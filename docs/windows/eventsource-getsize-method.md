@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33886995"
 ---
 # <a name="eventsourcegetsize-method"></a>EventSource::GetSize 方法
 检索与当前 EventSource 对象关联的事件处理程序数量  

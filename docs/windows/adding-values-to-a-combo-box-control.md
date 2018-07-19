@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858963"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>向组合框控件添加值
 可以将值添加到组合框控件中，只要你有打开的对话框编辑器中。  

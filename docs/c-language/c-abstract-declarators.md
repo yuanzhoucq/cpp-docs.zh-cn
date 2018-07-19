@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381816"
 ---
 # <a name="c-abstract-declarators"></a>C 抽象声明符
 抽象声明符是没有标识符的声明符，由一个或多个指针、数组或函数修饰符组成。 指针修饰符 (\*) 始终在声明符中的标识符前面；数组 ([ ]) 和函数 ( ( ) ) 修饰符紧跟在标识符后面。 了解这种情况后，您可以确定标识符将在抽象声明符中显示的位置并相应地解释声明符。 有关复杂声明符的其他信息和示例，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。 通常 `typedef` 可用于简化声明符。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  

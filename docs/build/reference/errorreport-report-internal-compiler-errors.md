@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377243"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport（报告内部编译器错误）
 允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。  

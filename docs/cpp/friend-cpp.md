@@ -1,7 +1,7 @@
 ---
 title: 友元 （C++） |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/02/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942076"
 ---
 # <a name="friend-c"></a>友元 (C++)
-在某些情况下，它会更方便，以授予成员级别的访问的不是类的成员的函数或单独类中的所有成员。 仅类实现器可以声明其友元。 函数或类不能将其自身声明为任何类的友元。 在类定义中，使用`friend`关键字和非成员函数或其他类，以允许其访问你的类的私有和受保护成员的名称。         在模板定义中，类型参数可以声明为友元。  
+在某些情况下，它是更方便地授予成员级别访问权限的函数时，不是类的成员或单独的类中的所有成员。 仅类实现器可以声明其友元。 函数或类不能将其自身声明为任何类的友元。 在类定义中，使用**友元**关键字和非成员函数或其他类，以允许其访问你的类的私有和受保护成员的名称。 在模板定义中，类型参数可以声明为友元。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +38,7 @@ friend F;
 ## <a name="friend-declarations"></a>友元声明  
  如果声明以前未声明的友元函数，则该函数将被导出到封闭非类范围。  
   
- 友元声明中声明的函数被视为已使用 `extern` 关键字声明。 (有关详细信息`extern`，请参阅[静态存储类说明符](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48)。)  
+ 友元声明中声明的函数将其视为好像它们已声明使用**extern**关键字。 有关详细信息，请参阅[extern](extern-cpp.md)。  
   
  尽管具有全局范围的函数可以在其原型之前声明为友元函数，但是成员函数在它们的完整类声明出现前不能声明为友元函数。 以下代码演示此失败的原因：  
   
@@ -49,7 +50,7 @@ class HasFriends
 };  
 ```  
   
- 前面的示例将类名 `ForwardDeclared` 输入到范围中，但是完整的声明（具体而言，声明函数 `IsAFriend` 的部分）是未知的。 因此，`friend` 类中的 `HasFriends` 声明会生成一个错误。  
+ 前面的示例将类名 `ForwardDeclared` 输入到范围中，但是完整的声明（具体而言，声明函数 `IsAFriend` 的部分）是未知的。 因此，**友元**类中的声明`HasFriends`生成一个错误。  
   
  从 C++ 11 开始，有两种形式的类的友元声明：  
   
@@ -58,9 +59,9 @@ friend class F;
 friend F;  
 ```  
   
- 如果该名称没有任何现有类位于最内部的命名空间，则第一个窗体引入了新类 F。  **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
+ 如果该名称的现有类不最内部的命名空间中找到，则第一个窗体引入了一个新类 F。  **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
   
- 使用`class friend F`时引用的类型具有尚未声明：  
+ 使用`class friend F`时被引用的类型具有尚未声明：  
   
 ```cpp  
 namespace NS  
@@ -82,7 +83,7 @@ namespace NS
 }  
 ```  
   
- 在下面的示例中，`friend F`指`F`NS 的作用域之外声明的类。  
+ 在以下示例中，`friend F`是指`F`NS 范围之外声明的类。  
   
 ```cpp  
 class F {};  
@@ -95,7 +96,7 @@ namespace NS
 }  
 ```  
   
- 使用`friend F`若要声明为友元模板参数：  
+ 使用`friend F`声明为友元模板参数：  
   
 ```cpp  
 template <typename T>  
@@ -125,9 +126,9 @@ class G
 >  尽管整个第二个类必须是第一个类的友元，但是可以选择将第一个类中的哪些函数作为第二个类的友元。  
   
 ## <a name="friend-functions"></a>友元函数  
- `friend` 函数是一个不为类成员的函数，但它可以访问类的私有和受保护的成员。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围，并且不调用使用成员选择运算符 (**。** 和-**>**) 除非它们是另一个类的成员。 `friend` 函数由授予访问权限的类声明。 可将 `friend` 声明放置在类声明中的任何位置。 它不受访问控制关键字的影响。  
+ 一个**友元**函数是不是类的成员，但有权访问类的私有和受保护成员的函数。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围内，并且它们的调用使用成员选择运算符 (**。** 和-**>**) 除非它们是另一个类的成员。 一个**友元**授予访问权限的类来声明函数。 **友元**声明任意位置可以放置在类声明中。 它不受访问控制关键字的影响。  
   
- 以下示例显示 `Point` 类和友元函数 `ChangePrivate`。 `friend` 函数可以访问其接受为参数的 `Point` 对象的私有数据成员。  
+ 以下示例显示 `Point` 类和友元函数 `ChangePrivate`。 **友元**函数有权访问的私有数据成员的`Point`对象作为参数接收。  
   
 ```cpp  
 // friend_functions.cpp  
@@ -188,7 +189,7 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248  
 ```  
   
- 在前面的示例中，仅为函数 `A::Func1( B& )` 授予对类 `B` 的友元访问权限。 因此，访问私有成员`_b`中是正确`Func1`类的`A`但未显示在`Func2`。  
+ 在前面的示例中，仅为函数 `A::Func1( B& )` 授予对类 `B` 的友元访问权限。 因此，访问私有成员`_b`中是正确`Func1`类的`A`但不能在`Func2`。  
   
  `friend` 类是其所有成员函数都是类的友元函数的类，即，其成员函数具有对类的私有成员和受保护成员访问权限。 假定类 `friend` 中的 `B` 声明是：  
   

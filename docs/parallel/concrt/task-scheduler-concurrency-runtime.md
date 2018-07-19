@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689316"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>任务计划程序（并发运行时）
 文档这一部分的主题介绍并发运行时任务计划程序的重要功能。 如果希望细微调整并发运行时的现有代码的性能，则任务计划程序会很有用。  

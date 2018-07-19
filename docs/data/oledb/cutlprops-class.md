@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101339"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 实现各种不同的 OLE DB 属性接口属性 (例如， `IDBProperties`， `IDBProperties`，和`IRowsetInfo`)。  

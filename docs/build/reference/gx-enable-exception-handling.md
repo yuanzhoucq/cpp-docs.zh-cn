@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376710"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX（启用异常处理）
 已否决。 启用同步异常处理使用函数假设声明使用`extern "C"`从不引发异常。  

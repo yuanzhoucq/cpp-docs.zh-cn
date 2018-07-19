@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094252"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /cli CX 程序，你可以任意使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，通过传递时，集合来回 Windows 运行时应用程序二进制接口 (ABI) — 例如，到 XAML 控件或 JavaScript 客户端，必须使用 Windows 运行时集合类型。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264512"
 ---
 # <a name="compiler-error-c3642"></a>编译器错误 C3642
 return_type/参数： 无法从本机代码调用约定的 __clrcall 与调用函数  

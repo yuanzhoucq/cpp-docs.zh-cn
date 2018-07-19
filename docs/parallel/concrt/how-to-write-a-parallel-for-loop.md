@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689813"
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>如何：编写 parallel_for 循环
 此示例演示如何使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)来计算两个矩阵的乘积。  

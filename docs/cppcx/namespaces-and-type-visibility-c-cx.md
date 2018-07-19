@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089827"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 命名空间为标准 C++ 构造，用于分组具有相关功能的类型和阻止库中发生名称冲突。 Windows 运行时类型系统要求，必须在命名空间范围的命名空间中声明所有公共 Windows 运行时类型，包括你自己的代码中的那些。 在全局范围内声明的或嵌套在其他类中的公共类型将导致编译时错误。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
 |`internal` 或 `private public`|成员在应用程序或组件中是公共的，但在元数据中不可见。|否|  
   
 ## <a name="windows-runtime-namespaces"></a>Windows 运行时命名空间  
- Windows API 由在 Windows 中声明的类型组成::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”**中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参见 [Windows API](http://msdn.microsoft.com/library/windows/apps/br211377)。  
+ Windows API 由在 Windows 中声明的类型组成::\*命名空间。 这些命名空间为 Windows 所保留，因此，不能在其中添加类型。 在 **“对象浏览器”** 中，您可以在 windows.winmd 文件中查看这些命名空间。 有关这些命名空间的文档，请参见 [Windows API](http://msdn.microsoft.com/library/windows/apps/br211377)。  
   
 ## <a name="ccx-namespaces"></a>C++/CX 命名空间  
  C + + /cli CX 将某些类型定义这些命名空间中，为 Windows 运行时类型系统投影的一部分。  

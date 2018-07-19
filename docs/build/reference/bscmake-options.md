@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377850"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 选项
 本部分介绍可用于控制 BSCMAKE 选项。 多个选项控制通过排除或包括某些信息的浏览信息文件的内容。 排除选项可以允许 BSCMAKE 运行更快，并可能会导致较小的.bsc 文件。 选项名称不区分大小写 (除 **/帮助**和 **/NOLOGO**)。  

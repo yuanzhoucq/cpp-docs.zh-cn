@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087788"
 ---
 # <a name="odbc-driver-list"></a>ODBC 驱动程序列表
 Visual c + + 提供了对以下数据库的 ODBC 驱动程序：  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873220"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>创建设备图像（图标的图像编辑器）
 当你创建新图标或光标资源时，图像编辑器首先以特定的样式 （32 × 32，16 种颜色图标和 32x32，为游标的单色） 创建的映像。 然后可以将映像中不同的大小和样式添加到初始图标或光标，并编辑每个其他映像，根据需要为不同的显示设备。 你还可以通过执行剪切和粘贴操作，从现有的映像类型或在图形程序中创建的位图编辑映像。  

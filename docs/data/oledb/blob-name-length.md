@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092055"
 ---
 # <a name="blobnamelength"></a>BLOB_NAME_LENGTH
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还获取以字节为单位的 BLOB 数据列的长度。  

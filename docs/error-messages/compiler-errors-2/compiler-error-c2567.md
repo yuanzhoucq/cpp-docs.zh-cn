@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229684"
 ---
 # <a name="compiler-error-c2567"></a>编译器错误 C2567
 无法打开 file 中的元数据，文件可能已删除或移动  

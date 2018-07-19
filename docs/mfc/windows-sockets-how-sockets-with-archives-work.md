@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954274"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 套接字：使用存档的套接字如何工作
 此文章介绍了如何[CSocket](../mfc/reference/csocket-class.md)对象， [CSocketFile](../mfc/reference/csocketfile-class.md)对象，和一个[CArchive](../mfc/reference/carchive-class.md)对象结合来简化发送和接收数据通过 Windows套接字。  
   
- 文章[Windows 套接字： 套接字的使用存档示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)显示**PacketSerialize**函数。 中的存档对象**PacketSerialize**示例才会非常类似于传递到 MFC 的存档对象[序列化](../mfc/reference/cobject-class.md#serialize)函数。 基本差异是，对于套接字，存档并不附加到一种标准[CFile](../mfc/reference/cfile-class.md) （通常使用的磁盘文件相关联） 的对象而`CSocketFile`对象。 而不是连接到磁盘文件，`CSocketFile`对象连接到`CSocket`对象。  
+ 文章[Windows 套接字： 套接字的使用存档示例](../mfc/windows-sockets-example-of-sockets-using-archives.md)显示`PacketSerialize`函数。 中的存档对象`PacketSerialize`示例才会非常类似于传递到 MFC 的存档对象[序列化](../mfc/reference/cobject-class.md#serialize)函数。 基本差异是，对于套接字，存档并不附加到一种标准[CFile](../mfc/reference/cfile-class.md) （通常使用的磁盘文件相关联） 的对象而`CSocketFile`对象。 而不是连接到磁盘文件，`CSocketFile`对象连接到`CSocket`对象。  
   
  A`CArchive`对象管理的缓冲区。 存储 （发送） 存档的缓冲区已满时，一个关联`CFile`对象写出的缓冲区的内容。 刷新的缓冲区的存档的套接字附加相当于发送消息。 当加载 （接收） 存档的缓冲区已满，`CFile`对象停止读取，直到缓冲区重新变为可用。  
   
@@ -50,7 +51,7 @@ CArchive、CSocketFile 和 CSocket
  如果`CSocket`未实现为两个状态对象，它可以为相同类型的事件的其他通知你已在处理时接收前一次的通知。 例如，你可能获得`OnReceive`处理时通知`OnReceive`。 在上述代码片段中，提取`str`从存档可能导致递归。 通过切换状态，`CSocket`通过阻止其他通知禁止递归。 一般规则是通知内的没有通知。  
   
 > [!NOTE]
->  A`CSocketFile`还可用作 （受限） 文件，而没有`CArchive`对象。 默认情况下，`CSocketFile`构造函数的`bArchiveCompatible`参数是**TRUE**。 此特性指定的文件对象有用于存档。 若要使用但未存档的文件对象，将传递**FALSE**中`bArchiveCompatible`参数。  
+>  A`CSocketFile`还可用作 （受限） 文件，而没有`CArchive`对象。 默认情况下，`CSocketFile`构造函数的*bArchiveCompatible*参数是**TRUE**。 此特性指定的文件对象有用于存档。 若要使用但未存档的文件对象，将传递**FALSE**中*bArchiveCompatible*参数。  
   
  在"存档兼容"模式下，`CSocketFile`对象提供更好的性能并减少的危险"死锁"。 当等待相互关联，或等待常见的资源这两个发送和接收套接字时，将发生死锁。 如果这种情况下可能会出现`CArchive`对象结合`CSocketFile`与其处理的方式`CFile`对象。 与`CFile`，存档可以假定，如果它收到较少的字节数比其请求，文件结尾已达到。 与`CSocketFile`，但是，数据是基于消息; 缓冲区中可以包含多条消息，因此接收请求的字节数少于并不意味着文件结尾。 在此情况下不会阻止应用程序，因为它可能与`CFile`，它可以继续从缓冲区中读取消息，直到缓冲区为空。 [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty)函数中`CArchive`可用于监视这种情况下的存档的缓冲区的状态。  
   

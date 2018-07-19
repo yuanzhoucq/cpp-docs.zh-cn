@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197606"
 ---
 # <a name="fatal-error-c1045"></a>错误 C1045
 编译器限制 : 链接规范嵌套太深  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687266"
 ---
 # <a name="21-directive-format"></a>2.1 指令格式
 中的语法正式指定 OpenMP 指令的语法[附录 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)，和非正式的方式，如下所示：  

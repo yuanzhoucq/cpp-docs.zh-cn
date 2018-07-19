@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342054"
 ---
 # <a name="deprecated-ansi-apis"></a>弃用的 ANSI API
 Microsoft 基础类 (MFC) 库正在向类和基于 Unicode 字符集的方法将迁移。 因此，某些 MFC 方法的 ANSI 版本已弃用。 在你将来的应用程序中使用这些方法的 Unicode 版本。  

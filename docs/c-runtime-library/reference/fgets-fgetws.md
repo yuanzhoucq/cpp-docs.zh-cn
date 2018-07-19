@@ -1,7 +1,7 @@
 ---
 title: fgets、fgetws | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027162"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -69,7 +70,7 @@ wchar_t *fgetws(
 *str*<br/>
 数据的存储位置。
 
-*Numchar*<br/>
+*numChars*<br/>
 要读取的最大字符数。
 
 *流*<br/>
@@ -77,17 +78,17 @@ wchar_t *fgetws(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回*str*。 **NULL**返回以指示错误或文件尾条件。 使用**feof**或**ferror**以确定是否发生了错误。 如果*str*或*流*是 null 指针，或*Numchar*小于或等于零，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+每个函数将返回*str*。 **NULL**返回以指示错误或文件结尾条件。 使用**feof**或**ferror**以确定是否发生了错误。 如果*str*或*流*是 null 指针，或*numChars*小于或等于零，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fgets**函数从输入中读取一个字符串*流*自变量并将其存储在*str*。 **fgets**从到当前流位置和包括第一个换行符，到末尾的流中读取字符或直到读取的字符数等于*Numchar* -1，不管先满足。 结果存储在*str*追加 null 字符。 换行符（如果读取）将包括在字符串中。
+**Fgets**函数从输入读取的字符串*流*自变量并将其存储在*str*。 **fgets**读取字符从当前流位置到并包括第一个换行符，到流的结尾或直到读取的字符数等于*numChars* -1，具体取决于第一个。 结果存储在*str*追加 null 字符。 换行符（如果读取）将包括在字符串中。
 
-**fgetws**是宽字符版本的**fgets**。
+**fgetws**是宽字符版本**fgets**。
 
-**fgetws**读取的宽字符自变量*str*作为多字节字符字符串或宽字符字符串根据是否*流*以文本模式还是二进制模式中，打开分别。 有关在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
+**fgetws**读取的宽字符自变量*str*作为多字节字符字符串或宽字符字符串根据*流*在文本模式还是二进制模式中打开分别。 有关在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -108,9 +109,8 @@ wchar_t *fgetws(
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

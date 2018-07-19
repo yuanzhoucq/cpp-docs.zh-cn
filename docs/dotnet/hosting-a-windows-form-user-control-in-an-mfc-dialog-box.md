@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129432"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>在 MFC 对话框中承载 Windows 窗体用户控件
 MFC 作为一种特殊的 ActiveX 控件承载 Windows 窗体控件和使用 ActiveX 接口和属性和方法，与控件进行通信<xref:System.Windows.Forms.Control>类。 我们建议你使用.NET Framework 属性和方法来操作该控件。  

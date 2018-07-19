@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090544"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>获取数据缓冲区的指针 (C++/CX)
 在 Windows 运行时中， [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) 接口提供了一种基于流的非特定语言方式来访问数据缓冲区。 在 C++ 中，可使用 robuffer.h 中定义的 Windows 运行时 IBufferByteAccess 接口获取指向基础字节数组的原始指针。 通过这种方式，可就地修改字节数组，而不必创建任何数据副本。  
@@ -133,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>创建 C++ 组件  
   
-1.  将新的 c + + Windows 运行时组件添加到现有的解决方案中，并将其命名`ImageManipCPP`。 通过在 **“解决方案资源管理器”** 中右击该 C# 项目并选择 **“添加”**和 **“引用”**，在项目中添加对该组件的引用。  
+1.  将新的 c + + Windows 运行时组件添加到现有的解决方案中，并将其命名`ImageManipCPP`。 通过在 **“解决方案资源管理器”** 中右击该 C# 项目并选择 **“添加”** 和 **“引用”**，在项目中添加对该组件的引用。  
   
 2.  在 Class1.h 中  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373483"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何生成 .Bsc 文件
 BSCMAKE 生成或重新生成，以最高效的方式，它可以在.bsc 文件。 若要避免潜在问题，务必了解生成过程。  

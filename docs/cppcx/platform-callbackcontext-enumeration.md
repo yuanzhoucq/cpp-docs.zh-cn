@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086938"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 枚举
 指定在其中执行回调函数（事件处理程序）的线程上下文。  

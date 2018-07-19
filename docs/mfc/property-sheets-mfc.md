@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351110"
 ---
 # <a name="property-sheets-mfc"></a>属性表 (MFC)
 本系列文章介绍如何在 MFC 应用程序中实现对属性表的支持。 属性表（也称为选项卡对话框）提供了一种在对话框中管理大量控件的方法。 属性表包含属性页，每个属性页都基于一个单独的对话框模板资源。 您可以将对话框的控件分成若干个逻辑组，并将每个组放在其自己的属性页中。  

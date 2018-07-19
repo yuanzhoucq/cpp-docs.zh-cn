@@ -322,6 +322,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372542"
 ---
 # <a name="internal-classes"></a>内部类
 在 MFC 中内部使用以下类。 为了保持完整性，本节将说明这些内部类，但这些内部类不在代码中直接使用。  

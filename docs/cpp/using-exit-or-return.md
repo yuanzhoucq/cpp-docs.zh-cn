@@ -1,5 +1,5 @@
 ---
-title: 使用退出或返回 |Microsoft 文档
+title: 使用退出或返回 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942389"
 ---
 # <a name="using-exit-or-return"></a>使用 exit 或 return
-当调用**退出**或执行`return`语句从**主要**，静态对象会被销毁其初始化的相反顺序。 以下示例演示如何进行此类初始化和清理工作。  
+当您调用**退出**或执行**返回**语句从`main`，静态对象与其初始化相反顺序被销毁。 以下示例演示如何进行此类初始化和清理工作。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- 在前面的示例中，在进入 `sd1` 之前，将创建和初始化静态对象 `sd2` 和 `main`。 使用 `return` 语句终止此程序后，首先销毁 `sd2`，然后销毁 `sd1`。 `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。   
+ 在前面的示例中，在进入 `sd1` 之前，将创建和初始化静态对象 `sd2` 和 `main`。 使用此程序终止后**返回**语句中，第一个`sd2`销毁，然后`sd1`。 `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。   
   
  另一种编写此代码的方式为，使用块范围声明 `ShowData` 对象，并允许在它们超出范围时将其销毁：  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

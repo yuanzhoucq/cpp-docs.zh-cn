@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345565"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>拖放框架窗口中的文件
 框架窗口管理与文件资源管理器或文件管理器的关系。  

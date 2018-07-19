@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346924"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>创建状态栏的方法
 MFC 提供用于创建状态栏的两个类： [CStatusBar](../mfc/reference/cstatusbar-class.md)和[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （其包装 Windows 公共控件 API）。 `CStatusBar` 提供的所有功能的公共控件状态栏，它会自动与交互菜单和工具栏，和它为你; 处理许多必需的常用控制设置和结构但是，生成可执行文件通常将大于使用创建的`CStatusBarCtrl`。  

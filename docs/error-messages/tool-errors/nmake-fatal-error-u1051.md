@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317409"
 ---
 # <a name="nmake-fatal-error-u1051"></a>NMAKE 错误 U1051
 内存不足  
@@ -33,4 +34,4 @@ ms.lasthandoff: 05/04/2018
   
 2.  增加 Windows NT 分页文件或 Windows 交换文件的大小。  
   
-3.  如果仅生成文件的部分正在使用，则将生成文件划分为单独的文件或使用**！如果**预处理指令来限制 NMAKE 必须处理量。 **！如果**指令包含**！如果**， `!IFDEF`， **！IFNDEF**， **！ELSE IF**， **！其他** `IFDEF`，和**！其他** `IFNDEF`。
+3.  如果仅生成文件的部分正在使用，则将生成文件划分为单独的文件或使用 **！如果**预处理指令来限制 NMAKE 必须处理量。 **！如果**指令包含 **！如果**， `!IFDEF`， **！IFNDEF**， **！ELSE IF**， **！其他** `IFDEF`，和 **！其他** `IFNDEF`。

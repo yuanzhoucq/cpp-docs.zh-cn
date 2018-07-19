@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111349"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参考类型的 C++ 堆栈语义
 在 Visual C++ 2005 之前，只能使用 `new` 运算符来创建引用类型的实例（这会在垃圾回收堆上创建对象）。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)以创建一个引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。  

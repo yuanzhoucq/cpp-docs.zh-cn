@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689475"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 构造
 **并行部分**指令提供快捷窗体，用于指定**并行**区域包含只有一个**部分**指令。 语义相等显式指定**并行**指令紧跟**部分**指令。 语法**并行部分**指令是，如下所示：  

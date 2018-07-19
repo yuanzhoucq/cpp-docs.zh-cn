@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092383"
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
 `delegate`关键字用于声明引用类型，后者是标准 c + + 中的函数对象的 Windows 运行时等效项。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：  

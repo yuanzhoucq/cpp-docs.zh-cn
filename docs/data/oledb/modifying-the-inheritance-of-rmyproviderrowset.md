@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106227"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的继承
 若要添加`IRowsetLocate`接口与简单只读提供程序的示例中，修改的继承**RMyProviderRowset**。 最初， **RMyProviderRowset**继承自`CRowsetImpl`。 你需要修改从继承**CRowsetBaseImpl**。  

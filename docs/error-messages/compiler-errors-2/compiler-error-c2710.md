@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233075"
 ---
 # <a name="compiler-error-c2710"></a>编译器错误 C2710
 construct: __declspec(modifier) 可以仅应用于返回一个指向函数  

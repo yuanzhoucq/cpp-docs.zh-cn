@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109776"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 启动 OLE DB 应用程序之前，应考虑以下问题：  

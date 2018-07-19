@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877405"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>从图像中选取颜色用于其他地方（图标的图像编辑器）
 **选择颜色**，或颜色选取工具，可以在图像上的任何颜色的当前前景色或背景色，具体取决于您按左侧或鼠标右键按钮。 若要取消**选择颜色**工具中，选择另一个工具。  

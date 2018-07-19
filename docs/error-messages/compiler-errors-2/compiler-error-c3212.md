@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256139"
 ---
 # <a name="compiler-error-c3212"></a>编译器错误 C3212
 “specialization”：模板成员的显式专用化必须是显示专用化的成员  

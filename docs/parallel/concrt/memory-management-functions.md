@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687291"
 ---
 # <a name="memory-management-functions"></a>内存管理函数
 本文档介绍并发运行时提供的可帮助你分配和释放内存以并发方式的内存管理函数。  

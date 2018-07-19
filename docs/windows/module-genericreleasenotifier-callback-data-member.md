@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880671"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ 数据成员
 包含与当前 Module::GenericReleaseNotifier 对象关联的 lambda、functor 或 pointer-to-function 事件处理程序。  

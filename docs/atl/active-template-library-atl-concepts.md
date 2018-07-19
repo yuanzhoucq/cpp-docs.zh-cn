@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358109"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 活动模板库 (ATL) 是一组基于模板的 c + + 类，可用于创建小型、 快速组件对象模型 (COM) 对象。 它提供了有关密钥的 COM 功能，包括股票实现、 双重接口、 标准 COM 枚举器接口、 连接点、 分离式接口和 ActiveX 控件的特殊支持。  

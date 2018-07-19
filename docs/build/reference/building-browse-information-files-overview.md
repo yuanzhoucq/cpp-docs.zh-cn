@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843070"
 ---
 # <a name="building-browse-information-files-overview"></a>生成浏览信息文件：概述
 若要创建浏览信息符号浏览的编译器在项目中，然后 BSCMAKE 创建每个源文件的.sbr 文件。EXE 将.sbr 文件串联成一个.bsc 文件。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  不生成.bsc 文件，在项目级别，或者使用 /n 开关防止.sbr 文件被截断。  
   
-2.  生成所有项目后，作为输入使用所有的.sbr 文件运行 BSCMAKE。 接受通配符。 例如，如果你有项目目录 C:\X、 C:\Y 和 C:\Z 具有中以及你想要将它们组合成一个.bsc 文件所有的.sbr 文件，然后使用 BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*。sbr /o c:\whatever_directory\combined.bsc 生成组合的.bsc 文件。  
+2.  生成所有项目后，作为输入使用所有的.sbr 文件运行 BSCMAKE。 接受通配符。 例如，如果你有项目目录 C:\X、 C:\Y 和 C:\Z 具有中以及你想要将它们组合成一个.bsc 文件所有的.sbr 文件，然后使用 BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\\*.sbr /o c:\whatever_directory\combined.bsc 生成组合的.bsc 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [C/c + + 生成工具](../../build/reference/c-cpp-build-tools.md)   

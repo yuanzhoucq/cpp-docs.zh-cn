@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129783"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>如何：在本机类型中保存对值类型的引用
 使用`gcroot`装箱类型上要在本机类型中保存对值类型的引用。  

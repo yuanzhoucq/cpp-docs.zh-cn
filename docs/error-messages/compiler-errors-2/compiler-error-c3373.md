@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254493"
 ---
 # <a name="compiler-error-c3373"></a>编译器错误 C3373
 除了针对组件类，特性“attribute”不接受任何参数  

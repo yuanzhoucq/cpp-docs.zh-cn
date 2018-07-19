@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951362"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和编号约定
 本说明介绍 ID 命名和编号约定 MFC 2.0 使用的资源、 命令、 字符串、 控件和子窗口。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/04/2018
 |IDM_|不使用 MFC 命令体系结构的菜单项。|  
 |ID_|为使用 MFC 命令体系结构的菜单命令。|  
   
- 请按照 MFC 命令体系结构的命令必须具有`ON_COMMAND`命令处理程序，并可以`ON_UPDATE_COMMAND_UI`处理程序。 如果这些命令处理程序遵循 MFC 命令体系结构，它们将正常它们是否已绑定到的菜单命令、 工具栏按钮或对话框栏按钮。 相同的"ID_"前缀还用于在程序的消息栏显示的菜单提示字符串。 应用程序中的菜单项的大多数应遵循的 MFC 命令约定。 所有标准命令 Id (例如， `ID_FILE_NEW`) 遵循此约定。  
+ 按照 MFC 命令体系结构的命令必须具有一个 ON_COMMAND 命令处理程序，并且可以具有 ON_UPDATE_COMMAND_UI 处理程序。 如果这些命令处理程序遵循 MFC 命令体系结构，它们将正常它们是否已绑定到的菜单命令、 工具栏按钮或对话框栏按钮。 相同的"ID_"前缀还用于在程序的消息栏显示的菜单提示字符串。 应用程序中的菜单项的大多数应遵循的 MFC 命令约定。 所有标准命令 Id (例如，ID_FILE_NEW) 遵循此约定。  
   
  MFC 还使用"IDP_"作为一种特殊形式的字符串 （而不是"IDS_")。 以"IDP_"前缀的字符串是提示，即，在消息框中使用的字符串。 "IDP_"字符串可以包含"%1"和"%2"作为由程序的字符串的占位符。 "IDP_"字符串通常具有与它们，关联的帮助主题，"IDS_"字符串不能。 始终本地化"IDP_"字符串，并可能不会本地化"IDS_"字符串。  
   

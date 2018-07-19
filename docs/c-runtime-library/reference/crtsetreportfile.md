@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402333"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -115,7 +116,7 @@ _HFILE _CrtSetReportFile(
 
 通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：**仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
+**库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
 
 ## <a name="see-also"></a>请参阅
 

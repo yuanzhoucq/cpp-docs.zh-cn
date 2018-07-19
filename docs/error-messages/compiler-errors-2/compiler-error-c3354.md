@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257349"
 ---
 # <a name="compiler-error-c3354"></a>编译器错误 C3354
 “%$I”：该函数用于创建不能有返回类型“type”的委托  

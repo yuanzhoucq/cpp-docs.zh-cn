@@ -1,5 +1,5 @@
 ---
-title: CDaoQueryDefInfo 结构 |Microsoft 文档
+title: CDaoQueryDefInfo 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fe098472eb31f0bd9b185adfa6793f7061a35ac
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338729"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 结构
-`CDaoQueryDefInfo`结构包含有关 querydef 对象定义的数据访问对象 (DAO) 的信息。  
+`CDaoQueryDefInfo`结构包含有关 querydef 对象定义为数据访问对象 (DAO) 的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,68 +45,68 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名 querydef 对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。 调用[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)直接检索此属性。  
   
- `m_nType`  
+ *m_nType*  
  一个值，指示 querydef 对象的操作类型。 值可以是下列任一值：  
   
-- **dbQSelect**选择-查询选择记录。  
+- `dbQSelect` 选择 — 查询用于选择记录。  
   
-- **dbQAction**操作-查询将移动或更改数据，但不返回记录。  
+- `dbQAction` 操作-查询将移动或更改数据但不返回记录。  
   
-- **dbQCrosstab**交叉表-查询类似于电子表格的格式返回数据。  
+- `dbQCrosstab` 交叉表 — 查询类似于电子表格的格式返回数据。  
   
-- **dbQDelete**删除-查询删除指定的行的一组。  
+- `dbQDelete` 删除 — 查询删除一组指定的行。  
   
-- **dbQUpdate**更新-查询会更改一组记录。  
+- `dbQUpdate` 更新 — 查询更改记录的集。  
   
-- **dbQAppend**追加-查询的表或查询的末尾添加新记录。  
+- `dbQAppend` 查询追加-将新记录添加到表或查询的末尾。  
   
-- **dbQMakeTable**生成表-查询记录集从创建一个新表。  
+- `dbQMakeTable` 生成表，查询从记录集中创建新表。  
   
-- **dbQDDL**数据定义-查询影响的表或其部分的结构。  
+- `dbQDDL` 数据定义-查询影响的表或其部分内容的结构。  
   
-- **dbQSQLPassThrough**传递-SQL 语句直接传递到数据库后端，而不中间处理。  
+- `dbQSQLPassThrough` 直通-SQL 语句将直接传递到数据库后端，而无需中间处理。  
   
-- **dbQSetOperation**联合-查询创建一个包含所有指定在两个记录中的数据的快照类型的记录集对象或包含的任何重复记录的多个表中删除。 若要包含重复项，请添加关键字**所有**querydef 的 SQL 语句中。  
+- `dbQSetOperation` 并集，查询将创建一个包含所有指定在两个记录中的数据的快照类型的记录集对象或任何重复记录的多个表中删除。 若要包含重复项，添加关键字**所有**querydef 的 SQL 语句中。  
   
-- **dbQSPTBulk**用于**dbQSQLPassThrough**若要指定不返回记录的查询。  
+- `dbQSPTBulk` 用于`dbQSQLPassThrough`若要指定不返回记录的查询。  
   
 > [!NOTE]
->  若要创建 SQL 传递查询，未设置**dbQSQLPassThrough**常量。 这将自动设置通过 Microsoft Jet 数据库引擎创建 querydef 对象和设置连接属性时。  
+>  若要创建 SQL 传递查询，未设置`dbQSQLPassThrough`常量。 这是由自动设置 Microsoft Jet 数据库引擎时创建 querydef 对象并设置连接属性。  
   
  有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
- `m_dateCreated`  
- 创建日期和时间 querydef 已。 若要直接检索 querydef 的创建的日期，调用[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 另请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
+ *m_dateCreated*  
+ 日期和 querydef 的创建的时间。 若要直接检索 querydef 的创建的日期，请调用[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成员函数的`CDaoTableDef`与表关联的对象。 有关详细信息，请参阅下面的注释。 此外请参阅 DAO 帮助中的主题"DateCreated，上次更新属性"。  
   
- `m_dateLastUpdated`  
- 日期和时间对 querydef 的最新的变更。 若要直接检索上次更新表的日期，调用[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成员函数。 有关详细信息，请参阅下面的注释。 和，请参阅中 DAO 帮助主题"时间，上次更新属性"。  
+ *m_dateLastUpdated*  
+ 日期和时间对 querydef 所做的最新更改。 若要直接检索上次更新表的日期，请调用[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成员函数。 有关详细信息，请参阅下面的注释。 请参阅中 DAO 帮助主题"DateCreated，上次更新属性"。  
   
- `m_bUpdatable`  
- 指示是否可以对 querydef 对象进行更改。 如果此属性为**TRUE**、 querydef 则可更新; 否则为它不是。 可更新意味着可以更改 querydef 对象的查询定义。 Querydef 对象的可更新属性设置为**TRUE**如果查询定义可以更新，即使得到的结果集不可更新。 若要直接检索此属性，请调用此 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
+ *m_bUpdatable*  
+ 指示是否可以对 querydef 对象进行更改。 如果此属性为 TRUE，querydef 是可更新;否则，它不是。 可更新意味着可以更改 querydef 对象的查询定义。 Querydef 对象的可更新属性设置为 TRUE 可更新查询定义，如果即使生成的记录集是不可更新。 若要直接检索此属性，请调用 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
  *m_bReturnsRecords*  
- 指示是否对外部数据库的 SQL 传递查询返回的记录。 如果此属性为**TRUE**，查询返回的记录。 若要直接检索此属性，调用[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)。 到外部数据库不是所有 SQL 传递查询都返回的记录。 例如，SQL**更新**语句更新记录，而无需返回记录时 SQL**选择**语句后才返回记录。 有关详细信息，请参阅主题"属性"DAO 帮助中。  
+ 指示是否向外部数据库的 SQL 传递查询返回的记录。 如果此属性为 TRUE，查询将返回的记录。 若要直接检索此属性，请调用[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)。 到外部数据库不是所有 SQL 传递查询都返回的记录。 例如，SQL**更新**语句更新记录，并且不返回记录，而 SQL**选择**语句返回的记录。 有关详细信息，请参阅"属性"DAO 帮助中的主题。  
   
  *m_strSQL*  
- 定义由 querydef 对象执行的查询的 SQL 语句。 SQL 属性包含确定如何记录选择，分组和排序时执行查询的 SQL 语句。 可以使用查询来选择要包含在动态集或快照类型记录集对象中的记录。 你还可以定义大容量查询，而无需返回记录中修改数据。 你可以直接通过调用此 querydef 检索此属性的值[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成员函数。  
+ 定义由 querydef 对象执行的查询的 SQL 语句。 SQL 属性包含确定如何选择记录，分组和排序时执行查询的 SQL 语句。 可以使用查询来选择要包括在动态集或快照类型的记录集对象中的记录。 此外可以定义大容量查询不返回记录的情况下修改数据。 您可以直接通过调用 querydef 检索此属性的值[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成员函数。  
   
- `m_strConnect`  
- 提供有关原因的传递查询中使用的数据库的信息。 此信息的连接字符串的形式。 有关详细信息的连接字符串，并直接检索此属性的值的信息，请参阅[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成员函数。  
+ *m_strConnect*  
+ 提供了有关使用传递查询中的数据库的源的信息。 此信息的连接字符串的形式。 有关详细信息大约连接字符串，并直接检索此属性的值的信息，请参阅[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成员函数。  
   
  *m_nODBCTimeout*  
- ODBC 数据库上运行一次查询时发生的 Microsoft Jet 数据库引擎在超时错误之前等待的秒数。 在你使用 ODBC 数据库，例如 Microsoft SQL Server 时由于网络流量或大量使用 ODBC 服务器可能存在延迟。 而不是无限期地等待，可以指定 Microsoft Jet 引擎会产生错误之前的等待多长时间。 默认超时值为 60 秒。 你可以直接通过调用此 querydef 检索此属性的值[GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"odbc 超时属性"。  
+ ODBC 数据库上运行一次查询时发生超时错误之前的 Microsoft Jet 数据库引擎等待的秒数。 在使用 ODBC 数据库，例如 Microsoft SQL Server 时由于网络流量或频繁使用的 ODBC 服务器可能存在延迟。 而不是无限期地等待，可以指定 Microsoft Jet 引擎等待多长时间才能生成错误。 默认超时值为 60 秒。 您可以直接通过调用 querydef 检索此属性的值[GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"odbc 超时属性"。  
   
 ## <a name="remarks"></a>备注  
- Querydef 是类的对象[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 对主、 辅助数据库，以及所有上面的引用指示如何通过返回的信息[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)类中的成员函数`CDaoDatabase`。  
+ Querydef 是类的对象[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 对主要、 次要和上面所有的引用指示如何通过返回的信息[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)类中的成员函数`CDaoDatabase`。  
   
- 检索的信息[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成员函数将存储在`CDaoQueryDefInfo`结构。 调用`GetQueryDefInfo`querydef 对象存储在其 QueryDefs 集合中的数据库对象。 `CDaoQueryDefInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoQueryDefInfo`对象。 类`CDaoDatabase`还提供了用于直接访问的所有属性中返回的成员函数`CDaoQueryDefInfo`对象，因此可能很少需要调用`GetQueryDefInfo`。  
+ 检索的信息[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成员函数存储在`CDaoQueryDefInfo`结构。 调用`GetQueryDefInfo`querydef 对象存储在其 QueryDefs 集合中的数据库对象。 `CDaoQueryDefInfo` 此外定义了`Dump`成员函数在调试生成。 可以使用`Dump`转储的内容`CDaoQueryDefInfo`对象。 类`CDaoDatabase`还提供了用于直接访问的所有属性中返回的成员函数`CDaoQueryDefInfo`对象，因此您可能很少需要调用`GetQueryDefInfo`。  
   
- 当你将新字段或参数对象追加到 querydef 对象的字段或参数集合中时，如果基础数据库不支持指定为新的对象的数据类型是引发异常。  
+ 当你将新字段或参数对象追加到 querydef 对象的字段或参数的集合时，如果基础数据库不支持指定为新的对象的数据类型是引发异常。  
   
- 从计算机在其创建或上次更新时间 querydef 派生的日期和时间设置。 在多用户环境中，用户应直接从文件服务器使用获取这些设置**net 时间**命令，以免时间和上次更新属性设置中的差异。  
+ 从计算机在其创建或上次更新时间 querydef 派生的日期和时间设置。 在多用户环境中，用户应直接从文件服务器使用获取这些设置**net 时间**命令，以避免 DateCreated 和上次更新属性设置中的差异。  
   
 ## <a name="requirements"></a>要求  
  **标头：** afxdao.h  

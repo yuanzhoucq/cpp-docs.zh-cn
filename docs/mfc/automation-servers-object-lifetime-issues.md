@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341795"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>自动化服务器：对象生存期问题
 当自动化客户端创建或激活一个 OLE 项时，服务器会向客户端传递一个指向该对象的指针。 客户端建立对通过调用 OLE 函数对象的引用[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 此引用直到客户端调用实际上是[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。 （使用 Microsoft 基础类库类的 OLE 类编写的客户端应用程序不需要执行这些调用；框架也是如此。）OLE 系统和服务器本身可能会建立对对象的引用。 只要对某个对象的外部引用仍然有效，服务器就不应销毁该对象。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230530"
 ---
 # <a name="compiler-error-c2507"></a>编译器错误 C2507
 identifier： 基的类上的虚拟修饰符太多  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688110"
 ---
 # <a name="3-run-time-library-functions"></a>3.运行时库函数
 本部分介绍 OpenMP C 和 c + + 运行时库函数。 标头 **\<omp.h >** 声明两种类型，可以用于控制和查询并行执行环境中，以及锁定可用于同步对数据的访问的函数的几个函数。  

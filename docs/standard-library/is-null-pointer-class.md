@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966532"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer 类
 
@@ -36,11 +37,11 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是 `std::nullptr_t`，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*T*是`std::nullptr_t`，否则为 false。
 
 ## <a name="requirements"></a>要求
 

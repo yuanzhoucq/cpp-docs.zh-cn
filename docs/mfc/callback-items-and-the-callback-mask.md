@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931683"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>回调项和回调掩码
 列表视图控件通常会为它的每一项存储标签文本、项图标的图像列表索引以及表示项状态的一组位标志。 您可以定义单个项作为回调项，当应用程序已经存储某个项的一些信息时，这将很有用。  
@@ -28,13 +29,13 @@ ms.lasthandoff: 05/04/2018
   
  除了定义回调项之外，您还可以修改控件的回调掩码。 此掩码是一组位标志，用于指定应用程序（而不是控件）存储当前数据的项状态。 回调掩码适用于控件的所有项，而回调项指示符则不同，它适用于特定项。 回调掩码默认为零，这意味着控件将跟踪所有项状态。 若要更改此默认行为，请将掩码初始化为以下值的任意组合：  
   
--   `LVIS_CUT` 项被标记为剪切和粘贴操作。  
+-   **LVIS_CUT**项被标记为剪切和粘贴操作。  
   
--   `LVIS_DROPHILITED` 项被标记为拖放目标。  
+-   **LVIS_DROPHILITED**项被标记为拖放目标。  
   
--   `LVIS_FOCUSED` 项具有焦点。  
+-   **LVIS_FOCUSED**项具有焦点。  
   
--   `LVIS_SELECTED` 选择项。  
+-   **LVIS_SELECTED**选定了项。  
   
 -   **LVIS_OVERLAYMASK**应用程序存储的每个项将当前覆盖图像的图像列表索引。  
   

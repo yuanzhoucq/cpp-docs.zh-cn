@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694282"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 本文档演示如何使用并发运行时移动的工作线程对 Microsoft 基础类 (MFC) 应用程序中的用户界面 (UI) 线程执行的工作。 本文档还演示如何提高长的绘制操作的性能。  

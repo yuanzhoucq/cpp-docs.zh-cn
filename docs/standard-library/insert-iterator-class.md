@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960000"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 类
 
@@ -39,11 +40,11 @@ class insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 元素是由插入到其中的容器的类型`insert_iterator`。
+`Container` 元素将由插入到其中的容器类型`insert_iterator`。
 
 ## <a name="remarks"></a>备注
 
-**Container** 类型的容器必须满足可变大小容器的需求，并具有一个两个自变量插入成员函数，其中，形式参数分别为 **Container::iterator** 类型和 **Container::value_type** 类型，将返回 **Container::iterator** 类型。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
+类型的容器`Container`必须满足可变大小容器的要求，并具有两个自变量插入成员函数的类型参数的位置是`Container::iterator`并`Container::value_type`并返回类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
 
 ### <a name="constructors"></a>构造函数
 
@@ -82,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Container** 的同义词。
+该类型是模板参数 *Container* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -124,9 +125,9 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 在其中容器`insert_iterator`是插入元素。
+*_Cont*到其中的容器`insert_iterator`要将元素插入。
 
-`_It` 插入位置。
+*_It*的插入操作的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -192,7 +193,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是迭代器，然后在序列中，元素 **\*Iter** = **值**使用值替换该元素并不会更改的总数序列中的元素。
 
 ### <a name="example"></a>示例
 
@@ -240,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>insert_iterator::operator++
 
-将 **insert_iterator** 递增到下一个可用来存储值的位置。
+将 `insert_iterator` 递增到下一个可用来存储值的位置。
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -316,7 +317,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>参数
 
-`val` 要分配给容器的值。
+*val*要分配给容器的值。
 
 ### <a name="return-value"></a>返回值
 

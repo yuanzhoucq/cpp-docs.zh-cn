@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964305"
 ---
 # <a name="extent-class"></a>extent 类
 
@@ -36,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
-`I` 数组绑定到查询。
+*我*数组绑定到查询。
 
 ## <a name="remarks"></a>备注
 
-如果 `Ty` 是至少具有 `I` 维度的数组类型，则类型查询保留在由 `I` 指定的维度中的元素数。 如果 `Ty` 不是数组类型或它的级别小于 `I`，或者如果 `I` 为零且 `Ty` 属于类型“`U` 的未知绑定的数组”，则类型查询保留值 0。
+如果*Ty*是至少具有一个数组类型*我*维度，则类型查询保留的元素数中由指定的维度*我*。如果*Ty*不是数组类型或它的级别小于*我*，或者，如果*我*为零并*Ty*属于类型"未知绑定的数组的`U`"，则类型查询保留值 0。
 
 ## <a name="example"></a>示例
 

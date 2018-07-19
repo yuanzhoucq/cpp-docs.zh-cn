@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302849"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
 比较中的算术运算的转换规则意味着无法执行一个分支。  

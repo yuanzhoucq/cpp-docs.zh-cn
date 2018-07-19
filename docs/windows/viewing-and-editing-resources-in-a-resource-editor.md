@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891813"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在资源编辑器中查看和编辑资源
 每个资源类型都有特定于该资源类型的资源编辑器。 你可以重新排列、 调整大小、 添加控件和功能，或修改资源使用关联的编辑器的方面。 你还可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)和[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。  

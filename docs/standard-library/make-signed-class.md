@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957342"
 ---
 # <a name="makesigned-class"></a>make_signed 类
 
@@ -39,11 +40,11 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-如果 `is_signed<T>` 为 true，则类型修饰符的实例保留修改后的类型 `T`。 否则，它就是适用于 `sizeof (T) <= sizeof (UT)` 的最小的无符号类型 `UT`。
+类型修饰符的实例保留修改的类型是*T*如果`is_signed<T>`保持为 true。 否则，它就是适用于 `sizeof (T) <= sizeof (UT)` 的最小的无符号类型 `UT`。
 
 ## <a name="requirements"></a>要求
 

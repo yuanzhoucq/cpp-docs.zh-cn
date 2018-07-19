@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705561"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322389"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
@@ -89,7 +89,7 @@ ms.locfileid: "34705561"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) （级别 1）|*operator1*： 逗号前的运算符起任何作用; 是否要使用*operator2*？|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) （级别 1）|表达式无效；应输入带副作用的表达式|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （级别 3）|__assume 包含效果*效果*|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （级别 4）|自 Visual c + + 7.1; 以来更改的信息： 之后语义不再捕获结构化的异常 (SEH)|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （级别 4）|信息性： 自 Visual c + + 7.1; 以来发生更改之后语义不再捕获结构化的异常 (SEH)|
 |C4574 （级别 4）|*标识符*定义为"0： 你是否希望使用 #if*标识符*？|
 |C4577 （级别 1）|noexcept 用于没有异常处理模式，以指定;不保证异常终止。 指定 /EHsc|
 |C4582 （级别 4）|*类型*： 不隐式调用构造函数|
@@ -153,12 +153,14 @@ ms.locfileid: "34705561"
 |[C5038](../error-messages/compiler-warnings/c5038.md) （级别 4）|数据成员*member1*将数据成员后初始化*member2* <sup>15.3</sup>|
 |C5039 （级别 4）|*函数*： 指针或对可能引发函数引用传递给下-EHc extern C 函数。 如果此函数将引发异常，则可能出现未定义的行为。 <sup>15.5</sup>|
 |C5042 （级别 3）|*函数*： 在块范围的函数声明不能指定为内联，在标准 c + +; 中删除内联说明符<sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|如果 /Qspectre 交换机指定，编译器将插入的内存负载的 Spectre 缓解<sup>15.7</sup>|
 
-<sup>14.1</sup>此警告可从 Visual Studio 2015 Update 1 开始。<br>
-<sup>14.3</sup>此警告是在 Visual Studio 2015 Update 3 中开始提供。<br>
-<sup>15.3</sup>此警告是在 Visual Studio 2017 版本 15.3 中开始提供。<br>
-<sup>15.5</sup>此警告是在 Visual Studio 2017 版本 15.5 中开始提供。<br>
-<sup>Perm</sup>此警告处于关闭状态，除非[/ 宽松-](../build/reference/permissive-standards-conformance.md)设置编译器选项。
+<sup>14.1</sup>此警告可从 Visual Studio 2015 Update 1 开始。  
+<sup>14.3</sup>此警告是在 Visual Studio 2015 Update 3 中开始提供。  
+<sup>15.3</sup>此警告是在 Visual Studio 2017 版本 15.3 中开始提供。  
+<sup>15.5</sup>此警告是在 Visual Studio 2017 版本 15.5 中开始提供。  
+<sup>15.7</sup>此警告是在 Visual Studio 2017 15.7 版中开始提供。  
+<sup>Perm</sup>此警告处于关闭状态，除非[/ 宽松-](../build/reference/permissive-standards-conformance.md)设置编译器选项。  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下，在早期版本中关闭的警告
 

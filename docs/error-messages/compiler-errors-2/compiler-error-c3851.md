@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268823"
 ---
 # <a name="compiler-error-c3851"></a>编译器错误 C3851
 “char”：通用字符名称不能指定基本字符集中的字符  

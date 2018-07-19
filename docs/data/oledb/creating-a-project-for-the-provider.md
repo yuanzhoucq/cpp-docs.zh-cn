@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098350"
 ---
 # <a name="creating-a-project-for-the-provider"></a>为提供程序创建项目
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>若要创建的 OLE DB 访问接口将驻留在其中一个项目  

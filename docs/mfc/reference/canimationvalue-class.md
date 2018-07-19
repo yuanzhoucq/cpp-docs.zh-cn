@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952093"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 类
 实现有一个值的动画对象功能。  
@@ -78,7 +79,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|封装的动画变量表示动画值。|  
   
@@ -103,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTransition`  
+ *pTransition*  
  指向转换对象的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -124,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定默认值。  
   
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  指定用户定义的数据。  
   
 ### <a name="remarks"></a>备注  
@@ -149,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  当函数返回时，它包含指向 CAnimationVariable 表示动画的值的指针。  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -161,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblValue`  
+ *dblValue*  
  输出。 在函数返回时它包含动画变量的当前值。  
   
- `nValue`  
+ *n 值*  
  输出。 在函数返回时它包含动画变量的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -228,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblVal`  
+ *dblVal*  
  指定要分配给动画值的值。  
   
- `nVal`  
+ *nVal*  
  指定要分配给动画值的值。  
   
 ### <a name="remarks"></a>备注  
@@ -245,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定的默认值。  
   
 ### <a name="remarks"></a>备注  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877210"
 ---
 # <a name="helpcontext"></a>helpcontext
 指定允许用户查看有关此帮助文件中的元素信息的上下文 ID。  

@@ -1,5 +1,5 @@
 ---
-title: CD2DSizeU 类 |Microsoft 文档
+title: CD2DSizeU 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335836"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU 类
 D2D1_SIZE_U 包装器。  
@@ -41,13 +42,13 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|已重载。 构造`CD2DSizeU`对象`D2D1_SIZE_U`对象。|  
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|已重载。 构造`CD2DSizeU`对象从`D2D1_SIZE_U`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|返回`boolean`值，该值指示表达式是否包含任何有效的数据 ( `null`)。|  
+|[CD2DSizeU::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -64,7 +65,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- 构造 CD2DSizeU 对象从 CSize 对象。  
+ 构造 CSize 对象中的 CD2DSizeU 对象。  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -78,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>参数  
- `size`  
- 源的大小  
+ *size*  
+ 源大小  
   
- `cx`  
+ *cx*  
  源宽度  
   
- `cy`  
+ *cy*  
  源高度  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  
@@ -95,10 +96,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 宽度和高度都为空; 如果为 TRUE否则为 FALSE。  
+ 如果宽度和高度都为空; 则为 TRUE否则为 FALSE。  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
- 将 CD2DSizeU 转换 CSize 对象。  
+ 将转换为 CSize 对象的 CD2DSizeU。  
   
 ```  
 operator CSize();

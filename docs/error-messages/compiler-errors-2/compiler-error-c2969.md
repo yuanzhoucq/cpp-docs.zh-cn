@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241894"
 ---
 # <a name="compiler-error-c2969"></a>编译器错误 C2969
 语法错误: “symbol”: 成员函数定义应以“}”结尾  

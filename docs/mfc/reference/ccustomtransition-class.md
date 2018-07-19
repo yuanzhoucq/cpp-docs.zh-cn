@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952747"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 类
 实现自定义转换。  
@@ -67,7 +68,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|指定是否使用 SetInitialValue 指定初始值。|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|指定是否使用 SetInitialVelocity 指定的初始速度。|  
@@ -96,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInterpolator`  
+ *pInterpolator*  
  指向自定义插值程序的指针。  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -109,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFactory`  
+ *pFactory*  
  指向转换工厂，其负责创建的自定义转换的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -160,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialValue`  
+ *initialValue*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  设置初始的速度，它们将应用于此转换与关联的动画变量。  
@@ -170,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

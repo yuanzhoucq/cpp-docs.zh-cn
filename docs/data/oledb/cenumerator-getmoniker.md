@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097700"
 ---
 # <a name="cenumeratorgetmoniker"></a>CEnumerator::GetMoniker
 分析要提取的字符串可以转换为一个名字对象的组件的显示名称。  

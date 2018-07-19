@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093095"
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 在属性中设置属性的开头的标记集映射。  

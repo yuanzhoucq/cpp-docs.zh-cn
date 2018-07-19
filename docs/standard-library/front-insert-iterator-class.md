@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964380"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
 
@@ -39,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 其中元素被由插入前端的容器类型`front_insert_iterator`。
+*容器*容器类型的元素要插入的前端`front_insert_iterator`。
 
 ## <a name="remarks"></a>备注
 
@@ -82,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Container** 的同义词。
+该类型是模板参数 *Container* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -124,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 在其中的容器对象`front_insert_iterator`是插入元素。
+*_Cont*到其中的容器对象`front_insert_iterator`要将元素插入。
 
 ### <a name="return-value"></a>返回值
 
@@ -190,7 +191,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是迭代器，然后在序列中，元素 **\*Iter** = **值**使用值替换该元素并不会更改的总数序列中的元素。
 
 ### <a name="example"></a>示例
 
@@ -300,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>参数
 
-`val` 要分配给容器的值。
+*val*要分配给容器的值。
 
 ### <a name="return-value"></a>返回值
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890306"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>对 RichEdit 1.0 控件使用 MFC
 若要使用 RichEdit 控件，必须先调用[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)来加载 RichEdit 2.0 控件 (RICHED20。DLL)，或调用[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)来加载的较旧的 RichEdit 1.0 控件 (RICHED32。DLL)。  

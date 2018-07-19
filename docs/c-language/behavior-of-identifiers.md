@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380796"
 ---
 # <a name="behavior-of-identifiers"></a>标识符的行为
 -   [没有外部链接的重要字符](../c-language/significant-characters-without-external-linkage.md)  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879043"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>调整图像大小（图标的图像编辑器）
 图像编辑器时调整图像的大小的行为取决于是否已[选](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)整个图像或只是它的一部分。  

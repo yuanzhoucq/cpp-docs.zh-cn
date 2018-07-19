@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964790"
 ---
 # <a name="packagedtask-class"></a>packaged_task 类
 
@@ -122,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>参数
 
-`Right` A`packaged_task`对象。
+*右*A`packaged_task`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -130,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>备注
 
-操作后，`Right` 不再具有关联异步状态。
+操作完成后，*右*不再具有关联异步状态。
 
 ## <a name="op_call"></a>packaged_task::operator()
 
@@ -158,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果对象有关联的异步状态，则为 `true`；否则为 `false`。
+**true**如果该对象具有关联异步状态; 否则为**false**。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task 构造函数
 
@@ -177,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-`Right` A`packaged_task`对象。
+*右*A`packaged_task`对象。
 
-`alloc` 内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。
+*分配*内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。
 
-`fn` 一个函数对象。
+*fn*函数对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造没有关联异步状态的 `packaged_task` 对象。
 
-第二个构造函数构造 `packaged_task` 对象并从 `Right` 传输关联异步状态。 操作后，`Right` 不再具有关联异步状态。
+第二个构造函数构造`packaged_task`对象，并传输关联异步状态从*右*。 操作完成后，*右*不再具有关联异步状态。
 
-第三个构造函数构造 `packaged_task` 对象，该对象具有存储在其关联异步状态中的 `fn` 的副本。
+第三个构造函数构造`packaged_task`对象，它具有一份*fn*存储在其关联异步状态中。
 
-第四个构造函数构造 `packaged_task` 对象（该对象具有存储在其关联异步状态中的 `fn` 的副本）并使用 `alloc` 分配内存。
+第四个构造函数构造`packaged_task`对象，它具有一份*fn*存储在其关联异步状态，并使用`alloc`内存分配。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 析构函数
 
@@ -227,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Right` A`packaged_task`对象。
+*右*A`packaged_task`对象。
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -239,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>返回值
 
-如果对象有关联的异步状态，则为 `true`；否则为 `false`。
+**true**如果该对象具有关联异步状态; 否则为**false**。
 
 ## <a name="see-also"></a>请参阅
 

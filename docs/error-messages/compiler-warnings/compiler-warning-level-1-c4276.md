@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277301"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>编译器警告（等级 1）C4276
 function： 不提供原型;假定没有参数  

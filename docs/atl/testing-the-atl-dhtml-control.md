@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361861"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>测试 ATL DHTML 控件
 一旦创建了项目后，你可以生成和测试示例控件。 执行此操作之前，请使用类视图和解决方案资源管理器检查该项目。 中更详细地介绍了你的项目元素[确定 DHTML 控件项目元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  

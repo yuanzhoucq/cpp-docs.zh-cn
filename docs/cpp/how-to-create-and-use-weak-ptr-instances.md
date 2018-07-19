@@ -1,7 +1,7 @@
 ---
-title: 如何： 创建和使用共享 weak_ptr 实例 |Microsoft 文档
+title: 如何： 创建和使用共享 weak_ptr 实例 |Microsoft Docs
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,27 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034811"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：创建和使用共享 weak_ptr 实例
-有时对象必须存储用于访问的基础对象的方法`shared_ptr`而不会导致要递增的引用计数。 当之间的循环引用时，通常情况下，出现这种情况`shared_ptr`实例。  
-  
- 最佳设计是尽可能避免共享的所有权的指针。 但是，如果你必须具有共享所有权的`shared_ptr`情况下，避免它们之间的循环引用。 当循环引用不可避免的或甚至更可取的方法因某种原因，请使用`weak_ptr`为一个或多个所有者提供对另一个的弱引用`shared_ptr`。 通过使用`weak_ptr`，你可以创建`shared_ptr`，可以将其联接到一组现有的相关的实例，但仅基础的内存资源是否仍然有效。 A`weak_ptr`本身不参与引用计数，而因此，它不能阻止从转到零的引用计数。 但是，你可以使用`weak_ptr`来试图获得的新副本`shared_ptr`与初始化它。 如果已删除内存， **bad_weak_ptr**引发异常。 如果仍有效的内存，新的共享的指针递增引用计数，并保证内存才会生效，只要`shared_ptr`变量保持在范围内。  
-  
+有时对象必须存储一种方法访问的基础对象`shared_ptr`而不会导致引用计数会递增。 当你具有之间进行循环引用时，通常情况下，出现这种情况`shared_ptr`实例。  
+
+ 最佳的设计是为了避免共享的所有权的指针，在可能的情况。 但是，如果您必须具有共享所有权的`shared_ptr`情况下，避免之间进行循环引用。 当循环引用不可避免的或甚至更可取出于某种原因，请使用`weak_ptr`为一个或多个所有者提供对另一个的弱引用`shared_ptr`。 通过使用`weak_ptr`，可以创建`shared_ptr`，可以将其联接到一组现有的相关实例，但仅基础内存资源是否仍有效。 一个`weak_ptr`本身不参与引用计数，并因此，它无法阻止引用计数转到为零。 但是，可以使用`weak_ptr`来尝试获取的新副本`shared_ptr`与它已初始化。 如果内存已被删除，`bad_weak_ptr`引发异常。 如果内存仍有效，新的共享的指针递增引用计数，并保证内存将生效，只要`shared_ptr`变量保持在范围内。  
+
 ## <a name="example"></a>示例  
- 下面的代码示例演示一种情况其中`weak_ptr`用于确保正确删除具有循环依赖项的对象。 在您检查示例，假定它创建仅后考虑替代解决方案了。 `Controller`对象代表机过程中，某个方面，这些独立运行。 每个控制器必须能够在任何时候，查询的其他控制器的状态和每个包含私有`vector<weak_ptr<Controller>>`为此目的。 每个矢量包含循环引用，因此，`weak_ptr`而不是使用实例`shared_ptr`。  
-  
+ 下面的代码示例显示了一种情况其中`weak_ptr`用于确保正确删除循环依赖项的对象。 检查示例时，假定它创建仅在考虑备用解决方案后。 `Controller`对象表示处理的某些方面，它们将独立运行。 每个控制器必须能够在任何时候，查询其他控制器的状态和每个包含私有`vector<weak_ptr<Controller>>`实现此目的。 每个向量包含循环引用，因此`weak_ptr`而不是使用实例`shared_ptr`。  
+
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
-  
+
 ```Output  
-Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+Creating Controller0  
+Creating Controller1  
+Creating Controller2  
+Creating Controller3  
+Creating Controller4  
+push_back to v[0]: 1  
+push_back to v[0]: 2  
+push_back to v[0]: 3  
+push_back to v[0]: 4  
+push_back to v[1]: 0  
+push_back to v[1]: 2  
+push_back to v[1]: 3  
+push_back to v[1]: 4  
+push_back to v[2]: 0  
+push_back to v[2]: 1  
+push_back to v[2]: 3  
+push_back to v[2]: 4  
+push_back to v[3]: 0  
+push_back to v[3]: 1  
+push_back to v[3]: 2  
+push_back to v[3]: 4  
+push_back to v[4]: 0  
+push_back to v[4]: 1  
+push_back to v[4]: 2  
+push_back to v[4]: 3
+use_count = 1  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = O  
+nStatus of 1 = On  
+Status of 2 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Destroying Controller0  
+Destroying Controller1  
+Destroying Controller2  
+Destroying Controller3  
+Destroying Controller4  
+Press any key  
 ```  
-  
- 进行试验，修改向量`others`要`vector<shared_ptr<Controller>>`，然后在输出中，记下，在没有析构函数进行调用时`TestRun`返回。  
-  
+
+ 试验一下，修改向量`others`要`vector<shared_ptr<Controller>>`，然后在输出中，请注意，在不析构函数进行调用时`TestRun`返回。  
+
 ## <a name="see-also"></a>请参阅  
  [智能指针](../cpp/smart-pointers-modern-cpp.md)

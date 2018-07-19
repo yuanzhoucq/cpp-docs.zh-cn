@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50ec60ef094660dfa722a3a5c1f73fd9141aeef4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964354"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream 类
 
@@ -41,15 +42,15 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-`Alloc` 分配器类中。
+*分配*的分配器类。
 
-`Elem` 字符串的基本元素的类型。
+*Elem*字符串的基本元素的类型。
 
 *Tr*字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
-该模板类描述了一个对象，该对象可通过使用 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区控制元素和编码对象的插入和提取，其中 **Elem** 类型的元素的字符特征由类 **Tr** 确定，且其元素由类 `Alloc` 的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+此模板类描述控制元素的插入和提取的对象和编码的对象使用类的流缓冲区[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>，类型的元素`Elem`，其字符特征由类`Tr`，并且其元素由类的分配器`Alloc`。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -96,15 +97,15 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>参数
 
-`_Mode` 中的枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`str` 类型的对象`basic_string`。
+*str*类型的对象`basic_string`。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) 来初始化基类，其中 **sb** 是类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 的存储对象。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode`)，它还可以初始化 **sb**。
+第一个构造函数通过调用来初始化基类[basic_iostream](../standard-library/basic-iostream-class.md)( **sb**)，其中`sb`是类的存储的对象[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**， `Alloc`>。 它还可以初始化`sb`通过调用 basic_stringbuf < **Elem**， **Tr**， `Alloc`> ( `_Mode`)。
 
-第二个构造函数通过调用 basic_iostream( **sb**) 初始化基类。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`)，它还可以初始化 **sb**。
+第二个构造函数通过调用 basic_iostream( **sb**) 初始化基类。 它还可以初始化`sb`通过调用 basic_stringbuf < **Elem**， **Tr**， `Alloc`> (_ *Str*， `_Mode`)。
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -116,7 +117,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>返回值
 
-返回到 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的**指针**类型的已存储流缓冲区的地址。
+类型的存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="example"></a>示例
 
@@ -136,7 +137,7 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-`_Newstr` 新的字符串。
+*_Newstr*新字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -148,7 +149,7 @@ void str(
 
 ### <a name="example"></a>示例
 
-请参阅 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)，了解使用 **str** 的示例。
+请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)有关的示例，使用`str`。
 
 ## <a name="see-also"></a>请参阅
 

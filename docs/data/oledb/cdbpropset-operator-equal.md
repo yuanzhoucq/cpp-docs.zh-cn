@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094177"
 ---
 # <a name="cdbpropsetoperator-"></a>CDBPropSet::operator =
 将一个属性集的内容分配给另一属性集。  

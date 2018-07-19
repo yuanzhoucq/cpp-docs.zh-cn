@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368754"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>确定要使用的导出方法
 您可以通过两种方法导出函数 - .def 文件或 `__declspec(dllexport)` 关键字。 为了帮助您决定哪种方法更适合您的 DLL，请考虑以下问题：  

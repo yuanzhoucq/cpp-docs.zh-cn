@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358972"
 ---
 # <a name="exception-handling-macros"></a>异常处理宏
 这些宏用于异常处理提供支持。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278904"
 ---
 # <a name="compiler-warning-level-1-c4555"></a>编译器警告（等级 1）C4555
 表达式无效；应输入带副作用的表达式  

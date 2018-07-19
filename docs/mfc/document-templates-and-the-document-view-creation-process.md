@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348086"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文档模板和文档/视图创建过程
 若要管理使用其关联的视图和框架窗口创建文档的复杂的过程，框架将使用两个文档模板类： [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)用于 SDI 应用程序和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)对于 MDI 应用程序。 `CSingleDocTemplate` 可以一次创建和存储一种类型的一个文档。 `CMultiDocTemplate` 保留一个类型的多个打开的文档的列表。  

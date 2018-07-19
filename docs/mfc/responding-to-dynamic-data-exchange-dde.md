@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379198"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>响应动态数据交换 (DDE)
 框架窗口可以响应动态数据交换 (DDE) 请求以从文件管理器打开文件（如果文件扩展名已被注册或已经与应用程序关联）。 请参阅[Shell 注册](../mfc/special-cwinapp-services.md)。  

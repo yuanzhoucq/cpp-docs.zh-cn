@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091482"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057921"
 ---
 # <a name="operator-mask"></a>运算符 MASK
 返回的位掩码顺序中的位*recordfieldname*或*记录*设置并清除所有其他位。  

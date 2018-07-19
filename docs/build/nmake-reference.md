@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372674"
 ---
 # <a name="nmake-reference"></a>NMAKE 参考
 Microsoft Program Maintenance Utility (NMAKE.EXE) 是 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 随附的命令行工具，它根据描述文件中包含的命令生成项目。  

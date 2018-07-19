@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354963"
 ---
 # <a name="elapsed-time-automation-classes"></a>运行时间： 自动化类
 此过程演示如何计算两个区别`CTime`对象和 get`CTimeSpan`结果。  

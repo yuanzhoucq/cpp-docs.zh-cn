@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350479"
 ---
 # <a name="output-device-context-classes"></a>输出（设备上下文）类
 这些类封装了不同类型的 Windows 中可用的设备上下文。  

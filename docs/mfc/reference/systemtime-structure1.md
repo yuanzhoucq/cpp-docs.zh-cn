@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372387"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME 结构 1
 `SYSTEMTIME`结构表示的日期和时间用于月份、 天、 年、 工作日、 小时、 分钟、 秒和毫秒的各个成员。  

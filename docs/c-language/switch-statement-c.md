@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392154"
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C)
 `switch` 和 **case** 语句帮助控制复杂条件和分支运算。 `switch` 语句将控制权转交给其主体中的语句。  

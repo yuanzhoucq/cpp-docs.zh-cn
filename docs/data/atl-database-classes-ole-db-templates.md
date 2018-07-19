@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089047"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 数据库类（OLE DB 模板）
 Microsoft 提供了多个 OLE DB，一组提供对各种信息源和格式中的数据的统一访问的 COM 接口的实现。  OLE DB 正式不推荐使用;本文档适用于开发人员而维护旧代码。 新的应用程序应使用 ODBC 连接到 SQL 数据源。

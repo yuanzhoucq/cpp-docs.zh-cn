@@ -1,5 +1,5 @@
 ---
-title: 标记语句 |Microsoft 文档
+title: 标记语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942372"
 ---
 # <a name="labeled-statements"></a>标记语句
 标签用于将程序控制权直接转交给特定语句。  
@@ -64,13 +65,13 @@ int main() {
   
  **Goto 语句**  
   
- 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了的使用`goto`语句和*标识符*标签：  
+ 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：  
   
  标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
   
  标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -89,9 +90,9 @@ int main() {
   
  **Case 语句**  
   
- 后显示的标签**用例**关键字不能外部显示`switch`语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
+ 后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -118,9 +119,9 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-case-statement"></a>case 语句中的标签  
- 后显示的标签**用例**关键字不能外部显示`switch`语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
+ 后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -162,13 +163,13 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签  
- 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了的使用`goto`语句和*标识符*标签：  
+ 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：  
   
  标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
   
  标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  

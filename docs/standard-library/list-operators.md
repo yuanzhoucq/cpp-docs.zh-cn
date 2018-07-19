@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: b2647cf836fb565115b8a582085b6108c01a3420
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965712"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 运算符
 
@@ -45,9 +46,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 
@@ -94,9 +95,9 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 
@@ -147,9 +148,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 
@@ -200,9 +201,9 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 
@@ -249,9 +250,9 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 
@@ -302,9 +303,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**列表**。
+*左*类型的对象`list`。
 
-`right` 类型的对象**列表**。
+*右*类型的对象`list`。
 
 ### <a name="return-value"></a>返回值
 

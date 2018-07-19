@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173020"
 ---
 # <a name="compiler-error-c2274"></a>编译器错误 C2274
 type： 非法作为右侧。 运算符  

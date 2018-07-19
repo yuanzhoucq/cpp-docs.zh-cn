@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688201"
 ---
 # <a name="taskhandle-class"></a>task_handle 类
 `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。  

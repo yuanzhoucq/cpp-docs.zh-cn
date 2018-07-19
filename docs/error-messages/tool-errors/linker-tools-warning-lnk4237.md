@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302862"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>链接器工具警告 LNK4237
 指定当从 dll; 导入的 /SUBSYSTEM:NATIVE使用 /SUBSYSTEM:CONSOLE 或 /SUBSYSTEM:WINDOWS。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879222"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
 开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 随后，你可以使用[资源包括对话框中](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  

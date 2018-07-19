@@ -22,15 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963519"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 类
 
-模板类 ostream_iterator 描述一个输出迭代器对象，该对象使用提取**运算符 <<** 将连续的元素写入输出流。
+模板类 ostream_iterator 描述输出迭代器对象，将使用提取的输出流的连续元素写入`operator <<`。
 
 ## <a name="syntax"></a>语法
 
@@ -43,9 +44,9 @@ class ostream_iterator
 
 *类型*要插入到输出流的对象类型。
 
-`CharType` 表示的字符类型的类型`ostream_iterator`。 此参数为可选参数，默认值为 `char`。
+*CharType*表示的字符类型的类型`ostream_iterator`。 此参数是可选的默认值是**char**。
 
-`Traits` 表示的字符类型的类型`ostream_iterator`。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
+*特征*表示的字符类型的类型`ostream_iterator`。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ostream_iterator 类必须满足对输出迭代器的需求。 可使用 `ostream_iterator` 直接向输出流中写入算法。
 
@@ -87,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 `CharType` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -235,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-`val` 类型的对象的值`Type`要插入到输出流。
+*val*类型的对象的值`Type`要插入到输出流。
 
 ### <a name="return-value"></a>返回值
 
-运算符将 `val` 插入到与对象相关联的输出流中，后跟 [ostream_iterator 构造函数](#ostream_iterator)中指定的分隔符（如果有），然后将引用返回到 `ostream_iterator`。
+运算符插入*val*到输出流中与对象相关联，跟中指定的分隔符[ostream_iterator 构造函数](#ostream_iterator)（如果有），然后返回的引用`ostream_iterator`.
 
 ### <a name="remarks"></a>备注
 
@@ -293,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>参数
 
-`_Ostr` 类型的输出流[ostream_iterator:: ostream_type](#ostream_type)来循环访问。
+*_Ostr*类型的输出流[ostream_iterator:: ostream_type](#ostream_type)来循环访问。
 
-`_Delimiter` 用于插入到输出流中值之间的分隔符。
+*（_d)* 插入到输出流值之间的分隔符。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数通过 `&_Ostr` 初始化输出流指针。 分隔符字符串指针将指定一个空字符串。
 
-第二个构造函数通过 `&_Ostr` 初始化输出流指针，并通过 `_Delimiter` 初始化分隔符字符串指针。
+第二个构造函数初始化与输出流指针`&_Ostr`并使用分隔符字符串指针 *（_d)*。
 
 ### <a name="example"></a>示例
 
@@ -376,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Traits** 的同义词。
+该类型是模板参数 `Traits` 的同义词。
 
 ### <a name="example"></a>示例
 

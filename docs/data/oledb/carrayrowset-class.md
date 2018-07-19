@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091097"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 使用数组语法访问行集的元素。  

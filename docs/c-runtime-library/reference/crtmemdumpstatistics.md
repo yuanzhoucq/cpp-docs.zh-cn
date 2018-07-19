@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32395599"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -70,7 +71,7 @@ void _CrtMemDumpStatistics(
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：**仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
+**库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
 
 ## <a name="see-also"></a>请参阅
 

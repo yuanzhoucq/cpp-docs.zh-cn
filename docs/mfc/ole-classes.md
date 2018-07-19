@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343507"
 ---
 # <a name="ole-classes"></a>OLE 类
 OLE 类可与其他应用程序框架类一起使用来方便对 ActiveX API 的访问，从而为您的程序可以很轻松地让用户获得 ActiveX 的强大功能。 利用 ActiveX，可以：  

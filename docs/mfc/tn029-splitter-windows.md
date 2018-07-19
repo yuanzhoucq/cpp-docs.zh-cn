@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957219"
 ---
 # <a name="tn029-splitter-windows"></a>TN029：拆分窗口
 此注释描述 MFC [CSplitterWnd 类](../mfc/reference/csplitterwnd-class.md)，提供了窗口将拆分和管理其他窗格中窗口的大小调整。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/04/2018
  窗格中：  
  应用程序特定窗口，`CSplitterWnd`管理。 窗格中通常是一个对象，派生自[CView 类](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)具有适当的子窗口 ID 的对象  
   
- 若要使用`CWnd`-派生对象，则传递`RUNTIME_CLASS`对象与`CreateView`发挥如果已使用`CView`-派生类。 你的类必须使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`因为框架将使用在运行时动态创建。 尽管没有大量的代码中但`CSplitterWnd`特定于`CView`类， [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)之前执行这些操作时始终使用。  
+ 若要使用`CWnd`-派生对象，则传递到的对象 RUNTIME_CLASS`CreateView`如果已使用发挥`CView`-派生类。 你的类必须使用 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE，因为框架将使用在运行时动态创建。 尽管没有大量的代码中但`CSplitterWnd`特定于`CView`类， [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof)之前执行这些操作时始终使用。  
   
  拆分栏：  
  行和列的窗格之间放置一个控件。 它可能用于调整大小的行或列的窗格。  
@@ -87,14 +88,14 @@ ms.lasthandoff: 05/04/2018
 [      ][      ][v]  
 ```  
   
- 当用户将在滚动条`WM_VSCROLL`消息将发送到这两个视图。 如果其中任意一个视图设置滚动条的位置，则会将设置共享的滚动条。  
+ 当用户将滚动条时，WM_VSCROLL 消息将发送到这两个视图。 如果其中任意一个视图设置滚动条的位置，则会将设置共享的滚动条。  
   
  请注意，共享的滚动条具有类似的视图对象最有用。 如果混合拆分中不同类型的视图，你可能需要编写特殊的代码来协调它们的滚动位置。 任何`CView`-派生类，该类使用`CWnd`如果它存在 Api 会将委托到共享的滚动条的滚动条。 `CScrollView`实现是一个示例`CView`支持的类共享滚动条。 不派生自的类`CView`，依赖于非控件滚动条的类或使用标准的 Windows 实现的类 (例如， `CEditView`) 不会使用的共享的滚动栏功能`CSplitterWnd`。  
   
 ## <a name="minimum-sizes"></a>最小大小  
  对于每个行中，没有最小行高度，并且为每个列没有小列宽。 满足此最低值保证窗格不太小，无法在完整的详细信息中显示。  
   
- 静态拆分窗口，在初始的最小行高度和列的宽度为 0。 动态拆分窗口，在初始的最小行的高度和列宽度由设置`sizeMin`参数`CSplitterWnd::Create`函数。  
+ 静态拆分窗口，在初始的最小行高度和列的宽度为 0。 动态拆分窗口，在初始的最小行的高度和列宽度由设置*sizeMin*参数`CSplitterWnd::Create`函数。  
   
  你可以通过更改这些最小大小[CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo)和[CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo)函数。  
   

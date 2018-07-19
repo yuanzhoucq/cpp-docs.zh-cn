@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953070"
 ---
 # <a name="gslicearray-class"></a>gslice_array 类
 
@@ -75,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>备注
 
-该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的 **va** 对象及 [gslice](../standard-library/gslice-class.md) 类的 **gs** 对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。
+此类描述的对象将存储对对象的引用`va`类的[valarray](../standard-library/valarray-class.md)**\<类型 >**，对象及`gs`类的[gslice](../standard-library/gslice-class.md)它描述了要从选择的元素序列`valarray<Type>`对象。
 
-只通过写入 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 形式的表达式即可构造 **gslice_array\<Type>** 对象。 然后 gslice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应的函数签名，只不过仅所选的元素的序列受到影响。
+在构造`gslice_array<Type>`只通过写入形式的表达式的对象[va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)。 Gslice_array 类的成员函数，然后就像是为定义的对应函数签名`valarray<Type>`，只不过仅所选元素的序列受到影响。
 
 此模板类由某些 valarray 运算间接创建，无法直接在程序中使用。 相反，切分下标运算符使用内部辅助模板类：
 
 `gslice_array`\<**Type**> `valarray`\<**Type**>:: `operator[]` ( **constgslice&**).
 
-对于 valarray **va** 的切分 **gsl**，仅通过编写 **va[gsl]** 形式的表达式构造 **gslice_array\<Type>** 对象。 然后 gslice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应的函数签名，只不过仅所选的元素的序列受到影响。 gslice_array 控制的序列由此切分构造函数的三个参数定义，即第一个切分中第一个元素的索引、每个切分中的元素数和每个切分中元素间的距离。
+在构造`gslice_array<Type>`只通过写入形式的表达式的对象`va[gsl]`，切片`gsl`valarray 的`va`。 Gslice_array 类的成员函数，然后就像是为定义的对应函数签名`valarray<Type>`，只不过仅所选元素的序列受到影响。 gslice_array 控制的序列由此切分构造函数的三个参数定义，即第一个切分中第一个元素的索引、每个切分中的元素数和每个切分中元素间的距离。
 
 如下示例中：
 

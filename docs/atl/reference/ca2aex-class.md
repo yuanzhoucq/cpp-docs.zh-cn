@@ -1,5 +1,5 @@
 ---
-title: CA2AEX 类 |Microsoft 文档
+title: CA2AEX 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdbdebb1ab79ceab44a408fc182b6037f2d32fae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94e9c33fb69b439cc6c99d87d00d24f60e87d780
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882125"
 ---
 # <a name="ca2aex-class"></a>CA2AEX 类
-此类由字符串转换宏`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
+字符串转换宏 CA2TEX 和 CT2AEX 和 typedef CA2A 使用此类。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +41,8 @@ class CA2AEX
 ```  
   
 #### <a name="parameters"></a>参数  
- `t_nBufferLength`  
- 在转换过程中使用的缓冲区大小。 默认长度为 128 个字节。  
+ *t_nBufferLength*  
+ 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。  
   
 ## <a name="members"></a>成员  
   
@@ -62,27 +63,27 @@ class CA2AEX
   
 |名称|描述|  
 |----------|-----------------|  
-|[CA2AEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
-|[CA2AEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储已转换的字符串。|  
+|[CA2AEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
+|[CA2AEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储转换后的字符串。|  
   
 ## <a name="remarks"></a>备注  
- 除非需要额外功能，则使用`CA2TEX`， `CT2AEX`，或**CA2A**你自己的代码中。  
+ 除非需要额外的功能，则使用 CA2TEX、 CT2AEX 或 CA2A 中你自己的代码。  
   
- 此类包含固定大小静态缓冲区，用于存储转换的结果。 如果结果过大，无法放入静态缓冲区，则该类将使用 `malloc` 分配内存，并在对象超出范围时释放内存。 这样可确保，像文本转换宏可用在以前版本的 ATL，此类可以安全地在循环中使用和它不会溢出堆栈。  
+ 此类包含固定大小的静态缓冲区用于存储转换的结果。 如果结果太大而无法放入静态缓冲区，类分配内存使用**malloc**，当对象超出范围时释放内存。 这样可确保与不同的文本转换宏可在以前版本的 ATL，此类可以安全地在循环中使用和堆栈不会溢出。  
   
- 如果类尝试分配内存堆和失败，它将调用`AtlThrow`用参数**E_OUTOFMEMORY**。  
+ 如果类尝试分配内存堆和失败时，它将调用`AtlThrow`用 E_OUTOFMEMORY 自变量。  
   
- 默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。  
+ 默认情况下，ATL 转换类和宏用于当前线程的 ANSI 代码页转换。  
   
- 在此类基于以下宏：  
+ 下列宏基于此类：  
   
-- `CA2TEX`  
+- CA2TEX  
   
-- `CT2AEX`  
+- CT2AEX  
   
  以下 typedef 基于此类：  
   
-- **CA2A**  
+- CA2A  
   
  这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)。  
   
@@ -101,14 +102,14 @@ CA2AEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `psz`  
+ *psz*  
  要转换的文本字符串。  
   
- `nCodePage`  
- 在此类中未使用。  
+ *nCodePage*  
+ 未使用此类。  
   
 ### <a name="remarks"></a>备注  
- 创建转换所需的缓冲区。  
+ 创建所需的翻译的缓冲区。  
   
 ##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX  
  析构函数。  
@@ -118,17 +119,17 @@ CA2AEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放已分配的缓冲区。  
+ 释放分配的缓冲区。  
   
 ##  <a name="m_psz"></a>  CA2AEX::m_psz  
- 将源字符串存储数据成员。  
+ 将源字符串存储的数据成员。  
   
 ```
 LPSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer  
- 静态缓冲区，用于存储已转换的字符串。  
+ 静态缓冲区，用于存储转换后的字符串。  
   
 ```
 char m_szBuffer[ t_nBufferLength];
@@ -142,7 +143,7 @@ operator LPSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回文本字符串作为类型**LPSTR**。  
+ 返回文本字符串，键入 LPSTR。  
   
 ## <a name="see-also"></a>请参阅  
  [CA2CAEX 类](../../atl/reference/ca2caex-class.md)   

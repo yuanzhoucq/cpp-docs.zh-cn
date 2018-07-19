@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880600"
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 在命名空间范围内声明枚举，该枚举是用户定义的类型，其包含称为枚举数的一组命名常数。  

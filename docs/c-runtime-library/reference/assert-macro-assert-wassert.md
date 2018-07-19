@@ -43,6 +43,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32397836"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 
@@ -84,7 +85,7 @@ void _wassert(
 
 诊断消息将用宽字符打印。 因此，它将按预期工作，即使表达式中存在 Unicode 字符也是如此。
 
-诊断消息的目标取决于调用例程的应用程序的类型。 控制台应用程序始终接收通过消息**stderr**。 在基于 Windows 的应用程序，**断言**调用 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)函数来创建一个消息框以显示消息以及**确定**按钮。 当用户单击 **“确定”**后，程序将立即中止。
+诊断消息的目标取决于调用例程的应用程序的类型。 控制台应用程序始终接收通过消息**stderr**。 在基于 Windows 的应用程序，**断言**调用 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)函数来创建一个消息框以显示消息以及**确定**按钮。 当用户单击 **“确定”** 后，程序将立即中止。
 
 当运行时库的调试版本链接应用程序**断言**创建带三个按钮的消息框：**中止**，**重试**，和**忽略**。 如果用户单击 **“中止”**，则程序将立即中止。 如果用户单击 **“重试”**，则将调用调试器，之后用户可以调试程序，前提是启用了实时 (JIT) 调试。 如果用户单击**忽略**，**断言**继续其常规执行： 创建带的消息框**确定**按钮。 请注意，当存在错误条件时单击 **“忽略”** 可能导致未定义的行为。
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691894"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 数据共享特性子句
 多个指令接受允许用户控制变量的共享属性区域的持续时间内的子句。 共享特性子句仅适用于子句在其显示的指令的词法范围中的变量。 并非所有以下子句可以在所有指令。 指令一起描述了在特定指令都有效的子句的列表。  

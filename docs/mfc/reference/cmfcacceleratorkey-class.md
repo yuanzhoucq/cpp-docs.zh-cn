@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039776"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 类
 实现虚拟键映射和格式设置的帮助器类。  
@@ -79,7 +80,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpAccel`  
+ [in]*lpAccel*  
  指向的快捷键的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -93,7 +94,7 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `str`  
+ [out]*str*  
  对引用`CString`方法写入的已翻译的快捷键的位置的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -107,7 +108,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpAccel`  
+ [in]*lpAccel*  
  指向的快捷键的指针。  
   
 ### <a name="remarks"></a>备注  

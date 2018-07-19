@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174145"
 ---
 # <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
 托管类型的用户定义运算符可用作静态成员或实例成员，或者在全局范围内使用。 但是，使用除 Visual C++ 之外的语言编写的客户端通过元数据仅可以访问静态运算符。  

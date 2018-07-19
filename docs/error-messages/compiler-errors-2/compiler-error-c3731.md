@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275299"
 ---
 # <a name="compiler-error-c3731"></a>编译器错误 C3731
 function1 不兼容事件和处理程序 function2;事件源和事件处理程序必须是同一类型  

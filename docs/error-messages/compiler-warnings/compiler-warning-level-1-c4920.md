@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290044"
 ---
 # <a name="compiler-warning-level-1-c4920"></a>编译器警告（等级 1）C4920
 enum enum member member=value 在 enum enum 中被视为 member=value  

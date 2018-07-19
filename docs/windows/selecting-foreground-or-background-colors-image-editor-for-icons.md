@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888641"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>选择前景色或背景色（图标的图像编辑器）
 除**橡皮擦**上的工具**图像编辑器**使用当前前景色或背景色时分别按左或向右鼠标按钮，工具栏绘图。  

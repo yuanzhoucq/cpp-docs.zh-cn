@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS 结构 1 |Microsoft 文档
+title: WINDOWPOS 结构 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885957"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 结构 1
-`WINDOWPOS`结构包含有关的大小和窗口的位置的信息。  
+`WINDOWPOS`结构包含有关大小和窗口位置信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,40 +53,40 @@ typedef struct tagWINDOWPOS { /* wp */
  *y*  
  指定窗口的右边缘的位置。  
   
- `cx`  
+ *cx*  
  指定的窗口宽度，以像素为单位。  
   
- `cy`  
- 指定以像素为单位的窗口高度。  
+ *cy*  
+ 以像素为单位指定窗口高度。  
   
- `flags`  
- 指定窗口定位选项。 此成员可以是以下值之一：  
+ *flags*  
+ 指定窗口定位选项。 此成员可以是下列值之一：  
   
-- **SWP_DRAWFRAME**窗口周围绘制 （在窗口的类描述中定义） 的帧。 该窗口才接收`WM_NCCALCSIZE`消息。  
+- SWP_DRAWFRAME 绘制的窗口周围帧 （在窗口类说明中定义）。 在窗口接收 WM_NCCALCSIZE 消息。  
   
-- **SWP_FRAMECHANGED**发送`WM_NCCALCSIZE`消息到窗口中，即使未发生更改窗口的大小。 如果未指定此标志，`WM_NCCALCSIZE`仅更改窗口的大小时发送。  
+- SWP_FRAMECHANGED 发送 WM_NCCALCSIZE 消息到窗口中，即使不会更改窗口的大小。 如果未指定此标志，该窗口的大小正在更改时才发送 WM_NCCALCSIZE。  
   
-- **SWP_HIDEWINDOW**隐藏窗口。  
+- SWP_HIDEWINDOW 隐藏窗口。  
   
-- `SWP_NOACTIVATE` 不会激活窗口。  
+- SWP_NOACTIVATE 不会激活窗口。  
   
-- **SWP_NOCOPYBITS**放弃的工作区的全部内容。 如果未指定此标志，客户端区域的有效内容会保存，并且之后的窗口在大小或重新定位复制回的工作区。  
+- SWP_NOCOPYBITS 放弃的工作区的全部内容。 如果未指定此标志，客户端区域中的有效内容保存并复制到工作区后的窗口大小或重新定位。  
   
-- `SWP_NOMOVE` 保留当前的位置 (将忽略**x**和**y**成员)。  
+- SWP_NOMOVE 保留当前的位置 (将忽略`x`和`y`成员)。  
   
-- **SWP_NOOWNERZORDER**不会更改中的 Z 顺序的所有者窗口的位置。  
+- SWP_NOOWNERZORDER 不会更改在 Z 顺序中的所有者窗口的位置。  
   
-- `SWP_NOSIZE` 保留当前大小 (忽略**cx**和**cy**成员)。  
+- SWP_NOSIZE 保留当前大小 (将忽略`cx`和`cy`成员)。  
   
-- **SWP_NOREDRAW**不重绘更改。  
+- SWP_NOREDRAW 不重绘更改。  
   
-- **SWP_NOREPOSITION**相同**SWP_NOOWNERZORDER**。  
+- SWP_NOREPOSITION SWP_NOOWNERZORDER 与相同。  
   
-- **SWP_NOSENDCHANGING**窗口防止接收`WM_WINDOWPOSCHANGING`消息。  
+- SWP_NOSENDCHANGING 会阻止接收 WM_WINDOWPOSCHANGING 消息窗口。  
   
-- `SWP_NOZORDER` 保留当前排序 (忽略**hwndInsertAfter**成员)。  
+- SWP_NOZORDER 保留当前的订购 (忽略`hwndInsertAfter`成员)。  
   
-- **SWP_SHOWWINDOW**显示窗口。  
+- SWP_SHOWWINDOW 显示窗口。  
   
 ## <a name="requirements"></a>要求  
  **标头：** winuser.h  

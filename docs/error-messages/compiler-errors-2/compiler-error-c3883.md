@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268848"
 ---
 # <a name="compiler-error-c3883"></a>编译器错误 C3883
 var： 必须初始化 initonly 静态数据成员  

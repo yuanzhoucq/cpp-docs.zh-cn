@@ -1,5 +1,5 @@
 ---
-title: _variant_t 关系运算符 |Microsoft 文档
+title: _variant_t 关系运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663d8e24af8362de8ea809bc37a68c33d3278bc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942477"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t 关系运算符
 **Microsoft 专用**  
@@ -40,32 +41,28 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator==(  
-   const VARIANT& varSrc   
-) const;  
 bool operator==(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT& varSrc) const;  
+bool operator==(  
+   const VARIANT* pSrc) const;  
 bool operator!=(  
-   const VARIANT& varSrc   
-) const;  
+   const VARIANT& varSrc) const;  
 bool operator!=(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT* pSrc) const;  
 ```  
   
 #### <a name="parameters"></a>参数  
  *varSrc*  
- A **VARIANT**与比较`_variant_t`对象。  
+ 一个`VARIANT`进行比较与`_variant_t`对象。  
   
- `pSrc`  
- 指向**VARIANT**与比较`_variant_t`对象。  
+ *pSrc*  
+ 指向`VARIANT`进行比较与`_variant_t`对象。  
   
 ## <a name="return-value"></a>返回值  
- 返回**true**如果比较保留， **false**如果不是。  
+ 返回 **，则返回 true**如果比较保留， **false**如果不是。  
   
 ## <a name="remarks"></a>备注  
- 比较`_variant_t`对象**VARIANT**测试它们是否相等。  
+ 比较`_variant_t`对象与`VARIANT`，测试是否相等。  
   
  **结束 Microsoft 专用**  
   

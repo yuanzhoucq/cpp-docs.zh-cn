@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368608"
 ---
 # <a name="precedence-in-macro-definitions"></a>宏定义中的优先级
 如果宏具有多个定义，NMAKE 使用优先级最高的定义。 以下列表显示优先级从高到最低的顺序：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  预定义的宏，如[CC](../build/command-macros-and-options-macros.md)和[AS](../build/command-macros-and-options-macros.md)  
   
- 使用 /E 会导致从环境变量重写一个同名的生成文件宏继承的宏。 使用**！UNDEF**重写命令行。  
+ 使用 /E 会导致从环境变量重写一个同名的生成文件宏继承的宏。 使用 **！UNDEF**重写命令行。  
   
 ## <a name="see-also"></a>请参阅  
  [定义 NMAKE 宏](../build/defining-an-nmake-macro.md)

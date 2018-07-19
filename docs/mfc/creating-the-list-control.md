@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342041"
 ---
 # <a name="creating-the-list-control"></a>创建列表控件
 如何控制列表 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 创建取决于是否你直接使用该控件，或使用类[CListView](../mfc/reference/clistview-class.md)相反。 如果你使用`CListView`，该框架构造该视图作为其文档/视图创建序列的一部分。 创建列表视图创建列表控件也 （二者是相同的操作）。 在视图中的创建控件[OnCreate](../mfc/reference/cwnd-class.md#oncreate)处理程序函数。 在这种情况下，控件可供你添加项，通过调用[GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)。  

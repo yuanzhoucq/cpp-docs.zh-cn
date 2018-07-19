@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391439"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家/地区名称列表，请参阅[国家语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 在列表中，国家/地区字符串可以是“区域设置 - 语言国家/地区”列中的任何国家/地区值，或“国家或地区名称缩写”列中的任何缩写。 有关 Windows 操作系统（按版本）中的其他语言支持信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092313"
 ---
 # <a name="dynaset"></a>动态集
 本主题介绍动态集，并讨论了其[可用性](#_core_availability_of_dynasets)。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361965"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 项目的编译器优化
 默认情况下， [ATL 控件向导](../../atl/reference/atl-control-wizard.md)生成 ATL_NO_VTABLE 宏，使用的新类，如下所示：  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891716"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件
 Winmdidl.exe 和 midlrt.exe 可在本机 C++ 代码与 Windows 运行时组件之间实现 COM 级别交互。 Winmdidl.exe 采用包含 Windows 运行时组件元数据的 .winmd 文件作为输入，并输出 IDL 文件。 Midlrt.exe 将该 IDL 文件转换为 C++ 代码可以使用的头文件。 这两个工具都在命令行上运行。  

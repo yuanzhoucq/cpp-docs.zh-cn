@@ -1,5 +1,5 @@
 ---
-title: 辅助 Archetype |Microsoft 文档
+title: 辅助原型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,49 +14,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881300"
 ---
 # <a name="worker-archetype"></a>辅助原型
-类符合*辅助*archetype 提供到过程工作项的代码在线程池上排队。  
+类符合*辅助*原型提供线程池上排队进程的工作项的代码。  
   
  **实现**  
   
- 若要实现此 archetype 符合的类，类必须提供以下功能：  
+ 若要实现符合此原型的类，类必须提供以下功能：  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Initialize](#initialize)|调用以初始化辅助对象，任何请求传递到前[执行](#execute)。|  
+|[Initialize](#initialize)|调用以初始化辅助对象之前的任何请求传递给[Execute](#execute)。|  
 |[执行](#execute)|调用以处理工作项。|  
-|[终止](#terminate)|调用的所有请求都传递给后取消初始化辅助对象[执行](#execute)。|  
+|[终止](#terminate)|被调用的所有请求都传递给后取消初始化辅助对象[Execute](#execute)。|  
   
 |Typedef|描述|  
 |-------------|-----------------|  
-|[RequestType](#requesttype)|可由辅助类处理的工作项的类型的 typedef。|  
+|[RequestType](#requesttype)|可以由辅助类处理的工作项类型的 typedef。|  
   
- 典型*辅助*类类似如下所示：  
+ 典型*辅助*类如下所示：  
   
  [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
- **现有实现**  
+ **现有的实现**  
   
  这些类符合此原型：  
   
 |类|描述|  
 |-----------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|在线程池中接收请求，并将它们传递到创建和销毁为每个请求的辅助对象。|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|从线程池接收请求并将它们传递到一个辅助角色对象的创建和销毁为每个请求。|  
   
  **使用**  
   
- 这些模板参数预期要符合此 archetype 的类：  
+ 这些模板参数预期要符合此原型的类：  
   
 |参数名称|通过者|  
 |--------------------|-------------|  
-|*辅助进程*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
-|*辅助进程*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
+|*辅助角色*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
+|*辅助角色*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
 ### <a name="requirements"></a>要求  
  **标头：** atlutil.h  
@@ -74,47 +75,47 @@ void Execute(
 ```  
   
 #### <a name="parameters"></a>参数  
- `request`  
- 要处理的工作项。 在工作项已与相同类型`RequestType`。  
+ *请求*  
+ 要处理的工作项。 工作项是与相同类型的`RequestType`。  
   
- `pvWorkerParam`  
+ *pvWorkerParam*  
  理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`Terminate`。  
   
- `pOverlapped`  
- 指向的指针[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)用于创建的队列的工作项排队等待的结构。  
+ *给 pOverlapped*  
+ 一个指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)用来创建的队列的工作项排队等待的结构。  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
-调用以初始化辅助对象，任何请求传递到前`WorkerArchetype::Execute`。  
+调用以初始化辅助对象之前的任何请求传递给`WorkerArchetype::Execute`。  
 ```
 BOOL Initialize(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- `pvParam`  
+ *pvParam*  
  理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。  
   
 ### <a name="return-value"></a>返回值  
- 返回**TRUE**成功后， **FALSE**失败。  
+ 如果成功，返回 TRUE FALSE 失败。  
   
 ## <a name="requesttype"></a> WorkerArchetype::RequestType
-可由辅助类处理的工作项的类型的 typedef。  
+可以由辅助类处理的工作项类型的 typedef。  
   
 ```  
 typedef MyRequestType RequestType;    
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型必须使用的第一个参数作为`WorkerArchetype::Execute`，并且必须能够与其他 ULONG_PTR 强制转换。  
+ 此类型必须使用作为第一个参数`WorkerArchetype::Execute`，并且必须能够与 ULONG_PTR 要强制转换。  
   
 ## <a name="terminate"></a> WorkerArchetype::Terminate
-调用的所有请求都传递给后取消初始化辅助对象`WorkerArchetype::Execute`)。  
+被调用的所有请求都传递给后取消初始化辅助对象`WorkerArchetype::Execute`)。  
     
 ``` 
 void Terminate(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- `pvParam`  
+ *pvParam*  
  理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。  
   
 ## <a name="see-also"></a>请参阅  

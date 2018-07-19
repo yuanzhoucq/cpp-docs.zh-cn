@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961501"
 ---
 # <a name="logicalor-struct"></a>logical_or 结构
 
@@ -48,11 +49,11 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>参数
 
-`Type``T`，`U`支持任何类型`operator||`接受的操作数的指定或推断类型。
+*类型*， *T*， *U*支持任何类型`operator||`接受指定或推断类型的操作数。
 
-`Left` 逻辑析取运算的左的操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。
+*左侧*逻辑析取运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-`Right` 逻辑析取运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。
+*右*逻辑析取运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 

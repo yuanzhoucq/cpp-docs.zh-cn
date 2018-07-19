@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693190"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 此分步演练演示如何使用 c + + AMP 来加快矩阵相乘的执行。 提供两种算法，另一个未平铺和一个平铺。  

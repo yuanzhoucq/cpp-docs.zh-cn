@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170643"
 ---
 # <a name="user-defined-conversions-ccli"></a>用户定义的转换 (C++/CLI)
 本部分讨论用户定义的转换 (UDC) 中转换的类型之一时引用或值类型或引用类型的实例。  

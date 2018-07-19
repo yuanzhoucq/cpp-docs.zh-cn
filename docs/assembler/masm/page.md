@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057982"
 ---
 # <a name="page"></a>PAGE
 第一个指令将设置行*长度*和字符*宽度*的程序列表。 如果未提供参数，将生成一个分页符。 第二个指令形式递增的节号，并将页码重置为 1。  

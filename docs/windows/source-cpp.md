@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889857"
 ---
 # <a name="source-c"></a>source (C++)
 上一个类，指定连接点的 COM 对象的源接口。 在属性或方法，指示的成员返回的对象或作为源的事件的变体。  

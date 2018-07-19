@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356549"
 ---
 # <a name="providing-flicker-free-activation"></a>提供无闪烁激活
 如果控件处于非活动和活动状态相同绘制本身 （和不使用无窗口激活），则可以消除绘制操作和伴随通常发生在进行间处于非活动状态的转换时的可视闪烁和活动状态。 若要执行此操作，包括**noFlickerActivate**标志返回集中的标志[COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如：  

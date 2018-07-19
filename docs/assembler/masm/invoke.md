@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055165"
 ---
 # <a name="invoke"></a>INVOKE
 在给定的地址调用过程*表达式*，并将参数传递到堆栈上或在寄存器中根据语言类型的标准调用约定。  

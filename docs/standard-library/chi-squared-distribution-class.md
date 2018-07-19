@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 562e522d695b20795d59f90dc1f166b4dfe44874
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959240"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution 类
 
@@ -75,13 +76,13 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 *URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了生成用户指定的浮点类型或根据卡方分布分配的 `double` 类型（如果未提供任何内容）的值的分配。 下表链接到有关各个成员的文章。
+此模板类将描述产生的值的用户指定的浮点类型**double**如果未提供任何内容，卡方分布根据分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -244,7 +245,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 *n* `n`分布参数。
 
-*参数*用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
@@ -273,7 +274,7 @@ struct param_type {
 
 *n* `n`分布参数。
 
-*右*`param_type`要比较的此对象。
+*右*`param_type`要与此比较的对象。
 
 ### <a name="remarks"></a>备注
 

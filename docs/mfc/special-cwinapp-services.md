@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955867"
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服务
 除了运行消息循环以及支持您初始化应用程序然后清理它， [CWinApp](../mfc/reference/cwinapp-class.md)提供了一些其他服务。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/04/2018
   
  如果你想要为你的应用程序初始化 GDI + (通过调用[GdiplusStartup](https://msdn.microsoft.com/library/ms534077)中你[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函数)，您必须禁止 GDI + 后台线程。  
   
- 你可以执行此操作通过设置**SuppressBackgroundThread**的成员[GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)结构**TRUE**。 当禁止 GDI + 后台线程， **NotificationHook**和**NotificationUnhook**应进行呼叫之前进入和退出应用程序的消息循环。 有关这些调用的详细信息，请参阅[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，调用的良好开端**GdiplusStartup**和挂钩通知函数将中的虚函数重写[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
+ 你可以执行此操作通过设置`SuppressBackgroundThread`的成员[GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)结构**TRUE**。 当禁止 GDI + 后台线程，`NotificationHook`和`NotificationUnhook`应进行呼叫之前进入和退出应用程序的消息循环。 有关这些调用的详细信息，请参阅[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，调用的良好开端`GdiplusStartup`和挂钩通知函数将中的虚函数重写[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

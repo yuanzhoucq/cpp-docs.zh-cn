@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381702"
 ---
 # <a name="c-tokens"></a>C 标记
 在 C 源程序中，编译器识别的基本元素是“标记”。 标记是编译器不会分解为组件元素的源程序文本。  

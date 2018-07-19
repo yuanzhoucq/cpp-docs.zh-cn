@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686680"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 类
 此类描述因未能在并发运行时中获取关键资源而引发的异常。  

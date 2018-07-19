@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378254"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD（使用运行时库）
 指示多线程模块是否为 DLL，并指定运行库的零售版本或调试版本。  

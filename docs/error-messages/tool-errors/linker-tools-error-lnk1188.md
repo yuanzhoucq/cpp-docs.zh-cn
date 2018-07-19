@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302615"
 ---
 # <a name="linker-tools-error-lnk1188"></a>链接器工具错误 LNK1188
 BADFIXUPSECTION:: 无效的修正目标 symbol;可能零长度部分  

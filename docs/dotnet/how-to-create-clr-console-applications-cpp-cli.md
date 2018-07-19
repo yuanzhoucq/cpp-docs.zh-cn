@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132565"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C++/CLI)
 你可以使用控制台应用程序模板创建已具有基本项目引用和文件的控制台应用程序项目。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
-2.  在 **“新建项目”** 对话框中的 **“已安装的模块”**窗口下，依次选择 **“Visual C++”** 节点、 **“CLR”** 节点和“控制台应用程序”模板。  
+2.  在 **“新建项目”** 对话框中的 **“已安装的模块”** 窗口下，依次选择 **“Visual C++”** 节点、 **“CLR”** 节点和“控制台应用程序”模板。  
   
 3.  在“名称”  框中，输入你的应用程序的唯一名称。  
   

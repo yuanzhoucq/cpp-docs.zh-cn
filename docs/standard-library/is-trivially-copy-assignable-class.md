@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953961"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable 类
 
@@ -35,13 +36,13 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是具有普通复制赋值运算符的类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*T*是具有普通复制赋值运算符，否则为 false 的类。
 
-如果类 `T` 的赋值构造函数为隐式提供，则为普通类，类 `T` 不具有虚拟函数，类 `T` 不具有虚拟基，类类型的所有非静态数据成员的类都具有普通赋值运算符，且类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
+一个类的赋值构造函数*T*并不重要，如果它隐式提供，该类*T*没有虚函数，类*T*没有虚拟基，类类类型的所有非静态数据成员具有普通赋值运算符和类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
 
 ## <a name="requirements"></a>要求
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105733"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 提供的实现[IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)接口。  

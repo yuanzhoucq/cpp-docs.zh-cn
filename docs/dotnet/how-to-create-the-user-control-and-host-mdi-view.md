@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136478"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：创建用户控件并承载 MDI 视图
 以下步骤演示如何创建.NET Framework 用户控件创作控件类库 （具体而言，Windows 控件库项目） 中的用户控件，然后将项目编译为程序集。 从 MFC 应用程序使用派生自的类也可以使用控件[CView 类](../mfc/reference/cview-class.md)和[CWinFormsView 类](../mfc/reference/cwinformsview-class.md)。  

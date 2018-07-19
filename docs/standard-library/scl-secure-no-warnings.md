@@ -18,21 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965495"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-调用 c + + 标准库中的任何潜在的不安全的方法会导致[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要禁用此警告，可在代码中将宏定义为 **_SCL_SECURE_NO_WARNINGS**：
+调用 c + + 标准库中的任何潜在的不安全的方法会导致[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要禁用此警告，请在代码中定义宏 _SCL_SECURE_NO_WARNINGS:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-如果你使用预编译标头，预编译标头文件中放置此指令之前包括任何 C 运行库或标准库头文件。 如果你之前包含预编译的头文件将其放入单独的源代码文件，它会忽略编译器。
+如果使用预编译标头，此指令在预编译的头文件中先将包括任何 C 运行时库或标准库标头。 如果你包含预编译的头文件之前将其放入单个源代码文件中，它将忽略编译器。
 
 ## <a name="remarks"></a>备注
 

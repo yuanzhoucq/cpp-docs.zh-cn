@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375681"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
 Microsoft 基础类库可以分成两个主要部分: （1） 的 MFC 类和 （2） 宏和全局函数。 如果函数或变量不是类的成员，则全局函数或变量。  

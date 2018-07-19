@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121833"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 类
 利用可拆分的选项卡实现窗格的功能。  
@@ -79,7 +80,7 @@ class CTabbedPane : public CBaseTabbedPane
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|选项卡在应用程序中的的默认位置。|  
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|自定义 `CMFCTabCtrl`-派生对象的运行时类信息。|  
@@ -87,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>备注  
  当用户通过将一个窗格指向第二个窗格的标题的方式来附加到另一个窗格，框架自动创建此类的实例。 由框架创建的所有选项卡式窗格都具有值为 -1 的 ID。  
   
- 若要指定常规选项卡，而不是 Outlook 样式的选项卡，将传递`AFX_CBRS_REGULAR_TABS`样式到[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
+ 若要指定常规选项卡，而不是 Outlook 样式的选项卡，将传递到的 AFX_CBRS_REGULAR_TABS 样式[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
   
  如果你使用可拆离的选项卡创建一个选项卡式窗格，该窗格可能会被框架自动销毁，因此，你不应该存储该指针。 若要获取对选项卡式窗格的指针，请调用 `CBasePane::GetParentTabbedPane` 方法。  
   
@@ -176,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `bHide`  
+ [in]*pBar*  
+ [in]*bHide*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -191,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
- `TRUE` 若要启用自动着色的选项卡。否则为`FALSE`。  
+ [in]*bEnable*  
+ 若要启用自动着色的选项卡。否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此静态方法用于启用或禁用自动在应用程序中的所有选项卡式窗格中的选项卡着色。 启用此功能后，由其自己的颜色填充每个选项卡。 你可以查找用于通过调用颜色选项卡的颜色的列表[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
@@ -213,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in]*pBar*  
+ [in]*nTabID*  
+ [in]*dockMethod*  
+ [in]*bHide*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -232,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectTabAreaTop`  
+ [out]*rectTabAreaTop*  
  包含的大小和顶部的选项卡区域的位置，在屏幕坐标。  
   
- [out] `rectTabAreaBottom`  
+ [out]*rectTabAreaBottom*  
  包含的大小和底部选项卡区域的位置，在屏幕坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -273,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果选项卡区域位于底部的选项卡式窗口中;否则为`FALSE`。  
+ 选项卡区域位于底部的选项卡式窗口中; 如果为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -285,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此静态成员设置为`TRUE`以强制应用程序显示顶部的选项卡式窗格中的所有选项卡。  
+ 在要在选项卡式窗格顶部显示的应用程序中设置到此静态成员设置为 true 将强制所有选项卡。  
   
  创建选项卡式的窗格之前，必须设置此值。  
   
- 默认值为 `FALSE`。  
+ 默认值为 FALSE。  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  自定义 `CMFCTabCtrl`-派生对象的运行时类信息。  
@@ -319,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `arColors`  
+ [in]*arColors*  
  包含数组的颜色设置。  
   
 ### <a name="remarks"></a>备注  

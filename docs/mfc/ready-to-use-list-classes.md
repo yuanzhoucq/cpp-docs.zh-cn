@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304b47918424a73e4feda9812c372cb28db0623e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 014c3aabb770dc35fdbf106f9a225e52285d201b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929671"
 ---
 # <a name="ready-to-use-list-classes"></a>随时可用的列表类
 下列类是随时可用的列表类。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
  在链接列表中存储指向类 `CObject` 的对象或派生自 `CObject` 的类的对象的指针。  
   
  [CPtrList](../mfc/reference/cptrlist-class.md)  
- 在链接列表中存储指向 `void`（泛型指针）的指针。  
+ 存储指向**void** （泛型指针） 在链接列表中。  
   
  [CStringList](../mfc/reference/cstringlist-class.md)  
  在链接列表中存储 `CString` 对象。  

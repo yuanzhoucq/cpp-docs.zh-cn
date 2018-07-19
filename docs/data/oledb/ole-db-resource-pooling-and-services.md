@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111180"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 资源池和服务
 若要很好地与 OLE DB 池，或使用任何 OLE DB 服务，你的提供程序必须支持的所有对象的聚合。 这是任何 OLE DB 1.5 或更高版本的提供程序的要求。 这非常重要利用服务。 不能共用提供程序不支持聚合并提供没有其他服务。  

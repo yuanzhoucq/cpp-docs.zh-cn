@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387383"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八进制和十六进制字符规范
 序列 \\ooo 表示可以将 ASCII 字符集中的任何字符指定为三位数八进制字符代码。 八进制整数的数字值用于指定所需字符或宽字符的值。  

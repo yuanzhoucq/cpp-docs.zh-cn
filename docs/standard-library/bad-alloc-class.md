@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab496a5de8062f6888b92b318788ff72345bc7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955905"
 ---
 # <a name="badalloc-class"></a>bad_alloc 类
 
@@ -38,7 +39,7 @@ virtual ~bad_alloc();
 
 ## <a name="remarks"></a>备注
 
-**what** 返回的值是实现定义的 C 字符串。 无成员函数引发任何异常。
+返回的值`what`是实现定义的 C 字符串。 无成员函数引发任何异常。
 
 ## <a name="requirements"></a>要求
 
@@ -79,4 +80,4 @@ bad allocation
 
 ## <a name="see-also"></a>请参阅
 
-[异常类](../standard-library/exception-class.md) [c + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception 类](../standard-library/exception-class.md) [c + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

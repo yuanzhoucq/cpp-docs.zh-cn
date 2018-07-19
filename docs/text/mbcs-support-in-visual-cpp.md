@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865831"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
 当在 MBCS 支持的版本的 Windows 上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 是 MBCS 支持，除了内存窗口。  

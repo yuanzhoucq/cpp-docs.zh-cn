@@ -1,5 +1,5 @@
 ---
-title: 函数模板 |Microsoft 文档
+title: 函数模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941062"
 ---
 # <a name="function-templates"></a>函数模板
 类模板可定义一系列相关类，这些类基于在实例化时传递到类的类型参数。 函数模板类似于类模板，但定义的是一系列函数。 利用函数模板，你可以指定基于相同代码但作用于不同类型或类的函数集。 以下函数模板交换两个项：  
@@ -36,9 +37,9 @@ int main() {
 }  
 ```  
   
- 此代码定义交换自变量的值的一系列函数。 此模板中，你可以从生成将交换的函数**int**和**长**类型以及用户定义的类型。 如果正确定义了类的复制构造函数和赋值运算符，`MySwap` 甚至会交换类。  
+ 此代码定义交换自变量的值的一系列函数。 从此模板中，您可以生成将交换的函数**int**并**长**类型以及用户定义类型。 如果正确定义了类的复制构造函数和赋值运算符，`MySwap` 甚至会交换类。  
   
- 此外，函数模板将阻止您交换不同类型的对象，因为在编译时编译器知道 `a` 和 `b` 参数的类型。  
+ 此外，函数模板将阻止您交换不同类型的对象的类型，编译器知道由于并*b*在编译时的参数。  
   
  尽管非模板化函数可以使用 void 指针运行此函数，但模板版本是 typesafe。 请考虑以下调用：  
   
@@ -63,7 +64,7 @@ int main(int j) {
 }  
 ```  
   
- 当显式指定模板参数时，将对函数自变量执行常规隐式转换以将其转换为对应的函数模板自变量的类型。 在上面的示例中，编译器会将转换`char j`类型`int`。  
+ 当显式指定模板参数时，将对函数自变量执行常规隐式转换以将其转换为对应的函数模板自变量的类型。 在上述示例中，编译器会将转换`char j`键入**int**。  
   
 ## <a name="see-also"></a>请参阅  
  [模板](../cpp/templates-cpp.md)   

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342584"
 ---
 # <a name="automation-clients-using-type-libraries"></a>自动化客户端：使用类型库
 自动化客户端必须具有服务器对象的属性和方法有关的信息，如果客户端要操作的服务器的对象。 属性具有数据类型;方法通常返回值并接受参数。 客户端需要有关数据类型的所有这些信息才能静态绑定到服务器对象类型。  

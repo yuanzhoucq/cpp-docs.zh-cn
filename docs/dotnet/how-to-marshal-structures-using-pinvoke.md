@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136608"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 本文档说明如何本机接受 C 样式结构可以从托管函数调用通过使用 P/Invoke 的函数。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  

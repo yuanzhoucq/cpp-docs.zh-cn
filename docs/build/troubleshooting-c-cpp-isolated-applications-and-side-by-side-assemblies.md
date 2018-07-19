@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390686"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 如果找不到依赖库，则加载 C/C++ 应用程序可能会失败。 本文介绍 C/C++ 应用程序未能加载的一些常见原因，并提供了用于解决问题的建议步骤。  

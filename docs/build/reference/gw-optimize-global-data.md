@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376434"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw（优化全局数据）
 在 COMDAT 节中打包全局数据以进行优化。  

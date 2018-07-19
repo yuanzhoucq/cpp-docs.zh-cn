@@ -1,7 +1,7 @@
 ---
-title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面应用程序 |Microsoft 文档
+title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面应用程序 |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,20 +13,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034775"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
-当你在 Visual Studio 2017 年 1 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负荷的安装或上次更新一起安装的 Windows 10 sdk 的版本进行生成。 此版本的 Windows SDK 是与所有最新的 Windows 版本兼容。 如果你想要面向的 sdk 的早期版本，则可以打开项目 |属性，然后选择从其他 Windows SDK 版本下拉列表中提供的 SDK 版本。  
+当在 Visual Studio 2017 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负载的安装或上一次更新时已安装了 Windows 10 SDK 的版本进行生成。 Windows 7 和更高版本，此版本的 Windows SDK 都兼容。 请参阅[使用 Windows 标头](/windows/desktop/WinProg/using-the-windows-headers)有关面向特定版本 Windows 的详细信息。
+
+如果你想要面向早期版本的 sdk，则可以打开**项目 |属性**，然后选择从 Windows SDK 版本下拉列表中提供的其他 SDK 版本。
   
- 从 Visual Studio 2015 和 Windows 10 SDK 开始，CRT 库分为两个部分，一个部分 (ucrtbase) 包含可接受要在通用 Windows 应用程序中使用的函数 (vcruntime140) 包含所有的一个。 由于 Windows 10 SDK 包含新函数（如许多 C99 函数），因此需要按照以下步骤进行操作以便使用这些函数。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。  
+ 从 Visual Studio 2015 和 Windows 10 SDK 开始，CRT 库分为两个部分，一个 (ucrtbase) 包含可接受要在通用 Windows 应用程序中使用的函数，其他所有内容 (vcruntime140) 包含的一个。 由于 Windows 10 SDK 包含新函数（如许多 C99 函数），因此需要按照以下步骤进行操作以便使用这些函数。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。  
   
 ### <a name="to-target-the-windows-10-sdk"></a>面向 Windows 10 SDK  
   
-1.  确保已安装 Windows 10 SDK。 作为的一部分安装 Windows 10 SDK**使用 c + + 桌面开发**工作负荷。 独立版本位于[下载和适用于 Windows 10 工具](https://developer.microsoft.com/windows/downloads)。
+1.  确保已安装 Windows 10 SDK。 Windows 10 SDK 安装的一部分**使用 c + + 的桌面开发**工作负荷。 独立版是在[下载和工具适用于 Windows 10](https://developer.microsoft.com/windows/downloads)。
 
   
 2.  打开项目节点的快捷菜单，然后选择 **“重定向 SDK 版本”**。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/08/2018
   
      ![查看解决方案操作](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  在**目标平台版本**下拉列表中，选择想要面向的 Windows 10 sdk 版本。 选择“确定”按钮以应用更改。  
+3.  在中**目标平台版本**下拉列表中，选择想要面向的 Windows 10 sdk 版本。 选择“确定”按钮以应用更改。  
   
      请注意，此上下文中的 8.1 是指 Windows SDK 版本，它也向后兼容 Windows 8、Windows Server 2012、Windows 7、Windows Server 2008 和 Windows Vista。  
   
@@ -45,15 +48,15 @@ ms.lasthandoff: 05/08/2018
   
      `Retargeting End: 1 completed, 0 failed, 0 skipped`  
   
-4.  打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”**的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。  
+4.  打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。  
   
-     ![指定的目标平台版本](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
+     ![目标平台版本](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     此操作将更改项目宏的值，该项目宏中包含头文件和库文件的路径。 若要查看更改的内容，项目属性对话框中，Visual c + + 目录部分中选择一个属性，例如包含目录，选择打开下拉列表中，然后选择\<编辑 >。 将显示 **“包含目录”** 对话框。  
+     此操作将更改项目宏的值，该项目宏中包含头文件和库文件的路径。 若要查看更改的内容，在 Visual c + + 目录部分中的项目属性对话框中，选择一个属性，如包含目录，选择打开下拉列表中，并选择\<编辑 >。 将显示 **“包含目录”** 对话框。  
   
      ![包含目录对话框](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     选择**宏 >>** 按钮，然后向下滚动到 Windows SDK 宏，以查看所有新值的宏的列表。  
+     选择**宏 >>** 按钮，然后向下滚动以查看所有新值的 Windows SDK 宏的宏的列表。  
   
      ![Windows SDK 宏](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   

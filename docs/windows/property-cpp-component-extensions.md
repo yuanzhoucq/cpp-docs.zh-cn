@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882701"
 ---
 # <a name="property--c-component-extensions"></a>属性（C++ 组件扩展）
 声明*属性*，它是成员函数，其行为和访问数据成员或数组元素类似。  

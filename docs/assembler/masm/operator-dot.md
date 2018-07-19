@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058158"
 ---
 # <a name="operator-"></a>运算符 .
 第一个运算符返回*表达式*plus 的偏移量*字段*在其结构或联合中。 第二个运算符返回指向的位置的值*注册*plus 的偏移量*字段*在其结构或联合中。  

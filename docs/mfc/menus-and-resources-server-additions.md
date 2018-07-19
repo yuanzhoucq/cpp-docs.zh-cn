@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930197"
 ---
 # <a name="menus-and-resources-server-additions"></a>菜单和资源：服务器添加
 此文章介绍了需要的菜单和可视化编辑服务器 （组件） 应用程序中的其他资源进行的更改。 服务器应用程序需要多个添加到菜单结构和其他资源，因为它可以启动在三种模式之一： 独立、 嵌入，或就地。 中所述[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)文章，有最多四个集的菜单。 所有四个用于 MDI 完全服务器应用程序，而只有三用于 miniserver。 应用程序向导将创建菜单布局所需的服务器所需的类型。 自定义一些可能有必要。  
@@ -62,14 +63,14 @@ ms.lasthandoff: 05/04/2018
   
  第二个表是几乎视图的快捷键对应表的一个精确副本。 任何差异并行中所述完全打开菜单中所做的更改[服务器菜单添加](#_core_server_menu_additions)。  
   
- 有关这些快捷键对应表更改的示例，比较**IDR_HIERSVRTYPE_SRVR_IP**和**IDR_HIERSVRTYPE_SRVR_EMB**快捷键对应表与**IDR_MAINFRAME**在 HIERSVR。RC 文件包含在 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。 文件和窗口加速器是就地表中缺少且它们之间的精确副本以在嵌入式表。  
+ 有关这些快捷键对应表更改的示例，比较 IDR_MAINFRAME HIERSVR 中为 IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快捷键对应表。RC 文件包含在 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。 文件和窗口加速器是就地表中缺少且它们之间的精确副本以在嵌入式表。  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> 针对服务器应用程序添加的字符串表  
  只有一个字符串表加法指的是需要在服务器应用程序-以表示 OLE 初始化失败的字符串。 例如，下面是应用程序向导生成的字符串表条目：  
   
 |Id|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE 初始化失败。 请确保 OLE 库的正确版本。|  
+|IDP_OLE_INIT_FAILED|OLE 初始化失败。 请确保 OLE 库的正确版本。|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> 添加袖珍服务器  
  相同的添加件同样适用于袖珍上面所列的完整服务器。 由于无法在独立模式下运行 miniserver，其主菜单是小得多。 应用程序向导创建的主菜单还拥有仅文件菜单上，仅包含的项退出和有关。 嵌入和就地菜单和快捷键的袖珍都与完整服务器相同。  

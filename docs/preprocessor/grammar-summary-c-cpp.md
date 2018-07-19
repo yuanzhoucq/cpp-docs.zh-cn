@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849140"
 ---
 # <a name="grammar-summary-cc"></a>语法摘要 (C/C++)
 本节介绍预处理器的正式语法。 它涵盖的预处理指令的语法和运算符中所述[预处理器](../preprocessor/preprocessor.md)并在[杂注指令](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。  

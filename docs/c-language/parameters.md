@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391686"
 ---
 # <a name="parameters"></a>参数
 自变量是通过函数调用传递到函数的值的名称。 形参是函数期望接收的值。 在函数原型中，函数名称后的括号包含函数的参数及其类型的完整列表。 参数声明指定参数中存储的值的类型、大小和标识符。  

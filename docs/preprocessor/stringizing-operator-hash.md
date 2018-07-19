@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841694"
 ---
 # <a name="stringizing-operator-"></a>字符串化运算符 (#)
 数字符号或"字符串化"运算符 (**#**) 将宏参数转换为字符串，而不扩展参数定义。 它只用于采用自变量的宏。 如果它在宏定义中位于形参之前，则由宏调用传递的实参将用引号引起来并被视为字符串。 字符串随后替换宏定义中的字符串化运算符和形参的组合的每个匹配项。  

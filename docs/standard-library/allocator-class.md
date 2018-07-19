@@ -44,15 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa9ab355456c912617bfcc1d803fa980ff21669
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964504"
 ---
 # <a name="allocator-class"></a>allocator 类
 
-模板类描述一个对象，用于管理对象类型 **Type** 数组的存储分配和释放。 类 **allocator** 的对象是 C++ 标准库中的多个容器模板类的构造函数中所指定的默认分配器对象。
+此模板类描述一个对象，用于管理存储分配和释放对象的类型数组的`Type`。 类的对象`allocator`是 c + + 标准库中的多个容器模板类的构造函数中指定的默认分配器对象。
 
 ## <a name="syntax"></a>语法
 
@@ -63,11 +64,11 @@ class allocator
 
 ### <a name="parameters"></a>参数
 
-*类型*正在为其存储的对象的类型分配或释放。
+*类型*存储的对象的类型分配或释放。
 
 ## <a name="remarks"></a>备注
 
-所有 C++ 标准库容器均有默认为 **allocator** 的模板参数。 通过使用自定义分配器构造容器可控制该容器的元素的分配和释放。
+所有 c + + 标准库容器都具有一个模板参数，默认为`allocator`。 通过使用自定义分配器构造容器可控制该容器的元素的分配和释放。
 
 例如，分配器对象可能会在私有堆上或共享内存中分配存储，或者可能针对小型或大型对象大小进行优化。 它可能还会通过它提供的类型定义靠指定通过管理共享内存或执行自动垃圾回收的特殊访问器对象访问元素。 因此，使用分配器对象分配存储的类应使用这些类型来声明指针和引用对象，这与 C++ 标准库中的容器所执行的操作一样。
 
@@ -75,15 +76,15 @@ class allocator
 
 因此，分配器定义以下类型：
 
-- [pointer](#pointer) 的行为方式与 **Type** 的指针相同。
+- [指针](#pointer)的行为类似于一个指向`Type`。
 
-- [const_pointer](#const_pointer) 的行为方式与 **Type** 的常量指针相同。
+- [const_pointer](#const_pointer)的行为类似于指向 const 指针`Type`。
 
-- [reference](#reference) 的行为方式与 **Type** 的引用相同。
+- [引用](#reference)的行为类似于对引用`Type`。
 
-- [const_reference](#const_reference) 的行为方式与 **Type** 的常量引用相同。
+- [const_reference](#const_reference)的行为方式类似的常量引用`Type`。
 
-这些 **Type** 指定了指针和引用必须为分配的元素所采用的形式。 （对于所有的分配器对象，[allocator::pointer](#pointer) 不必与 **Type**\* 相同，尽管它对类 **allocator** 具有此明显定义。）
+这些`Type`s 指定的窗体的指针和引用必须采取的分配的元素。 ( [allocator:: pointer](#pointer)不一定是相同`Type*`的所有分配器对象，即使它具有此明显定义为类`allocator`。)
 
 **C++11 和更高版本：** 若要在你的分配器中启动移动操作，请使用最小的分配器界面并执行复制构造函数、 == and != operators、分配和释放。 有关详细信息和示例，请参阅 [Allocators](../standard-library/allocators.md)
 
@@ -142,7 +143,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>参数
 
-`val` 其地址进行搜索对象的 const 或 nonconst 值。
+*val*其地址要搜索的对象的常量或非常量值。
 
 ### <a name="return-value"></a>返回值
 
@@ -150,7 +151,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `val` 的地址（以指针为分配的元素必须采用的形式）。
+成员函数返回的地址*val*中的窗体的指针必须采取的分配的元素。
 
 ### <a name="example"></a>示例
 
@@ -206,9 +207,9 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>参数
 
-`count` 为分配足够的存储空间的元素数目。
+*计数*为分配足够的存储空间的元素数。
 
-*_Hint*可能帮助的分配器对象是 const 指针满足存储的请求通过定位在请求之前分配的对象的地址。
+*_Hint*常量指针可能帮助分配器对象满足存储请求通过定位在请求之前分配的对象的地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -216,7 +217,7 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="remarks"></a>备注
 
-成员函数通过调用运算符 new( `count`) 来为计算元素的类型 **Type** 的数组分配存储。 它返回指向已分配对象的指针。 提示参数帮助某些分配器改进引用区域；有效的选择是由同一分配器对象较早分配且尚未被释放的对象的地址。 若不提供提示，请改用 null 指针参数。
+成员函数的类型的计数元素数组分配存储`Type`，通过调用运算符 new (*计数*)。 它返回指向已分配对象的指针。 提示参数帮助某些分配器改进引用区域；有效的选择是由同一分配器对象较早分配且尚未被释放的对象的地址。 若不提供提示，请改用 null 指针参数。
 
 ### <a name="example"></a>示例
 
@@ -267,7 +268,7 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要复制的分配器对象。
+*右*要复制的分配器对象。
 
 ### <a name="remarks"></a>备注
 
@@ -346,7 +347,7 @@ typedef const value_type *const_pointer;
 
 ### <a name="remarks"></a>备注
 
-指针类型描述一个对象 **ptr**，能够通过表达式 **\*ptr** 指定模板类分配器对象可以分配的任何常量对象。
+指针类型描述一个对象`ptr`，可以指定，通过表达式`*ptr`，模板类分配器对象可以分配的任何常量对象。
 
 ### <a name="example"></a>示例
 
@@ -470,9 +471,9 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向该对象为要构造的位置的指针。
+*ptr*指向其中对象是要构造位置的指针。
 
-`val` 正在构造的对象初始化为值。
+*val*所构造的对象与之进行初始化的值。
 
 ### <a name="remarks"></a>备注
 
@@ -537,13 +538,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向要释放从存储的第一个对象的指针。
+*ptr*指向第一个要从存储中释放的对象的指针。
 
-`count` 要从存储中释放的对象数。
+*计数*要从存储中释放的对象数。
 
 ### <a name="remarks"></a>备注
 
-成员函数释放存储的类型的计数对象的数组**类型**开始`ptr`，通过调用`operator delete(ptr)`。 通过为与 **\*this** 相等的分配器对象调用 [allocate](#allocate)（分配具有同一大小和类型的数组对象），指针 `ptr` 必须较早返回。 `deallocate` 绝不会引发异常。
+成员函数释放存储类型的计数对象的数组`Type`开始*ptr*，通过调用`operator delete(ptr)`。 指针*ptr*必须较早返回通过调用[分配](#allocate)相等的分配器对象**\*这**，分配一个数组相同的大小和类型的对象。 `deallocate` 绝不会引发异常。
 
 ### <a name="example"></a>示例
 
@@ -559,11 +560,11 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指定要销毁的对象的地址指针。
+*ptr*指定要销毁的对象的地址的指针。
 
 ### <a name="remarks"></a>备注
 
-成员函数会销毁指定的对象`ptr`，通过调用析构函数`ptr->`**类型**::**~ 类型**。
+成员函数会销毁指定的对象*ptr*，通过调用析构函数`ptr->`**类型**::**~ 类型**。
 
 ### <a name="example"></a>示例
 
@@ -677,7 +678,7 @@ The difference between the integer's addresses is: 8.
 
 ## <a name="max_size"></a>  allocator::max_size
 
-在可用内存用完之前，返回可以由类分配器的对象分配的类型 **Type** 的元素数。
+在可用内存用完之前，返回可以由类分配器的对象分配的类型 `Type` 的元素数。
 
 ```cpp
 size_type max_size() const;
@@ -755,7 +756,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要分配给另一个此类对象的分配器对象。
+*右*将分配给另一个此类对象的分配器对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -816,7 +817,7 @@ typedef value_type *pointer;
 
 ### <a name="remarks"></a>备注
 
-指针类型描述一个对象 **ptr**，可以通过表达式 **\*ptr** 指定模板类分配器对象可以分配的任何对象。
+指针类型描述一个对象`ptr`，可以指定，通过表达式 **\*ptr**，模板类分配器对象可以分配任何对象。
 
 ### <a name="example"></a>示例
 
@@ -877,7 +878,7 @@ struct rebind {    typedef allocator<_Other> other ;    };
 
 成员模板类定义其他类型。 其唯一目的是在给出类型名称 **allocator**\< **Type**> 时提供类型名称 **allocator**\<_ **Other**>
 
-例如，给出分配器对象 **al** of type **A** 时，可以使用以下表达式分配对象类型 **_Other**：
+例如，给定一个分配器对象`al`类型的`A`，你可以分配类型的对象`_Other`使用表达式：
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -1029,7 +1030,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Type** 的同义词。
+该类型是模板参数 `Type` 的同义词。
 
 ### <a name="example"></a>示例
 

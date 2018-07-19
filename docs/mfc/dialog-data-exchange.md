@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930854"
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
-如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示哪个位置对话框本身中出现时响应`DoModal`或**创建**. `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。  
+如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示哪个位置对话框本身中出现时响应`DoModal`或`Create`。 `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。  
   
  相同的机制将值从传输控件到成员变量当用户单击确定按钮 (或每次调用`UpdateData`具有参数的成员函数**TRUE**)。 对话框数据验证机制将验证为其指定了验证规则的所有数据项。  
   

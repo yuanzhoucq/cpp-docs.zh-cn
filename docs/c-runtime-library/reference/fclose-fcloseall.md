@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32400234"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
@@ -71,7 +72,7 @@ int _fcloseall( void );
 
 **_Fcloseall**函数关闭所有打开的流，除了**stdin**， **stdout**， **stderr** (以及在 MS-DOS， **_stdaux**和 **_stdprn**)。 它还将关闭并删除创建的所有临时文件**tmpfile**。 在这两个函数中，与流相关联的所有缓冲区在关闭前都会进行刷新。 系统分配的缓冲区在流关闭时释放。 由具有用户分配的缓冲区**setbuf**和**setvbuf**也不会自动释放。
 
-**注意：**将这些函数用于关闭流时，基础文件描述符和 OS 文件句柄（或套接字）以及流都将被关闭。 因此，如果最初打开该文件作为文件处理的文件说明符和关闭或与**fclose**，这样做也不调用 **_close**到关闭的文件描述符; 不要调用 Win32 函数**CloseHandle**关闭文件句柄。
+**注意：** 将这些函数用于关闭流时，基础文件描述符和 OS 文件句柄（或套接字）以及流都将被关闭。 因此，如果最初打开该文件作为文件处理的文件说明符和关闭或与**fclose**，这样做也不调用 **_close**到关闭的文件描述符; 不要调用 Win32 函数**CloseHandle**关闭文件句柄。
 
 **fclose**和 **_fcloseall**包含代码，从而防止来自其他线程的干扰。 有关非锁定版本的**fclose**，请参阅 **_fclose_nolock**。
 

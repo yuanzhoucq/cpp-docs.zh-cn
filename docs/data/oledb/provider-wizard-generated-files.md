@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106003"
 ---
 # <a name="provider-wizard-generated-files"></a>提供程序向导生成的文件
 ATL OLE DB 提供程序向导生成以下文件。 下面的主题使用的短名称"MyProvider"，但确切的文件名依赖于时创建提供程序所做的选择。  

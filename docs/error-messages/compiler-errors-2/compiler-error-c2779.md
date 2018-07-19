@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233923"
 ---
 # <a name="compiler-error-c2779"></a>编译器错误 C2779
 declaration： 只能与非静态数据成员相关联的属性方法  

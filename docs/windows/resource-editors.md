@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879589"
 ---
 # <a name="resource-editors"></a>资源编辑器
 资源编辑器是用于创建或修改 Visual Studio 项目中所含资源的专用环境。 Visual Studio 资源编辑器共享技术和接口，以帮助你快速、轻松地创建和修改应用程序资源。 通过资源编辑器，你可以 [在适当的编辑器中查看和编辑资源](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 并 [预览资源](../windows/previewing-resources.md)。  

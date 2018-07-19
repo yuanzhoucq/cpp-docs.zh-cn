@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359602"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 类
 从线程池接收请求，并将它们传递到创建和销毁的辅助对象上每个请求。  

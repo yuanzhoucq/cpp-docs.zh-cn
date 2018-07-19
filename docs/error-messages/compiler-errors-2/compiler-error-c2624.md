@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230659"
 ---
 # <a name="compiler-error-c2624"></a>编译器错误 C2624
 局部类不能用于声明变量的外部  

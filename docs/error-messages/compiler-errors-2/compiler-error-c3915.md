@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271599"
 ---
 # <a name="compiler-error-c3915"></a>编译器错误 C3915
 type 具有任何默认索引属性 （类索引器）  

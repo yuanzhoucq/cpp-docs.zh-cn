@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374903"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 调用约定概述
 X86 的两个重要区别和[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]是 64 位寻址功能和 16 64 位一平面组寄存器供常规使用。 给定的展开注册集，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]使用[__fastcall](../cpp/fastcall.md)调用约定和基于 RISC 的异常处理模型。 `__fastcall`约定使用寄存器的前四个自变量和堆栈帧将传递其他参数。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050280"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 将标记的末尾段、 结构或联合*名称*以前始于[段](../../assembler/masm/segment.md)，[结构](../../assembler/masm/struct-masm.md)，[联合](../../assembler/masm/union.md)，或简化的线段指令。  

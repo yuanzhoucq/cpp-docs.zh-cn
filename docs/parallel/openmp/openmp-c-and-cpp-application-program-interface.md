@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687057"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C 和 C++ 应用程序接口
 讨论 OpenMP C 和 c + + API，从 OpenMP 体系结构审阅委员会版本 2.0 规范中所述。  

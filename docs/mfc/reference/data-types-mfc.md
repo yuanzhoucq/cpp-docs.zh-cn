@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121009"
 ---
 # <a name="data-types-mfc"></a>数据类型 (MFC)
 本主题列出了 Microsoft 基础类库中最常使用的数据类型。 大部分数据类型与平台软件开发工具包 (SDK) 中的相同，而其他数据类型对于 MFC 是唯一的。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/04/2018
   
  对 Microsoft 基础类库唯一的数据类型包括：  
   
--   **位置**值用于代表元素在集合中的位置，由 MFC 集合类。  
+-   用于表示元素的集合; 中的位置的位置的值由 MFC 集合类。  
   
--   **LPCRECT**指向常量 （不可修改） 的 32 位指针`RECT`结构。  
+-   LPCRECT 的 32 位指针，指向常量 （不可修改）`RECT`结构。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../mfc/class-library-overview.md)   

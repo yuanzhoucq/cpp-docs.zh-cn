@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384276"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函数声明和定义的过时形式
 旧式函数声明和定义使用与 ANSI C 标准建议的语法略微不同的规则来声明参数。 首先，旧式声明不具有参数列表。 第二，在函数定义中，列出了参数，但未在参数列表中声明其类型。 类型声明在构成函数主体的复合语句之前。 该旧式语法已过时，不应在新代码中使用。 但仍支持使用旧式语法的代码。 此示例阐释声明和定义的过时形式：  

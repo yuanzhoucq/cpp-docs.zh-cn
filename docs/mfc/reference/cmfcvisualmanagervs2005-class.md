@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48cbe09d493ecc86bf8927ad4c66fd03d7662f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038056"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 类
 `CMFCVisualManagerVS2005` 向应用程序提供 Microsoft Visual Studio 2005 外观。  
@@ -142,7 +143,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPropList`  
+ [in]*pPropList*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -165,15 +166,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTabWnd`  
- [in] `clrDark`  
- [in] `clrBlack`  
- [in] `clrHighlight`  
- [in] `clrFace`  
- [in] `clrDarkShadow`  
- [in] `clrLight`  
- [in] `pbrFace`  
- [in] `pbrBlack`  
+ [in]*pTabWnd*  
+ [in]*clrDark*  
+ [in]*clrBlack*  
+ [in]*clrHighlight*  
+ [in]*clrFace*  
+ [in]*clrDarkShadow*  
+ [in]*clrLight*  
+ [in]*pbrFace*  
+ [in]*pbrBlack*  
   
 ### <a name="remarks"></a>备注  
   
@@ -200,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectBounds`  
- [in] `rectBorderSize`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*rectBounds*  
+ [in]*rectBorderSize*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -222,13 +223,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `bActive`  
- [in] `bHorz`  
- [in] `bMaximized`  
- [in] `bDisabled`  
- [in] `nImageID`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*bActive*  
+ [in]*bHorz*  
+ [in]*bMaximized*  
+ [in]*bDisabled*  
+ [in]*nImageID*  
   
 ### <a name="remarks"></a>备注  
   
@@ -245,11 +246,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pBar`  
- [in] `bActive`  
- [in] `rectCaption`  
- [in] `rectButtons`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*bActive*  
+ [in]*rectCaption*  
+ [in]*rectButtons*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -267,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsHoriz`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsHoriz*  
   
 ### <a name="remarks"></a>备注  
   
@@ -287,11 +288,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectTab`  
- [in] `iTab`  
- [in] `bIsActive`  
- [in] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rectTab*  
+ [in]*iTab*  
+ [in]*bIsActive*  
+ [in]*pTabWnd*  
   
 ### <a name="remarks"></a>备注  
   
@@ -305,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -321,9 +322,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pTabWnd*  
   
 ### <a name="remarks"></a>备注  
   
@@ -338,9 +339,9 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -356,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `pBrush`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pBrush*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -375,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pFrameWnd`  
- [in] `bActive`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*pFrameWnd*  
+ [in]*bActive*  
   
 ### <a name="return-value"></a>返回值  
   

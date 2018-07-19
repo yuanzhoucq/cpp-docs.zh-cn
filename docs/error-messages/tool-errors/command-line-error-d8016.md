@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300613"
 ---
 # <a name="command-line-error-d8016"></a>命令行错误 D8016
 "选项 1"和"选项 2"的命令行选项不兼容  

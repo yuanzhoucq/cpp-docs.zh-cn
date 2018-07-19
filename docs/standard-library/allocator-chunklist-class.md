@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa7b01fe4008089cb8a773fc866d62a269ae717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955353"
 ---
 # <a name="allocatorchunklist-class"></a>allocator_chunklist 类
 
@@ -39,11 +40,11 @@ class allocator_chunklist;
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|由分配器分配元素类型。|
+|*类型*|由分配器分配元素类型。|
 
 ## <a name="remarks"></a>备注
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 宏将此类传递为以下语句中的 `name` 参数：`ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将作为此类传递*名称*以下语句中的参数： `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>要求
 

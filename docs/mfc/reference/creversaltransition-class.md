@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079040"
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition 类
 封装反向转换。  
@@ -80,7 +81,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  指向转换库，它是负责创建的标准转换的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -94,7 +95,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
 ##  <a name="m_duration"></a>  CReversalTransition::m_duration  

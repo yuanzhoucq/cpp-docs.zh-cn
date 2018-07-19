@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955717"
 ---
 # <a name="inputoutput-streams"></a>输入/输出流
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/07/2018
 
 类模板 `basic_fstream` 派生自 `basic_iostream`，用于向/从文件流式处理字符数据。
 
-其他一些 typedef 还可提供 `basic_fstream` 的特定于字符的专用化。 即 `fstream` 和 `wfstream`，前者是基于 `char` 的文件 I/O 流，后者是基于 `wchar_t` 的文件 I/O 流。 有关详细信息，请参阅 [basic_fstream 类](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 和 [wfstream](../standard-library/basic-fstream-class.md)。 使用这些 typedef 要求包含头文件 \<fstream>。
+其他一些 typedef 还可提供 `basic_fstream` 的特定于字符的专用化。 它们是`fstream`，这是基于的文件 I/O 流**char**，和`wfstream`，这是基于的文件 I/O 流**wchar_t**。 有关详细信息，请参阅 [basic_fstream 类](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 和 [wfstream](../standard-library/basic-fstream-class.md)。 使用这些 typedef 要求包含头文件 \<fstream>。
 
 > [!NOTE]
 > 使用 `basic_fstream` 对象执行文件 I/O 时，尽管基础缓冲区包含为读取和写入单独指定的位置，但是当前输入和当前输出位置绑定在一起，因此，读取某些数据会移动输出位置。

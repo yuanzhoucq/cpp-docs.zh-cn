@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839333"
 ---
 # <a name="preprocessor-operators"></a>预处理器运算符
 有四种预处理器特定运算符的上下文中使用`#define`指令 （请参阅以下列表了解每个摘要）。 在接下来三个部分讨论了对 stringizing、 charizing，和标记粘贴运算符。 有关信息**定义**运算符，请参阅[#if、 #elif，#else 和 #endif 指令](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。  

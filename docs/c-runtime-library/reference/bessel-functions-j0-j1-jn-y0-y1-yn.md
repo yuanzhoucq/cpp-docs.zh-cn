@@ -53,6 +53,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32393597"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367467"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>构造动态的参数堆栈区域
 如果使用帧指针时，都有选项动态创建的参数堆栈区域。 当前未[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]编译器。  

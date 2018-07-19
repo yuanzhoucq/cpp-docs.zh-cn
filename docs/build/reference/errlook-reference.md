@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371351"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 可从工具菜单访问的 ERRLOOK 实用工具**错误查找**，检索系统错误消息或模块错误消息根据输入的值。 ERRLOOK 检索错误消息文本自动如果拖放到 Visual Studio 调试器从十六进制或十进制值**值**编辑控件。 你也可以输入一个值通过键入**值**编辑控件或通过从剪贴板粘贴并单击**查找**。  

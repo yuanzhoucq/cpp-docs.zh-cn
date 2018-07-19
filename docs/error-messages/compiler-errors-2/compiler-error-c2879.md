@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243158"
 ---
 # <a name="compiler-error-c2879"></a>编译器错误 C2879
 symbol： 只有现有命名空间可以由命名空间别名定义提供备用名称  

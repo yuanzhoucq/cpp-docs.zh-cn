@@ -1,5 +1,5 @@
 ---
-title: 右值引用声明符： &amp; &amp; |Microsoft 文档
+title: 右值引用声明符： &amp; &amp; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f775573693f0897122502d7ca092cfe392ebd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942499"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 保留对右值表达式的引用。  
@@ -35,16 +36,16 @@ type-id && cast-expression
 ## <a name="remarks"></a>备注  
  利用右值引用，您可以将左值与右值区分开。 左值引用和右值引用在语法和语义上相似，但它们遵循的规则稍有不同。 有关左值和右值的详细信息，请参阅[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)。 有关左值引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)。  
   
- 以下各节介绍右值引用如何支持的实现*移动语义*和*完美转发*。  
+ 以下各节介绍右值引用如何支持的实现*移动语义*并*完美转发*。  
   
 ## <a name="move-semantics"></a>移动语义  
- 右值引用支持的实现*移动语义*，这可以显著提高你的应用程序的性能。 利用移动语义，你可以编写将资源（如动态分配的内存）从一个对象转移到另一个对象的代码。 移动语义很有效，因为它使资源能够从无法在程序中的其他位置引用的临时对象转移。  
+ 右值引用支持的实现*移动语义*，这可以显著提高应用程序的性能。 利用移动语义，你可以编写将资源（如动态分配的内存）从一个对象转移到另一个对象的代码。 移动语义很有效，因为它使资源能够从无法在程序中的其他位置引用的临时对象转移。  
   
- 若要实现移动语义，通常提供*移动构造函数，*和 （可选） 移动赋值运算符 (`operator=`)，向您的类。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在你的应用程序中使用它的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
+ 若要实现移动语义，通常提供*移动构造函数，* 和 （可选） 移动赋值运算符 (`operator=`)，向您的类。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在你的应用程序中使用它的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
   
  您还可以重载普通函数和运算符以利用移动语义。 Visual C++ 2010年移动语义引入到 C++ 标准库。 例如，`string` 类实现了执行移动语义的操作。 请考虑以下串联几个字符串并输出结果的示例：  
   
-```  
+```cpp 
 // string_concatenation.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -69,13 +70,13 @@ int main()
  有关移动语义引入 Visual C++ 2010年中的 C++ 标准库的详细信息，请参阅[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。  
   
 ## <a name="perfect-forwarding"></a>完美转发  
- 完美转发可减少对重载函数的需求，并有助于避免转发问题。 *转发问题*编写采用引用作为其参数的泛型函数并传递时可能发生 (或*将转发*) 给另一个函数这些参数。 例如，如果泛型函数采用 `const T&` 类型的参数，则调用的函数无法修改该参数的值。 如果泛型函数采用 `T&` 类型的参数，则无法使用右值（如临时对象或整数文本）来调用该函数。  
+ 完美转发可减少对重载函数的需求，并有助于避免转发问题。 *转发问题*编写采用引用作为其参数的泛型函数并传递时可能发生 (或*转发*) 到另一个函数的这些参数。 例如，如果泛型函数采用 `const T&` 类型的参数，则调用的函数无法修改该参数的值。 如果泛型函数采用 `T&` 类型的参数，则无法使用右值（如临时对象或整数文本）来调用该函数。  
   
  通常，若要解决此问题，则必须提供为其每个参数采用 `T&` 和 `const T&` 的重载版本的泛型函数。 因此，重载函数的数量将基于参数的数量呈指数方式增加。 利用右值引用，您可以编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。  
   
- 请考虑以下声明了四个类型 `W``X`、`Y` 和 `Z` 的示例。 每个类型的构造函数采用 `const` 和非 `const` 左值引用的不同组合作为其参数。  
+ 请考虑以下声明了四个类型 `W``X`、`Y` 和 `Z` 的示例。 每种类型的构造函数采用不同的组合**const**和非-**const**左值引用作为其参数。  
   
-```  
+```cpp 
 struct W  
 {  
    W(int&, int&) {}  
@@ -99,30 +100,30 @@ struct Z
   
  假定您要编写生成对象的泛型函数。 以下示例演示了一种编写此函数的方式：  
   
-```  
+```cpp 
 template <typename T, typename A1, typename A2>  
 T* factory(A1& a1, A2& a2)  
 {  
    return new T(a1, a2);  
 }  
-```  
+```
   
  以下示例演示了对 `factory` 函数的有效调用：  
   
-```  
+```cpp 
 int a = 4, b = 5;  
 W* pw = factory<W>(a, b);  
 ```  
   
  但是，以下示例不包含对 `factory` 函数的有效调用，因为 `factory` 采用可修改的左值引用作为其参数，但该函数是使用右值调用的：  
   
-```  
+```cpp 
 Z* pz = factory<Z>(2, 2);  
 ```  
   
  通常，若要解决此问题，您必须为 `factory` 和 `A&` 的参数的每个组合创建一个重载版本的 `const A&` 函数。 利用右值引用，您可以编写一个版本的 `factory` 函数，如以下示例所示：  
   
-```  
+```cpp 
 template <typename T, typename A1, typename A2>  
 T* factory(A1&& a1, A2&& a2)  
 {  
@@ -130,11 +131,11 @@ T* factory(A1&& a1, A2&& a2)
 }  
 ```  
   
- 此示例使用右值引用作为 `factory` 函数的参数。 用途[std:: forward](../standard-library/utility-functions.md#forward)函数是模板类的构造函数将 factory 函数的参数转发。  
+ 此示例使用右值引用作为 `factory` 函数的参数。 目的[std:: forward](../standard-library/utility-functions.md#forward)函数是为了将转发到此模板类的构造函数将 factory 函数的参数。  
   
  以下示例演示了使用修改后的 `main` 函数创建 `factory`、`W`、`X` 和 `Y` 类的实例的 `Z` 函数。 修改后的 `factory` 函数会将其参数（左值和右值）转发给适当的类构造函数。  
   
-```  
+```cpp 
 int main()  
 {  
    int a = 4, b = 5;  
@@ -153,9 +154,9 @@ int main()
 ## <a name="additional-properties-of-rvalue-references"></a>右值引用的其他属性  
  **您可以重载采用左值引用和右值引用的函数。**  
   
- 通过重载函数来采用 `const` 左值引用或右值引用，您可以编写能区分不可更改的对象（左值）和可修改的临时值（右值）的代码。 您可以将对象传递给采用右值引用的函数，除非该对象标记为 `const`。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 `main` 函数同时使用左值和右值来调用 `f`。  
+ 通过重载函数以采用**const**左值引用或右值引用，可以编写代码来区分不可更改的对象 （左值） 和可修改的临时值 （右值）。 可以将对象传递给采用右值引用，除非该对象标记为一个函数**const**。 以下示例演示了函数 `f`，该函数将被重载以采用左值引用和右值引用。 `main` 函数同时使用左值和右值来调用 `f`。  
   
-```  
+```cpp 
 // reference-overload.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -187,7 +188,7 @@ int main()
   
  该示例产生下面的输出：  
   
-```  
+```Output  
 In f(const MemoryBlock&). This version cannot modify the parameter.  
 In f(MemoryBlock&&). This version can modify the parameter.  
 ```  
@@ -200,7 +201,7 @@ In f(MemoryBlock&&). This version can modify the parameter.
   
  以下示例演示了函数 `g`，该函数将被重载以采用左值引用和右值引用。 函数 `f` 采用右值引用作为其参数（已命名的右值引用），并返回右值引用（未命名的右值引用）。 在从 `g` 到 `f` 的调用中，重载决策选择采用左值引用的 `g` 版本，因为 `f` 的主体将其参数视为左值。 在从 `g` 到 `main` 的调用中，重载决策选择采用右值引用的 `g` 版本，因为 `f` 返回右值引用。  
   
-```  
+```cpp 
 // named-reference.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -236,18 +237,18 @@ int main()
   
  该示例产生下面的输出：  
   
-```  
+```cpp 
 In g(const MemoryBlock&).  
 In g(MemoryBlock&&).  
 ```  
   
  在此示例中，`main` 函数将右值传递给 `f`。 `f` 的主体将其命名参数视为左值。 从 `f` 到 `g` 的调用会将参数绑定到左值引用（第一个重载版本的 `g`）。  
   
--   **您可以强制转换为右值引用左值。**  
+-   **您可以强制转换为右值引用的左值。**  
   
- C++ 标准库[std:: move](../standard-library/utility-functions.md#move)函数使您能够将对象转换为对该对象的右值引用。 或者，您也可以使用 `static_cast` 关键字将左值强制转换为右值引用，如以下示例所示：  
+ C++ 标准库[std:: move](../standard-library/utility-functions.md#move)函数使您能够将对象转换为对该对象的右值引用。 或者，可以使用**static_cast**关键字来强制转换为右值引用，左值，如下面的示例中所示：  
   
-```  
+```cpp 
 // cast-reference.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -279,20 +280,20 @@ int main()
   
  该示例产生下面的输出：  
   
-```  
+```cpp 
 In g(const MemoryBlock&).  
 In g(MemoryBlock&&).  
 ```  
   
- **函数模板推导出其模板自变量类型，然后使用引用折叠规则。**  
+ **函数模板推导其模板自变量类型，然后使用引用折叠规则。**  
   
- 通常需要编写将传递一个函数模板 (或*将转发*) 给另一个函数其参数。 了解模板类型推导如何对采用右值引用的函数模板起作用很重要。  
+ 通常会编写将传递一个函数模板 (或*转发*) 到另一个函数及其参数。 了解模板类型推导如何对采用右值引用的函数模板起作用很重要。  
   
- 如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板参数推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数参数是左值或 `const` 右值，则编译器会将其类型推导为右值引用或该类型的 `const` 左值引用。  
+ 如果函数参数是右值，则编译器将参数推导为右值引用。 例如，如果将对 `X` 类型的对象的右值引用传递给采用类型 `T&&` 作为其参数的模板函数，则模板参数推导会将 `T` 推导为 `X`。 因此，参数具有类型 `X&&`。 如果函数自变量是左值或**const**左值，编译器可以推断其类型为左值引用或**const**该类型的左值引用。  
   
  以下示例声明了一个结构模板，然后针对不同引用类型对其进行了专用化。 `print_type_and_value` 函数采用右值引用作为其参数，并将它转发给适当专用版本的 `S::print` 方法。 `main` 函数演示了调用 `S::print` 方法的各种方式。  
   
-```  
+```cpp 
 // template-type-deduction.cpp  
 // Compile with: /EHsc  
 #include <iostream>  
@@ -373,7 +374,7 @@ int main()
   
  该示例产生下面的输出：  
   
-```  
+```cpp 
 print<T&>: first  
 print<const T&>: second  
 print<T&&>: third  
@@ -382,13 +383,13 @@ print<const T&&>: fourth
   
  为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板参数推导。 然后，编译器在用推导出的模板参数替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：  
   
-```  
+```cpp 
 print_type_and_value<string&>(string& && t)  
 ```  
   
  编译器使用引用折叠规则将签名缩短为以下形式：  
   
-```  
+```cpp 
 print_type_and_value<string&>(string& t)  
 ```  
   

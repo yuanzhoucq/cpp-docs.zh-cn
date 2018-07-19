@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855089"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown 方法
 将 `I0` 模板参数定义的类型的接口指针转换为指向 IUnknown 的指针。  

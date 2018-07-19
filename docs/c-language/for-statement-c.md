@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389276"
 ---
 # <a name="for-statement-c"></a>for 语句 (C)
 使用 **for** 语句可以重复语句或复合语句指定的次数。 在可选条件变为 false 前，**for** 语句的主体将执行零次或多次。 可以在 **for** 语句中使用可选表达式，以便在 **for** 语句的执行期间初始化和更改值。  

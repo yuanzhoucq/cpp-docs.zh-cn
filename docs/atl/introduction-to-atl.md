@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355799"
 ---
 # <a name="introduction-to-atl"></a>ATL 简介
 ATL 是活动模板库、 一组基于模板的 c + + 类使用它可以轻松地创建小型、 快速的组件对象模型 (COM) 对象。 它提供了特殊支持密钥 COM 功能包括： 常用的实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)， [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)， [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)，和`IDispatch`; 双重接口;标准的 COM 枚举器接口;连接点;分离式接口;和 ActiveX 控件。  

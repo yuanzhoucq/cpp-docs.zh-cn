@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description |Microsoft 文档
+title: _com_error::Description |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939892"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Microsoft 专用**  
   
- 调用 **:: Getdescription**函数。  
+ 调用`IErrorInfo::GetDescription`函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回的结果 **:: Getdescription**为**IErrorInfo**对象中记录`_com_error`对象。 生成的 `BSTR` 封装在 `_bstr_t` 对象中。 如果没有**IErrorInfo**是记录，它将返回空`_bstr_t`。  
+ 返回的结果`IErrorInfo::GetDescription`有关`IErrorInfo`对象中记录`_com_error`对象。 生成的 `BSTR` 封装在 `_bstr_t` 对象中。 如果没有`IErrorInfo`是记录，返回一个空`_bstr_t`。  
   
 ## <a name="remarks"></a>备注  
- 调用 **:: Getdescription**函数并检索**IErrorInfo**中记录`_com_error`对象。 时调用的所有错误 **:: Getdescription**方法时将忽略。  
+ 调用`IErrorInfo::GetDescription`函数并检索`IErrorInfo`记录`_com_error`对象。 调用时的任何错误`IErrorInfo::GetDescription`方法将被忽略。  
   
  **结束 Microsoft 专用**  
   

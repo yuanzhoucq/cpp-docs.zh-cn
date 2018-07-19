@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691347"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   critical 构造内工作共享构造的使用
 下面的示例演示如何使用内部的工作共享构造`critical`构造。 此示例是符合的因为工作共享构造和`critical`构造未将绑定到同一并行区域。  

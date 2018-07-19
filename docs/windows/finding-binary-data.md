@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873558"
 ---
 # <a name="finding-binary-data"></a>查找二进制数据
 你可以搜索 ASCII 字符串或十六进制字节。 例如，若要查找"Hello"，你可以搜索是否存在字符串"Hello"或"48 65 6C 6 C 6F"（十六进制的等效项）。  

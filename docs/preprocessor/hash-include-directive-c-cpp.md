@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843543"
 ---
 # <a name="include-directive-cc"></a>#include 指令 (C/C++)
 告知预处理器将已指定文件的内容视为它们在源程序中指令出现处出现的方式处理。  

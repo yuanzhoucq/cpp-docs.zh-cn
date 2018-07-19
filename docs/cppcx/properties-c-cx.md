@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089554"
 ---
 # <a name="properties-ccx"></a>属性 (C++/CX)
 Windows 运行时类型公开公共数据作为属性。 客户端代码像公共数据成员一样访问该属性。 在内部，该属性实现为包含一个 get 访问器方法、一个 set 访问器方法或二者的块。 通过使用访问器方法，你可以在检索值的前后执行其他操作，例如，可以触发事件或执行验证检查。  

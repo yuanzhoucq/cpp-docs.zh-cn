@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863733"
 ---
 # <a name="atl-predefined-symbols"></a>ATL 预定义的符号
 在 ATL 标头文件中，定义了这些符号，但它们支持标准 Windows 应用程序功能和操作。 这些符号主要用于显示对话框。 当你正在使用对话框和控件中[对话框编辑器](../windows/dialog-editor.md)，这些符号将出现在属性窗口中与公共控件关联。 例如，如果对话框中具有取消按钮，该命令将与关联的符号 IDCANCEL 中[属性窗口](/visualstudio/ide/reference/properties-window)。  

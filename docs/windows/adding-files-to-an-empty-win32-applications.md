@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856887"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>向空的 Win32 应用程序添加文件
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>向空的 Windows 桌面应用程序添加文件  

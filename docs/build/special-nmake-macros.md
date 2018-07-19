@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380009"
 ---
 # <a name="special-nmake-macros"></a>特殊 NMAKE 宏
 NMAKE 提供了几个特殊的宏来表示不同的文件名和命令。 对于某些这些宏的一个用途是预定义的推理规则中。 如所有宏提供 nmake 宏区分大小写。  

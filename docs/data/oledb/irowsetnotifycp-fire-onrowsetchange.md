@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101989"
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 广播[OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx)事件与连接点上的所有侦听器**IID_IRowsetNotify**以通知客户的影响整个行集的更改。  

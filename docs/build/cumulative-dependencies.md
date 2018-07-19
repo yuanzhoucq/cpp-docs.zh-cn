@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366970"
 ---
 # <a name="cumulative-dependencies"></a>累计依赖项
 依赖项是在描述块中累积的如果重复目标，则。  

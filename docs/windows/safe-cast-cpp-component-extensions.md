@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891511"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
 如果成功，则 `safe_cast` 操作以指定类型的形式返回指定表达式；否则引发 `InvalidCastException`。  

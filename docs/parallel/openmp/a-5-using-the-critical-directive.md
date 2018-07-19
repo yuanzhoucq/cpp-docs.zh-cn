@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686251"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   使用 critical 指令
 下面的示例包括几个`critical`指令 ([部分 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md)第 18 页上)。 该示例阐释了一个任务是取消排队和处理的队列模型。 若要防止出队相同的任务的多个线程，取消排队操作必须为`critical`部分。 由于在此示例中的两个队列都是独立的它们通过保护`critical`具有不同名称的指令*xaxis*和*y 轴*。  

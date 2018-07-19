@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960776"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable 类
 
@@ -35,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是具有复制赋值运算符的类，则类型谓词的实例为 true；否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。
+如果类型谓词的实例将保留 true 类型*Ty*是具有复制赋值运算符，否则为 false 的类。 等效于 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="requirements"></a>要求
 

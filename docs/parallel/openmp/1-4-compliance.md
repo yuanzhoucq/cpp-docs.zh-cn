@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687226"
 ---
 # <a name="14-compliance"></a>1.4 遵从性
 OpenMP C/c + + API 的实现是*OpenMP 符合*如果它识别，并保留本规范的所有元素的语义，如按章节 1、 2、 3、 4、 布局和附录 c。 附录 A、 B、 D、 E 和 F 适用于信息仅目的并不规范的一部分。 仅包含一个子集的 api 的实现都不是 OpenMP 符合。  

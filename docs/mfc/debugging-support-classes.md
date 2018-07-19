@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342600"
 ---
 # <a name="debugging-support-classes"></a>调试支持类
 MFC 提供的以下类，以帮助你调试动态内存分配问题。  

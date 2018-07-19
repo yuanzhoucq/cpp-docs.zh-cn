@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873233"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add 方法
 将追加到的事件处理程序当前 EventSource 对象集表示由指定的委托接口的事件处理程序。  

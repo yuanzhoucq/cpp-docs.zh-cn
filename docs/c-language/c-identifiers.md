@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388664"
 ---
 # <a name="c-identifiers"></a>C 标识符
 “Identifiers”或“symbols”是您为程序中的变量、类型、函数和标签提供的名称。 标识符名称在拼写和大小写上必须与任何关键字都不同。 不能将关键词（C 或 Microsoft）用作标识符；将它们保留以用于特殊用途。 通过在变量、类型或函数的声明中指定标识符来创建标识符。 在此示例中，`result` 是整型变量的标识符，`main` 和 `printf` 是函数的标识符名称。  

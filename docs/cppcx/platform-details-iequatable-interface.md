@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086377"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable 接口
 此接口仅供内部使用，不用于开发。  

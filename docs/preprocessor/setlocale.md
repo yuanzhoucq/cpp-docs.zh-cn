@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847411"
 ---
 # <a name="setlocale"></a>setlocale
 定义要在转换宽字符常量和字符串时使用的区域设置（国家/地区和语言）。  

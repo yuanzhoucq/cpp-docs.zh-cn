@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688864"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>多线程处理：创建用户界面线程
 用户界面线程通常用于处理用户输入并响应用户事件行为独立于线程执行其他部分的应用程序。 主应用程序线程 (中提供你`CWinApp`-派生类) 已经创建并启动。 本主题介绍创建其他用户界面线程所需的步骤。  

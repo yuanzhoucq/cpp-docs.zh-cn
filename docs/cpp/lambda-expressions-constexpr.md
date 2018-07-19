@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418895"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr C++ 中的 Lambda 表达式
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 可以将 lambda 表达式声明为`constexpr`或 contant 表达式中使用时的每个数据成员的初始化它捕获或引入的常量表达式内允许。  

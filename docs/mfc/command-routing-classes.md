@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341957"
 ---
 # <a name="command-routing-classes"></a>命令传送类
 当用户通过用鼠标选择菜单或控件条按钮与应用程序交互时，应用程序会将来自受影响的用户界面对象的消息发送到合适的命令目标对象。 命令目标类派生自`CCmdTarget`包括[CWinApp](../mfc/reference/cwinapp-class.md)， [CWnd](../mfc/reference/cwnd-class.md)， [CDocTemplate](../mfc/reference/cdoctemplate-class.md)， [CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)，并从这些类派生。 框架支持自动命令传送，以便让命令可以由应用程序中当前处于活动状态的最合适的对象处理。  

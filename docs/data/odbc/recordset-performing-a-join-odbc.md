@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093306"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>记录集：执行联接 (ODBC)
 本主题适用于 MFC ODBC 类。  

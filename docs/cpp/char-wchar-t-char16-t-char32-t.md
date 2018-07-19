@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413890"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
 类型**char**， **wchar_t**， **char16_t**和**char32_t**是表示字母数字字符的内置类型，以及非字母数字的标志符号和非打印字符。

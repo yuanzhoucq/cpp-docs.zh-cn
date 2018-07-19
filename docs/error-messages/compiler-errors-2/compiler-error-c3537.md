@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252600"
 ---
 # <a name="compiler-error-c3537"></a>编译器错误 C3537
 type： 你不能强制转换为包含 auto 的类型  

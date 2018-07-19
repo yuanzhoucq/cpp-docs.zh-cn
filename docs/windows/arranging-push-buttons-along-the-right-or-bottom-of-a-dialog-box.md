@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860237"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>沿对话框右侧或底部排列普通按钮
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>排列沿右侧或底部的对话框中的推送按钮  

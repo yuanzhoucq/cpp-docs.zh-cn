@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109802"
 ---
 # <a name="user-records"></a>用户记录
 若要使用静态的访问器 (一个访问器，它是派生自**CAccessor)**，你使用者都必须有用户记录。 用户记录是一个 c + + 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导生成为你的使用者的用户记录。 可以将方法添加到可选任务，例如处理命令的用户记录中。  

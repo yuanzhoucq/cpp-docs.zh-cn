@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112233"
 ---
 # <a name="using-stored-procedures"></a>使用存储过程
 存储的过程是在数据库中存储的可执行对象。 调用存储的过程是类似于调用 SQL 命令。 在数据源 （而不是执行或准备客户端应用程序中的语句） 上使用存储的过程可以提供几个好处，包括更高的性能，减少的网络开销，以及改进的一致性和准确性。  

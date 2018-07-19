@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845861"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/07/2018
 
 可在开发环境中创建新项目。 Visual Studio 具备大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
   
-可以使用**“控制台应用程序 (Win32) 向导”**开始创建空项目。 选择“空项目”复选框。 然后稍后可将新的和现有文件添加到项目。  
+可以使用 **“控制台应用程序 (Win32) 向导”** 开始创建空项目。 选择“空项目”复选框。 然后稍后可将新的和现有文件添加到项目。  
   
 当创建项目时，必须对其进行命名。 默认情况下，项目名称即为动态链接库 (DLL) 或从此项目生成的可执行文件的名称。 有关详细信息，请参阅[创建解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。  
   

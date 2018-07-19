@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953358"
 ---
 # <a name="expressions-c"></a>表达式 (C++)
 本节描述 C++ 表达式。 表达式是用于实现以下一个或多个目的而使用的运算符和操作数的序列：  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 -   生成“副作用”。 （副作用是表达式的计算之外的所有操作 - 例如，修改对象的值。）  
   
- 在 C++ 中，可以重载运算符，并且其含义可以是用户定义的。 但是，不能修改其优先级以及它们采用的操作数的数目。 本节描述了使用语言提供而不是重载的运算符的语法和语义。 除了[表达式的类型](../cpp/types-of-expressions.md)和[表达式的语义](../cpp/semantics-of-expressions.md)，涵盖以下主题：  
+ 在 C++ 中，可以重载运算符，并且其含义可以是用户定义的。 但是，不能修改其优先级以及它们采用的操作数的数目。 本节描述了使用语言提供而不是重载的运算符的语法和语义。 除了[类型的表达式](../cpp/types-of-expressions.md)并[表达式的语义](../cpp/semantics-of-expressions.md)，包括以下主题：  
   
 -   [主要表达式](../cpp/primary-expressions.md)  
   
@@ -39,13 +40,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)  
   
--   [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)  
+-   [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)  
   
 -   [条件运算符](../cpp/conditional-operator-q.md)  
   
 -   [常量表达式](../cpp/cpp-constant-expressions.md)  
-  
--   [带显式类型转换的表达式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [强制转换运算符](../cpp/casting-operators.md)  
   

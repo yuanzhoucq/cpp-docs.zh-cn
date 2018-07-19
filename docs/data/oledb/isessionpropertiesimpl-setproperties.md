@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102314"
 ---
 # <a name="isessionpropertiesimplsetproperties"></a>ISessionPropertiesImpl::SetProperties
 在设置属性**DBPROPSET_SESSION**属性组。  

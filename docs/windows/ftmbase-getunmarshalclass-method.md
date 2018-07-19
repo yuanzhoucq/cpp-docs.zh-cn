@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873298"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
 获取 COM 用来定位 DLL 包含代码的相应的代理的 CLSID。 COM 加载此 DLL 才能创建代理服务器的未初始化的实例。  

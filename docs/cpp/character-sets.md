@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414778"
 ---
 # <a name="character-sets"></a>字符集
 C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 Visual C++ 允许在源文件和已编译文件中使用额外一组特定于区域设置的字符。  

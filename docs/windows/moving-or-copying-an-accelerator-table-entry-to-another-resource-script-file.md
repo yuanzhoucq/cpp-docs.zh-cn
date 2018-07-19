@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877899"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>将快捷键对应表项移动或复制到另一资源脚本文件
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>将快捷键对应表项移动或复制到另一个资源脚本文件  

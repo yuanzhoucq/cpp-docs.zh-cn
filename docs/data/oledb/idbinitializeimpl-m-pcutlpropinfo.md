@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100364"
 ---
 # <a name="idbinitializeimplmpcutlpropinfo"></a>IDBInitializeImpl::m_pCUtlPropInfo
 指向实现 DB 属性信息的对象的指针。  

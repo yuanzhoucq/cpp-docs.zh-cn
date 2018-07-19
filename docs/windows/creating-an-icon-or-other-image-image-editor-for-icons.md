@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874728"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>创建图标或其他图像（图标的图像编辑器）
 你可以创建新映像 （位图、 图标、 光标或工具栏），然后使用图像编辑器自定义其外观。 你还可以创建新的位图模式[模板](../windows/how-to-use-resource-templates.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096101"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 使用一个 OLE DB 枚举器对象，它公开[ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx)接口以返回行集描述所有数据源和枚举数。  
@@ -47,7 +48,7 @@ class CEnumerator :
  你可以检索**ISourcesRowset**从此类间接的数据。  
   
 ## <a name="requirements"></a>要求  
- **标头：**atldbcli.h  
+ **标头：** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  
  [DBViewer](../../visual-cpp-samples.md)   

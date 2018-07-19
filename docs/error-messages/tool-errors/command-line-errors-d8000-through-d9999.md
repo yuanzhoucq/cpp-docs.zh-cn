@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302537"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>命令行错误 D8000 到 D9999
 

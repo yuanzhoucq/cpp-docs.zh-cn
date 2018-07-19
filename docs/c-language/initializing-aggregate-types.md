@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391673"
 ---
 # <a name="initializing-aggregate-types"></a>初始化聚合类型
 “聚合”类型是结构、联合或数组类型。 如果聚合类型包含聚合类型的成员，则初始化规则将以递归方式应用。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390055"
 ---
 # <a name="name-spaces"></a>命名空间
 编译器设置“命名空间”来区分用于各种项的标识符。 每个命名空间中的名称必须是唯一的以避免冲突，但相同的名称可出现在多个命名空间中。 这意味着，可以对两个或更多不同的项使用同一个标识符，前提是这些项位于不同的命名空间中。 编译器可以基于程序中标识符的语义上下文来解析引用。  

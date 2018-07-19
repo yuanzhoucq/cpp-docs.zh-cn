@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370871"
 ---
 # <a name="how-to-create-a-release-build"></a>如何：创建发行版本
 ### <a name="to-generate-a-release-build-of-your-program"></a>若要生成你的程序的发布版本  

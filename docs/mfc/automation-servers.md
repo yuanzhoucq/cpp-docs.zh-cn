@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343939"
 ---
 # <a name="automation-servers"></a>自动化服务器
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化服务器是可编程对象 （称为自动化对象） 公开到其他应用程序的应用程序 (称为[自动化客户端](../mfc/automation-clients.md))。 自动化服务器有时称为自动化组件。  

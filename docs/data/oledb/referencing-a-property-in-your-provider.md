@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106539"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  

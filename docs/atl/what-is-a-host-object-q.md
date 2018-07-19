@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357729"
 ---
 # <a name="what-is-a-host-object"></a>主机对象是什么？
 主机对象是一个表示由 ATL 提供特定窗口的 ActiveX 控件容器的 COM 对象。 该主机对象子类容器窗口，以便它可以反映到控件的消息，它提供了必要的容器接口用于控件，并且它公开[IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md)和[IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md)接口，以便允许你配置的环境的控件。  

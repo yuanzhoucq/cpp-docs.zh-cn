@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860393"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C 风格的强制转换和 /clr (C++/CLI)
 以下主题仅适用于公共语言运行时。  

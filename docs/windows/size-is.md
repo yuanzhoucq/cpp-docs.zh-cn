@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889668"
 ---
 # <a name="sizeis"></a>size_is
 指定的内存大小为固定大小的指针分配且大小调整了大小的指针和单字节或多维数组的指针。  

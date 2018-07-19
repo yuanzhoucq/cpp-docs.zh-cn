@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961231"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -99,10 +100,10 @@ C++11/C++14 的 Visual C++ 实现中添加了以下功能：
 |[hash](../standard-library/hash-class.md)|一种类，用于计算值的哈希代码。|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|一种类，用于调用 `bind` 时是否会生成特定的类型。|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|一种类，用于测试特定类型是否为占位符。|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 **non_const** 成员函数作为一元函数对象调用。|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|一种适配器类，在使用指针自变量进行初始化的情况下，该类允许将不带任何自变量的 **non_const** 成员函数作为一元函数对象调用。|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将仅带一个自变量的 **non_const** 成员函数作为二元函数对象调用。|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|一种适配器类，在使用指针自变量进行初始化的情况下，该类允许将仅带一个自变量的 **non_const** 成员函数作为二元函数对象调用。|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|一种适配器类，允许`non_const`不采用任何参数，以使用引用自变量进行初始化的一元函数对象形式调用成员函数。|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|一种适配器类，允许`non_const`不采用任何参数，以使用指针自变量进行初始化的一元函数对象形式调用成员函数。|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|一种适配器类，允许`non_const`带一个自变量作为二元函数对象在使用引用自变量初始化时调用的成员函数。|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|一种适配器类，允许`non_const`带一个自变量作为二元函数对象在使用指针自变量初始化时调用的成员函数。|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|将二元函数指针转换为自适应二元函数。|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|将一元函数指针转换为自适应一元函数。|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|一种类，用于包装引用。|

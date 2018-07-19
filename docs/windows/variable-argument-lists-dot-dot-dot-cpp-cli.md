@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889818"
 ---
 # <a name="variable-argument-lists--ccli"></a>变量自变量列表 (...) (C++/CLI)
 此示例演示如何使用`...`Visual c + +，以实现具有可变数量的自变量的函数的语法。  

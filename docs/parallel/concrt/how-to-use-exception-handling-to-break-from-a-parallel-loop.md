@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691841"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>如何：使用异常处理中断并行循环
 本主题演示如何编写基本树结构的搜索算法。  

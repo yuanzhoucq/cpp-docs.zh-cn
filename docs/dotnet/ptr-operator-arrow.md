@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160011"
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 成员访问运算符，用于在拥有的 COM 对象上调用方法。  

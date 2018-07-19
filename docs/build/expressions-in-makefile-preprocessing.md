@@ -21,9 +21,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367263"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>生成文件预处理中的表达式
-**！如果**或**！ELSE IF** `constantexpression`组成 （采用十进制或 C 语言表示法） 的整数常量、 字符串常量或命令。 使用括号来为组表达式。 表达式使用 C 样式符号长整数算术;数字是在 32 位 2 的补数的形式范围在-2147483648 到 2147483647。  
+**！如果**或 **！ELSE IF** `constantexpression`组成 （采用十进制或 C 语言表示法） 的整数常量、 字符串常量或命令。 使用括号来为组表达式。 表达式使用 C 样式符号长整数算术;数字是在 32 位 2 的补数的形式范围在-2147483648 到 2147483647。  
   
  表达式可以使用在常数值、 命令、 字符串、 宏和文件系统路径的退出代码的运算符。  
   

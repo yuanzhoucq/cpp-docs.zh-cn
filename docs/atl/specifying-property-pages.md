@@ -1,5 +1,5 @@
 ---
-title: 指定属性页 (ATL) |Microsoft 文档
+title: 指定属性页 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848371"
 ---
 # <a name="specifying-property-pages"></a>指定属性页
-在创建 ActiveX 控件时，通常想要将其与可以用来设置控件的属性的属性页关联。 控制容器使用**ISpecifyPropertyPages**接口以找出哪些属性页可以用于设置控件的属性。 你将需要对控件中实现此接口。  
+创建 ActiveX 控件时，通常想要将它与可用于设置控件的属性的属性页相关联。 控制容器使用`ISpecifyPropertyPages`接口以找出哪些属性页可以用于设置控件的属性。 你将需要您的控件上实现此接口。  
   
- 若要实现**ISpecifyPropertyPages**使用 ATL，执行以下步骤：  
+ 若要实现`ISpecifyPropertyPages`使用 ATL，执行以下步骤：  
   
-1.  派生您的类从[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。  
+1.  从类派生[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。  
   
-2.  为添加一个条目**ISpecifyPropertyPages**到您的类的 COM 映射。  
+2.  为添加一个条目`ISpecifyPropertyPages`到您的类的 COM 映射。  
   
-3.  添加[PROP_PAGE](reference/property-map-macros.md#prop_page)与控件关联的每一页的属性映射到的条目。  
+3.  添加[PROP_PAGE](reference/property-map-macros.md#prop_page)属性映射为每个页面与控件关联的条目。  
   
 > [!NOTE]
->  生成标准控件使用时[ATL 控件向导](../atl/reference/atl-control-wizard.md)，你只需添加`PROP_PAGE`属性映射到的条目。 向导将生成所需的代码有关的其他步骤。  
+>  生成标准控件使用时[ATL 控件向导](../atl/reference/atl-control-wizard.md)，只需将 PROP_PAGE 项添加到属性映射。 该向导生成所需的代码执行其他步骤。  
   
- 功能良好的容器将显示指定的属性页中的顺序相同`PROP_PAGE`属性映射中的条目。 通常情况下，你应该将置于标准属性页项条目后在属性映射中，你自定义页的以便用户先看到特定于控件的页面。  
+ 功能良好的容器将显示指定的属性页，在属性映射中 PROP_PAGE 项的顺序相同。 通常情况下，则应将标准属性页项后项自定义属性映射中页，以便用户先看到特定于控件的页。  
   
 ## <a name="example"></a>示例  
- 下面的类为日历控件使用**ISpecifyPropertyPages**接口来告诉可以使用自定义日期页和常用颜色页设置其属性的容器。  
+ 下面的类的一个日历控件使用`ISpecifyPropertyPages`告知容器可以使用自定义日期页和常用颜色页设置其属性的接口。  
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   

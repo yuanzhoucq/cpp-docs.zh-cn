@@ -1,5 +1,5 @@
 ---
-title: 显式实例化 |Microsoft 文档
+title: 显式实例化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940610"
 ---
 # <a name="explicit-instantiation"></a>显式实例化
-你可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于你的代码。 创建库 (.lib) 文件，使用的模板分发时，这很有用，因为未实例化的模板定义未放入对象 (.obj) 文件。  
+你可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于你的代码。 创建库 (.lib) 文件，使用模板进行分发时，这很有用，因为未实例化的模板定义不会被放到对象 (.obj) 文件。  
   
- 此代码针对 `MyStack` 变量和六个项显式实例化 `int`：  
+ 此代码显式实例化`MyStack`有关**int**变量和六个项：  
   
 ```cpp  
 template class MyStack<int, 6>;  
@@ -39,9 +40,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- 你可以显式使用实例化函数模板的特定类型参数来重新声明这些中的示例中所示[函数模板实例化](../cpp/function-template-instantiation.md)。  
+ 您可以显式实例化函数模板使用特定类型参数重新声明它们中的示例中所示[函数模板实例化](../cpp/function-template-instantiation.md)。  
   
- 你可以使用`extern`关键字以防止自动实例化的成员。 例如：  
+ 可以使用**extern**关键字以防止自动实例化的成员。 例如：  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -53,10 +54,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- 您可以使用 `extern` 关键字阻止编译器在多个对象模块中生成相同的实例化代码。 如果调用该函数，则必须在至少一个链接的模块中使用指定的显式模板参数来实例化模板函数，否则会在生成程序时收到链接器错误。  
+ 可以使用**extern**关键字阻止编译器在多个对象模块中生成相同的实例化代码。 如果调用该函数，则必须在至少一个链接的模块中使用指定的显式模板参数来实例化模板函数，否则会在生成程序时收到链接器错误。  
   
 > [!NOTE]
->  `extern`专用化中的关键字仅适用于类主体外部定义的成员函数。 类声明中定义的函数被视为内联函数，并且始终实例化。  
+>  **Extern**专用化中的关键字仅适用于在类主体外部定义成员函数。 类声明中定义的函数被视为内联函数，并始终实例化。  
   
 ## <a name="see-also"></a>请参阅  
  [函数模板](../cpp/function-templates.md)

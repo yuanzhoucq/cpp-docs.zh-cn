@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383688"
 ---
 # <a name="character-types"></a>字符类型
 前面没有字母 L 的整数字符常量具有类型 `int`。 包含单个字符的整数字符常量的值是解释为整数的字符的数字值。 例如，字符 `a` 的数字值在十进制和十六进制下分别为 97 和 61。  

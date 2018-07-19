@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872960"
 ---
 # <a name="default-c"></a>default (C++)
 指示组件类中定义的自定义接口或调度接口表示默认的可编程性接口。  

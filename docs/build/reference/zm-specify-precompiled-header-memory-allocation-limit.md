@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380896"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm（指定预编译标头的内存分配限额）
 确定编译器分配的用于构造预编译标头的内存量。  

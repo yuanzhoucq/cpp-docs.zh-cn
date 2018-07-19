@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341360"
 ---
 # <a name="adding-items-to-the-control"></a>向控件添加项
 若要将项添加到列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md))，调用多个版本之一[InsertItem](../mfc/reference/clistctrl-class.md#insertitem)成员函数，具体取决于你有哪些信息。 一个版本采用[LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)你准备的结构。 因为 `LV_ITEM` 结构包含很多成员，所以您更容易控制列表控件项的特性。  

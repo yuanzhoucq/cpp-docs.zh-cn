@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839876"
 ---
 # <a name="porting-data-applications"></a>移植数据应用程序
 多年来，Visual C ++ 提供了多种处理数据库的方法。 2011 年，Microsoft 宣布将 ODBC 作为从本机代码访问 SQL Server 产品的首选技术。 ODBC 是一个行业标准，通过它可在多个平台与数据源之间获取代码最佳的可移植性。 绝大多数 SQL 数据库和众多 NoSQL 产品都支持 ODBC。 可通过调用低级别 ODBC API、使用 MFC ODBC 包装器类或第三方 C++ 包装器库来直接使用 ODBC。 

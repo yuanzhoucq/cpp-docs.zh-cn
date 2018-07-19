@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694152"
 ---
 # <a name="agent-class"></a>agent 类
 旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368416"
 ---
 # <a name="inference-rules"></a>推理规则
 推理规则提供命令来更新目标，并可以推断目标的依赖项。 推理规则中的扩展匹配单个目标并具有相同的基名称的依赖。 推理规则是用户定义的或预定义的;可以重新定义预定义的规则。  

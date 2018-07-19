@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849868"
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定内联启发式搜索深度，这样，如果它的深度大于 `n` 的深度（在调用关系图中），则函数将不内联。  

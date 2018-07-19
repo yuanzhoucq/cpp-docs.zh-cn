@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f4594044ce135ed6927f9d0108863cca12845d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a368b9df930a3a72ba1e43c861663263175699d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963076"
 ---
 # <a name="isarray-class"></a>is_array 类
 
@@ -36,11 +37,11 @@ struct is_array;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是数组类型，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一个数组类型，否则为 false。
 
 ## <a name="example"></a>示例
 

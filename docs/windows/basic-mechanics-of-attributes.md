@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864925"
 ---
 # <a name="basic-mechanics-of-attributes"></a>特性的基本机制
 有三种方法要插入到你的项目的属性。 首先，你可以将它们手动插入你的源代码。 其次，你可以将它们插入项目中使用对象的属性网格。 最后，你可以将它们插入使用各种向导。 使用属性窗口和各种向导的详细信息，请参阅[创建和管理 Visual c + + 项目](../ide/creating-and-managing-visual-cpp-projects.md)。  

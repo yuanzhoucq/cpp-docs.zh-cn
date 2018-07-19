@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374747"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>优化杂注和关键字
 几个关键字和使用 C 或 c + + 代码中的杂注会影响优化：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873009"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>在项目外部编辑图像（图标的图像编辑器）
 您可以打开并编辑在开发环境中的映像，就像在任何图形应用程序中。 你使用的映像不需要进行独立编辑 Visual Studio 项目的一部分。  

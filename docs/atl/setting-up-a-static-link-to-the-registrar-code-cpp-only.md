@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360183"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>设置注册机构代码 （c + +） 的静态链接
 C + + 客户端可以创建指向注册机构的代码的静态链接。 静态链接的注册机构的分析器将大约 5 K 添加到发布版本。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382214"
 ---
 # <a name="using-ctreectrl"></a>使用 CTreeCtrl
 树控件中，由类表示[CTreeCtrl](../mfc/reference/ctreectrl-class.md)，是在磁盘显示的项，如文档中的标题中索引，或文件和目录的项的分层列表的窗口。 每个项包含一个标签和一个可选位图图像，且每个项可以有一个与之关联的子项列表。 通过单击项，用户可以展开和折叠关联的子项列表。 资源管理器的左侧窗格中的目录树是树控件的一个示例。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389184"
 ---
 # <a name="scope-and-visibility"></a>范围和可见性
 标识符的“可见性”确定其可以引用的程序部分，即其“范围”。 标识符仅在其“范围”包含的程序部分中可见（即可使用），这可能仅限于（按限制增长的顺序）它显示在其中的文件、函数、块或函数原型。 标识符的范围是可使用名称的程序的一部分。 这有时被称为“词法范围”。 有四种范围：函数、文件、块和函数原型。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373717"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>指定要延迟加载的 DLL
 您可以指定哪个 Dll 延迟加载，出现[/delayload](../../build/reference/delayload-delay-load-import.md):`dllname`链接器选项。 如果您不打算使用您自己的一个帮助程序函数版本，您还必须链接您的程序与 delayimp.lib （对于桌面应用程序） 或 dloadhelper.lib （针对应用商店应用）。  

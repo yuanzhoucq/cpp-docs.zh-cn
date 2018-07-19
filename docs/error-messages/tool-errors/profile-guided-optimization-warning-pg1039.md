@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316525"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>按配置优化警告 PG1039
 失败等待空闲时间以进行扫描。  

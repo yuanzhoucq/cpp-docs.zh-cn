@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268586"
 ---
 # <a name="compiler-error-c3894"></a>编译器错误 C3894
 var： 类 class 的类构造函数中只允许左值使用 initonly 静态数据成员  

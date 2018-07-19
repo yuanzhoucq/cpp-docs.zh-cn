@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227295"
 ---
 # <a name="compiler-error-c2579"></a>编译器错误 C2579
 无法解析类型 type （偏移量）。 应在文件中  

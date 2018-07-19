@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298322"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>编译器警告（等级 4）C4437
 从虚拟基 class1 到 class2 的 dynamic_cast 无法在与 /vd2 某些上下文中编译失败或实际上定义与 #pragma vtordisp(2) class2  

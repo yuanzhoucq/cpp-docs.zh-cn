@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387786"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 乘法运算符执行乘法 (\*)、除法 (/) 和余数 (`%`) 运算。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878169"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>“加载调色板颜色”对话框（图标的图像编辑器）
 使用此对话框中加载特殊调色板，要在你的项目中使用。 有关详细信息，请参阅[保存和加载不同的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  

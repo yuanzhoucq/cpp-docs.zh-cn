@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372716"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>选择 .netmodule 输入文件的格式
 MSIL 的.obj 文件 (使用编译[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) 还可用作.netmodule 文件。  .obj 文件包含元数据和本机符号。  .netmodule 只包含元数据。  

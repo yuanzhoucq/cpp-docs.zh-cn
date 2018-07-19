@@ -1,5 +1,5 @@
 ---
-title: 显式默认函数和已删除的函数 |Microsoft 文档
+title: 显式默认函数和已删除的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942494"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除的函数
 在 C++11 中，默认函数和已删除函数使你可以显式控制是否自动生成特殊成员函数。 已删除的函数还可为您提供简单语言，以防止所有类型的函数（特殊成员函数和普通成员函数以及非成员函数）的参数中出现有问题的类型提升，这会导致意外的函数调用。  
@@ -50,11 +51,11 @@ ms.lasthandoff: 05/03/2018
 >   
 >  在这两种情况下，Visual Studio 将继续隐式自动生成所需的函数且不发出警告。  
   
- 这些规则的结果也可能泄漏到对象层次结构中。 例如，如果基类因某种原因无法拥有可从派生类调用的默认构造函数 - 也就是说，一个不采用任何参数的 `public` 或 `protected` 构造函数 - 那么从基类派生的类将无法自动生成它自己的默认构造函数。  
+ 这些规则的结果也可能泄漏到对象层次结构中。 例如，如果出于任何原因基类不具有默认构造函数可从派生类调用 — 即，**公共**或**受保护的**不带参数的构造函数 — 然后类派生不能自动生成其自己的默认构造函数。  
   
  这些规则可能会使本应直接的内容、用户定义类型和常见 C++ 惯例的实现变得复杂 — 例如，通过以私有方式复制构造函数和复制赋值运算符，而不定义它们，使用户定义类型不可复制。  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -77,7 +78,7 @@ private:
   
  在 C++11 中，不可复制的习语可通过更直接的方法实现。  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -103,7 +104,7 @@ struct noncopyable
   
  可通过如此示例所示进行声明来默认设置特殊成员函数：  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -121,7 +122,7 @@ inline widget& widget::operator=(const widget&) =default;
 ## <a name="deleted-functions"></a>已删除的函数  
  可以删除特殊成员函数以及普通成员函数和非成员函数，以阻止定义或调用它们。 通过删除特殊成员函数，可以更简洁地阻止编译器生成不需要的特殊成员函数。 必须在声明函数时将其删除；不能在这之后通过声明一个函数然后不再使用的方式来将其删除。  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -131,15 +132,15 @@ struct widget
   
  删除普通成员函数或非成员函数可阻止有问题的类型提升导致调用意外函数。 这可发挥作用的原因是，已删除的函数仍参与重载决策，并提供比提升类型之后可能调用的函数更好的匹配。 函数调用将解析为更具体的但可删除的函数，并会导致编译器错误。  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- 请注意，在前面的示例中，使用 `call_with_true_double_only` 参数调用 `float` 将导致编译器错误，但使用 `call_with_true_double_only` 参数调用 `int` 不会导致编译器错误；在 `int` 示例中，此参数将从 `int` 提升到 `double`，并成功调用函数的 `double` 版本，即使这可能并不是预期目的。 若要确保使用非双精度参数对此函数进行的任何调用均会导致编译器错误，您可以声明已删除的函数的模板版本。  
+ 请注意，在上述示例中，调用`call_with_true_double_only`通过使用**float**参数会导致编译器错误，但调用`call_with_true_double_only`通过**int**参数不会; 在**int**的情况下，该参数将从提升**int**到**double**并成功调用**double**版本的函数即使这不可能的用途是什么。 若要确保使用非双精度自变量对此函数进行的任何调用均会导致编译器错误，你可以声明已删除的函数的模板版本。  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   

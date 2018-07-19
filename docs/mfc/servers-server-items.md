@@ -18,18 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72cbf640f7886eac65762520ebc7c21f3906f0c0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953082"
 ---
 # <a name="servers-server-items"></a>服务器：服务器项
 当容器启动服务器以便用户可编辑嵌入或链接的 OLE 项时，服务器应用程序将创建一个“服务器项”。 服务器项是派生自 `COleServerItem` 的类的对象，可提供服务器文档和容器应用程序之间的接口。  
   
  `COleServerItem` 类定义由 OLE 调用的若干可重写的成员函数，通常用于响应容器的请求。 服务器项可以表示服务器文档的一部分或整个文档。 将 OLE 项嵌入到容器文档中时，服务器项表示整个服务器文档。 链接 OLE 项时，服务器项可以表示服务器文档的一部分或整个文档，这取决于是链接到部分文档还是整个文档。  
   
- 在[HIERSVR](../visual-cpp-samples.md)示例，例如，服务器项类中， **CServerItem**，有一个是指向类的对象的指针的成员**CServerNode**。 **CServerNode**对象是 HIERSVR 应用程序的文档，这是一个树中的节点。 当**CServerNode**对象是根节点中， **CServerItem**对象表示整个文档。 当**CServerNode**对象是子节点， **CServerItem**对象表示文档的一部分。 请参阅 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)有关此交互的示例。  
+ 在[HIERSVR](../visual-cpp-samples.md)示例，例如，服务器项类中， `CServerItem`，有一个是指向类的对象的指针的成员`CServerNode`。 `CServerNode`对象是 HIERSVR 应用程序的文档，这是一个树中的节点。 当`CServerNode`对象是根节点中，`CServerItem`对象表示整个文档。 当`CServerNode`对象是子节点，`CServerItem`对象表示文档的一部分。 请参阅 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)有关此交互的示例。  
   
 ##  <a name="_core_implementing_server_items"></a> 实现服务器项  
  如果使用应用程序向导生成应用程序的“起始”代码，若要在起始代码中包含服务器项，则只需从“OLE 选项”页中选择一个服务器选项即可。 如果您要将服务器项添加到现有应用程序中，请执行以下步骤：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> 服务器项体系结构的提示  
  中所述[实现服务器项](#_core_implementing_server_items)，服务器应用程序必须能够呈现在服务器的视图和图元文件由容器应用程序中的项。 Microsoft 基础类库的应用程序体系结构中，视图类的`OnDraw`时进行编辑，成员函数渲染项 (请参阅[类库](../mfc/reference/cview-class.md#ondraw)中*类库参考*). 服务器项的`OnDraw`到图元文件在所有其他情况下会将项 (请参阅[coleserveritem:: Ondraw](../mfc/reference/coleserveritem-class.md#ondraw))。  
   
- 您可以通过在服务器文档类中编写 Helper 函数，并在您的视图类和服务器项类中从 `OnDraw` 函数调用 Helper 函数来避免重复代码。 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)使用此策略： 函数**cserverview:: Ondraw**和**cserveritem:: Ondraw**都调用**cserverdoc:: Drawtree**渲染该项。  
+ 您可以通过在服务器文档类中编写 Helper 函数，并在您的视图类和服务器项类中从 `OnDraw` 函数调用 Helper 函数来避免重复代码。 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)使用此策略： 函数`CServerView::OnDraw`和`CServerItem::OnDraw`都调用`CServerDoc::DrawTree`渲染该项。  
   
  因为视图和项是在不同条件下绘制的，所以视图和项都具有 `OnDraw` 成员函数。 视图必须考虑这些因素，如缩放、选择大小和范围、剪辑和用户界面元素（如滚动条）。 另一方面，服务器项始终绘制整个 OLE 对象。  
   

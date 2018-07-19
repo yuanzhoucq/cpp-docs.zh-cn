@@ -1,5 +1,5 @@
 ---
-title: CObList 类 |Microsoft 文档
+title: CObList 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,14 +60,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f816e4fd83439b528e6f2ab92212c763d769bed
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853051"
 ---
 # <a name="coblist-class"></a>CObList 类
-排序的唯一，则列表的 fSupports`CObject`指针访问按顺序或指针值。  
+有序列表的唯一，则 fSupports`CObject`指针可访问按顺序或指针值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,47 +88,47 @@ class CObList : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CObList::AddHead](#addhead)|将一个元素 （或另一个列表中的所有元素） 添加到 （使新头） 的列表的开头。|  
-|[CObList::AddTail](#addtail)|将一个元素 （或另一个列表中的所有元素） 添加到列表 （使新尾） 生成后半部分。|  
-|[CObList::Find](#find)|获取指针值指定的元素的位置。|  
+|[CObList::AddHead](#addhead)|将一个元素 （或另一个列表中的所有元素） 添加到 （使新头） 了列表的开头。|  
+|[CObList::AddTail](#addtail)|将一个元素 （或另一个列表中的所有元素） 添加到列表 （使新结尾） 的尾部。|  
+|[CObList::Find](#find)|获取指针值所指定的元素的位置。|  
 |[CObList::FindIndex](#findindex)|获取指定的从零开始的索引的元素的位置。|  
 |[CObList::GetAt](#getat)|获取位于给定位置的元素。|  
 |[CObList::GetCount](#getcount)|返回此列表中的元素数。|  
-|[CObList::GetHead](#gethead)|返回的列表中 （不能为空） 的头元素。|  
+|[CObList::GetHead](#gethead)|返回的列表 （不能为空） 的头元素。|  
 |[CObList::GetHeadPosition](#getheadposition)|返回列表的头元素的位置。|  
-|[CObList::GetNext](#getnext)|获取循环的下一个元素。|  
+|[CObList::GetNext](#getnext)|获取用于循环的下一个元素。|  
 |[CObList::GetPrev](#getprev)|获取循环访问的上一个元素。|  
 |[CObList::GetSize](#getsize)|返回此列表中的元素数。|  
 |[CObList::GetTail](#gettail)|返回 （不能为空） 的列表的结尾元素。|  
 |[CObList::GetTailPosition](#gettailposition)|返回列表的结尾元素的位置。|  
-|[CObList::InsertAfter](#insertafter)|给定位置之后插入一个新元素。|  
-|[CObList::InsertBefore](#insertbefore)|将插入一个新的元素之前的给定位置。|  
-|[CObList::IsEmpty](#isempty)|空列表条件 （没有元素） 的的测试。|  
-|[CObList::RemoveAll](#removeall)|从此列表中移除所有元素。|  
-|[CObList::RemoveAt](#removeat)|从此列表中，指定位置移除的元素。|  
-|[CObList::RemoveHead](#removehead)|从列表头与列表中移除的元素。|  
+|[CObList::InsertAfter](#insertafter)|在给定位置后插入一个新元素。|  
+|[CObList::InsertBefore](#insertbefore)|将插入新元素之前的给定位置。|  
+|[CObList::IsEmpty](#isempty)|对于空列表条件 （元素） 的测试。|  
+|[CObList::RemoveAll](#removeall)|此列表中移除所有元素。|  
+|[CObList::RemoveAt](#removeat)|从此列表中，指定位置移除一个元素。|  
+|[CObList::RemoveHead](#removehead)|从列表的开头移除的元素。|  
 |[CObList::RemoveTail](#removetail)|从列表的结尾移除的元素。|  
 |[CObList::SetAt](#setat)|设置给定位置处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CObList` 列表的行为类似于双向链接列表。  
+ `CObList` 列表类似于双向链接列表。  
   
- 类型的变量的**位置**至关重要的列表。 你可以使用**位置**变量作为一个迭代器来按顺序遍历列表和一个书签以保存一个位置。 位置不相同的索引，但是。  
+ 位置类型的变量是列表的键。 作为要按顺序遍历列表的迭代器和一个书签，用于保存一个位置，可以使用位置变量。 位置不是相同的索引，但是。  
   
- 插入元素非常快速位于列表前面、 尾部，和已知**位置**。 按顺序搜索是按值或索引查找元素所需的。 此搜索可能会很慢，如果列表太长。  
+ 元素插入速度非常快列表头、 尾和已知位置。 按值或索引查找元素所需顺序搜索。 此搜索可能较慢，如果列表太长。  
   
- `CObList` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果一份`CObject`指针存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CObject`反过来序列化元素。  
+ `CObList` 集成了 IMPLEMENT_SERIAL 宏来支持序列化和转储的它的元素。 如果一系列`CObject`指针存储到存档，或者用重载的插入运算符`Serialize`成员函数，每个`CObject`反过来序列化元素。  
   
  如果你需要个人的转储`CObject`列表中的元素，必须将转储上下文的深度设置为 1 或更高版本。  
   
- 当`CObList`对象被删除，或删除其元素是时，仅`CObject`指针将被删除，它们引用不是对象。  
+ 当`CObList`删除对象，或删除其元素是时，仅`CObject`指针将被删除，它们引用而非的对象。  
   
- 可以派生您自己的类从`CObList`。 新的列表类，用于保存到派生自的对象的指针`CObject`，添加新的数据成员和新成员函数。 请注意，生成的列表不完全是类型安全，因为它允许任何插入`CObject`指针。  
+ 可以派生您自己的类从`CObList`。 新列表类，设计用来存放指针到派生自`CObject`，添加了新的数据成员和新的成员函数。 请注意，所得到的列表并不严格类型安全的因为它允许任何插入`CObject`指针。  
   
 > [!NOTE]
->  必须使用[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)你如果你想要序列化列表的派生类的实现中的宏。  
+>  必须使用[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)如果你想要序列化列表为派生类的实现中的宏。  
   
- 有关详细信息使用`CObList`，请参阅文章[集合](../../mfc/collections.md)。  
+ 有关使用的详细信息`CObList`，请参阅文章[集合](../../mfc/collections.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -146,14 +147,14 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `newElement`  
- `CObject`要添加到此列表的指针。  
+ *newElement*  
+ `CObject`用于添加到此列表的指针。  
   
- `pNewList`  
- 指向另一个`CObList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CObList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
- 第一个版本返回**位置**新插入的元素的值。  
+ 第一个版本返回新插入的元素的位置值。  
   
  下表显示其他成员函数类似于`CObList::AddHead`。  
   
@@ -187,14 +188,14 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `newElement`  
- `CObject`要添加到此列表的指针。  
+ *newElement*  
+ `CObject`用于添加到此列表的指针。  
   
- `pNewList`  
- 指向另一个`CObList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CObList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
- 第一个版本返回**位置**新插入的元素的值。  
+ 第一个版本返回新插入的元素的位置值。  
   
 ### <a name="remarks"></a>备注  
  列表可以为空操作之前。  
@@ -227,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
- 内存分配扩展列表的粒度。  
+ *nBlockSize*  
+ 扩展列表的内存分配粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着列表后，内存分配的单位`nBlockSize`条目。 如果内存分配失败，`CMemoryException`引发。  
+ 随着在列表中的单元分配内存*nBlockSize*条目。 如果内存分配失败，`CMemoryException`引发。  
   
  下表显示其他成员函数类似于`CObList::CObList`。  
   
@@ -241,7 +242,7 @@ CObList(INT_PTR nBlockSize = 10);
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|  
   
 ### <a name="example"></a>示例  
-  下面列出了的`CObject`-派生类`CAge`集合的所有示例中使用：  
+  下面是一系列`CObject`的派生类`CAge`集合的所有示例中使用：  
   
  [!code-cpp[NVC_MFCCollections#91](../../mfc/codesnippet/cpp/coblist-class_3.h)]  
   
@@ -250,7 +251,7 @@ CObList(INT_PTR nBlockSize = 10);
  [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CObList::Find  
- 按顺序以查找第一个在列表中搜索`CObject`匹配指定的指针`CObject`指针。  
+ 按顺序以找到第一个在列表中搜索`CObject`匹配的指定指针`CObject`指针。  
   
 ```  
 POSITION Find(
@@ -259,23 +260,23 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>参数  
- `searchValue`  
+ *searchValue*  
  要在此列表中找到的对象指针。  
   
- `startAfter`  
+ *startAfter*  
  搜索起始位置。  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果找不到对象。  
+ 可用于迭代或检索对象指针; 一个位置值如果未找到该对象为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 请注意指针值进行比较，而非对象的内容。  
+ 请注意，指针值进行比较，而非对象的内容。  
   
  下表显示其他成员函数类似于`CObList::Find`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置查找 (void\***  `searchValue` **，位置** `startAfter` **= NULL) const;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置找到 (void\***  `searchValue` **，位置** `startAfter` **= NULL) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置查找 (LPCTSTR** `searchValue` **，位置** `startAfter` **= NULL) const;**|  
   
 ### <a name="example"></a>示例  
@@ -284,21 +285,21 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- 使用的值`nIndex`作为列表中的索引。  
+ 使用的值*nIndex*作为列表中的索引。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要找的列表元素的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果`nIndex`太大。 (如果，框架才生成断言`nIndex`为负。)  
+ 可用于迭代或检索对象指针; 一个位置值则为 NULL *nIndex*太大。 (如果，框架才生成断言*nIndex*为负。)  
   
 ### <a name="remarks"></a>备注  
- 从列表中，停止对的开头开始顺序扫描*n*th 元素。  
+ 从列表中，停止对的开头开始顺序扫描*n*个元素。  
   
  下表显示其他成员函数类似于`CObList::FindIndex`。  
   
@@ -313,7 +314,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
 ##  <a name="getat"></a>  CObList::GetAt  
- 类型的变量的**位置**至关重要的列表。  
+ 位置类型的变量是列表的键。  
   
 ```  
 CObject*& GetAt(POSITION position);  
@@ -322,25 +323,25 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>参数  
  *位置*  
- A**位置**通过前一个返回值`GetHeadPosition`或**查找**成员函数调用。  
+ 返回先前的位置值`GetHeadPosition`或`Find`成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
- 请参见的返回值说明[GetHead](#gethead)。  
+ 请参阅的返回值描述[GetHead](#gethead)。  
   
 ### <a name="remarks"></a>备注  
- 它并不相同索引，并且无法对**位置**值自己。 `GetAt` 检索`CObject`给定位置与关联的指针。  
+ 不是索引，请与相同和您无法对位置值自己。 `GetAt` 检索`CObject`与给定位置相关联的指针。  
   
- 你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
+ 您必须确保你的位置值表示在列表中的有效位置。 如果无效，Microsoft 基础类库的调试版本断言。  
   
  下表显示其他成员函数类似于`CObList::GetAt`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置***位置* **) const;**<br /><br /> **void\*& GetAt (位置***位置* **);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString 和 GetAt (位置***位置* **) const;**<br /><br /> **CString 和 GetAt (位置***位置* **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (位置***位置* **) const;**<br /><br /> **CString & GetAt (位置***位置* **);**|  
   
 ### <a name="example"></a>示例  
-  请参阅示例[FindIndex](#findindex)。  
+  有关示例，请参阅[FindIndex](#findindex)。  
   
 ##  <a name="getcount"></a>  CObList::GetCount  
  获取此列表中的元素数。  
@@ -373,24 +374,24 @@ const CObject*& GetHead() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果通过指针访问列表**const CObList**，然后`GetHead`返回`CObject`指针。 这允许使用仅在赋值语句右侧的函数，因此进行修改，保护列表。  
+ 如果通过到指针访问列表`const CObList`，然后`GetHead`返回`CObject`指针。 这允许使用仅在赋值语句右侧的函数，因此，从修改保护列表。  
   
- 如果直接或通过指针访问列表`CObList`，然后`GetHead`返回的引用`CObject`指针。 这允许要在赋值语句的任何一侧上使用的函数，从而允许对要修改的列表项。  
+ 如果直接或通过指针向访问列表`CObList`，然后`GetHead`返回的引用`CObject`指针。 这允许使用赋值语句的任何一侧的函数，因此允许列表条目，以进行修改。  
   
 ### <a name="remarks"></a>备注  
- 你必须确保该列表不是空之前调用`GetHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表包含的元素。  
+ 必须确保该列表不是空之前调用`GetHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表中包含的元素。  
   
  下表显示其他成员函数类似于`CObList::GetHead`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead （) const; void\*& GetHead （);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString 和 GetHead （) const;CString 和 GetHead （);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead （) const;CString & GetHead （);**|  
   
 ### <a name="example"></a>示例  
  请参阅[CObList::CObList](#coblist)有关的列表`CAge`类。  
   
- 下面的示例演示如何使用`GetHead`赋值语句的左侧。  
+ 下面的示例演示如何使用`GetHead`赋值语句左侧。  
   
  [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
@@ -402,7 +403,7 @@ POSITION GetHeadPosition() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果列表为空。  
+ 可用于迭代或检索对象指针; 一个位置值如果列表为空，则为 NULL。  
   
  下表显示其他成员函数类似于`CObList::GetHeadPosition`。  
   
@@ -417,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- 获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`的列表中的下一步条目的值。  
+ 获取标识的列表元素*rPosition*，然后设置*rPosition*到`POSITION`列表中的下一个条目的值。  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -425,23 +426,23 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `rPosition`  
- 对引用`POSITION`通过前一个返回值`GetNext`， `GetHeadPosition`，或其他成员函数调用。  
+ *rPosition*  
+ 对先前返回的位置值的引用`GetNext`， `GetHeadPosition`，或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
- 请参见的返回值说明[GetHead](#gethead)。  
+ 请参阅的返回值描述[GetHead](#gethead)。  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`GetNext`如果建立通过调用的初始位置的向前迭代循环中`GetHeadPosition`或`Find`。  
+ 可以使用`GetNext`中如果建立调用一次的初始位置的向前迭代循环`GetHeadPosition`或`Find`。  
   
- 你必须确保你`POSITION`值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
+ 您必须确保你的位置值表示在列表中的有效位置。 如果无效，Microsoft 基础类库的调试版本断言。  
   
- 如果检索的元素的是在列表中，最后然后的新值`rPosition`设置为`NULL`。  
+ 如果检索的元素的是在列表中，最后再的新值*rPosition*设置为 NULL。  
   
- 可迭代过程中删除元素。 请参阅示例[RemoveAt](#removeat)。  
+ 就可以执行迭代的过程中删除元素。 有关示例，请参阅[RemoveAt](#removeat)。  
   
 > [!NOTE]
->  从 MFC 8.0 开始的 const 版本的此方法已更改以返回`const CObject*`而不是`const CObject*&`。  进行此更改将使编译器符合 c + + 标准。  
+>  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合 c + + 标准。  
   
  下表显示其他成员函数类似于`CObList::GetNext`。  
   
@@ -462,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- 获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`列表中的上一项的值。  
+ 获取标识的列表元素*rPosition*，然后设置*rPosition*列表的上一项的位置值。  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -470,21 +471,21 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `rPosition`  
- 对引用`POSITION`通过前一个返回值`GetPrev`或其他成员函数调用。  
+ *rPosition*  
+ 对先前返回的位置值的引用`GetPrev`或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
- 请参见的返回值说明[GetHead](#gethead)。  
+ 请参阅的返回值描述[GetHead](#gethead)。  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`GetPrev`如果建立通过调用的初始位置的反向迭代循环中`GetTailPosition`或`Find`。  
+ 可以使用`GetPrev`在反向迭代循环中，如果建立初始位置通过调用`GetTailPosition`或`Find`。  
   
- 你必须确保你`POSITION`值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
+ 您必须确保你的位置值表示在列表中的有效位置。 如果无效，Microsoft 基础类库的调试版本断言。  
   
- 如果检索的元素的是在列表中，第一个然后的新值`rPosition`设置为`NULL`。  
+ 如果检索的元素的为第一个在列表中，则新值的*rPosition*设置为 NULL。  
   
 > [!NOTE]
->  从 MFC 8.0 开始的 const 版本的此方法已更改以返回`const CObject*`而不是`const CObject*&`。  进行此更改将使编译器符合 c + + 标准。  
+>  MFC 8.0 截至此方法的 const 版本已更改为返回`const CObject*`而不是`const CObject*&`。  此更改是为了使编译器符合 c + + 标准。  
   
  下表显示其他成员函数类似于`CObList::GetPrev`。  
   
@@ -505,7 +506,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
  `a CAge at $421C 40`  
   
 ##  <a name="getsize"></a>  CObList::GetSize  
- 返回列表元素的数目。  
+ 返回列表的元素数。  
   
 ```  
 INT_PTR GetSize() const;  
@@ -538,17 +539,17 @@ const CObject*& GetTail() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 请参见的返回值说明[GetHead](#gethead)。  
+ 请参阅的返回值描述[GetHead](#gethead)。  
   
 ### <a name="remarks"></a>备注  
- 你必须确保该列表不是空之前调用`GetTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表包含的元素。  
+ 必须确保该列表不是空之前调用`GetTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表中包含的元素。  
   
  下表显示其他成员函数类似于`CObList::GetTail`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail （) const; void\*& GetTail （);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString 和 GetTail （) const;CString 和 GetTail （);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail （) const;CString & GetTail （);**|  
   
 ### <a name="example"></a>示例  
  请参阅[CObList::CObList](#coblist)有关的列表`CAge`类。  
@@ -563,7 +564,7 @@ POSITION GetTailPosition() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果列表为空。  
+ 可用于迭代或检索对象指针; 一个位置值如果列表为空，则为 NULL。  
   
  下表显示其他成员函数类似于`CObList::GetTailPosition`。  
   
@@ -578,7 +579,7 @@ POSITION GetTailPosition() const;
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
 ##  <a name="insertafter"></a>  CObList::InsertAfter  
- 在指定位置处的元素后，请向此列表中添加一个元素。  
+ 在指定位置处的元素后添加到此列表的一个元素。  
   
 ```  
 POSITION InsertAfter(
@@ -588,9 +589,9 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ 返回先前的位置值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的对象指针。  
   
  下表显示其他成员函数类似于`CObList::InsertAfter`。  
@@ -601,7 +602,7 @@ POSITION InsertAfter(
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置***位置* **，const CString &** `newElement` **);**<br /><br /> **位置 InsertAfter (位置***位置* **，LPCTSTR** `newElement` **);**|  
   
 ### <a name="return-value"></a>返回值  
- A**位置**是相同的值作为*位置*参数。  
+ 相同的位置值作为*位置*参数。  
   
 ### <a name="example"></a>示例  
   请参阅[CObList::CObList](#coblist)有关的列表`CAge`类。  
@@ -629,13 +630,13 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ 返回先前的位置值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的对象指针。  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果列表为空。  
+ 可用于迭代或检索对象指针; 一个位置值如果列表为空，则为 NULL。  
   
  下表显示其他成员函数类似于`CObList::InsertBefore`。  
   
@@ -667,7 +668,7 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果此列表为空，则为非零否则为 0。  
+ 如果此列表为空，则为非零值否则为 0。  
   
  下表显示其他成员函数类似于`CObList::IsEmpty`。  
   
@@ -677,7 +678,7 @@ BOOL IsEmpty() const;
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty （) const;**|  
   
 ### <a name="example"></a>示例  
-  请参阅示例[RemoveAll](#removeall)。  
+  有关示例，请参阅[RemoveAll](#removeall)。  
   
 ##  <a name="removeall"></a>  CObList::RemoveAll  
  从此列表中移除所有元素，并释放关联`CObList`内存。  
@@ -689,7 +690,7 @@ void RemoveAll();
 ### <a name="remarks"></a>备注  
  如果列表已为空，则会不生成任何错误。  
   
- 删除中的元素时`CObList`，从列表中删除的对象指针。 它由你负责删除这些对象本身。  
+ 删除中的元素时`CObList`，从列表中删除对象指针。 它由你负责删除对象本身。  
   
  下表显示其他成员函数类似于`CObList::RemoveAll`。  
   
@@ -704,7 +705,7 @@ void RemoveAll();
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
 ##  <a name="removeat"></a>  CObList::RemoveAt  
- 从此列表中移除指定的元素。  
+ 此列表中移除指定的元素。  
   
 ```  
 void RemoveAt(POSITION position);
@@ -712,12 +713,12 @@ void RemoveAt(POSITION position);
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 要从列表中移除的元素的位置。  
+ 若要从列表中移除的元素的位置。  
   
 ### <a name="remarks"></a>备注  
- 删除中的元素时`CObList`，从列表中删除的对象指针。 它由你负责删除这些对象本身。  
+ 删除元素时`CObList`，从列表中删除的对象指针。 它由你负责删除对象本身。  
   
- 你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
+ 您必须确保你的位置值表示在列表中的有效位置。 如果无效，Microsoft 基础类库的调试版本断言。  
   
  下表显示其他成员函数类似于`CObList::RemoveAt`。  
   
@@ -727,7 +728,7 @@ void RemoveAt(POSITION position);
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (位置***位置* **);**|  
   
 ### <a name="example"></a>示例  
-  列表迭代过程中删除元素时要小心。 下面的示例演示一种删除技术，可保证有效**位置**值[GetNext](#getnext)。  
+  列表迭代过程中删除元素时要小心。 下面的示例演示一种删除方法，可保证是有效**位置**值[GetNext](#getnext)。  
   
  请参阅[CObList::CObList](#coblist)有关的列表`CAge`类。  
   
@@ -742,17 +743,17 @@ void RemoveAt(POSITION position);
  `a CAge at $4B22 21`  
   
 ##  <a name="removehead"></a>  CObList::RemoveHead  
- 从列表头与列表中移除的元素，将指针返回到它。  
+ 从列表的开头移除的元素并返回的指针。  
   
 ```  
 CObject* RemoveHead();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `CObject`以前在列表的开头的指针。  
+ `CObject`以前位于列表的开头的指针。  
   
 ### <a name="remarks"></a>备注  
- 你必须确保该列表不是空之前调用`RemoveHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表包含的元素。  
+ 必须确保该列表不是空之前调用`RemoveHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表中包含的元素。  
   
  下表显示其他成员函数类似于`CObList::RemoveHead`。  
   
@@ -767,17 +768,17 @@ CObject* RemoveHead();
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
 ##  <a name="removetail"></a>  CObList::RemoveTail  
- 从列表的结尾移除的元素，将指针返回到它。  
+ 从列表的结尾移除的元素并返回的指针。  
   
 ```  
 CObject* RemoveTail();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向已在列表末尾的对象的指针。  
+ 指向所列表的结尾处的对象的指针。  
   
 ### <a name="remarks"></a>备注  
- 你必须确保该列表不是空之前调用`RemoveTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表包含的元素。  
+ 必须确保该列表不是空之前调用`RemoveTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](#isempty)验证列表中包含的元素。  
   
  下表显示其他成员函数类似于`CObList::RemoveTail`。  
   
@@ -801,16 +802,16 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
- **位置**要设置的元素。  
+ *pos*  
+ 若要设置的元素的位置。  
   
- `newElement`  
- `CObject`要写入到列表的指针。  
+ *newElement*  
+ `CObject`用于写入到列表的指针。  
   
 ### <a name="remarks"></a>备注  
- 类型的变量的**位置**至关重要的列表。 它并不相同索引，并且无法对**位置**值自己。 `SetAt` 写入`CObject`到列表中的指定位置的指针。  
+ 位置类型的变量是列表的键。 不是索引，请与相同和您无法对位置值自己。 `SetAt` 写入`CObject`到列表中的指定位置的指针。  
   
- 你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
+ 您必须确保你的位置值表示在列表中的有效位置。 如果无效，Microsoft 基础类库的调试版本断言。  
   
  下表显示其他成员函数类似于`CObList::SetAt`。  
   
@@ -834,6 +835,6 @@ void SetAt(
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CStringList 类](../../mfc/reference/cstringlist-class.md)   
  [CPtrList 类](../../mfc/reference/cptrlist-class.md)

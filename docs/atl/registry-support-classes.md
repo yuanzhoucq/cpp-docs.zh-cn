@@ -1,5 +1,5 @@
 ---
-title: 注册表支持类 (ATL) |Microsoft 文档
+title: 注册表支持类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78d032bd6de104808600de97d20d2727f896e8e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960399"
 ---
 # <a name="registry-support-classes"></a>注册表支持类
 下面的类提供注册表支持：  

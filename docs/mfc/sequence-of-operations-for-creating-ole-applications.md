@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381204"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>用于创建 OLE 应用程序的操作顺序
 下表显示你的角色和框架的角色中创建 OLE 链接和嵌入应用程序。 这些表示可用的选项而不是一个序列的步骤执行。  

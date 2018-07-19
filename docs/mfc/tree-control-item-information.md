@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385360"
 ---
 # <a name="tree-control-item-information"></a>树控件项信息
 树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 具有大量检索有关控件中项的信息的成员函数。 [GetItem](../mfc/reference/ctreectrl-class.md#getitem)成员函数将检索的部分或全部与项关联的数据。 此数据可以包括项目的文本、状态、图像、子项目计数和应用程序定义的 32 位数据值。 此外，还有[SetItem](../mfc/reference/ctreectrl-class.md#setitem)可以设置某些或所有与项关联的数据的函数。  

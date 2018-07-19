@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391254"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 边界传递 CRT 对象时可能的错误
 当你将 C 运行时 (CRT) 对象（例如，文件句柄、区域设置和环境变量）传入或传出 DLL（跨 DLL 边界的函数调用）时，如果 DLL 以及 DLL 中调用的文件使用不同的 CRT 库副本，则可能发生意外行为。  

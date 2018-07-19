@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363524"
 ---
 # <a name="atl-control-wizard"></a>ATL 控件向导
 ATL 项目 （或具有 ATL 支持的 MFC 项目） 插入 ATL 控件。 此向导可用于插入一个三种类型的控件：  

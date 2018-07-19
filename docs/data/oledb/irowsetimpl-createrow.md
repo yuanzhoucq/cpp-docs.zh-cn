@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103237"
 ---
 # <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
 由调用一个帮助器方法[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)分配一个新**HROW**。  

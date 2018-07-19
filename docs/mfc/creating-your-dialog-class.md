@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341905"
 ---
 # <a name="creating-your-dialog-class"></a>创建自己的对话框类
 对于每个程序中的对话框，创建一个新的对话框类，用于对话框资源。  

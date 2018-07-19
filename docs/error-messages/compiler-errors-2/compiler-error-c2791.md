@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236491"
 ---
 # <a name="compiler-error-c2791"></a>编译器错误 C2791
 非法使用超级: class 没有任何基类，这些类  

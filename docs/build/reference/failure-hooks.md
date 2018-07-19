@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371780"
 ---
 # <a name="failure-hooks"></a>失败挂钩
 失败挂钩的启用方式与[通知挂钩](../../build/reference/notification-hooks.md)。 挂钩例程需要将返回一个适合的值，以便处理可以继续 （HINSTANCE 或 FARPROC） 或为 0 指示应引发异常。  

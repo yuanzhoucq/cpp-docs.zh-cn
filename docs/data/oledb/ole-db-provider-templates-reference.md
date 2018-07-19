@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112415"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供程序模板参考
 可以为以下类别分组的类和接口的 OLE DB 提供程序模板。 参考材料还包含下列相关信息[OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)。  

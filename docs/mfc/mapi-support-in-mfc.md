@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 301e15b11b05f9ccbeaee63aead486f1cc6c405c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931897"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支持
-MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 类中支持**CDocument**。 具体而言， **CDocument**具有确定邮件支持是否在最终用户的计算机上存在的成员函数，并且，如果是这样，启用其标准命令 id 的发送邮件命令**ID_FILE_SEND_MAIL**. 此命令的 MFC 处理程序函数允许用户通过电子邮件发送文档。  
+MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 类中支持`CDocument`。 具体而言，`CDocument`具有确定邮件支持是否在最终用户的计算机上存在的成员函数，并且，如果是这样，启用其标准命令 ID 是 ID_FILE_SEND_MAIL 的发送邮件命令。 此命令的 MFC 处理程序函数允许用户通过电子邮件发送文档。  
   
 > [!TIP]
 >  尽管 MFC 不封装整个 MAPI 函数集，但仍然可以调用 MAPI 函数直接，只需为可直接从 MFC 程序中调用 Win32 API 函数。  
   
- 提供发送邮件应用程序中的命令是非常简单。 MFC 提供的实现来打包文档 (即， **CDocument**-派生对象) 以附件形式并将其作为电子邮件发送。 此附件相当于将保存的文件保存命令 （序列化） 到邮件的文档的内容。 此实现中调用邮件客户端用户的计算机上，可以向用户授予机会，将邮件发送，并将使用者和消息文本添加到邮件消息。 用户看到其熟悉的邮件应用程序的用户界面。 此功能提供的两个**CDocument**成员函数：`OnFileSendMail`和`OnUpdateFileSendMail`。  
+ 提供发送邮件应用程序中的命令是非常简单。 MFC 提供的实现来打包文档 (即， `CDocument`-派生对象) 以附件形式并将其作为电子邮件发送。 此附件相当于将保存的文件保存命令 （序列化） 到邮件的文档的内容。 此实现中调用邮件客户端用户的计算机上，可以向用户授予机会，将邮件发送，并将使用者和消息文本添加到邮件消息。 用户看到其熟悉的邮件应用程序的用户界面。 此功能提供的两个`CDocument`成员函数：`OnFileSendMail`和`OnUpdateFileSendMail`。  
   
  MAPI 需要读取要发送附件的文件。 如果应用程序将其数据文件保留在打开`OnFileSendMail`函数调用，该文件必须使用允许多个进程访问该文件的共享模式下打开。  
   
@@ -40,7 +41,7 @@ MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 
   
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>若要实现具有 MFC 的发送邮件命令  
   
-1.  使用 Visual c + + 菜单编辑器将添加其命令 ID 是菜单项**ID_FILE_SEND_MAIL**。  
+1.  使用 Visual c + + 菜单编辑器中添加的命令 ID 是 ID_FILE_SEND_MAIL 菜单项。  
   
      此命令 ID 是由在 AFXRES framework 提供的。H。 该命令可以添加到任何菜单上，但通常将其添加到**文件**菜单。  
   
@@ -49,7 +50,7 @@ MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 
      [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]  
   
     > [!NOTE]
-    >  此消息映射适用于从派生文档**CDocument**或**COleDocument** — 即使消息映射是在派生的文档类拾取在任一情况下，正确的基类。  
+    >  此消息映射适用于从派生文档`CDocument`或`COleDocument`— 即使消息映射是在派生的文档类拾取在任一情况下，正确的基类。  
   
 3.  生成你的应用程序。  
   
@@ -60,7 +61,7 @@ MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 
   
  有关相关信息，请参阅[MAPI](../mfc/mapi.md)概述。  
   
- 有关详细信息**CDocument**成员函数，MAPI，请参阅：  
+ 有关详细信息`CDocument`成员函数，MAPI，请参阅：  
   
 -   [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)  
   

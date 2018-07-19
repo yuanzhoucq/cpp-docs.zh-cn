@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931647"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 对象之间的关系
 为了帮助正确地对待文档/视图创建过程，请考虑正在运行的程序：文档、用于包含视图的框架窗口以及与文档关联的视图。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
  通常，框架窗口包含一个视图，但在某些情况下（例如在拆分窗口中），同一框架窗口包含多个视图。 框架窗口保留指向当前处于活动状态的视图的指针；该指针在其他视图激活时更新。  
   
 > [!NOTE]
->  指向主框架窗口的指针存储在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)应用程序对象的成员变量。 在 `OnFileNew` 的 `InitInstance` 成员函数的重写中调用 `CWinApp` 将为您设置 `m_pMainWnd`。 如果您未调用 `OnFileNew`，则必须自行在 `InitInstance` 中设置变量的值。 （如果 /Embedding 在命令行上，SDI COM 组件（服务器）应用程序就无法设置变量。）请注意，`m_pMainWnd` 现在是类 `CWinThread` 的成员而不是类 `CWinApp` 的成员。  
+>  指向主框架窗口的指针存储在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)应用程序对象的成员变量。 调用`OnFileNew`的重写中`InitInstance`成员函数`CWinApp`设置*m_pMainWnd*为你。 如果您未调用 `OnFileNew`，则必须自行在 `InitInstance` 中设置变量的值。 （如果 /Embedding 在命令行上，SDI COM 组件（服务器）应用程序就无法设置变量。）请注意， *m_pMainWnd*现在是类的成员`CWinThread`而非`CWinApp`。  
   
 ## <a name="see-also"></a>请参阅  
  [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)   

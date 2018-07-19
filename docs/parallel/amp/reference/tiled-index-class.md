@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692140"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 提供的索引[tiled_extent](tiled-extent-class.md)对象。 此类具有属性来访问元素相对于本地的磁贴源和相对于全局源。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。  

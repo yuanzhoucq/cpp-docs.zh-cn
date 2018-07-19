@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695182"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  

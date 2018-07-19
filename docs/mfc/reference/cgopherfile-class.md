@@ -1,5 +1,5 @@
 ---
-title: CGopherFile 类 |Microsoft 文档
+title: CGopherFile 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6c4f87ffb1538e581320e9d6f36e8d4fbc6fc12
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335677"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 类
 提供查找和读取 Gopher 服务器上文件的功能。  
   
 > [!NOTE]
->  类`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`和其成员具有已弃用，因为它们不能在 Windows XP 平台上，但它们将继续在早期版本的平台上正常工作。  
+>  类`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`和它们的成员具有已弃用，因为它们不能在 Windows XP 平台上，但它们将继续在早期版本的平台上工作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,9 +46,9 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|构造 `CGopherFile` 对象。|  
   
 ## <a name="remarks"></a>备注  
- Gopher 服务不允许用户将数据写入到 gopher 文件，因为此服务主要充当菜单驱动的界面，用于查找信息。 `CGopherFile`成员函数**编写**， `WriteString`，和`Flush`未实现`CGopherFile`。 在调用这些函数`CGopherFile`对象，返回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Gopher 服务不允许用户将数据写入到 gopher 文件，因为此服务主要用作菜单驱动的界面，用于查找信息。 `CGopherFile`成员函数`Write`， `WriteString`，和`Flush`未实现的`CGopherFile`。 在调用这些函数`CGopherFile`对象，返回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 若要了解有关如何`CGopherFile`工作与其他 MFC Internet 类，请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。  
+ 若要详细了解如何`CGopherFile`适用于其他 MFC Internet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -64,7 +65,7 @@ class CGopherFile : public CInternetFile
  **标头：** afxinet.h  
   
 ##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
- 此成员函数调用以构造`CGopherFile`对象。  
+ 调用此成员函数来构造`CGopherFile`对象。  
   
 ```  
 CGopherFile(
@@ -82,35 +83,35 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hFile`  
- 句柄`HINTERNET`文件。  
+ *hFile*  
+ HINTERNET 文件句柄。  
   
- `refLocator`  
+ *refLocator*  
  对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
   
- `pConnection`  
- 指向的指针[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。  
+ *pConnection*  
+ 一个指向[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。  
   
- `hSession`  
- 当前的 Internet 会话句柄。  
+ *hSession*  
+ 当前 Internet 会话句柄。  
   
- `pstrLocator`  
- 指向用于查找 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](cgopherlocator-class.md)有关 gopher 定位符的详细信息。  
+ *pstrLocator*  
+ 指向用来定位 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](cgopherlocator-class.md)有关 gopher 定位符的详细信息。  
   
  *dwLocLen*  
- 一个包含中的字节数的 dword 值`pstrLocator`。  
+ 包含中的字节数的 DWORD *pstrLocator*。  
   
- `dwContext`  
+ *dwContext*  
  指向所打开的文件的上下文标识符的指针。  
   
 ### <a name="remarks"></a>备注  
- 你需要`CGopherFile`要 gopher Internet 会话期间从文件读取对象。  
+ 您需要`CGopherFile`对象，以便从文件读取 gopher Internet 会话期间。  
   
- 切勿创建`CGopherFile`直接对象。 而应调用[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)以打开 gopher 服务器上的文件。  
+ 永远不会创建`CGopherFile`直接对象。 改为调用[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)打开 gopher 服务器上的文件。  
   
 ## <a name="see-also"></a>请参阅  
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
  [CGopherLocator 类](../../mfc/reference/cgopherlocator-class.md)   
  [CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)   

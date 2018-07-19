@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112311"
 ---
 # <a name="receiving-notifications"></a>接收通知
 OLE DB 提供用于在事件发生时接收通知的接口。 描述了这些内容在[OLE DB 对象通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)中*OLE DB 程序员参考*。 这些事件的安装程序将使用的标准的 COM 连接点机制。 例如，想要检索通过事件的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其通过公开**COM_INTERFACE_ENTRY**宏。  

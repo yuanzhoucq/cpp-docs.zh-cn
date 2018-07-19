@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLabel 类 |Microsoft 文档
+title: CMFCRibbonLabel 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848578"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 实现功能区的不可单击文本标签。  
@@ -41,7 +42,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|构造并初始化`CMFCRibbonLabel`与指定的文本字符串的对象。|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|构造并初始化`CMFCRibbonLabel`对象与指定的文本字符串。|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
@@ -49,11 +50,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |名称|描述|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonLabel::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|确定当前的功能区 label 元素的可访问性数据。 (重写[cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|  
+|`CMFCRibbonLabel::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|确定当前的功能区标签元素的可访问性数据。 (重写[cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|  
   
 ### <a name="remarks"></a>备注  
- 创建功能区的标签后，将其添加到面板通过调用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+ 创建功能区标签后，将其添加到一个面板，通过调用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
  无法将功能区标签添加到快速访问工具栏。  
   
@@ -79,14 +80,14 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  要在标签中显示的文本。  
   
- [in] `bIsMultiLine`  
- `TRUE` 若要指定标签是多行标签;否则为`FALSE`。  
+ [in]*bIsMultiLine*  
+ 若要指定标签是一个多行标签;，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- 确定当前的功能区 label 元素的可访问性数据。  
+ 确定当前的功能区标签元素的可访问性数据。  
   
 ```  
 virtual BOOL SetACCData(
@@ -95,16 +96,16 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
- 表示当前的功能区标签的父窗口。  
+ [in]*pParent*  
+ 表示父窗口的当前功能区标签。  
   
- [out] `data`  
- 类型的对象`CAccessibilityData`并且填充了当前的功能区标签可访问性数据。  
+ [out]*数据*  
+ 类型的对象`CAccessibilityData`填入的可访问性数据的当前功能区标签。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`data`参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
+ 则为 TRUE*数据*参数已成功使用当前的功能区标签可访问性数据填充; 否则为 FALSE。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846527"
 ---
 # <a name="loop"></a>循环
 控制自动并行化如何考虑循环代码和/或从自动向量化进行的考虑中排除循环。  

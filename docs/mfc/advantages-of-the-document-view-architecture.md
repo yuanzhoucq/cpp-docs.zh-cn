@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340843"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>文档/视图结构的优点
 使用 MFC 文档/视图体系结构的主要优点是体系结构能够很好地支持同一文档的多个视图。 （如果你不需要多个视图，文档/视图的少量开销为在你的应用程序过多，可以避免体系结构。 [文档/视图结构的替换选项](../mfc/alternatives-to-the-document-view-architecture.md)。)  

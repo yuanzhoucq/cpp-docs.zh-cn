@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929603"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控件：本地化 ActiveX 控件
 本文讨论本地化 ActiveX 控件接口的过程。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
     > [!NOTE]
     >  如果将来的实例具有不同的区域设置，则这在某些情况下不会正常运行。  
   
--   使用**OnAmbientChanged**通知函数以动态方式加载容器的区域设置的正确资源。  
+-   使用`OnAmbientChanged`通知函数以动态方式加载容器的区域设置的正确资源。  
   
     > [!NOTE]
     >  这对控件有效，但运行时 DLL 将不能在环境 LocaleID 属性更改时动态更新其自己的资源。 此外，ActiveX 控件的运行时 DLL 将使用线程区域设置确定其资源的区域设置。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- 将上面的代码示例放入该控件，如的重写的成员函数[colecontrol:: Onsetclientsite](../mfc/reference/colecontrol-class.md#onsetclientsite)。 此外，`m_hResDLL` 应该是控件类的成员变量。  
+ 将上面的代码示例放入该控件，如的重写的成员函数[colecontrol:: Onsetclientsite](../mfc/reference/colecontrol-class.md#onsetclientsite)。 此外， *m_hResDLL*应控件类的成员变量。  
   
  您可以使用类似的逻辑本地化控件的属性页。 若要本地化属性页，请将类似于下面的示例代码添加到属性页的实现文件 (的重写中[COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

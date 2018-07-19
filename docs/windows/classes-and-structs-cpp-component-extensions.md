@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864910"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 声明类或结构其*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，Visual C++ 会自动放弃分配给对象的内存。  

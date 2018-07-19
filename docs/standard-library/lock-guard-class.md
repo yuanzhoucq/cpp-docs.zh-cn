@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953742"
 ---
 # <a name="lockguard-class"></a>lock_guard 类
 
@@ -69,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>参数
 
-`Mtx` A*互斥体类型*对象。
+*使用 Mtx* A*互斥体类型*对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造一个 `lock_guard` 类型的对象并锁定 `Mtx`。 如果 `Mtx` 不是递归互斥体，则在调用此构造函数时必须将其解锁。
+第一个构造函数将构造类型的对象`lock_guard`和锁*使用 Mtx*。 如果*使用 Mtx*不是递归互斥体，它必须在调用此构造函数时解锁。
 
-第二个构造函数不会锁定 `Mtx`。 调用此构造函数时，必须锁定 `Mtx`。 此构造函数不会引发异常。
+第二个构造函数不会锁定*使用 Mtx*。 *使用 Mtx*时调用此构造函数，必须锁定。 此构造函数不会引发异常。
 
 ## <a name="dtorlock_guard_destructor"></a>lock_guard::~lock_guard 析构函数
 

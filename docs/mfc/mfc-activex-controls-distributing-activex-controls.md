@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928877"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控件：发行 ActiveX 控件
 此文章介绍了相关的重新分发 ActiveX 控件的几个问题：  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
  安装程序提供使用 ActiveX 控件应创建特殊的 Windows 目录的子目录，并安装的控件的。在其中 OCX 文件。  
   
 > [!NOTE]
->  使用 Windows **GetWindowsDirectory**安装程序中的 API 来获取 Windows 目录的名称。 你可能想要从你的公司或产品的名称派生的子目录的名称。  
+>  使用 Windows`GetWindowsDirectory`安装程序中的 API 来获取 Windows 目录的名称。 你可能想要从你的公司或产品的名称派生的子目录的名称。  
   
  安装程序必须在 Windows 系统目录中安装所需的可再发行 DLL 文件。 如果任一个 Dll 已存在用户的计算机上，安装程序应比较其版本与要安装的版本。 仅当其版本号高于已安装的文件，重新安装文件。  
   
@@ -70,14 +71,14 @@ ms.lasthandoff: 05/04/2018
   
  如果你愿意，你可以编写你的安装程序以改为直接注册控件。  
   
- 使用**LoadLibrary** Windows API 来加载 DLL 的控件。 接下来，使用**GetProcAddress**获取"dllregisterserver 的调用"函数的地址。 最后，调用`DllRegisterServer`函数。 下面的代码示例演示一个可能的方法，其中`hLib`将句柄的控件库中，存储和`lpDllEntryPoint`存储"dllregisterserver 的调用"函数的地址。  
+ 使用`LoadLibrary`Windows API 来加载 DLL 的控件。 接下来，使用`GetProcAddress`获取"dllregisterserver 的调用"函数的地址。 最后，调用`DllRegisterServer`函数。 下面的代码示例演示一个可能的方法，其中`hLib`将句柄的控件库中，存储和`lpDllEntryPoint`存储"dllregisterserver 的调用"函数的地址。  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  直接注册控件的优点是，你不需要调用，并加载单独的进程 (即 REGSVR32)，从而减少了安装时间。 此外，因为注册是一个内部的过程，安装程序可以处理错误，并且出现未预见的情况下更好外部进程可以。  
   
 > [!NOTE]
->  你的安装程序安装 ActiveX 控件之前，则应调用**OleInitialize**。 你的安装程序完成后，调用**OleUnitialize**。 这将确保 OLE 系统 Dll 位于正确的状态以注册 ActiveX 控件。  
+>  你的安装程序安装 ActiveX 控件之前，则应调用`OleInitialize`。 你的安装程序完成后，调用`OleUnitialize`。 这将确保 OLE 系统 Dll 位于正确的状态以注册 ActiveX 控件。  
   
  你应该注册 MFCx0.DLL。  
   

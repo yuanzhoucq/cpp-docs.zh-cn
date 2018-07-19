@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880161"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 声明*钉住指针*，其只能与公共语言运行时一起使用。  

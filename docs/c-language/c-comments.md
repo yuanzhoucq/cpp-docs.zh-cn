@@ -1,7 +1,7 @@
 ---
 title: C 注释 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121739"
 ---
 # <a name="c-comments"></a>C 注释
 “注释”是一个以正斜杠/星号组合（<b>/\*</b>）开头的字符序列，编译器会将正斜杠/星号组合视为单个空白字符，要不然就忽略它。 注释可以包含可表示字符集中的任意字符组合，包括换行符，但“结束注释”分隔符 (<b>\*/</b>) 除外。 注释可以占用多行，但无法嵌套。  
@@ -69,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Microsoft 专用**  
   
- Microsoft 编译器还支持前面有两个正斜杠 (**//**) 的单行注释。 如果使用 /Za（ANSI 标准）进行编译，这些注释将产生错误。 这些注释不能扩展到第二行。  
+ Microsoft 编译器还支持前面有两个正斜杠 (__//__) 的单行注释。 如果使用 /Za（ANSI 标准）进行编译，这些注释将产生错误。 这些注释不能扩展到第二行。  
   
 ```  
 // This is a valid comment  
 ```  
   
- 以两个正斜杠 (**//**) 开头的注释被前面没有转义字符的下一个换行符终止。 在下一个示例中，换行符的前面有一个反斜杠 (**\\**)，这将创建“转义序列”。 此转义序列会使编译器将下一行视为上一行的一部分。 （有关详细信息，请参阅[转义序列](../c-language/escape-sequences.md)。）  
+ 以两个正斜杠 (__//__) 开头的注释被前面没有转义字符的下一个换行符终止。 在下一个示例中，换行符的前面有一个反斜杠 (**\\**)，这将创建“转义序列”。 此转义序列会使编译器将下一行视为上一行的一部分。 （有关详细信息，请参阅[转义序列](../c-language/escape-sequences.md)。）  
   
 ```  
 // my comment \  

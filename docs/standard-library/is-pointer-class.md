@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962811"
 ---
 # <a name="ispointer-class"></a>is_pointer 类
 
@@ -36,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是指向 `void` 的指针、指向对象的指针、指向函数的指针或是其中之一的 `cv-qualified` 形式，类型谓词的实例将为 true，否则为 false。 请注意，如果 `Ty` 是指向成员的指针或指向成员函数的指针，则 `is_pointer` 为 false。
+如果类型谓词的实例将保留 true 类型*Ty*指向的指针**void**、 一个指针指向的对象，或指向函数的指针或`cv-qualified`窗体的其中之一，否则为 false。 请注意，`is_pointer`持有 false if *Ty*是指向成员的指针或指向成员函数的指针。
 
 ## <a name="example"></a>示例
 

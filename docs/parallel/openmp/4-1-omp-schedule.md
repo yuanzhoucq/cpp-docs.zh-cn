@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691045"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE**仅适用于**为**和**为并行**指令具有计划类型**运行时**。 通过向任何已识别的计划类型和一个可选设置此环境变量，可以在运行时设置所有此类循环的计划类型和区块大小*使用 chunk_size*。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374890"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 选项
 选项包括选项说明符，它是短划线 （-） 或正斜杠 （/） 后, 跟选项的名称。 选项名不能缩写。 某些选项带冒号 （:） 后指定的参数。 中的选项规范所允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名称，而其关键字或文件的名称自变量不区分大小写。 大多数选项适用于所有二进制文件;一些应用仅为某些类型的文件。 默认情况下，DUMPBIN 将信息发送到标准输出。 使用[/out](../../build/reference/out-dumpbin.md)选项将输出发送到文件。  

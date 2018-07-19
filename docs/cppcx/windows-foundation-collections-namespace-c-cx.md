@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090817"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空间 (C++/CX)
 C + + /cli CX 补充 Windows::Foundation::Collections 命名空间进行简化使用 Vector、 VectorView、 地图中和 MapView 集合类的函数。  

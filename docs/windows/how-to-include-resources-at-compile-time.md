@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880145"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在编译时包含资源
 通常可简单且方便地在一个资源脚本 (.rc) 文件中使用所有资源的默认安排。 但是，你可以将资源添加其他文件中到当前项目在编译时通过列出在**编译时指令**框中[资源包括对话框中](../windows/resource-includes-dialog-box.md)。  

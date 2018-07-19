@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090713"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 提取和操作要通过检索多个行句柄，通过调用一次处理中大容量的数据行。  

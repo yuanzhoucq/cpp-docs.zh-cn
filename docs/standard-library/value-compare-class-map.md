@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965843"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare 类（&lt;映射&gt;）
 
@@ -44,7 +45,7 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-辅助类构造包含的相应元素的键之间的比较将引发一种比较条件，这种比较条件由 map 包含的整个元素的 **value_types** 之间的 `value_compare` 提供。 成员函数运算符使用 `value_compare` 提供的函数对象中存储的 `key_compare` 类型的 **comp** 对象，用于比较两个元素的排序键组件。
+提供的比较条件`value_compare`之间`value_types`的由 map 包含的整个元素的比较将引发之间的相应元素的辅助类构造的密钥。 成员函数运算符使用的对象`comp`类型的`key_compare`提供的函数对象中存储`value_compare`用于比较两个元素的排序键组件。
 
 对于 set 和 multiset（二者均为键值与元素值完全相同的简单容器），`value_compare` 等效于 `key_compare`；对于 map 和 multimap，它们则不相等，因为类型 `pair` 元素的值与元素的键值不完全相同。
 

@@ -12,15 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5b1eeef0e5f07b0867eb79afc76ba9037a95e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e6e14e0b94000972873b6050f0e8154891b4e57
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026794"
 ---
 # <a name="file-system-navigation"></a>文件系统导航
 
-\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回 `false` 。
+\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着`is_fifo(const path&)`始终返回**false**在 Windows 上。
 
 ## <a name="overview"></a>概述
 

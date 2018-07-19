@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380883"
 ---
 # <a name="x64-software-conventions"></a>x64 软件约定
 本部分介绍 Visual c + + 调用约定方法[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]，为 x86，64 位扩展体系结构。  

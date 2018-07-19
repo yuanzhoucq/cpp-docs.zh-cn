@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418375"
 ---
 # <a name="vprintf-functions"></a>vprintf 函数
 每个 `vprintf` 函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到特定目标。 函数在执行参数验证过程中会有所不同，无论函数是采用宽字符字符串还是单字节字符串、是否具有输出目标以及是否支持指定格式字符串中使用的参数的顺序。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873142"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>创建自定义画笔（图标的图像编辑器）
 自定义画笔是映像的一个矩形部分的拾取和使用类似的图像编辑器的现成画笔。 你可以执行基于所选的所有操作，你可以对都执行自定义画笔。  

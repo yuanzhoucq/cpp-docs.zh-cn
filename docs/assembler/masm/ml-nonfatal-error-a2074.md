@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055386"
 ---
 # <a name="ml-nonfatal-error-a2074"></a>ML 非致命错误 A2074
 **无法访问通过段寄存器的标签**  

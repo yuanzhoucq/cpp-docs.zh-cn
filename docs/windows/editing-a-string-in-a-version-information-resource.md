@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882879"
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>编辑版本信息资源中的字符串
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>编辑版本信息资源中的字符串  

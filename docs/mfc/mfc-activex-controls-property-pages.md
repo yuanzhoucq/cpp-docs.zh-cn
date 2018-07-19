@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930428"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 属性页允许 ActiveX 控件的用户查看和更改 ActiveX 控件属性。 通过调用控件的属性对话框中，其中包含一个或多个属性页可以用于查看和编辑控件属性提供自定义的图形界面访问这些属性。  
@@ -79,13 +80,13 @@ ms.lasthandoff: 05/04/2018
   
 2.  双击**对话框**directory 图标。  
   
-3.  打开**IDD_PROPPAGE_SAMPLE**对话框。  
+3.  打开 IDD_PROPPAGE_SAMPLE 对话框。  
   
      ActiveX 控件向导将项目名称追加到对话框 ID，在这种情况下，示例末尾。  
   
 4.  拖放所选的控件从工具箱中拖放到对话框框区域。  
   
-5.  例如，文本标签控件"标题:"和具有的编辑框控件**IDC_CAPTION**标识符已经足够。  
+5.  例如，文本标签控件"标题:"，编辑框控件 IDC_CAPTION 标识符与所足够权限。  
   
 6.  单击**保存**在工具栏上，以保存所做的更改。  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- 此函数将相关联的属性页`m_caption`标题为成员变量使用`DDP_TEXT`函数。  
+ 此函数将相关联的属性页*m_caption*标题为成员变量使用`DDP_TEXT`函数。  
   
- 插入的属性页控件后，你需要建立属性页上控件之间的链接`IDC_CAPTION`，和的实际控件属性，标题，使用**DDP_Text**函数上文所述。  
+ 插入的属性页控件后，你需要建立的属性页控件、 IDC_CAPTION 与实际的控件属性之间的链接标题，使用`DDP_Text`函数上文所述。  
   
  [属性页](../mfc/reference/property-pages-mfc.md)可用于其他对话框控件类型，如复选框、 单选按钮和列表框。 下表列出了属性页的整个集**DDP_** 函数和它们的用途：  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/04/2018
 |`DDP_LBString`|中的控件属性在列表框中的所选的字符串。 所选的字符串可以以属性的值相同的字母开头，但需要完全匹配它。|  
 |`DDP_LBStringExact`|中的控件属性在列表框中的所选的字符串。 所选的字符串，该属性的字符串值必须完全匹配。|  
 |`DDP_Radio`|一个具有的控件属性的单选按钮。|  
-|**DDP_Text**|与控件属性的文本。|  
+|`DDP_Text`|与控件属性的文本。|  
   
 ## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   

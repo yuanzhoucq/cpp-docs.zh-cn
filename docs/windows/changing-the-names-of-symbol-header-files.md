@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864224"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>更改符号头文件的名称
 通常情况下所有符号定义都保存在 Resource.h 中。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。  

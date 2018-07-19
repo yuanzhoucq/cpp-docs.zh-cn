@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880525"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>“图像”菜单（图标的图像编辑器）
 图像菜单，仅在图像编辑器处于活动状态时，才显示，提供用于编辑图像、 管理调色板，和设置的图像编辑器窗口选项的命令。 此外，使用设备图像提供了个命令使用图标和光标时。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096907"
 ---
 # <a name="crowsetreleaserows"></a>CRowset::ReleaseRows
 调用[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)释放当前的行句柄。  

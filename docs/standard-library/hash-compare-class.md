@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956568"
 ---
 # <a name="hashcompare-class"></a>hash_compare 类
 
@@ -32,15 +33,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>备注
 
-每个哈希关联容器都存储一个 **Traits** 类型的哈希特征对象（模板参数）。 可以从 hash_compare 专用化中派生一个类，用于选择性地重写某些函数和对象，也可以在满足某些最低要求时提供你所拥有的该类的版本。 具体而言，对于类型 **hash_compare\<Key, Traits>** 的对象 hash_comp，上述容器需要以下行为：
+每个哈希关联容器都存储类型的哈希特征对象`Traits`（模板参数）。 可以从 hash_compare 专用化中派生一个类，用于选择性地重写某些函数和对象，也可以在满足某些最低要求时提供你所拥有的该类的版本。 具体而言，对于类型的对象 hash_comp `hash_compare<Key, Traits>`，上述容器需要以下行为：
 
-- 对于类型 **Key** 的所有值 `key`，调用 **hash_comp**( `key`) 会用作哈希函数，这将产生类型为 **size_t** 的值的分布。 由 hash_compare 提供的函数将返回 `key`。
+- 所有值`key`类型的`Key`，在调用**hash_comp**(`key`) 用作哈希函数，这将产生的类型的值的分布`size_t`。 由 hash_compare 提供的函数将返回 `key`。
 
-- 对于序列中位于 `key2` 之前且具有相同哈希值（由哈希函数返回的值）的类型 **Key** 的任何值 `key1`，**hash_comp**( `key2`, `key1`) 为 false。 该函数必须在 **Key** 类型的值上施加全面排序。 由 hash_compare 提供的函数将返回 comp( `key2`, `key1`)`,`，其中 comp 是构造对象 hash_comp 时可指定的类型 **Traits** 的存储对象。 对于默认的 **Traits** 参数类型 **less\<Key>**，排序键的值永远不会减小。
+- 对于任何值`key1`类型的`Key`前面`key2`序列中且具有相同哈希值 （由哈希函数返回的值）， **hash_comp**(`key2`， `key1`) 为 false。 该函数必须施加全面排序类型的值`Key`。 由 hash_compare 提供的函数返回*comp*(`key2`， `key1`)`,`其中*comp*是类型的存储的对象`Traits`，可以指定当您构造对象 hash_comp。 默认情况下`Traits`参数类型`less<Key>`，排序关键字永远不会减小值。
 
-- 整数常量 **bucket_size** 指定容器不应尝试超过的每个“存储桶”（哈希表项）的平均元素数目。 该数目必须大于零。 由 hash_compare 提供的值为 4。
+- 整数常量`bucket_size`指定平均每个"存储桶"（哈希表项） 的容器不应尝试超过的元素数目。 该数目必须大于零。 由 hash_compare 提供的值为 4。
 
-- 整数常量 **min_buckets** 指定要保留在哈希表中的存储桶的最小数目。 该数目必须是 2 的幂且大于零。 Hash_compare 提供的值为 8。
+- 整数常量`min_buckets`指定要保留在哈希表中的存储桶的最小数目。 该数目必须是 2 的幂且大于零。 Hash_compare 提供的值为 8。
 
 ## <a name="example"></a>示例
 

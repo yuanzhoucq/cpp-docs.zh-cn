@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282777"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>编译器警告（等级 1）C4727
 "PCH 相同的时间戳 obj_file_1 和 obj_file_2 中找到的名为 pch_file。  使用第一个 PCH。  

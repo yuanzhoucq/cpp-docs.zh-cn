@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8452c106c5a4d0d005ec61278c8e0d7cb75723ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b9b58235d404b523629a0e9d24121182d1119c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960325"
 ---
 # <a name="issigned-class"></a>is_signed 类
 
@@ -36,11 +37,11 @@ struct is_signed;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是带符号整型类型或 `cv-qualified` 带符号整型类型，则类型谓词的实例将保留为 true，否则保留为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是有符号的整型或`cv-qualified`带符号整型类型，否则为 false。
 
 ## <a name="example"></a>示例
 

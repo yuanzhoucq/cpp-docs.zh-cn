@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883337"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 在泛型类型或方法声明中，可以使用约束限定类型参数。 约束是用作类型参数的类型必须满足的需求。 例如，约束可能是类型参数必须实现特定接口或从特定类继承。  

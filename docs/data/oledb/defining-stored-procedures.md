@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101297"
 ---
 # <a name="defining-stored-procedures"></a>定义存储过程
 在调用之前存储的过程，你必须首先定义它，使用[DEFINE_COMMAND](../../data/oledb/define-command.md)宏。 在定义该命令时，作为参数标记表示用问号 （？） 的参数：  

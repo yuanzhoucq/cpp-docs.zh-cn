@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354177"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>将功能添加到复合控件
 一旦你已将任何必要的控件插入复合控件下, 一步涉及添加新功能。 此新功能通常分为两类：  

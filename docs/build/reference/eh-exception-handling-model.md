@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379102"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果未指定 **/EH** ，则编译器将同时捕获异步结构化异常和 C++ 异常，但不会销毁由于异步异常超出范围的 C++ 对象。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419123"
 ---
 # <a name="lexical-conventions"></a>词法约定
 本节介绍 C++ 程序的基本元素。 你将使用这些名为“词法元素”或“标记”的元素构造用于构造完整程序的语句、定义和声明等。 本节将讨论以下词法元素：

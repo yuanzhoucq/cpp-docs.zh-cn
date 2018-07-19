@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetInterfacePtr |Microsoft 文档
+title: _com_ptr_t::GetInterfacePtr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba50965199128726f325fc0dcf9260c6415bf0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e81484f7b40417320078700332b512cbc81d7e6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942384"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 **Microsoft 专用**  
@@ -31,12 +32,12 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      Interface* GetInterfacePtr( ) const throw( );   
+Interface* GetInterfacePtr( ) const throw( );   
 Interface*& GetInterfacePtr() throw();  
 ```  
   
 ## <a name="remarks"></a>备注  
- 返回封装的接口指针，这可能是**NULL**。  
+ 返回封装的接口指针，这可能为 NULL。  
   
  **结束 Microsoft 专用**  
   

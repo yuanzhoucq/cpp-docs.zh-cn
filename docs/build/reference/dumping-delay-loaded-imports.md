@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372862"
 ---
 # <a name="dumping-delay-loaded-imports"></a>转储延迟加载的导入
 可使用转储延迟加载的导入[dumpbin /imports](../../build/reference/imports-dumpbin.md)和显示与略有不同的信息不是标准导入。 它们被隔离到它们自己的 /imports 转储的部分，并显式标记为延迟加载的导入。 如果卸载映像中存在的信息，该记录。 如果存在的绑定信息，以及导入的绑定地址记录的目标 DLL 的时间/日期戳。  

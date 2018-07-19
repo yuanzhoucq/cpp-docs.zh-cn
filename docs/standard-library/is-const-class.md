@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956080"
 ---
 # <a name="isconst-class"></a>is_const 类
 
@@ -36,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果 `Ty` 是 `const-qualified`，则类型谓词的实例为 true。
+如果类型谓词的实例的保留为 true *Ty*是`const-qualified`。
 
 ## <a name="example"></a>示例
 

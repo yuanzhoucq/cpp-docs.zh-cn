@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250561"
 ---
 # <a name="compiler-error-c3062"></a>编译器错误 C3062
 'enum': 枚举器需要值，由于基础类型为 type  

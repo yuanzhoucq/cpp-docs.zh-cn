@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198360"
 ---
 # <a name="fatal-error-c1603"></a>错误 C1603
 内联程序集分支目标超出范围 number 个字节  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345708"
 ---
 # <a name="creating-stack-and-queue-collections"></a>创建堆栈和队列集合
 此文章介绍了如何创建其他数据结构，如[堆栈](#_core_stacks)和[队列](#_core_queues)，MFC 类列表中。 示例使用从 `CList` 派生的类，但可以直接使用 `CList`，除非您需要添加功能。  

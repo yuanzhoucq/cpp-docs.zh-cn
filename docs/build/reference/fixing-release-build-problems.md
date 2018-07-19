@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372147"
 ---
 # <a name="fixing-release-build-problems"></a>修复发行版本问题
 如果你的代码从调试版本切换到发行版本后生成编译错误，有几个方面应检查。  

@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799189"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -85,7 +86,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 由于通过链接到静态 CRT 构建的 DLL 将具有其自己的 CRT 状态，因此不建议以静态方式链接到 DLL 中的 CRT，除非特别需要和需了解这一后果。 例如，如果在加载 DLL（链接到其自己的静态 CRT）的可执行文件中调用 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，则转换器将不会捕获由 DLL 中的代码生成的任何硬件异常，但会捕获由主可执行文件中的代码生成的硬件异常。
 
-如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。
+如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。 纯托管的 CRT 库在 Visual Studio 2015 中已弃用并在 Visual Studio 2017 中不受支持。
 
 有关将 CRT 与 **/clr** 配合使用的详细信息，请参阅[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)。
 
@@ -112,10 +113,15 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>如果应用程序使用多个 CRT 版本，将存在什么问题？
 
-如果有多个 DLL 或 EXE，则无论是否正在使用不同版本的 Visual C++，你都可以具有多个 CRT。 例如，将 CRT 静态链接到多个 Dll 可能存在相同的问题。 遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。 如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配的问题，需要使用 Visual C++ 重新编译项目。
+每个可执行映像（EXE 或 DLL）可以具有其自己静态链接的 CRT，或可以动态链接到 CRT。 静态包括在某个映像中或某个映像动态加载的 CRT 版本取决于构建 该 CRT 时采用的工具和库。 单个进程可能会加载多个 EXE 和 DLL 映像，每个都有其自己的 CRT。 每个 CRT 可能使用不同的分配器，可能具有不同的内部结构布局，可能使用不同的存储排列方式。 这意味着，分配的内存、CRT 资源或跨 DLL 边界传递的类可能会导致内存管理、内部静态使用情况或布局解释方面的问题。 例如，如果在一个 DLL 中分配类，但将其传递给另一个 DLL 或由另一个 DLL 删除，那么使用了哪个 CRT 释放器？ 导致的错误程度可以从微小到立即致命，因此强烈建议不要直接传输此类资源。
 
-如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时需注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+你可以使用应用程序二进制接口 (ABI) 技术避免这些问题，因为此技术被设计成稳定且版本可控。 设计 DLL 导出接口以按值传递信息，或致力于调用方传入而非本地分配并返回给调用方的内存。 使用封送技术复制可执行映像之间的结构化数据。 本地封装资源并仅允许通过向客户端公开的句柄或函数操作。
+
+如果进程中的所有映像全都使用相同的 CRT 动态加载版本，则也有可能避免这些问题。 若要确保所有组件都使用相同的 CRT 的 DLL 版本，请使用“/MD”选项，并使用相同的编译器工具集和属性设置进行构建。
+
+如果程序跨 DLL 边界传递某些 CRT 资源（如文件句柄、区域设置和环境变量），即便使用的是相同版本的 CRT，那也需要注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+
 
 ## <a name="see-also"></a>请参阅
 
-[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)
+- [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695728"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>编译和链接多线程程序
 中引入 Bounce.c 程序[多线程 C 程序示例](../parallel/sample-multithread-c-program.md)。  

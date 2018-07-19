@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294913"
 ---
 # <a name="compiler-warning-level-4-c4610"></a>编译器警告（等级 4）C4610
 class 可以永远不会实例化对象-用户定义的构造函数所需  

@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939827"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>初始化和委派构造函数
 在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- 您可以在一般执行初始化的任何情况下使用大括号初始化 - 例如，初始化为函数参数或返回值，或使用 `new` 关键字初始化：  
+ 可以使用大括号初始化任意位置通常会执行初始化-例如，作为函数参数或返回值，或使用**新**关键字：  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,7 +101,7 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 构造函数  
- [Initializer_list 类](../standard-library/initializer-list-class.md)表示可在构造函数，并在其他上下文中的指定类型的对象的列表。 您可通过使用大括号初始化构造 initializer_list：  
+ [Initializer_list 类](../standard-library/initializer-list-class.md)表示只能在构造函数，并且在其他上下文中的指定类型的对象的列表。 您可通过使用大括号初始化构造 initializer_list：  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  

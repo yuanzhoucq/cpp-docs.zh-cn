@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052955"
 ---
 # <a name="textequ"></a>TEXTEQU
 将分配*textitem*到*名称*。 *Textitem*可以是文本字符串，前面是一个常数`%`，或通过宏函数返回的字符串。  

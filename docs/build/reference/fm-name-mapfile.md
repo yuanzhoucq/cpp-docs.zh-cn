@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374268"
 ---
 # <a name="fm-name-mapfile"></a>/Fm（命名映射文件）
 通知链接器生成映射文件包含在相应的.exe 文件或 DLL 的显示的顺序中的段的列表。  

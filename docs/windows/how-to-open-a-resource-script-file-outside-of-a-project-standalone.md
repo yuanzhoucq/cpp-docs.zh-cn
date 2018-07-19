@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879160"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在项目外打开资源脚本文件（独立）
 你可以查看 .rc 文件中的资源，而不必打开项目。 .Rc 文件将在而不是在中打开的文档窗口中打开[资源视图](../windows/resource-view-window.md)窗口 （方式与其在项目内部打开文件时）。  

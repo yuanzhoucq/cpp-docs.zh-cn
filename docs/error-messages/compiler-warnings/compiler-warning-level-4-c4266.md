@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294555"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>编译器警告（等级 4）C4266
 function： 不重写的基 type; 的虚拟成员函数函数将被隐藏  

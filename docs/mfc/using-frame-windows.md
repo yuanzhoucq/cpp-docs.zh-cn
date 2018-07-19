@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381912"
 ---
 # <a name="using-frame-windows"></a>使用框架窗口
 MFC 框架会创建文档框架窗口-及其视图和文档-作为其实现的新增和文件菜单上的打开命令的一部分。 框架执行的大部分框架窗口工作为你的操作，因为你播放仅创建、 使用和销毁这些窗口中的小型角色。 你可以但是，显式创建自己的框架窗口和子窗口用于特殊用途。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170838"
 ---
 # <a name="compiler-error-c2299"></a>编译器错误 C2299
 function： 行为更改： 显式专用化不能复制构造函数或复制赋值运算符  

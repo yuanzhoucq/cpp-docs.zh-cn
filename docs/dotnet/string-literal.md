@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172403"
 ---
 # <a name="string-literal"></a>字符串
 字符串文本处理已从托管扩展中的 c + + 更改为 Visual c + +。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856483"
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
 Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：  

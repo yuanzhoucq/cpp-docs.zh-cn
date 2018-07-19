@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384263"
 ---
 # <a name="null-statement-c"></a>Null 语句 (C)
 “null 语句”是仅包含分号的语句；它可在需要语句时显示。 执行 null 语句时不会发生任何事件。 编码 null 语句的正确方式是：  

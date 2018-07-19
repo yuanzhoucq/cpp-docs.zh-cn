@@ -20,11 +20,12 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870840"
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 Microsoft 定义一的组特性，用于简化 COM 编程和.NET Framework 公共语言运行时开发。 当您在源文件中包含特性时，编译器会使用提供程序 Dll 插入代码或修改生成的对象文件中的代码。  
   
- **注意：**如果你正在寻找 c + + 标准特性，请参阅[属性](../cpp/attributes.md)。  
+ **注意：** 如果你正在寻找 c + + 标准特性，请参阅[属性](../cpp/attributes.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [概念](../windows/attributed-programming-concepts.md)  

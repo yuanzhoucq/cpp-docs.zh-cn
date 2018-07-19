@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049696"
 ---
 # <a name="arm-assembler-reference"></a>ARM 汇编程序参考
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/28/2018
 |[ARM 汇编程序诊断消息](../../assembler/arm/arm-assembler-diagnostic-messages.md)|描述常见的 armasm 警告和错误消息。|  
 |[ARM 汇编程序指令](../../assembler/arm/arm-assembler-directives.md)|介绍在 armasm 中是不同的 ARM 指令。|  
 |[ARM 体系结构参考手册](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual)ARM 开发人员网站上。|选择你的 ARM 体系结构的相关手册。 每个包含有关 ARM、 Thumb、 霓虹灯，和 VFP，参考部分和臂程序集语言有关的其他信息。|  
-|[ARM 编译器 armasm 用户指南](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide)ARM 开发人员网站上。|选择最新版本以查找有关 ARM 程序集语言的最新信息。 **注意：**称为 ARM 开发人员网站的"armasm"汇编不是，包含在 Visual Studio 中，在本节中提供的 Microsoft armasm 汇编。|  
+|[ARM 编译器 armasm 用户指南](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide)ARM 开发人员网站上。|选择最新版本以查找有关 ARM 程序集语言的最新信息。 **注意：** 称为 ARM 开发人员网站的"armasm"汇编不是，包含在 Visual Studio 中，在本节中提供的 Microsoft armasm 汇编。|  
   
 ## <a name="see-also"></a>请参阅  
 

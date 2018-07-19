@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 965ff7aadb4add306061599bbe55466bbfb87f94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964453"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函数
 
@@ -63,17 +64,17 @@ void advance(
 
 ### <a name="parameters"></a>参数
 
-`InIt` 迭代器，要递增且必须满足输入迭代器的要求。
+*InIt*的迭代器，这是要递增，且必须满足输入迭代器的要求。
 
-`Off` 整数类型可转换为迭代器的距离类型，用于指定的迭代器的位置是为高级的增量数。
+*关闭*整型类型转换为迭代器的差异类型并且指定的迭代器的位置是高级的增量数。
 
 ### <a name="remarks"></a>备注
 
 前移范围必须非奇数，这种情况下，迭代器必须可解引用或超过结尾。
 
-如果 **InputIterator** 满足双向迭代器类型的需求，则 `Off` 可以是负数。 如果 **InputIterator** 为输入迭代器类型或向前迭代器类型，则 `Off` 必须为非负。
+如果`InputIterator`满足双向迭代器类型的要求，则*关闭*可以是负数。 如果`InputIterator`是输入或向前迭代器类型，*关闭*必须为非负。
 
-当 **InputIterator** 满足随机访问迭代器的需求时，前移函数具有固定复杂度；否则具有线性复杂度，因此可能会产生高昂的代价。
+前移函数具有恒定的复杂性时`InputIterator`满足的要求随机访问迭代器; 否则为它具有线性复杂度，因此会可能很重要。
 
 ### <a name="example"></a>示例
 
@@ -133,11 +134,11 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 插入的容器在其中后要执行。
+*_Cont*后插入将执行到其中的容器。
 
 ### <a name="return-value"></a>返回值
 
-与容器对象 `_Cont` 关联的 `back_insert_iterator`。
+一个`back_insert_iterator`与容器对象相关联 *_Cont*。
 
 ### <a name="remarks"></a>备注
 
@@ -211,15 +212,15 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>参数
 
-`cont` 一个容器。
+*cont*容器。
 
-`array` 类型的对象的数组`Ty`。
+*数组*类型的对象的数组`Ty`。
 
 ### <a name="return-value"></a>返回值
 
 前两个模板函数返回 `cont.begin()`。 第一个函数为非常量；第二个函数为常量。
 
-第三个模板函数返回 `array`。
+第三个模板函数返回*数组*。
 
 ### <a name="example"></a>示例
 
@@ -304,7 +305,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>参数
 
-`cont` 容器或 initializer_list。
+*cont*容器或 initializer_list。
 
 ### <a name="return-value"></a>返回值
 
@@ -314,7 +315,7 @@ auto cbegin(const Container& cont)
 
 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。
 
-可以使用此成员函数替代 `begin()` 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为可修改（非 `const`）容器或支持 `begin()` 与 `cbegin()` 的任何类型的 `initializer_list`。
+可以使用此成员函数替代 `begin()` 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 容器或`initializer_list`的任何类型的支持`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -336,7 +337,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>参数
 
-`cont` 容器或 initializer_list。
+*cont*容器或 initializer_list。
 
 ### <a name="return-value"></a>返回值
 
@@ -346,7 +347,7 @@ auto cend(const Container& cont)
 
 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。
 
-可以使用此成员函数替代 [end()](../standard-library/iterator-functions.md#end) 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为可修改（非 `const`）容器或支持 `end()` 与 `cend()` 的任何类型的 `initializer_list`。
+可以使用此成员函数替代 [end()](../standard-library/iterator-functions.md#end) 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 容器或`initializer_list`的任何类型的支持`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -367,17 +368,17 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>参数
 
-`first` 从第二个其距离是确定第一个迭代器。
+*第一个*距离第二个是确定第一个迭代器。
 
-`last` 从第一个其距离是确定第二个迭代器。
+*最后一个*从第一个的距离是确定的第二个迭代器。
 
 ### <a name="return-value"></a>返回值
 
-`first` 必须递增到等于 `last` 时的次数。
+数乘以*第一个*必须递增到等于*最后一个*。
 
 ### <a name="remarks"></a>备注
 
-当 **InputIterator** 满足随机访问迭代器的需求时，distance 函数具有固定复杂度；否则具有线性复杂度，因此可能会产生高昂的代价。
+Distance 函数具有恒定的复杂性时`InputIterator`满足的要求随机访问迭代器; 否则为它具有线性复杂度，因此会可能很昂贵。
 
 ### <a name="example"></a>示例
 
@@ -446,9 +447,9 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>参数
 
-`cont` 一个容器。
+*cont*容器。
 
-`array` 类型的对象的数组`Ty`。
+*数组*类型的对象的数组`Ty`。
 
 ### <a name="return-value"></a>返回值
 
@@ -471,11 +472,11 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 容器对象，其前面其元素插入。
+*_Cont*其前部元素的容器对象插入。
 
 ### <a name="return-value"></a>返回值
 
-与容器对象 `_Cont` 关联的 `front_insert_iterator`。
+一个`front_insert_iterator`与容器对象相关联 *_Cont*。
 
 ### <a name="remarks"></a>备注
 
@@ -532,7 +533,7 @@ After the front insertions, the list L is:
 
 ## <a name="inserter"></a>inserter
 
-允许你使用的帮助程序模板函数`inserter(_Cont, _Where)`而不是`insert_iterator<Container>(_Cont, _Where)`。
+使您可以使用一个帮助程序模板函数`inserter(_Cont, _Where)`而不是`insert_iterator<Container>(_Cont, _Where)`。
 
 ```cpp
 template <class Container>
@@ -544,9 +545,9 @@ inserter(
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 新元素是要添加容器。
+*_Cont*新元素是要添加的容器。
 
-`_Where` 迭代器定位插入点。
+*_Where*定位插入点的迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -617,11 +618,11 @@ checked_array_iterator<Iter>
 
 ### <a name="parameters"></a>参数
 
-`Ptr` 指向目标数组的指针。
+*Ptr*指向目标数组的指针。
 
-`Size` 目标数组的大小。
+*大小*目标数组的大小。
 
-`Index` 数组中的可选索引。
+*索引*数组中的可选索引。
 
 ### <a name="return-value"></a>返回值
 
@@ -703,7 +704,7 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>参数
 
-`_It` 存储在新移动迭代器的迭代器。
+*_It*迭代器，用于存储在新移动迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -724,7 +725,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>参数
 
-`Ptr` 指向目标数组的指针。
+*Ptr*指向目标数组的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -801,17 +802,17 @@ InputIterator next(
 
 ### <a name="parameters"></a>参数
 
-`first` 当前的位置。
+*第一个*当前位置。
 
-`_Off` 若要循环的次数。
+*_Off*进行循环访问次数。
 
 ### <a name="return-value"></a>返回值
 
-循环访问 `_Off` 次后返回新的迭代器位置。
+循环访问之后，返回新的迭代器位置 *_Off*时间。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回 `next` 递增 `_Off` 次数
+模板函数返回`next`递增 *_Off*时间
 
 ## <a name="prev"></a>prev
 
@@ -826,9 +827,9 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>参数
 
-`first` 当前的位置。
+*第一个*当前位置。
 
-`_Off` 若要循环的次数。
+*_Off*进行循环访问次数。
 
 ### <a name="remarks"></a>备注
 

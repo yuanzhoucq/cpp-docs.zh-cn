@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::copy |Microsoft 文档
+title: _bstr_t::copy |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7337669cae68c088265d812585a44fadd6bcb76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942537"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft 专用**  
@@ -32,21 +33,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      BSTR copy(  
-  bool fCopy = true  
-) const;  
+BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>参数  
- `fCopy`  
- 如果**true**，**复制**返回所包含的副本`BSTR`，否则为**复制**返回实际的 BSTR。  
+ *fCopy*  
+ 如果为 TRUE，`copy`返回所包含的一个副本`BSTR`; 否则为`copy`返回实际的 BSTR。  
   
 ## <a name="remarks"></a>备注  
  返回封装的 `BSTR` 对象的新分配的副本。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
    *pVal = m_bsConStr.copy();  
 }  

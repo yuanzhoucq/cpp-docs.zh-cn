@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111076"
 ---
 # <a name="ole-db-object-model"></a>OLE DB 对象模型
 OLE DB 对象模型包含下列对象或组件。 第一个四个对象或列出的组件 （数据源、 会话、 命令和行集），可以连接到数据源并查看它。 与显示时使用的数据相关的其余部分，从访问器中，开始。  

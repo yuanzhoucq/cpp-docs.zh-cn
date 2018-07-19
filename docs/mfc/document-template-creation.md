@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928017"
 ---
 # <a name="document-template-creation"></a>文档模板创建
-在响应中创建新文档时`New`或**打开**命令**文件**菜单中，文档模板还创建新的框架窗口对其进行查看该文档可访问。  
+在响应中创建新文档时**新建**或**打开**命令**文件**菜单中，文档模板还创建新的框架窗口通过其进行查看文档。  
   
  文档模板构造函数指定哪些类型的文档、 windows 和模板将能够创建的视图。 这是由传递给文档模板构造函数的实参来确定的。 下面的代码演示创建[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)示例应用程序：  
   

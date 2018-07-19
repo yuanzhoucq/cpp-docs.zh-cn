@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373369"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI（命名强制包含文件）
 导致预处理器将处理指定的标头文件。  

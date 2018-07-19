@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377533"
 ---
 # <a name="y-precompiled-headers"></a>/Y（预编译标头）
 生成和使用预编译标头，则会影响以下编译器选项：  

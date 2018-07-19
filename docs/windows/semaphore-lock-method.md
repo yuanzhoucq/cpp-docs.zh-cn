@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892470"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 方法
 一直等到当前对象或与指定句柄关联的 Semaphore 对象处于已发出信号状态或指定超时间隔已过去。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112922"
 ---
 # <a name="session-object-interfaces"></a>会话对象接口
 下表显示为会话对象定义由 OLE DB 的必需和可选接口。  

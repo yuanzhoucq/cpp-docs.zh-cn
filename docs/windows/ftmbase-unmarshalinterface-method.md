@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877714"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 方法
 初始化新创建的代理，并向该代理返回的接口指针。  

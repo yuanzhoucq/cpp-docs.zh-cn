@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264808"
 ---
 # <a name="compiler-error-c3666"></a>编译器错误 C3666
 constructor： 重写说明符 keyword 不允许在构造函数  

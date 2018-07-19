@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957890"
 ---
 # <a name="removereference-class"></a>remove_reference 类
 
@@ -39,11 +40,11 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`remove_reference<T>` 的实例保留修改后的类型，当 `T1` 为 `T` 形式时，此类型为 `T1&`，否则为 `T`。
+实例`remove_reference<T>`包含修改类型，即`T1`时*T*的形式`T1&`; 否则为*T*。
 
 ## <a name="example"></a>示例
 

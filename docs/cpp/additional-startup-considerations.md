@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409717"
 ---
 # <a name="additional-startup-considerations"></a>附加启动注意事项
 在 C++ 中，对象构造和析构可能涉及执行用户代码。 因此，务必了解在输入前发生的初始化**主要**退出后调用的析构函数和**主要**。 (有关构造和析构的对象的详细信息，请参阅[构造函数](../cpp/constructors-cpp.md)和[析构函数](../cpp/destructors-cpp.md)。)  

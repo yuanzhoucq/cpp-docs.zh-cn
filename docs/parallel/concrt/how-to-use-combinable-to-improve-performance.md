@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692085"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用 combinable 提高性能
 此示例演示如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类来计算中的数字的和[std:: array](../../standard-library/array-class-stl.md)质数的对象。 `combinable`类消除共享的状态，从而提高了性能。  

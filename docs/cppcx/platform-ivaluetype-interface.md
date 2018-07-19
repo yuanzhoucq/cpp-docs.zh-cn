@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089254"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 接口
 `Platform::IValueType` 是由值类和值结构实现的基础结构接口。 不能在代码中显式使用。  

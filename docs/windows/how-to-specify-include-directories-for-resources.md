@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875274"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定资源的包含目录
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>为特定 .rc 文件指定包含目录  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941767"
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  
@@ -101,7 +102,7 @@ int main() {
   
  标识符的第一个字符必须是字母字符（大写、小写或带下划线 ( **_** ) 的字母）。 由于 C++ 标识符区分大小写，因此 `fileName` 与 `FileName`不同。  
   
- 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如， `Pint` 是一个合法标识符，即使它包含 `int`关键字。  
+ 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如，`Pint`是一个合法标识符，即使它包含**int**，这是一个关键字。  
   
  在标识符开头使用两个顺序下划线字符 ( **__** ) 或在单个前导下划线后跟一个大写字母的用法是专为所有范围的 C++ 实现保留的。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。  
   

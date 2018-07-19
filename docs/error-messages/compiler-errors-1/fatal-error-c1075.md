@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198763"
 ---
 # <a name="fatal-error-c1075"></a>错误 C1075
 左侧标记与文件结尾不匹配  

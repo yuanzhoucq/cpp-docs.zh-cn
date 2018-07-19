@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383077"
 ---
 # <a name="elements-of-c"></a>C 的元素
 本节介绍 C 编程语言的元素，包括用于构造 C 程序的名称、数字和字符。 ANSI C 语法标记这些组件标记。  

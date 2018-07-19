@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319073"
 ---
 # <a name="project-build-error-prj0034"></a>项目生成错误 PRJ0034
 项目级自定义的附加依赖项属性生成包含步骤 macro 等于 macro_expansion。  

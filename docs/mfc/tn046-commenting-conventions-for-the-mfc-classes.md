@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380820"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046：MFC 类的注释约定
 此技术说明最初描述了用于注释 MFC 类的约定。 此信息现在包含在[MFC： 使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)。  

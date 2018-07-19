@@ -1,5 +1,5 @@
 ---
-title: IRegistrar 接口 |Microsoft 文档
+title: IRegistrar 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993563"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 接口
-此接口在 atliface.h 中定义并由内部 CAtlModule 成员函数如[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)。   
+此接口 atliface.h 中定义，供内部使用 CAtlModule 成员函数如[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)。   
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>备注
-请参阅主题[使用可替换参数 （注册机构的预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)有关详细信息。  
+请参阅主题[使用可替换参数 （注册机构的预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)的更多详细信息。  
 
 ## <a name="members"></a>成员  
   
@@ -49,13 +50,13 @@ typedef interface IRegistrar IRegistrar;
 |名称|描述|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|注册资源。 |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 注销资源。|  
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 注销该资源。|  
 |[IRegistrar::FileRegister](#fileregister)|注册文件。|  
 |[IRegistrar::FileUnregister](#fileunregister)|取消注册该文件。|  
-|[IRegistrar::StringRegister](#stringregister)|注册字符串。|  
-|[IRegistrar::StringUnregister](#stringunregister)|注销字符串|  
+|[IRegistrar::StringRegister](#stringregister)|将字符串的注册。|  
+|[IRegistrar::StringUnregister](#stringunregister)|在字符串中取消注册|  
 |[IRegistrar::ResourceRegister](#resourceregister)|注册资源。|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|注销资源。| 
+|[IRegistrar::ResourceUnregister](#resourceunregister)|注销该资源。| 
   
 
  
@@ -75,7 +76,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
  
   
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- 注销资源。
+ 注销该资源。
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
@@ -111,7 +112,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- 注销指定的字符串数据。  
+ 取消注册指定的字符串数据。  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -131,7 +132,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
    
   
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- 注销资源。  
+ 注销该资源。  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 

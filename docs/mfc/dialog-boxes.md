@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346670"
 ---
 # <a name="dialog-boxes"></a>对话框
 适用于 Windows 的应用程序经常与用户通过对话框通信。 类[CDialog](../mfc/reference/cdialog-class.md)提供了接口管理对话框中，Visual c + + 对话框编辑器可以轻松地设计对话框和创建对话框模板资源，并代码向导简化的初始化的过程和正在验证的控件在对话框中，收集用户输入的值。  

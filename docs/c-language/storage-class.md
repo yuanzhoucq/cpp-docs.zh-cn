@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391426"
 ---
 # <a name="storage-class"></a>存储类
 函数定义中的存储类说明符为函数提供 `extern` 或 static 存储类。  

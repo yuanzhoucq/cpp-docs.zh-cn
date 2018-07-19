@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111635"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>强制转换表示法和 safe_cast 简介&lt;&gt;
 强制转换表示法已从托管扩展中的 c + + 更改为 Visual c + +。  

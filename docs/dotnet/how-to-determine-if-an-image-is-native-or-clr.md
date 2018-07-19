@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128220"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定映像为本机映像还是 CLR 映像
 一种方法来确定是使用公共语言运行时是否生成映像**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。  

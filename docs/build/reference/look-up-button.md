@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371442"
 ---
 # <a name="look-up-button"></a>“查找”按钮
 单击**查找**来检索与所输入的系统或模块值相对应的错误消息。 可以以十六进制或十进制 （包括负十进制值） 的形式输入值。 中列出的模块**用于错误搜索的其他模块**还可搜索对话框。  

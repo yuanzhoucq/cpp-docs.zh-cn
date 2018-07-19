@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375836"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi（生成内部函数）
 替换某些函数调用替换内部函数或其他特殊形式的函数，可帮助你的应用程序的运行速度。  

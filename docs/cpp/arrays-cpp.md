@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942495"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   可选存储类说明符。  
   
--   可选**const**和/或`volatile`说明符。  
+-   可选**const**和/或**易失性**说明符。  
   
 -   数组元素的类型名称。  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   标识符。  
   
--   用方括号括起来的整型常量表达式 **[]。** 如果使用额外方括号声明多个维度，则可能在第一组括号省略常量表达式。  
+-   括在方括号内，整型类型的常量表达式 **[]**。 如果使用额外方括号声明多个维度，在第一组括号可省略常量表达式。  
   
 -   包含常数表达式的可选附加方括号。  
   
  3. 可选初始值设定项。  请参阅[初始值设定项](../cpp/initializers.md)。  
   
- 数组中的元素数目由常数表达式给定。 数组中的第一个元素是 0th 元素，和最后一个元素是 (*n*-1) 元素，其中*n*是数组可以包含的元素数。 *常量表达式*必须为整数类型，并且必须是大于 0。 仅当数组的最后一个字段时，零大小的数组才合法`struct`或**联合**并启用 Microsoft 扩展 (/Ze) 时。  
+ 数组中的元素数目由常数表达式给定。 数组中的第一个元素是 0th 元素，并最后一个元素是 (*n*-1) 元素，其中*n*是该数组可以包含的元素数目。 *常数表达式*必须为整型类型和必须大于 0。 仅当数组中的最后一个字段时，大小为零的数组是合法**struct**或**union**和启用 Microsoft 扩展 (/Ze) 时。  
   
  以下示例说明如何在运行时定义数组：  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- 数组是派生类型，可以从函数、引用和 `void` 之外的任何其他派生类型或基本类型构造。  
+ 数组是派生的类型，因此可以从其他函数的引用，除外的派生或基本类型构造并**void**。  
   
  从其他数组构造的数组是多维数组。 通过按顺序放置多个括起来的常数表达式来指定这些多维数组。 例如，考虑此声明：  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- 它指定类型为 `int` 的数组，从概念上以五行七列的二维矩阵排列，如下图所示：  
+ 指定类型的数组**int**、 从概念上讲排列在五个行和七列的二维矩阵中，如下图中所示：  
   
- ![一个多的概念布局&#45;维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![一个多概念性布局&#45;维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
 多维数组的概念性布局  
   
- 在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如：  
+ 在声明中的多维数组的具有初始值设定项列表 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如：  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>示例  
  省略多维数组的第一个维度的边界规范的技术也可用于函数声明中，如下所示：  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

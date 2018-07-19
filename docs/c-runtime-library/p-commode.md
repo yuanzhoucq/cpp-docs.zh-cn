@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388060"
 ---
 # <a name="pcommode"></a>__p__commode
 指向 `_commode` 全局变量，该变量为文件 I/O 操作指定默认的*文件提交模式*。  

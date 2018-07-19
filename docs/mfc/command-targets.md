@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341292"
 ---
 # <a name="command-targets"></a>命令目标
 图[框架中的命令](../mfc/user-interface-objects-and-command-ids.md)显示一个用户界面对象，如菜单项，并与框架调用生成的命令在单击该对象时执行的处理程序函数之间的连接。  

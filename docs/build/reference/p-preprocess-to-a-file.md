@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377139"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P（预处理到文件）
 对 C 和 c + + 源文件进行预处理并预处理的输出写入文件。  

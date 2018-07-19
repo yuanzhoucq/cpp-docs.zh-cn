@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104693"
 ---
 # <a name="schema--mfc-data-access"></a>架构（MFC 数据访问）
 数据库架构描述了表格的当前结构和数据库中的数据库视图。 一般情况下，向导生成的代码假定数据集所访问的表格的架构不会改变，但数据库类可以处理部分架构更改，如添加、重新排序或删除未绑定的列。 如果表格更改，则必须手动更新表格的记录集，然后重新编译应用程序。  

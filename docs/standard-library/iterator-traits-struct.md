@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959633"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 结构
 
@@ -44,17 +45,17 @@ struct iterator_traits {
 
 此模板结构定义成员类型
 
-- **iterator_category**：**Iterator::iterator_category** 的同义词。
+- `iterator_category`： 的同义词`Iterator::iterator_category`。
 
-- `value_type`：**Iterator::value_type** 的同义词。
+- `value_type`： 的同义词`Iterator::value_type`。
 
-- `difference_type`：**Iterator::difference_type** 的同义词。
+- `difference_type`： 的同义词`Iterator::difference_type`。
 
-- `distance_type`：**Iterator::difference_type.** 的同义词。
+- `distance_type`： 的同义词 `Iterator::difference_type.`
 
-- **pointer**：**Iterator::pointer** 的同义词。
+- `pointer`： 的同义词`Iterator::pointer`。
 
-- **reference**：**Iterator::reference** 的同义词。
+- `reference`： 的同义词`Iterator::reference`。
 
 部分专用化决定与类型 **Type \*** 或常量 **Type \*** 关联的关键类型。
 

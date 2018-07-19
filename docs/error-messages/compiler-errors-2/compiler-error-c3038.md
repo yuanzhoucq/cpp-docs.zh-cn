@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245573"
 ---
 # <a name="compiler-error-c3038"></a>编译器错误 C3038
 “var”：“private”子句中的变量不能是封闭上下文中的 reduction 变量  

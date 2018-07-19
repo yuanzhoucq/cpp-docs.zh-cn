@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376327"
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 提供的预编译标头而不是使用默认路径名称的路径名称。  

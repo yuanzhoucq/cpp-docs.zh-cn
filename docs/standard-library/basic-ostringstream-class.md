@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6e3a51cb63a448568f3cf31525f6f153637ec7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955229"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream 类
 
@@ -41,15 +42,15 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-`Alloc` 分配器类中。
+*分配*的分配器类。
 
-`Elem` 字符串的基本元素的类型。
+*Elem*字符串的基本元素的类型。
 
 *Tr*字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
-该类描述了控制元素和编码对象插入流缓冲区的对象（其字符特征由类 **Tr** 确定，其元素由类 `Alloc` 的分配器分配），该流缓冲区具有 **Elem** 类型的元素。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+此类的流缓冲区，类型的元素描述一个对象，控制插入的元素和编码的对象`Elem`，其字符特征由类`Tr`，和它的元素分配器的分配类`Alloc`。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -61,7 +62,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 |类型名称|描述|
 |-|-|
-|[allocator_type](#allocator_type)|该类型是模板参数 `Alloc` 的同义词。|
+|[allocator_type](#allocator_type)|该类型是模板参数的同义词*Alloc*。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -78,7 +79,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ## <a name="allocator_type"></a>  basic_ostringstream::allocator_type
 
-该类型是模板参数 `Alloc` 的同义词。
+该类型是模板参数的同义词*Alloc*。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -96,19 +97,19 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>参数
 
-`_Mode` 中的枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`str` 类型的对象`basic_string`。
+*str*类型的对象`basic_string`。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用 [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**) 来初始化基类，其中 **sb** 是类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 的存储对象。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`)，它还可以初始化 **sb**。
+第一个构造函数通过调用来初始化基类[basic_ostream](../standard-library/basic-ostream-class.md)( **sb**)，其中`sb`是类的存储的对象[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**， `Alloc`>。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`)，它还可以初始化 **sb**。
 
-第二个构造函数通过调用 basic_ostream( **sb**) 初始化基类。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode` &#124; `ios_base::out`)，它还可以初始化 **sb**。
+第二个构造函数通过调用 basic_ostream( **sb**) 初始化基类。 它还可以初始化`sb`通过调用 basic_stringbuf < **Elem**， **Tr**， `Alloc`> (_ *Str*， `_Mode` &#124; `ios_base::out`).
 
 ## <a name="rdbuf"></a>  basic_ostringstream::rdbuf
 
-将**指针**类型的已存储流缓冲区的地址返回到 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。
+返回类型的存储的流缓冲区的地址`pointer`到[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -116,11 +117,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>返回值
 
-返回到 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的**指针**类型的已存储流缓冲区的地址。
+类型的已存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="remarks"></a>备注
 
-成员函数将**指针**类型的存储流缓冲区的地址返回到 basic_stringbuf< **Elem**, **Tr**, `Alloc`>。
+此成员函数返回类型的存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="example"></a>示例
 
@@ -140,7 +141,7 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-`_Newstr` 新的字符串。
+*_Newstr*新字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -152,7 +153,7 @@ void str(
 
 ### <a name="example"></a>示例
 
-请参阅 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)，了解使用 **str** 的示例。
+请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)有关的示例，使用`str`。
 
 ## <a name="see-also"></a>请参阅
 

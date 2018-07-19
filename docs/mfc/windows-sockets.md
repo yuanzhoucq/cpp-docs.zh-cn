@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382536"
 ---
 # <a name="windows-sockets"></a>Windows 套接字
 本系列文章介绍了 Windows 套接字的 MFC 实现。 MFC 还提供两个类以支持与 Windows 套接字 API 编程网络应用程序。 类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)封装一个 Windows 套接字 API，提供高级的网络程序员最强大功能和灵活性。 类[CSocket](../mfc/reference/csocket-class.md)来回序列化数据提供简化的接口[CArchive](../mfc/reference/carchive-class.md)对象。  

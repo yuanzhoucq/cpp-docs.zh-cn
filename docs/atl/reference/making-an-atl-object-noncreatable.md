@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358256"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
 你可以更改基于 ATL COM 对象的属性，以便客户端不能直接创建对象。 在这种情况下，该对象将被另一个对象通过方法调用返回而不直接创建。  

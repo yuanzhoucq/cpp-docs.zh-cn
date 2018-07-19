@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374169"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>显式卸载延迟加载的 DLL
 [/延迟](../../build/reference/delay-delay-load-import-settings.md): unload 链接器选项允许您卸载已被延迟加载的 DLL。 默认情况下，当你的代码卸载 DLL (使用 /delay: unload 和 **__FUnloadDelayLoadedDLL2**)，在导入地址表 (IAT) 中保留的延迟加载导入。 但是，如果你使用 /delay: unload 链接器命令行上，则 helper 函数将支持显式卸载 DLL，正在 IAT 重置为其原始格式;现在无效指针将被覆盖。 IAT 是中的字段[ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md)包含原始 IAT 的副本的地址 （如果存在）。  

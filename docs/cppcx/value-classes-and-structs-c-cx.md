@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090707"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 A*值结构*或*值类*是一个 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。  

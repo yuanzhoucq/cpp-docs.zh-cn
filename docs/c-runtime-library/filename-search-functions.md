@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391797"
 ---
 # <a name="filename-search-functions"></a>文件名搜索函数
 这些函数搜索并关闭搜索指定的文件名称：  

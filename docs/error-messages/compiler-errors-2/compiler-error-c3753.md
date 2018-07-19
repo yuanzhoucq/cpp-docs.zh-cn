@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271955"
 ---
 # <a name="compiler-error-c3753"></a>编译器错误 C3753
 不允许泛型属性。  

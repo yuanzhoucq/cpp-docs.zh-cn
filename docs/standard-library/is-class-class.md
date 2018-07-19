@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966441"
 ---
 # <a name="isclass-class"></a>is_class 类
 
@@ -36,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是定义为 `class` 或 `struct` 的类型、或者是其中一个的 `cv-qualified` 形式，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*一种类型定义为**类**或**结构**，或`cv-qualified`窗体的其中之一，否则为 false。
 
 ## <a name="example"></a>示例
 

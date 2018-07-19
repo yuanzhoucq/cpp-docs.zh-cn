@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390324"
 ---
 # <a name="file-translation-constants"></a>文件翻译常量
 ## <a name="syntax"></a>语法  

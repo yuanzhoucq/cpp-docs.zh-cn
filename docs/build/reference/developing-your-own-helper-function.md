@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371393"
 ---
 # <a name="developing-your-own-helper-function"></a>开发您自己的 Helper 函数
 你可能想要提供您自己执行基于名称的 DLL 或导入的特定处理例程的版本。 执行此操作的两种方法： 编码你自己的基于提供的代码，或只将挂钩使用前面详细介绍通知挂钩所提供的版本。  

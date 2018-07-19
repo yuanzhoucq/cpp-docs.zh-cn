@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689982"
 ---
 # <a name="multithreading-programming-tips"></a>多线程处理：编程提示
 在访问数据时，多线程应用程序要比使用单线程应用程序的更加小心。 由于有多个，独立的路径中执行的同时在中使用多线程应用程序，算法、 数据，或两者必须知道该数据无法通过多个线程一次使用。 本主题介绍使用 Microsoft 基础类 (MFC) 库的多线程应用程序进行编程时避免潜在问题的技术。  

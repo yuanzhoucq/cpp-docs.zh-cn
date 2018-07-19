@@ -31,11 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931884"
 ---
 # <a name="docking-and-floating-toolbars"></a>停靠和浮动工具栏
 Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父窗口中，任何一边可停靠工具栏或可以分离或浮动在其自己的微型框架窗口中。 此文章介绍了如何在你的应用程序中使用可停靠工具栏。  
@@ -61,7 +62,7 @@ Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父
  请参阅 MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)有关示例。  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> 启用停靠在框架窗口  
- 若要将工具栏停靠到框架窗口，框架窗口 （或目标） 必须启用以允许停靠。 这是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函数，其将一个`DWORD`参数是一套样式位，该值指示框架窗口的哪一侧接受停靠。 如果工具栏可停靠，有多个可以停靠的边，四条边所示的参数传递给`EnableDocking`使用按以下顺序： 上、 下、 左、 右。 如果你希望能够停靠控件条任何位置，则传递`CBRS_ALIGN_ANY`到`EnableDocking`。  
+ 若要将工具栏停靠到框架窗口，框架窗口 （或目标） 必须启用以允许停靠。 这是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函数，其将一个*DWORD*参数是一套样式位，该值指示框架窗口的哪一侧接受停靠。 如果工具栏可停靠，有多个可以停靠的边，四条边所示的参数传递给`EnableDocking`使用按以下顺序： 上、 下、 左、 右。 如果你希望能够停靠控件条任何位置，则传递**CBRS_ALIGN_ANY**到`EnableDocking`。  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> 启用为工具栏停靠  
  准备停靠的目标后，您必须以类似的方式准备的工具栏 （或源）。 调用[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)对你想要停靠每一个工具栏，指定目标边到应该停靠工具栏。 如果未对调用中指定的侧边`CControlBar::EnableDocking`匹配四条边启用停靠在框架窗口中，不能停靠工具栏-它将浮动。 一旦浮动，它就会一直浮动工具栏，不能将停靠在框架窗口。  

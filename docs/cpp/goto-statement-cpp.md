@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953390"
 ---
 # <a name="goto-statement-c"></a>goto 语句 (C++)
-`goto` 语句无条件地将控制权转移给由指定的标识符标记的语句。  
+**Goto**语句无条件将控制转移到由指定的标识符标记的语句。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +35,16 @@ goto identifier;
 ## <a name="remarks"></a>备注  
  由 `identifier` 指定的标记语句必须位于当前函数中。 所有 `identifier` 名称都是内部命名空间的成员，因此不会干扰其他标识符。  
   
- 语句标签仅对 `goto` 语句有意义；其它情况下，语句标签将被忽略。 不能重新声明标签。  
+ 语句标签是仅对有意义**goto**语句; 否则，语句标签将被忽略。 不能重新声明标签。  
   
- 尽可能使用 `break`、`continue` 和 `return` 语句而不是 `goto` 语句是一种好的编程风格。 但是，因为 `break` 语句仅退出循环的一个级别，所以可能必须使用 `goto` 语句退出深度嵌套的循环。  
+ 它是一个良好的编程样式，以使用**中断**，**继续**，并**返回**语句而不是**goto**语句时可能。 但是，由于**中断**语句从只有一个级别的循环中退出，则可能必须使用**goto**语句退出深度嵌套的循环。  
   
- 有关标签的详细信息和`goto`语句，请参阅[Labeled 语句](../cpp/labeled-statements.md)和[goto 语句中使用标签](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe)。  
+ 有关标签的详细信息和**goto**语句，请参阅[Labeled 语句](../cpp/labeled-statements.md)。  
   
 ## <a name="example"></a>示例  
- 在此示例中，当 `i` 等于 3 时，`goto` 语句将控制权转移给标记为 `stop` 的点。  
+ 在此示例中， **goto**语句将控制转移到标记的点`stop`时`i`等于 3。  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

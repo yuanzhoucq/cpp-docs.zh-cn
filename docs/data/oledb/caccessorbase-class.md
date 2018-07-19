@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090791"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 从此类派生，OLE DB 模板中的所有访问器。 `CAccessorBase` 允许一个行集来管理多个访问器。 它还提供用于参数和输出列的绑定。  

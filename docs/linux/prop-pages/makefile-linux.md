@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705694"
 ---
 # <a name="makefile-project-properties-linux-c"></a>生成文件项目属性 (Linux C++)
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/04/2018
 强制包含 | 指定强制包含的文件。
 预处理器定义 | 指定源文件使用的预处理器定义。
 取消定义预处理器定义 | 指定取消定义一个或多个预处理器。     (/U[macro])
-附加选项 | 指定分析 C++ 文件时 Intellisense 使用的附加编译器开关。
+附加选项 | 指定分析 C++ 文件时 IntelliSense 使用的附加编译器开关。
 
 ### <a name="build"></a>生成
 

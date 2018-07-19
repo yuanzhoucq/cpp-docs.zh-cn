@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889002"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 类
 表示继承指定的接口并提供指定的 Windows 运行时、 经典 COM 和弱引用支持的、 WinRT 或 COM 的类。  

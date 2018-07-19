@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690402"
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 本文档介绍并发运行时中的计划程序策略的角色。 A*计划程序策略*控制计划程序将使用在管理任务的策略。 例如，假设一个应用程序需要某些任务在 `THREAD_PRIORITY_NORMAL` 上执行，而其他任务在 `THREAD_PRIORITY_HIGHEST` 上执行。  您可以创建两个计划程序实例：一个指定 `ContextPriority` 策略为 `THREAD_PRIORITY_NORMAL`，另一个指定同一策略为 `THREAD_PRIORITY_HIGHEST`。  

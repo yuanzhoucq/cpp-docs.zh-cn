@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953565"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 表示基本转换。  
@@ -103,7 +104,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|指定是否已将转换添加到情节提要。|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|将存储到指定的结束过渡的关键帧的指针。|  
@@ -138,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  情节提要的指针，其将进行动画处理相关的变量。  
   
 ### <a name="return-value"></a>返回值  
@@ -155,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  情节提要的指针，其将进行动画处理相关的变量。  
   
 ### <a name="return-value"></a>返回值  
@@ -191,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  创建标准转换的转换库指向的指针。 自定义转换，它可以为 NULL。  
   
- `pFactory`  
+ *pFactory*  
  指向转换工厂，其创建自定义转换的指针。 它可以为 NULL 的标准转换。  
   
 ### <a name="return-value"></a>返回值  
@@ -254,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  创建标准转换的转换库指向的指针。 自定义转换，它可以为 NULL。  
   
- `pFactory`  
+ *pFactory*  
  指向转换工厂，其创建自定义转换的指针。 它可以为 NULL 的标准转换。  
   
 ### <a name="return-value"></a>返回值  
@@ -344,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStart`  
+ *pStart*  
  指定转换的起始关键帧。  
   
- `pEnd`  
+ *挂起*  
  指定转换结束关键帧。  
   
 ### <a name="remarks"></a>备注  
@@ -361,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pVariable`  
+ *pVariable*  
  指向相关的动画变量的指针。  
   
 ### <a name="remarks"></a>备注  

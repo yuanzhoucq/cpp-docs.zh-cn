@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381756"
 ---
 # <a name="using-ccomboboxex"></a>使用 CComboBoxEx
 扩展的组合框控件是标准的组合框控件，为项图像提供本机支持的扩展。 这些映像可以用于指示组合框，如当前选定的和未选定项中的各个项的状态。 若要使项图像可以轻松进行访问，该控件提供支持的图像列表。  

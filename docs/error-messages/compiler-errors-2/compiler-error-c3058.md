@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246670"
 ---
 # <a name="compiler-error-c3058"></a>编译器错误 C3058
 “符号”：符号在用于“copyin”子句之前，不能声明为“threadprivate”  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354787"
 ---
 # <a name="atl-services"></a>ATL 服务
 若要创建 ATL COM 对象，以便它在服务中运行，只需从 ATL 项目向导中的服务器选项列表中选择服务 (EXE)。 然后，向导将创建派生自的类`CAtlServiceModuleT`若要实现服务。  

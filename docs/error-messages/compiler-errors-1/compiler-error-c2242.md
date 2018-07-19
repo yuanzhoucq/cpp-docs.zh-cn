@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166109"
 ---
 # <a name="compiler-error-c2242"></a>编译器错误 C2242
 typedef 名不能位于类/结构/联合之后  

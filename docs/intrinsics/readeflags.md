@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340094"
 ---
 # <a name="readeflags"></a>__readeflags
 读取程序状态和控制 (EFLAGS) 注册。  

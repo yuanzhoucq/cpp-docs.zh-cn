@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338177"
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。  
@@ -2364,8 +2365,8 @@ void _MoveFromCoprocessor64(
 |__code_seg|void __code_seg(const char *)|  
 |__debugbreak|void __cdecl \__debugbreak(void)|  
 |__fastfail|__declspec （noreturn) void \__fastfail （无符号整数）|  
-|__nop|void __nop(void)**注意：**在 ARM 平台上，如果在目标体系结构中实现了一个，此函数将生成一个 NOP 指令; 否则，一个替代指令，不会更改项目或 CPU 的状态为生成 — 例如， `MOV r8, r8`。 这在功能上等效于\__nop 其他硬件体系结构内部函数。 因为对项目或 CPU 的状态无影响的指令可能会因优化而被目标体系结构忽略，所以指令不一定消耗 CPU 周期。 因此，不要使用\__nop 内部函数来操作代码序列的执行时间，除非确信 CPU 的工作方式。 相反，你可以使用\__nop 内部对齐到特定的 32 位边界地址的下一个指令。|  
-|__yield|void __yield(void)**注意：**在 ARM 平台上，此函数生成 YIELD 指令，这表示线程正在执行从执行的任务可以暂时挂起 — 例如，旋转锁 — 而无需对项目产生负面影响。 这使 CPU 可在执行周期过程中执行其他任务，这些任务如果不执行则会被浪费掉。|  
+|__nop|void __nop(void)**注意：** 在 ARM 平台上，如果在目标体系结构中实现了一个，此函数将生成一个 NOP 指令; 否则，一个替代指令，不会更改项目或 CPU 的状态为生成 — 例如， `MOV r8, r8`。 这在功能上等效于\__nop 其他硬件体系结构内部函数。 因为对项目或 CPU 的状态无影响的指令可能会因优化而被目标体系结构忽略，所以指令不一定消耗 CPU 周期。 因此，不要使用\__nop 内部函数来操作代码序列的执行时间，除非确信 CPU 的工作方式。 相反，你可以使用\__nop 内部对齐到特定的 32 位边界地址的下一个指令。|  
+|__yield|void __yield(void)**注意：** 在 ARM 平台上，此函数生成 YIELD 指令，这表示线程正在执行从执行的任务可以暂时挂起 — 例如，旋转锁 — 而无需对项目产生负面影响。 这使 CPU 可在执行周期过程中执行其他任务，这些任务如果不执行则会被浪费掉。|  
 |_AddressOfReturnAddress|void * _AddressOfReturnAddress(void)|  
 |_BitScanForward|unsigned char _BitScanForward(unsigned long * _Index, unsigned long _Mask)|  
 |_BitScanReverse|unsigned char _BitScanReverse(unsigned long * _Index, unsigned long _Mask)|  
@@ -2376,8 +2377,8 @@ void _MoveFromCoprocessor64(
 |_byteswap_uint64|unsigned 的 __int64 \__cdecl _byteswap_uint64 (无符号\__int64)|  
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|  
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|  
-|_disable|void __cdecl _disable(void)**注意：**在 ARM 平台上，此函数生成 CPSID 指令; 仅可用作内部函数。|  
-|_enable|void __cdecl _enable(void)**注意：**在 ARM 平台上，此函数生成 CPSIE 指令; 仅可用作内部函数。|  
+|_disable|void __cdecl _disable(void)**注意：** 在 ARM 平台上，此函数生成 CPSID 指令; 仅可用作内部函数。|  
+|_enable|void __cdecl _enable(void)**注意：** 在 ARM 平台上，此函数生成 CPSIE 指令; 仅可用作内部函数。|  
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|  
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|  
 |_ReadBarrier|void _ReadBarrier(void)|  

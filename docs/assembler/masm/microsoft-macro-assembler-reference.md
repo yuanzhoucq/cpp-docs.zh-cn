@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052822"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 Microsoft Macro Assembler (MASM) 提供内联程序集的几个的优点。 MASM 包含具有功能，如循环、 算术、 和文本字符串处理的宏语言。 MASM 还可让你更好地控制硬件因为它支持的 386、 486 和 Pentium 处理器的指令集。 通过使用 MASM，你还可以减少时间和内存开销。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389912"
 ---
 # <a name="while-statement-c"></a>While 语句 (C)
 利用 `while` 语句，您可以重复语句直到指定的表达式变为 false。  

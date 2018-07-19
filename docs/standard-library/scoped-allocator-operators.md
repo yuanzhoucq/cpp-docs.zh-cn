@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 66cf60dd3d70719fe42645215b1190c9fb752ff3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2c61e3fce5d1cf58f59bc9dd51920bccc0eb2f3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966467"
 ---
 # <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; 运算符
 
@@ -34,9 +35,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-`left` 左侧`scoped_allocator_adaptor`对象。
+*左*左侧`scoped_allocator_adaptor`对象。
 
-`right` 右侧`scoped_allocator_adaptor`对象。
+*右*右侧`scoped_allocator_adaptor`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -55,9 +56,9 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`left` 左侧`scoped_allocator_adaptor`对象。
+*左*左侧`scoped_allocator_adaptor`对象。
 
-`right` 右侧`scoped_allocator_adaptor`对象。
+*右*右侧`scoped_allocator_adaptor`对象。
 
 ### <a name="return-value"></a>返回值
 

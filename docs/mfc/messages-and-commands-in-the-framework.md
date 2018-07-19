@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348869"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>框架中的消息和命令
 为 Microsoft Windows 编写的应用程序是"驱动的消息。" 在响应鼠标单击、 击键、 窗口动作数等的事件，Windows 将消息发送到适当的窗口。 Framework 应用程序处理 Windows 消息与适用于 Windows 的任何其他应用程序一样。 但该框架还提供一些增强功能使处理消息更轻松、 更易于维护，并更好地封装。  

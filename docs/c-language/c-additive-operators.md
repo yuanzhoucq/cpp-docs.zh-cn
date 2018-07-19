@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382859"
 ---
 # <a name="c-additive-operators"></a>C 加法运算符
 加法运算符执行加法 (**+**) 和减法 (**-**) 运算。  

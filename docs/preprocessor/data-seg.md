@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841227"
 ---
 # <a name="dataseg"></a>data_seg
 指定 .obj 文件中用于存储初始化变量的数据段。  

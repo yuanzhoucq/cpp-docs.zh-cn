@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391202"
 ---
 # <a name="return-statement-c"></a>return 语句 (C)
 `return` 语句终止函数的执行并返回对调用函数的控制。 紧接在调用之后在调用函数中恢复执行。 `return` 语句还可以将值返回给调用函数。 有关详细信息，请参阅[返回类型](../c-language/return-type.md)。  

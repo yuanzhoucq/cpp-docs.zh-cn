@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374003"
 ---
 # <a name="fo-object-file-name"></a>/Fo（对象文件名）
 指定对象 (.obj) 文件的名称或要使用的目录，而不是默认目录。  

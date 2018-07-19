@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318771"
 ---
 # <a name="project-build-error-prj0013"></a>项目生成错误 PRJ0013
 系统资源可能严重不足。 无法创建启动生成所需的管道。  

@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930511"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>管理 MFC 模块的状态数据
-本文讨论 MFC 模块的状态数据以及在执行流（路径代码将在执行时通过应用程序）进入和离开模块时如何更新此状态。 还将讨论使用 `AFX_MANAGE_STATE` 和 `METHOD_PROLOGUE` 宏切换模块状态。  
+本文讨论 MFC 模块的状态数据以及在执行流（路径代码将在执行时通过应用程序）进入和离开模块时如何更新此状态。 此外讨论切换模块状态与 AFX_MANAGE_STATE 和 METHOD_PROLOGUE 宏。  
   
 > [!NOTE]
 >  此处术语“模块”指一个可执行程序，或指独立于剩下的应用程序运行、但使用 MFC DLL 的共享副本的 DLL（或 DLL 集）。 ActiveX 控件是典型的模块示例。  

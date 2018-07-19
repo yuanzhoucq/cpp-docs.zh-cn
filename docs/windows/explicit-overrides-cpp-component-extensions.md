@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879498"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
 本主题讨论如何显式重写基类或接口的成员。 命名的 （显式） 重写应仅用于重写的方法与具有不同的名称派生方法。  

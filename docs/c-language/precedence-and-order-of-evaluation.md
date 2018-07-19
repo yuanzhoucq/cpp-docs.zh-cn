@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392180"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>计算的优先级和顺序
 C 运算符的优先级和结合性将影响表达式中操作数的分组和计算。 仅当存在优先级较高或较低的其他运算符时，运算符的优先级才有意义。 首先计算带优先级较高的运算符的表达式。 也可以通过“绑定”一词描述优先级。 优先级较高的运算符被认为具有更严格的绑定。  

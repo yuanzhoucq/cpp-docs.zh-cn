@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357400"
 ---
 # <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
 使用**应用程序设置**ATL 项目向导设计并将基本功能添加到新的 ATL 项目页。  

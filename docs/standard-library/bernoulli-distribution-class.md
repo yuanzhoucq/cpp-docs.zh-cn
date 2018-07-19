@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953229"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 类
 
@@ -79,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-该类描述了产生 `bool` 类型的值的分布，根据伯努利分布离散型概率函数进行分布。 下表链接到有关各个成员的文章。
+此类描述了生成类型的值的分布**bool**分布，根据伯努利分布离散型概率函数。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -179,7 +180,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 *p*存储`p`分布参数。
 
-*参数*`param_type`用于构造分布的结构。
+*parm* `param_type`用于构造分布的结构。
 
 ### <a name="remarks"></a>备注
 

@@ -1,7 +1,7 @@
 ---
 title: 确定要重新分布的 DLL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -18,20 +18,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337595"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253862"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>确定要重新分发的 DLL
 
 在生成使用由 Visual Studio 提供的库 DLL 的应用程序时，应用程序的用户也必须在运行该应用程序的计算机上安装这些 DLL。 由于大多数用户可能没有安装 Visual Studio，因此你必须为他们提供这些 DLL。 Visual Studio 以可再发行文件的形式提供这些 DLL，可以将其包含到应用程序的安装程序中。
 
-若要更轻松地将可再发行 DLL 包含到你的安装程序，能以独立可再发行组件包的形式获得它们。 这些是特定于体系结构的可执行文件，它们使用集中部署将可再发行文件安装在用户的计算机上。 例如：vcredist\_x86.exe 为 x86 计算机安装 32 位库；vcredist\_x64.exe 为 x64 计算机安装 32 位和 64 位库；vcredist\_ARM.exe 为 ARM 计算机安装库。 建议采用集中部署，因为 Microsoft 可以使用 Windows 更新服务来分别更新这些库。 除了 Visual Studio 安装中的副本，还可在“其他工具”和“框架”部分中的 [VisualStudio.com/Downloads](https://www.visualstudio.com/downloads/) 下载当前的可再发行组件包。
+若要更轻松地将可再发行 DLL 包含到你的安装程序，能以独立可再发行组件包的形式获得它们。 这些是特定于体系结构的可执行文件，它们使用集中部署将可再发行文件安装在用户的计算机上。 例如：vcredist\_x86.exe 为 x86 计算机安装 32 位库；vcredist\_x64.exe 为 x64 计算机安装 32 位和 64 位库；vcredist\_ARM.exe 为 ARM 计算机安装库。 建议采用集中部署，因为 Microsoft 可以使用 Windows 更新服务来分别更新这些库。 除了 Visual Studio 安装中的副本，还可下载当前可再发行组件包。 若要查看当前和较旧版本工具集支持的最新可再发行组件包的链接，请参阅[最新支持的 Visual C++ 下载](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 通过在 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=158431)中搜索“Visual C++ 可再发行组件包”，也许能找到特定较早版本的可再发行组件包。
 
-所部署的可再发行组件包的主版本号必须与创建应用程序的 Visual Studio 工具集的版本相匹配。 Visual Studio 2017 和 Visual Studio 2015 的工具集版本号是兼容的，也就是说通过使用 2015 版工具集生成的应用可能会使用 Visual Studio 2017 可再发行文件。 尽管它们可能是兼容的，我们还是不支持在使用 2017 版工具集生成的应用中使用 2015 版可再发行文件。 仅支持使用与工具集相同或更高版本的可再发行组件包。 若要查看较旧版本工具集支持的最新可再发行组件包的链接，请参阅[最新支持的 Visual C++ 下载](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)。 通过在 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=158431)中搜索“Visual C++ 可再发行组件包”，也许能找到特定较早版本的可再发行组件包。
+所部署的可再发行组件包的主版本号必须与创建应用程序的 Visual Studio 工具集的版本相匹配，并且次版本必须为相同版本或更高版本。 Visual Studio 2017 和 Visual Studio 2015 的工具集版本号是兼容的，也就是说通过使用 2015 版工具集生成的应用可能会使用 Visual Studio 2017 可再发行文件。 尽管它们可能是兼容的，我们还是不支持在使用 2017 版工具集生成的应用中使用 2015 版可再发行文件。 仅支持使用与工具集相同或更高版本的可再发行组件包。
 
 将可再发行 DLL 包含到你的安装程序的另一种方式是使用合并模块。 这些 Microsoft 安装程序模块由应用程序安装程序包括并安装。 可再发行 DLL 的合并模块位于 \\VC\\Redist\MSVC\\*version*\\MergeModules\\ 下的 Visual Studio 安装目录中。 在早期版本的 Visual Studio 中，这些文件位于 \\Program Files 或 \\Program Files (x86) 目录的 Common Files\\Merge Modules 子目录中。 有关使用这些文件的详细信息，请参阅[使用合并模块重新分发组件](../ide/redistributing-components-by-using-merge-modules.md)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "33337595"
 
 具有依赖项列表时，将该列表与在 Microsoft Visual Studio 安装目录下找到的 Redist.txt 文件中链接的列表进行比较，或者与你的 Visual Studio 副本的 Microsoft 软件许可条款中“可分发代码”文件部分引用的可再发行 DLL“REDIST 列表”进行比较。 对于 Visual Studio 2017，请参阅 [Microsoft Visual Studio 2017 的可分发代码（包括实用程序、可扩展性和 BuildServer 文件）](http://go.microsoft.com/fwlink/p/?linkid=823098)。 对于 Visual Studio 2015，请参阅 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码（包括实用程序和 BuildServer 文件）](http://go.microsoft.com/fwlink/p/?linkid=799794)。 对于 Visual Studio 2013，列表可以在 [Microsoft Visual Studio 2013 和 Microsoft Visual Studio 2013 SDK 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=313603)中联机获得。
 
-在 Visual Studio 2015 以前的版本中，C 运行时库 (CRT) 作为可再发行 DLL 包含在 msvcversion.dll 中。 从 Visual Studio 2015 开始，CRT 中的函数已重构到 vcruntime 和 UCRT 中。 UCRT 现在是 Windows 10 中由 Windows 更新托管的系统组件。 它在所有 Windows 10 操作系统上都可用。 若要将应用程序部署到较早的操作系统，可能还需要重新分发 UCRT。 Visual Studio 可再发行文件中包括较早版本的 UCRT，它仅安装在 Windows 10 以前的操作系统上，且仅当未安装任何版本的 UCRT 时才会安装它。 若要获取能作为 Microsoft 系统更新包安装在下层系统的 UCRT 版本，请参阅 Microsoft 下载中心中的 [Windows 10 通用 C 运行时](https://www.microsoft.com/en-us/download/details.aspx?id=48234)。
+在 Visual Studio 2015 以前的版本中，C 运行时库 (CRT) 作为可再发行 DLL 包含在 msvcversion.dll 中。 从 Visual Studio 2015 开始，CRT 中的函数已重构到 vcruntime 和 UCRT 中。 UCRT 现在是 Windows 10 中由 Windows 更新托管的系统组件。 它在所有 Windows 10 操作系统上都可用。 若要将应用程序部署到较早的操作系统，可能还需要重新分发 UCRT。 Visual Studio 可再发行文件中包括较早版本的 UCRT，它仅安装在 Windows 10 以前的操作系统上，且仅当未安装任何版本的 UCRT 时才会安装它。 若要获取能作为 Microsoft 系统更新包安装在下层系统的 UCRT 版本，请参阅 Microsoft 下载中心中的 [Windows 10 通用 C 运行时](https://www.microsoft.com/download/details.aspx?id=48234)。
 
 无法重新发布 Visual Studio 中包含的所有文件；只允许重新发布 Redist.txt 或在线“REDIST 列表”中指定的文件。 调试版本的应用程序和各种 Visual C++ 调试 DLL 是不可再发行的。 有关详细信息，请参阅[选择部署方法](../ide/choosing-a-deployment-method.md)。
 

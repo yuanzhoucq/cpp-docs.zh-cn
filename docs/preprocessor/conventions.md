@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912662"
 ---
 # <a name="conventions"></a>约定
 约定将对不同的语法组件使用不同的字体特性。 符号和字体如下所示：  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692777"
 ---
 # <a name="texture-class"></a>texture 类
 纹理是一种数据聚合上`accelerator_view`范围域中。 它是变量，一个用于扩展盘区域中的每个元素的集合。 每个变量包含 c + + 基元类型相对应的值 ( `unsigned int`， `int`， `float`， `double`)，为标量类型 ( `norm`，或`unorm`)，或短矢量类型。  

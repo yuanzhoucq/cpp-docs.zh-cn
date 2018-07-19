@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097505"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 可以用于通过最少复制操作将字符串数据从 `Platform::String^` 输入参数传递到其他方法的优化类型。  

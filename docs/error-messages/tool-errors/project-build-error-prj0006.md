@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317474"
 ---
 # <a name="project-build-error-prj0006"></a>项目生成错误 PRJ0006
 无法打开临时文件 file。 请确保文件存在，而且，目录未写入-受保护。  

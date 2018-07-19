@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104517"
 ---
 # <a name="comptr"></a>com::ptr
 可用作 CLR 类的成员的 COM 对象的包装器。 包装还会自动调用其析构函数时释放对象上拥有的引用的 COM 对象的生存期管理。 类似于[CComPtr 类](../atl/reference/ccomptr-class.md)。  

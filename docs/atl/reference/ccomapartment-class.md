@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362156"
 ---
 # <a name="ccomapartment-class"></a>CComApartment 类
 此类提供用于管理线程放入池中 EXE 模块中的房间的支持。  

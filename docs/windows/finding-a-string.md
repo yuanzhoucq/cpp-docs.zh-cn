@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875729"
 ---
 # <a name="finding-a-string"></a>查找字符串
 你可以搜索字符串表中的一个或多个字符串，然后使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)与**在文件中查找**命令 (**编辑**菜单) 查找字符串的所有实例模式相匹配。  

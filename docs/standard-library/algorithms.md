@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67a509c17558c7b388aa288612d73ea26062ec0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5338ddeb802d13d100e5e3026152793f866c90f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961020"
 ---
 # <a name="algorithms"></a>算法
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 
 算法模板函数的说明使用几个速记短语：
 
-- 短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从 *A 到达 *B* 时，范围有效；*可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B *)。*
+- 短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从 *A 到达 *B* 时，范围有效；* 可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B *)。*
 
 - 短语“each *N* in the range [*A*, *B*)”表示 *N* 以值 *A* 开始并递增零次或多次，直至等于值 *B*。*N* == *B* 的情况不在范围内。
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/07/2018
 
 - 表达式如 *X* - *Y*，其中*X* 和 *Y* 可以是随机访问迭代器以外的迭代器，从数学意义上来说是需要的。 如果该函数必须确定此类值，则它不一定会评估 operator**-**。 对于 *X* + *N* 和 *X* - *N* 等表达式也是如此，其中 *N* 是整数类型。
 
-几种算法使用进行成对比较的谓词（例如 `operator==`）生成 `bool` 结果。 谓词函数 `operator==` 或其任何替代函数不得更改其任一操作数。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。
+几种算法使用的一个谓词，如执行成对比较`operator==`，以产生**bool**结果。 谓词函数 `operator==` 或其任何替代函数不得更改其任一操作数。 它必须生成相同**bool**导致每次计算，并且它必须生成相同的结果，如果其中一个操作数的副本替换为操作数。
 
 几种算法使用对序列中的元素对执行严格弱排序的谓词。 对于谓词 `pr`(*X*, *Y*)：
 
@@ -52,11 +53,11 @@ ms.lasthandoff: 05/07/2018
 
 - 排序意味着 `pr`(*X*, *Y*) (&& ) `pr`(*Y*, Z) 表示 `pr`(*X*, Z)。
 
-以上这些算法隐式使用谓词 *X* \< *Y*。通常满足严格弱排序需求的其他谓词有 *X*  >  *Y*、**less**(*X*、*Y*) 和 `greater`(*X*, *Y*)。 但请注意，*X* \<= *Y* 和 *X* >= *Y* 等谓词不满足这一需求。
+以上这些算法隐式使用谓词 *X* \< *Y*。通常满足严格弱排序需求的其他谓词有*X* > *Y*， `less`(*X*， *Y*)，并`greater`(*X*， *Y*)。 但请注意，*X* \<= *Y* 和 *X* >= *Y* 等谓词不满足这一需求。
 
-如果对于范围 [0, `Last` - `First`) 中的每个 *N* 和范围 (N,`Last` - `First`) 中的每个 *M*，谓词 !(\*(`First` + *M*) < \*(*First* + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 operator**<** 排序的序列。 （请注意元素以升序进行排序）。谓词函数 **operator<** 或任何其替代函数不得更改其任一操作数。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。 此外，必须对它比较的操作数进行严格弱排序。
+如果对于范围 [0, `Last` - `First`) 中的每个 *N* 和范围 (N,`Last` - `First`) 中的每个 *M*，谓词 !(\*(`First` + *M*) < \*(*First* + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 operator**<** 排序的序列。 （请注意元素以升序进行排序）。谓词函数 `operator<` 或其任何替代函数不得更改其任一操作数。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。 此外，必须对它比较的操作数进行严格弱排序。
 
-如果对于范围 [1, `Last` - `First`) 中的每个 *N*，谓词 !(\*`First` < \*(`First` + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 **operator<** 排序的堆。 （第一个元素最大。）仅对模板函数否则已知其内部结构[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，和[push_heap](../standard-library/algorithm-functions.md#push_heap)。 就有序序列来说，谓词函数 **operator<**（或其任何替代函数）不得更改任一操作数，且必须对将它比较的操作数进行严格弱排序。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。
+指定由迭代器在范围内的元素序列 [`First`， `Last`) 由排序的堆`operator<`if、 为每个*N*范围内 [1， `Last`  -  `First`)谓词 ！(\*`First` < \*(`First` + *N*)) 为 true。 （第一个元素最大。）其内部结构仅对模板函数已知[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，并[push_heap](../standard-library/algorithm-functions.md#push_heap)。 作为有序序列，谓词函数`operator<`，或任何其替代，不得更改任一操作数，且必须对进行严格弱排序它比较的操作数。 它必须生成相同**bool**导致每次计算，并且它必须生成相同的结果，如果其中一个操作数的副本替换为操作数。
 
 C++ 标准库算法位于 [\<algorithm>](../standard-library/algorithm.md) 和 [\<numeric>](../standard-library/numeric.md) 标头文件中。
 

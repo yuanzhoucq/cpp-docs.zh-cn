@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964250"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible 类
 
@@ -35,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是具有默认构造函数的类类型，则类型谓词的实例为 true，否则为 false。 这等效于谓词 `is_constructible<T>`。 类型 `T` 必须是一个完整类型、 `void`或未知绑定的数组。
+如果类型谓词的实例将保留 true 类型*T*是具有默认构造函数，否则为 false 的类类型。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型**void**，或未知边界的数组。
 
 ## <a name="example"></a>示例
 

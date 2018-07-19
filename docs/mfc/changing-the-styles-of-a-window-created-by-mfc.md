@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345724"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>更改 MFC 创建的窗口的样式
 它的版本中`WinMain`函数，MFC 为您注册若干标准窗口类。 由于你通常不编辑 MFC 的`WinMain`，，函数使您可以以后你无法更改 MFC 默认窗口样式。 此文章介绍了如何更改现有应用程序中的此类的预先注册的窗口类的样式。  

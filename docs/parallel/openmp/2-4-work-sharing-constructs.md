@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689631"
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 工作共享构造
 工作共享构造分布在遇到此警告的团队成员之间的关联语句的执行。 工作共享指令不启动新线程，并且在进入工作共享构造没有不存在任何隐含的障碍。  

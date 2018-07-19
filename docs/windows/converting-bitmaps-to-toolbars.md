@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872622"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>将位图转换为工具栏
 可以通过将位图转换来创建一个新的工具栏。 从位图图形将转换为工具栏按钮图像。 位图通常包含一个位图，与每个按钮的一个映像若干按钮图像。 映像可以是任意大小;默认值为 16 像素宽的图像的高度。 你可以指定在按钮图像的大小[新建工具栏资源对话框](../windows/new-toolbar-resource-dialog-box.md)当选择从工具栏编辑器**映像**与图像编辑器中的菜单。  

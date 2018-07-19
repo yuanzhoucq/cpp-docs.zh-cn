@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392622"
 ---
 # <a name="overview-of-declarations"></a>声明概述
 “声明”指定一组标识符的解释和特性。 还将导致针对标识符命名的对象或函数保留存储的声明将称为“定义”。 用于变量、函数和类型的 C 声明都具有以下语法：  

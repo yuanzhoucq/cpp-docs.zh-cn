@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382267"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051：现在和将来使用 CTL3D
 此之前讨论 CTL3D 和 MFC 的技术说明现已过时。 控件的 3D 效果将由 MFC 自动实现。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689904"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   使用可嵌套的锁
 下面的示例 (对于[第 3.2 节](../../parallel/openmp/3-2-lock-functions.md)在页上 41) 演示如何使用 nestable 锁以同步更新同时向整个结构和其成员之一。  

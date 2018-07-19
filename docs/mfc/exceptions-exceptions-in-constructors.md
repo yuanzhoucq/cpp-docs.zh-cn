@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342626"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>异常：构造函数中的异常
 构造函数中引发异常时, 所需的对象，内存分配所做在引发异常之前, 中所述清理[异常： 从您自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)。  

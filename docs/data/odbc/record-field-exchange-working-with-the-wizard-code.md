@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092504"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>记录字段交换：使用向导代码
 本主题解释的代码，MFC 应用程序向导和**添加类**(中所述[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 为支持 RFX 和如何你可能想要更改该代码编写。  

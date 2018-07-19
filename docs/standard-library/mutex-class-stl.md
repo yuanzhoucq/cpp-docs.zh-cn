@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958940"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex 类（C++ 标准库）
 
@@ -120,7 +121,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 

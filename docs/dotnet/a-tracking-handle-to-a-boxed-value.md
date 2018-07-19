@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108262"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>装箱值的跟踪句柄
 引用值类型的跟踪句柄的使用情况已从托管扩展中的 c + + 更改为 Visual c + +。  

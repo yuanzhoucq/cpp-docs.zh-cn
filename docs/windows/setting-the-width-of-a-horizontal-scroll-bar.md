@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892784"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>设置水平滚动条的宽度
 在水平滚动条在列表框中添加到对话框中使用 MFC 类时，滚动条将不会自动出现在你的应用程序。  

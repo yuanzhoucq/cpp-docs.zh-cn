@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695374"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 命名空间
 函数中`precise_math`命名空间是符合 C99。 包含单个精度和双精度的每个函数的版本。 例如，`acos`是双精度版本和`acosf`是单精度版本。 这些函数中，包括单精度函数中，需要扩展的双精度支持加速器上。 你可以使用[accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision)以确定是否可以在一个特定的加速器上运行这些函数。 

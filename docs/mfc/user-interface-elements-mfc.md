@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383235"
 ---
 # <a name="user-interface-elements-mfc"></a>用户界面元素 (MFC)
 有关如何通过使用 Microsoft 基础类 (MFC) 库中创建你的应用程序的用户界面的信息，请参阅以下主题。  

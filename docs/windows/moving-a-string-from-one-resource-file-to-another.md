@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879264"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>在资源文件之间移动字符串
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>将字符串从一个资源脚本文件移动到另一个  

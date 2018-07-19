@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275157"
 ---
 # <a name="compiler-warning-c4986"></a>编译器警告 C4986
 “function”: 异常规范与前面的声明不匹配  

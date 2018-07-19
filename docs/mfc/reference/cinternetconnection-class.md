@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 227637dc042777725692122babe0d4c7b232d578
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037773"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection 类
 管理与 Internet 服务器的连接。  
@@ -88,17 +89,17 @@ CInternetConnection(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSession`  
+ *pSession*  
  指向的指针[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。  
   
- `pstrServer`  
+ *pstrServer*  
  指向包含服务器名称的字符串的指针。  
   
- `nPort`  
+ *nPort*  
  标识此连接的 Internet 端口数。  
   
- `dwContext`  
- 上下文标识符`CInternetConnection`对象。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 上下文标识符`CInternetConnection`对象。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="remarks"></a>备注  
  永远不会调用`CInternetConnection`自己; 而应调用[CInternetSession](../../mfc/reference/cinternetsession-class.md)您想要建立的连接的类型的成员函数：  
@@ -109,7 +110,7 @@ CInternetConnection(
   
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)  
   
- 默认值为`dwContext`发送到 mfc `CInternetConnection`-派生对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建**InternetConnection**-派生对象。 默认值设置为 1;但是，你可以显式将分配中的特定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)连接的构造函数。 对象和做的任何工作将与该上下文 id。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 默认值为*dwContext*发送到 mfc `CInternetConnection`-派生对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建**InternetConnection**-派生的对象。 默认值设置为 1;但是，你可以显式将分配中的特定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)连接的构造函数。 对象和做的任何工作将与该上下文 id。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  调用此成员函数可获取此会话的上下文 ID。  
@@ -124,7 +125,7 @@ DWORD_PTR GetContext() const;
 ### <a name="remarks"></a>备注  
  中最初指定的上下文 ID [CInternetSession](../../mfc/reference/cinternetsession-class.md)并传播到`CInternetConnection`-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类中，除非对打开的函数调用中指定以不同方式连接。 上下文 ID 与给定的任何的对象操作相关联，并标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
- 详细了解如何**GetContext**适用于其他 WinInet 类，让用户状态信息，请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关上下文的详细信息标识符。  
+ 详细了解如何`GetContext`适用于其他 WinInet 类，让用户状态信息，请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  调用此成员函数可获取与此 Internet 连接关联的服务器的名称。  

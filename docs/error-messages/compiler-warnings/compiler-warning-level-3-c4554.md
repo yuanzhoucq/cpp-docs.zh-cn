@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294409"
 ---
 # <a name="compiler-warning-level-3-c4554"></a>编译器警告（等级 3）C4554
 operator： 检查可能存在的错误; 运算符优先级使用括号以阐明优先级  

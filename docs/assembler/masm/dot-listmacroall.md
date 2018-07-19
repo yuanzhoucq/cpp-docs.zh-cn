@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051883"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 启动的宏中的所有语句的列表。  

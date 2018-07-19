@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381234"
 ---
 # <a name="c-unary-operators"></a>C 一元运算符
 一元运算符出现在其操作数前，并按照从右到左的顺序关联。  

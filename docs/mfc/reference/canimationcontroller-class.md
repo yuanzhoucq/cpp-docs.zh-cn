@@ -113,11 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955110"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 实现动画控制器，它为创建和管理动画提供了中央接口。  
@@ -189,7 +190,7 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|关键帧，表示情节提要的开头。|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|指定动画控制器是否为有效。 如果当前操作系统不支持 Windows 动画 API，此成员设置为 FALSE。|  
@@ -226,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pObject`  
+ *pObject*  
  指向的动画对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -245,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `pKeyframe`  
+ *pKeyframe*  
  指向一个关键帧的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -267,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  指定是否要立即运行动画。  
   
 ### <a name="return-value"></a>返回值  
@@ -295,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
- `pGroup`  
+ *pGroup*  
  指向要清理的动画组的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -320,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定要为其创建关键帧的组 ID。  
   
- `pTransition`  
+ *pTransition*  
  指向过渡的指针。 关键帧将插入到此过渡后的情节提要。  
   
- `pKeyframe`  
+ *pKeyframe*  
  指向此关键帧的基关键帧的指针。  
   
- `offset`  
+ *offset*  
  由 pKeyframe 指定的基关键帧的偏移量（以秒为单位）。  
   
 ### <a name="return-value"></a>返回值  
@@ -346,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  指定是否要设置或释放一个处理程序。  
   
 ### <a name="return-value"></a>返回值  
@@ -365,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  指定是否要设置或释放处理程序。  
   
- `idleBehavior`  
+ *idleBehavior*  
  指定空闲行为计时器更新处理程序。  
   
 ### <a name="return-value"></a>返回值  
@@ -385,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwHandlerType`  
+ *dwHandlerType*  
  UI_ANIMATION_PHT_ 组合标志 （请参阅备注），它指定要设置或释放哪些处理程序。  
   
 ### <a name="return-value"></a>返回值  
@@ -404,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `bEnable`  
+ *bEnable*  
  指定是否要设置或释放一个处理程序。  
   
 ### <a name="return-value"></a>返回值  
@@ -425,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -448,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pVariable`  
+ *pVariable*  
  指向动画变量的指针。  
   
- `ppObject`  
+ *ppObject*  
  输出。 包含指向动画对象或 NULL。  
   
- `ppGroup`  
+ *ppGroup*  
  输出。 包含指向包含的动画对象或为 NULL 的动画组。  
   
 ### <a name="return-value"></a>返回值  
@@ -618,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  指向已计划的动画组的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -637,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  已更改到动画组包含其值的动画对象的指针。  
   
- `pObject`  
+ *pObject*  
  指向一个包含已更改其值的动画变量的动画对象的指针。  
   
- `variable`  
+ *变量*  
  指向动画变量的指针。  
   
- `newValue`  
+ *newValue*  
  指定新值。  
   
- `prevValue`  
+ *prevValue*  
  指定以前的值。  
   
 ### <a name="remarks"></a>备注  
@@ -665,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>参数  
- `newStatus`  
+ *newStatus*  
  新动画管理器状态。  
   
- `previousStatus`  
+ *previousStatus*  
  以前的动画管理器状态。  
   
 ### <a name="remarks"></a>备注  
@@ -702,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fps`  
+ *每秒帧数*  
  每秒帧数中的当前帧速率。  
   
 ### <a name="remarks"></a>备注  
@@ -721,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  已更改到动画组包含其值的动画对象的指针。  
   
- `pObject`  
+ *pObject*  
  指向一个包含已更改其值的动画变量的动画对象的指针。  
   
- `variable`  
+ *变量*  
  指向动画变量的指针。  
   
- `newValue`  
+ *newValue*  
  指定新值。  
   
- `prevValue`  
+ *prevValue*  
  指定以前的值。  
   
 ### <a name="remarks"></a>备注  
@@ -747,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  指向其动画即将开始的动画组的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -764,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  拥有当前已计划的情节提要的组。  
   
- `pGroupNew`  
+ *pgroupnew 会有*  
  拥有计划中的新情节提要的组与 pGroupScheduled 所拥有的已计划的情节提要发生冲突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有更高的优先级，则对 pGroupNew 会有潜在影响。  
   
 ### <a name="return-value"></a>返回值  
@@ -790,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  拥有当前已计划的情节提要的组。  
   
- `pGroupNew`  
+ *pgroupnew 会有*  
  拥有计划中的新情节提要的组与 pGroupScheduled 所拥有的已计划的情节提要发生冲突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有更高的优先级，则对 pGroupNew 会有潜在影响。  
   
 ### <a name="return-value"></a>返回值  
@@ -816,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  拥有当前已计划的情节提要的组。  
   
- `pGroupNew`  
+ *pgroupnew 会有*  
  拥有计划中的新情节提要的组与 pGroupScheduled 所拥有的已计划的情节提要发生冲突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有更高的优先级，则对 pGroupNew 会有潜在影响。  
   
 ### <a name="return-value"></a>返回值  
@@ -842,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  拥有当前已计划的情节提要的组。  
   
- `pGroupNew`  
+ *pgroupnew 会有*  
  拥有计划中的新情节提要的组与 pGroupScheduled 所拥有的已计划的情节提要发生冲突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有更高的优先级，则对 pGroupNew 会有潜在影响。  
   
 ### <a name="return-value"></a>返回值  
@@ -868,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  指向拥有其状态的情节提要的动画组的已更改。  
   
- `newStatus`  
+ *newStatus*  
  指定的新状态。  
   
- `previousStatus`  
+ *previousStatus*  
  指定以前的状态。  
   
 ### <a name="remarks"></a>备注  
@@ -888,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  指向拥有的情节提要的组的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -912,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定动画组 id。  
   
 ### <a name="remarks"></a>备注  
@@ -928,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pObject`  
+ *pObject*  
  指向的动画对象的指针。  
   
- `bNoDelete`  
+ *bNoDelete*  
  如果此参数为 TRUE 的对象将不会删除在删除时。  
   
 ### <a name="remarks"></a>备注  
@@ -945,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
 ### <a name="remarks"></a>备注  
@@ -961,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定动画要计划的组 ID。  
   
- `time`  
+ *time*  
  指定计划的时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -981,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向要设置的窗口对象的指针。  
   
 ### <a name="remarks"></a>备注  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253952"
 ---
 # <a name="compiler-error-c3295"></a>编译器错误 C3295
 “#pragma pragma”只能在全局范围或命名空间范围上使用  

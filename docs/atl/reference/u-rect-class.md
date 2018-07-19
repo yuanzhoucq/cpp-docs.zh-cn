@@ -1,5 +1,5 @@
 ---
-title: _U_RECT 类 |Microsoft 文档
+title: _U_RECT 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,67 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882216"
 ---
 # <a name="urect-class"></a>_U_RECT 类
-此自变量适配器类允许`RECT`指针或引用传递给实现根据指针的函数。  
+此参数适配器类允许`RECT`指针或引用要传递给实现方面的指针的函数。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>成员  
   
-### Public Constructors  
+### <a name="public-constructors"></a>公共构造函数  
   
-|Name|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|构造函数。|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>公共数据成员  
   
-|Name|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|指向`RECT`。|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>备注  
+ 该类定义两个构造函数重载： 一个接受**RECT &** 参数，另一个接受`LPRECT`参数。 第一个构造函数将引用自变量的地址存储在类的单个数据成员[m_lpRect](#_u_rect__m_lprect)。 转换不直接存储指针构造函数的参数。  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>要求  
+ **标头：** atlwin.h  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ 类包含公共作为传递给其构造函数之一的值`LPRECT`数据成员。  
   
 ```
 LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ 引用自变量的地址存储在类的单个数据成员[m_lpRect](#_u_rect__m_lprect)。  
   
 ```
-_U_RECT (RECT & rc);  
-_U_RECT (LPRECT lpRect);
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>参数  
+ *rc*  
+ 一个`RECT`引用。  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lpRect*  
+ 一个`RECT`指针。  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>备注  
+ 转换不直接存储指针构造函数的参数。  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>请参阅  
+ [类概述](../../atl/atl-class-overview.md)

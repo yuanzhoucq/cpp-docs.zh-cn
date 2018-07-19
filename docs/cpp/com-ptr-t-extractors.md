@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t 提取器 |Microsoft 文档
+title: _com_ptr_t 提取器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942525"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 提取器
 **Microsoft 专用**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,17 +56,17 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>备注  
   
--   **运算符接口\*** 返回封装的接口指针，这可能是**NULL**。  
+-   **运算符接口\*** 返回封装的接口指针，这可能为 NULL。  
   
--   **运算符接口 （& a)** 返回对封装的接口指针的引用，并发出错误，如果指针**NULL**。  
+-   **运算符接口 &** 返回对封装的接口指针的引用，并发出错误，如果指针为 NULL。  
   
--   **运算符\*** 允许智能指针对象在充当实际封装的接口取消引用时。  
+-   **运算符\*** 允许智能指针对象在执行操作，就好像它是实际封装的接口取消引用时。  
   
--   **operator->** 允许智能指针对象在充当实际封装的接口取消引用时。  
+-   **运算符->** 允许智能指针对象在执行操作，就好像它是实际封装的接口取消引用时。  
   
--   **运算符 &** 释放任何封装的接口指针，将其替换为**NULL**，并返回封装的指针的地址。 这允许智能指针通过寻址传递到具有的函数**出**参数通过其它将返回的接口指针。  
+-   **运算符 &** 释放所有封装的接口指针，将它替换为 NULL，并返回封装的指针的地址。 这允许智能指针通过寻址传递到具有的函数*出*参数通过它会返回一个接口指针。  
   
--   **运算符 bool**允许智能指针对象在条件表达式中使用。 此运算符返回**true**如果指针不**NULL**。  
+-   **运算符 bool**允许智能指针对象在条件表达式中使用。 如果指针不为 NULL，则此运算符返回 TRUE。  
   
  **结束 Microsoft 专用**  
   

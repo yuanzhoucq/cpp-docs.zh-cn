@@ -1,5 +1,5 @@
 ---
-title: 下标 |Microsoft 文档
+title: 下标 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942492"
 ---
 # <a name="subscripting"></a>下标
-下标运算符 (**[]**)，如函数调用运算符，被视为二元运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
+下标运算符 (**[]**)，如函数调用运算符被视为二进制运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何创建用于实现边界检查的 `int` 类型的矢量：  
+ 下面的示例演示如何创建类型的矢量**int**用于实现边界检查：  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856067"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete 方法
 为指定的值设置完成事件处理程序的地址。  

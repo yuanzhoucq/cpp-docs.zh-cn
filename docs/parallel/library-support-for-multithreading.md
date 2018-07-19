@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685666"
 ---
 # <a name="library-support-for-multithreading"></a>多线程编程的库支持
 所有版本的 CRT 现在都支持多线程处理，但某些函数的非锁定版本除外。 请参阅[多线程库性能](../c-runtime-library/multithreaded-libraries-performance.md)有关详细信息。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086964"
 ---
 # <a name="namespaces-reference-ccx"></a>命名空间参考 (C++/CX)
 文档本部分中的文章介绍命名空间支持编译器为 C + + /cli CX。  

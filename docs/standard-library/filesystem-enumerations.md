@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025934"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<实验/文件系统 > **Namespace:** std::experimental::filesystem
+**标头：** \<experimental/文件系统 > **Namespace:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
-和 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函数一起用于指定行为的位掩码值的枚举。
+和 [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函数一起用于指定行为的位掩码值的枚举。
 
 ### <a name="syntax"></a>语法
 
@@ -115,7 +116,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名称|值|描述|
+|名称|“值”|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|表示一个不存在的文件。|
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|

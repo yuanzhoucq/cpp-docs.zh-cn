@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382123"
 ---
 # <a name="windows-sockets-classes"></a>Windows 套接字类
 Windows 套接字提供了一个在两台计算机之间进行通信的与网络协议无关的方法。 这些套接字可以是同步（你的程序等到通信完成才运行），也可以是异步的（你的程序在通信进行时继续运行）。  

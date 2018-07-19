@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880764"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 本文档说明如何使用 Windows 运行时 c + + 模板库 (WRL) 初始化 Windows 运行时以及如何激活和使用 Windows 运行时组件。  

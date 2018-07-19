@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953896"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 类
 
@@ -49,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`_Locname` 区域设置名称。
+*_Locname*  
+ 区域设置名称。
 
-`_Refs` 初始引用计数。
+*_Refs*  
+ 初始引用计数。
 
 ## <a name="remarks"></a>备注
 
-其行为由[已命名的](../standard-library/locale-class.md#name)区域设置 `_Locname` 决定。 每个构造函数使用 [time_put](../standard-library/time-put-class.md#time_put)\<CharType、 OutputIterator 1> ( `_Refs`) 初始化其基对象。
+其行为由[名为](../standard-library/locale-class.md#name)区域设置 *_Locname*。 每个构造函数初始化其基对象与[time_put](../standard-library/time-put-class.md#time_put)\<CharType，OutputIterator > (`_Refs`)。
 
 ## <a name="requirements"></a>要求
 

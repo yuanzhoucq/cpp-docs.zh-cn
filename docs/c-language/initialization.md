@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382843"
 ---
 # <a name="initialization"></a>初始化
 “初始值设定项”是要赋给正在声明的变量的一个值或一系列值。 通过在变量声明中将初始值设定项应用于声明符，可以将变量设置为初始值。 初始值设定项的值将赋给变量。  

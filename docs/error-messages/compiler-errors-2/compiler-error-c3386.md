@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258070"
 ---
 # <a name="compiler-error-c3386"></a>编译器错误 C3386
 type: __declspec （dllexport) /\__declspec(dllimport) 不能应用于托管或 WinRTtype  

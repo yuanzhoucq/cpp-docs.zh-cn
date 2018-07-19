@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930220"
 ---
 # <a name="containers-compound-files"></a>容器：复合文件
 本文介绍了复合文件的组件和实现以及在 OLE 应用程序中使用复合文件的优缺点。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
 -   存储对象（如目录）可以包含其他存储和流对象。  
   
--   **LockBytes**对象代表的存储对象和物理硬件之间的接口。 它们确定实际字节如何写入任何存储设备**LockBytes**访问对象，例如硬盘或全局内存的区域。 有关详细信息**LockBytes**对象和`ILockBytes`接口，请参阅*OLE 程序员参考*。  
+-   `LockBytes` 对象表示的存储对象和物理硬件之间的接口。 它们确定实际字节如何写入任何存储设备`LockBytes`访问对象，例如硬盘或全局内存的区域。 有关详细信息`LockBytes`对象和`ILockBytes`接口，请参阅*OLE 程序员参考*。  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 复合文件的优点和缺点  
  复合文件提供了之前的文件存储方式不具备的好处。 它们包括：  

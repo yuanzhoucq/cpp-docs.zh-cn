@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380597"
 ---
 # <a name="stack-allocation"></a>堆栈分配
 函数的 prolog 负责为本地变量分配堆栈空间，保存的寄存器，堆栈参数，并注册参数。  

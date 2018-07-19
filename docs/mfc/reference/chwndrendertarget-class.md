@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d83765309f6df860b190d3ea2114e7e0fd35724
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e0962d4a0c97db27f7d5ae31ec58eb26f20a7f7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038388"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 类
 ID2D1HwndRenderTarget 包装器。  
@@ -80,7 +81,7 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|指向 ID2D1HwndRenderTarget 对象的指针。|  
   
@@ -102,7 +103,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTarget`  
+ *pTarget*  
  现有呈现器目标接口。 不能为 NULL  
   
 ##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
@@ -123,7 +124,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hwnd`  
+ *hwnd*  
  与此关联的 HWND 呈现器目标  
   
 ##  <a name="create"></a>  CHwndRenderTarget::Create  
@@ -134,7 +135,7 @@ BOOL Create(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWnd`  
+ *hWnd*  
  与此关联的 HWND 呈现器目标  
   
 ### <a name="return-value"></a>返回值  
@@ -195,7 +196,7 @@ BOOL ReCreate(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWnd`  
+ *hWnd*  
  与此关联的 HWND 呈现器目标  
   
 ### <a name="return-value"></a>返回值  
@@ -209,7 +210,7 @@ BOOL Resize(const CD2DSizeU& size);
 ```  
   
 ### <a name="parameters"></a>参数  
- `size`  
+ *size*  
  以设备像素为单位的呈现器目标的新的大小  
   
 ### <a name="return-value"></a>返回值  

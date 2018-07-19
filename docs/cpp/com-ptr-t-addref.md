@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::AddRef |Microsoft 文档
+title: _com_ptr_t::AddRef |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940987"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Microsoft 专用**  
   
- 调用`AddRef`成员函数**IUnknown**封装的接口指针上。  
+ 调用`AddRef`成员函数的`IUnknown`上封装的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>备注  
- 调用`IUnknown::AddRef`封装的接口指针上引发`E_POINTER`错误如果指针**NULL**。  
+ 调用`IUnknown::AddRef`封装的接口指针上引发 E_POINTER 错误如果指针为 NULL。  
   
  **结束 Microsoft 专用**  
   

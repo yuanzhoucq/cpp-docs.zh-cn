@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959743"
 ---
 # <a name="basicregex-class"></a>basic_regex 类
 
@@ -83,19 +84,19 @@ class basic_regex {
 
 ### <a name="parameters"></a>参数
 
-`Elem` 要匹配的元素类型。
+*Elem*要匹配的元素的类型。
 
-`RXtraits` 元素的特征类。
+*RXtraits*元素的特征类。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述包含正则表达式的对象。 此模板类的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，和[regex_replace](../standard-library/regex-functions.md#regex_replace)，适合的文本字符串自变量，以及若要搜索匹配正则表达式的文本。 此模板类有两种专用定义，包括针对 `char` 类型元素的类型定义 [regex](../standard-library/regex-typedefs.md#regex)，以及针对 `wchar_t` 类型元素的类型定义 [wregex](../standard-library/regex-typedefs.md#wregex)。
+此模板类描述包含正则表达式的对象。 此模板类的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，并[regex_replace](../standard-library/regex-functions.md#regex_replace)，结合适合的文本字符串自变量，若要搜索的正则表达式匹配的文本。 有两种类型定义此模板类专用化[正则表达式](../standard-library/regex-typedefs.md#regex)类型的元素**char**，并[wregex](../standard-library/regex-typedefs.md#wregex)类型的元素**wchar_t**。
 
-模板参数 `RXtraits` 描述模板类支持的正则表达式语法的各个重要属性。 一个指定这些正则表达式特征的外部接口必须与模板类 [regex_traits Class](../standard-library/regex-traits-class.md) 的对象相同的类。
+模板参数*RXtraits*描述模板类支持的正则表达式语法的各种重要属性。 一个指定这些正则表达式特征的外部接口必须与模板类 [regex_traits Class](../standard-library/regex-traits-class.md) 的对象相同的类。
 
 某些函数使用操作数序列来定义正则表达式。 可以通过多种方式指定此操作数序列：
 
-`ptr` - 从 `Elem`（不能为 null 指针）开始、以 null 结尾的序列（例如 C 字符串，`char` 类型的 `ptr`），其中结尾元素为值 `value_type()`，且不是操作数序列的一部分
+`ptr` -以 null 结尾的序列 (如 C 字符串，对于*Elem*类型的**char**) 开始`ptr`（这必须不能为 null 指针），其中结尾元素为值`value_type()`并不是操作数序列的一部分
 
 `ptr`, `count` - 从 `count`（不能为 null 指针）开始的 `ptr` 元素序列
 
@@ -105,7 +106,7 @@ class basic_regex {
 
 `right` - `basic_regex` 对象 `right`
 
-这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项以及 `RXtraits` 类型描述的选项。
+这些成员函数还使用参数`flags`，它指定用于解释除所描述的正则表达式的各种选项*RXtraits*类型。
 
 ## <a name="requirements"></a>要求
 
@@ -147,27 +148,27 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>参数
 
-`STtraits` 字符串源的特征类。
+*STtraits*字符串源的特征类。
 
-`STalloc` 字符串源的分配器类。
+*STalloc*字符串源的分配器类。
 
-`InIt` 范围源的输入迭代器类型。
+*InIt*输入迭代器范围源的类型。
 
-`right` 要复制的正则表达式源。
+*右*要复制的正则表达式源。
 
-`ptr` 指向要复制的序列开头的指针。
+*ptr*要复制到序列的开头的指针。
 
-`flags` 要添加复制时的语法选项标志。
+*标志*复制时要添加的语法选项标志。
 
-`len/TD>` 要复制的序列的长度。
+*len/t D >* 要复制的序列的长度。
 
-`str` 要复制的字符串。
+*str*要复制的字符串。
 
-`first` 要复制的序列的开头。
+*第一个*的要复制的序列的开头。
 
-`last` 要复制的序列的结尾。
+*最后一个*序列的末尾来复制。
 
-`IList` 要复制的 initializer_list。
+*IList*要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -292,27 +293,27 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>参数
 
-`STtraits` 字符串源的特征类。
+*STtraits*字符串源的特征类。
 
-`STalloc` 字符串源的分配器类。
+*STalloc*字符串源的分配器类。
 
-`InIt` 范围源的输入迭代器类型。
+*InIt*输入迭代器范围源的类型。
 
-`right` 要复制的正则表达式源。
+*右*要复制的正则表达式源。
 
-`ptr` 指向要复制的序列开头的指针。
+*ptr*要复制到序列的开头的指针。
 
-`flags` 要添加复制时的语法选项标志。
+*标志*复制时要添加的语法选项标志。
 
-`len/TD>` 要复制的序列的长度。
+*len/t D >* 要复制的序列的长度。
 
-`str` 要复制的字符串。
+*str*要复制的字符串。
 
-`first` 要复制的序列的开头。
+*第一个*的要复制的序列的开头。
 
-`last` 要复制的序列的结尾。
+*最后一个*序列的末尾来复制。
 
-`IList` 要复制的 initializer_list。
+*IList*要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -705,7 +706,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-`loc` 要存储的区域设置对象。
+*loc*要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1005,13 +1006,13 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>参数
 
-`STtraits` 字符串源的特征类。
+*STtraits*字符串源的特征类。
 
-`STalloc` 字符串源的分配器类。
+*STalloc*字符串源的分配器类。
 
-`right` 要复制的正则表达式源。
+*右*要复制的正则表达式源。
 
-`str` 要复制的字符串。
+*str*要复制的字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -1112,11 +1113,11 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>参数
 
-`right` 要交换的正则表达式对象。
+*右*要交换的正则表达式对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换 `*this` 和 `right`之间的正则表达式。 它定时执行此操作且不引发异常。
+成员函数交换之间的正则表达式`*this`并*右*。 它定时执行此操作且不引发异常。
 
 ### <a name="example"></a>示例
 
@@ -1213,7 +1214,7 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Elem` 的同义词。
+该类型是模板参数的同义词*Elem*。
 
 ### <a name="example"></a>示例
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320582"
 ---
 # <a name="nmake-warning-u4007"></a>NMAKE 警告 U4007
 文件名 filename 太长;截断为 8.3  

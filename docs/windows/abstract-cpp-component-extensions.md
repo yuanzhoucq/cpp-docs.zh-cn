@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857550"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract（C++ 组件扩展）
 `abstract` 关键字声明以下两者之一：  

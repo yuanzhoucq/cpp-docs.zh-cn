@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233664"
 ---
 # <a name="compiler-error-c2616"></a>编译器错误 C2616
 conversion： 无法将非-左值 type1 到 type2 隐式转换，不是常量  

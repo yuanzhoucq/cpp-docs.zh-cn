@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104394"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>向导生成的访问器中的字段状态数据成员
 当你使用 ATL OLE DB 使用者向导创建使用者时，向导将在指定列映射中每个字段的用户记录类生成的数据成员。 每个数据成员是类型`DWORD`并包含其各自的字段相对应的状态值。  

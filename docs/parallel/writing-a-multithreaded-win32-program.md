@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689969"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>编写多线程 Win32 程序
 当你编写具有多个线程的程序时，你必须协调它们的行为和[的程序的资源使用](#_core_sharing_common_resources_between_threads)。 你还必须确保每个线程接收[其自己的堆栈](#_core_thread_stacks)。  

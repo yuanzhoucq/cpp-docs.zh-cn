@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383437"
 ---
 # <a name="operands-and-expressions"></a>操作数和表达式
 “操作数”是运算符作用于的实体。 “表达式”是用于执行以下操作的任意组合的一系列运算符和操作数：  

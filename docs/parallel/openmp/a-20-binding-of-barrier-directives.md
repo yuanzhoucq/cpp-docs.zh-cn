@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691401"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   barrier 指令的绑定
 指令绑定规则调用**屏障**指令以将绑定到最近的封闭`parallel`指令。 指令绑定的详细信息，请参阅[部分 2.8](../../parallel/openmp/2-8-directive-binding.md)在页上 32。  

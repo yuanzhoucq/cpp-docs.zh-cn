@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038085"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 类
 `CMFCDesktopAlertWndInfo`类用于[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 它指定在桌面警报窗口弹出时显示的控件。  
@@ -55,7 +56,7 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|显示的图标的句柄。|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|在桌面警报窗口上提供一个链接与关联的命令 ID。|  
@@ -92,7 +93,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
   
 ### <a name="return-value"></a>返回值  
   

@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846644"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指令 (C/C++)
 `#if` 指令与 `#elif`、`#else` 和 `#endif` 指令一起控制源文件部分的编译。 如果您编写的表达式（在 `#if` 后）有一个非零值，则在翻译单元中保留紧跟 `#if` 指令的行组。  

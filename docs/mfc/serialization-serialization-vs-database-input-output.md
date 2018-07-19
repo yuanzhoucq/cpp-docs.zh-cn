@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379572"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>序列化： 序列化 vs。数据库输入/输出
 本文介绍何时使用文档对象和序列化，基于文件的输入/输出 (I/O) 以及其他 I/O 技术相应何时-由于应用程序读取和写入在每个事务的基础，如下所示数据库应用程序的数据。 如果不使用序列化，也不需要的文件打开保存，并且将另存为命令。 涉及主题包括：  

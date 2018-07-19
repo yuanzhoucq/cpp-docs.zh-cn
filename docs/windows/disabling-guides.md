@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882084"
 ---
 # <a name="disabling-guides"></a>禁用参考线
 可以使用与鼠标结合使用的特殊键禁用参考线对齐效果。 使用 ALT 键禁用选定参考线的对齐效果。 移动与 SHIFT 键的指南可防止已对齐的控件与参考线移动。  

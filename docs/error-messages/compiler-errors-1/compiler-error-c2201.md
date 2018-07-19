@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170825"
 ---
 # <a name="compiler-error-c2201"></a>编译器错误 C2201
 identifier： 必须拥有才能导出/导入的外部链接  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380573"
 ---
 # <a name="tool-tips"></a>工具提示
 将工具提示添加到 windows 中包含的控件派生自 MFC 类，则不同的步骤[CFrameWnd](../mfc/reference/cframewnd-class.md)和 windows 不派生自`CFrameWnd`。  

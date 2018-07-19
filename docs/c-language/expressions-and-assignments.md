@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382710"
 ---
 # <a name="expressions-and-assignments"></a>表达式和赋值
 本节描述如何构建表达式以及如何在 C 语言中赋值。 常量、标识符、字符串和函数调用是表达式中操作的所有操作数。 C 语言具有所有常见语言运算符。 本节包括这些运算符以及对 C 或 Microsoft C 唯一的运算符。讨论的主题包括：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097843"
 ---
 # <a name="columnentrystatus"></a>COLUMN_ENTRY_STATUS
 表示行集上与数据库中的特定列的绑定。  

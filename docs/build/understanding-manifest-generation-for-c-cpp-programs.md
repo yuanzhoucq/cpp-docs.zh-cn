@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381619"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程序的清单生成
 A[清单](http://msdn.microsoft.com/library/aa375365)的 XML 文档可以是外部 XML 文件或资源嵌入到应用程序或程序集。 清单[隔离应用程序](http://msdn.microsoft.com/library/aa375190)用于管理的名称和版本的应用程序应在运行时绑定到的共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集上的依赖项。  

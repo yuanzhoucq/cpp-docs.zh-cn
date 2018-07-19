@@ -1,5 +1,5 @@
 ---
-title: __ptr32、 __ptr64 |Microsoft 文档
+title: __ptr32，__ptr64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704810"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941699"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
 **Microsoft 专用**
 
-`__ptr32` 表示 32 位系统中的本机指针，而 `__ptr64` 表示 64 位系统中的本机指针。
+**__ptr32**表示本机指针在 32 位系统上，而 **__ptr64**表示 64 位系统上的本机指针。
 
 以下示例演示如何声明所有这些指针类型：
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- 在 32 位系统中，使用 `__ptr64` 声明的指针被截断为 32 位指针。 在 64 位系统中, 使用 `__ptr32` 声明的指针被强制转换为 64 位指针。
+ 在 32 位系统上，使用声明的指针 **__ptr64**截断为 32 位指针。 在 64 位系统上，使用声明的指针 **__ptr32**强制转换为 64 位指针。
 
 > [!NOTE]
-> 不能使用`__ptr32`或`__ptr64`编译时 **/clr: pure**。 否则，将生成编译器错误 C2472。 **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+> 不能使用 **__ptr32**或 **__ptr64**编译时 **/clr: pure**。 否则，将生成编译器错误 C2472。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
 ## <a name="example"></a>示例
 
-以下示例演示如何使用 `__ptr32` 和 `__ptr64` 关键字声明和分配指针。
+下面的示例演示如何声明和分配与指针 **__ptr32**并 **__ptr64**关键字。
 
 ```cpp
 #include <cstdlib>

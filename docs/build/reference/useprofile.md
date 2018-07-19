@@ -18,6 +18,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377988"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (在线程安全模式下的运行 PGO)
 

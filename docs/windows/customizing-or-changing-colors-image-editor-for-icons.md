@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871232"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自定义或更改颜色（图标的图像编辑器）
 图像编辑器[调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，你可以[保存并加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  

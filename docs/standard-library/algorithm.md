@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5e181a933c0c511802a0270026635a1766a7be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9de7d5606d2bb178dd786d22bb0e5ab890fd16ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964231"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -55,12 +56,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |函数模板|描述|
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|当给定范围中的每个元素均满足条件时返回 `true`。|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|当指定元素范围中至少有一个元素满足条件时返回 `true`。|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|返回 **，则返回 true**位于给定范围中的每个元素满足条件时。|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|返回 **，则返回 true**满足条件时指定的元素范围中的至少一次。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。|
 |[copy](../standard-library/algorithm-functions.md#copy)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|复制给定范围中对于指定条件为 `true` 的所有元素。|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|测试某个给定范围内复制所有元素 **，则返回 true**针对指定的条件|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|复制指定数量的元素。|
 |[count](../standard-library/algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|返回范围中其值与指定条件匹配的元素的数量。|
@@ -78,12 +79,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。|
 |[includes](../standard-library/algorithm-functions.md#includes)|测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|如果指定范围中的元素形成堆，则返回 `true`。|
-|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|如果指定范围形成直到最后一个元素的堆，则返回 `true`。|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|如果给定范围中对某个条件测试为 `true` 的所有元素在测试为 `true` 的所有元素之前，则返回 `false`。|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|返回 **，则返回 true**如果指定范围中的元素形成堆。|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|返回 **，则返回 true**如果指定的范围形成一个堆，直到最后一个元素。|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|返回 **，则返回 true**如果给定范围中的所有元素的都测试**true**对某个条件都测试的所有元素之前**false**。|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|确定给定范围的元素是否形成有效排列。|
-|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|如果指定范围中的元素按顺序排序，则返回 `true`。|
-|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|如果指定范围中的元素按顺序排序，则返回 `true`。|
+|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|返回 **，则返回 true**如果指定范围中的元素按顺序排序。|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|返回 **，则返回 true**如果指定范围中的元素按顺序排序。|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|交换由一对指定迭代器引用的两个值。|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|逐个元素比较两个序列以确定其中的较小序列。|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|在排序的范围中查找其值大于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。|
@@ -99,12 +100,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|移动与指定范围关联的元素。|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|当给定范围中没有元素满足条件时返回 `true`。|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|返回 **，则返回 true**满足条件时永远不会在给定范围中没有元素。|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|对范围内的元素分区，正确找到范围中序列的第 *n* 个元素，以使序列中位于此元素之前的所有元素小于或等于此元素，位于此元素之后的所有元素大于或等于此元素。|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。|
 |[partition](../standard-library/algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|将条件为 `true` 的元素复制到一个目标，将条件为 `false` 的元素复制到另一目标。 元素必须来自于指定范围。|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|是的条件的元素复制 **，则返回 true**到一个目标和条件为**false**到另一个。 元素必须来自于指定范围。|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|

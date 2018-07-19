@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891010"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>以弹出菜单方式查看菜单
 通常情况下，当你在菜单编辑器中工作时，菜单资源将作为菜单栏显示。 但是，你可能拥有在程序运行时添加到应用程序菜单栏的菜单资源。  

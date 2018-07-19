@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226969"
 ---
 # <a name="fatal-error-c1383"></a>错误 C1383
 编译器选项 /GL 与安装的公共语言运行时版本不兼容  

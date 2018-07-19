@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369755"
 ---
 # <a name="predefined-rules"></a>预定义的规则
 预定义的推理规则使用 NMAKE 提供命令和选项宏。  

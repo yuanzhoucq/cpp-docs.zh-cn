@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348565"
 ---
 # <a name="device-contexts"></a>设备上下文
 设备上下文是 Windows 数据结构，它包含一个显示或打印机等设备绘制属性相关信息。 所有的绘图调用都通过一个设备上下文对象，它封装 Windows Api 用于绘制线条、 形状和文本。 设备上下文允许在 Windows 中进行独立于设备的绘制。 设备上下文可以用于绘制到屏幕，打印机，或图元文件。  

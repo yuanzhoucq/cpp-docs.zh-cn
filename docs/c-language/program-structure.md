@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385951"
 ---
 # <a name="program-structure"></a>程序结构
 本节概述了 C 程序和程序执行。 还引入了对于了解 C 程序和组件来说很重要的术语和功能。 讨论的主题包括：  

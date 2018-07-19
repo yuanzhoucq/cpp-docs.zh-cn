@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347755"
 ---
 # <a name="application-design-choices"></a>应用程序设计选择
 此文章介绍了一些用于 Internet 编程时要考虑的设计问题。  

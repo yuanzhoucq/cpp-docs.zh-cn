@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342873"
 ---
 # <a name="ole-automation-classes"></a>OLE 自动化类
 这些类支持自动化客户端 （控制其他应用程序的应用程序）。 自动化服务器 （可以由其他应用程序控制的应用程序） 支持通过[调度映射](../mfc/reference/dispatch-maps.md)。  

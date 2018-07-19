@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376216"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor（针对体系结构详细信息优化）
 **/favor:** `option`生成针对特定体系结构或针对 AMD 和 Intel 体系结构中的微体系结构的特性进行优化的代码。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129679"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定义和安装全局异常处理程序
 下面的代码示例演示如何未经处理的异常可以捕获。 该示例窗体包含一个按钮，按下时，执行会导致异常引发空引用。 此功能表示典型代码失败。 生成的异常由安装的主要功能的应用程序级异常处理程序捕获。  

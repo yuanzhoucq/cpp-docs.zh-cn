@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421268"
 ---
 # <a name="selection-statements-c"></a>选择语句 (C++)
 C++ 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。  

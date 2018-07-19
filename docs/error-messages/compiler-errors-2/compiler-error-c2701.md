@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231300"
 ---
 # <a name="compiler-error-c2701"></a>编译器错误 C2701
 function： 函数模板不能为本地类的友元  

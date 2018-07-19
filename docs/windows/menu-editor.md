@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879433"
 ---
 # <a name="menu-editor"></a>菜单编辑器
 使用菜单，可以按照逻辑方式和易于查找的方式排列命令。 使用菜单编辑器，可以通过直接使用与已完成应用程序中非常相似的菜单栏来创建和编辑菜单。  

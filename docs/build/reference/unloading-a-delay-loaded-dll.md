@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375209"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸载延迟加载的 DLL
 默认提供延迟加载 helper 检查以查看的延迟加载描述符 pUnloadIAT 字段中是否具有为指针，原始的导入地址表 (IAT) 的副本。 如果是这样，它会将指针保存到导入延迟描述符列表中。 这使要按名称以支持显式卸载该 DLL 中查找该 DLL 的帮助器函数。  

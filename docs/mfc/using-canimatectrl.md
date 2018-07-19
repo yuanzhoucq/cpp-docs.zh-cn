@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381613"
 ---
 # <a name="using-canimatectrl"></a>使用 CAnimateCtrl
 动画控件，由类表示[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)，是一个窗口，显示音频视频交错 (AVI) 格式的剪辑-标准 Windows 视频/音频格式。 AVI 剪辑是一系列位图帧，与电影相似。  

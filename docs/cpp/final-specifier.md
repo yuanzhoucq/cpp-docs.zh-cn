@@ -1,5 +1,5 @@
 ---
-title: final 说明符 |Microsoft 文档
+title: final 说明符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942375"
 ---
 # <a name="final-specifier"></a>final 说明符
-可以使用 `final` 关键字指定无法在派生类中重写的虚函数。 您还可以使用它指定无法继承的类。  
+可以使用**最终**关键字来指定不能在派生类中重写的虚函数。 您还可以使用它指定无法继承的类。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>备注  
- `final` 只有在函数声明或类名称后使用时才是区分上下文的且具有特殊含义；否则，它不是保留的关键字。  
+ **最终**是上下文相关和具有特殊含义，仅当用于函数声明后或类名称; 否则为而不是保留的关键字。  
   
- 在类声明中使用 `final` 时，`base-classes` 是声明的可选部分。  
+ 当**最终**在类声明中使用`base-classes`是声明的可选部分。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 `final` 关键字指定无法重写虚函数。  
+ 下面的示例使用**最终**关键字来指定，不能重写虚函数。  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- 有关如何指定，可以重写成员函数的信息，请参阅[重写说明符](../cpp/override-specifier.md)。  
+ 有关如何指定可以重写成员函数的信息，请参阅[重写说明符](../cpp/override-specifier.md)。  
   
- 下一个示例使用 `final` 关键字指定无法继承类。  
+ 下面的示例使用**最终**关键字指定无法继承类。  
   
 ```cpp  
 class BaseClass final   

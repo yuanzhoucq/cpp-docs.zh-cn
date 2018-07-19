@@ -31,11 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961007"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 类
 
@@ -73,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据学生的 `double`t *-分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或*  型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的整型值类型**双**如果未提供任何内容根据学生的分布*t*-分发。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -182,9 +183,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*n* `n`分布参数。
+*n*  
+ `n` 分布参数。
 
-*参数*用于构造分布的参数包。
+*parm*用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
@@ -211,9 +213,11 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*n* `n`分布参数。
+*n*  
+`n` 分布参数。
 
-*右*`param_type`要比较的此对象。
+*right*  
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

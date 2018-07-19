@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693918"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 结构
 计划程序用来与并发运行时的资源管理器进行通信以协商资源分配的接口。  

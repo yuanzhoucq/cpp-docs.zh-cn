@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882545"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>在设备图像中创建透明或反色区域（图标的图像编辑器）
 在[图像编辑器](../windows/image-editor-for-icons.md)，初始图标或光标图像具有透明特性。 尽管图标和光标映像为矩形，许多不会显示，因为图像的部分都是透明的;通过图标或光标显示在屏幕上的基础映像。 当拖动图标时，图像的部分可能以反转的颜色。 通过设置屏幕颜色和中的反转颜色创建此效果[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  

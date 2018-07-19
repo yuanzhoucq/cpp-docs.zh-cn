@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104381"
 ---
 # <a name="output-parameters"></a>输出参数
 调用存储的过程是类似于调用 SQL 命令。 主要区别是存储的过程使用输出参数 （或"输出"） 和返回值。  

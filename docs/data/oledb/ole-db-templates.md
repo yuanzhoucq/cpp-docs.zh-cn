@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109568"
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供了实现许多常用 OLE DB 接口的模板类。 你可以使用 Visual c + + 使用者模板编写 OLE DB 客户端 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序。  

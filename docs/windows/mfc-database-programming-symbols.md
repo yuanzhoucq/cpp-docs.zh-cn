@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877600"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 数据库编程符号
 添加数据库支持，此表中的符号仅出现在 MFC 项目中。 它们支持的 MFC 连接到 SQL 服务器和数据库编程。  

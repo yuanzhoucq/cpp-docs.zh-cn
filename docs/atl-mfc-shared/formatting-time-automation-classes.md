@@ -1,5 +1,5 @@
 ---
-title: 格式设置的时间： 自动化类 |Microsoft 文档
+title: 格式化时间： 自动化类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882093"
 ---
-# <a name="formatting-time-automation-classes"></a>格式设置的时间： 自动化类
-#### <a name="to-format-a-time"></a>若要设置格式的时间  
+# <a name="formatting-time-automation-classes"></a>格式化时间： 自动化类
+#### <a name="to-format-a-time"></a>时间格式  
   
-1.  使用**格式**成员函数的[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)或[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)创建表示的时间或运行时间的字符串。  
+ 使用`Format`的成员函数[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)或[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)创建表示已用时间字符串。  
   
      [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
   
  有关详细信息，请参阅类[COleVariant](../mfc/reference/colevariant-class.md)。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   [常规日期和时间编程 MFC 中](../atl-mfc-shared/date-and-time.md)  
   

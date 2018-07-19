@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381688"
 ---
 # <a name="servers-implementing-a-server"></a>服务器：实现服务器
 此文章介绍了 MFC 应用程序向导为可视化编辑服务器应用程序创建的代码。 如果你未使用应用程序向导，本文列出了，你必须编写代码来实现服务器应用程序的区域。  

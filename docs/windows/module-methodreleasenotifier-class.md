@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880815"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 类
 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由对象并将其指针到方法成员指定。  

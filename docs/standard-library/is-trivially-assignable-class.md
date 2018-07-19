@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955561"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 类
 
@@ -42,7 +43,7 @@ struct is_trivially_assignable;
 
 ## <a name="remarks"></a>备注
 
-表达式 `declval<To>() = declval<From>()` 必须格式正确，且编译器必须已知其不需要任何重要操作。 `From` 和 `To` 都必须是完整类型、`void` 或具有未知边界的数组。
+表达式 `declval<To>() = declval<From>()` 必须格式正确，且编译器必须已知其不需要任何重要操作。 这两`From`并`To`必须是完整类型**void**，或具有未知边界的数组。
 
 ## <a name="requirements"></a>要求
 

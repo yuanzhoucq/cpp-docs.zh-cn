@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955643"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 类
 实现回调，它在动画管理器状态更改时由动画 API 调用。  
@@ -89,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  输出。 如果方法成功，则包含指向将处理到动画管理器的状态更新的 COM 对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -110,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `newStatus`  
+ *newStatus*  
  新的状态。  
   
- `previousStatus`  
+ *previousStatus*  
  以前的状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -129,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
 ## <a name="see-also"></a>请参阅  

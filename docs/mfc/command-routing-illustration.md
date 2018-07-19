@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341131"
 ---
 # <a name="command-routing-illustration"></a>命令传送示例
 为了说明，请考虑来自 MDI 应用程序的“编辑”菜单中“全部清除”菜单项的命令消息。 假设此命令的处理程序函数恰好是应用程序的文档类的成员函数。 下面演示了在用户选择菜单项后命令如何到达其处理程序：  

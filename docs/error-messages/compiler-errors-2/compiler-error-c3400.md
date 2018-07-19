@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258340"
 ---
 # <a name="compiler-error-c3400"></a>编译器错误 C3400
 涉及“constraint_1”和“constraint_2”的循环约束依赖项  

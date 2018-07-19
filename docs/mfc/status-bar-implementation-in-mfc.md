@@ -26,16 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950443"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC 中的状态栏实现
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)对象是具有一行文本输出窗格的控件条。 输出窗格通常用作消息行和状态指示器。 示例包括简短解释选定的菜单命令的菜单帮助消息行和指示器显示 SCROLL LOCK、 NUM LOCK 和其他键的状态。  
   
- 从 MFC 4.0 版开始，状态栏实现使用类[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)，封装状态栏公共控件。 为了向后兼容，MFC 将保留在类中的较旧状态栏实现**COldStatusBar**。 对于早期版本的 MFC 的文档介绍**COldStatusBar**下`CStatusBar`。  
+ 从 MFC 4.0 版开始，状态栏实现使用类[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)，封装状态栏公共控件。 为了向后兼容，MFC 将保留在类中的较旧状态栏实现`COldStatusBar`。 对于早期版本的 MFC 的文档介绍`COldStatusBar`下`CStatusBar`。  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)，成员函数新到 MFC 4.0，使你可以利用的状态栏自定义项和其他功能的 Windows 公共控件的支持。 `CStatusBar` 成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetStatusBarCtrl`，你可让你状态栏甚至多个状态栏的特征。 当调用`GetStatusBarCtrl`，它将返回到引用`CStatusBarCtrl`对象。 你可使用该引用操作状态栏控件。  
   

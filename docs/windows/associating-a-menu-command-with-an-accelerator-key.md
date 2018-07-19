@@ -22,21 +22,22 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858072"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>将菜单命令与快捷键关联
 你经常希望某一菜单命令和某一键盘组合可以发出相同的程序命令。 你可以通过使用“菜单”编辑器为该菜单命令和应用程序快捷键对应表中的条目分配相同的资源标识符，来达到这个目的。 接着你可以编辑该菜单命令的 [标题](../windows/menu-command-properties.md) ，以显示快捷键的名称。  
   
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>将菜单命令与快捷键关联  
   
-1.  在**“菜单”** 编辑器中，选择所需菜单命令。  
+1.  在 **“菜单”** 编辑器中，选择所需菜单命令。  
   
-2.  在[“属性窗口”](/visualstudio/ide/reference/properties-window)中，向**“标题”** 属性添加快捷键的名称：  
+2.  在[“属性窗口”](/visualstudio/ide/reference/properties-window)中，向 **“标题”** 属性添加快捷键的名称：  
   
     -   在菜单标题后面，输入制表符 (\t) 的转义序列，以使所有菜单的快捷键都左对齐。  
   
     -   输入修改键的名称（**CTRL**、 **ALT**或 **SHIFT**），后跟一个加号 (**+**) 和附加键的名称、字母或符号。  
   
-         例如，若要将 **CTRL+O** 分配给**“文件”** 菜单上的 **“打开”** 命令，请修改该菜单命令的“标题”  ，以便它如下所示：  
+         例如，若要将 **CTRL+O** 分配给 **“文件”** 菜单上的 **“打开”** 命令，请修改该菜单命令的“标题”  ，以便它如下所示：  
   
         ```  
         &Open...\tCtrl+O   

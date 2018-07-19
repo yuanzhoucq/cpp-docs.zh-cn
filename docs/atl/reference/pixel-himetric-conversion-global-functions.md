@@ -1,5 +1,5 @@
 ---
-title: 像素 HIMETRIC 转换全局函数 |Microsoft 文档
+title: PIXEL-HIMETRIC 转换全局函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881157"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 转换全局函数
-这些函数为像素和 himetric 为单位来回转换提供支持。  
+这些函数为从像素和 HIMETRIC 为单位进行来回转换提供支持。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。  
   
 |||  
 |-|-|  
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|将 himetric 为单位 （每个单位是 0.01 毫米） 转换为像素。|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|将像素转换为 himetric 为单位 （每个单位是 0.01 毫米）。|  
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|将 HIMETRIC 为单位 （每个单位是 0.01 毫米） 转换为像素。|  
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|将像素转换为 HIMETRIC 为单位 （每个单位是 0.01 毫米）。|  
   
 ##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  将以 HIMETRIC 为单位（每个单位是 0.01 毫米）的对象大小转换为以屏幕设备上的像素为单位的大小。  
@@ -43,11 +44,11 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpSizeInHiMetric`  
- [in]指向以 himetric 为单位的对象的大小。  
+ *lpSizeInHiMetric*  
+ [in]指向以 HIMETRIC 为单位的对象的大小。  
   
- `lpSizeInPix`  
- [out]到其中以像素为单位的对象的大小是要返回的指针。  
+ *lpSizeInPix*  
+ [out]指向对象的大小 （像素） 将返回的指针。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
@@ -65,11 +66,11 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpSizeInPix`  
- [in]指向对象的大小，以像素为单位。  
+ *lpSizeInPix*  
+ [in]指向对象的大小 （像素）。  
   
- `lpSizeInHiMetric`  
- [out]到其中以 himetric 为单位的对象的大小是要返回的指针。  
+ *lpSizeInHiMetric*  
+ [out]指向其中以 HIMETRIC 为单位的对象的大小是要返回的指针。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  

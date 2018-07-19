@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343471"
 ---
 # <a name="destroying-frame-windows"></a>销毁框架窗口
 MFC 框架管理窗口析构，以及与 framework 文档和视图关联的窗口的创建。 如果你创建其他 windows，你将负责销毁它们。  

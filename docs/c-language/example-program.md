@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387627"
 ---
 # <a name="example-program"></a>示例程序
 下面的 C 源程序包括两个源文件。 它尽可能在 C 程序中提供一些各种声明和定义的概述。 本书后面的节中描述了如何写入这些声明、定义和初始化，以及如何使用 C 关键字（例如，static 和 `extern`）。 在 C 标头文件 STDIO.H. 中声明 `printf` 函数。  

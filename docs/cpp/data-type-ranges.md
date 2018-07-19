@@ -1,5 +1,5 @@
 ---
-title: 数据类型范围 |Microsoft 文档
+title: 数据类型范围 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,11 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940636"
 ---
 # <a name="data-type-ranges"></a>数据类型范围
 Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。  
@@ -87,7 +88,7 @@ Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。
 |__int64|8|long long、signed long long|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|  
 |unsigned __int64|8|unsigned long long|0 到 18,446,744,073,709,551,615|  
 |bool|1|无|false 或 true|  
-|char|1|无|-默认情况下 128 到 127 之间<br /><br /> 0 到 255（当使用 [/J](../build/reference/j-default-char-type-is-unsigned.md)编译时）|  
+|char|1|无|-默认情况下 128 到 127<br /><br /> 0 到 255（当使用 [/J](../build/reference/j-default-char-type-is-unsigned.md)编译时）|  
 |signed char|1|无|-128 到 127|  
 |unsigned char|1|无|0 到 255|  
 |short|2|short int、signed short int|-32,768 到 32,767|  
@@ -104,9 +105,9 @@ Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。
   
  根据使用方式， `__wchar_t` 的变量指定宽字符类型或多字节字符类型。 在字符或字符串常量前使用 `L` 前缀以指定宽字符类型常量。  
   
- `signed` 和 `unsigned` 是可用于任何整型（ `bool`除外）的修饰符。 请注意，对于重载和模板等机制而言， `char`、 `signed char`和 `unsigned char` 是三种不同的类型。  
+ **签名**并**无符号**是可用于除任何整型类型的修饰符**bool**。 请注意， **char**，**签名 char**，并**unsigned char**的重载和模板等机制而言是三个不同的类型。  
   
- `int` 和 `unsigned int` 类型具有四个字节的大小。 但是，由于语言标准允许可移植代码特定于实现，因此该代码不应依赖于 `int` 的大小。  
+ **Int**并**无符号的 int**类型具有四个字节的大小。 但是，可移植代码不应依赖于的大小**int**由于语言标准允许可特定于实现的。  
   
  Visual Studio 中的 C/C++ 还支持按大小分类的整型。 有关详细信息，请参阅 [__int8、\__int16、 \__int32、 \__int64](../cpp/int8-int16-int32-int64.md) 和 [整数限制](../cpp/integer-limits.md)。  
   

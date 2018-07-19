@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353671"
 ---
 # <a name="controls-mfc"></a>控件 (MFC)
 控件是用户可与之交互以便输入或操作数据的对象。 它们通常显示在对话框中或工具栏上。 本主题介绍三种主要类型的控件：  

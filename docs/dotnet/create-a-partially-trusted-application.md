@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108993"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序
 本主题讨论如何创建通过移除对 msvcm90.dll 依赖性使用 Visual c + + 的部分受信任公共语言运行时应用程序。  

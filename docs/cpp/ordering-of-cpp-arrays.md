@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419961"
 ---
 # <a name="ordering-of-c-arrays"></a>C++ 数组的排序
 C++ 数组按行优先顺序存储。 行优先顺序意味着最后一个下标变化最快。  

@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121311"
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 用户工具是运行外部应用程序的菜单项。 **工具**选项卡**自定义**对话框 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 允许用户添加用户工具，并指定名称、 命令、 自变量，并每个用户工具的的初始目录。  
@@ -78,7 +79,7 @@ class CUserTool : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|用户工具命令行参数。|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|用户工具初始目录。|  
@@ -121,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  指定要显示的图标区域的坐标。  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -168,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 加载图标的句柄 ( `HICON`)，或`NULL`有无法加载默认图标。  
+ 加载的图标 （任务栏） 或如果无法加载默认图标则为 NULL 的句柄。  
   
 ### <a name="remarks"></a>备注  
  无法从该工具的可执行文件加载用户定义的工具的图标时，框架将调用此方法。  
@@ -210,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -222,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszCmd`  
+ [in]*lpszCmd*  
  指定新的应用程序要与用户工具相关联。  
   
 ### <a name="remarks"></a>备注  

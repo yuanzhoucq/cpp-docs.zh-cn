@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876753"
 ---
 # <a name="importlib"></a>importlib
 使已编译到另一个类型库中的类型可供所创建的类型库使用。  

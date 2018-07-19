@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056374"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 将保存部分或全部当前`context`： 段寄存器假定，基数值、 列表和 cref 标志或处理器/协处理器的值。 `context`可以是**假设**， `RADIX`，**列出**， **CPU**，或**所有**。  

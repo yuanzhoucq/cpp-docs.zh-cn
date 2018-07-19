@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c1e7c0992822f8f0a47011a873f99a17b2095d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955615"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname 类
 
@@ -49,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`_Locname` 命名的区域设置。
+*_Locname*  
+ 已命名的区域设置。
 
-`_Refs` 初始引用计数。
+*_Refs*  
+ 初始引用计数。
 
 ## <a name="requirements"></a>要求
 
-其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数都使用 [time_get](../standard-library/time-get-class.md#time_get)\<CharType、InputIterator>( `_Refs`) 初始化其基对象。
+其行为由命名的区域设置确定 *_Locname*。 每个构造函数都使用 [time_get](../standard-library/time-get-class.md#time_get)\<CharType、InputIterator>( `_Refs`) 初始化其基对象。
 
 ## <a name="requirements"></a>要求
 

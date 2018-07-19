@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086338"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>生成应用程序和库 (C++/CX)
 本部分中的主题提供有关使用生成系统生成的通用 Windows 平台应用程序或 Windows 运行时组件的一些详细信息。  

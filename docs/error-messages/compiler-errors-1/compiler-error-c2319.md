@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222389"
 ---
 # <a name="compiler-error-c2319"></a>编译器错误 C2319
 “try/catch”后面必须有复合语句。 缺少“{”  

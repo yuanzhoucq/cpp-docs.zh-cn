@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158516"
 ---
 # <a name="param-array-and-ellipsis"></a>参数数组和省略号
 参数数组用于解析重载的函数调用的优先级已从托管扩展中的 c + + 更改为 Visual c + +。  

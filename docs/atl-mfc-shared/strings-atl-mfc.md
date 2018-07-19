@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355475"
 ---
 # <a name="strings-atlmfc"></a>字符串 (ATL/MFC)
 几乎所有的程序使用的字符串数据。 Visual c + + 提供多种方式来管理此字符串数据。  

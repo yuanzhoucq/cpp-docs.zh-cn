@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127963"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>如何：获取字节数组的指针
 你可以获取指向中的数组块的指针<xref:System.Byte>通过采用第一个元素的地址，并将其分配给指针的数组。  

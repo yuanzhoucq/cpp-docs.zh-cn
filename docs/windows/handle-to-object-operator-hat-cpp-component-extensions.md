@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881164"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>对象句柄运算符 (^)（C++ 组件扩展）
 *句柄声明符*(`^`，发音为"hat")，修改类型[说明符](../cpp/overview-of-declarators.md)表示，声明的对象应自动删除当系统确定该对象是无法再进行访问。  

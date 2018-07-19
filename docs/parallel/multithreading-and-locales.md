@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692849"
 ---
 # <a name="multithreading-and-locales"></a>多线程和区域设置
 C 运行库和 c + + 标准库为更改程序的区域设置中提供支持。 本主题讨论在使用这两个库中的多线程应用程序的区域设置功能时出现的问题。  

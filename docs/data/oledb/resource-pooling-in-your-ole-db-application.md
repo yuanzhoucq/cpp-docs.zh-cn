@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107482"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 应用程序中的资源池
 若要充分利用你的应用程序中的池，你必须确保 OLE DB 服务都通过获取数据源通过调用**IDataInitialize**或**IDBPromptInitialize**。 如果直接使用`CoCreateInstance`调用提供程序基于提供程序的 CLSID，调用任何 OLE DB 服务。  

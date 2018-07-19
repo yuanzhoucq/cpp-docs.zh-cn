@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873974"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。  

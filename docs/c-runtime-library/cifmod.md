@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386553"
 ---
 # <a name="cifmod"></a>_CIfmod
 计算堆栈上前两个值的浮点余数。  
@@ -50,7 +51,7 @@ void __cdecl _CIfmod();
  生成的值被将被推送到堆栈顶部。  
   
 ## <a name="requirements"></a>惠?  
- **平台：**x86  
+ **平台：** x86  
   
 ## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

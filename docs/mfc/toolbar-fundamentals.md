@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951632"
 ---
 # <a name="toolbar-fundamentals"></a>工具栏基础知识
 本文介绍基本的 MFC 实现，允许你将默认工具栏添加到你的应用程序，通过在应用程序向导中选择一个选项。 涉及主题包括：  
@@ -55,11 +56,11 @@ ms.lasthandoff: 05/04/2018
 -   管理工具栏上，包括其具有停靠或浮动的能力。  
   
 ##  <a name="_core_the_toolbar_in_code"></a> 在代码中的工具栏  
- 工具栏是[CToolBar](../mfc/reference/ctoolbar-class.md)作为你的应用程序的数据成员声明对象**CMainFrame**类。 换而言之，工具栏对象嵌入主框架窗口对象。 这意味着 MFC 创建工具栏，当它创建框架窗口并销毁工具栏在销毁框架窗口。 下面的分部类声明，对于多文档界面 (MDI) 应用程序，显示了嵌入的工具栏和嵌入式的状态栏的数据成员。 它还显示重写`OnCreate`成员函数。  
+ 工具栏是[CToolBar](../mfc/reference/ctoolbar-class.md)作为你的应用程序的数据成员声明对象`CMainFrame`类。 换而言之，工具栏对象嵌入主框架窗口对象。 这意味着 MFC 创建工具栏，当它创建框架窗口并销毁工具栏在销毁框架窗口。 下面的分部类声明，对于多文档界面 (MDI) 应用程序，显示了嵌入的工具栏和嵌入式的状态栏的数据成员。 它还显示重写`OnCreate`成员函数。  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- 工具栏创建出现在**CMainFrame::OnCreate**。 MFC 调用[OnCreate](../mfc/reference/cwnd-class.md#oncreate)后创建窗口的帧但变成可见之前。 默认值`OnCreate`，生成应用程序向导将执行以下工具栏任务：  
+ 工具栏创建出现在`CMainFrame::OnCreate`。 MFC 调用[OnCreate](../mfc/reference/cwnd-class.md#oncreate)后创建窗口的帧但变成可见之前。 默认值`OnCreate`，生成应用程序向导将执行以下工具栏任务：  
   
 1.  调用`CToolBar`对象的[创建](../mfc/reference/ctoolbar-class.md#create)成员函数来创建基础[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/04/2018
 3.  调用函数，可以让停靠、 浮动和工具提示。 有关这些调用详细信息，请参阅文章[停靠和浮动工具栏](../mfc/docking-and-floating-toolbars.md)。  
   
 > [!NOTE]
->  MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)包括旧和新 MFC 工具栏的说明。 使用工具栏**COldToolbar**需要在步骤 2 到中的调用`LoadBitmap`(而非`LoadToolBar`) 并对其`SetButtons`。 新工具栏需要调用`LoadToolBar`。  
+>  MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)包括旧和新 MFC 工具栏的说明。 使用工具栏`COldToolbar`需要在步骤 2 到中的调用`LoadBitmap`(而非`LoadToolBar`) 并对其`SetButtons`。 新工具栏需要调用`LoadToolBar`。  
   
  停靠、 浮动和工具提示的调用是可选的。 你可以删除这些行从`OnCreate`如果你愿意。 结果是一个工具栏，保持固定，不能浮动或重新停靠和无法显示工具提示。  
   

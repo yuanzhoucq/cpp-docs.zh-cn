@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881739"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>删除设备图像（图标的图像编辑器）
 ### <a name="to-delete-a-device-image"></a>若要删除设备图像  

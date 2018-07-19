@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878803"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接实例化 WRL 组件
 了解如何使用 Windows 运行时 c + + 模板库 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函数来实例化的模块中的组件，将其定义。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863564"
 ---
 # <a name="attribute-requirements"></a>特性需求
 对于 c + + 属性列出的要求描述项目类型、 编译器设置和属性所需的其他信息工作。 如下所述的信息类别。  

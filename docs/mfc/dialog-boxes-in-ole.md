@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929658"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的对话框
 在用户运行 OLE 启用应用程序，可以在应用程序时才能执行的操作需要从用户的信息的时间。 MFC OLE 类提供了许多的对话框，以收集所需的信息。 本主题列出由 OLE 对话框的任务和显示这些对话框所需的类。 OLE 对话框和用于自定义其行为的结构的详细信息，请参阅[MFC 参考](../mfc/mfc-desktop-applications.md)。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
  编辑链接对话框中允许用户以更改有关链接对象的源的信息。 更新链接对话框中验证在当前的对话框中的所有链接项的源，并显示编辑链接对话框中，如有必要。 显示编辑链接对话框中，当用户从编辑菜单中选择的链接。 首次打开复合文档时，通常被显示更新链接对话框。 可以使用两种[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)或[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)类中，具体取决于哪个对话框你想要显示。  
   
  *服务器忙或服务器未响应*  
- 当用户尝试激活某个项，并且服务器当前无法处理该请求，通常是由于服务器正在使用另一个用户或任务时，将显示服务器忙对话框。 如果服务器未在所有响应对激活请求，将显示服务器未响应对话框。 显示这些对话框显示通过`COleMessageFilter`根据 OLE 接口的实现， **IMessageFilter**，用户可以决定是否要再次尝试激活请求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)类来显示此对话框。  
+ 当用户尝试激活某个项，并且服务器当前无法处理该请求，通常是由于服务器正在使用另一个用户或任务时，将显示服务器忙对话框。 如果服务器未在所有响应对激活请求，将显示服务器未响应对话框。 显示这些对话框显示通过`COleMessageFilter`根据 OLE 接口的实现， `IMessageFilter`，用户可以决定是否要再次尝试激活请求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)类来显示此对话框。  
   
 ## <a name="see-also"></a>请参阅  
  [对话框](../mfc/dialog-boxes.md)   

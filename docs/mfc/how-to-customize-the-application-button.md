@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351352"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自定义应用程序按钮
 单击应用程序按钮时，将显示命令的菜单。 通常情况下，则菜单包含与文件相关的命令如**打开**，**保存**，**打印**，和**退出**。  

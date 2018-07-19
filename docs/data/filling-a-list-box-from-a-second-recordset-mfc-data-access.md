@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090637"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>从另一个记录集填充列表框（MFC 数据访问）
 默认情况下，记录视图与其字段映射到记录视图控件的单个记录集对象有关。 有时，你可能需要在记录视图中放置列表框或组合框控件，并使用来自另一个记录集对象的值填充。 用户可以使用列表框选择要在记录视图中显示的新类别信息。 本主题将介绍此操作的方法和时间。  

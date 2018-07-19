@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929551"
 ---
 # <a name="idle-loop-processing"></a>空闲循环处理
 很多应用程序“在后台”执行长时间的处理。 有时候，出于性能考虑，不得不对此类工作使用多线程处理。 线程会产生额外的开发开销，因此不建议将其用于简单任务，例如 MFC 在空闲时间工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函数。 本文将重点介绍空闲处理。 有关多线程处理，请参阅详细信息[多线程处理主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
  在使用 MFC 开发的应用，主消息循环中`CWinThread`类包含调用的消息循环[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 此循环也称为消息之间的 `OnIdle` 的 `CWinThread` 成员函数。 应用程序可通过重写 `OnIdle` 函数处理此空闲时间中的消息。  
   
 > [!NOTE]
->  **运行**， `OnIdle`，和某些其他成员函数现在是类的成员`CWinThread`而不是类`CWinApp`。 `CWinApp` 派生自 `CWinThread`。  
+>  `Run``OnIdle`，和某些其他成员函数现在是类的成员`CWinThread`而不是类`CWinApp`。 `CWinApp` 派生自 `CWinThread`。  
   
  有关执行空闲处理的详细信息，请参阅[OnIdle](../mfc/reference/cwinthread-class.md#onidle)中*MFC 参考*。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- 只要有要执行的空闲处理，嵌入函数中的此代码就会循环。 在该循环中，嵌套的循环将重复调用**PeekMessage**。 只要该调用返回非零值，该循环就会调用 `CWinThread::PumpMessage` 以执行常规消息转换和调度。 尽管没有 `PumpMessage` 的文档说明，但可以在 Visual C++ 安装的 \atlmfc\src\mfc 目录的 ThrdCore.Cpp 文件中检查其源代码。  
+ 只要有要执行的空闲处理，嵌入函数中的此代码就会循环。 在该循环中，嵌套的循环将重复调用`PeekMessage`。 只要该调用返回非零值，该循环就会调用 `CWinThread::PumpMessage` 以执行常规消息转换和调度。 尽管没有 `PumpMessage` 的文档说明，但可以在 Visual C++ 安装的 \atlmfc\src\mfc 目录的 ThrdCore.Cpp 文件中检查其源代码。  
   
  内部循环结束后，外部循环将通过对 `OnIdle` 进行一次或多次调用执行空闲处理。 第一次调用是针对 MFC 的。 您可以对 `OnIdle` 进行更多调用以完成自己的后台工作。  
   

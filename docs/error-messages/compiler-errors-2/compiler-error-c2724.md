@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234887"
 ---
 # <a name="compiler-error-c2724"></a>编译器错误 C2724
 identifier: 'static' 不应使用在文件范围内定义的成员函数  

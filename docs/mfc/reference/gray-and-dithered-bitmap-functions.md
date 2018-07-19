@@ -1,5 +1,5 @@
 ---
-title: 灰色和抖色位图函数 |Microsoft 文档
+title: 灰色和抖色位图函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339392"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 **灰色位图函数**  
   
  MFC 提供了两个函数为位图提供已禁用控件的外观。  
   
- ![灰色与原始图标版本版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
  MFC 还提供了两个函数以将位图背景替换为抖色样式。  
   
- ![抖色与原始图标版本版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 |||  
 |-|-|  
@@ -61,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向目标值 DC 的指针。  
   
  *x*  
@@ -70,16 +71,16 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  目标 y 坐标。  
   
- `rSrc`  
+ *rSrc*  
  源位图。  
   
- `crBackground`  
+ *crBackground*  
  新背景色（通常为灰色，如 COLOR_MENU）。  
   
 ### <a name="remarks"></a>备注  
  使用 `AfxDrawGrayBitmap` 绘制的位图将具有禁用控件的外观。  
   
- ![灰色与原始图标版本版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
@@ -98,19 +99,19 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rSrc`  
+ *rSrc*  
  源位图。  
   
- `pDest`  
+ *pDest*  
  目标位图。  
   
- `crBackground`  
+ *crBackground*  
  新背景色（通常为灰色，如 COLOR_MENU）。  
   
 ### <a name="remarks"></a>备注  
  使用 `AfxGetGrayBitmap` 复制的位图将具有禁用控件的外观。  
   
- ![灰色与原始图标版本版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![灰色和原始图标版本的比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
@@ -119,7 +120,7 @@ void AFXAPI AfxGetGrayBitmap(
  **标头:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- 绘制位图，并将其背景替换为抖色 （棋盘格） 图案。  
+ 绘制一个位图，其背景替换为抖色 （棋盘格） 图案。  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -132,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向目标值 DC 的指针。  
   
  *x*  
@@ -141,19 +142,19 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  目标 y 坐标。  
   
- `rSrc`  
+ *rSrc*  
  源位图。  
   
- `cr1`  
+ *cr1*  
  两种递色中的一种，通常为白色。  
   
- `cr2`  
+ *cr2*  
  另一种递色，通常为浅灰色 (COLOR_MENU)。  
   
 ### <a name="remarks"></a>备注  
- 在具有两种颜色的目的地 DC 上绘制的源位图 (`cr1`和`cr2`) 棋盘格的图案替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
+ 在两种颜色与目标 DC 上绘制的源位图 (*cr1*并*cr2*) 棋盘格的图案替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
   
- ![抖色与原始图标版本版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
@@ -174,22 +175,22 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rSrc`  
+ *rSrc*  
  源位图。  
   
- `pDest`  
+ *pDest*  
  目标位图。  
   
- `cr1`  
+ *cr1*  
  两种递色中的一种，通常为白色。  
   
- `cr2`  
+ *cr2*  
  另一种递色，通常为浅灰色 (COLOR_MENU)。  
   
 ### <a name="remarks"></a>备注  
- 源位图复制到目标位图，并使用两种颜色 (`cr1`和`cr2`) 棋盘格的图案替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
+ 源位图复制到目标位图与两种颜色 (*cr1*并*cr2*) 棋盘格的图案替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
   
- ![抖色与原始图标版本版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![抖色与原始图标版本的比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  

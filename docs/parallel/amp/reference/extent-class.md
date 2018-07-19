@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693245"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 表示向量*N*指定的边界的整数值*N*-具有 0 来源的维空间。 向量中的值是从最高有效订购到最不重要。  

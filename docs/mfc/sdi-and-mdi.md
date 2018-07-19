@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385799"
 ---
 # <a name="sdi-and-mdi"></a>SDI 和 MDI
 MFC 使用户可轻松地与单文档界面 (SDI) 和多文档界面 (MDI) 应用程序。  

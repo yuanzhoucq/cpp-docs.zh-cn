@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322427"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>资源编译器警告 RC4093
 非活动代码中的字符常量中的非转义换行  

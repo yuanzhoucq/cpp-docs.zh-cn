@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963623"
 ---
 # <a name="iterator-struct"></a>iterator 结构
 
-用来确保用户定义的迭代器可正常配合 **iterator_trait** 使用的空基结构。
+空基结构使用，以确保用户定义的迭代器类可正常配合`iterator_trait`s。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +47,7 @@ struct iterator {
 
 - `iterator_category`（模板参数 `Category` 的同义词）。
 
-- `value_type`（模板参数 **Type** 的同义词）。
+- `value_type`（模板参数 `Type` 的同义词）。
 
 - `difference_type`（模板参数 `Distance` 的同义词）。
 
@@ -56,7 +57,7 @@ struct iterator {
 
 - `reference`（模板参数 `Reference` 的同义词）。
 
-请注意，即使 **pointer** 指向常量 **Type** 的对象且引用指定常量 **Type** 的对象，`value_type` 也不得为常量类型。
+请注意，`value_type`不应为常量类型即使`pointer`指向的对象**const** `Type`且引用指定的对象**const** `Type`。
 
 ## <a name="example"></a>示例
 

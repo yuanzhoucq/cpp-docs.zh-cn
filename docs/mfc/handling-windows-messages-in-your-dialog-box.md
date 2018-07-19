@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343803"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>处理您对话框中的 Windows 消息
 对话框是窗口，因此，如果您提供了合适的处理程序函数，对话框就能处理 Windows 消息。 当使用添加类向导创建对话框类时，该向导会将空消息映射添加到该类。 使用“属性”窗口可映射您希望您的类处理的任何 Windows 消息和命令。  

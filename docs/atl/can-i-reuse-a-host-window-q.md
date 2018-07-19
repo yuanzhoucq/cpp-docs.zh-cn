@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353700"
 ---
 # <a name="can-i-reuse-a-host-window"></a>可以重复使用宿主窗口。
 建议不要重复使用宿主窗口。 若要确保你的代码的可靠性，您应将你的主机窗口的单个控件的生存期的生存期。  

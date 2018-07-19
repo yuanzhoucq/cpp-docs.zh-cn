@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892834"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>窗口窗格（图标的图像编辑器）
 图像编辑器窗口通常显示两个窗格隔开拆分条中的图像。 其中一个视图是实际大小和其他扩大 （默认放大因子为 6）。 这两个窗格中的视图都将自动更新： 立即显示另一部分中的两侧加上一个窗格中所做的更改。 两个窗格方便在你的映像，在其中你可以区分单个像素并，同时，观察对映像的实际大小视图所做的工作的影响的放大视图上工作。  

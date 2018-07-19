@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387604"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 NULL 是与许多指针操作和函数一起使用的 null 指针值。 它等效于 0。 在下列标头文件中定义 NULL：CRTDBG.H、LOCALE.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H、TCHAR.H、TIME.H 和 WCHAR.H。  

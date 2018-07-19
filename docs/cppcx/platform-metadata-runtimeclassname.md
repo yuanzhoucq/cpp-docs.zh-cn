@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088227"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 在应用于类定义时，请确保私有类从 GetRuntimeClassName 函数返回有效名称。  

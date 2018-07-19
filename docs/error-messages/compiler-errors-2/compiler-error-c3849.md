@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270959"
 ---
 # <a name="compiler-error-c3849"></a>编译器错误 C3849
 在类型 type 的表达式上的函数样式调用都将丢失所有数字可用运算符重载的 const 和/或可变限定符  

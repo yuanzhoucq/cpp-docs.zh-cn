@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877042"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
 如果对象是使用 `true` 的参数构造的，则删除当前 Module::ReleaseNotifier 对象。  

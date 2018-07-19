@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689176"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 类
 `task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用从 Windows 运行时应用此类。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。  

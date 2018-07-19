@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368572"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>导入和导出内联函数
 可以将导入的函数定义为内联。 效果大致是相同定义的标准函数内联;对函数的调用会展开为内联代码，类似于宏。 这是一种支持 c + + 类在 DLL 中某些成员函数以提高效率中可能内联主要有用。  

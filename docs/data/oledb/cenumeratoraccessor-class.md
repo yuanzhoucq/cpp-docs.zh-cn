@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097236"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
 使用[CEnumerator](../../data/oledb/cenumerator-class.md)从枚举器行集访问数据。  

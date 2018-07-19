@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377592"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd（禁用构造置换）
 ## <a name="syntax"></a>语法  

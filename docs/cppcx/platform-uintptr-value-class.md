@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088214"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::UIntPtr 值类
 表示其大小适合平台（32 位或 64 位）的无符号指针。  

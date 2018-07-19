@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966545"
 ---
 # <a name="moneyget-class"></a>money_get 类
 
@@ -45,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 在程序内所使用的区域设置中的字符进行编码的类型。
+*CharType*在程序内使用的区域设置的字符进行编码的类型。
 
-`InputIterator` 获取函数从中读取其输入的迭代器的类型。
+*InputIterator*获取函数从中读取其输入的迭代器的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -90,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 *CharType* 的同义词。
 
 ## <a name="do_get"></a>money_get::do_get
 
@@ -112,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-`first` 发现要转换的序列的开头的输入迭代器。
+*第一个*用于确定待转换序列开头的输入迭代器。
 
-`last` 发现要转换的序列的末尾的输入迭代器。
+*最后一个*用于确定待转换序列末尾的输入迭代器。
 
-`Intl` 一个布尔值，该值指示序列中预期的货币符号的类型： **true**如果国际， **false**如果国内。
+*Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
 
-`Iosbase` 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需的。
+*Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需。
 
-`State` 设置根据操作成功与否的流状态的相应位掩码元素。
+*状态*设置流状态根据操作成功与否的相应位掩码元素。
 
-`val` 一个字符串，它存储转换后的序列。
+*val*存储已转换的序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -130,9 +131,9 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个包含一个或多个十进制数字的序列（数字前可带负号 ( `-`)），以表示数额，并将结果存储于 [string_type](#string_type) 对象 `val`。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，函数将在 `val` 中存储空的序列，并在 `State` 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它将此字段转换为一系列一个或多个十进制数字前, 可带负号 ( `-`)，以表示数额，并将存储中的结果[string_type](#string_type)对象*val*. 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，函数将存储在一个空序列*val* ，并设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
 
-第二个受保护的虚拟成员函数的行为与第一个相同，只不过如果成功，它会将选择性签名的数字序列转换为 `long double` 类型的值，并将该值存储于 `val`。
+第二个受保护的虚拟成员函数的行为与第一个相同，只不过如果成功，则它将选择性签名的数字序列转换为类型的值**长双精度**并将该值存储于*val*.
 
 货币输入字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class)**fac** 决定，而后者又有有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -188,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-`first` 发现要转换的序列的开头的输入迭代器。
+*第一个*用于确定待转换序列开头的输入迭代器。
 
-`last` 发现要转换的序列的末尾的输入迭代器。
+*最后一个*用于确定待转换序列末尾的输入迭代器。
 
-`Intl` 一个布尔值，该值指示序列中预期的货币符号的类型： **true**如果国际， **false**如果国内。
+*Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
 
-`Iosbase` 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需
+*Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
 
-`State` 设置根据操作是否成功的流状态的相应位掩码元素。
+*状态*设置流状态根据操作是否成功的相应位掩码元素。
 
-`val` 一个字符串，它存储转换后的序列。
+*val*存储已转换的序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -206,7 +207,7 @@ iter_type get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-两个成员函数返回[do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`。
+这两个成员函数返回[do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`。
 
 ### <a name="example"></a>示例
 
@@ -279,11 +280,11 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -293,7 +294,7 @@ explicit money_get(size_t _Refs = 0);
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数初始化与与其基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。
+构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。
 
 ## <a name="string_type"></a>  money_get::string_type
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860276"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>更改多个字符串的 Caption 属性
 以下过程演示了如何更改多个字符串的 caption 属性。  

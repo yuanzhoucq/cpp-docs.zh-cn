@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964907"
 ---
 # <a name="collatebyname-class"></a>collate_byname 类
 
@@ -48,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`_Locname` 命名的区域设置。
+*_Locname*命名的区域设置。
 
-`_Refs` 初始引用计数。
+*_Refs*初始引用计数。
 
 ## <a name="remarks"></a>备注
 
-一种模板类，用于描述一个可充当类型 [collate](../standard-library/collate-class.md#collate)\<CharType> 的[区域设置 facet](../standard-library/locale-class.md#facet_class) 的对象。 其行为由 [named](../standard-library/locale-class.md#name) locale `_Locname` 决定。 每个构造函数通过 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基对象。
+一种模板类，用于描述一个可充当类型 [collate](../standard-library/collate-class.md#collate)\<CharType> 的[区域设置 facet](../standard-library/locale-class.md#facet_class) 的对象。 其行为由[名为](../standard-library/locale-class.md#name)区域设置 *_Locname*。 每个构造函数通过 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基对象。
 
 ## <a name="requirements"></a>要求
 

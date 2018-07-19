@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247561"
 ---
 # <a name="compiler-error-c3350"></a>编译器错误 C3350
 “delegate”: 委托构造函数需要 number 个参数  

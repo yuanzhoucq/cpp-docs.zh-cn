@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880080"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 创建传统型 COM 组件
 Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使用适用于通用 Windows 平台 (UWP) 应用创建用于基本经典 COM 组件。 创建 COM 组件时，对于 Windows 运行时 c + + 模板库可能需要更少的代码比 ATL Windows 运行时 c + + 模板库支持的 COM 子集的信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317175"
 ---
 # <a name="nmake-warning-u4004"></a>NMAKE 警告 U4004
 太多规则目标 targetname  

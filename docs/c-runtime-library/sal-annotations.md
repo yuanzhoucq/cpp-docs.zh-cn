@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409379"
 ---
 # <a name="sal-annotations"></a>SAL 批注
 如果检查库的标头文件，您可能会注意一些特殊的注释，例如，`_In_z` 和 `_Out_z_cap_(_Size)`。 这些是 Microsoft 源代码注释语言 (SAL) 的示例。SAL 提供一组描述函数如何使用其参数的注释，例如，它关于参数的假设以及关于完成的保证。 标头文件 \<sal.h> 定义了这些注释。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391895"
 ---
 # <a name="structure-declarations"></a>结构声明
 “结构声明”用于为类型命名和指定一系列可具有不同类型的变量值（称为结构的“成员”或“字段”）。 可选标识符（称为“标记”）为结构类型命名并可用于结构类型的后续引用。 该结构类型的变量保留该类型定义的整个序列。 C 中的结构类似于其他语言中称为“记录”的类型。  

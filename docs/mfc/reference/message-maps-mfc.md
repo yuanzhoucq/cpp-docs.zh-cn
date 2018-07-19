@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371707"
 ---
 # <a name="message-maps-mfc"></a>消息映射 (MFC)
 参考的此部分列出了所有[消息映射宏](../../mfc/reference/message-map-macros-mfc.md)和全部[CWnd](../../mfc/reference/cwnd-class.md)消息映射条目以及相应的成员函数原型：  

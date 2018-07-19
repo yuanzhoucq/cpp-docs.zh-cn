@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385786"
 ---
 # <a name="using-cimagelist"></a>使用 CImageList
 图像列表，表示由类[CImageList](../mfc/reference/cimagelist-class.md)，是相同大小的图像，其中每个可以按其索引引用的集合。 图像列表用于有效地管理大的图标或位图集。 图像列表本身不是控件由于它们不是 windows;但是，它们用于多种不同类型的控件，包括列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md))，树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))，和选项卡控件 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132461"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
 这篇文章演示如何使用跟踪引用 （%） 中 C + + /cli CLI 来用引用方式传递公共语言运行时 (CLR) 类型。  

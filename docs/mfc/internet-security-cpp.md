@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348844"
 ---
 # <a name="internet-security-c"></a>Internet 安全性 (C++)
 代码安全性是一个主要问题对于开发人员和 Internet 应用程序的用户。 有风险： 恶意代码、 被篡改的代码和代码未知的站点或作者。  

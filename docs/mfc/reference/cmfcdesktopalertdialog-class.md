@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815f9e8177cc908d7d76ca6d0f3130d1d50c93ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040790"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 类
 `CMFCDesktopAlertDialog`类一起配合使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)在弹出窗口中显示自定义对话框。  
@@ -89,8 +90,8 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `params`  
- [in] `pParent`  
+ [in]*params*  
+ [in]*pParent*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -126,7 +127,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>返回值  
   

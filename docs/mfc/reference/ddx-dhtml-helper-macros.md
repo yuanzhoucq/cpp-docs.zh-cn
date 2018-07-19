@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121697"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 帮助器宏
 DDX_DHtml 帮助器宏让您轻松访问的 HTML 页上的控件的常用属性。  
@@ -65,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -88,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -113,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -139,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -162,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。 请参阅*值*中[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)。  
   
 ## <a name="remarks"></a>备注  
@@ -187,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -212,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
@@ -235,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>参数  
- `dx`  
+ *dx*  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
   
- `name`  
+ *name*  
  为 HTML 控件的 ID 参数指定的值。  
   
- `var`  
+ *var*  
  要交换的值。  
   
 ## <a name="remarks"></a>备注  
- 使用时`DDX_DHtml_Img_Src`宏要检索图像元素，Internet Explorer 映像对象的 src 属性将返回图像源的完全转义的 URL。 例如，如果你使用`DDX_DHtml_Img_Src`宏以将图像元素的 src 属性设置为字符串"一些有趣图中，"Internet Explorer 时检索该属性，将返回字符串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。"  
+ 当使用 DDX_DHtml_Img_Src 宏要检索图像元素的 src 属性，Internet Explorer 图像对象将返回图像源的完全转义的 URL。 例如，如果你使用 DDX_DHtml_Img_Src 宏将图像元素的 src 属性设置为字符串"一些有趣的图片"，检索该属性，Internet 资源管理器时将返回字符串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。"  
   
  此宏将调用[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函数使用 DISPID_IHTMLIMGELEMENT_SRC 调度 id。  
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892447"
 ---
 # <a name="safecast"></a>SafeCast
 将一种类型到另一种类型的数字的强制转换。  

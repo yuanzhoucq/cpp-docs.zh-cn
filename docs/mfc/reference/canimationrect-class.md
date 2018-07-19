@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957193"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 类
 实现可对矩形边进行动画处理的矩形功能。  
@@ -105,7 +106,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|表示底层封装的动画变量动画矩形的边界。|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|表示左封装的动画变量动画矩形的边界。|  
@@ -138,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLeftTransition`  
+ *pLeftTransition*  
  指定左边的转换。  
   
- `pTopTransition`  
+ *pTopTransition*  
  指定转换的顶部。  
   
- `pRightTransition`  
+ *pRightTransition*  
  指定转换的右侧。  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  指定的底边的转换。  
   
 ### <a name="remarks"></a>备注  
@@ -186,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  指定默认矩形。  
   
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  指定用户定义的数据。  
   
- `pt`  
+ *pt*  
  左上角的坐标。  
   
- `sz`  
+ *sz*  
  矩形的大小。  
   
- `nLeft`  
+ *nLeft*  
  指定左边边界的坐标。  
   
- `nTop`  
+ *nTop*  
  指定的绑定的顶部的坐标。  
   
- `nRight`  
+ *nRight*  
  指定的右边界的坐标。  
   
- `nBottom`  
+ *nBottom*  
  指定的绑定的底部的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -229,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  当函数返回时，它包含指向四个 CAnimationVariable 对象，表示矩形的坐标的指针。  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -305,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  输出。 此方法返回时包含的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -380,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  新动画矩形的值。  
   
 ### <a name="remarks"></a>备注  
@@ -394,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  指定左侧、 顶部、 右侧和底部的新默认的值。  
   
 ### <a name="remarks"></a>备注  

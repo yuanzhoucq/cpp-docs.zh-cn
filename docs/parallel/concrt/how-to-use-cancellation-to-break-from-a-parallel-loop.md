@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696287"
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>如何：使用取消中断 Parallel 循环
 本示例说明如何使用取消操作来实现基本的并行搜索算法。  

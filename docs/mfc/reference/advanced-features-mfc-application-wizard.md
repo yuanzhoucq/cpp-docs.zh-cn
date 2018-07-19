@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358451"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
 本主题列出了应用程序的附加功能选项，如帮助、打印支持等。 在每个部分中，指定这些高级功能的附加支持。  

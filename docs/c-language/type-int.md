@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389171"
 ---
 # <a name="type-int"></a>int 类型
 带符号或无符号的 `int` 项的大小是特定计算机上的一个整数的标准大小。 例如，在 16 位操作系统中，`int` 类型通常是 16 位（或 2 字节）。 在 32 位操作系统中，`int` 类型通常是 32 位（或 4 字节）。 因此，`int` 类型与 `short int` 或 long int 类型等效，`unsigned int` 类型与 unsigned short 或 `unsigned long` 类型等效，具体取决于目标环境。 除非另有规定，否则所有 `int` 类型都表示带符号值。  

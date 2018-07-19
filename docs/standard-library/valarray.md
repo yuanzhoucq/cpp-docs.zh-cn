@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954794"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -65,8 +66,8 @@ ms.lasthandoff: 05/08/2018
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|测试两个相同大小的 valarray 的对应元素是否不相等或者 valarray 的所有元素是否都不等于 valarray 元素类型的指定值。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|获取 valarray 的元素类型的指定值除以两个大小相同的 valarray 的对应元素所得的余数或除以 valarray 所得的余数，或 valarray 除以指定值所得的余数。|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 **AND**。|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 **AND**。|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `AND`。|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `AND`。|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|测试某个 valarray 的元素是否大于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于或小于 valarray 元素类型的指定值。|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|测试某个 valarray 的元素是否大于或等于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于等于或小于等于某个指定值。|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|将 valarray 的每个元素的位以指定数位向右移位，或按由第二个 valarray 指定的元素指向值向右移位。|
@@ -92,13 +93,13 @@ ms.lasthandoff: 05/08/2018
 |[mask_array 类](../standard-library/mask-array-class.md)|一个内部的辅助模板类，该类通过提供子集阵列之间的操作来支持作为父级 valarray（使用布尔表达式指定）的子集的对象。|
 |[slice 类](../standard-library/slice-class.md)|一个用于定义 valarray 的一维矢量型子集的 valarray 实用程序类。|
 |[slice_array 类](../standard-library/slice-array-class.md)|一个内部的辅助模板类，该类通过提供由 valarray 的切分定义的子集阵列之间的操作来支持切分对象。|
-|[valarray 类](../standard-library/valarray-class.md)|该模板类描述了一个对象，该对象控制类型 **Type** 的元素序列，这些元素存储为数组并用于执行高速数学运算，且针对计算性能进行了优化。|
+|[valarray 类](../standard-library/valarray-class.md)|模板类描述一个对象，用于控制的类型的元素序列`Type`，是存储为数组并用于执行高速数学运算，针对计算性能进行了优化。|
 
 ### <a name="specializations"></a>专用化
 
 |||
 |-|-|
-|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|类型 `bool` 的元素的模板类 valarray\<**Type**> 的专用版本。|
+|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|模板类 valarray 的专用的版本\<**类型**> 元素的类型为**bool**。|
 
 ## <a name="see-also"></a>请参阅
 

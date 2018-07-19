@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379128"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE（创建终端服务器识别的应用程序）
 ```  

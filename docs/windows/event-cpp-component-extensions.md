@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881206"
 ---
 # <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
 `event`关键字声明*事件*，这是一条通知到已注册的订阅服务器 (*事件处理程序*) 的相关事情已发生。  

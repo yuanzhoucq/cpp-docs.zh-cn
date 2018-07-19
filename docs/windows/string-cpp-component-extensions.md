@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889224"
 ---
 # <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
 Visual c + + 编译器支持*字符串*，这是对象，表示为字符序列的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式的带引号的字符串。  

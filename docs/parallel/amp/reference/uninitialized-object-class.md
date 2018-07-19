@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696170"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 类
 使用未初始化的对象时引发的异常。  

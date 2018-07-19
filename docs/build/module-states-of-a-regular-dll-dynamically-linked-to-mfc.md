@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369365"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则的 MFC DLL 的模块状态
 若要动态链接到 MFC DLL 的正则表达式 MFC DLL 的能力使非常复杂的某些配置。 例如，正则 MFC DLL 并使用它的可执行文件可以同时动态链接到 MFC DLL 和任何 MFC 扩展 Dll。  

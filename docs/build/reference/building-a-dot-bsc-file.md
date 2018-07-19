@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369001"
 ---
 # <a name="building-a-bsc-file"></a>生成 .Bsc 文件
 BSCMAKE 可以生成新的浏览信息文件从新创建的.sbr 文件。 它还可以维护现有.bsc 文件用于自上次生成以来已更改的对象文件中使用.sbr 文件。  

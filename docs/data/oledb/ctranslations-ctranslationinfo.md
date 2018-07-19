@@ -42,6 +42,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101622"
 ---
 # <a name="ctranslations-ctranslationinfo"></a>CTranslations，CTranslationInfo
 调用 typedef 类**CTranslations**来实现其参数类**CTranslationInfo**。  

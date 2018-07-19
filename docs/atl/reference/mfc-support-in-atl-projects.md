@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360636"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 项目中的 MFC 支持
 如果你选择**支持 MFC**在 ATL 项目向导中，则项目将声明为 MFC 应用程序对象 （类） 应用程序。 项目初始化 MFC 库并实例化类 (类*ProjName*)、 派生自[CWinApp](../../mfc/reference/cwinapp-class.md)。  

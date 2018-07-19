@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050745"
 ---
 # <a name="equ"></a>EQU
 第一个指令将分配数字值*表达式*到*名称*。  

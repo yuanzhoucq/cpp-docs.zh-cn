@@ -1,5 +1,5 @@
 ---
-title: _com_error 成员函数 |Microsoft 文档
+title: _com_error 成员函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b137d24d3d6500a46ceb392c79ff6f7ac5e780e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 919276e7a32399185256c38cb146158420aeded5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942011"
 ---
 # <a name="comerror-member-functions"></a>_com_error 成员函数
-璝惠 **_com_error**成员函数，请参阅[_com_error 类](../cpp/com-error-class.md)。  
+璝惠`_com_error`成员函数，请参阅[_com_error 类](../cpp/com-error-class.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [_com_error 类](../cpp/com-error-class.md)

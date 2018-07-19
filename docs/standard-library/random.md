@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956500"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="quick-tips"></a>快速提示
 
-下面是一些提示使用时，需要注意\<随机 >:
+下面是使用时需要注意的一些提示\<随机 >:
 
 - 在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，因为它直接使用 URNG。）
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/08/2018
 
 - 对于大多数应用程序而言，最有用的配对是 `mt19937` 引擎和 `uniform_int_distribution`，如本文后面的[代码示例](#code)中所示。
 
-有许多选项可供选择在\<随机 > 标头，并且其中任何优于过时的 C 运行时函数`rand()`。 有关问题信息`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+有许多选项可供选择在\<随机 > 标头，并且其中任何一个优于过时的 C 运行时函数`rand()`。 有关什么是不妥`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](http://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a>示例
 
@@ -293,7 +294,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ###  <a name="distributions"></a>随机数分布
 
-下列部分列出了中提供的分布\<随机 > 标头。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
+以下各节列出的分发版中提供\<随机 > 标头。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
 
 #### <a name="uniform-distributions"></a>均匀分布
 
@@ -309,7 +310,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |||
 |-|-|
-|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|产生 `bool` 值的伯努利分布。|
+|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|产生的伯努利分布**bool**值。|
 |[binomial_distribution 类](../standard-library/binomial-distribution-class.md)|产生整数值的二项式分布。|
 |[geometric_distribution 类](../standard-library/geometric-distribution-class.md)|产生整数值的几何分布。|
 |[negative_binomial_distribution 类](../standard-library/negative-binomial-distribution-class.md)|产生整数值的负二项式分布。|
@@ -372,13 +373,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="engdist"></a>引擎和分布
 
-请参阅有关每个模板类类别中定义的以下部分\<随机 >。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：
+以下各节，有关每个模板类类别中定义的信息，请参阅\<随机 >。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：
 
-- `IntType` 指示 `short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。
+- `IntType` 指示**短**， **int**，**长**，**超长**， **unsigned short**， **无符号的整型**，**无符号长**，或**无符号长长**。
 
-- `UIntType` 指示 `unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。
+- `UIntType` 指示**unsigned short**，**无符号的 int**，**无符号长**，或者**无符号长长**。
 
-- `RealType` 指示 `float`、`double` 或 `long double`。
+- `RealType` 指示**float**， **double**，或**长双精度型**。
 
 ### <a name="engines"></a>引擎
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096995"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>使用向导创建 OLE DB 使用者
 此过程演示如何使用 ATL 项目向导和 ATL OLE DB 使用者向导生成 OLE DB 模板使用者，然后修改的控制台应用程序以检索和显示数据库表中的数据的主代码。  

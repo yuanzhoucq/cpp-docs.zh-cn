@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932203"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>异常：使用 MFC 宏和 C++ 异常
 此文章介绍了有关编写使用 MFC 异常处理宏和 c + + 异常处理关键字的代码的注意事项。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- 出现问题的原因`e`时执行将跳出"内部"删除**捕获**块。 使用`THROW_LAST`宏而不是**引发**语句将导致"外部"**捕获**块接收有效指针：  
+ 出现问题的原因`e`时执行将跳出"内部"删除**捕获**块。 使用**THROW_LAST**宏而不是**引发**语句将导致"外部"**捕获**块接收有效指针：  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

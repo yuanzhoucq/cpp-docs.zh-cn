@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957381"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
-访问控制使你可以将分隔[公共](../cpp/public-cpp.md)从类接口的[私有](../cpp/private-cpp.md)实现详细信息和[保护](../cpp/protected-cpp.md)成员仅供使用通过派生的类。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。  
+访问控制，您可以将[公共](../cpp/public-cpp.md)从类的接口[专用](../cpp/private-cpp.md)实现的详细信息并[保护](../cpp/protected-cpp.md)仅适用于的成员使用的派生的类。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。  
   
-```  
+```cpp 
 class Point  
 {  
 public:                   
@@ -42,17 +43,17 @@ protected:      // Declare protected function for derived classes only.
     Point ToWindowCoords();  
 };  
   
-```  
+``` 
   
- 默认访问是类中的 `private`，以及结构或联合中的 `public`。 类中的访问说明符可按任何顺序使用任意次数。 类类型的对象的存储分配是取决于实现的，但成员一定能分配到访问说明符之间的依次升高的内存地址。  
+ 默认访问是**私有**在类中，并**公共**结构或联合中。 类中的访问说明符可按任何顺序使用任意次数。 类类型的对象的存储分配是取决于实现的，但成员一定能分配到访问说明符之间的依次升高的内存地址。  
   
 ### <a name="member-access-control"></a>成员访问控制  
   
 |访问类型|含义|  
 |--------------------|-------------|  
-|[private](../cpp/private-cpp.md)|声明为 `private` 的类成员只能由类的成员函数和友元（类或函数）使用。|  
-|[protected](../cpp/protected-cpp.md)|声明为 `protected` 的类成员可由类的成员函数和友元（类或函数）使用。 此外，它们还可由派生自该类的类使用。|  
-|[public](../cpp/public-cpp.md)|类成员声明为**公共**可由任何函数。|  
+|[private](../cpp/private-cpp.md)|类成员声明为**专用**仅可由成员函数和友元 （类或函数） 的类。|  
+|[protected](../cpp/protected-cpp.md)|类成员声明为**保护**可由成员函数和友元 （类或函数） 的类。 此外，它们还可由派生自该类的类使用。|  
+|[public](../cpp/public-cpp.md)|类成员声明为**公共**可以由任意函数。|  
   
  访问控制有助于阻止您通过不适当的方式使用对象。 在执行显式类型转换（强制转换）时，此保护将丢失。  
   
@@ -62,7 +63,7 @@ protected:      // Declare protected function for derived classes only.
 ## <a name="access-control-in-derived-classes"></a>派生类中的访问控制  
  两个因素控制基类的哪些成员可在派生类中访问；这些相同的因素控制对派生类中的继承成员的访问：  
   
--   是否派生的类声明基类使用**公共**访问中的说明符*类头*(*类头*中语法部分中描述[定义类类型](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da))。  
+-   是否在派生的类声明基类将**公共**访问说明符。  
   
 -   基类中对成员的访问权限如何。  
   
@@ -78,7 +79,7 @@ protected:      // Declare protected function for derived classes only.
   
  下面的示例阐释了这一点：  
   
-```  
+```cpp 
 // access_specifiers_for_base_classes.cpp  
 class BaseClass  
 {  
@@ -108,45 +109,45 @@ int main()
   
  在 `DerivedClass2` 中，函数 `PublicFunc` 和 `ProtectedFunc` 被视为私有成员，因为 `BaseClass` 是私有基类。 同样，`PrivateFunc` 对于 `BaseClass` 是私有的，因此任何派生类都无法访问它。  
   
- 您可以声明派生类而不使用基类访问说明符。 在这种情况下，则将派生视为私有如果派生的类声明使用**类**关键字。 如果派生类声明使用 `struct` 关键字，则将派生视为公共。 例如，以下代码：  
+ 您可以声明派生类而不使用基类访问说明符。 在这种情况下，将派生视为私有如果派生的类声明使用**类**关键字。 则将派生视为公共如果派生的类声明使用**结构**关键字。 例如，以下代码：  
   
-```  
+```cpp 
 class Derived : Base  
 ...  
 ```  
   
  等效于：  
   
-```  
+```cpp 
 class Derived : private Base  
 ...  
 ```  
   
  同样，以下代码：  
   
-```  
+```cpp 
 struct Derived : Base  
 ...  
 ```  
   
  等效于：  
   
-```  
+```cpp 
 struct Derived : public Base  
 ...  
 ```  
   
- 请注意，声明为拥有私有访问权限的成员对函数或派生类不可访问，除非使用基类中的 `friend` 声明来声明这些函数或类。  
+ 请注意成员声明为拥有私有访问权限不能访问函数或派生类，除非这些函数或类使用声明**友元**基类中的声明。  
   
- A**联合**类型不能有基类。  
+ 一个**union**类型不能具有基类。  
   
 > [!NOTE]
->  当指定私有基类时，建议显式使用 `private` 关键字，以便让派生类的用户了解成员访问。  
+>  在指定私有基类时，最好显式使用**专用**关键字，以便派生类的用户了解成员访问。  
   
 ## <a name="access-control-and-static-members"></a>访问控制和静态成员  
- 在将基类指定为 `private` 时，它只影响非静态成员。 在派生类中，公共静态成员仍是可访问的。 但是，使用指针、引用或对象访问基类的成员需要转换，此时将再次应用访问控制。 请看下面的示例：  
+ 当指定为基类**专用**，它会影响仅非静态成员。 在派生类中，公共静态成员仍是可访问的。 但是，使用指针、引用或对象访问基类的成员需要转换，此时将再次应用访问控制。 请看下面的示例：  
   
-```  
+```cpp 
 // access_control.cpp  
 class Base  
 {  
@@ -178,7 +179,7 @@ int Derived2::ShowCount()
 }  
 ```  
   
- 在前面的代码中，访问控制禁止从指向 `Derived2` 的指针转换为指向 `Base` 的指针。 **这**指针为隐式类型`Derived2 *`。 若要选择`CountOf`函数，**这**必须转换为类型`Base *`。 不允许执行此类转换，因为 `Base` 是 `Derived2` 的私有间接基类。 到私有基类类型的转换仅对于指向立即派生类的指针是可接受的。 因此，可以将 `Derived1 *` 类型的指针转换为 `Base *` 类型。  
+ 在前面的代码中，访问控制禁止从指向 `Derived2` 的指针转换为指向 `Base` 的指针。 **这**指针是隐式类型的`Derived2 *`。 若要选择`CountOf`函数，**这**必须转换为类型`Base *`。 不允许执行此类转换，因为 `Base` 是 `Derived2` 的私有间接基类。 到私有基类类型的转换仅对于指向立即派生类的指针是可接受的。 因此，可以将 `Derived1 *` 类型的指针转换为 `Base *` 类型。  
   
  请注意，显式调用 `CountOf` 函数而不使用指针、引用或对象来选择它，则表示没有转换。 因此，允许该调用。  
   
@@ -187,7 +188,7 @@ int Derived2::ShowCount()
 ## <a name="access-to-virtual-functions"></a>对虚函数的访问  
  访问控制应用于[虚拟](../cpp/virtual-cpp.md)函数由用于进行函数调用的类型。 重写函数的声明不会影响给定类型的访问控制。 例如：  
   
-```  
+```cpp 
 // access_to_virtual_functions.cpp  
 class VFuncBase  
 {  
@@ -223,7 +224,7 @@ int main()
 ## <a name="access-control-with-multiple-inheritance"></a>具有多重继承的访问控制  
  在涉及虚拟基类的多重继承方格中，可通过多个路径到达给定的名称。 由于可沿着这些不同的路径应用不同的访问控制，因此该编译器选择允许大多数访问的路径。 请参见下图。  
   
- ![沿继承图的路径访问](../cpp/media/vc38v91.gif "vc38V91")  
+ ![沿继承关系图的路径访问](../cpp/media/vc38v91.gif "vc38V91")  
 沿继承关系图的路径访问  
   
  在该图中，通过类 `VBase` 始终到达类 `RightPath` 中声明的名称。 右路径是更易于访问的，因为 `RightPath` 将 `VBase` 声明为公共基类，而 `LeftPath` 将 `VBase` 声明为私有基类。  

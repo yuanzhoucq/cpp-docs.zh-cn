@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360144"
 ---
 # <a name="building-cc-isolated-applications"></a>生成 C/C++ 独立应用程序
 独立应用程序仅取决于通过并行程序集，并将绑定到使用清单及其依赖项。 不需要应用程序，以便在 Windows; 上正确运行完全隔离但是，通过在造成应用程序完全隔离方面的投资，你可能节省时间，如果需要应用程序在将来提供服务。 使应用程序完全独立的好处的详细信息，请参阅[独立应用程序](http://msdn.microsoft.com/library/aa375190)。  

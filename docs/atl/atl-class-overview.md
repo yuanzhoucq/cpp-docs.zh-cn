@@ -22,6 +22,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255923"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 类在活动模板库 (ATL) 可以进行分类，如下所示：  

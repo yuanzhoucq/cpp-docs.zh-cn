@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374461"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J（默认 char 类型是无符号的）
 将默认 `char` 类型从 `signed char` 更改为 `unsigned char`，并且在将 `char` 类型扩展到 `int` 类型时，将对其进行零扩展。  

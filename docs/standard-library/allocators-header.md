@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965738"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -86,7 +87,7 @@ _List0 使用 `allocator_chunklist` 和默认的同步筛选器来分配节点�
 
 _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/sync-per-thread-class.md) 同步筛选器来分配节点。
 
-块分配器是一个缓存或筛选器。 缓存是采用一种参数类型为 std::size_t 的模板类。 它定义分配和释放单个大小内存块的块分配器。 它必须使用 `new` 运算符获取内存，但无需为每个块单独调用运算符 `new`。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
+块分配器是一个缓存或筛选器。 缓存是采用一种参数类型为 std::size_t 的模板类。 它定义分配和释放单个大小内存块的块分配器。 它必须获取内存使用运算符**新**，但它不需要进行单独调用运算符**新**为每个块。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
 
 在不能编译重新绑定的编译器中，模板实例化时所使用的 std::size_t 参数的值并不一定是传递给缓存的成员函数 allocate 和 deallocate 的 argument _Sz 值。
 
@@ -150,7 +151,7 @@ _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/syn
 |[allocator_base](../standard-library/allocator-base-class.md)|定义基类和常用函数需要从同步筛选器创建一个用户定义的分配器。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_chunklist](../standard-library/cache-chunklist-class.md) 的对象的存储分配和释放。|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|描述一个对象，用于管理由 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的长度的使用缓存类型 [cache_suballoc](../standard-library/cache-freelist-class.md) 的类型 `Type` 的对象的存储分配和释放。|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|实现分配器使用 `operator delete` 来释放内存块和使用 `operator new` 来分配内存块。|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|实现使用的分配器**运算符 delete**来释放内存块和**运算符 new**来分配内存块。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|描述一个对象，用于管理使用类型 [cache_suballoc](../standard-library/cache-suballoc-class.md) 的缓存类型的类型 `Type` 的对象的存储分配和释放。|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_freelist](../standard-library/cache-freelist-class.md) 的对象类型 `Type` 的存储分配和释放，其长度由 [max_unbounded](../standard-library/max-unbounded-class.md) 管理。|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_freelist](../standard-library/cache-freelist-class.md) 的对象类型 `Type` 的存储分配和释放，其长度由 [max_variable_size](../standard-library/max-variable-size-class.md) 管理。|

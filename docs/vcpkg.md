@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705434"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -34,7 +35,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
 
 ## <a name="installation"></a>安装 
 
@@ -120,7 +121,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 现在，只需键入文件夹/标头就可轻松加入标头，自动完成功能将帮助你完成这一切。 在链接到 lib 或添加项目引用时，无需额外步骤。 下图演示了 Visual Studio 查找 azure-storage-cpp 标头的方法。 vcpkg 将其标头放置在 /installed 子文件夹中，由目标平台予以分区。 下图显示库的 /was 子文件夹中包含文件的列表：
 
-![vcpkg Intellisense 集成](media/vcpkg-intellisense.png "vcpkg 和 Intellisense")
+![vcpkg IntelliSense 集成](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
 ### <a name="per-project"></a>按项目
 

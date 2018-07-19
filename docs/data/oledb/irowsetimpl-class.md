@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108433"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 类
 提供 `IRowset` 接口的实现。  

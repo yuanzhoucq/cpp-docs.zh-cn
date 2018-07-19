@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249348"
 ---
 # <a name="compiler-error-c3351"></a>编译器错误 C3351
 “object”：委托构造函数：第二个参数必须为静态成员函数或全局函数的地址  

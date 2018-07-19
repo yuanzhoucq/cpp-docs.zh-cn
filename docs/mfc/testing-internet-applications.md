@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380063"
 ---
 # <a name="testing-internet-applications"></a>测试 Internet 应用程序
 Internet 上有一些独特的测试难题，特别是在 Web 服务器上运行的应用程序。 您的初始测试可能通过使用至测试服务器的单一用户客户端连接来完成。 这对调试代码很有用。  

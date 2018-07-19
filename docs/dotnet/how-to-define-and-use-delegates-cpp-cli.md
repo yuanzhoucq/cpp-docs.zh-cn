@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135997"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C++/CLI)
 这篇文章演示如何定义和使用委托在 C + + /cli CLI。  

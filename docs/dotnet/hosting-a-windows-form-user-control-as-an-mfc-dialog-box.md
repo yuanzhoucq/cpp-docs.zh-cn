@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138673"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>以 MFC 对话框的形式承载 Windows 窗体用户控件
 MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，以便可以承载 Windows 窗体用户控件 (<xref:System.Windows.Forms.UserControl>) 在模式或无模式的 MFC 对话框中。 `CWinFormsDialog` 派生自 MFC 类[CDialog](../mfc/reference/cdialog-class.md)，因此可以作为模式或无模式启动对话框。  

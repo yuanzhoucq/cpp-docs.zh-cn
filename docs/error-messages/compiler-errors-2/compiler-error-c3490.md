@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258745"
 ---
 # <a name="compiler-error-c3490"></a>编译器错误 C3490
 无法修改 var，因为正在通过 const 对象对其进行访问  

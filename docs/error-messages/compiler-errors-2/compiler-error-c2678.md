@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234089"
 ---
 # <a name="compiler-error-c2678"></a>编译器错误 C2678
 二进制“operator”：未定义接受“type”类型的左操作数的运算符（或者没有可接受的转换）  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377752"
 ---
 # <a name="mutual-imports"></a>相互导入
 当导入是相互 （或循环） 时，导出或导入到另一个可执行文件比较复杂。 例如，两个 Dll 导入相互，类似于相互递归函数的符号。  

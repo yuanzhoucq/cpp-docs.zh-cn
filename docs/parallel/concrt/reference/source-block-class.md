@@ -48,6 +48,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694958"
 ---
 # <a name="sourceblock-class"></a>source_block 类
 `source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。  

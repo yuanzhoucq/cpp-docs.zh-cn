@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347002"
 ---
 # <a name="making-and-using-controls"></a>创建和使用控件
 在 Visual c + + 中进行的对话框中的大多数控件[对话框编辑器](../windows/dialog-editor.md)。 但您也可以在任何对话框或窗口中创建控件。  

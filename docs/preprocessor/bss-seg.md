@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849803"
 ---
 # <a name="bssseg"></a>bss_seg
 指定其中的未初始化变量存储在 .obj 文件中的段。  

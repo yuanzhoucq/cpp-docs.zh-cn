@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319905"
 ---
 # <a name="resource-compiler-fatal-error-rc1052"></a>资源编译器错误 RC1052
 编译器限制： #if 或 #ifdef 块嵌套太深  

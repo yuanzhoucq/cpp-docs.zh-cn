@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095760"
 ---
 # <a name="cenumeratoraccessormntype"></a>CEnumeratorAccessor::m_nType
 变量，该值指示是否行所说明的数据源或枚举数。  

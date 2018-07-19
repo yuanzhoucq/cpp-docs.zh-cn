@@ -1,5 +1,5 @@
 ---
-title: CMFCMaskedEdit 类 |Microsoft 文档
+title: CMFCMaskedEdit 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,14 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849466"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 类
-`CMFCMaskedEdit`类支持掩码的编辑控件，将验证用户输入掩码并显示根据模板验证的结果。  
+`CMFCMaskedEdit`类支持掩码的编辑控件，将验证用户输入是否针对一个掩码，并显示根据模板验证的结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,36 +66,36 @@ class CMFCMaskedEdit : public CEdit
 |[CMFCMaskedEdit::DisableMask](#disablemask)|禁用验证用户输入。|  
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|指定是否`GetWindowText`方法检索仅掩码的字符。|  
 |[CMFCMaskedEdit::EnableMask](#enablemask)|初始化掩码编辑控件。|  
-|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|指定是否掩码的编辑控件选择的用户输入或输入的所有用户的特定组。|  
-|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|指定是否根据验证文本，仅屏蔽字符，或针对整个掩码。|  
-|`CMFCMaskedEdit::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
-|[CMFCMaskedEdit::GetWindowText](#getwindowtext)|检索验证从掩码的编辑控件的文本。|  
+|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|指定掩码的编辑控件是否选择特定组的用户输入或所有用户输入。|  
+|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|指定是否屏蔽字符，仅文本进行验证，或针对整个掩码。|  
+|`CMFCMaskedEdit::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
+|[CMFCMaskedEdit::GetWindowText](#getwindowtext)|检索验证掩码的编辑控件中的文本。|  
 |[CMFCMaskedEdit::SetValidChars](#setvalidchars)|指定用户可以输入的有效字符的字符串。|  
-|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|掩码的编辑控件中显示一条提示。|  
+|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|掩码的编辑控件中显示的提示。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|由框架调用以验证对相应的掩码字符的指定的字符。|  
+|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|由框架调用以验证对相应的掩码字符指定的字符。|  
   
 ## <a name="remarks"></a>备注  
- 执行以下步骤以使用`CMFCMaskedEdit`应用程序中的控件：  
+ 执行以下步骤以使用`CMFCMaskedEdit`控件在应用程序中：  
   
- 1. 嵌入`CMFCMaskedEdit`入窗口类的对象。  
+ 1. 嵌入`CMFCMaskedEdit`向您的窗口类的对象。  
   
- 2. 调用[CMFCMaskedEdit::EnableMask](#enablemask)方法，以指定掩码。  
+ 2. 调用[CMFCMaskedEdit::EnableMask](#enablemask)方法以指定的掩码。  
   
- 3. 调用[CMFCMaskedEdit::SetValidChars](#setvalidchars)方法，以指定有效的列表。  
+ 3. 调用[CMFCMaskedEdit::SetValidChars](#setvalidchars)方法，以指定有效的字符的列表。  
   
- 4. 调用[CMFCMaskedEdit::SetWindowText](#setwindowtext)若指定的默认文本在掩蔽的编辑控件的方法。  
+ 4. 调用[CMFCMaskedEdit::SetWindowText](#setwindowtext)方法，以指定的掩码编辑控件的默认文本。  
   
  5. 调用[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法来检索已验证的文本。  
   
- 如果不调用以初始化掩码、 有效字符和默认文本的一个或多个方法，掩码的编辑控件的行为就像该标准编辑控件的行为。  
+ 如果不调用一个或多个方法来初始化的掩码、 有效字符和默认文本，掩码的编辑控件的行为就像标准编辑控件的行为。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用设置掩码 （例如电话号码）`EnableMask`方法来为掩码编辑控件，创建掩码`SetValidChars`方法，以指定的用户可以输入的有效字符和字符串`SetWindowText` edit 控件的方法以在掩蔽显示一条提示。 此示例摘自[新控件示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何使用设置掩码 （例如电话号码）`EnableMask`方法来创建掩码的掩码编辑控件，`SetValidChars`方法，以指定的用户可以输入，有效字符和的字符串`SetWindowText`方法来显示一条提示中屏蔽编辑控件。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]  
@@ -131,11 +132,11 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
- `TRUE` 若要指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法检索仅屏蔽字符;`FALSE`若要指定方法检索整个文本。 默认值为 `TRUE`。  
+ [in]*bEnable*  
+ 为 true，则指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法检索仅屏蔽字符;为 FALSE，则指定该方法检索整个文本。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 此方法用于启用检索掩码的字符。 然后创建对应的电话号码，例如 (425) 555-0187 的掩码的编辑控件。 如果调用`GetWindowText`方法，则返回"4255550187"。 如果你禁用检索掩码的字符`GetWindowText`方法返回编辑控件，例如"(425) 555-0187"中显示的文本。  
+ 使用此方法以便检索掩码的字符。 然后创建对应于电话号码，如 (425) 555-0187 的掩码的编辑控件。 如果调用`GetWindowText`方法，则返回"4255550187"。 如果禁用检索掩码的字符`GetWindowText`方法返回编辑控件，例如"(425) 555-0187"中显示的文本。  
   
 ##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  初始化掩码编辑控件。  
@@ -149,20 +150,20 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszMask`  
- 指定的字符可以出现在用户输入中每个位置的类型掩码字符串。 长度`lpszInputTemplate`和`lpszMask`参数字符串必须相同。 请参阅有关掩码字符的更多详细信息备注部分。  
+ [in]*lpszMask*  
+ 一个掩码字符串，指定的字符可以出现在用户输入中每个位置的类型。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。 请参阅备注部分的掩码字符有关的更多详细信息。  
   
- [in] `lpszInputTemplate`  
- 一个掩码模板字符串，指定文本字符可以出现在用户输入中每个位置。 使用下划线字符 ('_') 作为的字符占位符。 长度`lpszInputTemplate`和`lpszMask`参数字符串必须相同。  
+ [in]*lpszInputTemplate*  
+ 指定文本字符的掩码模板字符串可以显示在用户输入中每个位置。 下划线字符 ('_') 用作字符占位符。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。  
   
- [in] `chMaskInputTemplate`  
- 框架将为每个用户输入中包含无效字符替换默认字符。 此参数的默认值是下划线 ('_')。  
+ [in]*chMaskInputTemplate*  
+ 框架将替换为在用户输入中每个无效字符的默认字符。 此参数的默认值为下划线 ('_')。  
   
- [in] `lpszValid`  
- 包含一组有效字符的字符串。 `NULL` 指示所有字符都有效。 此参数的默认值为 `NULL`。  
+ [in]*lpszValid*  
+ 一个包含一组有效字符的字符串。 NULL 指示所有字符都都有效。 此参数的默认值为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此方法用于创建掩码的编辑控件的掩码。 从派生类`CMFCMaskedEdit`类并重写[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)你自己的代码用于自定义掩码处理方法。  
+ 使用此方法来创建掩码的编辑控件的掩码。 从派生类`CMFCMaskedEdit`类并重写[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)方法以使用你自己的代码进行自定义掩码处理。  
   
  下表列出了默认掩码字符：  
   
@@ -170,7 +171,7 @@ void EnableMask(
 |--------------------|----------------|  
 |D|数字。|  
 |d|数字或空格。|  
-|+|加 （+）、 减号 (-)，或空间。|  
+|+|加号 （+）、 减号 ('-')，或空格。|  
 |C|字母字符。|  
 |c|字母字符或空格。|  
 |包含当前请求的 URL 的|字母数字字符。|  
@@ -178,22 +179,22 @@ void EnableMask(
 |*|可打印字符。|  
   
 ##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
- 指定掩码的编辑控件是否允许用户选择的特定组输入或所有输入。  
+ 指定掩码的编辑控件是否允许用户选择特定组输入或所有输入。  
   
 ```  
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
- `TRUE` 若要选择仅组;`FALSE`来选择整个文本。 默认值为 `TRUE`。  
+ [in]*bEnable*  
+ 为 TRUE，则仅选择组;为 FALSE，则选择整个文本。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数指定掩码的编辑控件是否允许用户通过组或整个文本选择。  
+ 使用此函数指定掩码的编辑控件是否允许用户选择的组或整个文本。  
   
- 默认情况下，启用选择的组。 在这种情况下用户可以选择仅连续组的有效字符。  
+ 默认情况下，启用按组选择。 在这种情况下用户可以选择仅持续组的有效字符。  
   
- 例如，可以使用以下掩码的编辑控件来验证的电话号码：  
+ 例如，可能会使用以下掩码的编辑控件来验证某个电话号码：  
   
  `m_wndMaskEdit.EnableMask(`  
   
@@ -207,21 +208,21 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
   
- 如果启用了按组选择，用户可以检索仅"425"、"555"或"0187"字符串组。 如果禁用组选择用户可以在检索的电话号码的整个文本:"(425) 555-0187"。  
+ 如果启用了按组选择，用户可以检索仅"425"、"555"或"0187"字符串组。 如果禁用组选择用户可检索整个文本的电话号码:"(425) 555-0187"。  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
- 指定对仅经过屏蔽的字符，或针对整个掩码是否验证文本。  
+ 指定对仅屏蔽的字符，或者对整个掩码是否验证文本。  
   
 ```  
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
- `TRUE` 若要验证用户输入与仅屏蔽字符;`FALSE`以对整个掩码进行验证。 默认值为 `TRUE`。  
+ [in]*bEnable*  
+ 为 TRUE，则验证用户输入针对仅屏蔽字符;如果为 FALSE，来验证整个掩码。 默认值为 TRUE。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
- 检索验证从掩码的编辑控件的文本。  
+ 检索验证掩码的编辑控件中的文本。  
   
 ```  
 int GetWindowText(
@@ -232,25 +233,25 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `lpszStringBuf`  
- 指向接收来自编辑控件的文本的缓冲区的指针。  
+ [out]*lpszStringBuf*  
+ 指向接收的文本编辑控件中的缓冲区的指针。  
   
- [in] `nMaxCount`  
- 最大要接收的字符数。  
+ [in]*nMaxCount*  
+ 要接收的字符数目上限。  
   
- [out] `rstrString`  
- 对接收来自编辑控件的文本的字符串对象的引用。  
+ [out]*rstrString*  
+ 对接收的文本编辑控件中的字符串对象的引用。  
   
 ### <a name="return-value"></a>返回值  
- 第一个方法重载方法返回的字符串复制到的字节数`lpszStringBuf`参数缓冲区; 如果掩码的编辑控件具有没有文本为 0。  
+ 第一个方法重载方法返回的字符串复制到的字节数*lpszStringBuf*参数缓冲区中; 如果掩码的编辑控件具有没有文本，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法将文本复制到掩码的编辑控件从`lpszStringBuf`缓冲区或`rstrString`字符串。  
+ 此方法将文本复制到掩码的编辑控件从*lpszStringBuf*缓冲区或*rstrString*字符串。  
   
- 此方法重新定义了[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
+ 此方法将重新定义[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
   
 ##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
- 由框架调用以验证对相应的掩码字符的指定的字符。  
+ 由框架调用以验证对相应的掩码字符指定的字符。  
   
 ```  
 virtual BOOL IsMaskedChar(
@@ -259,17 +260,17 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `chChar`  
+ [in]*chChar*  
  要验证的字符。  
   
- [in] `chMaskChar`  
+ [in]*chMaskChar*  
  掩码字符串中的相应字符。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`chChar`参数是一种通过允许的字符`chMaskChar`参数; 否则为`FALSE`。  
+ 则为 TRUE *chChar*参数是一种允许字符*chMaskChar*参数; 否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法以验证自己的输入的字符。 有关掩码字符的详细信息，请参阅[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
+ 重写此方法可以验证自己的输入的字符。 有关掩码字符的详细信息，请参阅[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
   
 ##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  指定用户可以输入的有效字符的字符串。  
@@ -279,33 +280,33 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszValid`  
- 包含的一套有效的输入字符的字符串。 `NULL` 表示所有字符都有效。 此参数的默认值为 `NULL`。  
+ [in]*lpszValid*  
+ 包含的一套有效的输入字符的字符串。 NULL 表示所有字符都都有效。 此参数的默认值为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法定义的有效字符的列表。 如果输入的字符不在此列表中，掩码的编辑控件将不会接受它。  
+ 此方法用于定义一组有效字符。 如果输入的字符不在此列表中，掩码的编辑控件将不会接受它。  
   
- 下面的代码示例接受十六进制数字。  
+ 下面的代码示例接受仅十六进制数字。  
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
- 掩码的编辑控件中显示一条提示。  
+ 掩码的编辑控件中显示的提示。  
   
 ```  
 void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszString`  
- 指向以 null 结尾的字符串，将使用作为提示。  
+ [in]*lpszString*  
+ 指向以 null 终止的字符串，将使用作为提示。  
   
 ### <a name="remarks"></a>备注  
  此方法设置的控件文本。  
   
- 此方法重新定义了[CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)。  
+ 此方法将重新定义[CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CEdit 类](../../mfc/reference/cedit-class.md)

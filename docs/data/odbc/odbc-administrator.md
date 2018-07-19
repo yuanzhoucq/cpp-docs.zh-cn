@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090190"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理器
 ODBC 管理器注册和配置[数据源](../../data/odbc/data-source-odbc.md)供你在本地或通过网络。 向导使用提供由 ODBC 管理器的信息来创建你的用户连接到数据源的应用程序中的代码。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860887"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>更改图像上文本的字体（图标的图像编辑器）
 以下过程演示了如何：  

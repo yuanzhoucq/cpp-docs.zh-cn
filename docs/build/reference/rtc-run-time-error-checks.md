@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378452"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC（运行时错误检查）
 用于启用和禁用运行时错误检查功能，结合[runtime_checks](../../preprocessor/runtime-checks.md)杂注。  

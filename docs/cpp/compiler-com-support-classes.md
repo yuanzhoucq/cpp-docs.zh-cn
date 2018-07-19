@@ -1,5 +1,5 @@
 ---
-title: 编译器 COM 支持类 |Microsoft 文档
+title: 编译器 COM 支持类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939814"
 ---
 # <a name="compiler-com-support-classes"></a>编译器 COM 支持类
 **Microsoft 专用**  
   
- 标准类用于支持某些 COM 类型。 在定义这些类\<comdef.h > 和从类型库生成的标头文件。  
+ 标准类用于支持某些 COM 类型。 在定义了类\<comdef.h > 并从类型库生成的标头文件。  
   
 |类|目标|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|包装 `BSTR` 类型，以提供有用的运算符和方法。|  
 |[_com_error](../cpp/com-error-class.md)|定义引发的错误对象[_com_raise_error](../cpp/com-raise-error.md)在大多数失败中。|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封装 COM 接口指针，并自动执行对所需的调用`AddRef`，**版本**，和`QueryInterface`。|  
-|[_variant_t](../cpp/variant-t-class.md)|包装**VARIANT**类型，以提供有用的运算符和方法。|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封装 COM 接口指针，并自动执行对所需的调用`AddRef`， `Release`，和`QueryInterface`。|  
+|[_variant_t](../cpp/variant-t-class.md)|包装 `VARIANT` 类型，以提供有用的运算符和方法。|  
   
 **结束 Microsoft 专用**  
   

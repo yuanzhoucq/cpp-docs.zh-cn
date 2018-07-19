@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324897"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控件容器：使用非对话框容器中的控件
 在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 **创建**的包装器类，由 Visual c + + 中，插入成员函数可以动态地创建控件的实例，而无需对话框。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382686"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在对话框中使用公共控件
 Windows 公共控件可在[对话框](../mfc/dialog-boxes.md)，窗体视图、 记录视图和任何其他基于对话框模板的窗口。 以下过程有细微更改，同样适用于窗体。  

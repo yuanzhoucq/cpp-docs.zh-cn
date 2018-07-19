@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688565"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 进行多线程编程
 Microsoft 基础类 (MFC) 库提供支持多线程应用程序。 本主题介绍进程、 线程和 MFC 方法为多线程处理。  

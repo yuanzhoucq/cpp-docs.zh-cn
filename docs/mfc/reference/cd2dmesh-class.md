@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce3ad5cfa7df335b5633dffbdd221bf59f01bb29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc5db59c16c10026bf411d640c864cf0107691cb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952230"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 类
 ID2D1Mesh 包装器。  
@@ -78,7 +79,7 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DMesh::m_pMesh](#m_pmesh)|指向 ID2D1Mesh 的指针。|  
   
@@ -107,7 +108,7 @@ void Attach(ID2D1Mesh* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
@@ -120,10 +121,10 @@ CD2DMesh(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DMesh::Create  
@@ -134,7 +135,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  

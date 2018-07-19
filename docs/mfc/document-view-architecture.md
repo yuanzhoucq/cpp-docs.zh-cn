@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350050"
 ---
 # <a name="documentview-architecture"></a>文档/视图体系结构
 默认情况下，MFC 应用程序向导创建的应用程序主干具有文档类和视图类。 MFC 分隔到这两个类的数据管理。 该文档将数据存储和管理数据的打印和协调更新的数据的多个视图。 该视图显示的数据，并管理与它，包括选择和编辑的用户交互。  

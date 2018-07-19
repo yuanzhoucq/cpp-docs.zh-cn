@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863577"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress 方法
 调用当前进度事件处理程序。  

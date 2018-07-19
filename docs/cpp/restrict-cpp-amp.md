@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942518"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 可将限制说明符应用于函数和 lambda 声明。 它会强制对函数中的代码以及使用 C++ Accelerated Massive Parallelism (C++ AMP) 运行时的应用程序中的函数的行为实施限制。  
   
 > [!NOTE]
->  璝惠`restrict`关键字属于`__declspec`存储类特性，请参阅[限制](../cpp/restrict.md)。  
+>  璝惠**限制**关键字的一部分 **__declspec**存储类特性，请参见[限制](../cpp/restrict.md)。  
   
- `restrict` 子句采用以下形式：  
+ **限制**子句采用以下形式：  
   
 |子句|描述|  
 |------------|-----------------|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |一系列 `restrict(cpu)` 和 `restrict(amp)`。|函数必须遵循 `restrict(cpu)` 和 `restrict(amp)`的限制。 函数可由使用 `restrict(cpu)`、`restrict(amp)`、`restrict(cpu, amp)` 或 `restrict(amp, cpu)` 声明的函数调用。<br /><br /> `restrict(A) restrict(B)` 形式可以编写为 `restrict(A,B)`。|  
   
 ## <a name="remarks"></a>备注  
- `restrict` 关键字是上下文关键字。 限制说明符、`cpu` 和 `amp` 不是保留字。 说明符列表不可扩展。 没有 `restrict` 子句的函数与具有 `restrict(cpu)` 子句的函数相同。  
+ **限制**关键字是上下文关键字。 限制说明符、`cpu` 和 `amp` 不是保留字。 说明符列表不可扩展。 一个函数，但没有**限制**子句是具有的函数相同`restrict(cpu)`子句。  
   
  包含 `restrict(amp)` 子句的函数具有以下限制：  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 -   函数必须可内联。  
   
--   函数只能声明 `int`、`unsigned int`、`float` 和 `double` 变量，以及只包含这些类型的类和结构。 也允许使用 `bool`，但如果您在复合类型中使用它，则它必须是 4 字节对齐的。  
+-   该函数可以仅声明**int**，**无符号的整数**， **float**，并**double**变量、 类、 类和结构，它们仅包含这些类型。 **bool**还允许，但它必须是 4 字节对齐如果使用复合类型中。  
   
 -   Lambda 函数无法通过引用捕获，并且无法捕获指针。  
   
@@ -68,30 +69,30 @@ ms.lasthandoff: 05/03/2018
   
     -   指向指针的指针。  
   
-    -   `goto` 语句。  
+    -   **转到**语句。  
   
     -   Labeled 语句。  
   
-    -   `try`、`catch` 或 `throw` 语句。  
+    -   **请尝试**，**捕获**，或**引发**语句。  
   
     -   全局变量。  
   
     -   静态变量。 使用[tile_static 关键字](../cpp/tile-static-keyword.md)相反。  
   
-    -   `dynamic_cast` 强制转换。  
+    -   **dynamic_cast**强制转换。  
   
-    -   `typeid` 运算符。  
+    -   **Typeid**运算符。  
   
     -   asm 声明。  
   
     -   Varargs。  
   
- 函数限制的讨论，请参阅[restrict(amp) 限制](http://go.microsoft.com/fwlink/p/?LinkId=251089)。  
+ 有关函数限制的讨论，请参阅[restrict （amp) 限制](http://go.microsoft.com/fwlink/p/?LinkId=251089)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用`restrict(amp)`子句。  
   
-```  
+```cpp 
   
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376268"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL（全程序优化）
 启用全程序优化。  

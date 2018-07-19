@@ -1,6 +1,6 @@
 ---
 title: 使用 Visual Studio IDE 进行 C++ 桌面开发 | Microsoft Docs
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328875"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253810"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>使用 Visual Studio IDE 进行 C++ 桌面开发
 
@@ -27,7 +27,7 @@ Visual Studio 集成开发环境 (IDE) 提供一组功能，帮助你管理大�
 
 ## <a name="prerequisites"></a>系统必备
 
-如果尚未安装 Visual Studio，现在即可安装。 若要获取 Visual Studio，则可以从 [Visual Studio 下载](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)进行下载。 请确保在安装 Visual Studio 时包含 Visual C++ 开发工具，因为该工具不会默认安装。 有关如何安装 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+如果尚未安装 Visual Studio，现在即可安装。 有关下载链接和快速演练，请参阅[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。 有关如何常规安装 Visual Studio 的详细信息以及出现错误时的故障排除提示，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 安装 Visual Studio 时，请务必选择“使用 C++ 的桌面开发”工作负荷以包含 C++ 编译器、工具和库，因为不会默认安装它们。
 
 这些演练假定你已安装 Visual Studio 和 Windows 桌面开发所需的 Visual C++ 语言和组件。 我们假定你了解 C++ 语言的基础知识。 如果需要了解 C++，这里有许多可用的书籍和 Web 资源。 “标准 C++ 基础”网站的[快速入门](https://isocpp.org/get-started)是一个不错的开始。
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367441"
 ---
 # <a name="fpcsr"></a>FpCsr
 注册状态还包括 x87 FPU 控制字。 调用约定决定此寄存器是非非易失性。  

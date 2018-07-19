@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::CreateInstance |Microsoft 文档
+title: _com_ptr_t::CreateInstance |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942479"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft 专用**  
   
- 创建给定的对象的新实例**CLSID**或**ProgID**。  
+ 创建一个对象的新实例`CLSID`或`ProgID`。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,29 +50,29 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>参数  
- `rclsid`  
- **CLSID**的对象。  
+ *rclsid*  
+ `CLSID`的对象。  
   
- `clsidString`  
- 由 Unicode 字符串，包含**CLSID** (从"**{**") 或**ProgID**。  
+ *clsidString*  
+ 由 Unicode 字符串，包含`CLSID`(从"**{**") 或`ProgID`。  
   
- `clsidStringA`  
- 使用 ANSI 代码页，包含的多字节字符串**CLSID** (从"**{**") 或**ProgID**。  
+ *clsidStringA*  
+ 使用 ANSI 代码页，包含的多字节字符串`CLSID`(从"**{**") 或`ProgID`。  
   
- `dwClsContext`  
+ *dwClsContext*  
  运行可执行代码的上下文。  
   
- `pOuter`  
- 未知的外部对象[聚合](../atl/aggregation.md)。  
+ *pOuter*  
+ 未知的外部[聚合](../atl/aggregation.md)。  
   
 ## <a name="remarks"></a>备注  
- 这些成员函数调用 `CoCreateInstance` 来创建新的 COM 对象，然后查询此智能指针的接口类型。 生成的指针随后将封装在此 `_com_ptr_t` 对象内。 **版本**调用以减少前面封装的指针的引用计数。 此例程返回 `HRESULT` 以指示成功或失败。  
+ 这些成员函数调用 `CoCreateInstance` 来创建新的 COM 对象，然后查询此智能指针的接口类型。 生成的指针随后将封装在此 `_com_ptr_t` 对象内。 `Release` 调用以减少前面封装指针的引用计数。 此例程将返回 HRESULT，指示成功或失败。  
   
--   **CreateInstance (** `rclsid` **，**`dwClsContext`**)** 创建给定的对象的新运行实例**CLSID**。        
+-   **CreateInstance (***rclsid* **，***dwClsContext***)** 创建给定的对象的新运行实例`CLSID`.        
   
--   **CreateInstance (** `clsidString` **，**`dwClsContext`**)** 创建给定的 Unicode 字符串，包含的对象的新运行实例**CLSID**(从"**{**") 或**ProgID**。        
+-   **CreateInstance (***clsidString* **，***dwClsContext***)** 创建给定的对象的新运行实例Unicode 字符串包含`CLSID`(从"**{**") 或`ProgID`。        
   
--   **CreateInstance (** `clsidStringA` **，**`dwClsContext`**)** 创建给定的多字节字符字符串，包含的对象的新运行实例**CLSID** (从"**{**") 或**ProgID**。       调用[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，这假定字符串是在 ANSI 代码页中而不是 OEM 代码页。  
+-   **CreateInstance (***clsidStringA* **，***dwClsContext***)** 创建给定的对象的新运行实例多字节字符字符串包含`CLSID`(从"**{**") 或`ProgID`。       调用[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。  
   
  **结束 Microsoft 专用**  
   

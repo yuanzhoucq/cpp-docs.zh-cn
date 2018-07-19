@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378413"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr （启用 extern constexpr 变量）
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 添加 **/Zc:externConstexpr**或 **/Zc:externConstexpr-** 到**其他选项：**窗格。
+1. 添加 **/Zc:externConstexpr**或 **/Zc:externConstexpr-** 到**其他选项：** 窗格。
 
 ## <a name="see-also"></a>请参阅
 

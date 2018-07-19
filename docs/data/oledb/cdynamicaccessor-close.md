@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089306"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 取消绑定所有列，释放分配的内存，并释放[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)类中的接口指针。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255993"
 ---
 # <a name="compiler-error-c3553"></a>编译器错误 C3553
 decltype 应为表达式而不是类型  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367480"
 ---
 # <a name="filename-parts-syntax"></a>文件名部分语法
 在命令中的文件名部分语法表示第一个依赖项文件名 （它可能是暗含的依赖项） 的组件。 文件名组件文件的驱动器、 路径、 基名称和按指定的扩展名不是它存在于磁盘上。 使用 **%s**来表示完整的文件名。 使用 **%&#124;**[*部件*]**F** (竖线字符百分号后面跟着) 来表示部分文件名，其中*部件*可以为零个或多个以下的字母，按任何顺序排列。  

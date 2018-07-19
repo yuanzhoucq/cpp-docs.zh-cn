@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690538"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   使用 lastprivate 子句
 有时正确的执行取决于循环的最后一个迭代分配给变量的值。 此类程序都必须列出所有此类变量作为自变量到`lastprivate`子句 ([部分 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md)第 27 页上)，以便变量的值与按顺序执行循环时相同。  

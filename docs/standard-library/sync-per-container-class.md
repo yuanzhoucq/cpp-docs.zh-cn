@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957116"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 类
 
@@ -39,7 +40,7 @@ class sync_per_container
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*缓存*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -65,12 +66,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|同步筛选器的缓存对象。|
-|`Other`|要用于比较是否相等的缓存对象。|
+|*缓存*|同步筛选器的缓存对象。|
+|*其他*|要用于比较是否相等的缓存对象。|
 
 ### <a name="return-value"></a>返回值
 
-此成员函数总是返回 `false`。
+成员函数总是返回**false**。
 
 ### <a name="remarks"></a>备注
 

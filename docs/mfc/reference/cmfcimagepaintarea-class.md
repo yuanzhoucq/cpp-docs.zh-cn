@@ -1,5 +1,5 @@
 ---
-title: CMFCImagePaintArea 类 |Microsoft 文档
+title: CMFCImagePaintArea 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852469"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 类
 提供用于修改图像编辑器对话框中的图像的图片区域。  
@@ -58,16 +59,16 @@ class CMFCImagePaintArea : public CButton
 |名称|描述|  
 |[CMFCImagePaintArea::GetMode](#getmode)|检索当前的绘制模式。|  
 |[CMFCImagePaintArea::SetBitmap](#setbitmap)|设置图片区域的位图图像。|  
-|[CMFCImagePaintArea::SetColor](#setcolor)|设置当前绘图色。|  
-|[CMFCImagePaintArea::SetMode](#setmode)|设置的当前绘图模式。|  
+|[CMFCImagePaintArea::SetColor](#setcolor)|设置当前绘图的颜色。|  
+|[CMFCImagePaintArea::SetMode](#setmode)|设置当前的绘制模式。|  
   
 ### <a name="remarks"></a>备注  
- 此类不应在代码中直接使用。  
+ 此类不适于在代码中直接使用。  
   
- 框架使用此类以便在图像编辑器对话框中显示该图片区域。 有关图像编辑器对话框的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。  
+ 该框架使用此类以在图像编辑器对话框中显示图片区域。 有关图像编辑器对话框的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何构造的对象`CMFCImagePaintArea`类中，设置当前绘图时的颜色，设置当前绘图模式中，并设置图片区域的位图图像。  
+ 下面的示例演示如何构造的对象`CMFCImagePaintArea`类中，设置当前绘图时的颜色，设置当前的绘制模式，并设置图片区域的位图图像。  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
@@ -97,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pParentDlg`|指向父级的图像编辑器的对话框中的指针。|  
+|[in]*pParentDlg*|指向是父级的图像编辑器对话框中的指针。|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  检索当前的绘制模式。  
@@ -121,13 +122,13 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pBitmap`|要显示的新位图图像。|  
+|[in]*pBitmap*|要显示的新位图图像。|  
   
 ### <a name="remarks"></a>备注  
- 如果`pBitmap`是`NULL`，此方法可修改绘制区域的大小设置为零。 否则，它可修改绘制区域的大小设置为提供的位图图像的大小。  
+ 如果*pBitmap*为 NULL，此方法可修改绘制区域的大小设置为零。 否则，它将可修改绘制区域的大小设置为提供的位图图像的大小。  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
- 设置当前绘图色。  
+ 设置当前绘图的颜色。  
   
 ```  
 void SetColor(COLORREF color);
@@ -138,15 +139,15 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `color`|新的绘图色。|  
+|[in]*颜色*|新的绘图颜色。|  
   
 ### <a name="remarks"></a>备注  
- 当从映像编辑器调色板栏选择一种颜色或颜色选取器，框架调用此方法以更新当前绘制颜色。 初始绘制颜色为黑色 (`COLORREF`值为 0)。  
+ 当从图像编辑器调色板栏中选择一种颜色或颜色选取器中，框架调用此方法来更新当前绘图的颜色。 初始绘图的颜色为黑色 （0 COLORREF 值）。  
   
- 绘制颜色由除所有绘图模式的图像编辑器对话框`IMAGE_EDIT_MODE_COLOR`。 关于绘图模式的详细信息，请参阅[cmfcimagepaintarea:: Image_edit_mode 枚举](cmfcimagepaintarea-image-edit-mode-enumeration.md)。  
+ 图像编辑器对话框中的所有绘图模式下，除了 IMAGE_EDIT_MODE_COLOR 使用绘图的颜色。 有关绘制模式的详细信息，请参阅[cmfcimagepaintarea:: Image_edit_mode 枚举](cmfcimagepaintarea-image-edit-mode-enumeration.md)。  
   
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
- 设置的当前绘图模式。  
+ 设置当前的绘制模式。  
   
 ```  
 void SetMode(IMAGE_EDIT_MODE mode);
@@ -157,9 +158,9 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，该值指定当前的绘制模式。|  
+|[in]*模式*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，该值指定当前的绘制模式。|  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)

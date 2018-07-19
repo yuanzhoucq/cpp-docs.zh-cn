@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418424"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 内置运算符、 优先级和关联性
 
@@ -56,7 +57,7 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 |[前缀递增](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[前缀递减](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[二进制反码](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
-|[逻辑非](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
+|[逻辑非](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[一元求反](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[一元加](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[地址的](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
@@ -83,7 +84,7 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 |[大于或等于](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**组 9 优先级，从左到右的关联性**|
 |[相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|[不相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[不相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[\!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**组 10 优先顺序从左到右的关联性**|
 |[按位“与”](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**组 11 优先级，从左到右的关联性**|

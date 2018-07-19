@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091798"
 ---
 # <a name="recordset-filtering-records-odbc"></a>记录集：筛选记录 (ODBC)
 本主题适用于 MFC ODBC 类。  

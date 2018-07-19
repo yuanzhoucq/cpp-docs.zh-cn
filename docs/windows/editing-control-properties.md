@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873480"
 ---
 # <a name="editing-control-properties"></a>编辑控件属性
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>若要编辑的控件或控件属性  

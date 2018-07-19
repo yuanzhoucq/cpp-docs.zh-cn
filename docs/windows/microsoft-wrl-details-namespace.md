@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881765"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空间
 支持 WRL 基础结构，不应在代码中直接使用。  

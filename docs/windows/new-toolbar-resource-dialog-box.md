@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877535"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>“新建工具栏资源”对话框
 新建工具栏资源对话框中，可指定的宽度和高度要添加到工具栏资源的按钮。 默认值为 16 × 15 像素。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882571"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>“对话框编辑器”选项卡，工具箱
 对话框编辑器选项卡将出现在[工具箱窗口](/visualstudio/ide/reference/toolbox)在对话框编辑器中工作时。 若要将控件添加到新的对话框中，将控件从工具箱拖到您正在创建对话框 (有关详细信息，请参阅[将控件添加到对话框](adding-a-control-to-a-dialog-box.md))。 然后，可以移动控件或更改其大小和形状。  

@@ -1,5 +1,5 @@
 ---
-title: COleChangeIconDialog 类 |Microsoft 文档
+title: COleChangeIconDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850561"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 类
 用于 OLE“更改图标”对话框。  
@@ -54,21 +55,21 @@ class COleChangeIconDialog : public COleDialog
 |名称|描述|  
 |----------|-----------------|  
 |[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|执行在对话框中指定的更改。|  
-|[COleChangeIconDialog::DoModal](#domodal)|OLE 2 更改图标对话框中显示。|  
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|获取与此项图标窗体关联的图元文件的句柄。|  
+|[COleChangeIconDialog::DoModal](#domodal)|显示 OLE 2 更改图标对话框。|  
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|获取与此项的图标窗体相关联的图元文件的句柄。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleChangeIconDialog::m_ci](#m_ci)|结构，它控制的对话框中的行为。|  
+|[COleChangeIconDialog::m_ci](#m_ci)|结构，它控制对话框的行为。|  
   
 ## <a name="remarks"></a>备注  
- 创建类的对象`COleChangeIconDialog`如果想要调用此对话框。 后`COleChangeIconDialog`构造对象，则可以使用[m_ci](#m_ci)结构初始化的值或在对话框中的控件的状态。 `m_ci`结构属于类型**OLEUICHANGEICON**。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+ 创建类的对象`COleChangeIconDialog`时您想要调用此对话框。 之后`COleChangeIconDialog`构造对象，则可以使用[m_ci](#m_ci)结构初始化的值或在对话框中的控件的状态。 `m_ci`结构属于类型 OLEUICHANGEICON。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
   
  有关详细信息，请参阅[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的结构。  
   
- 关于 OLE 特定对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,7 +90,7 @@ class COleChangeIconDialog : public COleDialog
  **标头：** afxodlgs.h  
   
 ##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
- 此函数仅构造`COleChangeIconDialog`对象。  
+ 此函数将构造仅`COleChangeIconDialog`对象。  
   
 ```  
 explicit COleChangeIconDialog(
@@ -99,43 +100,43 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要转换的项。  
   
- `dwFlags`  
- 使用的按位组合起来，创建标志，其中包含任意数量的以下值-或运算符：  
+ *dwFlags*  
+ 使用按位组合起来，创建标记，其中包含任意数量的以下值-或运算符：  
   
-- **CIF_SELECTCURRENT**指定，在调用对话框时最初选择当前的单选按钮。 这是默认设置。  
+- CIF_SELECTCURRENT 指定当前的单选按钮将所选最初调用的对话框时。 这是默认设置。  
   
-- **CIF_SELECTDEFAULT**指定，在调用对话框时最初选择的默认单选按钮。  
+- CIF_SELECTDEFAULT 指定默认单选按钮将所选最初调用的对话框时。  
   
-- **CIF_SELECTFROMFILE**指定，在调用对话框时最初选择文件中的单选按钮。  
+- CIF_SELECTFROMFILE 指定文件中的单选按钮将所选最初调用的对话框时。  
   
-- **CIF_SHOWHELP**指定调用对话框中时，将显示帮助按钮。  
+- CIF_SHOWHELP 指定对话框的调用时，将显示帮助按钮。  
   
-- **CIF_USEICONEXE**指定应从中指定的可执行文件中提取图标**szIconExe**字段[m_ci](#m_ci)而不是检索的类型。 这可用于嵌入或链接到非 OLE 文件。  
+- CIF_USEICONEXE 指定应从中指定的可执行文件中提取图标`szIconExe`字段[m_ci](#m_ci)而不是检索到的类型。 这可用于嵌入或链接到非 OLE 文件。  
   
- `pParentWnd`  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口将设置为应用程序主窗口。  
+ *pParentWnd*  
+ 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象属于的。 如果它为 NULL，父窗口的对话框的将设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
- 若要显示对话框中，调用[DoModal](#domodal)函数。  
+ 若要显示的对话框，请调用[DoModal](#domodal)函数。  
   
  有关详细信息，请参阅[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的结构。  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
- 调用此函数可更改到对话框后中选定的一个表示项的图标[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数可更改到对话框后中选择一个表示项的图标[DoModal](#domodal)返回 IDOK。  
   
 ```  
 BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向以更改其图标的项。  
   
 ### <a name="return-value"></a>返回值  
- 如果更改成功; 则为非 0否则为 0。  
+ 如果成功，则更改为非零值否则为 0。  
   
 ##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  调用此函数可显示 OLE 更改图标对话框。  
@@ -147,40 +148,40 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>返回值  
  对话框中的完成状态。 以下值之一：  
   
-- **IDOK**如果成功显示该对话框。  
+- IDOK 如果成功显示的对话框。  
   
-- **IDCANCEL**如果用户已取消对话框。  
+- 如果用户已取消对话框的，IDCANCEL。  
   
-- **IDABORT**如果发生错误。 如果**IDABORT**是返回，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型详细信息。 有关可能的错误的列表，请参阅[OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要通过设置成员的初始化各种对话框控件[m_ci](#m_ci)结构，应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
+ 如果你想要通过设置的成员初始化各种对话框控件[m_ci](#m_ci)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
   
- 如果`DoModal`返回**IDOK**，您可以调用其他成员函数检索的设置或由用户输入到对话框中的信息。  
+ 如果`DoModal`返回 IDOK，您可以调用其他成员函数以检索的设置或由用户输入到对话框中的信息。  
   
 ##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
- 调用此函数可获取包含所选的项的图标化方面的图元文件的句柄。  
+ 调用此函数可获取包含选定项的图标方面的图元文件的句柄。  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果通过选择解除对话框中包含的新建图标，图标化方面的图元文件的句柄**确定**; 否则为在显示对话框之前, 已作为它的图标。  
+ 如果通过选择解除对话框的包含新建图标，图标方面的图元文件的句柄**确定**; 否则为对话框中显示前作为它的图标。  
   
 ##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
- 类型的结构**OLEUICHANGEICON**用于控制更改图标对话框中的行为。  
+ 类型 OLEUICHANGEICON 的结构，用于控制更改图标对话框中的行为。  
   
 ```  
 OLEUICHANGEICON m_ci;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 直接或通过成员函数，则可以修改此结构的成员。  
+ 直接或通过成员函数，可以修改此结构的成员。  
   
  有关详细信息，请参阅[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [COleDialog 类](../../mfc/reference/coledialog-class.md)

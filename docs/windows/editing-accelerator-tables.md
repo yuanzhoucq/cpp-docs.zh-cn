@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872934"
 ---
 # <a name="editing-accelerator-tables"></a>编辑快捷键对应表
 在 Visual c + + 中，你可以直接使用就地编辑快捷键编辑器中编辑快捷键对应表。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111440"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>架构行集类和 Typedef 类
 架构是拥有，或由特定用户已创建的数据库对象的集合。 目录可以包含一个或多个架构，但必须始终包含调用 INFORMATION_SCHEMA，其中包含的视图和域的信息架构的架构。 OLE DB 中的架构信息检索使用预定义的架构行集，并包含类型、 表、 列、 索引、 视图、 断言和约束、 统计信息、 字符集、 排序规则，和域。  

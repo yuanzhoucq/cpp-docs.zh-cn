@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928764"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
-下列说明和示例演示如何捕获和删除异常。 有关详细信息**重**，**捕获**，和`throw`关键字，请参阅[c + + 异常处理](../cpp/cpp-exception-handling.md)。  
+下列说明和示例演示如何捕获和删除异常。 有关详细信息**重**，**捕获**，和**引发**关键字，请参阅[c + + 异常处理](../cpp/cpp-exception-handling.md)。  
   
  你的异常处理程序必须删除其处理的异常对象，因为如果未删除异常将导致在代码捕获异常时出现内存泄漏。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 -   执行返回内**捕获**块。  
   
 > [!NOTE]
->  删除时`CException`，使用**删除**成员函数删除异常。 不要使用**删除**关键字，因为如果异常不在堆上，它就可能会失败。  
+>  删除时`CException`，使用`Delete`成员函数删除异常。 不要使用**删除**关键字，因为如果异常不在堆上，它就可能会失败。  
   
 #### <a name="to-catch-and-delete-exceptions"></a>捕获和删除异常  
   

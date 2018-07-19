@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121723"
 ---
 # <a name="csocketfile-class"></a>CSocketFile 类
 用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。  
@@ -47,11 +48,11 @@ class CSocketFile : public CFile
  要序列化数据 （发送），应将其插入到存档，其中调用`CSocketFile`成员函数以将数据写入`CSocket`对象。 若要反序列化 （接收） 存档中提取数据。 这将导致调用的存档`CSocketFile`成员函数将从中读取数据`CSocket`对象。  
   
 > [!TIP]
->  除了使用`CSocketFile`如下文所述，你可以使用它作为独立的文件对象，就像可以与`CFile`，将其基类。 你还可以使用`CSocketFile`与任何基于存档的 MFC 序列化函数。 因为`CSocketFile`不支持的所有`CFile`的功能，某些默认 MFC 序列化函数与不兼容`CSocketFile`。 这是尤其如此`CEditView`类。 不应尝试序列化`CEditView`数据通过`CArchive`对象附加到`CSocketFile`对象使用`CEditView::SerializeRaw`; 使用**CEditView::Serialize**相反。 `SerializeRaw`函数需要的文件对象，以包含函数，如`Seek`，则该`CSocketFile`没有。  
+>  除了使用`CSocketFile`如下文所述，你可以使用它作为独立的文件对象，就像可以与`CFile`，将其基类。 你还可以使用`CSocketFile`与任何基于存档的 MFC 序列化函数。 因为`CSocketFile`不支持的所有`CFile`的功能，某些默认 MFC 序列化函数与不兼容`CSocketFile`。 这是尤其如此`CEditView`类。 不应尝试序列化`CEditView`数据通过`CArchive`对象附加到`CSocketFile`对象使用`CEditView::SerializeRaw`; 使用`CEditView::Serialize`相反。 `SerializeRaw`函数需要的文件对象，以包含函数，如`Seek`，则该`CSocketFile`没有。  
   
- 当你使用`CArchive`与`CSocketFile`和`CSocket`，可能会遇到这样的情况其中**CSocket::Receive**进入循环 (通过**PumpMessages(FD_READ)**) 等待所需的字节的量。 这是因为 Windows 套接字允许每个 FD_READ 通知，只有一个接收调用，但`CSocketFile`和`CSocket`允许每 FD_READ 的多个接收调用。 如果你收到 FD_READ 要读取的数据时，应用程序挂起。 如果你永远不会获得另一个 FD_READ，应用程序将停止通过套接字进行通信。  
+ 当你使用`CArchive`与`CSocketFile`和`CSocket`，可能会遇到这样的情况其中`CSocket::Receive`进入循环 (通过`PumpMessages(FD_READ)`) 等待请求的字节量。 这是因为 Windows 套接字允许每个 FD_READ 通知，只有一个接收调用，但`CSocketFile`和`CSocket`允许每 FD_READ 的多个接收调用。 如果你收到 FD_READ 要读取的数据时，应用程序挂起。 如果你永远不会获得另一个 FD_READ，应用程序将停止通过套接字进行通信。  
   
- 可以解决此问题，如下所示。 在`OnReceive`你套接字类，调用的方法**CAsyncSocket::IOCtl (FIONREAD，...)** 之前调用`Serialize`你消息类时所需的数据从套接字读取超过一个的 TCP 数据包 （为网络中，通常至少 1096 字节的最大传输单元） 的大小的方法。 如果可用的数据的大小小于所需，等待以接收和仅然后开始读取的操作的所有数据。  
+ 可以解决此问题，如下所示。 在`OnReceive`你套接字类，调用的方法`CAsyncSocket::IOCtl(FIONREAD, ...)`之前调用`Serialize`你消息类时所需的数据从套接字读取超过一个的 TCP 数据包 （最大传输单元为网络中的大小的方法通常至少 1096 字节)。 如果可用的数据的大小小于所需，等待以接收和仅然后开始读取的操作的所有数据。  
   
  在下面的示例中，`m_dwExpected`是近似用户期望接收的字节数。 假定，您将其声明在其他位置中你的代码。  
   
@@ -79,17 +80,17 @@ explicit CSocketFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSocket`  
+ *pSocket*  
  若要将附加到的套接字`CSocketFile`对象。  
   
- `bArchiveCompatible`  
- 指定文件的对象是否为用于`CArchive`对象。 传递**FALSE**仅当你想要使用`CSocketFile`对象以独立的方式，就像独立`CFile`对象，但存在某些限制。 此标志会更改如何`CArchive`对象附加到`CSocketFile`对象管理其缓冲区以进行读取。  
+ *bArchiveCompatible*  
+ 指定文件的对象是否为用于`CArchive`对象。 传递 FALSE 仅当你想要使用`CSocketFile`对象以独立的方式，就像独立`CFile`对象，但存在某些限制。 此标志会更改如何`CArchive`对象附加到`CSocketFile`对象管理其缓冲区以进行读取。  
   
 ### <a name="remarks"></a>备注  
  对象的析构函数解除之间的关联本身的套接字对象超出范围或删除的对象时。  
   
 > [!NOTE]
->  A`CSocketFile`还可用作 （受限） 文件，而没有`CArchive`对象。 默认情况下，`CSocketFile`构造函数的`bArchiveCompatible`参数是**TRUE**。 此特性指定的文件对象有用于存档。 若要使用但未存档的文件对象，将传递**FALSE**中`bArchiveCompatible`参数。  
+>  A`CSocketFile`还可用作 （受限） 文件，而没有`CArchive`对象。 默认情况下，`CSocketFile`构造函数的*bArchiveCompatible*参数为 TRUE。 此特性指定的文件对象有用于存档。 若要使用的文件对象，但未存档，传入 FALSE 中的*bArchiveCompatible*参数。  
   
  在"存档兼容"模式下，`CSocketFile`对象提供更好的性能并减少的危险"死锁"。 这两个发送和接收套接字等待相互关联，或为常见的资源时，将发生死锁。 如果这种情况下可能会出现`CArchive`对象结合`CSocketFile`与其处理的方式`CFile`对象。 与`CFile`，存档可以假定，如果它收到较少的字节数比其请求，文件结尾已达到。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166330"
 ---
 # <a name="compiler-error-c2113"></a>编译器错误 C2113
 “-”：指针只能从另一个指针上进行减法运算  

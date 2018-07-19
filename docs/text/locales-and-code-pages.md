@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858141"
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
 将区域设置 ID 反映本地的约定和语言特定的地理区域。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两个不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。  

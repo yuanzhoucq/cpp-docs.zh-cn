@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105899"
 ---
 # <a name="using-manual-accessors"></a>使用手动访问器
 有四个事项需要时处理未知的命令执行的操作：  

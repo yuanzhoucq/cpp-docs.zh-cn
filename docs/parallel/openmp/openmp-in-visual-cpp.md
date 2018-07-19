@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691139"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
 OpenMP C 和 c + + 应用程序接口，可以编写的应用程序有效地使用多个处理器。 Visual c + + 支持 OpenMP 2.0 标准。  

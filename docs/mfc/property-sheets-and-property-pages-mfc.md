@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348977"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>属性表和属性页 (MFC)
 MFC[对话框](../mfc/dialog-boxes.md)可以通过将合并属性表和属性页"选项卡对话框"查看对其执行。 MFC 中称为"属性表"，这种类型的对话框中，类似于在 Microsoft Word、 Excel 和 Visual c + +，许多对话框框中似乎包含选项卡式表，类似于文件文件夹前后或的级联的 windows 组中所示的堆栈的堆栈。 在前面的选项卡上的控件可见。;仅标记选项卡将在后面的选项卡上可见。 属性表的用处尤其显著管理大量的属性或相当整齐成若干个组的设置。 通常情况下，一个属性表可以通过将多个单独的对话框简化用户界面。  

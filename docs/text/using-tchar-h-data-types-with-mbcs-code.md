@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858349"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>将 TCHAR.H 数据类型用于 _MBCS 代码
 当清单常量 **_MBCS**是定义，给定的一般文本例程映射到例程的以下类型之一：  

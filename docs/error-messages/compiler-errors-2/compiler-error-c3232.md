@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246550"
 ---
 # <a name="compiler-error-c3232"></a>编译器错误 C3232
 “param”：泛型类型参数不能用于限定名中  

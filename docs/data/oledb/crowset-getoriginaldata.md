@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098402"
 ---
 # <a name="crowsetgetoriginaldata"></a>CRowset::GetOriginalData
 调用**IRowsetUpdate::GetOriginalData**检索最近从提取或传输到数据源的数据。  

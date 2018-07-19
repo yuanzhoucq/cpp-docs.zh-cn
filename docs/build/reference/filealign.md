@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373265"
 ---
 # <a name="filealign-align-sections-in-files"></a>/ FILEALIGN （文件中的对齐部分）
 

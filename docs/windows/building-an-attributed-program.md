@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862272"
 ---
 # <a name="building-an-attributed-program"></a>生成特性化程序
 Visual c + + 特性置于你的源代码后，您可能希望 Visual c + + 编译器可为你生成类型库和.idl 文件。 以下链接器选项生成.tlb 和.idl 文件的帮助：  

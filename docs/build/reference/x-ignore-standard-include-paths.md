@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376463"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X（忽略标准包含路径）
 阻止编译器在 PATH 和 INCLUDE 环境变量中指定目录中的包含文件搜索。  

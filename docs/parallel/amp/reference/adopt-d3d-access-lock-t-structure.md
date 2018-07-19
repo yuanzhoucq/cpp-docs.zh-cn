@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695962"
 ---
 # <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t 结构
 而不获取，应采用标记类型以便指示 D3D 访问锁。  

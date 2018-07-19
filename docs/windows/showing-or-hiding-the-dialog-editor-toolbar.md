@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891589"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>显示或隐藏对话框编辑器工具栏
 打开对话框编辑器时，对话框编辑器工具栏将自动显示在你的解决方案的顶部。  

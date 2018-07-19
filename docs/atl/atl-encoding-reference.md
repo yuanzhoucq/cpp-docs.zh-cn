@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358623"
 ---
 # <a name="atl-encoding-reference"></a>ATL 编码引用
 在常见的 Internet 标准，如进行 uuencode 十六进制、 范围和 UTF8 编码支持在 atlenc.h 中找到的代码。  

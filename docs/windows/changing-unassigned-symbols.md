@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855378"
 ---
 # <a name="changing-unassigned-symbols"></a>更改未分配的符号
 中时，在[资源符号对话框](../windows/resource-symbols-dialog-box.md)，你可以编辑或删除现有尚未分配给资源或对象的符号。  

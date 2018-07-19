@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343000"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp：应用程序类
 MFC 中的主应用程序类将封装 Windows 操作系统的应用程序的初始化、运行和终止。 基于框架生成的应用程序必须有且只有一个对象的类派生自[CWinApp](../mfc/reference/cwinapp-class.md)。 创建窗口之前将构造此对象。  

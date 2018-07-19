@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419906"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 使用**typename**为模板定义，以告知编译器给定的限定的名称标识的类型中的限定名。 有关详细信息，请参阅[typename](../cpp/typename.md)。  

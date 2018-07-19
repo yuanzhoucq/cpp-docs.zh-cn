@@ -24,11 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c211617752a9c9701f513373d8fe796a26a1c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957998"
 ---
 # <a name="autoptr-class"></a>auto_ptr 类
 
@@ -64,13 +65,13 @@ public:
 ```
 ### <a name="parameters"></a>参数
 
-`right` `auto_ptr`从中获取现有资源。
+*右*`auto_ptr`从中获取现有资源。
 
-`ptr` 指定用于替换存储的指针的指针。
+*ptr*指定用于替换已存储的指针的指针。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述调用的智能指针`auto_ptr`，指向已分配对象。 指针必须为 Null 或指定 `new` 所分配的对象。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在与 Null 指针进行转移后替换存储值。）`auto_ptr<Type>` 的析构函数将删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
+此模板类描述一个智能指针，调用`auto_ptr`，到已分配的对象。 指针必须为 null 或指定分配的对象**新**。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在与 Null 指针进行转移后替换存储值。）`auto_ptr<Type>` 的析构函数将删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
 
 可以将 `auto_ptr<Type>` 对象作为函数调用的参数按值传递。 `auto_ptr` 不能是任何标准库容器的元素。 你无法使用 C++ 标准库容器可靠地管理一系列 `auto_ptr<Type>` 对象。
 
@@ -94,7 +95,7 @@ public:
 |-|-|
 |[get](#get)|该成员函数将返回存储的指针 `myptr`。|
 |[release](#release)|该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。|
-|[reset](#reset)|此成员函数对表达式 `delete myptr` 进行求值，但仅在存储的指针值 `myptr` 因函数调用而更改时进行。 然后它将存储的指针替换为 `ptr`。|
+|[reset](#reset)|此成员函数对表达式 `delete myptr` 进行求值，但仅在存储的指针值 `myptr` 因函数调用而更改时进行。 然后它将存储的指针替换为 *ptr*。|
 
 ### <a name="operators"></a>运算符
 
@@ -129,17 +130,17 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>参数
 
-`ptr` 对象的指针，`auto_ptr`封装。
+*ptr*对象的指针的`auto_ptr`封装。
 
-`right` `auto_ptr`对象要复制构造函数。
+*右*`auto_ptr`复制构造函数对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将 `ptr` 存储在 **myptr** 中，存储的指针指向已分配对象。 第二个构造函数通过存储 `right` 转移 `right` 中存储的指针的所有权。 **myptr** 中的 [release](#release)。
+第一个构造函数存储*ptr*中`myptr`，已分配对象存储的指针。 第二个构造函数将存储在指针的所有权转移*右*，通过将存储*右*。 [释放](#release)在`myptr`。
 
-第三个构造函数的行为与第二个相同，只不过它存储 **right**。 `ref`。 **myptr** 中的 **release**，其中 `ref` 是 `right` 中存储的引用。
+第三个构造函数行为与第二个，相同，只不过它存储`right`。 `ref`。 `release` 在中`myptr`，其中`ref`引用存储在`right`。
 
-模板构造函数与第二个构造函数的行为相同，前提是指向 **Other** 的指针可以隐式转换为指向 **Type** 的指针。
+模板构造函数的行为相同作为第二个构造函数中，条件是一个指向`Other`可以隐式转换为指向`Type`。
 
 ### <a name="example"></a>示例
 
@@ -202,7 +203,7 @@ Destructing 00311AF8
 
 ## <a name="element_type"></a>  auto_ptr::element_type
 
-该类型是模板参数 **Type** 的同义词。
+该类型是模板参数 `Type` 的同义词。
 
 ```cpp
 
@@ -211,7 +212,7 @@ typedef Type element  _type;
 
 ## <a name="get"></a>  auto_ptr::get
 
-该成员函数将返回存储指针 **myptr**。
+该成员函数将返回存储的指针 `myptr`。
 
 ```cpp
 Type *get() const throw();
@@ -219,7 +220,7 @@ Type *get() const throw();
 
 ### <a name="return-value"></a>返回值
 
-存储指针 **myptr**。
+存储的指针`myptr`。
 
 ### <a name="example"></a>示例
 
@@ -281,7 +282,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>参数
 
-`right` 类型的对象`auto_ptr`。
+*右*类型的对象`auto_ptr`。
 
 ### <a name="return-value"></a>返回值
 
@@ -289,7 +290,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="remarks"></a>备注
 
-赋值将对表达式 **delete myptr** 进行求值，但是仅存储指针 **myptr** 因赋值而更改时才进行。 然后，它通过存储 \_ *Right* 转移存储在 _ *Right* 中的指针的所有权。 **myptr** 中的 [release](#release)。 该函数返回 **\*this**。
+赋值将对表达式`delete myptr`，但是只有当存储的指针`myptr`赋值后导致的更改。 然后，它通过存储 \_ *Right* 转移存储在 _ *Right* 中的指针的所有权。 [释放](#release)在`myptr`。 该函数返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -305,7 +306,7 @@ Type& operator*() const throw();
 
 ### <a name="return-value"></a>返回值
 
-对指针所拥有的类型 **Type** 的对象的引用。
+对类型的对象的引用`Type`指针拥有。
 
 ### <a name="remarks"></a>备注
 
@@ -325,11 +326,11 @@ Type * operator->() const throw();
 
 ### <a name="return-value"></a>返回值
 
-**auto_ptr** 所拥有的对象的成员。
+对象的成员的`auto_ptr`拥有。
 
 ### <a name="remarks"></a>备注
 
-选择运算符返回 [get](#get)`( )`，以便让表达式 *ap*-> **member** 的行为与 ( *ap* 相同。 **get**( ) )-> **member**，其中 *ap* 是类 `auto_ptr`\< **Type**> 的对象。 因此，存储的指针不能为空且 **Type** 必须是类、结构或成员为 **member** 的联合类型。
+选择运算符返回 [get](#get)`( )`，以便让表达式 *ap*-> **member** 的行为与 ( *ap* 相同。 **get**( ) )-> **member**，其中 *ap* 是类 `auto_ptr`\< **Type**> 的对象。 因此，存储的指针不能为 null，并且`Type`必须是类、 结构或联合类型`member`成员。
 
 ### <a name="example"></a>示例
 
@@ -367,7 +368,7 @@ int main()
 
 ## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;
 
-将 `auto_ptr` 强制转换为 **auto_ptr_ref**。
+将 `auto_ptr` 强制转换为 `auto_ptr_ref`。
 
 ```cpp
 template <class Other>
@@ -428,7 +429,7 @@ main exiting
 
 ## <a name="release"></a>  auto_ptr::release
 
-该成员将存储指针 **myptr** 替换为 Null 指针，并返回以前存储的指针。
+该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。
 
 ```cpp
 Type *release() throw();
@@ -440,7 +441,7 @@ Type *release() throw();
 
 ### <a name="remarks"></a>备注
 
-该成员将存储指针 **myptr** 替换为 Null 指针，并返回以前存储的指针。
+该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。
 
 ### <a name="example"></a>示例
 
@@ -490,7 +491,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="reset"></a>  auto_ptr::reset
 
-成员函数的计算结果表达式**删除** **myptr**，但是只有当存储的指针值**myptr**因函数调用而更改。 然后它将存储的指针替换为 **ptr**。
+此成员函数求值表达式`delete myptr`，但是只有当存储的指针值`myptr`因函数调用而更改。 然后它将存储的指针替换为 `ptr`。
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -498,7 +499,7 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指定用于替换存储的指针的指针**myptr**。
+*ptr*指定用于替换已存储的指针的指针`myptr`。
 
 ### <a name="example"></a>示例
 

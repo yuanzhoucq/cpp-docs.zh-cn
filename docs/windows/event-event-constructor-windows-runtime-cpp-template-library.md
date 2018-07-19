@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882623"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 构造函数（Windows 运行时 C++ 模板库）
 初始化 Event 类的新实例。  

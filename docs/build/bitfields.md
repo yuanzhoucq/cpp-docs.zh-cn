@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360775"
 ---
 # <a name="bitfields"></a>位域
 结构位域限制为 64 位并且可以为类型 int、 unsigned 的 int、 int64、 或无符号的 int64 签名。 交叉类型边界的位域将跳过位，以使位域与下一步类型对齐方式。 例如，整数位域可能不能跨越 32 位边界。  

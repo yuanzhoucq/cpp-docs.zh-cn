@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346758"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控件：创建自动化服务器
 你可以为自动化服务器，从而以编程方式在另一个应用程序中嵌入该控件和控件中调用方法，从应用程序开发 MFC ActiveX 控件。 此类控件也仍可用于承载 ActiveX 控件容器中。  

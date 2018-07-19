@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386409"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和标记语句 (C)
 `goto` 语句将控制权转交给一个标签。 给定标签必须位于同一函数中，并且只可以出现在同一函数中的一个语句前面。  

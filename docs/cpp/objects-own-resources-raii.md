@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419923"
 ---
 # <a name="objects-own-resources-raii"></a>对象拥有资源 (RAII)
 请确保对象拥有资源。 此原则也称“资源获取即是初始化”，简称“RAII”。  

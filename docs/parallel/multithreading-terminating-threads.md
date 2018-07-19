@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689579"
 ---
 # <a name="multithreading-terminating-threads"></a>多线程处理：终止线程
 两种正常情况下会导致线程终止： 控制函数退出或不允许线程能够运行完成。 如果字处理器用于后台打印的线程，如果已成功打印已完成控制函数将正常终止。 如果用户想要取消的打印，但是，后台打印线程必须提前终止。 本主题说明如何实现的每种情形和如何获取线程的退出代码之后它终止。  

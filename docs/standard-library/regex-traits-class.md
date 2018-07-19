@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960926"
 ---
 # <a name="regextraits-class"></a>regex_traits 类
 
@@ -91,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`Elem` 要描述的字符元素类型。
+*Elem*要描述的字符元素类型。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述 `Elem`类型的各种正则表达式特征。 此模板类 [basic_regex 类](../standard-library/basic-regex-class.md) 使用此信息来操作 `Elem` 类的元素。
+此模板类描述各种类型的正则表达式特征*Elem*。 此模板类[basic_regex 类](../standard-library/basic-regex-class.md)使用此信息来操作类型的元素*Elem*。
 
 每个 `regex_traits` 对象包含 `regex_traits::locale` 类型的对象，该对象由它的一些成员函数使用。 默认区域设置是一份 `regex_traits::locale()`副本。 成员函数 `imbue` 替换区域设置对象，而成员函数 `getloc` 返回区域设置对象的副本。
 
@@ -364,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-`loc` 要存储的区域设置对象。
+*loc*要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数将 `loc` 复制到存储的 `locale` 对象，并返回存储的 `locale` 对象的以前值的副本。
+成员函数副本*loc*到存储`locale`对象，并返回以前存储的值的副本`locale`对象。
 
 ### <a name="example"></a>示例
 
@@ -451,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>参数
 
-`ch` 要测试的元素。
+*ch*要测试的元素。
 
-`cls` 要测试的类。
+*cls*要用于测试的类。
 
 ### <a name="remarks"></a>备注
 
-仅当字符 `ch` 属于 `cls`指定的字符类时，成员函数才返回 true。
+仅当成员函数将返回 true 字符*ch*中指定的字符类*cls*。
 
 ### <a name="example"></a>示例
 
@@ -540,9 +541,9 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>参数
 
-`str`
+*str*
 
-Null 结尾的序列。
+Null 终止的序列。
 
 ### <a name="remarks"></a>备注
 
@@ -713,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 要查找的序列的开头。
+*第一个*的要查找的序列的开头。
 
-`last` 要查找的序列的结尾。
+*最后一个*序列末尾的位置查找。
 
 ### <a name="remarks"></a>备注
 
@@ -807,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 要查找的序列的开头。
+*第一个*的要查找的序列的开头。
 
-`last` 要查找的序列的结尾。
+*最后一个*序列末尾的位置查找。
 
 ### <a name="remarks"></a>备注
 
@@ -1148,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 要转换的序列的开头。
+*第一个*的要转换的序列的开头。
 
-`last` 要转换的序列的结尾。
+*最后一个*序列的末尾来转换。
 
 ### <a name="remarks"></a>备注
 
@@ -1238,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 要转换的序列的开头。
+*第一个*的要转换的序列的开头。
 
-`last` 要转换的序列的结尾。
+*最后一个*序列的末尾来转换。
 
 ### <a name="remarks"></a>备注
 
@@ -1327,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-`ch` 要转换的元素。
+*ch*要转换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1414,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-`ch` 要转换的元素。
+*ch*要转换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1501,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>参数
 
-`ch` 要转换的元素。
+*ch*要转换的元素。
 
-`radix` 在算术基数若要使用的情况下。
+*基数*的算术基数来使用。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将返回由基数 `ch` 中字符 `radix`表示的值，或者如果 `ch` 不是基数 `radix`中的有效数字，则返回 -1。 只有使用 `radix` 参数 8、10 或 16 才能调用该函数。
+此成员函数返回的值的字符表示形式*ch*中的*基数*，则为-1 *ch*不是有效的数字中的*基数*. 仅将与调用函数*基数*参数 8、 10 或 16。
 
 ### <a name="example"></a>示例
 

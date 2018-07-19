@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382374"
 ---
 # <a name="using-cmonthcalctrl"></a>使用 CMonthCalCtrl
 月历控件 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 实现类似于日历的用户界面。 这为用户提供了非常直观和可识别的输入或选择日期的方法。 通过使用现有数据类型，该控件还为应用程序提供了在控件中获取并设置日期信息的方法。 默认情况下，月历控件显示当前的日期和月份。 但是，用户可以滚动到上一个月和下一个月并选择特定的月和/或年。  

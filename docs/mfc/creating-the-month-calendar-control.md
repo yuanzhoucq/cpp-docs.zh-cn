@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343238"
 ---
 # <a name="creating-the-month-calendar-control"></a>创建月历控件
 月历控件的创建方式取决于您将在对话框中使用此控件还是将在非对话框窗口中创建此控件。  

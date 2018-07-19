@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932154"
 ---
 # <a name="active-document-containers"></a>活动文档容器
 活动文档容器，如 Microsoft Office Binder 或 Internet Explorer 中，允许你使用不同的应用程序类型 （而不是强制你创建和使用多个应用程序帧每个单个范围内的多个文档文档类型）。  
@@ -49,15 +50,15 @@ ms.lasthandoff: 05/04/2018
   
  活动文档容器集成了活动文档必须：  
   
--   能够处理通过对象存储**IPersistStorage**接口，也就是说，它必须提供`IStorage`实例与每个活动文档。  
+-   能够处理通过对象存储`IPersistStorage`接口，也就是说，它必须提供`IStorage`实例与每个活动文档。  
   
--   支持 OLE 文档，因而需要进行"站点"对象 （每个文档或嵌入一个） 的基础嵌入功能实现**IOleClientSite**和**IAdviseSink**。  
+-   支持 OLE 文档，因而需要进行"站点"对象 （每个文档或嵌入的一个） 的基础嵌入功能实现`IOleClientSite`和`IAdviseSink`。  
   
--   支持就地激活嵌入的对象或活动文档。 容器的站点对象必须实现`IOleInPlaceSite`和容器的框架对象必须提供**IOleInPlaceFrame**。  
+-   支持就地激活嵌入的对象或活动文档。 容器的站点对象必须实现`IOleInPlaceSite`和容器的框架对象必须提供`IOleInPlaceFrame`。  
   
 -   通过实现来支持活动文档的扩展`IOleDocumentSite`提供要与文档交流的容器的机制。 （可选） 容器可以实现活动文档接口`IOleCommandTarget`和`IContinueCallback`以拾取如打印或保存的简单命令。  
   
- 框架对象、 对象的视图和容器对象 （可选） 可以实现**IOleCommandTarget**以支持中所述的某些命令的调度[命令目标](../mfc/message-handling-and-command-targets.md)。 视图和容器对象也可以实现`IPrint`和`IContinueCallback`，以便支持以编程方式打印，如下所述[以编程方式打印](../mfc/programmatic-printing.md)。  
+ 框架对象、 对象的视图和容器对象 （可选） 可以实现`IOleCommandTarget`以支持中所述的某些命令的调度[命令目标](../mfc/message-handling-and-command-targets.md)。 视图和容器对象也可以实现`IPrint`和`IContinueCallback`，以便支持以编程方式打印，如下所述[以编程方式打印](../mfc/programmatic-printing.md)。  
   
  下图显示容器和其组件 （左侧） 和活动文档和其视图 （右侧） 之间的概念关系。 活动文档管理存储和数据，并显示的视图，或 （可选） 将打印该数据。 以粗体显示的接口是所需的活动文档参与;这些粗体和斜体是可选的。 所有其他接口是必需的。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/04/2018
  支持多个视图的容器必须能够创建文档站点内的站点对象的多个视图。 这需要为每个视图提供了单独的激活和停用服务，如通过提供`IOleInPlaceSite`。  
   
 ##  <a name="frame_object"></a> 框架对象  
- 容器的框架对象，大多数情况下，用于就地激活 OLE 文档中，它是同一帧、 处理菜单和工具栏协商。 视图对象有权访问通过此框架对象**IOleInPlaceSite::GetWindowContext**，其中还提供对表示容器文档 （它可以处理窗格级工具栏协商的容器对象访问和包含的对象枚举）。  
+ 容器的框架对象，大多数情况下，用于就地激活 OLE 文档中，它是同一帧、 处理菜单和工具栏协商。 视图对象有权访问通过此框架对象`IOleInPlaceSite::GetWindowContext`，其中还提供对表示容器文档 （它可以处理窗格级工具栏协商和包含的对象枚举） 的容器对象访问。  
   
  活动文档容器可以通过添加增强帧`IOleCommandTarget`。 这使它可以接收源自活动文档的用户界面与此接口可以允许一个容器来发送相同的命令相同的方式的命令 (如**文件新**，**打开**， **将另存为**，**打印**;**编辑副本**，**粘贴**，**撤消**，等) 到活动文档。 有关详细信息，请参阅[命令目标](../mfc/message-handling-and-command-targets.md)。  
   

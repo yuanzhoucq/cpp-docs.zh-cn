@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367194"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>在预处理中执行程序
 若要在预处理过程中使用命令的退出代码，请与任何参数，在方括号 ([]) 中指定的命令。 所有宏都扩展之前执行此命令。 NMAKE 替换命令的退出代码，以便可以在表达式中用来控制预处理命令规范。  

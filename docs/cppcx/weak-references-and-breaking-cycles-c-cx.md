@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089073"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>弱引用和中断循环 (C++/CX)
 在基于引用计数的任何类型的系统中，对类型的引用可以形成 *循环*，即第一个对象引用第二个对象，第二个对象引用第三个对象，依此类推，直到某个最终对象引用回第一个对象。 在一个循环中，当一个对象的引用计数变为零时，将无法正确删除该对象。 若要帮助你解决此问题，C + + /cli CX 提供[platform:: weakreference 类](../cppcx/platform-weakreference-class.md)类。 `WeakReference` 对象支持 [Resolve](../cppcx/platform-weakreference-class.md#resolve) 方法，如果对象不再存在，则返回 Null，或如果对象是活动的但不是类型 [，则将引发](../cppcx/platform-invalidcastexception-class.md) Platform::InvalidCastException `T`。  

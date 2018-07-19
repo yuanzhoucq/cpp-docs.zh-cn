@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317344"
 ---
 # <a name="project-build-error-prj0036"></a>项目生成错误 PRJ0036
 Web 部署工具的附加文件属性包含的无效条目。  

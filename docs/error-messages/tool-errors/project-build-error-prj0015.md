@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316444"
 ---
 # <a name="project-build-error-prj0015"></a>项目生成错误 PRJ0015
 从你的系统缺少 NULL 设备。 我们都无法启动生成。  

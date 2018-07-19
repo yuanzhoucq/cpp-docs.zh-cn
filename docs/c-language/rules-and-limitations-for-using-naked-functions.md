@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385873"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>针对使用 Naked 函数的规则和限制
 有关使用 Naked 函数的规则和限制的信息，请参阅《C++ 语言参考》中的相应主题：[Naked 函数的规则和限制](../cpp/rules-and-limitations-for-naked-functions.md)。  

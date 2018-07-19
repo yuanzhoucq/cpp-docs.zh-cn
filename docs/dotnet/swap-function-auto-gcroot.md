@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33165147"
 ---
 # <a name="swap-function-autogcroot"></a>swap 函数 (auto_gcroot)
 交换一个之间的对象`auto_gcroot`和另一个。  

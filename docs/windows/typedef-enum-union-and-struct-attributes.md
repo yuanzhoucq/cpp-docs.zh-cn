@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891826"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 下列属性适用于[typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[结构](../cpp/struct-cpp.md)，和[枚举](../cpp/enumerations-cpp.md)c + + 关键字。  

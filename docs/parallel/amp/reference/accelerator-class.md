@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694746"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 加速器是针对数据并行计算进行了优化的硬件功能。 加速器可能是设备连接到 PCIe 总线 （如 GPU)，也可能是在主要的 CPU 上设置的扩展的指令。  

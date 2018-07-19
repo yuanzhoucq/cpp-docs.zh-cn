@@ -1,5 +1,5 @@
 ---
-title: _variant_t::ChangeType |Microsoft 文档
+title: _variant_t::ChangeType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942473"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Microsoft 专用**  
   
- 类型更改`_variant_t`到指示的对象**VARTYPE**。  
+ 更改的类型`_variant_t`所指示的对象`VARTYPE`。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>参数  
- `vartype`  
- **VARTYPE**此`_variant_t`对象。  
+ *vartype*  
+ `VARTYPE`此`_variant_t`对象。  
   
- `pSrc`  
- 指向要转换的 `_variant_t` 对象的指针。 如果此值为**NULL**，转换将就地。  
+ *pSrc*  
+ 指向要转换的 `_variant_t` 对象的指针。 如果此值为 NULL，是就地完成转换。  
   
 ## <a name="remarks"></a>备注  
- 此成员函数将转换`_variant_t`对象插入指示**VARTYPE**。 如果`pSrc`是**NULL**，转换将就地，否则为这`_variant_t`从复制对象`pSrc`，然后进行转换。  
+ 此成员函数将转换`_variant_t`到所指示的对象`VARTYPE`。 如果*pSrc*为 NULL，则转换将就地，否则为这`_variant_t`从复制对象*pSrc* ，然后再转换。  
   
  **结束 Microsoft 专用**  
   

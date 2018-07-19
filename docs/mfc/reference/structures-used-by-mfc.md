@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371340"
 ---
 # <a name="structures-used-by-mfc"></a>MFC 使用的结构
 下表列出了从各成员函数调用的结构。 有关各个结构用法的详细信息，请参阅每个结构“另请参阅”列表中记录的类和成员函数。  

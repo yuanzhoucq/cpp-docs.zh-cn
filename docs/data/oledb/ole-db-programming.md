@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107173"
 ---
 # <a name="ole-db-programming"></a>OLE DB 编程
 Microsoft OLE DB 是一项传统技术;对于新的应用程序是链接 SQL 服务器的所需的数据访问 API。 所有其他新的应用程序应使用 ODBC。 SQL Server 的当前 OLE DB 访问接口是 SQLNCLI11。DLL。 提供程序仍将在 SQL Server 2016 进行发布。 本文档适用于开发人员要保留已使用 OLE DB 的现有应用程序。

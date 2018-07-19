@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379557"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv（通用表示形式）
 使用时[/vmb、 /vmg （表示方法）](../../build/reference/vmb-vmg-representation-method.md)被选为[表示方法](../../build/reference/vmb-vmg-representation-method.md)。 这些选项指示尚未遇到类定义的继承模型。  

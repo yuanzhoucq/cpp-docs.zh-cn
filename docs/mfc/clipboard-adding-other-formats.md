@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932012"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
-本主题说明如何扩展支持的格式，特别是对于 OLE 支持的列表。 主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放到剪贴板上的唯一格式会`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并有可能延长`CF_LINKSOURCE`。 大多数应用程序将需要在剪贴板上比这三种的更多格式。  
+本主题说明如何扩展支持的格式，特别是对于 OLE 支持的列表。 主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放到剪贴板上的唯一格式会**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并有可能延长**CF_LINKSOURCE**。 大多数应用程序将需要在剪贴板上比这三种的更多格式。  
   
 ##  <a name="_core_registering_custom_formats"></a> 注册自定义格式  
  若要创建您自己的自定义格式，请按照相同的过程将使用在注册任何自定义剪贴板格式时： 传递到格式的名称**RegisterClipboardFormat**函数，并将其返回值用作格式 id。  

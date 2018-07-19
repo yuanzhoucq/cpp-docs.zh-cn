@@ -24,28 +24,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80fefde054ed411dcb30836b2b89cef89cc54e64
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928789"
 ---
 # <a name="receiving-notification-from-common-controls"></a>从公共控件接收通知
 公共控件是一系列子窗口，当控件中发生事件（如来自用户的输入）时，它们会将通知消息发送到父窗口。  
   
- 应用程序依靠这些通知消息来确定用户希望它执行的操作。 最常见的控件将发送通知消息作为**WM_NOTIFY**消息。 Windows 控件发送大多数通知消息作为**WM_COMMAND**消息。 [Cwnd:: Onnotify](../mfc/reference/cwnd-class.md#onnotify)处理程序**WM_NOTIFY**消息。 与 `CWnd::OnCommand` 相同，`OnNotify` 的实现会将通知消息调度到 `OnCmdMsg` 以在消息映射中进行处理。 用于处理通知的消息映射项是 `ON_NOTIFY`。 有关详细信息，请参阅[技术说明 61: ON_NOTIFY 和 WM_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。  
+ 应用程序依靠这些通知消息来确定用户希望它执行的操作。 最常见的控件 WM_NOTIFY 消息的形式发送通知消息。 Windows 控件 WM_COMMAND 消息的形式发送大多数通知消息。 [Cwnd:: Onnotify](../mfc/reference/cwnd-class.md#onnotify)为 WM_NOTIFY 消息的处理程序。 与 `CWnd::OnCommand` 相同，`OnNotify` 的实现会将通知消息调度到 `OnCmdMsg` 以在消息映射中进行处理。 处理通知的消息映射条目是 ON_NOTIFY。 有关详细信息，请参阅[技术说明 61: ON_NOTIFY 和 WM_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。  
   
  或者，派生类也可以使用“消息反射”处理其自己的通知消息。 有关详细信息，请参阅[技术说明 62: Windows 控件的消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)。  
   
 ## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>在通知消息中检索位置光标  
- 有时，在公共控件收到某些通知消息时确定光标的当前位置很有用。 例如，它将有助于确定当前光标位置，当公共控件收到**NM_RCLICK**通知消息。  
+ 有时，在公共控件收到某些通知消息时确定光标的当前位置很有用。 例如，它将有助于确定当前光标位置，当公共控件收到 NM_RCLICK 通知消息。  
   
- 达到此目的的一个简单方法是调用 `CWnd::GetCurrentMessage`。 但是，此方法仅在消息发送时检索光标位置。 因为光标可能已经移动因为消息已发送必须调用**cwnd:: Getcursorpos**来获取当前光标位置。  
+ 达到此目的的一个简单方法是调用 `CWnd::GetCurrentMessage`。 但是，此方法仅在消息发送时检索光标位置。 因为光标可能已经移动因为消息已发送必须调用`CWnd::GetCursorPos`来获取当前光标位置。  
   
 > [!NOTE]
 >  只应在消息处理程序中调用 `CWnd::GetCurrentMessage`。  
   
- 将以下代码添加到消息通知处理程序的正文 (在此示例中， **NM_RCLICK**):  
+ 将以下代码添加到 （在此示例中，NM_RCLICK） 通知消息处理程序的主体：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]  
   

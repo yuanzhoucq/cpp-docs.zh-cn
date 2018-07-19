@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688897"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 结构
 通过 short_vector_traits 可检索基础矢量长度和短的矢量类型或标量类型的标量类型  

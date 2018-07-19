@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370316"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 类
 实现显示在功能区类别或上下文类别顶部的彩色标题。  

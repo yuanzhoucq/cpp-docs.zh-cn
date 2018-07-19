@@ -18,15 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961066"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函数
 
-\<array> 标头包含两个非成员函数 `get` 和 `swap`，作用于 `array` 对象。
+\<数组 > 标头包含两个非成员函数，`get`并`swap`，，对**数组**对象。
 
 |||
 |-|-|
@@ -49,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Index` 元素偏移量。
+*索引*元素偏移量。
 
-`T` 元素的类型。
+*T*元素的类型。
 
-`N` 数组中的元素数目。
+*N*中数组的元素数。
 
-`arr` 要从选择的数组。
+*arr*要从选择的数组。
 
 ### <a name="example"></a>示例
 
@@ -91,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-交换两个 `array` 对象的 `std::swap` 的非成员模板专用化。
+非成员模板专用化`std::swap`的交换两个**数组**对象。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要交换的第一个数组。
+*左*要交换的第一个数组。
 
-`right` 要交换的第二个数组。
+*右*要交换的第二个数组。
 
 ### <a name="remarks"></a>备注
 

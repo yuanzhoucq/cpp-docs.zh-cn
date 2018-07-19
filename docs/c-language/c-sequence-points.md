@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384295"
 ---
 # <a name="c-sequence-points"></a>C 序列点
 在连续的“序列点”之间，仅能通过表达式修改一次对象的值。 C 语言定义以下序列点：  

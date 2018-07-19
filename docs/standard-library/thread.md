@@ -1,5 +1,5 @@
 ---
-title: '&lt;线程&gt;|Microsoft 文档'
+title: '&lt;线程&gt;|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953024"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-包括标准标头\<线程 > 定义类`thread`和各种支持的函数。
+包括标准标头\<线程 > 来定义此类**线程**和各种支持的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,9 +34,9 @@ ms.lasthandoff: 05/08/2018
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 通过使用编译的代码中 **/clr**，阻止此标头。
+> 在使用已编译的代码 **/clr**，禁止使用此标头。
 
-`__STDCPP_THREADS__`宏定义为非零值以指示线程是否支持通过此标头。
+`__STDCPP_THREADS__`宏被定义为非零值指示此标头支持线程。
 
 ## <a name="members"></a>成员
 
@@ -43,22 +44,22 @@ ms.lasthandoff: 05/08/2018
 
 |名称|描述|
 |----------|-----------------|
-|[thread 类](../standard-library/thread-class.md)|定义用于发现和管理的应用程序中的执行线程的对象。|
+|[thread 类](../standard-library/thread-class.md)|定义用于查看和管理的应用程序中的执行线程的对象。|
 
 ### <a name="public-structures"></a>公共结构
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
-|[hash 结构（C++ 标准库）](../standard-library/hash-structure-stl.md)|定义一个成员函数返回一个值，由唯一确定`thread::id`。 成员函数定义[哈希](../standard-library/hash-class.md)适用于类型的映射值的函数`thread::id`索引值的分布。|
+|[hash 结构（C++ 标准库）](../standard-library/hash-structure-stl.md)|定义了成员函数返回一个值，通过唯一确定`thread::id`。 此成员函数定义[哈希](../standard-library/hash-class.md)适用于类型的映射值的函数`thread::id`到索引值的分布。|
 
 ### <a name="public-functions"></a>公共函数
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|唯一标识当前的执行线程。|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|阻止调用线程。|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|阻止调用线程，至少直到指定的时间。|
-|[swap](../standard-library/thread-functions.md#swap)|交换两个状态`thread`对象。|
+|[swap](../standard-library/thread-functions.md#swap)|交换两个状态**线程**对象。|
 |[yield](../standard-library/thread-functions.md#yield)|表示要运行其他线程的操作系统，即使当前线程会照常继续运行。|
 
 ### <a name="public-operators"></a>公共运算符

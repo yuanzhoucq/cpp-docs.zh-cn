@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136348"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：创建用户控件并将它承载在对话框中
 这篇文章中的步骤假定你要创建基于对话框的 ([CDialog 类](../mfc/reference/cdialog-class.md)) Microsoft 基础类 (MFC) 项目，但你还可以添加对 Windows 窗体控件的支持到一个现有的 MFC 对话框。  

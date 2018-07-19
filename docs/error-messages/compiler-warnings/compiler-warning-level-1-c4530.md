@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283320"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>编译器警告（等级 1）C4530
 C + + 异常处理程序使用，但展开语义未启用。 指定 /EHsc  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249949"
 ---
 # <a name="compiler-error-c3222"></a>编译器错误 C3222
 “parameter”: 无法为托管或 WinRT 类型或泛型函数的成员函数声明默认自变量  

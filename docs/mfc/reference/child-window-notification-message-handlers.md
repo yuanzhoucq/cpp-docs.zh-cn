@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367167"
 ---
 # <a name="child-window-notification-message-handlers"></a>子窗口通知消息处理程序
 有五种类别的子窗口通知消息：  

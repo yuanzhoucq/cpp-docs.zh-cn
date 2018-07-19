@@ -55,17 +55,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4a9cd6c4533b3b59fdb3c5cab17ffaba071fb08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960276"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
-&lt;Shared_mutex > 标头的多个线程可以访问的共享数据的保护可提供同步基元。 除由 mutex 类提供的独占访问控制之外，共享 mutex 类还允许共享多个线程的非独占访问所有权。 共享 mutex 可用于控制可通过多个线程读取的资源且不会引发争用条件问题，但必须以独占方式通过单个线程写入。
+&lt;Shared_mutex > 标头提供同步基元，多个线程可以访问的共享数据的保护。 除由 mutex 类提供的独占访问控制之外，共享 mutex 类还允许共享多个线程的非独占访问所有权。 共享 mutex 可用于控制可通过多个线程读取的资源且不会引发争用条件问题，但必须以独占方式通过单个线程写入。
 
-标头&lt;shared_mutex > 定义类`shared_mutex`和`shared_timed_mutex`，此模板类`shared_lock`，和模板函数`swap`有关共享互斥体支持。
+标头&lt;shared_mutex > 定义类`shared_mutex`并`shared_timed_mutex`，此模板类`shared_lock`，和模板函数`swap`共享互斥体的支持。
 
 |类|描述|
 |-------------|-----------------|
@@ -100,20 +101,20 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 - `unlock_shared` 方法通过调用线程释放 mutex 共享所有权。
 
-- `try_lock_shared` 方法尝试在不阻止的情况下获取 mutex 共享所有权。 如果此方法获取所有权，则其返回类型可转换为 `bool` 且为 `true`否则即为 `false`。
+- `try_lock_shared` 方法尝试在不阻止的情况下获取 mutex 共享所有权。 转换为其返回类型是**bool**是**true**如果此方法获取所有权，否则**false**。
 
 类 `shared_timed_mutex` 是 *共享定时 mutex 类型*，满足共享 mutex 类型的两个要求并且是定时 mutex 类型。
 
 共享 mutex 类型支持其他方法 `try_lock_shared_for` 和 `try_lock_shared_until`：
 
-- `try_lock_shared_for` 方法尝试获取 mutex 共享所有权，直到超过由参数指定的持续时间。 如果持续时间不为正，则该方法等效于 `try_lock_shared`。 除非已获得共享所有权，否则在指定持续时间内不会返回该方法。 如果此方法获取所有权，则其返回值为 `true`，否则为 `false`。
+- `try_lock_shared_for` 方法尝试获取 mutex 共享所有权，直到超过由参数指定的持续时间。 如果持续时间不为正，则该方法等效于 `try_lock_shared`。 除非已获得共享所有权，否则在指定持续时间内不会返回该方法。 它的返回值是 **，则返回 true**如果此方法获取所有权，否则**false**。
 
-- `try_lock_shared_until` 方法尝试获取 mutex 共享所有权，直到超过指定的绝对持续时间。 如果指定的时间已过，该方法等效于 `try_lock_shared`。 除非已获得共享所有权，否则不会在指定时间之前返回该方法。 如果此方法获取所有权，则其返回值为 `true`，否则为 `false`。
+- `try_lock_shared_until` 方法尝试获取 mutex 共享所有权，直到超过指定的绝对持续时间。 如果指定的时间已过，该方法等效于 `try_lock_shared`。 除非已获得共享所有权，否则不会在指定时间之前返回该方法。 它的返回值是 **，则返回 true**如果此方法获取所有权，否则**false**。
 
 `shared_lock` 模板类扩展对定时锁定和所有权转移给共享 mutex 的支持。 Mutex 所有权可以在构造之时或之后获得，也可转移到另一个 `shared_lock` 对象。 可移动 `shared_lock` 类型的对象，但不能复制。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非当目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不应与任何 ConcRT 类型或函数一起使用。
+> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元和不再使用 ConcRT （除非目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不能与任何 ConcRT 类型或函数。
 
 ## <a name="classes"></a>类
 
@@ -243,5 +244,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>请参阅
 
-[标头文件引用](../standard-library/cpp-standard-library-header-files.md)
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)
 [&lt;互斥体 >](../standard-library/mutex.md)

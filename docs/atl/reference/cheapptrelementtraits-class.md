@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrElementTraits 类 |Microsoft 文档
+title: CHeapPtrElementTraits 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1aa3921f79e8c368fe4a42c3b56ede27f436e25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884095"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 类
-此类提供方法、 静态函数和有用的 typedef 时创建的堆指针的集合。  
+在创建集合的堆指针时，此类提供方法、 静态函数和有用的 typedef。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,10 +41,10 @@ class CHeapPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  要存储在集合类的对象类型。  
   
- `Allocator`  
+ *分配器*  
  要使用的内存分配类。 默认值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。  
   
 ## <a name="members"></a>成员  
@@ -53,10 +54,10 @@ class CHeapPtrElementTraits :
 |名称|描述|  
 |----------|-----------------|  
 |[CHeapPtrElementTraits::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|  
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|要用来检索元素的集合类对象的数据类型。|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|要用于从集合类对象中检索元素的数据类型。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供对帮助创建包含堆指针集合类对象的方法、 静态函数和 typedef。 类`CHeapPtrList`派生自`CHeapPtrElementTraits`。  
+ 此类提供帮助包含堆指针集合类对象的创建方法，静态函数和 typedef。 该类`CHeapPtrList`派生自`CHeapPtrElementTraits`。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
@@ -82,7 +83,7 @@ typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
- 要用来检索元素的集合类对象的数据类型。  
+ 要用于从集合类对象中检索元素的数据类型。  
   
 ```
 typedef T *& OUTARGTYPE;

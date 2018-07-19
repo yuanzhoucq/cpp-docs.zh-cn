@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106175"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 使用的运算符`auto_handle`条件表达式中。  

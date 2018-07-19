@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273623"
 ---
 # <a name="compiler-error-c3764"></a>编译器错误 C3764
 override_function： 不能重写基类方法 base_class_function  

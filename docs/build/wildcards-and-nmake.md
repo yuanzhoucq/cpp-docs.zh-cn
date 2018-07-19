@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380442"
 ---
 # <a name="wildcards-and-nmake"></a>通配符和 NMAKE
 NMAKE 扩展 filename 通配符 (* 和？) 中相关行。 命令中指定通配符将传递到命令;NMAKE 不展开它。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872356"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>创建 256 色图标或光标（图标的图像编辑器）
 使用图像编辑器，图标和光标可能会调整了大小大 (64 × 64) 使用 256 色调色板，可供选择。 创建资源之后, 设备图像样式处于选中状态。  

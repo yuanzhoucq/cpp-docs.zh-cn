@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383982"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows 套接字：端口和套接字地址
 此文章介绍了使用术语"端口"和"地址"作为用于 Windows 套接字。  

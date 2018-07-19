@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858752"
 ---
 # <a name="adding-or-deleting-a-string"></a>添加或删除字符串
 你可以快速插入到字符串表使用字符串编辑器的新条目。 新的字符串放置在表的末尾，并且提供下一个可用的标识符。 然后，你可以编辑中的 ID、 值或标题属性[属性窗口](/visualstudio/ide/reference/properties-window)根据需要。  

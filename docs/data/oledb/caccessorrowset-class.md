@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090965"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 封装一个行集和单个类中其关联的访问器。  

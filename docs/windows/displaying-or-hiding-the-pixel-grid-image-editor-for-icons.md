@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882922"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>显示或隐藏像素网格（图标的图像编辑器）
 对于所有放大因子为 4 或更高版本的图像编辑器窗格，可以显示的界限映像中的单个像素的网格。  

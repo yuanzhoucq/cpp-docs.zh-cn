@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387773"
 ---
 # <a name="statements-c"></a>语句 (C)
 C 程序的语句控制程序执行流。 在 C 中就像在其他编程语言中一样，有多种语句可用于执行循环、选择要执行的其他语句和传输控制。 在简短的[语句语法概述](../c-language/overview-of-c-statements.md)之后，本节将按字母顺序介绍 C 语句：  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963921"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -47,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>参数
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ 第 N 个元组元素的类型。
 
-## Remarks
+## <a name="remarks"></a>备注
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+此模板类描述的对象将存储 N 个对象的类型`T1`， `T2`、...、 `TN`，分别，where `0 <= N <= Nmax`。 元组实例的程度`tuple<T1, T2, ..., TN>`是数字`N`的其模板自变量。 模板参数的索引`Ti`和相应的存储值的该类型是`i - 1`。 因此时都进行编号的类型从 1 到 N 本文档中，, 相应的索引值的范围介于 0 至 N – 1。
 
-## Example
+## <a name="example"></a>示例
 
 ```cpp
 // tuple.cpp
@@ -152,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-`UN` 复制的第 n 个类型的元组元素。
+*取消*  
+ 第 N 个复制的元组元素的类型。
 
-`right` 将从复制此元组。
+*right*  
+ 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 
-前两个成员运算符将 `right` 的元素分配到 `*this` 的相应元素。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
+前两个成员运算符分配的元素*右*的对应元素`*this`。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
 
 剩余的成员运算符类似于之前的构造函数，但具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -225,8 +229,8 @@ template <class... Types>
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|一个元组，它的元素将与元组 `right` 的元素进行交换。|
-|`right`|一个元组，它的元素将与元组 `left` 的元素进行交换。|
+|*left*|其元素将要进行交换与元组的元组*右*。|
+|*right*|其元素将要进行交换与元组的元组*左*。|
 
 ### <a name="remarks"></a>备注
 
@@ -259,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-`UN` 复制的第 n 个类型的元组元素。
+*取消*  
+ 第 N 个复制的元组元素的类型。
 
-`right` 将从复制此元组。
+*right*  
+ 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 
@@ -269,7 +275,7 @@ template <class U1, class U2>
 
 第二个构造函数将构造一个对象，该对象的元素是从参数 `P1`、`P2`、...、`PN` 复制构造的，其中每个 `Pi`都将初始化 `i - 1` 索引处的元素。
 
-第三和第四个构造函数将构造一个对象，该对象的元素是从 `right` 的相应元素复制构造的。
+第三个和第四个构造函数构造一个对象，其元素是从相应的元素构造的副本*右*。
 
 第五个构造函数将构造一个对象，该对象在索引 0 处的元素是从`right.first` 复制构造的，在索引 1 处的元素是从 `right.second` 复制构造的。
 

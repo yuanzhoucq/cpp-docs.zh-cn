@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962395"
 ---
 # <a name="conditional-class"></a>conditional 类
 
@@ -39,15 +40,15 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>参数
 
-`B` 确定所选的类型的值。
+*B*确定所选的类型的值。
 
-`T1` 当 B 为 true 时类型的结果。
+*T1*当 B 为 true 时的类型结果。
 
-`T2` 当 B 为 false 时的类型结果。
+*T2*当 B 为 false 时的类型结果。
 
 ## <a name="remarks"></a>备注
 
-当 `conditional<B, T1, T2>::type` 的计算结果为 `T1` 时，模板成员 typedef `B` 的计算结果为 `true`，当 `T2` 的计算结果为 `B` ，其计算结果为 `false`。
+模板成员 typedef`conditional<B, T1, T2>::type`计算结果为*T1*时*B*的计算结果为**true**，并计算结果为*T2*时*B*计算结果为**false**。
 
 ## <a name="requirements"></a>要求
 

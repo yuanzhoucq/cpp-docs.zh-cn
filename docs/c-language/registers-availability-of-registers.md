@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383938"
 ---
 # <a name="registers-availability-of-registers"></a>寄存器：寄存器的可用性
 **ANSI 3.5.1** 通过使用寄存器存储类说明符可将对象实际放置在寄存器中的范围  

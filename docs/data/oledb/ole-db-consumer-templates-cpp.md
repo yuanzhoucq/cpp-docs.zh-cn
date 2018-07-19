@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112103"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 使用者模板 (C++)
 OLE DB 使用者模板支持 OLE DB 2.6 版规范。 （OLE DB 使用者模板针对 OLE DB 2.6 进行测试，但该模板并非支持规范中的每个接口。）使用者模板最小化实现 OLE DB 使用者所必须编写的代码的量。 该模板提供：  

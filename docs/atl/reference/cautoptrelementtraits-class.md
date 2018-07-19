@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357439"
 ---
 # <a name="cautoptrelementtraits-class"></a>CAutoPtrElementTraits 类
 此类提供方法、 静态函数和有用的 typedef 时创建的智能指针的集合。  

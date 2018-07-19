@@ -1,5 +1,5 @@
 ---
-title: CComControl 类 |Microsoft 文档
+title: CComControl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,17 +29,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883445"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 类
 此类提供用于创建和管理 ATL 控件的方法。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,11 +51,11 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  实现控件的类。  
   
  *WinBase*  
- 实现开窗函数的基本类。 默认为[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
+ 实现开窗函数的基本类。 默认情况下[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
   
 ## <a name="members"></a>成员  
   
@@ -70,16 +71,16 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|检索指向所请求的接口的指针。|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|创建控件的窗口。|  
-|[CComControl::FireOnChanged](#fireonchanged)|通知的控件属性已更改的容器的接收器。|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|验证的控件属性将要发生更改，以及如何继续执行，该对象要求接收器通知容器的接收器。|  
-|[CComControl::MessageBox](#messagebox)|调用此方法以创建、 显示和操作的消息框。|  
+|[CComControl::FireOnChanged](#fireonchanged)|通知控件属性已更改的容器的接收器。|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|控件属性即将更改并继续操作，该对象要求接收器通知容器的接收器。|  
+|[CComControl::MessageBox](#messagebox)|调用此方法来创建、 显示和操作的消息框。|  
   
 ## <a name="remarks"></a>备注  
- `CComControl` 是一组非常有用的控件帮助器函数和 ATL 控件的重要数据成员。 当你创建的标准控件或使用 ATL 控件向导 DHTML 控件时，该向导将自动派生您的类从`CComControl`。 `CComControl` 派生从其方法中的大多数[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
+ `CComControl` 是一组非常有用的控件帮助器函数和 ATL 控件的基本数据成员。 标准控件或 DHTML 控件使用 ATL 控件向导创建时，向导将自动派生您的类从`CComControl`。 `CComControl` 派生从其方法中的大多数[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
   
- 有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。 有关 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
+ 有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
   
- 有关演示`CComControl`方法和数据成员，请参阅[CIRC](../../visual-cpp-samples.md)示例。  
+ 有关的演示`CComControl`方法和数据成员，请参阅[CIRC](../../visual-cpp-samples.md)示例。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `WinBase`  
@@ -109,11 +110,11 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iid`  
- [in]所请求接口的 GUID。  
+ *iid*  
+ [in]所请求的接口的 GUID。  
   
- `ppv`  
- [out]指向由标识的接口指针的指针`iid`，或**NULL**如果找不到该接口。  
+ *ppv*  
+ [out]通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
  仅处理 COM 映射表中的接口。  
@@ -122,27 +123,27 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
- 默认情况下，通过调用创建控件的窗口`CWindowImpl::Create`。  
+ 默认情况下，通过调用创建一个窗口，以控制`CWindowImpl::Create`。  
   
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWndParent`  
- [in]父或所有者窗口的句柄。 必须提供有效的窗口句柄。 控制窗口范围限制为其父窗口的区域。  
+ *hWndParent*  
+ [in]父级或所有者窗口句柄。 必须提供有效的窗口句柄。 控制窗口范围限制为其父窗口的区域。  
   
- `rcPos`  
- [in]初始大小和窗口要创建的位置。  
+ *rcPos*  
+ [in]初始大小和要创建窗口的位置。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法，如果你想要执行某些操作之外创建一个窗口，例如，若要创建两个窗口，其中将成为工具栏为您的控件。  
+ 如果你想要执行一些操作，重写此方法不是创建一个窗口，例如，若要创建两个窗口，其中一个将成为您的控件的工具栏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
- 通知的控件属性已更改的容器的接收器。  
+ 通知控件属性已更改的容器的接收器。  
   
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -156,15 +157,15 @@ HRESULT FireOnChanged(DISPID dispID);
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有连接`IPropertyNotifySink`接口的指定的控件属性已更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回`S_OK`。 
+ 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有连接`IPropertyNotifySink`接口指定的控件属性已更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。 
   
- 此方法调用是安全即使控件不支持连接点。  
+ 此方法可以安全地调用即使控件不支持连接点。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- 验证的控件属性将要发生更改，以及如何继续执行，该对象要求接收器通知容器的接收器。  
+ 控件属性即将更改并继续操作，该对象要求接收器通知容器的接收器。  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -178,16 +179,16 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口的指定控件属性即将更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回`S_OK`。  
+ 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口指定控件属性是将要更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。  
 
   
- 此方法调用是安全即使控件不支持连接点。  
+ 此方法可以安全地调用即使控件不支持连接点。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>  CComControl::MessageBox  
- 调用此方法以创建、 显示和操作的消息框。  
+ 调用此方法来创建、 显示和操作的消息框。  
   
 ```
 int MessageBox(
@@ -197,20 +198,20 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  要在消息框中显示的文本。  
   
- `lpszCaption`  
- 对话框标题。 如果 NULL （默认值），使用"Error"的标题。  
+ *lpszCaption*  
+ 对话框的标题。 如果为 NULL （默认值），使用"错误"的标题。  
   
- `nType`  
- 指定的内容和对话框中的行为。 请参阅[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供一个简单的**确定**按钮。  
+ *n 类型*  
+ 指定的内容和对话框中的行为。 请参阅[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供了一个简单**确定**按钮。  
   
 ### <a name="return-value"></a>返回值  
  返回一个整数值，指定下列出的菜单项值之一[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文档中。  
   
 ### <a name="remarks"></a>备注  
- `MessageBox` 同时在开发过程和向用户显示错误或警告消息的简单办法，则非常有用。  
+ `MessageBox` 在开发期间以及作为方便地向用户显示的错误或警告消息，则很有用。  
   
 ## <a name="see-also"></a>请参阅  
  [CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)   

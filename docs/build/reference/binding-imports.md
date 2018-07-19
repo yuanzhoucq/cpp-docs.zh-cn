@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368923"
 ---
 # <a name="binding-imports"></a>绑定导入
 默认链接器行为是为延迟加载的 DLL 创建可绑定导入地址表。 如果绑定了 DLL，则 helper 函数将尝试使用绑定的信息，而不是调用**GetProcAddress**上每个引用的导入。 如果的时间戳或首选的地址不匹配与加载的 DLL，helper 函数将假定绑定导入地址表已过时，并将继续进行，犹如它不存在。  

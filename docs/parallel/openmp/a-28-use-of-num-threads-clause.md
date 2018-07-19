@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689111"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   使用 num_threads 子句
 下面的示例演示`num_threads`子句 ([2.3 节](../../parallel/openmp/2-3-parallel-construct.md)第 8 页上)。 并行区域最多 10 个线程的执行。  

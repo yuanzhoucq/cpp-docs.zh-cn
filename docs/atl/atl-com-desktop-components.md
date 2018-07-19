@@ -1,5 +1,5 @@
 ---
-title: ATL COM 桌面组件 |Microsoft 文档
+title: ATL COM 桌面组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953844"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
-ATL 引用记录活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 要完全利用 ATL，强烈建议熟悉 COM 工作。  
+ATL 引用记录了活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 若要充分利用 ATL，强烈建议工作熟悉 COM。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ATL 类概述](../atl/atl-class-overview.md)  
- 提供链接到并按类别组织的 ATL 类的简要说明。  
+ 提供按类别组织的 ATL 类的简短说明和链接。  
   
  [ATL 类和结构](../atl/reference/atl-classes.md)  
- 类和按字母顺序组织的结构上提供参考资料。  
+ 类和按字母顺序组织的结构提供参考材料。  
   
  [ATL 函数](../atl/reference/atl-functions.md)  
- 提供按字母顺序组织的全局函数的参考资料。 包括将函数组织为类别的主题。  
+ 提供有关按字母顺序组织的全局函数的参考资料。 包括按类别组织函数的主题。  
   
  [ATL 全局变量](../atl/reference/atl-global-variables.md)  
- 提供按字母顺序组织的全局变量的参考资料。  
+ 提供有关按字母顺序组织的全局变量的参考资料。  
   
  [ATL 宏](../atl/reference/atl-macros.md)  
- 提供按字母顺序组织的宏的参考资料。 包括将宏组织为类别的主题。  
+ 在按字母顺序组织的宏提供参考材料。 包含的主题按类别组织宏。  
   
  [ATL Typedef](../atl/reference/atl-typedefs.md)  
- 提供有关按字母顺序组织的 typedef 的参考资料  
+ 按字母顺序组织的 typedef 上提供的参考资料  
   
  [Worker Archetype](../atl/reference/worker-archetype.md)  
- 提供指向 ATL 辅助原型。  
-  
- [过时 ATL 主题](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- 在类、 宏和已过时或已弃用的函数上提供参考资料。  
+ 提供指向 ATL 工作原型。  
   
 ## <a name="related-sections"></a>相关章节  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 提供有关如何使用活动模板库 (ATL) 进行编程的主题。  
+ 提供有关如何使用活动模板库 (ATL) 进行编程主题。  
   
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
- 将引导你完成创建控件并演示了在过程中的一些 ATL 基础知识。  
+ 将引导你完成创建控件，并演示过程中的某些 ATL 基础知识。  
   
  [ATL 示例](../visual-cpp-samples.md)  
  演示如何使用 ATL 编写 COM 对象的示例代码。  

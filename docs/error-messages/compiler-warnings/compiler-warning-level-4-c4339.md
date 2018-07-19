@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295790"
 ---
 # <a name="compiler-warning-level-4-c4339"></a>编译器警告（等级 4）C4339
 “type”: 在 WinRT 或 CLR 元数据中检测到使用了未定义的类型 - 使用此类型可能导致运行时异常  

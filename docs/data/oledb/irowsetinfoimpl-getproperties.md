@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101274"
 ---
 # <a name="irowsetinfoimplgetproperties"></a>IRowsetInfoImpl::GetProperties
 返回中的属性的当前设置**DBPROPSET_ROWSET**组。  

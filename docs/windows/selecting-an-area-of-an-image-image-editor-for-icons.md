@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890096"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>选择图像的区域（图标的图像编辑器）
 选择工具可用于定义你想要剪切、 复制、 清除、 调整大小、 反转，或移动图像的区域。 与**矩形选择**工具可以定义并选择图像的矩形区域。 与**不规则选择**工具可以绘制你想要选择的剪切、 复制或其他操作的区域的画概述。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323545"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>编译器内部函数和程序集语言
 该文档的本节包含有关编译器内部函数和汇编语言的信息。  

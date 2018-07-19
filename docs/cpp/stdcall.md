@@ -1,5 +1,5 @@
 ---
-title: __stdcall |Microsoft 文档
+title: __stdcall |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939840"
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 专用**  
   
- `__stdcall` 调用约定用于调用 Win32 API 函数。 被调用方将清理堆栈，因此编译器进行**vararg**函数`__cdecl`。 使用此调用约定的函数需要一个函数原型。  
+ **__Stdcall**调用约定用于调用 Win32 API 函数。 被调用方清理堆栈，因此编译器进行**vararg**函数 **__cdecl**。 使用此调用约定的函数需要一个函数原型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,11 +46,11 @@ return-type __stdcall function-name[(argument-list)]
 |名称修饰约定|下划线 (_) 是名称的前缀。 名称后跟后面是参数列表中的字节数（采用十进制）的符号 (@)。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|  
 |大小写转换约定|无|  
   
- [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项指定`__stdcall`适用于未使用不同调用约定显式声明的所有功能。  
+ [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项指定 **__stdcall**适用于使用不同的调用约定不显式声明的所有功能。  
   
- 使用声明的函数`__stdcall`修饰符返回值以使用声明的函数的相同方式[__cdecl](../cpp/cdecl.md)。  
+ 使用声明的函数 **__stdcall**修饰符返回值声明使用的函数一样[__cdecl](../cpp/cdecl.md)。  
   
- 在 ARM 和 x64 处理器上，`__stdcall` 由编译器接受和忽略；在 ARM 和 x64 体系结构上，按照约定，参数将传入寄存器（如果可能）且后续参数将在堆栈上传递。  
+ 在 ARM 和 x64 处理器， **__stdcall**接受和忽略由编译器; 在 ARM 和 x64 体系结构中，按照约定，参数将传入寄存器在可能的情况下，和后续自变量传递到堆栈上。  
   
  对于非静态类函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。 也就是说，对于类非静态成员方法，在定义时假定声明期间指定的调用约定。 给定此类定义，  
   
@@ -72,7 +73,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，使用 __**stdcall**会导致所有`WINAPI`函数类型作为标准调用处理：  
+ 在以下示例中，使用 __**stdcall**会导致所有`WINAPI`函数类型作为标准调用处理：  
   
 ```cpp  
 // Example of the __stdcall keyword  

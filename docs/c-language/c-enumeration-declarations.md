@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389736"
 ---
 # <a name="c-enumeration-declarations"></a>C 枚举声明
 枚举由一组命名整数常量构成。 枚举类型声明提供（可选）枚举标记的名称，并定义命名整数标识符集（称为“枚举集”、“枚举器常量”、“枚举器”或“成员”）。 具有枚举类型的变量存储该类型所定义的枚举集的值之一。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361884"
 ---
 # <a name="registry-scripting-examples"></a>注册表脚本示例
 本主题中的脚本示例演示如何将密钥添加到系统注册表，注册注册机构 COM 服务器，并指定多个分析树。  

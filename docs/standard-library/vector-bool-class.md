@@ -25,15 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962775"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 
-`vector<bool>` 类是 `bool` 类型元素的[矢量](../standard-library/vector-class.md)的部分专用化。 它包含由专用化使用的基础类型的分配器，此分配器通过每个位存储一个 `bool` 值的方式来提供空间优化。
+`vector<bool>`类是部分专用化[向量](../standard-library/vector-class.md)类型的元素**bool**。 它具有由专用化，可通过将一个存储空间优化的基础类型的分配器**bool**每个位的值。
 
 ## <a name="syntax"></a>语法
 
@@ -46,14 +47,14 @@ class vector<bool, Allocator>
 
 除了本文中说明的差异以外，此类模板专用化的行为类似于矢量。
 
-处理 `bool` 类型的操作与容器存储中的值相对应。 `allocator_traits::construct` 不用于构造这些值。
+处理的操作**bool**类型对应于容器存储中的值。 `allocator_traits::construct` 不用于构造这些值。
 
 ### <a name="typedefs"></a>Typedef
 
 |类型名称|描述|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的常量指针。|
-|[const_reference](#const_reference)|`bool` 的 typedef。 初始化之后，它不观察对原始值的更新。|
+|[const_reference](#const_reference)|Typedef **bool**。 初始化之后，它不观察对原始值的更新。|
 |[pointer](#pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|
 
 ### <a name="member-functions"></a>成员函数
@@ -152,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |参数|描述|
 |-|-|
-|`Pos`|`vector<bool>` 元素的位置。|
+|*pos*|`vector<bool>` 元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -162,7 +163,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>备注
 
-在使用 `_ITERATOR_DEBUG_LEVEL` 集进行编译时，如果你尝试访问矢量边界以外的元素，则将发生运行时错误。  有关更多信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译，如果您尝试访问矢量边界之外的元素，会发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
@@ -267,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>vector\<bool>::reference::operator bool
 
-提供从 `vector<bool>::reference` 到 `bool` 的隐式转换。
+提供了隐式转换`vector<bool>::reference`到**bool**。
 
 ```cpp
 operator bool() const;
@@ -292,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>参数
 
-`Right` 其值将赋给位中的元素引用。
+右侧  
+ 要将值赋给位的元素引用。
 
-`Val` 要赋给位的布尔值。
+*val*  
+ 要赋给位的布尔值。
 
 #### <a name="example"></a>示例
 
@@ -379,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>参数
 
-`Left` 要与交换的元素`Right`元素。
+左侧  
+ 要与交换的元素*右*元素。
 
-`Right` 要与交换的元素`Left`元素。
+右侧  
+ 要与交换的元素*左侧*元素。
 
 ### <a name="remarks"></a>备注
 

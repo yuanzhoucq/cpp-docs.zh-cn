@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340879"
 ---
 # <a name="an-example-of-the-comments"></a>注释示例
 类的以下部分列表`CChildFrame`使用大部分 MFC 在采用其类将类成员的方式使用它们的标准注释：  

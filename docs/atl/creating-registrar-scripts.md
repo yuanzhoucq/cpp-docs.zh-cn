@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354428"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 注册器脚本提供对系统注册表的数据驱动的而不是驱动 API 访问。 数据驱动的访问是通常更高效，因为它采用一个脚本来向注册表添加项只能将一个或两个行。  

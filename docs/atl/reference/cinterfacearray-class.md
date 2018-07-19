@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray 类 |Microsoft 文档
+title: CInterfaceArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882704"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 类
-构造的 COM 接口指针的数组时，此类提供有用的方法。  
+构造的 COM 接口指针的数组时，此类提供了有用的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>参数  
- `I`  
- COM 接口，指定要存储的指针的类型。  
+ *I*  
+ 指定要存储的指针的类型的 COM 接口。  
   
- `piid`  
- 指向 IID 的`I`。  
+ *piid*  
+ 指向 IID*我*。  
   
 ## <a name="members"></a>成员  
   
@@ -52,7 +53,7 @@ class CInterfaceArray :
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|接口数组构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供一个构造函数和派生的方法用于创建 COM 接口指针的数组。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)需要列表时。  
+ 此类提供一个构造函数和创建的 COM 接口指针的数组的派生的方法。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)列表在需要时。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   

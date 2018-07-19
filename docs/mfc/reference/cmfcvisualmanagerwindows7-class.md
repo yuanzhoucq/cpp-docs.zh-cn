@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows7 类 |Microsoft 文档
+title: CMFCVisualManagerWindows7 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849944"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
-`CMFCVisualManagerWindows7` ，应用程序的外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。  
+`CMFCVisualManagerWindows7`向应用程序提供的外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,17 +43,17 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |名称|描述|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|默认构造函数。|  
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|在默认析构函数。|  
+|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|默认析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|`CMFCVisualManagerWindows7::CleanStyle`|清除当前的视觉样式，并重置默认的视觉样式。|  
-|`CMFCVisualManagerWindows7::CleanUp`|清除所有用户界面中的对象，并重置菜单。|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|在帧上的非工作区中绘制一个按钮。 此方法，以便绘制尽量减少，框架将使用最大化，请关闭并还原窗口框架的右上角中的按钮。 该程序使用非 Aero 主题时，不调用此方法。|  
-|`CMFCVisualManagerWindows7::DrawNcText`|在帧上的非工作区中绘制文本。 框架使用此方法来绘制在框架窗口顶部的标题栏中的应用程序标题。|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|在上绘制分隔符[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。|  
+|`CMFCVisualManagerWindows7::CleanStyle`|清除当前视觉样式，并重置默认的视觉样式。|  
+|`CMFCVisualManagerWindows7::CleanUp`|清除所有的用户界面中的对象并将重置菜单。|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|绘制非工作区中的帧上的按钮。 框架将使用此方法以绘制降到最低，最大化、 关闭和还原中的窗口框架右上角的按钮。 当程序在使用非 Aero 主题时，不调用此方法。|  
+|`CMFCVisualManagerWindows7::DrawNcText`|在帧上的非工作区中绘制文本。 该框架使用此方法在框架窗口的顶部的标题栏中绘制应用程序标题。|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|上绘制一个分隔符[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。|  
 |`CMFCVisualManagerWindows7::GetRibbonBar`|检索[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)与用户界面相关联。|  
 |[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|获取功能区编辑框背景色。|  
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|重写[CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
@@ -91,20 +92,20 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|重写[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|  
 |`CMFCVisualManagerWindows7::OnFillBarBackground`|重写[CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|  
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|重写[CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|  
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|当填充菜单项图像周围区域时，框架将调用此方法。|  
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|当它填充菜单项图像的四周的区域时，框架将调用此方法。|  
 |`CMFCVisualManagerWindows7::OnFillRibbonButton`|重写[CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|  
 |`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|重写[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|  
 |`CMFCVisualManagerWindows7::OnHighlightMenuItem`|重写[CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|  
 |`CMFCVisualManagerWindows7::OnNcActivate`|重写[CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
 |`CMFCVisualManagerWindows7::OnNcPaint`|重写[CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
 |`CMFCVisualManagerWindows7::OnUpdateSystemColors`|重写[CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|设置描述视觉管理器的属性的资源句柄。|  
-|`CMFCVisualManagerWindows7::SetStyle`|设置的配色方案`CMFCVisualManagerWindows7`GUI。|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|设置了视觉管理器的属性的资源句柄。|  
+|`CMFCVisualManagerWindows7::SetStyle`|将配色方案设置`CMFCVisualManagerWindows7`GUI。|  
   
 ## <a name="remarks"></a>备注  
- 使用`CMFCVisualManagerWindows7`类更改你的应用程序模拟默认外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。 此类可能不是有效的 Windows 版本上运行你的应用程序如果早于[!INCLUDE[win7](../../build/includes/win7_md.md)]。 在这种情况下，应用程序使用默认视觉管理器中定义[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
+ 使用`CMFCVisualManagerWindows7`类，以更改你的应用程序来模拟默认外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。 此类可能不是有效的 Windows 版本上运行你的应用程序如果早于[!INCLUDE[win7](../../build/includes/win7_md.md)]。 在这种情况下，应用程序使用默认视觉管理器中定义[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
- CMFCVisualManagerWindows7 继承自多个方法[CMFCVisualManagerWindows 类](../../mfc/reference/cmfcvisualmanagerwindows-class.md)和`CMFCVisualManager`类。 上一节中列出的方法是方法的新手`CMFCVisualManagerWindows7`类。  
+ CMFCVisualManagerWindows7 继承多个方法从这两个[CMFCVisualManagerWindows 类](../../mfc/reference/cmfcvisualmanagerwindows-class.md)和`CMFCVisualManager`类。 在上一部分中列出的方法是为新方法`CMFCVisualManagerWindows7`类。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -123,7 +124,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
  **标头：** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
- 在默认析构函数。  
+ 默认析构函数。  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
@@ -148,25 +149,25 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pEdit`  
- 指向编辑控件的指针。 此值不能为 `NULL`。  
+ [in]*pEdit*  
+ 指向编辑控件的指针。 此值不能为 NULL。  
   
- [out] `bIsHighlighted`  
- 返回功能区框中将突出显示。  
+ [out]*bIsHighlighted*  
+ 返回是否突出显示功能区框。  
   
- [out] `bIsPaneHighlighted`  
- 返回`TRUE`功能区面板中，如果包含`pEdit`突出显示。  
+ [out]*bIsPaneHighlighted*  
+ 如果在功能区面板中，则为 TRUE 返回包含*pEdit*突出显示。  
   
- [out] `bIsDisabled`  
- 返回是否`pEdit`处于禁用状态。  
+ [out]*bIsDisabled*  
+ 返回是否*pEdit*被禁用。  
   
 ### <a name="return-value"></a>返回值  
- 编辑框的背景色`pEdit`。  
+ 在编辑框的背景色*pEdit*。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
- 当填充菜单项图像周围的区域时，框架将调用此方法。  
+ 当它填充菜单项图像的周围区域时，框架将调用此方法。  
   
 ```  
 virtual void OnFillMenuImageRect(
@@ -177,22 +178,22 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向菜单按钮的设备上下文的指针。  
   
- [in] `pButton`  
- 指向的指针`CMFCToolBarButton`。 框架填充此按钮的背景。  
+ [in]*pButton*  
+ 一个指向`CMFCToolBarButton`。 框架填充此按钮的背景。  
   
- [in] `rect`  
+ [in]*rect*  
  指定菜单按钮图像区域的边界矩形。  
   
- [in] `state`  
+ [in]*状态*  
  按钮的状态。  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)   
  [CMFCVisualManagerWindows 类](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

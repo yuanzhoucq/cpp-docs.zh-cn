@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687447"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda 表达式、函数对象和受限函数
 作为自变量对的调用中指定你想要在快捷键上运行的 c + + AMP 代码[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 你可以提供 lambda 表达式或函数对象 （函子），作为该参数。 此外，lambda 表达式或函数对象可以调用 c + + AMP 限制的函数。 本主题使用数组添加算法来演示 lambda、 函数对象和受限的函数。 下面的示例演示不使用 c + + AMP 代码的算法。 创建两个一维数组的长度相等。 相应的整数元素添加，并存储在第三个一维数组。 不使用 c + + AMP。  

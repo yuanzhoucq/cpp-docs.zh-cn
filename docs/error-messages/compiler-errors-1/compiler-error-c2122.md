@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166174"
 ---
 # <a name="compiler-error-c2122"></a>编译器错误 C2122
 identifier： 原型中的参数名称列表非法  

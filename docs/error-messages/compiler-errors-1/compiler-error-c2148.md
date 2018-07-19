@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170695"
 ---
 # <a name="compiler-error-c2148"></a>编译器错误 C2148
 数组的总大小不得超过 0x7fffffff 字节  

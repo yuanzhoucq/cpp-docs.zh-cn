@@ -96,11 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c3b9e3ba7a7929158adacfab889007cb518c54b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965004"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 
@@ -121,13 +122,13 @@ class hash_multimap
 
 ### <a name="parameters"></a>参数
 
-`Key` 要存储在 hash_multimap 中的键数据类型。
+*密钥*的键数据类型存储在 hash_multimap 中。
 
-`Type` 要存储在 hash_multimap 的元素数据类型。
+*类型*要存储在 hash_multimap 中的元素数据类型。
 
-`Traits` 此类型包括两个函数对象，其中一个类`Traits`能够将两个元素值作为排序键以确定其相对顺序是一元谓词映射到的无符号整数的元素的键值的哈希函数进行比较类型**size_t**。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key>>`。
+*特征*包括两个函数对象，其中一个是类的类型*Traits*能够将两个元素值作为排序键以确定其相对顺序是一个一元谓词的映射键的哈希函数进行比较为无符号整数类型的元素的值`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key>>`。
 
-`Allocator` 表示存储的分配器对象封装有关 hash_multimap 的分配和解除分配内存的详细信息的类型。 此参数是可选参数，默认值为 `allocator<pair <const Key, Type>>`。
+*分配器*表示存储的分配器对象封装有关 hash_multimap 的分配和解除分配的内存的详细信息的类型。 此参数是可选参数，默认值为 `allocator<pair <const Key, Type>>`。
 
 ## <a name="remarks"></a>备注
 
@@ -153,7 +154,7 @@ hash_multimap 为：
 
 hash_multimap 通过调用类型 [value_compare](../standard-library/value-compare-class.md) 的已存储哈希 `Traits` 对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](../standard-library/hash-map-class.md#key_comp) 进行访问。 此类函数对象的行为必须与类 [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` 的对象行为相同。 具体而言，针对类型为 `Key` 的所有值 `Key`，调用 `Traits (Key)` 将对类型为 `size_t` 的值进行分布。
 
-通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 f(x, y) 是包含两个自变量对象（`x` 和 `y`）以及一个返回值（`true` 或 `false`）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，则对 hash_multimap 进行的排序将为严格弱排序，其中 `x` 和 `y` 两个对象定义为在 f(x, y) 和 f(y, x) 均为 `false` 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 f （x，y） 是一个函数对象，包含两个参数对象`x`并`y`和返回值的**true**或**false**。 对 hash_multimap 进行排序将为严格弱排序如果二元谓词具有自反性、 反对称性和传递性且等效可传递，其中两个对象`x`和`y`定义为在等效这两个 f (xy） 和 f （y，x） 都是**false**。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
 受控序列中元素的实际顺序取决于哈希函数、排序函数和存储在容器对象中的哈希表的当前大小。 无法确定哈希表的当前大小，因此通常无法预测受控序列中元素的顺序。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。
 
@@ -171,9 +172,9 @@ hash_multimap 类所提供的迭代器是双向迭代器，但类成员函数 [i
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_multimap` 类。|
 |[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `hash_multimap` 元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型，此类型提供指向 `const` 中的 `hash_multimap` 元素的指针。|
-|[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `hash_multimap` 元素的引用（用于读取和执行 `const` 操作）。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `hash_multimap` 元素的双向迭代器。|
+|[const_pointer](#const_pointer)|提供一个指针指向的类型**const**中的元素`hash_multimap`。|
+|[const_reference](#const_reference)|提供对引用的类型**const**元素存储在`hash_multimap`用于读取和执行**const**操作。|
+|[const_reverse_iterator](#const_reverse_iterator)|一个类型，提供双向迭代器可读取任何**const**中的元素`hash_multimap`。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_multimap` 中迭代器指向的元素间范围内的元素数量。|
 |[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multimap` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multimap` 中两个元素的相对顺序。|
@@ -267,7 +268,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-如果 **begin** 的返回值赋给了 `const_iterator`，则无法修改 hash_multimap 对象中的元素。 如果 **begin** 的返回值赋给了 **iterator**，则可修改 hash_multimap 对象中的元素。
+如果返回值`begin`分配给`const_iterator`，无法修改 hash_multimap 对象中的元素。 如果返回值`begin`分配给`iterator`，可以修改 hash_multimap 对象中的元素。
 
 ### <a name="example"></a>示例
 
@@ -473,9 +474,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 类型不能用于修改元素的值。
 
-`const_iterator`由 hash_multimap 指向的对象定义[value_type](#value_type)，类型`pair` *\< ***constKey，类型***>*. 键值通过第一个成员对可用，已映射元素的值通过第二个成员对可用。
+`const_iterator` Hash_multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` *\< ***constKey，Type*** >*. 键值通过第一个成员对可用，已映射元素的值通过第二个成员对可用。
 
-若要取消引用`const_iterator``cIter`指向 hash_multimap 中的某个元素，使用**->** 运算符。
+若要取消引用`const_iterator``cIter`指向 hash_multimap 中的元素，使用`->`运算符。
 
 若要访问元素的键值，请使用 `cIter` -> **first**，其作用与 (\* `cIter`). **first** 相同。 若要访问元素的映射值，请使用 `cIter` -> **second**，其作用与 (\* `cIter`). **first** 相同。
 
@@ -573,7 +574,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 由 hash_multimap 定义的 `const_reverse_iterator` 会指向 [value_type](#value_type) 的对象（即 `pair`*\<***const Key, Type>** 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。
 
-若要取消引用`const_reverse_iterator``crIter`指向 hash_multimap 中的某个元素，使用**->** 运算符。
+若要取消引用`const_reverse_iterator``crIter`指向 hash_multimap 中的元素，使用`->`运算符。
 
 若要访问元素的键值，请使用 `crIter` -> **first**，其作用与 (\* `crIter`). **first** 相同。 若要访问元素的映射值，请使用 `crIter` -> **second**，其作用与 (\* `crIter`). **first** 相同。
 
@@ -594,7 +595,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 若要从 hash_multimap 中进行匹配的元素的键。
+*密钥*匹配的 hash_multimap 的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -606,7 +607,7 @@ size_type count(const Key& key) const;
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-这些元素具有键值 `key`。
+该元素具有键值*密钥*。
 
 ### <a name="example"></a>示例
 
@@ -853,7 +854,7 @@ iterator emplace(ValTy&& val);
 
 |参数|描述|
 |-|-|
-|`val`|此值用于移动构造要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 的元素。|
+|*val*|此值用于移动构造要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 的元素。|
 
 ### <a name="return-value"></a>返回值
 
@@ -910,8 +911,8 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|`val`|要插入 [hash_multimap](../standard-library/hash-multimap-class.md) 的用于移动构造元素的值，除非此 `hash_multimap` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|`_Where`|有关开始搜索正确插入点的位置的提示。|
+|*val*|要插入 [hash_multimap](../standard-library/hash-multimap-class.md) 的用于移动构造元素的值，除非此 `hash_multimap` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+|*_Where*|有关开始搜索正确插入点的位置的提示。|
 
 ### <a name="return-value"></a>返回值
 
@@ -921,7 +922,7 @@ iterator emplace_hint(
 
 元素的 [hash_multimap::value_type](#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
-如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。
+插入可发生在分期常量时间内，而非对数时间，如果插入点紧随 *_Where*。
 
 ### <a name="example"></a>示例
 
@@ -1022,9 +1023,9 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-**end** 用于测试迭代器是否已到达 hash_multimap 的末尾。
+`end` 用于测试迭代器是否已到达 hash_multimap 的末尾。
 
-不应对 **end** 返回的值取消引用。
+不应对 `end` 返回的值取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1089,7 +1090,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_multimap 要搜索的元素的排序键进行比较的自变量键。
+*密钥*要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1179,13 +1180,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-`_Where` 要从 hash_multimap 中移除的元素的位置。
+*_Where*要从 hash_multimap 中移除的元素的位置。
 
-`first` 从 hash_multimap 中移除的第一个元素的位置。
+*第一个*从 hash_multimap 中移除的第一个元素的位置。
 
-`last` 从 hash_multimap 中移除的刚超出最后一个元素的位置。
+*最后一个*从 hash_multimap 中移除的刚超出最后一个元素的位置。
 
-`key` 若要从 hash_multimap 中移除的元素的键。
+*密钥*要从 hash_multimap 中移除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1299,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_multimap 要搜索的元素的排序键匹配的键。
+*密钥*要搜索的 hash_multimap 中元素的排序键匹配的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1307,9 +1308,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回一个迭代器，此迭代器发现 hash_multimap 中其排序键与二元谓词下的参数键**等效**的元素的位置，该谓词基于小于比较关系进行顺序。
+此成员函数返回其排序键与的 hash_multimap 中元素的迭代器`equivalent`的参数键在排序的二元谓词基于小于比较关系。
 
-如果将 **find** 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果 **find** 的返回值赋给 **iterator**，则可修改 hash_multimap 对象。
+如果将 `find` 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果返回值`find`分配给`iterator`，可以修改 hash_multimap 对象。
 
 ### <a name="example"></a>示例
 
@@ -1514,12 +1515,12 @@ hash_multimap(
 
 |参数|描述|
 |-|-|
-|`Al`|要用于此 hash_multimap 对象的存储分配器类，默认为 `Allocator`。|
-|`Comp`|用于对映射中元素排序的类型 `const Traits` 的比较函数，默认为 `Traits`。|
-|`Right`|所构造集要作为其副本的 map 。|
-|`First`|要复制的范围元素中的第一个元素的位置。|
-|`Last`|要复制的元素范围以外的第一个元素的位置。|
-|`IList`|要从中进行复制的 initializer_list。|
+|*Al*|要用于此 hash_multimap 对象的存储分配器类，默认为 `Allocator`。|
+|*Comp*|用于对 map 中元素排序的类型 `const Traits` 的比较函数，默认为 `Traits`。|
+|右侧|所构造集要作为其副本的 map 。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*IList*|要从中进行复制的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
@@ -1529,11 +1530,11 @@ hash_multimap(
 
 所有构造函数会存储 `Traits` 类的函数对象，此对象用于在 hash_multimap 的键之间建立排序，且稍后通过调用 [key_comp](#key_comp) 可进行返回。
 
-前三个构造函数均指定空的起始 hash_multimap；第二个函数还指定用于建立元素顺序的比较函数 ( `Comp`) 的类型，第三个函数还显式指定了要使用的分配器类型 ( `_Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。
+前三个构造函数指定空的起始 hash_multimap;第二个指定的比较函数类型 (*Comp*) 用于显式建立的元素和第三个顺序指定的分配器类型 (`_Al`) 使用。 关键字 `explicit` 取消了某些种类的自动类型转换。
 
 第四个构造函数指定 hash_multimap `Right` 的副本。
 
-接下来的三个构造函数复制映射的范围 `First, Last)`，其指定类 **Traits** 和 Allocator 的比较函数类型和分配器时更加明确。
+接下来的三个构造函数复制 map 的范围 `First, Last)`，其指定类 `Traits` 和 Allocator 的比较函数类型和分配器时更加明确。
 
 第八个构造函数移动 hash_multimap `Right`。
 
@@ -1574,10 +1575,10 @@ iterator insert(
 
 |参数|描述|
 |-|-|
-|`Val`|将插入 hash_multimap 的元素的值，除非已包含该元素，或更普遍的情况是除非它已包含其键已经过相同排序的元素。|
-|`Where`|有关从哪里开始搜索正确插入点的位置的提示。|
-|`First`|要从映射中复制的第一个元素的位置。|
-|`Last`|要从映射中复制的最后一个元素以外的位置。|
+|*val*|将插入 hash_multimap 的元素的值，除非已包含该元素，或更普遍的情况是除非它已包含其键已经过相同排序的元素。|
+|*Where*|有关从哪里开始搜索正确插入点的位置的提示。|
+|*第一个*|要从映射中复制的第一个元素的位置。|
+|*最后一个*|要从映射中复制的最后一个元素以外的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1593,7 +1594,7 @@ iterator insert(
 
 元素的 [value_type](#value_type) 是一个对，从而元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
-对于 `insert`的提示版本，如果插入点紧随 `Where`，插入可能发生在分期常量时间内，而非对数时间内。
+插入可发生在分期常量时间内的提示版本`insert`，而非对数时间，如果插入点紧随*其中*。
 
 ## <a name="iterator"></a>hash_multimap::iterator
 
@@ -1608,17 +1609,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>备注
 
-由 hash_multimap 定义的 **iterator** 会指向 [value_type](#value_type) 的对象（即 `pair`\< **const Key, Type**> 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。
+`iterator` Hash_multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` \< **const Key，Type**>，其第一个成员是元素的键和第二个成员是此元素保留的映射的基准。
 
-若要取消引用指向 hash_multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。
+若要取消引用**迭代器**`Iter`指向 hash_multimap 中的元素，使用`->`运算符。
 
 若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **first** 相同。
 
-**iterator** 类型可用于修改元素的值。
+一种类型`iterator`可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。
+有关如何声明和使用 `iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
 ## <a name="key_comp"></a>hash_multimap::key_comp
 
@@ -1705,9 +1706,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>备注
 
-**key_compare** 是模板参数 `Traits` 的同义词。
+`key_compare` 是模板参数的同义词*特征*。
 
-有关 `Traits` 的详细信息，请参阅 [hash_multimap 类](../standard-library/hash-multimap-class.md)主题。
+有关详细信息*特征*请参阅[hash_multimap 类](../standard-library/hash-multimap-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -1726,9 +1727,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-`key_type` 是模板参数 `Key` 的同义词。
+`key_type` 是模板参数的同义词*密钥*。
 
-有关 `Key` 的详细信息，请参阅 [hash_multimap 类](../standard-library/hash-multimap-class.md)主题的备注部分。
+有关详细信息*键*，请参阅备注部分[hash_multimap 类](../standard-library/hash-multimap-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -1749,13 +1750,13 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_multimap 要搜索的元素的排序键进行比较的自变量键。
+*密钥*要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_multimap 中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_multimap 中最后一个元素之后的位置。
 
-如果将 `lower_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果 `lower_bound` 的返回值赋给 **iterator**，则可修改 hash_multimap 对象。
+如果将 `lower_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果返回值`lower_bound`分配给`iterator`，可以修改 hash_multimap 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1841,9 +1842,9 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>备注
 
-`mapped_type` 是模板参数 `Type` 的同义词。
+`mapped_type` 是模板参数 *Type* 的同义词。
 
-有关 `Type` 的详细信息，请参阅 [hash_multimap 类](../standard-library/hash-multimap-class.md)主题。
+有关详细信息*类型*请参阅[hash_multimap 类](../standard-library/hash-multimap-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -1904,11 +1905,11 @@ hash_multimap& operator=(hash_multimap&& right);
 
 |参数|描述|
 |-|-|
-|`right`|正在复制到 `hash_multimap` 的 [hash_multimap](../standard-library/hash-multimap-class.md)。|
+|*right*|正在复制到 `hash_multimap` 的 [hash_multimap](../standard-library/hash-multimap-class.md)。|
 
 ### <a name="remarks"></a>备注
 
-清除 `hash_multimap` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 `hash_multimap`。
+在清除中的任何现有元素后`hash_multimap`，`operator=`复制或移动的内容*右*到`hash_multimap`。
 
 ### <a name="example"></a>示例
 
@@ -1961,7 +1962,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>备注
 
-**pointer** 类型可用于修改元素的值。
+一种类型`pointer`可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问 hash_multimap 对象中的元素。
 
@@ -2302,7 +2303,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>参数
 
-`right` Hash_multimap 提供要交换的元素或其元素将要与那些 hash_multimap 交换的 hash_multimap。
+*右*hash_multimap 提供要交换的元素或其元素将要进行交换的 hash_multimap 的 hash_multimap。
 
 ### <a name="remarks"></a>备注
 
@@ -2375,13 +2376,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_multimap 要搜索的元素的排序键进行比较的自变量键。
+*密钥*要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_multimap 中其键大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_multimap 中最后一个元素之后的位置。
 
-如果将 `upper_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果 `upper_bound` 的返回值赋给 **iterator**，则可修改 hash_multimap 对象。
+如果将 `upper_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_multimap 对象。 如果返回值`upper_bound`分配给`iterator`，可以修改 hash_multimap 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -2528,7 +2529,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type` 被声明为对\<const [key_type](#key_type)， [mapped_type](#mapped_type)> 然后不配对\<key_type，mapped_type > 因为不能更改的关联容器中的键使用非常量的迭代器或引用。
+`value_type` 被声明为对\<const [key_type](#key_type)， [mapped_type](#mapped_type)> 和未配对\<key_type，mapped_type > 因为可能不会更改关联容器的键使用非常量迭代器或引用。
 
 ### <a name="example"></a>示例
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892021"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 结构
 包含的实例类型[RuntimeClass](../windows/runtimeclass-class.md)。  

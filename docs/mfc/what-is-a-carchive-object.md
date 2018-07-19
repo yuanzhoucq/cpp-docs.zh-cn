@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383823"
 ---
 # <a name="what-is-a-carchive-object"></a>什么是 CArchive 对象
 `CArchive` 对象提供类型安全缓冲机制，以通过 `CFile` 对象写入或读取可序列化对象。 `CFile` 对象一般表示磁盘文件；但是，它还可能是可能表示剪贴板的内存文件（`CSharedFile` 对象）。  

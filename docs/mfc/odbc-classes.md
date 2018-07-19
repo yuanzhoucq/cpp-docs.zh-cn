@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348135"
 ---
 # <a name="odbc-classes"></a>ODBC 类
 这些类可与其他应用程序框架类以便轻松访问各种数据库为其开放式数据库连接 (ODBC) 驱动程序都可用。  

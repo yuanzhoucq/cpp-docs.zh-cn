@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038072"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 表示一个"互斥体"-允许一个线程互相排斥的方式访问资源的同步对象。  
@@ -73,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  指定如果线程创建`CMutex`对象最初具有由互斥体控制资源访问权限。  
   
- `lpszName`  
- `CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，`lpszName`如果跨进程边界，将使用该对象必须提供。 如果**NULL**，将未命名互斥体。 如果名称与匹配现有的互斥体，构造函数将生成新`CMutex`即在引用该名称的互斥体的对象。 如果名称与匹配现有同步对象不是一个 mutex，构造将失败。  
+ *在 lpszName*  
+ `CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体， *lpszName*如果跨进程边界，将使用该对象必须提供。 如果**NULL**，将未命名互斥体。 如果名称与匹配现有的互斥体，构造函数将生成新`CMutex`即在引用该名称的互斥体的对象。 如果名称与匹配现有同步对象不是一个 mutex，构造将失败。  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Mutex 对象的安全属性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  

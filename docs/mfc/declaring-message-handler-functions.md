@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341705"
 ---
 # <a name="declaring-message-handler-functions"></a>声明消息处理程序函数
 某些规则和约定控制消息处理程序函数的名称。 这些依赖于消息的类别，如以下主题中所述：  

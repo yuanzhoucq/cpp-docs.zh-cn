@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849478"
 ---
 # <a name="function-cc"></a>函数 (C/C++)
 指定生成对杂注的自变量列表中指定的函数的调用。  

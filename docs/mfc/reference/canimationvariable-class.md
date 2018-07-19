@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957294"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 表示动画变量。  
@@ -109,7 +110,7 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|指定默认值，该值会传播到 IUIAnimationVariable。|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|包含进行动画处理此动画变量的转换的列表。|  
@@ -140,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTransition`  
+ *pTransition*  
  指向要添加的转换的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -157,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pController`  
+ *pController*  
  指向父动画控制器的指针。  
   
- `pStoryboard`  
+ *pStoryboard*  
  情节提要的指针。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  如果为 TRUE，此方法应添加依赖于关键帧的转换。  
   
 ### <a name="remarks"></a>备注  
@@ -177,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定的默认值。  
   
 ### <a name="remarks"></a>备注  
@@ -191,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAutodestroy`  
+ *bAutodestroy*  
  指定此方法是否应删除转换对象。  
   
 ### <a name="remarks"></a>备注  
@@ -205,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pManager`  
+ *pManager*  
  动画管理器指向的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -224,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>参数  
-`pLibrary`  
+*pLibrary*  
  指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
   
 ### <a name="return-value"></a>返回值  
@@ -243,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>参数  
- `pController`  
+ *pController*  
  指向父控制器的指针。  
   
- `bEnable`  
+ *bEnable*  
  TRUE-启用事件，FALSE-禁用事件。  
   
 ### <a name="remarks"></a>备注  
@@ -262,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>参数  
- `pController`  
+ *pController*  
  指向父控制器的指针。  
   
- `bEnable`  
+ *bEnable*  
  TRUE-启用事件，FALSE-禁用事件。  
   
 ### <a name="remarks"></a>备注  
@@ -306,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblValue`  
+ *dblValue*  
  动画变量的当前值。  
   
- `nValue`  
+ *n 值*  
  动画变量的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -377,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定新的默认值。  
   
 ### <a name="remarks"></a>备注  
@@ -391,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentObject`  
+ *pParentObject*  
  指向一个包含此变量的动画对象的指针。  
   
 ### <a name="remarks"></a>备注  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860315"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer 方法
 递增或递减当前 ClassFactory 对象跟踪的基础对象数量。  

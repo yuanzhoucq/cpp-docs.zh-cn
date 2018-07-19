@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388110"
 ---
 # <a name="storage-of-basic-types"></a>基本类型的存储
 下表汇总了与每个基本类型关联的存储。  

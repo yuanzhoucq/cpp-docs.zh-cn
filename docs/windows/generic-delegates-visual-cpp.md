@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875593"
 ---
 # <a name="generic-delegates-visual-c"></a>泛型委托 (Visual C++)
 你可以使用具有委托的泛型类型参数。 有关委托的更多信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  

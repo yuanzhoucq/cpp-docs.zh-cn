@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693856"
 ---
 # <a name="scheduler-instances"></a>计划程序实例
 本文档介绍中并发运行时以及如何使用计划程序实例的角色[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)和[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)类来创建和管理计划程序实例。 当你想要将显式计划策略与特定类型的工作负荷相关联，计划程序实例非常有用。 例如，你可以创建一个计划程序实例来以提升的线程优先级运行一些任务，并使用默认计划程序以普通线程优先级运行其他任务。  

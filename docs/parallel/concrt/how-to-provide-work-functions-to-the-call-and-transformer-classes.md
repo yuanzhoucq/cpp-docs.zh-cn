@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687187"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>如何：为 call 和 transformer 类提供工作函数
 本主题演示通过多种方法提供工作函数[concurrency:: call](../../parallel/concrt/reference/call-class.md)和[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)类。  

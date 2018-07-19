@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686066"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 函数
 `omp_get_thread_num`函数返回的线程数目，在其团队中的线程执行函数。 线程号在于使用介于 0 和**omp_get_num_threads()**-1 （含)。 团队主线程为线程 0。  

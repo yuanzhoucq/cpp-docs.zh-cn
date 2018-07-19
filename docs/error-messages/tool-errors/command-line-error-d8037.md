@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298806"
 ---
 # <a name="command-line-error-d8037"></a>命令行错误 D8037
 无法创建临时 il 文件;对旧 il 文件清理临时目录  

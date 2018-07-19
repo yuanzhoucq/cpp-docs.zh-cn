@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391358"
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 有关操作系统版本的语言支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。   

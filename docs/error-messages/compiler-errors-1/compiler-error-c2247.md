@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172308"
 ---
 # <a name="compiler-error-c2247"></a>编译器错误 C2247
 identifier 无法访问，因为 class 使用 specifier 继承 class  

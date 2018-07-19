@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690376"
 ---
 # <a name="a9---using-single-directives"></a>A.9   使用 single 指令
 下面的示例演示`single`指令 ([部分 2.4.3](../../parallel/openmp/2-4-3-single-construct.md)在页上 15)。 在示例中，只有一个线程 (通常遇到的第一个线程`single`指令) 将打印进度消息。 用户必须对将执行的线程不进行任何假设`single`部分。 所有其他线程将跳过`single`部分，并在末尾的屏障处停止`single`构造。 如果其他线程可以转而无需等待的线程正在执行`single`部分中，`nowait`子句可以指定在`single`指令。  

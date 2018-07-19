@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880213"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>如何：在资源中搜索符号
 ### <a name="to-find-symbols-in-resources"></a>在资源中查找符号  

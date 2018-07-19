@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101534"
 ---
 # <a name="irowsetlocateimplmrgbookmarks"></a>IRowsetLocateImpl::m_rgBookmarks
 书签的数组。  

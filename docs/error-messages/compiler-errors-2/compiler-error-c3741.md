@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266219"
 ---
 # <a name="compiler-error-c3741"></a>编译器错误 C3741
 class： 必须能是组件类时 event_receiver layout_dependent 参数 = true  

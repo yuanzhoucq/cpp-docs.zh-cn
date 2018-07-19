@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270893"
 ---
 # <a name="compiler-warning-c4746"></a>编译器警告 C4746
 可变访问\<表达式 > 受 /volatile: [iso&#124;ms] 设置; 请考虑使用 __iso_volatile_load/store 内部函数。  

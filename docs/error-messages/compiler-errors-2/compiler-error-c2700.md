@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235293"
 ---
 # <a name="compiler-error-c2700"></a>编译器错误 C2700
 “identifier”：无法引发（有关详细信息，请使用 /W4）  

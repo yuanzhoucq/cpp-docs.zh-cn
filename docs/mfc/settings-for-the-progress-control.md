@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380004"
 ---
 # <a name="settings-for-the-progress-control"></a>进度控件的设置
 进度控件的基本设置 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) 的范围和当前的位置。 范围表示该操作的整个持续时间。 当前的位置表示你的应用程序已完成该操作的进度。 对该区域或位置的任何更改导致进度控件重绘自己。  

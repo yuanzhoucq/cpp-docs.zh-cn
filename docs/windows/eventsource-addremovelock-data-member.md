@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872648"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_ 数据成员
 同步访问[targets_](../windows/eventsource-targets-data-member.md)数组时添加、 删除或调用事件处理程序。  

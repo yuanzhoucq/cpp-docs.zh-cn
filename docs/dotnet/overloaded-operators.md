@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139455"
 ---
 # <a name="overloaded-operators"></a>重载运算符
 运算符重载已显著从更改托管扩展的 c + + 为 Visual c + +。  

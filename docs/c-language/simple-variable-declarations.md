@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389762"
 ---
 # <a name="simple-variable-declarations"></a>简单变量声明
 简单变量的声明（直接声明符的最简单形式）指定变量的名称和类型。 它还指定变量的存储类和数据类型。  

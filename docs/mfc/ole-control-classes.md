@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355346"
 ---
 # <a name="ole-control-classes"></a>OLE 控件类
 这些是您在编写 OLE 控件时使用的主类。 `COleControlModule` OLE 控件模块中的类就像[CWinApp](../mfc/reference/cwinapp-class.md)应用程序中的类。 每个模块实现一个或多个 OLE 控件；这些控件由 `COleControl` 对象表示。 这些控件使用 `CConnectionPoint` 对象与其容器进行通信。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424118"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 C++ 运算符对表达式实施。)  

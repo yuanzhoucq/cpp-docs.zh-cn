@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385812"
 ---
 # <a name="using-csliderctrl"></a>使用 CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)类表示滑块控件，这也称为 trackbar 控件。 “滑块控件”是一个包含滑块和可选刻度线的窗口。 当用户使用鼠标或箭头键移动滑块时，滑块控件将发送通知消息来指示更改。  

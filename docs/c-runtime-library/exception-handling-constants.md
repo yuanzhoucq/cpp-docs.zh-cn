@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388222"
 ---
 # <a name="exception-handling-constants"></a>异常处理常量
 在执行 try-except 语句的保护部分期间发生异常时，将返回常量 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION` 或 `EXCEPTION_EXECUTE_HANDLER`。 此返回值确定了处理异常的方式。 有关详细信息，请参阅《C++ 语言参考》中的 [try-except 语句](../cpp/try-except-statement.md)。  

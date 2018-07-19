@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290512"
 ---
 # <a name="compiler-warning-level-1-c4935"></a>编译器警告（等级 1）C4935
 程序集访问说明符已从“access”修改  

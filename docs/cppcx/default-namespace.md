@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086937"
 ---
 # <a name="default-namespace"></a>default 命名空间
 `default`命名空间限定范围的内置类型的支持 C + + /cli CX。  

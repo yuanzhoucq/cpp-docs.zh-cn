@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392034"
 ---
 # <a name="global-variables"></a>全局变量
 Microsoft C 运行时库提供了以下全局变量或宏。 已弃用几个全局变量或宏，以便使用我们建议的更安全的函数版本，而非全局变量。  

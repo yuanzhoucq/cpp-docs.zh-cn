@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384419"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>生存期、范围、可见性和链接
 若要了解 C 程序的工作方式，您必须了解确定如何在程序中使用变量和函数的规则。 有多个概念对于理解这些规则是至关重要的：  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880731"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空间（C++ 组件扩展）
 命名空间限定语言元素的名称，使这些名称不与源代码中其他位置的相同名称发生冲突。 例如，名称冲突可能会阻止编译器识别[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 命名空间由编译器使用但不保留在已编译的程序集中。  

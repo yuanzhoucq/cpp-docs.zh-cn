@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369609"
 ---
 # <a name="error-message-edit-control"></a>“错误消息”编辑控件
 **错误消息**框包含系统错误消息或根据输入的值的模块错误消息的文本。  

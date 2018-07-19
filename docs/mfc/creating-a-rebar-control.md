@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342302"
 ---
 # <a name="creating-a-rebar-control"></a>创建 Rebar 控件
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)在父对象可见之前，应该创建对象。 这将最大限度降低出现绘画问题的可能性。  

@@ -1,5 +1,5 @@
 ---
-title: CComTearOffObject 类 |Microsoft 文档
+title: CComTearOffObject 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885034"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 类
 此类实现分离式接口。  
@@ -42,10 +43,10 @@ class CComTearOffObject : public Base
 ```  
   
 #### <a name="parameters"></a>参数  
- `Base`  
- 分离式类，派生自`CComTearOffObjectBase`，并且你希望你的拖曳对象以支持的接口。  
+ *基本*  
+ 分离式类，派生自`CComTearOffObjectBase`和希望分离式对象以支持接口。  
   
- ATL 在两个阶段实现其分离式接口 —`CComTearOffObjectBase`方法句柄引用计数和`QueryInterface`，虽然`CComTearOffObject`实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
+ ATL 在两个阶段中实现其分离式接口 —`CComTearOffObjectBase`方法处理引用计数并`QueryInterface`，而`CComTearOffObject`实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
   
 ## <a name="members"></a>成员  
   
@@ -60,8 +61,8 @@ class CComTearOffObject : public Base
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComTearOffObject::AddRef](#addref)|递增的引用计数`CComTearOffObject`对象。|  
-|[CComTearOffObject::QueryInterface](#queryinterface)|在您分离式的类或所有者类上，将指针返回到所请求的接口。|  
+|[CComTearOffObject::AddRef](#addref)|递增引用计数为`CComTearOffObject`对象。|  
+|[CComTearOffObject::QueryInterface](#queryinterface)|返回一个指向所请求的接口分离式类或所有者类上。|  
 |[CComTearOffObject::Release](#release)|递减引用计数为`CComTearOffObject`对象，并销毁它。|  
   
 ### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase 方法  
@@ -74,16 +75,16 @@ class CComTearOffObject : public Base
   
 |||  
 |-|-|  
-|[m_pOwner](#m_powner)|指向的指针`CComObject`派生自所有者类。|  
+|[m_pOwner](#m_powner)|一个指向`CComObject`所有者类派生。|  
   
 ## <a name="remarks"></a>备注  
- `CComTearOffObject` 作为一个单独的对象，仅当该接口查询搜索时实例化实现分离式接口。 分离式就会删除其引用计数变为零。 通常情况下，你会生成很少使用的因为您的主要对象的所有实例中，使用拖曳可节省 vtable 指针的接口的分离式接口。  
+ `CComTearOffObject` 作为一个单独的对象，该接口查询时，仅实例化来实现分离式接口。 拖曳时将删除其引用计数变为零。 通常情况下，生成很少使用，因为主要对象的所有实例中，使用分离式节省 vtable 指针的接口的分离式接口。  
   
- 你应派生类实现从分离式`CComTearOffObjectBase`和从您希望拖曳对象以支持的任何接口。 `CComTearOffObjectBase` 进行模板所有者类和线程模型。 所有者类是为其拖曳正在实现的对象的类。 如果未指定线程模型，则使用默认线程模型。  
+ 应派生类实现分离式从`CComTearOffObjectBase`和从希望分离式对象以支持任何接口。 `CComTearOffObjectBase` 在所有者类和线程模型上模板化。 在所有者类是对象的为其分离式正在实现的类。 如果不指定线程模型，则使用默认线程模型。  
   
- 应为拖曳类来创建 COM 映射。 当 ATL 分离式实例化时，它将创建**CComTearOffObject\<CYourTearOffClass >** 或**CComCachedTearOffObject\<CYourTearOffClass >**。  
+ 分离式类，应创建 COM 映射。 当分离式实例化 ATL 时，它将创建`CComTearOffObject<CYourTearOffClass>`或`CComCachedTearOffObject<CYourTearOffClass>`。  
   
- 例如，在寻呼机示例中，`CBeeper2`类是拖曳类和`CBeeper`类是所有者类：  
+ 例如，在寻呼机示例中，`CBeeper2`类是分开的类和`CBeeper`类是在所有者类：  
   
  [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]  
   
@@ -96,14 +97,14 @@ class CComTearOffObject : public Base
  **标头：** atlcom.h  
   
 ##  <a name="addref"></a>  CComTearOffObject::AddRef  
- 引用计数递增 1`CComTearOffObject`逐个的对象。  
+ 递增引用计数的`CComTearOffObject`由一个对象。  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个值，可能是用于诊断和测试。  
+ 一个值，可能是有用的诊断和测试。  
   
 ##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject  
  构造函数。  
@@ -113,11 +114,11 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
- [in]将转换为指向的指针的指针**CComObject\<所有者 >** 对象。  
+ *pv*  
+ [in]将转换为指向指针的指针`CComObject<Owner>`对象。  
   
 ### <a name="remarks"></a>备注  
- 所有者的引用计数增加 1。  
+ 所有者的引用计数加一。  
   
 ##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
  析构函数。  
@@ -127,7 +128,7 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放所有已分配的资源时，调用 FinalRelease，并减少模块锁定计数。  
+ 释放所有已分配的资源，而该模块的调用 FinalRelease，并减少锁定计数。  
   
 ##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  构造函数。  
@@ -137,10 +138,10 @@ CComTearOffObjectBase();
 ```  
   
 ### <a name="remarks"></a>备注  
- 初始化[m_pOwner](#m_powner)成员**NULL**。  
+ 初始化[m_pOwner](#m_powner)为 NULL 的成员。  
   
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
- 指向的指针[CComObject](../../atl/reference/ccomobject-class.md)对象派生自*所有者*。  
+ 一个指向[CComObject](../../atl/reference/ccomobject-class.md)对象派生自*所有者*。  
   
 ```
 CComObject<Owner>* m_pOwner;
@@ -148,10 +149,10 @@ CComObject<Owner>* m_pOwner;
   
 ### <a name="parameters"></a>参数  
  *所有者*  
- [in]为其拖曳正在实现的类。  
+ [in]为其分离式正在实现的类。  
   
 ### <a name="remarks"></a>备注  
- 指针初始化为**NULL**在构造期间。  
+ 在构造期间，该指针被初始化为 NULL。  
   
 ##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  检索指向所请求的接口的指针。  
@@ -161,27 +162,27 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iid`  
- [in]所请求接口的 IID。  
+ *iid*  
+ [in]所请求的接口的 IID。  
   
- `ppvObject`  
- [out]指向由标识的接口指针的指针`iid`，或**NULL**如果找不到该接口。  
+ *ppvObject*  
+ [out]通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 对于你拖曳类上的接口第一次查询。 如果接口不存在，所有者对象上的接口的查询。 如果所请求的接口是**IUnknown**，返回**IUnknown**的所有者。  
+ 首先为您分离式的类上的接口的的查询。 如果接口不存在，所有者对象上的接口的查询。 如果所请求的接口是`IUnknown`，返回`IUnknown`的所有者。  
   
 ##  <a name="release"></a>  CComTearOffObject::Release  
- 递减引用计数 1，如果引用计数为零，删除`CComTearOffObject`。  
+ 引用计数按 1 递减，引用计数为零，如果删除`CComTearOffObject`。  
   
 ```
 STDMETHOD_ULONG Release();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 在非调试版本中，始终返回零。 在调试版本中，返回一个值，可能是用于诊断或测试。  
+ 在非调试版本中，始终返回零。 在调试版本中返回一个值，可能是有用的诊断或测试。  
   
 ## <a name="see-also"></a>请参阅  
  [CComCachedTearOffObject 类](../../atl/reference/ccomcachedtearoffobject-class.md)   

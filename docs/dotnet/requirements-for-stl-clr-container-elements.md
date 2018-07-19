@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162431"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>STL/CLR 容器元素的需求
 插入 STL/CLR 容器的所有引用类型必须至少具有以下元素：  

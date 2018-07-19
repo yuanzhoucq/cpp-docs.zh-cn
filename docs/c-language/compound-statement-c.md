@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385720"
 ---
 # <a name="compound-statement-c"></a>复合语句 (C)
 复合语句（也称为“块”）通常显示为另一个语句（例如 if 语句）的主体。 [声明和类型](../c-language/declarations-and-types.md)描述可在复合语句的头部出现的声明的格式和含义。  

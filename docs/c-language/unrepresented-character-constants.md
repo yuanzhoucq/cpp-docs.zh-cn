@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385707"
 ---
 # <a name="unrepresented-character-constants"></a>无代表的字符常量
 **ANSI 3.1.3.4** 包含没有以宽字符常量的基本执行字符集或扩展字符集表示的字符或转义序列的整数字符常量的值  

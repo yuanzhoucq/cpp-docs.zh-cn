@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875716"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 方法
 将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。  

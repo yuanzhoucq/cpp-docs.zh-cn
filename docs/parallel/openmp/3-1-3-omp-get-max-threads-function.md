@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687506"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 函数
 **Omp_get_max_threads**函数返回一个整数，它可以保证至少与将用于形成一个组合，如果没有并行区域的线程数一样大**num_threads**子句已在该点遇到在代码中。 格式如下所示：  

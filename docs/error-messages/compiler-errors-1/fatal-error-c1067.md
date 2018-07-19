@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229087"
 ---
 # <a name="fatal-error-c1067"></a>错误 C1067
 编译器限制： 已超出类型记录的大小的 64k 限制  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696196"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>如何：使用并行容器提高效率
 本主题演示如何使用并行容器来高效地存储和访问数据并行。  

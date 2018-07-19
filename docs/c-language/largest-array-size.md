@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384475"
 ---
 # <a name="largest-array-size"></a>最大数组大小
 **ANSI 3.3.3.4、4.1.1** 保存数组的最大大小所需的整数类型，即 **size_t** 的大小  

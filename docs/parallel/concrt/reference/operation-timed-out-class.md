@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689397"
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out 类
 此类描述操作超时时引发的异常。  

@@ -1,5 +1,5 @@
 ---
-title: COleDialog 类 |Microsoft 文档
+title: COleDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853616"
 ---
 # <a name="coledialog-class"></a>COleDialog 类
 提供 OLE 对话框共有的功能。  
@@ -62,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- 关于 OLE 特定对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -81,17 +82,17 @@ class COleDialog : public CCommonDialog
  **标头：** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- 调用`GetLastError`成员函数以获取其他错误信息时`DoModal`返回**IDABORT**。  
+ 调用`GetLastError`成员函数以获取其他错误信息时`DoModal`返回 IDABORT。  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的错误代码`GetLastError`依赖于中显示的特定的对话框。  
+ 返回的错误代码`GetLastError`取决于特定的对话框显示。  
   
 ### <a name="remarks"></a>备注  
- 请参阅`DoModal`有关特定错误消息信息的派生类中的成员函数。  
+ 请参阅`DoModal`成员函数在派生类的特定错误消息有关的信息。  
   
 ## <a name="see-also"></a>请参阅  
  [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   

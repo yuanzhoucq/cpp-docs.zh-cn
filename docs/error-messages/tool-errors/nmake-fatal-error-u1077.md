@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316259"
 ---
 # <a name="nmake-fatal-error-u1077"></a>NMAKE 错误 U1077
 程序： 返回代码 value  

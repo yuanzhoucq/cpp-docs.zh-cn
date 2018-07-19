@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375365"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE（调试信息选项）
 /DEBUGTYPE 选项指定 /DEBUG 选项生成的调试信息的类型。  

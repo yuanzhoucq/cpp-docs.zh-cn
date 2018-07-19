@@ -1,5 +1,5 @@
 ---
-title: 按位与运算符： &amp; |Microsoft 文档
+title: 按位与运算符： &amp; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942379"
 ---
 # <a name="bitwise-and-operator-amp"></a>按位与运算符： &amp;
+
 ## <a name="syntax"></a>语法  
   
-```  
-  
-expression   
-&  
- expression  
-  
-```  
+```
+
+expression & expression  
+
+```
   
 ## <a name="remarks"></a>备注  
  表达式可以是其他“与”表达式，或（遵循下面所述的类型限制）相等表达式、关系表达式、加法表达式、乘法表达式、指向成员的指针表达式、强制转换表达式、一元表达式、后缀表达式或主表达式。  
   
- 按位 AND 运算符 (**&**) 的每个位与第二个操作数的相应位的第一个操作数将进行比较。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。  
+ 按位 AND 运算符 (**&**) 进行比较的第二个操作数的相应位的第一个操作数的每一位。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。  
   
  按位“与”运算符的两个操作数必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)，适用于操作数。  
   
 ## <a name="operator-keyword-for-"></a>运算符关键字 （& a)  
- `bitand`运算符是文本等效项**&**。 有两种方法来访问`bitand`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ **Bitand**运算符是的文本等效**&**。 有两种方法来访问**bitand**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_Bitwise_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise AND  

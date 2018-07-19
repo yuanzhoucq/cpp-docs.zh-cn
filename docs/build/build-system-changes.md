@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363316"
 ---
 # <a name="build-system-changes"></a>有关生成系统的更改
 MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 和早期版本中，使用了 VCBuild 系统。 某些文件类型和依赖 VCBuild 的概念不存在，或在当前系统中以不同方式表示。 本文档讨论当前的生成系统中的差异。  

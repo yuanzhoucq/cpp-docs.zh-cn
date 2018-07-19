@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569691"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
 
@@ -394,12 +395,10 @@ Visual C++ 生成工具（以前作为单独的产品提供）现在作为工作
 C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动完成 C++ 项目的升级。 如果在 Visual Studio 2017 中打开面向 v140 的 UWP 项目，且如果没有安装 Visual Studio 2015，则需要在项目属性页中选择 v141 平台工具集。
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新选项
+现在，你拥有了为通用 Windows 平台和 Windows 应用商店编写和打包 C++ 应用程序的新选项：可使用桌面桥基础结构打包现有的桌面应用程序或 COM 对象，用于通过 Windows 应用商店部署或借助边载通过现有通道部署。 Windows 10 中的新功能使你能够以各种方式将 UWP 功能添加到桌面应用程序。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
 
-现可使用新选项编写和打包面向通用 Windows 平台和 Microsoft 官方商城的 C++ 应用程序。 可使用 Desktop App Converter 打包现有的桌面应用程序，以通过 Microsoft 官方商城进行部署。 有关详细信息，请参阅 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)（在 Centennial 项目中使用 Visual C++ 运行时）和 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root)（使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)）。
-
-**Visual Studio 2017 版本 15.5**：
-
-添加了“Windows 应用程序打包项目”项目模板，支持使用桌面桥打包桌面应用程序。 安装通用 Windows 应用工作负荷之后，该模板位于“已安装”>“Visual C++”>“通用 Windows 平台”下的“文件”>“新建”>“项目”。
+**Visual Studio 2017 版本 15.5**  
+添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
 在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
 

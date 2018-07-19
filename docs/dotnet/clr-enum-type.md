@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111492"
 ---
 # <a name="clr-enum-type"></a>CLR 枚举类型
 声明和行为的枚举已从更改托管扩展的 c + + 为 Visual c + +。  

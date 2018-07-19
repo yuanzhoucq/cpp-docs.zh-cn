@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422379"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 C++ [iostreams](../standard-library/iostream.md)。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。   

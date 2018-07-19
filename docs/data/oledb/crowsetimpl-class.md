@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098714"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 类
 提供标准 OLE DB 行集实现，而无需许多实现接口的多个继承。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409340"
 ---
 # <a name="type-checking-crt"></a>类型检查 (CRT)
 编译器对可采用可变数目的自变量的函数执行有限类型检查，如下所示：  

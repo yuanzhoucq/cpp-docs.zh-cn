@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371991"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 除非另行指定，/c 选项，则 CL 编译器将自动调用链接。 CL 提供一定的控制链接器通过命令行选项和自变量。 下表汇总了 CL 影响链接的功能。  

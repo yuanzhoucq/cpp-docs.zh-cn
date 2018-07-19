@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932040"
 ---
 # <a name="ready-to-use-array-classes"></a>随时可用的数组类
 下面的类是随时可用的数组类。  
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
  存储类型的元素**字节**数组中。  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- 存储类型的元素`DWORD`数组中。  
+ 存储类型的元素**DWORD**数组中。  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  存储指向类的对象`CObject`或从派生的类的对象`CObject`数组中。  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- 存储指向`void`（泛型指针） 在一个数组中。  
+ 存储指向**void** （泛型指针） 在一个数组中。  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  存储类型的元素**UINT**数组中。  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954566"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -41,14 +42,14 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 - 以 null 结尾的字符数组通常作为 C 字符串被引用。
 
-- 属于类 `basic_string` 的模板类对象，它处理类似于 `char` 的所有模板参数。
+- 类型的模板类对象`basic_string`，，处理所有**char**-等模板自变量。
 
 ### <a name="typedefs"></a>Typedef
 
 |类型名称|描述|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|使用 `basic_string` 类型的元素将 `char` 模板类的专用化描述为 `string` 的类型。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|使用 `basic_string` 类型的元素将 `wchar_t` 模板类的专用化描述为 `wstring` 的类型。|
+|[string](../standard-library/string-typedefs.md#string)|该类型描述模板类专用化`basic_string`类型的元素**char**作为`string`。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|该类型描述模板类专用化`basic_string`类型的元素**wchar_t**作为`wstring`。|
 |[u16string](../standard-library/string-typedefs.md#u16string)|基于 `basic_string` 类型的元素描述模板类 `char16_t` 的专用化的类型。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|基于 `basic_string` 类型的元素描述模板类 `char32_t` 的专用化的类型。|
 
@@ -71,13 +72,13 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|交换两个字符串的字符数组。|
-|[stod](../standard-library/string-functions.md#stod)|将字符序列转换为 `double.`|
-|[stof](../standard-library/string-functions.md#stof)|将字符序列转换为 `float`。|
+|[stod](../standard-library/string-functions.md#stod)|将转换为字符序列**double**。|
+|[stof](../standard-library/string-functions.md#stof)|将转换为字符序列**float**。|
 |[stoi](../standard-library/string-functions.md#stoi)|将字符序列转换为整数。|
-|[stold](../standard-library/string-functions.md#stold)|将字符序列转换为 `long double`。|
-|[stoll](../standard-library/string-functions.md#stoll)|将字符序列转换为 `long long`。|
-|[stoul](../standard-library/string-functions.md#stoul)|将字符序列转换为 `unsigned long`。|
-|[stoull](../standard-library/string-functions.md#stoull)|将字符序列转换为 `unsigned long long`。|
+|[stold](../standard-library/string-functions.md#stold)|将转换为字符序列**长双精度型**。|
+|[stoll](../standard-library/string-functions.md#stoll)|将转换为字符序列**超长**。|
+|[stoul](../standard-library/string-functions.md#stoul)|将转换为字符序列**无符号长**。|
+|[stoull](../standard-library/string-functions.md#stoull)|将转换为字符序列**无符号长长**。|
 |[to_string](../standard-library/string-functions.md#to_string)|将一个值转换为 `string`。|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|将一个值转换为宽 `string`。|
 

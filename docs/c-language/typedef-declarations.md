@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391647"
 ---
 # <a name="typedef-declarations"></a>Typedef 声明
 typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成为新类型。 您可以使用 typedef 声明为已由 C 定义的类型或您已声明的类型构造更短和更有意义的名称。 利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。  

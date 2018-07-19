@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381324"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>用于创建数据库应用程序的操作顺序
 下表显示你的角色和框架的角色中编写数据库应用程序。  

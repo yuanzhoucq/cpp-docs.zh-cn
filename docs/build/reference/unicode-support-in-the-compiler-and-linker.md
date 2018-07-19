@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376187"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 

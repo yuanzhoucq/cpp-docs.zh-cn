@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890939"
 ---
 # <a name="wrl-reference"></a>WRL 引用
 本部分包含有关 Windows 运行时 c + + 模板库 (WRL) 的参考信息。  

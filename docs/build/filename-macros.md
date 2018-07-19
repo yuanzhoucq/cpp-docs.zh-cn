@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458857"
 ---
 # <a name="filename-macros"></a>文件名宏
 文件名宏被预定义为依赖项 （在磁盘上的不完整的文件名规范） 中指定的文件名。 这些宏不需要括在圆括号中时调用;指定仅的 $ 所示。  

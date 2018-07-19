@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369937"
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 本主题提供信息来帮助你确定要生成 dll 的类型。  

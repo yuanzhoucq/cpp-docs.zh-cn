@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d91cfdafcbe81d568bdfffa5ee1b7c99d6bf8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956942"
 ---
 # <a name="addlvaluereference-class"></a>add_lvalue_reference 类
 
@@ -38,11 +39,11 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-如果 `T` 为 lvalue 引用，则类型修饰符的实例将保留修改后的类型 `T`，否则 `T&`。
+类型修饰符的实例保留修改的类型是*T*如果*T*是左值引用，否则`T&`。
 
 ## <a name="example"></a>示例
 

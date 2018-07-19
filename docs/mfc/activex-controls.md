@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340779"
 ---
 # <a name="activex-controls"></a>ActiveX 控件
 在 Visual C++ 中，您可以使用 MFC 或 ATL 创建 ActiveX 控件。  

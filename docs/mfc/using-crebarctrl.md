@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383304"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
 Rebar 控件充当子窗口的容器。 这些子窗口（通常是其他控件）将被分配到 Rebar 控件带区。 Rebar 控件可以包含一个或多个带区，每个带区都有手柄栏、位图、文本标签和子窗口的任意组合。 但是，带区不可包含多个子窗口。  

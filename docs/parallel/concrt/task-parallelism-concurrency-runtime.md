@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695319"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 并发运行时中,*任务*是执行特定作业并通常与其他任务并行运行的工作单元。 任务可以分解为其他更细化的任务组织成*任务组*。  

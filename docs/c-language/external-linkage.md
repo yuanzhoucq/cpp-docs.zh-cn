@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383197"
 ---
 # <a name="external-linkage"></a>外部链接
 如果标识符的文件范围级别的第一个声明不使用 static 存储类说明符，则该对象具有外部链接。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089228"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>动态集的 ODBC 驱动程序需求
 在 MFC ODBC 数据库类中，动态记录集是记录集具有动态属性：它们保持同步与数据源以某些方式。 MFC 动态记录集 （但不是仅向前的记录集） 需要与级别 2 API 一致性 ODBC 驱动程序。 如果驱动程序你[数据源](../../data/odbc/data-source-odbc.md)符合级别 1 API 设置，你仍然可以使用可更新和只读快照以及只进的记录集，但不是能使用动态集。 但是，如果它支持扩展的提取和键集驱动游标级别 1 驱动程序，就可以支持动态记录集。  

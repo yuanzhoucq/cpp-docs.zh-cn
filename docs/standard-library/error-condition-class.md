@@ -27,11 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202add45c335adea086087aed9ce3374e56a7e39
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027334"
 ---
 # <a name="errorcondition-class"></a>error_condition 类
 
@@ -96,12 +97,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |参数|描述|
 |---------------|-----------------|
-|`val`|要存储在 `error_code` 中的错误代码值。|
-|`_Cat`|要存储在 `error_code` 中的错误类别。|
+|*val*|要存储在 `error_code` 中的错误代码值。|
+|*则*|要存储在 `error_code` 中的错误类别。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数存储 `val` 作为错误代码值和指向 `_Cat` 的指针。
+此成员函数存储*val*作为错误代码值和指向*则*。
 
 ## <a name="category"></a>  error_condition::category
 
@@ -148,15 +149,15 @@ error_condition(_Enum _Errcode,
 
 |参数|描述|
 |---------------|-----------------|
-|`val`|要存储在 `error_condition` 中的错误代码值。|
-|`_Cat`|要存储在 `error_condition` 中的错误类别。|
-|`_Errcode`|要存储在 `error_condition` 中的枚举值。|
+|*val*|要存储在 `error_condition` 中的错误代码值。|
+|*则*|要存储在 `error_condition` 中的错误类别。|
+|*_Errcode*|要存储在 `error_condition` 中的枚举值。|
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
-第二个构造函数存储 `val` 作为错误代码值和指向 [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8) 的指针。
+第二个构造函数存储*val*作为错误代码值和指向[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
 
 第三个构造函数存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
@@ -188,7 +189,7 @@ bool operator==(const error_condition& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要测试是否相等的对象。|
+|*right*|要测试是否相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -210,11 +211,11 @@ bool operator!=(const error_condition& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要测试是否不相等的对象。|
+|*right*|要测试是否不相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果 `error_condition` 对象不等于 `right` 中的传入对象 `error_condition`，则为 **true**；否则为 **false**。
+**true**如果`error_condition`对象是否不等于`error_condition`传入的对象*右*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -232,7 +233,7 @@ bool operator<(const error_condition& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要比较的 `error_condition` 对象。|
+|*right*|要比较的 `error_condition` 对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -258,7 +259,7 @@ error_condition(_Enum error,
 
 |参数|描述|
 |---------------|-----------------|
-|`_Errcode`|要向 `error_condition` 对象分配的枚举值。|
+|*_Errcode*|要向 `error_condition` 对象分配的枚举值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -282,7 +283,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>备注
 
-仅在[值](#value)不等于零时，此运算符才返回可转换为 `true` 的值。 返回类型只能转换为 `bool`，而不能转换为 `void *` 或其他已知的标量类型。
+该运算符将返回一个值可转换为 **，则返回 true**仅当[值](#value)不等于零。 返回类型是转换仅为**bool**不为`void *`或其他已知的标量类型。
 
 ## <a name="value"></a>  error_condition::value
 
@@ -308,7 +309,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型定义是 `int` 的同义词。
+类型定义是的同义词**int**。
 
 ## <a name="see-also"></a>请参阅
 

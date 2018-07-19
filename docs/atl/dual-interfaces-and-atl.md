@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355041"
 ---
 # <a name="dual-interfaces-and-atl"></a>双重接口和 ATL
 双重接口使其方法来为调度接口方法或 vtable 方法访问。 本部分将介绍一些从 ATL 的角度的双重接口的功能。  

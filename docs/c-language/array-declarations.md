@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386899"
 ---
 # <a name="array-declarations"></a>数组声明
 “数组声明”将命名数组并指定其元素的类型。 它还可定义数组中的元素数。 带数组类型的变量被视为指向数组元素的类型的指针。  

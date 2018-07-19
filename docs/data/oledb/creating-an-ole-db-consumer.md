@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096686"
 ---
 # <a name="creating-an-ole-db-consumer"></a>创建 OLE DB 使用者
 尽管使用该向导是建议的方法，都可以使用或不使用 ATL OLE DB 使用者向导，创建 OLE DB 模板使用者。 使用者可以运行任何应用程序支持 atl。  

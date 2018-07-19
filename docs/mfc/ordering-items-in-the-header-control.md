@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928565"
 ---
 # <a name="ordering-items-in-the-header-control"></a>对标题控件中的项排序
 之后[项添加到标题控件](../mfc/adding-items-to-the-header-control.md)，您可以操作它们或获取有关它们的顺序使用以下函数的信息：  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
      检索特定标题项的索引值。  
   
- 除了前面成员函数外，`HDS_DRAGDROP` 样式也可以让用户在标题控件中拖放标题项。 有关详细信息，请参阅[为标题项提供拖放支持](../mfc/providing-drag-and-drop-support-for-header-items.md)。  
+ 除了前面成员函数，HDS_DRAGDROP 样式也可以让用户拖放标头控件中的标头项。 有关详细信息，请参阅[为标题项提供拖放支持](../mfc/providing-drag-and-drop-support-for-header-items.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)

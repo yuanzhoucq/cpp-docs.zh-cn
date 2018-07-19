@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379920"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 控件中的流操作
 你可以使用流将数据传输到或跳出 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 流定义通过[EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)结构，指定缓冲区和应用程序定义的回调函数。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870098"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 方法
 将此 ComPtr 与由当前模板类型参数指定的接口类型相关联。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380836"
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032：MFC 异常机制
 以前版本的 Visual c + + 不支持标准 c + + 异常机制，和 MFC 中提供的宏**TRY/CATCH/THROW** ，只能改为使用。 此版本的 Visual C++ 完全支持 C++ 异常。 本说明包含以前的宏的高级实现详细信息，包括如何自动清理基于堆栈的对象。 由于 C++ 异常默认支持堆栈展开，此技术说明不再是必需的。  

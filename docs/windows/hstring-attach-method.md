@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876061"
 ---
 # <a name="hstringattach-method"></a>HString::Attach 方法
 将指定的 HString 对象与当前 HString 对象相关联。  

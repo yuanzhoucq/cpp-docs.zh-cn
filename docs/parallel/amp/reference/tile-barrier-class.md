@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686485"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
 同步正在线程组 （磁贴） 中使用的线程的执行`wait`方法。 只有运行时可以实例化此类。  

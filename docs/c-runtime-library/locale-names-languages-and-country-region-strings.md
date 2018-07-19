@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391810"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>区域设置名称、语言和国家/地区字符串
 `setlocale` 和 `_create_locale` 函数的 *locale* 参数可使用 Windows NLS API 支持的区域设置名称、语言、国家/地区代码和代码页设置。 *locale* 参数采取以下格式：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687655"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理计划程序实例
 计划程序实例，可以将特定的计划策略与各种类型的工作负荷相关联。 本主题包含两个基本示例，演示如何创建和管理计划程序实例。  

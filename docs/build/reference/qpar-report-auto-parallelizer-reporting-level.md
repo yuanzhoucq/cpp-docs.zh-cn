@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376009"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report（自动并行化程序报告等级）
 启用编译器的报表功能[自动并行化](../../parallel/auto-parallelization-and-auto-vectorization.md)并在编译期间指定的输出信息性消息的级别。  

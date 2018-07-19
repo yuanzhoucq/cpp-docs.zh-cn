@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380928"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047：放宽数据库事务需求
 讨论 MFC ODBC 数据库类的事务要求，此技术说明现已过时。 在 MFC 4.2 版之前数据库类所需的记录集后保留游标**CommitTrans**或**回滚**操作。 ODBC 驱动程序和 DBMS 不支持此级别的光标保留，如果数据库类未不会启用交易。  

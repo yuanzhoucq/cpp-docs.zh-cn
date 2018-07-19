@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248519"
 ---
 # <a name="compiler-error-c3190"></a>编译器错误 C3190
 实例，并且它提供的模板自变量不是 type 的任何成员函数的显式实例化  

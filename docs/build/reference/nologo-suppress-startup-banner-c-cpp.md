@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373837"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo（取消显示启动版权标志）(C/C++)
 取消显示版权标志编译器启动时和在编译期间显示信息性消息。  

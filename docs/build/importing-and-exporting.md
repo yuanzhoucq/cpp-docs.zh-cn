@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368868"
 ---
 # <a name="importing-and-exporting"></a>导入和导出
 你可以将公共符号导入到应用程序或使用两种方法从 DLL 导出函数：  

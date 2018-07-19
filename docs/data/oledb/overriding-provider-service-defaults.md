@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110075"
 ---
 # <a name="overriding-provider-service-defaults"></a>重写提供程序服务默认值
 提供程序的注册表值以查找**OLEDB_SERVICES**返回的默认值为[DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx)数据源对象上的初始化属性。  

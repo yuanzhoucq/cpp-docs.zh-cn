@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379596"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel（创建内核模式二进制）
 创建可在 Windows 内核中执行的二进制文件。  

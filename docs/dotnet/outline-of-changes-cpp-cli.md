@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138296"
 ---
 # <a name="outline-of-changes-ccli"></a>更改概要 (C++/CLI)
 此大纲显示你的一些示例的某些更改托管扩展中的语言为 c + + 实现 Visual c + +。 访问附带有关详细信息的每个项的链接。  

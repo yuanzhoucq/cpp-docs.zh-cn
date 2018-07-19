@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373382"
 ---
 # <a name="exceptions-cc"></a>异常 (C/C++)
 遇到故障时，可以引发两个异常代码：  

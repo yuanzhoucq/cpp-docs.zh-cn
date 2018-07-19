@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198737"
 ---
 # <a name="fatal-error-c1313"></a>错误 C1313
 编译器限制： 类型块嵌套深度不能深于数字级别  

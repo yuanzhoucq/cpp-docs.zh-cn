@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236218"
 ---
 # <a name="compiler-error-c2803"></a>编译器错误 C2803
 operator operator 必须具有至少一个类类型的正式参数  

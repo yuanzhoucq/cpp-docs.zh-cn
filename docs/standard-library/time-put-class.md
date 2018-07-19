@@ -24,11 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd4cf162ba16ac5c9ae9c6bf018be2988507bcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958924"
 ---
 # <a name="timeput-class"></a>time_put 类
 
@@ -44,9 +45,11 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 用于在程序内的字符进行编码的类型。
+*CharType*  
+ 在程序中用于对字符进行编码的类型。
 
-`OutputIterator` 时间向其中放入函数的迭代器的类型写入其输出结果。
+*OutputIterator*  
+ 供时间放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -88,11 +91,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 `CharType` 的同义词。
 
 ## <a name="do_put"></a>  time_put::do_put
 
-一种以 **CharType** 序列的形式输出时间和日期信息的虚拟函数。
+一种以 `CharType` 序列的形式输出时间和日期信息的虚拟函数。
 
 ```cpp
 virtual iter_type do_put(
@@ -105,15 +108,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-`next` 要插入的序列字符表示的日期和时间的其中一个输出迭代器。
+*next*  
+ 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-`_Iosbase` 未使用。
+*_Iosbase*  
+ 未使用。
 
-`_Pt` 输出时间和日期信息。
+*_Pt*  
+ 输出的时间和日期信息。
 
-`_Fmt` 输出的格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*_Fmt*  
+ 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-`_Mod` 对于格式修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*_Mod*  
+ 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
 
@@ -121,9 +129,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数从存储于对象 \* `_Pt`（**tm** 类型）中的时间值生成开始于 `next` 的有序元素。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。
+受保护的虚拟成员函数生成有序元素`next`从对象中存储的时间值\* `_Pt`，类型的`tm`。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。
 
-通过使用与 `strftime` 相同的规则及 `_Pt` 的最后一个参数生成输出，在数组中生成一系列 `char` 元素。 假定将每个这样的 `char` 元素通过简单的、一对一的映射映射到 **CharType** 类型的等效元素。 如果 `_Mod` 等于零，有效格式为“%F”，其中 F 替换为 `_Fmt`。 否则，有效格式为“%MF”，其中 M 替换为 `_Mod`。
+使用的相同规则不会生成输出`strftime`，使用的最后一个自变量 *_Pt*，用于生成一系列**char**到一个数组的元素。 每个此类**char**假定元素将映射到类型的等效元素`CharType`通过简单的、 一对一的映射。 如果 *_Mod*等于零，有效格式为"%f"，其中 F 替换为 *_Fmt*。 否则，有效格式是"%MF"，其中 M 替换由 *_Mod*。
 
 ### <a name="example"></a>示例
 
@@ -139,11 +147,11 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **OutputIterator** 的同义词。
+该类型是模板参数 `OutputIterator` 的同义词。
 
 ## <a name="put"></a>  time_put::put
 
-以 **CharType** 序列的形式输出时间和日期信息。
+以 `CharType` 的形式输出时间和日期信息。
 
 ```cpp
 iter_type put(iter_type next,
@@ -163,21 +171,29 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>参数
 
-`next` 要插入的序列字符表示的日期和时间的其中一个输出迭代器。
+*next*  
+ 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-`_Iosbase` 未使用。
+*_Iosbase*  
+ 未使用。
 
-`_Fill` 类型的字符**CharType**用于间距。
+*_Fill*  
+ 类型字符`CharType`用于调整间距。
 
-`_Pt` 输出时间和日期信息。
+*_Pt*  
+ 输出的时间和日期信息。
 
-`_Fmt` 输出的格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*_Fmt*  
+ 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-`_Mod` 对于格式修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*_Mod*  
+ 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-`first` 输出的格式设置字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*first*  
+ 输出格式字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-`last` 输出格式设置字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
+*最后一个*  
+ 输出格式字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
 
@@ -185,7 +201,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 [do_put](#do_put)（`next`、`_Iosbase`、`_Fill`、`_Pt`、`_Fmt` 和 `_Mod`）。 第二个成员函数复制到 \* `next` ++ [ `first`, `last`) 间隔中的任何元素而不是百分号 (%)。 在间隔 [ `first`, `last`) 中，对于后跟字符 *C* 的百分号，函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 并跳过 *C*。但如果 *C* 是集 EOQ # 中的限定符字符（后跟 [ `first`, `last`) 间隔中的字符 `C2`），此函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 并跳过 `C2`。
+第一个成员函数返回[do_put](#do_put)(`next`， `_Iosbase`， `_Fill`， `_Pt`， `_Fmt`， `_Mod`)。 第二个成员函数复制到 \* `next` ++ [ `first`, `last`) 间隔中的任何元素而不是百分号 (%)。 在间隔 [ `first`, `last`) 中，对于后跟字符 *C* 的百分号，函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 并跳过 *C*。但如果 *C* 是集 EOQ # 中的限定符字符（后跟 [ `first`, `last`) 间隔中的字符 `C2`），此函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 并跳过 `C2`。
 
 ### <a name="example"></a>示例
 
@@ -241,11 +257,11 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -253,7 +269,7 @@ explicit time_put(size_t _Refs = 0);
 
 - \> 1： 未定义这些值。
 
-构造函数初始化与与其基对象[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
+构造函数初始化其基对象与[locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 
 ## <a name="see-also"></a>请参阅
 

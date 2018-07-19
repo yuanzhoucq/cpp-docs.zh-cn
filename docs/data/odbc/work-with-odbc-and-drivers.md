@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095110"
 ---
 # <a name="work-with-odbc-and-drivers"></a>使用 ODBC 和驱动程序
 ODBC，可编写的应用程序不依赖于一个数据库管理系统 (DBMS)。 你可以在你的用户为其具有正确的特定于 DBMS 的 ODBC 驱动程序的多个 Dbms 上编写一个应用程序可以运行。  

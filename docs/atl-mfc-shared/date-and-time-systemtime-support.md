@@ -1,5 +1,5 @@
 ---
-title: 日期和时间： SYSTEMTIME 支持 |Microsoft 文档
+title: 日期和时间： SYSTEMTIME 支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883562"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和时间： SYSTEMTIME 支持
-[CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受从 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。  
+[CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受来自 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。  
   
  有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](../mfc/reference/systemtime-structure1.md)。 有关 FILETIME 结构的信息，请参阅[FILETIME](../mfc/reference/filetime-structure.md)。  
   
@@ -40,17 +41,17 @@ ms.lasthandoff: 05/03/2018
   
 -   CTime (const FILETIME & `fileTime`);  
   
- `fileTime` 参数是对 Win32 `FILETIME` 结构的引用，此结构将时间表示为 64 位值，这是比 `SYSTEMTIME` 结构和 Win32 所使用的格式更便利的内部存储格式。  
+ *FileTime*参数是对 Win32 引用`FILETIME`结构，它表示时间作为 64 位值，用于内部存储比以更方便格式`SYSTEMTIME`结构和 Win32 到使用的格式表示文件的创建时间。  
   
  如果你的代码包含使用系统时间初始化的 `CTime` 对象，你应该使用 Win32 中的 `SYSTEMTIME` 构造函数。  
   
- 你最有可能将不会使用`CTime``FILETIME`直接初始化。 如果你使用`CFile`对象操作文件， [cfile:: Getstatus](../mfc/reference/cfile-class.md#getstatus)为你通过检索文件时间戳`CTime`使用初始化对象`FILETIME`结构。  
+ 您很可能不会使用`CTime``FILETIME`直接初始化。 如果您使用`CFile`对象来处理一个文件， [cfile:: Getstatus](../mfc/reference/cfile-class.md#getstatus)为您通过检索文件时间戳`CTime`初始化对象，`FILETIME`结构。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   [常规日期和时间编程 MFC 中](../atl-mfc-shared/date-and-time.md)  
   
--   [日期和时间编程的自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [自动化的日期和时间编程的支持](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 -   [日期和时间编程的通用类](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354164"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>创建 ATL DHTML 控件
 ATL 控件向导创建 DHTML 控件的过程进行自动化。 它会生成必需的资源文件，包括包含的示例代码的 HTML 文件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293358"
 ---
 # <a name="compiler-warning-level-4-c4268"></a>编译器警告（等级 4）C4268
 identifier: const 全局静态/数据使用编译器生成默认构造函数初始化填充零的对象  

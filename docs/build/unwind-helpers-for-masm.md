@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380244"
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM 的展开帮助器
 若要编写正确的程序集例程，有一组可以与实际的程序集说明并行用于创建相应的.pdata 和.xdata 的伪操作。 有一组提供的宏还简化个最常见用途的伪操作的使用。  

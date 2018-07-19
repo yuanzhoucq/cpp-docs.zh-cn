@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881112"
 ---
 # <a name="id-property"></a>ID 属性
 ID 属性引用在程序代码中的每个快捷键对应表项。 这是当用户按下的加速键或键组合，该程序将收到命令值。 要使快捷键与菜单项相同，请将其 Id 相同 （只要快捷键对应表的 ID 是菜单资源的 ID 相同）。  

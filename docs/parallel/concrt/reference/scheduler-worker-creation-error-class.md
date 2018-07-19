@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686420"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 类
 此类描述因未能在并发运行时中创建辅助执行上下文而引发的异常。  

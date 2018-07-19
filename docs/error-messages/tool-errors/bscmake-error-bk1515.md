@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295085"
 ---
 # <a name="bscmake-error-bk1515"></a>BSCMAKE 错误 BK1515
 bscfile： 版本不兼容： 无法以增量方式更新  

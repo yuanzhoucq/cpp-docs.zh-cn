@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301276"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>链接器工具警告 LNK4253
 部分"资料节 1"不合并到 section2';已合并到 section3  

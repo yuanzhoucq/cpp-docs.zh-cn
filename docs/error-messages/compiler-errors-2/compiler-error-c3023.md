@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242152"
 ---
 # <a name="compiler-error-c3023"></a>编译器错误 C3023
 “value”：在 OpenMP“clause”子句的参数中遇到意外的标记  

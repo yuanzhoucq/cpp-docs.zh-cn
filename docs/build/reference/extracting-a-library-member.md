@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371237"
 ---
 # <a name="extracting-a-library-member"></a>提取库成员
 LIB 可用于创建对象 (.obj) 文件包含的一个成员的现有库的副本。 若要提取的成员的副本，请使用以下语法：  

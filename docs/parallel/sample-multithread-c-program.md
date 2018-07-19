@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687987"
 ---
 # <a name="sample-multithread-c-program"></a>多线程 C 程序示例
 Bounce.c 是创建一个新的示例多线程程序线程每次字母或**A**已类型化。 每个线程退回笑脸在屏幕的不同颜色。 可以创建多达 32 个线程。 发生的程序正常终止时`q`或**Q**已类型化。 编译和链接 Bounce.c 有关的信息，请参阅[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  

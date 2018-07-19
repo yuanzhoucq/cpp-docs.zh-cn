@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341207"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>创建扩展组合框控件
 如何创建扩展的组合框控件取决于你是要使用控件在对话框中，还是要在非对话框窗口中创建。  

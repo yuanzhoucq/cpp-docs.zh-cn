@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092186"
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 传输任何挂起的更改对所有行进行自上次提取或**更新**对其调用。  

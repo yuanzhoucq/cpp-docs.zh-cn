@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879352"
 ---
 # <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
 （数据成员） 的变量标记为`literal`中 **/clr**编译为等同的本机`static const`变量。  

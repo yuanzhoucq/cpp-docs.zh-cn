@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382229"
 ---
 # <a name="null-macro"></a>NULL 宏
 **ANSI 4.1.5** 宏 NULL 将扩展到的 null 指针常量  

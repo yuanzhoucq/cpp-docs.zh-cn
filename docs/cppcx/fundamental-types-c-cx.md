@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098532"
 ---
 # <a name="fundamental-types-ccx"></a>基本类型 (C++/CX)
 除了标准 c + + 内置类型，C + + /cli CX 支持由 Windows 运行时体系结构的基本 Windows 运行时类型映射到标准 c + + 类型提供 typedef 定义的类型系统... C + + /cli CX 实现布尔值、 字符和数值基本类型。 这些 typedef 在永远不需要显式指定的 `default` 命名空间中进行定义。 此外，C + + /cli CX 提供了包装和具体实现某些 Windows 运行时类型和接口。  

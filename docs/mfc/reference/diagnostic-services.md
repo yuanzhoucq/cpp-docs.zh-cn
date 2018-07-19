@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00aece4445f87ab13b0f3250e6e0b1a337d75633
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122988"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些诊断服务包括宏和全局函数，让你能够跟踪程序的内存分配，在运行时转储对象的内容并打印调试消息。 诊断服务的宏和全局函数可分为以下几类：  
@@ -45,7 +46,7 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
   
 -   对象诊断函数  
   
- 这些宏和函数可用于派生自 MFC 调试和发布版本中的 `CObject` 的所有类。 但是，除 `DEBUG_NEW` 和 **VERIFY** 之外，它们在发布版本中不执行任何操作。  
+ 这些宏和函数可用于派生自 MFC 调试和发布版本中的 `CObject` 的所有类。 但是，除 DEBUG_NEW 并验证所有执行发行版中的任何操作。  
   
  在调试库中，所有分配的内存块被一系列的“保护字节”包围。 如果这些字节受到错误内存写入的干扰，诊断例程可以报告问题。 如果包括行：  
   
@@ -59,15 +60,15 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
   
 |||  
 |-|-|  
-|[ASSERT](#assert)|如果库调试版本中的指定表达式的计算结果为 **FALSE** ，则打印一条消息，然后中止程序。|  
+|[ASSERT](#assert)|打印一条消息，然后中止程序，如果指定的表达式的计算结果为 FALSE 的库的调试版本中。|  
 |[ASSERT_KINDOF](#assert_kindof)|测试对象是指定类的对象还是指定类派生类的对象。|  
 |[ASSERT_VALID](#assert_valid)|通过调用 `AssertValid` 成员函数测试一个对象的内部有效性；通常从 `CObject`中重写。|
 |[DEBUG_NEW](#debug_new)|提供调试模式下用于所有对象分配的文件名和行号以帮助查找内存泄漏。|  
-|[DEBUG_ONLY](#debug_only)|类似于 **ASSERT** 但不会测试表达式的值；对仅在调试模式下执行的代码非常有用。|  
+|[DEBUG_ONLY](#debug_only)|类似于断言但不会测试表达式; 的值对于应该仅在调试模式下执行的代码非常有用。|  
 |[确保和 ENSURE_VALID](#ensure)|用于验证数据的正确性。|
 |[THIS_FILE](#this_file)|将扩展到正在编译的文件的名称。|
 |[TRACE](#trace)|在库调试版本中提供类似 `printf`的功能。|  
-|[VERIFY](#verify)|类似于 **ASSERT** ，但是可在库发布版本以及调试版本中计算表达式的值。|  
+|[VERIFY](#verify)|Assert 类似但计算结果也如下所示的调试版本的库的发行版中的表达式。|  
   
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC 常规诊断变量和函数  
   
@@ -75,7 +76,7 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 |-|-|  
 |[afxDump](#afxdump)|将 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 信息发送给调试器输出窗口或调试终端的全局变量。|  
 |[afxMemDF](#afxmemdf)|控制调试内存分配器行为的全局变量。|  
-|[AfxCheckError](#afxcheckerror)|用于测试传递的 **SCODE** 是否出错的全局变量，如果出错，将引发相应的错误。|  
+|[AfxCheckError](#afxcheckerror)|全局变量用于测试传递的 SCODE 是否是错误，如果是这样，将引发相应的错误。|  
 |[AfxCheckMemory](#afxcheckmemory)|检查所有当前分配的内存的完整性。|  
 |[AfxDebugBreak](#afxdebugbreak)|在执行过程中会引起的中断。|
 |[AfxDump](#cdumpcontext_in_mfc)|如果在调试器中调用，将在调试时转储对象的状态。|  
@@ -132,7 +133,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>备注  
- `AfxDebugBreak` 在 MFC 应用程序的发行版本中不起，应删除。 此函数只应在 MFC 应用程序。 使用 Win32 API 的版本， **DebugBreak**，以在非 MFC 应用程序中导致中断。  
+ `AfxDebugBreak` 在 MFC 应用程序的发行版本中不起，应删除。 此函数只应在 MFC 应用程序。 使用 Win32 API 的版本， `DebugBreak`，以在非 MFC 应用程序中导致中断。  
    
 ### <a name="requirements"></a>要求  
  **标头：** afxver_.h   
@@ -145,7 +146,7 @@ ASSERT(booleanExpression)
 ```  
   
 ### <a name="parameters"></a>参数  
- `booleanExpression`  
+ *布尔表达式*  
  指定计算结果为零或 0 的表达式 （包括指针值）。  
   
 ### <a name="remarks"></a>备注  
@@ -157,7 +158,7 @@ ASSERT(booleanExpression)
   
  其中*名称*是源文件的名称和*num*是源文件中失败的断言的行号。  
   
- 在发行版的 MFC，**断言**不计算表达式，并因此不会中断该程序。 如果必须计算该表达式，而不考虑环境，使用**验证**宏代替了**断言**。  
+ 在 MFC 的发行版本，断言不计算表达式，并因此不会中断该程序。 如果必须计算该表达式，而不考虑环境，使用 VERIFY 代替 ASSERT 宏。  
   
 > [!NOTE]
 >  此函数是仅在调试版本的 MFC 中可用。  
@@ -207,13 +208,13 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="parameters"></a>参数  
- `pObject`  
+ *pObject*  
  指定的派生类的对象`CObject`具有的重写版本`AssertValid`成员函数。  
   
 ### <a name="remarks"></a>备注  
- `ASSERT_VALID` 调用`AssertValid`作为其自变量传递的对象的成员函数。  
+ ASSERT_VALID 调用`AssertValid`作为其自变量传递的对象的成员函数。  
   
- 在发行版的 MFC，`ASSERT_VALID`不执行任何操作。 在调试版本中，它会验证指针、 检查针对**NULL**，并调用该对象自己的`AssertValid`成员函数。 如果任何这些测试失败，一条警告消息将显示在与相同的方式[断言](#assert)。  
+ 在 MFC 的发行版本，ASSERT_VALID 没有任何影响。 在调试版本中，它验证指针、 为 NULL，检查和调用对象自己的`AssertValid`成员函数。 如果任何这些测试失败，一条警告消息将显示在与相同的方式[断言](#assert)。  
   
 > [!NOTE]
 >  此函数是仅在调试版本的 MFC 中可用。  
@@ -234,33 +235,33 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`DEBUG_NEW`你通常将使用的程序中的所有位置**新**运算符以将堆存储分配。  
+ 你可以在程序时，通常可使用无处不在使用 DEBUG_NEW**新**运算符以将堆存储分配。  
   
- 在调试模式下 (当 **_DEBUG**定义符号)，`DEBUG_NEW`将跟踪的每个对象所分配的文件名和行号。 然后，使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)用的成员函数，每个对象分配`DEBUG_NEW`还会显示文件名和行号分配所在位置。  
+ 在调试模式下 (当 **_DEBUG**定义符号)，DEBUG_NEW 将跟踪的每个对象所分配的文件名和行号。 然后，使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)成员函数，用 DEBUG_NEW 分配每个对象还会显示文件名和行号分配所在位置。  
   
- 若要使用`DEBUG_NEW`，插入到你的源文件的以下指令：  
+ 若要使用 DEBUG_NEW，插入你的源文件中的以下指令：  
   
  [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- 预处理器后插入此指令时，将插入`DEBUG_NEW`任何位置使用**新**，并将执行其余的 MFC。 编译您的程序的发行版时`DEBUG_NEW`解析为一个简单**新**不生成操作和的文件名和行号信息。  
+ 只要你使用预处理器后插入此指令时，将插入 DEBUG_NEW**新**，并将执行其余的 MFC。 DEBUG_NEW 编译你的程序的发行版时，解析为一个简单**新**不生成操作和的文件名和行号信息。  
   
 > [!NOTE]
->  您需要在以前版本的 MFC （4.1 和更早版本） 将放`#define`后调用的所有语句语句`IMPLEMENT_DYNCREATE`或`IMPLEMENT_SERIAL`宏。 这是不再有必要。  
+>  您需要在以前版本的 MFC （4.1 和更早版本） 将放`#define`调用 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 宏的所有语句之后的语句。 这是不再有必要。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h
 
 ##  <a name="debug_only"></a>  DEBUG_ONLY  
- 在调试模式下 (当 **_DEBUG**定义符号)，`DEBUG_ONLY`其自变量的计算结果。  
+ 在调试模式下 (当 **_DEBUG**定义符号)，DEBUG_ONLY 计算其自变量。  
   
 ```   
 DEBUG_ONLY(expression)   
 ```  
   
 ### <a name="remarks"></a>备注  
- 在发布版本中， **DEBUG_ONLY**不会计算其自变量。 时你应仅在调试版本中执行的代码，这会很有用。  
+ 在发布版本中，DEBUG_ONLY 不会计算其自变量。 时你应仅在调试版本中执行的代码，这会很有用。  
   
- `DEBUG_ONLY`宏等同于周围*表达式*与 **#ifdef _DEBUG**和`#endif`。  
+ DEBUG_ONLY 宏等同于周围*表达式*与`#ifdef _DEBUG`和`#endif`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
@@ -277,19 +278,19 @@ ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )  
 ```
 ### <a name="parameters"></a>参数  
- `booleanExpression`  
+ *布尔表达式*  
  指定要测试的布尔表达式。  
    
 ### <a name="remarks"></a>备注  
- 这些宏的目的是提高验证的参数。 宏阻止进一步处理代码中的参数不正确。 与不同**断言**宏，**确保**宏引发除了生成断言异常。  
+ 这些宏的目的是提高验证的参数。 宏阻止进一步处理代码中的参数不正确。 不同于断言宏，确保宏引发除了生成断言异常。  
   
- 根据项目配置将宏的行为方式中，两种方式。 宏调用**断言**和这样如果，则断言失败将引发异常。 因此，在调试配置 (即，其中 **_DEBUG**定义) 宏生成断言，并在发布配置中的异常，该宏产生只能使用异常 (**断言**不评估版本配置中的表达式）。  
+ 根据项目配置将宏的行为方式中，两种方式。 这些宏调用断言和这样如果，则断言失败将引发异常。 因此，在调试配置 （即，如果定义的 _DEBUG） 宏生成断言，并在版本配置中，宏生成时出现异常仅 （断言不计算表达式的结果中发布配置） 的异常。  
   
- 宏**ENSURE_ARG**类似**确保**宏。  
+ 宏 ENSURE_ARG 的作用类似确保宏。  
   
- **ENSURE_VALID**调用`ASSERT_VALID`宏 （用于仅在调试版本中起作用）。 此外， **ENSURE_VALID**指针为 NULL 时引发异常。 在调试和发布配置执行 NULL 测试。  
+ ENSURE_VALID 调用 ASSERT_VALID 宏 （这仅在调试版本中起作用）。 此外，ENSURE_VALID 指针为 NULL 时引发异常。 在调试和发布配置执行 NULL 测试。  
   
- 如果任何这些测试失败，一条警告消息将显示在与相同的方式**断言**。 如果需要宏将引发无效参数异常。  
+ 如果任何这些测试失败，一条警报消息所示断言与相同的方式。 如果需要宏将引发无效参数异常。  
 ### <a name="requirements"></a>要求  
  **标头：** afx.h  
    
@@ -307,7 +308,7 @@ THIS_FILE
 ```  
    
 ### <a name="remarks"></a>备注  
- 使用的信息**断言**和**验证**宏。 应用程序向导和代码向导将宏放在他们创建源代码文件。  
+ 断言并验证宏使用的信息。 应用程序向导和代码向导将宏放在他们创建源代码文件。  
    
 ### <a name="example"></a>示例  
 ```cpp
@@ -338,7 +339,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)有关的说明**跟踪**。 **跟踪**和`ATLTRACE2`具有相同的行为。  
+ 请参阅[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)有关跟踪的说明。 跟踪和 ATLTRACE2 具有相同的行为。  
   
  在 MFC 调试版本中，此宏将指定的字符串发送到当前应用程序的调试器。 在发布版本中，此宏编译为 nothing （在完全生成任何代码）。  
   
@@ -355,7 +356,7 @@ VERIFY(booleanExpression)
 ```  
   
 ### <a name="parameters"></a>参数  
- `booleanExpression`  
+ *布尔表达式*  
  指定计算结果为零或 0 的表达式 （包括指针值）。  
   
 ### <a name="remarks"></a>备注  
@@ -367,7 +368,7 @@ VERIFY(booleanExpression)
   
  其中*名称*是源文件的名称和*num*是源文件中失败的断言的行号。  
   
- 在发行版的 MFC，**验证**计算的表达式，但不会不打印或中断该程序。 例如，如果表达式是一个函数调用，将发起呼叫。  
+ 在发行版的 MFC 中，验证计算的表达式，但无法打印或中断该程序。 例如，如果表达式是一个函数调用，将发起呼叫。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
@@ -404,13 +405,13 @@ MFC 使用要在调试时转储对象的状态的内部函数。
 void AfxDump(const CObject* pOb);   
 ```
 ### <a name="parameters"></a>参数  
- `pOb`  
+ *邮政信箱*  
  指向类的对象的指针派生自`CObject`。  
    
 ### <a name="remarks"></a>备注  
- **AfxDump**调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 **AfxDump**仅在调试版本的 MFC 中可用。  
+ `AfxDump` 调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 `AfxDump` 是仅在调试版本的 MFC 中可用。  
   
- 你的程序代码不应调用**AfxDump**，但应改为调用`Dump`的相应对象的成员函数。  
+ 你的程序代码不应调用`AfxDump`，但应改为调用`Dump`的相应对象的成员函数。  
    
 ### <a name="requirements"></a>要求  
  **标头：** afx.h  
@@ -430,11 +431,11 @@ int  afxMemDF;
 ### <a name="remarks"></a>备注  
  `afxMemDF` 可以具有下列值由枚举指定`afxMemDF`:  
   
-- **allocMemDF**开启调试分配器 （在调试库中的默认设置）。  
+- `allocMemDF` 打开调试分配器 （在调试库中的默认设置）。  
   
-- **delayFreeMemDF**延迟释放内存。 虽然程序释放的内存块，分配器不返回到基础操作系统的内存。 这将在你的程序上放置的最大内存压力。  
+- `delayFreeMemDF` 延迟释放内存。 虽然程序释放的内存块，分配器不返回到基础操作系统的内存。 这将在你的程序上放置的最大内存压力。  
   
-- **checkAlwaysMemDF**调用`AfxCheckMemory`每次分配或释放内存。 这将显著降低的内存分配和释放。  
+- `checkAlwaysMemDF` 调用`AfxCheckMemory`每次分配或释放内存。 这将显著降低的内存分配和释放。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
@@ -443,7 +444,7 @@ int  afxMemDF;
  **标头：** afx.h
 
 ##  <a name="afxcheckerror"></a>  AfxCheckError  
- 此函数将测试传递**SCODE**是否出错。  
+ 此函数将测试传递的 SCODE 出错。  
   
 ```   
 void AFXAPI AfxCheckError(SCODE sc);
@@ -452,7 +453,7 @@ throw COleException*
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果为错误，则此函数将引发异常。 如果传入`SCODE`是**E_OUTOFMEMORY**，该函数将引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)通过调用[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否则，函数将引发[COleException](../../mfc/reference/coleexception-class.md)通过调用[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
+ 如果为错误，则此函数将引发异常。 如果传递的 SCODE E_OUTOFMEMORY，该函数将引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)通过调用[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否则，函数将引发[COleException](../../mfc/reference/coleexception-class.md)通过调用[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
  此函数可用于检查调用应用程序中的 OLE 函数返回的值。 通过在您的应用程序中使用此函数测试返回值，您可使用最少的代码正确反映错误条件。  
   
@@ -478,7 +479,7 @@ BOOL  AfxCheckMemory();
 ### <a name="remarks"></a>备注  
  如果该函数检测到没有内存损坏，会输出执行任何操作。  
   
- 检查所有当前分配的堆上的内存块，包括那些由分配**新**但无法通过直接调用基础内存分配器，如分配`malloc`函数或**GlobalAlloc** Windows 函数。 如果找到任何块可能已损坏，则会将消息打印到调试器输出。  
+ 检查所有当前分配的堆上的内存块，包括那些由分配**新**但无法通过直接调用基础内存分配器，如分配**malloc**函数或`GlobalAlloc` Windows 函数。 如果找到任何块可能已损坏，则会将消息打印到调试器输出。  
   
  如果包括行  
   
@@ -487,7 +488,7 @@ BOOL  AfxCheckMemory();
  程序模块，然后后续调用中`AfxCheckMemory`显示文件名和行号分配内存时。  
   
 > [!NOTE]
->  如果模块包含可序列化类的一个或多个实现，则必须将放`#define`后的最后一个行`IMPLEMENT_SERIAL`宏调用。  
+>  如果模块包含可序列化类的一个或多个实现，则必须将放`#define`上一 IMPLEMENT_SERIAL 宏调用后的行。  
   
  此函数仅在调试版本的 MFC 中有效。  
   
@@ -505,13 +506,13 @@ void AfxDump(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pOb`  
+ *邮政信箱*  
  指向类的对象的指针派生自`CObject`。  
   
 ### <a name="remarks"></a>备注  
- **AfxDump**调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 **AfxDump**仅在调试版本的 MFC 中可用。  
+ `AfxDump` 调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 `AfxDump` 是仅在调试版本的 MFC 中可用。  
   
- 你的程序代码不应调用**AfxDump**，但应改为调用`Dump`的相应对象的成员函数。  
+ 你的程序代码不应调用`AfxDump`，但应改为调用`Dump`的相应对象的成员函数。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h  
@@ -532,15 +533,15 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
  *dwTarget*  
  指示转储输出的目标。 可能的值，可以使用按位 OR 组合 ( **&#124;**) 运算符，如下所示：  
   
-- **AFX_STACK_DUMP_TARGET_TRACE**将输出通过发送[跟踪](#trace)宏。 **跟踪**宏将生成仅在调试版本中输出; 它在发布版本中不生成任何输出。 此外，**跟踪**可以重定向到其他目标除了调试器。  
+- 通过 AFX_STACK_DUMP_TARGET_TRACE 发送输出[跟踪](#trace)宏。 TRACE 宏将生成仅; 在调试版本中的输出它将生成发布版本中没有输出。 此外，跟踪可以重定向到其他目标除了调试器。  
   
-- **AFX_STACK_DUMP_TARGET_DEFAULT**发送转储到默认的目标的输出。 为调试版本，输出将转到**跟踪**宏。 在发布版本中，输出将转到剪贴板。  
+- AFX_STACK_DUMP_TARGET_DEFAULT 发送转储到默认的目标的输出。 为调试版本，输出转到 TRACE 宏。 在发布版本中，输出将转到剪贴板。  
   
-- **AFX_STACK_DUMP_TARGET_CLIPBOARD**将输出发送到仅剪贴板。 数据放置在作为纯文本使用剪贴板上**CF_TEXT**剪贴板格式。  
+- AFX_STACK_DUMP_TARGET_CLIPBOARD 将发送到剪贴板仅输出。 作为使用 CF_TEXT 剪贴板格式的纯文本情况下，数据放到剪贴板上。  
   
-- **AFX_STACK_DUMP_TARGET_BOTH**将输出到剪贴板和发送**跟踪**宏，同时。  
+- AFX_STACK_DUMP_TARGET_BOTH 发送同时输出到剪贴板和 TRACE 宏、。  
   
-- **AFX_STACK_DUMP_TARGET_ODS**将输出发送直接到调试器中，通过 Win32 函数**OutputDebugString()**。 此选项将在这两个调试生成调试器输出并发行版本时调试器附加到进程。 **AFX_STACK_DUMP_TARGET_ODS** （如果它将附加） 始终到达调试器并不能被重定向。  
+- 直接到通过 Win32 函数调试器 AFX_STACK_DUMP_TARGET_ODS 发送输出`OutputDebugString()`。 此选项将在这两个调试生成调试器输出并发行版本时调试器附加到进程。 AFX_STACK_DUMP_TARGET_ODS 始终到达调试器 （如果它将附加） 和不能重定向。  
   
 ### <a name="remarks"></a>备注  
  下面的示例反映从调用生成的输出的单行`AfxDumpStack`从 MFC 对话框应用程序中的按钮处理程序：  
@@ -611,15 +612,15 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
  **标头：** afx.h 
 
 ##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
- 启用和禁用 `AFX_DEBUG_STATE` 析构函数中的内存泄漏转储。  
+ 启用和禁用内存泄漏转储在 AFX_DEBUG_STATE 析构函数中。  
   
 ```  
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDump`  
- `TRUE` 指示已启用内存泄漏转储；`FALSE` 指示已禁用内存泄漏转储。  
+ [in]*bDump*  
+ TRUE 表示已启用内存泄漏转储;FALSE 指示内存泄漏转储已禁用。  
   
 ### <a name="return-value"></a>返回值  
  此标志的上一个值。  
@@ -644,7 +645,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
   
 ### <a name="parameters"></a>参数  
  *bTrack*  
- 此值设置为**TRUE**开启跟踪; 的内存**FALSE**会将其关闭。  
+ 将此值设置为 TRUE 将跟踪; 的内存FALSE 会将其关闭。  
   
 ### <a name="return-value"></a>返回值  
  以前的设置的跟踪启用标志。  
@@ -674,20 +675,20 @@ BOOL AfxIsMemoryBlock(
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向要测试的内存块。  
   
- `nBytes`  
+ *nBytes*  
  包含以字节为单位的内存块的长度。  
   
- `plRequestNumber`  
+ *plRequestNumber*  
  指向**长**将使用的内存块分配序列号，填充或如果它不表示当前处于活动状态的内存块为零的整数。  
   
 ### <a name="return-value"></a>返回值  
  如果当前分配的内存块，并且长度是否正确; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 它还检查原始分配的大小对指定的大小。 如果该函数将返回非零，以返回分配序列号`plRequestNumber`。 此数字表示相对于所有其他分配的块时的顺序**新**分配。  
+ 它还检查原始分配的大小对指定的大小。 如果该函数将返回非零，以返回分配序列号*plRequestNumber*。 此数字表示相对于所有其他分配的块时的顺序**新**分配。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
@@ -706,19 +707,19 @@ BOOL AfxIsValidAddress(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lp`  
+ *lp*  
  指向要测试的内存地址。  
   
- `nBytes`  
+ *nBytes*  
  包含要测试的内存的字节数。  
   
  *bReadWrite*  
- 指定的内存是否同时用于读取和写入 ( **TRUE**) 或只读取 ( **FALSE**)。  
+ 指定的内存是否用于读取和写入 (TRUE) 或只需读取 (FALSE)。  
   
 ### <a name="return-value"></a>返回值  
  在调试版本中，如果指定的内存块的非零是完全内包含程序的内存空间;否则为 0。  
   
- 在非调试版本中，则为非 0 如果`lp`不是 NULL; 否则为 0。  
+ 在非调试版本中，则为非 0 如果*lp*不是 NULL; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
  地址并不局限于由分配块**新**。  
@@ -739,16 +740,16 @@ BOOL  AfxIsValidString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  要测试的指针。  
   
- `nLength`  
+ *nLength*  
  指定要进行测试，以字节为单位的字符串的长度。 值-1 指示该字符串将以 null 结尾。  
   
 ### <a name="return-value"></a>返回值  
  在调试版本中，如果指定的指针指向的字符串指定的大小; 则为非 0否则为 0。  
   
- 在非调试版本中，则为非 0 如果`lpsz`不是 NULL; 否则为 0。  
+ 在非调试版本中，则为非 0 如果*lpsz*不是 NULL; 否则为 0。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
@@ -775,16 +776,16 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
   
  **BOOL AFXAPI AllocHook (size_t** `nSize` **，BOOL** `bObject`**很久很久** `lRequestNumber` **);**  
   
- `nSize`  
+ *nSize*  
  建议的内存分配的大小。  
   
- `bObject`  
- **TRUE**如果分配适用于`CObject`-派生对象; 否则为**FALSE**。  
+ *bObject*  
+ 如果分配适用于 TRUE `CObject`-派生的对象; 否则为 FALSE。  
   
- `lRequestNumber`  
+ *lRequestNumber*  
  内存分配的序列号。  
   
- 请注意， **AFXAPI**调用约定意味着被调用方必须删除从堆栈的参数。  
+ 请注意，调用约定 AFXAPI 意味着被调用方必须删除从堆栈的参数。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h 
@@ -800,14 +801,14 @@ AFXAPI AfxDoForAllClasses(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pfn`  
+ *pfn*  
  指向要为每个类调用的迭代函数。 函数参数是一个指向`CRuntimeClass`对象和调用方提供给函数的额外数据的 void 指针。  
   
- `pContext`  
- 指向调用方可以提供给迭代函数的可选数据。 此指针可能为**NULL**。  
+ *pContext*  
+ 指向调用方可以提供给迭代函数的可选数据。 此指针可以为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 可序列化`CObject`-派生的类是类派生使用`DECLARE_SERIAL`宏。 传递给指针`AfxDoForAllClasses`中`pContext`每次调用时传递给指定的迭代函数。  
+ 可序列化`CObject`-派生的类是派生使用 DECLARE_SERIAL 宏的类。 传递给指针`AfxDoForAllClasses`中*pContext*每次调用时传递给指定的迭代函数。  
   
 > [!NOTE]
 >  此函数仅在调试版本的 MFC 中有效。  
@@ -830,14 +831,14 @@ void AfxDoForAllObjects(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pfn`  
+ *pfn*  
  指向要为每个对象执行的迭代函数。 函数参数是一个指向`CObject`和调用方提供给函数的额外数据的 void 指针。  
   
- `pContext`  
- 指向调用方可以提供给迭代函数的可选数据。 此指针可能为**NULL**。  
+ *pContext*  
+ 指向调用方可以提供给迭代函数的可选数据。 此指针可以为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 不会枚举堆栈，全局或嵌入的对象。 将指针传递给`AfxDoForAllObjects`中`pContext`每次调用时传递给指定的迭代函数。  
+ 不会枚举堆栈，全局或嵌入的对象。 将指针传递给`AfxDoForAllObjects`中*pContext*每次调用时传递给指定的迭代函数。  
   
 > [!NOTE]
 >  此函数仅在调试版本的 MFC 中有效。  

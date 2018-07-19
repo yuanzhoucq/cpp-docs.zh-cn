@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422675"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 本主题介绍如何配置 Visual Studio Linux 项目。 有关 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。

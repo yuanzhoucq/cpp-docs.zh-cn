@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889899"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>对话框编辑器疑难解答
 以下是几种你应注意在对话框编辑器中工作时的问题。  

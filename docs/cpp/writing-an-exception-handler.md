@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421817"
 ---
 # <a name="writing-an-exception-handler"></a>编写异常处理程序
 异常处理程序通常用于响应特定错误。 您可以使用异常处理语法筛选出您不知道如何处理的所有异常。 其他异常应该传递到为了查找特定异常而编写的其他处理程序（可能在运行库或操作系统中）。  

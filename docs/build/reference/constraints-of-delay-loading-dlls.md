@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375911"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 导入延迟加载有一些约束。  

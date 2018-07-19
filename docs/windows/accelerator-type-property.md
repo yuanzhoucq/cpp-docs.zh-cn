@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856496"
 ---
 # <a name="accelerator-type-property"></a>快捷键 Type 属性
 快捷键**类型**属性确定是否与快捷键 ID 关联的快捷键组合为虚拟键组合或 ASCII/ANSI 密钥值：  

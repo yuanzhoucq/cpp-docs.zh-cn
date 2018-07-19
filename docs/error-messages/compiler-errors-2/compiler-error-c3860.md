@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268307"
 ---
 # <a name="compiler-error-c3860"></a>编译器错误 C3860
 类类型名称后面的类型自变量列表必须列表中使用类型参数列表的顺序的参数  

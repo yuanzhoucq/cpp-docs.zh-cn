@@ -558,3 +558,4 @@
 ## [编译器警告（等级 1）C4997](compiler-warning-level-1-c4997.md)
 ## [编译器警告（等级 1）C4999](compiler-warning-level-1-c4999.md)
 ## [编译器警告 C5038](c5038.md)
+## [编译器警告 C5045](c5045.md)

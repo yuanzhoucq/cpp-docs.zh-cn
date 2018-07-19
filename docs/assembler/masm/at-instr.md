@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049276"
 ---
 # <a name="instr"></a>@InStr
 查找的第一个匹配项的宏函数*string2*中*string1*开始，*位置*内*string1*。 如果*位置*未显示，在开始处开始搜索*string1*。 如果返回位置整数或 0 *string2*找不到。  

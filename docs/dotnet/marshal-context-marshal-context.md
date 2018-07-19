@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140115"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
 构造`marshal_context`用于托管和本机数据类型之间的数据转换对象。  

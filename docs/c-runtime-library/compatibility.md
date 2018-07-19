@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390477"
 ---
 # <a name="compatibility"></a>兼容性
 通用 C 运行时库 (UCRT) 支持实现 C++ 一致性所需的大多数 C 标准库。 它实现了 C99 (ISO/IEC 9899:1999) 库，\<tgmath.h> 中定义的泛型类型宏和 \<complex.h> 中的严格的类型兼容性除外。 UCRT 还实现了 POSIX.1（ISO/IEC 9945-1:1996，POSIX 系统应用程序编程接口）C 库的大型子集，但不完全符合任何特定的 POSIX 标准。  此外，UCRT 实现了几个特定于 Microsoft 的函数和不属于标准的一部分的宏。  

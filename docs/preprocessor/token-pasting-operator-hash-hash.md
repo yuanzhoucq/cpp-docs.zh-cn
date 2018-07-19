@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842226"
 ---
 # <a name="token-pasting-operator-"></a>标记粘贴运算符 (##)
 双数字符号或"标记粘贴"运算符 (**##**)，有时称为"合并"运算符，用于类似对象的和类似函数的宏。 它允许将不同的标记加入到单个标记中，因此不能是宏定义中的第一个或最后一个标记。  

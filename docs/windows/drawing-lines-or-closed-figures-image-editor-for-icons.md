@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882770"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>绘制线条或闭合图形（图标的图像编辑器）
 图像编辑器工具用于绘制线条和所有闭合的图形工作方式相同： 你将插入点放在某个时间点并将其拖到另一个。 对于行，这些点是终结点。 为闭合图形，这些点是对角边界图的矩形。  

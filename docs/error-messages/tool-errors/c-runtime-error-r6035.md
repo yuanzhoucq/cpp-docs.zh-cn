@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299742"
 ---
 # <a name="c-runtime-error-r6035"></a>C 运行时错误 R6035
 函数依赖于该安全 cookie 处于活动状态时，Microsoft Visual c + + 运行时库，错误 R6035-此应用程序中的模块正在初始化的模块的全局安全 cookie。  调用 __security_init_cookie 更早版本。  

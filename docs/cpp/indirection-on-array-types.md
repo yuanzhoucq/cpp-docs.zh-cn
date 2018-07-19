@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418834"
 ---
 # <a name="indirection-on-array-types"></a>数组类型的间接寻址
 使用间接寻址运算符 (**\***) 上*n*-维数组类型生成*n*-1 维数组。 如果*n*为 1，生成标量 （或数组元素）。  

@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963467"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/07/2018
 ```
 
 > [!NOTE]
-> 通过使用编译的代码中 **/clr**，阻止此标头。
+> 在使用已编译的代码 **/clr**，禁止使用此标头。
 
 ### <a name="remarks"></a>备注
 
@@ -58,9 +59,9 @@ while (condition is false)
 
 - `wait_for` 等待指定的 `time interval`。
 
-这些方法各自拥有两个重载版本。 其中一个版本只需等待并可虚假唤醒。 而另一个版本使用其他模板参数定义谓词。 此方法只有在谓词为 `true` 时才会返回。
+这些方法各自拥有两个重载版本。 其中一个版本只需等待并可虚假唤醒。 而另一个版本使用其他模板参数定义谓词。 该方法不返回之前的谓词 **，则返回 true**。
 
-每个类还具有两种方法，用于通知其条件为 `true` 的条件变量。
+每个类还具有两个方法，用于通知其条件是一个条件变量 **，则返回 true**。
 
 - `notify_one` 唤醒等待条件变量的其中一个线程。
 

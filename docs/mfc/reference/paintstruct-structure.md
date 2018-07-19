@@ -1,5 +1,5 @@
 ---
-title: PAINTSTRUCT 结构 |Microsoft 文档
+title: PAINTSTRUCT 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338205"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 结构
-`PAINTSTRUCT`结构包含可以用于绘制窗口的客户端区域的信息。  
+`PAINTSTRUCT`结构包含可用于绘制的窗口工作区的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +44,19 @@ typedef struct tagPAINTSTRUCT {
  标识要用于绘制的显示上下文。  
   
  *fErase*  
- 指定是否需要重绘背景。 它不是 0，如果应用程序应重绘背景。 应用程序负责绘制背景，如果一个 Windows 窗口类创建无背景画笔 (请参阅说明**hbrBackground**的成员[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构在 Windows SDK)。  
+ 指定是否需要重新绘制背景。 它不是 0，如果应用程序应重绘后台。 应用程序负责绘制背景，如果没有背景画笔的情况下创建一个 Windows 窗口类 (请参阅的说明`hbrBackground`的成员[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构)。  
   
  *rcPaint*  
- 指定的右上角和右下角的顺序请求绘制的矩形。  
+ 指定右上角和右下角的绘制请求在其中的矩形。  
   
  *fRestore*  
- 保留的成员。 它由 Windows 在内部使用。  
+ 保留的成员。 它是由 Windows 在内部使用。  
   
  *fIncUpdate*  
- 保留的成员。 它由 Windows 在内部使用。  
+ 保留的成员。 它是由 Windows 在内部使用。  
   
  *rgbReserved [16]*  
- 保留的成员。 保留供内部使用 Windows 的内存块。  
+ 保留的成员。 保留的由 Windows 在内部使用的内存块。  
   
 ## <a name="requirements"></a>要求  
  **标头：** winuser.h  

@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956581"
 ---
 # <a name="references-c"></a>引用 (C++)
-与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用： 左值引用后者是指命名的变量和右值引用后者是指[临时对象](../cpp/temporary-objects.md)。 & 运算符表示左值引用，&& 运算符根据上下文表示右值引用或通用引用（右值引用或左值引用）。  
+与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用： 左值引用，后者是指已命名的变量和右值引用后者是指[临时对象](../cpp/temporary-objects.md)。 & 运算符表示左值引用，&& 运算符根据上下文表示右值引用或通用引用（右值引用或左值引用）。  
   
  可以通过以下语法声明引用：  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   可选存储类说明符。  
   
--   可选**const**和/或`volatile`限定符。  
+-   可选**const**和/或**易失性**限定符。  
   
 -   类型说明符：类型的名称。  
   
@@ -58,24 +59,24 @@ ms.lasthandoff: 05/03/2018
   
 -   & 运算符和 && 运算符。  
   
--   可选**const**和/或`volatile`限定符。  
+-   可选**const**和/或**易失性**限定符。  
   
 -   标识符。  
   
  3. 可选初始值设定项。  
   
- 更复杂的声明符形式为指向数组和函数的指针也适用于引用的数组和函数，请参阅[指针](../cpp/pointers-cpp.md)和[声明符](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
+ 更复杂的声明符形式为指向数组和函数的指针也适用于对数组和函数，请参阅[指针](../cpp/pointers-cpp.md)。  
   
  多个声明符和初始值设定项可能出现在一个声明说明符后面的逗号分隔的列表中。 例如：  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  引用、指针和对象可以一起声明：  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

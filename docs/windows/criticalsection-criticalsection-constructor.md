@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870892"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection 构造函数
 初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。  

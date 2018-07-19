@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353882"
 ---
 # <a name="date-and-time-database-support"></a>日期和时间： 数据库支持
 从 4.0 版本开始，MFC 数据库编程使用[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)和[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)类表示日期和时间数据。 在自动化中，还使用这些类派生自类[COleVariant](../mfc/reference/colevariant-class.md)。 它们提供更好地支持管理日期和时间数据比[CTime](../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)。  

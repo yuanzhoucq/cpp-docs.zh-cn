@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889015"
 ---
 # <a name="string-c"></a>string (C++)
 指示的一维`char`， `wchar_t`，**字节**（或等效） 必须作为一个字符串处理数组或指向这样的数组的指针。  

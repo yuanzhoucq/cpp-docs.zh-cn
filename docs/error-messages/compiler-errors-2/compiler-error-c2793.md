@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236287"
 ---
 # <a name="compiler-error-c2793"></a>编译器错误 C2793
 token： 意外的令牌以下::，标识符或关键字 operator 预期  

@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122962"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 提供 Windows 公共数值调节钮控件的功能。  
@@ -119,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定数值调节钮控件的样式。 应用于控件的数值调节按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定数值调节钮控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构  
   
- `pParentWnd`  
- 数值调节钮控件的父窗口，通常一个指向`CDialog`。 它不能**NULL。**  
+ *pParentWnd*  
+ 数值调节钮控件的父窗口，通常一个指向`CDialog`。 不得为 NULL。  
   
- `nID`  
+ *nID*  
  指定数值调节钮控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果初始化成功; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CSpinButtonCtrl`首先对象在两个步骤中，调用的构造函数，然后调用**创建**，它创建数值调节钮控件并将其附加到`CSpinButtonCtrl`对象。  
+ 构造`CSpinButtonCtrl`首先对象在两个步骤中，调用的构造函数，然后调用`Create`，它创建数值调节钮控件并将其附加到`CSpinButtonCtrl`对象。  
   
- 若要使用扩展的窗口样式创建数值调节钮控件，调用[CSpinButtonCtrl::CreateEx](#createex)而不是**创建**。  
+ 若要使用扩展的窗口样式创建数值调节钮控件，调用[CSpinButtonCtrl::CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  创建控件 （子窗口），并将其与关联`CSpinButtonCtrl`对象。  
@@ -152,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展的窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展的窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定数值调节钮控件的样式。 应用于控件的数值调节按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+ 使用`CreateEx`而不是[创建](#create)要应用的 Windows 扩展的样式加 WS_EX_ 中指定的扩展的窗口样式。  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  构造 `CSpinButtonCtrl` 对象。  
@@ -190,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nAccel`  
- 指定的数组中的元素数`pAccel`。  
+ *nAccel*  
+ 指定的数组中的元素数*pAccel*。  
   
- `pAccel`  
+ *pAccel*  
  指向数组的指针[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)接收加速信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -228,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>参数  
  *lpbError*  
- 指向一个布尔值，值设置为零的指针是已成功检索到或非零如果发生错误。 如果此参数设置为**NULL**，不会报告错误。  
+ 指向一个布尔值，值设置为零的指针是已成功检索到或非零如果发生错误。 如果此参数设置为 NULL，将不会报告错误。  
   
 ### <a name="return-value"></a>返回值  
  第一个版本返回低序位字中的 16 位当前位置。 高序位字不为零，如果出现错误。  
@@ -276,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nAccel`  
- 数[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)结构指定`pAccel`。  
+ *nAccel*  
+ 数[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)结构指定*pAccel*。  
   
- `pAccel`  
- 指向数组的指针`UDACCEL`结构，其中包含加速信息。 元素应按升序排序基于**nSec**成员。  
+ *pAccel*  
+ 指向 UDACCEL 结构，其中包含加速信息的数组的指针。 元素应按升序排序基于`nSec`成员。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -293,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBase`  
+ *nBase*  
  控件的新基值。 它可以是表示小数点 10 或 16 个十六进制。  
   
 ### <a name="return-value"></a>返回值  
@@ -310,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWndBuddy`  
+ *pWndBuddy*  
  指向新的合作者窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -328,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  控件的新位置。 此值必须为指定控件的上限和下限限制的范围。  
   
 ### <a name="return-value"></a>返回值  
@@ -352,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLower` 和 `nUpper`  
- 控件的上限和下限限制。 有关`SetRange`，既不限制可以大于**UD_MAXVAL**或小于**UD_MINVAL**; 此外，不能超过两个限制之间的差异**UD_MAXVAL**. `SetRange32` 无限制将限制;使用任何整数。  
+ *nLower*和*nUpper*  
+ 控件的上限和下限限制。 有关`SetRange`、 既不限制可以大于 UD_MAXVAL 或小于 UD_MINVAL; 此外，以下两种限制之间的差异不能超过 UD_MAXVAL。 `SetRange32` 无限制将限制;使用任何整数。  
   
 ### <a name="remarks"></a>备注  
  成员函数`SetRange32`设置数值调节钮控件的 32 位范围。  

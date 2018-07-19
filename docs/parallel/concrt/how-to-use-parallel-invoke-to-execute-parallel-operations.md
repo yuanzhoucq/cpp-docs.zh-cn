@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691165"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 parallel_invoke 来执行并行操作
 此示例演示如何使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法提高执行共享的数据源的多个操作的程序的性能。 没有操作修改源，因为它们可以并行执行直接的方式。  

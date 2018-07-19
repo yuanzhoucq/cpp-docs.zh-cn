@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857267"
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
 返回表示由指定模板参数标识的接口的 ComPtr 对象。  

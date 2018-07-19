@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387947"
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 下标表达式还可以有多个下标，如下所示：  

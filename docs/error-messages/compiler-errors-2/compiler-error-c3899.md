@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275991"
 ---
 # <a name="compiler-error-c3899"></a>编译器错误 C3899
 var： 左值使用 initonly 数据成员不允许直接在类 class 中的并行区域内  

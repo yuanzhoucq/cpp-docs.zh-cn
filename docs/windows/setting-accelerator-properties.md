@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888840"
 ---
 # <a name="setting-accelerator-properties"></a>设置快捷键属性
 你可以在设置快捷键属性[属性窗口](/visualstudio/ide/reference/properties-window)在任何时间。 还可以使用快捷键编辑器修改快捷键对应表中的快捷键属性。 使用“属性”窗口或快捷键编辑器所做的更改具有相同结果：在快捷键对应表中都即时反映编辑情况。  

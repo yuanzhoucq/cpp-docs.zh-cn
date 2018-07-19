@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380168"
 ---
 # <a name="special-characters-in-macros"></a>宏内的特殊字符
 数字符号 （#） 后的定义来指定注释。 若要在宏中指定文本的数字符号，请使用脱字号 (^)，如在 ^ #。  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b123144643fd50b019853d21e4140ba2d931f7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957956"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type 类
 
@@ -36,11 +37,11 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是文本类型，则类型谓词的实例为 true；否则为 false。 文本类型为 `void`、标量类型、引用类型、文本类型数组或文本类类型。 文本类类型是一种类类型，其具有普通析构函数，为聚合类型或至少具有一个非移动非复制的 `constexpr` 构造函数，其所有基类和非静态数据成员为非易失性文本类型。 尽管文本类型始终为文本类型，但是文本类型的概念包括编译器在编译时可计算为 `constexpr` 的任何内容。
+如果类型谓词的实例将保留 true 类型*T*是*文本类型*，否则为 false。 文本类型为**void**，标量类型、 引用类型、 参数类型的数组或文本类类型。 文本类类型是一种类类型，其具有普通析构函数，为聚合类型或至少具有一个非移动非复制的 `constexpr` 构造函数，其所有基类和非静态数据成员为非易失性文本类型。 尽管文本类型始终为文本类型，但是文本类型的概念包括编译器在编译时可计算为 `constexpr` 的任何内容。
 
 ## <a name="requirements"></a>要求
 

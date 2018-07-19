@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370942"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 公开与相同的功能[/堆](../../build/reference/heap-set-heap-size.md)链接器选项。  

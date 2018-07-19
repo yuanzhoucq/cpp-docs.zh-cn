@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451394"
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 变量是指向构成进程环境的多字节字符字符串的指针数组的指针。 此全局变量已弃用，因为出现了更安全的函数版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)，应使用这两个版本来替换此全局变量。 `_environ` 在 Stdlib.h 中声明。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234056"
 ---
 # <a name="compiler-error-c2762"></a>编译器错误 C2762
 class： 作为自变量的模板参数的表达式无效  

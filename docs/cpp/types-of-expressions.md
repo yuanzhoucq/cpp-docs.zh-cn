@@ -1,5 +1,5 @@
 ---
-title: 表达式的类型 |Microsoft 文档
+title: 类型的表达式 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026560"
 ---
 # <a name="types-of-expressions"></a>表达式的类型
 C++ 表达式分为多个类别：  
@@ -35,7 +36,7 @@ C++ 表达式分为多个类别：
   
 -   [常量表达式](../cpp/cpp-constant-expressions.md)。 常量表达式完全由常量数据组成。  
   
--   [带显式类型转换的表达式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)。 可以在表达式中使用显式类型转换或“强制转换”。  
+-   [使用显式类型转换的表达式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)。 可以在表达式中使用显式类型转换或“强制转换”。  
   
 -   [使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。  
   

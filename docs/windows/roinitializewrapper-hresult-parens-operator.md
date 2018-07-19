@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891930"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() 运算符
 检索由上一个 RoInitializeWrapper 构造函数生成的 HRESULT 值。  

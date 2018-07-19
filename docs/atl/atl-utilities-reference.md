@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363818"
 ---
 # <a name="atl-utilities-reference"></a>ATL 实用程序引用
 ATL 提供有关操作的窗体中的路径和 Url 的代码[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 线程池， [CThreadPool](../atl/reference/cthreadpool-class.md)，可在你的应用程序。 此代码可以 atlpath.h 和 atlutil.h 中找到。  

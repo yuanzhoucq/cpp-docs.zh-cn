@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375293"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge（启用堆栈探测）
 激活堆栈探测每个函数调用需要存储的本地变量。  

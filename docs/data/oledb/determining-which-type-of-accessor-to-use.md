@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104004"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>确定要使用的访问器类型
 在编译时或在运行时，你可以确定行集上的数据类型。  

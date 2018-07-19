@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133320"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ 互操作封送 COM 字符串
 本主题演示如何能够 BSTR （偏好在 COM 编程中的基本字符串格式） 传递从托管到非托管函数，反之亦然。 有关与其他字符串类型的互操作性，请参阅以下主题：  

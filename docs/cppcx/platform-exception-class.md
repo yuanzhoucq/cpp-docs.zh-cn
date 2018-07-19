@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091555"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 表示在应用程序执行过程中发生的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。  

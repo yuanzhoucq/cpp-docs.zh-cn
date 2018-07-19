@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339873"
 ---
 # <a name="project-build-error-prj0046"></a>项目生成错误 PRJ0046
 无法生成命令行，因为指定的一个为空。  

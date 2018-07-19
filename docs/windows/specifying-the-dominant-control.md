@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889619"
 ---
 # <a name="specifying-the-dominant-control"></a>指定主导控件
 所选控件首先是主导控件。  

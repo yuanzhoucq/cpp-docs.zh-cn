@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234011"
 ---
 # <a name="compiler-error-c2676"></a>编译器错误 C2676
 二进制 operator: type 不定义此运算符或可接受的类型转换到预定义的运算符  

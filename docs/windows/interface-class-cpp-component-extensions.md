@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880854"
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
 声明接口。  在本机接口上的信息，请参阅[__interface](../cpp/interface.md)。  

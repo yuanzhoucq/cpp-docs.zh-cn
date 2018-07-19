@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266625"
 ---
 # <a name="compiler-error-c3733"></a>编译器错误 C3733
 event： 用于指定的 COM 事件; 不正确的语法是否忘记了 __interface？  

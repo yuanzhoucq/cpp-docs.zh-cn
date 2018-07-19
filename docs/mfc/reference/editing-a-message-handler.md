@@ -1,5 +1,5 @@
 ---
-title: 编辑消息处理程序 |Microsoft 文档
+title: 编辑消息处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb80b7497d8ab9acbc01060b67e967d5f8244f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027867"
 ---
 # <a name="editing-a-message-handler"></a>编辑消息处理程序
-一旦定义消息处理程序，你可以转到成员函数的定义，以便添加或修改代码。  
+一旦定义消息处理程序，你可以转到成员函数的定义，以添加或修改代码。  
   
- 跳转到中的成员函数定义[对话框编辑器](../../windows/dialog-editor.md)，双击处理程序已为其定义的控件。 使用它可导航到在其中定义所选的控件的消息处理程序的文件。  
+ 若要跳转到成员函数定义从[对话框编辑器](../../windows/dialog-editor.md)，双击一个处理程序已为其定义的控件。 使用它可导航到在其中定义所选的控件的消息处理程序的文件。  
   
- 跳转到中的成员函数定义[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，双击类视图中的函数名称。  
+ 若要跳转到成员函数定义从[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，双击类视图中的函数名称。  
   
 ## <a name="see-also"></a>请参阅  
- [将消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)   
+ [消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../../ide/adding-a-class-visual-cpp.md)   
  [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)   

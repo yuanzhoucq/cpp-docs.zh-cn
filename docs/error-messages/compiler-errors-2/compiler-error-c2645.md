@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229142"
 ---
 # <a name="compiler-error-c2645"></a>编译器错误 C2645
 指向成员的指针的限定的名 (找到:: *)  

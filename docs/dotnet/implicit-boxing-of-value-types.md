@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132214"
 ---
 # <a name="implicit-boxing-of-value-types"></a>值类型的隐式装箱
 值类型装箱已从托管扩展中的 c + + 更改为 Visual c + +。  

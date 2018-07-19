@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344303"
 ---
 # <a name="menu-sample-list"></a>菜单示例列表
 请参阅以下演示创建、 编辑和更新菜单的示例程序：  

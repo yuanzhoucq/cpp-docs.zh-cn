@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383340"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>在扩展组合框控件中使用图像列表
 扩展的组合框控件的主要功能是能够将映像从图像列表与组合框控件中的各个项相关联。 每个项都可以显示三个不同的映像： 一个用于其所选的状态，另一个用于其未选中的状态和第三个覆盖图像。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887021"
 ---
 # <a name="custom-attributes-c"></a>自定义特性 (C++)
 自定义特性是允许用户扩展元数据的强类型化的技术。 本主题说明如何使用特性： 指定参数和目标。  

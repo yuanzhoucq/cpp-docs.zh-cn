@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380443"
 ---
 # <a name="special-characters-in-a-makefile"></a>生成文件中的特殊字符
 若要使用 NMAKE 特殊字符作为原义字符，请在它前面添脱字号 (^)。 NMAKE 将忽略位于其他字符之前的插入符号。 特殊字符包括：  

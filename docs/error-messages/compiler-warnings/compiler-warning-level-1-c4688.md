@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286573"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>编译器警告（等级 1）C4688
 “constraint”：约束列表包含程序集私有类型“type”  

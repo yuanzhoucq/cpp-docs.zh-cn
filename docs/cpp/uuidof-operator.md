@@ -1,5 +1,5 @@
 ---
-title: __uuidof 运算符 |Microsoft 文档
+title: __uuidof 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942484"
 ---
 # <a name="uuidof-operator"></a>__uuidof 运算符
 **Microsoft 专用**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>备注  
- *表达式*可以是类型名称、 指针、 引用或该类型的数组，模板专用化对这些类型或这些类型的变量。 只要编译器可使用自变量查找附加的 GUID，此自变量就有效。  
+ *表达式*可以是类型名称、 指针、 引用或该类型的数组，这些类型或这些类型的变量上专用化模板。 只要编译器可使用自变量查找附加的 GUID，此自变量就有效。  
   
- 此内部函数的一个特殊情况是当任一**0**或**NULL**作为参数提供。 在此情况下，`__uuidof` 将返回由零组成的 GUID。  
+ 此内部函数的一种特殊情况是当任一**0**或作为自变量提供了空值。 在这种情况下， **__uuidof**将返回零组成的 GUID。  
   
  使用此关键字可将附加的 GUID 提取到：  
   
 -   一个对象的[uuid](../cpp/uuid-cpp.md)扩展的特性。  
   
--   使用创建的库块[模块](../windows/module-cpp.md)属性。  
+-   使用创建库块[模块](../windows/module-cpp.md)属性。  
   
 > [!NOTE]
->  在调试版本中，`__uuidof` 始终动态初始化对象（在运行时）。 在发布版本中，`__uuidof` 可静态初始化对象（在编译时）。  
+>  在调试版本中， **__uuidof**始终初始化动态 （在运行时） 的对象。 在发布版本中， **__uuidof**可静态 （在编译时） 初始化的对象。  
   
 ## <a name="example"></a>示例  
  以下代码（使用 ole32.lib 编译的）将显示使用 module 特性创建的库块的 uuid。  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>注释  
- 在中库名不再在作用域中的情况下，你可以使用 __LIBID\_而不是`__uuidof`。 例如：  
+ 在库名称的不再在作用域中的情况下，可以使用`__LIBID_`而不是 **__uuidof**。 例如：  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

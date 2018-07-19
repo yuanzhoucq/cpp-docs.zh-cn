@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348802"
 ---
 # <a name="dialog-bars"></a>对话栏
 对话栏是一个工具栏，一种类型的[控件条](../mfc/control-bars.md)可以包含任何类型的控件。 因为它具有无模式对话框的特征[CDialogBar](../mfc/reference/cdialogbar-class.md)对象提供更强大的工具栏。  

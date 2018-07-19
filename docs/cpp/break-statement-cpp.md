@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942490"
 ---
 # <a name="break-statement-c"></a>break 语句 (C++)
-`break` 语句可终止执行最近的封闭循环或其所在条件语句。 控制权将传递给该语句结束之后的语句（如果有的话）。  
+**中断**语句将终止执行最近的封闭循环或它所在的条件语句。 控制权将传递给该语句结束之后的语句（如果有的话）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>备注  
- `break`语句用于条件[切换](../cpp/switch-statement-cpp.md)语句与[执行](../cpp/do-while-statement-cpp.md)，[为](../cpp/for-statement-cpp.md)，和[时](../cpp/while-statement-cpp.md)循环语句。  
+ **中断**语句用于条件性[切换](../cpp/switch-statement-cpp.md)语句且[执行](../cpp/do-while-statement-cpp.md)，[对于](../cpp/for-statement-cpp.md)，和[时](../cpp/while-statement-cpp.md)循环语句。  
   
- 在 `switch` 语句中，`break` 语句将导致程序执行 `switch` 语句之外的下一语句。 如果没有 `break` 语句，则将执行从匹配的 `case` 标签到 `switch` 语句末尾之间的每个语句，包括 `default` 子句。  
+ 在中**切换**语句**中断**语句会导致要执行的下一个语句之外的程序**切换**语句。 无需**中断**语句中，每个语句从匹配**用例**到末尾的标签**切换**语句，包括**默认**子句中，执行。  
   
- 在循环中，`break` 语句将终止执行最近的 `do`、`for` 或 `while` 封闭语句。 控制权将传递给终止语句之后的语句（如果有的话）。  
+ 在循环中，**中断**语句将终止执行最近的封闭**做**，**有关**，或**而**语句。 控制权将传递给终止语句之后的语句（如果有的话）。  
   
- 在嵌套语句中，`break` 语句只终止直接包围它的 `do`、`for`、`switch` 或 `while` 语句。 你可以使用 `return` 或 `goto` 语句从较深嵌套的结构转移控制权。  
+ 在嵌套语句**中断**语句只终止**执行**，**有关**，**切换**，或**时**直接包围它的语句。 可以使用**返回**或**goto**语句将控制权从较深嵌套的结构。  
   
 ## <a name="example"></a>示例  
- 以下代码演示如何在 `break` 循环中使用 `for` 语句。  
+ 下面的代码演示如何使用**中断**中的语句**为**循环。  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- 以下代码演示如何在 `break` 循环和 `while` 循环中使用 `do`。  
+ 下面的代码演示如何使用**中断**中**虽然**循环和一个**执行**循环。  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- 以下代码演示如何在 switch 语句中使用 `break`。 如果你要分别处理每个用例，则必须在每个用例中使用 `break`；如果不使用 `break`，则执行下一用例中的代码。  
+ 下面的代码演示如何使用**中断**switch 语句中。 必须使用**中断**在所有情况下，如果你想要处理每种情况下，单独; 如果不使用**中断**，代码则执行下一用例。  
   
 ```cpp  
 #include <iostream>  

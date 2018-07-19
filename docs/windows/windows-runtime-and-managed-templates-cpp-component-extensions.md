@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891358"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
 使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。  

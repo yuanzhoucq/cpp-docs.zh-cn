@@ -25,6 +25,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056702"
 ---
 # <a name="operator-"></a>运算符 *
 返回*expression1*时间*expression2*。  

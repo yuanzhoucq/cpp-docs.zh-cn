@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057765"
 ---
 # <a name="proc"></a>PROC
 将标记开始和结束调用的过程块*标签*。 块中的语句可以使用调用**调用**指令或[INVOKE](../../assembler/masm/invoke.md)指令。  

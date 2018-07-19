@@ -1,5 +1,5 @@
 ---
-title: 如何： 为生成文件项目启用 IntelliSense |Microsoft 文档
+title: 如何：对生成文件项目启用 IntelliSense | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705457"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>如何：对生成文件项目启用 IntelliSense
-IntelliSense 无法正常工作，某些项目设置或编译器选项时，在 Visual c + + 生成文件项目 IDE 操作的设置不正确。 使用此过程来配置 Visual c + + 生成文件项目，以便在生成文件项目都在 Visual Studio 开发环境中打开时，IntelliSense 可用。  
+错误设置某些项目设置或编译器操作时，IntelliSense 无法在 IDE 中针对 Visual C++ 生成文件项目运行。 使用此步骤配置 Visual C++ 生成文件项目，以便生成文件项目在 Visual Studio 开发环境中处于打开状态时，IntelliSense 能够运行。  
   
-### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>若要在 IDE 中生成文件项目启用 IntelliSense  
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>在 IDE 中对生成文件项目启用 IntelliSense  
   
-1.  打开**属性页**对话框。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+1.  打开“属性页”对话框。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
-2.  展开**配置属性**节点。  
+2.  展开“配置属性”节点。  
   
-3.  选择**NMake**属性页上，然后修改属性下的**IntelliSense**根据。  
+3.  选择“NMake”属性页，然后在“IntelliSense”下适当修改属性。  
   
-    -   设置**预处理器定义**属性以定义你的生成文件项目中任何预处理器符号。 请参阅[/D （预处理器定义）](../build/reference/d-preprocessor-definitions.md)，有关详细信息。  
+    -   设置“预处理器定义”属性以定义生成文件项目中的任何预处理器符号。 请参阅 [/D （预处理器定义）](../build/reference/d-preprocessor-definitions.md)，获取详细信息。  
   
-    -   设置**包含搜索路径**属性指定的编译器将搜索以解析传递给生成文件项目中的预处理器指令的文件引用的目录列表。 请参阅[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)，有关详细信息。  
+    -   设置“包含搜索路径”属性，指定编译器将搜索的目录列表，以解析传递到生成文件项目中的预处理器指令的文件引用。 请参阅 [/I（附加包含目录）](../build/reference/i-additional-include-directories.md)，获取详细信息。  
   
-         对于使用 CL 生成的项目。从命令窗口中，EXE 设置**包括**环境变量指定编译器将搜索以解析传递给生成文件项目中的预处理器指令的文件引用的目录。  
+         对于从命令窗口使用 CL.EXE 生成的项目，设置“INCLUDE”环境变量，指定编译器将搜索的目录，以解析传递到生成文件项目中的预处理器指令的文件引用。  
   
-    -   设置**强制包含**属性来指定在生成你的生成文件项目时要处理的头文件。 请参阅[/FI （命名强制包含文件）](../build/reference/fi-name-forced-include-file.md)，有关详细信息。  
+    -   设置“强制包含”属性，指定生成生成文件时，要处理哪些头文件。 请参阅 [/FI（命名强制包含文件）](../build/reference/fi-name-forced-include-file.md)，获取详细信息。  
   
-    -   设置**程序集搜索路径**属性指定的编译器将搜索以解析对你的项目中的.NET 程序集引用的目录列表。 请参阅[/AI （指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)，有关详细信息。  
+    -   设置“程序集搜索路径”属性指定编译器将搜索的目录列表，以解析对项目中 .NET 程序集的引用。 请参阅 [/AI（指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)，获取详细信息。  
   
-    -   设置**强制使用程序集**属性来指定在生成生成文件项目时要处理的.NET 程序集。 请参阅[/FU (命名强制 #using 文件)](../build/reference/fu-name-forced-hash-using-file.md)，有关详细信息。  
+    -   设置“强制使用程序集”属性指定生成生成文件时，要处理哪些 .NET 程序集。 请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)，获取详细信息。  
   
-    -   设置**其他选项**属性指定其他编译器开关分析 c + + 文件时要使用 intellisense。  
+    -   设置“其他选项”属性，指定分析 C++ 文件时 IntelliSense 使用的附加编译器开关。  
   
-4.  单击**确定**关闭属性页。  
+4.  单击“确定”关闭属性页。  
   
-5.  使用**保存所有**命令可保存已修改的项目的设置。  
+5.  使用“全部保存”命令，保存已修改的项目设置。  
   
- 下一次你打开你的生成文件项目在 Visual Studio 开发环境中，运行**清理解决方案**命令，然后**生成解决方案**命令生成文件项目。 IntelliSense 会在 IDE 中正常工作。  
+ 下一次在 Visual Studio 开发环境中打开生成文件项目时，请在生成文件项目上依次运行“清理解决方案”命令和“生成解决方案”命令。 IntelliSense 应该会在 IDE 中正常运行。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 IntelliSense](/visualstudio/ide/using-intellisense)   

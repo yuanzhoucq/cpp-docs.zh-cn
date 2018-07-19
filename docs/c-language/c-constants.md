@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381650"
 ---
 # <a name="c-constants"></a>C 常量
 “常量”是可以用作程序中的值的数字、字符或字符字符串。 使用常量可表示不能修改的浮点、整数、枚举或字符值。  

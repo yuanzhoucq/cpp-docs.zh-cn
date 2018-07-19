@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ab041fe3cee9a3b6065f22e5f96a44a56af030
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57288e7eb85e3d23fe8790ac3097cab82acdcf8b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954664"
 ---
 # <a name="input-stream-member-functions"></a>输入流成员函数
 
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a>输入流的 open 函数
 
-如果使用输入文件流 (ifstream)，则必须将该流与特定磁盘文件关联。 可在构造函数中实现此操作，或者可使用 **open** 函数。 在这两种情况下，参数都相同。
+如果使用输入文件流 (ifstream)，则必须将该流与特定磁盘文件关联。 您可以执行此操作在构造函数中，也可以使用`open`函数。 在这两种情况下，参数都相同。
 
-打开与输入流关联的文件时，通常要指定一个 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 标志（默认模式为 **ios::in**）。 有关的列表**open_mode**标记，请参阅[打开](#vclrftheopenfunctionforinputstreamsanchor11)。 这些标志可与按位 OR ( &#124; ) 运算符组合。
+通常指定[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)标志，打开与输入流关联的文件时 (默认模式是`ios::in`)。 有关一系列`open_mode`标记，请参阅[打开](#vclrftheopenfunctionforinputstreamsanchor11)。 这些标志可与按位 OR ( &#124; ) 运算符组合。
 
-若要读取文件，请首先使用 **fail** 成员函数来确定文件是否存在：
+若要读取的文件，首先使用`fail`成员函数来确定是否存在：
 
 ```cpp
 istream ifile("FILENAME");
@@ -54,9 +55,9 @@ if (ifile.fail())
 
 ## <a name="vclrfthegetfunctionanchor12"></a> Get
 
-未格式化的 **get** 成员函数作用方式与 **>>** 运算符类似，但存在两个例外。 第一，**get** 函数会将空格字符包含在内，而在设置了 **skipws** 标志（默认设置）时提取符会将空格排除在外。 第二，**get** 函数导致绑定输出流（例如 `cout`）刷新的可能性较小。
+未格式化`get`成员函数的工作方式类似于`>>`运算符有两个例外。 首先，`get`函数包括空白字符，而提取程序不包括空白时`skipws`标志设置 （默认值）。 第二个，`get`函数是不太可能会导致绑定的输出流 (`cout`，例如) 刷新。
 
-一个 **get** 函数变体可指定缓冲区地址和要读取的最大字符数。 这在限制发送给特定变量的字符数时非常有用，如本例所示：
+一个变体`get`函数指定缓冲区地址和要读取的字符最大数量。 这在限制发送给特定变量的字符数时非常有用，如本例所示：
 
 ```cpp
 // ioo_get_function.cpp
@@ -89,7 +90,7 @@ int main()
 
 ## <a name="vclrfthegetlinefunctionanchor13"></a> Getline
 
-**getline** 成员函数类似于 **get** 函数。 这两个函数均允许用于指定输入终止字符的第三个参数。 默认值为换行字符。 这两个函数均会保留一个字符作为所需终止字符。 但是，**get** 会将终止字符留在流中，而 **getline** 会删除此终止字符。
+`getline`成员函数是类似于`get`函数。 这两个函数均允许用于指定输入终止字符的第三个参数。 默认值为换行字符。 这两个函数均会保留一个字符作为所需终止字符。 但是，`get`将终止字符留在流中和`getline`删除结尾的字符。
 
 如下示例为输入流指定了一个终止字符：
 
@@ -116,7 +117,7 @@ test
 
 ## <a name="vclrfthereadfunctionanchor14"></a> 只读
 
-**read** 成员函数会将文件中的字节读取到内存的指定区域。 长度参数决定了所读取字节的数量。 如果未包含该参数，则到达文件物理末尾时，或在文本模式文件的情况下读取到嵌入的 `EOF` 字符时，将停止读取。
+`read`成员函数到指定的内存区域从文件读取字节数。 长度参数决定了所读取字节的数量。 如果未包含该参数，则到达文件物理末尾时，或在文本模式文件的情况下读取到嵌入的 `EOF` 字符时，将停止读取。
 
 本示例将工资单文件中的二进制记录读取到一个结构中：
 
@@ -174,7 +175,7 @@ int main( )
 }
 ```
 
-若要使用 `seekg` 来实现面向记录的数据管理系统，请用固定长度记录大小乘以记录数来获取相对于该文件末尾的字节位置，然后使用 **get** 对象读取记录。
+若要使用`seekg`若要实现面向记录的数据管理系统，固定长度记录大小乘以记录数来获取相对于该文件末尾的字节位置，然后使用`get`对象读取记录。
 
 `tellg` 成员函数会返回读取的当前文件位置。 该值为 `streampos` 类型，即 \<iostream> 中定义的一个 `typedef`。 如下示例会读取文件并显示指示空格位置的消息。
 
@@ -203,7 +204,7 @@ int main( )
 
 ## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a>输入流的 close 函数
 
-**close** 成员函数会关闭与输入文件流关联的磁盘文件，并释放操作系统文件句柄。 [ifstream](../standard-library/basic-ifstream-class.md) 析构函数将关闭该文件，但如需打开同一流对象的另一个文件，则可以使用 **close** 函数。
+`close`成员函数关闭与输入的文件流关联的磁盘文件，并释放操作系统文件句柄。 [Ifstream](../standard-library/basic-ifstream-class.md)析构函数将关闭该文件，但你可以使用`close`函数如果您需要打开同一流对象的另一个文件。
 
 ## <a name="see-also"></a>请参阅
 

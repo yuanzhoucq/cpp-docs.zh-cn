@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262574"
 ---
 # <a name="compiler-error-c3538"></a>编译器错误 C3538
 在声明符列表中，“auto”必须始终推导为同一类型  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135113"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>类或接口中的成员声明 (C++/CLI)
 声明属性和运算符的已经过广泛改写从托管扩展的 c + + 到 Visual c + +，隐藏在托管扩展的设计中公开的基础实现详细信息。 还修改了事件声明。  

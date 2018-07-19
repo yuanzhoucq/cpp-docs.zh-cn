@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855365"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项  

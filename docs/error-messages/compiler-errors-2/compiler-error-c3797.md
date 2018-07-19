@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274139"
 ---
 # <a name="compiler-error-c3797"></a>编译器错误 C3797
 重写： 事件声明不能重写说明符 （应该放在事件添加/删除/引发方法相反）  

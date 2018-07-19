@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877958"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>移除工具栏按钮之间的间隔
 以下过程演示如何删除上一个工具栏按钮之间留一个空格。  

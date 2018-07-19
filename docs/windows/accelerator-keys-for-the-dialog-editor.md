@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863401"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>对话框编辑器的快捷键
 下面是默认值对话框编辑器命令的快捷键。 若要更改键盘快捷方式，请单击**选项**上**工具**菜单，然后选择**键盘**下**环境**文件夹。 有关详细信息，请参阅[标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。  

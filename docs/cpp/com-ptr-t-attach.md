@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Attach |Microsoft 文档
+title: _com_ptr_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942564"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft 专用**  
@@ -32,27 +33,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      void Attach(  
-   Interface* pInterface   
-) throw( );  
-void Attach(  
-   Interface* pInterface,  
-   bool fAddRef   
-) throw( );  
+void Attach( Interface* pInterface ) throw( );  
+void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
   
 #### <a name="parameters"></a>参数  
- `pInterface`  
+ *pInterface*  
  原始接口指针。  
   
- `fAddRef`  
- 如果它是**true**，然后`AddRef`调用。 如果它是**false**、`_com_ptr_t`对象将获得而不调用原始接口指针的所有权`AddRef`。  
+ *fAddRef*  
+ 如果它为 TRUE，则`AddRef`调用。 如果为 FALSE 时，`_com_ptr_t`对象采用而无需调用的原始接口指针的所有权`AddRef`。  
   
 ## <a name="remarks"></a>备注  
   
--   **附加 (**`pInterface`**)** `AddRef`不调用。     将接口的所有权传递给此 `_com_ptr_t` 对象。 **版本**调用以减少前面封装的指针的引用计数。  
+-   **附加 (***pInterface***)** `AddRef`不调用。     将接口的所有权传递给此 `_com_ptr_t` 对象。 `Release` 调用以减少前面封装指针的引用计数。  
   
--   **附加 (** `pInterface` **，**`fAddRef`**)** 如果`fAddRef`是**true**，`AddRef`调用以递增引用封装的接口指针的计数。       如果`fAddRef`是**false**，则此`_com_ptr_t`对象将获得而不调用原始接口指针的所有权`AddRef`。 **版本**调用以减少前面封装的指针的引用计数。  
+-   **附加 (***pInterface* **，***fAddRef***)** 如果*fAddRef*为 TRUE， `AddRef`调用来增加封装的接口指针的引用计数。       如果*fAddRef*为 FALSE，这`_com_ptr_t`对象将拥有原始接口指针，而无需调用的所有权`AddRef`。 `Release` 调用以减少前面封装指针的引用计数。  
   
  **结束 Microsoft 专用**  
   

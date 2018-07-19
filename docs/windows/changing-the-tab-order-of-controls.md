@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861540"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>更改控件的 Tab 键顺序
 Tab 键顺序是在其中 TAB 键在输入的焦点从一个控件移到下一个对话框中的顺序。 通常从左到右、 从上到下一个对话框中，将继续进行 tab 键顺序。 每个控件具有**Tabstop**属性，用于确定控件是否接收输入的焦点。  

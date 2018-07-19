@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957398"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 类
 实现可对点坐标进行动画处理的点功能。  
@@ -85,7 +86,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|封装的动画变量表示 X 动画点的坐标。|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|封装的动画变量表示动画点的 Y 坐标。|  
@@ -113,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pXTransition`  
+ *pXTransition*  
  指向转换 X 坐标的指针。  
   
- `pYTransition`  
+ *pYTransition*  
  指向转换的 Y 坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -137,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptDefault`  
+ *ptDefault*  
  指定默认点坐标。  
   
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  指定用户定义的数据。  
   
 ### <a name="remarks"></a>备注  
@@ -160,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  当函数返回时，它包含指向表示 X 和 Y 坐标的两个 CAnimationVariable 对象的指针。  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -184,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptValue`  
+ *ptValue*  
  输出。 此方法返回时包含的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -254,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptSrc`  
+ *ptSrc*  
  指 CPoint 或点。  
   
 ### <a name="remarks"></a>备注  
@@ -268,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptDefault`  
+ *ptDefault*  
  指定默认点值。  
   
 ### <a name="remarks"></a>备注  

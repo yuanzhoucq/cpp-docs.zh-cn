@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358894"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>常用属性，ATL 控件向导
 向导的此页可标识控件支持的常用属性。 默认情况下，没有属性进行标识。  

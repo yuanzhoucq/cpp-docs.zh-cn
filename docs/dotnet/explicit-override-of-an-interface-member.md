@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110432"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>接口成员的显式重写
 声明一个类中接口成员的显式重写的语法已从托管扩展中的 c + + 更改为 Visual c + +。  

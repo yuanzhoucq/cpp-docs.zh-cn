@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097336"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 向导将生成行集对象的条目。 在此例中，它称为 `CMyProviderRowset`。 `CMyProviderRowset`类继承的 OLE DB 提供程序类调用`CRowsetImpl`，该类可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:  

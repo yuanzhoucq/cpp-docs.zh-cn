@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342961"
 ---
 # <a name="derived-message-maps"></a>派生消息映射
 消息处理期间，检查类自己的消息映射是否是消息映射描述的结尾。 如果会发生什么情况类`CMyView`(派生自`CView`) 的消息没有匹配项  

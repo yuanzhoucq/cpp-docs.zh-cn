@@ -17,11 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966402"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
 
@@ -63,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>参数
 
-`Index` 要获取的元素的索引。
+*Tuple*  
+ 要获取的元素的索引。
 
-`Types` 在此元组，按声明顺序排列中声明类型的序列。
+*类型*  
+ 元组中声明的序列顺序，按声明顺序排列。
 
-`T` 要获取的元素的类型。
+*T*  
+ 要获取的元素的类型。
 
-`Tuple` Std:: tuple 包含任意数目的元素。
+*Tuple*  
+ 包含任意数目元素的 std::tuple。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回对索引 `Index`处的值或 `T` 对象中类型为 `tuple` 的值的引用。
+模板函数返回对索引处的值的引用*索引*，或类型的*T*中`tuple`对象。
 
 如果元组中包含的 T 类型元素的个数不为一个，则调用 `get<T>(Tuple)` 将生成编译器错误。
 
@@ -117,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>参数
 
-`TN` Nth 函数参数的类型。
+*TN*  
+ 第 N 个函数参数的类型。
 
-`tN` Nth 函数参数的值。
+*TN*  
+ 第 N 个函数参数的值。
 
 ### <a name="remarks"></a>备注
 
@@ -162,7 +169,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  平分
+## <a name="tie"></a>  将绑定
 
 从元素引用中生成一个 `tuple`。
 
@@ -173,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>参数
 
-`TN` 第 n 个元组元素的基类型。
+*TN*  
+ 第 N 个元组元素的基类型。
 
 ### <a name="remarks"></a>备注
 

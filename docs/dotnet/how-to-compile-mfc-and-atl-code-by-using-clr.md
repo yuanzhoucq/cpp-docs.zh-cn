@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136062"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>如何：使用 /clr 编译 MFC 和 ATL 代码
 本主题讨论如何将现有的 MFC 和 ATL 程序，以面向公共语言运行时编译。  

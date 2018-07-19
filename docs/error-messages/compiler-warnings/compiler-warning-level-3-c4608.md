@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290681"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>编译器警告（等级 3）C4608
 “union_member”已被初始值设定项列表中的另一个联合成员“union_member”初始化  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865818"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel 方法
 当在派生类中重写时取消异步操作。  

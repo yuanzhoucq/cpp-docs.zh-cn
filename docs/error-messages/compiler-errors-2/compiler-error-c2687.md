@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233013"
 ---
 # <a name="compiler-error-c2687"></a>编译器错误 C2687
 type： 异常声明不能为 void，也不能表示不完整类型、 指针或对不完整类型引用  

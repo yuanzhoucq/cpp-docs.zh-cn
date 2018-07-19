@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880200"
 ---
 # <a name="interface-attributes"></a>接口特性
 下列属性适用于[接口 （或 __interface）](../cpp/interface.md) c + + 关键字。  

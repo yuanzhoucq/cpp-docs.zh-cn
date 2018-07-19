@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269020"
 ---
 # <a name="compiler-error-c3763"></a>编译器错误 C3763
 type: retval 和 out 只能出现在数据指针类型  

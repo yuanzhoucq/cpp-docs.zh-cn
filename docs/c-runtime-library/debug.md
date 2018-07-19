@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387539"
 ---
 # <a name="debug"></a>_DEBUG
 指定 /MTd 或 /MDd 选项时，编译器将定义 `_DEBUG`。 这些选项可指定 C 运行时库的调试版本。  

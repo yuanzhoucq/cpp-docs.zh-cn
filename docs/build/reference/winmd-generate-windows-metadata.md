@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376174"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD（生成 Windows 元数据）
 启用 Windows 运行时元数据 (.winmd) 文件的生成。  

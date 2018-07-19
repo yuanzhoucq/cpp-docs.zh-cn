@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089567"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>记录视图类的功能（MFC 数据访问）
 你可以执行与类的基于窗体的数据访问编程[CFormView](../mfc/reference/cformview-class.md)，但[CRecordView](../mfc/reference/crecordview-class.md)通常是更好的类以派生自。 除了其`CFormView`功能， `CRecordView`:  

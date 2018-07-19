@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380248"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>数组、列表和映射的模板类
 这些集合类是其参数确定聚合中存储对象的类型的模板。 `CArray`、`CMap` 和 `CList` 类使用必须进行自定义的全局帮助器函数。 有关这些帮助器函数的详细信息，请参阅[集合类帮助器](../mfc/reference/collection-class-helpers.md)。 类型化指针类是类库中其他类的包装器。 通过使用这些包装器，登记编译器的类型检查以帮助避免错误。 有关使用这些类的详细信息，请参阅[集合](../mfc/collections.md)。  

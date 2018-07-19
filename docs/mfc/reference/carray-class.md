@@ -1,5 +1,5 @@
 ---
-title: CArray 类 |Microsoft 文档
+title: CArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,14 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339431"
 ---
 # <a name="carray-class"></a>CArray 类
-支持类似于 C 数组，但可以动态减小和增大根据需要的数组。  
+支持类似于 C 数组，但可以动态减小和增大的数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>参数  
- `TYPE`  
- 指定数组中存储的对象类型的模板参数。 `TYPE` 是一个参数，返回`CArray`。  
+ *类型*  
+ 指定数组中存储的对象类型的模板参数。 *类型*是一个参数，返回的`CArray`。  
   
- `ARG` *_* `TYPE`  
- 指定用于访问存储在数组中对象的自变量类型的模板参数。 通常对的引用`TYPE`。 `ARG_TYPE` 是传递给参数`CArray`。  
+ *ARG* *_* *类型*  
+ 指定用于访问存储在数组中对象的自变量类型的模板参数。 通常对的引用*类型*。 *ARG_TYPE*是一个参数，传递给`CArray`。  
   
 ## <a name="members"></a>成员  
   
@@ -88,13 +89,13 @@ class CArray : public CObject
 |名称|描述|  
 |----------|-----------------|  
 |[CArray::Add](#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|  
-|[Carray:: Append](#append)|将另一个数组追加到数组中;如有必要，请扩展该数组|  
+|[Carray:: Append](#append)|将另一个数组追加到数组中;如有必要，扩展该数组|  
 |[Carray:: Copy](#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|  
 |[CArray::ElementAt](#elementat)|在该数组中返回对元素指针的临时引用。|  
 |[CArray::FreeExtra](#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|  
 |[CArray::GetAt](#getat)|返回给定索引位置处的值。|  
 |[CArray::GetCount](#getcount)|获取此数组中的元素数。|  
-|[CArray::GetData](#getdata)|允许访问该数组中的元素。 可以是**NULL**。|  
+|[CArray::GetData](#getdata)|允许访问该数组中的元素。 可以为 NULL。|  
 |[CArray::GetSize](#getsize)|获取此数组中的元素数。|  
 |[CArray::GetUpperBound](#getupperbound)|返回最大的有效索引。|  
 |[CArray::InsertAt](#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|  
@@ -112,23 +113,23 @@ class CArray : public CObject
 |[operator[]](#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- 数组索引始终在位置 0 处启动。 你可以决定是否以修复上限或启用要展开时添加过去的当前绑定元素的数组。 内存分配连续给上限，即使某些元素为 null。  
+ 数组索引始终在位置 0 处开始。 您可以决定是否要修复上限或启用要展开时添加过去的当前绑定元素的数组。 内存是连续分配给了上限，即使某些元素是 null。  
   
 > [!NOTE]
->  调整大小的大多数方法`CArray`对象或添加到它的元素使用[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)移动元素。 这是一个问题，因为`memcpy_s`与任何需要的构造函数要调用的对象不兼容。 如果中的项`CArray`与不兼容`memcpy_s`，你必须创建一个新`CArray`的适当的大小。 然后，你必须使用[carray:: Copy](#copy)和[CArray::SetAt](#setat)用于填充该新数组，因为这些方法使用而不是赋值运算符`memcpy_s`。  
+>  重设大小的大多数方法`CArray`对象或添加到该元素使用[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)移动元素。 这是一个问题，因为`memcpy_s`不符合要求的构造函数调用的任何对象。 如果中的项`CArray`都不符合`memcpy_s`，你必须创建一个新`CArray`的适当的大小。 然后，您必须使用[carray:: Copy](#copy)并[CArray::SetAt](#setat)用于填充新数组，因为这些方法使用而不是赋值运算符`memcpy_s`。  
   
- C 数组，访问时间与`CArray`索引的元素是常数，它独立于数组大小。  
+ 与使用 C 数组，访问时间`CArray`索引的元素是常量，它独立于数组大小。  
   
 > [!TIP]
->  在使用数组之前, 使用[SetSize](#setsize)建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
+>  在使用一个数组之前, 使用[SetSize](#setsize)建立其大小，并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
   
- 如果你需要在一个数组中的各个元素的转储，则必须设置的深度[CDumpContext](../../mfc/reference/cdumpcontext-class.md)到 1 或更大的对象。  
+ 如果您需要在数组中的各个元素的转储，则必须设置的深度[CDumpContext](../../mfc/reference/cdumpcontext-class.md)为 1 或更大的对象。  
   
- 全局帮助器函数，此类调用某些成员函数必须进行自定义的大部分使用`CArray`类。 请参阅主题[集合类帮助器](../../mfc/reference/collection-class-helpers.md)MFC 宏和全局函数部分中。  
+ 全局帮助器函数的此类调用的某些成员函数必须进行自定义的大部分使用`CArray`类。 请参阅主题[集合类帮助器](../../mfc/reference/collection-class-helpers.md)MFC 宏和全局部分中。  
   
  数组类派生就像列表派生。  
   
- 有关如何使用`CArray`，请参阅文章[集合](../../mfc/collections.md)。  
+ 有关如何使用详细信息`CArray`，请参阅文章[集合](../../mfc/collections.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -139,24 +140,24 @@ class CArray : public CObject
  `Header:` afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
- 将新元素添加到数组中，按 1 增长数组的末尾。  
+ 将新元素添加到数组，按 1 增长数组的末尾。  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_TYPE`  
- 模板参数来指定自变量引用此数组中的元素的类型。  
+ *ARG_TYPE*  
+ 指定的参数引用此数组中的元素类型模板参数。  
   
- `newElement`  
+ *newElement*  
  要添加到该数组的元素。  
   
 ### <a name="return-value"></a>返回值  
- 添加元素的索引。  
+ 添加的元素的索引。  
   
 ### <a name="remarks"></a>备注  
- 如果[SetSize](#setsize)已用于`nGrowBy`可能分配值大于 1，则额外的内存。 但是，上限将增加仅为 1。  
+ 如果[SetSize](#setsize)已用于`nGrowBy`可能分配值大于 1，则额外的内存。 但是，仅为 1 将提高上限。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -170,7 +171,7 @@ INT_PTR Append(const CArray& src);
   
 ### <a name="parameters"></a>参数  
  *src*  
- 要追加到一个数组的元素的源。  
+ 要追加到数组的元素的源。  
   
 ### <a name="return-value"></a>返回值  
  第一个追加的元素的索引。  
@@ -178,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>备注  
  数组必须是类型的相同。  
   
- 如有必要，**追加**可能会分配额外内存来容纳追加到该数组的元素。  
+ 如有必要，`Append`可能会分配额外内存来容纳追加到该数组的元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -191,7 +192,7 @@ CArray();
 ```  
   
 ### <a name="remarks"></a>备注  
- 数组增长一次一个元素。  
+ 数组每次增加一个元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
@@ -208,15 +209,15 @@ void Copy(const CArray& src);
  要复制到数组的元素的源。  
   
 ### <a name="remarks"></a>备注  
- 调用此成员函数以覆盖与另一个数组的元素的一个数组的元素。  
+ 调用此成员函数以使用另一个数组的元素覆盖一个数组的元素。  
   
- **复制**不释放内存; 但是，如有必要，**复制**可能会分配额外内存来容纳的元素复制到数组。  
+ `Copy` 不会释放内存;但是，如果有必要，`Copy`可能会分配额外内存来容纳复制到数组的元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
 ##  <a name="elementat"></a>  CArray::ElementAt  
- 返回到该数组中指定的元素的临时引用。  
+ 返回对指定元素的数组中的临时引用。  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);  
@@ -224,30 +225,30 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 整数索引大于或等于 0 且小于或等于返回的值[GetUpperBound](#getupperbound)。  
+ *nIndex*  
+ 大于或等于 0 的整数索引且小于或等于返回的值[GetUpperBound](#getupperbound)。  
   
 ### <a name="return-value"></a>返回值  
  对数组元素的引用。  
   
 ### <a name="remarks"></a>备注  
- 它用于实现数组左侧赋值运算符。  
+ 它用于实现数组的左侧赋值运算符。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[GetSize](#getsize)。  
+  有关示例，请参阅[GetSize](#getsize)。  
   
 ##  <a name="freeextra"></a>  CArray::FreeExtra  
- 释放任何额外已分配内存，而数组已增长。  
+ 释放任何已分配，而数组已增长的额外内存。  
   
 ```  
 void FreeExtra();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此函数不起的大小或数组的上限。  
+ 此函数无效的大小或数组的上限。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[GetData](#getdata)。  
+  有关示例，请参阅[GetData](#getdata)。  
   
 ##  <a name="getat"></a>  CArray::GetAt  
  返回指定索引处的数组元素。  
@@ -261,20 +262,20 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *类型*  
  指定的数组元素的类型的模板参数。  
   
- `nIndex`  
- 整数索引大于或等于 0 且小于或等于返回的值[GetUpperBound](#getupperbound)。  
+ *nIndex*  
+ 大于或等于 0 的整数索引且小于或等于返回的值[GetUpperBound](#getupperbound)。  
   
 ### <a name="return-value"></a>返回值  
  当前位于此索引的数组元素。  
   
 ### <a name="remarks"></a>备注  
- 传递值为负或值返回的值大于`GetUpperBound`将导致失败的断言。  
+ 传递值为负或值大于返回的值`GetUpperBound`将导致失败的断言。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
 ##  <a name="getcount"></a>  CArray::GetCount  
- 返回数组元素的数目。  
+ 返回数组元素的个数。  
   
 ```  
 INT_PTR GetCount() const;  
@@ -284,13 +285,13 @@ INT_PTR GetCount() const;
  数组中的项数。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法来检索其中的数组中的元素数。 因为索引是从零开始，大小为 1 大于最大的索引。 调用此方法将生成与相同的结果[CArray::GetSize](#getsize)方法。  
+ 调用此方法来检索数组中的元素数。 因为索引是从零开始，大小为 1 大于最大的索引。 调用此方法将生成相同的结果[CArray::GetSize](#getsize)方法。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
 ##  <a name="getdata"></a>  CArray::GetData  
- 使用此成员函数来获取数组中的元素的直接访问。  
+ 使用此成员函数来直接访问数组中的元素。  
   
 ```  
 const TYPE* GetData() const; 
@@ -305,9 +306,9 @@ TYPE* GetData();
  指向数组元素的指针。  
   
 ### <a name="remarks"></a>备注  
- 如果没有元素可用，`GetData`返回一个 null 值。  
+ 如果没有元素可用，`GetData`返回 null 值。  
   
- 对数组的元素的直接访问可帮助你更快地工作，而时要格外小心调用`GetData`; 直接进行的任何错误会影响你数组的元素。  
+ 对数组的元素的直接访问可帮助你更快地工作，而时要格外小心调用`GetData`; 直接进行的任何错误会影响在数组的元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
@@ -320,28 +321,28 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 因为索引是从零开始，大小为 1 大于最大的索引。 调用此方法将生成与相同的结果[CArray::GetCount](#getcount)方法。  
+ 因为索引是从零开始，大小为 1 大于最大的索引。 调用此方法将生成相同的结果[CArray::GetCount](#getcount)方法。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
 ##  <a name="getupperbound"></a>  CArray::GetUpperBound  
- 返回此数组中的当前的上限。  
+ 返回此数组的当前的上限。  
   
 ```  
 INT_PTR GetUpperBound() const;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 数组索引是从零开始的因为此函数将返回值 1 小于`GetSize`。  
+ 数组索引是从零开始的因为此函数返回值 1 小于`GetSize`。  
   
- 条件**GetUpperBound （)** =-1 指示该数组包含任何元素。  
+ 条件`GetUpperBound( )`=-1 指示该数组包含任何元素。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[CArray::GetAt](#getat)。  
+  有关示例，请参阅[CArray::GetAt](#getat)。  
   
 ##  <a name="insertat"></a>  CArray::InsertAt  
- 第一个版本`InsertAt`中数组的指定索引处插入一个元素 （或多个元素的副本）。  
+ 第一个版本`InsertAt`数组中指定索引处插入一个元素 （或一个元素的多个副本）。  
   
 ```  
 void InsertAt(
@@ -355,30 +356,30 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 可能返回的值大于整数索引`GetUpperBound`。  
+ *nIndex*  
+ 可能会高于返回的值的整数索引`GetUpperBound`。  
   
- `ARG_TYPE`  
- 在此数组中指定的元素类型的模板参数。  
+ *ARG_TYPE*  
+ 此数组中指定的元素类型模板参数。  
   
- `newElement`  
+ *newElement*  
  要放置在此数组的元素。  
   
- `nCount`  
- 此元素应为次数插入 （默认为 1）。  
+ *nCount*  
+ 此元素应为次数插入 （默认值为 1）。  
   
- `nStartIndex`  
- 可能返回的值大于整数索引[GetUpperBound](#getupperbound)。  
+ *nStartIndex*  
+ 可能会高于返回的值的整数索引[GetUpperBound](#getupperbound)。  
   
- `pNewArray`  
- 包含要添加到该数组的元素的另一个数组。  
+ *pNewArray*  
+ 另一个数组，其中包含要添加到该数组的元素。  
   
 ### <a name="remarks"></a>备注  
- 在过程中，它上移 （通过将递增索引） 在此索引，和它的现有元素上移它上面的所有元素。  
+ 在过程中，它上移 （通过递增索引） 在此索引和它的现有元素上移其上的所有元素。  
   
- 第二个版本将所有元素都插入从另一个`CArray`从开始的集合`nStartIndex`位置。  
+ 第二个版本将所有元素都插入从另一`CArray`集合，开始*nStartIndex*位置。  
   
- `SetAt`函数，与此相反，替换一个指定的数组元素和任何元素不移位。  
+ `SetAt`函数，与此相反，替换一个指定的数组元素，并不移动任何元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
@@ -391,10 +392,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果数组不包含任何元素; 则为非 0否则为 0。  
+ 如果数组不包含任何元素，则非零值否则为 0。  
   
 ##  <a name="operator_at"></a>  CArray::operator \[\]  
- 这些下标运算符是一个方便替换[SetAt](#setat)和[GetAt](#getat)函数。  
+ 这些下标运算符不方便代替[SetAt](#setat)并[GetAt](#getat)函数。  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
@@ -403,21 +404,21 @@ const TYPE& operator[](int_ptr nindex) const;
   
 ### <a name="parameters"></a>参数  
  *类型*  
- 在此数组中指定的元素类型的模板参数。  
+ 此数组中指定的元素类型模板参数。  
   
- `nIndex`  
- 若要访问的元素的索引。  
+ *nIndex*  
+ 若要访问元素的索引。  
   
 ### <a name="remarks"></a>备注  
- 第一个运算符，为不数组调用**const**，可以在右侧 （右值） 或赋值语句的左侧 （左值） 一起使用。 第二个，为调用**const**数组，可能使用仅在右侧。  
+ 第一个运算符为数组不是调用**const**，可以在赋值语句左侧 （左值） 或右侧 （右值） 一起使用。 第二个，为调用**const**数组，可能会使用仅在右侧。  
   
- 库的调试版本断言下标 （或者在左侧或赋值语句右侧） 是否超出界限。  
+ 在库的调试版本断言的下标 （无论在左侧或右侧的赋值语句） 是否超出界限。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
 ##  <a name="relocateelements"></a>  CArray::RelocateElements  
- 将数据重新调整到一个新的缓冲区数组应增大或收缩时。  
+ 将数据重新调整到新的缓冲区数组应增大或收缩时。  
   
 ```  
 template<class TYPE, class ARG_TYPE>  
@@ -428,21 +429,21 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pNewData`  
- 一个新的缓冲区中的元素数组。  
+ *pNewData*  
+ 新的缓冲区数组的元素。  
   
- `pData`  
- 旧元素的数组。  
+ *pData*  
+ 元素的旧的数组。  
   
- `nCount`  
- 旧的数组中的元素数目。  
+ *nCount*  
+ 旧的数组中的元素数。  
   
 ### <a name="remarks"></a>备注  
- `pNewData` 始终是足够大以保存所有`pData`元素。  
+ *pNewData*始终是足够大以保存所有*pData*元素。  
   
- [CArray](../../mfc/reference/carray-class.md)实现使用此方法将旧的数据复制到新的缓冲区，数组应增大或收缩时 (当[SetSize](#setsize)或[FreeExtra](#freeextra)称为)。 默认实现只需复制的数据。  
+ [CArray](../../mfc/reference/carray-class.md)实现使用此方法将旧数据复制到新的缓冲区，数组应增大或收缩时 (当[SetSize](#setsize)或[FreeExtra](#freeextra)称为)。 默认实现只是将复制数据。  
   
- 对于在其中元素包含一个自己的成员的指针或另一种结构包含一个数组元素的指针的数组，指针不会更新纯副本中。 在这种情况下，可以通过实现的专用化更正指针`RelocateElements`与相关的类型。 你负责还复制数据。  
+ 对于在其中一个元素包含一个指向个成员，或另一种结构包含一个数组元素的指针数组，指针不会更新中普通复制。 在这种情况下，您可以通过实现的专用化来更正指针`RelocateElements`与相关的类型。 你也要负责数据复制。  
   
 ##  <a name="removeall"></a>  CArray::RemoveAll  
  从此数组中移除所有元素。  
@@ -467,16 +468,16 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 整数索引大于或等于 0 且小于或等于返回的值[GetUpperBound](#getupperbound)。  
+ *nIndex*  
+ 大于或等于 0 的整数索引且小于或等于返回的值[GetUpperBound](#getupperbound)。  
   
- `nCount`  
+ *nCount*  
  要移除的元素数。  
   
 ### <a name="remarks"></a>备注  
- 在过程中，它会转而下上面已移除元素的所有元素。 它递减上限绑定的数组，但不释放内存。  
+ 在过程中，移向上述的已删除的元素的所有元素下。 它递减右上绑定的数组，但不会释放内存。  
   
- 如果你尝试删除不是删除点上方数组中包含的多个元素，然后断言库的调试版本。  
+ 如果你尝试删除不是上面的删除点数组中包含的更多元素，然后在库的调试版本断言。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
@@ -489,22 +490,22 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 整数索引大于或等于 0 且小于或等于返回的值[GetUpperBound](#getupperbound)。  
+ *nIndex*  
+ 大于或等于 0 的整数索引且小于或等于返回的值[GetUpperBound](#getupperbound)。  
   
- `ARG_TYPE`  
- 模板参数来指定自变量用于引用数组元素的类型。  
+ *ARG_TYPE*  
+ 指定用于引用数组元素的参数的类型的模板参数。  
   
- `newElement`  
- 要存储在指定位置的新元素值。  
+ *newElement*  
+ 在指定位置处存储的新元素值。  
   
 ### <a name="remarks"></a>备注  
  `SetAt` 不会导致要增长的数组。 使用[SetAtGrow](#setatgrow)如果你想要自动增长的数组。  
   
- 你必须确保你的索引值表示数组中的有效位置。 如果该值超出界限，库的调试版本断言。  
+ 您必须确保你的索引值表示数组中的有效位置。 如果该值超出界限，调试版本的库断言。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[GetAt](#getat)。  
+  有关示例，请参阅[GetAt](#getat)。  
   
 ##  <a name="setatgrow"></a>  CArray::SetAtGrow  
  设置指定索引处的数组元素。  
@@ -514,17 +515,17 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 大于或等于 0 的整数索引。  
+ *nIndex*  
+ 一个大于或等于 0 的整数索引。  
   
- `ARG_TYPE`  
- 数组中指定的元素类型的模板参数。  
+ *ARG_TYPE*  
+ 数组中指定的元素类型模板参数。  
   
- `newElement`  
- 要添加到该数组的元素。 A **NULL**允许值。  
+ *newElement*  
+ 要添加到该数组的元素。 允许 NULL 值。  
   
 ### <a name="remarks"></a>备注  
- 数组是自动增长如有必要 （即，上限调整以容纳新元素）。  
+ 如有必要，该数组自动增长 （即，上限为进行调整以容纳新元素）。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
@@ -539,25 +540,25 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewSize`  
- 新数组大小 （即元素的数目）。 必须大于或等于 0。  
+ *nNewSize*  
+ 新数组大小 （元素的数量）。 必须是大于或等于 0。  
   
- `nGrowBy`  
- 要分配如果大小增加是必需的元素插槽中最小的数。  
+ *nGrowBy*  
+ 元素槽分配的大小增长是否需要最小数目。  
   
 ### <a name="remarks"></a>备注  
- 如果新的大小小于旧大小，然后数组将被截断并释放所有未使用的内存。  
+ 如果新大小小于旧大小，该数组被截断，并释放所有未使用的内存。  
   
- 使用此函数在开始使用数组之前设置你的数组的大小。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
+ 使用此函数之前开始使用数组设置数组的大小。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
   
- `nGrowBy`参数会影响内部内存分配，而增长数组。 其使用永远不会影响数组大小由报告[GetSize](#getsize)和[GetUpperBound](#getupperbound)。 如果使用默认值，MFC 中分配内存计算以避免内存碎片并优化对于大部分程序来说效率的方式。  
+ *NGrowBy*参数会影响内部内存分配，而增长数组。 其用途永远不会影响数组大小由报告[GetSize](#getsize)并[GetUpperBound](#getupperbound)。 如果使用默认值，则 MFC 中分配内存中计算以避免内存碎片并优化效率在大多数情况下的，一种方法。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[GetData](#getdata)。  
+  有关示例，请参阅[GetData](#getdata)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例收集](../../visual-cpp-samples.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CObArray 类](../../mfc/reference/cobarray-class.md)   
  [集合类帮助器](../../mfc/reference/collection-class-helpers.md)

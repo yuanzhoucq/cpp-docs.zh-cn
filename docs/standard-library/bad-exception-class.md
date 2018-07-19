@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b30763f1382b7a12f68cd6a45b87960f623649
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3813fae7a9ae6105d4a3dfe4e72ac1773a10e65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954651"
 ---
 # <a name="badexception-class"></a>bad_exception 类
 
@@ -36,7 +37,7 @@ class bad_exception    : public exception {};
 
 如果 `bad_exception` 包含在函数的引发列表中，则 [unexpected](../standard-library/exception-functions.md#unexpected) 将引发 `bad_exception`，而不是终止或调用使用 [set_unexpected](../standard-library/exception-functions.md#set_unexpected) 指定的其他函数。
 
-**what** 返回的值是实现定义的 C 字符串。 无成员函数引发任何异常。
+返回的值`what`是实现定义的 C 字符串。 无成员函数引发任何异常。
 
 有关通过 `bad_exception` 类继承的成员列表，请参阅 [exception 类](../standard-library/exception-class.md)。
 

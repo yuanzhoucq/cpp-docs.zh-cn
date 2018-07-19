@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245998"
 ---
 # <a name="compiler-error-c3213"></a>编译器错误 C3213
 基类“base_type”的可访问性比“derived_type”低  

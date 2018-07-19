@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879472"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 `interior_ptr` 可以与值类型一起使用。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377477"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report（自动矢量化程序报告等级）
 启用编译器的报告功能[自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)并在编译期间指定的输出信息性消息的级别。  

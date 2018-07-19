@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879056"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
 `ref new`聚合关键字分配进行垃圾回收时在对象变为不可访问，并返回的句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到分配的对象。  

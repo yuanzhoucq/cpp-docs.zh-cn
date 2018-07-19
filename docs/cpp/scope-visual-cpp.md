@@ -1,7 +1,7 @@
 ---
-title: 范围 （Visual C++） |Microsoft 文档
+title: 作用域 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/08/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,139 +20,124 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8af021120c06465d0fd79ead79e2a18cb593803
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027604"
 ---
-# <a name="scope-visual-c"></a>范围 (Visual C++)
-只能在程序的某些区域内使用 C++ 名称。 此区域称为名称的“范围”。 范围决定一个不表示静态范围的对象的名称的“生存期”。 在以下情况下，范围还可决定名称的可见性：调用类构造函数或析构函数时，或初始化范围的局部变量时。 (有关详细信息，请参阅[构造函数](../cpp/constructors-cpp.md)和[析构函数](../cpp/destructors-cpp.md)。)有五种范围：  
-  
--   **局部范围**在块内声明的名称是只能在该块中以及括起来，并仅在声明点后的块中访问。 函数的最外层块范围中的函数形式自变量的名称具有局部范围，就像已在包含函数主体的块中声明了它们一样。 考虑以下代码片断：  
-  
-    ```  
-    {  
-        int i;  
-    }  
-    ```  
-  
-     由于 `i` 的声明位于包含在大括号内的块中，因此，`i` 具有局部范围且绝对不可访问，因为右大括号之前没有代码访问它。  
-  
--   **函数范围**标签是具有函数范围的唯一名称。 它们可以在函数内的任意位置使用，但在函数外部是不可访问的。 用于函数的形式自变量（函数定义中指定的自变量）被视为在函数体的最外层块的范围内。  
-  
--   **文件范围**声明所有块或类外部的任何名称都具有文件范围。 它在其声明后的翻译单元中的任意位置都是可访问的。 不声明静态对象的带文件范围的名称通常称为全局名称。  
-  
-     在 C++ 中，文件范围也称为命名空间范围。  
-  
--   **类范围内使用**类成员的名称具有类范围。 类成员函数可访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。\*** 或**-> \***) 上的对象或指针指向的对象类; 非静态的类成员数据被视为本地给该类的对象。 考虑下列类声明：  
-  
-    ```  
-    class Point  
-    {  
-        int x;  
-        int y;  
-    };  
-    ```  
-  
-     类成员 `x` 和 `y` 被认为在类 `Point` 的范围内。  
-  
--   **原型范围**函数原型中声明的名称是可见的才原型的末尾。 以下原型声明了三个名称（`strDestination`、`numberOfElements` 和 `strSource`）；这些名称超出了原型末尾的范围：  
-  
-    ```  
-    errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );  
-    ```  
-  
-## <a name="hiding-names"></a>隐藏名称  
- 可通过在封闭块中声明名称来隐藏该名称。 在下图中，在内部块中重新声明 `i`，从而隐藏与外部块范围中的 `i` 关联的变量。  
-  
- ![块&#45;作用域的名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")  
-块范围和名称隐藏  
-  
- 来自图中显示的程序的输出为：  
-  
-```  
-i = 0  
-i = 7  
-j = 9  
-i = 0  
-```  
-  
+# <a name="scope-c"></a>范围 (C++)
+
+在程序元素，如类、 函数或变量声明时，可以仅"看到"并在程序的某些部分中使用其名称。 在其中一个名称是可见的上下文调用其*作用域*。 例如，如果将变量声明`x`内的函数`x`时才会显示该函数体中。 它具有*局部范围*。 中可以有其他变量同名的程序;只要它们是在不同的作用域中，只要不违反单个定义规则，并不会引发错误。
+
+自动的非静态变量的范围还可决定何时创建和销毁程序内存中。 
+
+有六种范围：
+
+- **全局范围内**全局名称是指任何类、 函数或命名空间的外部声明。 但是，c + + 中甚至这些名称存在一个隐式全局命名空间。 从声明点扩展了全局名称的作用域到声明它们的文件的末尾。 对于全局名称，可见性也由规则的控制[链接](program-and-linkage-cpp.md)确定名称在程序中的其他文件中是否可见。
+
+- **Namespace 作用域**中声明的名称[命名空间](namespaces-cpp.md)、 任何类或枚举的定义或函数块的外部是可见的声明点到命名空间的末尾。 跨不同的文件可能在多个块中定义命名空间。
+
+- **局部范围**声明函数或 lambda，包括参数名称中的名称具有局部范围。 它们通常被称为"局部变量"。 它们只是从其声明的点对函数或 lambda 体的结尾可见。 本地作用域是一种类型的块范围，这将在本文后面部分进行讨论。
+
+- **类范围内使用**类成员的名称具有类范围内，整个类定义，而不考虑声明点扩展。 类成员可访问性是由控制进一步**公共**，**专用**，并**受保护的**关键字。 公共或受保护的成员可以访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。\*** 或**-> \***)。
+
+- **语句作用域**中声明的名称**有关**，**如果**，**虽然**，或**切换**语句结束时才是可见语句块。
+
+- **函数范围**A[标签](labeled-statements.md)具有函数范围，这意味着它是整个函数体甚至之前声明点可见。 函数范围，使可能编写等语句`goto cleanup`之前`cleanup`声明标签。
+
+## <a name="hiding-names"></a>隐藏名称
+
+可通过在封闭块中声明名称来隐藏该名称。 在下图中，在内部块中重新声明 `i`，从而隐藏与外部块范围中的 `i` 关联的变量。
+
+ ![块&#45;的范围名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")块范围和名称隐藏
+
+ 来自图中显示的程序的输出为：
+
+```cpp
+i = 0
+i = 7
+j = 9
+i = 0
+```
+
 > [!NOTE]
->  参数 `szWhat` 被视为处于函数的范围内。 因此，它被当做就像已在函数的最外层块中声明一样。  
-  
-## <a name="hiding-class-names"></a>隐藏类名  
- 通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，类名仍可以访问由关键字作为前缀时**类**。  
-  
-```  
-// hiding_class_names.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-// Declare class Account at file scope.  
-class Account  
-{  
-public:  
-    Account( double InitialBalance )  
-        { balance = InitialBalance; }  
-    double GetBalance()  
-        { return balance; }  
-private:  
-    double balance;  
-};  
-  
-double Account = 15.37;            // Hides class name Account  
-  
-int main()  
-{  
-    class Account Checking( Account ); // Qualifies Account as   
-                                       //  class name  
-  
-    cout << "Opening account with balance of: "  
-         << Checking.GetBalance() << "\n";  
-}  
-//Output: Opening account with balance of: 15.37  
-```  
-  
+> 参数 `szWhat` 被视为处于函数的范围内。 因此，它被当做就像已在函数的最外层块中声明一样。
+
+## <a name="hiding-class-names"></a>隐藏类名
+
+ 通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，类名仍可访问时前缀由关键字**类**。
+
+```cpp
+// hiding_class_names.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+// Declare class Account at global scope.
+class Account
+{
+public:
+    Account( double InitialBalance )
+        { balance = InitialBalance; }
+    double GetBalance()
+        { return balance; }
+private:
+    double balance;
+};
+
+double Account = 15.37;            // Hides class name Account
+
+int main()
+{
+    class Account Checking( Account ); // Qualifies Account as 
+                                       //  class name
+
+    cout << "Opening account with balance of: "
+         << Checking.GetBalance() << "\n";
+}
+//Output: Opening account with balance of: 15.37
+```
+
 > [!NOTE]
->  在任何位置调用类名称 (`Account`)，关键字类都必须用于将其与文件范围内的变量 Account 区分开来。 当类名出现在范围解析运算符 (::) 的左侧时，此规则不适用。 在范围解析运算符的左侧的名称始终被视为类名称。  
-  
- 下面的示例演示如何声明指向类型的对象的指针`Account`使用**类**关键字：  
-  
-```  
-class Account *Checking = new class Account( Account );  
-```  
-  
- `Account`初始值设定项 （括号） 中前面的语句在具有文件范围; 它是类型**double**。  
-  
+> 任何位置的类名 (`Account`) 调用，必须使用关键字类以将它与全局范围内的变量 Account 区分开来。 当类名出现在范围解析运算符 (::) 的左侧时，此规则不适用。 在范围解析运算符的左侧的名称始终被视为类名称。
+
+ 下面的示例演示如何声明指向类型的对象的指针`Account`使用**类**关键字：
+
+```cpp
+class Account *Checking = new class Account( Account );
+```
+
+ `Account` （在括号内） 在前面的语句中的初始值设定项中具有全局作用域; 它是类型**double**。
+
 > [!NOTE]
->  此示例中所示的标识符名称的重用被视为较差的编程样式。  
-  
- 有关指针的详细信息，请参阅[派生类型](http://msdn.microsoft.com/en-us/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化的类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**和**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。  
-  
-## <a name="hiding-names-with-file-scope"></a>隐藏具有文件范围的名称  
- 通过在块范围中显式声明相同的名称，可以隐藏带文件范围的名称。 但是，可以使用范围解析运算符 (`::`) 访问文件范围名称。  
-  
-```  
-// file_scopes.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-int i = 7;   // i has file scope, outside all blocks  
-using namespace std;  
-  
-int main( int argc, char *argv[] ) {  
-   int i = 5;   // i has block scope, hides i at file scope  
-   cout << "Block-scoped i has the value: " << i << "\n";  
-   cout << "File-scoped i has the value: " << ::i << "\n";  
-}  
-```  
-  
-```Output  
-Block-scoped i has the value: 5  
-File-scoped i has the value: 7  
-```  
-  
-## <a name="see-also"></a>请参阅  
+> 此示例中所示的标识符名称的重用被视为较差的编程样式。
+
+ 有关指针的详细信息，请参阅[派生类型](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
+
+## <a name="hiding-names-with-global-scope"></a>隐藏具有全局作用域的名称
+
+ 可以通过显式声明块范围中的具有相同名称来隐藏具有全局作用域的名称。 但是，全局作用域名称可以使用访问作用域解析运算符 (`::`)。
+
+```cpp
+#include <iostream>
+
+int i = 7;   // i has global scope, outside all blocks
+using namespace std;
+
+int main( int argc, char *argv[] ) {
+   int i = 5;   // i has block scope, hides i at global scope
+   cout << "Block-scoped i has the value: " << i << "\n";
+   cout << "Global-scoped i has the value: " << ::i << "\n";
+}
+```
+
+```Output
+Block-scoped i has the value: 5
+Global-scoped i has the value: 7
+```
+
+## <a name="see-also"></a>请参阅
+
  [基本概念](../cpp/basic-concepts-cpp.md)

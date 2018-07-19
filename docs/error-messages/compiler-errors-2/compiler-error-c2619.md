@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231313"
 ---
 # <a name="compiler-error-c2619"></a>编译器错误 C2619
 “标识符”：匿名结构或联合中不允许使用静态数据成员  

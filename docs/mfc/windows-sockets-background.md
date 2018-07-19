@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384932"
 ---
 # <a name="windows-sockets-background"></a>Windows 套接字：背景
 此文章介绍了的性质和用途的 Windows 套接字。 文章还：  

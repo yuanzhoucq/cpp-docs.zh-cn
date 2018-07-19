@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953057"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function 类
 
@@ -42,17 +43,17 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`pfunc` 要转换的二元函数。
+*pfunc*转换的二元函数。
 
-`left` 对象的 *\*pfunc*上调用。
+*左*对象的 *\*pfunc*上调用。
 
 ## <a name="return-value"></a>返回值
 
-模板类存储 **pfunc** 的副本。 它将其成员函数 `operator()` 定义为返回 (\* **pfunc**)(_ *Left*)。
+此模板类存储一份`pfunc`。 它将其成员函数 `operator()` 定义为返回 (\* **pfunc**)(_ *Left*)。
 
 ## <a name="remarks"></a>备注
 
-一元函数指针是一个函数对象，且可能会被传递到期望将一元函数作为参数的任何 C++ 标准库算法，但它不可调适。 若要将其与适配器配合使用（如向其绑定值或与求反器配合使用），则必须将其与可促成这种调适的 **argument_type** 和 **result_type** 嵌套类型一起提供。 `pointer_to_unary_function` 执行的转换允许函数适配器与二元函数指针配合使用。
+一元函数指针是一个函数对象，且可能会被传递到期望将一元函数作为参数的任何 C++ 标准库算法，但它不可调适。 若要使用与适配器，如向其绑定值或将它与配合，它必须提供嵌套类型一起`argument_type`和`result_type`，使这种适应成为可能。 `pointer_to_unary_function` 执行的转换允许函数适配器与二元函数指针配合使用。
 
 ## <a name="example"></a>示例
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878692"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
 应用于对类类型参数的限制都应用于类型参数在接口上的那些相同 (请参阅[泛型类 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  

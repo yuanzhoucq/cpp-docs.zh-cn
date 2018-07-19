@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890854"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed（C++ 组件扩展）
 `sealed` 是 ref 类的上下文相关关键字，它指示某个虚拟成员不能被替代，或某个类型不能用作基类型。  

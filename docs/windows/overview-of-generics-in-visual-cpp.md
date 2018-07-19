@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880984"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概述
 泛型是公共语言运行时所支持的参数化类型。 参数化类型是用在使用泛型时指定的未知类型参数定义的类型。  

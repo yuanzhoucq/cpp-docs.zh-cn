@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378465"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl（为调试库插入 PCH 引用）
 

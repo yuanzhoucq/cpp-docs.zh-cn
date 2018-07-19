@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391452"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 `_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。  

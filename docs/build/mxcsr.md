@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368621"
 ---
 # <a name="mxcsr"></a>MxCsr
 注册状态还包括 MxCsr。 调用约定易失性的部分和非易失性部分中划分此注册。 易失的部分包含的 6 状态标志，MXCSR [0:5]，而的寄存器，MXCSR [6:15]，其余部分被视为非易失性。  

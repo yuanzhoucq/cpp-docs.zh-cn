@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376645"
 ---
 # <a name="release-builds"></a>发行版本
 发布版本使用优化。 当使用优化以创建发行版本时，编译器不会生成符号化调试信息。 符号化调试信息，以及不的跟踪和断言生成代码的事实没有调用，表示可执行文件的大小会减少，因此将更快。  

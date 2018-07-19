@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860302"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>特性参数类型（C++ 组件扩展）
 编译器在编译时必须知道传递给特性的值。  特性参数可为下列类型：  

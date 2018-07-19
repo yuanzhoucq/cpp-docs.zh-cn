@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872310"
 ---
 # <a name="entry"></a>entry
 通过标识 DLL 中的入口点，在模块中指定导出的函数或常量。  

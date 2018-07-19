@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687408"
 ---
 # <a name="lightweight-tasks"></a>轻量级任务
 本文档介绍并发运行时中的轻量任务的角色。 A*轻量级任务*是直接从计划的任务`concurrency::Scheduler`或`concurrency::ScheduleGroup`对象。 轻量级任务类似于对 Windows API 提供的函数[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。 因此，轻量级任务非常有用，当改编现有代码以使用并发运行时的计划功能时。 并发运行时本身使用轻量任务来计划异步代理和之间异步消息块发送消息。  

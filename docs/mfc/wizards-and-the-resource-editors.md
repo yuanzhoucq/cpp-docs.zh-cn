@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951135"
 ---
 # <a name="wizards-and-the-resource-editors"></a>向导和资源编辑器
 Visual c + + 包括多个向导用于在 MFC 编程中，以及许多集成的资源编辑器。 对于 ActiveX 控件编程中， [ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)非常类似于 MFC 应用程序向导的起作用。 虽然可以编写没有其中大多数工具的 MFC 应用程序，则工具将极大地简化并加速你的工作。  
@@ -40,7 +41,7 @@ Visual c + + 包括多个向导用于在 MFC 编程中，以及许多集成的�
 > [!NOTE]
 >  类视图还可帮助你重写虚函数中的 MFC 类。 选择类和重写虚函数。 以下各段中所述，该过程的其余部分是类似于消息处理。  
   
- 在 Windows 下运行的应用程序是[驱动的消息](../mfc/message-handling-and-mapping.md)。 用户操作和其他运行的程序中发生的事件导致 Windows 将消息发送到程序中的窗口。 例如，如果用户单击鼠标在窗口中的，则 Windows 将发送`WM_LBUTTONDOWN`消息时按下鼠标左键和`WM_LBUTTONUP`消息时释放按钮。 Windows 还会发送**WM_COMMAND**邮件时对用户从菜单栏中选择命令。  
+ 在 Windows 下运行的应用程序是[驱动的消息](../mfc/message-handling-and-mapping.md)。 用户操作和其他运行的程序中发生的事件导致 Windows 将消息发送到程序中的窗口。 例如，如果用户单击鼠标在窗口中的，Windows 将发送 WM_LBUTTONDOWN 消息时按下鼠标左键和 WM_LBUTTONUP 消息时释放按钮。 当用户从菜单栏中选择命令时，Windows 还会发送 WM_COMMAND 消息。  
   
  在 MFC 框架中中, 各种对象，如文档、 视图、 框架窗口、 文档模板和应用程序对象中，可以"处理"消息。 此类对象"处理程序函数"作为其成员之一和提供函数，框架将传入的消息映射到其处理程序。  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088419"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode 枚举
 指定表示一个内置类型的数字类别。  

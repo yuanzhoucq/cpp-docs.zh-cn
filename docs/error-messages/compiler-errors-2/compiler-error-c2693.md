@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232769"
 ---
 # <a name="compiler-error-c2693"></a>编译器错误 C2693
 “运算符”：比较托管数组或 WinRT 数组的引用是非法的  

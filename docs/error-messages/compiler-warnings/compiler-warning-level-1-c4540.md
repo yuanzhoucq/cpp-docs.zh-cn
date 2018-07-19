@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283057"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>编译器警告（等级 1）C4540
 dynamic_cast 用于将转换为无法访问或不明确的基;运行时测试将失败 (如到 type2 的 type1)  

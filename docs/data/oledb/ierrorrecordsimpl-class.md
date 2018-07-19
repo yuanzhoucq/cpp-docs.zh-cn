@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105460"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 实现 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)接口，添加到的记录并从数据成员中检索的记录 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 类型的**CAtlArray <** `RecordClass`**>**.  

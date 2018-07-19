@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380649"
 ---
 # <a name="blank-lines"></a>空行
 **ANSI 4.9.2** 读入时出现换行符之前，空格字符是否可以立即被写出到文本流  

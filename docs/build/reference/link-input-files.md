@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374822"
 ---
 # <a name="link-input-files"></a>LINK 输入文件
 链接器提供包含对象、 导入和标准库、 资源、 模块定义和输入的命令的文件。 链接不使用文件扩展名来做出假设文件的内容。 相反，LINK 检查每个输入的文件，以确定它是什么类型的文件。  

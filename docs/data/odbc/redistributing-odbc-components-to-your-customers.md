@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090219"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>为客户重新分发 ODBC 组件
 如果你将 ODBC 管理员程序的功能合并到你的应用程序，则还必须分配到你的用户运行这些程序的文件。 这些 ODBC 文件驻留在 Visual c + + CD-ROM 的 \OS\System 目录。 Redistrb.wri 文件和许可协议位于同一目录中的包含你可以重新分发 ODBC 文件的列表。  

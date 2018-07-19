@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382774"
 ---
 # <a name="using-image-lists-with-header-controls"></a>对标题控件使用图像列表
 标头项都具有显示标头项中的某个图像的功能。 存储在关联的图像列表中，此图像为 16 x 16 像素，并且具有相同的特性列表视图控件中使用的图标图像。 为了成功实现此行为，必须首先创建和初始化的图像列表，将列表与标头控件相关联，然后修改项的图像将显示的标题项的属性。  

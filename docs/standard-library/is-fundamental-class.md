@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957355"
 ---
 # <a name="isfundamental-class"></a>is_fundamental 类
 
@@ -36,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是基本类型（即 `void`、整数类型、浮点类型或前述其中一个类型的 `cv-qualified` 形式），则类型谓词的实例将为 true，否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一种基本类型，即**void**，一种整型类型，浮点点类型，或`cv-qualified`窗体的其中之一，否则为 false。
 
 ## <a name="example"></a>示例
 

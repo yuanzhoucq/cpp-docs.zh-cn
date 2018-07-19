@@ -1,5 +1,5 @@
 ---
-title: CDefaultCharTraits 类 |Microsoft 文档
+title: CDefaultCharTraits 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881849"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 类
-此类提供了两个静态函数将之间大写和小写字符转换。  
+此类提供两个静态函数转换为大写和小写字母之间的字符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  要存储在集合中的数据类型。  
   
 ## <a name="members"></a>成员  
@@ -45,11 +46,11 @@ class CDefaultCharTraits
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDefaultCharTraits::CharToLower](#chartolower)|（静态）调用此函数可将字符转换为大写形式。|  
+|[CDefaultCharTraits::CharToLower](#chartolower)|（静态）调用此函数可将字符转换为大写。|  
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|（静态）调用此函数可将字符转换为小写。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供了利用类的函数[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
+ 此类提供了函数所使用的类[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
@@ -70,7 +71,7 @@ static char CharToLower(char x);
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
- 调用此函数可将字符转换为大写形式。  
+ 调用此函数可将字符转换为大写。  
   
 ```
 static wchar_t CharToUpper(wchar_t x);  

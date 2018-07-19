@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370662"
 ---
 # <a name="res-files-as-linker-input"></a>用作链接器输入的 .Res 文件
 链接程序时，你可以指定一个.res 文件。 .Res 文件是由资源编译器 (RC) 创建的。 链接将.res 文件自动转换为 COFF。 CVTRES.exe 工具必须 LINK.exe 同一目录中或在指定的目录中的 PATH 环境变量中。  

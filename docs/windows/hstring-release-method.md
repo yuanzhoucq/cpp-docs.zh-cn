@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875287"
 ---
 # <a name="hstringrelease-method"></a>HString::Release 方法
 删除的基础字符串值，并初始化为空值的当前 HString 对象。  

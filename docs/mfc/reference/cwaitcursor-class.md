@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122666"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 在单行中显示等待光标，在你执行较长操作时，此光标通常显示为一个沙漏。  
@@ -61,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  由于其构造函数和析构函数的工作方式，`CWaitCursor`对象始终声明为局部变量 — 它们永远不会在声明为全局变量，也不它们用分配**新**。  
   
- 如果执行操作，这可能会导致更改，例如显示消息框或对话框中，调用的光标[还原](#restore)成员函数以还原等待光标。 可以调用**还原**甚至等待光标当前显示时。  
+ 如果执行操作，这可能会导致更改，例如显示消息框或对话框中，调用的光标[还原](#restore)成员函数以还原等待光标。 可以调用`Restore`甚至等待光标当前显示时。  
   
  显示等待光标另一种方法是使用的组合[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)， [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)，，也可能[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). 但是，`CWaitCursor`可以更轻松地使用，因为无需将光标放置到以前的光标处，完成后与时间较长的操作。  
   
@@ -105,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>备注  
- 它是确定以调用**还原**甚至将等待光标当前显示时。  
+ 它是确定以调用`Restore`甚至将等待光标当前显示时。  
   
  如果需要还原不是在其中函数中的将等待光标`CWaitCursor`声明对象，您可以调用[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。  
   

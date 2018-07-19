@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890549"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>工具栏（图标的图像编辑器）
 **图像编辑器**工具栏包含用于绘制、 绘制、 输入文本、 擦除，和操作视图的工具。 它还包含选项选择器，可以选择使用每个工具的选项。 例如，你可以选择从各种画笔宽度、 放大因子和线条样式。  

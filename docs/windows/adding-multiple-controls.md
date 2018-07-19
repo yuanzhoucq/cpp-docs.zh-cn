@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855781"
 ---
 # <a name="adding-multiple-controls"></a>添加多个控件
 ### <a name="to-add-multiple-controls"></a>若要添加多个控件  

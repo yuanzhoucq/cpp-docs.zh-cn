@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247005"
 ---
 # <a name="compiler-error-c3034"></a>编译器错误 C3034
 OpenMP“directive1”指令不能直接嵌套在“directive2”指令中  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355870"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>使用 ATL 和 C 运行时代码进行编程
 本部分讨论使用 C 运行时库 (CRT) 与静态或动态链接的好处。  

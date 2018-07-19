@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104992"
 ---
 # <a name="using-accessors"></a>使用访问器
 以下主题说明如何确定哪种类型的访问器是最适合你的数据应用程序，然后如何使用不同类型的访问器可用：  
