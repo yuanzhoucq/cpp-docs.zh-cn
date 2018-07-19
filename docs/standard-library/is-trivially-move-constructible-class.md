@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4368fa2b88d22f0b07bc10bba4769d05375041
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316ffdee4905ff8a35baef7137ff7f28a2846786
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859246"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958187"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible 类
 
@@ -36,25 +36,25 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是一个具有普通移动构造函数的类，则类型谓词的实例为 true，否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一个类具有普通移动构造函数，否则为 false。
 
-如果符合以下条件，则类 `Ty` 的移动构造函数为普通构造函数：
+移动构造函数的类*Ty*并不重要如果：
 
 它被隐式声明
 
 其参数类型等效于那些隐式声明的参数类型
 
-类 `Ty` 没有虚函数
+该类*Ty*不具有虚拟函数
 
-类 `Ty` 没有虚拟基
+该类*Ty*不具有虚拟基
 
 类没有任何不稳定的非静态数据成员
 
-类 `Ty` 的所有直接基均具有普通构造函数
+类的所有直接都基均*Ty*具有普通移动构造函数
 
 类类型的所有非静态数据成员的类具有普通构造函数
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853396"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953874"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents 类
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`remove_all_extents<T>` 的实例包含修改类型，即移除了所有数组维度的数组类型 `T` 的元素类型，如果 `T` 不是数组类型，则此实例包含 `T`。
+实例`remove_all_extents<T>`保留修改的类型是数组类型的元素类型*T*与所有数组维度中删除，或*T*如果*T*不是数组类型。
 
 ## <a name="example"></a>示例
 

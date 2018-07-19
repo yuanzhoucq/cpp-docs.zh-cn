@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0754ba9dc63f77793ced17e7950c7fc3ea3290d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960057"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 类
 
@@ -44,15 +44,15 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-`Alloc` 分配器类中。
+*分配*的分配器类。
 
-`Elem` 字符串的基本元素的类型。
+*Elem*字符串的基本元素的类型。
 
 *Tr*字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
-该模板类描述一个对象，该对象控制从 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区中提取元素和编码对象的操作，该类具有 **Elem** 类型的元素，元素的字符特征由 **Tr** 类决定，并且其元素由 `Alloc` 类的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+此模板类描述一个对象，用于控制提取元素和编码的对象类的流缓冲区[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>，类型的元素*Elem*，其字符特征由类*Tr*，并且其元素由类的分配器*分配*。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -112,19 +112,19 @@ basic_istringstream(
 
 ### <a name="parameters"></a>参数
 
-`_Mode` 中的枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`str` 类型的对象`basic_string`。
+*str*类型的对象`basic_string`。
 
-`right` 右值引用的`basic_istringstream`对象。
+*右*的右值引用`basic_istringstream`对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用 [basic_istream](../standard-library/basic-istream-class.md)(`sb`) 初始化基类，其中 `sb` 是 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> 类的存储对象。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
+第一个构造函数通过调用来初始化基类[basic_istream](../standard-library/basic-istream-class.md)(`sb`)，其中`sb`是类的存储的对象[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`， `Tr`， `Alloc`>。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
 第二个构造函数通过调用 `basic_istream(sb)` 初始化基类。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
-第三个构造函数初始化具有 `right` 的内容的对象，将其视为右值引用。
+第三个构造函数初始化的对象的内容*右*，视为右值引用。
 
 ## <a name="op_eq"></a>  basic_istringstream::operator=
 
@@ -136,15 +136,15 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 对的右值引用`basic_istringstream`对象。
+*右*的右值引用`basic_istringstream`对象。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将对象的内容替换为 `right` 的内容，被视为右值引用移动赋值。
+成员运算符使用的内容替换对象的内容*右*，被视为右值引用移动赋值。
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-将**指针**类型的已存储流缓冲区的地址返回到 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。
+返回类型的存储的流缓冲区的地址`pointer`到[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -152,7 +152,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>返回值
 
-返回到 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的**指针**类型的已存储流缓冲区的地址。
+类型的存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="example"></a>示例
 
@@ -172,7 +172,7 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-`_Newstr` 新的字符串。
+*_Newstr*新字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -184,7 +184,7 @@ void str(
 
 ### <a name="example"></a>示例
 
-请参阅 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)，了解使用 **str** 的示例。
+请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)有关的示例，使用`str`。
 
 ## <a name="swap"></a>  basic_istringstream::swap
 
@@ -198,11 +198,11 @@ void swap(basic_istringstream& right);
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|对 `basic_istringstream` 对象的 `lvalue` 引用。|
+|*right*|对 `basic_istringstream` 对象的 `lvalue` 引用。|
 
 ### <a name="remarks"></a>备注
 
-成员函数将交换此对象的值和 `right` 的值。
+成员函数将交换此对象的值和的值*右*。
 
 ## <a name="see-also"></a>请参阅
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f470f07c59860118b682784dca6c83587ee87b04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953772"
 ---
 # <a name="isfunction-class"></a>is_function 类
 
@@ -37,11 +37,11 @@ struct is_function;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是函数类型，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一种函数类型，否则为 false。
 
 ## <a name="example"></a>示例
 

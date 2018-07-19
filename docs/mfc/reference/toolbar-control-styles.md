@@ -1,5 +1,5 @@
 ---
-title: 工具栏控件样式 |Microsoft 文档
+title: 工具栏控件样式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373190"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885830"
 ---
 # <a name="toolbar-control-styles"></a>工具栏控件样式
-[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)具有一组确定的外观的样式标志和按钮的行为。 你可以通过调用设置这些标志的组合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主题列出了样式标志值及其含义。  
+[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)具有一组用于确定外观的样式标志和按钮的行为。 可以通过调用设置这些标志的组合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主题列出了样式标志值及其含义。  
   
 ## <a name="property-values"></a>属性值  
  下列值确定控件表示的按钮的类型：  
@@ -62,7 +62,7 @@ ms.locfileid: "33373190"
  将项放置在新行或新列上，无需分隔列。  
   
 ## <a name="remarks"></a>备注  
- 在当前样式存储在[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)。 未在中设置新值`m_nStyle`直接，因为一些派生的类执行其他处理，当您调用`SetStyles`。  
+ 当前样式存储在[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)。 未在中设置新值`m_nStyle`直接，因为一些派生的类时执行附加处理调用`SetStyles`。  
   
  视觉管理器将确定按钮在每种状态下的外观。 请参阅[可视化管理器](../../mfc/visualization-manager.md)有关详细信息。  
   

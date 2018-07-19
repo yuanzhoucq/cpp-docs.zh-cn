@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953005"
 ---
 # <a name="syncnone-class"></a>sync_none 类
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="remarks"></a>备注
 
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|同步筛选器的缓存对象。|
-|`Other`|要用于比较是否相等的缓存对象。|
+|*缓存*|同步筛选器的缓存对象。|
+|*其他*|要用于比较是否相等的缓存对象。|
 
 ### <a name="return-value"></a>返回值
 
-此成员函数总是返回 `true`。
+成员函数总是返回 **，则返回 true**。
 
 ### <a name="remarks"></a>备注
 

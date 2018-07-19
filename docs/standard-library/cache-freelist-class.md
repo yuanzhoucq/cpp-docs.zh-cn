@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960412"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 类
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |参数|描述|
 |---------------|-----------------|
-|`Sz`|数组中要分配的元素数目。|
-|`Max`|表示释放列表的最大大小的 max 类。 其可以是 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|
+|*sz*|数组中要分配的元素数目。|
+|*最大值*|表示释放列表的最大大小的 max 类。 其可以是 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|
 
 ## <a name="remarks"></a>备注
 
-cache_freelist 模板类维持大小为 `Sz` 的内存块释放列表。 当释放列表已满时，其使用 `operator delete` 释放内存块。 当释放列表为空时，其使用 `operator new` 分配新的内存块。 释放列表的最大大小由 `Max` 参数传递的 max 类决定。
+Cache_freelist 模板类维持大小的内存块释放列表*Sz*。 当释放列表已满时它使用**运算符 delete**释放内存块。 当释放列表为空时它使用**运算符 new**来分配新的内存块。 空闲列表的最大大小由传递的 max 类的类*最大*参数。
 
-每个内存块保留 `Sz` 个字节的可用内存和 `operator new` 及 `operator delete` 所需的数据。
+每个内存块保留*Sz*字节的可用内存和数据的**运算符 new**并**运算符 delete**要求。
 
 ### <a name="constructors"></a>构造函数
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 

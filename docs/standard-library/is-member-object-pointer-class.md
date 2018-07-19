@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845474"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955411"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer 类
 
@@ -37,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是指向成员对象的指针，则类型谓词的实例为 true；如果它是指向成员对象的 `cv-qualified` 指针，则类型谓词的实例为 false。 请注意，如果 `Ty` 是指向成员函数的指针，则 `is_member_object_pointer` 为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是指向成员对象的指针或`cv-qualified`指向成员对象; 否则为 false。 请注意，`is_member_object_pointer`持有 false if *Ty*是指向成员函数的指针。
 
 ## <a name="example"></a>示例
 

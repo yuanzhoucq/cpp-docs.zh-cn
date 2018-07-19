@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957368"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 结构
 
-一种为代表随机访问迭代器的 **iterator_category** 函数提供返回类型的类。
+一个类，提供返回类型的`iterator_category`代表随机访问迭代器的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最特定的类别，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`> **::iterator_category** 必须定义为最特定的类别标记，用于描述迭代器的行为。
 
-当 **Iter** 描述一个可充当随机访问迭代器的对象时，其类型与 **iterator**\< **Iter**> **::iterator_category** 相同。
+类型是与相同**迭代器**\< **Iter**> **:: iterator_category**时`Iter`描述一个对象来充当随机访问迭代器。
 
 ## <a name="example"></a>示例
 

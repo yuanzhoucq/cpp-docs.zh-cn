@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818d6fad62ec4d506215a82f2faa1e3aa58d1654
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849036"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956447"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -135,13 +135,13 @@ Ios_base 类的对象存储格式设置信息，其中包括：
 
 - [iostate](#iostate) 类型的对象中的异常掩码。
 
-- 类型的对象中的字段宽度`int`。
+- 类型的对象中的字段宽度**int**。
 
-- `int` 类型的对象中的显示精度。
+- 类型的对象中的显示精度**int**。
 
-- **locale** 类型的对象中的区域设置对象。
+- 类型的对象中的区域设置对象`locale`。
 
-- 两个可扩展数组，其中包含 **long** 类型的元素和 `void` 指针。
+- 两个可扩展数组，包含类型的元素**长**并**void**指针。
 
 Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型的对象和回调堆栈中。
 
@@ -178,7 +178,7 @@ Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型�
 |[basefield](#fmtflags)|定义为 `dec` &#124; `hex` &#124; `oct` 的位掩码。|
 |[beg](#seekdir)|指定相对于序列的开头进行查找。|
 |[binary](#openmode)|指定文件应读取为二进制流，而不是文本流。|
-|[boolalpha](#fmtflags)|指定以名称（如 `true` 和`false`）而不是以数字值插入或提取 `bool` 类型的对象。|
+|[boolalpha](#fmtflags)|指定插入或提取类型的对象的**bool**作为名称 (如**true**并**false**) 而不是数值。|
 |[cur](#seekdir)|指定相对于序列中的当前位置进行查找。|
 |[dec](#fmtflags)|指定以十进制格式插入或提取整数值。|
 |[end](#seekdir)|指定相对于序列的末尾进行查找。|
@@ -249,11 +249,11 @@ enum event {
 
 此类型是枚举的类型，该类型描述的对象可将作为参数使用的回调事件存储到使用 [register_callback](#register_callback) 注册的函数中。 非重复的事件值为：
 
-- **copyfmt_event**（用来在复制 [exception mask](../standard-library/ios-base-class.md) 之前标识发生在 [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 调用末尾附近的回调）。
+- `copyfmt_event`标识调用末尾附近发生的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)之前[异常掩码](../standard-library/ios-base-class.md)复制。
 
-- **erase_event**（用来标识发生在 [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 调用开始处或 **\*this** 的析构函数调用开始处的回调）。
+- `erase_event`标识发生在调用开始时的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或调用的析构函数的开头**\*这**。
 
-- **imbue_event**（用来在函数返回前标识发生在 [imbue](#imbue) 调用末尾处的回调）。
+- `imbue_event`标识发生在结束对的调用的回调[imbue](#imbue)，该函数返回之前。
 
 ### <a name="example"></a>示例
 
@@ -272,11 +272,11 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>参数
 
-*_E* [事件](#event)。
+*（_e)* [事件](#event)。
 
-`_Base` 调用了事件流。
+*（_b)* 调用了事件的流。
 
-*（_i)* 用户定义的数量。
+*_I*用户定义的数字。
 
 ### <a name="remarks"></a>备注
 
@@ -349,7 +349,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>参数
 
-`fmtfl` 新`fmtflags`设置。
+*fmtfl*新`fmtflags`设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -359,7 +359,7 @@ fmtflags flags(fmtflags fmtfl);
 
 有关标志列表，请参阅 [ios_base::fmtflags](#fmtflags)。
 
-第一个成员函数返回存储的格式标志。 第二个成员函数将 `fmtfl` 存储在格式标志中，并返回其先前的存储值。
+第一个成员函数返回存储的格式标志。 第二个成员函数存储*fmtfl*在格式标志并返回其先前的存储值。
 
 ### <a name="example"></a>示例
 
@@ -433,7 +433,7 @@ public:
 
 - `right`，用于通过在已生成字段的开头插入填充字符（右对齐），来根据需要填充字段宽度。
 
-- `boolalpha`，用于将类型 `bool` 的对象作为名称（如 `true` 和 `false`）而不是数值进行插入或提取。
+- `boolalpha`用于插入或提取类型的对象**bool**作为名称 (如**true**并**false**) 而不是数值。
 
 - `fixed`，用于以固定点格式（不带指数字段）插入浮点值。
 
@@ -499,7 +499,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-`_Loc` 新的区域设置。
+*_Loc*新的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -507,7 +507,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="remarks"></a>备注
 
-此成员函数将 `_Loc` 存储在区域设置对象中，然后报告回调事件和 `imbue_event`。 它返回先前的存储值。
+此成员函数存储 *_Loc*中的区域设置对象，然后报告回调事件和`imbue_event`。 它返回先前的存储值。
 
 ### <a name="example"></a>示例
 
@@ -563,7 +563,7 @@ public:
 
 - `failbit`（用于记录一个从流中提取有效字段失败的操作）。
 
-此外，`goodbit` 是一个很有用的值，其中未设置之前提及的任何位（`goodbit` 保证为 0）。
+此外，有用的值是`goodbit`，则无前面提到的 bits 设置 (`goodbit`保证为零)。
 
 ## <a name="iword"></a>ios_base::iword
 
@@ -575,13 +575,13 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>参数
 
-`idx` 要将存储为的值的索引`iword`。
+*idx*的值存储为索引`iword`。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回具有类型 **long** 的元素的可扩展数组的 `idx` 元素引用。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+成员函数将返回元素的引用*idx*类型的元素的可扩展数组**长**。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
-如果 `idx` 为负或唯一存储对该元素不可用，则此函数会调用 [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 并返回一个可能并不唯一的引用。
+如果*idx*为负或唯一的存储的元素不可用，如果该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 并返回可能不是唯一的引用。
 
 若要获取唯一索引以用于类型 `ios_base` 的所有对象，请调用 [xalloc](#xalloc)。
 
@@ -609,17 +609,17 @@ public:
 
 此类型为 `bitmask type`，它描述的对象可存储多个 iostreams 对象的开放模式。 非重复的标志值（元素）为：
 
-- **app**（每次插入前查找流末尾）。
+- `app`若要查找每次插入前流的末尾。
 
-- **ate**（首次创建其控制对象时查找流末尾）。
+- `ate`首次创建其控制的对象时查找流末尾。
 
-- **binary**（文件读取为二进制流，而不是文本流）。
+- `binary`用于读取文件作为二进制流，而不是文本流。
 
-- **in**（允许从流中提取）。
+- `in`以允许从流中的提取。
 
-- **out**（允许插入到流）。
+- `out`以允许插入到流。
 
-- **trunc**（在创建其控制的对象后删除现有文件的内容）。
+- `trunc`若要创建其控制的对象时删除现有文件的内容。
 
 ### <a name="example"></a>示例
 
@@ -649,7 +649,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 类型的对象`ios_base`。
+*右*类型的对象`ios_base`。
 
 ### <a name="return-value"></a>返回值
 
@@ -672,11 +672,11 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>参数
 
-`_Prec` 小数位数，若要显示或在固定记数法小数点后的数字个数。
+*_Prec*有效位数来显示或固定表示法中小数点后的位数。
 
 ### <a name="return-value"></a>返回值
 
-第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数将 `_Prec` 存储在显示精度中，并返回其先前的存储值。
+第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数存储 *_Prec*在显示精度并返回其先前的存储值。
 
 ### <a name="remarks"></a>备注
 
@@ -716,11 +716,11 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>参数
 
-`_Idx` 要将存储为的值的索引`pword`。
+*上 _Idx*的值存储为索引`pword`。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回具有类型 `void` 指针的元素的可扩展数组的 _ *Idx* 元素引用。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+成员函数返回的引用元素 _ *Idx*类型的元素的可扩展数组**void**指针。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
 如果 _ *Idx* 为负或唯一存储对该元素不可用，则此函数会调用 [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 并返回一个可能并不唯一的引用。
 
@@ -741,13 +741,13 @@ void register_callback(
 
 ### <a name="parameters"></a>参数
 
-`pfn` 对回调函数的指针。
+*pfn*指向回调函数的指针。
 
-`idx` 一个用户定义的数字。
+*idx*用户定义的数字。
 
 ### <a name="remarks"></a>备注
 
-成员函数将对推送`{pfn, idx}`到存储的回调堆栈[回调堆栈](../standard-library/ios-base-class.md)。 回调事件时**ev**调用函数时，按相反的顺序的注册表中，表达式的报告`(*pfn)(ev, *this, idx)`。
+成员函数将对推送`{pfn, idx}`到存储的回调堆栈[回调堆栈](../standard-library/ios-base-class.md)。 当回调事件**ev**进行报告后，调用函数时，按相反的顺序的注册表中，由表达式`(*pfn)(ev, *this, idx)`。
 
 ### <a name="example"></a>示例
 
@@ -855,13 +855,13 @@ namespace std {
 
 ### <a name="remarks"></a>备注
 
-类型是枚举的类型描述可存储用作的几个 iostream 类的成员函数的参数的搜索模式的对象。 非重复的标志值为：
+类型为描述一个对象，可以将存储作为若干 iostream 类的成员函数的参数所使用的搜索模式的枚举的类型。 非重复的标志值为：
 
-- **beg**，用以相对于序列（数组、流或文件）的开始位置进行查找（更改当前读取或写入位置）。
+- `beg`若要查找 （更改当前读取或写入位置） 相对于序列 （数组、 流或文件） 的开头。
 
-- **cur**（相对于序列中的当前位置进行查找）。
+- `cur`相对于序列中的当前位置进行查找。
 
-- **end**（相对于序列的末尾进行查找）。
+- `end`相对于序列的末尾进行查找。
 
 ### <a name="example"></a>示例
 
@@ -901,7 +901,7 @@ fmtflags setf(
 
 ### <a name="parameters"></a>参数
 
-`_Mask` 要打开的标志。
+*掩码 （_m)* 要启用的标志。
 
 *_Unset*要关闭的标志。
 
@@ -949,7 +949,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>参数
 
-`_Sync` 所有流都是否与同步**stdio**。
+*_Sync*所有流都是否与同步`stdio`。
 
 ### <a name="return-value"></a>返回值
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>备注
 
-    The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
 
 ## <a name="unsetf"></a>ios_base::unsetf
 
@@ -971,7 +971,7 @@ void unsetf(
 
 ### <a name="parameters"></a>参数
 
-`_Mask` 要关闭的标志。
+*掩码 （_m)* 要关闭的标志。
 
 ### <a name="remarks"></a>备注
 
@@ -994,7 +994,7 @@ streamsize width(
 
 ### <a name="parameters"></a>参数
 
-`_Wide` 输出流所需的大小。
+*_Wide*的输出流的所需的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -1002,7 +1002,7 @@ streamsize width(
 
 ### <a name="remarks"></a>备注
 
-    The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.
+    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
 
 ### <a name="example"></a>示例
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfcb554b374d035e85d53d769d04317e52e4193b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958200"
 ---
 # <a name="thread-class"></a>thread 类
 
@@ -52,7 +52,7 @@ class thread;
 
 ## <a name="remarks"></a>备注
 
-可以使用 `thread` 对象查看和管理应用程序中的执行线程。 使用默认构造函数创建的线程对象不与任何执行线程相关联。 通过使用可调用对象构造的线程对象创建一个新的执行线程，并在该线程中调用可调用对象。 可移动线程对象，但不能复制。 因此，执行线程只与一个线程对象相关联。
+可以使用**线程**对象查看和管理应用程序中执行的线程。 使用默认构造函数创建的线程对象不与任何执行线程相关联。 通过使用可调用对象构造的线程对象创建一个新的执行线程，并在该线程中调用可调用对象。 可移动线程对象，但不能复制。 因此，执行线程只与一个线程对象相关联。
 
 每个执行线程都具有 `thread::id` 类型的唯一标识符。 函数 `this_thread::get_id` 返回调用线程的标识符。 成员函数`thread::get_id` 返回由线程对象管理的线程标识符。 对于默认构造的线程对象，`thread::get_id` 方法返回具有值的对象，该值与所有默认构造线程对象的值相同但和 `this_thread::get_id` 返回的任何线程（可在调用时连接）的值不同。
 
@@ -68,25 +68,25 @@ class thread;
 
 |名称|描述|
 |----------|-----------------|
-|[thread](#thread)|构造 `thread` 对象。|
+|[thread](#thread)|构造**线程**对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[detach](#detach)|从 `thread` 对象拆离相关联的线程。|
+|[detach](#detach)|拆离相关联的线程从**线程**对象。|
 |[get_id](#get_id)|返回关联线程的唯一标识符。|
 |[hardware_concurrency](#hardware_concurrency)|静态。 返回硬件线程上下文的估计数量。|
 |[join](#join)|阻止，直到完成关联的线程。|
-|[加入](#joinable)|指定关联的线程是否可联接。|
+|[可加入](#joinable)|指定关联的线程是否可联接。|
 |[native_handle](#native_handle)|返回表示线程句柄的特定于实现的类型。|
-|[swap](#swap)|与指定的 `thread` 对象交换对象状态。|
+|[swap](#swap)|交换对象状态与指定**线程**对象。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|将线程与当前 `thread` 对象关联。|
+|[thread::operator=](#op_eq)|将线程与当前相关联**线程**对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -172,7 +172,7 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果关联的线程可联接，则为 `true`；否则为 `false`。
+**true**相关联的线程是否*可加入*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -200,7 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`thread`对象。
+*其他*  
+ 一个**线程**对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -214,7 +215,7 @@ thread& operator=(thread&& Other) noexcept;
 
 ## <a name="swap"></a>  thread:: swap
 
-与指定的 `thread` 对象交换对象状态。
+交换对象状态与指定**线程**对象。
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -222,11 +223,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`thread`对象。
+*其他*  
+ 一个**线程**对象。
 
 ## <a name="thread"></a>  thread::thread 构造函数
 
-构造 `thread` 对象。
+构造**线程**对象。
 
 ```cpp
 thread() noexcept;
@@ -238,17 +240,20 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`F` 要由线程执行的应用程序定义的函数。
+*F*  
+ 要由线程执行的应用程序所定义的函数。
 
-`A` 自变量传递给列表`F`。
+*A*  
+ 传递给参数的列表*F*。
 
-`Other` 现有`thread`对象。
+*其他*  
+ 将现有**线程**对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造与执行线程不相关联的对象。 通过调用 `get_id` 返回的构造对象的值为 `thread::id()`。
 
-第二个构造函数构造一个对象，该对象与新的执行线程关联并执行在 [\<functional>](../standard-library/functional.md) 中定义的伪函数 `INVOKE`。 如果用于启动新线程的资源不足，该函数将引发一个错误代码为 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md) 对象。 如果对 `F` 的调用终止并捕获异常，则调用 [terminate](../standard-library/exception-functions.md#terminate)。
+第二个构造函数构造一个对象，该对象与新的执行线程关联并执行在 [\<functional>](../standard-library/functional.md) 中定义的伪函数 `INVOKE`。 如果用于启动新线程的资源不足，该函数将引发一个错误代码为 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md) 对象。 如果在调用*F*未捕获的异常，以终止[终止](../standard-library/exception-functions.md#terminate)调用。
 
 第三个构造函数将构造一个对象，该对象与关联 `Other` 的线程相关。 随后， `Other` 会被设置为默认构造状态。
 

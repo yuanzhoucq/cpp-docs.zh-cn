@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957069"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 结构
 
-此类是模板结构 **char_traits\<CharType>** 对 `wchar_t` 类型的一个元素的专用化。
+专用化的模板结构的类**char_traits\<CharType >** 类型的元素**wchar_t**。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>备注
 
-专用化允许结构利用库函数处理此 `wchar_t` 类型的对象。
+专用化允许结构利用库函数处理此类型的对象**wchar_t**。
 
 ## <a name="requirements"></a>要求
 

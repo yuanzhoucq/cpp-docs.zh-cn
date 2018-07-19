@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: ddcc5ab787e4eba060960207a5260a571a64ff4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138eddc6704b5e12798ccceacc5b3f37b3df1d96
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958287"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 运算符
 
@@ -44,9 +44,9 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 
@@ -109,9 +109,9 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 
@@ -170,9 +170,9 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,9 +233,9 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 
@@ -297,9 +297,9 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 
@@ -361,9 +361,9 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**队列**。
+*左*类型的对象`queue`。
 
-`right` 类型的对象**队列**。
+*右*类型的对象`queue`。
 
 ### <a name="return-value"></a>返回值
 

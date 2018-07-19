@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860640"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959266"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 类
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>参数
 
-`UIntType` 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-`W` **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **状态大小**。 状态序列中的元素（值）数量。
+*N* **状态大小**。 状态序列中的元素（值）数量。
 
-`M` **移位大小**。 每次旋转过程中要跳过的元素数量。 **前提条件**：`0 < M ≤ N`
+*M* **移位大小**。 每次旋转过程中要跳过的元素数量。 **前提条件**：`0 < M ≤ N`
 
-`R` **掩码位**。 **前提条件**：`R ≤ W`
+*R* **掩码位**。 **前提条件**：`R ≤ W`
 
-`A` **XOR 掩码**。 **前提条件**：`A ≤ (1u<<W) - 1u`
+*一个* **XOR 掩码**。 **前提条件**：`A ≤ (1u<<W) - 1u`
 
-`U``S`， `T`， `L` **Tempering shift 参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`
+*U*， *S*， *T*， *L* **Tempering 移位参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`
 
-`D``B`， `C` **Tempering 位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`
+*D*， *B*， *C* **Tempering 位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`
 
-`F` **初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`
+*F* **初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
 
@@ -70,9 +70,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了返回闭区间 [ `0`, `2`<sup>W</sup> - `1`] 上的值的随机数引擎。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它从此较大值中一次提取 `W` 位，当它已使用所有的位时，它将通过对这些位进行移位和混合来旋转该较大值，以便生成可从中进行提取的新位集。 如果已调用 `N` 至少 `W` 次，则引擎的状态是所使用的最后一个 `operator()` `N` 位的值，否则是已使用的 `M` `W` 位的值和种子的最后一个 `N - M` 值。
+此模板类描述了返回闭区间 [ `0`, `2`<sup>W</sup> - `1`] 上的值的随机数引擎。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它提取*W*一次通过此较大的值，并且当它已使用的所有位的位它通过移位和混合位，以使其具有一组新的 bits 来提取从较大的值。 引擎的状态是最后`N``W`的位的值如果`operator()`至少已调用*N*次，否则`M` `W`-位的已使用的值和最后一个`N - M`种子的值。
 
-通过使用移位值 `N` 和 `M`、旋转值 `R`，以及有条件的 XOR 掩码 `A` 定义的旋转生成的反馈移位寄存器，生成器将旋转它保留的较大值。 另外，将根据由值 `U`、`D`、`S`、`B`、`T`、`C` 和 `L` 定义的位混合矩阵，来混合（调和）原始移位寄存器。
+生成器扭转较大值，它包含通过使用移位值定义的旋转生成的反馈移位寄存器*N*并*M*，旋转值*R*，和一个条件的 XOR 掩码*A*。此外，原始移位寄存器的位混合 （调和） 根据由值定义的位混合矩阵*U*， *D*， *S*， *B*， *T*， *C*，并且*L*。
 
 模板自变量 `UIntType` 必须大到足以保留最多 `2`<sup>W</sup> - `1` 个值。 其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 

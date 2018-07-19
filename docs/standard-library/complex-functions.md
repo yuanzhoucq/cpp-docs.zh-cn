@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 040104eeb43ccfe6225821b7318346bc1fe60f92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959987"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函数
 
@@ -73,7 +73,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 确定其取模时的复数。
+*complexNum*要确定其取模的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -159,7 +159,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 确定其自变量时的复数。
+*complexNum*要确定其参数的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -167,7 +167,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>备注
 
-*参数*是复杂向量可使与复平面中的正实际轴的角度。 对于复数*a + bi*，该参数是否等于反正切值 (*b / a*)。 该角度从正实轴以逆时针方向测量时为正值，以顺时针方向测量时则为负值。 主体的值为大于-pi 且小于于或等于 + pi。
+*自变量*是复杂矢量发出复平面中的正实轴的角度。 对于复数*a + bi*，参数等于反正切值 (*b / a*)。 该角度从正实轴以逆时针方向测量时为正值，以顺时针方向测量时则为负值。 主体的值是大于-pi 且小于于或等于 + pi。
 
 ### <a name="example"></a>示例
 
@@ -245,7 +245,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 未返回其复数的共轭的复数。
+*complexNum*所返回的复共轭的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -319,7 +319,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定其余弦的复数。
+*complexNum*确定其余弦的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -409,7 +409,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定指双曲余弦值的复数。
+*complexNum*要确定其双曲余弦的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -499,7 +499,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 复杂数字的指数所决定。
+*complexNum*其的复数指数要确定。
 
 ### <a name="return-value"></a>返回值
 
@@ -569,7 +569,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 复数的实部要提取。
+*complexNum*其实部是要提取的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -620,7 +620,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定其自然对数的复数。
+*complexNum*要确定其自然对数的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -689,7 +689,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定其以 10 为底对数的复数。
+*complexNum*要确定其 10 为底的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -758,7 +758,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 其范数是确定的复数。
+*complexNum*要确定其 norm 的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -840,9 +840,9 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Modulus*正在输入的复数的模数。
+*_Modulus*所输入的复数的取模。
 
-*_Argument*正在输入的复数的自变量。
+*_Argument*所输入的复数的参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -850,7 +850,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="remarks"></a>备注
 
-复数的极坐标图形式提供取模*r*和自变量*p*，这些参数将与实部和虚部的笛卡尔组件和*b*公式通过 = r \* cos *p*和*b* = *r* \* sin *p*。
+复数的极坐标图的形式提供了取模*r*和参数*p*，其中这些参数与实部和虚部笛卡尔组件和*b*通过公式 = r \* cos *p*并*b* = *r* \* sin *p*。
 
 ### <a name="example"></a>示例
 
@@ -924,9 +924,9 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>参数
 
-`_Base` 复数或的是要乘幂的成员函数的基类的复数的参数类型的数字。
+*（_b)* 复数或属于数是基数由成员函数引发的幂的复数的参数类型。
 
-*电源*整数或复杂的数字或是基数是成员函数要乘幂的复数的参数类型的数字。
+*电源 （_p)* 整数或复数或属于数是基数是成员函数将其提升到幂的复数的参数类型。
 
 ### <a name="return-value"></a>返回值
 
@@ -1058,7 +1058,7 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 复数的实部要提取。
+*complexNum*其实部是要提取的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1109,7 +1109,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定其正弦值的复数。
+*complexNum*确定其正弦的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1199,7 +1199,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定双曲正弦值的复数。
+*complexNum*要确定其双曲正弦的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1289,7 +1289,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 计算平方根是要查找的复数。
+*complexNum*找到其平方根的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1365,7 +1365,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定其正切的复数。
+*complexNum*确定其正切的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1453,7 +1453,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 要确定指双曲正切值的复数。
+*complexNum*要确定其双曲正切的复数。
 
 ### <a name="return-value"></a>返回值
 

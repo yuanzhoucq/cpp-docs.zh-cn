@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957000"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point 类
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是浮点类型或 `cv-qualified` 形式的浮点类型，类型谓词的实例将为 true，否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是浮点类型或`cv-qualified`窗体的浮点类型，否则为 false。
 
-浮点类型为 `float`、`double` 或 `long double` 之一。
+一个浮点类型是之一**float**， **double**，或**长双精度型**。
 
 ## <a name="example"></a>示例
 

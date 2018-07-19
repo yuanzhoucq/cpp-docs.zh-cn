@@ -1,5 +1,5 @@
 ---
-title: 属性和属性页类 (ATL) |Microsoft 文档
+title: 属性和属性页类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355002"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953795"
 ---
 # <a name="properties-and-property-pages-classes"></a>属性和属性页类
-以下类支持属性和属性页：  
+以下类支持的属性和属性页：  
   
 -   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver)检索或设置对象的属性通过`IDispatch`指针。  
   
--   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md)实现 atl 支持的常用属性  
+-   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md)实现 atl。 支持的常用属性  
   
 -   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md)访问对象的属性页中的信息。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "32355002"
   
 -   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md)管理属性表中的特定属性页面。  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)与类似`IPropertyPageImpl`，但还允许客户端在属性页中选择的特定属性。  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)类似于`IPropertyPageImpl`，但还允许客户端在属性页中选择的特定属性。  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)获取支持由对象的属性页的 Clsid。  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)获取支持的对象的属性页的 Clsid。  
   
 ## <a name="related-articles"></a>相关文章  
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  

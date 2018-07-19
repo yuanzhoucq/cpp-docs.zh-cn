@@ -1,5 +1,5 @@
 ---
-title: CW2CWEX 类 |Microsoft 文档
+title: CW2CWEX 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363277"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879376"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 类
-此类由字符串转换宏`CW2CTEX`和`CT2CWEX`，和 typedef `CW2W`。  
+字符串转换宏 CW2CTEX 和 CT2CWEX 和 typedef CW2W 使用此类。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +40,8 @@ class CW2CWEX
 ```  
   
 #### <a name="parameters"></a>参数  
- `t_nBufferLength`  
- 在转换过程中使用的缓冲区大小。 默认长度为 128 个字节。  
+ *t_nBufferLength*  
+ 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。  
   
 ## <a name="members"></a>成员  
   
@@ -62,22 +62,22 @@ class CW2CWEX
   
 |名称|描述|  
 |----------|-----------------|  
-|[CW2CWEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
+|[CW2CWEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
   
 ## <a name="remarks"></a>备注  
- 除非需要额外功能，则使用`CW2CTEX`， `CT2CWEX`，或`CW2W`在代码中。  
+ 除非需要额外的功能，在代码中使用 CW2CTEX、 CT2CWEX 或 CW2W。  
   
- 此类可以安全地在循环中使用和不会溢出堆栈。 默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。  
+ 此类安全地在循环中使用，不会造成堆栈溢出。 默认情况下，ATL 转换类和宏用于当前线程的 ANSI 代码页转换。  
   
- 在此类基于以下宏：  
+ 下列宏基于此类：  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
  以下 typedef 基于此类：  
   
-- `CW2W`  
+- CW2W  
   
  这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)。  
   
@@ -96,14 +96,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `psz`  
+ *psz*  
  要转换的文本字符串。  
   
- `nCodePage`  
+ *nCodePage*  
  代码页中。 不使用此类中。  
   
 ### <a name="remarks"></a>备注  
- 分配在转换过程中使用的缓冲区。  
+ 分配在转换过程中所使用的缓冲区。  
   
 ##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  析构函数。  
@@ -113,10 +113,10 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放已分配的缓冲区。  
+ 释放分配的缓冲区。  
   
 ##  <a name="m_psz"></a>  CW2CWEX::m_psz  
- 将源字符串存储数据成员。  
+ 将源字符串存储的数据成员。  
   
 ```
 LPCWSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回文本字符串作为类型**LPCWSTR。**  
+ 返回文本字符串，键入 LPCWSTR。  
   
 ## <a name="see-also"></a>请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   

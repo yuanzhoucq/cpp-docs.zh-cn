@@ -1,5 +1,5 @@
 ---
-title: CComObjectRoot 类 |Microsoft 文档
+title: CComObjectRoot 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6a7d350f7bd50476c1c327d824089981d3e8321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2832b9866145d9af510302c8c6d327972205495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359027"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952963"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 类
-此 typedef [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)针对线程处理模型的服务器的默认模板。  
+Typedef [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)针对线程处理模型的服务器的默认模板化。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,15 +34,14 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
 ## <a name="remarks"></a>备注  
- `CComObjectRoot` 是`typedef`的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)针对线程处理模型的服务器的默认模板。 因此[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)将引用，则[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。  
+ `CComObjectRoot` 是`typedef`的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)针对线程处理模型的服务器的默认模板化。 从而[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)将引用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。  
   
- `CComObjectRootEx` 处理非聚合和聚合对象的对象引用计数管理。 如果你的对象不正在聚合，并且如果你的对象进行了正在聚合包含指向未知的外部对象，它包含的对象引用计数。 对于聚合对象，`CComObjectRootEx`方法可以用于处理失败的内部对象构造，并保护中删除在发布内部接口的外部对象或内部对象删除。  
+ `CComObjectRootEx` 处理非聚合和聚合对象的对象引用计数管理。 如果您的对象未被聚合，并且如果您的对象正在聚合包含指向未知的外部，它保留对象引用计数。 对于聚合对象，`CComObjectRootEx`方法可用于处理的内部对象失败，若要构造，并保护中删除发布内部接口时的外部对象或内部对象删除。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
 ## <a name="see-also"></a>请参阅  
- [CComObjectRootEx 类成员](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
  [CComObject 类](../../atl/reference/ccomobject-class.md)   

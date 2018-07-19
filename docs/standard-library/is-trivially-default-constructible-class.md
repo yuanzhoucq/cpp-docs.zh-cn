@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954729"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible 类
 
@@ -36,21 +36,21 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是具有普通构造函数的类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是具有普通构造函数，否则为 false 的类。
 
-类 `Ty` 的默认构造函数为普通构造函数，如果：
+一个类的默认构造函数*Ty*并不重要如果：
 
 - 它是一个隐式声明的默认构造函数
 
-- 类 `Ty` 没有虚函数
+- 该类*Ty*不具有虚拟函数
 
-- 类 `Ty` 没有虚拟基
+- 该类*Ty*不具有虚拟基
 
-- 类 `Ty` 的所有直接基均具有普通构造函数
+- 类的所有直接都基均*Ty*具有普通构造函数
 
 - 类类型的所有非静态数据成员的类具有普通构造函数
 

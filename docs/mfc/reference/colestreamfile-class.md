@@ -1,5 +1,5 @@
 ---
-title: COleStreamFile 类 |Microsoft 文档
+title: COleStreamFile 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041440"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852753"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
-表示数据的流 ( `IStream`) 作为 OLE 结构化存储一部分的复合文件中。  
+表示作为 OLE 结构化存储一部分的复合文件中的数据流 (`IStream`)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,20 +59,20 @@ class COleStreamFile : public CFile
 |名称|描述|  
 |----------|-----------------|  
 |[COleStreamFile::Attach](#attach)|将流与对象相关联。|  
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|从全局内存中创建一个流，并将其关联的对象。|  
-|[COleStreamFile::CreateStream](#createstream)|创建一个流，并将其关联的对象。|  
-|[COleStreamFile::Detach](#detach)|解除关联的流对象。|  
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|从全局内存中创建一个流，并将其与对象相关联。|  
+|[COleStreamFile::CreateStream](#createstream)|创建一个流，并将其与对象相关联。|  
+|[COleStreamFile::Detach](#detach)|取消关联对象的流。|  
 |[COleStreamFile::GetStream](#getstream)|返回当前的流。|  
-|[COleStreamFile::OpenStream](#openstream)|安全地打开一个流，并将其关联的对象。|  
+|[COleStreamFile::OpenStream](#openstream)|安全地打开一个流，并将其与对象相关联。|  
   
 ## <a name="remarks"></a>备注  
- `IStorage`之前流可以打开或创建，除非它是一个内存流对象必须存在。  
+ `IStorage`对象必须存在才能打开或创建，除非它是一个内存流的流。  
   
  `COleStreamFile` 操作对象的完全相同[CFile](../../mfc/reference/cfile-class.md)对象。  
   
- 有关操作流与存储的详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...  
+ 有关操作流和存储的详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...  
   
- 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)和[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
+ 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)并[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -93,7 +93,7 @@ void Attach(LPSTREAM lpStream);
   
 ### <a name="parameters"></a>参数  
  *lpStream*  
- 指向 OLE 流 ( `IStream`) 与对象相关联。 不能为**NULL**。  
+ 指向 OLE 流 (`IStream`) 要与对象相关联。 不能为 NULL。  
   
 ### <a name="remarks"></a>备注  
  对象已不得与 OLE 流相关联。  
@@ -109,15 +109,15 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
 ### <a name="parameters"></a>参数  
  *lpStream*  
- 指向要将与对象相关联的 OLE 流指针。  
+ 指向要与对象相关联的 OLE 流指针。  
   
 ### <a name="remarks"></a>备注  
- 如果*lpStream*是**NULL**、 对象不是与 OLE 流关联，否则，该对象是与提供的 OLE 流相关联。  
+ 如果*lpStream*为 NULL，该对象不是与 OLE 流相关联，否则，该对象是与所提供的 OLE 流相关联。  
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
- 安全地创建一个新流全局、 共享内存不足其中故障为正常，预期的条件。  
+ 安全地创建其中失败是正常的预期条件的新流全局、 共享内存不足。  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -125,18 +125,18 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>参数  
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL** ，该值指示创建操作的完成状态。 如果你想要监视可能尝试创建流的生成的异常，请提供此参数。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或空值，该值指示创建操作的完成状态。 如果你想要监视生成的尝试创建该流的可能异常，提供此参数。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则创建流则不为否则为 0。  
+ 如果成功，则创建流，非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- OLE 子系统分配内存。  
+ 由 OLE 子系统分配内存。  
   
  有关详细信息，请参阅[CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
- 安全地在其中的失败问题是正常，预期的条件所提供的存储对象中创建一个新的流。  
+ 安全地在其中失败是正常的预期条件所提供的存储区对象中创建新的流。  
   
 ```  
 BOOL CreateStream(
@@ -148,37 +148,37 @@ BOOL CreateStream(
   
 ### <a name="parameters"></a>参数  
  *lpStorage*  
- 指向包含要创建的流的 OLE 存储对象。 不能为**NULL**。  
+ 指向包含要创建的流的 OLE 存储对象。 不能为 NULL。  
   
  *lpszStreamName*  
- 要创建的流的名称。 不能为**NULL**。  
+ 要创建的流的名称。 不能为 NULL。  
   
  *nOpenFlags*  
- 打开流时要使用的访问模式。 独占，读/写和创建模式默认情况下使用。 有关可用的模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
+ 打开流时要使用的访问模式。 排他，读/写，并创建模式默认情况下使用。 可用模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL**。 如果你想要监视可能尝试创建流的生成的异常，请提供此参数。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象则为 NULL。 如果你想要监视生成的尝试创建该流的可能异常，提供此参数。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则创建流则不为否则为 0。  
+ 如果成功，则创建流，非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果打开失败，则将引发文件异常和*pError*不**NULL**。  
+ 如果打开失败，将引发文件异常并*pError*不为 NULL。  
   
  有关详细信息，请参阅[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
- 解除对象的流未关闭流之间的关联。  
+ 解除对象中的流未关闭流的关联。  
   
 ```  
 LPSTREAM Detach();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向流的指针 ( `IStream`) 这是与对象关联。  
+ 指向流的指针 (`IStream`) 这是与对象相关联。  
   
 ### <a name="remarks"></a>备注  
- 在程序终止之前，必须以某种其他方式关闭流。  
+ 程序终止之前，必须以某种其他方式关闭流。  
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
@@ -205,22 +205,22 @@ BOOL OpenStream(
   
 ### <a name="parameters"></a>参数  
  *lpStorage*  
- 指向包含要打开的流的 OLE 存储对象。 不能为**NULL**。  
+ 指向包含要打开的流的 OLE 存储对象。 不能为 NULL。  
   
  *lpszStreamName*  
- 要打开的流的名称。 不能为**NULL**。  
+ 若要打开的流的名称。 不能为 NULL。  
   
  *nOpenFlags*  
- 打开流时要使用的访问模式。 独占和读/写模式默认情况下使用。 有关可用的模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
+ 打开流时要使用的访问模式。 独占和读/写模式默认情况下使用。 可用模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL**。 如果你想要监视可能由尝试打开流生成的异常，请提供此参数。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)对象则为 NULL。 如果你想要监视可能由于试图打开流产生的异常，请提供此参数。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则打开流，则非零否则为 0。  
+ 如果成功，则打开流，则非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果打开失败，则将引发文件异常和*pError*不**NULL**。  
+ 如果打开失败，将引发文件异常并*pError*不为 NULL。  
   
  有关详细信息，请参阅[IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
   

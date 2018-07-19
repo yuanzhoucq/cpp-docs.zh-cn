@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t |Microsoft 文档
+title: _com_ptr_t::_com_ptr_t |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413929"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939066"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 专用**  
@@ -143,32 +143,32 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>参数  
- `pInterface`  
+ *pInterface*  
  原始接口指针。  
   
- `fAddRef`  
- 如果**true**，`AddRef`称为增加封装的接口指针的引用计数。  
+ *fAddRef*  
+ 如果为 TRUE，`AddRef`调用来增加封装的接口指针的引用计数。  
   
  *cp*  
  一个 `_com_ptr_t` 对象。  
   
- `p`  
+ *p*  
  一个原始接口指针，其类型与此 `_com_ptr_t` 对象的智能指针类型不同。  
   
  *varSrc*  
  一个 `_variant_t` 对象。  
   
- `clsid`  
- **CLSID**的组件类。  
+ *clsid*  
+ `CLSID`的组件类。  
   
- `dwClsContext`  
+ *dwClsContext*  
  运行可执行代码的上下文。  
   
  *lpcStr*  
- 包含的多字节字符串**CLSID** (从"**{**") 或**ProgID**。  
+ 包含的多字节字符串`CLSID`(从"**{**") 或`ProgID`。  
   
- `pOuter`  
- 未知的外部对象[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)。  
+ *pOuter*  
+ 未知的外部[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)。  
   
 ## <a name="see-also"></a>请参阅  
  [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

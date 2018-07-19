@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840389"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959321"
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; 结构
 
-此结构是模板结构 **char_traits\<CharType>** 对 `char` 类型的一个元素的专用化。
+专用化的模板结构的结构**char_traits\<CharType >** 类型的元素**char**。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>备注
 
-专用化允许结构利用库函数处理此 `char` 类型的对象。
+专用化允许结构利用库函数处理此类型的对象**char**。
 
 ## <a name="example"></a>示例
 

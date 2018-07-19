@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1cba80b18f94d5a833b238e19be8190a442146
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959924"
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 
@@ -27,9 +27,9 @@ ms.locfileid: "33858456"
 
 ## <a name="the-open-function-for-output-streams"></a>输出流的 open 函数
 
-若要使用输出文件流 ([ofstream](../standard-library/basic-ofstream-class.md))，则必须将该流与构造函数中的特定磁盘文件或 **open** 函数相关联。 如果使用 **open** 函数，则可以重复使用具有一系列文件的同一流对象。 在任一情况下，描述该文件的参数是相同的。
+若要使用输出文件流 ([ofstream](../standard-library/basic-ofstream-class.md))，必须将该流关联与构造函数中的特定磁盘文件或`open`函数。 如果使用`open`函数，可以重复使用具有一系列文件的同一个流对象。 在任一情况下，描述该文件的参数是相同的。
 
-当打开与输出流关联的文件时，通常会指定 **open_mode** 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+当您打开与输出流关联的文件时，您通常会指定`open_mode`标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 三种常见的输出流情况涉及模式选项：
 
@@ -75,7 +75,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>写入
 
-**write** 函数将内存块写入到输出文件流。 长度参数指定写入的字节数。 此示例可创建输出文件流，并向其写入 `Date` 结构的二进制值：
+`write`函数将内存块写入到输出文件流。 长度参数指定写入的字节数。 此示例可创建输出文件流，并向其写入 `Date` 结构的二进制值：
 
 ```cpp
 // write_function.cpp
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-当 **write** 函数达到空字符时，该函数不会停止，因此，将写入完整的类结构。 该函数采用两个参数：一个 `char` 指针和一个要写入的字符计数。 在对结构对象寻址之前，请注意需要强制转换为 **char\***。
+`write`到达 null 字符，因此，编写完整的类结构时，函数不会停止。 该函数采用两个参数： **char**指针和要写入的字符计数。 在对结构对象寻址之前，请注意需要强制转换为 **char\***。
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函数
 
@@ -104,9 +104,9 @@ int main( )
 
 ## <a name="the-close-function-for-output-streams"></a>输出流的 close 函数
 
-**close** 成员函数将关闭与输出文件流关联的磁盘文件。 若要完成所有磁盘输出，则必须关闭该文件。 如有必要，`ofstream` 析构函数将关闭该文件，但如果需要打开相同流对象的另一个文件，则可以使用 **close** 函数。
+`close`成员函数将关闭与输出文件流关联的磁盘文件。 若要完成所有磁盘输出，则必须关闭该文件。 如果有必要，请`ofstream`析构函数将关闭该文件，但你可以使用`close`函数如果您需要打开同一流对象的另一个文件。
 
-仅当构造函数或 **open** 成员函数打开该文件时，输出流析构函数会自动关闭流的文件。 如果向构造函数传递已打开文件的文件描述符，或使用 **attach** 成员函数，则必须显式关闭该文件。
+输出流析构函数会自动关闭流的文件仅当构造函数或`open`成员函数打开该文件。 如果您将构造函数传递已打开文件或使用的文件描述符`attach`成员函数，必须显式关闭该文件。
 
 ## <a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数
 
@@ -115,13 +115,13 @@ int main( )
 |函数|返回值|
 |--------------|------------------|
 |[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果存在不可恢复的错误，则返回 **true**。|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 在使用填零参数调用 **clear** 后，通常可以恢复处理。|
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 通常可以在调用后恢复处理`clear`使用零个自变量。|
 |[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|在文件结尾时返回 **true**。|
 |[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
 |[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|返回当前错误状态。|
 
-重载 **!** 运算符以执行与 **fail** 函数相同的函数。 因此表达式：
+重载 **!** 运算符重载来执行相同的功能`fail`函数。 因此表达式：
 
 ```cpp
 if(!cout)...
@@ -145,7 +145,7 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-**void\*()** 运算符并不等同于 **good**，因为它不会测试文件结尾。
+**Void\*（)** 运算符并不等同于`good`因为不会测试文件尾。
 
 ## <a name="see-also"></a>请参阅
 

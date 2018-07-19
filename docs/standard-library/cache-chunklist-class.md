@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953255"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 类
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |参数|描述|
 |---------------|-----------------|
-|`Sz`|数组中要分配的元素数目。|
+|*sz*|数组中要分配的元素数目。|
 
 ## <a name="remarks"></a>备注
 
-此模板类使用 `operator new` 分配原始内存的区块，并对块进行细分以在必要时为内存块分配存储空间；其将释放的内存块存储在每个区块的独立释放列表中，并在未使用区块的任何内存块时使用 `operator delete` 释放区块。
+使用此模板类**运算符 new**分配原始内存的区块，并阻止分配的内存块时所需的存储; 它将释放的内存块存储在每个区块的独立释放列表并使用**运算符 delete**时正在使用中的任何内存块释放区块。
 
-每个内存块保留 `Sz` 个字节的可用内存和指向其所属于的区块的指针。 每个区块保留 `Nelts` 内存块、三个指针、一个 int 以及 `operator new` 和 `operator delete` 所需的数据。
+每个内存块保留*Sz*个字节的可用内存以及指向其所属的块区的指针。 每个区块保留`Nelts`内存块、 三个指针、 整数和数据的**new 运算符**并**运算符 delete**要求。
 
 ### <a name="constructors"></a>构造函数
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 

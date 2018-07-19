@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960191"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 类
 
@@ -77,13 +77,13 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 *URNG* 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据指数分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `double` 型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的整型值类型**double**如果未提供任何内容，指数分布根据分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -193,7 +193,7 @@ explicit exponential_distribution(const param_type& parm);
 
 *lambda* `lambda`分布参数。
 
-*参数*用于构造分布的参数包。
+*parm*用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
@@ -222,7 +222,7 @@ struct param_type {
 
 *lambda* `lambda`分布参数。
 
-*右*`param_type`要比较的此对象。
+*右*`param_type`要与此比较的对象。
 
 ### <a name="remarks"></a>备注
 

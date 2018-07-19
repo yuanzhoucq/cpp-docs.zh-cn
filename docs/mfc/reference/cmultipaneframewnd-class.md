@@ -1,5 +1,5 @@
 ---
-title: CMultiPaneFrameWnd 类 |Microsoft 文档
+title: CMultiPaneFrameWnd 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039201"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852330"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 类
-`CMultiPaneFrameWnd`类扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个、 动态地创建多个浮点，选项卡式windows。  
+`CMultiPaneFrameWnd`类用于扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个并动态创建多个浮动、 选项卡式windows。  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -120,7 +120,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(重写[CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)。)|  
 |[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|计算停靠窗口的预期的矩形。 (重写[CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect)。)|  
 |[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|确定是否当前窗格可以停靠到另一个窗格或框架窗口。 (重写[CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached)。)|  
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|确定是否微型框架窗口可以停靠到窗格。 (重写[CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane)。)|  
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|确定微型框架窗口是否可以停靠窗格。 (重写[CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane)。)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(重写[CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility)。)|  
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|（重写 `CPaneFrameWnd::CloseMiniFrame`。）|  
 |[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|将窗格转换为选项卡式文档。 (重写[CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument)。)|  
@@ -137,7 +137,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|从注册表加载窗格的状态。 (重写[CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate)。)|  
 |[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|将微型框架窗口停靠在其最新的位置。 (重写[CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos)。)|  
 |[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|停止汇总计时器。 (重写[CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)。)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|调整微型框架窗口中的窗格的布局。 (重写[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|调整微型框架窗口中窗格的布局。 (重写[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|  
 |[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|设置汇总计时器。 (重写[CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer)。)|  
 |[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|隐藏或显示微型框架窗口的窗格时，由框架进行调用。 (重写[CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane)。)|  
 |[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果窗格在微型框架窗口内包含用户提供的点，则返回窗格。 (重写[CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)。)|  
@@ -153,13 +153,13 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(重写[CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo)。)|  
   
 ## <a name="remarks"></a>备注  
- 大多数此类中的方法重写中的方法[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)类。  
+ 大多数此类中的方法中重写方法[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)类。  
   
- 如果窗格使用`AFX_CBRS_AUTO_ROLLUP`样式和用户到多窗格框架窗口停靠该窗格中，用户可以汇总窗口而不考虑其他停靠的窗格样式设置。  
+ 如果窗格使用 AFX_CBRS_AUTO_ROLLUP 样式，并且用户将该窗格停靠到窗格中多框架窗口，用户可以汇总而不考虑其他停靠窗格的样式设置窗口。  
   
- 框架会自动创建`CMultiPaneFrameWnd`对象时用户中时浮动窗格使用`CBRS_FLOAT_MULTI`样式。  
+ 框架会自动创建`CMultiPaneFrameWnd`时用户中时浮动窗格使用 CBRS_FLOAT_MULTI 样式的对象。  
   
- 璝惠派生的类从`CPaneFrameWnd`类，并动态创建，请参阅[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
+ 有关派生的类从信息`CPaneFrameWnd`类，并动态创建，请参见[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何检索一个指向`CMultiPaneFrameWnd`对象。 此代码片段属于[设置窗格大小示例](../../visual-cpp-samples.md)。  
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  对内部容器管理器对象的引用。  
   
 ### <a name="remarks"></a>备注  
- 此方法可以用于访问内部[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象。  
+ 此方法可用于访问内部[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象。  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 
@@ -655,6 +655,6 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)

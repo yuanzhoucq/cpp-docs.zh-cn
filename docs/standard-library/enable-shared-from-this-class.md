@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845747"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956133"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 类
 
@@ -46,13 +46,13 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由共享指针控制的类型。
+*Ty*由共享指针控制的类型。
 
 ## <a name="remarks"></a>备注
 
-从 `enable_shared_from_this` 派生的对象可以在成员函数中使用 `shared_from_this` 方法来创建实例的 [shared_ptr](../standard-library/shared-ptr-class.md) 所有者，这些所有者与现有 `shared_ptr` 所有者共享所有权。 否则，如果使用 `this` 创建一个新的 `shared_ptr`，则其与现有的 `shared_ptr` 所有者不同，从而会导致无效引用或导致此对象被删除多次。
+从 `enable_shared_from_this` 派生的对象可以在成员函数中使用 `shared_from_this` 方法来创建实例的 [shared_ptr](../standard-library/shared-ptr-class.md) 所有者，这些所有者与现有 `shared_ptr` 所有者共享所有权。 否则为如果您创建一个新`shared_ptr`通过使用**这**，它不同于现有`shared_ptr`所有者，这可能会导致无效引用或导致超过一次删除的对象。
 
-保护构造函数、析构函数和赋值运算符，以帮助预防意外的误用。 模板参数类型 `Ty` 必须是派生类类型。
+保护构造函数、析构函数和赋值运算符，以帮助预防意外的误用。 模板自变量类型*Ty*必须是派生类的类型。
 
 有关使用示例，请参阅 [enable_shared_from_this::shared_from_this](#shared_from_this)。
 
@@ -73,7 +73,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>备注
 
-从 `enable_shared_from_this` 基类派生对象时，`shared_from_this` 模板成员函数返回与现有 `shared_ptr` 所有者共享此实例所有权的 [shared_ptr 类](../standard-library/shared-ptr-class.md)对象。 否则，如果通过 `this` 创建一个新的 `shared_ptr`，则其与现有的 `shared_ptr` 所有者不同，从而会导致无效引用或导致此对象被删除多次。 如果在尚未由 `shared_ptr` 对象所有的实例上调用 `shared_from_this`，则不会定义行为。
+从 `enable_shared_from_this` 基类派生对象时，`shared_from_this` 模板成员函数返回与现有 `shared_ptr` 所有者共享此实例所有权的 [shared_ptr 类](../standard-library/shared-ptr-class.md)对象。 否则为如果您创建一个新`shared_ptr`从**这**，它不同于现有`shared_ptr`所有者，这可能会导致无效引用或导致超过一次删除的对象。 如果在尚未由 `shared_ptr` 对象所有的实例上调用 `shared_from_this`，则不会定义行为。
 
 ### <a name="example"></a>示例
 
@@ -111,5 +111,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>请参阅
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
 [shared_ptr 类](../standard-library/shared-ptr-class.md)<br/>

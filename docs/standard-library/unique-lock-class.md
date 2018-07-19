@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888b847c3e52cd8b6a034e95e35ca73933acd3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956471"
 ---
 # <a name="uniquelock-class"></a>unique_lock 类
 
@@ -36,7 +36,7 @@ class unique_lock;
 
 模板参数 `Mutex` 必须命名为 mutex 类型。
 
-在内部，`unique_lock` 存储一个指向关联的 `mutex` 对象的指针，以及一个指示当前线程是否拥有 `mutex` 的 `bool`。
+在内部，`unique_lock`存储一个指向一个关联`mutex`对象和一个**bool** ，该值指示当前线程是否拥有`mutex`。
 
 ## <a name="members"></a>成员
 
@@ -94,11 +94,11 @@ void lock();
 
 ### <a name="remarks"></a>备注
 
-如果存储的 `mutex` 指针为 `null`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果存储`mutex`指针为 NULL，则此方法将引发[system_error](../standard-library/system-error-class.md)的一个错误代码`operation_not_permitted`。
 
 如果调用线程已拥有关联的 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
-否则，此方法将在关联的 `mutex` 上调用 `lock`，并将内部线程所有权标志设为 `true`。
+否则，此方法会调用`lock`关联`mutex`并将内部线程所有权标志设置为**true**。
 
 ## <a name="mutex"></a>  mutex
 
@@ -118,7 +118,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>返回值
 
-如果线程拥有 mutex，则为 `true`；否则为 `false`。
+**true**如果线程拥有该互斥体; 否则为**false**。
 
 ## <a name="op_eq"></a>operator=
 
@@ -130,7 +130,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`unique_lock`对象。
+*其他*  
+ 一个 `unique_lock` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -140,7 +141,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 如果调用线程拥有以前关联的 `mutex`，则此方法在 `mutex` 上调用 `unlock` 之前，将分配新值。
 
-复制后，此方法可将 `Other` 设为默认构造状态。
+复制后，此方法设置*其他*为默认构造状态。
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -152,7 +153,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果线程拥有 `mutex`，则为 `true`；否则为 `false`。
+**true**如果线程拥有`mutex`; 否则为**false**。
 
 ## <a name="release"></a>  release
 
@@ -168,7 +169,7 @@ mutex_type *release() noexcept;
 
 ### <a name="remarks"></a>备注
 
-此方法将存储的 `mutex` 指针的值设为 0，并将内部 `mutex` 所有权标志的值设为 `false`。
+此方法设置的存储值`mutex`为 0，并且将内部指针`mutex`所有权标志设**false**。
 
 ## <a name="swap"></a>  swap
 
@@ -180,7 +181,8 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`unique_lock`对象。
+*其他*  
+ 一个 `unique_lock` 对象。
 
 ## <a name="try_lock"></a>try_lock
 
@@ -192,11 +194,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果存储的 `mutex` 指针为 `null`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果存储`mutex`指针为 NULL，则该方法将引发[system_error](../standard-library/system-error-class.md)的一个错误代码`operation_not_permitted`。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -212,15 +214,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>参数
 
-`Rel_time` A [chrono:: duration](../standard-library/duration-class.md)对象，它指定的最大方法尝试获取的所有权的时间量`mutex`。
+*Rel_time*  
+ 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果存储的 `mutex` 指针为 `null`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果存储`mutex`指针为 NULL，则该方法将引发[system_error](../standard-library/system-error-class.md)的一个错误代码`operation_not_permitted`。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -237,15 +240,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-`Abs_time` 一个指定之后此方法不再尝试获取的所有权的阈值的时间点在`mutex`。
+*Abs_time*  
+ 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果存储的 `mutex` 指针为 `null`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果存储`mutex`指针为 NULL，则该方法将引发[system_error](../standard-library/system-error-class.md)的一个错误代码`operation_not_permitted`。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -279,21 +283,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>参数
 
-`Mtx` 一个互斥体类型对象。
+*使用 Mtx*  
+ 一个 mutex 类型对象。
 
-`Rel_time` A [chrono:: duration](../standard-library/duration-class.md)对象，它指定的最大方法尝试获取的所有权的时间量`mutex`。
+*Rel_time*  
+ 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
-`Abs_time` 一个指定之后此方法不再尝试获取的所有权的阈值的时间点在`mutex`。
+*Abs_time*  
+ 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
-`Other` A`unique_lock`对象。
+*其他*  
+ 一个 `unique_lock` 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数将构造一个对象，该对象包含值为 0 的关联 mutex 指针。
 
-第二个构造函数将从 `Other` 中移动关联的 mutex 状态。 移动后，`Other` 将不再与 mutex 关联。
+第二个构造函数移动从关联的 mutex 状态*其他*。 在移动后*其他*将不再与 mutex 关联。
 
-剩余构造函数将 & `Mtx` 存储为存储的 `mutex` 指针。 如果第二个参数存在，则由它确定 `mutex` 的所有权。
+剩余的构造函数将 &*使用 Mtx*为存储`mutex`指针。 如果第二个参数存在，则由它确定 `mutex` 的所有权。
 
 |||
 |-|-|
@@ -328,7 +336,7 @@ void unlock();
 
 如果调用线程没有关联的 `mutex`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
 
-否则，此方法将在关联的 `mutex` 上调用 `unlock`，并将内部线程所有权标志设为 `false`。
+否则，此方法会调用`unlock`关联`mutex`并将内部线程所有权标志设置为**false**。
 
 ## <a name="see-also"></a>请参阅
 

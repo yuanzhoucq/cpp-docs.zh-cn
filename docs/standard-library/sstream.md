@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9beb54dd241c6987b79db238f033f3d169497
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957763"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -82,8 +82,8 @@ void swap (
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|引用 `sstream` 对象。|
-|`right`|引用 `sstream` 对象。|
+|*left*|引用 `sstream` 对象。|
+|*right*|引用 `sstream` 对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -93,14 +93,14 @@ void swap (
 
 |类型名称|描述|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|创建专用于 `char` 模板参数的类型 `basic_istringstream`。|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|创建专用于 `char` 模板参数的类型 `basic_ostringstream`。|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|创建专用于 `char` 模板参数的类型 `basic_stringbuf`。|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|创建专用于 `char` 模板参数的类型 `basic_stringstream`。|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|创建专用于 `wchar_t` 模板参数的类型 `basic_istringstream`。|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|创建专用于 `wchar_t` 模板参数的类型 `basic_ostringstream`。|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|创建专用于 `wchar_t` 模板参数的类型 `basic_stringbuf`。|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|创建专用于 `wchar_t` 模板参数的类型 `basic_stringstream`。|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|创建类型`basic_istringstream`专用于**char**模板参数。|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|创建类型`basic_ostringstream`专用于**char**模板参数。|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|创建类型`basic_stringbuf`专用于**char**模板参数。|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|创建类型`basic_stringstream`专用于**char**模板参数。|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|创建类型`basic_istringstream`专用于**wchar_t**模板参数。|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|创建类型`basic_ostringstream`专用于**wchar_t**模板参数。|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|创建类型`basic_stringbuf`专用于**wchar_t**模板参数。|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|创建类型`basic_stringstream`专用于**wchar_t**模板参数。|
 
 ### <a name="manipulators"></a>操控器
 
@@ -112,10 +112,10 @@ void swap (
 
 |类|描述|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|描述对 **Elem** 类型的元素（其字符特征由类 **Tr** 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，该对象控制从 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 类的流缓冲区中提取元素和编码对象的操作，该类具有 **Elem** 类型的元素，元素的字符特征由 **Tr** 类确定，并且其元素由 `Alloc` 类的分配器进行分配。|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述一个对象，该对象控制在 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 类的流缓冲区中插入元素和编码对象的操作，该类具有 **Elem** 类型的元素，元素的字符特征由 **Tr** 类确定，并且其元素由 `Alloc` 类的分配器进行分配。|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述一个对象，该对象使用 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 类的流缓冲区，控制插入和提取元素和编码对象的操作，该类具有 **Elem** 类型的元素，元素的字符特征由 **Tr** 类确定，并且其元素由 `Alloc` 类的分配器进行分配。|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，用于控制提取元素和编码的对象类的流缓冲区[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，类型的元素`Elem`，其字符特征由类`Tr`，并且其元素由类的分配器`Alloc`。|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述类的流缓冲区控制元素插入的对象和编码的对象[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，类型的元素`Elem`，其字符特征由类`Tr`，并且其元素由类的分配器`Alloc`。|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述控制元素的插入和提取的对象和编码的对象使用类的流缓冲区[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，类型的元素`Elem`，其字符特征由类`Tr`，并且其元素由类的分配器`Alloc`。|
 
 ## <a name="requirements"></a>要求
 

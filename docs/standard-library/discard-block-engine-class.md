@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b814f64f340577508add6bf3c0f85ffac0786db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b65cfbe156ba462af9e87abf82d63023cfdc44b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843465"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957433"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine 类
 
@@ -36,11 +36,11 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>参数
 
-`Engine` 基引擎类型中。
+*引擎*基引擎类型。
 
-`P` **块大小**。 每个块中的值数。
+*P* **块大小**。 每个块中的值数。
 
-`R` **已用的块**。 已使用的每个块中的值数。 丢弃剩余部分 ( `P` - `R`)。 **前提条件**：`0 < R ≤ P`
+*R* **使用的块**。 已使用的每个块中的值数。 丢弃剩余部分 (`P` - `R`)。 **前提条件**：`0 < R ≤ P`
 
 ## <a name="members"></a>成员
 

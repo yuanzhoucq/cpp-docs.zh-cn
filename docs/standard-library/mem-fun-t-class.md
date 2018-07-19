@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32aceae204f50d98e84f1286042854e725917623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956383"
 ---
 # <a name="memfunt-class"></a>mem_fun_t 类
 
-一种适配器类，在使用指针自变量进行初始化的情况下，该类允许将不带任何自变量的 **non_const** 成员函数作为一元函数对象调用。
+一种适配器类，允许`non_const`不采用任何参数，以使用指针自变量进行初始化的一元函数对象形式调用成员函数。
 
 ## <a name="syntax"></a>语法
 
@@ -41,9 +41,9 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>参数
 
-`_Pm` 指向类成员函数的指针**类型**可转换为函数对象。
+*_Pm*指向的类成员函数的指针`Type`可转换为函数对象。
 
-`_Pleft` 对象的`_Pm`上调用成员函数。
+*_Pleft*对象的 *_Pm*上调用成员函数。
 
 ## <a name="return-value"></a>返回值
 
@@ -51,7 +51,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ## <a name="remarks"></a>备注
 
-模板类存储 `_Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它将其成员函数 `operator()` 定义为返回 ( `_Pleft`->* `_Pm`)( )。
+此模板类存储一份 *_Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它将其成员函数 `operator()` 定义为返回 ( `_Pleft`->* `_Pm`)( )。
 
 ## <a name="example"></a>示例
 

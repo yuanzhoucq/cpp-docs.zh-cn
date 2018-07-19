@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958261"
 ---
 # <a name="tuplesize-class"></a>tuple_size 类
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>参数
 
-*元组*元组类型。
+*Tuple*  
+元组的类型。
 
-*Elem*数组元素的类型。
+*Elem*  
+数组元素的类型。
 
-*大小*数组的大小。
+*Size*  
+数组大小。
 
-*T1*该对的第一个成员的类型。
+T1  
+对的第一个成员的类型。
 
-*T2*对第二个成员的类型。
+T2  
+对的第二个成员的类型。
 
-*类型*元组元素的类型。
+*类型*  
+元组元素的类型。
 
 ## <a name="remarks"></a>备注
 
-模板类拥有成员 `value` ，此成员是一个整型常数表达式，值为元祖类型 `Tuple`的范围。
+此模板类有一个成员`value`，它是其值为元组类型的范围的整型常量表达式*元组*。
 
-数组的模板专用化拥有成员 `value`，它是整型常数表达式，值为 `Size`，即数组的大小。
+数组的模板专用化有一个成员`value`，它是其值是整数常量表达式*大小*，它是数组的大小。
 
 对的模板专用化拥有成员 `value`，它是整型常数表达式，值为 2。
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<元组 >**标头：** \<数组 > （适用于数组专用化）**标头：** \<实用程序 > （用于对专用化）
+**标头：** \<元组 >**标头：** \<数组 > （适用于数组专用化）**标头：** \<实用程序 > （适用于对专用化）
 
 **命名空间：** std
 

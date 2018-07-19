@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960302"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
 
@@ -41,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>参数
 
-`val` 将接收 new_val 的值的对象。
+*val*  
+ 将接收 new_val 的值的对象。
 
-`new_val` 其值被复制或移到 val 对象。
+*new_val*  
+ 其值将被复制或移到 val 中的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -99,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|传入 `Arg` 的值的类型，可能不同于 `Arg` 的类型。 通常由转发函数的模板自变量决定。|
-|`Arg`|要强制转换的自变量。|
+|*类型*|传入的值的类型*Arg*，这可能是不同的类型*Arg*。 通常由转发函数的模板自变量决定。|
+|*arg*|要强制转换的自变量。|
 
 ### <a name="return-value"></a>返回值
 
-如果传入 `Arg` 的值最初为右值或右值引用，则返回对 `Arg` 的右值引用；否则，返回 `Arg`，而不修改其类型。
+返回的右值引用*Arg*如果中传递的值*Arg*最初为右值或对 rvalue 的引用; 否则，返回*Arg*而无需修改其类型。
 
 ### <a name="remarks"></a>备注
 
@@ -161,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Index` 指定元素的从 0 开始的索引。
+*Tuple*  
+ 指定元素从 0 开始的索引。
 
-`T1` 第一个 pair 元素的类型。
+T1  
+ 第一个 pair 元素的类型。
 
-`T2` 第二个 pair 元素的类型。
+T2  
+ 第二个 pair 元素的类型。
 
-`pr` 要从选择的对。
+*拉取请求*  
+ 要从中进行选择的对。
 
 ### <a name="remarks"></a>备注
 
 每个模板函数都返回对其 `pair` 参数的元素的引用。
 
-对于索引重载，如果 `Index` 的值为 0，则这些函数返回 `pr.first` ；如果 `Index` 的值为 1，则这些函数返回 `pr.second`。 类型 `RI` 是返回的元素的类型。
+对于索引重载，如果的值*索引*是的 0，则函数返回`pr.first`如果的值*索引*是的 1，则函数返回`pr.second`。 类型 `RI` 是返回的元素的类型。
 
-对于不具有索引参数的重载，要返回的元素由类型参数推导。 如果 `get<T>(Tuple)` 中包含的 T 类型元素的个数不为一个，则调用 `pr` 将生成编译器错误。
+对于不具有索引参数的重载，要返回的元素由类型参数推导。 调用`get<T>(Tuple)`如果将生成编译器错误*pr*包含多于或少于一个元素类型为 t。
 
 ### <a name="example"></a>示例
 
@@ -228,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>参数
 
-`Val1` 初始化的第一个元素的值`pair`。
+*Val1*  
+ 用于初始化第一个 `pair` 元素的值。
 
-`Val2` 初始化的第二个元素的值`pair`。
+*Val2*  
+ 用于初始化第二个 `pair` 元素的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -269,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|一种从 `Arg` 中传递的参数类型推导出的类型（与引用折叠规则一起）。|
-|`Arg`|要强制转换的自变量。 虽然 `Arg` 的类型看起来指定为右值引用，但 `move` 也接受左值参数，原因是左值引用可以绑定到右值引用。|
+|*类型*|从自变量的类型推导的类型传入*Arg*一起引用折叠规则。|
+|*arg*|要强制转换的自变量。 尽管的类型*Arg*看起来指定为右值引用，`move`也接受左值自变量，因为可以将左值引用绑定到右值引用。|
 
 ### <a name="return-value"></a>返回值
 
@@ -278,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>备注
 
-模板参数 `Type` 不应显式指定，而应从 `Arg` 中传递的值类型进行推导。 `Type` 的类型将根据引用折叠规则进行进一步调整。
+模板参数*类型*不应显式指定，而是从传入的值的类型推导*Arg*。 类型*类型*根据引用折叠规则进行进一步调整。
 
-`move` 不会移动其参数。 相反，通过无条件将其参数（可能是左值）强制转换为右值引用，它使得编译器随后能够移动（而不是复制）在 `Arg` 中传递的值（如果其类型支持移动）。 如果其类型不支持移动，则将进行复制。
+`move` 不会移动其参数。 相反，通过无条件地将其自变量强制转换，这可能是左值 — 为右值引用，它使得编译器随后能够移动，而不是复制中传递的值*Arg*如果其类型为支持移动。 如果其类型不支持移动，则将进行复制。
 
-如果 `Arg` 中传递的值为左值（也就是说，它具有名称或可以采用其地址），则它在发生移动时将会失效。 在移动 `Arg` 中传递的值后，请勿按照其名称或地址来引用它。
+如果中传递的值*Arg*是左值 — 即，它具有一个名称或可以采用其地址 — 发生移动时将失效。 引用中传递的值不是*Arg*按其名称或地址后它已经被移动。
 
 ## <a name="swap"></a>  swap
 
@@ -297,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|一个 `pair` 类型的对象。|
-|`right`|一个 `pair` 类型的对象。|
+|*left*|一个 `pair` 类型的对象。|
+|*right*|一个 `pair` 类型的对象。|
 
 ### <a name="remarks"></a>备注
 

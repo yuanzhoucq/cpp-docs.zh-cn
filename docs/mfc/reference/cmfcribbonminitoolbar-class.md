@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonMiniToolBar 类 |Microsoft 文档
+title: CMFCRibbonMiniToolBar 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041739"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852882"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 类
 实现上下文快捷工具栏。  
@@ -56,7 +56,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |名称|描述|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|（重写 `CMFCPopupMenu::IsRibbonMiniToolBar`。）|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|设置要在工具栏上显示的命令的列表。|  
@@ -99,16 +99,16 @@ void SetCommands(
   
 ### <a name="parameters"></a>参数  
  [in]*pRibbonBar*  
- 浮动工具栏搜索要显示的按钮的功能区栏。  
+ 浮动工具栏中搜索要显示的按钮在功能区栏。  
   
  [in]*lstCommands*  
- 要显示在浮动工具栏上的命令的列表。 所有功能区类别搜索以查找关联的按钮。  
+ 要在浮动工具栏上显示的命令的列表。 所有功能区类别进行搜索以找到关联的按钮。  
   
 ### <a name="remarks"></a>备注  
- 此函数用于设置的命令在浮动工具栏中显示的列表。  
+ 使用此函数设置的命令显示在浮动工具栏的列表。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示如何使用`SetCommands`方法`CMFCRibbonMiniToolBar`类。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何使用`SetCommands`方法的`CMFCRibbonMiniToolBar`类。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -123,13 +123,13 @@ BOOL Show(
   
 ### <a name="parameters"></a>参数  
  [in]*x*  
- 在屏幕坐标中指定水平位置的浮动工具栏。  
+ 指定屏幕坐标中的浮动工具栏的水平位置。  
   
  [in]*y*  
- 在屏幕坐标中指定浮动工具栏的垂直的位置。  
+ 指定屏幕坐标中的浮动工具栏的垂直位置。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则显示了浮动工具栏否则为`FALSE`。  
+ 如果成功，则显示浮动工具栏，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  显示浮动工具栏以及上下文菜单。  
@@ -144,22 +144,22 @@ BOOL ShowWithContextMenu(
   
 ### <a name="parameters"></a>参数  
  [in]*x*  
- 在屏幕坐标中指定的上下文菜单的水平位置。  
+ 屏幕坐标中指定的上下文菜单的水平位置。  
   
  [in]*y*  
- 在屏幕坐标中指定的上下文菜单的垂直位置。  
+ 屏幕坐标中指定的上下文菜单的垂直位置。  
   
  [in]*uiMenuResID*  
  指定要显示的上下文菜单的资源 ID。  
   
  [in]*pWndOwner*  
- 标识从上下文菜单中接收消息窗口的窗口。  
+ 标识从上下文菜单中接收消息的窗口。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则显示了上下文菜单否则为`FALSE`。  
+ 如果已成功，则显示上下文菜单，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此函数用于显示具有一个上下文菜单的浮动工具栏。 上下文菜单为浮动工具栏下面定位 15 像素。  
+ 此函数用于显示具有上下文菜单的浮动工具栏。 上下文菜单为浮动工具栏下方的定位 15 像素。  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,5 +184,5 @@ virtual BOOL IsRibbonMiniToolBar() const;
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11d9d45a8bf9d2eff7f4fa8d006299045a21c116
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6238aeada530a8fc33fc98b79cba969353796ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953083"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc 类
 
-描述一个对象，用于管理使用类型 [cache_suballoc](../standard-library/cache-suballoc-class.md) 的缓存类型的类型 `Type` 的对象的存储分配和释放。
+描述一个对象，用于管理存储分配和释放的对象的类型*类型*使用缓存类型[cache_suballoc](../standard-library/cache-suballoc-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -39,11 +39,11 @@ class allocator_suballoc;
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|由分配器分配元素类型。|
+|*类型*|由分配器分配元素类型。|
 
 ## <a name="remarks"></a>备注
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 宏将此类传递为以下语句中的 `name` 参数：`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将作为此类传递*名称*以下语句中的参数： `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>要求
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853646"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953018"
 ---
 # <a name="resultof-class"></a>result_of 类
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>参数
 
-`Fn` 查询的可调用类型。
+*Fn*查询的可调用类型。
 
-`ArgTypes` 到查询的可调用类型参数列表的类型。
+*ArgTypes*查询的可调用类型的参数列表的类型。
 
 ## <a name="remarks"></a>备注
 
-使用此模板可在编译时确定 `Fn`(`ArgTypes`) 的结果类型，其中 `Fn` 是可调用类型、对函数的引用或对可调用类型的引用（通过在 `ArgTypes` 中使用类型的参数列表进行调用）。 如果未计算的表达式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 格式正确，则模板类的 `type` 成员为 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 的结果类型命名。 否则，此模板类不具有任何成员 `type`。 类型 `Fn` 和参数包 `ArgTypes` 中的所有类型必须是完整的类型、`void` 或未知边界数组。
+使用此模板在编译时确定的结果类型`Fn`(`ArgTypes`)，其中*Fn*是可调用类型、 对函数引用或对中使用的类型的参数列表调用可调用类型的引用*ArgTypes*。 如果未计算的表达式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 格式正确，则模板类的 `type` 成员为 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 的结果类型命名。 否则，此模板类不具有任何成员 `type`。 类型*Fn*和参数包中的所有类型*ArgTypes*必须是完整类型**void**，或具有未知边界的数组。
 
 ## <a name="requirements"></a>要求
 

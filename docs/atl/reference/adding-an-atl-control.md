@@ -1,5 +1,5 @@
 ---
-title: 添加 ATL 控件 |Microsoft 文档
+title: 添加 ATL 控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356930"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954677"
 ---
 # <a name="adding-an-atl-control"></a>添加 ATL 控件
-使用此向导将一个用户界面对象添加到所有潜在容器支持接口的项目。 若要支持这些接口，该项目必须已创建作为 ATL 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  
+使用此向导将用户界面对象添加到所有潜在容器支持接口的项目。 若要支持这些接口，该项目必须已创建为 ATL 应用程序或作为包含 ATL 支持的 MFC 应用程序。 可使用 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[将 ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)以实现 MFC 应用程序的 ATL 支持。  
   
-### <a name="to-add-an-atl-control-to-your-project"></a>ATL 控件添加到你的项目  
+### <a name="to-add-an-atl-control-to-your-project"></a>若要向项目添加 ATL 控件  
   
-1.  在**解决方案资源管理器**或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击你想要添加的 ATL 简单对象的项目的名称。  
+1.  在上述**解决方案资源管理器**或[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击你想要添加的 ATL 简单对象的项目的名称。  
   
-2.  单击**添加**从快捷菜单，然后单击**添加类**。  
+2.  单击**外**从快捷菜单，然后单击**添加类**。  
   
-3.  在[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL 控件**，然后单击**添加**以显示[ATL 控件向导](../../atl/reference/atl-control-wizard.md)。  
+3.  在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL 控件**，然后单击**添加**以显示[ATL 控件向导](../../atl/reference/atl-control-wizard.md)。  
   
- 使用**ATL 控件向导**，你可以创建一个三种类型的控件：  
+ 使用**ATL 控件向导**，可以创建一个三种类型的控件：  
   
 -   标准控件  
   
@@ -41,10 +41,9 @@ ms.locfileid: "32356930"
   
 -   DHTML 控件  
   
- 此外，你可以减少控件的大小，并删除接口通过选择不使用的大多数容器**最低限度的控制**上**选项**向导页。  
+ 此外，可以降低控件的大小和删除未使用的大多数容器通过选择接口**最低限度的控制**上**选项**向导页。  
   
 ## <a name="see-also"></a>请参阅  
  [将功能添加到复合控件](../../atl/adding-functionality-to-the-composite-control.md)   
- [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire 示例](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
 

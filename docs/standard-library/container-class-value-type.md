@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4927657bd0a4944e62493134c041011c142051
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919d62d967df4e41b5a25e953202352305b50d02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958161"
 ---
 # <a name="container-classvaluetype"></a>Container Class::value_type
 
 > [!NOTE]
 > 本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
-可用作模板参数 **Ty** 的同义词。
+可用作模板参数 *Ty* 的同义词。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ typedef T4 value_type;
 
 ## <a name="remarks"></a>备注
 
-此处它被描述为未指定类型 **T4** 的同义词（通常为 **Alloc::value_type**）。
+它被描述为未指定类型的同义词，此处`T4`(通常`Alloc::value_type`)。
 
 ## <a name="see-also"></a>请参阅
 

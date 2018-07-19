@@ -1,5 +1,5 @@
 ---
-title: 数据传输类 (ATL) |Microsoft 文档
+title: 数据传输类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c28c2e04bb3d4084a3dfdeebee9c4c6d6d5fbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b953b7e7a2f67aa3b17d5bb5fd020706d4c98e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953377"
 ---
 # <a name="data-transfer-classes"></a>数据传输类
 以下类支持各种类型的数据传输：  
   
--   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md)支持统一数据传输通过使用标准格式来检索和设置数据。 句柄数据通过管理连接来建议接收器更改通知。  
+-   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md)支持通用数据传输使用标准的格式来检索和设置数据。 句柄数据通过管理连接向建议接收器更改通知。  
   
--   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md)允许异步名字对象发送和接收异步数据传输到和从你的对象有关的信息。  
+-   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md)允许发送和接收有关异步数据传输到和从您的对象的信息为异步名字对象。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)

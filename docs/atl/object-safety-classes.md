@@ -1,5 +1,5 @@
 ---
-title: 对象安全类 (ATL) |Microsoft 文档
+title: 对象安全类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355615"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953699"
 ---
 # <a name="object-safety-classes"></a>对象安全类
 下面的类对象安全提供支持：  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md)允许对象被标记为安全的初始化或可安全执行脚本。  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md)允许对象被标记为用于初始化安全或可安全执行脚本。  
   
 ## <a name="related-articles"></a>相关文章  
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  

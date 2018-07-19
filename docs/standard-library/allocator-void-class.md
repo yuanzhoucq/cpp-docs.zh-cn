@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846540"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953549"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 类
 
-一种针对 `void` 类型进行的模板类分配器专用化，用于定义在此上下文中有意义的类型。
+模板类分配器类型的专用化**void**，定义在此上下文中有意义的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -51,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>备注
 
-类为类型 *void 显式指定模板类 [allocator](../standard-library/allocator-class.md)。* 其构造函数和赋值运算符与模板类的行为方式相同，但它仅定义以下类型：
+类显式专用化模板类[allocator](../standard-library/allocator-class.md)类型**void**。 其构造函数和赋值运算符与模板类的行为方式相同，但它仅定义以下类型：
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer)。
 

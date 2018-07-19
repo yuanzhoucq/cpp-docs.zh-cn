@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN 结构 |Microsoft 文档
+title: SOCKADDR_IN 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373633"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885733"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 结构
-在 Internet 地址系列中， `SOCKADDR_IN` Windows 套接字使用结构来指定要连接套接字的本地或远程终结点地址。  
+在 Internet 地址族， `SOCKADDR_IN` Windows 套接字使用结构来指定要连接套接字的本地或远程终结点地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>参数  
  *sin_family*  
- 地址系列 (必须是**AF_INET**)。  
+ 地址的系列 （必须是 AF_INET）。  
   
  *sin_port*  
  IP 端口。  
@@ -48,12 +48,12 @@ struct in_addr sin_addr;
  IP 地址。  
   
  *sin_zero*  
- 填充以使大小相同的结构`SOCKADDR`。  
+ 填充结构使大小相同`SOCKADDR`。  
   
 ## <a name="remarks"></a>备注  
- 此窗体中的`SOCKADDR`结构特定于 Internet 地址族，和可以强制转换为`SOCKADDR`。  
+ 此窗体中的`SOCKADDR`结构特定于 Internet 地址族并可转换为`SOCKADDR`。  
   
- 组件的此结构的 IP 地址属于类型**IN_ADDR**。 **IN_ADDR** Windows 套接字头文件 WINSOCK 中定义结构。H，如下所示：  
+ 此结构的 IP 地址组件是类型的`IN_ADDR`。 `IN_ADDR` Windows 套接字标头文件 WINSOCK 中定义结构。H，如下所示：  
   
 ```  
 struct in_addr {

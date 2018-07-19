@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958138"
 ---
 # <a name="addcv-class"></a>add_cv 类
 
-从类型设置常量可变类型。
+使**const 易失性**从类型的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +44,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>备注
 
-修改类型 `add_cv<T>` 的实例具有等同于由 [add_volatile](../standard-library/add-volatile-class.md) 和 [add_const](../standard-library/add-const-class.md) 修改的 *T* 的 `type` 成员 typedef，*T* 已经有 cv 限定符、是一个引用或者一个函数的情况除外。
+修改后的类型的实例`add_cv<T>`已`type`成员**typedef**等效于*T*由[add_volatile](../standard-library/add-volatile-class.md)和[add_const](../standard-library/add-const-class.md)，除非*T*已具有 cv 限定符、 是引用，或未一个函数。
 
 `add_cv_t<T>` 帮组程序类型是访问 `add_cv<T>` 成员 typedef `type` 的快捷方式。
 

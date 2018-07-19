@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956861"
 ---
 # <a name="duration-class"></a>duration 类
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>参数
 
-`Rep2` 一个算术类型来表示的计时周期数。
+*Rep2*算术类型来表示计时周期数。
 
-`Period2` A`std::ratio`模板专用化来表示时钟周期的单位为秒。
+*Period2* A`std::ratio`模板专用化来表示的秒为单位的时钟周期。
 
-`R` 默认时间的计时周期数。
+*R*默认时间段的计时周期数。
 
-`Dur` 指定时间段内的计时周期数`Period2`。
+*Dur*指定的时间段的计时周期数*Period2*。
 
 ### <a name="remarks"></a>备注
 
 默认构造函数构造未经初始化的对象。 通过使用空大括号进行的值初始化会初始化表示零个时钟计时周期的时间间隔的对象。
 
-第二，一模板参数构造函数构造一个对象，该对象表示使用 `std::ratio<1>` 的默认时间段的 `R` 时钟计时周期时间间隔。 若要避免刻度计数化整，从表示类型 `Rep2`（该类型在 `duration::rep` 不能作为浮点类型时可被视为浮点类型）构造持续时间对象这一做法是错误的。
+第二个、 一个模板参数构造函数将构造一个对象，表示的时间间隔*R*时钟计时周期使用的默认时间段的`std::ratio<1>`。 若要避免舍的滴答计数，则返回错误，构造一个持续时间对象从一种表示类型*Rep2* ，可将其视为浮点类型`duration::rep`不能被视为浮点类型。
 
-第三，两个模板参数构造函数构造一个对象，该对象表示时间间隔，其长度是由 `Dur` 指定的时间间隔。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为*不可公度*的持续时间对象构造一个持续时间对象这一做法是错误的。
+第三，两个模板参数构造函数将构造一个对象，表示时间间隔，其长度是由指定的时间间隔*Dur*。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为*不可公度*的持续时间对象构造一个持续时间对象这一做法是错误的。
 
 如果不能将 `D2` 视为浮点类型且 [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) 不是 1，持续时间类型 `D1` 与其他持续时间类型 `D2` *不可公度*。
 
-除非 `Rep2` 可隐式转换为 `rep` 且 `treat_as_floating_point<rep>` *为 true* 或 `treat_as_floating_point<Rep2>` *为 false*，否则第二个构造函数将不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
+除非*Rep2*隐式转换为`rep`并将`treat_as_floating_point<rep>`*如此*或`treat_as_floating_point<Rep2>` *false*，第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 除非转换中没有引发溢出且 `treat_as_floating_point<rep>` *为 true*，或 `ratio_divide<Period2, period>::den` 等于 1 且 `treat_as_floating_point<Rep2>` *为 false*，否则第三个构造函数将不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-`Div` 对于第一个方法，`Div`表示滴答计数。 对于第二种方法，`Div` 是包含计时周期计数的 `duration` 对象。
+*Div*的第一种方法， *Div*表示的计时周期计数。 对于第二个方法，请*Div*是`duration`对象，其中包含的计时周期计数。
 
 ### <a name="return-value"></a>返回值
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>参数
 
-`Mult` 由指定类型的值`duration::rep`。
+*Mult*由指定类型的值`duration::rep`。
 
 ### <a name="return-value"></a>返回值
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>参数
 
-`Div` 由指定类型的值`duration::rep`。
+*Div*由指定类型的值`duration::rep`。
 
 ### <a name="return-value"></a>返回值
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -314,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-`Div` 除数，这是一个持续时间对象或表示滴答计数的值。
+*Div*除数，即一个持续时间对象或值，该值表示刻度计数。
 
 ### <a name="remarks"></a>备注
 

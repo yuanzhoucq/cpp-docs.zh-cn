@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954859"
 ---
 # <a name="weakptr-class"></a>weak_ptr 类
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由弱指针控制的类型。
+*Ty*  
+ 由弱指针控制的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -104,7 +105,7 @@ public:
 |[element_type](#element_type)|元素的类型。|
 |[expired](#expired)|测试所属权是否已过期。|
 |[lock](#lock)|获取资源的独占所属权。|
-|[owner_before](#owner_before)|如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。|
+|[owner_before](#owner_before)|返回 **，则返回 true**如果此`weak_ptr`排序之前 (或小于) 所提供的指针。|
 |[reset](#reset)|释放所拥有的资源。|
 |[swap](#swap)|交换两个 `weak_ptr` 对象。|
 |[use_count](#use_count)|指定 `shared_ptr` 对象的计数。|
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>备注
 
-如果 `*this` 已过期，则成员函数返回 `true`；否则将返回 `false`。
+此成员函数返回 **，则返回 true**如果`*this`已过期，否则**false**。
 
 ### <a name="example"></a>示例
 
@@ -226,7 +227,7 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回空 shared_ptr 对象，如果`*this`已过期; 否则它将返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 拥有的资源的对象`*this`指向。
+此成员函数返回空 shared_ptr 对象，如果`*this`已过期; 否则返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 对象，它拥有的资源`*this`指向。
 
 ### <a name="example"></a>示例
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-`Other` 由自变量共享/弱指针控制的类型。
+*其他*  
+ 由参数共享/弱指针控制的类型。
 
-`wp` 要复制的弱指针。
+*wp*  
+ 要复制的弱指针。
 
-`sp` 要复制的共享的指针。
+*sp*  
+ 要复制的共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>owner_before
 
-如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。
+返回 **，则返回 true**如果此`weak_ptr`排序之前 (或小于) 所提供的指针。
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>参数
 
-`ptr` `lvalue`引用为`shared_ptr`或`weak_ptr`。
+*ptr*  
+ 对 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 引用。
 
 ### <a name="remarks"></a>备注
 
-模板成员函数将返回`true`如果`*this`是`ordered before` `ptr`。
+模板成员函数返回 **，则返回 true**如果`*this`是`ordered before` `ptr`。
 
 ## <a name="reset"></a>reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>参数
 
-`wp` 要交换的弱指针。
+*wp*  
+ 要交换的弱指针。
 
 ### <a name="remarks"></a>备注
 
-成员函数将保留最初由 `*this` 指向且随后由 `wp` 指向的资源，以及最初由 `wp` 指向且随后由 `*this` 指向的资源。 此函数不会更改两个资源的引用计数，也不会引发任何异常。
+成员函数将保留最初由指向的资源`*this`且随后由*wp*，并通过最初指向的资源*wp*且随后由`*this`. 此函数不会更改两个资源的引用计数，也不会引发任何异常。
 
 ### <a name="example"></a>示例
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-`Other` 由自变量共享/弱指针控制的类型。
+*其他*  
+ 由参数共享/弱指针控制的类型。
 
-`wp` 要复制的弱指针。
+*wp*  
+ 要复制的弱指针。
 
-`sp` 要复制的共享的指针。
+*sp*  
+ 要复制的共享指针。
 
 ### <a name="remarks"></a>备注
 

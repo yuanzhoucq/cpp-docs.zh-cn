@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39549a277a203d9daa894f48437224caf50a0521
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953451"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 类
 
@@ -44,19 +44,19 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`pfunc` 要转换的二元函数。
+*pfunc*转换的二元函数。
 
-`left` 左侧对象 *\*pfunc*上调用。
+*左*的左侧对象 *\*pfunc*上调用。
 
-`right` 右对象 *\*pfunc*上调用。
+*右*的右侧对象 *\*pfunc*上调用。
 
 ## <a name="return-value"></a>返回值
 
-模板类存储 **pfunc** 的副本。 它将其成员函数 `operator()` 定义为返回 (\* **pfunc**)(_ *Left*, \_ *Right*)。
+此模板类存储一份`pfunc`。 它将其成员函数 `operator()` 定义为返回 (\* **pfunc**)(_ *Left*, \_ *Right*)。
 
 ## <a name="remarks"></a>备注
 
-二元函数指针是一个函数对象，且可能会被传递到期望将二元函数作为参数的任何 C++ 标准库算法，但这不适用。 若要将其与适配器配合使用（如向其绑定值或与求反器配合使用），则必须将其与可使这种适应成为可能的 **first_argument_type**、**second_argument_type** 和 **result_type** 嵌套类型一起提供。 `pointer_to_binary_function` 执行的转换允许函数适配器与二元函数指针配合使用。
+二元函数指针是一个函数对象，且可能会被传递到期望将二元函数作为参数的任何 C++ 标准库算法，但这不适用。 若要使用与适配器，如向其绑定值或将它与配合，它必须提供嵌套类型一起`first_argument_type`， `second_argument_type`，和`result_type`，使这种适应成为可能。 `pointer_to_binary_function` 执行的转换允许函数适配器与二元函数指针配合使用。
 
 ## <a name="example"></a>示例
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954742"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible 类
 
@@ -37,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
-`Args` 要匹配的构造函数中的自变量类型`T`。
+*Args*要匹配的构造函数中的参数类型*T*。
 
 ## <a name="remarks"></a>备注
 
-如果通过使用 `Args` 中的参数类型可普通构造类型 `T`，则类型谓词的实例为 true；否则为 false。 如果变量定义 `T t(std::declval<Args>()...);` 格式正确且已知其不会调用任何重要的操作，则类型 `T` 为普通构造类型。 `T` 和 `Args` 中的所有类型都必须是完整类型、`void` 或具有未知边界的数组。
+如果类型谓词的实例将保留 true 类型*T*通过使用中的参数类型为普通构造*Args*，否则为 false。 类型*T*为普通构造如果变量定义`T t(std::declval<Args>()...);`是格式正确，以及确定要调用任何重要的操作。 这两*T*和中的所有类型*Args*必须是完整类型**void**，或具有未知边界的数组。
 
 ## <a name="requirements"></a>要求
 

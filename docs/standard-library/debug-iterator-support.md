@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959587"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -155,7 +155,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-当 `for` 循环作用域结束时，调试迭代器检查也会导致 `for` 循环中声明的迭代器变量超出范围。
+调试迭代器检查也会导致中声明的迭代器变量**有关**循环，以采用正确的作用域时**为**循环作用域结束。
 
 ```cpp
 // iterator_debugging_4.cpp

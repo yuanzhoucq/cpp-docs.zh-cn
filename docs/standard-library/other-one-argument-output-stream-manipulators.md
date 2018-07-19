@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953821"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他单一参数输出流操控器
 
-下面的示例使用了一个 `long` 类型的 `money` 类。 `setpic` 操控器可将格式设置“图片”字符串附加到可由 `money` 类的重载的流插入运算符使用的类。 图片字符串将存储为 `money` 类中的静态变量，而非存储为流类的数据成员，因此无需派生新的输出流类。
+下面的示例使用一个类`money`，即**长**类型。 `setpic` 操控器可将格式设置“图片”字符串附加到可由 `money` 类的重载的流插入运算符使用的类。 图片字符串将存储为 `money` 类中的静态变量，而非存储为流类的数据成员，因此无需派生新的输出流类。
 
 ## <a name="example"></a>示例
 

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 676f6522a5625103a00310c6ce5353ce40da9359
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862921"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957420"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -113,11 +113,11 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>参数
 
-`Val` 对象或为其获取其实际地址的函数。
+*Val*的对象或函数要获取其实际地址。
 
 ### <a name="return-value"></a>返回值
 
-由 `Val` 引用的对象或函数的实际地址，即使存在重载的 `operator&()`，情况也不例外。
+对象或引用的函数的实际地址*Val*，即使一个已重载`operator&()`存在。
 
 ### <a name="remarks"></a>备注
 
@@ -136,23 +136,23 @@ void* align(
 
 ### <a name="parameters"></a>参数
 
-`Alignment` 对齐边界以尝试。
+*对齐方式*的对齐边界以尝试。
 
-`Size` 以字节为单位的对齐存储大小。
+*大小*以字节为单位的对齐存储的大小。
 
-`Ptr` 要使用的可用连续存储池的起始地址。 此参数也是一个输出参数，并设置要包含新的起始地址，如果对齐成功。 如果 `align()` 不成功，则不修改此参数。
+*Ptr*要使用的可用连续存储池的起始地址。 此参数还是输出参数，并设置为包含新的起始地址，如果对齐成功。 如果 `align()` 不成功，则不修改此参数。
 
-`Space` 总空间提供给`align()`可用于创建对齐的存储。 此参数还是输出参数，并包含存储缓冲区中在减去对齐存储和任何关联系统开销后剩余的调整空间。
+*空间*总的可用空间`align()`可用于创建对齐的存储。 此参数还是输出参数，并包含存储缓冲区中在减去对齐存储和任何关联系统开销后剩余的调整空间。
 
 如果 `align()` 不成功，则不修改此参数。
 
 ### <a name="return-value"></a>返回值
 
-如果请求的对齐缓冲区无法放入可用空间，则为 null 指针；否则为 `Ptr` 的新值。
+请求的对齐的缓冲区无法放入可用空间; 如果是 null 指针否则为新的值*Ptr*。
 
 ### <a name="remarks"></a>备注
 
-通过修改的 `Ptr` 和 `Space` 参数，可以使用不同的 `align()` 值和 `Alignment` 值，对同一缓冲区重复调用 `Size`。 下面的代码片段演示 `align()` 的一种用法。
+已修改*Ptr*并*空间*参数，你可以调用`align()`上可能具有不同的值的同一缓冲区重复*对齐*和*大小*。 下面的代码片段演示 `align()` 的一种用法。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -189,13 +189,13 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>参数
 
-`Alloc` 用于创建对象的分配器。
+*分配*用于创建对象的分配器。
 
-`Args` 成为对象的零个或多个参数。
+*Args*成为对象的零个或多个参数。
 
 ### <a name="remarks"></a>备注
 
-此函数创建对象 `shared_ptr<Type>`，此对象为指向 `Type(Args...)` 的指针，通过 `Alloc` 分配和构造。
+该函数创建对象`shared_ptr<Type>`，指向`Type(Args...)`所分配和构造由*分配*。
 
 ## <a name="const_pointer_cast"></a>const_pointer_cast
 
@@ -209,15 +209,15 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由返回的共享指针控制的类型。
+*Ty*控制返回的类型共享指针。
 
-`Other` 由参数共享指针控制的类型。
+*其他*由自变量共享指针控制的类型。
 
-`Other` 自变量共享的指针。
+*其他*自变量共享的指针。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回空 shared_ptr 对象，如果`const_cast<Ty*>(sp.get())`返回一个 null 指针; 否则它将返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 拥有拥有的资源的对象`sp`。 表达式 `const_cast<Ty*>(sp.get())` 必须有效。
+模板函数返回空 shared_ptr 对象，如果`const_cast<Ty*>(sp.get())`返回一个空指针; 否则返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 对象，它拥有的资源拥有的`sp`。 表达式 `const_cast<Ty*>(sp.get())` 必须有效。
 
 ### <a name="example"></a>示例
 
@@ -258,12 +258,12 @@ void declare_no_pointers(
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|第一个字符的地址，该字符不再包含可跟踪的指针。|
-|`_Size`|块的大小，该块以不包含可跟踪的指针的 `ptr` 开始。|
+|*ptr*|第一个字符的地址，该字符不再包含可跟踪的指针。|
+|*大小) (_s*|开始块的大小*ptr* ，其中包含任何可跟踪的指针。|
 
 ### <a name="remarks"></a>备注
 
-函数告知任何垃圾回收器的地址范围`[ ptr, ptr + _Size)`不再包含可跟踪的指针。 （指向已分配存储的任何指针必须不被取消引用除非进行访问。）
+该函数通知任何垃圾回收器的地址范围`[ ptr, ptr + _Size)`不再包含可跟踪的指针。 （指向已分配存储的任何指针必须不取消引用，除非进行访问。）
 
 ## <a name="declare_reachable"></a>declare_reachable
 
@@ -275,15 +275,15 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向可访问的、 已分配的有效存储区域的指针。
+*ptr*指向可访问、 已分配的有效存储区域的指针。
 
 ### <a name="remarks"></a>备注
 
-如果 `ptr` 不为 null，则该函数将通知任何垃圾回收器以后可访问 `ptr`（指向有效的已分配存储）。
+如果*ptr*不为 null，该函数通知任何垃圾回收器的*ptr*是以后可访问 （指向有效的已分配存储）。
 
 ## <a name="default_delete"></a>default_delete
 
-删除使用 `operator new` 分配的对象。 适合与 `unique_ptr` 一起使用。
+删除与分配的对象**运算符 new**。 适合与 `unique_ptr` 一起使用。
 
 ```cpp
 struct default_delete {
@@ -296,13 +296,13 @@ struct default_delete {
 
 ### <a name="parameters"></a>参数
 
-`Ptr` 指向要删除的对象的指针。
+*Ptr*指向的对象中删除。
 
-其他要删除数组中的元素的类型。
+其他要删除的数组中元素的类型。
 
 ### <a name="remarks"></a>备注
 
-此模板类描述 `deleter`，它删除使用 `operator new` 分配的标量对象，适合与 `unique_ptr` 模板类一起使用。 它还具有显式专用化 `default_delete<Type[]>`。
+此模板类描述`deleter`删除与分配的标量对象**new 运算符**适合与模板类一起使用、 `unique_ptr`。 它还具有显式专用化 `default_delete<Type[]>`。
 
 ## <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast
 
@@ -316,15 +316,15 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由返回的共享指针控制的类型。
+*Ty*控制返回的类型共享指针。
 
-`Other` 由参数共享指针控制的类型。
+*其他*由自变量共享指针控制的类型。
 
-`sp` 自变量共享的指针。
+*sp*自变量共享的指针。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回空 shared_ptr 对象，如果`dynamic_cast<Ty*>(sp.get())`返回一个 null 指针; 否则它将返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 拥有拥有的资源的对象`sp`。 表达式 `dynamic_cast<Ty*>(sp.get())` 必须有效。
+模板函数返回空 shared_ptr 对象，如果`dynamic_cast<Ty*>(sp.get())`返回一个空指针; 否则返回[shared_ptr 类](../standard-library/shared-ptr-class.md)\<Ty > 对象，它拥有的资源拥有的*sp*. 表达式 `dynamic_cast<Ty*>(sp.get())` 必须有效。
 
 ### <a name="example"></a>示例
 
@@ -373,15 +373,15 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>参数
 
-`D` 删除器的类型。
+*D*删除器的类型。
 
-`Ty` 由共享指针控制的类型。
+*Ty*由共享指针控制的类型。
 
-`sp` 共享的指针。
+*sp*共享的指针。
 
 ### <a name="remarks"></a>备注
 
-该模板函数返回一个指向 `D` 类型的删除器的指针，该删除器属于 [shared_ptr 类](../standard-library/shared-ptr-class.md)对象 `sp`。 如果 `sp` 没有删除器，或如果其删除器的类型不是 `D`，则该函数将返回 0。
+模板函数返回一个指向类型的删除器*D*属于[shared_ptr 类](../standard-library/shared-ptr-class.md)对象*sp*。 如果*sp*没有删除器或如果其删除器的类型不是*D*函数将返回 0。
 
 ### <a name="example"></a>示例
 
@@ -438,7 +438,7 @@ pointer_safety get_pointer_safety();
 
 ### <a name="remarks"></a>备注
 
-该函数返回任何自动垃圾回收器所采用的指针安全的类型。
+该函数返回任何自动垃圾回收器所采用的指针安全类型。
 
 ## <a name="get_temporary_buffer"></a>get_temporary_buffer
 
@@ -451,7 +451,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>参数
 
-`count` 元素的最大数目请求为分配内存。
+*计数*元素的内存请求的最大数目是并将其分配。
 
 ### <a name="return-value"></a>返回值
 
@@ -510,7 +510,7 @@ make_shared(Types&&... _Args);
 
 |参数|描述|
 |---------------|-----------------|
-|`_Args`|零个或多个构造函数参数。 函数根据所提供的自变量来推断要调用的构造函数重载。|
+|*_Args*|零个或多个构造函数参数。 函数根据所提供的自变量来推断要调用的构造函数重载。|
 
 ### <a name="remarks"></a>备注
 
@@ -619,15 +619,15 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>参数
 
-`T` 对象的类型，`unique_ptr`将指向。
+*T*的对象类型的`unique_ptr`将指向。
 
-`Types` 指定的构造函数自变量类型`Args`。
+*类型*构造函数参数所指定的类型*Args*。
 
-`Args` 要传递给类型的对象的构造函数的自变量`T`。
+*Args*类型的对象的构造函数传递的参数*T*。
 
-`Elem` 类型的元素的数组`T`。
+*Elem*类型的元素的数组*T*。
 
-`Size` 要分配空间的新数组中的元素数。
+*大小*要分配空间的新数组中的元素数。
 
 ### <a name="remarks"></a>备注
 
@@ -645,7 +645,7 @@ make_unique(Types&&...) = delete;
 
 ## <a name="owner_less"></a>owner_less
 
-允许对共享指针和弱指针进行基于所有权的混合比较。 如果成员函数 `owner_before` 将左侧参数排在右侧参数前面，则返回 `true`。
+允许对共享指针和弱指针进行基于所有权的混合比较。 返回 **，则返回 true**如果左侧的参数排在右侧参数前面由成员函数`owner_before`。
 
 ```cpp
 template <class Type>
@@ -684,9 +684,9 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>参数
 
-`_left` 共享或弱指针。
+*_ 左*共享或弱指针。
 
-`right` 共享或弱指针。
+*右*共享或弱指针。
 
 ### <a name="remarks"></a>备注
 
@@ -759,11 +759,11 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由返回的共享指针控制的类型。
+*Ty*控制返回的类型共享指针。
 
-`Other` 由参数共享指针控制的类型。
+*其他*由自变量共享指针控制的类型。
 
-`Other` 自变量共享的指针。
+*其他*自变量共享的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -818,13 +818,13 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>参数
 
-`Ty` 由左侧共享/弱指针控制的类型。
+*Ty*由左侧共享/弱指针控制的类型。
 
-`Other` 由右侧共享/弱指针控制的类型。
+*其他*由右侧共享/弱指针控制的类型。
 
-`left` 左侧共享/弱指针。
+*左*左侧共享/弱指针。
 
-`right` 右侧共享/弱指针。
+*右*右侧共享/弱指针。
 
 ### <a name="remarks"></a>备注
 
@@ -895,11 +895,11 @@ void undeclare_no_pointers(
 
 ### <a name="remarks"></a>备注
 
-函数告知任何垃圾回收器的地址范围`[ptr, ptr + _Size)`现在可包含可跟踪的指针。
+该函数通知任何垃圾回收器的地址范围`[ptr, ptr + _Size)`现在可能包含可跟踪的指针。
 
 ## <a name="undeclare_reachable"></a>undeclare_reachable
 
-撤消的可访问性为指定的内存位置的声明。
+撤消指定的内存位置的可访问性的声明。
 
 ```cpp
 template <class Type>
@@ -910,11 +910,11 @@ Type *undeclare_reachable(Type* ptr);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要声明为不可访问的内存地址的指针。|
+|*ptr*|指向要声明为不可访问的内存地址的指针。|
 
 ### <a name="remarks"></a>备注
 
-如果`ptr`不`nullptr`，该函数会通知任意垃圾回收器的`ptr`将不再可以访问。 它将返回一个安全派生的指针，它比较等于`ptr`。
+如果*ptr*不是**nullptr**，该函数通知任何垃圾回收器的*ptr*不再可到达。 返回一个安全派生的指针，它比较等于*ptr*。
 
 ## <a name="uninitialized_copy"></a>uninitialized_copy
 
@@ -927,15 +927,15 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>参数
 
-`first` 寻址源范围中的第一个元素的输入迭代器。
+*第一个*发现源范围中的第一个元素的输入迭代器。
 
-`last` 寻址源范围中的最后一个元素的输入迭代器。
+*最后一个*发现源范围中的最后一个元素的输入迭代器。
 
-`dest` 寻址的目标范围内的第一个元素的向前迭代器。
+*dest*的目标范围内的第一个元素的向前迭代器。
 
 ### <a name="return-value"></a>返回值
 
-寻址超出目标范围的第一个位置，除非源范围为空的前向迭代器。
+发现超出目标范围的第一个位置，除非源范围为空的前向迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -1032,15 +1032,15 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>参数
 
-`first` 要复制的对象是指一个输入迭代器。
+*第一个*指的是要复制的对象的输入迭代器。
 
-`count` 有符号或无符号整数指定的类型的次数复制对象。
+*计数*一个签名或无符号整数类型指定的次数复制对象。
 
-`dest` 指的是新的副本从何处向前迭代器。
+*dest*指的是新的副本在哪里的向前迭代器。
 
 ### <a name="return-value"></a>返回值
 
-发现超出目标的第一个位置的向前迭代器。 如果源范围为空，迭代器地址`first`。
+发现超出目标的第一个位置的向前迭代器。 如果源范围为空，迭代*第一个*。
 
 ### <a name="remarks"></a>备注
 
@@ -1066,11 +1066,11 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>参数
 
-`first` 寻址要启动的目标范围内的第一个元素的向前迭代器。
+*第一个*是用于在要启动的目标范围内的第一个元素的向前迭代器。
 
-`last` 寻址要启动的目标范围内的最后一个元素的向前迭代器。
+*最后一个*发现是用于在要启动的目标范围内的最后一个元素的向前迭代器。
 
-`val` 要用于初始化目标范围的值。
+*val*要用于初始化目标范围的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1135,11 +1135,11 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>参数
 
-`first` 发现向前迭代器的第一个元素的目标范围内启动。
+*第一个*的向前迭代器的第一个元素的目标范围内启动。
 
-`count` 要初始化的元素数。
+*计数*要初始化的元素数。
 
-`val` 要用于初始化目标范围的值。
+*val*要用于初始化目标范围的值。
 
 ### <a name="remarks"></a>备注
 

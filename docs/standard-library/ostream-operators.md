@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e818c267f5fed9bd98b5c5998f4b0eac0c09f3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955928"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 
@@ -88,17 +88,17 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-`_Ch` 一个字符。
+*_Ch*字符。
 
-`_Elem` 元素类型。
+*_Elem*元素类型。
 
-`_Ostr` A`basic_ostream`对象。
+*_Ostr* A`basic_ostream`对象。
 
-`str` 一个字符串。
+*str*字符字符串。
 
-`_Tr` 字符特征。
+*_Tr*字符特征。
 
-`val` 类型
+*val*类型
 
 ### <a name="return-value"></a>返回值
 
@@ -117,7 +117,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-确定以 `str` 开始的序列的长度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 重复项在序列前，前提是 ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 该函数返回 `_Ostr`。
+确定长度 N = `traits_type::`[长度](../standard-library/char-traits-struct.md#length)(`str`) 的开始的序列*str*，并将其插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 重复项在序列前如果 (`_Ostr`。 [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 该函数将返回 *_Ostr*。
 
 模板函数
 
@@ -128,7 +128,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-插入元素 `_Ch`。 如果 1 < `_Ostr.width`，则该函数还将插入 `_Ostr.width` 的重复项 - 1 个填充字符。 如果 `_Ostr.flags & adjustfield != left`，则该重复项在序列前。 否则，重复项在该序列后。 它将返回 `_Ostr`。
+插入元素 `_Ch`。 如果 1 < `_Ostr.width`，则该函数还将插入 `_Ostr.width` 的重复项 - 1 个填充字符。 如果 `_Ostr.flags & adjustfield != left`，则该重复项在序列前。 否则，重复项在该序列后。 它将返回 *_Ostr*。
 
 模板函数
 
@@ -148,7 +148,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-通过调用 `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) 将以 `str` 开头的序列的每个元素 `_Ch` 转换为 `Elem` 类型的对象除外。
+只不过每个元素 *_Ch*的开头的序列*str*转换为类型的对象`Elem`通过调用`_Ostr.`[放](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[扩大](../standard-library/basic-ios-class.md#widen)(`_Ch`))。
 
 模板函数
 
@@ -168,7 +168,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-通过调用 `_Ostr.put`( `_Ostr.widen`( `_Ch`)) 将 `_Ch` 转换为 `Elem` 类型的对象除外。
+只不过 *_Ch*转换为类型的对象`Elem`通过调用`_Ostr.put`( `_Ostr.widen`( `_Ch`))。
 
 模板函数
 
@@ -208,7 +208,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-（在插入 `_Ch` 之前，无需将其加宽。）
+(它没有以扩大 *_Ch*之前将其插入。)
 
 模板函数
 
@@ -219,7 +219,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-返回 `_Ostr` << ( `const char *`) `str`。
+返回`_Ostr`<< (`const char *`) `str`。
 
 模板函数
 
@@ -230,7 +230,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-返回 `_Ostr` << ( `char`) `_Ch`。
+返回`_Ostr`<< (`char`) `_Ch`。
 
 模板函数：
 
@@ -241,7 +241,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-返回 `_Ostr` << ( `const char *`) `str`。
+返回`_Ostr`<< (`const char *`) `str`。
 
 模板函数：
 
@@ -252,7 +252,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-返回 `_Ostr` << ( `char`) `_Ch`。
+返回`_Ostr`<< (`char`) `_Ch`。
 
 模板函数：
 

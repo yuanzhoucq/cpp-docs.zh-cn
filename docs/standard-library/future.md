@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954013"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -36,7 +36,7 @@ ms.locfileid: "33847190"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 通过使用编译的代码中 **/clr**，阻止此标头。
+> 在使用已编译的代码 **/clr**，禁止使用此标头。
 
 异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。
 
@@ -48,7 +48,7 @@ ms.locfileid: "33847190"
 
 模板函数 `async` 以及模板类 `promise` 和 `packaged_task` 是异步提供程序。 模板类 `future` 和 `shared_future` 描述异步返回对象。
 
-`promise`、`future` 和 `shared_future` 每个模板类都具有一个类型 `void` 的专用化和一个用于按引用存储和检索值的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
+每个模板类`promise`， `future`，并`shared_future`有类型专用化**void**和用于存储和检索一个值，通过引用的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
 
 除保留后向兼容性的情况外，模板类 `future` 和 `shared_future` 从不会在其析构函数中阻塞：不同于其他所有 future，对于附加到以 `std::async` 开始的任务的 `future`（或最后一个 `shared_future`），如果任务尚未完成，则析构函数会阻塞；即，如果此线程尚未调用 `.get()` 或 `.wait()` 且任务仍在运行，则此析构函数会阻塞。 如下可用性注释已添加到草案标准中 `std::async` 的描述中：“[注意：如果将从 std::async 获取的 future 移出本地范围外，则使用此 future 的其他代码必须意识到此 future 的析构函数可能阻塞，直到共享状态变为准备就绪。—尾注]”在其他所有情况下，需要使用 `future` 和 `shared_future` 析构函数，且需保证其永不阻塞。
 
@@ -83,7 +83,7 @@ ms.locfileid: "33847190"
 
 ### <a name="enumerations"></a>枚举
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|

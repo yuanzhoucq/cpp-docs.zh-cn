@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959279"
 ---
 # <a name="removeconst-class"></a>remove_const 类
 
@@ -42,11 +42,11 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`remove_const<T>` 的实例保留修改后的类型，当 `T1` 为 `T` 形式时，此类型为 `const T1`，否则为 `T`。
+实例`remove_const<T>`包含修改类型，即`T1`时*T*的形式`const T1`; 否则为*T*。
 
 ## <a name="example"></a>示例
 

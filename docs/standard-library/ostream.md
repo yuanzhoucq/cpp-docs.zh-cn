@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7b8bf3015879643728358258cfe4a67536b3ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c84a8fd6b3aacbedf9d624fc750f98da4531e9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957930"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -40,8 +40,8 @@ ms.locfileid: "33863782"
 
 |类型名称|描述|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|通过专用于 `char` 的 `basic_ostream` 和专用于 `char` 的 `char_traits` 创建类型。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|通过专用于 `wchar_t` 的 `basic_ostream` 和专用于 `wchar_t` 的 `char_traits` 创建类型。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|创建从类型`basic_ostream`专用于**char**并`char_traits`专用于**char**。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|创建从类型`basic_ostream`专用于**wchar_t**并`char_traits`专用于**wchar_t**。|
 
 ### <a name="manipulators"></a>操控器
 

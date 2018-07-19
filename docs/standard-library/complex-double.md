@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d442e6b62a7e18a3b6025633ae5f12dde7915f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955424"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-描述一个对象，用于存储这两种类型的对象的有序的对 **双 * * *，* 首先表示复数与第二个实部表示复数虚部。
+描述一个对象，用于存储这两种类型的对象的有序的对 **双 * * *，* 首先表示第二个复数的实部表示虚数部分。
 
 ## <a name="syntax"></a>语法
 
@@ -46,11 +46,11 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`RealVal` 类型的值**double**正在构造的复数的实部。
+*RealVal*类型的值**double**正在构造的复数的实部。
 
-`ImagVal` 类型的值**double**正在构造的复数的虚部。
+*ImagVal*类型的值**double**正在构造的复数虚部。
 
-`complexNum` 类型的复数**float**或类型的`long double`其实部和虚部用于初始化类型的复数**double**正在构造。
+*complexNum*类型的复数**float**或类型的**长双精度型**其实部和虚部用于初始化类型的复数**双**正在构造。
 
 ## <a name="return-value"></a>返回值
 
@@ -58,7 +58,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ## <a name="remarks"></a>备注
 
-complex 模板类显式专用化为 **double** 类型的 complex 类仅在它所定义的构造函数中与模板类不同。 从 **float** 到 **double** 类型的转换可以是隐式的，但从 `long double` 到 **double** 的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
+complex 模板类显式专用化为 **double** 类型的 complex 类仅在它所定义的构造函数中与模板类不同。 从转换**float**到**double**可以是隐式的但从转换**长双精度型**到**double**必须是**显式**。 使用**显式**转换可排除使用赋值语法启动类型转换。
 
 有关 `complex` 模板类的详细信息，请参阅 [complex 类](../standard-library/complex-class.md)。 有关 `complex` 模板类的成员列表，请参阅。
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952992"
 ---
 # <a name="identity-structure"></a>identity 结构
 
@@ -40,13 +40,13 @@ struct identity {
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要识别的值。|
+|*left*|要识别的值。|
 
 ## <a name="remarks"></a>备注
 
 此类包含公共类型定义 `type`，其与模板参数 Type 相同。 它与模板函数 [forward](../standard-library/utility-functions.md#forward) 结合使用，从而确保函数参数具有所需的类型。
 
-为与旧版代码兼容，此类还定义了 identity 函数 `operator()`，该函数会返回其参数 `left`。
+为了与较旧的代码兼容，该类还定义了 identity 函数`operator()`这会返回其自变量*左*。
 
 ## <a name="requirements"></a>要求
 

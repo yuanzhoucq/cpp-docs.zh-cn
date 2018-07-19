@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954807"
 ---
 # <a name="moneyput-class"></a>money_put 类
 
@@ -47,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 在程序内所使用的区域设置中的字符进行编码的类型。
+*CharType*在程序内使用的区域设置的字符进行编码的类型。
 
-`OutputIterator` 货币放置的函数写入其输出的迭代器的类型。
+*OutputIterator*写入其输出到供货币放置函数的迭代器的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -117,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-`next` 寻址插入的字符串的第一个元素的迭代器。
+*下一步*发现插入的字符串的第一个元素的迭代器。
 
-`_Intl` 一个布尔值，该值指示序列中预期的货币符号的类型： **true**如果国际， **false**如果国内。
+*_Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
 
-`_Iosbase` 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需
+*_Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
 
-`_Fill` 一个字符间距时使用。
+*_Fill*出现用于调整间距的字符。
 
-`val` 要转换的字符串对象。
+*val*要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -133,9 +133,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数生成以 `next` 开始的连续元素，以便从 [string_type](#string_type) 对象 `val` 生成货币输出字段。 控制的序列`val`必须以一个或多个十进制数字，（可选） 前面加负号 （-），它表示量开头。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
+第一个受保护的虚拟成员函数生成有序元素*下一步*生成货币输出字段从[string_type](#string_type)对象*val*。 控制的序列*val*必须以与一个或多个十进制数字，可以后跟减号 （-），以表示数额。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
 
-第二个受保护的虚拟成员函数的行为与第一个相同，只不过它实际上首先将 `val` 转换为十进制数字序列（数字前可带有负号），然后按上述方式转换该序列。
+第二个受保护的虚拟成员函数的行为与第一个相同只不过它实际上首先将*val*到序列中的十进制数，可以后跟一个减号，然后将转换该序列作为更高版本。
 
 货币输出字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class) fac 决定，而后者又由（有效）调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -195,11 +195,11 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -234,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-`next` 寻址插入的字符串的第一个元素的迭代器。
+*下一步*发现插入的字符串的第一个元素的迭代器。
 
-`_Intl` 一个布尔值，该值指示序列中预期的货币符号的类型： **true**如果国际， **false**如果国内。
+*_Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
 
-`_Iosbase` 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需
+*_Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
 
-`_Fill` 一个字符间距时使用。
+*_Fill*出现用于调整间距的字符。
 
-`val` 要转换的字符串对象。
+*val*要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -286,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a>  money_put::string_type
 
-一种类型，此类型描述包含 **CharType** 类型字符的字符串。
+一种类型，此类型描述包含 `CharType` 类型字符的字符串。
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

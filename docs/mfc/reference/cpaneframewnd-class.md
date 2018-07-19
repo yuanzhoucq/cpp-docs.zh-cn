@@ -1,5 +1,5 @@
 ---
-title: CPaneFrameWnd 类 |Microsoft 文档
+title: CPaneFrameWnd 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079689"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854117"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -240,16 +240,16 @@ class CPaneFrameWnd : public CWnd
   
 |name|描述|  
 |----------|-----------------|  
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|指定是否注册具有 `CS_SAVEBITS` 类样式的窗口类。|  
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|指定是否将窗口类注册 CS_SAVEBITS 类样式。|  
   
 ## <a name="remarks"></a>备注  
  当窗格从停靠状态切换到浮动状态时，框架会自动创建 `CPaneFrameWnd` 对象。  
   
  可使用其可见内容（立即停靠）或拖动矩形（标准停靠）来拖动微型框架窗口。 微型框架的容器窗格的停靠模式确定微型框架的拖动行为。 有关详细信息，请参阅[cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)。  
   
- 微型框架窗口根据包含的窗格样式在标题上显示按钮。 如果可以关闭窗格 ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed))，它将显示关闭按钮。 如果窗格具有 `AFX_CBRS_AUTO_ROLLUP` 样式，它将显示指针。  
+ 微型框架窗口根据包含的窗格样式在标题上显示按钮。 如果可以关闭窗格 ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed))，它将显示关闭按钮。 如果窗格具有 AFX_CBRS_AUTO_ROLLUP 样式，它将显示指针。  
   
- 如果从 `CPaneFrameWnd` 派生类，则必须告诉框架如何创建类。 通过重写创建类[cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)，或设置`CPane::m_pMiniFrameRTC`成员使其指向为您的类的运行时类信息。  
+ 如果从 `CPaneFrameWnd` 派生类，则必须告诉框架如何创建类。 通过重写创建类[cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)，或设置`CPane::m_pMiniFrameRTC`成员使其指向您的类的运行时类信息。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -285,13 +285,13 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
   
 ### <a name="parameters"></a>参数  
  [in]*pWnd*  
- 要添加或删除的窗格。  
+ 若要添加或删除窗格。  
   
- [in]*bAdd*  
- 如果非零，将窗格添加。 如果为 0，则删除窗格。  
+ [in]*b 将*  
+ 如果非零，则添加窗格。 如果为 0，则删除窗格。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则非零否则为 0。  
+ 如果此方法已成功，则非零值否则为 0。  
   
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  调整微型框架窗口的布局。  
@@ -310,7 +310,7 @@ virtual void AdjustPaneFrames();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize  
- 计算袖珍框架窗口边框的大小。  
+ 计算微型框窗口的边框的大小。  
   
 ```  
 virtual void CalcBorderSize(CRect& rectBorderSize) const;  
@@ -318,10 +318,10 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
   
 ### <a name="parameters"></a>参数  
  [out]*rectBorderSize*  
- 包含的大小，以像素为单位的袖珍框架窗口的边框。  
+ 包含以像素为单位的微型框窗口边框的大小。  
   
 ### <a name="remarks"></a>备注  
- 由框架计算袖珍框架窗口边框的大小调用此方法。 返回的大小取决于是否袖珍框架窗口包含一个工具栏或[CDockablePane](../../mfc/reference/cdockablepane-class.md)。  
+ 若要计算的袖珍框架窗口的边框的大小的框架调用此方法。 返回的大小取决于是否袖珍框架窗口包含一个工具栏或[CDockablePane](../../mfc/reference/cdockablepane-class.md)。  
   
 ##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  计算停靠窗口的预期矩形。  
@@ -337,7 +337,7 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="parameters"></a>参数  
  [in]*pWndToDock*  
- 指向停靠窗口的指针。  
+ 指向窗口停靠的指针。  
   
  [in]*ptMouse*  
  鼠标位置。  
@@ -346,13 +346,13 @@ virtual void CalcExpectedDockedRect(
  计算的矩形。  
   
  [out]*bDrawTab*  
- 如果`TRUE`，绘制选项卡。如果`FALSE`，不绘制选项卡。  
+ 如果为 TRUE，绘制选项卡。如果为 FALSE，则不会绘制一个选项卡。  
   
  [out]*ppTargetBar*  
- 指向目标窗格中的指针。  
+ 指向目标窗格的指针。  
   
 ### <a name="remarks"></a>备注  
- 此方法计算窗口将占用如果用户将窗口拖到所指定的点的矩形*ptMouse*和存在停靠。  
+ 此方法计算一个窗口，如果用户将窗口拖到由指定的点会占用的矩形*ptMouse*和那里停靠。  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  确定是否可将当前窗格停靠到另一个窗格或框架窗口。  
@@ -362,7 +362,7 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果窗格可以停靠到另一个窗格或框架窗口;，否则为`FALSE`。  
+ 可将窗格停靠到另一个窗格或框架窗口; 如果为 TRUE否则为 FALSE。  
   
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  确定是否可将微型框架窗口停靠到窗格。  
@@ -373,10 +373,10 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
   
 ### <a name="parameters"></a>参数  
  [in]*pDockingBar*  
- 窗格。  
+ 一个窗格。  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果微型框架可以停靠到*pDockingBar*; 否则为 0。  
+ 如果微型框架可停靠到非零*pDockingBar*; 否则为 0。  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -395,7 +395,7 @@ virtual void ConvertToTabbedDocument();
 ```  
   
 ##  <a name="create"></a>  CPaneFrameWnd::Create  
- 创建袖珍框架窗口，并将其附加到[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)对象。  
+ 创建微型框窗口，并将其附加到[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)对象。  
   
 ```  
 virtual BOOL Create(
@@ -408,28 +408,28 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  [in]*lpszWindowName*  
- 指定要在袖珍框架窗口中显示的文本。  
+ 指定要在袖珍框架窗口上显示的文本。  
   
  [in]*dwStyle*  
- 指定的窗口样式。 有关详细信息，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+ 指定的窗口样式。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
  [in]*rect*  
  指定的初始大小和袖珍框架窗口的位置。  
   
  [in][out]*pParentWnd*  
- 指定袖珍框架窗口的父框架。 此值不能`NULL`。  
+ 指定与父框架的微型框窗口。 此值不能为 NULL。  
   
  [in][out]*pContext*  
  指定用户定义的上下文。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果已成功; 创建窗口否则为`FALSE`。  
+ 如果该窗口已创建的成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 在两个步骤中创建袖珍框架窗口。 首先，框架会创建`CPaneFrameWnd`对象。 其次，它调用`Create`若要创建 Windows 袖珍框架窗口，然后将其附加到`CPaneFrameWnd`对象。  
+ 在两个步骤中将创建一个微型框窗口。 首先，框架将创建`CPaneFrameWnd`对象。 其次，它将调用`Create`若要创建 Windows 微型框窗口，并将其附加到`CPaneFrameWnd`对象。  
   
 ##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
- 创建袖珍框架窗口，并将其附加到[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)对象。  
+ 创建微型框窗口，并将其附加到[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)对象。  
   
 ```  
 virtual BOOL CreateEx(
@@ -446,25 +446,25 @@ virtual BOOL CreateEx(
  指定扩展的窗口样式。 有关详细信息，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
  [in]*lpszWindowName*  
- 指定要在袖珍框架窗口中显示的文本。  
+ 指定要在袖珍框架窗口上显示的文本。  
   
  [in]*dwStyle*  
- 指定的窗口样式。 有关详细信息，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+ 指定的窗口样式。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
  [in]*rect*  
  指定的初始大小和袖珍框架窗口的位置。  
   
  [in][out]*pParentWnd*  
- 指定袖珍框架窗口的父框架。 此值不能`NULL`。  
+ 指定与父框架的微型框窗口。 此值不能为 NULL。  
   
  [in][out]*pContext*  
  指定用户定义的上下文。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果已成功; 创建窗口否则为`FALSE`。  
+ 如果该窗口已创建的成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 在两个步骤中创建袖珍框架窗口。 首先，框架会创建`CPaneFrameWnd`对象。 其次，它调用`Create`若要创建 Windows 袖珍框架窗口，然后将其附加到`CPaneFrameWnd`对象。  
+ 在两个步骤中将创建一个微型框窗口。 首先，框架将创建`CPaneFrameWnd`对象。 其次，它将调用`Create`若要创建 Windows 微型框窗口，并将其附加到`CPaneFrameWnd`对象。  
   
 ##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  停靠窗格。  
@@ -475,10 +475,10 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>参数  
  [out]*bWasDocked*  
- `TRUE` 如果已停靠窗格;，否则为`FALSE`。  
+ 如果已停靠窗格; 则为 TRUE否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
- 如果该操作成功，`CDockablePane`窗格已停靠到; 否则为`NULL`。  
+ 如果操作成功，`CDockablePane`窗格是停靠到; 否则为 NULL。  
   
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  在浮动窗格的全局列表中查找具有指定控件 ID 的窗格。  
@@ -489,10 +489,10 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
   
 ### <a name="parameters"></a>参数  
  [in]*nID*  
- 表示要查找的窗格中的控件 ID。  
+ 表示要查找窗格的控件 ID。  
   
 ### <a name="return-value"></a>返回值  
- 指定的控件 id 中; 窗格否则为`NULL`，如果没有窗格具有指定的控件 id。  
+ 具有指定的控件 ID; 窗格否则为 NULL，如果没有窗格会显示指定的控件 id。  
   
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
  查找包含指定的点的微型框架窗口。  
@@ -510,16 +510,16 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
  屏幕坐标中的点。  
   
  [in]*nSensitivity*  
- 通过此大小增加微型框架窗口的搜索的区域。 微型框架窗口满足搜索条件，如果给的定点落在增加的区域。  
+ 通过此大小增加微型框架窗口的搜索区域。 如果给的定点落在更高的区域，微型框架窗口将满足搜索条件。  
   
  [in]*pFrameToExclude*  
  指定要从搜索中排除的微型框架窗口。  
   
  [in]*bFloatMultiOnly*  
- 如果`TRUE`，仅搜索微型框架窗口具有`CBRS_FLOAT_MULTI`样式。 如果`FALSE`，搜索所有微型框架窗口。  
+ 如果为 TRUE，仅搜索已 CBRS_FLOAT_MULTI 样式的微型框架窗口。 如果为 FALSE，搜索所有微型框架窗口。  
   
 ### <a name="return-value"></a>返回值  
- 指向包含微型框架窗口的指针*pt*; 否则为`NULL`。  
+ 指向包含在微型框架窗口的指针*pt*; 否则为 NULL。  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  返回微型框架窗口标题的高度。  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  以像素为单位的微型框架窗口的高度。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以确定微型框架窗口的高度。 默认情况下，高度设置为`SM_CYSMCAPTION`。 有关详细信息，请参阅[GetSystemMetrics 函数](http://msdn.microsoft.com/library/windows/desktop/ms724385)。  
+ 调用此方法来确定微型框架窗口的高度。 默认情况下，高度设置为 SM_CYSMCAPTION。 有关详细信息，请参阅[GetSystemMetrics 函数](http://msdn.microsoft.com/library/windows/desktop/ms724385)。  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  计算微型框架窗口标题的边框矩形。  
@@ -543,10 +543,10 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
   
 ### <a name="parameters"></a>参数  
  [out]*rectCaption*  
- 包含的大小和位置的微型框架窗口标题中，在屏幕坐标。  
+ 包含的大小和屏幕坐标中的微型框架窗口标题的位置。  
   
 ### <a name="remarks"></a>备注  
- 由框架计算微型框架窗口标题的边框调用此方法。  
+ 若要计算微型框架窗口标题的边框的框架调用此方法。  
   
 ##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText  
  返回标题文本。  
@@ -556,10 +556,10 @@ virtual CString GetCaptionText();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 微型框架窗口标题文本。  
+ 微型框架窗口的标题文本。  
   
 ### <a name="remarks"></a>备注  
- 显示的标题文本时，将由框架调用此方法。  
+ 显示的标题文本时，由框架调用此方法。  
   
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager  
 
@@ -582,11 +582,11 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>返回值  
  停靠模式。 以下值之一：  
   
-- `DT_STANDARD`  
+- DT_STANDARD  
   
-- `DT_IMMEDIATE`  
+- DT_IMMEDIATE  
   
-- `DT_SMART`  
+- DT_SMART  
   
 ##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  返回包含在微型框架窗口中的第一个可见窗格。  
@@ -596,7 +596,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 第一个窗格在微型框架窗口中，或`NULL`如果微型框架窗口不包含任何窗格。  
+ 中的微型框架窗口中或如果微型框架窗口不包含任何窗格，则为 NULL 的第一个窗格。  
   
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
@@ -617,7 +617,7 @@ virtual CWnd* GetPane() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 在最小化框架中，包含的窗格或`NULL`如果微型框架窗口不包含任何窗格。  
+ 如果微型框架窗口不包含任何窗格包含在微型框架或为空的窗格。  
   
 ### <a name="remarks"></a>备注  
   
@@ -629,7 +629,7 @@ virtual int GetPaneCount() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 微型框架窗口中的窗格数。 此值可为零。  
+ 微型框架窗口中的窗格数。 此值可以为零。  
   
 ### <a name="remarks"></a>备注  
   
@@ -692,24 +692,24 @@ virtual LRESULT HitTest(
  要测试的点。  
   
  [in]*bDetectCaption*  
- 如果`TRUE`，检查对标题的点。 如果`FALSE`，忽略标题。  
+ 如果为 TRUE，则检查针对标题的点。 如果为 FALSE，则忽略标题。  
   
 ### <a name="return-value"></a>返回值  
  以下值之一：  
   
 |“值”|含义|  
 |-----------|-------------|  
-|`HTNOWHERE`|该点则微型框架窗口外。|  
-|`HTCLIENT`|该点位于工作区。|  
-|`HTCAPTION`|该点则在标题上。|  
-|`HTTOP`|点正处于顶部。|  
-|`HTTOPLEFT`|在点位于左上角。|  
-|`HTTOPRIGHT`|点是右上角。|  
-|`HTLEFT`|在点位于左侧。|  
-|`HTRIGHT`|该点位于右侧。|  
-|`HTBOTTOM`|点正处于底部。|  
-|`HTBOTTOMLEFT`|该点则在左下角。|  
-|`HTBOTTOMRIGHT`|该点则右下方。|  
+|HTNOWHERE|关键是微型框架窗口外。|  
+|HTCLIENT|关键是工作区中。|  
+|HTCAPTION|关键是在标题上。|  
+|HTTOP|点位于顶部。|  
+|HTTOPLEFT|在点位于左上角。|  
+|HTTOPRIGHT|在右上角点。|  
+|HTLEFT|在点位于左侧。|  
+|HTRIGHT|点位于右侧。|  
+|HTBOTTOM|点位于底部。|  
+|HTBOTTOMLEFT|在左下角点。|  
+|HTBOTTOMRIGHT|在点位于靠下右对齐。|  
   
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
@@ -741,12 +741,12 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果必须向; 下滚微型框架窗口否则为`FALSE`。  
+ 如果必须向; 下滚微型框架窗口，则返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 要确定是否应下滚微型框架窗口的框架调用此方法。 如果它包含至少一个窗格，它汇总/下滚功能为微型框架窗口启用`AFX_CBRS_AUTO_ROLLUP`标志。 创建一个窗格时设置此标志。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
+ 若要确定是否应下滚微型框架窗口的框架调用此方法。 如果它包含至少一个 AFX_CBRS_AUTO_ROLLUP 标志的窗格中，将微型框架窗口启用下滚汇总/功能。 创建一个窗格时，设置此标志。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- 默认情况下，框架检查鼠标指针是否位于微型框架窗口边界矩形，以确定是否需要向下滚动窗口。 你可以重写此行为在派生类中。  
+ 默认情况下，框架将检查鼠标指针是否位于微型框架窗口边界矩形来确定窗口是否具有要下滚。 您可以重写此行为在派生类中。  
   
 ##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
  确定是否应上滚微型框架窗口。  
@@ -756,12 +756,12 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果必须汇总微型框架窗口;否则为`FALSE`。  
+ 如果必须汇总微型框架窗口; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 由框架确定微型框架窗口是否应进行汇总调用此方法。 如果它包含至少一个窗格，它汇总/下滚功能为微型框架窗口启用`AFX_CBRS_AUTO_ROLLUP`标志。 创建一个窗格时设置此标志。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
+ 确定是否应汇总微型框架窗口的框架调用此方法。 如果它包含至少一个 AFX_CBRS_AUTO_ROLLUP 标志的窗格中，将微型框架窗口启用下滚汇总/功能。 创建一个窗格时，设置此标志。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- 默认情况下，框架检查鼠标指针是否位于微型框架窗口边界矩形，以确定窗口是否具有要进行汇总。 你可以重写此行为在派生类中。  
+ 默认情况下，框架检查鼠标指针是否位于微型框架窗口边界矩形来确定窗口是否具有要进行汇总。 您可以重写此行为在派生类中。  
   
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  停止停靠计时器。  
@@ -784,20 +784,20 @@ virtual BOOL LoadState(
  配置文件名称。  
   
  [in]*uiID*  
- 窗格中的 id。  
+ 窗格 id。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则加载窗格状态否则为`FALSE`。  
+ 如果窗格状态加载成功，则为 TRUE否则为 FALSE。  
   
 ##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
- 指定是否以注册窗口类具有`CS_SAVEBITS`类样式。  
+ 指定是否注册具有 CS_SAVEBITS 类样式的窗口类。  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此静态成员设置为`TRUE`以注册微型框架窗口类具有`CS_SAVEBITS`样式。 这可能有助于减少闪烁当用户将拖动微型框架窗口。  
+ 设置为 true，则具有 CS_SAVEBITS 样式的微型框架窗口类注册到此静态成员。 这可能有助于减少闪烁时在用户拖动微型框架窗口。  
   
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  确定停靠是否可能。  
@@ -807,7 +807,7 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果停靠是可行的;否则为`FALSE`。  
+ 停靠; 如果为 TRUE否则为 FALSE。  
   
 ##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  确定是否应上滚或下滚微型框架窗口。  
@@ -817,9 +817,9 @@ virtual void OnCheckRollState();
 ```  
   
 ### <a name="remarks"></a>备注  
- 要确定是否应向上或向下滚微型框架窗口的框架调用此方法。  
+ 若要确定是否应向上或向下滚微型框架窗口的框架调用此方法。  
   
- 默认情况下，框架将调用[CPaneFrameWnd::IsRollUp](#isrollup)和[CPaneFrameWnd::IsRollDown](#isrolldown)刚拉伸或还原微型框架窗口。 你可以重写此方法在派生类以使用不同的可视化效果。  
+ 默认情况下，框架将调用[CPaneFrameWnd::IsRollUp](#isrollup)并[CPaneFrameWnd::IsRollDown](#isrolldown)只拉伸或还原微型框架窗口。 您可以重写此方法在派生类以使用不同的可视化效果中。  
   
 ##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
  将微型框架窗口停靠在其最新的位置。  
@@ -840,7 +840,7 @@ virtual void OnDrawBorder(CDC* pDC);
  用于绘制边框的设备上下文。  
   
 ### <a name="remarks"></a>备注  
- 若要绘制的微型框架窗口边框的框架调用此方法。  
+ 若要绘制微型框架窗口的边框的框架调用此方法。  
   
 ##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
  停止汇总计时器。  
@@ -860,20 +860,20 @@ virtual void OnMovePane(
   
 ### <a name="parameters"></a>参数  
  [in]*pBar*  
- 指向 （忽略） 的窗格的指针。  
+ 指向一个窗格 （忽略） 的指针。  
   
  [in]*ptOffset*  
- 用于将窗格移动偏移量。  
+ 要将窗格移动偏移量。  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
- 调整微型框架窗口中的窗格的布局。  
+ 调整微型框架窗口中窗格的布局。  
   
 ```  
 virtual void OnPaneRecalcLayout();
 ```  
   
 ### <a name="remarks"></a>备注  
- 它必须调整窗格在微型框架窗口内的布局时，框架将调用此方法。  
+ 它必须调整微型框架窗口中窗格的布局时，框架将调用此方法。  
   
  默认情况下，窗格中定位来覆盖微型框架窗口的完整的客户端区域。  
   
@@ -895,13 +895,13 @@ virtual void OnShowPane(
   
 ### <a name="parameters"></a>参数  
  [in]*pBar*  
- 正在窗格中显示或隐藏。  
+ 在窗格中显示或隐藏。  
   
  [in]*bShow*  
- `TRUE` 如果当前显示窗格中;`FALSE`如果窗格将会被隐藏。  
+ 所显示的窗格中; 如果为 TRUE如果要隐藏窗格，则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 显示或隐藏微型框架窗口的窗格中时，由框架调用。 默认实现不执行任何操作。  
+ 显示或隐藏窗格在微型框架窗口时由框架调用。 默认实现不执行任何操作。  
   
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
@@ -927,19 +927,19 @@ virtual CBasePane* PaneFromPoint(
   
 ### <a name="parameters"></a>参数  
  [in]*点*  
- 点的用户在屏幕坐标中单击。  
+ 点用户单击以屏幕坐标表示。  
   
  [in]*nSensitivity*  
  未使用此参数。  
   
  [in]*bCheckVisibility*  
- `TRUE` 若要指定应返回仅可见窗格的;否则为`FALSE`。  
+ 为 TRUE，则指定应返回仅可见窗格;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
- 用户单击，窗格或`NULL`如果在该位置不存在任何窗格。  
+ 窗格中，用户单击或如果该位置不存在任何窗格，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以获取包含给定的点的窗格。  
+ 调用此方法来获得一个窗格，其中包含给定的点。  
   
 ##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll  
  重绘所有微型框架窗口。  
@@ -949,7 +949,7 @@ static void RedrawAll();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法通过调用来更新所有微型框架窗口[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)每个窗口。  
+ 此方法通过调用来更新所有微型框架窗口[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)为每个窗口。  
   
 ##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes  
  由框架调用以删除非有效窗格。  
@@ -970,16 +970,16 @@ virtual void RemovePane(
   
 ### <a name="parameters"></a>参数  
  [in]*pWnd*  
- 指向删除窗格的指针。  
+ 指向要删除的窗格的指针。  
   
  [in]*bDestroy*  
- 指定到微型框架窗口进行什么操作。 如果*bDestroy*是`TRUE`，此方法将立即销毁微型框架窗口。 如果它是`FALSE`，此方法特定的延迟后销毁微型框架窗口。  
+ 指定到微型框架窗口的操作。 如果*bDestroy*为 TRUE 时，此方法将立即销毁微型框架窗口。 如果为 FALSE，则此方法在某些延迟之后销毁微型框架窗口。  
   
  [in]*bNoDelayedDestroy*  
- 如果`TRUE`、 延迟析构处于禁用状态。 如果`FALSE`、 延迟启用析构。  
+ 如果为 TRUE，则禁用延迟的析构。 如果为 FALSE，则启用延迟的析构。  
   
 ### <a name="remarks"></a>备注  
- 立即或在特定的延迟后，框架可以销毁微型框架窗口。 如果你想要延迟析构微型框架窗口，将传递`FALSE`中*bNoDelayedDestroy*参数。 框架处理时发生延迟的析构`AFX_WM_CHECKEMPTYMINIFRAME`消息。  
+ 立即或在某些延迟之后，该框架可以销毁微型框架窗口。 如果你想要延迟析构的微型框架窗口，将传递 FALSE *bNoDelayedDestroy*参数。 框架处理 AFX_WM_CHECKEMPTYMINIFRAME 消息时出现延迟的析构。  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  用一个窗格替换另一个窗格。  
@@ -995,7 +995,7 @@ virtual void ReplacePane(
  指向原始的窗格的指针。  
   
  [in]*pBarReplaceWith*  
- 指向替换原始窗格中的窗格的指针。  
+ 指向将替换原始窗格的窗格的指针。  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  将窗格的状态保存到注册表。  
@@ -1011,10 +1011,10 @@ virtual BOOL SaveState(
  配置文件名称。  
   
  [in]*uiID*  
- 窗格中的 id。  
+ 窗格 id。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则保存窗格状态否则为`FALSE`。  
+ 如果窗格状态已保存成功，则为 TRUE否则为 FALSE。  
   
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  设置标题按钮。  
@@ -1027,13 +1027,13 @@ virtual void SetCaptionButtons(DWORD dwButtons);
  [in]*dwButtons*  
  以下值的按位 OR 组合：  
   
-- `AFX_CAPTION_BTN_CLOSE`  
+- AFX_CAPTION_BTN_CLOSE  
   
-- `AFX_CAPTION_BTN_PIN`  
+- AFX_CAPTION_BTN_PIN  
   
-- `AFX_CAPTION_BTN_MENU`  
+- AFX_CAPTION_BTN_MENU  
   
-- `AFX_CAPTION_BTN_CUSTOMIZE`  
+- AFX_CAPTION_BTN_CUSTOMIZE  
   
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
@@ -1107,30 +1107,30 @@ virtual BOOL SetPreDockState(
  [in]*preDockState*  
  可能的值：  
   
-- `PDS_NOTHING`,  
+- PDS_NOTHING，  
   
-- `PDS_DOCK_REGULAR`,  
+- PDS_DOCK_REGULAR，  
   
-- `PDS_DOCK_TO_TAB`  
+- PDS_DOCK_TO_TAB  
   
  [in]*pBarToDock*  
- 指向要将停靠的窗格的指针。  
+ 指向要停靠的窗格的指针。  
   
  [in]*dockMethod*  
  停靠的方法。 （忽略此参数。）  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果微型框架窗口停靠;`FALSE`如果它停靠。  
+ 微型框架窗口停靠; 如果为 TRUE如果为 FALSE。  
   
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
- 调整微型框架窗口的大小，以便它等效于包含的窗格。  
+ 调整微型框架窗口的大小，使它等效于包含的窗格。  
   
 ```  
 virtual void SizeToContent();
 ```  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以调整为包含的窗格的大小微型框架窗口的大小。  
+ 调用此方法以调整微型框架窗口包含窗格的大小的大小。  
   
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  移走菜单。  
@@ -1144,7 +1144,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  指向一个菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+ 如果该方法成功，则为 TRUE否则为 FALSE。  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 
@@ -1174,6 +1174,6 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)

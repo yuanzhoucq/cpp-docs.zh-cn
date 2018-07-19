@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842994"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958460"
 ---
 # <a name="isassignable-class"></a>is_assignable 类
 
@@ -42,7 +42,7 @@ struct is_assignable;
 
 ## <a name="remarks"></a>备注
 
-未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 `From` 和 `To` 都必须是完整类型、`void` 或具有未知边界的数组。
+未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 这两`From`并`To`必须是完整类型**void**，或具有未知边界的数组。
 
 ## <a name="requirements"></a>要求
 

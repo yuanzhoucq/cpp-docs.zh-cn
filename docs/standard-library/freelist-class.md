@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954107"
 ---
 # <a name="freelist-class"></a>freelist 类
 
@@ -43,12 +43,12 @@ class freelist
 
 |参数|描述|
 |---------------|-----------------|
-|`Sz`|数组中要分配的元素数目。|
-|`Max`|max 类表示可存储在空闲列表中的元素的最大数量。 max 类可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|
+|*sz*|数组中要分配的元素数目。|
+|*最大值*|max 类表示可存储在空闲列表中的元素的最大数量。 max 类可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|
 
 ## <a name="remarks"></a>备注
 
-此模板类管理大小为 `Sz` 的内存块列表，列表的最大长度由传入 `Max` 中的 max 类确定。
+此模板类管理大小内存块的一系列*Sz*由中传递的 max 类的列表的最大长度*最大*。
 
 ### <a name="constructors"></a>构造函数
 
@@ -93,7 +93,7 @@ void *pop();
 
 ### <a name="remarks"></a>备注
 
-如果列表为空，则成员函数将返回 `NULL`。 否则，成员函数从列表中删除第一个内存块。
+如果列表为空，则成员函数返回 NULL。 否则，成员函数从列表中删除第一个内存块。
 
 ## <a name="push"></a>  freelist::push
 
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要添加到空闲列表的内存块的指针。|
+|*ptr*|指向要添加到空闲列表的内存块的指针。|
 
 ### <a name="return-value"></a>返回值
 
-如果 max 类的 `full` 函数返回 `false`，则为 `true`，否则 `push` 函数返回 `false`。
+**true**如果`full`max 类的函数将返回**false**; 否则为`push`函数返回**false**。
 
 ### <a name="remarks"></a>备注
 
-如果 max 类的 `full` 函数返回 `false`，则此成员函数将 `ptr` 指向的内存块添加到列表表头。
+如果`full`max 类的函数将返回**false**，此成员函数将指向的内存块添加*ptr*到了列表的开头。
 
 ## <a name="see-also"></a>请参阅
 

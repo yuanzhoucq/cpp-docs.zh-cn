@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855755"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959851"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 类
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据正态分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `double` 型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的整型值类型**double**如果未提供任何内容，普通分布根据分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-属性函数 `mean()` 和 `stddev()` 将分别返回存储的分布参数 `mean` 和 `stddev` 的值。
+属性函数`mean()`并`stddev()`返回存储的分布参数的值*意味着*并*stddev*分别。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -212,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *stddev* `stddev`分布参数。
 
-*参数*用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 

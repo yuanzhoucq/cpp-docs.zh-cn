@@ -1,5 +1,5 @@
 ---
-title: CMFCFilterChunkValueImpl 类 |Microsoft 文档
+title: CMFCFilterChunkValueImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,15 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040124"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852570"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
-这是一个类可简化区块和属性值对逻辑。  
+这是一个类，这样可以简化区块和属性值对逻辑。  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,32 +86,32 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |名称|描述|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::Clear](#clear)|清除 ChunkValue。|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|将此块复制到结构描述一个块的特征。|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|初始化此区块值从另一个值。|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|检索区块 GUID。|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|检索区块 PID (属性 ID)。|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|获取消息类型的分块。|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|将此文本块复制到块区的特征描述的结构。|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|初始化此区块的值从另一个值。|  
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|检索块区的 GUID。|  
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|检索块区 PID (属性 ID)。|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|获取消息的分块类型。|  
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|检索字符串值。|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|检索形式分配 propvariant 的值。|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|为已分配 propvariant 检索的值。|  
 |[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|返回一个非分配 （内部值） 值。|  
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|检查此属性的值是否为有效。|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|已重载。 通过为布尔值的键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|DWORD 的密钥设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Filetime 的密钥设置的属性。|  
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|检查此属性的值是否有效。|  
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|已重载。 将属性设置为布尔值的密钥。|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|通过指向 DWORD 键设置的属性。|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|将属性设置为 filetime 的密钥。|  
 |[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|通过为 int64 键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|通过给整型变量的键设置的属性|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|为长整型的密钥设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|通过成 SystemTime 键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|为 Unicode 字符串的密钥设置的属性。|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|将属性设置为 int。 按键|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|将属性设置为长整型的密钥。|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|将属性设置成 SystemTime 按键。|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|将属性设置为 Unicode 字符串的密钥。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|一个 helper 函数，设置块区的常见属性。|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|一个设置分块的通用属性的帮助器函数。|  
   
 ## <a name="remarks"></a>备注  
- 若要使用，你只需创建正确类型的 CMFCFilterChunkValueImpl 类  
+ 若要使用，您只需创建正确类型的 CMFCFilterChunkValueImpl 类  
   
  示例:  
   
@@ -159,7 +159,7 @@ virtual ~CMFCFilterChunkValueImpl();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
- 将此块复制到结构描述一个块的特征。  
+ 将此文本块复制到块区的特征描述的结构。  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -167,15 +167,15 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="parameters"></a>参数  
  *pStatChunk*  
- 指向目标值，描述在区块的特征的指针。  
+ 一个指向目标值，描述在块区的特征。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
- 初始化此区块值从另一个值。  
+ 初始化此区块的值从另一个值。  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
@@ -188,19 +188,19 @@ void CopyFrom (IFilterChunkValue* pValue);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
- 检索区块 GUID。  
+ 检索块区的 GUID。  
   
 ```  
 REFGUID GetChunkGUID() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对一个标识区块的 GUID 的引用。  
+ 对标识块的 GUID 的引用。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
- 检索区块 PID (属性 ID)。  
+ 检索块区 PID (属性 ID)。  
   
 ```  
 DWORD GetChunkPID() const;  
@@ -212,14 +212,14 @@ DWORD GetChunkPID() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
- 检索的块类型。  
+ 检索块区类型。  
   
 ```  
 CHUNKSTATE GetChunkType() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- CHUNKSTATE 枚举值，该值指定当前块是文本类型属性或值类型属性。  
+ CHUNKSTATE 枚举值，指定当前区块是文本类型的属性或值类型属性。  
   
 ### <a name="remarks"></a>备注  
   
@@ -231,12 +231,12 @@ CString &GetString();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 包含区块值的字符串。  
+ 包含块区值的字符串。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
- 检索形式分配 propvariant 的值。  
+ 为已分配 propvariant 检索的值。  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
@@ -244,10 +244,10 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="parameters"></a>参数  
  *ppPropVariant*  
- 在函数返回时，此参数会包含区块值。  
+ 当函数返回时，此参数包含块区值。  
   
 ### <a name="return-value"></a>返回值  
- 如果已成功分配 PROPVARIANT 并区块值已成功复制到，则为 S_OK *ppPropVariant*; 否则为错误代码。  
+ 如果已成功分配 PROPVARIANT 和区块值已成功复制到，则为 S_OK *ppPropVariant*; 否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
@@ -259,24 +259,24 @@ PROPVARIANT GetValueNoAlloc ();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回当前的区块值。  
+ 返回当前的块区值。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
- 检查此属性的值是否为有效。  
+ 检查此属性的值是否有效。  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果当前的区块值为有效，则为否则为`FALSE`。  
+ 如果当前的块区值有效，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
- 已重载。 通过为布尔值的键设置的属性。  
+ 已重载。 将属性设置为布尔值的密钥。  
   
 ```  
 HRESULT SetBoolValue(
@@ -304,30 +304,30 @@ HRESULT SetBoolValue(
  指定一个属性键。  
   
  *bVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
- 一个 helper 函数，设置块区的常见属性。  
+ 一个设置分块的通用属性的帮助器函数。  
   
 ```  
 HRESULT SetChunk(
@@ -344,27 +344,27 @@ HRESULT SetChunk(
  指定一个属性键。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
- DWORD 的密钥设置的属性。  
+ 将属性设置为 DWORD 按键。  
   
 ```  
 HRESULT SetDwordValue(
@@ -382,30 +382,30 @@ HRESULT SetDwordValue(
  指定一个属性键。  
   
  *dwVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- Filetime 的密钥设置的属性。  
+ 将属性设置为 filetime 的密钥。  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -423,25 +423,25 @@ HRESULT SetFileTimeValue(
  指定一个属性键。  
   
  *dtVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
@@ -464,30 +464,30 @@ HRESULT SetInt64Value(
  指定一个属性键。  
   
  *nVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
- 通过给整型变量的键设置属性  
+ 将属性设置为 int。 按键  
   
 ```  
 HRESULT SetIntValue(
@@ -505,30 +505,30 @@ HRESULT SetIntValue(
  指定一个属性键。  
   
  *nVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
- 为长整型的密钥设置的属性。  
+ 将属性设置为长整型的密钥。  
   
 ```  
 HRESULT SetLongValue(
@@ -546,30 +546,30 @@ HRESULT SetLongValue(
  指定一个属性键。  
   
  *lVal*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
- 通过成 SystemTime 键设置的属性。  
+ 将属性设置成 SystemTime 按键。  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -587,30 +587,30 @@ HRESULT SetSystemTimeValue(
  指定一个属性键。  
   
  *systemTime*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
- 为 Unicode 字符串的密钥设置的属性。  
+ 将属性设置为 Unicode 字符串的密钥。  
   
 ```  
 HRESULT SetTextValue(
@@ -628,25 +628,25 @@ HRESULT SetTextValue(
  指定一个属性键。  
   
  *pszValue*  
- 指定要设置的区块值。  
+ 指定要设置的块区值。  
   
  *chunkType*  
- 标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
+ 标志指示此块包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
   
  *locale*  
- 语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
+ 语言和子语言的文本块与相关联。 文档索引器使用区块区域设置执行正确的断字的文本。 如果区块是文本类型既不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
   
  *cwcLenSource*  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
+ 中从其派生当前文本块的源文本的字符长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系存在。  
   
  *cwcStartSource*  
- 从中派生的块区的源文本启动在源块区中的偏移量。  
+ 从中派生区块的源文本开始的源区块中偏移量。  
   
  *chunkBreakType*  
- 分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
+ 分页符将与当前的块区分开的上一个块区的类型。 从 CHUNK_BREAKTYPE 枚举的有效值。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为错误代码。  
+ 如果成功，则为 S_OK否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   

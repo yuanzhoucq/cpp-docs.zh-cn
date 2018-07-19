@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954885"
 ---
 # <a name="messages-class"></a>messages 类
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 在程序内所使用的区域设置中的字符进行编码的类型。
+*CharType*在程序内使用的区域设置的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-`_Catval` 要关闭的目录。
+*_Catval*要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-`_Catval` 要关闭的目录。
+*_Catval*要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将关闭消息目录 `_Catval`，该目录必须已通过对 [do_open](#do_open) 的早期调用处于打开状态。
+受保护的成员函数将关闭消息目录 *_Catval*，其必须具有到的早期调用打开[do_open](#do_open)。
 
 必须从以前打开的且未关闭的目录获取 *_Catval*。
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>参数
 
-`_Catval` 指定消息目录要搜索的标识值。
+*_Catval*标识值，该值指定要搜索的消息目录。
 
-`_Set` 第一个标识用于在消息目录中查找消息。
+*_ 设置*的第一个标识用于在消息目录中查找一条消息。
 
-`_Message` 第二个标识用于在消息目录中查找消息。
+*消息 （_m)* 第二个标识用于在消息目录中查找一条消息。
 
-`_Dfault` 要返回失败的字符串。
+*_Dfault*失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
-它在失败时返回 `_Dfault` 的副本。 否则，它返回指定的消息序列的副本。
+它将返回一份 *_Dfault*失败。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数会尝试从消息目录 `_Catval` 中获取消息序列。 执行此操作时，它可能会使用 `_Set`、`_Message` 和 `_Dfault`。
+受保护的成员函数尝试从消息目录中获取消息序列 *_Catval*。 它可能会利用 *_ 设置*，*消息 （_m)*，并 *_Dfault*中执行此操作。
 
 ### <a name="example"></a>示例
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>参数
 
-`_Catname` 要搜索的目录的名称。
+*_Catname*要搜索的目录的名称。
 
-`_Loc` 要搜索的目录中的区域设置。
+*_Loc*要搜索的目录中的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -198,7 +198,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数会尝试打开名称为 `_Catname` 的消息目录。 执行此操作时，它可能会使用区域设置 `_Loc`
+受保护的成员函数尝试打开消息目录的名称是 *_Catname*。 它可能会使用区域设置 *_Loc*中执行此操作
 
 返回值应用作稍后对 [close](#close) 调用时的自变量。
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>参数
 
-`_Catval` 指定消息目录要搜索的标识值。
+*_Catval*标识值，该值指定要搜索的消息目录。
 
-`_Set` 第一个标识用于在消息目录中查找消息。
+*_ 设置*的第一个标识用于在消息目录中查找一条消息。
 
-`_Message` 第二个标识用于在消息目录中查找消息。
+*消息 （_m)* 第二个标识用于在消息目录中查找一条消息。
 
-`_Dfault` 要返回失败的字符串。
+*_Dfault*失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
-它在失败时返回 `_Dfault` 的副本。 否则，它返回指定的消息序列的副本。
+它将返回一份 *_Dfault*失败。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
-`_Locname` 区域设置的名称。
+*_Locname*的区域设置名称。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>参数
 
-`_Catname` 要搜索的目录的名称。
+*_Catname*要搜索的目录的名称。
 
-`_Loc` 要搜索的目录中的区域设置。
+*_Loc*要搜索的目录中的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,7 +295,7 @@ catalog open(
 
 ## <a name="string_type"></a>messages::string_type
 
-一种类型，此类型描述包含 **CharType** 类型字符的 `basic_string` 类型字符串。
+一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845760"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959502"
 ---
 # <a name="indirectarray-class"></a>indirect_array 类
 
@@ -31,11 +31,11 @@ ms.locfileid: "33845760"
 
 ## <a name="remarks"></a>备注
 
-该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的 **va** 对象及 **valarray<size_t>** 类的 **xa** 对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。
+此类描述的对象将存储对对象的引用`va`类的[valarray](../standard-library/valarray-class.md)**\<类型 >**，对象及`xa`类的`valarray<size_t>`，它描述了要从选择的元素序列`valarray<Type>`对象。
 
-只可通过编写 **va[xa]** 形式的表达式来构造 **indirect_array\<Type>** 对象。 indirect_array 类的成员函数的行为方式类似于为 **valarray\<Type>** 定义的对应函数签名，只不过仅所选的元素的序列受到影响。
+在构造`indirect_array<Type>`只通过写入形式的表达式的对象`va[xa]`。 Indirect_array 类的成员函数，然后就像是为定义的对应函数签名`valarray<Type>`，只不过仅所选元素的序列受到影响。
 
-此序列由 **xa.**[size](../standard-library/valarray-class.md#size) 元素组成，其中元素 `I` 在 **va** 内成为索引 **xa**[ `I`]。
+序列组成**xa。**[大小](../standard-library/valarray-class.md#size)元素，其中元素`I`成为索引**xa**[ `I`] 内`va`。
 
 ## <a name="example"></a>示例:
 

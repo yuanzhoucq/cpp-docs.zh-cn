@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959467"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 类
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`RealType` 浮点结果类型，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认值为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -264,17 +264,17 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *firstW*权重范围中的第一个元素的输入迭代器。
 
-*间隔* [initializer_list](../cpp/initializers.md)具有分布区间。
+*时间间隔* [initializer_list](../cpp/initializers.md)具有分布区间。
 
-*计数*分布范围中的元素的数目。
+*计数*分布范围中的元素数。
 
 *xmin*分布范围中的最小值。
 
-*xmax*分布范围中的最大值。 必须大于 *xmin*。
+*xmax*分布范围中的最高值。 必须大于 *xmin*。
 
-*weightfunc*表示分布的概率函数的对象。 参数和返回值都必须可转换为 `double`。
+*weightfunc*表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
 
-*参数*用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-使用序列 [`firstI`，`lastI`) 上迭代器中的区间和以 `firstW` 开始的匹配权重序列来构造分布对象。
+对序列中构造分布对象与迭代器中的区间 [ `firstI`， `lastI`) 和的匹配权重序列开始*firstW*。
 
 初始值设定项列表构造函数
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-使用初始值设定项列表 `intervals` 中的区间和从函数 `weightfunc` 中生成的权重来构造分布对象。
+构造分布对象初始值设定项列表区间*间隔*并从该函数生成的权重*weightfunc*。
 
 定义为以下内容的构造函数
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-使用在 [`xmin,xmax`] 上均匀分布的 `count` 区间来构造分布对象，从而根据函数 `weightfunc` 分配每个区间权重，`weightfunc` 必须接受一个参数并包含一个返回值，两者都可转换为 `double`。 **前提条件：**`xmin < xmax`。
+构造分布对象*计数*上均匀分布的时间间隔 [ `xmin,xmax`]，分配每个区间权重根据函数*weightfunc*，并*weightfunc*必须接受一个参数并包含返回值，这两种都可以转换为`double`。 **前提条件：**`xmin < xmax`。
 
 定义为以下内容的构造函数
 
@@ -322,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-通过将 `parm` 用作存储的参数结构，构造分布对象。
+构造分布对象使用*parm*作为存储的参数结构。
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

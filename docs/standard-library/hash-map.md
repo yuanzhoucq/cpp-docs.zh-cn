@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959769"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> 此标头已废弃不用。 替代项是[ \<unordered_map >](unordered-map.md)。
+> 此标头已废弃不用。 替代方法是[ \<unordered_map >](unordered-map.md)。
 
 定义容器模板类 hash_map 和 hash_multimap 及其支持的模板。
 
@@ -51,7 +51,7 @@ ms.locfileid: "33850048"
 
 |类|描述|
 |-|-|
-|[hash_compare 类](hash-compare-class.md)|描述了一个对象，任何哈希关联容器（hash_map、hash_multimap、hash_set 或 hash_multiset）都可将该对象用作默认的 **Traits** 参数对象，以对其所包含的元素进行排序和哈希处理。|
+|[hash_compare 类](hash-compare-class.md)|描述一个对象，可以使用的哈希关联容器 — hash_map、 hash_multimap、 hash_set 或 hash_multiset — 默认情况下`Traits`参数对象以进行排序和哈希它们所包含的元素。|
 |[value_compare 类](value-compare-class.md)|提供一个函数对象，该对象能通过比较 hash_map 元素的键值来比较这些元素，以确定其在 hash_map 中的相对顺序。|
 |[hash_map 类](hash-map-class.md)|用于存储和快速检索集合中的数据，集合中的每个元素都是具有排序键和关联数据值的元素对，而排序键的值是唯一的。|
 |[hash_multimap 类](hash-multimap-class.md)|用于存储和快速检索集合中的数据，集合中的每个元素都是具有排序键和关联数据值的元素对，而排序键的值不需要具有唯一性。|
@@ -64,6 +64,6 @@ ms.locfileid: "33850048"
 
 ## <a name="see-also"></a>请参阅
 
-[标头文件引用](cpp-standard-library-header-files.md)
+[头文件引用](cpp-standard-library-header-files.md)
 [c + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)
 [c + + 标准库参考](cpp-standard-library-reference.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5066e793c58dca9ccc12ccc159a010654df3efbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860666"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955447"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -89,22 +89,22 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 
 |类|描述|
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一种为代表双向迭代器的 **iterator_category** 函数提供返回类型的类。|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它将元素插入到类型的容器`Container`，通过受保护访问`pointer`对象将存储在名为容器。|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`表示双向迭代器函数。|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|一种使用随机访问检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|一种为代表向前迭代器的 **iterator_category** 函数提供返回类型的类。|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|一种为代表输入迭代器的 **iterator_category** 函数提供返回类型的类。|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。 它也可以存储受保护的 **iterator** 对象（**Container::iterator** 类），称为 **iter**。|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|此模板类描述输入迭代器对象。 它可以从输入流中提取 **Ty** 类的对象，并通过其存储的、指向 `basic_istream`\<**Elem**, **Tr**> 的 pointer 类型对象进行访问。|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此模板类描述输入迭代器对象。 它可以将 **Elem** 类对象插入到输出流缓冲区，并通过其存储的、指向 `basic_streambuf`\<**Elem**, **Tr**> 的 **pointer** 类型对象进行访问。|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`表示前向迭代器函数。|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它将元素插入到类型的容器`Container`，通过受保护访问`pointer`对象将存储在名为容器。|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`代表输入迭代器的函数。|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|此模板类描述输出迭代器对象。 它将元素插入到类型的容器`Container`，通过受保护访问`pointer`对象将存储在名为容器。 它还存储受保护`iterator`类的对象`Container::iterator`称为`iter`。|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|此模板类描述输入迭代器对象。 它提取类的对象`Ty`从输入流，通过其存储的指针类型的对象访问`basic_istream` \< **Elem**， **Tr**>。|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此模板类描述输入迭代器对象。 它将这些类的元素插入`Elem`到输出流缓冲区，并通过的对象访问其存储的类型、`pointer`到`basic_streambuf` \< **Elem**， **Tr**>。|
 |[Iterator](../standard-library/iterator-struct.md)|模板类用作所有迭代器的基类型。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|一种模板 helper 类，可以提供与不同迭代器类型相关联的关键类型，以便用相同的方式引用这些迭代器。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` 对象可以存储 `RandomIterator` 类型的随机访问迭代器。 它的行为类似于随机访问迭代器，但在解引用时除外。 `operator*` 的结果将隐式强制转换为 `value_type&&:`，以便形成 `rvalue reference`。|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将 **Type** 类对象插入到输出流，并通过其存储的、指向 `basic_ostream`\<**Elem**, **Tr**> 的 **pointer** 类型对象进行访问。|
-|[ostreambuf_iterator 类](../standard-library/ostreambuf-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将 **Elem** 类对象插入到输出流缓冲区，并通过其存储的、指向 `basic_streambuf`\<**Elem**, **Tr**> 的 pointer 类型对象进行访问。|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|一种为代表输出迭代器的 **iterator_category** 函数提供返回类型的类。|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|一种为代表随机访问迭代器的 **iterator_category** 函数提供返回类型的类。|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此模板类描述输出迭代器对象。 这类对象插入`Type`到输出流，并通过的对象访问其存储的类型、`pointer`到`basic_ostream` \< **Elem**， **Tr**>。|
+|[ostreambuf_iterator 类](../standard-library/ostreambuf-iterator-class.md)|此模板类描述输出迭代器对象。 它将这些类的元素插入`Elem`到输出流缓冲区，通过它存储到指针类型的对象访问`basic_streambuf` \< **Elem**， **Tr**>。|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`代表输出迭代器的函数。|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`代表随机访问迭代器的函数。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此模板类描述一个行为类似于随机访问迭代器的对象，只不过方向相反。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 

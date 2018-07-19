@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: aa5c2a662fb5e827978a7c00aa3035dcc6cc97f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847294"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958231"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 运算符
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_map`。
+*左*类型的对象`hash_map`。
 
-`right` 类型的对象`hash_map`。
+*右*类型的对象`hash_map`。
 
 ### <a name="return-value"></a>返回值
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_map 对象之间的比较基于其元素的成对比较。 如果两个 hash_map 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_map 相等。 否则，它们不相等。
 
-成员[< hash_map >](hash-map.md)和[< hash_set >](hash-set.md)标头文件中[stdext Namespace](stdext-namespace.md)。
+成员[< hash_map >](hash-map.md)并[< hash_set >](hash-set.md)标头中的文件[stdext Namespace](stdext-namespace.md)。
 
 ### <a name="example"></a>示例
 
@@ -103,9 +103,9 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_map`。
+*左*类型的对象`hash_map`。
 
-`right` 类型的对象`hash_map`。
+*右*类型的对象`hash_map`。
 
 ### <a name="return-value"></a>返回值
 
@@ -168,9 +168,9 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_multimap`。
+*左*类型的对象`hash_multimap`。
 
-`right` 类型的对象`hash_multimap`。
+*右*类型的对象`hash_multimap`。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,9 +233,9 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_multimap`。
+*左*类型的对象`hash_multimap`。
 
-`right` 类型的对象`hash_multimap`。
+*右*类型的对象`hash_multimap`。
 
 ### <a name="return-value"></a>返回值
 

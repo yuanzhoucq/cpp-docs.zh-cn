@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863886"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953643"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 函数
 
@@ -42,9 +42,9 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`left` 一个流。
+*左*流。
 
-`right` 一个流。
+*右*流。
 
 ## <a name="ws"></a>  ws
 
@@ -56,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>参数
 
-`_Istr` 一个流。
+*_Istr*流。
 
 ### <a name="return-value"></a>返回值
 
@@ -66,7 +66,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 此操控器提取并放弃任何 `ch` 元素，对于这些元素，[use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) 为 true。
 
-此函数如果在提取元素时遇到文件末尾，则会调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它将返回 `_Istr`。
+此函数如果在提取元素时遇到文件末尾，则会调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它将返回 *_Istr*。
 
 ### <a name="example"></a>示例
 

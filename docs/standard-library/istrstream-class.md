@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855313"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957280"
 ---
 # <a name="istrstream-class"></a>istrstream 类
 
@@ -82,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>参数
 
-`count` 缓冲区的长度 ( `ptr`)。
+*计数*缓冲区的长度 (*ptr*)。
 
-`ptr` 与其初始化缓冲区的内容。
+*ptr*缓冲区初始化的内容。
 
 ### <a name="remarks"></a>备注
 
-所有构造函数均可通过调用 [istream](../standard-library/istream-typedefs.md#istream)( **sb**)（其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 类的存储的对象）对基类进行初始化。 前两个构造函数还通过调用 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) 来初始化 **sb** 。 剩余的两个构造函数则调用 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
+所有构造函数通过调用初始化基类[istream](../standard-library/istream-typedefs.md#istream)(**sb**)，其中`sb`是类的存储的对象[strstreambuf](../standard-library/strstreambuf-class.md)。 前两个构造函数还初始化`sb`通过调用`strstreambuf`(( **const** `char` \*) `ptr`，0)。 剩余的两个构造函数则调用 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
 
 ## <a name="rdbuf"></a>istrstream::rdbuf
 
@@ -128,7 +128,7 @@ char *str();
 
 ### <a name="example"></a>示例
 
-有关使用 **str** 的示例，请参阅 [strstream::str](../standard-library/strstreambuf-class.md#str)。
+请参阅[strstream:: str](../standard-library/strstreambuf-class.md#str)有关的示例，使用`str`。
 
 ## <a name="see-also"></a>请参阅
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954318"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 类
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |参数|描述|
 |---------------|-----------------|
-|`Sz`|数组中要分配的元素数目。|
+|*sz*|数组中要分配的元素数目。|
 
 ## <a name="remarks"></a>备注
 
-cache_suballoc 模板类使用 `freelist<sizeof(Type), max_unbounded>` 将释放的内存块存储在长度不受限制的可用列表中，并在可用列表为空时在 `operator new` 分配的较大区块中细分内存块。
+Cache_suballoc 模板类将释放的内存块存储在长度不受限制的可用列表中使用`freelist<sizeof(Type), max_unbounded>`，并使用分配的较大区块中细分内存块**new 运算符**空闲列表时为空。
 
-每个区块保留 `Sz * Nelts` 个字节的可用内存以及 `operator new` 和 `operator delete` 所需的数据。 不会释放已分配的区块。
+每个区块保留`Sz * Nelts`字节的可用内存和数据的**new 运算符**并**运算符 delete**要求。 不会释放已分配的区块。
 
 ### <a name="constructors"></a>构造函数
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 

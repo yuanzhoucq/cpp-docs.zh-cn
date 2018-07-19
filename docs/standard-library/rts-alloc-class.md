@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856295"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956446"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 类
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|数组中包含的缓存实例的类型。 这可能是 [cache_chunklist 类](../standard-library/cache-chunklist-class.md)、 [cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*缓存*|数组中包含的缓存实例的类型。 这可能是 [cache_chunklist 类](../standard-library/cache-chunklist-class.md)、 [cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ## <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -84,7 +84,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `caches[_IDX].allocate(count)`，其中索引 `_IDX` 由所请求的块大小 `count` 决定，但如果 `count` 太大，将返回 `operator new(count)`。 用于表示缓存对象的 `cache`。
+此成员函数返回`caches[_IDX].allocate(count)`，其中索引`_IDX`由请求的块大小*计数*，或者，如果*计数*是太大，它将返回`operator new(count)`。 用于表示缓存对象的 `cache`。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
-成员函数将调用 `caches[_IDX].deallocate(ptr, count)`，其中索引 `_IDX` 由所请求的块大小 `count` 决定，但如果 `count` 太大，它将返回 `operator delete(ptr)`。
+此成员函数调用`caches[_IDX].deallocate(ptr, count)`，其中索引`_IDX`由请求的块大小*计数*，或者，如果*计数*是太大，它将返回`operator delete(ptr)`。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`_Cache`|与筛选器关联的缓存对象。|
-|`_Other`|要用于比较是否相等的缓存对象。|
+|*_Cache*|与筛选器关联的缓存对象。|
+|*_Other*|要用于比较是否相等的缓存对象。|
 
 ### <a name="remarks"></a>备注
 
-如果结果为 `caches[0].equals(other.caches[0])`，则为 `true`；否则为 `false`。 `caches` 表示缓存对象的数组。
+**true**如果的结果`caches[0].equals(other.caches[0])`; 否则为**false**。 `caches` 表示缓存对象的数组。
 
 ## <a name="see-also"></a>请参阅
 

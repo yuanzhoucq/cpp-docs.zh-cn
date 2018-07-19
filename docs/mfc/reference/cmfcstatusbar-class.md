@@ -1,5 +1,5 @@
 ---
-title: CMFCStatusBar 类 |Microsoft 文档
+title: CMFCStatusBar 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e0f97eb2bce0bb39641aeceeaaa57d73dd45994e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041720"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854026"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 `CMFCStatusBar`类实现类似于状态栏`CStatusBar`类。 但是，`CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。 
@@ -108,42 +108,42 @@ class CMFCStatusBar : public CPane
 |----------|-----------------|  
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(重写[cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||  
-|[CMFCStatusBar::Create](#create)|创建的控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 (重写[cpane:: Create](../../mfc/reference/cpane-class.md#create)。)|  
-|[CMFCStatusBar::CreateEx](#createex)|创建的控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 (重写[cpane:: Createex](../../mfc/reference/cpane-class.md#createex)。)|  
-|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|确定是否另一个窗格可以动态地插入此窗格之间的父框架。 (重写[cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)。)|  
-|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|启用或禁用在状态栏双击鼠标的处理。|  
-|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|在指定的窗格中显示一个进度栏。|  
-|[CMFCStatusBar::GetCount](#getcount)|在状态栏上返回窗格的数。|  
+|[CMFCStatusBar::Create](#create)|创建控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 (重写[cpane:: Create](../../mfc/reference/cpane-class.md#create)。)|  
+|[CMFCStatusBar::CreateEx](#createex)|创建控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。 (重写[cpane:: Createex](../../mfc/reference/cpane-class.md#createex)。)|  
+|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|确定另一个窗格是否可以动态地插入此窗格与父框架之间。 (重写[cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)。)|  
+|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|启用或禁用的鼠标处理双击状态栏上。|  
+|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|在指定窗格中显示一个进度栏。|  
+|[CMFCStatusBar::GetCount](#getcount)|返回上状态栏窗格的数目。|  
 |[CMFCStatusBar::GetDrawExtendedArea](#getdrawextendedarea)||  
 |[CMFCStatusBar::GetExtendedArea](#getextendedarea)||  
 |[CMFCStatusBar::GetItemID](#getitemid)||  
 |[CMFCStatusBar::GetItemRect](#getitemrect)||  
 |[CMFCStatusBar::GetPaneInfo](#getpaneinfo)||  
 |[CMFCStatusBar::GetPaneProgress](#getpaneprogress)||  
-|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|返回的窗格样式。 (重写[CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle)。)|  
+|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|返回窗格样式。 (重写[CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle)。)|  
 |[CMFCStatusBar::GetPaneText](#getpanetext)||  
-|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|返回宽度，以像素为单位，指定窗格的状态栏。|  
-|[CMFCStatusBar::GetTipText](#gettiptext)|返回指定的窗格的状态栏的工具提示文本。|  
-|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|使无效指定的窗格并重绘其内容。|  
+|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|返回以像素为单位，指定的状态栏窗格的宽度。|  
+|[CMFCStatusBar::GetTipText](#gettiptext)|返回指定的状态栏窗格的工具提示文本。|  
+|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|使指定的窗格并重新绘制其内容。|  
 |[CMFCStatusBar::PreCreateWindow](#precreatewindow)|由框架创建附加到此 Windows 窗口之前调用`CWnd`对象。 (重写[CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow)。)|  
 |[CMFCStatusBar::SetDrawExtendedArea](#setdrawextendedarea)||  
 |[CMFCStatusBar::SetIndicators](#setindicators)||  
-|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|将动画分配给指定的窗格中。|  
-|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|设置指定的状态栏窗格的背景色。|  
-|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|设置状态栏的指定窗格中的指示器图标。|  
+|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|将动画分配到指定的窗格。|  
+|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|设置为指定的状态栏窗格的背景色。|  
+|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|设置为指定的状态栏窗格的指示器图标。|  
 |[CMFCStatusBar::SetPaneInfo](#setpaneinfo)||  
-|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|设置状态栏的指定窗格中的进度栏的当前进度。|  
-|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|设置窗格中的样式。 (重写[CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)。)|  
+|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|设置指定的状态栏窗格的进度条的当前进度。|  
+|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|设置窗格的样式。 (重写[CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)。)|  
 |[CMFCStatusBar::SetPaneText](#setpanetext)||  
-|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|设置状态栏的指定窗格中的文本颜色。|  
-|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|以像素为单位指定窗格的状态栏设置的宽度。|  
-|[CMFCStatusBar::SetTipText](#settiptext)|设置状态栏的指定窗格中的工具提示文本。|  
+|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|设置为指定的状态栏窗格的文本颜色。|  
+|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|设置以像素为单位指定的状态栏窗格的宽度。|  
+|[CMFCStatusBar::SetTipText](#settiptext)|设置指定的状态栏窗格的工具提示文本。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCStatusBar::OnDrawPane](#ondrawpane)|当它重绘的状态栏窗格中时，由框架调用。|  
+|[CMFCStatusBar::OnDrawPane](#ondrawpane)|重绘的状态栏窗格时，由框架调用。|  
   
 ## <a name="remarks"></a>备注  
  下图显示了从状态栏的图[状态栏演示示例](../../visual-cpp-samples.md)应用程序。  
@@ -151,18 +151,18 @@ class CMFCStatusBar : public CPane
  ![Cmfcstatusbar 示例](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")  
   
 ## <a name="example"></a>示例  
- 下面的示例演示应用程序使用调用中的各种方法的本地变量`CMFCStatusBar`类。 StatusBarDemoView.h 中声明这些变量。 主框架在 MainFrm.h 中声明、 文档声明中 StatusBarDemoDoc.h，和在 StatusBarDemoView.h 中声明视图。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示应用程序用于调用中的各种方法的本地变量`CMFCStatusBar`类。 StatusBarDemoView.h 中声明这些变量。 主框架声明在 MainFrm.h 中、 在文档中 StatusBarDemoDoc.h，声明和 StatusBarDemoView.h 中声明视图。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何获取对引用`CMFCStatusBar`对象，它引入了`GetStatusBar`方法在 MainFrm.h，然后再调用此方法从`GetStatusBar`StatusBarDemoView.h 中的方法。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何获取对的引用`CMFCStatusBar`对象通过引入`GetStatusBar`方法在 MainFrm.h 中，然后再调用此方法从`GetStatusBar`StatusBarDemoView.h 中的方法。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何调用中的各种方法`CMFCStatusBar`StatusBarDemoView.cpp 中的类。 在 MainFrm.h 中声明的常量。 该示例演示如何设置图标、 设置状态栏窗格的工具提示文本，在指定的窗格中显示一个进度条、 将动画分配给指定的窗格中，设置文本和状态栏窗格的宽度以及设置 progr 的当前进度指示器状态栏窗格的 ess 栏。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何调用各种方法中`CMFCStatusBar`StatusBarDemoView.cpp 中的类。 在 MainFrm.h 中声明的常量。 该示例演示如何设置图标，设置状态栏窗格的工具提示文本，指定窗格上显示一个进度栏、 将动画分配到指定的窗格中，设置文本和宽度的状态栏窗格，以及设置进行的当前进度指示器状态栏窗格的 ess 栏。 此代码片段属于[状态栏演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]  
@@ -270,7 +270,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enablepanedoubleclick"></a>  CMFCStatusBar::EnablePaneDoubleClick  
- 启用或禁用在状态栏双击鼠标的处理。  
+ 启用或禁用的鼠标处理双击状态栏上。  
   
 ```  
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
@@ -278,13 +278,13 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>参数  
  [in]*bEnable*  
- 如果`TRUE`，启用处理鼠标双击。 否则禁用鼠标双击的处理。  
+ 如果为 TRUE，使鼠标双击的处理。 否则禁用鼠标双击的处理。  
   
 ### <a name="remarks"></a>备注  
- 如果启用了状态栏，来处理两次单击，Windows 会将以及资源 ID 的 WM_COMMAND 通知发送给用户双击状态栏窗格上每次状态栏的所有者。  
+ 如果启用状态栏来处理双点击，Windows 将以及资源 ID 的 WM_COMMAND 通知发送到每次用户双击状态栏窗格上状态栏的所有者。  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
- 在指定的窗格中显示一个进度条。  
+ 在指定窗格中显示一个进度栏。  
   
 ```  
 void EnablePaneProgressBar(
@@ -298,32 +298,32 @@ void EnablePaneProgressBar(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定的窗格中的索引启用其进度栏。  
+ 若要启用其进度栏指定窗格的索引。  
   
  [in]*nTotal*  
  指定进度栏的最大值。  
   
  [in]*bDisplayText*  
- 指定进度栏是否应显示当前进度值。  
+ 指定进度栏是否应显示当前的进度值。  
   
  [in]*clrBar*  
  指定进度栏的背景色。  
   
  [in]*clrBarDest*  
- 指定进度栏背景辅助颜色。 使用不同的值*clrBar*通过融入到渐变的颜色填充。  
+ 指定进度栏背景的辅助颜色。 使用不同的值*clrBar*通过融入到渐变的颜色填充。  
   
  [in]*clrProgressText*  
- 指定的文本的进度栏的颜色。  
+ 指定进度栏的文本的颜色。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要禁用进度栏调用`EnablePaneProgressBar`与*nTotal*设置为-1。 默认情况下*nTotal*将设置为 100。 因此，你不需要任何附加的计算，显示为百分比的进度。  
+ 如果你想要禁用进度栏呼叫`EnablePaneProgressBar`与*nTotal*设置为-1。 默认情况下*nTotal*设置为 100。 因此，您不需要任何其他计算，以显示为百分比的进度。  
   
- 您应为传递不同的值*clrBar*和*clrBarDest*以便进度栏的背景色显示融入到渐变颜色。 .  
+ 您应为传递不同的值*clrBar*并*clrBarDest* ，以便在进度栏的背景色显示融入到渐变的颜色。 .  
   
- 若要设置当前进度，调用[CMFCStatusBar::SetPaneProgress](#setpaneprogress)方法。  
+ 若要设置的当前进度，请调用[CMFCStatusBar::SetPaneProgress](#setpaneprogress)方法。  
   
 ##  <a name="getcount"></a>  CMFCStatusBar::GetCount  
- 检索状态栏中的窗格的数。  
+ 检索在状态栏中的窗格数。  
   
 ```  
 int GetCount() const;  
@@ -461,13 +461,13 @@ int GetPaneWidth(int nIndex) const;
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定状态栏窗格中的索引。  
+ 指定状态栏窗格的索引。  
   
 ### <a name="return-value"></a>返回值  
- 状态栏窗格的宽度， *nIndex*指定; 否则为零如果状态栏窗格中不存在。  
+ 状态栏窗格的宽度的*nIndex*指定; 如果状态栏窗格中不存在，则为零。  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
- 检索一个状态栏窗格中的工具提示文本。  
+ 检索一个状态栏窗格的工具提示文本。  
   
 ```  
 CString GetTipText(int nIndex) const;  
@@ -475,13 +475,13 @@ CString GetTipText(int nIndex) const;
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定为其检索工具提示文本窗格中的索引。  
+ 指定要为其检索工具提示文本窗格中的索引。  
   
 ### <a name="return-value"></a>返回值  
- 状态栏窗格的工具提示文本的*nIndex*指定。 否则为空字符串如果状态栏窗格中不存在指定*nIndex*或其工具提示文本是否为空。  
+ 状态栏窗格的工具提示文本的*nIndex*指定。 否则为空字符串状态栏窗格是否存在指定的*nIndex*或其工具提示文本是否为空。  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
- 使失效状态栏窗格以及重绘其内容。  
+ 使失效状态栏窗格，重绘其内容。  
   
 ```  
 void InvalidatePaneContent(int nIndex);
@@ -489,10 +489,10 @@ void InvalidatePaneContent(int nIndex);
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定其内容是失效并在重绘的窗格中的索引。  
+ 指定用于失效并重新绘制其内容是: 窗格中的索引。  
   
 ### <a name="remarks"></a>备注  
- 当状态栏将失效时，则将它标记为重绘。 Windows 重绘时`UpdateWindow`方法可发送到 WM_PAINT 消息`OnPaint`方法。  
+ 当状态栏将失效时，则将其标记为重绘。 Windows 重新绘制它时`UpdateWindow`方法将发送到 WM_PAINT 消息`OnPaint`方法。  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
  重绘状态栏的窗格。  
@@ -505,15 +505,15 @@ virtual void OnDrawPane(
   
 ### <a name="parameters"></a>参数  
  [in]*pDC*  
- 一个指向设备上下文的绘图区域。  
+ 指向设备上下文进行绘制的指针。  
   
  [in]*pPane*  
- 指向的指针`CMFCStatusBarPaneInfo`结构，其中包含有关要重新绘制的窗格中的信息。  
+ 一个指向`CMFCStatusBarPaneInfo`结构，其中包含有关窗格重绘的信息。  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，`OnDrawPane`通过使用设备上下文重绘窗格*pDC*根据窗格的样式和内容。  
+ 默认情况下`OnDrawPane`使用的设备上下文来重绘窗格*pDC*根据窗格的样式和内容。  
   
- 重写此方法在`CMFCStatusBar`-派生类以自定义窗格的外观。  
+ 重写此方法在`CMFCStatusBar`的派生类，以自定义窗格的外观。  
   
 ##  <a name="precreatewindow"></a>  CMFCStatusBar::PreCreateWindow  
 
@@ -559,7 +559,7 @@ BOOL SetIndicators(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setpaneanimation"></a>  CMFCStatusBar::SetPaneAnimation  
- 将动画分配给指定的窗格中。  
+ 将动画分配到指定的窗格。  
   
 ```  
 void SetPaneAnimation(
@@ -571,19 +571,19 @@ void SetPaneAnimation(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定你想要向其分配一种动画效果的窗格中的索引。  
+ 指定你想要为其分配一个动画窗格中的索引。  
   
  [in]*hImageList*  
- 指定包含动画帧的图像列表的句柄。  
+ 指定的句柄保留动画帧的图像列表。  
   
  [in]*nFrameRate*  
- 指定以毫秒为单位，用于动画帧速率。  
+ 指定以毫秒为单位，动画帧速率。  
   
  [in]*bUpdate*  
- 如果`TRUE`，立即更新在窗格中的内容。 否则，它失效时，被更新窗格的内容。  
+ 如果为 TRUE，则立即更新窗格内容。 否则，它失效时，被更新窗格内容。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要禁用当前动画，调用`SetPaneAnimation`与`hImageList`设置为`NULL`。  
+ 如果你想要禁用当前的动画，则调用`SetPaneAnimation`与`hImageList`设置为 NULL。  
   
 ##  <a name="setpanebackgroundcolor"></a>  CMFCStatusBar::SetPaneBackgroundColor  
  设置状态栏窗格的背景色。  
@@ -597,13 +597,13 @@ void SetPaneBackgroundColor(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定为其设置新的背景色窗格中的索引。  
+ 指定要为其设置新的背景色窗格中的索引。  
   
  [in]*clrBackground*  
- 指定新的背景色。  
+ 指定新背景色。  
   
  [in]*bUpdate*  
- 如果`TRUE`，立即更新在窗格中的内容。 否则前, 不会更新窗格内容窗格中失效另一种方法。  
+ 如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  设置状态栏窗格的图标。  
@@ -624,24 +624,24 @@ void SetPaneIcon(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定为其设置映像窗格中的索引。  
+ 指定要为其设置的图像的窗格的索引。  
   
- [in]*任务栏*  
+ [in]*hIcon*  
  指定要设置为窗格图像的图标的句柄。  
   
  [in]*bUpdate*  
- 指定是否要立即更新窗格的内容。  
+ 指定是否要立即更新窗格内容。  
   
  [in]*hBmp*  
  指定要设置为窗格图像的位图的句柄。  
   
  [in]*clrTransparent*  
- 指定位图的透明颜色， *hBmp*指示。  
+ 指定位图的透明颜色的*hBmp*指示。  
   
 ### <a name="remarks"></a>备注  
- 你可以传递`HICON`或`HBITMAP`以及设置窗格中的图像的透明色。 如果你不希望将不再显示图像，将传递`NULL`作为图像句柄的值。  
+ 可以将 HICON 或 HBITMAP 传递以及设置窗格的图像的透明色。 如果不希望再显示图像，作为图像句柄传递 NULL 值。  
   
- 如果没有任何正在运行的动画， [CMFCStatusBar::SetPaneAnimation](#setpaneanimation)已设置，动画将被停止。  
+ 如果没有任何正在运行的动画， [CMFCStatusBar::SetPaneAnimation](#setpaneanimation)已设置，就将停止动画。  
   
 ##  <a name="setpaneinfo"></a>  CMFCStatusBar::SetPaneInfo  
 
@@ -674,18 +674,18 @@ void SetPaneProgress(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定要更新进度指示器的窗格中的索引。  
+ 指定要为其更新进度指示器窗格中的索引。  
   
  [in]*nCurr*  
- 指定的进度指示器的当前值。  
+ 指定进度指示器的当前值。  
   
  [in]*bUpdate*  
  指定是否应立即更新窗格。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要更新指定的窗格中的进度栏的进度指示器，请调用此方法。  
+ 当你想要更新指定的窗格中的进度栏的进度指示器，请调用此方法。  
   
- 若要为给定的窗格中使用此功能，必须调用[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)第一个。  
+ 若要使用给定的窗格的此函数，必须调用[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)第一个。  
   
 ##  <a name="setpanestyle"></a>  CMFCStatusBar::SetPaneStyle  
 
@@ -722,7 +722,7 @@ virtual BOOL SetPaneText(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setpanetextcolor"></a>  CMFCStatusBar::SetPaneTextColor  
- 设置指定的窗格中的文本颜色。  
+ 设置指定窗格中的文本颜色。  
   
 ```  
 void SetPaneTextColor(
@@ -733,13 +733,13 @@ void SetPaneTextColor(
   
 ### <a name="parameters"></a>参数  
  [in]*nIndex*  
- 指定你想要分配新的文本颜色的窗格中的索引。  
+ 指定你想要分配新的文本颜色窗格中的索引。  
   
  [in]*clrText*  
  指定的文本颜色。  
   
  [in]*bUpdate*  
- 如果`TRUE`，立即更新在窗格中的内容。 否则前, 不会更新窗格内容窗格中失效另一种方法。  
+ 如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  设置状态栏窗格的宽度。  
@@ -755,7 +755,7 @@ void SetPaneWidth(
  为其设置新宽度状态栏窗格的索引。  
   
  [in]*cx*  
- 新状态栏窗格，以像素为单位的宽度。  
+ 状态栏窗格，以像素为单位的新宽度。  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  设置状态栏窗格的工具提示文本。  
@@ -774,7 +774,7 @@ void SetTipText(
  新的工具提示文本。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPane 类](../../mfc/reference/cpane-class.md)   
  [CStatusBar 类](../../mfc/reference/cstatusbar-class.md)

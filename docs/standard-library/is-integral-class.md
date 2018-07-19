@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954026"
 ---
 # <a name="isintegral-class"></a>is_integral 类
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是整型类型之一，或整型类型之一的 `cv-qualified` 形式，则类型谓词的实例将为 true，否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一种整型类型，或`cv-qualified`窗体的一种整型类型，否则为保留为 false。
 
-整型类型是 `bool`、`char`、`unsigned char`、`signed char`、`wchar_t`、`short`、`unsigned short`、`int`、`unsigned int`、`long` 和 `unsigned long` 之一。 此外，若使用提供这些类型的编译器，整型类型还可以是 `long long`、`unsigned long long`、`__int64` 和 `unsigned __int64` 之一。
+一种整型类型是之一**bool**， **char**， **unsigned char**，**签名 char**， **wchar_t**， **短**， **unsigned short**， **int**，**无符号的 int**，**长**，和**无符号长**。 此外，向他们提供的编译器，整型类型可以是之一**超长**， **unsigned long long**， **__int64**，和**unsigned 的 __int64**.
 
 ## <a name="example"></a>示例
 

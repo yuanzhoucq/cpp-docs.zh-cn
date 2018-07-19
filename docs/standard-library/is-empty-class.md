@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10fe3f311211e3bbde61aef37c9a152ba2105126
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 040121c192d11a54a6142ff565768ba2bc104c33
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955314"
 ---
 # <a name="isempty-class"></a>is_empty 类
 
@@ -37,11 +37,11 @@ struct is_empty;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是空类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一个空类，否则为 false。
 
 ## <a name="example"></a>示例
 

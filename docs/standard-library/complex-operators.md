@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957693"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-`left` 复数或其参数类型，要测试不相等的对象。
+*左*复数或其参数类型为要测试是否不相等的对象。
 
-`right` 复数或其参数类型，要测试不相等的对象。
+*右*复数或其参数类型为要测试是否不相等的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>参数
 
-`left` 中的两个复数或数字的乘积是一个复杂的数字的参数类型的第一个 * 操作。
+*左*两个复数相加或相乘的复数的参数类型的数字的第一个 * 操作。
 
-`right` 两个复数或数字的乘积是一个复杂的数字的参数类型的第二个 * 操作。
+*右*两个复数相加或相乘的复数的参数类型的数字的第二个 * 操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 两个复数或通过添加一个复杂的数字的参数类型的数字的第一个 + 操作。
+*左*两个复数或属于要添加的复数的参数类型的数字的第一个 + 操作。
 
-`right` 两个复数或通过添加一个复杂的数字的参数类型的数字的第二个 + 操作。
+*右*两个复数或属于要添加的复数的参数类型的数字的第二个 + 操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -305,7 +305,7 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="remarks"></a>备注
 
-重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。 一元运算符返回`left`。
+重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。 一元运算符返回*左*。
 
 ### <a name="example"></a>示例
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 两个复数或的是要减去的操作的复数的参数类型的数字的第一个。
+*左*是要通过-运算中减去的复数的参数类型的数或两个复数相加的第一个。
 
-`right` 两个复数或的是要减去的操作的复数的参数类型的数字的第二个。
+*右*的第二个是要通过-运算中减去的复数的参数类型的数或两个复数相加。
 
 ### <a name="return-value"></a>返回值
 
-由 `right`从 `left` 减去得出的复数，两个数的值由参数输入指定。
+从该减法运算的结果的复数*右*从*左*，其值由参数输入指定的两个数字。
 
 ### <a name="remarks"></a>备注
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>参数
 
-`left` 一个复数或为分子要通过使用分母作为被除数的复数的参数类型的数字 / 操作。
+*左*复数或用分子除以分母与复数的参数类型的数字 / 操作。
 
-`right` 一个复数或的是要用于划分与分子分母的复数的参数类型的数字 / 操作。
+*右*复数或是要用来与分子除以分母的复数的参数类型的数字 / 操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-`Ostr` 在其中输入复数输出流。
+*Ostr*在其中输入复数的输出流。
 
-`right` 要输入到输出流的复数
+*右*要输入到输出流的复数
 
 ### <a name="return-value"></a>返回值
 
-以笛卡尔坐标格式：（*实部、虚部*）将指定复数值写入 `Ostr`。
+将指定复数值写入*Ostr*笛卡尔坐标格式: (*实部、 虚部*)。
 
 ### <a name="remarks"></a>备注
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`left` 复数或其参数类型，要测试不相等的对象。
+*左*复数或其参数类型为要测试是否不相等的对象。
 
-`right` 复数或其参数类型，要测试不相等的对象。
+*右*复数或其参数类型为要测试是否不相等的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-`Istr` 从中提取复数的输入的流。
+*Istr*从中提取复数的输入的流。
 
-`right` 正在从输入流中提取的复数。
+*右*正在从输入流提取的复数。
 
 ### <a name="return-value"></a>返回值
 
-读取从表示指定复数的值`Istr`并返回到`right`。
+读取的值从指定的复数*Istr*并返回到*右*。
 
 ### <a name="remarks"></a>备注
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957943"
 ---
 # <a name="abstract-classes-c"></a>抽象类 (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "34705356"
 
 包含至少一个纯虚函数的类被视为抽象类。 派生自抽象类的类必须实现纯虚函数或者它们必须也是抽象类。
 
-虚函数通过使用声明为"纯"*纯说明符*语法 (中所述[类协议实现](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5))。 中介绍的示例，请考虑[虚函数](../cpp/virtual-functions.md)。 类 `Account` 的用途是提供通用功能，但 `Account` 类型的对象太通用，因此没什么用。 因此，`Account` 是抽象类的很合适的候选项：
+中介绍的示例，请考虑[虚函数](../cpp/virtual-functions.md)。 类 `Account` 的用途是提供通用功能，但 `Account` 类型的对象太通用，因此没什么用。 因此，`Account` 是抽象类的很合适的候选项：
 
 ```cpp
 // deriv_AbstractClasses.cpp

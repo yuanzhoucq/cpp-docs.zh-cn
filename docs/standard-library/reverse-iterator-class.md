@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30151d18126d86256c189355c19f61a694bb3267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1610013027305d75a9520c8882b1900fe18c016c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955366"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 类
 
@@ -52,13 +52,13 @@ RandomIterator 表示要进行适配化以反向操作的迭代器的类型。
 
 ## <a name="remarks"></a>备注
 
-现有 C++ 标准库容器还定义 `reverse_iterator` 和 `const_reverse_iterator` 类型，并拥有返回反向迭代器的成员函数 `rbegin` 和 `rend`。 这些迭代器具有覆盖语义。 `reverse_iterator`适配器补充此功能，因为它提供插入语义，并且还与流一起使用。
+现有 C++ 标准库容器还定义 `reverse_iterator` 和 `const_reverse_iterator` 类型，并拥有返回反向迭代器的成员函数 `rbegin` 和 `rend`。 这些迭代器具有覆盖语义。 `reverse_iterator`适配器补充此功能，因为它提供插入语义，并且还可用于流。
 
-`reverse_iterator`需要双向迭代器不能调用任何成员函数`operator+=`， `operator+`， `operator-=`， `operator-`，或`operator[]`，这可能仅能与使用随机访问迭代器。
+`reverse_iterator`需要的双向迭代器必须不调用任何成员函数`operator+=`， `operator+`， `operator-=`， `operator-`，或`operator[]`，其中只能用于使用随机访问迭代器。
 
-迭代器的范围是 [*第一个*，*最后一个*)，其中左侧方括号指示包含*第一个*和右侧的括号指示包含的元素但不包括*最后一个*本身。 相同的元素包含在反向序列 [**修订** - *第一个*，**修订** - *最后一个*) 以便如果*最后一个*为一个过去的结束元素在序列中，则第一个元素**修订** - *第一个*中的反向的序列点\*(*最后一个*-1)。 将所有反向迭代器与其基础迭代器关联的标识是：
+一个迭代器的范围是 [*第一个*，*上次*)，其中左侧的方括号指示包含*第一个*，在右侧的括号指示包含的元素但不包括*最后一个*本身。 相同的元素包含在反向序列 [ **rev** - *第一个*， **rev** - *上次*) 以便如果*上次*是一个过去的结束元素在序列中，然后将第一个元素**rev** - *第一个*中的反向的序列点\*(*最后一个*-1)。 将所有反向迭代器与其基础迭代器关联的标识是：
 
-&\*( **reverse_iterator** (*我*)) = = （& a)\*(*我*-1)。
+&\*( **reverse_iterator** (*我*)) = = &\*(*我*-1)。
 
 在实际操作中，这意味着在反向序列中，reverse_iterator 将引用迭代器在原有序列中引用的元素之外（右侧）一个位置的元素。 因此，如果迭代器在序列 (2, 4, 6, 8) 中发现元素 6，则 `reverse_iterator` 将在反向序列 (8, 6, 4, 2) 中发现元素 4。
 
@@ -275,7 +275,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>参数
 
-`Off` 要添加到反向迭代器的偏移量。
+*关闭*要添加到反向迭代器的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -423,7 +423,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>参数
 
-`Off` 若要将迭代器递增依据偏移量。
+*关闭*递增迭代器的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -495,7 +495,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>参数
 
-`Off` 要从 reverse_iterator 减去的偏移量。
+*关闭*要从 everse_iterator 中减去的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -644,7 +644,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>参数
 
-`Off` 要从减去的偏移量`reverse_iterator`。
+*关闭*偏移量被减数`reverse_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -797,7 +797,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>参数
 
-`Off` 从的偏移量`reverse_iterator`地址。
+*关闭*从偏移量`reverse_iterator`地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -950,7 +950,7 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="example"></a>示例
 
-请参阅 [reverse_iterator:: operator&#91;&#93;](#op_at) 或 [reverse_iterator:: operator *](#op_star)，获取有关如何声明和使用**引用**的示例。
+请参阅[reverse_iterator:: operator&#91; &#93; ](#op_at)或[reverse_iterator:: operator *](#op_star)有关如何声明和使用的示例`reference`。
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -966,7 +966,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 是要进行适配化到的迭代器`reverse_iterator`。
+*右*是适用于迭代器`reverse_iterator`。
 
 ### <a name="return-value"></a>返回值
 

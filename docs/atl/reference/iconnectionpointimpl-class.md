@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointImpl 类 |Microsoft 文档
+title: IConnectionPointImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf1f012067c3a3b85dd5168cf93521e4b2024e00
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362635"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884032"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl 类
 此类实现连接点。  
@@ -42,14 +42,14 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IConnectionPointImpl`。  
+ *T*  
+ 您的类，派生自`IConnectionPointImpl`。  
   
- `piid`  
- 指向由连接点对象的接口的 IID 的指针。  
+ *piid*  
+ 指向 IID 的连接点对象所表示接口的指针。  
   
- `CDV`  
- 管理连接一个类。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许不受限制的连接。 你还可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。  
+ *CDV*  
+ 一个类，管理包的连接。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许无限制的连接。 此外可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。  
   
 ## <a name="members"></a>成员  
   
@@ -58,10 +58,10 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |名称|描述|  
 |----------|-----------------|  
 |[IConnectionPointImpl::Advise](#advise)|建立的连接点和接收器之间的连接。|  
-|[IConnectionPointImpl::EnumConnections](#enumconnections)|创建一个枚举器循环访问的连接点的连接。|  
-|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|检索由连接点表示接口的 IID。|  
+|[IConnectionPointImpl::EnumConnections](#enumconnections)|创建一个枚举器循环访问该连接点的连接。|  
+|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|检索由此连接点的接口的 IID。|  
 |[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|检索到可连接对象的接口指针。|  
-|[IConnectionPointImpl::Unadvise](#unadvise)|终止通过以前建立的连接`Advise`。|  
+|[IConnectionPointImpl::Unadvise](#unadvise)|终止先前通过建立的连接`Advise`。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
@@ -70,11 +70,11 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|管理连接点的连接。|  
   
 ## <a name="remarks"></a>备注  
- `IConnectionPointImpl` 实现连接点，这样要公开给客户端的传出接口的对象。 客户端在调用接收器的对象上实现此接口。  
+ `IConnectionPointImpl` 实现连接点，它允许对象公开给客户端的传出接口。 客户端在一个名为接收器对象上实现此接口。  
   
- 使用 ATL [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)实现可连接对象。 可连接对象中的每个连接点表示的传出接口，由标识`piid`。 类*CDV*管理之间的连接点和接收器的连接。 每个连接进行唯一标识的"cookie"。  
+ 使用 ATL [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)实现可连接对象。 每个连接点可连接对象中的表示标识的传出接口*piid*。 类*CDV*管理之间的连接点和接收器的连接。 由"cookie"。 唯一标识每个连接  
   
- 有关使用 ATL 中的连接点的详细信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
+ 有关在 ATL 中使用连接点的详细信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `_ICPLocator`  
@@ -99,7 +99,7 @@ STDMETHOD(Advise)(
  请参阅[IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) Windows SDK 中。  
   
 ##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
- 创建一个枚举器循环访问的连接点的连接。  
+ 创建一个枚举器循环访问该连接点的连接。  
   
 ```
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
@@ -109,7 +109,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
  请参阅[IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) Windows SDK 中。  
   
 ##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
- 检索由连接点表示接口的 IID。  
+ 检索由此连接点的接口的 IID。  
   
 ```
 STDMETHOD(GetConnectionInterface)(IID* piid2);
@@ -136,17 +136,17 @@ CDV m_vec;
 ```     
   
 ### <a name="remarks"></a>备注  
- 默认情况下，`m_vec`属于类型[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)。  
+ 默认情况下`m_vec`属于类型[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)。  
   
 ##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
- 终止通过以前建立的连接[建议](#advise)。  
+ 终止先前通过建立的连接[Advise](#advise)。  
   
 ```
 STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) Windows SDK 中。  
+ 请参阅[iconnectionpoint::](http://msdn.microsoft.com/library/windows/desktop/ms686608) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   

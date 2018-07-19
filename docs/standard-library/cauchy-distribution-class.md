@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6f4a8779bcc92b48896fa016944df27c58903
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960949"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 类
 
@@ -80,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 *URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了生成用户指定浮点类型或根据柯西分步分配的 `double` 类型（如果未提供任何内容）的值的分配。 下表链接到有关各个成员的文章。
+此模板类将描述产生的值的用户指定的浮点类型**double**如果未提供任何内容柯西分布根据分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -263,7 +263,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 *b* `b`分布参数。
 
-*参数*`param_type`用于构造分布的结构。
+*parm* `param_type`用于构造分布的结构。
 
 ### <a name="remarks"></a>备注
 
@@ -295,7 +295,7 @@ struct param_type {
 
 *b* `b`分布参数。
 
-*右*`param_type`要比较的此对象。
+*右*`param_type`要与此比较的对象。
 
 ### <a name="remarks"></a>备注
 
