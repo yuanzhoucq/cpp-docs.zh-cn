@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes 类 |Microsoft 文档
+title: CSecurityAttributes 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357501"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879329"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
-此类是安全特性结构的瘦包装器。  
+此类是安全的属性结构的精简包装。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[Csecurityattributes:: Set](#set)|调用此方法以设置的属性`CSecurityAttributes`对象。|  
   
 ## <a name="remarks"></a>备注  
- **SECURITY_ATTRIBUTES**结构包含[安全描述符](http://msdn.microsoft.com/library/windows/desktop/aa379561)用于创建对象，并指定通过指定此结构来检索句柄是否可继承。  
+ `SECURITY_ATTRIBUTES`结构包含[安全描述符](http://msdn.microsoft.com/library/windows/desktop/aa379561)用于创建对象并指定检索通过指定此结构的句柄是否可继承。  
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
@@ -74,10 +74,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>参数  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  对安全描述符的引用。  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。  
   
 ##  <a name="set"></a>  Csecurityattributes:: Set  
@@ -88,14 +88,14 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ```  
   
 ### <a name="parameters"></a>参数  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  对安全描述符的引用。  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。  
   
 ### <a name="remarks"></a>备注  
- 此方法用于构造函数初始化`CSecurityAttributes`对象。  
+ 构造函数使用此方法以初始化`CSecurityAttributes`对象。  
   
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   

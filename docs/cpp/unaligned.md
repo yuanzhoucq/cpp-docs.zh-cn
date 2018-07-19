@@ -1,5 +1,5 @@
 ---
-title: __unaligned |Microsoft 文档
+title: __unaligned |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420898"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940408"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Microsoft 专用**。 声明带有 `__unaligned` 修饰符的指针时，编译器将假定该指针处理未对齐的数据。 因此，相应平台的代码生成以处理未对齐的读取和写入通过指针。
+**特定于 Microsoft**。 当声明的指针 **__unaligned**修饰符，编译器将假定该指针处理未对齐的数据。 因此，相应平台的代码生成，以处理未对齐的读取和写入通过指针。
 
 ## <a name="remarks"></a>备注
 
-此修饰符描述该指针; 寻址的数据的对齐方式指针本身被假定对齐。
+此修饰符描述所处理的指针; 的数据的对齐方式指针本身被假定对齐。
 
-必要条件`__unaligned`关键字因平台和环境。 未能将相应地标记数据可以导致范围从性能损失到硬件故障的问题。 `__unaligned`修饰符不适合 x86 平台。
+偶尔 **__unaligned**关键字因平台和环境。 未能将适当地标记数据可能会导致性能损失范围到硬件故障的问题。 **__Unaligned**修饰符不能用于 x86 平台。
 
 有关对齐的详细信息，请参阅：
 

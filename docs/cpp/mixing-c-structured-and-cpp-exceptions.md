@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420101"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942037"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C（结构化）和 C++ 异常
-若要编写可移植性更高的代码，建议不要在 C++ 程序中使用结构化异常处理。 但是，有时可能需要使用 **/EHa** 进行编译并混合使用结构化异常和 C++ 源代码，同时需要一些用于处理这两种异常的设备。 由于结构化异常处理程序没有对象或类型化异常概念，因此无法处理 C++ 代码抛出的异常；但是，C++ **catch** 处理程序可以处理结构化异常。 同样的，C++ 异常处理语法（**try**、`throw`、**catch**）无法被 C 编译器认可，但结构化异常处理语法（`__try`、`__except`、`__finally`）受 C++编译器支持。  
+若要编写可移植性更高的代码，建议不要在 C++ 程序中使用结构化异常处理。 但是，有时可能需要使用 **/EHa** 进行编译并混合使用结构化异常和 C++ 源代码，同时需要一些用于处理这两种异常的设备。 由于结构化异常处理程序没有对象或类型化异常概念，因此无法处理 C++ 代码抛出的异常；但是，C++ **catch** 处理程序可以处理结构化异常。 为此类中，c + + 异常处理语法 (**尝试**，**引发**，**捕获**) 不接受的 C 编译器，但结构化的异常处理语法 (**__try**， **__except**， **__finally**) 都支持 c + + 编译器支持。  
   
  请参阅 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)，了解如何将结构化异常作为 C++ 异常来处理。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "32420101"
   
 1.  不能在同一函数中混合 C++ 异常和结构化异常。  
   
-2.  始终执行终止处理程序（`__finally` 块），甚至在引发异常后的展开过程中也是如此。  
+2.  终止处理程序 (**__finally**块) 将始终执行，即使引发异常后的展开过程。  
   
 3.  C++ 异常处理可以在所有使用 [/EH](../build/reference/eh-exception-handling-model.md) 编译器选项（此选项启用展开语义）进行编译的模块中捕获并保留展开语义。  
   

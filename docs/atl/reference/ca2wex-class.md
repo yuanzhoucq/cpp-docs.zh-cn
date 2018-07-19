@@ -1,5 +1,5 @@
 ---
-title: CA2WEX 类 |Microsoft 文档
+title: CA2WEX 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218e0d8f5e93a9e6c41ff855ff086cc7bfa6c766
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358741"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882814"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 类
-此类由字符串转换宏`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
+字符串转换宏 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W 使用此类。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,8 +41,8 @@ class CA2WEX
 ```  
   
 #### <a name="parameters"></a>参数  
- `t_nBufferLength`  
- 在转换过程中使用的缓冲区大小。 默认长度为 128 个字节。  
+ *t_nBufferLength*  
+ 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。  
   
 ## <a name="members"></a>成员  
   
@@ -63,31 +63,31 @@ class CA2WEX
   
 |名称|描述|  
 |----------|-----------------|  
-|[CA2WEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
-|[CA2WEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储已转换的字符串。|  
+|[CA2WEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
+|[CA2WEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储转换后的字符串。|  
   
 ## <a name="remarks"></a>备注  
- 除非需要额外功能，则使用`CA2TEX`， `CA2CTEX`， `CT2WEX`， `CT2CWEX`，或**CA2W**在代码中。  
+ 除非需要额外的功能，在代码中使用 CA2TEX、 CA2CTEX、 CT2WEX、 CT2CWEX 或 CA2W。  
   
- 此类包含固定大小静态缓冲区，用于存储转换的结果。 如果结果过大，无法放入静态缓冲区，则该类将使用 `malloc` 分配内存，并在对象超出范围时释放内存。 这样可确保，像文本转换宏可用在以前版本的 ATL，此类可以安全地在循环中使用和它不会溢出堆栈。  
+ 此类包含固定大小的静态缓冲区用于存储转换的结果。 如果结果太大而无法放入静态缓冲区，类分配内存使用**malloc**，当对象超出范围时释放内存。 这样可确保与不同的文本转换宏可在以前版本的 ATL，此类可以安全地在循环中使用和堆栈不会溢出。  
   
- 如果类尝试分配内存堆和失败，它将调用`AtlThrow`用参数**E_OUTOFMEMORY**。  
+ 如果类尝试分配内存堆和失败时，它将调用`AtlThrow`用 E_OUTOFMEMORY 自变量。  
   
- 默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。 如果你想要重写特定转换的该行为，请将代码页指定为类的构造函数的第二个参数。  
+ 默认情况下，ATL 转换类和宏用于当前线程的 ANSI 代码页转换。 如果你想要重写特定转换该行为，作为类的构造函数的第二个参数指定代码页。  
   
- 在此类基于以下宏：  
+ 下列宏基于此类：  
   
-- `CA2TEX`  
+- CA2TEX  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2WEX`  
+- CT2WEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
  以下 typedef 基于此类：  
   
-- **CA2W**  
+- CA2W  
   
  这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)。  
   
@@ -106,14 +106,14 @@ CA2WEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `psz`  
+ *psz*  
  要转换的文本字符串。  
   
- `nCodePage`  
- 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)有关详细信息。  
+ *nCodePage*  
+ 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)的更多详细信息。  
   
 ### <a name="remarks"></a>备注  
- 分配在转换过程中使用的缓冲区。  
+ 分配在转换过程中所使用的缓冲区。  
   
 ##  <a name="dtor"></a>  CA2WEX:: ~ CA2WEX  
  析构函数。  
@@ -123,17 +123,17 @@ CA2WEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放已分配的缓冲区。  
+ 释放分配的缓冲区。  
   
 ##  <a name="m_psz"></a>  CA2WEX::m_psz  
- 将源字符串存储数据成员。  
+ 将源字符串存储的数据成员。  
   
 ```
 LPWSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer  
- 静态缓冲区，用于存储已转换的字符串。  
+ 静态缓冲区，用于存储转换后的字符串。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
@@ -147,7 +147,7 @@ operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回文本字符串作为类型**LPWSTR。**  
+ 返回文本字符串，键入 LPWSTR。  
   
 ## <a name="see-also"></a>请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   

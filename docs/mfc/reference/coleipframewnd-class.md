@@ -1,5 +1,5 @@
 ---
-title: COleIPFrameWnd 类 |Microsoft 文档
+title: COleIPFrameWnd 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040020"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849141"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 类
 应用程序就地编辑窗口的基。  
@@ -50,13 +50,13 @@ class COleIPFrameWnd : public CFrameWnd
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|当以进行就地编辑在激活一项时，由框架调用。|  
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|由框架调用以重新定位的就地编辑窗口。|  
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|项激活进行就地编辑时由框架调用。|  
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|由框架调用以重新定位就地编辑窗口。|  
   
 ## <a name="remarks"></a>备注  
- 此类创建和位置控件条容器应用程序的文档窗口中。 它还可以通过嵌入生成的通知[COleResizeBar](../../mfc/reference/coleresizebar-class.md)对象时用户的就地编辑窗口大小调整。  
+ 此类创建和位置控件容器应用程序的文档窗口中的条。 它还处理生成的嵌入通知[COleResizeBar](../../mfc/reference/coleresizebar-class.md)对象在用户调整的就地编辑窗口。  
   
- 有关详细信息使用`COleIPFrameWnd`，请参阅文章[激活](../../mfc/activation-cpp.md)。  
+ 有关使用的详细信息`COleIPFrameWnd`，请参阅文章[激活](../../mfc/activation-cpp.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -73,7 +73,7 @@ class COleIPFrameWnd : public CFrameWnd
  **标头：** afxole.h  
   
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
- 构造`COleIPFrameWnd`对象并初始化其现有状态信息，它存储在类型的结构**OLEINPLACEFRAMEINFO**。  
+ 构造`COleIPFrameWnd`对象并初始化其就地状态信息，它存储在类型 OLEINPLACEFRAMEINFO 的结构。  
   
 ```  
 COleIPFrameWnd();
@@ -83,7 +83,7 @@ COleIPFrameWnd();
  有关详细信息，请参阅[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) Windows SDK 中。  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
- 框架调用`OnCreateControlBars`函数时进行就地编辑在激活一项。  
+ 框架将调用`OnCreateControlBars`时进行就地编辑激活某个项的功能。  
   
 ```  
 virtual BOOL OnCreateControlBars(
@@ -98,19 +98,19 @@ virtual BOOL OnCreateControlBars(
   
 ### <a name="parameters"></a>参数  
  *pWndFrame*  
- 到容器应用程序的框架窗口的指针。  
+ 向容器应用程序的框架窗口的指针。  
   
  *pWndDoc*  
- 指向容器的文档级窗口的指针。 可以是**NULL**如果容器是 SDI 应用程序。  
+ 指向容器的文档级别窗口的指针。 如果容器是 SDI 应用程序，可以为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 成功; 则为非零否则为为 0。  
+ 非零值; 如果成功否则为为 0。  
   
 ### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。 重写此函数以执行任何所需控件条创建时的特殊处理。  
+ 默认实现不执行任何操作。 重写此函数可执行创建条形图控件时所需任何特殊处理。  
   
 ##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
- 框架调用`RepositionFrame`成员函数来设置控件条布局和重新定位的就地编辑窗口，因此它是可见。  
+ 框架将调用`RepositionFrame`版式控件条和重新定位就地编辑窗口，因此它是可见的成员函数。  
   
 ```  
 virtual void RepositionFrame(
@@ -120,16 +120,16 @@ virtual void RepositionFrame(
   
 ### <a name="parameters"></a>参数  
  *lpPosRect*  
- 指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前位置坐标，以像素为单位，相对于工作区。  
+ 指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前位置坐标，以像素为单位，相对于客户端区域。  
   
  *lpClipRect*  
- 指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前剪辑矩形坐标，以像素为单位，相对于工作区。  
+ 指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前剪辑矩形坐标，以像素为单位，相对于客户端区域。  
   
 ### <a name="remarks"></a>备注  
- 在容器窗口中的控件条布局不同于执行的非 OLE 框架窗口。 非 OLE 框架窗口计算的控件条和从给定的框架窗口大小，如下所示调用其他对象的位置[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 客户端区域是其余后减去控件条和其他对象的空间。 A`COleIPFrameWnd`窗口，另一方面，确定工具栏位置根据给定的工作区。 换而言之， `CFrameWnd::RecalcLayout` "发件人的外部，"起作用，而`COleIPFrameWnd::RepositionFrame`有效"发件人括号外的顺序。"  
+ 在容器窗口中的控件条的布局不同于执行的非 OLE 框架窗口。 非 OLE 框架窗口计算的位置控件条和其他对象从给定的框架窗口大小，如下所示调用[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 客户端区域是什么仍后减去控件条和其他对象的空间。 一个`COleIPFrameWnd`窗口中，但是，根据给定的工作区定位工具栏。 换而言之， `CFrameWnd::RecalcLayout` "从在中，外部"起作用，而`COleIPFrameWnd::RepositionFrame`工作原理"从内到外。"  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
  [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)

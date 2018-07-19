@@ -1,5 +1,5 @@
 ---
-title: __restrict |Microsoft 文档
+title: __restrict |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943045"
 ---
 # <a name="restrict"></a>__restrict
-如 **__declspec ([限制](../cpp/restrict.md))** 修饰符，`__restrict`关键字指示某个符号是否不在当前范围中的有别名。 `__restrict` 关键字与 `__declspec ( restrict )` 修饰符在下列方面不同：  
+像 **__declspec ([限制](../cpp/restrict.md))** 修饰符 **__restrict**关键字指示某个符号未在当前作用域中的指定。 **__Restrict**关键字不同于`__declspec ( restrict )`修饰符在以下方面：  
   
--   `__restrict` 关键字仅对变量有效，而 `__declspec ( restrict )` 仅对函数声明和函数定义有效。  
+-   **__Restrict**关键字是仅在变量上有效和`__declspec ( restrict )`仅适用于函数声明和定义。  
   
--   `__restrict` 类似于 C99 规范中的 `restrict`，但 `__restrict` 可在 C++ 或 C 程序中使用。  
+-   **__restrict**类似于**限制**于 C99 规范中，但 **__restrict**可以在 c + + 或 C 程序中使用。  
   
--   使用 `__restrict` 时，编译器将不会传播变量的非别名属性。 即，如果你向非 `__restrict` 变量分配 `__restrict` 变量，则编译器仍允许非 __restrict 变量使用别名。 这与 C99 规范中的 `restrict` 关键字的行为不同。  
+-   当 **__restrict**是使用，编译器将不会传播变量的非别名属性。 也就是说，如果将分配 **__restrict**变量为非 **__restrict**变量时，编译器仍允许非 __restrict 变量使用别名。 这是不同的行为**限制**C99 规范中的关键字。  
   
  通常，如果你影响整个函数的行为，则使用 `__declspec ( restrict )` 要好过使用关键字。  
   
- 在 Visual Studio 2015 及更高版本中，可以对 C++ 引用使用 `__restrict`。  
+ 在 Visual Studio 2015 及更高版本， **__restrict**可应用于 c + + 引用。  
   
 > [!NOTE]
->  此外具有的变量上使用时[易失性](../cpp/volatile-cpp.md)关键字，`volatile`将优先。  
+>  此外具有变量上使用时[可变](../cpp/volatile-cpp.md)关键字**易失性**将优先。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // __restrict_keyword.c  
 // compile with: /LD  
 // In the following function, declare a and b as disjoint arrays  

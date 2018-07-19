@@ -1,5 +1,5 @@
 ---
-title: 附加终止注意事项 |Microsoft 文档
+title: 附加终止注意事项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b634c7c792d4462f96f022f223d0b1eec2a750ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408141"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941244"
 ---
 # <a name="additional-termination-considerations"></a>附加终止注意事项
-你可以通过使用终止 C++ 程序**退出**， `return`，或**中止**。 您可以使用 `atexit` 函数添加退出处理。 以下几节中讨论了这几个方面。  
+可以通过使用终止 c + + 程序**退出**，**返回**，或**中止**。 您可以使用 `atexit` 函数添加退出处理。 以下几节中讨论了这几个方面。  
   
 ## <a name="see-also"></a>请参阅  
  [启动和终止](../cpp/startup-and-termination-cpp.md)

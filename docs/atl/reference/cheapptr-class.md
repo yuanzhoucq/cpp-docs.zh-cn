@@ -1,5 +1,5 @@
 ---
-title: CHeapPtr 类 |Microsoft 文档
+title: CHeapPtr 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06c66f274ab2302689afdeda195c735d7a6e5069
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359938"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884488"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 类
 用于管理堆指针的智能指针类。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 要存储在堆的对象类型。  
+ *T*  
+ 要存储在堆上的对象类型。  
   
- `Allocator`  
+ *分配器*  
  要使用的内存分配类。  
   
 ## <a name="members"></a>成员  
@@ -59,17 +59,17 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
   
 |名称|描述|  
 |----------|-----------------|  
-|[CHeapPtr::Allocate](#allocate)|调用此方法以在存储对象的堆上分配内存。|  
+|[CHeapPtr::Allocate](#allocate)|调用此方法来存储对象在堆上分配内存。|  
 |[CHeapPtr::Reallocate](#reallocate)|调用此方法以重新分配堆上的内存。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CHeapPtr::operator =](#operator_eq)|赋值运算符中。|  
+|[CHeapPtr::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- `CHeapPtr` 派生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)和默认情况下使用的 CRT 例程 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 分配和释放内存。 类[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可能用于构造的堆指针的列表。 另请参阅[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它使用 COM 内存分配例程。  
+ `CHeapPtr` 派生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) ，并默认情况下使用的 CRT 例程 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 来分配和释放内存。 该类[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可能用于构造的堆指针的列表。 另请参阅[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它使用 COM 内存分配例程。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -80,21 +80,21 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  **标头：** atlcore.h  
   
 ##  <a name="allocate"></a>  CHeapPtr::Allocate  
- 调用此方法以在存储对象的堆上分配内存。  
+ 调用此方法来存储对象在堆上分配内存。  
   
 ```
 bool Allocate(size_t nElements = 1) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nElements`  
- 用于计算要分配的内存量的元素数目。 默认值为 1。  
+ *nElements*  
+ 用于计算要分配的内存量的元素数。 默认值为 1。  
   
 ### <a name="return-value"></a>返回值  
  如果内存已成功，则返回 true 分配，失败的 false。  
   
 ### <a name="remarks"></a>备注  
- 用于存储堆上预留足够内存的分配器例程*nElement*构造函数中定义的类型的对象。  
+ 用于保留足够的内存来存储在堆上分配器例程*nElement*构造函数中定义的类型的对象。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
@@ -109,11 +109,11 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
- 现有的堆指针或`CHeapPtr`。  
+ *p*  
+ 现有堆指针或`CHeapPtr`。  
   
 ### <a name="remarks"></a>备注  
- （可选） 可以使用现有的指针，创建堆指针或`CHeapPtr`对象。 如果是这样，新`CHeapPtr`对象负责管理的新指针和资源。  
+ （可选） 可以使用的现有指针创建堆指针或`CHeapPtr`对象。 如果是这样，新`CHeapPtr`对象负责管理的新指针和资源。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
@@ -127,7 +127,7 @@ CHeapPtr<T, Allocator>& operator=(
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  一个现有的 `CHeapPtr` 对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -144,7 +144,7 @@ bool Reallocate(size_t nElements) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nElements`  
+ *nElements*  
  新的用于计算要分配的内存量的元素数。  
   
 ### <a name="return-value"></a>返回值  

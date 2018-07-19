@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943021"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>递增和递减运算符重载 (C++)
 由于递增和递减运算符各有两个变量，因此它们属于一个特殊类别：  
@@ -30,14 +31,14 @@ ms.lasthandoff: 05/03/2018
   
 -   前置递减和后置递减  
   
- 编写重载的运算符函数时，为这些运算符的前缀和后缀版本实现单独的版本很有用。 若要区分这两者，请遵循以下规则：运算符的前缀形式与声明任何其他一元运算符的方式完全相同；后缀形式接受 `int` 类型的其他参数。  
+ 编写重载的运算符函数时，为这些运算符的前缀和后缀版本实现单独的版本很有用。 若要区分这两个，请遵循以下规则： 运算符的前缀形式被声明为任何其他一元运算符; 完全相同的方式后缀形式接受类型的其他自变量**int**。  
   
 > [!NOTE]
->  当为递增或递减运算符的前缀形式指定重载运算符时，其他参数的类型必须是 `int`；指定任何其他类型都将产生错误。  
+>  当递增或递减运算符的前缀形式指定重载的运算符，其他参数必须是类型**int**; 指定任何其他类型都将产生错误。  
   
  以下示例显示如何为 `Point` 类定义前缀和后缀递增和递减运算符：  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -98,16 +99,16 @@ int main()
   
  可使用以下函数头在文件范围中（全局）定义同一运算符：  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- 表示递增或递减运算符的后缀形式的 `int` 类型的参数不常用于传递参数。 它通常包含值 0。 但是，可按以下方式使用它：  
+ 类型的参数**int**表示的后缀形式的递增或递减运算符不常使用将参数传递。 它通常包含值 0。 但是，可按以下方式使用它：  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  

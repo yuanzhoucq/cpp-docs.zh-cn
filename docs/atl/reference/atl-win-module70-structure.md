@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 结构 |Microsoft 文档
+title: _ATL_WIN_MODULE70 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256075"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883029"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 结构
-使用窗口化代码在 atl。  
+使用开窗中的代码 atl。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ struct _ATL_WIN_MODULE70 {
   
 ## <a name="members"></a>成员  
  `cbSize`  
- 结构，用于版本控制的大小。  
+ 用于版本控制的结构的大小。  
   
  `m_csWindowCreate`  
- 用于序列化对窗口注册代码的访问。 Atl。 在内部使用  
+ 用于序列化窗口注册代码的访问权限。 在内部由 atl。  
   
- **m_pCreateWndList**  
- 用于将 windows 绑定到它们的对象。 Atl。 在内部使用  
+ `m_pCreateWndList`  
+ 用于将 windows 绑定到它们的对象。 在内部由 atl。  
   
- **m_rgWindowClassAtoms**  
- 用于跟踪窗口类注册，以便它们可以在终止正确注销。 Atl。 在内部使用  
+ `m_rgWindowClassAtoms`  
+ 用于跟踪窗口类注册，以便它们可以成为在终止时未正确注册。 在内部由 atl。  
   
 ## <a name="remarks"></a>备注  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)指的 typedef `_ATL_WIN_MODULE70`。  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定义的 typedef 为`_ATL_WIN_MODULE70`。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h  

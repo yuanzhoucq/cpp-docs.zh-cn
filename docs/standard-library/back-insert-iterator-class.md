@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958615"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 类
 
@@ -40,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 后端的哪些元素的容器的类型是由插入`back_insert_iterator`。
+*容器*后端的哪些元素的容器的类型为通过插入`back_insert_iterator`。
 
 ## <a name="remarks"></a>备注
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 容器的`back_insert_iterator`是插入元素插入。
+*_Cont*容器的`back_insert_iterator`是要插入到元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>参数
 
-`val` 要插入到容器的值。
+*val*要插入到容器的值。
 
 ### <a name="return-value"></a>返回值
 

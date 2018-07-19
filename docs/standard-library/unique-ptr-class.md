@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862002"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961550"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 类
 
@@ -104,13 +104,17 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`Right` A `unique_ptr`。
+右侧  
+ `unique_ptr`。
 
-`Nptr` `rvalue`类型的`std::nullptr_t`。
+*Nptr*  
+ 类型为 `rvalue` 的 `std::nullptr_t`。
 
-`Ptr` A `pointer`。
+*ptr*  
+ `pointer`。
 
-`Deleter` A`deleter`函数绑定到`unique_ptr`。
+*删除器*  
+ 绑定到 `deleter` 的 `unique_ptr` 函数。
 
 ## <a name="exceptions"></a>异常
 
@@ -124,7 +128,7 @@ public:
 
 `unique_ptr` 唯一管理资源。 每个 `unique_ptr` 对象均存储一个指向其拥有的对象的指针，或存储一个 null 指针。 资源只能由一个 `unique_ptr` 对象拥有；当拥有特定资源的 `unique_ptr` 对象被销毁后，资源将释放。 `unique_ptr` 对象可以移动，但不能复制；有关详细信息，请参阅[右值引用声明符 &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-资源通过调用 `deleter` 类型的已存储 `Del` 对象来释放，此对象知道如何为特定 `unique_ptr` 分配资源。 默认值`deleter``default_delete<T>`假定，资源指向`ptr`用分配`new`，并且它可以通过调用释放`delete _Ptr`。 （部分专用化 `unique_ptr<T[]>` 管理通过 `new[]` 分配的数组对象，并具有经过专用化以调用 delete[] `deleter` 的默认 `default_delete<T[]>` `ptr`。）
+资源通过调用 `deleter` 类型的已存储 `Del` 对象来释放，此对象知道如何为特定 `unique_ptr` 分配资源。 默认值`deleter``default_delete<T>`假定指向到的资源的`ptr`分配带有`new`，并可以通过调用释放`delete _Ptr`。 （部分专用化 `unique_ptr<T[]>` 管理通过 `new[]` 分配的数组对象，并具有经过专用化以调用 delete[] `deleter` 的默认 `default_delete<T[]>` `ptr`。）
 
 指向拥有的资源的存储指针 `stored_ptr` 具有类型 `pointer`。 如果已定义，此为 `Del::pointer`，如果未定义，则为 `T *`。 如果 `deleter` 无状态，则存储的 `stored_deleter` 对象 `deleter` 不占用任何空间。 请注意，`Del` 可以为引用类型。
 
@@ -158,7 +162,7 @@ public:
 
 |运算符|描述|
 |-|-|
-|`operator bool`|此运算符返回可转换为 `bool` 的类型的值。 当 `bool` 时，转换为 `true` 的结果为 `get() != pointer()`，否则为 `false`。|
+|**operator bool**|该运算符返回可转换为类型的值**bool**。 为转换的结果**bool**是**true**时`get() != pointer()`; 否则为**false**。|
 |`operator->`|成员函数返回 `stored_ptr`。|
 |`operator*`|成员函数返回 `*stored_ptr`。|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|将 `unique_ptr`（或 `pointer-type`）的值分配给当前 `unique_ptr`。|
@@ -252,7 +256,7 @@ typedef T1 pointer;
 
 ## <a name="release"></a>  unique_ptr::release
 
-释放给调用方返回的存储指针的所有权，并将存储的指针值设置为`nullptr`。
+释放给调用方返回存储的指针的所有权并存储的指针值设置为**nullptr**。
 
 ```cpp
 pointer release();
@@ -315,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::reset
 
-取得指针参数的所有权，然后删除原始存储的指针。 如果新指针与原始存储指针相同，`reset`将删除指针并将存储的指针设置为`nullptr`。
+取得指针参数的所有权，然后删除原始存储的指针。 如果新指针与原始存储指针，相同`reset`删除指针并将存储的指针设置为**nullptr**。
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -326,13 +330,13 @@ void reset(nullptr_t ptr);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要取得所有权的资源的指针。|
+|*ptr*|指向要取得所有权的资源的指针。|
 
 ### <a name="remarks"></a>备注
 
-使用 `reset` 将 `unique_ptr` 拥有的存储[指针](#pointer)更改为 `ptr`，然后删除原始存储指针。 如果 `unique_ptr` 不为空，`reset` 将调用原始存储指针上的 [get_deleter](#get_deleter) 返回的删除器函数。
+使用`reset`若要更改存储[指针](#pointer)归`unique_ptr`到*ptr* ，然后删除原始存储的指针。 如果 `unique_ptr` 不为空，`reset` 将调用原始存储指针上的 [get_deleter](#get_deleter) 返回的删除器函数。
 
-因为`reset` 首先将存储新指针 `ptr`，然后删除原始存储的指针，如果与原始存储指针相同，则`reset` 可以立即删除`ptr`。
+因为`reset`首先将存储新指针*ptr*，然后删除原始存储的指针，很可能`reset`若要立即删除*ptr*如果它是与原始相同存储的指针。
 
 ## <a name="swap"></a>  unique_ptr::swap
 
@@ -344,7 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>参数
 
-`right` A`unique_ptr`用于交换指针。
+*right*  
+ 用于交换指针的 `unique_ptr`。
 
 ### <a name="remarks"></a>备注
 
@@ -377,15 +382,15 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要分配给 `unique_ptr.` 的资源的指针|
-|`_Deleter`|要分配给 `unique_ptr` 的 `deleter`。|
-|`right`|`unique_ptr` 的 `rvalue reference`，其中 `unique_ptr` 字段为分配给最近构造的 `unique_ptr` 的移动。|
+|*ptr*|指向要分配给 `unique_ptr.` 的资源的指针|
+|*_Deleter*|要分配给 `unique_ptr` 的 `deleter`。|
+|*right*|`unique_ptr` 的 `rvalue reference`，其中 `unique_ptr` 字段为分配给最近构造的 `unique_ptr` 的移动。|
 
 ### <a name="remarks"></a>备注
 
-前两个构造函数用于构造不管理任何资源的对象。 第三个构造函数用于将 `ptr` 存储到 `stored_ptr` 中。 第四个构造函数用于将 `ptr` 存储到 `stored_ptr` 中和将 `deleter` 存储到 `stored_deleter` 中。
+前两个构造函数用于构造不管理任何资源的对象。 第三个构造函数存储*ptr*中`stored_ptr`。 第四个构造函数存储*ptr*中`stored_ptr`并`deleter`中`stored_deleter`。
 
-第五个构造函数用于将 `ptr` 存储到 `stored_ptr` 中和将 `deleter` 移动到 `stored_deleter` 中。 第六和第七个构造函数用于将 `right.release()` 存储到 `stored_ptr` 中和将 `right.get_deleter()` 移动到 `stored_deleter` 中。
+第五个构造函数存储*ptr*中`stored_ptr`，并将移动`deleter`到`stored_deleter`。 第六和第七个构造函数用于将 `right.release()` 存储到 `stored_ptr` 中和将 `right.get_deleter()` 移动到 `stored_deleter` 中。
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
 

@@ -1,5 +1,5 @@
 ---
-title: __hook |Microsoft 文档
+title: __hook |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943033"
 ---
 # <a name="hook"></a>__hook
 将处理程序方法与事件关联。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      long __hook(  
+long __hook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -52,20 +53,20 @@ long __hook(
   
 -   托管事件： *SourceClass*是事件源类和*EventMethod*是事件。  
   
- `interface`  
- 要挂钩到的接口名称`receiver`，仅适用于在其中的 COM 事件接收器*layout_dependent*参数[event_receiver](../windows/event-receiver.md)属性是**true**.  
+ *interface*  
+ 要挂钩到的接口名*接收方*，仅适用于在其中 COM 事件接收器*layout_dependent*参数[event_receiver](../windows/event-receiver.md)属性是 **，则返回 true**。  
   
- *源*  
- 指向事件源的实例的指针。 根据代码`type`中指定**event_receiver**，*源*可以是以下之一：  
+ *source*  
+ 指向事件源的实例的指针。 根据代码`type`中指定`event_receiver`，*源*可以是以下之一：  
   
 -   本机事件源对象指针。  
   
--   **IUnknown**-基于指针 （COM 源）。  
+-   `IUnknown`-基于指针 （COM 源）。  
   
 -   托管对象指针（针对托管事件）。  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- 指向要挂钩到事件的事件处理程序方法的指针。 处理程序将指定为类的方法或对同一方法的引用；如果不指定类名称，则 `__hook` 假定该类是从中调用它的类。  
+ 指向要挂钩到事件的事件处理程序方法的指针。 作为方法的类或引用相同，则为指定的处理程序如果未指定类名 **__hook**假定该类是在其中进行调用。  
   
 -   本机 C++ 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
   
@@ -73,28 +74,28 @@ long __hook(
   
 -   托管事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
   
- `receiver`（可选）  
- 指向事件接收器类的实例的指针。 如果不指定接收器，则默认为在其中调用 `__hook` 的接收器类或结构。  
+ *接收方*（可选）  
+ 指向事件接收器类的实例的指针。 如果未指定接收方，默认值是接收方类或结构中其 **__hook**调用。  
   
 ## <a name="usage"></a>用法  
  可以在事件接收器类的外部的任何函数范围（包括 main）中使用。  
   
 ## <a name="remarks"></a>备注  
- 请使用事件接收器中的内部函数 `__hook` 将处理程序方法与事件方法关联或挂钩。 随后会在源引发指定事件时调用指定的事件处理程序。 可以将多个处理程序挂钩到单个事件，或将多个事件挂钩到单个处理程序。  
+ 使用内部函数 **__hook**事件接收器关联或挂钩与事件方法的处理程序方法中。 随后会在源引发指定事件时调用指定的事件处理程序。 可以将多个处理程序挂钩到单个事件，或将多个事件挂钩到单个处理程序。  
   
- `__hook` 有两种形式。 适用于在其中的 COM 事件接收器，使用具体而言，在大多数情况下，第一种 （四个形参） 形式*layout_dependent*参数[event_receiver](../windows/event-receiver.md)属性是**false**.  
+ 有两种形式的 **__hook**。 适用于 COM 事件接收器中，使用具体而言，在大多数情况下，第一种 （四个参数） 形式*layout_dependent*的参数[event_receiver](../windows/event-receiver.md)属性是**false**.  
   
- 在这些情况下，当在其中一个方法上激发事件前，不需要在接口中挂钩所有方法；只需挂钩处理事件的方法。 你可以使用的第二个 (two-argument) 形式`__hook`仅为 COM 事件接收器在其中 * layout_dependent ***= true**。  
+ 在这些情况下，当在其中一个方法上激发事件前，不需要在接口中挂钩所有方法；只需挂钩处理事件的方法。 可以使用的第二个 （两个参数） 窗体 **__hook**仅对在其中的 COM 事件接收器的 * layout_dependent ***= true**。  
   
- `__hook` 将返回一个长值。 非零返回值表示发生了错误（托管事件引发了异常）。  
+ **__hook**返回一个长整型值。 非零返回值表示发生了错误（托管事件引发了异常）。  
   
  编译器将检查是否存在事件以及事件签名是否与委托签名一致。  
   
- 除 COM 事件外，可以在事件接收器的外部调用 `__hook` 和 `__unhook`。  
+ 除 COM 事件 **__hook**并 **__unhook**外部事件接收器可以调用。  
   
- 使用 `__hook` 的替代方法是使用 += 运算符。  
+ 使用的替代方法 **__hook**是使用 + = 运算符。  
   
- 有关编码的新语法中的托管的事件的信息，请参阅[事件](../windows/event-cpp-component-extensions.md)。  
+ 有关新语法中编码托管的事件的信息，请参阅[事件](../windows/event-cpp-component-extensions.md)。  
   
 > [!NOTE]
 >  模板类或结构不能包含事件。  

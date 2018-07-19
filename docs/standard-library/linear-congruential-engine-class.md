@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864068"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958274"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 类
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>参数
 
-`UIntType` 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-`A` **乘数**。 **前置条件**：请参阅“备注”部分。
+*一个***乘数**。 **前置条件**：请参阅“备注”部分。
 
-`C` **递增**。 **前置条件**：请参阅“备注”部分。
+*C* **增量**。 **前置条件**：请参阅“备注”部分。
 
-`M` **取模**。 **前置条件**：请参阅“备注”。
+*M* **取模**。 **前置条件**：请参阅“备注”。
 
 ## <a name="members"></a>成员
 
@@ -80,9 +80,9 @@ class linear_congruential_engine{
 
 此引擎使用重复关系( *period*) `x(i) = (A * x(i-1) + C) mod M` 产生用户指定的无符号整型值。
 
-如果 `M` 为零，则用于此取模运算的值是 `numeric_limits<result_type>::max() + 1`。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
+如果*M*为零，用于此取模运算的值是`numeric_limits<result_type>::max() + 1`。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
 
-如果 `M` 不为零，则模板参数 `A` 和 `C` 的值必须小于 `M`。
+如果*M*不为零，模板自变量的值*A*并*C*必须是小于*M*。
 
 虽然可以从此引擎直接构造生成器，但也可以使用其中一个预定义的 typedef。
 

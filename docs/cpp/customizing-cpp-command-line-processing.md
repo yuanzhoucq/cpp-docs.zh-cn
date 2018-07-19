@@ -24,20 +24,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2691ba3b83cd536c6f0a152bf4de2a855f81e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411106"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939047"
 ---
 # <a name="customizing-c-command-line-processing"></a>自定义 C++ 命令行处理
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- 如果程序不采用命令行自变量，则可以通过取消使用执行命令行处理的库例程来节省少量空间。 此例程称为 **_setargv**和中所述[通配符扩展](../cpp/wildcard-expansion.md)。 若要禁止使用它，请定义不执行任何操作中包含的文件的例程**主要**函数，并将其命名 **_setargv**。 调用 **_setargv**然后按照你定义满足 **_setargv**，并且不加载库版本。  
+ 如果程序不采用命令行自变量，则可以通过取消使用执行命令行处理的库例程来节省少量空间。 此例程称为`_setargv`和中所述[通配符扩展](../cpp/wildcard-expansion.md)。 若要禁止使用，定义中包含的文件不起作用的例程`main`函数，并将其命名`_setargv`。 在调用`_setargv`然后满足您的定义的`_setargv`，并且不会加载库版本。  
   
- 同样，如果你永远不会访问环境表通过`envp`自变量，你可以提供你自己的空例程用于代替了 **_setenvp**，环境处理例程。 正如使用 **_setargv**函数， **_setenvp**必须声明为**extern"C"**。  
+ 同样，如果永远不会访问环境表通过`envp`参数，你可以提供你自己的空例程来代替使用`_setenvp`，环境处理例程。 正如使用`_setargv`函数，`_setenvp`必须声明为**extern"C"**。  
   
- 程序可以调用**spawn**或`exec`系列 C 运行时库中的例程。 如果是这样，则不应取消环境处理例程，因为可使用此例程将环境从父进程传递到子进程中。  
+ 您的程序可能会使对调用`spawn`或`exec`系列中的 C 运行时库例程。 如果是这样，则不应取消环境处理例程，因为可使用此例程将环境从父进程传递到子进程中。  
   
 **结束 Microsoft 专用**  
   

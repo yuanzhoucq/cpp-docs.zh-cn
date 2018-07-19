@@ -1,5 +1,5 @@
 ---
-title: CProgressCtrl 类 |Microsoft 文档
+title: CProgressCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079385"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850152"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -80,30 +80,30 @@ class CProgressCtrl : public CWnd
   
 |名称|描述|  
 |----------|-----------------|  
-|[Cprogressctrl:: Create](#create)|创建进度栏控件并将其附加到`CProgressCtrl`对象。|  
-|[CProgressCtrl::CreateEx](#createex)|与指定的 Windows 扩展样式创建进度控件并将其附加到`CProgressCtrl`对象。|  
-|[CProgressCtrl::GetBarColor](#getbarcolor)|获取当前进度栏控件的进度指示器栏的颜色。|  
+|[Cprogressctrl:: Create](#create)|创建进度栏控件，并将其附加到`CProgressCtrl`对象。|  
+|[CProgressCtrl::CreateEx](#createex)|使用指定的 Windows 扩展样式创建进度控件，并将其附加到`CProgressCtrl`对象。|  
+|[CProgressCtrl::GetBarColor](#getbarcolor)|获取当前进度栏控件进度指示符栏的颜色。|  
 |[CProgressCtrl::GetBkColor](#getbkcolor)|获取当前进度栏的背景色。|  
 |[CProgressCtrl::GetPos](#getpos)|获取进度栏的当前位置。|  
 |[CProgressCtrl::GetRange](#getrange)|获取进度栏控件的范围的下限和上限限制。|  
 |[Cprogressctrl:: Getstate](#getstate)|获取当前进度栏控件的状态。|  
 |[CProgressCtrl::GetStep](#getstep)|检索当前进度栏控件的进度栏的步骤增量。|  
-|[CProgressCtrl::OffsetPos](#offsetpos)|进度栏控件的当前位置前移以指定的增量和重绘滚动条来反映新的位置。|  
-|[CProgressCtrl::SetBarColor](#setbarcolor)|设置当前进度栏控件中的进度指示器栏的颜色。|  
+|[CProgressCtrl::OffsetPos](#offsetpos)|进度栏控件的当前位置提升以指定的增量并重绘条以反映新的位置。|  
+|[CProgressCtrl::SetBarColor](#setbarcolor)|设置当前进度栏控件中的进度指示符栏的颜色。|  
 |[CProgressCtrl::SetBkColor](#setbkcolor)|设置进度栏的背景色。|  
 |[CProgressCtrl::SetMarquee](#setmarquee)|关闭当前进度栏控件的字幕模式打开或关闭。|  
-|[CProgressCtrl::SetPos](#setpos)|设置当前进度栏控件位置和重绘滚动条来反映新的位置。|  
-|[CProgressCtrl::SetRange](#setrange)|设置进度栏控件的最小和最大范围和重绘滚动条来反映新的范围。|  
+|[CProgressCtrl::SetPos](#setpos)|设置当前进度栏控件位置并重新绘制条以反映新的位置。|  
+|[CProgressCtrl::SetRange](#setrange)|设置进度栏控件的最小值和最大范围并重新绘制条以反映新的范围。|  
 |[CProgressCtrl::SetState](#setstate)|设置当前进度栏控件的状态。|  
 |[CProgressCtrl::SetStep](#setstep)|指定进度栏控件的步骤增量。|  
-|[CProgressCtrl::StepIt](#stepit)|进度栏控件的当前位置前移步骤增量 (请参阅[SetStep](#setstep)) 和重绘滚动条来反映新的位置。|  
+|[CProgressCtrl::StepIt](#stepit)|进度栏控件的当前位置提升步骤增量 (请参阅[SetStep](#setstep)) 并重新绘制条以反映新的位置。|  
   
 ## <a name="remarks"></a>备注  
- 进度栏控件是操作的一个窗口，其中应用程序可用于指示较长的进度。 它包含一个矩形，它逐渐填充，从左到右，用系统突出颜色显示操作进度。  
+ 进度栏控件是一个窗口，其中应用程序可以使用它来指示漫长操作的进度。 它包含一个矩形，逐渐填充来显示，从左到右，与系统突出显示颜色操作进度。  
   
- 进度栏控件具有范围和当前的位置。 范围表示该操作的总持续时间，当前的位置表示应用程序已完成该操作的进度。 窗口过程使用范围和当前的位置来确定的进度栏填充的突出显示颜色的百分比。 范围和当前的位置值表示为有符号整数，因为当前的位置值的可能范围是从-2147483648 到 2147483647 之间 （含）。  
+ 进度栏控件具有一个范围和当前的位置。 范围表示该操作的总持续时间和当前的位置表示应用程序已完成该操作方面的进度。 窗口过程使用的范围和当前的位置来确定的进度栏，以突出显示颜色填充百分比。 范围和当前的位置值表示为有符号整数，因为当前的位置值的可能范围是从-2,147,483,648 到 2,147,483,647 非独占。  
   
- 有关详细信息使用`CProgressCtrl`，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CProgressCtrl](../../mfc/using-cprogressctrl.md)。  
+ 有关使用的详细信息`CProgressCtrl`，请参阅[控件](../../mfc/controls-mfc.md)并[使用 CProgressCtrl](../../mfc/using-cprogressctrl.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,13 +125,13 @@ CProgressCtrl();
 ```  
   
 ### <a name="remarks"></a>备注  
- 后构造`CProgressCtrl`对象，请调用`CProgressCtrl::Create`创建进度栏控件。  
+ 构造后`CProgressCtrl`对象，请调用`CProgressCtrl::Create`创建进度栏控件。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
 ##  <a name="create"></a>  Cprogressctrl:: Create  
- 创建进度栏控件并将其附加到`CProgressCtrl`对象。  
+ 创建进度栏控件，并将其附加到`CProgressCtrl`对象。  
   
 ```  
 virtual BOOL Create(
@@ -143,32 +143,32 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，到控件：  
+ 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
   
-- `PBS_VERTICAL` 显示垂直进度信息、 上到下。 如果没有此标志，进度栏控件到右显示水平、 左侧。  
+- PBS_VERTICAL 显示垂直进度的信息，请从上到下。 如果没有此标志，进度栏控件可显示水平、 左到右。  
   
-- `PBS_SMOOTH` 显示逐步区平滑填写进度栏控件。 如果没有此标志，该控件将填充块。  
+- PBS_SMOOTH 显示逐步，平滑填充进度栏控件。 如果没有此标志，该控件将填充与块中。  
   
  *rect*  
- 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为控件必须是子窗口，指定的坐标是相对于工作区*pParentWnd*。  
+ 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为该控件必须是子窗口，指定的坐标是相对于客户端区域*pParentWnd*。  
   
  *pParentWnd*  
- 通常指定进度栏控件的父窗口`CDialog`。 它不能**NULL。**  
+ 通常指定进度栏控件的父窗口`CDialog`。 它不能为 NULL。  
   
  *nID*  
  指定进度栏控件的 id。  
   
 ### <a name="return-value"></a>返回值  
- **TRUE**如果`CProgressCtrl`对象是已成功创建; 否则为**FALSE**。  
+ 如果`CProgressCtrl`对象是已成功创建; 否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 构造`CProgressCtrl`两个步骤中的对象。 首先，调用的构造函数，这将创建`CProgressCtrl`对象，，然后调用`Create`，这将创建进度栏控件。  
+ 构造`CProgressCtrl`两个步骤中的对象。 首先，调用构造函数中，这会创建`CProgressCtrl`对象，，然后调用`Create`，这将创建进度栏控件。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
   
 ##  <a name="createex"></a>  CProgressCtrl::CreateEx  
- 创建控件 （子窗口），并将其与关联`CProgressCtrl`对象。  
+ 创建控件 （子窗口），并将其与`CProgressCtrl`对象。  
   
 ```  
 virtual BOOL CreateEx(
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定进度栏控件的样式。 应用中所述的窗口样式的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -199,20 +199,20 @@ virtual BOOL CreateEx(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+ 使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
 ##  <a name="getbarcolor"></a>  CProgressCtrl::GetBarColor  
- 获取当前进度栏控件的进度指示器栏的颜色。  
+ 获取当前进度栏控件进度指示符栏的颜色。  
   
 ```  
 COLORREF GetBarColor() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 当前进度栏的颜色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，或`CLR_DEFAULT`如果进度指示器栏颜色为默认颜色。  
+ 当前进度栏的颜色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示器栏颜色为默认颜色。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)消息，Windows SDK 中所述。  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  获取当前进度栏的背景色。  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 当前进度栏的背景色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。  
+ 表示为当前进度栏的背景色[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)消息，Windows SDK 中所述。  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  检索进度栏的当前位置。  
@@ -238,7 +238,7 @@ int GetPos();
  进度栏控件的位置。  
   
 ### <a name="remarks"></a>备注  
- 进度栏控件的位置不在屏幕上，在的物理位置但而是会之间上限和下限范围表明在[SetRange](#setrange)。  
+ 进度栏控件的位置不在屏幕上的物理位置，但而不是为之间上限和下限范围所示[SetRange](#setrange)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
@@ -260,7 +260,7 @@ void GetRange(
  对接收进度栏控件的上限的整数的引用。  
   
 ### <a name="remarks"></a>备注  
- 此函数将下限和上限限制的值复制到引用的整数*nLower*和*nUpper*分别。  
+ 此函数将下限和上限限制的值复制到引用的整数*nLower*并*nUpper*分别。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -273,16 +273,16 @@ int GetState() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 当前的进度栏控件，可以为以下值之一的状态：  
+ 当前的进度栏控件，这是以下值之一的状态：  
   
 |“值”|状态|  
 |-----------|-----------|  
-|`PBST_NORMAL`|正在进行|  
-|`PBST_ERROR`|Error|  
-|`PBST_PAUSED`|已暂停|  
+|PBST_NORMAL|正在进行|  
+|PBST_ERROR|Error|  
+|PBST_PAUSED|已暂停|  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -302,12 +302,12 @@ int GetStep() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 进度栏步骤增量。  
+ 进度栏的步骤增量。  
   
 ### <a name="remarks"></a>备注  
- 步骤增量是依据量对的调用[CProgressCtrl::StepIt](#stepit)增加进度栏的当前位置。  
+ 步骤增量是所根据的数量对的调用[CProgressCtrl::StepIt](#stepit)增加进度栏的当前位置。  
   
- 此方法可发送[PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -320,7 +320,7 @@ int GetStep() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- 进度栏控件的当前位置前移由指定的增量*nPos*和重绘滚动条来反映新的位置。  
+ 进度栏控件的当前位置提升由指定的增量*nPos*并重新绘制条以反映新的位置。  
   
 ```  
 int OffsetPos(int nPos);
@@ -328,16 +328,16 @@ int OffsetPos(int nPos);
   
 ### <a name="parameters"></a>参数  
  *nPos*  
- 要前移的位置的量。  
+ 若要提升位置的量。  
   
 ### <a name="return-value"></a>返回值  
- 进度栏控件的前一个位置。  
+ 进度栏控件的以前的位置。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
 ##  <a name="setbarcolor"></a>  CProgressCtrl::SetBarColor  
- 设置当前进度栏控件中的进度指示器栏的颜色。  
+ 设置当前进度栏控件中的进度指示符栏的颜色。  
   
 ```  
 COLORREF SetBarColor(COLORREF clrBar);
@@ -347,15 +347,15 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示器栏的新颜色。 指定`CLR_DEFAULT`导致进度栏，以使用其默认颜色。|  
+|[in]*clrBar*|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
- 进度指示器栏，以前的颜色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，或`CLR_DEFAULT`如果进度指示器栏的颜色为默认颜色。  
+ 前一种颜色的进度指示条，表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示符栏的颜色为默认颜色。  
   
 ### <a name="remarks"></a>备注  
- `SetBarColor`方法会设置进度栏颜色才[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)][主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)不起作用。  
+ `SetBarColor`方法设置进度栏颜色才[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)][主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)不起作用。  
   
- 此方法可发送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -376,10 +376,10 @@ COLORREF SetBkColor(COLORREF clrNew);
   
 ### <a name="parameters"></a>参数  
  *clrNew*  
- A **COLORREF**值，该值指定新的背景色。 指定`CLR_DEFAULT`值要用于进度栏的默认背景色。  
+ 一个 COLORREF 值，该值指定新背景色。 指定要用于进度栏的默认背景色的 CLR_DEFAULT 值。  
   
 ### <a name="return-value"></a>返回值  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示以前的背景颜色，或**CLR_DEFAULT**如果的背景色为默认颜色。  
+ [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示以前的背景色或 CLR_DEFAULT 如果背景色为默认颜色。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -397,16 +397,16 @@ BOOL SetMarquee(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fMarqueeMode*|`true` 若要打开选框模式，或`false`关闭字幕模式。|  
-|[in]*间隔*|以毫秒为单位的字幕动画的更新之间的时间。|  
+|[in]*fMarqueeMode*|设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|  
+|[in]*n 间隔*|以毫秒为单位的字幕动画的更新之间的时间。|  
   
 ### <a name="return-value"></a>返回值  
- 此方法始终返回 `true`。  
+ 此方法始终返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 当打开选框模式、 进度条动态显示和滚动喜欢登录影院选框。  
+ 当打开字幕模式、 进度栏的动画和滚动等登录影院字幕。  
   
- 此方法可发送[PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -414,12 +414,12 @@ BOOL SetMarquee(
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
 ### <a name="example"></a>示例  
- 下面的代码示例启动和停止滚动动画。  
+ 下面的代码示例启动和停止滚动动画字幕。  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- 设置进度栏控件的当前位置由指定*nPos*和重绘滚动条来反映新的位置。  
+ 设置进度栏控件的当前位置由指定*nPos*并重新绘制条以反映新的位置。  
   
 ```  
 int SetPos(int nPos);
@@ -430,16 +430,16 @@ int SetPos(int nPos);
  进度栏控件的新位置。  
   
 ### <a name="return-value"></a>返回值  
- 进度栏控件的前一个位置。  
+ 进度栏控件的以前的位置。  
   
 ### <a name="remarks"></a>备注  
- 进度栏控件的位置不在屏幕上，在的物理位置但而是会之间上限和下限范围表明在[SetRange](#setrange)。  
+ 进度栏控件的位置不在屏幕上的物理位置，但而不是为之间上限和下限范围所示[SetRange](#setrange)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
 ##  <a name="setrange"></a>  CProgressCtrl::SetRange  
- 设置进度栏控件的范围的上限和下限限制和重绘滚动条来反映新的范围。  
+ 设置进度栏控件的范围的上限和下限限制并重新绘制条以反映新的范围。  
   
 ```  
 void SetRange(
@@ -476,13 +476,13 @@ int SetState(int iState);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iState*|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> - `PBST_NORMAL` -正在进行中<br />- `PBST_ERROR` -错误<br />- `PBST_PAUSED` -暂停|  
+|[in]*iState*|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|  
   
 ### <a name="return-value"></a>返回值  
  当前进度栏控件的前一个状态。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850)消息，Windows SDK 中介绍。  
+ 此方法将发送[PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -506,10 +506,10 @@ int SetStep(int nStep);
  新步骤增量。  
   
 ### <a name="return-value"></a>返回值  
- 以前的步骤增量。  
+ 上一步骤增量。  
   
 ### <a name="remarks"></a>备注  
- 步骤增量是依据量对的调用`CProgressCtrl::StepIt`增加进度栏的当前位置。  
+ 步骤增量是所根据的数量调用`CProgressCtrl::StepIt`增加进度栏的当前位置。  
   
  默认步骤增量为 10。  
   
@@ -517,14 +517,14 @@ int SetStep(int nStep);
  [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
 ##  <a name="stepit"></a>  CProgressCtrl::StepIt  
- 进度栏控件的当前位置前移步骤增量和重绘滚动条来反映新的位置。  
+ 进度栏控件的当前位置提升步骤增量并重绘条以反映新的位置。  
   
 ```  
 int StepIt();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 进度栏控件的前一个位置。  
+ 进度栏控件的以前的位置。  
   
 ### <a name="remarks"></a>备注  
  通过设置步骤增量`CProgressCtrl::SetStep`成员函数。  

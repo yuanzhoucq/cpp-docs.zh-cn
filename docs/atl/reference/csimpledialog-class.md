@@ -1,5 +1,5 @@
 ---
-title: CSimpleDialog 类 |Microsoft 文档
+title: CSimpleDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362382"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881654"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 类
 此类实现基本的模式对话框。  
@@ -44,7 +44,7 @@ class CSimpleDialog : public CDialogImplBase
  对话框模板资源的资源 ID。  
   
  *t_bCenter*  
- **TRUE**对话框对象是否为中心的所有者窗口; 否则为**FALSE**。  
+ 如果对话框对象是要在所有者窗口; 上居中否则为 FALSE。  
   
 ## <a name="members"></a>成员  
   
@@ -55,9 +55,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|创建模式对话框。|  
   
 ## <a name="remarks"></a>备注  
- 实现模式对话框的基本功能。 `CSimpleDialog` 提供 Windows 公共控件仅支持。 若要创建和显示模式对话框，请创建此类，在对话框中提供现有的资源模板的名称的实例。 当用户单击与预定义的值 （如 IDOK 或 IDCANCEL） 的任何控件，将关闭对话框对象。  
+ 具有基本功能实现的模式对话框。 `CSimpleDialog` 提供 Windows 公共控件仅支持。 若要创建和显示模式对话框，创建此类，在对话框中提供现有的资源模板的名称的实例。 当用户单击与预定义的值 （如 IDOK 或 IDCANCEL） 的任何控件将关闭对话框对象。  
   
- `CSimpleDialog` 可以创建仅有模式对话框。 `CSimpleDialog` 提供对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
+ `CSimpleDialog` 可以创建仅模式对话框。 `CSimpleDialog` 提供的对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
   
  请参阅[实现对话框](../../atl/implementing-a-dialog-box.md)有关详细信息。  
   
@@ -77,16 +77,16 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWndParent`  
- 对话框中的父句柄。 如果没有提供任何值，则会将父设置为当前的活动窗口。  
+ *hWndParent*  
+ 对话框中的父句柄。 如果未不提供任何值，父级设置为当前的活动窗口。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则返回值是控件的关闭对话框中的资源 ID。  
+ 如果成功，返回值是控件的关闭对话框中的资源 ID。  
   
  如果函数失败，返回值为-1。 若要获得扩展的错误信息，请调用 `GetLastError`。  
   
 ### <a name="remarks"></a>备注  
- 对话框中处于活动状态时，此方法可处理所有与用户交互。 正是这使得对话框模式;也就是说，用户不能交互与其他窗口中，是关闭该对话框之前。  
+ 在对话框处于活动状态时，此方法将处理与用户的所有交互。 这是什么工作使得对话框成为模式;也就是说，用户不能前进行交互与其他窗口对话框的已关闭。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

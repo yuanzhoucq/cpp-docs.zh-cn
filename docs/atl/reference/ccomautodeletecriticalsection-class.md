@@ -1,5 +1,5 @@
 ---
-title: CComAutoDeleteCriticalSection 类 |Microsoft 文档
+title: CComAutoDeleteCriticalSection 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5153520b5a5648f8352465031264c223ffd97c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360059"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879897"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection 类
-此类提供用于获取和释放的关键部分对象所有权的方法。  
+此类提供方法用于获取并释放关键节对象的所有权。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
 ## <a name="remarks"></a>备注  
- `CComAutoDeleteCriticalSection` 派生自类[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 但是，`CComAutoDeleteCriticalSection`重写[术语](ccomsafedeletecriticalsection-class.md#term)方法`private`访问，这会强制内部内存清理，以仅当此类的实例超出范围或显式删除从内存时才发生。  
+ `CComAutoDeleteCriticalSection` 派生自类[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 但是，`CComAutoDeleteCriticalSection`重写[术语](ccomsafedeletecriticalsection-class.md#term)方法**专用**访问，这会强制执行仅在此类的实例会超出范围或显式删除从内部内存清理操作内存。  
 
   
- 此类引入了通过其基本类的任何其他方法。 请参阅[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)和[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)有关关键部分帮助程序类的详细信息。  
+ 此类通过其基类引入了任何其他方法。 请参阅[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)并[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)的关键部分帮助程序类的详细信息。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  

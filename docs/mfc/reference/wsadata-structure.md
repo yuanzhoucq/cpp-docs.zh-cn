@@ -1,5 +1,5 @@
 ---
-title: WSADATA 结构 |Microsoft 文档
+title: WSADATA 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadc502900285d879f2fd77af69b1fcf08a4ba1e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380079"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880926"
 ---
 # <a name="wsadata-structure"></a>WSADATA 结构
 `WSADATA` 结构用于存储通过调用 `AfxSocketInit` 全局函数返回的 Windows 套接字初始化信息。  
@@ -45,19 +45,19 @@ struct WSAData {
  Windows 套接字的动态链接库希望调用方使用的 Windows 套接字规范的版本。  
   
  *wHighVersion*  
- 此 DLL 可支持的 Windows 套接字规范的最高版本（按如上编码）。 通常情况下，这是与相同**wVersion**。  
+ 此 DLL 可支持的 Windows 套接字规范的最高版本（按如上编码）。 通常情况下，这是与相同*wVersion*。  
   
  *szDescription*  
  不以 null 结尾的 ASCII 字符串，Windows 套接字的动态链接库将 Windows 套接字实现的描述（包括供应商标识）复制到其中。 文本（最多 256 个字符长）可包含任何字符，但供应商应谨慎包含控制和格式设置字符：应用程序放置此类字符最有可能的用途是为了在状态消息中显示（可能截断）它。  
   
  *szSystemStatus*  
- 不以 null 结尾的 ASCII 字符串，Windows 套接字的动态链接库会将相关状态或配置信息复制到其中。 Windows 套接字 DLL 应使用此字段，仅当信息可能对用户有用或支持人员;不应该将它作为的扩展**szDescription**字段。  
+ 不以 null 结尾的 ASCII 字符串，Windows 套接字的动态链接库会将相关状态或配置信息复制到其中。 Windows 套接字 DLL 的信息可能会很有帮助向用户或支持人员; 时，才应使用此字段不应将它视为的扩展*szDescription*字段。  
   
  *iMaxSockets*  
- 一个进程潜在可打开的套接字的最大数量。 Windows 套接字实现可为要分配给任何进程的套接字提供一个全局池；也可以为套接字分配每进程资源。 数字可以很好地反映 Windows 套接字的动态链接库或联网软件的配置方式。 应用程序编写器可使用此数字作为 Windows 套接字实现是否可由应用程序使用的原始指示。 例如，X Windows 服务器可能会检查**iMaxSockets**首次启动时： 如果它是小于 8，应用程序将显示错误消息指示用户重新配置联网软件。 (这是在其中的情况下**szSystemStatus**可能会使用文本。)显然就会实际分配特定的应用程序不能保证**iMaxSockets**套接字，因为可能有其他 Windows 套接字应用程序正在使用。  
+ 一个进程潜在可打开的套接字的最大数量。 Windows 套接字实现可为要分配给任何进程的套接字提供一个全局池；也可以为套接字分配每进程资源。 数字可以很好地反映 Windows 套接字的动态链接库或联网软件的配置方式。 应用程序编写器可使用此数字作为 Windows 套接字实现是否可由应用程序使用的原始指示。 例如，X Windows 服务器可能会检查*iMaxSockets*首次启动时： 如果它小于 8，应用程序将显示错误消息指示用户重新配置该网络软件。 (这是在其中的情况下*szSystemStatus*可能使用文本。)很明显就会实际分配特定的应用程序不能保证*iMaxSockets*套接字，因为可能有其他 Windows 套接字应用程序正在使用。  
   
  *iMaxUdpDg*  
- Windows 套接字应用程序可发送或接收的最大用户数据报协议 (UDP) 大小（以字节为单位）。 如果实现未不施加任何限制， **iMaxUdpDg**为零。 在 Berkeley 套接字的许多实现中，UDP 数据报（如有必要，将其碎片化）上具有 8192 字节的隐式限制。 例如，Windows 套接字实现可以基于碎片重组缓冲区的分配施加限制。 最小值**iMaxUdpDg**合规 Windows 套接字实现为 512。 请注意，无论的值如何**iMaxUdpDg**，它是不宜尝试发送大于比最大传输单元 (MTU) 网络的广播数据报。 （Windows 套接字 API 未提供发现 MTU 的机制，但 MTU 必须小于 512 字节。）  
+ Windows 套接字应用程序可发送或接收的最大用户数据报协议 (UDP) 大小（以字节为单位）。 如果实现未不施加任何限制*iMaxUdpDg*为零。 在 Berkeley 套接字的许多实现中，UDP 数据报（如有必要，将其碎片化）上具有 8192 字节的隐式限制。 例如，Windows 套接字实现可以基于碎片重组缓冲区的分配施加限制。 最小值*iMaxUdpDg*合规 Windows 套接字实现为 512。 请注意，而不考虑的值*iMaxUdpDg*，它是尝试发送大于比最大传输单元 (MTU) 的网络广播数据报。 （Windows 套接字 API 未提供发现 MTU 的机制，但 MTU 必须小于 512 字节。）  
   
  *lpVendorInfo*  
  指向供应商特定数据结构的远指针。 此结构的定义（如果提供）将超出 Windows 套接字规范的范围。  

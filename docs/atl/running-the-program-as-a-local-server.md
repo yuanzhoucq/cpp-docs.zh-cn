@@ -1,5 +1,5 @@
 ---
-title: 为本地服务器中运行程序 |Microsoft 文档
+title: 为本地服务器中运行程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b8a79978528493e02ac5a272dafe8da6fdc1d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ae2e44ba51a878d293ad5b497a1638cc9d7dc76
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360438"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848478"
 ---
 # <a name="running-the-program-as-a-local-server"></a>为本地服务器中运行程序
-如果作为服务运行程序来说很不方便，可以暂时更改注册表，以便为普通的本地服务器运行该程序时。 简单地重命名`LocalService`下到你 AppID 值`_LocalService`并确保`LocalServer32`正确设置你的 CLSID 下的键。 (请注意，使用 DCOMCNFG 指定你的应用程序，应运行的其他计算机上重命名你`LocalServer32`键，以`_LocalServer32`。)运行程序，如本地服务器上启动需要几详细秒钟，因为调用**StartServiceCtrlDispatcher**中`CAtlServiceModuleT::Start`需要几秒钟就失败。  
+如果作为服务运行该程序是不方便，可以暂时更改注册表，以便以普通的本地服务器运行该程序。 只需重命名`LocalService`下为你 AppID 值`_LocalService`，并确保`LocalServer32`正确设置您的 CLSID 下的键。 (请注意，使用 DCOMCNFG 指定，应另一台计算机上运行你的应用程序将重命名你`LocalServer32`关键`_LocalServer32`。)运行程序，如本地服务器上启动占用几秒钟时间，因为在调用`StartServiceCtrlDispatcher`中`CAtlServiceModuleT::Start`需要几秒钟就失败。  
   
 ## <a name="see-also"></a>请参阅  
  [调试提示](../atl/debugging-tips.md)

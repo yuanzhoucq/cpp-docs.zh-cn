@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse 类 |Microsoft 文档
+title: CSimpleMapEqualHelperFalse 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360013"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882619"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 类
-此类是帮助器[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
+此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,9 +46,9 @@ class CSimpleMapEqualHelperFalse
 |[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（静态）返回 false。|  
   
 ## <a name="remarks"></a>备注  
- 此特征类是对的补充`CSimpleMap`类。 它提供用于比较两个元素中包含的方法`CSimpleMap`对象，具体而言两个值元素或两个关键元素。  
+ 此特征类是对的补充`CSimpleMap`类。 它提供了方法来比较两个元素中包含`CSimpleMap`对象，特别是两个值元素或两个重要元素。  
   
- 值比较将始终返回 false，并且此外，将调用`ATLASSERT`用 false 如果曾引用自变量。 在其中相等性测试未充分定义的情况下，此类允许包含键/值对，若要正确运行的大多数方法，但失败的如依赖于比较的方法定义完善的方式映射[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
+ 值比较将始终返回 false，并且除了，将调用`ATLASSERT`参数为 false，如果曾经引用它。 在相等性测试不足够定义位置的情况下，此类允许包含键/值对的大多数方法正常运行，但失败，如依赖于比较的方法的定义完善的方式映射[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsimpcoll.h  
@@ -61,14 +61,14 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>参数  
- `k1`  
+ *版 k1*  
  第一个键。  
   
- `k2`  
+ *k2*  
  第二个密钥。  
   
 ### <a name="return-value"></a>返回值  
- 如果密钥均相等，则返回 false，则返回 true。  
+ 如果键相等，则返回 false 否则，则返回 true。  
   
 ### <a name="remarks"></a>备注  
  此方法调用[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。  
@@ -84,7 +84,7 @@ static bool IsEqualValue(const TVal&, const TVal&);
  返回 false。  
   
 ### <a name="remarks"></a>备注  
- 此方法始终返回 false，并且将调用`ATLASSERT`用 false 如果曾引用自变量。 用途`CSimpleMapEqualHelperFalse::IsEqualValue`是强制使用比较时没有充分定义相等性测试，以定义完善的方式失败的方法。  
+ 此方法始终返回 false，并将调用`ATLASSERT`参数为 false，如果曾经引用它。 用途`CSimpleMapEqualHelperFalse::IsEqualValue`是强制方法使用的比较时尚未充分定义相等性测试，以明确定义的方式失败。  
   
 ## <a name="see-also"></a>请参阅  
  [CSimpleMapEqualHelper 类](../../atl/reference/csimplemapequalhelper-class.md)   

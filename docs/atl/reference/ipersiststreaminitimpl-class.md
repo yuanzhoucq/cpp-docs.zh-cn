@@ -1,5 +1,5 @@
 ---
-title: IPersistStreamInitImpl 类 |Microsoft 文档
+title: IPersistStreamInitImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b862d6b0fc99184232621432ec1c2a1027f8a9d5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360451"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881498"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 类
-此类实现**IUnknown**并提供的默认实现[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)接口。  
+此类实现`IUnknown`，并提供的默认实现[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)接口。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,8 +47,8 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IPersistStreamInitImpl`。  
+ *T*  
+ 您的类，派生自`IPersistStreamInitImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -57,14 +57,14 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 |名称|描述|  
 |----------|-----------------|  
 |[IPersistStreamInitImpl::GetClassID](#getclassid)|检索对象的 CLSID。|  
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|检索保存的对象的数据所需的流的大小。 ATL 实现返回**E_NOTIMPL**。|  
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|检索流保存对象的数据所需的大小。 ATL 实现返回 E_NOTIMPL。|  
 |[IPersistStreamInitImpl::InitNew](#initnew)|初始化新创建的对象。|  
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|检查自上次保存后，该对象的数据是否已发生更改。|  
-|[IPersistStreamInitImpl::Load](#load)|从指定的流加载对象的属性。|  
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|检查对象的数据是否自上次保存以来已更改。|  
+|[IPersistStreamInitImpl::Load](#load)|从指定流加载对象的属性。|  
 |[IPersistStreamInitImpl::Save](#save)|将对象的属性保存到指定的流。|  
   
 ## <a name="remarks"></a>备注  
- [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)接口允许客户端请求你的对象加载，并将其持久性数据保存到单个流。 类`IPersistStreamInitImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)接口允许客户端请求您的对象加载并将其持久性数据保存到一个流。 类`IPersistStreamInitImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -87,14 +87,14 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
  请参阅[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
- 检索保存的对象的数据所需的流的大小。  
+ 检索流保存对象的数据所需的大小。  
   
 ```
 STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) Windows SDK 中。  
@@ -110,7 +110,7 @@ STDMETHOD(InitNew)();
  请参阅[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) Windows SDK 中。  
   
 ##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
- 检查自上次保存后，该对象的数据是否已发生更改。  
+ 检查对象的数据是否自上次保存以来已更改。  
   
 ```
 STDMETHOD(IsDirty)();
@@ -120,7 +120,7 @@ STDMETHOD(IsDirty)();
  请参阅[IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) Windows SDK 中。  
   
 ##  <a name="load"></a>  IPersistStreamInitImpl::Load  
- 从指定的流加载对象的属性。  
+ 从指定流加载对象的属性。  
   
 ```
 STDMETHOD(Load)(LPSTREAM pStm);

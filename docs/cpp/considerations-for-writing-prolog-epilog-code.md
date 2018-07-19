@@ -1,5 +1,5 @@
 ---
-title: 有关编写 Prolog Epilog 代码的注意事项 |Microsoft 文档
+title: 有关编写 Prolog / Epilog 代码的注意事项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414765"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942102"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>有关编写 Prolog/Epilog 代码的注意事项
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- 在编写你自己的 prolog 和 epilog 代码序列之前，请务必了解堆栈帧的布局方式。它也是有助于你了解如何使用 **__LOCAL_SIZE**符号。  
+ 在编写你自己的 prolog 和 epilog 代码序列之前，请务必了解堆栈帧的布局方式。最好还知道如何使用 __LOCAL_SIZE 符号。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 堆栈帧布局  
  此示例显示了可能出现在 32 位函数中的标准 prolog 代码：  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  堆栈始终向下增长（从高内存地址到低内存地址）。 基指针 (`ebp`) 指向 `ebp` 的推入值。 本地区域开始于 `ebp-4`。 若要访问局部变量，可通过从 `ebp` 中减去适当的值来计算 `ebp` 的偏移量。  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- 编译器提供符号 **__LOCAL_SIZE**，用于函数 prolog 代码的内联汇编程序块。 此符号用于在自定义 prolog 代码中的堆栈帧上为局部变量分配空间。  
+ 编译器提供了一个符号，__LOCAL_SIZE 用于函数 prolog 代码的内联汇编程序块。 此符号用于在自定义 prolog 代码中的堆栈帧上为局部变量分配空间。  
   
- 编译器确定 __LOCAL_SIZE 的值。 其值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 __LOCAL_SIZE 只能用作即时操作数；它不能在表达式中使用。 不得更改或重新定义此符号的值。 例如：  
+ 编译器确定 __LOCAL_SIZE 的值。 其值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 可以使用 __LOCAL_SIZE 只能用作即时操作数;它不能在表达式中使用。 不得更改或重新定义此符号的值。 例如：  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- 下面的示例包含自定义 prolog 和 epilog 的裸函数的序列使用 **__LOCAL_SIZE** prolog 序列中的符号：  
+ 包含自定义 prolog 和 epilog 序列的裸函数的以下示例在 prolog 序列中使用 __LOCAL_SIZE 符号：  
   
 ```  
 // the__local_size_symbol.cpp  

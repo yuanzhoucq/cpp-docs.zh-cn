@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Release |Microsoft 文档
+title: _com_ptr_t::Release |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf83b3f6ece4e8422f1ba8dbc5d1448da6bf0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409639"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939251"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft 专用**  
   
- 调用**版本**成员函数**IUnknown**封装的接口指针上。  
+ 调用`Release`成员函数的`IUnknown`上封装的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ void Release( );
 ```  
   
 ## <a name="remarks"></a>备注  
- 调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针是**NULL**。  
+ 调用`IUnknown::Release`上封装的接口指针，此接口指针为 NULL 时引发了 E_POINTER 错误。  
   
  **结束 Microsoft 专用**  
   

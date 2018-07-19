@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl 类 |Microsoft 文档
+title: IConnectionPointContainerImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361165"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886227"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl 类
-此类实现连接点容器，用来管理集合的[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。  
+此类实现连接点容器来管理一系列[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +40,8 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IConnectionPointContainerImpl`。  
+ *T*  
+ 您的类，派生自`IConnectionPointContainerImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -49,15 +49,15 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
   
 |名称|描述|  
 |----------|-----------------|  
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|创建一个枚举器循环访问可连接对象中所支持的连接点。|  
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|检索支持指定的 IID 与连接点的接口指针。|  
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|创建进行循环访问，可连接对象中所支持的连接点的枚举器。|  
+|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|检索到支持指定的 IID 的连接点的接口指针。|  
   
 ## <a name="remarks"></a>备注  
- `IConnectionPointContainerImpl` 实现连接点容器，用来管理集合的[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。 `IConnectionPointContainerImpl` 提供客户端可以调用以检索有关可连接对象详细信息的两种方法：  
+ `IConnectionPointContainerImpl` 实现连接点容器来管理一系列[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。 `IConnectionPointContainerImpl` 提供了客户端可以调用以检索有关可连接对象的详细信息的两个方法：  
   
 - `EnumConnectionPoints` 允许客户端确定对象支持的传出接口。  
   
-- `FindConnectionPoint` 允许客户端确定对象是否支持特定的传出接口。  
+- `FindConnectionPoint` 允许客户端确定对象是否支持特定的输出接口。  
   
  在 ATL 中使用连接点的信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
   
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
  **标头：** atlcom.h  
   
 ##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  
- 创建一个枚举器循环访问可连接对象中所支持的连接点。  
+ 创建进行循环访问，可连接对象中所支持的连接点的枚举器。  
   
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
@@ -80,7 +80,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
  请参阅[IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) Windows SDK 中。  
   
 ##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
- 检索支持指定的 IID 与连接点的接口指针。  
+ 检索到支持指定的 IID 的连接点的接口指针。  
   
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);

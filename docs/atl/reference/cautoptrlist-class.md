@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrList 类 |Microsoft 文档
+title: CAutoPtrList 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357540"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883588"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 类
-构造的智能指针的列表时，此类提供有用的方法。  
+构造的智能指针的列表时，此类提供了有用的方法。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>参数  
- `E`  
+ *E*  
  指针类型。  
   
 ## <a name="members"></a>成员  
@@ -52,7 +52,7 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供的构造函数和派生方法从[CAtlList](../../atl/reference/catllist-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)以帮助创建存储智能指针列表对象。 类[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)数组对象中提供的类似函数。  
+ 此类提供构造函数，并派生方法从[CAtlList](../../atl/reference/catllist-class.md)并[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)来帮助列表对象存储智能指针的创建。 该类[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)为一个数组对象提供类似功能。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
@@ -72,11 +72,11 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
- 块的大小，默认值为 10。  
+ *nBlockSize*  
+ 块大小，默认值为 10。  
   
 ### <a name="remarks"></a>备注  
- 块大小是内存的分配需要一个新的元素时量的度量值。 更大的块大小减少到内存分配例程的调用，但使用更多资源。  
+ 块大小为分配的新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。  
   
 ## <a name="see-also"></a>请参阅  
  [CAtlList 类](../../atl/reference/catllist-class.md)   

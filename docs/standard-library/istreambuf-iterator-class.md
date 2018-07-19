@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859275"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960585"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 类
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>参数
 
-`CharType` 表示 istreambuf_iterator 的字符类型的类型。
+*CharType*表示 istreambuf_iterator 的字符类型的类型。
 
-`Traits` 表示 istreambuf_iterator 的字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
+*特征*表示 istreambuf_iterator 的字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ## <a name="remarks"></a>备注
 
 istreambuf_iterator 类必须满足输入迭代器的需求。
 
-构造或递增带有非 null 存储指针的 istreambuf_iterator 类对象后，此对象将有效尝试从关联的输入流提取和存储 **CharType** 类型的对象。 不过，提取可能会延迟到实际取消引用对象或复制对象后进行。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。
+构造或递增带有非 null 存储指针的 istreambuf_iterator 类对象后，此对象将有效尝试从关联的输入流提取和存储 *CharType* 类型的对象。 不过，提取可能会延迟到实际取消引用对象或复制对象后进行。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。
 
 ### <a name="constructors"></a>构造函数
 
@@ -105,7 +105,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 *CharType* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -150,7 +150,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>参数
 
-`right` 要检查相等的迭代器。
+*右*要检查是否相等的迭代器。
 
 ### <a name="return-value"></a>返回值
 
@@ -158,7 +158,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>备注
 
-通过 `istreambuf_iterator` 定义当前位置和流末尾迭代器的范围，但由于所有非流末尾迭代器在 **equal** 成员函数下都相等，因此无法使用 `istreambuf_iterator` 定义任何子范围。 `==` 和 `!=` 运算符具有相同的语义。
+通过定义一系列`istreambuf_iterator`当前位置和流末尾迭代器，但由于所有非-流末尾迭代器均下等效`equal`成员函数不能定义使用任何子范围`istreambuf_iterator`s。 `==` 和 `!=` 运算符具有相同的语义。
 
 ### <a name="example"></a>示例
 
@@ -198,7 +198,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 **Traits::int_type** 的同义词。
+该类型是 `Traits::int_type`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>参数
 
-`strbuf` 输入的流缓冲区`istreambuf_iterator`正在附加。
+*strbuf*到的输入的流缓冲区`istreambuf_iterator`已附加。
 
-`_Istr` 向其输入的流`istreambuf_iterator`正在附加。
+*_Istr*到的输入的流`istreambuf_iterator`已附加。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过 `strbuf` 初始化输入流缓冲区指针。 第二个构造函数通过 `_Istr` 初始化输入流缓冲区指针。 `rdbuf`，然后最终尝试提取和存储 **CharType** 类型的对象。
+第一个构造函数初始化与输入的流缓冲区指针*strbuf*。 第二个构造函数初始化与输入的流缓冲区指针 *_Istr*。 `rdbuf`然后最终尝试提取和存储类型的对象和`CharType`。
 
 ### <a name="example"></a>示例
 
@@ -341,7 +341,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>备注
 
-第一个运算符最终尝试从关联的输入流提取和存储 **CharType** 类型的对象。 第二个运算符生成对象的副本，递增对象，然后返回副本。
+第一个运算符最终尝试提取和存储类型的对象`CharType`从关联的输入流。 第二个运算符生成对象的副本，递增对象，然后返回副本。
 
 ### <a name="example"></a>示例
 
@@ -397,7 +397,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 **istreambuf_type** 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。
+有关如何声明和使用 `istreambuf_type` 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。
 
 ## <a name="traits_type"></a>istreambuf_iterator::traits_type
 
@@ -409,7 +409,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Traits** 的同义词。
+该类型是模板参数 *Traits* 的同义词。
 
 ### <a name="example"></a>示例
 

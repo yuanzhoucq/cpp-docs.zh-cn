@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845968"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958541"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;hash_map&gt; 函数
 
@@ -35,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`right` 其元素将要与那些地图交换的 hash_map `left`。
+*右*其元素将要与地图进行交换的 hash_map*左*。
 
-`left` 其元素将要与那些地图交换的 hash_map `right`。
+*左*其元素将要与地图进行交换的 hash_map*右*。
 
 ### <a name="remarks"></a>备注
 
@@ -58,9 +58,9 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`right` 其元素将要与那些地图交换的 hash_multimap `left`。
+*右*其元素将要与地图进行交换的 hash_multimap*左*。
 
-`left` 其元素将要与那些地图交换的 hash_multimap `right`。
+*左*其元素将要与地图进行交换的 hash_multimap*右*。
 
 ### <a name="remarks"></a>备注
 

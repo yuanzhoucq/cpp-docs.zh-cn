@@ -9,12 +9,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 2d3f63ab29049e5f5a928186ba033bfe041bcfc1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5747d511777ae6f1f32d8e93bb6ee90bd0193bf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959974"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
 
@@ -25,7 +25,7 @@ ms.locfileid: "33860614"
 
 ## <a name="string"></a>  string
 
-用 `char` 类型的元素描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化的类型。
+该类型描述模板类专用化[basic_string](../standard-library/basic-string-class.md)类型的元素**char**。
 
 专用化 `basic_string` 的其他 typedef 包括 [wstring](../standard-library/string-typedefs.md#wstring)、[u16string](../standard-library/string-typedefs.md#u16string) 和 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -75,7 +75,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a>  wstring
 
-用 `wchar_t` 类型的元素描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化的类型。
+该类型描述模板类专用化[basic_string](../standard-library/basic-string-class.md)类型的元素**wchar_t**。
 
 专用化 `basic_string` 的其他 typedef 包括 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 和 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -96,7 +96,7 @@ basic_string<wchar_t> wstr(L"");
 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。
 
 > [!NOTE]
-> `wchar_t` 的大小是由实现定义的。 如果你的代码的大小取决于 `wchar_t`，请检查你平台的实现（例如，使用 `sizeof(wchar_t)`）。 如果需要保证宽度在所有平台上一致的字符串字符类型，请使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
+> 大小**wchar_t**是实现定义的。 如果你的代码依赖**wchar_t**若要在某个大小，请检查你平台的实现 (例如，对于`sizeof(wchar_t)`)。 如果需要保证宽度在所有平台上一致的字符串字符类型，请使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
 
 ## <a name="see-also"></a>请参阅
 

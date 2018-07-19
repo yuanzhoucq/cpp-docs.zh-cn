@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModuleT 类 |Microsoft 文档
+title: CAtlAutoThreadModuleT 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361413"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883068"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 类
-此类提供用于实现线程放入池中，单元模型的 COM 服务器的方法。  
+此类提供用于实现为在线程池的单元模型 COM 服务器的方法。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  一个类，该类将实现 COM 服务器。  
   
- `ThreadAllocator`  
+ *ThreadAllocator*  
  管理线程选择类。 默认值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
- `dwWait`  
- 指定的超时间隔，以毫秒为单位。 默认值为 INFINITE，这意味着方法的超时间隔永远不会经历。  
+ *dwWait*  
+ 指定的超时间隔，以毫秒为单位。 默认值为 INFINITE，这意味着该方法的超时间隔永远不会经历。  
   
 ## <a name="members"></a>成员  
   
@@ -56,13 +56,13 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|此静态函数动态计算并返回最大为 EXE 模块，基于的处理器数量的线程数。|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|此静态函数动态计算并返回最大为 EXE 模块，基于处理器的数量的线程数。|  
   
 ## <a name="remarks"></a>备注  
- 类[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)派生自`CAtlAutoThreadModuleT`为了实现线程放入池中，单元模型的 COM 服务器。 它将替换已过时的类别[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
+ 该类[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)派生自`CAtlAutoThreadModuleT`才能实现为在线程池的单元模型 COM 服务器。 它取代了已过时的类别[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
 > [!NOTE]
->  此类不应在一个 DLL，默认值为`dwWait`无限值将导致死锁时将在卸载 DLL。  
+>  此类不应在一个 DLL，为默认*dwWait*卸载 DLL 时，无限的值将导致死锁。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IAtlAutoThreadModule`  
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  **标头：** atlbase.h  
   
 ##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- 此静态函数动态计算并返回最大为 EXE 模块，基于的处理器数量的线程数。  
+ 此静态函数动态计算并返回最大为 EXE 模块，基于处理器的数量的线程数。  
   
 ```
 static int GetDefaultThreads();
@@ -83,7 +83,7 @@ static int GetDefaultThreads();
  要在 EXE 模块中创建的线程数。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要使用不同的方法用于计算的线程数，重写此方法。 默认情况下，线程数取决于处理器的数目。  
+ 如果你想要使用不同的方法用于计算的线程数，重写此方法。 默认情况下，线程数取决于处理器数。  
   
 ## <a name="see-also"></a>请参阅  
  [IAtlAutoThreadModule 类](../../atl/reference/iatlautothreadmodule-class.md)   

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958525"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 类
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据对数正态分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `double` 型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的整型值类型**double**如果未提供任何内容分布根据对数正态分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -208,7 +208,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 *s* `s`分布参数。
 
-*参数*`param_type`用于构造分布的结构。
+*parm* `param_type`用于构造分布的结构。
 
 ### <a name="remarks"></a>备注
 

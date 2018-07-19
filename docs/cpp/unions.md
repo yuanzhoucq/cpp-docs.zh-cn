@@ -1,5 +1,5 @@
 ---
-title: 联合 |Microsoft 文档
+title: 联合 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425694"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939204"
 ---
 # <a name="unions"></a>Unions
-`union` 是用户定义的类型，其中所有成员都共享同一个内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
+一个**union**是用户定义的类型中的所有成员都共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
   
  具有大量对象和/或内存有限时，联合可用于节省内存。 但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。 如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。 使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。  
   
@@ -36,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>参数  
- `name`  
+ *name*  
  为联合提供的类型名称。  
   
- `member-list`  
+ *成员的列表*  
  联合可以包含的成员。 请参阅“备注”。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="declaring-a-union"></a>声明联合  
- 利用 `union` 关键字开始联合的声明，并用大括号包含成员列表：  
+ 开始使用联合的声明**union**关键字，并将成员列表括在大括号中：  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -67,7 +67,7 @@ int main()
 ```  
   
 ## <a name="using-unions"></a>使用联合  
- 在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为*可区分的联合*，下面的示例演示了基本模式。  
+ 在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为*可区分联合*和下面的示例演示了基本模式。  
   
 ```cpp  
 #include "stdafx.h"  
@@ -650,7 +650,7 @@ union  {  member-list  }
   
 匿名联合中声明的名称可直接使用，就像非成员变量一样。 因此，匿名联合中声明的名称必须在周边范围中是唯一的。  
   
-除了命名联合的限制，匿名联合还受这些其他的限制：  
+除了命名联合的限制，匿名联合还受下列其他限制：  
   
 -   它们还必须声明为**静态**如果在文件或命名空间范围中声明。  
   

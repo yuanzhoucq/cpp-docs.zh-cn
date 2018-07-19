@@ -1,5 +1,5 @@
 ---
-title: 设计集合和枚举器接口 (ATL) |Microsoft 文档
+title: 设计集合和枚举器接口 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354914"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851322"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和枚举器接口的设计原则
-有不同的设计依据每种类型的接口的原理：  
+有每种类型的接口不同的设计原则：  
   
--   一个集合接口提供了*随机*访问*单个*通过集合中的项**项**方法，它允许发现多少项在集合中的客户端通过**计数**属性，并通常允许客户端添加和移除项。  
+-   集合接口提供了*随机*访问权限*单个*通过集合中的项`Item`方法，它可让客户端发现通过集合中有多少项`Count`属性，并通常允许客户端添加和删除项。  
   
--   枚举器接口提供*串行*访问*多个*集合中的项，它不允许客户端发现多少项在集合中 （直到枚举器停止返回项），并且它不提供任何方式来添加或删除项目。  
+-   枚举器接口提供了*串行*访问权限*多个*集合中的项，它不允许客户端能够发现 （直到枚举器停止返回集合中有多少项项），并且它不提供任何办法来添加或删除项。  
   
  每种类型的接口扮演不同的角色提供对集合中元素的访问。  
   

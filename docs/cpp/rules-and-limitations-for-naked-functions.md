@@ -1,5 +1,5 @@
 ---
-title: 裸函数的规则和限制 |Microsoft 文档
+title: Naked 函数的规则和限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942414"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>裸函数的规则和限制
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  以下规则和限制适用于裸函数：  
   
--   不允许使用 `return` 语句。  
+-   **返回**语句不允许。  
   
 -   不允许结构化异常处理和 C++ 异常处理构造，因为它们必须在堆栈帧中展开。  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   不能在函数词法范围中声明 C++ 类对象。 但是，可以在嵌套的块中声明对象。  
   
--   `naked`与编译时，将忽略关键字[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
+-   **裸**进行编译时，将忽略关键字[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
   
 -   有关[__fastcall](../cpp/fastcall.md)裸函数，只要对某个寄存器自变量的 C/C++ 代码中的引用，prolog 代码应将存储到该变量的堆栈位置寄存器的值。 例如：  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

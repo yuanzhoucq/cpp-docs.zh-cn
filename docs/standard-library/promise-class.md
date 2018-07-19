@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958544"
 ---
 # <a name="promise-class"></a>promise 类
 
@@ -107,7 +107,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`promise`对象。
+*其他*A`promise`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -115,7 +115,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>备注
 
-此运算符从 `Other` 传输关联异步状态。 传输后，`Other` 为空。
+此运算符传输关联异步状态从*其他*。 传输后，*其他*是*空*。
 
 ## <a name="promise"></a>promise::promise 构造函数
 
@@ -130,17 +130,17 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Al` 内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。
+*Al*内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。
 
-`Other` A`promise`对象。
+*其他*A`promise`对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造一个*空*`promise`对象。
 
-第二个构造函数构造一个空 `promise` 对象，并使用 `Al` 实现内存分配。
+第二个构造函数构造一个空`promise`对象，并使用*Al*内存分配。
 
-第三个构造函数构造 `promise` 对象并从 `Other` 传输关联异步状态，同时保留 `Other` 为空。
+第三个构造函数构造`promise`对象，并传输关联异步状态从*其他*，并使*其他*为空。
 
 ## <a name="set_exception"></a>promise::set_exception
 
@@ -152,7 +152,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
+*独占* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
 
 ### <a name="remarks"></a>备注
 
@@ -172,7 +172,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
+*独占* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
 
 ### <a name="remarks"></a>备注
 
@@ -195,7 +195,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>参数
 
-`Val` 要作为结果存储的值。
+*Val*作为结果存储的值。
 
 ### <a name="remarks"></a>备注
 
@@ -205,11 +205,11 @@ void promise<void>::set_value();
 
 此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。
 
-第一种方法还会引发在将 `Val` 复制到关联的异步状态时所引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。
+第一种方法还会引发任何异常时，会引发*Val*复制到关联异步状态。 在此情况下，关联的异步状态不设置为“就绪”。
 
-第二种方法还会引发在将 `Val` 移动到关联的异步状态时引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。
+第二种方法还会引发任何异常时，会引发*Val*移到关联异步状态。 在此情况下，关联的异步状态不设置为“就绪”。
 
-对于部分专用化 `promise<Ty&>`，存储的值实际上是对 `Val` 的引用。
+对于部分专用化`promise<Ty&>`，存储的值实际上是指*Val*。
 
 对于专用化 `promise<void>`，不存在任何存储的值。
 
@@ -226,7 +226,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>参数
 
-`Val` 要作为结果存储的值。
+*Val*作为结果存储的值。
 
 ### <a name="remarks"></a>备注
 
@@ -236,11 +236,11 @@ void promise<void>::set_value_at_thread_exit();
 
 与 `set_value` 相反，在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。
 
-第一种方法还会引发在将 `Val` 复制到关联的异步状态时所引发的任何异常。
+第一种方法还会引发任何异常时，会引发*Val*复制到关联异步状态。
 
-第二种方法还会引发在将 `Val` 移动到关联的异步状态时引发的任何异常。
+第二种方法还会引发任何异常时，会引发*Val*移到关联异步状态。
 
-对于部分专用化 `promise<Ty&>`，存储的值实际上是对 `Val` 的引用。
+对于部分专用化`promise<Ty&>`，存储的值实际上是指*Val*。
 
 对于专用化 `promise<void>`，不存在任何存储的值。
 
@@ -254,7 +254,7 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`promise`对象。
+*其他*A`promise`对象。
 
 ## <a name="see-also"></a>请参阅
 

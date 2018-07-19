@@ -1,5 +1,5 @@
 ---
-title: CComPtr 类 |Microsoft 文档
+title: CComPtr 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358535"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881586"
 ---
 # <a name="ccomptr-class"></a>CComPtr 类
 用于管理 COM 接口指针的智能指针类。  
@@ -36,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- COM 接口，指定要存储的指针的类型。  
+ *T*  
+ 指定要存储的指针的类型的 COM 接口。  
   
 ## <a name="members"></a>成员  
   
@@ -51,18 +51,18 @@ class CComPtr
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|将指针分配给成员指针。|  
+|[CComPtr::operator =](#operator_eq)|将一个指针分配给成员指针。|  
   
 ## <a name="remarks"></a>备注  
- 使用 ATL`CComPtr`和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)来管理 COM 接口指针。 派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，并同时执行自动引用计数。  
+ 使用 ATL`CComPtr`并[CComQIPtr](../../atl/reference/ccomqiptr-class.md)来管理 COM 接口指针。 派生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，并同时执行自动引用计数。  
   
- **CComPtr**和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)类可以帮助执行自动引用计数，从而消除内存泄漏。  以下函数这两个执行相同的逻辑操作;但是，请注意如何第二个版本可能不太容易出错使用**CComPtr**类：  
+ `CComPtr`并[CComQIPtr](../../atl/reference/ccomqiptr-class.md)类可帮助避免内存泄漏，通过执行自动引用计数。  以下函数这两个执行相同的逻辑操作;但是，请注意如何第二个版本可能是更不易于出错使用`CComPtr`类：  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- 在调试版本中，将 atlsd.lib 代码跟踪。  
+ 在调试版本链接代码跟踪的 atlsd.lib。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -82,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lp`  
+ *lp*  
  用于初始化的接口指针。  
   
- `T`  
+ *T*  
  COM 接口。  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -97,10 +97,10 @@ T* operator= (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 将指针返回到更新`CComPtr`对象  
+ 返回一个指向已更新`CComPtr`对象  
   
 ### <a name="remarks"></a>备注  
- 现有对象，如果一个存在此操作 AddRefs 新对象和版本。  
+ 现有对象，如果存在此操作 AddRefs 新对象和版本。  
   
 ## <a name="see-also"></a>请参阅  
  [CComPtr::CComPtr](#ccomptr)   

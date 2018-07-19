@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca75d2e54c951e20de842b984f8619dc6639dc00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421062"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941975"
 ---
 # <a name="static-members-c"></a>静态成员 (C++)
-类可以包含静态成员数据和成员函数。 当数据成员声明为**静态**，只有一个数据副本维护类的所有对象。
+类可以包含静态成员数据和成员函数。 当数据成员声明为**静态**，只有一个数据副本保留的类的所有对象。
   
  静态数据成员不是给定的类类型的对象的一部分。 因此，静态数据成员的声明不被视为一个定义。 在类范围中声明数据成员，但在文件范围内执行定义。 这些静态类成员具有外部链接。 下面的示例阐释了这一点：  
   
@@ -72,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 对于存在的静态成员，类类型的所有对象的存在则没有必要。 此外可以使用成员选择访问静态成员 (**。** 和**->**) 运算符。 例如：  
+ 对于存在的静态成员，类类型的所有对象的存在则没有必要。 此外可以使用成员选择访问静态成员 (**。** 并**->**) 运算符。 例如：  
   
 ```cpp  
 BufferedOutput Console;  
@@ -82,9 +82,9 @@ long nBytes = Console.bytecount;
   
  在前面的示例中，不会评估对对象(`Console`) 的引用；返回的值是静态对象 `bytecount` 的值。  
   
- 静态数据成员遵循类成员访问规则，因此只允许类成员函数和友元拥有对静态数据成员的私有访问权限。 描述了这些规则[成员访问控制](../cpp/member-access-control-cpp.md)。 例外情况是，无论静态数据成员的访问限制如何，都必须在文件范围内进行定义。 如果进行显式初始化数据成员，则必须使用定义提供初始值设定项。  
+ 静态数据成员遵循类成员访问规则，因此只允许类成员函数和友元拥有对静态数据成员的私有访问权限。 这些规则所述[成员访问控制](../cpp/member-access-control-cpp.md)。 例外情况是，无论静态数据成员的访问限制如何，都必须在文件范围内进行定义。 如果进行显式初始化数据成员，则必须使用定义提供初始值设定项。  
   
- 静态成员的类型不是由其类名称限定的。 因此，`BufferedOutput::bytecount` 的类型为 `long`。  
+ 静态成员的类型不是由其类名称限定的。 因此，类型`BufferedOutput::bytecount`是**长**。  
   
 ## <a name="see-also"></a>请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)

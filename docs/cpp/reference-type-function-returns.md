@@ -1,5 +1,5 @@
 ---
-title: 引用类型函数返回 |Microsoft 文档
+title: 引用类型函数返回 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942388"
 ---
 # <a name="reference-type-function-returns"></a>引用类型函数返回
 可将函数声明为返回引用类型。 做出此类声明有两个原因：  
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 -   引用的对象在函数返回时不会超出范围。  
   
- 就像它可能更有效，传递大型对象*到*函数按引用，它还可以更加高效返回大型对象*从*通过引用的函数。 引用返回协议使得不必在返回前将对象复制到临时位置。  
+ 就像它可能更有效，传递大型对象*到*函数的引用，它也可以是返回大型对象更有效*从*函数的引用。 引用返回协议使得不必在返回前将对象复制到临时位置。  
   
- 当函数的计算结果必须为左值时，引用返回类型也可能很有用。 大多数重载运算符属于此类别，尤其是赋值运算符。 重载运算符详见[重载运算符](../cpp/operator-overloading.md)。  
+ 当函数的计算结果必须为左值时，引用返回类型也可能很有用。 大多数重载运算符属于此类别，尤其是赋值运算符。 中介绍了重载运算符[重载运算符](../cpp/operator-overloading.md)。  
   
 ## <a name="example"></a>示例  
  请考虑 `Point` 示例：  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>输出  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  除以下情况之外，引用类型的声明必须包含初始值设定项：  
   
--   显式 `extern` 声明  
+-   显式**extern**声明  
   
 -   类成员的声明  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>返回局部变量地址时的注意事项  
  如果在局部范围中声明某个对象，则该对象会在函数返回时销毁。 如果函数返回对该对象的引用，则当调用方尝试使用 null 引用时，该引用可能会在运行时导致访问冲突。  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  

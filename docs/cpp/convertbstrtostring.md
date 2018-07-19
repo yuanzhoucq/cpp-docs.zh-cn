@@ -1,5 +1,5 @@
 ---
-title: ConvertBSTRToString |Microsoft 文档
+title: ConvertBSTRToString |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986fc35d1a84737b441d7259bba78459a42404e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942475"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft 专用**  
   
- 将转换`BSTR`值赋给**char \*** 。  
+ 将转换`BSTR`值设为**char \*** 。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
   
-      char* __stdcall ConvertBSTRToString(  
-   BSTR pSrc  
-);  
+char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
 #### <a name="parameters"></a>参数  
- `pSrc`  
+ *pSrc*  
  BSTR 变量。  
   
 ## <a name="remarks"></a>备注  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // ConvertBSTRToString.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -74,7 +73,7 @@ char * text: Test
 ## <a name="requirements"></a>要求  
  **标头：** \<comutil.h >。  
   
- **Lib:** 对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+ **Lib:** comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
 ## <a name="see-also"></a>请参阅  
  [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

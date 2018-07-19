@@ -1,5 +1,5 @@
 ---
-title: 强制转换运算符 |Microsoft 文档
+title: 强制转换运算符 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4204e55811cd33fa48e2b3a07d3058100729ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411642"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941620"
 ---
 # <a name="casting-operators"></a>强制转换运算符
 有几种特定于 C++ 语言的转换运算符。 这些运算符用于删除旧式 C 语言转换中的一些多义性和危险继承。 这些运算符是：  
@@ -29,7 +29,7 @@ ms.locfileid: "32411642"
   
 -   [static_cast](../cpp/static-cast-operator.md)用于非多态类型的转换。  
   
--   [const_cast](../cpp/const-cast-operator.md)用于删除`const`， `volatile`，和`__unaligned`属性。  
+-   [const_cast](../cpp/const-cast-operator.md)用于删除**const**，**易失性**，并且 **__unaligned**属性。  
   
 -   [reinterpret_cast](../cpp/reinterpret-cast-operator.md)用于位的简单重新解释。  
   

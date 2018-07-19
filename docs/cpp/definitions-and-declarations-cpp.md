@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411762"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940906"
 ---
 # <a name="definitions-and-declarations-c"></a>定义和声明 (C++)
 ## <a name="microsoft-specific"></a>Microsoft 专用
- DLL 接口引用已知由此系统; 中的某个程序导出的所有项 （函数和数据）即，声明为的所有项`dllimport`或`dllexport`。 DLL 接口中包含的所有声明必须都指定`dllimport`或`dllexport`属性。 但是，该定义仅必须指定 `dllexport` 特性。 例如，以下函数定义产生了一个编译器错误：
+ DLL 接口引用已知由此系统; 中的某个程序导出的所有项 （函数和数据）也就是说，声明为的所有项**dllimport**或**dllexport**。 DLL 接口中包含的所有声明必须都指定**dllimport**或**dllexport**属性。 但是，定义必须仅指定**dllexport**属性。 例如，以下函数定义产生了一个编译器错误：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- 使用`dllexport`表示定义，尽管`dllimport`表示声明。 必须使用带 `extern` 的 `dllexport` 关键字来强制进行声明；否则，会进行隐式定义。 因此，以下示例是正确的：
+ 利用**dllexport**表示定义，而**dllimport**表示声明。 必须使用**extern**关键字**dllexport**来强制进行声明; 否则，为隐式定义。 因此，以下示例是正确的：
 
 ```
 #define DllImport   __declspec( dllimport )

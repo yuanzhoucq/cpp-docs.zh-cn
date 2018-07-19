@@ -1,5 +1,5 @@
 ---
-title: CComEnumOnSTL 类 |Microsoft 文档
+title: CComEnumOnSTL 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca7b7d38c204d7dd8402b9d610a5800dcef6ced9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363293"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883224"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。  
@@ -40,43 +40,43 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>参数  
- `Base`  
+ *基本*  
  COM 枚举器 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 接口。  
   
- `piid`  
- 指向的枚举器接口的接口 ID 的指针。  
+ *piid*  
+ 一个指向枚举器接口的接口 ID。  
   
- `T`  
- 枚举器接口所显示的项类型。  
+ *T*  
+ 枚举器接口所显示的项的类型。  
   
- `Copy`  
- A[复制策略](../../atl/atl-copy-policy-classes.md)类。  
+ *复制*  
+ 一个[复制策略](../../atl/atl-copy-policy-classes.md)类。  
   
- `CollType`  
+ *CollType*  
  C + + 标准库容器类。  
   
 ## <a name="remarks"></a>备注  
- `CComEnumOnSTL` 定义根据 c + + 标准库集合的 COM 枚举器对象。 此类可用于在其自身或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)。  
+ `CComEnumOnSTL` 定义基于 c + + 标准库集合的 COM 枚举器对象。 此类可以在自己或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。  
   
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>将此类用于 ICollectionOnSTLImpl:  
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>若要将此类与 ICollectionOnSTLImpl:  
   
-- `typedef` 此类的专用化。  
+- **typedef**的此类专用化。  
   
--   使用`typedef`的专用化中的最后一个模板参数作为`ICollectionOnSTLImpl`。  
+-   使用**typedef**作为最终模板参数中的专用化`ICollectionOnSTLImpl`。  
   
- 请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)有关示例。  
+ 请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)有关的示例。  
   
-## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>若要使用独立 ICollectionOnSTLImpl 于此类：  
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>若要使用此独立于 ICollectionOnSTLImpl 类：  
   
-- `typedef` 此类的专用化。  
+- **typedef**的此类专用化。  
   
--   使用`typedef`中的专用化的模板自变量作为`CComObject`。  
+-   使用**typedef**中的专用化的模板自变量作为`CComObject`。  
   
 -   创建的实例`CComObject`专用化。  
   
--   通过调用初始化的枚举器对象[IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init)。  
+-   通过调用枚举器对象初始化[IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init)。  
   
--   返回的枚举器接口返回到客户端。  
+-   返回到客户端的枚举数接口。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CComObjectRootBase`  
@@ -93,19 +93,19 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  **标头：** atlcom.h  
   
 ## <a name="example"></a>示例  
- 下面显示的代码提供泛型函数来处理的创建和初始化的枚举器对象：  
+ 如下所示的代码提供了一个泛型函数以处理创建和初始化的枚举器对象：  
   
  [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]  
   
- 此模板函数可用于实现`_NewEnum`属性的集合接口如下所示：  
+ 此模板函数可用于实现`_NewEnum`属性的集合接口，如下所示：  
   
  [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]  
   
- 此代码将创建`typedef`为`CComEnumOnSTL`公开的向量`CComVariant`通过 s **IEnumVariant**接口。 **CVariantCollection**类只是专用化**CreateSTLEnumerator**要使用此类型的枚举器对象。  
+ 此代码将创建**typedef**有关`CComEnumOnSTL`公开的矢量`CComVariant`s 通过`IEnumVariant`接口。 `CVariantCollection`类只是专用化`CreateSTLEnumerator`才能使用此类型的枚举器对象。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
- [ATLCollections 示例： 演示 ICollectionOnSTLImpl、 CComEnumOnSTL 和自定义的复制策略类](../../visual-cpp-samples.md)   
+ [ATLCollections 示例： 演示 ICollectionOnSTLImpl 和 CComEnumOnSTL，自定义复制策略类](../../visual-cpp-samples.md)   
  [类概述](../../atl/atl-class-overview.md)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   

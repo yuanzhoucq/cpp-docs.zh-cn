@@ -1,5 +1,5 @@
 ---
-title: CComAllocator 类 |Microsoft 文档
+title: CComAllocator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358272"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881912"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
-此类提供用于管理使用 COM 内存例程的内存的方法。  
+此类提供用于管理内存使用 COM 内存例程的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ class CComAllocator
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|调用此静态方法，以分配内存。|  
-|[CComAllocator::Free](#free)|调用此静态方法以释放分配的内存。|  
-|[CComAllocator::Reallocate](#reallocate)|调用此静态方法，以重新分配内存。|  
+|[CComAllocator::Allocate](#allocate)|调用此静态方法分配内存。|  
+|[CComAllocator::Free](#free)|调用此静态方法来释放已分配的内存。|  
+|[CComAllocator::Reallocate](#reallocate)|调用此静态方法来重新分配内存。|  
   
 ## <a name="remarks"></a>备注  
- 此类由[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)提供 COM 内存分配例程。 对应项类中， [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)，提供使用 CRT 例程的相同方法。  
+ 使用此类[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)提供 COM 内存分配例程。 与类[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)，提供了使用 CRT 例程的相同方法。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
@@ -60,28 +60,28 @@ static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBytes`  
+ *nBytes*  
  要分配的字节数。  
   
 ### <a name="return-value"></a>返回值  
  返回指向已分配空间的 void 指针；如果可用内存不足，则返回 NULL。  
   
 ### <a name="remarks"></a>备注  
- 分配内存。 请参阅[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)有关详细信息。  
+ 分配内存。 请参阅[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)的更多详细信息。  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- 调用此静态函数以释放分配的内存。  
+ 调用此静态函数以释放已分配的内存。  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向已分配内存的指针。  
   
 ### <a name="remarks"></a>备注  
- 释放分配的内存。 请参阅[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)有关详细信息。  
+ 释放已分配的内存。 请参阅[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)的更多详细信息。  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  调用此静态函数以重新分配内存。  
@@ -91,17 +91,17 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向已分配内存的指针。  
   
- `nBytes`  
+ *nBytes*  
  要重新分配的字节数。  
   
 ### <a name="return-value"></a>返回值  
- 如果没有足够的内存分配的空间，或者为 NULL 返回 void 的指针  
+ 如果没有足够的内存分配的空间，或者为 NULL 返回 void 指针  
   
 ### <a name="remarks"></a>备注  
- 调整已分配内存的大小。 请参阅[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)有关详细信息。  
+ 调整已分配内存的大小。 请参阅[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)的更多详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   

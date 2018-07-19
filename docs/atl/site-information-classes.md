@@ -1,5 +1,5 @@
 ---
-title: 站点信息类 (ATL) |Microsoft 文档
+title: 站点信息类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959951"
 ---
 # <a name="site-information-classes"></a>站点信息类
-以下类允许要与其站点通信的对象：  
+以下类允许对象与其站点通信：  
   
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md)检索并将指针设置到的对象的站点。 用于不是控件的对象。  
+-   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md)检索和设置的指针到对象的站点。 用于不是控件的对象。  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)检索并将指针设置到的对象的站点。 用于控件。  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)检索和设置的指针到对象的站点。 用于控件。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)

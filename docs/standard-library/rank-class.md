@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853149"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960598"
 ---
 # <a name="rank-class"></a>rank 类
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型查询会保留数组类型 `Ty` 的维度数值，如果 `Ty` 不是数组类型，则为 0。
+类型查询保留的值的数组类型的维数*Ty*，或者，如果*Ty*不是数组类型。
 
 ## <a name="example"></a>示例
 

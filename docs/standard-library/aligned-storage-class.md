@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958869"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage 类
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>参数
 
-`Len` 对象大小。
+*Len*对象大小。
 
-`Align` 对象对齐方式。
+*对齐*对象对齐方式。
 
 ## <a name="remarks"></a>备注
 
-模板成员 typedef `type` 与对齐方式为 `Align`、大小为 `Len` 的 POD 类型为同义词。 对于某些类型 `T`，`Align` 必须等于 `alignment_of<T>::value`，或为默认对齐方式。
+模板成员 typedef`type`是对齐的 POD 类型的同义词*对齐*和大小*Len*。 *对齐*必须等于`alignment_of<T>::value`某些类型`T`，或为默认对齐方式。
 
 ## <a name="example"></a>示例
 

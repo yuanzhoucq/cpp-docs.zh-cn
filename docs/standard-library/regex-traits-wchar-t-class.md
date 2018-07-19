@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958953"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 类
 
@@ -36,7 +36,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>备注
 
-此类是类型为 `wchar_t` 的元素的 [regex_traits](../standard-library/regex-traits-class.md) 模板类的显式专用化（以便它可以充分利用操作此类型对象的库函数）。
+此类是模板类的显式专用化[regex_traits](../standard-library/regex-traits-class.md)类型的元素**wchar_t** （以便它可以充分利用操作此类型的对象的库函数）。
 
 ## <a name="requirements"></a>要求
 

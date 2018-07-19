@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 结构 |Microsoft 文档
+title: _ATL_COM_MODULE70 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255656"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883708"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 结构
-由 COM 相关的代码在 atl。  
+由 COM 相关代码在 atl。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,22 +43,22 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>成员  
  `cbSize`  
- 结构，用于版本控制的大小。  
+ 用于版本控制的结构的大小。  
   
  `m_hInstTypeLib`  
- 实例句柄的与此模块的类型库。  
+ 对此模块的类型库句柄实例。  
   
- **m_ppAutoObjMapFirst**  
- 指示为此模块对象映射条目的开始的数组元素的地址。  
+ `m_ppAutoObjMapFirst`  
+ 数组元素，该值指示此模块的对象映射条目的开头的地址。  
   
- **m_ppAutoObjMapLast**  
- 数组元素，该值指示此模块对象映射条目的结束地址。  
+ `m_ppAutoObjMapLast`  
+ 指示此模块的对象映射条目的结束位置的数组元素的地址。  
   
  `m_csObjMap`  
- 要序列化到对象映射项的访问的关键部分。 Atl。 在内部使用  
+ 若要序列化到对象的映射条目的访问的关键部分。 在内部由 atl。  
   
 ## <a name="remarks"></a>备注  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)指的 typedef `_ATL_COM_MODULE70`。  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定义为 _ATL_COM_MODULE70 的 typedef。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h  

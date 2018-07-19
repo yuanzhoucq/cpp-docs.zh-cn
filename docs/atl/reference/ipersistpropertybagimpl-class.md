@@ -1,5 +1,5 @@
 ---
-title: IPersistPropertyBagImpl 类 |Microsoft 文档
+title: IPersistPropertyBagImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363426"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879210"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 类
-此类实现**IUnknown**和允许将其属性保存到客户端提供的属性包对象。  
+此类实现`IUnknown`和允许对象将其属性保存到客户端提供的属性包。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,8 +42,8 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IPersistPropertyBagImpl`。  
+ *T*  
+ 您的类，派生自`IPersistPropertyBagImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -52,14 +52,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |名称|描述|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|检索对象的 CLSID。|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新创建的对象。 ATL 实现返回`S_OK`。|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新创建的对象。 ATL 实现返回 S_OK。|  
 |[IPersistPropertyBagImpl::Load](#load)|从客户端提供的属性包加载对象的属性。|  
 |[IPersistPropertyBagImpl::Save](#save)|将对象的属性保存到客户端提供的属性包。|  
   
 ## <a name="remarks"></a>备注  
- [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)接口允许对象将其属性保存到客户端提供的属性包。 类`IPersistPropertyBagImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)接口允许对象将其属性保存到客户端提供的属性包。 类`IPersistPropertyBagImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
- **IPersistPropertyBag**与结合工作[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)和[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)。 客户端必须实现这些后者的两个接口。 通过`IPropertyBag`，客户端将保存并加载该对象的各个属性。 通过**IErrorLog**，该对象和客户端可以报告遇到的任何错误。  
+ `IPersistPropertyBag` 结合工作[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)并[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)。 这后一种两个接口必须由客户端实现。 通过`IPropertyBag`，客户端将保存并加载该对象的各个属性。 通过`IErrorLog`，该对象和客户端可以报告遇到的任何错误。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回 `S_OK`。  
+ 返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK 中。  

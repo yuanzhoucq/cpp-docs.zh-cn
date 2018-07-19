@@ -1,5 +1,5 @@
 ---
-title: CComQIPtrElementTraits 类 |Microsoft 文档
+title: CComQIPtrElementTraits 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361926"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879647"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits 类
-此类提供方法、 静态函数和有用的 typedef 时创建的 COM 接口指针的集合。  
+创建的 COM 接口指针的集合时，此类提供了方法、 静态函数和有用的 typedef。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +37,11 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>参数  
- `I`  
- COM 接口，指定要存储的指针的类型。  
+ *I*  
+ 指定要存储的指针的类型的 COM 接口。  
   
- `piid`  
- 指向 IID 的`I`。  
+ *piid*  
+ 指向 IID*我*。  
   
 ## <a name="members"></a>成员  
   
@@ -52,7 +52,7 @@ class CComQIPtrElementTraits :
 |[CComQIPtrElementTraits::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|  
   
 ## <a name="remarks"></a>备注  
- 此类派生方法，并提供有用的 typedef 时创建的集合类[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM 接口指针对象。 此类使用两个[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)和[CInterfaceList](../../atl/reference/cinterfacelist-class.md)类。  
+ 此类派生方法并提供有用的 typedef 时创建的集合类[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM 接口指针对象。 此类使用的同时[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)并[CInterfaceList](../../atl/reference/cinterfacelist-class.md)类。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   

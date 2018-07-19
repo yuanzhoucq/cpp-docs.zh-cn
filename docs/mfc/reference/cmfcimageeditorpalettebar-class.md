@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorPaletteBar 类 |Microsoft 文档
+title: CMFCImageEditorPaletteBar 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370037"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851451"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 类
-调色板栏功能提供给一个图像编辑器对话框。  
+提供图像编辑器对话框中的调色板栏的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,9 +47,9 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|确定工具栏是否可以显示已扩展边框的按钮。 (重写[CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。)|  
   
 ### <a name="remarks"></a>备注  
- 此类不应在代码中直接使用。  
+ 此类不适于在代码中直接使用。  
   
- 框架使用此类以在图像编辑器对话框中显示调色板栏。 有关图像编辑器对话框的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。  
+ 该框架使用此类在图像编辑器对话框中显示调色板条。 有关图像编辑器对话框的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,9 +89,9 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 此方法返回 `FALSE`。  
+ 此方法返回 FALSE。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)

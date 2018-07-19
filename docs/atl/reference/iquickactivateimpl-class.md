@@ -1,5 +1,5 @@
 ---
-title: IQuickActivateImpl 类 |Microsoft 文档
+title: IQuickActivateImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87427408483a60cf33b46a1a670095d211b3d80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362799"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881368"
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 类
 此类将合并到一个调用容器的控件初始化。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,8 +44,8 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IQuickActivateImpl`。  
+ *T*  
+ 您的类，派生自`IQuickActivateImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -54,11 +54,11 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |名称|描述|  
 |----------|-----------------|  
 |[IQuickActivateImpl::GetContentExtent](#getcontentextent)|检索当前正在运行的控件的显示大小。|  
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|执行快速初始化的控件正在加载。|  
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控件容器有分配给它的显示空间量。|  
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|执行快速加载的控件的初始化。|  
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控件容器有分配给它的显示空间。|  
   
 ## <a name="remarks"></a>备注  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)接口可帮助避免的延迟加载通过组合的单次调用中初始化的控件时的容器。 `QuickActivate`方法允许容器传递到一个指针[QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)需要的所有接口控件都包含指针的结构。 返回时，该控件将通过返回一个指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)包含它自己由容器使用的接口指针的结构。 类`IQuickActivateImpl`提供的默认实现**IQuickActivate**并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)界面可帮助避免延迟加载控件通过组合的单个调用中初始化时的容器。 `QuickActivate`方法，传递一个指向容器[QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)结构，它包含所有的接口指针控件需要。 返回时，该控件将通过返回一个指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)包含它自己的容器使用的接口指针的结构。 类`IQuickActivateImpl`提供的默认实现`IQuickActivate`并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -78,12 +78,12 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ```  
   
 ### <a name="remarks"></a>备注  
- 大小为完整呈现控件，并以 himetric 为单位指定。  
+ 大小用于完全呈现控件，以 HIMETRIC 为单位指定。  
   
  请参阅[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) Windows SDK 中。  
   
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
- 执行快速初始化的控件正在加载。  
+ 执行快速加载的控件的初始化。  
   
 ```
 STDMETHOD(QuickActivate)(
@@ -92,19 +92,19 @@ STDMETHOD(QuickActivate)(
 ```  
   
 ### <a name="remarks"></a>备注  
- 该结构包含指向接口所需的控件和一些环境属性的值。 返回时，该控件将传递指向的指针[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)包含指向容器要求，其自身接口和其他状态信息的结构。  
+ 该结构包含控件和一些环境属性的值所需的接口的指针。 在返回时，控制权将传递一个指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)结构，其中包含指向容器要求，其自身接口和其他状态信息的指针。  
   
  请参阅[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) Windows SDK 中。  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
- 通知控件容器有分配给它的显示空间量。  
+ 通知控件容器有分配给它的显示空间。  
   
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ```  
   
 ### <a name="remarks"></a>备注  
- 该大小以 himetric 为单位指定。  
+ 以 HIMETRIC 为单位指定大小。  
   
  请参阅[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK 中。  
   

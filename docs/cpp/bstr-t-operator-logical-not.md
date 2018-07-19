@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409756"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940223"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Microsoft 专用**  
   
- 检查是否封装`BSTR`是**NULL**字符串。  
+ 检查封装`BSTR`是一个 NULL 字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>返回值  
- 它将返回**true**如果是， **false**如果不是。  
+ 如果是，则返回 TRUE，如果没有，则返回 FALSE。  
   
  **结束 Microsoft 专用**  
   

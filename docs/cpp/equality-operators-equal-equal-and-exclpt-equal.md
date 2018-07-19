@@ -1,5 +1,5 @@
 ---
-title: '相等运算符: = = 和 ！ = |Microsoft 文档'
+title: '相等运算符: = = 和 ！ = |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e4a85f31777581df1a138de6d50b1057253e5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942567"
 ---
 # <a name="equality-operators--and-"></a>相等运算符：== 和 !=
 ## <a name="syntax"></a>语法  
@@ -41,16 +42,16 @@ expression != expression
 ## <a name="remarks"></a>备注  
  二元相等运算符将严格比较其操作数的相等性或不相等性。  
   
- 相等运算符（等于 (`==`) 而不等于 (`!=`)）的优先级低于关系运算符的优先级，但其行为类似。 这些运算符的结果类型为 `bool`。  
+ 相等运算符（等于 (`==`) 而不等于 (`!=`)）的优先级低于关系运算符的优先级，但其行为类似。 这些运算符的结果类型是**bool**。  
   
- 相等运算符 (`==`) 返回**true** (1) 如果两个操作数具有相同的值; 否则，它将返回**false** (0)。 不等于运算符 (`!=`) 返回**true**如果操作数不具有相同的值; 否则，它将返回**false**。  
+ 相等运算符 (`==`) 返回**true** (1)，如果两个操作数具有相同的值; 否则，它将返回**false** (0)。 不等于运算符 (`!=`) 返回**true**如果操作数不具有相同的值; 否则，它将返回**false**。  
   
 ## <a name="operator-keyword-for-"></a>!= 的运算符关键字  
- `not_eq` 运算符是 `!=` 的文本等效项。 有两种方法来访问`not_eq`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ `not_eq` 运算符是 `!=` 的文本等效项。 有两种方法来访问`not_eq`您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_Equality_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -69,6 +70,6 @@ int main() {
  相等运算符可比较指向同一类型的成员的指针。 在这种比较中，则执行指针到成员转换。 指向成员的指针也可以与计算结果为 0 的常量表达式进行比较。  
   
 ## <a name="see-also"></a>请参阅  
- [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
+ [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 关系和相等运算符](../c-language/c-relational-and-equality-operators.md)

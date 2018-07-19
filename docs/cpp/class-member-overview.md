@@ -1,5 +1,5 @@
 ---
-title: 类成员概述 |Microsoft 文档
+title: 类成员概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943042"
 ---
 # <a name="class-member-overview"></a>类成员概述
-类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 成员初始化的通过构造函数和清理工作，如释放的内存和释放资源可通过析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
+类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 初始化的成员，可以构造函数，然后清理工作，如释放的内存和释放的资源，可以析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
   
 ## <a name="kinds-of-class-members"></a>类成员的种类  
  成员类别的完整列表如下：  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [位域](../cpp/cpp-bit-fields.md)。  
   
--   [友元](../cpp/friend-cpp.md)。  
+-   [朋友](../cpp/friend-cpp.md)。  
   
 -   [别名和 typedef](../cpp/aliases-and-typedefs-cpp.md)。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example-class-declaration"></a>类声明示例  
  下面的示例显示了一个简单的类声明：  
   
-```  
+```cpp 
 // TestRun.h  
   
 class TestRun  
@@ -97,10 +98,10 @@ int TestRun::_instances{ 0 };
 ```  
   
 ## <a name="member-accessibility"></a>成员可访问性  
- 在成员列表中声明类的成员。 类的成员列表中可能会分为任意数量的`private`，`protected`和**公共**部分使用称为访问说明符的关键字。  冒号 **:** 必须遵循访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅[成员访问控制 （C++）](../cpp/member-access-control-cpp.md)。  
+ 在成员列表中声明类的成员。 类的成员列表中可能被分割为任意数量的**私有**，**保护**并**公共**部分使用称为访问说明符的关键字。  冒号 **:** 必须遵循的访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅[成员访问控制 （C++）](../cpp/member-access-control-cpp.md)。  
   
 ## <a name="static-members"></a>静态成员  
- 可将数据成员声明为静态，这表示类的所有对象都有权访问它的同一副本。 成员函数可能被声明为静态，在这种情况下它只能访问类的静态数据成员 (且不具有*这*指针)。 有关详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。  
+ 可将数据成员声明为静态，这表示类的所有对象都有权访问它的同一副本。 成员函数可能会声明为静态，这种情况下它只能访问类的静态数据成员 (且不具有*这*指针)。 有关详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。  
   
 ## <a name="special-member-functions"></a>特殊成员函数  
  如果你并未在源代码中指定特殊成员函数，那么编译器自动提供的函数则为特殊成员函数。  
@@ -122,7 +123,7 @@ int TestRun::_instances{ 0 };
 ## <a name="memberwise-initialization"></a>按成员初始化  
  在 C++ 11 和更高版本中，非静态成员声明符可以包含初始值设定项。  
   
-```  
+```cpp 
   
 class CanInit  
 {  
@@ -147,7 +148,7 @@ int main()
   
  对于给定类类型的所有对象，只有一个静态数据成员的共享副本。 必须在文件范围内定义静态数据成员并可在此范围内将其初始化。 (有关静态数据成员的详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。)以下示例演示如何执行这些初始化：  
   
-```  
+```cpp 
 // class_members2.cpp  
 class CanInit2  
 {  

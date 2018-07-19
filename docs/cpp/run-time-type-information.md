@@ -1,5 +1,5 @@
 ---
-title: 运行时类型信息 |Microsoft 文档
+title: 运行时类型信息 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419987"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938910"
 ---
 # <a name="run-time-type-information"></a>运行时类型信息
 运行时类型信息 (RTTI) 是一种允许在程序执行过程中确定对象的类型的机制。 RTTI 已添加到 C++ 语言中，因为许多类库供应商将自行实现此功能。 这会导致库之间出现不兼容的情况。 因此，显而易见的是，需要语言级别的对运行时类型信息的支持。  
@@ -42,7 +42,7 @@ ms.locfileid: "32419987"
   
 -   [Type_info](../cpp/type-info-class.md)类。  
   
-     用于保留由 `typeid` 运算符返回的类型信息。  
+     用于保存返回的类型信息**typeid**运算符。  
   
 ## <a name="see-also"></a>请参阅  
  [强制转换](../cpp/casting.md)

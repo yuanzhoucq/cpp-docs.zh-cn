@@ -1,5 +1,5 @@
 ---
-title: COlePropertyPage 类 |Microsoft 文档
+title: COlePropertyPage 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b6b6d011b40ebc9871baec1a1e57636499a58963
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042542"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851569"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 类
 用于在图形界面（类似于对话框）中显示自定义控件的属性。  
@@ -78,26 +78,26 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |----------|-----------------|  
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|指示用户是否已修改控件中的值。|  
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|返回正在编辑的属性页的对象的数组。|  
-|[COlePropertyPage::GetPageSite](#getpagesite)|将指针返回到属性页的`IPropertyPageSite`接口。|  
+|[COlePropertyPage::GetPageSite](#getpagesite)|返回一个指向属性页的`IPropertyPageSite`接口。|  
 |[COlePropertyPage::IgnoreApply](#ignoreapply)|确定哪些控件不能将应用按钮。|  
 |[COlePropertyPage::IsModified](#ismodified)|指示用户是否已修改的属性页。|  
 |[COlePropertyPage::OnEditProperty](#oneditproperty)|当用户编辑属性时，由框架调用。|  
-|[COlePropertyPage::OnHelp](#onhelp)|当用户调用帮助时，由框架调用。|  
-|[COlePropertyPage::OnInitDialog](#oninitdialog)|在初始化属性页时，由框架调用。|  
-|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|选择另一个 OLE 控件，用新属性时，由框架调用。|  
-|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|当属性框架提供页面的站点时，由框架调用。|  
+|[COlePropertyPage::OnHelp](#onhelp)|当用户调用帮助时由框架调用。|  
+|[COlePropertyPage::OnInitDialog](#oninitdialog)|初始化的属性页时，由框架调用。|  
+|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|选择具有新属性的另一个 OLE 控件时由框架调用。|  
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|当属性框架提供页面的站点时由框架调用。|  
 |[COlePropertyPage::SetControlStatus](#setcontrolstatus)|设置一个标志，指示用户是否已修改控件中的值。|  
-|[COlePropertyPage::SetDialogResource](#setdialogresource)|设置的属性页对话框资源。|  
-|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|设置属性页的简短的帮助文本、 其帮助文件和其帮助上下文的名称。|  
+|[COlePropertyPage::SetDialogResource](#setdialogresource)|设置属性页对话框资源。|  
+|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|设置属性页的简短帮助文本、 其帮助文件和其帮助上下文的名称。|  
 |[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|设置一个标志，指示用户是否已修改的属性页。|  
 |[COlePropertyPage::SetPageName](#setpagename)|设置属性页的名称 （标题）。|  
   
 ## <a name="remarks"></a>备注  
- 例如，属性页可能包含编辑控件，它允许用户查看和修改控件的 caption 属性。  
+ 例如，属性页可能包括允许用户查看和修改控件的标题属性的编辑控件。  
   
- 每个自定义或常用控件属性可以具有对话框控件，该控件的用户可以查看当前的属性值并根据需要修改该值。  
+ 每个自定义或库存控制属性可以具有控件的用户可以查看当前属性值并根据需要修改该值的对话框控件。  
   
- 有关详细信息使用`COlePropertyPage`，请参阅文章[ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。  
+ 有关使用的详细信息`COlePropertyPage`，请参阅文章[ActiveX 控件： 属性页](../../mfc/mfc-activex-controls-property-pages.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -124,16 +124,16 @@ COlePropertyPage(
   
 ### <a name="parameters"></a>参数  
  *idDlg*  
- 对话框模板资源 ID。  
+ 在对话框模板资源 ID。  
   
  *idCaption*  
- 资源 ID 属性页的标题。  
+ 属性页的标题的资源 ID。  
   
 ### <a name="remarks"></a>备注  
- 当您实现的一个子类`COlePropertyPage`，子类的构造函数应使用`COlePropertyPage`构造函数，以标识的对话框模板资源上基于的属性页并包含其标题的字符串资源。  
+ 当您实现的子类`COlePropertyPage`，子类的构造函数应使用`COlePropertyPage`构造函数，以标识的对话框模板资源上它的属性页为基础，并包含其标题的字符串资源。  
   
 ##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
- 确定用户是否已修改的值的属性页控件替换为指定的资源 id。  
+ 确定用户是否已修改的值的属性页控件指定的资源 id。  
   
 ```  
 BOOL GetControlStatus(UINT nID);
@@ -141,10 +141,10 @@ BOOL GetControlStatus(UINT nID);
   
 ### <a name="parameters"></a>参数  
  *nID*  
- 属性页控件的资源 ID。  
+ 资源 ID 的属性页控件。  
   
 ### <a name="return-value"></a>返回值  
- **TRUE**如果控件的值已修改; 否则为**FALSE**。  
+ 如果控件值已修改，则为 TRUE否则为 FALSE。  
   
 ##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
  返回正在编辑的属性页的对象的数组。  
@@ -155,16 +155,16 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
   
 ### <a name="parameters"></a>参数  
  *pnObjects*  
- 将接收正在编辑的页面的对象的数目为无符号长整数的指针。  
+ 指向将接收所编辑的页的对象数的无符号长整数的指针。  
   
 ### <a name="return-value"></a>返回值  
- 指向数组的指针`IDispatch`指针，用于访问每个控件的属性页上的属性。 调用方必须不释放这些接口指针。  
+ 指向数组的指针`IDispatch`指针，用于访问属性页上的每个控件的属性。 调用方必须释放这些接口指针。  
   
 ### <a name="remarks"></a>备注  
- 每个属性页对象维护指向的指针的数组`IDispatch`正在编辑的页面的对象的接口。 此函数将其*pnObjects*该数组中的元素数目的自变量并返回数组的第一个元素的指针。  
+ 每个属性页对象维护指向的指针的数组`IDispatch`正在编辑的页的对象的接口。 此函数将其*pnObjects*该数组中的元素数目的参数和返回指向数组的第一个元素的指针。  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
- 获取一个指针指向属性页的`IPropertyPageSite`接口。  
+ 获取一个指针指向的属性页`IPropertyPageSite`接口。  
   
 ```  
 LPPROPERTYPAGESITE GetPageSite();
@@ -174,7 +174,7 @@ LPPROPERTYPAGESITE GetPageSite();
  指向属性页的`IPropertyPageSite`接口。  
   
 ### <a name="remarks"></a>备注  
- 控件和容器共同协作，以便用户可以浏览和编辑控件属性。 该控件提供属性页，其中每个是允许用户编辑属性的一组相关的 OLE 对象。 容器提供的属性框架中显示的属性页。 对于每个页上，属性框架提供了支持的页站点`IPropertyPageSite`接口。  
+ 控件与容器的协作，以便用户可以浏览和编辑控件属性。 此控件提供属性页，其中每个是允许用户编辑一组相关的属性的 OLE 对象。 容器提供了显示的属性页的属性帧。 对于每个页中，属性框架提供支持的页站点`IPropertyPageSite`接口。  
   
 ##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
  确定哪些控件不能将应用按钮。  
@@ -188,7 +188,7 @@ void IgnoreApply(UINT nID);
  若要忽略的控件 ID。  
   
 ### <a name="remarks"></a>备注  
- 仅当已更改的属性页面控件的值时，将启用属性页的应用按钮。 使用此函数指定不会导致应用按钮在其值更改时启用的控件。  
+ 仅当属性页控件的值已更改时，才启用属性页的应用按钮。 使用此函数指定不会导致其值更改时启用应用按钮的控件。  
   
 ##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
  确定用户是否已更改的属性页上的任何值。  
@@ -198,10 +198,10 @@ BOOL IsModified();
 ```  
   
 ### <a name="return-value"></a>返回值  
- **TRUE**如果已修改的属性页。  
+ 如果已修改的属性页，则为 TRUE。  
   
 ##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
- 要编辑的特定属性时，框架将调用此函数。  
+ 若要对其进行编辑的特定属性时，框架将调用此函数。  
   
 ```  
 virtual BOOL OnEditProperty(DISPID dispid);
@@ -212,13 +212,13 @@ virtual BOOL OnEditProperty(DISPID dispid);
  正在编辑的属性的调度 ID。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现返回**FALSE**。 此函数的重写应返回**TRUE**。  
+ 默认实现将返回 FALSE。 重写此函数应返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 你可以重写它以将焦点设置到页上的相应控件。 默认实现不执行任何操作并返回**FALSE**。  
+ 可以重写它以将焦点设置到的页上的相应控件。 默认实现不执行任何操作，并返回 FALSE。  
   
 ##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
- 当用户请求联机帮助时，框架将调用此函数。  
+ 当用户请求的联机帮助时，框架将调用此函数。  
   
 ```  
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
@@ -229,35 +229,35 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
  包含属性页的帮助文件的目录。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现返回**FALSE**。  
+ 默认实现将返回 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 如果在用户访问帮助时，属性页必须执行任何特殊操作，重写它。 默认实现不执行任何操作并返回**FALSE**，它指示框架在调用调用 WinHelp。  
+ 如果属性页必须执行的任何特殊操作，在用户访问帮助时，重写它。 默认实现不执行任何操作，并将返回 FALSE，这会指示框架调用 WinHelp。  
   
 ##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
- 在初始化属性页的对话框时，框架将调用此函数。  
+ 初始化属性页的对话框时，框架将调用此函数。  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 默认实现返回**FALSE**。  
+ 默认实现将返回 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 如果在初始化对话框时，不需要执行任何特殊操作，重写它。 默认实现调用`CDialog::OnInitDialog`并返回**FALSE**。  
+ 如果初始化对话框时，不需要执行任何特殊操作，请将其覆盖。 默认实现将调用`CDialog::OnInitDialog`，返回 FALSE。  
   
 ##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
- 选择另一个 OLE 控件，用新属性时，由框架调用。  
+ 选择具有新属性的另一个 OLE 控件时由框架调用。  
   
 ```  
 virtual void OnObjectsChanged();
 ```  
   
 ### <a name="remarks"></a>备注  
- 无模式对话框中查看时 OLE 控件的属性开发人员环境，用于显示其属性页。 如果选择另一个控件，则必须为新的属性集显示一组不同的属性页。 框架调用此函数可通知的更改的属性页。  
+ 当开发人员环境中查看 OLE 控件的属性，无模式对话框用于显示其属性页。 如果选择另一个控件，则一组不同的属性页必须显示为一组新的属性。 框架调用此函数，以通知此更改的属性页。  
   
- 重写此函数可接收此操作的通知并执行任何特殊操作。  
+ 重写此函数可接收此操作的通知和执行任何特殊操作。  
   
 ##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite  
  当属性框架提供的属性页的页站点时，框架将调用此函数。  
@@ -267,10 +267,10 @@ virtual void OnSetPageSite();
 ```  
   
 ### <a name="remarks"></a>备注  
- 默认实现加载该页面的标题，并尝试确定从对话框资源的页面的大小。 属性页需要任何进一步的操作; 如果重写此函数重写应调用基类实现。  
+ 默认实现将加载页面的标题，并会尝试确定从对话框资源的页面的大小。 如果属性页面所需任何进一步的操作; 重写此函数重写应调用基类实现。  
   
 ##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
- 更改属性页控件的状态。  
+ 属性页控件状态更改。  
   
 ```  
 BOOL SetControlStatus(
@@ -280,19 +280,19 @@ BOOL SetControlStatus(
   
 ### <a name="parameters"></a>参数  
  *nID*  
- 包含属性页控件的 ID。  
+ 包含的属性页控件的 ID。  
   
  *bDirty*  
- 指定是否已修改的属性页的字段。 设置为**TRUE**如果字段已被修改， **FALSE**如果尚未修改。  
+ 指定是否已修改的属性页字段。 如果该字段已被修改，FALSE 如果它未被修改，则设置为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
- **TRUE**，如果指定的控件已设置; 否则为**FALSE**。  
+ 设置指定的控件; 如果为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 如果关闭属性页或选择应用按钮时，属性页控件的状态已更新，则将使用适当的值更新控件的属性。  
+ 如果关闭属性页或选择应用按钮时，属性页控件的状态已更新，将使用适当的值更新控件的属性。  
   
 ##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
- 设置的属性页对话框资源。  
+ 设置属性页对话框资源。  
   
 ```  
 void SetDialogResource(HGLOBAL hDialog);
@@ -314,7 +314,7 @@ void SetHelpInfo(
   
 ### <a name="parameters"></a>参数  
  *lpszDocString*  
- 包含在一个状态栏或其他位置中进行显示简要的帮助信息的字符串。  
+ 包含用于显示一个状态栏或其他位置中的简短帮助信息的字符串。  
   
  *lpszHelpFile*  
  属性页的帮助文件的名称。  
@@ -334,7 +334,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
  指定的属性页修改标志的新值。  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
- 设置属性框架将通常显示在页面的选项卡上的属性页的名称。  
+ 设置属性页的名称，通常会在页面的选项卡上显示属性框架。  
   
 ```  
 void SetPageName(LPCTSTR lpszPageName);
@@ -342,11 +342,11 @@ void SetPageName(LPCTSTR lpszPageName);
   
 ### <a name="parameters"></a>参数  
  *lpszPageName*  
- 包含属性页的名称的字符串的指针。  
+ 包含属性页的名称的字符串指针。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 CIRC3](../../visual-cpp-samples.md)   
  [MFC 示例 TESTHELP](../../visual-cpp-samples.md)   
  [CDialog 类](../../mfc/reference/cdialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CDialog 类](../../mfc/reference/cdialog-class.md)

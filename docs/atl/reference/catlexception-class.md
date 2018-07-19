@@ -1,5 +1,5 @@
 ---
-title: CAtlException 类 |Microsoft 文档
+title: CAtlException 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaafdf42d218e2c3bca1e8ee28c27898f80bcf40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fed15dc2348fa540c1f33e7742c5cbcda96b5846
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357865"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882528"
 ---
 # <a name="catlexception-class"></a>CAtlException 类
 此类定义 ATL 异常。  
@@ -47,16 +47,16 @@ class CAtlException
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|强制转换为 HRESULT 值的当前对象。|  
+|[CAtlException::operator HRESULT](#operator_hresult)|将强制转换为 HRESULT 值的当前对象。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|类型的变量 HRESULT 由对象和创建用于存储的错误条件。|  
+|[CAtlException::m_hr](#m_hr)|创建的对象的 HRESULT 以及用来存储错误条件的类型的变量。|  
   
 ## <a name="remarks"></a>备注  
- A`CAtlException`对象表示与 ATL 操作相关的异常条件。 `CAtlException`类包括存储原因异常和转换运算符，您可以将异常，就像它是一个 HRESULT，该值指示的状态代码的公共数据成员。  
+ 一个`CAtlException`对象都表示对 ATL 操作相关的异常条件。 `CAtlException`类包括存储，该值指示该异常并使您可以将该异常，就好像 HRESULT 的强制转换运算符的原因的状态代码的公共数据成员。  
   
  一般情况下，将调用`AtlThrow`而不是创建`CAtlException`直接对象。  
   
@@ -72,25 +72,25 @@ CAtlException() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `hr`  
- `HRESULT`错误代码。  
+ *hr*  
+ HRESULT 错误代码。  
   
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT 
- 强制转换为 HRESULT 值的当前对象。  
+ 将强制转换为 HRESULT 值的当前对象。  
   
 ```  
 operator HRESULT() const throw ();
 ```  
   
 ##  <a name="m_hr"></a>  CAtlException::m_hr  
- `HRESULT`数据成员。  
+ HRESULT 数据成员。  
   
 ```
 HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>备注  
- 数据成员的存储的错误条件。 HRESULT 值由构造函数中，设置[CAtlException::CAtlException](#catlexception)。  
+ 将存储的错误条件的数据成员。 HRESULT 值由构造函数中，设置[CAtlException::CAtlException](#catlexception)。  
   
 ## <a name="see-also"></a>请参阅  
  [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   

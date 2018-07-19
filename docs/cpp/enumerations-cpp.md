@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943018"
 ---
 # <a name="enumerations-c"></a>枚举 (C++)
 枚举是用户定义的类型，其中包含一组称为枚举器的命名的整型常数。  
   
 > [!NOTE]
->  本文包含 ISO 标准 C++ 语言 `enum` 类型和 C++11 中引入的范围（或强类型）`enum class` 类型。 璝惠`public enum class`或`private enum class`类型在 C++ /cli 和 C++ /CX 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。  
+>  本文包含 ISO 标准 c + + 语言**enum**类型和作用域内 （或强类型化）**枚举类**在 C + + 11 中引入的类型。 有关信息**公共枚举类**或**私有枚举类**类型在 C + + /cli 和 C + + /CX 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +46,7 @@ enum [class|struct]
 {enum-list};  
 ```  
   
-```  
+```cpp 
 // Forward declaration of enumerations  (C++11):  
 enum A : int; // non-scoped enum must have type specified
 enum class B; // scoped enum defaults to int but ...
@@ -53,17 +54,17 @@ enum class C : short;  // ... may have any integral underlying type
 ```  
   
 ## <a name="parameters"></a>参数  
- `identifier`  
+ *identifier*  
  指定给与枚举的类型名称。  
   
- `type`  
+ *type*  
  枚举器的基础类型；所有枚举器都具有相同的基础类型。 可能是任何整型。  
   
- `enum-list`  
- 枚举中以逗号分隔的枚举器列表。 范围中的每个枚举器或变量名必须是唯一的。 但是，值可以重复。 在未区分范围的枚举中，范围是周边范围；在区分范围的枚举中，范围是 `enum-list` 本身。  中的范围的枚举，列表可能为空后者实际上定义了新的整型类型。
+ *枚举列表*  
+ 枚举中以逗号分隔的枚举器列表。 范围中的每个枚举器或变量名必须是唯一的。 但是，值可以重复。 在未区分范围枚举中，范围是周边范围;在限定了作用域枚举中，作用域是*枚举列表*本身。  在限定了作用域枚举中，列表可能为空的有效定义了新的整型类型。
   
- `class`  
- 可使用声明中的此关键字指定枚举区分范围，并且必须提供 `identifier`。 还可使用 `struct` 关键字来代替 `class`，因为在此上下文中它们在语义上等效。  
+ *class*  
+ 通过在声明中使用此关键字，指定枚举区分范围，和一个*标识符*必须提供。 此外可以使用**struct**关键字来代替**类**，因为它们在语义上等效，在此上下文中。  
   
 ## <a name="enumerator-scope"></a>枚举器作用域  
  枚举提供上下文来描述以命名常数表示的一系列值，这些值也称为枚举器。 在原始 C 和 C++ 枚举类型中，非限定枚举器在声明枚举的整个范围中可见。 在区分范围的枚举中，枚举器名称必须由枚举类型名称限定。 以下示例演示两种枚举之间的基本差异：  
@@ -112,7 +113,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
   
  ## <a name="casting-rules"></a>强制转换规则  
   
- 未区分范围的枚举常数可以隐式转换为 `int`，但是 `int` 不可以隐式转换为枚举值。 下面的示例显示了如果尝试为 `hand` 分配一个不是 `Suit` 的值可能出现的情况：  
+ 未区分范围的枚举常数可以隐式转换为**int**，但**int**是永远不会隐式转换为枚举值。 下面的示例显示了如果尝试为 `hand` 分配一个不是 `Suit` 的值可能出现的情况：  
   
 ```cpp  
 int account_num = 135692;  
@@ -121,7 +122,7 @@ hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
   
 ```  
   
- 将 `int` 转换为区分范围或未区分范围的枚举器时，需要强制转换。 但是，你可以将区分范围的枚举器提升为整数值，而不进行强制转换。  
+ 将转换所需的强制转换**int**对作用域内或未区分范围枚举器。 但是，你可以将区分范围的枚举器提升为整数值，而不进行强制转换。  
   
 ```cpp  
 int account_num = Hearts; //OK if Hearts is in a unscoped enum  
@@ -152,14 +153,14 @@ namespace ScopedEnumConversions
  注意，`hand = account_num;` 行仍会导致对未区分范围的枚举发生的错误，如前面所示。 它可以与显式强制转换一起使用。 但是，借助区分范围的枚举，不再允许在没有显式强制转换的情况下在下一条语句 `account_num = Suit::Hearts;` 中尝试转换。 
 
 ## <a name="enums-with-no-enumerators"></a>与任何枚举器枚举
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置基础类型，则可以消除可能会引起意外的隐式转换的细微错误。  
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置的基础类型，则可以消除导致意外的隐式转换的细微错误的可能性。  
 
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-新类型的基础类型的一个精确副本，因此具有相同的调用约定，这意味着它可以跨使用 ABIs 而无需产生任何性能损失。 没有强制转换类型的变量将通过使用直接列表初始化初始化时需要。 下面的示例演示如何初始化具有各种上下文中没有枚举器枚举：
+新类型的基础类型的精确副本，因此具有相同的调用约定，这意味着它可跨 Abi 不产生任何性能损失。 使用直接列表初始化的变量进行初始化时，没有强制转换是类型的必需的。 下面的示例演示如何初始化与中各种上下文没有枚举器枚举：
 
 ```cpp
 enum class byte : unsigned char { };

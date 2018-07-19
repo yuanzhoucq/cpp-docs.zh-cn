@@ -1,5 +1,5 @@
 ---
-title: CComVariant 类 |Microsoft 文档
+title: CComVariant 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2ebef74f6da48d2124d69f002a85c467db73406
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edc0e098e1f3e80a80dabeda8c0a5f7a58e5e697
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961137"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 类
-此类将包装`VARIANT`提供，该值指示存储的数据类型的成员的类型。  
+此类包装提供存储的数据类型，该值指示成员的变体类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,31 +60,31 @@ class CComVariant : public tagVARIANT
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComVariant::Attach](#attach)|将附加**VARIANT**到`CComVariant`对象。|  
+|[CComVariant::Attach](#attach)|将附加到一个变体`CComVariant`对象。|  
 |[CComVariant::ChangeType](#changetype)|将转换`CComVariant`为新类型的对象。|  
 |[CComVariant::Clear](#clear)|清除`CComVariant`对象。|  
-|[CComVariant::Copy](#copy)|副本**VARIANT**到`CComVariant`对象。|  
+|[CComVariant::Copy](#copy)|将复制到一个变体`CComVariant`对象。|  
 |[CComVariant::CopyTo](#copyto)|内容复制`CComVariant`对象。|  
-|[CComVariant::Detach](#detach)|分离基础**VARIANT**从`CComVariant`对象。|  
+|[CComVariant::Detach](#detach)|从基础的变体中分离`CComVariant`对象。|  
 |[CComVariant::GetSize](#getsize)|返回中的内容的字节数大小`CComVariant`对象。|  
-|[CComVariant::ReadFromStream](#readfromstream)|加载**VARIANT**从流。|  
-|[CComVariant::SetByRef](#setbyref)|初始化`CComVariant`对象并设置**vt**成员**VT_BYREF**。|  
-|[CComVariant::WriteToStream](#writetostream)|将保存基础**VARIANT**到流。|  
+|[CComVariant::ReadFromStream](#readfromstream)|从流加载一个变体。|  
+|[CComVariant::SetByRef](#setbyref)|初始化`CComVariant`对象并设置`vt`VT_BYREF 的成员。|  
+|[CComVariant::WriteToStream](#writetostream)|将保存到流的基础的变体。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |||  
 |-|-|  
-|[CComVariant::operator <](#operator_lt)|指示是否`CComVariant`对象是否指定小于**VARIANT**。|  
-|[CComVariant::operator >](#operator_gt)|指示是否`CComVariant`对象是否大于指定**VARIANT**。|  
-|[运算符 ！ =](#operator_neq)|指示是否`CComVariant`对象不等于指定**VARIANT**。|  
-|[operator =](#operator_eq)|将值赋给`CComVariant`对象。|  
-|[operator ==](#operator_eq_eq)|指示是否`CComVariant`的对象等于指定**VARIANT**。|  
+|[CComVariant::operator <](#operator_lt)|指示是否`CComVariant`对象是否小于指定的变体。|  
+|[CComVariant::operator >](#operator_gt)|指示是否`CComVariant`对象是否大于指定的变体。|  
+|[运算符 ！ =](#operator_neq)|指示是否`CComVariant`对象不等于指定的变体。|  
+|[operator =](#operator_eq)|将一个值赋给`CComVariant`对象。|  
+|[operator ==](#operator_eq_eq)|指示是否`CComVariant`对象等于指定的变体。|  
   
 ## <a name="remarks"></a>备注  
- `CComVariant` 包装`VARIANT and VARIANTARG`类型，其中包含联合和联合中存储的数据类型，该值指示成员。 **VARIANT**s 通常在自动化中使用。  
+ `CComVariant` 包装 VARIANT 和 VARIANTARG 类型，其中包含联合和联合中存储的数据类型，该值指示成员。 在自动化中通常使用变体。  
   
- `CComVariant` 派生自**VARIANT**键入，以便它可以是任何位置使用**VARIANT**可用。 例如，可以使用**V_VT**宏来提取的一种`CComVariant`或可以访问**vt**成员直接就像可以按照与**VARIANT**。  
+ `CComVariant` 派生于变体类型，因此可以使用一个变体的位置，可以使用它。 例如，可以使用 V_VT 宏的类型中提取`CComVariant`，或可以访问`vt`成员直接就像可以使用一个变体。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `tagVARIANT`  
@@ -95,24 +95,24 @@ class CComVariant : public tagVARIANT
  **标头：** atlcomcli.h  
   
 ##  <a name="attach"></a>  CComVariant::Attach  
- 安全地清除的当前内容`CComVariant`对象，将复制的内容`pSrc`到此对象，然后设置的变体类型`pSrc`到`VT_EMPTY`。  
+ 安全地清除当前的内容`CComVariant`对象，请将复制的内容*pSrc*成此对象，然后设置的变体类型*pSrc*为 VT_EMPTY。  
   
 ```
 HRESULT Attach(VARIANT* pSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSrc`  
- [in]指向[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)要附加到对象。  
+ *pSrc*  
+ [in]指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要附加到对象。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 保存的数据的所有权`pSrc`传输到`CComVariant`对象。  
+ 保存的数据的所有权*pSrc*传输到`CComVariant`对象。  
   
 ##  <a name="ccomvariant"></a>  CComVariant::CComVariant  
- 每个构造函数处理的安全初始化`CComVariant`对象通过调用`VariantInit`Win32 函数或通过设置对象的值和根据传递的参数的类型。  
+ 每个构造函数将处理的安全初始化`CComVariant`对象通过调用`VariantInit`Win32 函数或通过设置对象的值与根据传递的参数的类型。  
   
 ```
 CComVariant() throw();
@@ -142,39 +142,39 @@ CComVariant(const CComBSTR& bstrSrc);
   
 ### <a name="parameters"></a>参数  
  *varSrc*  
- [in]`CComVariant`或`VARIANT`用于初始化`CComVariant`对象。 源变体的内容复制到目标而不进行转换。  
+ [in]`CComVariant`或用来初始化的变体`CComVariant`对象。 源变体的内容复制到目标而不进行转换。  
   
- `lpszSrc`  
- [in]用于初始化的字符字符串`CComVariant`对象。 你可以零终止宽 (Unicode) 字符将字符串传递给**LPCOLESTR**版本的构造函数或 ANSI 字符串到`LPCSTR`版本。 在任一情况下字符串转换为 Unicode`BSTR`使用分配**SysAllocString**。 一种`CComVariant`对象将`VT_BSTR`。  
+ *lpszSrc*  
+ [in]用于初始化的字符字符串`CComVariant`对象。 可以将零终止宽 (Unicode) 字符字符串传递给构造函数或 ANSI 字符串到 LPCSTR 版本的 LPCOLESTR 版本。 在任一情况下，此字符串将转换为 Unicode 使用分配的 BSTR `SysAllocString`。 类型`CComVariant`对象将成为 VT_BSTR。  
   
- `bSrc`  
- [in]`bool`用于初始化`CComVariant`对象。 `bool`自变量转换为**VARIANT_BOOL**之前存储。 一种`CComVariant`对象将`VT_BOOL`。  
+ *bSrc*  
+ [in]**Bool**用来初始化`CComVariant`对象。 **Bool**参数转换为 VARIANT_BOOL 再将其存储。 类型`CComVariant`对象都是 VT_BOOL。  
   
- `nSrc`  
- [in]`int`，**字节**，**短**，**长**， **LONGLONG**， **ULONGLONG**， **无符号短**， `unsigned long`，或`unsigned int`用于初始化`CComVariant`对象。 一种`CComVariant`对象将`VT_I4`， `VT_UI1`， `VT_I2`， `VT_I4`， **VT_I8**， **VT_UI8**， **VT_UI2**， **VT_UI4**，或**VT_UI4**分别。  
+ *nSrc*  
+ [in]**Int**，**字节**，**短**，**长**，LONGLONG、 ULONGLONG， **unsigned short**， **无符号长**，或**无符号的 int**用来初始化`CComVariant`对象。 类型`CComVariant`对象将分别为 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 为 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4。  
   
- `vtSrc`  
- [in]该变量的类型。 第一个参数时`int`，有效类型是`VT_I4`和**VT_INT**。 第一个参数时**长**，有效类型是`VT_I4`和`VT_ERROR`。 第一个参数时**double**，有效类型是`VT_R8`和`VT_DATE`。 第一个参数时`unsigned int`，有效类型是**VT_UI4**和**VT_UINT**。  
+ *vtSrc*  
+ [in]变体类型。 当第一个参数是**int**，有效类型为 VT_I4 和 VT_INT。 当第一个参数是**长**，有效类型为 VT_I4 和 VT_ERROR。 当第一个参数是**double**，有效类型是 VT_R8 和 VT_DATE。 当第一个参数是**无符号的 int**，有效类型是 VT_UI4 和 VT_UINT。  
   
- `fltSrc`  
- [in]**Float**用于初始化`CComVariant`对象。 一种`CComVariant`对象将`VT_R4`。  
+ *fltSrc*  
+ [in]**Float**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R4。  
   
- `dblSrc`  
- [in]**Double**用于初始化`CComVariant`对象。 一种`CComVariant`对象将`VT_R8`。  
+ *dblSrc*  
+ [in]**双**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R8。  
   
- `cySrc`  
- [in]**CY**用于初始化`CComVariant`对象。 一种`CComVariant`对象将`VT_CY`。  
+ *cySrc*  
+ [in]`CY`用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_CY。  
   
- `pSrc`  
- [in]`IDispatch`或**IUnknown**指针用于初始化`CComVariant`对象。 `AddRef` 将在接口指针上调用。 一种`CComVariant`对象将**VT_DISPATCH**或**VT_UNKNOWN**分别。  
+ *pSrc*  
+ [in]`IDispatch`或`IUnknown`指针用于初始化`CComVariant`对象。 `AddRef` 将接口指针上调用。 类型`CComVariant`对象将分别为 VT_DISPATCH 或 VT_UNKNOWN。  
   
- 或者， **SAFERRAY**指针用于初始化`CComVariant`对象。 一份**SAFEARRAY**存储在`CComVariant`对象。 一种`CComVariant`对象将是原始类型的组合**SAFEARRAY**和**VT_ARRAY**。  
+ 或者，用来初始化 SAFERRAY 指针`CComVariant`对象。 SAFEARRAY 的副本存储在`CComVariant`对象。 类型`CComVariant`对象将是原始类型的 SAFEARRAY 和 VT_ARRAY 的组合。  
   
- `cSrc`  
- [in]`char`用于初始化`CComVariant`对象。 一种`CComVariant`对象将**VT_I1**。  
+ *cSrc*  
+ [in]**Char**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_I1。  
   
- `bstrSrc`  
- [in]BSTR 用于初始化`CComVariant`对象。 一种`CComVariant`对象将`VT_BSTR`。  
+ *bstrSrc*  
+ [in]BSTR 用于初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_BSTR。  
   
 ### <a name="remarks"></a>备注  
  析构函数通过调用管理清理[CComVariant::Clear](#clear)。  
@@ -197,17 +197,17 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `vtNew`  
+ *vtNew*  
  [in]新类型`CComVariant`对象。  
   
- `pSrc`  
- [in]指向的指针`VARIANT`其值将转换为新的类型。 默认值是**NULL**，这意味着`CComVariant`将就地转换对象。  
+ *pSrc*  
+ [in]一个指向其值将转换为新类型的变体。 默认值为 NULL，含义`CComVariant`将就地转换对象。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果您传递一个值`pSrc`，`ChangeType`将使用此**VARIANT**作为转换的源。 否则为`CComVariant`对象将为源。  
+ 如果传递的值*pSrc*，`ChangeType`将使用此变体作为源进行转换。 否则为`CComVariant`对象将成为源。  
   
 ##  <a name="clear"></a>  CComVariant::Clear  
  清除`CComVariant`对象通过调用`VariantClear`Win32 函数。  
@@ -217,24 +217,24 @@ HRESULT Clear();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 析构函数自动调用**清除**。  
+ 析构函数自动调用`Clear`。  
   
 ##  <a name="copy"></a>  CComVariant::Copy  
- 释放`CComVariant`对象，然后将其分配一份指定**VARIANT**。  
+ 释放`CComVariant`对象，然后将其分配指定的变体的副本。  
   
 ```
 HRESULT Copy(const VARIANT* pSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSrc`  
- [in]指向的指针[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)要复制。  
+ *pSrc*  
+ [in]一个指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要复制。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="copyto"></a>  CComVariant::CopyTo  
  内容复制`CComVariant`对象。  
@@ -245,33 +245,33 @@ HRESULT CopyTo(BSTR* pstrDest);
   
 ### <a name="parameters"></a>参数  
  *pstrDest*  
- 指向`BSTR`，将收到的内容的副本`CComVariant`对象。  
+ 指向将接收的内容的副本的 BSTR`CComVariant`对象。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- **CComVariant**对象的类型必须为`VT_BSTR`。  
+ `CComVariant`对象必须是类型 VT_BSTR。  
   
 ##  <a name="detach"></a>  CComVariant::Detach  
- 分离基础**VARIANT**从`CComVariant`对象，并将该对象的类型设置为`VT_EMPTY`。  
+ 从基础的变体中分离`CComVariant`对象，并将该对象的类型设置为 VT_EMPTY。  
   
 ```
 HRESULT Detach(VARIANT* pDest);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDest`  
- [out]返回基础`VARIANT`对象值。  
+ *pDest*  
+ [out]返回对象的基础的变体值。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 请注意的内容`VARIANT`所引用的`pDest`自动将在所赋的值和调用类型之前清除**CComVariant**对象。  
+ 请注意，该变体的内容引用的*pDest*的值和调用类型在赋值前会自动清除`CComVariant`对象。  
   
 ##  <a name="getsize"></a>  CComVariant::GetSize  
- 简单固定大小`VARIANT`s，此方法返回`sizeof`加号的基础数据类型`sizeof(VARTYPE)`。  
+ 对于简单的固定大小变体，此方法返回**sizeof**加上的基础数据类型**sizeof(VARTYPE)**。  
   
 ```
 ULONG GetSize() const;
@@ -281,14 +281,14 @@ ULONG GetSize() const;
  以字节为单位的当前内容的大小`CComVariant`对象。  
   
 ### <a name="remarks"></a>备注  
- 如果`VARIANT`包含的接口指针，`GetSize`查询`IPersistStream`或`IPersistStreamInit`。 如果成功，，则返回值是个返回的值的低 32 位`GetSizeMax`加上`sizeof``CLSID`和`sizeof(VARTYPE)`。 如果接口指针是`NULL`，`GetSize`返回`sizeof``CLSID`加上`sizeof(VARTYPE)`。 如果总大小大于`ULONG_MAX`，`GetSize`返回`sizeof(VARTYPE)`指示错误。  
+ 如果该变量包含的接口指针，`GetSize`中查询`IPersistStream`或`IPersistStreamInit`。 如果成功，，则返回值是个返回的值的低 32 位`GetSizeMax`再加上**sizeof** CLSID 并**sizeof(VARTYPE)**。 如果接口指针为 NULL，`GetSize`将返回**sizeof** CLSID 加号**sizeof(VARTYPE)**。 如果总大小大于 ULONG_MAX，`GetSize`将返回**sizeof(VARTYPE)** 指示错误。  
   
- 在所有其他情况下，临时`VARIANT`类型的`VT_BSTR`强制从当前`VARIANT`。 此长度`BSTR`计算为字符串的长度加上其自身的字符串的长度的大小加上加号 null 字符的大小`sizeof(VARTYPE)`。 如果`VARIANT`不能强制转换为`VARIANT`类型的`VT_BSTR`，`GetSize`返回`sizeof(VARTYPE)`。  
+ 在所有其他情况下，从当前变量强制转换类型 VT_BSTR 的临时变体。 此 BSTR 的长度计算为字符串的长度再加上字符串本身的长度的大小加上加号的 null 字符的大小**sizeof(VARTYPE)**。 如果将该变量不能强制转换为类型 VT_BSTR、 的变体`GetSize`将返回**sizeof(VARTYPE)**。  
   
- 此方法返回的大小匹配的使用的字节数[CComVariant::WriteToStream](#writetostream)在成功的情况下。  
+ 此方法返回的大小匹配的使用的字节数[CComVariant::WriteToStream](#writetostream)成功的情况下。  
   
 ##  <a name="operator_eq"></a>  CComVariant::operator =  
- 将分配一个值，并相应类型设置为`CComVariant`对象。  
+ 分配值和相应类型设置为`CComVariant`对象。  
   
 ```
 CComVariant& operator=(const CComVariant& varSrc);
@@ -317,100 +317,100 @@ CComVariant& operator=(char cSrc) throw();
   
 ### <a name="parameters"></a>参数  
  *varSrc*  
- [in]`CComVariant`或[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)要分配给`CComVariant`对象。 源变体的内容复制到目标而不进行转换。  
+ [in]`CComVariant`或[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要分配给`CComVariant`对象。 源变体的内容复制到目标而不进行转换。  
   
- `bstrSrc`  
- [in]要分配给的 BSTR`CComVariant`对象。 一种`CComVariant`对象将`VT_BSTR`。  
+ *bstrSrc*  
+ [in]要分配给的 BSTR`CComVariant`对象。 类型`CComVariant`对象将成为 VT_BSTR。  
   
- `lpszSrc`  
- [in]要分配给字符串`CComVariant`对象。 你可以零终止宽 (Unicode) 字符将字符串传递给**LPCOLESTR**版本运算符或 ANSI 字符串到`LPCSTR`版本。 在任一情况下，字符串转换为 Unicode`BSTR`使用分配**SysAllocString**。 一种`CComVariant`对象将`VT_BSTR`。  
+ *lpszSrc*  
+ [in]要分配给字符串`CComVariant`对象。 可以将零终止宽 (Unicode) 字符字符串传递给 LPCOLESTR 版本的运算符或到 LPCSTR 版本为 ANSI 字符串。 在任一情况下，此字符串将转换为 Unicode 使用分配的 BSTR `SysAllocString`。 类型`CComVariant`对象将成为 VT_BSTR。  
   
- `bSrc`  
- [in]`bool`要分配给`CComVariant`对象。 `bool`自变量转换为**VARIANT_BOOL**之前存储。 一种`CComVariant`对象将`VT_BOOL`。  
+ *bSrc*  
+ [in]**Bool**要分配给`CComVariant`对象。 **Bool**参数转换为 VARIANT_BOOL 再将其存储。 类型`CComVariant`对象都是 VT_BOOL。  
   
- `nSrc`  
- [in]`int`，**字节**，**短**，**长**， **LONGLONG**， **ULONGLONG**， **无符号短**， `unsigned long`，或`unsigned int`要分配给`CComVariant`对象。 一种`CComVariant`对象将`VT_I4`， `VT_UI1`， `VT_I2`， `VT_I4`， **VT_I8**， **VT_UI8**， **VT_UI2**， **VT_UI4**，或**VT_UI4**分别。  
+ *nSrc*  
+ [in]**Int**，字节**短**，**长**，LONGLONG、 ULONGLONG， **unsigned short**，**无符号长**，或**无符号的 int**要分配给`CComVariant`对象。 类型`CComVariant`对象将分别为 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 为 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4。  
   
- `fltSrc`  
- [in]**Float**要分配给`CComVariant`对象。 一种`CComVariant`对象将`VT_R4`。  
+ *fltSrc*  
+ [in]**Float**要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R4。  
   
- `dblSrc`  
- [in]**Double**要分配给`CComVariant`对象。 一种`CComVariant`对象将`VT_R8`。  
+ *dblSrc*  
+ [in]**双**要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R8。  
   
- `cySrc`  
- [in]**CY**要分配给`CComVariant`对象。 一种`CComVariant`对象将`VT_CY`。  
+ *cySrc*  
+ [in]`CY`要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_CY。  
   
- `pSrc`  
- [in]`IDispatch`或**IUnknown**指针分配给`CComVariant`对象。 `AddRef` 将在接口指针上调用。 一种`CComVariant`对象将**VT_DISPATCH**或**VT_UNKNOWN**分别。  
+ *pSrc*  
+ [in]`IDispatch`或`IUnknown`指针分配给`CComVariant`对象。 `AddRef` 将接口指针上调用。 类型`CComVariant`对象将分别为 VT_DISPATCH 或 VT_UNKNOWN。  
   
- 或者， **SAFEARRAY**指针分配给`CComVariant`对象。 一份**SAFEARRAY**存储在`CComVariant`对象。 一种`CComVariant`对象将是原始类型的组合**SAFEARRAY**和**VT_ARRAY**。  
+ 或者，若要分配给的 SAFEARRAY 指针`CComVariant`对象。 SAFEARRAY 的副本存储在`CComVariant`对象。 类型`CComVariant`对象将是原始类型的 SAFEARRAY 和 VT_ARRAY 的组合。  
   
- `cSrc`  
- [in]要分配给 char`CComVariant`对象。 一种`CComVariant`对象将**VT_I1**。  
+ *cSrc*  
+ [in]要分配给 char`CComVariant`对象。 类型`CComVariant`对象将成为 VT_I1。  
   
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator = =  
- 指示是否`CComVariant`的对象等于指定**VARIANT**。  
+ 指示是否`CComVariant`对象等于指定的变体。  
   
 ```
 bool operator==(const VARIANT& varSrc) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回**true**如果值和类型*varSrc*等于的值和类型，分别的`CComVariant`对象。 否则为**false**。 操作员使用用户的默认区域设置执行比较。  
+ 如果返回 TRUE 值和类型*varSrc*等于的值和类型，分别的`CComVariant`对象。 否则为 FALSE。 运算符使用用户的默认区域设置进行比较。  
   
- 运算符将仅变体类型的值进行比较。 它将比较字符串、 整数和浮点点，但不是数组或记录。  
+ 运算符仅变量类型的值进行比较。 比较字符串、 整数和浮点点，但不是数组或记录。  
   
 ##  <a name="operator_neq"></a>  CComVariant::operator ！ =  
- 指示是否`CComVariant`对象不等于指定**VARIANT**。  
+ 指示是否`CComVariant`对象不等于指定的变体。  
   
 ```
 bool operator!=(const VARIANT& varSrc) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回**true**如果值或类型的*varSrc*是否不等于值或键入，分别的`CComVariant`对象。 否则为**false**。 操作员使用用户的默认区域设置执行比较。  
+ 如果返回 TRUE 的值或类型*varSrc*不等于的值或类型，分别的`CComVariant`对象。 否则为 FALSE。 运算符使用用户的默认区域设置进行比较。  
   
- 运算符将仅变体类型的值进行比较。 它将比较字符串、 整数和浮点点，但不是数组或记录。  
+ 运算符仅变量类型的值进行比较。 比较字符串、 整数和浮点点，但不是数组或记录。  
   
 ##  <a name="operator_lt"></a>  CComVariant::operator &lt;  
- 指示是否`CComVariant`对象是否指定小于**VARIANT**。  
+ 指示是否`CComVariant`对象是否小于指定的变体。  
   
 ```
 bool operator<(const VARIANT& varSrc) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回**true**如果的值`CComVariant`对象是小于的值*varSrc*。 否则为**false**。 操作员使用用户的默认区域设置执行比较。  
+ 如果返回 TRUE 的值`CComVariant`对象是否小于的值*varSrc*。 否则为 FALSE。 运算符使用用户的默认区域设置进行比较。  
   
 ##  <a name="operator_gt"></a>  CComVariant::operator &gt;  
- 指示是否`CComVariant`对象是否大于指定**VARIANT**。  
+ 指示是否`CComVariant`对象是否大于指定的变体。  
   
 ```
 bool operator>(const VARIANT& varSrc) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回**true**如果的值`CComVariant`对象是否大于值*varSrc*。 否则为**false**。 操作员使用用户的默认区域设置执行比较。  
+ 如果返回 TRUE 的值`CComVariant`对象是否大于的值*varSrc*。 否则为 FALSE。 运算符使用用户的默认区域设置进行比较。  
   
 ##  <a name="readfromstream"></a>  CComVariant::ReadFromStream  
- 设置基础**VARIANT**到**VARIANT**包含在指定的流。  
+ 设置指定流中包含的变体的基础变体。  
   
 ```
 HRESULT ReadFromStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStream`  
- [in]指向的指针[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)上包含数据的流的接口。  
+ *pStream*  
+ [in]一个指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)上包含数据的流接口。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- **ReadToStream**需要的以前调用[WriteToStream](#writetostream)。  
+ `ReadToStream` 要求对以前调用[WriteToStream](#writetostream)。  
   
 ##  <a name="setbyref"></a>  CComVariant::SetByRef  
- 初始化`CComVariant`对象并设置**vt**成员**VT_BYREF**。  
+ 初始化`CComVariant`对象并设置`vt`VT_BYREF 的成员。  
   
 ```
 template < typename T >
@@ -418,30 +418,30 @@ void SetByRef(T* pT) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 一种**VARIANT**，例如， `BSTR`， `int`，或`char`。  
+ *T*  
+ 变体，例如，BSTR，类型**int**，或**char**。  
   
- *PT*  
+ *pT*  
  用于初始化的指针`CComVariant`对象。  
   
 ### <a name="remarks"></a>备注  
- `SetByRef` 是一个函数模板，初始化`CComVariant`对象与指针*pT*和设置**vt**成员**VT_BYREF**。 例如：  
+ `SetByRef` 是一个函数模板，初始化`CComVariant`对象的指针*pT* ，并设置`vt`VT_BYREF 的成员。 例如：  
   
  [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]  
   
 ##  <a name="writetostream"></a>  CComVariant::WriteToStream  
- 将保存基础**VARIANT**到流。  
+ 将保存到流的基础的变体。  
   
 ```
 HRESULT WriteToStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStream`  
- [in]指向的指针[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)流上的接口。  
+ *pStream*  
+ [in]一个指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)流上的接口。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

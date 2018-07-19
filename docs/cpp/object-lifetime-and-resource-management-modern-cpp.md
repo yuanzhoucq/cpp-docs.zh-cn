@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423491"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941546"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 与托管语言不同，C++ 没有垃圾回收 (GC)，垃圾回收将在程序运行时自动释放不再使用的内存资源。 在 C++ 中，资源管理直接与对象生存期相关。 本文档描述影响 C++ 中对象生存期的因素以及如何管理对象生存期。  
@@ -25,7 +25,7 @@ ms.locfileid: "32423491"
  C++ 没有 GC 的主要原因是它不会处理非内存资源。 仅类似 C++ 中的确定析构函数可公平处理内存和非内存资源。 GC 还有其他问题，类似更高的内存和 CPU 使用率开销以及区域。 但是，普遍是无法通过机智的优化迁移的基础问题。  
   
 ## <a name="concepts"></a>概念  
- 对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  例如，[智能指针](../cpp/smart-pointers-modern-cpp.md)如`unique_ptr`和`shared_ptr`，和 C++ 标准库容器类似`vector`，封装`new` / `delete`和`new[]` /`delete[]`在对象中，具有析构函数。 这就是为什么因此，务必使用智能指针和 C++ 标准库容器。  
+ 对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  例如，[智能指针](../cpp/smart-pointers-modern-cpp.md)等`unique_ptr`并`shared_ptr`，和 c + + 标准库容器类似`vector`，封装**新**/ **删除**并`new[]` / `delete[]`在对象中，其中具有析构函数。 这就是为什么因此，务必使用智能指针和 C++ 标准库容器。  
   
  生存期管理中另一个重要概念：析构函数。 析构函数封装资源释放。  （常用的助记键是 RRID，资源释放是析构。）资源是您从“系统”中获取并且之后必须归还的内容。  内存是最常见的资源，但还有文件、套接字、纹理和其他非内存资源。 “拥有”资源意味着您可以在需要时使用资源，但还必须在用完时释放。  销毁对象时，其析构函数将释放它拥有的资源。  
   
@@ -45,7 +45,7 @@ p->draw();
   
 ```  
   
- 使用`unique_ptr`为了唯一所有权，例如，在*pimpl*惯用语法。 (请参阅[用于编译时封装的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。)使 `unique_ptr` 成为所有显式 `new` 表达式的主要目标。  
+ 使用`unique_ptr`为了唯一所有权，例如，在*pimpl*惯用语法。 (请参阅[用于编译时封装的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。)请`unique_ptr`主目标的所有显式**新**表达式。  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
@@ -64,7 +64,7 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- 需要性能优化时，你可能必须使用*完好封装*拥有指针和显式调用来删除。 例如，在实现自己的低级别数据结构时。  
+ 当需要性能优化时，您可能必须使用*完好封装*拥有指针和显式调用来删除。 例如，在实现自己的低级别数据结构时。  
   
 ### <a name="stack-based-lifetime"></a>基于堆栈的生存期  
  在现代 C++，*基于堆栈的范围*是一种强大的方法，因为它将结合自动编写可靠代码*堆栈生存期*和*数据成员生存期*，同时高效-生存期跟踪绝对无开销。 堆对象生存期需要努力的手动管理，可能是资源泄露和无效的根源，尤其是在您使用原始指针时。 考虑此代码，其演示了基于堆栈的范围：  

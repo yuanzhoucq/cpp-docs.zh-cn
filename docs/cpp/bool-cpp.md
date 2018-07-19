@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410858"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939307"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-此关键字是内置类型。 此类型的变量可以具有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 条件表达式不仅具有类型 `bool`，还具有类型 `bool` 的值。 例如，`i!=0`现在具有**true**或**false**根据的值`i`。  
+此关键字是内置类型。 此类型的变量可以具有值[，则返回 true](../cpp/true-cpp.md)并[false](../cpp/false-cpp.md)。 条件表达式具有类型**bool** ，因此拥有类型的值**bool**。 例如，`i!=0`现在具有 TRUE 或 FALSE，具体取决于值`i`。  
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量**b**类型的**bool**，不再允许这些表达式：
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量`b`类型的**bool**，不再允许两个表达式：
 
 ```cpp
     b++;
@@ -38,7 +38,7 @@ ms.locfileid: "32410858"
     --b;
 ```
   
-值**true**和**false**具有以下关系：  
+TRUE 和 FALSE 的值具有以下关系：  
   
 ```cpp  
 !false == true  
@@ -51,14 +51,14 @@ ms.locfileid: "32410858"
 if (condexpr1) statement1;   
 ```  
   
-如果`condexpr1`是**true**，`statement1`始终执行; 如果`condexpr1`是**false**，`statement1`永远不会执行。  
+如果`condexpr1`为 TRUE 时，`statement1`时始终执行; 如果`condexpr1`为 FALSE，`statement1`永远不会执行。  
   
-当后缀或前缀**++** 运算符应用于类型的变量的**bool**，则变量设置为**true**。 
-**Visual Studio 2017 15.3 及更高版本**: operator + + 为**bool**已从语言删除并且不再受支持。
+当后缀或前缀**++** 运算符应用于类型的变量**bool**，将变量设置为 TRUE。 
+**Visual Studio 2017 版本 15.3 及更高版本**： 的 operator + + **bool**从该语言已被删除，不再受支持。
 
 后缀或前缀**--** 运算符不能应用于此类型的变量。  
   
- **Bool**类型参与了整型提升。 类型的右值**bool**可以转换为右值的类型**int**，与**false**变为 0 和**true**变为 1。 作为截然不同的类型， **bool**参与重载决策。  
+ **Bool**类型参与了整型提升。 类型的右值**bool**可转换为类型为右值**int**、 与 FALSE 成为零和 TRUE 变为 1。 作为截然不同的类型， **bool**参与重载决策。  
   
 ## <a name="see-also"></a>请参阅
 

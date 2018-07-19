@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Detach |Microsoft 文档
+title: _com_ptr_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410575"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941348"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Microsoft 专用**  
@@ -37,7 +37,7 @@ Interface* Detach( ) throw( );
 ```  
   
 ## <a name="remarks"></a>备注  
- 提取和返回封装的接口指针，然后再清除封装的指针存储到**NULL**。 这将从封装中移除接口指针。 它将由您来调用**版本**返回的接口指针上。  
+ 提取和返回封装的接口指针，然后再清除为 NULL 的封装的指针存储。 这将从封装中移除接口指针。 它将由您来调用`Release`上返回的接口指针。  
   
  **结束 Microsoft 专用**  
   

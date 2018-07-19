@@ -1,5 +1,5 @@
 ---
-title: CComHeapPtr 类 |Microsoft 文档
+title: CComHeapPtr 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359053"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884777"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 类
 用于管理堆指针的智能指针类。  
@@ -36,8 +36,8 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 要存储在堆的对象类型。  
+ *T*  
+ 要存储在堆上的对象类型。  
   
 ## <a name="members"></a>成员  
   
@@ -48,7 +48,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|构造函数。|  
   
 ## <a name="remarks"></a>备注  
- `CComHeapPtr` 派生自`CHeapPtr`，但使用[CComAllocator](../../atl/reference/ccomallocator-class.md)分配使用 COM 例程的内存。 请参阅[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。  
+ `CComHeapPtr` 派生自`CHeapPtr`，但使用[CComAllocator](../../atl/reference/ccomallocator-class.md)以使用 COM 例程分配内存。 请参阅[CHeapPtr](../../atl/reference/cheapptr-class.md)并[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)为可用的方法。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -69,11 +69,11 @@ explicit CComHeapPtr(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `pData`  
+ *pData*  
  一个现有的 `CComHeapPtr` 对象。  
   
 ### <a name="remarks"></a>备注  
- （可选） 可以使用现有创建堆指针`CComHeapPtr`对象。 如果是这样，新`CComHeapPtr`对象负责管理的新指针和资源。  
+ （可选） 可以使用一个现有创建堆指针`CComHeapPtr`对象。 如果是这样，新`CComHeapPtr`对象负责管理的新指针和资源。  
   
 ## <a name="see-also"></a>请参阅  
  [CHeapPtr 类](../../atl/reference/cheapptr-class.md)   

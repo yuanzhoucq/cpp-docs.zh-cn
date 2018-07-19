@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424758"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940444"
 ---
 # <a name="keywords-c"></a>关键字 （C++）
 关键字是具有特殊意义的预定义保留标识符。 它们不能用作程序中的标识符。 Microsoft C++ 保留了下列关键字。 带前导下划线的名称是 Microsoft 扩展。  
@@ -41,8 +41,8 @@ ms.locfileid: "32424758"
 |[__interface](../cpp/interface.md)|[__leave](../cpp/try-finally-statement.md)|[__m128](../cpp/m128.md)|  
 |[__m128d](../cpp/m128d.md)|[__m128i](../cpp/m128i.md)|[__m64](../cpp/m64.md)|  
 |[__multiple_inheritance](../cpp/inheritance-keywords.md)|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__noop](../intrinsics/noop.md)|  
-|`__pin` <sup>2</sup>|`__property` <sup>2</sup>|[__raise](../cpp/raise.md)|  
-|`__sealed` <sup>2</sup>|[__single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
+|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__raise](../cpp/raise.md)|  
+|**__sealed** <sup>2</sup>|[__single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
 |[__super](../cpp/super.md)|[__thiscall](../cpp/thiscall.md)|[__try /\__except](../cpp/try-except-statement.md)， [__try /\___identifier](../cpp/try-finally-statement.md)|  
 |[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](../cpp/unaligned.md)|[__unhook](../cpp/unhook.md) <sup>3</sup>|  
 |[__uuidof](../cpp/uuidof-operator.md)|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|[__virtual_inheritance](../cpp/inheritance-keywords.md)|  
@@ -52,7 +52,7 @@ ms.locfileid: "32424758"
 |[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
 |[const_cast](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
 |[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
-|[弃用](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
+|[已弃用](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
 |[else](../cpp/if-else-statement-cpp.md)|[enum](../cpp/enumerations-cpp.md)|[枚举类](../windows/enum-class-cpp-component-extensions.md)|  
 |[enum 结构](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
@@ -63,7 +63,7 @@ ms.locfileid: "32424758"
 |[initonly](../dotnet/initonly-cpp-cli.md)|[内联](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[接口类](../windows/interface-class-cpp-component-extensions.md)|[接口结构](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
 |[文本](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[可变](../cpp/mutable-data-members-cpp.md)|  
-|[裸](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
+|[naked](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[noinline](../cpp/noinline.md) <sup>1</sup>|[noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  
 |[operator](../cpp/operator-overloading.md)|[private](../cpp/private-cpp.md)|[属性](../windows/property-cpp-component-extensions.md)|  
@@ -77,28 +77,28 @@ ms.locfileid: "32424758"
 |[线程](../cpp/thread.md) <sup>1</sup>|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|[true](../cpp/true-cpp.md)|  
 |[try](../cpp/try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](../cpp/typeid-operator.md)|  
 |[typeid](../windows/typeid-cpp-component-extensions.md)|[typename](../cpp/typename.md)|[union](../cpp/unions.md)|  
-|[unsigned](../cpp/fundamental-types-cpp.md)|[使用](../cpp/using-declaration.md)声明，[使用](namespaces-cpp.md#using_directives)指令|[uuid](../cpp/uuid-cpp.md) <sup>1</sup>|  
+|[unsigned](../cpp/fundamental-types-cpp.md)|[使用](../cpp/using-declaration.md)声明中，[使用](namespaces-cpp.md#using_directives)指令|[uuid](../cpp/uuid-cpp.md) <sup>1</sup>|  
 |[值类](../windows/classes-and-structs-cpp-component-extensions.md)|[值结构](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](../cpp/virtual-cpp.md)|  
 |[void](../cpp/void-cpp.md)|[volatile](../cpp/volatile-cpp.md)|[while](../cpp/while-statement-cpp.md)|  
   
- 1 扩展特性`__declspec`关键字。  
+ 1 扩展特性 **__declspec**关键字。  
   
  2 适用于仅 C++ 托管扩展。 此语法现已弃用。  
   
- 3 事件处理中使用的内部函数。  
+ 事件处理中使用的 3 个内部函数。  
   
  请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)有关详细信息。  
   
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  在 Microsoft C++ 中，保留带有两条前导下划线的标识符以供编译器实现使用。 因此，Microsoft 约定位于带双下划线的 Microsoft 特定关键字前面。 这些单词不能用作标识符名称。  
   
- 默认情况下将启用 Microsoft 扩展。 若要确保你的程序是完全可移植，可禁用 Microsoft 扩展通过指定与 ANSI 兼容[/Za](../build/reference/za-ze-disable-language-extensions.md)在编译过程的命令行选项 （针对 ANSI 兼容性编译）。 如果这样做，将禁用 Microsoft 专用关键字。  
+ 默认情况下将启用 Microsoft 扩展。 若要确保您的程序是完全可移植的可以禁用 Microsoft 扩展通过指定与 ANSI 兼容[/Za](../build/reference/za-ze-disable-language-extensions.md)在编译过程的命令行选项 （针对 ANSI 兼容性编译）。 如果这样做，将禁用 Microsoft 专用关键字。  
   
- 启用 Microsoft 扩展后，你可以在程序中使用 Microsoft 特定关键字。 为了符合 ANSI，这些关键字的前面有一条双下划线。 出于向后兼容性考虑，支持除 `__except`、`__finally`、`__leave` 和 `__try` 以外的所有双下划线关键字的单下划线版本。 此外，还提供了没有前导下划线的 `__cdecl`。  
+ 启用 Microsoft 扩展后，你可以在程序中使用 Microsoft 特定关键字。 为了符合 ANSI，这些关键字的前面有一条双下划线。 为了向后兼容，单下划线版本的所有双下划线关键字除外 **__except**， **__finally**， **__leave**，和 **__finally**支持。 此外， **__cdecl**提供了没有前导下划线。  
   
- `__asm` 关键字替代了 C++ `asm` 语法。 保留了 `asm` 以便与其他 C++ 实现兼容，但未成功。 请使用 `__asm`。  
+ **__Asm**关键字替代了 c + +`asm`语法。 保留了 `asm` 以便与其他 C++ 实现兼容，但未成功。 使用 **__asm**。  
   
- `__based` 关键字对于 32 位和 64 位目标编译的使用会受到限制。  
+ **__based** 关键字对于 32 位和 64 位目标编译的使用会受到限制。  
   
 **结束 Microsoft 专用**  
   

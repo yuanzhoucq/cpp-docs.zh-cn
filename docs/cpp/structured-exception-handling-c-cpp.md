@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424265"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940490"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 尽管 Windows 和 Visual C++ 支持结构化异常处理 (SEH)，我们还是建议你使用 ISO 标准 C++ 异常处理，因为它使代码具有更好的可移植性并更灵活。 然而，在现有代码中或者对于特定类型的程序，你仍可能必须使用 SEH。  
@@ -39,7 +39,7 @@ ms.locfileid: "32424265"
  `__except` ( `expression` )*复合语句*  
   
 ## <a name="remarks"></a>备注  
- 使用 SEH，你可以确保执行意外终止时资源（如内存块和文件）是正确的。 你还可以处理特定问题 — 例如，没有足够的内存 — 方法是使用简洁的结构化的代码，该代码不依赖于 `goto` 语句或返回代码的详尽测试。  
+ 使用 SEH，你可以确保执行意外终止时资源（如内存块和文件）是正确的。 你还可以处理特定问题 — 例如，没有足够的内存-使用简洁的结构化的代码，不依赖于**goto**语句或返回代码的详尽测试。  
   
  这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果在通过使用 C++ 程序中使用 SEH [/EH](../build/reference/eh-exception-handling-model.md)选项 — 以及某些修饰符-会调用本地对象的析构函数，但其他执行行为可能不是你的预期。 （有关图示，请参阅本文后面的示例。）在大多数情况下，而不是 SEH 我们建议你使用 ISO 标准[C++ 异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，Visual C++ 还支持。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32424265"
   
 -   [异常处理程序](../cpp/writing-an-exception-handler.md)，它们可以响应或消除异常。  
   
--   [终止处理程序](../cpp/writing-a-termination-handler.md)，当异常在代码块中引起终止时会调用它。  
+-   [终止处理程序](../cpp/writing-a-termination-handler.md)，该异常的代码块中引起终止时会调用。  
   
  这两种类型的处理程序是不同的，但会通过称为“展开堆栈”的过程紧密关联。 发生异常时，Windows 将查找当前处于活动状态的最新安装的异常处理程序。 该处理程序可以执行以下三个操作之一：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "32424265"
   
 -   识别异常，并处理异常。  
   
- 识别异常的异常处理程序可能不在异常发生时正在运行的函数中。 在某些情况下，它可能在堆栈上高得多的函数中。 当前正在运行的函数和堆栈帧上的所有其他函数都将终止。 在此过程中，堆栈会“展开”；即终止的函数的本地变量（除非它们是 `static`）将从堆栈清除。  
+ 识别异常的异常处理程序可能不在异常发生时正在运行的函数中。 在某些情况下，它可能在堆栈上高得多的函数中。 当前正在运行的函数和堆栈帧上的所有其他函数都将终止。 在此过程中，堆栈是"展开"; 即终止的函数的本地变量，除非它们是**静态**— 从堆栈清除。  
   
  当它展开堆栈时，操作系统将调用你为每个函数编写的任何终止处理程序。 通过使用终止处理程序，你可以清理资源，否则资源将由于异常终止而保持打开状态。 如果你已输入了关键部分，可以在终止处理程序中退出。 如果程序将要关闭，你可以执行其他维护任务，如关闭和删除临时文件。  
   
@@ -122,7 +122,7 @@ int main()
   
 ```  
   
- 如果你使用 **/EHsc**来编译此代码，但本地测试控件`CPPEX`是未定义，则不执行的`TestClass`析构函数，输出如下所示：  
+ 如果您使用 **/EHsc**若要编译此代码，但本地测试控件`CPPEX`是未定义，则不执行`TestClass`析构函数和输出看起来如下所示：  
   
 ```Output  
 Triggering SEH exception  
@@ -137,7 +137,7 @@ Destroying TestClass!
 Executing SEH __except block  
 ```  
   
- 如果你使用 **/EHa**来编译代码，`TestClass`析构函数而不考虑是否使用引发异常时执行`std::throw`或通过使用 SEH 来触发异常 (`CPPEX`或未定义)。 输出如下所示：  
+ 如果您使用 **/EHa**来编译代码，`TestClass`析构函数执行时不考虑是否使用引发异常`std::throw`或通过使用 SEH 来触发异常 (`CPPEX`或未定义)。 输出如下所示：  
   
 ```Output  
 Throwing C++ exception  

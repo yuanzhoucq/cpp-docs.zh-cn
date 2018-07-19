@@ -1,5 +1,5 @@
 ---
-title: CA2CAEX 类 |Microsoft 文档
+title: CA2CAEX 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357797"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879239"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 类
-此类由字符串转换宏`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
+字符串转换宏 CA2CTEX 和 CT2CAEX 和 typedef CA2CA 使用此类。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +40,8 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>参数  
- `t_nBufferLength`  
- 在转换过程中使用的缓冲区大小。 默认长度为 128 个字节。  
+ *t_nBufferLength*  
+ 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。  
   
 ## <a name="members"></a>成员  
   
@@ -62,22 +62,22 @@ class CA2CAEX
   
 |名称|描述|  
 |----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
+|[CA2CAEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
   
 ## <a name="remarks"></a>备注  
- 除非需要额外功能，则使用`CA2CTEX`， `CT2CAEX`，或**CA2CA**你自己的代码中。  
+ 除非需要额外的功能，则使用 CA2CTEX、 CT2CAEX 或 CA2CA 中你自己的代码。  
   
- 此类可以安全地在循环中使用和不会溢出堆栈。 默认情况下，ATL 转换类和宏将使用用于转换的当前线程的 ANSI 代码页。  
+ 此类安全地在循环中使用，不会造成堆栈溢出。 默认情况下，ATL 转换类和宏将使用用于转换的当前线程的 ANSI 代码页。  
   
- 在此类基于以下宏：  
+ 下列宏基于此类：  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
  以下 typedef 基于此类：  
   
-- **CA2CA**  
+- CA2CA  
   
  这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)。  
   
@@ -96,14 +96,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `psz`  
+ *psz*  
  要转换的文本字符串。  
   
- `nCodePage`  
- 在此类中未使用。  
+ *nCodePage*  
+ 未使用此类。  
   
 ### <a name="remarks"></a>备注  
- 创建转换所需的缓冲区。  
+ 创建所需的翻译的缓冲区。  
   
 ##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
  析构函数。  
@@ -113,10 +113,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放已分配的缓冲区。  
+ 释放分配的缓冲区。  
   
 ##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- 将源字符串存储数据成员。  
+ 将源字符串存储的数据成员。  
   
 ```
 LPCSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回文本字符串作为类型`LPCSTR`。  
+ 返回文本字符串键入 LPCSTR。  
   
 ## <a name="see-also"></a>请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   

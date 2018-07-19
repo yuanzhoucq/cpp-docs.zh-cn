@@ -1,5 +1,5 @@
 ---
-title: 硬件异常 |Microsoft 文档
+title: 硬件异常 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a7e7127135837a426436c15e8ae8aff60227da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413955"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941569"
 ---
 # <a name="hardware-exceptions"></a>硬件异常
 操作系统识别的大多数标准异常是硬件上定义的异常。 Windows 可识别少数低级别的软件异常，但这些异常通常最好通过操作系统进行处理。  
@@ -34,20 +34,20 @@ ms.locfileid: "32413955"
   
 |异常代码|异常的原因|  
 |--------------------|------------------------|  
-|**STATUS_ACCESS_VIOLATION**|读取或写入不可访问的内存位置。|  
-|**STATUS_BREAKPOINT**|遇到硬件定义的断点；仅由调试器使用。|  
-|**STATUS_DATATYPE_MISALIGNMENT**|在没有正确对齐的地址上读取或写入数据；例如，16 位实体必须在 2 字节边界对齐。 (不适用于 Intel 80*x*86 处理器。)|  
-|**STATUS_FLOAT_DIVIDE_BY_ZERO**|将浮点类型除以 0.0。|  
-|**STATUS_FLOAT_OVERFLOW**|超过浮点类型的最大正指数。|  
-|**STATUS_FLOAT_UNDERFLOW**|超过浮点类型的最小负指数的大小。|  
-|**STATUS_FLOATING_RESEVERED_OPERAND**|使用保留的浮点格式（无效的使用格式）。|  
-|**STATUS_ILLEGAL_INSTRUCTION**|尝试执行处理器未定义的指令代码。|  
-|**STATUS_PRIVILEGED_INSTRUCTION**|执行当前计算机模式下不允许的指令。|  
-|**STATUS_INTEGER_DIVIDE_BY_ZERO**|将整数类型除以 0。|  
-|**STATUS_INTEGER_OVERFLOW**|尝试超出整数的范围的操作。|  
-|**STATUS_SINGLE_STEP**|以单步模式执行一条指令；仅由调试器使用。|  
+|STATUS_ACCESS_VIOLATION|读取或写入不可访问的内存位置。|  
+|STATUS_BREAKPOINT|遇到硬件定义的断点；仅由调试器使用。|  
+|STATUS_DATATYPE_MISALIGNMENT|在没有正确对齐的地址上读取或写入数据；例如，16 位实体必须在 2 字节边界对齐。 (不适用于 Intel 80*x*86 处理器。)|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|将浮点类型除以 0.0。|  
+|STATUS_FLOAT_OVERFLOW|超过浮点类型的最大正指数。|  
+|STATUS_FLOAT_UNDERFLOW|超过浮点类型的最小负指数的大小。|  
+|STATUS_FLOATING_RESEVERED_OPERAND|使用保留的浮点格式（无效的使用格式）。|  
+|STATUS_ILLEGAL_INSTRUCTION|尝试执行处理器未定义的指令代码。|  
+|STATUS_PRIVILEGED_INSTRUCTION|执行当前计算机模式下不允许的指令。|  
+|STATUS_INTEGER_DIVIDE_BY_ZERO|将整数类型除以 0。|  
+|STATUS_INTEGER_OVERFLOW|尝试超出整数的范围的操作。|  
+|STATUS_SINGLE_STEP|以单步模式执行一条指令；仅由调试器使用。|  
   
- 上表中列出的很多异常应由调试器、操作系统或其他低级别代码处理。 您的代码不应处理这些错误（整数和浮点错误除外）。 因此，您通常应使用异常处理筛选器来忽略异常（计算结果为 0）。 否则，您可能阻止低级别机制进行适当的响应。 但是，可以采取适当的预防措施，通过这些低级别错误的潜在影响针对[编写终止处理程序](../cpp/writing-a-termination-handler.md)。  
+ 上表中列出的很多异常应由调试器、操作系统或其他低级别代码处理。 您的代码不应处理这些错误（整数和浮点错误除外）。 因此，您通常应使用异常处理筛选器来忽略异常（计算结果为 0）。 否则，您可能阻止低级别机制进行适当的响应。 可以但是，需要通过这些低级别错误的潜在影响针对适当的预防措施[编写终止处理程序](../cpp/writing-a-termination-handler.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [编写异常处理程序](../cpp/writing-an-exception-handler.md)   

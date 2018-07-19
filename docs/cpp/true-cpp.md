@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44df8d3e9429c272d83025b600fc8d43cc8f8b73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a469b47d54cef9084ba686538219d62a2d5ec50
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942404"
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>语法  
   
 ```  
   
-      bool-identifier = true ;  
+bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
 ## <a name="remarks"></a>备注  
- 此关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 （条件表达式现在是 true 的 boolean 表达式）。 如果`i`属于类型`bool`，then 语句`i = true;`分配**true**到`i`。  
+ 此关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 （条件表达式现在是 true 的布尔表达式）。 如果`i`属于类型**bool**，然后语句`i = true;`分配**true**到`i`。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // bool_true.cpp  
 #include <stdio.h>  
 int main()  

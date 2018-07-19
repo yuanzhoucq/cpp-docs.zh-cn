@@ -1,5 +1,5 @@
 ---
-title: WinModule 全局函数 |Microsoft 文档
+title: WinModule 全局函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362292"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884557"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全局函数
-这些函数都提供支持`_AtlCreateWndData`结构操作。  
+这些函数提供的支持`_AtlCreateWndData`结构操作。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。  
   
 |||  
 |-|-|  
@@ -47,17 +47,17 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWinModule`  
- 指向模块的[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。  
+ *pWinModule*  
+ 指向模块的指针[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。  
   
- `pData`  
- 指向[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构来初始化和添加到当前的模块。  
+ *pData*  
+ 指向[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构，以初始化，并添加到当前模块。  
   
- `pObject`  
- 指针指向的对象**这**指针。  
+ *pObject*  
+ 指向对象的指针**这**指针。  
   
 ### <a name="remarks"></a>备注  
- 初始化`_AtlCreateWndData`结构，用于存储**这**指针来引用类的实例，并将其添加到引用的模块的列表`_ATL_WIN_MODULE70`结构。 由调用[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)。  
+ 初始化`_AtlCreateWndData`结构，用于存储**这**指针用于指代类的实例，并将其添加到引用的模块的列表`_ATL_WIN_MODULE70`结构。 调用[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)。  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
  调用此函数可提取现有 `_AtlCreateWndData` 结构。  
@@ -67,14 +67,14 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWinModule`  
- 指向模块的[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。  
+ *pWinModule*  
+ 指向模块的指针[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。  
   
 ### <a name="return-value"></a>返回值  
  返回一个指向[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
- 此函数将提取现有`_AtlCreateWndData`从引用的模块的列表的结构`_ATL_WIN_MODULE70`结构。  
+ 此函数将提取的现有`_AtlCreateWndData`从列表中引用的模块的结构`_ATL_WIN_MODULE70`结构。  
   
 ## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)

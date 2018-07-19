@@ -1,5 +1,5 @@
 ---
-title: IPropertyPageImpl 类 |Microsoft 文档
+title: IPropertyPageImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -41,18 +41,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f86b93bad181fdbac5763bd215b0ec28ab50296
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365349"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884745"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 类
-此类实现**IUnknown**并提供的默认实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口。  
+此类实现`IUnknown`，并提供的默认实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,8 +62,8 @@ class IPropertyPageImpl
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IPropertyPageImpl`。  
+ *T*  
+ 您的类，派生自`IPropertyPageImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -77,35 +77,35 @@ class IPropertyPageImpl
   
 |名称|描述|  
 |----------|-----------------|  
-|[IPropertyPageImpl::Activate](#activate)|创建为属性页对话框窗口。|  
-|[IPropertyPageImpl::Apply](#apply)|适用于通过指定的基础对象的属性页的当前值`SetObjects`。 ATL 实现返回`S_OK`。|  
-|[IPropertyPageImpl::Deactivate](#deactivate)|销毁窗口使用创建**激活**。|  
-|[IPropertyPageImpl::GetPageInfo](#getpageinfo)|检索有关的属性页的信息。|  
-|[IPropertyPageImpl::Help](#help)|调用属性页的 Windows 帮助。|  
+|[IPropertyPageImpl::Activate](#activate)|创建属性页对话框窗口。|  
+|[IPropertyPageImpl::Apply](#apply)|适用于通过指定的基础对象的属性页的当前值`SetObjects`。 ATL 实现返回 S_OK。|  
+|[IPropertyPageImpl::Deactivate](#deactivate)|销毁此窗口与创建`Activate`。|  
+|[IPropertyPageImpl::GetPageInfo](#getpageinfo)|检索有关属性页的信息。|  
+|[IPropertyPageImpl::Help](#help)|调用属性页面的 Windows 帮助。|  
 |[IPropertyPageImpl::IsPageDirty](#ispagedirty)|指示是否已更改的属性页，因为它已激活。|  
 |[IPropertyPageImpl::Move](#move)|定位并调整大小属性页对话框。|  
-|[IPropertyPageImpl::SetDirty](#setdirty)|将其标记为已更改或不变的属性页的状态。|  
-|[IPropertyPageImpl::SetObjects](#setobjects)|提供一系列**IUnknown**与属性页关联的对象的指针。 这些对象接收当前的属性页值通过调用**应用**。|  
+|[IPropertyPageImpl::SetDirty](#setdirty)|标记为已更改或不变的属性页的状态。|  
+|[IPropertyPageImpl::SetObjects](#setobjects)|提供了一系列`IUnknown`与属性页关联的对象的指针。 这些对象接收当前的属性页值通过调用`Apply`。|  
 |[IPropertyPageImpl::SetPageSite](#setpagesite)|提供的属性页`IPropertyPageSite`指针，通过该属性页与属性框架进行通信。|  
-|[IPropertyPageImpl::Show](#show)|使属性页对话框中，可见或不可见。|  
+|[IPropertyPageImpl::Show](#show)|使属性页对话框中可见或不可见。|  
 |[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|处理指定的键击。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
 |----------|-----------------|  
-|[IPropertyPageImpl::m_bDirty](#m_bdirty)|指定是否已更改属性页的状态。|  
-|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|将存储与文本字符串，描述的属性页关联的资源标识符。|  
-|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|将存储与属性页关联的帮助主题的上下文标识符。|  
-|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|将存储与描述的属性页的帮助文件的名称关联的资源标识符。|  
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|指定是否在属性页的状态已更改。|  
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|存储与描述的属性页的文本字符串关联的资源标识符。|  
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|存储与属性页关联的帮助主题的上下文标识符。|  
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|存储与描述的属性页的帮助文件的名称关联的资源标识符。|  
 |[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|将存储在属性页选项卡中显示的文本字符串与关联的资源标识符。|  
-|[IPropertyPageImpl::m_nObjects](#m_nobjects)|将存储属性页关联的对象的数。|  
-|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|指向`IPropertyPageSite`通过该属性页与属性框架进行通信的接口。|  
-|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|指向数组的**IUnknown**指向与属性页关联的对象的指针。|  
-|[IPropertyPageImpl::m_size](#m_size)|存储的高度和宽度属性页对话框中，以像素为单位。|  
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|存储与属性页关联的对象数。|  
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|指向`IPropertyPageSite`通过其属性页与属性框架进行通信的接口。|  
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|指向数组的`IUnknown`与属性页关联的对象的指针。|  
+|[IPropertyPageImpl::m_size](#m_size)|存储的高度和宽度的属性页对话框中，以像素为单位。|  
   
 ## <a name="remarks"></a>备注  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口允许对象管理属性表中的特定属性页面。 类`IPropertyPageImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口允许对象管理的属性表中的特定属性页面。 类`IPropertyPageImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -118,7 +118,7 @@ class IPropertyPageImpl
  **标头：** atlctl.h  
   
 ##  <a name="activate"></a>  IPropertyPageImpl::Activate  
- 创建为属性页对话框窗口。  
+ 创建属性页对话框窗口。  
   
 ```
 HRESULT Activate(  
@@ -128,7 +128,7 @@ HRESULT Activate(
 ```  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，对话框中始终是无模式，而不考虑的值*bModal*参数。  
+ 默认情况下，对话框的始终是无模式，而不考虑的值*bModal*参数。  
   
  请参阅[IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) Windows SDK 中。  
   
@@ -140,7 +140,7 @@ HRESULT Apply();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回 `S_OK`。  
+ 返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) Windows SDK 中。  
@@ -156,19 +156,19 @@ HRESULT Deactivate();
  请参阅[IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) Windows SDK 中。  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
- 填充*pPageInfo*与数据成员中包含的信息的结构。  
+ 填充*pPageInfo*结构中的数据成员包含的信息。  
   
 ```
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>备注  
- `GetPageInfo` 加载与关联的字符串资源[m_dwDocString](#m_dwdocstring)， [m_dwHelpFile](#m_dwhelpfile)，和[m_dwTitle](#m_dwtitle)。  
+ `GetPageInfo` 加载与关联的字符串资源[m_dwDocString](#m_dwdocstring)， [m_dwHelpFile](#m_dwhelpfile)，并[m_dwTitle](#m_dwtitle)。  
   
  请参阅[IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) Windows SDK 中。  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
- 调用属性页的 Windows 帮助。  
+ 调用属性页面的 Windows 帮助。  
   
 ```
 HRESULT Help(PROPPAGEINFO* pPageInfo);
@@ -195,38 +195,38 @@ HRESULT IsPageDirty(void);
 ```  
   
 ### <a name="remarks"></a>备注  
- `IsPageDirty` 返回`S_OK`如果页已更改，因为它已激活。  
+ `IsPageDirty` 如果页已更改，因为它已激活，则返回 S_OK。  
   
 ##  <a name="m_bdirty"></a>  IPropertyPageImpl::m_bDirty  
- 指定是否已更改属性页的状态。  
+ 指定是否在属性页的状态已更改。  
   
 ```
 BOOL m_bDirty;
 ```  
   
 ##  <a name="m_nobjects"></a>  IPropertyPageImpl::m_nObjects  
- 将存储属性页关联的对象的数。  
+ 存储与属性页关联的对象数。  
   
 ```
 ULONG m_nObjects;
 ```  
   
 ##  <a name="m_dwhelpcontext"></a>  IPropertyPageImpl::m_dwHelpContext  
- 将存储与属性页关联的帮助主题的上下文标识符。  
+ 存储与属性页关联的帮助主题的上下文标识符。  
   
 ```
 DWORD m_dwHelpContext;
 ```  
   
 ##  <a name="m_dwdocstring"></a>  IPropertyPageImpl::m_dwDocString  
- 将存储与文本字符串，描述的属性页关联的资源标识符。  
+ 存储与描述的属性页的文本字符串关联的资源标识符。  
   
 ```
 UINT m_dwDocString;
 ```  
   
 ##  <a name="m_dwhelpfile"></a>  IPropertyPageImpl::m_dwHelpFile  
- 将存储与描述的属性页的帮助文件的名称关联的资源标识符。  
+ 存储与描述的属性页的帮助文件的名称关联的资源标识符。  
   
 ```
 UINT m_dwHelpFile;
@@ -240,21 +240,21 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- 指向[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)通过该属性页与属性框架进行通信的接口。  
+ 指向[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)通过其属性页与属性框架进行通信的接口。  
   
 ```
 IPropertyPageSite* m_pPageSite;
 ```  
   
 ##  <a name="m_ppunk"></a>  IPropertyPageImpl::m_ppUnk  
- 指向数组的**IUnknown**指向与属性页关联的对象的指针。  
+ 指向数组的`IUnknown`与属性页关联的对象的指针。  
   
 ```
 IUnknown** m_ppUnk;
 ```  
   
 ##  <a name="m_size"></a>  IPropertyPageImpl::m_size  
- 存储的高度和宽度属性页对话框中，以像素为单位。  
+ 存储的高度和宽度的属性页对话框中，以像素为单位。  
   
 ```
 SIZE m_size;
@@ -271,21 +271,21 @@ HRESULT Move(LPCRECT pRect);
  请参阅[IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) Windows SDK 中。  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty  
- 标记为已更改或不变，具体取决于的值的属性页的状态`bDirty`。  
+ 标记为已更改或不变，具体取决于值的属性页的状态*bDirty*。  
   
 ```
 void SetDirty(BOOL bDirty);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bDirty`  
- [in]如果**TRUE**，属性页的状态标记为已更改。 否则，它被标记为不变。  
+ *bDirty*  
+ [in]如果为 TRUE，则会将属性页的状态标记为已更改。 否则，它被标记为不变。  
   
 ### <a name="remarks"></a>备注  
- 如有必要，`SetDirty`通知已更改的属性页的帧。  
+ 如有必要，`SetDirty`通知属性页已更改的帧。  
   
 ##  <a name="setobjects"></a>  IPropertyPageImpl::SetObjects  
- 提供一系列**IUnknown**与属性页关联的对象的指针。  
+ 提供了一系列`IUnknown`与属性页关联的对象的指针。  
   
 ```
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
@@ -295,7 +295,7 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
  请参阅[IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) Windows SDK 中。  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- 提供的属性页[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)指针，通过该属性页与属性框架进行通信。  
+ 提供了与属性页[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)指针，通过该属性页与属性框架进行通信。  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
@@ -305,7 +305,7 @@ HRESULT SetPageSite(IPropertyPageSite* pPageSite);
  请参阅[IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) Windows SDK 中。  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
- 使属性页对话框中，可见或不可见。  
+ 使属性页对话框中可见或不可见。  
   
 ```
 HRESULT Show(UINT nCmdShow);

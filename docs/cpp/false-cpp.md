@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b4015e5bdbb0ad015f3bb5299e888c862567c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a743398b60bc51118045b00e8caf4effde2c68da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942399"
 ---
 # <a name="false-c"></a>false (C++)
-关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 (条件表达式现在是**true**布尔表达式)。 例如，如果`i`是类型的变量`bool`、`i = false;`语句分配**false**到`i`。  
+关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 (条件表达式现**true**布尔表达式)。 例如，如果`i`类型的变量**bool**，则`i = false;`语句分配**false**到`i`。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // bool_false.cpp  
 #include <stdio.h>  
   

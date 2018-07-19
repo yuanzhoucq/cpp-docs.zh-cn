@@ -1,5 +1,5 @@
 ---
-title: 线程 |Microsoft 文档
+title: 线程 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,52 +19,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422730"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940145"
 ---
 # <a name="thread"></a>thread
 
 **Microsoft 专用**
 
-**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现 **__declspec （thread)**。
+**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上`thread_local`通过实现`__declspec(thread)`。
 
 ## <a name="syntax"></a>语法
 
-> **__declspec (thread)** *声明符*  
+> **__declspec （线程）** *声明符*  
 
 ## <a name="remarks"></a>备注
 
 线程本地存储 (TLS) 是多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅[多线程处理](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-线程局部变量的声明必须使用[扩展特性语法](../cpp/declspec.md)和`__declspec`关键字后的跟**线程**关键字。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+必须使用线程本地变量的声明[扩展特性语法](../cpp/declspec.md)并 **__declspec**关键字**线程**关键字。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-动态加载库中使用线程本地变量，需要注意的因素可能会导致不会正确初始化线程本地变量：
+在动态加载的库中使用线程本地变量，需要注意的因素可能会导致为正确初始化的线程本地变量：
 
-1. 如果函数调用 （包括构造函数） 在初始化变量时，此函数将仅调用线程导致二进制/DLL 以加载到进程中，以及二进制/DLL 已加载后启动这些线程。 为已在运行时已加载该 DLL 的其他任何线程不调用初始化函数。 动态初始化永远不会获取消息如果线程启动时，DLL 不在过程上 DLL_THREAD_ATTACH，DllMain 调用，但该 DLL 时发生。
+1. 如果通过函数调用 （包括构造函数） 初始化变量，此函数将只调用导致二进制/DLL 加载到进程的线程和二进制文件/DLL 已加载后启动这些线程。 为已在运行时加载该 DLL 的其他任何线程不调用初始化函数。 动态初始化永远不会获取该消息 DLL 不是在过程中，在线程启动时如果 DLL_THREAD_ATTACH，DllMain 调用，但在 DLL 上发生。
 
-1. 使用常量的值以静态方式初始化线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual C++ 编译器中动态而不是静态初始化。
+1. 使用常量值以静态方式初始化的线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual C++ 编译器中动态而不是静态初始化。
 
-   注意： 这两个这些问题被需要修复在将来的编译器的更新。
+   注意： 这两个问题应该在将来的编译器更新修复。
 
-此外，在声明线程本地对象和变量时必须遵守下列准则：
+此外，声明线程本地对象和变量时必须遵守以下准则：
 
-- 你可以将应用**线程**属性仅为类和数据声明和定义;**线程**不能用于函数声明或定义。
+- 您可以将应用**线程**属性仅对类和数据声明和定义;**线程**不能用于函数声明或定义。
 
-- 你可以指定**线程**只能在具有静态存储持续时间的数据项上的属性。 这包括全局数据对象 (同时**静态**和**extern**)，本地静态对象和类的静态数据成员。 你不能声明自动数据对象与**线程**属性。
+- 您可以指定**线程**属性只能在具有静态存储持续时间的数据项上。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 不能声明自动数据对象与**线程**属性。
 
-- 必须使用**线程**是否声明和定义出现在同一文件中还是单独的文件属性，则为声明和定义的线程本地对象。
+- 必须使用**线程**属性的声明和线程本地对象，定义是否声明和定义是出现在同一个文件或单独的文件中。
 
 - 不能使用**线程**用作类型修饰符的属性。
 
-- 因为使用的对象的声明**线程**允许属性，这两个示例在语义上等效：
+- 因为使用的对象的声明**线程**允许特性，这两个示例在语义上等效：
 
     ```cpp
     // declspec_thread_2.cpp

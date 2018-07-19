@@ -1,5 +1,5 @@
 ---
-title: ISpecifyPropertyPagesImpl 类 |Microsoft 文档
+title: ISpecifyPropertyPagesImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362227"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879567"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 类
-此类实现**IUnknown**并提供的默认实现[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)接口。  
+此类实现`IUnknown`，并提供的默认实现[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)接口。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,8 +42,8 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`ISpecifyPropertyPagesImpl`。  
+ *T*  
+ 您的类，派生自`ISpecifyPropertyPagesImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -51,13 +51,13 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
   
 |名称|描述|  
 |----------|-----------------|  
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填充的 UUID 计数数组值。 每个 UUID 对应于一个可以显示对象的属性表中的属性页的 CLSID。|  
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填充值的计数的 UUID 的数组。 每个 UUID 对应于一个可以显示对象的属性表中的属性页的 CLSID。|  
   
 ## <a name="remarks"></a>备注  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)接口允许客户端获取有关支持的对象的属性页的 Clsid 的列表。 类`ISpecifyPropertyPagesImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)接口允许客户端获取支持的对象的属性页的 Clsid 的列表。 类`ISpecifyPropertyPagesImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
 > [!NOTE]
->  不会公开**ISpecifyPropertyPages**接口如果你的对象不支持属性页。  
+>  不会公开`ISpecifyPropertyPages`接口如果您的对象不支持属性页。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **标头：** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- 在填充数组[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)结构可以显示对象的属性表中的属性页的 Clsid。  
+ 填充数组[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)结构可以显示对象的属性表中的属性页的 Clsid。  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);

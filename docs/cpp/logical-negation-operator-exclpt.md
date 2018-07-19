@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c8ad17195954feeeccb47896fa013302b6d7e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942486"
 ---
 # <a name="logical-negation-operator-"></a>逻辑非运算符：!
 ## <a name="syntax"></a>语法  
@@ -34,16 +35,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 逻辑求反运算符 (**！**) 反转其操作数的含义。 操作数必须是算法或指针类型（或计算结果为算法或指针类型的表达式）。 操作数将隐式转换为类型 `bool`。 结果是**true**如果已转换的操作数是**false**; 结果是**false**如果已转换的操作数是**true**。 结果为 `bool` 类型。  
+ 逻辑求反运算符 (**！**) 反转其操作数的含义。 操作数必须是算法或指针类型（或计算结果为算法或指针类型的表达式）。 操作数将隐式转换为类型**bool**。 结果为 TRUE，如果转换后的操作数为 FALSE;如果转换后的操作数为 TRUE，则结果为 FALSE。 结果为类型**bool**。  
   
- 对于表达式*e*，一元表达式 **！ * * * e*等效于表达式 **(* * * e* `==` 0)，除涉及重载的运算符的。  
+ 表达式*e*，一元表达式 **！ * * * e*等效于表达式 **(* * * e* `==` 0)，除涉及重载的运算符的。  
   
 ## <a name="operator-keyword-for-"></a>! 的运算符关键字  
- **不**运算符是文本等效项**！**。 有两种方法来访问**不**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ **不**运算符是的文本等效 **！**。 有两种方法来访问**不**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_Logical_NOT_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424862"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939372"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用程序——从有趣而刺激的游戏，到高性能的科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，人们使用 C++ 解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃了过时的 C 样式编程，转而使用使用现代 C++。   
@@ -102,7 +102,7 @@ void f()
 
 ```
 
- 在现代 C++ 中，不必使用 new/delete 或显式异常处理程序，因为可以使用智能指针来替代 使用 `auto` 类型推导和 [lambda 函数](../cpp/lambda-expressions-in-cpp.md)时，可以更快地编写出紧凑而可读性高的代码。 基于范围的 `for` 循环更简洁、更易于使用，且与 C 样式的 `for` 循环相比，在编写时不易犯错。 可以使用样板来尽量减少编写应用所需的代码行数。 
+ 在现代 C++ 中，不必使用 new/delete 或显式异常处理程序，因为可以使用智能指针来替代 当你使用**自动**的类型推断并[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，可以编写代码更快，加强代码并更好地了解。 基于范围的并**有关**循环是更简洁、 更易于使用，和不太容易发生意外错误比 C 样式**为**循环。 可以使用样板来尽量减少编写应用所需的代码行数。 
  确保代码能够安全地处理异常和内存，无需进行内存分配/释放或错误码的处理。  
   
  现代 C++ 整合了两种多态性：通过模板实现的编译时多态性，以及通过继承和虚拟化实现的运行时多态性。 可以结合使用这两种多态性以增强效果。 C++ 标准库模板 `shared_ptr` 可以相当轻松地通过内部的虚函数进行类型擦除。 但当模板是更好的选择时，请不要过度使用虚拟化来实现多态性。 模板其实很强大。  

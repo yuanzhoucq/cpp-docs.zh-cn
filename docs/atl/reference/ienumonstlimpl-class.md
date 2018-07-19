@@ -1,5 +1,5 @@
 ---
-title: IEnumOnSTLImpl 类 |Microsoft 文档
+title: IEnumOnSTLImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365251"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883003"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
-此类定义一个基于 c + + 标准库集合的枚举器接口。  
+此类定义基于 c + + 标准库集合的枚举器接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```  
   
 #### <a name="parameters"></a>参数  
- `Base`  
+ *基本*  
  COM 枚举器 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 接口。  
   
- `piid`  
- 指向的枚举器接口的接口 ID 的指针。  
+ *piid*  
+ 一个指向枚举器接口的接口 ID。  
   
- `T`  
- 枚举器接口所显示的项类型。  
+ *T*  
+ 枚举器接口所显示的项的类型。  
   
- `Copy`  
- A[复制策略类](../../atl/atl-copy-policy-classes.md)。  
+ *复制*  
+ 一个[复制策略类](../../atl/atl-copy-policy-classes.md)。  
   
- `CollType`  
+ *CollType*  
  C + + 标准库容器类。  
   
 ## <a name="members"></a>成员  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |名称|描述|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::Clone](#clone)|实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
-|[IEnumOnSTLImpl::Init](#init)|初始化枚举数。|  
+|[IEnumOnSTLImpl::Init](#init)|初始化枚举器。|  
 |[IEnumOnSTLImpl::Next](#next)|实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)。|  
 |[IEnumOnSTLImpl::Reset](#reset)|实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)。|  
 |[IEnumOnSTLImpl::Skip](#skip)|实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)。|  
@@ -75,19 +75,19 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |名称|描述|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::m_iter](#m_iter)|表示集合中的枚举器的当前位置迭代器。|  
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|指向该 c + + 标准库容器保存要枚举的项的指针。|  
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown**提供集合的对象的指针。|  
+|[IEnumOnSTLImpl::m_iter](#m_iter)|迭代器，表示集合中的枚举器的当前位置。|  
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|指向 c + + 标准库容器保存要枚举的项的指针。|  
+|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|`IUnknown`提供集合的对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `IEnumOnSTLImpl` 提供正在枚举项目兼容的 c + + 标准库容器中的存储在何处 COM 枚举器接口的实现。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。  
+ `IEnumOnSTLImpl` 提供要枚举的项在兼容的 c + + 标准库容器中的存储位置的 COM 枚举器接口的实现。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。  
   
 > [!NOTE]
 >  请参阅[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)有关进一步之间的差异的详细信息`CComEnumImpl`和`IEnumOnSTLImpl`。  
   
- 通常情况下，将*不*需要来创建你自己的枚举器类派生自此接口的实现。 如果你想要使用基于 c + + 标准库容器的 ATL 提供枚举，则更常见的是创建的实例[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或创建通过派生从返回的枚举的集合类[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。  
+ 通常情况下，将*不*需要通过此接口实现从派生来创建您自己的枚举器类。 如果你想要使用基于 c + + 标准库容器的 ATL 提供的枚举器，则更常见的是创建的实例[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或创建一个集合类，返回一个枚举器通过派生自[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。  
   
- 但是，如果你确实需要提供的自定义的枚举器 （例如，一个公开除了枚举器接口的接口），你可以从此类派生。 在此情况下很可能需要重写[克隆](#clone)方法以提供您自己的实现。  
+ 但是，如果需要提供的自定义枚举器 （例如，一个公开的枚举数接口除了接口），您可以从此类派生。 在此情况下很可能需要重写[克隆](#clone)方法以提供您自己的实现。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Base`  
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
  **标头：** atlcom.h  
   
 ##  <a name="init"></a>  IEnumOnSTLImpl::Init  
- 初始化枚举数。  
+ 初始化枚举器。  
   
 ```
 HRESULT Init(
@@ -107,46 +107,46 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pUnkForRelease`  
- [in]**IUnknown**必须保持活动状态的枚举数的生存期内的对象的指针。 传递**NULL**如果不存在任何此类对象。  
+ *pUnkForRelease*  
+ [in]`IUnknown`必须保持活动状态的枚举器的生命周期内的对象的指针。 如果没有此类对象存在，则传递 NULL。  
   
- `collection`  
+ collection  
  对包含要枚举的项的 c + + 标准库容器的引用。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果你通过`Init`对集合的引用保存在另一个对象，你可以使用`pUnkForRelease`参数以确保对象和集合持有，都可用于只要枚举器需要它。  
+ 如果传递`Init`对集合的引用保存在另一个对象，您可以使用*pUnkForRelease*参数以确保对象，并且它包含的集合是可用于为枚举器需要它。  
   
- 将指针传递给任何客户端返回的枚举器接口之前，必须调用此方法。  
+ 将指针传递到返回到任何客户端的枚举数接口前，必须调用此方法。  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- 此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)通过创建类型的对象的方法`CComEnumOnSTL`，具有相同的集合和迭代器使用的当前对象，初始化它并在返回接口新创建的对象。  
+ 此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法通过创建类型的对象`CComEnumOnSTL`，具有相同的集合和迭代器使用的当前对象，初始化并返回该接口上新创建的对象。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppEnum`  
- [out]从当前的枚举器克隆上新创建对象的枚举器接口。  
+ *ppEnum*  
+ [out]从当前枚举数中克隆上新创建的对象的枚举器接口。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
- **IUnknown**提供集合的对象的指针。  
+ `IUnknown`提供集合的对象的指针。  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此智能指针保留在传递到的对象的引用[IEnumOnSTLImpl::Init](#init)，确保，它将保持活动状态的枚举数的生存期内。  
+ 此智能指针将保留在传递到的对象的引用[IEnumOnSTLImpl::Init](#init)，确保它仍然保持活动状态的枚举器的生存期内。  
   
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
- 此成员是指向提供驱动枚举器接口的实现数据的集合。  
+ 此成员是指向提供数据驱动的枚举数接口的实现的集合。  
   
 ```
 CollType* m_pcollection;
@@ -156,7 +156,7 @@ CollType* m_pcollection;
  此成员初始化通过调用[IEnumOnSTLImpl::Init](#init)。  
   
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
- 此成员包含用于将标记集合中的当前位置，并导航到后续元素的迭代器。  
+ 此成员保留用于将标记集合中的当前位置，并导航到后续元素的迭代器。  
   
 ```
 CollType::iterator m_iter;
@@ -173,17 +173,17 @@ STDMETHOD(Next)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `celt`  
- [in]请求的元素数目。  
+ *celt*  
+ [in]请求的元素数。  
   
- `rgelt`  
- [out]要使用元素填充的数组。  
+ *rgelt*  
+ [out]要填充元素的数组。  
   
- `pceltFetched`  
- [out]中实际返回的元素的数目`rgelt`。 这可以是小于`celt`如果少于`celt`列表中剩余的元素。  
+ *pceltFetched*  
+ [out]中实际返回的元素数*rgelt*。 这可以是小于*celt*如果少于*celt*列表中剩余的元素。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  此方法提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
@@ -193,7 +193,7 @@ STDMETHOD(Reset)(void);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  此方法提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
@@ -203,11 +203,11 @@ STDMETHOD(Skip)(ULONG celt);
 ```  
   
 ### <a name="parameters"></a>参数  
- `celt`  
+ *celt*  
  [in]要跳过的元素数。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

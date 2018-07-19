@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2140dbe786a5d2a2a1b86eca17912e5e06b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942392"
 ---
 # <a name="using-arrays-c"></a>使用数组 (C++)
 您可以使用数组下标运算符 (`[ ]`) 访问数组的各个元素。 如果一维数组用于无下标的表达式中，则数组名称的计算结果为一个指向该数组中第一个元素的指针。  
   
-```  
+```cpp 
 // using_arrays.cpp  
 int main() {  
    char chArray[10];  
@@ -35,7 +36,7 @@ int main() {
   
  使用多维数组时，可以在表达式中使用各种组合。  
   
-```  
+```cpp 
 // using_arrays_2.cpp  
 // compile with: /EHsc /W1  
 #include <iostream>  
@@ -54,7 +55,7 @@ int main() {
 }  
 ```  
   
- 在前面的代码中，`multi` 是 `double` 类型的三维数组。 `p2multi` 指针指向大小为三的 `double` 类型的数组。 在此示例中，该数组与一个、两个和三个下标一起使用。 尽管更为常见的是指定所有下标（如在 `cout` 语句中），但有时选择数组元素的特定子集会很有用，如 `cout` 后面的语句中所示。  
+ 在前面的代码中，`multi`是类型的三维数组**double**。 `p2multi`指针指向的类型数组**double**大小为三。 在此示例中，该数组与一个、两个和三个下标一起使用。 尽管更为常见的是指定所有下标（如在 `cout` 语句中），但有时选择数组元素的特定子集会很有用，如 `cout` 后面的语句中所示。  
   
 ## <a name="see-also"></a>请参阅  
  [数组](../cpp/arrays-cpp.md)

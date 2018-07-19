@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLinkCtrl 类 |Microsoft 文档
+title: CMFCRibbonLinkCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039006"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851491"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 类
 实现位于功能区上的超链接。 当单击此超链接时，可以打开网页。  
@@ -85,7 +85,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|设置超链接的值。|  
   
 ## <a name="remarks"></a>备注  
- 创建一个超链接后，将其添加到面板通过调用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+ 创建超链接后，将其添加到一个面板，通过调用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -107,7 +107,7 @@ CMFCRibbonLinkCtrl(
   
 ### <a name="parameters"></a>参数  
  [in]*nID*  
- 指定在单击链接控件时执行的命令的命令 ID。  
+ 指定在单击链接控件时执行该命令的命令 ID。  
   
  [in]*lpszText*  
  指定要在链接控件上显示的标签。  
@@ -192,7 +192,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>参数  
  [in]*CDC**  
- [in]*的 CRect*  
+ [in]*CRect*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则打开关联的 Web 页否则为`FALSE`。  
+ 如果成功，则打开关联的网页，则返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 会打开一个网页，使用相应的超链接`CMFCRibbonLinkCtrl`对象。  
+ 将使用相应的超链接的网页打开`CMFCRibbonLinkCtrl`对象。  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  设置超链接的值。  
@@ -267,6 +267,6 @@ void SetLink(LPCTSTR lpszLink);
  指定的超链接文本。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)

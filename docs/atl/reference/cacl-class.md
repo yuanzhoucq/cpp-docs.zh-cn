@@ -1,5 +1,5 @@
 ---
-title: CAcl 类 |Microsoft 文档
+title: CAcl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,18 +32,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bab138d743dc3f5346ce15449c2a31b5b2484fd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365333"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879977"
 ---
 # <a name="cacl-class"></a>CAcl 类
-此类是包装器`ACL`（访问控制列表） 结构。  
+此类是包装`ACL`（访问控制列表） 结构。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,9 +57,9 @@ class CAcl
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAcl::CAccessMaskArray](#caccessmaskarray)|数组`ACCESS_MASK`s。|  
-|[CAcl::CAceFlagArray](#caceflagarray)|数组`BYTE`s。|  
-|[CAcl::CAceTypeArray](#cacetypearray)|数组`BYTE`s。|  
+|[CAcl::CAccessMaskArray](#caccessmaskarray)|ACCESS_MASKs 的数组。|  
+|[CAcl::CAceFlagArray](#caceflagarray)|一个字节数组。|  
+|[CAcl::CAceTypeArray](#cacetypearray)|一个字节数组。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
@@ -73,16 +73,16 @@ class CAcl
 |名称|描述|  
 |----------|-----------------|  
 |[CAcl::GetAceCount](#getacecount)|返回数的访问控制项 (ACE) 的对象。|  
-|[CAcl::GetAclEntries](#getaclentries)|检索访问控制列表 (ACL) 项`CAcl`对象。|  
+|[CAcl::GetAclEntries](#getaclentries)|检索从访问控制列表 (ACL) 项`CAcl`对象。|  
 |[CAcl::GetAclEntry](#getaclentry)|检索有关中的条目的信息的所有`CAcl`对象。|  
-|[CAcl::GetLength](#getlength)|返回的 ACL 的长度。|  
+|[CAcl::GetLength](#getlength)|返回的 acl 的长度。|  
 |[CAcl::GetPACL](#getpacl)|返回程序包 （指针的 acl）。|  
-|[CAcl::IsEmpty](#isempty)|测试`CAcl`条目的对象。|  
+|[CAcl::IsEmpty](#isempty)|测试`CAcl`的条目对象。|  
 |[CAcl::IsNull](#isnull)|返回的状态`CAcl`对象。|  
-|[CAcl::RemoveAce](#removeace)|从中移除特定 ACE （访问控制项）`CAcl`对象。|  
-|[CAcl::RemoveAces](#removeaces)|从中移除所有 Ace （访问控制项）`CAcl`适用于给定`CSid`。|  
+|[CAcl::RemoveAce](#removeace)|从删除特定的 ACE （访问控制项）`CAcl`对象。|  
+|[CAcl::RemoveAces](#removeaces)|从删除所有 Ace （访问控制项）`CAcl`适用于给定`CSid`。|  
 |[CAcl::SetEmpty](#setempty)|标记`CAcl`对象为空。|  
-|[CAcl::SetNull](#setnull)|标记`CAcl`对象作为`NULL`。|  
+|[CAcl::SetNull](#setnull)|标记`CAcl`对象为 NULL。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- **ACL**结构是 ACL （访问控制列表） 的标头。 ACL 包括零个或多一个顺序列表[Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) （访问控制项）。 ACL 中的各个 Ace 编号从 0 到*n-1*，其中*n*是 ACL 中的 Ace 的数量。 在编辑 ACL 时，应用程序是按其索引指在 ACL 中的访问控制项 (ACE)。  
+ `ACL`结构是 ACL （访问控制列表） 的标头。 ACL 包括零个或多了按顺序列出[Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) （访问控制项）。 从 0 到编号在 ACL 中的各个 Ace *n-1*，其中*n*是在 ACL 中 Ace 的数量。 在编辑 ACL 时，应用程序是通过其索引指中 ACL 的访问控制项 (ACE)。  
   
  有两种 ACL 类型：  
   
@@ -100,9 +100,9 @@ class CAcl
   
 -   系统  
   
- 自定义 ACL 控制由对象的所有者或任何人授予**WRITE_DAC**对对象的访问。 它指定访问特定用户和组可以具有的对一个对象。 例如，文件的所有者可以使用任意 ACL 控制哪些用户和组可以和不能有权访问文件。  
+ 自由 ACL 控制对象的所有者或任何人都授予对该对象的 WRITE_DAC 访问权限。 它指定访问特定用户和组可以具有的对象。 例如，文件的所有者可以使用任意 ACL 来控制哪些用户和组可以和不能有权访问文件。  
   
- 对象也可以具有与之关联的系统 ACL 由系统管理员控制窗体中的系统级安全信息。 系统 ACL 可以允许系统管理员联系，以审核任何尝试获得访问的对象。  
+ 对象还可以具有与其关联的系统 ACL 由系统管理员控制窗体中的系统级别的安全信息。 系统 ACL 可以允许系统管理员可以审核访问对象的任何尝试。  
   
  有关更多详细信息，请参阅[ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) Windows SDK 中的讨论。  
   
@@ -119,27 +119,27 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此 typedef 指定用于将使用的访问权限存储在访问控制项 (Ace) 的数组类型。  
+ 此 typedef 指定可用于将使用的访问权限存储在访问控制项 (Ace) 的数组类型。  
   
 ##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray  
- 字节数组。  
+ 一个字节数组。  
   
 ```
 typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此 typedef 指定用于定义访问控制项 (ACE) 的特定类型的控制标志的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能标志的完整列表定义。  
+ 此 typedef 指定用于定义访问控制项 (ACE) 特定于类型的控制标志的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能标志的完整列表的定义。  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
- 字节数组。  
+ 一个字节数组。  
   
 ```
 typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此 typedef 指定用于定义访问控制项 (ACE) 对象，如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE 的特性的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能的类型的定义的完整列表。  
+ 此 typedef 指定用于定义访问控制项 (ACE) 对象，如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE 性质的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)的完整列表的可能的类型定义。  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  构造函数。  
@@ -150,7 +150,7 @@ CAcl(const CAcl& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rhs`  
+ *rhs*  
  一个现有的 `CAcl` 对象。  
   
 ### <a name="remarks"></a>备注  
@@ -174,10 +174,10 @@ virtual UINT GetAceCount() const throw() = 0;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的项数 ACE 中`CAcl`对象。  
+ 返回的 ACE 中的条目数`CAcl`对象。  
   
 ##  <a name="getaclentries"></a>  CAcl::GetAclEntries  
- 检索访问控制列表 (ACL) 项`CAcl`对象。  
+ 检索从访问控制列表 (ACL) 项`CAcl`对象。  
   
 ```
 void GetAclEntries(
@@ -188,22 +188,22 @@ void GetAclEntries(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSids`  
+ *pSids*  
  指向数组的指针[CSid](../../atl/reference/csid-class.md)对象。  
   
  *pAccessMasks*  
  访问掩码中。  
   
  *pAceTypes*  
- 访问控制项 ( **ACE**) 类型。  
+ 访问控制项 (ACE) 类型。  
   
  *pAceFlags*  
- **ACE**标志。  
+ ACE 的标志。  
   
 ### <a name="remarks"></a>备注  
- 此方法填充的数组参数的详细信息与每个**ACE**对象中包含`CAcl`对象。 不需要该特定的数组的详细信息时，请使用 NULL。  
+ 此方法填充数组参数中包含的每个 ACE 对象的详细信息`CAcl`对象。 不需要该特定的数组的详细信息时，请使用空值。  
   
- 每个数组的内容彼此对应，即的第一个元素`CAccessMaskArray`数组对应的第一个元素`CSidArray`数组，依次类推。  
+ 每个数组的内容彼此对应，即，第一个元素的`CAccessMaskArray`数组中的第一个元素到对应`CSidArray`数组中，依次类推。  
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关 ACE 类型和标志的详细信息。  
   
@@ -222,29 +222,29 @@ void GetAclEntry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要检索的 ACL 项的索引。  
   
- `pSid`  
- [CSid](../../atl/reference/csid-class.md)对象对其应用 ACL 条目。  
+ *pSid*  
+ [CSid](../../atl/reference/csid-class.md) ACL 条目应用到对象。  
   
  *pMask*  
- 指定权限以授予或拒绝访问掩码。  
+ 在指定的权限以授予或拒绝访问掩码。  
   
- `pType`  
- ACE 类型中。  
+ *pType*  
+ ACE 类型。  
   
- `pFlags`  
+ *pFlags*  
  ACE 的标志。  
   
- `pObjectType`  
+ *pObjectType*  
  对象类型。 这将设置为 GUID_NULL，如果该 ACE 中未指定的对象类型，或如果 ACE 不是对象 ACE。  
   
- `pInheritedObjectType`  
+ *pInheritedObjectType*  
  继承的对象类型。 这将设置为 GUID_NULL，如果该 ACE 中未指定继承的对象类型，或如果 ACE 不是对象 ACE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将检索所有的各个 ACE，提供更多消息有关的信息[CAcl::GetAclEntries](#getaclentries)单独提供。  
+ 此方法将检索所有单独的 ACE，提供的更多消息有关的信息[CAcl::GetAclEntries](#getaclentries)单独提供。  
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关 ACE 类型和标志的详细信息。  
   
@@ -256,27 +256,27 @@ UINT GetLength() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回以字节为单位的所需的长度保存所需**ACL**结构。  
+ 返回以字节为单位的所需的长度存放所需`ACL`结构。  
   
 ##  <a name="getpacl"></a>  CAcl::GetPACL  
- 将指针返回到访问控制列表 (ACL)。  
+ 返回一个指向访问控制列表 (ACL)。  
   
 ```
 const ACL* GetPACL() const throw(...);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回一个指向**ACL**结构。  
+ 返回一个指向`ACL`结构。  
   
 ##  <a name="isempty"></a>  CAcl::IsEmpty  
- 测试`CAcl`条目的对象。  
+ 测试`CAcl`的条目对象。  
   
 ```
 bool IsEmpty() const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回**true**如果`CAcl`对象不为 NULL，且不包含任何条目。 返回**false**如果`CAcl`对象为 NULL，或包含至少一个条目。  
+ 返回 true; 否则`CAcl`对象不为 NULL，且不包含任何条目。 如果返回 FALSE`CAcl`对象为 NULL，或包含至少一个条目。  
   
 ##  <a name="isnull"></a>  CAcl::IsNull  
  返回的状态`CAcl`对象。  
@@ -286,17 +286,17 @@ bool IsNull() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果`CAcl`对象为 NULL， **false**否则为。  
+ 返回 true; 否则`CAcl`对象否则是 NULL，则返回 FALSE。  
   
 ##  <a name="operator_const_acl__star"></a>  CAcl::operator const ACL *  
- 强制转换`CAcl`对象传递给**ACL** （访问控制列表） 结构。  
+ 强制转换`CAcl`对象传递给`ACL`（访问控制列表） 结构。  
   
 ```  
 operator const ACL *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回的地址**ACL**结构。  
+ 返回的地址`ACL`结构。  
   
 ##  <a name="operator_eq"></a>  CAcl::operator =  
  赋值运算符。  
@@ -306,35 +306,35 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rhs`  
+ *rhs*  
  `CAcl`要分配给现有对象。  
   
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CAcl`对象。  
   
 ##  <a name="removeace"></a>  CAcl::RemoveAce  
- 从中移除特定 ACE （访问控制项） **CAcl**对象。  
+ 从删除特定的 ACE （访问控制项）`CAcl`对象。  
   
 ```
 void RemoveAce(UINT nIndex) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要移除的 ACE 项的索引。  
   
 ### <a name="remarks"></a>备注  
  此方法派生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
 ##  <a name="removeaces"></a>  CAcl::RemoveAces  
- 从中移除所有人 Ace （访问控制项）`CAcl`适用于给定`CSid`。  
+ 从删除 alls Ace （访问控制项）`CAcl`适用于给定`CSid`。  
   
 ```
 bool RemoveAces(const CSid& rSid) throw(...)
 ```  
   
 ### <a name="parameters"></a>参数  
- `rSid`  
+ *rSid*  
  对 `CSid` 对象的引用。  
   
 ##  <a name="setempty"></a>  CAcl::SetEmpty  
@@ -345,17 +345,17 @@ void SetEmpty() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- `CAcl`可以设置为空或为 NULL： 两个状态并不相同。  
+ `CAcl`可以设置为空或为 NULL： 两个状态都不同。  
   
 ##  <a name="setnull"></a>  CAcl::SetNull  
- 标记`CAcl`为 NULL 的对象。  
+ 标记`CAcl`对象为 NULL。  
   
 ```
 void SetNull() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- `CAcl`可以设置为空或为 NULL： 两个状态并不相同。  
+ `CAcl`可以设置为空或为 NULL： 两个状态都不同。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
