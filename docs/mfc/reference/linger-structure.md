@@ -1,5 +1,5 @@
 ---
-title: LINGER 结构 |Microsoft 文档
+title: LINGER 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339366"
 ---
 # <a name="linger-structure"></a>LINGER 结构
-`LINGER`结构用于操作**SO_LINGER**和**SO_DONTLINGER**选项`CAsyncSocket::GetSockOpt`。  
+`LINGER`结构用于操作的 {3&gt;so_linger&lt;3 和 4&gt;so_dontlinger&lt;4} 选项`CAsyncSocket::GetSockOpt`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>备注  
- 设置**SO_DONTLINGER**选项将防止锁定成员函数上**关闭**等待发送的未发送数据时。 设置此选项等效于设置**SO_LINGER**与**l_onoff**设置为 0。  
+ 锁定成员函数将设置 4&gt;so_dontlinger&lt;4} 选项可阻止`Close`等待发送的未发送数据时。 设置此选项等同于将设置与 SO_LINGER`l_onoff`设置为 0。  
   
 ## <a name="requirements"></a>要求  
  **标头：** winsock2.h  

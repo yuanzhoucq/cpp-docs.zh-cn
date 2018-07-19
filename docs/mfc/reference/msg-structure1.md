@@ -1,5 +1,5 @@
 ---
-title: MSG 结构 1 |Microsoft 文档
+title: MSG 结构 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338807"
 ---
 # <a name="msg-structure1"></a>MSG 结构 1
-`MSG`结构包含从线程的消息队列的消息信息。  
+`MSG`结构包含来自线程的消息队列的消息信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,22 +41,22 @@ typedef struct tagMSG {     // msg
   
 #### <a name="parameters"></a>参数  
  *hwnd*  
- 标识其窗口过程中接收的消息窗口。  
+ 标识其窗口过程接收消息的窗口。  
   
- `message`  
- 指定的消息数。  
+ *message*  
+ 指定的消息号。  
   
- `wParam`  
- 指定有关该消息的其他信息。 值的确切含义取决于**消息**成员。  
+ *wParam*  
+ 指定消息有关的其他信息。 值的确切含义取决于`message`成员。  
   
- `lParam`  
- 指定有关该消息的其他信息。 值的确切含义取决于**消息**成员。  
+ *lParam*  
+ 指定消息有关的其他信息。 值的确切含义取决于`message`成员。  
   
- `time`  
+ *time*  
  指定发送消息之后的时间。  
   
- `pt`  
- 当发送消息之后，请指定光标位置，在屏幕坐标。  
+ *pt*  
+ 发送消息之后，请指定的游标位置，以屏幕坐标。  
   
 ## <a name="requirements"></a>要求  
  **标头：** winuser.h  

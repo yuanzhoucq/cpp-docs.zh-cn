@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonUndoButton 类 |Microsoft 文档
+title: CMFCRibbonUndoButton 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041242"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848763"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 类
-`CMFCRibbonUndoButton`类实现包含最新的用户命令的下拉列表按钮。 用户可以从要重做或撤消的下拉列表中选择一个或多个最新的命令。  
+`CMFCRibbonUndoButton`类实现包含最新的用户命令的下拉列表按钮。 用户可以从要重做或撤消它们的下拉列表选择一个或多个最新的命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,13 +48,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|构造一个新`CMFCRibbonUndoButton`通过使用你指定的命令 ID、 文本标签和映像从父对象的图像列表对象。|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|构造一个新`CMFCRibbonUndoButton`通过使用指定的命令 ID、 文本标签和映像从父对象的图像列表对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|将新的操作添加到的操作列表。|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|将新的操作添加到的操作的列表。|  
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|清除操作列表中，这是下拉列表。|  
 |[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|确定用户从下拉列表中选择的项的数目。|  
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|指示对象是否包含一个菜单。|  
@@ -63,7 +63,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
  `CMFCRibbonUndoButton`类使用堆栈来表示下拉列表。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何构造的对象`CMFCRibbonUndoButton`类，并将新操作添加到的操作列表。 此代码片段属于[功能区的小工具示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何构造的对象`CMFCRibbonUndoButton`类，并将新的操作添加到的操作的列表。 此代码片段属于[功能区的小工具示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -82,7 +82,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
  **标头：** afxribbonundobutton.h  
   
 ##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
- 将新的操作添加到的操作列表。  
+ 将新的操作添加到的操作的列表。  
   
 ```  
 void AddUndoAction(LPCTSTR lpszLabel);
@@ -100,7 +100,7 @@ void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- 构造一个新`CMFCRibbonUndoButton`通过使用你指定的命令 ID、 文本标签和映像从父对象的图像列表对象。  
+ 构造一个新`CMFCRibbonUndoButton`通过使用指定的命令 ID、 文本标签和映像从父对象的图像列表对象。  
   
 ```  
 CMFCRibbonUndoButton(
@@ -118,19 +118,19 @@ CMFCRibbonUndoButton(
   
 ### <a name="parameters"></a>参数  
  [in]*nID*  
- 指定的命令标识符。  
+ 指定命令标识符。  
   
  [in]*lpszText*  
  指定按钮的文本标签。  
   
  [in]*nSmallImageIndex*  
- 按钮的小图像的父对象的图像列表中的从零开始索引。  
+ 中的图像列表的按钮的小图像的父对象的从零开始索引。  
   
  [in]*nLargeImageIndex*  
- 从零开始的索引的父对象的图像列表中的按钮的大图像。  
+ 从零开始的索引中的父对象的图像列表的按钮的大图像。  
   
- [in]*任务栏*  
- 指向可以用作按钮的图像的图标的句柄。  
+ [in]*hIcon*  
+ 句柄可用作按钮的图像的图标。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  确定用户从下拉列表中选择的项的数目。  
@@ -140,7 +140,7 @@ int GetActionNumber() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 用户选择的项的数目。  
+ 用户选择的项目数。  
   
 ##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
  指示对象是否包含一个菜单。  
@@ -150,12 +150,12 @@ virtual BOOL HasMenu() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+ 始终返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonGallery 类](../../mfc/reference/cmfcribbongallery-class.md)   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)

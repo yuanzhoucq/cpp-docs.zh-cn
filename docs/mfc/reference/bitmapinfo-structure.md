@@ -1,5 +1,5 @@
 ---
-title: BITMAPINFO 结构 |Microsoft 文档
+title: BITMAPINFO 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336252"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO 结构
-`BITMAPINFO`结构定义的维度和 Windows 设备独立位图 (DIB) 的颜色信息。  
+`BITMAPINFO`结构定义的维度和 Windows 设备无关位图 (DIB) 的颜色信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>参数  
  *bmiHeader*  
- 指定[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)结构，它包含的维度和独立于设备的位图的颜色格式有关的信息。  
+ 指定[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)结构，其中包含有关维度和独立于设备的位图的颜色格式信息。  
   
  *bmiColors*  
- 指定的数组[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)或`DWORD`在位图中定义的颜色的数据类型。  
+ 指定的数组[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)或位图中定义的颜色的 DWORD 数据类型。  
   
 ## <a name="remarks"></a>备注  
- 独立于设备的位图包含两个不同部分：`BITMAPINFO`说明的维度和颜色位图，并指定在位图中的像素为单位的字节数组的结构。 数组中的位打包在一起，但每个扫描行必须填充了零以上结束`LONG`边界。 如果正高度的源位图的是左下角。 如果高度为负，是的左上角的起点。  
+ 与设备无关位图包含两个不同部分：`BITMAPINFO`说明的维度和颜色位图，并指定像素的位图中的字节数组的结构。 数组中的位将打包在一起，但每个扫描行必须填充了零以结束**长**边界。 如果高度为正，位图的源是左下角。 高度为负，如果源是左上角。  
   
- A*已打包的位图*是位图的字节数组紧随`BITMAPINFO`结构。 由单个指针引用已打包的位图。  
+ 一个*打包的位图*是一个位图，其中的字节数组紧随`BITMAPINFO`结构。 由单个指针引用已打包的位图。  
   
- 有关详细信息`BITMAPINFO`结构和相应的成员的值`BITMAPINFOHEADER`和`RGBQUAD`结构，请参阅 Windows SDK 文档中的以下主题。  
+ 有关详细信息`BITMAPINFO`结构，并将相应值的成员`BITMAPINFOHEADER`和`RGBQUAD`结构，请参阅 Windows SDK 文档中的以下主题。  
   
 - [BITMAPINFO 结构](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
   

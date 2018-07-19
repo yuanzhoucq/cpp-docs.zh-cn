@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditDoc 类 |Microsoft 文档
+title: CHtmlEditDoc 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335599"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 类
 与[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供 MFC 文档视图体系结构上下文中的 WebBrowser 编辑平台功能。  
@@ -53,8 +53,8 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 |名称|描述|  
 |----------|-----------------|  
 |[CHtmlEditDoc::GetView](#getview)|检索`CHtmlEditView`对象附加到此文档。|  
-|[CHtmlEditDoc::IsModified](#ismodified)|返回关联的视图 WebBrowser 控件是否包含已修改用户的文档。|  
-|[CHtmlEditDoc::OpenURL](#openurl)|打开一个 URL。|  
+|[CHtmlEditDoc::IsModified](#ismodified)|返回关联的视图的 WebBrowser 控件是否包含已由用户修改的文档。|  
+|[CHtmlEditDoc::OpenURL](#openurl)|将打开一个 URL。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **标头：** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- 构造**CHtmlEditDoc**对象。  
+ 构造 `CHtmlEditDoc` 对象。  
   
 ```  
 CHtmlEditDoc();
@@ -83,17 +83,17 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 将指针返回到文档的**CHtmlEditView**对象。  
+ 返回一个指向文档的`CHtmlEditView`对象。  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- 返回关联的视图 WebBrowser 控件是否包含已修改用户的文档。  
+ 返回关联的视图的 WebBrowser 控件是否包含已由用户修改的文档。  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
 ##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
- 打开一个 URL。  
+ 将打开一个 URL。  
   
 ```  
 virtual BOOL OpenURL(LPCTSTR lpszURL);
@@ -104,7 +104,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
  要打开的 URL。  
   
 ### <a name="return-value"></a>返回值  
- 返回**TRUE**成功后， **FALSE**失败。  
+ 如果成功，则返回 TRUE FALSE 失败。  
   
 ## <a name="see-also"></a>请参阅  
  [HTMLEdit 示例](../../visual-cpp-samples.md)   

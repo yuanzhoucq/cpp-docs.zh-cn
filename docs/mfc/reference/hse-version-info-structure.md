@@ -1,5 +1,5 @@
 ---
-title: HSE_VERSION_INFO 结构 |Microsoft 文档
+title: HSE_VERSION_INFO 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335810"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 结构
-由 `pVer` 成员函数中的 `CHttpServer::GetExtensionVersion` 参数指向此结构。 它提供 ISA 的 ISA 版本号和文本说明。  
+此结构所指向的*pVer*中的参数`CHttpServer::GetExtensionVersion`成员函数。 它提供 ISA 的 ISA 版本号和文本说明。  
   
 ## <a name="syntax"></a>语法  
   

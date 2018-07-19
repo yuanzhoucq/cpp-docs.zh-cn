@@ -1,5 +1,5 @@
 ---
-title: AFX_GLOBAL_DATA 结构 |Microsoft 文档
+title: AFX_GLOBAL_DATA 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337403"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -82,7 +82,7 @@ struct AFX_GLOBAL_DATA
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|启用或禁用 Microsoft Active Accessibility 支持。 Active Accessibility 提供了可靠的方式来公开与用户界面元素有关的信息。|  
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|指示是否启用了 Microsoft Active Accessibility 支持。|  
-|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|指示操作系统是否支持分层的窗口。|  
+|[Afx_global_data:: iswindowslayersupportavailable](#iswindowslayersupportavailable)|指示操作系统是否支持分层的窗口。|  
   
 ### <a name="data-members"></a>数据成员  
   
@@ -113,12 +113,12 @@ struct AFX_GLOBAL_DATA
  **标头：** afxglobals.h  
   
 ### <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
-指示操作系统是否支持 alpha 混合。  
+指示操作系统是否支持 alpha 值混合处理。  
   
   
 ```  
@@ -126,7 +126,7 @@ BOOL  bIsOSAlphaBlendingSupport;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE` 指示支持 alpha 混合;否则为`FALSE`。  
+ TRUE 指示支持 alpha 值混合处理;否则为 FALSE。  
   
 
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
@@ -149,16 +149,16 @@ HRESULT D2D1MakeRotateMatrix(
   
 ### <a name="parameters"></a>参数   
  *角度*  
- 顺时针旋转的角度，以度为单位。  
+ 顺时针旋转角度，以度为单位。  
   
- *center*  
- 围绕其旋转的点。  
+ *中心*  
+ 要围绕其旋转点。  
   
  *矩阵*  
- 此方法返回时，包含新的旋转转换。 必须为此参数来分配存储空间。  
+ 此方法返回时，包含新的旋转转换。 为此参数，必须分配存储空间。  
   
 ### <a name="return-value"></a>返回值  
- 否则，返回如果成功，则为 S_OK 或一个错误值。  
+ 如果成功，则为 S_OK 或错误值返回，否则返回。  
   
 ## <a name="drawparentbackground"></a> AFX_GLOBAL_DATA::DrawParentBackground
 在指定区域中绘制控件的父级的背景。  
@@ -179,10 +179,10 @@ BOOL DrawParentBackground(
  指向设备上下文的指针。  
   
  [in]*lpRect*  
- 指向用来限定要绘制的区域的矩形的指针。 默认值为 `NULL`。  
+ 指向用来限定要绘制的区域的矩形的指针。 默认值为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
 使用指定主题的视觉样式绘制指定的文本。  
@@ -203,9 +203,9 @@ BOOL DrawTextOnGlass(
   
 ### <a name="parameters"></a>参数   
  [in]*hTheme*  
- 窗口主题数据的句柄，或 `NULL`。 如果此参数不是 `NULL` 且支持主题，框架将使用指定的主题绘制文本。 否则，该框架将不使用主题来绘制文本。  
+ 句柄主题数据的一个窗口，则为 NULL。 该框架使用指定的主题用于绘制文本，如果此参数不为 NULL，并且支持主题。 否则，该框架将不使用主题来绘制文本。  
   
- 使用 [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) 方法创建 `HTHEME`。  
+ 使用[OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821)方法来创建 HTHEME。  
   
  [in]*pDC*  
  指向设备上下文的指针。  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in]*dwFlags*  
  指定如何绘制指定文本的标志的按位组合 (OR)。  
   
- 如果*hTheme*参数是`NULL`或如果主题不支持的和启用， *nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*参数[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法描述有效的标志。  
+ 如果*hTheme*参数是`NULL`或不受支持且已启用，主题*nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*的参数[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法描述有效的标志。  
   
  [in]*nGlowSize*  
  在背景上绘制，然后指定绘制的文本之前发光效果的大小。 默认值为 0。  
@@ -234,13 +234,13 @@ BOOL DrawTextOnGlass(
  在其中绘制指定文本的颜色。 默认值为默认颜色。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果主题用于绘制指定的文本;否则为`FALSE`。  
+ 如果主题用于绘制指定的文本; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数是`NULL`，或者如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支持方法，或者如果[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合已被禁用。  
+ 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数为 NULL，或者如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支持方法，或者，如果[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合已禁用。  
   
 ### <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
@@ -258,12 +258,12 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>参数   
  [in]*bEnable*  
- `TRUE` 启用辅助功能支持；`FALSE` 禁用辅助功能支持。 默认值为 `TRUE`。  
+ 若要启用辅助功能的支持;如果为 FALSE，则禁用辅助功能支持。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 有关这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。  
+ Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。  
   
- 使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法来确定是否启用 Microsoft Active Accessibility 支持。  
+ 使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法，以确定是否启用 Microsoft Active Accessibility 支持。  
   
  
 ### <a name="see-also"></a>请参阅  
@@ -284,24 +284,24 @@ BOOL ExcludeTag(
   
 ### <a name="parameters"></a>参数   
  [in]*strBuffer*  
- 文本缓冲区。  
+ 文本的缓冲区。  
   
  [in]*lpszTag*  
- 成对的开始和结束 XML 标记的名称。  
+ 一对的开始和结束 XML 标记的名称。  
   
  [out]*strTag*  
- 此方法返回时， *strTag*参数包含由命名的标记是开始标记和结束 XML 之间的文本*lpszTag*参数。 从结果中任何前导或尾随空格被裁剪。  
+ 此方法返回时， *strTag*参数包含的文本之间的开始和结束 XML 标记由命名*lpszTag*参数。 从结果中任何前导或尾随空格被裁剪。  
   
  [in]*bIsCharsList*  
- `TRUE` 要转换为转义字符中的符号*strTag*到实际的转义字符; 的参数`FALSE`无法执行转换。默认值是`FALSE`。 有关更多信息，请参见“备注”。  
+ 为 true，则转换中的转义字符的符号*strTag*到实际的转义符; 参数如果为 FALSE，则无法执行转换。默认值为 FALSE。 有关更多信息，请参见“备注”。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 名为开始和结束标记表示的开始和结束的指定缓冲区中的文本的运行时的 XML 标记对组成。 *StrBuffer*参数指定缓冲区，和*lpszTag*参数指定的 XML 标记的名称。  
+ XML 标记对包含名为打开和关闭来表示的开始和结束指定的缓冲区中的文本运行的标记。 *StrBuffer*参数指定的缓冲区，并*lpszTag*参数指定的 XML 标记名称。  
   
- 使用下表中的符号进行编码的一组指定的缓冲区中的转义字符。 指定`TRUE`为*bIsCharsList*要转换中的符号参数*strTag*到实际的转义符的参数。 下表使用[_T()](../../c-runtime-library/data-type-mappings.md)宏来指定符号并转义字符字符串。  
+ 使用下表中的符号进行编码的一组指定的缓冲区中的转义字符。 指定为 TRUE *bIsCharsList*参数来转换中的符号*strTag*到实际的转义符的参数。 下表使用[_t （)](../../c-runtime-library/data-type-mappings.md)宏来指定符号和转义字符字符串。  
   
 |符号|转义符|  
 |------------|----------------------|  
@@ -323,13 +323,13 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>参数   
  [in]*nColor*  
- 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*参数[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>返回值  
  指定的用户界面元素的 RGB 颜色值。 有关更多信息，请参见“备注”。  
   
 ### <a name="remarks"></a>备注  
- 如果*nColor*参数的值超出范围，则返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，它返回`NULL`如果颜色不受支持。  
+ 如果*nColor*参数的值超出范围，返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，如果颜色不受支持，则返回 NULL。  
   
 ### <a name="see-also"></a>请参阅  
 
@@ -338,7 +338,7 @@ COLORREF GetColor(int nColor);
  [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
- 返回存储在全局数据的 ID2D1Factory 接口指针。 如果接口未初始化，则创建具有默认参数的接口。  
+ 返回指向存储在全局数据中的 ID2D1Factory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。  
   
   
 ```  
@@ -346,10 +346,10 @@ ID2D1Factory* GetDirect2dFactory();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向 ID2D1Factory 接口时的默认的工厂创建成功，则为 NULL 如果无法创建或当前操作系统没有 D2D 支持。  
+ 指向 ID2D1Factory 接口的工厂创建成功，或如果创建失败，则为 NULL 或当前操作系统没有 D2D 支持。  
   
 ## <a name="gethandcursor"></a>  AFX_GLOBAL_DATA::GetHandCursor
-检索类似于手，其标识符为 `IDC_HAND`的预定义光标。  
+检索预定义的游标，类似于手，其标识符为 IDC_HAND。  
   
   
 ```  
@@ -368,11 +368,11 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>参数   
- [在中，out]*信息*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
+ [in、 out]*信息*  
+ 一个[NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果此方法成功，则否则为`FALSE`。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。  
  
   
 ### <a name="see-also"></a>请参阅   
@@ -388,13 +388,13 @@ int GetTextHeight(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>参数   
  [in]*bHorz*  
- 如果为 `TRUE`，则在文本水平运行时检索字符的高度；如果为 `FALSE`，则在文本垂直运行时检索字符的高度。 默认值为 `TRUE`。  
+ 为 TRUE，则文本水平; 运行时检索字符的高度为 FALSE，则文本垂直运行时检索字符的高度。 默认值为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  当前字体的高度，从字体上缘往字体下缘测量。  
   
 ## <a name="getwicfactory"></a> AFX_GLOBAL_DATA::GetWICFactory
-返回存储在全局数据的 IWICImagingFactory 接口指针。 如果接口未初始化，则创建具有默认参数的接口。  
+返回指向存储在全局数据中的 IWICImagingFactory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。  
   
   
 ```  
@@ -402,10 +402,10 @@ IWICImagingFactory* GetWICFactory();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向 IWICImagingFactory 接口时的默认的工厂创建成功，则为 NULL 如果无法创建或当前操作系统没有 WIC 支持。  
+ IWICImagingFactory 接口时的默认工厂的创建成功，或者如果创建失败，则为 NULL 或当前操作系统的指针将不具有 WIC 支持。  
   
 ## <a name="getwritefactory"></a> AFX_GLOBAL_DATA::GetWriteFactory
-返回存储在全局数据的 IDWriteFactory 接口指针。 如果接口未初始化，则创建具有默认参数的接口。  
+返回指向存储在全局数据中的 IDWriteFactory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。  
   
   
 ```  
@@ -413,10 +413,10 @@ IDWriteFactory* GetWriteFactory();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向 IDWriteFactory 接口时的默认的工厂创建成功，则为 NULL 如果无法创建或当前操作系统没有 DirectWrite 支持。  
+ 指向 IDWriteFactory 接口的工厂创建成功，或如果创建失败，则为 NULL 或当前操作系统没有 DirectWrite 的支持。  
  
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
-初始化 D2D、 DirectWrite 和 WIC 工厂。 在初始化主窗口之前调用此方法。  
+初始化 D2D、 相同，DirectWrite 和 WIC 工厂。 在初始化主窗口之前调用此方法。  
   
   
 ```  
@@ -430,10 +430,10 @@ BOOL InitD2D(
  它创建 D2D 工厂和资源的线程模型。  
   
  *writeFactoryType*  
- 一个值，指定是否将共享或隔离写入工厂对象  
+ 一个值，指定是否将共享或隔离写工厂对象  
   
 ### <a name="return-value"></a>返回值  
- 如果工厂已 intilalizrd，FALSE-否则则返回 TRUE  
+ 如果工厂已 intilalizrd，FALSE-否则将返回 TRUE  
   
 ## <a name="is32biticons"></a> AFX_GLOBAL_DATA::Is32BitIcons
 指示是否支持预定义的 32 位图标。  
@@ -446,10 +446,10 @@ BOOL Is32BitIcons() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果预定义的 32 位，支持图标;否则为`FALSE`。  
+ 支持预定义的 32 位图标; 如果为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法返回`TRUE`如果框架支持 32 位内置图标和操作系统支持 16 位 / 像素或更多，并且映像不会显示在高对比度。  
+ 如果框架支持 32 位内置图标和操作系统支持 16 位 / 像素或更多，并且映像不会显示在高对比度，此方法返回 TRUE。  
   
 ## <a name="isaccessibilitysupport"></a> AFX_GLOBAL_DATA::IsAccessibilitySupport
 指示是否启用了 Microsoft Active Accessibility 支持。  
@@ -460,12 +460,12 @@ BOOL IsAccessibilitySupport() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果启用了 Accessibility 支持，则为 `TRUE`；否则为 `FALSE`。  
+ 如果启用了辅助功能支持; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  Microsoft Active Accessibility 是使应用程序可访问的早期解决方案。 Microsoft UI Automation 是 Microsoft Windows 的新的可访问性模型，旨在满足对辅助技术产品和自动测试工具的需求。   
   
- 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法来启用或禁用 Active Accessibility 支持。  
+ 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法启用或禁用 Active Accessibility 支持。  
   
 
 ### <a name="see-also"></a>请参阅  
@@ -480,7 +480,7 @@ BOOL IsD2DInitialized() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 已初始化 D2D; 如果为 TRUE否则为 FALSE。  
+ 如果已初始化 D2D; 则为 TRUE否则为 FALSE。  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法。  
@@ -491,7 +491,7 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合是已启用; 否则为`FALSE`。  
+ 则为 TRUE[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合，则启用; 否则为 FALSE。  
   
 ### <a name="see-also"></a>请参阅    
  [桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
@@ -504,12 +504,12 @@ BOOL IsHighContrastMode() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果映像当前显示在黑色或白色高对比度模式;否则为`FALSE`。  
+ 如果映像当前会显示在黑色或白色高对比度模式，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 在黑色高对比度模式下，面向光缘为白色和后台为黑色。 在白色高对比度模式下，面向光缘为黑色和背景为白色。  
+ 在黑色的高对比度模式下，面向光源的边缘为白色和背景为黑色。 在白色的高对比度模式下，面向光源的边缘是黑色和背景为白色。  
   
-## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+## <a name="iswindowslayersupportavailable"></a> Afx_global_data:: iswindowslayersupportavailable
 指示操作系统是否支持分层的窗口。  
   
   
@@ -518,10 +518,10 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果支持分层窗口，则为 `TRUE`；否则为 `FALSE`。  
+ 如果支持分层的窗口; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 如果支持分层的窗口，*智能停靠*标记使用分层的窗口。  
+ 如果支持分层的窗口，则*智能停靠*标记将使用分层的窗口。  
   
 ## <a name="m_busebuiltin32biticons"></a> AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
 指示框架是否使用预定义的 32 位颜色图标或分辨率较低的图标。  
@@ -532,7 +532,7 @@ BOOL  m_bUseBuiltIn32BitIcons;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE` 指定框架使用 32 位颜色图标；`FALSE` 指定较低分辨率的图标。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 构造函数将此成员初始化为 `TRUE`。  
+ TRUE 指定框架使用 32 位颜色图标;FALSE 指定较低分辨率图标。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`构造函数初始化此成员为 TRUE。  
   
  必须在应用程序启动时设置此成员。  
   
@@ -545,9 +545,9 @@ BOOL m_bUseSystemFont;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE` 指定要使用系统字体;否则为`FALSE`。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 构造函数将此成员初始化为 `FALSE`。  
+ TRUE 指定要使用系统字体;否则为 FALSE。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`构造函数初始化此成员为 FALSE。  
   
- 测试此成员不能使用框架可以确定字体的唯一方法。 `AFX_GLOBAL_DATA::UpdateFonts`方法还会测试默认和的替代项的字体，以确定哪些视觉样式可应用于菜单、 工具栏和功能区。  
+ 测试此成员不是使用框架可以确定该字体的唯一方式。 `AFX_GLOBAL_DATA::UpdateFonts`还对方法进行测试以确定哪些视觉样式可应用于菜单、 工具栏和功能区的默认和替代字体。  
   
 ## <a name="m_hcurhand"></a> AFX_GLOBAL_DATA::m_hcurHand
 存储手形光标的句柄。  
@@ -604,7 +604,7 @@ int   m_nAutoHideToolBarSpacing;
   
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
-指定用于表示停靠的状态拖帧的粗细。  
+指定用来指示停靠的状态的拖动框架的粗细。  
   
   
 ```  
@@ -612,10 +612,10 @@ int  m_nDragFrameThicknessDock;
 ```  
   
 ### <a name="remarks"></a>备注  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`构造函数此成员初始化为 3 个像素。  
+ `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`构造函数初始化此成员为 3 个像素。  
   
 ## <a name="m_ndragframethicknessfloat"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
-指定用于表示浮点状态拖帧的粗细。  
+指定用来指示浮点状态的拖动框架的粗细。  
   
   
 ```  
@@ -634,7 +634,7 @@ void OnSettingChange();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法将 framework 变量设置为用户的桌面的特定属性的状态。 此方法检测到的菜单动画，菜单淡入淡出和任务栏自动隐藏功能的当前状态。  
+ 此方法将 framework 变量设置为用户的桌面的特定属性的状态。 此方法检测到的菜单动画、 菜单淡入淡出和任务栏自动隐藏功能的当前状态。  
   
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 注册指定的 MFC 窗口类。  
@@ -652,7 +652,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  如果此方法成功，则已注册的类的限定的名称否则为[资源异常](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>备注  
- 返回值是一个冒号分隔的列表*lpszClassNamePrefix*参数字符串和当前的应用程序实例; 的句柄的十六进制文本表示形式之间实现应用程序光标，它是箭头光标其标识符为 IDC_ARROW;和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
+ 返回值是冒号分隔的列表*lpszClassNamePrefix*参数字符串和十六进制文本表示形式的句柄的当前的应用程序实例; 应用程序光标，它是箭头其标识符为 IDC_ARROW 的游标和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
   
 ### <a name="see-also"></a>请参阅    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -667,7 +667,7 @@ BOOL Resume();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果此方法成功，则否则为`FALSE`。 在调试模式下，此方法断言如果此方法将失败。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。 在调试模式下，此方法要声明此方法不成功。  
   
 ### <a name="remarks"></a>备注  
  当框架接收时调用此方法[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)消息。  
@@ -698,7 +698,7 @@ BOOL SetLayeredAttrib(
  标志的按位组合 (OR)，其指定参数要使用的方法。 指定 LWA_COLORKEY 以使用*crKey*参数作为透明度颜色。 指定 LWA_ALPHA 以使用*bAlpha*参数确定分层窗口的不透明度。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果此方法成功，则否则为`FALSE`。   
+ 如果此方法成功，则为 TRUE否则为 FALSE。   
  
 ### <a name="see-also"></a>请参阅   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
@@ -716,16 +716,16 @@ BOOL SetMenuFont(
   
 ### <a name="parameters"></a>参数   
  [in]*lpLogFont*  
- 指向包含字体的属性的结构的指针。  
+ 指向包含的一种字体属性的结构的指针。  
   
  [in]*bHorz*  
- `TRUE` 若要指定文本水平; 运行`FALSE`指定文本垂直运行。  
+ 为 TRUE，则指定水平; 运行的文本如果为 FALSE，以指定文本垂直运行。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果此方法成功，则否则为`FALSE`。 在调试模式下，此方法断言如果此方法将失败。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。 在调试模式下，此方法要声明此方法不成功。  
   
 ### <a name="remarks"></a>备注  
- 此方法创建一个水平的正则字体，带下划线的字体，并使用默认菜单项是加粗字体。 此方法 （可选） 创建一个正则垂直字体。 有关逻辑字体的详细信息，请参阅[cfont:: Createfontindirect](../../mfc/reference/cfont-class.md#createfontindirect)。  
+ 此方法创建水平的常规字体，带下划线的字体，并且是加粗字体在默认使用菜单项。 此方法根据需要创建正则垂直字体。 有关逻辑焦点的详细信息，请参阅[cfont:: Createfontindirect](../../mfc/reference/cfont-class.md#createfontindirect)。  
   
 ## <a name="updatefonts"></a> AFX_GLOBAL_DATA::UpdateFonts
 重新初始化框架使用的逻辑字体。  
@@ -779,7 +779,7 @@ ITaskbarList *GetITaskbarList();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果任务栏列表对象的创建成功，则为指向 `ITaskbarList` 接口的指针；如果创建失败或者当前操作系统的版本低于 Windows 7，则为 `NULL`。  
+ 一个指向`ITaskbarList`如果任务栏列表对象的创建成功，则接口如果创建失败，或者如果当前操作系统低于 Windows 7，则为 NULL。  
   
 ## <a name="getitaskbarlist3"></a> AFX_GLOBAL_DATA::GetITaskbarList3
 在全局数据中创建和存储指向 `ITaskBarList3` 接口的指针。  
@@ -790,7 +790,7 @@ ITaskbarList3 *GetITaskbarList3();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果任务栏列表对象的创建成功，则为指向 `ITaskbarList3` 接口的指针；如果创建失败或者当前操作系统的版本低于 Windows 7，则为 `NULL`。  
+ 一个指向`ITaskbarList3`如果任务栏列表对象的创建成功，则接口如果创建失败，或者如果当前操作系统低于 Windows 7，则为 NULL。  
   
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 确定 Shell 自动隐藏栏的位置。  
@@ -825,17 +825,17 @@ HRESULT ShellCreateItemFromParsingName(
   
 ### <a name="parameters"></a>参数   
  *pszPath*  
- [in]指向的显示名称的指针。  
+ [in]指向显示名称的指针。  
   
  *pbc*  
  指向控制在分析操作的绑定上下文的指针。  
   
  *riid*  
- 指接口 id。  
+ 对接口 id。  
   
  *ppv*  
- [out]此函数返回时，包含在中请求的接口指针*riid*。 这通常是`IShellItem`或`IShellItem2`。  
+ [out]此函数返回时，包含请求中的接口指针*riid*。 这通常是`IShellItem`或`IShellItem2`。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK 返回否则为一个错误值。  
+ 如果成功，则为 S_OK 返回否则为错误值。  
 

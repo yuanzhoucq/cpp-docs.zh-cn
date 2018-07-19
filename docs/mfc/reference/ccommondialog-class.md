@@ -1,5 +1,5 @@
 ---
-title: CCommonDialog 类 |Microsoft 文档
+title: CCommonDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335910"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 类
 封装 Windows 公共对话框功能的类的基类。  
@@ -43,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|构造 `CCommonDialog` 对象。|  
   
 ## <a name="remarks"></a>备注  
- 下列类能封装 Windows 公共对话框功能：  
+ 下列类能封装 Windows 公共对话框的功能：  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -84,14 +84,14 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>参数  
  *pParentWnd*  
- 指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
+ 指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象属于的。 如果它为 NULL，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
  请参阅[CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)的完整信息。  
   
 ## <a name="see-also"></a>请参阅  
  [CDialog 类](../../mfc/reference/cdialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CFileDialog 类](../../mfc/reference/cfiledialog-class.md)   
  [CFontDialog 类](../../mfc/reference/cfontdialog-class.md)   
  [CColorDialog 类](../../mfc/reference/ccolordialog-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: CREATESTRUCT 结构 |Microsoft 文档
+title: CREATESTRUCT 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078462"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848465"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 结构
 `CREATESTRUCT`结构定义传递给应用程序的窗口过程的初始化参数。  
@@ -53,10 +53,10 @@ typedef struct tagCREATESTRUCT {
  标识拥有新的窗口中的模块的模块实例句柄。  
   
  *hMenu*  
- 标识要使用新的窗口的菜单。 如果一个子窗口，将包含整数 id。  
+ 标识要由新的窗口的菜单。 如果子窗口中，将包含整数 id。  
   
  *hwndParent*  
- 标识拥有新的窗口的窗口。 此成员是**NULL**如果新的窗口为顶级窗口。  
+ 标识拥有新的窗口的窗口。 如果新窗口是一个顶级窗口，此成员为 NULL。  
   
  *cy*  
  指定新的窗口的高度。  
@@ -65,19 +65,19 @@ typedef struct tagCREATESTRUCT {
  指定新的窗口的宽度。  
   
  *y*  
- 指定的新窗口的左上角的 y 坐标。 如果新的窗口是子窗口; 坐标是相对于父窗口否则坐标是相对于屏幕源。  
+ 指定新的窗口的左上角的 y 坐标。 在新窗口是子窗口; 如果坐标是相对于父窗口否则坐标是相对于屏幕源。  
   
  *x*  
- 指定的新窗口的左上角的 x 坐标。 如果新的窗口是子窗口; 坐标是相对于父窗口否则坐标是相对于屏幕源。  
+ 指定新的窗口的左上角的 x 坐标。 在新窗口是子窗口; 如果坐标是相对于父窗口否则坐标是相对于屏幕源。  
   
  *style*  
  指定新的窗口[样式](../../mfc/reference/styles-used-by-mfc.md)。  
   
- *在 lpszName*  
- 指向以 null 结尾的字符串，指定新窗口的名称。  
+ *lpszName*  
+ 指向一个以 null 结尾的字符串，指定新窗口的名称。  
   
  *lpszClass*  
- 指向以 null 结尾的字符串，指定新窗口的窗口类名称 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。  
+ 指向一个以 null 结尾的字符串，指定新窗口的 Windows 类名称 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。  
   
  *dwExStyle*  
  指定[扩展样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新窗口。  

@@ -1,5 +1,5 @@
 ---
-title: CD2DSizeF 类 |Microsoft 文档
+title: CD2DSizeF 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336108"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 类
 D2D1_SIZE_F 包装器。  
@@ -42,13 +42,13 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|已重载。 构造`CD2DSizeF`对象`D2D1_SIZE_F`对象。|  
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|已重载。 构造`CD2DSizeF`对象从`D2D1_SIZE_F`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 ( **null**)。|  
+|[CD2DSizeF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -65,7 +65,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- 构造 CD2DSizeF 对象从 CSize 对象。  
+ 构造 CSize 对象从一个 CD2DSizeF 对象。  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -80,7 +80,7 @@ CD2DSizeF(
   
 ### <a name="parameters"></a>参数  
  *size*  
- 源的大小  
+ 源大小  
   
  *cx*  
  源宽度  
@@ -96,10 +96,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 宽度和高度都为空; 如果为 TRUE否则为 FALSE。  
+ 如果宽度和高度都为空; 则为 TRUE否则为 FALSE。  
   
 ##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
- 将 CD2DSizeF 转换 CSize 对象。  
+ 将 CD2DSizeF 转换为 CSize 对象。  
   
 ```  
 operator CSize();

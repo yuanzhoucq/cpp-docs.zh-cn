@@ -1,5 +1,5 @@
 ---
-title: CBrush 类 |Microsoft 文档
+title: CBrush 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336629"
 ---
 # <a name="cbrush-class"></a>CBrush 类
 封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -62,13 +62,13 @@ class CBrush : public CGdiObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化具有样式、 颜色和中指定模式的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|初始化具有指定独立于设备的位图 (DIB) 模式的画笔。|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|初始化具有指定的与设备无关位图 (DIB) 模式的画笔。|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|初始化具有指定阴影的模式和颜色的画笔。|  
-|[CBrush::CreatePatternBrush](#createpatternbrush)|初始化具有指定位图的模式的画笔。|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|初始化使用指定的纯色画笔。|  
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|创建一个画笔，它为默认系统颜色。|  
-|[CBrush::FromHandle](#fromhandle)|返回一个指向`CBrush`对象提供 Windows 句柄时`HBRUSH`对象。|  
+|[CBrush::CreatePatternBrush](#createpatternbrush)|初始化具有指定的位图模式的画笔。|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|初始化具有指定纯色画笔。|  
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|创建为默认系统颜色的画笔。|  
+|[CBrush::FromHandle](#fromhandle)|返回一个指向`CBrush`对象时提供给 Windows 的一个句柄`HBRUSH`对象。|  
 |[CBrush::GetLogBrush](#getlogbrush)|获取[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
   
 ### <a name="public-operators"></a>公共运算符  
@@ -80,7 +80,7 @@ class CBrush : public CGdiObject
 ## <a name="remarks"></a>备注  
  若要使用`CBrush`对象，构造`CBrush`对象，并将其传递给任何`CDC`需要画笔的成员函数。  
   
- 画笔可以实线、 阴影线，或实现模式化。  
+ 画笔可以 solid，影线，或图案。  
   
  有关详细信息`CBrush`，请参阅[图形对象](../../mfc/graphic-objects.md)。  
   
@@ -106,42 +106,42 @@ explicit CBrush(CBitmap* pBitmap);
   
 ### <a name="parameters"></a>参数  
  *crColor*  
- 指定作为 RGB 颜色的画笔的前景色。 如果画笔阴影线，则此参数指定阴影的颜色。  
+ 指定为 RGB 颜色的前景色的画笔。 如果影线画笔，则此参数指定阴影的颜色。  
   
  *nIndex*  
- 指定的画笔的阴影样式。 它可以是以下值之一：  
+ 指定画笔的阴影样式。 它可以是以下值之一：  
   
-- `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
+- 45 度的位置 （从左到右） 的向下 HS_BDIAGONAL 阴影  
   
-- `HS_CROSS` 水平和垂直剖面线  
+- HS_CROSS 水平和垂直交叉影线  
   
-- `HS_DIAGCROSS` 在 45 度阴影线  
+- HS_DIAGCROSS 交叉影线 45 度  
   
-- `HS_FDIAGONAL` 在 45 度 （从左到右） 的向上阴影  
+- 向上 HS_FDIAGONAL 阴影 （从左到右） 45 度的位置  
   
-- `HS_HORIZONTAL` 水平阴影  
+- HS_HORIZONTAL 水平阴影  
   
-- `HS_VERTICAL` 垂直阴影  
+- HS_VERTICAL 垂直阴影  
   
  *pBitmap*  
- 指向`CBitmap`对象，它指定与其画笔绘制的位图。  
+ 指向`CBitmap`对象，它指定与画笔绘制的位图。  
   
 ### <a name="remarks"></a>备注  
- `CBrush` 有四个重载的构造函数。不带任何参数的构造函数构造未经初始化即`CBrush`可以使用它之前必须进行初始化的对象。  
+ `CBrush` 有四个重载的构造函数。不带任何参数的构造函数构造未经初始化即`CBrush`可以使用它之前，必须初始化的对象。  
   
- 如果你使用不带任何参数的构造函数，必须初始化生成`CBrush`对象[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果你使用不采用参数的构造函数之一，则没有任何进一步初始化是所必需。 如果遇到错误，而不带任何参数的构造函数将始终会成功，带有参数的构造函数可以引发异常。  
+ 如果你使用不带任何参数的构造函数，则必须初始化生成`CBrush`对象使用[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果你使用采用参数的构造函数之一，则无需再初始化是所必需。 如果遇到错误，而不带任何参数的构造函数将始终成功，则使用参数的构造函数可以引发异常。  
   
- 使用单个构造函数[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数构造实心画笔用指定颜色。 颜色指定 RGB 值，并可以使用构造`RGB`WINDOWS 中的宏。H。  
+ 使用单个构造函数[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数构造具有指定颜色的实心画笔。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
   
- 带两个参数的构造函数构造阴影画笔。 *NIndex*参数指定阴影模式的索引。 *CrColor*参数指定的颜色。  
+ 具有两个参数的构造函数构造阴影画笔。 *NIndex*参数指定的索引的阴影模式。 *CrColor*参数指定的颜色。  
   
- 带的构造函数`CBitmap`参数构造图案的画笔。 此参数标识位图。 假定已创建使用位图[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)。 填充模式中使用的位图的最小大小为 8 个像素的 8 个像素。  
+ 使用构造函数`CBitmap`参数构造模式的画笔。 此参数用于标识位图。 假定已使用已创建位图[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)。 要填充模式中使用的位图的最小大小是 8 x 8 像素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- 初始化具有样式、 颜色和中指定模式的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。  
+ 初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,21 +149,21 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>参数  
  *lpLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，它包含有关画笔的信息。  
+ 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+ 随后可以为任何设备上下文的当前画笔选择画笔。  
   
- 使用当前的文本和背景色绘制字符使用 （1 平面，每个像素的 1 位） 的单色位图创建画笔。 将使用当前的文本色绘制由位设置为 0 的像素。 将当前的背景色绘制由位设置为 1 的像素。  
+ 使用当前的文本和背景色绘制字符使用 （1 平面，每像素 1 位） 的单色位图创建的画笔。 将使用当前的文本颜色绘制像素为单位表示的位设置为 0。 将使用当前的背景色绘制像素位设置为 1 表示。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
 ##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
- 使用独立于设备的位图 (DIB) 指定的模式初始化画笔。  
+ 使用画笔初始化与设备无关位图 (DIB) 指定的模式。  
   
 ```  
 BOOL CreateDIBPatternBrush(
@@ -178,39 +178,39 @@ BOOL CreateDIBPatternBrush(
   
 ### <a name="parameters"></a>参数  
  *hPackedDIB*  
- 标识包含已打包的独立于设备的位图 (DIB) 的全局内存对象。  
+ 标识包含已打包的设备无关位图 (DIB) 的全局内存对象。  
   
  *nUsage*  
- 指定是否**bmiColors []** 字段[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)数据结构 （是的"打包 DIB"的一部分） 到当前已实现的逻辑调色板包含显式的 RGB 值或索引。 参数必须是以下值之一：  
+ 指定是否`bmiColors[]`的字段[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)数据结构 （"打包 DIB"的一部分） 包含显式的 RGB 值或索引的当前实现逻辑调色板。 参数必须为下列值之一：  
   
-- **DIB_PAL_COLORS**颜色表包含 16 位索引的数组。  
+- DIB_PAL_COLORS 颜色表包含 16 位索引的数组。  
   
-- **DIB_RGB_COLORS**颜色表包含文本的 RGB 值。  
+- DIB_RGB_COLORS 颜色表包含文本的 RGB 值。  
   
  *lpPackedDIB*  
- 指向已打包 DIB 组成`BITMAPINFO`紧跟定义位图的像素的字节数组的结构。  
+ 指向包含的已打包 DIB`BITMAPINFO`紧随其后的定义位图的像素的字节数组的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 随后可以支持光栅操作任何设备上下文选择画笔。  
+ 随后可以为任何支持光栅操作的设备上下文选择画笔。  
   
- 在处理 DIB 的方法不同的两个版本：  
+ 两个版本的不同处理 DIB 的方法：  
   
--   在第一个版本中，若要获取 DIB 的句柄可调用 Windows`GlobalAlloc`函数分配的全局内存块，然后打包 DIB 并用来填充内存。  
+-   在第一个版本中，若要获取的句柄 DIB 你调用 Windows`GlobalAlloc`函数分配的全局内存块，然后打包 DIB 并用来填充内存。  
   
--   在第二个版本中，它不需要调用`GlobalAlloc`为已打包 DIB 分配内存。  
+-   在第二个版本中，它不需要调用`GlobalAlloc`分配内存来存放已打包 DIB。  
   
- 已打包的 DIB 组成`BITMAPINFO`紧跟定义位图的像素的字节数组的数据结构。 用作填充模式的位图应为 8 个像素 8 个像素。 如果位图大小，则 Windows 将创建使用仅为前 8 行和中与位图左上角的像素的 8 列对应的位的填充模式。  
+ 已打包的 DIB 组成`BITMAPINFO`紧随其后定义位图的像素的字节数组的数据结构。 位图作为填充模式应为 8 x 8 像素。 如果位图大小，Windows 将创建使用仅为前 8 行和 8 个列的左上角的位图的像素对应的位的填充模式。  
   
- 当应用程序选择两种颜色 DIB 模式画笔入单色设备上下文时，Windows 将忽略指定的颜色中 DIB，并改为显示使用的设备上下文的当前文本和背景颜色的模式画笔。 映射到第一种颜色 （在 DIB 颜色表中的偏移量 0） 的 DIB 的像素为单位显示使用的文本颜色。 映射到的第二个颜色 （在颜色表中的偏移量 1） 的像素为单位显示使用的背景色。  
+ 当应用程序到单色设备上下文选择两种颜色 DIB 模式画笔时，Windows 将忽略 DIB 中指定的颜色，并改为显示模式画笔使用设备上下文的当前文本和背景颜色。 使用的文本颜色显示像素映射到的 DIB （按 DIB 颜色表中的偏移量 0） 的第一个颜色。 使用背景色显示映射到 （以颜色表中的偏移量 1） 的第二个颜色的像素为单位。  
   
  有关使用以下 Windows 功能的信息，请参阅 Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (此函数提供仅为对于早于 3.0 版本的 Windows 编写的应用程序的兼容性的; 使用`CreateDIBPatternBrushPt`函数。)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (此函数仅用于与 Windows 的版本早于 3.0 编写的应用程序兼容性; 使用`CreateDIBPatternBrushPt`函数。)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （此函数应使用基于 Win32 的应用程序。）  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （此函数应基于 Win32 的应用程序。）  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
@@ -228,34 +228,34 @@ BOOL CreateHatchBrush(
   
 ### <a name="parameters"></a>参数  
  *nIndex*  
- 指定的画笔的阴影样式。 它可以是以下值之一：  
+ 指定画笔的阴影样式。 它可以是以下值之一：  
   
-- `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
+- 45 度的位置 （从左到右） 的向下 HS_BDIAGONAL 阴影  
   
-- `HS_CROSS` 水平和垂直剖面线  
+- HS_CROSS 水平和垂直交叉影线  
   
-- `HS_DIAGCROSS` 在 45 度阴影线  
+- HS_DIAGCROSS 交叉影线 45 度  
   
-- `HS_FDIAGONAL` 在 45 度 （从左到右） 的向上阴影  
+- 向上 HS_FDIAGONAL 阴影 （从左到右） 45 度的位置  
   
-- `HS_HORIZONTAL` 水平阴影  
+- HS_HORIZONTAL 水平阴影  
   
-- `HS_VERTICAL` 垂直阴影  
+- HS_VERTICAL 垂直阴影  
   
  *crColor*  
- 指定作为 RGB 颜色 （阴影的颜色） 的画笔的前景色。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)适用于详细信息的 Windows SDK 中。  
+ 指定为的 RGB 颜色 （阴影的颜色） 的前景色的画笔。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK for 的详细信息中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+ 随后可以为任何设备上下文的当前画笔选择画笔。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
 ##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
- 初始化具有指定位图的模式的画笔。  
+ 初始化具有指定的位图模式的画笔。  
   
 ```  
 BOOL CreatePatternBrush(CBitmap* pBitmap);
@@ -263,19 +263,19 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
 ### <a name="parameters"></a>参数  
  *pBitmap*  
- 标识位图。  
+ 标识一个位图。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 随后可以支持光栅操作任何设备上下文选择画笔。 由标识位图*pBitmap*通常通过使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函数。  
+ 随后可以为任何支持光栅操作的设备上下文选择画笔。 由标识位图*pBitmap*通常使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函数。  
   
- 用作填充模式的位图应为 8 个像素 8 个像素。 如果位图大小，则 Windows 将只使用对应的前 8 行和列中与位图左上角的像素的位。  
+ 位图作为填充模式应为 8 x 8 像素。 如果位图大小，Windows 将只使用对应的前 8 行和列的左上角的位图的像素的位。  
   
- 模式画笔可以删除而不会影响相关联的位图。 这意味着位图可以用于创建任意数量的模式画笔。  
+ 模式画笔可以删除而不会影响相关联的位图。 这意味着位图可用于创建任意数量的模式的画笔。  
   
- 使用当前的文本和背景色绘制字符使用单色位图 （1 颜色平面，每个像素的 1 位） 创建画笔。 使用当前的文本色绘制由位设置为 0 的像素为单位。 使用当前的背景色绘制由位设置为 1 的像素为单位。  
+ 使用单色位图 （每像素 1 位 1 平面） 创建一个画笔是使用当前的文本和背景色绘制字符。 使用当前的文本颜色绘制像素位设置为 0 表示。 使用当前的背景色绘制像素为单位表示的位设置为 1。  
   
  有关使用信息[CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508)，Windows 函数中，请参阅 Windows SDK。  
   
@@ -291,21 +291,21 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>参数  
  *crColor*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定的画笔的颜色。 颜色指定 RGB 值，并可以使用 WINDOWS 中的 RGB 宏构造。H。  
+ 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定画笔的颜色。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+ 随后可以为任何设备上下文的当前画笔选择画笔。  
   
- 当应用程序已完成使用创建的画笔`CreateSolidBrush`，它应选择设备上下文中的画笔。  
+ 当应用程序已完成使用创建的画笔`CreateSolidBrush`，应已选择不在设备上下文画笔。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[CBrush::CBrush](#cbrush)。  
+  有关示例，请参阅[CBrush::CBrush](#cbrush)。  
   
 ##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
- 初始化画笔的颜色。  
+ 初始化画笔颜色。  
   
 ```  
 BOOL CreateSysColorBrush(int nIndex);
@@ -313,21 +313,21 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>参数  
  *nIndex*  
- 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 的值列表中。  
+ 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 值的列表中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+ 随后可以为任何设备上下文的当前画笔选择画笔。  
   
- 当应用程序已完成使用创建的画笔`CreateSysColorBrush`，它应选择设备上下文中的画笔。  
+ 当应用程序已完成使用创建的画笔`CreateSysColorBrush`，应已选择不在设备上下文画笔。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
 ##  <a name="fromhandle"></a>  CBrush::FromHandle  
- 返回一个指向`CBrush`对象提供 Windows 句柄时[HBRUSH](#operator_hbrush)对象。  
+ 返回一个指向`CBrush`对象时提供给 Windows 的一个句柄[HBRUSH](#operator_hbrush)对象。  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -335,21 +335,21 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>参数  
  *hBrush*  
- `HANDLE` 为 Windows GDI 画笔。  
+ Windows GDI 画笔的句柄。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`CBrush`对象成功; 否则为如果**NULL**。  
+ 一个指向`CBrush`如果成功，否则该值为 NULL 的对象。  
   
 ### <a name="remarks"></a>备注  
- 如果`CBrush`对象尚未附加到该句柄，一种临时`CBrush`创建对象并将其附加。 此临时`CBrush`对象仅在应用程序必须在其事件循环中的空闲时间的下一步时间是否有效。 在此期间，将删除所有临时的图形对象。 换而言之，仅在一个窗口消息处理期间临时对象有效。  
+ 如果`CBrush`对象尚未附加到句柄，临时`CBrush`创建并附加对象。 此临时`CBrush`对象仅在应用程序必须在其事件循环内的空闲时间的下一步时间前是否有效。 在此期间，会删除所有临时图形对象。 换而言之，仅在一个窗口消息处理期间的临时对象有效。  
   
  有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[CBrush::CBrush](#cbrush)。  
+  有关示例，请参阅[CBrush::CBrush](#cbrush)。  
   
 ##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
- 调用此成员函数可检索`LOGBRUSH`结构。  
+ 调用此成员函数以检索`LOGBRUSH`结构。  
   
 ```  
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -357,19 +357,19 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>参数  
  *pLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，它包含有关画笔的信息。  
+ 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功，和*pLogBrush*是有效的指针，则返回值是存储到缓冲区的字节数。  
+ 如果函数成功，并*pLogBrush*是有效的指针，返回值是存储到缓冲区的字节数。  
   
- 如果函数成功，和*pLogBrush*是**NULL**，返回值是保存该函数的信息所需的字节数应将存储到缓冲区。  
+ 如果函数成功，并*pLogBrush*为 NULL，则返回值是保存该函数的信息所需的字节数将存储到缓冲区。  
   
  如果函数失败，返回值为 0。  
   
 ### <a name="remarks"></a>备注  
- `LOGBRUSH`结构定义样式、 颜色和模式的画笔。  
+ `LOGBRUSH`结构定义样式、 颜色和画笔的模式。  
   
- 例如，调用`GetLogBrush`特定颜色或位图模式相匹配。  
+ 例如，调用`GetLogBrush`以匹配的特定颜色或图案的位图。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
@@ -382,10 +382,10 @@ operator HBRUSH() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，Windows GDI 对象的句柄表示`CBrush`对象; 否则为**NULL**。  
+ 如果成功，Windows GDI 对象的句柄由`CBrush`对象; 否则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此运算符是一个强制转换运算符，它支持直接使用`HBRUSH`对象。  
+ 此运算符是强制转换运算符，支持直接使用 HBRUSH 对象。  
   
  有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
@@ -395,6 +395,6 @@ operator HBRUSH() const;
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 PROPDLG](../../visual-cpp-samples.md)   
  [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CBitmap 类](../../mfc/reference/cbitmap-class.md)   
  [CDC 类](../../mfc/reference/cdc-class.md)

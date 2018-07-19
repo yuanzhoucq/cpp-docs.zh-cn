@@ -1,5 +1,5 @@
 ---
-title: 类工厂和许可 |Microsoft 文档
+title: 类工厂和许可 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: abb9d5ca169edf28bb3f72c26e644894c12ccb93
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336213"
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
 为了创建 OLE 控件的实例，容器应用程序调用了控件的类工厂的成员函数。 由于控件是实际 OLE 对象，类工厂将负责创建控件的实例。 每个 OLE 控件类必须有一个类工厂。  
@@ -52,7 +52,7 @@ DECLARE_OLECREATE_EX(class_name)
  控件类的名称。  
   
 ### <a name="remarks"></a>备注  
- 在控件类标头文件中的控件，不支持授权使用此宏。  
+ 不支持授权的控件的控件类标头文件中使用此宏。  
   
  请注意此宏提供下面的代码示例相同的目的：  
   
@@ -88,11 +88,11 @@ IMPLEMENT_OLECREATE_EX(
  *external_name*  
  向应用程序公开的对象名称。  
   
- *l、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
- 类的组件**CLSID**。 有关这些参数的详细信息，请参阅备注[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
+ *l、 w1、 w2，b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
+ 类的 CLSID 的组件。 有关这些参数的详细信息，请参阅备注[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
   
 ### <a name="remarks"></a>备注  
- 此宏必须出现在任何使用的控件类的实现文件`DECLARE_OLECREATE_EX`宏或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`宏。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称请求此控件类的对象。  
+ 此宏必须出现在任何控件类，该类使用 DECLARE_OLECREATE_EX 宏或 BEGIN_OLEFACTORY 和 END_OLEFACTORY 宏的实现文件中。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称请求此控件类的对象。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
@@ -106,10 +106,10 @@ BEGIN_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 指定的控件类这是其类工厂的名称。  
+ 指定控件类这是其类工厂的名称。  
   
 ### <a name="remarks"></a>备注  
- 声明的授权函数的类工厂应开始后立即`BEGIN_OLEFACTORY`。  
+ 声明的授权函数的类工厂应 BEGIN_OLEFACTORY 后立即开始。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
@@ -123,13 +123,13 @@ END_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 这是其类工厂的控件类名称。  
+ 这是其类工厂的控件类的名称。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
 ##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
- 调用此函数可验证通过名为的许可证文件`pszLicFileName`对 OLE 控件有效。  
+ 调用此函数可验证由命名许可证文件`pszLicFileName`对 OLE 控件有效。  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -144,16 +144,16 @@ BOOL AFXAPI AfxVerifyLicFile(
  与授权控件关联的 DLL 的实例句柄。  
   
  *pszLicFileName*  
- 指向以 null 结尾的字符串包含许可证文件名。  
+ 指向包含许可证文件名的以 null 结尾的字符字符串。  
   
  *pszLicFileContents*  
- 指向一个字节序列，其中必须与许可证文件的开头处的顺序匹配。  
+ 为必须匹配在许可证文件的开头找到序列的字节序列的点。  
   
  *cch*  
  中的字符数*pszLicFileContents*。  
   
 ### <a name="return-value"></a>返回值  
- 如果许可证文件存在且开始中的字符序列则不为*pszLicFileContents*; 否则为 0。  
+ 非零，如果许可证文件存在，并且开头中的字符序列*pszLicFileContents*; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
  如果*cch*为-1，此函数使用：  

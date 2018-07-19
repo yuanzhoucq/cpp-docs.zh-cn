@@ -1,5 +1,5 @@
 ---
-title: CMapStringToOb 类 |Microsoft 文档
+title: CMapStringToOb 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cbeecff722ba25d28ba38a60d3b577ce108b61d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337351"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 类
 将唯一 `CString` 对象映射到 `CObject` 指针的字典集合类。  
@@ -72,38 +72,38 @@ class CMapStringToOb : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::GetCount](#getcount)|在此地图中返回元素的数。|  
+|[CMapStringToOb::GetCount](#getcount)|此映射中返回元素的数。|  
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|确定当前的哈希表中的元素数。|  
-|[CMapStringToOb::GetNextAssoc](#getnextassoc)|获取循环的下一个元素。|  
-|[CMapStringToOb::GetSize](#getsize)|在此地图中返回元素的数。|  
-|[CMapStringToOb::GetStartPosition](#getstartposition)|返回的第一个元素的位置。|  
+|[CMapStringToOb::GetNextAssoc](#getnextassoc)|获取用于循环的下一个元素。|  
+|[CMapStringToOb::GetSize](#getsize)|此映射中返回元素的数。|  
+|[CMapStringToOb::GetStartPosition](#getstartposition)|返回第一个元素的位置。|  
 |[CMapStringToOb::HashKey](#hashkey)|计算指定的键的哈希值。|  
 |[CMapStringToOb::InitHashTable](#inithashtable)|初始化哈希表。|  
-|[CMapStringToOb::IsEmpty](#isempty)|空映射条件 （没有元素） 的测试。|  
-|[CMapStringToOb::Lookup](#lookup)|查找基于 void 指针密钥的 void 指针。 指针值，它指向不实体用于键的比较。|  
-|[CMapStringToOb::LookupKey](#lookupkey)|返回与指定的密钥值关联的密钥的引用。|  
-|[CMapStringToOb::RemoveAll](#removeall)|从此映射中移除所有元素。|  
+|[CMapStringToOb::IsEmpty](#isempty)|空映射条件 （元素） 的测试。|  
+|[CMapStringToOb::Lookup](#lookup)|查找的 void 指针关键字的 void 指针。 指针值，而不是它指向的实体用于关键的比较。|  
+|[CMapStringToOb::LookupKey](#lookupkey)|返回具有指定的密钥值相关联的密钥对的引用。|  
+|[CMapStringToOb::RemoveAll](#removeall)|此映射中移除所有元素。|  
 |[CMapStringToOb::RemoveKey](#removekey)|移除由键指定的元素。|  
-|[CMapStringToOb::SetAt](#setat)|将元素插入到映射;如果找到匹配的键，将替换现有元素。|  
+|[CMapStringToOb::SetAt](#setat)|将元素插入到映射;如果找到匹配项，将替换现有元素。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::operator [ ]](#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
+|[CMapStringToOb::operator [ ]](#operator_at)|将元素插入到映射 — 运算符替换为`SetAt`。|  
   
 ## <a name="remarks"></a>备注  
- 一旦已插入`CString` -  `CObject*`对 （元素） 到映射中，你可以高效地检索或删除对使用字符串或`CString`作为键的值。 此外可以循环访问映射中的所有元素。  
+ 已插入后`CString` -  `CObject*`对 （元素） 可以有效地检索或删除对使用字符串到映射，或`CString`作为键的值。 此外可以循环访问映射中的所有元素。  
   
- 类型的变量的**位置**适用于所有地图变体中的备用条目访问。 你可以使用**位置**"记住"条目和循环通过映射。 你可能会认为此迭代是根据键值; 顺序不存在。 检索元素的序列是不确定的。  
+ 位置类型的变量用于备用条目中所有的映射变体的访问权限。 可以使用位置"记住"条目并循环访问映射。 您可能认为此迭代是有顺序的键值;不是这样。 检索元素的序列是不确定。  
   
- `CMapStringToOb` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档中，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。  
+ `CMapStringToOb` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。  
   
- 如果你需要在映射中的各个元素的诊断转储 (`CString`值和`CObject`内容)，必须将转储上下文的深度设置为 1 或更高版本。  
+ 如果你需要在映射中的各个元素的诊断转储 (`CString`值和`CObject`内容)，则必须将转储上下文的深度设置为 1 或更高版本。  
   
- 当`CMapStringToOb`对象被删除，或删除其元素时，`CString`对象和`CObject`删除的指针。 引用的对象`CObject`指针不会被销毁。  
+ 当`CMapStringToOb`删除对象，或删除它的元素时，`CString`对象和`CObject`删除的指针。 所引用的对象`CObject`指针不会被销毁。  
   
- 映射类派生是类似于列表派生。 请参阅文章[集合](../../mfc/collections.md)有关特殊用途列表类派生的图例。  
+ 映射类派生是类似于列表派生。 请参阅文章[集合](../../mfc/collections.md)有关的特殊用途的列表类派生的图例。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,9 +125,9 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
  指定扩展映射的内存分配粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着映射后，内存分配的单位*nBlockSize*条目。  
+ 随着映射中的单元分配内存*nBlockSize*条目。  
   
- 下表显示其他成员函数类似于**CMapStringToOb:: CMapStringToOb**。  
+ 下表显示其他成员函数类似于`CMapStringToOb:: CMapStringToOb`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
@@ -141,17 +141,17 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
   
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
 ##  <a name="getcount"></a>  CMapStringToOb::GetCount  
- 确定在映射中元素数量。  
+ 确定在映射中元素的数量。  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 此映射中的元素数目。  
+ 此映射中的元素数。  
   
 ### <a name="remarks"></a>备注  
  下表显示其他成员函数类似于`CMapStringToOb::GetCount`。  
@@ -166,7 +166,7 @@ INT_PTR GetCount() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount （) const;**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#64](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
@@ -178,7 +178,7 @@ UINT GetHashTableSize() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回哈希表中的元素数。  
+ 哈希表中返回元素的数。  
   
 ### <a name="remarks"></a>备注  
  下表显示其他成员函数类似于`CMapStringToOb::GetHashTableSize`。  
@@ -193,7 +193,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize （) const;**|  
   
 ##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc  
- 检索处的地图元素*rNextPosition*，然后更新*rNextPosition*来引用映射中的下一个元素。  
+ 检索处的地图元素*rNextPosition*，然后更新*rNextPosition*来指代在映射中的下一个元素。  
   
 ```  
 void GetNextAssoc(
@@ -204,38 +204,38 @@ void GetNextAssoc(
   
 ### <a name="parameters"></a>参数  
  *rNextPosition*  
- 指定对引用**位置**通过前一个返回值**GetNextAssoc**或**GetStartPosition**调用。  
+ 指定对先前返回的位置值的引用`GetNextAssoc`或`GetStartPosition`调用。  
   
  *rKey*  
  指定检索的元素 （字符串） 的返回的密钥。  
   
  *rValue*  
- 指定检索的元素的返回的值 ( **CObject**指针)。 有关此参数的详细信息，请参阅备注。  
+ 指定检索的元素的返回的值 (`CObject`指针)。 有关此参数的详细信息，请参阅备注。  
   
 ### <a name="remarks"></a>备注  
- 此函数是最适用于循环访问映射中的所有元素。 请注意，位置序列不一定是相同的密钥值序列。  
+ 此函数是最适用于通过映射中的所有元素。 请注意，位置序列不一定与密钥值序列相同。  
   
- 如果检索的元素的是在映射中，最后然后的新值*rNextPosition*设置为**NULL**。  
+ 如果检索的元素在映射中上, 一次然后的新值*rNextPosition*设置为 NULL。  
   
- 有关*右值*参数，请务必类型强制转换你对象为**CObject\*&**，这是编译器的要求，如下面的示例中所示：  
+ 有关*rValue*参数，请务必对您对象类型强制转换**CObject\*&**，这是编译器的要求，如下面的示例中所示：  
   
  [!code-cpp[NVC_MFCCollections#65](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]  
   
- 这是不正确的**GetNextAssoc**适用于基于模板的映射。  
+ 这不是 true 的`GetNextAssoc`适用于基于模板的映射。  
   
- 下表显示其他成员函数类似于**CMapStringToOb::GetNextAssoc**。  
+ 下表显示其他成员函数类似于`CMapStringToOb::GetNextAssoc`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (位置 （& a)** *rNextPosition* **，void\* &**  *rKey* **，void\* &**  *右值* **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (位置 &** *rNextPosition* **，void\* &**  *rKey* **，void\* &**  *右值* **) const;**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (位置 & a)** *rNextPosition*  **， void\*&** *rKey* **，WORD 和** *右值* **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (位置 （& a)** *rNextPosition* **，CString &** *rKey* **，void\* &** *右值* **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (位置 （& a)** *rNextPosition* **，CString &** *rKey* **，CString &** *右值* **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (位置 （& a)** *rNextPosition* **，WORD （& a)** *rKey* **，CObject\* &** *右值* **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (位置 （& a)** *rNextPosition* **，WORD （& a)** *rKey* **，void\* &** *右值* **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (位置 &** *rNextPosition* **，CString &** *rKey* **，void\* &** *rValue* **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (位置 &** *rNextPosition* **，CString &** *rKey* **，CString &** *右值* **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (位置 &** *rNextPosition* **，WORD &** *rKey* **，CObject\* &** *rValue* **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (位置 &** *rNextPosition* **，WORD &** *rKey* **，void\* &** *rValue* **) const;**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
   
@@ -260,7 +260,7 @@ INT_PTR GetSize() const;
  在映射中的项的数目。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以检索在映射中的元素的数目。  
+ 调用此方法来检索该映射中的元素数。  
   
  下表显示其他成员函数类似于`CMapStringToOb::GetSize`。  
   
@@ -277,17 +277,17 @@ INT_PTR GetSize() const;
  [!code-cpp[NVC_MFCCollections#67](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMapStringToOb::GetStartPosition  
- 通过返回启动映射迭代**位置**值，可以传递给`GetNextAssoc`调用。  
+ 通过返回位置值，可传递给启动映射迭代`GetNextAssoc`调用。  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- A**位置**值，该值指示来循环映射; 的起始位置或**NULL**如果映射为空。  
+ 位置值，该值指示用于循环访问映射的起始位置或者，如果映射为空，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 迭代序列是不可预测的;因此，"映射中的第一个元素"必须没有特别的意义。  
+ 迭代序列不是可预测;因此，"映射中的第一个元素"有没有特别的意义。  
   
  下表显示其他成员函数类似于`CMapStringToOb::GetStartPosition`。  
   
@@ -301,7 +301,7 @@ POSITION GetStartPosition() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**位置 GetStartPosition （) const;**|  
   
 ### <a name="example"></a>示例  
- 请参阅示例[CMapStringToOb::GetNextAssoc](#getnextassoc)。  
+ 有关示例，请参阅[CMapStringToOb::GetNextAssoc](#getnextassoc)。  
   
 ##  <a name="hashkey"></a>  CMapStringToOb::HashKey  
  计算指定的键的哈希值。  
@@ -312,7 +312,7 @@ UINT HashKey(LPCTSTR key) const;
   
 ### <a name="parameters"></a>参数  
  *key*  
- 键，其哈希值是要从中计算。  
+ 将计算其哈希值的键。  
   
 ### <a name="return-value"></a>返回值  
  键的哈希值  
@@ -343,10 +343,10 @@ void InitHashTable(
  哈希表中的条目数。  
   
  *bAllocNow*  
- 如果**TRUE**，分配哈希表初始化; 在需要时否则分配表。  
+ 如果为 TRUE，则会分配哈希表初始化; 时否则需要时分配的表。  
   
 ### <a name="remarks"></a>备注  
- 为了获得最佳性能，哈希表大小应为质数。 为了尽量减少冲突，则大小应为大致大于最大预期的数据集的 20%。  
+ 为了获得最佳性能，哈希表大小应为一个素数。 为了尽量减少冲突，大小应为大约 20%超过最大预期的数据集。  
   
  下表显示其他成员函数类似于`CMapStringToOb::InitHashTable`。  
   
@@ -367,10 +367,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果此映射不包含任何元素; 则为非 0否则为 0。  
+ 此映射不包含任何元素; 如果非零值否则为 0。  
   
 ### <a name="example"></a>示例  
- 请参阅示例[RemoveAll](#removeall)。  
+ 有关示例，请参阅[RemoveAll](#removeall)。  
   
 ### <a name="remarks"></a>备注  
  下表显示其他成员函数类似于**CMapStringToOb:: IsEmpty**。  
@@ -385,7 +385,7 @@ BOOL IsEmpty() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty （) const;**|  
   
 ##  <a name="lookup"></a>  CMapStringToOb::Lookup  
- 返回`CObject`指针基于`CString`值。  
+ 返回`CObject`上基于指针`CString`值。  
   
 ```  
 BOOL Lookup(
@@ -395,13 +395,13 @@ BOOL Lookup(
   
 ### <a name="parameters"></a>参数  
  *key*  
- 指定标识要查找的元素的字符串键。  
+ 指定用于标识要查找的元素的字符串键。  
   
  *rValue*  
- 指定查阅到元素中的返回的值。  
+ 指定从查找元素的返回的值。  
   
 ### <a name="return-value"></a>返回值  
- 如果该元素; 如果未找到则不为否则为 0。  
+ 如果找到该元素; 非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
  `Lookup` 使用哈希算法来快速查找完全匹配的密钥的地图元素 (`CString`值)。  
@@ -411,19 +411,19 @@ BOOL Lookup(
 |类|成员函数|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL 查找 (void\***  `key` **，void\* &**  `rValue` **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL 查找 (void\***  `key` **，WORD （& a)** `rValue` **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL 查找 (void\***  `key` **，WORD &** `rValue` **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL 查找 (LPCTSTR** `key` **，void\* &**  `rValue` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL 查找 (LPCTSTR** `key` **，CString &** `rValue` **) const;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL 查找 (WORD** `key` **，CObject\* &**  `rValue` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL 查找 (WORD** `key` **，void\* &**  `rValue` **) const;**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#68](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
 ##  <a name="lookupkey"></a>  CMapStringToOb::LookupKey  
- 返回与指定的密钥值关联的密钥的引用。  
+ 返回具有指定的密钥值相关联的密钥对的引用。  
   
 ```  
 BOOL LookupKey(
@@ -433,52 +433,52 @@ BOOL LookupKey(
   
 ### <a name="parameters"></a>参数  
  *key*  
- 指定标识要查找的元素的字符串键。  
+ 指定用于标识要查找的元素的字符串键。  
   
  *rKey*  
  对关联的键的引用。  
   
 ### <a name="return-value"></a>返回值  
- 如果找到该键，; 则为非 0否则为 0。  
+ 如果找到该键; 非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果使用后，关联的元素已从映射中移除或映射已被销毁后，使用对密钥的引用是不安全的。  
+ 如果使用后关联的元素从映射中删除或映射已被销毁后，使用密钥的引用是不安全。  
   
- 下表显示其他成员函数类似于**CMapStringToOb:: LookupKey**。  
+ 下表显示其他成员函数类似于`CMapStringToOb:: LookupKey`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR （& a)** `rKey` **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR （& a)** `rKey` **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR &** `rKey` **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR &** `rKey` **) const;**|  
   
 ##  <a name="operator_at"></a>  CMapStringToOb::operator]  
- 一个方便替换`SetAt`成员函数。  
+ 便捷替代`SetAt`成员函数。  
   
 ```  
 CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对指向的指针的引用`CObject`对象; 或**NULL**如果映射为空或*密钥*超出范围。  
+ 对指向指针的引用`CObject`对象; 或者如果映射为空，则为 NULL 或*密钥*不在范围。  
   
 ### <a name="remarks"></a>备注  
- 因此它可以仅在赋值语句 （左值） 的左侧使用。 如果没有地图元素与指定的键，则会创建一个新的元素。  
+ 因此它可以仅在左侧和右侧的赋值语句 （左值） 上使用。 如果不存在具有指定键映射元素，则会创建一个新的元素。  
   
- 没有等效于此运算符的任何"右侧"（右值），因为一个密钥可能无法找到在映射中的可能。 使用`Lookup`元素检索的成员函数。  
+ 没有等效于此运算符的任何"右侧"（右值），因为可能可能映射中找到密钥。 使用`Lookup`元素检索的成员函数。  
   
- 下表显示其他成员函数类似于**CMapStringToOb::operator []**。  
+ 下表显示其他成员函数类似于`CMapStringToOb::operator []`。  
   
 |类|成员函数|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& 运算符 [] (void\***  `key`  **\);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD （&) 运算符 [] (void\***  `key`  **\);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & 运算符 [] (void\***  `key`  **\);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& 运算符 [] (lpctstr** `key`  **\);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & 运算符 [] (lpctstr** `key`  **\);**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 运算符 [] (word** `key`  **\);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& 运算符 [] (word** `key`  **\);**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
   
@@ -491,16 +491,16 @@ CObject*& operator[ ](lpctstr key);
  `[Bart] = a CAge at $497E 13`  
   
 ##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
- 从该映射中移除所有元素和销毁`CString`密钥对象。  
+ 此映射中移除所有元素，并销毁`CString`密钥对象。  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>备注  
- `CObject`所引用的每个键对象不会被销毁。 `RemoveAll`函数可以导致内存泄漏，如果您不能确保该引用`CObject`对象被销毁。  
+ `CObject`所引用的每个键对象不会被销毁。 `RemoveAll`如果您不能确保的引用，函数可能会导致内存泄漏`CObject`对象被销毁。  
   
- 如果映射已经为空，该函数能正常工作。  
+ 功能工作正常，如果映射已经为空。  
   
  下表显示其他成员函数类似于`CMapStringToOb::RemoveAll`。  
   
@@ -514,12 +514,12 @@ void RemoveAll();
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll （);**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#69](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
 ##  <a name="removekey"></a>  CMapStringToOb::RemoveKey  
- 查找与提供的键; 相对应的映射条目然后，如果找到该键中, 移除的项。  
+ 查找映射条目对应于所提供的密钥;然后，如果找到该键，则移除的项。  
   
 ```  
 BOOL RemoveKey(LPCTSTR key);
@@ -530,10 +530,10 @@ BOOL RemoveKey(LPCTSTR key);
  指定用于映射查找的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 如果该条目已成功找到并移除; 则为非 0否则为 0。  
+ 如果找到该条目并将其成功移除，则非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 这会导致内存泄漏，如果`CObject`不其他地方删除对象。  
+ 如果满足以下条件，这可能导致内存泄漏`CObject`对象不会在其他位置删除。  
   
  下表显示其他成员函数类似于`CMapStringToOb::RemoveKey`。  
   
@@ -547,7 +547,7 @@ BOOL RemoveKey(LPCTSTR key);
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
   
@@ -562,7 +562,7 @@ BOOL RemoveKey(LPCTSTR key);
  `[Bart] = a CAge at $4634 13`  
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
- 主要方法将一个元素插入映射中。  
+ 主要方法要在地图中插入元素。  
   
 ```  
 void SetAt(
@@ -575,10 +575,10 @@ void SetAt(
  指定为新元素的键的字符串。  
   
  *newValue*  
- 指定`CObject`是新的元素的值的指针。  
+ 指定`CObject`是新元素的值的指针。  
   
 ### <a name="remarks"></a>备注  
- 首先，查找键。 如果找到该键，则相应的值发生更改;否则，将创建一个新的键值对的元素。  
+ 首先，查找密钥。 如果找到该键，然后更改相应的值;否则将创建一个新的键 / 值元素。  
   
  下表显示其他成员函数类似于`CMapStringToOb::SetAt`。  
   
@@ -592,7 +592,7 @@ void SetAt(
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **，void\***  `newValue` **);**|  
   
 ### <a name="example"></a>示例  
- 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`所有集合示例中使用的类。  
+ 请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`集合的所有示例中使用的类。  
   
  [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  
   
@@ -612,7 +612,7 @@ void SetAt(
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CMapPtrToPtr 类](../../mfc/reference/cmapptrtoptr-class.md)   
  [CMapPtrToWord 类](../../mfc/reference/cmapptrtoword-class.md)   
  [CMapStringToPtr 类](../../mfc/reference/cmapstringtoptr-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: CPtrArray 类 |Microsoft 文档
+title: CPtrArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078021"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851286"
 ---
 # <a name="cptrarray-class"></a>CPtrArray 类
 支持 void 指针数组。  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>成员  
- 成员函数的`CPtrArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处`CObject`作为函数参数或返回值的指针替换指向**void**。  
+ 成员函数`CPtrArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为函数参数或返回值替换为指向的指针**void**。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,16 +112,16 @@ class CPtrArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CPtrArray` 合并 `IMPLEMENT_DYNAMIC` 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针数组元素的转储，你必须设置为 1 或更高版本的转储上下文的深度。  
+ `CPtrArray` 集成了 IMPLEMENT_DYNAMIC 宏来支持运行时类型访问和转储到`CDumpContext`对象。 如果需要单个指针数组元素的转储，你必须将转储上下文的深度设置为 1 或更高版本。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
   
  无法序列化指针数组。  
   
- 当删除指针数组时，或删除其元素时，只有指针均被删除，未引用的实体。  
+ 当删除指针数组时，或移除其元素时，只有指针均被删除，未引用的实体。  
   
- 有关详细信息使用`CPtrArray`，请参阅文章[集合](../../mfc/collections.md)。  
+ 有关使用的详细信息`CPtrArray`，请参阅文章[集合](../../mfc/collections.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -133,5 +133,5 @@ class CPtrArray : public CObject
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CObArray 类](../../mfc/reference/cobarray-class.md)

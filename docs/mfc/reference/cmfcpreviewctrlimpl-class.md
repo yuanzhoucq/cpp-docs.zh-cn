@@ -1,5 +1,5 @@
 ---
-title: CMFCPreviewCtrlImpl 类 |Microsoft 文档
+title: CMFCPreviewCtrlImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ab9cd717d8e035d9cfc75e0f856af792c392cf7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040072"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848990"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 类
-此类实现位于 Shell 提供用于丰富预览的宿主窗口的窗口。  
+此类实现位于 shell 提供用于丰富预览的宿主窗口的窗口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,20 +69,20 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |名称|描述|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs 预览控件对象。|  
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|构造预览控件对象。|  
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|构造一个预览控件对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::Create](#create)|已重载。 由要创建 Windows 窗口的丰富预览处理程序调用。|  
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|在需要销毁该控件时，由丰富预览处理程序调用。|  
-|[CMFCPreviewCtrlImpl::Focus](#focus)|设置输入到此控件的焦点。|  
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|返回连接到此预览版控件的文档。|  
+|[CMFCPreviewCtrlImpl::Create](#create)|已重载。 由丰富的预览处理程序创建 Windows 窗口调用。|  
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|需要销毁此控件时，由丰富的预览处理程序调用。|  
+|[CMFCPreviewCtrlImpl::Focus](#focus)|设置输入焦点设置到此控件。|  
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|返回连接到此预览控件的文档。|  
 |[CMFCPreviewCtrlImpl::Redraw](#redraw)|指示此控件重绘。|  
 |[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|由要创建的文档实现和预览控件之间的关系的预览处理程序调用。|  
 |[CMFCPreviewCtrlImpl::SetHost](#sethost)|设置此控件的新父级。|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|由调用丰富预览处理程序需要设置的丰富预览的视觉对象时内容。|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|由丰富的预览处理程序时调用它需要设置视觉对象的丰富的预览内容。|  
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|设置此控件的新边框。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
@@ -96,9 +96,9 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |name|描述|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|预览窗口的背景色。|  
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|预览窗口文本颜色。|  
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|预览窗口的文本颜色。|  
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|用于在预览窗口中显示文本的字体。|  
-|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|指向其内容在控件中预览的文档的指针。|  
+|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|一个指向其内容预览控件中的文档。|  
   
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h    
@@ -113,13 +113,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
 ## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
-构造预览控件对象。
+构造一个预览控件对象。
 
 ### <a name="syntax"></a>语法
 CMFCPreviewCtrlImpl();  
 
 ## <a name="create"></a> CMFCPreviewCtrlImpl::Create
-已重载。 由要创建 Windows 窗口的丰富预览处理程序调用。  
+已重载。 由丰富的预览处理程序创建 Windows 窗口调用。  
   
 ### <a name="syntax"></a>语法  
   
@@ -137,19 +137,19 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *hWndParent*  
- Shell 提供用于丰富预览主机窗口的句柄。  
+ 用于丰富预览提供 shell 主机窗口的句柄。  
   
- *中国*  
+ *中华人民共和国*  
  指定的初始大小和窗口的位置。  
   
  *pContext*  
  指向创建上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果创建成功;否则为`FALSE`。  
+ 如果创建成功，则为 TRUE；否则为 FALSE。  
   
 ## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
-在需要销毁该控件时，由丰富预览处理程序调用。  
+需要销毁此控件时，由丰富的预览处理程序调用。  
   
 ### <a name="syntax"></a>语法  
   
@@ -170,11 +170,11 @@ virtual void DoPaint(
   
 ### <a name="parameters"></a>参数  
  *pDC*  
- 指向绘制的设备上下文的指针。  
+ 指向用于绘制的设备上下文的指针。  
 
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
-设置输入到此控件的焦点。  
+设置输入焦点设置到此控件。  
   
 ### <a name="syntax"></a>语法  
   
@@ -182,7 +182,7 @@ virtual void DoPaint(
 virtual void Focus();  
 ```  
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
-返回连接到此预览版控件的文档。  
+返回连接到此预览控件的文档。  
   
 ### <a name="syntax"></a>语法  
   
@@ -191,7 +191,7 @@ ATL::IDocument* GetDocument();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向一个文档，在控件中预览其内容的指针。
+ 指向一个文档，其内容预览控件中的指针。
 
 ## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 预览窗口的背景色。  
@@ -210,7 +210,7 @@ COLORREF m_clrBackColor;
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a> 用于在预览窗口中显示文本的 CMFCPreviewCtrlImpl::m_font 字体。  
+## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font 用来在预览窗口中显示的文本字体。  
   
 ### <a name="syntax"></a>语法  
   
@@ -218,7 +218,7 @@ COLORREF m_clrTextColor;
 CFont m_font;  
 ```  
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
-指向其内容在控件中预览的文档的指针。  
+一个指向其内容预览控件中的文档。  
   
 ### <a name="syntax"></a>语法  
   
@@ -265,7 +265,7 @@ virtual void SetHost(
  新的父窗口的句柄。  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
-由调用丰富预览处理程序需要设置的丰富预览的视觉对象时内容。  
+由丰富的预览处理程序时调用它需要设置视觉对象的丰富的预览内容。  
   
 ### <a name="syntax"></a>语法  
   
@@ -282,7 +282,7 @@ virtual void SetPreviewVisuals(
  预览窗口的背景色。  
   
  *clrText*  
- 预览窗口文本颜色。  
+ 预览窗口的文本颜色。  
   
  *plf*  
  用于在预览窗口中显示文本的字体。 
@@ -300,14 +300,14 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- *中国*  
+ *中华人民共和国*  
  指定新的大小和预览控件的位置。  
   
  *bRedraw*  
- 指定是否应重绘控件。  
+ 指定是否需要重新绘制控件。  
   
 ### <a name="remarks"></a>备注  
- 通常时调整主机控件的设置新的绑定矩形。  
+ 通常宿主控件在调整大小时设置新边框。  
 
 ## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 Destructs 预览控件对象。  

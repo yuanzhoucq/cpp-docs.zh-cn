@@ -1,5 +1,5 @@
 ---
-title: CD2DRectF 类 |Microsoft 文档
+title: CD2DRectF 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338267"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 类
 `D2D1_RECT_F`的包装器。  
@@ -42,13 +42,13 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|已重载。 构造`CD2DRectF`对象`D2D1_RECT_F`对象。|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|已重载。 构造`CD2DRectF`对象从`D2D1_RECT_F`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 ( **null**)。|  
+|[CD2DRectF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -65,7 +65,7 @@ class CD2DRectF : public D2D1_RECT_F;
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
- 构造 CD2DRectF 对象从 CRect 对象。  
+ 构造 CRect 对象从一个 CD2DRectF 对象。  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -85,16 +85,16 @@ CD2DRectF(
  源矩形  
   
  *fLeft*  
- 源左的坐标  
+ 源左边缘坐标  
   
  *fTop*  
- 源上坐标  
+ 源上边缘坐标  
   
  *了恐惧*  
- 源右坐标  
+ 源角坐标  
   
  *fBottom*  
- 源下坐标  
+ 源下边缘坐标  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  
  返回一个布尔值，该值指示表达式是否包含任何有效的数据 (Null)。  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 矩形的顶部、 左、 下、 和正确的值完全等于 0; 如果为 TRUE否则为 FALSE。  
+ 矩形的上、 左、 下、 和正确的值均相等，则为 0; 如果为 TRUE否则为 FALSE。  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- 将 CD2DRectF 转换 CRect 对象。  
+ 将 CD2DRectF 转换为 CRect 对象。  
   
 ```  
 operator CRect();

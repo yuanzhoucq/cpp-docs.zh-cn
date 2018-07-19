@@ -1,5 +1,5 @@
 ---
-title: ATL 字符串和文本类 |Microsoft 文档
+title: ATL 字符串和文本类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 953afd2ba9f2a575eddb4140e71bada46e71dae3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362195"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848946"
 ---
 # <a name="string-and-text-classes"></a>字符串和文本类
 这些类为字符串和文本字符串转换提供支持。  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md)此类由字符串转换宏`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
+-   [CA2AEX](../atl/reference/ca2aex-class.md)字符串转换宏 CA2TEX 和 CT2AEX 和 typedef CA2A 使用此类。  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md)此类由字符串转换宏`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md)字符串转换宏 CA2CTEX 和 CT2CAEX 和 typedef CA2CA 使用此类。  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md)此类由字符串转换宏`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
+-   [CA2WEX](../atl/reference/ca2wex-class.md)字符串转换宏 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W 使用此类。  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md)此类由字符串转换宏`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
+-   [CW2AEX](../atl/reference/cw2aex-class.md)字符串转换宏 CT2AEX、 CW2TEX、 CW2CTEX，和 CT2CAEX 和 typedef CW2A 使用此类。  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md)此类由字符串转换宏`CW2CTEX`和`CT2CWEX`，和 typedef **CW2CW**。  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md)字符串转换宏 CW2CTEX 和 CT2CWEX 和 typedef CW2CW 使用此类。  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md)此类由字符串转换宏`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
+-   [CW2WEX](../atl/reference/cw2wex-class.md)字符串转换宏 CW2TEX 和 CT2WEX 和 typedef CW2W 使用此类。  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md)此类是包装器`BSTR`s。  
+-   [CComBSTR](../atl/reference/ccombstr-class.md)此类是 Bstr 的包装器。  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)此自变量适配器类允许任一资源名称 (`LPCTSTR`s) 或资源 Id (**UINT**s) 传递到函数，而无需调用方将 ID 转换为使用字符串**MAKEINTRESOURCE**宏。  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)使用此参数适配器类，任一资源名称 (`LPCTSTR`s) 或资源 Id （示） 要传递给函数，而无需调用方将 ID 转换为使用 MAKEINTRESOURCE 宏的字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   

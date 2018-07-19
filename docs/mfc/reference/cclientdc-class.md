@@ -1,5 +1,5 @@
 ---
-title: CClientDC 类 |Microsoft 文档
+title: CClientDC 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338576"
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
-负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
+负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时并[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,13 +42,13 @@ class CClientDC : public CDC
   
 |名称|描述|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|构造`CClientDC`对象连接到`CWnd`。|  
+|[CClientDC::CClientDC](#cclientdc)|构造`CClientDC`连接到对象`CWnd`。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
 |name|描述|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND`此窗口的`CClientDC`有效。|  
+|[CClientDC::m_hWnd](#m_hwnd)|此窗口的 HWND`CClientDC`有效。|  
   
 ## <a name="remarks"></a>备注  
  这意味着，与关联的设备上下文`CClientDC`对象是一个窗口的工作区。  
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **标头:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 构造`CClientDC`访问的工作区的对象[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。  
+ 构造`CClientDC`对象的访问的工作区[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -77,15 +77,15 @@ explicit CClientDC(CWnd* pWnd);
  窗口设备上下文对象将访问其工作区中。  
   
 ### <a name="remarks"></a>备注  
- 构造函数调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
+ 构造函数将调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
   
- 异常 (类型的`CResourceException`) 如果则会引发 Windows`GetDC`调用将失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序竞争可用在任何给定时间在 Windows 下的五个常见显示上下文。  
+ 异常 (类型的`CResourceException`) 如果则会引发 Windows`GetDC`调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- `HWND`的`CWnd`指针用于构造`CClientDC`对象。  
+ `HWND`的`CWnd`指针，用于构造`CClientDC`对象。  
   
 ```  
 HWND m_hWnd;  
@@ -95,10 +95,10 @@ HWND m_hWnd;
  *m_hWnd*是受保护的变量。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[CClientDC::CClientDC](#cclientdc)。  
+  有关示例，请参阅[CClientDC::CClientDC](#cclientdc)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   
  [CDC 类](../../mfc/reference/cdc-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CDC 类](../../mfc/reference/cdc-class.md)

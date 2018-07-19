@@ -1,5 +1,5 @@
 ---
-title: ATL 集合和枚举数 |Microsoft 文档
+title: ATL 集合和枚举器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356773"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848789"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
-A`collection`是提供一个允许对一组数据项 （原始数据或其他对象） 的访问接口的 COM 对象。 一个接口，用于提供对一组对象的访问被称为遵循标准*集合接口*。  
+一个`collection`是提供一个允许对一组数据 （原始数据或其他对象） 的项的访问接口的 COM 对象。 为提供对一组对象的访问被称为遵循标准的接口*集合接口*。  
   
- 集合接口必须提供至少**计数**属性在集合中，返回的项数**项**从基于索引的集合返回一个项的属性和`_NewEnum`返回集合的枚举数的属性。 或者，可提供的集合接口**添加**和**删除**方法以允许项要插入或删除集合中的属性和**清除**方法移除所有项。  
+ 集合接口必须提供至少`Count`属性，用于在集合中，返回的项数`Item`从基于索引的集合返回一个项的属性和一个`_NewEnum`返回的属性集合的枚举器。 （可选） 可以提供集合接口`Add`和`Remove`方法以允许要插入到或从集合中删除项和一个`Clear`方法中删除所有项。  
   
- `enumerator`是提供一个用于循环访问集合中的项接口的 COM 对象。 枚举器接口提供对通过四个所需的方法的集合的元素的串行访问： `Next`，**跳过**，**重置**，和`Clone`。  
+ `enumerator`是一个用于遍历集合中的项提供一个接口的 COM 对象。 枚举器接口提供串行访问通过四个所需的方法集合的元素： `Next`， `Skip`， `Reset`，和`Clone`。  
   
- 可以了解有关枚举器接口的详细信息，请参阅典型 （但完全虚部） [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)接口。  
+ 可以了解有关枚举器接口的详细信息，请参阅 （但完全假想的） 典型[IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)接口。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ATL 集合和枚举器类](../atl/atl-collection-and-enumerator-classes.md)  
- 简要介绍并提供指向 ATL 类，可帮助您实现集合和枚举数。  
+ 简要介绍并提供指向 ATL 类，这样有助于实现集合和枚举数。  
   
  [集合和枚举器接口的设计原则](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- 讨论每种类型的接口背后的不同的设计原则。  
+ 讨论了每种类型的接口的不同的设计原则。  
   
  [实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)  
  一个扩展的示例将指导你完成一个基于 c + + 标准库的集合的实现。  
@@ -48,7 +48,7 @@ A`collection`是提供一个允许对一组数据项 （原始数据或其他对
  提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。  
   
  [ATLCollections 示例](../visual-cpp-samples.md)  
- 一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类实现。  
+ 一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类的实现。  
   
 ## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)

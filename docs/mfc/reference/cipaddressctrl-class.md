@@ -1,5 +1,5 @@
 ---
-title: CIPAddressCtrl 类 |Microsoft 文档
+title: CIPAddressCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338027"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
 提供 Windows 公共 IP 地址控件的功能。  
@@ -64,17 +64,17 @@ class CIPAddressCtrl : public CWnd
 |----------|-----------------|  
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|清除 IP 地址控件的内容。|  
 |[CIPAddressCtrl::Create](#create)|创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。|  
-|[CIPAddressCtrl::CreateEx](#createex)|指定的 Windows 扩展样式创建的 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。|  
+|[CIPAddressCtrl::CreateEx](#createex)|使用指定的 Windows 扩展样式创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。|  
 |[CIPAddressCtrl::GetAddress](#getaddress)|检索 IP 地址控件中的所有四个字段的地址值。|  
-|[CIPAddressCtrl::IsBlank](#isblank)|确定 IP 地址控件中的所有字段都是否为空。|  
+|[CIPAddressCtrl::IsBlank](#isblank)|确定是否 IP 地址控件中的所有字段都为空。|  
 |[CIPAddressCtrl::SetAddress](#setaddress)|设置 IP 地址控件中的所有四个字段的地址值。|  
 |[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|将键盘焦点设置为 IP 地址控件中的指定字段。|  
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|设置 IP 地址控件中的指定字段的范围。|  
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|在 IP 地址控件中的指定字段中设置的范围。|  
   
 ## <a name="remarks"></a>备注  
- IP 地址，控件类似于一个编辑控件，可以输入和操作中 Internet 协议 (IP) 格式的数字地址。  
+ 一个 IP 地址控件，类似于一个编辑控件，控件，可输入和操作中 Internet 协议 (IP) 格式的数字地址。  
   
- 此控件 (因此`CIPAddressCtrl`类) 仅供运行在 Microsoft Internet Explorer 4.0 及更高版本的程序。 它们也将在将来版本的 Windows 和 Windows NT 下可用。  
+ 此控件 (并因此`CIPAddressCtrl`类) 仅供运行在 Microsoft Internet Explorer 4.0 及更高版本的程序。 它们也将在未来版本的 Windows 和 Windows NT 下可用。  
   
  IP 地址控件有关的更多常规信息，请参阅[IP 地址控件](http://msdn.microsoft.com/library/windows/desktop/bb761372)Windows SDK 中。  
   
@@ -105,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)，如 Windows SDK 中所述。  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。  
@@ -120,19 +120,19 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- IP 地址控件的样式。 适用窗口样式的组合。 必须包括**WS_CHILD**样式由于控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
+ IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
   
  *rect*  
  对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
- 指向该 IP 地址控件的父窗口的指针。 它不能**NULL。**  
+ 指向 IP 地址控件的父窗口的指针。 它不能为 NULL。  
   
  *nID*  
  IP 地址控件的 id。  
   
 ### <a name="return-value"></a>返回值  
- 如果初始化成功; 则为非 0否则为 0。  
+ 如果初始化成功，则非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
  构造`CIPAddressCtrl`两个步骤中的对象。  
@@ -141,10 +141,10 @@ virtual BOOL Create(
   
 2.  调用`Create`，这将创建 IP 地址控件。  
   
- 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是`Create`。  
+ 如果你想要在控件中使用扩展的 windows 样式，则调用[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
- 调用此函数可创建的控件 （子窗口），并将其与关联`CIPAddressCtrl`对象。  
+ 调用此函数可创建的控件 （子窗口），并将其与`CIPAddressCtrl`对象。  
   
 ```  
 virtual BOOL CreateEx(
@@ -157,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- IP 地址控件的样式。 适用窗口样式的组合。 必须包括**WS_CHILD**样式由于控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
+ IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -175,7 +175,7 @@ virtual BOOL CreateEx(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+ 使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
 ##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  检索 IP 地址控件中的所有四个字段的地址值。  
@@ -192,45 +192,45 @@ int GetAddress(DWORD& dwAddress);
   
 ### <a name="parameters"></a>参数  
  *nField0*  
- 对字段 0 值中的已打包的 IP 地址的引用。  
+ 字段 0 值对发件人已打包的 IP 地址的引用。  
   
  *nField1*  
- 对字段 1 值中的已打包的 IP 地址的引用。  
+ 对字段 1 值发件人已打包的 IP 地址的引用。  
   
  *nField2*  
- 对字段 2 值中的已打包的 IP 地址的引用。  
+ 对字段 2 值发件人已打包的 IP 地址的引用。  
   
  *nField3*  
- 对字段 3 值中的已打包的 IP 地址的引用。  
+ 对字段 3 值发件人已打包的 IP 地址的引用。  
   
  *dwAddress*  
- 地址的引用`DWORD`接收 IP 地址的值。 请参阅**备注**的表的显示方式*dwAddress*填充。  
+ 对接收的 IP 地址的 DWORD 值的地址的引用。 请参阅**备注**的表显示了如何*dwAddress*进行填充。  
   
 ### <a name="return-value"></a>返回值  
- IP 地址控件中的非空字段数。  
+ 在 IP 地址控件中的非空字段数。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress* ，如下所示填充。  
+ 此成员函数可实现 Win32 消息的行为[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
   
-|字段|包含的字段值的位|  
+|字段|包含字段值的位|  
 |-----------|-------------------------------------|  
-|0|24 到 31 之间|  
-|1|16 至 23|  
+|0|24 到 31|  
+|1|16 到 23|  
 |2|8 到 15|  
 |3|0 到 7|  
   
 ##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
- 确定 IP 地址控件中的所有字段都是否为空。  
+ 确定是否 IP 地址控件中的所有字段都为空。  
   
 ```  
 BOOL IsBlank() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果所有 IP 地址控件字段为空; 则为非 0否则为 0。  
+ 如果所有的 IP 地址控件字段都是空，则为非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)，如 Windows SDK 中所述。  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  设置 IP 地址控件中的所有四个字段的地址值。  
@@ -247,27 +247,27 @@ void SetAddress(DWORD dwAddress);
   
 ### <a name="parameters"></a>参数  
  *nField0*  
- 发件人已打包的 IP 地址字段 0 值。  
+ 中的已打包的 IP 地址的字段 0 值。  
   
  *nField1*  
- 发件人已打包的 IP 地址字段 1 值。  
+ 中的已打包的 IP 地址的字段 1 值。  
   
  *nField2*  
- 发件人已打包的 IP 地址字段 2 值。  
+ 中的已打包的 IP 地址的字段 2 值。  
   
  *nField3*  
- 发件人已打包的 IP 地址字段 3 值。  
+ 中的已打包的 IP 地址的字段 3 值。  
   
  *dwAddress*  
- A`DWORD`包含新的 IP 地址的值。 请参阅**备注**的表，其中显示了`DWORD`填充值。  
+ 一个 DWORD 值，该值包含新的 IP 地址。 请参阅**备注**的表显示了如何填充 DWORD 值。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress* ，如下所示填充。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
   
-|字段|包含的字段值的位|  
+|字段|包含字段值的位|  
 |-----------|-------------------------------------|  
-|0|24 到 31 之间|  
-|1|16 至 23|  
+|0|24 到 31|  
+|1|16 到 23|  
 |2|8 到 15|  
 |3|0 到 7|  
   
@@ -280,13 +280,13 @@ void SetFieldFocus(WORD nField);
   
 ### <a name="parameters"></a>参数  
  *nField*  
- 应将焦点设置到的从零开始的字段索引。 如果此值大于的字段的数目，则会将焦点设置为第一个空白字段。 如果所有字段非空，则会将焦点设置为第一个字段。  
+ 应将焦点设置到的从零开始的字段索引。 如果此值大于的字段数，则会将焦点设置到第一个空白字段。 如果所有字段都均为非空，则会将焦点设置到的第一个字段。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)，如 Windows SDK 中所述。  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
- 设置 IP 地址控件中的指定字段的范围。  
+ 在 IP 地址控件中的指定字段中设置的范围。  
   
 ```  
 void SetFieldRange(
@@ -297,16 +297,16 @@ void SetFieldRange(
   
 ### <a name="parameters"></a>参数  
  *nField*  
- 将向其应用范围的从零开始的字段索引。  
+ 将应用范围的从零开始的字段索引。  
   
  *nLower*  
  对此 IP 地址控件在接收指定的字段的下限的整数的引用。  
   
  *nUpper*  
- 对此 IP 地址控件中接收的指定字段上限的整数的引用。  
+ 对此 IP 地址控件在接收指定的字段的上限的整数的引用。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)，如 Windows SDK 中所述。 使用两个参数， *nLower*和*nUpper*，以指示该字段的下限和上限限制而不是*wRange*与 Win32 消息一起使用的参数。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)，如 Windows SDK 中所述。 使用两个参数， *nLower*并*nUpper*，以指示该字段的下限和上限限制而不是*wRange* Win32 消息所使用的参数。  
   
 ## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

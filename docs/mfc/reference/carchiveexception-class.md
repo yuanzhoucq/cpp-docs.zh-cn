@@ -1,5 +1,5 @@
 ---
-title: CArchiveException 类 |Microsoft 文档
+title: CArchiveException 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 53e82838ba952656d7067ce2294d9abdde11479c
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335739"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 类
 表示序列化异常条件  
@@ -50,13 +50,13 @@ class CArchiveException : public CException
   
 |名称|描述|  
 |----------|-----------------|  
-|[CArchiveException::m_cause](#m_cause)|指示的异常原因。|  
+|[CArchiveException::m_cause](#m_cause)|指示异常原因。|  
 |[CArchiveException::m_strFileName](#m_strfilename)|指定此异常条件的文件的名称。|  
   
 ## <a name="remarks"></a>备注  
- `CArchiveException`类包括一个公共数据成员，该值指示对导致异常。  
+ `CArchiveException`类包括指示异常原因的公共数据成员。  
   
- `CArchiveException` 对象了构造和内引发[CArchive](../../mfc/reference/carchive-class.md)成员函数。 你可以访问这些对象的作用域内**捕获**表达式。 原因代码是独立于操作系统。 有关异常处理的详细信息，请参阅[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ `CArchiveException` 对象构造和内部发生[CArchive](../../mfc/reference/carchive-class.md)成员函数。 您可以访问这些对象的作用域内**捕获**表达式。 原因代码是独立于操作系统。 有关异常处理的详细信息，请参阅[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **标头：** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- 构造`CArchiveException`对象，存储的值*导致*对象中。  
+ 构造`CArchiveException`对象，如果将值*导致*对象中。  
   
 ```  
 CArchiveException(
@@ -78,48 +78,48 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>参数  
- *可能的原因*  
- 一个枚举的类型变量，指示该异常的原因。 枚举器的列表，请参阅[m_cause](#m_cause)数据成员。  
+ *原因*  
+ 指示异常原因的枚举的类型变量。 枚举器的列表，请参阅[m_cause](#m_cause)数据成员。  
   
  *lpszArchiveName*  
- 指向包含的名称的字符串`CArchive`引发异常的对象。  
+ 指向包含名称的字符串`CArchive`导致发生异常的对象。  
   
 ### <a name="remarks"></a>备注  
- 你可以创建`CArchiveException`堆上对象而引发它自己或让全局函数[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)为你处理。  
+ 您可以创建`CArchiveException`堆上对象和自行引发或让全局函数[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)为你处理。  
   
- 不要直接; 使用此构造函数相反，调用全局函数`AfxThrowArchiveException`。  
+ 直接调用不使用此构造函数相反，调用全局函数`AfxThrowArchiveException`。  
   
 ##  <a name="m_cause"></a>  CArchiveException::m_cause  
- 指定的异常的原因。  
+ 指定异常的原因。  
   
 ```  
 int m_cause;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此数据成员是类型的公共变量**int**。由定义其值`CArchiveException`枚举类型。 枚举器及其含义如下所示：  
+ 此数据成员是类型的公共变量**int**。通过定义其值`CArchiveException`枚举类型。 枚举器及其含义如下所示：  
   
-- **CArchiveException::none**未发生错误。  
+- `CArchiveException::none` 未发生错误。  
   
-- **CArchiveException::genericException**未指定的错误。  
+- `CArchiveException::genericException` 未指定的错误。  
   
-- **CArchiveException::readOnly**尝试写入到适用于加载的打开的存档。  
+- `CArchiveException::readOnly` 尝试写入到适用于加载的打开的存档。  
   
-- **CArchiveException::endOfFile**读取对象时已达到最终的文件。  
+- `CArchiveException::endOfFile` 读取对象时达到的文件尾。  
   
-- **CArchiveException::writeOnly**尝试从用于存储打开的存档中读取。  
+- `CArchiveException::writeOnly` 尝试从存档存储可供读取。  
   
-- **CArchiveException::badIndex**文件格式无效。  
+- `CArchiveException::badIndex` 无效的文件格式。  
   
-- **CArchiveException::badClass**尝试读取某个对象为错误类型的对象。  
+- `CArchiveException::badClass` 尝试读取某个对象转换为对象类型不正确。  
   
-- **CArchiveException::badSchema**尝试读取具有不同版本的类的对象。  
+- `CArchiveException::badSchema` 尝试读取具有不同版本的类的对象。  
   
     > [!NOTE]
     >  引发这些 `CArchiveException` 的枚举器不同于引发 `CFileException` 的枚举器。  
   
     > [!NOTE]
-    > **CArchiveException::generic**已弃用。 使用**genericException**相反。 如果**泛型**是应用程序中使用和生成使用 /clr，将很难解密的语法错误。  
+    > `CArchiveException::generic` 已弃用。 请改用 `genericException`。 如果**泛型**是应用程序中使用和构建使用 /clr，将不容易解密的语法错误。  
   
 ##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  指定此异常条件的文件的名称。  
@@ -130,7 +130,7 @@ CString m_strFileName;
   
 ## <a name="see-also"></a>请参阅  
  [CException 类](../../mfc/reference/cexception-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CArchive 类](../../mfc/reference/carchive-class.md)   
  [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)   
  [异常处理](../../mfc/reference/exception-processing.md)

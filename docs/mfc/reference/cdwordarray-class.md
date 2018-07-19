@@ -1,5 +1,5 @@
 ---
-title: CDWordArray 类 |Microsoft 文档
+title: CDWordArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06364aeb75ef57d02946a6799e80cf44c21c733
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335700"
 ---
 # <a name="cdwordarray-class"></a>CDWordArray 类
 支持 32 位双字数组。  
@@ -69,7 +69,7 @@ class CDWordArray : public CObject
 ```  
   
 ## <a name="members"></a>成员  
- 成员函数的`CDWordArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为函数参数或返回值，替换`DWORD`。  
+ 成员函数`CDWordArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为函数参数或返回值，替换`DWORD`。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -90,11 +90,11 @@ class CDWordArray : public CObject
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|  
 |[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|  
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|返回对该数组中的字节的临时引用。|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|返回的字节数组中的临时引用。|  
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以是**NULL**。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 NULL。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|  
@@ -112,19 +112,19 @@ class CDWordArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果双字数组数组存储到存档中，使用重载插入 ( **<<**) 运算符或`Serialize`成员函数，每个元素，从而，序列化。  
+ `CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果双字数组的数组存储到存档，使用重载插入 ( **<<**) 运算符或`Serialize`成员函数，每个元素是，依次序列化。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
   
- 如果需要调试从数组中的各个元素的输出，则必须设置的深度`CDumpContext`为 1 或更高的对象。  
+ 如果需要调试从数组中的各个元素的输出，则必须设置的深度`CDumpContext`等于或大于 1 的对象。  
   
- 有关详细信息使用`CDWordArray`，请参阅文章[集合](../../mfc/collections.md)。  
+ 有关使用的详细信息`CDWordArray`，请参阅文章[集合](../../mfc/collections.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CObArray 类](../../mfc/reference/cobarray-class.md)

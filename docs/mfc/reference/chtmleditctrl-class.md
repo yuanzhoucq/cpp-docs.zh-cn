@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrl 类 |Microsoft 文档
+title: CHtmlEditCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338563"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 类
 提供 MFC 窗口中的 WebBrowser ActiveX 控件功能。  
@@ -53,12 +53,12 @@ class CHtmlEditCtrl: public CWnd,
   
 |名称|描述|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|创建 WebBrowser ActiveX 控件并将其附加到`CHtmlEditCtrl`对象。 此函数会自动将置于编辑模式的 WebBrowser ActiveX 控件。|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)包含 WebBrowser 控件中当前加载的文档上的接口。|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|检索默认文档包含 WebBrowser 控件中加载的 URL。|  
+|[CHtmlEditCtrl::Create](#create)|创建 WebBrowser ActiveX 控件，并将其附加到`CHtmlEditCtrl`对象。 此函数自动使 WebBrowser ActiveX 控件进入编辑模式。|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)所包含的 web 浏览器控件中当前加载该文档上的接口。|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|检索默认文档包含的 WebBrowser 控件中加载的 URL。|  
   
 ## <a name="remarks"></a>备注  
- 控件自动放入托管 web 浏览器将在创建后编辑模式。  
+ 在创建后，托管的 WebBrowser 控件自动将进入编辑模式。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- 创建 WebBrowser ActiveX 控件并将其附加到`CHtmlEditCtrl`对象。 WebBrowser ActiveX 控件自动导航到默认文档，且然后将置于编辑模式，此函数。  
+ 创建 WebBrowser ActiveX 控件，并将其附加到`CHtmlEditCtrl`对象。 WebBrowser ActiveX 控件自动导航到默认文档，然后置于编辑模式，此函数。  
   
 ```  
 virtual BOOL Create(
@@ -105,7 +105,7 @@ virtual BOOL Create(
  指定控件的大小和位置。  
   
  *pParentWnd*  
- 指定控件的父窗口。 它不能**NULL**。  
+ 指定控件的父窗口。 它不能为 NULL。  
   
  *nID*  
  指定控件的 id。  
@@ -114,10 +114,10 @@ virtual BOOL Create(
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
- 返回**TRUE**成功后， **FALSE**失败。  
+ 如果成功，则返回 TRUE FALSE 失败。  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- 检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)在文档上的接口当前加载到包含的 web 浏览器控件  
+ 检索[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)所包含的 web 浏览器控件中当前加载该文档上的接口  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  文档界面中。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- 检索默认文档包含 WebBrowser 控件中加载的 URL。  
+ 检索默认文档包含的 WebBrowser 控件中加载的 URL。  
   
 ```  
 virtual LPCTSTR GetStartDocument();

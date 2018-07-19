@@ -1,5 +1,5 @@
 ---
-title: CMFCCaptionButton 类 |Microsoft 文档
+title: CMFCCaptionButton 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338394"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 类
-`CMFCCaptionButton`类实现停靠的窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  
+`CMFCCaptionButton`类实现的停靠窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,29 +56,29 @@ class CMFCCaptionButton : public CObject
   
 |name|描述|  
 |----------|-----------------|  
-|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|构造 CMFCCaptionButton 对象。|  
+|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|构造一个 CMFCCaptionButton 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCCaptionButton::GetHit](#gethit)|返回由按钮的命令。|  
-|[CMFCCaptionButton::GetIconID](#geticonid)|返回与按钮相关联的图像 ID。|  
+|[CMFCCaptionButton::GetHit](#gethit)|返回按钮表示的命令。|  
+|[CMFCCaptionButton::GetIconID](#geticonid)|返回与按钮关联的图像 ID。|  
 |[CMFCCaptionButton::GetRect](#getrect)|返回由按钮所占用的矩形。|  
-|[CMFCCaptionButton::GetSize](#getsize)|返回的宽度和高度的按钮。|  
+|[CMFCCaptionButton::GetSize](#getsize)|返回的宽度和按钮的高度。|  
 |[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|指示是否将标题栏高度设置为最小大小。|  
-|[CMFCCaptionButton::Move](#move)|设置按钮绘图位置和窗口显示状态。|  
+|[CMFCCaptionButton::Move](#move)|设置按钮绘制位置和窗口显示状态。|  
 |[CMFCCaptionButton::OnDraw](#ondraw)|绘制标题按钮。|  
 |[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|设置标题栏的最小大小。|  
   
 ## <a name="remarks"></a>备注  
- 你可以从派生类[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)和使用受保护的方法， `AddButton`，若要添加到微型框架窗口的标题按钮。  
+ 您可以从派生类[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)，并使用受保护的方法， `AddButton`，以添加到微型框架窗口的标题按钮。  
   
  CPaneFrameWnd.h 定义两种类型的标题按钮的命令 Id:  
   
-- `AFX_CAPTION_BTN_PIN`它会显示固定按钮时停靠窗格支持自动隐藏模式。  
+- AFX_CAPTION_BTN_PIN 停靠窗格支持自动隐藏模式时显示图钉按钮。  
   
-- `AFX_CAPTION_BTN_CLOSE`其中显示**关闭**按钮可以关闭窗格中，或将其隐藏。  
+- AFX_CAPTION_BTN_CLOSE，后者将显示**关闭**按钮时可以关闭或隐藏窗格。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何构造`CMFCCaptionButton`对象，并将标题栏的最小大小。  
@@ -107,52 +107,52 @@ CMFCCaptionButton(
   
 ### <a name="parameters"></a>参数  
  [in]*nHit*  
- 与按钮相关联的命令。  
+ 与按钮关联的命令。  
   
  [in]*bLeftAlign*  
  指定是否向左对齐按钮。  
   
- 下表列出可能值*nHit*参数。  
+ 下表列出了可能值*nHit*参数。  
   
 |“值”|命令|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|关闭按钮。|  
-|`HTMINBUTTON`|最小化按钮。|  
-|`HTMAXBUTTON`|最大化按钮。|  
-|`AFX_HTLEFTBUTTON`|左的箭头按钮。|  
-|`AFX_HTRIGHTBUTTON`|右箭头按钮。|  
-|`AFX_HTMENU`|向下箭头菜单按钮。|  
-|`HTNOWHERE`|默认值;不表示任何命令。|  
+|AFX_HTCLOSE|关闭按钮。|  
+|HTMINBUTTON|最小化按钮。|  
+|HTMAXBUTTON|最大化按钮。|  
+|AFX_HTLEFTBUTTON|向左的箭头按钮。|  
+|AFX_HTRIGHTBUTTON|向右箭头按钮。|  
+|AFX_HTMENU|向下箭头菜单按钮。|  
+|HTNOWHERE|默认值;不表示任何命令。|  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，标题按钮不与命令关联。  
+ 默认情况下，标题按钮将无法与命令相关联。  
   
- 在左或向右对齐标题按钮。  
+ 标题按钮上的右侧或左侧对齐。  
   
 ##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
- 返回由按钮的命令。  
+ 返回按钮表示的命令。  
   
 ```  
 UINT GetHit() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 由按钮表示该命令。  
+ 按钮表示该命令。  
   
- 下表列出可能的返回值。  
+ 下表列出了可能的返回值。  
   
 |“值”|命令|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|关闭按钮。|  
-|`HTMINBUTTON`|最小化按钮。|  
-|`HTMAXBUTTON`|最大化按钮。|  
-|`AFX_HTLEFTBUTTON`|左的箭头按钮。|  
-|`AFX_HTRIGHTBUTTON`|右箭头按钮。|  
-|`AFX_HTMENU`|向下箭头菜单按钮。|  
-|`HTNOWHERE`|默认值;不表示任何命令。|  
+|AFX_HTCLOSE|关闭按钮。|  
+|HTMINBUTTON|最小化按钮。|  
+|HTMAXBUTTON|最大化按钮。|  
+|AFX_HTLEFTBUTTON|向左的箭头按钮。|  
+|AFX_HTRIGHTBUTTON|向右箭头按钮。|  
+|AFX_HTMENU|向下箭头菜单按钮。|  
+|HTNOWHERE|默认值;不表示任何命令。|  
   
 ##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
- 返回与按钮相关联的图像 ID。  
+ 返回与按钮关联的图像 ID。  
   
 ```  
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -162,16 +162,16 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>参数  
  [in]*bHorz*  
- `TRUE` 左或向右箭头映像 Id;`FALSE`的向上或向下箭头图像 Id。  
+ 左或向右箭头图像 Id;，则返回 TRUE如果为 FALSE 的向上或向下箭头的映像 Id。  
   
  [in]*bMaximized*  
- `TRUE` 最大化映像 ID;`FALSE`的最小化映像 id。  
+ 最大化图像 id;，则返回 TRUEFALSE 为最小化映像 id。  
   
 ### <a name="return-value"></a>返回值  
- 图像 id。  
+ 映像 id。  
   
 ### <a name="remarks"></a>备注  
- 参数指定最小化的映像 Id 或最大化标题按钮。  
+ 参数指定的最小化映像 Id 或最大化标题按钮。  
   
 ##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  返回由按钮所占用的矩形。  
@@ -184,10 +184,10 @@ virtual CRect GetRect() const;
  表示按钮的位置的矩形。  
   
 ### <a name="remarks"></a>备注  
- 如果看不到按钮，返回的大小为 0。  
+ 如果您不能看到的按钮，返回的大小为 0。  
   
 ##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
- 返回的宽度和高度的按钮。  
+ 返回的宽度和按钮的高度。  
   
 ```  
 static CSize GetSize();
@@ -207,12 +207,12 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果将标题设置为最小大小;否则为`FALSE`。  
+ 如果标题设置为最小大小，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="move"></a>  CMFCCaptionButton::Move  
- 设置按钮绘图位置和窗口显示状态。  
+ 设置按钮绘制位置和窗口显示状态。  
   
 ```  
 void Move(
@@ -225,7 +225,7 @@ void Move(
  新位置。  
   
  [in]*bHide*  
- 是否显示按钮。  
+ 是否显示该按钮。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  绘制标题按钮。  
@@ -241,7 +241,7 @@ virtual void OnDraw(
   
 ### <a name="parameters"></a>参数  
  [in]*pDC*  
- 指向设备上下文的按钮的指针。  
+ 为按钮的设备上下文的指针。  
   
  [in]*bActive*  
  是否要绘制活动按钮图像。  
@@ -256,7 +256,7 @@ virtual void OnDraw(
  是否要绘制启用的按钮图像。  
   
 ### <a name="remarks"></a>备注  
- *BMaximized*参数最大化按钮时使用，或最小化按钮。  
+ *BMaximized*参数使用时该按钮是最大化或最小化按钮。  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  设置标题栏的最小大小。  
@@ -267,10 +267,10 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in]*bSet*  
- `TRUE` 微型标题栏的高度;`FALSE`的默认标题栏的高度。  
+ 适用于最小的标题栏的高度;对于默认标题栏高度为 FALSE。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)   
  [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)

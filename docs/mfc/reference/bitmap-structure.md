@@ -1,5 +1,5 @@
 ---
-title: 位图结构 |Microsoft 文档
+title: 位图结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339340"
 ---
 # <a name="bitmap-structure"></a>BITMAP 结构
-**位图**结构定义的高度、 宽度、 颜色格式和逻辑位图的位值 **。**  
+**位图**结构定义的高度、 宽度、 颜色格式和逻辑位图位值 **。**  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>备注  
  当前使用的位图格式是单色和彩色。 单色位图使用 1 位 1 平面格式。 每个扫描是 16 位的倍数。  
   
- 扫描高度的单色位图组织方式如下*n*:  
+ 按如下所示高度的单色位图组织扫描*n*:  
   
  `Scan 0`  
   
@@ -83,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  单色设备的像素是黑色或白色。 如果位图中的对应位是 1，则打开像素（白色）。 如果位图中的对应位是 0，则关闭像素（黑色）。  
   
- 所有设备都支持位图**RC_BITBLT**中设置位**RASTERCAPS**索引[CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps)成员函数。  
+ 所有设备都支持具有 RC_BITBLT 位集的 RASTERCAPS 索引中的位图[CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps)成员函数。  
   
- 每台设备都具有自己的唯一颜色格式。 为了将位图从一台设备传输到另一个，使用[GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)和[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 函数。  
+ 每台设备都具有自己的唯一颜色格式。 为了将位图从一台设备传输到另一种，使用[GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)并[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 函数。  
   
 ## <a name="requirements"></a>要求  
  **标头：** wingdi.h  

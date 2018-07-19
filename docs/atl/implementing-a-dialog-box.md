@@ -1,5 +1,5 @@
 ---
-title: 实现一个对话框 |Microsoft 文档
+title: 实现对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c5133960cca3aab3d4bf526179fd9c825c41a20
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355847"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848452"
 ---
-# <a name="implementing-a-dialog-box"></a>实现一个对话框
-有两种方法将添加到你的 ATL 项目对话框中： 使用 ATL 对话框向导或手动添加它。  
+# <a name="implementing-a-dialog-box"></a>实现对话框
+若要添加到 ATL 项目对话框中的两种方式： 使用 ATL 对话框向导或手动添加它。  
   
-## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>添加一个带有 ATL 对话框向导对话框  
- 在[添加类对话框](../ide/add-class-dialog-box.md)，选择要添加到你的 ATL 项目的对话框中的 ATL 对话框对象。 填写根据 ATL 对话框向导并单击**完成**。 该向导将添加派生自的类[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)到你的项目。 打开资源视图从**视图**菜单上，找到你的对话框，并双击它以在资源编辑器中打开它。  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>添加 ATL 对话框向导对话框  
+ 在中[添加类对话框](../ide/add-class-dialog-box.md)，选择要添加到 ATL 项目对话框中的 ATL 对话框对象。 ATL 对话框向导根据需要填充，然后单击**完成**。 该向导将添加一个类派生自[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)到你的项目。 打开从资源视图**视图**菜单中，找到您的对话框，然后双击它以在资源编辑器中打开它。  
   
 > [!NOTE]
->  如果对话框中派生自`CAxDialogImpl`、 它可以承载这两个 ActiveX 和 Windows 控制。 如果你不希望在对话框类中的 ActiveX 控件支持的开销，使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)或[CDialogImpl](../atl/reference/cdialogimpl-class.md)相反。  
+>  如果您的对话框派生自`CAxDialogImpl`、 它可以承载这两个 ActiveX 和 Windows 控制。 如果你不希望在对话框类中的 ActiveX 控件支持的系统开销，使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)或[CDialogImpl](../atl/reference/cdialogimpl-class.md)相反。  
   
- 消息和事件处理程序可以添加到对话框类中，从类视图。 有关详细信息，请参阅[添加 ATL 消息处理程序](../atl/adding-an-atl-message-handler.md)。  
+ 消息和事件处理程序可以从类视图添加到对话框类。 有关详细信息，请参阅[添加 ATL 消息处理程序](../atl/adding-an-atl-message-handler.md)。  
   
 ## <a name="adding-a-dialog-box-manually"></a>手动添加一个对话框  
- 实现一个对话框是类似于实现一个窗口。 从派生一个类[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)， [CDialogImpl](../atl/reference/cdialogimpl-class.md)，或[CSimpleDialog](../atl/reference/csimpledialog-class.md)和声明[消息映射](../atl/message-maps-atl.md)处理消息。 但是，还必须指定在派生类中的对话框模板资源 ID。 你的类必须具有一个名为的数据成员`IDD`保留此值。  
+ 实现对话框是类似于实现窗口。 从派生类[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)， [CDialogImpl](../atl/reference/cdialogimpl-class.md)，或[CSimpleDialog](../atl/reference/csimpledialog-class.md) ，并声明[消息映射](../atl/message-maps-atl.md)来处理消息。 但是，还必须指定在派生类中的对话框模板资源 ID。 您的类必须具有一个名为的数据成员`IDD`来保存此值。  
   
 > [!NOTE]
->  当你创建使用 ATL 对话框向导对话框中时，向导会自动添加`IDD`作为成员`enum`类型。  
+>  创建一个对话框使用 ATL 对话框向导时，向导会自动添加`IDD`作为成员**枚举**类型。  
   
- `CDialogImpl` 可实现在安装结束时或承载 Windows 控件的无模式对话框。 `CAxDialogImpl` 可实现在安装结束时或承载 ActiveX 和 Windows 控件的无模式对话框。  
+ `CDialogImpl` 可以实现在安装结束时或承载 Windows 控件的无模式对话框。 `CAxDialogImpl` 可以在安装结束时或无模式对话框承载 ActiveX 和 Windows 控件实现。  
   
- 若要创建模式对话框，创建的实例你`CDialogImpl`-派生 (或`CAxDialogImpl`-派生) 类，然后调用[DoModal](../atl/reference/cdialogimpl-class.md#domodal)方法。 若要关闭模式对话框，调用[EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)从消息处理程序方法。 若要创建无模式对话框，请调用[创建](../atl/reference/cdialogimpl-class.md#create)方法而不是`DoModal`。 若要销毁无模式对话框中，调用[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)。  
+ 若要创建模式对话框，创建的实例在`CDialogImpl`的派生 (或`CAxDialogImpl`-派生) 类，然后调用[DoModal](../atl/reference/cdialogimpl-class.md#domodal)方法。 若要关闭的模式对话框，请调用[EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)从消息处理程序方法。 若要创建无模式对话框，请调用[创建](../atl/reference/cdialogimpl-class.md#create)方法而不是`DoModal`。 若要销毁无模式对话框，请调用[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)。  
   
- 接收事件将自动完成[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)。 实现对话框的消息处理程序中的处理程序像`CWindowImpl`-派生类。 如果没有特定于消息的返回值，则返回其作为`LRESULT`。 返回`LRESULT`值通过 ATL 映射的 Windows 对话框管理器正确处理。 有关详细信息，请参阅的源代码[CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h 中。  
+ 接收器事件中自动完成[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)。 实现对话框的消息处理程序中的处理程序像`CWindowImpl`-派生的类。 如果没有特定于消息的返回值，将其返回为`LRESULT`。 返回`LRESULT`值由 ATL 映射以便进行正确处理由 Windows 对话框管理器。 有关详细信息，请参阅的源代码[CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h 中。  
   
 ## <a name="example"></a>示例  
- 下面的类实现对话框中：  
+ 以下类实现一个对话框：  
   
  [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   

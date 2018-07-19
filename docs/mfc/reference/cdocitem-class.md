@@ -1,5 +1,5 @@
 ---
-title: CDocItem 类 |Microsoft 文档
+title: CDocItem 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88c30418f886cd791a7119367c5ddbccc19003fa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335576"
 ---
 # <a name="cdocitem-class"></a>CDocItem 类
 属于文档数据一部分的文档项的基类。  
@@ -43,7 +43,7 @@ class CDocItem : public CCmdTarget
 |名称|描述|  
 |----------|-----------------|  
 |[CDocItem::GetDocument](#getdocument)|返回包含项的文档。|  
-|[CDocItem::IsBlank](#isblank)|确定项目是否包含任何信息。|  
+|[CDocItem::IsBlank](#isblank)|确定项是否包含任何信息。|  
   
 ## <a name="remarks"></a>备注  
  `CDocItem` 对象用于表示在客户端和服务器文档中的 OLE 项。  
@@ -61,36 +61,36 @@ class CDocItem : public CCmdTarget
  **标头：** afxole.h  
   
 ##  <a name="getdocument"></a>  CDocItem::GetDocument  
- 调用此函数可获取包含项的文档。  
+ 调用此函数可获取包含该项的文档。  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向包含的项; 文档的指针**NULL**，如果项不是文档的一部分。  
+ 指向包含的项; 文档如果项不是文档的一部分，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此函数在派生类中重写[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，返回一个指向为[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)对象。  
+ 在派生类中重写此函数[COleClientItem](../../mfc/reference/coleclientitem-class.md)并[COleServerItem](../../mfc/reference/coleserveritem-class.md)，为返回的指针[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)对象。  
   
 ##  <a name="isblank"></a>  CDocItem::IsBlank  
- 默认序列化时，由框架调用。  
+ 默认的序列化时由框架调用。  
   
 ```  
 virtual BOOL IsBlank() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果项不包含任何信息; 则为非 0否则为 0。  
+ 非零，如果项不包含任何信息;否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，`CDocItem`对象不为空。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)对象有时是空白因为它们直接从派生`CDocItem`。 但是， [COleServerItem](../../mfc/reference/coleserveritem-class.md)对象始终为空白。 默认情况下，OLE 应用程序包含`COleClientItem`没有 x 或 y 的对象序列化扩展盘区。 这通过返回**TRUE**的重写`IsBlank`项时出现任何 x 或 y 扩展盘区。  
+ 默认情况下，`CDocItem`对象是否不为空。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)对象，有时空白因为它们直接派生`CDocItem`。 但是， [COleServerItem](../../mfc/reference/coleserveritem-class.md)对象始终为空白。 默认情况下，包含 OLE 应用程序`COleClientItem`没有 x 或 y 的对象进行序列化程度。 这是通过从的重写返回 TRUE`IsBlank`项时出现没有 x 或 y 扩展盘区。  
   
- 如果你想要在序列化过程中执行其他操作，重写此函数。  
+ 如果你想要在序列化期间执行其他操作，重写此函数。  
   
 ## <a name="see-also"></a>请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [COleDocument 类](../../mfc/reference/coledocument-class.md)   
  [COleServerItem 类](../../mfc/reference/coleserveritem-class.md)   
  [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)

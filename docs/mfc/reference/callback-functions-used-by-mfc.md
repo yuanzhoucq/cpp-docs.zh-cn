@@ -1,5 +1,5 @@
 ---
-title: MFC 使用的回调函数 |Microsoft 文档
+title: MFC 使用的回调函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339005"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
-在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须都捕获返回到 Windows，因为不能跨回调边界引发异常之前的 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，并[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须返回到 Windows，因为不能跨回调边界引发异常之前都捕获 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
 
 |name||  
 |----------|-----------------|  
@@ -51,7 +51,7 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>参数  
  *lpszLogObject*  
- 指向[LOGPEN](../../mfc/reference/logpen-structure.md)或[LOGBRUSH](../../mfc/reference/logbrush-structure.md)数据结构，其中包含有关的逻辑特性的对象的信息。  
+ 指向[LOGPEN](../../mfc/reference/logpen-structure.md)或[LOGBRUSH](../../mfc/reference/logbrush-structure.md)数据结构，其中包含的对象的逻辑特性信息。  
   
  *lpData*  
  指向传递给 `EnumObjects` 函数的应用程序提供的数据。  
@@ -76,7 +76,7 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>参数  
  *hDC*  
- 标识内存设备上下文与至少包含位图的宽度和高度指定*nWidth*和*nHeight*到`GrayString`。  
+ 向 `nWidth` 标识一个内存设备上下文，该上下文具有宽度和高度至少为 `nHeight` 和 `GrayString` 指定的值的位图。  
   
  *lpData*  
  指向要绘制的字符串。  
@@ -85,7 +85,7 @@ BOOL CALLBACK EXPORT OutputFunc(
  指定要输出的字符数。  
   
 ### <a name="return-value"></a>返回值  
- 回调函数的返回值必须是**TRUE**以指示成功; 否则它是**FALSE**。  
+ 回调函数的返回值必须为 TRUE 以指示成功;否则，它为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  回调函数 (*OutputFunc*) 必须绘制图像相对于坐标 (0，0) 而非 (*x*， *y*)。  
@@ -106,13 +106,13 @@ BOOL CALLBACK EXPORT AbortFunc(
  标识设备上下文。  
   
  *代码*  
- 指定是否已发生了错误。 如果未发生错误，则为 0。 它是**SP_OUTOFDISK**如果打印管理器当前磁盘空间不足，更多磁盘空间将变为可用，如果应用程序在等待。 如果*代码*是**SP_OUTOFDISK**，应用程序没有中止打印作业。 如果不存在，也必须通过调用生成到打印管理器`PeekMessage`或`GetMessage`Windows 函数。  
+ 指定是否已发生错误。 如果未发生错误，则为 0。 如果，则 SP_OUTOFDISK 打印管理器目前磁盘空间不足，更多磁盘空间将变为可用如果应用程序等待。 如果*代码*是 SP_OUTOFDISK，应用程序无需中止打印作业。 如果未显示，也必须通过调用生成到打印管理器`PeekMessage`或`GetMessage`Windows 函数。  
   
 ### <a name="return-value"></a>返回值  
- 中止处理程序函数的返回值表示打印作业是否要继续，则为非 0，0 如果它被取消。  
+ 中止处理程序函数的返回值为非零，如果打印作业将继续，请和 0 如果它已取消。  
   
 ### <a name="remarks"></a>备注  
- 中的备注部分所述，必须导出实际名称[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。  
+ 必须导出实际名称，如备注部分中所述[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。  
  
   
 ## <a name="see-also"></a>请参阅  

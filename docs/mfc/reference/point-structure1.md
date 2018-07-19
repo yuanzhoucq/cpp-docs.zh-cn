@@ -1,5 +1,5 @@
 ---
-title: 点结构 1 |Microsoft 文档
+title: 点结构 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31af23b336e5a911b62d23d0cce2795aa66f0f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de172814db04ab8d057f84a29ce505896f89adc9
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335329"
 ---
 # <a name="point-structure1"></a>点结构 1
-**点**结构定义 x*-* 和 y 坐标的点。  
+`POINT`结构定义 x*-* 和点的 y 坐标。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +39,10 @@ typedef struct tagPOINT {
   
 #### <a name="parameters"></a>参数  
  *x*  
- 指定的点的 x 坐标。  
+ 指定一个点的 x 坐标。  
   
  *y*  
- 指定的点的 y 坐标。  
+ 指定一个点的 y 坐标。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
