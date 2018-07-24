@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027935"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209295"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>备注
 
-`swap` 应优先于 **iter_swap** 使用，它包含在 C++ Standard 中用于实现向后兼容。 如果 `Fit1` 和 `Fit2` 是前向迭代器，则 `iter_swap` ( `Fit1`, `Fit2` ) 等效于 `swap` ( * `Fit1`, \* `Fit2` )。
+`swap` 应优先于 **iter_swap** 使用，它包含在 C++ Standard 中用于实现向后兼容。 如果`Fit1`并`Fit2`是前向迭代器，则`iter_swap`( `Fit1`， `Fit2` )，等效于`swap`( \* `Fit1`， \* `Fit2` )。
 
 输入前向迭代器的值类型必须具有相同的值。
 
