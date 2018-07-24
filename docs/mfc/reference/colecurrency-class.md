@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596160b94370c4cb8ccbbe7a9003f893d9513a17
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028299"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208791"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 类
 封装 OLE 自动化的 `CURRENCY` 数据类型。  
@@ -350,7 +350,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="operator_star"></a>  COleCurrency::operator * 和 /  
+##  <a name="operator_star"></a>  COleCurrency::operator\*和 /  
  可用于缩放`COleCurrency`的整数值的值。  
   
 ```  
@@ -370,7 +370,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="operator_star_div_eq"></a>  COleCurrency::operator * =、 / =  
+##  <a name="operator_star_div_eq"></a>  COleCurrency::operator \*=、 / =  
  允许你可以扩展这`COleCurrency`的整数值的值。  
   
 ```  

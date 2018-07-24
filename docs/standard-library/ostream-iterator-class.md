@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963519"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207914"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 类
 
@@ -68,9 +68,9 @@ ostream_iterator 类必须满足对输出迭代器的需求。 可使用 `ostrea
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`。|
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostream_iterator`。|
-|[operator=](#op_eq)|用于实现输出迭代器表达式 * `i` = `x` 以写入输出流的赋值运算符。|
+|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`以写入输出流。|
 
 ## <a name="requirements"></a>要求
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>ostream_iterator::operator=
 
-用于实现输出迭代器表达式 * `i` = `x` 以写入输出流的赋值运算符。
+用于实现输出迭代器表达式的赋值运算符\* `i`  =  `x`以写入输出流。
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="remarks"></a>备注
 
-`ostream_iterator` 必须满足的输出迭代器的要求要求仅表达式 * `ii` = `t` 有效，并且本身未提及 operator 或 operator=。 该成员运算符将返回 `*this`。
+输出迭代器的需求，`ostream_iterator`必须满足仅要求表达式\* `ii`  =  `t`有效并且本身未提及运算符或运算符 = 靠自己。 此成员运算符将返回 `*this`。
 
 ### <a name="example"></a>示例
 

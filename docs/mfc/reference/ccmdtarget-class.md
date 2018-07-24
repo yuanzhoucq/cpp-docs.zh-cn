@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027649"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208684"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  指针到指向`ITypeInfo`接口。  
   
 ### <a name="return-value"></a>返回值  
- 一个 HRESULT，指示调用成功与否。 如果成功，* *ppTypeInfo*指向类型信息接口。  
+ 一个 HRESULT，指示调用成功与否。 如果成功， \* *ppTypeInfo*指向类型信息接口。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  获取一个指针指向的类型库。  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  指针到指向`ITypeLib`接口。  
   
 ### <a name="return-value"></a>返回值  
- 一个 HRESULT，指示调用成功与否。 如果成功，* *ppTypeLib*指向类型库接口。  
+ 一个 HRESULT，指示调用成功与否。 如果成功， \* *ppTypeLib*指向类型库接口。  
   
 ### <a name="remarks"></a>备注  
  派生的类应重写此成员函数 (如果未重写，`GetTypeLib`返回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还可实现`GetTypeInfoCount`和`GetTypeLibCache`。  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode*值|*pExtra*值|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>示例  

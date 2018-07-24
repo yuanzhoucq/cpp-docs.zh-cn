@@ -1,5 +1,5 @@
 ---
-title: CBulkRowset 类 |Microsoft 文档
+title: CBulkRowset 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,117 @@ f1_keywords:
 - ATL::CBulkRowset<TAccessor>
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
+- CBulkRowset::AddRefRows
+- AddRefRows
+- CBulkRowset.AddRefRows
+- ATL.CBulkRowset<TAccessor>.AddRefRows
+- ATL::CBulkRowset::AddRefRows
+- CBulkRowset<TAccessor>::AddRefRows
+- ATL.CBulkRowset.AddRefRows
+- ATL::CBulkRowset<TAccessor>::AddRefRows
+- ATL.CBulkRowset<TAccessor>.CBulkRowset
+- ATL::CBulkRowset::CBulkRowset
+- CBulkRowset.CBulkRowset
+- CBulkRowset::CBulkRowset
+- ATL.CBulkRowset.CBulkRowset
+- ATL::CBulkRowset<TAccessor>::CBulkRowset
+- CBulkRowset<TAccessor>::CBulkRowset
+- CBulkRowset
+- ATL.CBulkRowset.MoveFirst
+- CBulkRowset<TAccessor>.MoveFirst
+- ATL.CBulkRowset<TAccessor>.MoveFirst
+- ATL::CBulkRowset::MoveFirst
+- ATL::CBulkRowset<TAccessor>::MoveFirst
+- CBulkRowset::MoveFirst
+- CBulkRowset<TAccessor>::MoveFirst
+- CBulkRowset.MoveFirst
+- CBulkRowset.MoveLast
+- ATL.CBulkRowset.MoveLast
+- ATL::CBulkRowset<TAccessor>::MoveLast
+- CBulkRowset::MoveLast
+- CBulkRowset<TAccessor>.MoveLast
+- ATL::CBulkRowset::MoveLast
+- ATL.CBulkRowset<TAccessor>.MoveLast
+- CBulkRowset<TAccessor>::MoveLast
+- MoveLast
+- ATL.CBulkRowset<TAccessor>.MoveNext
+- ATL::CBulkRowset::MoveNext
+- CBulkRowset::MoveNext
+- ATL.CBulkRowset.MoveNext
+- CBulkRowset.MoveNext
+- ATL::CBulkRowset<TAccessor>::MoveNext
+- CBulkRowset<TAccessor>.MoveNext
+- CBulkRowset<TAccessor>::MoveNext
+- CBulkRowset::MovePrev
+- MovePrev
+- CBulkRowset<TAccessor>::MovePrev
+- ATL::CBulkRowset<TAccessor>::MovePrev
+- CBulkRowset<TAccessor>.MovePrev
+- ATL::CBulkRowset::MovePrev
+- CBulkRowset.MovePrev
+- ATL.CBulkRowset.MovePrev
+- ATL.CBulkRowset<TAccessor>.MovePrev
+- CBulkRowset<TAccessor>::MoveToBookmark
+- CBulkRowset.MoveToBookmark
+- MoveToBookmark
+- ATL.CBulkRowset.MoveToBookmark
+- CBulkRowset::MoveToBookmark
+- ATL::CBulkRowset<TAccessor>::MoveToBookmark
+- ATL::CBulkRowset::MoveToBookmark
+- CBulkRowset.MoveToRatio
+- ATL::CBulkRowset::MoveToRatio
+- MoveToRatio
+- CBulkRowset::MoveToRatio
+- ATL.CBulkRowset<TAccessor>.MoveToRatio
+- ATL::CBulkRowset<TAccessor>::MoveToRatio
+- ATL.CBulkRowset.MoveToRatio
+- CBulkRowset<TAccessor>::MoveToRatio
+- ReleaseRows
+- ATL.CBulkRowset<TAccessor>.ReleaseRows
+- ATL::CBulkRowset<TAccessor>::ReleaseRows
+- ATL.CBulkRowset.ReleaseRows
+- CBulkRowset<TAccessor>::ReleaseRows
+- ATL::CBulkRowset::ReleaseRows
+- CBulkRowset::ReleaseRows
+- CBulkRowset.ReleaseRows
+- ATL.CBulkRowset.SetRows
+- CBulkRowset::SetRows
+- CBulkRowset<TAccessor>.SetRows
+- ATL.CBulkRowset<TAccessor>.SetRows
+- CBulkRowset<TAccessor>::SetRows
+- ATL::CBulkRowset<TAccessor>::SetRows
+- ATL::CBulkRowset::SetRows
+- CBulkRowset.SetRows
+- SetRows
 dev_langs:
 - C++
 helpviewer_keywords:
 - CBulkRowset class
+- AddRefRows method
+- CBulkRowset class, constructor
+- MoveFirst method
+- MoveLast method
+- MoveNext method
+- MovePrev method
+- MoveToBookmark method
+- MoveToRatio method
+- ReleaseRows method
+- SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7dddf645b8795b12f6da70081327366b62946303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090713"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207622"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
-提取和操作要通过检索多个行句柄，通过调用一次处理中大容量的数据行。  
+提取和操作将通过检索一次调用多个行句柄中大容量的数据处理的行。  
   
 ## <a name="syntax"></a>语法
 
@@ -38,9 +130,12 @@ template <class TAccessor>
 class CBulkRowset : public CRowset<TAccessor>  
 ```  
   
-#### <a name="parameters"></a>参数  
- `TAccessor`  
+### <a name="parameters"></a>参数  
+ *TAccessor*  
  一个访问器类。  
+
+## <a name="requirements"></a>要求  
+ **标头:** atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -48,24 +143,172 @@ class CBulkRowset : public CRowset<TAccessor>
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)|递增引用计数。|  
-|[CBulkRowset](../../data/oledb/cbulkrowset-cbulkrowset.md)|构造函数。|  
-|[MoveFirst](../../data/oledb/cbulkrowset-movefirst.md)|检索数据，执行新的大容量提取必要的第一行。|  
-|[MoveLast](../../data/oledb/cbulkrowset-movelast.md)|将移动到最后一个行。|  
-|[MoveNext](../../data/oledb/cbulkrowset-movenext.md)|检索下的一行数据。|  
-|[MovePrev](../../data/oledb/cbulkrowset-moveprev.md)|移动到的上一行。|  
-|[MoveToBookmark](../../data/oledb/cbulkrowset-movetobookmark.md)|该书签从提取用书签标记的行或指定的偏移量处的行。|  
-|[MoveToRatio](../../data/oledb/cbulkrowset-movetoratio.md)|提取行的行集中的小数部分位置 （从开始）。|  
-|[ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)|设置当前行 (**m_nCurrentRow**) 为零，并释放所有行。|  
-|[SetRows](../../data/oledb/cbulkrowset-setrows.md)|设置一次调用可以检索的行句柄数。|  
+|[AddRefRows](#addrefrows)|递增引用计数。|  
+|[CBulkRowset](#cbulkrowset)|构造函数。|  
+|[MoveFirst](#movefirst)|检索数据、 执行新的大容量提取必要的第一行。|  
+|[MoveLast](#movelast)|将移动到最后一个行。|  
+|[MoveNext](#movenext)|检索下的一行数据。|  
+|[MovePrev](#moveprev)|移动到上一行。|  
+|[MoveToBookmark](#movetobookmark)|从该书签提取用书签标记的行或指定的偏移量处的行。|  
+|[MoveToRatio](#movetoratio)|提取从行集中的小数位置开始的行。|  
+|[ReleaseRows](#releaserows)|设置当前行 (`m_nCurrentRow`) 为零，并发布的所有行。|  
+|[SetRows](#setrows)|设置一次调用要检索的行句柄数。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示使用`CBulkRowset`类。  
+ 下面的示例说明如何使用`CBulkRowset`类。  
   
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+
+## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
+调用[irowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.aspx)来增加当前从 bulk 行集检索到的所有行的引用计数。  
   
-## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT AddRefRows() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。 
+  
+## <a name="cbulkrowset"></a> Cbulkrowset:: Cbulkrowset
+创建一个新的 `CBulkRowset` 对象并将默认行数设置为 10。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+CBulkRowset();  
+  
+```  
+
+## <a name="movefirst"></a> Cbulkrowset:: Movefirst
+检索数据的第一行。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT MoveFirst() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。
+
+## <a name="movelast"></a> Cbulkrowset:: Movelast
+将移动到最后一个行。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT MoveLast() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。  
+
+## <a name="movenext"></a> Cbulkrowset:: Movenext
+检索下的一行数据。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT MoveNext() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。 当已达到行集末尾时，返回 DB_S_ENDOFROWSET。 
+
+## <a name="moveprev"></a> Cbulkrowset:: Moveprev
+移动到上一行。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT MovePrev() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。  
+
+## <a name="movetobookmark"></a> Cbulkrowset:: Movetobookmark
+提取标记的书签或指定的偏移量处的行的行 (*lSkip*) 从该书签。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+   DBCOUNTITEM lSkip = 0) throw();  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *书签*  
+ [in] 标记要从其提取数据的位置的书签。  
+  
+ *lSkip*  
+ [in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是书签的行。 如果*lSkip*为 1，提取的第一行是标有书签的行后的行。 如果*lSkip*为-1，提取的第一行是标有书签的行前的行。  
+  
+### <a name="return-value"></a>返回值  
+ 请参阅[irowset:: Getdata](https://msdn.microsoft.com/library/ms716988.aspx)中*OLE DB 程序员参考*。 
+
+## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
+提取从行集中的小数位置开始的行。  
+  
+### <a name="syntax"></a>语法  
+  
+```
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+   DBCOUNTITEM nDenominator)throw();  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *nNumerator*  
+ [in]用于确定从其提取数据的小数位置分子。  
+  
+ *nDenominator*  
+ [in]用于确定从其提取数据的小数位置分母。  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。  
+  
+### <a name="remarks"></a>备注  
+ `MoveToRatio` 提取大致依据的公式如下行：  
+  
+ `(nNumerator *  RowsetSize ) / nDenominator`  
+  
+ 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](https://msdn.microsoft.com/library/ms709602.aspx)中*OLE DB 程序员参考*。   
+
+## <a name="releaserows"></a> Cbulkrowset:: Releaserows
+调用[irowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx)要递减当前从 bulk 行集检索到的所有行的引用计数。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT ReleaseRows() throw();  
+  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。  
+
+## <a name="setrows"></a> Cbulkrowset:: Setrows
+设置每个调用检索的行句柄数量。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+      void SetRows(DBROWCOUNT nRows) throw();  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *nRows*  
+ [in] 行集的新大小（行数）。  
+  
+### <a name="remarks"></a>备注  
+ 如果调用此函数，则它必须在行集之前打开。
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

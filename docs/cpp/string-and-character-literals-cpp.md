@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942089"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208544"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- 请注意，`strlen()`并`wcslen()`不包括终止 null 字符，其大小等于字符串类型的元素大小的大小： char * 字符串上的一个字节，wchar_t 上的两个字节\*或 char16_t\*字符串，四个字节 char32_t\*字符串。  
+ 请注意，`strlen()`并`wcslen()`不包括终止 null 字符，其大小等于字符串类型的元素大小的大小： char 上一个字节\*字符串、 两个字节 wchar_t\*或 char16_t\*字符串和四个字节，char32_t 上\*字符串。  
   
  字符串文本的最大长度为 65535 字节。 此限制适用于窄字符串文本和宽字符串文本。  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>具有通用字符名称的字符串文本  
- 本机（非原始）字符串文本可能使用通用字符名称来表示任何字符，只要通用字符名称可被编码为字符串类型中的一个或多个字符。  例如，表示扩展字符的通用字符名称不能以使用 ANSI 代码页的窄字符串进行编码，但可以使用一些多字节代码页中的窄字符串、UTF-8 字符串或宽字符串进行编码。 在 C++11 中，Unicode 支持扩展由 char16_t * 和 char32_t\*字符串类型：  
+ 本机（非原始）字符串文本可能使用通用字符名称来表示任何字符，只要通用字符名称可被编码为字符串类型中的一个或多个字符。  例如，表示扩展字符的通用字符名称不能以使用 ANSI 代码页的窄字符串进行编码，但可以使用一些多字节代码页中的窄字符串、UTF-8 字符串或宽字符串进行编码。 在 C + + 11 中，Unicode 支持扩展的 char16_t\*和 char32_t\*字符串类型：  
   
 ```cpp  
 // ASCII smiling face  

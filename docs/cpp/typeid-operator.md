@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943057"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207447"
 ---
 # <a name="typeid-operator"></a>typeid 运算符
 ## <a name="syntax"></a>语法  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   对类的引用  
   
--   使用 * 取消引用的指针  
+-   使用取消引用指针 \*  
   
 -   带下标的指针（即 [ ]）。 （请注意，通常情况下，将下标与指向多态类型的指针一起使用不安全。）  
   

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337442"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209126"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 管理单个用户从登录到注销的已命名并受密码保护的数据库会话。  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>参数  
  *lpszDefaultUser*  
- 默认用户名。 用户名称是 1 到 20 个字符，包括字母字符、 重音的字符、 数字、 空格和符号除外:"（引号） / （正斜杠），\ （反斜杠）， \[ \] （方括号）: （冒号）、 &#124; (管道）、 \< (更少的登录比)，> (更高版本-号)，+ （加号）、 = （等于登录），;（分号），（逗号）、 （问号） * （星号），前导空格和控制字符 (ASCII 00 到 ASCII 31)。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
+ 默认用户名。 用户名称是 1 到 20 个字符，包括字母字符、 重音的字符、 数字、 空格和符号除外:"（引号） / （正斜杠），\ （反斜杠）， \[ \] （方括号）: （冒号）、 &#124; (管道）、 \< (更少的登录比)，> (更高版本-号)，+ （加号）、 = （等于登录），;（分号），（逗号）、 （问号） \* （星号），前导空格和控制字符 (ASCII 00 到 ASCII 31)。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
   
 ### <a name="remarks"></a>备注  
  默认用户名设置应用于在调用后创建的新工作区。 在创建后续工作区时，不需要指定中的用户名[创建](#create)调用。  

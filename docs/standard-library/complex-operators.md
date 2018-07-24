@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957693"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208671"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a>operator\*
 
 将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>参数
 
-*左*两个复数相加或相乘的复数的参数类型的数字的第一个 * 操作。
+*左*两个复数相加或相乘的复数的参数类型的数字的第一个\*操作。
 
-*右*两个复数相加或相乘的复数的参数类型的数字的第二个 * 操作。
+*右*两个复数相加或相乘的复数的参数类型的数字的第二个\*操作。
 
 ### <a name="return-value"></a>返回值
 

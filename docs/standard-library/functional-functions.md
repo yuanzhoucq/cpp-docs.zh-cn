@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9033ba128714edde2593a09fbfb46f9f65d195ae
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957446"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208645"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函数
 
@@ -957,9 +957,9 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="return-value"></a>返回值
 
-第一个模板函数返回一元函数 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`)。
+第一个模板函数返回一元函数[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`，**结果**> (\* `pfunc`)。
 
-第二个模板函数返回二元函数 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`)。
+第二个模板函数返回二元函数[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**， **Arg2**，**结果**> (\* `pfunc`)。
 
 ### <a name="remarks"></a>备注
 

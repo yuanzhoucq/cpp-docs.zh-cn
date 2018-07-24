@@ -1,5 +1,5 @@
 ---
-title: '如何： 转换 char * 字符串 system:: byte 数组 |Microsoft 文档'
+title: '如何： 将 char * 字符串到 system:: byte 数组 |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e42294ad2c2e0bef77d29f6d47a5373dc0f728bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1afb7548af704fc81d7cab8ac4e1a2476d661717
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129484"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209438"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何：将 char * 字符串转换为 System::Byte 数组
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何： 将 char 转换\*system:: byte 数组的字符串
 要转换的最有效方法`char *`字符串以<xref:System.Byte>数组是使用<xref:System.Runtime.InteropServices.Marshal>类。  
   
 ## <a name="example"></a>示例  

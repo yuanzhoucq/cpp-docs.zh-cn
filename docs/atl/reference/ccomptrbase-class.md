@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885446"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209217"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 此类为使用基于 COM 的内存例程的智能指针类提供了基础。  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|强制转换运算符。|  
 |[CComPtrBase::operator ！](#operator_not)|NOT 运算符。|  
 |[CComPtrBase::operator （& a)](#operator_amp)|& 运算符。|  
-|[CComPtrBase::operator *](#operator_star)|* 运算符。|  
+|[CComPtrBase::operator *](#operator_star)|\* 运算符。|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小于-运算符。|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|相等运算符。|  
 |[CComPtrBase::operator->](#operator_ptr)|指针到成员运算符中。|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>返回值  
  返回通过指向的对象的地址`CComPtrBase`对象。  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * 运算符。  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ \* 运算符。  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>返回值  
  如果由当前对象的指针，则返回 true 小于要比较的指针。  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  强制转换运算符。  
   
 ```  

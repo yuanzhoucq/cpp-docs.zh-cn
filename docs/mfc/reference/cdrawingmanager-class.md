@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337416"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209165"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 `CDrawingManager`类实现复杂的绘图算法。  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>备注  
  此方法会失败并出错，如果任一*k1*或*k2*小于零。 如果这些参数设置为 0，该方法返回`RGB(0, 0, 0)`。  
   
- 使用以下公式计算加权的比率: (color1 * 版 k1 + color2 \* k2) /(k1 + k2)。 加权的比率确定后，该方法计算混合的颜色的亮度。 然后将相乘的亮度*dblLumRatio*。 如果值大于 1.0，方法会将混合的颜色的亮度设置为新值。 否则，亮度是设置为 1.0。  
+ 使用以下公式计算加权的比率: (color1 \* k1 + color2 \* k2) /(k1 + k2)。 加权的比率确定后，该方法计算混合的颜色的亮度。 然后将相乘的亮度*dblLumRatio*。 如果值大于 1.0，方法会将混合的颜色的亮度设置为新值。 否则，亮度是设置为 1.0。  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  源 DC 在给定矩形内的内容旋转 90 度。  
