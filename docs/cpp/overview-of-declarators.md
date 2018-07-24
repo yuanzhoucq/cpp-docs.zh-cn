@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942403"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208557"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，如类型和存储类的属性传递。 在本部分中并在讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- 可能如下所示的声明**int**指针和函数返回`int*`，但它不是。  那是因为 * 是 `i` 的声明符的一部分，而不是 `f` 的声明符的一部分。  
+ 可能如下所示的声明**int**指针和函数返回`int*`，但它不是。  这是因为\*属于的声明符`i`，它不属于的声明符`f`。  
   
  **用 typedef 简化声明符语法**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - 并*指针运算符*是之一：  
   
-  - * [cv 限定符]  
-  - & [cv 限定符]:: 嵌套名称说明符 * [cv 限定符]  
+  - \* [cv 限定符]  
+  - & [cv 限定符]:: 嵌套名称说明符\*[cv 限定符]  
 
   
  由于一个声明符可能包含多个声明符，因此可以使用上述规则来构造更复杂的派生类型，如指针数组和返回函数指针数组的函数。  若要制定构造的所有步骤，请以呈现基数据类型的标识符开头，并应用上面的语法规则（将上一个表达式作为 `declarator`）。  应用语法规则的顺序应该与用英语表示表达式的方法相反。  如果将应用*指针运算符*语法规则应用于数组或函数表达式，如果你想指向数组或函数，如下面的表中的最后一行中所示使用括号。  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |10 的数组|`(*i)[10]`|4|  
 |指针|`*((*i)[10])`|6，然后 5|  
   
- 当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  本主题[解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md)介绍了如何读取更复杂的声明符语法。  主题是适用于 C 和 C++，但在 C++，任何位置 * 用于指示指针，一个限定的名称，例如 MyClass::\*可能用于指定指向类的成员的指针。
+ 当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  本主题[解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md)介绍了如何读取更复杂的声明符语法。  主题是适用于 C 和 c + +，虽然在 c + +，任何地方\*用来指示指针，如 MyClass 的限定名称::\*可用于指定一个指向类的成员。

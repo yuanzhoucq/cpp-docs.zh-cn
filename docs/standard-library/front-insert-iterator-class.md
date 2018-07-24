@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964380"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207606"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
 
@@ -63,9 +63,9 @@ class front_insert_iterator;
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用用于实现前端插入的输出迭代器表达式 * `i` = `x` 的运算符。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
 |[operator++](#op_add_add)|将 `front_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现前端插入的输出迭代器表达式 * `i` = `x`。|
+|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
 
 ## <a name="requirements"></a>要求
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: operator\*
 
 取消引用返回其所寻址元素的插入迭代器。
 

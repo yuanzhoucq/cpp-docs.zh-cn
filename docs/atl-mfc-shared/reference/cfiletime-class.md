@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880942"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208658"
 ---
 # <a name="cfiletime-class"></a>CFileTime 类
 此类提供用于管理与文件相关联的日期和时间值的方法。  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |成员变量|100 纳秒间隔数|  
 |---------------------|-----------------------------------------|  
 |毫秒|10,000|  
-|秒|毫秒 * 1000|  
-|分钟|第二个 * 60|  
-|小时|分钟 * 60|  
-|天|小时 * 24|  
-|周|一天 * 7|  
+|秒|毫秒\*1,000|  
+|分钟|第二个\*60|  
+|小时|分钟\*60|  
+|天|小时\*24|  
+|周|一天\*7|  
   
  **请注意**不是所有的文件系统可以记录创建和上次访问时间并不是所有的文件系统记录这些相同的方式。 示例中的，在 Windows NT FAT 文件系统上，则可以创建时具有的分辨率为 10 毫秒、 写入时具有的分辨率为 2 秒和访问时间具有的分辨率为 1 天 （访问日期）。 在 NTFS 中，访问时间程序的分辨率为 1 小时。 此外，FAT 记录在磁盘上的时间以本地时间，但 NTFS 在 UTC 中记录在磁盘上的时间。 有关详细信息，请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
   

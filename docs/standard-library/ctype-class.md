@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954768"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208632"
 ---
 # <a name="ctype-class"></a>ctype 类
 
@@ -275,7 +275,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`,* `ptr`) 为 true。
+受保护的成员函数返回最小的指针`ptr`范围内 [ `first`， `last`) 为其[do_is](#do_is)( `maskVal`， \* `ptr`) 为 true。
 
 ### <a name="example"></a>示例
 
@@ -306,7 +306,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`, * `ptr`) 为 false。
+受保护的成员函数返回最小的指针`ptr`范围内 [ `first`， `last`) 为其[do_is](#do_is)( `maskVal`， \* `ptr`) 为 false。
 
 ### <a name="example"></a>示例
 

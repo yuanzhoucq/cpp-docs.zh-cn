@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336769"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208005"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 提供 Windows 公共 SysLink 控件的功能。  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |参数|描述|  
 |---------------|-----------------|  
 |[in]*cxMaxWidth*|该链接，以像素为单位的最大宽度。|  
-|[out 一个] * *pSize*|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|  
+|[out]\* *pSize*|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|  
   
 ### <a name="return-value"></a>返回值  
  链接文本，以像素为单位的首选的高度。 返回值是相同的值*cy*的成员`SIZE`结构。  

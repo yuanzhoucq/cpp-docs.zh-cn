@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator void * * 运算符 |Microsoft 文档'
+title: 'Comptrref:: Operator void * * 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3993cb0a5ce55996ae2ff793e83453040455aa7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887077"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207847"
 ---
-# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void** 运算符
+# <a name="comptrrefoperator-void-operator"></a>Comptrref:: Operator void\* \*运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>备注  
- 删除当前 ComPtrRef 对象，作为指针-到-指针-到由 ComPtrRef 对象表示的接口的指针转换`void`，然后返回强制转换指针。  
+ 删除当前 ComPtrRef 对象，将强制转换为指针-到-指针-若要由 ComPtrRef 对象表示的接口的指针`void`，然后返回强制转换指针。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

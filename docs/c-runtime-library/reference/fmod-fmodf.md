@@ -1,5 +1,5 @@
 ---
-title: fmod、 fmodf，fmodl |Microsoft 文档
+title: fmod、 fmodf、 fmodl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,14 +39,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399031"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207528"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf、 fmodl
 
 计算浮点余数。
 
@@ -82,13 +82,13 @@ long double fmodl(
 
 ## <a name="return-value"></a>返回值
 
-**fmod**返回的浮点余数*x* / *y*。 如果值*y*为 0.0， **fmod**返回 quiet NaN。 璝惠表示形式通过一个静态 NaN **printf**系列，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**返回的浮点余数*x* / *y*。 如果的值*y*为 0.0， **fmod**返回静态 NaN。 有关安静 NaN 的表示形式**printf**系列，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fmod**函数计算的浮点余数*f*的*x* / *y*以便*x* = *我* * *y* + *f*，其中*我*是一个整数， *f*有相同的符号作为*x*，和数值的绝对值*f*小于绝对值的数值的*y*。
+**Fmod**函数计算的浮点余数*f*的*x* / *y*以便*x* = *我* \* *y* + *f*，其中*我*是一个整数， *f*具有相同的符号*x*，和值的绝对值*f*是值的绝对值小于*y*。
 
-C + + 允许重载，因此您可以调用的重载**fmod**采用并返回**float**和**长** **double**值。 在 C 程序中， **fmod**始终采用两个**double**自变量和返回**double**。
+C + + 允许重载，因此可以调用的重载**fmod**采用并返回**float**并**长** **double**值。 在 C 程序中， **fmod**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

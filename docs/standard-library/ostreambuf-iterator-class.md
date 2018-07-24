@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958248"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207716"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
 
@@ -78,7 +78,7 @@ ostreambuf_iterator 类必须满足输出迭代器的需求。 可使用 `ostrea
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`。|
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|
 |[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。
 

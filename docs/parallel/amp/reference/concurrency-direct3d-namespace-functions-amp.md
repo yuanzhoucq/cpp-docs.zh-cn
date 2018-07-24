@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: direct3d 命名空间函数 (AMP) |Microsoft 文档'
+title: Concurrency::direct3d 命名空间函数 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,14 +28,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693723"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208947"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空间函数 (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空间函数 (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
@@ -65,8 +65,8 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  返回自变量的绝对值。  
   
-##  <a name="clamp"></a>  夹具  
- 计算其限制为第二个和第三个指定的参数定义范围内第一个指定自变量的值。  
+##  <a name="clamp"></a>  clamp  
+ 计算限制到由第二个和第三个指定的参数定义的范围内的第一个指定参数的值。  
   
 ```  
 inline float clamp(
@@ -86,16 +86,16 @@ inline int clamp(
  要被限制的值  
   
  `_Min`  
- 夹紧范围的下限。  
+ 限制范围的下限。  
   
  `_Max`  
- 夹紧范围的上限。  
+ 限制范围的上限。  
   
 ### <a name="return-value"></a>返回值  
  限制的值`_X`。  
   
 ##  <a name="countbits"></a>  countbits  
- 计算 _X 中设置位的数目  
+ 计算 _X 中的设置位的数目  
   
 ```  
 inline unsigned int countbits(unsigned int _X) restrict(amp);
@@ -106,7 +106,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
  无符号整数值  
   
 ### <a name="return-value"></a>返回值  
- 返回 _X 中的一组比特数  
+ 返回 _X 中的设置位数  
 
 ## <a name="create_accelerator_view"></a> create_accelerator_view  
 创建[accelerator_view](accelerator-view-class.md)从指针到 Direct3D 设备接口的对象。  
@@ -126,30 +126,30 @@ accelerator_view create_accelerator_view(
   
 #### <a name="parameters"></a>参数  
  `_Accelerator`  
- 新 accelerator_view 是要创建快捷键。  
+ 新的 accelerator_view 是要创建快捷键。  
   
  `_D3D_device`  
  指向 Direct3D 设备接口的指针。  
   
  `_Disable_timeout`  
- 一个布尔型参数，用于指定是否应为新创建的 accelerator_view 禁用超时。 这对应于用于创建 Direct3D 设备的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 标志，用于指示操作系统应允许采取多个 2 秒，执行，而每个 Windows 超时将设备重置的工作负荷检测和恢复机制。 如果你需要在 accelerator_view 上执行耗时的任务，则建议使用此标志。  
+ 一个布尔参数，指定是否应为新创建的 accelerator_view 禁用超时。 这对应于 Direct3D 设备创建的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 标志，用于指示操作系统是否应允许采用多个 2 秒，而不必重置设备在每个 Windows 超时值执行的工作负荷检测和恢复机制。 如果您需要在 accelerator_view 上执行耗时任务，则建议使用此标志。  
   
  `_Qmode`  
  [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)要用于新创建的 accelerator_view。 此参数具有默认值为`queuing_mode_automatic`。  
   
 ## <a name="return-value"></a>返回值  
- `accelerator_view`创建来自传入 Direct3D 设备接口的对象。  
+ `accelerator_view`从传入的 Direct3D 设备接口创建的对象。  
   
 ## <a name="remarks"></a>备注  
- 此函数会创建一个新`accelerator_view`从现有指针到 Direct3D 设备接口的对象。 如果函数调用成功，该参数的引用计数会递增的方式`AddRef`调用界面。 不再需要 DirectX 代码中时，你可以安全地释放该对象。 如果方法调用失败， [runtime_exception](runtime-exception-class.md)引发。  
+ 此函数创建一个新`accelerator_view`从现有指针到 Direct3D 设备接口的对象。 如果函数调用成功，该参数的引用计数会递增通过`AddRef`对接口的调用。 不再需要在您的 DirectX 代码中时，可以安全地释放对象。 如果方法调用失败， [runtime_exception](runtime-exception-class.md)引发。  
   
- `accelerator_view`通过使用此函数创建的对象是线程安全的。 你必须同步并发使用`accelerator_view`对象。 未同步的并发使用`accelerator_view`对象和原始 ID3D11Device 接口会导致未定义的行为。  
+ `accelerator_view`通过使用此函数创建的对象是线程安全。 你必须同步并发使用`accelerator_view`对象。 非同步并发使用的`accelerator_view`对象和原始 ID3D11Device 接口导致未定义的行为。  
   
- C + + AMP 运行时提供详细的错误信息，在调试模式下使用 D3D 调试层，如果你使用`D3D11_CREATE_DEVICE_DEBUG`标志。  
+ C + + AMP 运行时提供详细的错误信息在调试模式下使用 D3D 调试层，如果您使用`D3D11_CREATE_DEVICE_DEBUG`标志。  
   
   
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock  
- 获取对安全地执行与 accelerator_view 共享的资源执行 D3D 操作各种非法 accelerator_view 的锁。 Accelerator_view 和内部与此 accelerator_view 相关联的所有 c + + AMP 资源考虑此锁，执行操作时，将阻止另一个线程保持 D3D 访问锁。 此锁，则非递归： 它是未定义的行为，从已持有锁的线程调用此函数。 它是未定义的行为在 accelerator_view 或任何从持有 D3D 访问锁的线程 accelerator_view 与关联的数据容器上执行操作。 另请参阅 scoped_d3d_access_lock，基于范围的 D3D 访问锁 RAII 样式类。  
+ 获取一个锁出于安全执行 D3D 操作在与 accelerator_view 共享的资源。 Accelerator_view 和所有与此 accelerator_view 内部关联的 c + + AMP 资源会采用此锁时执行的操作和其他线程占有 D3D 访问锁时，将阻止。 此锁为非递归： 它是未定义从已经持有锁的线程调用此函数的行为。 它是未定义的行为来执行操作的 accelerator_view 或任何与保留 D3D 访问锁的线程的 accelerator_view 相关联的数据容器。 也可参见 scoped_d3d_access_lock，基于范围的 D3D 访问锁的 RAII 样式类。  
   
 ```  
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -157,10 +157,10 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>参数  
  `_Av`  
- 若要锁定 accelerator_view。  
+ 要锁定的 accelerator_view。  
   
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock  
- 尝试获取对 accelerator_view 的 D3D 访问锁定而不阻止。  
+ 尝试获取 accelerator_view 上的 D3D 访问锁而不会阻塞。  
   
 ```  
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -168,13 +168,13 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>参数  
  `_Av`  
- 若要锁定 accelerator_view。  
+ 要锁定的 accelerator_view。  
   
 ### <a name="return-value"></a>返回值  
- 如果已获取锁，则为 true 或 false，如果它当前由另一个线程。  
+ 如果已获取锁，则为 true 或 false，如果当前由另一个线程。  
   
 ##  <a name="d3d_access_unlock"></a>  d3d_access_unlock  
- 释放 D3D 访问锁在给定的 accelerator_view 上。 如果调用线程 accelerator_view 不保持锁定，结果不确定。  
+ 发布给定 accelerator_view 上的 D3D 访问锁。 如果调用线程不拥有 accelerator_view 上的锁结果不确定。  
   
 ```  
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -182,10 +182,10 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>参数  
  `_Av`  
- Accelerator_view，为释放锁。  
+ 将释放该锁的 accelerator_view。  
   
 ##  <a name="firstbithigh"></a>  firstbithigh  
- 获取 _X，开头最高顺序位并转向最低顺序位中的第一个设置位的位置。  
+ 获取 _X，开头为最高顺序位及位移至最低顺序位中的第一组位的位置。  
   
 ```  
 inline int firstbithigh(int _X) restrict(amp);
@@ -196,10 +196,10 @@ inline int firstbithigh(int _X) restrict(amp);
  整数值  
   
 ### <a name="return-value"></a>返回值  
- 第一个设置位的位置  
+ 第一组位的位置  
   
 ##  <a name="firstbitlow"></a>  firstbitlow  
- 获取 _X，开头最低顺序位并围绕最高顺序位工作中的第一个设置位的位置。  
+ 获取 _X，从最低顺序位开始，从而最高顺序位中的第一组位的位置。  
   
 ```  
 inline int firstbitlow(int _X) restrict(amp);
@@ -210,10 +210,10 @@ inline int firstbitlow(int _X) restrict(amp);
  整数值  
   
 ### <a name="return-value"></a>返回值  
- 返回的第一个设置位的位置  
+ 返回第一组位的位置  
   
 ##  <a name="get_buffer"></a>  get_buffer  
- 获取 Direct3D 缓冲区接口基础指定的数组。  
+ 获取指定的数组的基础 Direct3D 缓冲区接口。  
   
 ```  
 template<
@@ -232,10 +232,10 @@ IUnknown *get_buffer(
  数组的秩。  
   
  `_Array`  
- 在为其返回基础 Direct3D 缓冲区接口 Direct3D accelerator_view 数组。  
+ 一个数组，为其返回基础 Direct3D 缓冲区接口 Direct3D accelerator_view 上。  
   
 ### <a name="return-value"></a>返回值  
- 对应于基础数组的 Direct3D 缓冲区 IUnknown 接口指针。  
+ 对应于数组的基础 Direct3D 缓冲区 IUnknown 接口指针。  
   
 ##  <a name="imax"></a>  imax  
  确定自变量的最大数值  
@@ -276,7 +276,7 @@ inline int imin(
  返回自变量的最小数值  
   
 ##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
- 返回一个布尔型标志，该值指示是否对指定 accelerator_view 禁用超时。 这对应于用于创建 Direct3D 设备的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 标志。  
+ 返回一个布尔标志，指示是否针对 accelerator_view 禁用超时。 这对应于 Direct3D 设备创建的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 标志。  
   
 ```  
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -284,13 +284,13 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
   
 ### <a name="parameters"></a>参数  
  `_Accelerator_view`  
- Accelerator_view，为查询设置禁用的超时值。  
+ 超时禁用设置要为进行查询的 accelerator_view。  
   
 ### <a name="return-value"></a>返回值  
- 一个布尔型标志，该值指示是否对指定 accelerator_view 禁用超时。  
+ 布尔标志，指示是否针对 accelerator_view 禁用超时。  
   
 ##  <a name="mad"></a>  mad  
- 计算产品的第一个和第二个指定的自变量，然后添加第三个指定的自变量。  
+ 计算第一个和第二个指定参数的产品，然后添加第三个指定的参数。  
   
 ```  
 inline float mad(
@@ -319,19 +319,19 @@ inline unsigned int mad(
   
 ### <a name="parameters"></a>参数  
  `_X`  
- 第一个指定自变量。  
+ 指定的第一个参数。  
   
  `_Y`  
- 第二个指定的自变量。  
+ 第二个指定的参数。  
   
  `_Z`  
- 第三个指定的自变量。  
+ 第三个指定的参数。  
   
 ### <a name="return-value"></a>返回值  
- 结果`_X`  *  `_Y`  +  `_Z`。  
+ 结果`_X` \* `_Y`  +  `_Z`。  
   
 ##  <a name="make_array"></a>  make_array  
- 创建从 Direct3D 缓冲区接口指针的数组。  
+ 从 Direct3D 缓冲区接口指针创建一个数组。  
   
 ```  
 template<
@@ -349,19 +349,19 @@ array<value_type, _Rank> make_array(
  要创建的数组元素类型。  
   
  `_Rank`  
- 要创建数组的秩。  
+ 要创建的数组的秩。  
   
  `_Extent`  
- 介绍数组聚合的形状的范围。  
+ 描述数组聚合形状的范围。  
   
  `_Rv`  
- 数组是要创建 D3D 快捷键视图。  
+ 数组是要创建 D3D 加速器视图。  
   
  `_D3D_buffer`  
- 要创建从数组的 D3D 缓冲区的 IUnknown 接口指针。  
+ 若要创建从数组的 D3D 缓冲区 IUnknown 接口指针。  
   
 ### <a name="return-value"></a>返回值  
- 使用提供的 Direct3D 缓冲区创建数组。  
+ 创建使用提供的 Direct3D 缓冲区的数组。  
   
 ##  <a name="noise"></a>  干扰  
  通过采用 Perlin 噪音算法生成一个随机值  
@@ -378,7 +378,7 @@ inline float noise(float _X) restrict(amp);
  返回在一个介于 -1 和 1 之间的 Perlin 噪音值  
   
 ##  <a name="radians"></a>  弧度为单位  
- 将 _X 从度数转换成弧度  
+ 将 _X 从度数转换为弧度  
   
 ```  
 inline float radians(float _X) restrict(amp);
@@ -392,7 +392,7 @@ inline float radians(float _X) restrict(amp);
  返回从度数转换到弧度的 _X。  
   
 ##  <a name="rcp"></a>  rcp  
- 通过使用快速近似计算指定的自变量的倒数。  
+ 通过使用快速近似计算指定参数的倒数。  
   
 ```  
 inline float rcp(float _X) restrict(amp);
@@ -403,13 +403,13 @@ inline double rcp(double _X) restrict(amp);
   
 ### <a name="parameters"></a>参数  
  `_X`  
- 为其计算与倒数值。  
+ 要为其计算倒数值。  
   
 ### <a name="return-value"></a>返回值  
- 指定的自变量的倒数。  
+ 指定的参数的倒数。  
   
 ##  <a name="reversebits"></a>  reversebits  
- _X 中位的顺序反转  
+ 颠倒 _X 中位的顺序  
   
 ```  
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
@@ -423,7 +423,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
  以 _X 中位的反序的顺序返回值  
   
 ##  <a name="saturate"></a>  saturate  
- Clamps 的 0 到 1 范围内的 _X  
+ 将为 0 到 1 范围内的 _X 夹紧  
   
 ```  
 inline float saturate(float _X) restrict(amp);
@@ -437,7 +437,7 @@ inline float saturate(float _X) restrict(amp);
  返回固定于 0 和 1 之间的 _X  
   
 ##  <a name="sign"></a>  登录  
- 确定指定的自变量的符号。  
+ 确定指定的参数的符号。  
   
 ```  
 inline int sign(int _X) restrict(amp);
@@ -448,10 +448,10 @@ inline int sign(int _X) restrict(amp);
  整数值  
   
 ### <a name="return-value"></a>返回值  
- 自变量的符号。  
+ 参数的符号。  
   
 ##  <a name="smoothstep"></a>  smoothstep  
- 如果 _X 处于范围 [_Min，_Max] 0 和 1 之间，返回平滑 Hermite 内插。  
+ 如果 _X 处于范围 [_Min，_Max] 将返回介于 0 和 1 之间平滑的 Hermite 插值。  
   
 ```  
 inline float smoothstep(

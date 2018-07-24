@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 atomic 构造 |Microsoft 文档
+title: 2.6.4 atomic 构造 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688123"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208128"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 构造
-`atomic`指令可确保特定内存位置而不是将其公开到的多个可能性的更新是以原子方式，同时编写线程。 语法`atomic`指令是，如下所示：  
+`atomic`指令可确保特定的内存位置，而不是将其公开都会向可能的多个以原子方式，更新同时编写线程。 语法`atomic`指令是按如下所示：  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
@@ -42,17 +42,17 @@ ms.locfileid: "33688123"
   
 -   *x*是具有标量类型的左值表达式。  
   
--   *expr*是标量类型的表达式，它不引用指定的对象*x*。  
+-   *expr*是与标量类型的表达式，它不引用指定的对象*x*。  
   
--   `binop` 而不是重载的运算符之一的 +、 *、-、 /、 &、 ^， &#124;，<\<，或 >>。  
+-   `binop` 重载的运算符并不是 +、 \*、-、 /、 &、 ^， &#124;，<\<，或 >>。  
   
- 尽管它是实现定义是否实现替换所有`atomic`指令与**关键**指令具有相同的唯一*名称*、`atomic`指令允许更好的优化。 提供了通常硬件说明可以执行开销最少的原子更新。  
+ 尽管它是实现定义的实现是否替换所有`atomic`指令与**关键**指令必须具有相同唯一*名称*，则`atomic`指令允许更好的优化。 提供了硬件说明通常可以执行系统开销最少的原子更新。  
   
- 负载和指定的对象的存储区*x*是原子; 的评估*expr*不是原子的。 若要避免争用条件，应该用进行保护的并行中的位置的所有更新`atomic`指令，除了那些认为是免费的争用条件。  
+ 负载和指定的对象的应用商店*x*是原子; 的计算*expr*不是原子的。 若要避免出现争用情况，并行中的位置的所有更新应都保护与`atomic`指令，除了那些已知可免费的争用条件。  
   
- 限制到`atomic`指令如下所示：  
+ 限制`atomic`指令如下所示：  
   
--   在整个程序的存储位置 x 的所有原子引用都需要有兼容的类型。  
+-   对在整个程序的存储位置 x 的所有原子引用需要具有兼容的类型。  
   
 ## <a name="examples"></a>示例：  
   

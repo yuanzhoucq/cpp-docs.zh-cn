@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143924aa3dccf00df1f5486a07d9324cea584a46
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884296"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208853"
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装`SID`（安全标识符） 结构。  
@@ -469,7 +469,7 @@ bool operator>=(
 ### <a name="return-value"></a>返回值  
  则为 TRUE *lhs*大于或等于*rhs*，否则为 FALSE。  
   
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*  
  强制转换`CSid`指向的对象`SID`（安全标识符） 结构。  
   
 ```  

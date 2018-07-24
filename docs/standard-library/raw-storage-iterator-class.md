@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954625"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208521"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
 
@@ -69,8 +69,8 @@ class raw_storage_iterator
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `ii` = `x` 的取消引用运算符。|
-|[operator=](#op_eq)|用于实现原始存储迭代器表达式 * `i` = `x` 以便在内存中进行存储的赋值运算符。|
+|[operator*](#op_star)|用于实现输出迭代器表达式的取消引用运算符\* `ii`  =  `x`。|
+|[operator=](#op_eq)|用于实现原始存储迭代器表达式是赋值运算符\* `i`  =  `x`在内存中存储的。|
 |[operator++](#op_add_add)|原始存储迭代器的前置递增和后置递增运算符。|
 
 ## <a name="requirements"></a>要求
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 该类型是模板参数 `ForwardIterator` 的同义词。
 
-## <a name="op_star"></a>raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator:: operator\*
 
 用于实现原始存储迭代器表达式 \* *ii* = *x* 的取消引用运算符。
 
