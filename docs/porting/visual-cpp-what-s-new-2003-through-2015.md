@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271391"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209048"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1494,7 +1494,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 - 别名模板。
 - 已删除的函数。
 - 非静态数据成员初始值设定项 (NSDMI)。
-- 默认的函数。 *
+- 默认的函数。 \*
 - 支持以下 ISO C99 语言功能：
 - _Bool
 - 复合文本。
