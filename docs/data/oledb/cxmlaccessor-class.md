@@ -1,5 +1,5 @@
 ---
-title: CXMLAccessor 类 |Microsoft 文档
+title: CXMLAccessor 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,34 @@ f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
 - ATL.CXMLAccessor
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
 dev_langs:
 - C++
 helpviewer_keywords:
 - CXMLAccessor class
+- GetXMLColumnData method
+- GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 916e9dbe4e142192e4e716f57f97d5bd6865c709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25d02b5b8b86a70f63dc2b0ca8d2ba9cb60066b
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102903"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233407"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  
@@ -34,6 +46,9 @@ ms.locfileid: "33102903"
 ```cpp
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
+
+## <a name="requirements"></a>要求  
+ **标头**：atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -41,21 +56,72 @@ class CXMLAccessor : public CDynamicStringAccessorW
   
 |||  
 |-|-|  
-|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|检索列信息。|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|检索行的表的全部内容。|  
+|[GetXMLColumnData](#getxmlcolumndata)|检索列信息。|  
+|[GetXMLRowData](#getxmlrowdata)|按行中检索表的全部内容。|  
   
 ## <a name="remarks"></a>备注  
- 但是，`CXMLAccessor`区别`CDynamicStringAccessorW`，因为它将转换从数据存储为 XML 格式 （有标记） 数据访问的所有数据。 这是非常适合 XML 感知的网页的输出。 XML 标记名称将与数据存储区的列名称尽可能匹配。  
+ 但是，`CXMLAccessor`不同于`CDynamicStringAccessorW`，因为它会将转换从数据存储为 XML 格式 （标记） 的数据访问的所有数据。 这是非常适合 XML 感知的 Web 页面的输出。 XML 标记名称将尽可能接近地匹配数据存储区的列名称。  
   
- 使用`CDynamicAccessor`方法以获取列信息。 此列信息用于在运行时动态创建取值函数。  
+ 使用`CDynamicAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。  
   
- 列信息存储在缓冲区创建和管理此类。 获取列信息使用[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)或通过使用的行获取列数据[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)。  
+ 创建和管理此类缓冲区中存储的列信息。 获取列信息使用[GetXMLColumnData](#getxmlcolumndata)或按行使用获取列数据[GetXMLRowData](#getxmlrowdata)。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+## <a name="getxmlcolumndata"></a> Cxmlaccessor:: Getxmlcolumndata
+按列检索为 XML 格式的字符串数据的列类型信息的表。  
   
-## <a name="requirements"></a>要求  
- **标头**：atldbcli.h  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *strOutput*  
+ [out]对包含要检索的列类型信息的字符串缓冲区的引用。 使用与数据存储区的列名称匹配的 XML 标记名称格式化的字符串。  
+  
+### <a name="return-value"></a>返回值  
+ 一个标准的 HRESULT 值。  
+  
+### <a name="remarks"></a>备注  
+ 下面显示了如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，将数据类型基于 OLE DB 数据类型，不是那些正在访问的数据库。  
+  
+ `<columninfo>`  
+  
+ `<column type = I2/> ColumnName`  
+  
+ `</columninfo>` 
+
+## <a name="getxmlrowdata"></a> Cxmlaccessor:: Getxmlrowdata
+检索表的整个内容为 XML 格式的字符串数据，按行。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT GetXMLRowData(CSimpleStringW& strOutput,   
+   bool bAppend = false) throw();  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *strOutput*  
+ [out]对包含要检索的表数据的缓冲区的引用。 数据格式化为使用与数据存储区的列名称匹配的 XML 标记名称的字符串数据。  
+  
+ *bAppend*  
+ [in]一个布尔值，指定是否要将字符串追加到输出数据的末尾。  
+  
+### <a name="return-value"></a>返回值  
+ 一个标准的 HRESULT 值。  
+  
+### <a name="remarks"></a>备注  
+ 下面显示了如何在 XML 中设置行数据的格式。 `DATA` 下面表示行数据。 使用 move 方法移动到所需的一行。  
+  
+ `<row>`  
+  
+ `<column name>DATA</column name>`  
+  
+ `</row>`   
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
