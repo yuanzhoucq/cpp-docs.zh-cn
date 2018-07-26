@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418518"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208775"
 ---
 # <a name="standard-types"></a>标准类型
 Microsoft 运行库定义下列标准类型和 typedef。  
@@ -218,7 +218,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`fpos_t`（long integer、`__int64` 或结构，取决于目标平台）|由 [fsetpos](../c-runtime-library/reference/fsetpos.md) 和 [fgetpos](../c-runtime-library/reference/fgetpos.md) 用于记录信息以在文件中唯一指定每个位置。|STDIO.H|  
 |`_fsize_t` (unsigned long integer)|用于表示文件的大小。|IO.H、<br /><br /> WCHAR.H|  
 |`_HEAPINFO` 结构|包含有关 [_heapwalk](../c-runtime-library/reference/heapwalk.md) 的下一个堆条目的信息。|MALLOC.H|  
-|`_HFILE` (void *)|操作系统文件句柄。|CRTDBG.H|  
+|`_HFILE` (void \*)|操作系统文件句柄。|CRTDBG.H|  
 |`imaxdiv_t`|[imaxdiv](../c-runtime-library/reference/imaxdiv.md) 函数返回的值的类型，包含商和余数。|inttypes.h|  
 |`ino_t`、`_ino_t` (unsigned short)|用于返回状态信息。|WCHAR.H|  
 |`intmax_t`|一个带符号整数类型，能够表示任何带符号整数类型的任何值。|stdint.h|  

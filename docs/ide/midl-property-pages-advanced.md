@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330799"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207755"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 属性页：高级
 MIDL 文件夹中的“高级”属性页指定以下 MIDL 编译器选项：  
@@ -48,7 +48,7 @@ MIDL 文件夹中的“高级”属性页指定以下 MIDL 编译器选项：
   
 -   检查存根(Stub)数据 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   验证参数 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   验证参数 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   结构成员对齐 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

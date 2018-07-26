@@ -1,7 +1,8 @@
 ---
-title: 部署、运行和调试 Linux 项目 | Microsoft Docs
+title: 在 Visual Studio 中部署、运行和调试 C++ Linux 项目 | Microsoft Docs
+description: 介绍如何从 Visual Studio 中的 C++ Linux 项目内针对远程目标编译、执行和调试代码。
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338050"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207674"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
-一旦创建了 Linux 项目并且使用 [Linux 连接管理器](../linux/connect-to-your-remote-linux-computer.md)连接到该项目，就可以运行并调试该项目。 在远程目标上编译、执行和调试代码。
+在 Visual Studio 中创建 Linux C++ 项目，并使用 [Linux 连接管理器](../linux/connect-to-your-remote-linux-computer.md)连接到该项目，即可运行和调试该项目。 在远程目标上编译、执行和调试代码。
 
 与 Linux 项目交互并对其进行调试方法有若干种。
 

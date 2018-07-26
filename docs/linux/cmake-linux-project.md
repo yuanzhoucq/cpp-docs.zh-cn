@@ -1,7 +1,8 @@
 ---
 title: 在 Visual Studio 中配置 Linux CMake 项目 | Microsoft Docs
+description: 如何在 Visual Studio 中配置 Linux CMake 项目
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849254"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207782"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
 **Visual Studio 2017 版本 15.4 及更高版本**  
-安装 Linux C++ 工作负载时，默认选择的是 CMake Linux 支持。 现在即可处理使用 CMake 的现有基本代码，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。
+为 Visual Studio 安装 Linux C++ 工作负载时，会默认选中对 Linux 的 CMake 支持。 现在即可处理使用 CMake 的现有基本代码，无需将其转换为 Visual Studio 项目。 如果基本代码为跨平台代码，则从 Visual Studio 中可同时面向 Windows 和 Linux。
 
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
 > [!NOTE]  
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如果包管理器提供旧版 CMake，解决方法为[从源生成 CMake](#build-a-supported-cmake release-from-source)，或从官方 [CMake 下载页](https://cmake.org/download/)下载它。
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如果包管理器提供旧版 CMake，解决方法为[从源生成 CMake](#build-a-supported-cmake release-from-source)，或从官方 [CMake 下载页](https://cmake.org/download/)下载它。 如需支持 Visual Studio 中 [CMake 目标视图](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的，由 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下载最新预生成二进制文件。
 
 ## <a name="open-a-folder"></a>打开文件夹
 

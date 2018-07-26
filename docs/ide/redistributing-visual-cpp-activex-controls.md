@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331014"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207952"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>重新分发 Visual C++ ActiveX 控件
 Visual C++ 6.0 提供 ActiveX 控件，供你在应用程序中使用并且随后重新分发。 这些控件不再包含在 Visual C++ 中。 根据 Visual C++ 6.0 许可协议，可以使用在 Visual C++ 中开发的应用程序重新分发这些控件。  
@@ -34,11 +34,11 @@ Visual C++ 6.0 提供 ActiveX 控件，供你在应用程序中使用并且随�
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   

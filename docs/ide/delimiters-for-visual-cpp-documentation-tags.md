@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337569"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208570"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文档标记的分隔符
 文档标记需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。  
@@ -51,7 +51,7 @@ ms.locfileid: "33337569"
     /** <summary>text</summary> */  
     ```  
   
--   编译器应用了“*”模式，用于在第二行和第三行的开头位置进行忽略。  
+-   编译器应用“\*”模式，以便在第二行和第三行开头位置进行忽略。  
   
     ```  
     /**  

@@ -1,7 +1,8 @@
 ---
-title: 下载、安装和设置 Linux 工作负载 | Microsoft Docs
+title: 在 Visual Studio 中安装 C++ Linux 工作负荷 | Microsoft Docs
+description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,14 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 1d28f0db0ff91dbdb08c9ca88dfe197e8942a7f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329431"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207554"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
+
+若要使用 Visual Studio IDE 创建和调试针对 Linux 的 C++ 项目，必须安装**使用 C++ 的 Linux 开发**工作负荷。
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 1. 启动 Visual Studio 安装程序并选择“**使用 C++ 的 Linux 开发**”工作负载。
