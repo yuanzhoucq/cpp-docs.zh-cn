@@ -1,7 +1,8 @@
 ---
-title: 连接到远程 Linux 计算机 | Microsoft Docs
+title: 在 Visual Studio 中连接到远程 Linux 计算机 | Microsoft Docs
+description: 如何从 Visual Studio C++ 项目内连接到远程 Linux 计算机。
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329317"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207661"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>连接到远程 Linux 计算机
 
-进行生成时，将 Linux 代码复制到远程 Linux 计算机，然后根据在 Visual Studio 中选择的设置在该系统上进行编译。  若要设置此远程连接：
+在 Visual Studio 中生成 C++ Linux 项目时，将 Linux 代码复制到远程 Linux 计算机，然后基于 Visual Studio 设置进行编译。 若要设置此远程连接，请执行以下操作：
 
 1. 首次生成项目或手动创建新条目的方法：选择“**工具 > 选项**”，然后打开“**跨平台 > 连接管理器**”节点，单击“**添加**”按钮。
 

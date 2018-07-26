@@ -14,15 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422675"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207897"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
-本主题介绍如何配置 Visual Studio Linux 项目。 有关 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
+本主题介绍如何在 Visual Studio 中配置 C++ Linux 项目。 有关 Visual Studio 中 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>常规设置
 可以使用 Visual Studio 为 Linux 项目配置各种选项。  若要查看这些选项，请选择“项目”>“属性”菜单，或在“解决方案资源管理器”中右键单击相应项目，然后从上下文菜单中选择“属性”。 显示“常规”设置。
