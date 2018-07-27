@@ -1,5 +1,5 @@
 ---
-title: IConvertTypeImpl 类 |Microsoft 文档
+title: IConvertTypeImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,29 @@ f1_keywords:
 - ATL.IConvertTypeImpl
 - ATL::IConvertTypeImpl
 - ATL::IConvertTypeImpl<T>
+- IConvertTypeImpl.CanConvert
+- CanConvert
+- IConvertTypeImpl::CanConvert
 dev_langs:
 - C++
 helpviewer_keywords:
 - IConvertTypeImpl class
+- CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9a8fdef3abf0c33fb6fca857086e6490ec959e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dfa073226dc4ddb3cd14b2aae31375a6f6ccc25
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100039"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269778"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
-提供的实现[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)接口。  
+提供的实现[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -39,9 +43,12 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IConvertTypeImpl`。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 您的类，派生自`IConvertTypeImpl`。  
+
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -49,13 +56,27 @@ class ATL_NO_VTABLE IConvertTypeImpl
   
 |||  
 |-|-|  
-|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|命令或行集上，为提供的可用性的类型转换的信息。|  
+|[CanConvert](#canconvert)|命令或上一个行集提供类型转换的可用性的信息。|  
   
 ## <a name="remarks"></a>备注  
- 此接口是必需的对于命令、 行集和索引行集。 **IConvertTypeImpl**通过委派由 OLE DB 提供的转换对象到实现该接口。  
+ 此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。  
+
+## <a name="canconvert"></a> Iconverttypeimpl:: Canconvert
+命令或上一个行集提供类型转换的可用性的信息。  
   
-## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+### <a name="syntax"></a>语法  
+  
+```cpp
+      STDMETHOD(CanConvert)(DBTYPE wFromType,   
+   DBTYPE wToType,   
+   DBCONVERTFLAGS dwConvertFlags);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ 请参阅[IConvertType::CanConvert](https://msdn.microsoft.com/library/ms711224.aspx)中*OLE DB 程序员参考*。  
+  
+### <a name="remarks"></a>备注  
+ 使用 OLE DB 中的数据转换`MSADC.DLL`。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
