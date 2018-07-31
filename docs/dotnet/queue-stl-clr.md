@@ -1,5 +1,5 @@
 ---
-title: 队列 (STL/CLR) |Microsoft 文档
+title: 队列 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079702"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375992"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
-此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
+此模板类描述一个对象，用于控制变长序列的元素具有的先进先出访问。 使用中的容器适配器`queue`管理视为一个队列的基础容器。  
   
- 在下面，描述`GValue`相同`Value`后者为 ref 类型，除非在这种情况下很`Value^`。 同样，`GContainer`相同`Container`后者为 ref 类型，除非在这种情况下很`Container^`。  
+ 在下面的说明`GValue`等同于*值*后者是 ref 类型，除非在此情况下是`Value^`。 同样，`GContainer`等同于*容器*后者是 ref 类型，除非在此情况下是`Container^`。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,10 +98,10 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>参数  
- “值”  
+ *值*  
  受控序列中的元素的类型。  
   
- 容器  
+ *容器*  
  基础容器的类型。  
   
 ## <a name="requirements"></a>要求  
@@ -128,12 +128,12 @@ template<typename Value,
 |[queue::back (STL/CLR)](#back)|访问最后一个元素。|  
 |[queue::empty (STL/CLR)](#empty)|测试元素是否存在。|  
 |[queue::front (STL/CLR)](#front)|访问第一个元素。|  
-|[queue::get_container (STL/CLR)](#get_container)|访问基础的容器。|  
-|[queue::pop (STL/CLR)](#pop)|移除的第一个元素。|  
-|[queue::push (STL/CLR)](#push)|添加新的最后一个元素。|  
+|[queue::get_container (STL/CLR)](#get_container)|访问基础容器。|  
+|[queue::pop (STL/CLR)](#pop)|删除第一个元素。|  
+|[queue::push (STL/CLR)](#push)|添加一个新的最后一个元素。|  
 |[queue::queue (STL/CLR)](#queue)|构造容器对象。|  
 |[queue::size (STL/CLR)](#size)|对元素数进行计数。|  
-|[queue::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
+|[queue::to_array (STL/CLR)](#to_array)|将受控的序列复制到新数组。|  
   
 |属性|描述|  
 |--------------|-----------------|  
@@ -143,22 +143,22 @@ template<typename Value,
 |运算符|描述|  
 |--------------|-----------------|  
 |[queue::operator= (STL/CLR)](#op_as)|替换受控序列。|  
-|[operator!= (queue) (STL/CLR)](#op_neq)|确定如果`queue`对象是否不等于另一个`queue`对象。|  
-|[operator< (queue) (STL/CLR)](#op_lt)|确定如果`queue`对象是否小于另一个`queue`对象。|  
-|[operator<= (queue) (STL/CLR)](#op_lteq)|确定如果`queue`对象是否小于或等于另一个`queue`对象。|  
-|[operator== (queue) (STL/CLR)](#op_eq)|确定如果`queue`对象是否等于另一个`queue`对象。|  
-|[operator> (queue) (STL/CLR)](#op_gt)|确定如果`queue`对象是否大于另一个`queue`对象。|  
-|[operator>= (queue) (STL/CLR)](#op_gteq)|确定如果`queue`对象是否大于或等于另一个`queue`对象。|  
+|[operator!= (queue) (STL/CLR)](#op_neq)|确定是否`queue`对象不等于另一个`queue`对象。|  
+|[operator< (queue) (STL/CLR)](#op_lt)|确定是否`queue`对象是否小于另一个`queue`对象。|  
+|[operator<= (queue) (STL/CLR)](#op_lteq)|确定是否`queue`对象是否小于或等于另一个`queue`对象。|  
+|[operator== (queue) (STL/CLR)](#op_eq)|确定是否`queue`对象是否等于另一个`queue`对象。|  
+|[operator> (queue) (STL/CLR)](#op_gt)|确定是否`queue`对象是否大于另一个`queue`对象。|  
+|[operator>= (queue) (STL/CLR)](#op_gteq)|确定是否`queue`对象是否大于或等于另一个`queue`对象。|  
   
 ## <a name="interfaces"></a>接口  
   
 |接口|描述|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|复制对象。|  
-|IQueue\<值、 容器 >|维护泛型容器适配器。|  
+|<xref:System.ICloneable>|重复的对象。|  
+|IQueue\<值中，容器 >|维护泛型容器适配器。|  
   
 ## <a name="remarks"></a>备注  
- 对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限只将推送的第一个元素并弹出的最后一个元素，实现第一个在先进先出队列 （也称为 FIFO 队列或只需队列）。  
+ 该对象分配并释放存储类型的基础容器，通过它控制的序列`Container`，用于存储`Value`元素并根据需要增长。 该对象将访问限制为只将推送的第一个元素并弹出的最后一个元素，实现的先进先出队列 （也称为 FIFO 队列或只需一个队列）。  
   
 ## <a name="members"></a>成员
 
@@ -167,16 +167,16 @@ template<typename Value,
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 右  
+ *right*  
  要插入的容器适配器。  
   
 ### <a name="remarks"></a>备注  
- 成员函数将指派`right.get_container()`到基础的容器。 你可以使用它来更改队列的全部内容。  
+ 该成员函数分配`right.get_container()`到基础容器。 您可以使用它来更改队列的全部内容。  
   
 ### <a name="example"></a>示例  
   
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -219,12 +218,12 @@ a b c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回对受控序列，必须为非空的最后一个元素的引用。 用于访问最后一个元素，当你知道它存在。  
+ 成员函数返回对受控序列，必须为非空的最后一个元素的引用。 用于访问的最后一个元素，当您知道它存在。  
   
 ### <a name="example"></a>示例  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -270,12 +268,12 @@ back() = c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 属性访问受控序列，必须为非空的最后一个元素。 你可以使用它来读取或写入的最后一个元素，当你知道它存在。  
+ 属性访问，必须为非空的受控序列的最后一个元素。 您可以使用它来读取或写入的最后一个元素，当您知道它存在。  
   
 ### <a name="example"></a>示例  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,12 +318,12 @@ back_item = c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述元素的常量引用。  
+ 此类型描述的元素的常量引用。  
   
 ### <a name="example"></a>示例  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +360,7 @@ a b c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -401,16 +396,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> queue::difference_type (STL/CLR)
-两个元素间的带符号距离的类型。  
+两个元素之间的带符号距离的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述可能负元素计数。  
+ 此类型描述可能是负值元素计数。  
   
 ### <a name="example"></a>示例  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ popping 3 = 3
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 对于空受控序列，该成员函数返回 true。 它相当于[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`。 用于测试是否队列为空。  
+ 对于空受控序列，该成员函数返回 true。 它等效于[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`。 用于测试是否队列为空。  
   
 ### <a name="example"></a>示例  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +508,12 @@ empty() = True
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回对受控序列，必须为非空的第一个元素的引用。 用于访问第一个元素，当你知道它存在。  
+ 成员函数返回对受控序列，必须为非空的第一个元素的引用。 用于访问第一个元素，当您知道它存在。  
   
 ### <a name="example"></a>示例  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -566,12 +558,12 @@ front() = a
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 属性访问必须为非空的受控序列的第一个元素。 你可以使用它来读取或写入的第一个元素，当你知道它存在。  
+ 属性访问，必须为非空的受控序列的第一个元素。 您可以使用它来读取或写入的第一个元素，当您知道它存在。  
   
 ### <a name="example"></a>示例  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -617,13 +608,13 @@ front_item = a
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述此模板容器适配器类的泛型接口。  
+ 此类型描述此模板容器适配器类的泛型接口。  
   
 ### <a name="example"></a>示例  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -675,16 +665,16 @@ a b c d e
 ```  
 
 ## <a name="generic_value"></a> queue::generic_value (STL/CLR)
-使用容器的泛型接口具有的元素的类型。  
+用于容器的泛型接口具有的元素的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型描述类型的对象`GValue`描述使用的存储的元素值与此模板容器类的泛型接口。 (`GValue`是`value_type`或`value_type^`如果`value_type`是 ref 类型。)  
+ 此类型描述类型的对象`GValue`描述使用的存储的元素值与此模板容器类的泛型接口。 (`GValue`可以是`value_type`或`value_type^`如果`value_type`是 ref 类型。)  
   
 ### <a name="example"></a>示例  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -732,16 +721,16 @@ a b c
 ```  
 
 ## <a name="get_container"></a> queue::get_container (STL/CLR)
-访问基础的容器。  
+访问基础容器。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回基础的容器。 你可以使用它来绕过容器包装施加的限制。  
+ 成员函数返回基础容器。 您可以使用它来跳过容器包装所规定的限制。  
   
 ### <a name="example"></a>示例  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -776,16 +764,16 @@ a b c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 右  
- 要复制的容器适配器。  
+ *right*  
+ 若要复制的容器适配器。  
   
 ### <a name="remarks"></a>备注  
- 成员运算符副本`right`到对象，然后返回`*this`。 用它将受控序列替换为 `right` 中的受控序列的副本。  
+ 成员运算符副本*右*对象，然后返回`*this`。 用于替换受控的序列中的受控序列的副本*右*。  
   
 ### <a name="example"></a>示例  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -824,20 +811,20 @@ a b c
 ```  
 
 ## <a name="pop"></a> queue:: pop (STL/CLR)
-移除的最后一个元素。  
+删除最后一个元素。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数删除受控序列，必须为非空的最后一个元素。 你可以使用它将在后面的一个元素缩短队列。  
+ 成员函数删除必须为非空的受控序列的最后一个元素。 您可以使用它来缩短队列在后一个元素。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -871,16 +857,16 @@ b c
 ```  
 
 ## <a name="push"></a> queue:: push (STL/CLR)
-添加新的最后一个元素。  
+添加一个新的最后一个元素。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数添加一个带有值元素`val`队列的末尾。 用于将元素追加到队列。  
+ 成员函数将具有值的元素添加`val`队列的末尾。 用于将元素追加到队列。  
   
 ### <a name="example"></a>示例  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -915,7 +900,7 @@ a b c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,11 +908,11 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>参数  
- 右  
+ *right*  
  要复制的对象。  
   
- 包装  
- 要使用的已包装的容器。  
+ *包装*  
+ 若要使用的已包装的容器。  
   
 ### <a name="remarks"></a>备注  
  构造函数：  
@@ -940,19 +925,19 @@ explicit queue(container_type% wrapped);
   
  `queue(queue<Value, Container>% right);`  
   
- 创建一个已包装的容器，它是一份`right.get_container()`。 用于指定是通过对队列对象控制的序列的副本的初始受控的序列`right`。  
+ 创建已包装的容器是一份`right.get_container()`。 用于指定是控制队列对象的序列的副本的初始受控的序列*右*。  
   
  构造函数：  
   
  `queue(queue<Value, Container>^ right);`  
   
- 创建一个已包装的容器，它是一份`right->get_container()`。 用于指定是通过对队列对象控制的序列的副本的初始受控的序列`*right`。  
+ 创建已包装的容器是一份`right->get_container()`。 用于指定是控制队列对象的序列的副本的初始受控的序列`*right`。  
   
  构造函数：  
   
  `explicit queue(container_type wrapped);`  
   
- 使用现有容器`wrapped`作为已包装的容器。 你可以使用它来构造一个队列从现有容器。  
+ 使用现有容器*包装*作为已包装的容器。 使用它来构造一个队列从现有的容器。  
   
 ### <a name="example"></a>示例  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,12 +990,12 @@ size() = 0
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述元素的引用。  
+ 此类型描述的元素的引用。  
   
 ### <a name="example"></a>示例  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ a b x
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回受控序列的长度。 用于确定当前受控序列中的元素的数目。 如果你关注的只是序列是否具有非零大小，请参阅[queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`。  
+ 成员函数将返回受控序列的长度。 用于确定受控序列中当前元素的数目。 如果您关心的只是该序列是否具有非零大小，请参阅[queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`。  
   
 ### <a name="example"></a>示例  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1103,16 +1085,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> queue:: size_type (STL/CLR)
-两个元素之间的带符号距离的类型。  
+两个元素间的带符号距离的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述非负元素计数。  
+ 此类型描述非负元素计数。  
   
 ### <a name="example"></a>示例  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1151,20 +1132,20 @@ size difference = 2
 ```  
 
 ## <a name="to_array"></a> queue::to_array (STL/CLR)
-受控的序列复制到新数组。  
+将受控的序列复制到新数组。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
+ 成员函数返回一个数组，包含对受控的序列。 用于获取数组形式的受控序列的副本。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ a b c
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Value` 的同义词。  
+ 该类型是模板参数的同义词*值*。  
   
 ### <a name="example"></a>示例  
   
@@ -1235,8 +1215,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1244,11 +1223,11 @@ a b c
 ```  
 
 ## <a name="op_neq"></a> 运算符 ！ = （队列） (STL/CLR)
-队列不等于比较。  
+队列不相等比较。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(left == right)`。 用于测试是否`left`未进行排序相同`right`两个队列时由元素的比较的元素。  
+ 运算符函数返回`!(left == right)`。 使用它来测试是否*左*未排序相同*右*当两个队列都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1317,7 +1295,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回 true 当对于最低的位置`i`为其`!(right[i] < left[i])`很还 true， `left[i] < right[i]`。 否则，它将返回`left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()`用于测试是否`left`进行排序之前`right`两个队列时由元素的比较的元素。  
+ 运算符函数返回 true 当对于最低的位置`i`为其`!(right[i] < left[i])`它是还 true 的`left[i] < right[i]`。 否则，它将返回`left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()`使用它来测试是否*左*排序之前*右*当两个队列都是比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1386,7 +1363,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(right < left)`。 用于测试是否`left`未进行排序之后`right`两个队列时由元素的比较的元素。  
+ 运算符函数返回`!(right < left)`。 使用它来测试是否*左*未排序后*右*当两个队列都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1455,7 +1431,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数，则返回 true，才由控制序列`left`和`right`具有相同的长度和每个位置`i`， `left[i] ==` `right[i]`。 用于测试是否`left`进行排序相同`right`两个队列时由元素的比较的元素。  
+ 运算符函数才返回 true，序列由控制*左*并*右*具有相同的长度和每个位置`i`， `left[i] ==` `right[i]`。 使用它来测试是否*左*进行排序相同*右*当两个队列都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1520,11 +1495,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 运算符&gt;（队列） (STL/CLR)
-队列大于以下值比较。  
+大于比较的队列。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`right` `<` `left`。 用于测试是否`left`进行排序之后`right`两个队列时由元素的比较的元素。  
+ 运算符函数将返回`right` `<` `left`。 使用它来测试是否*左*进行排序后*右*当两个队列都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1589,11 +1563,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> 运算符&gt;= （队列） (STL/CLR)
-队列大于以下值或相等比较。  
+队列大于或等于比较。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(left < right)`。 用于测试是否`left`未进行排序之前`right`两个队列时由元素的比较的元素。  
+ 运算符函数返回`!(left < right)`。 使用它来测试是否*左*未排序之前*右*当两个队列都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

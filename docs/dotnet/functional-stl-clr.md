@@ -1,5 +1,5 @@
 ---
-title: 功能 (STL/CLR) |Microsoft 文档
+title: 功能 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305899"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376360"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-包括 STL/CLR 标头`<cliext/functional>`定义大量的模板类和相关的模板委托和函数。  
+包含 STL/CLR 标头`<cliext/functional>`来定义多个模板类和相关的模板委托和函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,56 +90,56 @@ ms.locfileid: "36305899"
 ```  
 
 ## <a name="requirements"></a>要求  
- **标头：** \<功能 cliext/>  
+ **标头：** \<cliext/功能 >  
   
  **Namespace:** cliext 
 
 ## <a name="declarations"></a>声明  
   
-|委托|Description|  
+|委托|描述|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|两个参数的委托。|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|返回两个参数委托`void`。|  
-|[unary_delegate (STL/CLR)](#unary_delegate)|一个参数的委托。|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|返回的单自变量委托`void`。|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|返回两个参数委托**void**。|  
+|[unary_delegate (STL/CLR)](#unary_delegate)|单参数委托。|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|返回的单参数委托**void**。|  
   
-|类|Description|  
+|类|描述|  
 |-----------|-----------------|  
-|[binary_negate (STL/CLR)](#binary_negate)|要求反的两个参数函子的函子。|  
-|[binder1st (STL/CLR)](#binder1st)|若要将第一个自变量绑定到两个参数函子的函子。|  
-|[binder2nd (STL/CLR)](#binder2nd)|若要将第二个参数绑定到两个参数函子的函子。|  
-|[divides (STL/CLR)](#divides)|将划分函子。|  
+|[binary_negate (STL/CLR)](#binary_negate)|要求反的两个参数函子的仿函数。|  
+|[binder1st (STL/CLR)](#binder1st)|若要将第一个参数绑定到两个参数函子的仿函数。|  
+|[binder2nd (STL/CLR)](#binder2nd)|若要将第二个参数绑定到两个参数函子的仿函数。|  
+|[divides (STL/CLR)](#divides)|除仿函数。|  
 |[equal_to (STL/CLR)](#equal_to)|相等比较函子。|  
-|[greater (STL/CLR)](#greater)|更大的比较函子。|  
+|[greater (STL/CLR)](#greater)|大于比较函子。|  
 |[greater_equal (STL/CLR)](#greater_equal)|大于或等于比较函子。|  
 |[less (STL/CLR)](#less)|小于比较函子。|  
 |[less_equal (STL/CLR)](#less_equal)|小于或等于比较函子。|  
-|[logical_and (STL/CLR)](#logical_and)|逻辑 AND 函子。|  
-|[logical_not (STL/CLR)](#logical_not)|逻辑不函子。|  
-|[logical_or (STL/CLR)](#logical_or)|逻辑 OR 函子。|  
-|[minus (STL/CLR)](#minus)|减去函子。|  
-|[modulus (STL/CLR)](#modulus)|取模函子。|  
-|[multiplies (STL/CLR)](#multiplies)|乘函子。|  
-|[negate (STL/CLR)](#negate)|返回求反后其自变量的函子。|  
+|[logical_and (STL/CLR)](#logical_and)|逻辑 AND 仿函数。|  
+|[logical_not (STL/CLR)](#logical_not)|逻辑不仿函数。|  
+|[logical_or (STL/CLR)](#logical_or)|逻辑 OR 仿函数。|  
+|[minus (STL/CLR)](#minus)|减去仿函数。|  
+|[modulus (STL/CLR)](#modulus)|取模仿函数。|  
+|[multiplies (STL/CLR)](#multiplies)|Multiply 仿函数。|  
+|[negate (STL/CLR)](#negate)|若要返回其参数求反的仿函数。|  
 |[not_equal_to (STL/CLR)](#not_equal_to)|不等于比较函子。|  
-|[plus (STL/CLR)](#plus)|添加函子。|  
-|[unary_negate (STL/CLR)](#unary_negate)|要求反单自变量函子的函子。|  
+|[plus (STL/CLR)](#plus)|添加仿函数。|  
+|[unary_negate (STL/CLR)](#unary_negate)|要求反的单参数函子的仿函数。|  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|生成自变量和函子的 binder1st。|  
-|[bind2nd (STL/CLR)](#bind2nd)|生成自变量和函子的 binder2nd。|  
-|[not1 (STL/CLR)](#not1)|生成函子 unary_negate。|  
-|[not2 (STL/CLR)](#not2)|生成函子 binary_negate。|  
+|[bind1st (STL/CLR)](#bind1st)|生成自变量和函子 binder1st。|  
+|[bind2nd (STL/CLR)](#bind2nd)|生成自变量和函子 binder2nd。|  
+|[not1 (STL/CLR)](#not1)|生成伪函数 unary_negate。|  
+|[not2 (STL/CLR)](#not2)|生成伪函数 binary_negate。|  
    
 ## <a name="members"></a>成员
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-Genereic 类描述两个参数的委托。 使用它指定根据其自变量和返回类型的委托。  
+Genereic 类描述双参数委托。 使用它指定在其参数和返回类型的方面的委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,17 +147,17 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>参数  
- arg1  
+ *arg1*  
  第一个参数的类型。  
   
- arg2  
+ *Arg2*  
  第二个参数的类型。  
   
- 结果  
+ *结果*  
  返回类型。  
   
 ### <a name="remarks"></a>备注  
- Genereic 委托介绍了两个参数的函数。  
+ Genereic 委托描述两个参数函数。  
   
  请注意，对于：  
   
@@ -171,7 +171,7 @@ generic<typename Arg1,
   
  `delegate int Fun2(int, int);`  
   
- 它们不是同一类型。  
+ 它们不是相同的类型。  
   
 ### <a name="example"></a>示例  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,25 +208,25 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-Genereic 类描述两个参数委托，可返回`void`。 使用它指定根据其自变量的委托。  
+Genereic 类将描述返回的两个参数委托**void**。 使用它指定根据其参数的委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>参数  
- arg1  
+ *arg1*  
  第一个参数的类型。  
   
- arg2  
+ *Arg2*  
  第二个参数的类型。  
   
 ### <a name="remarks"></a>备注  
- Genereic 委托描述返回的两个参数函数`void`。  
+ Genereic 委托介绍返回的两个参数函数**void**。  
   
  请注意，对于：  
   
@@ -241,7 +240,7 @@ generic<typename Arg1,
   
  `delegate void Fun2(int, int);`  
   
- 它们不是同一类型。  
+ 它们不是相同的类型。  
   
 ### <a name="example"></a>示例  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-此模板类描述某个函数，当调用，返回的逻辑不其存储的两个参数函子。 使用它指定根据其存储的函子的函数对象。  
+此模板类描述某个函数，调用时，返回的逻辑不其存储的两个参数函子。 使用它指定根据其存储的函子的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,32 +302,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- 有趣  
+ *乐趣*  
  存储函子的类型。  
   
 ## <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
 |stored_function_type|函子的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|binary_negate|构造函数。|  
+|binary_negate|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type^()|强制转换为委托的函子。|  
+|运算符 delegate_type^()|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述存储其他两个参数函子的两个参数伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回逻辑的存储函子的不调用带有两个参数。  
+ 此模板类描述存储其他两个参数函子的两个参数仿函数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回逻辑的存储函子的不调用具有两个参数。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-生成`binder1st`有关自变量，以及函子。  
+生成`binder1st`自变量和函数。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>模板参数  
- Arg  
+ *arg*  
  自变量类型。  
   
- 有趣  
+ *乐趣*  
  函子的类型。  
   
 #### <a name="function-parameters"></a>函数参数  
- 函子  
- 包装函数。  
+ *伪函数*  
+ 要包装仿函数。  
   
- 左  
+ *left*  
  要包装的第一个参数。  
   
 ### <a name="remarks"></a>备注  
- 模板函数返回[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。 你将它用作一种简便方式中调用它与第二个参数的单自变量涵子包装两个参数函子和其第一个参数。  
+ 模板函数返回[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。 您将其用作中调用的第二个参数的单参数伪函数包装两个参数函子和其第一个参数的简便方法。  
   
 ### <a name="example"></a>示例  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-生成`binder2nd`有关自变量，以及函子。  
+生成`binder2nd`自变量和函数。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>模板参数  
- Arg  
+ *arg*  
  自变量类型。  
   
- 有趣  
+ *乐趣*  
  函子的类型。  
   
 #### <a name="function-parameters"></a>函数参数  
- 函子  
- 包装函数。  
+ *伪函数*  
+ 要包装仿函数。  
   
- 右  
+ *right*  
  要包装的第二个参数。  
   
 ### <a name="remarks"></a>备注  
- 模板函数返回[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。 你将它用作一种简便方式将两个参数函子和其第二个自变量包装在使用第一个参数调用它的单自变量伪函数。  
+ 模板函数返回[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。 您将其用作中与第一个参数调用某个单参数函数包装两个参数函子和第二个参数的简便方法。  
   
 ### <a name="example"></a>示例  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-此模板类描述一个自变量函子的当调用，返回其存储的第一个参数而提供的第二个自变量调用其存储两个参数函子。 使用它指定根据其存储的函子的函数对象。  
+此模板类描述单参数仿函数，调用时，返回其存储的第一个参数而提供的第二个参数调用其存储两个参数仿函数。 使用它指定根据其存储的函子的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,32 +566,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- 有趣  
+ *乐趣*  
  存储函子的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
 |stored_function_type|函子的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|binder1st|构造函数。|  
+|binder1st|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type^()|强制转换为委托的函子。|  
+|运算符 delegate_type^()|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述存储两个参数函子和的第一个参数的单自变量伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回调用存储的第一个参数而提供的第二个自变量的存储函子的结果。  
+ 此模板类描述存储两个参数函子和第一个参数的单参数仿函数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回调用存储的第一个参数而提供的第二个参数的存储函子的结果。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-此模板类描述一个自变量函子的当调用，则返回存储其使用提供的第一个自变量和其存储的第二个自变量调用的两个参数函子。 使用它指定根据其存储的函子的函数对象。  
+此模板类描述单参数仿函数，调用时，返回使用提供的第一个自变量和其存储的第二个参数调用其存储两个参数仿函数。 使用它指定根据其存储的函子的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,32 +668,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- 有趣  
+ *乐趣*  
  存储函子的类型。  
   
 ## <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
 |stored_function_type|函子的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|binder2nd|构造函数。|  
+|binder2nd|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type^()|强制转换为委托的函子。|  
+|运算符 delegate_type^()|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述存储两个参数函子和第二个参数的单自变量伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回调用使用提供的第一个自变量和存储的第二个参数的存储函子的结果。  
+ 此模板类描述单参数仿函数，存储的两个参数伪函数和第二个参数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回调用提供的第一个参数而存储的第二个参数的存储函子的结果。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -750,12 +743,12 @@ int main()
 0 -1  
 ```  
   
-## <a name="divides"></a> 会将其划分 (STL/CLR)
-此模板类描述某个函数，当调用，返回除以第二个的第一个参数。 使用它指定根据其自变量类型的函数对象。  
+## <a name="divides"></a> 将划分 (STL/CLR)
+此模板类描述某个函数，调用时，返回第一个参数除以第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,31 +770,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数和返回值的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|divides|构造函数。|  
+|divides|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type^()|强制转换为委托的函子。|  
+|运算符 delegate_type^()|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第一个参数除以第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回第一个参数除以第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -850,11 +842,11 @@ int main()
 ```  
 
 ## <a name="equal_to"></a> equal_to (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个参数是否等于第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数等于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,31 +868,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|equal_to|构造函数。|  
+|equal_to|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type^()|强制转换为委托的函子。|  
+|运算符 delegate_type^()|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个参数是否等于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否等于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> 更高版本 (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个参数为大于第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数大于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,31 +966,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|greater|构造函数。|  
+|greater|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个自变量是否大于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否大于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true 仅第一个自变量是否大于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true 仅第一个参数是否大于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,31 +1064,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|greater_equal|构造函数。|  
+|greater_equal|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个自变量是否大于或等于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否大于或等于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1146,12 +1135,12 @@ int main()
 1 0  
 ```  
 
-## <a name="less"></a> 较少的 (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个参数小于第二个。 使用它指定根据其自变量类型的函数对象。  
+## <a name="less"></a> 更少的 (STL/CLR)
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数小于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,31 +1162,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|less|构造函数。|  
+|less|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个参数是否小于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否小于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true 仅第一个参数是否小于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true 仅第一个参数是否小于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,31 +1260,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|less_equal|构造函数。|  
+|less_equal|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个参数是否小于或等于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否小于或等于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个参数，第二个测试可以为 true。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数和第二个测试为 true。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,31 +1358,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|logical_and|构造函数。|  
+|logical_and|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅当第一个参数，第二个测试可以为 true。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅当第一个参数和第二个测试为 true。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当任一其自变量测试为 false。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当任一参数测试为 false。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,30 +1454,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |argument_type|伪函数自变量的类型。|  
 |delegate_type|泛型委托的类型。|  
-|result_type|函子结果的类型。|  
+|result_type|伪函数结果的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|logical_not|构造函数。|  
+|logical_not|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述一个自变量函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它 true 仅返回其自变量如果测试为 false。  
+ 此模板类描述单参数仿函数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅其参数如果测试为 false。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个自变量或第二个测试为 true。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数或第二个测试为 true。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,31 +1543,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|logical_or|构造函数。|  
+|logical_or|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅当 true 的第一个参数或作为第二个测试。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅当 true 的第一个参数或作为第二个测试。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> 减 (STL/CLR)
-此模板类描述某个函数，当调用，则返回第一个减去第二个参数。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回第一个参数减去第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,31 +1641,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数和返回值的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|minus|构造函数。|  
+|minus|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第一个减去第二个参数。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回第一个参数减去第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1730,11 +1713,11 @@ int main()
 ``` 
 
 ## <a name="modulus"></a> 取模 (STL/CLR)
-此模板类描述某个函数，当调用，则返回第二个模的第一个参数。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回第二个模的第一个参数。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,31 +1739,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数和返回值的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|modulus|构造函数。|  
+|modulus|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第二个模的第一个参数。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回第二个模的第一个参数。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1828,12 +1810,12 @@ int main()
 1 0  
 ```   
 
-## <a name="multiplies"></a> 乘以 (STL/CLR)
-此模板类描述某个函数，当调用，则返回第二个时间的第一个参数。 使用它指定根据其自变量类型的函数对象。  
+## <a name="multiplies"></a> 相乘 (STL/CLR)
+此模板类描述某个函数，调用时，返回第二个时间的第一个参数。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,31 +1837,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数和返回值的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|multiplies|构造函数。|  
+|multiplies|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第二个时间的第一个参数。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回第二个时间的第一个参数。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1927,12 +1908,12 @@ int main()
 8 3  
 ```  
 
-## <a name="negate"></a> 要求反 (STL/CLR)
-此模板类描述某个函数，当调用，返回求反后其自变量。 使用它指定根据其自变量类型的函数对象。  
+## <a name="negate"></a> 求反 (STL/CLR)
+此模板类描述某个函数，调用时，返回其参数求反。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,30 +1933,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |argument_type|伪函数自变量的类型。|  
 |delegate_type|泛型委托的类型。|  
-|result_type|函子结果的类型。|  
+|result_type|伪函数结果的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|negate|构造函数。|  
+|negate|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述一个自变量函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回求反后其自变量。  
+ 此模板类描述单参数仿函数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回其参数求反。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
-此模板类描述某个函数，当调用时，返回 true，仅当第一个参数是否不等于第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回 true，仅当第一个参数不等于第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,31 +2022,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|not_equal_to|构造函数。|  
+|not_equal_to|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回 true 仅第一个参数是否不等于第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回 true 仅第一个参数是否不等于第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2119,21 +2098,21 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>模板参数  
- 有趣  
+ *乐趣*  
  函子的类型。  
   
 #### <a name="function-parameters"></a>函数参数  
- 函子  
- 包装函数。  
+ *伪函数*  
+ 要包装仿函数。  
   
 ### <a name="remarks"></a>备注  
- 模板函数返回[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`。 您将其用作将单自变量函子包装在提供其逻辑非函子的简便方法。  
+ 模板函数返回[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`。 您将其用作方便地将某个单参数函数包装在仿函数，提供其逻辑非。  
   
 ### <a name="example"></a>示例  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2188,21 +2166,21 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>模板参数  
- 有趣  
+ *乐趣*  
  函子的类型。  
   
 #### <a name="function-parameters"></a>函数参数  
- 函子  
- 包装函数。  
+ *伪函数*  
+ 要包装仿函数。  
   
 ### <a name="remarks"></a>备注  
- 模板函数返回[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`。 你将它用作一种简便方式将两个参数函子包装在提供其逻辑非函子。  
+ 模板函数返回[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`。 您将其用作中提供其逻辑非运算的伪函数包装两个参数函子的简便方法。  
   
 ### <a name="example"></a>示例  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2262,11 +2239,11 @@ int main()
 ```  
 
 ## <a name="plus"></a> 加 (STL/CLR)
-此模板类描述某个函数，当调用时，返回的第一个参数包括第二个。 使用它指定根据其自变量类型的函数对象。  
+此模板类描述某个函数，调用时，返回的第一个参数加上第二个。 使用它指定根据其自变量类型的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,31 +2265,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  参数和返回值的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |delegate_type|泛型委托的类型。|  
-|first_argument_type|函子的第一个自变量的类型。|  
-|result_type|函子结果的类型。|  
-|second_argument_type|函子的第二个自变量的类型。|  
+|first_argument_type|函子的第一个参数的类型。|  
+|result_type|伪函数结果的类型。|  
+|second_argument_type|函子的第二个参数的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|plus|构造函数。|  
+|plus|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|运算符 delegate_type ^|强制转换为委托的函子。|  
+|运算符 delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第一个自变量以及第二个。  
+ 此模板类描述了两个参数函子。 它定义了成员运算符`operator()`以便作为函数调用时对象，它返回第一个参数加上第二个。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,25 +2337,25 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-Genereic 类描述一个单参数的委托。 使用它指定根据其自变量和返回类型的委托。  
+Genereic 类描述单参数委托。 使用它指定在其参数和返回类型的方面的委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
- 参数类型。  
+ *arg*  
+ 自变量类型。  
   
- 结果  
+ *结果*  
  返回类型。  
   
 ### <a name="remarks"></a>备注  
- Genereic 委托介绍了一个自变量的函数。  
+ Genereic 委托描述单参数函数。  
   
  请注意，对于：  
   
@@ -2393,7 +2369,7 @@ generic<typename Arg,
   
  `delegate int Fun2(int);`  
   
- 它们不是同一类型。  
+ 它们不是相同的类型。  
   
 ### <a name="example"></a>示例  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,21 +2400,21 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-Genereic 类描述一个自变量委托，可返回`void`。 使用它指定根据其自变量类型的委托。  
+Genereic 类将描述返回的单参数委托**void**。 使用它指定根据其自变量类型的委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>参数  
- Arg  
+ *arg*  
  自变量类型。  
   
 ### <a name="remarks"></a>备注  
- Genereic 委托描述返回的单自变量函数`void`。  
+ Genereic 委托介绍返回的单参数函数**void**。  
   
  请注意，对于：  
   
@@ -2453,7 +2428,7 @@ generic<typename Arg>
   
  `delegate void Fun2(int);`  
   
- 它们不是同一类型。  
+ 它们不是相同的类型。  
   
 ### <a name="example"></a>示例  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-此模板类描述某个函数，当调用，返回的逻辑不其存储的单自变量函子。 使用它指定根据其存储的函子的函数对象。  
+此模板类描述某个函数，调用时，返回的逻辑不其存储的单参数函子。 使用它指定根据其存储的函子的函数对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,30 +2485,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>参数  
- 有趣  
+ *乐趣*  
  存储函子的类型。  
   
 ### <a name="member-functions"></a>成员函数  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |argument_type|伪函数自变量的类型。|  
 |delegate_type|泛型委托的类型。|  
-|result_type|函子结果的类型。|  
+|result_type|伪函数结果的类型。|  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|unary_negate|构造函数。|  
+|unary_negate|构造函子。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |operator()|计算所需的函数。|  
-|delegate_type ^|强制转换为委托的函子。|  
+|delegate_type ^|将强制转换为委托的仿函数。|  
   
 ### <a name="remarks"></a>备注  
- 此模板类描述存储另一个单自变量函子的单自变量伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回逻辑的存储函子的不使用参数调用。  
+ 此模板类描述存储另一个单参数函子的一个参数仿函数。 它定义了成员运算符`operator()`以便作为函数调用时对象，它将返回逻辑的存储函子的不使用参数调用。  
   
- 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
+ 你还可以传递该对象用作函数参数的类型是`delegate_type^`，适当地将其转换。  
   
 ### <a name="example"></a>示例  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
