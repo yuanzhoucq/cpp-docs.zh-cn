@@ -1,5 +1,5 @@
 ---
-title: 多重映射 (STL/CLR) |Microsoft 文档
+title: 多重映射 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -107,29 +107,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 0dcbab8f6ced483c54b7eb3efed68efacd60c858
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079715"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376217"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
-此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`multimap`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
+此模板类描述一个对象，用于控制不同长度序列元素的双向访问。 使用容器`multimap`来管理一系列元素作为 （几乎） 平衡有序树中的节点，每个存储一个元素。 元素包含的键，对序列和映射的值，会赶上排序。  
   
- 在下面，描述`GValue`相同：  
+ 在下面的说明`GValue`相同：  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
  其中：  
   
- `GKey` 等同于`Key`后者为 ref 类型，除非在此情况下它是 `Key^`  
+ `GKey` 与相同*密钥*除非后一种是 ref 类型，在这种情况下它是 `Key^`  
   
- `GMapped` 等同于`Mapped`后者为 ref 类型，除非在此情况下它是 `Mapped^`  
+ `GMapped` 与相同*映射*除非后一种是 ref 类型，在这种情况下它是 `Mapped^`  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class multimap  
@@ -145,11 +145,11 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>参数  
- 键  
- 受控序列中的元素的关键组件的类型。  
+ *Key*  
+ 受控序列中元素的关键组件的类型。  
   
- 映射  
- 受控序列中的元素的其他组件的类型。  
+ *映射*  
+ 受控序列中元素的其他组件的类型。  
   
 ## <a name="requirements"></a>要求  
  **标头：** \<cliext/映射 >  
@@ -163,18 +163,18 @@ template<typename Key,
 |[multimap::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[multimap::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
 |[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|  
-|[multimap::difference_type (STL/CLR)](#difference_type)|两个元素间的 （可能是带符号） 距离的类型。|  
-|[multimap::generic_container (STL/CLR)](#generic_container)|容器的泛型接口的类型。|  
-|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|容器的泛型接口的迭代器类型。|  
+|[multimap::difference_type (STL/CLR)](#difference_type)|两个元素之间的 （可能是带符号） 距离的类型。|  
+|[multimap::generic_container (STL/CLR)](#generic_container)|泛型接口的容器的类型。|  
+|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|泛型接口的容器的迭代器的类型。|  
 |[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型接口的反向迭代器的类型。|  
 |[multimap::generic_value (STL/CLR)](#generic_value)|容器的泛型接口的元素的类型。|  
 |[multimap::iterator (STL/CLR)](#iterator)|受控序列的迭代器的类型。|  
-|[multimap::key_compare (STL/CLR)](#key_compare)|两个键的排序的委托。|  
+|[multimap::key_compare (STL/CLR)](#key_compare)|两个键排序委托。|  
 |[multimap::key_type (STL/CLR)](#key_type)|排序键的类型。|  
 |[multimap::mapped_type (STL/CLR)](#mapped_type)|与每个键关联的映射值的类型。|  
 |[multimap::reference (STL/CLR)](#reference)|元素的引用的类型。|  
 |[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|受控序列的反向迭代器的类型。|  
-|[multimap::size_type (STL/CLR)](#size_type)|两个元素间的 （非负号） 距离的类型。|  
+|[multimap::size_type (STL/CLR)](#size_type)|两个元素之间的 （非负值） 距离的类型。|  
 |[multimap::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[multimap::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
@@ -182,72 +182,72 @@ template<typename Key,
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[multimap::clear (STL/CLR)](#clear)|删除所有元素。|  
-|[multimap::count (STL/CLR)](#count)|对与指定的键匹配的元素计数。|  
+|[multimap::count (STL/CLR)](#count)|对与指定的键匹配的元素进行计数。|  
 |[multimap::empty (STL/CLR)](#empty)|测试元素是否存在。|  
 |[multimap::end (STL/CLR)](#end)|指定受控序列的末尾。|  
 |[multimap::equal_range (STL/CLR)](#equal_range)|查找与指定键匹配的范围。|  
 |[multimap::erase (STL/CLR)](#erase)|移除指定位置处的元素。|  
 |[multimap::find (STL/CLR)](#find)|查找与指定键匹配的元素。|  
 |[multimap::insert (STL/CLR)](#insert)|添加元素。|  
-|[multimap::key_comp (STL/CLR)](#key_comp)|将复制为两个键排序的委托。|  
-|[multimap::lower_bound (STL/CLR)](#lower_bound)|查找与指定的键匹配的范围开始处。|  
-|[multimap::make_value (STL/CLR)](#make_value)|构造值对象。|  
+|[multimap::key_comp (STL/CLR)](#key_comp)|将复制两个键的排序委托。|  
+|[multimap::lower_bound (STL/CLR)](#lower_bound)|查找与指定的键匹配的范围的起始处。|  
+|[multimap::make_value (STL/CLR)](#make_value)|构造一个值对象。|  
 |[multimap::multimap (STL/CLR)](#multimap)|构造容器对象。|  
 |[multimap::rbegin (STL/CLR)](#rbegin)|指定反向受控序列的开头。|  
 |[multimap::rend (STL/CLR)](#rend)|指定反向受控序列的末尾。|  
 |[multimap::size (STL/CLR)](#size)|对元素数进行计数。|  
 |[multimap::swap (STL/CLR)](#swap)|交换两个容器的内容。|  
-|[multimap::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
+|[multimap::to_array (STL/CLR)](#to_array)|将受控的序列复制到新数组。|  
 |[multimap::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[multimap::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
 |运算符|描述|  
 |--------------|-----------------|  
 |[multimap::operator= (STL/CLR)](#op_as)|替换受控序列。|  
-|[operator!= (multimap) (STL/CLR)](#op_neq)|确定如果`multimap`对象是否不等于另一个`multimap`对象。|  
-|[operator< (multimap) (STL/CLR)](#op_lt)|确定如果`multimap`对象是否小于另一个`multimap`对象。|  
-|[operator<= (multimap) (STL/CLR)](#op_lteq)|确定如果`multimap`对象是否小于或等于另一个`multimap`对象。|  
-|[operator== (multimap) (STL/CLR)](#op_eq)|确定如果`multimap`对象是否等于另一个`multimap`对象。|  
-|[operator> (multimap) (STL/CLR)](#op_gt)|确定如果`multimap`对象是否大于另一个`multimap`对象。|  
-|[operator>= (multimap) (STL/CLR)](#op_gteq)|确定如果`multimap`对象是否大于或等于另一个`multimap`对象。|  
+|[operator!= (multimap) (STL/CLR)](#op_neq)|确定是否`multimap`对象不等于另一个`multimap`对象。|  
+|[operator< (multimap) (STL/CLR)](#op_lt)|确定是否`multimap`对象是否小于另一个`multimap`对象。|  
+|[operator<= (multimap) (STL/CLR)](#op_lteq)|确定是否`multimap`对象是否小于或等于另一个`multimap`对象。|  
+|[operator== (multimap) (STL/CLR)](#op_eq)|确定是否`multimap`对象是否等于另一个`multimap`对象。|  
+|[operator> (multimap) (STL/CLR)](#op_gt)|确定是否`multimap`对象是否大于另一个`multimap`对象。|  
+|[operator>= (multimap) (STL/CLR)](#op_gteq)|确定是否`multimap`对象是否大于或等于另一个`multimap`对象。|  
   
 ## <a name="interfaces"></a>接口  
   
 |接口|描述|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|复制对象。|  
+|<xref:System.ICloneable>|重复的对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
-|<xref:System.Collections.ICollection>|维护的组元素。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|访问类型化的元素序列。|  
+|<xref:System.Collections.ICollection>|维护组元素。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|通过类型化的元素进行排序。|  
 |<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|  
-|ITree\<密钥，值 >|维护泛型容器。|  
+|ITree\<键，值 >|维护泛型容器。|  
   
 ## <a name="remarks"></a>备注  
- 对象分配和释放各个节点作为其控制的序列的存储。 它将元素插入到通过变更节点，永远不会通过将一个节点的内容复制到另一个之间的链接保持有序 （几乎） 平衡的树。 这意味着可以插入和移除自由不影响剩余元素的元素。  
+ 该对象分配并释放存储单独的节点作为其控制的序列。 它将元素插入到通过更改节点永远不会通过将一个节点的内容复制到另一个之间的链接保持有序 （几乎） 平衡树。 这意味着您可以插入和删除自由地不影响剩余元素的元素。  
   
- 该对象进行排序它通过调用类型的存储的委托对象控制的序列[multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 在构造多重映射; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(key_type, key_type)`。 通过调用成员函数来访问此存储的对象[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`。  
+ 该对象通过调用类型的存储的委托对象控制的序列进行排序[multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 在构造多重映射; 时，可以指定存储的委托对象如果指定没有委托对象，默认值是比较`operator<(key_type, key_type)`。 通过调用成员函数来访问此存储的对象[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`。  
   
- 此类委托对象必须进行严格弱排序键的类型在施加[multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
+ 此类委托对象必须进行严格弱排序的键的类型在施加[multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 这意味着，任何两个密钥`X`和`Y`:  
   
- `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致在每次调用。  
   
- 如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
+ 如果`key_comp()(X, Y)`为 true，则`key_comp()(Y, X)`必须为 false。  
   
- 如果`key_comp()(X, Y)`为 true，然后`X`称为才能进行排序之前`Y`。  
+ 如果`key_comp()(X, Y)`为 true，然后`X`进行排序之前说过`Y`。  
   
- 如果`!key_comp()(X, Y) && !key_comp()(Y, X)`为 true，然后`X`和`Y`被认为具有等效顺序。  
+ 如果`!key_comp()(X, Y) && !key_comp()(Y, X)`为 true，然后`X`和`Y`被视为具有等效顺序。  
   
- 任何元素`X`，之前`Y`受控序列中中,`key_comp()(Y, X)`为 false。 （对于默认委托对象，密钥永远不会减小值中。）与模板类不同[映射 (STL/CLR)](../dotnet/map-stl-clr.md)，模板类的对象`multimap`不需要的所有元素的键是唯一。 （两个或多个密钥可以拥有等效顺序。）  
+ 任何元素`X`前面`Y`受控序列中`key_comp()(Y, X)`为 false。 （对于默认委托对象，密钥永远不会减小值。）与模板类不同[映射 (STL/CLR)](../dotnet/map-stl-clr.md)，模板类的对象`multimap`不需要的所有元素的键是唯一。 （两个或多个键可以具有等效顺序。）  
   
- 每个元素包含一个单独的键和映射的值。 序列是按顺序 （对数时间） 允许查找、 插入和移除任意元素与大量的操作的元素数的对数成正比的方式表示。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
+ 每个元素包含单独的密钥和映射的值。 允许查找、 插入和删除具有多个操作的元素数的对数成正比的任意元素的序列 （对数时间） 中的方式被表示序列。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
   
- 多重映射支持双向迭代器，这意味着你可以单步执行到给定指定受控序列中的元素的迭代器的相邻元素。 特殊的头节点对应于返回的迭代器[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`。 如果存在，可以减少此迭代器来访问控制的序列中中的最后一个元素。 可以递增的多重映射的迭代器来访问头节点，且然后将比较等于`end()`。 但不是能取消引用返回的迭代器`end()`。  
+ 多重映射支持双向迭代器，这意味着您可以转到给定迭代器，指定受控序列中的元素的相邻元素步骤。 特殊的头节点对应于返回的迭代器[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`。 如果存在，可以递减此迭代器，用于访问受控序列中的最后一个元素。 可以递增的多重映射的迭代器来访问头节点，并将然后比较等于`end()`。 但不能取消引用返回的迭代器`end()`。  
   
- 请注意，不能引用直接给定其数字位置-需要随机访问迭代器的多重映射元素。  
+ 请注意，不能指直接给定其数字位置-所需的随机访问迭代器的多重映射元素。  
   
- Multimap 的迭代器存储其关联的多重映射节点，后者反过来将存储到其关联的容器的句柄的句柄。 迭代器仅用于其关联的容器对象。 Multimap 的迭代器就保持有效的只要其关联的多重映射节点是与某些多重映射相关联。 此外，有效的迭代器是 dereferencable-可用来访问或更改元素值，它指定-，只要不等于`end()`。  
+ 多重映射的迭代器存储的句柄关联的多重映射节点，后者又将存储的句柄关联的容器。 迭代器只能用于其关联的容器对象。 多重映射的迭代器保持有效，只要其关联的多重映射节点是与某些多重映射相关联。 此外，有效的迭代器是现在--可以使用它来访问或更改，只要不等于此元素的值指定- `end()`。  
   
- 擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
+ 擦除或删除元素调用析构函数为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是 ref 类的容器可确保任何元素的生存期长于容器。 但请注意，容器的句柄 does*不*销毁它的元素。  
   
 ## <a name="members"></a>成员
 
@@ -256,12 +256,12 @@ template<typename Key,
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回指定的受控序列，或刚超出空序列末尾的第一个元素的双向迭代器。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改的受控的序列中，但其状态的开头。  
+ 成员函数返回指定受控序列，或刚超出空序列末尾的第一个元素的双向迭代器。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改受控制的序列，但其状态的开头。  
   
 ### <a name="example"></a>示例  
   
@@ -292,7 +292,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -306,12 +305,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数可有效地调用[multimap:: erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`())`. 你可以使用它来确保受控的序列为空。  
+ 成员函数有效地调用[multimap:: erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`())`. 用于确保受控的序列为空。  
   
 ### <a name="example"></a>示例  
   
@@ -348,7 +347,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -363,12 +361,12 @@ size() = 0
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型描述未指定类型的对象`T2`，可用作受控序列的常量的双向迭代器。  
+ 此类型描述未指定类型的对象`T2`可充当受控序列的常量双向迭代器。  
   
 ### <a name="example"></a>示例  
   
@@ -392,7 +390,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -404,12 +401,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述元素的常量引用。  
+ 此类型描述的元素的常量引用。  
   
 ### <a name="example"></a>示例  
   
@@ -436,7 +433,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -448,12 +444,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型描述未指定类型的对象`T4`，可用作受控序列的常量反向迭代器。  
+ 此类型描述未指定类型的对象`T4`可充当受控序列的常量反向迭代器。  
   
 ### <a name="example"></a>示例  
   
@@ -477,7 +473,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -489,16 +484,16 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 密钥  
+ *key*  
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回拥有等效顺序与控制序列中的元素数目`key`。 你可以使用它来确定当前受控序列中与指定的键匹配的元素的数目。  
+ 成员函数返回具有等效顺序的受控序列中的元素数目*密钥*。 用于确定受控序列中当前与指定的键匹配的元素数。  
   
 ### <a name="example"></a>示例  
   
@@ -525,7 +520,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -536,16 +530,16 @@ count(L'C') = 0
 ```  
 
 ## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
-两个元素间的带符号距离的类型。  
+两个元素之间的带符号距离的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述可能负元素计数。  
+ 此类型描述可能是负值元素计数。  
   
 ### <a name="example"></a>示例  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -594,12 +587,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 对于空受控序列，该成员函数返回 true。 它相当于[multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`。 用于测试是否多重映射为空。  
+ 对于空受控序列，该成员函数返回 true。 它等效于[multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`。 您可以使用它来测试是否多重映射为空。  
   
 ### <a name="example"></a>示例  
   
@@ -629,7 +622,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -645,12 +637,12 @@ empty() = True
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回的双向迭代器，它指向刚超出受控序列的末尾。 用于获取指定的受控序列中; 末尾的迭代器其状态不更改如果更改了受控序列的长度。  
+ 成员函数返回的双向迭代器指向刚超出受控序列的末尾。 用于获取指定受控序列; 的末尾的迭代器其状态不会更改如果受控序列的长度发生更改。  
   
 ### <a name="example"></a>示例  
   
@@ -683,7 +675,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -697,16 +688,16 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 pair_iter_iter equal_range(key_type _Keyval);  
 ```  
   
 #### <a name="parameters"></a>参数  
- `_Keyval`  
+ *_Keyval*  
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 该方法返回一对迭代器`-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`。 你可以使用它来确定的受控序列中的当前与指定的键匹配的元素范围。  
+ 该方法将返回一对迭代器`-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`。 用于确定受控序列中当前与指定的键匹配的元素的范围。  
   
 ### <a name="example"></a>示例  
   
@@ -742,7 +733,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -756,31 +746,31 @@ equal_range(L'x') empty = True
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>参数  
- 第一个  
- 要清除范围的起点。  
+ *first*  
+ 要清除范围的起始处。  
   
- 密钥  
- 要擦除的密钥值。  
+ *key*  
+ 若要清除的键值。  
   
- last  
+ *最后一个*  
  要清除范围的末尾。  
   
- 其中  
+ *where*  
  要清除的元素。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数删除指向的受控序列的元素`where`，并返回指定已移除的元素之外保留的第一个元素的迭代器或[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`如果此类元素不存在。 用于删除单个元素。  
+ 第一个成员函数删除由指向受控序列的元素*其中*，并返回一个迭代器，指定已移除，元素之外保留的第一个元素或[multimap:: end (STL /CLR)](../dotnet/multimap-end-stl-clr.md) `()`如果此类元素不存在。 用于删除单个元素。  
   
- 第二个成员函数范围中移除受控序列的元素 [`first`， `last`)，并返回指定已移除，任何元素之外保留的第一个元素的迭代器或`end()`如果没有此类元素存在... 用于删除零个或多个由连续的元素。  
+ 第二个成员函数的范围内移除受控序列的元素 [`first`， `last`)，并返回一个迭代器，指定已删除的任何元素之外保留的第一个元素或`end()`如果没有此类元素存在... 用于删除零个或多个连续的元素。  
   
- 第三个成员函数删除其键具有等效顺序受控任何的序列元素到`key`，并返回已移除的元素数的计数。 你可以使用它删除，用来计数与指定的键匹配的所有元素。  
+ 第三个成员函数将移除其键具有等效顺序的受控任何的序列元素到*密钥*，并返回已移除的元素数的计数。 使用要删除用来计数与指定的键匹配的所有元素。  
   
  每个元素擦除需要受控序列中的元素数的对数成正比的时间。  
   
@@ -829,7 +819,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -847,16 +836,16 @@ erase(L'e') = 1
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 密钥  
+ *key*  
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 如果受控序列中的至少一个元素具有等效顺序与`key`，成员函数将返回指定这些元素之一的迭代器; 否则它将返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. 用于定位指定的键相匹配的受控序列中当前的元素。  
+ 如果受控序列中的至少一个元素具有等效排序*键*，此成员函数返回迭代器，指定其中一个元素; 否则返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. 用于当前与指定的键匹配的受控序列中定位的元素。  
   
 ### <a name="example"></a>示例  
   
@@ -889,7 +878,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -900,18 +888,18 @@ find C = False
 ```  
 
 ## <a name="generic_container"></a> multimap::generic_container (STL/CLR)
-容器的泛型接口的类型。  
+泛型接口的容器的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述此模板容器类的泛型接口。  
+ 此类型描述该类模板容器的泛型接口。  
   
 ### <a name="example"></a>示例  
   
@@ -952,7 +940,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -963,18 +950,18 @@ int main()
 ```  
   
 ## <a name="generic_iterator"></a> multimap::generic_iterator (STL/CLR)
-与容器的泛型接口使用的迭代器类型。  
+用于容器的泛型接口具有的迭代器的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述此模板容器类可与泛型接口中使用的泛型迭代器。  
+ 此类型描述可用于泛型接口为该类模板容器的泛型迭代器。  
   
 ### <a name="example"></a>示例  
   
@@ -1009,7 +996,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1019,18 +1005,18 @@ int main()
 ```  
 
 ## <a name="generic_reverse_iterator"></a> multimap::generic_reverse_iterator (STL/CLR)
-反向迭代器用于与容器的泛型接口类型。  
+一个反向迭代器用于与容器的泛型接口的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述一个泛型反向迭代器，此模板容器类可与泛型接口中使用。  
+ 此类型描述可用于泛型接口为该类模板容器的泛型反向迭代器。  
   
 ### <a name="example"></a>示例  
   
@@ -1064,7 +1050,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1074,11 +1059,11 @@ int main()
 ```  
 
 ## <a name="generic_value"></a> multimap::generic_value (STL/CLR)
-使用容器的泛型接口具有的元素的类型。  
+用于容器的泛型接口具有的元素的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
@@ -1117,7 +1102,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1131,7 +1115,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1140,33 +1124,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>参数  
- 第一个  
- 要插入的范围开始处。  
+ *first*  
+ 要插入范围的起始处。  
   
- last  
- 要插入的范围的末尾。  
+ *最后一个*  
+ 要插入的范围的下限。  
   
- 右  
+ *right*  
  要插入的枚举。  
   
- Val  
+ *val*  
  要插入的密钥值。  
   
- 其中  
+ *where*  
  要插入 （仅提示） 的容器中的位置。  
   
 ### <a name="remarks"></a>备注  
- 每个成员函数将插入剩余操作数指定的序列。  
+ 每个成员函数插入由剩余操作数指定的序列。  
   
- 第一个成员函数将具有值的元素插入`val`，并返回一个迭代器，指定新插入的元素。 你可以使用它来插入单个元素。  
+ 第一个成员函数将具有值的元素插入*val*，并返回一个迭代器，指定新插入的元素。 用于插入单个元素。  
   
- 第二个成员函数将具有值的元素插入`val`，使用`where`作为提示，（用于提高性能），并返回一个迭代器，指定新插入的元素。 你可以使用它来插入单个元素，这可能是靠近你知道的元素。  
+ 第二个成员函数将具有值的元素插入*val*，并使用*其中*作为提示 （若要提高性能），并返回一个迭代器，指定新插入的元素。 用于插入单个元素，这可能是您知道的元素相邻。  
   
- 第三个成员函数将序列插入 [`first`， `last`)。 你可以使用它将从另一个序列复制的零个或多个元素。  
+ 第三个成员函数将序列 [`first`， `last`)。 用于插入另一个序列中复制的零个或多个元素。  
   
- 第四个成员函数将由序列插入`right`。 用于插入一个枚举器所描述的序列。  
+ 第四个成员函数将指定的序列插入*右*。 用于插入序列描述将枚举器。  
   
- 每个元素插入受控序列中需要的元素数的对数成正比的时间。 插入可能发生在分期常量时间内，但是，给定一个提示，指示某个元素的插入点旁边。  
+ 每个元素插入到受控序列中需要的元素数的对数成正比的时间。 插入可发生在分期常量时间内，但是，给出一个提示，指示某个元素旁边插入点。  
   
 ### <a name="example"></a>示例  
   
@@ -1228,7 +1212,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1247,12 +1230,12 @@ insert(begin(), [L'y' 25]) = [y 25]
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型描述未指定类型的对象`T1`，可用作受控序列的双向迭代器。  
+ 此类型描述未指定类型的对象`T1`可充当受控序列的双向迭代器。  
   
 ### <a name="example"></a>示例  
   
@@ -1276,7 +1259,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1284,16 +1266,16 @@ int main()
 ```  
 
 ## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
-将复制为两个键排序的委托。  
+将复制两个键的排序委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回使用受控的序列进行排序的排序委托。 用于比较两个键。  
+ 成员函数将返回用于受控的序列进行排序的排序委托。 用于比较两个键。  
   
 ### <a name="example"></a>示例  
   
@@ -1328,7 +1310,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1342,17 +1323,17 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> multimap:: key_compare (STL/CLR)
-两个键的排序的委托。  
+两个键排序委托。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型为委托来决定其密钥的自变量的顺序的同义词。  
+ 类型为委托，它确定其密钥的自变量的顺序的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1387,7 +1368,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1405,12 +1385,12 @@ compare(L'b', L'a') = True
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Key` 的同义词。  
+ 该类型是模板参数的同义词*密钥*。  
   
 ### <a name="example"></a>示例  
   
@@ -1437,7 +1417,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1445,20 +1424,20 @@ a b c
 ```  
   
 ## <a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
-查找与指定的键匹配的范围开始处。  
+查找与指定的键匹配的范围的起始处。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 密钥  
+ *key*  
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数将确定第一个元素`X`受控序列中具有等效顺序到`key`。 如果此类元素不存在，它将返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否则它将返回指定的迭代器`X`。 用于当前与指定的键匹配的控制序列中查找的元素序列的开头。  
+ 此成员函数将确定第一个元素`X`受控序列中具有相同的排序*密钥*。 如果此类元素不存在，它将返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否则它将返回一个迭代器，指定`X`。 使用要在与指定的键匹配的受控序列中当前定位的元素序列的开头。  
   
 ### <a name="example"></a>示例  
   
@@ -1491,7 +1470,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1502,23 +1480,23 @@ lower_bound(L'x')==end() = True
 ```  
 
 ## <a name="make_value"></a> multimap::make_value (STL/CLR)
-构造值对象。  
+构造一个值对象。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 密钥  
- 要使用的密钥值。  
+ *key*  
+ 若要使用的密钥值。  
   
- 映射  
+ *映射*  
  要搜索的映射的值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回`value_type`对象，其键是`key`并且其映射的值为`mapped`。 你可以使用它来编写适用于多个其他成员函数的对象。  
+ 此成员函数返回`value_type`对象，其键是*密钥*并且其映射的值为*映射*。 您可以用它来组合使用适合与几个其他成员函数的对象。  
   
 ### <a name="example"></a>示例  
   
@@ -1541,7 +1519,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1553,12 +1530,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Mapped` 的同义词。  
+ 该类型是模板参数的同义词*映射*。  
   
 ### <a name="example"></a>示例  
   
@@ -1585,7 +1562,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1597,7 +1573,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 multimap();  
 explicit multimap(key_compare^ pred);  
 multimap(multimap<Key, Mapped>% right);  
@@ -1613,16 +1589,16 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>参数  
- 第一个  
- 要插入的范围开始处。  
+ *first*  
+ 要插入范围的起始处。  
   
- last  
- 要插入的范围的末尾。  
+ *最后一个*  
+ 要插入的范围的下限。  
   
- pred  
- 排序受控序列的谓词。  
+ *Pred*  
+ 排序谓词对受控序列。  
   
- 右  
+ *right*  
  要插入的对象或范围。  
   
 ### <a name="remarks"></a>备注  
@@ -1630,49 +1606,49 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `multimap();`  
   
- 使用默认的排序谓词初始化受控的序列不包含任何元素， `key_compare()`。 用于指定空的初始受控的序列，使用默认的排序谓词。  
+ 使用默认排序谓词初始化受控的序列不含任何元素， `key_compare()`。 用于指定一个空的初始受控的序列，使用默认排序谓词。  
   
  构造函数：  
   
  `explicit multimap(key_compare^ pred);`  
   
- 初始化受控的序列不包含任何元素，与排序的谓词`pred`。 用于指定空的初始受控的序列，通过指定排序的谓词。  
+ 初始化受控的序列不含任何元素，与排序谓词*pred*。 用于指定一个空的初始受控的序列，使用指定的排序谓词。  
   
  构造函数：  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- 初始化受控的序列与序列 [`right.begin()`， `right.end()`)，使用默认的排序谓词。 用于指定是通过多重映射对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)，使用默认排序谓词。 用于指定副本的多重映射对象控制的序列的初始受控的序列*右*，使用默认排序谓词。  
   
  构造函数：  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- 初始化受控的序列与序列 [`right->begin()`， `right->end()`)，使用默认的排序谓词。 用于指定是通过多重映射对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)，使用默认排序谓词。 用于指定副本的多重映射对象控制的序列的初始受控的序列*右*，使用默认排序谓词。  
   
  构造函数：  
   
  `template<typename InIter> multimap(InIter first, InIter last);`  
   
- 初始化受控的序列与序列 [`first`， `last`)，使用默认的排序谓词。 你可以使用它以使用默认的排序谓词使受控的序列的另一个序列，副本。  
+ 初始化受控的序列与序列 [`first`， `last`)，使用默认排序谓词。 用于使用默认排序谓词使受控的序列的另一个序列副本。  
   
  构造函数：  
   
  `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`。 你可以使用它以使另一个序列，使用指定的排序谓词的副本的受控的序列。  
+ 初始化受控的序列与序列 [`first`， `last`)，使用排序谓词*pred*。 您可以使用它来使受控的序列的具有指定的排序谓词的另一个序列副本。  
   
  构造函数：  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化与枚举器指定序列的受控的序列`right`，使用默认的排序谓词。 你可以使用它来使一个枚举器，使用默认的排序谓词所描述的另一个序列的副本的受控的序列。  
+ 初始化具有指定枚举器的序列的受控的序列*右*，使用默认排序谓词。 您可以使用它来使受控的序列描述将枚举器，使用默认排序谓词的另一个序列的副本。  
   
  构造函数：  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`。 你可以使用它来使受控的序列的枚举，通过指定排序的谓词所描述的另一个序列的副本。  
+ 初始化具有指定枚举器的序列的受控的序列*右*，使用排序谓词*pred*。 您可以使用它来使受控的序列的枚举器，指定排序谓词所描述的另一个序列的副本。  
   
 ### <a name="example"></a>示例  
   
@@ -1747,7 +1723,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1768,16 +1743,16 @@ size() = 0
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 右  
+ *right*  
  用于复制的容器。  
   
 ### <a name="remarks"></a>备注  
- 成员运算符副本`right`到对象，然后返回`*this`。 用它将受控序列替换为 `right` 中的受控序列的副本。  
+ 成员运算符副本*右*对象，然后返回`*this`。 用于替换受控的序列中的受控序列的副本*右*。  
   
 ### <a name="example"></a>示例  
   
@@ -1807,8 +1782,7 @@ int main()
         System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    } 
 ```  
   
 ```Output  
@@ -1821,12 +1795,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回指定的受控序列，或刚超出空序列的开头的最后一个元素的反向迭代器。 因此，它指定`beginning`反向序列。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改按逆序的受控的序列，但其状态的开头。  
+ 成员函数返回一个反向迭代器，指定受控序列，或刚超出空序列的开头的最后一个元素。 因此，它指定`beginning`反向序列。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改的相反顺序的受控的序列，但其状态开始。  
   
 ### <a name="example"></a>示例  
   
@@ -1857,7 +1831,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1871,12 +1844,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述元素的引用。  
+ 此类型描述的元素的引用。  
   
 ### <a name="example"></a>示例  
   
@@ -1903,7 +1876,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1915,12 +1887,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回一个反向迭代器指向刚超出开头的受控序列。 因此，它指定`end`反向序列。 用于获取指定的迭代器`current`末尾按逆序的受控的序列，但其状态可以更改，如果更改了受控序列的长度。  
+ 成员函数返回一个反向迭代器指向刚超出开头的受控序列。 因此，它指定`end`反向序列。 用于获取迭代器，指定`current`如果受控序列的长度发生更改，可以更改的相反顺序的受控的序列，但其状态结束。  
   
 ### <a name="example"></a>示例  
   
@@ -1953,7 +1925,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1967,7 +1938,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
@@ -1996,7 +1967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2008,12 +1978,12 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回受控序列的长度。 用于确定当前受控序列中的元素的数目。 如果你关注的只是序列是否具有非零大小，请参阅[multimap:: empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`。  
+ 成员函数将返回受控序列的长度。 用于确定受控序列中当前元素的数目。 如果您关心的只是该序列是否具有非零大小，请参阅[multimap:: empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`。  
   
 ### <a name="example"></a>示例  
   
@@ -2045,7 +2015,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2055,16 +2024,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> multimap:: size_type (STL/CLR)
-两个元素之间的带符号距离的类型。  
+两个元素间的带符号距离的类型。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型描述非负元素计数。  
+ 此类型描述非负元素计数。  
   
 ### <a name="example"></a>示例  
   
@@ -2093,7 +2062,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2106,16 +2074,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 右  
+ *right*  
  要与其交换内容的容器。  
   
 ### <a name="remarks"></a>备注  
- 成员函数交换 `this` 和 `right`之间的受控序列。 它会以在常量时间内，则会引发任何异常。 你将它用作交换两个容器的内容的快速方法。  
+ 成员函数交换之间的受控的序列`this`并*右*。 它是在常量时间内，则会引发任何异常。 您将其用作一种来交换两个容器的内容的快速方法。  
   
 ### <a name="example"></a>示例  
   
@@ -2157,7 +2125,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2168,16 +2135,16 @@ int main()
 ```  
 
 ## <a name="to_array"></a> multimap::to_array (STL/CLR)
-受控的序列复制到新数组。  
+将受控的序列复制到新数组。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
+ 成员函数返回一个数组，包含对受控的序列。 用于获取数组形式的受控序列的副本。  
   
 ### <a name="example"></a>示例  
   
@@ -2208,7 +2175,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2221,16 +2187,16 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>参数  
- 密钥  
+ *key*  
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数将确定最后一个元素`X`受控序列中具有等效顺序到`key`。 如果此类元素不存在，或者`X`为受控序列中的最后一个元素，它将返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否则它将返回指定以外的第一个元素的迭代器`X`. 用于当前与指定的键匹配的控制序列中查找的元素序列的末尾。  
+ 此成员函数将确定最后一个元素`X`受控序列中具有相同的排序*密钥*。 如果此类元素不存在，或者如果`X`是受控序列中的最后一个元素，它将返回[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 否则它将返回一个迭代器，指定第一个超出元素`X`. 使用要在与指定的键匹配的受控序列中当前定位的元素序列的末尾。  
   
 ### <a name="example"></a>示例  
   
@@ -2263,7 +2229,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2278,12 +2243,12 @@ upper_bound(L'x')==end() = True
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回使用受控的序列进行排序的排序委托。 使用两个元素值进行比较。  
+ 成员函数将返回用于受控的序列进行排序的排序委托。 用于比较两个元素值。  
   
 ### <a name="example"></a>示例  
   
@@ -2310,7 +2275,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2324,13 +2288,13 @@ compare([L'b', 2], [L'a', 1]) = False
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是确定其值自变量的顺序的委托的同义词。  
+ 类型为委托，它确定其值参数的顺序的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -2357,7 +2321,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2371,7 +2334,7 @@ compare([L'b', 2], [L'a', 1]) = False
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2402,7 +2365,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2410,11 +2372,11 @@ int main()
 ```  
 
 ## <a name="op_neq"></a> 运算符 ！ = (multimap) (STL/CLR)
-列表不相等比较。  
+列出不等于比较。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator!=(multimap<Key, Mapped>% left,  
@@ -2422,14 +2384,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(left == right)`。 用于测试是否`left`未进行排序相同`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数返回`!(left == right)`。 使用它来测试是否*左*未排序相同*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2468,7 +2430,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2483,7 +2444,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<(multimap<Key, Mapped>% left,  
@@ -2491,14 +2452,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回 true 当对于最低的位置`i`为其`!(right[i] < left[i])`很还 true， `left[i] < right[i]`。 否则，它将返回`left->size() < right->size()`用于测试是否`left`进行排序之前`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数返回 true 当对于最低的位置`i`为其`!(right[i] < left[i])`它是还 true 的`left[i] < right[i]`。 否则，它将返回`left->size() < right->size()`使用它来测试是否*左*进行排序之前*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2537,7 +2498,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2548,11 +2508,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 运算符&lt;= (multimap) (STL/CLR)
-小于或等于列表比较。  
+列表小于或等于比较。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<=(multimap<Key, Mapped>% left,  
@@ -2560,14 +2520,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(right < left)`。 用于测试是否`left`未进行排序之后`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数返回`!(right < left)`。 使用它来测试是否*左*未排序后*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2606,7 +2566,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2621,7 +2580,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator==(multimap<Key, Mapped>% left,  
@@ -2629,14 +2588,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数，则返回 true，才由控制序列`left`和`right`具有相同的长度和每个位置`i`， `left[i] ==` `right[i]`。 用于测试是否`left`进行排序相同`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数才返回 true，序列由控制*左*并*右*具有相同的长度和每个位置`i`， `left[i] ==` `right[i]`。 使用它来测试是否*左*进行排序相同*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2675,7 +2634,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2690,7 +2648,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>(multimap<Key, Mapped>% left,  
@@ -2698,14 +2656,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`right` `<` `left`。 用于测试是否`left`进行排序之后`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数将返回`right` `<` `left`。 使用它来测试是否*左*进行排序后*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2744,7 +2702,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2759,7 +2716,7 @@ int main()
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>=(multimap<Key, Mapped>% left,  
@@ -2767,14 +2724,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>参数  
- 左  
+ *left*  
  要比较的左容器。  
   
- 右  
+ *right*  
  要比较的右容器。  
   
 ### <a name="remarks"></a>备注  
- 运算符函数返回`!(left` `<` `right)`。 用于测试是否`left`未进行排序之前`right`两个 multimap 何时比较的元素的元素。  
+ 运算符函数将返回`!(left` `<` `right)`。 使用它来测试是否*左*未排序之前*右*当两个多重映射都比较的元素的方式。  
   
 ### <a name="example"></a>示例  
   
@@ -2813,7 +2770,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

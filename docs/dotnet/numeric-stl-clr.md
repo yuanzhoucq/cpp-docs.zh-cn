@@ -1,5 +1,5 @@
 ---
-title: 数字 (STL/CLR) |Microsoft 文档
+title: 数字 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 62fcf1664164baa876699cf6000217d9977d8271
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079034"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376016"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 定义容器模板函数执行为数值处理提供的算法。  
@@ -55,7 +55,7 @@ ms.locfileid: "37079034"
 |[accumulate (STL/CLR)](#accumulate)|通过计算连续部分总和来计算指定范围（包括一些初始值）中所有元素的和，或计算通过指定的二元运算（而不是求和运算）获得的类似的连续部分结果的结果。|  
 |[adjacent_difference (STL/CLR)](#adjacent_difference)|计算输入范围中每个元素与其前一元素之间的连续差值，并将结果输出到目标范围，或计算将差值运算替换为其他指定二元运算的一般化程序的结果。|  
 |[inner_product (STL/CLR)](#inner_product)|计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积二元运算替换为其他指定二元运算的一般化程序的结果。|  
-|[partial_sum (STL/CLR)](#partial_sum)|计算一系列从第一个元素到输入范围中的总和`i`th 元素，并将存储在每个此类总和的结果`i`个元素的目标范围，或计算结果的一般化程序的其中求和运算是替换为其他指定二元运算。|  
+|[partial_sum (STL/CLR)](#partial_sum)|计算的一系列输入范围中从第一个元素到总和`i`个元素，并将存储在每个此类总和的结果`i`个元素的目标范围或计算结果的一般化程序的位置将求和运算将替换为其他指定二元运算。|  
  
 ## <a name="members"></a>成员
 
@@ -64,7 +64,7 @@ ms.locfileid: "37079034"
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<class _InIt, class _Ty> inline  
     _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val);  
 template<class _InIt, class _Ty, class _Fn2> inline  
@@ -79,7 +79,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt> inline  
     _OutIt adjacent_difference(_InIt _First, _InIt _Last,  
         _OutIt _Dest);  
@@ -96,7 +96,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
   
 ###<a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _Ty> inline  
     _Ty inner_product(_InIt1 _First1, _InIt1 _Last1, _InIt2 _First2,  
         _Ty _Val);  
@@ -110,11 +110,11 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
  此函数的行为与 c + + 标准库数值函数相同`inner_product`。 有关详细信息，请参阅[inner_product](../standard-library/numeric-functions.md#inner_product)。
 
 ## <a name="partial_sum"></a> partial_sum (STL/CLR)
-计算一系列从第一个元素到输入范围中的总和`i`th 元素，并将存储在每个此类总和的结果`i`个元素的目标范围，或计算结果的一般化程序的其中求和运算是替换为其他指定二元运算。  
+计算的一系列输入范围中从第一个元素到总和`i`个元素，并将存储在每个此类总和的结果`i`个元素的目标范围或计算结果的一般化程序的位置将求和运算将替换为其他指定二元运算。  
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt> inline  
     _OutIt partial_sum(_InIt _First, _InIt _Last, _OutIt _Dest);  
 template<class _InIt, class _OutIt, class _Fn2> inline  
@@ -124,4 +124,3 @@ template<class _InIt, class _OutIt, class _Fn2> inline
   
 ### <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库数值函数相同`partial_sum`。 有关详细信息，请参阅[partial_sum](../standard-library/numeric-functions.md#partial_sum)。  
-    
