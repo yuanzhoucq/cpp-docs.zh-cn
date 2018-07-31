@@ -1,5 +1,5 @@
 ---
-title: 使用存储的过程 |Microsoft 文档
+title: 使用存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,31 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5b49daa44fc8c88316134915945ad7ee01bb81a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe62aff7e8828dcb17c04fc3e05eedc9eefe9d16
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112233"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337276"
 ---
 # <a name="using-stored-procedures"></a>使用存储过程
-存储的过程是在数据库中存储的可执行对象。 调用存储的过程是类似于调用 SQL 命令。 在数据源 （而不是执行或准备客户端应用程序中的语句） 上使用存储的过程可以提供几个好处，包括更高的性能，减少的网络开销，以及改进的一致性和准确性。  
+存储的过程是存储在数据库中的可执行对象。 调用存储的过程是类似于调用 SQL 命令。 在数据源 （而不是执行或准备客户端应用程序中的语句） 上使用存储的过程可以提供多项优点，包括更高的性能、 减少的网络开销，并可提高的一致性和准确性。  
   
- 存储的过程可以具有任意数量的 （包括零） 输入或输出参数，并且可以通过返回的值。 可以将参数值硬编码为特定数据值，也可以使用参数标记 (问号？)。  
+ 存储的过程可以有任意数量的 （包括零个） 输入或输出参数，并可以传递返回值。 可以将值硬编码参数为特定的数据值，也可以使用参数标记 (问号？)。  
   
 > [!NOTE]
->  必须使用编译使用 Visual c + + 创建的存储的过程的 CLR SQL Server **/clr: safe**编译器选项。  
+>  CLR 必须使用编译使用 Visual c + + 创建的存储的过程的 SQL Server`/clr:safe`编译器选项。  
   
- OLE DB 访问接口为 SQL Server (SQLOLEDB) 支持以下存储过程用于返回数据的机制：  
+ OLE DB 访问接口的 SQL Server (SQLOLEDB) 支持以下存储过程使用可返回数据的机制：  
   
--   在过程中的每个 SELECT 语句生成的结果集。  
+-   该过程中的每个 SELECT 语句生成的结果集。  
   
 -   该过程可以返回通过输出参数的数据。  
   
--   该过程可以返回代码的整数。  
+-   该过程可具有整数返回代码。  
   
 > [!NOTE]
->  你无法使用存储的过程的 OLE DB 访问接口为 Jet 因为该提供程序不支持存储的过程;查询字符串中允许使用仅常量。  
+>  你无法将存储的过程的 OLE DB 访问接口用于 Jet 因为该提供程序不支持存储的过程;只允许使用常量查询字符串中。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

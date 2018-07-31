@@ -1,5 +1,5 @@
 ---
-title: CNoAccessor 类 |Microsoft 文档
+title: CNoAccessor 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3110d20330d42fcb0816873ff3e8a25d1f8436ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097349"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336734"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor 类
-可用作模板自变量 (`TAccessor`) 的模板类，如`CCommand`和`CTable`，需要访问器类自变量。  
+可以用作模板自变量 (`TAccessor`) 的模板类，如`CCommand`和`CTable`，需要访问器类参数。  
   
 ## <a name="syntax"></a>语法
 
@@ -36,33 +36,33 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用`CNoAccessor`作为模板参数时你不想要支持参数或输出列的类。  
+ 使用`CNoAccessor`作为模板参数，如果不想要支持参数或输出列的类。  
   
  `CNoAccessor` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
   
--   **BindColumns** -将列绑定到访问器。  
+-   `BindColumns` -将列绑定到访问器。  
   
--   `BindParameters` -将绑定到列的创建的参数。  
+-   `BindParameters` -将创建的参数绑定到列。  
   
--   **将绑定**-创建绑定。  
+-   `Bind` -创建绑定。  
   
--   **关闭**-关闭访问器。  
+-   `Close` -关闭访问器。  
   
--   `ReleaseAccessors` -释放类创建的访问器。  
+-   `ReleaseAccessors` -释放访问器类创建的。  
   
--   `FreeRecordMemory` -释放当前需要被释放的记录中的任何列。  
+-   `FreeRecordMemory` -释放需要释放的当前记录中的任何列。  
   
 -   `GetColumnInfo` -从打开的行集中获取列信息。  
   
 -   `GetNumAccessors` -检索类创建的取值函数的数目。  
   
--   `IsAutoAccessor` -如果数据计算机在移动操作期间访问器将自动检索返回 true。  
+-   `IsAutoAccessor` 的如果自动检索数据的访问器在移动操作过程返回 true。  
   
--   `GetHAccessor` -检索指定访问器的访问器句柄。  
+-   `GetHAccessor` -检索指定的访问器的访问器句柄。  
   
 -   `GetBuffer` -检索到的书签缓冲区的指针。  
   
--   **NoBindOnNullRowset** -阻止空的行集的数据绑定。  
+-   `NoBindOnNullRowset` -可以防止在空的行集上的数据绑定。  
   
 ## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  

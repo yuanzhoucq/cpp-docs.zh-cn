@@ -1,5 +1,5 @@
 ---
-title: 使用动态访问器 |Microsoft 文档
+title: 使用动态访问器 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.technology:
@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 700a959742fafd4478659ff08821b043aff8bc14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111967"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340979"
 ---
 # <a name="using-dynamic-accessors"></a>使用动态访问器
 
-动态访问器，可以在不知道数据库架构 （基础结构） 时访问数据源。 OLE DB 模板库提供了几个类来帮助你执行此操作。
+动态访问器，可以在不知道数据库架构 （基础结构） 时访问数据源。 OLE DB 模板库提供了几个类可帮助您执行此操作。
 
-[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例演示如何使用动态访问器类来获取列信息并动态创建访问器。
+[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例演示如何使用动态访问器类来获取列信息和动态创建访问器。
 
 ## <a name="using-cdynamicaccessor"></a>使用 CDynamicAccessor
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)允许你访问数据源，当在不知道数据库架构 （数据库的基础结构）。 `CDynamicAccessor` 方法获取列信息，如列名称、 计数和数据类型。 此列信息用于在运行时动态创建取值函数。 列信息存储在缓冲区是创建和管理此类。 获取数据缓冲区使用[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)方法。
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ，可在不知道数据库架构 （数据库的基础结构） 时访问数据源。 `CDynamicAccessor` 方法获取列信息，例如列名称、 计数和数据类型。 此列信息用于在运行时动态创建取值函数。 列信息存储在缓冲区的创建和管理此类。 从缓冲区使用获取数据[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)方法。
 
 ## <a name="example"></a>示例
 
@@ -103,9 +103,9 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>使用 CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)工作方式类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，除非在一个重要区别。 虽然`CDynamicAccessor`请求中提供程序，报告的本机格式数据`CDynamicStringAccessor`请求提供程序获取访问从数据存储区作为字符串数据的所有数据。 这是对于不需要计算的数据存储，例如显示或打印数据存储区的内容中的值的简单任务特别有用。
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)工作方式类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，重要的一种方法中除外。 虽然`CDynamicAccessor`请求数据以本机格式提供程序，报告`CDynamicStringAccessor`请求提供程序提取从字符串数据作为数据存储区访问的所有数据。 这是对于不需要计算的数据存储，如在显示或输出数据存储区的内容中的值的简单任务特别有用。
 
-使用`CDynamicStringAccessor`方法以获取列信息。 此列信息用于在运行时动态创建取值函数。 列信息存储在缓冲区创建和管理此类。 获取数据缓冲区使用[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或将其存储到缓冲区使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。
+使用`CDynamicStringAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。 创建和管理此类缓冲区中存储的列信息。 从缓冲区使用获取数据[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或将其存储到缓冲区使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。
 
 ## <a name="example"></a>示例
 
@@ -165,11 +165,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicparameteraccessor"></a>使用 CDynamicParameterAccessor
 
-[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，只不过`CDynamicParameterAccessor`获取参数信息，以通过调用设置[ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)接口。 访问接口必须支持 `ICommandWithParameters` 以便使用者使用此类。
+[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)类似于[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，只不过`CDynamicParameterAccessor`获取参数信息将通过调用[ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)接口。 访问接口必须支持 `ICommandWithParameters` 以便使用者使用此类。
 
-参数信息存储在由此类创建和管理的缓冲区中。 使用从缓冲区中获取参数数据[cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)和[cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)。
+参数信息存储在由此类创建和管理的缓冲区中。 通过使用从缓冲区获取参数数据[cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)并[cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)。
 
-有关演示如何使用此类来执行 SQL Server 存储过程并获取输出参数值的示例，请参阅[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例中的代码[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)在 GitHub 上的存储库。
+有关演示如何使用此类以执行 SQL Server 存储过程并获取输出参数值的示例，请参阅[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例中的代码[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)GitHub 上的存储库。
 
 ## <a name="see-also"></a>请参阅
 

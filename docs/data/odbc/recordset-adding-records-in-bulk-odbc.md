@@ -1,5 +1,5 @@
 ---
-title: 记录集： 添加记录 (Odbc) |Microsoft 文档
+title: 记录集： 添加记录大容量 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089280"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337224"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>记录集：批量添加记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
- MFC [CRecordset](../../mfc/reference/crecordset-class.md)类具有一新优化方法，当你在添加新记录到表在大容量时可提高效率。  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md)类具有了新的优化，当向表中大容量添加新记录时，提高了效率。  
   
 > [!NOTE]
->  本主题适用于派生自`CRecordset`中哪些批量行提取尚未实现。 如果你将批量行提取，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 新选项**dwOptions**参数[CRecordset::Open](../../mfc/reference/crecordset-class.md#open)成员函数， **optimizeBulkAdd**，当你要添加多个记录时可提高性能连续而不调用**Requery**或**关闭**。 脏之前第一个字段**更新**调用标记为脏的后续`AddNew` /**更新**调用。  
+ 新选项*dwOptions*参数[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成员函数`optimizeBulkAdd`，可以提高性能，而不会调用连续添加多个记录时`Requery`或`Close`。 脏之前第一个字段`Update`调用标记为已更新的后续`AddNew` / `Update`调用。  
   
- 如果你正在使用数据库类以利用 **:: SQLSetPos** ODBC API 函数用于添加、 编辑和删除记录，这种优化是不必要的。  
+ 如果正在使用数据库类才能利用`::SQLSetPos`ODBC API 函数用于添加、 编辑和删除记录，此优化是不必要。  
   
- 如果加载 ODBC 游标库或 ODBC 驱动程序不支持添加、 编辑和删除通过 **:: SQLSetPos**，这种优化应提高大容量添加性能。 若要打开此优化，设置**dwOptions**中的参数**打开**调用你记录集到以下：  
+ 如果加载 ODBC 游标库或 ODBC 驱动程序不支持添加、 编辑和删除通过`::SQLSetPos`，这种优化应提高大容量增加了性能。 若要启用这种优化，设置*dwOptions*中的参数`Open`调用到以下记录集：  
   
 ```  
 appendOnly | optimizeBulkAdd  

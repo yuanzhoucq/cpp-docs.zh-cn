@@ -1,5 +1,5 @@
 ---
-title: 使用者向导生成的类 |Microsoft 文档
+title: 使用者向导生成的类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091980"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338730"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
 当使用 ATL OLE DB 使用者向导生成一个使用者时，可以选择使用 OLE DB 模板或 OLE DB 属性。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：  
@@ -47,9 +47,9 @@ ms.locfileid: "33091980"
 >  如果修改用户记录类或编写自己的使用者，则数据变量必须在状态和长度变量之前出现。  
   
 > [!NOTE]
->  ATL OLE DB 使用者向导使用 **DB_NUMERIC** 类型来绑定数值数据类型。 它之前使用的是 **DBTYPE_VARNUMERIC** （其格式由 **DB_VARNUMERIC** 类型所描述；请参阅 Oledb.h）。 如果不使用向导来创建使用者，则建议使用 **DB_NUMERIC**。  
+>  ATL OLE DB 使用者向导使用`DB_NUMERIC`类型来绑定数值数据类型。 它之前使用`DBTYPE_VARNUMERIC`(由描述的格式`DB_VARNUMERIC`类型; 请参阅 Oledb.h)。 如果不使用向导来创建使用者，建议你使用`DB_NUMERIC`。  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>行集属性  
  接下来，向导将设置行集属性。 如果在 ATL OLE DB 使用者向导中选择了“更改” 、“插入” 或“删除”  ，则此时将设置相应的属性（将始终设置 DBPROP_IRowsetChange，然后将分别设置 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 中的一个或多个）。  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>命令类或表类  
  如果指定命令类，则向导将声明命令类；对于模板化代码，命令将如下所示：  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>类声明  
  最后，向导将生成如下命令类声明：  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  在下面的示例中，向导将生成针对 `COrders`类的声明，但不会显示用户记录类 `COrdersAccessor` ，因为属性会将其插入。  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  
