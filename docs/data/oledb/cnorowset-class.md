@@ -1,5 +1,5 @@
 ---
-title: CNoRowset 类 |Microsoft 文档
+title: CNoRowset 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098155"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339557"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 类
-可用作模板自变量 (`TRowset`) 为[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
+可以用作模板自变量 (`TRowset`) 用于[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
   
 ## <a name="syntax"></a>语法
 
@@ -38,8 +38,8 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>参数  
- `TAccessor`  
+### <a name="parameters"></a>参数  
+ *TAccessor*  
  一个访问器类。 默认值为 `CAccessorBase`。  
   
 ## <a name="remarks"></a>备注  
@@ -47,19 +47,19 @@ class CNoRowset
   
  `CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
   
--   **BindFinished** -指示绑定完成 (返回`S_OK`)。  
+-   `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。  
   
--   **关闭**-释放行和当前 IRowset 接口。  
+-   `Close` -释放行和当前 IRowset 接口。  
   
 -   `GetIID` - 检索连接点的接口 ID。  
   
--   **GetInterface** -检索接口。  
+-   `GetInterface` -检索接口。  
   
 -   `GetInterfacePtr` - 检索封装的接口指针。  
   
--   **SetAccessor** -对访问器中设置的指针。  
+-   `SetAccessor` -将指针设置为访问器。  
   
--   **SetupOptionalRowsetInterfaces** -设置为行集的可选接口。  
+-   `SetupOptionalRowsetInterfaces` -设置设置为行集的可选接口。  
   
 ## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  

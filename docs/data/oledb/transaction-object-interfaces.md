@@ -1,5 +1,5 @@
 ---
-title: 事务对象接口 |Microsoft 文档
+title: 事务对象接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 415fdec8397b72bf8f391865fb5af418f95fdf03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104547"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339749"
 ---
 # <a name="transaction-object-interfaces"></a>事务对象接口
-事务对象数据源上定义工作的原子单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，你必须创建您自己的对象）。  
+事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，必须创建你自己的对象）。  
   
- 下表显示由 OLE DB 事务对象的必需和可选接口。  
+ 下表显示了由 OLE DB 定义的事务对象的必需和可选接口。  
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|强制|否|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|强制|否|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|否|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|强制|否|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|否|  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

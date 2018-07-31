@@ -1,5 +1,5 @@
 ---
-title: 遍历简单行集合 |Microsoft 文档
+title: 遍历简单行集合 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102946"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336649"
 ---
 # <a name="traversing-a-simple-rowset"></a>遍历简单行集合
-下面的示例演示不涉及命令的快速而简便的数据库访问。 下面的使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码创建[CTable](../../data/oledb/ctable-class.md)使用访问器的表对象基于用户记录类`CArtists`。 打开连接，打开连接上, 一个会话，并在会话上打开表。  
+下面的示例演示不涉及命令的快速而简便的数据库访问。 以下使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码会创建[CTable](../../data/oledb/ctable-class.md)取值函数的表对象基于用户记录类`CArtists`。 打开的连接、 打开该连接上的会话，并在会话中打开表。  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 用户记录中， `CArtists`，如下所示：  
+ 用户记录`CArtists`，如下所示：  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

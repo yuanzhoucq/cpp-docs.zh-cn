@@ -1,5 +1,5 @@
 ---
-title: 接收通知 |Microsoft 文档
+title: 接收通知 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9e1dee5c63281c729cdb798a190938c6433aac0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdef616456b98086bf9490297d68c98596b2dca4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112311"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338965"
 ---
 # <a name="receiving-notifications"></a>接收通知
-OLE DB 提供用于在事件发生时接收通知的接口。 描述了这些内容在[OLE DB 对象通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)中*OLE DB 程序员参考*。 这些事件的安装程序将使用的标准的 COM 连接点机制。 例如，想要检索通过事件的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其通过公开**COM_INTERFACE_ENTRY**宏。  
+OLE DB 提供用于在事件发生时接收通知的接口。 中介绍了这些[OLE DB 对象通知](https://msdn.microsoft.com/library/ms725406.aspx)中*OLE DB 程序员参考*。 这些事件的安装程序将使用标准的 COM 连接点机制。 例如，想要检索事件通过的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其公开通过 COM_INTERFACE_ENTRY 宏。  
   
- `IRowsetNotify` 有三种方法，可以在不同时间调用。 如果你想要对这些方法之一做出响应，则可以使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)类，它将返回**E_NOTIMPL**你不感兴趣的方法。  
+ `IRowsetNotify` 有三个方法，可以在不同时间调用。 如果你想要响应的下列方法之一，则可以使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)类，您不感兴趣的方法返回 E_NOTIMPL。  
   
- 在创建行集时，你必须告知提供程序想要返回的行集对象支持**IConnectionPointContainer**，所需设置通知。  
+ 在创建行集时，你必须告知提供程序希望返回的行集对象以支持`IConnectionPointContainer`，需要设置通知。  
   
- 下面的代码演示如何从 ATL 对象打开行集和使用`AtlAdvise`函数设置通知接收器。 `AtlAdvise` 返回在调用时使用 cookie `AtlUnadvise`。  
+ 下面的代码演示如何从 ATL 对象打开行集，并使用`AtlAdvise`函数来通知接收器设置。 `AtlAdvise` 返回在调用时使用的 cookie `AtlUnadvise`。  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 
 propset.AddProperty(DBPROP_IConnectionPointContainer, true);  
   
-
 product.Open(session, _T("Products"), &propset);  
   
-
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   

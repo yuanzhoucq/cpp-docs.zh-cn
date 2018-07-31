@@ -1,5 +1,5 @@
 ---
-title: 记录集： 处理大数据项 (ODBC) |Microsoft 文档
+title: 记录集： 处理大数据项 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,51 +19,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6845d2e3c1b1eac31486200a0f610037d4774626
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38915b3a10f1ed3e2a175687937b3b18a60a9be4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091730"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338488"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>记录集：处理大数据项 (ODBC)
 本主题适用于 MFC ODBC 类和 MFC DAO 类。  
   
 > [!NOTE]
->  如果你正在使用 MFC DAO 类，管理大型数据项与类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果将 MFC ODBC 类用于批量行提取，使用`CLongBinary`而非`CByteArray`。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  如果使用 MFC DAO 类时，管理大型数据项与类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 如果使用批量行提取使用 MFC ODBC 类，使用`CLongBinary`而非`CByteArray`。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 假设你的数据库可以存储大片的数据，例如位图 （员工的照片、 映射或图片的产品、 OLE 对象等）。 此类数据通常称为二进制大型对象 （或 BLOB） 因为：  
+ 假设您的数据库可以存储大的数据，如位图 （雇员照片、 映射、 图片的产品、 OLE 对象等）。 此类数据通常称为二进制大型对象 （或 BLOB） 因为：  
   
--   每个字段值很大。  
+-   每个字段值都大。  
   
--   与不同数字和其他简单数据类型，它具有大小不可预知。  
+-   与不同的数字和其他简单数据类型，它具有大小不可预知。  
   
--   数据为从你的程序的角度不定型数据。  
+-   不从应用程序的角度来看定型数据。  
   
- 本主题介绍了哪些数据库类提供用于处理此类对象的支持。  
+ 本主题介绍数据库类用于处理此类对象提供哪些支持。  
   
 ##  <a name="_core_managing_large_objects"></a> 管理大型对象  
- 记录集有两个方法来解决管理二进制大型对象的特殊的难度。 你可以使用类[CByteArray](../../mfc/reference/cbytearray-class.md)或者你可以使用类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 一般情况下，`CByteArray`是首选的方法来管理大型二进制数据。  
+ 记录集有两种方法来解决特别难管理二进制大型对象。 可以使用类[CByteArray](../../mfc/reference/cbytearray-class.md)也可以使用类[CLongBinary](../../mfc/reference/clongbinary-class.md)。 一般情况下，`CByteArray`是管理大型二进制数据的首选的方法。  
   
- `CByteArray` 需要更多的开销比`CLongBinary`但功能更强大中, 所述[CByteArray 类](#_core_the_cbytearray_class)。 `CLongBinary` 简要中所述[CLongBinary 类](#_core_the_clongbinary_class)。  
+ `CByteArray` 需要更多的开销比`CLongBinary`但功能更强大，如中所述[CByteArray 类](#_core_the_cbytearray_class)。 `CLongBinary` 简要中所述[CLongBinary 类](#_core_the_clongbinary_class)。  
   
- 有关使用的详细信息`CByteArray`若要使用的大型数据项，请参阅[技术说明 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)。  
+ 有关使用的详细信息`CByteArray`若要处理大数据项，请参阅[技术说明 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)。  
   
 ##  <a name="_core_the_cbytearray_class"></a> CByteArray 类  
- `CByteArray` 是 MFC 集合类之一。 A`CByteArray`对象存储为动态的字节数组-数组可以根据需要进行扩展。 此类与内置 c + + 数组的索引，提供快速访问。 `CByteArray` 对象可以序列化和转储以进行诊断。 类提供用于获取和设置指定的字节、 插入和追加字节，和删除 1 个字节或所有字节的成员函数。 这些功能使得分析更轻松的二进制数据。 例如，如果二进制对象是一个 OLE 对象，你可能需要完成某些头字节才能访问实际对象。  
+ `CByteArray` 是 MFC 集合类之一。 一个`CByteArray`对象将存储为动态的字节数组，数组可以根据需要进行扩展。 此类与内置 c + + 数组相同的索引，提供快速访问。 `CByteArray` 对象可以序列化和转储以用于诊断目的。 类提供成员函数用于获取和设置将指定的字节、 插入和追加字节和删除 1 个字节或所有字节。 这些功能使得分析更轻松的二进制数据。 例如，如果二进制对象是一个 OLE 对象，您可能需要完成一些标头字节来访问实际对象。  
   
 ##  <a name="_core_using_cbytearray_in_recordsets"></a> 在记录集中使用 CByteArray  
- 通过为记录集中的字段数据成员提供类型`CByteArray`，提供从中固定的基[RFX](../../data/odbc/record-field-exchange-rfx.md)可以管理此类对象的传输，记录集和数据源之间而通过你可以操作在对象内的数据。 RFX 需要特定的站点检索到的数据，并且需要用于访问基础数据的方法。  
+ 通过提供类型的记录集的字段数据成员`CByteArray`，提供的固定的基础[RFX](../../data/odbc/record-field-exchange-rfx.md)可以管理记录集和数据源之间以及通过可操作此类对象的传输对象中的数据。 RFX 检索到的数据，所需的特定站点，你需要用于访问基础数据的方法。  
   
- 有关使用的详细信息`CByteArray`若要使用的大型数据项，请参阅[技术说明 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)。  
+ 有关使用的详细信息`CByteArray`若要处理大数据项，请参阅[技术说明 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)。  
   
 ##  <a name="_core_the_clongbinary_class"></a> CLongBinary 类  
- A [CLongBinary](../../mfc/reference/clongbinary-class.md)对象是围绕简单 shell`HGLOBAL`的堆上分配的存储块的句柄。 当它绑定包含二进制大型对象的表列时，RFX 将其分配`HGLOBAL`处理时它需要将数据传输到记录集并存储中的句柄`CLongBinary`记录集的字段。  
+ 一个[CLongBinary](../../mfc/reference/clongbinary-class.md)对象是围绕一个简单 shell`HGLOBAL`句柄存储在堆上分配的块。 它将绑定包含二进制大型对象的表列，会分配 RFX`HGLOBAL`处理需要将数据传输到记录集和存储中的句柄时`CLongBinary`记录集的字段。  
   
- 反过来，使用`HGLOBAL`处理， `m_hData`，以便使用数据本身，方式上任何处理数据操作等。 这就是[CByteArray](../../mfc/reference/cbytearray-class.md)添加功能。  
+ 反过来，使用`HGLOBAL`处理， `m_hData`，可以使用数据本身，来在任何处理数据操作。 这就是[CByteArray](../../mfc/reference/cbytearray-class.md)添加功能。  
   
 > [!CAUTION]
->  CLongBinary 对象不能作为函数调用中的参数。 此外，其实现，它可以调用 **:: SQLGetData**、 一定会降低可滚动快照滚动性能。 这也可能是 true 当你使用 **:: SQLGetData**自行检索动态架构列调用。  
+>  CLongBinary 对象不能用作函数调用中的参数。 此外，其实现，它调用`::SQLGetData`，一定会降低可滚动的快照的滚动性能。 这也可能是 true 时使用`::SQLGetData`自行检索动态架构列调用。  
   
 ## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   

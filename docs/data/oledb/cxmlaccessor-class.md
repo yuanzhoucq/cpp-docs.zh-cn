@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f25d02b5b8b86a70f63dc2b0ca8d2ba9cb60066b
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 16ced0ce1d6c5531b7210231315f001cda4c0bc4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233407"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337208"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  

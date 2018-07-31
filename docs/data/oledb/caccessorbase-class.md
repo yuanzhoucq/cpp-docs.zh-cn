@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181193"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340659"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 OLE DB 模板中的所有访问器从此类派生。 `CAccessorBase` 允许一个行集来管理多个访问器。 它还提供有关参数和输出列的绑定。  
@@ -74,7 +74,6 @@ OLE DB 模板中的所有访问器从此类派生。 `CAccessorBase` 允许一�
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
@@ -86,7 +85,7 @@ void Close();
 ### <a name="syntax"></a>语法  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -103,7 +102,6 @@ void Close();
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>返回值  
@@ -115,7 +113,7 @@ ULONG GetNumAccessors() const;
 ### <a name="syntax"></a>语法  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>参数  

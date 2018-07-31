@@ -1,5 +1,5 @@
 ---
-title: 事务： 在记录集 (ODBC) 执行事务 |Microsoft 文档
+title: 事务： 在记录集 (ODBC) 执行事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d7cae3b05c20736a2e271b574569bcac4d5cdc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fcc5c6aae86aea005aef50f9083aeb718f64b19
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094600"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340262"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>事务：在记录集中执行事务 (ODBC)
-本主题介绍了如何在记录集中执行事务。  
+本主题说明如何在记录集中执行事务。  
   
 > [!NOTE]
->  仅支持一个级别的事务是;你无法嵌套事务。  
+>  仅支持一个级别的事务是;不能嵌套事务。  
   
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>在记录集中执行事务  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>若要在记录集中执行事务  
   
-1.  调用`CDatabase`对象的**BeginTrans**成员函数。  
+1.  调用`CDatabase`对象的`BeginTrans`成员函数。  
   
-2.  如果你不具有实现批量行提取，调用**AddNew/更新**，**编辑/更新**，和**删除**的相同的一个或多个记录集对象的成员函数根据需要多次的数据库。 有关详细信息，请参阅[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果已实现批量行提取，则必须编写您自己的函数，更新数据源。  
+2.  如果你尚未实现批量行提取，调用`AddNew/Update`， `Edit/Update`，和`Delete`的很多时候根据需要与相同的数据库的一个或多个记录集对象的成员函数。 有关详细信息，请参阅[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果已实现批量行提取，则必须编写您自己的函数来更新数据源。  
   
-3.  最后，调用`CDatabase`对象的**CommitTrans**成员函数。 如果错误发生的一个更新中，或你决定取消所做的更改，调用其**回滚**成员函数。  
+3.  最后，调用`CDatabase`对象的`CommitTrans`成员函数。 如果在更新之一中出现错误，或者你决定取消所做的更改，则调用其`Rollback`成员函数。  
   
- 下面的示例使用两个记录集从学校注册数据库，将该学生从在其中注册学生的所有类删除学生的注册。 因为**删除**调用这两个记录集内的必须成功，则需要使用事务。 该示例假定存在`m_dbStudentReg`，类型的成员变量`CDatabase`已连接到数据源和记录集类`CEnrollmentSet`和`CStudentSet`。 `strStudentID`变量包含从用户获取的值。  
+ 下面的示例使用两个记录集从 school 注册数据库，将从学生已注册的所有课程的学生删除学生的注册。 因为`Delete`中这两个记录集的调用必须成功，则需要使用事务。 该示例假定存在`m_dbStudentReg`，类型的成员变量`CDatabase`已连接到数据源和记录集类`CEnrollmentSet`和`CStudentSet`。 `strStudentID`变量包含从用户获取一个值。  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -89,7 +89,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  调用**BeginTrans**试情况下调用**CommitTrans**或**回滚**时出错。  
+>  调用`BeginTrans`而无需调用再次`CommitTrans`或`Rollback`是错误。  
   
 ## <a name="see-also"></a>请参阅  
  [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   

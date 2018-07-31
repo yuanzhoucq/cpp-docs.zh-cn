@@ -1,5 +1,5 @@
 ---
-title: CAccessor 类 |Microsoft 文档
+title: CAccessor 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093904"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337412"
 ---
 # <a name="caccessor-class"></a>CAccessor 类
 表示一个访问器类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
+### <a name="parameters"></a>参数  
+ *T*  
  用户记录类。  
   
 ## <a name="remarks"></a>备注  
- 记录静态绑定到数据源时使用。 该记录包含缓冲区。 此类在行集上支持多个访问器。  
+ 使用一条记录以静态方式绑定到数据源时。 该记录包含缓冲区。 此类支持多个访问器的行集。  
   
- 当你知道的结构和数据库的类型时，请使用此访问器类型。  
+ 当你知道的结构和数据库类型时，请使用此访问器类型。  
   
- 如果你访问器包含指向内存的字段 (如`BSTR`或接口)，必须释放，调用成员函数[caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md)在下一步之前读取记录。  
+ 如果您访问器包含指向内存的字段 (如`BSTR`或接口)，必须释放，调用成员函数[caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md)在下一步之前读取记录。  
   
 ## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  

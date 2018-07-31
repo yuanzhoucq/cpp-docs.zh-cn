@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954579"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340633"
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 
@@ -30,7 +30,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
   
  本主题假定你着手工作提供程序。 有两个步骤创建可更新的提供程序。 您必须首先确定如何提供程序将对数据存储区; 进行的更改具体而言，是否更改会立即完成或者延迟，直到发出 update 命令。 部分"[使提供程序可更新](#vchowmakingprovidersupdatable)"的更改和的设置，需要在提供程序代码中执行操作。  
   
- 接下来，必须确保您的提供程序包含所有功能，以支持使用者可能会请求它的任何内容。 如果使用者想要更新的数据存储区，则提供程序必须包含的数据保存到数据存储区的代码。 例如，可能会使用 MFC 的 C 运行时库来执行此类操作对数据源。 部分"[写入到数据源](#vchowwritingtothedatasource)"介绍如何将写入到数据源，处理`NULL`和默认值，以及如何设置列标志。  
+ 接下来，必须确保您的提供程序包含所有功能，以支持使用者可能会请求它的任何内容。 如果使用者想要更新的数据存储区，则提供程序必须包含的数据保存到数据存储区的代码。 例如，可能会使用 MFC 的 C 运行时库来执行此类操作对数据源。 部分"[写入到数据源](#vchowwritingtothedatasource)"介绍如何将写入到数据源，处理 NULL 和默认值，并设置列标志。  
   
 > [!NOTE]
 >  UpdatePV 是可更新的提供程序的示例。 UpdatePV 是相同的作为 MyProv 但对可更新的支持。  
@@ -55,7 +55,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
   
      添加`IRowsetChangeImpl`到使用此窗体继承链：  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
   
      添加`IRowsetUpdate`到使用此窗体继承链：  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
   
 4.  在属性集映射中，您还应包括以下设置的所有按照如下所示：  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

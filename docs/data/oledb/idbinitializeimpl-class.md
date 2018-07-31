@@ -50,12 +50,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269919"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336483"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 提供一个实现[IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx)接口。  
@@ -106,7 +106,6 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
   
 ```cpp
 IDBInitializeImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
@@ -118,7 +117,7 @@ IDBInitializeImpl();
 ### <a name="syntax"></a>语法  
   
 ```cpp
-      STDMETHOD(Initialize)(void);  
+STDMETHOD(Initialize)(void);  
 ```  
   
 ### <a name="remarks"></a>备注  
@@ -130,7 +129,7 @@ IDBInitializeImpl();
 ### <a name="syntax"></a>语法  
   
 ```cpp
-      STDMETHOD(Uninitialize)(void);  
+STDMETHOD(Uninitialize)(void);  
 ```  
   
 ### <a name="remarks"></a>备注  
@@ -143,13 +142,12 @@ IDBInitializeImpl();
   
 ```cpp
 DWORD m_dwStatus;  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
  这些标志指定，或者表示为数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：  
   
-```  
+```cpp  
 enum DATASOURCE_FLAGS {  
     DSF_MASK_INIT     = 0xFFFFF00F,  
     DSF_PERSIST_DIRTY = 0x00000001,  
@@ -169,10 +167,7 @@ enum DATASOURCE_FLAGS {
 ### <a name="syntax"></a>语法  
   
 ```cpp
-CUtlPropInfo<  
-T  
->* m_pCUtlPropInfo;  
-  
+CUtlPropInfo< T >* m_pCUtlPropInfo;  
 ```  
   
 ## <a name="see-also"></a>请参阅  

@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9f8af45082f8b861b177c4e214a69e9b15799dd7
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233368"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336961"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 使用公开的 OLE DB 枚举器对象[ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx)接口以返回行集描述所有数据源和枚举器。  
@@ -72,7 +72,7 @@ class CEnumerator :
 ### <a name="syntax"></a>语法  
   
 ```cpp
-      bool Find(TCHAR* szSearchName) throw();  
+bool Find(TCHAR* szSearchName) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -92,7 +92,6 @@ class CEnumerator :
   
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();  
-
 
 HRESULT GetMoniker(LPMONIKER* ppMoniker,   
    LPCTSTR lpszDisplayName) const throw();  
@@ -116,9 +115,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```cpp
 HRESULT Open(LPMONIKER pMoniker) throw();  
 
-
 HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();  
-
 
 HRESULT Open(const CEnumerator& enumerator) throw();  
 ```  
