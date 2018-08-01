@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 310f462414ce5e579ea16b40c44ce543bd74b107
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256091"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337513"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -48,7 +48,7 @@ ms.locfileid: "34256091"
 
 在本地部署中，库文件以及可执行文件安装在应用程序文件夹中。 不同版本的 Visual C++ 可再发行库可安装在同一文件夹中，因为每个版本的文件名都包含其版本号。 例如，C++ 运行时库的版本 12 是 msvcp120.dll，版本 14 是 msvcp140.dll。
 
-库可以分布在多个附加 DLL 中，称为“点库”。 例如，Visual Studio 2017 版本 15.6 中发布的标准库中的某些功能已添加到 msvcp140_1.dll 中，以维护 msvcp140.dll 的 ABI 兼容性。 如果使用 Visual Studio 2017 版本 15.6（工具集 14.13）或 Visual Studio 2017 中更高版本的工具集，则可能需要本地部署这些点库以及主库。 然后，当 ABI 发生更改时，这些单独的点库将滚动到基本库的下一个主版本中。
+库可以分布在多个附加 DLL 中，称为“点库”。 例如，Visual Studio 2017 版本 15.6 中发布的一些标准库功能已添加到 msvcp140_1.dll 中，以维护 msvcp140.dll 的 ABI 兼容性。 如果使用 Visual Studio 2017 版本 15.6（工具集 14.13）或 Visual Studio 2017 中更高版本的工具集，则可能需要本地部署这些点库以及主库。 然后，当 ABI 发生更改时，这些单独的点库将滚动到基本库的下一个主版本中。
 
 由于 Microsoft 无法自动更新本地部署的 Visual C++ 库，因此不建议本地部署这些库。 如果你决定使用可再发行库的本地部署，建议你实现自己的自动更新本地部署库的方法。
 
