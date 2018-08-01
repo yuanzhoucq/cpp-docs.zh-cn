@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940723"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405865"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ ms.locfileid: "37940723"
 
 不能指定函数参数的对齐方式。 当通过堆栈上的值传递具有对齐特性的数据，它的对齐由调用约定控制。 如果数据对齐在所调用函数中很重要，请在使用前将参数复制到正确对齐的内存中。
 
-无需`__declspec(align(#))`，编译器通常会根据目标处理器和数据的大小，最多 4 字节边界上 32 位处理器的自然边界和在 64 位处理器上的 8 字节边界上的数据对齐。 在类或结构中的数据的对齐方式的类或结构在至少其自然对齐和当前包装设置 (从 #pragma **pack**或 **/Zp**编译器选项)。
+无需`__declspec(align(#))`，编译器通常会根据目标处理器和数据的大小，最多 4 字节边界上 32 位处理器的自然边界和在 64 位处理器上的 8 字节边界上的数据对齐。 类或结构中的数据在类或结构中依据其自然对齐的最小值和当前包装设置（来自 #pragma `pack` 或 `/Zp` 编译器选项）进行对齐。
 
 本示例演示 `__declspec(align(#))` 的使用：
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-在堆上分配了内存时，对齐方式取决于所调用的分配函数。  例如，如果您使用**malloc**，结果取决于操作数大小。 如果*arg* > = 8，返回的内存为 8 字节对齐。 如果*arg* < 8，返回的内存的对齐方式是 2 的第一个幂小于*arg*。 例如，如果你使用 malloc(7)，则对齐方式为 4 字节。
+在堆上分配了内存时，对齐方式取决于所调用的分配函数。  例如，如果你使用 `malloc`，则该结果取决于操作数大小。 如果*arg* > = 8，返回的内存为 8 字节对齐。 如果*arg* < 8，返回的内存的对齐方式是 2 的第一个幂小于*arg*。 例如，如果你使用 malloc(7)，则对齐方式为 4 字节。
 
 ##  <a name="vclrf_declspecaligntypedef"></a> 定义新的类型与 __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> 与数据打包配合的对齐方式
 
-**/Zp**编译器选项和**pack**杂注影响的打包数据的结构和联合成员。此示例演示如何 **/Zp**和`__declspec(align(#))`协同工作：
+`/Zp`编译器选项和`pack`杂注影响的打包数据的结构和联合成员。此示例演示如何`/Zp`和`__declspec(align(#))`协同工作：
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-下表列出了在各种下每个成员的偏移量 **/Zp** (或 #pragma **pack**) 值，显示如何进行交互。
+下表列出了各种 `/Zp`（或 #pragma `pack`）值下的每个成员的偏移量，并演示了二者的交互方式。
 
 |变量|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ struct S {
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
-
 [__declspec](../cpp/declspec.md)  
 [ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)  
 [x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)  

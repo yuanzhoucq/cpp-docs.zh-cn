@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942516"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406963"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -30,7 +30,7 @@ ms.locfileid: "37942516"
   
  这种形式的 **__declspec**可应用于任何类声明，但只应用于纯接口类，即，永远不会将其自身实例化的类。 **__Declspec**将阻止编译器生成用于初始化的构造函数和类的析构函数中的 vfptr 的代码。 在许多情况下，这将移除对与类关联的 vtable 的唯一引用，因此链接器将移除它。 使用这种形式的 **__declspec**可能会导致代码大小的显著降低。  
   
- 如果尝试实例化标记为 `novtable` 的类，然后访问类成员，您将收到访问冲突 (AV)。  
+ 如果你尝试实例化类标记有**novtable** ，然后访问类成员，您将收到访问冲突 (AV)。  
   
 ## <a name="example"></a>示例  
   

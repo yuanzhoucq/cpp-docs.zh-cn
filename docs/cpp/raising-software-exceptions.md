@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942559"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405183"
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。  
@@ -60,7 +60,7 @@ ms.locfileid: "37942559"
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- 在定义异常代码后，可以使用它来引发异常。 例如，下面的代码引发 STATUS_INSUFFICIENT_MEM 异常以响应内存分配问题：  
+ 在定义异常代码后，可以使用它来引发异常。 例如，下面的代码引发`STATUS_INSUFFICIENT_MEM`异常以响应内存分配问题：  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

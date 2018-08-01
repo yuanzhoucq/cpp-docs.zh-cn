@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a178510c02cd7ae0238686c6ff6634466715ddf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966940"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408341"
 ---
 # <a name="primary-expressions"></a>主要表达式
 主表达式是更复杂的表达式的构造块。 它们是文本、名称以及范围解析运算符 (`::`) 限定的名称。  主表达式可以具有以下任一形式：  
   
 ```  
-  
 literal  
 this
 name  

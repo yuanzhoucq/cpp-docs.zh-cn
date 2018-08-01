@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942579"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405530"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch 块的计算方式 (C++)
 虽然通常建议您引发派生自 std::exception 的类型，但 C++ 使您能够引发任何类型的异常。 可由捕获 C++ 异常**捕获**指定相同的类型，为所引发的异常，或可以捕获任何类型的异常处理程序的处理程序。  

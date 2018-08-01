@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941546"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406037"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 与托管语言不同，C++ 没有垃圾回收 (GC)，垃圾回收将在程序运行时自动释放不再使用的内存资源。 在 C++ 中，资源管理直接与对象生存期相关。 本文档描述影响 C++ 中对象生存期的因素以及如何管理对象生存期。  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  使用`unique_ptr`为了唯一所有权，例如，在*pimpl*惯用语法。 (请参阅[用于编译时封装的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。)请`unique_ptr`主目标的所有显式**新**表达式。  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  当需要性能优化时，您可能必须使用*完好封装*拥有指针和显式调用来删除。 例如，在实现自己的低级别数据结构时。  

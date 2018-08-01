@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939729"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407229"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>错误和异常处理（现代 C++）
 在现代 C++，在大多数情况下，报告和处理逻辑错误和运行时错误的首选的方式是使用异常。 当堆栈可能包含多个函数调用之间检测到错误的函数和具有要知道如何处理它的上下文的函数时，也是如此。 异常提供正式且定义完善的方法的代码检测错误，无法将此信息在调用堆栈中向上传递。  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  在 C++ 异常类似于 C# 和 Java 等语言中。 中**尝试**例外情况是如果阻止*引发*它将是*捕获*通过第一个关联的**捕获**其类型与的块异常。 换而言之，执行将从跳**引发**到语句**捕获**语句。 如果找到没有任何可用的 catch 块，则`std::terminate`调用并退出程序。 C++ 中可能会引发任何类型;但是，我们建议您引发派生自的直接或间接类型`std::exception`。 在前面的示例中，异常类型， [invalid_argument](../standard-library/invalid-argument-class.md)，在中的标准库中定义[ \<stdexcept >](../standard-library/stdexcept.md)标头文件。 C + + 不提供，并不需要**最后**块来确保如果引发异常，释放所有资源。 资源获取即是初始化 (RAII) 惯用语法，后者使用智能指针，提供所需的功能的资源清理。 有关详细信息，请参阅[如何： 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。 有关 C++ 堆栈展开机制的信息，请参阅[异常和堆栈展开](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。  
@@ -97,7 +96,7 @@ int main()
  异常和断言是检测程序中运行时错误的两个不同的机制。 使用断言来在应永远不会为您的所有代码是否正确，则返回 true 的开发期间测试条件。 没有任何意义，因为错误表明代码中的某些内容，必须保持不变，使用异常来处理此类错误，并不代表程序已在运行时从恢复的条件。 断言停止执行该语句，以便您可以检查调试器; 中的程序状态异常继续从第一个正确 catch 处理程序的执行。 使用异常检查可能会在运行时，即使你的代码正确，例如，"未找到文件"或"内存不足。"的错误条件 您可能想要恢复由这些情况，即使恢复仅输出到日志消息并结束程序。 始终使用异常检查公共函数的参数。 即使你的函数是无错误的您可能没有完全控制用户传递给它的参数。  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>与 Windows SEH 异常的 C++ 异常  
- C 和 C++ 程序可使用结构化的异常处理 (SEH) 机制在 Windows 操作系统中。 Seh 的概念类似于 c + + 异常，但使用 SEH `__try`， `__except`，并`__finally`构造而不是**尝试**并**捕获**。 在 Visual C++，是为 SEH 实现 C++ 异常。 但是，当你编写 C++ 代码，使用 C++ 异常语法。  
+ C 和 C++ 程序可使用结构化的异常处理 (SEH) 机制在 Windows 操作系统中。 Seh 的概念类似于 c + + 异常，但使用 SEH **__try**， **__except**，并 **__finally**构造而不是**尝试**并**捕获**。 在 Visual C++，是为 SEH 实现 C++ 异常。 但是，当你编写 C++ 代码，使用 C++ 异常语法。  
   
  有关 SEH 的详细信息，请参阅[结构化异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)。  
   

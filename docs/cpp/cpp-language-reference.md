@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954188"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408211"
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
 本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。  
@@ -59,16 +59,16 @@ ms.locfileid: "38954188"
  表达式、null、复合、选择、迭代、跳转和声明语句。  
   
  [声明和定义](declarations-and-definitions-cpp.md)  
- 存储类说明符、函数定义、初始化、枚举、类、结构和联合声明以及 typedef 声明。 此外，还有内联函数、常量关键字、命名空间。  
+ 存储类说明符、 函数定义、 初始化、 枚举**类**，**结构**，并**联合**声明，和**typedef**声明。 此外，**内联**函数， **const**关键字、 命名空间。  
   
  [类、 结构和联合](../cpp/classes-and-structs-cpp.md)  
- 介绍类、结构和联合。 此外，成员函数、 特殊成员函数、 数据成员、 位域，此指针和嵌套的类。  
+ 介绍类、结构和联合。 此外，成员函数，特殊成员函数，数据成员，位域，**这**指针和嵌套的类。  
   
  [派生的类](../cpp/inheritance-cpp.md)  
- 单一继承和多重继承、虚函数、多个基类、抽象类、范围规则。 此外，还有 __super 和\_（_i） 关键字。  
+ 单个和多个继承**虚拟**函数、 多个基类**抽象**类作用域规则。 此外， **__super**并 **__interface**关键字。  
   
  [成员访问控制](../cpp/member-access-control-cpp.md)  
- 控制对类成员的访问：public、private 和 protected 关键字。 友元函数和友元类。  
+ 控制对类成员的访问权限：**公共**，**专用**，并**保护**关键字。 友元函数和友元类。  
   
  [重载](operator-overloading.md)  
  重载的运算符，运算符重载的规则。  
@@ -80,16 +80,16 @@ ms.locfileid: "38954188"
  `#error` 指令**static_assert**关键字，`assert`宏。  
   
  [模板](../cpp/templates-cpp.md)  
- 模板规范、函数模板、类模板、类型名称关键字、模板与宏、模板和智能指针。  
+ 模板规范、 函数模板、 类模板，而**typename**关键字、 模板与宏、 模板和智能指针。  
   
  [事件处理](../cpp/event-handling.md)  
  声明事件和事件处理程序。  
   
  [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 专用修饰符。 内存寻址、 调用约定、 裸函数、 扩展的存储类特性 (__declspec) \__w64。  
+ Microsoft C++ 专用修饰符。 内存寻址、 调用约定、**裸**函数，扩展的存储类特性 (**__declspec**)， **__w64**。  
   
  [内联汇编程序](../assembler/inline/inline-assembler.md)  
- 在 __asm 块中使用汇编语言和 C++。  
+ 使用程序集语言和 c + + 中的 **__asm**块。  
   
  [编译器 COM 支持](../cpp/compiler-com-support.md)  
  有关用于支持 COM 类型的 Microsoft 专用类和全局函数的参考。  

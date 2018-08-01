@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940313"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404605"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -82,7 +82,7 @@ int sum(int a, int b)
 
 函数声明的可选部分有：
 
-1. **constexpr**，指示该函数的返回值是常量值可以在编译时计算。
+1. `constexpr`，指示函数的返回值是常量值，可以在编译时进行计算。
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ int sum(int a, int b)
 
      有关详细信息，请参阅[内联函数](../cpp/inline-functions-cpp.md)。
 
-1. 一个**noexcept**表达式，指定函数是否可以引发异常。 在以下示例中，该函数时不引发异常`is_pod`表达式的计算结果**true**。
+1. 一个`noexcept`表达式，指定函数是否可以引发异常。 在以下示例中，该函数时不引发异常`is_pod`表达式的计算结果**true**。
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ int sum(int a, int b)
 
 1. （仅限成员函数）Cv 限定符中，指定函数是否是**const**或**易失性**。
 
-1. （仅限成员函数）**虚拟**，**重写**，或**最终**。 **虚拟**指定可以在派生类中重写函数。 **重写**意味着函数在派生类中的重写虚函数。 **最终**表示函数不能覆盖任何进一步派生类。 有关详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。
+1. （仅限成员函数）**虚拟**， `override`，或`final`。 **虚拟**指定可以在派生类中重写函数。 `override` 表示派生类中的函数在重写虚函数。 `final` 表示函数不能在任何进一步的派生类中进行重写。 有关详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。
 
 1. （仅限成员函数）**静态**应用到成员函数意味着该函数不是与类的任何对象实例相关联。
 
@@ -170,7 +170,7 @@ int sum(int a, int b)
 
 您可以声明一个成员函数作为**const**来指定该函数不能更改的类中的任何数据成员的值。 通过声明一个成员函数作为**const**，帮助编译器强制执行*const 正确性*。 如果有人错误地尝试通过使用函数声明为修改的对象**const**，将引发编译器错误。 有关详细信息，请参阅[const](const-cpp.md)。
 
-将函数声明为**constexpr**时它将生成的值可能是可以在编译时确定。 Constexpr 函数通常比常规函数更快地执行。 有关详细信息，请参阅[constexpr](constexpr-cpp.md)。
+将函数声明为`constexpr`时它将生成的值可能是可以在编译时确定。 Constexpr 函数通常比常规函数更快地执行。 有关详细信息，请参阅[constexpr](constexpr-cpp.md)。
 
 ## <a name="function-templates"></a>函数模板
 
@@ -269,11 +269,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 函数体中声明的变量称为*局部变量*或只需*本地*。 非静态局部变量仅在函数体中可见，如果它们在堆栈上声明，则会在函数退出时超出范围。 构造局部变量并通过值返回它时，编译器通常可以执行返回值优化以避免不必要的复制操作。 如果通过引用返回局部变量，则编译器会发出警告，因为调用方为使用该引用而进行的任何尝试会在局部变量已销毁之后进行。
 
-在 C++ 中，局部变量可以声明为静态。 变量仅在函数体中可见，但是对于函数的所有实例，存在变量的单个副本。 指定的终止期间销毁本地静态对象**atexit**。 如果某个静态对象由于程序的控制流跳过了其声明而未构造，则不会尝试销毁该对象。
+在 C++ 中，局部变量可以声明为静态。 变量仅在函数体中可见，但是对于函数的所有实例，存在变量的单个副本。 局部静态对象将在 `atexit` 指定的终止期间销毁。 如果某个静态对象由于程序的控制流跳过了其声明而未构造，则不会尝试销毁该对象。
 
 ##  <a name="type_deduction"></a> 返回类型 (C++ 14) 中的类型推导
 
-在 C++ 14 中，你可以使用**自动**指示编译器从函数体的返回类型推断而不必提供结尾返回类型。 请注意，**自动**始终推导为返回的值。 使用**自动 & &** 可指示编译器推导引用。
+在 C++ 14 中，你可以使用**自动**指示编译器从函数体的返回类型推断而不必提供结尾返回类型。 请注意，**自动**始终推导为返回的值。 使用 `auto&&` 可指示编译器推导引用。
 
 在此示例中，**自动**会推导为 lhs 和 rhs 之和的非常量值副本。
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 前面的声明与使用上面的 typedef 的声明等效。
 
 ## <a name="see-also"></a>请参阅
-
-- [函数重载](../cpp/function-overloading.md)
-- [包含变量参数列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [显式默认设置的函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [默认自变量](../cpp/default-arguments.md)
-- [内联函数](../cpp/inline-functions-cpp.md)
+ [函数重载](../cpp/function-overloading.md)  
+ [包含变量参数列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [显式默认设置的函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [默认自变量](../cpp/default-arguments.md)  
+ [内联函数](../cpp/inline-functions-cpp.md)

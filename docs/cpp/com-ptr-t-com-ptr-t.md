@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939066"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403821"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 专用**  
   
- 构造 `_com_ptr_t` 对象。  
+ 构造 **_com_ptr_t**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  如果为 TRUE，`AddRef`调用来增加封装的接口指针的引用计数。  
   
  *cp*  
- 一个 `_com_ptr_t` 对象。  
+ 一个 **_com_ptr_t**对象。  
   
  *p*  
- 一个原始接口指针，其类型与此 `_com_ptr_t` 对象的智能指针类型不同。  
+ 原始接口指针，其类型不同于此智能指针类型 **_com_ptr_t**对象。  
   
  *varSrc*  
  一个 `_variant_t` 对象。  

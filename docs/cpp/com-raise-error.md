@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54cb2183bccc45446cd68b8d5d6d2753f571009b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942483"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408084"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft 专用**  
@@ -31,7 +31,6 @@ ms.locfileid: "37942483"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
@@ -46,11 +45,11 @@ void __stdcall _com_raise_error(
  `IErrorInfo` 对象。  
   
 ## <a name="remarks"></a>备注  
- `_com_raise_error`其定义中\<comdef.h >，可由用户编写相同的名称和原型的版本替换。 若要使用 `#import` 但不使用 C++ 异常处理，则可以执行此操作。 在此情况下，用户版`_com_raise_error`可能决定执行`longjmp`或显示一个消息框并暂停。 但不应返回用户版本，因为编译器 COM 支持代码不希望返回它。  
+ **_com_raise_error**，其定义中\<comdef.h >，可由用户编写相同的名称和原型的版本替换。 若要使用 `#import` 但不使用 C++ 异常处理，则可以执行此操作。 在此情况下，用户版 **_com_raise_error**可能决定执行`longjmp`或显示一个消息框并暂停。 但不应返回用户版本，因为编译器 COM 支持代码不希望返回它。  
   
  此外可以使用[_set_com_error_handler](../cpp/set-com-error-handler.md)来替换默认错误处理函数。  
   
- 默认情况下，`_com_raise_error` 定义为：  
+ 默认情况下 **_com_raise_error**定义，如下所示：  
   
 ```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  

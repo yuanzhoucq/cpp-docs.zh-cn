@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919276e7a32399185256c38cb146158420aeded5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dccbf5cb312dcbced034ad2987b7f9a620b8d161
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942011"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404696"
 ---
 # <a name="comerror-member-functions"></a>_com_error 成员函数
-璝惠`_com_error`成员函数，请参阅[_com_error 类](../cpp/com-error-class.md)。  
+璝惠 **_com_error**成员函数，请参阅[_com_error 类](../cpp/com-error-class.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [_com_error 类](../cpp/com-error-class.md)

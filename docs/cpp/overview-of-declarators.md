@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208557"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404933"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，如类型和存储类的属性传递。 在本部分中并在讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - 指针运算符声明符   
   - （声明符）  
 
-  
 - 并*指针运算符*是之一：  
   
   - \* [cv 限定符]  
   - & [cv 限定符]:: 嵌套名称说明符\*[cv 限定符]  
 
-  
  由于一个声明符可能包含多个声明符，因此可以使用上述规则来构造更复杂的派生类型，如指针数组和返回函数指针数组的函数。  若要制定构造的所有步骤，请以呈现基数据类型的标识符开头，并应用上面的语法规则（将上一个表达式作为 `declarator`）。  应用语法规则的顺序应该与用英语表示表达式的方法相反。  如果将应用*指针运算符*语法规则应用于数组或函数表达式，如果你想指向数组或函数，如下面的表中的最后一行中所示使用括号。  
   
  以下示例显示了“指向‘指向 int 的 10 个指针的数组’的指针”的构造。  

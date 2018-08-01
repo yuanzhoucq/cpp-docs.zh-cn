@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941190"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408461"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft 专用**  
@@ -31,19 +31,17 @@ ms.locfileid: "37941190"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 BSTR* GetAddress( );  
-  
 ```  
   
 ## <a name="return-value"></a>返回值  
  指向由 `BSTR` 包装的 `_bstr_t` 的指针。  
   
 ## <a name="remarks"></a>备注  
- `GetAddress` 影响所有共享 `_bstr_t` 的 `BSTR` 对象。 多个`_bstr_t`可以共享`BSTR`通过使用复制构造函数和**运算符 =**。  
+ **GetAddress**影响所有`_bstr_t`对象的共享`BSTR`。 多个`_bstr_t`可以共享`BSTR`通过使用复制构造函数和**运算符 =**。  
   
 ## <a name="example"></a>示例  
- 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用`GetAddress`。  
+ 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**GetAddress**。  
   
  **结束 Microsoft 专用**  
   

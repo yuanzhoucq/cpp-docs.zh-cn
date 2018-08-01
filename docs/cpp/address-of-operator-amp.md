@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958580"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406001"
 ---
 # <a name="address-of-operator-amp"></a>Address-of 运算符： &amp;
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ ms.locfileid: "38958580"
   
  address-of 运算符仅适用于具有基本、结构、类或在文件范围级别声明的联合类型的变量，或仅适用于下标数组引用。 在这些表达式中，可在 address-of 表达式中添加或提取不包括 address-of 运算符的常数表达式。  
   
- 当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。 例如，如果操作数的类型**char**，该表达式的结果是指针类型的**char**。 Address-of 运算符，应用于**const**或**易失性**对象，计算结果为**const 类型\*** 或**可变类型\*** ，其中**类型**是原始对象的类型。  
+ 当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。 例如，如果操作数的类型**char**，该表达式的结果是指针类型的**char**。 Address-of 运算符，应用于**const**或**易失性**对象，计算结果为`const type *`或`volatile type *`，其中**类型**是原始的类型对象。  
   
  当 address-of 运算符应用于限定名时，结果取决于是否*限定名称*指定静态成员。 如果是这样，则结果为指向成员声明中指定的类型的指针。 如果该成员不是静态的结果是指向成员的指针*名称*指示的类的*限定类名*。 (请参阅[主表达式](../cpp/primary-expressions.md)有关详细信息*限定类名*。)以下代码段说明了结果的不同之处，取决于该成员是否为静态的：  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>输出  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,7 +109,7 @@ int main() {
   
 ## <a name="output"></a>输出  
   
-```  
+```Output  
 25  
 ```  
   

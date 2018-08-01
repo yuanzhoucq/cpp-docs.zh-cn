@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942373"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405105"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 控制条件分支。 中的语句*if 块*仅当执行*if 表达式*的计算结果为非零值 （或 TRUE）。 如果的值*表达式*为非零值，*语句 1*和块中的任何其他语句执行和其他的块，如果存在，则跳过。 如果的值*表达式*是零，则跳过 if 块，并且执行其他的块，（如果存在）。 表达式的计算结果为非零值。
@@ -36,7 +36,6 @@ ms.locfileid: "37942373"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,8 +192,6 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
 ## <a name="see-also"></a>请参阅  
  [选择语句](../cpp/selection-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   

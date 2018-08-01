@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940312"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403688"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：设计异常安全性
 异常机制的优势之一是执行以及异常相关数据将直接从引发异常的语句跳至处理异常的第一个 catch 语句。 处理程序可以是调用堆栈中任意数量的级别。 在 try 语句和 throw 语句之间调用的函数无需了解与所引发异常有关的任何信息。  但是，这些函数必须进行设计，以便它们在异常可能从下向上传播时“意外地”超出范围，而这样做不会留下部分创建的对象、泄漏的内存或处于不稳定状态的数据结构。  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>使用 RAII 习语管理资源  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7d7c9ccf70286040d06e7e01400299b806157e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 07e05e3a1c1b25e87053e15244f3c5fb9db442d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940967"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404156"
 ---
 # <a name="nullptr"></a>nullptr
 指定 `std::nullptr_t` 类型的 null 指针常量，该类型可转换为任何原始指针类型。  尽管可以使用关键字**nullptr**而不包含任何标头，如果您的代码使用类型`std::nullptr_t`，然后，必须通过包含标头定义它`<cstddef>`。  

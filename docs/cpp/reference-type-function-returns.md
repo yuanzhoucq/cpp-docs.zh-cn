@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47b2ce26ea9cba7f0c38d06546eb0d162332d047
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942388"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408292"
 ---
 # <a name="reference-type-function-returns"></a>引用类型函数返回
 可将函数声明为返回引用类型。 做出此类声明有两个原因：  

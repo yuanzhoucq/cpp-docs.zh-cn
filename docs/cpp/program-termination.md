@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643718dc0b58f74fbb1ed957c8dc3212a4408073
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939918"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407278"
 ---
 # <a name="program-termination"></a>程序终止
 在 C++ 中，可通过多种方式退出程序：  

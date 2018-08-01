@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957381"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407382"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 访问控制，您可以将[公共](../cpp/public-cpp.md)从类的接口[专用](../cpp/private-cpp.md)实现的详细信息并[保护](../cpp/protected-cpp.md)仅适用于的成员使用的派生的类。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  默认访问是**私有**在类中，并**公共**结构或联合中。 类中的访问说明符可按任何顺序使用任意次数。 类类型的对象的存储分配是取决于实现的，但成员一定能分配到访问说明符之间的依次升高的内存地址。  

@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409571"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403571"
 ---
 # <a name="basic-concepts--c"></a>基本概念 （C++）
-本部分介绍对了解 C++ 至关重要的概念。 将熟悉这些概念的许多 C 程序员但有一些细微的差异可能导致意外的程序结果。 包含以下主题：  
+本部分介绍对了解 C++ 至关重要的概念。 C 程序员都非常熟悉的许多这些概念，但有一些细微的差异可能会导致意外的程序结果。 包含以下主题：  
   
 -   [声明和定义](../cpp/declarations-and-definitions-cpp.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32409571"
   
 -   [alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [普通，标准布局和 POD 类型](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [一般，标准布局和 POD 类型](../cpp/trivial-standard-layout-and-pod-types.md)  
   
 ## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)

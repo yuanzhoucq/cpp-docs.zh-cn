@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027269"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407856"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 这一概念*类型*在 C++ 中非常重要。 每个变量、函数自变量和函数返回值必须具有一个类型以进行编译。 此外，在计算表达式前，编译器会给出每个表达式（包括文本值）的隐式类型。 类型的一些示例包括**int**用于存储整数值， **double**用于存储浮点值 (也称为*标量*数据类型)，或标准库类[std:: basic_string](../standard-library/basic-string-class.md)来存储文本。 您可以通过定义来创建你自己的类型**类**或**结构**。 该类型指定将分配给变量（或表达式结果）的内存量、可能存储在该变量中的值类型、如何对那些值（作为位模式）进行说明以及可对其执行的操作。 本文包含对 C++ 类型系统的主要功能的非正式概述。   
@@ -41,7 +41,6 @@ ms.locfileid: "39027269"
  下面的示例演示了一些简单变量声明，并分别对它们进行了说明。 该示例还演示了编译器如何使用类型信息允许或禁止对变量进行某些后续操作。  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>基本（内置）类型  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  **Const**限定符广泛应用于函数和变量声明和"const 有效性"是 c + + 中的重要概念; 它实质上表示使用**const**以确保在编译时，值不是无意中修改。 有关详细信息，请参阅[const](../cpp/const-cpp.md)。  
   
- 一个**const**类型是不同于其非常量版本; 例如，`const int`是从不同的类型**int**。可以使用 c + + **const_cast**运算符时必须删除这些极少数情况下的*常量性*变量中。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。  
+ 一个**const**类型是不同于其非常量版本; 例如， **const int**是从不同的类型**int**。可以使用 c + + **const_cast**运算符时必须删除这些极少数情况下的*常量性*变量中。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。  
   
 ## <a name="string-types"></a>字符串类型  
- 严格地说，c + + 语言不具有内置的字符串类型;**char**并`wchar_t`存储单个字符-必须声明一个数组以估计字符串，这些类型添加一个终止 null 值 (例如，ASCII `'\0'`) 到最后一个数组元素有效字符 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 在现代 c + + 中，我们已有标准库类型，但是`std::string`(用于 8 位**char**-键入字符的字符串) 或`std::wstring`(对于 16 位`wchar_t`-键入字符的字符串)。 可以将这些 C++ 标准库容器视为本机字符串类型因为它们是包含在任何符合 C++ 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。  
+ 严格地说，c + + 语言不具有内置的字符串类型;**char**并**wchar_t**存储单个字符-必须声明一个数组以估计字符串，这些类型添加一个终止 null 值 (例如，ASCII `'\0'`) 到的数组元素最后一个有效字符 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 在现代 c + + 中，我们已有标准库类型，但是`std::string`(用于 8 位**char**-键入字符的字符串) 或`std::wstring`(对于 16 位**wchar_t**-键入字符的字符串)。 可以将这些 C++ 标准库容器视为本机字符串类型因为它们是包含在任何符合 C++ 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。  
   
 ## <a name="user-defined-types"></a>用户定义的类型  
  定义时**类**，**结构**，**联合**，或者**枚举**，该构造使用你代码的其余部分中，就好像一种基本类型. 它具有内存的已知大小以及一些有关可以如何在程序生命期内将其用于编译时检查和运行时的规则。 基本内置类型和用户定义的类型之间的主要区别如下：  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  首先你应该知道的是，声明一个原始指针变量只会分配存储了取消指针时需引用的内存地址的内存。 数据值本身的内存分配 (也称为*后备存储*) 尚未分配。 换言之，通过声明原始指针变量，将创建内存地址变量而非实际数据变量。 在确保指针变量包含指向备份存储的有效地址前取消对其的引用将导致程序发生未定义行为（通常为严重错误）。 下面的示例演示了此种错误：  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  该示例取消引用指针类型，未分配用于存储实际整数数据的任何内存或向其分配有效内存地址。 下面的代码更正这些错误：  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  已纠正的代码示例使用本地堆栈内存创建 `pNumber` 指向的后备存储。 我们使用基本类型，以求简单。 在实践中，指针的后备存储是在内存中，调用一个区域中将是动态分配的大多数通常为用户定义类型*堆*(或*自由存储*) 使用**新**关键字表达式 (在 C 样式编程中，较旧`malloc()`C 运行时库函数)。 分配后，这些变量通常称为对象，尤其是基于类定义。 使用分配的内存**新**必须删除相应的**删除**语句 (或者，如果您使用`malloc()`函数以分配它，C 运行时函数`free()`)。  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  但是，很容易忘记删除动态分配对象-尤其是在复杂代码中，这会导致调用的资源 bug*内存泄漏*。 为此，强烈建议你不要在现代 C++ 中使用原始指针。 始终是更好的做法在原始指针包装[智能指针](../cpp/smart-pointers-modern-cpp.md)，这将自动释放内存时 （当代码超出智能指针的范围） 时，将调用其析构函数; 使用智能指针您几乎消除了所有类的 C++ 程序中的 bug。 在下面的示例中，假定 `MyClass` 是具有公共方法 `DoSomeWork();` 的用户定义的类型  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  有关智能指针的详细信息，请参阅[智能指针](../cpp/smart-pointers-modern-cpp.md)。  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942390"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408185"
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 [Const](../cpp/const-cpp.md)并[易失性](../cpp/volatile-cpp.md)关键字更改指针的方式。 **Const**关键字指定指针不能在初始化之后修改; 此后修改保护指针。  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- `pch2` 的声明声明了一个可以用来修改常量对象的指针，因此不允许使用。 声明`pch3`规定**指针**是常数，它不是对象; 不允许使用相同的原因`pch2`不允许使用。  
+ `pch2` 的声明声明了一个可以用来修改常量对象的指针，因此不允许使用。 声明`pch3`指定指针是常量，不是对象; 不允许使用相同的原因`pch2`不允许使用。  
   
  以下八个赋值显示了通过指针进行的赋值以及对前面的声明的指针值的更改；现在，假设 `pch1` 到 `pch8` 的初始化是正确的。  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  前面的语句声明一个函数[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中两个三个参数是指针类型的**char**。 因为通过引用传递的参数，并且不由值，该函数可以随意修改这两`strDestination`并`strSource`如果`strSource`未声明为**const**。 声明`strSource`作为**const**调用方保证`strSource`所调用的函数不能更改。  
   
 > [!NOTE]
->  因为没有从的标准转换*typename* **\*** 到**const** *typename*  **\***，它是合法的类型的自变量传递**char \*** 到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不成立;删除的目的是隐式转换**const**从对象或指针的属性。  
+>  因为没有从的标准转换*typename* **\*** 到**const** *typename*  **\***，它是合法的类型的自变量传递`char *`到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不成立;删除的目的是隐式转换**const**从对象或指针的属性。  
   
  一个**const**给定类型的指针可以分配给同一类型的指针。 但是，指针的不是**const**不能分配给**const**指针。 以下代码显示了正确和错误的赋值：  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955460"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406186"
 ---
 # <a name="multiple-base-classes"></a>多个基类
 可以从多个基类派生的类。 在多重继承模型中 （其中类派生自多个基类），使用指定基类*基列表*语法元素。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：  
@@ -97,9 +97,9 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 > [!NOTE]
 >  与非虚拟继承相比较，虚拟继承提供了显著的大小优势。 但是，它可能会引入额外的处理开销。  
   
- 如果派生类重写它从虚拟基类继承的虚函数，并且派生基类的构造函数或析构函数使用指向虚拟基类的指针调用该虚函数，则编译器可能会将其他隐藏的“vtordisp”字段引入到具有虚拟基的类中。 /vd0 编译器选项将禁止添加隐藏的 vtordisp 构造函数/析构函数置换成员。 默认的 /vd1 编译器选项会在必要时启用它们。 仅当确定所有类构造函数和析构函数以虚拟方式调用虚函数时才关闭 vtordisps。  
+ 如果派生类重写它从虚拟基类继承的虚函数，并且派生基类的构造函数或析构函数使用指向虚拟基类的指针调用该虚函数，则编译器可能会将其他隐藏的“vtordisp”字段引入到具有虚拟基的类中。 `/vd0`编译器选项将禁止添加隐藏的 vtordisp 构造函数/析构函数置换成员。 `/vd1`编译器选项，默认情况下，让它们将在必要时。 仅当确定所有类构造函数和析构函数以虚拟方式调用虚函数时才关闭 vtordisps。  
   
- /vd 编译器选项会影响整个编译模块。 使用**vtordisp**杂注，然后重新启用 vtordisp 字段基于类的类：  
+ `/vd`编译器选项会影响整个编译模块。 使用`vtordisp`杂注，然后重新启用`vtordisp`个类的类的字段：  
   
 ```cpp 
 #pragma vtordisp( off )  

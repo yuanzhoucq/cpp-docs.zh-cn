@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026697"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408107"
 ---
 # <a name="c-constant-expressions"></a>C++ 常量表达式
 一个*常量*值是一种不会更改。 C + + 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-到整型的显式转换在常量表达式中是合法的；所有其他类型和派生类型是非法的（在用作 `sizeof` 运算符的操作数时除外）。  
+到整型的显式转换在是合法的常量表达式;所有其他类型和派生的类型是非法使用作为操作数时除外**sizeof**运算符。  
   
 逗号运算符和赋值运算符不能用于常量表达式。  
   

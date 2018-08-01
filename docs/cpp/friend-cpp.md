@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942076"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407012"
 ---
 # <a name="friend-c"></a>友元 (C++)
 在某些情况下，它是更方便地授予成员级别访问权限的函数时，不是类的成员或单独的类中的所有成员。 仅类实现器可以声明其友元。 函数或类不能将其自身声明为任何类的友元。 在类定义中，使用**友元**关键字和非成员函数或其他类，以允许其访问你的类的私有和受保护成员的名称。 在模板定义中，类型参数可以声明为友元。  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- 如果该名称的现有类不最内部的命名空间中找到，则第一个窗体引入了一个新类 F。  **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
+ 如果该名称的现有类不最内部的命名空间中找到，则第一个窗体引入了一个新类 F。 **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
   
  使用`class friend F`时被引用的类型具有尚未声明：  
   

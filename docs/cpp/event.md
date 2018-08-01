@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942497"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407820"
 ---
 # <a name="event"></a>__event
 声明事件。  
@@ -31,7 +31,6 @@ ms.locfileid: "37942497"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)有关示例代码。  
   
 ## <a name="com-events"></a>COM 事件  
- COM 事件是接口。 事件源接口中的方法的参数应为`in`参数 （但不是强制这一点严格），因为`out`参数不是多播时无用。 如果您使用，将发出 1 级警告`out`参数。  
+ COM 事件是接口。 事件源接口中的方法的参数应为*中*参数 （但不是强制这一点严格），因为*出*参数不是多播时无用。 如果您使用，将发出 1 级警告*出*参数。  
   
  返回类型通常是 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型并且事件处理程序返回非零值时，这是错误情况，此时引发的事件将中止对其他委托的调用。 请注意，编译器会自动将标记作为事件源接口[源](../windows/source-cpp.md)为生成的 IDL 中。  
   

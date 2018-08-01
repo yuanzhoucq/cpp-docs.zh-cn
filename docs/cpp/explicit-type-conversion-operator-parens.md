@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966930"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406778"
 ---
 # <a name="explicit-type-conversion-operator-"></a>显式类型转换运算符：()
 C++ 允许使用与函数调用语法类似的语法进行显式类型转换。  
@@ -108,15 +108,12 @@ d = float( i );
  还可以使用“cast”语法指定显式类型转换。 使用 cast 语法重写的上一个示例是：  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  当从单个值转换时，强制转换和函数样式转换都有相同的结果。 但是，在函数样式语法中，可以为转换指定多个参数。 此差异对用户定义的类型非常重要。 请考虑 `Point` 类及其转换：  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  上述示例中，使用函数样式转换，演示如何将两个值 (一个用于*x* ，另一个用于*y*) 为用户定义类型`Point`。  

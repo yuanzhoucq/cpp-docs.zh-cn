@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942398"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404592"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 类
 **Microsoft 专用**  
   
- `_com_ptr_t` 对象封装 COM 接口指针，被称为“智能”指针。 此模板类管理资源分配和解除分配，通过对函数调用`IUnknown`成员函数： `QueryInterface`， `AddRef`，和`Release`。  
+ 一个 **_com_ptr_t**对象封装 COM 接口指针，称为"智能"指针。 此模板类管理资源分配和解除分配，通过对函数调用`IUnknown`成员函数： `QueryInterface`， `AddRef`，和`Release`。  
   
- 智能指针通常由 _COM_SMARTPTR_TYPEDEF 宏所提供的 typedef 定义引用。 此宏采用接口名称和 IID，并利用接口名称与后缀 `_com_ptr_t` 声明 `Ptr` 的专用化。 例如：  
+ 智能指针通常由 _COM_SMARTPTR_TYPEDEF 宏所提供的 typedef 定义引用。 此宏采用接口名称和 IID 和声明的专用化 **_com_ptr_t**同名的接口和后缀的`Ptr`。 例如：  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- 声明`_com_ptr_t`专用化`IMyInterfacePtr`。  
+ 声明 **_com_ptr_t**专用化`IMyInterfacePtr`。  
   
  一套[函数模板](../cpp/relational-function-templates.md)，不隶属于此模板类，支持使用比较运算符右侧的智能指针的比较。  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|构造 `_com_ptr_t` 对象。|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|构造 **_com_ptr_t**对象。|  
   
 ### <a name="low-level-operations"></a>低级别运算  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|将新值赋给现有 `_com_ptr_t` 对象。|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|将新值分配到现有 **_com_ptr_t**对象。|  
 |[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比较的智能指针对象与另一个智能指针、 原始接口指针，则为 NULL。|  
 |[提取器](../cpp/com-ptr-t-extractors.md)|提取封装的 COM 接口指针。|  
   

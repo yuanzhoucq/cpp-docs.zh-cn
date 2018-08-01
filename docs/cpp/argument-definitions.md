@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943041"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407583"
 ---
 # <a name="argument-definitions"></a>自变量定义
 原型中的自变量  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  第一个命令行参数始终是`argv` **[1]** 和最后一项`argv` **[** `argc` -1 **]**。  
   
 > [!NOTE]
->  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且使用第一个和第二个参数 (`lpApplicationName`并`lpCommandLine`)， `argv` **[0]** 可能不是可执行文件的名称;使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)来检索可执行文件的名称和其完全限定的路径。  
+>  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且使用第一个和第二个参数 (*lpApplicationName*并*lpCommandLine*)， `argv`**[0]** 可能不是可执行名称; 而使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)来检索可执行文件的名称和其完全限定的路径。  
   
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  *envp*  
- *Envp*数组，它是在许多 UNIX 系统中的一个常见扩展，在 Microsoft c + + 中使用。 它是表示用户环境中的变量集的字符串的数组。 该数组由 NULL 项终止。 它可以声明为指向的指针的数组**char (char** \*envp []**)** 或作为指针到指向**char (char** \* \*envp **)**。 如果程序使用**wmain**而不是**主要**，使用**wchar_t**数据类型而非**char**。 环境块传递给**主要**并**wmain**是当前环境的"冻结"副本。 如果随后更改通过调用环境**putenv**或`_wputenv`，在当前环境 (由返回`getenv` / `_wgetenv`并`_environ` /  `_wenviron`变量) 发生更改，但由 envp 指向的块将不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。  
+ *Envp*数组，它是在许多 UNIX 系统中的一个常见扩展，在 Microsoft c + + 中使用。 它是表示用户环境中的变量集的字符串的数组。 该数组由 NULL 项终止。 它可以声明为指向的指针的数组**char (char** \*envp []**)** 或作为指针到指向**char (char** \* \*envp **)**。 如果程序使用`wmain`而不是`main`，使用`wchar_t`数据类型而非**char**。 环境块传递给`main`和`wmain`是当前环境的"冻结"副本。 如果随后更改通过调用环境`putenv`或`_wputenv`，在当前环境 (由返回`getenv` / `_wgetenv`并`_environ` /  `_wenviron`变量) 将将不会发生更改，但由 envp 指向的块。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。  
   
 **结束 Microsoft 专用**  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用*argc*， *argv*，并*envp*参数**主要**:  
+ 下面的示例演示如何使用*argc*， *argv*，并*envp*参数`main`:  
   
 ```cpp 
 // argument_definitions.cpp  
