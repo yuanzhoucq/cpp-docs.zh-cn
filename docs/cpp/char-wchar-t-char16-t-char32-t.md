@@ -1,5 +1,5 @@
 ---
-title: char、 wchar_t、 char16_t、 char32_t |Microsoft 文档
+title: char、 wchar_t、 char16_t、 char32_t |Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dc38eb9742459139747578a8227bdfaee8bb8a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d0c89df02c624d96c613f6241c9beefd466827e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413890"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402609"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
-类型**char**， **wchar_t**， **char16_t**和**char32_t**是表示字母数字字符的内置类型，以及非字母数字的标志符号和非打印字符。
+类型**char**， **wchar_t**， **char16_t**并**char32_t**是表示字母数字字符的内置类型，以及非字母数字的标志符号和非打印字符。
 
 ## <a name="syntax"></a>语法
 
@@ -38,11 +38,10 @@ char32_t ch4{ U'a' };
   
 ## <a name="remarks"></a>备注
 
-**Char**类型是 C 和 C++ 中的原始字符类型。 类型**无符号 char**通常用于表示*字节*，这不是 C++ 中的内置类型。 **Char**类型可以用于存储中的字符的 ASCII 字符集或所有 iso-8859 字符集，和单个个字节 Shift JIS 等的多字节字符或 Unicode 字符集的 utf-8 编码。 字符串**char**类型统称为*缩小*字符串，即使用于多字节字符进行编码。 Microsoft 编译器中**char**是 8 位类型。
+**Char**类型是 C 和 C++ 中的原始字符类型。 类型**无符号 char**通常用于表示*字节*，这不是 C++ 中的内置类型。 **Char**类型可以用于存储中的字符的 ASCII 字符集或任何 ISO-8859 字符集，并且各个字节多字节字符，如 Shift JIS 或 Unicode 字符集的 utf-8 编码。 字符串**char**类型被称为*缩小*字符串，即使使用多字节字符进行编码。 在 Microsoft 编译器**char**是一个 8 位类型。
 
-**Wchar_t**类型为实现定义的宽字符类型。 在 Microsoft 编译器中，它表示用于存储 Unicode 编码为 UTF 16LE，16 位宽字符在 Windows 操作系统上的本机字符类型。 通用 C 运行时 (UCRT) 库函数使用的宽字符版本**wchar_t**和其指针和数组类型作为参数和返回值，像那样的本机 Windows API 的宽字符版本。
+**Wchar_t**类型是实现定义的宽字符类型。 在 Microsoft 编译器，它表示用来存储 Unicode 编码为 UTF 16LE 的 16 位宽字符在 Windows 操作系统上的本机字符类型。 宽字符版本的通用 C 运行时 (UCRT) 库函数使用**wchar_t**和其指针和数组类型作为参数和返回值是否为本机 Windows API 的宽字符版本。
 
-**Char16_t**和**char32_t**类型分别表示 16 位和 32 位的宽字符。 Unicode 编码为 utf-16 可以存储在**char16_t**类型和 Unicode 编码为 utf-32 可以存储在**char32_t**类型。 这些类型的字符串和**wchar_t**是否所有称为*宽*字符串，但通常是指专门的字符串**wchar_t**类型。
+**Char16_t**并**char32_t**类型分别表示 16 位和 32 位的宽字符。 Unicode 编码为 utf-16 可以存储在**char16_t**类型和 Unicode 编码为 UTF-32 可以存储在**char32_t**类型。 这些类型的字符串和**wchar_t**是所有被称为*宽*字符串，但此术语通常专指的字符串**wchar_t**类型。
 
-在 C++ 标准库，`basic_string`类型专用于窄和宽字符串。 使用`std::string`字符时的类型都是**char**，`std::u16string`字符时的类型都是**char16_t**，`std::u32string`字符时的类型都是**char32_t**，和`std::wstring`字符时的类型都是**wchar_t**。 其他表示文本的类型包括`std::stringstream`和`std::cout`均可专用于窄字符串和宽字符串。  
-  
+在 C++ 标准库，`basic_string`类型专用于窄和宽字符串。 使用`std::string`字符时的类型都是**char**，`std::u16string`字符时的类型都是**char16_t**，`std::u32string`字符时的类型都是**char32_t**，并`std::wstring`字符时的类型都是**wchar_t**。 表示文本，其他类型包括`std::stringstream`和`std::cout`均可专用于窄和宽字符串。  

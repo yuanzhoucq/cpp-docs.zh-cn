@@ -1,5 +1,5 @@
 ---
-title: code_seg (__declspec) |Microsoft 文档
+title: code_seg (__declspec) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70477759046c153bf78d7a870492a332210cca5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc96b3bdd7aa2eed69290b879e054df5ac6f35c3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408832"
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Microsoft 专用**  
   
- `code_seg` 声明特性可命名将存储该函数或类成员函数对象代码的 .obj 文件中的可执行文本段。  
+ **Code_seg**声明特性可命名将在其中存储的函数或类成员函数的对象代码的.obj 文件中的可执行文件的文本段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +37,19 @@ __declspec(code_seg("segname")) declarator
 ## <a name="remarks"></a>备注  
  `__declspec(code_seg(...))` 特性可将代码放置到可在内存中独立分页或锁定的单独命名的段中。 你可以使用该特性控制实例化的模板和编译器生成的代码的放置位置。  
   
- A*段*是命名的.obj 文件加载到内存中作为一个单元中的数据块。 A*文本段*是包含可执行代码的段。 术语*部分*通常会与段互换使用。  
+ 一个*段*是命名的.obj 文件加载到内存中作为一个单元中的数据块。 一个*文本段*是包含可执行代码段。 术语*部分*通常会与段互换使用。  
   
- 定义 `declarator` 时生成的对象代码将放入 `segname`（窄字符串字面值）指定的文本段。 名称`segname`不必中指定[部分](../preprocessor/section.md)杂注然后可以在声明中使用它。 默认情况下，未指定 `code_seg` 时，对象代码将放入名为 .text 的段中。 A`code_seg`属性将覆盖任何现有[#pragma code_seg](../preprocessor/code-seg.md)指令。 应用于成员函数的 `code_seg` 特性将重写应用于封闭类的任何 `code_seg` 特性。  
+ 定义 `declarator` 时生成的对象代码将放入 `segname`（窄字符串字面值）指定的文本段。 名称`segname`不必中指定[部分](../preprocessor/section.md)杂注才能在声明中使用。 默认情况下，未指定 `code_seg` 时，对象代码将放入名为 .text 的段中。 一个**code_seg**特性将重写任何现有[#pragma code_seg](../preprocessor/code-seg.md)指令。 一个**code_seg**特性应用于成员函数将重写任何**code_seg**应用于封闭类的属性。  
   
- 如果一个实体具有 `code_seg` 特性，则同一实体的所有声明和定义必须具有相同的 `code_seg` 特性。 如果一个基类具有 `code_seg` 特性，则派生类必须具有相同的特性。  
+ 如果实体有**code_seg**属性，所有声明和定义相同的实体必须都具有相同**code_seg**属性。 如果 base 类具有**code_seg**特性，则派生类必须具有相同的属性。  
   
- 当 `code_seg` 特性应用于命名空间范围的函数或成员函数时，该函数的对象代码将放入指定文本段中。 该特性应用于类时，类和嵌套类的所有成员函数（其中包括编译器生成的特殊成员函数）将放入指定段中。 局部定义的类（例如在成员函数主体中定义的类）不继承封闭范围的 `code_seg` 特性。  
+ 当**code_seg**特性应用于命名空间范围函数或成员函数，该函数的对象代码放入指定的文本段。 该特性应用于类时，类和嵌套类的所有成员函数（其中包括编译器生成的特殊成员函数）将放入指定段中。 局部定义的类，例如，成员函数体中定义的类，不会继承**code_seg**封闭作用域的属性。  
   
- 当 `code_seg` 特性应用于模板类或模板函数时，模板的所有隐式专用化将放入指定段中。 显式或部分专用化不继承主模板中的 `code_seg` 特性。 你可以在专用化时指定相同或不同的 `code_seg` 特性。 `code_seg` 特性不能应用于显式模板实例化。  
+ 当**code_seg**属性应用于模板类或模板函数，该模板的所有隐式专用化将放入指定段。 显式或部分专用化不会继承**code_seg**从主模板的属性。 你可以指定相同或不同**code_seg**上专用化的属性。 一个**code_seg**属性不能应用于显式模板实例化。  
   
- 默认情况下，编译器生成的代码（例如特殊成员函数）将放入 .text 段中。 `#pragma code_seg` 指令不重写该默认设置。 在类、类模板或函数模板上使用 `code_seg` 特性可控制编译器生成的代码的放置位置。  
+ 默认情况下，编译器生成的代码（例如特殊成员函数）将放入 .text 段中。 `#pragma code_seg` 指令不重写该默认设置。 使用**code_seg**属性类、 类模板或函数模板控制编译器生成的代码的放置位置。  
   
- lambda 继承其封闭范围中的 `code_seg` 特性。 若要为 lambda 指定段，请将 `code_seg` 特性应用于参数声明子句之后，任何可变或异常规范、任何尾随返回类型规范和 lambda 主体之前。 有关详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。 该示例在名为 PagedMem 的段中定义 lambda：  
+ Lambda 继承**code_seg**其封闭范围中的属性。 若要指定 lambda 的段，请应用**code_seg**属性的参数声明子句之后和任何之前可变或异常规范、 任何尾随的返回类型规范且 lambda 体。 有关详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。 该示例在名为 PagedMem 的段中定义 lambda：  
   
 ```cpp  
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };  
@@ -57,9 +58,9 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
  在不同的段中放入特定成员函数（尤其是虚拟成员函数）时要特别小心。 如果你在位于分页段中的派生类中定义虚拟函数，而基类方法位于非分页段中，则其他基类方法或用户代码可能会假定调用该虚拟方法不会触发页面错误。  
   
 ## <a name="example"></a>示例  
- 以下示例演示使用隐式和显式模板专用化时，`code_seg` 特性如何控制段的放置位置：  
+ 此示例演示如何**code_seg**属性控制段的放置位置时隐式和显式模板专用化使用：  
   
-```  
+```cpp 
 // code_seg.cpp  
 // Compile: cl /EHsc /W4 code_seg.cpp  
   

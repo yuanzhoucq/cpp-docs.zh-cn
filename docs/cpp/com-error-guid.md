@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c592607732eb5558ce74edb7b71adbc023b2ae52
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939021"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402278"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Microsoft 专用**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939021"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 GUID GUID( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回的结果`IErrorInfo::GetGUID`有关`IErrorInfo`对象中记录`_com_error`对象。 如果没有`IErrorInfo`记录对象，它将返回 GUID_NULL。  
+ 返回的结果`IErrorInfo::GetGUID`有关`IErrorInfo`对象中记录`_com_error`对象。 如果没有`IErrorInfo`记录对象时，它将返回`GUID_NULL`。  
   
 ## <a name="remarks"></a>备注  
  调用时的任何错误`IErrorInfo::GetGUID`方法将被忽略。  

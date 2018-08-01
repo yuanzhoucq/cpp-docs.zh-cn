@@ -1,5 +1,5 @@
 ---
-title: extern （c + +） |Microsoft 文档
+title: extern （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.reviewer: ''
@@ -24,27 +24,27 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b9f94d02443163f45b83d64702fe49622597cd
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 133cbb01ba54ccc8bc0ce0c31b5d7b4436c2488d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261047"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403034"
 ---
 # <a name="extern-c"></a>extern （c + +）
 
-**Extern**关键字应用于全局变量、 函数或模板声明用于指定该事物的名称具有*外部链接*。 链接和，建议不要使用全局变量是为什么背景信息，请参阅[程序和链接](program-and-linkage-cpp.md)。
+**Extern**关键字应用于全局变量、 函数或模板声明来指定该操作的名称具有*外部链接*。 链接和为何使用全局变量，建议不要使用的背景信息，请参阅[程序和链接](program-and-linkage-cpp.md)。
 
-**Extern**关键字具有四个含义，具体取决于上下文：
+**Extern**关键字具有四个的含义，具体取决于上下文：
 
-1. 在非 const 全局变量声明、 **extern**指定另一个翻译单元中定义的变量或函数。 **Extern**必须在其中定义变量以外的所有文件中应用。
-1. 在 const 变量声明中，它指定该变量具有外部链接。 **Extern**必须应用于所有文件中的所有声明。 （全局常量变量具有内部链接默认情况下）。
-1. **extern"C"** 指定该函数在其他位置定义，并使用 C 语言调用约定。 Extern"C"修饰符还可以应用于块中的多个函数声明中。
-1. 在模板声明中，它指定对模板，已实例化在其他位置。 这是一种优化，告知编译器，它可以重新使用其他实例化，而不是创建一个新的当前位置。 有关详细信息有关的这种用法**extern**，请参阅[模板](templates-cpp.md)。
+1. 在非常量全局变量声明中， **extern**指定另一个翻译单元中定义的变量或函数。 **Extern**必须应用在其中定义的变量除外的所有文件中。
+1. 在 const 变量声明中，它指定该变量具有外部链接。 **Extern**必须应用于所有文件中的所有声明。 （全局常量变量具有内部链接默认情况下。）
+1. **extern"C"** 指定该函数在其他地方定义，并使用 C 语言调用约定。 Extern"C"修饰符还可能会应用于在块中的多个函数声明。
+1. 在模板声明中，它指定该模板，已实例化其他位置。 这是一种优化，告知编译器，它可以重新使用其他实例化，而不是创建一个新的当前的位置。 详细了解的这种用法**extern**，请参阅[模板](templates-cpp.md)。
 
 ## <a name="extern-linkage-for-non-const-globals"></a>非常量全局函数的外部链接
 
-当链接器发现**extern**之前全局变量声明，它会查找另一个翻译单元中的定义。 在全局范围内的非 const 变量的声明是外部默认设置。仅适用**extern**对不提供定义声明。
+当链接器发现**extern**之前全局变量声明，它会查找另一个翻译单元中的定义。 在全局范围内的非常量变量的声明是外部默认设置。仅适用**extern**到不提供定义的声明。
 
 ```cpp
 //fileA.cpp
@@ -63,7 +63,7 @@ extern int i = 43; // same error (extern is ignored on definitions)
 
 ## <a name="extern-linkage-for-const-globals"></a>const 全局函数的外部链接
 
-A **const**全局变量默认情况下具有内部链接。 如果你想要具有外部链接的变量，则应用**extern**关键字定义以及关于其他文件中的所有其他声明：
+一个**const**全局变量具有内部链接，默认情况下。 如果你想要具有外部链接的变量，将应用**extern**关键字来定义以及关于其他文件中的所有其他声明：
 
 ```cpp
 //fileA.cpp
@@ -73,15 +73,15 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>Extern constexpr 链接
+## <a name="extern-constexpr-linkage"></a>extern constexpr 链接
 
-在 Visual Studio 2017 15.3 及更早版本的版本，编译器始终提供 constexpr 变量内部链接即使变量被标记为外部。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) 启用符合标准的正确行为。 这最终将成为默认设置。
+在 Visual Studio 2017 版本 15.3 及更早版本中，编译器常常 constexpr 变量内部链接即使变量标记为外部。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) 启用符合标准的正确行为。 这最终将成为默认设置。
 
 ```cpp
 extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 ```
 
-如果标头文件包含变量的声明的 extern constexpr，它需要将标记为 **__declspec （selectany)** 才能正确组合其重复声明：
+如果标头文件包含变量的声明的 extern constexpr，它需要标记为 **__declspec （selectany)** 以便正确组合其重复声明：
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -89,7 +89,7 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"c + +"函数声明
 
- C + + 中与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
+ 在 c + +，与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
 
  Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用**extern** "C"语法以允许要在 c + + 程序中使用的运行时库函数。
 
@@ -148,9 +148,8 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>请参阅
-
-- [关键字](../cpp/keywords-cpp.md)
-- [程序和链接](program-and-linkage-cpp.md)
-- [extern 存储类说明符在 C 中](../c-language/extern-storage-class-specifier.md) 
-- [在 C 中的标识符的行为](../c-language/behavior-of-identifiers.md) 
-- [C 中的链接](../c-language/linkage.md)
+ [关键字](../cpp/keywords-cpp.md)  
+ [程序和链接](program-and-linkage-cpp.md)  
+ [extern 存储类说明符在 C 中](../c-language/extern-storage-class-specifier.md)  
+ [在 C 中的标识符的行为](../c-language/behavior-of-identifiers.md)  
+ [C 中的链接](../c-language/linkage.md)

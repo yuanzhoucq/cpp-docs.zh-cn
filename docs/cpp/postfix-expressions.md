@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943022"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403136"
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 后缀表达式包含主表达式或者其中的后缀运算符跟在主表达式之后的表达式。 下表列出了后缀运算符。  
@@ -34,13 +34,12 @@ ms.locfileid: "37943022"
 |[函数调用运算符](../cpp/function-call-operator-parens.md)|**( )**|  
 |[显式类型转换运算符](../cpp/explicit-type-conversion-operator-parens.md)|*类型名称* **（)**|  
 |[成员访问运算符](../cpp/member-access-operators-dot-and.md)|**.** 或 **->**|  
-|[后缀递增运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[后缀递增运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[后缀递减运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  以下语法描述了可能的后缀表达式：  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 在上面的表达式中，func 是主表达式，func(1) 是函数后缀表达式，func(1)->GetData 是指定类成员的后缀表达式，func(1)->GetData() 是另一个函数后缀表达式，整个表达式是增加 GetData 的返回值的后缀表达式。  该表达式的整体含义是作为参数传递 1 的 "call func，并作为返回值获取一个指向类的指针。  然后调用此类上的 GetValue()，接着递增返回的值。  
+ 在上述表达式中，`func`是主表达式`func(1)`是函数后缀表达式`func(1)->GetData`是指定类的成员的后缀表达式`func(1)->GetData()`是另一个函数后缀表达式，并且整个表达式是增加 GetData 的返回值的后缀表达式。  该表达式的整体含义是作为自变量传递 1 的 "call func，并作为返回值获取一个指向类的指针。  然后，调用`GetValue()`对该类，然后递增返回的值。  
   
  上面列出的表达式是赋值表达式，这意味着这些表达式的结果必须为右值。  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- 上面的程序声明一个采用两个参数的函数 `print`。 而第二个参数 `terminator` 具有默认值 `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个自变量指定显式值。 该程序的输出为  
+ 上面的程序声明一个采用两个参数的函数 `print`。 但是，第二个参数，*终止符*，具有默认值， `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个自变量指定显式值。 该程序的输出为  
   
 ```Output 
 hello,  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940880"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403058"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -30,7 +30,6 @@ ms.locfileid: "37940880"
 构造函数可以根据需要采用成员初始化列表。 这是更高效的方法来初始化类成员的成员数目在构造函数主体中的赋值。 下面的示例演示一个类`Box`具有三个重载构造函数。 最后两个使用 init 成员列表：
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 声明类的实例时，编译器将选择要调用的构造函数根据重载决策的规则：
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - 构造函数可声明为**内联**，[显式](#explicit_constructors)，**友元**或者[constexpr](#constexpr_constructors)。
@@ -87,7 +83,6 @@ int main()
 使用成员初始值设定项列表是首选通过分配的构造函数的正文中的值，因为它直接初始化成员。 在下面的示例演示成员初始值设定项列表包含所有**identifier(argument)** 冒号后面的表达式：
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 如果您依赖于隐式默认构造函数，请务必初始化成员在类定义中，在前面的示例所示。 没有这些初始值设定项，成员将为未初始化并且 Volume() 调用将生成一个垃圾回收的值。 一般情况下，它是很好的做法初始化这种方式中的成员，即使不依赖于隐式默认构造函数。
@@ -141,7 +135,6 @@ int main() {
 可以阻止编译器生成的隐式默认构造函数通过定义其作为[删除](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 如果类没有默认构造函数，将无法通过单独使用方括号语法来构造该类的对象数组。 例如，在前面提到的代码块中，框的数组无法进行如下声明：
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 但是，可以使用一组初始值设定项列表初始化框对象的数组：
@@ -205,7 +196,6 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
 复制构造函数可能会产生这些签名之一：
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Box(Box&& other);
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 如果类未定义的移动构造函数，编译器将生成一个隐式，如果没有用户声明复制构造函数、 复制赋值运算符、 移动赋值运算符或析构函数。 如果不定义了任何显式或隐式的移动构造函数，否则将使用移动构造函数的操作使用的复制构造函数。 如果一个类中声明的移动构造函数或移动赋值运算符，隐式声明的复制构造函数定义为已删除。
@@ -338,7 +325,6 @@ public:
 - 所有非静态数据成员和基类的子对象进行初始化;
 - 如果类是 （a） 一个具有 variant 类型的值成员的联合，或 （b） 提供了匿名联合，只有一个联合成员进行初始化;
 - 类类型的每个非静态数据成员和所有基类的子对象具有 constexpr 构造函数
-
 
 ## <a name="init_list_constructors"></a> 初始值设定项列表构造函数
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 这类转换可能在某些情况下很有用，但更常见的是，它们可能会导致代码中发生细微但严重的错误。 作为一般规则，应使用**显式**上一个构造函数 （和用户定义的运算符） 以防止出现这种隐式类型转换关键字：
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 下面的示例显示，在派生类的构造函数中，基类和成员构造函数的调用顺序。 首先，调用基构造函数，然后按照基类成员在类声明中出现的顺序对这些成员进行初始化，然后，调用派生构造函数。
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 这是输出：
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 调用基类构造函数进行派生，例如，如果 ClassA 派生自 ClassB，ClassB 派生自 ClassC，那么首先调用 ClassC 构造函数，然后调用 ClassB 构造函数，最后调用 ClassA 构造函数。
+派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 派生的顺序调用基类构造函数，例如，如果`ClassA`派生自`ClassB`，它派生自`ClassC`，则`ClassC`首先，调用构造函数则`ClassB`构造函数中，则`ClassA`构造函数。
 
 如果基类没有默认构造函数，则必须在派生类构造函数中提供基类构造函数参数：
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 你应看到以下输出：
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> 在构造函数中的虚函数
@@ -587,7 +566,7 @@ int main() {
 
 这是输出：
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 using 语句可将来自基类的所有构造函数引入范围（除了签名与派生类中的构造函数相同的构造函数）。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 如果基类的构造函数具有相同签名，则派生类无法从多个基类继承。

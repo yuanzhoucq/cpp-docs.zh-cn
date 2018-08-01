@@ -1,5 +1,5 @@
 ---
-title: '一个&#39;s 求补运算符: ~ |Microsoft 文档'
+title: '一个&#39;s 二进制求补运算符: ~ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409152"
 ---
-# <a name="one39s-complement-operator-"></a>一个&#39;s 求补运算符: ~
+# <a name="one39s-complement-operator-"></a>一个&#39;s 二进制求补运算符: ~
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
  二进制反码运算符 (`~`)（有时称为“按位反码”运算符）将生成其操作数的按位二进制反码。 即，操作数中为 1 的每个位在结果中为 0。 相反，操作数中为 0 的每个位在结果中为 1。 二进制反码运算符的操作数必须为整型。  
   
 ## <a name="operator-keyword-for-"></a>~ 的运算符关键字  
- `compl` 运算符是 `~` 的文本等效项。 有两种方法来访问`compl`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md)。  
+ **Compl**运算符是文本等效项`~`。 有两种方法来访问**compl**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md)。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  

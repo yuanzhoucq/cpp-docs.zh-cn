@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409082"
 ---
 # <a name="deprecated-c"></a>已弃用 (C++)
-本主题只介绍特定于 Microsoft 的弃用 declspec 声明。 有关 C++ 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[C++ 标准特性](attributes.md)。
+本主题提供有关特定于 Microsoft 的信息已弃用 declspec 声明。 有关 C++ 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[C++ 标准特性](attributes.md)。
 
- 与所示的异常**弃用**声明提供与相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
+ 如下所示的异常**弃用**声明提供相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
   
--   **弃用**声明允许你的函数重载的特殊形式指定为已弃用，而杂注形式适用于所有重载形式的函数名称。  
+-   **弃用**声明允许您函数重载的特殊形式指定为已弃用，而杂注形式适用于所有重载形式的函数名称。  
   
 -   **弃用**声明允许您指定在编译时将显示一条消息。 该消息的文本可以来自宏。  
   
--   宏仅被标记为已弃用，**弃用**杂注。  
+-   宏只标记为与已弃用**弃用**杂注。  
   
- 如果编译器遇到不推荐使用的标识符或标准使用[ `[[deprecated]]` ](attributes.md)属性， [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)引发警告。  
+ 如果编译器遇到使用不推荐使用的标识符或标准[ `[[deprecated]]` ](attributes.md)属性， [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)引发警告。  
   
 ## <a name="example"></a>示例  
  下面的示例演示在使用已弃用的函数时，如何将函数标记为已弃用以及如何指定在编译时将显示的消息。  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>示例  
  下面的示例演示在使用已弃用的类时，如何将类标记为已弃用以及如何指定在编译时将显示的消息。  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  

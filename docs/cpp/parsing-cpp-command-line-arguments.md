@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409202"
 ---
 # <a name="parsing-c-command-line-arguments"></a>分析 C++ 命令行自变量
 **Microsoft 专用**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   参数用空白分隔，空白可以是一个空格或制表符。  
   
--   插入符号 (^) 未被识别为转义符或者分隔符。 字符传递给之前由操作系统中的命令行分析器完全处理`argv`在程序中的数组。  
+-   插入符号 (^) 未被识别为转义符或者分隔符。 字符在被传递到前由操作系统中的命令行分析器完全处理`argv`程序中的数组。  
   
 -   由双引号括起来的字符串 ("*字符串*") 被解释为单个参数，而不考虑包含空白。 带引号的字符串可以嵌入在自变量内。  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/03/2018
   
 -   反斜杠按其原义解释，除非它们紧位于双引号之前。  
   
--   如果为偶数的反斜杠后跟双引号，一个反斜杠置于`argv`每对反斜杠，和双引号的数组将被解释为字符串分隔符。  
+-   如果偶数个反斜杠后跟双引号，一个反斜杠被置于`argv`数组，每对反斜杠，双引号被解释为字符串分隔符。  
   
--   如果奇数数目的反斜杠后跟双引号，一个反斜杠置于`argv`每对反斜杠，和双引号的数组"进行转义"其余的反斜杠，导致原义双引号 (") 放入`argv`。  
+-   如果奇数个反斜杠后跟双引号，一个反斜杠被置于`argv`数组中的每对反斜杠和双引号由剩余反斜杠，从而导致原义双引号进行"转义"(")，无法放置在`argv`。  
   
 ## <a name="example"></a>示例  
- 下面的程序演示如何命令行自变量传递：  
+ 以下程序演示了如何命令行参数传递：  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -66,7 +67,7 @@ int main( int argc,      // Number of strings in array argv
 }  
 ```  
   
- 下表显示了示例输入和预期的输出，演示前面列表中的规则。  
+ 下表显示了示例输入和预期的输出，演示上述列表中的规则。  
   
 ### <a name="results-of-parsing-command-lines"></a>分析命令行的结果  
   

@@ -1,5 +1,5 @@
 ---
-title: __clrcall |Microsoft 文档
+title: __clrcall |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4012eac44f376ccdeeb57227e562c672f6ba7ffe
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 27564ce9c3cf795d7999745e82c733092bccd719
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704576"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401852"
 ---
 # <a name="clrcall"></a>__clrcall
 
 **Microsoft 专用**
 
-指定只能从托管代码调用的函数。  对所有只能从托管代码调用的虚函数使用 `__clrcall`。 但是，此调用约定不能用于从本机代码调用的函数。
+指定只能从托管代码调用的函数。  使用 **__clrcall**只会从托管代码调用的所有虚拟函数。 但是，此调用约定不能用于从本机代码调用的函数。
 
-当通过指针从托管函数调用到虚拟托管函数或从托管函数调用到托管函数时，可使用 `__clrcall` 来提高性能。
+使用 **__clrcall**以调用从托管函数到虚拟托管函数或从托管函数指针通过托管函数时提高性能。
 
-入口点是编译器生成的单独函数。 如果函数同时具有本机和托管入口点，则其中一个将是具有函数实现的实际函数。 其他函数将是调用到实际函数的单独函数（形式转换 (thunk)）并允许公共语言运行时执行 PInvoke。 当将函数标记为 `__clrcall` 时，您可以指示函数实现必须是 MSIL，并且不生成本机入口点函数。
+入口点是编译器生成的单独函数。 如果函数同时具有本机和托管入口点，则其中一个将是具有函数实现的实际函数。 其他函数将是调用到实际函数的单独函数（形式转换 (thunk)）并允许公共语言运行时执行 PInvoke。 当函数标记为 **__clrcall**，指示函数实现必须是 MSIL，并且将不会生成本机入口点函数。
 
-当采用本机函数的地址时，如果未指定 `__clrcall`，编译器将使用本机入口点。 `__clrcall` 指示函数为托管函数，并且不需要经历从托管到本机的转换。 在这种情况下，编译器将使用托管入口点。
+当采用本机函数的地址，如果 **__clrcall**未指定，则编译器将使用本机入口点。 **__clrcall**指示函数为托管，并且没有不需要经历从托管到本机。 在这种情况下，编译器将使用托管入口点。
 
-时 **/clr** (不 **/clr: pure**或 **/clr: safe**) 使用和`__clrcall`是未使用，始终采用函数的地址返回本机入口的地址点函数。 当使用了 `__clrcall` 时，不会创建本机入口点函数，因此您将获得托管函数的地址，而不是入口点形式转换 (thunk) 函数的地址。 有关详细信息，请参阅[双重形式转换](../dotnet/double-thunking-cpp.md)。 **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+当`/clr`(不`/clr:pure`或`/clr:safe`) 使用并 **__clrcall**是未使用，始终采用一个函数的地址返回本机入口点函数的地址。 当 **__clrcall**是使用本机入口点函数不会创建，因此获得托管函数，而不是入口点转换 （thunk） 函数的地址。 有关详细信息，请参阅[双重形式转换](../dotnet/double-thunking-cpp.md)。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
-[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)意味着所有函数和函数指针都是`__clrcall`，编译器将不允许在编译单位要标记的任何内容以外的函数`__clrcall`。 当 **/clr: pure**使用时，`__clrcall`只能在函数指针和外部声明上指定。
+[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)意味着，所有函数和函数指针都是 **__clrcall** ，编译器将不允许将编译单位以外的任何标记中的函数 **__clrcall**。 当 **/clr: pure**使用，则 **__clrcall**只能在函数指针和外部声明上指定。
 
-你可以直接调用`__clrcall`函数从现有的 C++ 代码编译的使用 **/clr** ，只要该函数具有 MSIL 实现。 `__clrcall` 不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数在编译时带有 **/clr**。
+可以直接调用 **__clrcall**函数从使用已编译的现有 c + + 代码 **/clr** ，只要该函数具有 MSIL 实现。 **__clrcall**不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数将编译使用`/clr`。
 
-`__clrcall` 函数指针仅能在创建它们的应用程序域中使用。  不要跨应用程序域传递 `__clrcall` 函数指针，而应使用 <xref:System.CrossAppDomainDelegate>。 有关详细信息，请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)。
+**__clrcall**函数指针仅用于在其中创建应用程序域中使用。  而不是传入 **__clrcall**函数指针跨应用程序域，请使用<xref:System.CrossAppDomainDelegate>。 有关详细信息，请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 
-请注意，当使用 `__clrcall` 声明函数时，将根据需要生成代码；例如，当调用函数时。
+请注意，当声明的函数 **__clrcall**，在需要时将生成代码; 例如，在调用函数时。
 
 ```cpp
 // clrcall2.cpp
@@ -103,6 +103,5 @@ int main() {
 ```
 
 ## <a name="see-also"></a>请参阅
-
-- [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)
-- [关键字](../cpp/keywords-cpp.md)
+ [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)  
+ [关键字](../cpp/keywords-cpp.md)
