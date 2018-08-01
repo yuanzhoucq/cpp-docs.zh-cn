@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940814"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401569"
 ---
 # <a name="for-statement-c"></a>for 语句 (C++)
 重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  默认情况下[/Ze](../build/reference/za-ze-disable-language-extensions.md)中, 声明的变量**有关**循环保持在范围内直到**为**循环的封闭范围终止。  
   
- [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)启用中声明的循环，而无需指定 /Za 的变量的标准行为。  
+ [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)启用中声明的循环，而无需指定的变量的标准行为`/Za`。  
   
- 还有可能要使用的范围差异**为**循环来重新声明 /Ze 下的变量，如下所示：  
+ 还有可能要使用的范围差异**有关**循环来重新声明变量下的`/Ze`，如下所示：  
   
 ```cpp  
 // for_statement5.cpp  
