@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942586"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402915"
 ---
 # <a name="mutable-data-members-c"></a>可变数据成员 (C++)
 此关键字只能应用于类的非静态和非常量数据成员。 如果声明数据成员**可变**，然后是合法将值分配到此数据成员从**const**成员函数。  
@@ -29,7 +29,6 @@ ms.locfileid: "37942586"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   

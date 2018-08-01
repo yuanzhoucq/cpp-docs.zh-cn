@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943026"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402745"
 ---
 # <a name="additive-operators--and--"></a>加法运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  在 C++ 程序中很少找到 `pIntArray = pIntArray + 1` 形式的代码；若要实现递增，以下形式更可取：`pIntArray++` 或 `pIntArray += 1`。  
   
 ## <a name="pointer-subtraction"></a>指针减法  
- 如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型的有符号整数结果**ptrdiff_t** (在标准包含文件中定义\<stddef.h >)。  
+ 如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型的有符号整数结果`ptrdiff_t`(在标准包含文件中定义\<stddef.h >)。  
   
  其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 该减法运算的值是指向的 (*n* - *我*) 个数组元素，其中*n*指向的元素通过原始指针并*我*是第二个操作数的整数值。  
   

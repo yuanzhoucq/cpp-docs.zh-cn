@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75689c07718bf066105920b566087c08a220a7de
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408802"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函数模板的部分排序 (C++)
 
 有多个与函数调用的自变量列表匹配的函数模板可用。 C++ 定义了函数模板的部分排序以指定应调用的函数。 由于有一些模板可能会视为专用化程度相同，因此排序只是部分的。
 
-编译器从可能的匹配项中选择可用的专用化程度最高的模板函数。 例如，如果函数模板采用类型__T__，和另一个函数模板采用__T\*__ 不可用， __T\*__ 版本称为要更多专用化并且优先于泛型__T__当参数是指针类型，即使都将是允许的匹配项的版本。
+编译器从可能的匹配项中选择可用的专用化程度最高的模板函数。 例如，如果函数模板采用类型__T__，和另一个函数模板采用__T\*__ 不可用， __T\*__ 说版本要更专用和泛型优于__T__只要自变量是指针类型，但同时会允许匹配项的版本。
 
 通过以下过程可确定一个函数模板候选项是否更加专用化：
 
@@ -36,21 +37,21 @@ ms.lasthandoff: 05/03/2018
 
 4. 对 T1 和 T2 执行相反的过程。
 
-5. 如果一个模板是另一个模板的有效模板自变量列表，但反之不成立，则认为第一个模板的专用化程度低于第二个模板。 如果使用的上一个步骤窗体有效自变量对于每个其他两个模板，则它们被视为同等专用化，并不明确的调用导致当你尝试使用它们。
+5. 如果一个模板是另一个模板的有效模板自变量列表，但反之不成立，则认为第一个模板的专用化程度低于第二个模板。 如果使用的上一步骤窗体有效参数为每个其他两个模板，则它们被视为同等专用化，并不明确的调用结果时您尝试使用它们。
 
 6. 使用以下规则：
 
      1. 针对特定类型的模板的专用化程度高于采用泛型类型参数的模板。
 
-     2. 模板仅采用__T\*__ 化程度高于仅采用一个__T__，因为一个假想键入__X\*__ 是有效的参数__T__模板自变量，但__X__不是有效参数__T\*__ 模板自变量。
+     2. 仅采用一个模板__T\*__ 更加专用化程度高于仅采用一个__T__，因为一个假想键入__X\*__ 是有效的参数__T__模板自变量，但__X__不是有效的参数__T\*__ 模板自变量。
 
-     3. __const T__化程度高于__T__，这是因为__const X__是的有效参数__T__模板自变量，但__X__是有效参数不__const T__模板自变量。
+     3. __const T__更加专用化程度高于__T__，因为__const X__是有效的参数__T__模板自变量，但__X__是有效参数不__const T__模板自变量。
 
-     4. __const T\*__ 化程度高于__T\*__，这是因为__const X\*__ 是的有效参数__T\*__ 模板自变量，但__X\*__ 不是有效参数__const T\*__ 模板自变量。
+     4. __const T\*__ 更加专用化程度高于__T\*__，这是因为__const X\*__ 是有效参数为__T\*__ 模板参数，但__X\*__ 不是有效的参数__const T\*__ 模板自变量。
 
 ## <a name="example"></a>示例
 
-下面的示例的作用是作为标准中的指定：
+下面的示例是标准中指定：
 
 ```cpp
 // partial_ordering_of_function_templates.cpp
@@ -85,12 +86,11 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 Less specialized function called  
 More specialized function called  
 Even more specialized function for const T*  
 ```  
   
 ## <a name="see-also"></a>请参阅
-
-[函数模板](../cpp/function-templates.md)
+ [函数模板](../cpp/function-templates.md)

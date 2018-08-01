@@ -1,5 +1,5 @@
 ---
-title: appdomain |Microsoft 文档
+title: appdomain |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52108e79a50d596dbb1f1afdfb2f64b93421d860
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 52b371d0dedc03c3f14ede1472221077d081ae8f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705226"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402297"
 ---
 # <a name="appdomain"></a>appdomain
 
@@ -30,17 +30,17 @@ ms.locfileid: "34705226"
 
 每个应用程序域具有其自己的 per-appdomain 变量的副本。 在将程序集加载到应用程序域中时执行 appdomain 变量的构造函数，并在卸载应用程序域时执行析构函数。
 
-如果希望公共语言运行时中进程内的所有应用程序域共享全局变量，请使用 `__declspec(process)` 修饰符。 `__declspec(process)` 默认情况下实际上是[/clr](../build/reference/clr-common-language-runtime-compilation.md)。 **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+如果希望公共语言运行时中进程内的所有应用程序域共享全局变量，请使用 `__declspec(process)` 修饰符。 `__declspec(process)` 默认情况下是否生效[/clr](../build/reference/clr-common-language-runtime-compilation.md)。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
 
-`__declspec(appdomain)` 时才有效之一 **/clr**使用编译器选项。 只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。 将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。
+`__declspec(appdomain)` 有效时才之一 **/clr**使用编译器选项。 只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。 将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。
 
 使用`__declspec(appdomain)`类似于使用[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)。 线程具有其自己的存储，就像应用程序域一样。 使用 `__declspec(appdomain)` 可确保全局变量在为此应用程序创建的每个应用程序域中都具有其自己的存储。
 
-有混合 per process 和 per appdomain 变量; 的使用限制请参阅[过程](../cpp/process.md)有关详细信息。
+有混合 per process 和 per appdomain 变量; 的使用限制请参阅[进程](../cpp/process.md)有关详细信息。
 
 例如，在程序启动时，初始化所有 per-process 变量，然后初始化所有 per-appdomain 变量。 因此，当初始化 per-process 变量时，它不能依赖于任何 per-application 域变量的值。 混合使用（分配）per appdomain 和 per process 变量的做法不妥。
 
-有关如何在特定应用程序域中调用函数的信息，请参阅[call_in_appdomain 函数](../dotnet/call-in-appdomain-function.md)。
+有关如何在特定的应用程序域中调用函数的信息，请参阅[call_in_appdomain 函数](../dotnet/call-in-appdomain-function.md)。
 
 ## <a name="example"></a>示例
 
@@ -145,6 +145,5 @@ __declspec(process) CGlobal::~CGlobal destructor
 ```
 
 ## <a name="see-also"></a>请参阅
-
-- [__declspec](../cpp/declspec.md)
-- [关键字](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)  
+[关键字](../cpp/keywords-cpp.md)  

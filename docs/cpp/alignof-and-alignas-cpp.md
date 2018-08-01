@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407976"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402411"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
-`alignas` 类型说明符是用于指定变量和用户定义类型的自定义对齐方式的一种可移植的 C++ 标准方法。 `alignof` 运算符也是一种获取指定类型或变量的对齐方式的标准可移植的方法。  
+**Alignas**类型说明符是可移植的 c + + 标准方法来指定自定义的变量和用户定义类型的对齐方式。 **Alignof**运算符也是一种标准可移植方法来获取指定的类型或变量的对齐方式。  
   
 ## <a name="example"></a>示例  
- 你可以在类（struck 或 union）或者单个成员上使用 `alignas`。 遇到多个 `alignas` 说明符时，编译器将选择最严格的说明符（即具有最大值的说明符）。  
+ 可以使用**alignas**类，struck 或 union，或单个成员上。 当多个**alignas**遇到说明符时，编译器将选择最严格的一个 （即具有最大值）。  
   
 ```cpp  
 // alignas_alignof.cpp

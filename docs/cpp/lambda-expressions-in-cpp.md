@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941962"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402960"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 在 C++ 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  此图显示了 lambda 的组成部分：  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- 要在类方法的正文中使用 lambda 表达式，请将 `this` 指针传递给 Capture 子句，以提供对封闭类的方法和数据成员的访问权限。 
+ 若要使用类方法的正文中的 lambda 表达式，请将传递**这**指向 capture 子句，以提供对封闭类的方法和数据成员的访问。 
  
 **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**这**指针可能通过指定通过值捕获`*this`capture 子句中。 按值捕获表示整个*闭包*，这是该 encapulates lambda 表达式的匿名函数对象，会复制到调用 lambda 的每个调用站点。 按值捕获时，lambda 将执行中的并行或异步操作，尤其是在如 NUMA 某些硬件体系结构上。 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  在**C++ 14**，如果参数类型是泛型，则可以使用 auto 关键字作为类型说明符。 这将告知编译器将函数调用运算符创建为模板。 参数列表中的每个 auto 实例等效于一个不同的类型参数。  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Lambda 是隐式`constexpr`其结果满足的要求如果`constexpr`函数：
 ```cpp

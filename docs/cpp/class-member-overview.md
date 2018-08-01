@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943042"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403464"
 ---
 # <a name="class-member-overview"></a>类成员概述
 类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 初始化的成员，可以构造函数，然后清理工作，如释放的内存和释放的资源，可以析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
@@ -124,7 +124,6 @@ int TestRun::_instances{ 0 };
  在 C++ 11 和更高版本中，非静态成员声明符可以包含初始值设定项。  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

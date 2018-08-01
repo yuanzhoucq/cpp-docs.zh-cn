@@ -1,5 +1,5 @@
 ---
-title: bad_typeid 异常 |Microsoft 文档
+title: bad_typeid 异常 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409002"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid 异常
-`bad_typeid`引发异常[typeid 运算符](../cpp/typeid-operator.md)时的操作数`typeid`是 NULL 指针。  
+**Bad_typeid**引发异常[typeid 运算符](../cpp/typeid-operator.md)时的操作数**typeid**是 NULL 指针。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>备注  
- `bad_typeid` 的接口为：  
+ 接口**bad_typeid**是：  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- 以下示例演示引发 `typeid` 异常的 `bad_typeid` 运算符。  
+ 下面的示例演示**typeid**运算符引发**bad_typeid**异常。  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,7 +78,7 @@ catch (bad_typeid){
   
 ## <a name="output"></a>输出  
   
-```  
+```Output 
 Object is NULL  
 ```  
   

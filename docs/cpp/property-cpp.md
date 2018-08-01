@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409062"
 ---
 # <a name="property-c"></a>属性 (C++)
 **Microsoft 专用**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>备注  
- 当编译器发现使用此特性声明成员选择运算符右侧的数据成员 ("**。**"**->**")，它将转换到的操作**获取**或**放**函数，具体取决于此类表达式是左值还是右值。 在更复杂的上下文中，如"`+=`"，通过执行操作同时执行重写**获取**和**放**。  
+ 当编译器发现与此特性声明成员选择运算符右侧的数据成员 ("**。**"**->**")，它会将转换到的操作`get`或`put`函数，具体取决于此类表达式是左值或右值。 在更复杂的上下文中，如"`+=`"，由两项操作都执行重写`get`和`put`。  
   
  此特性还可用于类或结构定义中的空数组的声明。 例如：  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

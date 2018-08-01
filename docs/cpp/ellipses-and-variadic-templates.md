@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941000"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402941"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略号和可变参数模板
 这篇文章演示如何使用省略号 (`...`) 与 C++ 可变参数模板。 省略号具有 C 和 C++ 中的许多用途。 其中包括函数的变量参数列表。 `printf()` C 运行时库中的函数是最常见的示例之一。  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  请注意，本文使用第一个示例中显示的约定（省略号已附加到 `typename`）。  
   
- 在前面的示例中，`Arguments` 是参数包。 类`classname`可以接受数目可变的自变量，如以下示例所示：  
+ 在上述示例中，*自变量*是参数包。 类`classname`可以接受数目可变的自变量，如以下示例所示：  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  通过使用可变参数模板类定义，你可能还需要至少一个参数：  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  下面是一个基本的示例*可变参数模板函数*语法：  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- `Arguments`参数包展开使用，在下一节中所示**了解可变参数模板**。  
+ *自变量*参数包展开使用，在下一节中所示**了解可变参数模板**。  
   
  可使用其他形式的可变参数模板函数的语法，其中包括但不是限于这些示例：  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  作为使用可变参数模板类的定义，可以进行要求至少一个参数的函数：  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  可变参数模板使用`sizeof...()`运算符 (不相关的更早`sizeof()`运算符):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>有关省略号位置的更多信息  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>输出  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  合并可变参数模板函数的大多数实现使用某种形式的递归，但与传统递归稍有不同。  传统递归涉及函数调用其自身使用相同的签名。 （可以重载或模板化，但每次选择相同的签名。）可变递归涉及使用不同 （几乎总是减少） 数目的参数，并抹去不同的签名每次调用可变参数函数模板。 "基用例"仍是必需的但有不同的递归性质。  
-  

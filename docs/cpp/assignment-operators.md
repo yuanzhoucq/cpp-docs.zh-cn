@@ -1,5 +1,5 @@
 ---
-title: 赋值运算符 |Microsoft 文档
+title: 赋值运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408982"
 ---
 # <a name="assignment-operators"></a>赋值运算符
 ## <a name="syntax"></a>语法  
@@ -61,8 +62,8 @@ assignment-operator : one of
 ## <a name="remarks"></a>备注  
  赋值运算符将值存储在左操作数指定的对象中。 有三种类型的赋值操作： 
 
-1. 简单赋值，在其中第二个操作数的值存储在第一个操作数指定的对象中。 1. 复合赋值，算术、 移位或位运算执行再存储结果。
-1. 中的资源传输而不复制移动 （对于类类型） 的分配。
+1. 简单赋值，在其中的第二个操作数的值存储在第一个操作数指定的对象中。 1. 复合赋值，算术、 移位或位运算执行再存储结果。
+1. 中的资源而不复制传输移动赋值 （对于类类型）。
 
 
 下表中的所有赋值运算符都除外 = 和 & & = 运算符是复合赋值运算符。  
@@ -82,7 +83,7 @@ assignment-operator : one of
 |**&=**|获取第一个和第二个操作数的按位“与”；将结果存储在第一个操作数指定的对象中。|  
 |**^=**|获取第一个和第二个操作数的按位“异或”；将结果存储在第一个操作数指定的对象中。|  
 |**\|=**|获取第一个和第二个操作数的按位“与或”；将结果存储在第一个操作数指定的对象中。|
-|**&&=**| （对于类类型） 的移动赋值运算符。 如果第二个操作数为右值，（而不复制它们） 将其资源移到第一个操作数。 请参阅[移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)有关详细信息。|
+|**&&=**| （对于类类型） 的移动赋值运算符。 如果第二个操作数为右值，（而不将其复制） 将其资源移到第一个操作数。 请参阅[移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)有关详细信息。|
   
  **运算符关键字**  
   
@@ -94,11 +95,11 @@ assignment-operator : one of
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- 若要访问这些运算符关键字在程序中的使用两种方式： 包括头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ 有两种方法来访问这些应用程序中的运算符关键字： 包括头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -129,7 +130,7 @@ int main() {
   
  任何从给定基类明确派生的类的对象均可赋给基类的对象。 反之则不然，因为有一个隐式转换，它能从派生类转换到基类，但不能从基类转换到派生类。 例如：  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  对于类类型对象，赋值与初始化不同。 若要演示不同赋值和初始化的工作方式，请考虑以下代码  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  上面的代码显示了一个初始值设定项；它调用了采用 `UserType2` 类型的参数的 `UserType1` 的构造函数。 给定以下代码  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  赋值语句  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,13 +190,13 @@ B = A;
 -   调用采用 `UserType2::UserType2` 参数并复制结果的构造函数 `UserType1`，前提是存在此类构造函数。  
   
 ## <a name="compound-assignment"></a>复合赋值  
- 复合赋值运算符，在表中所示[赋值运算符](../cpp/assignment-operators.md)，窗体中指定*e1* `op` =  *e2*，其中*e1*是一个可修改的左值不是 const 类型和*e2*是以下之一：  
+ 复合赋值运算符，在表中所示[赋值运算符](../cpp/assignment-operators.md)，在窗体中指定*e1* `op` =  *e2*，其中*e1*是非常量类型可修改左值和*e2*是以下之一：  
   
 -   算术类型  
   
 -   一个指针，如果`op`是 + 或-  
   
- *E1* `op` =  *e2*窗体的行为方式如*e1* *= e1* `op` *e2*，但*e1*只计算一次。  
+ *E1* `op` =  *e2*形式的行为方式作为*e1* *= e1* `op` *e2*，但*e1*只计算一次。  
   
  对枚举类型的复合赋值将生成错误消息。 如果左操作数属于指针类型，则右操作数必须属于指针类型或必须是计算结果为 0 的常量表达式。 如果左操作数属于整数类型，则右操作数不能属于指针类型。  
   
@@ -205,6 +206,6 @@ B = A;
  在 ANSI C 中，赋值表达式的结果不是左值。 因此，合法的 C++ 表达式 `(a += b) += c` 在 C 中是非法的。  
   
 ## <a name="see-also"></a>请参阅  
- [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
+ [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 赋值运算符](../c-language/c-assignment-operators.md)

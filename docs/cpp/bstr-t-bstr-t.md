@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ba2935dcec7863e43c0dd6a0a4e55ee5c4f3d28d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941260"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401641"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Microsoft 专用**  
@@ -81,7 +81,7 @@ _bstr_t(
 |`_bstr_t( char*`  `s2`  `)`|通过调用 `_bstr_t` 来创建一个新的 `SysAllocString` 对象并封装该对象，从而构造一个 `BSTR` 对象。<br /><br /> 此构造函数首先执行多字节到 Unicode 的转换。|  
 |`_bstr_t( wchar_t*`  `s3`  `)`|通过调用 `_bstr_t` 来创建一个新的 `SysAllocString` 对象并封装该对象，从而构造一个 `BSTR` 对象。|  
 |`_bstr_t( _variant_t&`  `var`  `)`|通过先从封装的 VARIANT 对象检查 `_bstr_t` 对象来从 `_variant_t` 对象构造一个 `BSTR` 对象。|  
-|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|从现有 `_bstr_t` 构造一个 `BSTR` 对象（与 `wchar_t*` 字符串相对）。 如果 `fCopy` 为 false，则将提供的 `BSTR` 附加到新对象，而不使用 `SysAllocString` 创建新的副本。<br /><br /> 此构造函数由类型库标头中的包装器函数用于封装接口方法所返回的 `BSTR` 并获取其所有权。|  
+|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|从现有 `_bstr_t` 构造一个 `BSTR` 对象（与 `wchar_t*` 字符串相对）。 如果*fCopy*为 false，提供`BSTR`附加到新的对象，而不创建新的副本与`SysAllocString`。<br /><br /> 此构造函数由类型库标头中的包装器函数用于封装接口方法所返回的 `BSTR` 并获取其所有权。|  
   
  **结束 Microsoft 专用**  
   

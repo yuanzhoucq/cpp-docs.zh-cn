@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942504"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403714"
 ---
 # <a name="declarations-and-definitions-c"></a>声明和定义 (C++)
 声明引入名称在程序中，例如变量、 命名空间、 函数和类的名称。 声明还指定了类型信息以及正在声明的对象的其他特征。 必须声明一个名称，然后才能进行使用；C++ 中在声明名称的位置确定其是否对编译器可见。 您不能引用函数或在编译单元中; 在以后某个时刻声明的类可以使用*的前向声明*避开此限制。  
@@ -61,7 +61,6 @@ public:
  不是定义的某些声明为：  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  

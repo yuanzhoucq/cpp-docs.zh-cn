@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942396"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402491"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 专用**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  编译器无法生成使用 naked 特性标记的函数的内联函数，即使该函数还将标有[__forceinline](inline-functions-cpp.md)关键字。  
 
-  
  如果编译器将发出错误**裸**特性应用于非成员方法的定义之外的任何内容。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Attach |Microsoft 文档
+title: _bstr_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb114a33d3ac356bff16aeab47b8d894b7513e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9f69811b7b25a793d11ef6d53aaf0638c752a11
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409102"
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
 **Microsoft 专用**  
@@ -30,8 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      void Attach(  
+void Attach(  
    BSTR s  
 );  
 ```  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  如果 `_bstr_t` 以前被附加到了另一个 `BSTR`，并且没有其他 `_bstr_t` 变量使用 `BSTR`，`_bstr_t` 将清理 `BSTR` 资源。  
   
 ## <a name="example"></a>示例  
- 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用示例**附加**。  
+ 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)示例使用**附加**。  
   
  **结束 Microsoft 专用**  
   
