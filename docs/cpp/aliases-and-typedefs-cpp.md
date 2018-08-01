@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942476"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404972"
 ---
 # <a name="aliases-and-typedefs-c"></a>别名和 typedef (C++)
 可以使用*别名声明*来声明要使用的声明类型的同义词的名称。 (此机制也称为非正式*类型别名*)。 此外可以使用此机制来创建*别名模板*，可以是对自定义分配器特别有用。  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>备注  
- `identifier`  
+ *identifier*  
  别名的名称。  
   
- `type`  
+ *type*  
  您为其创建别名的类型标识符。  
   
  别名未引入新类型，且无法更改现有类型名称的含义。  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

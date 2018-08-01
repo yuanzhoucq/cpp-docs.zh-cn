@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942487"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404104"
 ---
 # <a name="pointers-c"></a>指针 （C++）
 使用以下序列声明指针。  
@@ -32,7 +32,7 @@ ms.locfileid: "37942487"
 [ms-modifier] declarator ;  
 ```  
   
- 其中，任何有效指针声明符均可用于 `declarator`。  简单指针声明符的语法如下所示：  
+ 其中，任何有效指针声明符均可用于 `declarator`。 简单指针声明符的语法如下所示：  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

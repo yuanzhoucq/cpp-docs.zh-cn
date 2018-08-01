@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942401"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405738"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Microsoft 专用**  
@@ -33,7 +33,6 @@ ms.locfileid: "37942401"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 _bstr_t& operator+=( const _bstr_t& s1 );  
 _bstr_t operator+( const _bstr_t& s1 );  
 friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
@@ -53,9 +52,9 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 ## <a name="remarks"></a>备注  
  以下运算符将执行字符串串联：  
   
--   **operator + = (***s1***)** 中封装的字符追加`BSTR`的*s1*到此对象封装末尾`BSTR`.      
+-   **operator + = (***s1***)** 中封装的字符追加`BSTR`的*s1*到此对象封装末尾`BSTR`.  
   
--   **operator + (***s1***)** 返回新`_bstr_t`此对象的连接在一起构成`BSTR`与*s1*。      
+-   **operator + (***s1***)** 返回新`_bstr_t`此对象的连接在一起构成`BSTR`与*s1*。  
   
 -   **operator + (***s2***&#124;***s1***)** 返回一个新`_bstr_t`通过串联构成多字节字符串*s2*，已转换为 Unicode，与`BSTR`封装在*s1*。          
   

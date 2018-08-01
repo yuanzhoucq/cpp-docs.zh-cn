@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941793"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405374"
 ---
 # <a name="nonstandard-behavior"></a>非标准行为
 以下几节将列出 C++ 的 Visual C++ 实现不遵循 C++ 标准的几处地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>函数异常说明符  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  异常规范的详细信息，请参阅[异常规范](../cpp/exception-specifications-throw-cpp.md)。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C++ 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual c + + 编译器可强制此约束的类型**char**，而不是类型`wchar_t`。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。  
+ C++ 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual c + + 编译器可强制此约束的类型**char**，而不是类型**wchar_t**。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。  
   
 ```cpp  
 #include <iostream>  

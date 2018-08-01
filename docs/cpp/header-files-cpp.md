@@ -17,12 +17,12 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b0829be6f66203d22cae4072dded9f6be32d8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9f6950049d9bd9b9264383ab6e5e216023526880
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939697"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404760"
 ---
 # <a name="header-files-c"></a>标头文件 （c + +）
 
@@ -92,18 +92,24 @@ int main()
 
 ## <a name="include-guards"></a>包含保护
 
-通常情况下，标头文件具有*include 防护*或 **#pragma 一次**指令以确保，它们不会插入多个时间到单一的.cpp 文件。 
+通常情况下，标头文件具有*include 防护*或`#pragma once`指令以确保，它们不会插入多个时间到单一的.cpp 文件。 
 
-my_class.h
-#<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / / include 防护
-#<a name="define-myclassh"></a>定义 MY_CLASS_H
+```cpp
+// my_class.h
+#ifndef MY_CLASS_H // include guard
+#define MY_CLASS_H
 
-
-命名空间 N {类 my_class {public: void do_something();};
-
+namespace N
+{
+    class my_class
+    {
+    public:
+        void do_something();
+    };
 }
 
-#<a name="endif--myclassh-"></a>endif / * MY_CLASS_H * /
+#endif /* MY_CLASS_H */
+```
 
 ## <a name="what-to-put-in-a-header-file"></a>要放置在头文件中的内容
 
@@ -129,14 +135,12 @@ my_class.h
 
 namespace N  // namespace declaration
 {
-
     inline namespace P
     {
         //...
     }
 
     enum class colors : short { red, blue, purple, azure };
-
 
     const double PI = 3.14;  // const and constexpr definitions
     constexpr int MeaningOfLife{ 42 };
@@ -153,7 +157,6 @@ namespace N  // namespace declaration
 #ifdef LOG   // conditional compilation directive
     void print_to_log();
 #endif
-
 
     class my_class   // regular class definition, 
     {                // but no non-inline function definitions
@@ -190,5 +193,5 @@ namespace N  // namespace declaration
 
     template <typename T>  // template declaration
     class value_widget;
-
 }
+```

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940649"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408146"
 ---
 # <a name="override-specifier"></a>override 说明符
 可以使用**重写**关键字来指定重写基类中的虚函数的函数的成员。  
@@ -27,7 +27,6 @@ ms.locfileid: "37940649"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  当你使用**重写**，编译器将生成错误而不是以无提示方式创建新的成员函数。  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  若要指定函数不能重写和不能继承的类，请使用[最终](../cpp/final-specifier.md)关键字。  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>请参阅  
  [final 说明符](../cpp/final-specifier.md)   
  [关键字](../cpp/keywords-cpp.md)   
- 

@@ -1,5 +1,5 @@
 ---
-title: 自变量传递和命名约定 |Microsoft 文档
+title: 自变量传递和命名约定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413481"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404036"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>自变量传递和命名约定
 **Microsoft 专用**  
@@ -42,9 +42,9 @@ ms.locfileid: "32413481"
 > [!NOTE]
 >  当结构、联合或类由值从函数返回时，类型的所有定义需要相同，否则程序可能在运行时失败。  
   
- 有关如何定义你自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。  
+ 有关如何定义自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。  
   
- 默认值有关的信息在针对 x64 平台上，请参阅的代码中调用约定[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。  
+ 默认值有关的信息面向 x64 平台，请参阅代码中调用约定[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。  
   
  Visual C/C++ 编译器支持下列调用约定。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32413481"
 |[__clrcall](../cpp/clrcall.md)|n/a|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|  
 |[__stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|  
 |[__fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|  
-|[__thiscall](../cpp/thiscall.md)|被调用方|在堆栈上推送**这**指针存储在 ECX 中|  
+|[__thiscall](../cpp/thiscall.md)|被调用方|推入堆栈;**这**指针存储在 ECX 中|  
 |[__vectorcall](../cpp/vectorcall.md)|被调用方|存储在寄存器中，然后按相反顺序在堆栈上推送（从右到左）|  
   
  有关相关信息，请参阅[过时的调用约定](../cpp/obsolete-calling-conventions.md)。  

@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: db1f512b10bdedffa5b6978b735c881dc21370ce
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942475"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406697"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft 专用**  
   
- 将转换`BSTR`值设为**char \*** 。  
+ 将转换`BSTR`值设为`char *`。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
@@ -40,7 +39,7 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
  BSTR 变量。  
   
 ## <a name="remarks"></a>备注  
- `ConvertBSTRToString` 分配必须删除的字符串。  
+ **ConvertBSTRToString**分配必须删除的字符串。  
   
 ## <a name="example"></a>示例  
   

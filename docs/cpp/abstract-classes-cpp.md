@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957943"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407902"
 ---
 # <a name="abstract-classes-c"></a>抽象类 (C++)
 
@@ -97,5 +97,4 @@ int main() {
 > 在前面的示例中，纯虚函数 `base::~base` 是从 `derived::~derived` 隐式调用的。 还可使用完全限定的成员函数名称显式调用纯虚函数。
 
 ## <a name="see-also"></a>请参阅
-
-- [继承](../cpp/inheritance-cpp.md)
+[继承](../cpp/inheritance-cpp.md)  

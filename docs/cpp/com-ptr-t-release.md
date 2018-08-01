@@ -17,28 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939251"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404270"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft 专用**  
   
- 调用`Release`成员函数的`IUnknown`上封装的接口指针。  
+ 调用**发行**成员函数的`IUnknown`上封装的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 void Release( );  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- 调用`IUnknown::Release`上封装的接口指针，此接口指针为 NULL 时引发了 E_POINTER 错误。  
+ 调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针为 NULL。  
   
  **结束 Microsoft 专用**  
   

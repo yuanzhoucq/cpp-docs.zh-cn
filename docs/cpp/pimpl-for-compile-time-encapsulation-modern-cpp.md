@@ -12,17 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420150"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404650"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
 *Pimpl 惯用语法*现代的 C++ 技术，可隐藏实现，以便最大程度减少耦合，从而单独的接口。 Pimpl 是短的"指向的实现。" 你已可能熟悉的概念，但是知道它通过类似 Cheshire Cat 或编译器防火墙惯用语法其他名称。  
   
-## <a name="why-use-pimpl"></a>为何使用 pimpl？  
+## <a name="why-use-pimpl"></a>为什么要使用的 pimpl？  
  下面是 pimpl 惯用语法可以如何改进软件开发生命周期：  
   
 -   编译依赖项的最小化。  
@@ -40,10 +40,9 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- 重新生成级联和脆弱对象布局，可避免 pimpl 惯用语法。 它非常适合 （间接） 常用类型。  
+ 重新生成级联和脆弱的对象布局，可避免 pimpl 惯用语法。 它非常适合用于 （间接） 受欢迎的类型。  
   
 ## <a name="pimpl-implementation"></a>Pimpl 实现  
  定义`impl`.cpp 文件中的类。  
@@ -61,7 +60,7 @@ my_class::my_class(): pimpl( new impl )
 ```  
   
 ## <a name="best-practices"></a>最佳做法  
- 考虑是否添加对非引发交换专用化的支持。  
+ 考虑添加对非引发交换专用化的支持。  
   
 ## <a name="see-also"></a>请参阅  
  [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   

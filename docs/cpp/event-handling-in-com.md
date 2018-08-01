@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942407"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406862"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件处理
 在 COM 事件处理中，您将使用事件源和事件接收器设置[event_source](../windows/event-source.md)并[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = `com`. 这些特性为自定义接口、调度接口和双重接口注入相应的代码，从而使这些接口能够应用到的类激发事件并通过 COM 连接点处理事件。  
   
 ## <a name="declaring-events"></a>声明事件  
- 在事件源类中，使用[__event](../cpp/event.md)在接口声明以该接口将方法声明为事件的关键字。 当您将该接口的事件作为接口方法调用时，将激发这些事件。 事件接口上的方法可以有零个或多个参数 (应全是`in`参数)。 返回类型可以是 void 或任何整型。  
+ 在事件源类中，使用[__event](../cpp/event.md)在接口声明以该接口将方法声明为事件的关键字。 当您将该接口的事件作为接口方法调用时，将激发这些事件。 事件接口上的方法可以有零个或多个参数 (应全是*在*参数)。 返回类型可以是 void 或任何整型。  
   
 ## <a name="defining-event-handlers"></a>定义事件处理程序  
  在事件接收器类中，可定义事件处理程序，这些处理程序是具有与它们将处理的事件匹配的签名（返回类型、调用约定和自变量）的方法。 对于 COM 事件，调用约定不必匹配;请参阅[布局相关的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)下面有关详细信息。  

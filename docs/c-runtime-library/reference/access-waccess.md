@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d0b699c6ac9664bae8cd0e6e28438ef019e69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393738"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404637"
 ---
 # <a name="access-waccess"></a>_access、_waccess
 
@@ -67,27 +67,27 @@ int _waccess(
 
 ### <a name="parameters"></a>参数
 
-*path*<br/>
+*path*  
 文件或目录路径。
 
-*模式*<br/>
+*模式*  
 读取/写入属性。
 
 ## <a name="return-value"></a>返回值
 
-如果该文件具有给定的模式，则每个函数将返回 0。 如果已命名的文件不存在或不具有给定的模式;，函数将返回-1在这种情况下， **errno**下表中所示设置。
+如果该文件具有给定的模式，则每个函数将返回 0。 如果命名的文件不存在或没有给定的模式，则函数将返回-1在这种情况下，`errno`下表中所示设置。
 
 |||
 |-|-|
-**EACCES**|拒绝访问：文件的权限设置不允许指定的访问权限。
-**ENOENT**|未找到文件名或路径。
-**EINVAL**|参数无效。
+`EACCES`|拒绝访问：文件的权限设置不允许指定的访问权限。
+`ENOENT`|未找到文件名或路径。
+`EINVAL`|参数无效。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-对文件，使用时 **_access**函数将确定是否指定的文件或目录存在并且具有指定的值的属性*模式*。 与目录，一起使用时 **_access**只确定指定的目录是否存在; 在 Windows 2000 及更高版本操作系统中，所有目录具有读取和写入访问。
+与文件一起使用时 **_access**函数将确定是否指定的文件或目录存在并且具有指定的值的属性*模式*。 与目录一起使用时 **_access**仅确定指定的目录是否存在; 在 Windows 2000 及更高版本操作系统中，所有目录具有读取和写入访问权限。
 
 |*模式*值|文件检查内容|
 |------------------|---------------------|
@@ -98,26 +98,26 @@ int _waccess(
 
 此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
 
-**_waccess**是宽字符版本的 **_access**;*路径*参数 **_waccess**是宽字符字符串。 **_waccess**和 **_access**否则具有相同行为。
+**_waccess**是宽字符版本 **_access**;*路径*参数 **_waccess**是宽字符字符串。 **_waccess**并 **_access**行为相同。
 
-此函数验证其参数。 如果*路径*是**NULL**或*模式*未指定有效的模式，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，函数将设置**errno**到**EINVAL**并返回-1。
+此函数验证其参数。 如果*路径*为 NULL 或*模式*未指定有效的模式下，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess**|**_access**|**_access**|**_waccess**|
+|`_taccess`|**_access**|**_access**|**_waccess**|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> 或 \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 
-下面的示例使用 **_access**检查名为 crt_ACCESS 的文件。C，以查看它是否存在以及是否允许写入。
+下面的示例使用 **_access**来检查名为 crt_ACCESS 的文件。若要查看其是否存在以及是否允许写入 C。
 
 ```C
 // crt_access.c
@@ -151,8 +151,8 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>请参阅
 
-[文件处理](../../c-runtime-library/file-handling.md)<br/>
-[_chmod、_wchmod](chmod-wchmod.md)<br/>
-[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open、_wopen](open-wopen.md)<br/>
-[_stat、_wstat 函数](stat-functions.md)<br/>
+[文件处理](../../c-runtime-library/file-handling.md)  
+[_chmod、_wchmod](chmod-wchmod.md)  
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open、_wopen](open-wopen.md)  
+[_stat、_wstat 函数](stat-functions.md)  

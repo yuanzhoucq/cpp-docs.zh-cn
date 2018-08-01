@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942394"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405939"
 ---
 # <a name="ifexists-statement"></a>__if_exists 语句
 **__If_exists**语句测试是否存在指定的标识符。 如果该标识符存在，则执行指定的语句块。  
@@ -40,8 +40,8 @@ statements
   
 |参数|描述|  
 |---------------|-----------------|  
-|`identifier`|要测试其存在性的标识符。|  
-|`statements`|时要执行的一个或多个语句`identifier`存在。|  
+|*identifier*|要测试其存在性的标识符。|  
+|*语句*|一个或多个时要执行的语句*标识符*存在。|  
   
 ## <a name="remarks"></a>备注  
   

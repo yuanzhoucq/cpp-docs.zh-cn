@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414778"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407070"
 ---
 # <a name="character-sets"></a>字符集
 C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 Visual C++ 允许在源文件和已编译文件中使用额外一组特定于区域设置的字符。  
@@ -57,7 +57,6 @@ C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标�
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  Windows 剪贴板上的扩展字符的格式特定于应用程序区域设置。 从另一个应用程序剪切这些字符并将其粘贴到你的代码中可能会引入意外的字符编码。 这可能会导致在你的代码中出现原因不可见的分析错误。 我们建议你在粘贴扩展的字符之前将你的源文件编码设置为 Unicode 代码页。 我们还建议你使用 IME 或字符映射应用生成扩展的字符。  
@@ -65,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **结束 Microsoft 专用**  
   
 ### <a name="basic-execution-character-set"></a>基本执行字符集  
- *基本执行字符集* 和 *基本执行宽字符集* 的构成包括基本源字符集中的所有字符和用于表示警报、退格符、回车符和 null 字符的控制字符。   *执行字符集* 和 *执行宽字符集* 是基本集的超集。 它们包括基本原字符集之外的由实现定义的源字符。 执行字符集具有特定于区域设置的表示形式。
+ *基本执行字符集* 和 *基本执行宽字符集* 的构成包括基本源字符集中的所有字符和用于表示警报、退格符、回车符和 null 字符的控制字符。 *执行字符集* 和 *执行宽字符集* 是基本集的超集。 它们包括基本原字符集之外的由实现定义的源字符。 执行字符集具有特定于区域设置的表示形式。

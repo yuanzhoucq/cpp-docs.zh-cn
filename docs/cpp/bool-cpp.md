@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939307"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407398"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ if (condexpr1) statement1;
  **Bool**类型参与了整型提升。 类型的右值**bool**可转换为类型为右值**int**、 与 FALSE 成为零和 TRUE 变为 1。 作为截然不同的类型， **bool**参与重载决策。  
   
 ## <a name="see-also"></a>请参阅
-
-[关键字](../cpp/keywords-cpp.md)<br/>
-[基本类型](../cpp/fundamental-types-cpp.md)<br/>
+[关键字](../cpp/keywords-cpp.md)  
+[基本类型](../cpp/fundamental-types-cpp.md)  

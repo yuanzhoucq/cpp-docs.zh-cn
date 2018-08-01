@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942576"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407775"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 指向成员的指针的声明是指针声明的特例。  使用以下序列来声明它们：  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- 在前面的示例中，`pwCaption`是指向类的任何成员的指针`Window`具有类型**char\***。 类型 `pwCaption` 不是 `char * Window::* `。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。  
+ 在前面的示例中，`pwCaption`是指向类的任何成员的指针`Window`具有类型`char*`。 类型 `pwCaption` 不是 `char * Window::* `。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  之间的差异 **。\*** 并**-> \*** 运算符 （指向成员的指针运算符） 是 **。\*** 运算符选择成员给定的对象或对象引用，而**-> \*** 运算符选择通过指针的成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
- 指针到成员运算符的结果是成员的类型，在这种情况下， **char \*** 。  
+ 指针到成员运算符的结果是成员的类型，在这种情况下， `char *`。  
   
  以下代码片段使用指向成员的指针调用成员函数 `GetCaption` 和 `SetCaption`：  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>请参阅  
- 

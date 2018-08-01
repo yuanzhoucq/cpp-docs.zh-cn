@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940181"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403918"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
 
@@ -79,5 +79,6 @@ int main()
 条款*左值*并*右值*通常用于在引用对象的引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)并[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅
-
- [基本概念](../cpp/basic-concepts-cpp.md)[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md) [右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [基本概念](../cpp/basic-concepts-cpp.md)  
+ [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)  
+ [规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

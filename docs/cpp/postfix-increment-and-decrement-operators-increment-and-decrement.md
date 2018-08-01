@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942496"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404049"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>后缀增量和减量运算符：++ 和 --
 ## <a name="syntax"></a>语法  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- 应用后缀递增运算符 (`++`) 的效果是操作数的值增加一个适当类型的单位。 同样，应用后缀递减运算符的效果 (**--**) 是操作数的值减少一个适当类型的单位。  
+ 应用后缀递增运算符的效果 (**++**) 是操作数的值增加一个适当类型的单位。 同样，应用后缀递减运算符的效果 (**--**) 是操作数的值减少一个适当类型的单位。  
   
  务必要注意是，后缀递增或递减表达式的计算结果的表达式的值*早于*相应运算符的应用程序。 递增或递减运算发生*后*操作数的求值。 仅当在较大的表达式的上下文中发生后缀递增或递减运算时才会出现此问题。  
   

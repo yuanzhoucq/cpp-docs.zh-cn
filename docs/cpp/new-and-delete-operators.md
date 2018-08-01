@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940755"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406658"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 上述两种形式中的只有一个可用于给定的类。 第一种形式采用单个参数的类型**void \*** ，其中包含指向要释放的对象的指针。 第二种形式 — 大小的释放，采用两个参数，其中第一个是指向要释放的内存块的指针和第二个是要解除分配的字节数。 这两种形式的返回类型是**void** (**运算符 delete**无法返回值)。  
+ 上述两种形式中的只有一个可用于给定的类。 第一种形式采用单个参数的类型`void *`，其中包含指向要释放的对象的指针。 第二种形式 — 大小的释放，采用两个参数，其中第一个是指向要释放的内存块的指针和第二个是要解除分配的字节数。 这两种形式的返回类型是**void** (**运算符 delete**无法返回值)。  
   
  第二种形式的旨在加快搜索要删除的对象的正确大小类别的速度，这通常不是存储附近本身的分配，可能非缓存;第二个窗体时特别有用**运算符 delete**从基类函数用于删除派生类的对象。  
   
- **运算符 delete**函数是静态的; 因此，不能是虚函数。 `operator delete`函数服从访问控制，如中所述[成员访问控制](../cpp/member-access-control-cpp.md)。  
+ **运算符 delete**函数是静态的; 因此，不能是虚函数。 **运算符 delete**函数服从访问控制，如中所述[成员访问控制](../cpp/member-access-control-cpp.md)。  
   
  下面的示例演示用户定义**运算符 new**并**运算符 delete**函数设计为记录分配和释放的内存：  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

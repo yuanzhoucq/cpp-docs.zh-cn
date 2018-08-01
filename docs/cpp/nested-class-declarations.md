@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942420"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407710"
 ---
 # <a name="nested-class-declarations"></a>嵌套类声明
 可以在一个类的范围内声明另一个类。 这样的类称为“嵌套类”。 嵌套类被视为在封闭类的范围内且可在该范围内使用。 若要从嵌套类的即时封闭范围之外的某个范围引用该类，则必须使用完全限定名。  

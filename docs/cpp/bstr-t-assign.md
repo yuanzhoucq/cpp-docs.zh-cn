@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942381"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403902"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 专用**  
@@ -41,7 +41,7 @@ void Assign(
  要复制到 `BSTR` 包装的 `BSTR` 中的 `_bstr_t`。  
   
 ## <a name="remarks"></a>备注  
- `Assign` 执行二进制副本，这意味着将在不考虑内容的情况下复制 `BSTR` 的整个长度。  
+ **将分配**执行二进制副本，这意味着的整个长度`BSTR`复制，而不管内容如何。  
   
 ## <a name="example"></a>示例  
   

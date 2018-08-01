@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942498"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404618"
 ---
 # <a name="exception-handling-differences"></a>异常处理差异
 结构化的异常处理和 c + + 异常处理之间的主要区别是，c + + 异常处理模式处理的类型，而 C 结构化的异常处理模型处理的一种类型的异常，具体而言， **无符号的 int**。即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当 C 中引发了异常时，每个可能的处理程序都将执行筛选器来检查 C 异常上下文并确定是接受该异常、将其传递给其他处理程序还是忽略它。 当 C++ 中引发了异常时，该异常可以是任何类型。  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  若要使用此类，请安装每次引发 C 异常时由内部异常处理机制调用的自定义 C 异常转换函数。 在你的转换函数，你可以引发任何类型化的异常 (可能是`SE_Exception`类型或类类型派生自`SE_Exception`)，可由适当匹配 C++ 捕获**捕获**处理程序。 转换函数可能直接返回，这表示它没有处理异常。 如果转换功能本身引起了 C 异常，[终止](../c-runtime-library/reference/terminate-crt.md)调用。  

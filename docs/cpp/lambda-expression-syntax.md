@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938936"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405037"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 表达式语法
 本文演示了 lambda 表达式的语法和结构化元素。 有关 lambda 表达式的说明，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>注释  
  在示例中，第三个参数**for_each**函数是一个 lambda。 `[&evenCount]` 部分指定表达式的捕获子句，`(int n)` 指定参数列表，剩余部分指定表达式的主体。  
   
 ## <a name="example-2-using-a-function-object"></a>示例 2：使用函数对象  
- 有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。 下面的示例使用而不是 lambda、 函数对象一起使用**for_each**函数，以产生与示例 1 相同的结果。 两个示例都在 `vector` 对象中存储偶数的个数。 为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。 为执行该运算，`FunctorClass` 实现函数调用运算符 `operator()`。 Visual C++ 编译器生成的代码与示例 1 中的 lambda 代码在大小和性能上相差无几。 对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。 但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。  
+ 有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。 下面的示例使用而不是 lambda、 函数对象一起使用**for_each**函数，以产生与示例 1 相同的结果。 两个示例都在 `vector` 对象中存储偶数的个数。 为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。 若要执行此操作，`FunctorClass`实现函数调用运算符**operator （)**。 Visual C++ 编译器生成的代码与示例 1 中的 lambda 代码在大小和性能上相差无几。 对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。 但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。  
   
- 有关详细信息`operator()`，请参阅[函数调用](../cpp/function-call-cpp.md)。 有关详细信息**for_each**函数中，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。  
+ 有关详细信息**operator （)**，请参阅[函数调用](../cpp/function-call-cpp.md)。 有关详细信息**for_each**函数中，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。  
   
 ### <a name="code"></a>代码  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>输出  
@@ -166,7 +164,6 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  

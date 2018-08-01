@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942417"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406566"
 ---
 # <a name="function-overloading"></a>函数重载
 C++ 允许同一范围内具有相同名称的多个函数的规范。 这些被称为*重载*函数。 重载的函数，可提供不同的语义，对于函数，具体取决于类型和数量的参数。 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  前面的语句生成两个集：  
   
-|集 1：其第一个参数的类型为 Fraction 的候选函数|集 2：其第二个参数可转换为类型 int 的候选函数|  
+|集 1：其第一个自变量的类型为 Fraction 的候选函数|集 2： 候选函数其第二个自变量可转换为类型**int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variant 1|Variant 1 (**int**可转换为**长**使用标准转换)|  
 |Variant 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  前面的函数调用生成以下集：  
   
-|集 1：其第一个自变量的类型为 int 的候选函数|集 2：其第二个自变量的类型为 int 的候选函数|  
+|集 1： 候选函数，具有第一个自变量的类型**int**|集 2： 候选函数，具有第二个自变量的类型**int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**int**可转换为**长**使用标准转换)|Variant 1 (**int**可转换为**长**使用标准转换)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  使用标准转换的匹配。 未归类为完全匹配或仅包含标准转换和常用转换的使用提升的匹配的序列将归类为使用标准转换的匹配。 在此类别中，以下规则将适用：  
   
-    -   从指针到派生类中，为指向直接或间接基类的转换优于将转换为**void \*** 或**const void \*** 。  
+    -   从指针到派生类中，为指向直接或间接基类的转换优于将转换为`void *`或`const void *`。  
   
     -   从指向派生类的指针到指向基类的指针的转换会产生一个到直接基类的更好匹配。 假定类层次结构如下图所示。  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>重载的限制  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     前面的两个函数具有相同的自变量列表。 `PSTR` 是类型的同义词**char \*** 。 在成员范围内，此代码生成错误。  
+     前面的两个函数具有相同的自变量列表。 `PSTR` 是类型的同义词`char *`。 在成员范围内，此代码生成错误。  
   
 -   枚举类型是不同的类型，并且可用于区分重载函数。  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>请参阅  
  [函数 (C++)](../cpp/functions-cpp.md)

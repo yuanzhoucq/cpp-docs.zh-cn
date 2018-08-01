@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942507"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405514"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （C++）
 文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （C++）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （C++）](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  有时需要指示编译器如何解释某个文本或者为其赋予哪种特定类型。 你可以通过为文本追加前缀或后缀来达到此目的。 例如，前缀 0x 指示编译器将其后面的数字解释为十六进制值，例如 0x35。 ULL 后缀指示编译器将值视为**无符号长长**5894345ull 类型。 有关每个文本类型的前缀和后缀的完整列表，请参阅以下各节。  
@@ -129,7 +128,6 @@ void func( long double );
  可以通过使用 `0B` 或 `0b` 前缀，后跟一系列 1 和 0，来指定二进制文本：  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  在上一个示例中，使用能够传达明确含义的命名常量可能会更好，例如“MAXIMUM_ERROR_THRESHOLD”。 如果最终用户看到返回值“成功”，则使用可以存储在文件单一位置中的命名字符串常量可能会更好，它可以在该位置本地化为其他语言。 使用命名常量可帮助你自己和其他人了解代码的含义。  

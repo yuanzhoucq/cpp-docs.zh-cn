@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939385"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404075"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 将函数标记为对 64 位公共语言运行时很有用。 这用于 Microsoft 提供的库中的某些函数。  
@@ -35,7 +35,7 @@ __declspec(jitintrinsic)
 ```  
   
 ## <a name="remarks"></a>备注  
- `jitintrinsic` 将 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 添加到函数签名。  
+ **jitintrinsic**添加 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 到函数签名。  
   
  禁止用户使用此 **__declspec**修饰符，意外的结果作为可以发生。  
   

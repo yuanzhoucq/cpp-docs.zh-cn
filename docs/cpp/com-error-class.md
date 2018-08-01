@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026629"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407756"
 ---
 # <a name="comerror-class"></a>_com_error 类
 **Microsoft 专用**  
   
- 一个`_com_error`对象表示从类型库生成的标头文件中的错误处理包装器函数或其中一个 COM 支持类检测到的异常条件。 `_com_error`类封装了 HRESULT 错误代码和任何关联`IErrorInfo Interface`对象。  
+ 一个 **_com_error**对象表示从类型库生成的标头文件中的错误处理包装器函数或其中一个 COM 支持类检测到的异常条件。 **_Com_error**类封装了 HRESULT 错误代码和任何关联`IErrorInfo Interface`对象。  
   
 ### <a name="construction"></a>构造  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|构造 `_com_error` 对象。|  
+|[_com_error](../cpp/com-error-com-error.md)|构造 **_com_error**对象。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|将现有 `_com_error` 对象赋给另一个对象。|  
+|[operator =](../cpp/com-error-operator-equal.md)|将现有 **_com_error**到另一个对象。|  
   
 ### <a name="extractor-functions"></a>提取程序函数  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026629"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|HRESULT 存储中检索的字符串消息`_com_error`对象。|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|HRESULT 存储中检索的字符串消息 **_com_error**对象。|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode 到 HRESULT 映射器  
   

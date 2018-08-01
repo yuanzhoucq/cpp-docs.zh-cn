@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392778"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404747"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -66,21 +66,21 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x*  
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Acosh**函数返回的反双曲余弦值 （反双曲余弦值） *x*。 在域内，这些函数都是有效*x* ≥ 1。 如果*x*小于 1， **errno**设置为**EDOM**且结果是 quiet NaN。 如果*x*是 quiet NaN、 不确定数或无穷大，返回相同的值。
+**Acosh**函数返回的反双曲余弦值 （反双曲余弦值） *x*。 这些函数是有效的域上*x* ≥ 1。 如果*x*小于 1，`errno`设置为`EDOM`和结果是 quiet NaN。 如果*x*是不定的静默 NaN 或无穷大，返回相同的值。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|`_matherr` 异常|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|无|无|
 |*x* < 1|无|无|
 
 ## <a name="remarks"></a>备注
 
-当你使用 c + + 时，你可以调用的重载**acosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **acosh**始终采用并返回**double**。
+当你使用 c + + 时，可以调用的重载**acosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **acosh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
-[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)  
+[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)  
+[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)  
+[cosh、coshf、coshl](cosh-coshf-coshl.md)  
+[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)  
+[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)  

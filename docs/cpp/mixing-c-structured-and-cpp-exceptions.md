@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942037"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404858"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C（结构化）和 C++ 异常
 若要编写可移植性更高的代码，建议不要在 C++ 程序中使用结构化异常处理。 但是，有时可能需要使用 **/EHa** 进行编译并混合使用结构化异常和 C++ 源代码，同时需要一些用于处理这两种异常的设备。 由于结构化异常处理程序没有对象或类型化异常概念，因此无法处理 C++ 代码抛出的异常；但是，C++ **catch** 处理程序可以处理结构化异常。 为此类中，c + + 异常处理语法 (**尝试**，**引发**，**捕获**) 不接受的 C 编译器，但结构化的异常处理语法 (**__try**， **__except**， **__finally**) 都支持 c + + 编译器支持。  
