@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941975"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466236"
 ---
 # <a name="static-members-c"></a>静态成员 (C++)
 类可以包含静态成员数据和成员函数。 当数据成员声明为**静态**，只有一个数据副本保留的类的所有对象。

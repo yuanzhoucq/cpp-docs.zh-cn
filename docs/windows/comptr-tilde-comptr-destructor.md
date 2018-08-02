@@ -1,5 +1,5 @@
 ---
-title: 'ComPtr:: ~ ComPtr 析构函数 |Microsoft 文档'
+title: 'ComPtr:: ~ ComPtr 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f430e11c2d213273b46b6b6d2d502407ae84ab6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70fcb38ad9ec3d18220197ad0fa44c3ad128444e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883441"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463780"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr 析构函数
-取消初始化 ComPtr 的实例。  
+取消初始化的实例**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   

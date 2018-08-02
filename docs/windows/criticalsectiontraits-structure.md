@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits 结构 |Microsoft 文档
+title: CriticalSectionTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870546"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466678"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 结构
-专用化 CriticalSection 对象，以支持无效的关键部分或发布临界区的功能。  
+专用化 CriticalSection 对象，以支持无效的关键部分或函数，以释放关键节。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |名称|描述|  
 |----------|-----------------|  
-|`Type`|A`typedef`到关键部分定义指针。 `Type` 定义为`typedef CRITICAL_SECTION* Type;`。|  
+|`Type`|一个**typedef**的关键部分定义指针。 `Type` 定义为`typedef CRITICAL_SECTION* Type;`。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue 方法](../windows/criticalsectiontraits-getinvalidvalue-method.md)|专用化 CriticalSection 模板，以便始终无效的模板。|  
-|[CriticalSectionTraits::Unlock 方法](../windows/criticalsectiontraits-unlock-method.md)|专用化 CriticalSection 模板，以便它支持释放指定的关键部分对象的所有权。|  
+|[CriticalSectionTraits::GetInvalidValue 方法](../windows/criticalsectiontraits-getinvalidvalue-method.md)|专门负责`CriticalSection`模板，以便该模板始终无效。|  
+|[CriticalSectionTraits::Unlock 方法](../windows/criticalsectiontraits-unlock-method.md)|专门负责`CriticalSection`模板以便支持指定的关键节对象的释放所有权。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CriticalSectionTraits`  

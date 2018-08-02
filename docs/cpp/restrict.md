@@ -1,5 +1,5 @@
 ---
-title: 限制 |Microsoft 文档
+title: 限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422883"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463676"
 ---
 # <a name="restrict"></a>restrict
 
 **Microsoft 专用**
 
-当应用于函数声明或定义返回指针类型，`restrict`通知编译器该函数将返回一个对象，它不*别名*，即，引用的任何其他指针。 这使编译器能够执行额外的优化。
+应用于函数声明或定义返回指针类型时**限制**告知编译器该函数返回一个对象，它不*别名*，也就是说，引用的任何其他指针。 这使编译器能够执行其他优化。
 
 ## <a name="syntax"></a>语法
 
@@ -36,21 +36,21 @@ ms.locfileid: "32422883"
   
 ## <a name="remarks"></a>备注
 
-编译器将传播`__declspec(restrict)`。 例如，CRT`malloc`函数具有`__declspec(restrict)`修饰，因此，编译器假定指针初始化为内存位置由`malloc`还不是别名通过以前现有指针。
+编译器将传播 **__declspec(restrict)**。 例如，CRT`malloc`函数具有 **__declspec(restrict)** 修饰，因此，编译器假定指针初始化为内存位置的`malloc`还不是别名之前现有的指针。
 
-编译器不会检查返回的指针不是实际别名。 开发人员负责确保程序没有对使用 `restrict __declspec` 修饰符标记的指针使用别名。  
+编译器不会检查返回的指针不是实际使用别名。 开发人员负责确保程序没有别名使用标记的指针**限制 __declspec**修饰符。  
   
-在变量上相似的语义，请参阅[__restrict](../cpp/extension-restrict.md)。
+有关变量的类似语义，请参阅[__restrict](../cpp/extension-restrict.md)。
  
-有关适用于函数内的别名的另一个批注，请参阅[__declspec(noalias)](../cpp/noalias.md)。
+适用于锯齿函数内的另一个批注，请参阅[__declspec(noalias)](../cpp/noalias.md)。
   
 璝惠**限制**关键字是 C++ AMP 中，请参阅[限制 (C++ AMP)](../cpp/restrict-cpp-amp.md)。  
  
 ## <a name="example"></a>示例  
 
-下面的示例演示如何使用`__declspec(restrict)`。
+下面的示例演示如何使用 **__declspec(restrict)**。
 
-当`__declspec(restrict)`应用于函数，返回一个指针，这将告知编译器的返回值指向的内存不使用别名。 在此示例中，指针`mempool`和`memptr`是全局的因此编译器不能确保它们引用的内存不使用别名。 但是，在中使用`ma`和其调用方`init`方式返回未否则引用该程序，因此内存`__decslpec(restrict)`用于帮助优化程序。 它类似于如何 CRT 标头修饰分配函数如`malloc`使用`__declspec(restrict)`以指示它们始终返回不能有别名现有指针的内存。
+当 **__declspec(restrict)** 应用于函数，返回一个指针，这将告知编译器的返回值指向的内存不使用别名。 在此示例中，指针`mempool`和`memptr`是全局的因此编译器不能确保它们引用的内存不使用别名。 但是，在中使用`ma`和其调用方`init`内存不是否则所引用的程序，因此将返回方式 **__decslpec(restrict)** 用于帮助优化程序。 它类似于 CRT 标头如修饰的分配函数如何`malloc`通过使用 **__declspec(restrict)** 以指示它们始终返回不能有别名的现有指针的内存。
 
 ```C
 // declspec_restrict.c
@@ -122,7 +122,6 @@ int main()
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
-
-[关键字](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[__declspec(noalias)](../cpp/noalias.md)  
+ [关键字](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [__declspec(noalias)](../cpp/noalias.md)  

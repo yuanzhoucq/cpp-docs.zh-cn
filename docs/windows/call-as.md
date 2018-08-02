@@ -1,5 +1,5 @@
 ---
-title: call_as |Microsoft 文档
+title: call_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860861"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465865"
 ---
 # <a name="callas"></a>call_as
-使[本地](../windows/local-cpp.md)函数映射到远程函数，以便远程函数调用时，调用本地函数。  
+使[本地](../windows/local-cpp.md)函数以便远程函数调用时，调用本地函数要映射到远程函数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>参数  
  *函数*  
- 你想要调用远程函数时要调用的本地函数。  
+ 你想要远程函数调用时调用本地函数。  
   
 ## <a name="remarks"></a>备注  
  **Call_as** c + + 属性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用**call_as**映射不可远程控制函数 (**f1**) 为可远程处理函数 (**Remf1**):  
+ 下面的代码演示如何使用**call_as**映射不可远程处理函数 (**f1**) 到可远程处理函数 (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

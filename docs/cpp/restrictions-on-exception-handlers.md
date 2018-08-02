@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8775f752a541d2a250e9c1c5a0c325b684335988
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938778"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464595"
 ---
 # <a name="restrictions-on-exception-handlers"></a>对于异常处理程序的限制
 在代码中使用异常处理程序的主要限制是，您不能使用**goto**语句跳转到 **__try**语句块。 相反，您必须通过常规控制流进入此语句块。 您可以带跳转 **__try**语句块和嵌套异常处理程序，您选择。  

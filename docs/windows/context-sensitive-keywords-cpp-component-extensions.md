@@ -1,5 +1,5 @@
 ---
-title: 上下文相关的关键字 （c + + 组件扩展） |Microsoft 文档
+title: 上下文相关关键字 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871518"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466119"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
-*上下文相关的关键字*是只能在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
+*上下文相关的关键字*是仅在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  **备注**  
@@ -56,7 +56,7 @@ ms.locfileid: "33871518"
   
 -   `where` (属于[泛型](../windows/generics-cpp-component-extensions.md))  
   
- 出于可读性目的，你可能想要限制区分上下文关键字作为用户定义符号的使用。  
+ 出于可读性目的，你可能想要限制区分上下文关键字作为用户定义的符号的使用。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871518"
 ### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例显示，在合适的上下文中，`property` 区分上下文关键字可用来定义属性和变量。  
+ 下面的代码示例演示在适当的上下文中，**属性**上下文相关关键字可用于定义属性和变量。  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

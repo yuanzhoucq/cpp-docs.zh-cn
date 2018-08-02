@@ -1,5 +1,5 @@
 ---
-title: CreatorMap 结构 |Microsoft 文档
+title: CreatorMap 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873279"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464251"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 结构
-支持的 Windows 运行时 c + + 模板库基础结构，不宜在代码中直接使用。  
+支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>备注  
- 包含有关如何初始化、 注册和注销对象的信息。  
+ 包含有关如何初始化、 注册和注销的对象的信息。  
   
- CreatorMap 包含以下信息：  
+ **CreatorMap**包含以下信息：  
   
--   如何初始化、 注册和注销对象。  
+-   如何初始化、 注册和注销的对象。  
   
--   如何比较具体取决于经典 COM 或 Windows 运行时工厂激活数据。  
+-   如何比较激活数据，具体取决于传统 COM 或 Windows 运行时的工厂。  
   
 -   有关接口的工厂缓存和服务器名称的信息。  
   
@@ -52,9 +52,9 @@ struct CreatorMap;
 |名称|描述|  
 |----------|-----------------|  
 |[CreatorMap::activationId 数据成员](../windows/creatormap-activationid-data-member.md)|表示通过经典的 COM 类 ID 或 Windows 运行时名称标识的对象 ID。|  
-|[CreatorMap::factoryCache 数据成员](../windows/creatormap-factorycache-data-member.md)|CreatorMap，将存储指向工厂缓存的指针。|  
-|[CreatorMap::factoryCreator 数据成员](../windows/creatormap-factorycreator-data-member.md)|指定 CreatorMap 创建一个工厂。|  
-|[CreatorMap::serverName 数据成员](../windows/creatormap-servername-data-member.md)|存储 CreatorMap 的服务器名称。|  
+|[CreatorMap::factoryCache 数据成员](../windows/creatormap-factorycache-data-member.md)|存储的工厂缓存指向**CreatorMap**。|  
+|[CreatorMap::factoryCreator 数据成员](../windows/creatormap-factorycreator-data-member.md)|创建指定的工厂**CreatorMap**。|  
+|[CreatorMap::serverName 数据成员](../windows/creatormap-servername-data-member.md)|将存储的服务器名称**CreatorMap**。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CreatorMap`  

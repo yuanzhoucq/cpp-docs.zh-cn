@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Iidcount 常量 |Microsoft 文档'
+title: 'Chaininterfaces:: Iidcount 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859997"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463936"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount 常量
-模板参数 `I0` 到 `I9` 指定的接口中包含的接口 ID 总数。  
+模板参数所指定的接口中包含的接口 Id 总数*I0*通过*I9*。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  接口 ID 的总数。  
   
 ## <a name="remarks"></a>备注  
- 模板参数 `I0` 和 `I1` 为必需，参数 `I2` 到 `I9` 为可选。每个接口的 IID 计数一般为 1。  
+ 模板参数*I0*并*I1*是必需的并且参数*I2*通过*I9*都是可选的。每个接口的 IID 计数通常为 1。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

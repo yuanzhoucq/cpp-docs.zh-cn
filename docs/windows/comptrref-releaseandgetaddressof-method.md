@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Releaseandgetaddressof 方法 |Microsoft 文档'
+title: 'Comptrref:: Releaseandgetaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 631f27dc7124cfce655f6a254548335ca8f1039f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884002"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465404"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,10 +34,10 @@ InterfaceType** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指向由已删除的 ComPtrRef 对象表示的接口的指针。  
+ 指向表示的接口的已删除**ComPtrRef**对象。  
   
 ## <a name="remarks"></a>备注  
- 删除当前 ComPtrRef 对象并返回指向由 ComPtrRef 对象表示的接口的指针。  
+ 删除当前**ComPtrRef**对象并返回到由表示的接口的指针到-的指针**ComPtrRef**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

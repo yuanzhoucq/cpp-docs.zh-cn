@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942585"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463709"
 ---
 # <a name="unhook"></a>__unhook
 取消处理程序方法与事件的关联。  
@@ -31,8 +31,7 @@ ms.locfileid: "37942585"
 ## <a name="syntax"></a>语法  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  接口名称从解除挂钩*接收方*，仅适用于在其中 COM 事件接收器*layout_dependent*参数[event_receiver](../windows/event-receiver.md)特性是 **，则返回 true**。  
   
  *source*  
- 指向事件源的实例的指针。 根据代码`type`中指定**event_receiver**，*源*可以是以下之一：  
+ 指向事件源的实例的指针。 根据代码`type`中指定`event_receiver`，*源*可以是以下之一：  
   
 -   本机事件源对象指针。  
   
--   **IUnknown**-基于指针 （COM 源）。  
+-   `IUnknown`-基于指针 （COM 源）。  
   
 -   托管对象指针（针对托管事件）。  
   

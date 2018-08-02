@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942508"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463923"
 ---
 # <a name="templates-c"></a>模板 (C++)
 模板是用于在 C++ 中泛型的编程的基础。 作为强类型语言，C++ 需要具有特定类型，显式声明由程序员或由编译器推导的所有变量。 但是，许多数据结构和算法看起来相同，无论它们作用于哪种类型。 模板可使你能够定义的操作的类或函数，并允许用户指定哪些具体的类型的那些操作应处理。  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 上面的代码介绍了具有单个类型参数的泛型函数模板`T`，它的返回值和调用参数 （lhs 和 rhs） 是所有此类。 可以命名为您类似，但通过约定单一大写字母最常用于名称的类型参数。 `T` 是一个模板参数;**typename**关键字指示此参数是一种类型的占位符。 当调用该函数时，编译器将替换的每个实例`T`与具体的类型参数已由用户指定，或者由编译器推断。 进程在其中，编译器将生成一个类或函数模板中的称为*模板实例化*;  `minimum<int>`是模板的实例化`minimum<T>`。  
+ 上面的代码介绍了具有单个类型参数的泛型函数的模板*T*，它的返回值和调用参数 （lhs 和 rhs） 是所有此类。 可以命名为您类似，但通过约定单一大写字母最常用于名称的类型参数。 *T*是模板参数; **typename**关键字指示此参数是一种类型的占位符。 当调用该函数时，编译器将替换的每个实例`T`与具体的类型参数已由用户指定，或者由编译器推断。 进程在其中，编译器将生成一个类或函数模板中的称为*模板实例化*;`minimum<int>`是模板的实例化`minimum<T>`。  
   
  在其他位置，用户可以声明为 int。 专用化模板的实例假设 get_a() 和 get_b() 是返回 int 的函数：  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- 但是，由于这是函数模板和编译器可以推断出的类型`T`从参数`a`和`b`，可以就像普通函数一样调用它：  
+ 但是，由于这是函数模板和编译器可以推断出的类型`T`从参数并*b*，可以就像普通函数一样调用它：  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  当编译器遇到这最后一个语句时，它生成一个新的函数中的哪个每个匹配项*T*在模板中替换**int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  有关编译器如何在函数模板中执行类型推断规则基于普通函数的规则。 有关详细信息，请参阅[重载解析的函数模板调用](../cpp/overload-resolution-of-function-template-calls.md)。  
   
 ## <a id="type_parameters"></a> 类型参数  
- 在中`minimum`模板更高版本，请注意，类型参数`T`之前添加的常量和引用限定符用在函数调用参数中，未以任何方式进行限定。  
+ 在中`minimum`模板更高版本，请注意，类型参数*T*之前添加的常量和引用限定符用在函数调用参数中，未以任何方式进行限定。  
   
  类型参数的数目没有实际限制。 使用逗号分隔多个参数：  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  关键字**类**等效于**typename**在此上下文中。 可以表示为前面的示例：  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  将生成编译器错误，因为 MyClass 不提供的重载 < 运算符。  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  注意，模板声明中的语法。 Size_t 值以传入的模板自变量在编译时，并且必须是常量或 constexpr 表达式。 此类中使用它：  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  可以作为非类型参数中传递其他类型的值包括指针和引用。 例如，可以传递一个指针到函数或函数对象，若要自定义模板代码内的某些操作。  
   
 ## <a id="template_parameters"></a> 作为模板参数的模板  
- 模板可以是模板参数。 在此示例中，MyClass2 具有两个模板参数： typename 参数`T`和模板参数`Arr`:  
+ 模板可以是模板参数。 在此示例中，MyClass2 具有两个模板参数： typename 参数*T*和模板参数*Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- 因为`Arr`参数本身有没有正文，不需要其参数名称。 事实上，它是错误来指代`Arr`的类型名称或类参数名称与主体内的`MyClass2`。 出于此原因，`Arr`的可以省略类型参数名称，在此示例中所示：  
+ 因为*Arr*参数本身有没有正文，不需要其参数名称。 事实上，它是错误来指代*Arr*的类型名称或类参数名称与主体内的`MyClass2`。 出于此原因， *Arr*的可以省略类型参数名称，在此示例中所示：  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>模板专用化  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- 模板可以包含任意数量的专用化，只要每个专用化的类型参数是唯一的。   只有类模板可以部分专用化。 必须在原始模板相同的命名空间中声明的模板的所有完整和部分专用化。  
+ 模板可以包含任意数量的专用化，只要每个专用化的类型参数是唯一的。 只有类模板可以部分专用化。 必须在原始模板相同的命名空间中声明的模板的所有完整和部分专用化。  
   
  有关详细信息，请参阅[模板专用化](../cpp/template-specialization-cpp.md)。

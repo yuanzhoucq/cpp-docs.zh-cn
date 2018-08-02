@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Release 方法 |Microsoft 文档'
+title: 'Activationfactory:: Release 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2617df132f31d63379a3bd27a49409b1599a090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e3f05576b4122acd21f7a535172a1facd562ed4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854832"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466382"
 ---
 # <a name="activationfactoryrelease-method"></a>ActivationFactory::Release 方法
-递减引用计数的当前 ActivationFactory 对象。  
+递减引用计数的当前**ActivationFactory**对象。  
   
 ## <a name="syntax"></a>语法  
   

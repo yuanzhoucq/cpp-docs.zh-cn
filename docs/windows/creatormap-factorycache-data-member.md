@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Factorycache 数据成员 |Microsoft 文档'
+title: 'Creatormap:: Factorycache 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466772"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,7 +34,7 @@ FactoryCache* factoryCache;
 ```  
   
 ## <a name="remarks"></a>备注  
- CreatorMap，将存储指向工厂缓存的指针。  
+ 存储的工厂缓存指向**CreatorMap**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

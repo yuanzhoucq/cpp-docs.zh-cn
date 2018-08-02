@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Errorcode 方法 |Microsoft 文档'
+title: 'Asyncbase:: Errorcode 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859574"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464611"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode 方法
 检索当前的异步操作的错误代码。  
@@ -36,8 +36,8 @@ inline void ErrorCode(
 ```  
   
 #### <a name="parameters"></a>参数  
- `error`  
- 此操作存储的当前错误代码的位置。  
+ *error*  
+ 此操作存储当前的错误代码的位置。  
   
 ## <a name="remarks"></a>备注  
  此操作是线程安全的。  

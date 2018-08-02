@@ -1,5 +1,5 @@
 ---
-title: appobject |Microsoft 文档
+title: appobject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856968"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466366"
 ---
 # <a name="appobject"></a>appobject
-标识为应用程序对象，这些关联与完整.exe 应用程序，并指示是否在此全局提供的函数和属性组件类组件类[类型库](../mfc/automation-clients-using-type-libraries.md)。  
+标识作为应用程序对象，这是与完整.exe 应用程序相关联，指示在此全局可用的函数和属性的组件类组件类[类型库](../mfc/automation-clients-using-type-libraries.md)。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Appobject** c + + 属性具有相同的功能[appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示前面要加特性块，其中包含一个简单的类定义**appobject**:  
+ 下面的代码显示了简单的类定义包括特性块的前面**appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
-|**必需的特性**|**coclass**|  
+|**必需的特性**|`coclass`|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

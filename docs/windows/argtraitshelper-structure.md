@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper 结构 |Microsoft 文档
+title: ArgTraitsHelper 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857696"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466632"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>参数  
- `TDelegateInterface`  
- 一种委托接口。  
+ *TDelegateInterface*  
+ 委托的接口。  
   
 ## <a name="remarks"></a>备注  
- 可帮助定义委托自变量的共同的特征。  
+ 可帮助定义委托参数的共同的特征。  
   
 ## <a name="members"></a>成员  
   
@@ -52,9 +52,9 @@ struct ArgTraitsHelper;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args 常量](../windows/argtraitshelper-args-constant.md)|可帮助[argtraits:: Args](../windows/argtraits-args-constant.md)上调用方法的委托接口中保留的参数数目的计数。|  
+|[ArgTraitsHelper::args 常量](../windows/argtraitshelper-args-constant.md)|可帮助[argtraits:: Args](../windows/argtraits-args-constant.md)上保留的参数的数目计数`Invoke`委托接口的方法。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ArgTraitsHelper`  

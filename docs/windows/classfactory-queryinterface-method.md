@@ -1,5 +1,5 @@
 ---
-title: 'Classfactory:: Queryinterface 方法 |Microsoft 文档'
+title: 'Classfactory:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855983"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467087"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface 方法
 检索指向指定参数的接口的指针。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>参数  
- `riid`  
+ *riid*  
  接口 ID。  
   
- `ppvObject`  
- 此操作完成后，指向指定参数的接口的指针`riid`。  
+ *ppvObject*  
+ 此操作完成后，指向由参数指定的接口的指针*riid*。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为描述失败的 HRESULT。  

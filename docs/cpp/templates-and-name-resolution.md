@@ -1,5 +1,5 @@
 ---
-title: 模板和名称解析 |Microsoft 文档
+title: 模板和名称解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464215"
 ---
 # <a name="templates-and-name-resolution"></a>模板和名称解析
 
@@ -84,5 +84,4 @@ ms.locfileid: "32422808"
  类型依赖和值依赖表达式是涉及类型依赖或值依赖的变量的表达式。 这些表达式可能有不同的语义，具体取决于用于模板的参数。  
   
 ## <a name="see-also"></a>请参阅
-
  [模板](../cpp/templates-cpp.md)

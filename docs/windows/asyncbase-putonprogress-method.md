@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Putonprogress 方法 |Microsoft 文档'
+title: 'Asyncbase:: Putonprogress 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859782"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467412"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 方法
-进度事件处理程序的地址设置为指定的值。  
+为指定的值设置的进度事件处理程序的地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>参数  
- `progressHandler`  
+ *progressHandler*  
  进度事件处理程序设置为地址。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
+ 如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

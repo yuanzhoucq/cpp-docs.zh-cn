@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Factorycreator 数据成员 |Microsoft 文档'
+title: 'Creatormap:: Factorycreator 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882324"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465378"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,23 +38,23 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>参数  
- `currentflags`  
+ *currentflags*  
  之一[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
   
- `entry`  
+ *entry*  
  CreatorMap。  
   
- `iidClassFactory`  
- 类工厂接口 ID。  
+ *iidClassFactory*  
+ 类工厂的接口 ID。  
   
- `factory`  
+ *工厂*  
  操作完成后，类工厂的地址。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- 指定 CreatorMap 创建一个工厂。  
+ 为指定 CreatorMap 创建的工厂。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

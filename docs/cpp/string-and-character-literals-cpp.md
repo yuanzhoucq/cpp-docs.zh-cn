@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208544"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466938"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -146,7 +146,7 @@ int main() {
   
  **Microsoft 专用**  
   
- 若要创建普通字符文本 （不带前缀） 的值，编译器将转换为 32 位整数内的 8 位值的单引号之间的字符序列的字符。 文本中的多个字符根据需要从高序位到低序位填充相应字节。 若要创建**char**值，编译器采用低序位字节。 为了创建 `wchar_t` 或 `char16_t` 值，编译器采用低序位字。 如果在分配的字节或字上设置了任何位，则编译器会警告结果被截断。  
+ 若要创建普通字符文本 （不带前缀） 的值，编译器将转换为 32 位整数内的 8 位值的单引号之间的字符序列的字符。 文本中的多个字符根据需要从高序位到低序位填充相应字节。 若要创建**char**值，编译器采用低序位字节。 若要创建**wchar_t**或`char16_t`值，编译器采用低序位字。 如果在分配的字节或字上设置了任何位，则编译器会警告结果被截断。  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>宽字符串文本  
- 宽字符串文本是常量的以 null 终止的数组`wchar_t`且具有前缀`L`和包含除双引号 （"）、 反斜杠的任何图形字符 (\\)，或换行字符。 宽字符串文本可包含上面列出的转义序列和任何通用字符名称。  
+ 宽字符串文本是常量的以 null 终止的数组**wchar_t**且具有前缀`L`和包含除双引号 （"）、 反斜杠的任何图形字符 (\\)，或换行字符。 宽字符串文本可包含上面列出的转义序列和任何通用字符名称。  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft 专用**  
   
- 在 Visual c + + 可以使用字符串文字，若要将指针初始化为非常量**char**或`wchar_t`。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：  
+ 在 Visual c + + 可以使用字符串文字，若要将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：  
   
 ```cpp  
 wchar_t* str = L"hello";  

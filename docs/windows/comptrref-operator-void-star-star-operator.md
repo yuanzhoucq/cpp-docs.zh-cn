@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207847"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463848"
 ---
 # <a name="comptrrefoperator-void-operator"></a>Comptrref:: Operator void\* \*运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>备注  
- 删除当前 ComPtrRef 对象，将强制转换为指针-到-指针-若要由 ComPtrRef 对象表示的接口的指针`void`，然后返回强制转换指针。  
+ 删除当前**ComPtrRef**对象，将强制转换到由表示的接口指针**ComPtrRef**对象作为指针-到-指针-若要**void**，，然后返回转换的指针。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: CriticalSection 类 |Microsoft 文档
+title: CriticalSection 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871505"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466132"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 类
 表示关键部分对象。  
@@ -37,22 +37,22 @@ class CriticalSection;
   
 ### <a name="constructor"></a>构造函数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CriticalSection::CriticalSection 构造函数](../windows/criticalsection-criticalsection-constructor.md)|初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。|  
-|[CriticalSection::~CriticalSection 析构函数](../windows/criticalsection-tilde-criticalsection-destructor.md)|取消初始化和销毁当前 CriticalSection 对象。|  
+|[CriticalSection::~CriticalSection 析构函数](../windows/criticalsection-tilde-criticalsection-destructor.md)|取消初始化和销毁当前**CriticalSection**对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CriticalSection::TryLock 方法](../windows/criticalsection-trylock-method.md)|尝试进入临界区而不阻止。 如果调用成功，则调用线程将获得的关键部分所有权。|  
+|[CriticalSection::TryLock 方法](../windows/criticalsection-trylock-method.md)|尝试进入关键节而不会阻塞。 如果调用成功，调用线程将取得所有权的关键部分。|  
 |[CriticalSection::Lock 方法](../windows/criticalsection-lock-method.md)|等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。|  
 |[CriticalSection::IsValid 方法](../windows/criticalsection-isvalid-method.md)|指示当前的临界部分是否有效。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CriticalSection::cs_ 数据成员](../windows/criticalsection-cs-data-member.md)|声明关键部分数据成员。|  
   

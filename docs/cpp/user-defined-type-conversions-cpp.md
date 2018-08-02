@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943034"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465927"
 ---
 # <a name="user-defined-type-conversions-c"></a>用户定义的类型转换 (C++)
 一个*转换*产生一个值，从某种类型的不同类型的新值。 *标准转换*内置于其内置类型，你可以创建的 C++ 语言和支持*用户定义的转换*来执行到、 从，或用户定义类型之间的转换。  
@@ -79,7 +79,7 @@ ms.locfileid: "37943034"
   
  **显式**关键字可应用于自 c++98 后，转换构造函数和自 c++11 后的转换函数。 以下各节包含有关如何使用的详细信息**显式**关键字。  
   
-##  <a name="ConvCTOR"></a> 转换构造函数  
+## <a name="ConvCTOR"></a> 转换构造函数  
  转换构造函数定义了从用户定义的类型或内置类型到用户定义的类型的转换。 下面的示例演示如何将从内置类型转换的转换构造函数**双**为用户定义的类型`Money`。  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  请注意，成员变量`amount`专用和公共转换函数键入**双**引入只是为了返回的值`amount`。 在函数 `display_balance` 中，当 `balance` 的值通过使用流插入运算符 `<<` 流入标准输出时，将执行隐式转换。 因为任何流插入运算符针对用户定义类型不定义`Money`，但还有一个适用于内置类型**双**，编译器可以使用中的转换函数`Money`到**双**满足流插入运算符。  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  此处，转换函数**运算符 double**已显式，并显式强制转换为类型**double**函数中引入了`display_balance`来执行此转换。 若已省略此强制转换，则编译器将无法定位适用于类型 `<<` 的相应流插入运算符 `Money`，并且将发生错误。  
-  

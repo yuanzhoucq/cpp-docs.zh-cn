@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942418"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464157"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 专用**  
@@ -32,7 +32,6 @@ ms.locfileid: "37942418"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **无符号的 int**要复制到新值`_variant_t`对象。  
   
  *i8Src*  
- __**Int64**要复制到新值`_variant_t`对象。  
+ **__Int64**要复制到新值`_variant_t`对象。  
   
  *ui8Src*  
  **Unsigned 的 __int64**要复制到新值`_variant_t`对象。  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***var_t_Src***)** 构造`_variant_t`从另一个对象`_variant_t`对象。     变体类型将保留。  
   
--   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)** 构造`_variant_t`从现有对象`VARIANT`对象。       如果`fCopy`是**false**，则**变体**对象附加到新对象，而无需进行复制。  
+-   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)** 构造`_variant_t`从现有对象`VARIANT`对象。       如果*fCopy*是**false**，则**变体**对象附加到新对象，而无需进行复制。  
   
 -   **_variant_t (short***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)** 构造`_variant_t`从VT_I2或VT_BOOL类型的对象**短**整数值。       任何其他`VARTYPE`导致 E_INVALIDARG 错误。  
   

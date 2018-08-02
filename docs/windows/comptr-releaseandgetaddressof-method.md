@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Releaseandgetaddressof 方法 |Microsoft 文档'
+title: 'Comptr:: Releaseandgetaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d846a1fc41596812ca6e8578f25f9ae8115182
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883794"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464988"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf 方法
-释放与此 ComPtr 关联的接口，然后检索 [ptr_](../windows/comptr-ptr-data-member.md) 数据成员的地址，其中包含指向已释放接口的指针。  
+释放与此关联的接口**ComPtr** ，然后检索的地址[ptr_](../windows/comptr-ptr-data-member.md)数据成员，其中包含指向已释放接口的指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ T** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 地址[ptr_](../windows/comptr-ptr-data-member.md)此 ComPtr 的数据成员。  
+ 地址[ptr_](../windows/comptr-ptr-data-member.md)数据成员**ComPtr**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

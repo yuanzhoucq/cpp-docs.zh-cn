@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942419"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464855"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 **Microsoft 专用**  
   
- 以下语法描述 `try-finally` 语句：  
+ 下面的语法描述**的 try-finally**语句：  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *复合语句*  
   
- `try-finally` 语句是 Microsoft C 和 C++ 语言扩展，它们使目标应用程序能够确保在代码块的执行被中断时执行清理。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 `try-finally` 语句对此类例程特别有用：具有几个位置，在这些位置上执行了检查以找出可能导致例程提前返回内容的错误。  
+ **的 try-finally**语句是 C 和 c + + 语言的 Microsoft 扩展，使目标应用程序的代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。  
   
  有关相关的信息和代码示例，请参阅[试用-除非语句](../cpp/try-except-statement.md)。 一般情况下处理结构化异常的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 在托管应用程序中处理异常的详细信息，请参阅[/clr 下的异常处理](../windows/exception-handling-cpp-component-extensions.md)。  
   
@@ -83,16 +83,16 @@ __finally {
 >  的 try-finally 的行为是不同于支持使用的其他一些语言**最后**，如 C#。  将单个 **__try**可能存在，但不是能同时的 **__finally**并 **__except**。  如果同时使用二者，则外部 try-except 语句必须包含内部 try-finally 语句。  指定何时执行每个块的规则也有所不同。  
   
 ## <a name="the-leave-keyword"></a>__leave 关键字  
- **__Leave**关键字是仅在受保护节的有效`try-finally`语句和其效果是跳转到受保护部分的结尾。 执行将在终止处理程序中的第一个语句处继续。  
+ **__Leave**关键字是仅在受保护节的有效**的 try-finally**语句和其效果是跳转到受保护部分的结尾。 执行将在终止处理程序中的第一个语句处继续。  
   
  一个**goto**语句还可以跳出受保护的部分中，但它会降低性能，因为它调用了堆栈展开。 **__Leave**语句将更为有效，因为它不会导致堆栈展开。  
   
 ## <a name="abnormal-termination"></a>异常终止  
- 退出`try-finally`语句使用[longjmp](../c-runtime-library/reference/longjmp.md)运行时函数被视为异常终止。 您不能跳转到 **__try**语句，但跳出的法律。 所有 **__finally**终点之间处于活动状态的语句 (的正常终止 **__try**块) 和目标 ( **__except**块处理异常） 必须运行。 这称为本地展开。  
+ 退出**的 try-finally**语句使用[longjmp](../c-runtime-library/reference/longjmp.md)运行时函数被视为异常终止。 您不能跳转到 **__try**语句，但跳出的法律。 所有 **__finally**终点之间处于活动状态的语句 (的正常终止 **__try**块) 和目标 ( **__except**块处理异常） 必须运行。 这称为本地展开。  
   
  如果**尝试**块过早终止出于任何原因，包括跳出该块，则系统将执行关联**最后**块的堆栈展开过程的一部分。 在这种情况下， [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265)函数将返回**true**如果从内部调用**最后**阻止; 否则，它将返回**false**.  
   
- 如果在执行 `try-finally` 语句期间结束进程，则不会调用终止处理程序。  
+ 如果在执行结束进程不调用终止处理程序**的 try-finally**语句。  
   
  **结束 Microsoft 专用**  
   

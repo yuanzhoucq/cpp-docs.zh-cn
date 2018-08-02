@@ -1,5 +1,5 @@
 ---
-title: 与 clr 的 C 样式强制转换 (C + + /cli CLI) |Microsoft 文档
+title: C 样式强制转换和-clr (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860393"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464579"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C 风格的强制转换和 /clr (C++/CLI)
-以下主题仅适用于公共语言运行时。  
+下面的主题仅适用于公共语言运行时。  
   
- 当与 CLR 类型一起使用，编译器将尝试映射 C 样式强制转换为一个强制转换下列，按以下顺序：  
+ 当与 CLR 类型一起使用，编译器将尝试映射 C 样式强制转换为下面列出，按以下顺序执行的转换之一：  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast 加上 const_cast  
+3.  safe_cast plus const_cast  
   
 4.  static_cast  
   
-5.  static_cast 加上 const_cast  
+5.  static_cast plus const_cast  
   
- 如果强制转换上面列出的所有均有效，以及如果表达式的类型和目标类型是 CLR 引用类型，C 样式强制转换将映射到运行时检查 （castclass MSIL 指令）。 否则为 C 样式强制转换将被视为无效，编译器会发出错误。  
+ 如果上面列出的转换都有效，并且该表达式的类型和目标类型是 CLR 引用类型，C 样式强制转换将映射到运行时检查 （castclass MSIL 指令）。 否则为 C 样式强制转换将被视为无效，则编译器会发出错误。  
   
 ## <a name="remarks"></a>备注  
- 不建议 C 样式强制转换。 使用编译时[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
+ 不建议使用 C 样式强制转换。 使用编译时[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
   
- 下面的示例演示 C 样式强制转换映射到`const_cast`。  
+ 下面的示例演示 C 样式强制转换映射到**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- 下面的示例演示 C 样式强制转换映射到`safe_cast`。  
+ 下面的示例演示 C 样式强制转换映射到**safe_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- 下面的示例演示 C 样式强制转换映射到`safe_cast`加上`const_cast`。  
+ 下面的示例演示 C 样式强制转换映射到**safe_cast**加上**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- 下面的示例演示 C 样式强制转换映射到`static_cast`。  
+ 下面的示例演示 C 样式强制转换映射到**static_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- 下面的示例演示 C 样式强制转换映射到`static_cast`加上`const_cast`。  
+ 下面的示例演示 C 样式强制转换映射到**static_cast**加上**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -133,7 +133,7 @@ int main() {
   
  下面的示例演示 C 样式强制转换映射到运行时检查。  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- 下面的示例显示无效 C 样式强制转换，这将导致编译器发出错误。  
+ 下面的示例演示无效 C 样式强制转换，这将导致编译器发出错误。  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

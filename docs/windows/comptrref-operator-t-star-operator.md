@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator T * 运算符 |Microsoft 文档'
+title: 'Comptrref:: Operator T * 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f03dfeb75d11ffabe7ab9e29c29474b392dc8bda
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881918"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466795"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,7 +34,7 @@ operator T*();
 ```  
   
 ## <a name="remarks"></a>备注  
- 返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。  
+ 返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员的当前**ComPtrRef**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

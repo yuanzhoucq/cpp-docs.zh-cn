@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Gettrustlevel 方法 |Microsoft 文档'
+title: 'Activationfactory:: Gettrustlevel 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854384"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466717"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 方法
-获取当前 ActivationFactory 实例化的对象的信任级别。  
+获取对象的信任级别的当前**ActivationFactory**实例化。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>参数  
- `trustLvl`  
- 完成此操作后，ActivationFactory 实例化的运行时类的信任级别。  
+ *trustLvl*  
+ 在运行时的信任级别完成此操作后，类，该类**ActivationFactory**实例化。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK；否则将发出断言错误并将 `trustLvl` 设置为 FullTrust。  
+ 如果成功，则为 S_OK否则，将发出断言错误并*trustLvl*设置为 FullTrust。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

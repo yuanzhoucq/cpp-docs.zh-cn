@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Asweak 方法 |Microsoft 文档'
+title: 'Comptr:: Asweak 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870072"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465215"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
 检索对当前对象的弱引用。  
@@ -36,7 +36,7 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>参数  
- `pWeakRef`  
+ *pWeakRef*  
  此操作完成后，指向弱引用对象的指针。  
   
 ## <a name="return-value"></a>返回值  

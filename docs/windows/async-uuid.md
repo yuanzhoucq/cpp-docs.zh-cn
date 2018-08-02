@@ -1,5 +1,5 @@
 ---
-title: async_uuid |Microsoft 文档
+title: async_uuid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856900"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466743"
 ---
 # <a name="asyncuuid"></a>async_uuid
 指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。  
@@ -30,8 +30,7 @@ ms.locfileid: "33856900"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
@@ -45,7 +44,7 @@ ms.locfileid: "33856900"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
