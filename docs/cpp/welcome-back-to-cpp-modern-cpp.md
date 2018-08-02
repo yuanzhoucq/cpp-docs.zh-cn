@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939372"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462357"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用程序——从有趣而刺激的游戏，到高性能的科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，人们使用 C++ 解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃了过时的 C 样式编程，转而使用使用现代 C++。   
@@ -49,7 +49,6 @@ C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是�
  C++ 语言本身也有所发展。 比较以下代码片段。 下面显示了过去 C++ 的代码片段：  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  以下是用现代 C++ 完成同一操作的代码片段：  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  在现代 C++ 中，不必使用 new/delete 或显式异常处理程序，因为可以使用智能指针来替代 当你使用**自动**的类型推断并[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，可以编写代码更快，加强代码并更好地了解。 基于范围的并**有关**循环是更简洁、 更易于使用，和不太容易发生意外错误比 C 样式**为**循环。 可以使用样板来尽量减少编写应用所需的代码行数。 

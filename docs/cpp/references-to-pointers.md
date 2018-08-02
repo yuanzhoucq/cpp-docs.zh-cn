@@ -1,5 +1,5 @@
 ---
-title: 对指针的引用 |Microsoft 文档
+title: 对指针的引用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467825"
 ---
 # <a name="references-to-pointers"></a>对指针的引用
 声明对指针的引用的方式与声明对对象的引用差不多。 声明对指针的引用将生成一个可像常规指针一样使用的可修改值。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  函数 `Add1` 和 `Add2` 在功能上是等效的（虽然它们的调用方式不同）。 二者的差异在于，`Add1` 使用双间接寻址，而 `Add2` 利用了对指针的引用的便利性。  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

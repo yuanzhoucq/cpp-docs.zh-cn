@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940490"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461697"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 尽管 Windows 和 Visual C++ 支持结构化异常处理 (SEH)，我们还是建议你使用 ISO 标准 C++ 异常处理，因为它使代码具有更好的可移植性并更灵活。 然而，在现有代码中或者对于特定类型的程序，你仍可能必须使用 SEH。  
@@ -72,7 +72,7 @@ ms.locfileid: "37940490"
 -   [将结构化异常处理用于 C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>示例  
- 如上文所述，析构函数会调用本地对象，如果你在 C++ 程序中使用 SEH，并通过对其进行编译的 **/EH**具有某些修饰符的选项 — 例如， **/EHsc**和 **/EHa**. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
+ 正如前文所述，如果你在 C++ 程序中使用 SEH，并通过使用具有某些修饰符的 `/EH` 选项对其进行编译，则会调用本地对象的析构函数，例如 `/EHsc` 和 `/EHa`。 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  如果您使用 **/EHsc**若要编译此代码，但本地测试控件`CPPEX`是未定义，则不执行`TestClass`析构函数和输出看起来如下所示：  

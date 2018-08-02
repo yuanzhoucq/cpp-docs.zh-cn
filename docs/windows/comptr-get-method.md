@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Get 方法 |Microsoft 文档'
+title: 'Comptr:: Get 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da8c4446d10f87514ec49feef95d05df2de721f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fbf9b1e21492294f6e26fb743f611ac4f4685f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870723"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460792"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get 方法
-检索指向与此 ComPtr 相关联的接口。  
+检索指向与此相关联的接口**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ T* Get() const;
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指向与此 ComPtr 相关联的接口指针。  
+ 指向与此相关联的接口指针**ComPtr**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft 文档'
+title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863499"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463202"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError 方法
 指示指定的错误代码是否可以修改的内部错误状态。  
@@ -36,14 +36,14 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>参数  
- `error`  
- HRESULT 错误。  
+ *error*  
+ 错误的 HRESULT。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果内部错误状态发生了更改;否则为`false`。  
+ **true**内部错误状态已更改; 否则为如果**false**。  
   
 ## <a name="remarks"></a>备注  
- 此操作修改的错误状态，仅当错误状态已设置为，则为 S_OK。 如果错误状态已为错误，取消、 完成或已关闭，则此操作无效。  
+ 仅当错误状态已设置为，则为 S_OK，则此操作修改的错误状态。 如果错误状态已经是错误，已取消、 已完成，或已关闭，则此操作无效。  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

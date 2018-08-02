@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 82ea6211a51bbe45fa1613dd7bb682f363783367
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940961"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461918"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 可用于声明可在程序中由硬件修改的对象的类型限定符。  
@@ -32,7 +32,6 @@ ms.locfileid: "37940961"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 volatile declarator ;  
 ```  
   

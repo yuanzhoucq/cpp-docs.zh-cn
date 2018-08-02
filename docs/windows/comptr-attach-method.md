@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Attach 方法 |Microsoft 文档'
+title: 'Comptr:: Attach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870098"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461063"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 方法
-将此 ComPtr 与由当前模板类型参数指定的接口类型相关联。  
+将相关联这**ComPtr**与由当前模板类型参数指定的接口类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>参数  
- `other`  
+ *other*  
  接口类型。  
   
 ## <a name="requirements"></a>要求  

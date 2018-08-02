@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Internalrelease 方法 |Microsoft 文档'
+title: 'Comptr:: Internalrelease 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 375a44d3f541e5eb5e01c328093d831cfe158717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d8dfc618ba8871a06da6ddd9d1754bc1543654d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881713"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462461"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease 方法
-对与此 ComPtr 关联的接口执行 COM 释放操作。  
+执行与此相关联的接口上的 COM 释放操作**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ void InternalRelease();
 ```  
   
 ## <a name="remarks"></a>备注  
- 此方法是受保护。  
+ 此方法受到保护。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

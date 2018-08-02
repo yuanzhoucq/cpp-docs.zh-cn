@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956581"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463143"
 ---
 # <a name="references-c"></a>引用 (C++)
 与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用： 左值引用，后者是指已命名的变量和右值引用后者是指[临时对象](../cpp/temporary-objects.md)。 & 运算符表示左值引用，&& 运算符根据上下文表示右值引用或通用引用（右值引用或左值引用）。  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>注释  
- 本节中的主题：  
-  
--   [引用类型函数自变量](../cpp/reference-type-function-arguments.md)  
-  
--   [引用类型函数返回](../cpp/reference-type-function-returns.md)  
-  
--   [对指针的引用](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>请参阅
+ [引用类型函数自变量](../cpp/reference-type-function-arguments.md)  
+ [引用类型函数返回](../cpp/reference-type-function-returns.md)  
+ [对指针的引用](../cpp/references-to-pointers.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Swap 方法 |Microsoft 文档'
+title: 'Comptr:: Swap 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45bc87ec63088fe8f44411a8e86438ebab706e3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883480"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462474"
 ---
 # <a name="comptrswap-method"></a>ComPtr::Swap 方法
-交换由当前 ComPtr 托管的接口与由指定 ComPtr 托管的接口。  
+交换当前管理的接口**ComPtr**管理指定的接口与**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +40,8 @@ void Swap(
 ```  
   
 #### <a name="parameters"></a>参数  
- `r`  
- ComPtr。  
+ *r*  
+ 一个**ComPtr**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

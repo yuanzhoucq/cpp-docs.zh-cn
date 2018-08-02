@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Fillarraywithiid 方法 |Microsoft 文档'
+title: 'Chaininterfaces:: Fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855937"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461031"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid 方法
-通过定义的接口 ID 的存储`I0`指定数组中的接口 Id 的指定位置的模板参数。  
+通过定义的接口 ID 的存储*I0*到指定数组中的接口 Id 的指定位置的模板参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +37,10 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>参数  
- `index`  
- 为到索引值的指针`iids`数组。  
+ *index*  
+ 为到索引值的指针*iid*数组。  
   
- `iids`  
+ *iid*  
  接口 Id 的数组。  
   
 ## <a name="requirements"></a>要求  

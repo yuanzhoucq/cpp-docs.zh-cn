@@ -1,5 +1,5 @@
 ---
-title: ChainInterfaces 结构 |Microsoft 文档
+title: ChainInterfaces 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861131"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461528"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 结构
 指定可应用于一组接口 ID 的验证和初始化函数。  
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>参数  
- `I0`  
+ *I0*  
  （必需）接口 ID 0。  
   
- `I1`  
+ *I1*  
  （必需）接口 ID 为 1。  
   
- `I2`  
- （可选）接口 ID 2。  
+ *I2*  
+ （可选）接口 ID 为 2。  
   
- `I3`  
- （可选）接口 ID 3。  
+ *I3*  
+ （可选）ID 为 3 的接口。  
   
- `I4`  
+ *I4*  
  （可选）接口 ID 4。  
   
- `I5`  
+ *I5*  
  （可选）接口 ID 5。  
   
- `I6`  
+ *I6*  
  （可选）接口 ID 6。  
   
- `I7`  
+ *I7*  
  （可选）接口 ID 7。  
   
- `I8`  
+ *I8*  
  （可选）接口 ID 8。  
   
- `I9`  
+ *I9*  
  （可选）接口 ID 9。  
   
- `DerivedType`  
+ *DerivedType*  
  派生的类型。  
   
- `BaseType`  
+ *BaseType*  
  派生类型的基类型。  
   
- `hasImplements`  
- 一个布尔值，如果`true`，这意味着你无法使用[MixIn](../windows/mixin-structure.md)与不是派生的类结构[实现](../windows/implements-structure.md)结构。  
+ *hasImplements*  
+ 一个布尔值，如果 **，则返回 true**，意味着不能使用[MixIn](../windows/mixin-structure.md)不是派生的类结构[实现](../windows/implements-structure.md)结构。  
   
 ## <a name="members"></a>成员  
   
@@ -106,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |名称|描述|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定的接口 ID 是否可以强制转换为每个由 ChainInterface 模板参数定义专用化。|  
-|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|将 `I0` 模板参数定义的类型的接口指针转换为指向 IUnknown 的指针。|  
-|[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|通过定义的接口 ID 的存储`I0`指定数组中的接口 Id 的指定位置的模板参数。|  
-|[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|验证模板参数 `I0` 到 `I9` 定义的每个接口是否继承自 IUnknown 和/或 IInspectable，以及验证 `I0` 是否继承自 `I1` 到 `I9`。|  
+|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定的接口 ID 是否可以转换为每个由 ChainInterface 模板参数定义的专用化。|  
+|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|定义的类型的接口指针转换*I0*为指向 IUnknown 的模板参数。|  
+|[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|通过定义的接口 ID 的存储*I0*到指定数组中的接口 Id 的指定位置的模板参数。|  
+|[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|验证每个接口定义的模板参数*I0*通过*I9*继承`IUnknown`和/或`IInspectable`，以及*I0*继承*I1*通过*I9*。|  
   
 ### <a name="protected-constants"></a>受保护的常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount 常量](../windows/chaininterfaces-iidcount-constant.md)|模板参数 `I0` 到 `I9` 指定的接口中包含的接口 ID 总数。|  
+|[ChainInterfaces::IidCount 常量](../windows/chaininterfaces-iidcount-constant.md)|模板参数所指定的接口中包含的接口 Id 总数*I0*通过*I9*。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  

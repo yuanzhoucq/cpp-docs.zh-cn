@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Getaddressof 方法 |Microsoft 文档'
+title: 'Comptrref:: Getaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883302"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462932"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>返回值  
- 由当前 ComPtrRef 对象表示的接口的指针的地址。  
+ 指向当前所表示接口的指针的地址**ComPtrRef**对象。  
   
 ## <a name="remarks"></a>备注  
- 检索用当前 ComPtrRef 对象表示的接口的指针的地址。  
+ 检索指向当前所表示接口的指针的地址**ComPtrRef**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

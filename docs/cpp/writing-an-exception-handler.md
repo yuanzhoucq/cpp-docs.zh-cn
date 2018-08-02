@@ -1,5 +1,5 @@
 ---
-title: 编写异常处理程序 |Microsoft 文档
+title: 编写异常处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d16d95cc246ad7ef0fe9f03c20e2652fe81aad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb06c23e17f16bdf33fe469327351105d6a4571c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421817"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461044"
 ---
 # <a name="writing-an-exception-handler"></a>编写异常处理程序
 异常处理程序通常用于响应特定错误。 您可以使用异常处理语法筛选出您不知道如何处理的所有异常。 其他异常应该传递到为了查找特定异常而编写的其他处理程序（可能在运行库或操作系统中）。  
@@ -29,7 +29,7 @@ ms.locfileid: "32421817"
   
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [重试-除非语句](../cpp/try-except-statement.md)  
+-   [在尝试-除非语句](../cpp/try-except-statement.md)  
   
 -   [编写异常筛选器](../cpp/writing-an-exception-filter.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "32421817"
   
 -   [硬件异常](../cpp/hardware-exceptions.md)  
   
--   [对于异常处理程序的限制](../cpp/restrictions-on-exception-handlers.md)  
+-   [异常处理程序的限制](../cpp/restrictions-on-exception-handlers.md)  
   
 ## <a name="see-also"></a>请参阅  
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

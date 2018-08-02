@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Start 方法 |Microsoft 文档'
+title: 'Asyncbase:: Start 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860913"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463725"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start 方法
 启动异步操作。  
@@ -39,7 +39,7 @@ STDMETHOD(
  如果该操作启动或已，启动，则为 S_OK;否则为 E_ILLEGAL_STATE_CHANGE。  
   
 ## <a name="remarks"></a>备注  
- Start （） IAsyncInfo::Start，默认实现，并且不执行任何实际工作。 若要实际开始一个异步操作，重写 onstart （） 的纯虚方法。  
+ **Start （)** 是默认实现`IAsyncInfo::Start`，并不执行任何实际工作。 若要实际启动异步操作，重写`OnStart()`纯虚方法。  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

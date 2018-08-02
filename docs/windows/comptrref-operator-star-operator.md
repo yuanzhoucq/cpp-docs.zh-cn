@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator * 运算符 |Microsoft 文档'
+title: 'Comptrref:: Operator * 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883467"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461447"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,10 +34,10 @@ InterfaceType* operator *();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指向由当前 ComPtrRef 对象表示的接口指针。  
+ 指向由当前的接口指针**ComPtrRef**对象。  
   
 ## <a name="remarks"></a>备注  
- 检索指向由当前 ComPtrRef 对象表示的接口的指针。  
+ 检索指向当前所表示接口的指针**ComPtrRef**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

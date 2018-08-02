@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dbb46302c2ae8834ab9a2a626a3bfb77c41996a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942493"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461473"
 ---
 # <a name="void-c"></a>void (C++)
 作为函数的返回类型，使用时**void**关键字指定函数不返回值。 当用于函数的参数列表时，void 将指定函数不采用任何参数。 用于指针声明时，void 指定该指针为“通用”。  
   
- 如果指针的类型为**void \*** ，该指针可以指向任何不使用声明的变量**const**或**易失性**关键字。 void 指针不能取消引用，除非它被强制转换为另一种类型。 void 指针可以转换为任何其他类型的数据指针。  
+ 如果指针的类型为`void *`，该指针可以指向任何不使用声明的变量**const**或**易失性**关键字。 void 指针不能取消引用，除非它被强制转换为另一种类型。 void 指针可以转换为任何其他类型的数据指针。  
   
  void 指针可以指向函数，但不能指向 C++ 中的类成员。  
   

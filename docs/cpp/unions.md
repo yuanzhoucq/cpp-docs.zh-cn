@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939204"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460864"
 ---
 # <a name="unions"></a>Unions
 一个**union**是用户定义的类型中的所有成员都共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
@@ -35,7 +35,7 @@ ms.locfileid: "37939204"
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *name*  
  为联合提供的类型名称。  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  在前面的示例中，请注意 Input 结构中的联合没有名称。 这是匿名联合，可以访问其成员，如同它们是结构的直接成员一样。 有关匿名联合的详细信息，请参阅下面一节。  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  联合不能存储引用。 联合不支持继承，因此联合本身不能用作基类、继承自另一个类或具有虚函数。  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  `NumericType` 联合排列在内存中（概念性的），如下图所示。  
@@ -654,7 +651,7 @@ union  {  member-list  }
   
 -   它们还必须声明为**静态**如果在文件或命名空间范围中声明。  
   
--   它们可以只具有公共成员；匿名联合中的私有成员和受保护的成员会生成错误。  
+-   它们可以只有**公共**成员;**私有**并**保护**匿名联合中的成员会生成错误。  
   
 -   它们不能具有函数成员。  
   

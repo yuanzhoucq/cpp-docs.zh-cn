@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953741"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463484"
 ---
 # <a name="specifiers"></a>说明符
 本主题介绍*声明说明符*（声明说明符） 组件[声明](declarations-and-definitions-cpp.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "38953741"
  因为**签名**，**无符号**，**长**，以及**短**都表示**int**、 **typedef**命名为以下任一关键字的成员*声明符列表*不是*声明说明符*。  
   
 > [!NOTE]
->  由于可以重新声明名称，因此其解释受当前范围内的最新声明的约束。 重新声明可能影响编译器解释名称的方式，尤其是 `typedef` 名称。  
+>  由于可以重新声明名称，因此其解释受当前范围内的最新声明的约束。 重新声明可能会影响如何解释名称的编译器，尤其是**typedef**名称。  
   
 ## <a name="see-also"></a>请参阅  
  [声明和定义](declarations-and-definitions-cpp.md)

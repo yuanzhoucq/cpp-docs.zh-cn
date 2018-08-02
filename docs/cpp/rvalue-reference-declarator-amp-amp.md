@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942499"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462383"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 保留对右值表达式的引用。  
@@ -29,7 +29,6 @@ ms.locfileid: "37942499"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>移动语义  
  右值引用支持的实现*移动语义*，这可以显著提高应用程序的性能。 利用移动语义，你可以编写将资源（如动态分配的内存）从一个对象转移到另一个对象的代码。 移动语义很有效，因为它使资源能够从无法在程序中的其他位置引用的临时对象转移。  
   
- 若要实现移动语义，通常提供*移动构造函数，* 和 （可选） 移动赋值运算符 (`operator=`)，向您的类。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在你的应用程序中使用它的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
+ 若要实现移动语义，通常提供*移动构造函数，* ，并根据需要移动赋值运算符 (**运算符 =**)，向您的类。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在你的应用程序中使用它的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
   
  您还可以重载普通函数和运算符以利用移动语义。 Visual C++ 2010年移动语义引入到 C++ 标准库。 例如，`string` 类实现了执行移动语义的操作。 请考虑以下串联几个字符串并输出结果的示例：  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- 在 Visual C++ 2010 中之前, 每个调用到`operator+`分配并返回一个新的临时`string`对象 （右值）。 `operator+` 不能将一个字符串追加到另一个字符串，因为它不知道源字符串是左值还是右值。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用，可以将 `operator+` 修改为采用右值，而右值不能在程序中的其他位置引用。 因此，`operator+` 现在可将一个字符串追加到另一个字符串。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。  
+ 在 Visual c + + 2010 中之前, 每个调用到**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。  
   
  当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual C++ 2005年中名为返回值优化](http://go.microsoft.com/fwlink/p/?linkid=131571)。  
   

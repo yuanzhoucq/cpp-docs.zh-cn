@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942478"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462214"
 ---
 # <a name="this-pointer"></a>this 指针
 **这**指针是只能在非静态成员函数中访问指针**类**，**结构**，或者**联合**类型。 它指向为其调用成员函数的对象。 静态成员函数不具有**这**指针。  
@@ -31,7 +31,6 @@ ms.locfileid: "37942478"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
- 
