@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939840"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461460"
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 专用**  
   
- **__Stdcall**调用约定用于调用 Win32 API 函数。 被调用方清理堆栈，因此编译器进行**vararg**函数 **__cdecl**。 使用此调用约定的函数需要一个函数原型。  
+ **__Stdcall**调用约定用于调用 Win32 API 函数。 被调用方清理堆栈，因此编译器进行`vararg`函数 **__cdecl**。 使用此调用约定的函数需要一个函数原型。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>示例  
- 在以下示例中，使用 __**stdcall**会导致所有`WINAPI`函数类型作为标准调用处理：  
+ 在以下示例中，利用 **__stdcall**会导致所有`WINAPI`函数类型作为标准调用处理：  
   
 ```cpp  
 // Example of the __stdcall keyword  

@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory 函数 |Microsoft 文档
+title: CreateClassFactory 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870468"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461320"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函数
 创建为指定类生成实例的工厂。  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>参数  
- `flags`  
+ *flags*  
  一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。  
   
- `entry`  
- 指向[CreatorMap](../windows/creatormap-structure.md) ，包含有关参数的初始化和注册信息`riid`。  
+ *entry*  
+ 指向[CreatorMap](../windows/creatormap-structure.md)包含有关参数的初始化和注册信息*riid*。  
   
- `riid`  
+ *riid*  
  引用接口 id。  
   
- `ppFactory`  
- 如果此操作成功，完成到类工厂的指针。  
+ *ppFactory*  
+ 如果此操作成功完成，指向类工厂。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- 如果将发出断言错误模板参数`Factory`不派生自接口 IClassFactory。  
+ 如果发出断言错误模板参数*工厂*不会派生自接口`IClassFactory`。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

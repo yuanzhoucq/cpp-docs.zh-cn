@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942513"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462181"
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C++)
 允许根据整型表达式的值在多个代码段中进行选择。  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  一个**切换**语句可以嵌套。 在这种情况下，**用例**或**默认**标签相关联的最近**切换**封装它们的语句。  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  Microsoft C 未限制中的 case 值的数量**切换**语句。 该数量仅受可用内存的限制。 ANSI C 要求至少 257 case 标签中允许**切换**语句。  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>请参阅  
  [选择语句](../cpp/selection-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
- 

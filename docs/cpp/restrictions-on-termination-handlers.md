@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941335"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461765"
 ---
 # <a name="restrictions-on-termination-handlers"></a>对于终止处理程序的限制
 不能使用**goto**语句跳转到 **__try**语句块或 **__finally**语句块。 相反，您必须通过常规控制流进入此语句块。 (您可以但是，跳转出 **__try**语句块。)此外，不能嵌套异常处理程序或终止处理程序 **__finally**块。  

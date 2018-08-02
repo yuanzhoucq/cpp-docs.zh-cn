@@ -1,5 +1,5 @@
 ---
-title: CloakedIid 结构 |Microsoft 文档
+title: CloakedIid 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856155"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461218"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 结构
-指示无法访问 IID 列表中指定接口的 RuntimeClass、Implements 和 ChainInterfaces 模板。  
+指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 接口不可见 （掩蔽）。  
+ *T*  
+ 接口处于隐藏状态 （已掩蔽）。  
   
 ## <a name="remarks"></a>备注  
- 下面是如何使用 CloakedIid 的一个示例： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
+ 下面是如何的示例`CloakedIid`使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `T`  

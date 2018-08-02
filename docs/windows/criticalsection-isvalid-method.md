@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsection:: Isvalid 方法 |Microsoft 文档'
+title: 'Criticalsection:: Isvalid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870369"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461231"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 方法
 指示当前的临界部分是否有效。  
@@ -34,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>返回值  
- 默认情况下，始终返回 `true`。  
+ 默认情况下始终返回 **，则返回 true**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

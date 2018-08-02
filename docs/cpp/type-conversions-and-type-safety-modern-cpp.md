@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940548"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462259"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>类型转换和类型安全（现代 C++）
 本文档确定了一些常见的类型转换问题，并介绍了如何在 C++ 代码中避免它们。  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  请注意，值将在两个方向重新解释。 如果程序生成了奇怪的结果，其中的值的符号似乎与您预期的相反，请查找有符号和无符号整型之间的隐式转换。 在下面的示例中，该表达式的结果 (0-1) 从隐式转换**int**到**无符号的 int**时存储在`num`。 这将导致位模式被重新解释。  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  编译器不会发出有关有符号和无符号整型之间的隐式转换的警告。 因此，建议您完全避免有从符号到无符号的转换。 如果您无法避免它们，则向代码添加运行时检查，以检测所转换的值是大于或等于零还是小于或等于有符号类型的最大值。 此范围内的值将从有符号转换为无符号或从无符号转换为有符号而不用重新解释。  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>显式转换（强制转换）  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  C 样式强制转换运算符与调用运算符 () 相同，因此在代码中不显眼，容易被忽略。 两者都是错误的因为它们难以识别在浏览或搜索，并且它们差异要调用的任意组合**静态**， **const**，和**reinterpret_cast**. 确定旧式强制转换的实际作用可能很困难并且容易出错。 基于所有这些原因，当需要进行强制转换时，我们建议使用以下 C++ 强制转换运算符之一。在某些情况下，它们更加类型安全，并且可以更加明确地表达编程目的：  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      有关详细信息，请参阅[static_cast](../cpp/static-cast-operator.md)。  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      有关详细信息，请参阅[dynamic_cast](../cpp/dynamic-cast-operator.md)。  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      有关详细信息，请参阅[const_cast](../cpp/const-cast-operator.md)。  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      有关详细信息，请参阅[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。  

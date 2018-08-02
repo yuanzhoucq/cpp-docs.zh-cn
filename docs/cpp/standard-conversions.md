@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028354"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462305"
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  有符号整数类型的对象可以转换为对应的无符号类型。 当这些转换发生时，实际位模式不会更改；但是，数据的解释会更改。 考虑此代码：  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  在前面的示例中，**短签名**， `i`、 定义和初始化为一个负数。 表达式`(u = i)`会导致`i`可转换为**unsigned short**到赋值前`u`。  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  以下代码演示了上表中所述的转换规则：  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  指针 `pA` 的类型为 `A *`，它可解释为“指向类型 `A` 的对象的指针”。 成员`bObject``(`如`BComponent`并`BMemberFunc`) 是唯一的以键入`B`也就是无法通过`pA`。 `pA` 指针只允许访问类 `A` 中定义的对象的那些特性（成员函数和数据）。  
   
 ### <a name="pointer-to-function"></a>指向函数的指针  
- 指向一个函数的指针可以转换为类型**void \*** ，如果类型**void \*** 足够大以容纳该指针。  
+ 指向一个函数的指针可以转换为类型`void *`，如果类型`void *`足够大以容纳该指针。  
   
 ### <a name="pointer-to-void"></a>指向 void 的指针  
  指向类型**void**可以转换为指针的显式类型强制转换为任何其他类型，但仅 (不同于在 C 中)。 (请参阅[带显式类型转换的表达式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)有关类型强制转换的详细信息。)指向任何类型的指针可以隐式转换为指向类型的指针**void**。指向不完整类型的对象的指针可以转换为指向**void** （隐式） 和 back （显式）。 此类转换的结果与原始指针的值相等。 对象被视为是不完整的（如果已声明对象），但未提供足够多的可用信息，无法确定其大小或基类。  
   
- 指向不是任何对象的指针**const**或**易失性**可以隐式转换为类型的指针**void \*** 。  
+ 指向不是任何对象的指针**const**或**易失性**可以隐式转换为类型的指针`void *`。  
   
 ### <a name="const-and-volatile-pointers"></a>固定和可变指针  
  C + + 不会提供一个标准转换**const**或**易失性**类型设置为不是一种**const**或者**易失性**。 但是，任何类型的转换都可以用显式类型强制转换指定（包括不安全的转换）。  

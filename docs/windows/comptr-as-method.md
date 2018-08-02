@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: As 方法 |Microsoft 文档'
+title: 'Comptr:: As 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857267"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461005"
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
-返回表示由指定模板参数标识的接口的 ComPtr 对象。  
+返回**ComPtr**对象，表示由指定的模板参数标识的接口。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -40,15 +39,14 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>参数  
- `U`  
- 要由参数表示的接口`p`。  
+ *U*  
+ 要由参数表示的接口*p*。  
   
- `p`  
- 表示由参数指定的接口的 ComPtr 对象`U`。 参数`p`不得引用当前 ComPtr 对象。  
+ *p*  
+ 一个**ComPtr**对象，表示指定参数的接口*U*。参数*p*必须是当前指**ComPtr**对象。  
   
 ## <a name="remarks"></a>备注  
  第一个模板是应在代码中使用的表单。 第二个模板是支持 [自动](../cpp/auto-cpp.md) 类型推导关键字等 C++ 语言功能的内部专用帮助器。  

@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance 函数 |Microsoft 文档
+title: ActivateInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855570"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461966"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函数
-注册并检索在指定的类 id。 定义的指定类型的实例  
+注册并检索实例的指定类型定义中指定的类 id。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,17 +39,17 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  要激活的类型。  
   
- `activatableClassId`  
- 定义参数的类 ID 的名称`T`。  
+ *activatableClassId*  
+ 定义参数的类 ID 的名称*T*。  
   
- `instance`  
- 此操作完成后，对的实例的引用`T`。  
+ *实例*  
+ 此操作完成后，对的实例的引用*T*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为指示错误的原因的 HRESULT 错误。  
+ 如果成功，则为 S_OK否则为错误 HRESULT，指示错误的原因。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

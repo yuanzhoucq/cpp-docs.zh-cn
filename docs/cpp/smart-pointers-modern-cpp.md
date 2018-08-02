@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462246"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 C++ 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  

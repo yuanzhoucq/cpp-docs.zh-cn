@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontocompleted 方法 |Microsoft 文档'
+title: 'Asyncbase:: Trytransitiontocompleted 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861254"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460737"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted 方法
 指示当前的异步操作是否已完成。  
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果异步操作已完成;否则为`false`。  
+ **true**如果异步操作已完成; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

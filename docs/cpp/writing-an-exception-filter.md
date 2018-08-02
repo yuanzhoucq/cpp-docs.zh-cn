@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942408"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462113"
 ---
 # <a name="writing-an-exception-filter"></a>编写异常筛选器
 您可以通过跳转到异常处理程序的级别或通过继续执行来处理异常。 不使用异常处理程序代码来处理异常和故障，则可以使用*筛选器*来清理问题，然后，通过返回-1，但不清除堆栈继续正常流。  

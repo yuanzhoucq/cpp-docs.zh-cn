@@ -1,5 +1,5 @@
 ---
-title: AsWeak 函数 |Microsoft 文档
+title: AsWeak 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854819"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462620"
 ---
 # <a name="asweak-function"></a>AsWeak 函数
 检索对指定实例的弱引用。  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 指向参数的类型的指针`p`。  
+ *T*  
+ 指向参数的类型的指针*p*。  
   
- `p`  
+ *p*  
  类型的实例。  
   
- `pWeak`  
- 此操作完成后，对参数的弱引用指向的指针`p`。  
+ *pWeak*  
+ 此操作完成后，对参数的弱引用的指针*p*。  
   
 ## <a name="return-value"></a>返回值  
- 则为 S_OK，如果此操作成功，则否则为的错误 HRESULT，该值指示失败的原因。  
+ 如果成功，则此操作，则为 S_OK否则为错误 HRESULT，指示失败的原因。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

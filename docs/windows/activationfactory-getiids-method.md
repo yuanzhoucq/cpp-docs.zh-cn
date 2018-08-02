@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getiids 方法 |Microsoft 文档'
+title: 'Activationfactory:: Getiids 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855505"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463519"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 方法
 检索已实现接口 ID 的数组。  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>参数  
- `iidCount`  
- 此操作完成后，`iids` 数组中接口 ID 的数量。  
+ *iidCount*  
+ 此操作完成后中, 接口 Id 数*iid*数组。  
   
- `iids`  
+ *iid*  
  此操作完成后，已实现接口 ID 的数组。  
   
 ## <a name="return-value"></a>返回值  

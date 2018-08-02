@@ -1,5 +1,5 @@
 ---
-title: ActivationFactoryCallback 函数 |Microsoft 文档
+title: ActivationFactoryCallback 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857319"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461388"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -37,17 +37,17 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>参数  
- `activationId`  
+ *activationId*  
  一个字符串，指定运行时类名称的句柄。  
   
- `ppFactory`  
- 此操作完成后，对应于参数的激活工厂`activationId`。  
+ *ppFactory*  
+ 此操作完成后，对应于参数的激活工厂*activationId*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK；否则为描述失败的 HRESULT。 可能失败的 hresult 映射为 CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。  
+ 如果成功，则为 S_OK；否则为描述失败的 HRESULT。 可能会失败的 Hresult 是 CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。  
   
 ## <a name="remarks"></a>备注  
- 获取指定的激活 id。 激活工厂  
+ 获取激活工厂指定的激活 id。  
   
  Windows 运行时调用此回调函数来请求由其运行时类名称指定的对象。  
   

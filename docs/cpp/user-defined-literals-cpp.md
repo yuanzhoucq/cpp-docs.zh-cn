@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 38c3f60f7460a3d03f16141b5629bfc2d6183cae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942405"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462370"
 ---
 # <a name="user-defined-literals--c"></a>用户定义的文本 （C++）
 文本有五个主要类别：整数、字符、浮点、字符串、布尔和指针。  从 C++ 11 开始，可以基于这些类别定义你自己的文本，以便为常见惯用语提供快捷语法，并提高类型安全性。 例如，假设有一个距离类。 你可以将一个文本定义为表示公里，将另一个文本定义为表示英里，并且只需编写以下内容即可帮助用户明确度量单位：auto d = 42.0_km 或 auto d = 42.0_mi。 用户定义的文本没有任何性能优势或劣势；它们的主要作用在于方便或实现编译时类型推断。 标准库中的时间和持续时间操作中具有用户定义的文本 std: string、 std:: complex，以及单位\<chrono > 标头：  
@@ -31,7 +31,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ```  
   
 ## <a name="user-defined-literal-operator-signatures"></a>用户定义的文本运算符签名  
- 通过以下形式之一在命名空间范围定义 `operator""` 来实现用户定义的文本：  
+ 通过定义实现用户定义的文本**运算符""** 在命名空间范围与以下形式之一：  
   
 ```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
@@ -51,7 +51,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  上例中的运算符名是你提供的任意占位符，但需要前导下划线。 （标准库只能定义不含下划线的文本。）在返回类型中，你可以自定义文本执行的转换或其他操作。 此外，这些运算符中的任何一个都可定义为 `constexpr`。  
   
 ## <a name="cooked-literals"></a>加工的文本  
- 在源代码中，任何文字（无论是否为用户定义的）实质上都是字母数字字符序列，例如 `101`、`54.7`、`"hello"` 或 `true`。 编译器将解释为整数、 float、 const char 序列\*字符串中，依次类推。 用户定义的接受编译器分配给文本值的任何类型作为输入的文本通俗称为*加工的文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。  
+ 在源中代码任何文字不管是用户定义的或不是实质上是一系列字母数字字符，例如`101`，或`54.7`，或`"hello"`或**true**。 编译器将解释为整数、 float、 const char 序列\*字符串中，依次类推。 用户定义的接受编译器分配给文本值的任何类型作为输入的文本通俗称为*加工的文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。  
   
  下面的示例演示用户定义的文本如何帮助用户明确其输入。 若要构造 `Distance`，用户必须通过使用相应的用户定义文本显式指定公里或英里。 当然也可以通过其他方式实现相同的结果，但用户定义的文本比其他方案简便。  
   
@@ -184,5 +184,4 @@ operator "" _dump_raw(const char*)        : ===>42<===
 operator "" _dump_raw(const char*)        : ===>3.1415926<===  
 operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
-  
 ```

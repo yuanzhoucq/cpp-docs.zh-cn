@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942389"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460940"
 ---
 # <a name="using-exit-or-return"></a>使用 exit 或 return
 当您调用**退出**或执行**返回**语句从`main`，静态对象与其初始化相反顺序被销毁。 以下示例演示如何进行此类初始化和清理工作。  
