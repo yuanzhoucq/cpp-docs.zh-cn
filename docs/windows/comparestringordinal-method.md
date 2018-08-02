@@ -1,5 +1,5 @@
 ---
-title: CompareStringOrdinal 方法 |Microsoft 文档
+title: CompareStringOrdinal 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860806"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464046"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,19 +34,19 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>参数  
- `lhs`  
- 要比较的第一个 HSTRING。  
+ *lhs*  
+ 第一个要比较的 HSTRING。  
   
- `rhs`  
+ *rhs*  
  要比较的第二个 HSTRING。  
   
 ## <a name="return-value"></a>返回值  
   
-|值|条件|  
+|“值”|条件|  
 |-----------|---------------|  
-|-1|`lhs` 小于 `rhs`。|  
-|0|`lhs` 等于 `rhs`。|  
-|1|`lhs` 大于 `rhs`。|  
+|-1|*lhs*是小于*rhs*。|  
+|0|*lhs*等于*rhs*。|  
+|1|*lhs*大于*rhs*。|  
   
 ## <a name="remarks"></a>备注  
  比较两个指定的 HSTRING 对象并返回一个整数，指示二者在排序顺序中的相对位置。  

@@ -1,5 +1,5 @@
 ---
-title: 控制 |Microsoft 文档
+title: 控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870827"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466482"
 ---
 # <a name="control"></a>控件
-指定的用户定义的类型是一个控件。  
+指定用户定义类型为控件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- **控件**特性意味着[组件类](../windows/coclass.md)属性。 **控件**c + + 属性具有相同的功能[控件](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 特性。  
+ **控制**属性对应[组件类](../windows/coclass.md)属性。 **控制**c + + 属性具有相同的功能[控制](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 特性。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

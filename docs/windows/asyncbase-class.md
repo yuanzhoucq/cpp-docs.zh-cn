@@ -1,5 +1,5 @@
 ---
-title: AsyncBase 类 |Microsoft 文档
+title: AsyncBase 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9dbd5d7296edaed9e850e6453f1b1b593ddba9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863382"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466197"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 实现 Windows 运行时异步状态机。  
@@ -30,7 +30,6 @@ ms.locfileid: "33863382"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -46,14 +45,14 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 ```  
   
 #### <a name="parameters"></a>参数  
- `TComplete`  
- 在异步操作完成时调用事件处理程序。  
+ *TComplete*  
+ 异步操作完成时调用事件处理程序。  
   
- `TProgress`  
+ *TProgress*  
  当正在运行的异步操作报告当前操作的进度时调用事件处理程序。  
   
- `resultType`  
- 之一[AsyncResultType](../windows/asyncresulttype-enumeration.md)枚举值。 默认情况下，SingleResult。  
+ *resultType*  
+ 之一[AsyncResultType](../windows/asyncresulttype-enumeration.md)枚举值。 默认情况下，可取值为 SingleResult。  
   
 ## <a name="members"></a>成员  
   
@@ -61,7 +60,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
   
 |名称|描述|  
 |----------|-----------------|  
-|[AsyncBase::AsyncBase 构造函数](../windows/asyncbase-asyncbase-constructor.md)|初始化 AsyncBase 类的实例。|  
+|[AsyncBase::AsyncBase 构造函数](../windows/asyncbase-asyncbase-constructor.md)|初始化的实例**AsyncBase**类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -70,15 +69,15 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 |[AsyncBase::Cancel 方法](../windows/asyncbase-cancel-method.md)|取消异步操作。|  
 |[AsyncBase::Close 方法](../windows/asyncbase-close-method.md)|关闭的异步操作。|  
 |[AsyncBase::FireCompletion 方法](../windows/asyncbase-firecompletion-method.md)|调用完成事件处理程序，或重置内部进行委托。|  
-|[AsyncBase::FireProgress 方法](../windows/asyncbase-fireprogress-method.md)|调用当前进度事件处理程序。|  
+|[AsyncBase::FireProgress 方法](../windows/asyncbase-fireprogress-method.md)|调用当前正在进行事件处理程序。|  
 |[AsyncBase::get_ErrorCode 方法](../windows/asyncbase-get-errorcode-method.md)|检索当前的异步操作的错误代码。|  
-|[AsyncBase::get_Id 方法](../windows/asyncbase-get-id-method.md)|检索异步操作的句的柄。|  
+|[AsyncBase::get_Id 方法](../windows/asyncbase-get-id-method.md)|检索异步操作的句柄。|  
 |[AsyncBase::get_Status 方法](../windows/asyncbase-get-status-method.md)|检索一个值，该值指示异步操作的状态。|  
 |[AsyncBase::GetOnComplete 方法](../windows/asyncbase-getoncomplete-method.md)|将当前的完成事件处理程序的地址复制到指定的变量。|  
 |[AsyncBase::GetOnProgress 方法](../windows/asyncbase-getonprogress-method.md)|将当前进度事件处理程序的地址复制到指定的变量。|  
 |[AsyncBase::put_Id 方法](../windows/asyncbase-put-id-method.md)|设置异步操作的句的柄。|  
 |[AsyncBase::PutOnComplete 方法](../windows/asyncbase-putoncomplete-method.md)|为指定的值设置完成事件处理程序的地址。|  
-|[AsyncBase::PutOnProgress 方法](../windows/asyncbase-putonprogress-method.md)|进度事件处理程序的地址设置为指定的值。|  
+|[AsyncBase::PutOnProgress 方法](../windows/asyncbase-putonprogress-method.md)|为指定的值设置的进度事件处理程序的地址。|  
 |[AsyncBase::Start 方法](../windows/asyncbase-start-method.md)|启动异步操作。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
@@ -86,13 +85,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 |名称|描述|  
 |----------|-----------------|  
 |[AsyncBase::CheckValidStateForDelegateCall 方法](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|测试是否可以在当前的异步状态中修改委托属性。|  
-|[AsyncBase::CheckValidStateForResultsCall 方法](../windows/asyncbase-checkvalidstateforresultscall-method.md)|测试是否可在当前的异步状态中收集的异步操作的结果。|  
-|[AsyncBase::ContinueAsyncOperation 方法](../windows/asyncbase-continueasyncoperation-method.md)|确定是否应继续处理异步操作，或暂停。|  
+|[AsyncBase::CheckValidStateForResultsCall 方法](../windows/asyncbase-checkvalidstateforresultscall-method.md)|测试是否可以在当前的异步状态中收集的异步操作结果。|  
+|[AsyncBase::ContinueAsyncOperation 方法](../windows/asyncbase-continueasyncoperation-method.md)|确定异步操作是否会继续进行处理，或者应该中止。|  
 |[AsyncBase::CurrentStatus 方法](../windows/asyncbase-currentstatus-method.md)|检索当前的异步操作的状态。|  
 |[AsyncBase::ErrorCode 方法](../windows/asyncbase-errorcode-method.md)|检索当前的异步操作的错误代码。|  
 |[AsyncBase::OnCancel 方法](../windows/asyncbase-oncancel-method.md)|当在派生类中重写时取消异步操作。|  
-|[AsyncBase::OnClose 方法](../windows/asyncbase-onclose-method.md)|当在派生类中重写，关闭异步操作。|  
-|[AsyncBase::OnStart 方法](../windows/asyncbase-onstart-method.md)|当在派生类中重写，开始一个异步操作。|  
+|[AsyncBase::OnClose 方法](../windows/asyncbase-onclose-method.md)|当在派生类中重写，会关闭一个异步操作。|  
+|[AsyncBase::OnStart 方法](../windows/asyncbase-onstart-method.md)|当在派生类中重写时启动的异步操作。|  
 |[AsyncBase::TryTransitionToCompleted 方法](../windows/asyncbase-trytransitiontocompleted-method.md)|指示当前的异步操作是否已完成。|  
 |[AsyncBase::TryTransitionToError 方法](../windows/asyncbase-trytransitiontoerror-method.md)|指示指定的错误代码是否可以修改的内部错误状态。|  
   

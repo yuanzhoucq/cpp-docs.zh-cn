@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d490f6bfb411f5ab0147e614813f8ff2bd084ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 02d2f75a9abbba44bd1900e2410ff73cf75cbb72
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942416"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466294"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -193,7 +193,6 @@ world
 **结束 Microsoft 专用**  
 
 ## <a name="see-also"></a>请参阅
-
-[编写异常处理程序](../cpp/writing-an-exception-handler.md)   
-[结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
-[关键字](../cpp/keywords-cpp.md)
+ [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
+ [结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
+ [关键字](../cpp/keywords-cpp.md)

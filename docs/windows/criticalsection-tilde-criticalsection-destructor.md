@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: ~ CriticalSection 析构函数 |Microsoft 文档'
+title: 'CriticalSection:: ~ CriticalSection 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33f8a3feb772ffe00221aeaf80892a535c2e271
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94f3937006f1cc13d9eefd7a9a8f338df2a13aa1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881609"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465976"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection 析构函数
-取消初始化和销毁当前 CriticalSection 对象。  
+取消初始化和销毁当前**CriticalSection**对象。  
   
 ## <a name="syntax"></a>语法  
   

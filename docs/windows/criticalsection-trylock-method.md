@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsection:: Trylock 方法 |Microsoft 文档'
+title: 'Criticalsection:: Trylock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883947"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465417"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 方法
-尝试进入临界区而不阻止。 如果调用成功，则调用线程将获得的关键部分所有权。  
+尝试进入关键节而不会阻塞。 如果调用成功，调用线程将取得所有权的关键部分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,11 +38,11 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>参数  
- `cs`  
+ *cs*  
  用户指定的关键部分对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功进入临界区的非零值或当前线程已拥有的关键部分。 如果另一个线程已拥有的关键部分，则为零。  
+ 如果成功进入关键节一个非零值或当前线程已拥有关键部分。 如果另一个线程已拥有关键部分，则为零。  
   
 ## <a name="remarks"></a>备注  
  第一个**TryLock**函数影响当前关键部分对象。 第二个**TryLock**函数影响用户指定的关键部分。  

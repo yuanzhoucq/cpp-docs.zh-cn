@@ -1,5 +1,5 @@
 ---
-title: 'Argtraits:: Args 常量 |Microsoft 文档'
+title: 'Argtraits:: Args 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855768"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466551"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 常量
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>备注  
- 保留的调用方法的委托接口上的参数数目的计数。  
+ 中保留的参数的数目计数`Invoke`委托接口的方法。  
   
 ## <a name="remarks"></a>备注  
- 当`args`等于-1 指示可以 Invoke 方法签名没有匹配项。  
+ 当`args`等于-1 指示可以为没有匹配项`Invoke`方法签名。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

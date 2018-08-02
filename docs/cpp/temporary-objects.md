@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942386"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466850"
 ---
 # <a name="temporary-objects"></a>临时对象
 在某些情况下，编译器需要创建临时对象。 可能会出于下列原因创建这些临时对象：  
@@ -54,4 +54,3 @@ ms.locfileid: "37942386"
 |------------------------------|-----------------------|  
 |表达式计算的结果|表达式语句末尾销毁作为表达式计算结果创建的所有临时项 (即，分号处)，或的控制表达式的末尾**有关**，**如果**，**虽然**，**做**，并**切换**语句。|  
 |正在初始化**const**引用|如果初始值设定项不是与所初始化引用相同类型的左值，则将用初始化表达式创建和初始化基础对象类型的临时项。 此临时对象将在其绑定到的引用对象销毁后立即销毁。|  
-  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Comptrref 构造函数 |Microsoft 文档'
+title: 'Comptrref:: Comptrref 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870654"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463627"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef 构造函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>参数  
- `ptr`  
- 另一个 ComPtrRef 对象的基础值。  
+ *ptr*  
+ 基础值的另一个**ComPtrRef**对象。  
   
 ## <a name="remarks"></a>备注  
- 初始化中的指定指针到另一个 ComPtrRef 对象的 ComPtrRef 类的新实例。  
+ 初始化的新实例**ComPtrRef**到另一个类从指定的指针**ComPtrRef**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 模板友元 |Microsoft 文档
+title: 模板友元 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422119"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466951"
 ---
 # <a name="template-friends"></a>模板友元
 
-类模板可以具有[好友](friend-cpp.md)。 类或类模板、函数或函数模板可以是模板类的友元。 友元也可以是类模板或函数模板的专用化，但不是部分专用化。  
+类模板可以具有[朋友](friend-cpp.md)。 类或类模板、函数或函数模板可以是模板类的友元。 友元也可以是类模板或函数模板的专用化，但不是部分专用化。  
   
 **C++ 11**： 通过使用窗体，可以将类型参数声明为友元`friend T;`。  
   
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>请参阅  
-
-[默认自变量](../cpp/default-arguments.md)
+ [默认自变量](../cpp/default-arguments.md)

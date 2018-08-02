@@ -1,5 +1,5 @@
 ---
-title: 使用 atexit |Microsoft 文档
+title: 使用 atexit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb0c89c34b5107326a961e874289d20cbd2385c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4acd81a5420f9fe2685e7570f26fea61691b845
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420962"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467399"
 ---
 # <a name="using-atexit"></a>使用 atexit
-与[atexit](../c-runtime-library/reference/atexit.md)函数，您可以指定在程序终止之前执行的 exit-processing 函数。 在执行 exit-processing 函数之前不会销毁在调用 `atexit` 之前初始化的任何全局静态对象。  
+与[atexit](../c-runtime-library/reference/atexit.md)函数，可以指定在程序终止之前执行 exit-processing 函数。 初始化之前调用了任何全局静态对象**atexit**在执行 exit-processing 函数之前销毁。  
   
 ## <a name="see-also"></a>请参阅  
  [附加终止注意事项](../cpp/additional-termination-considerations.md)

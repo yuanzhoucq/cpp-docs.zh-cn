@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025898"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465989"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
-返回表示由指定接口 ID 标识的接口的 ComPtr 对象。  
+返回**ComPtr**对象，表示由指定的接口 ID 标识的接口  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>参数  
- `riid`  
+ *riid*  
  接口 ID。  
   
- `p`  
- 如果对象具有的接口 ID 等于`riid`，指向由指定的接口的双向间接指针`riid`参数; 否则为指向 IUnknown 的指针。  
+ *p*  
+ 如果对象具有的接口 ID 等于*riid*，指向由指定的接口的双向间接指针*riid*参数; 否则为一个指向`IUnknown`。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  

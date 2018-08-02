@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939827"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465963"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>初始化和委派构造函数
 在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  如果类具有非默认构造函数，则类成员在大括号初始值设定项中的显示顺序是对应参数在构造函数中的显示顺序，而不是成员的声明顺序（如上一示例中的 `class_a` 一样）。 否则，如果类型没有声明的构造函数，则成员在大括号初始值设定项中的显示顺序与其声明顺序一样，在这种情况下，您可初始化所需数量的公共成员，但无法跳过任何成员。 以下示例演示了在无声明的构造函数时在大括号初始化中使用的顺序：  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 构造函数  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  标准库容器类以及 `string`、`wstring` 和 `regex` 具有 `initializer_list` 构造函数。 以下示例演示如何使用这些构造函数执行大括号初始化：  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  当您单步调试上一示例时，请注意，构造函数 `class_c(int, int, int)` 首先调用构造函数 `class_c(int, int)`，该构造函数反过来调用 `class_c(int)`。 每个构造函数将仅执行其他构造函数不会执行的工作。  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  下一示例演示非静态数据成员初始值设定项的使用。 请注意，如果构造函数还将初始化给定数据成员，则将重写成员初始值设定项：  

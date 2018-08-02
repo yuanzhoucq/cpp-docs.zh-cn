@@ -1,5 +1,5 @@
 ---
-title: ClassFactory 类 |Microsoft 文档
+title: ClassFactory 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858388"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463861"
 ---
 # <a name="classfactory-class"></a>ClassFactory 类
-实现 IClassFactory 接口的基本功能。  
+实现 `IClassFactory` 接口的基本功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>参数  
- `I0`  
+ *I0*  
  第零个接口中。  
   
- `I1`  
+ *I1*  
  第一个接口。  
   
- `I2`  
+ *I2*  
  第二个接口。  
   
 ## <a name="remarks"></a>备注  
  利用`ClassFactory`能够提供的用户定义的工厂实现。  
   
- 以下编程模式演示如何使用[实现](../windows/implements-structure.md)结构，以指定多个三个接口的类工厂。  
+ 下面的编程模式演示如何使用[实现](../windows/implements-structure.md)结构，以在一个类工厂上指定三个以上的接口。  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   

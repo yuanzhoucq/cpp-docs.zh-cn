@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Get_id 方法 |Microsoft 文档'
+title: 'Asyncbase:: Get_id 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859795"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464709"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id 方法
-检索异步操作的句的柄。  
+检索异步操作的句柄。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>参数  
- `id`  
- 句柄为要存储的位置。  
+ *id*  
+ 句柄所在存储的位置。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
+ 如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="remarks"></a>备注  
- 此方法实现 IAsyncInfo::get_Id。  
+ 此方法实现 `IAsyncInfo::get_Id`。  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

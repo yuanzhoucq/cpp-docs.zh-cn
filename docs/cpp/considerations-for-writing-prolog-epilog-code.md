@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402310"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464107"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>有关编写 Prolog/Epilog 代码的注意事项
-## <a name="microsoft-specific"></a>Microsoft 专用  
+ **Microsoft 专用**  
  在编写你自己的 prolog 和 epilog 代码序列之前，请务必了解堆栈帧的布局方式。它也是有助于了解如何使用`__LOCAL_SIZE`符号。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 堆栈帧布局  

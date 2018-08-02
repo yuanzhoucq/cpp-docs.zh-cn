@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409082"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466899"
 ---
 # <a name="deprecated-c"></a>已弃用 (C++)
 本主题提供有关特定于 Microsoft 的信息已弃用 declspec 声明。 有关 C++ 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[C++ 标准特性](attributes.md)。
 
- 如下所示的异常**弃用**声明提供相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
+如下所示的异常**弃用**声明提供相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
   
 -   **弃用**声明允许您函数重载的特殊形式指定为已弃用，而杂注形式适用于所有重载形式的函数名称。  
   

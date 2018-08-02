@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940919"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466580"
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)  
   
@@ -228,7 +228,7 @@ void DoSomething()
 
 -  必须为线程本地对象的声明和定义指定 `thread_local`，无论声明和定义是在同一文件中发生还是在单独的文件中发生。
 
-在 Windows 中，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过`__declspec(thread)`可应用于类型定义和在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
+在 Windows 中，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过 **__declspec （thread)** 可应用于类型定义和在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
 
 ##  <a name="register"></a>  注册
 
@@ -322,5 +322,4 @@ Destroying: Static I3
 - 最后，静态局部变量（如 `I3`）在程序持续时间内保留其值，但在程序终止时将被销毁。
 
 ## <a name="see-also"></a>请参阅
-
  [声明和定义](../cpp/declarations-and-definitions-cpp.md)

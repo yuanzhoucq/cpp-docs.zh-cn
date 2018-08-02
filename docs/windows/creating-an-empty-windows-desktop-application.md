@@ -1,5 +1,5 @@
 ---
-title: 创建空的 Windows 桌面应用程序 |Microsoft 文档
+title: 创建空的 Windows 桌面应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883989"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464358"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>正在创建空的 Windows 桌面应用程序
 ### <a name="to-create-an-empty-windows-desktop-application"></a>创建空的 Windows 桌面应用程序  
   
-1.  从 **“文件”** 菜单中选择 **“新建项目”**。  
+1.  从“文件”菜单中选择“新建” > “项目”。  
   
 2.  在 **“新建项目”** 对话框的左窗格中，单击 **“Win32”** ，然后在中央窗格中选择 **“Win32 控制台应用程序”**。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33883989"
  接下来，可以 [将文件添加到空的 Visual C++ 项目](../windows/adding-files-to-an-empty-win32-applications.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署应用程序](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

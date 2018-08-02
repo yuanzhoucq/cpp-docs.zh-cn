@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Activationid 数据成员 |Microsoft 文档'
+title: 'Creatormap:: Activationid 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881791"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467126"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -37,11 +37,11 @@ union {
 ```  
   
 ## <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  接口 ID。  
   
- `getRuntimeName`  
- 检索对象的 Windows 运行时名称函数。  
+ *getRuntimeName*  
+ 用于检索对象的 Windows 运行时名称的函数。  
   
 ## <a name="remarks"></a>备注  
  表示通过经典的 COM 类 ID 或 Windows 运行时名称标识的对象 ID。  

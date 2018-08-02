@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939411"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465004"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
 终止处理程序执行了无论 **__try**终止语句块。 原因包括跳出 **__try**块中，`longjmp`语句将控制权传出块和异常处理而堆栈展开。  

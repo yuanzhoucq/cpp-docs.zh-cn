@@ -1,5 +1,5 @@
 ---
-title: 特性编程常见问题 |Microsoft 文档
+title: 特性编程常见问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862359"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463738"
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 本主题回答下列常见问题：  
   
 -   [HRESULT 是什么？](#vcconattributeprogrammmingfaqanchor1)  
   
--   [何时具有指定属性的参数名称](#vcconattributeprogrammmingfaqanchor2)  
+-   [何时已指定属性的参数名称](#vcconattributeprogrammmingfaqanchor2)  
   
 -   [可以在特性块中使用注释？](#vcconattributeprogrammmingfaqanchor3)  
   
--   [属性如何与继承交互？](#vcconattributeprogrammmingfaqanchor4)  
+-   [属性与继承？](#vcconattributeprogrammmingfaqanchor4)  
   
--   [如何在非特性化 ATL 项目中使用属性？](#vcconattributeprogrammmingfaqanchor5)  
+-   [如何在非属性化 ATL 项目中使用特性？](#vcconattributeprogrammmingfaqanchor5)  
   
 -   [如何使用特性化项目中的.idl 文件？](#vcconattributeprogrammmingfaqanchor6)  
   
@@ -43,27 +43,27 @@ ms.locfileid: "33862359"
   
 -   [如何向前声明特性化的接口？](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
   
--   [可以从还使用属性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
+-   [可以从还使用特性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT 是什么？  
- `HRESULT`是通常由作为返回值特性和 ATL 通常以简单数据类型。 下表介绍各种值。 标头文件 winerror.h 中包含多个值。  
+ `HRESULT`是通常用作返回值属性和 ATL 的一般情况下的简单数据类型。 下表介绍各种值。 更多的值包含在标头文件 winerror.h 中。  
   
-|名称|描述|值|  
+|name|描述|“值”|  
 |----------|-----------------|-----------|  
 |S_OK|操作成功|0x00000000|  
-|E_UNEXPECTED|意外的失败|: 0x8000FFFF|  
+|E_UNEXPECTED|意外的失败|0x8000FFFF|  
 |E_NOTIMPL|未实现|0x80004001|  
 |E_OUTOFMEMORY|无法分配必要的内存|已用完 0x8007000E|  
-|E_INVALIDARG|一个或多个参数是无效|0x80070057|  
-|E_NOINTERFACE|不支持此接口|0x80004002|  
+|E_INVALIDARG|一个或多个参数均无效|0x80070057|  
+|E_NOINTERFACE|不支持此类接口|0x80004002|  
 |E_POINTER|无效的指针|0x80004003|  
-|E_HANDLE|无效句柄|0x80070006|  
-|E_ABORT|操作中止|0x80004004|  
-|E_FAIL|未指定的失败|0x80004005|  
+|E_HANDLE|无效的句柄|0x80070006|  
+|E_ABORT|操作已中止|0x80004004|  
+|E_FAIL|未知的故障|0x80004005|  
 |E_ACCESSDENIED|常规拒绝访问错误|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 何时具有指定属性的参数名称  
- 在大多数情况下，如果属性具有单个参数，该参数的名称为。 如果在你的代码中插入该属性，则不需要此名称。 例如，下面的用法的[聚合](../windows/aggregatable.md)属性：  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 何时已指定属性的参数名称  
+ 在大多数情况下，如果属性具有一个参数，该参数是命名为。 在代码中插入属性时，不需要此名称。 例如，下面的用法[聚合](../windows/aggregatable.md)属性：  
   
 ```  
 [coclass, aggregatable(value=allowed)]  
@@ -73,7 +73,7 @@ class CMyClass
 };  
 ```  
   
- 正是相同：  
+ 正是与相同：  
   
 ```  
 [coclass, aggregatable(allowed)]  
@@ -96,13 +96,13 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[源](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 可以在特性块中使用注释？  
- 你可以使用特性块中的单行和多行注释。 但是，不能使用两种样式中的属性中保存的参数的括号内的注释。  
+ 您可以使用在属性块中的单行和多行注释。 但是，不能使用注释保存属性的参数的括号中的这两种样式。  
   
- 以下被允许:  
+ 以下被允许使用：  
   
 ```  
 [ coclass,  
@@ -112,7 +112,7 @@ class CMyClass
 ]  
 ```  
   
- 不允许以下：  
+ 以下是不允许：  
   
 ```  
 [ coclass,  
@@ -121,21 +121,21 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性如何与继承交互？  
- 你可以从其他类，该类可能本身被归因或不继承特性化和非特性化类。 从特性化的类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性不会传输到派生通过 c + + 继承的类。 属性提供程序仅转换邻近及其属性的代码。  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性与继承？  
+ 特性化和非特性化类可以继承其他类，它们可能本身由于与否。 从特性化类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性未传输到派生类通过 c + + 继承。 特性提供程序仅转换代码附近，其属性。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非特性化 ATL 项目中使用属性？  
- 你可能必须具有.idl 文件，一个非特性化的 ATL 项目，并且你可能想要开始添加特性化的对象。 在这种情况下，使用添加类向导提供的代码。  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非属性化 ATL 项目中使用特性？  
+ 您可能具有.idl 文件中，非属性化的 ATL 项目，你可能想要开始添加特性化的对象。 在这种情况下，使用添加类向导提供的代码。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用特性化项目中的.idl 文件？  
- 你可能具有你想要使用特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)特性，编译的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)项目的属性页对话框中)，然后将.h 文件包含在你的项目.  
+ 您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)项目的属性页对话框中)，并随后包括在你的项目的.h 文件.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 可以修改由属性插入的代码？  
- 某些特性将代码注入到你的项目。 你可以通过查看插入的代码[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能从插入文件复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，你可能需要修改你的代码以及其他部分。  
+ 某些属性将代码注入到你的项目。 可以使用查看插入的代码[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能要插入的文件中复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，您可能需要修改代码的其他部分。  
   
- 下面的示例是将插入的代码复制到一个源代码文件的结果：  
+ 下面的示例是将插入的代码复制到源的代码文件的结果：  
   
-```  
+```cpp  
 // attr_injected.cpp  
 // compile with: comsupp.lib  
 #define _ATL_ATTRIBUTES 1  
@@ -254,10 +254,10 @@ int main() {}
 ```  
   
 ##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 如何向前声明特性化的接口？  
- 如果想要使前向声明的属性化接口，必须将相同的属性应用到适用于实际接口声明前向声明。 你还必须应用[导出](../windows/export.md)属性设为前向声明。  
+ 如果要进行特性化接口的前向声明，则必须为前向声明适用于实际接口声明的应用相同的属性。 此外必须应用[导出](../windows/export.md)属性为前向声明。  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 可以从还使用属性的类派生的类上使用属性？  
- 否，不支持从还使用属性的类派生的类上使用属性。  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 可以从还使用特性的类派生的类上使用属性？  
+ 否，不支持从还使用特性的类派生的类上使用属性。  
   
 ## <a name="see-also"></a>请参阅  
  [概念](../windows/attributed-programming-concepts.md)

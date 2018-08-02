@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a819c435135d2ee9c310f8fd4a5628d2d9d0acb1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405053"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466808"
 ---
 # <a name="comments-c"></a>注释 （C++）
 注释是的文本，则编译器将忽略，但这是适用于程序员。 注释通常用于批注代码，以供将来参考。 编译器将它们视为空白区域。 您可以使用在测试中的注释以使某些行代码处于非活动状态;但是， `#if` / `#endif`预处理器指令的工作更好地为此因为可环绕包含注释的代码，但不能嵌套注释。  
   
- 通过以下方式之一是编写 C++ 注释：  
+通过以下方式之一是编写 C++ 注释：  
   
 -   `/*`正斜杠 (星号） 字符后, 跟的字符 （包括新行） 后, 跟任意序列`*/`字符。 此语法等同于 ANSI c。  
   

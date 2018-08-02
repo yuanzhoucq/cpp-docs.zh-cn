@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase 类 |Microsoft 文档
+title: ComPtrRefBase 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883575"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464238"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -37,8 +37,8 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是 ComPtr 所表示的接口。  
+ *T*  
+ 一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口**ComPtr**。  
   
 ## <a name="remarks"></a>备注  
  表示类的基类[ComPtrRef](../windows/comptrref-class.md)类。  
@@ -49,20 +49,20 @@ class ComPtrRefBase;
   
 |名称|描述|  
 |----------|-----------------|  
-|`InterfaceType`|模板参数的类型的同义词`T`。|  
+|`InterfaceType`|模板参数的类型的同义词*T*。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前强制转换[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针-到的数据成员 IInspectable 接口。|  
-|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前强制转换[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针-到的数据成员的 IUnknown 接口。|  
+|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到 IInspectable 接口。|  
+|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针的到数据成员的 IUnknown 接口。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|指向由当前模板参数指定的类型的指针。|  
+|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|为当前的模板参数指定的类型的指针。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ComPtrRefBase`  
