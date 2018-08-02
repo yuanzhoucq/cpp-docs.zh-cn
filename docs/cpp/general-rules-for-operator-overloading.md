@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942411"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403451"
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 以下规则约束如何实现重载运算符。 但是，它们不适用于[新](../cpp/new-operator-cpp.md)并[删除](../cpp/delete-operator-cpp.md)operators，这单独进行说明。  
@@ -59,7 +59,7 @@ ms.locfileid: "37942411"
   
 -   重载运算符不能具有默认自变量。  
   
--   除赋值 (`operator=`) 之外的所有重载运算符均由派生类继承。  
+-   所有重载除赋值运算符 (**运算符 =**) 由派生类继承。  
   
 -   成员函数重载运算符的第一个自变量始终属于针对其调用运算符的对象的类类型（从中声明运算符的类或派生自该类的类）。 没有为第一个参数提供转换。  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- 无法依靠此标识来确定重载运算符的类类型。 此外，在使用这些运算符时针对基本类型的某些隐含要求对重载运算符放宽了。 例如，相加/赋值运算符 `+=` 要求在应用于基本类型时左操作数是左值；在重载该运算符时，不存在这样的要求。  
+ 无法依靠此标识来确定重载运算符的类类型。 此外，在使用这些运算符时针对基本类型的某些隐含要求对重载运算符放宽了。 例如，加法/赋值运算符**+=**，需要左的操作数是左值应用于基本类型; 时没有任何此类要求重载运算符时。  
   
 > [!NOTE]
 > 为保持一致性，定义重载运算符时通常最好遵循内置类型的模型。 如果某个重载运算符的语义与它在其他上下文中的含义差别很大，则它造成的混淆会盖过它的用处。  
