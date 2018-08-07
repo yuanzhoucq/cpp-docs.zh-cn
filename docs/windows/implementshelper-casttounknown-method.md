@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown 方法 |Microsoft 文档'
+title: 'Implementshelper:: Casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874494"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604234"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -37,7 +37,7 @@ IUnknown* CastToUnknown();
  指向基础的 IUnknown 接口指针。  
   
 ## <a name="remarks"></a>备注  
- 获取当前的实现结构的基础的 IUnknown 接口指针。  
+ 获取一个指针指向的基础`IUnknown`当前接口`Implements`结构。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

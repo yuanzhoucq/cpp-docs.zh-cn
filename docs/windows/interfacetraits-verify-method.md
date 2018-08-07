@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Verify 方法 |Microsoft 文档'
+title: 'Interfacetraits:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875495"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603037"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,7 +34,7 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>备注  
- 验证正确派生基。  
+ 验证`Base`正确派生。  
   
  有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   

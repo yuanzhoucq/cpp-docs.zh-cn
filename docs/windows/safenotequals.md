@@ -1,5 +1,5 @@
 ---
-title: SafeNotEquals |Microsoft 文档
+title: SafeNotEquals |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37f9627e301831c98ccab7a0c79258d96c520f1a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889198"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605131"
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 确定两个数字不相等。  
@@ -37,25 +37,25 @@ inline bool SafeNotEquals (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>参数  
- [in] `t`  
- 要比较的第一个数字。 其类型必须为 T。  
+### <a name="parameters"></a>参数  
+ [in]*t*  
+ 要比较的第一个数字。 其类型必须为`T`。  
   
- [in] `u`  
- 要比较的第二个数字。 其类型必须为 U。  
+ [in]*u*  
+ 要比较的第二个数字。 其类型必须为`U`。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果`t`和`u`不相等; 否则为`false`。  
+ **true**如果*t*并*u*是否不相等; 否则为**false**。  
   
 ## <a name="remarks"></a>备注  
- 该方法增强了 `!=`，因为 `SafeNotEquals` 使您能够将两个不同类型的数字作比较。  
+ 该方法增强了`!=`因为**SafeNotEquals** ，您可以比较两个不同类型的数字。  
   
- 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单个比较运算[SafeInt 类](../windows/safeint-class.md)。  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单一比较[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
- 有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
+ 有关模板类型的详细信息`T`并`U`，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** safeint.h  

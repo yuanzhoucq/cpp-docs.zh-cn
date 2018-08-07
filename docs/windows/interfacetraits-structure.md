@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits 结构 |Microsoft 文档
+title: InterfaceTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878679"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606743"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -41,17 +41,17 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `I0`  
+### <a name="parameters"></a>参数  
+ *I0*  
  接口的名称。  
   
- `CloakedType`  
- 对于 RuntimeClass、 Implements 和 ChainInterfaces，接口不会在列表中支持接口 Id。  
+ *CloakedType*  
+ 有关`RuntimeClass`，`Implements`和`ChainInterfaces`，不会在列表中的接口支持接口 Id。  
   
 ## <a name="remarks"></a>备注  
  实现的接口的共同特征。  
   
- 第二个模板是掩蔽接口的专用化。 第三个模板是 Nil 参数的专用化。  
+ 第二个模板是掩蔽的接口的专用化。 第三个模板是为 Nil 参数专用化。  
   
 ## <a name="members"></a>成员  
   
@@ -59,23 +59,23 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |名称|描述|  
 |----------|-----------------|  
-|`Base`|模板参数 `I0` 的同义词。|  
+|`Base`|同义词*I0*模板参数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[InterfaceTraits::CanCastTo 方法](../windows/interfacetraits-cancastto-method.md)|指示是否可以强制的指定的指针转换为指向的指针`Base`。|  
-|[InterfaceTraits::CastToBase 方法](../windows/interfacetraits-casttobase-method.md)|指向指针的指定的指针转换`Base`。|  
-|[InterfaceTraits::CastToUnknown 方法](../windows/interfacetraits-casttounknown-method.md)|为指向 IUnknown 的指定的指针转换。|  
-|[InterfaceTraits::FillArrayWithIid 方法](../windows/interfacetraits-fillarraywithiid-method.md)|将分配的接口 ID`Base`通过索引参数指定的数组元素。|  
+|[InterfaceTraits::CanCastTo 方法](../windows/interfacetraits-cancastto-method.md)|指示是否指定的指针可以转换为一个指向`Base`。|  
+|[InterfaceTraits::CastToBase 方法](../windows/interfacetraits-casttobase-method.md)|将转换为指针指定的指针`Base`。|  
+|[InterfaceTraits::CastToUnknown 方法](../windows/interfacetraits-casttounknown-method.md)|将转换为指针指定的指针`IUnknown`。|  
+|[InterfaceTraits::FillArrayWithIid 方法](../windows/interfacetraits-fillarraywithiid-method.md)|为指定的接口 ID`Base`索引参数指定的数组元素。|  
 |[InterfaceTraits::Verify 方法](../windows/interfacetraits-verify-method.md)|验证正确派生基。|  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[InterfaceTraits::IidCount 常量](../windows/interfacetraits-iidcount-constant.md)|保存数量的接口 Id 与当前的 InterfaceTraits 对象相关联。|  
+|[InterfaceTraits::IidCount 常量](../windows/interfacetraits-iidcount-constant.md)|保存数量的接口 Id 与当前相关联**InterfaceTraits**对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InterfaceTraits`  

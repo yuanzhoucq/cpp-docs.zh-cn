@@ -1,5 +1,5 @@
 ---
-title: SafeCast |Microsoft 文档
+title: SafeCast |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892447"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608542"
 ---
 # <a name="safecast"></a>SafeCast
-将一种类型到另一种类型的数字的强制转换。  
+将转换为一种类型的另一种类型的数量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- [in] `From`  
- 要转换的源数。 其类型必须为 T。  
+### <a name="parameters"></a>参数  
+ [in]*从*  
+ 要转换的源数字。 其类型必须为`T`。  
   
- [out] `To`  
- 对新的数字类型的引用。 其类型必须为 U。  
+ [out]*到*  
+ 对新的数字类型的引用。 其类型必须为`U`。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果没有错误发生;`false`如果发生错误。  
+ **true**如果未发生错误;**false**如果发生错误。  
   
 ## <a name="remarks"></a>备注  
- 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个强制转换操作[SafeInt 类](../windows/safeint-class.md)。  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)专为单一的强制转换操作而无需创建的实例并[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  必须保护单个操作时，仅应使用此方法。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
+>  必须保护单个操作时，应仅使用此方法。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
  有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   

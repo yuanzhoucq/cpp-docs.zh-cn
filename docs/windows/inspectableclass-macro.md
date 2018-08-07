@@ -1,5 +1,5 @@
 ---
-title: InspectableClass 宏 |Microsoft 文档
+title: InspectableClass 宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873766"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608951"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass 宏
 设置运行时类名称和信任级别。  
@@ -33,15 +33,15 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>参数  
- `runtimeClassName`  
+### <a name="parameters"></a>参数  
+ *runtimeClassName*  
  运行时类的完整文本名称。  
   
- `trustLevel`  
+ *trustLevel*  
  之一[TrustLevel](http://msdn.microsoft.com/library/br224625.aspx)枚举值。  
   
 ## <a name="remarks"></a>备注  
- `InspectableClass`宏可以只能与 Windows 运行时类型一起使用。  
+ **InspectableClass**宏可以仅可用于 Windows 运行时类型。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

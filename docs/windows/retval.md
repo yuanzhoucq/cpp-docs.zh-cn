@@ -1,5 +1,5 @@
 ---
-title: retval |Microsoft 文档
+title: retval |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888716"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606346"
 ---
 # <a name="retval"></a>retval
-指定参数，用于接收成员的返回值。  
+指定接收该成员的返回值的参数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Retval** c + + 属性具有相同的功能[retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 特性。  
   
- **retval**必须出现在函数的声明中的最后一个参数。  
+ **retval**必须出现在函数声明中的最后一个参数。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)的示例使用**retval**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)的示例使用**retval**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -58,5 +56,5 @@ ms.locfileid: "33888716"
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [方法特性](../windows/method-attributes.md)   

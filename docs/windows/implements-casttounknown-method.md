@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: casttounknown 方法 |Microsoft 文档'
+title: 'Implements:: casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874481"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607243"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown 方法
-获取一个指向基础的 IUnknown 接口。  
+获取一个指针指向基础`IUnknown`接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 此操作始终成功并返回的 IUnknown 指针。  
+ 此操作始终成功并返回`IUnknown`指针。  
   
 ## <a name="remarks"></a>备注  
- 内部帮助程序函数。  
+ 内部帮助器函数。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

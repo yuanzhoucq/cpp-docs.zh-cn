@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper 类 |Microsoft 文档
+title: RoInitializeWrapper 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705587"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606717"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 类
 初始化 Windows 运行时。  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>备注  
- RoInitializeWrapper 是初始化 Windows 运行时并返回指示操作是否成功的 HRESULT 的便利。 由于类析构函数调用`::Windows::Foundation::Uninitialize`的实例`RoInitializeWrapper`必须在全局或顶级范围内声明。  
+ **RoInitializeWrapper**是一种便于初始化 Windows 运行时并返回一个 HRESULT，指示操作是否成功。 因为类析构函数调用`::Windows::Foundation::Uninitialize`的实例**RoInitializeWrapper**必须在全局或顶级范围内声明。  
   
 ## <a name="members"></a>成员  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |名称|描述|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper 构造函数](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化 RoInitializeWrapper 类的新实例。|  
-|[RoInitializeWrapper::~RoInitializeWrapper 析构函数](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|销毁 RoInitializeWrapper 类的当前实例。|  
+|[RoInitializeWrapper::RoInitializeWrapper 构造函数](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化的新实例**RoInitializeWrapper**类。|  
+|[RoInitializeWrapper::~RoInitializeWrapper 析构函数](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|销毁的当前实例**RoInitializeWrapper**类。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() 运算符](../windows/roinitializewrapper-hresult-parens-operator.md)|检索 RoInitializeWrapper 构造函数生成的 HRESULT。|  
+|[RoInitializeWrapper::HRESULT() 运算符](../windows/roinitializewrapper-hresult-parens-operator.md)|检索生成的 HRESULT **RoInitializeWrapper**构造函数。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `RoInitializeWrapper`  

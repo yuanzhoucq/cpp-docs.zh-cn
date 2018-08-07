@@ -1,5 +1,5 @@
 ---
-title: rdx |Microsoft 文档
+title: rdx |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878952"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603110"
 ---
 # <a name="rdx"></a>rdx
 创建注册表项或修改现有的注册表项。  
@@ -30,28 +30,27 @@ ms.locfileid: "33878952"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `key`  
- 创建或打开密钥的名称。  
+### <a name="parameters"></a>参数  
+ *key*  
+ 若要创建或打开密钥的名称。  
   
- `valuename`（可选）  
+ *valuename* （可选）  
  指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。  
   
  *regtype*  
- 正在添加的注册表项的类型。 可以是以下之一：**文本**， **dword**，**二进制**，或`CString`。  
+ 要添加的注册表项的类型。 可以是以下之一： `text`， `dword`， `binary`，或`CString`。  
   
 ## <a name="remarks"></a>备注  
- **Rdx** c + + 属性在创建或修改现有 COM 组件的注册表项。 该属性将 BEGIN_RDX_MAP 宏添加到实现的目标成员的对象。 `RegistryDataExchange`因 BEGIN_RDX_MAP 宏，而插入的函数可以用于注册表和数据成员之间传输数据  
+ **Rdx** c + + 属性创建或修改现有的注册表项为 COM 组件。 该属性将 BEGIN_RDX_MAP 宏添加到实现的目标成员的对象。 `RegistryDataExchange`由于 BEGIN_RDX_MAP 宏，注入的函数可用于在注册表和数据成员之间传输数据  
   
- 此属性可以与结合使用[组件类](../windows/coclass.md)， [progid](../windows/progid.md)，或[vi_progid](../windows/vi-progid.md)属性或意味着其中一种其他属性。  
+ 可以结合使用此特性[组件类](../windows/coclass.md)， [progid](../windows/progid.md)，或[vi_progid](../windows/vi-progid.md)属性或隐含其中之一的其他属性。  
   
 ## <a name="requirements"></a>要求  
   
@@ -59,7 +58,7 @@ ms.locfileid: "33878952"
   
 |||  
 |-|-|  
-|**适用对象**|**类**或`struct`成员|  
+|**适用对象**|**类**或**结构**成员|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
@@ -69,7 +68,7 @@ ms.locfileid: "33878952"
 ## <a name="example"></a>示例  
  以下代码添加到系统描述 CMyClass COM 组件调用 MyValue 注册表项。  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

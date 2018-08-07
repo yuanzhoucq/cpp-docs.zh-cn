@@ -1,5 +1,5 @@
 ---
-title: 插入 ActiveX 控件对话框 |Microsoft 文档
+title: 插入 ActiveX 控件对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2e0b25b7457ed11e297c3a4793bee4c93fc481d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bbf381170da99a17ee8c701d8d3f3251c88729d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877146"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607119"
 ---
 # <a name="insert-activex-control-dialog-box"></a>“插入 ActiveX 控件”对话框
-此对话框中，可以为[将 ActiveX 控件插入对话框](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)时使用[对话框编辑器](../windows/dialog-editor.md)。  
+此对话框可以向[ActiveX 控件插入对话框](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)时使用[对话框编辑器](../windows/dialog-editor.md)。  
   
  **ActiveX 控件**  
- 显示 Active X 控件的列表。 从该对话框中插入控件不会生成的包装类。 如果你需要一个包装类，使用[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)创建一个 (有关详细信息，请参阅[添加类](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控件未出现在此对话框中，尝试安装该控件根据供应商的说明。  
+ 显示 Active X 控件的列表。 从该对话框中插入控件不会生成一个包装类。 如果您需要一个包装器类，使用[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)创建一个 (有关详细信息，请参阅[添加类](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控件不会出现在此对话框，请尝试安装该控件根据供应商的说明。  
   
  **Path**  
  显示在其中找到 ActiveX 控件的文件。  
   
- 可以在工具箱窗口中放置控件以方便访问。 有关详细信息，请参阅 [自定义工具箱对话框](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)。  
+ 可以在工具箱窗口中放置控件以方便访问。 有关详细信息，请参阅[自定义工具箱对话框](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -45,4 +45,3 @@ ms.locfileid: "33877146"
  [对话框编辑器选项卡工具箱](../windows/dialog-editor-tab-toolbox.md)   
  [资源文件](../windows/resource-files-visual-studio.md)   
  [对话框中的控件](../windows/controls-in-dialog-boxes.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: getactivationfactory 方法 |Microsoft 文档'
+title: 'Module:: getactivationfactory 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887008"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608100"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory 方法
 获取模块的激活工厂。  
@@ -37,15 +37,15 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `pActivatibleClassId`  
+### <a name="parameters"></a>参数  
+ *pActivatibleClassId*  
  运行时类的 IID。  
   
- `ppIFactory`  
+ *ppIFactory*  
  指定运行时类的 IActivationFactory。  
   
- `serverName`  
- 当前模块中类工厂的子集名称。 指定服务器名称中使用[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏，或指定`nullptr`以获取默认服务器名称。  
+ *服务器名称*  
+ 当前模块中类工厂的子集名称。 指定中使用的服务器名称[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏，或指定**nullptr**若要获取默认服务器名称。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为 GetActivationFactory 返回的 HRESULT。  
@@ -56,4 +56,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
  **命名空间：** Microsoft::WRL  
   
 ## <a name="see-also"></a>请参阅  
-[Module 类](../windows/module-class.md) [ActivatableClass 宏](../windows/activatableclass-macros.md)
+ [Module 类](../windows/module-class.md)  
+ [ActivatableClass 宏](../windows/activatableclass-macros.md)

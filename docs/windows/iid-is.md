@@ -1,5 +1,5 @@
 ---
-title: iid_is |Microsoft 文档
+title: iid_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877997"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603285"
 ---
 # <a name="iidis"></a>iid_is
-指定的接口指针指向 COM 接口的 IID。  
+指定的接口指针指向了 COM 接口的 IID。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>参数  
  *表达式*  
- 指定的 COM 接口的 IID 的 C 语言表达式指向一个接口指针。  
+ 指定 COM 接口的 IID 是 C 语言表达式指向一个接口指针。  
   
 ## <a name="remarks"></a>备注  
  **Iid_is** c + + 属性具有相同的功能[iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL 特性。  
@@ -46,7 +45,7 @@ ms.locfileid: "33877997"
 ## <a name="example"></a>示例  
  下面的代码演示如何使用**iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  

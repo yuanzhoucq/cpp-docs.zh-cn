@@ -1,5 +1,5 @@
 ---
-title: 选择控件 |Microsoft 文档
+title: 选择控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,25 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4a8d5260b721bf829c73f587ccd691db5543e40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892769"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605664"
 ---
 # <a name="selecting-controls"></a>“选择”控件
-选择控件以调整大小，对齐、 移动、 复制，或删除它们，然后执行所需的操作。 在大多数情况下，你需要选择要使用的大小和对齐方式的工具上的多个控件[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
+选择控件以调整大小、 对齐、 移动、 复制，或删除它们，，然后执行所需的操作。 在大多数情况下，您需要选择要使用的大小和对齐方式的工具上的多个控件[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
   
- 当选择了一个控件，它有带实心 （活动） 在其周围的阴影的边框或空心 （非活动）"大小调整控点，"小方块，显示在选择边框。 主导控件选中多个控件后，有稳定的大小调整控点;所有其他所选的控件具有空心的调整大小控点。  
+ 当控件被选定时，它有带实心 （活动） 在其周围的阴影的边框或空心 （非活动）"大小调整控点，"小方块，显示在选择边框。 当选择多个控件时，主导控件具有坚实的调整大小控点;所有其他所选的控件具有空心调整大小控点。  
   
- 当大小的设置或对齐多个控件，对话框编辑器使用"主导控件"来确定如何调整大小或对齐其他控件。 默认情况下，主导控件是所选的第一个控件。  
+ 当大小的设置或对齐多个控件，对话框编辑器使用"主导控件"来确定如何调整大小或对齐其他控件。 默认情况下，主导控件为所选的第一个控件。  
   
 -   [选定多个控件](../windows/selecting-multiple-controls.md)  
   
 -   [指定基准控件](../windows/specifying-the-dominant-control.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -46,4 +46,3 @@ ms.locfileid: "33892769"
 ## <a name="see-also"></a>请参阅  
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: propputref |Microsoft 文档
+title: propputref |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878185"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606795"
 ---
 # <a name="propputref"></a>propputref
-指定使用的引用，而不是值的属性设置函数。  
+指定使用引用而不是值的属性设置函数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Propputref** c + + 属性具有相同的功能[propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)的示例使用**propputref**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)的示例使用**propputref**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33878185"
 |**适用对象**|方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
-|**无效的特性**|**propget**， **propput**|  
+|**无效的特性**|`propget`, `propput`|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   

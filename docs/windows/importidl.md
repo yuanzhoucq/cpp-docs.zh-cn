@@ -1,5 +1,5 @@
 ---
-title: importidl |Microsoft 文档
+title: importidl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877470"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607178"
 ---
 # <a name="importidl"></a>importidl
-将指定的.idl 文件插入到生成的.idl 文件中。  
+将指定的.idl 文件插入到生成的.idl 文件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>参数  
- `idl_file`  
- 标识你想要将与你的应用程序将生成的.idl 文件合并在.idl 文件的名称。  
+### <a name="parameters"></a>参数  
+ *idl_file*  
+ 标识你想要将与你的应用程序将生成的.idl 文件合并的.idl 文件的名称。  
   
 ## <a name="remarks"></a>备注  
- **Importidl** c + + 特性放置之外的库块的部分 (在`idl_file`) 到你的程序生成的.idl 文件和库部分 (在`idl_file`) 到你的程序的库部分生成的.idl 文件。  
+ **Importidl** c + + 属性会放置在库块之外的部分 (在*idl_file*) 到您的程序生成的.idl 文件和库部分 (在*idl_file*) 到库的应用程序的部分生成的.idl 文件。  
   
- 你可能想要使用**importidl**，例如，如果你想要使用生成的.idl 文件手工编码.idl 文件。  
+ 您可能想要使用**importidl**，例如，如果你想要生成的.idl 文件中使用手工编码.idl 文件。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -71,6 +70,6 @@ ms.locfileid: "33877470"
  [编译器特性](../windows/compiler-attributes.md)   
  [独立特性](../windows/stand-alone-attributes.md)   
  [导入](../windows/import.md)   
- [importlib](../windows/importlib.md)   
+ [导入库](../windows/importlib.md)   
  [包括](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

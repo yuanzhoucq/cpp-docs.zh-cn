@@ -1,5 +1,5 @@
 ---
-title: 特性用途 |Microsoft 文档
+title: 特性用途 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877831"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607019"
 ---
 # <a name="purpose-of-attributes"></a>特性用途
-属性扩展的 c + + 在不是当前可能的方向而不会破坏语言的经典结构。 属性允许提供程序 (单独的 Dll) 来动态扩展语言功能。 属性的主要目的是简化的 COM 组件，除了提高组件开发人员的工作效率级别创作。 特性可以应用到几乎任何 c + + 构造，如类、 数据成员或成员函数。 下面是这种新技术所提供的优势突出显示：  
+属性扩展的 c + + 中当前不可能的方向而不会破坏经典的语言结构。 属性允许提供程序 (单独的 Dll) 来动态扩展语言功能。 属性的主要目标是简化 COM 组件以及增加组件开发人员的工作效率级别的创作。 属性可应用于几乎任何 c + + 构造，如类、 数据成员或成员函数。 下面是提供这项新技术的优势的突出显示：  
   
 -   公开熟悉且简单的调用约定。  
   
--   使用插入的代码，这不同于宏，则调试器所识别。  
+-   使用插入的代码，这不同于宏，调试器所识别。  
   
--   允许从基类不需要繁琐的实现详细信息的情况下轻松派生。  
+-   允许简单而无需繁重的实现详细信息的基类派生。  
   
--   替换大量的 IDL 代码所需的少数简洁属性的 COM 组件。  
+-   取代了大量的 IDL 代码所需的少量简洁属性具有的 COM 组件。  
   
- 例如，若要实现泛型的 ATL 类的简单事件接收器，可以应用[event_receiver](../windows/event-receiver.md)属性为特定的类，如`CMyReceiver`。 **Event_receiver**属性然后编译 Visual c + + 编译器将适当的代码插入到对象文件。  
+ 例如，若要实现泛型 ATL 类的简单事件接收器，可以应用[event_receiver](../windows/event-receiver.md)特性为特定的类如`CMyReceiver`。 `event_receiver`属性然后编译的 Visual c + + 编译器，它将正确的代码插入到对象文件。  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +44,7 @@ class CMyReceiver
 }  
 ```  
   
- 你可以然后设置**CMyReceiver**方法`handler1`和`handler2`来处理事件 (使用内部函数[__hook](../cpp/hook.md)) 从事件源，你可以创建使用[event_source](../windows/event-source.md)。  
+ 然后可以设置`CMyReceiver`方法`handler1`并`handler2`来处理事件 (使用内部函数[__hook](../cpp/hook.md)) 的事件源，可以创建使用[event_source](../windows/event-source.md).  
   
 ## <a name="see-also"></a>请参阅  
  [概念](../windows/attributed-programming-concepts.md)

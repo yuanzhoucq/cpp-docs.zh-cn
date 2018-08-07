@@ -1,5 +1,5 @@
 ---
-title: 新 (新 vtable 中的槽） （c + + 组件扩展） |Microsoft 文档
+title: 新 (新 vtable 中的槽） （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879778"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607006"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new（vtable 中的新槽）（C++ 组件扩展）
-`new`关键字指示虚拟成员将获取 vtable 中的新槽。  
+**新**关键字指示虚拟成员将获取 vtable 中的新槽。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  （此语言功能没有适用于所有运行时的备注。）  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- 不支持在 Windows 运行时中。  
+ 不支持 Windows 运行时中。  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注  
   
- 在 **/clr**编译，`new`指示虚拟成员将获取 vtable 中的新槽; 该函数不重写基类方法。  
+ 在中`/clr`编译**新**指示虚拟成员将获取 vtable 中的新槽; 该函数不重写基类方法。  
   
- `new` 导致 newslot 修饰符添加到的 IL 的函数。  Newslot 有关的详细信息，请参阅：  
+ **新**导致 newslot 修饰符添加到函数的 IL。  Newslot 有关的详细信息，请参阅：  
   
--   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [MethodAttributes 枚举](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes 枚举](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的示例演示的效果`new`。  
+ 下面的示例显示的效果**新**。  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

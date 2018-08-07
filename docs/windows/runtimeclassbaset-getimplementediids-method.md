@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Getimplementediids 方法 |Microsoft 文档'
+title: 'Runtimeclassbaset:: Getimplementediids 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892229"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603246"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,21 +38,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- `implements` 参数的类型。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 类型*实现*参数。  
   
- `implements`  
- 为参数指定的类型的指针`T`。  
+ *实现*  
+ 为参数指定的类型的指针*T*。  
   
- `iidCount`  
- 接口 Id，以检索最大数量。  
+ *iidCount*  
+ 接口 Id 来检索最大数目。  
   
- `iids`  
- 如果此操作成功完成操作，接口实现的类型的 Id 的数组`T`。  
+ *iid*  
+ 如果此操作成功，完成的接口实现的类型的 Id 数组*T*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为描述错误的 HRESULT。  
+ 如果成功，则为 S_OK否则为描述错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
  检索接口实现由指定类型的 Id 的数组。  

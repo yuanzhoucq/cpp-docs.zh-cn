@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Asiid 方法 |Microsoft 文档'
+title: 'Runtimeclassbaset:: Asiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892125"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607422"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,21 +38,21 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 实现的接口 ID 由参数指定的类型`riid`。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 实现接口 ID 由参数指定的类型*riid*。  
   
- `implements`  
- 由模板参数指定的类型的变量`T`。  
+ *实现*  
+ 指定模板参数的类型的变量*T*。  
   
- `riid`  
+ *riid*  
  要检索的接口 ID。  
   
- `ppvObject`  
- 如果此操作成功，由参数指定指针-到-a-指向接口的指针`riid`。  
+ *ppvObject*  
+ 如果此操作成功，由参数指定指针-到-a-指向接口的指针*riid*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为描述错误的 HRESULT。  
+ 如果成功，则为 S_OK否则为描述错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
  检索指向指定的接口 id。  

@@ -1,5 +1,5 @@
 ---
-title: 资源视图窗口 |Microsoft 文档
+title: 资源视图窗口 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877379"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608304"
 ---
 # <a name="resource-view-window"></a>“资源视图”窗口
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "33877379"
 >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
 > [!TIP]
->  可以在“资源视图”窗口上右击以启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
+>  可以在“资源视图”窗口上右击以启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
   
 #### <a name="to-open-the-resource-view-window"></a>打开资源视图窗口  
   
@@ -43,11 +43,9 @@ ms.locfileid: "33877379"
   
      \- 或 -  
   
-2.  按**CTRL + SHIFT + E**。  
+2.  按**Ctrl**+**Shift**+**E**。  
   
-
-  
-### <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

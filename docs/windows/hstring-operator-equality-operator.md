@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Operator = = 运算符 |Microsoft 文档'
+title: 'Hstring:: Operator = = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c21e9f79673cc888f8661803a8cc4bb9053870c4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876535"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604559"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator== 运算符
 指示两个参数是否相等。  
@@ -47,18 +47,17 @@ inline bool operator==(
 inline bool operator==(  
                  const HString& lhs,   
                  const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>参数  
- `lhs`  
- 要比较的第一个参数。 `lhs` 可以是 HString 或 HStringReference 对象或 HSTRING 句柄。  
+### <a name="parameters"></a>参数  
+ *lhs*  
+ 要比较的第一个参数。 *lhs*可以是**HString**或`HStringReference`对象或 HSTRING 句柄。  
   
- `rhs`  
- 要比较的第二个参数。`rhs` 可以是 HString 或 HStringReference 对象或 HSTRING 句柄。  
+ *rhs*  
+ 要比较的第二个参数。*rhs*可以是**HString**或`HStringReference`对象或 HSTRING 句柄。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果`lhs`和`rhs`参数是相等; 否则为`false`。  
+ **true**如果*lhs*并*rhs*参数不相等; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

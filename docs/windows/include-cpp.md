@@ -1,5 +1,5 @@
 ---
-title: 包括 （c + +） |Microsoft 文档
+title: 包括 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878419"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603483"
 ---
 # <a name="include-c"></a>include (C++)
-指定要包含在生成的.idl 文件中的一个或多个标头文件。  
+指定要包括在生成的.idl 文件中的一个或多个标头文件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ include(  
+[ include(  
    header_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *header_file*  
  在生成的.idl 文件中包含所需的文件的名称。  
   
 ## <a name="remarks"></a>备注  
- **包括**c + + 特性将导致`#include`语句下面放置`import "docobj.idl"`生成的.idl 文件中的语句。  
+ **包括**c + + 属性会导致`#include`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。  
   
  **包括**c + + 属性具有相同的功能[包括](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用的示例**包括**。 对于此示例中，文件 include.h 仅包含 #include 语句。  
+ 下面的代码演示如何使用的示例**包括**。 对于此示例中，文件 include.h 只包含 #include 语句。  
   
-```  
+```cpp  
 // cpp_attr_ref_include.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

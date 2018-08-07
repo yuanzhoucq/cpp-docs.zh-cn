@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Cancastto 方法 |Microsoft 文档'
+title: 'Interfacetraits:: Cancastto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879576"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607824"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -30,33 +30,31 @@ ms.locfileid: "33879576"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>参数  
- `ptr`  
+### <a name="parameters"></a>参数  
+ *ptr*  
  指向类型的名称。  
   
- `riid`  
+ *riid*  
  接口 ID `Base`。  
   
- `ppv`  
- 如果此操作成功，`ppv`指向指定的接口`Base`。 否则为`ppv`设置为`nullptr`。  
+ *ppv*  
+ 如果此操作成功， *ppv*指向由指定的界面`Base`。 否则为*ppv*设置为**nullptr**。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果此操作是否成功和`ptr`被强制转换为指向的指针`Base`; 否则为`false`。  
+ **true**此操作是否成功并*ptr*被强制转换为一个指向`Base`; 否则为**false** 。  
   
 ## <a name="remarks"></a>备注  
- 指示是否可以强制的指定的指针转换为指向的指针`Base`。  
+ 指示是否指定的指针可以转换为一个指向`Base`。  
   
- 有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
+ 有关详细信息`Base`，请参阅**公共 Typedef**主题中[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

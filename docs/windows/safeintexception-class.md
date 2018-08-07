@@ -1,5 +1,5 @@
 ---
-title: SafeIntException 类 |Microsoft 文档
+title: SafeIntException 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 961fc2f2050336469f5944f603c0db3c6291a176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbcb04229ea0d60c7bc5abfeb1db3f671c92c6b8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895770"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604975"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 类
-`SafeInt`类使用`SafeIntException`以确定为何无法完成数学运算。  
+`SafeInt`类使用**SafeIntException**以确定无法完成数学运算的原因。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +37,10 @@ class SafeIntException;
   
 ### <a name="public-constructors"></a>公共构造函数  
  [SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)  
- 创建一个 `SafeIntException` 对象。  
+ 创建**SafeIntException**对象。  
   
 ## <a name="remarks"></a>备注  
- [SafeInt 类](../windows/safeint-class.md)是唯一使用`SafeIntException`类。  
+ [SafeInt 类](../windows/safeint-class.md)是唯一使用的类**SafeIntException**类。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [SafeIntException 类](../windows/safeintexception-class.md)  
@@ -48,7 +48,7 @@ class SafeIntException;
 ## <a name="requirements"></a>要求  
  **标头：** safeint.h  
   
- **Namespace:** msl::utilities  
+ **Namespace:** msl:: utilities  
   
 ## <a name="see-also"></a>请参阅  
  [SafeInt 库](../windows/safeint-library.md)   

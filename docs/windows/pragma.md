@@ -1,5 +1,5 @@
 ---
-title: 杂注 |Microsoft 文档
+title: 杂注 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878143"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602612"
 ---
 # <a name="pragma"></a>pragma
-将指定的字符串发出到生成的.idl 文件而不使用引号引起来。 .  
+将指定的字符串发出到生成的.idl 文件而不使用引号引起来。 
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
@@ -45,7 +44,7 @@ ms.locfileid: "33878143"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

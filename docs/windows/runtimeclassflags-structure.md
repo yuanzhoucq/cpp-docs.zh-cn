@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags 结构 |Microsoft 文档
+title: RuntimeClassFlags 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892021"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604929"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 结构
-包含的实例类型[RuntimeClass](../windows/runtimeclass-class.md)。  
+包含的类型的实例[RuntimeClass](../windows/runtimeclass-class.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +36,15 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `flags`  
- A [RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
+### <a name="parameters"></a>参数  
+ *flags*  
+ 一个[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[RuntimeClassFlags::value 常量](../windows/runtimeclassflags-value-constant.md)|包含[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。|  
   

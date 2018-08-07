@@ -1,5 +1,5 @@
 ---
-title: 对象 （c + +） |Microsoft 文档
+title: 对象 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879703"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607905"
 ---
 # <a name="object-c"></a>object (C++)
 标识的自定义的接口。  
@@ -30,18 +30,16 @@ ms.locfileid: "33879703"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- 前面的接口定义中，当**对象**c + + 特性将导致要放置在.idl 文件中为自定义接口的接口。  
+ 前面的接口定义中，当**对象**c + + 属性导致将接口置于.idl 文件作为自定义的接口。  
   
- 使用对象标记任何接口必须继承自**IUnknown**。 如果任何基接口继承自满足此条件**IUnknown**。 如果没有基接口继承自**IUnknown**，编译器将导致与标记的接口**对象**为派生自**IUnknown**。  
+ 使用对象标记任何接口必须继承自`IUnknown`。 如果从任何基接口继承，则满足此条件`IUnknown`。 如果没有基接口继承自`IUnknown`，编译器将导致使用标记的接口**对象**为派生`IUnknown`。  
   
 ## <a name="example"></a>示例  
- 请参阅[nonbrowsable](../windows/nonbrowsable.md)以举例说明如何使用**对象**。  
+ 请参阅[nonbrowsable](../windows/nonbrowsable.md)有关如何使用的示例**对象**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -49,7 +47,7 @@ ms.locfileid: "33879703"
   
 |||  
 |-|-|  
-|**适用对象**|`interface`|  
+|**适用对象**|**interface**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: releasenotifier:: ~ ReleaseNotifier 析构函数 |Microsoft 文档'
+title: 'Module:: releasenotifier:: ~ ReleaseNotifier 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4483b71a2349251a6dbc9a3543ffa7ddd95f0d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: effe435a7dc036d5169c1fbde748b88e158bd355
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876048"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604962"
 ---
 # <a name="modulereleasenotifierreleasenotifier-destructor"></a>Module::ReleaseNotifier::~ReleaseNotifier 析构函数
-取消初始化 Module::ReleaseNotifier 类的当前实例。  
+取消初始化的当前实例**module:: releasenotifier**类。  
   
 ## <a name="syntax"></a>语法  
   

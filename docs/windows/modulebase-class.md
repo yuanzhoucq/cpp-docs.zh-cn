@@ -1,5 +1,5 @@
 ---
-title: ModuleBase 类 |Microsoft 文档
+title: ModuleBase 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878731"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605053"
 ---
 # <a name="modulebase-class"></a>ModuleBase 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -42,15 +42,15 @@ class ModuleBase;
   
 |名称|描述|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase 构造函数](../windows/modulebase-modulebase-constructor.md)|初始化 Module 类的实例。|  
-|[ModuleBase::~ModuleBase 析构函数](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化 Module 类的当前实例。|  
+|[ModuleBase::ModuleBase 构造函数](../windows/modulebase-modulebase-constructor.md)|初始化 `Module` 类的实例。|  
+|[ModuleBase::~ModuleBase 析构函数](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化的当前实例`Module`类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[ModuleBase::DecrementObjectCount 方法](../windows/modulebase-decrementobjectcount-method.md)|在实现时，递减的对象数模块所跟踪。|  
-|[ModuleBase::IncrementObjectCount 方法](../windows/modulebase-incrementobjectcount-method.md)|在实现时，递增模块所跟踪的对象数。|  
+|[ModuleBase::DecrementObjectCount 方法](../windows/modulebase-decrementobjectcount-method.md)|实现时，递减的对象数模块所跟踪。|  
+|[ModuleBase::IncrementObjectCount 方法](../windows/modulebase-incrementobjectcount-method.md)|实现时，递增模块所跟踪的对象数。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ModuleBase`  

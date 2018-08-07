@@ -1,5 +1,5 @@
 ---
-title: propput |Microsoft 文档
+title: propput |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882948"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608451"
 ---
 # <a name="propput"></a>propput
 指定属性设置功能。  
@@ -30,16 +30,14 @@ ms.locfileid: "33882948"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Propput** c + + 属性具有相同的功能[propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)的示例使用**propput**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)的示例使用**propput**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33882948"
 |**适用对象**|方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
-|**无效的特性**|**propget**， **propputref**|  
+|**无效的特性**|`propget`, `propputref`|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   

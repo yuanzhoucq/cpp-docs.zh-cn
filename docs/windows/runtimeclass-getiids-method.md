@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getiids 方法 |Microsoft 文档'
+title: 'Runtimeclass:: Getiids 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c309c97b9c9ce057ca67ab4b5d729c61d803ea5a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888383"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608438"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids 方法
-获取可包含当前 RuntimeClass 对象实现的接口 ID 的数组。  
+获取一个数组，其中可以包含的接口 Id 由当前**RuntimeClass**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +37,11 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>参数  
- `iidCount`  
- 此操作完成后，数组 `iids` 中的元素总量。  
+### <a name="parameters"></a>参数  
+ *iidCount*  
+ 此操作完成后，数组中的元素总数*iid*。  
   
- `iids`  
+ *iid*  
  此操作完成后，指向接口 ID 数组的指针。  
   
 ## <a name="return-value"></a>返回值  

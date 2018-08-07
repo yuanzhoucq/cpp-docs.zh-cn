@@ -1,5 +1,5 @@
 ---
-title: Module::GenericReleaseNotifier::callback_ 数据成员 |Microsoft 文档
+title: Module::GenericReleaseNotifier::callback_ 数据成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880671"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605027"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ 数据成员
-包含与当前 Module::GenericReleaseNotifier 对象关联的 lambda、functor 或 pointer-to-function 事件处理程序。  
+包含 lambda、 functor 或与当前关联的指针函数事件处理程序`Module::GenericReleaseNotifier`对象。  
   
 ## <a name="syntax"></a>语法  
   

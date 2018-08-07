@@ -1,5 +1,5 @@
 ---
-title: 在 （c + +） |Microsoft 文档
+title: （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874013"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606431"
 ---
 # <a name="in-c"></a>in (C++)
-指示参数是要调用的过程中传递给调用的过程。  
+指示参数是要从调用过程传递给被调用过程。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **中**c + + 属性具有相同的功能[中](http://msdn.microsoft.com/library/windows/desktop/aa367051)MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅[可绑定](../windows/bindable.md)以举例说明如何使用**中**。  
+ 请参阅[可绑定](../windows/bindable.md)有关如何使用的示例**中**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -56,7 +54,7 @@ ms.locfileid: "33874013"
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [方法特性](../windows/method-attributes.md)   
  [默认值](../windows/defaultvalue.md)   
  [id](../windows/id.md)   

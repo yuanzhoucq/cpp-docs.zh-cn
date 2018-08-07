@@ -1,5 +1,5 @@
 ---
-title: out （c + +） |Microsoft 文档
+title: out （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876808"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606119"
 ---
 # <a name="out-c"></a>out (C++)
 标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。  
@@ -30,9 +30,7 @@ ms.locfileid: "33876808"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -56,6 +54,6 @@ ms.locfileid: "33876808"
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [默认值](../windows/defaultvalue.md)   
  [id](../windows/id.md)   

@@ -1,5 +1,5 @@
 ---
-title: ref （c + +） |Microsoft 文档
+title: ref （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f266c263fea33254cb8b0c706982a6d2453eed97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 197ee3b30c257b98e2147bd030000db8dd192067
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881466"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607587"
 ---
 # <a name="ref-c"></a>ref (C++)
 标识引用指针。  
@@ -30,18 +30,16 @@ ms.locfileid: "33881466"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [ref]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- `ref` C + + 属性具有相同的功能[ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 特性。  
+ **Ref** c + + 属性具有相同的功能[ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用`ref`属性：  
+ 下面的代码演示如何使用**ref**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_ref.cpp  
 // compile with: /LD  
 #include <windows.h>   
@@ -59,7 +57,7 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**适用对象**|`typedef`接口参数，则接口方法|  
+|**适用对象**|**typedef**，接口参数，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Iidcount 常量 |Microsoft 文档'
+title: 'Implementshelper:: Iidcount 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873997"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604250"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 常量
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -30,12 +30,11 @@ ms.locfileid: "33873997"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>备注  
- 保存当前的实现对象中的实现接口 Id 的数量。  
+ 存储在当前实现的接口 Id 的数目`Implements`对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

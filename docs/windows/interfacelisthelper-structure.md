@@ -1,5 +1,5 @@
 ---
-title: InterfaceListHelper 结构 |Microsoft 文档
+title: InterfaceListHelper 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878042"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608126"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T0`  
+### <a name="parameters"></a>参数  
+ *T0*  
  模板参数 0，这是必需的。  
   
- `T1`  
- 模板参数，1，即默认情况下未指定。  
+ T1  
+ 模板参数 1，即默认情况下未指定。  
   
- `T2`  
- 模板参数，2，即默认情况下未指定。第三个模板参数。  
+ T2  
+ 模板参数 2，即默认情况下未指定。第三个模板参数。  
   
- `T3`  
- 模板参数，3，即默认情况下未指定。  
+ *T3*  
+ 模板参数 3，即默认情况下未指定。  
   
- `T4`  
- 模板参数，4，即默认情况下未指定。  
+ *T4*  
+ 模板参数 4，即默认情况下未指定。  
   
- `T5`  
- 模板参数，5，即默认情况下未指定。  
+ *T5*  
+ 模板参数 5，即默认情况下未指定。  
   
- `T6`  
+ *T6*  
  模板参数，6，即默认情况下未指定。  
   
- `T7`  
+ *T7*  
  模板参数，7，即默认情况下未指定。  
   
- `T8`  
+ *T8*  
  模板参数，8，即默认情况下未指定。  
   
- `T9`  
+ *T9*  
  模板参数，9，即默认情况下未指定。  
   
 ## <a name="remarks"></a>备注  
- 通过应用指定的模板参数自变量的以递归方式构建 InterfaceList 类型。  
+ 生成`InterfaceList`通过以递归方式应用指定的模板参数自变量的类型。  
   
- InterfaceListHelper 模板使用模板参数`T0`来定义的第一个数据成员 InterfaceList 结构，然后以递归方式应用 InterfaceListHelper 模板剩余的任何模板参数。 InterfaceListHelper 停止时没有剩余的模板参数。  
+ **InterfaceListHelper**模板使用模板参数*T0*定义中的第一个数据成员`InterfaceList`结构，然后以递归方式应用**InterfaceListHelper**任何剩余的模板参数的模板。 **InterfaceListHelper**没有剩余的模板参数时，会停止。  
   
 ## <a name="members"></a>成员  
   

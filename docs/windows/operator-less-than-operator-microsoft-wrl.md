@@ -1,5 +1,5 @@
 ---
-title: '运算符&lt;运算符 (microsoft:: wrl) |Microsoft 文档'
+title: '运算符&lt;运算符 (microsoft:: wrl) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881824"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604208"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>运算符&lt;运算符 (microsoft:: wrl)
 确定一个对象的地址是否小于另一个。  
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>参数  
- `a`  
+### <a name="parameters"></a>参数  
+ *a*  
  左对象。  
   
- `b`  
+ *b*  
  右对象。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果的地址`a`小于的地址`b`; 否则为`false`。  
+ **true**如果的地址的地址少于*b*; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

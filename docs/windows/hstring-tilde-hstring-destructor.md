@@ -1,5 +1,5 @@
 ---
-title: 'HString:: ~ HString 析构函数 |Microsoft 文档'
+title: 'HString:: ~ HString 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad64aa4cde3f3654c243e047f83669e5f02deea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 177f91c0f5222144a81fa33e5418bc4baa85f99a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874039"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603272"
 ---
 # <a name="hstringhstring-destructor"></a>HString::~HString 析构函数
-销毁 HString 类的当前实例。  
+销毁的当前实例**HString**类。  
   
 ## <a name="syntax"></a>语法  
   

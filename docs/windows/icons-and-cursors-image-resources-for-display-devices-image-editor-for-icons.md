@@ -1,5 +1,5 @@
 ---
-title: 图标和光标： 显示设备 （图标的图像编辑器） 的图像资源 |Microsoft 文档
+title: 图标和光标： 显示设备 （图标的图像编辑器） 的图像资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881905"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604611"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>图标和光标：显示设备的图像资源（图标的图像编辑器）
 图标和光标是图形资源，可以为不同类型的显示设备包含大小和配色方案不同的多个图像。 此外，光标还具有一个“热点”，即 Windows 用来跟踪其位置的位置。 可使用图像编辑器创建和编辑图标和光标以及位图和其他图像。  
@@ -75,7 +75,7 @@ ms.locfileid: "33881905"
   
 -   [设置光标的作用点](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  无  
@@ -84,4 +84,3 @@ ms.locfileid: "33881905"
  [图标的图像编辑器](../windows/image-editor-for-icons.md)   
  [图标](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [游标](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

@@ -1,5 +1,5 @@
 ---
-title: IsSame 结构 |Microsoft 文档
+title: IsSame 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877665"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603580"
 ---
 # <a name="issame-structure"></a>IsSame 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -41,21 +41,21 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T1`  
+### <a name="parameters"></a>参数  
+ T1  
  一种类型。  
   
- `T2`  
+ T2  
  另一种类型。  
   
 ## <a name="remarks"></a>备注  
- 测试一个指定类型等同于另一个指定的类型。  
+ 一个指定类型等同于另一个测试指定的类型。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[IsSame::value 常量](../windows/issame-value-constant.md)|指示一种类型是否与另一个相同。|  
   

@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper 结构 |Microsoft 文档
+title: ImplementsHelper 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875934"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605612"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `RuntimeClassFlagsT`  
- 指定一个或多个标志的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
+### <a name="parameters"></a>参数  
+ *RuntimeClassFlagsT*  
+ 指定一个或多个标记的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
   
- `ILst`  
+ *ILst*  
  接口 Id 的列表。  
   
- `IsDelegateToClass`  
- 指定`true`中的第一个接口 ID 的基类实现的当前实例是否`ILst`; 否则为`false`。  
+ *IsDelegateToClass*  
+ 指定 **，则返回 true**如果的当前实例`Implements`是一个基类中的第一个接口 ID *ILst*; 否则为**false**。  
   
 ## <a name="remarks"></a>备注  
  可帮助实现[实现](../windows/implements-structure.md)结构。  
   
- 此模板遍历接口的列表，并将它们添加用作基类，这些类，以及启用 QueryInterface 所需的信息。  
+ 此模板会遍历接口的列表，并将它们添加作为基类，这些类，以及启用 QueryInterface 所需的信息。  
   
 ## <a name="members"></a>成员  
   
@@ -64,5 +64,5 @@ friend struct Details::ImplementsHelper;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>请参阅  
- [参考 （Windows 运行时库）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [参考 （Windows 运行时库）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

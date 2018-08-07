@@ -1,5 +1,5 @@
 ---
-title: 预定义快捷键 |Microsoft 文档
+title: 预定义快捷键 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880789"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608412"
 ---
 # <a name="predefined-accelerator-keys"></a>预定义快捷键
 有多个预定义快捷键，它们可能是 Windows 应用程序项目的一部分。 部分虚拟键适用于 Windows 环境。 其他支持的浏览器或 Unicode 应用程序。 你可以在任何快捷键中使用这些键。  
@@ -83,7 +83,7 @@ ms.locfileid: "33880789"
 |VK_XBUTTON1|Windows：X1 鼠标按钮|  
 |VK_XBUTTON2|Windows：X2 鼠标按钮|  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
 ## <a name="requirements"></a>要求  
  Win32  

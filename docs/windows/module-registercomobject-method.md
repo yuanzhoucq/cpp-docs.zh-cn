@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registercomobject 方法 |Microsoft 文档'
+title: 'Module:: registercomobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873974"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606535"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。  
@@ -39,20 +39,20 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>参数  
- `serverName`  
+### <a name="parameters"></a>参数  
+ *服务器名称*  
  服务器的完全限定名。  
   
- `clsids`  
+ *clsid*  
  要注册的 CLSID 的数组。  
   
- `factories`  
+ *工厂*  
  其可用性正发布的类对象的 IUnknown 接口的数组。  
   
- `cookies`  
+ *Cookie*  
  完成此操作后，指向标识已注册类对象的值的指针数组。 以后将使用这些值来撤销注册。  
   
- `count`  
+ *count*  
  要注册的 CLSID 的数量。  
   
 ## <a name="return-value"></a>返回值  
@@ -61,7 +61,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 ## <a name="remarks"></a>备注  
  COM 对象是使用 CLSCTX 枚举的 CLSCTX_LOCAL_SERVER 枚举器注册的。  
   
- 注册对象的连接类型由当前 `comflag` 模板参数和 REGCLS 枚举的 REGCLS_SUSPENDED 枚举器结合指定。  
+ 当前的组合来指定连接到已注册的对象的类型*comflag*模板参数，并结合枚举的 REGCLS_SUSPENDED 枚举器。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: Operator = 运算符 |Microsoft 文档'
+title: 'Hstringreference:: Operator = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73ec71526d340aafb16ddf2af274dce7ad0e9cbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875534"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608516"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= 运算符
-将另一 HStringReference 对象的值移到当前 HStringReference 对象。  
+另一个的值移**HStringReference**对象与当前**HStringReference**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33875534"
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>参数  
- `other`  
- 现有 HStringReference 对象。  
+### <a name="parameters"></a>参数  
+ *other*  
+ 将现有**HStringReference**对象。  
   
 ## <a name="remarks"></a>备注  
- 现有 `other` 对象的值将复制到当前 HStringReference 对象，然后将销毁 `other` 对象。  
+ 现有值*其他*对象复制到当前**HStringReference**对象，然后*其他*对象被销毁。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
