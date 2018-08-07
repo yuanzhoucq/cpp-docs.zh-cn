@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Handlet 构造函数 |Microsoft 文档'
+title: 'Handlet:: Handlet 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881892"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569506"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT 构造函数
-初始化 HandleT 类的新实例。  
+初始化的新实例**HandleT**类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
- 一个句柄。  
+### <a name="parameters"></a>参数  
+ *h*  
+ 句柄。  
   
 ## <a name="remarks"></a>备注  
- 第一个构造函数初始化不是对象的有效句柄的 HandleT 对象。 第二个构造函数根据参数创建一个新的 HandleT 对象`h`。  
+ 第一个构造函数初始化**HandleT**不是有效的句柄到对象的对象。 第二个构造函数创建一个新**HandleT**对象从参数*h*。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
