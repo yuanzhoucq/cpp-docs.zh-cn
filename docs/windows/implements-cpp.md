@@ -1,5 +1,5 @@
 ---
-title: 实现 （c + +） |Microsoft 文档
+title: 实现 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880672"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606457"
 ---
 # <a name="implements-c"></a>implements (C++)
 指定强制 IDL 组件类的成员的调度接口。  
@@ -30,22 +30,21 @@ ms.locfileid: "33880672"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>参数  
- **interfaces**  
- 以逗号分隔的接口的将是 IDL 组件类的成员的列表。 针对指定单个接口的速记方法是**实现 (***interface_name***)**。  
+### <a name="parameters"></a>参数  
+ *interfaces*  
+ 以逗号分隔列表将为 IDL 组件类的成员的接口。 用于指定单个接口的速记方法是**实现 (***interface_name***)**。  
   
- **dispinterfaces**  
- 以逗号分隔将是 IDL 组件类的成员的调度接口的列表。 针对指定单个调度接口的速记方法是**实现 (调度接口*** = dispinterface_name ***)**。  
+ *dispinterfaces*  
+ 以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度*** = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，只有 COM 的接口的组件类的基类被添加在 IDL 组件类。 **实现**允许你强制 IDL 组件类成员其他接口。  
+ 默认情况下，仅 COM 接口的组件类的基类，这些类将添加 IDL 组件类中。 **实现**允许你强制添加 IDL 组件类成员其他接口。  
   
 ## <a name="requirements"></a>要求  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33880672"
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|是|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
@@ -63,7 +62,7 @@ ms.locfileid: "33880672"
 ## <a name="example"></a>示例  
  下面的示例分为三个部分：.idl 文件和其关联的.h 文件和 c + + 文件。  
   
- 假定以下的.idl 文件将可供编译器。  
+ 假设以下.idl 文件中，将在提供给编译器。  
   
 ```  
 // attr_implements.idl  
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>示例  
- 以及下面的.h 文件，还需要可供编译器。  
+ 和以下.h 文件，还必须是可用于编译器。  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>示例  
- 在下面的程序，而无需实现 IBar1、 IBar2 和 ISna 不会在生成的 IDL 中的组件类。  
+ 在下面的程序，而无需实现`IBar1`， `IBar2`，并`ISna`不会在`coclass`为生成的 IDL 中。  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

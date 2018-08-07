@@ -1,5 +1,5 @@
 ---
-title: importlib |Microsoft 文档
+title: 导入库 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876753"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603063"
 ---
 # <a name="importlib"></a>importlib
 使已编译到另一个类型库中的类型可供所创建的类型库使用。  
@@ -30,23 +30,22 @@ ms.locfileid: "33876753"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *tlb_file*  
  要导入当前项目类型库中的 .tlb 文件的名称（用引号引起来）。  
   
 ## <a name="remarks"></a>备注  
- **Importlib** c + + 特性将导致`importlib`语句放置在生成的.idl 文件的库块中。 **Importlib**属性具有相同的功能[importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 特性。  
+ **Importlib** c + + 属性会导致`importlib`语句生成的.idl 文件的库块中放置。 **Importlib**属性具有相同的功能[importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 特性。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何使用的示例**importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

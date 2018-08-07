@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: cancastto 方法 |Microsoft 文档'
+title: 'Implements:: cancastto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877068"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608938"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo 方法
 获取一个指向指定接口。  
@@ -36,18 +36,18 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `riid`  
- 指接口 id。  
+### <a name="parameters"></a>参数  
+ *riid*  
+ 对接口 id。  
   
- `ppv`  
- 如果成功，指向接口的指定`riid`。  
+ *ppv*  
+ 如果成功，指向接口由指定*riid*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为指示错误，例如 E_NOINTERFACE 的 HRESULT。  
+ 如果成功，则为 S_OK否则为一个 HRESULT，指示错误，例如 E_NOINTERFACE。  
   
 ## <a name="remarks"></a>备注  
- 这是一个内部帮助程序函数，执行 QueryInterface 操作。  
+ 这是执行 QueryInterface 操作内部帮助器函数。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

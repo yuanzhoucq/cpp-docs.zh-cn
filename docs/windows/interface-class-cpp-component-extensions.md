@@ -1,5 +1,5 @@
 ---
-title: 接口类 （c + + 组件扩展） |Microsoft 文档
+title: 接口类 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880854"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604481"
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
-声明接口。  在本机接口上的信息，请参阅[__interface](../cpp/interface.md)。  
+声明接口。  有关本机接口的信息，请参阅[__interface](../cpp/interface.md)。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **语法**  
+
+### <a name="syntax"></a>语法  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **参数**  
+### <a name="parameters"></a>参数  
   
  *interface_access*  
- 程序集之外的接口的可访问性。  可能的值为**公共**和`private`。  默认为 `private`。  嵌套的接口不能具有*interface_access*说明符。  
+ 在程序集外部接口的可访问性。  可能的值为**公共**并**专用**。  **专用**是默认值。 不能具有嵌套的接口*interface_access*说明符。  
   
  *name*  
  接口的名称。  
   
  *inherit_access*  
- 可访问性*base_interface*。  唯一允许可访问性基接口为`public`（默认值）。  
+ 可访问性*base_interface*。  唯一允许的可访问性的基接口是**公共**（默认值）。  
   
  *base_interface* （可选）  
  接口的基接口*名称*。  
   
- **备注**  
+### <a name="remarks"></a>备注  
   
  **接口结构**等效于**接口类**。  
   
- 接口可以包含声明的函数、 事件和属性的声明。  所有接口成员都具有公共可访问性。 接口还可以包含静态数据成员、 函数、 事件和属性，并且必须在接口中定义这些静态成员。  
+ 接口可以包含函数、 事件和属性的声明。  所有接口成员都具有公共可访问性。 接口还可以包含静态数据成员、 函数、 事件和属性，并且必须在接口中定义这些静态成员。  
   
- 接口定义可能如何实现一个类。 接口不是类和类只能实现接口。 当一个类定义在接口中声明的函数时，该函数实现，不重写。 因此，名称查找不包括接口成员。  
+ 接口定义可能会如何实现一个类。 接口不是类和类只能实现接口。 一个类定义在接口中声明的函数，被实现该函数，不重写。 因此，名称查找不包括接口成员。  
   
- 类或派生自接口的结构必须实现该接口的所有成员。 在实现接口时*名称*还必须实现中的在接口`base_interface`列表。  
+ 类或派生接口的结构必须实现接口的所有成员。 实现接口时*名称*还必须实现的接口中`base_interface`列表。  
   
  有关详细信息，请参见:  
   
@@ -70,7 +70,7 @@ interface class
   
  有关其他 CLR 类型的信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 你可以在编译时检测类型是否与接口`__is_interface_class(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 您可以在编译时检测类型是否具有的接口`__is_interface_class(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
  在开发环境中，你可以获取的 F1 帮助上这些关键字通过突出显示关键字 (`interface class`，例如)，然后按 F1。  
   
@@ -80,7 +80,7 @@ interface class
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
@@ -88,14 +88,13 @@ interface class
  （此语言功能没有只适用于公共运行时的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的代码示例演示如何接口可以定义 clock 函数的行为。  
+ 下面的代码示例演示如何一个接口可定义时钟函数的行为。  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **示例**  
+ 下面的代码示例演示两种方式使用相同的签名声明在多个接口，这些接口由一个类实现的函数。  
   
- 下面的代码示例演示两种方式使用相同的签名声明在多个接口和类其中使用这些接口实现函数。  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

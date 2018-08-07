@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Fillarraywithiid 方法 |Microsoft 文档'
+title: 'Implementshelper:: Fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879918"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608317"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,10 +36,10 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>参数  
- `index`  
- 一个指示此操作开始的数组元素的从零开始索引。 此操作完成后，`index`就会递增 1。  
+ *index*  
+ 一个从零开始的索引，该值指示此操作的起始数组元素。 此操作完成后，*索引*都会增加 1。  
   
- `iids`  
+ *iid*  
  类型 Iid 的数组。  
   
 ## <a name="remarks"></a>备注  

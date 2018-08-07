@@ -1,5 +1,5 @@
 ---
-title: lcid |Microsoft 文档
+title: lcid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877249"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602693"
 ---
 # <a name="lcid"></a>lcid
 可以将区域设置标识符传递给函数。  
@@ -30,17 +30,15 @@ ms.locfileid: "33877249"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [lcid]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- **Lcid** c + + 特性实现的功能[lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 特性。 如果你想要实现的库块的区域设置，使用**lcid =** `lcid`参数[模块](../windows/module-cpp.md)属性。  
+ **Lcid** c + + 属性实现的功能[lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 特性。 如果你想要实现的库块的区域设置，使用**lcid =** `lcid`参数[模块](../windows/module-cpp.md)属性。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_lcid.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

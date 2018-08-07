@@ -1,5 +1,5 @@
 ---
-title: 使控件相同的宽度、 高度或大小 |Microsoft 文档
+title: 使控件相同的宽度、 高度或大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8c475e42a490b68f6a50e071f2479748039186
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874793"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607313"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>使控件具有相同的宽度、高度或大小
-您可以调整大小一的组基于主导控件的大小的控件。 你还可以[调整其标题文本的维度所基于的控件的大小](../windows/sizing-individual-controls.md)。  
+您可以调整大小一的组基于主导控件大小的控件。 此外可以[调整大小基于标题文本的尺寸的控件](../windows/sizing-individual-controls.md)。  
   
 ### <a name="to-make-controls-the-same-width-height-or-size"></a>若要使控件相同的宽度、 高度或大小  
   
-1.  [选择的控件](../windows/selecting-multiple-controls.md)要调整大小。  
+1.  [选择的控件](../windows/selecting-multiple-controls.md)要重设大小。  
   
-     所选序列中的第一次控件是主导控件。 组中的控件的最终大小取决于主导控件的大小。 有关选择主导控件的详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
+     所选序列中的第一次控件是主导控件。 主导控件的大小取决于组中控件的最终大小。 选择主导控件的详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
   
-2.  从**格式**菜单上，选择**使大小相同**，然后选择下列命令之一：  
+2.  从**格式**菜单中，选择**使大小相同**，然后选择下列命令之一：  
   
-    -   **同时**  
+    -   **两者**  
   
     -   **高度**  
   
     -   **宽度**  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+## <a name="requirements"></a>要求  
   
  Win32  
   
 ## <a name="see-also"></a>请参阅  
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
-

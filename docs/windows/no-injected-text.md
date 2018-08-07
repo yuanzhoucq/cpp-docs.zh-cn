@@ -1,5 +1,5 @@
 ---
-title: no_injected_text |Microsoft 文档
+title: no_injected_text |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880343"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603415"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-阻止编译器将注入代码作为特性，请使用结果。  
+禁止编译器注入代码作为特性使用结果。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>参数  
- `boolean`（可选）  
- **true**如果你想将插入的没有代码**false**若要允许代码注入。 **true**是默认设置。  
+ *布尔*（可选）  
+ **true**注入，没有代码想**false**若要允许代码注入。 **true**是默认值。  
   
 ## <a name="remarks"></a>备注  
- 最常见的用途**no_injected_text** c + + 属性是通过[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项，可插入**no_injected_text**到.mrg 文件中的属性。  
+ 最常见用法**no_injected_text** c + + 属性是通过[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项，将插入**no_injected_text**属性拖动到.mrg 文件。  
   
 ## <a name="requirements"></a>要求  
   

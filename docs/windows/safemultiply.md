@@ -1,5 +1,5 @@
 ---
-title: SafeMultiply |Microsoft 文档
+title: SafeMultiply |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662f43d34494850f230723f57163383df99e4848
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889477"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603311"
 ---
 # <a name="safemultiply"></a>SafeMultiply
-将在一起以防止溢出的方式的两个数字相乘。  
+将防止溢出的方式在一起的两个数字相乘。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>参数  
- [in] `t`  
- 要相乘的第一个数。 其类型必须为 T。  
+### <a name="parameters"></a>参数  
+ [in]*t*  
+ 要相乘的第一个数。 其类型必须为`T`。  
   
- [in] `u`  
- 要相乘的第二个数。 其类型必须为 U。  
+ [in]*u*  
+ 要相乘的第二个数。 其类型必须为`U`。  
   
- [out] `result`  
- 参数其中`SafeMultiply`存储结果。  
+ [out]*结果*  
+ 参数位置**SafeMultiply**将结果存储。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果没有错误发生;`false`如果发生错误。  
+ **true**如果未发生错误;**false**如果发生错误。  
   
 ## <a name="remarks"></a>备注  
- 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个乘法运算[SafeInt 类](../windows/safeint-class.md)。  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单个乘法运算[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
- 有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
+ 有关模板类型的详细信息`T`并`U`，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** safeint.h  

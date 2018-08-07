@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregisterwinrtobject 方法 |Microsoft 文档'
+title: 'Module:: unregisterwinrtobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882597"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607467"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject 方法
-取消一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。  
+注销一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +34,10 @@ virtual HRESULT UnregisterWinRTObject(
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>参数  
- `cookie`  
+ *Cookie*  
  指针，其指向标识将撤销其注册的类对象的值。  
   
 ## <a name="return-value"></a>返回值  

@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Detach 方法 |Microsoft 文档'
+title: 'Makeallocator:: Detach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876964"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603363"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,9 +34,9 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>备注  
- 解除分配的内存之间的关联[分配](../windows/makeallocator-allocate-method.md)从当前 MakeAllocator 对象的方法。  
+ 解除分配的内存之间的关联[分配](../windows/makeallocator-allocate-method.md)方法从当前**MakeAllocator**对象。  
   
- 如果调用 Detach()，你负责删除分配方法提供的内存。  
+ 如果您调用**Detach()**，你需要负责删除提供的内存`Allocate`方法。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

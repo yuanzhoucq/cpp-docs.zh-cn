@@ -1,5 +1,5 @@
 ---
-title: MixIn 结构 |Microsoft 文档
+title: MixIn 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876158"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605719"
 ---
 # <a name="mixin-structure"></a>MixIn 结构
 确保运行时类先后派生自 Windows 运行时接口（如果有）和经典 COM 接口。  
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `Derived`  
- 从派生的类型[实现](../windows/implements-structure.md)结构。  
+### <a name="parameters"></a>参数  
+ *派生*  
+ 一个类型派生自[实现](../windows/implements-structure.md)结构。  
   
- `MixInType`  
+ *MixInType*  
  基类型。  
   
- `hasImplements`  
- 如果 `true` 派生自当前实现基类型，则为 `MixInType`；否则为 `false`。  
+ *hasImplements*  
+ **true**如果*MixInType*是派生自当前实现基类型;**false**否则为。  
   
 ## <a name="remarks"></a>备注  
- 如果从 Windows 运行时和经典 COM 接口派生的类，类声明列表必须先列出任何 Windows 运行时接口，以及然后任何经典 COM 接口。 MixIn 确保以正确顺序指定接口。  
+ 如果从 Windows 运行时和 COM 接口派生的类，类声明列表必须先列出任何 Windows 运行时接口，然后任何经典 COM 接口。 **MixIn**可确保按正确的顺序指定接口。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `MixIn`  

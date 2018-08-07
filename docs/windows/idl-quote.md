@@ -1,5 +1,5 @@
 ---
-title: idl_quote |Microsoft 文档
+title: idl_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878507"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606509"
 ---
 # <a name="idlquote"></a>idl_quote
-允许你使用 Visual c + + 的当前版本中不支持的 IDL 构造并将它们传递到生成的.idl 文件。  
+可以使用不支持当前版本的 Visual c + + 中的 IDL 构造并将它们传递到生成的.idl 文件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>参数  
  *文本*  
- 你想 Visual c + + 编译器，而无需返回编译器错误传递给生成的.idl 文件中的特性名称。  
+ 希望 Visual c + + 编译器，而不返回编译器错误传递给生成的.idl 文件的属性名称。  
   
 ## <a name="remarks"></a>备注  
- 如果**idl_quote**然后的独立特性 （与右括号后面的分号），使用 c + + 属性*文本*放置在合并的.idl 文件原样。 如果**idl_quote**使用上一个符号，*文本*放置在该符号的属性块内。  
+ 如果**idl_quote** c + + 属性使用的独立特性 （与右括号后面的分号），然后*文本*原样合并的.idl 文件中放置。 如果**idl_quote**使用的符号*文本*放在该符号的属性块内。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何可以指定不支持的属性 (使用**中**，这受支持) 以及如何定义和使用未定义的.idl 构造：  
+ 下面的代码演示如何可以指定不支持的属性 (使用**在**，这受支持) 以及如何定义和使用未定义的.idl 构造：  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 此代码会导致 MYFLOT 和 MYDUB 和*文本*条目以放置在生成的.idl 文件。 *名称*参数强制*文本*放置在引用的任何内容之前*名称*生成的.idl 文件中。 *依赖关系*参数强制前后放置的依赖项列表定义*文本*生成的.idl 文件中。  
+ 此代码会导致 MYFLOT 和 MYDUB 并*文本*要置于生成的.idl 文件中的项。 *名称*参数将强制*文本*在引用的任何操作之前放置*名称*生成的.idl 文件中。 *依赖项*参数强制依赖关系列表定义之前放置*文本*生成的.idl 文件中。  
   
 ## <a name="requirements"></a>要求  
   

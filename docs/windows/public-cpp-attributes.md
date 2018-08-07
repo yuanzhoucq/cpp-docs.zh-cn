@@ -1,5 +1,5 @@
 ---
-title: 公共 （c + + 特性） |Microsoft 文档
+title: public （c + + 特性） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881726"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603599"
 ---
 # <a name="public-c-attributes"></a>public（C++ 特性）
-可确保即使它未从引用.idl 文件中，typedef 将转到类型库。  
+可确保即使它未从引用的.idl 文件中，一个 typedef 将转到类型库。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -41,7 +39,7 @@ ms.locfileid: "33881726"
 ## <a name="example"></a>示例  
  下面的代码演示如何使用**公共**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,7 +59,7 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**适用对象**|`typedef`|  
+|**适用对象**|**typedef**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

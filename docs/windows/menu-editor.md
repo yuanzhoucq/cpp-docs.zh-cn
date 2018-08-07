@@ -1,5 +1,5 @@
 ---
-title: 菜单编辑器 |Microsoft 文档
+title: 菜单编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879433"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606245"
 ---
 # <a name="menu-editor"></a>菜单编辑器
 使用菜单，可以按照逻辑方式和易于查找的方式排列命令。 使用菜单编辑器，可以通过直接使用与已完成应用程序中非常相似的菜单栏来创建和编辑菜单。  
   
- 对于 Visual C++ 项目，可以使用菜单编辑器执行以下操作：  
+对于 Visual C++ 项目，可以使用菜单编辑器执行以下操作：  
   
 -   [创建菜单](../windows/creating-a-menu.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33879433"
     > [!NOTE]
     >  对于 Microsoft 基础类库 (MFC) 程序和 ATL 程序，可以使用代码向导将菜单命令与代码挂钩。 有关更多信息，请参阅 [添加事件](../ide/adding-an-event-visual-cpp.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -75,4 +75,3 @@ ms.locfileid: "33879433"
  [用户界面对象和命令 Id](../mfc/user-interface-objects-and-command-ids.md)   
  [菜单](../mfc/menus-mfc.md)   
  [菜单](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

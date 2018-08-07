@@ -1,5 +1,5 @@
 ---
-title: 实现结构 |Microsoft 文档
+title: 实现结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880910"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607801"
 ---
 # <a name="implements-structure"></a>Implements 结构
-为指定接口实现 QueryInterface 和 GetIid。  
+实现`QueryInterface`和`GetIid`指定接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `I0`  
+### <a name="parameters"></a>参数  
+ *I0*  
  第零个接口 id。 （必需）  
   
- `I1`  
+ *I1*  
  第一个接口 id。 （可选）  
   
- `I2`  
+ *I2*  
  第二个接口 id。 （可选）  
   
- `I3`  
+ *I3*  
  第三个接口 id。 （可选）  
   
- `I4`  
+ *I4*  
  第四个接口 id。 （可选）  
   
- `I5`  
+ *I5*  
  第五个接口 id。 （可选）  
   
- `I6`  
+ *I6*  
  第六个接口 id。 （可选）  
   
- `I7`  
+ *I7*  
  第七个接口 id。 （可选）  
   
- `I8`  
+ *I8*  
  第八个接口 id。 （可选）  
   
- `I9`  
+ *I9*  
  第九个接口 id。 （可选）  
   
- `flags`  
- 配置类的标志。 一个或多个[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)中指定的枚举[RuntimeClassFlags](../windows/runtimeclassflags-structure.md)结构。  
+ *flags*  
+ 配置标志的类。 一个或多个[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)中指定的枚举[RuntimeClassFlags](../windows/runtimeclassflags-structure.md)结构。  
   
 ## <a name="remarks"></a>备注  
- 派生自指定的接口列表和实现 QueryInterface 和 GetIid 的帮助程序模板。  
+ 派生的指定接口的列表，它实现的帮助程序模板用于`QueryInterface`和`GetIid`。  
   
- 每个`I0`通过`I9`必须从任一 IUnknown，IInspectable，派生的接口参数或[ChainInterfaces](../windows/chaininterfaces-structure.md)模板。 `flags`参数确定是否为 IUnknown 或 IInspectable 生成支持。  
+ 每个*I0*通过*I9*接口参数必须或者派生`IUnknown`， `IInspectable`，或者[ChainInterfaces](../windows/chaininterfaces-structure.md)模板。 *标志*参数确定是否为生成支持`IUnknown`或`IInspectable`。  
   
 ## <a name="members"></a>成员  
   
@@ -110,14 +110,14 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 |名称|描述|  
 |----------|-----------------|  
 |[Implements::CanCastTo 方法](../windows/implements-cancastto-method.md)|获取一个指向指定接口。|  
-|[Implements::CastToUnknown 方法](../windows/implements-casttounknown-method.md)|获取一个指向基础的 IUnknown 接口。|  
+|[Implements::CastToUnknown 方法](../windows/implements-casttounknown-method.md)|获取一个指针指向基础`IUnknown`接口。|  
 |[Implements::FillArrayWithIid 方法](../windows/implements-fillarraywithiid-method.md)|将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。|  
   
 ### <a name="protected-constants"></a>受保护的常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[Implements::IidCount 常量](../windows/implements-iidcount-constant.md)|保存实现接口 Id 的数量。|  
+|[Implements::IidCount 常量](../windows/implements-iidcount-constant.md)|存储实现的接口 Id 的数目。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  

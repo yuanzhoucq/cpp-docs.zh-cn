@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Allocate 方法 |Microsoft 文档'
+title: 'Makeallocator:: Allocate 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876210"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606258"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，指向已分配的内存中; 的指针否则为`nullptr`。  
+ 如果成功，指向已分配的内存中;否则为**nullptr**。  
   
 ## <a name="remarks"></a>备注  
- 分配内存并将其与当前的 MakeAllocator 对象关联。  
+ 分配内存，并将其与当前相关联**MakeAllocator**对象。  
   
- 分配的大小是类型的内存的由当前的 MakeAllocator 模板参数指定的大小。  
+ 已分配内存的大小是由当前指定的类型的大小**MakeAllocator**模板参数。  
   
- 开发人员需要重写仅 Allocate() 方法以实现不同的内存分配模型。  
+ 开发人员需要仅重写**Allocate()** 方法来实现不同的内存分配模型。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

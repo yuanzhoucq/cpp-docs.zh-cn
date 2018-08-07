@@ -1,5 +1,5 @@
 ---
-title: nonextensible |Microsoft 文档
+title: nonextensible |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881596"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608490"
 ---
 # <a name="nonextensible"></a>nonextensible
-指定`IDispatch`实现仅包括的属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。  
+指定`IDispatch`实现仅包括属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -41,9 +39,9 @@ ms.locfileid: "33881596"
  利用**nonextensible**还要求[oleautomation](../windows/oleautomation.md)属性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示一个使用**nonextensible**属性：  
+ 下面的代码演示的一种用途**nonextensible**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**适用对象**|`interface`|  
+|**适用对象**|**interface**|  
 |**可重复**|否|  
-|**必需的特性**|**双**和**oleautomation**，或**调度接口**|  
+|**必需的特性**|`dual` 和`oleautomation`，或 `dispinterface`|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

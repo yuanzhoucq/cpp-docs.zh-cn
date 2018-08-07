@@ -1,5 +1,5 @@
 ---
-title: 导入 |Microsoft 文档
+title: 导入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877262"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604702"
 ---
 # <a name="import"></a>import
-指定包含你想要从主 IDL 中引用的定义的另一个.idl、.odl 或标头文件。  
+指定包含要引用主要 IDL 中定义的另一个.idl、.odl 或标头文件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>参数  
- `idl_file`  
+### <a name="parameters"></a>参数  
+ *idl_file*  
  要导入当前项目的类型库的.idl 文件的名称。  
   
 ## <a name="remarks"></a>备注  
- **导入**c + + 特性将导致`#import`语句下面放置`import "docobj.idl"`生成的.idl 文件中的语句。 **导入**属性具有相同的功能[导入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 特性。  
+ **导入**c + + 属性会导致`#import`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。 **导入**属性具有相同的功能[导入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 特性。  
   
- **导入**属性仅将指定的文件放入将由你的项目; 生成的.idl 文件**导入**属性不允许您从源代码中指定的文件调用构造在你的项目。  若要从项目中的源代码中指定的文件调用构造，请使用[#import](../preprocessor/hash-import-directive-cpp.md)和`embedded_idl`属性也可以将的.h 文件`idl_file`，如果存在的.h 文件。  
+ **导入**属性仅将指定的文件放入你的项目; 将生成的.idl 文件**导入**属性不允许您从源代码中指定的文件调用构造在你的项目。  若要从项目中的源代码在指定的文件中调用的构造，使用[#import](../preprocessor/hash-import-directive-cpp.md)并`embedded_idl`属性也可以将的.h 文件*idl_file*，如果存在的.h 文件。  
   
 ## <a name="example"></a>示例  
  下面的代码：  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- 产生生成的.idl 文件中的以下代码：  
+ 生成生成的.idl 文件中的以下代码：  
   
 ```  
 import "docobj.idl";  
@@ -85,6 +84,6 @@ library MyLib {
  [IDL 特性](../windows/idl-attributes.md)   
  [独立特性](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
- [importlib](../windows/importlib.md)   
+ [导入库](../windows/importlib.md)   
  [包括](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

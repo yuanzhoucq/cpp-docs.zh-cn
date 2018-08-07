@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + + /cli CLI) |Microsoft 文档
+title: __identifier (c + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877678"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603340"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-可以用作标识符的 Visual c + + 关键字的使用。  
+可以使用 Visual c + + 关键字用作标识符。  
   
 ## <a name="all-platforms"></a>所有平台  
-**语法**  
+### <a name="syntax"></a>语法  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**备注**  
+### <a name="remarks"></a>备注  
   
-利用`__identifier`允许使用，但强烈建议不要这样做作为一种样式不是关键字的标识符的关键字。  
+利用 **__identifier**允许使用，但强烈建议不要使用作为一种样式的关键字不是关键字的标识符。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ### <a name="examples"></a>示例  
  **示例**  
   
- 在下面的示例中，类名为`template`是在 C# 中创建和分布式为 DLL。 使用 Visual c + + 程序中`template`类，`__identifier`关键字隐藏这一事实，`template`是标准 c + + 关键字。  
+ 在以下示例中，类命名为`template`是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中`template`类， **__identifier**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注  
   
- `__identifier`关键字是有效，且 **/clr**编译器选项。  
+ **__Identifier**关键字是有效，且`/clr`编译器选项。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 在下面的示例中，类名为`template`是在 C# 中创建和分布式为 DLL。 使用 Visual c + + 程序中`template`类，`__identifier`关键字隐藏这一事实，`template`是标准 c + + 关键字。  
+ 在以下示例中，类命名为`template`是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中`template`类， **__identifier**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerwinrtobject 方法 |Microsoft 文档'
+title: 'Module:: registerwinrtobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874949"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603752"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
 注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。  
@@ -36,17 +36,17 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>参数  
- `serverName`  
+### <a name="parameters"></a>参数  
+ *服务器名称*  
  指定受此操作影响的对象子集的名称。  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  要注册的可激活 CLSID 的数组。  
   
- `cookie`  
+ *Cookie*  
  标识已注册类对象的值。 此值以后将用于撤销注册。  
   
- `count`  
+ *count*  
  要注册的对象的数量。  
   
 ## <a name="return-value"></a>返回值  

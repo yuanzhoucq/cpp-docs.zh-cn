@@ -1,5 +1,5 @@
 ---
-title: progid |Microsoft 文档
+title: progid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2b2d2168b568c74c5404cc83bab1e5f77570773
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98057773d6cbb51fe5aacc3ac814af89532bd887
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880428"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607980"
 ---
 # <a name="progid"></a>progid
 指定 COM 对象的 ProgID。  
@@ -30,8 +30,7 @@ ms.locfileid: "33880428"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ progid(  
+[ progid(  
    name  
 ) ];  
 ```  
@@ -40,21 +39,21 @@ ms.locfileid: "33880428"
  *name*  
  表示的对象的 ProgID。  
   
- Progid 提供用于标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读的版本。  
+ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读版本。  
   
 ## <a name="remarks"></a>备注  
- **Progid** c + + 属性允许您指定的 COM 对象的 ProgID。 ProgID 形式具有窗体*name1.name2.version*。 如果不指定*版本*对于其 ProgID 的默认版本为 1。 如果不指定*name1.name2*，默认名称是*classname.classname*。 如果不指定**progid**而且你指定**vi_progid**， *name1.name2* ，将从**vi_progid**和 (下一步顺序追加数字） 版本。  
+ **Progid** c + + 属性允许您指定 COM 对象的 ProgID。 ProgID 具有窗体*name1.name2.version*。 如果未指定*版本*ProgID 的默认版本为 1。 如果未指定*name1.name2*，默认名称是*classname.classname*。 如果未指定**progid**并且你指定`vi_progid`， *name1.name2*取自`vi_progid`和 （下一个序列号） 追加版本。  
   
- 如果使用的属性块**progid**也不使用`uuid`，编译器将检查注册表以查看是否`uuid`指定存在**progid**。 如果**progid**未指定，则将使用版本 （和组件类名称，如果创建组件类） 来生成**progid**。  
+ 如果使用的特性块**progid**还使用**uuid**，编译器将检查注册表以查看是否**uuid**存在指定**progid**. 如果**progid**未指定，则将使用的版本 （和组件类名称，如果创建组件类） 来生成**progid**。  
   
- **progid**意味着**组件类**特性，也就是说，如果你指定**progid**，它是与指定的相同步**组件类**和**progid**属性。  
+ **progid**意味着`coclass`属性，也就是说，如果您指定**progid**，它是与指定相同的功能`coclass`并**progid**属性。  
   
- **Progid**属性将导致一个类，以指定的名称下自动注册。 生成的.idl 文件将不会显示**progid**值。  
+ **Progid**属性会导致自动注册的指定名称的类。 生成的.idl 文件将不会显示**progid**值。  
   
- 当使用 ATL 项目中使用此属性时，该属性的行为更改。 除了上述行为，指定与此属性的信息用于**GetProgID**函数，通过插入**组件类**属性。 有关详细信息，请参阅[组件类](../windows/coclass.md)属性。  
+ 当使用 ATL 的项目中使用此属性时，该属性的行为更改。 除了上述行为，在使用用此特性指定的信息`GetProgID`函数，由注入`coclass`属性。 有关详细信息，请参阅[组件类](../windows/coclass.md)属性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[组件类](../windows/coclass.md)的示例使用**progid**。  
+ 有关示例，请参阅[组件类](../windows/coclass.md)的示例使用**progid**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -62,7 +61,7 @@ ms.locfileid: "33880428"
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

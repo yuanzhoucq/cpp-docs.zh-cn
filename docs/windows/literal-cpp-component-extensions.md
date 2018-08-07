@@ -1,5 +1,5 @@
 ---
-title: 文本 （c + + 组件扩展） |Microsoft 文档
+title: 文本 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78dda3c52192b0d2755bdc8f8944eb0e1443e7af
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879352"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604169"
 ---
 # <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
-（数据成员） 的变量标记为`literal`中 **/clr**编译为等同的本机`static const`变量。  
+（数据成员） 的变量标记为**文字**中 **/clr**编译是等同的本机**静态常量**变量。  
   
 ## <a name="all-platforms"></a>所有平台  
- **备注**  
+### <a name="remarks"></a>备注 
   
  （此语言功能没有适用于所有运行时的备注。）  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注 
   
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
   
 ## <a name="remarks"></a>备注  
- 数据成员标记为`literal`声明时必须初始化和值必须为常量整型、 枚举类型或字符串类型。 从初始化表达式类型转换为静态常量数据成员类型时，不能使用用户定义的转换。  
+ 数据成员标记为**文字**必须声明时初始化并且值必须是常量整型、 枚举或字符串类型。 从初始化表达式类型转换为静态常量数据成员类型时，不能使用用户定义的转换。  
   
  没有在运行时为文本字段分配内存；编译器只将其值插入该类的元数据中。  
   
- 元数据中标记为 `static const` 的变量不可用于其他编译器。  
+ 变量标记**静态常量**将不可用到其他编译器的元数据中。  
   
- 有关详细信息，请参阅[静态](../cpp/storage-classes-cpp.md)和[const](../cpp/const-cpp.md)。  
+ 有关详细信息，请参阅[静态](../cpp/storage-classes-cpp.md)并[const](../cpp/const-cpp.md)。  
   
- `literal` 是上下文相关的关键字。 请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。  
+ **文本**是上下文相关关键字。 请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。  
   
 ## <a name="example"></a>示例  
- 此示例显示，`literal` 变量表示 `static`。  
+ 此示例演示**文字**变量表示**静态**。  
   
-```  
+```cpp  
 // mcppv2_literal.cpp  
 // compile with: /clr  
 ref struct X {  
@@ -72,7 +72,7 @@ int main() {
 ## <a name="example"></a>示例  
  下面的示例演示了对元数据的文本影响：  
   
-```  
+```cpp  
 // mcppv2_literal2.cpp  
 // compile with: /clr /LD  
 public ref struct A {  
@@ -92,9 +92,9 @@ public ref struct A {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 C# 编写，引用上一示例中创建的元数据并显示 `literal` 和 `static const` 变量的影响：  
+ 下面的示例，在 C# 中编写引用在上一示例中创建的元数据，并显示所产生的影响**文字**并**静态常量**变量：  
   
-```  
+```cs  
 // mcppv2_literal3.cs  
 // compile with: /reference:mcppv2_literal2.dll  
 // A C# program  
@@ -124,7 +124,7 @@ class B {
 ```  
   
 ## <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

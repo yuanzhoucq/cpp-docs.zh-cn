@@ -1,5 +1,5 @@
 ---
-title: 范围 （c + +） |Microsoft 文档
+title: 范围 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877925"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603437"
 ---
 # <a name="range-c"></a>range (C++)
-指定自变量或在运行时设置其值的字段的允许值的范围。  
+指定参数或在运行时设置其值的字段的允许值的范围。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -39,17 +38,17 @@ ms.locfileid: "33877925"
   
 #### <a name="parameters"></a>参数  
  *low*  
- 低范围值。  
+ 范围下限值。  
   
  *high*  
- 高范围值中。  
+ 高范围值。  
   
 ## <a name="remarks"></a>备注  
  **范围**c + + 属性具有相同的功能[范围](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 特性。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,5 +78,5 @@ __interface ICustom {
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [方法特性](../windows/method-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [数据成员特性](../windows/data-member-attributes.md)   

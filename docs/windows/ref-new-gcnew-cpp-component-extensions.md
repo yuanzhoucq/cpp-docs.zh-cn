@@ -1,5 +1,5 @@
 ---
-title: ref new、 gcnew （c + + 组件扩展） |Microsoft 文档
+title: ref new、 gcnew （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879056"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606180"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
-`ref new`聚合关键字分配进行垃圾回收时在对象变为不可访问，并返回的句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到分配的对象。  
+**新的 ref**聚合关键字分配进行垃圾回收时，对象将变为不可访问，并返回一个句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 已分配对象。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- `ref new` 分配的类型的实例的内存会自动释放。  
+ 分配的类型的实例的内存**ref 新**会自动释放。  
   
- 如果无法分配内存，则 `ref new` 操作会引发 `OutOfMemoryException`。  
+ 一个**新的 ref**操作，则会引发`OutOfMemoryException`如果无法分配内存。  
   
  有关如何分配和释放本机 c + + 类型的内存的详细信息，请参阅[新和 delete 运算符](../cpp/new-and-delete-operators.md)。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- 使用 `ref new` 可为要自动管理其生存期的 Windows 运行时对象分配内存。 对象会在其引用计数变为零（这会在引用的最后一个副本超出范围之后发生）时自动释放。 有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
+ 使用**ref 新**分配内存来存放 Windows 运行时对象想要自动管理其生存期。 对象会在其引用计数变为零（这会在引用的最后一个副本超出范围之后发生）时自动释放。 有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- 托管类型（引用或值类型）的内存由 `gcnew` 分配，使用垃圾回收进行释放。  
+ 分配的托管类型 （引用或值类型） 的内存**gcnew**，并且通过使用垃圾回收已解除分配。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的示例使用 `gcnew` 分配 Message 对象。  
+ 下面的示例使用**gcnew**分配消息对象。  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **示例**  
+ 下面的示例使用**gcnew**创建使用类似于引用类型的装箱的值类型。  
   
- 下面的示例使用 `gcnew` 创建装箱值类型以供使用（如引用类型）。  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

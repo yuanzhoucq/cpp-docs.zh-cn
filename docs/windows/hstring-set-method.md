@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Set 方法 |Microsoft 文档'
+title: 'Hstring:: Set 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882412"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606392"
 ---
 # <a name="hstringset-method"></a>HString::Set 方法
-将当前 HString 对象的值设置为指定的宽字符字符串或 HString 参数。  
+设置的当前值**HString**为指定的宽字符字符串的对象或**HString**参数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,15 +39,15 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>参数  
- `str`  
+### <a name="parameters"></a>参数  
+ *str*  
  宽字符字符串。  
   
- `len`  
- 最大长度`str`分配给当前 HString 对象的参数。  
+ *Len*  
+ 最大长度*str*分配给当前的参数**HString**对象。  
   
- `hstr`  
- 现有 HString 对象。  
+ *hstr*  
+ 将现有**HString**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

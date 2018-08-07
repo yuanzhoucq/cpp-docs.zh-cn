@@ -1,5 +1,5 @@
 ---
-title: 'Mutextraits:: Unlock 方法 |Microsoft 文档'
+title: 'Mutextraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880356"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606678"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock 方法
-释放共享资源的独有的控制。  
+释放全权控制共享资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +35,8 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
+### <a name="parameters"></a>参数  
+ *h*  
  互斥体对象的句柄。  
   
 ## <a name="return-value"></a>返回值  

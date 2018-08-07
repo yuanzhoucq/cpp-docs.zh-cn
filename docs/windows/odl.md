@@ -1,5 +1,5 @@
 ---
-title: odl |Microsoft 文档
+title: odl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877691"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608181"
 ---
 # <a name="odl"></a>odl
 标识为对象描述语言 (ODL) 接口的接口。 MIDL 编译器不需要**odl**属性; 仅为与较旧的.odl 文件的兼容性而识别它。  
@@ -30,9 +30,7 @@ ms.locfileid: "33877691"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -40,7 +38,7 @@ ms.locfileid: "33877691"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ public:
   
 |||  
 |-|-|  
-|**适用对象**|`interface`|  
+|**适用对象**|**interface**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

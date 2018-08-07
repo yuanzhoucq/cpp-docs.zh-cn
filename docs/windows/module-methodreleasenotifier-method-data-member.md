@@ -1,5 +1,5 @@
 ---
-title: Module::MethodReleaseNotifier::method_ 数据成员 |Microsoft 文档
+title: Module::MethodReleaseNotifier::method_ 数据成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877184"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606808"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ 数据成员
-包含指向当前 Module::MethodReleaseNotifier 对象的事件处理程序的指针。  
+包含当前的事件处理程序指向**module:: methodreleasenotifier**对象。  
   
 ## <a name="syntax"></a>语法  
   

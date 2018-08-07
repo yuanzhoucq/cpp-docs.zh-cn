@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: fillarraywithiid 方法 |Microsoft 文档'
+title: 'Implements:: fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e020bd725d0c0f5c65ab1cfb38b45e2b8fbca62e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875716"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608853"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 方法
 将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。  
@@ -36,15 +36,15 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `index`  
- 一个指示此操作开始的数组元素的从零开始索引。 此操作完成后，`index`就会递增 1。  
+### <a name="parameters"></a>参数  
+ *index*  
+ 一个从零开始的索引，该值指示此操作的起始数组元素。 此操作完成后，*索引*都会增加 1。  
   
- `iids`  
+ *iid*  
  类型 IID 的数组。  
   
 ## <a name="remarks"></a>备注  
- 内部帮助程序函数。  
+ 内部帮助器函数。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

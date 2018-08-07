@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator 类 |Microsoft 文档
+title: MakeAllocator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878055"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605914"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -30,7 +30,6 @@ ms.locfileid: "33878055"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
+### <a name="parameters"></a>参数  
+ *T*  
  类型名称。  
   
- `hasWeakReferenceSupport`  
- `true` 若要为支持弱引用; 的对象分配内存`false`为不支持弱引用的对象分配内存。  
+ *hasWeakReferenceSupport*  
+ **true**为支持弱引用; 的对象分配内存**false**为不支持弱引用的对象分配内存。  
   
 ## <a name="remarks"></a>备注  
- 可激活的类，在有无弱引用支持，为分配内存。  
+ 可激活的类，带或不带弱引用支持，为分配内存。  
   
- 重写 MakeAllocator 类来实现用户定义的内存分配模型。  
+ 重写**MakeAllocator**类，以实现用户定义的内存分配模型。  
   
- MakeAllocator 通常用于防止内存泄漏，如果在构造过程中引发的对象。  
+ **MakeAllocator**通常用于防止内存泄漏，如果在构造期间引发的对象。  
   
 ## <a name="members"></a>成员  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator 构造函数](../windows/makeallocator-makeallocator-constructor.md)|初始化 MakeAllocator 类的新实例。|  
-|[MakeAllocator::~MakeAllocator 析构函数](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化 MakeAllocator 类的当前实例。|  
+|[MakeAllocator::MakeAllocator 构造函数](../windows/makeallocator-makeallocator-constructor.md)|初始化的新实例**MakeAllocator**类。|  
+|[MakeAllocator::~MakeAllocator 析构函数](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化的当前实例**MakeAllocator**类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|分配内存并将其与当前的 MakeAllocator 对象关联。|  
-|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|解除分配的内存之间的关联[分配](../windows/makeallocator-allocate-method.md)从当前 MakeAllocator 对象的方法。|  
+|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|分配内存，并将其与当前相关联**MakeAllocator**对象。|  
+|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|解除分配的内存之间的关联[分配](../windows/makeallocator-allocate-method.md)方法从当前**MakeAllocator**对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `MakeAllocator`  

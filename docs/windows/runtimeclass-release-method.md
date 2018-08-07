@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Release 方法 |Microsoft 文档'
+title: 'Runtimeclass:: Release 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888791"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607519"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release 方法
-对当前 RuntimeClass 对象执行 COM 版本操作。  
+执行 COM 释放操作对当前**RuntimeClass**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- 如果引用计数变为零，则将删除 RuntimeClass 对象。  
+ 如果引用计数变为零， **RuntimeClass**删除对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

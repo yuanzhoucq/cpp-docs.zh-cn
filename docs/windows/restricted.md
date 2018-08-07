@@ -1,5 +1,5 @@
 ---
-title: 受限制 |Microsoft 文档
+title: 受限 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602767"
 ---
 # <a name="restricted"></a>restricted
 指定不能任意调用模块、 接口或调度接口的成员。  
@@ -30,15 +30,14 @@ ms.locfileid: "33892873"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `interfaces`  
- 不能调用任意对 COM 对象的一个或多个接口。 此参数才有效时应用于类。  
+### <a name="parameters"></a>参数  
+ *interfaces*  
+ 可能不会调用任意 COM 对象的一个或多个接口。 此参数才有效时应用于类。  
   
 ## <a name="remarks"></a>备注  
  **受限**c + + 属性具有相同的功能[受限](http://msdn.microsoft.com/library/windows/desktop/aa367157)MIDL 特性。  
@@ -46,7 +45,7 @@ ms.locfileid: "33892873"
 ## <a name="example"></a>示例  
  下面的代码演示如何使用**受限**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**适用对象**|接口方法， `interface`，**类**， `struct`|  
+|**适用对象**|接口方法，**接口**，**类**，**结构**|  
 |**可重复**|否|  
-|**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
+|**必需的特性**|**组件类**(当应用于**类**或**结构**)|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

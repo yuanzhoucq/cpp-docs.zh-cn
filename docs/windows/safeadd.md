@@ -1,5 +1,5 @@
 ---
-title: SafeAdd |Microsoft 文档
+title: SafeAdd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892711"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607399"
 ---
 # <a name="safeadd"></a>SafeAdd
 防止溢出的方式添加两个数字。  
@@ -38,21 +38,21 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>参数  
- [in] `t`  
- 要添加的第一个数字。 其类型必须为 T。  
+### <a name="parameters"></a>参数  
+ [in]*t*  
+ 要添加的第一个数。 其类型必须为 T。  
   
- [in] `u`  
+ [in]*u*  
  要添加的第二个数字。 其类型必须为 U。  
   
- [out] `result`  
- 参数其中`SafeAdd`存储结果。  
+ [out]*结果*  
+ 参数位置**SafeAdd**将结果存储。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果没有错误发生;`false`如果发生错误。  
+ **true**如果未发生错误;**false**如果发生错误。  
   
 ## <a name="remarks"></a>备注  
- 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个加法运算[SafeInt 类](../windows/safeint-class.md)。  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单个加法运算[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  

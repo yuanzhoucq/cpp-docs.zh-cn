@@ -1,5 +1,5 @@
 ---
-title: requestedit |Microsoft 文档
+title: requestedit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878250"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606470"
 ---
 # <a name="requestedit"></a>requestedit
-该值指示属性是否支持**OnRequestEdit**通知。  
+指示该属性支持`OnRequestEdit`通知。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Requestedit** c + + 属性具有相同的功能[requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)的示例使用**requestedit**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)的示例使用**requestedit**。  
   
 ## <a name="requirements"></a>要求  
   

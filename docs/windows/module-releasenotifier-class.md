@@ -1,5 +1,5 @@
 ---
-title: 'Module:: releasenotifier 类 |Microsoft 文档'
+title: 'Module:: releasenotifier 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1deeb3076d3f1bfc2243ec333f258f543a37fceb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878387"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608386"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
 在释放模块中的最后一个对象时调用事件处理程序。  
@@ -39,15 +39,15 @@ class ReleaseNotifier;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier 析构函数](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|取消初始化 Module::ReleaseNotifier 类的当前实例。|  
-|[Module::ReleaseNotifier::ReleaseNotifier 构造函数](../windows/module-releasenotifier-releasenotifier-constructor.md)|初始化 Module::ReleaseNotifier 类的新实例。|  
+|[Module::ReleaseNotifier::~ReleaseNotifier 析构函数](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|取消初始化的当前实例**module:: releasenotifier**类。|  
+|[Module::ReleaseNotifier::ReleaseNotifier 构造函数](../windows/module-releasenotifier-releasenotifier-constructor.md)|初始化的新实例**module:: releasenotifier**类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
 |[Module::ReleaseNotifier::Invoke 方法](../windows/module-releasenotifier-invoke-method.md)|实现后，在释放模块中的最后一个对象时调用事件处理程序。|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|如果对象是使用 `true` 的参数构造的，则删除当前 Module::ReleaseNotifier 对象。|  
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|删除当前**module:: releasenotifier**对象如果对象使用参数的构造**true**。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ReleaseNotifier`  

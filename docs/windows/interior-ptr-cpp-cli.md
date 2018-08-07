@@ -1,5 +1,5 @@
 ---
-title: interior_ptr (C + + /cli CLI) |Microsoft 文档
+title: interior_ptr (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879102"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605118"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
-*内部指针*声明内引用类型，但不是属于对象本身的指针。 内部指针可以指向引用句柄、值类型、装箱类型句柄、托管类型的成员或托管数组的元素。  
+*内部指针*声明指针指向内部引用类型，而不是对象本身。 内部指针可以指向引用句柄、值类型、装箱类型句柄、托管类型的成员或托管数组的元素。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  （此语言功能没有适用于所有运行时的备注。）  
@@ -36,7 +36,7 @@ ms.locfileid: "33879102"
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  以下语法示例演示内部指针。  
@@ -49,13 +49,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
 ### <a name="parameters"></a>参数  
  *cv_qualifier*  
- **const**或`volatile`限定符。  
+ **const**或**易失性**限定符。  
   
  *type*  
- 一种*初始值设定项*。  
+ 类型*初始值设定项*。  
   
  *var*  
- `interior_ptr` 变量的名称。  
+ 名称**interior_ptr**变量。  
   
  *initializer*  
  可以分配给本机指针的引用类型、托管数组的元素或者任何其他对象的成员。  
@@ -63,17 +63,17 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="remarks"></a>备注  
  本机指针无法跟踪项，因为其位置在托管堆上不断变化，这是由垃圾回收器移动对象实例引起的。 为了使指针正确指向实例，运行时需要将指针更新到新定位的对象。  
   
- `interior_ptr` 表示本机指针的功能超集。  因此，可以分配给本机指针的内容也可以分配给 `interior_ptr`。  内部指针允许执行与本机指针相同的操作，其中包括比较和指针算法。  
+ **Interior_ptr**表示本机指针的功能超集。  因此，可以分配给本机指针的任何内容还可以分配给**interior_ptr**。  内部指针允许执行与本机指针相同的操作，其中包括比较和指针算法。  
   
  内部指针只能在堆栈上声明。  内部指针无法声明为类的成员。  
   
  由于内部指针仅存在于堆栈，使用内部指针的地址会产生非托管指针。  
   
- `interior_ptr` 包含对 `bool` 的隐式转换，所以可在条件语句中使用。  
+ **interior_ptr**隐式转换为**bool**，这样可以在条件语句中使用它。  
   
- 有关如何声明的内部指针的指向不能在垃圾回收堆移动的对象的信息，请参阅[pin_ptr](../windows/pin-ptr-cpp-cli.md)。  
+ 有关如何声明内部指针指向一个对象，垃圾回收堆上无法移动到的信息，请参阅[pin_ptr](../windows/pin-ptr-cpp-cli.md)。  
   
- `interior_ptr` 位于 cli 命名空间中。  请参阅[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)有关详细信息。  
+ **interior_ptr** cli 命名空间中。  请参阅[Platform、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)有关详细信息。  
   
  有关内部指针的详细信息，请参阅  
   
@@ -86,10 +86,9 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 -   [如何：用 const 关键字声明内部指针 (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  以下示例演示如何声明和使用指向引用类型的内部指针。  
   

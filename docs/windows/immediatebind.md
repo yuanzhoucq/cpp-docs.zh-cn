@@ -1,5 +1,5 @@
 ---
-title: immediatebind |Microsoft 文档
+title: immediatebind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876259"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603041"
 ---
 # <a name="immediatebind"></a>immediatebind
-指示数据库将立即收到通知的数据绑定对象的属性的所有更改。  
+指示数据库将立即收到通知的所有更改将数据绑定对象的属性。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Immediatebind** c + + 属性具有相同的功能[immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅[可绑定](../windows/bindable.md)以举例说明如何使用**immediatebind**。  
+ 请参阅[可绑定](../windows/bindable.md)有关如何使用的示例**immediatebind**。  
   
 ## <a name="requirements"></a>要求  
   

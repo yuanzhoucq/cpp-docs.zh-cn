@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Queryinterface 方法 |Microsoft 文档'
+title: 'Runtimeclass:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892100"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603532"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface 方法
 检索指向指定的接口 id。  
@@ -30,7 +30,6 @@ ms.locfileid: "33892100"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>参数  
- `riid`  
+### <a name="parameters"></a>参数  
+ *riid*  
  接口 ID。  
   
- `ppvObject`  
- 此 opereation 完成后，指向由指定的接口的指针`riid`参数。  
+ *ppvObject*  
+ 当此 opereation 完成时，为指定的接口指针*riid*参数。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  

@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttounknown 方法 |Microsoft 文档'
+title: 'Interfacetraits:: Casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878120"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608646"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,18 +36,18 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 参数的类型`ptr`。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 参数的类型*ptr*。  
   
- `ptr`  
- 指针类型`T`。  
+ *ptr*  
+ 指向类型的指针*T*。  
   
 ## <a name="return-value"></a>返回值  
- 指向 IUnknown 从中`Base`派生。  
+ 从其指向 IUnknown 的指针`Base`派生。  
   
 ## <a name="remarks"></a>备注  
- 为指向 IUnknown 的指定的指针转换。  
+ 将转换为指针指定的指针`IUnknown`。  
   
  有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   

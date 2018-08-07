@@ -1,5 +1,5 @@
 ---
-title: RemoveReference 结构 |Microsoft 文档
+title: RemoveReference 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881258"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602699"
 ---
 # <a name="removereference-structure"></a>RemoveReference 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
+### <a name="parameters"></a>参数  
+ *T*  
  一个类。  
   
 ## <a name="remarks"></a>备注  
- 去除从指定的类模板参数的引用或右值引用特性。  
+ 去除从指定的类模板参数引用或右值引用的特征。  
   
 ## <a name="members"></a>成员  
   

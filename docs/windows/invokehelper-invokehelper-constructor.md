@@ -1,5 +1,5 @@
 ---
-title: 'Invokehelper:: Invokehelper 构造函数 |Microsoft 文档'
+title: 'Invokehelper:: Invokehelper 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874845"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602544"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper 构造函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -35,14 +35,14 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `callback`  
+### <a name="parameters"></a>参数  
+ *回调*  
  事件处理程序。  
   
 ## <a name="remarks"></a>备注  
- 初始化 InvokeHelper 类的新实例。  
+ 初始化的新实例**InvokeHelper**类。  
   
- `TCallback`模板参数指定事件处理程序的类型。  
+ `TCallback`模板参数指定的事件处理程序的类型。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

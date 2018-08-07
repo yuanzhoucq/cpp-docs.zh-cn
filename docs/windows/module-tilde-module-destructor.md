@@ -1,5 +1,5 @@
 ---
-title: '模块:: ~ Module 析构函数 |Microsoft 文档'
+title: '模块:: ~ Module 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f6c27924788be435a9388c1f8e3d24560a4279e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881359"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604312"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module 析构函数
-取消初始化 Module 类的当前实例。  
+取消初始化的当前实例**模块**类。  
   
 ## <a name="syntax"></a>语法  
   

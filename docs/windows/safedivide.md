@@ -1,5 +1,5 @@
 ---
-title: SafeDivide |Microsoft 文档
+title: SafeDivide |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c5698a85e17a8dbcb483dcd5468289df8afadcc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892665"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605040"
 ---
 # <a name="safedivide"></a>SafeDivide
-使可防止被零除的方式的两个数字相除。  
+将以一种可避免被零除两个数字相除。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ inline bool SafeDivide (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>参数  
- [in] `t`  
+### <a name="parameters"></a>参数  
+ [in]*t*  
  除数。 其类型必须为 T。  
   
- [in] `u`  
+ [in]*u*  
  被除数。 其类型必须为 U。  
   
- [out] `result`  
- 参数其中`SafeDivide`存储结果。  
+ [out]*结果*  
+ 参数位置**SafeDivide**将结果存储。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果没有错误发生;`false`如果发生错误。  
+ **true**如果未发生错误;**false**如果发生错误。  
   
 ## <a name="remarks"></a>备注  
- 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个除法运算[SafeInt 类](../windows/safeint-class.md)。  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单个除法运算[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  

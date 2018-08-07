@@ -1,5 +1,5 @@
 ---
-title: max_is |Microsoft 文档
+title: max_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878965"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608425"
 ---
 # <a name="maxis"></a>max_is
 指定有效的数组索引的最大值。  
@@ -30,15 +30,14 @@ ms.locfileid: "33878965"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>参数  
  *表达式*  
- 一个或多个 C 语言表达式。 允许空自变量槽。  
+ 一个或多个 C 语言表达式。 允许使用空参数槽。  
   
 ## <a name="remarks"></a>备注  
  **Max_is** c + + 属性具有相同的功能[max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL 特性。  
@@ -49,7 +48,7 @@ ms.locfileid: "33878965"
   
 |||  
 |-|-|  
-|**适用对象**|字段中`struct`或**联合**、 接口参数、 接口方法|  
+|**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**size_is**|  
@@ -57,12 +56,12 @@ ms.locfileid: "33878965"
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
 ## <a name="example"></a>示例  
- 请参阅[first_is](../windows/first-is.md)有关如何指定数组的一部分的示例。  
+ 请参阅[first_is](../windows/first-is.md)以举例说明如何指定数组的一部分。  
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [first_is](../windows/first-is.md)   
  [last_is](../windows/last-is.md)   
  [length_is](../windows/length-is.md)   

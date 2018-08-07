@@ -1,5 +1,5 @@
 ---
-title: 授权 |Microsoft 文档
+title: 许可 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875742"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603797"
 ---
 # <a name="licensed"></a>licensed
-指示它所应用于的 COM 对象授予许可，并且必须使用实例化**IClassFactory2**。  
+指示它所应用于的 COM 对象授予许可，并且必须使用实例化`IClassFactory2`。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -40,7 +38,7 @@ ms.locfileid: "33875742"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
-|**必需的特性**|**coclass**|  
+|**必需的特性**|`coclass`|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttobase 方法 |Microsoft 文档'
+title: 'Interfacetraits:: Casttobase 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878520"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606444"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,18 +36,18 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 参数的类型`ptr`。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 参数的类型*ptr*。  
   
- `ptr`  
- 指向类型`T`。  
+ *ptr*  
+ 指向类型指针*T*。  
   
 ## <a name="return-value"></a>返回值  
- 指向的指针`Base`。  
+ 一个指向`Base`。  
   
 ## <a name="remarks"></a>备注  
- 指向指针的指定的指针转换`Base`。  
+ 将转换为指针指定的指针`Base`。  
   
  有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   

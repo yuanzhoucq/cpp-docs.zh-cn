@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregisterobjects 方法 |Microsoft 文档'
+title: 'Module:: unregisterobjects 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874114"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607435"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 方法
 取消指定模块中的对象，以便其他应用程序无法连接到它们。  
@@ -35,11 +35,11 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>参数  
- `module`  
+### <a name="parameters"></a>参数  
+ *模块*  
  指向模块的指针。  
   
- `serverName`  
+ *服务器名称*  
  指定受此操作影响的对象子集的限定名。  
   
 ## <a name="return-value"></a>返回值  

@@ -1,5 +1,5 @@
 ---
-title: id |Microsoft 文档
+title: id |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882442"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605703"
 ---
 # <a name="id"></a>id
-指定`dispid`（属性或方法，在接口或调度接口） 的成员函数的参数。  
+指定*dispid* （属性或方法，请在接口或调度接口） 的成员函数的参数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `dispid`  
- 接口方法调度 ID。  
+### <a name="parameters"></a>参数  
+ *dispid*  
+ 接口方法的调度 ID。  
   
 ## <a name="remarks"></a>备注  
  **Id** c + + 属性具有相同的功能[id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)以举例说明如何使用**id**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)有关如何使用的示例**id**。  
   
 ## <a name="requirements"></a>要求  
   

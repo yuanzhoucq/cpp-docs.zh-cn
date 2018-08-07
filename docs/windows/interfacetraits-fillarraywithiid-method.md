@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Fillarraywithiid 方法 |Microsoft 文档'
+title: 'Interfacetraits:: Fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877484"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605651"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,20 +34,19 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>参数  
- `index`  
+### <a name="parameters"></a>参数  
+ *index*  
  指向包含一个从零开始的索引值的字段。  
   
- `iids`  
+ *iid*  
  接口 Id 的数组。  
   
 ## <a name="remarks"></a>备注  
- 将分配的接口 ID`Base`通过索引参数指定的数组元素。  
+ 为指定的接口 ID`Base`索引参数指定的数组元素。  
   
- 此 API 的名称，违背修改只有一个数组元素;不是整个数组。  
+ 与此 API 的名称，修改只有一个数组元素;不是整个数组。  
   
  有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   

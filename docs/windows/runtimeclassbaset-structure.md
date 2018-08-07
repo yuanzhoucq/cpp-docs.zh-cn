@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT 结构 |Microsoft 文档
+title: RuntimeClassBaseT 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888978"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604988"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `RuntimeClassTypeT`  
- 指定一个或多个标志的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
+### <a name="parameters"></a>参数  
+ *RuntimeClassTypeT*  
+ 指定一个或多个标记的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
   
 ## <a name="remarks"></a>备注  
- 提供用于 helper 方法`QueryInterface`操作和获取的接口 Id。  
+ 提供的帮助器方法`QueryInterface`操作和入门的接口 Id。  
   
 ## <a name="members"></a>成员  
   
@@ -52,5 +52,5 @@ friend struct Details::RuntimeClassBaseT;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>请参阅  
- [参考 （Windows 运行时库）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [参考 （Windows 运行时库）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

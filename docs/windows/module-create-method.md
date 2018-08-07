@@ -1,5 +1,5 @@
 ---
-title: 'Module:: create 方法 |Microsoft 文档'
+title: 'Module:: create 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874884"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603298"
 ---
 # <a name="modulecreate-method"></a>Module::Create 方法
 创建模块的实例。  
@@ -42,21 +42,21 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
+### <a name="parameters"></a>参数  
+ *T*  
  模块类型。  
   
- `callback`  
+ *回调*  
  释放该模块的最后一个实例对象时调用。  
   
- `object`  
- `object`和`method`结合使用参数。 点到最后一个实例对象在释放模块中的最后一个实例对象时。  
+ *object*  
+ *对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。  
   
- `method`  
- `object`和`method`结合使用参数。 指向方法的最后一个实例的对象在释放模块中的最后一个实例对象时。  
+ *方法*  
+ *对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。  
   
 ## <a name="return-value"></a>返回值  
- 对模块的引用。  
+ 对模块引用。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  
@@ -65,5 +65,3 @@ WRL_NOTHROW static Module& Create(
   
 ## <a name="see-also"></a>请参阅  
 [Module 类](../windows/module-class.md)
-
- 

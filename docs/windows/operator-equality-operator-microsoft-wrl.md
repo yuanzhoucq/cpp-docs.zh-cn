@@ -1,5 +1,5 @@
 ---
-title: '运算符 = = 运算符 (microsoft:: wrl) |Microsoft 文档'
+title: '运算符 = = 运算符 (microsoft:: wrl) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 719522a37c989b388a811348759d1fff34c373a9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882584"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605354"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 运算符 (Microsoft::WRL)
-相等运算符[ComPtr](../windows/comptr-class.md)和[ComPtrRef](../windows/comptrref-class.md)对象。  
+相等运算符[ComPtr](../windows/comptr-class.md)并[ComPtrRef](../windows/comptrref-class.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `a`  
+### <a name="parameters"></a>参数  
+ *a*  
  左对象。  
   
- `b`  
+ *b*  
  右对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果对象相等，则为 `true`；否则为 `false`。  
+ **true**如果对象相等; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: module 构造函数 |Microsoft 文档'
+title: 'Module:: module 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 207b1006aeb57d9c16c09f5d8101a7f64b2cb85b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875248"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608714"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module 构造函数
-初始化 Module 类的新实例。  
+初始化的新实例**模块**类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ Module();
 ```  
   
 ## <a name="remarks"></a>备注  
- 此构造函数受保护，不能使用 `new` 关键字进行调用。 相反，调用[module:: getmodule 方法](../windows/module-getmodule-method.md)或[module:: create 方法](../windows/module-create-method.md)。  
+ 此构造函数受到保护，不能调用带有**新**关键字。 请调用[module:: getmodule 方法](../windows/module-getmodule-method.md)或[module:: create 方法](../windows/module-create-method.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 移动或复制到另一个资源脚本文件的快捷键对应表项 |Microsoft 文档
+title: 移动或复制到另一个资源脚本文件的快捷键对应表项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877899"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608047"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>将快捷键对应表项移动或复制到另一资源脚本文件
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>将快捷键对应表项移动或复制到另一个资源脚本文件  
@@ -35,18 +35,16 @@ ms.locfileid: "33877899"
   
 2.  选择要移动的项。  
   
-3.  从**编辑**菜单上，选择**复制**或**剪切**。  
+3.  从**编辑**菜单中，选择**副本**或**剪切**。  
   
 4.  在目标资源脚本文件中选择一个项。  
   
-5.  从**编辑**菜单上，选择**粘贴**。  
+5.  从**编辑**菜单中，选择**粘贴**。  
   
     > [!NOTE]
     >  还可以使用快捷键进行复制和粘贴。  
   
-
-  
- **要求**  
+## <a name="requirements"></a>要求  
   
  Win32  
   
