@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Ftmbase 构造函数 |Microsoft 文档'
+title: 'Ftmbase:: Ftmbase 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15a2373a10df10012e4b2d2685b413014d2ea3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dadb80e62abd9088dc1d01515b1a169c0b1fb3d1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872180"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569548"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase 构造函数
-初始化 FtmBase 类的新实例。  
+初始化的新实例**FtmBase**类。  
   
 ## <a name="syntax"></a>语法  
   

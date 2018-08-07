@@ -1,5 +1,5 @@
 ---
-title: 如何： 钉住指针和数组 |Microsoft 文档
+title: 如何： 钉住指针和数组 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873584"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569370"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>如何：钉住指针和数组
 钉住在托管对象中定义的子对象能够钉住整个对象。  例如，如果数组的任何元素被钉住，则整个数组也被钉住。 没有用于声明钉住的数组的语言扩展。 若要钉住数组，请声明其元素类型的钉住指针，并钉住其中一个元素。  
@@ -30,7 +30,7 @@ ms.locfileid: "33873584"
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 ++  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: db_param |Microsoft 文档
+title: db_param |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880673"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569438"
 ---
 # <a name="dbparam"></a>db_param
-将指定的成员变量与一个输入或输出参数相关联，并分隔变量。  
+指定的成员变量相关联的输入或输出参数和分隔变量。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ ms.locfileid: "33880673"
 ```  
   
 #### <a name="parameters"></a>参数  
- `ordinal`  
- 列号 (**DBCOLUMNINFO**序号) 要将数据绑定到行集中的字段相对应。  
+ *序号*  
+ 列对应的编号 （DBCOLUMNINFO 序号） 到要将数据绑定到行集中的字段。  
   
  *paramtype* （可选）  
- 要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型是一个或多个组合**DBPARAMIOENUM**值：  
+ 要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型为一个或多个 DBPARAMIOENUM 值的组合：  
   
--   **DBPARAMIO_INPUT** 输入参数。  
+-   DBPARAMIO_INPUT 输入参数。  
   
--   **DBPARAMIO_OUTPUT** 输出参数。  
+-   DBPARAMIO_OUTPUT 输出参数。  
   
--   **DBPARAMIO_NOTPARAM** 访问器没有参数。 设置**eParamIO**到行中的此值访问器可提醒用户将忽略参数。  
+-   DBPARAMIO_NOTPARAM 访问器没有任何参数。 设置`eParamIO`为行中此值的访问器提醒用户参数将被忽略。  
   
  *dbtype* （可选）  
- OLE DB[类型指示符](https://msdn.microsoft.com/en-us/library/ms711251.aspx)列条目。  
+ OLE DB[类型指示符](https://msdn.microsoft.com/library/ms711251.aspx)列条目。  
   
  *精度*（可选）  
- 要用于列条目精度。 有关详细信息，请参阅说明**bPrecision**元素[DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *缩放*（可选）  
- 要使用的列项的比例。 有关详细信息，请参阅说明**bScale**元素[DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ 要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *状态*（可选）  
- 成员变量，用来保存此列的状态。 状态指示该列的值是数据值或某些其他值，如**NULL**。 有关可能的值，请参阅[状态](https://msdn.microsoft.com/en-us/library/ms722617.aspx)中*OLE DB 程序员参考*。  
+ 成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程序员参考*。  
   
  *长度*（可选）  
- 成员变量，用来保存列的大小，以字节为单位。  
+ 成员变量，用来保存的列的大小以字节为单位。  
   
 ## <a name="remarks"></a>备注  
- **db_param**定义参数，在命令中使用; 因此将它与**db_command**。 例如，你可以使用**db_param**若要将 SQL 查询或存储的过程中的参数绑定。 由问号 （？），表示在存储过程的参数，你应绑定参数的顺序中的数据成员。  
+ **db_param**定义的参数，在命令中使用; 因此可以将它与`db_command`。 例如，可以使用**db_param**绑定中的 SQL 查询或存储的过程的参数。 由问号 （？），表示存储过程中的参数，并应将数据成员绑定参数的显示顺序。  
   
- **db_param**分隔可以参与 OLE DB 的成员数据`ICommandWithParameters`-基于绑定。 它将设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP。 以将标记每个成员**db_param**属性中的映射中的 COLUMN_ENTRY 窗体占用一个条目。  
+ **db_param**分隔可以参与在 OLE DB 中的成员数据`ICommandWithParameters`-基于绑定。 它设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP。 您会使用标记每个成员**db_param**属性将占用 COLUMN_ENTRY 窗体中的映射中的一个条目。  
   
- **db_param**与请结合使用[db_table](../windows/db-table.md)或[db_command](../windows/db-command.md)属性。  
+ **db_param**与可以结合使用[db_table](../windows/db-table.md)或[db_command](../windows/db-command.md)属性。  
   
- 当使用者特性提供程序应用于类时此属性时，编译器将该类重命名为\_*类名*访问器，其中*类名*是你为指定的名称类，并且编译器还将创建一个名为类*类名*，它派生自\_*类名*访问器。  将在类视图中看到这两个类。  
+ 编译器时使用者特性提供程序适用于类，此属性，将重命名为类\_ *YourClassName*访问器，其中*名为 YourClassName*是您为指定的名称类和编译器还将创建一个名为类*名为 YourClassName*，它派生\_*名为 YourClassName*访问器。  将在类视图中看到这两个类。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建了基于 Northwind 数据库中的 SalesbyYear 存储过程的命令类。 它是相关联的存储过程中的第一个参数`m_RETURN_VALUE`变量，并将其定义为输出参数。 它是相关联的最后两个 （输入） 参数与`m_Beginning_Date`和`m_Ending_Date`。  
+ 以下示例创建基于 Northwind 数据库中的 SalesbyYear 存储过程的命令类。 它将关联的存储过程的第一个参数`m_RETURN_VALUE`变量，并将其定义为 output 参数。 它将使用最后两个 （输入） 参数相关联`m_Beginning_Date`和`m_Ending_Date`。  
   
- 下面的示例将`nOutput`变量使用输出参数。  
+ 下面的示例关联`nOutput`使用输出参数变量。  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -124,7 +123,7 @@ struct CSalesbyYear {
   
 |||  
 |-|-|  
-|**适用对象**|**类**、 `struct`、成员、方法、本地|  
+|**适用对象**|**类**，**结构**，成员、 方法、 本地|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

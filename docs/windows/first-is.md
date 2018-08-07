@@ -1,5 +1,5 @@
 ---
-title: first_is |Microsoft 文档
+title: first_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875001"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569258"
 ---
 # <a name="firstis"></a>first_is
 指定要传输的第一个数组元素的索引。  
@@ -30,23 +30,22 @@ ms.locfileid: "33875001"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *表达式*  
- 一个或多个 C 语言表达式。 允许空自变量槽。  
+ 一个或多个 C 语言表达式。 允许使用空参数槽。  
   
 ## <a name="remarks"></a>备注  
  **First_is** c + + 属性具有相同的功能[first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示通过多种方式来指定数组中的部分：  
+ 下面的代码演示一个部分指定数组中的各种方法：  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,7 +71,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**适用对象**|字段中`struct`或**联合**、 接口参数、 接口方法|  
+|**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
@@ -82,7 +81,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [last_is](../windows/last-is.md)   
  [max_is](../windows/max-is.md)   
  [length_is](../windows/length-is.md)   

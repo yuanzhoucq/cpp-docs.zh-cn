@@ -1,5 +1,5 @@
 ---
-title: 如何： 指定资源的包含目录 |Microsoft 文档
+title: 如何： 指定资源的包含目录 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875274"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569535"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定资源的包含目录
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>为特定 .rc 文件指定包含目录  
   
 1.  右键单击解决方案资源管理器中的.rc 文件并选择**属性**从快捷菜单。  
   
-2.  在**属性页**对话框中，单击**资源**节点在左窗格中，然后指定附加的包含目录中的**附加包含目录**属性。  
+2.  在中**属性页**对话框中，单击**资源**节点，在左窗格中，然后指定附加的包含目录**附加包含目录**属性。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 使用本地化资源用于 ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **要求**  
+## <a name="requirements"></a>要求  
   
  Win32  
   
 ## <a name="see-also"></a>请参阅  
  [资源包括对话框](../windows/resource-includes-dialog-box.md)   
- [TN035： 使用 Visual c + + 中使用多个资源文件和头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
+ [TN035: Visual c + + 中使用多个资源文件和标头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
  [符号： 资源标识符](../windows/symbols-resource-identifiers.md)   
  [资源文件](../windows/resource-files-visual-studio.md)   
  [资源编辑器](../windows/resource-editors.md)
