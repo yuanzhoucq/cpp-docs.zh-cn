@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Disconnectobject 方法 |Microsoft 文档'
+title: 'Ftmbase:: Disconnectobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872996"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568623"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 方法
-强制释放对象的所有外部连接。 对象的服务器调用之前的情况下关闭此方法的对象的实现。  
+强制释放对象的所有外部连接。 对象的服务器将调用此方法在关机前对象的实现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +35,8 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `dwReserved`  
+### <a name="parameters"></a>参数  
+ *dwReserved*  
  留待将来使用；必须为零。  
   
 ## <a name="return-value"></a>返回值  

@@ -1,5 +1,5 @@
 ---
-title: 如何： 创建资源 |Microsoft 文档
+title: 如何： 创建资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878640"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571465"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878640"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>在“类视图”中创建新资源  
   
-1.  在 [“类视图”](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，右击你的类，选择 **“添加”**，然后从快捷菜单单击 **“添加资源”** 。  
+1.  在中[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。  
   
 2.  在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878640"
   
  可将资源创建为一个新的默认资源（不基于模板的资源）或采用 [模板](../windows/how-to-use-resource-templates.md)模式的资源。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*
+
+
+## <a name="requirements"></a>要求  
   
- **要求**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>请参阅  
  [资源文件](../windows/resource-files-visual-studio.md)   

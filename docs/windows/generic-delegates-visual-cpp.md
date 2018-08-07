@@ -1,5 +1,5 @@
 ---
-title: 泛型委托 （Visual c + +） |Microsoft 文档
+title: 泛型委托 （Visual c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875593"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571306"
 ---
 # <a name="generic-delegates-visual-c"></a>泛型委托 (Visual C++)
-你可以使用具有委托的泛型类型参数。 有关委托的更多信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
+你可以使用具有委托的泛型类型参数。 有关委托的详细信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,31 +37,31 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>参数  
- `attributes` （可选）  
+ *属性*（可选）  
  附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
  *type-parameter-identifier(s)*  
  类型参数标识符的逗号分隔列表。  
   
- `type-parameter-constraints-clauses`  
- 中指定的形式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *类型形参约束子句*  
+ 将窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *可访问性修饰符*（可选）  
- 可访问性修饰符 (例如**公共**， `private`)。  
+ 可访问性修饰符 (例如**公共**，**专用**)。  
   
  *result-type*  
  委托的返回类型。  
   
  *identifier*  
- 该委托的名称。  
+ 委托的名称。  
   
- *正式参数*（可选）  
+ *形参*（可选）  
  委托的参数列表。  
   
 ## <a name="example"></a>示例  
  委托类型参数在创建委托对象时指定。 与其相关联的委托和方法必须有相同的签名。 下面是泛型委托声明的示例。  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -77,7 +77,7 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
   
 -   当调用泛型方法而不指定类型参数时，编译器会尝试推断调用的类型参数。  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -114,7 +114,7 @@ int main() {
 ## <a name="example"></a>示例  
  以下示例声明泛型委托 `GenDelegate<ItemType>`，然后将其与使用类型参数 `MyMethod` 的方法 `ItemType` 相关联。 创建并调用委托的两个实例（整型和双精度型）。  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

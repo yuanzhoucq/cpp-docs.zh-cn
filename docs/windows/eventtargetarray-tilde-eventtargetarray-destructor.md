@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray 析构函数 |Microsoft 文档'
+title: 'EventTargetArray:: ~ EventTargetArray 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871788"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571094"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray 析构函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "33871788"
 ```  
   
 ## <a name="remarks"></a>备注  
- 取消初始化当前`EventTargetArray`类。  
+ 取消初始化当前**EventTargetArray**类。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

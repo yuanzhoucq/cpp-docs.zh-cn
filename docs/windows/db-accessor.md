@@ -1,5 +1,5 @@
 ---
-title: db_accessor |Microsoft 文档
+title: db_accessor |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68c7d70c6d1192e1b80253cf1fb3cfc3040d8fce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874520"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570642"
 ---
 # <a name="dbaccessor"></a>db_accessor
-组**db_column**参与特性`IAccessor`-基于绑定。  
+组`db_column`参与属性`IAccessor`-基于绑定。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ db_accessor(   
+[ db_accessor(   
    num,   
    auto   
 ) ]  
@@ -39,24 +38,24 @@ ms.locfileid: "33874520"
   
 #### <a name="parameters"></a>参数  
  *num*  
- 指定访问器数目 （从零开始的整数索引）。 你必须指定访问器中增加的数字顺序，使用整数或定义的值。  
+ 指定访问器数 （从零开始的整数索引）。 必须指定访问器中增加的数字顺序，使用整数，或者定义的值。  
   
  *auto*  
- 一个布尔值，指定是否自动检索访问器 (**TRUE**) 未检索到或 (**FALSE**)。  
+ 一个布尔值，该值指定访问器是自动检索 (TRUE) 还是未检索到 (FALSE)。  
   
 ## <a name="remarks"></a>备注  
- **db_accessor**定义为基础的 OLE DB 取值函数后续**db_column**和**db_param**相同类或函数中的属性。 **db_accessor**在成员级别为可用，并且使用到组**db_column**参与 OLE DB 的特性`IAccessor`-基于绑定。 请结合使用**db_table**或**db_command**属性。 调用此属性是类似于调用[BEGIN_ACCESSOR](../data/oledb/begin-accessor.md)和[END_ACCESSOR](../data/oledb/end-accessor.md)宏。  
+ **db_accessor**定义为基础的 OLE DB 取值函数后续`db_column`和`db_param`相同类或函数中的属性。 **db_accessor**在成员级别为可用，并且使用到组`db_column`参与 OLE DB 属性`IAccessor`-基于绑定。 通过结合使用`db_table`或`db_command`属性。 调用此属性是类似于调用[BEGIN_ACCESSOR](../data/oledb/begin-accessor.md)并[END_ACCESSOR](../data/oledb/end-accessor.md)宏。  
   
- **db_accessor**生成行集，并将其绑定到相应的访问器映射。 如果不调用**db_accessor**，则将自动生成访问器 0，而所有列绑定将都映射到此访问器块。  
+ **db_accessor**生成行集，并将其绑定到相应的访问器映射。 如果不调用**db_accessor**、 将自动生成访问器 0，和列的所有绑定将都映射到此访问器块。  
   
- **db_accessor**组数据库列绑定到一个或多个访问器。 你需要使用多个访问器的方案的讨论，请参阅[行集上使用多个访问器](../data/oledb/using-multiple-accessors-on-a-rowset.md)。 另请参阅"用户记录支持的多个访问器"，在[用户记录](../data/oledb/user-records.md)。  
+ **db_accessor**组数据库列绑定到一个或多个访问器。 您需要在其中使用多个访问器的方案的讨论，请参阅[行集上使用多个访问器](../data/oledb/using-multiple-accessors-on-a-rowset.md)。 "用户记录的支持的多个访问器"中，还发现[用户记录](../data/oledb/user-records.md)。  
   
- 当使用者特性提供程序应用于类时此属性时，编译器将该类重命名为\_*类名*访问器，其中*类名*是你为指定的名称类，并且编译器还将创建一个名为类*类名*，它派生自\_*类名*访问器。  将在类视图中看到这两个类。  
+ 编译器时使用者特性提供程序适用于类，此属性，将重命名为类\_ *YourClassName*访问器，其中*名为 YourClassName*是您为指定的名称类和编译器还将创建一个名为类*名为 YourClassName*，它派生\_*名为 YourClassName*访问器。  将在类视图中看到这两个类。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用**db_accessor**将 Orders 表中的列分组从 Northwind 数据库到两个访问器。 访问器 0 是自动访问器中，并访问器 1 不是。  
+ 下面的示例使用**db_accessor**到订单表中两个访问器到 Northwind 数据库中的组列。 访问器 0 是一个自动访问器，并访问器 1 不是。  
   
-```  
+```cpp  
 // cpp_attr_ref_db_accessor.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

@@ -239,7 +239,7 @@ namespace concurrency;
 |----------|-----------------| 
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|  
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|  
-|[operator||](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为自变量提供的任一任务成功完成时成功完成的任务。|  
+|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为自变量提供的任一任务成功完成时成功完成的任务。|  
 |[operator<](concurrency-namespace-operators.md#operator_lt)|测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。|  
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。|  
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。|  

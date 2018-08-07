@@ -110,7 +110,7 @@ ms.locfileid: "38965521"
 |[operator=](#op_eq)|将元素分配给 `valarray`，其值可以直接指定，也可以作为一些其他 `valarray` 的一部分指定，或由 `slice_array`、`gslice_array`、`mask_array` 或 `indirect_array` 指定。|
 |[operator[]](#op_at)|返回对指定索引或指定子集处的元素或其值的引用。|
 |[operator^=](#op_xor_eq)|获取数组与指定 valarray 或元素类型的值进行的按点排除逻辑或运算符 (`XOR`)。|
-|[operator|=](#op_or_eq)|获取数组中元素的按位 `OR`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|
+|[operator&#124;=](#op_or_eq)|获取数组中元素的按位 `OR`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|
 |[operator~](#op_dtor)|一个一元运算符，该运算符获取 `valarray` 中每个元素的按位 `NOT` 值。|
 
 ## <a name="requirements"></a>要求

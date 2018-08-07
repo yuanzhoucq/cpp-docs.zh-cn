@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Createglobalinterfacetable 方法 |Microsoft 文档'
+title: 'Ftmbase:: Createglobalinterfacetable 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568999"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 方法
-可以创建全局接口表 (GIT)。  
+创建全局接口表 (GIT)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `git`  
+### <a name="parameters"></a>参数  
+ *Git*  
  此操作完成后，指向全局接口表的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- 有关详细信息，请参阅 MSDN 库中"COM 引用"主题的"COM 接口"子主题中的"IGlobalInterfaceTable"主题。  
+ 有关详细信息，请参阅"COM 接口"子主题的 MSDN Library 中的"COM 参考"主题中的"IGlobalInterfaceTable"主题。  
   
 ## <a name="requirements"></a>要求  
  **标头：** ftm.h  

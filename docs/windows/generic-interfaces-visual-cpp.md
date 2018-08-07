@@ -1,5 +1,5 @@
 ---
-title: 泛型接口 （Visual c + +） |Microsoft 文档
+title: 泛型接口 （Visual c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878692"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571170"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
-应用于对类类型参数的限制都应用于类型参数在接口上的那些相同 (请参阅[泛型类 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  
+适用于对类类型参数的限制将与那些应用于类型参数在接口上的相同 (请参阅[泛型类 (C + + CLI)](../windows/generic-classes-cpp-cli.md))。  
   
  控制函数重载的规则都相同的泛型类或泛型接口中的函数。  
   
- 显式接口成员的实现以使用 （请参阅下面的示例） 的简单接口类型的相同方式处理构造的接口类型。  
+ 显式接口成员实现代码使用的相同方式与使用简单的接口类型 （请参阅下面的示例） 的构造的接口类型。  
   
- 在接口上的详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
+ 有关接口的详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,14 +43,14 @@ ms.locfileid: "33878692"
  *属性*（可选）  
  附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
- *类别键*  
+ *类键*  
  **类**或**typename**  
   
- `type-parameter-identifier(s)`  
- 以逗号分隔标识符列表。  
+ *type-parameter-identifier(s)*  
+ 以逗号分隔的标识符列表。  
   
- `type-parameter-constraints-clauses`  
- 中指定的形式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *类型形参约束子句*  
+ 将窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *可访问性修饰符*（可选）  
  可访问性修饰符 (例如**公钥 / 私钥**)。  
@@ -58,8 +58,8 @@ ms.locfileid: "33878692"
  *identifier*  
  接口名称。  
   
- *基列表*（可选）  
- 包含一个或多个显式基接口用逗号分隔的列表。  
+ *基础列表*（可选）  
+ 包含一个或多个显式基接口由逗号分隔的列表。  
   
  *接口体内*  
  接口成员的声明。  
@@ -68,9 +68,9 @@ ms.locfileid: "33878692"
  基于此类型的变量的声明。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何声明并实例化一个泛型接口。 在示例中，泛型接口`IList<ItemType>`声明。 它由两个泛型类，然后实现`List1<ItemType>`和`List2<ItemType>`，具有不同的实现。  
+ 下面的示例演示如何声明和实例化泛型接口。 在示例中，泛型接口`IList<ItemType>`声明。 它由两个泛型类，然后实现`List1<ItemType>`和`List2<ItemType>`，具有不同的实现。  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>示例  
- 此示例声明一个泛型接口， `IMyGenIface`，和两个非泛型接口，`IMySpecializedInt`和`ImySpecializedString`的专用化`IMyGenIface`。 由两个类，然后实现两个专用的接口`MyIntClass`和`MyStringClass`。 该示例演示如何专用化的泛型接口，实例化泛型和非泛型接口，并在接口上调用显式实现的成员。  
+ 此示例声明一个泛型接口`IMyGenIface`，和两个非泛型接口，`IMySpecializedInt`并`ImySpecializedString`，，专用化`IMyGenIface`。 两个专用的接口然后由两个类实现`MyIntClass`和`MyStringClass`。 该示例演示如何专用化泛型接口，请实例化和非泛型接口，在接口上调用显式实现的成员。  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

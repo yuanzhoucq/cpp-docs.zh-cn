@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Unmarshalinterface 方法 |Microsoft 文档'
+title: 'Ftmbase:: Unmarshalinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877714"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570023"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 方法
-初始化新创建的代理，并向该代理返回的接口指针。  
+初始化新创建的代理，并对该代理返回的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>参数  
- `pStm`  
- 指向要取消封送的接口指针的流指针。  
+ *pStm*  
+ 指向要取消封送的接口指针的流。  
   
- `riid`  
+ *riid*  
  为要取消封送的接口的标识符的引用。  
   
- `ppv`  
- 此操作完成后，接收请求中的接口指针的指针变量的地址`riid`。 如果此操作成功，*`ppv`包含要取消封送的接口的请求的接口指针。  
+ *ppv*  
+ 此操作完成后，接收中请求的接口指针的指针变量的地址*riid*。 如果此操作成功，**ppv*包含要取消封送的接口的请求的接口指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为 E_NOINTERFACE 或 E_FAIL。  
+ 如果成功，则为 S_OK否则为 E_NOINTERFACE 和 e_fail 两者之一。  
   
 ## <a name="requirements"></a>要求  
  **标头：** ftm.h  

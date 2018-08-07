@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Targets_ 数据成员 |Microsoft 文档'
+title: 'Eventsource:: Targets_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568844"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 数据成员
 包含一个或多个事件处理程序的数组。  
@@ -34,7 +34,7 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果发生当前 EventSource 对象表示的事件，则将调用这些事件处理程序。  
+ 当事件表示由当前**EventSource**对象发生，则调用事件处理程序。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

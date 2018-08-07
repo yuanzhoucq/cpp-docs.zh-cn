@@ -1,5 +1,5 @@
 ---
-title: defaultvalue |Microsoft 文档
+title: defaultvalue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873412"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569981"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-允许类型化的可选参数的默认值的规范。  
+允许类型化可选参数的默认值的规范。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -42,9 +41,9 @@ ms.locfileid: "33873412"
  **Defaultvalue** c + + 属性具有相同的功能[defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示接口方法使用**defaultvalue**属性：  
+ 下面的代码显示了接口的方法使用**defaultvalue**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -81,7 +80,7 @@ __interface IFireTabCtrl : IDispatch {
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [Parameter 特性](../windows/parameter-attributes.md)   
+ [参数特性](../windows/parameter-attributes.md)   
  [out](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   

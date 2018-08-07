@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Getunmarshalclass 方法 |Microsoft 文档'
+title: 'Ftmbase:: Getunmarshalclass 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873298"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571147"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
-获取 COM 用来定位 DLL 包含代码的相应的代理的 CLSID。 COM 加载此 DLL 才能创建代理服务器的未初始化的实例。  
+获取 COM 用来定位相应代理包含代码的 DLL 的 CLSID。 COM 加载此 DLL 才能创建代理的未初始化的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,30 +40,30 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `riid`  
- 对要封送的接口标识符的引用。  
+### <a name="parameters"></a>参数  
+ *riid*  
+ 引用封送的接口标识符。  
   
- `pv`  
- 指向要封送处理; 接口如果调用方不具有到所需的接口指针，则可以为 NULL。  
+ *pv*  
+ 指向要封送处理; 的接口如果调用方不具有到所需的接口指针，则可以为 NULL。  
   
- `dwDestContext`  
- 其中将是取消封送指定的接口的目标上下文。  
+ *dwDestContext*  
+ 其中将被取消封送指定的接口的目标上下文。  
   
  指定一个或多个 MSHCTX 枚举值。  
   
- 在当前进程 (MSHCTX_INPROC) 的另一单元，或在当前进程 (MSHCTX_LOCAL) 所在的计算机上的另一个进程中，会发生取消封送。  
+ 在当前进程 (MSHCTX_INPROC) 的另一单元中或作为当前进程 (MSHCTX_LOCAL) 在同一台计算机上的另一个进程中，可能发生取消封送。  
   
- `pvDestContext`  
- 留待将来使用;必须为 NULL。  
+ *pvDestContext*  
+ 保留供将来使用;必须为 NULL。  
   
- `mshlflags`  
- 此操作完成后，指向要用于在客户端进程中创建代理的 CLSID。  
+ *mshlflags*  
+ 此操作完成后，若要使用客户端进程中创建的代理的 CLSID 的指针。  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为 S_FALSE。  
+ 如果成功，则为 S_OK否则为 S_FALSE。  
   
 ## <a name="requirements"></a>要求  
  **标头：** ftm.h  

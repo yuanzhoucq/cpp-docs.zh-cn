@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Close 方法 |Microsoft 文档'
+title: 'Handlet:: Close 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873246"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569913"
 ---
 # <a name="handletclose-method"></a>HandleT::Close 方法
-关闭当前的 HandleT 对象。  
+关闭当前**HandleT**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>备注  
- 关闭基于当前 HandleT 的句柄，然后将 HandleT 设置为无效状态。  
+ 是当前的基础句柄**HandleT**处于关闭状态，并**HandleT**设置为无效状态。  
   
  如果句柄关闭不正确，则调用线程中将引发异常。  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Dontusenewusemake:: Operator new 运算符 |Microsoft 文档'
+title: 'Dontusenewusemake:: Operator new 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873675"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571420"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -37,17 +37,17 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>参数  
- `__unnamed0`  
- 未命名的参数，指定要分配的内存的字节数。  
+ *__unnamed0*  
+ 一个未命名的参数，它指定要分配的内存字节数。  
   
- `placement`  
+ *放置*  
  要分配的类型。  
   
 ## <a name="return-value"></a>返回值  
- 使您能够将其他自变量传递如果重载运算符`new`。  
+ 提供了一种方法将传递其他参数，如果重载运算符**新**。  
   
 ## <a name="remarks"></a>备注  
- 重载运算符`new`和阻止它在 RuntimeClass 中使用。  
+ 重载运算符**新**，并防止中正在使用`RuntimeClass`。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

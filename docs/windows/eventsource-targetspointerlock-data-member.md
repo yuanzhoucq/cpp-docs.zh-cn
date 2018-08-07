@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Targetspointerlock_ 数据成员 |Microsoft 文档'
+title: 'Eventsource:: Targetspointerlock_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873103"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569812"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ 数据成员
-同步对内部数据成员的访问，即使在添加、删除或调用此 EventSource 的事件处理程序时也是如此。  
+此同步对内部数据成员，即使是事件处理程序的访问**EventSource**添加、 删除或被调用。  
   
 ## <a name="syntax"></a>语法  
   

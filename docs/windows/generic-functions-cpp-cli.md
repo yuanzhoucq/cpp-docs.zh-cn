@@ -1,5 +1,5 @@
 ---
-title: 泛型函数 (C + + /cli CLI) |Microsoft 文档
+title: 泛型函数 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878829"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568873"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
-泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  
+泛型函数是使用类型参数声明的函数。 调用时，使用实际类型而不是类型参数。  
   
 ## <a name="all-platforms"></a>所有平台  
  **备注**  
@@ -40,12 +40,12 @@ ms.locfileid: "33878829"
  在 Windows 运行时中不支持此功能。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- 泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  
+ 泛型函数是使用类型参数声明的函数。 调用时，使用实际类型而不是类型参数。  
   
- **语法**  
+### <a name="syntax"></a>语法  
   
 ```  
 [attributes] [modifiers]  
@@ -56,49 +56,49 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **参数**  
+### <a name="parameters"></a>参数 
   
  *属性*（可选）  
- 附加的声明信息。 有关特性和特性类的详细信息，请参阅属性。  
+ 附加的声明信息。 有关属性和属性类的详细信息，请参阅属性。  
   
  *修饰符*（可选）  
- 对于函数，如静态修饰符。  `virtual` 不允许由于虚方法不能是泛型。  
+ 对于函数，如静态修饰符。  **虚拟**不允许，因为虚方法不是泛型。  
   
  *返回类型*  
- 由方法返回的类型。 如果返回类型为 void，没有返回值是必需的。  
+ 由方法返回的类型。 如果返回类型为 void，则需要没有返回值。  
   
  *identifier*  
  函数名称。  
   
  *类型参数标识符*  
- 以逗号分隔标识符列表。  
+ 以逗号分隔的标识符列表。  
   
- *正式参数*（可选）  
+ *形参*（可选）  
  参数列表。  
   
  *类型形参约束子句*  
- 这可能用作类型参数的类型上指定限制，并采用中指定格式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
+ 这可能会用作类型参数的类型上指定的限制，接受窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
  *函数体*  
- 方法，其可能引用的类型参数标识符的正文。  
+ 可能引用的类型参数标识符的方法的正文。  
   
- **备注**  
+### <a name="remarks"></a>备注  
   
- 泛型函数是使用泛型类型参数声明的函数。 它们可能在类或结构或独立的函数中的方法。 单个的泛型声明隐式声明一的系列函数仅在不同的实际类型为泛型类型参数替换存在差异。  
+ 泛型函数是使用泛型类型参数声明的函数。 它们可能是类或结构或独立函数中的方法。 单个泛型声明隐式声明一的系列区别只体现在不同的实际类型为泛型类型参数替换的函数。  
   
- Visual c + + 中不能具有泛型类型参数声明类或结构的构造函数。  
+ Visual c + + 中不能使用泛型类型参数声明类或结构的构造函数。  
   
- 调用时，泛型类型参数替换为实际类型。 实际的类型可能在尖括号使用语法类似于模板函数调用中显式指定。 如果调用不带类型参数，编译器将尝试推导从函数调用中提供的参数的实际类型。 如果不能从所使用的参数中推导预期的类型参数，编译器将报告错误。  
+ 调用时，泛型类型参数替换为实际类型。 可以使用类似于模板函数调用语法的尖括号中显式指定的实际类型。 如果调用不带类型参数，编译器将尝试推导从函数调用中提供的参数的实际类型。 如果无法从使用的参数推导预期的类型参数，编译器将报告错误。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示如何泛型函数。  
+ 下面的代码示例演示了泛型函数。  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -131,9 +131,9 @@ int main() {
   
  **示例**  
   
- 泛型函数可以基于签名或 arity、 在函数上的类型参数的数目进行重载。 此外，泛型函数可以与非泛型函数具有相同名称的重载，只要函数不同，某些类型参数中。 例如，以下函数可以进行重载：  
+ 可以根据签名或实参数量、 上一个函数的类型参数的数目进行重载泛型函数。 此外，泛型函数可以具有相同名称的非泛型函数重载，只要函数在某些类型参数中的差异。 例如，以下函数可以进行重载：  
   
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -149,9 +149,9 @@ ref struct MyClass {
   
  **示例**  
   
- 下面的示例使用泛型函数查找数组中的第一个元素。 它声明`MyClass`，它继承自的基类`MyBaseClass`。 `MyClass` 包含泛型函数时， `MyFunction`，从而调用另一个泛型函数时，`MyBaseClassFunction`中的基类。 在**主要**，泛型函数时， `MyFunction`，称为使用不同的类型参数。  
+ 以下示例使用泛型函数在数组中查找的第一个元素。 它声明`MyClass`，后者又继承的基类`MyBaseClass`。 `MyClass` 包含泛型函数`MyFunction`，它调用另一个泛型函数`MyBaseClassFunction`，在基类中。 在中`main`，泛型函数， `MyFunction`，使用不同的类型参数调用。  
   
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Operator = 运算符 |Microsoft 文档'
+title: 'Handlet:: Operator = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873922"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570036"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 运算符
-将指定的 HandleT 对象的值移到当前的 HandleT 对象。  
+将指定的值移**HandleT**对象与当前**HandleT**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
- 右值引用的句柄。  
+### <a name="parameters"></a>参数  
+ *h*  
+ 将右值引用的句柄。  
   
 ## <a name="return-value"></a>返回值  
- 对当前的 HandleT 对象的引用。  
+ 对当前的引用**HandleT**对象。  
   
 ## <a name="remarks"></a>备注  
- 此操作将使失效参数指定的 HandleT 对象`h`。  
+ 此操作将使失效**HandleT**参数指定的对象*h*。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

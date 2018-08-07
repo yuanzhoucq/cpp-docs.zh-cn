@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext |Microsoft 文档
+title: helpstringcontext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874572"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569994"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-.Hlp 或.chm 文件中指定的帮助主题的 ID。  
+在.hlp 或.chm 文件中指定的帮助主题的 ID。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `contextID`  
- 帮助文件中的 32 位帮助上下文标识符。  
+### <a name="parameters"></a>参数  
+ *contextID*  
+ 帮助文件中的 32 位的帮助上下文标识符。  
   
 ## <a name="remarks"></a>备注  
  **Helpstringcontext** c + + 属性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 特性。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,7 +67,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `interface`，接口方法|  
+|**适用对象**|**类**，**接口**，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

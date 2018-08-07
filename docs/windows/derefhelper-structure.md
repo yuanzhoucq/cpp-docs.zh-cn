@@ -1,5 +1,5 @@
 ---
-title: DerefHelper 结构 |Microsoft 文档
+title: DerefHelper 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871362"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571331"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -42,11 +42,11 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
+ *T*  
  一个模板参数。  
   
 ## <a name="remarks"></a>备注  
- 表示指向的取消引用的指针`T*`模板参数。  
+ 表示一个取消引用的指向`T*`模板参数。  
   
  如在表达式中使用 DerefHelper: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。  
   

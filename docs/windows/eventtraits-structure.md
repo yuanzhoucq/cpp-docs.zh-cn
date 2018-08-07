@@ -1,5 +1,5 @@
 ---
-title: EventTraits 结构 |Microsoft 文档
+title: EventTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b6b88f9cfc095dfa6b2648dd81820b3454a1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf329199541ad0075044633d49d6ab654146b5e7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873737"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570959"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 结构
-定义事件类句柄的特征。  
+定义特征`Event`类句柄。  
   
 ## <a name="syntax"></a>语法  
   

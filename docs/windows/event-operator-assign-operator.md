@@ -1,5 +1,5 @@
 ---
-title: 'Event:: operator = 运算符 |Microsoft 文档'
+title: 'Event:: operator = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871118"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571293"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 运算符
-指定对当前 Event 实例的指定 Event 引用。  
+指定将分配**事件**对当前引用**事件**实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>参数  
- `h`  
- 对 Event 实例的 rvalue 引用。  
+ *h*  
+ 对的右值引用**事件**实例。  
   
 ## <a name="return-value"></a>返回值  
- 指向当前 Event 实例的指针。  
+ 指向当前**事件**实例。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

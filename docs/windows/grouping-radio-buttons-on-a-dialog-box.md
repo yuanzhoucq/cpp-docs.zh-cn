@@ -1,5 +1,5 @@
 ---
-title: 将出现在对话框中的单选按钮分组 |Microsoft 文档
+title: 将出现在对话框中的单选按钮 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879323"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571498"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>将对话框上的单选按钮分组
 当向对话框添加单选按钮时，对于组中的第一个按钮，可通过在属性窗口中设置组属性将它们视为组。 然后该单选按钮的控件 ID 出现在 [添加成员变量向导](../ide/add-member-variable-wizard.md)中，让你可以添加单选按钮组的成员变量。  
@@ -60,9 +60,9 @@ ms.locfileid: "33879323"
   
 6.  现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，m_radioBox1 = 0；选中组中第一个单选按钮。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+## <a name="requirements"></a>要求  
   
  Win32  
   
@@ -70,4 +70,3 @@ ms.locfileid: "33879323"
  [对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
-

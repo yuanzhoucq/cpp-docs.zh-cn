@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Addtail 方法 |Microsoft 文档'
+title: 'Eventtargetarray:: Addtail 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872278"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570169"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `element`  
- 指向要追加的事件处理程序的指针。  
+### <a name="parameters"></a>参数  
+ *元素*  
+ 指向要追加的事件处理程序。  
   
 ## <a name="remarks"></a>备注  
- 向事件处理程序在内部数组的末尾追加指定的事件处理程序。  
+ 将指定的事件处理程序附加到事件处理程序的内部数组的末尾。  
   
- AddTail() 旨在仅 EventSource 类由内部使用。  
+ **AddTail()** 应仅在内部使用`EventSource`类。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

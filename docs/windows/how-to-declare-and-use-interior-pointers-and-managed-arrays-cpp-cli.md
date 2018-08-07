@@ -1,5 +1,5 @@
 ---
-title: 如何： 声明和使用内部指针及托管的数组 (C + + /cli CLI) |Microsoft 文档
+title: 如何： 声明和使用内部指针及托管的数组 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875300"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569838"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：声明和使用内部指针及托管数组 (C++/CLI)
 以下 C + + /cli CLI 示例演示如何声明和使用内部指针到一个数组。  
   
 > [!IMPORTANT]
->  通过支持此语言功能 **/clr**编译器选项，但不是 **/ZW**编译器选项。  
+>  `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

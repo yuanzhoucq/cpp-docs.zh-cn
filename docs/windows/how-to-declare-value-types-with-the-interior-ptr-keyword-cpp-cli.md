@@ -1,5 +1,5 @@
 ---
-title: 如何： 用 interior_ptr 关键字声明值类型 (C + + /cli CLI) |Microsoft 文档
+title: 如何： 用 interior_ptr 关键字声明值类型 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879472"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571183"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
-`interior_ptr` 可以与值类型一起使用。  
+**Interior_ptr**可用于值类型。  
   
 > [!IMPORTANT]
->  通过支持此语言功能 **/clr**编译器选项，但不是 **/ZW**编译器选项。  
+>  `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 以下 C + + /cli CLI 示例演示如何使用`interior_ptr`使用值类型。  
+ 以下 C + + /cli CLI 示例演示如何使用**interior_ptr**与值类型。  
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 在值类型中，`this` 指针的计算结果为 interior_ptr。  
+ 在值类型，**这**指针的计算结果为 interior_ptr。  
   
- 在值类型 `V` 的非静态成员函数体中，`this` 是类型 `interior_ptr<V>` 的表达式，后者的值是函数调用的对象地址。  
+ 中的非静态成员函数将值类型的正文`V`，**这**类型的表达式`interior_ptr<V>`其值是为其调用该函数的对象的地址。  
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -105,7 +105,7 @@ value struct V {
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output 
 22  
 23  
 hello  
