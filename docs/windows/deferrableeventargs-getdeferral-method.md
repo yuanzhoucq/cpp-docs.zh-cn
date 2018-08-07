@@ -1,5 +1,5 @@
 ---
-title: 'Deferrableeventargs:: Getdeferral 方法 |Microsoft 文档'
+title: 'Deferrableeventargs:: Getdeferral 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883536"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571199"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral 方法
-获取对[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)对象该对象表示延迟的事件。  
+获取对[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)表示延迟的事件的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,8 +30,8 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>参数  
- `result`  
- 一个指针，它将引用[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)对象时在调用完成。  
+ *结果*  
+ 将引用的指针[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)对象在调用完成时。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  

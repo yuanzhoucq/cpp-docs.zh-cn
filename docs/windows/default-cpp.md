@@ -1,5 +1,5 @@
 ---
-title: 默认值 （c + +） |Microsoft 文档
+title: 默认值 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872960"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570852"
 ---
 # <a name="default-c"></a>default (C++)
 指示组件类中定义的自定义接口或调度接口表示默认的可编程性接口。  
@@ -32,8 +32,7 @@ ms.locfileid: "33872960"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ ms.locfileid: "33872960"
  **default** C++ 属性具有与 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 属性相同的功能。 **default** 属性还可以与 [case](../windows/case-cpp.md) 属性结合使用。  
   
 ## <a name="example"></a>示例  
- 以下代码演示如何在组件类的定义中使用 **default** 来将 **ICustomDispatch** 指定为默认可编程性接口：  
+ 下面的代码演示如何**默认**组件类的定义中用于指定`ICustomDispatch`为默认可编程性接口：  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**适用对象**|**class**、 `struct`、数据成员|  
+|**适用对象**|**类**，**结构**，数据成员|  
 |**可重复**|否|  
-|**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
+|**必需的特性**|**组件类**(当应用于**类**或**结构**)|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

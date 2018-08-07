@@ -1,5 +1,5 @@
 ---
-title: 如何： 通过泛型 （Visual c + +） 提高性能 |Microsoft 文档
+title: 如何： 通过泛型 （Visual c + +） 提高性能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877561"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571511"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：通过泛型提高性能 (Visual C++)
 采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅[泛型](../windows/generics-cpp-component-extensions.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "33877561"
   
  下面的代码示例显示了在采用泛型之前 .NET Framework 集合的两个主要缺点。  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -91,7 +91,7 @@ Popped an int: 7
   
  比较上述示例与使用泛型 <xref:System.Collections.Generic.Stack%601> 集合的此示例。 在访问频繁的大型集合中，此示例的性能显著高于前一个实例。  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

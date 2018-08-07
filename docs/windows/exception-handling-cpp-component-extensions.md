@@ -1,5 +1,5 @@
 ---
-title: 异常处理 （c + + 组件扩展） |Microsoft 文档
+title: 异常处理 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877730"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568649"
 ---
 # <a name="exception-handling--c-component-extensions"></a>异常处理（C++ 组件扩展）
-使用编译的应用程序 **/ZW**编译器选项或 **/clr**都使用的编译器选项*异常*来在程序执行过程中处理意外的错误。 以下主题讨论 C++/CX 或 C++/CLI 应用程序中的异常处理。  
+使用应用程序编译`/ZW`编译器选项或`/clr`编译器选项都使用*异常*在程序执行期间处理意外的错误。 以下主题讨论 C++/CX 或 C++/CLI 应用程序中的异常处理。  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用托管异常中的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- 介绍引发异常和使用`try` / `catch`块。  
+ 描述引发的异常和使用**尝试**/**捕获**块。  
   
  [异常处理在 /CLR 下的行为差异](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  讨论与 C++ 异常处理的标准行为的区别。  

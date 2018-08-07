@@ -1,5 +1,5 @@
 ---
-title: 'Handletraits:: Close 方法 |Microsoft 文档'
+title: 'Handletraits:: Close 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f45f95fb1b060f3892def6dc2962bfffef70c77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875609"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569825"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close 方法
 关闭指定的句柄。  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
+### <a name="parameters"></a>参数  
+ *h*  
  要关闭的句柄。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果处理`h`关闭成功; 否则为**false**。  
+ **true**如果处理*h*关闭成功; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

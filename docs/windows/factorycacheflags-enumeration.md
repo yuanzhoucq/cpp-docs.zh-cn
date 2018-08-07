@@ -1,5 +1,5 @@
 ---
-title: FactoryCacheFlags 枚举 |Microsoft 文档
+title: FactoryCacheFlags 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc4bd998368fb325878a81ee4954a2ceec9432fe
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874325"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570098"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 枚举
 确定是否缓存工厂对象。  
@@ -32,7 +32,7 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，将工厂缓存策略指定为[ModuleType](../windows/moduletype-enumeration.md)模板参数在创建时[模块](../windows/module-class.md)对象。 若要重写此策略，请在创建工厂对象时指定 `FactoryCacheFlags` 值。  
+ 默认情况下，工厂缓存策略指定为[ModuleType](../windows/moduletype-enumeration.md)时创建的模板参数[模块](../windows/module-class.md)对象。 若要重写此策略，指定**FactoryCacheFlags**时创建一个工厂对象的值。  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: helpfile |Microsoft 文档
+title: helpfile |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876184"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570442"
 ---
 # <a name="helpfile"></a>helpfile
 设置类型库的帮助文件的名称。  
@@ -30,13 +30,12 @@ ms.locfileid: "33876184"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *filename*  
  包含的帮助主题文件的名称。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "33876184"
  **Helpfile** c + + 属性具有相同的功能[helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[模块](../windows/module-cpp.md)以举例说明如何使用**helpfile**。  
+ 有关示例，请参阅[模块](../windows/module-cpp.md)有关如何使用的示例**helpfile**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33876184"
   
 |||  
 |-|-|  
-|**适用对象**|`interface``typedef`，**类**，方法、 属性|  
+|**适用对象**|**接口**， **typedef**，**类**，方法中，**属性**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

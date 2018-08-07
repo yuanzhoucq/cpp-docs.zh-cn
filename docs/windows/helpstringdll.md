@@ -1,5 +1,5 @@
 ---
-title: helpstringdll |Microsoft 文档
+title: helpstringdll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877340"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570075"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-指定要用于执行文档字符串查找 （本地化） 的 dll 的名称。  
+指定要用于执行文档字符串查找 （本地化） DLL 的名称。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `string`  
+### <a name="parameters"></a>参数  
+ *string*  
  要用于执行文档字符串查找 DLL。  
   
 ## <a name="remarks"></a>备注  
@@ -45,7 +44,7 @@ ms.locfileid: "33877340"
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `interface`，接口方法|  
+|**适用对象**|**类**，**接口**，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

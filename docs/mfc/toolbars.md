@@ -37,7 +37,7 @@ ms.locfileid: "33381343"
   
 -   [示例](../mfc/toolbar-sample-list.md)  
   
- 有关 MFC 工具栏的详细信息，请参阅文章 Q232017，"如何:: 添加文本到工具栏按钮，"Microsoft 知识库中在http://support.microsoft.com。  
+ 有关 MFC 工具栏的详细信息，请参阅文章 Q232017，"如何:: 添加文本到工具栏按钮，"Microsoft 知识库中在 http://support.microsoft.com。  
   
 ## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Eventtargetarray 构造函数 |Microsoft 文档'
+title: 'Eventtargetarray:: Eventtargetarray 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872710"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569783"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 构造函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `hr`  
- 此构造函数操作后, 参数`hr`指示数组分配是否成功。 下表列出的可能值`hr`。  
+### <a name="parameters"></a>参数  
+ *hr*  
+ 此构造函数的操作之后, 参数*hr*指示数组的分配是成功还是失败。 下表列出了可能的值为*hr*。  
   
  S_OK  
  操作成功。  
@@ -47,15 +47,15 @@ EventTargetArray(
  无法为数组分配内存。  
   
  S_FALSE  
- 参数`items`小于或等于零。  
+ 参数*项*小于或等于零。  
   
- `items`  
- 分配的数组元素的数目。  
+ *项*  
+ 要分配的数组元素数。  
   
 ## <a name="remarks"></a>备注  
- 初始化 EventTargetArray 类的新实例。  
+ 初始化的新实例**EventTargetArray**类。  
   
- EventTargetArray 用于保留 EventSource 对象中的事件处理程序的数组。  
+ **EventTargetArray**用于将数组中的事件处理程序`EventSource`对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

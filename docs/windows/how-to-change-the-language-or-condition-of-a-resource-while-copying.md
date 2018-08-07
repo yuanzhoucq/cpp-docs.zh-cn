@@ -1,5 +1,5 @@
 ---
-title: 如何： 在复制时更改语言或资源的条件 |Microsoft 文档
+title: 如何： 复制时更改语言或资源的条件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880132"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570491"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在复制时更改资源的语言或条件
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。  
@@ -44,15 +44,13 @@ IDD_AboutBox (Finnish - XX33)
   
 2.  选择**插入副本**从快捷菜单。  
   
-3.  在**插入资源副本**对话框中：  
+3.  在中**插入资源副本**对话框：  
   
     -   有关**语言**列表框中，选择的语言。  
   
-    -   在**条件**框中，键入条件。  
+    -   在中**条件**框中，键入条件。  
   
-
-  
- 要求  
+## <a name="requirements"></a>要求  
   
  Win32  
   

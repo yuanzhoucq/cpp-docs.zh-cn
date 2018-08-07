@@ -1,5 +1,5 @@
 ---
-title: 自定义或更改颜色 （图标的图像编辑器） |Microsoft 文档
+title: 自定义或更改颜色 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,36 +26,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871232"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571280"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自定义或更改颜色（图标的图像编辑器）
-图像编辑器[调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，你可以[保存并加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
+图像编辑器[颜色调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，可以[保存和加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>更改调色板上的颜色  
   
-1.  从**映像**菜单上，选择**调整颜色**。  
+1.  从**图像**菜单中，选择**调整颜色**。  
   
-2.  在[自定义颜色选择器对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)，通过在相应的文本框中键入 RGB 或 HSL 值来定义颜色，或选择一种颜色**渐变颜色显示**框。  
+2.  在中[自定义颜色选择器对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)，通过在相应的文本框中键入 RGB 或 HSL 值定义的颜色或选择中的颜色**渐变颜色显示**框。  
   
 3.  通过移动滑块来设置亮度**亮度**栏。  
   
 4.  许多自定义颜色是抖色。 如果要纯色最接近于抖色，双击**颜色**框。  
   
-     如果你以后决定要抖的色，移动滑块**亮度**栏或移动中的十字线**渐变颜色显示**框以还原抖色处理。  
+     如果你以后决定要抖的色，移动滑块**亮度**条形图或将十字线移**渐变颜色显示**框再次还原抖色。  
   
 5.  单击**确定**以添加新的颜色。  
   
-
-  
- 要求  
+## <a name="requirements"></a>要求  
   
  无  
   
 ## <a name="see-also"></a>请参阅  
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [处理颜色](../windows/working-with-color-image-editor-for-icons.md)

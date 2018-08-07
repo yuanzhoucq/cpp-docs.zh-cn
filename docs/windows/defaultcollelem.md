@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem |Microsoft 文档
+title: defaultcollelem |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870905"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569880"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 用于 Visual Basic 代码优化。  
@@ -30,18 +30,16 @@ ms.locfileid: "33870905"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Defaultcollelem** c + + 属性具有相同的功能[defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示接口方法使用**defaultcollelem**属性：  
+ 下面的代码显示了接口的方法使用**defaultcollelem**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

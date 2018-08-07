@@ -80,8 +80,8 @@ ms.locfileid: "38954794"
 |[operator/](../standard-library/valarray-operators.md#op_div)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的元素指向商。|
 |[operator==](../standard-library/valarray-operators.md#op_eq_eq)|测试两个相同大小的 valarray 的对应元素是否相等或者 valarray 的所有元素是否都等于 valarray 元素类型的指定值。|
 |[operator^](../standard-library/valarray-operators.md#op_xor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位异 `OR`。|
-|[operator|](../standard-library/valarray-operators.md#op_or)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `OR`。|
-|[operator||](../standard-library/valarray-operators.md#op_lor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `OR`。|
+|[operator&#124;](../standard-library/valarray-operators.md#op_or)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `OR`。|
+|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `OR`。|
 
 ### <a name="classes"></a>类
 

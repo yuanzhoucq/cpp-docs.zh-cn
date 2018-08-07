@@ -1,5 +1,5 @@
 ---
-title: 如何： 导入和导出资源 |Microsoft 文档
+title: 如何： 导入和导出资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879173"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570475"
 ---
 # <a name="how-to-import-and-export-resources"></a>如何：导入和导出资源
 可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 可以从 Visual C++ 项目导出相同类型的文件以分隔可以在开发环境外部使用的文件。  
@@ -42,30 +42,28 @@ ms.locfileid: "33879173"
   
 ### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>将一个单独的资源导入到当前资源文件中  
   
-1.  在[资源视图](../windows/resource-view-window.md)，右键单击资源脚本的节点 (*.rc) 文件您想要添加的资源。  
+1.  中[资源视图](../windows/resource-view-window.md)，右键单击该节点的资源脚本 (*.rc) 文件您想要添加资源。  
   
 2.  单击**导入**快捷菜单上。  
   
 3.  找到并选择位图 (.bmp)、图标 (.ico)、光标 (.cur)、Html 文件 (.htm) 或要导入的其他文件的文件名。  
   
-4.  单击**确定**将资源添加到所选文件**资源**视图。  
+4.  单击**确定**若要将资源添加到所选文件**资源**视图。  
   
     > [!NOTE]
     >  无论选择哪种特定资源类型，导入过程的工作方式都是相同的。 导入的资源会自动添加到该资源类型的正确节点。  
   
 ### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>导出位图、图标或光标作为单独的文件（以便在 Visual C++ 外部使用）  
   
-1.  在**资源**视图中，右键单击你想要导出的资源。  
+1.  在中**资源**视图中，右键单击你想要导出的资源。  
   
 2.  单击**导出**快捷菜单上。  
   
-3.  在**导出资源**对话框框中，接受当前文件名或键入一个新。  
+3.  在中**导出资源**对话框框中，接受当前文件的名称或键入一个新。  
   
-4.  导航到你想要保存该文件并单击的文件夹**导出**。  
+4.  导航到要保存文件，然后单击的文件夹**导出**。  
   
-
-  
- 要求  
+## <a name="requirements"></a>要求  
   
  Win32  
   

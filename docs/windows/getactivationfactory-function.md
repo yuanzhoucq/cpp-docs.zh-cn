@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory 函数 |Microsoft 文档
+title: GetActivationFactory 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881333"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570306"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函数
-检索由模板参数指定的类型的激活工厂。  
+检索指定模板参数的类型的激活工厂。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 一个模板参数，指定的激活工厂的类型。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 模板参数，用于指定的激活工厂的类型。  
   
- `activatableClassId`  
- 激活工厂可以生成的类名称。  
+ *activatableClassId*  
+ 激活工厂可以生成的类的名称。  
   
- `factory`  
- 此操作完成后，对类型的激活工厂的引用`T`。  
+ *工厂*  
+ 此操作完成后，对类型的激活工厂的引用*T*。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为该值指示此操作失败的原因的 HRESULT 错误。  
+ 如果成功，则为 S_OK否则为错误 HRESULT，指示此操作失败的原因。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

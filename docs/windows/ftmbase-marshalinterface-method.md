@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Marshalinterface 方法 |Microsoft 文档'
+title: 'Ftmbase:: Marshalinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874611"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570052"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface 方法
-初始化代理对象某些客户端过程中的所需的数据将写入流。  
+初始化一些客户端进程中的代理对象所需的数据写入到流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,32 +40,32 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `pStm`  
- 指向要封送处理期间使用的流指针。  
+### <a name="parameters"></a>参数  
+ *pStm*  
+ 指向要封送处理期间使用的流。  
   
- `riid`  
- 对要封送的接口标识符的引用。 此接口必须派生自 IUnknown 接口。  
+ *riid*  
+ 引用封送的接口标识符。 此接口必须派生自`IUnknown`接口。  
   
- `pv`  
- 指向要封送处理; 的接口指针如果调用方不具有到所需的接口指针，则可以为 NULL。  
+ *pv*  
+ 要封送处理; 的接口指针的指针如果调用方不具有到所需的接口指针，则可以为 NULL。  
   
- `dwDestContext`  
- 其中将是取消封送指定的接口的目标上下文。  
+ *dwDestContext*  
+ 其中将被取消封送指定的接口的目标上下文。  
   
  指定一个或多个 MSHCTX 枚举值。  
   
- 在当前进程 (MSHCTX_INPROC) 的另一单元，或者在当前进程 (MSHCTX_LOCAL) 所在的计算机上的另一个进程中，会发生取消封送。  
+ 在当前进程 (MSHCTX_INPROC) 的另一单元或者当前进程 (MSHCTX_LOCAL) 在同一台计算机上的另一个进程中，会发生取消封送。  
   
- `pvDestContext`  
+ *pvDestContext*  
  留待将来使用；必须为零。  
   
- `mshlflags`  
- 指定是否要封送处理数据的传输回客户端进程-典型用例 — 或写入全局表，其中它可以通过多个客户端检索。  
+ *mshlflags*  
+ 指定要封送处理的数据是否传输回客户端进程 — 典型用例，或写入到全局表，其中可以由多个客户端检索它。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
- 已成功封送的接口指针。  
+ 已成功地封送的接口指针。  
   
  E_NOINTERFACE  
  不支持指定的接口。  

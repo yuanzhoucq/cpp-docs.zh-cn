@@ -1,5 +1,5 @@
 ---
-title: 显式重写 （c + + 组件扩展） |Microsoft 文档
+title: 显式重写 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,64 +15,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879498"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570319"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
-本主题讨论如何显式重写基类或接口的成员。 命名的 （显式） 重写应仅用于重写的方法与具有不同的名称派生方法。  
+本主题讨论如何显式重写基类或接口的成员。 命名的显式重写仅应该用于重写的方法与具有不同的名称派生方法。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  **语法**  
   
 ```  
-  
-      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **参数**  
   
  *重写函数声明符*  
- 重写的函数返回类型、 名称和自变量列表。  请注意，重写的函数不需要具有重写的函数相同的名称。  
+ 重写的函数返回类型、 名称和参数列表。  请注意，重写的函数不需要具有被重写的函数相同的名称。  
   
  *type*  
  包含用于重写的函数的基类型。  
   
  *函数*  
- 以逗号分隔的一个或多个要重写的函数名称列表。  
+ 以逗号分隔的一个或多个重写的函数名称的列表。  
   
  *重写函数定义*  
- 定义重写的函数 function 正文语句。  
+ 定义重写的函数的函数正文语句。  
   
  **备注**  
   
- 使用显式重写创建别名对于方法签名，或以提供有关方法 witht 相同的签名的不同实现。  
+ 使用显式重写以创建一个别名对于方法签名，或提供方法以便使用相同的签名的不同实现。  
   
  有关修改继承的类型和继承的类型成员的行为的信息，请参阅[重写说明符](../windows/override-specifiers-cpp-component-extensions.md)。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- 有关显式信息在本机代码中重写或使用代码编译 **/clr:oldSyntax**，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
+ 有关显式信息将覆盖在本机代码中或使用代码编译`/clr:oldSyntax`，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示一个简单的、 隐式重写和一个的成员的实现在基接口中，不使用显式重写。  
+ 下面的代码示例演示了简单的、 隐式重写和成员的实现基接口，在不使用显式重写。  
   
-```  
+```cpp  
 // explicit_override_1.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -100,10 +99,9 @@ X::f override of I1::f
   
  **示例**  
   
- 下面的代码示例演示如何实现所有接口成员具有公共签名使用显式重写语法。  
+ 下面的代码示例演示如何实现所有接口成员具有公共签名，使用显式重写的语法。  
   
-```  
-  
+```cpp  
 // explicit_override_2.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -137,7 +135,7 @@ X::f override of I1::f and I2::f
   
  **示例**  
   
- 下面的代码示例显示如何函数重写可以有与它正在实现的函数的名称不同。  
+ 下面的代码示例演示如何使函数重写具有它正在实现的函数与不同的名称。  
   
 ```  
 // explicit_override_3.cpp  
@@ -167,9 +165,9 @@ X::g
   
  **示例**  
   
- 下面的代码示例显示一个显式接口实现，实现类型安全集合。  
+ 下面的代码示例显示了实现的类型安全集合的显式接口实现。  
   
-```  
+```cpp  
 // explicit_override_4.cpp  
 // compile with: /clr /LD  
 using namespace System;  

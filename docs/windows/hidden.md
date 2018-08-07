@@ -1,5 +1,5 @@
 ---
-title: 隐藏 |Microsoft 文档
+title: 隐藏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879680"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568665"
 ---
 # <a name="hidden"></a>隐藏
 指示该项存在，但不是应在面向用户的浏览器中显示。  
@@ -30,16 +30,14 @@ ms.locfileid: "33879680"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **隐藏**c + + 属性具有相同的功能[隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861)MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)以举例说明如何使用**隐藏**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)有关如何使用的示例**隐藏**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -47,9 +45,9 @@ ms.locfileid: "33879680"
   
 |||  
 |-|-|  
-|**适用对象**|`interface`**类**， `struct`，方法、 属性|  
+|**适用对象**|**接口**，**类**，**结构**，方法、 属性|  
 |**可重复**|否|  
-|**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
+|**必需的特性**|**组件类**(当应用于**类**或**结构**)|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

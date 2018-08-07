@@ -1,5 +1,5 @@
 ---
-title: 双 |Microsoft 文档
+title: 双 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872375"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571013"
 ---
 # <a name="dual"></a>dual
-将接口置于.idl 文件中作为双重接口。  
+双重接口.idl 文件中放置一个接口。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- 当**双重**c + + 特性之前接口，这会导致要放置在生成的.idl 文件中的库块内部的接口。  
+ 当**双**c + + 属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。  
   
 ## <a name="example"></a>示例  
- 下面的代码是使用特性块**双重**接口定义的前面：  
+ 下面的代码是使用特性块**双**接口定义的前面：  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**适用对象**|`interface`|  
+|**适用对象**|**interface**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**dispinterface**|  
@@ -88,7 +86,7 @@ __interface IStatic : IDispatch
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [按用法分的特性](../windows/attributes-by-usage.md)   
+ [按使用情况的特性](../windows/attributes-by-usage.md)   
  [自定义](../windows/custom-cpp.md)   
  [调度接口](../windows/dispinterface.md)   
  [对象](../windows/object-cpp.md)   

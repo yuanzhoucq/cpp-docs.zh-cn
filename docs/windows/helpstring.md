@@ -1,5 +1,5 @@
 ---
-title: helpstring |Microsoft 文档
+title: helpstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879001"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570926"
 ---
 # <a name="helpstring"></a>helpstring
-指定用于描述应用于元素的字符字符串。  
+指定一个字符串，用于描述应用该字符串的元素。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `string`  
+### <a name="parameters"></a>参数  
+ *string*  
  帮助字符串的文本。  
   
 ## <a name="remarks"></a>备注  
  **Helpstring** c + + 属性具有相同的功能[helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[defaultvalue](../windows/defaultvalue.md)以举例说明如何使用**helpstring**。  
+ 有关示例，请参阅[defaultvalue](../windows/defaultvalue.md)有关如何使用的示例**helpstring**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33879001"
   
 |||  
 |-|-|  
-|**适用对象**|`interface``typedef`，**类**，方法、 属性|  
+|**适用对象**|**接口**， **typedef**，**类**，方法、 属性|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
@@ -65,5 +64,5 @@ ms.locfileid: "33879001"
  [类特性](../windows/class-attributes.md)   
  [方法特性](../windows/method-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Helpfile](../windows/helpfile.md)   
+ [帮助文件](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

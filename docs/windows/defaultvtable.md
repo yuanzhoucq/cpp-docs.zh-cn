@@ -1,5 +1,5 @@
 ---
-title: defaultvtable |Microsoft 文档
+title: defaultvtable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882532"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569659"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-为 COM 对象的默认 vtable 接口中定义一个接口。  
+为 COM 对象的默认 vtable 接口定义的接口。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>参数  
- `interface`  
- 你想要的 COM 对象默认 vtable 指定的接口。  
+ *interface*  
+ 你想要具有默认 vtable 的 COM 对象的指定的接口。  
   
 ## <a name="remarks"></a>备注  
  **Defaultvtable** c + + 属性具有相同的功能[defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码显示使用的类上的特性**defaultvtable**以指定的默认接口：  
+ 下面的代码演示属性使用的类上**defaultvtable**指定默认接口：  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,7 +77,7 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  

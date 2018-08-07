@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954976"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571433"
 ---
 # <a name="dbcommand"></a>db_command
 创建 OLE DB 命令。  
@@ -133,7 +133,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="remarks"></a>备注  
 **db_command** 创建 [CCommand](../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。  
   
-可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类**CCommand\<>**，但函数和类的情况下，模板参数不同。 在函数事例中，将绑定包含本地变量的 **取值函数** ，而类用法将推断 `CAccessor`派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。  
+可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类`CCommand<>`，但函数和类的情况下，模板参数不同。 在函数事例中，将绑定包含本地变量的 **取值函数** ，而类用法将推断 `CAccessor`派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。  
   
 **db_command** 可用于执行不返回结果集的命令。  
   

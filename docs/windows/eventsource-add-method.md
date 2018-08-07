@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Add 方法 |Microsoft 文档'
+title: 'Eventsource:: Add 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873233"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570373"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add 方法
-将追加到的事件处理程序当前 EventSource 对象集表示由指定的委托接口的事件处理程序。  
+将追加到当前的事件处理程序集由指定的委托接口表示的事件处理程序**EventSource**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `delegateInterface`  
- 与委托的对象，它表示一个事件处理程序接口。  
+### <a name="parameters"></a>参数  
+ *delegateInterface*  
+ 为委托对象，表示事件处理程序的接口。  
   
- `token`  
- 此操作完成后，一个表示事件句柄。 使用此令牌的参数的[remove （)](../windows/eventsource-remove-method.md)方法，丢弃事件处理程序。  
+ *令牌*  
+ 此操作完成后，表示该事件的句柄。 使用此令牌作为参数[Remove()](../windows/eventsource-remove-method.md)方法，丢弃的事件处理程序。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  

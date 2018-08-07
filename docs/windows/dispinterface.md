@@ -1,5 +1,5 @@
 ---
-title: 调度接口 |Microsoft 文档
+title: dispinterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874283"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569209"
 ---
 # <a name="dispinterface"></a>dispinterface
 将一个接口作为调度接口置于 .idl 文件中。  
@@ -30,9 +30,7 @@ ms.locfileid: "33874283"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -58,7 +56,7 @@ dispinterface helloPro
   
 |||  
 |-|-|  
-|**适用对象**|`interface`|  
+|**适用对象**|**interface**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
@@ -67,8 +65,8 @@ dispinterface helloPro
   
 ## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
- [按用法分的特性](../windows/attributes-by-usage.md)   
- [Uuid](../windows/uuid-cpp-attributes.md)   
+ [按使用情况的特性](../windows/attributes-by-usage.md)   
+ [uuid](../windows/uuid-cpp-attributes.md)   
  [双](../windows/dual.md)   
  [自定义](../windows/custom-cpp.md)   
  [对象](../windows/object-cpp.md)   

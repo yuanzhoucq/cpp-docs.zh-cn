@@ -1,5 +1,5 @@
 ---
-title: helpcontext |Microsoft 文档
+title: helpcontext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877210"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571355"
 ---
 # <a name="helpcontext"></a>helpcontext
-指定允许用户查看有关此帮助文件中的元素信息的上下文 ID。  
+指定允许用户查看有关此帮助文件中的元素的信息的上下文 ID。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `id`  
+### <a name="parameters"></a>参数  
+ *id*  
  帮助主题的上下文 ID。 请参阅[HTML 帮助： 程序的上下文相关帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)的上下文 Id 的详细信息。  
   
 ## <a name="remarks"></a>备注  
  **Helpcontext** c + + 属性具有相同的功能[helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[defaultvalue](../windows/defaultvalue.md)以举例说明如何使用**helpcontext**。  
+ 有关示例，请参阅[defaultvalue](../windows/defaultvalue.md)有关如何使用的示例**helpcontext**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33877210"
   
 |||  
 |-|-|  
-|**适用对象**|`interface``typedef`，**类**，方法、 属性|  
+|**适用对象**|**接口**， **typedef**，**类**，方法、 属性|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
@@ -65,5 +64,5 @@ ms.locfileid: "33877210"
  [类特性](../windows/class-attributes.md)   
  [方法特性](../windows/method-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Helpfile](../windows/helpfile.md)   
+ [帮助文件](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   

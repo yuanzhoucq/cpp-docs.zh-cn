@@ -1,5 +1,5 @@
 ---
-title: 枚举类 （c + + 组件扩展） |Microsoft 文档
+title: 枚举类 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880600"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570543"
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 在命名空间范围内声明枚举，该枚举是用户定义的类型，其包含称为枚举数的一组命名常数。  
@@ -26,13 +26,12 @@ ms.locfileid: "33880600"
 ## <a name="all-runtimes"></a>所有运行时  
  **备注**  
   
- C++/CX 和 C++/CLI 支持 `public enum class` 和 `private enum class` ，两者与标准 C++ `enum class` 类似，但增加了可访问性说明符。 在 **/clr**下，允许使用 C++11 `enum class` 类型，但会生成警告 C4472，其目的是确保目标类型是 ISO 枚举类型，而不是 C++/CX 和 C++/CLI 类型。 有关 ISO 标准 c + +`enum`关键字，请参阅[枚举](../cpp/enumerations-cpp.md)。  
+ C + + /CX 和 C + + /cli CLI 支持**公共枚举类**和**私有枚举类**哪些是类似于标准 c + +**枚举类**但添加了可访问性说明符。 下 **/clr**，C + + 11**枚举类**类型允许，但会生成警告 C4472，其目的是确保真正需要的是 ISO 枚举类型，而不是 C + + /CX 和 C + + /cli CLI 类型。 有关 ISO 标准 c + + 的详细信息**enum**关键字，请参阅[枚举](../cpp/enumerations-cpp.md)。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
  **语法**  
   
 ```  
-  
       access  
       enum class  
       enumeration-identifier  
@@ -43,7 +42,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **参数**  
   
  *access*  
- 枚举的可访问性可以是 `public` 或 `private`。  
+ 可以是枚举的可访问性**公共**或**专用**。  
   
  *enumeration-identifier*  
  枚举的名称。  
@@ -51,7 +50,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *underlying-type*  
  （可选）枚举的基础类型。  
   
- （可选。 Windows 仅运行时） 的基础类型的枚举，它可以是`bool`， `char`， `char16`， `int16`， `uint16`， `int`， `uint32`， `int64`，或`uint64`。  
+ （可选。 Windows 仅限运行时） 的基础类型的枚举，它可以是**bool**， **char**， `char16`， `int16`， `uint16`， **int**， `uint32`， `int64`，或`uint64`。  
   
  *enumerator-list*  
  以逗号分隔的枚举器名称列表。  
@@ -69,7 +68,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
 -   如果 *underlying-type* 是数字，并且枚举器指定了该类型的最大值，则不会显示下一个隐式定义的枚举值。  
   
--   如果 *underlying-type* 是 `bool`，且隐式定义了两个以上的枚举器，则只显示前两个枚举器。  
+-   如果*基础类型*是**bool**，且两个以上的枚举器隐式定义后不能表示的前两个枚举器。  
   
 -   如果 *underlying-type* 是 `char16`，且枚举值的范围是从 0xD800 到 0xDFFF，则可显示该值。 但是，该值出现逻辑错误，因为它表示半个 Unicode 代理项对，且不会以分隔形式显示。  
   
@@ -80,7 +79,6 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **语法**  
   
 ```  
-  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
@@ -89,19 +87,19 @@ accessenum structname [:type] { enumerator-list } var;
   
  **参数**  
   
- `access`  
- 枚举的可访问性。  可以是 **public** 或 `private`。  
+ *access*  
+ 枚举的可访问性。 可以是**公共**或**专用**。  
   
- `enumerator-list`  
+ *enumerator-list*  
  枚举中以逗号分隔的标识符（枚举器）列表。  
   
- `name`  
- 枚举的名称。  不允许匿名托管枚举。  
+ *name*  
+ 枚举的名称。 不允许匿名托管枚举。  
   
- `type` （可选）  
- *标识符*的基础类型。  可以是任何标量类型，例如 int、short 或 long 的有符号或无符号的版本。  也可以是`bool` 或 `char` 。  
+ *类型*（可选）  
+ *标识符*的基础类型。 这可以是任何标量类型，例如符号或无符号的版本**int**，**短**，或**长**。  **bool**或**char**还允许使用。  
   
- `var` （可选）  
+ *var* （可选）  
  枚举类型的变量的名称。  
   
  **备注**  
@@ -145,9 +143,9 @@ static const int mon = 1;
   
  在 Visual C ++ 2002 和 Visual C ++ 2003 中，很有可能注入了枚举器（在封闭作用域中可见，除非具有相同名称的另一个标识符）。  
   
- 如果定义了标准 C++ 枚举（无 **class** 或 `struct`），编译 **/clr** 将导致枚举编译为托管枚举。  枚举仍然具有非托管枚举的语义。  注意：编译器插入 Visual C++ 编译器可识别的属性 `Microsoft::VisualC::NativeEnumAttribute`，以标识程序员想将枚举变为本机枚举。  其他编译器只会将标准枚举视为托管枚举。  
+ 如果定义了标准 c + + 枚举 (无需**类**或**结构**)，编译`/clr`将导致枚举编译为托管枚举。  枚举仍然具有非托管枚举的语义。  注意：编译器插入 Visual C++ 编译器可识别的属性 `Microsoft::VisualC::NativeEnumAttribute`，以标识程序员想将枚举变为本机枚举。  其他编译器只会将标准枚举视为托管枚举。  
   
- 使用 /clr 编译的已命名标准枚举将在作为托管枚举的程序集中可视，并且可供任何其他托管编译器使用。   但是，未命名的标准枚举不会在程序集中公开可见。  
+ 名为的与已编译的标准枚举`/clr`会显示在为托管枚举的程序集和可供任何其他托管编译器。   但是，未命名的标准枚举不会在程序集中公开可见。  
   
  在 Visual C ++ 2002 和 Visual C ++ 2003 中，用作函数参数中的类型的标准枚举：  
   
@@ -228,7 +226,6 @@ convert to int: 1
 1  
   
 1  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  
