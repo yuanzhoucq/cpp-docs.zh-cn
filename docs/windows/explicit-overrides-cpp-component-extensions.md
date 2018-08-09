@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570319"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644347"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
 本主题讨论如何显式重写基类或接口的成员。 命名的显式重写仅应该用于重写的方法与具有不同的名称派生方法。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **语法**  
+### <a name="syntax"></a>语法
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **参数**  
-  
+
+### <a name="parameters"></a>参数 
  *重写函数声明符*  
  重写的函数返回类型、 名称和参数列表。  请注意，重写的函数不需要具有被重写的函数相同的名称。  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *重写函数定义*  
  定义重写的函数的函数正文语句。  
   
- **备注**  
+### <a name="remarks"></a>备注
   
  使用显式重写以创建一个别名对于方法签名，或提供方法以便使用相同的签名的不同实现。  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注
   
  有关显式信息将覆盖在本机代码中或使用代码编译`/clr:oldSyntax`，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
   
 ### <a name="requirements"></a>要求  
  编译器选项：`/clr`  
   
-### <a name="examples"></a>示例  
- **示例**  
+### <a name="examples"></a>示例   
   
  下面的代码示例演示了简单的、 隐式重写和成员的实现基接口，在不使用显式重写。  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **示例**  
   
  下面的代码示例演示如何实现所有接口成员具有公共签名，使用显式重写的语法。  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **示例**  
-  
  下面的代码示例演示如何使函数重写具有它正在实现的函数与不同的名称。  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 X::g  
 ```  
-  
- **示例**  
   
  下面的代码示例显示了实现的类型安全集合的显式接口实现。  
   

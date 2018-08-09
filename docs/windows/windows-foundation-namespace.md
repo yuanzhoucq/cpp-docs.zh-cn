@@ -1,5 +1,5 @@
 ---
-title: 'Windows:: foundation Namespace |Microsoft 文档'
+title: 'Windows:: foundation Namespace |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891219"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646726"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 命名空间
-启用基本 Windows 运行时功能，如对象和工厂创建。  
+启用基本 Windows 运行时功能，例如对象和工厂创建。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +40,8 @@ namespace Windows::Foundation;
   
 |名称|描述|  
 |----------|-----------------|  
-|[ActivateInstance 函数](../windows/activateinstance-function.md)|注册并检索在指定的类 id。 定义的指定类型的实例|  
-|[GetActivationFactory 函数](../windows/getactivationfactory-function.md)|检索由模板参数指定的类型的激活工厂。|  
+|[ActivateInstance 函数](../windows/activateinstance-function.md)|注册并检索实例的指定类型定义中指定的类 id。|  
+|[GetActivationFactory 函数](../windows/getactivationfactory-function.md)|检索指定模板参数的类型的激活工厂。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  
@@ -49,4 +49,4 @@ namespace Windows::Foundation;
  **Namespace:** Windows  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Namespace](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Windows Namespace](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

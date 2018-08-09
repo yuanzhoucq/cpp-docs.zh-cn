@@ -1,5 +1,5 @@
 ---
-title: 工具栏编辑器 |Microsoft 文档
+title: 工具栏编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891306"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641642"
 ---
 # <a name="toolbar-editor"></a>工具栏编辑器
 使用工具栏编辑器，可以创建工具栏资源并将位图转换为工具栏资源。 工具栏编辑器通过图形化显示来显示工具栏和按钮，其外观与完成的应用程序非常相似。  
@@ -47,7 +47,7 @@ ms.locfileid: "33891306"
   
  工具栏编辑器与图像编辑器的功能类似。 菜单项、图形工具和位图网格与图像编辑器中的对应工具相同。 图像菜单上有菜单命令，让你可以在工具栏编辑器和图像编辑器之间切换。 有关使用图形工具栏、调色板或图像菜单的详细信息，请参阅 [图像编辑器](../windows/image-editor-for-icons.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  MFC 或 ATL  
@@ -55,4 +55,3 @@ ms.locfileid: "33891306"
 ## <a name="see-also"></a>请参阅  
  [资源编辑器](../windows/resource-editors.md)   
  [菜单和其他资源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

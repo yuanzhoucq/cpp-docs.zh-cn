@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571170"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650048"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
 适用于对类类型参数的限制将与那些应用于类型参数在接口上的相同 (请参阅[泛型类 (C + + CLI)](../windows/generic-classes-cpp-cli.md))。  
@@ -34,14 +34,14 @@ ms.locfileid: "39571170"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>备注  
  *属性*（可选）  
- 附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
+ 附加的声明信息。 属性和属性类的详细信息，请参阅**属性**。  
   
  *类键*  
  **类**或**typename**  

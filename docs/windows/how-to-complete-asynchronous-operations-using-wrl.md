@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643051"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成异步操作
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 来启动异步操作并在操作完成时执行工作。  
@@ -40,7 +40,7 @@ ms.locfileid: "39570738"
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h 声明使用异步计时器所需的类型。  
+     `Windows.System.Threading.h` 声明使用异步计时器所需的类型。  
   
      我们建议您在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "39570738"
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>编译代码  
- 若要编译代码，将其复制然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-asyncOp.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 若要编译代码，将其复制然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-asyncOp.cpp`，然后运行以下命令中**Visual Studio 命令提示符**窗口。  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

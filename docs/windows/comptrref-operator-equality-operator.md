@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463949"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650698"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *a*  
- ComPtrRef 对象的引用。  
+ 对引用**ComPtrRef**对象。  
   
  *b*  
- 对另一个 ComPtrRef 对象或到匿名类型的指针的引用 (`void*`)。  
+ 对另一个引用**ComPtrRef**对象或到匿名类型的指针 (`void*`)。  
   
 ## <a name="return-value"></a>返回值  
  第一个运算符产生 **，则返回 true**如果对象是否等于对象*b*; 否则为**false**。  
@@ -69,7 +69,7 @@ bool operator==(
  第四个和第五个运算符会产生 **，则返回 true**如果对象是否等于对象*b*; 否则为**false**。  
   
 ## <a name="remarks"></a>备注  
- 指示两个 ComPtrRef 对象是否相等。  
+ 指示两个**ComPtrRef**对象是否相等。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee66017edabf80349bf2960f7cb2ca2654c8c4cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464543"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643574"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
 等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 SyncLock Lock();  
   
    static SyncLock Lock(  
@@ -37,7 +37,7 @@ SyncLock Lock();
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *cs*  
  用户指定的关键部分对象。  
   

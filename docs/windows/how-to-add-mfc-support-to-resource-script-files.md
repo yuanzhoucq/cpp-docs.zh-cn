@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569737"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647019"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>如何：向资源脚本文件添加 MFC 支持
 通常情况下，生成用于 Windows 使用的 MFC 应用程序[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)，向导将生成一组基本的文件 （包括资源脚本 (.rc) 文件），其中包含 Microsoft 基础的核心功能类 (MFC)。 但是，如果在为不基于 MFC 的 Windows 应用程序编辑 .rc 文件，则无法使用以下特定于 MFC 框架的功能：  
@@ -55,7 +55,6 @@ ms.locfileid: "39569737"
     >  除了设置此标志之后，.rc 文件还必须是 MFC 项目的一部分。 例如，只需设置**MFC Mode**到**True**在 Win32 中的.rc 文件上项目不会为你提供任何 MFC 功能。  
   
 ## <a name="requirements"></a>要求  
-  
  MFC  
   
 ## <a name="see-also"></a>请参阅  

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570667"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643184"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 使用以下形式声明的泛型类：  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>备注  
  在上述语法中，使用以下术语：  
   
- `attributes`（可选）  
+ *属性*（可选）  
  附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
  *类键*  
@@ -57,7 +57,7 @@ class-body
  *约束子句*  
  （不以逗号分隔） 的列表**其中**子句指定的类型参数约束。 采用格式：  
   
- `where`  *类型参数标识符*`:`*约束列表*   `...`  
+ `where`  *类型参数标识符*`:`*约束列表*  `...`  
   
  *约束列表*  
  *类或接口*[`,` *...*]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- 类型 Outer\<int >:: 内部不是外部的类型相同\<双精度 >:: 内部。  
+ 类型`Outer<int>::Inner`不是类型相同`Outer<double>::Inner`。  
   
  与泛型类中的泛型方法，可以为嵌套类型定义其他类型参数。 如果在内部和外部类中使用相同的类型参数名称，内部类型参数将隐藏外部类型参数。  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  因为没有方法来引用外部类型参数，编译器会生成警告在此情况下。  
   
- 当构造嵌套的泛型类型的命名时，外部类型的类型参数即使内部类型隐式参数化外部类型的类型参数不包含内部类型的类型参数列表中。 在上面的示例中，构造类型的名称将为 Outer\<int >:: 内部\<字符串 >。  
+ 当构造嵌套的泛型类型的命名时，外部类型的类型参数即使内部类型隐式参数化外部类型的类型参数不包含内部类型的类型参数列表中。 在上述情况下，构造类型的名称会`Outer<int>::Inner<string>`。  
   
  下面的示例演示如何生成和读取泛型类中使用嵌套的类型的链接的列表。  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   属性、 事件、 索引和运算符可以作为返回值、 参数或局部变量，例如何时使用封闭泛型类的类型参数`ItemType`是类的一个类型参数：  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

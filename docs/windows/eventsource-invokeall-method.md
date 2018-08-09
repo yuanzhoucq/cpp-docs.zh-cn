@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570643"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648628"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
 调用与当前关联的每个事件处理程序[EventSource](../windows/eventsource-class.md)对象使用指定的参数类型和自变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void InvokeAll();  
 template <  
    typename T0  

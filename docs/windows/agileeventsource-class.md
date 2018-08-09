@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462064"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642833"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
@@ -30,7 +30,7 @@ ms.locfileid: "39462064"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>参数  
  *TDelegateInterface*  
-
  一个委托，表示一个事件处理程序接口。
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ class AgileEventSource
 
 |名称|描述|
 |----------|-----------------|
-|[AgileEventSource::Add 方法](#add)|将追加到当前 AgileEventSource 对象的事件处理程序集由指定的委托接口表示的敏捷事件处理程序。|
+|[AgileEventSource::Add 方法](#add)|将追加到当前的事件处理程序集由指定的委托接口表示的敏捷事件处理程序**AgileEventSource**对象。|
 
 ## <a name="add"></a> AgileEventSource::Add 方法
 
@@ -85,7 +84,7 @@ HRESULT Add(
 为委托对象，表示事件处理程序的接口。
 
 *令牌*  
-此操作完成后，表示该事件的句柄。 使用此令牌作为 Remove() 方法的参数要丢弃的事件处理程序。
+此操作完成后，表示该事件的句柄。 使用此令牌作为参数`Remove()`方法，丢弃的事件处理程序。
 
 ### <a name="return-value"></a>返回值
 

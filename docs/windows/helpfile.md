@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3c2714c1418c5c9828322561ae1d7ca86dc6130a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570442"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647731"
 ---
 # <a name="helpfile"></a>helpfile
 设置类型库的帮助文件的名称。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ helpfile(  
    "filename"  
 ) ]  

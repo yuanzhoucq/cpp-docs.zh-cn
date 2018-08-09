@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16d01d634b44b4e6da425c40e011106021638305
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461733"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642989"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>更改图像上文本的字体（图标的图像编辑器）
 下面的过程是如何的示例：  
@@ -31,13 +31,13 @@ ms.locfileid: "39461733"
   
 ### <a name="to-change-the-font-of-text-on-an-image"></a>若要更改图像上文本的字体  
   
-1.  创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa)。 [Windows 窗体应用程序模板](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)添加默认命名为 app.ico 到你的项目文件。  
+1.  创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa)。 [Windows 窗体应用程序模板](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)将添加一个名为文件`app.ico`到你的项目默认情况下。  
   
-2.  在解决方案资源管理器中双击文件 app.ico。 [的图像编辑器](../windows/image-editor-for-icons.md)将打开。  
+2.  在中**解决方案资源管理器**，双击文件 app.ico。 [的图像编辑器](../windows/image-editor-for-icons.md)将打开。  
   
 3.  从**图像**菜单中，选择**工具**，然后选择**文本工具**。 [文本工具对话框](../windows/text-tool-dialog-box-image-editor-for-icons.md)将出现。  
   
-4.  在中**文本工具**对话框中，键入`C++`空文本区域中。 此文本将显示在位于 app.ico、 左上角可调整大小框**的图像编辑器**。  
+4.  在中**文本工具**对话框中，键入`C++`空文本区域中。 此文本将显示在一个可调整大小的框，位于左上角`app.ico`，请在**的图像编辑器**。  
   
 5.  在中**的图像编辑器**，将可调整大小框中拖到 app.ico，以提高文本可读性的中心。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "39461733"
   
 10. 单击**确定**按钮。 **文本工具字体**对话框将关闭，并且新的字体设置将应用于您的文本。  
   
-11. 单击**关闭**按钮**文本工具**对话框。 在文本周围的调整大小框将消失从图像编辑器中。  
+11. 单击**关闭**按钮**文本工具**对话框。 在文本周围的调整大小框将不会出现**的图像编辑器**。  
   
 ## <a name="see-also"></a>请参阅  
  [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   

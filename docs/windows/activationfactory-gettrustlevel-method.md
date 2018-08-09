@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466717"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652264"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 方法
 获取对象的信任级别的当前**ActivationFactory**实例化。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *trustLvl*  
  在运行时的信任级别完成此操作后，类，该类**ActivationFactory**实例化。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则，将发出断言错误并*trustLvl*设置为 FullTrust。  
+ 如果成功，则为 S_OK否则，将发出断言错误并*trustLvl*设置为`FullTrust`。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

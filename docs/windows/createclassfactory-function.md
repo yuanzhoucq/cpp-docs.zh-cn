@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 57759e7191ecbe08e6d94dcec798f6d3203c13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461320"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645134"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函数
 创建为指定类生成实例的工厂。  
@@ -39,7 +39,7 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ) throw();  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *flags*  
  一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。  
   

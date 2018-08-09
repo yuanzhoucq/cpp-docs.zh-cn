@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466343"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642898"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函数
 创建为可由 Windows 运行时激活的指定类生成实例的工厂。  
@@ -37,7 +37,7 @@ template<typename Factory>
      _Outptr_ IUnknown **ppFactory) throw();  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *flags*  
  一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。  
   

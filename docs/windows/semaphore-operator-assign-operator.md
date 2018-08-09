@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: operator = 运算符 |Microsoft 文档'
+title: 'Semaphore:: operator = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892522"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651273"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 运算符
-将指定的句柄从信号量对象移动到当前的信号量对象。  
+将从指定句柄**信号量**对象与当前**信号量**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
- 信号量对象的右值引用。  
+### <a name="parameters"></a>参数  
+ *h*  
+ 对右值引用**信号量**对象。  
   
 ## <a name="return-value"></a>返回值  
- 对当前的信号量对象的引用。  
+ 对当前的引用**信号量**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

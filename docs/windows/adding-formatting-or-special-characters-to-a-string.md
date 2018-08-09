@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35592793b0fe606d3b88bef900d528d2c1231406
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8ccfe36f4bbd14856b25d18bc83339ece2e98801
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463835"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644776"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>为字符串添加格式设置或特殊字符
 ### <a name="to-add-formatting-or-special-characters-to-a-string"></a>若要为字符串添加格式设置或特殊字符  
@@ -35,7 +35,7 @@ ms.locfileid: "39463835"
   
 2.  选择你想要修改的字符串。  
   
-3.  在中[属性窗口](/visualstudio/ide/reference/properties-window)，添加任何标准的转义序列中的文本到下列**标题**框，然后按**ENTER**。  
+3.  在中[属性窗口](/visualstudio/ide/reference/properties-window)，添加任何标准的转义序列中的文本到下列**标题**框，然后按**Enter**。  
   
     |若要获取此信息|键入这|  
     |-----------------|---------------|  
@@ -47,14 +47,12 @@ ms.locfileid: "39463835"
     |警报 （响铃）|\a|  
   
 > [!NOTE]
->  字符串编辑器不支持转义 ASCI 字符的完整集。 您只能使用上面所列。  
+>  **字符串**编辑器不支持转义 ASCI 字符的完整集。 您只能使用上面所列。  
   
- 有关将资源添加到托管项目 （项目面向公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[演练： 使用 for Localization with ASP.NET 资源](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 有关将资源添加到托管项目 （项目面向公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[演练： 使用 for Localization with ASP.NET 资源](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
- **要求**  
-  
+## <a name="requirements"></a>要求 
  Win32  
   
 ## <a name="see-also"></a>请参阅  
  [字符串编辑器](../windows/string-editor.md)   
-

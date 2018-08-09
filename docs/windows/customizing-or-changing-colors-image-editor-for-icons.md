@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645391"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自定义或更改颜色（图标的图像编辑器）
-图像编辑器[颜色调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，可以[保存和加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
+**图像**编者[调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，可以[保存和加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>更改调色板上的颜色  
   
@@ -51,7 +51,6 @@ ms.locfileid: "39571280"
 5.  单击**确定**以添加新的颜色。  
   
 ## <a name="requirements"></a>要求  
-  
  无  
   
 ## <a name="see-also"></a>请参阅  

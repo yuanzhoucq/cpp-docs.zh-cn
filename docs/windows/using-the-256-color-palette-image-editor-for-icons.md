@@ -1,5 +1,5 @@
 ---
-title: 使用 256 色调色板 （图标的图像编辑器） |Microsoft 文档
+title: 使用 256 色调色板 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890900"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645147"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>使用 256 色调色板（图标的图像编辑器）
-若要从 256 色调色板绘制通过选择，你需要从调色板中选择这些颜色[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  
+若要通过选择绘制从 256 色调色板，您需要从调色板中选择的颜色[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  
   
-### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>若要从大图标 256 色调色板中选择一种颜色  
+### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>若要从大图标的 256 色调色板选择颜色  
   
-1.  选择大图标或光标，或创建新的大图标或光标。  
+1.  大图标或光标，选择或创建新的大图标或光标。  
   
-2.  从显示中的 256 种颜色选择颜色**颜色**调色板中的**颜色**窗口。  
+2.  从显示中的 256 种颜色中选择颜色**颜色**中的调色板**颜色**窗口。  
   
      选定的颜色将成为在调色板中的当前颜色**颜色**窗口。  
   
     > [!NOTE]
-    >  用于 256 色映像初始调色板匹配 CreateHalftonePalette Windows API 返回调色板。 适用于 Windows 外壳程序的所有图标应都使用此调色板来避免在调色板实现过程闪烁。  
+    >  使用 256 色图像的初始调色板匹配返回的调色板`CreateHalftonePalette`Windows API。 适用于 Windows 外壳程序的所有图标应都使用此面板来防止在调色板实现过程的闪烁。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
-  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [创建 256 色图标或光标](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

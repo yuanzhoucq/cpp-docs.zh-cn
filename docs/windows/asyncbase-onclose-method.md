@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Onclose 方法 |Microsoft 文档'
+title: 'Asyncbase:: Onclose 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a0cce7f51ef7974d0520f0bdfd2f025a09ecaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c1b888b9d3e3f3c80c3aff40f5fd545ece9cca6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859600"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650633"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose 方法
-当在派生类中重写，关闭异步操作。  
+当在派生类中重写，会关闭一个异步操作。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 virtual void OnClose(  
    void  
 ) = 0;  

@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568873"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645121"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 泛型函数是使用类型参数声明的函数。 调用时，使用实际类型而不是类型参数。  
   
 ## <a name="all-platforms"></a>所有平台  
- **备注**  
+### <a name="remarks"></a>备注
   
  此功能不适用于所有平台。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注
   
  在 Windows 运行时中不支持此功能。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "39568873"
   
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  下面的代码示例演示了泛型函数。  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **示例**  
-  
  可以根据签名或实参数量、 上一个函数的类型参数的数目进行重载泛型函数。 此外，泛型函数可以具有相同名称的非泛型函数重载，只要函数在某些类型参数中的差异。 例如，以下函数可以进行重载：  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **示例**  
   
  以下示例使用泛型函数在数组中查找的第一个元素。 它声明`MyClass`，后者又继承的基类`MyBaseClass`。 `MyClass` 包含泛型函数`MyFunction`，它调用另一个泛型函数`MyBaseClassFunction`，在基类中。 在中`main`，泛型函数， `MyFunction`，使用不同的类型参数调用。  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 My function returned an int: 2003  

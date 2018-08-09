@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Ptr_ 数据成员 |Microsoft 文档'
+title: 'Comptrrefbase:: Ptr_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883562"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644838"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
 ## <a name="remarks"></a>备注  
- 指向由当前模板参数指定的类型的指针。  
+ 为当前的模板参数指定的类型的指针。  
   
 ## <a name="remarks"></a>备注  
- `ptr_` 是受保护的数据成员。  
+ **ptr_** 是受保护的数据成员。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

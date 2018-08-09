@@ -1,5 +1,5 @@
 ---
-title: transmit_as |Microsoft 文档
+title: transmit_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890407"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642520"
 ---
 # <a name="transmitas"></a>transmit_as
 指示编译器将客户端和服务器应用程序操作，提供的类型与传输类型关联。  
@@ -30,23 +30,22 @@ ms.locfileid: "33890407"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `type`  
+### <a name="parameters"></a>参数  
+ *type*  
  指定客户端和服务器之间传输的数据类型。  
   
 ## <a name="remarks"></a>备注  
  **Transmit_as** c + + 属性具有相同的功能[transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示使用**transmit_as**属性：  
+ 下面的代码演示的一种用法**transmit_as**属性：  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,7 +79,7 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**适用对象**|`typedef`|  
+|**适用对象**|**typedef**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

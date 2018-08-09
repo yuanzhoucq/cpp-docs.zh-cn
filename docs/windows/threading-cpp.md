@@ -1,5 +1,5 @@
 ---
-title: 线程处理 （c + +） |Microsoft 文档
+title: 线程处理 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,50 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891319"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652996"
 ---
 # <a name="threading-c"></a>threading (C++)
-指定 COM 对象的线程模型。  
+指定 COM 对象的线程处理模型。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- ***模型***（可选）  
- 以下的线程处理模型之一：  
+### <a name="parameters"></a>参数  
+ *模型*（可选）  
+ 以下线程处理模型之一：  
   
--   **单元**（单元线程处理）  
+-   `apartment` （单元线程处理）  
   
--   **非特定**（不带用户界面的.NET Framework 组件）  
+-   `neutral` （不带用户界面的.NET framework 组件）  
   
--   **单个**（简单线程）  
+-   `single` （简单线程处理）  
   
--   **免费**（自由线程处理）  
+-   `free` （自由线程处理）  
   
--   **同时**（单元和自由线程处理）  
+-   `both` （单元和自由线程处理）  
   
- 默认值是**单元**。  
+ 默认值为 `apartment`。  
   
 ## <a name="remarks"></a>备注  
- **线程处理**c + + 特性在生成的.idl 文件中不显示，但会使用 COM 对象的实现中。  
+ **线程**c + + 属性生成的.idl 文件中未显示，但将在 COM 对象的实现中使用。  
   
- 在 ATL 项目中，如果[组件类](../windows/coclass.md)属性也是存在，由指定的线程模型*模型*作为模板参数传递[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)类由插入**组件类**属性。  
+ 在 ATL 项目中，如果[组件类](../windows/coclass.md)属性也是存在，由指定的线程模型*模型*传递作为模板参数[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)类由插入`coclass`属性。  
   
- **线程处理**属性还可防止对访问[event_source](../windows/event-source.md)。  
+ **线程**属性还能访问[event_source](../windows/event-source.md)。  
   
 ## <a name="example"></a>示例  
- 请参阅[许可](../windows/licensed.md)更大的示例的示例使用**线程处理**。  
+ 请参阅[许可](../windows/licensed.md)的示例使用的示例**线程**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -68,7 +67,7 @@ ms.locfileid: "33891319"
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  

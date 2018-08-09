@@ -1,5 +1,5 @@
 ---
-title: 资源的可编辑的文件类型 |Microsoft 文档
+title: 资源的可编辑的文件类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870245"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648426"
 ---
 # <a name="editable-file-types-for-resources"></a>资源的可编辑文件类型
 可以打开下列类型的文件，并可以编辑它们包含的资源。  
@@ -38,8 +38,6 @@ ms.locfileid: "33870245"
 |.exe|可执行文件。|  
 |.dll|动态链接库文件。|  
 |.bmp、.ico、.dib 和 .cur|位图、图标、工具栏和光标文件。|  
-  
-
   
 ## <a name="requirements"></a>要求  
  Win32  

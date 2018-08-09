@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e9f044a7aebdb96162edc0dcd4c33ed3c89e3b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461018"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644877"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 声明类或结构的*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，Visual C++ 会自动放弃分配给对象的内存。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **语法**  
+### <a name="syntax"></a>语法  
   
-```  
+```cpp  
       class_access  
       ref class  
       name  
@@ -42,7 +42,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 ```  
   
- **参数**  
+### <a name="parameters"></a>参数  
   
  *class_access* （可选）  
  程序集外部的类或结构的可访问性。 可能的值为**公共**并**专用**(**专用**是默认值)。 嵌套的类或结构不能有*class_access*说明符。  
@@ -54,14 +54,14 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [抽象](../windows/abstract-cpp-component-extensions.md)并[密封](../windows/sealed-cpp-component-extensions.md)是有效修饰符。  
   
  *inherit_access* （可选）  
- `base_type` 的可访问性。 仅允许可访问性是**公共**(**公共**是默认值)。  
+ 可访问性*base_type*。 仅允许可访问性是**公共**(**公共**是默认值)。  
   
  *base_type* （可选）  
  基类型。 但是，值类型不能充当基类型。  
   
  有关详细信息，请参阅中的 Windows 运行时和通用语言 Runtimesections 此参数的特定于语言的说明。  
   
- **备注**  
+### <a name="remarks"></a>备注  
   
  使用声明的对象的默认成员可访问性**ref 类**或**值类**是**专用**。 和使用的默认成员可访问性对象的声明**ref 结构**或**值结构**是**公共**。  
   
@@ -88,29 +88,27 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 -   [泛型类 (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注  
   
  请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)并[值类和结构](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。  
   
- **参数**  
-  
+### <a name="parameters"></a>参数  
  *base_type* （可选）  
- 基类型。 一个**ref 类**或**ref 结构**可以继承自零个或多个接口以及零个或一个`ref`类型。 一个**值类**或**值结构**只能继承自零个或多个接口。  
+ 基类型。 一个**ref 类**或**ref 结构**可以继承自零个或多个接口以及零个或一个**ref**类型。 一个**值类**或**值结构**只能继承自零个或多个接口。  
   
  当使用声明对象**ref 类**或**ref 结构**关键字，该对象被访问的对象的句柄; 即，指向对象的引用计数器指针。 声明的变量超出范围时，编译器会自动删除基础对象。 当对象在调用中用作参数或存储在变量中时，实际是在传递或存储该对象的句柄。  
   
  当使用声明对象**值类**或**值结构**关键字，不会监督声明的对象的对象生存期。 该对象如同任何其他标准 C++ 类或结构一样。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注  
   
  下表列出了与中所示的语法差异**所有运行时**部分特定于 C + + /cli CLI。  
   
- **参数**  
-  
+### <a name="parameters"></a>参数  
  *base_type* （可选）  
  基类型。 一个**ref 类**或**ref 结构**可以继承自零个或多个托管接口以及零个或一个 ref 类型。 一个**值类**或**值结构**只能继承自零个或多个托管接口。  
   
@@ -119,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  **值类**并**值结构**关键字告知编译器的已分配的类或结构的值是传递给函数或存储在成员。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

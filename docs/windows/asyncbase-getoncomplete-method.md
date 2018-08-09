@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466567"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647032"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 方法
 将当前的完成事件处理程序的地址复制到指定的变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetOnComplete  
 )(TComplete** completeHandler);  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *completeHandler*  
  存储当前完成事件处理程序的地址的位置。  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649200"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory 类
 启用 Windows 运行时将激活的一个或多个类。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *I0*  
  第零个接口中。  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef 方法](../windows/activationfactory-addref-method.md)|当前的引用计数递增**ActivationFactory**对象。|  
 |[ActivationFactory::GetIids 方法](../windows/activationfactory-getiids-method.md)|检索已实现接口 ID 的数组。|  
 |[ActivationFactory::GetRuntimeClassName 方法](../windows/activationfactory-getruntimeclassname-method.md)|获取运行时类名称的对象的当前**ActivationFactory**实例化。|  
-|[ActivationFactory::GetTrustLevel 方法](../windows/activationfactory-gettrustlevel-method.md)|获取当前 ActivationFactory 实例化的对象的信任级别。|  
+|[ActivationFactory::GetTrustLevel 方法](../windows/activationfactory-gettrustlevel-method.md)|获取对象的信任级别的当前**ActivationFactory**实例化。|  
 |[ActivationFactory::QueryInterface 方法](../windows/activationfactory-queryinterface-method.md)|检索指向指定接口的指针。|  
 |[ActivationFactory::Release 方法](../windows/activationfactory-release-method.md)|递减引用计数的当前**ActivationFactory**对象。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建 256 色图标或光标 （图标的图像编辑器） |Microsoft 文档
+title: 创建 256 色图标或光标 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52c9aed6e55a11eea8eeb9b4979cbe43b016c26f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92f5a427399009baf1b157480f0e486e9c4ec538
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872356"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645218"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>创建 256 色图标或光标（图标的图像编辑器）
-使用图像编辑器，图标和光标可能会调整了大小大 (64 × 64) 使用 256 色调色板，可供选择。 创建资源之后, 设备图像样式处于选中状态。  
+使用**图像**编辑器、 图标和光标可以是固定大小较大 (64 × 64) 使用 256 色调色板，可供选择。 创建资源后，选择设备映像样式。  
   
 ### <a name="to-create-a-256-color-icon-or-cursor"></a>若要创建 256 色图标或光标  
   
-1.  在[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择**插入资源**从快捷菜单。 (如果你已有现有的图像资源在.rc 文件中，如游标，只需可以右键单击**光标**文件夹，然后选择**插入光标**从快捷菜单。)  
+1.  在中[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择**插入资源**从快捷菜单。 (如果已有现有的图像资源在.rc 文件中，例如游标，只需可以右击**游标**文件夹，然后选择**插入光标**从快捷菜单。)  
   
-     **注意：** 如果你的项目尚未包含 .rc 文件，请参阅 [创建新资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
+    > [!NOTE] 
+    > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**光标**单击**新建**。  
+2.  在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**游标**然后单击**新建**。  
   
-3.  上**映像**菜单上，单击**新建设备图像**。  
+3.  上**图像**菜单上，单击**新设备图像**。  
   
-4.  选择所需的 256 色映像样式。  
+4.  选择所需的 256 色图像样式。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- **要求**  
-  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
  [使用 256 色调色板](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 创建弹出菜单 |Microsoft 文档
+title: 创建弹出菜单 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648069"
 ---
 # <a name="creating-pop-up-menus"></a>创建弹出菜单
 [弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。  
@@ -36,7 +36,7 @@ ms.locfileid: "33871492"
   
 1.  使用空标题（不提供[标题](../windows/creating-a-menu.md) ） **创建菜单**。  
   
-2.  [将菜单命令添加到新菜单](../windows/adding-commands-to-a-menu.md)。 移到空白菜单标题下的第一个菜单命令（临时标题显示“在此键入”）。 键入 **标题** 和任何其他信息。  
+2.  [将菜单命令添加到新菜单](../windows/adding-commands-to-a-menu.md)。 将移动到空白菜单标题下的第一个菜单命令 (临时标题显示`Type Here`)。 键入 **标题** 和任何其他信息。  
   
      对弹出菜单中的任何其他菜单命令重复此过程。  
   
@@ -45,12 +45,9 @@ ms.locfileid: "33871492"
     > [!TIP]
     >  有关查看弹出菜单的详细信息，请参阅 [以弹出菜单方式查看菜单](../windows/viewing-a-menu-as-a-pop-up-menu.md)。  
   
-
-  
- **要求**  
-  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  
- [将弹出菜单连接到你的应用程序](../windows/connecting-a-pop-up-menu-to-your-application.md)   
+ [弹出菜单连接到你的应用程序](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [菜单编辑器](../windows/menu-editor.md)

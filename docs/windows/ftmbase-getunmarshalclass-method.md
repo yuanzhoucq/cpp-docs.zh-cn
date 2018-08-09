@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 167ad8537a11a0118c15b588b353f33775b5ab3a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571147"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644994"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
 获取 COM 用来定位相应代理包含代码的 DLL 的 CLSID。 COM 加载此 DLL 才能创建代理的未初始化的实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHODIMP GetUnmarshalClass(  
    __in REFIID riid,  
    __in_opt void *pv,  

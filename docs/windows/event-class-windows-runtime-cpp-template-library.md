@@ -1,5 +1,5 @@
 ---
-title: Event 类 （Windows 运行时 c + + 模板库） |Microsoft 文档
+title: Event 类 （Windows 运行时 c + + 模板库） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872921"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644159"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event 类（Windows 运行时 C++ 模板库）
 表示一个事件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,13 +37,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Event::Event 构造函数（Windows 运行时 C++ 模板库）](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化 Event 类的新实例。|  
+|[Event::Event 构造函数（Windows 运行时 C++ 模板库）](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化的新实例**事件**类。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Event::operator= 运算符](../windows/event-operator-assign-operator.md)|指定对当前 Event 实例的指定 Event 引用。|  
+|[Event::operator= 运算符](../windows/event-operator-assign-operator.md)|指定将分配**事件**对当前引用**事件**实例。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `HandleT`  

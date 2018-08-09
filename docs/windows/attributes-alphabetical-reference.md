@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464884"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648173"
 ---
 # <a name="attributes-alphabetical-reference"></a>按字母顺序的特性参考
 Visual c + + 中提供了以下属性。  
@@ -118,7 +118,7 @@ Visual c + + 中提供了以下属性。
 |[satype](../windows/satype.md)|指定的数据类型`SAFEARRAY`。|  
 |[size_is](../windows/size-is.md)|指定的内存大小为固定大小的指针分配、 调整大小的指针和单字节或多维数组的指针。|  
 |[source](../windows/source-cpp.md)|指示类、 属性或方法的一个成员是事件的源。|  
-|[string](../windows/string-cpp.md)|指示的一维**char**， **wchar_t**，**字节**，或等效的数组或指针，指向此类必须视为字符串。|  
+|[string](../windows/string-cpp.md)|指示的一维**char**， **wchar_t**， `byte`，或等效的数组或指针，指向此类必须视为字符串。|  
 |[support_error_info](../windows/support-error-info.md)|支持的错误报告目标对象。|  
 |[switch_is](../windows/switch-is.md)|指定的表达式或作为联合判别选择联合成员的标识符。|  
 |[switch_type](../windows/switch-type.md)|标识用作联合判别变量的类型。|  

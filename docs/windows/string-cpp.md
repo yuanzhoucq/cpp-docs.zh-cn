@@ -1,5 +1,5 @@
 ---
-title: 字符串 （c + +） |Microsoft 文档
+title: 字符串 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889015"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645404"
 ---
 # <a name="string-c"></a>string (C++)
-指示的一维`char`， `wchar_t`，**字节**（或等效） 必须作为一个字符串处理数组或指向这样的数组的指针。  
+指示的一维**char**， **wchar_t**， `byte` （或等效） 必须作为字符串处理数组或指针，指向此类。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **字符串**c + + 属性具有相同的功能[字符串](http://msdn.microsoft.com/library/windows/desktop/aa367270)MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用**字符串**在接口上和 typedef:  
+ 下面的代码演示如何使用**字符串**接口上和 typedef:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,7 +58,7 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**适用对象**|数组或指针的数组、 接口参数、 接口方法|  
+|**适用对象**|数组或指针，指向 array，接口参数，接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

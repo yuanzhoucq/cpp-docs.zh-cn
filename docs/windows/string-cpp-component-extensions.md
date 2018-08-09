@@ -1,5 +1,5 @@
 ---
-title: 字符串 （c + + 组件扩展） |Microsoft 文档
+title: 字符串 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889224"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645988"
 ---
 # <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
-Visual c + + 编译器支持*字符串*，这是对象，表示为字符序列的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式的带引号的字符串。  
+Visual c + + 编译器支持*字符串*，这是对象，表示为一系列字符的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式带引号的字符串。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- Windows 运行时和公共语言运行时表示为其分配的内存将自动管理的对象的字符串。 也就是说，不需要显式放弃字符串的内存，字符串变量超出范围或你的应用程序结束时。 若要指示一个字符串对象的生存期是自动管理，声明类型字符串[句柄到对象 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修饰符。  
+ Windows 运行时和公共语言运行时表示为自动管理其已分配的内存对象的字符串。 也就是说，不需要显式放弃字符串的内存，字符串变量超出范围或你的应用程序结束时。 若要指示字符串对象的生存期是自动管理，声明类型字符串[句柄到对象 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修饰符。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- Windows 运行时体系结构需要 Visual c + + 实现`String`中数据类型`Platform`命名空间。 为方便起见，Visual c + + 还提供`string`数据类型，即的同义词`Platform::String`中`default`命名空间。  
+ Windows 运行时体系结构需要 Visual c + + 实现`String`中的数据类型`Platform`命名空间。 为方便起见，还提供 Visual c + +`string`数据类型，即的同义词`Platform::String`，请在`default`命名空间。  
   
 ### <a name="syntax"></a>语法  
   
@@ -41,36 +41,35 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息和有关字符串的示例，请参阅[platform:: string、 std:: wstring 和文字 （平台）](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ 有关详细信息和有关字符串的示例，请参阅[platform:: string、 std:: wstring 和文字 （平台）](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
- 本主题讨论由使用运行时，Visual c + + 编译器如何处理字符串文本 **/clr**编译器选项。 若要使用 **/clr**，还必须使用公共语言运行时 (CLR) 中 C + + /cli 语法和托管对象。 有关详细信息 **/clr**，请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 本主题讨论使用运行时，Visual c + + 编译器如何处理字符串文本`/clr`编译器选项。 若要使用`/clr`，还必须使用公共语言运行时 (CLR) 中 C + + /cli 语法和托管对象。 有关详细信息`/clr`，请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 使用编译时 **/clr**，编译器会将字符串转换为字符串类型<xref:System.String>。 若要保留与现有代码存在向后的兼容性是对这两种例外：  
+ 使用编译时`/clr`，编译器会将字符串文字转换为字符串类型的<xref:System.String>。 若要保留与现有代码存在向后的兼容性是两个例外情况：  
   
--   异常处理。 当引发字符串文字时，编译器将捕捉它为字符串文本。  
+-   异常处理。 当引发字符串文字时，编译器将捕获它作为字符串文字。  
   
--   模板推导。 当字符串文本传递作为模板参数时，编译器将不将其转换为<xref:System.String>。 请注意，作为泛型自变量传递的字符串文本将被提升为<xref:System.String>。  
+-   模板推导。 当字符串文字作为模板参数传递时，编译器将不将其转换为<xref:System.String>。 请注意，作为泛型自变量传递的字符串文字将提升为<xref:System.String>。  
   
- 编译器还具有内置支持三个运算符，可以重写自定义它们的行为：  
+ 编译器还具有对三个运算符，可以重写自定义其行为的内置支持：  
   
--   System:: string ^ 运算符 + system:: string (system:: string）;  
+-   System:: string ^ 运算符 + （system:: string、 system:: string）  
   
 -   System:: string ^ 运算符 + (system:: object，system:: string);  
   
 -   System:: string ^ 运算符 + (system:: string，system:: object);  
   
- 当传递<xref:System.String>，编译器将框中，如有必要，然后再进行连接 （具有 ToString) 以字符串的对象。  
+ 当传递<xref:System.String>，编译器将框中，如有必要，，然后执行连接字符串 （具有 ToString) 的对象。  
   
 > [!NOTE]
->  插入符号 ("^") 指示声明的变量的句柄的 C + + /cli CLI 管理对象。  
+>  将插入符号 ("^") 指示声明的变量的句柄的 C + + /cli CLI 托管对象。  
   
  有关详细信息请参阅[字符串和字符文本](../cpp/string-and-character-literals-cpp.md)。  
   
@@ -78,9 +77,8 @@ using namespace default;
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的代码示例演示将连接并比较字符串。  
+ 下面的代码示例演示连接在一起和比较字符串。  
   
 ```cpp  
 // string_operators.cpp  
@@ -169,9 +167,7 @@ abc
 n is empty  
 ```  
   
- **示例**  
-  
- 下面的示例显示您可以重载的编译器提供的运算符，以及编译器将找到基于的函数重载<xref:System.String>类型。  
+ 下面的示例演示您可以重载编译器提供的运算符，编译器会找到基于了函数重载<xref:System.String>类型。  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -230,8 +226,6 @@ String ^ a
   
 const char * a  
 ```  
-  
- **示例**  
   
  下面的示例演示编译器区分本机字符串和<xref:System.String>字符串。  
   

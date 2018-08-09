@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9e5c4965ab8a013fdd52e6dfa51e74bfbf54ed73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571331"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651530"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -41,14 +41,14 @@ template <
 struct DerefHelper<T*>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *T*  
  一个模板参数。  
   
 ## <a name="remarks"></a>备注  
  表示一个取消引用的指向`T*`模板参数。  
   
- 如在表达式中使用 DerefHelper: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。  
+ **DerefHelper**的表达式中如使用： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。  
   
 ## <a name="members"></a>成员  
   

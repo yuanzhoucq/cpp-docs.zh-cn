@@ -1,5 +1,5 @@
 ---
-title: Windows 运行时和托管的模板 （c + + 组件扩展） |Microsoft 文档
+title: Windows 运行时和托管的模板 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641455"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
 使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。  
@@ -34,16 +34,15 @@ ms.locfileid: "33891358"
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  根据托管类型创建类模板会有一些限制，如以下代码示例所示。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。  这是因为泛型类型在运行时解析。  有关详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
   
@@ -67,8 +66,6 @@ ref class R {
 };  
 ```  
   
- **示例**  
-  
  泛型类型或函数不能嵌套在托管模板中。  
   
 ```cpp  
@@ -79,8 +76,6 @@ template<class T> public ref class R {
    generic<class T> ref class W {};   // C2959  
 };  
 ```  
-  
- **示例**  
   
  不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。  如果模板未实例化，则元数据中不会发出该模板。  如果模板已实例化，则元数据中仅显示引用的成员函数。  
   
@@ -112,8 +107,6 @@ int main() {
 }  
 ```  
   
- **示例**  
-  
  可以在类模板的部分专用化或显式专用化中更改类的托管修饰符。  
   
 ```cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  

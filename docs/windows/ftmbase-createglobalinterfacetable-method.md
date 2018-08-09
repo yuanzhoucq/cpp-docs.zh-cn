@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ae65169ac3f315aed170ba8dfc42b16fb4e9b328
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568999"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641312"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 方法
 创建全局接口表 (GIT)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 static HRESULT CreateGlobalInterfaceTable(  
    __out IGlobalInterfaceTable **git  
 );  
@@ -43,7 +43,7 @@ static HRESULT CreateGlobalInterfaceTable(
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
 ## <a name="remarks"></a>备注  
- 有关详细信息，请参阅"COM 接口"子主题的 MSDN Library 中的"COM 参考"主题中的"IGlobalInterfaceTable"主题。  
+ 有关详细信息，请参阅`IGlobalInterfaceTable`中的主题**COM 接口**的子主题**COM 引用**MSDN Library 中的主题。  
   
 ## <a name="requirements"></a>要求  
  **标头：** ftm.h  

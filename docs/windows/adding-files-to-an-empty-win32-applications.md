@@ -1,5 +1,5 @@
 ---
-title: 将文件添加到空的 Win32 应用程序 |Microsoft 文档
+title: 将文件添加到空的 Win32 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856887"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646837"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>向空的 Win32 应用程序添加文件
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>向空的 Windows 桌面应用程序添加文件  
@@ -36,7 +36,7 @@ ms.locfileid: "33856887"
   
 4.  单击 **“确定”**。  
   
- 要向项目中添加既不是源文件、头文件也不是资源文件的文件，请右键单击解决方案资源管理器中的解决方案节点，然后以相同的方法将文件添加到项目中。 将创建杂项文件夹来保存项目中的其他文件。  
+ 若要添加为既不源、 标头或到你的项目资源文件的文件，请右键单击**解决方案**中的节点**解决方案资源管理器**和相同的方式将文件添加到项目。 一个**杂项**将创建文件夹来保存你的项目中的其他文件。  
   
 > [!NOTE]
 >  在生成项目之前，需要指定这些文件的生成选项，以便将文件正确地添加到已完成的应用程序中。 有关详细信息，请参阅 [通过属性页指定项目设置](../ide/property-pages-visual-cpp.md) 和 [生成 C/C++ 程序](../build/building-c-cpp-programs.md)。  

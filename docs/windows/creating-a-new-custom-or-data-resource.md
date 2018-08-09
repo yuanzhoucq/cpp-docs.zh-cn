@@ -1,5 +1,5 @@
 ---
-title: 创建新的自定义资源或数据资源 |Microsoft 文档
+title: 创建新的自定义资源或数据资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82d68ec7c9580cf1b95d4c678c491c4e33d12e10
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871827"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650841"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>创建新的自定义资源或数据资源
-可以通过以下方式来创建新的自定义资源或数据资源：在使用标准资源脚本 (.rc) 文件语法的独立文件中放置资源，然后在解决方案资源管理器中右键单击项目并单击快捷菜单上的 **资源包含** 来包含文件。  
+可以通过右键单击你的项目中将资源放在单独的文件使用标准资源脚本 (.rc) 文件语法，然后包括该文件创建新的自定义资源或数据资源**解决方案资源管理器**，然后单击**资源包括**快捷菜单上。  
   
 ### <a name="to-create-a-new-custom-or-data-resource"></a>创建新的自定义资源或数据资源  
   
@@ -37,9 +37,9 @@ ms.locfileid: "33871827"
   
 2.  在“解决方案资源管理器” 中，右键单击项目的 .rc 文件，然后在快捷方式菜单中单击“资源包含”  。  
   
-3.  在“编译时指令”  框中，键入 **#include** 语句，为包含自定义资源的文件命名。 例如：  
+3.  在中**编译时指令**框中，键入`#include`语句，为包含自定义资源的文件的名称。 例如：  
   
- ```  
+ ```cpp  
     #include mydata.rc  
  ```  
   
@@ -49,12 +49,10 @@ ms.locfileid: "33871827"
   
  创建自定义资源的另一种方法是将外部文件导入为自定义资源。 有关详细信息，请参阅 [导入和导出资源](../windows/how-to-import-and-export-resources.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
-  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  
  [二进制编辑器](binary-editor.md)
-

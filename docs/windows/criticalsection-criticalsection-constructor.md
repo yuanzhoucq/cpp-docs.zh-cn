@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f87f95a0683f6b4440d2be8b770902a7e4ecde59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467347"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644289"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection 构造函数
 初始化类似 mutex 对象、但只能由单一进程的线程使用的同步对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 explicit CriticalSection(  
    ULONG spincount = 0  
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *spincount*  
  关键部分对象的旋转计数。 默认值为 0。  
   

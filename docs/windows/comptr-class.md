@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465332"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647555"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 创建表示模板参数指定的接口的 *智能指针* 类型。 **ComPtr**自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,7 +37,7 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *T*  
  该接口的**ComPtr**表示。  
   

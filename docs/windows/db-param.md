@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569438"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651377"
 ---
 # <a name="dbparam"></a>db_param
 指定的成员变量相关联的输入或输出参数和分隔变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ ms.locfileid: "39569438"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *序号*  
  列对应的编号 （DBCOLUMNINFO 序号） 到要将数据绑定到行集中的字段。  
   

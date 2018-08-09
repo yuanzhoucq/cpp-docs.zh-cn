@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570543"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647308"
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 在命名空间范围内声明枚举，该枚举是用户定义的类型，其包含称为枚举数的一组命名常数。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **备注**  
+### <a name="remarks"></a>备注
   
  C + + /CX 和 C + + /cli CLI 支持**公共枚举类**和**私有枚举类**哪些是类似于标准 c + +**枚举类**但添加了可访问性说明符。 下 **/clr**，C + + 11**枚举类**类型允许，但会生成警告 C4472，其目的是确保真正需要的是 ISO 枚举类型，而不是 C + + /CX 和 C + + /cli CLI 类型。 有关 ISO 标准 c + + 的详细信息**enum**关键字，请参阅[枚举](../cpp/enumerations-cpp.md)。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **语法**  
+### <a name="syntax"></a>语法  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ ms.locfileid: "39570543"
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **参数**  
-  
+### <a name="parameters"></a>参数  
  *access*  
  可以是枚举的可访问性**公共**或**专用**。  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  （可选）枚举类型的变量的名称。  
   
- **备注**  
+### <a name="remarks"></a>备注 
   
  有关详细信息和示例，请参阅 [枚举](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   如果 *underlying-type* 是 `char16`，且枚举值的范围是从 0xD800 到 0xDFFF，则可显示该值。 但是，该值出现逻辑错误，因为它表示半个 Unicode 代理项对，且不会以分隔形式显示。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **语法**  
+### <a name="syntax"></a>语法
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **参数**  
+ ### <a name="parameters"></a>参数  
   
  *access*  
  枚举的可访问性。 可以是**公共**或**专用**。  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* （可选）  
  枚举类型的变量的名称。  
   
- **备注**  
+### <a name="remarks"></a>备注 
   
  **enum class** 和 **enum struct** 是等效声明。  
   
@@ -163,13 +162,13 @@ int main() {
   
  将发出 MSIL 形式的以下内容用于函数签名：  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  但是，在当前版本的编译器中，标准枚举将作为属性为 [NativeEnumAttribute] 的托管枚举以及采用 MSIL 形式的以下内容发出，以用于函数签名：  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [枚举的基础类型。](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
-  
- 降序  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **输出**  
   
 ```Output  
 no automatic conversion to int: b  

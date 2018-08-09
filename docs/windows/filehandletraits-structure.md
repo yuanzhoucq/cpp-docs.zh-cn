@@ -1,5 +1,5 @@
 ---
-title: FileHandleTraits 结构 |Microsoft 文档
+title: FileHandleTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da8386959fcceead688976afe5da8736618004dc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872778"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652896"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits 结构
 定义的文件句柄的特征。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 struct FileHandleTraits : HANDLETraits;  
 ```  
   

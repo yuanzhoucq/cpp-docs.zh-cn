@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 0f740cbfb8aea1a0e2378d1d2ab42d3c88c77137
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570530"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644763"
 ---
 # <a name="eventsource-class"></a>EventSource 类
 表示非敏捷事件。 **EventSource**成员函数添加、 删除和调用事件处理程序。 对于 agile 事件，使用[AgileEventSource](agileeventsource-class.md)。 
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename TDelegateInterface>  
 class EventSource;  
 ```  

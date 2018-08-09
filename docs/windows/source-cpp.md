@@ -1,5 +1,5 @@
 ---
-title: 源 （c + +） |Microsoft 文档
+title: 源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889857"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651517"
 ---
 # <a name="source-c"></a>source (C++)
-上一个类，指定连接点的 COM 对象的源接口。 在属性或方法，指示的成员返回的对象或作为源的事件的变体。  
+在类上，指定连接点的 COM 对象的源接口。 在属性或方法，指示该成员返回的对象或为事件源的变体。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ source(  
+[ source(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- `interfaces`  
- 指定当你将源的一个或多个接口的类属性。 源应用到属性或方法时，不使用此参数。  
+### <a name="parameters"></a>参数  
+ *interfaces*  
+ 到类属性，指定将应用源时的一个或多个接口。 源应用到属性或方法时，不使用此参数。  
   
 ## <a name="remarks"></a>备注  
  **源**c + + 属性具有相同的功能[源](http://msdn.microsoft.com/library/windows/desktop/aa367166)MIDL 特性。  
   
- 你可以使用[默认](../windows/default-cpp.md)特性来指定对象的默认源接口。  
+ 可以使用[默认](../windows/default-cpp.md)属性来指定默认源接口的对象。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cpp_attr_ref_source.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -85,9 +84,9 @@ class NN : public b
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`， `interface`|  
+|**适用对象**|**类**， **struct**，**接口**|  
 |**可重复**|否|  
-|**必需的特性**|**组件类**（时应用于类或结构）|  
+|**必需的特性**|`coclass` （当应用于类或结构）|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

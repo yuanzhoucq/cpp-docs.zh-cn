@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25277c2fc8dc4672422bd85f4197f770198f1978
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54435a5035c101f5d868e9a5e831a7ba31fba1ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464796"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646463"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory 构造函数
 初始化**ActivationFactory**类。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 ActivationFactory();  
 ```  
   

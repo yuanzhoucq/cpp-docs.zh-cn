@@ -1,5 +1,5 @@
 ---
-title: 指定的位置和大小的对话框中 |Microsoft 文档
+title: 指定的位置和一个对话框的大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc4c6867f5ed3791414619257fec33db4c632553
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a3a9a629ec138659a7b0d2aba2460aced31fc74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890572"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648998"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>指定对话框的位置和大小
-位置和大小的对话框中，以及位置和中，控件的大小以对话框单位进行衡量。 当选择 Visual Studio 状态栏的右下方显示单独的控件和对话框中的值。  
+位置和大小的对话框中，并将位置和大小的控件，以对话框单元为单位测量。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。  
   
- 有三个您可以在设置的属性[属性窗口](/visualstudio/ide/reference/properties-window)指定对话框中将出现在屏幕上。 Center 属性是布尔型;如果将值设置为 True 时，对话框中将始终显示在屏幕的中心。 如果将其设置为 False 时，你可以然后设置 XPos 和 YPos 属性，以显式定义对话框中将显示在屏幕上的位置。 位置属性是从查看区域中，吞吐量被定义为 {X = 0，Y = 0} 左上角的偏移量的值。 位置还基于**Absolute Align**属性： 如果为 True，坐标相对于屏幕; 如果为 False，坐标相对于对话框所有者窗口。  
+ 有三个属性，您可以在设置[属性窗口](/visualstudio/ide/reference/properties-window)指定对话框将出现在屏幕上。 Center 属性是一个布尔值;如果将值设置为 True，对话框中将始终显示在屏幕的中心。 如果将其设置为 False 时，你可以然后设置 XPos 和 YPos 属性来显式定义在屏幕上将显示此对话框。 位置属性是从定义为 {X = 0，Y = 0} 的查看区域的左上角的偏移量的值。 位置也基于**Absolute Align**属性： 如果为 True，坐标是相对于屏幕的; 如果为 False，坐标是相对于对话框所有者窗口。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -36,4 +36,3 @@ ms.locfileid: "33890572"
 ## <a name="see-also"></a>请参阅  
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
-

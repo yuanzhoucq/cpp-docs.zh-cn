@@ -1,5 +1,5 @@
 ---
-title: TerminateMap 函数 |Microsoft 文档
+title: TerminateMap 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645933"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,21 +36,21 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>参数  
- `module`  
- A[模块](../windows/module-class.md)。  
+### <a name="parameters"></a>参数  
+ *模块*  
+ 一个[模块](../windows/module-class.md)。  
   
- `serverName`  
- 由参数指定的模块中的类工厂的子集名称`module`。  
+ *服务器名称*  
+ 参数指定的模块中的类工厂的子集名称*模块*。  
   
- `forceTerminate`  
- `true` 若要终止类而不考虑它们的工厂处于活动状态;`false`不终止的类工厂，如果任何工厂处于活动状态。  
+ *forceTerminate*  
+ **true**终止类而不考虑它们的工厂处于活动状态;**false**不终止类工厂，如果任何工厂处于活动状态。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果所有类工厂均已都终止;否则为`false`。  
+ **true**如果所有类工厂都已终止; 否则为**false**。  
   
 ## <a name="remarks"></a>备注  
- 关闭指定模块中的类工厂。  
+ 关闭指定的模块中的类工厂。  
   
 ## <a name="requirements"></a>要求  
  **标头：** module.h  

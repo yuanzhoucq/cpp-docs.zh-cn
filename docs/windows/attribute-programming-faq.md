@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645196"
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 本主题回答下列常见问题：  
@@ -46,7 +46,7 @@ ms.locfileid: "39463738"
 -   [可以从还使用特性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT 是什么？  
- `HRESULT`是通常用作返回值属性和 ATL 的一般情况下的简单数据类型。 下表介绍各种值。 更多的值包含在标头文件 winerror.h 中。  
+ HRESULT 为通常用作返回值属性和 ATL 的一般情况下的简单数据类型。 下表介绍各种值。 更多的值包含在标头文件 winerror.h 中。  
   
 |name|描述|“值”|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "39463738"
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 何时已指定属性的参数名称  
  在大多数情况下，如果属性具有一个参数，该参数是命名为。 在代码中插入属性时，不需要此名称。 例如，下面的用法[聚合](../windows/aggregatable.md)属性：  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  正是与相同：  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  以下被允许使用：  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  以下是不允许：  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  特性化和非特性化类可以继承其他类，它们可能本身由于与否。 从特性化类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性未传输到派生类通过 c + + 继承。 特性提供程序仅转换代码附近，其属性。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非属性化 ATL 项目中使用特性？  
- 您可能具有.idl 文件中，非属性化的 ATL 项目，你可能想要开始添加特性化的对象。 在这种情况下，使用添加类向导提供的代码。  
+ 您可能具有.idl 文件中，非属性化的 ATL 项目，你可能想要开始添加特性化的对象。 在这种情况下，使用**添加类向导**提供代码。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用特性化项目中的.idl 文件？  
- 您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)项目的属性页对话框中)，并随后包括在你的项目的.h 文件.  
+ 您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)在项目的**属性页**对话框)，并然后在项目中包含的.h 文件。  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 可以修改由属性插入的代码？  
  某些属性将代码注入到你的项目。 可以使用查看插入的代码[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能要插入的文件中复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，您可能需要修改代码的其他部分。  

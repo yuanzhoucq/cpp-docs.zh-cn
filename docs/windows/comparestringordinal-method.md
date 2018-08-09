@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7084b16536533c9605b741adb596a2a7d383c153
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464046"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649993"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -33,7 +33,7 @@ inline INT32 CompareStringOrdinal(
    HSTRING rhs)  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *lhs*  
  第一个要比较的 HSTRING。  
   

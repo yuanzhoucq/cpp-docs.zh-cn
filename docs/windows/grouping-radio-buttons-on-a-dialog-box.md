@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571498"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641413"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>将对话框上的单选按钮分组
-当向对话框添加单选按钮时，对于组中的第一个按钮，可通过在属性窗口中设置组属性将它们视为组。 然后该单选按钮的控件 ID 出现在 [添加成员变量向导](../ide/add-member-variable-wizard.md)中，让你可以添加单选按钮组的成员变量。  
+当向对话框添加单选按钮时，将它们视为一组通过设置**组**属性中的**属性**组中的第一个按钮的窗口。 然后该单选按钮的控件 ID 出现在 [添加成员变量向导](../ide/add-member-variable-wizard.md)中，让你可以添加单选按钮组的成员变量。  
   
  一个对话框中可以有多组单选按钮，每个组都应使用以下过程添加。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "39571498"
      将 **组** 属性更改为 **True** 可将 WS_GROUP 样式添加到资源脚本的对话框对象的按钮条目中，并确保用户一次只能选择按钮组中的一个单选按钮（当用户单击一个单选按钮时，组中其他按钮都被清除）。  
   
     > [!NOTE]
-    >  只有组中第一个单选按钮的 **组** 属性应设置为 **True**。 如果你的不是按钮组的一部分的其他控件，设置**组**的第一个控件的属性 *，则将组外*到**True**以及。 通过按 CTRL+D 即可查看 Tab 键顺序，快速确定组外的第一个控件。  
+    >  只有组中第一个单选按钮的 **组** 属性应设置为 **True**。 如果你的不是按钮组的一部分的其他控件，设置**组**的第一个控件的属性 *，则将组外*到**True**以及。 您可以快速确定组外的第一个控件，通过按**Ctrl**+**D**若要查看的 tab 键顺序。  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>添加单选按钮组的成员变量  
   
@@ -56,14 +56,13 @@ ms.locfileid: "39571498"
   
 4.  在 **“变量名称”** 框中键入新成员变量的名称。  
   
-5.  在**变量类型**列表框中，选择**int**或类型**int**。  
+5.  在中**变量类型**列表框中，选择**int**或类型`int`。  
   
-6.  现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，m_radioBox1 = 0；选中组中第一个单选按钮。  
+6.  现在可以通过修改代码来指定哪个单选按钮为选中状态。 例如，`m_radioBox1 = 0;`选择第一个单选按钮组中。  
   
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

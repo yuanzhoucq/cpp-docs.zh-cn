@@ -1,5 +1,5 @@
 ---
-title: displaybind |Microsoft 文档
+title: displaybind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879882"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641735"
 ---
 # <a name="displaybind"></a>displaybind
 指示应显示给用户作为可绑定的属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
  **Displaybind** c + + 属性具有相同的功能[displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[可绑定](../windows/bindable.md)以举例说明如何使用**displaybind**。  
+ 有关示例，请参阅[可绑定](../windows/bindable.md)有关如何使用的示例**displaybind**。  
   
 ## <a name="requirements"></a>要求  
   

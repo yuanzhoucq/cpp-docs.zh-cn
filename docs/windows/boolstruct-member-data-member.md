@@ -1,5 +1,5 @@
 ---
-title: 'Boolstruct:: Member 数据成员 |Microsoft 文档'
+title: 'Boolstruct:: Member 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859808"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641110"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>备注  
- 指定[ComPtr](../windows/comptr-class.md) ，或不是，管理接口的对象生存期。  
+ 指定的[ComPtr](../windows/comptr-class.md) ，或不管理接口的对象生存期。  
   
 ## <a name="requirements"></a>要求  
  **标头：** internal.h  

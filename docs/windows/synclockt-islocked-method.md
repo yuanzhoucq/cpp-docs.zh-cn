@@ -1,5 +1,5 @@
 ---
-title: 'Synclockt:: Islocked 方法 |Microsoft 文档'
+title: 'Synclockt:: Islocked 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888470"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641514"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true** SyncLockT 对象是否锁定; 否则为**false**。  
+ **true**如果**SyncLockT**对象是锁定; 否则为**false**。  
   
 ## <a name="remarks"></a>备注  
- 指示当前的 SyncLockT 对象是否拥有资源;SyncLockT 对象也是*锁定*。  
+ 指示是否当前**SyncLockT**对象拥有一个资源; 也就是，则**SyncLockT**对象*锁定*。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

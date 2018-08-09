@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571524"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643840"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 一个*桌面应用程序*c + + 中是可以访问 Windows Api 和是运行在窗口中或在系统控制台中的完整集的本机应用程序。 （尽管不再受正式支持 Windows XP，并且从那以后引入了许多 Windows api），在 c + + 的桌面应用程序可以在 Windows XP 到 Windows 10 上运行。
@@ -26,11 +26,12 @@ ms.locfileid: "39571524"
 桌面应用程序与来自通用 Windows 平台 (UWP) 应用于运行 Windows 10 电脑以及 XBox、 Windows Phone、 Surface Hub 和其他设备上可以运行不同。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择你的技术](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
 
 
-**桌面桥**在 Windows 10 可以打包你的现有桌面应用程序或作为 UWP 应用的 COM 对象，并添加诸如处理，或者在调用 Api 从新的 UWP 功能 Windows API 设置。 您还可以向 Visual Studio 中，以及它们在单个包，并使用 Windows Api 它们之间通信的程序包的桌面解决方案添加 UWP 应用。  
+### <a name="desktop-bridge"></a>桌面桥
+在 Windows 10 可以打包你的现有桌面应用程序或作为 UWP 应用的 COM 对象和添加 UWP 功能，如触摸屏输入，或从现代 Windows API 集调用 Api。 您还可以向 Visual Studio 中，以及它们在单个包，并使用 Windows Api 它们之间通信的程序包的桌面解决方案添加 UWP 应用。  
    
 在 Visual Studio 2017 版本 15.4 和更高版本中，可以创建一个 Windows 应用程序程序包项目，从而大大简化了打包现有的桌面应用程序的工作。 有一些限制方面的注册表调用或桌面应用程序的 Api 使用，但在许多情况下，您可以创建替代代码路径来在应用包运行时实现类似功能。 有关详细信息，请参阅[桌面桥](/windows-uwp/porting/desktop-to-uwp-root)。  
   
- **术语**  
+### <a name="terminology"></a>术语  
   
 -   一个*Win32*应用程序是在可以进行的 c + + 的桌面应用程序使用的本机 Windows [Windows C Api 和/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和标准库 Api 和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用内部 Windows 过程函数的 Windows 消息。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义的。  
   

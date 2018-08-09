@@ -1,5 +1,5 @@
 ---
-title: 对话框上的控件排列 |Microsoft 文档
+title: 对话框上的控件排列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3414c6856619f602ec21297ebb330e060e98906b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858482"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645768"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>对话框上的控件排列
-对话框编辑器提供了布局工具对齐控件和自动调整控件的大小。 对于大多数任务，你可以使用[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 对话框编辑器工具栏上的所有命令还可在格式菜单上，但大多数有[快捷键](../windows/accelerator-keys-for-the-dialog-editor.md)。  
+**对话框**编辑器提供了布局工具一致，并自动调整控件的大小。 对于大多数任务，你可以使用[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 所有**对话框编辑器**工具栏命令还位于**格式**菜单中和大多数具有[键盘快捷方式](../windows/accelerator-keys-for-the-dialog-editor.md)。  
   
- 仅当选择多个控件时，可以提供了许多对话框的布局命令。 你可以选择单个控件或多个控件，并且选中多个控件后，你选择的第一个是默认情况下的"基准"控件。 有关选择控件和主导控件的信息，请参阅[选择控件](../windows/selecting-controls.md)。  
+ 仅当选择多个控件提供了为对话框的许多布局命令。 你可以选择单个控件或多个控件，并选中多个控件后，你选择的第一个是默认情况下的"基准"控件。 选择控件和主导控件的信息，请参阅[选择控件](../windows/selecting-controls.md)。  
   
- 位置、 高度和宽度当前控件的右下角的状态栏显示。 选中整个对话框后，状态栏将显示作为一个整体，其高度和宽度的对话框中的位置。  
+ 位置、 高度和宽度的当前控件的右下角的状态栏显示。 选中整个对话框后，状态栏将显示作为一个整体，其高度和宽度的对话框中的位置。  
   
 -   [对话框编辑器状态（参考线和网格）](../windows/dialog-editor-states-guides-and-grids.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33858482"
   
 -   [更改控件的 Tab 键顺序](../windows/changing-the-tab-order-of-controls.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -53,4 +53,3 @@ ms.locfileid: "33858482"
 ## <a name="see-also"></a>请参阅  
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
-

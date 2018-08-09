@@ -1,5 +1,5 @@
 ---
-title: 同步 |Microsoft 文档
+title: 同步 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 304ceece506465df0a51c56b247407d351fd23b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889792"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643493"
 ---
 # <a name="synchronize"></a>synchronize
-将对目标方法的访问进行同步。  
+同步到目标方法的访问。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [synchronize]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
- **同步**c + + 特性实现对同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用常见的资源 （例如类的方法）。  
+ **同步**c + + 属性实现为同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用公共资源 （如类的方法）。  
   
- 此属性由插入的代码调用正确`Lock`方法 （由线程处理模型），而目标方法的开头。 该方法退出时,`Unlock`自动调用。 有关这些函数的详细信息，请参阅[CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
+ 此属性由插入该代码调用了正确`Lock`目标方法的开头 （由线程模型） 的方法。 该方法退出时,`Unlock`自动调用。 有关这些函数的详细信息，请参阅[CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 **progid** ，则也会应用 **vi_progid** 和 **coclass** 。  
+ 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。  
   
 ## <a name="example"></a>示例  
- 以下代码提供了有关同步`UpdateBalance`方法`CMyClass`对象。  
+ 下面的代码提供的同步`UpdateBalance`方法的`CMyClass`对象。  
   
-```  
+```cpp  
 // cpp_attr_ref_synchronize.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -78,7 +76,7 @@ class CMyClass {
 |-|-|  
 |**适用对象**|类方法方法|  
 |**可重复**|否|  
-|**必需的特性**|以下一个或多个属性： **coclass**、 **progid**或 **vi_progid**。|  
+|**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

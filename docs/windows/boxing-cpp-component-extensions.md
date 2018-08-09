@@ -1,5 +1,5 @@
 ---
-title: 装箱 （c + + 组件扩展） |Microsoft 文档
+title: 装箱 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861352"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650617"
 ---
 # <a name="boxing--c-component-extensions"></a>装箱（C++ 组件扩展）
 Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装箱*，并将对象转换为称为的过程中的值类型*取消装箱*。  
@@ -29,26 +29,23 @@ Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装
  （此语言功能没有适用于所有运行时的备注。）  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- C + + /cli CX 支持用于装箱值类型和取消装箱引用类型的速记形式语法。 值类型在分配给类型为 `Object` 的变量时装箱。 在将 `Object` 变量分配给值类型变量，并且在括号中指定了未装箱的类型时（即，当对象变量强制转换为值类型时），该变量将取消装箱。  
+ C + + /CX 值类型装箱和取消装箱引用类型支持速记形式语法。 值类型在分配给类型为 `Object` 的变量时装箱。 在将 `Object` 变量分配给值类型变量，并且在括号中指定了未装箱的类型时（即，当对象变量强制转换为值类型时），该变量将取消装箱。  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ### <a name="examples"></a>示例  
- 下面的代码示例装箱和取消装箱 `DateTime` 值。 首先，该示例获取表示当前日期和时间的 DateTime 值，然后将其分配给 DateTime 变量。 然后，通过将 DateTime 分配到对象变量，对其进行装箱。 最后，通过将装箱值分配到另一个 DateTime 变量来取消装箱。  
+ 下面的代码示例装箱和取消装箱 `DateTime` 值。 首先，此示例获取`DateTime`值，该值表示当前日期和时间，并将它分配给`DateTime`变量。 然后`DateTime`装箱分配到`Object`变量。 最后，装箱的值通过将其分配到另一个取消装箱`DateTime`变量。  
   
- 要测试示例，请创建 BlankApplication 项目，替换 BlankPage::OnNavigatedTo() 方法，然后在后括号处指定断点并对变量 str1 赋值。 当示例到达右括号时，检查 str1。  
+ 若要测试示例，创建`BlankApplication`项目中，替换`BlankPage::OnNavigatedTo()`方法，然后指定断点在右括号和对变量赋值`str1`。 当示例到达右括号时，检查`str1`。  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,13 +75,12 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
  有关详细信息，请参阅[装箱 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
- Visual C++ 编译器现在将值类型装箱到 <xref:System.Object>。  这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。  
+ Visual C++ 编译器现在将值类型装箱到 <xref:System.Object>。 这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。  
   
  装箱和取消装箱使值类型能够被视为对象。 值类型（包括结构类型和内置类型，如 int）与 <xref:System.Object> 类型可相互转换。  
   
@@ -99,10 +95,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [标准转换和隐式装箱](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  下面的示例说明了隐式装箱的工作方式。  
   
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 1  

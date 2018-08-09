@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb77d43dabe223308ae3eb0c34ec22d0c1624e2e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466925"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646661"
 ---
 # <a name="aggregates"></a>aggregates
 指示对象聚合由 CLSID 指定的对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *clsid*  
  指定可聚合对象的 CLSID。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "39466925"
   
  此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。  
   
- **ATL 项目**  
+### <a name="atl-projects"></a>ATL 项目  
   
  如果在使用 ATL 的项目中使用此属性，该属性的行为将会更改。 首先，将以下条目添加到目标对象的 COM 映射：  
   

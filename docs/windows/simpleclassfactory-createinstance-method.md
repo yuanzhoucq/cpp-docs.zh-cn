@@ -1,5 +1,5 @@
 ---
-title: 'Simpleclassfactory:: Createinstance 方法 |Microsoft 文档'
+title: 'Simpleclassfactory:: Createinstance 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892743"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651075"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance 方法
 
-创建指定的接口的实例。
+创建指定接口的实例。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ STDMETHOD( CreateInstance )(
 ### <a name="parameters"></a>参数
 
 *pUnkOuter*  
-必须是`nullptr`; 否则为返回值是 CLASS_E_NOAGGREGATION。
+必须是**nullptr**; 否则为返回值是 CLASS_E_NOAGGREGATION。
 
-SimpleClassFactory 不支持聚合。 如果聚合受支持，且正在创建的对象为聚合时，属于`pUnkOuter`将指向的聚合控制的 IUnknown 接口的指针。
+SimpleClassFactory 不支持聚合。 如果受支持聚合，并且正在创建的对象是一个聚合的组成部分*pUnkOuter*是一个指向控制`IUnknown`聚合的接口。
 
 *riid*  
-接口的对象 ID 来创建。
+若要创建的对象 ID 的接口。
 
 *ppvObject*  
-此操作完成后，向指定的对象的实例的指针`riid`参数。
+此操作完成后，指向由指定的对象的实例*riid*参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -57,7 +57,7 @@ SimpleClassFactory 不支持聚合。 如果聚合受支持，且正在创建的
 
 ## <a name="remarks"></a>备注
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，将断言发出错误如果基类中类模板参数指定不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 ClassicCom 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 ClassicCom 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
 ## <a name="requirements"></a>要求
 
@@ -66,5 +66,4 @@ SimpleClassFactory 不支持聚合。 如果聚合受支持，且正在创建的
 **命名空间：** Microsoft::WRL
 
 ## <a name="see-also"></a>请参阅
-
-[SimpleClassFactory 类](../windows/simpleclassfactory-class.md)
+ [SimpleClassFactory 类](../windows/simpleclassfactory-class.md)

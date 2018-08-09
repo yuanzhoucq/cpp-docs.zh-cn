@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570605"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646106"
 ---
 # <a name="dbsource"></a>db_source
 创建与数据源的连接。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ ms.locfileid: "39570605"
  当你使用**db_source**的类上*名称*是具有的数据源对象的实例**db_source**特性应用于它 （请参阅示例 1）。 当你使用**db_source**中的方法实现，以内联方式*名称*是一个变量 （本地到方法），可用于访问数据源 （请参见示例 2）。 将此传递*名称*到*source_name*参数的`db_command`若要将数据源与命令相关联。  
   
  *hresult* （可选）  
- 标识将接收此数据库命令的 `HRESULT` 的变量。 如果该变量不存在，属性将自动插入。  
+ 标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。  
   
 ## <a name="remarks"></a>备注  
  **db_source**创建[CDataSource](../data/oledb/cdatasource-class.md)和一个[CSession](../data/oledb/csession-class.md)对象，一起表示与 OLE DB 使用者数据源的连接。  

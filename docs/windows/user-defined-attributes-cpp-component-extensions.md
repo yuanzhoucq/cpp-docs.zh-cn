@@ -1,5 +1,5 @@
 ---
-title: 用户定义的属性 （c + + 组件扩展） |Microsoft 文档
+title: 用户定义的特性 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891761"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644123"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>用户定义的特性（C++ 组件扩展）
-自定义属性使您能够扩展接口、 类或结构、 方法、 参数或枚举的元数据。  
+自定义特性，可以扩展的接口、 类或结构、 方法、 参数或枚举元数据。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  所有运行时支持自定义属性。  
@@ -35,17 +35,17 @@ ms.locfileid: "33891761"
 ### <a name="remarks"></a>备注  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
- 自定义特性使你可以扩展托管元素的元数据。 有关更多信息，请参阅[特性](/dotnet/standard/attributes/index)。  
+ 自定义属性，您可以扩展其管理的元素的元数据。 有关更多信息，请参阅[特性](/dotnet/standard/attributes/index)。  
   
 ### <a name="remarks"></a>备注  
- 信息和本主题提供的语法旨在取代中提供的信息[属性](../windows/attribute.md)。  
+ 信息和本主题中的语法旨在取代中提供的信息[属性](../windows/attribute.md)。  
   
- 你可以定义的自定义特性定义类型，而使<xref:System.Attribute>基类类型和 （可选） 应用<xref:System.AttributeUsageAttribute>属性。  
+ 可以通过定义一个类型并使定义的自定义特性<xref:System.Attribute>基类的类型和 （可选） 将应用<xref:System.AttributeUsageAttribute>属性。  
   
- 例如，在 Microsoft Transaction Server (MTS) 1.0，相关的行为时会事务，同步时，负载平衡，并通过插入类型库，通过使用 ODL 自定义特性的自定义 Guid 指定等等。 因此，MTS 服务器的客户端无法通过读取类型库确定其特征。 在.NET Framework 中，类型库的模拟元数据，且 ODL 自定义特性的模拟自定义属性。 此外，读取类型库是类似于对类型使用反射。  
+ 例如，在 Microsoft Transaction Server (MTS) 1.0，与事务，同步过程中，有关行为的负载均衡，并通过使用 ODL 自定义特性插入到类型库的自定义 Guid 指定等。 因此，MTS 服务器的客户端可以通过读取类型库确定其特征。 在.NET Framework 中，类型库的模拟是元数据，并 ODL 自定义特性的模拟是自定义属性。 此外，读取类型库是类似于类型上使用反射。  
   
  有关详细信息，请参阅  
   
@@ -53,15 +53,14 @@ ms.locfileid: "33891761"
   
 -   [特性参数类型](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- 有关 Visual c + + 中的签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
+ 有关 Visual c + + 中签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的示例演示如何定义自定义特性。  
+ 下面的示例演示如何定义自定义属性。  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **示例**  
-  
- 下面的示例演示自定义特性的一些重要功能。 例如，此示例演示常见的自定义特性用法： 实例化完全可以向客户端描述本身的服务器。  
+ 下面的示例演示自定义特性的一些重要的功能。 例如，此示例显示了自定义特性的常见用法： 实例化的服务器的完全可向客户端描述自身。  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,11 +168,9 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **示例**  
+ `Object^`类型替换变量数据类型。 下面的示例定义采用的数组的自定义属性`Object^`作为参数。  
   
- 对象 ^ 类型替换的 variant 数据类型。 下面的示例定义采用对象的数组的自定义特性 ^ 作为参数。  
-  
- 特性自变量必须是编译时常量;在大多数情况下，它们应该是常量文字。  
+ 特性参数必须是编译时常量;在大多数情况下，它们应是常量文字。  
   
  请参阅[typeid](../windows/typeid-cpp-component-extensions.md)有关如何从自定义特性块中返回的 system:: type 值的信息。  
   
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **示例**  
-  
- 运行时要求自定义特性类的公共部分必须是可序列化。  当编写自定义属性，自定义特性的命名自变量被限制为编译时常量。  （将它视为追加到你的元数据中的类布局的位序列。）  
+ 在运行时要求必须可序列化自定义特性类的公共部分。  创建自定义属性时，自定义特性的命名的参数仅限于编译时常量。  （将其视为一系列追加到您的类布局的元数据中的位。）  
   
 ```cpp  
 // extending_metadata_f.cpp  

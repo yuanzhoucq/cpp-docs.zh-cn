@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference 析构函数 |Microsoft 文档'
+title: 'WeakReference:: ~ WeakReference 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890728"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648602"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference 析构函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,7 +36,7 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>返回值  
   
 ## <a name="remarks"></a>备注  
- 取消初始化 WeakReference 类的当前实例。  
+ 取消初始化的当前实例**WeakReference**类。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4683305b9f7f396168bd9404f6f2501502db3d01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462331"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645017"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: Operator IInspectable\* \*运算符
 
@@ -40,7 +40,7 @@ operator IInspectable**() const;
 
 如果发出错误当前**ComPtrRefBase**也不是派生`IInspectable`。
 
-此强制转换为可用才 **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** 定义。
+此强制转换为可用才`__WRL_CLASSIC_COM__`定义。
 
 ## <a name="requirements"></a>要求
 

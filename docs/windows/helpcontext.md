@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c505d6ebf62e6c01ecd3c2f750cec1c95775f53d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571355"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642423"
 ---
 # <a name="helpcontext"></a>helpcontext
-指定允许用户查看有关此帮助文件中的元素的信息的上下文 ID。  
+指定允许用户查看有关中此元素的信息的上下文 ID**帮助**文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ helpcontext(  
    id  
 ) ]  

@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466005"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641361"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock 方法
-专用化 CriticalSection 模板，以便它支持的指定关键部分对象释放所有权。  
+专门负责`CriticalSection`模板以便支持指定的关键节对象的释放所有权。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *cs*  
  指向关键部分对象的指针。  
   
 ## <a name="remarks"></a>备注  
- *类型*修饰符定义为`typedef CRITICAL_SECTION* Type;`。  
+ `Type`修饰符定义为`typedef CRITICAL_SECTION* Type;`。  
   
- 有关详细信息，请参阅"LeaveCriticalSection 函数"的 Windows API 文档的"同步函数"部分中。  
+ 有关详细信息，请参阅**LeaveCriticalSection 函数**中**同步函数**Windows API 文档的部分。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

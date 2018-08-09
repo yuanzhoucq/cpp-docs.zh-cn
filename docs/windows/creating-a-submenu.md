@@ -1,5 +1,5 @@
 ---
-title: 创建子菜单 |Microsoft 文档
+title: 创建子菜单 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1383e12761bc9d5cb0558072061bddac4da42d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883376"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647469"
 ---
 # <a name="creating-a-submenu"></a>创建子菜单
 ### <a name="to-create-a-submenu"></a>创建子菜单  
@@ -33,10 +33,9 @@ ms.locfileid: "33883376"
   
 3.  将其他菜单命令添加到子菜单的菜单中。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
- **要求**  
-  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

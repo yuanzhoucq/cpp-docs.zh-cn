@@ -1,5 +1,5 @@
 ---
-title: Swap 函数 （Windows 运行时 c + + 模板库） |Microsoft 文档
+title: Swap 函数 （Windows 运行时 c + + 模板库） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889379"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651754"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap 函数（Windows 运行时 C++ 模板库）
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,11 +34,11 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `left`  
+### <a name="parameters"></a>参数  
+ *left*  
  第一个参数。  
   
- `right`  
+ *right*  
  第二个参数。  
   
 ## <a name="return-value"></a>返回值  
