@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606418"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013514"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 类
 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  

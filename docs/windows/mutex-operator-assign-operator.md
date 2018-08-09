@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602741"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019951"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 运算符
 分配 （移动） 指定**Mutex**对象与当前**互斥体**对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 Mutex& operator=(  
    _Inout_ Mutex&& h  
 );  

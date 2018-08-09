@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 790e01f1b74d7d592196bdd5a21284f8379df5c4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646678"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011694"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 指定将用于传输而不是特定于应用程序的数据类型的数据类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [wire_marshal]  
 ```  
   

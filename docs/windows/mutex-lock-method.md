@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1dcb5b187944e58ff24f312fa376ff71e2cf63f3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018632"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
 等到当前对象或**互斥体**与指定句柄，互斥体或指定的超时间隔已过的版本关联的对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 SyncLock Lock(  
    DWORD milliseconds = INFINITE  
 );  

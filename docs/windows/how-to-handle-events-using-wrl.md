@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570628"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012529"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 订阅和处理 Windows 运行时对象的事件。  
@@ -35,7 +35,7 @@ ms.locfileid: "39570628"
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h 声明枚举设备所需的类型。  
+     `Windows.Devices.Enumeration.h` 声明枚举设备所需的类型。  
   
      我们建议您在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "39570628"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要编译代码，将其复制然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-events.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 若要编译代码，将其复制然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-events.cpp`，然后运行以下命令中**Visual Studio 命令提示符**窗口。  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

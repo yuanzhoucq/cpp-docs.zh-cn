@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a52f2a11634ff79bcb58302d4b2a4d7ceed362cc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604442"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017118"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr（C++ 组件扩展）
 **Nullptr**关键字表示*为 null 指针值*。 使用 null 指针值指示，对象句柄、 内部指针或本机指针类型不指向对象。  
@@ -116,8 +116,6 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 pMyClass == nullptr  
   
@@ -184,8 +182,6 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 test  
 ```  
@@ -212,8 +208,6 @@ int main() {
    x -> Test();  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 NULL  

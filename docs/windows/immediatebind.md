@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4b75adf562afcd7e6ce6dd0b754bae28bccea401
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603041"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014320"
 ---
 # <a name="immediatebind"></a>immediatebind
 指示数据库将立即收到通知的所有更改将数据绑定对象的属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [immediatebind]  
 ```  
   

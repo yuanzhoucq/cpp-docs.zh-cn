@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a9c9d347b319afc3ee84818e74029a98b1aa5484
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602612"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014294"
 ---
 # <a name="pragma"></a>pragma
 将指定的字符串发出到生成的.idl 文件而不使用引号引起来。 
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *pragma_statement*  
  你想要转到生成的.idl 文件杂注。  
   

@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569942"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014346"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：打开清单资源
-如果从 [资源视图](../windows/resource-view-window.md)打开清单资源，则资源将以二进制格式打开。 若要以可视效果更好的格式查看清单资源的内容，则必须从解决方案资源管理器打开资源。  
+如果从 [资源视图](../windows/resource-view-window.md)打开清单资源，则资源将以二进制格式打开。 若要以可视效果更好的格式查看清单资源的内容，必须打开的资源**解决方案资源管理器**。  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>若要在文本编辑器中打开清单资源  
   
@@ -32,7 +32,7 @@ ms.locfileid: "39569942"
   
 2.  双击 .manifest 文件。  
   
-     将在文本编辑器中打开清单资源。  
+     在中打开清单资源**文本编辑器**。  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>若要在另一个编辑器中打开清单资源  
   
@@ -43,7 +43,6 @@ ms.locfileid: "39569942"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

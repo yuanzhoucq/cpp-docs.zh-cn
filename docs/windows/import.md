@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 529e6f3a8e2b30be38d80ec253d394077c9f7f0f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604702"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017092"
 ---
 # <a name="import"></a>import
 指定包含要引用主要 IDL 中定义的另一个.idl、.odl 或标头文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ import(  
    idl_file  
 ) ];  

@@ -1,5 +1,5 @@
 ---
-title: MFC Windows 编程符号 |Microsoft 文档
+title: MFC Windows 编程符号 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882688"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012776"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 编程符号
-这些符号也是一部分的 MFC 支持文件，但它们支持标准 Windows 应用程序功能和操作。 这些符号主要用于菜单。 当你正在与菜单在菜单编辑器中时，这些符号将出现在常见的菜单命令与关联的属性窗口中。 例如，如果你的应用程序具有带退出命令的文件菜单，该命令将与关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。  
+这些符号也是 MFC 支持文件的一部分，但它们支持标准的 Windows 应用程序功能和操作。 这些符号主要用于菜单。 当你正在使用中的菜单**菜单编辑器**，这些符号将出现在**属性窗口**与常见的菜单命令相关联。 例如，如果你的应用程序具有**文件**菜单，其中包含**退出**命令，命令将与相关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。  
   
 ||||  
 |-|-|-|  

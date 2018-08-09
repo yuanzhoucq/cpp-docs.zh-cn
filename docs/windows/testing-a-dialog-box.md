@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652065"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019673"
 ---
 # <a name="testing-a-dialog-box"></a>测试对话框
 当您设计对话框时，无需编译程序即可模拟并测试其运行时行为。 在此模式中，您可以：  
@@ -42,7 +42,7 @@ ms.locfileid: "39652065"
   
 ### <a name="to-test-a-dialog-box"></a>测试对话框  
   
-1.  当对话框编辑器为活动窗口时，在菜单栏上，选择 **“格式”**、 **“测试对话框”**。  
+1.  当**对话框中**编辑器为活动窗口时，在菜单栏上的，选择**格式** > **测试对话框**。  
   
 2.  若要结束此模拟，按**Esc**，或只需选择**关闭**正在测试的对话框中的按钮。  
   

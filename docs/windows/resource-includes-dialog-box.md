@@ -1,5 +1,5 @@
 ---
-title: 资源包括对话框中 |Microsoft 文档
+title: 资源包括对话框的 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d11f3abdaa4f804f9916e7313d1a4338c29a7369
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879667"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015074"
 ---
 # <a name="resource-includes-dialog-box"></a>“资源包括”对话框
-你可以使用**资源包括**对话框来修改环境的正常工作安排，将所有资源都存储在项目.rc 文件和所有[符号](../windows/symbols-resource-identifiers.md)Resource.h 中。  
+可以使用**资源包括**对话框来修改在项目.rc 文件和所有中存储的所有资源的环境的正常工作安排[符号](../windows/symbols-resource-identifiers.md)在 Resource.h 中。  
   
  若要打开**资源包括**对话框中，右键单击.rc 文件中[资源视图](../windows/resource-view-window.md)，然后选择**资源包括**从快捷菜单。  
   
@@ -42,14 +42,12 @@ ms.locfileid: "33879667"
  允许包含含有编辑会话期间不应修改的符号的头文件。 例如，可以包括在多个项目间共享的符号文件。 此外也可以包括 MFC.h 文件。 有关详细信息，请参阅[包括共享 （只读） 或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)。  
   
  **编译时指令**  
- 允许包括所创建的资源文件，并可从主资源文件中的资源分别进行编辑，包含编译时指令（比如那些有条件地包括资源的指令），或者包含自定义格式的资源。 还可以使用“编译时指令”框包括标准 MFC 资源文件。 有关详细信息，请参阅[在编译时包括资源](../windows/how-to-include-resources-at-compile-time.md)。  
+ 允许包括所创建的资源文件，并可从主资源文件中的资源分别进行编辑，包含编译时指令（比如那些有条件地包括资源的指令），或者包含自定义格式的资源。 此外可以使用**编译时指令框**包括标准 MFC 资源文件。 有关详细信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。  
   
 > [!NOTE]
->  这些文本框中的项显示在.rc 文件中标记`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035： 使用多个资源文件和使用 Visual c + + 标头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。  
+>  由标记.rc 文件中显示这些文本框中的项`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035： 使用多个资源文件和使用 Visual c + + 头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。  
   
- 对资源文件使用进行了更改后**资源包括**对话框，你需要关闭.rc 文件，然后重新打开它以使更改生效。 有关详细信息，请参阅[在编译时包括资源](../windows/how-to-include-resources-at-compile-time.md)。  
-  
-
+ 对资源文件使用进行了更改后**资源包括**对话框中，你需要关闭.rc 文件并重新打开它以使更改生效。 有关详细信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。  
   
 ## <a name="requirements"></a>要求  
  Win32  

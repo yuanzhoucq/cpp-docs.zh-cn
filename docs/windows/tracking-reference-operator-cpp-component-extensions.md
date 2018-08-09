@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651826"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011837"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>跟踪引用运算符（C++ 组件扩展）
 一个*跟踪引用*(`%`) 的行为类似于普通的 c + + 引用 (`&`)，只不过当对象被分配给跟踪引用，该对象的引用计数会递增。  
@@ -46,7 +46,7 @@ ms.locfileid: "39651826"
 ## <a name="windows-runtime"></a>Windows 运行时  
  跟踪引用的行为与标准 C++ 引用相似，区别在于，% 是对引用计数的引用。 下面的代码段演示如何在 % 和 ^ 类型之间转换：  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  下面的示例演示如何将 ^ 传递到采用了 % 的函数。  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 21  

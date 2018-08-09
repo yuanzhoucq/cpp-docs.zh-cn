@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9c2dbb4bcbd1b6c76d00356535a9c99d983c1096
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569750"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019873"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>如何：声明钉住指针和值类型
 值类型可以隐式装箱。 然后可以声明钉住指针指向值类型对象本身以及使用**pin_ptr**为装箱的值类型。  
@@ -47,8 +47,6 @@ int main() {
    System::Console::WriteLine(mv->i);  
 }  
 ```  
-  
-### <a name="output"></a>输出  
   
 ```Output  
 8  

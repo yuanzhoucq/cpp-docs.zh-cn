@@ -1,5 +1,5 @@
 ---
-title: 'Module:: terminate 方法 |Microsoft 文档'
+title: 'Module:: terminate 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1822f8c1a854274ff30795096bb639520ea8cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874715"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016887"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 方法
 导致关闭模块实例化的所有工厂。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void Terminate();  
 ```  
   

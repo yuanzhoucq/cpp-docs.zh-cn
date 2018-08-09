@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c4609866b25f574f34b620d81de3a21d6b608db6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641514"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020313"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 bool IsLocked() const;  
 ```  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 45cfc4374b9779a61e3ea97c829317b9d4fe75ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569838"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016156"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：声明和使用内部指针及托管数组 (C++/CLI)
 以下 C + + /cli CLI 示例演示如何声明和使用内部指针到一个数组。  
@@ -56,8 +56,6 @@ int main() {
    System::Console::WriteLine("after incrementing ipi, it points to memory address whose value is: {0}", *ipi);  
 }  
 ```  
-  
-### <a name="output"></a>输出  
   
 ```Output  
 1st element in arr holds: 1  

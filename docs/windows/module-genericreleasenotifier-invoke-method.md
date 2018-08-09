@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ce08cdb1cfcba5e63c94904af965f504f30a8e4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: af00d6b8469dd6568f93fb112d65e1a3f4d49da5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606405"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014970"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke 方法
 调用与当前关联的事件处理程序**module:: genericreleasenotifier**对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void Invoke();  
 ```  
   

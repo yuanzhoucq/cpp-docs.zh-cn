@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604513"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012188"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -39,7 +39,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
    此类别还包括在服务器和云编程的上下文中使用 C++ 编写核心组件和计算代码。 有时，还会使用 C++ 编写核心服务器或云应用程序的性能强化代码以最大化性能。 可以将此类代码编译为 DLL，并通过 C# 或 Visual Basic 使用它。
 
-- **.NET framework 应用程序**。 大多数 .NET Framework 应用程序都是使用 C# 或 Visual Basic 编写的，但也可以使用 C++/CLI（Visual C++ 中的/clr 编译器选项）编写。 我们建议在包含托管和本机代码的较大应用程序中使用 C++/CLI 编写最小互操作层。
+- **.NET framework 应用程序**。 大多数.NET Framework 应用程序用 C# 或 Visual Basic 中，但也可以 C + + /cli CLI (`/clr`中 Visual c + + 编译器选项)。 我们建议在包含托管和本机代码的较大应用程序中使用 C++/CLI 编写最小互操作层。
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

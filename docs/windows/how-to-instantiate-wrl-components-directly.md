@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568811"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013270"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接实例化 WRL 组件
 了解如何使用 Windows 运行时 c + + 模板库 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)并[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函数来实例化组件的模块中的将其定义。  
@@ -34,13 +34,13 @@ ms.locfileid: "39568811"
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>若要创建并实例化一个基本的记录器组件  
   
-1.  在 Visual Studio 中创建**Win32 控制台应用程序**项目。 该项目命名，例如， `WRLLogger`。  
+1.  在 Visual Studio 中创建**Win32 控制台应用程序**项目。 该项目命名，例如， *WRLLogger*。  
   
 2.  添加**Midl 文件 (.idl)** 到项目文件中，将文件命名`ILogger.idl`，然后添加以下代码：  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  使用以下代码替换 WRLLogger.cpp 的内容。  
+3.  使用下面的代码的内容替换为`WRLLogger.cpp`。  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "39568811"
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  使用以下代码替换的定义`wmain`。 此版本使用`MakeAndInitialize`若要实例化`CConsoleWriter`对象并检查`HRESULT`结果。  
+2.  使用以下代码替换的定义`wmain`。 此版本使用`MakeAndInitialize`若要实例化`CConsoleWriter`对象，并检查 HRESULT 结果。  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   

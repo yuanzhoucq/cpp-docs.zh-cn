@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643278"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017323"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
 可以使用 Visual Studio 集成的开发环境 (IDE) 中的 Visual c + + 创建标准 c + + 程序。 按照此演练中的步骤操作，可以创建项目，向项目添加新文件，修改文件以添加 c + + 代码，然后编译并运行该程序使用[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。  
@@ -59,7 +59,7 @@ ms.locfileid: "39643278"
   
     2.  在中**代码**节点中，单击**c + + 文件 (.cpp)**，键入该文件的名称，然后单击**添加**。  
   
-     .Cpp 文件将出现在源文件文件夹**解决方案资源管理器**，并在 Visual Studio 编辑器中打开该文件。  
+     .Cpp 文件将显示在**源文件**中的文件夹**解决方案资源管理器**，并在 Visual Studio 编辑器中打开该文件。  
   
 6.  中的文件在编辑器中，键入一个有效的 c + + 程序，使用 c + + 标准库，或复制其中一个示例程序并将其粘贴在文件中。  
   

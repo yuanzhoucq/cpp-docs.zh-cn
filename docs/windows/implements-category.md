@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603706"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013709"
 ---
 # <a name="implementscategory"></a>implements_category
 指定由目标类实现的组件类别。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ ms.locfileid: "39603706"
  此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。  
   
 ## <a name="example"></a>示例  
- 下面的代码指定以下对象实现的控制类别。  
+ 下面的代码指定以下对象实现`Control`类别。  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608304"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012324"
 ---
 # <a name="resource-view-window"></a>“资源视图”窗口
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608304"
 >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
 > [!TIP]
->  可以在“资源视图”窗口上右击以启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
+>  您可以右键单击**资源视图**窗口来启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
   
-#### <a name="to-open-the-resource-view-window"></a>打开资源视图窗口  
+### <a name="to-open-the-resource-view-window"></a>打开资源视图窗口  
   
 1.  单击**资源视图**上**视图**菜单。  
   

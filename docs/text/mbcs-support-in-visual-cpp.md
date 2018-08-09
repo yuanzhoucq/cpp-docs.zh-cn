@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的 MBCS 支持 |Microsoft 文档
+title: Visual c + + 中的 MBCS 支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,40 +32,40 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865831"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010381"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
-当在 MBCS 支持的版本的 Windows 上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 是 MBCS 支持，除了内存窗口。  
+MBCS 启用的 Windows 版本上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 时，MBCS 启用的除了内存窗口。  
   
- 内存窗口不将数据的字节解释为 MBCS 字符，即使它可以将这些字节解释为 ANSI 或 Unicode 字符。 ANSI 字符的大小始终为 1 个字节，而 Unicode 字符的大小为 2 个字节。 在 MBCS 中，字符的大小可以是 1 个或 2 个字节，其解释取决于正在使用的代码页。 因此，内存窗口很难可靠地显示 MBCS 字符。 内存窗口无法知道哪些字节是字符的开头。 开发人员可以在内存窗口中查看的字节值，并查找表来确定字符表示形式中的值。 这可能是字符串的因为开发人员知道基于的源代码的起始地址。  
+ 内存窗口不将数据的字节解释为 MBCS 字符，即使它可以将这些字节解释为 ANSI 或 Unicode 字符。 ANSI 字符的大小始终为 1 个字节，而 Unicode 字符的大小为 2 个字节。 在 MBCS 中，字符的大小可以是 1 个或 2 个字节，其解释取决于正在使用的代码页。 因此，内存窗口很难可靠地显示 MBCS 字符。 内存窗口无法知道哪些字节是字符的开头。 开发人员可以查看内存窗口中的字节值，并查找表来确定字符表示形式中的值。 这可能是字符串的因为开发人员知道基于源代码的起始地址。  
   
- Visual c + + 接受双字节字符，只要它适合若要这样做。 这包括选择了路径名称和文件名称为中的对话框和 Visual c + + 资源编辑器 （例如，在对话框编辑器中的静态文本） 和图标编辑器中的静态文本项中的文本项。 此外，预处理器可识别某些双字节指令 — 例如，文件名中`#include`语句，并为变量**code_seg**和**data_seg**杂注。 在源代码编辑器中，注释和字符串文本中的双字节字符接受，尽管不是在 C/c + + 语言元素 （如变量名）。  
+ Visual c + + 接受双字节字符，只要适合执行此操作。 这包括对话框和 Visual c + + 资源编辑器 （例如，在对话框编辑器中的静态文本） 和图标编辑器中的静态文本项中的文本项中的路径名和文件名。 此外，预处理器可识别某些双字节指令，例如，文件中的名称`#include`语句，并作为参数`code_seg`和`data_seg`杂注。 在源代码编辑器中，双字节字符的注释和字符串文本中接受，尽管不在 C/c + + 语言元素 （如变量的名称）。  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支持用于输入法编辑器 (IME)  
- 编写通常使用 MBCS （例如，日语） 的东亚市场支持 Windows IME 用于输入这两个单字节和双字节字符的应用程序。 Visual c + + 开发环境包含完整 IME 支持。 有关详细信息，请参阅[IME 示例： 演示如何控制 IME 模式和实现 IME 级别 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支持的输入法编辑器 (IME)  
+ 编写用于输入这两个单字节和双字节字符的东亚语言市场的正常使用 MBCS （例如，日本） 支持 Windows IME 的应用程序。 Visual c + + 开发环境包含完全 IME 支持。 有关详细信息，请参阅[IME 示例： 演示如何控制输入法模式和实现 IME 级别 3](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
   
- 日语键盘不直接支持日文汉字字符。 IME 将转换的语音的字符串，其中一个其他日文字母表 （罗马字、 片假名或平假名） 中输入到其可能日文汉字表示形式。 如果存在多义性，可以从多种可选方案中进行选择。 当你选择了日文的汉字字符时，IME 将传递两个`WM_CHAR`到控制应用程序的消息。  
+ 日语键盘不直接支持日文汉字字符。 IME 转换拼音的字符串，其可能的日文汉字表示形式输入其他日文字母表 （罗马字、 片假名或平假名） 之一。 如果存在多义性，可以从多种可选方案中进行选择。 当选择了日文的汉字字符时，IME 传递两个`WM_CHAR`控制应用程序的消息。  
   
- IME，激活的 ALT +\`密钥组合，显示为一组按钮 （一个指示符） 和一个转换窗口。 应用程序将文本插入点处窗口定位。 应用程序必须处理`WM_MOVE`和`WM_SIZE`通过重新定位转换窗口的消息，以符合新位置或目标窗口的大小。  
+ IME，激活的 ALT +\`组合键，将显示为一系列按钮 （指标） 和转换窗口。 应用程序定位文本插入点处的窗口。 应用程序必须处理`WM_MOVE`和`WM_SIZE`通过重新定位转换窗口的消息，以符合新位置或目标窗口的大小。  
   
- 如果你希望用户的应用程序拥有输入日文汉字字符的能力，应用程序必须处理 Windows IME 消息。 有关 IME 编程的详细信息，请参阅[输入法编辑器](https://msdn.microsoft.com/en-us/library/ms776145.aspx)。  
+ 如果你希望用户的应用程序输入日文汉字字符的功能，该应用程序必须处理 Windows IME 消息。 有关输入法进行编程的详细信息，请参阅[输入法编辑器](https://msdn.microsoft.com/library/ms776145.aspx)。  
   
 ## <a name="visual-c-debugger"></a>Visual c + + 调试器  
- Visual c + + 调试器能够在 IME 消息上设置断点。 此外，内存窗口可以显示双字节字符。  
+ Visual c + + 调试器提供 IME 消息上设置断点的能力。 此外，内存窗口可以显示双字节字符。  
   
 ## <a name="command-line-tools"></a>命令行工具  
- Visual c + + 命令行工具，包括编译器、 NMAKE 和资源编译器 (RC。EXE)，MBCS 启用了。 资源编译器 /c 选项可用于更改编译应用程序的资源时的默认代码页。  
+ Visual c + + 命令行工具，包括编译器、 NMAKE，以及资源编译器 (RC。Exe 文件），MBCS 启用了。 资源编译器 /c 选项，可用于更改编译应用程序的资源时的默认代码页。  
   
- 若要在源代码编译时更改默认区域设置，请使用[#pragma setlocale](../preprocessor/setlocale.md)。  
+ 若要在源的代码编译时更改默认区域设置，请使用[#pragma setlocale](../preprocessor/setlocale.md)。  
   
 ## <a name="graphical-tools"></a>图形工具  
- Visual c + + Windows 基于等工具，Spy + + 和编辑工具，资源完全支持 IME 字符串。  
+ 基于 Visual c + + Windows 的工具，如 Spy + + 和编辑工具，该资源完全支持 IME 的字符串。  
   
 ## <a name="see-also"></a>请参阅  
- [多字节字符集 (Mbcs) 的支持](../text/support-for-multibyte-character-sets-mbcss.md)   
+ [对多字节字符集 (Mbcs) 的支持](../text/support-for-multibyte-character-sets-mbcss.md)   
  [MBCS 编程提示](../text/mbcs-programming-tips.md)

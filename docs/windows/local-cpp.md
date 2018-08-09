@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ad1fb4dd281918b0d9ab3494c9a9f060468fc389
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604195"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018092"
 ---
 # <a name="local-c"></a>local (C++)
 接口标头中使用时，可以使用 MIDL 编译器作为标头生成器。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [local]  
 ```  
   

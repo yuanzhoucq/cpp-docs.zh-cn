@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b824baae8044912e36dfe56054f4db1af7225fdb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603606"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015642"
 ---
 # <a name="nil-structure"></a>Nil 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 struct Nil;  
 ```  
   

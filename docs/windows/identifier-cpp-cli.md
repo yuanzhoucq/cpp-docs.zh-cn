@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603340"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018356"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可以使用 Visual c + + 关键字用作标识符。  
@@ -31,7 +31,7 @@ ms.locfileid: "39603340"
 ## <a name="all-platforms"></a>所有平台  
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Visual_C++_keyword
 ### <a name="examples"></a>示例  
  **示例**  
   
- 在以下示例中，类命名为`template`是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中`template`类， **__identifier**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
+ 在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>示例  
   
- 在以下示例中，类命名为`template`是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中`template`类， **__identifier**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
+ 在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
   
 ```cs  
 // identifier_template.cs  

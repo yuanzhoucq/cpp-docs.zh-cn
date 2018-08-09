@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608262"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015580"
 ---
 # <a name="selecting-multiple-controls"></a>选定多个控件
 ### <a name="to-select-multiple-controls"></a>若要选择多个控件  
@@ -47,7 +47,7 @@ ms.locfileid: "39608262"
 1.  与所选控件的组，按住**Shift**密钥，然后单击你想要添加到现有的选定内容或从其中移除的控件。  
   
     > [!NOTE]
-    >  按住 CTRL 键并单击所选内容内的控件将使该控件中所选内容的主要控件。 有关详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
+    >  按住**Ctrl**键并单击所选内容内的控件将使该控件中所选内容的主要控件。 有关详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
   
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81b3a166215f7731a43333e230621072d760260c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650464"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013527"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
 验证每个接口定义的模板参数*I0*通过*I9*继承`IUnknown`和/或`IInspectable`，以及*I0*继承*I1*通过*I9*。  
@@ -35,8 +35,7 @@ WRL_NOTHROW __forceinline static void Verify();
   
 ## <a name="remarks"></a>备注  
  如果验证操作失败， **static_assert**发出描述失败的错误消息。  
-  
-## <a name="remarks"></a>备注  
+
  模板参数*I0*并*I1*是必需的并且参数*I2*通过*I9*都是可选的。  
   
 ## <a name="requirements"></a>要求  

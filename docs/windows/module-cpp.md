@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604351"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018589"
 ---
 # <a name="module-c"></a>module (C++)
 定义.Idl 文件中的库块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ ms.locfileid: "39604351"
 ```  
   
 ### <a name="parameters"></a>参数  
- *类型*（可选）  
- 可以是以下各项之一：  
+*类型*（可选）  
+可以是以下各项之一：  
   
 -   `dll` 添加函数和类，使产生的 DLL 发挥进程内 COM 服务器。 这是默认值。  
   
@@ -61,51 +61,51 @@ ms.locfileid: "39604351"
   
 -   `unspecified` 禁用相关模块特性的 ATL 代码注入： 注入 ATL Module 类、 全局实例 _AtlModule 和入口点函数。 不要禁用该项目中的其他特性的 ATL 代码注入。  
   
-  名称（可选）  
- 库块的名称。  
+ 名称（可选）  
+库块的名称。  
   
- *版本*（可选）  
- 想要分配到库块的版本号。 默认值为 1.0。  
+*版本*（可选）  
+想要分配到库块的版本号。 默认值为 1.0。  
   
- *uuid*  
- 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (***libraryname***)**。  
+*uuid*  
+库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (***libraryname***)**。  
   
- *lcid*  
- 本地化参数。 有关详细信息，请参阅 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。  
+*lcid*  
+本地化参数。 有关详细信息，请参阅 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。  
   
- *控制*（可选）  
- 指定库中的所有组件为控件。  
+*控制*（可选）  
+指定库中的所有组件为控件。  
   
- *helpstring*  
- 指定类型库。  
+*helpstring*  
+指定类型库。  
   
- *helpstringdll* （可选）  
- 设置要用于执行文档字符串查找的.dll 文件名称。 有关详细信息，请参阅 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。  
+*helpstringdll* （可选）  
+设置要用于执行文档字符串查找的.dll 文件名称。 有关详细信息，请参阅 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。  
   
- *helpfile* （可选）  
- 类型库的帮助文件名称。  
+*helpfile* （可选）  
+名称**帮助**类型库文件。  
   
- *helpcontext* （可选）  
- 该类型库的帮助 ID。  
+*helpcontext* （可选）  
+**帮助 ID**该类型库。  
   
- *helpstringcontext* （可选）  
- 有关详细信息，请参阅 [helpstringcontext](../windows/helpstringcontext.md) 。  
+*helpstringcontext* （可选）  
+有关详细信息，请参阅 [helpstringcontext](../windows/helpstringcontext.md) 。  
   
- *隐藏*（可选）  
- 禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 更多详细信息，请参阅 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 特性。  
+*隐藏*（可选）  
+禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 更多详细信息，请参阅 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 特性。  
   
- *受限*（可选）  
- 不能随意调用库中的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。  
+*受限*（可选）  
+不能随意调用库中的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。  
   
- *自定义*（可选）  
- 一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 第一个参数*自定义*是该特性的 GUID。 例如：  
+*自定义*（可选）  
+一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 第一个参数*自定义*是该特性的 GUID。 例如：  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *资源名称*  
- 用 rgs 文件字符串资源 ID 来注册 DLL、可执行文件或服务应用程序的 APP ID。 模块是服务类型模块时，也使用此参数获取包含服务名称的字符串 ID。  
+*资源名称*  
+用 rgs 文件字符串资源 ID 来注册 DLL、可执行文件或服务应用程序的 APP ID。 模块是服务类型模块时，也使用此参数获取包含服务名称的字符串 ID。  
   
 > [!NOTE]
 >  rgs 文件和含服务名称的字符串应包含相同的数字值。  

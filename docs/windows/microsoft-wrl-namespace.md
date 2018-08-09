@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft:: wrl Namespace |Microsoft 文档'
+title: 'Microsoft:: wrl Namespace |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881645"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020247"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
-定义构成 Windows 运行时 c + + 模板库的基础类型。  
+定义构成了 Windows 运行时 c + + 模板库的基础类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,18 +70,18 @@ namespace Microsoft::WRL;
 |名称|描述|  
 |----------|-----------------|  
 |[ChainInterfaces 结构](../windows/chaininterfaces-structure.md)|指定可应用于一组接口 ID 的验证和初始化函数。|  
-|[CloakedIid 结构](../windows/cloakediid-structure.md)|指示无法访问 IID 列表中指定接口的 RuntimeClass、Implements 和 ChainInterfaces 模板。|  
-|[Implements 结构](../windows/implements-structure.md)|为指定接口实现 QueryInterface 和 GetIid。|  
+|[CloakedIid 结构](../windows/cloakediid-structure.md)|指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。|  
+|[Implements 结构](../windows/implements-structure.md)|实现`QueryInterface`和`GetIid`指定接口。|  
 |[MixIn 结构](../windows/mixin-structure.md)|确保运行时类先后派生自 Windows 运行时接口（如果有）和经典 COM 接口。|  
-|[RuntimeClassFlags 结构](../windows/runtimeclassflags-structure.md)|包含的实例类型[RuntimeClass](../windows/runtimeclass-class.md)。|  
+|[RuntimeClassFlags 结构](../windows/runtimeclassflags-structure.md)|包含的类型的实例[RuntimeClass](../windows/runtimeclass-class.md)。|  
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[AsyncResultType 枚举](../windows/asyncresulttype-enumeration.md)|指定 GetResults() 方法返回的结果类型。|  
+|[AsyncResultType 枚举](../windows/asyncresulttype-enumeration.md)|指定返回的结果类型`GetResults()`方法。|  
 |[ModuleType 枚举](../windows/moduletype-enumeration.md)|指定模块是否应支持进程内服务器或进程外服务器。|  
-|[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)|指定的一种[RuntimeClass](../windows/runtimeclass-class.md)支持的实例。|  
+|[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)|指定的类型[RuntimeClass](../windows/runtimeclass-class.md)支持实例。|  
   
 ### <a name="functions"></a>函数  
   

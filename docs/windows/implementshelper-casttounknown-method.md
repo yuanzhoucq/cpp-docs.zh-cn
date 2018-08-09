@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604234"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016231"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指向基础的 IUnknown 接口指针。  
+ 对基础指针`IUnknown`接口。  
   
 ## <a name="remarks"></a>备注  
  获取一个指针指向的基础`IUnknown`当前接口`Implements`结构。  

@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 719522a37c989b388a811348759d1fff34c373a9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c4f2ed14e0b12d28bc0977dce7e7480fe4c4d44e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605354"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012971"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 运算符 (Microsoft::WRL)
 相等运算符[ComPtr](../windows/comptr-class.md)并[ComPtrRef](../windows/comptrref-class.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW bool operator==(  
    const ComPtr<T>& a,  
    const ComPtr<U>& b  

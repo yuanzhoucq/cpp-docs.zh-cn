@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608152"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010686"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>将位图另存为 GIF 或 JPEG（图标的图像编辑器）
 在创建位图时，位图格式 (.bmp) 中创建映像。 但是，，您可以图像保存为 GIF 或 JPEG 或其他图形格式。  
@@ -51,9 +51,10 @@ ms.locfileid: "39608152"
   
 4.  与仍在中打开位图**图像**编辑器中，单击**保存*filename*为.bmp**上**文件**菜单。  
   
-5.  在**将文件另存为**对话框框中，键入你想要提供的文件和表示中所需的文件格式的扩展插件的名称**文件名**框。 例如，myfile.gif。  
+5.  在**将文件另存为**对话框框中，键入你想要提供的文件和表示中所需的文件格式的扩展插件的名称**文件名**框。 例如， *myfile.gif*。  
   
-     **请注意**必须创建或打开在项目之外的位图，才能将其保存为另一种文件格式。 如果在创建或打开您的项目内**另存为**命令将不可用。 有关详细信息，请参阅[查看资源在资源脚本文件之外的项目 （独立版）](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
+     > [!NOTE]
+     > 必须创建或打开在项目之外的位图，才能将其保存为另一种文件格式。 如果在创建或打开您的项目内**另存为**命令将不可用。 有关详细信息，请参阅[查看资源在资源脚本文件之外的项目 （独立版）](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
 6.  单击“保存” 。  
   

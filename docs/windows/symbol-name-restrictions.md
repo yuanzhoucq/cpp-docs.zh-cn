@@ -1,5 +1,5 @@
 ---
-title: 符号名限制 |Microsoft 文档
+title: 符号名限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892330"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011443"
 ---
 # <a name="symbol-name-restrictions"></a>符号名限制
 对符号名的限制如下所示：  
   
--   所有[符号](../windows/symbols-resource-identifiers.md)在应用程序的作用域内必须唯一。 这样可防止头文件中出现冲突的符号定义。  
+-   所有[符号](../windows/symbols-resource-identifiers.md)必须是唯一的应用程序的作用域内。 这样可防止头文件中出现冲突的符号定义。  
   
 -   符号名的有效字符包括 A-Z、a-z、0-9 和下划线 (_)。  
   
@@ -52,8 +52,6 @@ ms.locfileid: "33892330"
 |控件和子窗口|IDC_|控件|  
 |字符串|IDS_|字符串表中的字符串|  
 |MFC|AFX_|为预定义 MFC 符号保留|  
-  
-
   
 ## <a name="requirements"></a>要求  
  Win32  

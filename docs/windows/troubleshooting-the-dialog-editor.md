@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648615"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011099"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>对话框编辑器疑难解答
-下面是其中应注意在对话框编辑器中工作时的一些问题。  
+以下是几个应注意中工作时的问题**对话框**编辑器。  
   
 -   [向对话框添加控件导致对话框不再工作](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

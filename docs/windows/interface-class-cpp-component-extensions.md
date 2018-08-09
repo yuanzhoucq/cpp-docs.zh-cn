@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604481"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012828"
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
 声明接口。  有关本机接口的信息，请参阅[__interface](../cpp/interface.md)。  
@@ -32,14 +32,13 @@ ms.locfileid: "39604481"
 
 ### <a name="syntax"></a>语法  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>参数  
-  
  *interface_access*  
  在程序集外部接口的可访问性。  可能的值为**公共**并**专用**。  **专用**是默认值。 不能具有嵌套的接口*interface_access*说明符。  
   
@@ -75,7 +74,7 @@ interface class
  在开发环境中，你可以获取的 F1 帮助上这些关键字通过突出显示关键字 (`interface class`，例如)，然后按 F1。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注 
   
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
@@ -83,7 +82,7 @@ interface class
  编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注
   
  （此语言功能没有只适用于公共运行时的备注。）  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 in Function_3  

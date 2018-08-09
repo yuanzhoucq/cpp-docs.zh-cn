@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646925"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013998"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在资源编辑器中查看和编辑资源
-每种资源类型具有特定于该资源类型的资源编辑器。 可以重新排列、 调整大小、 添加控件和功能，或以其他方式修改资源使用相关联的编辑器的方面。 此外可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)并[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。  
+每种资源类型具有**资源**特定于该资源类型的编辑器。 可以重新排列、 调整大小、 添加控件和功能，或以其他方式修改资源使用相关联的编辑器的方面。 此外可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)并[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。  
   
  某些资源类型是单个文件可以导入和使用各种方式;其中包括位图、 图标、 光标、 工具栏和 html 文件。 此类资源具有文件的名称，以及[资源标识符](../windows/symbols-resource-identifiers.md)。 其他人，例如对话框、 菜单和在 Win32 项目中，字符串表仅作为的一部分存在的资源脚本 (.rc) 文件或资源模板 (.rct) 文件。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "39646925"
   
 1.  选择**资源视图**从**视图**菜单。  
   
-2.  如果资源视图窗口不是最顶层窗口，请单击**资源视图**选项卡以将它放在顶部。  
+2.  如果**资源视图**窗口不是最顶层窗口中，单击**资源视图**选项卡以将它放在顶部。  
   
-3.  从资源视图中，展开包含您想要查看的资源的项目的文件夹。 例如，如果你想要查看对话框资源，展开对话框文件夹。  
+3.  从**资源视图**，展开包含您想要查看的资源的项目的文件夹。 例如，如果你想要查看对话框资源，展开**对话框**文件夹。  
   
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-4.  双击该资源，例如，IDD_ABOUTBOX。  
+4.  例如，双击该资源**IDD_ABOUTBOX**。  
   
-     资源将在适当的编辑器中打开。 例如，对于对话框资源，资源对话框编辑器中打开。  
+     资源将在适当的编辑器中打开。 例如，对于对话框资源，资源将打开内**对话框**编辑器。  
   
      此外可以[.rc （资源脚本） 文件中查看资源，而无需打开一个项目](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "39646925"
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>若要在资源编辑器中查看托管的资源  
   
-1.  在中**解决方案资源管理器**，双击资源，例如，Bitmap1.bmp。  
+1.  在中**解决方案资源管理器**，双击该资源，例如， **Bitmap1.bmp**。  
   
      资源将在适当的编辑器中打开。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39646925"
   
 1.  在中**解决方案资源管理器**，右键单击你想要删除选择的资源**删除**从快捷菜单。  
   
-### <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
