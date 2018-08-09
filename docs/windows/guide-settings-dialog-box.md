@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568886"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647991"
 ---
 # <a name="guide-settings-dialog-box"></a>“参考线设置”对话框
 ## <a name="layout-guides"></a>版式参考线  
  显示布局参考线设置。  
   
- **无**  
+### <a name="none"></a>无  
   
  隐藏布局工具。  
   
- **标尺和参考线**  
+### <a name="rulers-and-guides"></a>标尺和参考线  
   
  启用时，将标尺添加到布局工具中;参考线可放在标尺。 默认指南将边距，可以通过拖动移动。 若要放置参考线标尺中单击。 控件指南时控件的上方或旁边它们移到"管理单元"。 一旦将它们附加到它，控件还用指南中进行移动。 当控件所附加到每一侧的指南和参考线移动时，该控件调整大小。  
   
- **网格**  
+### <a name="grid"></a>Grid  
   
  创建布局网格。 新控件将自动对齐到网格中。  
   
 ## <a name="grid-spacing"></a>网格间距  
  对话框框单元 (Dlu) 中显示的网格间距的设置。  
   
- **宽度： Dlu**  
+### <a name="width-dlus"></a>宽度： Dlu  
   
  Dlu 中设置布局网格的宽度。 水平 DLU 是由 4 个划分对话框字体平均宽度。  
   
- **高度： Dlu**  
+### <a name="height-dlus"></a>高度： Dlu 
   
  Dlu 中设置的布局网格的高度。 垂直 DLU 是平均划分的八个对话框字体的高度。  
   

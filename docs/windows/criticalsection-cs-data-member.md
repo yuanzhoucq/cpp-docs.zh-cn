@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsection:: Cs_ 数据成员 |Microsoft 文档'
+title: 'Criticalsection:: Cs_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882558"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641387"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ 数据成员
 声明关键部分数据成员。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   

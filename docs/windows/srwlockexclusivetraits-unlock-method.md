@@ -1,5 +1,5 @@
 ---
-title: 'Srwlockexclusivetraits:: Unlock 方法 |Microsoft 文档'
+title: 'Srwlockexclusivetraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892584"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648017"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock 方法
-释放指定 SRWLock 对象的独有控制。  
+释放指定的全权控制`SRWLock`对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `srwlock`  
- SRWLock 对象的句柄。  
+### <a name="parameters"></a>参数  
+ *srwlock*  
+ 句柄`SRWLock`对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571433"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650084"
 ---
 # <a name="dbcommand"></a>db_command
 创建 OLE DB 命令。  
@@ -41,7 +41,6 @@ ms.locfileid: "39571433"
 ```  
   
 ### <a name="parameters"></a>参数  
-
 *command*  
 包含 OLE DB 命令文本的命令字符串。 一个简单的例子是：  
   
@@ -112,12 +111,12 @@ TCHAR m_state[3] = 'CA';
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。  
   
 *hresult* （可选）  
-标识将接收此数据库命令的 `HRESULT` 的变量。 如果该变量不存在，属性将自动插入。  
+标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。  
   
  绑定（可选）  
 允许从 OLE DB 命令分离绑定参数。  
   
-如果指定的值*绑定*， **db_command**将分析相关联的值，但不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定 **Bindings=""**。  
+如果指定的值*绑定*， **db_command**将分析相关联的值，但不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定`Bindings=""`。  
   
 如果未指定的值*绑定*， **db_command**将分析绑定参数块，查找 **(** 后, 跟 **\[** _bindtype_**]** 在方括号内后, 跟一个或多个以前声明 c + + 成员变量后, 接 **)**。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。  
   
@@ -133,7 +132,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="remarks"></a>备注  
 **db_command** 创建 [CCommand](../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。  
   
-可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类`CCommand<>`，但函数和类的情况下，模板参数不同。 在函数事例中，将绑定包含本地变量的 **取值函数** ，而类用法将推断 `CAccessor`派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。  
+可以将 **db_command** 与类或函数范围一起使用，主要差异在于 `CCommand` 对象的范围。 使用函数范围，绑定等数据终止于函数末端。 类和函数范围的用法涉及到 OLE DB 使用者模板类`CCommand<>`，但函数和类的情况下，模板参数不同。 在函数事例中，将对进行绑定`Accessor`包含本地变量，而类用法将推断`CAccessor`-派生的类作为参数。 用作类属性时， **db_command** 和 **db_column**配合使用。  
   
 **db_command** 可用于执行不返回结果集的命令。  
   

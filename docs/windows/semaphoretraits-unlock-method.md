@@ -1,5 +1,5 @@
 ---
-title: 'Semaphoretraits:: Unlock 方法 |Microsoft 文档'
+title: 'Semaphoretraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892242"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650422"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock 方法
 版本控制共享资源。  
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
- 信号量对象的句柄。  
+### <a name="parameters"></a>参数  
+ *h*  
+ 句柄**信号量**对象。  
   
 ## <a name="remarks"></a>备注  
- 如果解除锁定操作不成功，Unlock() 会发出一个错误，指示失败的原因。  
+ 如果解锁操作不成功， **Unlock()** 发出一个错误，指示失败的原因。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

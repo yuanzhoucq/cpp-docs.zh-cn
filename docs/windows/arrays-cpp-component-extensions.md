@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461684"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645563"
 ---
 # <a name="arrays-c-component-extensions"></a>数组（C++ 组件扩展）
 `Platform::Array<T>`类型在 C + + /CX 中，或**数组**关键字在 C + + /cli CLI，声明数组的指定的类型和初始值。  
@@ -52,7 +52,7 @@ ms.locfileid: "39461684"
   
  第一个语法的示例使用**ref 新**聚合关键字分配一个数组。 第二个示例声明本地数组。  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461684"
  您可以在编译时检测类型是否是类型的引用计数数组`__is_ref_array(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ### <a name="examples"></a>示例  
  以下示例创建具有 100 个元素的一维数组。  
@@ -106,7 +106,7 @@ int main() {
   
  第一个语法的示例使用**gcnew**关键字来分配一个数组。 第二个示例声明本地数组。  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>备注  
   
- `array` 处于[Platform、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空间。  
+ **数组**处于[Platform、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空间。  
   
  如标准 c + +，数组的索引是从零开始，并且数组下标使用方括号 ([])。 与不同的是标准 c + +，而不是一组方括号 ([]) 运算符，为每个维度的每个维度的索引的列表中指定的多维数组的索引。 例如，*标识符*[*index1*， *index2*] 而不是*标识符*[*index1*] [ *index2*]。  
   
@@ -152,7 +152,7 @@ int main() {
  在编译时，可以检测是否使用的公共语言运行时 (CLR) 数组类型`__is_ref_array(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
  以下示例创建具有 100 个元素的一维数组和一个三维数组具有 3 个元素中的第一个维度、 5 个元素在第二个和第三个中的 6 个元素。  

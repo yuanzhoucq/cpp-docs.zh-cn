@@ -1,5 +1,5 @@
 ---
-title: CancelTransitionPolicy 枚举 |Microsoft 文档
+title: CancelTransitionPolicy 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860341"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642953"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 枚举
-指示如何异步操作的尝试，则切换为终端状态的完成或错误的行为与客户端请求已取消状态。  
+指示异步操作的尝试转换到的终端状态的方式完成或错误的行为根据客户端请求已取消状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |名称|描述|  
 |----------|-----------------|  
-|`RemainCanceled`|如果异步操作目前在客户端请求已取消状态，这指示它将保持已取消状态而不是转换为已完成的终端或错误状态。|  
-|`TransitionFromCanceled`|如果异步操作目前在客户端请求已取消状态，则表明状态应转换到的终端状态的已取消的状态完成从，或使用此标志的调用所根据的错误。|  
+|`RemainCanceled`|如果异步操作目前在客户端请求已取消状态，则表明它将处于已取消状态而不是转换为已完成的终端或错误状态。|  
+|`TransitionFromCanceled`|如果异步操作目前在客户端请求已取消状态，则表明状态应转换到的终端状态的已取消的状态完成的或由使用此标志的调用确定的错误。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** async.h  

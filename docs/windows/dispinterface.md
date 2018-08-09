@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569209"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644325"
 ---
 # <a name="dispinterface"></a>dispinterface
 将一个接口作为调度接口置于 .idl 文件中。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "39569209"
   
  MIDL 文档中的 [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) 用法示例：  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**适用对象**|**interface**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
-|**无效的特性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
+|**无效的特性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   

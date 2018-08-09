@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: df452614bfd5ee95a810300809678e28abfbf8ef
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570926"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643155"
 ---
 # <a name="helpstring"></a>helpstring
 指定一个字符串，用于描述应用该字符串的元素。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ helpstring(  
    "string"  
 ) ]  

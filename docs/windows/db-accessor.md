@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68c7d70c6d1192e1b80253cf1fb3cfc3040d8fce
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 727e67ad5bceb396da98463b77fb75f2f99154b3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570642"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650006"
 ---
 # <a name="dbaccessor"></a>db_accessor
 组`db_column`参与属性`IAccessor`-基于绑定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ db_accessor(   
    num,   
    auto   

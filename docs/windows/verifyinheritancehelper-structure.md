@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper 结构 |Microsoft 文档
+title: VerifyInheritanceHelper 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889698"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652931"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -41,15 +41,15 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `I`  
+### <a name="parameters"></a>参数  
+ *I*  
  一种类型。  
   
- `Base`  
+ *基本*  
  另一种类型。  
   
 ## <a name="remarks"></a>备注  
- 测试是否一个接口派生自另一个接口。  
+ 测试是否有一个接口派生自另一个接口。  
   
 ## <a name="members"></a>成员  
   
@@ -57,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|测试当前的模板参数指定的两个接口，并确定是否将一个接口派生自另。|  
+|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|测试当前的模板参数指定的两个接口，并确定是否派生自另一个接口。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `VerifyInheritanceHelper`  

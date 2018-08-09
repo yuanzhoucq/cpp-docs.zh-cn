@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc9ec0c0c68c2941991d0820265b9ee1499bf7cb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465124"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650828"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode 方法
 检索当前的异步操作的错误代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHOD(  
    get_ErrorCode  
 )(HRESULT* errorCode) override;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *错误代码*  
  存储当前的错误代码的位置。  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466551"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652957"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 常量
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 static const int args = -1; ;  
 ```  
   
@@ -37,7 +37,7 @@ static const int args = -1; ;
  中保留的参数的数目计数`Invoke`委托接口的方法。  
   
 ## <a name="remarks"></a>备注  
- 当`args`等于-1 指示可以为没有匹配项`Invoke`方法签名。  
+ 当**args**等于-1 指示可以为没有匹配项`Invoke`方法签名。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

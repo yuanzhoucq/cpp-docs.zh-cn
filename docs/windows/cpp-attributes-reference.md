@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 24ca39b307decbf88338295ba2650b935eca2d4f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460901"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645488"
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 Microsoft 定义一的组属性，用于简化 COM 编程和.NET Framework 公共语言运行时开发。 当在源文件中包含的属性时，编译器可使用提供程序 Dll 可以插入代码或修改生成的对象文件中的代码。  
   
- **注意：** 如果您要查找 c + + 标准属性，请参阅[属性](../cpp/attributes.md)。  
+ > [!NOTE] 
+ > 如果您要查找 c + + 标准属性，请参阅[属性](../cpp/attributes.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [概念](../windows/attributed-programming-concepts.md)  

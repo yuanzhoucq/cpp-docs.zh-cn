@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 86b55d8288f44b04ac1afc30a0afd67fce4edf81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465365"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646768"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 构造函数
 初始化的新实例**ComPtr**类。 重载提供默认、复制、移动和转换构造函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW ComPtr();  
 WRL_NOTHROW ComPtr(  
    decltype(__nullptr)  
@@ -58,7 +58,7 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *U*  
  类型*其他*参数。  
   

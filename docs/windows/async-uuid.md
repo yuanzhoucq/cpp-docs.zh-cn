@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466743"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642407"
 ---
 # <a name="asyncuuid"></a>async_uuid
 指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [async_uuid (  
    uuid  
 )]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *uuid*  
  一个标识接口的版本的 UUID。  
   

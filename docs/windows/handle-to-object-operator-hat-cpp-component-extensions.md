@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569799"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642765"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>对象句柄运算符 (^)（C++ 组件扩展）
 *句柄声明符*(`^`，发音为"hat")，修改类型[说明符](../cpp/overview-of-declarators.md)表示声明的对象将自动删除该系统确定该对象是无法再进行访问。  
@@ -36,7 +36,7 @@ ms.locfileid: "39569799"
  有关如何实例化对象的信息，请参阅[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
 ## <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，并且可以删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，这会使托管引用所引用的位置不再有效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。  
@@ -48,7 +48,6 @@ ms.locfileid: "39569799"
  有关详细信息，请参阅[如何： 在本机类型中声明处理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  此示例演示如何在托管堆上创建引用类型的实例。  此示例还演示，您可以使用一个句柄初始化另一个句柄，使两个引用都指向垃圾回收托管堆上的同一对象。 请注意，该分配[nullptr](../windows/nullptr-cpp-component-extensions.md)到一个句柄不会将标记为垃圾回收的对象。  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **示例**  
   
  以下示例演示如何声明一个句柄，指向托管堆上的一个对象，而对象的类型是装箱值类型。 示例还演示如何从装箱对象获取值类型。  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **输出**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **示例**  
-  
- 此示例演示，如何将使用 void* 指针指向任意对象的常见 C++ 思路替换为使用 Object^，后者可以容纳指向任意引用类的句柄。 它还演示可将所有类型（如数组和委托）都转换为对象句柄。  
+ 此示例显示使用的常见的 c + + 思路`void*`指针指向任意对象替换为`Object^`，后者可以容纳指向任意引用类的一个句柄。 它还演示可将所有类型（如数组和委托）都转换为对象句柄。  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **示例**  
   
  此示例演示可以对句柄取消引用，并通过取消引用的句柄访问成员。  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **示例**  
-  
- 此示例演示不能将本机引用 (`&`) 绑定到托管类型的 `int` 成员，因为 `int` 可能存储在垃圾回收堆中，但本机引用不能跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。  
+ 此示例显示本机引用 (`&`) 不能将绑定到**int**托管类型的成员作为**int**可能存储在垃圾回收堆，并且本机引用不能跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

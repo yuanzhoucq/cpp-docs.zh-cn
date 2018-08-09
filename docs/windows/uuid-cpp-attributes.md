@@ -1,5 +1,5 @@
 ---
-title: uuid （c + + 特性） |Microsoft 文档
+title: uuid （c + + 特性） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07258b2f7416b0747be81075f4c037a6be54e7a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891527"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647068"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
-指定为类或接口的唯一 ID。  
+指定类或接口的唯一 ID。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ uuid(  
+[ uuid(  
    "uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *uuid*  
- 128 位的唯一标识符。  
+ 一个 128 位的唯一标识符。  
   
 ## <a name="remarks"></a>备注  
- 如果未指定的接口或类定义`uuid`c + + 属性，则 Visual c + + 编译器将提供一个。 当指定`uuid`，必须包括引号。  
+ 如果未指定的接口或类定义**uuid** c + + 属性，则 Visual c + + 编译器将提供一个。 当指定**uuid**，必须包括引号。  
   
- 如果不指定`uuid`，则编译器将在一台计算机上的不同的属性项目中生成的 GUID 相同的接口或具有相同名称的类。  
+ 如果未指定**uuid**，则编译器将在一台计算机上的不同的属性项目中生成的接口或类具有相同的名称相同的 GUID。  
   
- 你可以使用 Uuidgen.exe 或 Guidgen.exe 生成你自己唯一的 Id。 (若要运行这些工具之一，请单击**启动**单击**运行**菜单上。 然后输入所需的工具的名称。）  
+ 您可以使用 Uuidgen.exe 或 Guidgen.exe 生成你自己的唯一 Id。 (若要运行这些工具，请单击**启动**然后单击**运行**菜单上。 然后输入所需的工具的名称。）  
   
- 也不使用 ATL 项目中使用时，指定`uuid`属性等同于指定[uuid](../cpp/uuid-cpp.md) __declspec 修饰符。 若要检索`uuid`的类，可以使用[__uuidof](../cpp/uuidof-operator.md)  
+ 也不使用 ATL 的项目中使用时，指定**uuid**属性是与指定[uuid](../cpp/uuid-cpp.md) **__declspec**修饰符。 若要检索**uuid**类，可以使用[__uuidof](../cpp/uuidof-operator.md)  
   
 ## <a name="example"></a>示例  
- 请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用`uuid`。  
+ 请参阅[可绑定](../windows/bindable.md)的示例使用的示例**uuid**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -58,7 +57,7 @@ ms.locfileid: "33891527"
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`， `interface`，**联合**， `enum`|  
+|**适用对象**|**类**， **struct**，**接口**，**联合**，**枚举**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1530f7998f2597aeb2fe46dba09f4844b471cd93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464293"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644825"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt;运算符
 检索指向当前模板参数所指定类型的指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
 ```  
   

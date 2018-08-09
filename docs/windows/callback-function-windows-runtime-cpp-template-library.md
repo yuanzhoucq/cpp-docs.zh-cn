@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461487"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652570"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>回调函数（Windows 运行时 C++ 模板库）
 创建一个对象，该对象的成员函数是一个回调方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback  
@@ -198,7 +198,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *TDelegateInterface*  
  一个模板参数，指定在事件发生时要调用的委托接口。  
   

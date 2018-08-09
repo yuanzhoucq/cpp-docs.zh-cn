@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465293"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649778"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 在泛型类型或方法声明中，可以使用约束限定类型参数。 约束是用作类型参数的类型必须满足的需求。 例如，约束可能是类型参数必须实现特定接口或从特定类继承。  
@@ -32,11 +32,11 @@ ms.locfileid: "39465293"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *类型参数*  
  要约束的其中一个类型参数。  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  列表也可以包含类。 要让类型参数满足基类约束，它必须与约束的类相同或从约束派生。  
   
- 此外可以指定`gcnew()`以指示类型参数必须具有公共无参数构造函数; 或**ref 类**以指示类型参数必须是引用类型，包括任何类、 接口、 委托或数组类型;或**值类**以指示类型参数必须是值类型。 除 Nullable 以外的类型的任何值\<T > 可以指定。  
+ 此外可以指定**gcnew （)** 以指示类型参数必须具有公共无参数构造函数; 或者**ref 类**以指示类型参数必须是引用类型，包括任何类接口、 委托或数组类型;或**值类**以指示类型参数必须是值类型。 除 Nullable 以外的类型的任何值\<T > 可以指定。  
   
  还可以指定泛型参数作为约束。 为要约束的类型提供的类型参数必须是或派生自约束的类型。 这称为裸类型约束。  
   

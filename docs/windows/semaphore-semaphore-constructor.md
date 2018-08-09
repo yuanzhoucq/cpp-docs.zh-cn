@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: semaphore 构造函数 |Microsoft 文档'
+title: 'Semaphore:: semaphore 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888654"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643655"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore 构造函数
-初始化 Semaphore 类的新实例。  
+初始化的新实例**信号量**类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `h`  
- Semaphore 对象的句柄或对此对象的 rvalue 引用。  
+### <a name="parameters"></a>参数  
+ *h*  
+ 句柄或对右值引用**信号量**对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

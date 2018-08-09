@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461218"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641915"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 结构
 指示对`RuntimeClass`，`Implements`和`ChainInterfaces`： 指定的接口是无法访问 IID 列表中的模板。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename T>  
 struct CloakedIid : T;  
 ```  
@@ -39,7 +39,7 @@ struct CloakedIid : T;
  接口处于隐藏状态 （已掩蔽）。  
   
 ## <a name="remarks"></a>备注  
- 下面是如何的示例`CloakedIid`使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
+ 下面是如何的示例**CloakedIid**使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `T`  

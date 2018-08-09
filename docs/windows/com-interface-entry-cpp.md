@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462779"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646184"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 接口将项添加到目标类的 COM 映射。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *com_interface_entry*  
  包含的项的实际文本的字符串。 有关可能的值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../atl/reference/com-interface-entry-macros.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "39462779"
   
  此限制是必要的因为 ATL 作为标识接口映射中使用的第一个条目`IUnknown`; 因此，输入项必须是有效的接口。 例如，下面的代码示例无效，因为接口映射中的第一个条目不指定实际的 COM 接口。  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  为生成的 COM 对象映射`CMyBaseClass`如下所示：  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**适用对象**|**类**，**结构**|  
 |**可重复**|是|  
-|**必需的特性**|以下一个或多个属性： **coclass**、 **progid**或 **vi_progid**。|  
+|**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  

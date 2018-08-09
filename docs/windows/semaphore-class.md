@@ -1,5 +1,5 @@
 ---
-title: 信号类 |Microsoft 文档
+title: 信号量类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889464"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652631"
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 表示控制可支持有限数量用户的共享资源的同步对象。  
@@ -30,7 +30,6 @@ ms.locfileid: "33889464"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -40,31 +39,31 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |名称|描述|  
 |----------|-----------------|  
-|`SyncLock`|支持同步锁的类，同义词。|  
+|`SyncLock`|类支持同步锁的同义词。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Semaphore::Semaphore 构造函数](../windows/semaphore-semaphore-constructor.md)|初始化 Semaphore 类的新实例。|  
+|[Semaphore::Semaphore 构造函数](../windows/semaphore-semaphore-constructor.md)|初始化的新实例**信号量**类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用签名包含参数的指定的数目的事件处理程序。|  
+|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用其签名包含指定的数量的参数的事件处理程序。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|等到当前对象或与指定句柄关联的对象处于终止状态，或者指定的超时间隔已过去。|  
+|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|将等待，直到当前的对象或与指定句柄关联的对象处于已发出信号状态或指定的超时间隔已过。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Semaphore::operator= 运算符](../windows/semaphore-operator-assign-operator.md)|将指定的句柄从信号量对象移动到当前的信号量对象。|  
+|[Semaphore::operator= 运算符](../windows/semaphore-operator-assign-operator.md)|将从指定句柄**信号量**对象与当前**信号量**对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Semaphore`  

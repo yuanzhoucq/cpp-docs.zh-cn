@@ -1,5 +1,5 @@
 ---
-title: 添加另一种语言的版本信息 |Microsoft 文档
+title: 添加另一种语言的版本信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650451"
 ---
 # <a name="adding-version-information-for-another-language"></a>添加其他语言的版本信息
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>添加其他语言的版本信息（新版本信息块）  
@@ -42,13 +42,11 @@ ms.locfileid: "33857566"
   
 3.  在“属性”  窗口中，为新块选择合适的语言和字符集。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- **要求**  
-  
+## <a name="requirements"></a>要求 
  Win32  
   
 ## <a name="see-also"></a>请参阅  
  [版本信息编辑器](../windows/version-information-editor.md)   
  [版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

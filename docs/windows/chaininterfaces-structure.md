@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461528"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646700"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 结构
 指定可应用于一组接口 ID 的验证和初始化函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *I0*  
  （必需）接口 ID 0。  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |名称|描述|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定的接口 ID 是否可以转换为每个由 ChainInterface 模板参数定义的专用化。|  
-|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|定义的类型的接口指针转换*I0*为指向 IUnknown 的模板参数。|  
+|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定的接口 ID 是否可以转换为每个定义的专用化**ChainInterface**模板参数。|  
+|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|定义的类型的接口指针转换*I0*指向的模板参数`IUnknown`。|  
 |[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|通过定义的接口 ID 的存储*I0*到指定数组中的接口 Id 的指定位置的模板参数。|  
 |[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|验证每个接口定义的模板参数*I0*通过*I9*继承`IUnknown`和/或`IInspectable`，以及*I0*继承*I1*通过*I9*。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建自定义画笔 （图标的图像编辑器） |Microsoft 文档
+title: 创建自定义画笔 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,59 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa6b10f1d263db95bf6eb901e65a3111721d6226
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873142"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647968"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>创建自定义画笔（图标的图像编辑器）
-自定义画笔是映像的一个矩形部分的拾取和使用类似的图像编辑器的现成画笔。 你可以执行基于所选的所有操作，你可以对都执行自定义画笔。  
+自定义画笔是选取并的方式之一使用的图像的矩形部分**图像**编辑器的现成画笔。 可以执行所选内容的所有操作，可以自定义画笔上都执行。  
   
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>若要从图像的一部分创建自定义画笔  
   
 1.  [选择映像的一部分](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)想要将它用作画笔。  
   
-2.  保存**SHIFT**键，单击所选内容中，在图像中拖动。  
+2.  持有**Shift**按键按下，单击选定内容中并在图像中拖动它。  
   
      \- 或 -  
   
-3.  从**映像**菜单上，选择**使用选定项作为画笔**。  
+3.  从**图像**菜单中，选择**使用所选内容用作画笔**。  
   
-     你的选择将成为一个自定义画笔，它在图像中分布中所选内容的颜色。 在拖动路径也会保留所选内容的副本。 拖动时速度就越慢，进行更多副本。  
+     你的选择将成为在图像中分布中所选内容的颜色的自定义画笔。 在拖动路径也会保留所选内容的副本。 您拖动的速度就越慢，进行更多副本。  
   
-     **请注意**单击**所选内容用作画笔**没有首先选择部分图像将用作整个图像画笔。 使用自定义画笔的结果将还取决于是否已选择[不透明或不透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
+     > [!NOTE]
+     > 单击**将所选内容用作画笔**没有首先选择图像的一部分将用作整个图像画笔。 使用自定义画笔的结果还取决于是否已选中[透明或不透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
   
- 自定义画笔与当前的背景色匹配的像素通常是透明： 它们不绘画通过现有的映像。 可以更改此行为，以便在现有的图像上绘制背景色像素为单位。  
+ 自定义画笔中匹配当前的背景色的像素通常是透明： 它们不在现有的图像上绘画。 可以更改此行为，以便现有图像上绘制背景色像素为单位。  
   
- 自定义画刷一样使用戳或模具可用于创建各种特殊效果。  
+ 如戳记或模具中的自定义画笔可用于创建各种特殊效果。  
   
-#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>若要绘制自定义画笔形状的背景色  
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>若要绘制自定义画笔形状中的背景色  
   
-1.  [选择透明或不透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
+1.  [选择透明或透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
   
 2.  [设置背景色](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)到想要绘制的颜色。  
   
-3.  将自定义画笔要绘制的位置。  
+3.  定位你想要绘制的自定义画笔。  
   
-4.  单击鼠标右键按钮。 自定义画笔任何不透明区域中的背景色绘制。  
+4.  单击鼠标右键。 自定义画笔的不透明的任何区域中的背景色绘制。  
   
-#### <a name="to-double-or-halve-the-custom-brush-size"></a>加倍或减半自定义画笔大小  
+### <a name="to-double-or-halve-the-custom-brush-size"></a>双击或四倍的自定义画笔大小  
   
-1.  按**加号**(**+**) 密钥为双精度，画笔大小，或**减号**(**-**) 键以减半.  
+1.  按**加号**(**+**) 密钥翻倍，画笔大小，或**减号**(**-**) 键减半.  
   
-#### <a name="to-cancel-the-custom-brush"></a>若要取消的自定义画笔  
+### <a name="to-cancel-the-custom-brush"></a>若要取消的自定义画笔  
   
-1.  按**ESC**或选择另一个绘制工具。  
+1.  按**Esc**或选择另一个绘制工具。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
-### <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [图标的图像编辑器](../windows/image-editor-for-icons.md)
-

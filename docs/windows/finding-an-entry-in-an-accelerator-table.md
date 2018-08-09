@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571371"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647848"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>在快捷键对应表中查找项
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在打开的快捷键对应表中查找项  
@@ -38,7 +38,6 @@ ms.locfileid: "39571371"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

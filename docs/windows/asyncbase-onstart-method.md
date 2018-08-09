@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Onstart 方法 |Microsoft 文档'
+title: 'Asyncbase:: Onstart 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c33751bd375846cf3ee4cf5b92131e2824fafd04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71e661280c62be1a8335a8e84e30664c2f35a338
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861186"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646856"
 ---
 # <a name="asyncbaseonstart-method"></a>AsyncBase::OnStart 方法
-当在派生类中重写，开始一个异步操作。  
+当在派生类中重写时启动的异步操作。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 virtual void OnStart(  
    void  
 ) = 0;  

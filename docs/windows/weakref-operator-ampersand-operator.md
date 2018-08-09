@@ -1,5 +1,5 @@
 ---
-title: WeakRef::operator&amp;运算符 |Microsoft 文档
+title: Weakref::&amp;运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890097"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649043"
 ---
-# <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp;运算符
-返回表示当前 WeakRef 对象的 ComPtrRef 对象。  
+# <a name="weakrefoperatoramp-operator"></a>Weakref::&amp;运算符
+返回`ComPtrRef`对象，表示当前**WeakRef**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 表示当前 WeakRef 对象的 ComPtrRef 对象。  
+ 一个`ComPtrRef`对象，表示当前**WeakRef**对象。  
   
 ## <a name="remarks"></a>备注  
- 这是一个内部帮助程序运算符，并不是在代码中使用。  
+ 这是不是要在代码中使用的内部帮助器运算符。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

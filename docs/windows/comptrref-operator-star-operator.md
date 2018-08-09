@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 229a5a61bfe28280f7bffcd92f9d9cebffa2415b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461447"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647155"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 InterfaceType* operator *();  
 ```  
   

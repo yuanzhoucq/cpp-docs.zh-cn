@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: As 方法 |Microsoft 文档'
+title: 'Weakref:: As 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890672"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649297"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 方法
-设置指定的 ComPtr 指针参数以表示指定接口。  
+设置指定`ComPtr`指针参数以表示指定的接口。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `U`  
+### <a name="parameters"></a>参数  
+ *U*  
  接口 ID。  
   
- `ptr`  
- 此操作完成后，返回一个表示参数 `U`的对象。  
+ *ptr*  
+ 此操作完成后，一个对象，表示参数*U*。  
   
 ## <a name="return-value"></a>返回值  
   
--   如果此操作成功，则为 S_OK；否则为指示此操作失败原因的错误 HRESULT，并且 `ptr` 被设置为 `nullptr`。  
+-   如果此操作成功，则为 S_OK否则，一个 HRESULT，指示的原因，操作失败，并*ptr*设置为**nullptr**。  
   
--   如果此操作成功，但已释放当前 WeakRef 对象，则为 S_OK。 参数 `ptr` 被设置为 `nullptr`。  
+-   如果此操作成功，但当前为 S_OK **WeakRef**已释放对象。 参数*ptr*设置为**nullptr**。  
   
--   如果此操作成功，但当前 WeakRef 对象不是派生自参数 `U`，则为 S_OK。 参数 `ptr` 被设置为 `nullptr`。  
+-   如果此操作成功，但当前为 S_OK **WeakRef**对象不派生自参数*U*。参数*ptr*设置为**nullptr**。  
   
 ## <a name="remarks"></a>备注  
- 如果参数 `U` 为 IWeakReference，或者不是派生自 IInspectable，则出现错误。  
+ 如果发出错误参数*U*是`IWeakReference`，或不派生自`IInspectable`。  
   
  第一个模板是应在代码中使用的表单。 第二个模板是支持 [自动](../cpp/auto-cpp.md) 类型推导关键字等 C++ 语言功能的内部专用帮助器。  
   
- 从 Windows 10 SDK 开始，如果无法获得弱引用，此方法不再将 WeakRef 实例设置为 `nullptr` ，因此应避免使用检查 `nullptr`的 WeakRef 的错误检查代码。 相反，应检查`ptr`为`nullptr`。  
+ 从 Windows 10 SDK 开始，此方法不设置**WeakRef**实例向**nullptr**如果无法获得弱引用，因此应避免检查的 WeakRef 的错误检查代码**nullptr**。 相反，应检查*ptr*有关**nullptr**。  
   
 ## <a name="requirements"></a>要求  
  **标头：** client.h  

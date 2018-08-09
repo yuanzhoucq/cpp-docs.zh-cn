@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649502"
 ---
 # <a name="delegate--c-component-extensions"></a>委托（C++ 组件扩展）
 声明表示的函数指针的类型。  
@@ -68,7 +68,7 @@ delegate-type-identifier
  使用*委托类型标识符*声明具有与委托相同的原型的事件。 有关详细信息，请参阅[委托 (C + + /cli CX)](../cppcx/delegates-c-cx.md)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  公共语言运行时支持使用以下语法的委托。  
@@ -124,10 +124,9 @@ function_declaration
 -   [泛型委托 (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  下面的示例演示如何声明、 初始化和调用委托。  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 in func1 8  

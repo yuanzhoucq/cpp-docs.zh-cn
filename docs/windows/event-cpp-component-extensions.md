@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570397"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649131"
 ---
 # <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
 **事件**关键字声明*事件*，这是到已注册的订阅的通知 (*事件处理程序*) 已发生的相关事情。  
@@ -31,9 +31,9 @@ ms.locfileid: "39570397"
 ## <a name="all-runtimes"></a>所有运行时  
  C + + /CX 支持声明*事件成员*或*事件块*。 事件成员是用于声明事件块的速记属性。 默认情况下，事件成员声明 `add()`、`remove()` 和 `raise()` 函数，而这些函数将在事件块中显式声明。 若要自定义事件成员中的函数，请改为声明一个事件块，然后替代所需的函数。  
   
- **语法**  
+### <a name="syntax"></a>语法
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **参数**  
-  
+### <a name="parameters"></a>参数
  *修饰符*  
  修饰符可用于事件声明或事件访问器方法。  可能的值为**静态**并**虚拟**。  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *参数*  
  （可选）为参数`raise`方法，它的签名匹配*委托*参数。  
   
- **备注**  
+### <a name="remarks"></a>备注
   
  事件是委托与成员函数（事件处理程序）之间的关联，用于对事件的触发作出响应并允许客户端从任何类注册符合基础委托签名和返回类型的方法。  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  如果想要添加，然后删除事件处理程序，则必须保存添加操作返回的 EventRegistrationToken 结构。 然后在删除操作中，必须使用已保存的 EventRegistrationToken 结构来标识要删除的事件处理程序。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **事件**关键字可以声明一个事件。 事件是类在相关事件发生时提供通知的一种方式。  
   
- **语法**  
+### <a name="syntax"></a>语法
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **参数**  
-  
+### <a name="parameters"></a>参数
  *修饰符*  
  修饰符可用于事件声明或事件访问器方法。  可能的值为**静态**并**虚拟**。  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *参数*  
  （可选）为参数`raise`方法，它的签名匹配*委托*参数。  
   
- **备注**  
-  
+### <a name="remarks"></a>备注
  事件是委托与成员函数（事件处理程序）之间的关联，用于对事件的触发作出响应并允许客户端从任何类注册符合基础委托签名和返回类型的方法。  
   
  委托可以有一个或多个关联方法，当代码指示事件发生时将调用这些方法。 程序中的事件可供面向 .NET Framework 公共语言运行时的其他程序使用。  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [接口中的事件](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
-  
+
  下面的代码示例演示如何声明委托对、事件和事件处理程序；订阅（添加）事件处理程序；调用事件处理程序；然后取消订阅（删除）事件处理程序。  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **示例**  
   
  下面的代码示例演示了用于生成普通事件的 `raise` 方法的逻辑：如果该事件具有一个或多个订阅服务器，则隐式调用 `raise` 方法或显式调用委托。 如果该委托的返回类型不是**void**并且没有事件订阅服务器，`raise`方法返回的委托类型的默认值。 如果没有事件订阅服务器，则调用 `raise` 方法仅返回而不会引发异常。 如果委托返回类型不是**void**，返回的委托类型。  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 0  

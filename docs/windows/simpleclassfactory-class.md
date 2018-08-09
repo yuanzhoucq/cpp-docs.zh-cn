@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory 类 |Microsoft 文档
+title: SimpleClassFactory 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892756"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641817"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 类
 提供创建基类的基本机制。  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `Base`  
+### <a name="parameters"></a>参数  
+ *基本*  
  基类。  
   
 ## <a name="remarks"></a>备注  
- 基类必须提供一个默认构造函数。  
+ 类的基类必须提供默认构造函数。  
   
- 下面的代码示例演示如何使用与 SimpleClassFactory [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。  
+ 下面的代码示例演示如何使用**SimpleClassFactory**与[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
@@ -51,7 +51,7 @@ class SimpleClassFactory : public ClassFactory<>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|创建指定的接口的实例。|  
+|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|创建指定接口的实例。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  

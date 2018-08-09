@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463237"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641803"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract（C++ 组件扩展）
 **抽象**关键字声明以下两者：  
@@ -33,16 +33,16 @@ ms.locfileid: "39463237"
 -   只可在派生类型中定义类型成员函数。  
   
 ## <a name="all-platforms"></a>所有平台  
- **语法**  
+### <a name="syntax"></a>语法 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **备注**  
+### <a name="remarks"></a>备注
   
  第一个示例语法将类声明为抽象类。 *类声明*组件可以是一个本机 c + + 声明 (**类**或**结构**)，或 c + + 扩展声明 (**ref 类**或**ref 结构**) 如果`/ZW`或`/clr`指定编译器选项。  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
- 下面的代码示例生成一个错误，因为类 `X` 被标记为 `abstract`。  
+ 下面的代码示例生成一个错误，因为类`X`砆**抽象**。  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **示例**  
-  
- 下面的代码示例生成一个错误，因为它实例化被标记为 `abstract` 的本机类。 无论是否使用 `/clr` 编译器选项，都将出现此错误。  
+ 下面的代码示例生成一个错误，因为它实例化被标记为本机类**抽象**。 无论是否使用 `/clr` 编译器选项，都将出现此错误。  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **示例**  
-  
- 下面的代码示例生成一个错误，因为函数 `f` 包含了一个定义，但被标记为 `abstract`。 示例中的最后一条语句显示声明抽象虚拟函数等效于声明纯虚拟函数。  
+ 下面的代码示例生成一个错误，因为函数`f`包含了一个定义，但却标记**抽象**。 示例中的最后一条语句显示声明抽象虚拟函数等效于声明纯虚拟函数。  
   
 ```cpp  
 // abstract_keyword_3.cpp  

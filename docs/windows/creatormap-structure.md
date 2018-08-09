@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 173b41c6d36d36b7d8a0f4e7b024e845eec6ae4a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464251"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650500"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 结构
 支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 struct CreatorMap;  
 ```  
   

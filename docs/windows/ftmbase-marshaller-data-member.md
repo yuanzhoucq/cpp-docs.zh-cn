@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Marshaller_ 数据成员 |Microsoft 文档'
+title: 'Ftmbase:: Marshaller_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872697"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642030"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ 数据成员
-保存到自由线程封送处理程序的引用。  
+保存对自由线程封送处理程序的引用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
 ```  
   

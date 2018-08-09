@@ -1,5 +1,5 @@
 ---
-title: support_error_info |Microsoft 文档
+title: support_error_info |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889925"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653054"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 实现针对返回详细错误的支持。  
@@ -30,25 +30,24 @@ ms.locfileid: "33889925"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ support_error_info(  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
- **error_interface**  
- 实现 **IErrorInfo**的接口的标识符。  
+### <a name="parameters"></a>参数  
+ *error_interface*  
+ 接口实现的标识符`IErrorInfo`。  
   
 ## <a name="remarks"></a>备注  
- **support_error_info** C++ 属性实现针对将目标对象遇到的详细上下文错误返回到客户端的支持。 若要使对象支持错误， **IErrorInfo** 接口的方法必须由对象实现。 有关详细信息，请参阅 [支持 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)。  
+ **support_error_info** C++ 属性实现针对将目标对象遇到的详细上下文错误返回到客户端的支持。 若要支持错误，方法的对象`IErrorInfo`接口必须由对象实现。 有关详细信息，请参阅 [支持 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)。  
   
- 此属性将 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 类作为基类添加到目标对象。 这会形成 **ISupportErrorInfo** 的默认实现，可以在单个接口在对象上生成错误时使用。  
+ 此属性将 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 类作为基类添加到目标对象。 这会导致的默认实现`ISupportErrorInfo`和单个接口在生成对象上的错误时，可以使用。  
   
 ## <a name="example"></a>示例  
- 下面的代码将针对 **ISupportErrorInfo** 接口的默认支持添加到 `CMyClass` 对象。  
+ 以下代码添加了对默认支持`ISupportErrorInfo`接口`CMyClass`对象。  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  

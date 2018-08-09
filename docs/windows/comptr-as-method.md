@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: debf10e3c3d7ca68bd277a32e55c21b3e8bf3421
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461005"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645420"
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
 返回**ComPtr**对象，表示由指定的模板参数标识的接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -41,7 +41,7 @@ HRESULT As(
 ) const;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *U*  
  要由参数表示的接口*p*。  
   

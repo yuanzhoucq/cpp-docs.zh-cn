@@ -1,5 +1,5 @@
 ---
-title: uidefault |Microsoft 文档
+title: uidefault |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890146"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651608"
 ---
 # <a name="uidefault"></a>uidefault
-表示类型信息成员以在用户界面中显示的默认成员。  
+指示该类型信息成员是用户界面中显示的默认成员。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -41,7 +39,7 @@ ms.locfileid: "33890146"
 ## <a name="example"></a>示例  
  下面的代码演示的示例**uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

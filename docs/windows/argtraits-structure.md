@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462038"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643116"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename TMemberFunction>  
 struct ArgTraits;  
 template<typename TDelegateInterface>  
@@ -117,7 +117,7 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *TMemberFunction*  
  ArgTraits 结构，它不能与任何匹配的 Typename 参数`Invoke`方法签名。  
   
@@ -152,7 +152,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  第九个自变量的类型`Invoke`方法。  
   
 ## <a name="remarks"></a>备注  
- `ArgTraits`结构接口和具有指定的数目的参数的匿名成员函数声明指定的委托。  
+ **ArgTraits**结构接口和具有指定的数目的参数的匿名成员函数声明指定的委托。  
   
 ## <a name="members"></a>成员  
   

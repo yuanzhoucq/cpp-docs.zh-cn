@@ -1,5 +1,5 @@
 ---
-title: 显示或隐藏颜色窗口 （图标的图像编辑器） |Microsoft 文档
+title: 显示或隐藏颜色窗口 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872037"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645105"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>显示或隐藏“颜色”窗口（图标的图像编辑器）
 ### <a name="to-display-colors-window"></a>若要显示颜色窗口  
   
-1.  在中右击**图像编辑器**窗格中，选择**显示颜色窗口**从快捷菜单。  
+1.  右键单击**的图像编辑器**窗格选择**显示颜色窗口**从快捷菜单。  
   
      \- 或 -  
   
@@ -42,8 +42,7 @@ ms.locfileid: "33872037"
   
 -   单击**关闭**按钮。  
   
- 要求  
-  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

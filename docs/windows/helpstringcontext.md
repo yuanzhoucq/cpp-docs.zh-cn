@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569994"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642329"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 在.hlp 或.chm 文件中指定的帮助主题的 ID。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ ms.locfileid: "39569994"
   
 ### <a name="parameters"></a>参数  
  *contextID*  
- 帮助文件中的 32 位的帮助上下文标识符。  
+ 中的 32 位的帮助上下文标识符**帮助**文件。  
   
 ## <a name="remarks"></a>备注  
  **Helpstringcontext** c + + 属性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 特性。  

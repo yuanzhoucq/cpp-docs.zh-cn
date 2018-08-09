@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits 结构 |Microsoft 文档
+title: SemaphoreTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892600"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645719"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 结构
-定义信号量对象的共同特征。  
+定义常见特征**信号量**对象。  
   
 ## <a name="syntax"></a>语法  
   

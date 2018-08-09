@@ -1,5 +1,5 @@
 ---
-title: 设置光标&#39;s 作用点 （图标的图像编辑器） |Microsoft 文档
+title: 设置游标&#39;s 作用点 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 527cdeabb6f45601641fcc64d3b82bb36652e002
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889402"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648660"
 ---
-# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>设置光标&#39;s 作用点 （图标的图像编辑器）
-作用点[光标](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)是点到其 Windows 所引用的跟踪光标的位置。 默认情况下，作用点设置为的光标 （坐标为 0，0） 的左上角。 中的热点属性[属性窗口](/visualstudio/ide/reference/properties-window)演示作用点坐标。  
+# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>设置游标&#39;s 作用点 （图标的图像编辑器）
+热点[游标](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)的作用是指 Windows 跟踪光标的位置。 默认情况下，作用点设置为游标 （坐标为 0，0） 的左上角。 中的热点属性[属性窗口](/visualstudio/ide/reference/properties-window)显示作用点坐标。  
   
-### <a name="to-set-a-cursors-hot-spot"></a>设置光标的作用点  
+### <a name="to-set-a-cursors-hot-spot"></a>若要设置光标的作用点  
   
-1.  上[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)，单击**设置作用点**工具。  
+1.  上[的图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)，单击**设置作用点**工具。  
   
 2.  单击你想要将指定为光标的作用点的像素。  
   
-     **热点**中的属性**属性**窗口将显示新的坐标。  
+     **热点**属性中的**属性**窗口将显示新的坐标。  
   
     > [!TIP]
-    >  将鼠标光标悬停在工具栏按钮上方时，将出现工具提示。 这些提示可以帮助您识别每个按钮的功能。  
+    >  将鼠标光标悬停工具栏按钮上时，会出现工具提示。 这些提示可以帮助您确定每个按钮的功能。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+## <a name="requirements"></a>要求  
   
  无  
   
 ## <a name="see-also"></a>请参阅  
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

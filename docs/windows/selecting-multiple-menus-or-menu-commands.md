@@ -1,5 +1,5 @@
 ---
-title: 选择多个菜单或菜单命令 |Microsoft 文档
+title: 选择多个菜单或菜单命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891904"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644851"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>选择多个菜单或菜单命令
 你可以选择多个菜单名称或菜单命令以执行删除或更改属性等批量操作。  
   
 ### <a name="to-select-multiple-menu-commands"></a>选择多个菜单命令  
   
-1.  按住 Ctrl 键的同时，单击你需要的菜单或子菜单命令。  
+1.  在按下**Ctrl**密钥，请单击菜单或所需的子菜单命令。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
- **要求**  
+## <a name="requirements"></a>要求  
   
  Win32  
   

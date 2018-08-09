@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463111"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647835"
 ---
 # <a name="coclass"></a>coclass
 创建 COM 对象，可以实现 COM 接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39463111"
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto)宏插入到 COM 映射。
   
- 生成类的.idl 文件中组件类的名称将具有与类相同的名称。  有关示例中，并参考下面的示例，若要访问用于 coclass 的类 ID CMyClass，MIDL 生成的标头文件中，通过在客户端中使用 CLSID_CMyClass。  
+ 生成类的.idl 文件中组件类的名称将具有与类相同的名称。  例如，并且引用下面的示例，若要访问用于 coclass 的类 ID `CMyClass`，在通过 MIDL 生成的标头文件在客户端，使用`CLSID_CMyClass`。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何使用**组件类**属性：  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- 下面的示例演示如何重写由注入代码中出现的函数的默认实现**组件类**属性。 有关查看插入的代码的详细信息，请参阅 [/Fx](../build/reference/fx-merge-injected-code.md) 。 任何基类或接口，使用的类将出现在注入的代码。   此外，如果您显式指定此类作为基在组件类的类包括在注入的代码默认情况下，特性提供程序将使用在代码中指定的窗体。  
+ 下面的示例演示如何重写由注入代码中出现的函数的默认实现**组件类**属性。 有关查看插入的代码的详细信息，请参阅 [/Fx](../build/reference/fx-merge-injected-code.md) 。 任何基类或接口，使用的类将出现在注入的代码。 此外，如果您显式指定此类作为基在组件类的类包括在注入的代码默认情况下，特性提供程序将使用在代码中指定的窗体。  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461804"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646314"
 ---
 # <a name="attribute"></a>attribute
 可以创建自定义属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ ms.locfileid: "39461804"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *AllowOn*  
  指定自定义的特性可以应用于的语言元素。 默认值是`System::AttributeTargets::All`(请参阅[System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx))。  
   
@@ -48,16 +48,16 @@ ms.locfileid: "39461804"
  指定是否可以重复应用自定义属性构造。 默认值为 FALSE。  
   
  *继承*  
- 指示该特性将由子类继承。 编译器不提供特殊支持此功能;它是作业的属性使用者 （例如反射） 采用此信息。 如果*继承*为 TRUE，结果为继承该属性。 如果*AllowMultiple*为 TRUE，如果该属性将派生的成员; 上累积*AllowMultiple*为 FALSE 时，属性将重写 （或替换） 中继承。 如果*继承*为 FALSE 时，该属性不能被继承。 默认值为 TRUE。  
+ 指示该特性将由子类继承。 编译器不提供特殊支持此功能;它是作业的属性使用者 (`Reflection`，例如) 遵循此信息。 如果*继承*为 TRUE，结果为继承该属性。 如果*AllowMultiple*为 TRUE，如果该属性将派生的成员; 上累积*AllowMultiple*为 FALSE 时，属性将重写 （或替换） 中继承。 如果*继承*为 FALSE 时，该属性不能被继承。 默认值为 TRUE。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  `attribute`属性现已弃用。  使用公共语言运行时特性 System.Attribute 直接创建用户定义的特性。  有关详细信息，请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)。  
+>  **特性**属性现已弃用。  使用公共语言运行时属性`System.Attribute`到直接来创建用户定义的特性。 有关详细信息，请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)。  
   
- 您定义[自定义特性](../windows/custom-attributes-cpp.md)上来将`attribute`上托管的类或结构定义的属性。 类的名称是自定义属性。 例如：  
+ 您定义[自定义特性](../windows/custom-attributes-cpp.md)上来**属性**上托管的类或结构定义的属性。 类的名称是自定义属性。 例如：  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)特性目标有关的讨论。  
   
- `attribute`属性具有*AllowMultiple*指定自定义属性是否是一次性使用的参数或 multiuse （可以出现不止一次相同的实体）。  
+ **特性**属性具有*AllowMultiple*指定自定义属性是否是一次性使用的参数或 multiuse （可以出现不止一次相同的实体）。  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- 自定义特性类派生直接或间接从<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，这样标识快速而简单的元数据中的特性定义。 `attribute`属性对应继承自 system:: attribute，因此不需要显式派生：  
+ 自定义特性类派生直接或间接从<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，这样标识快速而简单的元数据中的特性定义。 **特性**属性表示从继承`System::Attribute`，因此不需要显式派生：  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  等效于  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` 是的别名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 这是属性命名规则的例外)。  
+ **特性**是其别名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 这是属性命名规则的例外)。  
   
 ## <a name="requirements"></a>要求  
   

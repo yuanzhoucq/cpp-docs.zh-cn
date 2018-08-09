@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466119"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644224"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
 *上下文相关的关键字*是仅在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **备注**  
+### <a name="remarks"></a>备注
   
  下面是区上下文关键字的列表：  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466119"
  出于可读性目的，你可能想要限制区分上下文关键字作为用户定义的符号的使用。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注  
   
  （此功能没有特定于平台的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注  
   
  （此功能没有特定于平台的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
- **示例**  
   
  下面的代码示例演示在适当的上下文中，**属性**上下文相关关键字可用于定义属性和变量。  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 100  

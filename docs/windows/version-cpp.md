@@ -1,5 +1,5 @@
 ---
-title: 版本 （c + +） |Microsoft 文档
+title: 版本 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890604"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642274"
 ---
 # <a name="version-c"></a>version (C++)
-标识的类的多个版本之间的特定版本。  
+标识类的多个版本间的特定版本。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *version*  
- 组件类的版本号。 如果未指定，1.0 将放置在.idl 文件中。  
+ 版本号`coclass`。 如果未指定，则将在.idl 文件中放置 1.0。  
   
 ## <a name="remarks"></a>备注  
- **版本**c + + 属性具有相同的功能[版本](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 特性，传递到生成的.idl 文件。  
+ **版本**c + + 属性具有相同的功能[版本](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 特性并将传递给生成的.idl 文件。  
   
 ## <a name="example"></a>示例  
- 请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用**版本**。  
+ 请参阅[可绑定](../windows/bindable.md)的示例使用的示例**版本**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33890604"
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  

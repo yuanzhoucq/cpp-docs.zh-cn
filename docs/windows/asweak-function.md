@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b0f4645a6008b954833bf282971a0d3912e1d598
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462620"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653139"
 ---
 # <a name="asweak-function"></a>AsWeak 函数
 检索对指定实例的弱引用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename T>  
 HRESULT AsWeak(  
    _In_ T* p,  
@@ -37,7 +37,7 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *T*  
  指向参数的类型的指针*p*。  
   

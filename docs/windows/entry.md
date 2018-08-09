@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: f644df2969954187aa4506d2cc1d04d140f88de3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569633"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642882"
 ---
 # <a name="entry"></a>entry
 通过标识 DLL 中的入口点，在模块中指定的导出的函数或常量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ entry(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *id*  
  入口点的 ID。  
   

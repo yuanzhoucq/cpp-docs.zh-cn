@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT 析构函数 |Microsoft 文档'
+title: 'SyncLockT:: ~ SyncLockT 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892730"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646713"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT 析构函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -34,9 +34,9 @@ ms.locfileid: "33892730"
 ```  
   
 ## <a name="remarks"></a>备注  
- 取消初始化 SyncLockT 类的实例。  
+ 取消初始化的实例**SyncLockT**类。  
   
- 此析构函数也解除对当前的 SyncLockT 实例。  
+ 此析构函数还能释放种种当前**SyncLockT**实例。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

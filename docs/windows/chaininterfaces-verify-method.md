@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466834"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650464"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
-验证每个接口定义的模板参数*I0*通过*I9*继承自 IUnknown 和/或 IInspectable，以及验证*I0*继承*I1*通过*I9*。  
+验证每个接口定义的模板参数*I0*通过*I9*继承`IUnknown`和/或`IInspectable`，以及*I0*继承*I1*通过*I9*。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   

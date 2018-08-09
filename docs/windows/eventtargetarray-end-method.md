@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: End 方法 |Microsoft 文档'
+title: 'Eventtargetarray:: End 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874260"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648641"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   
@@ -37,7 +37,7 @@ ComPtr<IUnknown>* End();
  事件处理程序在内部数组的最后一个元素的地址。  
   
 ## <a name="remarks"></a>备注  
- 获取事件处理程序在内部数组的最后一个元素的地址。  
+ 获取事件处理程序的内部数组中的最后一个元素的地址。  
   
 ## <a name="requirements"></a>要求  
  **标头：** event.h  

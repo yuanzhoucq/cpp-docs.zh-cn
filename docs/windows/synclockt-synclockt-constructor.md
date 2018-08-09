@@ -1,5 +1,5 @@
 ---
-title: 'Synclockt:: Synclockt 构造函数 |Microsoft 文档'
+title: 'Synclockt:: Synclockt 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889833"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648160"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT 构造函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `other`  
- 右值引用到另一个 SyncLockT 对象。  
+### <a name="parameters"></a>参数  
+ *other*  
+ 对另一个右值引用**SyncLockT**对象。  
   
- `sync`  
- 对另一个 SyncLockWithStatusT 对象的引用。  
+ *sync*  
+ 对另一个引用`SyncLockWithStatusT`对象。  
   
 ## <a name="remarks"></a>备注  
- 初始化 SyncLockT 类的新实例。  
+ 初始化的新实例**SyncLockT**类。  
   
- 第一个构造函数初始化参数指定的另一个 SyncLockT 对象中的当前 SyncLockT 对象`other`，然后会与其他 SyncLockT 对象。 第二个构造函数是`protected`，并将当前 SyncLockT 对象初始化为无效状态。  
+ 第一个构造函数初始化当前**SyncLockT**从另一个对象**SyncLockT**对象由参数指定*其他*，并使其他然后无效**SyncLockT**对象。 第二个构造函数是**受保护**，并初始化当前**SyncLockT**为无效状态的对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

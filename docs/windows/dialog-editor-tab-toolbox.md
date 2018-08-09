@@ -1,5 +1,5 @@
 ---
-title: 对话框编辑器选项卡，工具箱 |Microsoft 文档
+title: 对话框编辑器选项卡，工具箱 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882571"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649417"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>“对话框编辑器”选项卡，工具箱
-对话框编辑器选项卡将出现在[工具箱窗口](/visualstudio/ide/reference/toolbox)在对话框编辑器中工作时。 若要将控件添加到新的对话框中，将控件从工具箱拖到您正在创建对话框 (有关详细信息，请参阅[将控件添加到对话框](adding-a-control-to-a-dialog-box.md))。 然后，可以移动控件或更改其大小和形状。  
+**对话框编辑器**选项卡中将显示[工具箱窗口](/visualstudio/ide/reference/toolbox)工作时**对话框**编辑器。 若要将控件添加到新的对话框中，将控件从**工具箱**到要创建的对话框 (有关详细信息，请参阅[将控件添加到对话框](adding-a-control-to-a-dialog-box.md))。 然后，可以移动控件或更改其大小和形状。  
   
- 工具箱中的可用标准控件包括：  
+ 提供的标准控件**工具箱**是：  
   
 -   [按钮控件](../mfc/reference/cbutton-class.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33882571"
   
 -   [滚动条控件](../mfc/reference/cscrollbar-class.md)  
   
- [Windows 公共控件](../mfc/controls-mfc.md)工具箱中的可用提供应用程序中的增强的功能。 它们包括：  
+ [Windows 公共控件](../mfc/controls-mfc.md)推出**工具箱**提供应用程序中的增强的功能。 它们包括：  
   
 -   [滑块控件](../mfc/slider-control-styles.md)  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33882571"
   
 -   [自定义控件](custom-controls-in-the-dialog-editor.md)  
   
- 可以通过选择向对话框添加自定义控件**自定义控件**工具箱和将其拖到您的对话框中的图标。 若要添加 Syslink 控件，添加自定义控件，然后更改控件的**类**属性**Syslink**。 这将导致属性刷新并显示 Syslink 控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
+ 可以通过选择向对话框添加自定义控件**自定义控件**中的图标**工具箱**并将其拖到您的对话框。 若要添加**Syslink**控制，添加自定义控件，然后更改控件的**类**属性设置为**Syslink**。 这将导致属性刷新并显示**Syslink**控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
   
- 你也可以[将 ActiveX 控件添加到对话框中](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
+ 你也可以[将 ActiveX 控件添加到对话框](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
   
- 还可以自定义工具箱窗口以方便使用。 有关详细信息，请参阅[使用工具箱](/visualstudio/ide/using-the-toolbox)。  
+ 此外可以自定义**工具箱**窗口以方便使用。 有关详细信息，请参阅[使用工具箱](/visualstudio/ide/using-the-toolbox)。  
 
- 有关 RichEdit 1.0 控件使用 MFC 的详细信息，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ 有关使用的详细信息**RichEdit 1.0**控件使用 MFC，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -102,6 +102,5 @@ ms.locfileid: "33882571"
  [对话框类](../mfc/dialog-box-classes.md)   
  [滚动条样式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Rich Edit 控件示例](../mfc/rich-edit-control-examples.md)   
- [添加事件处理程序对话框控件](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [对于对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)
-

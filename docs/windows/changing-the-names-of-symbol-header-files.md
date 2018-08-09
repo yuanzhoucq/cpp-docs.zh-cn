@@ -1,5 +1,5 @@
 ---
-title: 更改符号头文件的名称 |Microsoft 文档
+title: 更改符号头文件的名称 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,29 +24,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 953ac59958748bd58fa7e9027c595bf7905e5f27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d1c3436190ff36724eba1601a51608371b8d0a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864224"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649941"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>更改符号头文件的名称
-通常情况下所有符号定义都保存在 Resource.h 中。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。  
+通常情况下所有符号定义都保存在`Resource.h`。 但是，你可能需要更改此包含文件名，以便可以在同一个目录下使用多个资源文件。  
   
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>更改资源符号头文件的名称  
   
-1.  在[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)从快捷菜单。  
+1.  在中[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)从快捷菜单。  
   
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**符号头文件**框中，键入包含文件的新名称。  
+2.  在中**符号头文件**框中，键入包含文件的新名称。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
- 要求  
-  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

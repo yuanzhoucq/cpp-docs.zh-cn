@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466067"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648280"
 ---
 # <a name="accelerator-editor"></a>快捷键编辑器
 快捷键对应表是一个 Windows 资源，包含由快捷键和与之关联的命令标识符组成的列表。 一个程序可以拥有多个快捷键对应表。  
@@ -36,7 +36,7 @@ ms.locfileid: "39466067"
   
  可以使用[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)将快捷键命令与代码挂接。  
   
- 使用快捷键编辑器，可以执行下列操作：  
+ 与**Accelerator**编辑器，你可以：  
   
 -   [设置快捷键属性](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "39466067"
 -   [使用预定义快捷键](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  使用快捷键编辑器时，可以单击鼠标右键以显示常用命令的快捷菜单。 可用命令取决于指针所指向的内容。  
+    >  使用时**Accelerator**编辑器中，你可以右击以显示常用命令的快捷菜单。 可用命令取决于指针所指向的内容。  
   
     > [!NOTE]
     >  Windows 不允许创建空快捷键对应表。 如果创建的快捷键对应表中没有任何条目，在保存表时会被自动删除。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  

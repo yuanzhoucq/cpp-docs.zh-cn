@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466704"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652680"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。 通过使用 C + + /CX 中，您可以编写通用 Windows 平台应用程序和编译为本机代码的组件。 虽然可以通过对 Windows 运行时 COM 接口直接编程创建通用 Windows 平台应用，通过使用 C + + /CX 中，您可以使用构造函数、 异常和其他现代 c + + 编程惯例。 若要启用.NET 平台上的托管的执行环境中的 c + + 编程，可使用 C + + /cli CLI。  
   
- **两个运行时，一组扩展**  
+### <a name="two-runtimes-one-set-of-extensions"></a>两个运行时，一组扩展  
   
- C + + /cli CX 是子集 C + + /cli CLI。 扩展插件所共有的 C + + /CX 和 C + + /cli CLI，其语义取决您面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译您的应用程序在 Windows 运行时上运行，请指定 **/ZW**编译器选项。 若要对其进行编译以在 CLR 上运行，指定 **/clr**编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。  
+ C + + /cli CX 是子集 C + + /cli CLI。 扩展插件所共有的 C + + /CX 和 C + + /cli CLI，其语义取决您面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译您的应用程序在 Windows 运行时上运行，请指定`/ZW`编译器选项。 要将其编译为在 CLR 上运行，请指定 `/clr` 编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。  
   
  有关如何在 c + + 中创建通用 Windows 平台应用的详细信息，请参阅[路线图的 Windows 运行时应用使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。  
   
@@ -86,7 +86,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 |**nullptr**|否|指示图柄或指针不指向对象。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>模板构造  
- 下列语言构造作为模板而非关键字实现。 如果指定 **/ZW**编译器选项时，它们在定义`lang`命名空间。 如果指定 **/clr**编译器选项时，它们在定义`cli`命名空间。  
+ 下列语言构造作为模板而非关键字实现。 如果指定 `/ZW` 编译器选项，它们将在 `lang` 命名空间中定义。 如果指定 `/clr` 编译器选项，它们将在 `cli` 命名空间中定义。  
   
 |关键字|目标|参考|  
 |-------------|-------------|---------------|  

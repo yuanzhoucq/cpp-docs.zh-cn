@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70fcb38ad9ec3d18220197ad0fa44c3ad128444e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1874eb12f7a11482cb679a743d081a8bb78bc94e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463780"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650035"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr 析构函数
 取消初始化的实例**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW ~ComPtr();  
 ```  
   

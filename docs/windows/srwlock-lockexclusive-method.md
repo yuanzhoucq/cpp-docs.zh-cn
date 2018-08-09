@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Lockexclusive 方法 |Microsoft 文档'
+title: 'Srwlock:: Lockexclusive 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a32fe0e66a8f61bc17e4512f63705635cd8b5263
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889366"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643671"
 ---
 # <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive 方法
-获取以独占模式的 SRWLock 对象。  
+获取**SRWLock**独占模式下的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `lock`  
- 指向 SRWLock 对象的指针。  
+### <a name="parameters"></a>参数  
+ *lock*  
+ 指向**SRWLock**对象。  
   
 ## <a name="return-value"></a>返回值  
- 以独占模式的 SRWLock 对象。  
+ **SRWLock**独占模式下的对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

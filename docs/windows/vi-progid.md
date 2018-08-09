@@ -1,5 +1,5 @@
 ---
-title: vi_progid |Microsoft 文档
+title: vi_progid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642042"
 ---
 # <a name="viprogid"></a>vi_progid
 指定独立于版本的窗体的 ProgID。  
@@ -30,29 +30,28 @@ ms.locfileid: "33891280"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [ vi_progid(  
+[ vi_progid(  
    name  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>参数  
  *name*  
- 表示的对象独立于版本的 ProgID。  
+ 该对象表示独立于版本的 ProgID。  
   
- Progid 提供用于标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读的版本。  
+ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读版本。  
   
 ## <a name="remarks"></a>备注  
- **Vi_progid** c + + 属性允许您指定的 COM 对象独立于版本的 ProgID。 ProgID 形式具有窗体*name1.name2.version*。 独立于版本的 ProgID 没有*版本*。 可以同时指定两个**progid**和**vi_progid**为组件类的属性。 如果不指定**vi_progid**，独立于版本的 ProgID 是指定的值[progid](../windows/progid.md)属性。  
+ **Vi_progid** c + + 属性允许您指定 COM 对象独立于版本的 ProgID。 ProgID 具有窗体*name1.name2.version*。 独立于版本的 ProgID 不具有*版本*。 可以同时指定`progid`并**vi_progid**上的特性`coclass`。 如果未指定**vi_progid**，则独立于版本的 ProgID 是指定的值[progid](../windows/progid.md)属性。  
   
- **vi_progid**意味着**组件类**特性，也就是说，如果你指定**vi_progid**，它是与指定的相同步**组件类**和**vi_progid**属性。  
+ **vi_progid**意味着`coclass`属性，也就是说，如果您指定**vi_progid**，它是与指定相同的功能`coclass`并**vi_progid**属性。  
   
- **Vi_progid**属性将导致一个类，以指定的名称下自动注册。 生成的.idl 文件将不显示 ProgID 的值。  
+ **Vi_progid**属性会导致自动注册的指定名称的类。 生成的.idl 文件不会显示进程 Id 值。  
   
- 在 ATL 项目中，如果[组件类](../windows/coclass.md)属性也存在，使用指定的 ProgID **GetVersionIndependentProgID**函数 (由插入**组件类**属性）。  
+ 在 ATL 项目中，如果[组件类](../windows/coclass.md)属性也存在，使用指定的 ProgID`GetVersionIndependentProgID`函数 (由插入`coclass`属性)。  
   
 ## <a name="example"></a>示例  
- 请参阅[组件类](../windows/coclass.md)更大的示例的示例使用**vi_progid**。  
+ 请参阅[组件类](../windows/coclass.md)的示例使用的示例**vi_progid**。  
   
 ## <a name="requirements"></a>要求  
   
@@ -60,7 +59,7 @@ ms.locfileid: "33891280"
   
 |||  
 |-|-|  
-|**适用对象**|**class**， `struct`|  
+|**适用对象**|**类**，**结构**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

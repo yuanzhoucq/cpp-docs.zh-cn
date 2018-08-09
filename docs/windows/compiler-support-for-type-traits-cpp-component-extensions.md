@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463611"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644864"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>编译器支持类型特征（C++ 组件扩展）
 编译器支持*类型特征*，这表示在编译时类型的各种特征。  
   
 ## <a name="all-runtimes"></a>所有运行时  
- **备注**  
+### <a name="remarks"></a>备注  
   
  类型特征对编写库的编程人员尤其有用。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "39463611"
   
 -   `__has_assign(` `type` `)`  
   
-     如果该平台或本机类型具有复制赋值运算符，则返回 true。  
+     返回 **，则返回 true**如果平台或本机类型具有复制赋值运算符。  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ ms.locfileid: "39463611"
   
 -   `__has_copy(` `type` `)`  
   
-     如果该平台或本机类型具有复制构造函数，则返回 true。  
+     返回 **，则返回 true**如果平台或本机类型具有复制构造函数。  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ ms.locfileid: "39463611"
   
 -   `__has_finalizer(` `type` `)`  
   
-     （在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不受支持。）如果 CLR 类型有终结器，则返回 true。 请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。  
+     （在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不受支持。）返回 **，则返回 true**如果 CLR 类型有终结器。 请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ ms.locfileid: "39463611"
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     如果复制赋值运算符具有空异常规范，则返回 true。  
+     返回 **，则返回 true**如果复制赋值运算符具有空异常规范。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ ms.locfileid: "39463611"
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     如果默认构造函数具有空异常规范，则返回 true。  
+     返回 **，则返回 true**如果默认构造函数具有空异常规范。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ ms.locfileid: "39463611"
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     如果复制构造函数具有空异常规范，则返回 true。  
+     返回 **，则返回 true**如果复制构造函数具有空异常规范。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ ms.locfileid: "39463611"
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     如果类型具有一个普通的、由编译器生成的赋值运算符，则返回 true。  
+     返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成的赋值运算符。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ ms.locfileid: "39463611"
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     如果类型具有一个普通的、由编译器生成的构造函数，则返回 true。  
+     返回 **，则返回 true**类型是否包含普通的、 由编译器生成的构造函数。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ ms.locfileid: "39463611"
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     如果类型具有一个普通的、由编译器生成的复制构造函数，则返回 true。  
+     返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成复制构造函数。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ ms.locfileid: "39463611"
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     如果类型具有一个普通的、由编译器生成的析构函数，则返回 true。  
+     返回 **，则返回 true**如果该类型具有一个普通的、 由编译器生成的析构函数。  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ ms.locfileid: "39463611"
   
 -   `__has_user_destructor(` `type` `)`  
   
-     如果该平台或本机类型具有用户声明的析构函数，则返回 true。  
+     返回 **，则返回 true**如果平台或本机类型具有用户声明析构函数。  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ ms.locfileid: "39463611"
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     如果类型具有虚拟的析构函数，则返回 true。  
+     返回 **，则返回 true**如果该类型具有虚拟析构函数。  
   
      `__has_virtual_destructor` 也适用于平台类型，且平台类型中任何用户定义的析构函数都是虚拟的析构函数。  
   
@@ -278,7 +278,7 @@ ms.locfileid: "39463611"
   
 -   `__is_abstract(` `type` `)`  
   
-     如果类型为抽象类型，则返回 true。 有关本机抽象类型的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。  
+     返回 **，则返回 true**类型是否为抽象类型。 有关本机抽象类型的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。  
   
      `__is_abstract` 也适用于平台类型。 具有至少一个成员的接口为抽象类型，就像是具有至少一个抽象成员的引用类型。 有关抽象平台类型的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ ms.locfileid: "39463611"
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     如果第一种类型是第二种类型的基类，或如果这两种类型相同，则返回 true。  
+     返回 **，则返回 true**如果第一个类型为第二种类型的基类，如果这两种类型的相同。  
   
-     `__is_base_of` 也适用于平台类型。 例如，它将返回 true，如果第一个类型为[接口类](../windows/interface-class-cpp-component-extensions.md)和第二个类型实现接口。  
+     `__is_base_of` 也适用于平台类型。 例如，它将返回 **，则返回 true**如果第一个类型为[接口类](../windows/interface-class-cpp-component-extensions.md)和第二个类型实现接口。  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ ms.locfileid: "39463611"
   
 -   `__is_class(` `type` `)`  
   
-     如果类型为本机类或结构，则返回 true。  
+     返回 **，则返回 true**如果类型为本机类或结构。  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ ms.locfileid: "39463611"
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     如果第一种类型可被转换为第二种类型，则返回 true。  
+     返回 **，则返回 true**如果第一个类型可以转换为第二个类型。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ ms.locfileid: "39463611"
   
 -   `__is_delegate(` `type` `)`  
   
-     如果 `type` 是一个委托，则返回 true。 有关详细信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果`type`是一个委托。 有关详细信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ ms.locfileid: "39463611"
   
 -   `__is_empty(` `type` `)`  
   
-     如果类型没有实例数据成员，则返回 true。  
+     返回 **，则返回 true**如果类型没有实例数据成员。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ ms.locfileid: "39463611"
   
 -   `__is_enum(` `type` `)`  
   
-     如果类型为本机枚举，则返回 true。  
+     返回 **，则返回 true**类型是否为本机枚举。  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ ms.locfileid: "39463611"
   
 -   `__is_interface_class(` `type` `)`  
   
-     如果已传递一个平台接口，则返回 true。 有关详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递一个平台接口。 有关详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ ms.locfileid: "39463611"
   
 -   `__is_pod(` `type` `)`  
   
-     如果类型为没有构造函数、或私有或受保护的非静态成员、没有基类以及没有虚函数的类或联合，则返回 true。 请参见 C++ 标准，8.5.1/1、9/4 和 3.9/10 小节以获取有关 POD 的详细信息。  
+     返回 **，则返回 true**如果类型是一个类或联合没有构造函数或私有或受保护的非静态成员、 基类和没有虚函数。 请参见 C++ 标准，8.5.1/1、9/4 和 3.9/10 小节以获取有关 POD 的详细信息。  
   
      `__is_pod` 将在基本类型上返回 false。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ ms.locfileid: "39463611"
   
 -   `__is_polymorphic(` `type` `)`  
   
-     如果本机类型具有虚函数，则返回 true。  
+     返回 **，则返回 true**如果本机类型具有虚函数。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ ms.locfileid: "39463611"
   
 -   `__is_ref_array(` `type` `)`  
   
-     如果已传递一个平台数组，则返回 true。 有关详细信息，请参阅[数组](../windows/arrays-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递一个平台数组。 有关详细信息，请参阅[数组](../windows/arrays-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ ms.locfileid: "39463611"
   
 -   `__is_ref_class(` `type` `)`  
   
-     如果已传递一个引用类，则返回 true。 用户定义的引用类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递一个引用类。 用户定义的引用类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ ms.locfileid: "39463611"
   
 -   `__is_sealed(` `type` `)`  
   
-     如果已传递一个标记为密封的平台或本机类型，则返回 true。 有关详细信息，请参阅[密封](../windows/sealed-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递一个平台或本机类型标记为密封。 有关详细信息，请参阅[密封](../windows/sealed-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ ms.locfileid: "39463611"
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     如果已传递一个不包含对垃圾回收堆的引用的值类型，则返回 true。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递不包含对垃圾回收堆引用的值类型。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ ms.locfileid: "39463611"
   
 -   `__is_union(` `type` `)`  
   
-     如果类型是联合，则返回 true。  
+     返回 **，则返回 true**类型是否为联合。  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ ms.locfileid: "39463611"
   
 -   `__is_value_class(` `type` `)`  
   
-     如果已传递一个值类型，则返回 true。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     返回 **，则返回 true**如果传递值类型。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ ms.locfileid: "39463611"
     ```  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
+### <a name="remarks"></a>备注  
   
  `__has_finalizer(`*类型*`)`不支持类型特征，因为此平台不支持终结器。  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
+ 编译器选项：`/ZW`  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
+### <a name="remarks"></a>备注  
   
  （此功能没有特定于平台的备注。）  
   
 ### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
+ 编译器选项：`/clr`  
   
 ### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示如何使用类模板来公开的编译器类型特征 **/clr**编译。 有关详细信息，请参阅[Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
+ 下面的代码示例演示如何使用类模板来公开适用于 `/clr` 编译的编译器类型特征。 有关详细信息，请参阅[Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 R is a ref class  

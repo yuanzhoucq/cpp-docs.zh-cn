@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9446c94039db0ff81826e77d71a2a9539be4b276
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465071"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643142"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress 方法
 将当前进度事件处理程序的地址复制到指定的变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetOnProgress  
 )(TProgress** progressHandler);  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *progressHandler*  
  存储当前进度事件处理程序的地址的位置。  
   

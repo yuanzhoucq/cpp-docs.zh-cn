@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570761"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649486"
 ---
 # <a name="generics-and-templates-visual-c"></a>泛型和模板 (Visual C++)
 泛型和模板是为参数化类型提供支持这两种语言功能。 但是，它们不同，并且具有不同用途。 本主题概述了很多差异。  
@@ -51,7 +51,7 @@ ms.locfileid: "39570761"
   
 ## <a name="combining-templates-and-generics"></a>结合使用模板和泛型  
   
--   泛型中的基本差异影响构建应用程序的组合模板和泛型。 例如，假设你想要创建的泛型包装器来公开作为泛型该模板与其他语言的模板类。 不能具有泛型 take 然后传递到模板，因为该模板需要具有在编译时，该类型形参的类型参数，但一般不会直到运行时解析类型参数。 嵌套在泛型模板不可行，是因为没有方法在编译时无法在运行时实例化的任意泛型类型的扩展模板。  
+泛型中的基本差异影响构建应用程序的组合模板和泛型。 例如，假设你想要创建的泛型包装器来公开作为泛型该模板与其他语言的模板类。 不能具有泛型 take 然后传递到模板，因为该模板需要具有在编译时，该类型形参的类型参数，但一般不会直到运行时解析类型参数。 嵌套在泛型模板不可行，是因为没有方法在编译时无法在运行时实例化的任意泛型类型的扩展模板。  
   
 ## <a name="example"></a>示例  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>输出  
   
 ```Output  
 F  

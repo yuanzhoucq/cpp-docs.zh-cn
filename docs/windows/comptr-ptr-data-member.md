@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4ef8c54b2336ebae5e6f9b81aa33d977bd6199e7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465095"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651929"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ 数据成员
 包含指向相关联，并管理此接口的指针**ComPtr**。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 InterfaceType *ptr_;  
 ```  
   

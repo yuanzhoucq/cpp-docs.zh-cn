@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dadb80e62abd9088dc1d01515b1a169c0b1fb3d1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3a6036db01ecdd66bcfe06405515c174628810a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569548"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650145"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase 构造函数
 初始化的新实例**FtmBase**类。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 FtmBase();  
 ```  
   

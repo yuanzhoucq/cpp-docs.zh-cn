@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466197"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647809"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 实现 Windows 运行时异步状态机。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *TComplete*  
  异步操作完成时调用事件处理程序。  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  当正在运行的异步操作报告当前操作的进度时调用事件处理程序。  
   
  *resultType*  
- 之一[AsyncResultType](../windows/asyncresulttype-enumeration.md)枚举值。 默认情况下，可取值为 SingleResult。  
+ 之一[AsyncResultType](../windows/asyncresulttype-enumeration.md)枚举值。 默认情况下， `SingleResult`。  
   
 ## <a name="members"></a>成员  
   

@@ -1,5 +1,5 @@
 ---
-title: SRWLockSharedTraits 结构 |Microsoft 文档
+title: SRWLockSharedTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889621"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652469"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 结构
-描述中共享的锁模式的 SRWLock 类的共同特征。  
+描述的常见特征`SRWLock`中共享锁模式的类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,14 +39,14 @@ struct SRWLockSharedTraits;
   
 |名称|描述|  
 |----------|-----------------|  
-|`Type`|同义词指向的指针[SRWLOCK](../windows/srwlock-class.md)类。|  
+|`Type`|一个指向同义词[SRWLOCK](../windows/srwlock-class.md)类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[SRWLockSharedTraits::GetInvalidValue 方法](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|检索始终无效的 SRWLockSharedTraits 对象。|  
-|[SRWLockSharedTraits::Unlock 方法](../windows/srwlocksharedtraits-unlock-method.md)|释放指定 SRWLock 对象的独有控制。|  
+|[SRWLockSharedTraits::GetInvalidValue 方法](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|检索**SRWLockSharedTraits**始终是无效的对象。|  
+|[SRWLockSharedTraits::Unlock 方法](../windows/srwlocksharedtraits-unlock-method.md)|释放指定的全权控制`SRWLock`对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SRWLockSharedTraits`  

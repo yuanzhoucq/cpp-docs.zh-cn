@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570023"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644029"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 方法
 初始化新创建的代理，并对该代理返回的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHODIMP UnmarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  
@@ -37,7 +37,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *pStm*  
  指向要取消封送的接口指针的流。  
   

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467360"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649980"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>添加、编辑或删除控件
-使用对话框编辑器，可以添加、 重设大小、 编辑和删除控件在对话框中。 此外可以编辑的控件，如其 ID 属性或者它是否最初可见在运行时。  
+使用**对话框**编辑器中，您可以添加、 重设大小、 编辑和删除控件在对话框中的。 此外可以编辑的控件，如其 ID 属性或者它是否最初可见在运行时。  
   
- 可以使用对话框编辑器中的快捷菜单将已注册的 ActiveX 控件快速添加到对话框中，并可以将 ActiveX 控件添加到快速访问工具箱 (有关详细信息，请参阅[自定义工具箱对话框](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
+ 可以使用中的快捷菜单**对话框中**编辑器来快速添加注册 ActiveX 控件到对话框中，并且可以添加到 ActiveX 控件**工具箱**以便快速访问 （有关详细信息，请参阅[自定义工具箱对话框](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
   
 -   [将控件添加到对话框](adding-a-control-to-a-dialog-box.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39467360"
   
 -   [显示或隐藏工具箱窗口](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
  Win32  
@@ -52,4 +52,3 @@ ms.locfileid: "39467360"
  [在对话框中的控件](controls-in-dialog-boxes.md)   
  [对于对话框控件添加事件处理程序](adding-event-handlers-for-dialog-box-controls.md)   
  [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Trylockshared 方法 |Microsoft 文档'
+title: 'Srwlock:: Trylockshared 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892278"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645807"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 方法
-尝试针对当前或指定 SRWLock 对象获取共享模式的 SRWLock 对象。  
+尝试获取**SRWLock**对象中的当前或指定的共享模式**SRWLock**对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
- `lock`  
- 指向 SRWLock 对象的指针。  
+### <a name="parameters"></a>参数  
+ *lock*  
+ 指向**SRWLock**对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则为共享模式的 SRWLock 对象，并且调用线程将获得锁定的所有权。 否则为其状态无效的 SRWLock 对象。  
+ 如果成功， **SRWLock**共享的模式和调用线程中的对象采用锁的所有权。 否则为**SRWLock**对象，其状态为无效。  
   
 ## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  

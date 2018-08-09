@@ -1,5 +1,5 @@
 ---
-title: 创建设备图像 （图标的图像编辑器） |Microsoft 文档
+title: 创建设备图像 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,36 +22,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbdc52cca73d568cb365deb345ec6465488e3b40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873220"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641338"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>创建设备图像（图标的图像编辑器）
-当你创建新图标或光标资源时，图像编辑器首先以特定的样式 （32 × 32，16 种颜色图标和 32x32，为游标的单色） 创建的映像。 然后可以将映像中不同的大小和样式添加到初始图标或光标，并编辑每个其他映像，根据需要为不同的显示设备。 你还可以通过执行剪切和粘贴操作，从现有的映像类型或在图形程序中创建的位图编辑映像。  
+当创建新图标或光标资源**图像**编辑器首先在特定样式 （32 × 32，16 种颜色图标和 32 × 32，游标的单色） 中创建映像。 然后可以将不同大小和样式的图像添加到初始图标或光标，并编辑每个其他映像，根据需要对不同的显示设备。 此外可以通过从现有的映像类型或从位图图形程序创建的执行剪切和粘贴操作来编辑映像。  
   
- 当你打开中的图标或光标资源[图像编辑器](../windows/image-editor-for-icons.md)，默认情况下将打开大多数密切匹配的当前的显示设备的图像。  
+ 当你打开中的图标或光标资源[的图像编辑器](../windows/image-editor-for-icons.md)，默认情况下将打开大多数紧密匹配当前的显示设备的图像。  
   
 ### <a name="to-create-a-new-icon-or-cursor"></a>若要创建新图标或光标  
   
-1.  在[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择**插入资源**从快捷菜单。 (如果你已有现有的图像资源在.rc 文件中，如游标，只需可以右键单击**光标**文件夹，然后选择**插入光标**从快捷菜单。)  
+1.  在中[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择**插入资源**从快捷菜单。 (如果已有现有的图像资源在.rc 文件中，例如游标，只需可以右击**游标**文件夹，然后选择**插入光标**从快捷菜单。)  
   
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**光标**单击**新建**。 对于图标，这将创建一个图标资源 32 × 32，16 颜色图标。 对于光标，32x32，创建单色 （2 种颜色） 映像。  
+2.  在中[插入资源对话框](../windows/add-resource-dialog-box.md)，选择**图标**或**游标**然后单击**新建**。 对于图标，这将创建一个图标资源使用 32 × 32，16 色图标。 对于游标，32 × 32，创建单色 （2 种颜色） 映像。  
   
-     如果一个加号 (**+**) 旁边图像资源类型显示**插入资源**对话框中，这意味着工具栏模板都可用。 单击加号以便展开模板列表中的，选择一个模板，然后单击**新建**。  
+     如果一个加号 (**+**) 中的图像资源类型旁边会显示**插入资源**对话框中，这意味着工具栏模板都可用。 单击加号以展开模板列表中的，选择一个模板，然后单击**新建**。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- **要求**  
-  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

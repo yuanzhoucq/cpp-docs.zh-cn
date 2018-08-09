@@ -1,5 +1,5 @@
 ---
-title: SyncLockT 类 |Microsoft 文档
+title: SyncLockT 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892847"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643421"
 ---
 # <a name="synclockt-class"></a>SyncLockT 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>参数  
- `SyncTraits`  
+### <a name="parameters"></a>参数  
+ *SyncTraits*  
  可以获得资源的所有权类型。  
   
 ## <a name="remarks"></a>备注  
- 表示可能需要独占的类型或共享资源的所有权。  
+ 表示可能需要排他的类型或共享资源的所有权。  
   
- SyncLockT 类使用，例如，来帮助实施[SRWLock](../windows/srwlock-class.md)类。  
+ **SyncLockT**类用于，例如，可以帮助实施[SRWLock](../windows/srwlock-class.md)类。  
   
 ## <a name="members"></a>成员  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |名称|描述|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT 构造函数](../windows/synclockt-synclockt-constructor.md)|初始化 SyncLockT 类的新实例。|  
-|[SyncLockT::~SyncLockT 析构函数](../windows/synclockt-tilde-synclockt-destructor.md)|取消初始化 SyncLockT 类的实例。|  
+|[SyncLockT::SyncLockT 构造函数](../windows/synclockt-synclockt-constructor.md)|初始化的新实例**SyncLockT**类。|  
+|[SyncLockT::~SyncLockT 析构函数](../windows/synclockt-tilde-synclockt-destructor.md)|取消初始化的实例**SyncLockT**类。|  
   
 ### <a name="protected-constructors"></a>受保护的构造函数  
   
 |名称|描述|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT 构造函数](../windows/synclockt-synclockt-constructor.md)|初始化 SyncLockT 类的新实例。|  
+|[SyncLockT::SyncLockT 构造函数](../windows/synclockt-synclockt-constructor.md)|初始化的新实例**SyncLockT**类。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked 方法](../windows/synclockt-islocked-method.md)|指示当前的 SyncLockT 对象是否拥有资源;SyncLockT 对象也是*锁定*。|  
-|[SyncLockT::Unlock 方法](../windows/synclockt-unlock-method.md)|释放由当前 SyncLockT 对象占用的资源的控制，如果有的话。|  
+|[SyncLockT::IsLocked 方法](../windows/synclockt-islocked-method.md)|指示是否当前**SyncLockT**对象拥有一个资源; 也就是，则**SyncLockT**对象*锁定*。|  
+|[SyncLockT::Unlock 方法](../windows/synclockt-unlock-method.md)|释放当前占用的资源的控制**SyncLockT**对象，如果有的话。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[SyncLockT::sync_ 数据成员](../windows/synclockt-sync-data-member.md)|包含表示 SyncLockT 类的基础资源。|  
+|[SyncLockT::sync_ 数据成员](../windows/synclockt-sync-data-member.md)|保存由表示的基础资源**SyncLockT**类。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SyncLockT`  

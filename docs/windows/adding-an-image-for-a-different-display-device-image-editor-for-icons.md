@@ -1,5 +1,5 @@
 ---
-title: 为不同的显示设备 （图标的图像编辑器） 添加图像 |Microsoft 文档
+title: 添加用于不同的显示设备 （图标的图像编辑器） 的图像 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2819509bd5b3b42bc1d07cfb6ed1bedbd8a6bd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bf056dac289a88d2e94cb740c0ff1e7b4bedd33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651787"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>添加用于其他显示设备的图像（图标的图像编辑器）
-### <a name="to-add-an-image-for-a-different-display-device"></a>若要添加为不同的显示设备图像  
+### <a name="to-add-an-image-for-a-different-display-device"></a>若要添加不同的显示设备的图像  
   
-1.  上**映像**菜单上，单击**新建设备图像**(或右键单击**图像编辑器**窗格中，选择**新建设备图像**从快捷菜单）。  
+1.  上**图像**菜单上，单击**新设备图像**(或右键单击**的图像编辑器**窗格中，然后选择**新设备图像**从快捷菜单）。  
   
-2.  选择你想要添加的映像的类型。 您也可以单击**自定义**以创建其大小不是默认列表中的图标。  
+2.  选择你想要添加的图像的类型。 此外可以单击**自定义**创建图标的大小不是在默认列表中可用。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
-  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [加速键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-
