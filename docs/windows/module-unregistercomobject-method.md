@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 240ab47099b9e97e9a6bb794083858fe042605d2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602625"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018690"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject 方法
 注销一个或多个 COM 对象，以阻止其他应用程序连接到它们。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 virtual HRESULT UnregisterCOMObject(  
    const wchar_t* serverName,  
    DWORD* cookies,  

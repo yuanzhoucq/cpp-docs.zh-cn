@@ -1,5 +1,5 @@
 ---
-title: 符号值限制 |Microsoft 文档
+title: 符号值限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889533"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013396"
 ---
 # <a name="symbol-value-restrictions"></a>符号值限制
 符号值可以是用于 #define 预处理器指令的以正常方式表示的任何整数。 下面是符号值的一些示例：  
@@ -45,13 +45,13 @@ ms.locfileid: "33889533"
   
 -   不能使用其他符号字符串定义符号值。 例如，不支持以下符号定义：  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   不能将具有参数的预处理器宏用作值定义。 例如：  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
@@ -60,8 +60,6 @@ ms.locfileid: "33889533"
 -   应用程序可能具有包含使用表达式定义的符号的现有文件。 有关如何包含符号作为只读符号的详细信息，请参阅[使用共享 （只读） 或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)。  
   
  有关数字范围的详细信息，请参阅[TN023： 标准 MFC 资源](../mfc/tn023-standard-mfc-resources.md)。  
-  
-
   
 ## <a name="requirements"></a>要求  
  Win32  

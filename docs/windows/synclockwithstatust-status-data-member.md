@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 45655bc906816b17711485d01fbdfd96019b5d51
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652843"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018999"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 DWORD status_;  
 ```  
   

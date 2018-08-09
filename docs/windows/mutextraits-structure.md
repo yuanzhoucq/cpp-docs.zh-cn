@@ -1,5 +1,5 @@
 ---
-title: MutexTraits 结构 |Microsoft 文档
+title: MutexTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874585"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018973"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 结构
-定义的共性[互斥体](../windows/mutex-class1.md)类。  
+定义常见特征[互斥体](../windows/mutex-class1.md)类。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct MutexTraits : HANDLENullTraits;
   
 |名称|描述|  
 |----------|-----------------|  
-|[MutexTraits::Unlock 方法](../windows/mutextraits-unlock-method.md)|释放共享资源的独有的控制。|  
+|[MutexTraits::Unlock 方法](../windows/mutextraits-unlock-method.md)|释放全权控制共享资源。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `HANDLENullTraits`  

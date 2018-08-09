@@ -1,5 +1,5 @@
 ---
-title: C + + 的最佳安全方案 |Microsoft 文档
+title: C + + 的最佳安全方案 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015619"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -54,14 +55,14 @@ ms.lasthandoff: 05/17/2018
  已扩充 C 运行库 (CRT) 以包括面临安全风险的函数的安全版本（例如，未经检查的 `strcpy` 字符串复制函数）。 由于这些函数的早期、不安全版本现已被弃用，因此它们将导致编译时警告。 建议您使用这些 CRT 函数的安全版本，而不是选择禁止显示编译警告。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。  
   
 ## <a name="safeint-library"></a>SafeInt 库  
- [SafeInt 库](../windows/safeint-library.md)有助于防止整数溢出和应用程序执行数学运算时可能发生其他利用错误。 `SafeInt`库包括[SafeInt 类](../windows/safeint-class.md)、 [SafeIntException 类](../windows/safeintexception-class.md)，和几个[SafeInt 函数](../windows/safeint-functions.md)。  
+ [SafeInt 库](../windows/safeint-library.md)有助于防止整数溢出以及应用程序执行数学运算时可能发生其他可利用错误。 `SafeInt`库包含[SafeInt 类](../windows/safeint-class.md)，则[SafeIntException 类](../windows/safeintexception-class.md)，以及几个[SafeInt 函数](../windows/safeint-functions.md)。  
   
- `SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 我将提供两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。  
+ `SafeInt` 类可防止整数溢出和被零除攻击。 您可以使用它处理不同类型的值之间的比较。 它提供了两个错误处理策略。 默认策略是针对引发 `SafeInt` 类异常的 `SafeIntException` 类，以报告无法完成数学运算的原因。 第二个策略针对 `SafeInt` 类，用以停止程序的执行。 还可以定义自定义策略。  
   
  每个 `SafeInt` 函数各保护一个数学运算免于出现可被利用的错误。 您可使用两种不同的参数，而不必将它们转换为相同类型。 若要保护多个数学运算，请使用 `SafeInt` 类。  
   
 ## <a name="checked-iterators"></a>经过检查的迭代器  
- 经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供其他级别的响应取决于值分配给预处理器定义如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在**\_迭代器\_调试\_LEVEL = 2**，检查迭代器提供全面的正确性检查处于调试模式，这可通过使用断言。 有关详细信息，请参阅[检查迭代器](../standard-library/checked-iterators.md)和[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。  
+ 经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 检查迭代器提供了其他级别的响应取决于分配给预处理器的值定义，如 **\_SECURE\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在**\_迭代器\_调试\_LEVEL = 2**，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[Checked Iterators](../standard-library/checked-iterators.md)并[\_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)。  
   
 ## <a name="code-analysis-for-managed-code"></a>托管代码的代码分析  
  托管代码的代码分析，又称 FxCop，是检查程序集与 .NET Framework 设计准则的一致性的工具。 FxCop 分析各个程序集中的代码和元数据以检查下列区域的缺陷：  
@@ -89,17 +90,17 @@ ms.lasthandoff: 05/17/2018
 
 -   确定应用程序中的潜在安全问题。  
   
- AppVerifier 属于应用程序兼容性工具包，即从可用[应用程序兼容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 网站上。  
+ AppVerifier 是可从应用程序兼容性工具包的一部分[应用程序兼容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 网站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 用户帐户  
- 使用属于管理员组的 Windows 用户帐户将使开发人员和引申到的相关客户暴露在安全风险下。 有关详细信息，请参阅[作为用户组的成员运行](running-as-a-member-of-the-users-group.md)和[如何用户帐户控制 (UAC) 会影响应用程序](how-user-account-control-uac-affects-your-application.md)。
+ 使用属于管理员组的 Windows 用户帐户将使开发人员和引申到的相关客户暴露在安全风险下。 有关详细信息，请参阅[用户组的成员身份运行](running-as-a-member-of-the-users-group.md)并[如何用户帐户控制 (UAC) 会影响应用程序](how-user-account-control-uac-affects-your-application.md)。
 
 ## <a name="guidance-for-speculative-execution-side-channels"></a>推理执行端通道的指南
 
 有关如何识别和缓解针对 c + + 软件中的推理执行端通道硬件漏洞的信息，请参阅[推理执行端通道的 c + + 开发人员指南](developer-guidance-speculative-execution.md)。
 
 ## <a name="see-also"></a>请参阅  
-- <xref:System.Security>   
-- [安全性](/dotnet/standard/security/index)   
-- [用户帐户控制 (UAC) 如何影响应用程序](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[安全性](/dotnet/standard/security/index)   
+[用户帐户控制 (UAC) 如何影响应用程序](how-user-account-control-uac-affects-your-application.md)

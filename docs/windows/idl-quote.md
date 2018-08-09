@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606509"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011573"
 ---
 # <a name="idlquote"></a>idl_quote
 可以使用不支持当前版本的 Visual c + + 中的 IDL 构造并将它们传递到生成的.idl 文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *文本*  
  希望 Visual c + + 编译器，而不返回编译器错误传递给生成的.idl 文件的属性名称。  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 此代码会导致 MYFLOT 和 MYDUB 并*文本*要置于生成的.idl 文件中的项。 *名称*参数将强制*文本*在引用的任何操作之前放置*名称*生成的.idl 文件中。 *依赖项*参数强制依赖关系列表定义之前放置*文本*生成的.idl 文件中。  
+ 此代码会导致`MYFLOT`并`MYDUB`并*文本*要置于生成的.idl 文件中的项。 *名称*参数将强制*文本*在引用的任何操作之前放置*名称*生成的.idl 文件中。 *依赖项*参数强制依赖关系列表定义之前放置*文本*生成的.idl 文件中。  
   
 ## <a name="requirements"></a>要求  
   

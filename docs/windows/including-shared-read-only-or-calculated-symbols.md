@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608607"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014908"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
 开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 随后，可以使用[资源包括对话框的](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  
@@ -37,7 +37,7 @@ ms.locfileid: "39608607"
   
  当现有资源包含的符号定义使用表达式而不是简单整数来定义符号值时，也可以使用包含的符号文件。 例如：  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ ms.locfileid: "39608607"
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在中**只读符号指令**框中，使用 **#include**编译器指令，以指定想要保留只读符号的文件。  
+2.  在中**只读符号指令**框中，使用`#include`编译器指令，以指定想要保留只读符号的文件。  
   
-     请勿调用文件 Resource.h，因为这是通常由主符号头文件使用的文件名。  
+     请勿调用文件`Resource.h`，因为它是通常由主符号头文件的文件名。  
   
     > [!NOTE]
     >  **重要**完全按照您键入您在只读符号指令框中键入包含资源文件中。 请确保输入的内容不包含任何拼写或语法错误。  
@@ -76,7 +76,6 @@ ms.locfileid: "39608607"
 4.  单击 **“确定”**。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

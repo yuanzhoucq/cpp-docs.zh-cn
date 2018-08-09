@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1de680b2598a9439338986c283a4041482642fa0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607178"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015753"
 ---
 # <a name="importidl"></a>importidl
 将指定的.idl 文件插入到生成的.idl 文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ importidl(  
    idl_file  
 ) ];  

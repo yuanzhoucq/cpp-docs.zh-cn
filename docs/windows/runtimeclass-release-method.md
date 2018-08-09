@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 317fb846fa7c4f64545762b473233e87ca049173
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017690"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release 方法
 执行 COM 释放操作对当前**RuntimeClass**对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    Release  

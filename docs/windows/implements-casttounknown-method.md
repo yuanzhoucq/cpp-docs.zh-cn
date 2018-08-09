@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: efaf7b51da1e4a4e744133884b92ac78db3b3f66
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607243"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017760"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown 方法
 获取一个指针指向基础`IUnknown`接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   

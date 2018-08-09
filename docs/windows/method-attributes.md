@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604276"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016851"
 ---
 # <a name="method-attributes"></a>方法特性
 以下属性应用于类、 组件类或接口中的方法。  
@@ -39,8 +39,8 @@ ms.locfileid: "39604276"
 |[defaultbind](../windows/defaultbind.md)|指示最能代表对象的单个、 可绑定属性。|  
 |[defaultcollelem](../windows/defaultcollelem.md)|用于 Visual Basic 代码优化。|  
 |[displaybind](../windows/displaybind.md)|指示应显示给用户作为可绑定的属性。|  
-|[helpcontext](../windows/helpcontext.md)|指定允许用户查看有关此帮助文件中的元素的信息的上下文 ID。|  
-|[helpfile](../windows/helpfile.md)|设置类型库的帮助文件的名称。|  
+|[helpcontext](../windows/helpcontext.md)|指定允许用户查看有关中此元素的信息的上下文 ID**帮助**文件。|  
+|[helpfile](../windows/helpfile.md)|设置的名称**帮助**类型库文件。|  
 |[helpstring](../windows/helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|  
 |[helpstringcontext](../windows/helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|  
 |[helpstringdll](../windows/helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|  

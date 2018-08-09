@@ -1,5 +1,5 @@
 ---
-title: MFC 预定义的符号 |Microsoft 文档
+title: MFC 预定义的符号 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882055"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018489"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 预定义的符号
-MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些 #include 语句在 StdAfx.h 文件中：  
+MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些`#include`中的语句`StdAfx.h`文件：  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- 标头文件包括为 MFC 常见的值的符号 ID 值。 当您在 MFC 项目中工作时，这些符号才可用。 请注意 AFX_ 前缀后跟标准符号名前缀。  
+ 标头文件包括 MFC 常见值的符号 ID 值。 MFC 项目中工作时，这些符号才可用。 请注意 AFX_ 前缀后跟标准符号名前缀。  
   
 |||  
 |-|-|  
@@ -158,7 +158,7 @@ MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|  
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|  
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|  
-|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ 取消选中|  
+|AFX_IDS_CHECKLISTBOX_MIXED|取消选中 AFX_IDS_CHECKLISTBOX_|  
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|  
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|  
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|  

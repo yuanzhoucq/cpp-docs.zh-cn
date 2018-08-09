@@ -1,5 +1,5 @@
 ---
-title: 字符赋值 |Microsoft 文档
+title: 字符赋值 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856692"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010407"
 ---
 # <a name="character-assignment"></a>字符赋值
-请考虑以下示例中的，在其中`while`循环扫描字符串，将 X 以外的所有字符都复制到另一个字符串：  
+请考虑以下示例中的，在其中**虽然**循环扫描一个字符串，将 X 以外的所有字符都复制到另一个字符串：  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- 代码将复制的字节位置`sz2`指向的位置`sz1`，然后递增`sz1`接收的下一个字节。 但是，如果中的下一个字符`sz2`是双字节字符，分配给的`sz1`仅复制第一个字节。 下面的代码使用安全地复制字符的可移植函数，另一个用于递增`sz1`和`sz2`正确：  
+ 代码将复制的字节位置`sz2`指向的位置`sz1`，然后递增`sz1`接收的下一个字节。 但是，如果中的下一个字符`sz2`是一个双字节字符，分配到`sz1`仅复制第一个字节。 下面的代码使用可移植的函数来安全地复制字符，另一个用于递增`sz1`和`sz2`正确：  
   
 ```  
 while( *sz2 )  

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ed8669a22be7e1a2b696ca9373c30e71f17c191
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606782"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012678"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>选择图像的区域（图标的图像编辑器）
 选择工具可用于定义你想要剪切、 复制、 清除、 重设大小、 反转，或移动的图像的区域。 与**矩形选择**工具可以定义并选择图像的矩形区域。 与**不规则选择**工具可以绘制需选择它以执行剪切、 复制或其他操作的区域的徒手画的轮廓。  
@@ -52,7 +52,6 @@ ms.locfileid: "39606782"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
-  
  无  
   
 ## <a name="see-also"></a>请参阅  

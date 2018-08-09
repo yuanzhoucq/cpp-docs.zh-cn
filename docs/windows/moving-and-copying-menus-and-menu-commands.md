@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 50503f06c3617d046c86db7fdcfd56555c1b4b8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606584"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011798"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>移动和复制菜单和菜单命令
 可以使用拖放方法或使用快捷菜单（右击菜单）上的命令来移动或复制菜单和菜单命令。  
@@ -53,10 +53,9 @@ ms.locfileid: "39606584"
     > [!NOTE]
     >  还可以拖动、复制和粘贴到其他菜单窗口中的其他菜单中。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息以及 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息以及 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

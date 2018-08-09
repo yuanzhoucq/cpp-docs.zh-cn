@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ed78c9276603c8b6dbdab74a32ea1940bf39544f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570997"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012565"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid 方法
 指示是否当前**HString**对象是否为空。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 bool IsValid() const throw()  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  **true**如果当前**HString**对象不为空; 否则为**false**。  
   
 ## <a name="requirements"></a>要求  

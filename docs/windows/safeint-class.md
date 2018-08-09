@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606151"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019327"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 扩展的整数基元来帮助防止整数溢出，并可用于比较不同类型的整数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  当你使用时要小心**SafeInt**类一起使用`?:`三元运算符。 请考虑以下代码行。  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  编译器将其转换为此：  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  如果`flag`是**false**，编译器将引发异常而不是分配的值-1 到`x`。 因此，若要避免此行为，要使用的正确代码是以下行。  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606931"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010284"
 ---
 # <a name="modifying-the-layout-grid"></a>修改布局网格
 当您放置或排列控件在对话框中的时，可用于更精确地定位布局网格。 打开网格时，将显示控件与"对齐"网格的虚线像磁化。 您可以打开和关闭此"对齐网格"功能和更改布局网格单元格的大小。  
@@ -35,7 +35,7 @@ ms.locfileid: "39606931"
   
 2.  在中[指南设置对话框](../windows/guide-settings-dialog-box.md)，选中或清除**网格**按钮。  
   
-     你仍然可以控制使用的各个对话框编辑器窗口中的网格**切换网格**按钮[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
+     你仍然可以控制在单个网格**对话框中**使用的编辑器窗口**切换网格**按钮[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>若要更改布局网格的大小  
   
@@ -46,7 +46,6 @@ ms.locfileid: "39606931"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

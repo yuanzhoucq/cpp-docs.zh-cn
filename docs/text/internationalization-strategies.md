@@ -1,5 +1,5 @@
 ---
-title: 国际化策略 |Microsoft 文档
+title: 国际化策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,29 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e4d7b067daedcbc5ce065c096e561dbf932ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a3b8a47e70efa3268ae9b36eda311d267be2ded
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856591"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018924"
 ---
 # <a name="internationalization-strategies"></a>国际化策略
-根据您的目标操作系统和市场，你有几个国际化策略：  
+具体取决于您的目标操作系统和市场，有几个国际化策略：  
   
 -   你的应用程序使用 Unicode。  
   
-     使用 Unicode 特有的功能和所有字符宽度都为 16 位 （尽管出于特殊目的，可以在程序的某些部分中使用 ANSI 字符）。 C 运行库提供仅 Unicode 编程函数、 宏和数据类型。 MFC 是完全支持 Unicode。  
+     使用特定于 Unicode 的功能和所有字符宽度都为 16 位 （尽管出于特殊目的，可以在程序的某些部分中使用 ANSI 字符）。 C 运行时库提供用于仅限 Unicode 的编程函数、 宏和数据类型。 MFC 是完全支持 Unicode 的。  
   
--   你的应用程序使用 MBCS，并且可以在任何 Win32 平台上运行。  
+-   应用程序使用 MBCS，并可以在任何 Win32 平台上运行。  
   
-     使用特定于 MBCS 的功能。 字符串可以包含单字节字符和 / 或双字节字符。 C 运行库提供仅 MBCS 编程函数、 宏和数据类型。 MFC 是完全 MBCS 启用。  
+     使用特定于 MBCS 的功能。 字符串可以包含单字节字符、 双字节字符，或两者。 C 运行时库提供用于仅使用 MBCS 编程函数、 宏和数据类型。 MFC 是完全启用 MBCS 的。  
   
--   为完成的可移植性编写你的应用程序的源代码 — 通过使用符号重新编译 **_UNICODE**或符号 **_MBCS**定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+-   为应用程序的源代码编写的完整可移植性 — 通过使用符号重新编译`_UNICODE`或符号`_MBCS`定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
-     将使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持所有这些策略。  
+     使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持任何这些策略。  
   
- 这些主题的其余部分专注于编写可以生成为 Unicode 或 MBCS 的完全可移植代码。  
+ 这些主题的其余部分集中精力编写完全可移植代码，可以生成为 Unicode 或 MBCS。  
   
 ## <a name="see-also"></a>请参阅  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   

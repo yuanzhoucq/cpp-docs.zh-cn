@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603483"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013556"
 ---
 # <a name="include-c"></a>include (C++)
 指定要包括在生成的.idl 文件中的一个或多个标头文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ ms.locfileid: "39603483"
  **包括**c + + 属性具有相同的功能[包括](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 特性。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用的示例**包括**。 对于此示例中，文件 include.h 只包含 #include 语句。  
+ 下面的代码演示如何使用的示例**包括**。 对于此示例中，文件 include.h 仅包含`#include`语句。  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571465"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016923"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 > [!NOTE]
->  Express 版本不支持资源视图。  
+>  **资源视图**Express 版本不支持。  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>在“资源”视图中创建新资源  
   
-1.  重点放在 [“资源视图”](../windows/resource-view-window.md)中的 .rc 文件后，单击 **“编辑”** 菜单，然后选择 **“添加资源”** （或者右键单击“资源视图”中的 .rc 文件，然后从快捷菜单选择 **“添加资源”** ）。  
+1.  与你的.rc 文件中的焦点[资源视图](../windows/resource-view-window.md)，单击**编辑**菜单，然后选择**添加资源**(或右键单击.rc 文件中的**资源视图** ，然后选择**添加资源**从快捷菜单)。  
   
-     **注意：** 如果你的项目尚未包含 .rc 文件，请参阅 [创建新资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
+     > [!NOTE] 
+     > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
 2.  在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571465"
   
 1.  从 **“项目”** 菜单中，选择 **“添加资源”**。  
   
- 当创建新资源时，Visual c++ 会向其分配一个唯一名称，例如，IDD_Dialog1。 可通过在关联的资源编辑器中或 [“属性窗口”](/visualstudio/ide/reference/properties-window)中编辑该资源的属性来自定义该资源 ID。  
+ 当创建新资源时，Visual c + + 的唯一名称为其指定，例如， `IDD_Dialog1`。 可通过在关联的资源编辑器中或 [“属性窗口”](/visualstudio/ide/reference/properties-window)中编辑该资源的属性来自定义该资源 ID。  
   
  可将资源创建为一个新的默认资源（不基于模板的资源）或采用 [模板](../windows/how-to-use-resource-templates.md)模式的资源。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
 
-
-## <a name="requirements"></a>要求  
-  
-Win32  
+## <a name="requirements"></a>要求    
+ Win32  
   
 ## <a name="see-also"></a>请参阅  
  [资源文件](../windows/resource-files-visual-studio.md)   

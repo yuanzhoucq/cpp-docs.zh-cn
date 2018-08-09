@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646119"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019459"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用绘图工具（图标的图像编辑器）
-图像编辑器的手工绘制和擦除的工具都以相同方式工作： 选择的工具，如有必要，[选择前景色和背景色](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形状选项。 然后将指针移动到图像并单击或拖动以绘制和擦除。  
+**图像**编辑器的手工绘制和擦除的工具都以相同方式工作： 选择的工具，如有必要，[选择前景色和背景色](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形状选项。 然后将指针移动到图像并单击或拖动以绘制和擦除。  
   
  当选择**橡皮擦**工具**画笔**工具，或**喷枪**工具，选项选择器将显示该工具的选项。  
   

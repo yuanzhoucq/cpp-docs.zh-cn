@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88a092255655aaea0e06e8f69b520789f441d379
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652742"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016283"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo 方法
 如果可用，请为指定的指针变量分配一个指向接口的指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CopyTo(  
    REFIID riid,  
    _Deref_out_ IInspectable** ptr  

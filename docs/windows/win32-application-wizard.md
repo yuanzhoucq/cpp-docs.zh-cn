@@ -1,5 +1,5 @@
 ---
-title: Win32 应用程序向导 |Microsoft 文档
+title: Win32 应用程序向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891420"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014216"
 ---
 # <a name="win32-application-wizard"></a>Win32 应用程序向导
 Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的项目（在下表中的标题列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。 下表指示了每个应用程序类型可用的选项。  
@@ -56,7 +56,7 @@ Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的
 > [!NOTE]
 >  不能添加 ATL 类，只能向支持 MFC 的 Windows 桌面应用程序类型添加 MFC 类（请参阅上表）。  
   
- 可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)。  
+ 可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建空的 Windows 桌面应用程序](../windows/creating-an-empty-windows-desktop-application.md)   

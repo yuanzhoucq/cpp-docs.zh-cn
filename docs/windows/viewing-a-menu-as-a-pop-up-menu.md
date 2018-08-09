@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652196"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015606"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>以弹出菜单方式查看菜单
-通常情况下，当你在菜单编辑器中工作时，菜单资源将作为菜单栏显示。 但是，你可能拥有在程序运行时添加到应用程序菜单栏的菜单资源。  
+通常情况下，当你使用时，才**菜单**编辑器中，菜单资源显示为菜单栏。 但是，你可能拥有在程序运行时添加到应用程序菜单栏的菜单资源。  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>以弹出菜单方式查看菜单资源  
   

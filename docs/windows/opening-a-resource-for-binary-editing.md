@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605950"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014502"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>打开资源进行二进制编辑
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>打开 Windows 桌面资源进行二进制编辑  
@@ -36,7 +36,7 @@ ms.locfileid: "39605950"
 2.  右键单击该资源，然后在快捷菜单中单击“打开二进制数据”  。  
   
     > [!NOTE]
-    >  如果使用 [资源视图](../windows/resource-view-window.md) 窗口打开 Visual Studio 无法识别其格式的资源（如 RCDATA 或自定义资源），则该资源会自动在二进制编辑器中打开。  
+    >  如果您使用[资源视图](../windows/resource-view-window.md)中自动打开窗口，Visual Studio 无法识别 （如 RCDATA 或自定义资源），该资源的格式打开资源**二进制**编辑器。  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>打开托管资源进行二进制编辑  
   
@@ -58,10 +58,9 @@ ms.locfileid: "39605950"
  只有特定 ASCII 值才会二进制编辑器中进行表示（0x20 到 0x7E）。 扩展字符在二进制编辑器的 ASCII 值部分（右面板）中显示为句点。 “可打印”字符是 ASCII 值 32 到 126。  
   
 > [!NOTE]
->  如果要对已在另一个编辑器窗口中进行编辑的资源使用二进制编辑器，请先关闭其他编辑器窗口。  
+>  如果你想要使用**二进制**上已在另一个编辑器窗口中，编辑的资源编辑器先关闭其他编辑器窗口。  
   
 ## <a name="requirements"></a>要求  
-  
  无  
   
 ## <a name="see-also"></a>请参阅  

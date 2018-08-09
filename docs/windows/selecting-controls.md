@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5517695da652dfd1eaa34b6ffd68fa90eac1a397
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605664"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012864"
 ---
 # <a name="selecting-controls"></a>“选择”控件
 选择控件以调整大小、 对齐、 移动、 复制，或删除它们，，然后执行所需的操作。 在大多数情况下，您需要选择要使用的大小和对齐方式的工具上的多个控件[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
   
  当控件被选定时，它有带实心 （活动） 在其周围的阴影的边框或空心 （非活动）"大小调整控点，"小方块，显示在选择边框。 当选择多个控件时，主导控件具有坚实的调整大小控点;所有其他所选的控件具有空心调整大小控点。  
   
- 当大小的设置或对齐多个控件，对话框编辑器使用"主导控件"来确定如何调整大小或对齐其他控件。 默认情况下，主导控件为所选的第一个控件。  
+ 调整大小或对齐多个控件时**对话框**编辑器使用"主导控件"来确定如何调整大小或对齐其他控件。 默认情况下，主导控件为所选的第一个控件。  
   
 -   [选定多个控件](../windows/selecting-multiple-controls.md)  
   

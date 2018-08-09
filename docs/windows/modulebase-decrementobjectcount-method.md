@@ -1,5 +1,5 @@
 ---
-title: 'Modulebase:: Decrementobjectcount 方法 |Microsoft 文档'
+title: 'Modulebase:: Decrementobjectcount 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: daf27930261c0350c1e48b851fe989decd52dde2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65dc4dbca2e152a62bb79ed104f9533d2fa20569
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876288"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019977"
 ---
 # <a name="modulebasedecrementobjectcount-method"></a>ModuleBase::DecrementObjectCount 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 virtual long DecrementObjectCount() = 0;  
 ```  
   
@@ -37,7 +37,7 @@ virtual long DecrementObjectCount() = 0;
  递减操作之前的计数。  
   
 ## <a name="remarks"></a>备注  
- 在实现时，递减的对象数模块所跟踪。  
+ 实现时，递减的对象数模块所跟踪。  
   
 ## <a name="requirements"></a>要求  
  **标头：** implements.h  

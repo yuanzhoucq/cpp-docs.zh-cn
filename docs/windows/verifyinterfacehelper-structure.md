@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641244"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013293"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 结构
 支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    bool isWinRTInterface,  
    typename I  

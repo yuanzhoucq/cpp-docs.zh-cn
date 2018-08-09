@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648979"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015038"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和媒体基础的 UWP 应用
 了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建使用的通用 Windows 平台 (UWP) 应用程序[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -59,17 +59,17 @@ ms.locfileid: "39648979"
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>若要使用 WRL 创建媒体基础灰度转换组件  
   
-1.  在 Visual Studio 中创建**空白解决方案**项目。 该项目命名，例如， `MediaCapture`。  
+1.  在 Visual Studio 中创建**空白解决方案**项目。 该项目命名，例如， *MediaCapture*。  
   
-2.  添加**DLL (通用 Windows)** 到解决方案。 该项目命名，例如， `GrayscaleTransform`。  
+2.  添加**DLL (通用 Windows)** 到解决方案。 该项目命名，例如， *GrayscaleTransform*。  
   
-3.  添加**Midl 文件 (.idl)** 到项目文件。 例如，命名该文件， `GrayscaleTransform.idl`。  
+3.  添加**Midl 文件 (.idl)** 到项目文件。 例如，命名该文件， *GrayscaleTransform.idl*。  
   
 4.  将此代码添加到 GrayscaleTransform.idl。  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  用下面的代码替换 pch.h 的内容。  
+5.  使用下面的代码的内容替换为`pch.h`。  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ ms.locfileid: "39648979"
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  此示例中未使用 GrayscaleTransform.h。 如有需要，可以将其从项目中删除。  
+7.  `GrayscaleTransform.h` 不在此示例中使用。 如有需要，可以将其从项目中删除。  
   
-8.  用下面的代码替换 GrayscaleTransform.cpp 的内容。  
+8.  使用下面的代码的内容替换为`GrayscaleTransform.cpp`。  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "39648979"
        DllGetClassObject                   PRIVATE
    ```   
   
-10. 用下面的代码替换 dllmain.cpp 的内容。  
+10. 使用下面的代码的内容替换为`dllmain.cpp`。  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ ms.locfileid: "39648979"
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 从 C# 应用程序的自定义媒体基础组件  
   
-1.  添加一个新**C# 空白应用 (XAML)** 投影到`MediaCapture`解决方案。 该项目命名，例如， `MediaCapture`。  
+1.  添加一个新**C# 空白应用 (XAML)** 投影到`MediaCapture`解决方案。 该项目命名，例如， *MediaCapture*。  
   
 2.  在中**MediaCapture**项目中，添加对引用`GrayscaleTransform`项目。 若要了解如何操作，请参阅[如何： 添加或删除引用通过使用引用管理器](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。  
   
-3.  在 Package.appxmanifest 中上**功能**选项卡上，选择**麦克风**并**网络摄像头**。 从网络摄像头中捕捉照片时需要这两项功能。  
+3.  在中`Package.appxmanifest`，然后在**功能**选项卡上，选择**麦克风**并**网络摄像头**。 从网络摄像头中捕捉照片时需要这两项功能。  
   
-4.  在 MainPage.xaml 中，将此代码添加到根目录[网格](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)元素：  
+4.  在中`MainPage.xaml`，将此代码添加到根目录[网格](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)元素：  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  用下面的代码替换 MainPage.xaml.cs 的内容。  
+5.  使用下面的代码的内容替换为`MainPage.xaml.cs`。  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- 下图展示了 MediaCapture 应用。  
+ 下图显示`MediaCapture app`。  
   
  ![捕获照片的 MediaCapture 应用程序](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

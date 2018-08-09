@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606457"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010368"
 ---
 # <a name="implements-c"></a>implements (C++)
 指定强制 IDL 组件类的成员的调度接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ ms.locfileid: "39606457"
  以逗号分隔的将是 IDL 组件类的成员的调度接口的列表。 用于指定单个调度接口的速记方法是**实现 (调度*** = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，仅 COM 接口的组件类的基类，这些类将添加 IDL 组件类中。 **实现**允许你强制添加 IDL 组件类成员其他接口。  
+ 默认情况下，唯一的 COM 接口的基类的`coclass`IDL 组件类中添加。 **实现**允许你强制添加其他接口为 IDL`coclass`成员。  
   
 ## <a name="requirements"></a>要求  
   

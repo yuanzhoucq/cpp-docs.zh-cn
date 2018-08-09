@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 812f5e2462236faef1b2b13d5fb25320319e773e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608490"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015724"
 ---
 # <a name="nonextensible"></a>nonextensible
 指定`IDispatch`实现仅包括属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [nonextensible]  
 ```  
   

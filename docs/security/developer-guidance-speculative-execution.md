@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102460"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018840"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 
-本文包含面向开发人员以帮助识别和防御推理执行端通道硬件在 c + + 软件中的漏洞的指南。 这些漏洞可能会泄露敏感信息跨信任边界和可能会影响支持推理、 扩展的顺序执行的指令处理器运行的软件。 此类漏洞已在 2018 年 1 月中, 所述的第一个和其他背景和指南可在[Microsoft 安全公告](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。
+本文包含面向开发人员以帮助识别和防御推理执行端通道硬件在 c + + 软件中的漏洞的指南。 这些漏洞可能会泄露敏感信息跨信任边界和可能会影响支持推理、 扩展的顺序执行的指令处理器运行的软件。 此类漏洞已在 2018 年 1 月中, 所述的第一个和其他背景和指南可在[Microsoft 安全公告](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)。
 
 本文提供的指导与漏洞所表示的类：
 
-1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 
+1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 
 
 2. CVE-2018年-3639，也称为[推理存储区绕过 (SSB)](https://aka.ms/sescsrdssb)。 此硬件漏洞类与相关端通道可能会出现由于之前作为内存访问预测结果依赖于存储的负载的推理执行。
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-应注意，这两个示例涉及推理修改堆栈分配间接分支指针。 有可能推测性修改的全局变量、 堆分配内存和甚至只读内存上一些 Cpu 也可能发生。 对于堆栈分配内存，Visual c + + 编译器已采用步骤以使其更难推测性地修改堆栈分配间接分支目标，例如通过对本地变量进行重新排序，以便与作为安全 cookie 相邻放置缓冲区属于[/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check)编译器安全功能。
+应注意，这两个示例涉及推理修改堆栈分配间接分支指针。 有可能推测性修改的全局变量、 堆分配内存和甚至只读内存上一些 Cpu 也可能发生。 对于堆栈分配内存，Visual c + + 编译器已采用步骤以使其更难推测性地修改堆栈分配间接分支目标，例如通过对本地变量进行重新排序，以便与作为安全 cookie 相邻放置缓冲区属于[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)编译器安全功能。
 
 ## <a name="speculative-type-confusion"></a>推理类型混淆
 
@@ -368,6 +368,6 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="see-also"></a>请参阅
 
-[若要缓解推理执行旁道漏洞的指南](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[若要缓解推理执行旁道漏洞的指南](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [防御推理执行端通道硬件漏洞](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

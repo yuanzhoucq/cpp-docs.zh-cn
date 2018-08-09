@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645988"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017911"
 ---
 # <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
 Visual c + + 编译器支持*字符串*，这是对象，表示为一系列字符的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式带引号的字符串。  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **输出**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 char *  

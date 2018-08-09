@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 194a37bf631ab3226ad88208acfcf86a7a7a2926
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ab47494f18bfca8a94e6fc4697cf354eb71c5321
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603259"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014082"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>在资源文件之间移动字符串
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>若要将字符串从一个资源脚本文件移动到另一个  
@@ -45,7 +45,6 @@ ms.locfileid: "39603259"
  有关将资源添加到托管项目 （项目面向公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： 本地化 Windows 窗体](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[演练： 使用 for Localization with ASP.NET 资源](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

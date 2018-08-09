@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651400"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019168"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>显示或隐藏对话框编辑器工具栏
-当打开对话框编辑器时，对话框编辑器工具栏将自动显示在你的解决方案的顶部。  
+当打开**对话框中**编辑器中，**对话框编辑器**工具栏将自动显示在你的解决方案的顶部。  
   
 ### <a name="dialog-editor-toolbar"></a>对话框编辑器工具栏  
   
@@ -40,9 +40,9 @@ ms.locfileid: "39651400"
 |![垂直居中按钮](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切换网格按钮](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切换网格|  
 |![水平居中按钮](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切换参考线按钮](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切换参考线|  
   
- 对话框编辑器工具栏包含用于排列控件在对话框中，例如大小和对齐方式的布局的按钮。 对话框编辑器工具栏按钮对应于格式菜单上的命令。 有关详细信息，请参阅[对话框编辑器的快捷键](../windows/accelerator-keys-for-the-dialog-editor.md)。  
+ **对话框编辑器**工具栏包含用于安排上的对话框中，例如大小和对齐方式的控件布局的按钮。 **对话框编辑器**上的工具栏按钮对应于命令**格式**菜单。 有关详细信息，请参阅[对话框编辑器的快捷键](../windows/accelerator-keys-for-the-dialog-editor.md)。  
   
- 当对话框编辑器中，您可以通过从可用的工具栏和窗口的列表中选择切换对话框编辑器工具栏的显示。  
+ 当你处于**对话框中**编辑器中，您可以切换显示**对话框编辑器**可用工具栏和窗口的列表中选择的工具栏。  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>若要显示或隐藏对话框编辑器工具栏  
   

@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645147"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011811"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>使用 256 色调色板（图标的图像编辑器）
-若要通过选择绘制从 256 色调色板，您需要从调色板中选择的颜色[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  
+若要通过选择绘制从 256 色调色板，您需要选择中的颜色**颜色**中的调色板[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>若要从大图标的 256 色调色板选择颜色  
   
@@ -36,7 +36,7 @@ ms.locfileid: "39645147"
   
 2.  从显示中的 256 种颜色中选择颜色**颜色**中的调色板**颜色**窗口。  
   
-     选定的颜色将成为在调色板中的当前颜色**颜色**窗口。  
+     选定的颜色将成为中的当前颜色**颜色**中的调色板**颜色**窗口。  
   
     > [!NOTE]
     >  使用 256 色图像的初始调色板匹配返回的调色板`CreateHalftonePalette`Windows API。 适用于 Windows 外壳程序的所有图标应都使用此面板来防止在调色板实现过程的闪烁。  

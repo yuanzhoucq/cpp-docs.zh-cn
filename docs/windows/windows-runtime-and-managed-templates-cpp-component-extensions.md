@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641455"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011557"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
 使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。  
@@ -44,7 +44,7 @@ ms.locfileid: "39641455"
   
 ### <a name="examples"></a>示例  
   
- 使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。  这是因为泛型类型在运行时解析。  有关详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
+ 使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。 这是因为泛型类型在运行时解析。 有关详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- 不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。  如果模板未实例化，则元数据中不会发出该模板。  如果模板已实例化，则元数据中仅显示引用的成员函数。  
+ 不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。 如果模板未实例化，则元数据中不会发出该模板。 如果模板已实例化，则元数据中仅显示引用的成员函数。  
   
 ```cpp  
 // managed_templates_3.cpp  

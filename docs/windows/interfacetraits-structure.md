@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606743"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014095"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template<  
    typename I0  
 >  
@@ -69,7 +69,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |[InterfaceTraits::CastToBase 方法](../windows/interfacetraits-casttobase-method.md)|将转换为指针指定的指针`Base`。|  
 |[InterfaceTraits::CastToUnknown 方法](../windows/interfacetraits-casttounknown-method.md)|将转换为指针指定的指针`IUnknown`。|  
 |[InterfaceTraits::FillArrayWithIid 方法](../windows/interfacetraits-fillarraywithiid-method.md)|为指定的接口 ID`Base`索引参数指定的数组元素。|  
-|[InterfaceTraits::Verify 方法](../windows/interfacetraits-verify-method.md)|验证正确派生基。|  
+|[InterfaceTraits::Verify 方法](../windows/interfacetraits-verify-method.md)|验证`Base`正确派生。|  
   
 ### <a name="public-constants"></a>公共常量  
   

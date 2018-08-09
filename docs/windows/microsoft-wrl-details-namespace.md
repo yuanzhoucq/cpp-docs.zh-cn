@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604221"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012123"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空间
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits 结构](../windows/argtraits-structure.md)|接口和具有指定的数目的参数的匿名成员函数声明指定的委托。|  
 |[ArgTraitsHelper 结构](../windows/argtraitshelper-structure.md)|可帮助定义委托参数的共同的特征。|  
-|[BoolStruct 结构](../windows/boolstruct-structure.md)|定义是否 comptr 是否托管接口的对象生存期。 在内部使用 BoolStruct [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)运算符。|  
+|[BoolStruct 结构](../windows/boolstruct-structure.md)|定义是否`ComPtr`管理接口的对象生存期。 `BoolStruct` 在内部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)运算符。|  
 |[CreatorMap 结构](../windows/creatormap-structure.md)|包含有关如何初始化、 注册和注销的对象的信息。|  
 |[DerefHelper 结构](../windows/derefhelper-structure.md)|表示一个取消引用的指向`T*`模板参数。|  
 |[EnableIf 结构](../windows/enableif-structure.md)|定义指定如果第一个模板参数的计算结果为第二个模板参数的类型的数据成员 **，则返回 true**。|  

@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641642"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011723"
 ---
 # <a name="toolbar-editor"></a>工具栏编辑器
-使用工具栏编辑器，可以创建工具栏资源并将位图转换为工具栏资源。 工具栏编辑器通过图形化显示来显示工具栏和按钮，其外观与完成的应用程序非常相似。  
+**工具栏**编辑器，您可以创建工具栏资源并将位图转换为工具栏资源。 **工具栏**编辑器使用的图形化显示来显示工具栏和按钮，非常类似于它们的外观中完成的应用程序。  
   
- 使用工具栏编辑器，可以执行下列操作：  
+ 与**工具栏**编辑器，你可以：  
   
 -   [创建新工具栏和按钮](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ ms.locfileid: "39641642"
   
 -   [创建工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- “工具栏辑器”窗口与“图像编辑器”窗口一样，会显示两个按钮图像视图。 拆分栏分隔两个窗格。 你可以将拆分条从一端拖动到另一端来更改窗格的相对大小。 活动窗格将显示选择边框。 主题工具栏位于两个图像视图的上方。  
+ **工具栏**编辑器窗口中显示的按钮图像，图像编辑器窗口相同的两个视图。 拆分栏分隔两个窗格。 你可以将拆分条从一端拖动到另一端来更改窗格的相对大小。 活动窗格将显示选择边框。 主题工具栏位于两个图像视图的上方。  
   
  ![工具栏编辑器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 工具栏编辑器  
   
- 工具栏编辑器与图像编辑器的功能类似。 菜单项、图形工具和位图网格与图像编辑器中的对应工具相同。 图像菜单上有菜单命令，让你可以在工具栏编辑器和图像编辑器之间切换。 有关使用图形工具栏、调色板或图像菜单的详细信息，请参阅 [图像编辑器](../windows/image-editor-for-icons.md)。  
+ **工具栏**编辑器是类似于**映像**编辑器的功能。 菜单项、 图形工具和位图网格是中的那些相同**图像**编辑器。 上没有菜单命令**图像**菜单，以便您可以切换**工具栏**编辑器并**图像**编辑器。 有关使用的详细信息**图形**工具栏中，**颜色**面板中，或**图像**菜单中，请参阅[的图像编辑器](../windows/image-editor-for-icons.md)。  
   
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
   

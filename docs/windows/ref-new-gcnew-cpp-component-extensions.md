@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ed742d3762232846b2cac189978ea07c140b65f2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606180"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012652"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
 **新的 ref**聚合关键字分配进行垃圾回收时，对象将变为不可访问，并返回一个句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 已分配对象。  
@@ -86,8 +86,6 @@ int main()
     return 0;  
 }  
 ```  
-  
- **输出**  
   
 ```Output  
 32  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: be7a2b7bbac8affd0bc668113cac30f4bed96a6b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642141"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017290"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 方法
 等到当前对象或**信号量**对象与指定句柄处于已发出信号状态或指定的超时间隔已过。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 SyncLock Lock(  
    DWORD milliseconds = INFINITE  
 );  

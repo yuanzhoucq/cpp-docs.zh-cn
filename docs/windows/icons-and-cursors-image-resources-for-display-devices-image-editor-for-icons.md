@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604611"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017829"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>图标和光标：显示设备的图像资源（图标的图像编辑器）
-图标和光标是图形资源，可以为不同类型的显示设备包含大小和配色方案不同的多个图像。 此外，光标还具有一个“热点”，即 Windows 用来跟踪其位置的位置。 可使用图像编辑器创建和编辑图标和光标以及位图和其他图像。  
+图标和光标是图形资源，可以为不同类型的显示设备包含大小和配色方案不同的多个图像。 此外，光标还具有一个“热点”，即 Windows 用来跟踪其位置的位置。 图标和光标使用创建和编辑**图像**编辑器中，以及位图和其他映像。  
   
- 当创建新图标或光标时，图像编辑器首先会创建一个标准类型的图像。 图像最初用屏幕（透明）颜色填充。 如果图像是光标，热点最初是左上角（坐标为 0,0）。  
+ 当创建新图标或光标，**图像**编辑器首先会创建标准类型的图像。 图像最初用屏幕（透明）颜色填充。 如果图像是光标，热点最初是左上角（坐标为 0,0）。  
   
- 默认情况下，图像编辑器支持为下表中所列的设备创建附加图像。 可以通过向 [自定义图像对话框](custom-image-dialog-box-image-editor-for-icons.md)中键入宽度、高度和色彩计数参数为其他设备创建图像。  
+ 默认情况下**图像**编辑器支持为下表中所示的设备创建附加图像。 可以通过向 [自定义图像对话框](custom-image-dialog-box-image-editor-for-icons.md)中键入宽度、高度和色彩计数参数为其他设备创建图像。  
   
 > [!NOTE]
->  你可以使用“图像编辑器”查看 32 位图像，但是不能对它们进行编辑。  
+>  使用**的图像编辑器**，可以查看 32 位映像，但不能编辑这些。  
   
 |颜色|宽度（像素）|高度（像素）|  
 |-----------|----------------------|-----------------------|  

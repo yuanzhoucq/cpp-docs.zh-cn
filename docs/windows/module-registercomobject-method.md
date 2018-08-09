@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 61ebc6b7bfb0571ba1f2ce1957d916ecb4c790c7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606535"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010979"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(  
    const wchar_t* serverName,  
    IID* clsids,  

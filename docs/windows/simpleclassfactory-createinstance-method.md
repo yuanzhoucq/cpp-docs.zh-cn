@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651075"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020299"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance 方法
 
@@ -39,7 +39,6 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>参数
-
 *pUnkOuter*  
 必须是**nullptr**; 否则为返回值是 CLASS_E_NOAGGREGATION。
 
@@ -57,7 +56,7 @@ SimpleClassFactory 不支持聚合。 如果受支持聚合，并且正在创建
 
 ## <a name="remarks"></a>备注
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 ClassicCom 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+如果`__WRL_STRICT__`是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
 ## <a name="requirements"></a>要求
 

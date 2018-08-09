@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569451"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015542"
 ---
 # <a name="how-to-use-resource-templates"></a>如何：使用资源模板
 资源模板是保存为 .rct 文件的自定义资源。 因此，可将资源模板视为创建其他资源的起点。 资源模板可节省开发其他资源或共享功能（如标准控件和其他重复元素）的资源组的时间。 例如，你可能希望在多个对话框中包含“帮助”按钮和公司徽标的图标。 若要快速做到这一点，可以新建一个对话框模板，并用徽标和“帮助”按钮对其进行自定义。  
@@ -46,7 +46,7 @@ ms.locfileid: "39569451"
   
 4.  提供的名称和新的.rct 文件的位置，然后单击**打开**。  
   
-5.  新的.rct 文件添加到你的项目，并显示在解决方案资源管理器下**资源**文件夹。  
+5.  新的.rct 文件添加到你的项目，并显示在**解决方案资源管理器**下**资源**文件夹。  
   
      现在，可以双击.rct 文件以在文档窗口中，将其打开，然后将资源添加到其中 (右键单击文档窗口中的文件，然后选择**添加资源**从快捷菜单)。 这时，你便可以自定义这些资源并保存为 .rct 文件了。  
   
@@ -76,7 +76,6 @@ ms.locfileid: "39569451"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

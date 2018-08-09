@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 823244b54513e4f6b2901bc29984604f65eb9a11
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604929"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018031"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 结构
 包含的类型的实例[RuntimeClass](../windows/runtimeclass-class.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 template <  
    unsigned int flags  
 >  

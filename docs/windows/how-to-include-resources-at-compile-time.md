@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571330"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018911"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在编译时包含资源
 通常可简单且方便地在一个资源脚本 (.rc) 文件中使用所有资源的默认安排。 但是，您可以将资源添加其他文件中向当前项目在编译时列出相关**编译时指令**框中[资源包括对话框的](../windows/resource-includes-dialog-box.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "39571330"
   
 -   向保存 .rc 文件时不会删除的资源语句添加注释。  
   
-     资源编辑器不直接读取 .rc 或 resource.h 文件。 资源编译器将它们编译成由资源编辑器使用的 .aps 文件。 该文件是一个编译步骤，只存储符号数据。 与普通编译过程一样，非符号信息（如注释）在编译过程中将被放弃。 每当 .aps 文件与 .rc 文件不同步时，就会重新生成 .rc 文件（例如，当你进行“保存”时，资源编辑器将覆盖 .rc 文件和 resource.h 文件）。 对资源本身所做的任何更改依然包含在 .rc 文件中，但一旦覆盖 .rc 文件就总会丢失注释。  
+     资源编辑器不直接读取.rc 或`resource.h`文件。 资源编译器将它们编译成由资源编辑器使用的 .aps 文件。 该文件是一个编译步骤，只存储符号数据。 与普通编译过程一样，非符号信息（如注释）在编译过程中将被放弃。 每当.aps 文件与.rc 文件获取同步，重新生成.rc 文件 (例如，保存时，资源编辑器将覆盖.rc 文件和`resource.h`文件)。 对资源本身所做的任何更改依然包含在 .rc 文件中，但一旦覆盖 .rc 文件就总会丢失注释。  
   
 -   包含已开发和测试并且无需进一步修改的资源。 （包含在内但没有 .rc 扩展名的任何文件都不可通过资源编辑器进行编辑。）  
   
@@ -58,7 +58,6 @@ ms.locfileid: "39571330"
      采用这种方式包含的文件中的资源会在编译时成为可执行文件的一部分。 它们在你处理项目的主 .rc 文件时不可直接进行编辑或修改。 需要单独打开包含的 .rc 文件。 包含在内但没有 .rc 扩展名的任何文件都不可通过资源编辑器进行编辑。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

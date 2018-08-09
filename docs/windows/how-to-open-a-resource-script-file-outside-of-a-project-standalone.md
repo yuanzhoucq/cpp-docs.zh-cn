@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570371"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013408"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在项目外打开资源脚本文件（独立）
 你可以查看 .rc 文件中的资源，而不必打开项目。 .Rc 文件将在而不是在中打开的文档窗口中打开[资源视图](../windows/resource-view-window.md)窗口 （如它在项目内打开该文件时）。  
@@ -46,13 +46,13 @@ ms.locfileid: "39570371"
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>若要在项目外部打开多个 .rc 文件  
   
-1.  同时单独打开这两个资源文件。 例如，打开 Source1.rc 和 Source2.rc。  
+1.  同时单独打开这两个资源文件。 例如，打开`Source1.rc`和`Source2.rc`。  
   
     1.  从**文件**菜单中，选择**打开**，然后单击**文件**。  
   
-    2.  在中**打开文件**对话框框中，导航到你想要打开 (Source1.rc)，突出显示该文件，然后单击的第一个资源脚本文件**打开**。  
+    2.  在中**打开文件**对话框框中，导航到想要打开的第一个资源脚本文件 (`Source1.rc`)，突出显示该文件，然后单击**打开**。  
   
-    3.  重复上一步，打开第二个 .rc 文件 (Source2.rc)。  
+    3.  重复上述步骤打开第二个.rc 文件 (`Source2.rc`)。  
   
          .Rc 文件即会在单独的文档窗口中打开。  
   

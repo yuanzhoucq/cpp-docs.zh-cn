@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607103"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012137"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单  
@@ -35,7 +35,6 @@ ms.locfileid: "39607103"
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
   
 ## <a name="requirements"></a>要求  
-  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

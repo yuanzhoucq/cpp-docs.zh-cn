@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3252096216757c34e93933bcdd91f9da2c5bb14f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606258"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015964"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 __forceinline void* Allocate();  
 ```  
   

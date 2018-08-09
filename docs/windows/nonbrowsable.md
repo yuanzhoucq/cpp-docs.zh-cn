@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: db563fb7e140aece589c4f13bfcfe82cf490c966
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604585"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016718"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 指示接口成员不应显示在属性浏览器中。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [nonbrowsable]  
 ```  
   

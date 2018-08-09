@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42f274f01661927772a1a3a6551dcb5efa59ac40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7fa3193e505480a0acb8616510d8c2cdbc4f5d94
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641855"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016348"
 ---
 # <a name="synclocktsync-data-member"></a>SyncLockT::sync_ 数据成员
 支持 WRL 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typename SyncTraits::Type sync_;  
 ```  
   

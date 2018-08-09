@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1842202ea0873889f79848230c91c3ccded7f25b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651361"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016660"
 ---
 # <a name="switchis"></a>switch_is
 指定的表达式或作为联合判别选择联合成员的标识符。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 [switch_is]  
 ```  
   

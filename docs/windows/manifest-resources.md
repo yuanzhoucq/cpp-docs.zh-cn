@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b14684adcefcf975750f64a4a7402083943b9f71
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1546beabadda06c5433450f67e340eaaabb0aa26
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604077"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012269"
 ---
 # <a name="manifest-resources"></a>清单资源
 清单资源是描述应用程序所使用的依赖项的 XML 文件。 例如，在 Visual Studio 中，MFC 向导生成的清单文件定义应用程序应使用的 Windows 公共控件 DLL 是 5.0 版还是 6.0 版：  
   
-```  
+```xml  
 <description>Your app description here</description>   
 <dependency>   
     <dependentAssembly>   
