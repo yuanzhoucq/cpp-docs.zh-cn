@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376031"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571548"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此模板类描述一个对象，用于控制不同长度排序具有有限访问权限的元素序列。 使用中的容器适配器`priority_queue`管理作为优先级队列的基础容器。  
@@ -855,7 +855,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将具有值的元素插入`val`到受控的序列，并对要保持堆准则的受控的序列重新排序。 用于将另一个元素添加到队列。  
+ 成员函数将具有值的元素插入`val`到受控序列中，并对要保持堆准则的受控的序列重新排序。 用于将另一个元素添加到队列。  
   
 ### <a name="example"></a>示例  
   

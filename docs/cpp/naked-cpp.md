@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402491"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571939"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 专用**  
   
- 函数声明与为**裸**特性，因此编译器将生成代码而无需 prolog 和 epilog 代码。 利用此功能，可以使用内联汇编程序代码编写您自己的 prolog/epilog 代码序列。 裸函数对于编写虚拟设备驱动程序特别有用。  请注意，**裸**属性仅适用于 x86 和 ARM，和上不可用[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  
+ 函数声明与为**裸**特性，因此编译器将生成代码而无需 prolog 和 epilog 代码。 利用此功能，可以使用内联汇编程序代码编写您自己的 prolog/epilog 代码序列。 裸函数对于编写虚拟设备驱动程序特别有用。  请注意，**裸**属性仅适用于 x86 和 ARM，和在 x64 上不可用。  
   
 ## <a name="syntax"></a>语法  
   

@@ -1,7 +1,7 @@
 ---
-title: 链接器选项 |Microsoft 文档
+title: 链接器选项 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753625"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571471"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -40,7 +40,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 - [保留字](../../build/reference/reserved-words.md)
 
-在命令行中，链接器选项不区分大小写;例如，/base 和 /BASE 的含义相同的操作。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
+在命令行中，不区分大小写; 链接器选项例如，/base 和 /BASE 的含义相同的操作。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
 
 可以使用 [注释](../../preprocessor/comment-c-cpp.md) 杂注指定一些链接器选项。
 
@@ -68,14 +68,14 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|控制 DLL 的延迟加载。|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|导致延迟加载指定的 DLL。|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|对程序集进行部分签名。|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|在依赖 DLL 加载上设置默认值标志。|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载默认标志。|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否生成可在加载时随机重新设定基址的可执行文件映像。|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|设置起始地址。|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|向 Microsoft 报告内部链接器错误。|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|导出函数。|
-|[/ FILEALIGN](../../build/reference/filealign.md)|对齐上指定的值的倍数的输出文件中的部分。|
+|[/FILEALIGN](../../build/reference/filealign.md)|对齐指定值的序列图上的输出文件中的部分。|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|创建只能在其首选基址加载的程序。|
 |[/FORCE](../../build/reference/force-force-file-output.md)|强制完成链接，即使符号无法解析或已定义多次。|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|创建可进行热修补的映像。|
@@ -105,7 +105,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|包括映射文件中的指定信息。|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|合并节。|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|指定 MIDL 命令行选项。|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|将调试器可视化工具从 Natvis 文件添加到 PDB。|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|将调试器可视化工具中的 Natvis 文件添加到 PDB。|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|取消创建 .NET Framework 程序集。|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|在解析外部引用时忽略所有（或指定的）默认库。|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|创建纯资源 DLL。|
@@ -123,6 +123,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|在 .exe 标头中设置校验和。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|重写节的特性。|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|指定要添加到 PDB 的 SourceLink 文件。|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|设置堆栈的大小（以字节为单位）。|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|将 MS-DOS 存根程序附加到 Win32 程序。|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|通知操作系统如何运行 .exe 文件。|
@@ -130,10 +131,10 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|指定链接器生成的类型库的资源 ID。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|指定 .tlb 文件和其他 MIDL 输出文件的名称。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|创建专为在终端服务器下运行而设计的应用程序。|
-|[/USEPROFILE](../../build/reference/useprofile.md)|使用按配置文件优化定型数据，以创建优化的映像。|
+|[/USEPROFILE](../../build/reference/useprofile.md)|使用按配置优化训练数据来创建优化的映像。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|打印链接器进度消息。|
 |[/VERSION](../../build/reference/version-version-information.md)|分配版本号。|
-|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含指定的静态库中的每个对象文件。|
+|[/WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含指定的静态库中的每个对象文件。|
 |[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)|允许生成 Windows 运行时元数据文件。|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|指定由 [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) 链接器选项生成的 Windows 运行时元数据 (winmd) 输出文件的文件名。|
 |[/WINMDKEYFILE](../../build/reference/winmdkeyfile-specify-winmd-key-file.md)|指定用来对 Windows 运行时元数据文件进行签名的密钥或密钥对。|

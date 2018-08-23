@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884849"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572133"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 此类允许对象的消息映射为另一个对象的访问权限。  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>备注  
  `CMessageMap` 是一个抽象基类，允许对象的消息映射来访问另一个对象。 为了使对象公开其消息映射，它的类必须派生自`CMessageMap`。  
   
- 使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](../../visual-cpp-samples.md)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)，则`CAtlEdit`类自动派生`CMessageMap`。  
+ 使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)，则`CAtlEdit`类自动派生`CMessageMap`。  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

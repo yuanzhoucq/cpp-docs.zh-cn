@@ -1,5 +1,5 @@
 ---
-title: Dll 和 Visual c + + 运行库行为 |Microsoft 文档
+title: Dll 和 Visual c + + 运行时库行为 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,33 +25,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392057"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572050"
 ---
-# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 运行库行为  
+# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 运行时库行为  
   
-通过使用 Visual c + +，默认情况下生成动态链接库 (DLL) 时，链接器包括 Visual c + + 运行时库 (VCRuntime)。 VCRuntime 包含初始化和终止 C/c + + 可执行文件所需的代码。 VCRuntime 代码时链接到 DLL，提供一个内部调用的 DLL 入口点函数`_DllMainCRTStartup`用于处理 Windows OS 消息到要将附加到进程或与进程或线程分离的 DLL。 `_DllMainCRTStartup`函数执行重要任务，如堆栈缓冲区安全设置，C 运行时库 (CRT) 初始化和终止，并对静态和全局对象调用构造函数和析构函数。 `_DllMainCRTStartup` 此外调用挂钩函数执行其自己的初始化和终止的 WinRT、 MFC 和 ATL 等其他库。 如果没有此初始化、 CRT 和其他库，以及静态变量，将保持处于未初始化状态。 无论是否 DLL 使用静态链接的 CRT 或动态链接的 CRT DLL 称为相同 VCRuntime 内部初始化和终止例程。  
+通过使用 Visual c + +，默认情况下生成动态链接库 (DLL) 时，链接器包括 Visual c + + 运行时库 (VCRuntime)。 VCRuntime 包含初始化和终止 C/c + + 可执行文件所需的代码。 链接到 DLL，VCRuntime 代码提供了一个内部调用的 DLL 入口点函数`_DllMainCRTStartup`用于处理 Windows OS 消息到 DLL 以将附加到或从进程或线程分离。 `_DllMainCRTStartup`函数执行重要任务，例如堆栈缓冲区安全性设置，C 运行时库 (CRT) 初始化和终止，并对构造函数和析构函数中调用静态和全局对象的。 `_DllMainCRTStartup` 此外调用挂钩函数的其他库，如 WinRT、 MFC 和 ATL 来执行其自己的初始化和终止。 如果没有此初始化、 CRT 和其他库，以及静态变量，将保持处于未初始化状态。 无论您的 DLL 使用静态链接的 CRT 还是动态链接的 CRT DLL 调用的相同 VCRuntime 内部初始化和终止例程。  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>默认 DLL 入口点 _DllMainCRTStartup  
   
-在 Windows 中，所有 Dll 可以都包含一个可选的入口点函数，通常称为`DllMain`，即为初始化和终止调用。 这使你能够分配或释放更多资源，根据需要。 在四个情况下则 Windows 会调用入口点函数： 进程附加、 分离进程、 线程附加，和线程分离。 当 DLL 加载到进程地址空间中，使用它的应用程序加载时，或应用程序请求在运行时 DLL 时，系统将创建 DLL 数据的单独副本。 这称为*进程附加*。 *线程附加*中加载该 DLL 的过程创建一个新线程时发生。 *分离线程*线程终止，时发生和*进程分离*时不再需要的 DLL，并发布应用程序。 操作系统使这些事件，传递的每个单独的 DLL 入口点调用*原因*每个事件类型的自变量。 例如，操作系统将发送`DLL_PROCESS_ATTACH`作为*原因*附加参数，以指示过程。  
+在 Windows 中，所有 Dll 可都包含一个可选入口点函数，通常称为`DllMain`，即为初始化和终止调用。 这样，您可以分配或根据需要释放其他资源。 Windows 在四种情况下调用入口点函数： 进程附加、 进程分离、 线程附加和线程分离。 当 DLL 加载到进程地址空间，使用它的应用程序加载时，或应用程序请求在运行时 DLL 时，操作系统会创建 DLL 数据的单独副本。 这称为*进程附加*。 *线程附加*的进程中加载了 DLL 创建一个新线程时发生。 *线程分离*时发生的线程终止，并*进程分离*时不再需要的 DLL，并发布应用程序。 此操作系统会单独调用的 DLL 入口点的每个事件，并传递*原因*每个事件类型的参数。 例如，OS 会发送`DLL_PROCESS_ATTACH`作为*原因*参数发出信号进程附加。  
   
-VCRuntime 库提供调用入口点函数`_DllMainCRTStartup`以处理默认初始化和终止操作。 在过程上附加，`_DllMainCRTStartup`函数将设置缓冲区安全检查，初始化 CRT 和其他库、 初始化运行时类型信息、 初始化和调用静态和非本地数据的构造函数，初始化线程本地存储区递增每个附加的内部静态计数器，然后调用用户或库-提供`DllMain`。 进程分离，该函数将经历这些步骤按相反的顺序。 它调用`DllMain`、 递减内部计数器，会调用析构函数，调用 CRT 终止函数并注册`atexit`函数和通知的终止的任何其他库。 在附件计数器变为零时，该函数将返回`FALSE`以指示 Windows 可以卸载 DLL。 `_DllMainCRTStartup`函数也称为期间线程附加和分离线程。 在这些情况下，VCRuntime 代码不任何附加初始化和终止它自己，并只调用`DllMain`若要将沿消息传递。 如果`DllMain`返回`FALSE`从进程附加，正在故障时，发出信号`_DllMainCRTStartup`调用`DllMain`再次并将传递`DLL_PROCESS_DETACH`作为*原因*自变量，然后经历的其余部分终止进程。  
+VCRuntime 库提供了名为入口点函数`_DllMainCRTStartup`处理默认值初始化和终止操作。 在过程上附加，`_DllMainCRTStartup`函数设置了缓冲区安全检查，初始化 CRT 和其他库、 初始化运行时类型信息，初始化并调用构造函数的静态和非本地数据，初始化线程本地存储递增每个附加的内部静态计数器，然后调用用户或库-提供`DllMain`。 在进程分离，该函数将完成这些步骤按相反的顺序。 它将调用`DllMain`递减内部计数器，调用析构函数、 调用 CRT 终止函数并注册`atexit`函数，并通知的终止的任何其他库。 当附件计数器回到零时，该函数返回`FALSE`以指示 Windows 可以卸载 DLL。 `_DllMainCRTStartup`函数还调用期间线程附加和线程分离。 在这些情况下，VCRuntime 代码任何附加的初始化和终止其自身的、 不会，只需调用`DllMain`来传递沿该消息。 如果`DllMain`返回`FALSE`进程中附加，信令故障时，`_DllMainCRTStartup`调用`DllMain`试，并将传递`DLL_PROCESS_DETACH`作为*原因*参数，然后将经历的其余部分终止进程。  
   
-生成 Visual c + + 中的默认入口点的 Dll 时`_DllMainCRTStartup`提供 VCRuntime 自动链接中。 不需要指定适合您的 DLL 的入口点函数，通过使用[/ENTRY （入口点符号）](../build/reference/entry-entry-point-symbol.md)链接器选项。  
+生成 Visual c + + 中的默认入口点的 Dll 时`_DllMainCRTStartup`提供 VCRuntime 自动链接中。 不需要使用您的 DLL 指定入口点函数[/ENTRY （入口点符号）](../build/reference/entry-entry-point-symbol.md)链接器选项。  
   
 > [!NOTE]
-> 尽管可以使用来指定另一个入口点函数的 DLL /ENTRY： 链接器选项，我们不建议这样做，因为入口点函数必须对要复制的所有内容，`_DllMainCRTStartup`中相同的顺序执行。 Vcruntime 一起提供了函数，您可以复制其行为。 例如，你可以调用[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即过程附加以支持[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)检查选项的缓冲区。 你可以调用`_CRT_INIT`函数，将相同的参数作为入口点函数，若要执行的 DLL 初始化和终止函数的其余部分传递。  
+> 虽然可以使用 /ENTRY dll 指定另一个入口点函数： 链接器选项，我们不建议这样做，因为入口点函数必须重复的所有内容的`_DllMainCRTStartup`中相同的顺序执行。 VCRuntime 提供允许您可以复制其行为的函数。 例如，可以调用[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即在过程上附加以支持[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)缓冲区检查选项。 您可以调用`_CRT_INIT`函数，将作为入口点函数，来执行 DLL 初始化和终止函数的其余部分传递相同的参数。  
   
 <a name="initializing-a-dll"></a>  
   
 ## <a name="initialize-a-dll"></a>初始化 DLL  
   
-DLL 可能拥有当 DLL 加载时必须执行的初始化代码。 为了使你可以执行你自己的 DLL 初始化和终止功能，`_DllMainCRTStartup`调用时调用的函数`DllMain`可提供。 你`DllMain`必须具有所需的 DLL 入口点的签名。 默认入口点函数`_DllMainCRTStartup`调用`DllMain`使用相同的参数传递的 Windows。 默认情况下，如果未提供`DllMain`函数，Visual c + + 为您提供并将其链接中，以便`_DllMainCRTStartup`始终具有一些内容来调用。 这意味着，如果不需要初始化您的 DLL，则没有任何特殊你所要做时生成您的 DLL。  
+您的 DLL 可能具有在 DLL 加载时必须执行的初始化代码。 为了使您可以执行您自己的 DLL 初始化和终止函数，`_DllMainCRTStartup`调用一个名为函数`DllMain`，可以提供。 你`DllMain`必须具有所需的 DLL 入口点的签名。 默认入口点函数`_DllMainCRTStartup`调用`DllMain`Windows 使用相同的参数传递。 默认情况下，如果未提供`DllMain`函数，Visual c + + 提供了一个并将其链接中，以便`_DllMainCRTStartup`始终具有要调用的内容。 这意味着，如果不需要初始化 DLL，并没有什么特别您只需生成 DLL 时。  
   
 这是用于签名`DllMain`:  
   
@@ -64,16 +64,16 @@ extern "C" BOOL WINAPI DllMain (
     LPVOID    const reserved); // reserved
 ```  
   
-某些库自动换行`DllMain`为你的函数。 例如，在正则 MFC DLL，实现`CWinApp`对象的`InitInstance`和`ExitInstance`成员函数来执行初始化和终止所需的 DLL。 有关更多详细信息，请参阅[regular 初始化 MFC Dll](#initializing-regular-dlls)部分。  
+某些库包装`DllMain`为你的函数。 例如，在规则 MFC DLL，实现`CWinApp`对象的`InitInstance`和`ExitInstance`成员函数来执行初始化和终止所需的 DLL。 有关更多详细信息，请参阅[regular 初始化 MFC Dll](#initializing-regular-dlls)部分。  
   
 > [!WARNING]
-> 你可以安全地做什么中的 DLL 入口点上没有重要限制。 请参阅[的常规最佳做法](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices)是不安全调用中的特定 Windows api `DllMain`。 如果需要任何东西但最简单的初始化然后执行该操作在初始化函数的 dll。 你可以要求应用程序调用之后的初始化函数`DllMain`已运行和前调用任何其他函数 DLL 中。  
+> 您可以安全地执行的操作中的 DLL 入口点有明显的限制。 请参阅[的常规最佳做法](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices)不安全调用中的特定 Windows api `DllMain`。 如果需要任何内容，但是最简单的初始化然后执行该操作初始化函数中的 dll。 你可以要求应用程序调用初始化函数之后，`DllMain`具有运行和前调用任何其他函数在 DLL 中。  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
-### <a name="initialize-ordinary-non-mfc-dlls"></a>初始化普通 (非 MFC) Dll  
+### <a name="initialize-ordinary-non-mfc-dlls"></a>初始化 Dll 普通 (非 MFC)  
   
-若要使用 vcruntime 一起提供的普通 (非 MFC) Dll 中执行你自己的初始化`_DllMainCRTStartup`入口点 DLL 源代码必须包含一个名为函数`DllMain`。 下面的代码提供一个基本的主干，显示的定义`DllMain`可能如下所示：  
+若要执行你自己的初始化中使用的 vcruntime 一起提供的普通 (非 MFC) Dll`_DllMainCRTStartup`入口点 DLL 源代码必须包含一个名为函数`DllMain`。 下面的代码提供一个基本的主干，显示的定义`DllMain`可能如下所示：  
   
 ```cpp  
 #include <windows.h>
@@ -108,19 +108,19 @@ extern "C" BOOL WINAPI DllMain (
 ```  
   
 > [!NOTE]
-> 较旧的 Windows SDK 文档指出，必须在链接器 /ENTRY 选项与命令行上指定的 DLL 入口点函数的实际名称。 不需要使用 Visual c + + 中，如果入口点函数的名称使用 /ENTRY 选项`DllMain`。 事实上，如果你使用的 /ENTRY 选项和名称将入口点以外的函数的内容`DllMain`，除非你入口点函数进行的相同的初始化调用 CRT 不获取初始化不正确`_DllMainCRTStartup`使。  
+> 较旧的 Windows SDK 文档中指出，必须在链接器 /ENTRY 选项的命令行上指定的 DLL 入口点函数的实际名称。 使用 Visual c + +，不需要使用 /ENTRY 选项，如果你的入口点函数的名称为`DllMain`。 事实上，如果您使用 /ENTRY 选项和名称将入口点运行内容以外`DllMain`，除非您的入口点函数进行的相同的初始化调用 CRT 不获取初始化不正确`_DllMainCRTStartup`使。  
   
 <a name="initializing-regular-dlls"></a>  
   
-### <a name="initialize-regular-mfc-dlls"></a>初始化 MFC 的规则 Dll  
+### <a name="initialize-regular-mfc-dlls"></a>初始化规则 MFC Dll  
   
-由于 MFC 的规则 Dll 有`CWinApp`对象时，他们应在与 MFC 应用程序相同的位置中执行初始化和终止任务： 在`InitInstance`和`ExitInstance`成员函数的 DLL 的`CWinApp`-派生类。 由于 MFC 提供了`DllMain`由调用的函数`_DllMainCRTStartup`为`DLL_PROCESS_ATTACH`和`DLL_PROCESS_DETACH`，不应编写你自己`DllMain`函数。 MFC 提供`DllMain`函数调用`InitInstance`在加载 DLL 和其调用时`ExitInstance`将在卸载 DLL 之前。  
+因为规则 MFC Dll`CWinApp`对象，它们应在与 MFC 应用程序相同的位置执行初始化和终止任务： 在`InitInstance`并`ExitInstance`成员函数的 DLL 的`CWinApp`-派生类。 由于 MFC 提供了`DllMain`由调用的函数`_DllMainCRTStartup`有关`DLL_PROCESS_ATTACH`并`DLL_PROCESS_DETACH`，不应编写你自己`DllMain`函数。 提供 MFC`DllMain`函数调用`InitInstance`时加载 DLL 和它调用`ExitInstance`卸载 DLL 之前。  
   
-常规 MFC DLL 可以跟踪的多个线程通过调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)和[TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812)中其`InitInstance`函数。 这些函数允许 DLL 以跟踪线程特定的数据。  
+规则 MFC DLL 可以跟踪的多个线程通过调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)并[TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812)中其`InitInstance`函数。 这些函数使跟踪特定于线程的数据的 DLL。  
   
-在常规 MFC DLL 动态链接到 MFC，如果你使用的任何 MFC OLE、 MFC 数据库 （或 DAO），或 MFC 套接字支持，分别调试 MFC 扩展 Dll MFCO*版本*D.dll、 MFCD*版本*D.dll 和 MFCN*版本*D.dll (其中*版本*是的版本号) 自动链接中。 你必须为每个你在常规 MFC DLL 中使用这些 Dll 调用以下预定义的初始化函数之一`CWinApp::InitInstance`。  
+在规则 MFC DLL 动态链接到 MFC，如果使用的任何 MFC OLE，MFC 数据库 （或 DAO），或 MFC 套接字支持，分别调试 MFC 扩展 Dll MFCO*版本*D.dll，MFCD*版本*D.dll 和 MFCN*版本*D.dll (其中*版本*是版本号) 中自动链接。 必须为每个规则 MFC DLL 的中使用这些 Dll 调用以下预定义的初始化函数之一`CWinApp::InitInstance`。  
   
-|MFC 支持的类型|初始化函数可以调用|  
+|MFC 支持的类型|要调用的初始化函数|  
 |-------------------------|-------------------------------------|  
 |MFC OLE (MFCO*版本*D.dll)|`AfxOleInitModule`|  
 |MFC 数据库 (MFCD*版本*D.dll)|`AfxDbInitModule`|  
@@ -130,9 +130,9 @@ extern "C" BOOL WINAPI DllMain (
   
 ### <a name="initialize-mfc-extension-dlls"></a>初始化 MFC 扩展 Dll  
   
-因为 MFC 扩展 Dll 不具有`CWinApp`-派生对象 （和 MFC 的规则 Dll 相同），你应添加到你初始化和终止代码`DllMain`MFC DLL 向导生成的函数。  
+因为 MFC 扩展 Dll 不具有`CWinApp`-派生对象 （如执行规则 MFC Dll），应添加到在初始化和终止代码`DllMain`MFC DLL 向导生成的函数。  
   
- 该向导为 MFC 扩展 Dll 提供下面的代码。 在代码中，`PROJNAME`是你的项目的名称的占位符。  
+ 该向导的 MFC 扩展 Dll 提供下面的代码。 在代码中，`PROJNAME`是项目的名称的占位符。  
   
 ```cpp  
 #include "stdafx.h"  
@@ -167,29 +167,29 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }  
 ```  
   
-创建一个新`CDynLinkLibrary`对象在初始化期间允许 MFC 扩展 DLL 导出`CRuntimeClass`对象或客户端应用程序的资源。  
+创建一个新`CDynLinkLibrary`对象在初始化期间，MFC 扩展 DLL 导出`CRuntimeClass`对象或客户端应用程序的资源。  
   
-如果想要使用 MFC 扩展 DLL 从一个或多个规则的 MFC Dll，你必须导出创建一个初始化函数`CDynLinkLibrary`对象。 必须从每个正则使用 MFC 扩展 DLL 的 MFC Dll 中调用该函数。 调用此初始化函数的适当位置位于`InitInstance`常规 MFC dll 的成员函数`CWinApp`-派生对象，然后才能使用任一 MFC 扩展 DLL 导出的类或函数。  
+如果要使用 MFC 扩展 DLL 从一个或多个规则 MFC Dll，则必须导出创建的初始化函数`CDynLinkLibrary`对象。 必须从每个使用 MFC 扩展 DLL 规则 MFC Dll 调用该函数。 更好地调用此初始化函数处于`InitInstance`成员函数的规则 MFC DLL 的`CWinApp`-然后再使用 MFC 扩展 DLL 导出的类或函数的任何派生的对象。  
   
-在`DllMain`，MFC DLL 向导生成，调用`AfxInitExtensionModule`捕获模块的运行时类 (`CRuntimeClass`结构) 以及其对象工厂 (`COleObjectFactory`对象) 时使用`CDynLinkLibrary`创建对象。 应检查的返回值`AfxInitExtensionModule`; 如果从返回零值`AfxInitExtensionModule`，返回从零你`DllMain`函数。  
+在中`DllMain`，MFC DLL 向导生成，调用`AfxInitExtensionModule`捕获模块的运行时类 (`CRuntimeClass`结构) 以及其对象工厂 (`COleObjectFactory`对象) 时使用`CDynLinkLibrary`创建对象。 应检查的返回值`AfxInitExtensionModule`; 如果返回值为零`AfxInitExtensionModule`，返回零从你`DllMain`函数。  
   
-如果你的 MFC 扩展 DLL 将显式链接到可执行文件 (这意味着可执行文件调用`AfxLoadLibrary`以链接到 DLL)，你应添加到一个调用`AfxTermExtensionModule`上`DLL_PROCESS_DETACH`。 使用此功能，MFC 以进行每个进程从 MFC 扩展 DLL 中分离时清除 MFC 扩展 DLL (该优化发生在进程退出时或在卸载 DLL 时的结果时`AfxFreeLibrary`调用)。 如果应用程序，对的调用将隐式链接 MFC 扩展 DLL`AfxTermExtensionModule`不需要。  
+如果您的 MFC 扩展 DLL 将显式链接到可执行文件 (这意味着可执行文件调用`AfxLoadLibrary`若要链接到 DLL)，您应添加到一个调用`AfxTermExtensionModule`上`DLL_PROCESS_DETACH`。 此函数使 MFC 从 MFC 扩展 DLL 中的每个进程分离时清理 MFC 扩展 DLL (正好在进程退出时或当卸载 DLL 时为`AfxFreeLibrary`调用)。 如果您的 MFC 扩展 DLL 将隐式链接到应用程序调用`AfxTermExtensionModule`不是必需的。  
   
-应用程序显式链接到 MFC 扩展 Dll 必须调用`AfxTermExtensionModule`时释放 DLL。 它们还应使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函数`LoadLibrary`和`FreeLibrary`) 在应用程序使用多个线程。 使用`AfxLoadLibrary`和`AfxFreeLibrary`确保在 MFC 扩展 DLL 加载和卸载不会损坏全局 MFC 状态时执行的启动和关闭代码。  
+应用程序显式链接到 MFC 扩展 Dll 必须调用`AfxTermExtensionModule`时释放该 DLL。 它们还应使用`AfxLoadLibrary`并`AfxFreeLibrary`(而不是 Win32 函数`LoadLibrary`和`FreeLibrary`) 在应用程序使用多个线程。 使用`AfxLoadLibrary`和`AfxFreeLibrary`确保 MFC 扩展 DLL 加载和卸载不会损坏全局 MFC 状态时执行的启动和关闭代码。  
   
-因为 MFCx0.dll 完全初始化时`DllMain`是调用，你可以分配内存并调用中的 MFC 函数`DllMain`（而不像 MFC 的 16 位版本）。  
+因为时完全初始化 MFCx0.dll`DllMain`是调用，可以分配内存，并调用中的 MFC 函数`DllMain`（不同于 MFC 的 16 位版本）。  
   
-扩展 Dll 可以负责通过处理多线程处理`DLL_THREAD_ATTACH`和`DLL_THREAD_DETACH`情况下，在`DllMain`函数。 这种情况下传递给`DllMain`线程时附加和分离的 dll。 调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)时附加 DLL 使 DLL 以维护的线程本地存储 (TLS) 对该 DLL 附加每个线程进行索引。  
+扩展 Dll 可以负责通过处理多线程处理`DLL_THREAD_ATTACH`并`DLL_THREAD_DETACH`情况下，在`DllMain`函数。 这种情况下传递给`DllMain`时线程附加和分离从 DLL。 调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)时附加一个 DLL 可确保 DLL 可以维护的线程本地存储 (TLS) 索引为每个线程附加到 DLL。  
   
-请注意，头文件 Afxdllx.h 包含在 MFC 扩展 Dll，如的定义中使用的结构的特殊定义`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`。 MFC 扩展 DLL 中，应包括此标头文件。  
+请注意，头文件 Afxdllx.h 包含特殊的定义，MFC 扩展 Dll，如的定义中使用结构`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`。 MFC 扩展 DLL 中，应包括此标头文件。  
   
 > [!NOTE]
->  很重要，你既不定义也不取消定义的任何`_AFX_NO_XXX`Stdafx.h 中的宏。 这些宏仅用于检查特定的目标平台是否支持该功能，或不存在。 你可以编写你检查这些宏的程序 (例如， `#ifndef _AFX_NO_OLE_SUPPORT`)，但你的程序应永远不会定义或取消定义这些宏。  
+>  非常重要，就既不定义也不能取消定义的任何`_AFX_NO_XXX`Stdafx.h 中的宏。 这些宏仅用于检查特定的目标平台是否支持该功能，或不存在。 可以编写应用程序来检查这些宏 (例如， `#ifndef _AFX_NO_OLE_SUPPORT`)，但您的程序应永远不会定义或取消定义这些宏。  
   
-中包含多线程处理的句柄的示例初始化函数[使用线程本地存储在动态链接库](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 请注意此示例包含调用的入口点函数`LibMain`，但你应将此函数的命名`DllMain`，以便它适用于 MFC 和 C 运行时库。  
+中包含的多线程处理的句柄的示例初始化函数[使用线程本地存储在动态链接库](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 请注意，该示例包含名为入口点函数`LibMain`，但您应将此函数命名`DllMain`，使其可以使用 MFC 和 C 运行时库。  
   
 ## <a name="see-also"></a>请参阅  
   
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)  
-[DllMain 入口点](https://msdn.microsoft.com/library/windows/desktop/ms682583.aspx)  
-[动态链接库最佳做法](https://msdn.microsoft.com/library/windows/desktop/dn633971.aspx)  
+[DllMain 入口点](/windows/desktop/Dlls/dllmain)  
+[动态链接库的最佳做法](/windows/desktop/Dlls/dynamic-link-library-best-practices)  

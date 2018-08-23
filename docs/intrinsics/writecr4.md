@@ -1,5 +1,5 @@
 ---
-title: __writecr4 |Microsoft 文档
+title: __writecr4 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59949c031db6e33bbfb1ac56151c5bc57a972d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 097be395b26935b1c889a5ed542da3f544501ceb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326126"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545768"
 ---
 # <a name="writecr4"></a>__writecr4
 **Microsoft 专用**  
   
- 将值`Data`CR4 注册。  
+ 将值写入`Data`CR4 注册。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +38,13 @@ void writecr4(
   
 #### <a name="parameters"></a>参数  
  [in] `Data`  
- 要写入的 CR4 寄存器的值。  
+ 要写入到 CR4 寄存器的值。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr4`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

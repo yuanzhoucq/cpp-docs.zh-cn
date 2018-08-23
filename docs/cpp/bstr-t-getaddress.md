@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 680588a4c045c20001b46b35c67d28e366afc52d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408461"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572128"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft 专用**  

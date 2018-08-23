@@ -1,5 +1,5 @@
 ---
-title: __stosd |Microsoft 文档
+title: __stosd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327127"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545762"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft 专用**  
   
- 生成一个存储字符串指令 (`rep stosd`)。  
+ 生成的存储字符串指令 (`rep stosd`)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ void __stosd(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Data`  
  要存储的数据。  
@@ -54,12 +54,12 @@ void __stosd(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 结果是，双字`Data`写入到的块`Count`双字数组中的内存位置的指向`Dest`。  
+ 结果是，双字`Data`写入到块`Count`指向的内存位置的双字`Dest`。  
   
  此例程仅可用作内部函数。  
   

@@ -1,5 +1,5 @@
 ---
-title: 生成 C/c + + 程序 |Microsoft 文档
+title: 生成 C/c + + 程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572042"
 ---
 # <a name="building-cc-programs"></a>生成 C/C++ 程序
 
-你可以在 Visual Studio 中或命令行上生成 Visual C++ 项目。 Visual Studio IDE 使用[MSBuild](../build/msbuild-visual-cpp.md)以生成项目和解决方案。 可以在命令行使用 C/C++ 编译器 (cl.exe) 和链接器 (link.exe) 来生成简单项目。 若要在命令行上生成更复杂的项目，你可以使用 MSBuild 或[NMAKE](../build/nmake-reference.md)。 有关如何使用的概述[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]若要生成项目和解决方案，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
+你可以在 Visual Studio 中或命令行上生成 Visual C++ 项目。 使用 Visual Studio IDE [MSBuild](../build/msbuild-visual-cpp.md)以生成项目和解决方案。 可以在命令行使用 C/C++ 编译器 (cl.exe) 和链接器 (link.exe) 来生成简单项目。 若要在命令行上生成更复杂的项目，可以使用 MSBuild 或[NMAKE](../build/nmake-reference.md)。 有关如何使用 Visual Studio 生成项目和解决方案的概述，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
 ## <a name="in-this-section"></a>本节内容  
 

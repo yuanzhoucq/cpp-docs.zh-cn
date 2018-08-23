@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571652"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 类
-实现 OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)接口，可对行标识进行测试。  
+实现 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))接口，可对行标识进行测试。  
   
 ## <a name="syntax"></a>语法
 
@@ -72,7 +72,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
  若要比较的行句柄，此方法强制转换`HROW`句柄`RowClass`成员和调用`memcmp`指针。  

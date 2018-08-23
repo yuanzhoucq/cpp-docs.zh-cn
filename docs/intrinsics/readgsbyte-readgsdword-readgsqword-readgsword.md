@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte、 __readgsdword、 __readgsqword、 __readgsword |Microsoft 文档
+title: __readgsbyte、 __readgsdword、 __readgsqword、 __readgsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325274"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545735"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 专用**  
   
- 从指定的偏移量相对于 GS 段的开始位置读取内存。  
+ 从指定相对于 GS 段开头的偏移量的位置读取内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,19 +53,19 @@ unsigned __int64 __readgsqword(
   
 #### <a name="parameters"></a>参数  
  [in] `Offset`  
- 从开始处的偏移量`GS`要从其中进行读取。  
+ 从开始处的偏移量`GS`读取。  
   
 ## <a name="return-value"></a>返回值  
- 字节、 单词、 双字或四字 （如所示调用的函数的名称） 的内存内容位置`GS:[Offset]`。  
+ 内存内容的字节、 字、 双字或四字 （如所示的调用的函数名称） 的位置`GS:[Offset]`。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
  **标头文件** \<intrin.h >  
   

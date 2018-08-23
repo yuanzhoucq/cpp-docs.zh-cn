@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337717"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572131"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 提取和操作将通过检索一次调用多个行句柄中大容量的数据处理的行。  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
-调用[irowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.aspx)来增加当前从 bulk 行集检索到的所有行的引用计数。  
+调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))来增加当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是书签的行。 如果*lSkip*为 1，提取的第一行是标有书签的行后的行。 如果*lSkip*为-1，提取的第一行是标有书签的行前的行。  
   
 ### <a name="return-value"></a>返回值  
- 请参阅[irowset:: Getdata](https://msdn.microsoft.com/library/ms716988.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 提取从行集中的小数位置开始的行。  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](https://msdn.microsoft.com/library/ms709602.aspx)中*OLE DB 程序员参考*。   
+ 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))中*OLE DB 程序员参考*。   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
-调用[irowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx)要递减当前从 bulk 行集检索到的所有行的引用计数。  
+调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))要递减当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
   

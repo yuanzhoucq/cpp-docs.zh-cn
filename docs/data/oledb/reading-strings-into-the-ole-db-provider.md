@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572031"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
-`RMyProviderRowset::Execute`函数打开的文件和读取字符串。 使用者将文件名传递给提供程序，通过调用[icommandtext:: Setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)。 提供程序接收的文件的名称，并将其存储在成员变量`m_szCommandText`。 `Execute` 读取的文件名的`m_szCommandText`。 如果文件名无效或文件不可用，`Execute`返回错误。 否则，它会打开该文件并调用`fgets`检索字符串。 为每个集的字符串它读取`Execute`创建的用户记录实例 (`CAgentMan`) 并将其放到一个数组。  
+`RMyProviderRowset::Execute`函数打开的文件和读取字符串。 使用者将文件名传递给提供程序，通过调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))。 提供程序接收的文件的名称，并将其存储在成员变量`m_szCommandText`。 `Execute` 读取的文件名的`m_szCommandText`。 如果文件名无效或文件不可用，`Execute`返回错误。 否则，它会打开该文件并调用`fgets`检索字符串。 为每个集的字符串它读取`Execute`创建的用户记录实例 (`CAgentMan`) 并将其放到一个数组。  
   
  如果无法打开该文件，`Execute`必须返回 DB_E_NOTABLE。 如果改为返回 E_FAIL，提供程序不会使用多个使用者和未通过 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。  
   

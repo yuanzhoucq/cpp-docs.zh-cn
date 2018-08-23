@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571654"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
-OLE DB 模板实现[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) OLE DB 规范中的接口。  
+OLE DB 模板实现[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) OLE DB 规范中的接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   第 6 章*OLE DB 程序员参考*  
   
--   另请参阅如何`RUpdateRowset`UpdatePV 示例中使用类  
+-   另请参阅如何`RUpdateRowset`中使用类[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。  
   
 ## <a name="deleterows"></a> Irowsetchangeimpl:: Deleterows
 删除行集中的行。  
@@ -129,7 +129,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))中*OLE DB 程序员参考*。 
 
 ## <a name="insertrow"></a> Irowsetchangeimpl:: Insertrow
 创建并初始化新行集中的一行。  
@@ -144,7 +144,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowsetchange:: Insertrow](https://msdn.microsoft.com/library/ms716921.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="setdata"></a> Irowsetchangeimpl:: Setdata
 设置一个或多个列中的数据值。  
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowsetchange:: Setdata](https://msdn.microsoft.com/library/ms721232.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
 要将数据提交到其存储区提供程序的入口。  

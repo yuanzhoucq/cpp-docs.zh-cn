@@ -1,5 +1,5 @@
 ---
-title: x64 软件约定 |Microsoft 文档
+title: x64 软件约定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380883"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572032"
 ---
 # <a name="x64-software-conventions"></a>x64 软件约定
-本部分介绍 Visual c + + 调用约定方法[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]，为 x86，64 位扩展体系结构。  
+本部分介绍了 Visual c + + 调用约定方法对于 x64，x86 64 位扩展体系结构。  
   
 -   [x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32380883"
   
 -   [图像格式](../build/image-format.md)  
   
- 下面的编译器选项可帮助你优化你的应用程序[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ 以下编译器选项可帮助您优化用于 x64 应用程序：  
   
 -   [/favor（优化体系结构详细信息）](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

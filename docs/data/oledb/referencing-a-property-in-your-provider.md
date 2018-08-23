@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 467fa4812af6957bea249d6f55701e1474a9382d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341031"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572326"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
-找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/library/ms722734.aspx)中*OLE DB 程序员参考*。  
+找到所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](/previous-versions/windows/desktop/ms722734\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  下面的示例假定你尝试从行集中获取的属性。 使用会话或命令的代码类似，但使用不同的接口。  
   

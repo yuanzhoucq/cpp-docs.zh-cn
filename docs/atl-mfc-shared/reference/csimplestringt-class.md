@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883627"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571834"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 此类表示`CSimpleStringT`对象。  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  缓冲区内存将自动释放时`CSimpleStringT`对象被销毁。  
   
- 如果您跟踪字符串长度自己，不对不追加终止 null 字符。 当使用释放缓冲区时，必须指定最终的字符串长度`ReleaseBuffer`。 如果在调用时，执行追加终止 null 字符`ReleaseBuffer`，将为-1 （默认值） 传递到长度`ReleaseBuffer`，并`ReleaseBuffer`将执行`strlen`上要确定其长度的缓冲区。  
+ 如果您跟踪字符串长度自己，不要将追加终止 null 字符。 当使用释放缓冲区时，必须指定最终的字符串长度`ReleaseBuffer`。 如果在调用时，执行追加终止 null 字符`ReleaseBuffer`，将为-1 （默认值） 传递到长度`ReleaseBuffer`，并`ReleaseBuffer`将执行`strlen`上要确定其长度的缓冲区。  
   
  有关引用计数的详细信息，请参阅以下文章：  
   

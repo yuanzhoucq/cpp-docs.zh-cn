@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340724"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572130"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 封装一个行集和其关联的访问器的单个类。  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|构造函数。|  
 |[关闭](#close)|关闭的行集和任何访问器。|  
 |[FreeRecordMemory](#freerecordmemory)|释放当前需要释放的记录中的任何列。|  
-|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)。|  
+|[GetColumnInfo](#getcolumninfo)|实现[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|  
   
 ## <a name="remarks"></a>备注  
  类`TAccessor`管理访问器。 类*TRowset*管理行集。  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>备注  
  用户必须释放返回的列信息和字符串缓冲区。 当你使用时使用此方法的第二个版本[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要重写这些绑定。  
   
- 有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ 有关详细信息，请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

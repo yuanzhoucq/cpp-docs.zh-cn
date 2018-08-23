@@ -1,5 +1,5 @@
 ---
-title: LIB 引用 |Microsoft 文档
+title: LIB 引用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371936"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571839"
 ---
 # <a name="lib-reference"></a>LIB 引用
-Microsoft 库管理器 (LIB.exe) 创建和管理通用对象文件格式 (COFF) 对象文件的库。 LIB 还可用来创建导出文件，并将库导入引用导出的定义。  
+Microsoft 库管理器 (LIB.exe) 创建并管理通用对象文件格式 (COFF) 对象文件的库。 LIB 还可用来创建导出文件和导入库，以便引用导出的定义。  
   
 > [!NOTE]
->  你只能从 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。  
+>  可以仅从 Visual Studio 命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。  
   
 -   [LIB 概述](../../build/reference/overview-of-lib.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 分配和释放内存为 BSTR |Microsoft 文档
+title: 分配和释放内存为 BSTR |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 355d89a3cb5817cc64512ae885a075bf44ee2a86
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358320"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571656"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>为 BSTR 分配和释放内存
-当你创建`BSTR`s 并将它们传递之间 COM 对象，你必须在将它们使用，以避免内存泄漏的内存一定要小心。 当`BSTR`保持接口中的，你必须释放其内存是完成。 但是，当`BSTR`通过接口外的，接收对象负责其内存管理。  
+当你创建`BSTR`s 和 COM 对象之间传递它们，您必须小心地处理它们使用，以避免内存泄漏的内存。 当`BSTR`保持界面中的，您必须释放其内存是完成。 但是，当`BSTR`带接口的传递，接收对象有责任在其内存管理。  
   
- 分配和释放内存的规则一般情况下，为分配`BSTR`s 如下所示：  
+ 一般情况下，分配和释放内存的规则分配为`BSTR`s 如下所示：  
   
--   当您调用到需要的函数`BSTR`自变量，你必须将分配的内存`BSTR`的调用之前和之后发布。 例如：  
+-   当您调用到所需的函数`BSTR`自变量，您必须分配的内存`BSTR`在调用之前和之后将其释放。 例如：  
   
      [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
   
      [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
   
--   当您调用返回的函数到`BSTR`，必须自己释放字符串。 例如：  
+-   当您调用一个函数，返回到`BSTR`，必须自行释放字符串。 例如：  
   
      [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
   
      [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
   
--   当实现返回的函数`BSTR`、 分配字符串，但不要释放它。 接收函数会释放内存。 例如：  
+-   当实现一个函数，返回`BSTR`、 分配字符串，但不是释放它。 接收该函数会释放内存。 例如：  
   
      [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
   
 ## <a name="see-also"></a>请参阅  
  [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+ [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+ [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

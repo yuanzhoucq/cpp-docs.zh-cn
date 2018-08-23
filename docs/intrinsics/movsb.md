@@ -1,5 +1,5 @@
 ---
-title: __movsb |Microsoft 文档
+title: __movsb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328222"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545736"
 ---
 # <a name="movsb"></a>__movsb
 **Microsoft 专用**  
   
- 生成的移动字符串 (`rep movsb`) 指令。  
+ 生成移动字符串 (`rep movsb`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,10 +42,10 @@ void __movsb(
   
 #### <a name="parameters"></a>参数  
  [out] `Destination`  
- 副本的目标指向的指针。  
+ 一个指向该副本的目标。  
   
  [in] `Source`  
- 副本的源指向的指针。  
+ 指向源的副本的指针。  
   
  [in] `Count`  
  要复制的字节数。  
@@ -54,7 +54,7 @@ void __movsb(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

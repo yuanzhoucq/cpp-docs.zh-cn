@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881722"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571944"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 堆分配函数。  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  参数 HEAP_NO_SERIALIZE 指定堆函数分配和释放内存，以及相应提高性能时，将不使用互相排斥。  
   
- 第三个参数默认为 0，这使堆能够根据需要增长。 请参阅[HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx)有关内存大小和标志的说明。  
+ 第三个参数默认为 0，这使堆能够根据需要增长。 请参阅[HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate)有关内存大小和标志的说明。  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  析构函数。  

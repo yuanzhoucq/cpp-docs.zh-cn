@@ -1,5 +1,5 @@
 ---
-title: ATL COM 属性页 |Microsoft 文档
+title: ATL COM 属性页 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357527"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571378"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 属性页
-COM 属性页提供用户界面来设置属性 （或调用方法） 的一个或多个 COM 对象。 属性页广泛使用由 ActiveX 控件提供丰富的用户界面，允许在设计时设置的控件属性。  
+COM 属性页来设置属性提供一个用户界面 （或调用的方法） 的一个或多个 COM 对象。 属性页会提供丰富的用户界面允许控件属性，以便在设计时设置的广泛使用的 ActiveX 控件。  
   
- 属性页是 COM 对象实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)或[IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)接口。 这些接口提供允许页后，可以与关联的方法`site`（表示页的容器的 COM 对象） 以及大量的*对象*（COM 对象，其方法将调用以响应更改用户所做的属性页）。 属性页容器负责以通知该页以显示或隐藏其用户界面，以及何时应用所做的更改由用户发起时对基础对象的属性页接口上调用方法。  
+ 属性页是 COM 对象实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)或[IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)接口。 这些接口提供方法，以便页后，可以与相关联`site`（表示页的容器的 COM 对象） 和大量*对象*（COM 对象的方法将调用以响应更改通过属性页的用户）。 属性页容器负责告诉页面时显示或隐藏其用户界面，以及何时将变更应用所做的用户对基础对象的属性页接口上调用方法。  
   
- 每个属性页可以独立于可以设置其属性的对象的完全生成。 所有这些属性页需求是以了解特定接口 （或组的接口） 并为该接口上调用方法提供用户界面。  
+ 每个属性页，可以完全独立于其属性可以设置的对象生成。 所有这些属性页需要是若要了解特定接口 （或组的接口） 并为该接口上调用方法提供用户界面。  
   
- 有关详细信息，请参阅[属性表和属性页](http://msdn.microsoft.com/library/windows/desktop/ms686577)中[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ 有关详细信息，请参阅[属性表和属性页](http://msdn.microsoft.com/library/windows/desktop/ms686577)Windows SDK 中。  
   
 ## <a name="in-this-section"></a>本节内容  
  [指定属性页](../atl/specifying-property-pages.md)  
- 列出用于指定你的控件的属性页的步骤，并显示一个示例类。  
+ 列出了用于指定您的控件的属性页的步骤，并显示一个示例类。  
   
  [属性页](../atl/implementing-property-pages.md)  
- 列出了实现属性页中，包括要重写方法的步骤。 指导你完成基于 ATLPages 示例程序的完整示例。  
+ 列出了用于实现属性页，其中包括要重写方法的步骤。 指导你完成基于 ATLPages 示例程序的完整示例。  
   
 ## <a name="related-sections"></a>相关章节  
  [ATLPages 示例](../visual-cpp-samples.md)  
- ATLPages 示例中，实现属性页使用示例抽象`IPropertyPageImpl`。  
+ ATLPages 示例中，实现属性页使用的示例抽象`IPropertyPageImpl`。  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。  

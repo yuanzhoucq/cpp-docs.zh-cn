@@ -38,15 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337237"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571928"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 类
-提供的实现[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)接口。  
+提供的实现[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -88,7 +88,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 在由指定的列 Id 标识的行集返回的列序号的数组。  
@@ -102,7 +102,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   

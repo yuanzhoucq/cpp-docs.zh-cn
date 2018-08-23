@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ce041b92a1e6d90089de1a68a89041f1d033e854
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338228"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572134"
 ---
 # <a name="crowset-class"></a>CRowset 类
 封装 OLE DB 行集对象和多个相关接口，并提供行集数据的操作方法。  
@@ -281,16 +281,16 @@ class CRowset
 |-|-|  
 |[AddRefRows](#addrefrows)|递增与当前行相关联的引用计数。|  
 |[关闭](#close)|释放行和当前`IRowset`接口。|  
-|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx)。|  
+|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))。|  
 |[CRowset](#crowset)|创建一个新`CRowset`对象，并 （可选） 将其与`IRowset`作为参数提供的接口。|  
-|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx)。|  
+|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))。|  
 |[FindNextRow](#findnextrow)|后指定的书签查找下一个匹配行。|  
 |[GetApproximatePosition](#getapproximateposition)|返回对应于一个书签的行的近似位置。|  
 |[GetData](#getdata)|从行的行集的副本检索数据。|  
 |[GetDataHere](#getdatahere)|从指定的缓冲区中检索数据。|  
 |[GetOriginalData](#getoriginaldata)|检索最近从提取或传输到数据源，忽略挂起的更改的数据。|  
 |[GetRowStatus](#getrowstatus)|返回的所有行的状态。|  
-|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](https://msdn.microsoft.com/library/ms716921.aspx)。|  
+|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\))。|  
 |[IsSameRow](#issamerow)|将指定的行与当前行进行比较。|  
 |[MoveFirst](#movefirst)|将下一步提取位置重新定位到的初始位置。|  
 |[MoveLast](#movelast)|将移动到最后一个记录。|  
@@ -298,8 +298,8 @@ class CRowset
 |[MovePrev](#moveprev)|移动到上一条记录。|  
 |[MoveToBookmark](#movetobookmark)|从该书签提取用书签标记的行或指定的偏移量处的行。|  
 |[MoveToRatio](#movetoratio)|提取从行集中的小数位置开始的行。|  
-|[ReleaseRows](#releaserows)|调用[irowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx)释放当前的行句柄。|  
-|[SetData](#setdata)|设置行使用的一个或多个列中数据值[IRowsetChange:SetData](https://msdn.microsoft.com/library/ms721232.aspx)。|  
+|[ReleaseRows](#releaserows)|调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))释放当前的行句柄。|  
+|[SetData](#setdata)|设置行使用的一个或多个列中数据值[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\))。|  
 |[撤消](#undo)|撤消自上次提取的行所做任何更改或[更新](../../data/oledb/crowset-update.md)。|  
 |[更新](#update)|传输所有挂起的自上次提取或更新后对当前行所做的更改。|  
 |[UpdateAll](#updateall)|将任何挂起的更改自上次提取或更新后对所有行进行传输。|  
@@ -310,7 +310,7 @@ class CRowset
  此类不是为了进行实例化传递，但作为模板参数`CTable`或`CCommand`(`CRowset`是默认值)。  
 
 ## <a name="addrefrows"></a> Crowset:: Addrefrows
-调用[irowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.aspx)增加 （1) 的引用计数与相关联的当前行句柄。  
+调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))增加 （1) 的引用计数与相关联的当前行句柄。  
   
 ### <a name="syntax"></a>语法  
   
@@ -325,7 +325,7 @@ HRESULT AddRefRows() throw();
  此方法递增当前行句柄的引用计数。 调用[ReleaseRows](../../data/oledb/crowset-releaserows.md)要递减计数。 移动方法返回的行具有引用计数之一。  
 
 ## <a name="close"></a> Crowset:: Close
-释放行和当前[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)接口。  
+释放行和当前[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))接口。  
   
 ### <a name="syntax"></a>语法  
   
@@ -337,7 +337,7 @@ void Close() throw();
  此方法释放行集合中当前包含的所有行。  
 
 ## <a name="compare"></a> Crowset:: Compare
-比较两个创建一个书签，使用[IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx)。  
+比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\))。  
   
 ### <a name="syntax"></a>语法  
   
@@ -366,7 +366,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
  有关在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。  
 
 ## <a name="crowset"></a> Crowset:: Crowset
-创建一个新`CRowset`对象，并 （可选） 将其与[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)作为参数提供的接口。  
+创建一个新`CRowset`对象，并 （可选） 将其与[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))作为参数提供的接口。  
   
 ### <a name="syntax"></a>语法  
   
@@ -381,7 +381,7 @@ CRowset(IRowset* pRowset);
  [in] 指向将与此类关联的 `IRowset` 接口的指针。  
 
 ## <a name="delete"></a> Crowset:: Delete
-调用[IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx)从行集中删除当前行。  
+调用[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))从行集中删除当前行。  
   
 ### <a name="syntax"></a>语法  
   
@@ -410,22 +410,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
   
 #### <a name="parameters"></a>参数  
  *操作*  
- [in]要在比较行值中使用的操作。 值，请参阅[irowsetfind:: Findnextrow](https://msdn.microsoft.com/library/ms723091.aspx)。  
+ [in]要在比较行值中使用的操作。 值，请参阅[irowsetfind:: Findnextrow](/previous-versions/windows/desktop/ms723091\(v=vs.85\))。  
   
  *pData*  
  [in]指向要匹配的值的指针。  
   
  *wType*  
- [in]指示数据类型的缓冲区的值部分。 有关类型指示符的信息，请参阅[数据类型](https://msdn.microsoft.com/library/ms723969.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ [in]指示数据类型的缓冲区的值部分。 有关类型指示符的信息，请参阅[数据类型](/previous-versions/windows/desktop/ms723969\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
   
  *nLength*  
- [in]使用者数据结构分配数据值的长度 （字节）。 有关详细信息，请参阅的说明`cbMaxLen`中[DBBINDING 结构](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考。*  
+ [in]使用者数据结构分配数据值的长度 （字节）。 有关详细信息，请参阅的说明`cbMaxLen`中[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考。*  
   
  *bPrecision*  
- [in]使用获取数据时的最大精度。 使用仅当*wType*是 DBTYPE_NUMERIC。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx)中*OLE DB 程序员参考*。  
+ [in]使用获取数据时的最大精度。 使用仅当*wType*是 DBTYPE_NUMERIC。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *bScale*  
- [in]获取数据时，使用小数位数。 使用仅当*wType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx)中*OLE DB 程序员参考*。  
+ [in]获取数据时，使用小数位数。 使用仅当*wType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *bSkipCurrent*  
  [in]从其开始搜索的书签的行数。  
@@ -596,7 +596,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
  [in]要与当前行进行比较的行句柄。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。 则为 S_OK，指示行相同。 其他值，请参阅[IRowsetIndentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ 标准的 HRESULT。 则为 S_OK，指示行相同。 其他值，请参阅[IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
 
 ## <a name="movefirst"></a> Crowset:: Movefirst
 将光标移到初始位置，并检索初始行。  
@@ -611,7 +611,7 @@ HRESULT MoveFirst() throw();
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[irowset:: Restartposition](https://msdn.microsoft.com/library/ms712877.aspx)来重新定位的初始位置 （行集创建时的下一步提取位置的位置） 的下一步提取位置，并检索初始行。  
+ 调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))来重新定位的初始位置 （行集创建时的下一步提取位置的位置） 的下一步提取位置，并检索初始行。  
 
 ## <a name="movelast"></a> Crowset:: Movelast
 将光标移到最后一行。  
@@ -626,7 +626,7 @@ HRESULT MoveLast() throw();
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[irowset:: Restartposition](https://msdn.microsoft.com/library/ms712877.aspx)若要重新定位的下一步提取位置到最后一个位置，并检索最后一行。  
+ 调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))若要重新定位的下一步提取位置到最后一个位置，并检索最后一行。  
   
  此方法要求您设置`DBPROP_CANSCROLLBACKWARDS`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。 (为提高性能，你可能还要设置`DBPROP_QUICKRESTART`为 VARIANT_TRUE。)  
 
@@ -731,12 +731,12 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll::](https://msdn.microsoft.com/library/ms709602.aspx)。  
+ 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll::](/previous-versions/windows/desktop/ms709602\(v=vs.85\))。  
   
  此方法需要的可选接口`IRowsetScroll`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetScroll`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。  
 
 ## <a name="releaserows"></a> Crowset:: Releaserows
-调用[irowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx)释放当前的行句柄。  
+调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))释放当前的行句柄。  
   
 ### <a name="syntax"></a>语法  
   

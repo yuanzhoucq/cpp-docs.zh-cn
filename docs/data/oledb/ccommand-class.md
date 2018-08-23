@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 74cabc19dd21be78771fba177758131d13c8794d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1e5afa183721ced8fec4b6a8bfc2f27193a95fbe
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338358"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571941"
 ---
 # <a name="ccommand-class"></a>CCommand 类
 提供设置和执行命令的方法。  
@@ -90,7 +90,7 @@ class CCommand :
  您希望命令使用的行集类的类型（如 `CArrayRowset` 或 `CNoRowset`）。 默认值为 `CRowset`。  
   
  *TMultiple*  
- 若要使用 OLE DB 命令可以返回多个结果，指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否则，请使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 有关详细信息，请参阅[IMultipleResults](https://msdn.microsoft.com/library/ms721289.aspx)。  
+ 若要使用 OLE DB 命令可以返回多个结果，指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否则，请使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 有关详细信息，请参阅[IMultipleResults](/previous-versions/windows/desktop/ms721289\(v=vs.85\))。  
 
 ## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
@@ -211,13 +211,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
  [in]在其中执行命令会话。  
   
  *wszCommand*  
- [in]若要执行，该命令传递为 Unicode 字符串。 使用时，可以为 NULL `CAccessor`，在这种情况下该命令将检索传递给的值从[DEFINE_COMMAND](../../data/oledb/define-command.md)宏。 请参阅[icommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ [in]若要执行，该命令传递为 Unicode 字符串。 使用时，可以为 NULL `CAccessor`，在这种情况下该命令将检索传递给的值从[DEFINE_COMMAND](../../data/oledb/define-command.md)宏。 请参阅[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
  *szCommand*  
  [in]与相同*wszCommand*只不过此参数采用 ANSI 命令字符串。 此方法的第四个窗体可以采用 NULL 值。 有关详细信息的本主题中的更高版本，请参阅"备注"。  
   
  *pPropSet*  
- [in]指向数组的指针[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构包含要设置属性和值。 请参阅[属性设置和属性组](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
   
  *pRowsAffected*  
  [输入/输出]指向内存位置返回受命令影响的行数的指针。 如果 *\*pRowsAffected*为 NULL，会返回任何行。 否则为`Open`设置 *\*pRowsAffected*根据以下条件：  
@@ -229,13 +229,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |该命令不会更新、 删除或插入行|*\*pRowsAffected*是不确定的。|  
   
  *guidCommand*  
- [in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 请参阅[ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx)并[icommandtext:: Setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ [in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))并[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
  *bBind*  
  [in]指定是否正在执行后自动绑定命令。 默认值是 **，则返回 true**，这将导致自动绑定的命令。 设置*bBind*到**false**可防止自动绑定命令，以便您可以手动绑定。 （手动绑定是 OLAP 用户特别关注。）  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构传入*pPropSet*参数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -255,7 +255,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 >  `Open` 调用`Execute`，从而又会调用`GetNextResult`。 
 
 ## <a name="create"></a> Ccommand:: Create
-调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)命令创建为指定的会话，然后调用[icommandtext:: Setcommandtext](https://msdn.microsoft.com/library/ms709825.aspx)指定的命令文本。  
+调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)命令创建为指定的会话，然后调用[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709825\(v=vs.85\))指定的命令文本。  
   
 ### <a name="syntax"></a>语法  
   
@@ -280,7 +280,7 @@ HRESULT CCommandBase::Create(const CSession& session,
  [in]ANSI 的文本命令字符串的指针。  
   
  *guidCommand*  
- [in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 本地语言的说明，请参阅[ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx)中*OLE DB 程序员参考*。  
+ [in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 本地语言的说明，请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -319,7 +319,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandwithparameters:: Getparameterinfo](https://msdn.microsoft.com/library/ms714917.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[icommandwithparameters:: Getparameterinfo](/previous-versions/windows/desktop/ms714917\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。   
@@ -341,7 +341,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法将 OLE DB 方法包装[icommandprepare:: Prepare](https://msdn.microsoft.com/library/ms718370.aspx)。  
+ 此方法将 OLE DB 方法包装[icommandprepare:: Prepare](/previous-versions/windows/desktop/ms718370\(v=vs.85\))。  
 
 ## <a name="releasecommand"></a> Ccommand:: Releasecommand
 释放参数访问器，然后释放命令本身。  
@@ -367,7 +367,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandwithparameters:: Setparameterinfo](https://msdn.microsoft.com/library/ms725393.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[icommandwithparameters:: Setparameterinfo](/previous-versions/windows/desktop/ms725393\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -385,7 +385,7 @@ HRESULT CCommandBase::Unprepare() throw();
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法将 OLE DB 方法包装[icommandprepare:: Unprepare](https://msdn.microsoft.com/library/ms719635.aspx)。 
+ 此方法将 OLE DB 方法包装[icommandprepare:: Unprepare](/previous-versions/windows/desktop/ms719635\(v=vs.85\))。 
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
