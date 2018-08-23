@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641110"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591103"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member 数据成员
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-int Member;  
-```  
-  
-## <a name="remarks"></a>备注  
- 指定的[ComPtr](../windows/comptr-class.md) ，或不管理接口的对象生存期。  
-  
-## <a name="requirements"></a>要求  
- **标头：** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [BoolStruct 结构](../windows/boolstruct-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+int Member;
+```
+
+## <a name="remarks"></a>备注
+
+指定的[ComPtr](../windows/comptr-class.md) ，或不管理接口的对象生存期。
+
+## <a name="requirements"></a>要求
+
+**标头：** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[BoolStruct 结构](../windows/boolstruct-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

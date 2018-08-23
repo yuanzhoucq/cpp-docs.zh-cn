@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404920"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572820"
 ---
 # <a name="bstrt-class"></a>_bstr_t 类
 **Microsoft 专用**  
   
- 一个`_bstr_t`对象将封装[BSTR 数据类型](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)。 类管理资源分配和解除分配，通过对函数调用`SysAllocString`并`SysFreeString`和其他`BSTR`Api 在适当的时候。 **_Bstr_t**类使用引用计数来避免开销过大。  
+ 一个`_bstr_t`对象将封装[BSTR 数据类型](/previous-versions/windows/desktop/automat/bstr)。 类管理资源分配和解除分配，通过对函数调用`SysAllocString`并`SysFreeString`和其他`BSTR`Api 在适当的时候。 **_Bstr_t**类使用引用计数来避免开销过大。  
   
 ### <a name="construction"></a>构造  
   

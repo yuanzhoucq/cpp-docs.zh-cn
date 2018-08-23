@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604641"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper 构造函数
-初始化的新实例**RoInitializeWrapper**类。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+初始化的新实例**RoInitializeWrapper**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-### <a name="parameters"></a>参数  
- *flags*  
- RO_INIT_TYPE 枚举，指定 Windows 运行时提供的支持之一。  
-  
-## <a name="remarks"></a>备注  
- **RoInitializeWrapper**类调用`Windows::Foundation::Initialize(flags)`。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*flags*  
+RO_INIT_TYPE 枚举，指定 Windows 运行时提供的支持之一。
+
+## <a name="remarks"></a>备注
+
+**RoInitializeWrapper**类调用`Windows::Foundation::Initialize(flags)`。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

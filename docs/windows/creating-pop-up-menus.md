@@ -20,34 +20,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 878f7b31d98a26a76b8466e7a93cd3d165ed145f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648069"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583452"
 ---
 # <a name="creating-pop-up-menus"></a>创建弹出菜单
-[弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。  
-  
- 创建菜单资源后，应用程序代码需要加载该菜单资源，并使用 [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) 显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。  
-  
-### <a name="to-create-a-pop-up-menu"></a>创建弹出菜单  
-  
-1.  使用空标题（不提供[标题](../windows/creating-a-menu.md) ） **创建菜单**。  
-  
-2.  [将菜单命令添加到新菜单](../windows/adding-commands-to-a-menu.md)。 将移动到空白菜单标题下的第一个菜单命令 (临时标题显示`Type Here`)。 键入 **标题** 和任何其他信息。  
-  
-     对弹出菜单中的任何其他菜单命令重复此过程。  
-  
-3.  保存菜单资源。  
-  
-    > [!TIP]
-    >  有关查看弹出菜单的详细信息，请参阅 [以弹出菜单方式查看菜单](../windows/viewing-a-menu-as-a-pop-up-menu.md)。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [弹出菜单连接到你的应用程序](../windows/connecting-a-pop-up-menu-to-your-application.md)   
- [菜单编辑器](../windows/menu-editor.md)
+
+[弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。
+
+创建菜单资源后，应用程序代码需要加载该菜单资源，并使用 [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) 显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。
+
+### <a name="to-create-a-pop-up-menu"></a>创建弹出菜单
+
+1. 使用空标题（不提供[标题](../windows/creating-a-menu.md) ） **创建菜单**。
+
+2. [将菜单命令添加到新菜单](../windows/adding-commands-to-a-menu.md)。 将移动到空白菜单标题下的第一个菜单命令 (临时标题显示`Type Here`)。 键入 **标题** 和任何其他信息。
+
+   对弹出菜单中的任何其他菜单命令重复此过程。
+
+3. 保存菜单资源。
+
+   > [!TIP]
+   > 有关查看弹出菜单的详细信息，请参阅 [以弹出菜单方式查看菜单](../windows/viewing-a-menu-as-a-pop-up-menu.md)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[将弹出菜单连接到应用程序](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+[菜单编辑器](../windows/menu-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: __readpmc |Microsoft 文档
+title: __readpmc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333786"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541387"
 ---
 # <a name="readpmc"></a>__readpmc
 **Microsoft 专用**  
   
- 生成`rdpmc`指令，读取性能监视由指定的计数器`counter`。  
+ 将生成`rdpmc`指令，读取性能监视计数器指定`counter`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,12 +49,12 @@ unsigned __int64 __readpmc(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 此内部函数是在仅限，内核模式中可用，例程仅可用作内部函数。  
+ 此内部函数现已推出，内核模式且例程仅用作内部函数。  
   
 **结束 Microsoft 专用**  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377618"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572454"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 指定可执行映像需要的执行环境。  
@@ -40,7 +40,7 @@ ms.locfileid: "32377618"
  可以指定以下任何子系统：  
   
  BOOT_APPLICATION  
- 在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[有关的 BCD WMI 提供程序](http://msdn.microsoft.com/library/aa362639.aspx)。  
+ 在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[关于 BCD WMI 提供程序](/previous-versions/windows/desktop/bcd/about-bcd)。  
   
  CONSOLE  
  Windows 字符模式应用程序。 操作系统提供为控制台应用程序提供控制台。  
@@ -70,7 +70,7 @@ ms.locfileid: "32377618"
   
  子系统的选择会影响程序的默认开始地址。 有关详细信息，请参阅[/ENTRY （入口点符号）](../../build/reference/entry-entry-point-symbol.md)，链接器 /ENTRY:*函数*选项。  
   
- 有关详细信息，包括的每个子系统的主版本号和次版本号的最小值和默认值，请参阅[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)链接器选项。  
+ 有关详细信息，包括为每个子系统的主版本号和次版本号的最小值和默认值，请参阅[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)链接器选项。  
   
 ## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

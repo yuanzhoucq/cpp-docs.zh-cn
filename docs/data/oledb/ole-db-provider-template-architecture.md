@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2ce756cbeae87c33ec612b8c2665f27249e9ecf7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e4170e2089cbfc584c5832e4a1a0542f360741c5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339934"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571763"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供程序模板体系结构
 ## <a name="data-sources-and-sessions"></a>数据源和会话  
@@ -47,7 +47,7 @@ ms.locfileid: "39339934"
   
  请注意，OLE DB 提供程序模板不实现行和存储对象。  
   
- 下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](https://msdn.microsoft.com/library/ms722784.aspx)。  
+ 下表列出了必需和可选接口，上面列出的对象根据[OLE DB 2.6 SDK 文档](/previous-versions/windows/desktop/ms722784\(v=vs.85\))。  
   
 |组件|接口|注释|  
 |---------------|---------------|-------------|  
@@ -65,4 +65,4 @@ ms.locfileid: "39339934"
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 接口](https://msdn.microsoft.com/library/ms709709.aspx)
+ [OLE DB 接口](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

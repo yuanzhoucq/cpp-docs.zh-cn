@@ -1,5 +1,5 @@
 ---
-title: 值类和结构 (C + + /cli CX) |Microsoft 文档
+title: 值类和结构 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090707"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589051"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
-A*值结构*或*值类*是一个 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。  
+一个*值结构*或*值类*是 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。  
   
  下面的示例演示如何声明和初始化值结构。  
   
@@ -59,7 +59,7 @@ A*值结构*或*值类*是一个 Windows 运行时兼容的 POD （"纯旧数据
   
   值类则类似于 `value struct` ，只不过必须为其字段显式给定公共可访问性。 使用 `value class` 关键字来声明它。  
   
- 值结构或值类只能作为字段基本数值类型、 枚举类、 包含`Platform::String^`，或[platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md)其中 T 是数值类型或枚举类或是值类或结构。 `IBox<T>^` 字段的值可以是 `nullptr`，这是 C++ 实现 “可以为 null 的值类型”概念的方式。  
+ 值结构或值类只能作为字段仅基本数值类型、 枚举类，包含`Platform::String^`，或[platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md)其中 T 是数值类型或枚举类或是值类或结构。 `IBox<T>^` 字段的值可以是 `nullptr`，这是 C++ 实现 “可以为 null 的值类型”概念的方式。  
   
  将 `Platform::String^` 或 `IBox<T>^` 类型作为成员包含在内的值类型或结构不支持 `memcpy`。  
   

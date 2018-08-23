@@ -1,5 +1,5 @@
 ---
-title: 作为用户组的成员运行 |Microsoft 文档
+title: 用户组的成员身份运行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841655"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586317"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>作为用户组的成员运行
 本主题说明将 Windows 用户帐户配置为用户组（与管理员组相对）的成员如何通过减少受恶意代码感染的机会来增强安全性。  
@@ -36,7 +36,7 @@ ms.locfileid: "33841655"
  作为管理员运行使您的系统很容易受到几种类型的安全攻击，如“木马”和“缓冲区溢出”。 仅作为管理员访问 Internet 站点可能会损坏系统，因为从 Internet 站点下载的恶意代码可能攻击你的计算机。 如果攻击成功，则继承您的管理员权限，然后可以执行诸如删除所有文件、重新格式化硬盘以及创建具有管理员访问权限的新用户帐户等操作。  
   
 ## <a name="non-administrator-user-groups"></a>非管理员用户组  
- 应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，您可以执行例程任务，包括在使您的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，Windows **runas**命令可以用于启动具有管理访问权限的特定应用程序。  
+ 应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，您可以执行例程任务，包括在使您的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，Windows **runas**命令可用于启动具有管理访问权限的特定应用程序。  
   
 ## <a name="exposing-customers-to-security-risks"></a>向客户公开安全风险  
  不作为管理员组的一部分对于开发人员来说尤其重要，除保护开发的计算机外，还防止开发人员因疏忽而编写了要求客户加入管理员组以执行所开发的应用程序的代码。 如果开发过程中引入需要管理员访问权限的代码，它将在运行时失败，并将应用程序现在需要客户作为管理员运行这一事实通知您。  

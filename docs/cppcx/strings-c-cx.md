@@ -1,23 +1,23 @@
 ---
-title: 字符串 (C + + /cli CX) |Microsoft 文档
+title: 字符串 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092465"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592464"
 ---
 # <a name="strings-ccx"></a>字符串 (C++/CX)
-Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`时将字符串传递来回方法在 Windows 运行时类中，或与其他 Windows 运行时组件跨应用程序二进制接口 (ABI) 边界的进行交互时。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。  
+Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`或与其他 Windows 运行时组件交互跨应用程序二进制接口 (ABI) 边界时将字符串传递来回 Windows 运行时类中的方法。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。  
   
  **快速传递**  
   
@@ -40,7 +40,7 @@ Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string �
  [!code-cpp[cx_strings#03](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#03)]  
   
 ## <a name="string-conversions"></a>字符串转换  
- `Platform::String` 中只能包含 `char16` 字符或 `NULL` 字符。 如果你的应用程序必须使用 8 位字符，则使用[string:: data](../cppcx/platform-string-class.md#data)提取文本作为`const wchar_t*`。 然后，您可以使用适当的 Windows 函数或标准库函数对数据进行操作并将其转换回 `wchar_t*` 或 [wstring](../standard-library/basic-string-class.md)（用于构造新的 `Platform::String`表示。  
+ `Platform::String` 中只能包含 `char16` 字符或 `NULL` 字符。 如果你的应用程序必须使用 8 位字符，使用[string:: data](../cppcx/platform-string-class.md#data)若要将文本提取为`const wchar_t*`。 然后，您可以使用适当的 Windows 函数或标准库函数对数据进行操作并将其转换回 `wchar_t*` 或 [wstring](../standard-library/basic-string-class.md)（用于构造新的 `Platform::String`表示。  
   
  下面的代码片段演示 `String^` 变量和 `wstring` 变量间如何相互转换。 有关此示例中使用的字符串操作的更多信息，请参见 [basic_string::replace](../standard-library/basic-string-class.md#replace)。  
   
@@ -52,7 +52,7 @@ Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string �
  `Platform::String` 可以包含嵌入的 NULL 值，但前提是 NULL 必须为串联运算的结果。 字符串文本中不支持嵌入的 NULL，因此，不能以这种方式使用嵌入的 NULL 初始化 `Platform::String`。 在显示该字符串时（例如，将字符串分配给 `Platform::String` 属性时），将忽略 `TextBlock::Text` 中嵌入的 NULL 值。 当字符串值由 `Data` 属性返回时，将删除嵌入的 NULL。  
   
 ## <a name="stringreference"></a>StringReference  
- 在某些情况下代码 (a) 接收 std:: wstring、 wchar_t 字符串或 L""字符串文本，并直接将其传递到另一个方法采用 String ^ 作为输入参数。 只要原始字符串缓冲区本身在函数返回之前保持有效且不发生变化，则可以将 `wchar_t*` 字符串或字符串文本转换为 [Platform::StringReference](../cppcx/platform-stringreference-class.md)，然后将其代替 `Platform::String^`传入。 之所以允许这样做，是因为 `StringReference` 具有用户定义的到 `Platform::String^`的转换。 通过使用 `StringReference` ，可避免创建字符串数据的额外副本。 在传递大量字符串的循环中或传递非常大的字符串时，可通过使用 `StringReference`显著提高潜在性能。 但是，由于 `StringReference` 实质上是借用原始字符串缓冲区，因此必须格外小心，以免损坏内存。 不应将 `StringReference` 传递给异步方法，除非可以保证原始字符串在该方法返回时处于范围之内。 如果发生第二个记录分配操作，从 StringReference 初始化的 String^ 将强制分配和复制字符串数据。 在此情况下， `StringReference`的性能优势将丧失。  
+ 在某些情况下，代码 (a) 接收 std:: wstring、 wchar_t 字符串或 L""字符串文本，并直接将其传递到另一个方法采用字符串 ^ 作为输入参数。 只要原始字符串缓冲区本身在函数返回之前保持有效且不发生变化，则可以将 `wchar_t*` 字符串或字符串文本转换为 [Platform::StringReference](../cppcx/platform-stringreference-class.md)，然后将其代替 `Platform::String^`传入。 之所以允许这样做，是因为 `StringReference` 具有用户定义的到 `Platform::String^`的转换。 通过使用 `StringReference` ，可避免创建字符串数据的额外副本。 在传递大量字符串的循环中或传递非常大的字符串时，可通过使用 `StringReference`显著提高潜在性能。 但是，由于 `StringReference` 实质上是借用原始字符串缓冲区，因此必须格外小心，以免损坏内存。 不应将 `StringReference` 传递给异步方法，除非可以保证原始字符串在该方法返回时处于范围之内。 如果发生第二个记录分配操作，从 StringReference 初始化的 String^ 将强制分配和复制字符串数据。 在此情况下， `StringReference`的性能优势将丧失。  
   
  请注意， `StringReference` 是标准的 C++ 类类型，而非 ref 类，不能用于您定义的 ref 类的公共接口。  
   

@@ -1,5 +1,5 @@
 ---
-title: 优化 |Microsoft 文档
+title: 优化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff0e4cc40bfa0e355f348c02f01cb0c7445b596
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8222d909ad23157b4e3ed32a6920abadd77709b6
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849244"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538984"
 ---
 # <a name="optimize"></a>optimize
 指定要对每个函数执行的优化。  
@@ -31,34 +31,34 @@ ms.locfileid: "33849244"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 #pragma optimize( "[optimization-list]", {on | off} )  
 ```  
   
 ## <a name="remarks"></a>备注  
- **优化**杂注必须显示在函数的外部，并在杂注显示后定义的第一个函数处生效。 **上**和**关闭**参数中指定的选项将打开*优化列表*打开或关闭。  
+
+**优化**杂注必须出现在函数的外部，并定义杂注后的第一个函数处生效。 *上*并*off*参数打开选项中指定*优化列表*打开或关闭。  
   
- *优化列表*可以为零个或多个下表中所示的参数。  
+*优化列表*可以是零个或多个表所示的参数。  
   
 ### <a name="parameters-of-the-optimize-pragma"></a>optimize 杂注的参数  
   
 |参数|优化的类型|  
 |--------------------|--------------------------|  
-|**g**|启用全局优化。|  
-|**s**或**t**|指定机器代码的短或快速序列。|  
-|**y**|在程序堆栈上生成帧指针。|  
+|*g*|启用全局优化。|  
+|*s*或*t*|指定机器代码的短或快速序列。|  
+|*y*|在程序堆栈上生成帧指针。|  
   
- 这些是与使用的相同字母[/O](../build/reference/o-options-optimize-code.md)编译器选项。 例如，以下杂注等效于 **/Os**编译器选项：  
+这些是与一起使用的相同字母[/O](../build/reference/o-options-optimize-code.md)编译器选项。 例如，以下杂注等效于 `/Os` 编译器选项：  
   
 ```  
 #pragma optimize( "ts", on )  
 ```  
   
- 使用**优化**杂注和空字符串 (**""**) 是指令的特殊形式：  
+使用**优化**杂注和空字符串 (**""**) 是指令的特殊形式：  
   
- 当你使用**关闭**参数，它会关闭本主题前面的表中列出的优化。  
+当你使用*关闭*参数，它会关闭本主题前面的表中列出的优化。  
   
- 当你使用**上**参数，它将重置优化为使用指定的那些[/O](../build/reference/o-options-optimize-code.md)编译器选项。  
+当你使用*上*参数，它会重置优化为使用指定的[/O](../build/reference/o-options-optimize-code.md)编译器选项。  
   
 ```  
 #pragma optimize( "", off )  
@@ -69,4 +69,5 @@ ms.locfileid: "33849244"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

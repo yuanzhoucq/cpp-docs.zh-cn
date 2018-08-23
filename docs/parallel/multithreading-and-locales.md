@@ -1,5 +1,5 @@
 ---
-title: 多线程处理和区域设置 |Microsoft 文档
+title: 多线程处理和区域设置 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692849"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541726"
 ---
 # <a name="multithreading-and-locales"></a>多线程和区域设置
-C 运行库和 c + + 标准库为更改程序的区域设置中提供支持。 本主题讨论在使用这两个库中的多线程应用程序的区域设置功能时出现的问题。  
+C 运行时库和 c + + 标准库更改您的程序的区域设置提供支持。 本主题讨论使用这两个库中的多线程应用程序的区域设置功能时出现的问题。  
   
 ## <a name="remarks"></a>备注  
- 使用 C 运行时库，你可以创建多线程应用程序使用`_beginthread`和`_beginthreadex`函数。 本主题仅介绍创建使用这些函数的多线程应用程序。 有关详细信息，请参阅[_beginthread、 _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)。  
+
+使用 C 运行时库，可以创建使用多线程应用程序`_beginthread`和`_beginthreadex`函数。 本主题仅介绍使用这些函数创建的多线程应用程序。 有关详细信息，请参阅[_beginthread、 _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)。  
   
- 若要更改使用 C 运行时库的区域设置，请使用[setlocale](../preprocessor/setlocale.md)函数。 在以前版本的 Visual c + + 中，此函数将始终修改整个应用程序的区域设置。 这是用于设置基于每个线程的区域设置现在支持。 这是使用[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)函数。 若要指定[setlocale](../preprocessor/setlocale.md) ，才应该更改当前线程调用中的区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`在该线程中。 相反，调用`_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`将导致该线程使用全局区域设置，并对任何调用[setlocale](../preprocessor/setlocale.md)在于线程将更改中尚未显式启用每个线程区域设置的所有线程的区域设置。  
+若要更改使用 C 运行时库的区域设置，请使用[setlocale](../preprocessor/setlocale.md)函数。 在以前版本的 Visual c + + 中，此函数始终会修改整个应用程序中的区域设置。 没有用于设置针对每个线程区域设置现在支持。 这是使用[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)函数。 若要指定的[setlocale](../preprocessor/setlocale.md)才应更改当前线程调用中的区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`该线程中。 相反，调用`_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`该线程使用全局区域设置，以及对任何调用将导致[setlocale](../preprocessor/setlocale.md) ，线程将更改尚未显式启用每个线程区域设置的所有线程的区域设置。  
   
- 若要更改使用 c + + 运行时库的区域设置，请使用[区域设置类](../standard-library/locale-class.md)。 通过调用[locale:: global](../standard-library/locale-class.md#global)方法，可以更改在未显式启用每个线程区域设置的每个线程的区域设置。 若要更改在单个线程或应用程序的部分中的区域设置，只需创建的实例`locale`该线程或代码部分中的对象。  
+若要更改使用 c + + 运行时库的区域设置，请使用[locale 类](../standard-library/locale-class.md)。 通过调用[locale:: global](../standard-library/locale-class.md#global)方法，可以更改未显式启用每个线程区域设置的每个线程的区域设置。 若要更改单个线程或应用程序的一部分的区域设置，只需创建的实例`locale`该线程或代码部分中的对象。  
   
 > [!NOTE]
->  调用[locale:: global](../standard-library/locale-class.md#global)对 c + + 标准库和 C 运行库的更改区域设置。 但是，调用[setlocale](../preprocessor/setlocale.md)仅更改区域设置为 c + + 标准库; C 运行时库不受影响。  
+> 调用[locale:: global](../standard-library/locale-class.md#global)对 c + + 标准库和 C 运行时库的更改区域设置。 但是，调用[setlocale](../preprocessor/setlocale.md)仅更改区域设置的 c + + 标准库; C 运行时库不会受到影响。  
   
- 下面的示例演示如何使用[setlocale](../preprocessor/setlocale.md)函数，[区域设置类](../standard-library/locale-class.md)，和[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)函数更改中的应用程序的区域设置多种不同方案。  
+下面的示例演示如何使用[setlocale](../preprocessor/setlocale.md)函数， [locale 类](../standard-library/locale-class.md)，并[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)函数更改中的应用程序的区域设置多个不同的方案。  
   
 ## <a name="example"></a>示例  
- 在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，使每个线程区域设置，通过调用`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程中，不要启用每个线程区域设置。 然后 A 继续更改区域设置使用的线程[setlocale](../preprocessor/setlocale.md) C 运行库函数。  
+ 
+在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，通过调用允许每个线程区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程，则不要启用每个线程区域设置。 然后继续进行，若要更改区域设置使用的线程[setlocale](../preprocessor/setlocale.md) C 运行时库函数。  
   
- 由于线程 A 了每个线程区域设置启用，仅线程 A 开始使用"法语"区域设置中的 C 运行库函数。 C 运行时库函数和线程 B 中的主线程继续使用"C"区域设置。 此外，由于[setlocale](../preprocessor/setlocale.md)不会影响 c + + 标准库区域设置时，所有 c + + 标准库对象可继续使用"C"区域设置。  
+由于线程 A 了每个线程区域设置已启用，仅在线程 A 入门中使用"法国"区域设置的 C 运行时库函数。 C 运行时库函数线程 B 中和在主线程继续使用"C"区域设置。 此外，由于[setlocale](../preprocessor/setlocale.md)不会影响 c + + 标准库区域设置，继续使用"C"区域设置对象的所有 c + + 标准库。  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -138,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>示例  
- 在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，使每个线程区域设置，通过调用`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程中，不要启用每个线程区域设置。 然后 A 继续更改区域设置使用的线程[locale:: global](../standard-library/locale-class.md#global) c + + 标准库的方法。  
+ 
+在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，通过调用允许每个线程区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程，则不要启用每个线程区域设置。 然后继续进行，若要更改区域设置使用的线程[locale:: global](../standard-library/locale-class.md#global) c + + 标准库的方法。  
   
- 由于线程 A 了每个线程区域设置启用，仅线程 A 开始使用"法语"区域设置中的 C 运行库函数。 C 运行时库函数和线程 B 中的主线程继续使用"C"区域设置。 但是，由于[locale:: global](../standard-library/locale-class.md#global)方法"全局"更改区域设置，所有线程中的所有 c + + 标准库对象开始使用"法语"区域设置。  
+由于线程 A 了每个线程区域设置已启用，仅在线程 A 入门中使用"法国"区域设置的 C 运行时库函数。 C 运行时库函数线程 B 中和在主线程继续使用"C"区域设置。 但是，由于[locale:: global](../standard-library/locale-class.md#global)方法"全局"更改区域设置，所有线程中的所有 c + + 标准库对象开始使用"法国"区域设置。  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -236,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>示例  
- 在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，使每个线程区域设置，通过调用`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程中，不要启用每个线程区域设置。 线程 B，然后继续进行，若要更改区域设置使用[setlocale](../preprocessor/setlocale.md) C 运行库函数。  
+ 
+在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，通过调用允许每个线程区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程，则不要启用每个线程区域设置。 线程 B，然后继续进行，若要更改区域设置使用[setlocale](../preprocessor/setlocale.md) C 运行时库函数。  
   
- 由于线程 B 没有启用的每个线程区域设置，C 运行时库函数和线程 B 中的主线程开始使用"法语"区域设置。 线程 A 继续使用"C"区域设置，因为线程 A 已启用的每个线程区域设置中的 C 运行库函数。 此外，由于[setlocale](../preprocessor/setlocale.md)不会影响 c + + 标准库区域设置时，所有 c + + 标准库对象可继续使用"C"区域设置。  
+由于线程 B 没有启用的每个线程区域设置，C 运行时库函数线程 B 以及主线程中开始使用"法语"区域设置。 线程 A 继续使用"C"区域设置，因为线程 A 已启用的每个线程区域设置中的 C 运行时库函数。 此外，由于[setlocale](../preprocessor/setlocale.md)不会影响 c + + 标准库区域设置，继续使用"C"区域设置对象的所有 c + + 标准库。  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -338,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>示例  
- 在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，使每个线程区域设置，通过调用`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程中，不要启用每个线程区域设置。 线程 B，然后继续进行，若要更改区域设置使用[locale:: global](../standard-library/locale-class.md#global) c + + 标准库的方法。  
+ 
+在此示例中，主线程将生成两个子线程。 第一个线程，线程 A，通过调用允许每个线程区域设置`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`。 第二个线程、 线程 B，以及主线程，则不要启用每个线程区域设置。 线程 B，然后继续进行，若要更改区域设置使用[locale:: global](../standard-library/locale-class.md#global) c + + 标准库的方法。  
   
- 由于线程 B 没有启用的每个线程区域设置，C 运行时库函数和线程 B 中的主线程开始使用"法语"区域设置。 线程 A 继续使用"C"区域设置，因为线程 A 已启用的每个线程区域设置中的 C 运行库函数。 但是，由于[locale:: global](../standard-library/locale-class.md#global)方法"全局"更改区域设置，所有线程中的所有 c + + 标准库对象开始使用"法语"区域设置。  
+由于线程 B 没有启用的每个线程区域设置，C 运行时库函数线程 B 以及主线程中开始使用"法语"区域设置。 线程 A 继续使用"C"区域设置，因为线程 A 已启用的每个线程区域设置中的 C 运行时库函数。 但是，由于[locale:: global](../standard-library/locale-class.md#global)方法"全局"更改区域设置，所有线程中的所有 c + + 标准库对象开始使用"法国"区域设置。  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -440,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [针对旧代码 （Visual c + +） 的多线程处理支持](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale](../preprocessor/setlocale.md)   
- [国际化](../c-runtime-library/internationalization.md)   
- [区域设置](../c-runtime-library/locale.md)   
- [\<clocale >](../standard-library/clocale.md)   
- [\<locale>](../standard-library/locale.md)   
- [locale 类](../standard-library/locale-class.md)
+
+[针对旧代码 （Visual c + +） 的多线程处理支持](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setlocale](../preprocessor/setlocale.md)   
+[国际化](../c-runtime-library/internationalization.md)   
+[区域设置](../c-runtime-library/locale.md)   
+[\<clocale >](../standard-library/clocale.md)   
+[\<locale>](../standard-library/locale.md)   
+[locale 类](../standard-library/locale-class.md)

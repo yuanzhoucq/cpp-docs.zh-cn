@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886058"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539555"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式  
   
@@ -232,15 +232,15 @@ ms.locfileid: "37886058"
 |BS_AUTOCHECKBOX|创建具有两个状态的复选框按钮： BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，并更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|  
 |BS_AUTORADIOBUTTON|创建具有两个状态的单选按钮： BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口、 选中的单选按钮的状态设置为 BST_CHECKED，和所有其他单选按钮的状态设置为 BST_UNCHECKED 按钮组中。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|  
 |BS_CHECKBOX|创建具有两个状态的复选框按钮： BST_CHECKED 和 BST_UNCHECKED。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会更改按钮的状态。 默认情况下，关联的文本显示右侧的复选框。 若要显示文本，左侧的复选框，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|  
-|BS_COMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于一个命令按钮[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]左侧的主文本以及一条注释，主文本下方显示一个绿色箭头。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|  
-|BS_DEFCOMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于一个命令按钮[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]左侧的主文本以及一条注释，主文本下方显示一个绿色箭头。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按钮在对话框中，按 ENTER 键 BN_CLICKED 时发送通知对话框的到即使按钮没有输入的焦点。|  
+|BS_COMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于 Windows Vista 的主要文本以及一条注释，主文本下方左侧显示一个绿色箭头的命令按钮。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|  
+|BS_DEFCOMMANDLINK|创建命令链接按钮。 命令链接按钮是特定于 Windows Vista 的主要文本以及一条注释，主文本下方左侧显示一个绿色箭头的命令按钮。 您可以设置说明文本使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按钮在对话框中，按 ENTER 键 BN_CLICKED 时发送通知对话框的到即使按钮没有输入的焦点。|  
 |BS_DEFPUSHBUTTON|创建具有深黑色边框的命令按钮。 如果按钮在对话框中，按 ENTER 键 BN_CLICKED 时发送通知对话框的到即使按钮没有输入的焦点。|  
-|BS_DEFSPLITBUTTON|创建拆分按钮。 拆分按钮是特定于一个命令按钮[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]，其中包含旁的下拉箭头的按钮。 当单击按钮时，会执行默认命令。 当单击下拉箭头时，将显示其他命令的菜单。 如果拆分按钮在对话框中，按 ENTER 键 BN_CLICKED 向发送通知对话框的即使按钮没有输入的焦点|  
+|BS_DEFSPLITBUTTON|创建拆分按钮。 拆分按钮是特定于 Windows Vista 包含旁的下拉箭头的按钮的命令按钮。 当单击按钮时，会执行默认命令。 当单击下拉箭头时，将显示其他命令的菜单。 如果拆分按钮在对话框中，按 ENTER 键 BN_CLICKED 向发送通知对话框的即使按钮没有输入的焦点|  
 |BS_GROUPBOX|创建可以在其中分组其他按钮的矩形。 在矩形的左上角显示该样式的文本。|  
 |BS_OWNERDRAW|创建所有者描述的按钮。 框架将调用`DrawItem`方法时该按钮的可视方面已更改。 当你使用时，必须设置此样式`CBitmapButton`类。|  
 |BS_PUSHBUTTON|创建将 BN_CLICKED 通知发送到所有者窗口，当用户单击按钮的命令按钮。|  
 |BS_RADIOBUTTON|创建具有两个状态的单选按钮： BST_CHECKED 和 BST_UNCHECKED。 在组中使用一个选中项一次最多可以拥有每个组通常用于单选按钮。 单击该按钮将 BN_CLICKED 通知发送到所有者窗口，但不会自动更改组中任何按钮的状态。 默认情况下，关联的文本显示右侧的单选按钮。 若要显示左侧的单选按钮的文本，请使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 样式。|  
-|BS_SPLITBUTTON|创建拆分按钮。 拆分按钮是特定于一个命令按钮[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]，其中包含旁的下拉箭头的按钮。 当单击按钮时，会执行默认命令。 当单击下拉箭头时，将显示其他命令的菜单。|  
+|BS_SPLITBUTTON|创建拆分按钮。 拆分按钮是特定于 Windows Vista 包含旁的下拉箭头的按钮的命令按钮。 当单击按钮时，会执行默认命令。 当单击下拉箭头时，将显示其他命令的菜单。|  
 |BS_USERBUTTON|已弃用，但提供的 16 位版本的 Windows 兼容性。 基于 Win32 的应用程序应改用 BS_OWNERDRAW。|  
   
 ### <a name="radio-button-and-check-box-styles"></a>单选按钮和复选框样式  
@@ -498,7 +498,7 @@ ms.locfileid: "37886058"
 |WS_EX_CONTEXTHELP|在窗口的标题栏中包含一个问号。 当用户单击问号光标更改为使用指针的问号。 如果用户随后单击子窗口，子窗口将收到 WM_HELP 消息。|  
 |WS_EX_CONTROLPARENT|允许用户使用 TAB 键在窗口的子窗口之间导航。|  
 |WS_EX_DLGMODALFRAME|指定具有可能 （可选） 使用标题栏中的 WS_CAPTION 样式标志指定时创建的双边框窗口*dwStyle*参数。|  
-|WS_EX_LAYERED|该窗口[分层窗口](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果窗口具有不能使用此样式[类样式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 但是， [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] WS_EX_LAYERED 样式支持的子窗口，其中仅为顶级窗口早期 Windows 版本支持它。|  
+|WS_EX_LAYERED|该窗口[分层窗口](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果窗口具有不能使用此样式[类样式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 但是，Microsoft Windows 8 支持 WS_EX_LAYERED 样式的子窗口，其中仅为顶级窗口早期 Windows 版本支持它。|  
 |WS_EX_LEFT|为提供窗口一般左对齐属性。 这是默认设置。|  
 |WS_EX_LEFTSCROLLBAR|将垂直滚动条放置到客户端区域的左侧。|  
 |WS_EX_LTRREADING|显示窗口文本使用从左到右读取顺序属性。 这是默认设置。|  

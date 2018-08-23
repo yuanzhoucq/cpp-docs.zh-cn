@@ -17,44 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 018b5832b187223484013702a1b7d4871d0b1d44
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9fc1d0c7ed8655037eebfc12097789253b3027e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015711"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603890"
 ---
 # <a name="move-function"></a>Move 函数
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template<class T>  
-inline typename RemoveReference<T>::Type&& Move(  
-   _Inout_ T&& arg  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *T*  
- 自变量类型。  
-  
- *arg*  
- 要移动的参数。  
-  
-## <a name="return-value"></a>返回值  
- 参数*arg*后引用或右值引用的特点，如果有，已删除。  
-  
-## <a name="remarks"></a>备注  
- 将指定的参数从一个位置移动到另一个。  
-  
- 有关详细信息，请参阅**移动语义**一部分[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
-## <a name="requirements"></a>要求  
- **标头：** internal.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template<class T>
+inline typename RemoveReference<T>::Type&& Move(
+   _Inout_ T&& arg
+);
+```
+
+### <a name="parameters"></a>参数
+
+*T*  
+自变量类型。
+
+*arg*  
+要移动的参数。
+
+## <a name="return-value"></a>返回值
+
+参数*arg*后引用或右值引用的特点，如果有，已删除。
+
+## <a name="remarks"></a>备注
+
+将指定的参数从一个位置移动到另一个。
+
+有关详细信息，请参阅**移动语义**一部分[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+## <a name="requirements"></a>要求
+
+**标头：** internal.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

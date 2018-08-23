@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027808"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539986"
 ---
 # <a name="mfc-classes"></a>MFC 类
 下面列出的类包含在 Microsoft 基础类 (MFC) 库中。  
@@ -852,7 +852,7 @@ ms.locfileid: "39027808"
  当用户选择 Windows XP 或 Vista 主题时，模仿 Microsoft Windows XP 或 Microsoft Vista 的外观。  
   
  [CMFCVisualManagerWindows7 类](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- 向应用程序提供 [!INCLUDE[win7](../../build/includes/win7_md.md)] 应用程序的外观。  
+ 向应用程序提供的 Windows 7 应用程序的外观。  
   
  [CMFCWindowsManagerDialog 类](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  允许用户管理 MDI 应用程序中的 MDI 子窗口。  
@@ -1020,7 +1020,7 @@ ms.locfileid: "39027808"
  用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
   
  [COleVariant 类](../../mfc/reference/colevariant-class.md)  
- 封装[变体](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)数据类型。  
+ 封装[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)数据类型。  
   
  [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。  

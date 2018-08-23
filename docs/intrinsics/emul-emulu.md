@@ -1,5 +1,5 @@
 ---
-title: __emul、 __emulu |Microsoft 文档
+title: __emul，__emulu |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331030"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541202"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft 专用**  
   
- 执行乘法运算溢出可以容纳的 32 位整数。  
+ 执行乘法运算溢出的 32 位整数可以容纳。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,27 +47,27 @@ unsigned __int64 __emulu(
   
 #### <a name="parameters"></a>参数  
  [in] `a`  
- 乘法第一个整数操作数。  
+ 该乘法运算的第一个整数操作数。  
   
  [in] `b`  
- 乘法第二个整数操作数。  
+ 该乘法运算的第二个整数操作数。  
   
 ## <a name="return-value"></a>返回值  
- 乘法的结果。  
+ 该乘法运算的结果。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86、x64|  
+|`__emulu`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- `__emul` 采用两个 32 位有符号的值和返回作为 64 位有符号的整数值相乘的结果。  
+ `__emul` 采用两个 32 位有符号的值并返回作为 64 位有符号的整数值相乘的结果。  
   
- `__emulu` 采用两个 32 位无符号的整数值并返回作为 64 位无符号的整数值相乘的结果。  
+ `__emulu` 采用两个 32 位无符号的整数值，并返回作为 64 位无符号的整数值相乘的结果。  
   
 ## <a name="example"></a>示例  
   

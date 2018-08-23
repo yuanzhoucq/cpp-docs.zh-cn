@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: exception 类 |Microsoft 文档'
+title: 'Platform:: exception 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091555"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586630"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 表示在应用程序执行过程中发生的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。  
@@ -46,7 +46,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::Exception](#ctor)|初始化 `Exception` 类的新实例。|  
   
 ### <a name="methods"></a>方法  
- `Exception`类继承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，和`ToString()`方法从[platform:: object 类](../cppcx/platform-object-class.md)。 `Exception` 类还具有以下方法。  
+ `Exception`类继承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，以及`ToString()`方法从[platform:: object 类](../cppcx/platform-object-class.md)。 `Exception` 类还具有以下方法。  
   
 |成员|描述|  
 |------------|-----------------|  
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>参数  
  hr  
- 调用 COM 方法时通常获取的 HRESULT 值。 如果值为 0，这等同于 S_OK，此方法将引发[platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)因为成功的 COM 方法不应引发异常。  
+ 调用 COM 方法时通常获取的 HRESULT 值。 如果值为 0，这等同于 S_OK，则此方法将引发[platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)因为成功的 COM 方法不应引发异常。  
   
  消息  
  描述错误的字符串。  
@@ -92,7 +92,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>备注  
  使用此方法可基于返回的 HRESULT（例如，调用 COM 接口方法时返回的 HRESULT）创建异常。 您可以使用带 String^ 参数的重载提供自定义消息。  
   
- 它是强烈建议使用 CreateException 创建强类型的异常而不创建[platform:: comexception](../cppcx/platform-comexception-class.md)仅包含 HRESULT。  
+ 强烈建议使用 CreateException 创建强类型化的异常而不创建[platform:: comexception](../cppcx/platform-comexception-class.md)仅包含 HRESULT。  
   
 
 
@@ -146,7 +146,7 @@ public:property String^ Message;
  对于 Windows 运行时中出现的异常，这是系统提供的错误描述。  
   
 ### <a name="remarks"></a>备注  
- 在 Windows 8 中，此属性是只读的因为在该版本的 Windows 运行时中的异常仅作为 HRESULTS 跨 ABI 传输。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C + + /cli CX)](../cppcx/exceptions-c-cx.md)。  
+ 在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C + + /cli CX)](../cppcx/exceptions-c-cx.md)。  
   
 
   

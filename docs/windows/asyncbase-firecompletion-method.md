@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 199d84afe198c4fc41808144105ea704822aa00a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 19b796b1fbc618bb909b186aa86d3c893c8536c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646602"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600251"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion 方法
-调用完成事件处理程序，或重置内部进行委托。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void FireCompletion(  
-   void  
-) override;  
-  
-virtual void FireCompletion();  
-```  
-  
-## <a name="remarks"></a>备注  
- 第一个版本**FireCompletion()** 重置内部进度委托变量。 如果异步操作已完成，第二个版本调用完成事件处理程序。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+调用完成事件处理程序，或重置内部进行委托。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void FireCompletion(
+   void
+) override;
+
+virtual void FireCompletion();
+```
+
+## <a name="remarks"></a>备注
+
+第一个版本**FireCompletion()** 重置内部进度委托变量。 如果异步操作已完成，第二个版本调用完成事件处理程序。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)

@@ -17,70 +17,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd514b1684571fb12a19265b57e6d5b92b8c7edd
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0c53832acdd7a785ccc36941cd317a9d0705173
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011544"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583621"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template <  
-   typename SyncTraits  
->  
-class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
-```  
-  
-### <a name="parameters"></a>参数  
- *SyncTraits*  
- 可能需要排他的类型或共享资源的所有权。  
-  
-## <a name="remarks"></a>备注  
- 表示可能需要排他的类型或共享资源的所有权。  
-  
- **SyncLockWithStatusT**类用于实现[互斥体](../windows/mutex-class1.md)并[信号量](../windows/semaphore-class.md)类。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 构造函数](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新实例**SyncLockWithStatusT**类。|  
-  
-### <a name="protected-constructors"></a>受保护的构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 构造函数](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新实例**SyncLockWithStatusT**类。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|检索当前的等待状态**SyncLockWithStatusT**对象。|  
-|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指示是否当前**SyncLockWithStatusT**对象拥有一个资源; 也就是，则**SyncLockWithStatusT**对象*锁定*。|  
-  
-### <a name="protected-data-members"></a>受保护的数据成员  
-  
-|name|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::status_ 数据成员](../windows/synclockwithstatust-status-data-member.md)|保存后对象的锁操作取决于当前的基础的等待操作结果**SyncLockWithStatusT**对象。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `SyncLockT`  
-  
- `SyncLockWithStatusT`  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Wrappers::Details 命名空间](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   typename SyncTraits
+>
+class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
+```
+
+### <a name="parameters"></a>参数
+
+*SyncTraits*  
+可能需要排他的类型或共享资源的所有权。
+
+## <a name="remarks"></a>备注
+
+表示可能需要排他的类型或共享资源的所有权。
+
+**SyncLockWithStatusT**类用于实现[互斥体](../windows/mutex-class1.md)并[信号量](../windows/semaphore-class.md)类。
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::SyncLockWithStatusT 构造函数](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新实例**SyncLockWithStatusT**类。|
+
+### <a name="protected-constructors"></a>受保护的构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::SyncLockWithStatusT 构造函数](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新实例**SyncLockWithStatusT**类。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|检索当前的等待状态**SyncLockWithStatusT**对象。|
+|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指示是否当前**SyncLockWithStatusT**对象拥有一个资源; 也就是，则**SyncLockWithStatusT**对象*锁定*。|
+
+### <a name="protected-data-members"></a>受保护的数据成员
+
+|name|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::status_ 数据成员](../windows/synclockwithstatust-status-data-member.md)|保存后对象的锁操作取决于当前的基础的等待操作结果**SyncLockWithStatusT**对象。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`SyncLockT`
+
+`SyncLockWithStatusT`
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Wrappers::Details 命名空间](../windows/microsoft-wrl-wrappers-details-namespace.md)

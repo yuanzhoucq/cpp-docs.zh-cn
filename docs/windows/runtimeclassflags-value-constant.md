@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassflags:: Value 常量 |Microsoft 文档'
+title: 'Runtimeclassflags:: Value 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a9deb05bcb38acb157eaefcc392e9906bea6253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b64cb5c4e09cd72d96ff0ad7924f6ab5f203b015
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895731"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605269"
 ---
 # <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value 常量
-包含的字段[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
+包含的字段[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法
   
-```cpp  
-static const unsigned int value = flags;  
-```  
+```cpp
+static const unsigned int value = flags;
+```
   
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
+## <a name="requirements"></a>要求
+ **标头：** implements.h
   
- **命名空间：** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
  [RuntimeClassFlags 结构](../windows/runtimeclassflags-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: arrayreference 类 |Microsoft 文档'
+title: 'Platform:: arrayreference 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588306"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 类
 `ArrayReference` 是在你希望用输入数据填充 C 样式数组时可以在输入参数中替换 [Platform::Array^](../cppcx/platform-array-class.md) 的优化类型。  
@@ -109,7 +109,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 
 ## <a name="operator-call"></a>  ArrayReference::operator() 运算符
-将当前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)回对象[platform:: array](../cppcx/platform-array-class.md)类。  
+将当前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)对象返回到[platform:: array](../cppcx/platform-array-class.md)类。  
   
 ### <a name="syntax"></a>语法  
   
@@ -123,7 +123,7 @@ Array<TArg>^ operator ();
  `Array<TArg>^` 类型的句柄到对象  
   
 ### <a name="remarks"></a>备注  
- [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)和[platform:: array](../cppcx/platform-array-class.md)是标准 c + + 类模板，而不是 ref 类。  
+ [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)并[platform:: array](../cppcx/platform-array-class.md)是标准 c + + 类模板，而不是 ref 类。  
   
 
 

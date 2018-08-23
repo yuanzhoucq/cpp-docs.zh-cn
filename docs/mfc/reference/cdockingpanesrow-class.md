@@ -1,5 +1,5 @@
 ---
-title: CDockingPanesRow 类 |Microsoft 文档
+title: CDockingPanesRow 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955262"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540588"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 类
 管理位于停靠站点中同一水平或垂直行（列）的窗格的列表。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -234,13 +234,13 @@ virtual void ArrangePanes(
   
 ### <a name="parameters"></a>参数  
  [in]*nMargin*  
- 以像素为单位，从左上角的行的第一个窗格中指定的偏移量。  
+ 指定的偏移量，以像素为单位从左上角的行的第一个窗格。  
   
  [in]*nSpacing*  
- 指定以像素为单位，在窗格间间距。  
+ 指定以像素为单位的窗格之间的间距。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以排列在行中，它们将停靠的窗格。 调用此方法后，必须调用`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。  
+ 调用此方法来排列中的行，它们将停靠的窗格。 调用此方法后，必须调用`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 
@@ -673,7 +673,7 @@ virtual void RepositionPanes(
   
 ### <a name="parameters"></a>参数  
  [in]*rectNewParentBarArea*  
- [in]*nSide*  
+ [in]*深入剖析*  
  [in]*bExpand*  
  [in]*nOffset*  
   
@@ -781,7 +781,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [CDockSite 类](../../mfc/reference/cdocksite-class.md)   

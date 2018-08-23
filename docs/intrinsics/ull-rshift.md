@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift |Microsoft 文档
+title: __ull_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333113"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539557"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft 专用**  
   
- 在 x64，右移大量按第二个参数指定的位数向右的第一个参数指定的 64 位值。  
+ 在 x64 上，第二个参数指定的位数右移由右侧的第一个参数指定的 64 位值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>参数  
  [in] `mask`  
- 要移动到了右边的 64 位整数值。  
+ 要右移位的 64 位整数值。  
   
  [in] `nBit`  
- 要位移，取模上 x86、 32 和模 64 x64 上的位数数。  
+ 要切换，请取模 x86 上的 32 和取模运算在 x64 上的 64 位的数。  
   
 ## <a name="return-value"></a>返回值  
- 掩码移动`nBit`bits。  
+ 掩码移动`nBit`位。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 如果第二个参数大于 31 x86 (63 x64 上) 上，该数字执行取模 32 (x64 上的 64) 来确定要位移的位数数。 `ull`名称中指示`unsigned long long (unsigned __int64)`。  
+ 如果第二个参数大于 31 x86 (63 在 x64 上) 上，该数字执行取模 32 (64 在 x64 上) 若要确定移动的位数编号。 `ull`名称中指示`unsigned long long (unsigned __int64)`。  
   
 ## <a name="example"></a>示例  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337403"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539407"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|检测桌面菜单动画和任务栏自动隐藏功能的当前状态。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|注册指定的 MFC 窗口类。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|释放通过 GetITaskbarList 和 GetITaskbarList3 方法获取的接口。|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows [主题和视觉样式](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)的方法的内部函数指针。|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows 的方法的内部函数指针[主题和视觉样式](/windows/desktop/Controls/visual-styles-overview)。|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|创建指定的逻辑字体。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|创建并初始化分析名称中的 Shell 项对象。|  

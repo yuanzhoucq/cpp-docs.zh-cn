@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a93a89ed0ace158a0864d7987cafd838eed304
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
-ms.translationtype: HT
+ms.openlocfilehash: 8b7501adf2f424f2232df05e26f5d0ac4a35158c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853736"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538829"
 ---
 # <a name="colevariant-class"></a>COleVariant 类
-封装[变体](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)数据类型。  
+封装[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;， &gt;&gt;](#operator_lt_lt__gt_gt)|输出`COleVariant`值设为`CArchive`或`CDumpContext`并将输入`COleVariant`对象从`CArchive`。|  
   
 ## <a name="remarks"></a>备注  
- OLE 自动化中使用此数据类型。 具体而言， [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)结构包含一个变体结构数组的指针。 一个`DISPPARAMS`结构用于将参数传递给[idispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
+ OLE 自动化中使用此数据类型。 具体而言， [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)结构包含一个变体结构数组的指针。 一个`DISPPARAMS`结构用于将参数传递给[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。  
   
 > [!NOTE]
 >  此类派生自`VARIANT`结构。 这意味着可以将传递`COleVariant`中为调用的参数`VARIANT`并且的数据成员`VARIANT`结构是可访问的数据成员的`COleVariant`。  
   
  两个相关的 MFC 类[COleCurrency](../../mfc/reference/colecurrency-class.md)并[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)封装货币的变量数据类型 ( `VT_CY`) 和日期 ( `VT_DATE`)。 `COleVariant` DAO 类中广泛使用类; 请参阅此类，这些类的典型用法示例[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
   
- 有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)，[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)， [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)，并[idispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) Windows SDK 中的条目。  
+ 有关详细信息，请参阅[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)， [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)，并[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中的条目。  
   
  有关详细信息`COleVariant`类并在 OLE 自动化中的使用它，请参见"传递的参数在 OLE 自动化"一文中[自动化](../../mfc/automation.md)。  
   
@@ -96,7 +96,7 @@ class COleVariant : public tagVARIANT
  **标头：** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- 调用此函数可将附加给定[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)对象与当前`COleVariant`对象。  
+ 调用此函数可将附加给定[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)对象与当前`COleVariant`对象。  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -109,7 +109,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="remarks"></a>备注  
  此函数将[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)的*varSrc*为 VT_EMPTY。  
   
- 有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)并[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的条目。  
+ 有关详细信息，请参阅[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)并[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的条目。  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  构造 `COleVariant` 对象。  
@@ -221,10 +221,10 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
  [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)此`COleVariant`对象。  
   
  *pSrc*  
- 一个指向[变体](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)要转换的对象。 如果此值为 NULL，这`COleVariant`对象用作转换源。  
+ 一个指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要转换的对象。 如果此值为 NULL，这`COleVariant`对象用作转换源。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，并[VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Windows SDK 中的条目。  
+ 有关详细信息，请参阅[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，并[VariantChangeType](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) Windows SDK 中的条目。  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  清除`VARIANT`。  
@@ -239,7 +239,7 @@ void Clear();
  有关详细信息，请参阅`VARIANT`，VARTYPE，和`VariantClear`Windows SDK 中的条目。  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- 分离的基础[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)从此对象`COleVariant`对象。  
+ 分离的基础[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)从此对象`COleVariant`对象。  
   
 ```  
 VARIANT Detach();
@@ -251,7 +251,7 @@ VARIANT Detach();
 > [!NOTE]
 >  在调用`Detach`，调用方负责`VariantClear`上生成`VARIANT`结构。  
   
- 有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，并[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) Windows SDK 中的条目。  
+ 有关详细信息，请参阅[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，并[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) Windows SDK 中的条目。  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  从现有变量数组中检索的字节数组  
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **运算符 = (** `lbSrc` **)** 副本[CLongBinary](../../mfc/reference/clongbinary-class.md)到此对象`COleVariant`对象。  
   
- 有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)并[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的条目。  
+ 有关详细信息，请参阅[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)并[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的条目。  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator = =  
  此运算符比较两个变量的值，并返回非零，如果它们相等;否则为 0。  

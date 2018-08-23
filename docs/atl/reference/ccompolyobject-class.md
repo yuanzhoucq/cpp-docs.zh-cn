@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881095"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573033"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 此类实现`IUnknown`聚合或非聚合对象。  
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |名称|描述|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|递增对象的引用计数。|  
-|[CComPolyObject::CreateInstance](#createinstance)|（静态）可以创建一个新**CComPolyObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComPolyObject::CreateInstance](#createinstance)|（静态）可以创建一个新**CComPolyObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|执行的最终初始化`m_contained`。|  
 |[CComPolyObject::FinalRelease](#finalrelease)|执行的最后一个析构`m_contained`。|  
 |[CComPolyObject::QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|  
@@ -137,7 +137,7 @@ CComPolyObject(void* pv);
  释放所有已分配的资源，调用[FinalRelease](#finalrelease)，并减少模块锁计数。  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- 可以创建一个新**CComPolyObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 可以创建一个新**CComPolyObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
 ```
 static HRESULT WINAPI CreateInstance(  

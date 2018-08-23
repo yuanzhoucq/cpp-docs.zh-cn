@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmclear |Microsoft 文档
+title: __vmx_vmclear |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d93cff5c1be0847a6c88f0d60b89527388e4d8b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541756"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 专用**  
@@ -41,26 +41,26 @@ unsigned char __vmx_vmclear(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `VmcsPhysicalAddress`|指向包含 VMCS 清除的物理地址的 64 位内存位置的指针。|  
+|[in] `VmcsPhysicalAddress`|指向包含的物理地址的 VMCS，若要清除的 64 位内存位置的指针。|  
   
 ## <a name="return-value"></a>返回值  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |0|操作成功。|  
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
 |2|操作失败，无可用状态。|  
   
 ## <a name="remarks"></a>备注  
- 应用程序可以通过使用执行 VM 输入操作[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数可以使用其启动状态的 vmcs `Clear`，和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数可以使用其启动状态的 vmcs `Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函数可设置到 VMCS 的启动状态`Clear`。 使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)为第一个 VM 输入操作的函数和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)后续 VM 输入操作的函数。  
+ 应用程序可以通过使用执行 VM 输入操作[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数可以仅可用于启动状态是将 VMCS `Clear`，和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数可以仅可用于将 VMCS 的启动状态是`Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函数设置为将 VMCS 的启动状态`Clear`。 使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数对第一个 VM 输入操作与[__vmx_vmresume](../intrinsics/vmx-vmresume.md)对后续 VM 输入操作的函数。  
   
- `__vmx_vmclear`函数等同于`VMCLEAR`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__vmx_vmclear`函数等同于`VMCLEAR`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmclear`|X64|  
   
  **标头文件** \<intrin.h >  
   

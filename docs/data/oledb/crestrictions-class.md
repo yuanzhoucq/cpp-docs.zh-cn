@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337161"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572544"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 泛型类，可用于指定架构行集的限制。  
@@ -96,7 +96,7 @@ HRESULT Open(const CSession& session,
 ### <a name="remarks"></a>备注  
  架构行集上，可以指定最多七个限制。  
   
- 请参阅[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)有关每个架构行集上定义的限制信息。  
+ 请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))有关每个架构行集上定义的限制信息。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

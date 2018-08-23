@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss |Microsoft 文档
+title: _mm_cvtsi64x_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340601"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540584"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 专用**  
   
- 生成[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]扩展的版本为标量单精度浮点值将转换的 64 位整数 (`cvtsi2ss`) 指令。  
+ 生成扩展的 x64 版本的标量单精度浮点值将转换的 64 位整数 (`cvtsi2ss`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ __m128 _mm_cvtsi64x_ss(
  要转换为浮点值 64 位整数。  
   
 ## <a name="return-value"></a>返回值  
- `__m128`结构其第一个浮点值转换的结果。 其他三个值均将原样从复制`a`。  
+ `__m128`结构，其第一个浮点值是转换的结果。 其他三个值复制相比并无变化`a`。  
   
 ## <a name="requirements"></a>要求  
   
@@ -57,7 +57,7 @@ __m128 _mm_cvtsi64x_ss(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- `__m128`结构表示的 XMM 寄存器，因此此内部函数，则允许此值`b`从系统内存移动到 XMM 注册。  
+ `__m128`结构表示 XMM 寄存器，因此此内部函数，允许的值`b`从系统内存，无法移动到 XMM 注册。  
   
  此例程仅可用作内部函数。  
   

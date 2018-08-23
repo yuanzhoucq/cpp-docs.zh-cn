@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407856"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573038"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 这一概念*类型*在 C++ 中非常重要。 每个变量、函数自变量和函数返回值必须具有一个类型以进行编译。 此外，在计算表达式前，编译器会给出每个表达式（包括文本值）的隐式类型。 类型的一些示例包括**int**用于存储整数值， **double**用于存储浮点值 (也称为*标量*数据类型)，或标准库类[std:: basic_string](../standard-library/basic-string-class.md)来存储文本。 您可以通过定义来创建你自己的类型**类**或**结构**。 该类型指定将分配给变量（或表达式结果）的内存量、可能存储在该变量中的值类型、如何对那些值（作为位模式）进行说明以及可对其执行的操作。 本文包含对 C++ 类型系统的主要功能的非正式概述。   
@@ -157,7 +157,7 @@ void someFunction() {
  有关指针的详细信息一般情况下，请参阅[指针](../cpp/pointers-cpp.md)。  
   
 ## <a name="windows-data-types"></a>Windows 数据类型  
- 在 C 和 C++ 的经典 Win32 编程中，大多数函数使用 Windows 特定的 Typedef 和 #define 宏（在 `windef.h` 中定义）来指定参数类型和返回值。 这些 Windows 数据类型通常是只是特殊名称 （别名） 赋予 C/C++ 内置类型。 这些 typedef 和预处理器定义的完整列表，请参阅[Windows 数据类型](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46)。 这些 typedef 中的一些（例如 HRESULT 和 LCID）有用且具有描述性。 诸如 INT 的其他数据没有特殊含义，并且只是基础 C++ 类型的别名。 其他 Windows 数据类型的名称自 C 编程和 16 位处理器得到保留，并且在现代硬件或操作系统中不具有目的和意义。 也有特殊的数据类型与 Windows 运行时库，列为关联[Windows 运行时的基本数据类型](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6)。 在现代 C++ 中，一般准则是首选 C++ 基本类型，除非 Windows 类型传达一些有关如何解释值的附加意义。  
+ 在 C 和 C++ 的经典 Win32 编程中，大多数函数使用 Windows 特定的 Typedef 和 #define 宏（在 `windef.h` 中定义）来指定参数类型和返回值。 这些 Windows 数据类型通常是只是特殊名称 （别名） 赋予 C/C++ 内置类型。 这些 typedef 和预处理器定义的完整列表，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。 这些 typedef 中的一些（例如 HRESULT 和 LCID）有用且具有描述性。 诸如 INT 的其他数据没有特殊含义，并且只是基础 C++ 类型的别名。 其他 Windows 数据类型的名称自 C 编程和 16 位处理器得到保留，并且在现代硬件或操作系统中不具有目的和意义。 也有特殊的数据类型与 Windows 运行时库，列为关联[Windows 运行时的基本数据类型](/windows/desktop/WinRT/base-data-types)。 在现代 C++ 中，一般准则是首选 C++ 基本类型，除非 Windows 类型传达一些有关如何解释值的附加意义。  
   
 ## <a name="more-information"></a>详细信息  
  有关 C++ 类型系统的更多信息，请参见下列主题。  

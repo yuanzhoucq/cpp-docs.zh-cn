@@ -1,5 +1,5 @@
 ---
-title: 示例多线程 C 程序 |Microsoft 文档
+title: 示例多线程 C 程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687987"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42544408"
 ---
 # <a name="sample-multithread-c-program"></a>多线程 C 程序示例
-Bounce.c 是创建一个新的示例多线程程序线程每次字母或**A**已类型化。 每个线程退回笑脸在屏幕的不同颜色。 可以创建多达 32 个线程。 发生的程序正常终止时`q`或**Q**已类型化。 编译和链接 Bounce.c 有关的信息，请参阅[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  
+Bounce.c 是一个示例多线程程序创建新的线程每次以字母`a`或`A`类型化。 每个线程在屏幕上四处不同颜色的笑脸。 可以创建多达 32 个线程。 发生程序的正常终止时`q`或`Q`类型化。 有关编译和链接 Bounce.c 的信息，请参阅[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="code"></a>代码  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+
+[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

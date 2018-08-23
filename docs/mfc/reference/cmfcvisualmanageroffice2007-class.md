@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2007 类 |Microsoft 文档
+title: CMFCVisualManagerOffice2007 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039582"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544424"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 类
 `CMFCVisualManagerOffice2007` 向应用程序提供 Microsoft Office 2007 外观。 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -279,7 +279,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
 |[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
 |[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|返回当前配色方案`CMFCVisualManagerOffice2007`图形用户界面，反过来，模仿 Microsoft Office 2007 GUI。|  
+|`CMFCVisualManagerOffice2007::GetStyle`|返回当前颜色方案的`CMFCVisualManagerOffice2007`图形用户界面，反过来，模仿 Microsoft Office 2007 GUI。|  
 |[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
 |[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
 |[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
@@ -377,13 +377,13 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||  
 |[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||  
 |[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
-|`CMFCVisualManagerOffice2007::SetStyle`|设置的配色方案`CMFCVisualManagerOffice2007`GUI。|  
+|`CMFCVisualManagerOffice2007::SetStyle`|将配色方案设置`CMFCVisualManagerOffice2007`GUI。|  
   
 ## <a name="remarks"></a>备注  
- 使用`CMFCVisualManagerOffice2007`若要更改你的应用程序类似于 Microsoft Office 2007 的可视外观。 此视觉管理器需要在使用它之前设置的样式。 再传递到此视觉管理器`CMFCVisualManager::SetDefaultManager`，您必须调用静态函数`CMFCVisualManagerOffice2007::SetStyle`。  
+ 使用`CMFCVisualManagerOffice2007`更改为类似于 Microsoft Office 2007 的应用程序的可视外观。 此视觉管理器要求在使用之前设置的样式。 再传递到此视觉管理器`CMFCVisualManager::SetDefaultManager`，必须调用的静态函数`CMFCVisualManagerOffice2007::SetStyle`。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用视觉管理器 Office 2007。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何使用 Office 2007 的可视化管理器。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -711,7 +711,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="parameters"></a>参数  
  [in]*params*  
- [in]*nType*  
+ [in]*n 类型*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2403,7 +2403,7 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)   
  [CMFCVisualManagerOfficeXP 类](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   

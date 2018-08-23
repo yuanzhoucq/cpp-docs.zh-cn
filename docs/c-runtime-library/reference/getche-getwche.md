@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - getwche
@@ -38,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afca6d897f1cc8b1cd724b03ca57e3096829b9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bfd791eb0ac022cfd13de74ca902ef45565ac16
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400715"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573124"
 ---
 # <a name="getche-getwche"></a>_getche、_getwche
 
@@ -65,7 +66,7 @@ wint_t _getwche( void );
 
 ## <a name="remarks"></a>备注
 
-**_Getche**和 **_getwche**函数从与 echo，这意味着，在控制台显示字符控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
+**_Getche**并 **_getwche**函数从具有回显，这意味着，角色将会显示在控制台的控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本的信息，请参阅 [_getche_nolock、_getwche_nolock](getche-nolock-getwche-nolock.md)。
 
@@ -77,7 +78,7 @@ wint_t _getwche( void );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getche**|\<conio.h>|
 |**_getwche**|\<conio.h> 或 \<wchar.h>|

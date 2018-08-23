@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21478cdfd96fc32efaa674d7ec4f838e2f6b989b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026888"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538791"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 本演练演示如何使用**MFC 应用程序向导**创建默认情况下具有功能区的应用程序。 然后可以通过添加扩展功能区**自定义**具有的功能区类别**收藏夹**功能区面板中，并添加一些经常使用的面板的命令。  
   
 ## <a name="prerequisites"></a>系统必备  
- 本演练假定您已设置了[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]若要使用**常规开发设置**。 如果您使用其他设置，则以下说明中引用的某些用户界面 (UI) 元素可能不会显示。 有关如何更改设置的信息，请参阅[如何： 重置您设置](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76)。  
+ 本演练假定您已设置了 Visual Studio 以使用**常规开发设置**。 如果您使用其他设置，则以下说明中引用的某些用户界面 (UI) 元素可能不会显示。 有关如何更改设置的信息，请参阅[如何： 重置您设置](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76)。  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>创建带功能区的 MFC 应用程序  
   

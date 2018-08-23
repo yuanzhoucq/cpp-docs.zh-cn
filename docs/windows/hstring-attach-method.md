@@ -15,32 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 157512ee556126291427c3db6578788a477505a6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c7bdf5c17fc9364eb69d86f067bbb00cf40ebc5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016374"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595311"
 ---
 # <a name="hstringattach-method"></a>HString::Attach 方法
-将指定相关联**HString**对象与当前**HString**对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void Attach(  
-       HSTRING hstr  
+
+将指定相关联**HString**对象与当前**HString**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void Attach(
+       HSTRING hstr
        ) throw()  
-```  
-  
-### <a name="parameters"></a>参数  
- *hstr*  
- 将现有**HString**对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HString 类](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*hstr*  
+将现有**HString**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HString 类](../windows/hstring-class.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026953"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571750"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 类
 此类提供用于创建类的实例并获取其属性的方法。  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out]如果创建成功接收的请求的接口指针的指针变量的地址。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT 值。 请参阅[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)有关可能的返回值的说明 Windows SDK 中。  
+ 标准的 HRESULT 值。 请参阅[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)有关可能的返回值的说明 Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  此函数的第一个重载用于典型对象创建;当您需要聚合正在创建的对象时，请使用第二个重载。  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  请注意，该接口*Q*必须具有与之关联，可以使用检索的 IID [__uuidof](../../cpp/uuidof-operator.md)运算符。  
   
 ### <a name="example"></a>示例  
- 在以下示例中，`CDocument`向导生成的 ATL 类派生自`CComCoClass`实现`IDocument`接口。 因此，客户端不能创建实例文档使用的类与 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 宏在对象映射中注册[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。 `CApplication` 是一个其自己的 COM 接口，用于创建文档类的实例提供一种方法是组件类。 下面的代码显示如何轻松创建文档类使用的实例`CreateInstance`成员继承自`CComCoClass`基类。  
+ 在以下示例中，`CDocument`向导生成的 ATL 类派生自`CComCoClass`实现`IDocument`接口。 因此，客户端不能创建实例文档使用的类与 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 宏在对象映射中注册[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。 `CApplication` 是一个其自己的 COM 接口，用于创建文档类的实例提供一种方法是组件类。 下面的代码显示如何轻松创建文档类使用的实例`CreateInstance`成员继承自`CComCoClass`基类。  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

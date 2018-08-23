@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404069"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572127"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
@@ -104,17 +104,17 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果文件流的末尾到达第一个转换，则返回值是**EOF**为**fscanf**和**fwscanf**。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果在第一次转换前达到文件流的末尾，则返回值是**EOF**有关**fscanf**并**fwscanf**。
 
-这些函数验证其参数。 如果*流*或*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*流*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Fscanf**函数将从当前的位置读取数据*流*到提供的位置*参数*（如果有）。 每个*参数*必须是指向的变量的此类型中的类型说明符对应*格式*。 *格式*控件的输入解释字段，并具有相同形式和函数与*格式*参数**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
+**Fscanf**函数将从当前的位置读取数据*流*到给定的位置*参数*（如果有）。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 *格式*控制字段输入的解释，并且具有相同格式和函数作为*格式*自变量**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
 
-**fwscanf**是宽字符版本的**fscanf**; 的格式参数**fwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf**当前不支持 UNICODE 流中的输入。
+**fwscanf**是宽字符版本**fscanf**; 的格式参数**fwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf**当前不支持 UNICODE 流的输入。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

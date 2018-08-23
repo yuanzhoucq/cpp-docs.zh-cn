@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647032"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607464"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 方法
-将当前的完成事件处理程序的地址复制到指定的变量。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-STDMETHOD(  
-   GetOnComplete  
-)(TComplete** completeHandler);  
-```  
-  
-### <a name="parameters"></a>参数  
- *completeHandler*  
- 存储当前完成事件处理程序的地址的位置。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+将当前的完成事件处理程序的地址复制到指定的变量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   GetOnComplete
+)(TComplete** completeHandler);
+```
+
+### <a name="parameters"></a>参数
+
+*completeHandler*  
+存储当前完成事件处理程序的地址的位置。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)

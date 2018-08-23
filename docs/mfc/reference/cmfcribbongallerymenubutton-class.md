@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton 类 |Microsoft 文档
+title: CMFCRibbonGalleryMenuButton 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041255"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538991"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 类
 实现包含功能区库的功能区菜单按钮。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
    
 ## <a name="syntax"></a>语法  
   
@@ -133,25 +133,25 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>参数  
  *uiID*  
- 按钮的命令 ID。 这是当用户单击此按钮在 WM_COMMAND 消息中发送的值。  
+ 按钮的命令 ID。 这是在用户单击此按钮时发送 WM_COMMAND 消息中的值。  
   
  *iImage*  
- 要与库菜单按钮显示的图像的索引。 映像存储在*imagesPalette*参数。  
+ 要与库菜单按钮显示的图像的索引。 图像存储在*imagesPalette*参数。  
   
  *lpszText*  
  要在菜单按钮上显示的文本。  
   
  *imagesPalette*  
- 包含映像以在库中显示的列表。  
+ 包含要在库上显示的图像的列表。  
   
  *uiImagesPaletteResID*  
- 要在库中显示图像的图像列表的资源 ID。  
+ 要在库上显示的图像列表的图像资源 ID。  
   
  *cxPaletteImage*  
- 指定以像素为单位的要在库中显示的图像的宽度。  
+ 指定以像素为单位的要在库上显示的图像的宽度。  
   
 ### <a name="remarks"></a>备注  
- 库菜单按钮显示为带有箭头的弹出菜单。 用户单击此按钮时，会显示图像库。  
+ 库菜单按钮显示为一个带有箭头的弹出菜单。 用户单击此按钮时，会显示图像库。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用的构造函数`CMFCRibbonGalleryMenuButton`类。 此代码片段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。  
@@ -203,7 +203,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [CMFCRibbonGallery 类](../../mfc/reference/cmfcribbongallery-class.md)

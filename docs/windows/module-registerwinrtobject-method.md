@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b5605b68c569d4579324b51eaad42b1e9532011
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017410"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609296"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
-注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-HRESULT RegisterWinRTObject(const wchar_t* serverName,  
-   wchar_t** activatableClassIds,  
-   WINRT_REGISTRATION_COOKIE* cookie,  
+
+注册一个或多个 Windows 运行时对象，以便其他应用程序可以连接到它们。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT RegisterWinRTObject(const wchar_t* serverName,
+   wchar_t** activatableClassIds,
+   WINRT_REGISTRATION_COOKIE* cookie,
    unsigned int count)  
-```  
-  
-### <a name="parameters"></a>参数  
- *服务器名称*  
- 指定受此操作影响的对象子集的名称。  
-  
- *activatableClassIds*  
- 要注册的可激活 CLSID 的数组。  
-  
- *Cookie*  
- 标识已注册类对象的值。 此值以后将用于撤销注册。  
-  
- *count*  
- 要注册的对象的数量。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK；否则为指示操作失败原因的 HRESULT（如 CO_E_OBJISREG）。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [Module 类](../windows/module-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*服务器名称*  
+指定受此操作影响的对象子集的名称。
+
+*activatableClassIds*  
+要注册的可激活 CLSID 的数组。
+
+*Cookie*  
+标识已注册类对象的值。 此值以后将用于撤销注册。
+
+*count*  
+要注册的对象的数量。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示操作失败原因的 HRESULT（如 CO_E_OBJISREG）。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[Module 类](../windows/module-class.md)

@@ -198,17 +198,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b27a3fd2fdce9836512e19c566b02c40afb78a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853495"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541207"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 类
 `CMFCRibbonBar` 类实现与 Office 2007 中所使用的类似功能区栏。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
    
 ## <a name="syntax"></a>语法  
   

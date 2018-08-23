@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463484"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573323"
 ---
 # <a name="specifiers"></a>说明符
 本主题介绍*声明说明符*（声明说明符） 组件[声明](declarations-and-definitions-cpp.md)。  
@@ -34,9 +34,11 @@ ms.locfileid: "39463484"
   
  *函数说明符*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef]( [typedef](http://msdn.microsod) `(` *扩展声明修饰符 seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [typedef](aliases-and-typedefs-cpp.md) `(` *扩展声明修饰符 seq* `)`  
+
+ [__declspec](declspec.md) `(` *扩展声明修饰符 seq* `)`  
   
 ## <a name="remarks"></a>备注  
  *声明说明符*声明的一部分的最长序列是*声明说明符*可以用来表示类型名称，不包括指针或引用修饰符。 声明的其余部分是*声明符*，其中包括引入的名称。  

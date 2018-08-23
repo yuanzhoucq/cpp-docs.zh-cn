@@ -1,5 +1,5 @@
 ---
-title: 如何： 修改目标框架和平台工具集 |Microsoft 文档
+title: 如何： 修改目标框架和平台工具集 |Microsoft Docs
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371897"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573219"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
-你可以更改 Visual c + + 项目设置以面向不同版本的.NET Framework 和使用不同的平台工具集。 默认情况下，项目系统将使用对应于你用于创建该项目的 Visual Studio 版本的 .NET Framework 版本和工具集版本。 可以通过修改项目属性来更改目标平台工具集。 可以通过修改项目 (.vcxproj) 文件来更改目标框架。 不必为每个编译目标都维护一个单独的基本代码。  
+可以更改 Visual c + + 项目设置以面向不同版本的.NET framework 并使用不同的平台工具集。 默认情况下，项目系统将使用对应于你用于创建该项目的 Visual Studio 版本的 .NET Framework 版本和工具集版本。 可以通过修改项目属性来更改目标平台工具集。 可以通过修改项目 (.vcxproj) 文件来更改目标框架。 不必为每个编译目标都维护一个单独的基本代码。  
   
 > [!IMPORTANT]
 >  某些版本可能不支持修改过的目标 Framework 或平台工具集。 有关兼容性信息，请参阅[端口、 迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)。  
@@ -63,7 +63,7 @@ ms.locfileid: "32371897"
   
 3.  在对话框的左窗格中，展开 **“配置属性”** ，然后选择 **“常规”**。  
   
-4.  在右窗格中，选择 **“平台工具集”** ，然后从下拉列表中选择需要的工具集。 例如，如果您已安装了 [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] 工具集，请选择 **Visual Studio 2010 (v100)** 并用于您的项目。  
+4.  在右窗格中，选择 **“平台工具集”** ，然后从下拉列表中选择需要的工具集。 例如，如果已安装 Visual Studio 2010 工具集，则选择**Visual Studio 2010 (v100)** 要用于你的项目。  
   
 5.  选择“确定”  按钮。  
   

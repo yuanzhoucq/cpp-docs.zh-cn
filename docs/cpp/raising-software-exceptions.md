@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405183"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606410"
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。  
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- 如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函数，在[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]有关详细信息。  
+ 如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Windows SDK for 的详细信息中的函数。  
   
  在异常处理筛选器中，你随后可以测试已定义的代码。 例如：  
   

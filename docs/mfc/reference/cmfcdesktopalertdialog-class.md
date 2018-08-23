@@ -1,5 +1,5 @@
 ---
-title: CMFCDesktopAlertDialog 类 |Microsoft 文档
+title: CMFCDesktopAlertDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540184"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 类
-`CMFCDesktopAlertDialog`类一起配合使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)在弹出窗口中显示自定义对话框。  
+`CMFCDesktopAlertDialog`类使用连同[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)要在弹出窗口中显示自定义对话框。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
 2.  在项目的资源中创建子对话框模板。  
   
-3.  调用[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)使用对话框模板和指向派生类的运行时类信息作为参数的指针的资源 ID。  
+3.  调用[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)使用对话框模板和指向派生类的运行时类信息作为参数的资源 ID。  
   
 4.  对自定义对话框进行编程以处理来自托管控件的所有通知，或对托管控件进行编程以直接处理这些通知。  
   
@@ -134,7 +134,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
  [CMFCDesktopAlertWndInfo 类](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   

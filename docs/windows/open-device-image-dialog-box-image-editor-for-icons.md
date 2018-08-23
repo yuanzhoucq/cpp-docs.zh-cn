@@ -17,22 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e470a594f332ce86a6c1b35253f795a420d2fff3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013322"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591822"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>打开&lt;设备&gt;图像对话框 （图标的图像编辑器）
-使用此对话框中，打开设备图像。 它列出了当前资源 （属于当前资源的映像） 中的现有设备图像。  
-  
-### <a name="current-images"></a>当前映像  
- 列出资源中包含的映像。 选择你想要打开的图像类型。  
-  
-## <a name="requirements"></a>要求  
- 无  
-  
-## <a name="see-also"></a>请参阅  
- [图像菜单](../windows/image-menu-image-editor-for-icons.md)   
- [图标的图像编辑器](../windows/image-editor-for-icons.md)
+
+使用此对话框中，打开设备图像。 它列出了当前资源 （属于当前资源的映像） 中的现有设备图像。
+
+### <a name="current-images"></a>当前映像
+
+列出资源中包含的映像。 选择你想要打开的图像类型。
+
+## <a name="requirements"></a>要求
+
+无
+
+## <a name="see-also"></a>请参阅
+
+[图像菜单](../windows/image-menu-image-editor-for-icons.md)  
+[图标的图像编辑器](../windows/image-editor-for-icons.md)

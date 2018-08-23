@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils 类 |Microsoft 文档
+title: CGlobalUtils 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952080"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538620"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 类
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,7 +104,7 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [在中，out]*rect*  
+ [in、 out]*rect*  
  [in]*pRectDelta*  
   
 ### <a name="remarks"></a>备注  
@@ -233,7 +233,7 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [在中，out]*rect*  
+ [in、 out]*rect*  
  [in]*nDegrees*  
   
 ### <a name="remarks"></a>备注  
@@ -249,7 +249,7 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [在中，out]*pDockManager*  
+ [in、 out]*pDockManager*  
  [in]*bForce*  
  [in]*bForceInvisible*  
   
@@ -374,5 +374,5 @@ BOOL StringFromDecimal(
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

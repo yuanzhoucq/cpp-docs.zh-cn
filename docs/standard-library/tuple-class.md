@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963921"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538390"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-此模板类描述的对象将存储 N 个对象的类型`T1`， `T2`、...、 `TN`，分别，where `0 <= N <= Nmax`。 元组实例的程度`tuple<T1, T2, ..., TN>`是数字`N`的其模板自变量。 模板参数的索引`Ti`和相应的存储值的该类型是`i - 1`。 因此时都进行编号的类型从 1 到 N 本文档中，, 相应的索引值的范围介于 0 至 N – 1。
+此模板类描述的对象将存储 N 个对象的类型`T1`， `T2`、...、`TN`分别，其中`0 <= N <= Nmax`。 元组实例的程度`tuple<T1, T2, ..., TN>`是数字`N`的其模板自变量。 模板参数的索引`Ti`和相应的存储值的该类型是`i - 1`。 因此时都进行编号的类型从 1 到 N 本文档中，, 相应的索引值的范围介于 0 至 N – 1。
 
 ## <a name="example"></a>示例
 

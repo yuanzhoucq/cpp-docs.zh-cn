@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339700"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571383"
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
-架构行集允许使用者获得有关数据存储的信息，而不必知道其基础结构或架构。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，请注意，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。  
+架构行集允许使用者获得有关数据存储的信息，而不必知道其基础结构或架构。 例如，数据存储区可能有组织到用户定义层次结构，因此会有没有办法确保通过阅读本文了解除架构表。 （作为另一个示例中，请注意，Visual c + + 向导使用架构行集来生成使用者的访问器。）若要允许使用者执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))接口。 在 Visual c + + 应用程序，您使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现`IDBSchemaRowset`。  
   
  `IDBSchemaRowsetImpl` 支持以下方法：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "39339700"
 -   在中**C***短名称***SessionColSchemaRowset**，为表的名称传递`DBID`。  
   
 ## <a name="setting-restrictions"></a>设置限制  
- 在架构行集支持的一个重要概念设置限制，您执行此操作使用`SetRestrictions`。 限制允许使用者只提取匹配行（例如，查找表“MyTable”中的所有列）。 限制是可选的，如果不支持任何限制（默认设置），则始终返回所有数据。 有关支持限制的提供程序的示例，请参阅[UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f)示例。  
+ 在架构行集支持的一个重要概念设置限制，您执行此操作使用`SetRestrictions`。 限制允许使用者只提取匹配行（例如，查找表“MyTable”中的所有列）。 限制是可选的，如果不支持任何限制（默认设置），则始终返回所有数据。 有关支持限制的提供程序的示例，请参阅[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。  
   
 ## <a name="setting-up-the-schema-map"></a>设置架构映射  
  设置在 UpdatePV Session.h 中这样一个架构映射：  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  请注意，`CUpdateSession`继承`IDBSchemaRowsetImpl`，因此它处理方法的所有限制。 使用`CSchemaRowsetImpl`，声明 （在上面的架构映射中列出） 的三个子类： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 每个这些子类别有`Execute`处理各自的限制 （搜索条件） 的一组方法。 每个`Execute`方法比较的值`cRestrictions`和`rgRestrictions`参数。 请参阅中的这些参数的说明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。  
   
- 有关哪些限制对应于特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)中*OLE DB 程序员参考*中Windows SDK。  
+ 有关哪些限制对应于特定架构行集的详细信息，请查阅上表的架构行集 Guid 中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))中*OLE DB 程序员参考*中Windows SDK。  
   
  例如，如果您支持**TABLE_NAME**限制`DBSCHEMA_TABLES`，您将执行以下操作：  
   

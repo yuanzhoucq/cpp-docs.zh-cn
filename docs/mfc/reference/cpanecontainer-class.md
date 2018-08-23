@@ -1,5 +1,5 @@
 ---
-title: CPaneContainer 类 |Microsoft 文档
+title: CPaneContainer 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079470"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539372"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 类
-`CPaneContainer`类是由 MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠窗格或两个 `CPaneContainer.` 实例的指针。它还存储分隔窗格（或容器）的分隔线的指针。 通过嵌套容器内部的容器，框架可以生成表示复杂停靠布局的二叉树。 二进制树的根存储在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)对象。  
+`CPaneContainer`类是由 MFC 实现的停靠模型的基本组成部分。 此类对象存储指向两个停靠窗格或两个 `CPaneContainer.` 实例的指针。它还存储分隔窗格（或容器）的分隔线的指针。 通过嵌套容器内部的容器，框架可以生成表示复杂停靠布局的二叉树。 二进制树的根存储中[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)对象。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
  
 ## <a name="syntax"></a>语法  
   
@@ -991,7 +991,7 @@ virtual int StretchPaneContainer(
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)

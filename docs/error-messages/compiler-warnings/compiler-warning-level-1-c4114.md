@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4114 |Microsoft 文档
+title: 编译器警告 （等级 1） C4114 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283918"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538624"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>编译器警告 （等级 1） C4114
 多次使用同一类型限定符  
   
- 类型声明或定义使用的类型限定符 (**const**， `volatile`，**签名**，或`unsigned`) 不止一次。 这会导致具有 Microsoft 扩展 (/Ze) 警告而是在 ANSI 兼容性 (/Za) 下的错误。  
+ 类型声明或定义使用类型限定符 (**const**，**易失性**，**签名**，或者**无符号**) 不止一次。 这将导致具有 Microsoft 扩展 (/Ze) 的警告和 ANSI 兼容性 (/Za) 错误。  
   
  下面的示例生成 C4114:  
   

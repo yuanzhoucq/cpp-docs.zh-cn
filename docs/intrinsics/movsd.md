@@ -1,5 +1,5 @@
 ---
-title: __movsd |Microsoft 文档
+title: __movsd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326919"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538593"
 ---
 # <a name="movsd"></a>__movsd
 **Microsoft 专用**  
   
- 生成的移动字符串 (`rep movsd`) 指令。  
+ 生成移动字符串 (`rep movsd`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ void __movsd(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Source`  
  操作的源。  
@@ -54,12 +54,12 @@ void __movsd(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 结果是，第一个`Count`指向双字数组`Source`复制到`Dest`字符串。  
+ 结果是，第一个`Count`指向双字`Source`复制到`Dest`字符串。  
   
  此例程仅可用作内部函数。  
   

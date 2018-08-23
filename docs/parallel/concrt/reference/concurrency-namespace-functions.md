@@ -1,5 +1,5 @@
 ---
-title: 并发命名空间函数 |Microsoft 文档
+title: 并发命名空间函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -41,18 +41,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695218"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539171"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
-|[EnableTracing](#enabletracing)|[可用](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
+|[分配](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[EnableTracing](#enabletracing)|[免费](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
 |[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|  
@@ -67,7 +67,7 @@ ms.locfileid: "33695218"
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[等待](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc"></a>  Alloc  
+##  <a name="alloc"></a>  分配  
  通过并发运行时缓存子分配器分配具有指定大小的内存块。  
   
 ```
@@ -76,10 +76,10 @@ void* __cdecl Alloc(size_t _NumBytes);
   
 ### <a name="parameters"></a>参数  
  `_NumBytes`  
- 要分配的内存的字节数。  
+ 要分配的内存字节数。  
   
 ### <a name="return-value"></a>返回值  
- 指向新分配内存的指针。  
+ 指向新分配的内存的指针。  
   
 ### <a name="remarks"></a>备注  
  有关哪些应用程序中的方案适合使用缓存子分配器的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
@@ -104,13 +104,13 @@ bool asend(
  要发送的数据的类型。  
   
  `_Trg`  
- 指针或数据发送到的 target 引用。  
+ 指针或向其发送数据的目标引用。  
   
  `_Data`  
  对要发送的数据的引用。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果消息已被接受之前该方法返回，`false`否则为。  
+ `true` 如果消息已接受该方法返回时之前,`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[消息传递函数](../../../parallel/concrt/message-passing-functions.md)。  
@@ -125,7 +125,7 @@ inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
 ##  <a name="clear"></a>  清除  
- 清除并发队列，销毁所有当前排队元素。 此方法不是并发安全。  
+ 清除并发队列，销毁所有当前排入队列的元素。 此方法不是并发安全的。  
   
 ```
 template<typename T, class _Ax>
@@ -151,22 +151,22 @@ __declspec(noinline) auto create_async(const _Function& _Func)
  从其中创建 Windows 运行时异步构造的 lambda 或函数对象。  
   
 ### <a name="return-value"></a>返回值  
- 一个异步构造，它由 IAsyncAction ^，IAsyncActionWithProgress\<TProgress > ^，IAsyncOperation\<TResult > ^，或 IAsyncOperationWithProgress\<TResult，TProgress > ^。 返回的接口依赖于传递给函数的 lambda 的签名。  
+ 一个异步构造，它由 IAsyncAction ^、 IAsyncActionWithProgress\<TProgress > ^，IAsyncOperation\<TResult > ^，或 IAsyncOperationWithProgress\<，TProgress > ^。 返回的接口依赖于传递给函数的 lambda 的签名。  
   
 ### <a name="remarks"></a>备注  
  lambda 的返回类型确定该构造是一个行为还是一项操作。  
   
  返回 void 的 lambda 将导致创建一些行为。 返回类型为 `TResult` 的结果的 lambda 将导致创建 TResult 的操作。  
   
- lambda 可能还返回 `task<TResult>`（在自身中封装异步工作或是表示异步工作的任务链的延续）。 在此示例中，由于任务是异步执行的，所以将以内联方式执行 lambda，并且将解包 lambda 的返回类型以生成 `create_async` 返回的异步构造。 这意味着 lambda 的返回任务\<void > 将导致创建一些操作，并返回一个任务的 lambda 的\<TResult > 将导致创建 TResult 的操作。  
+ lambda 可能还返回 `task<TResult>`（在自身中封装异步工作或是表示异步工作的任务链的延续）。 在此示例中，由于任务是异步执行的，所以将以内联方式执行 lambda，并且将解包 lambda 的返回类型以生成 `create_async` 返回的异步构造。 这意味着，lambda 返回 task\<void > 将导致的操作，并返回一个任务的 lambda 创建\<TResult > 将导致创建 TResult 操作。  
   
- lambda 可采用零个、一个或两个自变量。 有效的参数是 `progress_reporter<TProgress>` 和 `cancellation_token`（此顺序为同时使用两个参数的顺序）。 无自变量的 lambda 将导致创建一个缺少进度报告功能的异步构造。 采用 progress_reporter 的 lambda\<TProgress > 将导致`create_async`返回一个异步构造将报告 TProgress 类型的进度每次`report`调用 progress_reporter 对象的方法。 采用 cancellation_token 的 lambda 可以使用该标记来检查取消情况，或将该标记传递给它创建的任务，以便取消异步构造可导致取消这些任务。  
+ lambda 可采用零个、一个或两个自变量。 有效的参数是 `progress_reporter<TProgress>` 和 `cancellation_token`（此顺序为同时使用两个参数的顺序）。 无自变量的 lambda 将导致创建一个缺少进度报告功能的异步构造。 Lambda 采用 progress_reporter\<TProgress > 将导致`create_async`要返回的异步构造将报告 TProgress 类型的进度每次`report`调用 progress_reporter 对象的方法。 采用 cancellation_token 的 lambda 可以使用该标记来检查取消情况，或将该标记传递给它创建的任务，以便取消异步构造可导致取消这些任务。  
   
- 如果 lambda 或函数对象的主体返回一个结果 (并且不是\<TResult >)，将在任务运行时的上下文中的 MTA 隐式为其创建过程中以异步方式执行 lamdba。 `IAsyncInfo::Cancel` 方法将导致取消隐式任务。  
+ 如果 lambda 或函数对象的主体返回的结果 (并且不是 task\<TResult >)，则将为其隐式创建的任务运行时上下文中的 MTA 在过程内以异步方式执行。 `IAsyncInfo::Cancel` 方法将导致取消隐式任务。  
   
  如果 lambda 的主体返回一个任务，则 lamba 将通过声明 lambda 采用类型为 `cancellation_token` 的参数，以内联方式执行，您可以通过在创建任务时将此标记传入，从而触发对在 lambda 中创建的任何任务的取消。 您还可对此标记使用 `register_callback` 方法，以使运行时在您对产生的异步操作或行为调用 `IAsyncInfo::Cancel` 时调用回调。  
   
- 此函数是仅可用于 Windows 运行时应用。  
+ 此函数是仅适用于 Windows 运行时应用。  
   
 ##  <a name="createresourcemanager"></a>  CreateResourceManager  
  返回表示并发运行时的资源管理器的单一实例的接口。 资源管理器负责将资源分配给想要相互合作的计划程序。  
@@ -179,7 +179,7 @@ IResourceManager* __cdecl CreateResourceManager();
  一个 `IResourceManager` 接口。  
   
 ### <a name="remarks"></a>备注  
- 多个后续调用此方法将返回相同的实例的资源管理器。 每次调用此方法会递增引用计数在资源管理器中，并必须通过调用匹配[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成您的计划程序通信使用资源管理器。  
+ 多个后续调用此方法将返回同一实例的资源管理器。 每次调用此方法会递增引用计数在资源管理器中，并必须通过调用匹配[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成你的计划程序时使用资源管理器进行通信。  
   
  [unsupported_os](unsupported-os-class.md)如果操作系统不支持并发运行时引发。  
   
@@ -201,22 +201,22 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  `_ReturnType`  
  `_Param`  
- 从中构造任务的参数。 这可能是一个 lambda 或函数对象，对象`task_completion_event`对象、 不同`task`对象或如果你要在 UWP 应用中使用任务 Windows::Foundation::IAsyncInfo 接口。  
+ 从中构造任务的参数。 这可能是 lambda 或函数对象`task_completion_event`对象，另`task`对象或如果在 UWP 应用中使用任务 Windows::Foundation::IAsyncInfo 接口。  
   
  `_TaskOptions`  
  `_Task`  
   
 ### <a name="return-value"></a>返回值  
- 类型的一个新任务`T`，即从推断`_Param`。  
+ 类型的新任务`T`，即从推断`_Param`。  
   
 ### <a name="remarks"></a>备注  
- 第一个重载的行为类似任务构造函数采用单个参数。  
+ 第一个重载的行为类似于采用单个参数的任务构造函数。  
   
- 第二个重载将提供与新创建的任务的取消标记相关联。 如果你使用此重载则不允许在不同传递`task`对象作为第一个参数。  
+ 第二个重载将提供与新创建的任务的取消令牌相关联。 如果使用此重载不允许传入不同`task`对象作为第一个参数。  
   
- 从第一个参数情况下，返回的任务的类型推断函数。 如果`_Param`是`task_completion_event<T>`、 `task<T>`，或返回任何一种类型的涵子`T`或`task<T>`，所创建的任务的类型是`task<T>`。  
+ 返回的任务的类型是从第一个参数推断函数。 如果`_Param`是`task_completion_event<T>`即`task<T>`，或返回任何一种类型的仿函数`T`或`task<T>`，创建的任务的类型是`task<T>`。  
   
- 在 UWP 应用中，如果`_Param`属于类型 Windows::Foundation::IAsyncOperation\<T > ^ 或 Windows::Foundation::IAsyncOperationWithProgress\<T、 P > ^，或创建的任务将为返回这些类型的某个函数，类型`task<T>`。 如果`_Param`属于类型 Windows::Foundation::IAsyncAction ^ 或 Windows::Foundation::IAsyncActionWithProgress\<P > ^，或返回这些类型的某个函数，创建的任务将具有键入`task<void>`。  
+ 在 UWP 应用中，如果`_Param`属于类型 Windows::Foundation::IAsyncOperation\<T > ^ 或 Windows::Foundation::IAsyncOperationWithProgress\<T，P > ^，或创建的任务将为返回这些类型的仿函数，类型`task<T>`。 如果`_Param`属于类型 Windows::Foundation::IAsyncAction ^ 或 Windows::Foundation::IAsyncActionWithProgress\<P > ^，或返回这些类型的仿函数，创建的任务将具有键入`task<void>`。  
   
 ##  <a name="disabletracing"></a>  DisableTracing  
  在并发运行时中禁用跟踪。 此函数被弃用，因为默认注销 ETW 跟踪。  
@@ -226,7 +226,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果正确禁用跟踪，`S_OK`返回。 如果之前未启动跟踪，将返回 `E_NOT_STARTED`。  
+ 如果已正确禁用跟踪，`S_OK`返回。 如果之前未启动跟踪，将返回 `E_NOT_STARTED`。  
   
 ##  <a name="enabletracing"></a>  EnableTracing  
  在并发运行时中启用跟踪。 此函数被弃用，因为现在默认启用 ETW 跟踪。  
@@ -238,7 +238,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>返回值  
  如果正确启动跟踪，`S_OK`返回; 否则为`E_NOT_STARTED`返回。  
   
-##  <a name="free"></a>  可用  
+##  <a name="free"></a>  免费  
  释放先前通过 `Alloc` 方法分配给并发运行时的缓存子分配器的内存块。  
   
 ```
@@ -247,7 +247,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
   
 ### <a name="parameters"></a>参数  
  `_PAllocation`  
- 指向以前分配的内存的指针`Alloc`方法即被释放。 如果参数`_PAllocation`设置为值`NULL`，此方法将忽略它，然后立即返回。  
+ 指向以前分配的内存的指针`Alloc`这是要释放的方法。 如果将参数`_PAllocation`设置为值`NULL`，此方法将忽略它并立即返回。  
   
 ### <a name="remarks"></a>备注  
  有关哪些应用程序中的方案适合使用缓存子分配器的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
@@ -268,10 +268,10 @@ unsigned int __cdecl GetExecutionContextId();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 执行上下文的唯一标识符。  
+ 执行上下文是唯一标识符。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法传递之前获取的执行上下文的标识符`IExecutionContext`作为参数传递给任何资源管理器提供的方法的接口。  
+ 使用此方法以获取执行上下文的标识符之前传递`IExecutionContext`作为任一资源管理器提供方法的参数的接口。  
   
 ##  <a name="getosversion"></a>  GetOSVersion  
  返回操作系统版本。  
@@ -310,7 +310,7 @@ unsigned int __cdecl GetProcessorNodeCount();
  NUMA 节点或处理器包数。  
   
 ### <a name="remarks"></a>备注  
- 如果系统包含多个 NUMA 节点比处理器包，在返回 NUMA 节点的数目，否则，返回的处理器包的数量。  
+ 如果系统包含多个 NUMA 节点比处理器包，则返回 NUMA 节点数，否则，返回处理器包数。  
   
  [unsupported_os](unsupported-os-class.md)如果操作系统不支持并发运行时引发。  
   
@@ -322,10 +322,10 @@ unsigned int __cdecl GetSchedulerId();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 计划程序唯一标识符。  
+ 计划程序的唯一标识符。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法来为您的计划程序获取的标识符之前传递,`IScheduler`作为参数传递给任何资源管理器提供的方法的接口。  
+ 使用此方法来为你的计划程序获取的标识符之前传递`IScheduler`作为任一资源管理器提供方法的参数的接口。  
   
 ##  <a name="internal_assign_iterators"></a>  internal_assign_iterators  
   
@@ -362,7 +362,7 @@ bool __cdecl is_current_task_group_canceling();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果正在取消当前正在执行的任务组，`false`否则为。  
+ `true` 如果要取消当前正在执行的任务组，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
@@ -394,7 +394,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
   
 ### <a name="parameters"></a>参数  
  `T1`  
- 消息块的第一个源类型。  
+ 第一个源消息块类型。  
   
  `T2`  
  第二个源消息块类型。  
@@ -444,7 +444,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
   
 ### <a name="parameters"></a>参数  
  `T1`  
- 消息块的第一个源类型。  
+ 第一个源消息块类型。  
   
  `T2`  
  第二个源消息块类型。  
@@ -495,7 +495,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
   
 ### <a name="parameters"></a>参数  
  `T1`  
- 消息块的第一个源类型。  
+ 第一个源消息块类型。  
   
  `T2`  
  第二个源消息块类型。  
@@ -528,16 +528,16 @@ task_handle<_Function> make_task(const _Function& _Func);
   
 ### <a name="parameters"></a>参数  
  `_Function`  
- 将调用以执行所表示的工作的函数对象类型`task_handle`对象。  
+ 将调用来执行工作所表示的函数对象的类型`task_handle`对象。  
   
  `_Func`  
- 将调用来执行工作所表示的函数`task_handle`对象。 这可能是 lambda functor、 指向函数的指针或支持具有签名的函数调用运算符的版本的任何对象`void operator()()`。  
+ 将调用来执行工作所表示的函数`task_handle`对象。 这可能是 lambda 函数，指向函数，也支持具有签名的函数调用运算符的版本的任何对象`void operator()()`。  
   
 ### <a name="return-value"></a>返回值  
  一个 `task_handle` 对象。  
   
 ### <a name="remarks"></a>备注  
- 此函数很有用，当你需要创建`task_handle`对象使用 lambda 表达式，因为它允许您创建无需知道 lambda 函子的实际类型的对象。  
+ 此函数时，您需要创建`task_handle`对象使用 lambda 表达式，因为它允许您不知道 lambda 函子的类型，则返回 true 的情况下创建该对象。  
   
 ##  <a name="parallel_buffered_sort"></a>  parallel_buffered_sort  
  将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列（以并行方式）。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似，但它需要 `O(n)` 附加空间，并需要待排序的元素进行默认初始化。  
@@ -606,7 +606,7 @@ inline void parallel_buffered_sort(
  一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。  
   
  `_Alloc`  
- C + + 标准库兼容的内存分配器实例。  
+ C + + 标准库兼容的内存分配器的实例。  
   
  `_Func`  
  用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。 该比较器函数必须对序列中的元素对进行严格弱排序。  
@@ -615,9 +615,9 @@ inline void parallel_buffered_sort(
  最小大小的区块将拆分为两个区块用于并行执行。  
   
 ### <a name="remarks"></a>备注  
- 所有重载都需要`n * sizeof(T)`附加空间，其中`n`是要排序的元素的数目和`T`是元素类型。 在大多数情况下 parallel_buffered_sort 将通过显示中的性能改进[parallel_sort](concurrency-namespace-functions.md)，并且你应使用它通过 parallel_sort 如果你有可用内存。  
+ 所有重载都需要`n * sizeof(T)`附加空间，其中`n`是要进行排序的元素数和`T`是元素类型。 在大多数情况下 parallel_buffered_sort 将通过显示中的性能改进[parallel_sort](concurrency-namespace-functions.md)，应使用它通过 parallel_sort 如果有可用的内存。  
   
- 如果未提供二进制比较器`std::less`用作默认情况下，需要元素类型，以提供运算符`operator<()`。  
+ 如果不提供二进制比较运算符`std::less`用作默认情况下，需要提供操作员的元素类型`operator<()`。  
   
  如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。  
   
@@ -676,25 +676,25 @@ void parallel_for(
  所使用的迭代的索引的类型。  
   
  `_Function`  
- 将在每次迭代执行函数的类型。  
+ 将在每次迭代执行的函数的类型。  
   
  `_Partitioner`  
- 用于分区提供的范围的分区的类型。  
+ 用于进行分区提供的范围分区程序的类型。  
   
  `first`  
  要包括在迭代中的第一个索引。  
   
  `last`  
- 索引一超过要包括在迭代中的最后一个索引。  
+ 索引一个过去的迭代中要包含的最后一个索引。  
   
  `_Step`  
- 值，通过它来单步当循环从`first`到`last`。 步骤必须是正数。 [invalid_argument](../../../standard-library/invalid-argument-class.md)的一步是等于或大于 1 时引发。  
+ 值，通过它来单步在迭代过程中从`first`到`last`。 在步骤必须是正数。 [invalid_argument](../../../standard-library/invalid-argument-class.md)的步骤是等于或大于 1 时引发。  
   
  `_Func`  
- 要在每次迭代执行的函数。 这可能是 lambda 表达式、 函数指针，或支持具有签名的函数调用运算符的版本的任何对象`void operator()(_Index_type)`。  
+ 在每次迭代执行的函数。 这可能是 lambda 表达式、 函数指针，也支持具有签名的函数调用运算符的版本的任何对象`void operator()(_Index_type)`。  
   
  `_Part`  
- 对分区程序对象的引用。 自变量可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)使用对象，该引用必须是一个非常量的左值引用，以便算法可以存储供未来循环重用的状态。  
+ 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[并行算法](../../../parallel/concrt/parallel-algorithms.md)。  
@@ -722,25 +722,25 @@ void parallel_for_each(
  用于循环访问容器的迭代器的类型。  
   
  `_Function`  
- 将应用于范围内的每个元素的函数类型。  
+ 将应用于每个元素的范围内的函数的类型。  
   
  `_Partitioner`  
  `first`  
- 寻址的迭代器的第一个元素的位置包括在并行迭代中。  
+ 迭代器，用于寻址第一个元素的位置包括在并行迭代中。  
   
  `last`  
- 寻址的迭代器的最后一个元素的位置包括在并行迭代中。  
+ 发现的迭代器的最后一个元素之后的位置包括在并行迭代中。  
   
  `_Func`  
- 用户定义函数对象应用于范围中每个元素。  
+ 应用于每个元素的范围中一个用户定义函数对象。  
   
  `_Part`  
- 对分区程序对象的引用。 自变量可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)使用对象，该引用必须是一个非常量的左值引用，以便算法可以存储供未来循环重用的状态。  
+ 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。  
   
 ### <a name="remarks"></a>备注  
  [auto_partitioner](auto-partitioner-class.md)将用于而无需显式分区程序的重载。  
   
- 对于不支持随机迭代器访问，仅[auto_partitioner](auto-partitioner-class.md)支持。  
+ 有关迭代器不支持随机访问，仅[auto_partitioner](auto-partitioner-class.md)支持。  
   
  有关详细信息，请参阅[并行算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
@@ -874,69 +874,69 @@ void parallel_invoke(
   
 ### <a name="parameters"></a>参数  
  `_Function1`  
- 并行执行的第一个函数对象的类型。  
+ 要并行执行的第一个函数对象的类型。  
   
  `_Function2`  
- 并行执行的第二个函数对象的类型。  
+ 要并行执行的第二个函数对象的类型。  
   
  `_Function3`  
- 并行执行的第三个函数对象的类型。  
+ 要并行执行的第三个函数对象的类型。  
   
  `_Function4`  
- 并行执行的第四个函数对象的类型。  
+ 要并行执行的第四个函数对象的类型。  
   
  `_Function5`  
- 并行执行的第五个函数对象的类型。  
+ 要并行执行的第五个函数对象的类型。  
   
  `_Function6`  
- 并行执行的第六个函数对象的类型。  
+ 要并行执行的第六个函数对象的类型。  
   
  `_Function7`  
- 并行执行的第七个函数对象的类型。  
+ 要并行执行的第七个函数对象的类型。  
   
  `_Function8`  
- 并行执行的第八个函数对象的类型。  
+ 要并行执行的第八个函数对象的类型。  
   
  `_Function9`  
- 并行执行的第九个函数对象的类型。  
+ 要并行执行的第九个函数对象的类型。  
   
  `_Function10`  
- 并行执行的第 10 个函数对象的类型。  
+ 要并行执行的第十个函数对象的类型。  
   
  `_Func1`  
- 并行执行的第一个函数对象。  
+ 要并行执行的第一个函数对象。  
   
  `_Func2`  
- 若要并行执行第二个函数对象。  
+ 要并行执行的第二个函数对象。  
   
  `_Func3`  
- 并行执行的第三个函数对象。  
+ 要并行执行的第三个函数对象。  
   
  `_Func4`  
- 并行执行的第四个函数对象。  
+ 要并行执行的第四个函数对象。  
   
  `_Func5`  
- 并行执行的第五个函数对象。  
+ 要并行执行的第五个函数对象。  
   
  `_Func6`  
- 并行执行的第六个函数对象。  
+ 要并行执行的第六个函数对象。  
   
  `_Func7`  
- 并行执行的第七个函数对象。  
+ 要并行执行的第七个函数对象。  
   
  `_Func8`  
- 并行执行的第八个函数对象。  
+ 要并行执行的第八个函数对象。  
   
  `_Func9`  
- 并行执行的第九个函数对象。  
+ 要并行执行的第九个函数对象。  
   
  `_Func10`  
- 并行执行的第 10 个函数对象。  
+ 要并行执行的第十个函数对象。  
   
 ### <a name="remarks"></a>备注  
- 请注意，一个或多个函数对象作为提供参数可能会执行将在调用上下文的内联。  
+ 请注意，一个或多个函数对象提供参数可能会将在调用上下文中执行内联。  
   
- 如果一个或多个函数对象作为参数传递给此函数引发了异常，运行时将选择其选择的此类异常之一，并将其传播到调用`parallel_invoke`。  
+ 如果一个或多个函数对象作为参数传递给此函数将引发异常，运行时将选择其选择的一个此类异常，并将其传播到调用`parallel_invoke`。  
   
  有关详细信息，请参阅[并行算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
@@ -1003,18 +1003,18 @@ inline void parallel_radixsort(
  一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。  
   
  `_Alloc`  
- C + + 标准库兼容的内存分配器实例。  
+ C + + 标准库兼容的内存分配器的实例。  
   
  `_Proj_func`  
- 将元素转换为整数值用户定义的投影函数对象。  
+ 将元素转换为整数值用户定义投影函数对象。  
   
  `_Chunk_size`  
  最小大小的区块将拆分为两个区块用于并行执行。  
   
 ### <a name="remarks"></a>备注  
- 所有重载都需要`n * sizeof(T)`附加空间，其中`n`是要排序的元素的数目和`T`是元素类型。 具有签名一元投影函子`I _Proj_func(T)`需要返回密钥在给定元素，其中`T`是元素类型和`I`是无符号的整数类型。  
+ 所有重载都需要`n * sizeof(T)`附加空间，其中`n`是要进行排序的元素数和`T`是元素类型。 具有签名一元投影函子`I _Proj_func(T)`需要返回键在给定元素，其中`T`是元素类型和`I`是无符号的整数类型。  
   
- 如果未提供的投影函数，只需返回的元素的默认投影函数适用于整数类型。 该函数将无法编译如果该元素不在缺少整数类型的投影函数。  
+ 如果未提供的投影函数，只需返回的元素的默认投影函数用于整数类型。 该函数将无法编译如果元素不是整数类型中不存在的投影函数。  
   
  如果未提供的分配器类型或实例，c + + 标准库内存分配器`std::allocator<T>`用于分配的缓冲区。  
   
@@ -1054,40 +1054,40 @@ inline _Reduce_type parallel_reduce(
  输入范围的迭代器类型。  
   
  `_Sym_reduce_fun`  
- 对称缩减函数的类型。 这必须是函数类型与签名`_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`，其中 _Reduce_type 是相同的标识类型和减少的结果类型。 对于第三个重载，这应是与的输出类型一致`_Range_reduce_fun`。  
+ 对称减少函数的类型。 这必须是具有签名的函数类型`_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`，其中 _Reduce_type 是相同的标识类型和减少的结果类型。 用于第三个重载，这应该是一致的输出类型`_Range_reduce_fun`。  
   
  `_Reduce_type`  
- 输入将减少，它可以是不同的输入的元素类型的类型。 返回值和标识值将包含此类型。  
+ 输入会减少为，可以是不同于输入的元素类型的类型。 返回值和标识值将具有此类型。  
   
  `_Range_reduce_fun`  
- 范围缩减函数的类型。 这必须是函数类型与签名`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的标识类型和减少的结果类型。  
+ 范围减少函数的类型。 这必须是具有签名的函数类型`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的标识类型和减少的结果类型。  
   
  `_Begin`  
- 输入迭代器寻址的范围中的第一个元素降低。  
+ 输入迭代器，用于寻址的范围中的第一个元素会减少。  
   
  `_End`  
- 寻址的最后一个元素之外要减少的范围内的一个位置的元素的输入迭代器。  
+ 发现要减少的范围内最后一个元素之外的一个位置的元素的输入迭代器。  
   
  `_Identity`  
- 标识值`_Identity`的减少的结果类型与相同的类型以及`value_type`的第一个和第二个重载的迭代器。 对于第三个重载，标识值必须具有降低的结果类型与相同的类型，但可以不同于`value_type`迭代器。 它必须具有适当的值以便范围 reduction 运算符`_Range_fun`，当应用于各种类型的单个元素时`value_type`，标识值，其行为相似类型的值的类型强制转换`value_type`到标识类型。  
+ 标识值`_Identity`的减少的结果类型与相同的类型以及`value_type`迭代器的第一个和第二个重载。 用于第三个重载，标识值必须与缩短，原本的结果类型相同的类型，但可以不同于`value_type`的迭代器。 它必须具有适当的值，范围 reduction 运算符`_Range_fun`，当应用于一定范围的单个元素的类型`value_type`的标识值的行为类似于类型中的值的类型强制转换和`value_type`为标识类型。  
   
  `_Sym_fun`  
- 中的第二个减少将使用对称函数。 有关详细信息，请参阅备注。  
+ 将中的第二个减少使用对称函数。 有关详细信息，请参阅备注。  
   
  `_Range_fun`  
  将在减少的第一阶段中使用的函数。 有关详细信息，请参阅备注。  
   
 ### <a name="return-value"></a>返回值  
- 减少结果。  
+ 减少的结果。  
   
 ### <a name="remarks"></a>备注  
- 若要执行并行缩减，该函数，请将分成区块基于供基础计划程序的辅助进程数的范围。 减少分两个阶段进行，第一阶段执行的每个区块中减少并第二个阶段执行从每个区块的部分结果之间的减少。  
+ 若要执行并行缩减，该函数会将范围分成区块根据基础计划程序可供工作线程的数目。 减少发生在两个阶段、 第一阶段执行每个区块中的减少和第二个阶段执行每个区块的部分结果之间的减少。  
   
- 第一个重载都需要的迭代器的`value_type`， `T`，作为标识值类型，以及减少结果类型是相同。 元素类型 T 必须提供运算符`T T::operator + (T)`以减少在每个块区中的元素。 在第二个阶段使用相同的运算符。  
+ 第一个重载需要迭代器的`value_type`， `T`，作为标识值类型，以及减少结果类型为相同。 元素类型 T 必须提供该运算符`T T::operator + (T)`以减少每个区块中的元素。 第二个阶段中使用相同的运算符。  
   
- 第二个重载还要求的迭代器`value_type`相同作为标识值类型，以及减少结果类型。 提供的二进制运算符`_Sym_fun`在这两个缩减阶段，标识值与第一阶段的初始值中使用。  
+ 第二个重载还需要迭代器的`value_type`是相同的作为标识值类型，以及减少结果类型。 提供的二进制运算符`_Sym_fun`用于这两种降低阶段，使用的标识值与第一阶段的初始值。  
   
- 对于第三个重载，标识值类型必须是相同为减少结果类型，但迭代器的`value_type`可能从这两个不同。 范围缩减函数`_Range_fun`在带有标识值的第一个阶段中使用的初始值和二元函数作为`_Sym_reduce_fun`应用到子在第二个阶段的结果。  
+ 用于第三个重载，标识值类型必须相同为减少结果类型，但迭代器的`value_type`可能会从这两个不同。 范围减少函数`_Range_fun`可在使用标识值的第一阶段中作为初始值和二元函数`_Sym_reduce_fun`应用到子在第二个阶段的结果。  
   
 ##  <a name="parallel_sort"></a>  parallel_sort  
  将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列（以并行方式）。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似。  
@@ -1126,7 +1126,7 @@ inline void parallel_sort(
  最小大小的区块将拆分为两个区块用于并行执行。  
   
 ### <a name="remarks"></a>备注  
- 第一个重载使用二进制比较器 `std::less`。  
+ 第一个重载使用二进制比较运算符`std::less`。  
   
  第二个重载使用提供的应具有签名 `bool _Func(T, T)`（其中 `T` 是输入范围中元素的类型）的二进制比较器。  
   
@@ -1233,7 +1233,7 @@ _Output_iterator parallel_transform(
  用户定义的应用于源范围内每个元素的一元函数对象。  
   
  `_Part`  
- 对分区程序对象的引用。 自变量可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)使用对象，该引用必须是一个非常量的左值引用，以便算法可以存储供未来循环重用的状态。  
+ 对分区程序对象的引用。 参数可以是之一`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_分区程序](simple-partitioner-class.md)`&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)对象，该引用必须是一个非常量左值引用，以便算法可以存储状态，供未来循环重用。  
   
  `first2`  
  一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。  
@@ -1245,9 +1245,9 @@ _Output_iterator parallel_transform(
  一种输出迭代器，用于寻址接收通过函数对象转换的输出元素的目标范围内最后元素之后下一个元素的位置。  
   
 ### <a name="remarks"></a>备注  
- [auto_partitioner](auto-partitioner-class.md)将用于无显式分区程序自变量的重载。  
+ [auto_partitioner](auto-partitioner-class.md)将用于无显式分区程序参数的重载。  
   
- 对于不支持随机迭代器访问，仅[auto_partitioner](auto-partitioner-class.md)支持。  
+ 有关迭代器不支持随机访问，仅[auto_partitioner](auto-partitioner-class.md)支持。  
   
  采用参数 `_Unary_op` 的重载将一元函子应用于输入范围内的每个元素，从而将输入范围转换为输出范围。 `_Unary_op` 必须支持带有签名 `operator()(T)` 的函数调用运算符，签名中的 `T` 是要循环访问的范围的值类型。  
   
@@ -1287,10 +1287,10 @@ T receive(
  负载类型。  
   
  `_Src`  
- 指针或对从中需要数据源的引用。  
+ 指针或对从其预期的数据源的引用。  
   
  `_Timeout`  
- 最大时间该方法应为其的数据，以毫秒为单位。  
+ 最长时间该方法应为其数据，以毫秒为单位。  
   
  `_Filter_proc`  
  确定是否应接受消息的筛选器函数。  
@@ -1299,7 +1299,7 @@ T receive(
  来自源的负载类型的值。  
   
 ### <a name="remarks"></a>备注  
- 如果参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间量过期之前收到一条消息，将引发。 如果你想零长度超时，则应使用[try_receive](concurrency-namespace-functions.md)函数，而不是调用`receive`且超时为`0`（零），因为它效率更高并且未引发超时异常。  
+ 如果将参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，该异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间内过期之前收到一条消息，将引发。 如果你想为零长度超时，则应使用[try_receive](concurrency-namespace-functions.md)函数，而不是调用`receive`且超时为`0`（零），因为它更高效，未引发超时异常。  
   
  有关详细信息，请参阅[消息传递函数](../../../parallel/concrt/message-passing-functions.md)。  
   
@@ -1342,13 +1342,13 @@ bool send(ITarget<T>& _Trg, const T& _Data);
  负载类型。  
   
  `_Trg`  
- 指针或数据发送到的 target 引用。  
+ 指针或向其发送数据的目标引用。  
   
  `_Data`  
  对要发送的数据的引用。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果消息已被接受，`false`否则为。  
+ `true` 如果接受该消息，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[消息传递函数](../../../parallel/concrt/message-passing-functions.md)。  
@@ -1389,7 +1389,7 @@ void __cdecl set_task_execution_resources(
  `GROUP_AFFINITY` 项的数组。  
   
 ### <a name="remarks"></a>备注  
- 该方法将引发[invalid_operation](invalid-operation-class.md)异常如果资源管理器是在调用它时，时间存在和[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果将指定的结果的关联中的空集资源。  
+ 该方法将引发[invalid_operation](invalid-operation-class.md)异常是否存在时调用，资源管理器和一个[invalid_argument](../../../standard-library/invalid-argument-class.md)异常，如果指定的关联产生空集资源。  
   
  应仅在具有 Windows 7 或更高版本的操作系统上使用接受组关联作为参数的方法版本。 否则为[invalid_operation](invalid-operation-class.md)引发异常。  
   
@@ -1410,18 +1410,18 @@ inline void swap(
  并发向量中存储的元素数据类型。  
   
  `_Ax`  
- 并发向量分配器类型。  
+ 并发向量的分配器类型。  
   
  `_A`  
- 其元素将要与并发向量交换的并发向量`_B`。  
+ 其元素将要与并发向量的交换的并发向量`_B`。  
   
  `_B`  
- 提供要交换的元素的并发向量或其元素将要与并发向量交换的向量`_A`。  
+ 提供要交换的元素的并发向量或其元素将要与并发向量的交换的向量`_A`。  
   
 ### <a name="remarks"></a>备注  
- 模板函数是一种算法专用的容器类`concurrent_vector`执行成员函数`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 这些是由编译器进行的函数模板部分排序的实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的常规版本`template <class T> void swap(T&, T&)`，算法类的工作原理是分配且较慢的操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
+ 模板函数是容器类上专用化的算法`concurrent_vector`用以执行成员函数`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 这些是由编译器进行的函数模板部分排序的实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本`template <class T> void swap(T&, T&)`，在算法类按分配工作，是一种慢速操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
   
- 此方法不是并发安全。 你必须确保在调用此方法时，没有其他线程正在执行的并发向量中的任何一个的操作。  
+ 此方法不是并发安全的。 您必须确保在调用此方法时，没有其他线程正在执行的并发向量中的任何一个的操作。  
   
 ##  <a name="task_from_exception"></a>  task_from_exception  
   
@@ -1509,16 +1509,16 @@ bool try_receive(
  负载类型  
   
  `_Src`  
- 指针或对从中需要数据源的引用。  
+ 指针或对从其预期的数据源的引用。  
   
  `_value`  
- 对在其中放置结果的位置的引用。  
+ 对放置结果的位置的引用。  
   
  `_Filter_proc`  
  确定是否应接受消息的筛选器函数。  
   
 ### <a name="return-value"></a>返回值  
- A`bool`值，该值指示是否将负载置于中`_value`。  
+ 一个`bool`值，该值指示是否将负载置于中`_value`。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[消息传递函数](../../../parallel/concrt/message-passing-functions.md)。  
@@ -1535,7 +1535,7 @@ void __cdecl wait(unsigned int _Milliseconds);
  当前上下文应该暂停的毫秒数。 如果 `_Milliseconds` 参数设置为值 `0`，则当前上下文应在继续之前执行其他可运行的上下文。  
   
 ### <a name="remarks"></a>备注  
- 如果在并发运行时计划程序上下文上调用此方法，计划程序将查找不同的上下文在基础资源上运行。 由于计划程序在本质上是合作的，此上下文不会正好在指定的毫秒数后继续。 如果计划程序正忙于执行不协作产生计划程序的其他任务，那么等待时间可能是无限期。  
+ 如果在并发运行时计划程序上下文调用此方法时，计划程序会发现不同的上下文的基础资源上运行。 由于计划程序在本质上是合作的，此上下文不会正好在指定的毫秒数后继续。 如果计划程序正忙于执行不协作产生计划程序的其他任务，那么等待时间可能是无限期。  
   
 ##  <a name="when_all"></a>  when_all  
  创建一个任务，在作为自变量提供的所有任务成功完成后，此任务将成功完成。  
@@ -1566,9 +1566,9 @@ auto when_all(
  将在所有输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>>`。 如果输入任务的类型为 `void`，则输出任务也将是 `task<void>`。  
   
 ### <a name="remarks"></a>备注  
- `when_all` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](task-class.md#wait)，则可以安全地中在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。  
+ `when_all` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](task-class.md#wait)，则可以安全地在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。  
   
- 如果一个任务被取消或引发异常，则返回的任务将提前，完成处于已取消状态，并且，如果遇到，将会引发该异常如果调用[task:: get](task-class.md#get)或`task::wait`该任务。  
+ 如果一个任务被取消或引发异常，则返回的任务将提前，完成在取消状态，并且，如果遇到，将引发异常如果调用[task:: get](task-class.md#get)或`task::wait`上该任务。  
   
  有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
@@ -1615,7 +1615,7 @@ auto when_any(
  在任意输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::pair<T, size_t>>>`，其中的 pair 的第一个元素是正在完成的任务的结果，第二个元素是已完成的任务的索引。 如果输入任务的类型为 `void`，则输出为 `task<size_t>`，其中的结果是正在完成的任务的索引。  
   
 ### <a name="remarks"></a>备注  
- `when_any` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](task-class.md#wait)，则可以安全地中在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。  
+ `when_any` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](task-class.md#wait)，则可以安全地在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。  
   
  有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208791"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538426"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 类
 封装 OLE 自动化的 `CURRENCY` 数据类型。  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) 构造`COleCurrency`从现有对象`COleCurrency`对象。 新对象具有与源对象相同的状态。  
   
-- COleCurrency (`varSrc`) 构造`COleCurrency`对象。 尝试将转换[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)结构或`COleVariant`为货币 (VT_CY) 值的对象。 如果此转换成功，转换后的值复制到新`COleCurrency`对象。 如果还没有，则`COleCurrency`对象设置为零 (0)，并且其状态设置为无效。  
+- COleCurrency (`varSrc`) 构造`COleCurrency`对象。 尝试将转换[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)结构或`COleVariant`为货币 (VT_CY) 值的对象。 如果此转换成功，转换后的值复制到新`COleCurrency`对象。 如果还没有，则`COleCurrency`对象设置为零 (0)，并且其状态设置为无效。  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency 中指定的数字部分对象。 如果值的小数部分的绝对值大于 10000，将的单位进行适当的调整。 请注意，由指定的单位和小数部分有符号长值。  
   
- 有关详细信息，请参阅[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)并[变体](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)Windows SDK 中的条目。  
+ 有关详细信息，请参阅[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)并[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 中的条目。  
   
 ### <a name="example"></a>示例  
  以下示例显示的零参数和两个参数构造函数的效果：  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **运算符 = (** *varSrc* **)** 如果的转换`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)对象) 的货币 ( `VT_CY`) 是成功，转换后的值复制到此`COleCurrency`对象并将其状态设置为有效。 如果不成功，则转换的值`COleCurrency`对象设置为 0，其状态设置为无效。  
   
- 有关详细信息，请参阅[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)并[变体](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)Windows SDK 中的条目。  
+ 有关详细信息，请参阅[货币](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)并[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 中的条目。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>备注  
  它使用本地语言规范 （区域设置 Id） 的源字符串中的非数字字符含义。  
   
- 有关区域设置 ID 值的讨论，请参阅[支持多种语言](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede)。  
+ 有关区域设置 ID 值的讨论，请参阅[支持多种语言](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)。  
   
  如果字符串是否已成功转换为货币值，此设置的值`COleCurrency`对象设置为该值，并且其状态设置为有效。  
   

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850886"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540378"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 类
 存储有关工具提示视觉外观的信息。  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  如果`m_bVislManagerTheme`为 TRUE 时，每个工具提示请求一个新[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)从应用程序之前它们显示在屏幕上，并使用该对象中的值来确定其外观的可视化管理器。 其他成员你[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)将被忽略。  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

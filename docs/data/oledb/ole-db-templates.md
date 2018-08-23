@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339430"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571927"
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供模板类来实现许多常用 OLE DB 接口。 可以使用 Visual c + + 使用者模板编写 OLE DB 客户端 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序。  
@@ -38,7 +38,7 @@ OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供模板类
  [OLE DB 编程概述](../../data/oledb/ole-db-programming-overview.md)  
  介绍什么是 OLE DB，并讨论了 OLE DB 中的通用数据访问。  
   
- [OLE DB 程序员参考](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  提供 OLE DB 的 Windows SDK 文档的链接。  
   
  [OLE DB 模板示例](../../visual-cpp-samples.md)  

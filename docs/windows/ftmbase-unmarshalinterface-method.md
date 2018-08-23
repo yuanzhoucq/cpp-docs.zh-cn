@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644029"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610696"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 方法
-初始化新创建的代理，并对该代理返回的接口指针。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>参数  
- *pStm*  
- 指向要取消封送的接口指针的流。  
-  
- *riid*  
- 为要取消封送的接口的标识符的引用。  
-  
- *ppv*  
- 此操作完成后，接收中请求的接口指针的指针变量的地址*riid*。 如果此操作成功，**ppv*包含要取消封送的接口的请求的接口指针。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为 E_NOINTERFACE 和 e_fail 两者之一。  
-  
-## <a name="requirements"></a>要求  
- **标头：** ftm.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [FtmBase 类](../windows/ftmbase-class.md)
+
+初始化新创建的代理，并对该代理返回的接口指针。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>参数
+
+*pStm*  
+指向要取消封送的接口指针的流。
+
+*riid*  
+为要取消封送的接口的标识符的引用。
+
+*ppv*  
+此操作完成后，接收中请求的接口指针的指针变量的地址*riid*。 如果此操作成功，**ppv*包含要取消封送的接口的请求的接口指针。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为 E_NOINTERFACE 和 e_fail 两者之一。
+
+## <a name="requirements"></a>要求
+
+**标头：** ftm.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[FtmBase 类](../windows/ftmbase-class.md)

@@ -1,36 +1,36 @@
 ---
-title: WRL 集成 (C + + /cli CX) |Microsoft 文档
+title: WRL 集成 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090255"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598085"
 ---
 # <a name="wrl-integration-ccx"></a>WRL 集成 (C++/CX)
 
-可以自由混合使用 WRL 代码[!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]智能指针 (`ComPtr<T>`) 表示法。 但是，你必须手动处理返回值和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT 错误代码和 WRL 异常。
+可以自由混合 WRL 代码和 Windows 运行时 c + + 模板库 (WRL) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和 WRL 智能指针 (`ComPtr<T>`) 表示法。 但是，您必须手动处理返回值和 WRL HRESULT 错误代码和 WRL 异常。
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 开发
+## <a name="wrl-development"></a>WRL 开发
 
-有关创作和使用的详细信息[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]组件，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
+有关创作和使用 WRL 组件的详细信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
 
 ### <a name="example"></a>示例
 
-下面的代码段演示如何使用 WRL 和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]使用[!INCLUDE[wrt](includes/wrt-md.md)]类和检查元数据文件。
+下面的代码段演示如何使用 WRL 和 WRL 使用 Windows 运行时类和检查元数据文件。
 
-此示例摘自构建 Microsoft 应用商店应用论坛中的代码片段。 此代码片段的作者提供以下免责声明和规定：
+该示例摘自构建 Microsoft Store 应用论坛中的代码片段。 此代码片段的作者提供以下免责声明和规定：
 
-1. 虽然 C++ 未提供反映在 [!INCLUDE[wrt](includes/wrt-md.md)] 类型上的特定 API，但是类型的 Windows 元数据文件(.winmd) 完全与 CLR 元数据文件兼容。 Windows 提供新的元数据发现 API (RoGetMetaDataFile) 来访问特定类型的 .winmd 文件。 但是，对于 C++ 开发人员而言，使用这些 API 存在一定限制，因为无法实例化类。
+1. C + + 不提供的特定 Api，以反映对 Windows 运行时类型，但 Windows 元数据文件 (.winmd) 的类型与 CLR 元数据文件完全兼容。 Windows 提供新的元数据发现 API (RoGetMetaDataFile) 来访问特定类型的 .winmd 文件。 但是，对于 C++ 开发人员而言，使用这些 API 存在一定限制，因为无法实例化类。
 
 1. 编译代码后，还需要将 Runtimeobject.lib 和 Rometadata.lib 传递到链接器。
 
@@ -120,4 +120,4 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 
 ## <a name="see-also"></a>请参阅
 
-[与其他语言的互操作性](interoperating-with-other-languages-c-cx.md)  
+[与其他语言进行互操作](interoperating-with-other-languages-c-cx.md)  

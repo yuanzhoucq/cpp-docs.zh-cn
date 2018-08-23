@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540787"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 提供 Microsoft 基础类库中所有窗口类的基本功能。  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  `DestroyWindow`成员函数还会通过创建无模式对话框销毁[CDialog::Create](../../mfc/reference/cdialog-class.md#create)。  
   
- 如果`CWnd`正在销毁是子窗口，但尚未[WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)样式集，则[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)消息发送给父级。  
+ 如果`CWnd`正在销毁是子窗口，但尚未[WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)样式集，则[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)消息发送给父级。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- 框架将调用此成员函数时当右或向左箭头键用于在菜单栏和系统菜单之间切换。  
+ 使用右或向左箭头键在菜单栏和系统菜单之间切换时，框架将调用此成员函数。  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|指定转换状态。 如果正在释放键，或如果按下了键则为 0，则值为 1。|  
   
 ### <a name="remarks"></a>备注  
- 它指定控件菜单键虚拟键的代码。 （有关的标准虚拟键代码的列表，请参见 Winuser.h）  
+ 它指定控件菜单键虚拟键的代码。 （有关标准虚拟键代码的列表，请参见 Winuser.h）  
   
  上下文代码为 0 时，可以传递 WM_SYSCHAR [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357)到消息[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373)将处理它，就好像它是普通的关键消息，而不是系统的 Windows 函数字符键。 这允许使用与活动窗口，即使活动窗口不具有输入的焦点的加速键。  
   
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- 调用以更改指定的窗口及其所有子窗口的用户界面 (UI) 状态。  
+ 调用以更改指定窗口及其所有子窗口的用户界面 (UI) 状态。  
   
 ```  
 afx_msg void OnUpdateUIState(

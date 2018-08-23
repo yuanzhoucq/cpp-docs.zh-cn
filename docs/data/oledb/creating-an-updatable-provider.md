@@ -1,7 +1,7 @@
 ---
 title: 创建可更新的提供程序 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/16/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340633"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572551"
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 
@@ -33,7 +33,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
  接下来，必须确保您的提供程序包含所有功能，以支持使用者可能会请求它的任何内容。 如果使用者想要更新的数据存储区，则提供程序必须包含的数据保存到数据存储区的代码。 例如，可能会使用 MFC 的 C 运行时库来执行此类操作对数据源。 部分"[写入到数据源](#vchowwritingtothedatasource)"介绍如何将写入到数据源，处理 NULL 和默认值，并设置列标志。  
   
 > [!NOTE]
->  UpdatePV 是可更新的提供程序的示例。 UpdatePV 是相同的作为 MyProv 但对可更新的支持。  
+>  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)是可更新的提供程序的示例。 UpdatePV 是相同的作为 MyProv 但对可更新的支持。  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> 使提供程序可更新  
 
@@ -147,3 +147,298 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
 ##  <a name="vchowwritingtothedatasource"></a> 写入到数据源  
  若要从数据源中读取，调用`Execute`函数。 若要写入的数据源，请调用`FlushData`函数。 （在常规的意义上，刷新表示以保存对表或索引到磁盘进行的修改。）  
 
+```cpp
+
+FlushData(HROW, HACCESSOR);  
+
+```
+
+行句柄 (HROW) 和访问器句柄 (HACCESSOR) 参数，可以指定要写入的区域。 通常情况下，一次写入的单个数据字段。
+
+`FlushData`方法中最初存储的格式写入数据。 如果不重写此函数，您的提供程序将正常工作，但不是会进行更改刷新到数据存储。
+
+### <a name="when-to-flush"></a>何时刷新
+提供程序模板调用 FlushData，每当数据需要写入到数据存储区;这通常 （但并非总是如此），将发生以下函数调用：
+
+- `IRowsetChange::DeleteRows`
+
+- `IRowsetChange::SetData`
+
+- `IRowsetChange::InsertRows` （如果没有要插入的行中的新数据）
+
+- `IRowsetUpdate::Update`
+
+### <a name="how-it-works"></a>其工作原理
+
+使用者发出要求 （如更新） 刷新的调用而此调用传递给提供程序，始终将执行以下操作：
+
+- 调用`SetDBStatus`每当有绑定的状态值。
+
+- 检查列标志。
+
+- 调用 `IsUpdateAllowed`。
+
+这三个步骤帮助提供安全。 然后在提供程序调用`FlushData`。
+
+### <a name="how-to-implement-flushdata"></a>如何实现 FlushData
+
+若要实现`FlushData`，您需要考虑的几个问题：
+
+确保数据存储区可以处理的更改。
+
+处理 NULL 值。
+
+### <a name="handling-default-values"></a>处理默认值。
+
+若要实现您自己的 FlushData 方法，您需要：
+
+- 请转到行集类。
+
+- 在行集类中，放置的声明：
+
+   ```cpp
+   HRESULT FlushData(HROW, HACCESSOR)  
+   {  
+      // Insert your implementation here and return an HRESULT.  
+   }  
+   ```
+
+- 提供的实现`FlushData`。
+
+FlushData 良好实现将存储的行和列的实际更新。 HROW 和 HACCESSOR 参数可用于确定当前行和列存储的优化。
+
+通常，最大的挑战如何使用你自己的本机数据存储。 如果可能，请尝试：
+
+- 保留写入到数据存储区一样简单的方法。
+
+- 处理 NULL 值 （可选但建议）。
+
+- 处理默认值 （可选但建议）。
+
+最佳办法就是能够实际指定的值为 NULL 和默认值在数据存储区中。 最好可以运用此数据。 如果没有，则建议不允许空值和默认值。
+
+下面的示例演示如何`FlushData`UpdatePV 示例中的 RUpdateRowset 类中实现 （在示例代码，请参阅 Rowset.h）：
+
+```cpp
+///////////////////////////////////////////////////////////////////////////  
+// class RUpdateRowset (in rowset.h)  
+...  
+HRESULT FlushData(HROW, HACCESSOR)  
+{  
+    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");  
+  
+    USES_CONVERSION;  
+    enum {  
+        sizeOfString = 256,  
+        sizeOfFileName = MAX_PATH  
+    };  
+    FILE*    pFile = NULL;  
+    TCHAR    szString[sizeOfString];  
+    TCHAR    szFile[sizeOfFileName];  
+    errcode  err = 0;  
+  
+    ObjectLock lock(this);  
+  
+    // From a filename, passed in as a command text,   
+    // scan the file placing data in the data array.  
+    if (m_strCommandText == (BSTR)NULL)  
+    {  
+        ATLTRACE( "RRowsetUpdate::FlushData -- "  
+                  "No filename specified\n");  
+        return E_FAIL;  
+    }  
+  
+    // Open the file  
+    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));  
+    if ((szFile[0] == _T('\0')) ||   
+        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))  
+    {  
+        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");  
+        return DB_E_NOTABLE;  
+    }  
+  
+    // Iterate through the row data and store it.  
+    for (long l=0; l<m_rgRowData.GetSize(); l++)  
+    {  
+        CAgentMan am = m_rgRowData[l];  
+  
+        _putw((int)am.dwFixed, pFile);  
+  
+        if (_tcscmp(&am.szCommand[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szText[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szText2[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+    }  
+  
+    if (fflush(pFile) == EOF || fclose(pFile) == EOF)  
+    {  
+        ATLTRACE("RRowsetUpdate::FlushData -- "  
+                 "Couldn't flush or close file\n");  
+    }  
+  
+    return S_OK;  
+}  
+```
+
+### <a name="handling-changes"></a>处理更改
+
+为提供者来处理更改，首先需要确保数据存储区 （如文本文件或视频文件中） 具有使您能够对它进行更改的功能。 如果不是，应从提供程序项目单独创建该代码。
+
+### <a name="handling-null-data"></a>处理 NULL 数据
+
+有可能，最终用户将会发送 NULL 数据。 当数据源中的字段中写入 NULL 值时，可能会有潜在问题。 假设接受表示城市和邮政编码; 值的顺序进行应用程序它能接受一个或两个值，但不是既不，因为在这种情况下传递就不可能。 因此需要限制对你的应用程序有意义的字段中的 NULL 值的某些组合。
+
+作为提供程序开发人员，您必须考虑如何将存储此数据、 如何将数据存储中读取该数据和如何为用户指定的。 具体而言，必须考虑如何更改数据源中的行集数据的数据状态 (例如，DataStatus = NULL)。 您决定要使用者访问包含 NULL 值的字段时返回的值。
+
+看一下 UpdatePV 示例; 中的代码它演示了一个提供程序如何处理 NULL 的数据。 在 UpdatePV，提供程序数据存储中存储通过编写在字符串"NULL"NULL 数据。 当它从数据存储区中读取 NULL 数据时，它将会看到该字符串，然后清空缓冲区，以创建空字符串。 它还具有的重写`IRowsetImpl::GetDBStatus`在它返回 DBSTATUS_S_ISNULL 该数据值是否为空。
+
+### <a name="marking-nullable-columns"></a>将标记为 Null 的列
+如果还实现架构行集 (请参阅`IDBSchemaRowsetImpl`)，您的实现应指定 DBSCHEMA_COLUMNS 行集 （通常标记提供程序中通过 CxxxSchemaColSchemaRowset） 中的列可以为 null。
+
+此外需要指定可以为 null 的所有列都包含你的版本中的 DBCOLUMNFLAGS_ISNULLABLE 值`GetColumnInfo`。
+
+在 OLE DB 模板实现中，如果您不能将标记为可为 null，列提供程序将假定它们必须包含一个值，并且将不允许使用者将其发送 null 值。
+
+下面的示例演示如何将`CommonGetColInfo`在 CUpdateCommand 中实现函数 （请参阅 UpProvRS.cpp） UpdatePV 中。 请注意如何列具有此 DBCOLUMNFLAGS_ISNULLABLE 为 null 的列。
+
+```cpp
+/////////////////////////////////////////////////////////////////////////////  
+// CUpdateCommand (in UpProvRS.cpp)  
+  
+ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)  
+{  
+    static ATLCOLUMNINFO _rgColumns[6];  
+    ULONG ulCols = 0;  
+  
+    if (bBookmark)  
+    {  
+        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,  
+                            sizeof(DWORD), DBTYPE_BYTES,  
+                            0, 0, GUID_NULL, CAgentMan, dwBookmark,  
+                            DBCOLUMNFLAGS_ISBOOKMARK)  
+        ulCols++;  
+    }  
+  
+    // Next set the other columns up.  
+    // Add a fixed length entry for OLE DB conformance testing purposes  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,  
+                        10, 255, GUID_NULL, CAgentMan, dwFixed,   
+                        DBCOLUMNFLAGS_WRITE |   
+                        DBCOLUMNFLAGS_ISFIXEDLENGTH)  
+    ulCols++;  
+  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szCommand,  
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,   
+                        255, 255, GUID_NULL, CAgentMan, szText,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szCommand2,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szText2,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+  
+    if (pcCols != NULL)  
+    {  
+        *pcCols = ulCols;  
+    }  
+  
+    return _rgColumns;  
+}  
+
+```
+
+### <a name="default-values"></a>默认值
+
+与 NULL 数据一样，您有责任处理如何更改默认值。
+
+默认值为 FlushData 和执行将返回 S_OK。 因此，如果不重写此函数，所做的更改看起来是成功 （返回 S_OK），但它们不能传输到数据存储。
+
+中 （在 Rowset.h)，UpdatePV 示例`SetDBStatus`方法处理默认值，如下所示：
+
+```cpp
+virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
+                            ATLCOLUMNINFO* pColInfo)  
+{  
+    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);  
+  
+    void* pData = NULL;  
+    char* pDefaultData = NULL;  
+    DWORD* pFixedData = NULL;  
+  
+    switch (*pdbStatus)  
+    {  
+        case DBSTATUS_S_DEFAULT:  
+            pData = (void*)&m_rgRowData[pRow->m_iRowset];  
+            if (pColInfo->wType == DBTYPE_STR)  
+            {  
+                pDefaultData = (char*)pData + pColInfo->cbOffset;  
+                strcpy_s(pDefaultData, "Default");  
+            }  
+            else  
+            {  
+                pFixedData = (DWORD*)((BYTE*)pData +   
+                                          pColInfo->cbOffset);  
+                *pFixedData = 0;  
+                return S_OK;  
+            }  
+            break;  
+        case DBSTATUS_S_ISNULL:  
+        default:  
+            break;  
+    }  
+    return S_OK;  
+}  
+```
+
+### <a name="column-flags"></a>列标志
+
+如果在列上支持默认值，则需要将其使用中的元数据设置\<提供程序类\>SchemaRowset 类。 设置`m_bColumnHasDefault`= VARIANT_TRUE。
+
+您也有责任设置指定使用 DBCOLUMNFLAGS 枚举类型的列标志。 列标志描述列特征。
+
+例如，在`CUpdateSessionColSchemaRowset`类 （在 Session.h) UpdatePV，在第一列设置这种方式：
+
+```cpp
+// Set up column 1  
+trData[0].m_ulOrdinalPosition = 1;  
+trData[0].m_bIsNullable = VARIANT_FALSE;  
+trData[0].m_bColumnHasDefault = VARIANT_TRUE;  
+trData[0].m_nDataType = DBTYPE_UI4;  
+trData[0].m_nNumericPrecision = 10;  
+trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
+                            DBCOLUMNFLAGS_ISFIXEDLENGTH;  
+lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+m_rgRowData.Add(trData[0]);  
+```
+
+此代码指定，除此之外，列支持默认值为 0，它是可写，并且列中的所有数据都具有相同的长度。 如果你想要具有可变长度的列中的数据，则不要设置此标志。
+
+## <a name="see-also"></a>请参阅
+[创建 OLE DB 提供程序](creating-an-ole-db-provider.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b432229f9ada4c1a3dbccfc9b71557827773b41c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 343f638c67acf4af627f9f65899d49c78c02fb13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645901"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608751"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection 析构函数
-取消初始化和销毁当前**CriticalSection**对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-WRL_NOTHROW ~CriticalSection();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [CriticalSection 类](../windows/criticalsection-class.md)
+
+取消初始化和销毁当前**CriticalSection**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+WRL_NOTHROW ~CriticalSection();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[CriticalSection 类](../windows/criticalsection-class.md)

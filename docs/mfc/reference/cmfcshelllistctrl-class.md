@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853990"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538417"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 `CMFCShellListCtrl`类提供 Windows 列表控件功能并通过包含显示 shell 项的列表的功能会将其展开。  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  如果显示的文件夹桌面文件夹; 则为 TRUEFALSE 否则为。  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual int OnCompareItems(

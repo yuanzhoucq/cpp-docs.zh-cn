@@ -1,5 +1,5 @@
 ---
-title: __assume |Microsoft 文档
+title: __assume |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340562"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540753"
 ---
 # <a name="assume"></a>__assume
 **Microsoft 专用**  
@@ -51,7 +51,7 @@ __assume(
   
  `__assume` 不是真正的内部函数。 不必将其宣传为函数，并且不能用于 `#pragma intrinsic` 指令。 尽管没有生成任何代码，但还是会对由优化程序生成的代码产生影响。  
   
- 使用`__assume`中[断言](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)仅当该断言不是可恢复。 请勿在其中有后续错误恢复代码的断言中使用 `__assume`，因为编译器可能优化掉错误处理的代码。  
+ 使用`__assume`中[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)只有当该断言不是可恢复。 请勿在其中有后续错误恢复代码的断言中使用 `__assume`，因为编译器可能优化掉错误处理的代码。  
   
  `__assume(0)` 语句是一个特例。 使用 `__assume(0)` 来表示无法到达的代码路径。 下例显示了如何使用 `__assume(0)` 来表示无法获得 switch 语句的默认大小写。 此例显示了 `__assume(0)` 最典型的用法。  
   
@@ -59,7 +59,7 @@ __assume(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__assume`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86、 ARM、 x64|  
   
 ## <a name="example"></a>示例  
   

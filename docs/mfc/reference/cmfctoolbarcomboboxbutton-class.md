@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4555de3e42efd298cc7a6f67949a8b474f76064
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854052"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538790"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 包含一个组合框控件的工具栏按钮 ( [CComboBox 类](../../mfc/reference/ccombobox-class.md))。  
@@ -1165,7 +1165,7 @@ void SetText(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>参数  
  [in]*lpszText*  
- 包含有关编辑框的文本的字符串指针。  
+ 包含在编辑框的文本的字符串指针。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

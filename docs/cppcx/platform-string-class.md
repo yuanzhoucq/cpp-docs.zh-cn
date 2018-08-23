@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: string 类 |Microsoft 文档'
+title: 'Platform:: string 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,16 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094821"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587406"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 用于表示文本的 Unicode 字符的有序集合。 有关详细信息和示例，请参阅[字符串](../cppcx/strings-c-cx.md)。  
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String:: equals](#equals)|指示指定对象是否等于当前对象。|  
 |[String::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
 |[String::IsEmpty](#isempty)|指示当前字符串对象是否为空。|  
-|[String::IsFastPass](#isfastpass)|指示当前 String 对象是否参与 *快速传递* 操作。 在快速传递操作中，将挂起引用计数。|  
+|[String::IsFastPass](#isfastpass)|指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。|  
 |[String::Length](#length)|检索当前字符串对象的长度。|  
 |[String::ToString](#tostring)|返回一个字符串对象，其值与当前字符串相同。|  
   
@@ -144,7 +144,7 @@ int CompareOrdinal(
 ### <a name="return-value"></a>返回值  
  一个整数，指示两个比较字之间的词法关系。 下表列出可能的返回值。  
   
-|值|条件|  
+|“值”|条件|  
 |-----------|---------------|  
 |-1|`str1` 小于 `str2`。|  
 |0|`str1` 等于 `str2`。|  
@@ -171,7 +171,7 @@ String^ Concat( String^ str1, String^ str2)
 ### <a name="return-value"></a>返回值  
  其值为 `str1` 与 `str2` 的值相连的新 String^ 对象。  
   
- 如果`str1`是`null`和`str2`不是，`str1`返回。 如果`str2`是`null`和`str1`不是，`str2`返回。 如果 `str1` 和 `str2` 都是 `null`，则返回空字符串 (L "")。  
+ 如果`str1`是`null`并`str2`不是，`str1`返回。 如果`str2`是`null`并`str1`不是，`str2`返回。 如果 `str1` 和 `str2` 都是 `null`，则返回空字符串 (L "")。  
   
 
 
@@ -185,10 +185,10 @@ const char16* Data()
 ```  
   
 ### <a name="return-value"></a>返回值  
- 开头的指针`const char16`的 Unicode 字符数组 (`char16`是的 typedef `wchar_t`)。  
+ 开头的指针`const char16`的 Unicode 字符数组 (`char16`是一个的 typedef `wchar_t`)。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法可从 `Platform::String^` 转换为 `wchar_t*`。 当 `String` 对象超出范围时，数据指针不再保证有效。 用于存储数据的原始生存期以外`String`对象，请使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)数组复制到您为自己分配的内存。  
+ 使用此方法可从 `Platform::String^` 转换为 `wchar_t*`。 当 `String` 对象超出范围时，数据指针不再保证有效。 用于存储数据的原始生存期超出`String`对象，请使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)数组复制到你已分配了自己的内存。  
   
 
 
@@ -241,7 +241,7 @@ bool String::Equals(String^ str);
  如果 `true` 等于当前对象，则为 `str`，否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 此方法相当于[string:: compareordinal](#compareordinal)。 在第一个重载中，`str` 参数应能够转换为 String^ 对象。  
+ 此方法等效于[string:: compareordinal](#compareordinal)。 在第一个重载中，`str` 参数应能够转换为 String^ 对象。  
   
 
 
@@ -275,7 +275,7 @@ bool IsEmpty()
 
 
 ## <a name="isfastpass"></a>  String:: isfastpass 方法
-指示当前 String 对象是否参与 *快速传递* 操作。 在快速传递操作中，将挂起引用计数。  
+指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。  
   
 ### <a name="syntax"></a>语法  
   
@@ -311,12 +311,12 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- 返回的字符数组[string:: data](#data)具有一个附加字符，是终止 NULL 或 \0'。 该字符也是两个字节长。  
+ 返回的字符数组[string:: data](#data)具有一个附加字符，这是终止 NULL 或 \0。 该字符也是两个字节长。  
   
 
 
 ## <a name="operator-plus"></a>  String:: operator + 运算符
-串联两个[字符串](../cppcx/platform-string-class.md)到新的对象[字符串](../cppcx/platform-string-class.md)对象。
+串联两个[字符串](../cppcx/platform-string-class.md)到一个新对象[字符串](../cppcx/platform-string-class.md)对象。
   
 ### <a name="syntax"></a>语法  
   
@@ -358,7 +358,7 @@ bool String::operator==( String^ str1, String^ str2)
  如果 `true` 的内容等于 `str1`，则为 `str2`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符相当于[string:: compareordinal](#compareordinal)。  
+ 此运算符等效于[string:: compareordinal](#compareordinal)。  
   
 
 
@@ -382,7 +382,7 @@ bool String::operator>( String^ str1, String^ str2)
  如果 `str1` 的值大于 `str2` 的值，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符与显式调用相当[string:: compareordinal](#compareordinal)并得到大于零的结果。  
+ 此运算符等效于显式调用[string:: compareordinal](#compareordinal)并得到大于零的结果。  
   
 
 
@@ -427,7 +427,7 @@ bool String::operator!=( String^ str1, String^ str2)
  如果 `true` 不等于 `str1`，则为 `str2`；否则为 `false`。   
 
 
-## <a name="operator-less-than"></a> String::&lt; 
+## <a name="operator-less-than"></a> String:: operator&lt; 
 指示一个字符串对象的值是否小于第二个字符串对象的值。  
   
 ### <a name="syntax"></a>语法  

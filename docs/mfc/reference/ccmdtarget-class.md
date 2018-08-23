@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208684"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539211"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -301,7 +301,7 @@ virtual UINT GetTypeInfoCount();
  类型信息接口的数量。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数基本上可实现[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12)。  
+ 此成员函数基本上可实现[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。  
   
  派生的类应重写此函数可返回提供 （0 或 1） 的类型信息接口的数量。 如果未重写，`GetTypeInfoCount`返回 0。 若要重写，请使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还可实现`GetTypeLib`和`GetTypeLibCache`。  
   

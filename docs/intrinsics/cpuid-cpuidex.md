@@ -1,5 +1,5 @@
 ---
-title: __cpuid、 __cpuidex |Microsoft 文档
+title: __cpuid、 __cpuidex |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336064"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538225"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
 
 **Microsoft 专用**
 
-生成可在 x86 和 `cpuid` 上使用的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 指令。 本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。
+生成`cpuid`x86 和 x64 可用的指令。 本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -62,26 +62,26 @@ void __cpuidex(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86、x64|
+|`__cpuidex`|x86、x64|
 
 **标头文件** \<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此内部函数将存储的支持的功能和 CPU 信息返回`cpuid`中的指令*cpuInfo*，四个 32 位整数数组填充 EAX、 EBX、 ECX 和 EDX 中的值 （中的注册顺序）。 返回的信息具有不同含义，具体取决于作为传递的值*function_id*参数。 使用的多个值返回的信息*function_id*与处理器相关。
+此内部函数将存储支持的功能和返回的 CPU 信息`cpuid`中的指令*cpuInfo*，四个 32 位整数数组填充 EAX、 EBX、 ECX 和 EDX 中的值 （在中的注册顺序）。 返回的信息具有不同的含义，具体取决于作为传递值*function_id*参数。 使用的各种值返回的信息*function_id*与处理器相关。
 
-`__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 `__cpuidex`内部设置的值在 ECX 寄存器*subfunction_id*它会生成之前`cpuid`指令。 这使你能够收集有关该处理器的其他信息。
+`__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 `__cpuidex`内部函数设置的值为 ECX 寄存器*subfunction_id*它生成之前`cpuid`指令。 这使你能够收集有关该处理器的其他信息。
 
-有关使用与这些内部函数返回在 Intel 处理器上的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 ia-32 体系结构软件开发人员手册卷 2： 指令集引用](http://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 体系结构指令集扩展编程参考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档将使用的术语"leaf"和"subleaf" *function_id*和*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关使用和 Intel 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 IA-32 体系结构软件开发人员手册第 2 卷： 指令集参考](http://go.microsoft.com/fwlink/p/?LinkID=510021)并[Intel 体系架构指令集扩展编程参考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档将使用术语"leaf"和"subleaf"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
 
-有关使用与这些内部函数返回在 AMD 处理器上的值的特定参数的详细信息，请参阅的文档`cpuid`AMD64 体系结构程序员手动卷 3 中的指令： 通用和系统说明，和特定的处理器系列的修订版本指南中。 这些文档和其他信息的链接，请参阅 AMD[开发人员指南、 手册和 ISA 文档](http://go.microsoft.com/fwlink/p/?LinkId=510023)页。 AMD 文档将使用的术语"function number"和"subfunction number" *function_id*和*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关使用和 AMD 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`指令在 AMD64 体系结构编程人员手册第 3 卷： 通用和系统说明，和特定处理器系列的修订版本指南中。 这些文档和其他信息的链接，请参阅 AMD[开发人员指南、 手册和 ISA 文档](http://go.microsoft.com/fwlink/p/?LinkId=510023)页。 AMD 文档将使用术语"function number"和"subfunction number"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
 
-当*function_id*自变量为 0， *cpuInfo*[0] 返回最高可用非扩展*function_id*由处理器支持的值。 处理器制造商编码中*cpuInfo*[1] *cpuInfo*[2]，和*cpuInfo*[3]。
+当*function_id*自变量为 0， *cpuInfo*[0] 返回的最高可用非扩展*function_id*处理器支持的值。 在编码处理器制造商*cpuInfo*[1] *cpuInfo*[2] 和*cpuInfo*[3]。
 
-支持特定指令集扩展和 CPU 功能中编码*cpuInfo*更高版本而返回的结果*function_id*值。 有关详细信息，请参阅上述链接的手册和以下示例代码。
+支持特定指令集扩展和 CPU 功能进行编码*cpuInfo*更高版本返回的结果*function_id*值。 有关详细信息，请参阅上述链接的手册和以下示例代码。
 
-某些处理器支持扩展函数 CPUID 信息。 如果支持这样做， *function_id* 0x80000000 中的值可能用于返回信息。 若要确定允许的最大有意义的值，设置*function_id*为 0x80000000。 最大值*function_id*支持扩展的功能将写入到*cpuInfo*[0]。
+某些处理器支持扩展函数 CPUID 信息。 如果支持这样做， *function_id* 0x80000000 中的值可能用于返回信息。 若要确定允许的最大有意义的值，请设置*function_id*为 0x80000000。 最大值*function_id*支持扩展的函数将写入*cpuInfo*[0]。
 
 ## <a name="example"></a>示例
 

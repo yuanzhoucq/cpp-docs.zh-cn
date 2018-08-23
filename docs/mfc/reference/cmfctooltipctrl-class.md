@@ -42,17 +42,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849534"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545771"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 类
 基于 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)的扩展工具提示实现。 基于 `CMFCToolTipCtrl` 类的工具提示可显示图标、标签和说明。 可以使用渐变填充、自定义文本和边框颜色、粗体文本、圆角或气球样式来自定义可视外观。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   

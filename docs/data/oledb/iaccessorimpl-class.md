@@ -48,15 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572929"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
-提供的实现[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)接口。  
+提供的实现[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|释放访问器。|  
   
 ## <a name="remarks"></a>备注  
- 这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。  
+ 这是必需的对于行集和命令。 OLE DB 要求提供商实现 HACCESSOR，这是一种标记的数组[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))结构。 提供的 HACCESSORs`IAccessorImpl`是地址`BindType`结构。 默认情况下`BindType`指`ATLBINDINGS`中`IAccessorImpl`的模板定义。 `BindType` 提供使用的一种机制`IAccessorImpl`跟踪中的元素数及其`DBBINDING`数组以及引用计数和访问器标志。  
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 构造函数。  
@@ -120,7 +120,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx)中*OLE DB 程序员参考*。
+ 请参阅[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
 从一组绑定创建取值函数。  
@@ -137,7 +137,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[iaccessor:: Createaccessor](https://msdn.microsoft.com/library/ms720969.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[iaccessor:: Createaccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\))中*OLE DB 程序员参考*。  
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 从访问器中的使用者返回的基本列绑定。  
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 释放访问器。  
@@ -165,7 +165,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[iaccessor:: Releaseaccessor](https://msdn.microsoft.com/library/ms719717.aspx)中*OLE DB 程序员参考*。
+ 请参阅[iaccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\))中*OLE DB 程序员参考*。
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   

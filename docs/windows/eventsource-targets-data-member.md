@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fcdcb759c90009410f76a4b10039a0d976ca0cc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642368"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605110"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 数据成员
-包含一个或多个事件处理程序的数组。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-ComPtr<Details::EventTargetArray> targets_;  
-```  
-  
-## <a name="remarks"></a>备注  
- 当事件表示由当前**EventSource**对象发生，则调用事件处理程序。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [EventSource 类](../windows/eventsource-class.md)
+
+包含一个或多个事件处理程序的数组。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+## <a name="remarks"></a>备注
+
+当事件表示由当前**EventSource**对象发生，则调用事件处理程序。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[EventSource 类](../windows/eventsource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何： 在 MSBuild 项目中使用生成事件 |Microsoft 文档
+title: 如何： 在 MSBuild 项目中使用生成事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369768"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613051"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
-生成事件是一个命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]在生成过程中的特定阶段执行。 *预生成*事件发生在生成开始前;*预链接*事件发生在链接步骤开始; 之前和*后期生成*事件发生在生成后已成功结束。 仅当关联的生成步骤发生时，生成事件才会发生。 例如，如果链接步骤未运行，也不会发生 pre-link 事件。  
+生成事件是在生成过程中的某个特定阶段执行 MSBuild 的命令。 *预生成*事件发生在生成开始之前;*预链接*事件发生之前链接步骤开始; 并*后期生成*发生在生成后事件已成功结束。 仅当关联的生成步骤发生时，生成事件才会发生。 例如，如果链接步骤不会运行，也不会发生预链接事件。  
   
- 每三个生成事件命令元素表示项定义组中 (`<Command>`) 执行和消息元素 (`<Message>`)，它是显示时**MSBuild**执行生成事件。 每个元素是可选的并且如果多次指定相同的元素，最后一个匹配项优先。  
+ 每个生成三个事件由命令元素表示在项定义组中 (`<Command>`)，它执行和消息元素 (`<Message>`)，它是显示时**MSBuild**执行生成事件。 每个元素是可选的并且如果多次指定同一个元素，最后一个匹配项优先。  
   
- 一个可选*在生成中使用*元素 (`<`* 生成的事件 ***UseInBuild**`>`) 可以在属性组，以指示是否执行生成事件中指定。 内容的价值*在生成中使用*元素可以是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。  
+ 一个可选*在生成中使用*元素 (`<`* 生成的事件 ***UseInBuild**`>`) 可以指定属性组，以指示是否执行生成事件中。 内容的价值*在生成中使用*元素是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。  
   
- 下表列出每个生成事件 XML 元素：  
+ 下表列出了每个生成事件 XML 元素：  
   
 |XML 元素|描述|  
 |-----------------|-----------------|  
-|`PreBuildEvent`|生成开始之前，将执行此事件。|  
+|`PreBuildEvent`|在生成开始之前执行此事件。|  
 |`PreLinkEvent`|此事件链接步骤开始之前执行。|  
-|`PostBuildEvent`|在生成完成之后，将执行此事件。|  
+|`PostBuildEvent`|在生成完成之后执行此事件。|  
   
- 下表列出了每一个*在生成中使用*元素：  
+ 下表列出了每个*在生成中使用*元素：  
   
 |XML 元素|描述|  
 |-----------------|-----------------|  
 |`PreBuildEventUseInBuild`|指定是否执行*预生成*事件。|  
-|`PreLinkEventUseInBuild`|指定是否执行*预链接*事件。|  
+|`PreLinkEventUseInBuild`|指定是否执行*链接前*事件。|  
 |`PostBuildEventUseInBuild`|指定是否执行*后期生成*事件。|  
   
 ## <a name="example"></a>示例  
- 可以在中创建的 myproject.vcxproj 文件的项目元素内部添加下面的示例[演练： 使用 MSBuild 创建 Visual c + + 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*预生成*事件使 main.cpp 的副本;*预链接*事件使 main.obj; 的副本和*后期生成*事件都提供了一份 myproject.exe。 如果使用发布配置生成项目时，才执行生成事件。 如果使用的调试配置生成项目时，不会执行生成事件。  
+ 下面的示例可以在中创建的 myproject.vcxproj 文件的项目元素内部添加[演练： 使用 MSBuild 创建 Visual c + + 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 一个*预生成*事件使 main.cpp 的副本; 以*预链接*事件使一个 main.obj; 的副本和一个*后期生成*事件生成 myproject.exe 的副本。 如果使用发布配置生成项目，则执行生成事件。 如果使用调试配置生成项目，则不执行生成事件。  
   
 ```  
 <ItemDefinitionGroup>  

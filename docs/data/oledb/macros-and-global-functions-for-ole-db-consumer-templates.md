@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a915a581a574193918f86f80083d3202c9949674
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 533891a3bc7517df7570e0c976d05ed8b3b20579
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338143"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572716"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 使用者模板的宏和全局函数
 OLE DB 使用者模板包括以下宏和全局函数：  
@@ -354,7 +354,7 @@ BEGIN_COLUMN_MAP(x)
  <!--[!CODE [NVC_OLEDB_Consumer#16](../codesnippet/vs_snippets_cpp/nvc_oledb_consumer#16)]  -->
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。  
   
 #### <a name="syntax"></a>语法  
   
@@ -379,7 +379,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
  请参阅[如何检索 BLOB？](../../data/oledb/retrieving-a-blob.md)。  
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还获取以字节为单位的 BLOB 列的长度。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还获取以字节为单位的 BLOB 列的长度。  
   
 #### <a name="syntax"></a>语法  
   
@@ -407,7 +407,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
  请参阅[如何检索 BLOB？](../../data/oledb/retrieving-a-blob.md)。  
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取的长度和 BLOB 列的状态。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取的长度和 BLOB 列的状态。  
   
 #### <a name="syntax"></a>语法  
   
@@ -444,7 +444,7 @@ BLOB_ENTRY_LENGTH_STATUS(
  请参阅[如何检索 BLOB？](../../data/oledb/retrieving-a-blob.md)。  
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
-BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取 BLOB 列的状态。  
+BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取 BLOB 列的状态。  
   
 #### <a name="syntax"></a>语法  
   
@@ -472,7 +472,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
  请参阅[如何检索 BLOB？](../../data/oledb/retrieving-a-blob.md)。  
 
 ### <a name="blob_name"></a> BLOB_NAME
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏采用而不是列号的列名称。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏采用而不是列号的列名称。  
   
 #### <a name="syntax"></a>语法  
   
@@ -497,7 +497,7 @@ BLOB_NAME(pszName, IID, flags, data )
  请参阅[如何检索 BLOB？](../../data/oledb/retrieving-a-blob.md)。  
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取长度以字节为单位的 BLOB 数据列。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取长度以字节为单位的 BLOB 数据列。  
   
 #### <a name="syntax"></a>语法  
   
@@ -522,7 +522,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
  [out]以字节为单位的 BLOB 列 （实际） 长度。  
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取的长度和 BLOB 数据列的状态。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取的长度和 BLOB 数据列的状态。  
   
 #### <a name="syntax"></a>语法  
   
@@ -550,7 +550,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
  [out]该 BLOB 字段的状态。  
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
-BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取 BLOB 数据列的状态。  
+BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 用于绑定的二进制大型对象 ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\)))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取 BLOB 数据列的状态。  
   
 #### <a name="syntax"></a>语法  
   
@@ -637,7 +637,7 @@ END_COLUMN_MAP()
   
 #### <a name="see-also"></a>请参阅  
  [CBookmark 类](../../data/oledb/cbookmark-class.md)   
- [DBPROP_BOOKMARKS](https://msdn.microsoft.com/library/ms709728.aspx)
+ [DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 在行集中的特定列表示行集上的绑定。  
@@ -649,7 +649,7 @@ COLUMN_ENTRY(nOrdinal, data)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -679,7 +679,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -727,7 +727,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in]列号，从一开始。 书签对应于列零。  
@@ -757,7 +757,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -790,7 +790,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -823,7 +823,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in]列号，从一开始。 书签对应于列零。  
@@ -859,7 +859,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -898,7 +898,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -934,7 +934,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *nOrdinal*  
  [in] 列号。  
@@ -1424,7 +1424,7 @@ BEGIN_PARAM_MAP(x)
  [in] 用户记录类的名称。  
   
 #### <a name="remarks"></a>备注  
- 使用参数[命令](https://msdn.microsoft.com/library/ms724608.aspx)。  
+ 使用参数[命令](/previous-versions/windows/desktop/ms724608\(v=vs.85\))。  
   
 #### <a name="example"></a>示例  
  有关示例，请参阅[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)宏。  
@@ -1455,7 +1455,7 @@ SET_PARAM_TYPE(type)
  [in] 要为参数设置的类型。  
   
 #### <a name="remarks"></a>备注  
- 提供程序仅支持基础数据源支持的参数输入/输出类型。 类型是一个或多个组合`DBPARAMIO`值 (请参阅[DBBINDING 结构](https://msdn.microsoft.com/library/ms716845.aspx)中*OLE DB 程序员参考*):  
+ 提供程序仅支持基础数据源支持的参数输入/输出类型。 类型是一个或多个组合`DBPARAMIO`值 (请参阅[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))中*OLE DB 程序员参考*):  
   
 -   `DBPARAMIO_NOTPARAM` 访问器没有任何参数。 通常情况下，设置`eParamIO`为行访问器，以提醒用户将忽略参数中此值。  
   

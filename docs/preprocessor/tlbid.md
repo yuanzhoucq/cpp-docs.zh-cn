@@ -1,5 +1,5 @@
 ---
-title: tlbid |Microsoft 文档
+title: tlbid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d651546733f42b1a714ac7a39992fa2d392c8fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839863"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540547"
 ---
 # <a name="tlbid"></a>tlbid
 **C + + 专用**  
   
- 允许加载主类型库之外的库。  
+允许加载主类型库之外的库。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,27 +34,29 @@ ms.locfileid: "33839863"
 tlbid(number)  
 ```  
   
-#### <a name="parameters"></a>参数  
- `number`  
- `filename` 中的类型库的编号。  
+### <a name="parameters"></a>参数  
+*数量*  
+`filename` 中的类型库的编号。  
   
 ## <a name="remarks"></a>备注  
- 如果将多个类型库内置于一个 DLL，则可以使用 `tlbid` 来加载非主类型库。  
+ 
+如果多个类型库内置于一个 dll，它可以加载非主类型库使用**tlbid**。  
   
- 例如：  
+例如：  
   
 ```  
 #import <MyResource.dll> tlbid(2)  
 ```  
   
- 等效于：  
+等效于：  
   
 ```  
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **结束 c + + 专用**  
+**结束 c + + 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import 指令](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 指令](../preprocessor/hash-import-directive-cpp.md)

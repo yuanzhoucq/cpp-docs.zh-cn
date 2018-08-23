@@ -1,25 +1,25 @@
 ---
-title: 获取数据缓冲区的指针 (C + + /cli CX) |Microsoft 文档
+title: 获取数据缓冲区的指针 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090544"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613025"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>获取数据缓冲区的指针 (C++/CX)
 在 Windows 运行时中， [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) 接口提供了一种基于流的非特定语言方式来访问数据缓冲区。 在 C++ 中，可使用 robuffer.h 中定义的 Windows 运行时 IBufferByteAccess 接口获取指向基础字节数组的原始指针。 通过这种方式，可就地修改字节数组，而不必创建任何数据副本。  
   
- 下图显示了一个 XAML 图像元素，其源是一个 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何语言编写的客户端应用程序均可将对 `WriteableBitmap` 的引用传递到 C++ 代码，随后 C++ 可使用该引用获取基础缓冲区。 在通用 Windows 平台应用中在 c + + 中编写的可以在下面的示例的源代码中直接使用函数，而无需打包在 Windows 运行时组件中。  
+ 下图显示了一个 XAML 图像元素，其源是一个 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何语言编写的客户端应用程序均可将对 `WriteableBitmap` 的引用传递到 C++ 代码，随后 C++ 可使用该引用获取基础缓冲区。 在通用 Windows 平台应用中用 c + + 编写的可以在以下示例中的源代码中直接使用函数，而无需在 Windows 运行时组件打包。  
   
  ![C&#43; &#43;直接访问像素数据的代码](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
@@ -56,7 +56,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>完整的示例  
- 以下步骤演示如何创建的 C# 通用 Windows 平台应用程序将传递`WriteableBitmap`到 c + + Windows 运行时组件 DLL。 此 C++ 代码包含一个指向像素缓冲区的指针，并在图像上就地执行简单的修改。 另外也可以使用 Visual Basic、JavaScript 或 C++ 代替 C# 来创建该客户端应用程序。 如果使用 C++，则不需要该组件 DLL；你可以将这些方法直接添加到 MainPage 类或你定义的某个其他类。  
+ 以下步骤演示如何创建一个 C# 通用 Windows 平台应用，它将传递`WriteableBitmap`到 c + + Windows 运行时组件 DLL。 此 C++ 代码包含一个指向像素缓冲区的指针，并在图像上就地执行简单的修改。 另外也可以使用 Visual Basic、JavaScript 或 C++ 代替 C# 来创建该客户端应用程序。 如果使用 C++，则不需要该组件 DLL；你可以将这些方法直接添加到 MainPage 类或你定义的某个其他类。  
   
 #### <a name="create-the-client"></a>创建客户端  
   
@@ -134,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>创建 C++ 组件  
   
-1.  将新的 c + + Windows 运行时组件添加到现有的解决方案中，并将其命名`ImageManipCPP`。 通过在 **“解决方案资源管理器”** 中右击该 C# 项目并选择 **“添加”** 和 **“引用”**，在项目中添加对该组件的引用。  
+1.  将新的 c + + Windows 运行时组件添加到现有的解决方案，并将其命名`ImageManipCPP`。 通过在 **“解决方案资源管理器”** 中右击该 C# 项目并选择 **“添加”** 和 **“引用”**，在项目中添加对该组件的引用。  
   
 2.  在 Class1.h 中  
   

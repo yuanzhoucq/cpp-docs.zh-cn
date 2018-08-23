@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339704"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539788"
 ---
 # <a name="cdc-class"></a>CDC 类
 定义设备上下文对象的类。  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  指向要处理的字符字符串的指针。  
   
  *nCount*  
- 指定字符串的长度。 对于 ANSI 版本，它是字节计数，而 Unicode 函数则为字数统计。 有关详细信息，请参阅[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)。  
+ 指定字符串的长度。 对于 ANSI 版本，它是字节计数，而 Unicode 函数则为字数统计。 有关详细信息，请参阅[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)。  
   
  *nMaxExtent*  
  该字符串处理到指定最大界限 （以逻辑单位）。 将忽略字符，如果处理，则会超出该范围。 任何所需的排序或字形数组的计算仅适用于包含的字符。 中指定 GCP_MAXEXTENT 值时才使用此参数*dwFlags*参数。 在函数处理输入的字符串，每个字符和其范围被添加到输出、 范围和其他数组仅当在总范围未超出最大值。 达到限制后，将停止处理。  
   
  lpResults  
- 指向[GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx)接收函数的结果的结构。  
+ 指向[GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa)接收函数的结果的结构。  
   
  *dwFlags*  
- 指定如何处理到所需的数组的字符串。 此参数可以是一个或多个值中列出*dwFlags*一部分[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)主题。  
+ 指定如何处理到所需的数组的字符串。 此参数可以是一个或多个值中列出*dwFlags*一部分[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)主题。  
   
  *str*  
  一个指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象传递给过程。  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  如果函数失败，则返回值为零。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟函数的功能[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)，如 Windows SDK 中所述。  
+ 此成员函数模拟函数的功能[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)，如 Windows SDK 中所述。  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  从当前的 TrueType 字体中检索指定范围中的连续字符的宽度。  

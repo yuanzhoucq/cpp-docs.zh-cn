@@ -1,5 +1,5 @@
 ---
-title: __ll_lshift |Microsoft 文档
+title: __ll_lshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327367"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539590"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 专用**  
@@ -41,24 +41,24 @@ unsigned __int64 __ll_lshift(
   
 #### <a name="parameters"></a>参数  
  [in] `Mask`  
- 要左移位的 64 位整数值。  
+ 要向左移动的 64 位整数值。  
   
  [in] `nBit`  
  要位移的位数。  
   
 ## <a name="return-value"></a>返回值  
- 掩码移动左`nBit`bits。  
+ 掩码向左旋转`nBit`位。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 如果编译程序时使用 64 位体系结构和`nBit`大于 63，要位移的位数是`nBit`模 64。 如果在编译程序使用 32 位体系结构和`nBit`大于 31，要位移的位数是`nBit`取模 32。  
+ 如果在编译应用程序使用 64 位体系结构和`nBit`大于 63，若要移动的位数是`nBit`模 64。 如果在编译使用 32 位体系结构应用程序和`nBit`大于 31，要移动的位数是`nBit`取模 32。  
   
  `ll`名称中指示这是一个操作上`long long`(`__int64`)。  
   
@@ -89,7 +89,7 @@ int main()
 10000  
 ```  
   
- **请注意**没有左的移位运算的任何无符号的版本。 这是因为`__ll_lshift`已使用一个无符号的输入的参数。 与右移位，不同是值的左移位运算中没有登录依赖性过程，因为结果中的最低有效位始终设置为零而不考虑移动的符号。  
+ **请注意**左的移操作没有未签名版本。 这是因为`__ll_lshift`已在使用无符号的输入的参数。 与右移位，不同的是左移，没有登录依赖性过程，因为结果中的最低有效位始终设置为零，而不考虑移动值的符号。  
   
 **结束 Microsoft 专用**  
   

@@ -1,5 +1,5 @@
 ---
-title: __writemsr |Microsoft 文档
+title: __writemsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323519"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540980"
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft 专用**  
   
- 生成模型特定注册写入 (`wrmsr`) 指令。  
+ 生成对模型特定注册写入 (`wrmsr`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,12 +50,12 @@ void __writemsr(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 此函数只能在内核模式下，此例程仅可用作内部函数。  
+ 此函数只能用于在内核模式下，且此例程仅用作内部函数。  
   
 **结束 Microsoft 专用**  
   

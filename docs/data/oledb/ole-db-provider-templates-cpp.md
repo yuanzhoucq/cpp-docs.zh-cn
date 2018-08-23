@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339570"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572132"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供程序模板 (C++)
 OLE DB 是 Microsoft 通用数据访问策略的一个重要部分。 OLE DB 设计允许来自任何数据源的高性能的数据访问。 可通过 OLE DB 而不考虑它是否由数据库查看任何表格数据。 灵活地提供了极大的方便。  
@@ -63,7 +63,7 @@ OLE DB 是 Microsoft 通用数据访问策略的一个重要部分。 OLE DB 设
  提供程序可以在复杂程度和功能会有很大。 最好将提供程序分类为只读的提供程序和可更新的提供程序：  
   
 -   Visual c + + 6.0 支持仅只读提供程序。 [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)讨论如何创建只读提供程序。  
--   Visual c + + 支持可更新的提供程序，可以更新 （写入） 数据存储区。 有关可更新的提供程序的信息，请参阅[创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f)示例是可更新的提供程序的一个示例。  
+-   Visual c + + 支持可更新的提供程序，可以更新 （写入） 数据存储区。 有关可更新的提供程序的信息，请参阅[创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例是可更新的提供程序的一个示例。  
   
  有关详细信息，请参见:  
   
@@ -75,5 +75,5 @@ OLE DB 是 Microsoft 通用数据访问策略的一个重要部分。 OLE DB 设
   
 ## <a name="see-also"></a>请参阅  
  [数据访问](../data-access-in-cpp.md)   
- [OLE DB SDK 文档](https://msdn.microsoft.com/library/ms722784.aspx)   
- [OLE DB 程序员参考](https://msdn.microsoft.com/library/ms713643.aspx)
+ [OLE DB SDK 文档](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

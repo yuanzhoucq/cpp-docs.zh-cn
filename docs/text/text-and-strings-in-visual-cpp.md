@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016621"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610709"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文本和字符串
 开发适用于国际市场的应用程序的一个重要方面是足够有代表性的本地字符集。 ASCII 字符集在 0x00 到 0x7F 范围内定义字符。 有其他字符集，主要是欧洲的相同定义 0x00 到 0x7F 范围内的字符到 ASCII 字符集，还可定义一个设置为从 0x80 到 0xFF 的扩展的字符。 因此，一个 8 位的单字节字符的集 (SBCS) 足以表示 ASCII 字符集以及许多欧洲语言的字符集。 但是，一些非欧洲语言的字符集，如日本汉字包括很多更多的字符不是单字节编码方案可表示，，因此需要使用多字节字符集 (MBCS) 编码。  

@@ -1,23 +1,23 @@
 ---
-title: 委托 (C + + /cli CX) |Microsoft 文档
+title: 委托 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592768"
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
-`delegate`关键字用于声明引用类型，后者是标准 c + + 中的函数对象的 Windows 运行时等效项。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：  
+`delegate`关键字用于声明 Windows 运行时等效于标准 c + + 中的函数对象的引用类型。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：  
   
 ```cpp  
      public delegate void PrimeFoundHandler(int result);  
@@ -32,7 +32,7 @@ event PrimeFoundHandler^ primeFoundEvent;
  当声明跨 Windows 运行时应用程序二进制接口向客户端将公开的委托，使用[Windows::Foundation::TypedEventHandler\<，TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委托已预定义代理和存根二进制文件，使其可以由 Javascript 客户端使用。  
   
 ## <a name="consuming-delegates"></a>使用委托  
- 当你创建通用 Windows 平台应用时，你将通常使用为 Windows 运行时类公开的事件类型的委托。 若要订阅事件，请通过指定匹配委托签名的函数或 lambda 创建其委托类型的一个实例。 然后使用 `+=` 运算符将委托对象传递到类上的事件成员。 这称为“订阅事件”。 当类实例“触发”事件时，你的函数随同由你的对象或其他对象添加的任何其他处理程序一起被调用。  
+ 创建通用 Windows 平台应用时，通常使用作为 Windows 运行时类公开的事件类型的委托。 若要订阅事件，请通过指定匹配委托签名的函数或 lambda 创建其委托类型的一个实例。 然后使用 `+=` 运算符将委托对象传递到类上的事件成员。 这称为“订阅事件”。 当类实例“触发”事件时，你的函数随同由你的对象或其他对象添加的任何其他处理程序一起被调用。  
   
 > [!TIP]
 >  在创建事件处理程序时，Visual Studio 可为你进行大量工作。 例如，如果你在 XAML 标记中指定事件处理程序，则将出现工具提示。 如果选择工具提示，则 Visual Studio 将自动创建事件处理程序方法并将其与发布类中的事件关联。  
@@ -50,7 +50,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 > [!WARNING]
 >  通常，对于事件处理程序，除非要格外注意以避免循环引用，否则更好的做法是使用命名函数而不是 lambda。 命名函数会通过弱引用捕获“this”指针，而 lambda 通过强引用捕获该指针并创建一个循环引用。 有关详细信息，请参阅[弱引用和中断循环](../cppcx/weak-references-and-breaking-cycles-c-cx.md)。  
   
- 按照约定，由 Windows 运行时定义的事件处理程序委托名采用以下格式 * EventHandler，例如，RoutedEventHandler、 SizeChangedEventHandler 或 SuspendingEventHandler。 同样按照约定，事件处理程序委托具有两个参数并返回 void。 在没有类型参数的委托中，第一个参数的类型为 [Platform::Object^](../cppcx/platform-object-class.md)，它保持对发送方即触发事件的对象的引用。 在事件处理程序方法中使用该参数前，必须转换回原始类型。 在具有类型参数的事件处理程序委托中，第一个类型参数指定发送方的类型，第二个参数是保持事件相关信息的 ref 类的句柄。 按照约定，该类名为\*EventArgs。 例如，RoutedEventHandler 委托具有类型为 RoutedEventArgs^ 的第二个参数，DragEventHander 具有类型为 DragEventArgs^ 的第二个参数。  
+ 按照约定，由 Windows 运行时定义的事件处理程序委托名采用以下格式 * 事件处理程序 — 例如，RoutedEventHandler、 SizeChangedEventHandler 或 SuspendingEventHandler。 同样按照约定，事件处理程序委托具有两个参数并返回 void。 在没有类型参数的委托中，第一个参数的类型为 [Platform::Object^](../cppcx/platform-object-class.md)，它保持对发送方即触发事件的对象的引用。 在事件处理程序方法中使用该参数前，必须转换回原始类型。 在具有类型参数的事件处理程序委托中，第一个类型参数指定发送方的类型，第二个参数是保持事件相关信息的 ref 类的句柄。 按照约定，该类名为\*EventArgs。 例如，RoutedEventHandler 委托具有类型为 RoutedEventArgs^ 的第二个参数，DragEventHander 具有类型为 DragEventArgs^ 的第二个参数。  
   
  按照约定，包装在异步操作完成时执行的代码的委托名为 *CompletedHandler。 这些委托定义为类而不是事件的属性。 因此，不使用 `+=` 运算符订阅它们；只是将委托对象分配给属性。  
   
@@ -58,7 +58,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 >  C++ IntelliSense 不显示完整委托签名，因此，它不能帮助你确定 EventArgs 参数的特定类型。 若要查找类型，可以转到 **“对象浏览器”** 查看委托的 `Invoke` 方法。  
   
 ## <a name="creating-custom-delegates"></a>创建自定义委托  
- 你可以定义自己的委托，以便定义事件处理程序或允许客户将自定义功能传递给 Windows 运行时组件。 像任何其他 Windows 运行时类型，公共委托不能声明为泛型。  
+ 您可以定义自己的委托，以定义事件处理程序，或使使用者能够将自定义功能传递给 Windows 运行时组件。 像任何其他 Windows 运行时类型，公共委托不能声明为泛型。  
   
 ### <a name="declaration"></a>声明  
  委托的声明类似函数声明，只不过委托是一种类型。 通常在命名空间范围声明委托，不过，也可以将委托声明嵌套在类声明中。 以下委托封装任何将 `ContactInfo^` 作为输入的函数并返回 `Platform::String^`。  
@@ -70,7 +70,7 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]  
   
 > [!NOTE]
->  你使用"^"符号在引用委托类型时，就像你不要与任何 Windows 运行时引用类型。  
+>  使用"^"符号引用委托类型时，就像你确实与任何 Windows 运行时引用类型。  
   
  事件声明始终有一个委托类型。 此示例演示一个典型的委托类型签名 Windows 运行时中：  
   
@@ -86,7 +86,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]  
   
- 在下一步的示例中，客户端应用程序自定义将委托传递给 Windows 运行时组件执行的每一项针对委托中的公共方法`Vector`:  
+ 在下一步的示例中，客户端应用程序自定义将委托传递给执行针对每个项中的委托的 Windows 运行时组件中的公共方法`Vector`:  
   
  [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]  
   
@@ -122,7 +122,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="delegates-and-threads"></a>委托和线程  
  委托和函数对象一样，包含将在未来某个时刻执行的代码。 如果创建和传递委托的代码和接受并执行委托的函数在同一线程上运行，则情况就相对简单。 如果该线程是 UI 线程，则委托可以直接操作用户界面对象（如 XAML 控件）。  
   
- 如果客户端应用程序加载在一个线程单元运行，并将委托提供给该组件的 Windows 运行时组件，然后默认情况下调用委托 STA 线程上直接。 大多数 Windows 运行时组件可在 STA 或 MTA 中运行。  
+ 如果客户端应用程序加载在一个线程的单元运行，并将委托提供给该组件的 Windows 运行时组件，则默认情况下调用委托直接在 STA 线程上。 大多数 Windows 运行时组件可以在 STA 或 MTA 中运行。  
   
  如果执行委托的代码在不同线程（如在 concurrency::task 对象的上下文中）运行，则你将负责同步对共享数据的访问。 例如，如果委托中包含对某个向量的引用，而 XAML 控件也具有对这一向量的引用，则你必须采取措施，避免因委托和 XAML 控件同时尝试访问该向量而可能发生的死锁或争用现象。 你还必须注意，在调用委托前，委托不会通过引用来尝试捕获可能超出范围的本地变量。  
   

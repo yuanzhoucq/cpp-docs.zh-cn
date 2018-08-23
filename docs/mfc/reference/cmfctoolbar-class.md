@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541398"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 `CMFCToolBar`类相似[CToolBar 类](../../mfc/reference/ctoolbar-class.md)，但为用户界面功能提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。    
   
 ## <a name="syntax"></a>语法  
   

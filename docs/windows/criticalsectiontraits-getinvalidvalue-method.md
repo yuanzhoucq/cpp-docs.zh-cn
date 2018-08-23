@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01efd9bf3941a5b19e1f0fe6c106d47f1b6e9fcf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4a23445cc9df0553a40d4f78a7ce3095a343d5d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642056"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599231"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue 方法
-专门**CriticalSection**模板，以便该模板始终无效。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 始终返回一个指向无效的关键部分。  
-  
-## <a name="remarks"></a>备注  
- `Type`修饰符定义为`typedef CRITICAL_SECTION* Type;`。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>请参阅  
- [CriticalSectionTraits 结构](../windows/criticalsectiontraits-structure.md)
+
+专门**CriticalSection**模板，以便该模板始终无效。
+
+## <a name="syntax"></a>语法
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>返回值
+
+始终返回一个指向无效的关键部分。
+
+## <a name="remarks"></a>备注
+
+`Type`修饰符定义为`typedef CRITICAL_SECTION* Type;`。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>请参阅
+
+[CriticalSectionTraits 结构](../windows/criticalsectiontraits-structure.md)

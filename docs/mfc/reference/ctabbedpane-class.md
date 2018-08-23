@@ -1,5 +1,5 @@
 ---
-title: CTabbedPane 类 |Microsoft 文档
+title: CTabbedPane 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121833"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541539"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 类
 利用可拆分的选项卡实现窗格的功能。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -88,12 +88,12 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>备注  
  当用户通过将一个窗格指向第二个窗格的标题的方式来附加到另一个窗格，框架自动创建此类的实例。 由框架创建的所有选项卡式窗格都具有值为 -1 的 ID。  
   
- 若要指定常规选项卡，而不是 Outlook 样式的选项卡，将传递到的 AFX_CBRS_REGULAR_TABS 样式[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
+ 若要指定常规选项卡而不是 Outlook 样式的选项卡，请将传递到 AFX_CBRS_REGULAR_TABS 样式[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
   
  如果你使用可拆离的选项卡创建一个选项卡式窗格，该窗格可能会被框架自动销毁，因此，你不应该存储该指针。 若要获取对选项卡式窗格的指针，请调用 `CBasePane::GetParentTabbedPane` 方法。  
   
 ## <a name="example"></a>示例  
- 我们在此示例中创建了一个 `CTabbedPane` 对象。 接下来，我们使用[cbasetabbedpane:: Addtab](../../mfc/reference/cbasetabbedpane-class.md#addtab)附加其他选项卡。  
+ 我们在此示例中创建了一个 `CTabbedPane` 对象。 接下来，我们使用[cbasetabbedpane:: Addtab](../../mfc/reference/cbasetabbedpane-class.md#addtab)来附加其他选项卡。  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -125,7 +125,7 @@ DockPane(pTabbededBar);
 ```  
   
 ## <a name="example"></a>示例  
- 若要创建选项卡式的控件条对象的另一种方法是使用[cdockablepane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)。 `AttachToTabWnd`方法动态创建使用设置的运行时类信息的选项卡式的窗格对象[cdockablepane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)。  
+ 若要创建选项卡式的控件条对象的另一种方法是使用[cdockablepane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)。 `AttachToTabWnd`方法动态创建一个使用设置的运行时类信息的选项卡式的窗格对象[cdockablepane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)。  
   
  在此示例中，我们动态地创建了一个选项卡式窗格，附加这两个选项卡，并使第二个选项不可拆离。  
   
@@ -193,14 +193,14 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in]*bEnable*  
- 若要启用自动着色的选项卡。否则为 FALSE。  
+ 若要启用的选项卡; 自动着色，则返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此静态方法用于启用或禁用自动在应用程序中的所有选项卡式窗格中的选项卡着色。 启用此功能后，由其自己的颜色填充每个选项卡。 你可以查找用于通过调用颜色选项卡的颜色的列表[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
+ 此静态方法用于启用或禁用自动在应用程序中的所有选项卡式窗格中的选项卡着色。 启用此功能后，由其自己的颜色填充每个选项卡。 您可以找到用于通过调用颜色选项卡的颜色的列表[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
   
- 你可以指定将通过调用使用选项卡的颜色的列表[CTabbedPane::SetTabAutoColors](#settabautocolors)。  
+ 您可以指定通过调用将为选项卡中使用的颜色的列表[CTabbedPane::SetTabAutoColors](#settabautocolors)。  
   
- 默认情况下，禁用此选项。  
+ 默认情况下，将禁用此选项。  
   
 ##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
@@ -224,7 +224,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
- 返回选项卡式窗口中的大小和选项卡区域的位置。  
+ 在选项卡式窗口中返回的大小和选项卡区域的位置。  
   
 ```  
 virtual void GetTabArea(
@@ -234,15 +234,15 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>参数  
  [out]*rectTabAreaTop*  
- 包含的大小和顶部的选项卡区域的位置，在屏幕坐标。  
+ 包含的大小和位置，在屏幕坐标中的顶部的选项卡区域。  
   
  [out]*rectTabAreaBottom*  
- 包含的大小和底部选项卡区域的位置，在屏幕坐标。  
+ 包含的大小和位置，在屏幕坐标中的底部选项卡区域。  
   
 ### <a name="remarks"></a>备注  
- 框架调用此方法来确定如何将用户正在拖动窗格停靠。 当用户将窗格拖到选项卡区域的目标窗格中时，框架会尝试将其添加为目标窗格中的新选项卡。 否则，它尝试将窗格停靠到目标窗格中，这就需要使用窗格分隔符分隔的两个窗格中创建新的窗格中容器的一端。  
+ 框架调用此方法以确定如何将用户拖动窗格停靠。 当用户将一个窗格拖到选项卡区域的目标窗格中时，框架会尝试将其添加为目标窗格中的新选项卡。 否则，它会将窗格停靠到的目标窗格中，这涉及创建一个新窗格容器与窗格分隔符用于分隔两个窗格一侧。  
   
- 重写此方法在`CTabbedPane`-派生类以更改此行为。  
+ 重写此方法在`CTabbedPane`的派生类，以更改此行为。  
   
 ##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 选项卡区域位于底部的选项卡式窗口中; 如果为 TRUE否则为 FALSE。  
+ 如果选项卡区域位于底部的选项卡式窗口; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -286,9 +286,9 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>备注  
- 在要在选项卡式窗格顶部显示的应用程序中设置到此静态成员设置为 true 将强制所有选项卡。  
+ 要在选项卡式窗格的顶部显示的应用程序中设置此静态成员添加到 true 以强制所有选项卡。  
   
- 创建选项卡式的窗格之前，必须设置此值。  
+ 在创建选项卡式的窗格之前，必须设置此值。  
   
  默认值为 FALSE。  
   
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>备注  
- 将此静态成员变量设置为指向运行时类信息的`CMFCTabCtrl`-派生对象，如果你使用在选项卡式窗格中的自定义选项卡式的窗口。  
+ 此静态成员变量设置为指向运行时类信息的`CMFCTabCtrl`-如果你使用的在选项卡式窗格内的自定义选项卡式的窗口派生的对象。  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  将所有选项卡式窗格重置为默认状态。  
@@ -310,10 +310,10 @@ static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>备注  
- 调用此方法还原为其默认状态的所有选项卡式的窗格。 调用时，此方法将重置的边框大小和自动颜色状态的所有选项卡式窗格。  
+ 调用此方法以还原为其默认状态的所有选项卡式的窗格。 调用时，此方法将重置的边框大小和自动颜色状态的所有选项卡式窗格。  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
- 设置在自动颜色功能启用时使用的自定义颜色的列表。  
+ 设置自动颜色功能启用时使用的自定义颜色的列表。  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -321,15 +321,15 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
   
 ### <a name="parameters"></a>参数  
  [in]*arColors*  
- 包含数组的颜色设置。  
+ 包含要设置的颜色数组。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法可以自定义在自动颜色功能启用时使用的颜色的列表。 这是静态的函数，并且会影响你的应用程序中的所有选项卡式的窗格。  
+ 使用此方法以自定义的自动颜色功能启用时，将使用的颜色列表。 这是一个静态函数，并会影响你的应用程序中的所有选项卡式的窗格。  
   
- 使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)启用或禁用在自动颜色功能。  
+ 使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)启用或禁用自动颜色功能。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
  [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)   

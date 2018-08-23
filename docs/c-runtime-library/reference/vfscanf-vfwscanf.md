@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413266"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572325"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -70,15 +70,15 @@ int vfwscanf(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换和分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果文件流的末尾到达第一个转换，则返回值是**EOF**为**vfscanf**和**vfwscanf**。
+每个函数都将返回成功转换和分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果在第一次转换前达到文件流的末尾，则返回值是**EOF**有关**vfscanf**并**vfwscanf**。
 
-这些函数验证其参数。 如果*流*或*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*流*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Vfscanf**函数将从当前的位置读取数据*流*到提供的位置*arglist*自变量列表。 在列表中的每个自变量必须是指向的变量的此类型中的类型说明符对应*格式*。 *格式*控件的输入解释字段，并具有相同形式和函数与*格式*参数**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
+**Vfscanf**函数将从当前的位置读取数据*流*到由给定的位置*arglist*参数列表。 列表中的每个参数必须是指向类型中的类型说明符相对应的变量的指针*格式*。 *格式*控制字段输入的解释，并且具有相同格式和函数作为*格式*自变量**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
 
-**vfwscanf**是宽字符版本的**vfscanf**; 的格式参数**vfwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **vfscanf**不支持 UNICODE 流中的输入。
+**vfwscanf**是宽字符版本**vfscanf**; 的格式参数**vfwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **vfscanf**不支持 UNICODE 流输入。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

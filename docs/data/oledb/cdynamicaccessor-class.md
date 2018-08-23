@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338241"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573215"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
@@ -165,7 +165,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry](#addbindentry)|重写默认访问器时，请将绑定条目添加到输出列。|  
 |[CDynamicAccessor](#cdynamicaccessor)|实例化并初始化`CDynamicAccessor`对象。|  
-|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)类中的接口指针。|  
+|[关闭](#close)|取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))类中的接口指针。|  
 |[GetBlobHandling](#getblobhandling)|检索 BLOB 处理的当前行值。|  
 |[GetBlobSizeLimit](#getblobsizelimit)|检索以字节为单位的最大 BLOB 大小。|  
 |[GetBookmark](#getbookmark)|检索当前行的书签。|  
@@ -202,7 +202,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 #### <a name="parameters"></a>参数  
  *信息*  
- [in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ [in]一个`DBCOLUMNINFO`结构，它包含的列信息。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
  此外可以指定如何`CDynamicAccessor`处理被称为 BLOB 数据的列数据： 它可以处理 BLOB 数据以默认方式; 可以跳过 （不绑定） BLOB 数据; 也可以将 BLOB 数据绑定中提供程序分配内存。  
 
 ## <a name="close"></a> Cdynamicaccessor:: Close
-取消绑定所有列时，释放分配的内存，并释放[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)类中的接口指针。  
+取消绑定所有列时，释放分配的内存，并释放[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))类中的接口指针。  
   
 ### <a name="syntax"></a>语法  
   
@@ -311,7 +311,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
  [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
  *pFlags*  
- [out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ [out]指向描述列特征的位掩码的指针。 请参阅中的"DBCOLUMNFLAGS 枚举类型" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  返回 **，则返回 true**如果成功检索列特征。 否则，返回 **false**。  
@@ -333,13 +333,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 #### <a name="parameters"></a>参数  
  *pRowset*  
- [in]一个指向[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)接口。  
+ [in]一个指向[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))接口。  
   
  *pColumns*  
  [out]一个指向内存中要在行集中; 返回的列数此数字包括书签列，如果有的话。  
   
  *ppColumnInfo*  
- [out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*。  
+ [out]指向内存中要返回的数组的指针`DBCOLUMNINFO`结构。 请参阅中的"DBCOLUMNINFO 结构" [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  *ppStringsBuffer*  
  [out]指向在其中存储的所有字符串值返回一个指向内存的指针 (在使用名称*columnid* ; 二是*pwszName*) 单个分配块中。  
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。  
+ 请参阅[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程序员参考*有关数据类型信息`DBORDINAL`， `DBCOLUMNINFO`，和`OLECHAR`。  
 
 ## <a name="getcolumnname"></a> Cdynamicaccessor:: Getcolumnname
 检索指定列的名称。  
@@ -465,7 +465,7 @@ bool GetStatus(const WCHAR* pColumnName,
  [in] 指向包含列名的字符串的指针。  
   
  *pStatus*  
- [out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ [out]指向包含的列状态的变量的指针。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
 ### <a name="return-value"></a>返回值  
  返回 **，则返回 true**如果找到指定的列。 否则，此函数返回**false**。  
@@ -607,7 +607,7 @@ bool SetStatus(const WCHAR* pColumnName,
  [in] 列号。 列号从 1 开始。 值为 0 指书签列，如果有的话。  
   
  *status*  
- [in]列状态。 请参阅[DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ [in]列状态。 请参阅[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
  *pColumnName*  
  [in] 指向包含列名的字符串的指针。  

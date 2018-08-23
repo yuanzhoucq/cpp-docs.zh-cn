@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572624"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 一个[事务](../../data/transactions-mfc-data-access.md)是一种方法进行分组或批处理中一系列的数据源的更新，以便所有成功，同时提交，或者 （如果任何一个发生故障） 不会提交和回滚整个事务。 此过程可确保数据源的结果的完整性。  
   
  OLE DB 提供以下三种方法支持事务：  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>会话和事务之间的关系  
  单个数据源对象可以创建一个或多个会话对象，其中每个可以是内部或外部事务在给定时间范围内。  
@@ -55,7 +55,7 @@ ms.locfileid: "39338705"
  调用`ITransaction::Commit`或`ITransaction::Abort`结束事务。 `Commit` 导致要应用于数据存储区的事务范围内的所有更改。 `Abort` 在事务启动之前，必须的使要取消的事务和数据存储区的范围内的所有更改将都保持在状态它。  
   
 ## <a name="nested-transactions"></a>嵌套的事务  
- 一个[transaction](https://msdn.microsoft.com/library/ms716985.aspx)发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。  
+ 一个[transaction](/previous-versions/windows/desktop/ms716985\(v=vs.85\))发生时启动新的本地事务在会话中存在活动事务。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`时已存在对该会话的活动事务返回 XACT_E_XTIONEXISTS。  
   
 ## <a name="distributed-transactions"></a>分布式事务  
  分布式的事务是指更新分布式的数据; 一个事务也就是说，多个联网的计算机系统上的数据。 如果你想要在分布式系统中支持事务，则应使用.NET Framework 而不是 OLE DB 事务支持。  

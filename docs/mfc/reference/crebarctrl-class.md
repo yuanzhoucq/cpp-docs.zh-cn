@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37bd71ae328af76a01106d2efe6cd3945ddb25b9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5ba3b93c1c45edabc86759a14f27309849d58553
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853532"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540791"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 封装 Rebar 控件的功能，此控件是一个子窗口容器。  
@@ -341,7 +341,7 @@ BOOL DeleteBand(UINT uBand);
  [!code-cpp[NVC_MFC_CReBarCtrl#4](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
 ##  <a name="dragmove"></a>  CReBarCtrl::DragMove  
- 实现 Win32 消息的行为[RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx)，如 Windows SDK 中所述。  
+ 实现 Win32 消息的行为[RB_DRAGMOVE](/windows/desktop/Controls/rb-dragmove)，如 Windows SDK 中所述。  
   
 ```  
 void DragMove(DWORD dwPos = (DWORD)-1);

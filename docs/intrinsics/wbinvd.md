@@ -1,5 +1,5 @@
 ---
-title: __wbinvd |Microsoft 文档
+title: __wbinvd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326340"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540582"
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Microsoft 专用**  
   
- 生成的写回和使其无效的缓存 (`wbinvd`) 指令。  
+ 生成的写回和使之无效的缓存 (`wbinvd`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ void __wbinvd(void);
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 此函数是仅在权限级别 (CPL) 为 0，内核模式下可用，例程仅可用作内部函数。  
+ 此函数选项仅适用于内核模式权限级别 (CPL) 为 0，且该例程仅用作内部函数。  
   
 **结束 Microsoft 专用**  
   

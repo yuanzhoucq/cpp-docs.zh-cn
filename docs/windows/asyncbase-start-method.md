@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641299"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611227"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start 方法
-启动异步操作。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果该操作启动或已，启动，则为 S_OK;否则为 E_ILLEGAL_STATE_CHANGE。  
-  
-## <a name="remarks"></a>备注  
- **Start （)** 是默认实现`IAsyncInfo::Start`，并不执行任何实际工作。 若要实际启动异步操作，重写`OnStart()`纯虚方法。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+启动异步操作。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>返回值
+
+如果该操作启动或已，启动，则为 S_OK;否则为 E_ILLEGAL_STATE_CHANGE。
+
+## <a name="remarks"></a>备注
+
+**Start （)** 是默认实现`IAsyncInfo::Start`，并不执行任何实际工作。 若要实际启动异步操作，重写`OnStart()`纯虚方法。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)

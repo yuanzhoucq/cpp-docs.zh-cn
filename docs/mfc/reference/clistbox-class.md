@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e48299b6a97f4cb6acba87c7c7bf9a68b16240
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339249"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539964"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 提供 Windows 列表框功能。  

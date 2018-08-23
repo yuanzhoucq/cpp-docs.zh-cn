@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028312"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540746"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函数
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>备注
 
-*原子比较和交换操作*所指向的对象中存储的值进行比较*Atom*与所指向的值*Exp*。如果值相等，所指向的对象中存储的值*atom*替换为`Val`使用`read-modify-write`操作和应用的内存顺序约束所指定的*顺序排列 1*。 如果值不相等，该操作将替换所指向的值*Exp*所指向的对象中存储的值与*Atom* ，并将应用的内存顺序约束的通过指定*Order2*。
+*原子比较和交换操作*所指向的对象中存储的值进行比较*Atom*与所指向的值*Exp*。如果值等于，所指向的对象中存储的值*atom*替换为*值*使用`read-modify-write`操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，该操作将替换所指向的值*Exp*所指向的对象中存储的值与*Atom* ，并将应用的内存顺序约束的通过指定*Order2*。
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 

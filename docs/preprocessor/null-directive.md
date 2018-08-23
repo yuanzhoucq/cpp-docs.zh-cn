@@ -1,5 +1,5 @@
 ---
-title: Null 指令 |Microsoft 文档
+title: Null 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496f22bcdc87a6772d0e0d9fc76d26f25d47adb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd5b996f4a44ef0a310b2a8d76560f6123929472
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912974"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539942"
 ---
 # <a name="null-directive"></a>Null 指令
-Null 预处理器指令是以单个数字符号 (**#**) 行上单独。 它没有作用。  
+Null 预处理器指令是以单个数字符号 (**#**) 行上唯一。 它没有作用。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 #  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [预处理器指令](../preprocessor/preprocessor-directives.md)
+ 
+[预处理器指令](../preprocessor/preprocessor-directives.md)

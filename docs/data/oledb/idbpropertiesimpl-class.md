@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337110"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571749"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 提供一个实现`IDBProperties`接口。  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|枚举器中的数据源和初始化的属性组，为数据源对象或初始化属性组中，设置属性。|  
   
 ## <a name="remarks"></a>备注  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx)是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开[IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx)，则它必须公开`IDBProperties`。 `IDBPropertiesImpl` 实现`IDBProperties`通过使用定义的一个静态函数[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\))是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))，则它必须公开`IDBProperties`。 `IDBPropertiesImpl` 实现`IDBProperties`通过使用定义的一个静态函数[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: Getproperties
 返回当前设置的数据源对象或当前设置初始化属性组中的属性值的数据源、 数据源信息和初始化属性组中的属性的值枚举器。  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbproperties:: Getproperties](https://msdn.microsoft.com/library/ms714344.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbproperties:: Getpropertyinfo](https://msdn.microsoft.com/library/ms718175.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbproperties:: Setproperties](https://msdn.microsoft.com/library/ms723049.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[idbproperties:: Setproperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
  如果在初始化提供程序时，此方法设置属性的值中 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO，DBPROPSET_DBINIT 属性组中的数据源对象。 如果未初始化提供程序，它会设置 DBPROPSET_DBINIT 组属性。  

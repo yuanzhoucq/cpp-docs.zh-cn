@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b3f865addd83bec64250807285947ea1c92e59f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016608"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609539"
 ---
 # <a name="modulecreate-method"></a>Module::Create 方法
-创建模块的实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-WRL_NOTHROW static Module& Create();  
-template<typename T>  
-WRL_NOTHROW static Module& Create(  
-   T callback  
-);  
-template<typename T>  
-WRL_NOTHROW static Module& Create(  
-   _In_ T* object,  
+
+创建模块的实例。
+
+## <a name="syntax"></a>语法
+
+```cpp
+WRL_NOTHROW static Module& Create();
+template<typename T>
+WRL_NOTHROW static Module& Create(
+   T callback
+);
+template<typename T>
+WRL_NOTHROW static Module& Create(
+   _In_ T* object,
    _In_ void (T::* method)()  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *T*  
- 模块类型。  
-  
- *回调*  
- 释放该模块的最后一个实例对象时调用。  
-  
- *object*  
- *对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。  
-  
- *方法*  
- *对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。  
-  
-## <a name="return-value"></a>返回值  
- 对模块引用。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
+);
+```
+
+### <a name="parameters"></a>参数
+
+*T*  
+模块类型。
+
+*回调*  
+释放该模块的最后一个实例对象时调用。
+
+*object*  
+*对象*并*方法*结合使用的参数。 点到最后一个实例对象时释放模块中的最后一个实例对象。
+
+*方法*  
+*对象*并*方法*结合使用的参数。 指向最后一个实例对象时释放模块中的最后一个实例对象的方法。
+
+## <a name="return-value"></a>返回值
+
+对模块引用。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
 [Module 类](../windows/module-class.md)

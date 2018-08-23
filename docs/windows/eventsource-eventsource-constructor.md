@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1e3d250fe4365b9701485457393b85f1c55464e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e00580397dade2bb5c44e44f18a51808826d7ef2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649570"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597672"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource 构造函数
-初始化的新实例**EventSource**类。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-EventSource();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [EventSource 类](../windows/eventsource-class.md)
+
+初始化的新实例**EventSource**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+EventSource();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[EventSource 类](../windows/eventsource-class.md)

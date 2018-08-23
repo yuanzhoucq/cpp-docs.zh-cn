@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 类 |Microsoft 文档
+title: CMFCVisualManagerVS2005 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038056"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539554"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 类
 `CMFCVisualManagerVS2005` 向应用程序提供 Microsoft Visual Studio 2005 外观。  
@@ -70,8 +70,8 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|绘制，可停靠选项卡式窗格中时，框架将调用此方法。 (重写[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|框架调用此方法之前，它可绘制窗口确定 MDITabs 窗口的边框大小。 (重写[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|  
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|绘制停靠和选项卡式窗格时，框架将调用此方法。 (重写[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|框架调用此方法以绘制窗口之前确定 /mditabs 以窗口的边框大小。 (重写[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(重写[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor)。)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(重写[CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors)。)|  
 |[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|返回自动隐藏按钮是否在当前视觉管理器中重叠。 (重写[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)。)|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(重写[CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors)。)|  
   
 ## <a name="remarks"></a>备注  
- CMFCVisualManagerVS2005 类用于更改你的应用程序类似于的可视外观[!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)]。  
+ CMFCVisualManagerVS2005 类用于将更改为类似于 Microsoft Visual Studio 2005 的应用程序的可视外观。  
   
- 所有此类的成员都派生自的此类上级的虚函数[CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)。  
+ 所有此类的成员都是派生自该类的上级的虚函数[CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 visual manager VS 2005。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何使用 VS 2005 的可视化管理器。 此代码片段属于[桌面警报演示示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   
@@ -395,7 +395,7 @@ virtual void OnUpdateSystemColors();
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)   
  [CMFCVisualManagerOfficeXP 类](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   

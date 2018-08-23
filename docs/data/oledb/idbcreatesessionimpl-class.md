@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756cc7ba203a1655bf5112d9c03e84707644f1e5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337565"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575459"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
-提供一个实现[IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx)接口。  
+提供一个实现[IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbcreatesession:: Createsession](https://msdn.microsoft.com/library/ms714942.aspx)中*OLE DB 程序员参考*。   
+ 请参阅[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))中*OLE DB 程序员参考*。   
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   

@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339212"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571382"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
 通过使用[CEnumerator](../../data/oledb/cenumerator-class.md)从枚举器行集访问数据。  
@@ -92,7 +92,7 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。 
+ 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 一个，该值指示是否行所说明的数据源或枚举数的变量。  
@@ -104,7 +104,7 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。
+ 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 数据源或枚举器的说明。  
@@ -116,7 +116,7 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。
+ 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 枚举器的数据源的名称。  
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 要传递给字符串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)若要获取的数据源或枚举器的名字对象。  
@@ -140,7 +140,7 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。  
+ 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

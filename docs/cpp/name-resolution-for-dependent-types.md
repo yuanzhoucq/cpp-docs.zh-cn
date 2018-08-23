@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402681"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588212"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 使用**typename**为模板定义，以告知编译器给定的限定的名称标识的类型中的限定名。 有关详细信息，请参阅[typename](../cpp/typename.md)。  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>模板消除歧义  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 强制实施 C++98/03/11 标准规则以使用“template”关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受仅一致性行。  
+ Visual Studio 2012 对强制执行 C + + 98/03/11 标准规则使用"template"关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  Visual Studio 2012 接受仅一致性行。  
   
 ```cpp  
 #include <iostream>  

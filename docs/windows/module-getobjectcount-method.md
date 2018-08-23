@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f677557c81502a38caf7414abf71936ada456471
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2be87f336adeb156789bb8c0ae7c8d05c8de39a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016296"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608632"
 ---
 # <a name="modulegetobjectcount-method"></a>Module::GetObjectCount 方法
-检索此模块管理的对象数量。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-virtual long GetObjectCount() const;  
-```  
-  
-## <a name="return-value"></a>返回值  
- 此模块管理的当前对象数量。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL
- 
+
+检索此模块管理的对象数量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+virtual long GetObjectCount() const;
+```
+
+## <a name="return-value"></a>返回值
+
+此模块管理的当前对象数量。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
 ## <a name="see-also"></a>请参阅
- [Module 类](../windows/module-class.md)
+
+[Module 类](../windows/module-class.md)

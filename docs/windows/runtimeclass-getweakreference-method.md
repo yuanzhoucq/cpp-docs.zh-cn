@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cba36256e6abe176c6f5785b49a105395a30ee7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cc4d2e542afcd72426cb3b0aba57b7d7cbabad06
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014178"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583639"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference 方法
-获取一个指向弱引用对象的当前**RuntimeClass**对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-STDMETHOD(  
-   GetWeakReference  
-)(_Deref_out_ IWeakReference **weakReference);  
-```  
-  
-### <a name="parameters"></a>参数  
- *weakReference*  
- 此操作完成后，指向弱引用对象的指针。  
-  
-## <a name="return-value"></a>返回值  
- 始终返回 S_OK。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [RuntimeClass 类](../windows/runtimeclass-class.md)
+
+获取一个指向弱引用对象的当前**RuntimeClass**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>参数
+
+*weakReference*  
+此操作完成后，指向弱引用对象的指针。
+
+## <a name="return-value"></a>返回值
+
+始终返回 S_OK。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[RuntimeClass 类](../windows/runtimeclass-class.md)

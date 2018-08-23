@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852409"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538226"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 `CMFCFontInfo`类描述的名称和字体的其他属性。  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- 本文档使用术语*字符集*并*脚本*互换。 一个*脚本*，这也称为是书写系统，是一系列字符和一个或多个语言中编写这些字符的规则。 字符的集合包括的字母表和标点在该脚本中使用。 例如，拉丁语脚本使用英语解说在美国，以及其字母表中包含从 A 到 Z 的字符。`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构指定字符集。 例如，值 ANSI_CHARSET 指定[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]字符集，其中包括拉丁语脚本的字母表。  
+ 本文档使用术语*字符集*并*脚本*互换。 一个*脚本*，这也称为是书写系统，是一系列字符和一个或多个语言中编写这些字符的规则。 字符的集合包括的字母表和标点在该脚本中使用。 例如，拉丁语脚本使用英语解说在美国，以及其字母表中包含从 A 到 Z 的字符。`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构指定字符集。 例如，值 ANSI_CHARSET 指定 ANSI 字符集，其中包括拉丁语脚本的字母表。  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  检索串联的字体和它的字符的名称集 （脚本）。  

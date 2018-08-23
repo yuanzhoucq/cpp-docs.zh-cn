@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 17e2f5ce1ec78b150e6569fb571f9c08e39efe0e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339270"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571551"
 ---
 # <a name="retrieving-a-blob"></a>检索 BLOB
-您可以检索各种方法中的二进制大型对象 (BLOB)。 可以使用`DBTYPE_BYTES`为一系列字节检索 BLOB 或使用类似的接口`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](https://msdn.microsoft.com/library/ms711511.aspx)中*OLE DB 程序员参考*。  
+您可以检索各种方法中的二进制大型对象 (BLOB)。 可以使用`DBTYPE_BYTES`为一系列字节检索 BLOB 或使用类似的接口`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](/previous-versions/windows/desktop/ms711511\(v=vs.85\))中*OLE DB 程序员参考*。  
   
  下面的代码演示如何检索 BLOB 使用`ISequentialStream`。 该宏[BLOB_ENTRY](../../data/oledb/blob-entry.md)允许您指定的接口和接口使用的标志。 打开后表，该代码调用`Read`重复在`ISequentialStream`从 BLOB 读取字节。 该代码调用`Release`释放之前调用的接口指针`MoveNext`以获取下一条记录。  
   

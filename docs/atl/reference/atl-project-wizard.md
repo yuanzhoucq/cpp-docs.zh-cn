@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025813"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572621"
 ---
 # <a name="atl-project-wizard"></a>ATL 项目向导
 活动模板库 (ATL) 是一组简化编写小巧快捷的 COM 对象的 c + + 基于模板的类。 ATL 项目向导创建一个项目使用的结构，以包含 COM 对象。  
@@ -52,7 +52,7 @@ ms.locfileid: "39025813"
   
 -   [优化编译器为 ATL 项目](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- 您可以指定项目属性 (例如，[是否以静态方式链接到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[项目属性](../../ide/general-property-page-project.md)页上，并且可以设置[生成配置](/visualstudio/ide/understanding-build-configurations)为ATL 项目。 请参阅[生成应用程序使用项目](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe)有关详细信息。  
+ 您可以指定项目属性 (例如，[是否以静态方式链接到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[项目属性](../../ide/general-property-page-project.md)页上，并且可以设置[生成配置](/visualstudio/ide/understanding-build-configurations)为ATL 项目。  
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)   

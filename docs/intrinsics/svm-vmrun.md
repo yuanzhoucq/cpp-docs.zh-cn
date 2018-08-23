@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bce7d2bef75c7fba88c986d22e95d3ab40ba652
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4711238c45955ee7067e3e418212bcdb0fae09ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329769"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539173"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Microsoft 专用**  
@@ -44,15 +44,15 @@ void __svm_vmrun(
 |[in] `VmcbPhysicalAddress`|VMCB 物理地址。|  
   
 ## <a name="remarks"></a>备注  
- `__svm_vmrun`函数使用 VMCB 中最少量的信息来开始执行虚拟机来宾代码。 使用[__svm_vmsave](../intrinsics/svm-vmsave.md)或[__svm_vmload](../intrinsics/svm-vmload.md)函数如果你需要以处理复杂的中断，或切换到另一个来宾的详细信息。  
+ `__svm_vmrun`函数使用在 VMCB 最少量的信息来开始执行虚拟机来宾代码。 使用[__svm_vmsave](../intrinsics/svm-vmsave.md)或[__svm_vmload](../intrinsics/svm-vmload.md)函数如果需要处理的复杂中断或切换到另一台来宾的详细信息。  
   
- `__svm_vmrun`函数等同于`VMRUN`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构程序员手动卷 2： 系统编程中，"文档编号 24593、 修订 3.11 或更高版本，在[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ `__svm_vmrun`函数等同于`VMRUN`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档编号 24593、 3.11 或更高版本，在修订[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__svm_vmrun`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmrun`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

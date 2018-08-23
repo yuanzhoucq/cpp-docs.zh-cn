@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte、 __incgsword、 __incgsdword、 __incgsqword |Microsoft 文档
+title: __incgsbyte，__incgsword，__incgsdword，__incgsqword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329457"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543116"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Microsoft 专用**  
   
- 指定相对于开始的偏移量的内存位置添加一个为值`GS`段。  
+ 指定相对于开头的偏移量的内存位置中添加一个值`GS`段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,10 +63,10 @@ void __incgsqword(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|X64|  
+|`__incgsword`|X64|  
+|`__incgsdword`|X64|  
+|`__incgsqword`|X64|  
   
 ## <a name="remarks"></a>备注  
  这些内部函数只有在内核模式下可用，例程都仅可用作内部函数。  

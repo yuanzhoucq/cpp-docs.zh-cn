@@ -16,37 +16,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0c5e94913a705ac97407f82075ff9c83a12dd6b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642784"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595562"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项
-### <a name="to-add-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项  
-  
-1.  通过双击中对应的图标打开快捷键对应表[资源视图](../windows/resource-view-window.md)。  
-  
-    > [!NOTE]
-    >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  在快捷键对应表中右键单击并选择**新的加速器**从快捷菜单上或单击表底部的空行项。  
-  
-3.  选择[ID](id-property.md)从 ID 中的下拉列表框或键入中的新 ID **ID**框。  
-  
-4.  类型[键](../windows/accelerator-key-property.md)你想要用作快捷键或右键单击并选择**键入的下一步键**从快捷菜单来设置组合键 (**键入的下一个密钥**命令是也可从**编辑**菜单)。  
-  
-5.  更改[修饰符](../windows/accelerator-modifier-property.md)并[类型](../windows/accelerator-type-property.md)，如果有必要。  
-  
-6.  按 Enter。  
-  
-    > [!NOTE]
-    >  确保定义的所有快捷键都是唯一的。 您可以将多种组合键分配给相同 ID 而产生任何不良影响，例如， **Ctrl** + **P**并**F8**可以同时分配给 ID_PRINT。 但是，具有分配给多个 ID 会无法正常工作，例如，组合键**Ctrl** + **Z**分配给 ID_SPELL_CHECK 和 ID_THESAURUS。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [编辑快捷键对应表](../windows/editing-accelerator-tables.md)   
- [快捷键编辑器](../windows/accelerator-editor.md)
+
+### <a name="to-add-an-entry-to-an-accelerator-table"></a>向快捷键对应表添加项
+
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](../windows/resource-view-window.md)。
+
+   > [!NOTE]
+   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 在快捷键对应表中右键单击并选择**新的加速器**从快捷菜单上或单击表底部的空行项。
+
+3. 选择[ID](id-property.md)从 ID 中的下拉列表框或键入中的新 ID **ID**框。
+
+4. 类型[键](../windows/accelerator-key-property.md)你想要用作快捷键或右键单击并选择**键入的下一步键**从快捷菜单来设置组合键 (**键入的下一个密钥**命令是也可从**编辑**菜单)。
+
+5. 更改[修饰符](../windows/accelerator-modifier-property.md)并[类型](../windows/accelerator-type-property.md)，如果有必要。
+
+6. 按 Enter。
+
+   > [!NOTE]
+   > 确保定义的所有快捷键都是唯一的。 您可以将多种组合键分配给相同 ID 而产生任何不良影响，例如， **Ctrl** + **P**并**F8**可以同时分配给 ID_PRINT。 但是，具有分配给多个 ID 会无法正常工作，例如，组合键**Ctrl** + **Z**分配给 ID_SPELL_CHECK 和 ID_THESAURUS。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[编辑快捷键对应表](../windows/editing-accelerator-tables.md)  
+[快捷键编辑器](../windows/accelerator-editor.md)

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886045"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609494"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 此类表示`CStringT`对象。  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  在 MFC 程序中， [CMemoryException 类](../../mfc/reference/cmemoryexception-class.md)如果存在内存不足，则会引发。 在 ATL 程序中， [CAtlException](../../atl/reference/catlexception-class.md)引发。 此函数通常用于自动化返回的字符串。  
   
 
- 通常情况下，如果将此字符串传递给 COM 函数作为 [in] 参数，则这要求调用方释放字符串。 这可以通过使用[SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)，如 Windows SDK 中所述。 有关详细信息，请参阅[Allocating 和释放内存为 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。  
+ 通常情况下，如果将此字符串传递给 COM 函数作为 [in] 参数，则这要求调用方释放字符串。 这可以通过使用[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)，如 Windows SDK 中所述。 有关详细信息，请参阅[Allocating 和释放内存为 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。  
   
- 有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) Windows SDK 中。  
+ 有关在 Windows 中的 OLE 分配函数的详细信息，请参阅[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。  
 
   
 ### <a name="example"></a>示例  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): 可用于构建`CStringT`从指针到**unsigned char**。  
   
 > [!NOTE]
->  定义要关闭之间的隐式字符串转换的 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 宏[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]和[!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字符串。 宏不包括从编译支持转换的构造函数。  
+>  定义 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 宏来关闭对 ANSI 和 Unicode 字符串之间的隐式字符串转换。 宏不包括从编译支持转换的构造函数。  
   
  请注意， *strSrc*参数可以是`CStringT`或`CThisSimpleString`对象。 有关`CStringT`，使用其默认实例化之一 (`CString`， `CStringA`，或`CStringW`); 对于`CThisSimpleString`，使用**这**指针。 `CThisSimpleString` 声明的实例[CSimpleStringT 类](../../atl-mfc-shared/reference/csimplestringt-class.md)，它是一个较小字符串类与不太内置功能比`CStringT`类。  
   

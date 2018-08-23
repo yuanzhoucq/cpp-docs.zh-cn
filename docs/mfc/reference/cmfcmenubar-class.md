@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853772"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539371"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 实现停靠的菜单栏。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  按钮的组合框，以像素为单位的宽度。  
   
 ### <a name="remarks"></a>备注  
- **帮助**组合框类似于**帮助**组合框中的菜单栏[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]。  
+ **帮助**组合框类似于**帮助**菜单栏中的 Microsoft Word 的组合框。  
   
  当调用此方法替换*uiID*设置为 0，此方法会隐藏组合框。 否则，此方法显示组合框会自动在菜单栏的右侧。 调用此方法后，调用[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)若要获取指向插入[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象。  
   

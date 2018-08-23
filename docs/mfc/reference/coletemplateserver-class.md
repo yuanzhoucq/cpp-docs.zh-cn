@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849335"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540790"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 用于 OLE 可视编辑服务器、自动化服务器和链接容器（支持链接到嵌入的应用程序）。  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  在参数中的信息*rglpszRegister*并*rglpszOverwrite*写入到通过调用注册表[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 默认信息，这两个参数都为空时在注册时，是适用于大多数应用程序。 有关这些自变量中的信息的结构的信息，请参阅`AfxOleRegisterServerClass`。  
   
- 有关详细信息，请参阅[实现 IDispatch 接口](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: _e |Microsoft 文档
+title: 启用 （_e) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330940"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539368"
 ---
 # <a name="enable"></a>_enable
 **Microsoft 专用**  
@@ -41,7 +41,7 @@ void _enable(void);
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_enable`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86、 ARM、 x64|  
   
  **标头文件** \<intrin.h >  
   

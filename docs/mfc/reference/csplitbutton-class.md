@@ -1,5 +1,5 @@
 ---
-title: CSplitButton 类 |Microsoft 文档
+title: CSplitButton 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbced65aa76206d040ff1c13267fe9b7d3c69eca
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538822"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 `CSplitButton`类表示拆分按钮控件。 当用户单击按钮的主要部分时，拆分按钮控件将执行一个默认行为，而当用户单击按钮的下拉箭头时，控件将显示一个下拉菜单。  
@@ -52,21 +52,21 @@ class CSplitButton : public CButton
   
 |名称|描述|  
 |----------|-----------------|  
-|[CSplitButton::Create](#create)|创建具有指定样式的拆分按钮控件并将其附加到当前`CSplitButton`对象。|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|设置用户单击当前拆分按钮控件的下拉箭头时，显示的下拉列表菜单。|  
+|[CSplitButton::Create](#create)|使用指定的样式创建拆分按钮控件，并将其附加到当前`CSplitButton`对象。|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|设置在用户单击当前的拆分按钮控件的下拉箭头时显示的下拉列表菜单。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|处理用户单击当前拆分按钮控件的下拉箭头时，系统会将发送 BCN_DROPDOWN 通知。|  
+|[CSplitButton::OnDropDown](#ondropdown)|处理系统发送当用户单击当前的拆分按钮控件的下拉箭头的 BCN_DROPDOWN 通知。|  
   
 ## <a name="remarks"></a>备注  
- `CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式 BS_SPLITBUTTON 按钮控件。 当用户单击下拉箭头时，它会显示一个自定义菜单。 有关详细信息，请参阅在 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式[按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。  
+ `CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式 BS_SPLITBUTTON 按钮控件。 当用户单击下拉箭头时，它会显示一个自定义菜单。 有关详细信息，请参阅中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式[按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。  
   
- 下图描绘了对话框中包含的页导航控件和一个 (1) 拆分按钮控件。 已被单击 (2) 的下拉箭头，并显示 (3) 的子菜单。  
+ 下图描绘了一个包含页导航控件和一个 (1) 的拆分按钮控件的对话框。 已单击的 (2) 的下拉箭头，并显示 (3) 的子菜单。  
   
- ![与拆分按钮和页导航控件的对话框。] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![具有拆分按钮和页导航控件的对话框。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,12 +82,12 @@ class CSplitButton : public CButton
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
- 此类支持在[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
+ 在 Windows Vista 及更高版本支持此类。  
   
  此类的其他要求中所述[生成要求的 Windows Vista 公共控件](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
 ##  <a name="create"></a>  CSplitButton::Create  
- 创建具有指定样式的拆分按钮控件并将其附加到当前`CSplitButton`对象。  
+ 使用指定的样式创建拆分按钮控件，并将其附加到当前`CSplitButton`对象。  
   
 ```  
 virtual BOOL Create(
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwStyle*|要应用于控件的样式按位组合 (OR)。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
+|[in]*dwStyle*|按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
 |[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
 |[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
 |[in]*nID*|控件的 ID。|  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
- 构造 `CSplitButton` 对象。 构造函数的参数指定用户单击拆分按钮控件的下拉箭头时，显示的子菜单。  
+ 构造 `CSplitButton` 对象。 构造函数的参数指定当用户单击拆分按钮控件的下拉箭头会显示子菜单。  
   
 ```  
 CSplitButton();
@@ -126,15 +126,15 @@ CSplitButton(CMenu* pMenu)
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|菜单栏的资源 ID。|  
+|[in]*nMenuId*|在菜单栏的资源 ID。|  
 |[in]*nSubMenuId*|子菜单资源 ID。|  
-|[in]*pMenu*|指向的指针[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
+|[in]*pMenu*|一个指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
   
 ### <a name="remarks"></a>备注  
  使用[CSplitButton::Create](#create)方法创建拆分按钮控件并将其附加到`CSplitButton`对象。  
   
 ##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
- 处理用户单击当前拆分按钮控件的下拉箭头时，系统会将发送 BCN_DROPDOWN 通知。  
+ 处理系统发送当用户单击当前的拆分按钮控件的下拉箭头的 BCN_DROPDOWN 通知。  
   
 ```  
 afx_msg void OnDropDown(
@@ -146,15 +146,15 @@ afx_msg void OnDropDown(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|指向[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)结构包含以下信息[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
-|[out]*pResult*|（不使用; 不返回任何值。）返回值的[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
+|[in]*pNMHDR*|指向[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)结构，其中包含有关的信息[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
+|[out]*pResult*|（未使用; 不返回任何值。）返回的值[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
   
 ### <a name="remarks"></a>备注  
- 当用户单击拆分按钮控件上的下拉箭头时，系统会将发送 BCN_DROPDOWN 通知消息，其中`OnDropDown`方法句柄。 但是，`CSplitButton`对象不转发 BCN_DROPDOWN 通知包含拆分按钮控件的控件。 因此，包含控件无法支持自定义操作响应的通知。  
+ 当用户单击拆分按钮控件上的下拉箭头时，系统会发送 BCN_DROPDOWN 通知消息，其中`OnDropDown`方法句柄。 但是，`CSplitButton`对象不转发到包含拆分按钮控件的控件的 BCN_DROPDOWN 通知。 因此，包含控件不能响应与通知中支持自定义操作。  
   
- 若要实现包含控件支持的自定义操作，使用[CButton](../../mfc/reference/cbutton-class.md)对象而不是 BS_SPLITBUTTON 样式`CSplitButton`对象。 然后实现的处理程序中的 BCN_DROPDOWN 通知`CButton`对象。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。  
+ 若要实现包含控件支持的自定义操作，请使用[CButton](../../mfc/reference/cbutton-class.md)对象而不是 BS_SPLITBUTTON 样式`CSplitButton`对象。 然后，实现的处理程序中的 BCN_DROPDOWN 通知`CButton`对象。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。  
   
- 若要实现自定义操作，拆分按钮控件本身支持，使用[消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)。 派生您自己的类从`CSplitButton`类并将其命名，例如，CMySplitButton。 然后添加以下的消息映射到你的应用程序处理 BCN_DROPDOWN 通知：  
+ 若要实现自定义操作，拆分按钮控件本身支持，请使用[消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)。 派生您自己的类从`CSplitButton`类，并将其命名，例如，CMySplitButton。 然后将以下消息映射添加到你的应用程序以处理 BCN_DROPDOWN 通知：  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -164,7 +164,7 @@ END_MESSAGE_MAP()
 ```  
   
 ##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
- 设置用户单击当前拆分按钮控件的下拉箭头时，显示的下拉列表菜单。  
+ 设置在用户单击当前的拆分按钮控件的下拉箭头时显示的下拉列表菜单。  
   
 ```  
 void SetDropDownMenu(
@@ -178,23 +178,23 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|菜单栏的资源 ID。|  
+|[in]*nMenuId*|在菜单栏的资源 ID。|  
 |[in]*nSubMenuId*|子菜单资源 ID。|  
 |[in]*pMenu*|指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
   
 ### <a name="remarks"></a>备注  
- *NMenuId*参数标识的菜单栏中，这是水平的菜单栏项列表。 *NSubMenuId*参数是从零开始的索引号标识子菜单中，这是与每个菜单栏项关联的菜单项的下拉列表。 例如，典型的应用程序有一个菜单，其中包含菜单栏项，"文件，""编辑"和"帮助"。 "文件"菜单栏项包含子菜单，其中包含菜单项中，"打开"状态，"关闭"和"Exit"。 单击拆分按钮控件的下拉箭头时，该控件将显示指定的子菜单中，不菜单栏。  
+ *NMenuId*参数标识一个菜单栏，它是水平的菜单栏项的列表。 *NSubMenuId*参数是一个从零开始的索引号，用于标识子菜单中，这是与每个菜单栏项关联的菜单项的下拉列表。 例如，典型的应用程序有一个菜单，其中包含菜单栏项，"文件，""编辑"和"帮助"。 "文件"菜单栏项包含子菜单包含菜单项中，"，打开"状态"关闭"和"Exit"。 单击拆分按钮控件的下拉箭头时，该控件将显示指定的子菜单中，未在菜单栏。  
   
- 下图描绘了对话框中包含的页导航控件和一个 (1) 拆分按钮控件。 已被单击 (2) 的下拉箭头，并显示 (3) 的子菜单。  
+ 下图描绘了一个包含页导航控件和一个 (1) 的拆分按钮控件的对话框。 已单击的 (2) 的下拉箭头，并显示 (3) 的子菜单。  
   
- ![与拆分按钮和页导航控件的对话框。] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![具有拆分按钮和页导航控件的对话框。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ### <a name="example"></a>示例  
- 下面的代码示例中的第一个语句演示[CSplitButton::SetDropDownMenu](#setdropdownmenu)方法。 我们创建了菜单与 Visual Studio 资源编辑器，自动命名的菜单栏 ID IDR_MENU1。 *NSubMenuId*参数，为零，指的唯一子菜单的菜单栏。  
+ 下面的代码示例中的第一个语句演示[CSplitButton::SetDropDownMenu](#setdropdownmenu)方法。 我们创建了菜单与 Visual Studio 资源编辑器，自动命名的菜单栏 ID IDR_MENU1。 *NSubMenuId*参数，为零，表示菜单栏的唯一子菜单。  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   
 ## <a name="see-also"></a>请参阅  
  [CSplitButton 类](../../mfc/reference/csplitbutton-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [CButton 类](../../mfc/reference/cbutton-class.md)

@@ -122,17 +122,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338445"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539592"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 `CMDIChildWndEx`类提供的功能的 Windows 多文档界面 (MDI) 子窗口。 它扩展的功能[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
 
   
 ## <a name="syntax"></a>语法  
@@ -775,7 +775,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="parameters"></a>参数  
  *dwFlags*  
- STPFLAG 值的组合。 有关详细信息，请参阅[itaskbarlist4::settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)。  
+ STPFLAG 值的组合。 有关详细信息，请参阅[itaskbarlist4::settabproperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties)。  
   
 ### <a name="remarks"></a>备注  
   

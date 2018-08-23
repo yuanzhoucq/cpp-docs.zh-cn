@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336935"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572534"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 继承自`DBPROPIDSET`结构，并添加初始化键字段的构造函数并将[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)访问方法。  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|将属性 ID 集的内容分配到另一个属性 ID 集。|  
   
 ## <a name="remarks"></a>备注  
- OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)结构属于一个属性集。  
+ OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构属于一个属性集。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 将属性 ID 添加到属性 ID 集中。  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] 要添加到属性 ID 集中的属性 ID。  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
-构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)结构。  
+构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构。  
   
 ### <a name="syntax"></a>语法  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>参数  
  *guid*  
- [in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)结构。  
+ [in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))结构。  
   
 ### <a name="remarks"></a>备注  
  可设置此字段[构造函数](../../data/oledb/cdbpropidset-cdbpropidset.md)也。 如果您对此类使用默认构造函数，则调用此函数。  

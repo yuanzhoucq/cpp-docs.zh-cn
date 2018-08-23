@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337575"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539028"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 表示与数据源的连接，通过此连接可操作数据源。  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请注意，MFC ODBC 类不能再使用异步处理;若要执行的异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)。 有关详细信息，请参阅[异步执行](https://msdn.microsoft.com/library/ms713563.aspx)Windows SDK 中。  
+ 请注意，MFC ODBC 类不能再使用异步处理;若要执行的异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\))。 有关详细信息，请参阅[异步执行](/previous-versions/windows/desktop/ms713563\(v=vs.85\))Windows SDK 中。  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  调用此成员函数以确定数据库是否允许事务。  

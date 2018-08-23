@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642846"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605732"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>添加对话框控件的事件处理程序
 
@@ -49,13 +49,13 @@ ms.locfileid: "39642846"
 
    - BN_SETFOCUS
 
-    > [!NOTE]
-    > 或者，选择对话框的，然后单击**控件事件**按钮以在对话框中显示的所有控件的常见 Windows 事件列表。
+   > [!NOTE]
+   > 或者，选择对话框的，然后单击**控件事件**按钮以在对话框中显示的所有控件的常见 Windows 事件列表。
 
 3. 在中**属性**窗口中，单击事件处理旁的右侧列，然后选择建议的通知事件名称 (例如，`OnBnClickedOK`处理 BN_CLICKED)。
 
-    > [!NOTE]
-    > 或者，可以提供您的选择，而不是选择默认事件处理程序名称的事件处理程序名称。
+   > [!NOTE]
+   > 或者，可以提供您的选择，而不是选择默认事件处理程序名称的事件处理程序名称。
 
    一旦选择了该事件，Visual Studio 将打开**文本编辑器**和显示事件处理程序的代码。 例如，以下代码添加默认`OnBnClickedOK`:
 
@@ -71,14 +71,16 @@ ms.locfileid: "39642846"
 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="requirements"></a>要求
- Win32
+
+Win32
 
 ## <a name="see-also"></a>请参阅
- [默认控件事件](../windows/default-control-events.md)  
- [定义对话框控件的成员变量](../windows/defining-member-variables-for-dialog-controls.md)  
- [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)  
- [添加类](../ide/adding-a-class-visual-cpp.md)  
- [添加成员函数](../ide/adding-a-member-function-visual-cpp.md)  
- [添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)  
- [重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)  
- [MFC 消息处理程序](../mfc/reference/adding-an-mfc-message-handler.md)  
+
+[默认控件事件](../windows/default-control-events.md)  
+[定义对话框控件的成员变量](../windows/defining-member-variables-for-dialog-controls.md)  
+[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)  
+[添加类](../ide/adding-a-class-visual-cpp.md)  
+[添加成员函数](../ide/adding-a-member-function-visual-cpp.md)  
+[添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)  
+[重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[MFC 消息处理程序](../mfc/reference/adding-an-mfc-message-handler.md)  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462357"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571384"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用程序——从有趣而刺激的游戏，到高性能的科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，人们使用 C++ 解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃了过时的 C 样式编程，转而使用使用现代 C++。   
@@ -108,7 +108,7 @@ void f()
   
  C++ 正在复兴，因为功能再次占据首要位置。 当程序员的工作效率很重要时，Java 和 C# 等语言是很好的选择；但当功能和性能至关重要时，此类语言就暴露出了自身限制。 在实现高效率和强大功能（特别是在硬件有限的设备上）方面，现代 C++ 无可匹敌。  
   
- 不仅语言现代，开发工具也很现代。 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 可让开发周期的各个部分高效可靠。 开发周期包括应用程序生命周期管理 (ALM) 工具、IntelliSense 等 IDE 增强功能、XAML 等适用于工具的机制，以及生成、调试和许多其他工具。  
+ 不仅语言现代，开发工具也很现代。 Visual Studio，可以在开发周期的所有部分高效可靠。 开发周期包括应用程序生命周期管理 (ALM) 工具、IntelliSense 等 IDE 增强功能、XAML 等适用于工具的机制，以及生成、调试和许多其他工具。  
   
  此部分文档中的文章提供了有关在编写现代 C++ 程序时最重要的功能和技术的深入指导与最佳做法。  
   

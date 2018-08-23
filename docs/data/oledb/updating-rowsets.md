@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572151"
 ---
 # <a name="updating-rowsets"></a>更新行集合
 一项非常基本的数据库操作是更新数据存储区中的数据或在其中写入数据。 在 OLE DB 中，更新机制非常简单：使用者应用程序设置绑定数据成员的值，然后将这些值写入行集，然后使用者请求提供程序更新数据存储区。  
   
- 使用者可以对行集数据执行以下几种更新：设置行内的列值、插入行以及删除行。 若要执行这些操作，OLE DB 模板类[CRowset](../../data/oledb/crowset-class.md)实现[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)接口并重写了以下接口方法：  
+ 使用者可以对行集数据执行以下几种更新：设置行内的列值、插入行以及删除行。 若要执行这些操作，OLE DB 模板类[CRowset](../../data/oledb/crowset-class.md)实现[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))接口并重写了以下接口方法：  
   
 -   [SetData](../../data/oledb/crowset-setdata.md) 可更改行集中某一行内的列值；它等效于 SQL UPDATE 命令。  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [CRowset 类](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

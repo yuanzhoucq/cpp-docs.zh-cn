@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854003"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540789"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，它是有选择性地包含浏览按钮可编辑文本框。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>备注  
  当编辑浏览控件处于文件浏览模式，并且在用户单击浏览按钮时，该控件将显示标准文件选择对话框。  
   
- 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  当前的编辑浏览控件上显示浏览按钮并将控件放入*文件夹浏览*模式。  

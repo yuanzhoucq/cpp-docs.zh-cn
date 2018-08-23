@@ -17,237 +17,240 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57450abdef0a6b25731405e092520ec5589972a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648628"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613730"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
-调用与当前关联的每个事件处理程序[EventSource](../windows/eventsource-class.md)对象使用指定的参数类型和自变量。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void InvokeAll();  
-template <  
-   typename T0  
->  
-void InvokeAll(  
-   T0arg0  
-);  
-template <  
-   typename T0,  
-   typename T1  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8,  
-   typename T9  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8,  
-   T9arg9  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *T0*  
- 第零个事件处理程序自变量的类型。  
-  
- T1  
- 第一个事件处理程序自变量的类型。  
-  
- T2  
- 第二个事件处理程序自变量的类型。  
-  
- *T3*  
- 第三个事件处理程序自变量的类型。  
-  
- *T4*  
- 第四个事件处理程序自变量的类型。  
-  
- *T5*  
- 第五个事件处理程序自变量的类型。  
-  
- *T6*  
- 第六个事件处理程序自变量的类型。  
-  
- *T7*  
- 第七个事件处理程序自变量的类型。  
-  
- *T8*  
- 第八个事件处理程序自变量的类型。  
-  
- *T9*  
- 第九个事件处理程序自变量的类型。  
-  
- *arg0*  
- 第零个事件处理程序自变量。  
-  
- *arg1*  
- 第一个事件处理程序自变量。  
-  
- *Arg2*  
- 第二个事件处理程序自变量。  
-  
- *arg3*  
- 第三个事件处理程序自变量。  
-  
- *了 arg4*  
- 第四个事件处理程序自变量。  
-  
- *arg5*  
- 第五个事件处理程序自变量。  
-  
- *了 arg6*  
- 第六个事件处理程序自变量。  
-  
- *arg7*  
- 第七事件处理程序自变量。  
-  
- *arg8*  
- 第八个事件处理程序自变量。  
-  
- *arg9*  
- 第九个事件处理程序自变量。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [EventSource 类](../windows/eventsource-class.md)
+
+调用与当前关联的每个事件处理程序[EventSource](../windows/eventsource-class.md)对象使用指定的参数类型和自变量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>参数
+
+*T0*  
+第零个事件处理程序自变量的类型。
+
+T1  
+第一个事件处理程序自变量的类型。
+
+T2  
+第二个事件处理程序自变量的类型。
+
+*T3*  
+第三个事件处理程序自变量的类型。
+
+*T4*  
+第四个事件处理程序自变量的类型。
+
+*T5*  
+第五个事件处理程序自变量的类型。
+
+*T6*  
+第六个事件处理程序自变量的类型。
+
+*T7*  
+第七个事件处理程序自变量的类型。
+
+*T8*  
+第八个事件处理程序自变量的类型。
+
+*T9*  
+第九个事件处理程序自变量的类型。
+
+*arg0*  
+第零个事件处理程序自变量。
+
+*arg1*  
+第一个事件处理程序自变量。
+
+*Arg2*  
+第二个事件处理程序自变量。
+
+*arg3*  
+第三个事件处理程序自变量。
+
+*了 arg4*  
+第四个事件处理程序自变量。
+
+*arg5*  
+第五个事件处理程序自变量。
+
+*了 arg6*  
+第六个事件处理程序自变量。
+
+*arg7*  
+第七事件处理程序自变量。
+
+*arg8*  
+第八个事件处理程序自变量。
+
+*arg9*  
+第九个事件处理程序自变量。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[EventSource 类](../windows/eventsource-class.md)

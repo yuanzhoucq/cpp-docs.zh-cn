@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e80bf6d4313be5c90b4b4486cb31f3705252f33
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651260"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603673"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void AddTail(  
-   _In_ IUnknown* element  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *元素*  
- 指向要追加的事件处理程序。  
-  
-## <a name="remarks"></a>备注  
- 将指定的事件处理程序附加到事件处理程序的内部数组的末尾。  
-  
- **AddTail()** 应仅在内部使用`EventSource`类。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [EventTargetArray 类](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>参数
+
+*元素*  
+指向要追加的事件处理程序。
+
+## <a name="remarks"></a>备注
+
+将指定的事件处理程序附加到事件处理程序的内部数组的末尾。
+
+**AddTail()** 应仅在内部使用`EventSource`类。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[EventTargetArray 类](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

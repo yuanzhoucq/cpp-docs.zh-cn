@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025979"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572434"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 此向导设置 OLE DB 使用者类使用的数据绑定通过指定 OLE DB 访问接口访问指定的数据源所需。  
@@ -33,7 +33,7 @@ ms.locfileid: "39025979"
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **数据源**  
-**数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK 文档中。  
+**数据源**按钮的使你可以设置使用指定的 OLE DB 访问接口的指定的数据源。 单击此按钮时**数据链接属性**对话框随即出现。 有关详细信息生成连接字符串和**数据链接属性**对话框中，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 文档中。  
   
 > [!NOTE]
 >  在上一版本中，按住 Shift 单击**数据源**按钮打开文件打开对话框，从中可以选择数据链接 (.udl) 文件。 不再支持此功能。  
@@ -176,7 +176,7 @@ ms.locfileid: "39025979"
  如果你想要使用，请选择此选项`CCommand`或`db_command`创建命令和命令访问器类声明。 这是默认选择。  
   
  **支持**  
- 选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx)和的相应条目[DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx)在属性集映射。  
+ 选中复选框以指定的更新，在使用者 （默认值为 none） 中支持的种类。 以下各项将设置[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))和的相应条目[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))在属性集映射。  
   
  **更改**  
  指定使用者在行集中支持的行数据的更新。  
@@ -190,4 +190,4 @@ ms.locfileid: "39025979"
 ## <a name="see-also"></a>请参阅  
  [ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [连接字符串和数据链接 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

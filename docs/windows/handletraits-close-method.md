@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 561862427238a86dbb23ee05044c1d01558abab5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b1b36d4feea61e9a79978cc86dca29a7ad14846a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647594"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594031"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close 方法
-关闭指定的句柄。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-inline static bool Close(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *h*  
- 要关闭的句柄。  
-  
-## <a name="return-value"></a>返回值  
- **true**如果处理*h*关闭成功; 否则为**false**。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>请参阅  
- [HANDLETraits 结构](../windows/handletraits-structure.md)
+
+关闭指定的句柄。
+
+## <a name="syntax"></a>语法
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*  
+要关闭的句柄。
+
+## <a name="return-value"></a>返回值
+
+**true**如果处理*h*关闭成功; 否则为**false**。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>请参阅
+
+[HANDLETraits 结构](../windows/handletraits-structure.md)

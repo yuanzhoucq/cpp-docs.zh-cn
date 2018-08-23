@@ -16,29 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 231e9cd3e49b7e22dfd2a0daa4f7bbc83cc967f2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 96ad1050bdf065fbc1a48fe0e84d4d812c6b8dfe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644913"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611411"
 ---
 # <a name="deleting-a-control"></a>删除控件
-### <a name="to-delete-a-control"></a>若要删除控件  
-  
-1.  在对话框中，选择控件，然后按**删除**密钥。  
-  
-     \- 或 -  
-  
-2.  上**编辑**菜单上，单击**删除**。  
-  
-    > [!TIP]
-    >  使用时**对话框**编辑器中的，在许多情况下，您可以单击鼠标右键以显示常用命令的快捷菜单。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [对话框中的控件](../windows/controls-in-dialog-boxes.md)
+
+### <a name="to-delete-a-control"></a>若要删除控件
+
+1. 在对话框中，选择控件，然后按**删除**密钥。
+
+   \- 或 -
+
+2. 上**编辑**菜单上，单击**删除**。
+
+   > [!TIP]
+   > 使用时**对话框**编辑器中的，在许多情况下，您可以单击鼠标右键以显示常用命令的快捷菜单。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)

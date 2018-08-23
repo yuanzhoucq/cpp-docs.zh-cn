@@ -1,5 +1,5 @@
 ---
-title: __outword |Microsoft 文档
+title: __outword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331131"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541728"
 ---
 # <a name="outword"></a>__outword
 **Microsoft 专用**  
   
- 生成`out`指令，这将发送单词`Data`出指定的 I/O 端口`Port`。  
+ 将生成`out`指令，将发送一词`Data`出指定的 I/O 端口`Port`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ void __outword(
   
 #### <a name="parameters"></a>参数  
  [in] `Port`  
- 要将数据发送到的端口。  
+ 要向其发送数据的端口。  
   
  [in] `Data`  
  要发送的数据。  
@@ -49,7 +49,7 @@ void __outword(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5248d7c692e3443ea0e0798cf723f38099c3f863
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409132"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572323"
 ---
 # <a name="alignment-c-declarations"></a>对齐方式（C++ 声明）
-C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器根据其大小值来对齐类和结构成员：bool 和 char 都对齐一个 1 字节边界、短整型两个字节、整型四个字节，长整型、双精度型和长双精度型八个字节。 在大多数情况下，你永远无需注意对齐方式，因为默认对齐方式已经是最佳的。 但是，在某些情况下，你可以通过指定数据结构的自定义对齐方式获得显著的性能提升或节约内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 专用关键字 __alignof 和 declspec(alignas) 来指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 C++ 11 标准关键字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)获得最大代码可移植性。 新关键字实质上以与 Microsoft 专用扩展相同的方式运行，这些扩展的文档也适用于这些新关键字。 请参阅[__alignof 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)有关详细信息。 C++ 标准不指定小于目标平台中，默认的编译器的边界上对齐，因此仍需要使用 Microsoft #pragma 的装箱行为[包](../preprocessor/pack.md)在这种情况下。  
+C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器将根据其大小值类和结构成员对齐： bool 和 char 是一个字节边界上对齐，两个字节短整型四个字节，长时间长、 double 和长双精度型八个字节。 在大多数情况下，你永远无需注意对齐方式，因为默认对齐方式已经是最佳的。 但是，在某些情况下，你可以通过指定数据结构的自定义对齐方式获得显著的性能提升或节约内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 专用关键字 __alignof 和 declspec(alignas) 来指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 C++ 11 标准关键字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)获得最大代码可移植性。 新关键字实质上以与 Microsoft 专用扩展相同的方式运行，这些扩展的文档也适用于这些新关键字。 请参阅[__alignof 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)有关详细信息。 C++ 标准不指定小于目标平台中，默认的编译器的边界上对齐，因此仍需要使用 Microsoft #pragma 的装箱行为[包](../preprocessor/pack.md)在这种情况下。  
   
  C++ 标准库提供[aligned_storage 类](../standard-library/aligned-storage-class.md)为具有自定义对齐方式的数据结构分配内存和[aligned_union 类](../standard-library/aligned-union-class.md)用于指定具有联合的对齐方式非普通构造函数或析构函数。  
   

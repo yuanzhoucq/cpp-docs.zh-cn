@@ -1,7 +1,7 @@
 ---
-title: 链接器工具错误 LNK1181 |Microsoft 文档
+title: 链接器工具错误 LNK1181 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301354"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597657"
 ---
 # <a name="linker-tools-error-lnk1181"></a>链接器工具错误 LNK1181
 无法打开输入的文件 filename  
   
  找不到链接器`filename`因为它不存在或找不到路径。  
   
- 错误 lnk1181 某些常见原因：  
+ 错误 lnk1181 一些常见原因：  
   
--   `filename` 链接器行中，但该文件上的其他依赖关系不存在，因此引用。  
+-   `filename` 附加依赖项上链接器行中，但该文件不存在，因此引用。  
   
--   A **/LIBPATH**指定目录包含的语句`filename`缺少。  
+-   一个 **/LIBPATH**语句，用于指定目录包含`filename`缺少。  
   
- 若要解决上述问题，请确保引用链接器行上的任何文件都存在于系统。  另外，请确保没有 **/LIBPATH**包含依赖于链接器文件每个目录的语句。  
+ 若要解决上述问题，请确保链接器行上引用的任何文件都存在于系统。  此外请确保没有 **/LIBPATH**语句为每个目录，其中包含依赖于链接器的文件。 
+
+ 有关详细信息，请参阅[用作链接器输入的.lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)。
   
- LNK1181 的另一个可能原因是具有嵌入的空格的长文件名都不包含用引号引起来。  在这种情况下，链接器将仅识别最多包含第一个空格，文件名称，然后假定为文件扩展名。 obj。这种情况的解决方案是括起来的长文件名 （路径和文件名） 用引号引起来。  
+ Lnk1181 另一个可能的原因是没有具有嵌入的空格的长文件名括在引号中。  在这种情况下，链接器将仅识别第一个空格，文件名，然后假定的文件的扩展名。 目标这种情况下的解决方案是将括起来的长文件名 （路径和文件名） 引起来。  
+
+ 使用编译[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项可能导致 LNK1181，因为该选项将取消创建的.obj 文件。
   
- 有关详细信息，请参阅[用作链接器输入的.lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)。  
+  
   
 ## <a name="see-also"></a>请参阅  
  [/LIBPATH（附加的 Libpath）](../../build/reference/libpath-additional-libpath.md)

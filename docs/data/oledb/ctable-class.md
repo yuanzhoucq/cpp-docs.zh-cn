@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336721"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572445"
 ---
 # <a name="ctable-class"></a>CTable 类
 提供了一种方法直接访问简单行集合 （一个不带任何参数）。  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in]`DBID`要打开的表。  
   
  *pPropSet*  
- [in]指向数组的指针[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构包含要设置属性和值。 请参阅[属性设置和属性组](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。  
+ [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构传入*pPropSet*参数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 有关更多详细信息，请参阅[iopenrowset:: Openrowset](https://msdn.microsoft.com/library/ms716724.aspx)中*OLE DB 程序员参考*。  
+ 有关更多详细信息，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

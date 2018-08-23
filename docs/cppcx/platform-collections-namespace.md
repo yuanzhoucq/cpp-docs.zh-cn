@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: collections Namespace |Microsoft 文档'
+title: 'Platform:: collections Namespace |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,24 +11,24 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088032"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612526"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空间
 
-Platform:: collections 命名空间包含`Map`， `MapView`， `Vector`，和`VectorView`类。 这些类是在 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空间中定义的对应接口的具体实现。 具体集合类型在 ABI 之间是不可移植的（例如，当 Javascript 或 C# 程序调用到 C++ 组件时）时，但它们可以隐式转换为其相应的接口类型。 例如，如果你实现了一个填充并返回集合的公共方法，则使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在内部实现该集合并使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作为返回类型。 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)和[创建 Windows 运行时 c + + 组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+Platform:: collections 命名空间包含`Map`， `MapView`， `Vector`，和`VectorView`类。 这些类是在 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空间中定义的对应接口的具体实现。 具体集合类型在 ABI 之间是不可移植的（例如，当 Javascript 或 C# 程序调用到 C++ 组件时）时，但它们可以隐式转换为其相应的接口类型。 例如，如果你实现了一个填充并返回集合的公共方法，则使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在内部实现该集合并使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作为返回类型。 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)并[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 可以从 [std::vector](../standard-library/vector-class.md) 构造 Platform::Collections::Vector，从 [std::map](../cppcx/platform-collections-map-class.md) 构造 [Platform::Collections::Map](../standard-library/map-class.md)。
 
-此外，platform:: collections 命名空间提供对于回插和输入迭代器和`Vector`和`VectorView`迭代器。
+此外，platform:: collections 命名空间提供支持对于回插和输入迭代器，并`Vector`和`VectorView`迭代器。
 
 必须包括 (`#include`) collection.h 标头才能使用 platform:: collections 命名空间中的类型。
 
@@ -43,7 +43,7 @@ using namespace Platform::Collections;
 
 此命名空间包含以下成员。
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator 类](../cppcx/platform-collections-backinsertiterator-class.md)|表示在集合末尾插入一个元素的迭代器。|
 |[Platform::Collections::InputIterator 类](../cppcx/platform-collections-inputiterator-class.md)|表示在集合开头插入一个元素的迭代器。|

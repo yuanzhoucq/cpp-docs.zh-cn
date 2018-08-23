@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9905d878fe8592a17b86519d927a2c85629f4ed
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9de1db618375257f3465a9b3683a9ca47b470123
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013855"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599556"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator 构造函数
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-MakeAllocator();  
-```  
-  
-## <a name="remarks"></a>备注  
- 初始化的新实例**MakeAllocator**类。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [MakeAllocator 类](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+MakeAllocator();
+```
+
+## <a name="remarks"></a>备注
+
+初始化的新实例**MakeAllocator**类。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[MakeAllocator 类](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

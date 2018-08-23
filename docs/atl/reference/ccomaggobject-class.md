@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884988"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572922"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
 此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合对象接口。 根据定义，聚合的对象包含在外部对象。 `CComAggObject`类是类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开一个接口，可向外部客户端直接访问。  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |名称|描述|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|聚合对象的引用计数会递增。|  
-|[CComAggObject::CreateInstance](#createinstance)|此静态函数，可创建一个新**CComAggObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComAggObject::CreateInstance](#createinstance)|此静态函数，可创建一个新**CComAggObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|执行的最终初始化`m_contained`。|  
 |[CComAggObject::FinalRelease](#finalrelease)|执行的最后一个析构`m_contained`。|  
 |[CComAggObject::QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  释放所有已分配的资源，调用[FinalRelease](#finalrelease)，并减少模块锁计数。  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- 此静态函数，可创建一个新**CComAggObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此静态函数，可创建一个新**CComAggObject <** `contained` **>** 对象而不需要的开销[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
 ```
 static HRESULT WINAPI CreateInstance(

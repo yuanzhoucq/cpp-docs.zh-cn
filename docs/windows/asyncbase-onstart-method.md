@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e661280c62be1a8335a8e84e30664c2f35a338
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 810ed8d285d0e169fef3352d57a6911082033381
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646856"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600697"
 ---
 # <a name="asyncbaseonstart-method"></a>AsyncBase::OnStart 方法
-当在派生类中重写时启动的异步操作。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-virtual void OnStart(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)   
- [AsyncBase::OnStart 方法](../windows/asyncbase-onstart-method.md)
+
+当在派生类中重写时启动的异步操作。
+
+## <a name="syntax"></a>语法
+
+```cpp
+virtual void OnStart(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)  
+[AsyncBase::OnStart 方法](../windows/asyncbase-onstart-method.md)
