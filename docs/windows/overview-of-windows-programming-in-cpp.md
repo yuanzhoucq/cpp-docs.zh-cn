@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012188"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604274"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -26,14 +26,14 @@ ms.locfileid: "40012188"
 - 有效内存要求
 - 节约功耗 
 - 能够充分利用多核和众核设备
-- 能够执行图形处理单元 (GPU) 上的常规计算   
+- 能够执行图形处理单元 (GPU) 上的常规计算  
 - 能够利用硬件中的其他最新进展。
 
 Windows 应用有好几大类别可以使用 Visual C ++ 进行开发。 这些类别具有不同的编程模型或应用程序模型，多年来引入了。 每个模型使用不同的库和 Api 来提供对平台的访问，并创建用户界面如窗口和对话框。 可在任何这些类别中，有几个限制适用于 UWP 的 c + + 标准库以及第三方库。
 
 - [Windows 通用应用](#BK_WindowsUniversal)。 Windows 8 引入了第三类 Windows 应用，并且该类别的应用在 Windows 10 中继续受支持。 这些应用通常被认为只是“Windows 应用”，并且它们包括面向各种设备的桌面和移动应用。 通过使用 Windows 运行时库 (WRL)，可以使用 C ++/CX 或标准的 C++ 和 COM 编写这些应用，C ++/CX 是 C++ 的一种方言，支持 Windows 运行时开发。 虽然在 Windows 10 中，用户可以选择在桌面窗口中运行这些应用，但其实它们的最初设计是用于运行全屏幕。 这些应用面向触摸设备，但如果用户爱好或触摸屏不可用，也可以使用鼠标进行操作。 从 Microsoft Store，因此导致它们被称为"应用商店"应用程序分发这些应用。
 
-UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动手机上和在桌面上运行。 在桌面上，它们能够作为桌面窗口运行而不始终运行全屏幕。 这些应用还可以在 Xbox 上以及在将来使用的设备上运行。  在 Windows 运行时，它提供了用户界面元素、 服务和接口的支持在 Windows 的各种硬件设备上运行 UWP 应用。  
+UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动手机上和在桌面上运行。 在桌面上，它们能够作为桌面窗口运行而不始终运行全屏幕。 这些应用还可以在 Xbox 上以及在将来使用的设备上运行。  在 Windows 运行时，它提供了用户界面元素、 服务和接口的支持在 Windows 的各种硬件设备上运行 UWP 应用。
 
 您可以编写 UWP 应用程序在 C + + /CX 中，一种方言的 c + +，可以使用[C + + WinRT 库](https://moderncpp.com/)在某些情况下。 UWP 应用编译为本机代码和具有 XAML 用户界面，或使用 DirectX。 编写本机代码中可以使用其他语言编写的 UWP 应用的 Windows 运行时组件。 有关详细信息，请参阅[在 c + + 中创建通用 Windows 平台应用](http://go.microsoft.com/fwlink/?LinkID=534976)，[在第一个 UWP 使用 DirectX 创建游戏](http://go.microsoft.com/fwlink/p/?LinkId=244656)，并[c + + 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkId=244658)。
 
@@ -84,7 +84,7 @@ DirectX 游戏可以在电脑或 Xbox 上运行。 有关详细信息，请参�
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、 库和标头文件
 
-Visual c + + 包含 C 运行时库 (CRT)、 c + + 标准库和其他特定于 Microsoft 的库。 包含这些库的标头文件的包含文件夹位于 \VC\ 文件夹下或在 CRT 中的 Windows SDK 安装文件夹的情况下的 Visual Studio 安装目录中。   
+Visual c + + 包含 C 运行时库 (CRT)、 c + + 标准库和其他特定于 Microsoft 的库。 包含这些库的标头文件的包含文件夹位于 \VC\ 文件夹下或在 CRT 中的 Windows SDK 安装文件夹的情况下的 Visual Studio 安装目录中。
 
 可以使用[Vcpkg 程序包管理器](../vcpkg.md)方便地安装用于 Windows 的数百个第三方开放源代码库。
 
@@ -100,7 +100,7 @@ Microsoft 库包括：
 
 许多 Windows 编程方案还需要 Windows SDK，Windows SDK 包括可以实现对 Windows 操作系统组件访问的标头文件。 默认情况下，Visual Studio 安装 Windows SDK 的 c + + 桌面工作负载，从而使开发通用 Windows 应用的组件。 若要开发 UWP 应用，需要 Windows SDK 的 Windows 10 版本。 有关信息，请参阅[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)。 (适用于 Windows 的早期版本的 Windows sdk 的详细信息，请参阅[Windows SDK 存档](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
 
-**程序文件 (x86) \Windows 工具包**是适用于所有版本的 Windows sdk 的已安装的默认位置。
+**程序文件 (x86) \Windows 工具包**是已安装的 Windows sdk 的所有版本的默认位置。
 
 其他平台（例如，Xbox 和 Azure）有自己 SDK，你可能需要安装这些 SDK。 有关详细信息，请参阅 DirectX 开发人员中心和 Azure 开发人员中心。
 

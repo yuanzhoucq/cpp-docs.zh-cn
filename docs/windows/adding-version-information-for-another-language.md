@@ -21,32 +21,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: db11dee47b51cf695a93489d4ab851be47c39144
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650451"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612653"
 ---
 # <a name="adding-version-information-for-another-language"></a>添加其他语言的版本信息
-### <a name="to-add-version-information-for-another-language-new-info-block"></a>添加其他语言的版本信息（新版本信息块）  
-  
-1.  通过在 [资源视图](../windows/resource-view-window.md)中双击鼠标打开版本信息资源。  
-  
-    > [!NOTE]
-    >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  在版本信息表中单击右键并在快捷菜单中选择“新建版本信息块”  。  
-  
-     此命令将其他信息块添加到当前版本信息资源，并在 [属性窗口](/visualstudio/ide/reference/properties-window)中打开其相应属性。  
-  
-3.  在“属性”  窗口中，为新块选择合适的语言和字符集。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>要求 
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [版本信息编辑器](../windows/version-information-editor.md)   
- [版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+### <a name="to-add-version-information-for-another-language-new-info-block"></a>添加其他语言的版本信息（新版本信息块）
+
+1. 通过在 [资源视图](../windows/resource-view-window.md)中双击鼠标打开版本信息资源。
+
+   > [!NOTE]
+   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 在版本信息表中单击右键并在快捷菜单中选择“新建版本信息块”  。
+
+   此命令将其他信息块添加到当前版本信息资源，并在 [属性窗口](/visualstudio/ide/reference/properties-window)中打开其相应属性。
+
+3. 在“属性”  窗口中，为新块选择合适的语言和字符集。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[版本信息编辑器](../windows/version-information-editor.md)  
+[版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

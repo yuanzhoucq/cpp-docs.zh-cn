@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593271"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid 方法
-指示是否当前**HandleT**对象表示的句柄。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>返回值  
- **true**如果**HandleT**表示的句柄; 否则为**false**。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+
+指示是否当前**HandleT**对象表示的句柄。
+
+## <a name="syntax"></a>语法
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>返回值
+
+**true**如果**HandleT**表示的句柄; 否则为**false**。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

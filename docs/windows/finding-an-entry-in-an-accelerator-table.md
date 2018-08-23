@@ -16,30 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0db79773412b204b0aa006e3402c51daa9dc928d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647848"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605252"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>在快捷键对应表中查找项
-### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在打开的快捷键对应表中查找项  
-  
-1.  通过双击中对应的图标打开快捷键对应表[资源视图](../windows/resource-view-window.md)。  
-  
-    > [!NOTE]
-    >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  单击列标题，按字母顺序对列内容进行排序。 例如，单击**ID**快捷键对应表中按字母顺序显示所有 Id。  
-  
- 然后，可以浏览列表并找到该项。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [编辑快捷键对应表](../windows/editing-accelerator-tables.md)   
- [快捷键编辑器](../windows/accelerator-editor.md)
+
+### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在打开的快捷键对应表中查找项
+
+1. 通过双击中对应的图标打开快捷键对应表[资源视图](../windows/resource-view-window.md)。
+
+   > [!NOTE]
+   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 单击列标题，按字母顺序对列内容进行排序。 例如，单击**ID**快捷键对应表中按字母顺序显示所有 Id。
+
+然后，可以浏览列表并找到该项。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[编辑快捷键对应表](../windows/editing-accelerator-tables.md)  
+[快捷键编辑器](../windows/accelerator-editor.md)

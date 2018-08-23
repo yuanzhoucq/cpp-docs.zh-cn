@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: agile 类 |Microsoft 文档'
+title: 'Platform:: agile 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092426"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596597"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 表示将 MashalingBehavior=Standard 作为敏捷对象（这可以大大降低出现运行时线程处理异常的机率）的对象。 `Agile<T>` 使非敏捷对象可以调用相同或不同线程调用，或是从相同或不同线程进行调用。 有关详细信息，请参阅[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)。  
@@ -139,7 +139,7 @@ Agile(Agile<T>&& object);
 ### <a name="return-value"></a>返回值  
  用当前敏捷对象表示的对象的句柄。  
   
- 返回值的类型实际是未公开的内部类型。 保留返回值一种简便方式是将它分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myAgileTvariable->Get();`。  
+ 返回值的类型实际是未公开的内部类型。 保存返回值的简便方法是将其分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myAgileTvariable->Get();`。  
   
 ## <a name="getaddressof"></a>  Agile:: getaddressof 方法
 重新初始化当前敏捷对象，然后返回类型为 `T`的对象的句柄地址。  
@@ -160,7 +160,7 @@ throw();
  类型的对象的句柄的地址`T`。  
   
 ### <a name="remarks"></a>备注  
- 此操作释放类型的对象的当前表示`T`，如果任何; 重新初始化敏捷对象的数据成员; 获取当前线程上下文中;，然后返回可以表示句柄到对象变量的地址非敏捷对象。 若要使敏捷类实例以代表一个对象，使用赋值运算符 ([agile:: operator =](#operator-assign)) 将对象分配给敏捷类实例。  
+ 此操作释放类型的对象的当前表示形式`T`，如果任何; 重新初始化敏捷对象的数据成员; 获取当前线程上下文;，然后返回可以表示的句柄到对象变量的地址非敏捷对象。 若要使敏捷类实例表示的对象，请使用赋值运算符 ([agile:: operator =](#operator-assign)) 将对象分配给敏捷类实例。  
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout 方法
 将句柄的地址返回到用当前敏捷对象表示的对象。  
@@ -211,7 +211,7 @@ const throw();
 ### <a name="return-value"></a>返回值  
  用当前敏捷对象表示的对象的句柄。  
   
- 此运算符实际返回未公开的内部类型。 保留返回值一种简便方式是将它分配给使用声明的变量**自动**类型推导关键字。  
+ 此运算符实际返回未公开的内部类型。 保存返回值的简便方法是将其分配给使用声明的变量**自动**类型推导关键字。  
 
 ## <a name="operator-assign"></a>  Agile:: operator = 运算符
 将指定对象分配给当前敏捷对象。  

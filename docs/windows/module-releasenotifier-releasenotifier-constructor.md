@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608464"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598783"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier 构造函数
-初始化的新实例**module:: releasenotifier**类。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-### <a name="parameters"></a>参数  
- *release*  
- **true**若要删除此实例时`Release`调用方法;**false**不删除此实例。  
-  
-## <a name="exceptions"></a>异常  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [Module::ReleaseNotifier 类](../windows/module-releasenotifier-class.md)
+
+初始化的新实例**module:: releasenotifier**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>参数
+
+*release*  
+**true**若要删除此实例时`Release`调用方法;**false**不删除此实例。
+
+## <a name="exceptions"></a>异常
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[Module::ReleaseNotifier 类](../windows/module-releasenotifier-class.md)

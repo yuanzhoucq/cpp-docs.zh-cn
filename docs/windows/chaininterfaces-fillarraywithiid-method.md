@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c795a3a80c48e7fa976807ab3e261fc927d7e104
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 09e0dc3b9caf059bb8ecdce0468dfc118ce9ebfa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644266"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594939"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid 方法
-通过定义的接口 ID 的存储*I0*到指定数组中的接口 Id 的指定位置的模板参数。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>参数  
- *index*  
- 为到索引值的指针*iid*数组。  
-  
- *iid*  
- 接口 Id 的数组。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [ChainInterfaces 结构](../windows/chaininterfaces-structure.md)
+
+通过定义的接口 ID 的存储*I0*到指定数组中的接口 Id 的指定位置的模板参数。
+
+## <a name="syntax"></a>语法
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>参数
+
+*index*  
+为到索引值的指针*iid*数组。
+
+*iid*  
+接口 Id 的数组。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[ChainInterfaces 结构](../windows/chaininterfaces-structure.md)

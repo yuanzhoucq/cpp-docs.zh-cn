@@ -18,88 +18,95 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018356"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613317"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-可以使用 Visual c + + 关键字用作标识符。  
-  
-## <a name="all-platforms"></a>所有平台  
-### <a name="syntax"></a>语法  
-  
-```cpp  
-__identifier(  
-Visual_C++_keyword  
+
+可以使用 Visual c + + 关键字用作标识符。
+
+## <a name="all-platforms"></a>所有平台
+
+### <a name="syntax"></a>语法
+
+```cpp
+__identifier(
+Visual_C++_keyword
 )  
-```  
-  
-### <a name="remarks"></a>备注  
-  
-利用 **__identifier**允许使用，但强烈建议不要使用作为一种样式的关键字不是关键字的标识符。  
-  
-## <a name="windows-runtime"></a>Windows 运行时  
-  
-### <a name="requirements"></a>要求  
- 编译器选项：`/ZW`  
-  
-### <a name="examples"></a>示例  
- **示例**  
-  
- 在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
-  
-```cs  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```cpp  
-// keyword__identifier.cpp  
-// compile with: /ZW  
-#using <identifier_template.dll>  
-int main() {  
-   __identifier(template)^ pTemplate = ref new __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="common-language-runtime"></a>公共语言运行时 
-### <a name="remarks"></a>备注  
-  
- **__Identifier**关键字是有效，且`/clr`编译器选项。  
-  
-### <a name="requirements"></a>要求  
- 编译器选项：`/clr`  
-  
-### <a name="examples"></a>示例  
-  
- 在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。  
-  
-```cs  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```cpp  
-// keyword__identifier.cpp  
-// compile with: /clr  
-#using <identifier_template.dll>  
-  
-int main() {  
-   __identifier(template) ^pTemplate = gcnew __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+```
+
+### <a name="remarks"></a>备注
+
+利用 **__identifier**允许使用，但强烈建议不要使用作为一种样式的关键字不是关键字的标识符。
+
+## <a name="windows-runtime"></a>Windows 运行时
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/ZW`
+
+### <a name="examples"></a>示例
+
+**示例**
+
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /ZW
+#using <identifier_template.dll>
+int main() {
+   __identifier(template)^ pTemplate = ref new __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="common-language-runtime"></a>公共语言运行时
+
+### <a name="remarks"></a>备注
+
+**__Identifier**关键字是有效，且`/clr`编译器选项。
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/clr`
+
+### <a name="examples"></a>示例
+
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /clr
+#using <identifier_template.dll>
+
+int main() {
+   __identifier(template) ^pTemplate = gcnew __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)  
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

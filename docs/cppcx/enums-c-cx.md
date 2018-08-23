@@ -1,28 +1,28 @@
 ---
-title: 枚举 (C + + /cli CX) |Microsoft 文档
+title: 枚举 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087376"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593959"
 ---
 # <a name="enums-ccx"></a>枚举 (C++/CX)
-C + + /cli CX 支持`public enum class`关键字，类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。  
+C + + /CX 支持`public enum class`关键字，它是类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。  
   
 ### <a name="remarks"></a>备注  
  没有访问说明符（如 `public enum class` ）的 `public`将作为标准 C++ [范围枚举](../cpp/enumerations-cpp.md)处理。  
   
- A`public enum class`或`public enum struct`声明可以有任何整数类型的基础类型，尽管 Windows 运行时本身要求类型是 int32 或者 uint32 对于标志枚举。 以下语法描述 `public enum class` 或 `public enum struct`的一部分。  
+ 一个`public enum class`或`public enum struct`声明可以具有任何整型类型的基础类型，尽管 Windows 运行时本身要求类型是 int32 或者 uint32 对于标志枚举。 以下语法描述 `public enum class` 或 `public enum struct`的一部分。  
   
  此示例演示如何定义公共枚举类：  
   

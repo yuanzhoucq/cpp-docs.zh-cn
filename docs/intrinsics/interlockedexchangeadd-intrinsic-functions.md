@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangeAdd 内部函数 |Microsoft 文档
+title: _InterlockedExchangeAdd 内部函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340549"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600887"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 内部函数
 **Microsoft 专用**  
   
- 提供的 Win32 编译器内部支持[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd 内部函数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函数。  
+ 提供编译器内部函数支持 Win32 Windows SDK [_InterlockedExchangeAdd 内部函数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |内部函数|体系结构|标头|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、 ARM、 x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>备注  
  `_InterlockedExchangeAdd` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。  
@@ -190,7 +190,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些函数，则忽略此提示。  
   
- 这些例程只能用作内部函数。 因此，它们都内部函数是否或不[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或[#pragma 内部](../preprocessor/intrinsic.md)使用。 不能使用[#pragma 函数](../preprocessor/function-c-cpp.md)对于这些内部函数。  
+ 这些例程只能用作内部函数。 因此，它们是内部函数是否还是不[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或[#pragma 内部](../preprocessor/intrinsic.md)使用。 不能使用[#pragma 函数](../preprocessor/function-c-cpp.md)这些内部函数。  
   
 ## <a name="example"></a>示例  
  有关如何使用的示例`_InterlockedExchangeAdd`，请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  

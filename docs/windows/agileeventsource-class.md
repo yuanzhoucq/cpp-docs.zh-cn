@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642833"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611027"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>参数  
- *TDelegateInterface*  
- 一个委托，表示一个事件处理程序接口。
+## <a name="parameters"></a>参数
 
- *TEventSourceOptions*  
- [InvokeModeOptions](invokemodeoptions-structure.md)结构其 invokeMode 字段设置为`InvokeMode::StopOnFirstError`或`InvokeMode::FireAll`。
+*TDelegateInterface*  
+一个委托，表示一个事件处理程序接口。
+
+*TEventSourceOptions*  
+[InvokeModeOptions](invokemodeoptions-structure.md)结构其 invokeMode 字段设置为`InvokeMode::StopOnFirstError`或`InvokeMode::FireAll`。
 
 ## <a name="remarks"></a>备注
 
@@ -49,13 +50,14 @@ class AgileEventSource
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>要求
 
- **标头：** event.h
+**标头：** event.h
 
- **命名空间：** Microsoft::WRL
+**命名空间：** Microsoft::WRL
 
 ## <a name="members"></a>成员
 
@@ -92,4 +94,5 @@ HRESULT Add(
 
 
 ## <a name="see-also"></a>请参阅
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

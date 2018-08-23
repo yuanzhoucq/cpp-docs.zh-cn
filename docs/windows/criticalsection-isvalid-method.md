@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e89d7aa8bd35af3fa78d773b84276d560101942
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 031575c7d8e6cc9b9b56cdd172e75c45f45ca606
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644812"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592058"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 方法
-指示当前的临界部分是否有效。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>返回值  
- 默认情况下始终返回 **，则返回 true**。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [CriticalSection 类](../windows/criticalsection-class.md)
+
+指示当前的临界部分是否有效。
+
+## <a name="syntax"></a>语法
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>返回值
+
+默认情况下始终返回 **，则返回 true**。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[CriticalSection 类](../windows/criticalsection-class.md)

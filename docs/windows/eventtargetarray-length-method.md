@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653100"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604031"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-size_t Length();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 当前的事件处理程序内部数组中的元素数。  
-  
-## <a name="remarks"></a>备注  
- 获取事件处理程序的内部数组中元素的当前数目。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [EventTargetArray 类](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+size_t Length();
+```
+
+## <a name="return-value"></a>返回值
+
+当前的事件处理程序内部数组中的元素数。
+
+## <a name="remarks"></a>备注
+
+获取事件处理程序的内部数组中元素的当前数目。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[EventTargetArray 类](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

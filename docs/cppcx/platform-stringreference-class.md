@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: stringreference 类 |Microsoft 文档'
+title: 'Platform:: stringreference 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097505"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609658"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 可以用于通过最少复制操作将字符串数据从 `Platform::String^` 输入参数传递到其他方法的优化类型。  
@@ -69,7 +69,7 @@ class StringReference
  **标头：** vccorlib.h  
 
 ## <a name="data"></a>  Stringreference:: Data 方法
-返回的此内容`StringReference`char16 值数组形式。  
+返回此内容`StringReference`char16 值数组形式。  
   
 ### <a name="syntax"></a>语法  
   
@@ -149,7 +149,7 @@ StringReference& operator=(const ::default::char16* __strArg);
  对类型为 `StringReference` 的对象的引用。  
   
 ### <a name="remarks"></a>备注  
- 因为`StringReference`是标准 c + + 类而不是 ref 类，未出现在**对象浏览器**。  
+ 因为`StringReference`是标准 c + + 类而不是 ref 类，它不会出现在**对象浏览器**。  
   
 
 
@@ -195,7 +195,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
  `__strArg` 中的元素数。  
   
 ### <a name="remarks"></a>备注  
- 此构造函数的第一个版本是默认构造函数。 第二个版本从 `StringReference` 参数指定的对象初始化新 `__fstrArg` 实例类。 第三个和第四个重载初始化新`StringReference`实例的 char16 值数组。 char16 表示 16 位 UNICODE 文本字符。  
+ 此构造函数的第一个版本是默认构造函数。 第二个版本从 `StringReference` 参数指定的对象初始化新 `__fstrArg` 实例类。 第三个和第四个重载初始化新`StringReference`的 char16 值数组中的实例。 char16 表示 16 位 UNICODE 文本字符。  
   
 
 

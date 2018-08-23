@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110016"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609344"
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
-演示如何使用各种特定于 Windows 的任务[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]。  
+演示如何使用 Windows SDK 的各种特定于 Windows 的任务。  
   
- 以下主题演示如何使用执行的各种 Windows 操作[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]使用 Visual c + +。  
+ 以下主题演示使用 Visual c + + 的 Windows sdk 执行的各种 Windows 操作。  
 
 ## <a name="determine_shutdown"></a> 确定关闭是否已启动
 下面的代码示例演示如何确定是否正要终止该应用程序或.NET Framework。 这可用于访问.NET Framework 中的静态元素，因为在关闭期间，这些构造系统完成，并且不能可靠地使用。 通过检查<xref:System.Environment.HasShutdownStarted%2A>属性前，无法访问这些元素可以避免潜在故障。  

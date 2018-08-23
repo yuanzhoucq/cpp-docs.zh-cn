@@ -19,46 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 95dbd8003f95ee0c0e809d9017ec5093b782ae99
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017037"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604656"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>查看 ActiveX 控件并将其添加到对话框
-Visual Studio 使你可以将 ActiveX 控件插入对话框中。  
-  
-### <a name="to-see-the-activex-controls-you-have-available"></a>查看你可使用的 ActiveX 控件  
-  
-1.  在对话框编辑器中打开一个对话框。  
-  
-2.  右键单击该对话框主体中的任何位置。  
-  
-3.  在快捷菜单上，单击“插入 ActiveX 控件” 。  
-  
-     [“插入 ActiveX 控件”对话框](../windows/insert-activex-control-dialog-box.md) 随即出现，其中显示你系统上的所有 ActiveX 控件。 在该对话框底部，会显示 ActiveX 控件文件的路径。  
-  
-### <a name="to-add-an-activex-control-to-a-dialog-box"></a>将 ActiveX 控件添加到对话框  
-  
-1.  在 [“插入 ActiveX 控件”对话框](../windows/insert-activex-control-dialog-box.md)中，选择要添加到对话框中的控件，然后单击“确定” 。  
-  
-     该控件会出现在对话框中，可以在其中编辑它或为它创建处理程序，就如同处理任何其他控件一样。  
-  
-    > [!NOTE]
-    >  可以将 ActiveX 控件添加到 [工具箱窗口](/visualstudio/ide/reference/toolbox)。 有关详细信息，请参阅[管理项目和工具箱中的选项卡](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。  
-  
-    > [!CAUTION]
-    >  分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了控件的软件的许可协议，或与软件公司联系。  
-  
-     可以放置在控件**工具箱**以方便访问的窗口。 有关详细信息，请参阅[自定义工具箱对话框](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [ActiveX 控件容器](../mfc/activex-control-containers.md)
+
+Visual Studio 使你可以将 ActiveX 控件插入对话框中。
+
+### <a name="to-see-the-activex-controls-you-have-available"></a>查看你可使用的 ActiveX 控件
+
+1. 在对话框编辑器中打开一个对话框。
+
+2. 右键单击该对话框主体中的任何位置。
+
+3. 在快捷菜单上，单击“插入 ActiveX 控件” 。
+
+   [“插入 ActiveX 控件”对话框](../windows/insert-activex-control-dialog-box.md) 随即出现，其中显示你系统上的所有 ActiveX 控件。 在该对话框底部，会显示 ActiveX 控件文件的路径。
+
+### <a name="to-add-an-activex-control-to-a-dialog-box"></a>将 ActiveX 控件添加到对话框
+
+1. 在 [“插入 ActiveX 控件”对话框](../windows/insert-activex-control-dialog-box.md)中，选择要添加到对话框中的控件，然后单击“确定” 。
+
+   该控件会出现在对话框中，可以在其中编辑它或为它创建处理程序，就如同处理任何其他控件一样。
+
+   > [!NOTE]
+   > 可以将 ActiveX 控件添加到 [工具箱窗口](/visualstudio/ide/reference/toolbox)。 有关详细信息，请参阅[管理项目和工具箱中的选项卡](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。
+
+   > [!CAUTION]
+   > 分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了控件的软件的许可协议，或与软件公司联系。
+
+   可以放置在控件**工具箱**以方便访问的窗口。 有关详细信息，请参阅[自定义工具箱对话框](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)  
+[ActiveX 控件容器](../mfc/activex-control-containers.md)

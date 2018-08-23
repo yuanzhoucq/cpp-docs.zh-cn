@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 306359c1479c8c67d6edc08414f601a4b560496e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2ec71759deabfa1b5ff7337befa85bdd9c492ae9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648098"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607496"
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>编辑版本信息资源中的字符串
-### <a name="to-edit-a-string-in-a-version-information-resource"></a>编辑版本信息资源中的字符串  
-  
-1.  单击相应项目一次以选择它，然后再次开始编辑它。 使所做的更改直接在**版本信息**表中或在[属性窗口](/visualstudio/ide/reference/properties-window)。 进行的更改会在这两个位置得到反映。  
-  
-     > [!NOTE] 
-     > 编辑时`FILEFLAGS`中的键**版本信息**编辑器中，您会注意到，不能设置**调试**， **Private Build**，或**特殊构建**属性 (在**属性**窗口) 为.rc 文件：  
-  
-    -   **版本信息**编辑器集**调试**具有属性`#ifdef`在资源脚本中，基于`_DEBUG`生成标志。  
-  
-    -   如果`Private Build`密钥都有**值**中设置**版本信息**表中，相应**Private Build**属性 (在**属性**窗口) 的`FILEFLAGS`键将为**True**。 如果 **Value** 为空，则该属性为 **False**。 同样， **Special Build**密钥 (在**版本信息**表) 绑定到**Special Build**属性`FILEFLAGS`密钥。  
-  
- 可以通过单击键或值列标题来对字符串块的信息序列进行排序。 这些标题会自动将信息重新排列为所选顺序。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [版本信息编辑器](../windows/version-information-editor.md)   
- [版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>编辑版本信息资源中的字符串
+
+1. 单击相应项目一次以选择它，然后再次开始编辑它。 使所做的更改直接在**版本信息**表中或在[属性窗口](/visualstudio/ide/reference/properties-window)。 进行的更改会在这两个位置得到反映。
+
+   > [!NOTE] 
+   > 编辑时`FILEFLAGS`中的键**版本信息**编辑器中，您会注意到，不能设置**调试**， **Private Build**，或**特殊构建**属性 (在**属性**窗口) 为.rc 文件：
+
+   - **版本信息**编辑器集**调试**具有属性`#ifdef`在资源脚本中，基于`_DEBUG`生成标志。
+
+   - 如果`Private Build`密钥都有**值**中设置**版本信息**表中，相应**Private Build**属性 (在**属性**窗口) 的`FILEFLAGS`键将为**True**。 如果 **Value** 为空，则该属性为 **False**。 同样， **Special Build**密钥 (在**版本信息**表) 绑定到**Special Build**属性`FILEFLAGS`密钥。
+
+可以通过单击键或值列标题来对字符串块的信息序列进行排序。 这些标题会自动将信息重新排列为所选顺序。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[版本信息编辑器](../windows/version-information-editor.md)  
+[版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

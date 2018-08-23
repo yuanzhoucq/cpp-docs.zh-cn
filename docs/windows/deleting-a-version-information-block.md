@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596742"
 ---
 # <a name="deleting-a-version-information-block"></a>删除版本信息块
-### <a name="to-delete-a-version-information-block"></a>删除版本信息块  
-  
-1.  通过在 [资源视图](../windows/resource-view-window.md)中双击图标来打开版本信息资源。  
-  
-    > [!NOTE]
-    >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  右键单击想要删除的块标头，然后从快捷菜单中选择“删除版本信息块”  。  
-  
-     此命令会删除所选标头，并使其余的版本信息保持不变。 请注意此操作不能撤消。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。  
-  
+
+### <a name="to-delete-a-version-information-block"></a>删除版本信息块
+
+1. 通过在 [资源视图](../windows/resource-view-window.md)中双击图标来打开版本信息资源。
+
+   > [!NOTE]
+   > 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 右键单击想要删除的块标头，然后从快捷菜单中选择“删除版本信息块”  。
+
+   此命令会删除所选标头，并使其余的版本信息保持不变。 请注意此操作不能撤消。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
 ## <a name="requirements"></a>要求
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [版本信息编辑器](../windows/version-information-editor.md)   
- [版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[版本信息编辑器](../windows/version-information-editor.md)  
+[版本信息 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67a8bf626d2e3f26a2f182f2e1f099f14d29b779
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b8f00619e716ae0b906714691c652a6854eb8754
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013335"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606724"
 ---
 # <a name="hstringget-method"></a>HString::Get 方法
-检索基础 HSTRING 句柄的值。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+检索基础 HSTRING 句柄的值。
+
+## <a name="syntax"></a>语法
+
+```cpp
 HSTRING Get() const throw()  
-```  
-  
-## <a name="return-value"></a>返回值  
- 基础 HSTRING 句柄的值  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HString 类](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>返回值
+
+基础 HSTRING 句柄的值
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HString 类](../windows/hstring-class.md)

@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d63b90bb3622129589fca41c029f548a07ec21b8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017651"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591857"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module 构造函数
-初始化的新实例**模块**类。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-Module();  
-```  
-  
-## <a name="remarks"></a>备注  
- 此构造函数受到保护，不能调用带有**新**关键字。 请调用[module:: getmodule 方法](../windows/module-getmodule-method.md)或[module:: create 方法](../windows/module-create-method.md)。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [Module 类](../windows/module-class.md)
+
+初始化的新实例**模块**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+Module();
+```
+
+## <a name="remarks"></a>备注
+
+此构造函数受到保护，不能调用带有**新**关键字。 请调用[module:: getmodule 方法](../windows/module-getmodule-method.md)或[module:: create 方法](../windows/module-create-method.md)。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[Module 类](../windows/module-class.md)

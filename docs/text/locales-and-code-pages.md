@@ -1,5 +1,5 @@
 ---
-title: 区域设置和代码页 |Microsoft 文档
+title: 区域设置和代码页 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,35 +21,35 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9952f0bf27202c468e38ff3fb6aa701a0d6f9163
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858141"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594834"
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
-将区域设置 ID 反映本地的约定和语言特定的地理区域。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两个不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。  
+区域设置 ID 反映了本地约定和特定地理区域的语言。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两种不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。  
   
- 语言确定文本和数据的格式约定，而国家/地区则确定本地约定。 每种语言具有的唯一映射，表示由代码页，其中包括之外 （如标点符号和数字） 字母表中的字符。 一个代码页是一个字符集，并且与语言相关。 在这种情况下，[区域设置](../c-runtime-library/locale.md)就成为语言、 国家/地区和代码页的唯一组合。 通过调用，可在运行时更改区域设置和代码页设置[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函数。  
+ 语言确定文本和数据的格式约定，而国家/地区则确定本地约定。 每种语言具有唯一的映射，由代码页，其中包括在字母表中 （例如标点符号和数字） 字符。 代码页是一个字符集和与语言相关。 在这种情况下，[区域设置](../c-runtime-library/locale.md)是唯一的语言、 国家/地区和代码页。 通过调用，可在运行时更改区域设置和代码页设置[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函数。  
   
- 不同语言可能使用不同的代码页。 例如，ANSI 代码页 1252年适用于英语和大多数欧洲语言，并且 ANSI 代码页 932 适用于日本汉字。 几乎所有的代码页共享 ASCII 字符集为最低 128 个字符 (0x00 到 0x7F)。  
+ 不同的语言可能使用不同的代码页。 例如，适用于英语和大多数欧洲语言中，使用 ANSI 代码页 1252年和适用于日本汉字使用 ANSI 代码页 932。 几乎所有代码页都共享 ASCII 字符集的最小 128 个字符 (0x00 到 0x7F)。  
   
- 任何单字节代码页可以用来表示 （具有 256 项） 的表到字符 （包括数字和标点符号） 或标志符号的字节值的映射。 任何多字节代码页，也可以表示为一个非常大表 （64k) 的双字节字符的值。 在实践中，但是，它通常表示作为表以获取前 256 个 （单字节） 字符和双字节值的范围。  
+ 可以在表 （带 256 条目） 中表示任何单字节代码页，为到字符 （包括数字和标点符号） 或标志符号的字节值的映射。 也可以作为双字节值与字符的非常大 （有 64k 项） 表表示任何多字节代码页。 在实践中，但是，它通常表示作为表的前 256 个 （单字节） 字符和双字节值的范围。  
   
  有关代码页的详细信息，请参见 [Code Pages](../c-runtime-library/code-pages.md)。  
   
- C 运行时库有两种类型的内部代码页： 区域设置和多字节。 你可以在程序执行期间更改的当前代码页 (请参阅的文档[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)函数)。 此外，运行时库可能获取并使用操作系统代码页，可为程序的执行持续时间内的常数的值。  
+ C 运行时库有两种类型的内部代码页： 区域设置和多字节。 可以在程序执行期间更改当前代码页 (请参阅的文档[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)并[_setmbcp](../c-runtime-library/reference/setmbcp.md)函数)。 此外，运行时库可能会获取和使用的操作系统代码页上，该程序的执行持续时间是常量值。  
   
- 区域设置代码页更改时，区域设置相关的更改集的函数为由选定的代码页的行为。 默认情况下，所有依赖于区域设置函数开始执行与唯一的"C"区域设置的区域设置代码页。 你可以更改内部的区域设置代码页 （以及其他区域设置特定的属性） 通过调用`setlocale`函数。 调用`setlocale`(LC_ALL，"") 区域设置设定为，指示由操作系统用户区域设置。  
+ 区域设置代码页发生更改时，函数更改为由所选的代码页的区域设置相关集的行为。 默认情况下，所有依赖于区域设置的函数开始执行使用唯一的"C"区域设置的区域设置代码页。 可以通过调用更改内部的区域设置代码页 （以及其他特定于区域设置的属性）`setlocale`函数。 调用`setlocale`(LC_ALL，"") 将区域设置设置为指示的操作系统用户区域设置。  
   
- 同样，更改多字节代码页时，多字节函数更改为由选定的代码页的行为。 默认情况下，所有的多字节函数使用对应于操作系统的默认代码页多字节代码页开始执行。 你可以通过调用来更改内部的多字节代码页`_setmbcp`函数。  
+ 同样，多字节代码页发生更改时，为由所选的代码页的多字节函数更改的行为。 默认情况下，多字节的所有函数都开始执行过程与为操作系统的默认代码页对应的多字节代码页。 可以通过调用更改内部的多字节代码页`_setmbcp`函数。  
   
- C 运行时函数`setlocale`设置、 更改或查询部分或全部当前程序区域设置信息。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)例程是宽字符版本的`setlocale`; 的自变量和返回值`_wsetlocale`是宽字符字符串。  
+ C 运行时函数`setlocale`设置、 更改或查询部分或全部当前程序区域设置信息。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)例程是宽字符版本`setlocale`; 的参数和返回值`_wsetlocale`都是宽字符字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   

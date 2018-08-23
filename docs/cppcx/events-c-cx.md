@@ -1,26 +1,26 @@
 ---
-title: 事件 (C + + /cli CX) |Microsoft 文档
+title: 事件 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089633"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606371"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
-Windows 运行时类型可声明 （即，发布） 事件，并在同一组件或其他组件的客户端代码可以订阅这些事件通过将调用的方法相关联*事件处理程序*与事件。 一个事件可以有多个事件处理程序与之关联。 当发布对象引发事件时，将调用所有事件处理程序。 这样，订阅类可在发布者引发事件时执行任何适当的自定义操作。 属于委托类型的事件可指定在所有事件处理程序订阅事件时所需的签名。  
+Windows 运行时类型可声明 （即，发布） 事件和客户端代码在同一组件或其他组件可以订阅这些事件通过将调用的方法相关联*事件处理程序*与该事件。 一个事件可以有多个事件处理程序与之关联。 当发布对象引发事件时，将调用所有事件处理程序。 这样，订阅类可在发布者引发事件时执行任何适当的自定义操作。 属于委托类型的事件可指定在所有事件处理程序订阅事件时所需的签名。  
   
 ## <a name="consuming-events-in-windows-components"></a>使用 Windows 组件中的事件  
- Windows 运行时中的许多组件公开了事件。 例如，当传感器报告新的发光值时，LightSensor 对象触发 ReadingChanged 事件。 在程序中使用 LightSensor 对象时，可定义一个在激发 ReadingChanged 事件时调用的方法。 该方法可执行任何你想要执行的操作;唯一要求是其签名必须与匹配的是有关如何创建委托事件处理程序和订阅事件，请参阅详细信息的委托签名[委托](../cppcx/delegates-c-cx.md)。  
+ Windows 运行时中的许多组件公开的事件。 例如，当传感器报告新的发光值时，LightSensor 对象触发 ReadingChanged 事件。 在程序中使用 LightSensor 对象时，可定义一个在激发 ReadingChanged 事件时调用的方法。 该方法可以执行任何您想要执行的操作;唯一要求是其签名必须与匹配的是有关如何创建委托事件处理程序并订阅事件，请参阅详细信息的委托签名[委托](../cppcx/delegates-c-cx.md)。  
   
 ## <a name="creating-custom-events"></a>创建自定义事件  
   

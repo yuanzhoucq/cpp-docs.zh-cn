@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010381"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608675"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
 MBCS 启用的 Windows 版本上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 时，MBCS 启用的除了内存窗口。  
@@ -53,7 +53,7 @@ MBCS 启用的 Windows 版本上运行，Visual c + + 开发系统 （包括集�
   
  IME，激活的 ALT +\`组合键，将显示为一系列按钮 （指标） 和转换窗口。 应用程序定位文本插入点处的窗口。 应用程序必须处理`WM_MOVE`和`WM_SIZE`通过重新定位转换窗口的消息，以符合新位置或目标窗口的大小。  
   
- 如果你希望用户的应用程序输入日文汉字字符的功能，该应用程序必须处理 Windows IME 消息。 有关输入法进行编程的详细信息，请参阅[输入法编辑器](https://msdn.microsoft.com/library/ms776145.aspx)。  
+ 如果你希望用户的应用程序输入日文汉字字符的功能，该应用程序必须处理 Windows IME 消息。 有关输入法进行编程的详细信息，请参阅[输入法编辑器](/previous-versions/windows/desktop/ms776145\(v=vs.85\))。  
   
 ## <a name="visual-c-debugger"></a>Visual c + + 调试器  
  Visual c + + 调试器提供 IME 消息上设置断点的能力。 此外，内存窗口可以显示双字节字符。  

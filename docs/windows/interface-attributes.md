@@ -1,5 +1,5 @@
 ---
-title: 接口特性 |Microsoft 文档
+title: 接口特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c61aeb0dcf3a9e0e001f89b9872b43b0af092b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880200"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593318"
 ---
 # <a name="interface-attributes"></a>接口特性
-下列属性适用于[接口 （或 __interface）](../cpp/interface.md) c + + 关键字。  
-  
-|特性|描述|  
-|---------------|-----------------|  
-|[async_uuid](../windows/async-uuid.md)|指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。|  
-|[custom](../windows/custom-cpp.md)|你可以定义你自己的特性。|  
-|[dispinterface](../windows/dispinterface.md)|将一个接口作为调度接口置于 .idl 文件中。|  
-|[dual](../windows/dual.md)|将接口置于.idl 文件中作为双重接口。|  
-|[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
-|[helpcontext](../windows/helpcontext.md)|指定允许用户查看有关此帮助文件中的元素信息的上下文 ID。|  
-|[helpfile](../windows/helpfile.md)|设置类型库的帮助文件的名称。|  
-|[helpstring](../windows/helpstring.md)|指定用于描述应用于元素的字符字符串。|  
-|[helpstringcontext](../windows/helpstringcontext.md)|.Hlp 或.chm 文件中指定的帮助主题的 ID。|  
-|[helpstringdll](../windows/helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） 的 dll 的名称。|  
-|[hidden](../windows/hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|  
-|[library_block](../windows/library-block.md)|将.idl 文件的库块中的构造。|  
-|[local](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
-|[nonextensible](../windows/nonextensible.md)|指定`IDispatch`实现仅包括的属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。 此属性才有效上[双重](../windows/dual.md)接口。|  
-|[odl](../windows/odl.md)|标识为对象描述语言 (ODL) 接口的接口。|  
-|[object](../windows/object-cpp.md)|标识的自定义的接口。|  
-|[oleautomation](../windows/oleautomation.md)|指示接口是与自动化兼容。|  
-|[pointer_default](../windows/pointer-default.md)|参数列表中指定除顶级指针显示的所有指针的指针默认属性。|  
-|[ptr](../windows/ptr.md)|将一个指针指定为完整的指针。|  
-|[restricted](../windows/restricted.md)|指定库中的哪些成员不能任意调用。|  
-|[uuid](../windows/uuid-cpp-attributes.md)|提供的库的唯一 ID|  
-  
- 你必须遵循这些规则的定义的接口：  
-  
--   默认调用约定是[__stdcall](../cpp/stdcall.md)。  
-  
--   如果未提供一个，将为你提供一个 GUID。  
-  
--   允许使用没有重载的方法。  
-  
- 未指定时[uuid](../windows/uuid-cpp-attributes.md)属性，并在不同的属性项目中使用相同的接口名称，将生成相同的 GUID。  
-  
-## <a name="see-also"></a>请参阅  
- [按用法分的特性](../windows/attributes-by-usage.md)
+
+以下属性应用于[接口 （或 __interface）](../cpp/interface.md) c + + 关键字。
+
+|特性|描述|
+|---------------|-----------------|
+|[async_uuid](../windows/async-uuid.md)|指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。|
+|[custom](../windows/custom-cpp.md)|可以定义自己的属性。|
+|[dispinterface](../windows/dispinterface.md)|将一个接口作为调度接口置于 .idl 文件中。|
+|[dual](../windows/dual.md)|双重接口.idl 文件中放置一个接口。|
+|[export](../windows/export.md)|导致要放置在.idl 文件中的数据结构。|
+|[helpcontext](../windows/helpcontext.md)|指定允许用户查看有关此帮助文件中的元素的信息的上下文 ID。|
+|[helpfile](../windows/helpfile.md)|设置类型库的帮助文件的名称。|
+|[helpstring](../windows/helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
+|[helpstringcontext](../windows/helpstringcontext.md)|在.hlp 或.chm 文件中指定的帮助主题的 ID。|
+|[helpstringdll](../windows/helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） DLL 的名称。|
+|[hidden](../windows/hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
+|[library_block](../windows/library-block.md)|将放置在.idl 文件的库块中的构造。|
+|[local](../windows/local-cpp.md)|可以使用 MIDL 编译器为标头生成器界面标头中使用时。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。|
+|[nonextensible](../windows/nonextensible.md)|指定`IDispatch`实现仅包括属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。 此属性才有效上[双](../windows/dual.md)接口。|
+|[odl](../windows/odl.md)|标识为对象描述语言 (ODL) 接口的接口。|
+|[object](../windows/object-cpp.md)|标识的自定义的接口。|
+|[oleautomation](../windows/oleautomation.md)|指示接口使用自动化兼容。|
+|[pointer_default](../windows/pointer-default.md)|在参数列表中指定除顶级指针显示的所有指针的默认指针特性。|
+|[ptr](../windows/ptr.md)|将一个指针，指定为完整的指针。|
+|[restricted](../windows/restricted.md)|指定库中的哪些成员不能任意调用。|
+|[uuid](../windows/uuid-cpp-attributes.md)|提供的库的唯一 ID|
+
+您必须遵守这些规则用于定义一个接口：
+
+- 默认调用约定是[__stdcall](../cpp/stdcall.md)。
+
+- 如果未提供一个将为您提供一个 GUID。
+
+- 不允许使用任何重载的方法。
+
+未指定时[uuid](../windows/uuid-cpp-attributes.md)属性，并在不同的属性项目中使用相同的接口名称，就会生成相同的 GUID。
+
+## <a name="see-also"></a>请参阅
+
+[按用法分的特性](../windows/attributes-by-usage.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::Details::Heap 类 |Microsoft 文档
+title: Platform::Details::Heap 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::Heap Class
 ms.assetid: d6dcf9c0-8036-433f-9eb8-c53ec49b0993
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980583cb480ccc674e0606fa44c4399539e56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9bd4238f9e89a6d9c11f402aa0af2fa6f2418bd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088240"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591708"
 ---
 # <a name="platformdetailsheap-class"></a>Platform::Details::Heap 类
 此类仅供内部使用，不用于开发。  

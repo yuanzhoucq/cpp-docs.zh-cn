@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610048"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -34,7 +34,7 @@ ms.locfileid: "40015619"
  这些安全功能内置于 Visual C++ 编译器和链接器中：  
   
  [/guard（启用控制流保护）](../build/reference/guard-enable-control-flow-guard.md)  
- 使编译器在编译时为间接调用目标分析控制流，然后插入代码，以验证运行时的目标。  
+ 使编译器在编译时，分析为间接调用目标的控制流，然后插入代码以在运行时验证目标。  
   
  [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)  
  指示编译器将溢出检测代码插入到面临被利用风险的函数中。 检测到溢出时，则停止执行。 默认情况下，此选项处于启用状态。  

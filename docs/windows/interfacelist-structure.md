@@ -17,52 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 318738e5f4ac623987b1002e5204739407adcdb9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 61a8e7b36448a485705b914fbb37892271d7d9fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017752"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597161"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 结构
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template <  
-   typename T,  
-   typename U  
->  
-struct InterfaceList;  
-```  
-  
-### <a name="parameters"></a>参数  
- *T*  
- 接口名称;递归列表中的第一个接口。  
-  
- *U*  
- 接口名称;其余的接口中的递归列表。  
-  
-## <a name="remarks"></a>备注  
- 用于创建接口的递归列表。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-typedefs"></a>公共 Typedef  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`FirstT`|模板参数的同义词*T*。|  
-|`RestT`|模板参数的同义词*U*。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `InterfaceList`  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   typename T,
+   typename U
+>
+struct InterfaceList;
+```
+
+### <a name="parameters"></a>参数
+
+*T*  
+接口名称;递归列表中的第一个接口。
+
+*U*  
+接口名称;其余的接口中的递归列表。
+
+## <a name="remarks"></a>备注
+
+用于创建接口的递归列表。
+
+## <a name="members"></a>成员
+
+### <a name="public-typedefs"></a>公共 Typedef
+
+|名称|描述|
+|----------|-----------------|
+|`FirstT`|模板参数的同义词*T*。|
+|`RestT`|模板参数的同义词*U*。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`InterfaceList`
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

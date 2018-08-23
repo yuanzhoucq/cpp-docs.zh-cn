@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c714f37a53e111c90333352610fd73532ac86fe7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015126"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599827"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel 方法
 
@@ -37,6 +37,7 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>参数
+
 *trustLvl*  
 此操作完成后，当前的信任级别**RuntimeClass**对象。
 
@@ -55,4 +56,5 @@ STDMETHOD(GetTrustLevel)(
 **命名空间：** Microsoft::WRL
 
 ## <a name="see-also"></a>请参阅
- [RuntimeClass 类](../windows/runtimeclass-class.md)
+
+[RuntimeClass 类](../windows/runtimeclass-class.md)

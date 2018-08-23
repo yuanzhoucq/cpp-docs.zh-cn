@@ -1,44 +1,44 @@
 ---
-title: 异常 (C + + /cli CX) |Microsoft 文档
+title: 异常 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82f54a365208c247e735e467157dfd29f9f271a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613404"
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
-错误处理在 C + + /cli CX 基于异常。 在最基本级别，Windows 运行时组件将错误报告为 HRESULT 值。 在 C + + /CX 中，这些值将转换为包含 HRESULT 值和可以通过编程方式访问的字符串说明的强类型异常。  异常作为从 `ref class` 派生的 `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 您还可以检查可帮助确定根源异常，即使用 c + + 之外的语言编写的代码中产生从调试器中的用户代码的调用堆栈信息。
+错误处理中 C + + /cli CX 基于异常。 在最基本的级别，Windows 运行时组件将错误报告为 HRESULT 值。 在 C + + /CX 中，这些值转换为包含 HRESULT 值和可以以编程方式访问的字符串说明的强类型异常。  异常作为从 `ref class` 派生的 `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 您还可以检查可帮助查明的原始源的异常，即使在已用非 c + + 语言编写的代码中产生在调试器中的用户代码的调用堆栈信息。
 
 ## <a name="exceptions"></a>异常
 
-在 c + + 程序中，你可以引发和捕获来自 Windows 运行时操作的异常、 派生自的异常`std::exception`，或用户定义的类型。 你必须仅在将跨越应用程序二进制接口 (ABI) 边界，例如，当捕获你异常的代码用 JavaScript 编写的时引发 Windows 运行时异常。 当非-Windows 运行时 c + + 异常到达 ABI 边界时，将异常转换为`Platform::FailureException`异常，后者表示 E_FAIL HRESULT。 有关 ABI 的详细信息，请参阅[创建 Windows 运行时 c + + 组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在 c + + 程序中，您可以引发和捕获来自 Windows 运行时操作的异常，异常派生自`std::exception`，或用户定义的类型。 必须仅当将跨越应用程序二进制接口 (ABI) 边界，例如，当以 JavaScript 编写的代码捕获你的异常时引发的 Windows 运行时异常。 当非-Windows 运行时 c + + 异常到达 ABI 边界时，将异常转换为`Platform::FailureException`异常，后者表示 E_FAIL HRESULT。 有关 ABI 的详细信息，请参阅[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-你可以声明[platform:: exception](platform-exception-class.md)通过两个构造函数采用 HRESULT 参数或者 HRESULT 参数和一个[platform:: string](platform-string-class.md)^ 可以跨传递的参数ABI 到对其进行处理的任意 Windows 运行时应用。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
+可以声明[platform:: exception](platform-exception-class.md)通过两个构造函数采用 HRESULT 参数或者 HRESULT 参数和一个[platform:: string](platform-string-class.md)^ 可跨传递的参数对其进行处理的任何 Windows 运行时应用的 ABI。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
 
 ## <a name="standard-exceptions"></a>标准异常
 
-C + + /cli CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异常从 [Platform::COMException](platform-comexception-class.md)派生，而 Platform::COMException 从 `Platform::Exception`派生。 当跨 ABI 边界引发异常时，必须引发一个标准异常。
+C + + /CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异常从 [Platform::COMException](platform-comexception-class.md)派生，而 Platform::COMException 从 `Platform::Exception`派生。 当跨 ABI 边界引发异常时，必须引发一个标准异常。
 
 不能从 `Platform::Exception`派生您自己的异常类型。 若要引发自定义异常，请使用用户定义的 HRESULT 构造 `COMException` 对象。
 
 下表列出了标准异常。
 
-|名称|基础 HRESULT|描述|
+|name|基础 HRESULT|描述|
 |----------|------------------------|-----------------|
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|
 |AccessDeniedException|E\_ACCESSDENIED|被拒绝访问资源或功能时引发。|
-|ChangedStateException|E\_CHANGED\_状态|在父集合更改后调用集合迭代器或集合视图的方法时引发，从而使方法的结果无效。|
+|ChangedStateException|电子\_CHANGED\_状态|在父集合更改后调用集合迭代器或集合视图的方法时引发，从而使方法的结果无效。|
 |ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|当 COM 类尚未注册时引发。|
 |DisconnectedException|RPC\_E\_已断开连接|当对象与其客户端的连接断开时引发。|
 |FailureException|E\_失败|操作失败时引发。|
@@ -58,7 +58,7 @@ C + + /cli CX 支持一组表示典型 HRESULT 错误的标准异常。 每个�
 
 ### <a name="examples"></a>示例
 
-此示例演示如何引发 Windows 运行时异常为同步操作：
+此示例演示如何引发同步操作的 Windows 运行时异常：
 
 [!code-cpp[cx_exceptions#01](codesnippet/CPP/exceptiontest/class1.cpp#01)]
 
@@ -70,7 +70,7 @@ C + + /cli CX 支持一组表示典型 HRESULT 错误的标准异常。 每个�
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 情况下，你可以订阅到[:: unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，到达此处理程序作为[Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror)随与事件参数传递的对象。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
+在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，到达此处理程序作为[Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror)传递事件参数对象。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
 
 在 app.xaml.h:
 

@@ -17,90 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5d4380109c7eb858c2b0eaeeb9156e4003fc581
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012084"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600523"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template <  
-   typename T0,  
-   typename T1 = Nil,  
-   typename T2 = Nil,  
-   typename T3 = Nil,  
-   typename T4 = Nil,  
-   typename T5 = Nil,  
-   typename T6 = Nil,  
-   typename T7 = Nil,  
-   typename T8 = Nil,  
-   typename T9 = Nil  
->  
-struct InterfaceListHelper;  
-  
-template <  
-   typename T0  
->  
-struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
-```  
-  
-### <a name="parameters"></a>参数  
- *T0*  
- 模板参数 0，这是必需的。  
-  
- T1  
- 模板参数 1，即默认情况下未指定。  
-  
- T2  
- 模板参数 2，即默认情况下未指定。第三个模板参数。  
-  
- *T3*  
- 模板参数 3，即默认情况下未指定。  
-  
- *T4*  
- 模板参数 4，即默认情况下未指定。  
-  
- *T5*  
- 模板参数 5，即默认情况下未指定。  
-  
- *T6*  
- 模板参数，6，即默认情况下未指定。  
-  
- *T7*  
- 模板参数，7，即默认情况下未指定。  
-  
- *T8*  
- 模板参数，8，即默认情况下未指定。  
-  
- *T9*  
- 模板参数，9，即默认情况下未指定。  
-  
-## <a name="remarks"></a>备注  
- 生成`InterfaceList`通过以递归方式应用指定的模板参数自变量的类型。  
-  
- **InterfaceListHelper**模板使用模板参数*T0*定义中的第一个数据成员`InterfaceList`结构，然后以递归方式应用**InterfaceListHelper**任何剩余的模板参数的模板。 **InterfaceListHelper**没有剩余的模板参数时，会停止。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-typedefs"></a>公共 Typedef  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`TypeT`|InterfaceList 类型的同义词。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `InterfaceListHelper`  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   typename T0,
+   typename T1 = Nil,
+   typename T2 = Nil,
+   typename T3 = Nil,
+   typename T4 = Nil,
+   typename T5 = Nil,
+   typename T6 = Nil,
+   typename T7 = Nil,
+   typename T8 = Nil,
+   typename T9 = Nil
+>
+struct InterfaceListHelper;
+
+template <
+   typename T0
+>
+struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
+```
+
+### <a name="parameters"></a>参数
+
+*T0*  
+模板参数 0，这是必需的。
+
+T1  
+模板参数 1，即默认情况下未指定。
+
+T2  
+模板参数 2，即默认情况下未指定。第三个模板参数。
+
+*T3*  
+模板参数 3，即默认情况下未指定。
+
+*T4*  
+模板参数 4，即默认情况下未指定。
+
+*T5*  
+模板参数 5，即默认情况下未指定。
+
+*T6*  
+模板参数，6，即默认情况下未指定。
+
+*T7*  
+模板参数，7，即默认情况下未指定。
+
+*T8*  
+模板参数，8，即默认情况下未指定。
+
+*T9*  
+模板参数，9，即默认情况下未指定。
+
+## <a name="remarks"></a>备注
+
+生成`InterfaceList`通过以递归方式应用指定的模板参数自变量的类型。
+
+**InterfaceListHelper**模板使用模板参数*T0*定义中的第一个数据成员`InterfaceList`结构，然后以递归方式应用**InterfaceListHelper**任何剩余的模板参数的模板。 **InterfaceListHelper**没有剩余的模板参数时，会停止。
+
+## <a name="members"></a>成员
+
+### <a name="public-typedefs"></a>公共 Typedef
+
+|名称|描述|
+|----------|-----------------|
+|`TypeT`|InterfaceList 类型的同义词。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`InterfaceListHelper`
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

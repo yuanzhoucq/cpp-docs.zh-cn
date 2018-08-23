@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abc30204969464323d4995310cee0866139734fc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 84db0a82dfe6f9333f6a533aa9bc2bb529854fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593407"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach 方法
-取消关联这**ComPtr**从它所代表的接口的对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-T* Detach();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 指向表示此接口的指针**ComPtr**对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** client.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [ComPtr 类](../windows/comptr-class.md)
+
+取消关联这**ComPtr**从它所代表的接口的对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+T* Detach();
+```
+
+## <a name="return-value"></a>返回值
+
+指向表示此接口的指针**ComPtr**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** client.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[ComPtr 类](../windows/comptr-class.md)

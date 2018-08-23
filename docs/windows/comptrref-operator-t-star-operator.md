@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 472cdaeec78c30d49f3160ac4d632eb95ef8e71a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641868"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595414"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* 运算符
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>备注  
- 返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员的当前**ComPtrRef**对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [ComPtrRef 类](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>备注
+
+返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员的当前**ComPtrRef**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ComPtrRef 类](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

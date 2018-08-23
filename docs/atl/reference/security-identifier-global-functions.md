@@ -1,5 +1,5 @@
 ---
-title: 安全标识符全局函数 |Microsoft 文档
+title: 安全标识符全局函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365150"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610228"
 ---
 # <a name="security-identifier-global-functions"></a>安全标识符全局函数
-这些函数返回常见的已知 SID 的对象。  
+这些函数将返回通用的已知 SID 的对象。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。  
   
 |||  
 |-|-|  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 使用 NetworkService 启用 NT AUTHORITY\NetworkService 用户阅读 CPerfMon 安全对象。 NetworkService 向 atl Server 代码，这将允许使用 NetworkService 帐户登录到 DLL 中添加 SecurityAttribute[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]和更高版本的操作系统。  
+ 使用 NetworkService 启用 NT AUTHORITY\NetworkService 用户读取 CPerfMon 安全对象。 NetworkService 将 SecurityAttribute 添加到 atl Server 代码，这将允许在 Windows XP Home Edition、 Windows XP Professional、 Windows Server 2003 和更高版本操作系统的 NetworkService 帐户下的登录名的 DLL。  
   
- 使用 Perfmon MMC 中的 atl Server CPerfMon 类创建自定义日志计数器，计数器可能不会显示在查看日志文件，但它们将显示正确中的实时视图时。 CPerfMon 自定义性能计数器上没有足够的权限来运行在"性能日志和警报"服务 (smlogsvc.exe) 下[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]（或更高版本） 操作系统。 在"NT AUTHORITY\NetworkService"帐户下运行该服务。  
+ 在自定义日志计数器创建 Perfmon MMC 中的 atl Server CPerfMon 类后，计数器可能不会显示，尽管会正确显示实时视图中查看日志文件时。 CPerfMon 自定义性能计数器没有在"性能日志和警报"服务 (smlogsvc.exe) 上运行 Windows XP 家庭版、 Windows XP Professional、 Windows Server 2003 （或更高版本） 操作系统的必要权限。 "NT AUTHORITY\NetworkService"帐户下运行该服务。  
   
 ##  <a name="null"></a>  Sids::Null  
  返回 SECURITY_NULL_RID SID。  
