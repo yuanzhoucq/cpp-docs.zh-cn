@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: mtathreadattribute 类 |Microsoft 文档'
+title: 'Platform:: mtathreadattribute 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,15 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613454"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
 指示应用程序的线程处理模型为多线程单元 (MTA)。  
@@ -41,9 +42,9 @@ public ref class MTAThreadAttribute sealed : Attribute
 |[MTAThreadAttribute 构造函数 1](#ctor)构造函数|初始化类的新实例。|  
   
 ### <a name="public-methods"></a>公共方法  
- MTAThreadAttribute 属性继承自[platform:: object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：  
+ MTAThreadAttribute 属性继承[platform:: object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  

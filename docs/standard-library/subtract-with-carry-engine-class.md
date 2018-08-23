@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955301"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 类
 
@@ -45,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>参数
 
-`UIntType` 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*  
+ 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-`W` **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **短滞后**。 整数值数。 **前提条件**：`0 < S < R`
+*S*  
+ **短滞后**。 整数值数。 **前提条件**：`0 < S < R`
 
-`R` **长滞后**。 确定生成的系列中的重复。
+*R*  
+ **长滞后**。 确定生成的系列中的重复。
 
 ## <a name="members"></a>Members
 
@@ -67,7 +72,7 @@ class subtract_with_carry_engine;
 
 `substract_with_carry_engine` 模板类是基于 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
-此引擎使用重复关系（*周期*）`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`产生用户指定的无符号整型值，其中如果 `cy(i)`，则 `1` 包含值 `x(i - S) - x(i - R) - cy(i - 1) < 0`；如果 `0`，则 `M` 包含 `2`<sup>W</sup>。引擎状态是进位指示器加上 `R` 值。 如果已调用 `R` 至少 `operator()` 次，则这些值将包含返回的最后 `R` 个值，否则包含已返回的 `N` 个值和种子的最后 `R - N` 个值。
+此引擎使用重复关系（*周期*）`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`产生用户指定的无符号整型值，其中如果 `cy(i)`，则 `1` 包含值 `x(i - S) - x(i - R) - cy(i - 1) < 0`；如果 `0`，则 `M` 包含 `2`<sup>W</sup>。引擎的状态是进位指示器加上*R*值。 这些值包含的上一次*R*值返回的 if`operator()`至少已调用*R*次，否则`N`已返回的值和最后一个`R - N`种子值。
 
 模板参数 `UIntType` 必须大到足以保留最多 `M - 1` 个值。
 

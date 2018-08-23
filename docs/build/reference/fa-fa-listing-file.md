@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378946"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 创建包含汇编代码的列表文件。  

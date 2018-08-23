@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366804"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>配置用于 64 位 x64 Visual c + + 目标
 

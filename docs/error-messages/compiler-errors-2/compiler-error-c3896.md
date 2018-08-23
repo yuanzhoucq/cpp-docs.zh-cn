@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269733"
 ---
 # <a name="compiler-error-c3896"></a>编译器错误 C3896
 member： 不正确的初始值设定项： 只能与 nullptr 初始化此 literal 数据成员  

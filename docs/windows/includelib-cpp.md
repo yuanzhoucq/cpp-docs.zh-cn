@@ -1,5 +1,5 @@
 ---
-title: includelib （c + +） |Microsoft 文档
+title: includelib （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,58 +17,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584337"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-导致要包含在生成的.idl 文件的.idl 或.h 文件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      [ includelib(  
-   name.idl  
-) ];  
-```  
-  
-#### <a name="parameters"></a>参数  
- *name.idl*  
- 要生成的.idl 文件的一部分包括在.idl 文件的名称。  
-  
-## <a name="remarks"></a>备注  
- `includelib` C + + 特性将导致要包含在生成的.idl 文件中之后, 的.idl 或.h 文件`importlib`语句。  
-  
-## <a name="example"></a>示例  
- 下面的代码是在.cpp 文件中所示：  
-  
-```  
-// cpp_attr_ref_includelib.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[includelib("includelib.idl")];  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|任何位置|  
-|**可重复**|是|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [独立特性](../windows/stand-alone-attributes.md)   
- [导入](../windows/import.md)   
- [importidl](../windows/importidl.md)   
- [包括](../windows/include-cpp.md)   
- [importlib](../windows/importlib.md)   
+
+导致要生成的.idl 文件中包含的.idl 或.h 文件。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[ includelib(
+   name.idl
+) ];
+```
+
+### <a name="parameters"></a>参数
+
+*name.idl*  
+要生成的.idl 文件的一部分的.idl 文件的名称。
+
+## <a name="remarks"></a>备注
+
+**Includelib** c + + 属性会导致要包含在生成的.idl 文件中之后, 的.idl 或.h 文件`importlib`语句。
+
+## <a name="example"></a>示例
+
+下面的代码是.cpp 文件中所示：
+
+```cpp
+// cpp_attr_ref_includelib.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[includelib("includelib.idl")];
+```
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|任何位置|
+|**可重复**|是|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[独立特性](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importidl](../windows/importidl.md)  
+[include](../windows/include-cpp.md)  
+[importlib](../windows/importlib.md)  

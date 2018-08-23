@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382162"
 ---
 # <a name="using-cricheditctrl"></a>使用 CRichEditCtrl
 Rich edit 控件是一个窗口，用户可以输入和编辑文本。 文本可以分配字符和段落格式设置，并且可以包含嵌入的 OLE 对象。 Rich edit 控件表示在 MFC 中由[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)类。  

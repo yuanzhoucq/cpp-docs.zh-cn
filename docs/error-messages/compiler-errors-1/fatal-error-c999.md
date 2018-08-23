@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227093"
 ---
 # <a name="fatal-error-c999"></a>错误 C999
 未知消息请选择技术支持命令的 Visual c + + 帮助菜单上，或打开技术支持帮助文件了解详细信息  

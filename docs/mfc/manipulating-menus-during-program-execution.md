@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69302202059914217e066eb0389bb14e7c5190c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929755"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>在程序执行过程中操作菜单
-使用类 `CMenu` 即时操作菜单和菜单项。 `CMenu` 将封装 Windows `HMENU` 句柄并提供与菜单一起使用的成员函数。  
+使用类 `CMenu` 即时操作菜单和菜单项。 `CMenu` 封装 Windows HMENU 句柄并提供与菜单一起使用的成员函数。  
   
  请参阅类概述[CMenu](../mfc/reference/cmenu-class.md)有关详细信息。  
   

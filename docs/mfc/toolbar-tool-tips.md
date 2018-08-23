@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956289"
 ---
 # <a name="toolbar-tool-tips"></a>工具栏工具提示
 工具提示是用途的小型弹出窗口，当你将鼠标放按钮上的一段时间内时所显示的工具栏按钮的简短说明。 当有一个工具栏由应用程序向导创建应用程序时，为你提供工具提示支持。 本文介绍了由应用程序向导和如何将工具提示支持添加到你的应用程序创建这两个工具提示支持。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_activating_tool_tips"></a> 激活工具提示  
  若要激活你的应用程序中的工具提示，则必须执行两项操作：  
   
--   添加`CBRS_TOOLTIPS`对其他样式的样式 (如**WS_CHILD**， **WS_VISIBLE**，和其他**CBRS_** 样式) 作为传递`dwStyle`参数[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)函数或在[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)。  
+-   将 CBRS_TOOLTIPS 样式添加到其他样式 (如 WS_CHILD、 WS_VISIBLE，和其他**CBRS_** 样式) 作为传递*dwStyle*参数[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)函数或在[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)。  
   
 -   下面的过程中所述，追加换行符 (\n) 分隔到包含工具栏命令的命令行提示符的字符串资源的工具栏提示文本。 字符串资源共享工具栏按钮的 ID。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
 -   具有相同的 ID 在资源文件中的子控件的字符串表条目具有一个工具提示字符串。  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> 越过状态栏更新  
- 与工具提示相关功能是"越过"状态栏更新。 默认情况下，状态栏上的消息描述仅特定工具栏按钮时激活该按钮。 通过包括`CBRS_FLYBY`列表中的样式传递给`CToolBar::Create`，你可以更新当鼠标光标传递到工具栏上，而无需实际激活按钮时，这些消息。  
+ 与工具提示相关功能是"越过"状态栏更新。 默认情况下，状态栏上的消息描述仅特定工具栏按钮时激活该按钮。 通过在传递到样式的列表中包括 CBRS_FLYBY `CToolBar::Create`，你可以更新当鼠标光标传递到工具栏上，而无需实际激活按钮时，这些消息。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
   

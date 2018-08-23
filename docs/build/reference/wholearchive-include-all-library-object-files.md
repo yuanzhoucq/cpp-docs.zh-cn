@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376864"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE （包括所有库对象文件）
 Force 链接器包含在静态库链接的可执行文件中的所有对象文件。  

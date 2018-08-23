@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325911"
 ---
 # <a name="active-document-classes"></a>活动文档类
 在 Web 浏览器，如 Internet Explorer 5.5，整个客户端窗口中或在活动的容器中，如 Microsoft Office 活页夹，支持活动文档，可以显示活动文档。  

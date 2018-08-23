@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300054"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>链接器工具警告 LNK4014
 找不到成员对象"objectname"  

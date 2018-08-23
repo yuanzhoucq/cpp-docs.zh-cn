@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378657"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc（创建预编译标头文件）
 指示编译器创建表示在某个特定点的编译状态的预编译标头 (.pch) 文件。  

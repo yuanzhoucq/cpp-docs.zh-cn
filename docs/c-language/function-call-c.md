@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384354"
 ---
 # <a name="function-call-c"></a>函数调用 (C)
 “函数调用”是包含被调用函数的名称或函数指针的值以及（可选）传递给函数的自变量的表达式。  

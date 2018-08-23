@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页 |Microsoft 文档
+title: “MIDL”属性页 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328069"
 ---
 # <a name="midl-property-pages"></a>“MIDL”属性页
-**MIDL**节点包含几个属性页。 若要访问属性页， 右键单击.idl 文件**解决方案资源管理器**。  
+“MIDL”节点包含几个属性页。 若要访问属性页， 请在“解决方案资源管理器”中右键单击 .idl 文件。  
   
 -   [MIDL 属性页：常规](../ide/midl-property-pages-general.md)  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243965"
 ---
 # <a name="compiler-error-c2850"></a>编译器错误 C2850
 construct： 仅允许在文件范围内;可能不在的嵌套构造  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695884"
 ---
 # <a name="2-directives"></a>2.指令
 指令基于 **#pragma** C 和 c + + 标准中定义的指令。  支持的 OpenMP C 和 c + + API 的编译器将包括命令行选项，可激活并允许所有 OpenMP 编译器指令解释。

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690996"
 ---
 # <a name="4-environment-variables"></a>4.环境变量
 本部分介绍的 OpenMP C 和 c + + API 环境变量 （或等效的特定于平台的机制） 控制并行代码的执行。  环境变量的名称必须大写。 分配给它们的值区分大小写，并且可能必须前导和尾随空格。  修改程序已开始后的值将被忽略。  

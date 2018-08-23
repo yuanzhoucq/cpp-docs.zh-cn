@@ -1,5 +1,5 @@
 ---
-title: switch_type |Microsoft 文档
+title: switch_type |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,68 +17,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590661"
 ---
 # <a name="switchtype"></a>switch_type
-标识用作联合判别变量的类型。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-[switch_type(  
-type  
-}]  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `type`  
- 交换机类型可以是整数、 字符、 布尔值或枚举类型。  
-  
-## <a name="remarks"></a>备注  
- **Switch_type** c + + 属性具有相同的功能[switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 特性。  
-  
- 不支持 c + + 特性[封装联合](http://msdn.microsoft.com/library/windows/desktop/aa366811)。 [Nonencapsulated 的联合](http://msdn.microsoft.com/library/windows/desktop/aa367119)仅支持以下形式：  
-  
-```  
-// cpp_attr_ref_switch_type.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[module(name="MyLibrary")];  
-[ export ]  
-struct SizedValue2 {  
-   [switch_type("char"), switch_is(kind)] union {  
-      [case(1), string]  
-         wchar_t* wval;  
-      [default, string]  
-         char* val;  
-   };  
-   char kind;  
-};  
-```  
-  
-## <a name="example"></a>示例  
- 请参阅[用例](../windows/case-cpp.md)更大的示例的示例使用**switch_type**。  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|`typedef`|  
-|**可重复**|否|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [export](../windows/export.md)   
+
+标识用作联合判别变量的类型。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[switch_type(
+type
+}]
+```
+
+### <a name="parameters"></a>参数
+
+*type*  
+开关类型可以是整数、 字符、 布尔值或枚举类型。
+
+## <a name="remarks"></a>备注
+
+**Switch_type** c + + 属性具有相同的功能[switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 特性。
+
+不支持 c + + 特性[封装联合](http://msdn.microsoft.com/library/windows/desktop/aa366811)。 [Nonencapsulated 的联合](http://msdn.microsoft.com/library/windows/desktop/aa367119)支持仅按以下格式：
+
+```cpp
+// cpp_attr_ref_switch_type.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="MyLibrary")];
+[ export ]
+struct SizedValue2 {
+   [switch_type("char"), switch_is(kind)] union {
+      [case(1), string]
+         wchar_t* wval;
+      [default, string]
+         char* val;
+   };
+   char kind;
+};
+```
+
+## <a name="example"></a>示例
+
+请参阅[用例](../windows/case-cpp.md)的示例使用的示例**switch_type**。
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|**typedef**|
+|**可重复**|否|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[export](../windows/export.md)  

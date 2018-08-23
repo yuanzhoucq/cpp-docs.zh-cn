@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388482"
 ---
 # <a name="sequential-evaluation-operator"></a>顺序评估运算符
 顺序计算运算符（也称为“逗号运算符”）按从左到右的顺序计算其两个操作数。  

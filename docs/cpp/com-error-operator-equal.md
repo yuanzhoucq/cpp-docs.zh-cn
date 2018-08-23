@@ -1,5 +1,5 @@
 ---
-title: _com_error::operator = |Microsoft 文档
+title: _com_error::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744a4b344a336ec502e184e9be9ffb236c863708
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdc97982b9e8292dec1e8b5c2c49489f6803dea6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407918"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 **Microsoft 专用**  
@@ -32,14 +33,13 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      _com_error& operator = (  
+_com_error& operator = (  
    const _com_error& that   
 ) throw ( );  
 ```  
   
 #### <a name="parameters"></a>参数  
- `that`  
+ *的*  
  一个 `_com_error` 对象。  
   
  **结束 Microsoft 专用**  

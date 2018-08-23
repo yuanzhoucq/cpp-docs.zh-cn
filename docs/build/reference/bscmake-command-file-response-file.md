@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369560"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令文件（响应文件）
 你可以提供部分或全部命令文件中的命令行输入。 指定命令文件使用以下语法：  

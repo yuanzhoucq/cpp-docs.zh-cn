@@ -1,5 +1,5 @@
 ---
-title: __movsq |Microsoft 文档
+title: __movsq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540376"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft 专用**  
   
- 生成一个重复的移动字符串 (`rep movsq`) 指令。  
+ 生成重复移动字符串 (`rep movsq`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +42,19 @@ void __movsq(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Source`  
  操作的源。  
   
  [in] `Count`  
- 四字要复制的数。  
+ 要复制的四字的数目。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|X64|  
   
  **标头文件** \<intrin.h >  
   

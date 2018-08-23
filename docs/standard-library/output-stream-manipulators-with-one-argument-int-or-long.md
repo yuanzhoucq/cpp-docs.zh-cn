@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961846"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>带有一个自变量（int 或 long）的输出流操控器
 
-iostream 类库提供用于创建参数化操控器的一组宏。 具有单个 `int` 或 `long` 参数的操控器是一种特殊情况。 若要创建接受单个 `int` 或 `long` 参数（如 `setw`）的输出流操控器，则必须使用在 \<iomanip> 中定义的 _Smanip 宏。 此示例定义了向流中插入指定数量的空格的 `fillblank` 操控器：
+iostream 类库提供用于创建参数化操控器的一组宏。 操控器具有单个**int**或**长**自变量是一种特殊情况。 若要创建接受单个输出流操控器**int**或**长**参数 (如`setw`)，必须使用在中定义的 _Smanip 宏\<iomanip >。 此示例定义了向流中插入指定数量的空格的 `fillblank` 操控器：
 
 ## <a name="example"></a>示例
 

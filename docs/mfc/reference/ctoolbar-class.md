@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d6dc2c196e40daf4aa793f6643da95206b12be0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123131"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 类
 具有一行位图化按钮和可选分隔符的控件条。  
@@ -127,7 +128,7 @@ class CToolBar : public CControlBar
   
  在工具栏中的所有按钮图像，都将从一个位图，这必须包含每个按钮的一个映像。 所有映像必须都是相同的大小;默认值为 16 像素宽和 15 像素高。 映像必须在位图中的并排放置。  
   
- `SetButtons`函数将指针传递到的控件 Id 和一个整数，数组中指定的元素数的数组。 该函数将每个按钮 ID 设置为该数组的相应元素的值，并将每个按钮分配图像索引，它指定在位图中的按钮的图像的位置。 如果数组元素具有值**ID_SEPARATOR**，不分配任何映像索引。  
+ `SetButtons`函数将指针传递到的控件 Id 和一个整数，数组中指定的元素数的数组。 该函数将每个按钮 ID 设置为该数组的相应元素的值，并将每个按钮分配图像索引，它指定在位图中的按钮的图像的位置。 如果数组元素值 ID_SEPARATOR，不分配任何映像索引。  
   
  在位图中图像的顺序通常是在其中绘制它们在屏幕上，但你可以使用的顺序[SetButtonInfo](#setbuttoninfo)函数来更改图像顺序和绘制顺序之间的关系。  
   
@@ -144,9 +145,9 @@ class CToolBar : public CControlBar
   
  若要将分配要在按钮上显示的文本，调用[GetButtonText](#getbuttontext)以检索要显示在的按钮，然后调用的文本[SetButtonText](#setbuttontext)以设置的文本。  
   
- 若要创建复选框按钮，将其分配样式**TBBS_CHECKBOX**或使用`CCmdUI`对象的`SetCheck`成员函数在`ON_UPDATE_COMMAND_UI`处理程序。 调用`SetCheck`变为复选框按钮的按钮。 传递`SetCheck`参数为 0 的未选中，1 选中，或 2 的不确定。  
+ 若要创建复选框按钮、 将其分配的样式 TBBS_CHECKBOX 或使用`CCmdUI`对象的`SetCheck`ON_UPDATE_COMMAND_UI 处理程序中的成员函数。 调用`SetCheck`变为复选框按钮的按钮。 传递`SetCheck`参数为 0 的未选中，1 选中，或 2 的不确定。  
   
- 若要创建的单选按钮，调用[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)从成员函数`ON_UPDATE_COMMAND_UI`处理程序。 传递`SetRadio`取消选中或签入的非零的自变量为 0。 若要提供单选按钮组的互斥行为，您必须`ON_UPDATE_COMMAND_UI`针对所有组中的按钮处理程序。  
+ 若要创建的单选按钮，调用[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)从 ON_UPDATE_COMMAND_UI 处理程序成员函数。 传递`SetRadio`取消选中或签入的非零的自变量为 0。 若要提供单选按钮组的互斥行为，您必须针对所有按钮的 ON_UPDATE_COMMAND_UI 处理程序组中。  
   
  有关详细信息使用`CToolBar`，请参阅文章[MFC 工具栏实现](../../mfc/mfc-toolbar-implementation.md)和[技术说明 31： 控件条](../../mfc/tn031-control-bars.md)。  
   
@@ -172,7 +173,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDFind`  
+ *nIDFind*  
  工具栏按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -189,31 +190,31 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向将工具栏的父窗口的指针。  
   
- `dwStyle`  
+ *dwStyle*  
  工具栏样式中。 支持的其他工具栏样式包括：  
   
-- `CBRS_TOP` 控件条是在框架窗口的顶部。  
+- CBRS_TOP 控件条是在框架窗口的顶部。  
   
-- `CBRS_BOTTOM` 控件条是在框架窗口的底部。  
+- CBRS_BOTTOM 控件条是在框架窗口的底部。  
   
-- `CBRS_NOALIGN` 父级调整大小时，将不会重新定位控件条。  
+- 父级调整大小时，CBRS_NOALIGN 控件条不会重新定位。  
   
-- `CBRS_TOOLTIPS` 控件栏会显示工具提示。  
+- CBRS_TOOLTIPS 控件栏会显示工具提示。  
   
-- **CBRS_SIZE_DYNAMIC**控件条是动态的。  
+- CBRS_SIZE_DYNAMIC 控件条是动态的。  
   
-- **CBRS_SIZE_FIXED**固定的控件条。  
+- CBRS_SIZE_FIXED 控件条被固定。  
   
-- **CBRS_FLOATING**浮点控件条。  
+- 浮动 CBRS_FLOATING 控件条。  
   
-- `CBRS_FLYBY` 状态栏会显示有关该按钮的信息。  
+- CBRS_FLYBY 状态栏会显示有关该按钮的信息。  
   
-- **CBRS_HIDE_INPLACE**控件条不向用户显示。  
+- 不会向用户显示 CBRS_HIDE_INPLACE 控件条。  
   
- `nID`  
+ *nID*  
  工具栏的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -242,19 +243,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向将工具栏的父窗口的指针。  
   
- `dwCtrlStyle`  
- 为创建的嵌入其他样式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)对象。 默认情况下，此值设置为**TBSTYLE_FLAT**。 工具栏样式的完整列表，请参阅`dwStyle`。  
+ *dwCtrlStyle*  
+ 为创建的嵌入其他样式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)对象。 默认情况下，此值设置为 TBSTYLE_FLAT。 工具栏样式的完整列表，请参阅*dwStyle*。  
   
- `dwStyle`  
+ *dwStyle*  
  工具栏样式中。 请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK for 相应样式的列表中。  
   
  *rcBorders*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md)对象，用于定义工具栏窗口边框的宽度。 这些边框设置为 0,0,0,0 默认情况下，从而导致在工具栏窗口中并无边框。  
   
- `nID`  
+ *nID*  
  工具栏的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -263,7 +264,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  它还将工具栏高度设置为默认值。  
   
- 使用`CreateEx`，而不是[创建](#create)，当需要在嵌入式的工具栏控件的创建过程的某些样式。 例如，设置`dwCtrlStyle`到**TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT**创建类似于 Internet 资源管理器 4 工具栏的工具栏。  
+ 使用`CreateEx`，而不是[创建](#create)，当需要在嵌入式的工具栏控件的创建过程的某些样式。 例如，设置*dwCtrlStyle*到 TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT 创建类似于 Internet 资源管理器 4 工具栏的工具栏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
@@ -290,22 +291,22 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  工具栏按钮或获取其信息是要检索的分隔符的索引。  
   
- `nID`  
- 引用**UINT**是否设置为按钮的命令 ID。  
+ *nID*  
+ 设置按钮的命令 ID 为 uint 的引用。  
   
- `nStyle`  
- 引用**UINT**是否设置为按钮的样式。  
+ *nStyle*  
+ 设置按钮样式为 uint 的引用。  
   
- `iImage`  
+ *iImage*  
  对一个整数，它设置为位图中的按钮的图像的索引引用。  
   
 ### <a name="remarks"></a>备注  
- 这些值将赋给引用的变量`nID`， `nStyle`，和`iImage`。 映像索引是包含的所有工具栏按钮的图像位图中图像的位置。 第一个图像位于位置 0。  
+ 这些值将赋给引用的变量*nID*， *nStyle*，和*iImage*。 映像索引是包含的所有工具栏按钮的图像位图中图像的位置。 第一个图像位于位置 0。  
   
- 如果`nIndex`指定一个分隔符，`iImage`设为以像素为单位的分隔符宽度。  
+ 如果*nIndex*指定一个分隔符， *iImage*设为以像素为单位的分隔符宽度。  
   
 ##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  调用此成员函数可检索的按钮或在工具栏上的分隔符的样式。  
@@ -315,11 +316,11 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要检索的工具栏按钮或分隔符样式的索引。  
   
 ### <a name="return-value"></a>返回值  
- 按钮或由指定的分隔符的样式`nIndex`。  
+ 按钮或由指定的分隔符的样式*nIndex*。  
   
 ### <a name="remarks"></a>备注  
  按钮样式确定如何该按钮显示和对用户输入的响应方式。 请参阅[SetButtonStyle](#setbuttonstyle)有关按钮样式的示例。  
@@ -336,10 +337,10 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要检索的文本索引。  
   
- `rString`  
+ *rString*  
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)将包含要检索的文本的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -349,24 +350,24 @@ void GetButtonText(
  此成员的第二种形式函数填充`CString`具有字符串文本对象。  
   
 ##  <a name="getitemid"></a>  CToolBar::GetItemID  
- 此成员函数返回的命令 ID 的按钮或由指定的分隔符`nIndex`。  
+ 此成员函数返回的命令 ID 的按钮或由指定的分隔符*nIndex*。  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要检索其 ID 的项的索引。  
   
 ### <a name="return-value"></a>返回值  
- 按钮或由指定的分隔符的命令 ID `nIndex`。  
+ 按钮或由指定的分隔符的命令 ID *nIndex*。  
   
 ### <a name="remarks"></a>备注  
- 分隔符返回**ID_SEPARATOR**。  
+ 分隔符返回 ID_SEPARATOR。  
   
 ##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
- 此成员函数填充`RECT`结构中包含其地址`lpRect`按钮或由指定的分隔符的坐标`nIndex`。  
+ 此成员函数填充`RECT`结构中包含其地址*lpRect*按钮或由指定的分隔符的坐标*nIndex*。  
   
 ```  
 virtual void GetItemRect(
@@ -375,10 +376,10 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  矩形坐标是要检索的项 （按钮或分隔符） 的索引。  
   
- `lpRect`  
+ *lpRect*  
  地址[RECT](../../mfc/reference/rect-structure1.md)结构，它将包含该项的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -416,10 +417,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向要加载的位图的资源名称。  
   
- `nIDResource`  
+ *nIDResource*  
  资源 ID 加载位图。  
   
 ### <a name="return-value"></a>返回值  
@@ -432,7 +433,7 @@ BOOL LoadBitmap(UINT nIDResource);
 > `CToolBar` 支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
   
 ##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
- 调用此成员函数可加载由指定的工具栏`lpszResourceName`或`nIDResource`。  
+ 调用此成员函数可加载由指定的工具栏*lpszResourceName*或*nIDResource*。  
   
 ```  
 BOOL LoadToolBar(LPCTSTR lpszResourceName);  
@@ -440,10 +441,10 @@ BOOL LoadToolBar(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向要加载的工具栏资源名称。  
   
- `nIDResource`  
+ *nIDResource*  
  资源 ID 工具栏的加载。  
   
 ### <a name="return-value"></a>返回值  
@@ -484,44 +485,44 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  按钮或分隔符为设置信息的从零开始索引。  
   
- `nID`  
+ *nID*  
  为其设置按钮的命令 ID 的值。  
   
- `nStyle`  
+ *nStyle*  
  新的按钮样式。 支持以下按钮样式：  
   
-- **TBBS_BUTTON**标准按键 （默认值）  
+- TBBS_BUTTON 标准按键 （默认值）  
   
-- **TBBS_SEPARATOR**分隔符  
+- TBBS_SEPARATOR 分隔符  
   
-- **TBBS_CHECKBOX**自动复选框按钮  
+- TBBS_CHECKBOX 自动复选框按钮  
   
-- **TBBS_GROUP**标记的一组按钮开始位置  
+- TBBS_GROUP 标记一组按钮的开头  
   
-- **TBBS_CHECKGROUP**标记的一组复选框按钮开始位置  
+- TBBS_CHECKGROUP 标记一组复选框按钮的开头  
   
-- **TBBS_DROPDOWN**创建下拉列表按钮。  
+- TBBS_DROPDOWN 创建一个下拉列表按钮。  
   
-- **TBBS_AUTOSIZE**按钮的宽度将计算基于上按钮的文本，而非图像的大小。  
+- 将计算该按钮的宽度的 TBBS_AUTOSIZE 基于不上映像的大小的按钮的文本。  
   
-- **TBBS_NOPREFIX**按钮文本将不具有与之关联的快捷键前缀。  
+- TBBS_NOPREFIX 按钮文本将不具有与之关联的快捷键前缀。  
   
- `iImage`  
+ *iImage*  
  位图中的按钮的图像的新索引。  
   
 ### <a name="remarks"></a>备注  
- 分隔符，都样式**TBBS_SEPARATOR**，此函数以像素为单位到中存储的值设置的分隔符的宽度`iImage`。  
+ 分隔符，具有样式 TBBS_SEPARATOR，此函数设置的分隔符的宽度 （像素） 中存储的值为*iImage*。  
   
 > [!NOTE]
->  你还可以设置使用的按钮状态`nStyle`参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonInfo`下一步将会丢失空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
+>  你还可以设置使用的按钮状态*nStyle*参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonInfo`将会丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
   
  位图图像和按钮上的信息，请参阅[CToolBar](../../mfc/reference/ctoolbar-class.md)概述和[CToolBar::LoadBitmap](#loadbitmap)。  
   
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons  
- 此成员函数将每个工具栏按钮的命令 ID 设置为指定数组的相应元素的值`lpIDArray`。  
+ 此成员函数将每个工具栏按钮的命令 ID 设置为指定数组的相应元素的值*lpIDArray*。  
   
 ```  
 BOOL SetButtons(
@@ -530,21 +531,21 @@ BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpIDArray`  
- 指向命令 Id 的数组的指针。 它可以是**NULL**分配空按钮。  
+ *lpIDArray*  
+ 指向命令 Id 的数组的指针。 它可以为 NULL，以分配空按钮。  
   
- `nIDCount`  
- 指向数组中的元素数目`lpIDArray`。  
+ *nIDCount*  
+ 指向数组中的元素数目*lpIDArray*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果数组的元素具有值**ID_SEPARATOR**，在工具栏上的相应位置中创建一个分隔符。 此函数还将每个按钮的样式设置为**TBBS_BUTTON**和每个分隔符样式应用到**TBBS_SEPARATOR**，并将一个图像索引分配给每个按钮。 映像索引指定位图中的按钮的图像的位置。  
+ 如果数组的元素具有值 ID_SEPARATOR 时，在工具栏上的相应位置中创建分隔符。 此函数还将每个按钮的样式设置为 TBBS_BUTTON 和每个分隔符样式应用到 TBBS_SEPARATOR，并将一个图像索引分配给每个按钮。 映像索引指定位图中的按钮的图像的位置。  
   
  不需要考虑的位图中的分隔符，因为此函数不会分配为分隔符的映像索引。 如果你工具栏按钮在位置 0，1，和 3 和在位置 2，分别位于位置 0、 1 和 2 中你位图图像的分隔符为的按钮位于位置 0、 1 和 3，分别分配。  
   
- 如果`lpIDArray`是**NULL**，此函数为指定的项的数目分配空间`nIDCount`。 使用[SetButtonInfo](#setbuttoninfo)设置每个项的特性。  
+ 如果*lpIDArray*为 NULL，此函数为指定的项的数目分配空间*nIDCount*。 使用[SetButtonInfo](#setbuttoninfo)设置每个项的特性。  
   
 ##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  调用此成员函数可设置的样式的按钮或分隔符，或组按钮。  
@@ -556,27 +557,27 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  索引的按钮或获取其信息是要设置的分隔符。  
   
- `nStyle`  
+ *nStyle*  
  按钮样式中。 支持以下按钮样式：  
   
-- **TBBS_BUTTON**标准按键 （默认值）  
+- TBBS_BUTTON 标准按键 （默认值）  
   
-- **TBBS_SEPARATOR**分隔符  
+- TBBS_SEPARATOR 分隔符  
   
-- **TBBS_CHECKBOX**自动复选框按钮  
+- TBBS_CHECKBOX 自动复选框按钮  
   
-- **TBBS_GROUP**标记的一组按钮开始位置  
+- TBBS_GROUP 标记一组按钮的开头  
   
-- **TBBS_CHECKGROUP**标记的一组复选框按钮开始位置  
+- TBBS_CHECKGROUP 标记一组复选框按钮的开头  
   
-- **TBBS_DROPDOWN**创建下拉列表按钮  
+- TBBS_DROPDOWN 创建下拉列表按钮  
   
-- **TBBS_AUTOSIZE**按钮的宽度将计算基于上按钮的文本，而非图像的大小  
+- 将计算该按钮的宽度的 TBBS_AUTOSIZE 基于不上映像的大小的按钮的文本  
   
-- **TBBS_NOPREFIX**按钮文本将不具有与之关联的快捷键前缀  
+- TBBS_NOPREFIX 按钮文本将不具有与之关联的快捷键前缀  
   
 ### <a name="remarks"></a>备注  
  按钮样式确定如何该按钮显示和对用户输入的响应方式。  
@@ -584,7 +585,7 @@ void SetButtonStyle(
  之前调用`SetButtonStyle`，调用[GetButtonStyle](#getbuttonstyle)成员函数来检索按钮或分隔符样式。  
   
 > [!NOTE]
->  你还可以设置使用的按钮状态`nStyle`参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`下一步将会丢失空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
+>  你还可以设置使用的按钮状态*nStyle*参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`将会丢失在下一步的空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
   
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  调用此函数可设置上一个按钮的文本。  
@@ -596,10 +597,10 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  其中的文本是设置按钮的索引。  
   
- `lpszText`  
+ *lpszText*  
  指向要设置在按钮上的文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -609,14 +610,14 @@ BOOL SetButtonText(
   请参阅示例[CToolBar::GetToolBarCtrl](#gettoolbarctrl)。  
   
 ##  <a name="setheight"></a>  CToolBar::SetHeight  
- 此成员函数设置的值，以像素为单位，指定在工具栏的高度`cyHeight`。  
+ 此成员函数设置的值，以像素为单位，指定在工具栏的高度*cyHeight*。  
   
 ```  
 void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cyHeight`  
+ *cyHeight*  
  以像素为单位工具栏的高度。  
   
 ### <a name="remarks"></a>备注  
@@ -637,11 +638,11 @@ void SetSizes(
  *sizeButton*  
  以像素为单位，每个按钮的大小。  
   
- `sizeImage`  
+ *sizeImage*  
  以像素为单位的每个图像大小。  
   
 ### <a name="remarks"></a>备注  
- `sizeImage`参数必须包含大小，以像素为单位，工具栏的位图中图像的大小。 中的维度*sizeButton*必须足以容纳图像加 7 像素额外的宽度和高度额外 6 个像素。 此函数还将设置工具栏的高度以适应按钮。  
+ *SizeImage*参数必须包含大小，以像素为单位，工具栏的位图中图像的大小。 中的维度*sizeButton*必须足以容纳图像加 7 像素额外的宽度和高度额外 6 个像素。 此函数还将设置工具栏的高度以适应按钮。  
   
  调用此成员函数仅对工具栏不遵循*软件设计的 Windows 界面指南*按钮和图像的大小的建议。  
   

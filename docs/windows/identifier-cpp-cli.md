@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + + /cli CLI) |Microsoft 文档
+title: __identifier (c + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,89 +18,95 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613317"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-可以用作标识符的 Visual c + + 关键字的使用。  
-  
-## <a name="all-platforms"></a>所有平台  
-**语法**  
-  
-```  
-__identifier(  
-Visual_C++_keyword  
+
+可以使用 Visual c + + 关键字用作标识符。
+
+## <a name="all-platforms"></a>所有平台
+
+### <a name="syntax"></a>语法
+
+```cpp
+__identifier(
+Visual_C++_keyword
 )  
-  
-```  
-  
-**备注**  
-  
-利用`__identifier`允许使用，但强烈建议不要这样做作为一种样式不是关键字的标识符的关键字。  
-  
-## <a name="windows-runtime"></a>Windows 运行时  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
-  
-### <a name="examples"></a>示例  
- **示例**  
-  
- 在下面的示例中，类名为`template`是在 C# 中创建和分布式为 DLL。 使用 Visual c + + 程序中`template`类，`__identifier`关键字隐藏这一事实，`template`是标准 c + + 关键字。  
-  
-```  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```  
-// keyword__identifier.cpp  
-// compile with: /ZW  
-#using <identifier_template.dll>  
-int main() {  
-   __identifier(template)^ pTemplate = ref new __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
-  
- `__identifier`关键字是有效，且 **/clr**编译器选项。  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
-  
-### <a name="examples"></a>示例  
- **示例**  
-  
- 在下面的示例中，类名为`template`是在 C# 中创建和分布式为 DLL。 使用 Visual c + + 程序中`template`类，`__identifier`关键字隐藏这一事实，`template`是标准 c + + 关键字。  
-  
-```  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```  
-// keyword__identifier.cpp  
-// compile with: /clr  
-#using <identifier_template.dll>  
-  
-int main() {  
-   __identifier(template) ^pTemplate = gcnew __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+```
+
+### <a name="remarks"></a>备注
+
+利用 **__identifier**允许使用，但强烈建议不要使用作为一种样式的关键字不是关键字的标识符。
+
+## <a name="windows-runtime"></a>Windows 运行时
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/ZW`
+
+### <a name="examples"></a>示例
+
+**示例**
+
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /ZW
+#using <identifier_template.dll>
+int main() {
+   __identifier(template)^ pTemplate = ref new __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="common-language-runtime"></a>公共语言运行时
+
+### <a name="remarks"></a>备注
+
+**__Identifier**关键字是有效，且`/clr`编译器选项。
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/clr`
+
+### <a name="examples"></a>示例
+
+在以下示例中，类名为**模板**是在 C# 中创建并分发作为 DLL。 使用 Visual c + + 程序中**模板**类， **_try**关键字对隐藏这一事实，**模板**是标准 c + + 关键字。
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /clr
+#using <identifier_template.dll>
+
+int main() {
+   __identifier(template) ^pTemplate = gcnew __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)  
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

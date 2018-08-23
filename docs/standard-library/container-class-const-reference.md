@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935898197455715160e463d1b272e55ab368eab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cabc805f826c0e4d89fc9506e6a019632bdcd8c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956241"
 ---
 # <a name="container-classconstreference"></a>Container Class::const_reference
 
@@ -36,7 +37,7 @@ typedef T3 const_reference;
 
 ## <a name="remarks"></a>备注
 
-此处它被描述为未指定类型 **T3** 的同义词（通常为 **Alloc::const_reference**）。
+它被描述为未指定类型的同义词，此处`T3`(通常`Alloc::const_reference`)。
 
 ## <a name="see-also"></a>请参阅
 

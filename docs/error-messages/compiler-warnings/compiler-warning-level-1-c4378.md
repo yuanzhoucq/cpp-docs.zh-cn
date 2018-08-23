@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279326"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>编译器警告（等级 1）C4378
 必须获取函数指针，以便运行初始值设定项;请考虑 System::ModuleHandle::ResolveMethodHandle  

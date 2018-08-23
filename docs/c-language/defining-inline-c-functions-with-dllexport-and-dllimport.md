@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384618"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>定义带有 dllexport 和 dllimport 的内联 C 函数
 **Microsoft 专用**  

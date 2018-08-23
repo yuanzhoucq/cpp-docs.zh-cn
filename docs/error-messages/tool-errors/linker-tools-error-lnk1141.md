@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303733"
 ---
 # <a name="linker-tools-error-lnk1141"></a>链接器工具错误 LNK1141
 在导出文件的生成过程失败  

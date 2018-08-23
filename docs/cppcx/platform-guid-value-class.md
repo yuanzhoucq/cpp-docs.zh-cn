@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: guid 值类 |Microsoft 文档'
+title: 'Platform:: guid 值类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,15 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601249"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 代表 Windows 运行时类型系统中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 类型。  
@@ -41,7 +42,7 @@ public value struct Guid
 |[operator()](#operator-call)|将 Guid 转换为 GUID。|  
   
 ### <a name="remarks"></a>备注  
- 有关如何使用 Windows 函数 [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)生成新的 Platform::Guid 的示例，请参阅 [WinRT 组件：如何生成 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ 有关如何生成新的 platform:: guid 使用 Windows 函数的示例[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，请参阅[WinRT 组件： 如何生成 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  

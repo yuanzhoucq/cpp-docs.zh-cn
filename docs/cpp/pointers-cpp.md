@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404104"
 ---
 # <a name="pointers-c"></a>指针 （C++）
 使用以下序列声明指针。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 [ms-modifier] declarator ;  
 ```  
   
- 其中，任何有效指针声明符均可用于 `declarator`。  简单指针声明符的语法如下所示：  
+ 其中，任何有效指针声明符均可用于 `declarator`。 简单指针声明符的语法如下所示：  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -39,25 +40,25 @@ ms.lasthandoff: 05/03/2018
   
  1. 声明说明符：  
   
--   可选存储类说明符。 有关详细信息，请参阅[说明符](../cpp/specifiers.md)。  
+    - 可选存储类说明符。 有关详细信息，请参阅[说明符](../cpp/specifiers.md)。  
   
--   应用于要指向的对象的类型的可选 `const` 或 `volatile` 关键字。  
+    - 一个可选**const**或**易失性**关键字应用于要指向的对象的类型。  
   
--   类型说明符：可表示要指向的对象的类型的类型名称。  
+    - 类型说明符：可表示要指向的对象的类型的类型名称。  
   
  2. 声明符：  
   
--   可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
+    - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
   
--   `*` 运算符。  
+    - `*` 运算符。  
   
--   应用于指针本身的可选 `const` 或 `volatile` 关键字。  
+    - 一个可选**const**或**易失性**关键字应用于指针本身。  
   
--   标识符。  
+    - 标识符。  
   
--   可选初始值设定项。  
+    - 可选初始值设定项。  
   
- 指向函数的指针的声明符类似于以下形式：  
+     指向函数的指针的声明符类似于以下形式：  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ ms.lasthandoff: 05/03/2018
   
  指针声明的简单示例如下：  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- 前面的声明指定 `pch` 指向 `char` 类型的对象。  
+ 前面的声明指定`pch`指向类型的对象**char**。  
   
  更复杂的示例是  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- 前面的声明指定`ptr`是指向类型的对象的常量指针`unsigned``int`具有静态存储持续时间。  
+ 前面的声明指定`ptr`是指向类型的对象的常量指针**无符号** **int**具有静态存储持续时间。  
   
  下一个示例演示如何声明和初始化多个指针：  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- 在前面的示例中，指针 p 和 q 都指向类型 `int` 的对象并分别初始化为 i 和 j 的地址。  存储类说明符 `static` 应用于这两个指针。  
+ 在上述示例中，指针 p 和 q 都指向类型的对象**int**和分别初始化为 i 和 j 的地址。  存储类说明符**静态**适用于这两个指针。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>示例  
  另一个示例演示如何在数据结构中使用指针；本例中采用链接列表。  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -248,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

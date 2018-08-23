@@ -1,5 +1,5 @@
 ---
-title: CHandle 类 |Microsoft 文档
+title: CHandle 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd962e32f423baba6cfabb90f1d9f7fa5d69e170
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880227"
 ---
 # <a name="chandle-class"></a>CHandle 类
 此类提供用于创建和使用句柄对象的方法。  
@@ -52,7 +53,7 @@ class CHandle
 |----------|-----------------|  
 |[CHandle::Attach](#attach)|调用此方法以将附加`CHandle`现有句柄到对象。|  
 |[CHandle::Close](#close)|调用此方法来关闭`CHandle`对象。|  
-|[CHandle::Detach](#detach)|调用此方法以分离从的句柄`CHandle`对象。|  
+|[CHandle::Detach](#detach)|调用此方法可分离句柄从`CHandle`对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -68,10 +69,10 @@ class CHandle
 |[CHandle::m_h](#m_h)|存储句柄的成员变量。|  
   
 ## <a name="remarks"></a>备注  
- A`CHandle`需要句柄时，可以使用对象： 主要区别是，`CHandle`对象时将自动删除。  
+ 一个`CHandle`需要一个句柄时，可以使用对象： 主要区别在于`CHandle`对象时将自动删除。  
   
 > [!NOTE]
->  某些 API 函数将使用作为空或无效的句柄，NULL，而其他人使用 INVALID_HANDLE_VALUE。 `CHandle` 仅使用 NULL，将为 INVALID_HANDLE_VALUE 视为实际句柄。 如果调用可返回 INVALID_HANDLE_VALUE API，则应检查该值之前调用[CHandle::Attach](#attach)或将其传递给`CHandle`构造函数，并改为将传递 NULL。  
+>  某些 API 函数将为空或无效的句柄，使用 NULL，而其他人使用 INVALID_HANDLE_VALUE。 `CHandle` 仅使用 NULL，将为 INVALID_HANDLE_VALUE 视为实际句柄。 如果您调用可返回 INVALID_HANDLE_VALUE 的 API，则应检查之前调用此值[CHandle::Attach](#attach)或将其传递给`CHandle`构造函数，并改为将传递 NULL。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
@@ -84,11 +85,11 @@ void Attach(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `h`  
- `CHandle` 将句柄拥有`h`。  
+ *h*  
+ `CHandle` 将获得句柄的所有权*h*。  
   
 ### <a name="remarks"></a>备注  
- 将分配`CHandle`对象传递给`h`处理。 在调试生成中 ATLASSERT 如果将会引发`h`为 NULL。 不其他句柄的有效性进行检查。  
+ 将分配`CHandle`对象传递给*h*处理。 在调试生成中 ATLASSERT 情况下会引发*h*为 NULL。 不其他句柄的有效性进行检查。  
   
 ##  <a name="chandle"></a>  CHandle::CHandle  
  构造函数。  
@@ -100,11 +101,11 @@ explicit CHandle(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `h`  
+ *h*  
  现有句柄或`CHandle`。  
   
 ### <a name="remarks"></a>备注  
- 创建一个新`CHandle`对象，可以选择使用现有句柄或`CHandle`对象。  
+ 创建一个新`CHandle`对象，可选择使用现有句柄或`CHandle`对象。  
   
 ##  <a name="dtor"></a>  CHandle:: ~ CHandle  
  析构函数。  
@@ -124,10 +125,10 @@ void Close() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 关闭打开的对象句柄。 如果句柄为 NULL，则为情况**关闭**已被调用，ATLASSERT 将会引发在调试生成中。  
+ 关闭打开的对象句柄。 如果句柄为 NULL，这将是如果`Close`已被调用，ATLASSERT 将会引发在调试版本中。  
   
 ##  <a name="detach"></a>  CHandle::Detach  
- 调用此方法以分离从的句柄`CHandle`对象。  
+ 调用此方法可分离句柄从`CHandle`对象。  
   
 ```
 HANDLE Detach() throw();
@@ -137,7 +138,7 @@ HANDLE Detach() throw();
  返回要分离的句柄。  
   
 ### <a name="remarks"></a>备注  
- 释放句柄的所有权。  
+ 释放该句柄的所有权。  
   
 ##  <a name="m_h"></a>  CHandle::m_h  
  存储句柄的成员变量。  
@@ -147,21 +148,21 @@ HANDLE m_h;
 ```  
   
 ##  <a name="operator_eq"></a>  CHandle::operator =  
- 赋值运算符中。  
+ 赋值运算符。  
   
 ```
 CHandle& operator=(CHandle& h) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `h`  
- `CHandle` 将句柄拥有`h`。  
+ *h*  
+ `CHandle` 将获得句柄的所有权*h*。  
   
 ### <a name="return-value"></a>返回值  
  返回对新的引用`CHandle`对象。  
   
 ### <a name="remarks"></a>备注  
- 如果`CHandle`对象当前包含句柄，它将被关闭。 `CHandle`对象正在传递将具有其句柄引用设置为 NULL。 这样可确保两个`CHandle`对象永远不会将包含相同的 active 句柄。  
+ 如果`CHandle`对象当前包含句柄，则将关闭。 `CHandle`对象中传递将具有其句柄引用设置为 NULL。 这可确保两个`CHandle`对象永远不会将包含相同的活动句柄。  
   
 ##  <a name="operator_handle"></a>  CHandle::operator 句柄  
  返回存储的句柄的值。  
@@ -171,7 +172,7 @@ operator HANDLE() const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 返回中存储的值[CHandle::m_h](#m_h)。  
+ 返回存储中的值[CHandle::m_h](#m_h)。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

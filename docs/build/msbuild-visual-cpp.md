@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369300"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 你可以使用**MSBuild**工具生成 Visual c + + 应用程序，从命令提示符。 你可以创建和编辑的项目文件 (.vcxproj) 中的信息由控制生成过程。 项目文件指定基于的生成选项生成阶段、 条件和事件。  

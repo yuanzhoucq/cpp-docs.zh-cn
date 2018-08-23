@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703728"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG（链接时间代码生成）
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
 
 指定 [/LTCG](../../build/reference/gl-whole-program-optimization.md) 时，使用 [/GL](../../build/reference/clr-common-language-runtime-compilation.md) 和 **/clr** 编译的模块可用作链接器的输入：
 
-- **/LTCG**可接受本机对象文件和混合本机/托管对象文件 (使用编译的 **/clr**)。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。
+- **/LTCG**可接受本机对象文件和混合本机/托管对象文件 (使用编译的 **/clr**)。 **/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
 
 - **/Ltcg: pgi**不接受使用编译的本机模块 **/GL**和 **/clr**
 
@@ -161,5 +162,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)<br/>
+- [设置链接器选项](../../build/reference/setting-linker-options.md)
+- [链接器选项](../../build/reference/linker-options.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255825"
 ---
 # <a name="compiler-error-c3398"></a>编译器错误 C3398
 “operator”：无法从“function_signature”转换为“function_pointer”。 源表达式必须是函数符号  

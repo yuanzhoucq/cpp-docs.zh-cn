@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380571"
 ---
 # <a name="using-an-nmake-macro"></a>使用 NMAKE 宏
 若要使用宏，请用括号，如下所示前面美元符号 （$） 括起来其名称。  

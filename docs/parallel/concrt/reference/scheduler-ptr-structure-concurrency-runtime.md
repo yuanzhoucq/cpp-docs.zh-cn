@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr 结构 |Microsoft 文档
+title: scheduler_ptr 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540748"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 结构
-表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 来允许指定共享生存期，或通过使用原始指针来允许指定无格式引用。  
+表示指向计划程序的指针。 此类存在是为了通过使用 shared_ptr 或无格式引用通过使用原始指针允许指定共享生存期。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,14 +75,14 @@ scheduler_interface* get() const;
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  测试计划程序指针是否为非 null  
   
-'' 运算符 bool() const;
+'' 运算符 bool （) const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
  Behave like a pointer  
   
 ```
-scheduler_interface * 运算符-> （) const;
+scheduler_interface * 运算符-> const; （)
 ```  
   
 ### Return Value  
@@ -90,7 +91,7 @@ scheduler_interface * 运算符-> （) const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-显式 scheduler_ptr （计划程序 std:: shared_ptr < scheduler_interface >）;
+显式 scheduler_ptr （std:: < scheduler_interface > 计划程序）;
 
 显式 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
 ```  

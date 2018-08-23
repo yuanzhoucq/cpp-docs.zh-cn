@@ -1,5 +1,5 @@
 ---
-title: 唯一 （c + +） |Microsoft 文档
+title: 唯一 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81469e87d08ce17334d5e30fdf37db5ecf8bdab1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608063"
 ---
 # <a name="unique-c"></a>unique (C++)
-指定一个唯一指针。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-[unique]  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- **唯一**c + + 属性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 特性。  
-  
-## <a name="example"></a>示例  
- 请参阅[ref](../windows/ref-cpp.md)更大的示例的示例使用**唯一**。  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|`typedef``struct`，**联合**、 接口参数、 接口方法|  
-|**可重复**|否|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [参数特性](../windows/parameter-attributes.md)   
+
+指定一个唯一指针。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[unique]
+```
+
+## <a name="remarks"></a>备注
+
+**唯一**c + + 属性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 特性。
+
+## <a name="example"></a>示例
+
+请参阅[ref](../windows/ref-cpp.md)的示例使用的示例**唯一**。
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|**typedef**， **struct**，**联合**，接口参数，接口方法|
+|**可重复**|否|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[参数特性](../windows/parameter-attributes.md)  

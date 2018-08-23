@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243556"
 ---
 # <a name="compiler-error-c3022"></a>编译器错误 C3022
 “clause”：在 OpenMP “directive” 指令上的“value”的计划类型无效  

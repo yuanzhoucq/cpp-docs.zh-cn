@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368169"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>独立应用程序和并行程序集的概念
 如果应用程序的所有组件都是 [并行程序集](http://msdn.microsoft.com/library/aa375190) ，则该应用程序被视为 [独立应用程序](http://msdn.microsoft.com/library/ff951640)。 并行程序集是指应用程序在运行时可部署在一起并可使用的资源的集合，如一组 DLL、Windows 类、COM 服务器、类型库或接口。 通常，并行程序集是一个或若干个 DLL。  

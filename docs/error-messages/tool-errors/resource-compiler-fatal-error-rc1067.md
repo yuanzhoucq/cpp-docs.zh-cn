@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317585"
 ---
 # <a name="resource-compiler-fatal-error-rc1067"></a>资源编译器错误 RC1067
 编译器限制： 标识符已溢出内部缓冲区  

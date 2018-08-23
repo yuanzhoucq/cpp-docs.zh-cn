@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Handlet 构造函数 |Microsoft 文档'
+title: 'Handlet:: Handlet 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4a932428b274f8ef8fcda88cd48a4d24464e818c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597211"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT 构造函数
-初始化 HandleT 类的新实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-explicit HandleT(  
-   typename HandleTraits::Type h =   
+
+初始化的新实例**HandleT**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+explicit HandleT(
+   typename HandleTraits::Type h =
       HandleTraits::GetInvalidValue()  
-);  
-  
-HandleT(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `h`  
- 一个句柄。  
-  
-## <a name="remarks"></a>备注  
- 第一个构造函数初始化不是对象的有效句柄的 HandleT 对象。 第二个构造函数根据参数创建一个新的 HandleT 对象`h`。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+);
+
+HandleT(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*  
+句柄。
+
+## <a name="remarks"></a>备注
+
+第一个构造函数初始化**HandleT**不是有效的句柄到对象的对象。 第二个构造函数创建一个新**HandleT**对象从参数*h*。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows 支持类 (ATL) |Microsoft 文档
+title: Windows 支持类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2095e5141dfdd320bae0e7aa69ffd4b3c9fe9a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40521ce5b7ec192781e1496590fdd42b36e132e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848384"
 ---
 # <a name="windows-support-classes"></a>Windows 支持类
-下面的类提供适用于 windows 的支持：  
+适用于 windows，以下类提供支持：  
   
--   [_U_MENUorID](../atl/reference/u-menuorid-class.md)提供的包装**CreateWindow**和**CreateWindowEx**。  
+-   [_U_MENUorID](../atl/reference/u-menuorid-class.md)提供了用于包装`CreateWindow`和`CreateWindowEx`。  
   
--   [CWindow](../atl/reference/cwindow-class.md)包含用于操作窗口的方法。 `CWindow` 是 `CWindowImpl`、`CDialogImpl` 和 `CContainedWindow` 的基类。  
+-   [CWindow](../atl/reference/cwindow-class.md)包含用于处理窗口的方法。 `CWindow` 是 `CWindowImpl`、`CDialogImpl` 和 `CContainedWindow` 的基类。  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md)实现基于新的窗口类的窗口。 此外可以子类或超类到窗口。  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md)实现基于新的窗口类的窗口。 此外允许您为子类或超类窗口。  
   
--   [CDialogImpl](../atl/reference/cdialogimpl-class.md)实现一个对话框。  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md)实现对话框。  
   
 -   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)实现承载 ActiveX 控件的对话框 （模式或无模式）。  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md)实现对话框中 （模式或无模式） 的基本功能。  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md)实现具有基本功能的对话框 （模式或无模式）。  
   
 -   [CAxWindow](../atl/reference/caxwindow-class.md)操作承载 ActiveX 控件的窗口。  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md)提供用于操作一个窗口，其中承载 ActiveX 控件，还提供的许可的 ActiveX 控件承载支持的方法。  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md)提供用于操作的窗口，承载 ActiveX 控件并具有的许可的 ActiveX 控件承载的支持方法。  
   
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)实现包含在另一个对象的窗口。  
+-   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)实现包含在另一个对象内的窗口。  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md)管理新的窗口类的信息。  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md)管理新的窗口类信息。  
   
--   [CDynamicChain](../atl/reference/cdynamicchain-class.md)支持动态链接的消息映射。  
+-   [CDynamicChain](../atl/reference/cdynamicchain-class.md)支持消息映射的动态链接。  
   
 -   [CMessageMap](../atl/reference/cmessagemap-class.md)允许对象公开其消息映射到其他对象。  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md)提供了标准化的 ATL 窗口对象的特征的简单方法。  
+-   [CWinTraits](../atl/reference/cwintraits-class.md)提供标准化的 ATL 窗口对象的特性的一个简单的方法。  
   
--   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md)提供窗口样式和用于创建窗口的扩展的样式的默认值。 添加这些值，使用逻辑 OR 运算符，为在窗口的创建过程中提供的值。  
+-   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md)提供的默认值的窗口样式和用于创建窗口的扩展的样式。 使用逻辑 OR 运算符，为在窗口的创建过程中提供的值，添加这些值。  
   
 ## <a name="related-articles"></a>相关文章  
  [ATL 窗口类](../atl/atl-window-classes.md)  

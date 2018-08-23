@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096818"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults 类
 用作模板自变量 (*TMultiple*) 到[CCommand](../../data/oledb/ccommand-class.md)创建的优化的命令时，处理单个结果集。  

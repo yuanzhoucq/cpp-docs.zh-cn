@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276625"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级 1）C4288
 使用的非标准扩展: var： 在 for 循环中声明的循环控制变量用在 for 循环范围中; 外它与外层作用域中的声明冲突  

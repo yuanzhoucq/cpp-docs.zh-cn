@@ -1,5 +1,5 @@
 ---
-title: CComHeap 类 |Microsoft 文档
+title: CComHeap 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881599"
 ---
 # <a name="ccomheap-class"></a>CComHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 COM 内存分配函数。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,15 +47,15 @@ class CComHeap : public IAtlMemMgr
 |名称|描述|  
 |----------|-----------------|  
 |[CComHeap::Allocate](#allocate)|调用此方法来分配内存块。|  
-|[Ccomheap:: Free](#free)|调用此方法以释放此内存管理器分配的内存块。|  
-|[CComHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块分配的大小。|  
+|[Ccomheap:: Free](#free)|调用此方法来释放此内存管理器分配的内存块。|  
+|[CComHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|  
 |[Ccomheap:: Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|  
   
 ## <a name="remarks"></a>备注  
- `CComHeap` 实现使用 COM 分配函数，包括内存分配函数[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)， [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)， [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)，和[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)。 最大可分配的内存量等同于**INT_MAX** (2147483647) 字节。  
+ `CComHeap` 实现内存分配函数使用 COM 分配函数，包括[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)， [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)， [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)，以及[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)。 最大可分配的内存量等于 INT_MAX (2147483647) 字节。  
   
 ## <a name="example"></a>示例  
- 请参阅示例[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
+ 有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IAtlMemMgr`  
@@ -72,7 +73,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBytes`  
+ *nBytes*  
  新内存块中请求的字节数。  
   
 ### <a name="return-value"></a>返回值  
@@ -84,32 +85,32 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
  使用实现[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)。  
   
 ##  <a name="free"></a>  Ccomheap:: Free  
- 调用此方法以释放此内存管理器分配的内存块。  
+ 调用此方法来释放此内存管理器分配的内存块。  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。  
   
 ### <a name="remarks"></a>备注  
  使用实现[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)。  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
- 调用此方法以获取此内存管理器分配的内存块分配的大小。  
+ 调用此方法以获取此内存管理器分配的内存块的分配的大小。  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向此内存管理器以前分配的内存的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回以字节为单位分配的内存块的大小。  
+ 以字节为单位返回已分配的内存块的大小。  
   
 ### <a name="remarks"></a>备注  
  使用实现[IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)。  
@@ -122,10 +123,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `p`  
+ *p*  
  指向此内存管理器以前分配的内存的指针。  
   
- `nBytes`  
+ *nBytes*  
  新内存块中请求的字节数。  
   
 ### <a name="return-value"></a>返回值  

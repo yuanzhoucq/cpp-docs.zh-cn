@@ -1,5 +1,5 @@
 ---
-title: 重写说明符 （c + + 组件扩展） |Microsoft 文档
+title: 重写说明符 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71cafe3d73204b6a318e731d0a95f2dfcc73fa5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600118"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>重写说明符（C++ 组件扩展）
-*重写说明符*修改如何继承的类型和继承类型成员在派生类型中的行为。  
-  
-## <a name="all-runtimes"></a>所有运行时  
- **备注**  
-  
- 有关重写说明符的详细信息，请参阅：  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [新 (新 vtable 中的槽）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   [重写说明符和本机编译](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
-  
- `abstract` 和 `sealed` 也对类型声明有效，在类型声明中它们不用作重写说明符。  
-  
- 有关显式重写基类函数的信息，请参阅[显式重写](../windows/explicit-overrides-cpp-component-extensions.md)。  
-  
-## <a name="windows-runtime"></a>Windows 运行时  
- (此语言功能没有只适用于 Windows 运行时的备注。）  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
-  
-## <a name="common-language-runtime"></a>公共语言运行时  
- （此语言功能没有只适用于公共运行时的备注。）  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
-  
-## <a name="see-also"></a>请参阅  
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+
+*重写说明符*修改如何继承的类型和继承类型成员在派生类型中的行为。
+
+## <a name="all-runtimes"></a>所有运行时
+
+### <a name="remarks"></a>备注
+
+有关重写说明符的详细信息，请参阅：
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [新 (新 vtable 中的槽）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- [重写说明符和本机编译](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
+
+**抽象**并**密封**也是有效的在类型声明，它们不用作重写说明符。
+
+有关显式重写基类函数的信息，请参阅[显式重写](../windows/explicit-overrides-cpp-component-extensions.md)。
+
+## <a name="windows-runtime"></a>Windows 运行时
+
+(此语言功能没有只适用于 Windows 运行时的备注。）
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/ZW`
+
+## <a name="common-language-runtime"></a>公共语言运行时
+
+（此语言功能没有只适用于公共运行时的备注。）
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/clr`
+
+## <a name="see-also"></a>请参阅
+
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsingImpl 类 |Microsoft 文档
+title: IPerPropertyBrowsingImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9fffd6151405eaf53e99f770281139d7664b01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883100"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 类
-此类实现**IUnknown**和允许客户端访问的对象的属性页中的信息。  
+此类实现`IUnknown`和允许客户端访问对象的属性页中的信息。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,8 +46,8 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IPerPropertyBrowsingImpl`。  
+ *T*  
+ 您的类，派生自`IPerPropertyBrowsingImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -54,16 +55,16 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
   
 |名称|描述|  
 |----------|-----------------|  
-|[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|检索用于描述给定的属性的字符串。|  
-|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|检索与给定的属性可以接受的值相对应的字符串数组。|  
-|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|检索**VARIANT**包含由给定的 DISPID 标识属性的值。 与从检索此字符串名称关联的 DISPID 是`GetPredefinedStrings`。 ATL 实现返回**E_NOTIMPL**。|  
+|[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|检索描述某一给定的属性的字符串。|  
+|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|检索与给定的属性可接受的值相对应的字符串数组。|  
+|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|检索包含由给定 DISPID 标识属性的值的变量。 使用从检索的字符串名称关联的 DISPID 是`GetPredefinedStrings`。 ATL 实现返回 E_NOTIMPL。|  
 |[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|检索与给定属性相关联的属性页的 CLSID。|  
   
 ## <a name="remarks"></a>备注  
- [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432)接口允许客户端访问的对象的属性页中的信息。 类`IPerPropertyBrowsingImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
+ [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432)接口允许客户端访问对象的属性页中的信息。 类`IPerPropertyBrowsingImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
 > [!NOTE]
->  如果你使用 Microsoft Access 作为容器应用程序，你必须派生您的类从`IPerPropertyBrowsingImpl`。 否则，访问将不会加载你的控件。  
+>  如果使用的 Microsoft Access 作为容器应用程序，您必须派生您的类从`IPerPropertyBrowsingImpl`。 否则，访问不会加载您的控件。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -76,7 +77,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
  **标头：** atlctl.h  
   
 ##  <a name="getdisplaystring"></a>  IPerPropertyBrowsingImpl::GetDisplayString  
- 检索用于描述给定的属性的字符串。  
+ 检索描述某一给定的属性的字符串。  
   
 ```
 STDMETHOD(GetDisplayString)(
@@ -98,13 +99,13 @@ STDMETHOD(GetPredefinedStrings)(
 ```  
   
 ### <a name="return-value"></a>返回值  
- ATL 的实现[GetPredefinedValue](#getpredefinedvalue)返回**E_NOTIMPL**。  
+ ATL 的实现[GetPredefinedValue](#getpredefinedvalue)返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) Windows SDK 中。  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
- 检索**VARIANT**包含由给定的 DISPID 标识属性的值。 与从检索此字符串名称关联的 DISPID 是`GetPredefinedStrings`。  
+ 检索包含由给定 DISPID 标识属性的值的变量。 使用从检索的字符串名称关联的 DISPID 是`GetPredefinedStrings`。  
   
 ```
 STDMETHOD(GetPredefinedValue)(
@@ -114,7 +115,7 @@ STDMETHOD(GetPredefinedValue)(
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  ATL 的实现[GetPredefinedStrings](#getpredefinedstrings)检索没有相应的字符串。  
@@ -122,7 +123,7 @@ STDMETHOD(GetPredefinedValue)(
  请参阅[IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) Windows SDK 中。  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
- 检索与指定的属性相关联的属性页的 CLSID。  
+ 检索与指定的属性关联的属性页的 CLSID。  
   
 ```
 STDMETHOD(MapPropertyToPage)(

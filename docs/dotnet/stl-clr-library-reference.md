@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171817"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 STL/CLR 库是子集的一种封装的 c + + 标准库，以用于 c + + 和.NET Framework 公共语言运行时 (CLR)。 与 STL/CLR，可以使用所有容器、 迭代器和的托管环境中的标准库的算法。  

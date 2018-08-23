@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Iidcount 常量 |Microsoft 文档'
+title: 'Implementshelper:: Iidcount 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b96165b045c44f4b15b09d6a5c48da14b7e96be
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575849"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 常量
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="remarks"></a>备注  
- 保存当前的实现对象中的实现接口 Id 的数量。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [ImplementsHelper 结构](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="remarks"></a>备注
+
+存储在当前实现的接口 Id 的数目`Implements`对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ImplementsHelper 结构](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

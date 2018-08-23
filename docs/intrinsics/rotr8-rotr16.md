@@ -1,5 +1,5 @@
 ---
-title: _rotr8、 _rotr16 |Microsoft 文档
+title: _rotr8，_rotr16 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca8c9bddac3f9e1a34d9b1a430cb97da86c40865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539968"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8、_rotr16
 **Microsoft 专用**  
@@ -56,8 +57,8 @@ unsigned short _rotr16(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_rotr8`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotr16`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr8`|x86、 ARM、 x64|  
+|`_rotr16`|x86、 ARM、 x64|  
   
  **标头文件** \<intrin.h >  
   
@@ -107,5 +108,5 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 **结束 Microsoft 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [_rotl8、 _rotl16](../intrinsics/rotl8-rotl16.md)   
+ [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

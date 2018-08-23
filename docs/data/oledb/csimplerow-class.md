@@ -1,5 +1,5 @@
 ---
-title: CSimpleRow 类 |Microsoft 文档
+title: CSimpleRow 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,54 +9,150 @@ f1_keywords:
 - CSimpleRow
 - ATL::CSimpleRow
 - ATL.CSimpleRow
+- CSimpleRow::AddRefRow
+- AddRefRow
+- ATL.CSimpleRow.AddRefRow
+- ATL::CSimpleRow::AddRefRow
+- CSimpleRow.AddRefRow
+- CSimpleRow.Compare
+- CSimpleRow::Compare
+- CSimpleRow
+- ATL::CSimpleRow::CSimpleRow
+- CSimpleRow.CSimpleRow
+- ATL.CSimpleRow.CSimpleRow
+- CSimpleRow::CSimpleRow
+- ATL::CSimpleRow::ReleaseRow
+- CSimpleRow::ReleaseRow
+- ReleaseRow
+- CSimpleRow.ReleaseRow
+- ATL.CSimpleRow.ReleaseRow
+- CSimpleRow.m_dwRef
+- CSimpleRow::m_dwRef
+- CSimpleRow::m_iRowset
+- CSimpleRow.m_iRowset
 dev_langs:
 - C++
 helpviewer_keywords:
 - CSimpleRow class
+- AddRefRow method
+- Compare method
+- CSimpleRow class, constructor
+- ReleaseRow method
+- m_dwRef
+- m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68f1983eaad36494892c9a18dcb2dbebe2da1f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572138"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
-提供的默认实现中使用行句柄， [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)类。  
+提供的行控点，在中使用的默认实现[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)类。  
   
 ## <a name="syntax"></a>语法
 
 ```cpp
 class CSimpleRow  
 ```  
-  
+
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
+
 ## <a name="members"></a>成员  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[AddRefRow](../../data/oledb/csimplerow-addrefrow.md)|将引用计数添加到现有行句柄。|  
-|[Compare](../../data/oledb/csimplerow-compare.md)|比较两个行，以查看它们是否引用相同的行实例。|  
-|[CSimpleRow](../../data/oledb/csimplerow-csimplerow.md)|构造函数。|  
-|[ReleaseRow](../../data/oledb/csimplerow-releaserow.md)|释放行。|  
+|[AddRefRow](#addrefrow)|将引用计数添加到现有的行控点。|  
+|[Compare](#compare)|比较两个行，以查看它们是否引用同一个行实例。|  
+|[CSimpleRow](#csimplerow)|构造函数。|  
+|[ReleaseRow](#releaserow)|释放行。|  
   
 ### <a name="data-members"></a>数据成员  
   
 |||  
 |-|-|  
-|[m_dwRef](../../data/oledb/csimplerow-m-dwref.md)|为存在的行句柄的引用计数。|  
-|[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)|表示光标的行集的索引。|  
+|[m_dwRef](#dwref)|为现有的行句柄的引用计数。|  
+|[m_iRowset](#irowset)|表示光标的行集的索引。|  
   
 ## <a name="remarks"></a>备注  
- 在逻辑上是结果行的唯一标记的行句柄。 `IRowsetImpl` 创建一个新`CSimpleRow`为每个行中请求[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 此外可以在按原样的默认模板自变量替换为您自己的行句柄，实现`IRowsetImpl`。 从而替换此类的唯一要求是能够提供接受类型的单个参数的构造函数替换类**长**。  
+ 行控点在逻辑上就结果行的唯一标记。 `IRowsetImpl` 创建一个新`CSimpleRow`为每个行中请求[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 因为它的默认模板自变量也可以使用的行控点，您自己的实现替换`IRowsetImpl`。 到替换此类的唯一要求是能够提供接受类型的单个参数的构造函数替换类**长**。  
+
+## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+将引用计数添加到现有的行控点，以线程安全的方式。  
   
-## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+### <a name="syntax"></a>语法  
+  
+```cpp
+DWORD AddRefRow();  
+```  
+
+## <a name="compare"></a> Csimplerow:: Compare
+比较两个行，以查看它们是否引用同一个行实例。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+HRESULT Compare(CSimpleRow* pRow);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *pRow*  
+ 一个指向`CSimpleRow`对象。  
+  
+### <a name="return-value"></a>返回值  
+ HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程序员参考*有关其他可能的返回值。 
+
+## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+构造函数。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+CSimpleRow(DBCOUNTITEM iRowsetCur);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *iRowsetCur*  
+ [in]当前行集的索引。  
+  
+### <a name="remarks"></a>备注  
+ 集[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)到*iRowsetCur*。 
+
+## <a name="releaserow"></a> Csimplerow:: Releaserow
+释放行以线程安全的方式。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+DWORD ReleaseRow();  
+```  
+
+## <a name="dwref"></a> Csimplerow:: M_dwref
+为现有的行句柄的引用计数。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+DWORD m_dwRef;  
+```  
+
+## <a name="irowset"></a> Csimplerow:: M_irowset
+表示光标的行集的索引。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp
+KeyType m_iRowset;  
+```  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   

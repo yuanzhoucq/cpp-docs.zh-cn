@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: lock 方法 |Microsoft 文档'
+title: 'Mutex:: lock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600868"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
-等到当前对象或与指定句柄，关联的互斥体对象释放互斥体，或指定的超时间隔已过去。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `milliseconds`  
- 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。  
-  
- `h`  
- 互斥体对象的句柄。  
-  
-## <a name="return-value"></a>返回值  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>请参阅
- [Mutex 类](../windows/mutex-class1.md)
+
+等到当前对象或**互斥体**与指定句柄，互斥体或指定的超时间隔已过的版本关联的对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>参数
+
+*毫秒*  
+超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
+
+*h*  
+句柄**互斥体**对象。
+
+## <a name="return-value"></a>返回值
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+[Mutex 类](../windows/mutex-class1.md)

@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957293"
 ---
 # <a name="timebase-class"></a>time_base 类
 
-一种充当模板类 time_get 的 facet 基类的类，用于仅定义枚举的类型 **dateorder** 以及此类型的几个常量。
+此类用作定义枚举的类型的模板类 time_get 的 facet 基类`dateorder`和此类型的多个常量。
 
 ## <a name="syntax"></a>语法
 
@@ -47,15 +48,15 @@ public:
 
 每个常量以不同的方式对日期组件进行排序。 这些常量包括：
 
-- **no_order**：指示没有特定顺序。
+- `no_order` 指定没有特定的顺序。
 
-- **dmy**：指示顺序为日月年，例如，2 日，12 月，1979 年。
+- `dmy` 指定顺序为日月，月，然后如下所示 2 年 12 月 1979 年。
 
-- **dmy**：指示顺序为月日年，例如，12 月2 号，1979 年。
+- `mdy` 指定订购月份，一天，然后如下所示年 12 月 2 号，1979 年。
 
-- **ymd**：指示顺序为年月日，例如 1979/12/2。
+- `ymd` 指定订购年，月，然后一天，如 1979年/12/2 中所示。
 
-- **ydm**：指示顺序为年日月，例如，1979 年，2 日，12 月。
+- `ydm` 指定订单的年份，一天，然后如下所示 1979年: 2 年 12 月。
 
 ## <a name="requirements"></a>要求
 

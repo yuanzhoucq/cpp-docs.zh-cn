@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorViewIterator 类 |Microsoft 文档
+title: Platform::Collections::VectorViewIterator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f7894710957994faadcb22753c1fca389a13506
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597717"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 类
-为派生自 Windows 运行时的对象提供标准模板库迭代器`IVectorView`接口。  
+为对象派生自 Windows 运行时提供的标准模板库迭代器`IVectorView`接口。  
   
  `ViewVectorIterator` 是存储 `VectorProxy<T>`类型的元素的代理迭代器。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
@@ -119,7 +120,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator\*运算符
 检索对当前 VectorViewIterator 指定的元素的引用。  
   
 ### <a name="syntax"></a>语法  
@@ -336,7 +337,7 @@ inline VectorViewIterator<T> operator+
 ### <a name="return-value"></a>返回值  
  在第一个语法中，引用偏移当前 VectorViewIterator 指定偏移量处的元素的 VectorViewIterator。  
   
- 在第二个语法中，引用参数的开始位置指定的偏移量处的元素的 VectorViewIterator `i`。  
+ 在第二个语法中，从参数的开始位置引用指定偏移量处的元素的 VectorViewIterator `i`。  
   
 
 
@@ -395,7 +396,7 @@ explicit VectorViewIterator(
  IVectorView\<T > 对象。  
   
 ### <a name="remarks"></a>备注  
- 第一个语法示例是默认构造函数。 第二个语法示例是用于从 IVectorView 构造 VectorViewIterator 的显式构造函数\<T > 对象。  
+ 第一个语法示例是默认构造函数。 第二个语法示例是用来构造从 IVectorView VectorViewIterator 的显式构造函数\<T > 对象。  
   
 
   

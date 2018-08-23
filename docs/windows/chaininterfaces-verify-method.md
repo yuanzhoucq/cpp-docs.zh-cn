@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Verify 方法 |Microsoft 文档'
+title: 'Chaininterfaces:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6dbc595714cbecf2ad13db13051866e31e5ebcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581053"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
-验证模板参数 `I0` 到 `I9` 定义的每个接口是否继承自 IUnknown 和/或 IInspectable，以及验证 `I0` 是否继承自 `I1` 到 `I9`。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-WRL_NOTHROW __forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>备注  
- 如果验证操作失败，则 `static_assert` 将发出描述失败的错误消息。  
-  
-## <a name="remarks"></a>备注  
- 模板参数 `I0` 和 `I1` 为必需，参数 `I2` 到 `I9` 为可选。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [ChainInterfaces 结构](../windows/chaininterfaces-structure.md)
+
+验证每个接口定义的模板参数*I0*通过*I9*继承`IUnknown`和/或`IInspectable`，以及*I0*继承*I1*通过*I9*。
+
+## <a name="syntax"></a>语法
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+## <a name="remarks"></a>备注
+
+如果验证操作失败， **static_assert**发出描述失败的错误消息。
+
+模板参数*I0*并*I1*是必需的并且参数*I2*通过*I9*都是可选的。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[ChainInterfaces 结构](../windows/chaininterfaces-structure.md)

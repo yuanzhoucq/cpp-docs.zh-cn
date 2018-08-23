@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241218"
 ---
 # <a name="compiler-error-c2912"></a>编译器错误 C2912
 显式专用化“declaration”不是函数模板的专用化  

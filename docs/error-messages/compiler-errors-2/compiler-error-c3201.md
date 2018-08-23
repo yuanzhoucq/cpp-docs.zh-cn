@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254994"
 ---
 # <a name="compiler-error-c3201"></a>编译器错误 C3201
 类模板“template”的模板参数列表与模板参数“template”的模板参数列表不匹配  

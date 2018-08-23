@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381246"
 ---
 # <a name="spin-button-member-functions"></a>调节钮成员函数
 有几个成员函数可用于数值调节钮控件 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 使用这些函数可更改数值调节钮的以下特性。  

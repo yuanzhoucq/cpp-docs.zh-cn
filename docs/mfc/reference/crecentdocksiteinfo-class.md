@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae0a967fc8be50ec6b777cf5513543e0e2aecde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078995"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 `CRecentDockSiteInfo`类是存储最近状态信息的帮助器类[CPane 类](../../mfc/reference/cpane-class.md)。  
@@ -111,7 +112,7 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -134,7 +135,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -148,7 +149,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -162,7 +163,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -176,7 +177,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -190,7 +191,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -213,7 +214,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -227,7 +228,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -243,9 +244,9 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CList<HWND`  
- [in] `lstOrg`  
- [in] `bForSlider`  
+ [in]*CList < HWND*  
+ [in]*lstOrg*  
+ [in]*bForSlider*  
   
 ### <a name="remarks"></a>备注  
   
@@ -259,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bForSlider`  
- [in] `srcInfo`  
+ [in]*bForSlider*  
+ [in]*srcInfo*  
   
 ### <a name="remarks"></a>备注  
   
@@ -274,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRecentContainer`  
- [in] `pTabbedBar`  
+ [in]*pRecentContainer*  
+ [in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   

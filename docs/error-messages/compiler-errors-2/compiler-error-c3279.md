@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256817"
 ---
 # <a name="compiler-error-c3279"></a>编译器错误 C3279
 不允许对在 cli 命名空间中声明的类模板进行部分专用化、显式专用化和显式实例化  

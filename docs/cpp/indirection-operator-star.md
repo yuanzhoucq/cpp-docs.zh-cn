@@ -1,5 +1,5 @@
 ---
-title: '间接寻址运算符: * |Microsoft 文档'
+title: '间接寻址运算符: * |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409122"
 ---
 # <a name="indirection-operator-"></a>间接寻址运算符：*
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 * cast-expression  
 ```  
   
 ## <a name="remarks"></a>备注  
- 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 使用**\*** 运算符在此上下文中的是不同于其含义与二元运算符，后者是乘法。  
+ 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 利用**\*** 运算符在此上下文中的是不同于其含义为二元运算符，后者是乘法。  
   
  如果操作数指向函数，则结果是函数指示符。 如果它指向存储位置，则结果是指定存储位置的左值。  
   
  可以累计使用间接寻址运算符来取消引用指向指针的指针。 例如：  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  

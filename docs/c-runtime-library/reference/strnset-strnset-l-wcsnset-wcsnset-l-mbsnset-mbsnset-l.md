@@ -75,11 +75,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451623"
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -150,7 +151,7 @@ unsigned char *_mbsnset_l(
 
 **_wcsnset**和 **_mbsnset**宽字符及多字节字符版本的 **_strnset**。 字符串自变量和返回值 **_wcsnset**是宽字符字符串; 而的 **_mbsnset**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-**_mbsnset**验证其参数中; 如果*str*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsnset**返回 NULL 并设置**errno**到**EINVAL**。 **_strnset**和 **_wcsnset**不会验证其参数。
+**_mbsnset**验证其参数中; 如果*str*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsnset**返回**NULL**和设置**errno**到**EINVAL**。 **_strnset**和 **_wcsnset**不会验证其参数。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

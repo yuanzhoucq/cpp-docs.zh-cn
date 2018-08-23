@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692621"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 本主题介绍如何创建基于代理的基本应用程序。 在本演练中，你可以创建以异步方式从文本文件中读取数据的代理。 应用程序使用 adler-32 校验和算法来计算该文件的内容的校验和。  

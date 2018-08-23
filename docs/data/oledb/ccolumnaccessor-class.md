@@ -1,5 +1,5 @@
 ---
-title: CColumnAccessor 类 |Microsoft 文档
+title: CColumnAccessor 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341057"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 类
 生成注入的使用者代码。  
@@ -39,19 +40,19 @@ class CColumnAccessor : public CAccessorBase
   
  `CColumnAccessor` 可实现以下存根方法，每个方法在功能上对应于其他访问器类方法：  
   
--   `CColumnAccessor` 构造函数;实例化和初始化`CColumnAccessor`对象。  
+-   `CColumnAccessor` 构造函数;实例化并初始化`CColumnAccessor`对象。  
   
--   `CreateAccessor` 为列绑定结构分配内存和初始化列数据成员。  
+-   `CreateAccessor` 列绑定结构分配内存并初始化列数据成员。  
   
--   **BindColumns**将列绑定到访问器。  
+-   `BindColumns` 将列绑定到访问器。  
   
--   **SetParameterBuffer**为参数分配缓冲区。  
+-   `SetParameterBuffer` 为参数分配缓冲区。  
   
 -   `AddParameter` 将参数项添加到参数项结构。  
   
--   **HasOutputColumns**确定访问器是否有输出列  
+-   `HasOutputColumns` 确定访问器是否有输出列  
   
--   **HasParameters**确定访问器是否有参数。  
+-   `HasParameters` 确定访问器是否有参数。  
   
 -   `BindParameters` 将创建的参数绑定到列。  
   

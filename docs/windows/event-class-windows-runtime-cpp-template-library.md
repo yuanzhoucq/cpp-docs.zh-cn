@@ -1,5 +1,5 @@
 ---
-title: Event 类 （Windows 运行时 c + + 模板库） |Microsoft 文档
+title: Event 类 （Windows 运行时 c + + 模板库） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b40e9c5e04c21cdbcc56581e02751edc84e4617d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606284"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event 类（Windows 运行时 C++ 模板库）
-表示一个事件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-class Event : public HandleT<HandleTraits::EventTraits>;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[Event::Event 构造函数（Windows 运行时 C++ 模板库）](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化 Event 类的新实例。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[Event::operator= 运算符](../windows/event-operator-assign-operator.md)|指定对当前 Event 实例的指定 Event 引用。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `HandleT`  
-  
- `Event`  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)
+
+表示一个事件。
+
+## <a name="syntax"></a>语法
+
+```cpp
+class Event : public HandleT<HandleTraits::EventTraits>;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[Event::Event 构造函数（Windows 运行时 C++ 模板库）](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化的新实例**事件**类。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[Event::operator= 运算符](../windows/event-operator-assign-operator.md)|指定将分配**事件**对当前引用**事件**实例。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`HandleT`
+
+`Event`
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)

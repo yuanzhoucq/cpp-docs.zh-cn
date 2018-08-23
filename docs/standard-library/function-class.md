@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959922"
 ---
 # <a name="function-class"></a>function 类
 
@@ -88,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`Fty` 要包装的函数类型。
+*Fty*要包装的函数类型。
 
-`Ax` 分配器函数中。
+*Ax*分配器函数。
 
 ## <a name="remarks"></a>备注
 
@@ -163,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-`_Func` 可调用对象。
+*_Func*可调用对象。
 
-`_Fnref` 包含可调用对象引用包装器。
+*_Fnref*包含可调用对象的引用包装器。
 
-`Ax` 分配器对象。
+*Ax*分配器对象。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数使用作为 `operand` 传递的可调用对象替换由 `*this` 保留的`callable object`。 两者都使用分配器对象 `Ax` 分配存储。
+每个成员函数使用作为 `operand` 传递的可调用对象替换由 `*this` 保留的`callable object`。 同时分配与分配器对象的存储空间*Ax*。
 
 ## <a name="function"></a>  function::function
 
@@ -198,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-`right` 要复制的函数对象。
+*右*要复制的函数对象。
 
-`Fx` 可调用对象的类型。
+*Fx*可调用对象的类型。
 
-`_Func` 要包装的可调用对象。
+*_Func*要包装的可调用对象。
 
-`Alloc` 分配器类型中。
+*分配*的分配器类型。
 
-`Ax` 分配器。
+*Ax*分配器。
 
-`_Fnref` 要包装的可调用对象引用。
+*_Fnref*要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
 
@@ -294,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>备注
 
-仅当对象不为空时，运算符才返回一个可转换为 `bool` 的值，且该值为 true。 可将它用于测试对象是否为空。
+该运算符返回可转换为值**bool**仅当该对象不为空，则返回 true 值。 可将它用于测试对象是否为空。
 
 ### <a name="example"></a>示例
 
@@ -339,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>参数
 
-`TN` 第 n 个类型调用自变量。
+*TN*第 n 个调用参数的类型。
 
-`tN` 第 n 个调用自变量。
+*tN*第 n 个调用参数。
 
 ### <a name="remarks"></a>备注
 
@@ -390,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>参数
 
-`npc` Null 指针常量。
+*npc* null 指针常量。
 
-`right` 要复制的函数对象。
+*右*要复制的函数对象。
 
-`fn` 要包装的可调用对象。
+*fn*要包装的可调用对象。
 
-`fnref` 要包装的可调用对象引用。
+*fnref*要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
 
@@ -505,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要交换的函数对象。
+*右*要交换的函数对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数在 `*this` 和 `right` 之间交换目标对象。 它定时执行此操作且不引发异常。
+成员函数交换目标对象之间`*this`并*右*。 它定时执行此操作且不引发异常。
 
 ### <a name="example"></a>示例
 
@@ -566,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>参数
 
-`Fty2` 要测试的目标可调用对象类型。
+*Fty2*要测试的目标可调用对象类型。
 
 ### <a name="remarks"></a>备注
 
-类型 `Fty2` 必须对参数类型 `T1, T2, ..., TN` 和返回类型 `Ret` 可调用。 如果 `target_type() == typeid(Fty2)`，则成员模板函数返回目标对象的地址；否则返回 0。
+类型*Fty2*必须是可调用的参数类型`T1, T2, ..., TN`和返回类型`Ret`。 如果 `target_type() == typeid(Fty2)`，则成员模板函数返回目标对象的地址；否则返回 0。
 
-对于类型 `Fty2, T1, T2, ..., TN` 的各自的左值 `fn, t1, t2, ..., tN`，如果 `INVOKE(fn, t1, t2, ..., tN)` 格式标准，并且如果 `Ret` 并非 `void` 且可转换为 `Ret`，则类型 `Fty2` 对于参数类型 `T1, T2, ..., TN` 和返回类型 `Ret` 可调用。
+一种类型*Fty2*是可调用的参数类型`T1, T2, ..., TN`和返回类型`Ret`当对于左值`fn, t1, t2, ..., tN`类型的`Fty2, T1, T2, ..., TN`分别`INVOKE(fn, t1, t2, ..., tN)`而言格式是否正确，并且在`Ret`不是**void**且可转换为`Ret`。
 
 ### <a name="example"></a>示例
 

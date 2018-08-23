@@ -1,5 +1,5 @@
 ---
-title: Win32 预定义符号 |Microsoft 文档
+title: Win32 预定义的符号 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8578692701d6f9037ed40ed9ece34c79ca7f2275
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592783"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 预定义符号
-在 Win32 标头文件中，定义了这些符号和它们支持标准 Windows 应用程序功能和操作。 这些符号主要用于公共用户界面元素。 当你正在使用资源编辑器中的控件时，这些符号将出现在[属性窗口](/visualstudio/ide/reference/properties-window)与公共控件关联。 例如，如果您的工具栏上应显示应用程序图标，该图标可以为与属性窗口中的符号 IDI_SMALL 相关联。  
-  
-|||  
-|-|-|  
-|IDABORT|控制: 对话框的中止按钮|  
-|IDC_STATIC|在对话框中的控件： 静态文本|  
-|IDCANCEL|控制: 对话框的取消按钮|  
-|IDD_ABOUTBOX|有关对话框中的对话框： 产品|  
-|IDI_PROJECTNAME|图标: 当前项目图标|  
-|IDI_SMALL|图标： 当前项目小图标|  
-|IDIGNORE|用于对话框上的忽略按钮的控件：|  
-|IDM_ABOUT|菜单项： 用于帮助...有关...|  
-|IDM_EXIT|与文件一起使用菜单项:...退出...|  
-|IDNO|控制： 对话框中没有按钮|  
-|IDOK|控件： 对话框确定按钮|  
-|IDRETRY|控制: 对话框的重试按钮|  
-|IDS_APP_TITLE|字符串： 当前应用程序名称|  
-|IDYES|控制： 对话框中是按钮|  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [预定义的符号 Id](../windows/predefined-symbol-ids.md)   
- [符号：资源标识符](../windows/symbols-resource-identifiers.md)
+
+Win32 头文件中定义了这些符号，并且它们支持标准的 Windows 应用程序功能和操作。 这些符号主要用于公共用户界面元素。 当您正在使用资源编辑器中的控件时，这些符号将出现在[属性窗口](/visualstudio/ide/reference/properties-window)与公共控件相关联。 例如，如果您的工具栏应显示应用程序图标，图标将与关联的符号 IDI_SMALL 中**属性窗口**。
+
+|||
+|-|-|
+|IDABORT|控件: 对话框的中止按钮|
+|IDC_STATIC|在对话框中的控件： 静态文本|
+|IDCANCEL|控件: 对话框的取消按钮|
+|IDD_ABOUTBOX|关于对话框的对话框： 产品|
+|IDI_PROJECTNAME|图标: 当前项目图标|
+|IDI_SMALL|图标： 当前项目小图标|
+|IDIGNORE|使用忽略按钮的对话框上使用控件：|
+|IDM_ABOUT|菜单项： 用于帮助...有关...|
+|IDM_EXIT|与文件一起使用的菜单项:...退出...|
+|IDNO|控制： 对话框中的按钮|
+|IDOK|控件： 对话框确定按钮|
+|IDRETRY|控件: 对话框的重试按钮|
+|IDS_APP_TITLE|字符串： 当前应用程序名称|
+|IDYES|是按钮控件: 对话框|
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[预定义的符号 ID](../windows/predefined-symbol-ids.md)  
+[符号：资源标识符](../windows/symbols-resource-identifiers.md)

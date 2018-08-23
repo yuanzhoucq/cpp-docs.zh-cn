@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367961"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 显式链接到 DLL 调用的进程[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出的函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用作为参数的 DLL 模块句柄 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 采用的所需的函数名称到调用或函数的导出序号。  

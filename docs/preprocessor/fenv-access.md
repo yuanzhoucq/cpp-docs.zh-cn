@@ -1,5 +1,5 @@
 ---
-title: fenv_access |Microsoft 文档
+title: fenv_access |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540550"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-禁用 (**上**) 或启用 (**关闭*) 可更改浮点环境优化，标记测试和模式更改。
+禁用 (**上**) 或启用 (**关闭**) 可能会更改的浮点环境的优化标志测试和模式更改。
 
 ## <a name="syntax"></a>语法
 
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>备注
 
-默认情况下， **fenv_access**是**关闭**。 如果编译器可以假设你的代码不会访问或操作浮点的环境中，则它可以执行许多浮点代码优化。 设置**fenv_access**到**上**以告知编译器你的代码访问的浮点环境来测试状态标志，例外情况之外，或设置控件模式的标志。 编译器将禁用这些优化，以便你的代码可以访问的浮点环境一致。 
+默认情况下**fenv_access**是**关闭**。 如果编译器可以假设你的代码不会访问或处理浮点环境，则它可以执行很多的浮点代码优化。 设置**fenv_access**到**上**以告知编译器你的代码访问的浮点环境来测试状态标志，例外情况，或设置控制模式标志。 编译器禁用这些优化，以便你的代码可以一致地访问浮点环境。 
 
-浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
+有关浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
 
-类型的一些优化功能，都可能会**fenv_access**是：
+类型的优化，受到**fenv_access**是：
 
 - 全局公共子表达式消除
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="examples"></a>示例
 
-此示例将设置**fenv_access**到**上**设置 24 位精度的浮点控制寄存器：
+此示例设置**fenv_access**到**上**设置 24 位精度的浮点控制寄存器：
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -84,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-如果注释掉`#pragma fenv_access (on)`从上面的示例中，请注意，输出不同由于编译器执行编译时计算，这个过程未使用的控件模式。
+如果注释掉`#pragma fenv_access (on)`从上面的示例中，请注意，输出是不同，因为编译器执行编译时计算，不使用的控件模式。
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930538"
 ---
 # <a name="menus-and-resources-container-additions"></a>菜单和资源：容器添加
 此文章介绍了需要的菜单和可视化编辑的容器应用程序中的其他资源进行的更改。  
@@ -66,27 +67,27 @@ ms.lasthandoff: 05/04/2018
   
 |Id|键|类型|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
- 第二项更改是创建新的快捷键对应表对应于为就地激活创建新的菜单资源。 此表具有除文件和窗口菜单项**VK_ESCAPE**上文条目中。 下面的示例是在就地激活 MFC 示例中创建的快捷键对应表[容器](../visual-cpp-samples.md):  
+ 第二项更改是创建新的快捷键对应表对应于为就地激活创建新的菜单资源。 此表具有除了上文 VK_ESCAPE 条目中的文件和窗口菜单项。 下面的示例是在就地激活 MFC 示例中创建的快捷键对应表[容器](../visual-cpp-samples.md):  
   
 |Id|键|类型|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|Ctrl+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|Ctrl+O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|Ctrl+S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|Ctrl+P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_FILE_NEW|Ctrl+N|**VIRTKEY**|  
+|ID_FILE_OPEN|Ctrl+O|**VIRTKEY**|  
+|ID_FILE_SAVE|Ctrl+S|**VIRTKEY**|  
+|ID_FILE_PRINT|Ctrl+P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> 容器应用程序的添加的字符串表  
  更改到容器应用程序的字符串表中的大多数对应中所述的额外的菜单项[容器菜单添加](#_core_container_menu_additions)。 提供显示每个菜单项时，状态栏中显示的文本。 例如，下面是应用程序向导生成的字符串表条目：  
   
 |Id|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE 初始化失败。 请确保 OLE 库的正确版本。|  
-|**IDP_FAILED_TO_CREATE**|无法创建对象。 请确保在系统注册表中，输入对象。|  
+|IDP_OLE_INIT_FAILED|OLE 初始化失败。 请确保 OLE 库的正确版本。|  
+|IDP_FAILED_TO_CREATE|无法创建对象。 请确保在系统注册表中，输入对象。|  
   
 ## <a name="see-also"></a>请参阅  
  [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)   

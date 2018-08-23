@@ -1,5 +1,5 @@
 ---
-title: 调用示例： 函数原型和调用 |Microsoft 文档
+title: 调用示例： 函数原型和调用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fcfda308ed3a5723b32729e7986a7063e9928fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f9ee05b55a0945d18e78dc67df5653c06c8a1bc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404377"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>调用示例：函数原型和调用
 ## <a name="microsoft-specific"></a>Microsoft 专用  

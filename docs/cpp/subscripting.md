@@ -1,5 +1,5 @@
 ---
-title: 下标 |Microsoft 文档
+title: 下标 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461515"
 ---
 # <a name="subscripting"></a>下标
-下标运算符 (**[]**)，如函数调用运算符，被视为二元运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
+下标运算符 (**[]**)，如函数调用运算符被视为二进制运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何创建用于实现边界检查的 `int` 类型的矢量：  
+ 下面的示例演示如何创建类型的矢量**int**用于实现边界检查：  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>注释  
- 当 `i` 在前一个程序中达到 10 时，`operator[]` 将检测是否在使用超出边界的下标并发出错误消息。  
+ 当`i`达到在前面的程序中，10 **operator []** 检测越界下标正在使用，并发出一条错误消息。  
   
- 请注意，函数 `operator[]` 将返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。  
+ 请注意，该函数**operator []** 返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。  
   
 ## <a name="see-also"></a>请参阅  
  [运算符重载](../cpp/operator-overloading.md)

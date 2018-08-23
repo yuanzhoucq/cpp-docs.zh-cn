@@ -13,11 +13,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 23a93f90488e56436a8f185d7b4f12218a93a321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a354a5f7792d85d1d6c5dc02aa1174efae716a73
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963727"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedef
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="istringstream"></a>  istringstream
 
-创建专用于 `char` 模板参数的类型 `basic_istringstream`。
+创建类型`basic_istringstream`专用于**char**模板参数。
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -37,11 +38,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_istringstream](../standard-library/basic-istringstream-class.md) 的同义词，专用于 `char` 类型的元素。
+该类型是模板类的同义词[basic_istringstream](../standard-library/basic-istringstream-class.md)，专用于类型的元素**char**。
 
 ## <a name="ostringstream"></a>  ostringstream
 
-创建专用于 `char` 模板参数的类型 `basic_ostringstream`。
+创建类型`basic_ostringstream`专用于**char**模板参数。
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -49,11 +50,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 的同义词，专用于 `char` 类型的元素。
+该类型是模板类的同义词[basic_ostringstream](../standard-library/basic-ostringstream-class.md)，专用于类型的元素**char**。
 
 ## <a name="stringbuf"></a>  stringbuf
 
-创建专用于 `char` 模板参数的类型 `basic_stringbuf`。
+创建类型`basic_stringbuf`专用于**char**模板参数。
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -61,11 +62,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 的同义词，专用于 `char` 类型的元素。
+该类型是模板类的同义词[basic_stringbuf](../standard-library/basic-stringbuf-class.md)，专用于类型的元素**char**。
 
 ## <a name="stringstream"></a>  stringstream
 
-创建专用于 `char` 模板参数的类型 `basic_stringstream`。
+创建类型`basic_stringstream`专用于**char**模板参数。
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -73,11 +74,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_stringstream](../standard-library/basic-stringstream-class.md) 的同义词，专用于 `char` 类型的元素。
+该类型是模板类的同义词[basic_stringstream](../standard-library/basic-stringstream-class.md)，专用于类型的元素**char**。
 
 ## <a name="wistringstream"></a>  wistringstream
 
-创建专用于 `wchar_t` 模板参数的类型 `basic_istringstream`。
+创建类型`basic_istringstream`专用于**wchar_t**模板参数。
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -85,11 +86,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_istringstream](../standard-library/basic-istringstream-class.md) 的同义词，专用于 `wchar_t` 类型的元素。
+该类型是模板类的同义词[basic_istringstream](../standard-library/basic-istringstream-class.md)，专用于类型的元素**wchar_t**。
 
 ## <a name="wostringstream"></a>  wostringstream
 
-创建专用于 `wchar_t` 模板参数的类型 `basic_ostringstream`。
+创建类型`basic_ostringstream`专用于**wchar_t**模板参数。
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -97,11 +98,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 的同义词，专用于 `wchar_t` 类型的元素。
+该类型是模板类的同义词[basic_ostringstream](../standard-library/basic-ostringstream-class.md)，专用于类型的元素**wchar_t**。
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-创建专用于 `wchar_t` 模板参数的类型 `basic_stringbuf`。
+创建类型`basic_stringbuf`专用于**wchar_t**模板参数。
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -109,11 +110,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 的同义词，专用于 `wchar_t` 类型的元素。
+该类型是模板类的同义词[basic_stringbuf](../standard-library/basic-stringbuf-class.md)，专用于类型的元素**wchar_t**。
 
 ## <a name="wstringstream"></a>  wstringstream
 
-创建专用于 `wchar_t` 模板参数的类型 `basic_stringstream`。
+创建类型`basic_stringstream`专用于**wchar_t**模板参数。
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -121,7 +122,7 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>备注
 
-此类型是模板类 [basic_stringstream](../standard-library/basic-stringstream-class.md) 的同义词，专用于 `wchar_t` 类型的元素。
+该类型是模板类的同义词[basic_stringstream](../standard-library/basic-stringstream-class.md)，专用于类型的元素**wchar_t**。
 
 ## <a name="see-also"></a>请参阅
 

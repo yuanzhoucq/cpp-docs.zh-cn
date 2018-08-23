@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383219"
 ---
 # <a name="win32-internet-classes"></a>Win32 Internet 类
 MFC 包装的 Win32 Internet (WinInet) 和 ActiveX 技术，以使 Internet 编程更容易。  

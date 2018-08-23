@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929950"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程
 本文介绍了用于访问公开过程[方法](../mfc/mfc-activex-controls-methods.md)和[属性](../mfc/mfc-activex-controls-properties.md)的嵌入 ActiveX 控件。 基本上，你将执行下列步骤：  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> 项目的成员变量修改  
  添加到项目并在对话框容器中嵌入 ActiveX 控件后，项目的其他部分可以访问该。 访问控制的最简单方法是到[创建成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)的对话框类中， `CContainerDlg` （步骤 2），即包装类添加到项目中 Visual c + + 通过与同一类型。 然后可以使用成员变量在任何时访问嵌入的控件。  
   
- 当**添加成员变量**对话框中添加`m_circctl`成员变量项目，它还将添加以下行到标头文件 (。H） 的`CContainerDlg`类：  
+ 当**添加成员变量**对话框中添加*m_circctl*成员变量项目，它还将添加以下行到标头文件 (。H） 的`CContainerDlg`类：  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/04/2018
   
  若要修改控件的属性的常见位置是在`OnInitDialog`主对话框类的成员函数。 该对话框中显示，用来初始化其内容，包括其任何控件之前调用此函数。  
   
- 下面的代码示例使用`m_circctl`成员变量来修改嵌入的 Circ 控件的标题和 CircleShape 属性：  
+ 下面的代码示例使用*m_circctl*成员变量来修改嵌入的 Circ 控件的标题和 CircleShape 属性：  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

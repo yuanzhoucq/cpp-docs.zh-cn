@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846592"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 本主题提供有关升级 Visual c++ 代码的指南。 它包括获取要编译和在新版本的工具上运行的代码，以及利用新语言和 Visual Studio 功能。 本主题还包括有关将原有应用迁移到更现代的平台的信息。  

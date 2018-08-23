@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346358"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>初始化和清理文档和视图
 在对文档和视图执行以下操作后，使用下列准则进行初始化和清理：  

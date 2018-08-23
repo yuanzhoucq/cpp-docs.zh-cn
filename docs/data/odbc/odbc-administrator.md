@@ -1,5 +1,5 @@
 ---
-title: ODBC 管理器 |Microsoft 文档
+title: ODBC 管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,42 +22,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b214ba3513f95533e3892fb93ad9298c44415d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340519"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理器
-ODBC 管理器注册和配置[数据源](../../data/odbc/data-source-odbc.md)供你在本地或通过网络。 向导使用提供由 ODBC 管理器的信息来创建你的用户连接到数据源的应用程序中的代码。  
+ODBC 管理器注册和配置[数据源](../../data/odbc/data-source-odbc.md)可供你在本地或网络中。 向导使用提供的 ODBC 管理器中的信息连接到数据源的用户在应用程序中创建的代码。  
   
- 若要设置适用于 MFC ODBC 类或 MFC 数据访问对象 (DAO) 类 ODBC 数据源，必须先注册并配置数据源。 使用 ODBC 管理器添加和删除数据源。 具体取决于 ODBC 驱动程序，你还可以创建新的数据源。  
+ 若要设置 ODBC 数据源与 MFC ODBC 类或 MFC 数据访问对象 (DAO) 类配合使用，必须先注册并配置数据源。 使用 ODBC 管理器添加和删除数据源。 具体取决于 ODBC 驱动程序，还可以创建新的数据源。  
   
- ODBC 管理器安装在安装过程中。 如果你选择了**自定义**安装，但未选择任何中的 ODBC 驱动程序**数据库选项**对话框中，你需要运行安装程序以安装所需的文件。  
+ ODBC 管理器安装在安装过程中。 如果选择了**自定义**安装，但未选择任何中的 ODBC 驱动程序**数据库选项**对话框中，您需要运行安装程序以安装所需的文件。  
   
- 安装过程中，选择你想要安装的 ODBC 驱动程序。 你可以更高版本安装的附加驱动程序附带有 Visual c + + 使用 Visual c + + 安装程序。  
+ 安装过程中，选择你想要安装的 ODBC 驱动程序。 更高版本可以安装其他驱动程序随 Visual c + + 使用 Visual c + + 安装程序。  
   
- 如果你想要安装 ODBC 驱动程序不是随 Visual c + +，必须运行安装程序随附的驱动程序。  
+ 如果你想要使用 Visual c + + 安装的 ODBC 驱动程序不提供，必须运行安装程序附带驱动程序。  
   
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要使用 Visual c + + 安装 ODBC 驱动程序附带  
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要使用 Visual c + + 安装附带的 ODBC 驱动程序  
   
-1.  从 Visual c + + 分发光盘上运行安装程序。  
+1.  从您的 Visual c + + 分发 CD 运行安装程序。  
   
-     打开安装程序中的对话框时显示。  
+     打开安装程序中的对话框时，会显示。  
   
-2.  单击**下一步**上每个对话框中，直到你达到**安装选项**对话框。 选择**自定义**，然后单击`Next`。  
+2.  单击**下一步**上每个对话框中，直到达到**安装选项**对话框。 选择**自定义**，然后单击**下一步**。  
   
-3.  清除所有复选框**Microsoft Visual c + + 安装程序**对话框中，除**数据库选项**复选框，并依次**详细信息**以显示**数据库选项**对话框。  
+3.  清除所有复选框**Microsoft Visual c + + 安装程序**除对话框**数据库选项**复选框，然后依次**详细信息**显示**数据库选项**对话框。  
   
-4.  清除**Microsoft 数据访问对象**复选框，选择**Microsoft ODBC 驱动程序**复选框，并依次**详细信息**。  
+4.  清除**Microsoft 数据访问对象**复选框，选中**Microsoft ODBC 驱动程序**复选框，然后依次**详细信息**。  
   
      **Microsoft ODBC 驱动程序**对话框随即出现。  
   
-5.  选择你想要安装，，然后单击的驱动程序**确定**两次。  
+5.  选择你想要安装，然后单击的驱动程序**确定**两次。  
   
-6.  单击**下一步**上剩余的对话框中，以开始安装。 安装完成后，安装程序将通知您。  
+6.  单击**下一步**上其余对话框以开始安装。 安装完成后，安装程序将通知你。  
   
- 当安装驱动程序时，你可以配置数据源使用 ODBC 管理器。 在控制面板中，将找到 ODBC 图标。  
+ 当安装驱动程序时，可以配置使用 ODBC 管理器的数据源。 在控制面板中，您会发现的 ODBC 图标。  
   
 ## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

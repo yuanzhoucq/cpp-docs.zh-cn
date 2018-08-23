@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226942"
 ---
 # <a name="compiler-error-c2612"></a>编译器错误 C2612
 尾随 char 非法基/成员初始值设定项列表中  

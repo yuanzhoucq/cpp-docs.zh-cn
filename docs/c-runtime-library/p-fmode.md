@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389831"
 ---
 # <a name="pfmode"></a>__p__fmode
 指向 `_fmode` 全局变量，该变量为文件 I/O 操作指定默认的*文件转换模式*。  

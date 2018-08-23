@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686277"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 函数
 **Omp_in_parallel**如果调用在并行并行区域执行的动态范围内，函数将返回一个非零值; 否则，它将返回 0。 格式如下所示：  

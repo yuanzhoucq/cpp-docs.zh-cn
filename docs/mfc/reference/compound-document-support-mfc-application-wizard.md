@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368304"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 应用程序向导的复合文档支持
 在 MFC 应用程序向导的此页中，指示你的应用程序提供的复合和活动文档支持级别。 你的应用程序必须支持文档/视图体系结构，以支持复合文档和文档模板。  

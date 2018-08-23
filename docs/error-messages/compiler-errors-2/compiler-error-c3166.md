@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247701"
 ---
 # <a name="compiler-error-c3166"></a>编译器错误 C3166
 指针： 不能将内部 __gc 指针指向的指针声明为 type 的成员  

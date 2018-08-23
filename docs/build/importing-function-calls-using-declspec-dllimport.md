@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368530"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入函数调用
 下面的代码示例演示如何使用 **_declspec(dllimport)** 若要将函数调用从 DLL 导入到应用程序。 假定`func1`是驻留在单独的.exe 文件中包含的 DLL 函数**主要**函数。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373096"
 ---
 # <a name="structure-of-a-library"></a>库结构
 库包含 COFF 对象。 库中的对象包含函数和程序中的其他对象可以从外部引用的数据。 有时，库中的对象称为库成员。  

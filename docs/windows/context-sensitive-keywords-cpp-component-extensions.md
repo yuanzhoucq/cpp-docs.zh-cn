@@ -1,5 +1,5 @@
 ---
-title: 上下文相关的关键字 （c + + 组件扩展） |Microsoft 文档
+title: 上下文相关关键字 （c + + 组件扩展） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,93 +17,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605234"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
-*上下文相关的关键字*是只能在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
-  
-## <a name="all-runtimes"></a>所有运行时  
- **备注**  
-  
- 下面是区上下文关键字的列表：  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
-  
--   [event](../windows/event-cpp-component-extensions.md)  
-  
--   [finally](../dotnet/finally.md)  
-  
--   [for each, in](../dotnet/for-each-in.md)  
-  
--   [initonly](../dotnet/initonly-cpp-cli.md)  
-  
--   `internal`   
-  
--   [文本](../windows/literal-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [属性](../windows/property-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   `where` (属于[泛型](../windows/generics-cpp-component-extensions.md))  
-  
- 出于可读性目的，你可能想要限制区分上下文关键字作为用户定义符号的使用。  
-  
-## <a name="windows-runtime"></a>Windows 运行时  
- **备注**  
-  
- （此功能没有特定于平台的备注。）  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/ZW**  
-  
-## <a name="common-language-runtime"></a>公共语言运行时 
- **备注**  
-  
- （此功能没有特定于平台的备注。）  
-  
-### <a name="requirements"></a>要求  
- 编译器选项： **/clr**  
-  
-### <a name="examples"></a>示例  
- **示例**  
-  
- 下面的代码示例显示，在合适的上下文中，`property` 区分上下文关键字可用来定义属性和变量。  
-  
-```  
-// context_sensitive_keywords.cpp  
-// compile with: /clr  
-public ref class C {  
-   int MyInt;  
-public:  
-   C() : MyInt(99) {}  
-  
-   property int Property_Block {   // context-sensitive keyword  
-      int get() { return MyInt; }  
-   }  
-};  
-  
-int main() {  
-   int property = 0;               // variable name  
-   C ^ MyC = gcnew C();  
-   property = MyC->Property_Block;  
-   System::Console::WriteLine(++property);  
-}  
-```  
-  
- **输出**  
-  
-```Output  
-100  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+
+*上下文相关的关键字*是仅在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
+
+## <a name="all-runtimes"></a>所有运行时
+
+### <a name="remarks"></a>备注
+
+下面是区上下文关键字的列表：
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [delegate](../windows/delegate-cpp-component-extensions.md)
+
+- [event](../windows/event-cpp-component-extensions.md)
+
+- [finally](../dotnet/finally.md)
+
+- [for each, in](../dotnet/for-each-in.md)
+
+- [initonly](../dotnet/initonly-cpp-cli.md)
+
+- `internal`
+
+- [文本](../windows/literal-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [属性](../windows/property-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- `where` (属于[泛型](../windows/generics-cpp-component-extensions.md))
+
+出于可读性目的，你可能想要限制区分上下文关键字作为用户定义的符号的使用。
+
+## <a name="windows-runtime"></a>Windows 运行时
+
+### <a name="remarks"></a>备注
+
+（此功能没有特定于平台的备注。）
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/ZW`
+
+## <a name="common-language-runtime"></a>公共语言运行时
+
+### <a name="remarks"></a>备注
+
+（此功能没有特定于平台的备注。）
+
+### <a name="requirements"></a>要求
+
+编译器选项：`/clr`
+
+### <a name="examples"></a>示例
+
+下面的代码示例演示在适当的上下文中，**属性**上下文相关关键字可用于定义属性和变量。
+
+```cpp
+// context_sensitive_keywords.cpp
+// compile with: /clr
+public ref class C {
+   int MyInt;
+public:
+   C() : MyInt(99) {}
+
+   property int Property_Block {   // context-sensitive keyword
+      int get() { return MyInt; }
+   }
+};
+
+int main() {
+   int property = 0;               // variable name
+   C ^ MyC = gcnew C();
+   property = MyC->Property_Block;
+   System::Console::WriteLine(++property);
+}
+```
+
+```Output
+100
+```
+
+## <a name="see-also"></a>请参阅
+
+[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

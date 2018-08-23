@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348630"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>创建工具栏的方法
 MFC 提供用于创建工具栏的两个类： [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) （其包装 Windows 公共控件 API）。 `CToolBar` 提供的所有功能的工具栏公共控件，并它为你; 处理许多必需的常用控制设置和结构但是，生成可执行文件通常将大于使用创建的`CToolBarCtrl`。  

@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965872"
 ---
 # <a name="slice-class"></a>slice 类
 
@@ -145,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>参数
 
-`_StartIndex` Valarray 的子集中的第一个元素的索引。
+*_StartIndex*的子集中的第一个元素的 valarray 索引。
 
-`_Len` 子集中的元素数目。
+*_Len*的子集中的元素数。
 
-`stride` 子集中的元素之间的距离。
+*stride*的子集中的元素之间的距离。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数对于起始索引存储为 `_StartIndex`，对于总长度存储为 `_Len`，对于跨距存储为 `stride`。
+默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储 *_StartIndex*对于起始索引 *_Len*对于总长度，并*stride*对于跨距。
 
 ### <a name="remarks"></a>备注
 

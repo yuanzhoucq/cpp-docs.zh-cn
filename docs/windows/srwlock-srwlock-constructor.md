@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Srwlock 构造函数 |Microsoft 文档'
+title: 'Srwlock:: Srwlock 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51bbd331c240079ccbb241aa970e99dd5c7d79ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2972938b28f2a5bef9fdc648591cea3101d5e7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597905"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock 构造函数
-初始化 SRWLock 类的新实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-SRWLock();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [SRWLock 类](../windows/srwlock-class.md)
+
+初始化的新实例**SRWLock**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+SRWLock();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[SRWLock 类](../windows/srwlock-class.md)

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458909"
 ---
 # <a name="compiler-error-c3533"></a>编译器错误 C3533
 type: 参数不能具有包含 auto 的类型  
@@ -32,21 +33,21 @@ type: 参数不能具有包含 auto 的类型
 1.  删除`auto`从参数声明的关键字。  
   
 ## <a name="example"></a>示例  
- 下面的示例会产生 C3535，因为它声明的函数参数`auto`关键字和它进行编译的 **/zc: auto**。  
+ 下面的示例生成 C3533，因为它声明的函数参数`auto`关键字和它进行编译的 **/zc: auto**。  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例会产生 C3535，因为它声明的模板参数`auto`关键字和它进行编译的 **/zc: auto**。  
+ 下面的示例在 C + + 14 模式下生成 C3533，因为它声明的模板参数`auto`关键字和它进行编译的 **/zc: auto**。（在 C + + 17，这是具有单个非类型模板参数推导其类型的类模板的有效定义。）
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>请参阅  

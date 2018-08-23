@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929807"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 本文描述了 ActiveX 控件绘制进程，以及如何改变绘制代码来优化过程。 (请参阅[优化控件绘制](../mfc/optimizing-control-drawing.md)为技术如何优化绘制但不使控件单独还原以前选定的 GDI 对象。 绘制所有控件之后，容器可以自动还原原始对象。）  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 控件绘制进程  
  在最初显示或重新绘制 ActiveX 控件时，它们遵循与其他使用 MFC 开发的应用程序一样的绘制过程，但有一个重要区别：ActiveX 控件可以处于活动或非活动状态。  
   
- 活动控件在 ActiveX 控件容器中通过一个子窗口表示。 与其他窗口一样，当接收到 `WM_PAINT` 消息时，活动控件负责绘制自身。 控件的基类， [COleControl](../mfc/reference/colecontrol-class.md)，来处理此消息在其`OnPaint`函数。 此默认实现调用您的控件的 `OnDraw` 函数。  
+ 活动控件在 ActiveX 控件容器中通过一个子窗口表示。 像其他窗口中，它负责接收 WM_PAINT 消息时绘制自身。 控件的基类， [COleControl](../mfc/reference/colecontrol-class.md)，来处理此消息在其`OnPaint`函数。 此默认实现调用您的控件的 `OnDraw` 函数。  
   
  非活动控件绘制方式有所不同。 当控件处于不活动状态时，其窗口也是不可见或不存在的，因此它无法接收绘制消息。 相反，控件容器将直接调用控件的 `OnDraw` 函数。 这与活动控件的绘图过程的不同之处在于：绝不调用 `OnPaint` 成员函数。  
   
@@ -62,12 +63,12 @@ ms.lasthandoff: 05/04/2018
   
  ActiveX 控件绘制的默认实现将绘制整个控件区域。 这对于简单控件已经足够，但在很多情况下，如果只重新绘制需要更新的部分而非整个控件，则重新绘制控件会更快。  
   
- `OnDraw` 函数通过传递 `rcInvalid`（需要重新绘制的控件的矩形区域）提供一种简单的优化方法。 使用这个通常小于整个控件区域的区域来加速绘制过程。  
+ `OnDraw`函数提供了一种优化简单方法，通过传递*rcInvalid*，需要重新绘制的控件的矩形区域。 使用这个通常小于整个控件区域的区域来加速绘制过程。  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> 绘制控件使用图元文件  
- 在大多数情况下，`pdc` 函数的 `OnDraw` 参数指向屏幕设备上下文 (DC)。 但是，在打印控件图像期间或在打印预览会话期间，接收的用于渲染的 DC 是称为“图元文件 DC”的特殊类型。 与立即处理发送给它的请求的屏幕 DC不同，图元文件 DC 会存储请求以在稍后处理。 在设计模式中，一些容器应用程序还可能选择使用图元文件 DC 渲染控件图像。  
+ 在大多数情况下*pdc*参数`OnDraw`函数指向屏幕设备上下文 (DC)。 但是，在打印控件图像期间或在打印预览会话期间，接收的用于渲染的 DC 是称为“图元文件 DC”的特殊类型。 与立即处理发送给它的请求的屏幕 DC不同，图元文件 DC 会存储请求以在稍后处理。 在设计模式中，一些容器应用程序还可能选择使用图元文件 DC 渲染控件图像。  
   
- 可以容器可以通过两个接口函数发出图元文件绘制请求： **iviewobject:: Draw** （调用此函数可以还进行绘制图元文件） 和**idataobject:: Getdata**。 MFC 框架时的图元文件 DC 作为其中一个参数传递，将调用[colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)。 由于这是一个虚拟成员函数，因此请在控件类中重写此函数以执行任何特殊处理。 默认行为将调用 `COleControl::OnDraw`。  
+ 可以容器可以通过两个接口函数发出图元文件绘制请求： `IViewObject::Draw` （调用此函数可以还进行绘制图元文件） 和`IDataObject::GetData`。 MFC 框架时的图元文件 DC 作为其中一个参数传递，将调用[colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)。 由于这是一个虚拟成员函数，因此请在控件类中重写此函数以执行任何特殊处理。 默认行为将调用 `COleControl::OnDraw`。  
   
  若要确保能在屏幕和图元文件设备上下文中绘制控件，则必须仅使用在屏幕 DC 和图元文件 DC 中均支持的成员函数。 请注意，坐标系不能以像素为单位测量。  
   
@@ -75,11 +76,11 @@ ms.lasthandoff: 05/04/2018
   
 |Arc|BibBlt|Chord|  
 |---------|------------|-----------|  
-|**椭圆**|**Esc 键**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**多边形**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/04/2018
   
  不会记录在图元文件的函数是： [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect)， [DrawIcon](../mfc/reference/cdc-class.md#drawicon)， [DrawText](../mfc/reference/cdc-class.md#drawtext)， [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)， [FillRect](../mfc/reference/cdc-class.md#fillrect)， [FrameRect](../mfc/reference/cdc-class.md#framerect)， [GrayString](../mfc/reference/cdc-class.md#graystring)， [InvertRect](../mfc/reference/cdc-class.md#invertrect)， [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)，和[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)。 由于图元文件 DC 实际上与设备无关，因此您不能将 SetDIBits、GetDIBits 和 CreateDIBitmap 用于图元文件 DC。 您可以将 SetDIBitsToDevice 和 StretchDIBits 与用作目标的图元文件 DC 一起使用。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)， [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)，和[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)没有意义与图元文件 DC。  
   
- 在使用图元文件 DC 时要考虑的另一点是坐标系不能以像素为单位测量。 出于此原因，所有绘制代码应进行调整以适合在矩形中传递给`OnDraw`中`rcBounds`参数。 因为 `rcBounds` 表示控件窗口的大小，所以这可防止在控件外部意外绘制。  
+ 在使用图元文件 DC 时要考虑的另一点是坐标系不能以像素为单位测量。 出于此原因，所有绘制代码应进行调整以适合在矩形中传递给`OnDraw`中*rcBounds*参数。 这可以防止控件外部意外绘制，因为*rcBounds*表示控件的窗口的大小。  
   
  在实现了控件的图元文件渲染之后，请使用测试容器测试图元文件。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。  
   

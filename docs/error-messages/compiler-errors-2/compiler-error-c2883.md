@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244942"
 ---
 # <a name="compiler-error-c2883"></a>编译器错误 C2883
 name： 函数声明与由使用声明引入的 identifier 冲突  

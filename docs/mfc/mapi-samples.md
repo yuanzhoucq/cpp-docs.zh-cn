@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344112"
 ---
 # <a name="mapi-samples"></a>MAPI 示例
 请参见以下演示 Microsoft 消息处理应用程序编程接口 (MAPI) 功能的示例程序：  

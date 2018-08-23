@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686810"
 ---
 # <a name="c1-notation"></a>C.1 表示法
 语法规则包含非-终端，该名称后接冒号，在单独的行上其后替换的替代项。  

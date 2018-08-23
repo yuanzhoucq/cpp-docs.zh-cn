@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462246"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 C++ 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  
   
 ## <a name="uses-for-smart-pointers"></a>智能指针的使用  
- 智能指针中定义`std`中的命名空间[\<内存 >](../standard-library/memory.md)标头文件。 它们是至关重要的[RAII](../cpp/objects-own-resources-raii.md)或*获取资源即初始化*编程惯用法。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。  
+ 在中定义智能指针`std`中的命名空间[\<内存 >](../standard-library/memory.md)标头文件。 它们是至关紧要[RAII](../cpp/objects-own-resources-raii.md)或*获取资源即初始化*的编程惯例。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。  
   
  大多数情况下，当初始化原始指针或资源句柄以指向实际资源时，会立即将指针传递给智能指针。 在现代 C++ 中，原始指针仅用于范围有限的小代码块、循环或者性能至关重要且不会混淆所有权的 Helper 函数中。  
   
@@ -45,11 +46,11 @@ ms.lasthandoff: 05/03/2018
   
  此示例演示如何使用智能指针执行以下关键步骤。  
   
-1.  将智能指针声明为一个自动（局部）变量。 （不要对智能指针本身使用 `new` 或 `malloc` 表达式。）  
+1.  将智能指针声明为一个自动（局部）变量。 (不使用**新**或`malloc`智能指针本身在表达式中的。)  
   
 2.  在类型参数中，指定封装指针的指向类型。  
   
-3.  在智能指针构造函数中将原始指针传递至 `new` 对象。 （某些实用工具函数或智能指针构造函数可为你执行此操作。）  
+3.  传递到原始指针**新**-ed 智能指针构造函数中的对象。 （某些实用工具函数或智能指针构造函数可为你执行此操作。）  
   
 4.  使用重载的 `->` 和 `*` 运算符访问对象。  
   
@@ -75,12 +76,12 @@ ms.lasthandoff: 05/03/2018
      只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。  替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 C++ 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。  
   
 -   `shared_ptr`   
-     采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 shared_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)和[shared_ptr 类](../standard-library/shared-ptr-class.md)。  
+     采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 shared_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)并[shared_ptr 类](../standard-library/shared-ptr-class.md)。  
   
 -   `weak_ptr`   
-    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用共享 weak_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)和[weak_ptr 类](../standard-library/weak-ptr-class.md)。  
+    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用共享 weak_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)并[weak_ptr 类](../standard-library/weak-ptr-class.md)。  
   
- **智能指针的 COM 对象 （经典 Windows 编程）**  
+ **COM 对象 （经典 Windows 编程） 的智能指针**  
  当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。  
   
  [CComPtr 类](../atl/reference/ccomptr-class.md)  
@@ -105,7 +106,7 @@ ms.lasthandoff: 05/03/2018
  通过转移副本所有权增强唯一所有权的智能指针。 等同于已弃用的 `std::auto_ptr` 类。  
   
  [CHeapPtr 类](../atl/reference/cheapptr-class.md)  
- 通过使用 C 分配的对象的智能指针[malloc](../c-runtime-library/reference/malloc.md)函数。  
+ 通过使用 C 分配对象的智能指针[malloc](../c-runtime-library/reference/malloc.md)函数。  
   
  [CAutoVectorPtr 类](../atl/reference/cautovectorptr-class.md)  
  使用 `new[]` 分配的数组的智能指针。  

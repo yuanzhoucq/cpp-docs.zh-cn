@@ -1,5 +1,5 @@
 ---
-title: tile_static 关键字 |Microsoft 文档
+title: tile_static 关键字 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461870"
 ---
 # <a name="tilestatic-keyword"></a>tile_static 关键字
-`tile_static` 关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。  
+**Tile_static**关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。  
   
- `tile_static` 关键字具有下列限制：  
+ **Tile_static**关键字具有以下限制：  
   
 -   它只能对具有 `restrict(amp)` 修饰符的函数中的变量使用。  
   
 -   它不能对作为指针或引用类型的变量使用。  
   
--   `tile_static` 变量不能具有初始值设定项。 不会自动调用默认构造函数和析构函数。  
+-   一个**tile_static**变量不能具有初始值设定项。 不会自动调用默认构造函数和析构函数。  
   
--   未初始化的 `tile_static` 变量的值是不确定的。  
+-   未初始化的值**tile_static**变量是未定义。  
   
--   如果在产生于对 `tile_static` 的非平铺调用的调用关系图中声明 `parallel_for_each` 变量，则将生成警告并且变量的行为是不确定的。  
+-   如果**tile_static**通过非平铺调用取得 root 权限的调用关系图中声明变量`parallel_for_each`、 生成警告和未定义变量的行为。  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何使用 `tile_static` 变量在一个平铺的多个线程中累积数据。  
+ 下面的示例演示如何**tile_static**变量可用于多个线程一个磁贴中累积的数据。  
   
 ```cpp  
 // Sample data:  
@@ -149,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  

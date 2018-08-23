@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonButtonsGroup 类 |Microsoft 文档
+title: CMFCRibbonButtonsGroup 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848514"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 类
 `CMFCRibbonButtonsGroup`类使您可以将一组功能区按钮组织到组。 组中的所有按钮在水平位置上直接彼此相邻并位于边框中。  
@@ -69,21 +70,21 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 |----------|-----------------|  
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|向组添加一个按钮。|  
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|向组添加的按钮的列表。|  
-|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|将指针返回到位于指定索引处的按钮。|  
+|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|返回一个指向位于指定索引处的按钮。|  
 |[CMFCRibbonButtonsGroup::GetCount](#getcount)|返回组中的按钮的数目。|  
-|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|返回功能区组中的正常图像的图像大小 (重写[cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|  
+|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|在功能区组中返回正常图像的图像大小 (重写[cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|  
 |[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|返回功能区元素的常规大小 (重写[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|  
-|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|报表是否`CMFCRibbonButtonsGroup`对象包含工具栏图像。|  
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|绘制指定的按钮，具体取决于按钮是否正常、 突出显示或已禁用的相应映像。|  
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|删除所有按钮从`CMFCRibbonButtonsGroup`对象。|  
-|[CMFCRibbonButtonsGroup::SetImages](#setimages)|将映像分配给组。|  
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|设置父`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象和在其中的所有按钮 (重写[cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|  
+|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|报告是否`CMFCRibbonButtonsGroup`对象包含工具栏图像。|  
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|绘制指定的按钮，具体取决于该按钮是否正常、 突出显示或已禁用的相应映像。|  
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|移除所有按钮从`CMFCRibbonButtonsGroup`对象。|  
+|[CMFCRibbonButtonsGroup::SetImages](#setimages)|将图像分配给组。|  
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|设置父级`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象和在其中的所有按钮 (重写[cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|  
   
 ## <a name="remarks"></a>备注  
- 组派生自[CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md)可以作为单个实体进行操作。 您可以在任何面板或弹出菜单上定位组。  
+ 组派生自[CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) ，可以作为单个实体进行操作。 可以在任何面板或弹出菜单中放置组。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCRibbonButtonsGroup`类。 该示例演示如何构造`CMFCRibbonButtonsGroup`对象、 将映像分配到的功能区按钮、 组和将按钮添加到功能区按钮的组。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何使用中的各种方法`CMFCRibbonButtonsGroup`类。 该示例演示如何构造`CMFCRibbonButtonsGroup`对象，将图像分配给功能区按钮的组并将按钮添加到功能区按钮的组。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]  
   
@@ -105,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
- 指向一个按钮来添加的指针。  
+ [in]*pButton*  
+ 一个指向用于添加的按钮。  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  向组添加的按钮的列表。  
@@ -117,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lstButtons`  
- 指向你想要添加的按钮的指针的列表。  
+ [in]*lstButtons*  
+ 指向要添加的按钮的指针的列表。  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  构造 `CMFCRibbonButtonsGroup` 对象。  
@@ -129,26 +130,26 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
- 指定用于将添加到新创建的按钮`CMFCRibbonButtonsGroup`对象。  
+ [in]*pButton*  
+ 指定要添加到新创建的按钮`CMFCRibbonButtonsGroup`对象。  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
- 将指针返回到位于指定索引处的按钮。  
+ 返回一个指向位于指定索引处的按钮。  
   
 ```  
 CMFCRibbonBaseElement* GetButton(int i) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `i`  
- 按钮以返回从零开始索引。  
+ [in]*我*  
+ 按钮可返回一个从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 指向位于指定索引处的按钮的指针。 `NULL` 如果指定的索引超出范围。  
+ 一个指向位于指定索引处的按钮。 如果指定的索引超出范围，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
   
@@ -160,7 +161,7 @@ int GetCount() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 组中的按钮数。  
+ 在组中的按钮的数目。  
   
 ##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
  检索受保护的源映像大小`CMFCToolBarImages`成员`m_Images`。  
@@ -170,27 +171,27 @@ const CSize GetImageSize() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果存在，或返回工具栏图像的源映像大小`CSize`如果不为零。  
+ 如果存在，或返回的工具栏图像，图像大小`CSize`的如果不为零。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
- 检索的功能区组元素的最大可能大小。  
+ 检索功能区组元素的最大可能大小。  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 功能区组的设备上下文的指针。  
+ [in]*pDC*  
+ 指向功能区组的设备上下文指针。  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
- 报表是否`CMFCRibbonButtonsGroup`对象包含工具栏图像。  
+ 报告是否`CMFCRibbonButtonsGroup`对象包含工具栏图像。  
   
 ```  
 BOOL HasImages() const;  
@@ -202,7 +203,7 @@ BOOL HasImages() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
- 绘制指定的按钮，具体取决于按钮是否正常、 突出显示或已禁用的相应映像。  
+ 绘制指定的按钮，具体取决于该按钮是否正常、 突出显示或已禁用的相应映像。  
   
 ```  
 virtual void OnDrawImage(
@@ -213,22 +214,22 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 指向设备上下文的指针`CMFCRibbonButtonsGroup`对象。  
+ [in]*pDC*  
+ 指向设备上下文的`CMFCRibbonButtonsGroup`对象。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  在其中绘制图像的矩形。  
   
- [in] `pButton`  
- 若要绘制图像的按钮。  
+ [in]*pButton*  
+ 要为其绘制图像按钮。  
   
- [in] `nImageIndex`  
- （在其中一个正常、 突出显示或禁用按钮三个图像数组） 的按钮上绘制的图像的索引。  
+ [in]*nImageIndex*  
+ （在一个正常、 突出显示或已禁用按钮的三个映像数组） 的按钮上绘制图像的索引。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
- 删除所有按钮从`CMFCRibbonButtonsGroup`对象。  
+ 移除所有按钮从`CMFCRibbonButtonsGroup`对象。  
   
 ```  
 void RemoveAll();
@@ -237,7 +238,7 @@ void RemoveAll();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
- 将映像分配给功能区按钮的组。  
+ 将图像分配给功能区按钮的组。  
   
 ```  
 void SetImages(
@@ -247,34 +248,34 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pImages`  
+ [in]*pImages*  
  常规映像。  
   
- [in] `pHotImages`  
- 热图。  
+ [in]*pHotImages*  
+ 热的映像。  
   
- [in] `pDisabledImages`  
- 已禁用的图像。  
+ [in]*pDisabledImages*  
+ 已禁用的映像。  
   
 ### <a name="remarks"></a>备注  
- 调用`SetImages`将按钮添加到组之前。 映像数必须大于或等于按钮添加到组的数目。  
+ 调用`SetImages`将按钮添加到组之前。 映像数量必须大于或等于的按钮添加到组的数目。  
   
 > [!NOTE]
->  热图是在用户悬停在按钮上时显示的图像。 禁用的映像会禁用该按钮时，将显示的映像。  
+>  热映像是当用户悬停在按钮上时显示的映像。 已禁用的图像是按钮处于禁用状态时显示的图像。  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
- 设置父`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象和在其中的所有按钮。  
+ 设置父级`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象和在其中的所有按钮。  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCategory`  
- 指向要设置的父类别 （中功能区控件的选项卡式的组称为类别）。  
+ [in]*pCategory*  
+ 指向要设置的父类别 （功能区控件中的选项卡式的组称为类别）。  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

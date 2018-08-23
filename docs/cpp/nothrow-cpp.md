@@ -17,17 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408061"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
 **Microsoft 专用**
 
-`__declspec` 扩展特性，可在函数声明中使用。
+一个 **__declspec**扩展的特性，可以在函数的声明中使用。
 
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="remarks"></a>备注
 
-我们建议所有新代码使用[noexcept](noexcept-cpp.md)运算符而非`__declspec(nothrow)`。
+我们建议所有新代码改用[noexcept](noexcept-cpp.md)运算符而非`__declspec(nothrow)`。
 
 此特性告知编译器，声明的函数及其调用的函数从不引发异常。  但是，它不会强制指令。 换而言之，但决不导致[std:: terminate](../standard-library/exception-functions.md#terminate)要调用与不同`noexcept`，或在**std:C++ 17模式 (Visual Studio 2017 15.5 及更高版本)， `throw()`。
 
@@ -56,7 +57,6 @@ void __stdcall f3() throw();
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
-
-[__declspec](../cpp/declspec.md)  
-[noexcept](noexcept-cpp.md)  
-[关键字](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [noexcept](noexcept-cpp.md)  
+ [关键字](../cpp/keywords-cpp.md)  

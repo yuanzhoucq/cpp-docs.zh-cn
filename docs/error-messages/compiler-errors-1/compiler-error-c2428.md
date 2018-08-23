@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223551"
 ---
 # <a name="compiler-error-c2428"></a>编译器错误 C2428
 operation： 不允许对类型为 bool 的操作数  

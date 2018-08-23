@@ -1,5 +1,5 @@
 ---
-title: 开放式数据库连接 (ODBC) |Microsoft 文档
+title: 开放式数据库连接 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: de6931db1ef8048e6f376447307beebed67aa56a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571655"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
-Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 和 SQL Server 2012 ODBC 开始是连接到 SQL 数据源的首选的方法。
+Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 截至 Visual Studio 2015 和 SQL Server 2012 ODBC 是连接到 SQL 数据源的首选的方法。
   
- 有关使用无需 MFC ODBC API 的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) MSDN 中的 SDK。  
+ 有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN 中的 SDK。  
   
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [ODBC](odbc-basics.md)-开放式数据库连接标准和 API  
+-   [ODBC](odbc-basics.md)— 开放式数据库连接标准和 API  
   
--   [哪些 MFC 支持提供](odbc-and-mfc.md)对于 ODBC 编程  
+-   [哪些 MFC 支持提供](odbc-and-mfc.md)针对 ODBC 编程  
   
 -   [ODBC 驱动程序都可用](odbc-driver-list.md)  
   
@@ -43,7 +44,7 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
   
 -   [ODBC 记录集](recordset-odbc.md)  
   
--   [SQL](sql.md)适用于 ODBC  
+-   [SQL](sql.md)用于 ODBC  
   
 -   [数据库事务](transaction-odbc.md)  
   
@@ -55,20 +56,20 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
   
 -   [批量提取记录](recordset-fetching-records-in-bulk-odbc.md)  
   
--   [自定义我记录集的 SQL 语句](sql-customizing-your-recordsets-sql-statement-odbc.md)  
+-   [自定义记录集的 SQL 语句](sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [进行直接 SQL 调用](sql-making-direct-sql-calls-odbc.md)  
+-   [执行直接 SQL 调用](sql-making-direct-sql-calls-odbc.md)  
   
--   [无需直接调用 ODBC API](odbc-calling-odbc-api-functions-directly.md)  
+-   [直接调用 ODBC API](odbc-calling-odbc-api-functions-directly.md)  
   
 -   [数据库类如何使用 MFC 文档/视图体系结构工作？](working-with-documents-and-views.md)  
   
 -   [ODBC 驱动程序列表](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>ODBC 数据库任务  
- 这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用无需 MFC ODBC API 的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK。  
+ 这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用 ODBC API 而不使用 MFC 的详细信息，请参阅[开放式数据库连接 (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK。  
   
--   [安装和开始使用 ODBC](installing-and-getting-started-with-odbc.md)  
+-   [安装并开始使用 ODBC](installing-and-getting-started-with-odbc.md)  
   
 -   [设计和创建 ODBC 数据库应用程序](design-and-create-an-odbc-database-application.md)  
   

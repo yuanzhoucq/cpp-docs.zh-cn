@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362214"
 ---
 # <a name="supporting-idispeventimpl"></a>支持 IDispEventImpl
 此模板类[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可以用于为 ATL 类中的连接点接收器提供支持。 连接点接收器允许你的类以处理从外部 COM 对象触发的事件。 这些连接点接收器使用事件接收器映射，你的类所提供的映射。  

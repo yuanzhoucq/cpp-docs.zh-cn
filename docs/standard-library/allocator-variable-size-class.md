@@ -19,15 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690be271cd7e9ad3eaf019f1feb67202c14a9e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46ba5742f6beb308ada7ed64788577768afeac60
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953096"
 ---
 # <a name="allocatorvariablesize-class"></a>allocator_variable_size 类
 
-描述一个对象，用于管理使用缓存类型为 [cache_freelist](../standard-library/cache-freelist-class.md) 的对象类型 `Type` 的存储分配和释放，其长度由 [max_variable_size](../standard-library/max-variable-size-class.md) 管理。
+描述一个对象，用于管理存储分配和释放的对象的类型*类型*使用缓存类型[cache_freelist](../standard-library/cache-freelist-class.md)长度由[max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="syntax"></a>语法
 
@@ -40,11 +41,11 @@ class allocator_variable_size;
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|由分配器分配元素类型。|
+|*类型*|由分配器分配元素类型。|
 
 ## <a name="remarks"></a>备注
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 宏将此类传递为以下语句中的 `name` 参数：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)宏将作为此类传递*名称*以下语句中的参数： `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>要求
 

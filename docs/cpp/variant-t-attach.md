@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach |Microsoft 文档
+title: _variant_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464673"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft 专用**  
   
- 将附加**VARIANT**对象插入`_variant_t`对象。  
+ 将附加`VARIANT`对象插入 **_variant_t**对象。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>参数  
  *varSrc*  
- A **VARIANT**要附加到此对象`_variant_t`对象。  
+ 一个`VARIANT`要附加到此对象 **_variant_t**对象。  
   
 ## <a name="remarks"></a>备注  
- 将获得的所有权**VARIANT**通过封装。 此成员函数释放所有现有封装**VARIANT**，然后复制提供**VARIANT**，并设置其**VARTYPE**到`VT_EMPTY`若要确保其资源仅通过释放`_variant_t`析构函数。  
+ 取得所有权的`VARIANT`通过封装。 此成员函数将释放所有现有封装`VARIANT`，然后复制提供`VARIANT`，并设置其`VARTYPE`为 VT_EMPTY 以确保其资源可以仅由发布 **_variant_t**析构函数。  
   
  **结束 Microsoft 专用**  
   

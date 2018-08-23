@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705180"
 ---
 # <a name="messagenotfound-class"></a>message_not_found 类
 此类描述消息块找不到请求的消息时引发的异常。  

@@ -1,5 +1,5 @@
 ---
-title: 疑难解答 C/c + + 独立应用程序和通过并行程序集 |Microsoft 文档
+title: 故障排除 C/c + + 独立应用程序和通过并行程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f5645270cbc8fbb71dd841cb4f1affa6bef1295
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573132"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 如果找不到依赖库，则加载 C/C++ 应用程序可能会失败。 本文介绍 C/C++ 应用程序未能加载的一些常见原因，并提供了用于解决问题的建议步骤。  
@@ -39,9 +40,9 @@ ms.lasthandoff: 05/03/2018
   
  如果应用程序部署在未安装 Visual Studio 的计算机上，并且它在出现类似于以上消息的错误消息的情况下崩溃，请检查以下内容：  
   
-1.  按照中所述的步骤[了解 Visual c + + 应用程序的依赖关系](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。  
+1.  按照中所述的步骤[了解 Visual c + + 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)。 Dependency Walker 可以显示应用程序或 DLL 的大多数依赖项。 如果观察到某些 DLL 缺失，请在尝试运行应用程序的计算机上安装它们。  
   
-2.  操作系统加载程序会使用应用程序清单加载应用程序所依赖的程序集。 清单可以作为资源嵌入在二进制文件中，或作为单独文件安装在应用程序文件夹中。 若要检查清单是否嵌入在二进制文件中，请在 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中打开二进制文件，然后在其资源列表中查找 RT_MANIFEST。 如果找不到嵌入的清单，查找具有名为类似于二进制 < 文件名 > 的文件的应用程序文件夹中。\<扩展 >.manifest。  
+2.  操作系统加载程序会使用应用程序清单加载应用程序所依赖的程序集。 清单可以作为资源嵌入在二进制文件中，或作为单独文件安装在应用程序文件夹中。 若要检查是否将清单嵌入在二进制文件，请在 Visual Studio 中打开该二进制文件并在其资源列表中查找 RT_MANIFEST。 如果找不到嵌入的清单，查找名称类似于 < 二进制 > 的文件的应用程序文件夹中。\<扩展 >.manifest。  
   
 3.  如果应用程序依赖于并行程序集，但不存在清单，则必须确保链接器为项目生成清单。 检查链接器选项**生成清单**中**项目属性**项目对话框。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  我们建议将清单嵌入在每个 DLL 中，因为在通过 `LoadLibrary` 调用加载 DLL 时会忽略外部清单。 有关详细信息，请参阅[程序集清单](http://msdn.microsoft.com/library/aa374219)。  
   
-6.  检查清单中枚举的所有程序集是否都正确安装在计算机上。 每个程序集都通过其名称、版本号和处理器体系结构在清单中进行指定。 如果你的应用程序依赖于通过并行程序集，检查这些程序集是否正确安装在计算机上，以便操作系统加载程序可以找到它们中, 所述[程序集搜索顺序](http://msdn.microsoft.com/library/aa374224)。 请记住，64 位程序集不能在 32 位进程中加载，并且不能在 32 位操作系统上执行。  
+6.  检查清单中枚举的所有程序集是否都正确安装在计算机上。 每个程序集都通过其名称、版本号和处理器体系结构在清单中进行指定。 如果你的应用程序依赖于通过并行程序集，则检查，这些程序集是否正确安装在计算机上，以便操作系统加载程序可以找到它们，如中所述[程序集搜索顺序](http://msdn.microsoft.com/library/aa374224)。 请记住，64 位程序集不能在 32 位进程中加载，并且不能在 32 位操作系统上执行。  
   
 ## <a name="example"></a>示例  
  假设我们有一个应用程序，使用 Visual c + + 生成 appl.exe。 该应用程序清单作为二进制资源 RT_MANIFEST（ID 等于 1）嵌入在 appl.exe 中，或存储为单独文件 appl.exe.manifest。 此清单的内容类似于下面这样：  
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 </assembly>  
 ```  
   
- 通过并行程序集还可以使用[发行者配置文件](http://msdn.microsoft.com/library/aa375682)-也称为策略文件-进行全局重定向应用程序和程序集而不是相同的另一个版本中使用的并行程序集的版本程序集。 可以在 %WINDIR%\WinSxS\Policies\ 文件夹中检查共享程序集的策略。 下面是一个示例策略文件：  
+ 通过并行程序集还可以使用[发行者配置文件](http://msdn.microsoft.com/library/aa375682)— 也称为策略文件，进行全局重定向应用程序和程序集而不是相同的另一个版本使用的并行程序集的版本程序集。 可以在 %WINDIR%\WinSxS\Policies\ 文件夹中检查共享程序集的策略。 下面是一个示例策略文件：  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  检查具有名称的清单文件的应用程序文件夹\<程序集名称 >.manifest。 在此示例中，加载程序尝试在包含 appl.exe 的文件夹中查找 Fabrikam.SxS.Library.manifest。 如果找到清单，则加载程序从应用程序文件夹加载程序集。 如果找不到程序集，则加载会失败。  
   
-2.  尝试打开\\< 程序集名称\>\ 文件夹中包含 appl.exe 的文件夹和如果\\< 程序集名称\>\ 存在，尝试加载具有名称的清单文件\<程序集名称 >。清单从该文件夹。 如果找到清单，则加载程序加载的程序集从\\< 程序集名称\>\ 文件夹。 如果找不到程序集，则加载会失败。  
+2.  尝试打开\\< assemblyName\>\ 文件夹中包含 appl.exe 的文件夹; 如果\\< 程序集名称\>\ 存在，尝试加载具有名称的清单文件\<程序集名称 >。清单从该文件夹。 如果找到清单，则加载程序加载程序集从\\< 程序集名称\>\ 文件夹。 如果找不到程序集，则加载会失败。  
   
  加载程序如何搜索依赖程序集的详细信息，请参阅[程序集搜索顺序](http://msdn.microsoft.com/library/aa374224)。 如果加载程序未能找到作为私有程序集的依赖程序集，则加载会失败，并显示消息“系统无法执行指定的程序”。 若要解决此错误，请确保依赖程序集（以及作为它们一部分的 DLL）作为私有或共享程序集安装在计算机上。  
   

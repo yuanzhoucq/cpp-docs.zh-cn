@@ -1,5 +1,5 @@
 ---
-title: 创建声明 / 定义 |Microsoft 文档
+title: 创建声明/定义 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331278"
 ---
 # <a name="create-declaration--definition"></a>创建声明/定义
-**新增功能：**便会立即生成的声明或定义的函数。
+功能：允许立即生成函数的声明或定义。
 
-**何时：**你具有需要 delcaration 或进行相反的转换函数。  
+时间：有需要声明的函数，反之亦然。  
 
-**原因：**你可以手动创建声明/定义，但这将创建它自动，必要时创建的标头/代码文件。
+原因：可手动创建声明/定义，但这将自动创建声明/定义，并在需要时创建头文件/代码文件。
 
 方法：
 
-1. 文本或鼠标光标置于想要创建的声明或定义的函数。
+1. 将文本或鼠标光标置于要为其创建声明或定义的函数上。
 
    ![突出显示的代码](images/createdefinition_highlight.png)
 
 1. 接下来，执行以下操作之一：
    * **键盘**
-     * 按“Ctrl+.” 向触发器**快速操作和重构**菜单，然后选择**创建声明 / 定义**从上下文菜单。
+     * 按“Ctrl+.” 触发“快速操作和重构”菜单，然后从关联菜单选择“创建声明/定义”。
    * **鼠标**
-     * 右键单击并选择**快速操作和重构**菜单，然后选择**创建声明 / 定义**从上下文菜单。
+     * 右键单击并选择“快速操作和重构”菜单，然后从关联菜单选择“创建声明/定义”。
 
-1. 将在源文件或头文件，你将看到在弹出窗口的预览窗口中创建函数的声明/定义。  如果源文件或头文件不存在，将还会创建并放在项目中。
+1. 随即在源文件或头文件中创建函数的声明/定义，并在弹出的预览窗口中显示。  如果源文件或头文件不存在，也将创建它并将其放置在项目中。
 
-   ![创建声明 / 定义导致](images/createdefinition_result.png)
+   ![“创建声明/定义”结果](images/createdefinition_result.png)

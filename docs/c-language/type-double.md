@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387338"
 ---
 # <a name="type-double"></a>类型 double
 双精度类型的双精度值具有 8 个字节。 此格式类似于浮点格式，只不过该格式具有一个 11 位 excess-1023 指数和一个 52 位尾数以及隐含的高顺序 1 位。 此格式为双精度类型提供的范围大约介于 1.7E-308 和 1.7E+308 之间。  

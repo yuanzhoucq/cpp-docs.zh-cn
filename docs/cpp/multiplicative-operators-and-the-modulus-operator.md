@@ -1,5 +1,5 @@
 ---
-title: 乘法运算符和取模运算符 |Microsoft 文档
+title: 乘法运算符和取模运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408354"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法运算符和取模运算符
 ## <a name="syntax"></a>语法  
@@ -51,17 +52,17 @@ expression % expression
   
  这些二进制运算符具有从左至右的关联性。  
   
- 乘法运算符采用算术类型的操作数。 取模运算符 (`%`) 具有更严格的要求，即其操作数必须是整型。 (若要获取浮点除法运算的余数，请使用运行时函数： [fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵盖的转换[标准转换](standard-conversions.md)适用于操作数，并且结果为已转换的类型。  
+ 乘法运算符采用算术类型的操作数。 取模运算符 (`%`) 具有更严格的要求，即其操作数必须是整型。 (若要获取浮点除法的余数，请使用运行时函数[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵盖的转换[标准转换](standard-conversions.md)适用于操作数，结果为转换的类型。  
   
  除法运算符产生的结果为将第一个操作数乘以第二个操作数所获得的结果。  
   
  除法运算符产生的结果为将第一个操作数除以第二个操作数所获得的结果。  
   
- 取模运算符产生下列表达式中，给定的余数其中*e1*是第一个操作数和*e2*是第二个： *e1* -(*e1* /  *e2*) \* *e2*，其中两个操作数都是整型。  
+ 取模运算符产生下列表达式给定的余数， *e1*是第一个操作数和*e2*是第二部分： *e1* -(*e1* /  *e2*) \* *e2*、 两个操作数均为整型。  
   
  在除法或取模表达式中被 0 除的结果是不确定的，将会导致运行时错误。 因此，以下表达式生成未定义的错误结果：  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -75,14 +76,14 @@ f / 0.0
  在 Microsoft C++ 中，取模表达式的结果的符号始终与第一个操作数的符号相同。  
   
 **结束 Microsoft 专用**  
- 如果两个整数的减法计算不准确，并且只有一个操作数为负，则结果是最大的整数（在数量级上，忽略符号），该整数小于减法运算所生成的准确值。 例如，计算的值-11 / 3 是-3.666666666。 该整数除法的结果是-3。  
+ 如果两个整数的减法计算不准确，并且只有一个操作数为负，则结果是最大的整数（在数量级上，忽略符号），该整数小于减法运算所生成的准确值。 例如，-11 的计算的值除以 3 得-3.666666666。 该整数除法运算的结果为-3。  
   
- 乘法运算符之间的关系由标识 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
+ 乘法运算符之间的关系提供由标识 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
   
 ## <a name="example"></a>示例  
- 以下程序演示乘法运算符。 请注意，其中一个操作数的`10 / 3`必须显式转换为类型`float`以避免截断，以便两个操作数的类型`float`在除法运算前。  
+ 以下程序演示乘法运算符。 请注意的其中一个操作数`10 / 3`必须显式强制转换为类型**float**若要避免截断，以便这两个操作数均为类型**float**除法运算前。  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,6 +98,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
+ [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 乘法运算符](../c-language/c-multiplicative-operators.md)

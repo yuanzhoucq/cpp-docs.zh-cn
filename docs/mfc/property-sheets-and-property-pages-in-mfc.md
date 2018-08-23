@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348601"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC 中的属性表和属性页
 属性表，也称为选项卡对话框中，是一个包含属性页的对话框。 每个属性页基于对话框模板资源，并包含控件。 它被括在页面上在顶部的选项卡。 选项卡命名属性页，并指示其用途。 用户单击要选择一组控件的属性表中的选项卡。  

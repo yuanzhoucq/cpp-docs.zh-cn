@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380545"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini 和 NMAKE
 NMAKE 读取 Tools.ini 之前它读取生成文件，除非使用 /R。 它查找 Tools.ini 首先当前目录中，然后由 INIT 环境变量指定的目录中。 NMAKE 中的设置初始化文件的部分开头`[NMAKE]`并且可以包含任何生成文件的信息。 以数字符号开头的单独的行上指定的注释 （#）。  

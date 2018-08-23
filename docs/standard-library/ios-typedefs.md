@@ -11,11 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963636"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedef
 
@@ -34,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类 [basic_ios](../standard-library/basic-ios-class.md) 的同义词，专用于具有默认字符特征的 `char` 类型的元素。
+该类型是模板类的同义词[basic_ios](../standard-library/basic-ios-class.md)，专用于类型的元素**char**具有默认字符特征。
 
 ## <a name="streamoff"></a>streamoff
 
@@ -50,7 +51,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>备注
 
-此类型为带符号整数，该整数描述的对象可存储多个流定位操作涉及的字节偏移。 它的表示形式具有至少 32 个值位。 它并不需要大得足以表示流中任意字节位置。 值 **streamoff(-1)** 通常指示错误的偏移。
+此类型为带符号整数，该整数描述的对象可存储多个流定位操作涉及的字节偏移。 它的表示形式具有至少 32 个值位。 它并不需要大得足以表示流中任意字节位置。 值`streamoff(-1)`通常表示错误的偏移。
 
 ## <a name="streampos"></a>streampos
 
@@ -133,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类 [basic_ios](../standard-library/basic-ios-class.md) 的同义词，专用于具有默认字符特征的 `wchar_t` 类型的元素。
+该类型是模板类的同义词[basic_ios](../standard-library/basic-ios-class.md)，专用于类型的元素**wchar_t**具有默认字符特征。
 
 ## <a name="wstreampos"></a>wstreampos
 

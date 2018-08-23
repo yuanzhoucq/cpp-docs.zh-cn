@@ -1,5 +1,5 @@
 ---
-title: _bstr_t 成员函数 |Microsoft 文档
+title: _bstr_t 成员函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848d4a09c0422a09d62e7e6c6e3324dd4b9d2aac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a6fd3b9959e6c029a6a0b670771e6671404739b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404130"
 ---
 # <a name="bstrt-member-functions"></a>_bstr_t 成员函数
 璝惠`_bstr_t`成员函数，请参阅[_bstr_t 类](../cpp/bstr-t-class.md)。  

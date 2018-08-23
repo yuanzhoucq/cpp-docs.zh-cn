@@ -1,5 +1,5 @@
 ---
-title: 主表达式 |Microsoft 文档
+title: 主要表达式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c419bf65a02d13359335bc6cb527fc189d596d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a178510c02cd7ae0238686c6ff6634466715ddf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408341"
 ---
 # <a name="primary-expressions"></a>主要表达式
 主表达式是更复杂的表达式的构造块。 它们是文本、名称以及范围解析运算符 (`::`) 限定的名称。  主表达式可以具有以下任一形式：  
   
 ```  
-  
-      literal  
-      this  
-:: namename( expression )  
+literal  
+this
+name  
+::name ( expression )  
 ```  
   
- A*文本*是常量主表达式。 其类型取决于其规范的形式。 请参阅[文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)有关指定文本的完整信息。  
+ 一个*文字*是常量主表达式。 其类型取决于其规范的形式。 请参阅[文字](../cpp/numeric-boolean-and-pointer-literals-cpp.md)有关指定文本的完整信息。  
   
- **这**关键字是指向类对象的指针。 它在非静态成员函数中可用，并指向为其调用函数的类的实例。 **这**关键字不能使用外部类成员函数体。  
+ **这**关键字是指向类对象的指针。 它在非静态成员函数中可用，并指向为其调用函数的类的实例。 **这**关键字不能使用外部类成员函数的主体。  
   
- 一种**这**指针`type`  **\*const** (其中`type`是类名称) 不是专门修改的函数中**此**指针。 下面的示例演示成员函数声明和类型的**这**:  
+ 类型**这**指针位于`type`  **\*const** (其中`type`是类名称) 中未特别修改函数**此**指针。 下面的示例演示成员函数声明和类型的**这**:  
   
-```  
+```cpp 
 // expre_Primary_Expressions.cpp  
 // compile with: /LD  
 class Example  
@@ -58,11 +59,9 @@ public:
   
  用括号括起的表达式是与不带括号的表达式具有相同的类型和值的主表达式。 如果不带括号的表达式是左值，则用括号括起的表达式也是左值。  
   
- 在上面，给出的主表达式语法的上下文中*名称*意味着在语法中所述的任何内容[名称](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db)，但当使用范围解析运算符之前的名称，类型的名称可仅发生类中不允许。  这包括用户定义的转换函数名称和析构函数名称。  
-  
  主表达式的示例包括：  
   
-```  
+```cpp 
 100 // literal  
 'c' // literal  
 this // in a member function, a pointer to the class instance  
@@ -72,9 +71,9 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- 下面的示例所有考虑*名称*，并以各种形式的主表达式：  
+ 下面的示例均被视为*名称*，并以各种形式的主表达式：  
   
-```  
+```cpp 
 MyClass // a identifier  
 MyClass::f // a qualified name  
 operator = // an operator function name  

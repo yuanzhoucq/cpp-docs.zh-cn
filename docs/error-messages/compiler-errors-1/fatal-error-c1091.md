@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226204"
 ---
 # <a name="fatal-error-c1091"></a>错误 C1091
 编译器限制：字符串长度超过“length”个字节  

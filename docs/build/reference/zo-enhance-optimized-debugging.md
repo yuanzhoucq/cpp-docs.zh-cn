@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380270"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo（增强优化调试）
 在非调试生成中为优化代码生成增强调试信息。  

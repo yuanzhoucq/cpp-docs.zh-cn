@@ -1,5 +1,5 @@
 ---
-title: 如何： 异常和非异常代码之间的接口 |Microsoft 文档
+title: 如何： 异常和非异常代码之间的接口 |Microsoft Docs
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407967"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间的接口
 本文介绍如何在 C++ 模块中实现一致的异常处理，以及如何在异常边界将异常和错误代码进行互相转换。  
@@ -160,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>从非异常代码调用异常代码  
@@ -193,10 +193,9 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
- 当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可为每个可能引发的特定异常提供一个 `catch` 块，并在异常转换为错误代码前执行日志记录以记录异常的详细信息。 如果多个函数都使用同一组 `catch` 块，此方法可能产生大量代码重复。 避免代码重复的一个好方法是通过将这些块重构到一个实现 `try` 和 `catch` 块并接受 `try` 块中调用的函数对象的私有实用工具函数中。 在每个公用函数中，将代码传递到实用工具函数以作为 Lambda 表达式。  
+ 当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可以提供**捕获**块为每种特定异常类型，可能会引发，并在执行日志记录以记录之前它将转换为错误代码的异常的详细信息。 如果多个函数都使用一组相同的这种方法可以创建大量代码重复**捕获**块。 避免代码重复的好方法是通过这些块重构到一个实现的私有实用工具函数**尝试**并**捕获**块并接受中调用的函数对象**尝试**块。 在每个公用函数中，将代码传递到实用工具函数以作为 Lambda 表达式。  
   
 ```cpp  
 template<typename Func>   
@@ -216,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  以下示例演示如何编写函数定义的 lambda 表达式。 如果使用 lambda 表达式将某个函数定义为“内联”，该函数通常比作为命名函数对象编写时更容易读取。  
@@ -236,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。  

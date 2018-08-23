@@ -1,5 +1,5 @@
 ---
-title: __ll_rshift |Microsoft 文档
+title: __ll_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544422"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 专用**  
   
- 第二个参数所指定的位数右移右侧的第一个参数指定的 64 位值。  
+ 第二个参数指定的位数右移由右侧的第一个参数指定的 64 位值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +41,24 @@ __int64 __ll_rshift(
   
 #### <a name="parameters"></a>参数  
  [in] `Mask`  
- 要移动到了右边的 64 位整数值。  
+ 要右移位的 64 位整数值。  
   
  [in] `nBit`  
- 要移位，模 64，在 x64 上和取模 x86 上的 32 位的数。  
+ 要切换，请取模 64 在 x64 上，并取模运算在 x86 上的 32 位的数。  
   
 ## <a name="return-value"></a>返回值  
- 掩码移动`nBit`bits。  
+ 掩码移动`nBit`位。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 如果第二个参数大于 64 x64 (32 x86 上) 上，该数字执行模 64 (在 x86 32) 来确定要位移的位数数。 `ll`前缀指示这是一个操作上`long long`、 另一名称`__int64`，64 位有符号的整型。  
+ 如果第二个参数是否大于 64 在 x64 (32 x86 上) 上，该数字执行取模 64 (在 x86 上为 32) 若要确定移动的位数编号。 `ll`前缀指示这是一个操作上`long long`，另一个名称为`__int64`，64 位有符号整数类型。  
   
 ## <a name="example"></a>示例  
   
@@ -92,7 +93,7 @@ fffffffffffffff0
  - 10  
 ```  
   
- **请注意**如果`_ull_rshift`已被使用，向右移动值 MSB 已经是零，因此所需的结果将不具有已获取对于负值。  
+ **请注意**如果`_ull_rshift`已被使用，向右移动值的 MSB 的是零，因此所需的结果将不在负值的情况下获取。  
   
 **结束 Microsoft 专用**  
   

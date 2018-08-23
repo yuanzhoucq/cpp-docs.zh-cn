@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379635"
 ---
 # <a name="managing-a-library"></a>管理库
 默认模式为 LIB 是生成或修改 COFF 对象的库。 LIB 在此模式下运行，如果不指定 /extract، （若要将对象复制到文件中） 或 /DEF （若要生成导入库）。  

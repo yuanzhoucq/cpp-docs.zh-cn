@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369846"
 ---
 # <a name="checking-for-memory-overwrites"></a>检查内存改写
 如果在堆操作函数调用中获取访问冲突，则可能你的程序损坏了堆。 将这种情况下的常见的症状：  

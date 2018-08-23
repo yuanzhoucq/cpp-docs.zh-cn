@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343277"
 ---
 # <a name="destroying-the-list-control"></a>销毁列表控件
 如果您嵌入你[CListCtrl](../mfc/reference/clistctrl-class.md)对象的视图或对话框类中，数据成员作为其所有者被销毁时，它被销毁。 如果你使用[CListView](../mfc/reference/clistview-class.md)，框架销毁控件时销毁视图。  

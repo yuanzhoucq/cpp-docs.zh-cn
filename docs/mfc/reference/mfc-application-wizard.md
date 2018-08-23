@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371998"
 ---
 # <a name="mfc-application-wizard"></a>MFC 应用程序向导
 MFC 应用程序向导生成应用程序，在编译时实现 Windows 可执行文件 (.exe) 应用程序的基本功能。 MFC 初学者应用程序包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件、 标头 (.h) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。  

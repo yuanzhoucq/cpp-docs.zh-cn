@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378517"
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)。 选项指定 EDITBIN 做的更改。  

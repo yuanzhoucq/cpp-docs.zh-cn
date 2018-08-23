@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272299"
 ---
 # <a name="compiler-error-c3859"></a>C3859
 超过了 PCH 的虚拟内存范围；请使用“-Zmvalue”或更大的命令行选项重新编译  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383587"
 ---
 # <a name="improper-access-to-a-union"></a>对联合的不正确的访问
 **ANSI 3.3.2.3** 使用不同类型的成员访问联合对象的成员  

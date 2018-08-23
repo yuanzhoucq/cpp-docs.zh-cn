@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::MapView 类 |Microsoft 文档
+title: '& 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,15 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605466"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -47,10 +48,10 @@ ref class MapView sealed;
  键值对中值的类型。  
   
  `C`  
- 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下， [std:: less\<K >](../standard-library/less-struct.md)。  
+ 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下[std:: less\<K >](../standard-library/less-struct.md)。  
   
 ### <a name="remarks"></a>备注  
- MapView 是的具体 c + + 实现[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ MapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成员  
   
@@ -93,7 +94,7 @@ virtual Windows::Foundation::Collections::IIterator<
  指定映射视图中第一个元素的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMapView->First();`。  
+ 保留 first （） 返回的迭代器的简便方法是将返回值分配为使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMapView->First();`。  
   
 
 
@@ -109,7 +110,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>参数  
  `key`  
- 用于定位 MapView 元素的键。 一种`key`名称*K*。  
+ 用于定位 MapView 元素的键。 类型`key`是 typename *K*。  
   
 ### <a name="return-value"></a>返回值  
  如果找到该键，则为 `true`；否则为 `false`。  
@@ -127,10 +128,10 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>参数  
  `key`  
- 用于定位 MapView 中的元素的键。 一种`key`名称*K*。  
+ 用于定位 MapView 中的元素的键。 类型`key`是 typename *K*。  
   
 ### <a name="return-value"></a>返回值  
- 与 `key` 配对的值。 返回值的类型是 e *V*。  
+ 与 `key` 配对的值。 返回值的类型是 typename *V*。  
   
 
 
@@ -173,7 +174,7 @@ MapView(
  用于初始化当前 MapView 的一系列元素之后的第一个元素的输入迭代器。  
   
  il  
- A [std:: initializer_list < std:: pair\<K，V >>](../standard-library/initializer-list-class.md)其元素将插入 MapView。  
+ 一个[std:: initializer_list < std:: pair\<K，V >>](../standard-library/initializer-list-class.md)其元素将插入 MapView。  
 
 
 

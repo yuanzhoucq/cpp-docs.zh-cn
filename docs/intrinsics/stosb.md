@@ -1,5 +1,5 @@
 ---
-title: __stosb |Microsoft 文档
+title: __stosb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539586"
 ---
 # <a name="stosb"></a>__stosb
 **Microsoft 专用**  
   
- 生成一个存储字符串指令 (`rep stosb`)。  
+ 生成的存储字符串指令 (`rep stosb`)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ void __stosb(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Data`  
  要存储的数据。  
@@ -53,12 +54,12 @@ void __stosb(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 结果是，字符`Data`写入到的块`Count`中的字节数`Dest`字符串。  
+ 结果是，字符`Data`写入到块`Count`中的字节`Dest`字符串。  
   
  此例程仅可用作内部函数。  
   

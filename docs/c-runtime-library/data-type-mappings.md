@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389350"
 ---
 # <a name="data-type-mappings"></a>数据类型映射
 TCHAR.H 中定义了这些数据类型映射，具体取决于程序中是否定义了常量 `_UNICODE` 或 `_MBCS`。  

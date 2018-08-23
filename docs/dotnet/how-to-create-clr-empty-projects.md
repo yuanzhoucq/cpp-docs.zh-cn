@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128509"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：创建 CLR 空项目
 若要创建 CLR 空项目时，使用**CLR 空项目**模板，可从**新项目**对话框。  

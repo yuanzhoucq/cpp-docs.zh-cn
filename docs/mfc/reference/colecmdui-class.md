@@ -1,5 +1,5 @@
 ---
-title: COleCmdUI 类 |Microsoft 文档
+title: COleCmdUI 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851467"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 类
 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget`驱动功能相关的用户界面对象的状态。  
@@ -51,16 +52,16 @@ class COleCmdUI : public CCmdUI
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|设置或清除允许命令标志。|  
-|[COleCmdUI::SetCheck](#setcheck)|设置的状态打开/关闭切换命令。|  
+|[COleCmdUI::Enable](#enable)|设置或清除启用命令标志。|  
+|[COleCmdUI::SetCheck](#setcheck)|设置打开/关闭切换状态命令。|  
 |[COleCmdUI::SetText](#settext)|返回命令的文本名称或状态字符串。|  
   
 ## <a name="remarks"></a>备注  
- 应用程序未启用为 DocObjects，当用户查看应用程序，MFC 进程中的菜单中**UPDATE_COMMAND_UI**通知。 提供每个通知[CCmdUI](../../mfc/reference/ccmdui-class.md)可以操作以反映特定命令的状态的对象。 但是，当为 DocObjects 启用你的应用程序，则 MFC 将处理**UPDATE_OLE_COMMAND_UI**通知，并将分配`COleCmdUI`对象。  
+ 应用程序中，未启用为 DocObjects，当一个应用程序，MFC 菜单中的用户视图处理 UPDATE_COMMAND_UI 通知。 提供每个通知[CCmdUI](../../mfc/reference/ccmdui-class.md)可以操作以反映特定命令的状态的对象。 但是，当 DocObjects 启用了你的应用程序，则 MFC 将处理 UPDATE_OLE_COMMAND_UI 通知，将分配`COleCmdUI`对象。  
   
- `COleCmdUI` 允许 DocObject 能够接收命令源自其容器的用户界面 （如 FileNew、 打开、 打印等），并允许容器接收源自 DocObject 的用户界面的命令。 尽管`IDispatch`无法用于调度相同的命令，`IOleCommandTarget`提供了一种更简单的方法来查询和执行，因为它依赖于一组标准的命令，通常无需自变量，以及涉及无类型信息。 `COleCmdUI` 可以用于启用、 更新和设置其他属性 DocObject 用户界面命令。 当你想要调用的命令时，调用[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。  
+ `COleCmdUI` 允许 DocObject 为接收源自其容器的用户界面 （如 filenew、 打开、 打印和等等） 中的命令，并允许容器接收源自该文档的用户界面中的命令。 尽管`IDispatch`无法用于调度相同的命令，`IOleCommandTarget`提供更简单的方法来查询和执行，因为它依赖于一组标准的命令，通常不使用参数，且涉及无类型信息。 `COleCmdUI` 可用于启用、 更新和设置其他属性 DocObject 用户界面命令。 当你想要调用的命令时，调用[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。  
   
- DocObjects 的进一步信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。 另请参阅[Internet 前几个步骤： 活动文档](../../mfc/active-documents-on-the-internet.md)和[活动文档](../../mfc/active-documents-on-the-internet.md)。  
+ DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。 另请参阅[Internet 前几个步骤： 活动文档](../../mfc/active-documents-on-the-internet.md)并[活动文档](../../mfc/active-documents-on-the-internet.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  
@@ -81,28 +82,28 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rgCmds`  
- 与给定 GUID 相关联的受支持命令的列表。 **OLECMD**结构将命令与命令标志相关联。  
+ *rgCmds*  
+ 与给定 GUID 关联的受支持命令的列表。 `OLECMD`结构将命令与命令标志相关联。  
   
  *cCmds*  
- 中的命令的计数`rgCmds`。  
+ 中的命令计数*rgCmds*。  
   
- `pGroup`  
- 指向用于标识一组命令的 GUID 的指针。  
+ *pGroup*  
+ 指向标识一系列命令的 GUID 的指针。  
   
 ### <a name="remarks"></a>备注  
- `COleCmdUI`对象提供用于更新菜单项或控件条按钮之类的 DocObject 用户界面对象的编程接口。 可以启用、 禁用、 清除通过用户界面对象和选中，`COleCmdUI`对象。  
+ `COleCmdUI`对象提供一种编程接口的更新 DocObject 如菜单项或控件条按钮的用户界面对象。 可以启用、 禁用、 清除通过用户界面对象和选中状态，`COleCmdUI`对象。  
   
 ##  <a name="enable"></a>  COleCmdUI::Enable  
- 调用此函数可设置的命令标志`COleCmdUI`对象传递给**OLECOMDF_ENABLED**，它指示接口命令是否可用并且已启用，或清除命令标志。  
+ 调用此函数可设置的命令标志`COleCmdUI`对象到 OLECOMDF_ENABLED，它指示该命令，并启用该接口，或清除命令标志。  
   
 ```  
 virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bOn`  
- 指示该命令与`COleCmdUI`对象应启用或禁用。 Nonzero 使命令;0 禁用该命令。  
+ *bOn*  
+ 指示是否使用关联的命令`COleCmdUI`对象应启用或禁用。 Nonzero 启用命令;0 会禁用此命令。  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
  调用此函数可设置的状态的打开/关闭切换命令。  
@@ -112,13 +113,13 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCheck`  
- 值，该值确定要设置开/关切换的状态命令。 值为：  
+ *n 请查看*  
+ 一个值用于确定要设置打开/关闭切换的状态命令。 值为：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**1**|将该命令设置为 on。|  
-|**2**|将该命令设置为不确定的;无法确定状态，因为此命令的属性中同时打开和关闭相关的所选内容中的状态。|  
+|**2**|将该命令设置为不确定的;无法确定状态，因为此命令的属性是在同时打开和关闭相关的所选内容中的状态。|  
 |任何其他值|设置为 off 的命令。|  
   
 ##  <a name="settext"></a>  COleCmdUI::SetText  
@@ -129,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  指向要与命令一起使用的文本的指针。  
   
 ## <a name="see-also"></a>请参阅  

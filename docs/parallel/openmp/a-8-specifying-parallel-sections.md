@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694051"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   指定并行段
 在下面的示例中，(对于[部分 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md)第 14 页上) 函数*xaxis*， *y 轴*，和*zaxis*可以并发执行。 第一个`section`指令是可选的。  请注意，所有`section`指令需要出现在词法范围内的`parallel sections`构造。  

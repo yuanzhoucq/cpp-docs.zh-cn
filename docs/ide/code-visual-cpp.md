@@ -1,5 +1,5 @@
 ---
-title: '&lt;代码&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;code&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330114"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;代码&gt;（Visual c + +）
-\<代码 > 标记提供了一个或多个行指示为代码的方法。  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+\<code> 标记可将一行或多行内容指示为代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  要标记为代码的文本。  
   
 ## <a name="remarks"></a>备注  
- 使用[ \<c >](../ide/c-visual-cpp.md)以指示的部分文本应标记为代码。  
+ 使用 [\<c>](../ide/c-visual-cpp.md) 指示部分文本应标记为代码。  
   
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   

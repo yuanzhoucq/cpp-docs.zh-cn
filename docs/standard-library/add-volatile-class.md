@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958885"
 ---
 # <a name="addvolatile-class"></a>add_volatile 类
 
-从指定类型创建可变类型。
+使**易失性**从指定的类型的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +44,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>备注
 
-`add_volatile<T>` 的实例具有成员 typedef `type`，如果 *T* 为引用、函数或可变限定类型时，则为 *T*，否则为 `volatile` *T*。别名 `add_volatile_t` 是访问成员 typedef `type` 的快捷方式。
+实例`add_volatile<T>`有一个成员**typedef** `type`即*T*如果*T*为引用、 函数或可变限定类型，否则为**可变** *T*。别名`add_volatile_t`是访问成员的快捷方式**typedef** `type`。
 
 ## <a name="example"></a>示例
 

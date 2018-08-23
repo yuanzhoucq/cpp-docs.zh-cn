@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Marshaller_ 数据成员 |Microsoft 文档'
+title: 'Ftmbase:: Marshaller_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27c94442c8b64a635439f42208d0b7b0d1876da1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596417"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ 数据成员
-保存到自由线程封送处理程序的引用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** ftm.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [FtmBase 类](../windows/ftmbase-class.md)
+
+保存对自由线程封送处理程序的引用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** ftm.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[FtmBase 类](../windows/ftmbase-class.md)

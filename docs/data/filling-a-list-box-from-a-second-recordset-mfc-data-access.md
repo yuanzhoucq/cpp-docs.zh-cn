@@ -1,5 +1,5 @@
 ---
-title: 填充列表框从第二个记录集 （MFC 数据访问） |Microsoft 文档
+title: 填充列表框从第二个记录集 （MFC 数据访问） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339765"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>从另一个记录集填充列表框（MFC 数据访问）
 默认情况下，记录视图与其字段映射到记录视图控件的单个记录集对象有关。 有时，你可能需要在记录视图中放置列表框或组合框控件，并使用来自另一个记录集对象的值填充。 用户可以使用列表框选择要在记录视图中显示的新类别信息。 本主题将介绍此操作的方法和时间。  
@@ -39,15 +40,15 @@ ms.lasthandoff: 05/04/2018
   
 1.  创建记录集对象 ([CRecordset](../mfc/reference/crecordset-class.md)。  
   
-2.  获取指向的[CComboBox](../mfc/reference/ccombobox-class.md)组合框控件的对象。  
+2.  获取一个指向[CComboBox](../mfc/reference/ccombobox-class.md)组合框控件的对象。  
   
 3.  清空组合框以前的所有内容。  
   
-4.  浏览记录集中的所有记录调用[ccombobox::](../mfc/reference/ccombobox-class.md#addstring)从你想要添加到组合框的当前记录每个字符串。  
+4.  浏览所有记录集中的记录，调用[ccombobox:: Addstring](../mfc/reference/ccombobox-class.md#addstring)为从你想要添加到组合框的当前记录每个字符串。  
   
 5.  初始化组合框中的选择。  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

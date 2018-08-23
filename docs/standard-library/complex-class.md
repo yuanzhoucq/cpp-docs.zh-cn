@@ -20,15 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026402"
 ---
 # <a name="complex-class"></a>complex 类
 
-此模板类描述存储 **Type** 的两种对象类型的对象，一种表示复数的实部，另一种表示复数的虚部。
+此模板类描述一个对象，将两个对象类型的存储`Type`，一个代表实部的复数，一个表示虚数部分。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>备注
 
-**Type** 类的对象：
+类的对象`Type`:
 
 - 具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。
 
@@ -49,9 +50,9 @@ class complex
 
 - 根据需要，定义适用于浮点类型的算术运算符、数学函数和常规行为。
 
-具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对 **Type** 类的对象执行的所有操作都不会引发异常。
+具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 所有类的对象上操作`Type`可能会引发异常。
 
-对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中，任何其他类型 **Type** 的值均是实际计算的 **double** 的类型转换，其中 **double** 结果被重新分配到 **Type**`.` 类型的存储对象。
+对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中，任何其他类型的值`Type`类型转换为**双**进行实际计算，使用**double**结果返回到的存储对象的类型分配 `Type``.`
 
 ### <a name="constructors"></a>构造函数
 
@@ -107,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-`_RealVal` 用于初始化正在构造的复数的实部值。
+*_RealVal*用于初始化正在构造的复数的实部的值。
 
-`_ImagVal` 用于初始化正在构造的复数的虚部值。
+*_ImagVal*虚部用于初始化正在构造的复数的值。
 
-`complexNum` 其实部和虚部用于初始化正在构造的复数的复数。
+*complexNum*其实部和虚部用于初始化正在构造的复数的复数。
 
 ### <a name="remarks"></a>备注
 
@@ -186,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 是要提取其虚数值的复数。
+*右*提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -242,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 一个复数或属于相同类型作为参数的目标复数的数字。
+*右*复数或属于相同类型作为参数的目标复数的数字。
 
 ### <a name="return-value"></a>返回值
 
@@ -325,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 一个复数或属于相同类型作为参数的目标复数的数字。
+*右*复数或属于相同类型作为参数的目标复数的数字。
 
 ### <a name="return-value"></a>返回值
 
@@ -427,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 若要从目标复数中减去一个复数。
+*complexNum*要从目标复数减去的复数。
 
-`_RealPart` 若要从目标复数中减去一个实数。
+*_RealPart*要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
 
@@ -533,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-`complexNum` 若要从目标复数中减去一个复数。
+*complexNum*要从目标复数减去的复数。
 
-`_RealPart` 若要从目标复数中减去一个实数。
+*_RealPart*要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
 
@@ -633,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 一个复数或属于相同类型作为参数的目标复数的数字。
+*右*复数或属于相同类型作为参数的目标复数的数字。
 
 ### <a name="return-value"></a>返回值
 
@@ -710,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 是要提取其实数值的复数。
+*右*其实际值是要提取的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -762,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type` 是类复数 **Type** 模板参数的同义词。
+`value_type` 是类的同义词复杂`Type`模板参数。
 
 ### <a name="example"></a>示例
 
@@ -791,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>请参阅
 
-[复杂的成员](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[复杂的成员](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

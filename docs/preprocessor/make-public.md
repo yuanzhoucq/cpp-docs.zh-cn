@@ -1,5 +1,5 @@
 ---
-title: make_public |Microsoft 文档
+title: make_public |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27db5ac934973178e2485327090ed70f994becec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bdec8afa2088cad5faf700b3946926bb9d85748
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541362"
 ---
 # <a name="makepublic"></a>make_public
 指示本机类型应具有公共程序集可访问性。  
@@ -34,16 +35,17 @@ ms.lasthandoff: 05/07/2018
 ```  
   
 ### <a name="parameters"></a>参数  
- `type` 是需要具有公共程序集可访问性的类型的名称。  
+*类型*是想要具有公共程序集可访问性的类型的名称。  
   
 ## <a name="remarks"></a>备注  
-如果要引用的本机类型来自无法更改的 .h 文件，则 `make_public` 会很有用。 若要在带有公共程序集可见性的类型中使用公共函数签名中的本机类型，则本机类型还必须具有公共程序集可访问性，否则编译器将发出警告。  
+
+**make_public**对于想要引用的本机类型时不能更改的.h 文件很有用。 若要在带有公共程序集可见性的类型中使用公共函数签名中的本机类型，则本机类型还必须具有公共程序集可访问性，否则编译器将发出警告。  
   
-`make_public` 必须在全局范围内指定，并且它仅在从声明它的位置到源代码文件的结尾有效。  
+**make_public**必须在全局范围内指定，并且它仅在从点影响它的位置声明到源代码文件的末尾。  
   
-本机类型可以是隐式或显式专用;请参阅[类型可见性](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
+本机类型可能是隐式或显式私有;请参阅[类型的可见性](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例  
 以下示例是包含两个本机结构的定义的 .h 文件的内容。  
   
 ```cpp  
@@ -51,9 +53,8 @@ ms.lasthandoff: 05/07/2018
 struct Native_Struct_1 { int i; };  
 struct Native_Struct_2 { int i; };  
 ```  
-  
-## <a name="example"></a>示例  
-以下代码示例使用头文件并说明除非您使用 `make_public` 将本机结构显式标记为公共，否则当您尝试在公共托管类型中的公共函数签名中使用本机结构时，编译器将生成警告。  
+
+下面的代码示例使用标头文件，并表明除非你显式标记为公共的将本机结构使用，否则**make_public**，当您尝试使用本机结构中的时，编译器会生成一个警告中的公共托管类型的公共函数的签名。  
   
 ```cpp  
 // make_public_pragma.cpp  
@@ -68,5 +69,6 @@ public ref struct A {
 };  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
+
 [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

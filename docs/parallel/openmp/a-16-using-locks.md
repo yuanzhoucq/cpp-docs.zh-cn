@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695897"
 ---
 # <a name="a16---using-locks"></a>A.16   使用锁
 在以下示例中，(为[第 3.2 节](../../parallel/openmp/3-2-lock-functions.md)在页上 41) 注意锁定函数的参数应具有类型`omp_lock_t`，并且没有无需刷新。  锁函数会导致线程在等待第一个关键部分中，进入时处于空闲状态，但若要完成其他工作的同时等待第二个条目。  `omp_set_lock`函数块，但`omp_test_lock`函数不是，不允许在 skip() 进行的工作。  

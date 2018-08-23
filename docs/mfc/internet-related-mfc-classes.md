@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344904"
 ---
 # <a name="internet-related-mfc-classes"></a>与 Internet 相关的 MFC 类
 有关与 Internet 相关的类和函数的信息，请参阅：  

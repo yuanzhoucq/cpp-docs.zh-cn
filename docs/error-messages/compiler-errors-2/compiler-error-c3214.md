@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248722"
 ---
 # <a name="compiler-error-c3214"></a>编译器错误 C3214
 “type”：泛型“generic_type”的泛型形参“param”的类型实参无效，不符合“constraint”约束  

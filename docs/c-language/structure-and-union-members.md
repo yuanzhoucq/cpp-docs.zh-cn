@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392245"
 ---
 # <a name="structure-and-union-members"></a>结构和联合成员
 “成员选择表达式”是指结构和联合的成员。 此类表达式具有选定成员的值和类型。  

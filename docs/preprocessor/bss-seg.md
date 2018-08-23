@@ -1,5 +1,5 @@
 ---
-title: bss_seg |Microsoft 文档
+title: bss_seg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541531"
 ---
 # <a name="bssseg"></a>bss_seg
 指定其中的未初始化变量存储在 .obj 文件中的段。  
@@ -30,35 +31,35 @@ ms.lasthandoff: 05/07/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
 ## <a name="remarks"></a>备注  
- 可以使用查看 Obj 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 未初始化数据的 .obj 文件中的默认段为 .bss。 在某些情况下使用的**bss_seg**速度加载时间将未初始化的数据分组到一个部分。  
+ 
+可以使用查看 Obj 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 未初始化数据的 .obj 文件中的默认段为 .bss。 在某些情况下使用的**bss_seg**可加快通过分组为一个部分未初始化的数据加载时间。  
   
- **bss_seg**不带任何参数将段重置为.bss。  
+**bss_seg**不带任何参数将段重置为.bss。  
   
- **推送**（可选）  
- 将一个记录置于内部编译器堆栈上。 A**推送**可以*标识符*和*段名称*。  
+*推送*（可选）  
+将一个记录置于内部编译器堆栈上。 一个*推送*可以*标识符*并*段名称*。  
   
- **pop** （可选）  
- 从内部编译器堆栈的顶部移除一个记录。  
+*pop* （可选）  
+从内部编译器堆栈的顶部移除一个记录。  
   
- *标识符*（可选）  
- 如果用于**推送**，将名称分配给内部编译器堆栈上的记录。 如果用于**pop**，从之前的内部堆栈中弹出记录*标识符*被删除; 如果*标识符*找不到在内部堆栈上，会弹出任何内容。  
+*标识符*（可选）  
+与一起使用时*推送*，将名称分配给内部编译器堆栈上的记录。 与一起使用时*pop*，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
   
- *标识符*让多个记录有一条弹出**pop**命令。  
+*标识符*使多个记录只用一个*pop*命令。  
   
- *"段名称"*（可选）  
- 段的名称。 如果用于**pop**，弹出堆栈和*段名称*会成为活动段名称。  
+*"段名称"*（可选）  
+段的名称。 与一起使用时*pop*，在堆栈中弹出和*段名称*将成为活动段名称。  
   
- *"段类"* （可选）  
- 包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
+*"段类"* （可选）  
+包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -74,11 +75,12 @@ int main() {
 }  
 ```  
   
- 你还可以指定为初始化的数据部分 ([data_seg](../preprocessor/data-seg.md))，函数 ([code_seg](../preprocessor/code-seg.md))，和常量变量 ([const_seg](../preprocessor/const-seg.md))。  
+此外可以指定部分，用于初始化的数据 ([data_seg](../preprocessor/data-seg.md))，函数 ([code_seg](../preprocessor/code-seg.md))，和常量变量 ([const_seg](../preprocessor/const-seg.md))。  
   
- 使用分配的数据**bss_seg**杂注不会保留有关其位置的任何信息。  
+使用分配的数据**bss_seg**杂注不会保留有关其位置的任何信息。  
   
- 请参阅[/部分](../build/reference/section-specify-section-attributes.md)的创建部分时不应使用的名称列表。  
+请参阅[/section](../build/reference/section-specify-section-attributes.md)的名称创建一个部分时，不应使用的列表。  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

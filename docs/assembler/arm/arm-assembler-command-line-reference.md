@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054606"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 汇编程序命令行参考
 这篇文章提供有关 Microsoft ARM 汇编程序命令行信息*armasm*，用于编译到的 Microsoft 实现的通用对象文件格式 (COFF) 的 ARMv7 Thumb 程序集语言。 链接器可以将 COFF 代码与通过 ARM 汇编程序或由 C 编译器，结合了由管理员创建的对象库生成的对象代码链接。  

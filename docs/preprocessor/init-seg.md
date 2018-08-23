@@ -1,5 +1,5 @@
 ---
-title: init_seg |Microsoft 文档
+title: init_seg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,73 +19,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3be66fc2639253d1bbcfec21f544d5537e084e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 078026836b5f5c1fafe89e5f5e49bf0693be9250
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538582"
 ---
 # <a name="initseg"></a>init_seg
 **C + + 专用**  
   
- 指定影响启动代码的执行顺序的关键字或代码部分。  
+指定影响启动代码的执行顺序的关键字或代码部分。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 #pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )  
 ```  
   
 ## <a name="remarks"></a>备注  
- 这些术语的含义*段*和*部分*是可互换的本主题。  
+ 
+这些术语的含义*段*并*部分*是本主题中可互换的。  
   
- 由于全局静态对象的初始化可能涉及执行代码，你必须指定用于定义对象的构造时间的关键字。 特别是，务必使用**init_seg**动态链接库 (Dll) 中的杂注或需要初始化的库。  
+由于全局静态对象的初始化可能涉及执行代码，你必须指定用于定义对象的构造时间的关键字。 特别是，务必使用**init_seg**杂注中动态链接库 (Dll) 或需要初始化的库。  
   
- 到选项**init_seg**杂注是：  
+为选项**init_seg**杂注是：  
   
- **compiler**  
- 保留以供 Microsoft C 运行库初始化使用. 首先构造该组中的对象。  
+*compiler*  
+保留以供 Microsoft C 运行库初始化使用. 首先构造该组中的对象。  
   
- **lib**  
- 可用于第三方类库供应商的初始化。 在那些已标记为后构造此组中的对象**编译器**但之前的任何其他。  
+*lib*  
+可用于第三方类库供应商的初始化。 后那些已标记为构造此组中的对象*编译器*但之前的任何其他内容。  
   
- **user**  
- 可供任何用户使用。 最后构造此组中的对象。  
+*user*  
+可供任何用户使用。 最后构造此组中的对象。  
   
- *section-name*  
- 允许初始化部分的显式规范。 在用户指定的对象*节名称*不隐式构造; 但是，将其地址放置在命名的节*节名称*。  
+*section-name*  
+允许初始化部分的显式规范。 在用户指定的对象*节名称*不隐式构造; 但将其地址放置在命名的节*节名称*。  
   
- 您提供的节名称将包含指向 helper 函数的指针，这些函数将构造在杂注后的模块中声明的全局对象。  
+您提供的节名称将包含指向 helper 函数的指针，这些函数将构造在杂注后的模块中声明的全局对象。  
   
- 有关创建部分时不应使用的名称的列表，请参阅[/部分](../build/reference/section-specify-section-attributes.md)。  
+创建一个部分时，不应使用的名称的列表，请参阅[/section](../build/reference/section-specify-section-attributes.md)。  
   
- *func-name*  
- 指定在程序退出时为替换 `atexit` 而调用的函数。 此 helper 函数还调用[atexit](../c-runtime-library/reference/atexit.md)用一个指针指向全局对象的析构函数。 如果以杂注形式指定函数标识符，  
+*func-name*  
+指定在程序退出时为替换 `atexit` 而调用的函数。 此帮助程序函数还将调用[atexit](../c-runtime-library/reference/atexit.md)用一个指针指向全局对象的析构函数。 如果以杂注形式指定函数标识符，  
   
 ```  
 int __cdecl myexit (void (__cdecl *pf)(void))  
 ```  
   
- 则将调用您的函数而不是 C 运行库的 `atexit`。 这允许您生成在准备好销毁对象时要调用的析构函数的列表。  
+则将调用您的函数而不是 C 运行库的 `atexit`。 这允许您生成在准备好销毁对象时要调用的析构函数的列表。  
   
- 如果需要延迟初始化（例如，在 DLL 中），则可以选择显式指定节名称。 然后，您必须为每个静态对象调用构造函数。  
+如果需要延迟初始化（例如，在 DLL 中），则可以选择显式指定节名称。 然后，您必须为每个静态对象调用构造函数。  
   
- `atexit` 替换的标识符周围没有引号。  
+`atexit` 替换的标识符周围没有引号。  
   
- 您的对象仍放置在由其他 XXX_seg 杂注定义的节中。  
+您的对象仍放置在由其他 XXX_seg 杂注定义的节中。  
   
- 模块中声明的对象将不会由 C 运行时自动初始化。 您需要自行执行该操作。  
+模块中声明的对象将不会由 C 运行时自动初始化。 您需要自行执行该操作。  
   
- 默认情况下，`init_seg` 部分是只读的。 如果节的名称是 .CRT，则编译器将在无提示的情况下将特性更改为只读，即使它被标记为读写。  
+默认情况下，`init_seg` 部分是只读的。 如果节的名称是 .CRT，则编译器将在无提示的情况下将特性更改为只读，即使它被标记为读写。  
   
- 不能指定**init_seg**在翻译单元中多次。  
+不能指定**init_seg**多次在翻译单元中。  
   
- 即使你的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。  因此，你的代码必须调用编译器生成的构造函数。  
+即使你的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。  因此，你的代码必须调用编译器生成的构造函数。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // pragma_directive_init_seg.cpp  
 #include <stdio.h>  
 #pragma warning(disable : 4075)  
@@ -165,4 +166,5 @@ A()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

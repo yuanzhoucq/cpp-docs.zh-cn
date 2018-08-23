@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367519"
 ---
 # <a name="dependency-side-effects"></a>依赖项副作用
 如果使用冒号 （:） 中两个依赖项行中不同的位置，指定目标，如果后行之一显示的命令，NMAKE 将解释依赖项，如同相邻或组合。 它不会调用不具有任何命令，而是假定的依赖关系属于一个描述块和执行的命令与其他依赖项指定的依赖关系的推理规则。 例如，这一组规则：  

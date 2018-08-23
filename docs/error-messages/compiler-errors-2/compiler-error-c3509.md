@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257410"
 ---
 # <a name="compiler-error-c3509"></a>编译器错误 C3509
 type： 无效的自动化返回类型;当参数标记 retval，返回类型必须是 void，HRESULT 或 SCODE  

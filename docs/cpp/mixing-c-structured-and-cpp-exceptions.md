@@ -1,7 +1,7 @@
 ﻿---
-title: 混合使用 C （结构化） 和 C++ 异常 |Microsoft 文档
+title: 混合使用 C （结构化） 和 c + + 异常 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,32 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572455"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C（结构化）和 C++ 异常
-若要编写可移植性更高的代码，建议不要在 C++ 程序中使用结构化异常处理。 但是，有时可能希望使用编译 **/EHa**和混合使用结构化的异常和 C++ 源代码，并且需要用于处理这两种异常的一些设备。 由于结构化的异常处理程序没有对象或类型化的异常的概念，它无法处理 C++ 代码; 引发的异常但是，C++**捕获**处理程序可以处理结构化的异常。 为此类中，C++ 异常处理语法 (**重**， `throw`，**捕获**) 不接受 C 编译器，但结构化的异常处理语法 (`__try`， `__except`， `__finally`)C++ 编译器支持。  
-  
- 请参阅 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)，了解如何将结构化异常作为 C++ 异常来处理。
-  
- 如果将结构化异常和 C++ 异常混合，请注意以下几点：  
-  
-1. 不能在同一函数中混合 C++ 异常和结构化异常。  
-  
-2. 始终执行终止处理程序（`__finally` 块），甚至在引发异常后的展开过程中也是如此。  
-  
-3. C++ 异常处理可以在所有使用 [/EH](../build/reference/eh-exception-handling-model.md) 编译器选项（此选项启用展开语义）进行编译的模块中捕获并保留展开语义。
-  
-4. 有时候，可能不会针对所有对象调用析构函数。例如，如果在尝试通过未初始化的函数指针进行函数调用时发生结构化异常，而该函数用作参数的对象是在调用之前构造的，则这些对象不会在堆栈展开过程中调用其析构函数。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
-  
--   [C++ 程序中使用 setjmp 或 longjmp](../cpp/using-setjmp-longjmp.md)  
-  
--   [SEH 和 C++ EH 之间的差异](../cpp/exception-handling-differences.md)  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 异常处理](../cpp/cpp-exception-handling.md)
+# <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C （结构化） 和 c + + 异常
+
+如果你想要编写可移植代码，不被建议的结构化异常处理 (SEH) 机制在 c + + 程序中使用。 但是，有时可能希望使用进行编译[/EHa](../build/reference/eh-exception-handling-model.md)和混合使用结构化的异常和 c + + 源代码，并需要一些工具来处理这两种类型的异常。 由于结构化的异常处理程序的对象或类型化的异常没有概念，它不能处理 c + + 代码引发的异常。 但是，c + +**捕获**处理程序可以处理结构化的异常。 C + + 异常处理语法 (**尝试**，**引发**，**捕获**) 不被接受由 C 编译器，但结构化的异常处理语法 (**__try**， **__except**， **__finally**) 都支持 c + + 编译器支持。
+
+请参阅[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)有关如何处理结构化的异常作为 c + + 异常的信息。
+
+如果混合使用结构化和 c + + 异常，注意这些潜在的问题：
+
+- 不能在同一函数中混合 C++ 异常和结构化异常。
+
+- 终止处理程序 (**__finally**块) 将始终执行，即使引发异常后的展开过程。
+
+- C + + 异常处理可以捕获并保留展开使用编译的所有模块中的语义[/EH](../build/reference/eh-exception-handling-model.md)编译器选项，哪些启用展开语义。
+
+- 有时候，可能不会针对所有对象调用析构函数。 例如，如果尝试进行函数初始化的函数指针，通过调用时发生结构化的异常并且该函数将作为参数调用前构造的对象，这些对象的析构函数不调用在堆栈展开。
+
+## <a name="next-steps"></a>后续步骤
+
+- [C++ 程序中使用 setjmp 或 longjmp](../cpp/using-setjmp-longjmp.md)
+
+  查看有关使用详细信息`setjmp`和`longjmp`c + + 程序中。
+
+- [处理 c + + 中的结构化的异常](../cpp/exception-handling-differences.md)
+
+  请参阅可用 c + + 来处理结构化异常的方法的示例。
+
+## <a name="see-also"></a>请参阅
+
+[C++ 异常处理](../cpp/cpp-exception-handling.md)  

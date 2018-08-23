@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928359"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
 本指南介绍了与实现高级的 ActiveX 控件中的属性相关的主题：  
@@ -65,9 +66,9 @@ ms.lasthandoff: 05/04/2018
  此代码示例调用`SetNotSupported`如果`m_bReadOnlyMode`数据成员是**TRUE**。 如果**FALSE**，则该属性设置为新值。  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 从属性返回错误代码  
- 若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数，其将`SCODE`（状态代码） 作为参数。 您可以使用预定义的 `SCODE`，也可以自己定义一个。 有关的列表预定义`SCODE`s 和用于定义自定义的说明`SCODE`s，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
+ 若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数，其将作为参数 SCODE （状态代码）。 你可以使用预定义的 SCODE 或定义你自己的一个。 预定义 SCODEs 和用于定义自定义 SCODEs 说明的列表，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   
- 最常见的预定义存在帮助器函数`SCODE`s，如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)。  
+ 存在帮助器函数的最常见的预定义 SCODEs，如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` 用于返回属性的 Get 或 Set 从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。  

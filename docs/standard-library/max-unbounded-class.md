@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679db380dabf15786776a6896c931f584ef46fce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3bf2d24ad916a9f7dba5a61ecb7745c3d86573c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955794"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded 类
 
@@ -70,11 +71,11 @@ void allocated(std::size_t _Nx = 1);
 
 |参数|描述|
 |---------------|-----------------|
-|`_Nx`|增量值。|
+|*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次调用成功后，`cache_freelist::allocate` 会将此成员函数调用到运算符 `new`。 自变量 `_Nx` 是运算符 `new` 分配的区块中的内存块数。
+此成员函数不执行任何操作。 每次调用成功后，它将调用`cache_freelist::allocate`向操作员**新**。 自变量 *_Nx*是由运算符分配的区块中的内存块的数目**新**。
 
 ## <a name="deallocated"></a>max_unbounded::deallocated
 
@@ -88,11 +89,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |参数|描述|
 |---------------|-----------------|
-|`_Nx`|增量值。|
+|*_Nx*|增量值。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次调用后，`cache_freelist::deallocate` 会将此成员函数调用到运算符 `delete`。 自变量 `_Nx` 是运算符 `delete` 取消分配的区块中的内存块数。
+此成员函数不执行任何操作。 通过每次调用后调用此成员函数`cache_freelist::deallocate`向操作员**删除**。 自变量 *_Nx*是由运算符解除分配的区块中的内存块的数目**删除**。
 
 ## <a name="full"></a>max_unbounded::full
 
@@ -104,11 +105,11 @@ bool full();
 
 ### <a name="return-value"></a>返回值
 
-此成员函数总是返回 `false`。
+成员函数总是返回**false**。
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回 `true`，则 `deallocate` 会将内存块放入空闲列表；如果它返回 false，则 `deallocate` 将调用运算符 `delete` 以取消分配块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果该调用将返回 **，则返回 true**，`deallocate`放入内存块释放列表; 如果它返回 false，`deallocate`调用运算符**删除**解除分配块。
 
 ## <a name="released"></a>max_unbounded::released
 

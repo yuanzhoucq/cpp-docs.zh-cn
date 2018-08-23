@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169538"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>值类型及其行为 (C++/CLI)
 值类型已以多种方式从托管扩展中的 c + + 更改为 Visual c + +。 在本部分中，我们看看 CLR 枚举类型以及值类类型，以及查看装箱和到 CLR 堆上的装箱实例的访问，以及一看内部和钉住指针。 在此区域中进行了广泛的语言更改。  

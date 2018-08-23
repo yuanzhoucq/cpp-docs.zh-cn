@@ -1,5 +1,5 @@
 ---
-title: 表达式的语义 |Microsoft 文档
+title: 表达式的语义 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462737"
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 C++ 运算符对表达式实施。)  
@@ -69,7 +70,7 @@ int main()
  类似于上图的表达式的计算纯粹是为了展示副作用 - 在本例中是将信息转移到标准输出设备。  
   
 ## <a name="notation-in-expressions"></a>表达式中的表示法  
- 在指定操作数时，C++ 语言指定某些兼容性。 下表显示的操作数的类型可接受到需要类型的操作数的运算符*类型*。  
+ 在指定操作数时，C++ 语言指定某些兼容性。 下表显示了操作数的类型可接受需要类型的操作数的运算符*类型*。  
   
 ### <a name="operand-types-acceptable-to-operators"></a>运算符可接受的操作数类型  
   

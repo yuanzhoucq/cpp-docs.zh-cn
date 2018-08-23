@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341892"
 ---
 # <a name="creating-windows"></a>创建窗口
 框架自动创建框架程序中的大部分所需的窗口。 [文档/视图创建](../mfc/document-view-creation.md)演示了框架如何创建与文档和视图的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口-除了提供框架的窗口。  

@@ -1,5 +1,5 @@
 ---
-title: __writedr |Microsoft 文档
+title: __writedr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539200"
 ---
 # <a name="writedr"></a>__writedr
-将指定的值写入指定的调试寄存器。  
+将指定的值写入到指定的调试注册。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +41,13 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
  一个值，以写入调试注册。  
   
 ## <a name="remarks"></a>备注  
- 这些内部函数仅在内核模式下适用而例程只能用作内部函数。  
+ 这些内部函数仅在内核模式中可用，例程只能用作内部函数。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

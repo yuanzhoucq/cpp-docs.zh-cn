@@ -1,5 +1,5 @@
 ---
-title: -clr （公共语言运行时编译） |Microsoft 文档
+title: -clr （公共语言运行时编译） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606858"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。  
@@ -49,13 +50,13 @@ ms.lasthandoff: 05/03/2018
   
  [混合 （本机和托管） 程序集](../../dotnet/mixed-native-and-managed-assemblies.md)和  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md)。  
+ [如何： 迁移到 /clr](../../dotnet/how-to-migrate-to-clr.md)。  
   
  **/clr:pure**  
  /clr:pure 已弃用。 未来版本的编译器可能不支持此选项。 建议移植对 C# 来说必须是纯 MSIL 的代码。  
   
  **/clr:safe**  
- /clr:safe 已弃用。 未来版本的编译器可能不支持此选项。 我们建议你移植必须是对 C# 的安全 MSIL 的代码。 
+ /clr:safe 已弃用。 未来版本的编译器可能不支持此选项。 我们建议你对必须是安全 MSIL C# 的代码进行移植。 
   
  **/clr:noAssembly**  
  指定不应将程序集清单插入输出文件中。 默认情况下， **noAssembly** 选项是无效的。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
  在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。  
   
  **/clr:initialAppDomain**  
- 允许 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 应用程序在 CLR 版本 1 上运行。 如果你使用**initialAppDomain**，那么你可能会看到的一些问题中所述[BUG: AppDomainUnloaded 异常使用时托管 Visual c + + 组件扩展](http://go.microsoft.com/fwlink/p/?linkid=169465)的 microsoft支持网站。  
+ 可以将 Visual c + + 应用程序在 CLR 版本 1 上运行。 如果您使用**initialAppDomain**，那么你可能会看到的一些问题中所述[BUG: AppDomainUnloaded 异常时使用的托管 Visual c + + 组件扩展](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoft支持网站。  
   
  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。  
   
@@ -81,13 +82,13 @@ ms.lasthandoff: 05/03/2018
   
  使用 **/clr** 编译的应用程序可以包含也可以不包含托管数据。  
   
- 若要启用调试上托管的应用程序，请参阅[/ASSEMBLYDEBUG (添加 DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md)。  
+ 若要托管的应用程序上启用调试，请参阅[/ASSEMBLYDEBUG (添加 DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md)。  
   
  只有 CLR 类型会在垃圾回收堆上实例化。 有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要将函数编译为本机代码，请使用 `unmanaged` 杂注。 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。  
   
  默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。  
   
- 如果通过使用编译 **/c**，你可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
+ 如果通过使用编译 **/c**，可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
   
  **/clr** 暗含 **/EHa**，且 **/clr** 不支持任何其他 **/EH**选项。 有关详细信息，请参阅 [/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)。  
   
@@ -119,7 +120,7 @@ class {} x;
   
 #### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项  
   
-1.  在 **“解决方案资源管理器”**中，右键单击项目名，然后选择 **“属性”** 以打开项目的 **“属性页”** 对话框。  
+1.  在 **“解决方案资源管理器”** 中，右键单击项目名，然后选择 **“属性”** 以打开项目的 **“属性页”** 对话框。  
   
 2.  选择 **“配置属性”** 文件夹。  
   
@@ -128,7 +129,7 @@ class {} x;
     > [!NOTE]
     >  在“属性页”对话框中启用 **/clr** 时，还将根据需要调整与 **/clr** 不兼容的编译器选项属性。  例如，如果设置了 **/RTC** ，又启用了 **/clr** ，则将关闭 **/RTC** 。  
     >   
-    >  此外，当调试 **/clr**应用程序，来设置**调试器类型**属性**混合**或**仅限托管**。 有关详细信息，请参阅[用于 c + + 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
+    >  此外，调试 **/clr**应用程序中，设置**调试器类型**属性设置为**混合**或者**仅限托管**。 有关详细信息，请参阅[c + + 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
   
      了解如何创建模块，请参阅[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367987"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>如何：向 MSBuild 项目添加自定义生成步骤
 自定义生成步骤是在生成中的用户定义步骤。 自定义生成步骤表现得像任何其他*命令工具*步骤中，如标准的编译或链接工具步骤。  

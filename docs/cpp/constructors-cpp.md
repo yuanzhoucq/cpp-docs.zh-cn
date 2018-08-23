@@ -2,11 +2,8 @@
 title: 构造函数 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,26 +12,24 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6e99d76c7ff35e1d3be9db743f69b63e78490a
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571924"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
-若要自定义如何进行了初始化类成员，或创建你的类对象时调用函数，定义*构造函数*。 构造函数具有与类相同的名称，没有返回值。 你可以定义任意数量的重载构造函数根据需要自定义以各种方式初始化。 通常情况下，构造函数具有公共可访问性，以便在类定义或继承层次结构之外的代码可以创建类的对象。 但您也可以声明一个构造函数为**保护**或**私有**。
+若要自定义如何初始化类成员，或创建您的类的对象时调用的函数，定义*构造函数*。 构造函数具有与类相同的名称，没有返回值。 您可以定义任意数量的重载构造函数根据需要自定义初始化以各种方式。 通常情况下，构造函数具有公共可访问性，以便在类定义或继承层次结构之外的代码可以创建类的对象。 但您也可以声明为一个构造函数**受保护**或**专用**。
 
-构造函数 （可选） 可以采用成员 init 列表。 这是更有效的方式来初始化类成员超过构造函数主体中的赋值。 下面的示例演示一个类`Box`有三个重载构造函数。 最后两个使用成员 init 列表：
+构造函数可以根据需要采用成员初始化列表。 这是更高效的方法来初始化类成员的成员数目在构造函数主体中的赋值。 下面的示例演示一个类`Box`具有三个重载构造函数。 最后两个使用 init 成员列表：
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -59,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
-在声明类的实例时，编译器将选择要调用的构造函数根据重载决策的规则：
+声明类的实例时，编译器将选择要调用的构造函数根据重载决策的规则：
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -77,35 +70,33 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
-- 构造函数可以声明为**内联**，[显式](#explicit_constructors)，**友元**或[constexpr](#constexpr_constructors)。
-- 构造函数可以被声明为将对象初始化**const**，**易失性**或**const 易失性**。 在对象变为**const**构造函数完成后。
-- 在实现文件中定义的构造函数，为其提供的限定的名称与任何其他成员函数： `Box::Box(){...}`。
+- 构造函数可声明为**内联**，[显式](#explicit_constructors)，**友元**或者[constexpr](#constexpr_constructors)。
+- 构造函数可以初始化已声明为对象**const**，**易失性**或**const 易失性**。 对象将成为**const**在构造函数完成后。
+- 在实现文件中定义的构造函数，为其提供一个限定的名称与任何其他成员函数一样： `Box::Box(){...}`。
 
 ## <a name="member_init_list"></a> 成员初始值设定项列表
 
-构造函数可根据需要成员初始值设定项列表中，这将初始化之前构造函数主体的执行类成员。 (请注意，成员初始值设定项列表不与相同，均*初始值设定项列表*类型的[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。)
+构造函数可根据需要初始化之前执行的构造函数主体的类成员的成员初始值设定项列表。 (请注意，成员初始值设定项列表不与相同的功能*初始值设定项列表*类型的[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。)
 
-使用成员初始值设定项列表优于分配构造函数的正文中值，因为它直接成员进行初始化。 在下面的示例演示成员初始值设定项列表包含所有**identifier(argument)**冒号后面的表达式：
+使用成员初始值设定项列表是首选通过分配的构造函数的正文中的值，因为它直接初始化成员。 在下面的示例演示成员初始值设定项列表包含所有**identifier(argument)** 冒号后面的表达式：
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
 ```
 
-标识符必须指向类成员;它进行初始化的自变量的值。 参数可以是其中一个构造函数参数，函数调用或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。 
+标识符必须指向类成员;它是使用参数的值进行初始化。 参数可以是一个构造函数参数，函数调用或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。 
 
 **const**必须在成员初始值设定项列表中初始化成员和引用类型的成员。
 
-对参数化的基类构造函数的调用应初始值设定项列表中进行，若要确保在执行派生构造函数之前完全初始化的基类。
+对参数化的基类构造函数的调用应在初始值设定项列表中进行，以确保在执行派生构造函数之前完全初始化的基类。
 
 ## <a name="default_constructors"></a> 默认构造函数
 
- *默认构造函数*通常没有任何参数，但它们可以具有使用默认值的参数。
+ *默认构造函数*通常没有任何参数，但它们可能有具有默认值的参数。
 
 ```cpp
 class Box {
@@ -118,7 +109,7 @@ public:
 }
 ```
 
-默认构造函数是之一[特殊成员函数](special-member-functions.md)。 如果在类不声明了任何构造函数，则编译器会提供一种隐式**内联**默认构造函数。
+默认构造函数是之一[特殊成员函数](special-member-functions.md)。 如果在类中不声明了任何构造函数，则编译器会提供一种隐式**内联**默认构造函数。
 
 ```cpp
 #include <iostream>
@@ -137,23 +128,21 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
-在前面的示例所示，如果你的隐式的默认构造函数，请确保在类定义中，成员进行初始化。 这些初始值设定项，将初始化成员而无需 Volume() 调用将生成一个垃圾值。 一般情况下，很好的做法初始化这种方式中的成员，即使不依赖于一个隐式的默认构造函数。
+如果您依赖于隐式默认构造函数，请务必初始化成员在类定义中，在前面的示例所示。 没有这些初始值设定项，成员将为未初始化并且 Volume() 调用将生成一个垃圾回收的值。 一般情况下，它是很好的做法初始化这种方式中的成员，即使不依赖于隐式默认构造函数。
 
-你可以阻止编译器生成的隐式的默认构造函数，通过定义其作为[删除](#explicitly_defaulted_and_deleted_constructors):
+可以阻止编译器生成的隐式默认构造函数通过定义其作为[删除](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
 ```
 
-将定义编译器生成的默认构造函数，为已删除任何类成员不是默认构造。 例如，默认构造函数和析构函数的可访问的类类型的所有成员，必须都具有其类类型的成员。 所有数据成员的引用都类型，以及为**const**成员都必须具有默认成员初始值设定项。
+将定义编译器生成的默认构造函数，为已删除，如果任何类成员不是默认可构造。 例如，默认构造函数和析构函数可访问的类类型的所有成员，必须都具有它们类类型的成员。 所有数据成员的引用都类型，也一样**const**成员都必须具有一个默认成员初始值设定项。
 
-当你调用编译器生成的默认构造函数，并尝试使用括号时，则会发出警告：
+当您调用编译器生成的默认构造函数，并尝试使用括号时，则会发出警告：
 
 ```cpp
 class myclass{};
@@ -168,9 +157,9 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 
 ```cpp
 class Box {
+public:
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height){}
-};
 private:
     int m_width;
     int m_length;
@@ -184,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 如果类没有默认构造函数，将无法通过单独使用方括号语法来构造该类的对象数组。 例如，在前面提到的代码块中，框的数组无法进行如下声明：
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 但是，可以使用一组初始值设定项列表初始化框对象的数组：
@@ -204,12 +191,11 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 ## <a name="copy_and_move_constructors"></a> 复制构造函数
 
-A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 如果你的类成员是所有的简单类型，如标量值，编译器生成的复制构造函数是否足够大，你不必定义您自己。 如果你的类需要更复杂的初始化，然后你需要实现一个自定义的复制构造函数。 例如，类成员是否为指针然后你需要定义的复制构造函数以分配新内存，并且将值从各自的指向对象。 编译器生成的复制构造函数只需将复制指针，以便新指针仍指向对方的内存位置。
+A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 如果您的类成员是所有的简单类型，例如标量值，编译器生成的复制构造函数是否足够大，您不需要定义您自己。 如果您的类需要更复杂的初始化，然后需要实现一个自定义的复制构造函数。 例如，如果类成员是一个指针，然后需要定义复制构造函数以分配新内存，并从各自的指向的对象中复制值。 编译器生成的复制构造函数只需复制指针，以便新指针仍指向对方的内存位置。
 
 复制构造函数可能会产生这些签名之一：
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -219,9 +205,9 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-在定义的复制构造函数时，你还应定义复制赋值运算符 （=）。 有关详细信息，请参阅[分配](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
+在定义一个复制构造函数时，还应定义复制赋值运算符 （=）。 有关更多信息，请参见[赋值](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
 
-你可以防止你的对象复制通过定义为已删除的复制构造函数：
+您可以通过定义为已删除的复制构造函数复制阻止您的对象：
 
 ```cpp
     Box (const Box& other) = delete;
@@ -230,13 +216,13 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
 尝试将对象复制到生成错误*C2280： 尝试引用已删除的函数*。
 
 ## <a name="move_constructors"></a> 移动构造函数
-A*移动构造函数*是特殊成员函数，而不复制原始数据移动到新变量的现有对象的数据的所有权。 它采用右值引用作为其第一个参数，并且任何其他参数必须具有默认值。 传递了大型对象时，移动构造函数可显著提高程序的效率。 移动构造函数采用右值引用作为其第一个参数。 任何其他参数必须具有默认值。
+一个*移动构造函数*是将现有对象的数据的所有权移动到新的变量，而不复制原始数据的特殊成员函数。 它采用右值引用作为其第一个参数，并且任何其他参数必须具有默认值。 当传递了大型对象时，移动构造函数可显著提高程序的效率。 移动构造函数采用右值引用作为其第一个参数。 任何其他参数必须具有默认值。
 
 ```cpp
 Box(Box&& other);
 ```
 
-该编译器选择移动构造函数在某些情况下，为即将销毁且不再需要它的相同类型的另一个对象其中正在初始化对象的资源。 下面的示例演示一种情况下，当通过重载决策选择移动构造函数。 变量*框*返回 get_Box() 是*xvalue* （即将到期值） 这即将超出范围。 若要提供动机是针对此示例中，我们来试框一个大型的表示其内容的字符串向量。 而不是复制向量和其字符串时，移动构造函数"窃取"它从即将到期的值"框"以便向量现在所属的新对象。 调用`std::move`是因为需要同时`vector`和`string`类实现其自己的移动构造函数。
+编译器选择移动构造函数在某些情况下，正在由另一个是即将销毁，不再需要它的相同类型的对象初始化对象时的资源。 下面的示例演示一种情况下，当通过重载决策选择移动构造函数。 在变量*框*get_Box() 返回是*xvalue* （即将到期值） 这是即将超出范围。 若要提供有关此示例的目的，我们来试框一个大型的表示其内容的字符串向量。 而不是复制向量和其字符串，移动构造函数"窃取"它即将到期的值"框"中，以便该向量现在属于新对象。 在调用`std::move`是因为需要同时`vector`和`string`类实现其自己的移动构造函数。
 
 ```cpp
 #include <iostream>
@@ -244,7 +230,6 @@ Box(Box&& other);
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -302,19 +287,17 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
-如果类未定义移动构造函数，编译器将生成一个隐式，如果没有用户声明复制构造函数、 复制赋值运算符、 移动赋值运算符或析构函数。 如果不定义了任何显式或隐式移动构造函数，否则将使用移动构造函数的操作使用复制构造函数。 如果某个类声明了移动构造函数或移动赋值运算符，则会将隐式声明的复制构造函数定义为已删除。
+如果类未定义的移动构造函数，编译器将生成一个隐式，如果没有用户声明复制构造函数、 复制赋值运算符、 移动赋值运算符或析构函数。 如果不定义了任何显式或隐式的移动构造函数，否则将使用移动构造函数的操作使用的复制构造函数。 如果一个类中声明的移动构造函数或移动赋值运算符，隐式声明的复制构造函数定义为已删除。
 
-隐式声明的移动构造函数被定义为类类型的任何成员缺少析构函数或编译器无法确定要用于移动操作哪个构造函数被删除。
+隐式声明的移动构造函数被定义为类类型的任何成员缺少析构函数或编译器无法确定要用于移动操作的构造函数被删除。
 
 有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
 ## <a name="explicitly_defaulted_and_deleted_constructors"></a> 显式默认和已删除构造函数
 
-你可以显式*默认*复制构造函数、 默认构造函数、 移动构造函数、 复制赋值运算符、 移动赋值运算符和析构函数。 你可以显式*删除*所有特殊成员函数。
+可以使用显式*默认*复制构造函数、 默认构造函数、 移动构造函数、 复制赋值运算符、 移动赋值运算符和析构函数。 可以使用显式*删除*的所有特殊成员函数。
 
 ```cpp
 class Box
@@ -329,24 +312,23 @@ public:
 };
 ```
 
-有关详细信息，请参阅[显式默认函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)。
+有关详细信息，请参阅[显式默认设置和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)。
 
 ## <a name="constexpr_constructors"></a> constexpr 构造函数
 
-构造函数可以声明为[constexpr](constexpr-cpp.md)如果
+构造函数可声明为[constexpr](constexpr-cpp.md)如果
 
-- 它是可以声明为默认设置，否则是满足所有条件[constexpr 函数](constexpr-cpp.md#constexpr_functions)一般情况下;
-- 此类具有任何虚拟基类;
+- 它是可以声明为默认设置，否则它满足所有条件[constexpr 函数](constexpr-cpp.md#constexpr_functions)一般情况下;
+- 类具有虚拟基类;
 - 每个参数是[文本类型](trivial-standard-layout-and-pod-types.md#literal_types);
 - 正文不是函数 try 块;
-- 所有非静态数据成员和基类子对象进行初始化;
-- 如果类是具有 variant 类型的值的成员 （a） 联合，或 （b） 具有匿名联合，只有一个联合成员初始化;
-- 类类型，每个非静态数据成员及其所有基类的子对象具有 constexpr 构造函数
-
+- 所有非静态数据成员和基类的子对象进行初始化;
+- 如果类是 （a） 一个具有 variant 类型的值成员的联合，或 （b） 提供了匿名联合，只有一个联合成员进行初始化;
+- 类类型的每个非静态数据成员和所有基类的子对象具有 constexpr 构造函数
 
 ## <a name="init_list_constructors"></a> 初始值设定项列表构造函数
 
-如果构造函数采用[std:: initializer_list\<T\> ](../standard-library/initializer-list-class.md)类时，由于其参数和任何其他参数具有默认自变量，将重载解决方法中选择该构造函数通过直接初始化实例化。 你可以使用 initializer_list 初始化任何成员都可以接受它。 例如，假定 Box 类 （如前面所述） 具有`std::vector<string>`成员**m_contents**。 你可以提供此类构造函数：
+如果构造函数采用[std:: initializer_list\<T\> ](../standard-library/initializer-list-class.md)类时，该构造函数参数，以及任何其他参数具有默认自变量，如选择重载解决方法通过直接初始化实例化。 可以使用 initializer_list 来初始化任何成员都可以接受它。 例如，假定 （如上所示） 的类具有`std::vector<string>`成员`m_contents`。 你可以提供此类的构造函数：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -354,7 +336,7 @@ public:
 {}
 ```
 
-然后创建框对象如下：
+并创建如下对象：
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
@@ -389,17 +371,15 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
-这类转换可能在某些情况下很有用，但更常见的是，它们可能会导致代码中发生细微但严重的错误。 作为一般规则，你应使用**显式**构造函数 （和用户定义的运算符） 以防止出现这种隐式类型转换关键字：
+这类转换可能在某些情况下很有用，但更常见的是，它们可能会导致代码中发生细微但严重的错误。 作为一般规则，应使用**显式**上一个构造函数 （和用户定义的运算符） 以防止出现这种隐式类型转换关键字：
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-构造函数是显式函数时，此行会导致编译器错误：`ShippingOrder so(42, 10.8);`。  有关详细信息，请参阅[用户定义类型转换](../cpp/user-defined-type-conversions-cpp.md)。
+构造函数是显式函数时，此行会导致编译器错误：`ShippingOrder so(42, 10.8);`。  有关详细信息，请参阅[用户定义类型的转换](../cpp/user-defined-type-conversions-cpp.md)。
 
 ## <a name="order_of_construction"></a> 构造函数顺序
 
@@ -416,7 +396,6 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 下面的示例显示，在派生类的构造函数中，基类和成员构造函数的调用顺序。 首先，调用基构造函数，然后按照基类成员在类声明中出现的顺序对这些成员进行初始化，然后，调用派生构造函数。
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -454,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 这是输出：
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -467,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 调用基类构造函数进行派生，例如，如果 ClassA 派生自 ClassB，ClassB 派生自 ClassC，那么首先调用 ClassC 构造函数，然后调用 ClassB 构造函数，最后调用 ClassA 构造函数。
+派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 派生的顺序调用基类构造函数，例如，如果`ClassA`派生自`ClassB`，它派生自`ClassC`，则`ClassC`首先，调用构造函数则`ClassB`构造函数中，则`ClassA`构造函数。
 
 如果基类没有默认构造函数，则必须在派生类构造函数中提供基类构造函数参数：
 
@@ -541,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 你应看到以下输出：
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> 在构造函数中的虚函数
@@ -591,14 +566,14 @@ int main() {
 
 这是输出：
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
 
 ## <a name="delegating_constructors"></a> 委托构造函数
 
-A*委托构造函数*完成部分初始化工作的同一个类中调用的其他构造函数。 当必须全都具有执行类似工作的多个构造函数时，这非常有用。 可以编写一个构造函数中的主逻辑，还可以与其他调用它。 在以下简单示例中，Box(int) 将 Box(int,int,int) 到其工作委托：
+一个*委托构造函数*调用同一个类来执行某些初始化工作中的其他构造函数。 当有多个构造函数，都必须执行类似工作时，这很有用。 您可以编写一个构造函数中的主逻辑并调用它从其他人。 在下面的简单示例，Box(int) 其工作委托给 Box(int,int,int):
 
 ```cpp
 class Box {
@@ -670,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 using 语句可将来自基类的所有构造函数引入范围（除了签名与派生类中的构造函数相同的构造函数）。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
@@ -683,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 如果基类的构造函数具有相同签名，则派生类无法从多个基类继承。

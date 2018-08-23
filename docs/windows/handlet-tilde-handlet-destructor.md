@@ -1,5 +1,5 @@
 ---
-title: 'HandleT:: ~ HandleT 析构函数 |Microsoft 文档'
+title: 'HandleT:: ~ HandleT 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb2599beb7b5cadda1a26592a2ab5ca63c609fc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d48bef07a6aeb42569faad775867bf415577980
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607723"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT 析构函数
-取消初始化 HandleT 类的实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-~HandleT();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+
+取消初始化的实例**HandleT**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+~HandleT();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

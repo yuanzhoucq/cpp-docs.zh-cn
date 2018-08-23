@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301198"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>链接器工具警告 LNK4247
 入口点 decorated_function_name 已有的线程特性;attribute 忽略  

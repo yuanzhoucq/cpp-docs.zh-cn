@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954638"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 类
 
@@ -185,9 +186,9 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>参数
 
-`Types` 自变量列表类型。
+*类型*参数列表类型。
 
-`args` 自变量列表中。
+*args*参数列表。
 
 ### <a name="remarks"></a>备注
 
@@ -228,9 +229,9 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 要包装的类型。
+*Ty*要包装的类型。
 
-`val` 要包装的值。
+*val*要包装的值。
 
 ### <a name="remarks"></a>备注
 

@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f95f6c98138ff1eb52750c1b8593795ca28c784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406931"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
-关键字**constexpr**已在 C++ 11 中引入的以及在 C++ 14 中改进。 这意味着*常量表达式*。 如**const**，它可以应用于变量，以便如果任何代码试图修改的值，则将引发编译器错误。 与不同**const**， **constexpr**还可以应用于函数和类构造函数。 **constexpr**指示的值或返回值是常数，并且如果可能，将在编译时计算。
+关键字**constexpr**已在 C++ 11 中引入的以及在 C++ 14 中改进。 这意味着*常量表达式*。 像**const**，可以应用于变量，以便将引发编译器错误，如果任何代码尝试修改的值。 与不同**const**， **constexpr**也应用于函数和类构造函数。 **constexpr**指示的值或返回值是常数，并且如果可能，将在编译时计算。
 
-A **constexpr**每当 const 整数时必需的如在模板自变量和数组声明，则可以使用整数值。 并且时可以在编译时，而不是运行时计算某个值，它可以帮助你更快地运行，并使用较少的内存的程序。
+一个**constexpr**整数值可用于任何 const 整数时必需的例如模板自变量和数组声明中。 和时可以在编译时，而不是运行时计算一个值，它可以帮助你更快地运行，并使用较少的内存的程序。
 
 若要限制计算编译时常量的复杂度以及它们的编译时间的潜在影响，C++ 14 标准要求在常量表达式中涉及的类型是限于[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
@@ -40,10 +41,9 @@ constexpr ctor (params);
 ## <a name="parameters"></a>参数
 
  *params*  
-一个或多个参数必须是文本类型并且其本身必须是常量表达式。
+一个或多个参数必须是文本类型并且其本身必须是常数表达式。
 
 ## <a name="return-value"></a>返回值
-
 
  Constexpr 变量或函数必须返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
@@ -51,7 +51,7 @@ constexpr ctor (params);
 
  Const 和 constexpr 变量之间的主要区别在于：const 变量的初始化可以延迟到运行时，而 constexpr 变量必须在编译时进行初始化。  所有 constexpr 变量均为常量。
 
-- 可使用声明变量**constexpr**，如果它具有文本类型并且未被初始化。 如果由构造函数执行初始化，则构造函数必须声明为**constexpr**。
+- 可以使用声明的变量**constexpr**，如果它具有文本类型并且未被初始化。 如果由构造函数执行初始化，则构造函数必须声明为**constexpr**。
 
 - 如果所引用的对象已由常数表达式初始化，并且在初始化期间所调用的任何隐式转换也均是常数表达式，则可能将引用声明为 constexpr。
 
@@ -68,33 +68,33 @@ constexpr int k = j + 1; //Error! j not a constant expression
 
 ## <a name="constexpr_functions"></a> constexpr 函数
 
-A **constexpr**函数是使用代码需要它时，可以在编译计算其返回值。  当其自变量为**constexpr**值，并且使用代码需要返回值在编译时，例如，初始化**constexpr**变量或提供一个非类型模板自变量，它会生成编译时常量。 当调用使用非**constexpr**自变量，或不需要在编译时其值时，它将与正则函数一样运行时生成一个值。  (此双重行为使你无需编写**constexpr**和非-**constexpr**同一函数的版本。)
+一个**constexpr**函数是一个可以在编译中使用代码需要它时计算其返回值。  当其自变量都**constexpr**值，并使用代码需要返回值在编译时，例如，初始化**constexpr**变量或提供非类型模板参数，它会生成编译时常量。 使用非调用时**constexpr**自变量，或不需要在编译时其值时，它类似于正则函数运行时生成的值。  (此双重行为使你无需编写**constexpr**和非-**constexpr**相同函数的版本。)
 
-A **constexpr**函数或构造函数是隐式**内联**。
+一个**constexpr**函数或构造函数是隐式**内联**。
 
 以下规则适用于 constexpr 函数：
 
-- A **constexpr**函数必须接受并仅返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
+- 一个**constexpr**函数必须接受并仅返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
-- A **constexpr**函数可以是递归。
+- 一个**constexpr**函数可以是递归。
 
-- 它不能是[虚拟](../cpp/virtual-cpp.md)。 A 不能定义为 constexpr 构造函数，如果封闭类具有任何虚拟基类。
+- 它不能[虚拟](../cpp/virtual-cpp.md)。 一个构造函数不能定义为 constexpr，如果封闭类具有任何虚拟基类。
 
-- 正文可以定义为 **= 默认**或 **= 删除**。
+- 主体可以定义为 `= default` 或 `= delete`。
 
-- 不能包含正文**goto**语句或的 try 块。
+- 不能包含正文**goto**语句或 try 块。
 
 - 可以将非 constexpr 模板的显式专用化声明为**constexpr**:
 
-- 显式专用化**constexpr**模板没有也显示为**constexpr**:
+- 显式专用化**constexpr**模板不需要也是**constexpr**:
 
-以下规则适用于**constexpr** Visual Studio 2017 及更高版本的函数：
+以下规则适用于**constexpr**函数在 Visual Studio 2017 及更高版本：
 
-- 它可能包含**如果**和**切换**语句以及所有循环语句包括**为**、 基于范围的 for，**时**，和**执行-时**。
+- 它可能包含**如果**和**切换**语句以及所有循环语句，其中包括**有关**，基于范围的 for，**而**，和**执行操作-虽然**。
  
-- 它可能包含局部变量声明，但该变量必须进行初始化，必须文本的类型，并且不能为静态或线程本地。 本地声明变量不需要是常量，且可能会发生变化。
+- 它可能包含局部变量声明，但该变量必须初始化，必须是文本类型，并且不能为静态或线程本地。 本地声明变量不需要是常量，且可能会发生变化。
 
-- Constexpr 非静态成员函数不需要是隐式常量。
+- Constexpr 非静态成员函数不需要为隐式 const。
 
 
 ```cpp
@@ -107,15 +107,15 @@ constexpr float exp(float x, int n)
 ```
 
 > [!TIP]
-> 注意： 在 Visual Studio 调试器中，当调试非优化调试生成，你可以判断是否**constexpr**函数正在评估在编译时通过将放在其内部断点。 如果命中该断点，则在运行时调用该函数。  如果未命中，则在编译时调用该函数。
+> 注意： 在 Visual Studio 调试器中，在调试非优化调试版本，可以指示是否**constexpr**函数评估在编译时放置在其中一个断点。 如果命中该断点，则在运行时调用该函数。  如果未命中，则在编译时调用该函数。
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)编译器选项使编译器将[外部链接]()对使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并按默认或如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量即使**extern**使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 /Permissive-option 不会启用 /Zc:externConstexpr。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)编译器选项将使编译器要应用[外部链接]()到通过使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并且默认情况下或者如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量，即使**extern**关键字使用。 **/Zc: externconstexpr**选项是从开始在 Visual Studio 2017 更新 15.6 版中提供。 和默认情况下处于关闭状态。 /Permissive-option 不会启用 /zc: externconstexpr。
 
 ## <a name="example"></a>示例
 
- 下面的示例演示**constexpr**变量、 函数和用户定义的类型。 请注意，在 main （） 中的最后一个语句**constexpr**成员函数 getvalue （） 是运行时调用，因为不需要在编译时已知该值。
+ 下面的示例演示**constexpr**变量、 函数和用户定义类型。 请注意，在 main （） 中的最后一个语句**constexpr**成员函数 getvalue （） 是运行时调用，因为值不需要在编译时已知。
 
 ```cpp
 #include <iostream>
@@ -182,7 +182,6 @@ int main()
     cout << "The value of foo is " << foo.GetValue() << endl;
 
 }
-
 ```
 
 ## <a name="requirements"></a>要求
@@ -190,6 +189,5 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>请参阅
-
-- [声明和定义](../cpp/declarations-and-definitions-cpp.md)
-- [const](../cpp/const-cpp.md)
+ [声明和定义](../cpp/declarations-and-definitions-cpp.md)  
+ [const](../cpp/const-cpp.md)

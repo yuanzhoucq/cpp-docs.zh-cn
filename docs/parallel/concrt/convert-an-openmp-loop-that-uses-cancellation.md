@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693258"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：转换使用取消的 OpenMP 循环以使用并发运行时
 某些并行循环不需要执行所有迭代。 例如，搜索值的算法可以终止后找到此值。 OpenMP 不提供一种机制来中断并行循环。 但是，你可以使用布尔值或标志，若要启用的循环，以指示已找到解决方案的一个迭代。 并发运行时提供的功能，使一个任务，以取消尚未开始其他任务。  

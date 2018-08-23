@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951453"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：将 MFC 作为 DLL 的一部分使用
 本说明介绍正则 MFC Dll，它允许你使用 MFC 库作为 Windows 动态链接库 (DLL) 的一部分。 此说明假定您已熟悉 Windows DLL 及其生成方式。 有关 MFC 扩展 Dll，使用它可以创建扩展 MFC 库中，请参阅[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/04/2018
   
  将 API 放在 C 文件和 C++ 文件均可包含的单独标头中。 请参阅 MFC 高级概念示例中的 screencap.h [DLLScreenCap](../visual-cpp-samples.md)有关示例。 若要导出函数，请在模块定义文件 (.DEF) 的 `EXPORTS` 部分中输入它们，或将 `__declspec(dllexport)` 包含在您的函数定义中。 使用 `__declspec(dllimport)` 将这些函数导入客户端可执行文件中。  
   
- 你必须添加`AFX_MANAGE_STATE`开头的动态链接到 MFC 的正则 MFC Dll 中的所有导出函数的宏。 此宏会将当前模块状态设置为 DLL 的模块状态。 若要使用该宏，请将以下代码行添加到从 DLL 导出的函数的开始处：  
+ 你必须在动态链接到 MFC 的正则 MFC Dll 中的所有导出函数的开头添加 AFX_MANAGE_STATE 宏。 此宏会将当前模块状态设置为 DLL 的模块状态。 若要使用该宏，请将以下代码行添加到从 DLL 导出的函数的开始处：  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

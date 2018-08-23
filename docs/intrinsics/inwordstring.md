@@ -1,5 +1,5 @@
 ---
-title: __inwordstring |Microsoft 文档
+title: __inwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545766"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Microsoft 专用**  
@@ -44,7 +45,7 @@ void __inwordstring(
  要读取的端口。  
   
  [out] `Buffer`  
- 此处编写从端口读取的数据。  
+ 读取从端口将数据写入此处。  
   
  [in] `Count`  
  要读取的数据的单词数。  
@@ -53,7 +54,7 @@ void __inwordstring(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

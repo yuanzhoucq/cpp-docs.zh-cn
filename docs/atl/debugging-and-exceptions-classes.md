@@ -1,5 +1,5 @@
 ---
-title: 调试和异常类 (ATL) |Microsoft 文档
+title: 调试和异常类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c774679e2edcb944e7779a5dc3f95c5d33fad3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 407e1654aed66c60f8672d2d06ce1e80c405cac5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961351"
 ---
 # <a name="debugging-and-exceptions-classes"></a>调试和异常类
 这些类提供对异常处理和调试支持。  
   
--   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md)此类提供了支持调试接口。  
+-   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md)此类为调试接口提供支持。  
   
--   [CAtlException](../atl/reference/catlexception-class.md)此类定义 ATL 异常。  
+-   [CAtlException](../atl/reference/catlexception-class.md)此类定义了一个 ATL 异常。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   

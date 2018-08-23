@@ -1,5 +1,5 @@
 ---
-title: MFC 数据库类 （ODBC 和 DAO） |Microsoft 文档
+title: MFC 数据库类 （ODBC 和 DAO） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ef8331142550424641b00742d302caedc2974a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94202eab788d376abf80866beafe74c52180474f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336572"
 ---
 # <a name="mfc-database-classes"></a>MFC 数据库类 
 > [!NOTE]
->  Microsoft 建议使用 ODBC 通过 Microsoft ODBC Driver 13 （或更高版本） for SQL Server 为新项目。 不再支持 DAO。    
+>  Microsoft 建议使用通过 Microsoft ODBC Driver 13 （或更高版本） 的 ODBC SQL server 的新项目。 不再支持 DAO。    
 
  有关详细信息，请参阅下列主题：  
--   [数据访问技术路线图](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+-   [数据访问技术路线图](https://msdn.microsoft.com/library/ms810810.aspx) 
 
--   [ODBC Driver 13.1 for SQL Server 发布](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)Microsoft ODBC Driver 13 for SQL Server 应该用于创建新的应用程序或增强现有应用程序需要充分利用新的 SQL Server 2016 功能。
+-   [ODBC Driver 13.1 for SQL Server 发布](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)Microsoft ODBC Driver 13 for SQL Server 应该用于创建新的应用程序或增强需要利用 SQL Server 2016 的新增功能的现有应用程序。
   
 -   [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)  
   
 -   [结合文档和视图使用数据库类](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [不结合文档和视图使用数据库类](../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

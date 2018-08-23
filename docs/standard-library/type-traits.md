@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026346"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>备注
 
-类和中的模板\<type_traits > 用于支持类型推理、 分类和在编译时间，以检测与类型相关的错误，并帮助你优化你的泛型代码转换。 这些类和模板包括描述类型属性的一元类型特征、描述类型间关系的二元类型特征，以及修改类型属性的转换特征。
+类和模板\<type_traits > 用于支持类型推理、 分类和转换在编译时，检测类型相关的错误，并帮助你优化泛型代码。 这些类和模板包括描述类型属性的一元类型特征、描述类型间关系的二元类型特征，以及修改类型属性的转换特征。
 
 若要支持类型特征，需定义一个帮助程序类 `integral_constant`。 它具有可构成类型谓词的基类的模板专用化 `true_type` 和 `false_type`。 类型谓词是采用一个或多个类型参数的模板。 如果类型谓词保留为 true，则它是以公共方式直接或间接从 [true_type](../standard-library/type-traits-typedefs.md#true_type) 派生的。 如果类型谓词保留为 false，则它是以公共方式直接或间接从 [false_type](../standard-library/type-traits-typedefs.md#false_type) 派生的。
 
@@ -73,7 +74,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|测试类型是否为 `void`。|
+|[is_void](../standard-library/is-void-class.md)|测试类型是否为**void**。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|测试类型是否为 `std::nullptr_t`。|
 |[is_integral](../standard-library/is-integral-class.md)|测试类型是否为整型。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|测试类型是否为浮点。|
@@ -94,7 +95,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|测试类型是否为引用。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|测试类型是否为算术型。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|测试类型是否为 `void` 或算术型。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|测试类型是否为**void**或算术。|
 |[is_object](../standard-library/is-object-class.md)|测试类型是否为对象类型。|
 |[is_scalar](../standard-library/is-scalar-class.md)|测试类型是否为标量类型。|
 |[is_compound](../standard-library/is-compound-class.md)|测试类型是否为非标量类型。|
@@ -104,8 +105,8 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|测试类型是否为 `const`。|
-|[is_volatile](../standard-library/is-volatile-class.md)|测试类型是否为 `volatile`。|
+|[is_const](../standard-library/is-const-class.md)|测试类型是否为**const**。|
+|[is_volatile](../standard-library/is-volatile-class.md)|测试类型是否为**易失性**。|
 |[is_trivial](../standard-library/is-trivial-class.md)|测试类型是否常用。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|测试类型是否可完全复制。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|测试类型是否为标准布局类型。|
@@ -141,7 +142,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|测试类型是否是复制赋值，以及赋值是否确定不引发。|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|测试类型是否是移动赋值，以及赋值是否确定不引发。|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|测试类型是否易损坏，以及析构函数是否确定不引发。|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|测试类型是否包含虚拟的析构函数。|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|测试类型是否包含虚拟的析构函数。|
 
 Type 属性查询
 
@@ -163,9 +164,9 @@ Const-volatile 修改
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|从类型生成一个 `const` 类型。|
-|[add_volatile](../standard-library/add-volatile-class.md)|从类型生成一个 `volatile` 类型。|
-|[add_cv](../standard-library/add-cv-class.md)|从类型生成一个 `const volatile` 类型。|
+|[add_const](../standard-library/add-const-class.md)|将生成**const**从类型的类型。|
+|[add_volatile](../standard-library/add-volatile-class.md)|将生成**易失性**从类型的类型。|
+|[add_cv](../standard-library/add-cv-class.md)|将生成**const 易失性**从类型的类型。|
 |[remove_const](../standard-library/remove-const-class.md)|从类型生成一个非常量类型。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|从类型生成一个非易失类型。|
 |[remove_cv](../standard-library/remove-cv-class.md)|从类型生成一个非常量非易失类型。|

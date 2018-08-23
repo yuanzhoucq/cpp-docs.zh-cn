@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292680"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>编译器警告（等级 3）C4334
 operator： 结果的 32 位 shift 隐式转换为 64 位 （是否 64 位位移？）  

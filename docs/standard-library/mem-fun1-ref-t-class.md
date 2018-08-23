@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960825"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 类
 
-一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将仅带一个自变量的 **non_const** 成员函数作为二元函数对象调用。
+一种适配器类，允许`non_const`带一个自变量作为二元函数对象在使用引用自变量初始化时调用的成员函数。
 
 ## <a name="syntax"></a>语法
 
@@ -43,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>参数
 
-`_Pm` 指向类成员函数的指针**类型**可转换为函数对象。
+*_Pm*指向的类成员函数的指针`Type`可转换为函数对象。
 
-`left` 对象的`_Pm`上调用成员函数。
+*左*对象的 *_Pm*上调用成员函数。
 
-`right` 为指定的自变量`_Pm`。
+*右*自变量提供给 *_Pm*。
 
 ## <a name="return-value"></a>返回值
 
@@ -55,7 +56,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ## <a name="remarks"></a>备注
 
-模板类存储 `_Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它定义其成员函数`operator()`为返回 (**左**。\*`_Pm`) (**右**)。
+此模板类存储一份 *_Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 (**左**。\*`_Pm`) (**右**)。
 
 ## <a name="example"></a>示例
 

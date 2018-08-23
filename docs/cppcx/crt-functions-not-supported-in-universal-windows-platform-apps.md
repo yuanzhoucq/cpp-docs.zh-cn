@@ -1,22 +1,23 @@
 ---
-title: 通用 Windows 平台应用中不支持的 CRT 函数 |Microsoft 文档
+title: 通用 Windows 平台应用中不支持的 CRT 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8b5c150632d035060b0e34f3962f2e903990a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609180"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台应用中不支持的 CRT 函数
-生成通用 Windows 平台 (UWP) 应用时，许多 C 运行时 (CRT) 函数不可用。 在某些情况下，解决方法是可用--例如，可以使用 Windows 运行时或 Win32 Api。 但是在其他情况下，CRT 函数被禁止使用，因为对应于它们的功能或支持 API 不适用于 UWP 应用。 若要查看适用于 Windows 运行时的替代方法，请参阅[UWP 应用中的 Windows Api 的替代项](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  
+生成通用 Windows 平台 (UWP) 应用时，许多 C 运行时 (CRT) 函数不可用。 在某些情况下，解决方法都是可用--例如，可以使用 Windows 运行时或 Win32 Api。 但是在其他情况下，CRT 函数被禁止使用，因为对应于它们的功能或支持 API 不适用于 UWP 应用。 若要查找的 Windows 运行时支持一种替代方法，请参阅[UWP 应用中的 Windows Api 的替代方法](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  
   
 下表列出了在生成 UWP 应用时不可用的 CRT 函数，并指出了任何适用的解决方法。  
   
@@ -38,13 +39,13 @@ ms.lasthandoff: 05/04/2018
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|环境变量不可用于 UWP 应用。|无解决方法。 若要设置时区，请使用 _tzset。|  
 |_loaddll _getdllprocaddr _unloaddll|这些是以前 CRT 版本中的已过时函数。 此外，用户无法加载 DLL（同一个应用程序包中的 DLL 除外）。|使用 Win32 API `LoadPackagedLibrary`、 `GetProcAddress`和 `FreeLibrary` 加载和使用打包的 DLL。|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|该功能在 UWP 应用中不可用。 UWP 应用无法调用另一个 UWP 应用或桌面应用。|无解决方法。|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|这些函数通常用于处理堆。 但是，UWP 应用中不支持对应 Win32 API。 而且，应用无法再创建或使用专用堆。|无解决方法。 但是， `_heapwalk` 在 DEBUG CRT 中可用（仅用于进行调试）。 这些不能用于上载到 Microsoft 应用商店的应用。|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|这些函数通常用于处理堆。 但是，UWP 应用中不支持对应 Win32 API。 而且，应用无法再创建或使用专用堆。|无解决方法。 但是， `_heapwalk` 在 DEBUG CRT 中可用（仅用于进行调试）。 这些不能中上传到 Microsoft Store 的应用程序使用。|  
   
- 以下函数在 CRT 中可用于 UWP 应用，但仅当不能使用对应 Win32 或 Windows 运行时 Api 时，才应使用-例如，要移植大型基本代码  
+ 以下函数在 UWP 应用的 CRT 中可用，但仅当不能使用对应 Win32 或 Windows 运行时 Api 时，才应使用 — 例如，当您要移植大型基本代码  
   
 |||  
 |-|-|  
-|单字节字符串函数（例如， `strcat`、 `strcpy`、 `strlwr`等）。|使 UWP 应用严格遵循 unicode 标准因为所有 Win32 Api 和 Windows 运行时 Api 公开都使用的 Unicode 字符仅设置。  保留了单字节函数，以便用于移植大型基本代码，但在其他情况下应避免使用，并且应尽可能改用对应的宽字符函数。|  
+|单字节字符串函数（例如， `strcat`、 `strcpy`、 `strlwr`等）。|使 UWP 应用严格遵循 Unicode 因为所有 Win32 Api 和 Windows 运行时 Api 公开都使用的 Unicode 字符仅设置。  保留了单字节函数，以便用于移植大型基本代码，但在其他情况下应避免使用，并且应尽可能改用对应的宽字符函数。|  
 |流 IO 和低级文件 IO 函数（例如， `fopen`、 `open`等）。|这些函数是同步的，不推荐用于 UWP 应用。 在 UWP 应用中，使用异步 API 打开、读取和写入文件，以防止锁定 UI 线程。 这类 API 的示例是在 `Windows::Storage::FileIO` 类中的一个。|  
   
 ## <a name="windows-8x-store-apps-and-windows-phone-8x-apps"></a>Windows 8.x 应用商店应用和 Windows Phone 8.x 应用  

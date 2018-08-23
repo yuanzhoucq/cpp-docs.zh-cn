@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280177"
 ---
 # <a name="compiler-warning-level-1-c4669"></a>编译器警告（等级 1）C4669
 “cast”: 不安全的转换:“class”是托管的或 WinRT 类型对象  

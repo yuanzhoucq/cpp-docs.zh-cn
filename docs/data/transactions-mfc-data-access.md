@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107813"
 ---
 # <a name="transactions--mfc-data-access"></a>事务（MFC 数据访问）
 已开发出事务的概念以便根据一系列成功操作处理数据库结果状态的情况。 由于连续性操作可能修改先前操作的结果，因此可能会出现这种情况。 在这种情况下，如果任何一个操作失败，结果状态就有可能不确定。  

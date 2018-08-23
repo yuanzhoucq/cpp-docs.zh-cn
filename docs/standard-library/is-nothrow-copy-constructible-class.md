@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a9818b6334ddd2d2769fc79c55fc8fd72e6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953766"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible 类
 
@@ -35,11 +36,11 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 具有 nothrow 复制构造函数，则类型谓词的实例将保留为 true，否则保留为 false。
+如果类型谓词的实例将保留 true 类型*Ty*具有 nothrow 复制构造函数，否则为 false。
 
 ## <a name="requirements"></a>要求
 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386145"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>数据类型说明符和等效项
 本书通常使用下表中所列的类型说明符的形式而不使用长形式，并且本书假设 `char` 类型在默认情况下有符号。 因此，在本书中，`char` 与 **signed char** 等效。  

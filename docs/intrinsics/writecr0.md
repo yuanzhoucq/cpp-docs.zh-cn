@@ -1,5 +1,5 @@
 ---
-title: __writecr0 |Microsoft 文档
+title: __writecr0 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1437aa6f13a6f19afad36a59985c4d14e8e6a1d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68bb7ec3d89ac7fffbc2896023fbd2f1dd0584ba
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539202"
 ---
 # <a name="writecr0"></a>__writecr0
 **Microsoft 专用**  
   
- 将值`Data`到 CR0 寄存器。  
+ 将值写入`Data`到 CR0 寄存器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +38,13 @@ void writecr0(
   
 #### <a name="parameters"></a>参数  
  [in] `Data`  
- 要写入 CR0 寄存器的值。  
+ 要写入到 CR0 寄存器的值。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__writecr0`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr0`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332122"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>访问嵌入的月历控件
 可以从访问嵌入的月历控件对象`CDateTimeCtrl`对象通过调用[GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)成员函数。  

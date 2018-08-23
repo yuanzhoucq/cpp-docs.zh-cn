@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377295"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 引入了一个或多个部分`definitions`是对你的项目的输出文件中的分区的访问说明符。  

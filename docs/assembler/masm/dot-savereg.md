@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055201"
 ---
 # <a name="savereg"></a>.SAVEREG
 生成或者`UWOP_SAVE_NONVOL`或`UWOP_SAVE_NONVOL_FAR`展开代码条目指定的寄存器 (`reg`) 和偏移量 (`offset`) 使用的当前序言偏移量。 MASM 将选择最有效的编码。  

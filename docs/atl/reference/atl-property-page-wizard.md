@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359777"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 此向导[入 ATL 项目中添加的属性页](../../atl/reference/adding-an-atl-property-page.md)或具有 ATL 支持的 MFC 项目。 ATL 属性页提供一个用户界面来设置属性 （或调用方法） 的一个或多个 COM 对象。  

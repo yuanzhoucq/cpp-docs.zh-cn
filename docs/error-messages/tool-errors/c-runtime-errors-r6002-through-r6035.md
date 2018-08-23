@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300015"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 运行时错误 R6002 到 R6035
 

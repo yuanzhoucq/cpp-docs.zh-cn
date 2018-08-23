@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956548"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -39,8 +40,8 @@ ms.lasthandoff: 05/08/2018
 
 |类型名称|描述|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|专用于 `char` 的类型 `basic_iostream`。|
-|[istream](../standard-library/istream-typedefs.md#istream)|专用于 `char` 的类型 `basic_istream`。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|一种类型`basic_iostream`专用于**char**。|
+|[istream](../standard-library/istream-typedefs.md#istream)|一种类型`basic_istream`专用于**char**。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|专用于 **wchar** 的类型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|专用于 **wchar** 的类型 `basic_istream`。|
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/08/2018
 |类|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
-|[basic_istream](../standard-library/basic-istream-class.md)|该模板类描述一个控制从流缓冲区提取元素和编码对象的对象（其字符特征由类 **Tr** 确定，也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)），该流缓冲区具有 **Elem** 类型的元素（也称为 [char_type](../standard-library/basic-ios-class.md#char_type)）。|
+|[basic_istream](../standard-library/basic-istream-class.md)|此模板类描述一个对象，用于控制提取元素和编码的对象从具有类型的元素的流缓冲区`Elem`，也称为[char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类`Tr`，也称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>请参阅
 

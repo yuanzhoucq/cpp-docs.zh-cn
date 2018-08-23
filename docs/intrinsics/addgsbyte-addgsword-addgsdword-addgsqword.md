@@ -1,5 +1,5 @@
 ---
-title: __addgsbyte、 __addgsword、 __addgsdword、 __addgsqword |Microsoft 文档
+title: __addgsbyte，__addgsword，__addgsdword，__addgsqword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540751"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Microsoft 专用**  
   
- 将值添加到指定的偏移量相对于开始的内存位置`GS`段。  
+ 将值添加到指定相对于开头的偏移量的内存位置`GS`段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,19 +64,19 @@ void __addgsqword(
  从开始处的偏移量`GS`。  
   
  [in] `Data`  
- 要添加到的内存位置的值。  
+ 要添加到内存位置的值。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|X64|  
+|`__addgsword`|X64|  
+|`__addgsdword`|X64|  
+|`__addgsqword`|X64|  
   
 ## <a name="remarks"></a>备注  
- 这些内部函数可在仅，内核模式下，这些例程都仅可用作内部函数。  
+ 这些内部函数可用于在内核模式下，并且这些例程仅用作内部函数。  
   
 **结束 Microsoft 专用**  
   

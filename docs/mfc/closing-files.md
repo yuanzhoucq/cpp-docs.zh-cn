@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341021"
 ---
 # <a name="closing-files"></a>关闭文件
 像往常在 I/O 操作中一样，完成文件后，您必须关闭它。  

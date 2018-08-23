@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950430"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064：ActiveX 控件中的单元模型线程
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
  启用单元模型线程很容易地大多数控件，特别是当它们有很少或没有共享的数据。  
   
 ## <a name="protecting-shared-data"></a>保护共享数据  
- 如果你的控件使用共享的数据，例如的静态成员变量，访问数据应受到保护，与一个关键部分，以便防止多个线程同时修改数据。 若要为此目的，设置了关键部分，声明类的静态成员变量`CCriticalSection`控件的类中。 使用`Lock`和**解锁**本关键部分的成员函数对象，只要你的代码访问的共享的数据。  
+ 如果你的控件使用共享的数据，例如的静态成员变量，访问数据应受到保护，与一个关键部分，以便防止多个线程同时修改数据。 若要为此目的，设置了关键部分，声明类的静态成员变量`CCriticalSection`控件的类中。 使用`Lock`和`Unlock`本关键部分的成员函数对象，只要你的代码访问的共享的数据。  
   
  例如，考虑需要维护由所有实例共享的字符串控件类。 此字符串可在静态成员变量中维护和保护的关键部分。 控件的类声明将包含以下各项：  
   
@@ -80,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>注册的单元模型感知控件  
- 支持的单元模型线程的控件应在其下的类 ID 注册表项中的"Apartment"值加上命名的值"ThreadingModel"指示在注册表中，此功能*类 id* \\ **InprocServer32**密钥。 若要使此项以自动注册为您的控件，将传递`afxRegApartmentThreading`中的第六个参数标志`AfxOleRegisterControlClass`:  
+ 支持的单元模型线程的控件应在其下的类 ID 注册表项中的"Apartment"值加上命名的值"ThreadingModel"指示在注册表中，此功能*类 id* \\ **InprocServer32**密钥。 若要使此项以自动注册为您的控件，将传递*afxRegApartmentThreading*中的第六个参数标志`AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -107,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  如果控件项目由 Visual c + + 4.1 或更高版本的 controlwizard 可生成的此标志已将出现在你的代码。 注册的线程模型所需不进行任何更改。  
   
- 如果你的项目由早期版本的 controlwizard 可生成的则现有的代码将作为第六个参数具有一个布尔值。 如果现有的参数为 TRUE，将其更改为`afxRegInsertable | afxRegApartmentThreading`。 如果现有的参数为 FALSE，将其更改为`afxRegApartmentThreading`。  
+ 如果你的项目由早期版本的 controlwizard 可生成的则现有的代码将作为第六个参数具有一个布尔值。 如果现有的参数为 TRUE，将其更改为*afxRegInsertable | afxRegApartmentThreading*。 如果现有的参数为 FALSE，将其更改为*afxRegApartmentThreading*。  
   
- 如果控件不遵循单元模型线程处理的规则，你必须通过`afxRegApartmentThreading`此参数中。  
+ 如果控件不遵循单元模型线程处理的规则，你必须通过*afxRegApartmentThreading*此参数中。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

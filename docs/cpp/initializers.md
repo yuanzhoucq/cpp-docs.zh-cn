@@ -1,5 +1,5 @@
 ---
-title: 初始值设定项 |Microsoft 文档
+title: 初始值设定项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408159"
 ---
 # <a name="initializers"></a>初始值设定项
 初始值设定项可指定变量的初始值。 你可以在以下上下文中初始化变量：  
@@ -45,7 +46,6 @@ ms.lasthandoff: 05/03/2018
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  初始值设定项可以采用以下形式：  
@@ -90,11 +90,11 @@ ms.lasthandoff: 05/03/2018
   
 -   数值变量初始化为 0（或 0.0、0.0000000000 等）。  
   
--   字符变量初始化为`'\0'`。  
+-   Char 变量初始化为`'\0'`。  
   
--   指针初始化为 `nullptr`。  
+-   指针初始化为**nullptr**。  
   
--   数组， [POD](../standard-library/is-pod-class.md)类、 结构和联合将其成员初始化为零值。  
+-   数组[POD](../standard-library/is-pod-class.md)类、 结构和联合将其成员初始化为零值。  
   
  零初始化在不同的时间执行：  
   
@@ -124,7 +124,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> 默认初始化  
- 类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以不使用初始化表达式或使用 `new` 关键字调用默认构造函数：  
+ 类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以调用默认构造函数，不使用初始化表达式或与**新**关键字：  
   
 ```cpp  
 MyClass mc1;  
@@ -188,7 +188,7 @@ int main() {
   
 -   使用空圆括号或大括号初始化匿名临时对象  
   
--   使用 `new` 关键字和空圆括号或大括号来初始化对象  
+-   初始化的对象**新**关键字和空圆括号或大括号  
   
  值初始化执行以下操作：  
   
@@ -213,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>复制初始化  
@@ -278,9 +277,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   使用非空大括号或圆括号初始化变量  
   
--   使用 `new` 关键字和非空大括号或圆括号来初始化变量  
+-   使用初始化变量**新**关键字和非空大括号或圆括号  
   
--   使用 `static_cast` 初始化变量  
+-   使用初始化变量**static_cast**  
   
 -   在构造函数中，使用初始值设定项列表初始化基类和非静态成员  
   
@@ -320,7 +319,7 @@ int main(){
   
 -   初始化变量  
   
--   使用 `new` 关键字初始化类  
+-   使用初始化类**新**关键字  
   
 -   从函数返回对象  
   
@@ -377,7 +376,7 @@ int main() {
 -   没有虚拟成员函数  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->在 Visual Studio 2015 及更早版本，不是允许聚合具有大括号或等号初始值设定项用于非静态成员。 此限制已在 C + + 14 标准中删除，并在 Visual Studio 2017 中实现。 
   
  聚合初始值设定项包括含等号或不含等号的括号内的初始化列表，如以下示例所示：  
   
@@ -424,7 +423,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  已声明但未显式初始化聚合初始化期间数组成员都是零初始化，如`myArr3`上面。  
+>  声明但未显式初始化聚合初始化期间的数组成员将进行零初始化，如`myArr3`上面。  
   
 #### <a name="initializing-unions-and-structs"></a>初始化联合和结构  
  如果联合没有构造函数，你可以使用单个值（或使用联合的另一个实例）对其初始化。 该值用于初始化第一个非静态字段。 结构初始化与其不同，其初始值设定项中的第一个值用于初始化第一个字段，第二个值用于初始化第二个字段，依此类推。 比较以下示例中联合和结构的初始化：  
@@ -515,7 +514,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   显式指定为 `extern` 的声明。 例如：  
+-   显式指定为变量的声明**extern**。 例如：  
   
     ```  
     extern int& iVal;  
@@ -526,10 +525,9 @@ int main()
  ![Ref 类型初始化决策图](../cpp/media/vc38s71.gif "vc38S71")  
 引用类型初始化决策图  
   
- 引用`volatile`类型 (声明为`volatile` *typename * * * （& a)** *标识符*) 可以使用初始化`volatile`或使用的相同类型的对象未声明为对象`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename * * * （& a)** *标识符*) 可以是使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
+ 对引用**可变**类型 (声明为**易失性** *typename * * * &** *标识符*) 可初始化与**可变**对象相同类型的对象或使用未声明为**易失性**。 它们不能但是，使用初始化**const**该类型的对象。 同样，对**const**类型 (声明为**const** *typename * * * &** *标识符*) 可以是使用初始化**const**相同类型的对象 (或任何已转换为该类型对象或使用未声明为**const**)。 它们不能但是，使用初始化**易失性**该类型的对象。  
   
- 不使用限定的引用**const**或`volatile`关键字可以仅使用作为既不声明的对象初始化**const**也不`volatile`。  
+ 不使用限定的引用**const**或**易失性**关键字可以仅使用作为既不声明的对象初始化**const**也不**易失性**。  
   
 ### <a name="initialization-of-external-variables"></a>外部变量的初始化  
- 自动、 静态的和外部变量的声明可以包含初始值设定项。 但是，仅当外部变量没有声明为 `extern` 时，其声明中才可以包含初始值设定项。
-  
+ 自动、 静态和外部变量的声明可以包含初始值设定项。 但是，外部变量的声明可以包含初始值设定项仅当变量未声明为**extern**。

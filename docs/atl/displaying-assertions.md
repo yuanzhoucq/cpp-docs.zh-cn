@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354274"
 ---
 # <a name="displaying-assertions"></a>显示断言
 如果连接到你的服务的客户端似乎停止响应，服务可能有断言，并显示一个消息框，你不可以看到。 您可以通过使用 Visual c + + 的调试器来调试你的代码对此进行确认 (请参阅[使用任务管理器](../atl/using-task-manager.md)本部分前面的)。  

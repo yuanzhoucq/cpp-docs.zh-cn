@@ -1,5 +1,5 @@
 ---
-title: __int8、 __int16、 __int32、 __int64 |Microsoft 文档
+title: __int8，__int16，__int32，__int64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,31 +24,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1be48b2e6972ca3a291ab57dbcb1976e6a56d87
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401375"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- Microsoft C/C++ 功能支持固定大小整数类型。 可以通过使用声明 8 位、 16、 32 位或 64 位整数变量 **__int * * * n*类型说明符，其中*n*是 8、 16、 32 或 64。  
+ Microsoft C/C++ 功能支持固定大小整数类型。 可以通过使用声明 8 位、 16 位、 32 位或 64 位整数变量 **__int * * * n*类型说明符，其中*n*是 8、 16、 32 或 64。  
   
  以下示例为这些类型的固定大小整数声明了一个变量：  
   
-```  
+```cpp 
 __int8 nSmall;      // Declares 8-bit integer  
 __int16 nMedium;    // Declares 16-bit integer  
 __int32 nLarge;     // Declares 32-bit integer  
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- `__int8`、`__int16` 和 `__int32` 类型是大小相同的 ANSI 类型的同义词，用于编写在多个平台中具有相同行为的可移植代码。 `__int8`数据类型是类型的同义词， `char`，`__int16`是类型的同义词，**短**，和`__int32`是类型的同义词， `int`。 `__int64`类型是类型的同义词， `long long`。  
+ 类型 **__int8**， **__int16**，并 **__int32**是同义词，具有相同的 ANSI 类型的大小，并可用于编写的行为相同的可移植代码跨多个平台。 **__Int8**数据类型是同义词，具有类型**char**， **__int16**是类型的同义词**短**，和 **__int32**是类型的同义词**int**。**__Int64**类型是同义词，具有类型**超长**。  
   
 ## <a name="example"></a>示例  
- 下面的示例说明 __int*xx*参数将被提升为`int`:  
+ 下面的示例说明 __int*xx*参数将提升为**int**:  
   
-```  
+```cpp 
 // sized_int_types.cpp  
   
 #include <stdio.h>  

@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Eventtargetarray 构造函数 |Microsoft 文档'
+title: 'Eventtargetarray:: Eventtargetarray 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,50 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590647"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 构造函数
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-EventTargetArray(  
-   _Out_ HRESULT* hr,  
-   size_t items  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `hr`  
- 此构造函数操作后, 参数`hr`指示数组分配是否成功。 下表列出的可能值`hr`。  
-  
- S_OK  
- 操作成功。  
-  
- E_OUTOFMEMORY  
- 无法为数组分配内存。  
-  
- S_FALSE  
- 参数`items`小于或等于零。  
-  
- `items`  
- 分配的数组元素的数目。  
-  
-## <a name="remarks"></a>备注  
- 初始化 EventTargetArray 类的新实例。  
-  
- EventTargetArray 用于保留 EventSource 对象中的事件处理程序的数组。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [EventTargetArray 类](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>参数
+
+*hr*  
+此构造函数的操作之后, 参数*hr*指示数组的分配是成功还是失败。 下表列出了可能的值为*hr*。
+
+已成功，则为 S_OK 该操作。
+
+无法为数组分配 E_OUTOFMEMORY 内存。
+
+S_FALSE 参数*项*小于或等于零。
+
+*项*  
+要分配的数组元素数。
+
+## <a name="remarks"></a>备注
+
+初始化的新实例**EventTargetArray**类。
+
+**EventTargetArray**用于将数组中的事件处理程序`EventSource`对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[EventTargetArray 类](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: __if_exists 语句 |Microsoft 文档
+title: __if_exists 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405939"
 ---
 # <a name="ifexists-statement"></a>__if_exists 语句
-`__if_exists` 语句测试指定的标识符是否存在。 如果该标识符存在，则执行指定的语句块。  
+**__If_exists**语句测试是否存在指定的标识符。 如果该标识符存在，则执行指定的语句块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,28 +40,28 @@ statements
   
 |参数|描述|  
 |---------------|-----------------|  
-|`identifier`|要测试其存在性的标识符。|  
-|`statements`|一个或多个时要执行的语句`identifier`存在。|  
+|*identifier*|要测试其存在性的标识符。|  
+|*语句*|一个或多个时要执行的语句*标识符*存在。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!CAUTION]
->  若要实现最可靠的结果，请在以下约束条件下使用 `__if_exists` 语句。  
+>  若要实现最可靠的结果，请使用 **__if_exists**以下约束条件下的语句。  
   
--   只将 `__if_exists` 语句应用于简单类型而不是模板。  
+-   将应用 **__if_exists**语句仅简单类型，而不是模板。  
   
--   将 `__if_exists` 语句应用于类的内部或外部的标识符。 不要将 `__if_exists` 语句应用于局部变量。  
+-   将应用 **__if_exists**到的内部或外部类标识符的语句。 不适用于 **__if_exists**到本地变量的语句。  
   
--   仅在函数的主体中使用 `__if_exists` 语句。 在函数主体的外部，`__if_exists` 语句仅能测试完全定义的类型。  
+-   使用 **__if_exists**仅在函数体中的语句。 在函数体外部区域 **__if_exists**语句可以测试仅完全定义的类型。  
   
 -   在测试重载函数时，不能测试特定形式的重载。  
   
- 对补充`__if_exists`语句是[__if_not_exists](../cpp/if-not-exists-statement.md)语句。  
+ 对补充 **__if_exists**语句是[__if_not_exists](../cpp/if-not-exists-statement.md)语句。  
   
 ## <a name="example"></a>示例  
  请注意，此示例使用了模板，不建议这样做。  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>输出  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  

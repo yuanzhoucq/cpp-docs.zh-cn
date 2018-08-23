@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361298"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 使用此向导将对象添加到您的项目，支持 COM + 1.0 服务，包括事务。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374367"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>加载被延迟加载的 DLL 的所有导入
 **__HrLoadAllImportsForDll**函数，其定义中 delayhlp.cpp，通知链接器从指定的 DLL 加载所有导入[/delayload](../../build/reference/delayload-delay-load-import.md)链接器选项。  

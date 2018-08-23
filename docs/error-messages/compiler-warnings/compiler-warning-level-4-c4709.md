@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295313"
 ---
 # <a name="compiler-warning-level-4-c4709"></a>编译器警告（等级 4）C4709
 数组索引表达式中的逗号运算符  

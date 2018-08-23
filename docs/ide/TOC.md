@@ -71,6 +71,7 @@
 ## [了解 Visual C++ 应用程序的依赖项](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [确定要重新分发的 DLL](determining-which-dlls-to-redistribute.md)
 ## [选择部署方法](choosing-a-deployment-method.md)
+## [通用 CRT 部署](universal-crt-deployment.md)
 ## [重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)
 ### [使用合并模块重新分发组件](redistributing-components-by-using-merge-modules.md)
 ### [重新分发 Visual C++ ActiveX 控件](redistributing-visual-cpp-activex-controls.md)

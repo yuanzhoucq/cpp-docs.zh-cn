@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368117"
 ---
 # <a name="inline-files-in-a-makefile"></a>生成文件中的内联文件
 内联文件包含你在生成文件中指定的文本。 其名称可在命令中作为输入 （例如，链接命令文件），或者它可以将命令传递给操作系统。 运行命令，用于创建文件时，将在磁盘上创建文件。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366869"
 ---
 # <a name="commands-in-a-makefile"></a>生成文件中的命令
 描述块或推理规则指定的命令在依赖项已过期时要运行的块。 NMAKE 每个命令将在之前显示运行它，除非 /s 选项、 **。无提示**， **！CMDSWITCHES**，或使用 @。 如果描述块不跟命令块，NMAKE 查找匹配的推理规则。  

@@ -60,11 +60,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451571"
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -118,7 +119,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>返回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**返回找到的字节数在第一个*计数*的多字节字符的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**返回找到的字符数中第一个*计数*的字节数*str*。 如果之前的检查遇到 NULL 字符*str*已完成，它们返回的字节或找到的 NULL 字符之前的字符数。 如果*str*组成数不能超过*计数*字符或字节，它们在字符串中返回的字符或字节数。 如果*计数*小于零，它们将返回 0。 在早期版本中，这些函数必须返回值类型**int**而非**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**返回找到的字节数在第一个*计数*的多字节字符的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**返回找到的字符数中第一个*计数*的字节数*str*。 如果之前的检查遇到 null 字符*str*已完成，它们返回的字节或找到的 null 字符之前的字符数。 如果*str*组成数不能超过*计数*字符或字节，它们在字符串中返回的字符或字节数。 如果*计数*小于零，它们将返回 0。 在早期版本中，这些函数必须返回值类型**int**而非**size_t**。
 
 **_strncnt**中第一个返回的字符数*计数*单字节字符串的字节*str*。 **_wcsncnt**中第一个返回的字符数*计数*的宽字符字符串的宽字符*str*。
 
@@ -126,9 +127,9 @@ size_t _mbsnccnt_l(
 
 **_mbsnbcnt**和 **_mbsnbcnt_l**计数找到的字节数在第一个*计数*的多字节字符的*str*。 **_mbsnbcnt**和 **_mbsnbcnt_l**替换**mtob** ，应使用代替了**mtob**。
 
-**_mbsnccnt**和 **_mbsnccnt_l**计数找到的字符数中第一个*计数*的字节数*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到双字节字符的第二个字节中的 NULL，则第一个字节也被视为为 NULL，并且不包括在返回的计数值。 **_mbsnccnt**和 **_mbsnccnt_l**替换**btom** ，应使用代替了**btom**。
+**_mbsnccnt**和 **_mbsnccnt_l**计数找到的字符数中第一个*计数*的字节数*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到双字节字符的第二个字节中的 null 字符，则第一个字节也被视为为 null，并且不包括在返回的计数值。 **_mbsnccnt**和 **_mbsnccnt_l**替换**btom** ，应使用代替了**btom**。
 
-如果*str*是 null 指针，或者是*计数*为 0，则这些函数调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)， **errno**设置为**EINVAL**，并且该函数返回 0。
+如果*str*是**NULL**指针或*计数*为 0，则这些函数调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)， **errno**设置为**EINVAL**，并且该函数返回 0。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

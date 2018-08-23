@@ -1,5 +1,5 @@
 ---
-title: 重命名 |Microsoft 文档
+title: 重命名 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,9 +12,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339808"
 ---
 # <a name="rename"></a>重命名
 功能：重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。
@@ -36,15 +37,15 @@ ms.lasthandoff: 05/04/2018
      * 选择“编辑 > 重构 > 重命名”。
      * 右键单击代码并选择“重命名”。
 
-1. 在**重命名**窗口弹出，输入新名称的所选的项目，然后单击**预览**按钮。  更改**搜索作用域**如果需要扩大或缩小重命名的范围。
+1. 在弹出的“重命名”窗口中，输入所选项的新名称，并单击“预览”按钮。  如果需要扩大或缩小重命名的范围，请更改“搜索范围”。
 
-   ![重命名对话框](images/rename_dialog.png)
+   ![“重命名”对话框](images/rename_dialog.png)
 
    > [!TIP]
-   > 可以通过检查跳过预览**跳过预览更改如果所有确认引用**选项。
+   > 可以通过检查“如果确认了所有引用，则跳过预览更改”来跳过预览。
 
-1. 当**预览更改-重命名**窗口随即出现，请确保相应地进行您请求的更改。  使用在窗口的上半复选框启用或禁用任何项重命名。
+1. 当出现“预览更改 - 重命名”窗口时，请确保正确进行所请求的更改。  使用窗口上半部分的复选框，启用或禁用任何项的重命名。
 
    ![重命名预览](images/rename_preview.png)
 
-1. 当一切看上去正常时，则单击**应用**按钮和的项将被重命名你的源代码中。
+1. 当一切都正常时，单击“应用”按钮，项将在源代码中重命名。

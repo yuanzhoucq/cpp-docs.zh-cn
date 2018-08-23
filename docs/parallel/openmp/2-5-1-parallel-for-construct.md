@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687148"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for 构造
 **为并行**指令是的快捷方式**并行**区域包含单个仅**为**指令。 语法**为并行**指令是，如下所示：  

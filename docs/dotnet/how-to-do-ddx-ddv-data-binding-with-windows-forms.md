@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131655"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows 窗体执行 DDX/DDV 数据绑定
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)调用[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 如果你使用`DDX_ManagedControl`为`CWinFormsControl`控件 （在向导生成的代码），不应调用`CreateManagedControl`显式为同一个控件。  

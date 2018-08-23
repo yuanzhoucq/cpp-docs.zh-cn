@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e226fdf4f8978172a187e1bfa8d53655ce368f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463296"
 ---
 # <a name="while-statement-c"></a>While 语句 (C++)
-执行*语句*重复直到*表达式*计算结果为零。  
+执行*语句*重复直至*表达式*计算结果为零。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>备注  
- 测试*表达式*发生在每次执行循环; 因此，`while`循环将执行零次或多次。 *表达式*必须是整数类型、 指针类型，或明确转换为整数的类类型或指针类型。  
+ 测试*表达式*发生在每次执行循环; 因此，**虽然**循环执行零次或多次。 *表达式*必须为整型类型、 指针类型或类类型明确转换为整型或指针类型。  
   
- A`while`时，还可以终止循环[中断](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[返回](../cpp/return-statement-cpp.md)语句内执行主体。 使用[继续](../cpp/continue-statement-cpp.md)终止当前迭代，但不退出`while`循环。 **继续**将控制权传递给下一个迭代的`while`循环。  
+ 一个**虽然**时，还可以终止循环[中断](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或者[返回](../cpp/return-statement-cpp.md)正文执行的语句中。 使用[继续](../cpp/continue-statement-cpp.md)终止当前迭代，而不退出**虽然**循环。 **继续**将控制传递到下一个迭代**虽然**循环。  
   
- 下面的代码使用`while`循环要修剪尾随下划线从字符串：  
+ 下面的代码使用**虽然**循环，以裁剪尾随下划线从字符串：  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  
@@ -68,7 +68,7 @@ int main()
 }  
 ```  
   
- 终止条件在循环的顶部。 如果不有任何尾随下划线，则循环将永远不会执行。  
+ 终止条件计算循环的顶部。 如果不有任何尾随下划线，则循环将永远不会执行。  
   
 ## <a name="see-also"></a>请参阅  
  [迭代语句](../cpp/iteration-statements-cpp.md)   

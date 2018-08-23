@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383713"
 ---
 # <a name="technical-notes-by-number"></a>按编号列出的技术说明
 下面的技术说明会就数字而言，使用最近写入的技术备注首先列出。 有关按类别列表，请参阅[按类别列出的技术说明](../mfc/technical-notes-by-category.md)。  

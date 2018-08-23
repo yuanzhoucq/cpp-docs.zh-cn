@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270637"
 ---
 # <a name="compiler-error-c3651"></a>编译器错误 C3651
 member： 不能用作显式重写，必须是基类的成员  

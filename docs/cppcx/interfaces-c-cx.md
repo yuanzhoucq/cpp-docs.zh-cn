@@ -1,19 +1,20 @@
 ---
-title: 接口 (C + + /cli CX) |Microsoft 文档
+title: 接口 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592547"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 虽然一个 ref 类最多从一个具体基类继承，它可以实现任意数量的接口类。 一个接口类（或接口结构）自身可继承（或需要）多个接口类、可重载其成员函数，也可具有类型参数。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>泛型接口  
- 在 C + + /cli CX，`generic`关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义几个泛型接口 — 例如， [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)-但它不支持创建公共用户定义的泛型接口中 C + + /cli CX。 但可以创建私有泛型接口。  
+ 在 C + + /CX 中，`generic`关键字用于表示 Windows 运行时参数化类型。 参数化类型在元数据中发出，且可由用支持类型参数的任何语言编写的代码使用。 Windows 运行时定义几个泛型接口 — 例如， [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— 但它不支持创建公共用户定义的泛型接口中 C + + /cli CX。 但可以创建私有泛型接口。  
   
  下面是如何使用 Windows 运行时类型创作泛型接口：  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/04/2018
   
 -   当方法参数的类型是类型参数时，该参数或变量的声明将使用类型参数的名称，而不带任何指针、本机引用或句柄声明符。 换言之，绝不会写入“T^”。  
   
--   模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板形参传递*T*给泛型实参*T*。模板化 ref 类的每个实例化本身都是一个 ref 类。  
+-   模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板参数传递*T*给泛型自变量*T*。模板化 ref 类的每个实例化本身都是一个 ref 类。  
   
 ## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   

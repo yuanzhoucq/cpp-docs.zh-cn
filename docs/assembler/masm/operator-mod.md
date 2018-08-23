@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054453"
 ---
 # <a name="operator-mod"></a>运算符 MOD
 除时返回 （取模） 的其余部分的整数值*expression1*通过*expression2*。  

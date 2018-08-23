@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368985"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch（最小 CPU 体系结构）
 体系结构选项指定代码生成的体系结构。 选择要使用的基本硬件体系结构以查看该目标平台的 /arch 选项。  

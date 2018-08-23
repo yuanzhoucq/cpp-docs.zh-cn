@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932242"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>从标准控件派生控件
 与使用任何[CWnd](../mfc/reference/cwnd-class.md)-派生类，可以通过从现有控件类派生新类来修改控件的行为。  
   
 ### <a name="to-create-a-derived-control-class"></a>创建派生控件类  
   
-1.  从现有控件类派生类，选择重写**创建**成员函数，以便它可以提供必需的自变量到基类**创建**函数。  
+1.  从现有控件类派生类，选择重写`Create`成员函数，以便它可以提供必需的自变量到基类`Create`函数。  
   
 2.  提供消息处理程序成员函数和消息映射条目以修改控件行为来响应特定 Windows 消息。 请参阅[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380365"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>用于创建 ActiveX 控件的操作顺序
 下表显示你的角色和框架的角色中创建 ActiveX 控件 （以前称为 OLE 控件）。  

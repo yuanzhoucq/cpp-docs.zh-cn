@@ -1,5 +1,5 @@
 ---
-title: __segmentlimit |Microsoft 文档
+title: __segmentlimit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541206"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 专用**  
@@ -38,21 +39,21 @@ unsigned long __segmentlimit(
   
 #### <a name="parameters"></a>参数  
  [in] `a`  
- 一个指定段选择器的常数。  
+ 一个常量，它指定段选择器。  
   
 ## <a name="return-value"></a>返回值  
- 通过指定的段选择器的段限制`a`，前提是选择器在当前的权限级别是有效的并且可见。  
+ 指定的段选择器的段限制`a`，前提是选择器在当前的权限级别是有效的并且可见。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 如果不能检索段限制，此指令将失败。 在失败时，此指令清除 ZF 标志和返回值是不确定。  
+ 如果不能检索段限制，此指令将失败。 在失败时，此指令清除 ZF 标志和返回值未定义。  
   
  此例程仅可用作内部函数。  
   

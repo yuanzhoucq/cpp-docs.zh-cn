@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929034"
 ---
 # <a name="automation-clients"></a>自动化客户端
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化客户端是应用程序可以操作属于另一个应用程序公开的对象。 对象公开的应用程序称为自动化服务器。 客户端操作通过访问这些对象的属性和函数的服务器应用程序的对象。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  静态绑定的客户端在客户端应用程序中使用静态链接的代理类。 此类提供服务器应用程序的属性和操作的类型安全 c + + 的封装。  
   
- 类`COleDispatchDriver`提供自动化客户端的主体的支持。 使用`Add New Item`对话框中，你创建一个派生自的类`COleDispatchDriver`。  
+ 类`COleDispatchDriver`提供自动化客户端的主体的支持。 使用**添加新项**对话框中，你创建一个派生自的类`COleDispatchDriver`。  
   
  然后指定描述的属性和函数的服务器应用程序的对象的类型库文件。 添加项对话框中读取此文件，并创建`COleDispatchDriver`-派生类，与你的应用程序可以调用以类型安全的方式访问 c + + 中的服务器应用程序的对象的成员函数。 其他功能继承自`COleDispatchDriver`简化了调用正确的自动化服务器的过程。  
   

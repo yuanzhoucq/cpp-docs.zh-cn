@@ -1,5 +1,5 @@
 ---
-title: CODBCFieldInfo 结构 |Microsoft 文档
+title: CODBCFieldInfo 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853077"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 结构
-`CODBCFieldInfo`结构包含有关 ODBC 数据源中的字段的信息。  
+`CODBCFieldInfo`结构包含有关 ODBC 数据源中字段的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +41,7 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  字段的名称。  
   
  *m_nSQLType*  
@@ -53,7 +54,7 @@ struct CODBCFieldInfo
  字段的小数位数。 有关详细信息，请参阅 Windows SDK 中的"精度、 小数位数、 长度和显示大小"。  
   
  *m_nNullability*  
- 是否字段接受 Null 值。 这可以是两个值之一： **SQL_NULLABLE**如果字段接受 Null 值，或**SQL_NO_NULLS**如果字段不接受 Null 值。  
+ 是否字段接受 Null 值。 这可以是两个值之一： SQL_NULLABLE 如果字段接受 Null 值，或 SQL_NO_NULLS 如果字段不接受 Null 值。  
   
 ## <a name="remarks"></a>备注  
  若要检索此信息，请调用[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)。  

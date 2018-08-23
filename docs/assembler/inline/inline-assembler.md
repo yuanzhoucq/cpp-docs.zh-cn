@@ -1,5 +1,5 @@
 ---
-title: 内联汇编程序 |Microsoft 文档
+title: 内联汇编程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571550"
 ---
 # <a name="inline-assembler"></a>内联汇编程序
 **Microsoft 专用**  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  具有内联汇编代码的程序不能完全移植到其他硬件平台。 如果要针对可移植性进行设计，请避免使用内联汇编程序。  
   
- ARM 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 处理器不支持内联汇编程序。  以下主题解释如何使用具有 x86 处理器的可视 Visual C/C++ 内联汇编：  
+ 内联程序集不支持在 ARM 和 x64 处理器。  以下主题解释如何使用具有 x86 处理器的可视 Visual C/C++ 内联汇编：  
   
 -   [内联汇编概述](../../assembler/inline/inline-assembler-overview.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 函数模板的显式专用化 |Microsoft 文档
+title: 函数模板的显式专用化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407684"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>函数模板的显式专用化
 利用函数模板，您可以通过为特定类型提供函数模板的显式专用化（重写）来定义该类型的特殊行为。 例如：  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 template<> void MySwap(double a, double b);  
 ```  
   
- 此声明使您能够定义不同函数的**double**变量。 如非模板函数，标准类型转换 (如类型的变量提升**float**到**double**) 应用。  
+ 此声明使您能够定义不同的函数**double**变量。 与标准类型转换的非模板函数类似 (如类型的变量提升**float**到**double**) 应用。  
   
 ## <a name="example"></a>示例  
   

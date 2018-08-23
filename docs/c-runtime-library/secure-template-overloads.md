@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412460"
 ---
 # <a name="secure-template-overloads"></a>安全模板重载
 为了支持增强安全机制的版本，Microsoft 已弃用许多 C 运行时库 (CRT) 函数。 例如，`strcpy_s` 是 `strcpy` 更安全的替代函数。 已弃用的函数是安全 bug 的常见来源，因为它们并不阻止可能会覆盖内存的操作。 默认情况下，编译器在你使用这些函数之一时生成弃用警告。 CRT 为这些函数提供了 C++ 模板重载，以帮助你轻松地过渡到使用更安全的变体。  

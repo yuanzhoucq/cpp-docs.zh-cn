@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172666"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows 窗体/MFC 编程差异
 中的主题[在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows 窗体的 MFC 支持。 如果你不熟悉.NET Framework 或 MFC 编程，本主题提供有关编程两者之间的差异的背景信息。  

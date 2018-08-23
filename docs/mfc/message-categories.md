@@ -20,28 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 051fe93ef689959b0a0beb2b1b0f213adc942446
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929642"
 ---
 # <a name="message-categories"></a>消息类别
 哪种消息编写处理为有三个主要类别：  
   
 1.  Windows 消息  
   
-     这包括主要开头这些消息**WM_** 前缀，除**WM_COMMAND**。 Windows 消息由窗口和视图处理。 这些消息通常具有用于确定如何处理消息的参数。  
+     这包括主要开头这些消息**WM_** 前缀，但 WM_COMMAND 除外。 Windows 消息由窗口和视图处理。 这些消息通常具有用于确定如何处理消息的参数。  
   
 2.  控件通知  
   
-     这包括**WM_COMMAND**从控件和其他子窗口到其父窗口的通知消息。 例如，编辑控件会向其父级发送**WM_COMMAND**消息包含**EN_CHANGE**控件通知代码时用户已执行操作，可能更改编辑控件中的文本。 窗口的消息处理程序将以某种合适的方式响应通知消息，如检索控件中的文本。  
+     这包括从控件和其他子窗口到其父窗口的 WM_COMMAND 通知消息。 例如，编辑控件会向其父级发送时用户已执行的操作可能更改编辑控件中的文本将包含 EN_CHANGE 控件通知代码的 WM_COMMAND 消息。 窗口的消息处理程序将以某种合适的方式响应通知消息，如检索控件中的文本。  
   
-     框架将传送控件通知消息，如其他**WM_** 消息。 但是，是一个例外， **BN_CLICKED**时在用户单击它们由按钮发送的控件通知消息。 此消息将专门作为命令消息处理，并像传送其他命令一样传送。  
+     框架将传送控件通知消息，如其他**WM_** 消息。 一个例外，但是，是当用户单击它们时由按钮发送的 BN_CLICKED 控件通知消息。 此消息将专门作为命令消息处理，并像传送其他命令一样传送。  
   
 3.  命令消息  
   
-     这包括**WM_COMMAND**从用户界面对象的通知消息： 菜单、 工具栏按钮和快捷键。 框架处理命令不同于其他消息，并且它们可以处理由多个类型的对象，如中所述[命令目标](../mfc/command-targets.md)。  
+     这包括从用户界面对象的 WM_COMMAND 通知消息： 菜单、 工具栏按钮和快捷键。 框架处理命令不同于其他消息，并且它们可以处理由多个类型的对象，如中所述[命令目标](../mfc/command-targets.md)。  
   
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows 消息和控件通知消息  
  类别 1 和 2 的消息（Windows 消息和控件通知）由窗口处理：派生自 `CWnd` 对象。 这包括 `CFrameWnd`、`CMDIFrameWnd`、`CMDIChildWnd`、`CView`、`CDialog`，并且您拥有派生自这些基类的类。 此类对象将封装 `HWND`（Windows 窗口的句柄）。  

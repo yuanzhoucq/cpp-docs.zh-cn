@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461108"
 ---
 # <a name="return-statement-in-program-termination-c"></a>程序终止中的 return 语句 (C++)
-发出`return`语句从**主要**功能上等效于调用**退出**函数。 请看下面的示例：  
+发出**返回**从语句`main`在功能上等效于调用`exit`函数。 请看下面的示例：  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **退出**和`return`前面的示例中的语句是功能相同。 但是，C++ 需要具有 `void` 之外的返回类型的函数返回一个值。 `return`语句可以返回一个介于**主要**。  
+ `exit`并**返回**中前面的示例中的语句是功能上相同。 但是，c + + 需要具有的函数而不返回类型**void**返回值。 **返回**语句可以返回一个介于`main`。  
   
 ## <a name="see-also"></a>请参阅  
  [程序终止](../cpp/program-termination.md)

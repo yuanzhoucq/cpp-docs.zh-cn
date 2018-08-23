@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM （指定子系统） |Microsoft 文档
+title: -SUBSYSTEM （指定子系统） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571936"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 ```  
@@ -39,37 +40,37 @@ ms.lasthandoff: 05/03/2018
  在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[关于 BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)。  
   
  CONSOLE  
- Win32 字符模式应用程序。 操作系统提供为控制台应用程序提供控制台。 如果`main`或`wmain`为本机代码中，定义`int main(array<String ^> ^)`定义对于托管代码，或你生成应用程序完全使用`/clr:safe`，控制台是默认设置。  
+ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提供控制台。 如果`main`或`wmain`为本机代码中，定义`int main(array<String ^> ^)`为托管代码中，定义或应用程序完全使用生成`/clr:safe`，控制台是默认值。  
   
  可扩展固件接口  
  EFI_ * 子系统。 请参阅 EFI 规范的详细信息。 有关示例，请参阅 Intel 网站。 最小和默认版本为 1.0。  
   
  NATIVE  
- Windows NT 的内核模式驱动程序。 此选项通常为 Windows 系统组件保留。 如果[/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，则本机是默认设置。  
+ 用于 Windows NT 内核模式驱动程序。 此选项通常预留给 Windows 系统组件。 如果[/driver: wdm](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，本机模式是默认值。  
   
  POSIX  
  使用 Windows NT 中的 POSIX 子系统运行的应用程序。  
   
  窗口  
- 应用程序不需要控制台中，因为它可以创建其自己的与用户交互的窗口。 如果`WinMain`或`wWinMain`定义对于本机代码，或`WinMain(HISTANCE *, HINSTANCE *, char *, int)`或`wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`定义托管代码中，对于 WINDOWS 是默认值。  
+ 应用程序不需要控制台中，因为它可以创建其自身与用户交互的窗口。 如果`WinMain`或`wWinMain`定义为本机代码，或`WinMain(HISTANCE *, HINSTANCE *, char *, int)`或`wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`定义托管代码中，对于 WINDOWS 是默认值。  
   
  `Major` 和`minor`（可选）  
- 指定的子系统的最低所需的版本。 这些参数是十进制数字 0 到 65535 范围内。 请参阅有关详细信息备注。 为版本号没有上限。  
+ 指定的子系统所需最低版本。 参数是十进制数字 0 到 65,535 范围内。 请参阅有关详细信息备注。 没有上限的版本号。  
   
 ## <a name="remarks"></a>备注  
  /SUBSYSTEM 选项指定的可执行文件的环境。  
   
  子系统的选择会影响的入口点符号 （或入口点函数） 链接器将选择。  
   
- 可选的最小值和默认`major`和`minor`的子系统版本号包括，如下所示。  
+ 可选的最小值和默认`major`和`minor`子系统版本号如下所示。  
   
 |子系统|最低|默认|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
-|CONSOLE|(x86) 5.01 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|窗口|(x86) 5.01 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|本机 （带驱动程序： WDM)|(x86) 1.00 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]，ARM)|(x86) 1.00 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]，ARM)|  
-|本机 （不带 /DRIVER:WDM)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|  
+|窗口|5.01 (x86) (x64) 5.02 6.02 (ARM)|（x86、 x64） 6.00 6.02 (ARM)|  
+|本机 （带驱动程序： WDM)|(x86) 1.00 1.10 (x64、 ARM)|(x86) 1.00 1.10 (x64、 ARM)|  
+|本机 （不带 /driver: wdm)|4.00 (x86) (x64) 5.02 6.02 (ARM)|4.00 (x86) (x64) 5.02 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
 |EFI_APPLICATION，EFI_BOOT_SERVICE_DRIVER，EFI_ROM EFI_RUNTIME_DRIVER|1.0|1.0|  
   

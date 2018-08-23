@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Iidcount 常量 |Microsoft 文档'
+title: 'Interfacetraits:: Iidcount 常量 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eca04d185eaf31bb112741c1564e5fbe551c6b63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599907"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 常量
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-static const unsigned long IidCount = 1;  
-```  
-  
-## <a name="remarks"></a>备注  
- 保存数量的接口 Id 与当前的 InterfaceTraits 对象相关联。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [InterfaceTraits 结构](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+static const unsigned long IidCount = 1;
+```
+
+## <a name="remarks"></a>备注
+
+保存数量的接口 Id 与当前相关联**InterfaceTraits**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[InterfaceTraits 结构](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

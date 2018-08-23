@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358635"
 ---
 # <a name="control-classes"></a>控件类
 控件类封装各种范围从静态文本控件到树控件的标准 Windows 控件。 此外，MFC 提供了一些新的控件，包括使用位图和控件条按钮。  

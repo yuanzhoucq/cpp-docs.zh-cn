@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384057"
 ---
 # <a name="using-views"></a>使用视图
 该视图的责任是可以以图形方式向用户显示文档的数据还可以接受并将用户输入解释为对文档的操作。 你在编写您的视图类中的任务包括：  

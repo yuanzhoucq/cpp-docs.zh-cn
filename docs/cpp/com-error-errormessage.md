@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorMessage |Microsoft 文档
+title: _com_error::ErrorMessage |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16b8bb6859cd65b534d804764257b901050995b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9367e92110ba7fb232e89b9d950e491e5e8da5c7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407164"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 专用**  
   
- 检索存储在 `HRESULT` 对象中的 `_com_error` 的字符串消息。  
+ HRESULT 存储中检索的字符串消息`_com_error`对象。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 const TCHAR * ErrorMessage( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回在 `HRESULT` 对象中记录的 `_com_error` 的字符串消息。 如果`HRESULT`是映射的 16 位[wCode](../cpp/com-error-wcode.md)，然后一条常规消息"`IDispatch error #<wCode>`"返回。 如果未找到消息，则返回一般消息“`Unknown error #<hresult>`”。 返回的字符串是 Unicode 或多字节字符串，具体取决于的状态 **_UNICODE**宏。  
+ 中记录相应的 HRESULT 返回的字符串消息`_com_error`对象。 如果 HRESULT 为映射的 16 位[wCode](../cpp/com-error-wcode.md)，然后一条常规消息"`IDispatch error #<wCode>`"返回。 如果未找到消息，则返回一般消息“`Unknown error #<hresult>`”。 返回的字符串是 Unicode 或多字节字符串，具体取决于 _UNICODE 宏的状态。  
   
 ## <a name="remarks"></a>备注  
- 检索在 `HRESULT` 对象中记录的 `_com_error` 的对应系统消息文本。 系统消息文本通过调用 Win32 获取[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函数。 返回的字符串由 `FormatMessage` API 分配，并在销毁 `_com_error` 对象后释放。  
+ HRESULT 记录中检索相应的系统消息文本`_com_error`对象。 系统消息文本通过调用 Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函数。 返回的字符串由 `FormatMessage` API 分配，并在销毁 `_com_error` 对象后释放。  
   
  **结束 Microsoft 专用**  
   

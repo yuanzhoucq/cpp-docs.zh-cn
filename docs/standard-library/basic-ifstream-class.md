@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b72b49f545b4ba04c92840cb4d15f2258f08680
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958499"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 类
 
@@ -45,9 +46,9 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-`Elem` 文件缓冲区的基本元素。
+*Elem*文件缓冲区的基本元素。
 
-`Tr` 将文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
+*Tr*文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
 
 ## <a name="remarks"></a>备注
 
@@ -140,11 +141,11 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-`_Filename` 要打开的文件的名称。
+*_Filename*要打开的文件的名称。
 
-`_Mode` 中的枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 默认的文件打开保护，等效于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -193,7 +194,7 @@ void close();
 
 ### <a name="example"></a>示例
 
-有关如何使用 **close** 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
+有关如何使用 `close` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
 
 ## <a name="is_open"></a>  basic_ifstream::is_open
 
@@ -209,7 +210,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
+此成员函数返回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
 
 ### <a name="example"></a>示例
 
@@ -241,19 +242,19 @@ void open(
 
 ### <a name="parameters"></a>参数
 
-`_Filename` 要打开的文件的名称。
+*_Filename*要打开的文件的名称。
 
-`_Mode` 中的枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 默认的文件打开保护，等效于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，则函数调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)，这可能导致引发 ios_base::failure 异常。
+成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，则函数调用[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)，这可能导致引发 ios_base:: failure 异常。
 
 ### <a name="example"></a>示例
 
-有关如何使用 **open** 的示例，请参阅 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)。
+请参阅[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open)有关的示例，使用`open`。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -265,7 +266,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 对的右值引用`basic_ifstream`对象。
+*右*的右值引用`basic_ifstream`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -273,7 +274,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用 `right` 内容替换该对象的内容，被视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成员运算符使用的内容替换该对象的内容*右*，视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -301,11 +302,11 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 对另一个流缓冲区的引用。
+*右*对另一个流缓冲区的引用。
 
 ### <a name="remarks"></a>备注
 
-此成员函数将此对象的内容与 `right` 的内容进行交换。
+该成员函数交换内容的此对象的内容*右*。
 
 ## <a name="see-also"></a>请参阅
 

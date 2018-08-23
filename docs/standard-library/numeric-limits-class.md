@@ -80,11 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954872"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 类
 
@@ -99,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>参数
 
-`Type` 正在其属性的基本元素数据类型测试、 查询或设置。
+*类型*正在其属性的基础元素数据类型进行测试、 查询或设置。
 
 ## <a name="remarks"></a>备注
 
-标头为类型 `wchar_t`、 `bool`、 `char`、 `signed char`、 `unsigned char`、 `short`、 `unsigned short`、 `int`、 `unsigned int`、 `long`、 `unsigned long`、 `float`、 `double`、 `long double`**、** `long long`、 `unsigned long long`、 `char16_t`和 `char32_t`定义显式专用化。 对于这些显式专用化，成员 [numeric_limits::is_specialized](#is_specialized) 为 `true`，所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 该类的大多数成员函数描述或测试 `float`的可能的实现。
+标头定义的类型的显式专用化**wchar_t**， **bool**， **char**，**签名 char**，**无符号char**，**短**， **unsigned short**， **int**，**无符号的 int**，**长时间**，**无符号长**， **float**， **double**，**长双精度 * * *，** **长长时间**，**无符号长长**， `char16_t`，和`char32_t`。 对于这些显式专用化，成员[numeric_limits:: is_specialized](#is_specialized)是**true**，和所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能的实现**float**。
 
-对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零（或 `false`），不返回有意义的值的成员函数将返回 `Type(0)`。
+对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零 (或**false**)，并不返回有意义的值的成员函数返回`Type(0)`。
 
 ### <a name="static-functions-and-constants"></a>静态函数和常数
 
@@ -164,9 +165,9 @@ static Type denorm_min() throw();
 
 ### <a name="remarks"></a>备注
 
-`long double` 等同于 C++ 编译器的 **double**。
+**长双精度**等同于**double** c + + 编译器。
 
-该函数返回该类型的最小值，如果 [has_denorm](#has_denorm) 不等于 **denorm_present**，则该最值与 [min](#min) 相同。
+该函数返回类型，这是相同的最小值作为[最小](#min)如果[has_denorm](#has_denorm)是否不等于`denorm_present`。
 
 ### <a name="example"></a>示例
 
@@ -363,7 +364,7 @@ static const float_denorm_style has_denorm = denorm_absent;
 
 ### <a name="remarks"></a>备注
 
-此成员存储具有非规范化值的浮点类型的 **denorm_present**，它实际上是指数位的变量数。
+此成员存储`denorm_present`的浮点类型具有非规范化的值有效地指数位的可变数量。
 
 ### <a name="example"></a>示例
 
@@ -1009,7 +1010,7 @@ static Type lowest() throw();
 
 ### <a name="remarks"></a>备注
 
-返回类型的最小的负有限值 (通常是`min()`为整数类型和`-max()`浮点类型)。 当 `is_bounded` 为 `true` 时，返回值有意义。
+返回最小的类型的有限值 (通常是`min()`为整数类型和`-max()`对浮点类型)。 返回值有意义如果`is_bounded`是**true**。
 
 ## <a name="max"></a>  numeric_limits::max
 
@@ -1025,7 +1026,7 @@ static Type max() throw();
 
 ### <a name="remarks"></a>备注
 
-`int` 类型的最大有限值为 INT_MAX，**float** 类型的最大有限值为 FLT_MAX。 当 [is_bounded](#is_bounded) 为 **true** 时，返回值有意义。
+最大有限值为类型为 INT_MAX **int** flt_max **float**。 当 [is_bounded](#is_bounded) 为 **true** 时，返回值有意义。
 
 ### <a name="example"></a>示例
 
@@ -1175,7 +1176,7 @@ static Type min() throw();
 
 ### <a name="remarks"></a>备注
 
-`int` 类型的最小规范化值为 INT_MIN，`float` 类型的最小规范化值为 FLT_MIN。 当 [is_bounded](#is_bounded) 为 `true` 或当 [is_signed](#is_signed) 为 `false` 时，返回值有意义。
+最小规范化的值为类型 INT_MIN **int**类型为 flt_min **float**。 返回值有意义如果[is_bounded](#is_bounded)是**true**或者，如果[is_signed](#is_signed)是**false**。
 
 ### <a name="example"></a>示例
 
@@ -1534,7 +1535,7 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>返回值
 
-如果该类型可以在舍入之前检测微小的值，则为 `true`；反之则为 `false`。
+**true**如果类型可以在舍入; 之前检测微小的值**false**如果不能。
 
 ### <a name="remarks"></a>备注
 

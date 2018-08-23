@@ -1,5 +1,5 @@
 ---
-title: 快捷键 Modifier 属性 |Microsoft 文档
+title: 快捷键 Modifier 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7e6750bfc0195eaaa350b829d1d899f648e9fe0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592631"
 ---
 # <a name="accelerator-modifier-property"></a>快捷键 Modifier 属性
-以下是用于快捷键对应表中的修饰符属性的合法条目。  
-  
-|值|描述|  
-|-----------|-----------------|  
-|**无**|用户按下仅将密钥值。 这是最有效地 ASCII/ANSI 与值一起使用 001 026，通过它解释为 ^ A 到 ^ Z (CTRL-A 到 Z CTRL)。|  
-|**Alt**|用户必须按 ALT 键前的密钥值。|  
-|**Ctrl**|用户必须按 CTRL 键密钥值之前。 与 ASCII 类型无效。|  
-|**Shift**|用户必须按下 SHIFT 键密钥值之前。|  
-|**Ctrl + Alt**|用户必须按 ctrl 和 ALT 键前的密钥值。 与 ASCII 类型无效。|  
-|**Ctrl + Shift**|用户必须按 CTRL 键和 SHIFT 键密钥值之前。 与 ASCII 类型无效。|  
-|**Alt + Shift**|用户必须按 ALT 键和 SHIFT 键密钥值之前。 与 ASCII 类型无效。|  
-|**Ctrl + Alt + Shift**|密钥值之前，用户必须按下 CTRL、 ALT 和 SHIFT。 与 ASCII 类型无效。|  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [设置快捷键属性](../windows/setting-accelerator-properties.md)   
- [快捷键编辑器](../windows/accelerator-editor.md)
+
+以下是合法的快捷键对应表中的修饰符属性条目。
+
+|“值”|描述|
+|-----------|-----------------|
+|**无**|用户仅按**密钥**值。 这最有效地与使用 ASCII/ANSI 值 001 到 026，它解释为 ^ A 到 ^ Z (CTRL-A 到 Z CTRL)。|
+|**Alt**|用户必须按**Alt**密钥之前**密钥**值。|
+|**Ctrl**|用户必须按**Ctrl**密钥之前**密钥**值。 与 ASCII 类型无效。|
+|**Shift**|用户必须按**Shift**密钥之前**密钥**值。|
+|**Ctrl + Alt**|用户必须按**Ctrl**密钥和**Alt**密钥之前**密钥**值。 与 ASCII 类型无效。|
+|**Ctrl + Shift**|用户必须按**Ctrl**密钥和**Shift**密钥之前**密钥**值。 与 ASCII 类型无效。|
+|**Alt + Shift**|用户必须按**Alt**密钥和**Shift**密钥之前**密钥**值。 与 ASCII 类型无效。|
+|**Ctrl + Alt + Shift**|用户必须按**Ctrl**， **Alt**，并**Shift**之前**密钥**值。 与 ASCII 类型无效。|
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[设置快捷键属性](../windows/setting-accelerator-properties.md)  
+[快捷键编辑器](../windows/accelerator-editor.md)

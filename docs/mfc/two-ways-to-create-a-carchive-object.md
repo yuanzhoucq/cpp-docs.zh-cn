@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954788"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
 可通过两种方法创建 `CArchive` 对象：  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  创建`CArchive`指向此对象`CFile`对象。 在创建`CArchive`对象，该框架将模式设置"存储"（写入、 序列化），而不是"负载"（读取、 反序列化）。  
   
-4.  调用`Serialize`函数中定义你**CDocument**-派生类，将其传递到的引用`CArchive`对象。  
+4.  调用`Serialize`函数中定义你`CDocument`-派生类，将其传递到的引用`CArchive`对象。  
   
  文档的`Serialize`函数然后可将数据写入`CArchive`对象，稍后所述。 返回从后你`Serialize`函数，框架会销毁`CArchive`对象，然后`CFile`对象。  
   

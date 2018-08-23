@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847967"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 要在 UWP 环境中运行桌面程序，最简单的方法或许是使用桌面桥技术。 这包括 Desktop App Converter，它能将现有应用程序打包为 UWP 应用，而无需更改代码。 有关详细信息，请参阅[使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)。

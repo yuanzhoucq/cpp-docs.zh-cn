@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079060"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 类
 定义实现单文档界面 (SDI) 的文档模板。  
@@ -44,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  文档模板定义了三种类型的类之间的关系：  
   
--   文档类，该类派生自**CDocument**。  
+-   文档类，该类派生自`CDocument`。  
   
 -   视图类，它显示从上面列出的文档类的数据。 可以派生此类从`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (你还可以使用`CEditView`直接。)  
   
@@ -80,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDResource`  
+ *nIDResource*  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
  字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符用作占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 有关子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如：  
@@ -99,13 +100,13 @@ CSingleDocTemplate(
   
  有关这些资源类型的详细信息，请参阅[字符串编辑器](../../windows/string-editor.md)。  
   
- `pDocClass`  
- 指向`CRuntimeClass`文档类的对象。 此类是**CDocument**-派生类，定义来表示你的文档。  
+ *pDocClass*  
+ 指向`CRuntimeClass`文档类的对象。 此类是`CDocument`-派生类，定义来表示你的文档。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指向`CRuntimeClass`的框架窗口类的对象。 此类可以是`CFrameWnd`-派生类，也可以是`CFrameWnd`本身如果你希望用于您的主框架窗口的默认行为。  
   
- `pViewClass`  
+ *pViewClass*  
  指向`CRuntimeClass`视图类的对象。 此类是`CView`-派生类定义以显示你的文档。  
   
 ### <a name="remarks"></a>备注  

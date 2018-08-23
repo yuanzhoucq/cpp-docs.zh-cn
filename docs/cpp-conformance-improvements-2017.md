@@ -10,13 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209087"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 中 C++ 的一致性改进
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 中 C++ 的一致性改进
 
 Microsoft Visual C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -80,7 +81,7 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
 
-### <a name="capturing-this-by-value"></a>按值捕获 *this
+### <a name="capturing-this-by-value"></a>按值捕获 \*this
 
 Lambda 表达式中的 `*this` 对象现在可按值捕获。 这样可以在并行和异步操作中实现调用 lambda 的情况，特别是在较新的计算机体系结构中。 有关详细信息，请参阅[通过值执行的 \*this 的 Lambda 捕获为 [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)。
 
@@ -338,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 对 `std::traits_type` 成员函数 `length`、`compare` 和 `find` 进行了更改，以便使 `std::string_view` 在常数表达式中可用。 （在 Visual Studio 2017 版本 15.6 中，仅支持 Clang/LLVM。 在版本 15.7 预览版 2 中，也几乎完全支持 ClXX。）
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Visual Studio 版本 15.0、[15.3](#update_153)、[15.5](#update_155) 和 [15.7](#update_157) 中的 bug 修复
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Visual Studio 版本 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157) 和 [15.8](#update_158) 中的 bug 修复
 
 ### <a name="copy-list-initialization"></a>复制列表初始化
 
@@ -492,12 +493,12 @@ int main()
     printf("%i\n", static_cast<int>(s))
 ```
 
-对于使用 CStringW 生成和管理的字符串，提供的 `operator LPCWSTR()` 应用来将 CStringW 对象强制转换为格式字符串所需的 C 指针。
+对于使用 CString 生成和管理的字符串，提供的 `operator LPCTSTR()` 应用来将 CString 对象强制转换为格式字符串所需的 C 指针。
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>类构造中的 cv 限定符
@@ -1382,7 +1383,7 @@ Visual Studio 2017 版本 15.3 中添加了此警告，但是默认关闭。 在
 
 ### <a name="defaulted-functions-and-declspecnothrow"></a>默认函数和 __declspec(nothrow)
 
-以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数*。*因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数：
+以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数 *。* 因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数：
 
 ```cpp
 struct A {
@@ -1581,6 +1582,251 @@ D<int> d;
 ```
 
 若要修复此错误，请将 B() 表达式更改为 B\<T>()。
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr 聚合初始化
+
+先前版本的 C++ 编译器错误处理了 constexpr 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例： 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+在 Visual Studio 2017 版本 15.7 更新 3 及更高版本中，前面的示例现在引发“C2078 初始值设定项太多”。 以下示例演示了如何修复此代码。 在使用嵌套 brace-init-lists 初始化 `std::array` 时，给予内部数组一个自己的 braced-list：
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
+
+## <a name="update_158"></a>Visual Studio 2017 版本 15.8 中的 bug 修复和行为更改
+
+### <a name="typename-on-unqualified-identifiers"></a>非限定标识符的类型名称
+
+在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，编译器不再接受别名模板定义中非限定标识符上的虚假 `typename` 关键字。 现在，以下代码生成 C7511“T”：“typename”关键字后必须有限定名称：
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+要修复此错误，将第二行更改为 `using  X = T;`。
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>别名模板定义右侧的 __declspec()
+
+别名模板定义的右侧不再允许 [__declspec](cpp/declspec.md)。 编译器以前接受 __declspec，但会完全忽略，且在使用别名时从不会发出弃用警告。
+
+可改用标准 C++ 属性[\[\[已弃用\]\]](cpp/attributes.md)，并从 Visual Studio 2017 版本 15.6 开始遵循。 现在，以下代码生成 C2760 语法错误：意外令牌“__declspec”，需要“类型说明符”：
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+要修复此错误，将代码改为以下代码（将属性放置在别名定义的“=“前）：
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>两阶段名称查找诊断
+
+两阶段名称查找要求模板正文中使用的非相关名称必须在定义时对模板可见。 过去，Microsoft C++ 编译器会使未找到的名称处于非查找状态，直到实例化时。 现在，它要求非相关名称绑定在模板正文中。
+
+这其中一个表现是查找相关基类。 以前，编译器允许使用相关基类中定义的名称，因为解析所有类型后会在实例化时查找它们。 现在将该代码视为错误。 在这些情况下，可在实例化时强制查找变量，方法是使用基类类型对其进行限定或将其设置为相关，例如添加 `this->` 指针。
+
+在 /permissive- 模式下，现在以下代码会引发 C3861：找不到“base_value”标识符：
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空间 std 中的转发声明和定义
+
+C++ 标准不允许用户将转发声明或定义添加到命名空间 `std`。 如果将声明或定义添加到命名空间 `std` 或命名空间 std 中的命名空间，会导致未定义的行为。
+
+未来的某个时间，Microsoft 将移动定义一些 STL 类型的位置。 在此情况下，它会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序。 
+
+现在，以下代码引发 C4643：C++ Standard 不允许命名空间 std 中的转发声明“vector”。 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+要修复此错误，使用 include 指令，而不是转发声明：
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>对自身进行委托的构造函数
+
+C++ Standard 建议当委托构造函数对自身进行委托时，编译器应发出诊断。 在 [/std:c++17](build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式下，Microsoft C++  编译器现在引发 C7535：“X::X”委托构造函数调用自己。
+
+如果不出现此错误，以下程序将编译，但会生成无限循环：
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+若要避免无限循环，可委托给其他构造函数：
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>常量表达式的 offsetof
+
+传统上，使用需要 [reinterpret_cast](cpp/reinterpret-cast-operator.md) 的宏实现 [offsetof](c-runtime-library/reference/offsetof-macro.md)。 在需要常量表达式的上下文中，此操作是非法的，但从传统上，Microsoft C++ 编译器允许此操作。 STL 中附带的 offsetof 宏正确使用内部编译器 (__builtin_offsetof)，但许多人使用此宏来定义自己的 offsetof。  
+
+在 Visual Studio 2017 版本 15.8 中，编译器限制默认模式下出现这些 reinterpret_casts 的位置，以帮助代码符合标准 C++ 行为。 在 [/permissive-](build/reference/permissive-standards-conformance.md) 下，此类限制更严格。 在需要常量表达式的位置使用 offsetof 的结果会引发警告 C4644：在常量表达式中使用基于宏的 offsetof 模式是不标准的；请改用 C++ 标准库中定义的 offsetof，或引发 C2975：模板参数无效，需要编译时常量表达式。
+
+以下代码在 /default 和 /std:c++17 模式下引发 C4644，在 /permissive- 模式下引发 C2975： 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+要修复此错误，使用通过 cstddef> 定义的 offsetof\<：
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>基类上的 cv-qualifiers 受包扩展约束
+
+Microsoft C++ 编译器的以前版本不会检测基类是否有 cv-qualifiers，如果它也受包扩展约束。 
+
+在 Visual Studio 2017 版本 15.8 中的 /permissive- 模式下，以下代码引发 C3770：“const S”不是有效基类： 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>模板关键字和嵌套名称说明符
+
+在 /permissive- 模式下，编译器现在要求 `template` 关键字添加在模板名称前，如果该关键字是在相关的嵌套名称说明符之后。 
+
+在 /permissive- 模式下，以下代码现在引发 C7510：“foo”：相关的模板名称前必须添加“template”前缀。请注意：请参阅有关编译类模板实例化“X<T>”的参考：
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+要修复此错误，将 `template` 关键字添加到 `Base<T>::foo<int>();` 语句，如以下示例所示：
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
+```
 
 ## <a name="see-also"></a>请参阅
 

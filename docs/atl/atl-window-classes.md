@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355427"
 ---
 # <a name="atl-window-classes"></a>ATL 窗口类
 ATL 包括允许你使用和实现 windows 的多个类。 这些类，其他 ATL 像类一样，提供有效的实现，不会施加于你的代码的开销。  

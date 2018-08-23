@@ -1,19 +1,20 @@
 ---
-title: 分部类 (C + + /cli CX) |Microsoft 文档
+title: 分部类 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9457f3401ed03b13bf29f489b88472d11a4dd7a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593021"
 ---
 # <a name="partial-classes-ccx"></a>分部类 (C++/CX)
 分部类是支持你修改一部分类定义的方案的构造，而自动代码生成软件（例如 XAML 设计器）也在修改同一个类中的代码。 通过使用分部类，可以防止设计器重写代码。 在 Visual Studio 项目中， `partial` 修饰符自动应用于生成的文件。  

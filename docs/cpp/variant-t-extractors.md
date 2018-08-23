@@ -1,5 +1,5 @@
 ---
-title: _variant_t 提取器 |Microsoft 文档
+title: _variant_t 提取器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,16 +58,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465950"
 ---
 # <a name="variantt-extractors"></a>_variant_t 提取器
 **Microsoft 专用**  
   
- 从封装中提取数据**VARIANT**对象。  
+ 从封装中提取数据`VARIANT`对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -94,7 +95,7 @@ operator unsigned __int64() const;
 ```  
   
 ## <a name="remarks"></a>备注  
- 从封装中提取原始数据**VARIANT**。 如果**VARIANT**尚不正确的类型， **VariantChangeType**用于尝试进行转换，并在失败时生成错误：  
+ 从封装中提取原始数据`VARIANT`。 如果`VARIANT`是不正确的类型，`VariantChangeType`用于尝试进行转换，并在失败时生成错误：  
   
 -   **operator short （)** 提取**短**整数值。  
   
@@ -104,19 +105,19 @@ operator unsigned __int64() const;
   
 -   **operator double （)** 提取**double**整数值。  
   
--   **operator CY （)** 提取**CY**对象。  
+-   **operator CY （)** 提取`CY`对象。  
   
--   **operator bool （)** 提取`bool`值。  
+-   **operator bool （)** 提取**bool**值。  
   
--   **operator DECIMAL （)** 提取**十进制**值。  
+-   **operator DECIMAL （)** 提取`DECIMAL`值。  
   
--   **operator BYTE （)** 提取**字节**值。  
+-   **operator BYTE （)** 提取`BYTE`值。  
   
--   **operator _bstr_t （)** 提取字符串，封装在`_bstr_t`对象。  
+-   **operator _bstr_t （)** 提取封装在一个字符串`_bstr_t`对象。  
   
--   **运算符 IDispatch\*（)** 从封装中提取调度接口指针**VARIANT**。 `AddRef` 因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
+-   **运算符 IDispatch\*（)** 提取调度接口指针从封装`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。  
   
--   **运算符 IUnknown\*（)** 提取从封装的 COM 接口指针**VARIANT**。 `AddRef` 因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
+-   **运算符 IUnknown\*（)** 从封装中提取 COM 接口指针`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。  
   
  **结束 Microsoft 专用**  
   

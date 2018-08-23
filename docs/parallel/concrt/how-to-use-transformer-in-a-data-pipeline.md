@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686576"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在数据管道中使用转换器
 本主题包含演示如何使用一个基本示例[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)在数据管道中的类。 有关使用数据管道来执行图像处理的更完整示例，请参阅[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  

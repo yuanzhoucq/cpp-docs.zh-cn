@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360095"
 ---
 # <a name="marshaling"></a>封送处理
 封送处理的 COM 技术允许由一个进程，用于在另一个进程中的对象公开的接口。 封送处理、 COM 提供的代码 （或使用提供的接口实现的代码） 中进行打包到跨进程 （以及，通过在其他计算机上运行的进程电缆） 可以移动的格式的方法的参数并将这些参数解压缩在另一端。 同样，COM 必须从调用返回上执行相同的步骤。  

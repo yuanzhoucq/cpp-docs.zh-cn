@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251155"
 ---
 # <a name="compiler-error-c3383"></a>编译器错误 C3383
 不支持将“operator new”与 /clr:safe 一起使用  

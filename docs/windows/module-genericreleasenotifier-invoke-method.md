@@ -1,5 +1,5 @@
 ---
-title: 'Module:: genericreleasenotifier:: Invoke 方法 |Microsoft 文档'
+title: 'Module:: genericreleasenotifier:: 调用方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 116b313a0055bcdca9841e740f1720d18fb6c7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600662"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke 方法
-调用与当前 Module::GenericReleaseNotifier 对象关联的事件处理程序。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [Module::GenericReleaseNotifier 类](../windows/module-genericreleasenotifier-class.md)
+
+调用与当前关联的事件处理程序**module:: genericreleasenotifier**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[Module::GenericReleaseNotifier 类](../windows/module-genericreleasenotifier-class.md)

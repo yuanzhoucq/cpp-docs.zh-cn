@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381343"
 ---
 # <a name="toolbars"></a>工具栏
 工具栏系列文章介绍 MFC 工具栏以及如何创建和使用它们。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [示例](../mfc/toolbar-sample-list.md)  
   
- 有关 MFC 工具栏的详细信息，请参阅文章 Q232017，"如何:: 添加文本到工具栏按钮，"Microsoft 知识库中在http://support.microsoft.com。  
+ 有关 MFC 工具栏的详细信息，请参阅文章 Q232017，"如何:: 添加文本到工具栏按钮，"Microsoft 知识库中在 http://support.microsoft.com。  
   
 ## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)   

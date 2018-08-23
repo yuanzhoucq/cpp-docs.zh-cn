@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250638"
 ---
 # <a name="compiler-error-c3412"></a>编译器错误 C3412
 'template': 无法使当前作用域中的模板专用化  

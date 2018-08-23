@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451477"
 ---
 # <a name="control87-controlfp-control872"></a>_control87、_controlfp、__control87_2
 
@@ -128,7 +129,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-在 ARM 平台上， **_control87**和 **_controlfp**函数应用于 FPSCR 寄存器。 在 x64 体系结构中，仅存储 SSE2 控制字 MXCSR 注册受到影响。 在 x86 平台， **_control87**和 **_controlfp**影响 x87 和 SSE2 的控制字，如果存在。 该函数 **__control87_2**使 x87 和 SSE2 浮点单位单独或一起进行控制。 如果你想要影响这两个单元，则传入到两个整数的地址**x86_cw**和**sse2_cw**。 如果仅想影响一个单元，则传入该参数的地址，但为另一个单元传入 0 (NULL)。 如果为其中一个参数传递了 0，则函数对该浮点单元没有影响。 对于一部分代码使用 x87 浮点单元而另一部分代码使用 SSE2 浮点单元的情况而言，此功能很有用。 如果你使用 **__control87_2**程序的一部分中和设置浮点控制字，不同的值，然后使用 **_control87**或 **_controlfp**进一步然后操作控制字， **_control87**和 **_controlfp**可能导致无法返回单个控件单词以表示这两个浮点单元状态。 在这种情况下，这些函数将设置**EM_AMBIGUOUS**中返回的整数值，指示两个控件单词之间不一致的标志。 这是一条警告，指示所返回的控制字可能没有准确地表示两个浮点控制字的状态。
+在 ARM 平台上， **_control87**和 **_controlfp**函数应用于 FPSCR 寄存器。 在 x64 体系结构中，仅存储 SSE2 控制字 MXCSR 注册受到影响。 在 x86 平台， **_control87**和 **_controlfp**影响 x87 和 SSE2 的控制字，如果存在。 该函数 **__control87_2**使 x87 和 SSE2 浮点单位单独或一起进行控制。 如果你想要影响这两个单元，则传入到两个整数的地址**x86_cw**和**sse2_cw**。 如果要仅影响一个单元，为该参数传入一个地址，但请传入 0 (**NULL**) 其他。 如果为其中一个参数传递了 0，则函数对该浮点单元没有影响。 对于一部分代码使用 x87 浮点单元而另一部分代码使用 SSE2 浮点单元的情况而言，此功能很有用。 如果你使用 **__control87_2**程序的一部分中和设置浮点控制字，不同的值，然后使用 **_control87**或 **_controlfp**进一步然后操作控制字， **_control87**和 **_controlfp**可能导致无法返回单个控件单词以表示这两个浮点单元状态。 在这种情况下，这些函数将设置**EM_AMBIGUOUS**中返回的整数值，指示两个控件单词之间不一致的标志。 这是一条警告，指示所返回的控制字可能没有准确地表示两个浮点控制字的状态。
 
 在 ARM 和 x64 体系结构，更改无穷大模式或的浮点精度不支持。 如果在 x64 上使用的精度控制掩码平台，该函数引发了断言并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382385"
 ---
 # <a name="character-sequences"></a>字符序列
 **ANSI 3.8.2** 源文件字符序列的映射  

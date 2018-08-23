@@ -1,5 +1,5 @@
 ---
-title: 重写动态访问器 |Microsoft 文档
+title: 重写动态访问器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340025"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
-当使用动态访问器如`CDynamicAccessor`，该命令**打开**方法创建一个访问器自动根据打开行集的列信息。 您可以重写动态访问器可控制完全列的绑定方式。  
+当使用动态访问器如`CDynamicAccessor`，该命令`Open`方法为自动，基于打开行集的列信息创建取值函数。 您可以重写动态访问器来控制完全如何绑定列。  
   
- 若要重写动态访问器，请将传递**false**到的最后一个参数作为`CCommand::Open`方法。 这可以防止**打开**从自动创建一个访问器。 然后，你可以调用`GetColumnInfo`并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
+ 若要重写动态访问器，请将传递**false**的最后一个参数作为`CCommand::Open`方法。 这可以防止`Open`从自动创建取值函数。 然后，可以调用`GetColumnInfo`，并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

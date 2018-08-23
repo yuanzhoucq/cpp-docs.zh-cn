@@ -1,5 +1,5 @@
 ---
-title: 类型库访问 |Microsoft 文档
+title: 类型库访问权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885892"
 ---
 # <a name="type-library-access"></a>类型库访问
 类型库向其他 OLE 感知的应用程序公开 OLE 控件的接口。 如果将公开一个或多个接口，则每个 OLE 控件都必须具有类型库。  
@@ -43,10 +44,10 @@ DECLARE_OLETYPELIB(class_name)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 与类型库相关的控件类名称。  
+ 与类型库相关的控件类的名称。  
   
 ### <a name="remarks"></a>备注  
- 在控件类标头文件中使用此宏。  
+ 在控件类头文件中使用此宏。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
@@ -60,19 +61,19 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 与类型库相关的控件类名称。  
+ 与类型库相关的控件类的名称。  
   
  *tlid*  
  类型库 ID 号。  
   
- `wVerMajor`  
- 类型库主版本号。  
+ *wVerMajor*  
+ 类型库的主版本数。  
   
- `wVerMinor`  
- 类型库次版本号。  
+ *wVerMinor*  
+ 类型库的次版本数。  
   
 ### <a name="remarks"></a>备注  
- 此宏必须出现在任何使用的控件类的实现文件`DECLARE_OLETYPELIB`宏。  
+ 此宏必须出现在任何控件类，该类使用 DECLARE_OLETYPELIB 宏的实现文件中。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344251"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何简化 Internet 客户端应用程序的创建
 Win32 Internet 扩展或 WinInet，提供对常见的 Internet 协议，包括 gopher、 FTP 和 HTTP 访问。 使用 WinInet，你可以无需处理 WinSock、 TCP/IP 或特定 Internet 协议的详细信息来编写 Internet 客户端应用程序在编程中，较高级别。 WinInet 对于所有三个协议，使用熟悉的 Win32 API 界面提供一致的函数集。 这种一致性最大程度减少需要进行如果基础协议 （例如，从 HTTP 到 FTP) 更改的代码更改。  

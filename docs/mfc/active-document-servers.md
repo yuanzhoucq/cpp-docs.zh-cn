@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340159"
 ---
 # <a name="active-document-servers"></a>活动文档服务器
 活动文档服务器（如 Word、Excel 或 PowerPoint）承载其他应用程序类型的文档（称为“活动文档”）。 与 OLE 嵌入对象不同（其将仅显示在另一文档的页面中），活动文档提供其创建者 - 服务器应用程序的完整接口和完整本机功能。 用户可借助喜欢的应用程序的全力创建文档（如果他们启用了活动文档），还可将生成的项目视为单一项目。  

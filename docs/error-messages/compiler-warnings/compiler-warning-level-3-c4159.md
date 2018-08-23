@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291666"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>编译器警告 （等级 3） C4159
 \#杂注 pragma(pop,...)： 具有弹出先前入栈的标识符 identifier  

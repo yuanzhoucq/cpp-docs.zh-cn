@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391465"
 ---
 # <a name="global-constants"></a>全局常量
 Microsoft 运行库包含库例程所使用的全局常量的定义。 若要使用这些常量，请按照每个常量的说明中所示的那样包括适当的标头文件。 下表列出了全局常量。  

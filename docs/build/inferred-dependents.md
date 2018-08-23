@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367893"
 ---
 # <a name="inferred-dependents"></a>推导出的依赖项
 推理依赖项从推理规则中派生，并进行评估之前显式依赖项。 如果相对于其目标过期推理依赖项，NMAKE 调用依赖项的命令块。 如果推断依赖于不存在或已过期相对于其自身的依赖项，则 NMAKE 首先更新推理依赖项。 有关推理依赖项的详细信息，请参阅[推理规则](../build/inference-rules.md)。  

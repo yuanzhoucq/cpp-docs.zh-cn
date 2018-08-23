@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits 结构 |Microsoft 文档
+title: SemaphoreTraits 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5919b84a8b7b0b24588958198da89271d2a20119
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601815"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 结构
-定义信号量对象的共同特征。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-struct SemaphoreTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[SemaphoreTraits::Unlock 方法](../windows/semaphoretraits-unlock-method.md)|版本控制共享资源。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `HANDLENullTraits`  
-  
- `SemaphoreTraits`  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Wrappers::HandleTraits 命名空间](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+定义常见特征**信号量**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+struct SemaphoreTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[SemaphoreTraits::Unlock 方法](../windows/semaphoretraits-unlock-method.md)|版本控制共享资源。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`HANDLENullTraits`
+
+`SemaphoreTraits`
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Wrappers::HandleTraits 命名空间](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208999"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 类
 
@@ -39,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 后端的哪些元素的容器的类型是由插入`back_insert_iterator`。
+*容器*后端的哪些元素的容器的类型为通过插入`back_insert_iterator`。
 
 ## <a name="remarks"></a>备注
 
@@ -62,9 +63,9 @@ class back_insert_iterator;
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现末尾插入的输出迭代器表达式 * `i` = `x`。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`末尾插入。|
 |[operator++](#op_add_add)|将 `back_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现末尾插入的输出迭代器表达式 *`i` = `x`。|
+|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`末尾插入。|
 
 ## <a name="requirements"></a>要求
 
@@ -82,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 容器的`back_insert_iterator`是插入元素插入。
+*_Cont*容器的`back_insert_iterator`是要插入到元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -190,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator:: operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的取消引用运算符。
 
@@ -322,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>参数
 
-`val` 要插入到容器的值。
+*val*要插入到容器的值。
 
 ### <a name="return-value"></a>返回值
 

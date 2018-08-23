@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354863"
 ---
 # <a name="active-template-library-atl-tutorial"></a>活动模板库 (ATL) 教程
 ATL 旨在简化创建高效、 灵活、 轻型控件的过程。 本教程将引导你逐步完成创建 ActiveX 控件，演示许多 ATL 和 COM 的基础知识。  

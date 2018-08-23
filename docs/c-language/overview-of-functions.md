@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385801"
 ---
 # <a name="overview-of-functions"></a>函数概述
 函数必须具有定义且应具有声明，尽管定义可用作声明（如果声明在调用函数前出现）。 函数定义包含函数主体（调用函数时执行的代码）。  

@@ -1,27 +1,28 @@
 ---
-title: 属性 (C + + /cli CX) |Microsoft 文档
+title: 特性 (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e89c844b97637897c9b5eb6c1cc7e32081fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601133"
 ---
 # <a name="attributes-ccx"></a>特性 (C++/CX)
-特性是一种特殊的 ref 类，可以在前面追加到 Windows 运行时类型和方法，以指定元数据创建中的某些行为的方括号中。 几个预定义属性 — 例如， [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)-通常用在 C + + /cli CX 代码。 此示例演示如何将特性应用于类：  
+属性是一种特殊的 ref 类，可以附加到 Windows 运行时类型和方法，以指定元数据创建中的某些行为的方括号中。 几个预定义属性 — 例如， [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— 通常用在 C + + /CX 代码。 此示例演示如何将特性应用于类：  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
 ## <a name="custom-attributes"></a>自定义特性  
- 还可以定义自定义特性。 自定义特性必须遵循这些 Windows 运行时规则：  
+ 还可以定义自定义特性。 自定义特性必须符合这些 Windows 运行时规则：  
   
 -   自定义特性只能包含公共字段。  
   

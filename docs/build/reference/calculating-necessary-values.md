@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369323"
 ---
 # <a name="calculating-necessary-values"></a>计算所需值
 两条关键信息需要通过延迟 helper 例程。 为此，用于计算此信息的 delayhlp.cpp 中有两个内联函数。  

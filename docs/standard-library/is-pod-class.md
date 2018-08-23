@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962060"
 ---
 # <a name="ispod-class"></a>is_pod 类
 
@@ -40,7 +41,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>备注
 
-如果类型 *T* 为纯旧数据 (POD)，则 `is_pod<T>::value` 为 `true`。 否则为 `false`。
+`is_pod<T>::value` 是 **，则返回 true**如果类型*T*为纯旧数据 (POD)。 否则它是**false**。
 
 算术类型、枚举类型、指针类型和指向成员类型的指针是 POD。
 

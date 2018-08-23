@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380283"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>多个描述块中的目标
 若要更新在使用不同的命令的多个描述块中的目标，请指定目标与依赖项之间的两个连续冒号 （:）。  

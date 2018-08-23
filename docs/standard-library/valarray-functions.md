@@ -40,11 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 53a7c666684783a85b2aeb0318cfedd738cc4b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962464"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函数
 
@@ -68,7 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -122,7 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -194,7 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -204,7 +208,7 @@ valarray<Type> asin(const valarray<Type>& left);
 
 返回的元素以弧度为单位。
 
-返回值是主体之间的值 + pi/2 和-pi/2 与正弦一致值输入。
+返回值是主体之间的值 + pi/2 和 pi/2 一致与正弦值输入。
 
 ### <a name="example"></a>示例
 
@@ -266,7 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -276,7 +281,7 @@ valarray<Type> atan(const valarray<Type>& left);
 
 返回的元素以弧度为单位。
 
-返回值是主体之间的值 + pi/2 和-pi/2 与正切一致值输入。
+返回值是主体之间的值 + pi/2 和 pi/2 一致与正切值输入。
 
 ### <a name="example"></a>示例
 
@@ -347,9 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 常量的数值数据类型或输入 valarray 的元素提供值的反正切值自变量的 y 坐标。
+*left*  
+ 常量数值数据类型或输入 valarray，它的元素为反正切值参数的 y 轴提供值。
 
-`right` 常量的数值数据类型或输入 valarray 的元素提供值的反正切值自变量的 x 坐标。
+*right*  
+ 常量数值数据类型或输入 valarray，它的元素为反正切值参数的 x 轴提供值。
 
 ### <a name="return-value"></a>返回值
 
@@ -365,9 +372,9 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 返回的元素以弧度为单位。
 
-此函数会保留有关符号的丢失通过标准的正切函数的自变量中的组件的信息，象限的此知识可帮助要分配一个介于之间的唯一角度 + pi 和-pi 的返回值。
+此函数可以保留符号中会丢失标准正切函数的参数的组件的信息，这一知识象限的实现要分配之间的唯一角度 + pi 和-pi 的返回值。
 
-如果 `left` 和 `right` 具有不同元素数，则结果不可确定。
+如果*左*并*右*具有不同数量的元素，则结果为未定义。
 
 ### <a name="example"></a>示例
 
@@ -433,7 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -509,7 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -591,7 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -653,7 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -715,7 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -794,9 +806,11 @@ pow(
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素提供的每个元素是 exponentiated 基。
+*left*  
+ 输入 valarray，它的元素为每个要指数化的元素提供基数。
 
-`right` 输入的 valarray 的元素提供的每个元素是 exponentiated power。
+*right*  
+ 输入 valarray，它的元素为每个要指数化的元素提供幂。
 
 ### <a name="return-value"></a>返回值
 
@@ -810,7 +824,7 @@ pow(
 
 ### <a name="remarks"></a>备注
 
-如果 `left` 和 `right` 具有不同元素数，则结果不可确定。
+如果*左*并*右*具有不同数量的元素，则结果为未定义。
 
 ### <a name="example"></a>示例
 
@@ -874,7 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -950,7 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -1032,7 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -1089,8 +1106,8 @@ void swap(
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|一个 `valarray` 类型的对象。|
-|`right`|一个 `valarray` 类型的对象。|
+|*left*|一个 `valarray` 类型的对象。|
+|*right*|一个 `valarray` 类型的对象。|
 
 ### <a name="remarks"></a>备注
 
@@ -1107,7 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -1183,7 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-`left` 输入的 valarray 的元素成员函数来操作。
+*left*  
+ 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
 

@@ -1,5 +1,5 @@
 ---
-title: 插入新菜单在现有菜单之间 |Microsoft 文档
+title: 在现有菜单之间插入新 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 759ed60206ef9cb68ea2b0f502c1241c9ce5b6cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602968"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
-### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单  
-  
-1.  选择现有的菜单名称，然后按**插入**密钥。 **新项**框插入选定项的前面。  
-  
-     \- 或 -  
-  
-2.  在菜单栏上右键单击并选择**插入新**从快捷菜单。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
-  
- 要求  
-  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [菜单编辑器](../windows/menu-editor.md)   
+
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
+
+1. 选择现有的菜单名称并按**插入**密钥。 **新项**框插入到所选的项之前。
+
+   \- 或 -
+
+2. 在菜单栏上右键单击并选择**插入新**从快捷菜单。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[菜单编辑器](../windows/menu-editor.md)  

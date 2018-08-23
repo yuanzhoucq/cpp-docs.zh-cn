@@ -1,5 +1,5 @@
 ---
-title: 输出参数 |Microsoft 文档
+title: 输出参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339021"
 ---
 # <a name="output-parameters"></a>输出参数
 调用存储的过程是类似于调用 SQL 命令。 主要区别是存储的过程使用输出参数 （或"输出"） 和返回值。  
   
- 在以下存储过程中，第一个？ is 返回值 (phone) 和第二个？ 是输入的参数 （名称）：  
+ 在以下存储过程中，第一个？ 是返回值 （电话），第二个？ 是输入的参数 （名称）：  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- 参数映射中指定了切入和切出参数：  
+ 参数映射中指定 in 和 out 参数：  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 你的应用程序必须处理从存储过程返回的输出。 不同的 OLE DB 提供程序返回输出参数和返回值的结果处理过程中的不同时间。 例如，Microsoft OLE DB 提供程序的 SQL Server (SQLOLEDB) 不提供输出参数和返回之前的代码后使用者已检索到或取消的存储过程返回的结果集。 将输出从服务器返回的最后一个的 TDS 数据包中。  
+ 应用程序必须处理从存储过程返回的输出。 不同的 OLE DB 访问接口返回输出参数和返回结果处理期间的不同时间的值。 例如，Microsoft OLE DB 访问接口的 SQL Server (SQLOLEDB) 不会不提供输出参数和返回之前的代码后使用者检索或取消存储过程返回的结果集。 从服务器中的最后一个的 TDS 数据包返回输出。  
   
 ## <a name="row-count"></a>行计数  
- 如果使用 OLE DB 使用者模板来执行具有输出的存储的过程，直到您关闭行集未设置的行计数。  
+ 如果使用 OLE DB 使用者模板来执行具有输出的存储的过程，直到关闭的行集未设置行计数。  
   
- 例如，考虑使用带有行集和输出参数为存储的过程：  
+ 例如，请考虑使用带有行集和输出参数为存储的过程：  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -61,7 +62,7 @@ as
 return 0  
 ```  
   
- @_rowcount带有报告测试表中实际返回行数。 但是，此存储的过程限制为 50 的最大值的行数。 例如，如果在测试中没有 100 行，行计数应为 50 （因为此代码检索仅前 50 行）。 如果表中仅 30 行，行计数将为 30。 必须调用**关闭**或**CloseAll**来填充带有之前提取其值。  
+ @_rowcount带有报告从测试表实际上返回行数。 但是，此存储的过程限制到最多 50 个的行数。 例如，如果在测试中有 100 行，行计数将是 50 （因为此代码检索只显示前 50 行）。 如果表中仅 30 行，行计数将为 30。 必须调用`Close`或`CloseAll`来填充带有之前提取其值。  
   
 ## <a name="see-also"></a>请参阅  
  [使用存储过程](../../data/oledb/using-stored-procedures.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381517"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>C 后缀增量和减量运算符
 后缀递增和递减运算符的操作数是可修改的左值的标量类型。  

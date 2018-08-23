@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231857"
 ---
 # <a name="compiler-error-c2558"></a>编译器错误 C2558
 “identifier”: 没有可用的复制构造函数或复制构造函数声明为“explicit”  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344173"
 ---
 # <a name="frame-window-classes-architecture"></a>框架窗口类（体系结构）
 在文档/视图体系结构，框架窗口是包含视图窗口的窗口。 它们还支持具有控制条附加到它们。  

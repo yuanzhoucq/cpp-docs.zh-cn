@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056855"
 ---
 # <a name="operator-and"></a>运算符 AND
 返回的按位与运算的结果*expression1*和*expression2*。  

@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3309aee316c3b067c9bd0ade4e1064289cb4ddaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a597ad1a72f903d08e848727045e05bf014879b1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450632"
 ---
 # <a name="gets-getws"></a>gets、_getws
 从 `stdin` 流中获取行。 提供这些函数的更多安全版本；请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
@@ -76,7 +77,7 @@ wchar_t *_getws(
  输入字符串的存储位置。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回其参数。 `NULL` 指针指示错误或文件尾条件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 `NULL`，这些函数则会调用无效的参数处理程序，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数返回 `NULL` 并将 errno 设置为 `EINVAL`。  
+ 如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`。  
   
 ## <a name="remarks"></a>备注  
  `gets` 函数从标准输入流 `stdin` 中读取一个行并将该行存储在 `buffer` 中。 该行由第一个换行符(“\n”)之前的所有字符和该换行符构成。 随后，在返回行之前，`gets` 会将换行符替换为 null 字符（“\0”）。 相反， `fgets` 函数将保留换行符。 `_getws` 是 `gets`的宽字符版本；其参数和返回值都是宽字符字符串。  

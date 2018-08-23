@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964777"
 ---
 # <a name="submatch-class"></a>sub_match 类
 
@@ -64,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`BidIt` 子匹配项的迭代器类型。
+*BidIt*  
+ 子匹配项的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -96,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>参数
 
-`right` 子匹配项，要进行比较。
+*right*  
+ 要比较的子匹配项。
 
-`str` 要进行比较的字符串。
+*str*  
+ 要与之比较的字符串。
 
-`ptr` 要进行比较的以 null 结尾的序列。
+*ptr*  
+ 要比较的以 null 结尾的序列。
 
 ### <a name="remarks"></a>备注
 
@@ -372,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>备注
 
-仅当与 `true` 关联的捕获组是正则表达式匹配的一部分时，成员才保存 `*this` 。
+成员保留 **，则返回 true**仅当与关联的捕获组`*this`是正则表达式匹配的一部分。
 
 ### <a name="example"></a>示例
 

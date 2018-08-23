@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0acd5df644f097d19e5f9708f0a059a31f3e9ee9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 850050d4307d7b0c1170c24ca9d13d6f339de189
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406986"
 ---
 # <a name="exception-handling-in-visual-c"></a>Visual C++ 中的异常处理
 异常是一个可能超出程序的控制范围的错误条件，它会阻止程序继续沿其常规执行路径执行。 某些操作（包括对象创建、文件输入/输出以及从其他模块中进行的函数调用）都可能是异常的来源，设置在你的程序正常运行时也是如此。 可靠代码可预见并处理异常。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  有关在 CLR 应用程序中处理异常的信息，请参阅[异常处理](../windows/exception-handling-cpp-component-extensions.md)。  
   
- 有关在 x64 上处理的异常信息处理器，请参阅[异常处理 (x64)](../build/exception-handling-x64.md)。  
+ 有关异常处理在 x64 上的处理器，请参阅[异常处理 (x64)](../build/exception-handling-x64.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)

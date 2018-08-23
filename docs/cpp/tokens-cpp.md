@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467955"
 ---
 # <a name="tokens-c"></a>令牌 （C++）
 标记是对编译器有用的 C++ 程序的最小元素。 C++ 分析器识别以下类型的标记：标识符、关键字、文本、运算符、标点和其他分隔符。 这些标记流构成一个翻译单元。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
  分析器将标记与输入流区分开，方法是在从左到右的扫描中使用输入字符来创建尽可能最长的标记。 考虑此代码片段：  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  编写代码的程序员可能已考虑以下两个语句之一：  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

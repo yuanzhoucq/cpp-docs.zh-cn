@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367090"
 ---
 # <a name="exit-codes-from-nmake"></a>从 NMAKE 退出代码
 NMAKE 返回下列退出代码：  

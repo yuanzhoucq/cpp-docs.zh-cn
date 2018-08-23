@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225805"
 ---
 # <a name="fatal-error-c1089"></a>错误 C1089
 无法截断 filetype 文件: “文件”: 消息  

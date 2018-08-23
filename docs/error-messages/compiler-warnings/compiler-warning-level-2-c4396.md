@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290665"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>编译器警告（等级 2）C4396
 “name”：友元声明引用函数模板的专用化时，无法使用内联说明符  

@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: Hstringreference 构造函数 |Microsoft 文档'
+title: 'Hstringreference:: Hstringreference 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,52 +15,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591180"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 构造函数
-初始化 HStringReference 类的新实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template<unsigned int sizeDest>  
-HStringReference(wchar_t const (&str)[ sizeDest]) throw();  
-  
-template<unsigned int sizeDest>  
-HStringReference(wchar_t const (&str)[ sizeDest],   
-                 unsigned int len) throw();  
-  
-HStringReference(HStringReference&& other) throw();  
-```  
-  
-#### <a name="parameters"></a>参数  
- `sizeDest`  
- 指定目标 HStringReference 缓冲区大小的模板参数。  
-  
- `str`  
- 对宽字符串的引用。  
-  
- `len`  
- 要在此操作中使用的 `str` 参数缓冲区的最大长度。 如果 `len` 参数未指定，则将使用整个 `str` 参数。 如果 `len` 大于 `sizeDest`，则 `len` 将设置为 `sizeDest`-1。  
-  
- `other`  
- 另一 HStringReference 对象。  
-  
-## <a name="remarks"></a>备注  
- 第一个构造函数初始化大小与参数 `str` 相同的新的 HStringReference 对象。  
-  
- 第二个构造函数初始化大小由参数 `len` 指定的新的 HStringReference 对象。  
-  
- 第三个构造函数初始化新的 HStringReference 对象的值`other`参数，然后销毁`other`参数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HStringReference 类](../windows/hstringreference-class.md)
+
+初始化的新实例**HStringReference**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template<unsigned int sizeDest>
+HStringReference(wchar_t const (&str)[ sizeDest]) throw();
+
+template<unsigned int sizeDest>
+HStringReference(wchar_t const (&str)[ sizeDest],
+                 unsigned int len) throw();
+
+HStringReference(HStringReference&& other) throw();
+```
+
+### <a name="parameters"></a>参数
+
+*sizeDest*  
+指定的目标大小的模板参数**HStringReference**缓冲区。
+
+*str*  
+对宽字符串的引用。
+
+*Len*  
+最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。 如果*len*大于*sizeDest*， *len*设置为*sizeDest*-1。
+
+*other*  
+另一个**HStringReference**对象。
+
+## <a name="remarks"></a>备注
+
+第一个构造函数初始化新**HStringReference**相同大小与参数的对象*str*。
+
+第二个构造函数初始化新**HStringReference**对象的大小指定由参数*len*。
+
+第三个构造函数初始化新**HStringReference**对象的值*其他*参数，然后再销毁*其他*参数。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HStringReference 类](../windows/hstringreference-class.md)

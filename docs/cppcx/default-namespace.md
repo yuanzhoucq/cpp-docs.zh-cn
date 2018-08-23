@@ -1,5 +1,5 @@
 ---
-title: 默认命名空间 |Microsoft 文档
+title: 默认命名空间 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,18 +7,19 @@ ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f4386d3636744a673a10dd9530fd3836fdb78e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589729"
 ---
 # <a name="default-namespace"></a>default 命名空间
-`default`命名空间限定范围的内置类型的支持 C + + /cli CX。  
+`default`命名空间范围的内置类型支持的 C + + /cli CX。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +39,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>内置类型  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`char16`|表示 Unicode (UTF-16) 码位的 16 位非数字值。|  
 |`float32`|32 位 IEEE 754 浮点数。|  

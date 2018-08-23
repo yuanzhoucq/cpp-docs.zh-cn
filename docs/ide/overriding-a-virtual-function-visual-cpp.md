@@ -1,5 +1,5 @@
 ---
-title: 重写虚函数 （Visual c + +） |Microsoft 文档
+title: 替代虚函数 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,31 +20,32 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337738"
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>重写虚函数 (Visual C++)
-您可以重写基类从 Visual Studio 中定义的虚拟函数[属性窗口](/visualstudio/ide/reference/properties-window)。  
+可以从 Visual Studio [属性窗口](/visualstudio/ide/reference/properties-window)替代基类中定义的虚函数。  
   
-### <a name="to-override-a-virtual-function-in-the-properties-window"></a>若要重写属性窗口中的虚函数  
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>在属性窗口中替代虚函数  
   
-1.  在类视图中，单击类。  
+1.  在“类视图”中，单击此类。  
   
-2.  在属性窗口中，单击**重写**按钮。  
+2.  在“属性”窗口中，单击“替代”按钮。  
   
     > [!NOTE]
-    >  **重写**当在类视图或当您单击源窗口中选择类名时，按钮才可用。  
+    >  在“类视图”中选择类名或在源窗口中单击时，“替代”按钮才会显示。  
   
-     左侧的列列出的虚拟函数。 如果虚拟函数的名称也会出现在右侧列中，则已实现重写。  
+     左列列出了虚函数。 如果虚函数的名称还在右列中显示，则已实现替代。  
   
-3.  如果函数具有不重写，然后单击在属性窗口来显示该函数的建议的名称右侧列中的单元格重写因为\<添加 >*FuncName*。  
+3.  如果函数没有替代，则单击属性窗口右列中的单元格会将函数替代的建议名称显示为 \<add>FuncName。  
   
-4.  单击要添加函数的存根 （stub） 代码的建议的名称。  
+4.  单击建议名称，为函数添加存根代码。  
   
-5.  若要编辑重写函数，请双击类视图中函数的名称，然后编辑源窗口中的代码。  
+5.  若要编辑替代函数，请在类视图中双击函数名并在源窗口中编辑代码。  
   
- 若要删除一个替代，单击右侧列中的重写函数名称，然后选择\<删除 >*FuncName*。 函数的代码注释掉。  
+ 若要删除替代，请在右列中单击替代函数名并选择 \<delete>FuncName。 即注释掉函数的代码。  
   
 ## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   

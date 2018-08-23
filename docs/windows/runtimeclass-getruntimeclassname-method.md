@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getruntimeclassname 方法 |Microsoft 文档'
+title: 'Runtimeclass:: Getruntimeclassname 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606822"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName 方法
 
-获取当前 RuntimeClass 对象的运行时类名称。
+获取当前的运行时类名称**RuntimeClass**对象。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +47,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>备注
 
-如果将发出断言错误&#95; &#95;WRL_STRICT&#95; &#95;或&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;没有定义。
+如果发出断言错误`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`并不定义。
 
 ## <a name="requirements"></a>要求
 

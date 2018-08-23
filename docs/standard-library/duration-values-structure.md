@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846007"
 ---
 # <a name="durationvalues-structure"></a>duration_values 结构
 
@@ -48,7 +49,7 @@ struct duration_values;
 
 **标头：** \<chrono >
 
-**命名空间：**std::chrono
+**命名空间：** std::chrono
 
 ## <a name="max"></a>  duration_values::max
 

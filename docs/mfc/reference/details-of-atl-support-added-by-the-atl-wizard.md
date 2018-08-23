@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450021fd1ea05831f44dd5af7a9f1e39a9d6fc5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121374"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 当你[向现有 MFC 可执行文件或 DLL 中添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 进行以下修改现有的 MFC 项目 (在此示例中，项目称为`MFCEXE`):  
   
 -   添加两个新文件 （.idl 文件和.rgs 文件中，以用于注册服务器）。  
   
--   在主应用程序标头和实现文件 （Mfcexe.h 和 Mfcexe.cpp），新类 (派生自**CAtlMFCModule**) 添加。 除了新的类中，代码添加到`InitInstance`进行注册。 此外将代码添加到`ExitInstance`吊销类对象的函数。 在标头文件中，最后，两个新标头文件 （Initguid.h 和 Mfcexe_i.c） 包含在实现文件中，声明并初始化新的 Guid **CAtlMFCModule**-派生类。  
+-   在主应用程序标头和实现文件 （Mfcexe.h 和 Mfcexe.cpp），新类 (派生自`CAtlMFCModule`) 添加。 除了新的类中，代码添加到`InitInstance`进行注册。 此外将代码添加到`ExitInstance`吊销类对象的函数。 在标头文件中，最后，两个新标头文件 （Initguid.h 和 Mfcexe_i.c） 包含在实现文件中，声明并初始化新的 Guid `CAtlMFCModule`-派生类。  
   
 -   若要正确注册服务器，将新的.rgs file 的条目添加到项目的资源文件。  
   
 ## <a name="notes-for-dll-projects"></a>DLL 项目的说明  
- ATL 支持添加到 MFC DLL 项目时，你将看到一些差异。 代码添加到**dllregisterserver 的调用**和**DLLUnregisterServer**用于注册和注销该 DLL 的函数。 此外将代码添加到[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。  
+ ATL 支持添加到 MFC DLL 项目时，你将看到一些差异。 代码添加到`DLLRegisterServer`和`DLLUnregisterServer`用于注册和注销该 DLL 的函数。 此外将代码添加到[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 项目中的 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   

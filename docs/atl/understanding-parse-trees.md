@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358823"
 ---
 # <a name="understanding-parse-trees"></a>了解分析树
 你可以在你注册机构脚本中，其中每个分析树具有以下形式定义一个或多个分析树：  

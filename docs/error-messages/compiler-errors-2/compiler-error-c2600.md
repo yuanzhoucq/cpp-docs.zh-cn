@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230944"
 ---
 # <a name="compiler-error-c2600"></a>编译器错误 C2600
 function： 不能定义 （必须在声明类第一次） 的编译器生成的特殊成员函数  

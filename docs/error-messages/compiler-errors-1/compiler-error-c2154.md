@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168927"
 ---
 # <a name="compiler-error-c2154"></a>编译器错误 C2154
 “type”：只有枚举类型才允许作为编译器内部类型特征“__underlying_type”的自变量  

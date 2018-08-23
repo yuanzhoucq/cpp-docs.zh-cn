@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364016"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
 A[通过并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951640)是资源的集合-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间应用程序可以使用多个版本的程序集，并且可能对发布更新的当前安装的服务程序集。  

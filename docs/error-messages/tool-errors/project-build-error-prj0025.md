@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316980"
 ---
 # <a name="project-build-error-prj0025"></a>项目生成错误 PRJ0025
 批处理文件 file 包含无法转换为用户的 ANSI 代码页的 Unicode 内容。  

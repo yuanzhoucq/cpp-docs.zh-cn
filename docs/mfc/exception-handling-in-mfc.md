@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239432"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 此文章介绍了 MFC 中可用的异常处理机制。 可以使用两个机制：  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
  如果您已开发使用 MFC 异常宏的应用程序，你可以继续使用这些宏在现有代码中，在新的代码中使用 c + + 异常时。 文章[异常： 3.0 版本中对异常宏更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)这样为提供的准则。  
   
 > [!NOTE]
->  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../ide/property-pages-visual-cpp.md)对话框中或使用 /GX 编译器选项。 默认值为 /GX-，这将禁用异常处理。  
+>  若要启用 c + + 异常处理代码中，项目的 C/c + + 文件夹中的代码生成页上选择启用 c + + 异常[属性页](../ide/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。  
   
  本文介绍了以下主题：  
   

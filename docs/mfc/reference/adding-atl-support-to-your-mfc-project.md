@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347063"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>向 MFC 项目添加 ATL 支持
 如果你已创建基于 MFC 的应用程序，然后你可以添加支持的活动模板库 (ATL) 轻松地通过运行向 MFC 项目向导的添加 ATL 支持。  

@@ -21,13 +21,14 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254427"
 ---
 # <a name="compiler-error-c3287"></a>编译器错误 C3287
 类型“type”（GetEnumerator 的返回类型）必须具有适当的公共 MoveNext 成员函数和公共的 Current 属性  
   
  用户定义的集合类必须包含对 `MoveNext` 和 `Current`的定义。  
   
- 有关更多信息，请参见 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。  
+ 有关更多信息，请参见 [如何：使用 for each 循环访问用户定义集合](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。  
   
 ## <a name="example"></a>示例  
  以下示例生成 C3287。  

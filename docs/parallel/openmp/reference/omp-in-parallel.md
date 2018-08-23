@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690554"
 ---
 # <a name="ompinparallel"></a>omp_in_parallel
 返回非零，如果从调用并行区域内。  

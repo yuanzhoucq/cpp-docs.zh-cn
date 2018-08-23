@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248250"
 ---
 # <a name="compiler-error-c2903"></a>编译器错误 C2903
 “identifier”：符号既不是类模板也不是函数模板  

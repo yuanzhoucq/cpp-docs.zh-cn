@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345550"
 ---
 # <a name="collections"></a>集合
 Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类有两种类型：  

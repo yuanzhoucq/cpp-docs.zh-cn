@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931604"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一自定义属性页
 有时，ActiveX 控件将对有比正常可以容纳在一个属性页上的更多属性。 在这种情况下，你可以将属性页添加到要显示这些属性的 ActiveX 控件。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  展开**对话框**节点，然后选择**IDD_OLE_PROPPAGE_SMALL**。  
   
-4.  单击`New`，将资源添加到你的项目。  
+4.  单击**新建**，将资源添加到你的项目。  
   
 5.  选择要刷新属性窗口的新属性页模板。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- 请注意，你必须增加的第二个参数`BEGIN_PROPPAGEIDS`宏 （属性页计数） 从 1 到 2。  
+ 请注意，你必须增加 BEGIN_PROPPAGEIDS 宏 （属性页计数） 从 1 到 2 的第二个参数。  
   
  你还必须修改控件实现文件 (。CPP) 文件以包括标头 (。H） 文件的新的属性页类。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  修改的构造函数`CAddtlPropPage`以便**IDS_SAMPLE_ADDPPG_CAPTION**传递给`COlePropertyPage`构造函数，如下所示：  
+7.  修改的构造函数`CAddtlPropPage`以便 IDS_SAMPLE_ADDPPG_CAPTION 传递到`COlePropertyPage`构造函数，如下所示：  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

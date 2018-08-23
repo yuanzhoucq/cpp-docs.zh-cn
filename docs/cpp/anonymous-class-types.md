@@ -1,5 +1,5 @@
 ---
-title: 匿名类类型 |Microsoft 文档
+title: 匿名类类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8890a128ff625ead27ef34be6d057e879b22a5f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402729"
 ---
 # <a name="anonymous-class-types"></a>匿名类类型
-类可以是匿名 — 也就是说，它们可以声明而无需*标识符*。 在将类名称替换为 `typedef` 名称时，这会很有用，如下所示：  
+类可以是匿名 — 也就是说，它们可以声明而无需*标识符*。 这将为包含的类名称时很有用**typedef**名称，如以下所示：  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  上面示例中显示的匿名类的用法对于保留与现有 C 代码的兼容性很有用。 在某些 C 代码中，将 `typedef` 与匿名结构结合使用是很普遍的。  
+>  上面示例中显示的匿名类的用法对于保留与现有 C 代码的兼容性很有用。 在某些 C 代码中，使用**typedef**与匿名结构结合使用非常普遍。  
   
  如果您希望对类成员的引用就像它未包含在独立类中的情况一样出现，则匿名类也很有用，如下所示：  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -53,7 +54,7 @@ PTValue ptv;
   
  在前面的代码中，`iValue`可以使用对象成员选择运算符访问 (**。**)，如下所示：  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  您可以像访问包含结构中的成员一样访问匿名结构的成员。  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   
@@ -100,4 +101,3 @@ int main()
 ```  
   
 **结束 Microsoft 专用**  
-  

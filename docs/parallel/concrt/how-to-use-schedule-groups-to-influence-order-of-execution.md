@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691191"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>如何：使用计划组影响执行顺序
 在并发运行时，计划任务的顺序是不确定的。 但是，你可以使用计划策略影响任务运行的顺序。 本主题演示如何使用计划组连同[concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey)计划程序策略，来影响任务运行的顺序。  

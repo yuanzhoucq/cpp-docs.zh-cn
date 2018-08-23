@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205b05b4832098bca1d97bd949137d7271f111d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ea1f79d9f57c34bf6deed94f04354b87759d794
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966573"
 ---
 # <a name="isunion-class"></a>is_union 类
 
@@ -36,11 +37,11 @@ struct is_union;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是联合类型或 `cv-qualified` 形式的联合类型，则类型谓词的实例保留为 true，否则保留为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是联合类型或`cv-qualified`形式的联合类型，否则为 false。
 
 ## <a name="example"></a>示例
 

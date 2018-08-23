@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379653"
 ---
 # <a name="serialization-serializing-an-object"></a>序列化：对象的序列化
 文章[序列化： 定义可序列化类](../mfc/serialization-making-a-serializable-class.md)演示如何使类可序列化。 可序列化类之后，你可以将对象序列化为该类与通过文件的[CArchive](../mfc/reference/carchive-class.md)对象。 本文介绍：  

@@ -42,6 +42,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368065"
 ---
 # <a name="combo-box-handlers"></a>组合框处理程序
 下面的映射条目对应的函数原型。  

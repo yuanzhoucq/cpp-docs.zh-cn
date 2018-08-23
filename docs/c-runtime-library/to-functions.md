@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413201"
 ---
 # <a name="to-functions"></a>to 函数
 每个 **to** 函数及其关联的宏（如果有），将单个字符转换为另一个字符。  

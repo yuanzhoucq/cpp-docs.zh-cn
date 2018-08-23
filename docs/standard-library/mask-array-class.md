@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962668"
 ---
 # <a name="maskarray-class"></a>mask_array 类
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>备注
 
-该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的 **va** 对象及 [valarray\<bool>](../standard-library/valarray-bool-class.md) 类的 **ba** 对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。
+此类描述的对象将存储对对象的引用`va`类的[valarray](../standard-library/valarray-class.md)**\<类型 >**，对象及`ba`类的[valarray\<bool >](../standard-library/valarray-bool-class.md)，它描述了要从选择的元素序列`valarray<Type>`对象。
 
-只通过写入 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 形式的表达式即可构造 **mask_array\<Type>** 对象。 然后 mask_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应的函数签名，只不过仅所选的元素的序列受到影响。
+在构造`mask_array<Type>`只通过写入形式的表达式的对象[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)。 Mask_array 类的成员函数，然后就像是为定义的对应函数签名`valarray<Type>`，只不过仅所选元素的序列受到影响。
 
-该序列大部分由 **ba.size** 元素组成。 仅当 *ba* [ **J**] 为 true，才包括元素 *J*。 因此 **ba**中有多少 true 元素序列中就有多少元素。 如果 `I` 是 **ba**中最低 true 元素的索引，那么 **va**[ `I`] 则是所选序列中的元素零。
+序列的最多包含`ba.size`元素。 仅当 *ba* [ **J**] 为 true，才包括元素 *J*。 因此，有序列中任意多个元素中，则返回 true 的元素以及`ba`。 如果`I`是中最低 true 元素的索引`ba`，然后**va**[ `I`] 是所选序列中的元素零。
 
 ## <a name="example"></a>示例
 

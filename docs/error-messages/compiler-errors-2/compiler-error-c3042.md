@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250200"
 ---
 # <a name="compiler-error-c3042"></a>编译器错误 C3042
 “copyprivate”和“nowait”子句不能同时出现在 OpenMP“directive”指令中  

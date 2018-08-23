@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341666"
 ---
 # <a name="application-framework"></a>应用程序框架
 Microsoft 基础类 (MFC) 库的核心是对 C++ 形式的 Windows API 的大部分内容的封装。 库类表示窗口、对话框、设备上下文、公用 GDI 对象（如画笔和钢笔）、控件以及其他标准 Windows 项。 这些类为封装它们的窗口中的结构提供了一个便利的 C++ 成员函数接口。 有关使用这些类的详细信息，请参阅[窗口对象主题](../mfc/window-objects.md)。  

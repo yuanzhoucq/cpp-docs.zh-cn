@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301341"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>编译器警告（等级 4）C4571
 自 Visual c + + 7.1; 以来更改的信息： 之后语义不再捕获结构化的异常 (SEH)  

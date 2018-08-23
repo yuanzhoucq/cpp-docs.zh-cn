@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343877"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>非命令消息如何到达其处理程序
 与命令不同，标准 Windows 消息执行不获取通过链的命令目标路由，但通常由 Windows 将消息发送到窗口。 窗口可能是主框架窗口、 MDI 子窗口、 标准控件、 对话框中、 视图或其他一些种类的子窗口。  

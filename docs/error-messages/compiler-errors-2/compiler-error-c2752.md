@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233467"
 ---
 # <a name="compiler-error-c2752"></a>编译器错误 C2752
 'template': 多个部分专用化匹配模板自变量列表  

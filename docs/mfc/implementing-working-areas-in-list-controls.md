@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347355"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>实现列表控件中的工作区域
 默认情况下，列表控件排列标准网格方式中的所有项。 但是，支持另一种方法，工作区，它将列表项矩形分组。 实现工作区域的列表控件的映像，请参阅 Windows SDK 中使用列表视图控件。  

@@ -1,5 +1,5 @@
 ---
-title: __movsw |Microsoft 文档
+title: __movsw |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538996"
 ---
 # <a name="movsw"></a>__movsw
 **Microsoft 专用**  
   
- 生成的移动字符串 (`rep movsw`) 指令。  
+ 生成移动字符串 (`rep movsw`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +42,19 @@ void __movsw(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Source`  
  操作的源。  
   
  [in] `Count`  
- 要复制的单词数。  
+ 若要复制的单词数。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

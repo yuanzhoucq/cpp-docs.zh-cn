@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104118"
 ---
 # <a name="autohandleoperator-autohandle"></a>auto_handle::operator auto_handle
 之间的类型强制转换运算符`auto_handle`和兼容的类型。  

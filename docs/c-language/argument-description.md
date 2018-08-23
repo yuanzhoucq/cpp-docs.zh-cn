@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385079"
 ---
 # <a name="argument-description"></a>自变量说明
 main 和 wmain 函数中的 `argc` 形参是一个整数，用来指定从命令行传递到程序的实参的数量。 由于程序名被视为实参，因此 `argc` 的值至少有一个。  

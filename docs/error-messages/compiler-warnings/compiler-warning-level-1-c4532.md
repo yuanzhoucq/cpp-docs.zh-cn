@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285855"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>编译器警告（等级 1）C4532
 continue: __finally/finally 块中的跳转出现不可确定的行为在终止处理过程  

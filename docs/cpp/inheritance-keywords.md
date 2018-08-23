@@ -1,5 +1,5 @@
 ---
-title: 继承关键字 |Microsoft 文档
+title: 继承关键字 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cadeefc9ec150aedcb99f1ed531a3478aecfce89
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408409"
 ---
 # <a name="inheritance-keywords"></a>继承关键字
 **Microsoft 专用**  
@@ -50,12 +51,12 @@ class [__virtual_inheritance] class-name;
   
  C++ 允许您在类定义前声明指向类成员的指针。 例如：  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- 在上面的代码，`p`被声明为指向类 s。 整数成员的指针但是，`class S`具有尚未定义在此代码中; 它而只声明。 当编译器遇到此类指针时，它必须生成此指针的泛化表示形式。 表示形式的大小依赖于指定的继承模型。 可通过四种方式指定编译器的继承模型：  
+ 在上面的代码，`p`被声明为指向类 s。 整数成员的指针但是，`class S`具有尚未定义在此代码中; 它只声明。 当编译器遇到此类指针时，它必须生成此指针的泛化表示形式。 表示形式的大小依赖于指定的继承模型。 可通过四种方式指定编译器的继承模型：  
   
 -   在 IDE 中**指向成员的指针表示形式**  
   
@@ -63,7 +64,7 @@ int S::*p;
   
 -   使用[pointers_to_members](../preprocessor/pointers-to-members.md)杂注  
   
--   使用继承关键字 `__single_inheritance`、`__multiple_inheritance` 和 `__virtual_inheritance`。 此技术控制每个类的继承模型。  
+-   使用继承关键字 **__single_inheritance**， **__multiple_inheritance**，并 **__virtual_inheritance**。 此技术控制每个类的继承模型。  
   
     > [!NOTE]
     >  如果在定义类后始终声明指向类成员的指针，则无需使用上述任何选项。  
@@ -72,7 +73,7 @@ int S::*p;
   
  如果将上面的示例更改为：  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

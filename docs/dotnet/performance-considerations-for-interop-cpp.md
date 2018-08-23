@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164045"
 ---
 # <a name="performance-considerations-for-interop-c"></a>互操作的性能注意事项 (C++)
 本主题提供减少托管/非托管互操作转换对运行时性能的影响的指南。  

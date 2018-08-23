@@ -16,32 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc36fcfdc62983a90e39e04433052a256633a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705252"
 ---
 # <a name="compiler-error-c3268"></a>编译器错误 C3268
-“function”：泛型函数或泛型类的成员函数不能包含变量参数列表  
-  
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
- 请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C3268。  
-  
-```  
-// C3268.cpp  
-// compile with: /clr:pure /c  
-generic <class ItemType>  
-void Test(ItemType item, ...) {}   // C3268  
-// try the following line instead  
-// void Test(ItemType item) {}  
-  
-generic <class ItemType2>  
-ref struct MyStruct { void Test(...){} };   // C3268  
-// try the following line instead  
-// ref struct MyStruct { void Test2(){} };   // OK  
+
+> *函数*： 泛型函数或泛型类的成员函数不能具有变量参数列表
+
+## <a name="remarks"></a>备注
+
+**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+
+请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。
+
+## <a name="example"></a>示例
+
+以下示例生成 C3268。
+
+```cpp
+// C3268.cpp
+// compile with: /clr:pure /c
+generic <class ItemType>
+void Test(ItemType item, ...) {}   // C3268
+// try the following line instead
+// void Test(ItemType item) {}
+
+generic <class ItemType2>
+ref struct MyStruct { void Test(...){} };   // C3268
+// try the following line instead
+// ref struct MyStruct { void Test2(){} };   // OK
 ```

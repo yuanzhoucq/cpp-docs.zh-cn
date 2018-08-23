@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964751"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>备注
 
-`numeric_limits` 类的显式专用化描述基本类型（包括字符、整数、浮点类型和由实现定义而非由 C++ 语言规则固定的 `bool`）的许多属性。 \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
+显式专用化`numeric_limits`类描述的基本类型，包括字符、 整数和浮点类型的许多属性和**bool**是实现定义而不是通过修复c + + 语言的规则。 \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
 
 ### <a name="enumerations"></a>枚举
 

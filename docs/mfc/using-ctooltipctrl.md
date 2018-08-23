@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385620"
 ---
 # <a name="using-ctooltipctrl"></a>使用 CToolTipCtrl
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)类封装工具提示控件，显示的文本来描述应用程序中工具用途的单行一个小型弹出窗口的功能。 工具提示在大多数时间都是隐藏的，它仅在用户将光标置于工具上并在其上停留约半秒时间时显示。 工具提示显示在光标附近，并且在用户单击鼠标按钮或将光标移离工具时消失。  

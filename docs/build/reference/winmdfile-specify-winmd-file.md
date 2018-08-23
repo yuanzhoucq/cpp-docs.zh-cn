@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375592"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE（指定 winmd 文件）
 指定生成的 Windows 运行时元数据 (.winmd) 输出文件的文件名称[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)链接器选项。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343358"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Internet 上的异步名字对象
 由于应用程序访问网络的速度较慢，因此 Internet 要求采用新方法来设计应用程序。 应用程序应该异步执行网络访问，以避免用户界面出现停滞。 MFC 类[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)提供了用于下载文件的异步支持。  

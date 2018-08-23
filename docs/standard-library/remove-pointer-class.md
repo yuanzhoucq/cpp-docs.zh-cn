@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745711e1dd5abde022d0a21d5cb1ea6c013931a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9c8ddf5941394a8979832a753ed73cfda5f0876
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959119"
 ---
 # <a name="removepointer-class"></a>remove_pointer 类
 
@@ -39,11 +40,11 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>参数
 
-`T` 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`remove_pointer<T>` 的实例保留修改后的类型，当 `T1` 为 `T`、`T1*`、`T1* const` 或 `T1* volatile` 形式时，此类型为 `T1* const volatile`，否则为 `T`。
+实例`remove_pointer<T>`包含修改类型，即`T1`时*T*的形式`T1*`， `T1* const`， `T1* volatile`，或`T1* const volatile`; 否则为*T*。
 
 ## <a name="example"></a>示例
 

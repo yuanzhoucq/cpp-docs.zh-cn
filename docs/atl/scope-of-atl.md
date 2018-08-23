@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360026"
 ---
 # <a name="scope-of-atl"></a>ATL 的作用域
 ATL，可轻松地创建 COM 对象、 自动化服务器和 ActiveX 控件。 ATL 提供对许多基本的 COM 接口的内置支持。  

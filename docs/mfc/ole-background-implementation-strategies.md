@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350492"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 后台：实现策略
 根据您的应用程序，添加 OLE 支持有四个可能的实现策略：  

@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207716"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
 
@@ -44,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>参数
 
-`CharType` 表示 ostreambuf_iterator 字符类型的类型。 此参数为可选参数，默认值为 `char`。
+*CharType*表示 ostreambuf_iterator 字符类型的类型。 此参数是可选的默认值是**char**。
 
-`Traits` 表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
+*特征*表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ## <a name="remarks"></a>备注
 
@@ -77,7 +78,7 @@ ostreambuf_iterator 类必须满足输出迭代器的需求。 可使用 `ostrea
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`。|
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|
 |[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|
 
@@ -97,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 `CharType` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -188,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。
 
@@ -293,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>参数
 
-`_Char` 要插入到流缓冲区的字符。
+*_Char*要插入到流缓冲区的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -345,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>参数
 
-`strbuf` 用于初始化输出流缓冲区指针的输出 streambuf 对象。
+*strbuf*用于初始化输出流缓冲区指针的输出 streambuf 对象。
 
-`Ostr` 用于初始化输出流缓冲区指针的输出流对象。
+*Ostr*用于初始化输出流缓冲区指针的输出流对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过 `strbuf` 初始化输出流缓冲区指针。
+第一个构造函数初始化与输出流缓冲区指针*strbuf*。
 
 第二个构造函数通过 `Ostr` 初始化输出流缓冲区指针。 `rdbuf`。 存储的指针不能为空指针。
 
@@ -414,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>备注
 
-该类型为 `basic_streambuf`\<**CharType**, **Traits**> 的同义词，这是 I/O 缓冲区的流类，当专用化为字符类型 `char` 时将成为 `streambuf`。
+该类型是同义词`basic_streambuf` \< **CharType**，**特征**>，将成为用于 I/O 缓冲区的流类`streambuf`当专用化为字符类型**char**。
 
 ### <a name="example"></a>示例
 
@@ -430,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Traits** 的同义词。
+该类型是模板参数 `Traits` 的同义词。
 
 ### <a name="example"></a>示例
 

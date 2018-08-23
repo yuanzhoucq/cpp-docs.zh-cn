@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209048"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1493,7 +1494,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 - 别名模板。
 - 已删除的函数。
 - 非静态数据成员初始值设定项 (NSDMI)。
-- 默认的函数。 *
+- 默认的函数。 \*
 - 支持以下 ISO C99 语言功能：
 - _Bool
 - 复合文本。
@@ -1584,7 +1585,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 - 添加用于类类型的分号。
 - 完成对原始字符串文本使用括号。
-- 完成多行注释 (/* */)
+- 完成多行注释 (/\* \*/)
 
 **查找所有引用**在后台引用显示出文本匹配列表后自动对其进行解析和筛选。
 
@@ -1936,7 +1937,7 @@ __sptr、__uptr
 - 64 位本机和跨平台编译器。
 - 添加了 /analyze（企业代码分析）编译器选项。
 - 添加了 /bigobj 编译器选项。
-- 添加了 /clr:pure、/clr:safe 和 /clr:oldSyntax。 （此后在 Visual Studio 2015 中弃用。）
+- 添加了 /clr:pure、/clr:safe 和 /clr:oldSyntax。 （后来已在 Visual Studio 2015 中弃用，并已从 Visual Studio 2017 中删除。）
 - 已弃用的编译器选项：此版本中很多编译器选项已弃用，请参阅“已弃用的编译器选项”以获取详细信息。
 - 减少了 /clr 代码中的双重形式转换；请参阅“双重形式转换 (C++)”以获取详细信息。
 - /EH（异常处理模型）或 /EHs 将不能再用于捕捉非引发性异常；请使用 /EHa。

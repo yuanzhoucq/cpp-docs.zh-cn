@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Makereference 方法 |Microsoft 文档'
+title: 'Hstring:: Makereference 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,45 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610156"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 方法
-从指定的字符串参数创建 HStringReference 对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `sizeDest`  
- 指定目标 HStringReference 缓冲区大小的模板参数。  
-  
- `str`  
- 对宽字符串的引用。  
-  
- `len`  
- 要在此操作中使用的 `str` 参数缓冲区的最大长度。 如果 `len` 参数未指定，则将使用整个 `str` 参数。  
-  
-## <a name="return-value"></a>返回值  
- 一个 HStringReference 对象，其值是与指定相同`str`参数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HString 类](../windows/hstring-class.md)
+
+创建`HStringReference`从指定的字符串参数的对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>参数
+
+*sizeDest*  
+一个模板参数，指定的目标大小`HStringReference`缓冲区。
+
+*str*  
+对宽字符串的引用。
+
+*Len*  
+最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。
+
+## <a name="return-value"></a>返回值
+
+`HStringReference`对象，其值为与指定相同*str*参数。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HString 类](../windows/hstring-class.md)

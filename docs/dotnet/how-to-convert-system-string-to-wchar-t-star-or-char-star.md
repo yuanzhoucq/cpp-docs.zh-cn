@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139756"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>如何：将 System::String 转换为 wchar_t* 或 char*
 你可以使用`PtrToStringChars`中要转换的 Vcclr.h<xref:System.String>到本机`wchar_t *`或`char *`。  由于 CLR 字符串内部是 Unicode，这始终返回宽的 Unicode 字符串指针。 你可以然后转换为宽字符串，如下面的示例中所示。  

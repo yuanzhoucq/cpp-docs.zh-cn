@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391660"
 ---
 # <a name="interpreting-more-complex-declarators"></a>解释复杂声明符
 您可以将任何声明符括在圆括号中以指定“复杂声明符”的特殊解释。 复杂声明符是由多个数组、指针或函数修饰符限定的标识符。 您可以将数组、指针和函数修饰符的各种组合应用于单个标识符。 通常 `typedef` 可用来简化声明。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  

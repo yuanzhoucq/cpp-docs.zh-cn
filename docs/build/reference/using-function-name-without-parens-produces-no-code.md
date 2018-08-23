@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373977"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用没有 () 的函数名不产生代码
 当使用在程序中声明的函数名称时不带括号时，编译器不生成代码。 无论该函数使用参数，因为编译器将计算的函数地址; 将发生这种情况但是，因为不存在的函数调用运算符"（）"，则不进行调用。 此结果是类似于以下：  

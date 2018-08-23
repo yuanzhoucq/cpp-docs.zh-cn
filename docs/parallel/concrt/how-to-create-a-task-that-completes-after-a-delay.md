@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688406"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>如何：创建在延迟一段时间后完成的任务
 此示例演示如何使用[concurrency:: task](../../parallel/concrt/reference/task-class.md)， [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)， [concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)， [concurrency:: timer](../../parallel/concrt/reference/timer-class.md)，和[concurrency:: call](../../parallel/concrt/reference/call-class.md)类来创建在延迟后完成的任务。 你可使用此方法来生成偶尔轮询数据的循环，引入超时，将对用户输入的处理延迟预定的一段时间等。  

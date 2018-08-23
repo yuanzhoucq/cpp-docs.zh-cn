@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367646"
 ---
 # <a name="function-types"></a>函数类型
 基本上，有两种类型的函数。 需要的堆栈帧的函数称为帧函数。 Leaf 函数调用函数，不需要的堆栈帧。  

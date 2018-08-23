@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371095"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>结构、样式、回调和消息映射
 本节记录 Microsoft 基础类库和 MFC 消息映射使用的结构、样式和回调函数。  

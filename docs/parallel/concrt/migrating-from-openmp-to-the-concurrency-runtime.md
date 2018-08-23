@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690483"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>从 OpenMP 迁移至并发运行时
 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 在此文档部分比较[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)的并发运行，并提供有关如何迁移现有 OpenMP 代码以使用并发运行时的示例。  

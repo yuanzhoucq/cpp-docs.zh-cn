@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264939"
 ---
 # <a name="compiler-error-c3644"></a>编译器错误 C3644
 function： 无法编译将生成托管的代码的函数  

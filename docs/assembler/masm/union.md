@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057664"
 ---
 # <a name="union"></a>UNION
 声明的一个或多个数据类型的联合。 *Fielddeclarations*必须是有效的数据定义。 省略[结束](../../assembler/masm/ends-masm.md)*名称*上的标签嵌套**联合**定义。  

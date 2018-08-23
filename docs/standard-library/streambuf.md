@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026927"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -37,14 +38,14 @@ ms.lasthandoff: 05/08/2018
 
 |类型名称|描述|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|专用化使用 `char` 作为模板参数的 `basic_streambuf`。|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|专用化使用 `wchar_t` 作为模板参数的 `basic_streambuf`。|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|专用化`basic_streambuf`，它使用**char**作为模板参数。|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|专用化`basic_streambuf`，它使用**wchar_t**作为模板参数。|
 
 ### <a name="classes"></a>类
 
 |类|描述|
 |-|-|
-|[basic_streambuf 类](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|此模板类描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。|
+|[basic_streambuf 类](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|此模板类描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。|
 
 ## <a name="see-also"></a>请参阅
 

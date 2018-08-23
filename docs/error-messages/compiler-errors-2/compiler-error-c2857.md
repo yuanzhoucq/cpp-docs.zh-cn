@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246342"
 ---
 # <a name="compiler-error-c2857"></a>编译器错误 C2857
 #include 源文件中找不到与 /Ycfilename 命令行选项指定的语句  

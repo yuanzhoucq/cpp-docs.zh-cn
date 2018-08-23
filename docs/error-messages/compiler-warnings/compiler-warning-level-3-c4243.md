@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290811"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>编译器警告（等级 3）C4243
 转换 type 转换存在从 type1 到 type2，但无法访问  

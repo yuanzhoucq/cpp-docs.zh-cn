@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355189"
 ---
 # <a name="debugging-tips"></a>调试提示
 以下主题概述用于调试你的服务的一些有用步骤：  

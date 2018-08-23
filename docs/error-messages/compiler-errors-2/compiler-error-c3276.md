@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248237"
 ---
 # <a name="compiler-error-c3276"></a>编译器错误 C3276
 keyword: __finally/finally 块中的跳转出现不可确定的行为在终止处理过程  

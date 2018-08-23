@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e27742bc956a4d6c86db4a3eb0893ff8437e6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957667"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 类
 
@@ -79,11 +80,11 @@ class weibull_distribution
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型中，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据韦伯分布提供和分布任何类型，则模板类将描述生成用户指定的浮点型值或 `double` 型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的浮点数的值类型**double**如果未提供任何内容韦伯分布根据分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -231,11 +232,14 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
- `a`分布参数。
+*a*  
+`a` 分布参数。
 
-*b* `b`分布参数。
+*b*  
+`b` 分布参数。
 
-*参数*`param_type`用于构造分布的结构。
+*parm*  
+用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -263,11 +267,14 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
- `a`分布参数。
+*a*  
+`a` 分布参数。
 
-*b* `b`分布参数。
+*b*  
+`b` 分布参数。
 
-*右*`param_type`要比较的此对象。
+*right*  
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

@@ -1,5 +1,5 @@
 ---
-title: 'Roinitializewrapper:: Roinitializewrapper 构造函数 |Microsoft 文档'
+title: 'Roinitializewrapper:: Roinitializewrapper 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604641"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper 构造函数
-初始化 RoInitializeWrapper 类的新实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+初始化的新实例**RoInitializeWrapper**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-#### <a name="parameters"></a>参数  
- `flags`  
- 一个 RO_INIT_TYPE 枚举，它指定由 Windows 运行时提供的支持。  
-  
-## <a name="remarks"></a>备注  
- RoInitializeWrapper 类将调用 Windows::Foundation::Initialize (*标志*)。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*flags*  
+RO_INIT_TYPE 枚举，指定 Windows 运行时提供的支持之一。
+
+## <a name="remarks"></a>备注
+
+**RoInitializeWrapper**类调用`Windows::Foundation::Initialize(flags)`。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

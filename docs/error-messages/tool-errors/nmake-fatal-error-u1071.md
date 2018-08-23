@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323282"
 ---
 # <a name="nmake-fatal-error-u1071"></a>NMAKE 错误 U1071
 在目标 targetname 的依赖关系树中进行循环  

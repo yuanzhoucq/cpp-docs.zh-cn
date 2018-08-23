@@ -1,5 +1,5 @@
 ---
-title: __halt |Microsoft 文档
+title: __halt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 007b3be0fc26d9a011d961540f9dc4057498b137
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538393"
 ---
 # <a name="halt"></a>__halt
 **Microsoft 专用**  
   
- 暂停微处理器，直到启用的中断、 不可屏蔽的中断 (NMI) 或重置的发生。  
+ 已启用的中断、 不可屏蔽的中断 (NMI) 或重置发生之前就会停止微处理器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +40,12 @@ void __halt( void );
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- `__halt`函数等同于`HLT`计算机指令，并仅在内核模式中可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2： 指令集引用，"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__halt`函数等同于`HLT`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
 **结束 Microsoft 专用**  
   

@@ -1,5 +1,5 @@
 ---
-title: 字符串转换宏 |Microsoft 文档
+title: 字符串转换宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885150"
 ---
 # <a name="string-conversion-macros"></a>字符串转换宏
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/03/2018
  
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 和 MFC 字符串转换宏
 
-此处讨论的字符串转换宏对 ATL 和 MFC 都有效。 有关 MFC 字符串转换的详细信息，请参阅[TN059： 使用 MFC MBCS/Unicode 转换宏](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)和[MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)。
+此处讨论的字符串转换宏对 ATL 和 MFC 都有效。 有关 MFC 字符串转换的详细信息，请参阅[TN059： 使用 MFC MBCS/Unicode 转换宏](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)并[MFC 宏和全局](../../mfc/reference/mfc-macros-and-globals.md)。
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 和 TEXTMETRIC 字符串转换宏
 
-这些宏创建一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)结构并将新的结构中的字符串转换为新的字符串类型。 宏为新的结构分配堆栈上的内存，并返回指向新的结构的指针。  
+这些宏创建一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)结构，并将新的结构中的字符串转换为新的字符串类型。 宏为新的结构分配在堆栈上的内存，并返回指向新结构的指针。  
   
 ```cpp
 MACRONAME( address_of_structure )
@@ -53,15 +54,15 @@ and：
   
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
-在宏名称中，源结构中的字符串类型位于左侧 (例如， **A**) 和目标结构中的字符串类型位于右侧 (例如， **W**)。 **A**代表`LPSTR`， **OLE**代表`LPOLESTR`， **T**代表`LPTSTR`，和**W**代表`LPWSTR`。  
+在宏名称中的源结构的字符串类型位于左侧 (例如， **A**) 和目标结构中的字符串类型是在右侧 (例如， **W**)。 **一个**LPSTR，代表**OLE** LPOLESTR，代表**T**代表 LPTSTR，和**W**代表 LPWSTR。  
   
-因此， **DEVMODEA2W**副本`DEVMODE`结构`LPSTR`字符串到`DEVMODE`结构`LPWSTR`字符串， **TEXTMETRICOLE2T**复制`TEXTMETRIC`结构`LPOLESTR`字符串到`TEXTMETRIC`结构`LPTSTR`字符串，依次类推。  
+DEVMODEA2W 将因此，复制`DEVMODE`LPSTR 结构字符串到`DEVMODE`LPWSTR 字符串，TEXTMETRICOLE2T 副本具有结构`TEXTMETRIC`LPOLESTR 结构字符串到`TEXTMETRIC`结构与 LPTSTR 字符串和其他操作。  
   
-转换中的两个字符串`DEVMODE`结构不是设备名称 (`dmDeviceName`) 和窗体名称 (`dmFormName`)。 `DEVMODE`字符串转换宏还更新结构大小 (`dmSize`)。  
+两个字符串中转换`DEVMODE`结构是设备名称 (`dmDeviceName`) 和窗体名称 (`dmFormName`)。 `DEVMODE`字符串转换宏还更新结构大小 (`dmSize`)。  
   
-转换中的四个字符串`TEXTMETRIC`结构不是第一个字符 (`tmFirstChar`)，最后一个字符 (`tmLastChar`)，默认字符 (`tmDefaultChar`)，和中断字符 (`tmBreakChar`)。
+转换中的四个字符串`TEXTMETRIC`结构是第一个字符 (`tmFirstChar`)，最后一个字符 (`tmLastChar`)，默认的字符 (`tmDefaultChar`)，和换行符字符 (`tmBreakChar`)。
   
-行为`DEVMODE`和`TEXTMETRIC`字符串转换宏取决于编译器指令起作用，如果有。 如果源和目标类型相同，则不发生转换。 编译器指令更改**T**和**OLE** ，如下所示：  
+行为`DEVMODE`和`TEXTMETRIC`字符串转换宏取决于编译器指令中的效果，如果有。 如果源和目标类型相同，则不发生转换。 编译器指令更改**T**并**OLE** ，如下所示：  
   
 |有效的编译器指令|T 变为|OLE 变为|  
 |----------------------------------|---------------|-----------------|  
@@ -74,10 +75,10 @@ and：
   
 |||  
 |-|-|  
-|`DEVMODEA2W`|`TEXTMETRICA2W`|  
-|`DEVMODEOLE2T`|`TEXTMETRICOLE2T`|  
-|`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
-|`DEVMODEW2A`|`TEXTMETRICW2A`|  
+|DEVMODEA2W|TEXTMETRICA2W|  
+|DEVMODEOLE2T|TEXTMETRICOLE2T|  
+|DEVMODET2OLE|TEXTMETRICT2OLE|  
+|DEVMODEW2A|TEXTMETRICW2A|  
 
 ## <a name="see-also"></a>请参阅
 

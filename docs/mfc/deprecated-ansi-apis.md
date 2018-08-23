@@ -1,5 +1,5 @@
 ---
-title: 弃用的 ANSI Api |Microsoft 文档
+title: 已弃用的 ANSI Api |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541571"
 ---
 # <a name="deprecated-ansi-apis"></a>弃用的 ANSI API
-Microsoft 基础类 (MFC) 库正在向类和基于 Unicode 字符集的方法将迁移。 因此，某些 MFC 方法的 ANSI 版本已弃用。 在你将来的应用程序中使用这些方法的 Unicode 版本。  
+Microsoft 基础类 (MFC) 库迁移到类和方法，基于 Unicode 字符集中。 因此，已弃用某些 MFC 方法的 ANSI 版本。 在以后的应用程序中使用这些方法的 Unicode 版本。  
   
- 从 Windows 公共控件版本 6.1、 中附带了开始[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]，以下的 ANSI 方法已弃用。  
+ Windows 公共控件版本 6.1、 预装 Windows Vista 中，从开始不推荐使用以下 ANSI 方法。  
   
 ## <a name="cbutton-class"></a>CButton 类  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375579"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>链接器的延迟加载 DLL 支持
 Visual c + + 链接器现在支持 Dll 的延迟的加载。 这使您需要使用 Windows SDK 函数**LoadLibrary**和**GetProcAddress**来实现延迟加载的 DLL。  

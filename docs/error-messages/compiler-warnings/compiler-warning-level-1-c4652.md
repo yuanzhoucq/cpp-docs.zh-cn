@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285637"
 ---
 # <a name="compiler-warning-level-1-c4652"></a>编译器警告（等级 1）C4652
 编译器选项 option 与预编译标头; 不一致当前的命令行选项将重写预编译标头中定义  

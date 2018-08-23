@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128347"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
 你可以将具有 CLR 数组的引用类传递给本机函数中，并修改类，使用 PInvoke 服务。  

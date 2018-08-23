@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100611"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>实现简单的只读提供程序
 本主题中的扩展的示例演示如何编辑向导创建的文件以创建简单的只读提供程序从文本文件读取两个字符串的一组。 若要从向导文件创建此提供程序，添加代码以完成以下任务：  

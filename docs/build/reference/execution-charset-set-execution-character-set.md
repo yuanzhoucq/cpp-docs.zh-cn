@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375947"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （设置执行字符集）
 允许您指定可执行文件的执行字符集。  

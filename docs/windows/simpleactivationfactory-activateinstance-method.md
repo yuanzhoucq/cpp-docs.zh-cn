@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Activateinstance 方法 |Microsoft 文档'
+title: 'Simpleactivationfactory:: Activateinstance 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f83c98d35ce64ef51a15bccf0f33695fd266d0af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609565"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 方法
 
-创建指定的接口的实例。
+创建指定接口的实例。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +39,7 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>参数
 
 *ppvObject*  
-此操作完成后，向指定的对象的实例的指针`Base`类模板参数。
+此操作完成后，指向由指定的对象的实例`Base`类模板参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -46,7 +47,7 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>备注
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，将断言发出错误如果基类中类模板参数指定不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+如果`__WRL_STRICT__`是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
 ## <a name="requirements"></a>要求
 

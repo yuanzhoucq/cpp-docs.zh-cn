@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122632"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 `CVSListBox`类支持可编辑列表控件。  
@@ -123,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strIext`  
+ [in]*strIext*  
  字符串的引用。  
   
- [in] `dwData`  
+ [in]*dwData*  
  是与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
   
- [in] `iIndex`  
- 将保存字符串位置的从零开始索引。 如果`iIndex`参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
+ [in]*iIndex*  
+ 将保存字符串位置的从零开始索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
   
 ### <a name="return-value"></a>返回值  
  列表控件中字符串的位置的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
- 使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值`dwData`参数。 此值可以是特定于应用程序的整数或其他数据的指针。  
+ 使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值*dwData*参数。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  构造 `CVSListBox` 对象。  
@@ -157,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果编辑操作成功，则启动否则为`FALSE`。  
+ 如果编辑操作启动成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  在用户开始编辑操作，通过双击某一项，标签或通过按**F2**或**空格键**当项具有焦点关键。  
@@ -187,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  可编辑列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -245,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  可编辑列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果指定的项被删除;否则为`FALSE`。  
+ 如果指定的项被删除; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -261,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iItem`  
+ [in]*iItem*  
  可编辑列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+ 如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此方法选择指定的项，它是必需的如果将项滚动到视图。  
@@ -280,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  可编辑列表控件项的从零开始索引。  
   
- [in] `dwData`  
+ [in]*dwData*  
  一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
 ### <a name="remarks"></a>备注  

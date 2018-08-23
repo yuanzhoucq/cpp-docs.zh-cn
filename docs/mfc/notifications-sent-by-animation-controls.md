@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345233"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>动画控件发送的通知
 动画控件 ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 发送两个不同类型的通知消息。 通知发送的窗体[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。  

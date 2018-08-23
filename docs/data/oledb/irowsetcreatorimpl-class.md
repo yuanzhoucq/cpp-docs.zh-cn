@@ -1,5 +1,5 @@
 ---
-title: IRowsetCreatorImpl 类 |Microsoft 文档
+title: IRowsetCreatorImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,34 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>
 - ATL.IRowsetCreatorImpl<T>
 - IRowsetCreatorImpl
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetCreatorImpl class
+- SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0492994193130ffa6a547691490b4da1ae557c8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c828708a088c8fe31075a8fe8504f3a1f8c14b4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337092"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
-执行与相同的功能`IObjectWithSite`但使 OLE DB 属性还**DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**。  
+执行相同的功能`IObjectWithSite`但也可以启用 OLE DB 属性`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`。  
   
 ## <a name="syntax"></a>语法
 
@@ -38,9 +48,12 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
    : public IObjectWithSiteImpl< T >  
 ```  
   
-#### <a name="parameters"></a>参数  
- `T`  
- 从派生的类**IRowsetCreator**。  
+### <a name="parameters"></a>参数  
+ *T*  
+ 一个类派生自`IRowsetCreator`。  
+
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -48,14 +61,30 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
   
 |||  
 |-|-|  
-|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|设置包含行集对象的站点。|  
+|[SetSite](#setsite)|设置包含行集对象的站点。|  
   
 ## <a name="remarks"></a>备注  
- 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和替代[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 当提供程序命令或会话对象创建一个行集合时，它将调用`QueryInterface`寻找行集对象上`IObjectWithSite`和调用`SetSite`将行集对象传递**IUnkown**作为站点接口的接口。  
+ 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)并重写[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 当提供程序命令或会话对象创建行集时，它将调用`QueryInterface`寻找对行集对象`IObjectWithSite`并调用`SetSite`将行集对象传递`IUnkown`作为站点接口的接口。  
+
+## <a name="setsite"></a> Irowsetcreatorimpl:: Setsite
+设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
   
-## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+### <a name="syntax"></a>语法  
   
+```cpp
+STDMETHOD(SetSite )(IUnknown* pCreator);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ *pCreator*  
+ [in]指向`IUnknown`管理行集对象的站点的接口指针。  
+  
+### <a name="return-value"></a>返回值  
+ 标准的 HRESULT。  
+  
+### <a name="remarks"></a>备注  
+ 此外，`IRowsetCreatorImpl::SetSite`能使 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`属性。 
+
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

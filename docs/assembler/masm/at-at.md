@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056456"
 ---
 # <a name=""></a>@@:
 定义代码标签仅之间识别*label1*和*label2*，其中*label1*代码开头，或是以前`@@:`标签和*label2*是代码的结尾或下一步`@@:`标签。 请参阅[ @B ](../../assembler/masm/at-b.md)和[ @F ](../../assembler/masm/at-f.md)。  

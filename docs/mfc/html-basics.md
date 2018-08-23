@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929085"
 ---
 # <a name="html-basics"></a>HTML 基础
 大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 当您查看源时，将看到大量两侧是尖括号 (<>)、穿插文本的 HTML（超文本标记语言）标记。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  打开“记事本”或任何纯文本编辑器。  
   
-2.  从**文件**菜单上，选择`New`。  
+2.  从**文件**菜单上，选择**新建**。  
   
 3.  键入下列行：  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  从**文件**菜单上，选择**保存**，并将该文件保存为 c:\webpages\First.htm。 让文件在编辑器中处于打开状态。  
   
-5.  浏览器中，与交换机**文件**菜单上，选择**打开**，或类型`file://C:/webpages/first.htm`浏览器的 URL 编辑框中。 你应看到一个窗口标题为“顶级 HTML 标记”的空白页。  
+5.  浏览器中，与交换机**文件**菜单上，选择**打开**，或类型*file://C:/webpages/first.htm*浏览器的 URL 编辑框中。 你应看到一个窗口标题为“顶级 HTML 标记”的空白页。  
   
      请注意，标记是成对的，并且包含在尖括号中。 标记不区分大小写，但通常使用大写突出标记。  
   

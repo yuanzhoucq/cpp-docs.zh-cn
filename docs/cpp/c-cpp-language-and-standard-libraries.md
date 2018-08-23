@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412538"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C/C++ 语言和标准库
 此部分文档包含 Microsoft 实现的 C 和 C++ ISO 规范的指南和参考内容。  

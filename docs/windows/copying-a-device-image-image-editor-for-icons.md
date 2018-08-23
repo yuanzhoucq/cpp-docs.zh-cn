@@ -1,5 +1,5 @@
 ---
-title: 复制设备图像 （图标的图像编辑器） |Microsoft 文档
+title: 复制设备图像 （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b48691dde50c1f0829d5393c9023509c863ed39c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31ba668078d80b927d6a898d4700efe1e546ea1e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600092"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>复制设备图像（图标的图像编辑器）
-### <a name="to-copy-a-device-image"></a>复制设备图像  
-  
-1.  上**映像**菜单上，单击**打开设备图像**并从当前的图像列表中选择一个图像。 例如，选择 32x32，16 颜色图标版本。  
-  
-2.  复制当前显示的图标图像 (**CTRL + C**)。  
-  
-3.  打开在另一个不同的图标图像**图像编辑器**窗口。 例如，打开 16x16，16 颜色的图标版本。  
-  
-4.  粘贴图标图像 (**CTRL + V**) 从一个**图像编辑器**相互的窗口。 如果您要粘贴到较小的大小的更大的大小，可以使用图标句柄以调整图像的大小。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
-  
- 要求  
-  
- 无  
-  
-## <a name="see-also"></a>请参阅  
- [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)
 
+### <a name="to-copy-a-device-image"></a>复制设备图像
+
+1. 上**图像**菜单上，单击**打开设备图像**并从当前的图像列表中选择映像。 例如，选择 32 × 32，16 色版本的图标。
+
+2. 复制当前显示的图标图像 (**Ctrl**+**C**)。
+
+3. 打开另一个图像的图标在另一个**的图像编辑器**窗口。 例如，打开 16 × 16，16 色版本的图标。
+
+4. 粘贴图标图像 (**Ctrl**+**V**) 从一个**图像编辑器**到其他窗口。 如果您要粘贴到较小的大小更大的大小，可以使用图标句柄来调整图像的大小。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+无
+
+## <a name="see-also"></a>请参阅
+
+[图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[加速键](../windows/accelerator-keys-image-editor-for-icons.md)

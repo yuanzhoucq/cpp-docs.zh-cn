@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCodeToHRESULT |Microsoft 文档
+title: _com_error::WCodeToHRESULT |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f777b1de83b19727bca5e1b498c5380604f6688
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404536"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Microsoft 专用**  
   
- 将 16 位 `wCode` 映射到 32 位 `HRESULT`。  
+ 映射 16 位*wCode*为 32 位 HRESULT。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      static HRESULT WCodeToHRESULT(  
+```    
+static HRESULT WCodeToHRESULT(  
    WORD wCode   
 ) throw( );  
 ```  
   
 #### <a name="parameters"></a>参数  
- `wCode`  
- 要映射为 32 位 `wCode` 的 16 位 `HRESULT`。  
+ *WCode*  
+ 16 位*wCode*要映射到 32 位的 HRESULT。  
   
 ## <a name="return-value"></a>返回值  
- 已从 16 位 `HRESULT` 映射的 32 位 `wCode`。  
+ 映射从 16 位的 32 位 HRESULT *wCode*。  
   
 ## <a name="remarks"></a>备注  
  请参阅[WCode](../cpp/com-error-wcode.md)成员函数。  

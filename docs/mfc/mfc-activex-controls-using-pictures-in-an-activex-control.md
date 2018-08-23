@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930643"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 本文介绍常见的图片类型以及如何在 ActiveX 控件中实现该图片类型。 包括以下主题：  
@@ -70,11 +71,11 @@ ms.lasthandoff: 05/04/2018
      对用于绘制 ActiveX 控件的若干函数进行修改。  
   
 ##  <a name="_core_additions_to_your_control_project"></a> 向控件项目添加内容  
- 若要添加标准图片属性页的属性页 ID，请在控件实现文件 (.CPP) 中的 `BEGIN_PROPPAGEIDS` 宏后插入下面一行：  
+ 若要添加标准图片属性页的属性页 ID，可在控件实现文件中的 BEGIN_PROPPAGEIDS 宏后插入以下行 (。CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- 还必须以 1 为增量逐渐增加 `BEGIN_PROPPAGEIDS` 宏的计数参数。 下面一行阐释了这一点：  
+ 你还必须由一个递增 BEGIN_PROPPAGEIDS 宏的计数参数。 下面一行阐释了这一点：  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- 不必对数据成员 `m_pic`命名；可以使用任何名称。  
+ 不需要命名数据成员*m_pic*; 的任何名称就足够了。  
   
  接下来，添加支持图片类型的自定义属性：  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/04/2018
 >  你的控件类和函数名称可能与上面的示例不同。  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> 修改控件项目的内容  
- 对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。 （注意，在本例中，控件类名为 `CSampleCtrl`、 `CPictureHolder` 数据成员名为 `m_pic`，而自定义图片属性名称为 `ControlPicture`。）  
+ 对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。 (请注意，在此示例中调用的控件类`CSampleCtrl`、`CPictureHolder`数据成员称为*m_pic*，并且自定义图片属性名称为`ControlPicture`。)  
   
  在控件的 `OnResetState` 函数中，在 `COleControl::OnResetState`的调用后添加以下可选行：  
   

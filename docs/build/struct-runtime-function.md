@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379921"
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION 结构
 基于表的异常处理的分配堆栈空间或调用另一个函数 （例如，非叶函数） 的所有函数需要一个表项。 函数表项具有格式：  

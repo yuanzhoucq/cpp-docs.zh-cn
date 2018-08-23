@@ -1,5 +1,5 @@
 ---
-title: '&lt;包括&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;include&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330422"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;包括&gt;（Visual c + +）
-通过 \<include> 标记，可在其他文件中引用描述源代码中类型和成员的注释。 这是对直接在源代码文件中放入文档注释的替代方法。  例如，你可以使用\<包括 > 将在整个团队或公司的标准"样本"注释插入。  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+通过 \<include> 标记，可在其他文件中引用描述源代码中类型和成员的注释。 这是对直接在源代码文件中放入文档注释的替代方法。  例如，可使用 \<include> 插入整个团队或公司使用的标准“样板”注释。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  包含文档的文件的名称。 可使用路径来限定文件名。  将名称括在单引号或双引号中。  如果编译器没有找到 `filename`，它会发出警告。  
   
  `tagpath`  
- 一个有效的 XPath 表达式选择文件中包含所需的节点集。  
+ 有效 XPath 表达式，它选择文件中包含的所需节点集。  
   
  `name`  
  标记中的名称说明符（位于注释之前）；`name` 将有 `id`。  
@@ -47,12 +48,12 @@ ms.lasthandoff: 05/04/2018
  标记的 ID（位于注释之前）。  将名称括在单引号或双引号中。  
   
 ## <a name="remarks"></a>备注  
- \<include> 标记使用 XML XPath 语法。 请参阅有关如何自定义使用 XPath 文档\<包括 >。  
+ \<include> 标记使用 XML XPath 语法。 有关使用 \<include> 进行自定义的方法，请参阅 XPath 文档。  
   
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 这是多文件示例。 第一个文件，使用\<包括 >，包含以下的文档注释：  
+ 这是多文件示例。 第一个使用 \<include> 的文件包含以下文档注释：  
   
 ```  
 // xml_include_tag.cpp  

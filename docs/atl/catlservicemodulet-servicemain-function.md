@@ -1,5 +1,5 @@
 ---
-title: CAtlServiceModuleT::ServiceMain 函数 |Microsoft 文档
+title: 'Catlservicemodulet:: Servicemain 函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936090793890b1e33f0d5e29787d65f378afa84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dff3fa3f3ed20406955570f2ad72531f4e44f11
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848116"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain 函数
-服务控制管理器 (SCM) 调用`ServiceMain`当打开服务控制面板应用程序，请选择该服务，然后单击**启动**。  
+# <a name="catlservicemoduletservicemain-function"></a>Catlservicemodulet:: Servicemain 函数
+服务控制管理器 (SCM) 调用`ServiceMain`时打开服务控制面板应用程序，请选择该服务，然后单击**启动**。  
   
- SCM 后调用`ServiceMain`，服务必须为 SCM 指定处理程序函数。 此函数可获取服务的状态并传递特定的指令 （如暂停或停止） 的 SCM。 SCM 获取此函数在该服务传递时 **_Handler** Win32 API 函数时，到[RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054)。 (**_Handler**是调用非静态成员函数的静态成员函数[处理程序](../atl/reference/catlservicemodulet-class.md#handler)。)  
+ SCM 后，将调用`ServiceMain`，服务必须为 SCM 提供处理程序函数。 此函数允许 SCM 获得服务的状态并传递 （例如暂停或停止） 的具体说明。 SCM 获取此函数在该服务通过`_Handler`Win32 API 函数[RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054)。 (`_Handler`是调用非静态成员函数的静态成员函数[处理程序](../atl/reference/catlservicemodulet-class.md#handler)。)  
   
- 在启动时，服务还应通知的 SCM 其当前状态。 这是通过传递**SERVICE_START_PENDING** Win32 API 函数时，到[SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)。  
+ 在启动时，服务还应该通知 SCM 及其当前状态。 这是通过传递给 Win32 API 函数 SERVICE_START_PENDING [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)。  
   
- `ServiceMain` 然后调用`CAtlExeModuleT::InitializeCom`，从而调用 Win32 API 函数[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)。 默认情况下，`InitializeCom`传递**COINIT_MULTITHREADED**函数的标志。 此标志指示该程序将是自由线程的服务器。  
+ `ServiceMain` 然后调用`CAtlExeModuleT::InitializeCom`，它调用 Win32 API 函数[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)。 默认情况下， `InitializeCom` COINIT_MULTITHREADED 标志传递给函数。 此标志指示该程序将是自由线程服务器。  
   
- 现在，`CAtlServiceModuleT::Run`调用以执行服务的主要工作。 **运行**继续执行，直到该服务已停止。  
+ 现在，`CAtlServiceModuleT::Run`调用来执行该服务的主要工作。 `Run` 继续执行，直到该服务已停止。  
   
 ## <a name="see-also"></a>请参阅  
  [服务](../atl/atl-services.md)   
- [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+ [Catlservicemodulet:: Servicemain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

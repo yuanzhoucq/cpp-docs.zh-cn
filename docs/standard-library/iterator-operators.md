@@ -21,11 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954690"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 运算符
 
@@ -52,9 +53,9 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**迭代器**。
+*左*类型的对象`iterator`。
 
-`right` 类型的对象**迭代器**。
+*右*类型的对象`iterator`。
 
 ### <a name="return-value"></a>返回值
 
@@ -154,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`left` 一个类型迭代器的对象。
+*左*类型迭代器的对象。
 
-`right` 一个类型迭代器的对象。
+*右*类型迭代器的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果迭代器对象相等，则为 `true`；如果迭代器对象不相等，则为 `false`。
+**true**如果迭代器对象相等;**false**如果迭代器对象是否不相等。
 
 ### <a name="remarks"></a>备注
 
 如果两个迭代器对象对一个容器中的相同元素进行定址，则其中一个迭代器对象等于另一个。 如果两个迭代器指向一个容器中的不同元素，则他们不相等。
 
-仅在 `left` 和 `right` 都存储同一迭代器时，前两个模板运算符才会返回 true。 仅在 `left` 和 `right` 都存储同一流指针时，第三个模板运算符才会返回 true。 第四个模板运算符返回 ` left.equal ( right)`。
+前两个模板运算符返回 true，仅当*左*并*右*存储同一迭代器。 第三个模板运算符返回 true，仅当*左*并*右*存储同一流指针。 第四个模板运算符返回 ` left.equal ( right)`。
 
 ### <a name="example"></a>示例
 
@@ -241,9 +242,9 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**迭代器**。
+*左*类型的对象`iterator`。
 
-`right` 类型的对象**迭代器**。
+*右*类型的对象`iterator`。
 
 ### <a name="return-value"></a>返回值
 
@@ -330,9 +331,9 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>参数
 
-`left` 一个类型迭代器的对象。
+*左*类型迭代器的对象。
 
-`right` 一个类型迭代器的对象。
+*右*类型迭代器的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -423,9 +424,9 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>参数
 
-`left` 一个类型迭代器的对象。
+*左*类型迭代器的对象。
 
-`right` 一个类型迭代器的对象。
+*右*类型迭代器的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -510,9 +511,9 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>参数
 
-`left` 一个类型迭代器的对象。
+*左*类型迭代器的对象。
 
-`right` 一个类型迭代器的对象。
+*右*类型迭代器的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -612,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>参数
 
-`_Off` Const move_iterator 或 const reverse_iterator 是偏移的位置数。
+*_Off* const move_iterator 或 const reverse_iterator 将偏移的位置数。
 
-`right` 要偏移的迭代器。
+*右*要偏移的迭代器。
 
 ### <a name="return-value"></a>返回值
 
-返回 sum `right` + `_Off`。
+返回总和*右* + *_Off*。
 
 ### <a name="example"></a>示例
 
@@ -687,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>参数
 
-`left` 迭代器。
+*左*迭代器。
 
-`right` 迭代器。
+*右*迭代器。
 
 ### <a name="return-value"></a>返回值
 

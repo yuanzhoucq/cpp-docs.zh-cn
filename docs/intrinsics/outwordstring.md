@@ -1,5 +1,5 @@
 ---
-title: __outwordstring |Microsoft 文档
+title: __outwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539581"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Microsoft 专用**  
   
- 生成`rep outsw`指令，这将发送`Count`在开头的单词`Buffer`出指定的 I/O 端口`Port`。  
+ 将生成`rep outsw`指令，将发送`Count`处开头的单词`Buffer`出指定的 I/O 端口`Port`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ void __outwordstring(
   
 #### <a name="parameters"></a>参数  
  [in] `Port`  
- 要将数据发送到的端口。  
+ 要向其发送数据的端口。  
   
  [in] `Buffer`  
  指向要指定的端口发送的数据的指针。  
@@ -53,7 +54,7 @@ void __outwordstring(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

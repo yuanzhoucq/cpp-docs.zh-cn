@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384713"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>结构、联合、枚举和位域
 -   [对联合的不正确的访问](../c-language/improper-access-to-a-union.md)  

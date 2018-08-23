@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349917"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>MFC 应用程序向导创建的文档和视图类
 MFC 应用程序向导为您创建了主干文档和视图类，从而让您在程序开发中抢占先机。 然后，你可以[将命令和消息映射到这些类](../mfc/reference/mapping-messages-to-functions.md)并使用 Visual c + + 源代码编辑器编写其成员函数。  

@@ -1,5 +1,5 @@
 ---
-title: '一元加号和非运算符: + 和-|Microsoft 文档'
+title: '一元加号和非运算符: + 和-|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460888"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元加号和非运算符：+ 和 -
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+ 运算符  
  一元加运算符的结果 (**+**) 是其操作数的值。 一元加运算符的操作数必须是一个算术类型。  
   
- 整型提升是对整型操作数执行的。 结果类型是操作数将提升到的类型。 因此，表达式 `+ch`（其中 `ch` 的类型为 `char`）的结果类型为 `int`；值不会进行修改。 请参阅[标准转换](standard-conversions.md)有关如何完成提升的详细信息。  
+ 整型提升是对整型操作数执行的。 结果类型是操作数将提升到的类型。 因此，表达式`+ch`，其中`ch`属于类型**char**，导致类型**int**; 的值是未修改。 请参阅[标准转换](standard-conversions.md)有关如何完成提升的详细信息。  
   
 ## <a name="--operator"></a>- 运算符  
  一元求反运算符 (**-**) 生成其操作数的负值。 一元求反运算符的操作数必须是算术类型。  

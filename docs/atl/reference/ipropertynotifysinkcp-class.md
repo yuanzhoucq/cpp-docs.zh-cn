@@ -1,5 +1,5 @@
 ---
-title: IPropertyNotifySinkCP 类 |Microsoft 文档
+title: IPropertyNotifySinkCP 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879184"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 类
 此类公开[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作为可连接对象上的传出接口的接口。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +41,20 @@ class IPropertyNotifySinkCP
 ```    
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IPropertyNotifySinkCP`。  
+ *T*  
+ 您的类，派生自`IPropertyNotifySinkCP`。  
   
- `CDV`  
- 类，用于管理连接点和其接收器之间的连接。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许不受限制的连接。 你还可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。  
+ *CDV*  
+ 类，用于管理连接点和其接收器之间的连接。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许无限制的连接。 此外可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。  
   
 ## <a name="remarks"></a>备注  
  `IPropertyNotifySinkCP` 继承通过其基类，所有方法[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)。  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接口允许接收有关属性更改的通知接收器对象。 类`IPropertyNotifySinkCP`作为可连接对象上的传出接口公开此接口。 客户端必须实现`IPropertyNotifySink`接收器上的方法。  
+ [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接口允许接收器对象以接收有关属性更改通知。 类`IPropertyNotifySinkCP`作为可连接对象上的传出接口公开此接口。 客户端必须实现`IPropertyNotifySink`接收器上的方法。  
   
- 派生您的类从`IPropertyNotifySinkCP`如果想要创建连接点表示`IPropertyNotifySink`接口。  
+ 从类派生`IPropertyNotifySinkCP`当你想要创建的连接点的表示`IPropertyNotifySink`接口。  
   
- 有关使用 ATL 中的连接点的详细信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
+ 有关在 ATL 中使用连接点的详细信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlctl.h  

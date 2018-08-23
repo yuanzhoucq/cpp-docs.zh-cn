@@ -6,11 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 1ac1051ddaa67dc1970119586ecb9e937583c58a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957400"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 运算符
 
@@ -48,23 +49,23 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
-`Time` A`time_point`对象。
+*时间*A`time_point`对象。
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
 第一个函数返回一个 `duration` 对象，其间隔长度是两个参数的时间间隔之差。
 
-第二个函数返回一个 `time_point` 对象，该对象表示的时间点替代为对由 `Dur` 表示的时间间隔的求反结果（从由 `Time` 指定的时间点开始）。
+第二个函数将返回`time_point`对象，它表示取代，由表示的时间间隔的求反结果的时间点*Dur*，从指定的时间点*时间*.
 
-第三个函数返回一个 `duration` 对象，该对象表示 `Left` 和 `Right` 之间的时间间隔。
+第三个函数将返回`duration`对象，表示之间的时间间隔*左*并*右*。
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a>operator!=
 
 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象的不等运算符。
 
@@ -85,7 +86,7 @@ constexpr bool operator!=(
 
 `Left` 左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+`Right` 在右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -113,13 +114,13 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>参数
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
-`Mult` 一个整数值。
+*Mult*整数值。
 
 ### <a name="return-value"></a>返回值
 
-每个函数返回一个 `duration` 对象，其间隔长度是 `Dur` 的长度乘以 `Mult`。
+每个函数返回`duration`对象，其间隔长度是*Mult*的长度乘以*Dur*。
 
 除非 `is_convertible<Rep2, common_type<Rep1, Rep2>>` *“保持为 true”*，否则第一个函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
@@ -146,19 +147,19 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>参数
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
-`Div` 一个整数值。
+*Div*整数值。
 
-`Left` 左侧`duration`对象。
+*左*左侧`duration`对象。
 
-`Right` 右侧`duration`对象。
+*右*右侧`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
-第一个运算符返回持续时间对象，该对象的时间间隔长度是 `Dur` 除以值 `Div` 的长度。
+第一个运算符返回持续时间对象其间隔长度是长度*Dur*除以值*Div*。
 
-第二个运算符返回 `Left` 和 `Right` 的时间间隔长度的比率。
+第二个运算符返回的时间间隔长度的比率*左侧*并*右*。
 
 除非 `is_convertible<Rep2, common_type<Rep1, Rep2>>` *“保持为 true”*，并且 `Rep2` 不是 `duration` 的实例化，否则第一个运算符不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
@@ -190,19 +191,19 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
-`Time` A`time_point`对象。
+*时间*A`time_point`对象。
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
-第一个函数返回 `duration` 对象，该对象具有的时间间隔等同于 `Left` 和 `Right` 之和的时间间隔。
+第一个函数返回`duration`具有一个时间间隔，它等于之和的时间间隔的对象*左*并*右*。
 
-第二个和第三个函数将返回 `time_point` 对象，该对象表示从时间点 `Time` 由 `Dur` 时间间隔取代的时间点。
+第二个和第三个函数将返回`time_point`对象，它表示取代的时间间隔的时间点*Dur*，从时间点*时间*。
 
 ## <a name="op_lt"></a>operator&lt;
 
@@ -223,15 +224,15 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `Left` 的间隔长度小于 `Right` 的间隔长度，则第一个函数返回 `true`。 否则，该函数返回 `false`。
+第一个函数返回 **，则返回 true**如果的间隔长度*左侧*小于间隔时长*右*。 否则，该函数返回**false**。
 
-如果 `Left` 先于 `Right`，则第二个函数返回 `true`。 否则，该函数返回 `false`。
+第二个函数将返回 **，则返回 true**如果*左侧*之前*右*。 否则，该函数返回**false**。
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -251,9 +252,9 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -277,15 +278,15 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
-如果 `Left` 和 `Right` 表示具有相同长度的时间间隔，则第一个函数将返回 `true`。 否则，该函数返回 `false`。
+第一个函数返回 **，则返回 true**如果*左侧*并*右*表示具有相同长度的时间间隔。 否则，该函数返回**false**。
 
-如果 `Left` 和 `Right` 表示相同时间点，则第二个函数将返回 `true`。 否则，该函数返回 `false`。
+第二个函数将返回 **，则返回 true**如果*左侧*并*右*表示的时间相同的点。 否则，该函数返回**false**。
 
 ## <a name="op_gt"></a>operator&gt;
 
@@ -305,9 +306,9 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -331,9 +332,9 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-`Left` 左侧`duration`或`time_point`对象。
+*左*左侧`duration`或`time_point`对象。
 
-`Right` 右侧`duration`或`time_point`对象。
+*右*右侧`duration`或`time_point`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -359,19 +360,19 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>参数
 
-`Dur` A`duration`对象。
+*Dur* A`duration`对象。
 
-`Div` 一个整数值。
+*Div*整数值。
 
-`Left` 左侧`duration`对象。
+*左*左侧`duration`对象。
 
-`Right` 右侧`duration`对象。
+*右*右侧`duration`对象。
 
 ### <a name="return-value"></a>返回值
 
-第一个函数返回 `duration` 对象，其间隔长度是 `Dur` 取模 `Div`。
+第一个函数返回`duration`对象，其间隔长度是*Dur*取模*Div*。
 
-第二个函数返回一个值，该值表示 `Left` 取模 `Right`。
+第二个函数返回一个值，表示*左侧*取模*右*。
 
 ## <a name="see-also"></a>请参阅
 

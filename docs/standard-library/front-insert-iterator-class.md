@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207606"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
 
@@ -39,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 其中元素被由插入前端的容器类型`front_insert_iterator`。
+*容器*容器类型的元素要插入的前端`front_insert_iterator`。
 
 ## <a name="remarks"></a>备注
 
@@ -62,9 +63,9 @@ class front_insert_iterator;
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用用于实现前端插入的输出迭代器表达式 * `i` = `x` 的运算符。|
+|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
 |[operator++](#op_add_add)|将 `front_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现前端插入的输出迭代器表达式 * `i` = `x`。|
+|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
 
 ## <a name="requirements"></a>要求
 
@@ -82,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **Container** 的同义词。
+该类型是模板参数 *Container* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -124,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-`_Cont` 在其中的容器对象`front_insert_iterator`是插入元素。
+*_Cont*到其中的容器对象`front_insert_iterator`要将元素插入。
 
 ### <a name="return-value"></a>返回值
 
@@ -176,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: operator\*
 
 取消引用返回其所寻址元素的插入迭代器。
 
@@ -190,7 +191,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是迭代器，然后在序列中，元素 **\*Iter** = **值**使用值替换该元素并不会更改的总数序列中的元素。
 
 ### <a name="example"></a>示例
 
@@ -300,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>参数
 
-`val` 要分配给容器的值。
+*val*要分配给容器的值。
 
 ### <a name="return-value"></a>返回值
 

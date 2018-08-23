@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248503"
 ---
 # <a name="compiler-error-c3149"></a>编译器错误 C3149
 type： 不能使用不顶级 char 的情况下此类型  

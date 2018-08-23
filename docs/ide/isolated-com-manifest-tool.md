@@ -1,5 +1,5 @@
 ---
-title: 清单工具隔离 COM 属性 （Visual c + +） |Microsoft 文档
+title: 清单工具独立 COM 属性 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330176"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>隔离配置属性 COM 清单工具， &lt;Projectname&gt;属性页对话框
-使用此对话框中指定**独立 COM**选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt; 属性页”对话框 ->“配置属性”->“清单工具”->“独立 COM”
+使用此对话框指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的“独立 COM”选项。  
   
- 若要访问此属性页对话框中，打开你的项目或属性表的属性页。 展开**清单工具**节点下的**通用属性**，然后选择**独立 COM**。  
+ 若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“常用属性”下的“清单工具节点”，然后选择“独立 COM”。  
   
 ## <a name="task-list"></a>任务列表  
   
@@ -34,19 +35,19 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **类型库文件**  
- 使用 /tlb 选项来指定该清单工具将用于生成清单文件的类型库文件 （.tlb 文件） 的名称。  
+ 使用 /tlb 选项指定类型库文件（.tlb 文件）的名称，清单工具将使用该文件来生成清单文件。  
   
  **注册器脚本文件**  
- 使用 /rgs 选项来指定该清单工具将用于生成清单文件注册器脚本文件 (.rgs file) 的名称。  
+ 使用 /rgs 选项指定注册器脚本文件（.rgs 文件）的名称，清单工具将使用该文件来生成清单文件。  
   
- **组件文件名称**  
- 使用了 /dll 选项来指定该清单工具将生成资源的名称。 必须为此属性输入一个值时为值**类型库文件**或**注册器脚本文件**指定。  
+ **组件文件名**  
+ 使用 /dll 选项指定清单工具将生成的资源的名称。 指定“类型库文件”或“注册器脚本文件”时，必须输入此属性的值。  
   
  **替换文件**  
- 使用 /replacements 选项来指定包含.rgs 文件中的可替换字符串的值的文件的完整路径。  
+ 使用 /replacements 选项，为包含 .rgs 文件中可替换字符串的值的文件指定完整路径。  
   
 ## <a name="see-also"></a>请参阅  
- [独立应用程序](http://msdn.microsoft.com/library/aa375190)   
+ [独立的应用程序](http://msdn.microsoft.com/library/aa375190)   
  [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
  [清单工具属性页](../ide/manifest-tool-property-pages.md)   
  [使用项目属性](../ide/working-with-project-properties.md)   

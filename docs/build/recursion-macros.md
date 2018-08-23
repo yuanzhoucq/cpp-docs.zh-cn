@@ -21,9 +21,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368956"
 ---
 # <a name="recursion-macros"></a>递归宏
-递归宏用于 NMAKE 递归调用。 递归会话将继承命令行和环境变量宏和 Tools.ini 信息。 他们不继承生成文件定义的推理规则或**。后缀**和**。宝贵**规范。 要传递到递归 NMAKE 会话的宏，请设置环境变量使用 SET 递归调用之前，递归调用，该命令中定义的宏，或者在 Tools.ini 中定义的宏。  
+递归宏用于 NMAKE 递归调用。 递归会话将继承命令行和环境变量宏和 Tools.ini 信息。 他们不继承生成文件定义的推理规则或 **。后缀**和 **。宝贵**规范。 要传递到递归 NMAKE 会话的宏，请设置环境变量使用 SET 递归调用之前，递归调用，该命令中定义的宏，或者在 Tools.ini 中定义的宏。  
   
 |宏|定义|  
 |-----------|----------------|  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373620"
 ---
 # <a name="ctreeview-class"></a>CTreeView 类
 简化了使用树控件 and 的[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)，封装树控件功能，带有 MFC 文档视图体系结构的类。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265878"
 ---
 # <a name="compiler-error-c3744"></a>编译器错误 C3744
 __unhook 必须具有针对托管事件至少 3 个自变量  

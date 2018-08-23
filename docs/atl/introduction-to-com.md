@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356170"
 ---
 # <a name="introduction-to-com"></a>COM 简介
 COM 是生成的 ActiveX 控件和 OLE 的基本"对象模型"。 COM 允许对象公开其功能的其他组件和主机应用程序。 它定义同时对象如何公开本身和跨进程和跨网络这种公开的工作原理。 COM 还定义对象的生命周期。  

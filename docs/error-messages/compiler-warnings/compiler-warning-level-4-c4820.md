@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294214"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>编译器警告（等级 4）C4820
 “bytes”字节填充添加在构造“member_name”之后  

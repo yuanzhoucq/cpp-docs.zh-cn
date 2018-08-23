@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692153"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 命名空间
 函数中`fast_math`命名空间具有降低的准确性，支持仅的单精度 (`float`)，并调用 DirectX 内部函数。 有两个版本的每个函数，例如`cos`和`cosf`。 这两个版本采用并返回`float`，但每个调用相同的 DirectX 内部函数。  

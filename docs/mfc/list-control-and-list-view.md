@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345994"
 ---
 # <a name="list-control-and-list-view"></a>列表控件和列表视图
 为方便起见，MFC 将通过两种方式封装列表控件。 您可使用列表控件：  

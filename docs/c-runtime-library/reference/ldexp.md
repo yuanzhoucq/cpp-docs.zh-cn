@@ -1,5 +1,5 @@
 ---
-title: ldexp，ldexpf，ldexpl |Microsoft 文档
+title: ldexp、 ldexpf、 ldexpl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,13 +44,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208410"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp，ldexpf ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、 ldexpf、 ldexpl
 
 将浮点数乘以二的整数幂。
 
@@ -89,17 +90,17 @@ long double ldexpl(
 
 ## <a name="return-value"></a>返回值
 
-**Ldexp**函数返回的值*x* * 2<sup>*exp* </sup>如果成功。 在溢出时，和具体取决于的符号*x*， **ldexp**返回 + /- **HUGE_VAL**; **errno**值设置为**ERANGE**.
+**Ldexp**函数将返回的值*x* \* 2<sup>*exp* </sup>如果成功。 在溢出时，和具体取决于的符号*x*， **ldexp**返回 + /- **HUGE_VAL**; **errno**值设置为**ERANGE**.
 
 有关详细信息**errno**和可能的错误返回值，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**ldexp**采用**float**或**长** **double**类型。 在 C 程序中， **ldexp**始终采用**double**和**int**并返回**double**。
+由于 c + + 允许重载，可以调用的重载**ldexp**采用**float**或**长** **double**类型。 在 C 程序中， **ldexp**始终采用**double**和一个**int** ，并返回**double**。
 
 ## <a name="requirements"></a>要求
 
-|例程|C 标头|C++ 标头|
+|例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**ldexp**， **ldexpf**， **ldexpl**|\<math.h>|\<cmath>|
 

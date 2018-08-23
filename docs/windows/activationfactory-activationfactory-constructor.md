@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Activationfactory 构造函数 |Microsoft 文档'
+title: 'Activationfactory:: Activationfactory 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a28ec3d12790c4315a517afde1770ecda78c4b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9430e23c06bdccb05fe7bcadf6c89c4980564421
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611258"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory 构造函数
-初始化 ActivationFactory 类。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-ActivationFactory();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [ActivationFactory 类](../windows/activationfactory-class.md)
+
+初始化**ActivationFactory**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[ActivationFactory 类](../windows/activationfactory-class.md)

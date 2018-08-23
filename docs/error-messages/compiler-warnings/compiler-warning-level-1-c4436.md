@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281637"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>编译器警告（等级 1）C4436
 构造函数或析构函数中从虚拟基“class1”到“class2”的 dynamic_cast 对于部分构造的对象可能会失败。使用 /vd2 编译或使用生效的 #pragma vtordisp(2) 定义“class2”  

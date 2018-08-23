@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391582"
 ---
 # <a name="heapset"></a>_heapset
 检查堆是否符合最小一致性，并将可用项设置为指定值。  

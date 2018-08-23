@@ -1,5 +1,5 @@
 ---
-title: HLSL 属性页： 输出文件 |Microsoft 文档
+title: HLSL 属性页：输出文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339191"
 ---
 # <a name="hlsl-property-pages-output-files"></a>HLSL 属性页：输出文件
-若要配置 HLSL 编译器 (fxc.exe) 的以下属性，使用其**输出文件**属性。 有关如何访问**输出文件**HLSL 文件夹中的属性页上看到[使用项目属性](../ide/working-with-project-properties.md)。  
+若要配置 HLSL 编译器 (fxc.exe) 的以下属性，请使用其“输出文件”属性。 有关如何访问 HLSL 文件夹中的“输出文件”属性页面，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **标头变量名称**  
- 指定用于编码 HLSL 对象代码的数组的名称。 数组 HLSL 编译器包含是输出的头文件中。 标头文件的名称由指定**头文件的名称**属性。  
+ 指定用于编码 HLSL 对象代码的数组名称。 此数组包含在由 HLSL 编译器输出的头文件中。 头文件的名称由“头文件名”属性进行指定。  
   
- 此属性对应于 **/Vn [名称]** 命令行自变量。  
+ 该属性对应于“/Vn [name]”命令行参数。  
   
- **头文件的名称**  
- 指定由 HLSL 编译器输出的标头文件的名称。 标头包含编码为一个数组的 HLSL 对象代码。 数组的名称由指定**标头变量名称**属性。  
+ **头文件名**  
+ 指定由 HLSL 编译器输出的头文件名。 该标头包含编码到一个数组的 HLSL 对象代码。 数组的名称由“标头变量名”属性进行指定。  
   
- 此属性对应于 **/Fh [名称]** 命令行自变量。  
+ 该属性对应于“/Fh [name]”命令行参数。  
   
- **对象文件名称**  
- 指定由 HLSL 编译器输出的对象文件的名称。 默认情况下，值是 **$(OutDir) %（文件名）.cso**。  
+ **对象文件名**  
+ 指定由 HLSL 编译器输出的对象文件名。 默认情况下，值为“$(OutDir)%(Filename).cso”。  
   
- 此属性对应于 **/Fo [名称]** 命令行自变量。  
+ 该属性对应于“/Fo [name]”命令行参数。  
   
  **汇编程序输出**  
- **仅限程序集的列表 (/ Fc)** 输出只是程序集语言语句。 **程序集代码和十六进制 (/ Fx)** 输出程序集语言语句和相应的操作代码以十六进制表示。 默认情况下，没有列出是输出。  
+ **仅列出程序集 (/Fc)**：仅输出程序集语言语句。 **程序集代码和十六进制 (/Fx)**：输出程序集语言语句和相应十六进制的操作代码。 默认情况下，无列表输出。  
   
  **汇编程序输出文件**  
- 指定由 HLSL 编译器输出的程序集列表文件的名称。  
+ 指定由 HLSL 编译器输出的程序集列表文件名。  
   
- 此属性对应于 **/Fc [名称]** 和 **/Fx [名称]** 命令行自变量。  
+ 该属性对应于“/Fo [name]”和“/Fx [name]”命令行参数。  
   
 ## <a name="see-also"></a>请参阅  
  [HLSL 属性页](../ide/hlsl-property-pages.md)   
- [HLSL 属性页： 常规](../ide/hlsl-property-pages-general.md)   
+ [HLSL 属性页：常规](../ide/hlsl-property-pages-general.md)   
  [HLSL 属性页：高级](../ide/hlsl-property-pages-advanced.md)

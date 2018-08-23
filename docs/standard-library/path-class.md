@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861683"
 ---
 # <a name="path-class"></a>path 类
 
@@ -599,7 +600,7 @@ wstring wstring() const;
 
 **标头：** \<文件系统 >
 
-**命名空间：**std::experimental::filesystem
+**命名空间：** std::experimental::filesystem
 
 ## <a name="see-also"></a>请参阅
 

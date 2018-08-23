@@ -53,11 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451919"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
@@ -116,7 +117,7 @@ int _mbscoll_l(
 |0|*string1*等于*string2*|
 |> 0|*string1*大于*string2*|
 
-其中每个函数返回 **_NLSCMPERROR**发生错误时。 若要使用 **_NLSCMPERROR**，包括其中某一字符串。H 或 MBSTRING。H。 **wcscoll**如果任一可能会失败*string1*或*string2*为 NULL 或包含排序序列域外部的宽字符代码。 发生错误时， **wcscoll**可能设置**errno**到**EINVAL**。 若要在调用中的错误检查**wcscoll**，将其设置**errno**为 0，然后检查**errno**之后调用**wcscoll**。
+其中每个函数返回 **_NLSCMPERROR**发生错误时。 若要使用 **_NLSCMPERROR**，包括其中某一字符串。H 或 MBSTRING。H。 **wcscoll**如果任一可能会失败*string1*或*string2*是**NULL**或包含排序序列域外部的宽字符代码。 发生错误时， **wcscoll**可能设置**errno**到**EINVAL**。 若要在调用中的错误检查**wcscoll**，将其设置**errno**为 0，然后检查**errno**之后调用**wcscoll**。
 
 ## <a name="remarks"></a>备注
 

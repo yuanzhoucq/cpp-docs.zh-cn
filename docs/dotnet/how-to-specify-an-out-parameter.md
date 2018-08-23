@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128288"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>如何：指定 out 参数
 此示例演示如何指定函数参数是一个 out 参数以及如何从 C# 程序调用该函数。  

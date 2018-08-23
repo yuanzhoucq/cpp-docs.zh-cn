@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368403"
 ---
 # <a name="pseudotargets"></a>伪目标
 伪目标是代替是依赖项的行中的文件名的标签。 它被解释为不存在，因此可能会过期的文件。 NMAKE 假定伪目标的时间戳是最新创建的所有依赖项。 如果已没有依赖项，则假定当前时间。 如果伪目标用作目标，则始终执行其命令。 伪目标用作依赖还必须显示为另一个依赖项中的目标。 但是，该依赖关系不必命令块。  

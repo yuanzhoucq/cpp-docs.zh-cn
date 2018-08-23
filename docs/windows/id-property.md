@@ -1,5 +1,5 @@
 ---
-title: ID 属性 |Microsoft 文档
+title: ID 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebe701711de329d7b763b7bf3b3d3dbf1ce0ce93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605354"
 ---
 # <a name="id-property"></a>ID 属性
-ID 属性引用在程序代码中的每个快捷键对应表项。 这是当用户按下的加速键或键组合，该程序将收到命令值。 要使快捷键与菜单项相同，请将其 Id 相同 （只要快捷键对应表的 ID 是菜单资源的 ID 相同）。  
+ID 属性引用在程序代码中的每个快捷键对应表项。 这是当用户按下的加速键或键组合，程序将接收的命令值。 若要使快捷键与菜单项相同，使其 Id 相同 （只要快捷键对应表的 ID 是菜单资源的 ID 相同）。
   
-## <a name="requirements"></a>要求  
- Win32  
+## <a name="requirements"></a>要求
+ Win32
   
-## <a name="see-also"></a>请参阅  
- [设置快捷键属性](../windows/setting-accelerator-properties.md)   
+## <a name="see-also"></a>请参阅
+ [设置快捷键属性](../windows/setting-accelerator-properties.md)  
  [快捷键编辑器](../windows/accelerator-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: __raise |Microsoft 文档
+title: __raise |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5ee7e0b9679fc4fd4e4cd9c541c38dd4446e47c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404361"
 ---
 # <a name="raise"></a>__raise
 强调一个事件的调用站点。  
@@ -29,24 +30,20 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-__raise   
-method-declarator  
-;  
-  
+__raise method-declarator;  
 ```  
   
 ## <a name="remarks"></a>备注  
  在托管代码中，事件只能从定义它的类中引发。 请参阅[事件](../windows/event-cpp-component-extensions.md)有关详细信息。  
   
- 如果您调用了一个非事件，则关键字 `__raise` 将导致发出一个错误。  
+ 关键字 **__raise**导致调用非事件会发出的错误。  
   
 > [!NOTE]
 >  模板类或结构不能包含事件。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

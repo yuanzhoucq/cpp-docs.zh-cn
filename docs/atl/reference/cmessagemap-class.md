@@ -1,5 +1,5 @@
 ---
-title: CMessageMap 类 |Microsoft 文档
+title: CMessageMap 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572133"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
-此类允许对象的消息映射要由另一个对象的访问。  
+此类允许对象的消息映射为另一个对象的访问权限。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,24 +45,24 @@ class ATL_NO_VTABLE CMessageMap
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|访问消息映射中的`CMessageMap`-派生类。|  
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|访问消息映射中的`CMessageMap`-派生的类。|  
   
 ## <a name="remarks"></a>备注  
- `CMessageMap` 是一个抽象基类，允许对象的消息映射要由另一个对象进行访问。 为了使要公开其消息映射的对象，其类必须派生自`CMessageMap`。  
+ `CMessageMap` 是一个抽象基类，允许对象的消息映射来访问另一个对象。 为了使对象公开其消息映射，它的类必须派生自`CMessageMap`。  
   
- 使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](../../visual-cpp-samples.md)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`类自动派生自`CMessageMap`。  
+ 使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)，则`CAtlEdit`类自动派生`CMessageMap`。  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- 因为包含的窗口中， `m_EditCtrl`，将在包含的类中，使用消息映射`CAtlEdit`派生自`CMessageMap`。  
+ 因为包含的窗口中， `m_EditCtrl`，将使用消息映射中包含的类，`CAtlEdit`派生自`CMessageMap`。  
   
- 有关消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)本文"ATL 窗口类。"  
+ 有关消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)在文章"ATL 窗口类。"  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
- 访问由标识的消息映射`dwMsgMapID`中`CMessageMap`-派生类。  
+ 访问由标识的消息映射*dwMsgMapID*中`CMessageMap`-派生的类。  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -74,29 +75,29 @@ virtual BOOL ProcessWindowMessage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWnd`  
+ *hWnd*  
  [in]接收消息的窗口句柄。  
   
- `uMsg`  
+ *uMsg*  
  [in]发送到窗口的消息。  
   
- `wParam`  
- [in]消息特定的附加信息。  
+ *wParam*  
+ [in]其他特定于消息的信息。  
   
- `lParam`  
- [in]消息特定的附加信息。  
+ *lParam*  
+ [in]其他特定于消息的信息。  
   
- `lResult`  
+ *lResult*  
  [out]消息处理的结果。  
   
- `dwMsgMapID`  
- [in]将处理该消息的消息映射的标识符。 使用默认消息映射中，声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，由 0。 使用声明的备用消息映射， [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由标识`msgMapID`。  
+ *dwMsgMapID*  
+ [in]将处理该消息的消息映射的标识符。 使用默认消息映射声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，由 0。 使用替换消息映射声明[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由`msgMapID`。  
   
 ### <a name="return-value"></a>返回值  
- **TRUE**如果消息已完全处理; 否则为**FALSE**。  
+ 如果该消息完全处理; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 由窗口过程的调用[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象或对象的动态链接到消息映射。  
+ 调用的窗口过程[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象或对象的动态链接到的消息映射。  
   
 ## <a name="see-also"></a>请参阅  
  [CDynamicChain 类](../../atl/reference/cdynamicchain-class.md)   

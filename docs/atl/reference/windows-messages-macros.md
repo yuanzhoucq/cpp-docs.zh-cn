@@ -1,5 +1,5 @@
 ---
-title: Windows 消息宏 |Microsoft 文档
+title: Windows 消息宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,42 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886201"
 ---
 # <a name="windows-messages-macros"></a>Windows 消息宏
-此宏将转发窗口消息。  
+此宏将窗口消息转发。  
   
 |||  
 |-|-|  
-|[WM_FORWARDMSG](#wm_forwardmsg)|使用将转发到另一个处理的窗口的窗口收到的消息。|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|使用转发到另一个窗口中进行处理的窗口收到的消息。|  
 
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h 
    
 ##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- 此宏将转发到另一个处理的窗口的窗口收到的消息。  
+ 此宏将转发到另一个窗口中进行处理的窗口收到的消息。  
   
 ```
 WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零如果不，如果消息已处理，将为零。  
+ 非零值处理该消息，如果数值为零则不。  
   
 ### <a name="remarks"></a>备注  
- 使用`WM_FORWARDMSG`转发到另一个处理的窗口的窗口收到的消息。 则 LPARAM 和 WPARAM 使用参数，如下所示：  
+ 使用 WM_FORWARDMSG 转发到另一个窗口中进行处理的窗口收到的消息。 按如下所示使用 LPARAM 和 WPARAM 参数：  
   
 |参数|用法|  
 |---------------|-----------|  
-|WPARAM|用户定义的数据|  
-|LPARAM|指向的指针`MSG`结构，其中包含有关消息的信息|  
+|WPARAM|由用户定义的数据|  
+|LPARAM|一个指向`MSG`结构，其中包含有关消息的信息|  
   
 ### <a name="example"></a>示例  
- 在下面的示例中，`m_hWndOther`表示收到此消息的其他窗口。  
+ 在以下示例中，`m_hWndOther`表示收到此消息的其他窗口。  
   
  [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   

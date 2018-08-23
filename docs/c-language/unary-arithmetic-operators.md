@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390363"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算术运算符
 下面的列表中讨论了 C 一元加、算术求反、求补和逻辑求反运算符：  

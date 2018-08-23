@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248846"
 ---
 # <a name="compiler-error-c3136"></a>编译器错误 C3136
 interface： 只能从另一个 COM 接口继承的 COM 接口，接口不是一个 COM 接口  

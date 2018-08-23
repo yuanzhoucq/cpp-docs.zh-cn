@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347241"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC Internet 编程任务
 本节包含将 Internet 支持添加到应用程序的详细步骤。 主题包括如何使用 MFC 类使现有应用程序支持 Internet，以及如何为现有 COM 组件添加活动文档支持。 你想要创建文档包含最新股票行情、 匹兹堡的橄榄球比赛的比分和南极洲 Microsoft 中的最新温度提供了许多的技术来帮助您做到这一点通过 Internet。  

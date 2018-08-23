@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Internaladdref 方法 |Microsoft 文档'
+title: 'Runtimeclass:: Internaladdref 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2998e46201be2137f11f0b91438fb68e326e46c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e0d2b6d41598195b2615e4d6b4a8585d1ca1cf2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599720"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef 方法
-递增对当前 RuntimeClass 对象的引用计数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-ULONG InternalAddRef();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 在生成的引用计数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [RuntimeClass 类](../windows/runtimeclass-class.md)
+
+递增引用计数与当前**RuntimeClass**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ULONG InternalAddRef();
+```
+
+## <a name="return-value"></a>返回值
+
+在生成的引用计数。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[RuntimeClass 类](../windows/runtimeclass-class.md)

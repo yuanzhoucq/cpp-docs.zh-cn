@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375479"
 ---
 # <a name="cc-building-reference"></a>C/C++ 生成参考
 Visual c + + 提供生成 C/c + + 程序的两种的方法。 最简单的 （也是最常见的） 的方法是[Visual c + + 开发环境中生成](../../ide/building-cpp-projects-in-visual-studio.md)。 另一种方法是[从命令提示符使用命令行工具生成](../../build/building-on-the-command-line.md)。 在任一情况下，你可以创建使用 Visual c + + 源代码编辑器或第三方编辑器所选的源文件。  

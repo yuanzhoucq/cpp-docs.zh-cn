@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957680"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 类
 
@@ -80,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*整数结果类型，默认为`int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 *URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-如果未根据二项式分布离散型概率函数提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `int` 型值的分布。 下表链接到有关各个成员的文章。
+此模板类将描述产生用户指定的整型值类型**int**如果未提供任何内容根据二项式分布离散型概率函数分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-属性成员 `t()` 和 `p()` 将分别返回当前存储的分布参数值 `t` 和 `p`。
+属性成员`t()`并`p()`返回参数值的当前存储的分布*t*并*p*分别。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -253,15 +254,15 @@ explicit binomial_distribution(const param_type& parm);
 
 *p* `p`分布参数。
 
-*参数*`param_type`用于构造分布的结构。
+*parm* `param_type`用于构造分布的结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：**`0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一个构造函数将构造一个其存储的 `p` 值保留值 *p*，并且其存储的 `t` 值保留值 *t* 的对象。
+第一个构造函数构造一个对象，其存储*p*值保留值*p*并且其存储*t*值保留值*t*。
 
-第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 
@@ -285,7 +286,7 @@ struct param_type {
 
 *p* `p`分布参数。
 
-*右*`param_type`要比较的此对象。
+*右*`param_type`要与此比较的对象。
 
 ### <a name="remarks"></a>备注
 

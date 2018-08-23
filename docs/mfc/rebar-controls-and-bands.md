@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929502"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控件和带区
 Rebar 控件的主要用途是充当子窗口、 通用对话框控件、 菜单、 工具栏和等等的容器。 此包含支持的"带。"的概念 每个 rebar 带区可以包含一个手柄栏、 位图、 文本标签和子窗口的任意组合。  
@@ -42,7 +43,7 @@ Rebar 控件的主要用途是充当子窗口、 通用对话框控件、 菜单
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband)和[DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband)添加和删除 rebar 带区。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband)和[MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband)影响特定 rebar 带区的当前大小。 [MoveBand](../mfc/reference/crebarctrl-class.md#moveband)更改特定 rebar 带区的索引。 [ShowBand](../mfc/reference/crebarctrl-class.md#showband)显示或隐藏从用户 rebar 带区。  
   
- 下面的示例演示如何添加工具栏带 (`m_wndToolBar`) 到现有 rebar 控件 (`m_wndReBar`)。 初始化描述带`rbi`结构，然后再调用`InsertBand`成员函数：  
+ 下面的示例演示如何添加工具栏带 (*m_wndToolBar*) 到现有 rebar 控件 (*m_wndReBar*)。 初始化描述带`rbi`结构，然后再调用`InsertBand`成员函数：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

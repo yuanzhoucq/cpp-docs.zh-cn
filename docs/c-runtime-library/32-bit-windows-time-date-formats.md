@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387455"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>32 位 Windows 时间/日期格式
 将无符号整数用作位域，单独存储文件时间和日期。 文件的时间和日期打包如下：  

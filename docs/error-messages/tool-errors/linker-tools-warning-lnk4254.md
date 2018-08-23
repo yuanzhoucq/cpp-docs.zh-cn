@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316889"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>链接器工具警告 LNK4254
 部分"资料节 1"（偏移量） 合并到 section2 （偏移量） 具有不同的属性  

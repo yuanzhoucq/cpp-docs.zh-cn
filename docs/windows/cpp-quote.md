@@ -1,5 +1,5 @@
 ---
-title: cpp_quote |Microsoft 文档
+title: cpp_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610595"
 ---
 # <a name="cppquote"></a>cpp_quote
-发出指定的字符串，而无需引号字符，到生成的.idl 文件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      [ cpp_quote(  
-   "statement"  
-) ];  
-```  
-  
-#### <a name="parameters"></a>参数  
- statement  
- C 指令中。  
-  
-## <a name="remarks"></a>备注  
- **Cpp_quote** c + + 特性非常有用，如果你想要将预处理器指令放在.idl 文件。  
-  
- 你还可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果你有使用 c + + IDL 特性，但不能使用此文件执行某些任务的 c + + 头文件，然后你可以其进行编译以创建 MIDL 生成的.h 文件，你应该能够使用。  
-  
- **Cpp_quote**属性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 特性。  
-  
-## <a name="example"></a>示例  
- 请参阅示例[双重](../windows/dual.md)有关用法示例如何使用**cpp_quote**。  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|任何位置|  
-|**可重复**|否|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [独立特性](../windows/stand-alone-attributes.md)   
+
+将指定的字符串，而无需引号字符，发送到生成的.idl 文件。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[ cpp_quote(
+   "statement"
+) ];
+```
+
+### <a name="parameters"></a>参数
+
+statement  
+C 的指令。
+
+## <a name="remarks"></a>备注
+
+**Cpp_quote** c + + 特性会非常有用，如果你想要将预处理器指令放在.idl 文件中。
+
+此外可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果必须使用 c + + IDL 特性，但不能使用此文件执行一些任务的 c + + 头文件，然后您可以编译它创建 MIDL 生成.h 文件，您应能够使用。
+
+**Cpp_quote**属性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 特性。
+
+## <a name="example"></a>示例
+
+有关示例，请参阅[双](../windows/dual.md)有关的示例使用如何使用**cpp_quote**。
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|任何位置|
+|**可重复**|否|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[独立特性](../windows/stand-alone-attributes.md)  

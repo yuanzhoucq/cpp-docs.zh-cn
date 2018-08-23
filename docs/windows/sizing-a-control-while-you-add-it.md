@@ -1,5 +1,5 @@
 ---
-title: 控件的大小调整时将其添加 |Microsoft 文档
+title: 控件调整大小，而将其添加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 736a8cf1efacdbabcb4b5d54d965812f0322af36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1693ecdf60109732eaf13f41665590ee806a951
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598757"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>添加控件时调整其大小
-### <a name="to-size-a-control-while-you-add-it"></a>若要调整控件的大小，而将其添加  
-  
-1.  选择一个控件中的[工具箱窗口](/visualstudio/ide/reference/toolbox)。  
-  
-2.  将光标 （它显示为十字型光标） 置于想要在对话框中，新的控件的左上角。  
-  
-3.  单击并按住鼠标按钮定位在对话框中，控件的左上角，然后拖动光标向右和向下，直到该控件是所需的大小。  
-  
-    > [!NOTE]
-    >  实际上，您可以定位任何所绘制控件的四个角。 例如，使用此过程的左上角。  
-  
-4.  释放鼠标按钮。 控件结算到你指定的大小中的对话框。  
-  
-    > [!TIP]
-    >  你可以调整控件的大小后将其放置到该对话框中，通过在控件边框上移动调整大小控点。 有关详细信息，请参阅[调整单个控件的](../windows/sizing-individual-controls.md)。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
-  
- 要求  
-  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
- [添加事件处理程序对话框控件](../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)
 
+### <a name="to-size-a-control-while-you-add-it"></a>若要调整控件的大小，而将其添加
+
+1. 选择一个控件中的[工具箱窗口](/visualstudio/ide/reference/toolbox)。
+
+2. 将光标 （它显示为十字线） 想要在对话框中，新的控件的左上角。
+
+3. 单击并按住鼠标按钮，若要定位到对话框的上的控件的左上角，然后拖动光标向右和向下直到控件所需的大小。
+
+   > [!NOTE]
+   > 实际上，您可以定位任何要绘制的控件的四个角。 此过程作为示例使用左上角。
+
+4. 释放鼠标按钮。 到你指定的大小在该对话框会使该控件。
+
+   > [!TIP]
+   > 您可以通过将调整大小控点移动控件的边框上将其放到该对话框后调整控件的大小。 有关详细信息，请参阅[调整单个控件的](../windows/sizing-individual-controls.md)。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[添加对话框控件的事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)

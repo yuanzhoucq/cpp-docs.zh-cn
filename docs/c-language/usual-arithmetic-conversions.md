@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388852"
 ---
 # <a name="usual-arithmetic-conversions"></a>常用算术转换
 大多数 C 运算符执行类型转换以将表达式的操作数引入常见类型或将较短的值扩展到计算机运算中使用的整数大小。    C 运算符执行的转换取决于特定的运算符和操作数的类型。 但是，许多运算符对整型和浮点型的操作数执行相似的转换。 这些转换称为“算术转换”。 从操作数值到兼容类型的转换会导致不改变其值。  

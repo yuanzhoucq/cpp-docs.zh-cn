@@ -1,5 +1,5 @@
 ---
-title: __interface |Microsoft 文档
+title: __interface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24558b99cf5291a83cfef77a76dd631622b657b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404195"
 ---
 # <a name="interface"></a>__interface
 **Microsoft 专用**  
@@ -42,17 +43,15 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>备注  
- C++[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)无法实现与这些规则，但`__interface`执行它们的时间。  
+ C + +[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)未能实现这些规则，但 **__interface**强制实施它们。  
   
  例如，以下是示例接口定义：  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
@@ -63,16 +62,16 @@ __interface IMyInterface {
   
  请注意，您无需显式指示 `CommitX` 和 `get_X` 函数是纯虚函数。 第一个函数的等效声明为：  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 意味着[novtable](../cpp/novtable.md) `__declspec`修饰符。  
+ **__interface**意味着[novtable](../cpp/novtable.md) **__declspec**修饰符。  
   
 ## <a name="example"></a>示例  
  以下示例演示如何使用接口中声明的属性。  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

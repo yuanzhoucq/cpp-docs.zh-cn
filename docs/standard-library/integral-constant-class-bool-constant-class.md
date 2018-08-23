@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962528"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 类、bool_constant 类
 
@@ -53,7 +54,7 @@ struct integral_constant {
 
 使用整型类型 *T* 和该类型的值 *v* 进行专用化的 `integral_constant` 模板类表示一个对象，该对象保留该整型类型的常量以及指定的值。 名为 `type` 的成员是生成的模板专用化类型的别名，`value` 成员具有用于创建此专用化的值 *v*。
 
-`bool_constant` 模板类是将 `bool` 用作 *T* 参数的 `integral_constant` 的显式部分专用化。
+`bool_constant`模板类是显式的部分专用化`integral_constant`，它使用**bool**作为*T*参数。
 
 ## <a name="example"></a>示例
 

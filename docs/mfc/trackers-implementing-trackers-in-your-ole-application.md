@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381545"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>跟踪器：在您的 OLE 应用程序内实现跟踪器
 跟踪器提供了一个供用户与 OLE 项客户端交互的图形界面。 利用不同的跟踪器样式，可以采用阴影边框、大小调整手柄或者各种其他视觉效果显示 OLE 客户端项。 本文将介绍：  

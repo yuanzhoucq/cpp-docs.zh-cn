@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342974"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>数据对象和数据源 (OLE)
 在使用剪贴板或拖放操作执行数据传输时，数据将具有一个源和一个目标。 一个应用程序提供数据以进行复制，另一个应用程序接受该数据以进行粘贴。 传输的每一端均需要对同一数据执行不同的操作以使传输成功。 Microsoft 基础类 (MFC) 库提供表示此传输的每一端的两个类：  

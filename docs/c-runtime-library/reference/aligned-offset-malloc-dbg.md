@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451506"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +67,10 @@ void * _aligned_offset_malloc_dbg(
 用于强制对齐的内存分配中的偏移量。
 
 *filename*<br/>
-指向已请求分配操作的源文件名的指针或 NULL。
+指向已请求分配操作的源文件名或**NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行数或 NULL。
+请求分配操作所在的源文件中的行数或**NULL**。
 
 ## <a name="return-value"></a>返回值
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135877"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：扩展封送处理库
 本主题说明如何扩展封送处理库，从而提供更多数据类型之间转换。 用户可以扩展当前不支持库的任何数据转换的封送处理库。  

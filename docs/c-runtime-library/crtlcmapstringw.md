@@ -27,11 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451948"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 将一个字符串映射到另一个字符串，以执行指定的与区域设置相关的转换。 此函数还可用于生成输入字符串的排序键。  
@@ -59,7 +60,7 @@ int __crtLCMapStringW(
  指向函数映射或用于排序键生成的源字符串的指针。 假定此参数为 Unicode 字符串。  
   
  `cchSrc`  
- 由 `lpSrcStr` 参数指向的字符串的大小（以字符为单位）。 此计数可包含 NULL 终止符，也可不包含它。  
+ 由 `lpSrcStr` 参数指向的字符串的大小（以字符为单位）。 此计数可包含 null 终止符，也可不包含它。  
   
  `cchSrc` 值 -1 指定由 `lpSrcStr` 指向的字符串是以 null 结尾的。 如果是这种情况而且此函数在使用时采用了字符串映射模式，则此函数会自己计算字符串的长度，并以 null 终止存储在 `*lpDestStr`中的映射字符串。  
   
@@ -70,9 +71,9 @@ int __crtLCMapStringW(
  由 `lpDestStr`指向的缓冲区的大小（以字符为单位）。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `cchDest` 的值不为零，则写入到缓冲区的字符数（如果指定了 `LCMAP_SORTKEY` ，则为字节数）表示成功。 此计数包括 NULL 终止符的空间。  
+ 如果 `cchDest` 的值不为零，则写入到缓冲区的字符数（如果指定了 `LCMAP_SORTKEY` ，则为字节数）表示成功。 此计数包括 null 终止符的空间。  
   
- 如果 `cchDest` 值为零，则接收转换的字符串或排序键所需的缓冲区大小（以字符为单位，如果指定了 `LCMAP_SORTKEY` ，则以字节为单位）表示成功。 此大小包括 NULL 终止符的空间。  
+ 如果 `cchDest` 值为零，则接收转换的字符串或排序键所需的缓冲区大小（以字符为单位，如果指定了 `LCMAP_SORTKEY` ，则以字节为单位）表示成功。 此大小包括 null 终止符的空间。  
   
  零表示失败。 若要获得扩展的错误信息，请调用 `GetLastError` 函数。  
   

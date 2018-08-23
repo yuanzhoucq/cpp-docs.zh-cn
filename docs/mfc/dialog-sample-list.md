@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343601"
 ---
 # <a name="dialog-sample-list"></a>对话框示例列表
 请参阅以下演示对话框和属性表的示例程序：  

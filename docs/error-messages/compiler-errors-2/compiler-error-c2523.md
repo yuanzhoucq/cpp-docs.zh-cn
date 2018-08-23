@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228336"
 ---
 # <a name="compiler-error-c2523"></a>编译器错误 C2523
 类:: ~ 标识符： 析构函数/终结器标记不匹配  

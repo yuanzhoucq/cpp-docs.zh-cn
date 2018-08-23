@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693138"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. 新功能和 2.0 版中的说明
 本附录总结了对从版本 1.0 移动到 2.0 版中的 OpenMP C/c + + 规范的密钥的更改。 以下各项是新功能添加到规范：  

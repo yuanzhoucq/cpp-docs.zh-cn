@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375196"
 ---
 # <a name="stub"></a>STUB
 生成虚拟设备驱动程序 (VxD) 的模块定义文件中使用时，允许你指定的文件名称包含 IMAGE_DOS_HEADER 结构结构 （在 WINNT 中定义。H) 用于虚拟设备驱动程序 (VxD)，而不是默认标头。  

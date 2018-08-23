@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252515"
 ---
 # <a name="compiler-error-c3365"></a>编译器错误 C3365
 运算符“operator”: 区分类型为“type1”和“type2”的操作数  

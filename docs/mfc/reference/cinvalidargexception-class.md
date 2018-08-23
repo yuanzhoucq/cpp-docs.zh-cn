@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366744"
 ---
 # <a name="cinvalidargexception-class"></a>CInvalidArgException 类
 此类表示一个无效自变量异常条件。  

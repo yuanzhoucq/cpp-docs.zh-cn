@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorView 类 |Microsoft 文档
+title: '{2&gt;platform::collections::vectorview 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,15 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584101"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 表示可按照索引单独访问的对象的顺序集合的只读视图。 集合中每个对象的类型由模板参数指定。  
@@ -87,7 +88,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  指定 VectorView 中第一个元素的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myVectorView->First();`。  
+ 保留 first （） 返回的迭代器的简便方法是将返回值分配为使用声明的变量**自动**类型推导关键字。 例如 `auto x = myVectorView->First();`。  
   
 
 
@@ -108,7 +109,7 @@ T GetAt(
  从零开始的无符号整数，用于指定 VectorView 对象中的特定元素。  
   
 ### <a name="return-value"></a>返回值  
- `index` 参数指定的元素。 元素类型由 VectorView 模板参数，指定*T*。  
+ `index` 参数指定的元素。 元素类型由 VectorView 模板参数指定*T*。  
   
 
 
@@ -130,7 +131,7 @@ virtual unsigned int GetMany(
  要检索的项开头从零开始的索引。  
   
  `dest`  
- 此操作完成后，开始，以指定的元素的项的数组`startIndex`VectorView 中最后一个元素结尾。  
+ 此操作完成后，在指定的元素处开始的项的数组`startIndex`VectorView 中最后一个元素结尾。  
   
 ### <a name="return-value"></a>返回值  
  已检索的项的数量。  
@@ -241,7 +242,7 @@ VectorView(
  用于初始化当前 VectorView 的对象集合的类型。  
   
  il  
- A [std:: initializer_list](../standard-library/initializer-list-class.md)元素将用于初始化 VectorView。  
+ 一个[std:: initializer_list](../standard-library/initializer-list-class.md)其元素将用于初始化 VectorView。  
   
  `N`  
  用于初始化当前 VectorView 的对象集合中元素的数量。  
@@ -259,16 +260,16 @@ VectorView(
  指向用于初始化当前 VectorView 的 `std::vector` 的指针。  
   
  `arr`  
- A [platform:: array](../cppcx/platform-array-class.md)用于初始化当前 VectorView 的对象。  
+ 一个[platform:: array](../cppcx/platform-array-class.md)用于初始化当前 VectorView 的对象。  
   
  `a`  
- A [std:: array](../standard-library/array-class-stl.md)用于初始化当前 VectorView 的对象。  
+ 一个[std:: array](../standard-library/array-class-stl.md)用于初始化当前 VectorView 的对象。  
   
  `first`  
- 用于初始化当前 VectorView 的对象序列中的第一个元素。 一种`first`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 用于初始化当前 VectorView 的对象序列中的第一个元素。 类型`first`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  `last`  
- 用于初始化当前 VectorView 的对象序列中的最后一个元素。 一种`last`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 用于初始化当前 VectorView 的对象序列中的最后一个元素。 类型`last`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 
 

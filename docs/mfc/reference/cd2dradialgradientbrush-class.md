@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952269"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 类
 ID2D1RadialGradientBrush 包装器。  
@@ -98,7 +99,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|指向 ID2D1RadialGradientBrush 的指针。|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|中心、 渐变原点偏移量和 x 轴半径和 y 轴半径的画笔的渐变。|  
@@ -132,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -151,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `gradientStops`  
+ *gradientStops*  
  指向 D2D1_GRADIENT_STOP 结构的数组的指针。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  一个值大于或等于 1 gradientStops 数组中指定的数梯度停止点。  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  中心、 渐变原点偏移量和 x 轴半径和 y 轴半径的画笔的渐变。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  在哪种颜色执行之间的渐变停止点的内插的空间。  
   
- `extendMode`  
+ *extendMode*  
  [0，1] 的规范化范围之外的渐变的行为。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -183,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -288,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  中心的画笔的坐标空间中的渐变椭圆  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -299,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>参数  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  从该渐变椭圆的中心该渐变原点的偏移量  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -310,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>参数  
- `radiusX`  
+ *radiusX*  
  渐变椭圆 x 半径。 此值处于画笔的坐标空间  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -321,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>参数  
- `radiusY`  
+ *radiusY*  
  渐变的椭圆 y 轴半径。 此值处于画笔的坐标空间  
   
 ## <a name="see-also"></a>请参阅  

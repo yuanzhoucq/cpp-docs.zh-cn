@@ -22,16 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929476"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子窗口
-MDI 主框架窗口 （每个应用程序一个） 包含特殊子窗口调用**MDICLIENT**窗口。 **MDICLIENT**窗口管理主框架窗口的工作区，并且其自身具有子窗口： 派生自的文档窗口`CMDIChildWnd`。 由于文档窗口是框架窗口（MDI 子窗口），因此它们也有其自己的子级。 在所有这些情况下，父窗口管理其子窗口并将一些命令转发给它们。  
+MDI 主框架窗口 （每个应用程序一个） 包含一个称作 MDICLIENT 窗口的特殊子窗口。 MDICLIENT 窗口管理主框架窗口的工作区，并且其自身具有子窗口： 派生自的文档窗口`CMDIChildWnd`。 由于文档窗口是框架窗口（MDI 子窗口），因此它们也有其自己的子级。 在所有这些情况下，父窗口管理其子窗口并将一些命令转发给它们。  
   
- 在 MDI 框架窗口中，框架窗口管理**MDICLIENT**窗口中，其进行重新定位控件条结合。 **MDICLIENT**窗口，反过来，管理所有 MDI 子框架窗口。 下图显示 MDI 框架窗口，之间的关系及其**MDICLIENT**窗口中和其子文档框架窗口。  
+ 在 MDI 框架窗口中，框架窗口管理 MDICLIENT 窗口中，其进行重新定位控件条结合。 MDICLIENT 窗口中，反过来，管理所有 MDI 子框架窗口。 下图显示 MDI 框架窗口、 其 MDICLIENT 窗口中与其子文档框架窗口之间的关系。  
   
  ![MDI 框架窗口中的子窗口](../mfc/media/vc37gb1.gif "vc37gb1")  
 MDI 框架窗口和子窗口  

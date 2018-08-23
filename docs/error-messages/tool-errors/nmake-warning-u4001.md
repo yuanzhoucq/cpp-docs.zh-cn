@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316168"
 ---
 # <a name="nmake-warning-u4001"></a>NMAKE 警告 U4001
 可以仅从命令行调用命令文件  

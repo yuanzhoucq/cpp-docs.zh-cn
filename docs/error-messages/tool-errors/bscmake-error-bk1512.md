@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33306460"
 ---
 # <a name="bscmake-error-bk1512"></a>BSCMAKE 错误 BK1512
 filename： 超出容量  

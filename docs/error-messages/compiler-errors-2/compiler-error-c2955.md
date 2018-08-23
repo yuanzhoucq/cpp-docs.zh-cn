@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245944"
 ---
 # <a name="compiler-error-c2955"></a>编译器错误 C2955
 “标识符”：类模板或别名泛型的使用需要模板或泛型自变量列表  

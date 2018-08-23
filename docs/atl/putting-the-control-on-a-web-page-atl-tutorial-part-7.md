@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362579"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>将控件置于网页上（ATL 教程，第 7 部分）
 控件现已完成。 若要查看你在实际情况下运行的控件，请将其放在网页上。 定义你的控件时，已创建一个包含控件的 HTML 文件。 打开 PolyCtl.htm 文件从**解决方案资源管理器**，，您可以查看您在网页上的控件。  

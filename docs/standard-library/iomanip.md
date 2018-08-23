@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953470"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-包括`iostreams`标准标头\<iomanip > 以定义几个操控器，每个都采用单个自变量。
+包括`iostreams`标准标头\<iomanip > 来定义多个操控器各自采用单个参数。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="remarks"></a>备注
 
-其中每个操控器都会返回重载 `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) 和 `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt) 的未指定类型（名称为 **T1** 到 **T10**）。
+每个操控器返回未指定的类型，称为`T1`通过`T10`，该重载同时`basic_istream` \< **Elem**， **Tr** >`::`[运算符 >>](../standard-library/istream-operators.md#op_gt_gt)并`basic_ostream` \< **Elem**， **Tr** > `::` [运算符 <<](../standard-library/ostream-operators.md#op_lt_lt)。
 
 ### <a name="manipulators"></a>操控器
 

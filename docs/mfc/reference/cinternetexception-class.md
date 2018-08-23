@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037884"
 ---
 # <a name="cinternetexception-class"></a>CInternetException 类
 表示与 Internet 操作相关的异常条件。  
@@ -75,7 +76,7 @@ CInternetException(DWORD dwError);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwError`  
+ *dwError*  
  导致异常的错误。  
   
 ### <a name="remarks"></a>备注  
@@ -89,7 +90,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>备注  
- 中最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)和传递到 MFC 的[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类。 你可以重写此默认值并分配任何`dwContext`参数选择的值。 `dwContext` 是与给定任何的操作相关联。 `dwContext` 标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
+ 中最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)和传递到 MFC 的[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类。 你可以重写此默认值并分配任何*dwContext*参数选择的值。 *dwContext*与给定的任何的对象操作相关联。 *dwContext*标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  导致异常的错误。  

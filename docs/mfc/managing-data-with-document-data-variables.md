@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8048a38c2ec09828c462d5b671cc0c89aec30805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ca7c673f47510282e129eab2538008400eb2fb9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929427"
 ---
 # <a name="managing-data-with-document-data-variables"></a>使用文档数据变量管理数据
 实现文档的数据为您的文档类的成员变量。 例如，Scribble 程序声明类型的数据成员`CObList`-存储指向的链接的列表`CObject`对象。 此列表用于存储的构成画线条图形的点数组。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
  在定义文档的成员数据时，你通常将到文档类，以设置和获取数据项以及执行其他有用的操作在其上添加成员函数。  
   
- 您的视图通过使用到文档中，安装在创建时视图中的视图的指针访问文档对象。 您可以通过调用来检索视图的成员函数中的此指针`CView`成员函数**GetDocument**。 请务必将该指针为你自己的文档类型转换。 然后你可以通过指针访问公共文档成员。  
+ 您的视图通过使用到文档中，安装在创建时视图中的视图的指针访问文档对象。 您可以通过调用来检索视图的成员函数中的此指针`CView`成员函数`GetDocument`。 请务必将该指针为你自己的文档类型转换。 然后你可以通过指针访问公共文档成员。  
   
  如果频繁的数据传输需要直接访问，或你想要使用的文档类的非公共成员，你可能想要使视图类 （在 c + + 条款） 的文档类的友元。  
   

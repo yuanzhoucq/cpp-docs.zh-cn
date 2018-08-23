@@ -1,5 +1,5 @@
 ---
-title: __fastfail |Microsoft 文档
+title: __fastfail |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538392"
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft 专用**  
@@ -37,14 +38,14 @@ void __fastfail(unsigned int code);
  `__fastfail` 内部函数不会返回。  
   
 ## <a name="remarks"></a>备注  
- `__fastfail`内部函数提供了一种机制*快速失败*请求-潜在破坏进程请求立即终止进程到一种方法。 无法使用常规异常处理设施处理可能已破坏程序状态和堆栈至无法恢复的的严重故障。 使用 `__fastfail` 终止开销最少的进程。  
+ `__fastfail`内部函数提供了一种机制*快速失败*请求 — 一种方法的潜在破坏进程请求立即终止进程。 无法使用常规异常处理设施处理可能已破坏程序状态和堆栈至无法恢复的的严重故障。 使用 `__fastfail` 终止开销最少的进程。  
   
  在内部，可以使用几个特定于体系结构的机制实现 `__fastfail`：  
   
 |体系结构|指令|代码参数的位置|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|操作码 0xDEFB|r0|  
   
  快速失败请求是独立的请求，通常只需执行两个指令。 一旦执行快速失败请求后，内核就会采取相应的行动。 在用户模式代码中，引发速快速失败事件时，除指令指针本身外不存在任何内存依赖项。 即使存在严重的内存破坏，也可最大限度地提高其可靠性。  
@@ -61,7 +62,7 @@ void __fastfail(unsigned int code);
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__fastfail`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]、ARM|  
+|`__fastfail`|x86、 x64、 ARM|  
   
  **标头文件** \<intrin.h >  
   

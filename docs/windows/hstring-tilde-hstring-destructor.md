@@ -1,5 +1,5 @@
 ---
-title: 'HString:: ~ HString 析构函数 |Microsoft 文档'
+title: 'HString:: ~ HString 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad64aa4cde3f3654c243e047f83669e5f02deea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 394cabbd09a3eb2322424cd873e4d91825fa8c51
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603394"
 ---
 # <a name="hstringhstring-destructor"></a>HString::~HString 析构函数
-销毁 HString 类的当前实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+销毁的当前实例**HString**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
 ~HString() throw()  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HString 类](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HString 类](../windows/hstring-class.md)

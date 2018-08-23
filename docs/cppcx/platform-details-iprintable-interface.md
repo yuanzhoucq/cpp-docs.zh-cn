@@ -1,5 +1,5 @@
 ---
-title: Platform::Details::IPrintable 接口 |Microsoft 文档
+title: Platform::Details::IPrintable 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,15 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::IPrintable Interface
 ms.assetid: b863a872-2563-4d90-88e0-c5a0bdde83f4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52509d2f3813d02ee576ff080bc57f368e5d977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40b7fe1d4ef032b8895cfe9095a9c5b9a6bd32df
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603012"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable 接口
 此接口仅供内部使用，不用于开发。  

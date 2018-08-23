@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405225"
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  
@@ -80,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  美元符号 `$` 在 Visual C++ 中是有效标识符。 Visual C++ 还允许在标识符中使用通用字符名称允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  
@@ -101,7 +102,7 @@ int main() {
   
  标识符的第一个字符必须是字母字符（大写、小写或带下划线 ( **_** ) 的字母）。 由于 C++ 标识符区分大小写，因此 `fileName` 与 `FileName`不同。  
   
- 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如， `Pint` 是一个合法标识符，即使它包含 `int`关键字。  
+ 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如，`Pint`是一个合法标识符，即使它包含**int**，这是一个关键字。  
   
  在标识符开头使用两个顺序下划线字符 ( **__** ) 或在单个前导下划线后跟一个大写字母的用法是专为所有范围的 C++ 实现保留的。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。  
   

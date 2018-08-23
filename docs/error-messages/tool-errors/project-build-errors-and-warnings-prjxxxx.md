@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316103"
 ---
 # <a name="project-build-errors-and-warnings-prjxxxx"></a>项目生成错误和警告 (PRJxxxx)
 

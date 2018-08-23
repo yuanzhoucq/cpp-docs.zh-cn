@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348675"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 向导的应用程序设置
 MFC DLL 向导的此页用于设计和添加到新的 MFC DLL 项目的基本功能。  

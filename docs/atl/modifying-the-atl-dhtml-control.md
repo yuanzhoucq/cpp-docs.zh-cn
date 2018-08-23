@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356490"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 ATL 控件向导提供起始代码，以便你可以生成并运行该控件，因此你可以查看在项目文件中写入这些方法的方式以及如何 DHTML 调用到控件的 c + + 代码中使用调度方法。 可以将任何调度方法添加到接口。 然后，你可以在 HTML 资源调用方法。  

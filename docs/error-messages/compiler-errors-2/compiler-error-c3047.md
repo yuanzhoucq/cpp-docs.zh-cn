@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246122"
 ---
 # <a name="compiler-error-c3047"></a>编译器错误 C3047
 OpenMP“sections”区域中的结构化块的前面必须是“#pragma omp section”  

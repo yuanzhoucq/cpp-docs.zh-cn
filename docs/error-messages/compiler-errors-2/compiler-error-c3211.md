@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249178"
 ---
 # <a name="compiler-error-c3211"></a>编译器错误 C3211
 “显式专用化”: 显式专用化正在使用部分专用化语法，请改用模板 <>  

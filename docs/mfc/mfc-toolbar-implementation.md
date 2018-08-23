@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929220"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具栏实现
 工具栏是[控件条](../mfc/control-bars.md)包含控件的位图图像。 这些映像可以行为类似于普通按钮、 复选框或单选按钮。 MFC 还提供类[CToolbar](../mfc/reference/ctoolbar-class.md)管理工具栏。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  从 MFC 4.0 版开始工具栏和工具提示实现而不特定于 MFC 以前的实现中使用 Windows 95 和更高版本的功能。  
   
- 为了向后兼容，MFC 将保留在类中的旧工具栏实现**COldToolBar**。 对于早期版本的 MFC 文档介绍**COldToolBar**下`CToolBar`。  
+ 为了向后兼容，MFC 将保留在类中的旧工具栏实现`COldToolBar`。 对于早期版本的 MFC 文档介绍`COldToolBar`下`CToolBar`。  
   
  在程序中创建第一个工具栏，通过在应用程序向导选择工具栏上的选项。 你还可以创建其他的工具栏。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296671"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>编译器警告（等级 3）C4278
 identifier： 类型库 tlb 中的标识符已宏;使用重命名限定符  

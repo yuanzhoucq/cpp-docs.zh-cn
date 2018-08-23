@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392492"
 ---
 # <a name="ismbb-routines"></a>_ismbb 例程
 使用当前区域设置或指定 LC_CTYPE 转换状态类别，针对特定条件测试给定整数值 `c` 。  

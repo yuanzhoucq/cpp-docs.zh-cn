@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352153"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多文档类型、视图和框架窗口
 [文档/视图创建](../mfc/document-view-creation.md)中介绍了文档及其视图和架构窗口之间的标准关系。 许多应用程序都支持单文档类型，但可以出现该类型的多个打开的文档，单文档类型指在文档上具有单个视图，而且每个文档只有一个框架窗口的文档类型。 但某些应用程序可能需要改变一个或多个这些默认值。  

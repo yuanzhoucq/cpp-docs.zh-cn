@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049605"
 ---
 # <a name="date"></a>@Date
 格式 mm/dd/yy （文本宏） 中的系统日期。  

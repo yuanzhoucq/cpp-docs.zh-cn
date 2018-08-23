@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341279"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Rich Edit 控件中的剪贴板操作
 你的应用程序可以将剪贴板内容粘贴到 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用最佳可用的剪贴板格式或特定剪贴板格式。 您还可以确定格式文本编辑控件是否能粘贴剪贴板格式。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233864"
 ---
 # <a name="compiler-error-c2715"></a>编译器错误 C2715
 type： 无法引发或捕捉此类型  

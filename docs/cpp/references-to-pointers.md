@@ -1,7 +1,7 @@
 ---
-title: 对指针的引用 |Microsoft 文档
+title: 对指针的引用 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1aff9718d36757e67e5c7e47a1470b4f9e428bf7
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572345"
 ---
 # <a name="references-to-pointers"></a>对指针的引用
 声明对指针的引用的方式与声明对对象的引用差不多。 声明对指针的引用将生成一个可像常规指针一样使用的可修改值。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  函数 `Add1` 和 `Add2` 在功能上是等效的（虽然它们的调用方式不同）。 二者的差异在于，`Add1` 使用双间接寻址，而 `Add2` 利用了对指针的引用的便利性。  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   
@@ -75,7 +76,7 @@ int main( int argc, char *argv[] ) {
   
    // Read a text file from the standard input device and  
    //  build a binary tree.  
-   //while( !cin.eof() )   
+   while( !cin.eof() )   
    {  
       cin.get( szBuf, sizeOfBuffer, '\n' );  
       cin.get();  

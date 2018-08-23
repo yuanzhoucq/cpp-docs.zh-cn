@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131337"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>使用 for each 循环访问 c + + 标准库集合
 `for each`关键字可用于循环访问 c + + 标准库集合。  

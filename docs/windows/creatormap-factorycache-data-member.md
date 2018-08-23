@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Factorycache 数据成员 |Microsoft 文档'
+title: 'Creatormap:: Factorycache 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4b231aa38b0146e40f779e0fa8d75c71ec5d0a6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606328"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache 数据成员
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-FactoryCache* factoryCache;  
-```  
-  
-## <a name="remarks"></a>备注  
- CreatorMap，将存储指向工厂缓存的指针。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [CreatorMap 结构](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+FactoryCache* factoryCache;
+```
+
+## <a name="remarks"></a>备注
+
+存储的工厂缓存指向**CreatorMap**。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[CreatorMap 结构](../windows/creatormap-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

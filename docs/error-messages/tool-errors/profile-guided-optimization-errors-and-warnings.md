@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317315"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>按配置文件优化错误和警告
 该节是生成工具所生成错误的参考。 有关特定错误消息的帮助，请单击输出窗口中的错误号并按 F1，键入错误号**查找**框中的索引，或单击相应的链接：  

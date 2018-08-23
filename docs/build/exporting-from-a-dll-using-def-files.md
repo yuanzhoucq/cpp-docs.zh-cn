@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369742"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 DEF 文件从 DLL 导出
 模块定义 (.def) 文件是包含描述的 DLL 的各种属性的一个或多个模块语句的文本文件。 如果你不使用 **__declspec （dllexport)** 关键字导出的 DLL 函数 DLL 要求的.def 文件。  

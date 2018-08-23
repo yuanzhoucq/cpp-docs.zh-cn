@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d93511ad4f4ca835e09b6eaa3f612f0888e844
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18d54d22106742cab8d1cdfe9c32adc0a98fb41b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929538"
 ---
 # <a name="changing-list-control-styles"></a>更改列表控件样式
 你可以更改列表控件的窗口样式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何时间在创建之后。 通过更改窗口样式，可以更改该控件使用的视图的类型。 例如，若要模拟资源管理器，可能会提供菜单项或工具栏按钮以切换不同的视图之间的控件： 图标视图、 列表视图中，依次类推。  
   
  例如，当用户选择菜单项，你可以进行调用[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)若要检索的控件的当前样式，然后调用[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591)重置样式。 有关详细信息，请参阅[使用列表视图控件](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中。  
   
- 中列出了可用样式[创建](../mfc/reference/clistctrl-class.md#create)。 样式`LVS_ICON`， `LVS_SMALLICON`， `LVS_LIST`，和`LVS_REPORT`指定四个列表控件视图。  
+ 中列出了可用样式[创建](../mfc/reference/clistctrl-class.md#create)。 样式**LVS_ICON**， **LVS_SMALLICON**， **LVS_LIST**，和**LVS_REPORT**指定四个列表控件视图。  
   
 ## <a name="extended-styles"></a>扩展的样式  
  除了列表控件的标准样式，还有另一个组，称为扩展样式。 这些样式中, 所述[扩展列表视图样式](http://msdn.microsoft.com/library/windows/desktop/bb774732)在 Windows SDK 中，提供了各种各样的自定义列表控件的行为的有用功能。 若要实现的行为的某些样式 （如悬停时选择），请调用[CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle)，传递所需的样式。 下面的示例演示了函数调用：  

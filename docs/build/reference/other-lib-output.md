@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371458"
 ---
 # <a name="other-lib-output"></a>其他 LIB 输出
 在默认模式中，你可以使用 /LIST 选项以显示有关生成的库的信息。 你可以将此输出重定向到文件。  

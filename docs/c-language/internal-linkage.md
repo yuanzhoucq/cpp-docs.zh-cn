@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383990"
 ---
 # <a name="internal-linkage"></a>内部链接
 如果对象或函数的文件范围标识符声明包含 storage-class-specifier static，则该标识符具有内部链接。 否则，该标识符具有外部链接。 有关 storage-class-specifier 非终止符的讨论，请参阅[存储类](../c-language/c-storage-classes.md)。  

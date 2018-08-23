@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343708"
 ---
 # <a name="image-information-in-image-lists"></a>图像列表中的图像信息
 [CImageList](../mfc/reference/cimagelist-class.md)包括一些从图像列表中检索信息的函数。 [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo)成员函数填充`IMAGEINFO`使用有关单个图像，包括图像和位图、 颜色平面和每像素位数的数量和的边框句柄的信息的结构图像位图中的映像。 您可使用此信息直接操作图像的位图。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111466"
 ---
 # <a name="finally"></a>finally
 除了`try`和`catch`子句，CLR 异常处理支持`finally`子句。 语义相等`__finally`块中，在结构化异常处理 (SEH)。 A`__finally`块可以按照`try`或`catch`块。  

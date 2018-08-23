@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932190"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控件：使用常用属性页
 本文讨论了常用属性页可用于 ActiveX 控件和如何使用它们。  
@@ -40,13 +41,13 @@ ms.lasthandoff: 05/04/2018
   
 -   [MFC ActiveX 控件：添加另一自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC 提供三个常用属性页，以供使用 ActiveX 控件： **CLSID_CColorPropPage**， **CLSID_CFontPropPage**，和**CLSID_CPicturePropPage**。 这些页面分别显示用于常用颜色、 字体和图片属性的用户界面。  
+ MFC 提供三个常用属性页，以供使用 ActiveX 控件： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 这些页面分别显示用于常用颜色、 字体和图片属性的用户界面。  
   
  若要将这些属性页合并到一个控件，请向初始化的属性页 Id 的控件的数组的代码添加及其 Id。 在下面的示例中，此代码位于控件实现文件 (。CPP) 中，初始化数组以包含所有三个常用属性页和的默认属性页 (名为`CMyPropPage`在此示例中):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- 请注意的计数属性页面，在`BEGIN_PROPPAGEIDS`宏，为 4。 这表示 ActiveX 控件支持的属性页中的数。  
+ 请注意，属性页中，在 BEGIN_PROPPAGEIDS 宏的计数 4。 这表示 ActiveX 控件支持的属性页中的数。  
   
  这些修改之后，重新生成项目。 控件现在具有字体、 图片和颜色属性的属性页。  
   

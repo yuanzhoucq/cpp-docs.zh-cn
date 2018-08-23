@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391621"
 ---
 # <a name="conversions-from-signed-integral-types"></a>从带符号整型的转换
 当一个带符号整数转换为一个具有相等或更大大小的无符号整数且该带符号整数的值不为负时，值保持不变。 转换是通过对带符号整数进行符号扩展来实现的。 通过截断高位将带符号整数转换为较短的带符号整数。 结果被解释为无符号值，如此示例中所示。  

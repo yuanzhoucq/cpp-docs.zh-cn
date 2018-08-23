@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135854"
 ---
 # <a name="managed-types-ccl"></a>托管类型 (C++/CL)
 托管的类型和创建的声明和使用这些类型的对象的语法已显著更改从托管扩展的 c + + 到 Visual c + +。 这样做是为了提升它们在 ISO c + + 类型系统的集成。 以下各小节将详细介绍这些更改。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
  [析构函数语义的更改](../dotnet/changes-in-destructor-semantics.md)  
  讨论非确定性终止`Finalize`与`Dispose`，引用对象，以及使用显式的后果，这`Finalize`。  
   
- **注意：**的委托讨论将推迟至[委托和事件](../dotnet/delegates-and-events.md)以便提供一个类的常规主题中的事件成员[类或接口中的成员声明(C + + /CLI CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
+ **注意：** 的委托讨论将推迟至[委托和事件](../dotnet/delegates-and-events.md)以便提供一个类的常规主题中的事件成员[类或接口中的成员声明(C + + /CLI CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
   
 ## <a name="see-also"></a>请参阅  
  [C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)   

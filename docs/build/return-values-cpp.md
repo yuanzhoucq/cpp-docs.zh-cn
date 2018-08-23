@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380316"
 ---
 # <a name="return-values-c"></a>返回值 (C++)
 可以适合于 64 位的标量返回值通过 RAX 返回，这包括 __m64 类型。 非标量类型包括浮点数、 双精度型值和矢量类型，如[__m128](../cpp/m128.md)， [__m128i](../cpp/m128i.md)， [__m128d](../cpp/m128d.md)在 XMM0 中返回。 返回到 RAX 或 XMM0 中的值的未使用位数的状态未定义。  

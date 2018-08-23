@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962108"
 ---
 # <a name="alignedunion-class"></a>aligned_union 类
 
@@ -38,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>参数
 
-`Len` 在联合的最大类型对齐值。
+*Len*联合中的最大类型的对齐值。
 
-`Types` 基础联合中不同类型。
+*类型*基础联合中的不同类型。
 
 ## <a name="remarks"></a>备注
 
-使用此模板类来获取对齐方式和在未初始化的存储中存储一个联合所需的大小。 成员 typedef `type` 为 `Types` 中列出的任何类型的存储命名一个合适的 POD 类型；最小大小为 `Len`。 类型 `std::size_t` 的静态成员 `alignment_value` 包含 `Types` 中列出的所有类型所要求的最严格的对齐方式。
+使用此模板类来获取对齐方式和在未初始化的存储中存储一个联合所需的大小。 成员 typedef`type`适用于存储中列出的任何类型的 POD 名称，键入*类型*; 最小大小是*Len*。 静态成员`alignment_value`类型的`std::size_t`包含中列出的所有类型的所需的最严格的对齐方式*类型*。
 
 ## <a name="example"></a>示例
 

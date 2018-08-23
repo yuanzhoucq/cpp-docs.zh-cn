@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381767"
 ---
 # <a name="cast-operators"></a>强制转换运算符
 在特定情况下，类型强制转换提供了用于显式转换对象类型的方法。  

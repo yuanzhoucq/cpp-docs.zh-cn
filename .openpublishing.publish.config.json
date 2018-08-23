@@ -6,6 +6,8 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "vcppdocs",
       "locale": "zh-cn",
+      "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -17,6 +19,9 @@
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": [
+    "ceicnotifications@microsoft.com"
+  ],
   "branches_to_filter": [
     "live"
   ],

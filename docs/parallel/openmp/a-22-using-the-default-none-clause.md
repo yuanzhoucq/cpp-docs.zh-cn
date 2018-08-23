@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693880"
 ---
 # <a name="a22---using-the-defaultnone-clause"></a>A.22   使用 default(none) 子句
 下面的示例将区分开来的会影响变量`default(none)`子句不从：  

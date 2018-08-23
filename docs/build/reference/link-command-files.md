@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375280"
 ---
 # <a name="link-command-files"></a>LINK 命令文件
 可以将命令行自变量传递到命令文件形式的链接。 若要指定到链接器命令文件，请使用以下语法：  

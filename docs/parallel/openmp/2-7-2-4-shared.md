@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695689"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
 此子句共享中出现的变量*变量列表*团队中的所有线程间。 在团队中的所有线程都访问相同的存储区域，以进行**共享**变量。  

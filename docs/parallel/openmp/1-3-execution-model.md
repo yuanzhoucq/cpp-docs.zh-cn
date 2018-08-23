@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687889"
 ---
 # <a name="13-execution-model"></a>1.3 执行模型
 OpenMP 使用并行执行 fork-join 模型。 虽然此 fork-join 模型可用于解决各种问题，但它是某种程度上针对大型数组基于应用程序。 OpenMP 旨在到将立即执行正确同时并行程序 （多个执行线程和完整的 OpenMP 支持库） 的支持计划并为顺序程序 （忽略的指令和简单的 OpenMP 存根 （stub） 库）。 但是，它有可能，并且允许开发不无法正确工作时按顺序执行的程序。 此外，不同的并行度可能会导致不同的数值结果由于数值运算的关联中的变化。 例如，串行添加减少可能具有比并行缩减添加关联的不同模式。 这些不同的关联可能会更改浮点加法的结果。  

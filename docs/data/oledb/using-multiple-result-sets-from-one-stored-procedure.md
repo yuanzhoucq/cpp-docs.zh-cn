@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106305"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>使用一个存储过程返回的多个结果集
 大多数存储的过程返回多个结果集。 此类存储的过程通常包括一个或多个选择语句。 使用者需要考虑这一点以便处理所有结果集。  

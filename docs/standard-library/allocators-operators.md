@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962951"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 运算符
 
@@ -38,8 +39,8 @@ bool operator!=(
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要测试是否不相等的其中一个分配器对象。|
-|`right`|要测试是否不相等的其中一个分配器对象。|
+|*left*|要测试是否不相等的其中一个分配器对象。|
+|*right*|要测试是否不相等的其中一个分配器对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -64,8 +65,8 @@ bool operator==(
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要测试是否相等的其中一个分配器对象。|
-|`right`|要测试是否相等的其中一个分配器对象。|
+|*left*|要测试是否相等的其中一个分配器对象。|
+|*right*|要测试是否相等的其中一个分配器对象。|
 
 ### <a name="return-value"></a>返回值
 

@@ -1,5 +1,5 @@
 ---
-title: Windows::Foundation::Collections Namespace (C + + /cli CX) |Microsoft 文档
+title: Windows::Foundation::Collections Namespace (C + + /cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d889f68db2c631921f8c34f63d21ee1f5859bd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586706"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空间 (C++/CX)
-C + + /cli CX 补充 Windows::Foundation::Collections 命名空间进行简化使用 Vector、 VectorView、 地图中和 MapView 集合类的函数。  
+C + + /cli CX 补充 Windows::Foundation::Collections 命名空间进行简化使用 Vector、 VectorView、 图和 MapView 集合类的函数。  
   
 ## <a name="syntax"></a>语法  
   

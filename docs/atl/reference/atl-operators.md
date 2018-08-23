@@ -1,5 +1,5 @@
 ---
-title: ATL 运算符 |Microsoft 文档
+title: ATL 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75c9ffb8c918cce70ad1e150dd80cb07ebdd7b34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7ffb1c782e4b527b5e8a930a07d74859f7d8824c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880198"
 ---
 # <a name="atl-operators"></a>ATL 运算符
-本部分包含有关 ATL 全局运算符的参考主题。  
+本部分包含的 ATL 全局运算符的参考主题。  
   
 |运算符|描述|  
 |--------------|-----------------|  
-|[operator ==](#operator_eq_eq)|比较两个`CSid`对象或`SID`是否相等的结构。|  
-|[运算符 ！ =](#operator_neq)|比较两个`CSid`对象或`SID`是否不相等的结构。|  
-|[运算符 <](#operator_lt)|如果测试`CSid`对象或`SID`运算符左侧的结构是小于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
-|[运算符 >](#operator_gt)|如果测试`CSid`对象或`SID`运算符左侧的结构是大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
+|[operator ==](#operator_eq_eq)|比较两个`CSid`对象或`SID`结构是否相等。|  
+|[运算符 ！ =](#operator_neq)|比较两个`CSid`对象或`SID`结构是否不相等。|  
+|[运算符 <](#operator_lt)|如果测试`CSid`对象或`SID`运算符左侧的结构是不会早于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
+|[运算符 >](#operator_gt)|如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
 |[运算符 < =](#operator_lt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是否小于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
 |[运算符 > =](#operator_gt__eq)|如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。|  
   
@@ -50,7 +51,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果对象相等， **false**如果它们不相等。  
+ 如果对象相等，则返回 FALSE 如果它们不相等，则返回 TRUE。  
   
 ##  <a name="operator_neq"></a>  运算符 ！ =  
  比较`CSid`对象或`SID`（安全标识符） 结构是否不相等。  
@@ -60,54 +61,54 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lhs`  
+ *lhs*  
  第一个`CSid`对象或`SID`结构进行比较。  
   
- `rhs`  
+ *rhs*  
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**对象是否不相等，如果**false**如果它们是否相等。  
+ 如果对象不相等，如果它们相等则为 FALSE，则返回 TRUE。  
   
 ##  <a name="operator_lt"></a>  运算符 <  
- 如果测试`CSid`对象或`SID`运算符左侧的结构是小于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
+ 如果测试`CSid`对象或`SID`运算符左侧的结构是不会早于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
   
 ```   
 bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
 ```  
   
 ### <a name="parameters"></a>参数  
- `lhs`  
+ *lhs*  
  第一个`CSid`对象或`SID`结构进行比较。  
   
- `rhs`  
+ *rhs*  
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果的地址`lhs`对象是否的地址小于`rhs`对象， **false**否则为。  
+ 如果返回 TRUE 的地址*lhs*对象是否小于的地址*rhs*对象，则返回 FALSE 否则。  
   
 ### <a name="remarks"></a>备注  
- 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供 c + + 标准库集合类与兼容性。  
+ 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。  
   
 ##  <a name="operator_gt"></a>  运算符 >  
- 如果测试`CSid`对象或`SID`运算符左侧的结构是大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
+ 如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
   
 ```   
 bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
 ```  
   
 ### <a name="parameters"></a>参数  
- `lhs`  
+ *lhs*  
  第一个`CSid`对象或`SID`结构进行比较。  
   
- `rhs`  
+ *rhs*  
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果的地址`lhs`大于的地址`rhs`， **false**否则为。  
+ 如果，则返回 TRUE 的地址*lhs*大于的地址*rhs*FALSE，否则为。  
   
 ### <a name="remarks"></a>备注  
- 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供 c + + 标准库集合类与兼容性。  
+ 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。  
   
 ##  <a name="operator_lt__eq"></a>  运算符 < =  
  如果测试`CSid`对象或`SID`运算符左侧的结构是否小于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
@@ -117,17 +118,17 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lhs`  
+ *lhs*  
  第一个`CSid`对象或`SID`结构进行比较。  
   
- `rhs`  
+ *rhs*  
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果的地址`lhs`小于或等于的地址`rhs`， **false**否则为。  
+ 如果返回 TRUE 的地址*lhs*小于或等于的地址*rhs*，则返回 FALSE 否则为。  
   
 ### <a name="remarks"></a>备注  
- 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供 c + + 标准库集合类与兼容性。  
+ 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。  
   
 ##  <a name="operator_gt__eq"></a>  运算符 > =  
  如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。  
@@ -137,17 +138,17 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lhs`  
+ *lhs*  
  第一个`CSid`对象或`SID`结构进行比较。  
   
- `rhs`  
+ *rhs*  
  第二个`CSid`对象或`SID`结构进行比较。  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果的地址`lhs`大于或等于的地址`rhs`， **false**否则为。  
+ 如果，则返回 TRUE 的地址*lhs*大于或等于的地址*rhs*FALSE，否则为。  
   
 ### <a name="remarks"></a>备注  
- 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供 c + + 标准库集合类与兼容性。
+ 此运算符作用于的地址`CSid`对象或`SID`结构，并实现以提供与 c + + 标准库集合类的兼容性。
 
 
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415489"
 ---
 # <a name="routine-mappings"></a>例程映射
 TCHAR.H 中定义了一般文本例程映射。 `_tccpy` 和 `_tclen` 映射到 MBCS 模型中的函数；出于完整性的考虑，它们将映射到 SBCS 和 Unicode 模型中的宏或内联函数。 有关一般文本例程的信息，请参见与相应的 `SBCS`、`_MBCS` 或 `_UNICODE` 相关的例程的帮助主题。  

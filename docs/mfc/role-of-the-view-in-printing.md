@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379250"
 ---
 # <a name="role-of-the-view-in-printing"></a>视图在打印中的作用
 您的视图还将对其关联文档的打印具有两个重要影响。  

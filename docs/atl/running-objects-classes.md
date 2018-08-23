@@ -1,5 +1,5 @@
 ---
-title: 运行对象类 (ATL) |Microsoft 文档
+title: 运行对象类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958557"
 ---
 # <a name="running-objects-classes"></a>正在运行的对象类
 下面的类为运行对象提供支持：  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)确定如果正在运行一个对象，将其强制转换来运行，或进入运行状态将其锁定。  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)确定如果正在运行一个对象，将其强制转换来运行，或锁定到正在运行状态。  
   
 ## <a name="related-articles"></a>相关文章  
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  

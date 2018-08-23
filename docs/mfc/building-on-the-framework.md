@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341549"
 ---
 # <a name="building-on-the-framework"></a>基于框架生成
 配置应用程序与 MFC 框架中的角色是提供特定于应用程序的源代码，并将这些组件连接通过定义哪些消息和响应的命令。 使用 c + + 语言和标准 c + + 方法从提供的类库中派生您自己应用程序特定的类并将重写并增加基类的行为。  

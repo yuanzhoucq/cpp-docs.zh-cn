@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378335"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes（列出包含文件）
 使编译器将输出包含文件的列表。 嵌套包括文件还可以显示 （文件从你包含的文件所包含的）。  

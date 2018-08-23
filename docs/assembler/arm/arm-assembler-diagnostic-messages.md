@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052768"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 汇编程序诊断消息
 Microsoft ARM 汇编程序 (*armasm*) 遇到它们时发出诊断警告和错误。 本指南介绍了最常见的消息。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;返回&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;returns&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336731"
 ---
-# <a name="ltreturnsgt-visual-c"></a>&lt;返回&gt;（Visual c + +）
+# <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 在方法声明的注释中应使用 \<returns> 标记来描述返回值。  
   
 ## <a name="syntax"></a>语法  

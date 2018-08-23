@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386925"
 ---
 # <a name="recursive-functions"></a>递归函数
 C 程序中的任何函数都可以以递归方式调用；也就是说，函数可以调用自己。 递归调用的数量受堆栈的大小的限制。 有关设置堆栈大小的链接器选项的信息，请参阅 [/STACK（堆栈分配）](../build/reference/stack-stack-allocations.md)(/STACK) 链接器选项。 每次调用函数时，都会为参数以及 auto 和 register 变量分配新存储，以便不会覆盖它们在前面未完成的调用中的值。 只有从中创建参数的函数的实例才能直接访问该参数。 前面的参数对函数的后续实例不可直接访问。  

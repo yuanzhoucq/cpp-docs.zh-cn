@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451779"
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +64,16 @@ void *_malloc_dbg(
 内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指向已请求分配操作的源文件名的指针或 NULL。
+指向已请求分配操作的源文件名或**NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行数或 NULL。
+请求分配操作所在的源文件中的行数或**NULL**。
 
 *Filename*和*linenumber*参数才可用 **_malloc_dbg**显式调用或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)已定义预处理器常量。
 
 ## <a name="return-value"></a>返回值
 
-成功完成时，此函数将返回指向分配的内存块的用户部分的指针、调用新处理程序函数，或者返回 NULL。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [malloc](malloc.md) 函数。
+在成功完成，此函数将返回指向分配的内存块的用户部分的指针、 调用新处理程序函数，或返回**NULL**。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [malloc](malloc.md) 函数。
 
 ## <a name="remarks"></a>备注
 

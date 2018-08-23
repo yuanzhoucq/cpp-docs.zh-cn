@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929999"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 本文介绍如何与相关的开发 ActiveX 控件的高级的主题。 这些方法包括：  
@@ -78,9 +79,9 @@ ms.lasthandoff: 05/04/2018
   
 8.  在**获取函数**和**设置函数**框中，为 Get 和 Set 函数键入唯一名称，或接受默认名称。  
   
-9. 添加名为的参数`row`(类型`short`)，并使用**参数名称**和**参数类型**控件。  
+9. 添加名为的参数*行*(类型*短*)，并使用**参数名称**和**参数类型**控件。  
   
-10. 添加名为的第二个参数`column`(类型`short`)。  
+10. 添加名为的第二个参数*列*(类型*短*)。  
   
 11. 单击 **“完成”**。  
   
@@ -110,48 +111,48 @@ ms.lasthandoff: 05/04/2018
   
 |Error|描述|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|非法函数调用|  
-|**CTL_E_OVERFLOW**|溢出|  
-|**CTL_E_OUTOFMEMORY**|内存不足|  
-|**CTL_E_DIVISIONBYZERO**|被零除|  
-|**CTL_E_OUTOFSTRINGSPACE**|字符串空间不足|  
-|**CTL_E_OUTOFSTACKSPACE**|堆栈空间不足|  
-|**CTL_E_BADFILENAMEORNUMBER**|错误的文件名或文件号|  
-|**CTL_E_FILENOTFOUND**|找不到文件|  
-|**CTL_E_BADFILEMODE**|错误的文件模式|  
-|**CTL_E_FILEALREADYOPEN**|文件已打开|  
-|**CTL_E_DEVICEIOERROR**|设备 I/O 错误|  
-|**CTL_E_FILEALREADYEXISTS**|文件已存在|  
-|**CTL_E_BADRECORDLENGTH**|错误的记录长度|  
-|**CTL_E_DISKFULL**|磁盘已满|  
-|**CTL_E_BADRECORDNUMBER**|错误的记录号|  
-|**CTL_E_BADFILENAME**|错误的文件名称|  
-|**CTL_E_TOOMANYFILES**|文件太多|  
-|**CTL_E_DEVICEUNAVAILABLE**|设备不可用|  
-|**CTL_E_PERMISSIONDENIED**|权限被拒绝|  
-|**CTL_E_DISKNOTREADY**|磁盘未准备好|  
-|**CTL_E_PATHFILEACCESSERROR**|路径/文件访问错误|  
-|**CTL_E_PATHNOTFOUND**|找不到路径|  
-|**CTL_E_INVALIDPATTERNSTRING**|无效模式字符串|  
-|**CTL_E_INVALIDUSEOFNULL**|为 NULL 的使用无效|  
-|**CTL_E_INVALIDFILEFORMAT**|文件格式无效|  
-|**CTL_E_INVALIDPROPERTYVALUE**|无效的属性值|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|无效的属性数组索引|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|运行时不支持设置。|  
-|**CTL_E_SETNOTSUPPORTED**|不支持 Set 语句(只读属性)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|需要属性数组索引|  
-|**CTL_E_SETNOTPERMITTED**|不允许进行设置|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|运行时不支持 Get 语句|  
-|**CTL_E_GETNOTSUPPORTED**|不支持 Get（只写属性）|  
-|**CTL_E_PROPERTYNOTFOUND**|找不到属性|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|剪贴板格式无效|  
-|**CTL_E_INVALIDPICTURE**|无效的图片|  
-|**CTL_E_PRINTERERROR**|打印机错误|  
-|**CTL_E_CANTSAVEFILETOTEMP**|无法将文件保存到 TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|未找到搜索文本|  
-|**CTL_E_REPLACEMENTSTOOLONG**|替换内容太长|  
+|CTL_E_ILLEGALFUNCTIONCALL|非法函数调用|  
+|CTL_E_OVERFLOW|溢出|  
+|CTL_E_OUTOFMEMORY|内存不足|  
+|CTL_E_DIVISIONBYZERO|被零除|  
+|CTL_E_OUTOFSTRINGSPACE|字符串空间不足|  
+|CTL_E_OUTOFSTACKSPACE|堆栈空间不足|  
+|CTL_E_BADFILENAMEORNUMBER|错误的文件名或文件号|  
+|CTL_E_FILENOTFOUND|找不到文件|  
+|CTL_E_BADFILEMODE|错误的文件模式|  
+|CTL_E_FILEALREADYOPEN|文件已打开|  
+|CTL_E_DEVICEIOERROR|设备 I/O 错误|  
+|CTL_E_FILEALREADYEXISTS|文件已存在|  
+|CTL_E_BADRECORDLENGTH|错误的记录长度|  
+|CTL_E_DISKFULL|磁盘已满|  
+|CTL_E_BADRECORDNUMBER|错误的记录号|  
+|CTL_E_BADFILENAME|错误的文件名称|  
+|CTL_E_TOOMANYFILES|文件太多|  
+|CTL_E_DEVICEUNAVAILABLE|设备不可用|  
+|CTL_E_PERMISSIONDENIED|权限被拒绝|  
+|CTL_E_DISKNOTREADY|磁盘未准备好|  
+|CTL_E_PATHFILEACCESSERROR|路径/文件访问错误|  
+|CTL_E_PATHNOTFOUND|找不到路径|  
+|CTL_E_INVALIDPATTERNSTRING|无效模式字符串|  
+|CTL_E_INVALIDUSEOFNULL|为 NULL 的使用无效|  
+|CTL_E_INVALIDFILEFORMAT|文件格式无效|  
+|CTL_E_INVALIDPROPERTYVALUE|无效的属性值|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|无效的属性数组索引|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|运行时不支持设置。|  
+|CTL_E_SETNOTSUPPORTED|不支持 Set 语句(只读属性)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|需要属性数组索引|  
+|CTL_E_SETNOTPERMITTED|不允许进行设置|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|运行时不支持 Get 语句|  
+|CTL_E_GETNOTSUPPORTED|不支持 Get（只写属性）|  
+|CTL_E_PROPERTYNOTFOUND|找不到属性|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|剪贴板格式无效|  
+|CTL_E_INVALIDPICTURE|无效的图片|  
+|CTL_E_PRINTERERROR|打印机错误|  
+|CTL_E_CANTSAVEFILETOTEMP|无法将文件保存到 TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|未找到搜索文本|  
+|CTL_E_REPLACEMENTSTOOLONG|替换内容太长|  
   
- 如有必要，使用**CUSTOM_CTL_SCODE**宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如：  
+ 如果有必要，请使用 CUSTOM_CTL_SCODE 宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如：  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -173,9 +174,9 @@ ms.lasthandoff: 05/04/2018
   
 -   使用添加成员变量向导选择**控制变量**，然后选择控件的 id。 输入一个成员变量名称并选择控件的包装类作为**控件类型**。  
   
-     -或-  
+     或  
   
--   为对话框项声明的局部变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装器类，`IDC_MYCTRL1`是控件的 ID):  
+-   为对话框项声明的局部变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装器类，IDC_MYCTRL1 是控件的 ID):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

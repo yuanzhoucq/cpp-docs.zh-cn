@@ -1,5 +1,5 @@
 ---
-title: 在 UWP 应用中使用 c + + AMP |Microsoft 文档
+title: 在 UWP 应用中使用 c + + AMP |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3676bc8f2c4ecbd89f01fb9257c7306a66827548
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584011"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>在 UWP 应用中使用 c + + AMP
-可以在通用 Windows 平台 (UWP) 应用程序中使用 c + + AMP (c + + Accelerated Massive Parallelism) 在 GPU （图形处理单元） 或其他计算加速器上执行计算。 但是，C++ AMP 不提供用于直接处理 Windows 运行时类型的 API，并且 Windows 运行时不提供 C++ AMP 包装器。 当你在代码（包括你自己创建的代码）中使用Windows 运行时类型时，必须将它们转换为与 C++ AMP 兼容的类型。  
+可以使用通用 Windows 平台 (UWP) 应用程序中的 c + + AMP (c + + Accelerated Massive Parallelism) 在 GPU （图形处理单元） 或其他计算加速器上执行计算。 但是，C++ AMP 不提供用于直接处理 Windows 运行时类型的 API，并且 Windows 运行时不提供 C++ AMP 包装器。 当你在代码（包括你自己创建的代码）中使用Windows 运行时类型时，必须将它们转换为与 C++ AMP 兼容的类型。  
   
 ## <a name="performance-considerations"></a>性能注意事项  
- 如果你使用[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 若要创建通用 Windows 平台 (UWP) 应用程序，我们建议你使用连续存储配合纯旧数据 (POD) 类型 — 例如，`std::vector`或 C 样式数组-将使用的数据与 c + + AMP。 这可以帮助你实现更高的性能比使用非 POD 类型或 Windows RT 容器，因为没有封送处理具有发生。  
+ 
+如果正在使用 Visual c + + 组件扩展 C + + /cli CX 创建通用 Windows 平台 (UWP) 应用，我们建议使用纯旧数据 (POD) 类型和连续存储 — 例如，`std::vector`或 C 样式数组 — 将数据与 c + + AMP 一起使用。 这可以帮助您获得更高的性能比使用非 POD 类型或 Windows RT 容器，因为没有封送处理有发生。  
   
- C + + AMP 内核，访问数据存储在这种方式，只需包装`std::vector`或数组中的存储`concurrency::array_view`，然后使用中的数组视图`concurrency::parallel_for_each`循环：  
+在 c + + AMP 内核，访问数据存储在这种方式，我们只需封装`std::vector`或数组中的存储`concurrency::array_view`，然后使用数组视图中的`concurrency::parallel_for_each`循环：  
   
 ```cpp  
 // simple vector addition example  
@@ -45,22 +47,23 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 ```  
   
 ## <a name="marshaling-windows-runtime-types"></a>排列 Windows 运行时类型  
- 使用 Windows 运行时 API 时，可能需要对存储在 Windows 运行时容器（例如 `Platform::Array<T>^`）或复杂数据类型（例如通过使用 `ref` 关键字或 `value` 关键字声明的类或结构）中的数据应用 C++ AMP。 在这些情况下，你需要执行一些额外的工作，以使数据可用于 c + + AMP。  
+ 
+与 Windows 运行时 Api 时，你可能想要在如 Windows 运行时容器中存储的数据使用 c + + AMP`Platform::Array<T>^`或在复杂数据类型，例如通过使用声明的类或结构**ref**关键字或**值**关键字。 在这些情况下，必须执行一些额外工作，以使数据可供 c + + AMP。  
   
 ### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform:: array\<T > ^，其中 T 为 POD 类型  
- 当遇到`Platform::Array<T>^`，T 是 POD 类型，你可以使用访问其基础存储`get`成员函数：  
+当遇到`Platform::Array<T>^`和 T 为 POD 类型，你可以只需通过使用访问其基础存储`get`成员函数：  
   
 ```cpp  
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API  
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```  
   
- 如果 T 不是 POD 类型，使用以下部分中所述的技术来与 c + + AMP 中使用的数据。  
+如果 T 不是 POD 类型，使用下一节中所述的技术与 c + + AMP 中使用的数据。  
   
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Windows 运行时类型: 引用类和值类  
- C + + AMP 不支持复杂数据类型。 这包括非 POD 类型和通过使用声明的任何类型`ref`关键字或`value`关键字。 如果在中使用类型不受支持`restrict(amp)`生成上下文，编译时错误。  
+C + + AMP 不支持复杂数据类型。 这包括非 POD 类型和通过使用声明的任何类型**ref**关键字或**值**关键字。 如果不支持的类型中使用`restrict(amp)`生成上下文，编译时错误。  
   
- 当你遇到类型不受支持时，你可以复制到其数据值得关注的部分`concurrency::array`对象。 除了使数据可用于 c + + AMP 来使用，此手动复制方法还可提高性能，通过最大化数据位置，并通过确保不会使用的数据不复制到快捷键。 您可以通过改进性能进一步*暂存数组*，这是一种特殊形式的`concurrency::array`，它提供对数组应适合与其他阵列之间的频繁传输 AMP 运行时的提示指定的加速键。  
+遇到不支持的类型，可以将复制到其数据的有趣部分`concurrency::array`对象。 除了使数据可用于 c + + AMP 可使用，此手动复制方法还可以提高性能，通过最大化数据局部性以及确保不会使用的数据不会复制到快捷键。 可以通过使用提高性能进一步*暂存数组*，这是一种特殊形式`concurrency::array`，它提供对 AMP 运行时数组应进行优化和其他数组之间的频繁传输上的提示指定的加速器。  
   
 ```cpp  
 // pixel_color.h  
@@ -118,6 +121,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [创建第一个 UWP 应用使用 c + +](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
- [C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
-
+ 
+[创建第一个 UWP 应用使用 c + +](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
+[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

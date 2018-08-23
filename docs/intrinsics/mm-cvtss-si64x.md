@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtss_si64x |Microsoft 文档
+title: _mm_cvtss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540174"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft 专用**  
   
- 生成[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]扩展的版本将转换标量单精度浮点数为 64 位整数 (`cvtss2si`) 指令。  
+ 生成扩展的 x64 版本的转换标量单精度浮点数到 64 位整数 (`cvtss2si`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +39,21 @@ __int64 _mm_cvtss_si64x(
   
 #### <a name="parameters"></a>参数  
  [in] `value`  
- `__m128`结构，它包含浮点的值。  
+ `__m128`结构，它包含浮点数。  
   
 ## <a name="return-value"></a>返回值  
- 64 位整数，为整数的第一个浮点值的转换的结果。  
+ 一个 64 位整数的第一个浮点值转换为整数的结果。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|X64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 转换为整数的结构值的第一个元素，并将其返回。 在 MXCSR 舍入的控制位用于确定舍入的行为。 舍入模式默认值为舍入到最接近，舍入到偶数如果的小数部分为 0.5。 因为`__m128`结构表示的 XMM 寄存器，此内部操作将从 XMM 寄存器的值，并将其写入系统内存。  
+ 转换为整数并返回结构值的第一个元素。 在 MXCSR 舍入的控制位用于确定舍入行为。 默认舍入模式为舍入到最近的如果小数部分为 0.5 则舍入为偶数。 因为`__m128`结构表示 XMM 寄存器 XMM 寄存器，此内部函数采用一个值，并将其写入到系统内存。  
   
  此例程仅可用作内部函数。  
   

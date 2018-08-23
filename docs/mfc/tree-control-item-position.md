@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382146"
 ---
 # <a name="tree-control-item-position"></a>树控件项位置
 向树控件添加项时设置某一项的初始位置 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 通过使用`InsertItem`成员函数。 成员函数调用指定的父项的句柄和句柄的新项之后要插入的项。 第二个句柄必须标识给定父的子项目或这些值之一： `TVI_FIRST`， `TVI_LAST`，或`TVI_SORT`。  

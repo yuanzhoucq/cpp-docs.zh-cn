@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: object 类 |Microsoft 文档'
+title: 'Platform:: object 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,18 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601733"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
-提供 ref 类和 ref 结构在 Windows 运行时应用程序的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
+提供 ref 类和 ref 结构在 Windows 运行时应用中的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -98,7 +99,7 @@ public:int GetHashCode()
  唯一标识此对象的数值。  
   
 ### <a name="remarks"></a>备注  
- 可以在映射中使用 GetHashCode 创建对象的键。 你可以通过使用比较哈希代码[object:: equals](#equals)。 如果代码路径极为重要，并且 `GetHashCode` 和 `Equals` 不足够快，则可以下降到基础 COM 层并执行本机 `IUnknown` 指针比较。  
+ 可以在映射中使用 GetHashCode 创建对象的键。 可以通过使用比较哈希代码[object:: equals](#equals)。 如果代码路径极为重要，并且 `GetHashCode` 和 `Equals` 不足够快，则可以下降到基础 COM 层并执行本机 `IUnknown` 指针比较。  
   
 
 
@@ -113,14 +114,14 @@ Object::GetType()
 
   
 ### <a name="property-valuereturn-value"></a>属性值/返回值  
- A [platform:: type](../cppcx/platform-type-class.md)描述对象的运行时类型的对象。  
+ 一个[platform:: type](../cppcx/platform-type-class.md)描述对象的运行时类型的对象。  
   
 ### <a name="remarks"></a>备注  
- 静态[type:: gettypecode](../cppcx/platform-type-class.md#gettypecode)可以用于获取[platform:: typecode 枚举](../cppcx/platform-typecode-enumeration.md)表示当前类型的值。 这对于内置类型通常很有用。 除了任何 ref 类的类型代码[platform:: string](../cppcx/platform-string-class.md)为对象 (1)。  
+ 静态[type:: gettypecode](../cppcx/platform-type-class.md#gettypecode)可用于获取[platform:: typecode 枚举](../cppcx/platform-typecode-enumeration.md)值，该值表示当前类型。 这对于内置类型通常很有用。 除了任何 ref 类的类型代码[platform:: string](../cppcx/platform-string-class.md)是对象 (1)。  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)类使用在 Windows Api 中用作 Windows 组件和应用之间传递类型信息的独立于语言的方式。 T[platform:: type 类](../cppcx/platform-type-class.md)有之间进行转换的运算符`Type`和`TypeName`。  
+ [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)作为 Windows 组件和应用之间传递类型信息的独立于语言的方法在 Windows Api 中使用类。 T[platform:: type 类](../cppcx/platform-type-class.md)之间进行转换有运算符`Type`和`TypeName`。  
   
- 使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符可返回`Platform::Type`对象的类名，例如在 XAML 页面之间导航时：  
+ 使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符可返回`Platform::Type`对象的类名，例如，XAML 页面之间导航时：  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
@@ -129,7 +130,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>请参阅  
  [Platform:: type 类](../cppcx/platform-type-class.md)   
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)   
- [类型 System](../cppcx/type-system-c-cx.md
+ [类型系统](../cppcx/type-system-c-cx.md
   
 ## <a name="ctor"></a>  Object:: object 构造函数
 初始化该对象类的新实例。  

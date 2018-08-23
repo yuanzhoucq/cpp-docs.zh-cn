@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690863"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   嵌套的 for 指令
 下面的示例对`for`指令嵌套 ([部分 2.9](../../parallel/openmp/2-9-directive-nesting.md)在页上 33) 兼容因为内部和外部`for`指令将绑定到不同的并行区域：  

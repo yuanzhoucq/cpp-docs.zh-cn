@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961108"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 运算符
 
@@ -63,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-`Ch` 一个字符。
+*Ch*字符。
 
-`Istr` 一个流。
+*Istr*流。
 
-`str` 一个字符串。
+*str*字符串。
 
-`val` 一种类型。
+*val*类型。
 
 ### <a name="return-value"></a>返回值
 
@@ -87,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-提取多达 *N* - 1 个元素，并将其存储在以 _ *Str* 开始的数组中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大于 0，则 *N* 为 `Istr`. **width**；否则为可声明的 **Elem** 的最大数组的大小。 此函数始终在所存储的任何提取元素后存储值 **Elem()**。 遇到文件末尾、值为 **Elem**(0) 的字符（不会被提取）或会被 [ws](../standard-library/istream-functions.md#ws) 放弃的任何元素（不会被提取）时，提取会提前结束。 如果此函数没有提取任何元素，则会调用 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情况下，它调用 `Istr`. **width**(0) 并返回 `Istr`。
+提取多达 *N* - 1 个元素，并将其存储在以 _ *Str* 开始的数组中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大于 0，则 *N* 为 `Istr`. **宽度**; 否则为它是最大数组大小`Elem`可以声明。 该函数始终将值存储`Elem()`任何提取的元素后。 遇到文件末尾、值为 **Elem**(0) 的字符（不会被提取）或会被 [ws](../standard-library/istream-functions.md#ws) 放弃的任何元素（不会被提取）时，提取会提前结束。 如果此函数没有提取任何元素，则会调用 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情况下，它调用 `Istr`. **宽度**(0)，并返回*Istr*。
 
-**安全说明** 正在从输入流提取的以 Null 结尾的字符串不得超过目标缓冲区 `str` 的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明**正在从输入流提取的以 null 结尾的字符串不能超过目标缓冲区的大小*str*。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 
 模板函数：
 
@@ -99,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-提取一个元素（如果可能），并将其存储在 `Ch` 中。 否则，会调用 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情况下，它返回 `Istr`。
+如果它是可能的并将其存储在提取一个元素*Ch*。 否则，会调用 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情况下，它将返回*Istr*。
 
 模板函数：
 

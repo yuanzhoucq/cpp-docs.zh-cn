@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380257"
 ---
 # <a name="targets"></a>目标
 在依赖项行中，指定一个或多个目标，使用任何有效的文件名、 目录名或[伪目标](../build/pseudotargets.md)。 用一个或多个空格或制表符分隔多个目标。 目标不区分大小写。 路径被允许对文件名。 目标不能超过 256 个字符。 如果位于冒号前的目标是单个字符，使用分隔开来将空间;否则，NMAKE 将解释为一个驱动器说明符的字母冒号组合。  

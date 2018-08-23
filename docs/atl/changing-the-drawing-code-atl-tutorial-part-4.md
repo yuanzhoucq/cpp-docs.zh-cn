@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358907"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>更改绘图代码（ATL 教程，第 4 部分）
 默认情况下，控件的绘制代码显示的文本和正方形**PolyCtl**。 在此步骤中，你将更改要显示一些更有趣的内容的代码。 涉及以下任务：  

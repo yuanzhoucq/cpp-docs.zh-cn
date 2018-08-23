@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: Get 方法 |Microsoft 文档'
+title: 'Hstringreference:: Get 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8626eedf585fb66f11d2d6c1fe0eb506a8415b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 960f4059e564ba83e99e9a512d00efbdacb1652d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593458"
 ---
 # <a name="hstringreferenceget-method"></a>HStringReference::Get 方法
-检索基础 HSTRING 句柄的值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
+
+检索基础 HSTRING 句柄的值。
+
+## <a name="syntax"></a>语法
+
+```cpp
 HSTRING Get() const throw()  
-```  
-  
-## <a name="return-value"></a>返回值  
- 基础 HSTRING 句柄的值。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HStringReference 类](../windows/hstringreference-class.md)
+```
+
+## <a name="return-value"></a>返回值
+
+基础 HSTRING 句柄的值。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HStringReference 类](../windows/hstringreference-class.md)

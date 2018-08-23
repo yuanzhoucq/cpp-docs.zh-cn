@@ -1,7 +1,7 @@
 ---
-title: CDaoRelationInfo 结构 |Microsoft 文档
+title: CDaoRelationInfo 结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,70 +17,72 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336353"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
-`CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
+`CDaoRelationInfo`结构包含有关定义字段中的两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+*m_strName*  
  唯一地命名关系对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  *m_strTable*  
- 在关系中的主表进行命名。  
+ 命名关系中的主表。  
   
  *m_strForeignTable*  
- 在关系的外表进行命名。 外部表是用于包含外键表。 通常，可以使用外部表用于建立或强制引用完整性。 外部表通常是一个对多关系的多方。 外部表的示例包括表包含美国的州或加拿大省或客户订单的代码。  
+ 关系中的外部表进行命名。 外部表是用来包含外键表。 通常情况下，使用外部表建立或强制实施引用完整性。 外部表通常是一个对多关系的多方。 外部表的示例包括表包含有关美国的州或加拿大省或客户订单的代码。  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  包含有关关系类型的信息。 此成员的值可以是以下任一项：  
   
-- **dbRelationUnique**关系是一对一。  
+- `dbRelationUnique` 关系是一对一的。  
   
-- **dbRelationDontEnforce**关系不是强制执行 （没有引用完整性）。  
+- `dbRelationDontEnforce` 关系不是强制实施 （没有引用完整性）。  
   
-- **dbRelationInherited**包含两个附加的表的非当前数据库中存在的关系。  
+- `dbRelationInherited` 包含两个附加的表的非当前数据库中存在关系。  
   
-- **dbRelationLeft**的关系是左的联接。 左外部联接包括的所有记录从第一个 （左侧） 的两个表，即使第二个 （右侧） 表中的记录没有匹配值。  
+- `dbRelationLeft` 关系是左的联接。 左外部联接包含的所有记录从第一个 （左侧） 的两个表，即使第二个 （右侧） 表中的记录没有匹配值。  
   
-- **dbRelationRight**关系是正确的联接。 右外部联接包括所有从第二个记录 （右侧） 的两个表，即使有没有匹配的第一个 （左侧） 表中的记录值。  
+- `dbRelationRight` 关系是右联接。 右外部联接包含从第二个记录的所有 （右侧） 的两个表，即使没有匹配的第一个 （左侧） 表中的记录值。  
   
-- **两**更新会级联发生。  
+- `dbRelationUpdateCascade` 级联更新。  
   
-- **dbRelationDeleteCascade**将级联删除。  
+- `dbRelationDeleteCascade` 级联删除操作。  
   
- `m_pFieldInfos`  
- 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含关系中每个字段的一个对象。 `m_nFields`数据成员提供的数组元素的计数。  
+*m_pFieldInfos*  
+ 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含一个对象关系中的每个字段。 `m_nFields`数据成员提供的数组元素计数。  
   
- `m_nFields`  
+*m_nFields*  
  数`CDaoRelationFieldInfo`中的对象`m_pFieldInfos`数据成员。  
   
 ## <a name="remarks"></a>备注  
- 对主要和辅助上面的引用指示如何通过返回的信息[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类中的成员函数`CDaoDatabase`。  
+ 对主数据库和辅助上述引用指示如何通过返回的信息[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类中的成员函数`CDaoDatabase`。  
   
- 关系对象不由 MFC 类表示。 相反，基础的 MFC 对象的 DAO 对象`CDaoDatabase`类维护的关系对象的集合：`CDaoDatabase`提供成员函数来访问关系信息，或你的某些单个项可以使用在一次访问它们`CDaoRelationInfo`对象通过调用`GetRelationInfo`包含的数据库对象的成员函数。  
+ 由 MFC 类不表示关系的对象。 而是基础的 MFC 对象的 DAO 对象`CDaoDatabase`类维护关系对象的集合：`CDaoDatabase`提供成员函数来访问关系的信息，或您的一些单个项可以与一次性全部访问它们`CDaoRelationInfo`对象通过调用`GetRelationInfo`包含的数据库对象的成员函数。  
   
- 检索的信息[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数将存储在`CDaoRelationInfo`结构。 `CDaoRelationInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoRelationInfo`对象。  
+ 检索的信息[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数存储在`CDaoRelationInfo`结构。 `CDaoRelationInfo` 此外定义了`Dump`成员函数在调试生成。 可以使用`Dump`转储的内容`CDaoRelationInfo`对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：** afxdao.h  

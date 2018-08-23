@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357008"
 ---
 # <a name="implementing-a-window"></a>实现窗口
 类[CWindowImpl](../atl/reference/cwindowimpl-class.md)可实现一个窗口，并处理其消息。 ATL 中的消息处理取决于消息映射。 本部分介绍：  

@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022f2bb5355b59ca9ee614c79fee310526e094d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059974efa00d384f669c88a3e2dafbc3a7bc5746
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953686"
 ---
 # <a name="chrono-literals"></a>chrono 文本
 
@@ -69,7 +70,7 @@ inline namespace literals {
 
 ## <a name="return-value"></a>返回值
 
-采用 `long long` 参数的文本返回值或相应的类型。 采用浮点参数的文本返回 [duration](../standard-library/duration-class.md)。
+执行的文字**超长**参数返回一个值或相应的类型。 采用浮点参数的文本返回 [duration](../standard-library/duration-class.md)。
 
 ## <a name="example"></a>示例
 

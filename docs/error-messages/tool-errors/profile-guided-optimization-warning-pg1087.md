@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323142"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>按配置优化警告 PG1087
 PGC 文件 file 不是有效的。  

@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: Status_ 数据成员 |Microsoft 文档'
+title: 'Synclockwithstatust:: Status_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4a9a65e7ba45d38084d1695932c3897de583f49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610022"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ 数据成员
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-DWORD status_;  
-```  
-  
-## <a name="remarks"></a>备注  
- 根据当前的 SyncLockWithStatusT 对象保留的结果的基础等待锁操作完成后的操作对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>请参阅  
- [SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+DWORD status_;
+```
+
+## <a name="remarks"></a>备注
+
+保存后对象的锁操作取决于当前的基础的等待操作结果**SyncLockWithStatusT**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>请参阅
+
+[SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)

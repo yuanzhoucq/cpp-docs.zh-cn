@@ -1,7 +1,7 @@
 ---
-title: 并发运行时 |Microsoft 文档
+title: 并发运行时 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608262"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。  
   
- 参考文档，请参阅[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)。  
+ 有关参考文档，请参阅[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)。  
   
 > [!TIP]
 >  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 要了解详细信息，请阅读[欢迎回到 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/07/2018
 |||  
 |-|-|  
 |[概述](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|讲解并发运行时之所以重要的原因并介绍它的主要功能。|  
-|[与其他并发模型进行比较](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|演示并发运行时如何与其他并发模型（例如 Windows 线程池和 OpenMP）进行比较，以便你能够使用最适合你应用程序需求的并发模型。|  
+|[将与其他并发模型进行比较](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|演示并发运行时如何与其他并发模型（例如 Windows 线程池和 OpenMP）进行比较，以便你能够使用最适合你应用程序需求的并发模型。|  
 |[从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|将 OpenMP 与并发运行时进行比较，并提供有关如何迁移现有 OpenMP 代码以使用并发运行时的示例。|  
 |[并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|向你介绍 PPL，它提供并行循环、任务和并行容器。|  
 |[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)|向你介绍如何使用异步代理和消息传递来轻松地将数据流和流水线操作任务合并到应用程序中。|  
@@ -69,9 +70,9 @@ ms.lasthandoff: 05/07/2018
   
 |||  
 |-|-|  
-|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成异步操作中的 UWP 应用时，需要注意的要点。|  
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务和`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口以将 HTTP GET 和 POST 请求发送到 web 服务中的 UWP 应用。|  
-|[Windows 运行时应用示例](http://code.msdn.microsoft.com/windowsapps)|包含可下载代码示例和演示应用适用于 Windows 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|  
+|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成 UWP 应用中的异步操作时，需要注意的关键点。|  
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|  
+|[Windows 运行时应用示例](http://code.msdn.microsoft.com/windowsapps)|包含可下载的代码示例和演示适用于 Windows 的应用 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程  
   
@@ -108,9 +109,9 @@ ms.lasthandoff: 05/07/2018
 |-|-|  
 |[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|  
 |[并发运行时和 Visual Studio 2010 中的并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|  
-|[在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|  
-|[在 c + + 和本机代码论坛中的并行计算](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|  
-|[并行编程](/dotnet/standard/parallel-programming/index)|讲解关于 [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]中可用的并行编程模型的内容。|  
+|[本机代码博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|  
+|[C + + 和本机代码论坛中的并行计算](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|  
+|[并行编程](/dotnet/standard/parallel-programming/index)|介绍了有关在.NET Framework 中可用的并行编程模型。|  
   
 ## <a name="see-also"></a>请参阅  
  [参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)

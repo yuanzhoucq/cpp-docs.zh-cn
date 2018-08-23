@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359740"
 ---
 # <a name="celementtraits-class"></a>CElementTraits 类
 此类是集合类用于为移动、 复制、 比较、 和哈希操作提供方法和函数。  

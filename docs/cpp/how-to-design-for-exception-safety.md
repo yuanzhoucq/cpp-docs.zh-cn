@@ -1,5 +1,5 @@
 ---
-title: 如何： 设计异常安全性 |Microsoft 文档
+title: 如何： 设计异常安全性 |Microsoft Docs
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403688"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：设计异常安全性
 异常机制的优势之一是执行以及异常相关数据将直接从引发异常的语句跳至处理异常的第一个 catch 语句。 处理程序可以是调用堆栈中任意数量的级别。 在 try 语句和 throw 语句之间调用的函数无需了解与所引发异常有关的任何信息。  但是，这些函数必须进行设计，以便它们在异常可能从下向上传播时“意外地”超出范围，而这样做不会留下部分创建的对象、泄漏的内存或处于不稳定状态的数据结构。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/03/2018
  无论函数如何处理异常，为了帮助确保函数是“异常安全的”，必须通过下列基本规则设计函数。  
   
 ### <a name="keep-resource-classes-simple"></a>保持资源类简单  
- 当您将手动资源管理封装到类中时，请使用不会执行任何操作的类来管理资源；否则，您可能引入泄漏。 使用[智能指针](../cpp/smart-pointers-modern-cpp.md)如果可能，如下面的示例中所示。 对于突出显示使用 `shared_ptr` 时的差异，此示例是特意模拟的，非常简单。  
+ 当您将手动资源管理封装到类中时，请使用不会执行任何操作的类来管理资源；否则，您可能引入泄漏。 使用[智能指针](../cpp/smart-pointers-modern-cpp.md)如果可能，请在下面的示例所示。 对于突出显示使用 `shared_ptr` 时的差异，此示例是特意模拟的，非常简单。  
   
 ```cpp  
 // old-style new/delete version  
@@ -85,14 +86,13 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>使用 RAII 习语管理资源  
- 若要是异常安全的，函数必须确保销毁它使用 `malloc` 或 `new` 分配的对象以及关闭或释放所有资源（如文件句柄），即使引发异常时也是如此。 *获取资源即初始化*(RAII) 习语使此类资源到自动变量的生存期的管理。 当函数超出范围时，要么正常返回；要么因为异常，调用所有完全构造的自动变量的析构函数。 RAII 包装器对象（如智能指针）将在其析构函数中调用合适的 delete 或 close 函数。 在异常安全的代码中，将每个资源的所有权立即传递给某种 RAII 对象至关重要。 请注意， `vector`， `string`， `make_shared`， `fstream`，和相似类处理为你获取资源。  但是，`unique_ptr`和传统`shared_ptr`构造有些特殊，因为资源获取由用户而不是对象; 因此，它们算作*资源释放是析构*但作为 RAII 可疑。  
+ 是异常安全，函数必须确保该对象，它已经分配了通过使用`malloc`或**新**将被破坏，并且所有资源，如文件句柄关闭或释放，即使引发异常。 *资源获取即初始化*(RAII) 习语使此类资源到自动变量的生命期管理。 当函数超出范围时，要么正常返回；要么因为异常，调用所有完全构造的自动变量的析构函数。 RAII 包装器对象（如智能指针）将在其析构函数中调用合适的 delete 或 close 函数。 在异常安全的代码中，将每个资源的所有权立即传递给某种 RAII 对象至关重要。 请注意， `vector`， `string`， `make_shared`， `fstream`，和相似的类处理为你获取资源。  但是，`unique_ptr`和传统`shared_ptr`的结构是特殊，因为资源获取执行由用户而不是对象; 因此，它们算作*资源释放即析构*但作为 RAII 可疑。  
   
 ## <a name="the-three-exception-guarantees"></a>三个异常保证  
- 通常情况下，异常安全的一个函数可提供的三个异常保证讨论：*无故障保证*、*增强保证*，和*基本保证*.  
+ 通常情况下，异常安全的一个函数可提供的三种异常保证讨论：*无故障保证*，则*增强保证*，和*基本保证*.  
   
 ### <a name="no-fail-guarantee"></a>无故障保证  
  无故障（或“无引发”）保证是一个函数可提供的最有力的保证。 此保证声明，该函数将不会引发异常或允许异常传播。 但是，您无法可靠地提供此类包装，除非 (a) 您知道该函数调用的所有函数也是无故障的，或 (b) 您知道将在引发的所有异常到达该函数之前捕获这些异常，或者 (c) 您知道如何捕获和正确地处理可能到达该函数的所有异常。  

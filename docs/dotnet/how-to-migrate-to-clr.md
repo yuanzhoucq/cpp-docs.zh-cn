@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138435"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 本主题讨论了在编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许 Visual c + + 模块调用和被调用在保留与非托管模块的兼容性的同时从.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)和[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优点 **/clr**。  

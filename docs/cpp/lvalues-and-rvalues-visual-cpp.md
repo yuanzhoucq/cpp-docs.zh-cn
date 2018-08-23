@@ -15,33 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbe048ee6667aaf71b2a3cf52e82993f90ab1c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403918"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
 
-每个 C++ 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。
+每个 C++ 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和移动在表达式计算期间的临时对象时，编译器必须遵循的规则的基础。
 
  C++ 17 标准定义表达式值的分类，如下所示：
 
-- A *glvalue*是求值确定的标识的对象、 位域或函数的表达式。
-- A *prvalue*是一个表达式求值初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。
-- *Xvalue*是表示的对象或位域 （通常是因为它是在其生存期结束时的附近），可以重用其资源 glvalue。 [示例： 某些类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。 ]
+- 一个*glvalue*是的表达式的求值结果确定标识的对象、 位域或函数。
+- 一个*prvalue*是的表达式的求值结果初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。
+- *Xvalue*是 glvalue 表示的对象或位域可以重复使用的资源，（通常是因为它即将达到其生命周期结束）。 [示例： 特定类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。 ]
 - *左值*是不是 xvalue glvalue。
 - *右值*prvalue 或 xvalue。
 
-下图阐释了两个分类之间的关系：
+下图演示了两个分类之间的关系：
 
  ![C++ 表达式值的分类](media/value_categories.png "C++ 表达式值的分类")
 
- 左值具有可以访问你的程序的地址。 左值表达式的示例包括变量名称，包括`const`变量，数组元素，函数返回左值引用、 位域、 联合和类成员的调用。
+ 左值具有您的程序可以访问的地址。 左值表达式的示例包括变量的名称，包括**const**变量，数组元素、 函数返回的左值引用、 位域、 联合和类成员的调用。
 
- Prvalue 表达式中有任何由你的程序可访问的地址。 Prvalue 表达式的示例包括文本、 非引用类型返回的函数调用和只能由编译器创建表达式评估过程中，但可访问的临时对象。
+ Prvalue 表达式具有可访问你的程序没有地址。 Prvalue 表达式的示例包括文本、 非引用类型返回的函数调用和仅由编译器创建表达式评估期间，但可访问的临时对象。
 
- Xvalue 表达式具有的地址，无法再进行访问由你的程序，但可以用于初始化右值引用，它提供的表达式的访问。 示例包括返回右值引用，数组下标、 成员和指针到成员表达式，该数组或对象是右值引用的函数调用。
+ Xvalue 表达式具有一个地址，无法再访问你的程序，但可用于初始化右值引用，它提供与表达式的访问。 示例包括返回右值引用的数组下标、 成员和指针到成员表达式，数组或对象是右值引用的函数调用。
 
 ## <a name="example"></a>示例
 
@@ -75,8 +76,9 @@ int main()
 > [!NOTE]
 > 此主题中的示例阐释了未重载运算符时的正确和错误用法。 通过重载运算符，可以使表达式（如 `j * 4`）成为左值。
 
-条款*左值*和*右值*通常用于在引用对象引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+条款*左值*并*右值*通常用于在引用对象的引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)并[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅
-
- [基本概念](../cpp/basic-concepts-cpp.md)[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md) [右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [基本概念](../cpp/basic-concepts-cpp.md)  
+ [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)  
+ [规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

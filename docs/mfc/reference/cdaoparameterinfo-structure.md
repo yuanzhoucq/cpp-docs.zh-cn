@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951593"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 结构
 `CDaoParameterInfo`结构包含有关为数据访问对象 (DAO) 定义的参数对象的信息。  
@@ -38,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一命名的参数对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
- `m_nType`  
- 一个值，该值指示参数对象的数据类型。 有关可能的值的列表，请参阅`m_nType`的成员[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
+ *m_nType*  
+ 一个值，该值指示参数对象的数据类型。 有关可能的值的列表，请参阅*m_nType*的成员[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
  *m_varValue*  
  存储中的参数值[COleVariant](../../mfc/reference/colevariant-class.md)对象。  

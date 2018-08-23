@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690112"
 ---
 # <a name="walkthrough-implementing-futures"></a>演练：实现 Future
 本主题演示如何在你的应用程序中实现 future。 本主题演示如何将现有功能合并并发运行时中转换的内容执行更多。  

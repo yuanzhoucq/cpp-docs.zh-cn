@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232282"
 ---
 # <a name="compiler-error-c2573"></a>编译器错误 C2573
 “class”：不能删除指向此类对象的指针；该类没有“operator delete”的非位置重载。  

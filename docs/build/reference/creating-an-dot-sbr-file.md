@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371078"
 ---
 # <a name="creating-an-sbr-file"></a>创建 .Sbr 文件
 BSCMAKE 的输入的文件是.sbr 文件。 编译器创建.sbr 文件以供每个对象文件 (.obj) 对其进行编译。 当生成或更新你的浏览信息文件时，所有的.sbr 文件为你的项目必须在磁盘上可使用。  

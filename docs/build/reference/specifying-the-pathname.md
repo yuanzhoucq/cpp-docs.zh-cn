@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375657"
 ---
 # <a name="specifying-the-pathname"></a>指定路径名
 每个输出文件选项接受*路径名*自变量可以指定的位置和输出文件的名称。 自变量可以包括驱动器名称、 目录和文件名称。 不允许有空格选项和自变量之间。  

@@ -1,5 +1,5 @@
 ---
-title: 嵌套类声明 |Microsoft 文档
+title: 嵌套类声明 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407710"
 ---
 # <a name="nested-class-declarations"></a>嵌套类声明
 可以在一个类的范围内声明另一个类。 这样的类称为“嵌套类”。 嵌套类被视为在封闭类的范围内且可在该范围内使用。 若要从嵌套类的即时封闭范围之外的某个范围引用该类，则必须使用完全限定名。  
   
  下面的示例演示如何声明嵌套类：  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  在将类型名称与前向声明一起声明时，会引发嵌套类声明的范围可见性的异常。  在这种情况下，由前向声明声明的类名在封闭类的外部可见，其范围定义为最小的封闭非类范围。  例如：  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>嵌套类中的成员函数  
  在嵌套类中声明的成员函数可在文件范围中定义。 前面的示例可能已编写：  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -142,24 +143,24 @@ int main()
   
  在前面的示例中，*限定类型名称*语法用于声明函数名称。 声明：  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- 表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 因为此声明使用*限定类型名称*语法，还可能有以下形式的构造：  
+ 表示“作为 `read` 类（位于 `BufferedInput` 类的范围中）的成员的 `BufferedIO` 函数。” 因为此声明使用*限定类型名称*语法中，以下形式的构造是可能：  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- 上述声明与前一个声明等效，但它使用了 `typedef` 名称来代替类名称。  
+ 前面的声明等效于前一个，但它使用**typedef**名称来代替类名称。  
   
 ## <a name="friend-functions-in-nested-classes"></a>嵌套类中的友元函数  
  嵌套类中声明的友元函数被认为是在嵌套类而不是封闭类的范围内。 因此，友元函数未获得对封闭类的成员或成员函数的特定访问权限。 如果需要使用在友元函数中的嵌套类中声明的名称，并且友元函数是在文件范围内定义的，请使用限定的类型名称，如下所示：  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  以下代码演示声明为友元函数的函数 `GetExtendedErrorStatus`。 在文件范围内定义的函数中，将消息从静态数组复制到类成员中。 请注意，`GetExtendedErrorStatus` 的更佳实现是将其声明为：  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

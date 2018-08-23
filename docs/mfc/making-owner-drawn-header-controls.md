@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345235"
 ---
 # <a name="making-owner-drawn-header-controls"></a>定义所有者描述的标题控件
 你可以定义标头控件的单个项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 为所有者描述项。 有关详细信息，请参阅[所有者描述标头控件](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  

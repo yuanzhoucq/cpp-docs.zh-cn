@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376554"
 ---
 # <a name="using-verify-instead-of-assert"></a>使用 VERIFY 代替 ASSERT
 假设当您运行 MFC 应用程序的调试版本，没有任何问题。 但是，相同的应用程序的发行版本发生崩溃、 返回不正确的结果，和/或具有某些其他异常行为。  

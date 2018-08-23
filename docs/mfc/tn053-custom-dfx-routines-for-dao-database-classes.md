@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951989"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 数据库类的自定义 DFX 例程
 > [!NOTE]
@@ -133,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |操作|描述|  
 |---------------|-----------------|  
-|**AddToParameterList**|生成参数子句|  
-|**AddToSelectList**|生成 SELECT 子句|  
-|**BindField**|将设置绑定结构|  
-|**BindParam**|设置参数值|  
-|**修正**|设置 NULL 状态|  
-|**AllocCache**|为脏检查分配缓存|  
-|**StoreField**|将当前记录保存到缓存|  
-|**LoadField**|为成员值的还原缓存|  
-|**FreeCache**|释放缓存|  
+|`AddToParameterList`|生成参数子句|  
+|`AddToSelectList`|生成 SELECT 子句|  
+|`BindField`|将设置绑定结构|  
+|`BindParam`|设置参数值|  
+|`Fixup`|设置 NULL 状态|  
+|`AllocCache`|为脏检查分配缓存|  
+|`StoreField`|将当前记录保存到缓存|  
+|`LoadField`|为成员值的还原缓存|  
+|`FreeCache`|释放缓存|  
 |`SetFieldNull`|设置字段状态和为 NULL 的值|  
-|**MarkForAddNew**|将标记字段脏否则伪 NULL|  
-|**MarkForEdit**|标记字段脏如果不匹配缓存|  
-|**SetDirtyField**|设置字段值标记为已更新|  
+|`MarkForAddNew`|将标记字段脏否则伪 NULL|  
+|`MarkForEdit`|标记字段脏如果不匹配缓存|  
+|`SetDirtyField`|设置字段值标记为已更新|  
   
  在下一步的部分中，每个操作将会详细说明了为`DFX_Text`。  
   
@@ -167,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的详细信息  
  如前所述，阐释 DFX 的工作方式的最好办法是工作讲解了一个示例。 为此目的经过深谙`DFX_Text`工作相当有助于提供 DFX 的至少一个基本的了解。  
   
- **AddToParameterList**  
- 此操作生成 SQL**参数**子句 ("`Parameters <param name>, <param type> ... ;`") 所需的 Jet。 每个参数是名为，并键入 （在 RFX 调用中指定）。 请参阅函数**CDaoFieldExchange::AppendParamType**函数以查看各类型的名称。 情况下`DFX_Text`，使用的类型是`text`。  
+ `AddToParameterList`  
+ 此操作生成 SQL**参数**子句 ("`Parameters <param name>, <param type> ... ;`") 所需的 Jet。 每个参数是名为，并键入 （在 RFX 调用中指定）。 请参阅函数`CDaoFieldExchange::AppendParamType`函数以查看各类型的名称。 情况下`DFX_Text`，使用的类型是**文本**。  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  生成 SQL**选择**子句。 此 DFX 调用指定的列名称只是相当直接方式会追加 ("`SELECT <column name>, ...`")。  
   
- **BindField**  
+ `BindField`  
  而最复杂的操作。 如前文所述这是 DAO 绑定结构由`GetRows`设置。 正如您可以从代码中看到`DFX_Text`的结构中的信息类型包括使用的 DAO 类型 (**DAO_CHAR**或**DAO_WCHAR**的情况下`DFX_Text`)。 此外，使用的绑定类型是还设置。 在前面某一节中`GetRows`已说明只是暂时，但却不足以解释 MFC 使用的绑定的类型始终是直接地址绑定 (**DAOBINDING_DIRECT**)。 此外可变长度列绑定 (如`DFX_Text`)，以便 MFC 可以控制的内存分配，并指定正确的长度的地址使用回调绑定。 这意味着是该 MFC 可以总是判断出 DAO"where"将数据，从而允许直接绑定到成员变量。 绑定结构的其余部分是使用的内存分配回调函数和列绑定 （通过列名称绑定时） 的类型的地址等填充的。  
   
- **BindParam**  
+ `BindParam`  
  这是一个简单的操作调用`SetParamValue`与参数成员中指定的参数值。  
   
- **修正**  
+ `Fixup`  
  在填充**NULL**的每个字段的状态。  
   
  `SetFieldNull`  
  此操作仅将标记为每个字段状态**NULL**和的成员变量的值设置为**PSEUDO_NULL**。  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  调用`SetFieldValue`的每个字段标记为已更新。  
   
  所有剩余操作只需处理使用数据缓存。 缓存的数据是用来进一步简化某些操作的当前记录中的数据的额外缓冲区。 例如，可以自动检测"脏"的字段。 联机文档中所述它可以完全地或在字段级别关闭它们。 缓冲区的实现利用地图。 使用此映射，以匹配数据的"绑定"字段的地址的动态分配副本 (或`CDaoRecordset`派生数据成员)。  
   
- **AllocCache**  
+ `AllocCache`  
  动态分配的缓存的字段值，并将其添加到代码图。  
   
- **FreeCache**  
+ `FreeCache`  
  删除缓存的字段的值并将其从映射中删除。  
   
- **StoreField**  
+ `StoreField`  
  将当前的字段值复制到数据缓存。  
   
- **LoadField**  
+ `LoadField`  
  将缓存的值复制到字段成员。  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  检查当前字段值是否非**NULL**并将其标记脏如有必要。  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  将数据缓存与当前字段值进行比较，并将标记已更新，如有必要。  
   
 > [!TIP]

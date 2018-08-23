@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385065"
 ---
 # <a name="root-class-cobject"></a>根类：CObject
 大多数 Microsoft 基础类 (MFC) 库中的类派生而来的单个基类根处的类层次结构。 `CObject` 提供了大量有用的功能，所有派生的类，使用系统开销很低。 有关详细信息`CObject`和及其功能，请参阅[使用 CObject](../mfc/using-cobject.md)。  

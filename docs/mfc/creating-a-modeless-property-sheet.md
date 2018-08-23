@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342717"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>创建无模式属性表
 通常情况下，你创建属性表将模式。 如果使用模式属性表，用户必须使用的应用程序的任何其他部分之前关闭属性表。 本文介绍可用于创建无模式属性表，用户可以保持打开属性表，同时使用的应用程序其他部分的方法。  

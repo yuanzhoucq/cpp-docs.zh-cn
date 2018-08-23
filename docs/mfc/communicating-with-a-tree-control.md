@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341992"
 ---
 # <a name="communicating-with-a-tree-control"></a>与树控件通信
 为调用成员函数使用不同的方法[CTreeCtrl](../mfc/reference/ctreectrl-class.md)对象取决于对象的创建方式：  

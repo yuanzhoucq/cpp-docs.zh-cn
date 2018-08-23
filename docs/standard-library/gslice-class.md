@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955809"
 ---
 # <a name="gslice-class"></a>gslice 类
 
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/07/2018
 
 - 一个起始索引。
 
-- 类 **valarray<size_t>** 的长度矢量。
+- 类的长度矢量`valarray<size_t>`。
 
-- 类 **valarray<size_t>** 的跨距矢量。
+- 类的跨距矢量`valarray<size_t>`。
 
 两个矢量必须具有相同长度。
 
@@ -83,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>参数
 
-`_StartIndex` Valarray 的子集中的第一个元素的索引。
+*_StartIndex*的子集中的第一个元素的 valarray 索引。
 
-`_LenArray` 数组中每个切片中指定的元素数。
+*_LenArray*指定每个切分中元素数的数组。
 
-`_IncArray` 在每个切片中指定 stride 数组。
+*_IncArray*指定每个切分中跨距的数组。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数对于起始索引存储 `_StartIndex`，对于长度数组存储 `_LenArray`，对于跨距数组存储 `_IncArray`。
+默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数存储 *_StartIndex*对于起始索引 *_LenArray*对于长度数组并 *_IncArray*对于跨距数组。
 
 ### <a name="remarks"></a>备注
 
-**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切分具有一个带有 `_StartIndex` 的索引的第一个元素、由 `_LenArray` 的第一个元素指定的元素数和由 `_IncArray` 的第一个元素提供的跨距。 下一个正交切分集具有由第一个切分指定的第一个元素。 `_LenArray` 的第二个元素指定元素数。 跨距由 `_IncArray` 的第二个元素指定。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
+**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切分具有索引编号为第一个元素 *_StartIndex*，指定的第一个元素的元素数 *_LenArray*，并提供的第一个元素的跨距 *_IncArray*. 下一个正交切分集具有由第一个切分指定的第一个元素。 第二个元素 *_LenArray*指定的元素数。 第二个元素由给定跨距 *_IncArray*。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
 
 ### <a name="example"></a>示例
 

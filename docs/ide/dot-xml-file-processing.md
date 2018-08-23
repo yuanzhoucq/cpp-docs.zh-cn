@@ -1,5 +1,5 @@
 ---
-title: .Xml 文件处理 |Microsoft 文档
+title: .Xml 文件处理 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340510"
 ---
 # <a name="xml-file-processing"></a>.Xml 文件处理
-编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 有关详细信息，请参阅[建议标记文档注释](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。 ID 字符串唯一标识构造。 处理的.xml 文件的程序可使用的 ID 字符串以确定将应用文档的相应.NET Framework 元数据或反射项目。  
+编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 有关详细信息，请参阅[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。 ID 字符串唯一标识构造。 处理 .xml 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据或反射项。  
   
- .Xml 文件不是你的代码的分层表示形式，它是与每个元素的生成 ID 的平面列表。  
+ .xml 文件不是代码的分层表示形式；它是具有每个元素生成的 ID 的简单列表。  
   
  编译器在生成 ID 字符串时应遵循以下规则：  
   
--   在字符串中不放置任何空格。  
+-   字符串不得包含空格。  
   
--   ID 字符串的第一部分标识的标识，与单个字符跟一个冒号的成员的类型。 使用下面的成员类型：  
+-   ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用下面的成员类型：  
   
     |字符|描述|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> 无法将文档注释添加到命名空间，可能会出现到命名空间的 cref 引用。|  
+    |N|namespace<br /><br /> 无法将文档注释添加到命名空间中，但可能对命名空间进行 cref 引用。|  
     |T|类型：类、接口、结构、枚举、委托|  
     |D|typedef|  
     |F|Field — 字段|  
     |P|属性（包括索引器或其他的索引属性）|  
     |M|方法（包括构造函数、运算符等特殊方法）|  
     |E|Event — 事件|  
-    |!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 Visual c + + 编译器将生成错误无法解析的链接的信息。|  
+    |!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 Visual C++ 编译器将生成无法解析的链接的错误信息。|  
   
--   该字符串的第二部分是项目的完全限定名称，从命名空间的根开始。 用句点分隔的项、 其封闭类型或类型和命名空间的名称。 如果项目名称本身包含句点，会将其替换为哈希符号 ('#')。 假定任何项直接在其名称中拥有一个哈希符号。 例如，完全限定的名称的`String`构造函数将为"System.String.#ctor"。  
+-   该字符串的第二部分是项目的完全限定名称，从命名空间的根开始。 用句点分隔项目名称、其封闭类型和命名空间。 如果项目名称本身包含句点，会将其替换为哈希符号 ('#')。 假定没有项目恰好在其名称中包含哈希符号。 例如，`String` 构造函数的完全限定名称将是“System.String.#ctor”。  
   
 -   对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。 如果没有任何自变量，则不会出现括号。 确保自变量之间用逗号分隔。 每个自变量的编码直接遵循它在 .NET Framework 签名中的编码方式：  
   
     -   基类型。 常规的类型（ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE）表示为该类型的完全限定名称。  
   
-    -   内部类型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID） 例如，表示为相应的完整类型的完全限定名称**System.Int32**或**System.TypedReference**。  
+    -   内部类型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID）表示为对应的完整类型的完全限定名称，例如，System.Int32 或 System.TypedReference。  
   
     -   ELEMENT_TYPE_PTR 表示为修改类型之后的“*”。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   为转换运算符，该方法的返回值被编码为 ~ 跟返回类型，如前面编码。  
+-   仅针对转换运算符，该方法的返回值被编码为“~”，后面是返回类型，如上述编码所示。  
   
 -   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，应用于对象的  
   
@@ -84,12 +85,12 @@ ms.lasthandoff: 05/04/2018
     <member name="T:MyClass`2">  
     ```  
   
-     类型定义为`public class MyClass<T, U>`。  
+     适用于定义为 `public class MyClass<T, U>` 的类型。  
   
-     对于采用方法都将作为参数的泛型类型，泛型类型参数被指定为数字前面加上反勾 (例如\`0， \`1)。  每个数字表示该类型的泛型参数的从零开始的数组表示法。  
+     对于将泛型类型用作参数的方法，泛型类型参数被指定为前面加上反勾号的数字（例如 \`0、\`1）。  每个数字表示该类型的泛型参数的从零开始的数组表示法。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何的 ID 字符串类并将生成其成员。  
+ 下面的示例演示如何为类及其成员生成 ID 字符串。  
   
 ```  
 // xml_id_strings.cpp  

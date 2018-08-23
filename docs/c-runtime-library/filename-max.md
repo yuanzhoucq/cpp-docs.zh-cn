@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387565"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
 允许的 `filename` 字符串缓冲区大小的最大长度。  

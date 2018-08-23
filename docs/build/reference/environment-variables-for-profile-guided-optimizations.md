@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379440"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>用于按配置文件优化的环境变量
 

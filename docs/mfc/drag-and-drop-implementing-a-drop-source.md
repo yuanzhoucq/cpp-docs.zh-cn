@@ -19,20 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928975"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>拖放：实现放置源
 此文章介绍了如何获取你的应用程序，以向拖放操作提供数据。  
   
- 放置源的基本实现是相对简单。 第一步是确定哪些事件开始拖动操作。 建议用户界面指南定义拖动操作开始为选定的数据和`WM_LBUTTONDOWN`内所选数据点上发生的事件。 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)请遵循以下准则。  
+ 放置源的基本实现是相对简单。 第一步是确定哪些事件开始拖动操作。 建议用户界面指南定义拖动操作开始为选定的数据和**WM_LBUTTONDOWN**内所选数据点上发生的事件。 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)请遵循以下准则。  
   
  如果你的应用程序是一个容器，所选的数据链接或嵌入的对象的类型`COleClientItem`，调用其`DoDragDrop`成员函数。 否则，构造`COleDataSource`对象，并用所选内容，将其初始化，调用数据源对象`DoDragDrop`成员函数。 如果你的应用程序服务器，请使用`COleServerItem::DoDragDrop`。 有关自定义标准拖放行为的信息，请参阅文章[拖放： 自定义](../mfc/drag-and-drop-customizing.md)。  
   
- 如果`DoDragDrop`返回`DROPEFFECT_MOVE`，立即从源文档中删除源数据。 没有其他返回值从`DoDragDrop`都没有任何效果上放置源。  
+ 如果`DoDragDrop`返回**DROPEFFECT_MOVE**，立即从源文档中删除源数据。 没有其他返回值从`DoDragDrop`都没有任何效果上放置源。  
   
  有关详细信息，请参见:  
   

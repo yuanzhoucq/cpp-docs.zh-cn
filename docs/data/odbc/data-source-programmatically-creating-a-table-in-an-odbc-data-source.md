@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090505"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>数据源：以编程方式在 ODBC 数据源中创建表
 本主题说明如何创建表以获取你的数据源，使用`ExecuteSQL`类的成员函数`CDatabase`，将该函数传递一个字符串，包含**CREATE TABLE** SQL 语句。  

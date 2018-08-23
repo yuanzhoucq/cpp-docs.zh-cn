@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089907"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>设计和创建记录视图（MFC 数据访问）
 你可以创建记录视图类与[MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)。 如果使用应用程序向导，则可以创建记录视图类并为其创建对话框模板资源（无控件）。 必须使用 Visual C++ 对话框编辑器将控件添加到对话框模板资源。 另一方面，如果你使用**添加类**，你必须首先创建对话框模板资源在对话框编辑器，然后才创建记录视图类。  

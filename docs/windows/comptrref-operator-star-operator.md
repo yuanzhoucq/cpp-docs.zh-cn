@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator * 运算符 |Microsoft 文档'
+title: 'Comptrref:: Operator * 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bb6bc06f65f53f919197b5350db8aacc268013f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602954"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 运算符
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-InterfaceType* operator *();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 指向由当前 ComPtrRef 对象表示的接口指针。  
-  
-## <a name="remarks"></a>备注  
- 检索指向由当前 ComPtrRef 对象表示的接口的指针。  
-  
-## <a name="requirements"></a>要求  
- **标头：** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [ComPtrRef 类](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+InterfaceType* operator *();
+```
+
+## <a name="return-value"></a>返回值
+
+指向由当前的接口指针**ComPtrRef**对象。
+
+## <a name="remarks"></a>备注
+
+检索指向当前所表示接口的指针**ComPtrRef**对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ComPtrRef 类](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

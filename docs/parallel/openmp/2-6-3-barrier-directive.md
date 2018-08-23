@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689787"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 barrier 指令
 **屏障**指令会同步组中的所有线程。 在遇到时，团队中的每个线程等待，直到所有其他已达到此点。 语法**屏障**指令是，如下所示：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197359"
 ---
 # <a name="compiler-error-c2492"></a>编译器错误 C2492
 *变量*： 具有线程存储持续时间的数据可能没有 dll 接口    

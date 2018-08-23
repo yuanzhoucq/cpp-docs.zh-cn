@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103507"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>使用以 /clr 生成的 COM 对象时避免 CLR 关闭异常
 公共语言运行时 (CLR) 进入后关闭模式，本机函数会限制对 CLR 服务的访问。 尝试对调用 Release COM 对象将编译使用 **/clr**CLR 转换为本机代码，然后转换回为 iunknown:: Release 呼叫 （这在托管代码中定义） 提供服务的托管代码。 因为它处于关闭模式下，CLR 将阻止返回到托管代码调用。  

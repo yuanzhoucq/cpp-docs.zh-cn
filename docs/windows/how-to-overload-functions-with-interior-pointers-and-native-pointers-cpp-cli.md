@@ -1,5 +1,5 @@
 ---
-title: 如何： 重载用内部指针和本机指针的函数 (C + + /cli CLI) |Microsoft 文档
+title: 如何： 用内部指针和本机指针重载函数 (C + + CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,63 +15,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c019114726f696461de58d2dc4110a3150318c8f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597996"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>如何：用内部指针和本机指针重载函数 (C++/CLI)
-可以根据参数类型是内部指针还是本机指针重载函数。  
-  
+
+可以根据参数类型是内部指针或本机指针重载函数。
+
 > [!IMPORTANT]
->  通过支持此语言功能 **/clr**编译器选项，但不是 **/ZW**编译器选项。  
-  
-## <a name="example"></a>示例  
-  
-### <a name="code"></a>代码  
-  
-```  
-// interior_ptr_overload.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// C++ class  
-struct S {  
-   int i;  
-};  
-  
-// managed class  
-ref struct G {  
-   int i;  
-};  
-  
-// can update unmanaged storage  
-void f( int* pi ) {  
-   *pi = 10;  
-   Console::WriteLine("in f( int* pi )");  
-}  
-  
-// can update managed storage  
-void f( interior_ptr<int> pi ) {  
-   *pi = 10;   
-   Console::WriteLine("in f( interior_ptr<int> pi )");  
-}  
-  
-int main() {  
-   S *pS = new S;   // C++ heap  
-   G ^pG = gcnew G;   // common language runtime heap  
-   f( &pS->i );  
-   f( &pG->i );  
-};  
-```  
-  
-### <a name="output"></a>输出  
-  
-```  
+> `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。
+
+## <a name="example"></a>示例
+
+### <a name="code"></a>代码
+
+```cpp
+// interior_ptr_overload.cpp
+// compile with: /clr
+using namespace System;
+
+// C++ class
+struct S {
+   int i;
+};
+
+// managed class
+ref struct G {
+   int i;
+};
+
+// can update unmanaged storage
+void f( int* pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( int* pi )");
+}
+
+// can update managed storage
+void f( interior_ptr<int> pi ) {
+   *pi = 10;
+   Console::WriteLine("in f( interior_ptr<int> pi )");
+}
+
+int main() {
+   S *pS = new S;   // C++ heap
+   G ^pG = gcnew G;   // common language runtime heap
+   f( &pS->i );
+   f( &pG->i );
+};
+```
+
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+```
+
+## <a name="see-also"></a>请参阅
+
+[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

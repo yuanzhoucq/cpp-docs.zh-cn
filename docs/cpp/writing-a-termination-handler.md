@@ -1,5 +1,5 @@
 ---
-title: 编写终止处理程序 |Microsoft 文档
+title: 编写终止处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462828"
 ---
 # <a name="writing-a-termination-handler"></a>编写终止处理程序
 与异常处理程序不同，无论代码的受保护块是否已正常终止，终止处理程序总是会执行。 终止处理程序的唯一用途应该是确保无论代码的节如何完成执行，内存、句柄和文件等资源都能正确关闭。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [清理资源](../cpp/cleaning-up-resources.md)  
   
--   [操作的异常处理计时](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [异常处理中的操作的执行时间](../cpp/timing-of-exception-handling-a-summary.md)  
   
--   [对于终止处理程序的限制](../cpp/restrictions-on-termination-handlers.md)  
+-   [终止处理程序的限制](../cpp/restrictions-on-termination-handlers.md)  
   
 ## <a name="see-also"></a>请参阅  
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

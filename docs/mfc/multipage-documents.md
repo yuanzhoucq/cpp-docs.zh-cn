@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7362e7b9ccb15d338c09da337a6af5077a9789
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929869"
 ---
 # <a name="multipage-documents"></a>多页文档
 本文介绍 Windows 打印协议并说明如何打印包含多个页面的文档。 本文包含以下主题：  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="cviews-overridable-functions-for-printing"></a>CView 的可重写的打印函数  
   
-|名称|重写的原因|  
+|name|重写的原因|  
 |----------|---------------------------|  
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|在“打印”对话框中插入值，尤其是文档的长度|  
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|分配字体或其他 GDI 资源|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/04/2018
   
  `DoPreparePrinting` 随后显示“打印”对话框。 当它返回时，`CPrintInfo` 结构包含用户指定的值。 如果用户希望仅打印选定范围的页，他/她可以在“打印”对话框中指定开始和结束页码。 框架会检索使用这些值`GetFromPage`和`GetToPage`函数的[CPrintInfo](../mfc/reference/cprintinfo-structure.md)。 如果用户未指定页范围，框架将调用 `GetMinPage` 和 `GetMaxPage` 并使用返回的值来打印整个文档。  
   
- 对于文档要打印的每个页，框架将调用两个成员函数在视图类中， [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)和[OnPrint](../mfc/reference/cview-class.md#onprint)，并将每个函数传递两个参数： 指向的指针[CDC](../mfc/reference/cdc-class.md)对象和一个指向`CPrintInfo`结构。 每当调用 `OnPrepareDC` 和 `OnPrint` 时，框架都会在 `m_nCurPage` 结构的 `CPrintInfo` 成员中传递不同的值。 这样，框架就能告知视图应该打印的页。  
+ 对于文档要打印的每个页，框架将调用两个成员函数在视图类中， [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)和[OnPrint](../mfc/reference/cview-class.md#onprint)，并将每个函数传递两个参数： 指向的指针[CDC](../mfc/reference/cdc-class.md)对象和一个指向`CPrintInfo`结构。 每次时，框架调用`OnPrepareDC`和`OnPrint`，它将传递中的不同值*m_nCurPage*的成员`CPrintInfo`结构。 这样，框架就能告知视图应该打印的页。  
   
  [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)成员函数还用于屏幕显示。 它在绘制发生前对设备上下文进行调整。 `OnPrepareDC` 在打印中充当类似的角色，但有两个区别：首先，`CDC` 对象表示的是打印机设备上下文而不是屏幕设备上下文；其次，`CPrintInfo` 对象作为第二个参数传递。 (此参数是**NULL**时`OnPrepareDC`称为是用于屏幕显示。)重写 `OnPrepareDC` 以根据要打印的页调整设备上下文。 例如，您可以移动视区原点和剪辑区域以确保打印文档的相应部分。  
   
@@ -109,16 +110,16 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> 打印机页 vs。文档页  
  提到页码，有时候必须区分打印机的页概念与文档的页概念。 从打印机的角度来看，一页就是一张纸。 但是，一张纸不一定等同于一页文档。 例如，如果打印的是要对折纸张的新闻稿，那么一张纸可能会并排放置文档的第一页和最后一页。 同样，如果打印的是电子表格，那么文档完全不包含页。 相反，一张纸可能包含 1 至 20 行，6 至 10 列。  
   
- 所有中的页码[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构指打印机页。 框架将为要通过打印机的每张纸调用一次 `OnPrepareDC` 和 `OnPrint`。 当你重写[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函数来指定文档的长度，则必须使用打印机页。 如果存在一对一的对应关系（即一个打印机页等同于一个文档页），则此操作很容易。 另一方面，如果文档页和打印机页不直接对应，则必须对其进行相应的转换。 例如，考虑一下打印电子表格。 当重写 `OnPreparePrinting` 时，必须计算打印整个电子表需要多少张纸，然后在调用 `SetMaxPage` 的 `CPrintInfo` 成员函数时使用该值。 同样，当重写 `OnPrepareDC` 时，必须将 `m_nCurPage` 转换为显示在该特定纸张中的行和列的范围，然后相应地调整视区原点。  
+ 所有中的页码[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构指打印机页。 框架将为要通过打印机的每张纸调用一次 `OnPrepareDC` 和 `OnPrint`。 当你重写[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函数来指定文档的长度，则必须使用打印机页。 如果存在一对一的对应关系（即一个打印机页等同于一个文档页），则此操作很容易。 另一方面，如果文档页和打印机页不直接对应，则必须对其进行相应的转换。 例如，考虑一下打印电子表格。 当重写 `OnPreparePrinting` 时，必须计算打印整个电子表需要多少张纸，然后在调用 `SetMaxPage` 的 `CPrintInfo` 成员函数时使用该值。 同样，在重写`OnPrepareDC`，则必须将转换*m_nCurPage*到行和列，将该特定纸张上显示，然后相应地调整视区原点的范围。  
   
 ##  <a name="_core_print.2d.time_pagination"></a> 打印时分页  
  在某些情况下，视图类不能预先知道文档在实际打印前要等待多长时间。 例如，假定应用程序不是所见即所得的，那么文档在屏幕上的长度与其打印时的长度就不对应。  
   
  这会导致问题，在您重写[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)视图类： 你无法将值传递给`SetMaxPage`函数[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构，因为你不知道的长度文档。 如果用户未“打印”对话框指定停止处的页码，框架就不知道何时停止打印循环。 确定何时停止打印循环的唯一方法是输出文档并查看它何时结束。 视图类必须在文档打印期间检查其末尾，然后告知框架何时到达末尾。  
   
- 框架依赖视图类的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函数以告知何时停止。 每次调用 `OnPrepareDC` 后，框架都将检查称为 `CPrintInfo` 的 `m_bContinuePrinting` 结构的成员。 其默认值是**TRUE。** 只要此值保持为 TRUE，框架就会继续打印循环。 如果设置为**FALSE**，则框架将停止。 若要执行打印时分页，重写`OnPrepareDC`以检查是否已达到，并设置文档的结尾`m_bContinuePrinting`到**FALSE**它。  
+ 框架依赖视图类的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函数以告知何时停止。 每次调用后`OnPrepareDC`，框架都将检查的成员`CPrintInfo`结构调用*m_bContinuePrinting*。 其默认值是**TRUE。** 只要此值保持为 TRUE，框架就会继续打印循环。 如果设置为**FALSE**，则框架将停止。 若要执行打印时分页，重写`OnPrepareDC`以检查是否已达到，并设置文档的结尾*m_bContinuePrinting*到**FALSE**它。  
   
- 默认实现`OnPrepareDC`设置`m_bContinuePrinting`到**FALSE**如果当前页大于 1。 这意味着，如果未指定文档的长度，框架将假定文档的长度是一页。 这样的一个后果是，您在调用基类版本的 `OnPrepareDC` 时必须小心。 不要假定`m_bContinuePrinting`将**TRUE**调用基类版本之后。  
+ 默认实现`OnPrepareDC`设置*m_bContinuePrinting*到**FALSE**如果当前页大于 1。 这意味着，如果未指定文档的长度，框架将假定文档的长度是一页。 这样的一个后果是，您在调用基类版本的 `OnPrepareDC` 时必须小心。 不要假定*m_bContinuePrinting*将**TRUE**调用基类版本之后。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
   

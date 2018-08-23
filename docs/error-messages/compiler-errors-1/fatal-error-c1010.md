@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198490"
 ---
 # <a name="fatal-error-c1010"></a>错误 C1010
 查找预编译头时意外的文件尾。 是否忘记添加 #include 名称对源？  

@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Detach |Microsoft 文档
+title: _variant_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572049"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft 专用**  
   
- 分离封装**VARIANT**从此对象`_variant_t`对象。  
+ 分离封装`VARIANT`从此对象`_variant_t`对象。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 VARIANT Detach( );  
-  
 ```  
   
 ## <a name="return-value"></a>返回值  
- 封装**VARIANT**。  
+ 封装`VARIANT`。  
   
 ## <a name="remarks"></a>备注  
- 提取和返回封装**VARIANT**，然后清除此`_variant_t`对象而不销毁它。 此成员函数删除**VARIANT**从封装和集**VARTYPE**此`_variant_t`对象传递给`VT_EMPTY`。 它将由您来释放返回**VARIANT**通过调用[VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)函数。  
+ 提取并返回封装`VARIANT`，然后清除此`_variant_t`对象而不销毁它。 此成员函数将移除`VARIANT`从封装和集`VARTYPE`此`_variant_t`对象为 VT_EMPTY。 由您来释放返回`VARIANT`通过调用[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)函数。  
   
  **结束 Microsoft 专用**  
   

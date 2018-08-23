@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038453"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame 类
 表示动画关键帧。  
@@ -72,7 +73,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|指定此关键帧从存储在 m_pExistingKeyFrame 关键帧的偏移量。|  
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|将存储指向现有关键帧的指针的指针。 此关键帧添加到与现有的关键帧的 m_offset 情节提要。|  
@@ -101,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定是否添加关键帧或转换以递归方式。  
   
 ### <a name="return-value"></a>返回值  
@@ -123,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定是否转换以递归方式添加。  
   
 ### <a name="return-value"></a>返回值  
@@ -145,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定是否要添加关键帧此关键帧依赖于以递归方式。  
   
 ### <a name="return-value"></a>返回值  
@@ -170,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTransition`  
+ *pTransition*  
  指向过渡的指针。  
   
- `pKeyframe`  
+ *pKeyframe*  
  指向关键帧的指针。  
   
- `offset`  
+ *offset*  
  偏移量，以秒为单位，从由 pKeyframe 指定的关键帧。  
   
 ### <a name="remarks"></a>备注  

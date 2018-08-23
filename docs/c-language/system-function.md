@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386730"
 ---
 # <a name="system-function"></a>系统函数
 **ANSI 4.10.4.5** system 函数执行字符串的内容和模式  

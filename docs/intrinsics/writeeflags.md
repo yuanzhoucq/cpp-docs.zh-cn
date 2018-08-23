@@ -1,5 +1,5 @@
 ---
-title: __writeeflags |Microsoft 文档
+title: __writeeflags |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540182"
 ---
 # <a name="writeeflags"></a>__writeeflags
-指定的值写入程序状态和控制 (EFLAGS) 注册。  
+指定的值写入程序状态和控件 (EFLAGS) 注册。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +37,16 @@ void __writeeflags(unsigned __int64 Value);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `Value`|要写入的 EFLAGS 寄存器的值。 `Value`参数为 32 位长的 32 位平台和 64 位长为 64 位平台。|  
+|[in] `Value`|要写入到 EFLAGS 寄存器的值。 `Value`参数为 32 位长的 32 位平台和 64 位长的时间在 64 位平台。|  
   
 ## <a name="remarks"></a>备注  
- 这些例程只能用作内部函数不可用。  
+ 这些例程只能用作内部函数可使用。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用一元运算符的表达式 |Microsoft 文档
+title: 使用一元运算符的表达式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403974"
 ---
 # <a name="expressions-with-unary-operators"></a>使用一元运算符的表达式
 一元运算符仅作用于表达式中的某个操作数。 一元运算符如下所示：  
@@ -35,9 +36,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [逻辑求反运算符 （！）](../cpp/logical-negation-operator-exclpt.md)  
   
--   [二进制求补运算符 （~）](../cpp/one-s-complement-operator-tilde.md)  
+-   [一个值的二进制反码运算符 （~）](../cpp/one-s-complement-operator-tilde.md)  
   
--   [前缀递增运算符 （+ +）](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [前缀增量运算符 （+ +）](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
 -   [前缀递减运算符 （-）](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [__alignof 运算符](../cpp/alignof-operator.md)  
   
--   [New 运算符](../cpp/new-operator-cpp.md)  
+-   [new 运算符](../cpp/new-operator-cpp.md)  
   
 -   [delete 运算符](../cpp/delete-operator-cpp.md)  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   *一元运算符**强制转换表达式*  
   
--   `sizeof` *一元表达式*  
+-   **sizeof** *一元表达式*  
   
 -   `sizeof(` *类型名称* `)`  
   
@@ -73,17 +74,17 @@ ms.lasthandoff: 05/03/2018
   
 -   *分配表达式*  
   
--   *释放表达式*  
+-   *解除分配表达式*  
   
- 任何*后缀表达式*被视为*一元表达式*，而且因为任何主表达式被视为*后缀表达式*，任何主表达式是被视为*一元表达式*还。 有关详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)和[主表达式](../cpp/primary-expressions.md)。  
+ 任何*后缀表达式*被视为*一元表达式*，并且因为任何主表达式被视为*后缀表达式*，任何主表达式是被视为*一元表达式*还。 有关详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)并[主表达式](../cpp/primary-expressions.md)。  
   
- A*一元运算符*组成一个或多个以下符号： `* & + - ! ~`  
+ 一个*一元运算符*组成一个或多个以下符号： `* & + - ! ~`  
   
- *强制转换表达式*是可选的强制转换，以更改类型的一元表达式。 有关详细信息请参阅[强制转换运算符: （)](../cpp/cast-operator-parens.md)。  
+ *强制转换表达式*是与更改的类型的可选强制转换的一元表达式。 有关详细信息请参阅[强制转换运算符: （)](../cpp/cast-operator-parens.md)。  
   
  *表达式*可以是任何表达式。 有关详细信息，请参阅[表达式](../cpp/expressions-cpp.md)。  
   
- *分配表达式*指`new`运算符。 *释放表达式*指`delete`运算符。 有关详细信息，请参阅本主题前面的链接。  
+ *分配表达式*是指**新**运算符。 *解除分配表达式*是指**删除**运算符。 有关详细信息，请参阅本主题前面的链接。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式类型](../cpp/types-of-expressions.md)

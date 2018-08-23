@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Operator = 运算符 |Microsoft 文档'
+title: 'Handlet:: Operator = 运算符 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf539082ef88abb5fb27f09d92b73403dc2d03a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611337"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 运算符
-将指定的 HandleT 对象的值移到当前的 HandleT 对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HandleT& operator=(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `h`  
- 右值引用的句柄。  
-  
-## <a name="return-value"></a>返回值  
- 对当前的 HandleT 对象的引用。  
-  
-## <a name="remarks"></a>备注  
- 此操作将使失效参数指定的 HandleT 对象`h`。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+
+将指定的值移**HandleT**对象与当前**HandleT**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>参数
+
+*h*  
+将右值引用的句柄。
+
+## <a name="return-value"></a>返回值
+
+对当前的引用**HandleT**对象。
+
+## <a name="remarks"></a>备注
+
+此操作将使失效**HandleT**参数指定的对象*h*。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

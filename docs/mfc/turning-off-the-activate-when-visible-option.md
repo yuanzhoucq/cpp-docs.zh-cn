@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384776"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>关闭“可见时激活”选项
 控件有两种基本状态： 活动和非活动。 传统上，控件是否有一个窗口来区分这些状态。 活动控件有窗口;不支持非活动控件。 随着无窗口激活的推出，这一区别不再通用的但仍然适用于很多控件。  

@@ -1,5 +1,5 @@
 ---
-title: / Qspectre |Microsoft 文档
+title: /Qspectre |Microsoft Docs
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -15,15 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d87850ae5413ccf876eb4d4b44b34e34527ef9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375872"
 ---
-# <a name="qspectre"></a>/ Qspectre
+# <a name="qspectre"></a>/Qspectre
 
-指定编译器生成的说明进行操作以缓解特定 Spectre 变体 1 安全漏洞。
+指定编译器生成的指令以缓解特定 Spectre 变体 1 安全漏洞。
 
 ## <a name="syntax"></a>语法
 
@@ -31,35 +32,45 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="remarks"></a>备注
 
-**/Qspectre**选项会使编译器将插入说明以缓解某些[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推测执行边信道攻击*、 会影响许多操作系统和现代处理器，包括从 Intel、 AMD 处理器和 ARM。
+**/Qspectre**选项将使编译器插入以缓解特定的说明[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推理执行旁道攻击*、 会影响许多操作系统和现代处理器中，包括来自 Intel、 AMD 处理器和 ARM。
 
-**/Qspectre**选项默认处于关闭状态。
+**/Qspectre**选项默认情况下处于关闭状态。
 
-在其初始版本中， **/Qspectre**选项仅适用于优化的代码。 你应确保你使用编译代码的任何优化选项 (例如， [/O2 或 /O1](o1-o2-minimize-size-maximize-speed.md)但不是[/Od](od-disable-debug.md)) 来确保应用缓解措施。 同样，检查使用的任何代码[#pragma 优化 ("stg"，off)](../../preprocessor/optimize.md)。
+在其初始版本中， **/Qspectre**选项仅适用于优化的代码。 您应确保编写代码的任何优化选项 (例如， [/o2 或/o1](o1-o2-minimize-size-maximize-speed.md)但不是[/Od](od-disable-debug.md)) 以确保应用缓解措施。 同样，检查使用的任何代码[#pragma 优化 ("stg"，off)](../../preprocessor/optimize.md)。
 
 ### <a name="applicability"></a>适用性
 
-如果你的代码对跨信任边界的数据进行操作，则我们建议你使用 **/Qspectre**选项以重新构建并重新部署你的代码以尽可能快地缓解此问题。 跨信任边界的数据进行操作的代码示例包括用于加载不受信任的输入，可能会影响执行的代码，例如，代码使远程过程调用、 分析不受信任的输入或文件，或使用其他本地间进程通信 (IPC) 接口。 标准沙盒处理技术可能不足。 决定你的代码不会跨越信任边界之前，应仔细调查你沙盒。
+如果你的代码对跨信任边界的数据进行操作，则我们建议你使用 **/Qspectre**选项以重新生成并重新部署你的代码来尽可能快地缓解此问题。 对跨信任边界的数据进行操作的代码的示例包括用于加载不受信任的输入可能会影响执行的代码，例如，代码都会发出远程过程调用、 分析不受信任的输入或文件，或使用其他本地进程间通信 (IPC) 的接口。 标准的沙盒技术可能不足。 在确定您的代码不会跨越信任边界之前，应仔细调查您的沙盒。
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**选项可用于 Visual Studio 2017 版本 15.5.5 和所有更新到 Microsoft Visual c + + 编译器 (MSVC) 或之后 2018 年 1 月 23，做。
+**/Qspectre**选项现已推出 Visual Studio 2017 版本 15.5.5 和对 Microsoft Visual c + + 编译器 （msvc） 编写的所有更新或者在 2018 年 1 月 23 日。
 
-所有版本的 Visual Studio 2017 版本 15.5 和全部预览版的 Visual Studio 版本 15.6 已包含一个未记录的选项， **/d2guardspecload**，即相当于的初始行为 **/Qspectre**. 你可以使用 **/d2guardspecload**到这些版本的编译器中的代码应用相同的缓解措施。 请更新您的生成以使用 **/Qspectre**在编译器中支持的选项; **/Qspectre**选项可能还支持更高版本的编译器中的新的缓解措施。
+所有版本的 Visual Studio 2017 版本 15.5 和所有预览版的 Visual Studio 版本 15.6 已包含一个未记录的选项， **/d2guardspecload**，，等效于的初始行为 **/Qspectre**. 可以使用 **/d2guardspecload**将相同的缓解措施应用于这些版本的编译器中的代码。 请更新您的生成以使用 **/Qspectre**中的支持选项; 编译器 **/Qspectre**选项也可能在更高版本的编译器支持新的缓解措施。
 
 ### <a name="effect"></a>效果
 
-**/Qspectre**选项将输出代码以缓解产出变体 1，边界检查绕过[CVE 2017 5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753)。 它通过充当推理代码执行屏障的指令的插入适用。 用于缓解处理器推理的特定说明取决于处理器和其微体系结构，并在将来版本的编译器可能会更改。
+**/Qspectre**选项将输出代码以缓解低变体 1，边界检查绕过[CVE 2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753)。 它可通过插入充当推理代码执行屏障的说明。 用来缓解处理器推理的具体说明取决于处理器和其微型体系结构，并在将来版本的编译器可能会更改。
 
-当 **/Qspectre**选项启用时，编译器将尝试标识的实例推测执行其中可能会绕过边界检查和插入的屏障说明进行操作。 请务必注意，有一些编译器可以执行以标识实例的变体 1 的分析的限制。 在这种情况下，就不能保证所有实例的变体 1 检测下 **/Qspectre**。
+当 **/Qspectre**启用选项，编译器将尝试标识在其中推理执行可能会绕过边界检查和插入的屏障说明实例。 请务必注意是有限的编译器可以执行来标识实例的变体 1 的分析。 在这种情况下，则变体 1 的所有可能的实例检测下不能保证 **/Qspectre**。
 
 ### <a name="performance-impact"></a>对性能的影响
 
-对性能的影响 **/Qspectre**已出现非常可观中多个非常大型基本代码，但没有任何保证代码的性能 **/Qspectre**不受影响。 你应进行基准测试代码以确定对性能的选项的效果。 如果你知道缓解措施，不要求在性能关键的块或循环中，缓解措施可以有选择性地禁用通过使用[__declspec(spectre(nomitigation))](../../cpp/spectre.md)指令。 此指令不是在仅支持的编译器中可用 **/d2guardspecload**选项。
+性能影响 **/Qspectre**达到过要在多个非常大代码库，可以忽略不计，但没有保证代码的性能的 **/Qspectre**不会受到影响。 应制定基准代码以确定对性能的选项的效果。 如果您知道缓解措施不需要在性能关键的块或循环中，缓解措施可以有选择地禁用通过使用[__declspec(spectre(nomitigation))](../../cpp/spectre.md)指令。 此指令只支持的编译器中不可 **/d2guardspecload**选项。
+
+### <a name="required-libraries"></a>所需的库
+
+**/Qspectre**编译器选项生成的隐式链接的已生成提供 Spectre 缓解措施的运行时库版本的代码。 这些库都必须通过使用 Visual Studio 安装程序安装的可选组件：
+
+- VC + + 2017年版本*version_number* Libs 面向 Spectre （x86 和 x64）
+- 带有 Spectre 缓解措施的 Visual C++ ATL (x86/x64)
+- 带有 Spectre 缓解措施的 Visual C++ MFC for x86/x64
+
+如果使用生成你的代码 **/Qspectre**和这些库并不安装，生成系统报告**警告 MSB8038： 已启用 Spectre 缓解措施，但找不到 Spectre 缓解库**。 如果在 MFC 或 ATL 代码生成失败，并且链接器报表错误，例如**错误 LNK1104： 无法打开文件 oldnames.lib**，这些缺少的库可能就是原因。
 
 ### <a name="additional-information"></a>其他信息
 
-有关更多详细信息，请参阅官方[Microsoft 安全公告 ADV180002、 指南，以缓解推测执行端通道漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指南中也有来自 Intel，[推理执行端通道缓解措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[缓存推理端通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 Spectre 和垮台缓解措施的特定于 Windows 的概述，请参阅[了解在 Windows 系统上的 Spectre 和垮台缓解的性能影响](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全博客上。 由 MSVC 缓解措施的 Spectre 漏洞的概述，请参阅[中 MSVC Spectre 缓解](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)Visual c + + 团队博客上。
+有关更多详细信息，请参阅官方[Microsoft 安全公告 ADV180002，指南，以缓解推理执行旁道漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指南也是可从 Intel[推理执行端通道缓解措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[缓存推理端通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 有关 Spectre 和 Meltdown 缓解措施的特定于 Windows 的概述，请参阅[了解 Windows 系统上的 Spectre 和 Meltdown 缓解措施的性能影响](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全博客上。 MSVC 缓解措施针对 Spectre 漏洞的概述，请参阅[Spectre 缓解措施在 MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./) Visual c + + 团队博客上。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 

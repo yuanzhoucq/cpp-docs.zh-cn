@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104901"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>调用特定应用程序域中的函数
 在特定应用程序域内调用函数的支持。  

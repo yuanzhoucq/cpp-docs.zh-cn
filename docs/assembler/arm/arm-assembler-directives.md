@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053296"
 ---
 # <a name="arm-assembler-directives"></a>ARM 汇编程序指令
 大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  

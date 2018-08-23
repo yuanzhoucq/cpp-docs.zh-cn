@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234115"
 ---
 # <a name="compiler-error-c2694"></a>编译器错误 C2694
 重写： 重写虚函数具有限制性较弱的异常规范比基类虚拟成员函数 'base'  

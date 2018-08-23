@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379219"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （设置源字符集）
 允许您指定可执行文件的源字符集。  

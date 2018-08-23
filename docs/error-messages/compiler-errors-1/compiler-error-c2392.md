@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197905"
 ---
 # <a name="compiler-error-c2392"></a>编译器错误 C2392
 method1： 协变返回类型不支持在托管或 WinRTtypes，否则为 method2 将被重写  

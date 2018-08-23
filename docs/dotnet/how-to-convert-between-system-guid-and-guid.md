@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127437"
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>如何：在 System::Guid 与 _GUID 之间进行转换
 下面的代码示例演示如何将转换之间<xref:System.Guid>和`_GUID`。  

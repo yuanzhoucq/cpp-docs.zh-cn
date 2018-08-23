@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371910"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 调用链接器
 CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将在编译期间创建的.obj 文件的名称和命令行上指定的任何其他文件的名称传递到链接器。 链接器使用 LINK 环境变量中列出的选项。 /Link 选项可用于指定 CL 命令行上的链接器选项。 /Link 选项后跟的选项将替代 LINK 环境变量中。 下表中的选项禁止显示链接。  

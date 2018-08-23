@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348656"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>用于创建 Internet 客户端应用程序的 MFC 类
 MFC 提供有关编写 Internet 客户端应用程序的以下类和全局函数。 缩进表示从位于其上方的未缩进类派生的类。 `CGopherFile` 和`CHttpFile`派生自`CInternetFile`，例如。 AFXINET 中声明这些类和全局函数。H，除`CFileFind`，其中 AFX 中声明。H。  

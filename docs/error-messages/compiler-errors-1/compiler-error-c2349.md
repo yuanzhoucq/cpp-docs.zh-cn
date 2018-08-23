@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222262"
 ---
 # <a name="compiler-error-c2349"></a>编译器错误 C2349
 为托管，则不能编译 function: 原因';使用非托管的 #pragma  

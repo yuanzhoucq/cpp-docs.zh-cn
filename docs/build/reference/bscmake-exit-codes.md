@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369223"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE 退出代码
 BSCMAKE 到操作系统或调用程序返回退出代码 （也称为返回代码或错误代码）。  

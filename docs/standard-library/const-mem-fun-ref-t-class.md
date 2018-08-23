@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961244"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t 类
 
@@ -40,9 +41,9 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>参数
 
-`Pm` 指向类成员函数的指针**类型**可转换为函数对象。
+*Pm*指向的类成员函数的指针`Type`可转换为函数对象。
 
-`left` 对象的`Pm`上调用成员函数。
+*左*对象的*Pm*上调用成员函数。
 
 ## <a name="return-value"></a>返回值
 
@@ -50,7 +51,7 @@ class const_mem_fun_ref_t
 
 ## <a name="remarks"></a>备注
 
-模板类存储 `Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它定义其成员函数`operator()`为返回 (**左**。\*`Pm`) （) **const**。
+此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 (**左**。\*`Pm`) （) **const**。
 
 ## <a name="example"></a>示例
 

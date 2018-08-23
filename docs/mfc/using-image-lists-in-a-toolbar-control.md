@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951902"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>在工具栏控件中使用图像列表
 默认情况下，使用工具栏控件中的按钮的图像存储为单个位图。 但是，你可以将按钮图像存储在图像列表的一组。 工具栏控件对象可以使用最多三个单独的映像列表：  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 -   禁用当前已禁用的工具栏按钮的图像列表包含图像。  
   
--   突出显示当前突出显示的工具栏按钮的图像列表包含图像。 工具栏使用时才使用此图像列表**TBSTYLE_FLAT**样式。  
+-   突出显示当前突出显示的工具栏按钮的图像列表包含图像。 仅当工具栏使用 TBSTYLE_FLAT 样式时，才使用此图像列表。  
   
  您将其与相关联时，工具栏控件将使用这些映像列表`CToolBarCtrl`对象。 此关联通过调用来实现[CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist)， [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)，和[SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)。  
   

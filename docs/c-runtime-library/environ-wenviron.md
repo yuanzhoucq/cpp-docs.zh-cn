@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451394"
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 变量是指向构成进程环境的多字节字符字符串的指针数组的指针。 此全局变量已弃用，因为出现了更安全的函数版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)，应使用这两个版本来替换此全局变量。 `_environ` 在 Stdlib.h 中声明。  
@@ -56,9 +57,9 @@ extern wchar_t **_wenviron;
   
  是 `_environ` 的宽字符版本。 在使用 `wmain` 函数的程序中，`_wenviron` 在程序启动过程中根据来自操作系统环境的设置进行初始化。  
   
- 在使用 `main` 的程序中，`_wenviron` 最初为 `NULL`，因为环境是由多字节字符字符串组成的。 在首次调用 `_wgetenv` 或 `_wputenv` 时，会由 `_wenviron` 创建并指向对应的宽字符字符串环境。  
+ 在使用 `main` 的程序中，`_wenviron` 最初为 NULL，因为环境是由多字节字符字符串组成的。 在首次调用 `_wgetenv` 或 `_wputenv` 时，会由 `_wenviron` 创建并指向对应的宽字符字符串环境。  
   
- 同样，在使用 `wmain` 的程序中，`_environ` 最初是 `NULL`，因为环境是由宽字符字符串组成的。 在首次调用 `_getenv` 或 `_putenv` 时，会由 `_environ` 创建并指向对应的多字节字符字符串环境。  
+ 同样，在使用 `wmain` 的程序中，`_environ` 最初是 NULL，因为环境是由宽字符字符串组成的。 在首次调用 `_getenv` 或 `_putenv` 时，会由 `_environ` 创建并指向对应的多字节字符字符串环境。  
   
  当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，当调用 `_putenv` 时，也会自动调用 `_wputenv`，以便两个环境字符串相对应。  
   

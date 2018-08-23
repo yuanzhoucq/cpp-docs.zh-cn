@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270972"
 ---
 # <a name="compiler-error-c3867"></a>编译器错误 C3867
 “func”: 函数调用缺少自变量列表；请使用“&func”创建指向成员的指针  

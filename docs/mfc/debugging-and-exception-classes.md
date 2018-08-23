@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341756"
 ---
 # <a name="debugging-and-exception-classes"></a>调试和异常类
 这些类为调试动态内存分配和将异常信息从引发异常的函数传递到捕获异常的函数提供支持。  

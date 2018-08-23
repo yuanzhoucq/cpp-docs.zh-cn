@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232109"
 ---
 # <a name="compiler-error-c2751"></a>编译器错误 C2751
 parameter： 函数参数的名称不能限定  

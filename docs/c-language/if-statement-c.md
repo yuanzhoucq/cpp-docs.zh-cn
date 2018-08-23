@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387045"
 ---
 # <a name="if-statement-c"></a>if 语句 (C)
 if 语句控制条件分支。 如果表达式的值不为零，则执行 if 语句体。 if 语句的语法有两种形式。  

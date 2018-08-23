@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::operator = |Microsoft 文档
+title: _bstr_t::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5537f4ad3abbac9686272e15d06bfa5df0bfca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dfed780e0769e342ff368af453fc70764a372f0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404468"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Microsoft 专用**  
@@ -31,38 +32,29 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      _bstr_t& operator=(  
-   const _bstr_t& s1   
-) throw ( );  
-_bstr_t& operator=(  
-   const char* s2   
-);  
-_bstr_t& operator=(  
-   const wchar_t* s3   
-);  
-_bstr_t& operator=(  
-   const _variant_t& var   
-);  
+_bstr_t& operator=(const _bstr_t& s1) throw ( );  
+_bstr_t& operator=(const char* s2);  
+_bstr_t& operator=(const wchar_t* s3);  
+_bstr_t& operator=(const _variant_t& var);  
 ```  
   
 #### <a name="parameters"></a>参数  
- *S1*  
+ *s1*  
  将分配给现有 `_bstr_t` 对象的 `_bstr_t` 对象。  
   
- *S2*  
+ *s2*  
  将分配给现有 `_bstr_t` 对象的多字节字符串。  
   
- `s3`  
+ *s3*  
  将分配给现有 `_bstr_t` 对象的 Unicode 字符串。  
   
- `var`  
+ *var*  
  将分配给现有 `_variant_t` 对象的 `_bstr_t` 对象。  
   
  **结束 Microsoft 专用**  
   
 ## <a name="example"></a>示例  
- 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)有关的使用示例`operator=`。  
+ 请参阅[_bstr_t:: assign](../cpp/bstr-t-assign.md)有关的使用示例**运算符 =**。  
   
 ## <a name="see-also"></a>请参阅  
  [_bstr_t 类](../cpp/bstr-t-class.md)

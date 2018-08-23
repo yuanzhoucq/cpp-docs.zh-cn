@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSeparator 类 |Microsoft 文档
+title: CMFCRibbonSeparator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,14 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849758"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
-实现的功能区分隔符。  
+实现功能区分隔符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,26 +62,26 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |||  
 |-|-|  
 |名称|描述|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|将添加到分隔符**命令**列入**自定义**对话框。 (重写[CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。)|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|将添加到分隔符**命令**列表中**自定义**对话框。 (重写[CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。)|  
 |`CMFCRibbonSeparator::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonSeparator::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
+|`CMFCRibbonSeparator::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |||  
 |-|-|  
 |名称|描述|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|从另一个对象设置的分隔符的成员变量的复制方法。|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|返回的分隔符的大小。|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|从另一个对象设置分隔符的成员变量复制方法。|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|返回分隔符的大小。|  
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|指示这是否是一个分隔符。|  
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|指示这是一个制表位。|  
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|指示这是否是一个制表位。|  
 |[CMFCRibbonSeparator::OnDraw](#ondraw)|由系统在功能区或快速访问工具栏上绘制分隔符调用。|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|由系统上绘制分隔符调用**命令**列表。|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|调用的系统上绘制分隔符**命令**列表。|  
   
 ## <a name="remarks"></a>备注  
- 功能区分隔符是垂直或水平线条，逻辑上分隔功能区元素。 可以在功能区控件、 主应用程序菜单、 功能区状态栏，和快速访问工具栏上绘制分隔符。  
+ 功能区分隔符为垂直或水平线条，逻辑上将功能区元素。 可以在功能区控件、 主应用程序菜单、 功能区状态栏和快速访问工具栏上绘制分隔符。  
   
- 若要在你的应用程序中使用分隔符，构造新对象，并将其添加到主应用程序菜单如下所示：  
+ 若要在应用程序中使用分隔符，构造新对象并将其添加到主应用程序菜单，如下所示：  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -90,7 +91,7 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-调用[CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator)向功能区面板添加分隔符。 分配和内部添加分隔符`AddSeparator`方法。  
+调用[CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator)将分隔符添加到功能区面板。 分配和添加在内部分隔符`AddSeparator`方法。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -103,7 +104,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
  **标头：** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
- 将添加到分隔符**命令**列入**自定义**对话框。  
+ 将添加到分隔符**命令**列表中**自定义**对话框。  
   
 ```  
 virtual int AddToListBox(
@@ -112,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndListBox`  
- 指向的指针**命令**添加分隔符的位置的列表。  
+ [in]*pWndListBox*  
+ 一个指向**命令**添加分隔符的位置的列表。  
   
- [in] `bDeep`  
+ [in]*bDeep*  
  已忽略。  
   
 ### <a name="return-value"></a>返回值  
- 指定列表框中的字符串的从零开始索引`pWndListBox`。  
+ 为指定列表框中字符串的从零开始索引*pWndListBox*。  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  构造 `CMFCRibbonSeparator` 对象。  
@@ -129,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsHoriz`  
- 如果`TRUE`，该分隔符是水平; 如果`FALSE`，分隔符为垂直。  
+ [in]*bIsHoriz*  
+ 如果为 TRUE，该分隔符是水平;如果为 FALSE，分隔符为垂直。  
   
 ### <a name="remarks"></a>备注  
  在应用程序菜单中使用水平分隔符。 在工具栏中使用垂直分隔符。  
@@ -141,29 +142,29 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
- 从另一个对象设置的分隔符的成员变量的复制方法。  
+ 从另一个对象设置分隔符的成员变量复制方法。  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `Src`  
+ [in]*Src*  
  要从复制的源功能区元素。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
- 返回的分隔符的大小。  
+ 返回分隔符的大小。  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 指向设备内容的指针。  
+ [in]*pDC*  
+ 设备内容指向的指针。  
   
 ### <a name="return-value"></a>返回值  
- 在给定的设备上下文的分隔符的大小。  
+ 给定的设备上下文上的分隔符的大小。  
   
 ##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
  指示这是否是一个分隔符。  
@@ -173,17 +174,17 @@ virtual BOOL IsSeparator() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 始终`TRUE`此类。  
+ 对于此类始终返回 TRUE。  
   
 ##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
- 指示这是一个制表位。  
+ 指示这是否是一个制表位。  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 始终`FALSE`此类。  
+ 此类始终为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  功能区分隔符不是一个制表位。  
@@ -196,11 +197,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
- 由系统上绘制分隔符调用**命令**列表。  
+ 调用的系统上绘制分隔符**命令**列表。  
   
 ```  
 virtual void OnDrawOnList(
@@ -217,13 +218,13 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pDC`|一个指向设备上下文的指针。|  
-|[in] `strText`|显示在列表中的文本。|  
-|[in] `nTextOffset`|文本和边框的左侧之间的间距。|  
-|[in] `rect`|指定的绑定矩形。|  
-|[in] `bIsSelected`|已忽略。|  
-|[in] `bHighlighted`|已忽略。|  
+|[in]*pDC*|一个指向设备上下文的指针。|  
+|[in]*strText*|在列表上显示的文本。|  
+|[in]*nTextOffset*|文本和左侧和右侧的边界矩形之间的间距。|  
+|[in]*rect*|指定的边框。|  
+|[in]*bIsSelected*|已忽略。|  
+|[in]*bHighlighted*|已忽略。|  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

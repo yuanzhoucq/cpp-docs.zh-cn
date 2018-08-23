@@ -1,7 +1,7 @@
 ---
 title: steady_clock 结构 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1dbfac1eb8c67c5306bded6e6fd9ee8dacf54b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959720"
 ---
 # <a name="steadyclock-struct"></a>steady_clock 结构
 
-表示 `steady` 时钟。
+表示*稳定*时钟。
 
 ## <a name="syntax"></a>语法
 
@@ -32,34 +33,41 @@ struct steady_clock;
 
 ## <a name="remarks"></a>备注
 
-在 Windows 上，steady_clock 会包装 QueryPerformanceCounter 函数。
+在 Windows 中，`steady_clock`包装`QueryPerformanceCounter`函数。
 
-如果首次调用 `now()` 返回的值始终小于或等于后续调用 `now()` 返回的值，则为单调时钟。
+如果首次调用 `now` 返回的值始终小于或等于后续调用 `now` 返回的值，则为单调时钟。 如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
 
-如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
+`high_resolution_clock` 是的 typedef `steady_clock`。
 
-High_resolution_clock 是 steady_clock 的 typdef。
+### <a name="public-typedefs"></a>公共 typedef
+
+|name|描述|
+|----------|-----------------|
+|`steady_clock::duration`|同义词`nanoseconds`中定义\<chrono >。|
+|`steady_clock::period`|同义词`nano`中定义\<比率 >。|
+|`steady_clock::rep`|同义词**长****长**，用于表示中包含的实例化的时钟计时周期数的类型`duration`。|
+|`steady_clock::time_point`|`chrono::time_point<steady_clock>` 的同义词。|
 
 ## <a name="public-functions"></a>公共函数
 
 |函数|描述|
 |--------------|-----------------|
-|现在|返回当前时间作为 time_point 值。|
+|`now`|返回当前时间作为`time_point`值。|
 
 ## <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
-|`system_clock::is_steady`|保存 `true`。 `steady_clock` 是*稳定的*。|
+|`steady_clock::is_steady`|持有 **，则返回 true**。 `steady_clock` 是*稳定的*。|
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<chrono >
 
-**命名空间：**std::chrono
+**命名空间：** std::chrono
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[system_clock 结构](../standard-library/system-clock-structure.md)<br/>
+- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+- [\<chrono>](../standard-library/chrono.md)
+- [system_clock 结构](../standard-library/system-clock-structure.md)

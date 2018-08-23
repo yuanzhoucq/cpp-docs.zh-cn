@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685900"
 ---
 # <a name="22-conditional-compilation"></a>2.2 条件编译
 _**OPENMP**宏名称指由 OpenMP 符合实现十进制常量*yyyymm*，这将是年份和月份的已批准的规范。 此宏不能使用者的 **#define**或 **#undef**预处理指令。  

@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14034c598c3f7e77bc6bc650b275ee1e035d084c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450445"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -55,7 +56,7 @@ int mbsinit(
 
 ## <a name="return-value"></a>返回值
 
-非零如果*ps*为 NULL 或者不在转换的中间。
+非零如果*ps*是**NULL**或者，如果不在转换的中间。
 
 ## <a name="remarks"></a>备注
 

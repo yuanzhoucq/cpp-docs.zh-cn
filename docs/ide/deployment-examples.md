@@ -1,5 +1,5 @@
 ---
-title: 部署示例 |Microsoft 文档
+title: 部署示例 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327406"
 ---
 # <a name="deployment-examples"></a>部署示例
-本部分包含示例演示如何部署 Visual c + + 应用程序。  
+此部分包含演示如何部署 Visual C++ 应用程序的示例。  
   
 ## <a name="examples"></a>示例  
  [演练：使用安装项目部署 Visual C++ 应用程序](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  

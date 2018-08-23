@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951973"
 ---
 # <a name="tn001-window-class-registration"></a>TN001：窗口类注册
 本说明介绍注册这两个特殊的 MFC 例程[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`讨论使用 MFC 和 Windows 的属性。  
   
 ## <a name="the-problem"></a>问题  
- 属性[CWnd](../mfc/reference/cwnd-class.md)对象，如`HWND`处理在 Windows 中，在两个位置存储： 窗口对象和`WNDCLASS`。 名称`WNDCLASS`传递给常规窗口创建函数如[cwnd:: Create](../mfc/reference/cwnd-class.md#create)和[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)中`lpszClassName`参数。  
+ 属性[CWnd](../mfc/reference/cwnd-class.md)对象，如`HWND`处理在 Windows 中，在两个位置存储： 窗口对象和`WNDCLASS`。 名称`WNDCLASS`传递给常规窗口创建函数如[cwnd:: Create](../mfc/reference/cwnd-class.md#create)和[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)中*lpszClassName*参数。  
   
  这`WNDCLASS`必须注册通过四个方法之一：  
   
@@ -45,15 +46,15 @@ ms.lasthandoff: 05/04/2018
   
 |字段|描述|  
 |-----------|-----------------|  
-|`lpfnWndProc`|窗口过程，必须是 `AfxWndProc`|  
-|`cbClsExtra`|未使用 （应为零）|  
-|`cbWndExtra`|未使用 （应为零）|  
-|`hInstance`|使用自动填充[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|图标的框架窗口，请参阅下文|  
-|`hCursor`|下面提供了窗口，上方时鼠标光标|  
-|`hbrBackground`|背景色，请参阅下文|  
-|`lpszMenuName`|未使用 （应为 NULL）|  
-|`lpszClassName`|类名，请参阅下文|  
+|*lpfnWndProc*|窗口过程，必须是 `AfxWndProc`|  
+|*cbClsExtra*|未使用 （应为零）|  
+|*cbWndExtra*|未使用 （应为零）|  
+|*hInstance*|使用自动填充[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*任务栏*|图标的框架窗口，请参阅下文|  
+|*hCursor*|下面提供了窗口，上方时鼠标光标|  
+|*hbrBackground*|背景色，请参阅下文|  
+|*lpszMenuName*|未使用 （应为 NULL）|  
+|*lpszClassName*|类名，请参阅下文|  
   
 ## <a name="provided-wndclasses"></a>提供 WNDCLASSes  
  早期版本的 MFC （之前 MFC 4.0)，提供多个预定义的窗口类。 默认情况下不再提供这些窗口类。 应用程序应使用`AfxRegisterWndClass`结合适当的参数。  
@@ -104,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` 将引发[CResourceException](../mfc/reference/cresourceexception-class.md)如果窗口类注册失败 （由于错误的参数，或 Windows 内存不足）。  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass 和 AfxRegisterClass 函数  
- 如果你想要执行的任何内容更完善比`AfxRegisterWndClass`提供，你可以调用 Windows API`RegisterClass`或 MFC 函数`AfxRegisterClass`。 `CWnd`， [CFrameWnd](../mfc/reference/cframewnd-class.md)和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`函数采用`lpszClassName`窗口类作为第一个参数的字符串名称。 你可以使用任何已注册的窗口类名称，而不考虑用来将其注册的方法。  
+ 如果你想要执行的任何内容更完善比`AfxRegisterWndClass`提供，你可以调用 Windows API`RegisterClass`或 MFC 函数`AfxRegisterClass`。 `CWnd`， [CFrameWnd](../mfc/reference/cframewnd-class.md)和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`函数采用*lpszClassName*窗口类作为第一个参数的字符串名称。 你可以使用任何已注册的窗口类名称，而不考虑用来将其注册的方法。  
   
  务必使用`AfxRegisterClass`(或`AfxRegisterWndClass`) 在 Win32 DLL 中。 Win32 自动注销注册的一个 DLL，以便该 DLL 而终止时，必须显式注销类的类。 通过使用`AfxRegisterClass`而不是`RegisterClass`这会为你自动处理。 `AfxRegisterClass` 维护的唯一类的列表由您的 DLL 注册和将自动注销该 DLL 终止时。 当你使用`RegisterClass`在 DLL，你必须确保该 DLL 而终止时的情况下，所有类都都可以取消注册 (在你[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)函数)。 如果不这样做可能会导致`RegisterClass`另一个客户端应用程序尝试使用您的 DLL 时意外失败。  
   

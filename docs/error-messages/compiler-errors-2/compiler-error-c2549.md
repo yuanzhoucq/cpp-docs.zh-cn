@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227927"
 ---
 # <a name="compiler-error-c2549"></a>编译器错误 C2549
 用户定义的转换不能指定返回类型  

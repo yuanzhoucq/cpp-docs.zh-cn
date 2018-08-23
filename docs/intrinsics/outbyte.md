@@ -1,5 +1,5 @@
 ---
-title: __outbyte |Microsoft 文档
+title: __outbyte |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538227"
 ---
 # <a name="outbyte"></a>__outbyte
 **Microsoft 专用**  
   
- 生成`out`指令，这将发送 1 个字节指定`Data`出指定的 I/O 端口`Port`。  
+ 将生成`out`指令，将发送由指定 1 个字节`Data`出指定的 I/O 端口`Port`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +40,7 @@ void __outbyte(
   
 #### <a name="parameters"></a>参数  
  [in] `Port`  
- 要将数据发送到的端口。  
+ 要向其发送数据的端口。  
   
  [in] `Data`  
  要指定的端口发送的字节。  
@@ -48,7 +49,7 @@ void __outbyte(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Invokehelper:: Invoke 方法 |Microsoft 文档'
+title: 'Invokehelper:: Invoke 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,89 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584316"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-STDMETHOD(  
-   Invoke  
-)();  
-STDMETHOD(  
-   Invoke  
-)(typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `arg1`  
- 参数 1。  
-  
- `arg2`  
- 参数 2。  
-  
- `arg3`  
- 参数 3。  
-  
- `arg4`  
- 参数 4。  
-  
- `arg5`  
- 参数 5。  
-  
- `arg6`  
- 自变量 6。  
-  
- `arg7`  
- 参数 7。  
-  
- `arg8`  
- 自变量 8。  
-  
- `arg9`  
- 参数 9。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为描述错误的 HRESULT。  
-  
-## <a name="remarks"></a>备注  
- 调用签名包含参数的指定的数目的事件处理程序。  
-  
-## <a name="requirements"></a>要求  
- **标头：** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [InvokeHelper 结构](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>参数
+
+*arg1*  
+参数 1。
+
+*Arg2*  
+参数 2。
+
+*arg3*  
+参数 3。
+
+*了 arg4*  
+参数 4。
+
+*arg5*  
+参数 5。
+
+*了 arg6*  
+自变量 6。
+
+*arg7*  
+参数 7。
+
+*arg8*  
+参数 8。
+
+*arg9*  
+参数 9。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为描述错误的 HRESULT。
+
+## <a name="remarks"></a>备注
+
+调用其签名包含指定的数量的参数的事件处理程序。
+
+## <a name="requirements"></a>要求
+
+**标头：** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[InvokeHelper 结构](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

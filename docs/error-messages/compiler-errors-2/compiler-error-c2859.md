@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245186"
 ---
 # <a name="compiler-error-c2859"></a>编译器错误 C2859
 文件名不是创建此预编译标头时已使用的类型文件，请重新创建预编译标头。  

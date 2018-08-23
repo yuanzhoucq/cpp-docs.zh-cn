@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345636"
 ---
 # <a name="orchestrating-other-window-actions"></a>协调其他窗口操作
 框架窗口会协调半模式状态，如上下文相关的帮助和打印预览。 在打印预览中的框架窗口的角色的说明，请参阅[打印和打印预览](../mfc/printing-and-print-preview.md)。  

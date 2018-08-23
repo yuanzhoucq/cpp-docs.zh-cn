@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960656"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
 
-该类将 **ctype\<CharType**> 的模板类显式专用化为 `char` 类型，它描述一个对象来充当区域设置 facet，用来将 `char` 类字符的各种属性特征化。
+此类是模板类的显式专用化`ctype\<CharType>`键入**char**，描述一个对象来充当区域设置 facet 以各种类型的字符属性特征化**char**.
 
 ## <a name="syntax"></a>语法
 
@@ -131,15 +132,15 @@ protected:
 
 显式专用化与模板类存在以下几个方面的差异：
 
-- ctype< `char`> 类对象将指针存储到 ctype 掩码表的第一个元素，该掩码表是 **ctype_base::mask** 类型的 UCHAR_MAX + 1 元素数组。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
+- Ctype 类的对象 < `char`> 将存储到 ctype 掩码表的第一个元素，数组的 UCHAR_MAX + 1 个元素的类型的指针`ctype_base::mask`。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
 
-- 其唯一的公共构造函数允许指定 ctype 掩码表 **tab** 和布尔对象 **del**，如果在销毁 ctype< `char`> 对象时应删除该数组，则布尔对象为 true，还会指定 reference-count 参数引用。
+- 其唯一的公共构造函数允许您指定`tab`，ctype 掩码表，并`del`，如果应为数组，则为 true 的布尔对象时删除 ctype < `char`> 对象被销毁后，引用计数以及参数引用。
 
-- 受保护的成员函数 **table** 返回存储的 ctype 掩码表。
+- 受保护的成员函数`table`返回存储的 ctype 掩码表。
 
-- 静态成员对象 **table_size** 在 ctype 掩码表中指定最小的元素数。
+- 静态成员对象`table_size`ctype 掩码表中指定元素的最小数目。
 
-- 受保护的静态成员函数 **classic_table** 返回适合于 “C” 区域设置的 ctype 掩码表。
+- 受保护的静态成员函数`classic_table`（返回适合于"C"区域设置的 ctype 掩码表。
 
 - 没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)。 相应的公共成员函数自身执行等效操作。
 

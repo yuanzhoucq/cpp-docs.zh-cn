@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382872"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>assert 函数输出的诊断
 **ANSI 4.2** assert 函数输出的诊断和终止行为  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381600"
 ---
 # <a name="using-an-image-list"></a>使用图像列表
 图像列表的典型用法遵循以下模式：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370137"
 ---
 # <a name="mfc-class-wizard"></a>MFC 类向导
 可以将消息和消息处理程序添加到你的项目中的类。 此外可以启动其他向导，或将类添加到你的项目。  

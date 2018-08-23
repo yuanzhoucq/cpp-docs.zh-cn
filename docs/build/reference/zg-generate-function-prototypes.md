@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380529"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg（生成函数原型）
 已删除。 为源文件中定义的每个函数创建函数原型，但不编译源文件。  

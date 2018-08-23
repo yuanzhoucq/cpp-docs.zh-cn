@@ -1,5 +1,5 @@
 ---
-title: managed、 unmanaged |Microsoft 文档
+title: managed、 unmanaged |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540947"
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 启用函数级控制以将函数编译为托管或未托管函数。  
@@ -34,31 +35,31 @@ ms.lasthandoff: 05/07/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>备注  
- [/Clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项提供模块级别控制用于编译为托管或非托管函数。  
+
+[/Clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项提供用于编译为托管或非托管函数的模块级控制。  
   
- 未托管函数将为本机平台编译，因此，这一部分的程序的执行将由公共语言运行时传递给本机平台。  
+未托管函数将为本机平台编译，因此，这一部分的程序的执行将由公共语言运行时传递给本机平台。  
   
- 将函数编译为默认情况下管理时 **/clr**使用。  
+当使用了 `/clr` 时，默认情况下将函数编译为托管函数。  
   
- 在将应用这些杂注时：  
+在将应用这些杂注时：  
   
--   在函数前添加杂注，而不是在函数体内添加。  
+- 在函数前添加杂注，而不是在函数体内添加。  
   
--   在 `#include`语句后添加杂注。 在 `#include` 语句之前不使用这些杂注。  
+- 在 `#include`语句后添加杂注。 在 `#include` 语句之前不使用这些杂注。  
   
- 编译器将忽略`managed`和`unmanaged`杂注如果 **/clr**不编译中使用。  
+编译器将忽略**托管**并**非托管**杂注如果`/clr`不编译中使用。  
   
- 当实例化模板函数后，定义时的模板的杂注状态可确定该函数是托管或未托管的。  
+当实例化模板函数后，定义时的模板的杂注状态可确定该函数是托管或未托管的。  
   
- 有关详细信息，请参阅[初始化混合程序集的](../dotnet/initialization-of-mixed-assemblies.md)。  
+有关详细信息，请参阅[混合程序集初始化](../dotnet/initialization-of-mixed-assemblies.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -97,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

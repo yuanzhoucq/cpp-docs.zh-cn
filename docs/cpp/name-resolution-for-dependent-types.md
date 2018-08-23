@@ -1,5 +1,5 @@
 ---
-title: 依赖类型的名称解析 |Microsoft 文档
+title: 依赖类型的名称解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588212"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 使用**typename**为模板定义，以告知编译器给定的限定的名称标识的类型中的限定名。 有关详细信息，请参阅[typename](../cpp/typename.md)。  
@@ -48,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- 针对依赖名称的名称查找检查这两个上下文中的模板定义的名称-此上下文将在以下示例中，查找`myFunction(char)`-和模板实例化的上下文。在下面的示例中，模板进行实例化在主窗格中;因此，`MyNamespace::myFunction`可见从实例化的点，并且将选取它作为更好的匹配。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。  
+ 针对依赖名称的名称查找将检查模板定义的上下文中的名称，在以下示例中，此上下文将查找`myFunction(char)`— 和模板实例化的上下文。在以下示例中，模板实例化在 main 中;因此，`MyNamespace::myFunction`从实例化的点可见，并且将选取它作为更好的匹配。 如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。  
   
  所有名称都会得到解析，就如同它们是依赖名称一样。 尽管如此，如果存在任何可能的冲突，建议您使用完全限定名。  
   
@@ -92,12 +93,12 @@ int main()
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>模板消除歧义  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 强制实施 C++98/03/11 标准规则以使用“template”关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受仅一致性行。  
+ Visual Studio 2012 对强制执行 C + + 98/03/11 标准规则使用"template"关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  Visual Studio 2012 接受仅一致性行。  
   
 ```cpp  
 #include <iostream>  

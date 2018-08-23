@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32048743"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 根据区域性对齐下一步的变量或上一个字节的倍数的指令`number`。  

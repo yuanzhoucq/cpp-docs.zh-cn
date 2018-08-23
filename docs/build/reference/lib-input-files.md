@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371962"
 ---
 # <a name="lib-input-files"></a>LIB 输入文件
 LIB 所需的输入的文件取决于在其中它的使用的模式下, 表中所示。  

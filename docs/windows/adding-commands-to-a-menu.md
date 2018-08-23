@@ -1,5 +1,5 @@
 ---
-title: 将命令添加到菜单 |Microsoft 文档
+title: 将命令添加到菜单 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3564a808d39aa81ed3b45a1bc5812b285199e04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79dbc2644b721c62b67e0671b0caa2e053c7a923
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593573"
 ---
 # <a name="adding-commands-to-a-menu"></a>将命令添加到菜单
-### <a name="to-add-commands-to-a-menu"></a>将命令添加到菜单  
-  
-1.  [创建菜单](../windows/creating-a-menu.md)。  
-  
-2.  单击菜单名，例如“文件”。  
-  
-     每个菜单都将展开，并显示一个新项框让你输入命令。 例如，可以将“新建”、“打开”和“关闭”命令添加到“文件”菜单中。  
-  
-3.  在新项框中，键入新菜单命令的名称。  
-  
-    > [!NOTE]
-    >  你键入的文本出现在菜单编辑器和在**标题**框中[属性窗口](/visualstudio/ide/reference/properties-window)。 你可以在任一位置编辑新菜单的属性。  
-  
-    > [!TIP]
-    >  你可以定义一个允许用户选择菜单命令的助记键（热键）。 在字母前面键入 & 号，将它指定为助记键。 用户可以通过键入该字母来选择菜单命令。  
-  
-4.  在“属性”窗口中，选择适用的菜单命令属性。 有关详细信息，请参阅[菜单命令属性](../windows/menu-command-properties.md)。  
-  
-5.  在**提示符**框属性窗口中，键入你希望在应用程序的状态栏中显示的提示字符串。  
-  
-     这将在字符串表中创建一个条目，该条目的资源标识符与你创建的菜单命令相同。  
-  
-    > [!NOTE]
-    >  提示只能应用于菜单项**弹出**属性**True**。 例如，包含子菜单项的顶级菜单项可以有提示。 提示的用途是告诉用户在单击菜单项时会发生什么事。  
-  
-6.  按**ENTER**完成菜单命令。  
-  
-     将选定新项框，让你可以创建其他菜单命令。  
-  
 
-  
- **要求**  
-  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [菜单编辑器](../windows/menu-editor.md)   
+### <a name="to-add-commands-to-a-menu"></a>将命令添加到菜单
+
+1. [创建菜单](../windows/creating-a-menu.md)。
+
+2. 单击菜单名，例如**文件**。
+
+   每个菜单都将展开，并显示一个新项框让你输入命令。 例如，可以将命令添加**新建**，**打开**，并**关闭**到**文件**菜单。
+
+3. 在新项框中，键入新菜单命令的名称。
+
+   > [!NOTE]
+   > 键入的文本将同时出现在 **菜单** 编辑器 以及 **属性窗口** 中的 [“标题”](/visualstudio/ide/reference/properties-window)框中。 你可以在任一位置编辑新菜单的属性。
+
+   > [!TIP]
+   > 你可以定义一个允许用户选择菜单命令的助记键（热键）。 输入与号 (`&`) 若要指定为助记键的某个字母前。 用户可以通过键入该字母来选择菜单命令。
+
+4. 在中**属性**窗口中，选择菜单命令适用的属性。 有关详细信息，请参阅[菜单命令属性](../windows/menu-command-properties.md)。
+
+5. 在中**提示符**框中**属性**窗口中，键入你想要在应用程序的状态栏中显示的提示字符串。
+
+   这将在字符串表中创建一个条目，该条目的资源标识符与你创建的菜单命令相同。
+
+   > [!NOTE]
+   > 提示只能应用于菜单项**Popup**的属性**True**。 例如，包含子菜单项的顶级菜单项可以有提示。 目的**提示**用于指示会发生什么情况是如果用户单击菜单项。
+
+6. 按**Enter**完成菜单命令。
+
+   将选定新项框，让你可以创建其他菜单命令。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[菜单编辑器](../windows/menu-editor.md)  

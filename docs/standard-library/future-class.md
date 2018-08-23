@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956633"
 ---
 # <a name="future-class"></a>future 类
 
@@ -93,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Other` A`future`对象。
+*其他*A`future`对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造没有关联异步状态的 `future` 对象。
 
-第二个构造函数构造 `future` 对象并从 `Other` 传输关联异步状态。 `Other` 不再具有关联异步状态。
+第二个构造函数构造`future`对象，并传输关联异步状态从*其他*。 *其他*不再具有关联异步状态。
 
 ## <a name="get"></a>future::get
 
@@ -119,7 +120,7 @@ Ty get();
 
 对于部分专用化 `future<Ty&>`，存储值实际上是对已传递给异步提供程序作为返回值的对象的引用。
 
-因为专用化 `future<void>` 不存在任何存储值，所以此方法会返回 `void`。
+因为对于专用化不存在任何存储的值`future<void>`，该方法将返回**void**。
 
 在其他专用化中，此方法会从存储值移动其返回值。 因此，请仅调用此方法一次。
 
@@ -133,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Right` A`future`对象。
+*右*A`future`对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -141,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>备注
 
-传输后，`Right` 不再具有关联异步状态。
+传输后，*右*不再具有关联异步状态。
 
 ## <a name="share"></a>future::share
 
@@ -165,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果对象有关联的异步状态，则为 `true`；否则为 `false`。
+**true**如果该对象具有关联异步状态; 否则为**false**。
 
 ## <a name="wait"></a>future::wait
 
@@ -190,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>参数
 
-`Rel_time` A [chrono:: duration](../standard-library/duration-class.md)对象，它指定最大时间间隔的此线程受到阻止。
+*Rel_time* A [chrono:: duration](../standard-library/duration-class.md)对象，指定最大时间间隔，此线程受到阻止。
 
 ### <a name="return-value"></a>返回值
 
@@ -211,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>参数
 
-`Abs_time` A [chrono::](../standard-library/time-point-class.md)对象，它指定线程可以取消阻止后的时间。
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)对象，它指定在其后可取消阻止线程的时间。
 
 ### <a name="return-value"></a>返回值
 

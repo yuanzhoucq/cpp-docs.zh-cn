@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344917"
 ---
 # <a name="header-items-in-a-header-control"></a>标题控件中的标题项
 有相当大的控制权的外观和行为的构成标头控件的标题项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))。 每个标题项可以有一个字符串、一个位图化图像、一个关联图像列表中的图像或一个与之关联的应用程序定义的 32 位值。 字符串、位图或图像显示在标题项中。  

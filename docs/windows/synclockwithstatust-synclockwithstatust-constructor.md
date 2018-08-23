@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: Synclockwithstatust 构造函数 |Microsoft 文档'
+title: 'Synclockwithstatust:: Synclockwithstatust 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607625"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 构造函数
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-SyncLockWithStatusT(  
-   _Inout_ SyncLockWithStatusT&& other  
-);  
-  
-explicit SyncLockWithStatusT(  
-   typename SyncTraits::Type sync,  
-   DWORD status  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `other`  
- 右值引用到另一个 SyncLockWithStatusT 对象。  
-  
- `sync`  
- 对另一个 SyncLockWithStatusT 对象的引用。  
-  
- `status`  
- 值[status_](../windows/synclockwithstatust-status-data-member.md)数据成员的`other`参数或`sync`参数。  
-  
-## <a name="remarks"></a>备注  
- 初始化 SyncLockWithStatusT 类的新实例。  
-  
- 第一个构造函数初始化当前 SyncLockWithStatusT 对象从参数所指定的另一个 SyncLockWithStatusT `other`，然后会与其他 SyncLockWithStatusT 对象。 第二个构造函数是`protected`，并将当前 SyncLockWithStatusT 对象初始化为无效状态。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>请参阅  
- [SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)   
- [SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>参数
+
+*other*  
+对另一个右值引用**SyncLockWithStatusT**对象。
+
+*sync*  
+对另一个引用**SyncLockWithStatusT**对象。
+
+*status*  
+值[status_](../windows/synclockwithstatust-status-data-member.md)的数据成员*其他*参数或*同步*参数。
+
+## <a name="remarks"></a>备注
+
+初始化的新实例**SyncLockWithStatusT**类。
+
+第一个构造函数初始化当前**SyncLockWithStatusT**从另一个对象**SyncLockWithStatusT**由参数指定*其他*，，然后使另**SyncLockWithStatusT**对象。 第二个构造函数是**受保护**，并初始化当前**SyncLockWithStatusT**为无效状态的对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>请参阅
+
+[SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381166"
 ---
 # <a name="scalar-types"></a>标量类型
 虽然数据的访问可能源于任何的对齐方式，建议，在以避免性能损失 （或更多损失） 其自然边界上对齐数据。 枚举是常量的整数，而是被视为 32 位整数。 下表描述的类型定义和建议的存储为其与使用以下的对齐方式值的对齐方式：  

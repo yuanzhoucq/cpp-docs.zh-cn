@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374500"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH（启用 _pexit 挂钩函数）
 调用`_pexit`末尾的每个方法或函数的函数。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225421"
 ---
 # <a name="compiler-error-c2395"></a>编译器错误 C2395
 “your_type::operator'op'”：CLR 或 WinRT 运算符无效。 至少一个参数必须是以下类型：“T”、“T%”、“T&”、“T^”、“T^%”、“T^&”，其中 T =“your_type”  

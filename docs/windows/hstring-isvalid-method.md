@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Isvalid 方法 |Microsoft 文档'
+title: 'Hstring:: Isvalid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05efb34a2d03264ca0fb6da1da22a2610c800c30
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600811"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid 方法
-指示当前 HString 对象是否为空。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
+
+指示是否当前**HString**对象是否为空。
+
+## <a name="syntax"></a>语法
+
+```cpp
 bool IsValid() const throw()  
-```  
-  
-#### <a name="parameters"></a>参数  
- 如果当前对象 HString 不为空，则为 `true`；否则为 `false`。  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HString 类](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+**true**如果当前**HString**对象不为空; 否则为**false**。
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HString 类](../windows/hstring-class.md)

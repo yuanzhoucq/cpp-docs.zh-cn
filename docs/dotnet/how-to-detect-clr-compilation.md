@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130759"
 ---
 # <a name="how-to-detect-clr-compilation"></a>如何：检测 /clr 编译
 使用`_MANAGED`或`_M_CEE`宏如果用编译模块 **/clr**。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  

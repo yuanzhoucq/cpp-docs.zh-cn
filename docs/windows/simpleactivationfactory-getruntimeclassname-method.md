@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Getruntimeclassname 方法 |Microsoft 文档'
+title: 'Simpleactivationfactory:: Getruntimeclassname 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e66c6791a55debeb411fd6058d4bbe44cb6637e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575867"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 方法
 
@@ -44,7 +45,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>备注
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，将断言发出错误如果通过指定的类`Base`类模板参数不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+如果`__WRL_STRICT__`是定义，断言错误如果由指定的类发出`Base`类模板参数不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
 ## <a name="requirements"></a>要求
 

@@ -1,7 +1,7 @@
 ---
-title: 按字母顺序列出的编译器选项 |Microsoft 文档
+title: 按字母顺序列出的编译器选项 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/22/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -13,11 +13,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42575466"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -30,13 +31,13 @@ ms.lasthandoff: 05/03/2018
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
 |[/ 分析](analyze-code-analysis.md)|启用代码分析。|
 |[/arch](arch-minimum-cpu-architecture.md)|为代码生成指定体系结构。|
-|[await /](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在预处理期间保留注释。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
 |[/clr](clr-common-language-runtime-compilation.md)|生成要在公共语言运行时上运行的输出文件。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|控制在编译时的 constexpr 评估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
 |[/D](d-preprocessor-definitions.md)|定义常数和宏。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制诊断消息的格式。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|处理 XML 文件的文档注释。|
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/03/2018
 |[/EH](eh-exception-handling-model.md)|指定异常处理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Visual C++ 团队提供内部编译器错误(ICE)信息。|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|集执行字符集。|
+|[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|生成为特定 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 结构或为 AMD64 和 64 位内存扩展技术 (EM64T) 结构中的特定宏结构进行了优化的代码。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|生成代码适用于特定 x64 体系结构或 AMD64 和扩展内存 64 技术 (EM64T) 体系结构中的微体系结构的具体情况。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
 |[/Fa](fa-fa-listing-file.md)|设置列表文件名。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
@@ -80,14 +81,15 @@ ms.lasthandoff: 05/03/2018
 |[/Gw](gw-optimize-global-data.md)|启用全程序全局数据优化。|
 |[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 与相同[/RTC1](rtc-run-time-error-checks.md)。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 与相同[/rtc1](rtc-run-time-error-checks.md)。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定（仅限 x86）。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 编译器（本机编译和跨平台编译）。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/I](i-additional-include-directories.md)|在目录中搜索包含文件。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
+|[/ JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|创建调试动态链接库。|
@@ -111,7 +113,7 @@ ms.lasthandoff: 05/03/2018
 |[/Ox](ox-full-optimization.md)|使用最大优化 (/Ob2gity /Gs)。|
 |[/Oy](oy-frame-pointer-omission.md)|省略帧指针（仅限 x86）。|
 |[/P](p-preprocess-to-a-file.md)|将预处理器输出写入文件。|
-|[/permissive-](permissive-standards-conformance.md)|将标准一致性模式设置。|
+|[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点类型转换为整型时（仅限 x86）取消 `_ftol` 。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
@@ -121,24 +123,24 @@ ms.lasthandoff: 05/03/2018
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在编译期间显示包含文件的列表。|
-|[/source-charset](source-charset-set-source-character-set.md)|组源字符集。|
-|[/std](std-specify-language-standard-version.md)|C + + 标准版本兼容性选择器。|
+|[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
+|[/std](std-specify-language-standard-version.md)|C + + 标准的版本兼容性选择器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定的所有源代码文件都的 c + +。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都的 c + +。|
 |[/U](u-u-undefine-symbols.md)|移除预定义宏。|
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集为 utf-8。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
 |[/V](v-version-number.md)|已否决。 设置 .obj 文件版本字符串。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证仅兼容的字符的 utf-8 文件。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
 |[/vd](vd-disable-construction-displacements.md)|取消或启用隐藏的 vtordisp 类成员。|
 |[/vmb](vmb-vmg-representation-method.md)|对指向成员的指针使用最佳的基。|
 |[/vmg](vmb-vmg-representation-method.md)|对指向成员的指针使用完全一般性。|
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|声明多重继承。|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|声明单一继承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|声明虚拟继承。|
-|[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
+|[/ 易失性](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置要输出的警告级别。|
 |[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
@@ -160,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 |[/Za](za-ze-disable-language-extensions.md)|禁用语言扩展。|
 |[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
-|[/Zf](zf.md)|提高 PDB 中并行生成的生成时间。|
+|[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|

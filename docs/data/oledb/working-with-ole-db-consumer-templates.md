@@ -1,5 +1,5 @@
 ---
-title: 使用 OLE DB 使用者模板 |Microsoft 文档
+title: 使用 OLE DB 使用者模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340051"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 使用者模板
-以下主题提供如何在常见方案中使用 OLE DB 使用者模板的一些示例：  
+以下主题提供如何在常见的方案中使用 OLE DB 使用者模板的一些示例：  
   
 -   [使用数据库特性简化数据访问](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -59,13 +60,13 @@ ms.lasthandoff: 05/04/2018
   
  有关创建和实现 OLE DB 使用者的示例，请参阅[创建简单使用者](../../data/oledb/creating-an-ole-db-consumer.md)。  
   
- 你还可以查找如何在下面的示例中使用 OLE DB 使用者模板的示例：  
+ 您可以找到有关如何在以下示例中使用 OLE DB 使用者模板的示例：  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

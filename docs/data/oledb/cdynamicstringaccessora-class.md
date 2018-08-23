@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA 类 |Microsoft 文档
+title: CDynamicStringAccessorA 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341018"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA 类
 可以在不知道数据库架构 （基础结构） 时访问数据源。  
@@ -33,9 +34,9 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>备注  
- 它们都请求提供程序获取访问从数据存储区作为字符串数据的所有数据，但`CDynamicStringAccessor`请求 ANSI 字符串数据。  
+ 在这两个请求提供程序提取从字符串数据作为数据存储区访问的所有数据，但`CDynamicStringAccessor`请求 ANSI 字符串数据。  
   
- `CDynamicStringAccessorA` 继承**GetString**和`SetString`从`CDynamicStringAccessor`。 当你使用这些方法中的`CDynamicStringAccessorA`对象， ***BaseType***是**CHAR**。  
+ `CDynamicStringAccessorA` 继承`GetString`并`SetString`从`CDynamicStringAccessor`。 使用这些方法时`CDynamicStringAccessorA`对象， ***BaseType***是**CHAR**。  
   
 ## <a name="requirements"></a>要求  
  **标头**：atldbcli.h  

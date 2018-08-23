@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350349"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 选项卡式组
 多文档界面 (MDI) 选项卡式的组功能，多文档界面 (MDI) 应用程序以显示一个或多个选项卡式的窗口 (或称为的选项卡式窗口组*选项卡式组*) 在 MDI 工作区中。 选项卡式窗口可垂直对齐或水平对齐。 如果应用程序承载多个 MDI 选项卡式组，则将用拆分器分隔这些组。  

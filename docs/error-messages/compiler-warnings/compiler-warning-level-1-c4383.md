@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286079"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>编译器警告（等级 1）C4383
 instance_dereference_operator： 取消句柄引用的含义可以时的用户定义 operator 运算符存在; 更改编写作为静态函数进行显式有关操作数的运算符  

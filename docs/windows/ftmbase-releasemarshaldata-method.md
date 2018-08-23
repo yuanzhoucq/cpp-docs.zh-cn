@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Releasemarshaldata 方法 |Microsoft 文档'
+title: 'Ftmbase:: Releasemarshaldata 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d4bccbcd9f3c3b13fa8be0ccc7afa493751cd9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593534"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData 方法
-销毁封送的数据包。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-STDMETHODIMP ReleaseMarshalData(  
-   __in IStream *pStm  
-) override;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `pStm`  
- 指向包含数据数据包，以将其销毁的流指针。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
-  
-## <a name="requirements"></a>要求  
- **标头：** ftm.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [FtmBase 类](../windows/ftmbase-class.md)
+
+销毁封送的数据包。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHODIMP ReleaseMarshalData(
+   __in IStream *pStm
+) override;
+```
+
+### <a name="parameters"></a>参数
+
+*pStm*  
+指向包含要销毁的数据包的流。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+## <a name="requirements"></a>要求
+
+**标头：** ftm.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[FtmBase 类](../windows/ftmbase-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'ModuleBase:: ~ ModuleBase 析构函数 |Microsoft 文档'
+title: 'ModuleBase:: ~ ModuleBase 析构函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1dc6de0d4c3bc5bb723b1dbb39f146a49fe7ba8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071686e7ea4bf8a88beb340019b33d838e3aa806
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603508"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase 析构函数
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-virtual ~ModuleBase();  
-```  
-  
-## <a name="remarks"></a>备注  
- 取消初始化 ModuleBase 类的当前实例。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [ModuleBase 类](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+virtual ~ModuleBase();
+```
+
+## <a name="remarks"></a>备注
+
+取消初始化的当前实例**ModuleBase**类。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ModuleBase 类](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

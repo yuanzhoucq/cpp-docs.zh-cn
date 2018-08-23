@@ -98,11 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d3ed6e9274fdfad38ad7ed8cdd9f8e83e0630a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954925"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -123,13 +124,13 @@ class hash_map
 
 ### <a name="parameters"></a>参数
 
-`Key` 要存储在 hash_map 中的键数据类型。
+*密钥*的键数据类型存储在 hash_map 中。
 
-`Type` 要存储在 hash_map 中的元素数据类型。
+*类型*要存储在 hash_map 中的元素数据类型。
 
-`Traits` 此类型包括两个函数对象，其中一个是类 compare，可作为排序键以确定其相对顺序和哈希函数的两个元素值进行比较是一元谓词的元素的键值映射到类型的无符号整数`size_t`. 此自变量为可选自变量，默认值为 hash_compare< `Key`, less< `Key`> >。
+*特征*类型包括两个函数对象，其中一个是类 compare，可将两个元素值作为排序键以确定其相对顺序是一个一元谓词的元素的键值映射到未签名的哈希函数进行比较类型的整数`size_t`。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
 
-`Allocator` 表示存储的分配器对象封装有关 hash_map 的分配和解除分配内存的详细信息的类型。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
+*分配器*表示存储的分配器对象封装有关 hash_map 的分配和解除分配的内存的详细信息的类型。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>备注
 
@@ -153,9 +154,9 @@ hash_map 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_map 作为关联容器。 此类结构的模型是关键字排序列表，这些关键字只出现一次，并具有提供定义的关联字符串值。 相反，如果关键字有多个正确定义，则此关键字不唯一，应选择 hash_multimap 作为容器。 另一方面，如果仅存储关键字列表，则应使用 hash_set 作为正确容器。 如果允许关键字多次出现，那么相应的容器结构应该是 hash_multiset。
 
-hash_map 通过调用存储的 [value_compare](../standard-library/value-compare-class.md) 类的哈希 `Traits` 对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> 的对象的行为相同。 具体而言，针对类型为 `Key` 的所有值 `Key`，调用 `Traits`( `Key` ) 会提供 `size_t` 类型的值的分布。
+Hash_map 通过调用存储的哈希它控制的序列进行排序*特征*类的对象[value_compare](../standard-library/value-compare-class.md)。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> 的对象的行为相同。 具体而言，对于所有值*键*类型的*密钥*，在调用`Traits`( `Key` ) 生成的类型的值的分布`size_t`。
 
-通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 f(x y) 是包含两个自变量对象（`x` 和 `y`）以及一个返回值（`true` 或 `false`）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_map 进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 f(x, y) 和 f(y, x) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二进制谓词 f(x y) 是一个函数对象，包含两个参数对象`x`并`y`和返回值的**true**或**false**。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_map 进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 f(x, y) 和 f(y, x) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
 受控序列中元素的实际顺序取决于哈希函数、排序函数和存储在容器对象中的哈希表的当前大小。 无法确定哈希表的当前大小，因此通常无法预测受控序列中元素的顺序。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。
 
@@ -173,9 +174,9 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_map` 类。|
 |[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `hash_map` 元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型，此类型提供指向 `const` 中的 `hash_map` 元素的指针。|
-|[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `hash_map` 元素的引用（用于读取和执行 `const` 操作）。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `hash_map` 元素的双向迭代器。|
+|[const_pointer](#const_pointer)|提供一个指针指向的类型**const**中的元素`hash_map`。|
+|[const_reference](#const_reference)|提供对引用的类型**const**元素存储在`hash_map`用于读取和执行**const**操作。|
+|[const_reverse_iterator](#const_reverse_iterator)|一个类型，提供双向迭代器可读取任何**const**中的元素`hash_map`。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_map` 中迭代器指向的元素间范围内的元素数量。|
 |[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_map` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_map` 中两个元素的相对顺序。|
@@ -263,7 +264,7 @@ const Type& at(const Key& key) const;
 
 |参数|描述|
 |-|-|
-|`key`|要查找的元素的键值。|
+|*key*|要查找的元素的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -522,9 +523,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 类型不能用于修改元素的值。
 
-`const_iterator`由 hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的`pair` *\< ***const 密钥、 类型***>*、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。
+`const_iterator` Hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的`pair` *\< ***const Key，Type*** >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用`const_iterator``cIter`指向 hash_map 中的某个元素，使用**->** 运算符。
+若要取消引用`const_iterator``cIter`指向 hash_map 中的元素，使用`->`运算符。
 
 若要访问元素的键值，请使用 `cIter` **-> first**，其等同于 (\* `cIter`) **.first**。 若要访问元素的映射基准值，请使用 `cIter` **-> second**，其等同于 (\* `cIter`) **.second**。
 
@@ -622,7 +623,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 由 hash_map 定义的 `const_reverse_iterator` 会指向作为 [value_type](#value_type) 的对象的元素（即 `pair`\<**const Key, Type** 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。
 
-若要取消引用`const_reverse_iterator``crIter`指向 hash_map 中的某个元素，使用**->** 运算符。
+若要取消引用`const_reverse_iterator``crIter`指向 hash_map 中的元素，使用**->** 运算符。
 
 若要访问元素的键值，请使用 `crIter` -> **first**，其等同于 (\* `crIter`) **.first**。 若要访问元素的映射基准值，请使用 `crIter` -> **second**，其等同于 (\* `crIter`)。 **first** 相同。
 
@@ -643,7 +644,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_map 中进行匹配的元素的键值。
+*密钥*匹配的 hash_map 的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -896,13 +897,13 @@ emplace(
 
 |参数|描述|
 |-|-|
-|`val`|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+|*val*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 
 ### <a name="return-value"></a>返回值
 
 `hash_map` 成员函数返回一个对，其中，如果完成插入操作，则此对的 bool 组件返回 true，如果 `emplace` 已包含一个其值在排序中具有等效值的元素，则返回 false；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。
 
-若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的 `pr` 对的 `bool` 组件，请使用 `pr.second`；若要对其取消引用，请使用 `*(pr.second)`。
+若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 访问**bool**组件的一对`pr`返回此成员函数，使用`pr.second`，若要对其取消引用，使用`*(pr.second)`。
 
 ### <a name="remarks"></a>备注
 
@@ -955,8 +956,8 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|`val`|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|`_Where`|有关开始搜索正确插入点的位置的提示。|
+|*val*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+|*_Where*|有关开始搜索正确插入点的位置的提示。|
 
 ### <a name="return-value"></a>返回值
 
@@ -966,7 +967,7 @@ iterator emplace_hint(
 
 元素的 [hash_map::value_type](#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
-如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。
+插入可发生在分期常量时间内，而非对数时间，如果插入点紧随 *_Where*。
 
 ### <a name="example"></a>示例
 
@@ -1067,9 +1068,9 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-**end** 用于测试迭代器是否已到达 hash_map 的末尾。
+`end` 用于测试迭代器是否已到达其 hash_map 的末尾。
 
-不应对 **end** 返回的值取消引用。
+不应对 `end` 返回的值取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1134,7 +1135,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与从 hash_map 要搜索的元素的排序键进行比较。
+*密钥*参数键值与当前搜索的 hash_map 中元素的排序键进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -1222,13 +1223,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-`_Where` 要从 hash_map 中移除的元素的位置。
+*_Where*要从 hash_map 中移除的元素的位置。
 
-`first` 从 hash_map 中移除的第一个元素的位置。
+*第一个*从 hash_map 中移除的第一个元素的位置。
 
-`last` 从 hash_map 中移除的刚超出最后一个元素的位置。
+*最后一个*从 hash_map 中移除的刚超出最后一个元素的位置。
 
-`key` 要从 hash_map 中移除的元素的键值。
+*密钥*要从 hash_map 中移除的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1340,7 +1341,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从 hash_map 要搜索的元素的排序键匹配的键值。
+*密钥*要与当前搜索的 hash_map 中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1348,9 +1349,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-**find** 返回一个发现 hash_map 中其排序键与二元谓词下的参数键等效的元素位置的迭代器，该谓词基于小于比较关系引起排序。
+`find` 返回其排序键与参数键顺序二元谓词下等效 hash_map 中的元素的迭代器基于小于比较关系。
 
-如果 **find** 的返回值赋给了 [const_iterator](#const_iterator)，则无法修改 hash_map 对象。 如果 **find** 的返回值赋给了 [iterator](#iterator)，则可以修改 hash_map 对象
+如果返回值`find`分配给[const_iterator](#const_iterator)，无法修改 hash_map 对象。 如果返回值`find`分配给[迭代器](#iterator)，可以修改 hash_map 对象
 
 ### <a name="example"></a>示例
 
@@ -1534,12 +1535,12 @@ hash_map(
 
 |参数|描述|
 |-|-|
-|`Al`|要用于此 hash_map 对象的存储分配器类，默认为**分配器**。|
-|`Comp`|用于对 hash_map 中元素排序的类常量 `Traits` 的比较函数，默认为 `hash_compare`。|
-|`Right`|所构造映射要作为其副本的 hash_map。|
-|`First`|要复制的范围元素中的第一个元素的位置。|
-|`Last`|要复制的元素范围以外的第一个元素的位置。|
-|`IList`|initializer_list|
+|*Al*|存储分配器类要用于此 hash_map 对象，它默认为`Allocator`。|
+|*Comp*|用于对 hash_map 中元素排序的类常量 `Traits` 的比较函数，默认为 `hash_compare`。|
+|右侧|所构造映射要作为其副本的 hash_map。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*IList*|initializer_list|
 
 ### <a name="remarks"></a>备注
 
@@ -1549,13 +1550,13 @@ hash_map(
 
 所有构造函数会存储 `Traits` 类的函数对象，此对象用于在 hash_map 的键之间建立顺序，且稍后通过调用 [key_comp](#key_comp) 可进行返回。
 
-前三个构造函数均指定空的起始 hash_map，此外，第二个函数还指定用于建立元素顺序的比较函数 ( `Comp`) 的类型，第三个函数还显式指定了要使用的分配器类型 ( `Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。
+前三个构造函数指定空的起始 hash_map，此外，第二个指定的比较函数类型 (*Comp*) 用于显式建立的元素和第三个顺序指定分配器类型 (*Al*) 使用。 关键字 **explicit** 取消某些种类的自动类型转换。
 
-第四个构造函数指定 hash_map `Right` 的副本。
+第四个构造函数指定 hash_map 的副本*右*。
 
 接下来的三个构造函数复制 hash_map 的范围 `[First, Last)`，其指定类 `Traits` 和 Allocator 的比较函数类型和分配器时更加明确。
 
-最后一个构造函数会移动 hash_map `Right`。
+最后一个构造函数会移动 hash_map*右*。
 
 ## <a name="insert"></a>hash_map::insert
 
@@ -1592,26 +1593,26 @@ iterator insert(
 
 |参数|描述|
 |-|-|
-|`val`|要插入 hash_map 的元素的值，除非 hash_map 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|`_Where`|有关开始搜索正确插入点的位置的提示。|
-|`first`|要从 hash_map 复制的第一个元素的位置。|
-|`last`|刚超出要从 hash_map 复制的最后一个元素的位置。|
+|*val*|要插入 hash_map 的元素的值，除非 hash_map 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+|*_Where*|有关开始搜索正确插入点的位置的提示。|
+|*first*|要从 hash_map 复制的第一个元素的位置。|
+|*最后一个*|刚超出要从 hash_map 复制的最后一个元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
-第一个 **insert** 成员函数返回一个对，其中，如果完成插入操作，则此对的 bool 组件返回 true，如果 hash_map 已包含一个其值在排序中具有等效值的元素，则返回 false；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。
+第一个`insert`成员函数返回一对的 bool 组件返回如果完成插入，则返回 true 和 false 如果 hash_map 已包含一个元素中具有等效值在排序中的，并返回的迭代器组件解决新元素插入位置或已位于该元素。
 
-若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr`. **first**；若要对其取消引用，请使用 \*( `pr`. **first**)。 若要访问此成员函数返回的 `pr` 对的 `bool` 组件，请使用 `pr`。 **second**；若要对其取消引用，请使用 \*( `pr`. **second**)。
+若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr`. **first**；若要对其取消引用，请使用 \*( `pr`. **first**)。 访问**bool**组件的一对`pr`返回此成员函数，使用`pr`。 **second**；若要对其取消引用，请使用 \*( `pr`. **second**)。
 
-第二个 **insert** 成员函数（提示版本）返回一个迭代器，此迭代器指向插入到 hash_map 中的新元素的位置。
+第二个`insert`成员函数，提示版本中，将返回一个迭代器，指向 hash_map 中的新元素插入处的位置。
 
-除移动构造插入值外，最后两个 **insert** 成员函数与最初两个函数行为相同。
+最后两个`insert`成员函数行为与前两个相同，只不过它们将移动构造插入的值。
 
 ### <a name="remarks"></a>备注
 
 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
-对于 insert 的提示版本，如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。
+插入可发生在分期常量时间内插入，而非对数时间的提示版本，如果插入点紧随 *_Where*。
 
 第三个成员函数将元素值序列插入到 hash_map 中，该 hash_map 对应于迭代器在指定集范围 [First, Last) 中所处理的每一个元素。
 
@@ -1735,17 +1736,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>备注
 
-由 hash_map 定义的 **iterator** 会指向作为 [value_type](#value_type) 的对象的元素（即 **pair\<const Key, Type>,** 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。
+`iterator` Hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的**对\<const Key，Type >，** 其第一个成员是元素的键和第二个成员是此元素保留的映射的基准。
 
-若要取消引用指向 multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。
+若要取消引用**迭代器**`Iter`多重映射中指向的元素，使用`->`运算符。
 
 若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second** 相同。
 
-**iterator** 类型可用于修改元素的值。
+一种类型`iterator`可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。
+示例，请参阅[开始](#begin)有关如何声明和使用的示例`iterator`。
 
 ## <a name="key_comp"></a>hash_map::key_comp
 
@@ -1880,13 +1881,13 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与从 hash_map 要搜索的元素的排序键进行比较。
+*密钥*参数键值与当前搜索的 hash_map 中元素的排序键进行比较。
 
 ### <a name="return-value"></a>返回值
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_map 中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_map 中最后一个元素之后的位置。
 
-如果将 `lower_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果将 `lower_bound` 的返回值赋给 **iterator**，则无法修改 hash_map 对象。
+如果将 `lower_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果返回值`lower_bound`分配给`iterator`，可以修改 hash_map 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -2018,7 +2019,7 @@ Type& operator[](Key&& key);
 
 |参数|描述|
 |-|-|
-|`key`|要插入的元素的键值。|
+|*key*|要插入的元素的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2032,7 +2033,7 @@ Type& operator[](Key&& key);
 
 `m[ key] = DataValue`;
 
-在 DataValue 值是具有 `key` 键值的元素的 `mapped_type` 的值处进行插入。
+DataValue 所在的值`mapped_type`与密钥值的元素的*密钥*。
 
 使用 `operator[]` 插入元素时，返回的引用不会指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用于确定具有指定键的元素在插入前是否已存在。
 
@@ -2115,11 +2116,11 @@ hash_map& operator=(hash_map&& right);
 
 |参数|描述|
 |-|-|
-|`right`|正在复制到 `hash_map` 的 [hash_map 类](../standard-library/hash-map-class.md)。|
+|*right*|正在复制到 `hash_map` 的 [hash_map 类](../standard-library/hash-map-class.md)。|
 
 ### <a name="remarks"></a>备注
 
-清除 `hash_map` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 `hash_map`。
+在清除中的任何现有元素后`hash_map`，`operator=`复制或移动的内容*右*到`hash_map`。
 
 ### <a name="example"></a>示例
 
@@ -2172,7 +2173,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>备注
 
-**pointer** 类型可用于修改元素的值。
+一种类型`pointer`可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问 hash_map 对象中的元素。
 
@@ -2430,7 +2431,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 由 hash_map 定义的 `reverse_iterator` 会指向作为 [value_type](#value_type) 的对象的元素（即 **pair\<const Key, Type>** 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。
 
-若要取消引用`reverse_iterator``rIter`指向 hash_map 中的某个元素，使用-> 运算符。
+若要取消引用`reverse_iterator``rIter`指向 hash_map 中的元素，使用-> 运算符。
 
 若要访问元素的键值，请使用 `rIter` -> **first**，其作用与 (\* `rIter`). **first** 相同。 若要访问元素的映射值，请使用 `rIter` -> **second**，其作用与 (\* `rIter`). **first** 相同。
 
@@ -2518,7 +2519,7 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 自变量 hash_map 提供与目标 hash_map 交换的元素。
+*右*参数 hash_map 提供与目标 hash_map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2593,13 +2594,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与从 hash_map 要搜索的元素的排序键值进行比较。
+*密钥*参数键值与当前搜索的 hash_map 中元素的排序键值进行比较。
 
 ### <a name="return-value"></a>返回值
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_map 中其键大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_map 中最后一个元素之后的位置。
 
-如果将返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果将返回值赋给 **iterator**，则无法修改 hash_map 对象。
+如果将返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果返回值分配给`iterator`，可以修改 hash_map 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -2736,7 +2737,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type` 被声明为`pair`  *\< * **const**[key_type](#key_type)， [mapped_type](#mapped_type)*> * 而不`pair`  **\<key_type，mapped_type >** 因为不能更改的关联容器的密钥使用非常量的迭代器或引用。
+`value_type` 被声明为`pair`  *\< * **const**[key_type](#key_type)， [mapped_type](#mapped_type)*> *，而不`pair`  **\<key_type，mapped_type >** 因为不可能使用的非常量迭代器或引用更改关联容器的键。
 
 ### <a name="example"></a>示例
 

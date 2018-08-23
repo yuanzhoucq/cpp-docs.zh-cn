@@ -41,11 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957517"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 类
 
@@ -260,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-运算符返回的值`true`时`get() != nullptr`，否则为`false`。
+该运算符返回的值 **，则返回 true**时`get() != nullptr`; 否则为**false**。
 
 ### <a name="example"></a>示例
 
@@ -350,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>参数
 
-`sp` 要复制的共享的指针。
+*sp*要复制的共享的指针。
 
-`ap` 要复制的自动指针。
+*亚太*要复制的自动指针。
 
 ### <a name="remarks"></a>备注
 
@@ -440,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>参数
 
-`ptr` `lvalue`引用为`shared_ptr`或`weak_ptr`。
+*ptr* `lvalue`引用`shared_ptr`或`weak_ptr`。
 
 ### <a name="remarks"></a>备注
 
-如果模板成员函数返回 true`*this`是`ordered before` `ptr`。
+模板成员函数返回 true，如果`*this`是`ordered before` `ptr`。
 
 ## <a name="reset"></a>  shared_ptr::reset
 
@@ -465,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>参数
 
-`Other` 由自变量指针控制的类型。
+*其他*由自变量指针控制的类型。
 
-`D` 删除器的类型。
+*D*删除器的类型。
 
-`ptr` 要复制的指针。
+*ptr*要复制的指针。
 
-`dtor` 删除器复制。
+*dtor*要复制的删除器。
 
-`A` 分配器的类型。
+*一个*分配器的类型。
 
-`alloc` 要复制分配器。
+*分配*要复制的分配器。
 
 ### <a name="remarks"></a>备注
 
@@ -580,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>参数
 
-`Other` 由自变量指针控制的类型。
+*其他*由自变量指针控制的类型。
 
-`ptr` 要复制的指针。
+*ptr*要复制的指针。
 
-`D` 删除器的类型。
+*D*删除器的类型。
 
-`A` 分配器的类型。
+*一个*分配器的类型。
 
-`dtor` 删除器。
+*dtor*删除器。
 
-`ator` 分配器。
+*ator*分配器。
 
-`sp` 要复制的智能指针。
+*sp*要复制的智能指针。
 
-`wp` 弱指针。
+*wp*的弱指针。
 
-`ap` 要复制的自动指针。
+*亚太*要复制的自动指针。
 
 ### <a name="remarks"></a>备注
 
@@ -721,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>参数
 
-`sp` 要交换的共享的指针。
+*sp*要交换的共享的指针。
 
 ### <a name="remarks"></a>备注
 
-成员函数将保留最初由 `*this` 拥有随后由 `sp` 拥有的资源，以及最初由 `sp` 拥有随后为 `*this` 所有的资源。 此函数不会更改两个资源的引用计数，也不会引发任何异常。
+成员函数将保留最初由拥有的资源`*this`拥有随后由*sp*，和最初拥有的资源*sp*拥有随后由`*this`。 此函数不会更改两个资源的引用计数，也不会引发任何异常。
 
 ### <a name="example"></a>示例
 
@@ -791,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>备注
 
-如果其他 `shared_ptr` 对象没有为 `*this` 所有的资源，成员函数将返回 `true`，否则返回 `false`。
+此成员函数返回 **，则返回 true**如果没有其他`shared_ptr`对象拥有由拥有的资源`*this`; 否则为**false**。
 
 ### <a name="example"></a>示例
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391173"
 ---
 # <a name="union-declarations"></a>联合声明
 “联合声明”指定一组变量值和（可选）一个命名联合的标记。 变量值称为联合的“成员”，并且可以具有不同的类型。 联合类似于其他语言中的“变体记录”。  

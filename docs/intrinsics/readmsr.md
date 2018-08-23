@@ -1,5 +1,5 @@
 ---
-title: __readmsr |Microsoft 文档
+title: __readmsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545734"
 ---
 # <a name="readmsr"></a>__readmsr
 **Microsoft 专用**  
   
- 生成`rdmsr`指令，读取指定的模型特定寄存器`register`并返回其值。  
+ 将生成`rdmsr`指令，读取指定的模型特定寄存器`register`并返回其值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,12 +49,12 @@ __int64 __readmsr(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 此函数是仅在内核模式下可用，例程只能用作内部函数。  
+ 此函数仅在内核模式下可用，例程仅可用作内部函数。  
   
  有关详细信息，请参阅 AMD 文档。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169799"
 ---
 # <a name="compiler-error-c2139"></a>编译器错误 C2139
 type： 未定义的类不允许作为编译器内部类型特征特征的自变量  

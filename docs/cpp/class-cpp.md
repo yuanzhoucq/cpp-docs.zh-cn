@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bffa79760e9c597c5a6d736104dc856fc1de16b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405580"
 ---
 # <a name="class-c"></a>class (C++)
-`class`关键字声明的类类型或定义的类类型的对象。  
+**类**关键字声明的类类型或定义类类型的对象。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      [template-spec]  
-       class [ms-decl-spec] [tag [: base-list ]]  
+[template-spec]  
+class [ms-decl-spec] [tag [: base-list ]]  
 {  
    member-list  
 } [declarators];  
@@ -39,29 +39,29 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>参数  
- `template-spec`  
+ *模板规范*  
  可选模板规范。 有关详细信息，请参阅[模板](templates-cpp.md)。  
   
- `class`  
- `class` 关键字。  
+ *class*  
+ **类**关键字。  
   
- `ms-decl-spec`  
+ *ms 声明规范*  
  可选存储类规范。 有关详细信息，请参阅[__declspec](../cpp/declspec.md)关键字。  
   
- `tag`  
+ *标记*  
  提供给类的类型名称。 标记将变成类的范围内的保留的字。 标记是可选项。 如果省略，则定义匿名类。 有关详细信息，请参阅[匿名类类型](../cpp/anonymous-class-types.md)。  
   
- `base-list`  
- 类或结构，此类将从中派生其成员的可选列表。 请参阅[基类](../cpp/base-classes.md)有关详细信息。 每个基的类或结构名称的前面可具有访问说明符 ([公共](../cpp/public-cpp.md)，[私有](../cpp/private-cpp.md)，[保护](../cpp/protected-cpp.md)) 和[虚拟](../cpp/virtual-cpp.md)关键字。 请参阅中的成员访问表[控制对类成员的访问](member-access-control-cpp.md)有关详细信息。  
+ *基础列表*  
+ 类或结构，此类将从中派生其成员的可选列表。 请参阅[基类](../cpp/base-classes.md)有关详细信息。 每个基的类或结构名称的前面可具有访问说明符 ([公共](../cpp/public-cpp.md)，[专用](../cpp/private-cpp.md)，[保护](../cpp/protected-cpp.md)) 和[虚拟](../cpp/virtual-cpp.md)关键字。 请参阅中的成员访问表[控制对类成员的访问](member-access-control-cpp.md)有关详细信息。  
   
- `member-list`  
+ *成员的列表*  
  类成员的列表。 请参阅[类成员概述](../cpp/class-member-overview.md)有关详细信息。  
   
- `declarators`  
- 指定的类类型的一个或多个实例的名称的声明符列表。 如果类的所有数据成员是 `public`，则声明符可以包含初始值设定项列表。 这是更常见的结构，其数据成员是`public`默认情况下，比在类。 请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。  
+ *声明符*  
+ 指定类类型的一个或多个实例的名称的声明符列表。 如果类的所有数据成员声明符可以包含初始值设定项列表**公共**。 这是更常见的结构，其数据成员均**公共**默认情况下，比类。 请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。  
   
 ## <a name="remarks"></a>备注  
- 有关详细信息类一般情况下，请参阅下列主题之一：  
+ 有关详细信息的类一般情况下，请参阅以下主题之一：  
   
 -   [struct](../cpp/struct-cpp.md)  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // class.cpp  
 // compile with: /EHsc  
 // Example of the class keyword  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343215"
 ---
 # <a name="allocating-gdi-resources"></a>分配 GDI 资源
 此文章介绍了如何分配和解除分配打印所需的 Windows 图形设备接口 (GDI) 对象。  

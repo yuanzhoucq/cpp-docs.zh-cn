@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282592"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>编译器警告（等级 1）C4691
 type： 在未引用程序集 file，而是使用了当前翻译单元中定义的类型应引用的类型  

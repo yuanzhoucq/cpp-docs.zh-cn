@@ -24,11 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955889"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex 类
 
@@ -105,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `mutex` 的所有权，或如果调用线程已拥有 `mutex`，则为 `true`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex**; otherwise, **false`。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 `mutex`，则该函数将立即返回 `true`，并且上一锁定一直保持有效。
+如果调用线程已拥有`mutex`，该函数将立即返回**true**，和上一锁定保持有效。
 
 ## <a name="unlock"></a>unlock
 

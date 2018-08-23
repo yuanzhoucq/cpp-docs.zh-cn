@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928219"
 ---
 # <a name="containers-client-item-notifications"></a>容器：客户端项通知
 本文讨论 MFC 框架在服务器应用程序修改客户端应用程序的文档中的项时调用的可重写函数。  
@@ -31,11 +32,11 @@ ms.lasthandoff: 05/04/2018
   
 |通知|含义|  
 |------------------|-------------|  
-|`OLE_CHANGED`|OLE 项的外观已更改。|  
-|`OLE_SAVED`|已保存的 OLE 项。|  
-|`OLE_CLOSED`|OLE 项已关闭。|  
+|**OLE_CHANGED**|OLE 项的外观已更改。|  
+|**OLE_SAVED**|已保存的 OLE 项。|  
+|**OLE_CLOSED**|OLE 项已关闭。|  
 |**OLE_RENAMED**|已重命名包含 OLE 项的服务器文档。|  
-|`OLE_CHANGED_STATE`|OLE 项已从一个状态更改为另一个。|  
+|**OLE_CHANGED_STATE**|OLE 项已从一个状态更改为另一个。|  
 |**OLE_CHANGED_ASPECT**|OLE 项的绘图方面已由框架。|  
   
  这些值是从**OLE_NOTIFICATION** AFXOLE 中定义的枚举。H。  
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/04/2018
   
 |当第一个参数是|第二个参数|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` 或 `OLE_CLOSED`|未使用。|  
-|`OLE_CHANGED`|指定已更改的 OLE 项的方面。|  
-|`OLE_CHANGED_STATE`|描述输入的状态 (`emptyState`， **loadedState**， `openState`， `activeState`，或`activeUIState`)。|  
+|**OLE_SAVED**或**OLE_CLOSED**|未使用。|  
+|**OLE_CHANGED**|指定已更改的 OLE 项的方面。|  
+|**OLE_CHANGED_STATE**|描述输入的状态 (*emptyState*， *loadedState*， *openState*， *activeState*，或*activeUIState*)。|  
   
  有关可以假定客户端项状态的详细信息，请参阅[容器： 客户端项状态](../mfc/containers-client-item-states.md)。  
   

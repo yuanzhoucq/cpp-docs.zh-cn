@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359990"
 ---
 # <a name="what-is-atlaxwin100"></a>什么是 AtlAxWin100？
 `AtlAxWin100` 是的窗口类，可帮助提供 ATL 的控件承载功能的名称。 在创建此类的实例时，窗口过程将自动使用的控件承载的 API 来创建与窗口关联的主机对象，并将其加载与你指定为该窗口的标题控件。  

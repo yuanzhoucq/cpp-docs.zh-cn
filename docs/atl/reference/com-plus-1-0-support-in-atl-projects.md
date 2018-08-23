@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359352"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 支持在 ATL 项目
 你可以使用[ATL 项目向导](../../atl/reference/creating-an-atl-project.md)以创建项目对 COM + 1.0 组件的基本支持。  

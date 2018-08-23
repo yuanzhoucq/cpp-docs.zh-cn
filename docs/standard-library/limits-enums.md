@@ -7,11 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960643"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 枚举
 
@@ -34,11 +35,11 @@ enum float_denorm_style {
 
 此枚举返回：
 
-- 如果转换时不能确定是否存在非规范化窗体，则为 **denorm_indeterminate**。
+- `denorm_indeterminate` 如果不能在转换时确定是否存在非规范化窗体。
 
-- 如果不存在非规范化窗体，则为 **denorm_absent**。
+- `denorm_absent` 如果不存在非规范化窗体。
 
-- 如果存在非规范化窗体，则为 **denorm_present**。
+- `denorm_present` 如果存在非规范化窗体。
 
 ### <a name="example"></a>示例
 
@@ -61,15 +62,15 @@ enum float_round_style {
 
 此枚举返回：
 
-- 如果无法确定舍入方法，则为 **round_indeterminate**。
+- `round_indeterminate` 如果无法确定舍入方法。
 
-- 如果向零舍入，则为 **round_toward_zero**。
+- `round_toward_zero` 如果向零舍入。
 
-- 如果舍入到最近整数，则为 **round_to_nearest**。
+- `round_to_nearest` 如果舍入到最接近的整数。
 
-- 如果向远离零的方向舍入，则为 **round_toward_infinity**。
+- `round_toward_infinity` 如果远离零方向舍入。
 
-- 如果舍入到更小的负整数，则为 **round_toward_neg_infinity**。
+- `round_toward_neg_infinity` 如果舍入到更负整数。
 
 ### <a name="example"></a>示例
 

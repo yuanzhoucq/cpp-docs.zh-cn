@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372196"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 Helper 例程的原型是：  

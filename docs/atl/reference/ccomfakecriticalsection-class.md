@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358610"
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 类
 此类提供相同的方法为[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但未提供关键部分。  

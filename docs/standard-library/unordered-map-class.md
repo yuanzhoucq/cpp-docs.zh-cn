@@ -148,11 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f8f74a2aa1eb47d9de4705941bd7367e313e7bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954716"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 
@@ -173,11 +174,11 @@ class unordered_map;
 
 |参数|描述|
 |-|-|
-|`Key`|密钥类型。|
-|`Ty`|映射类型。|
-|`Hash`|哈希函数对象类型。|
-|`Pred`|相等比较函数对象类型。|
-|`Alloc`|allocator 类。|
+|*Key*|密钥类型。|
+|*Ty*|映射类型。|
+|*哈希*|哈希函数对象类型。|
+|*Pred*|相等比较函数对象类型。|
+|*分配*|allocator 类。|
 
 ## <a name="members"></a>成员
 
@@ -226,7 +227,7 @@ class unordered_map;
 |[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|
 |[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|
 |[max_size](#max_size)|获取受控序列的最大大小。|
-|[rehash](#rehash)|重新生成哈希表。|
+|[回顾](#rehash)|重新生成哈希表。|
 |[size](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_map](#unordered_map)|构造容器对象。|
@@ -304,7 +305,7 @@ const Ty& at(const Key& key) const;
 
 |参数|描述|
 |-|-|
-|`key`|要查找的键值。|
+|*key*|要查找的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -356,11 +357,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |参数|描述|
 |-|-|
-|`nbucket`|存储桶编号。|
+|*nbucket*|存储桶编号。|
 
 ### <a name="remarks"></a>备注
 
-前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器，指向存储桶 `nbucket` 的第一个元素（或刚超出空存储桶末尾的位置）。
+前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器存储桶的第一个元素，指向*nbucket* （或刚超出空存储桶末尾）。
 
 ### <a name="example"></a>示例
 
@@ -416,11 +417,11 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要映射的键值。
+*keyval*要映射的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回当前与键值 `keyval`对应的存储桶编号。
+此成员函数返回当前与键值相对应的存储桶编号*keyval*。
 
 ### <a name="example"></a>示例
 
@@ -559,11 +560,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-`nbucket` 存储桶编号。
+*nbucket*  
+ 存储桶编号。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回编号为 `nbucket`的存储桶的大小。
+成员函数返回存储桶数的大小*nbucket*。
 
 ### <a name="example"></a>示例
 
@@ -606,7 +608,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_map::cbegin
 
-返回确定范围中第一个元素地址的 `const` 迭代器。
+返回**const**的范围中的第一个元素的迭代器。
 
 ```cpp
 const_iterator cbegin() const;
@@ -614,13 +616,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-`const` 前向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。
+一个**const**向前访问迭代器，指向范围内或刚超出空范围末尾的位置的第一个元素 (对于空范围， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -632,7 +634,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_map::cend
 
-返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
+返回**const**刚超出范围中的最后一个元素的位置的迭代器。
 
 ```cpp
 const_iterator cend() const;
@@ -640,13 +642,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>返回值
 
-指向刚超出范围末尾的位置的 `const` 向前访问迭代器。
+一个**const**指向刚超出范围末尾的向前访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -922,7 +924,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1039,13 +1042,13 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入到 unordered_map 中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
+|*参数*|用于构造要插入到 unordered_map 中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
 
 ### <a name="return-value"></a>返回值
 
-如果完成插入操作，则包含 `bool` 组件的 `pair` 返回 true，如果 `unordered_map` 已包含一个值在排序中具有等效值的元素，则返回 false；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。
+一个`pair`其**bool**组件返回如果完成插入，则 true 和 false`unordered_map`已经包含一个元素中具有等效值在排序中的，并返回的迭代器组件解决新元素插入位置或已位于该元素。
 
-若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的 `pr` 对的 `bool` 组件，请使用 `pr.second`。
+若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 访问**bool**组件的一对`pr`返回此成员函数，使用`pr.second`。
 
 ### <a name="remarks"></a>备注
 
@@ -1068,8 +1071,8 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入 unordered_map 中的元素的转发参数，除非 unordered_map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
-|`where`|有关开始搜索正确插入点的位置的提示。|
+|*参数*|用于构造要插入 unordered_map 中的元素的转发参数，除非 unordered_map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
+|*where*|有关开始搜索正确插入点的位置的提示。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1169,11 +1172,11 @@ const_local_iterator end(size_type nbucket) const;
 
 |参数|描述|
 |-|-|
-|`nbucket`|存储桶编号。|
+|*nbucket*|存储桶编号。|
 
 ### <a name="remarks"></a>备注
 
-前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 `nbucket` 末尾的位置。
+前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器指向刚超出存储桶末尾*nbucket*。
 
 ## <a name="equal_range"></a>  unordered_map::equal_range
 
@@ -1186,11 +1189,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一对迭代器 `X` ，以便 `[X.first, X.second)` 仅分隔受控序列中与 `keyval`具有等效排序的那些元素。 如果不存在此类元素，则两个迭代器均为 `end()`。
+此成员函数返回一对迭代器`X`，以便`[X.first, X.second)`分隔受控序列中具有等效排序仅对这些元素*keyval*。 如果不存在此类元素，则两个迭代器均为 `end()`。
 
 ### <a name="example"></a>示例
 
@@ -1255,13 +1259,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>参数
 
-`Where` 要删除的元素的位置。
+*Where*  
+ 要移除的元素的位置。
 
-`First` 要移除的第一个元素的位置。
+*第一个*  
+ 要移除的第一个元素的位置。
 
-`Last` 要移除的最后一个元素以外的位置。
+*最后一个*  
+ 要移除的刚超出最后一个元素的位置。
 
-`Key` 要移除的元素的键值。
+*Key*  
+ 要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1283,7 +1291,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1491,17 +1500,17 @@ IList);
 
 |参数|描述|
 |-|-|
-|`Val`|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
-|`Where`|开始搜索正确插入点的位置。|
-|`ValTy`|一种模板参数，它指定 unordered_map 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的参数类型并将 `Val` 作为参数完美转发。|
-|`First`|要复制的第一个元素的位置。|
-|`Last`|要复制的最后一个元素以外的位置。|
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
-|`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
+|*Where*|开始搜索正确插入点的位置。|
+|*ValTy*|指定 unordered_map 可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
+|*第一个*|要复制的第一个元素的位置。|
+|*最后一个*|要复制的最后一个元素以外的位置。|
+|*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
+|*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>返回值
 
-单个元素成员函数 (1) 和 (2) 将返回 [pair](../standard-library/pair-structure.md)，如果完成插入，则其 `bool` 组件为 true；如果 unordered_map 已经包含一个其键在排序中具有等效值的元素，则为 false。 返回值对的迭代器组件将指向新插入的元素（如果 `bool` 组件为 true）或现有元素（如果 `bool` 组件为 false）。
+单个元素成员函数 （1） 和 (2) 返回[对](../standard-library/pair-structure.md)其**bool**组件为 true，则如果完成插入操作，如果 unordered_map 已经包含一个其键具有的元素，则为 false在排序中的等效值。 返回值对的迭代器组件指向新插入的元素如果**bool**组件为 true，或指向现有元素如果**bool**组件为 false。
 
 附带提示的单个元素的成员函数 (3) 和 (4) 返回迭代器，该迭代器指向将新元素插入到 unordered_map 中的位置，如果具有等效键的元素已经存在，则指向现有元素。
 
@@ -1511,7 +1520,7 @@ IList);
 
 在只插入单个元素的过程中，如果引发异常，但是异常并未在容器的哈希函数中发生，则不会修改该容器的状态。 如果在哈希函数中引发异常，则未定义此结果。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
-要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 要访问 `bool` 组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
+要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 访问**bool**组件，请使用`pr.second`。 有关示例，请参阅本文后面的示例代码。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于 map ，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -1999,11 +2008,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-`factor` 新的最大加载因子。
+*factor*  
+ 新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数将返回存储的最大加载因子。 第二个成员函数将用 `factor`替换已存储的最大加载因子。
+第一个成员函数将返回存储的最大加载因子。 第二个成员函数将使用存储的最大加载因子*身份*。
 
 ### <a name="example"></a>示例
 
@@ -2131,7 +2141,7 @@ Ty& operator[](Key&& keyval);
 
 |参数|描述|
 |-|-|
-|`Keyval`|要查找或插入的键值。|
+|*Keyval*|要查找或插入的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2219,13 +2229,13 @@ unordered_map& operator=(unordered_map&& right);
 
 |参数|描述|
 |-|-|
-|`right`|运算符函数从中分配内容的 unordered_map。|
+|*right*|运算符函数从中分配内容的 unordered_map。|
 
 ### <a name="remarks"></a>备注
 
-第一版将 `right` 的所有元素复制到此 unordered_map。
+第一个版本将从元素的所有复制*右*到此 unordered_map。
 
-第二版将 `right` 的所有元素移动到此 unordered_map。
+第二个版本将所有从元素移动*右*到此 unordered_map。
 
 放弃 `operator`= executes 之前此 unordered_map 中的任何元素。
 
@@ -2370,11 +2380,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-`nbuckets` 请求的 bucket 数。
+*nbuckets*  
+ 请求的存储桶数。
 
 ### <a name="remarks"></a>备注
 
-成员函数将存储桶数更改为至少 `nbuckets` 并根据需要重新生成哈希表。
+成员函数将更改存储桶为至少数*nbuckets*并根据需要重新生成哈希表。
 
 ### <a name="example"></a>示例
 
@@ -2553,11 +2564,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要交换的容器。
+*right*  
+ 要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
+成员函数交换之间的受控的序列`*this`并*右*。 如果为 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
 
 ### <a name="example"></a>示例
 
@@ -2664,28 +2676,28 @@ unordered_map(
 
 |参数|描述|
 |-|-|
-|`Al`|要存储的分配器对象。|
-|`Comp`|要存储的比较函数对象。|
-|`Hash`|要存储的哈希函数对象。|
-|`Bucket_count`|存储桶的最少数量。|
-|`Right`|要复制的容器。|
-|`First`||
-|`Last`||
-|`IList`|包含要复制的元素的 initializer_list。|
+|*Al*|要存储的分配器对象。|
+|*Comp*|要存储的比较函数对象。|
+|*哈希*|要存储的哈希函数对象。|
+|*bucket_count*|存储桶的最少数量。|
+|右侧|要复制的容器。|
+|*第一个*||
+|*最后一个*||
+|*IList*|包含要复制的元素的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数指定通过 `right` 控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数插入元素值 `[first, last)` 的序列。 第四个构造函数通过移动 `right` 指定序列副本。
 
-所有构造函数还初始化若干存储的值。 对于复制构造函数，值从 `Right` 获取。 否则：
+所有构造函数还初始化若干存储的值。 对于复制构造函数，可获得的值从*右*。 否则：
 
-存储桶的最少数量是参数 `Bucket_count`（如果有）；否则为此处说明的默认值 `N0`。
+存储桶的最小数量是参数*Bucket_count*，如果存在; 否则为它是所述的默认值为实现定义的值，此处`N0`。
 
-哈希函数对象是参数 `Hash`（如果有）；否则为 `Hash()`。
+哈希函数对象是参数*哈希*，如果存在; 否则为它是`Hash()`。
 
-比较函数对象是参数 `Comp`（如果有）；否则为 `Pred()`。
+比较函数对象是参数*Comp*，如果存在; 否则为它是`Pred()`。
 
-分配器对象是参数 `Al`（如果有）；否则为 `Alloc()`。
+分配器对象是参数*Al*，如果存在; 否则为它是`Alloc()`。
 
 ### <a name="example"></a>示例
 

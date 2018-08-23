@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375683"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar（自动并行化程序）
 使[自动并行化](../../parallel/auto-parallelization-and-auto-vectorization.md)以自动并行化代码中的循环的编译器的功能。  

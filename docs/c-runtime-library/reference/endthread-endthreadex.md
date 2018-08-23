@@ -40,15 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573037"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
-终止线程;**_endthread**终止通过创建的线程 **_beginthread**和 **_endthreadex**终止通过创建的线程 **_beginthreadex**.
+终止线程;**_endthread**终止创建的线程 **_beginthread**并 **_endthreadex**终止创建的线程 **_beginthreadex**.
 
 ## <a name="syntax"></a>语法
 
@@ -65,17 +66,17 @@ void _endthreadex(
 
 ## <a name="remarks"></a>备注
 
-你可以调用 **_endthread**或 **_endthreadex**显式来终止线程; 但是， **_endthread**或 **_endthreadex**称为自动线程时从该例程返回传递作为参数传递给 **_beginthread**或 **_beginthreadex**。 终止线程通过调用**endthread**或 **_endthreadex**有助于确保适当恢复为线程分配的资源。
+可以调用 **_endthread**或 **_endthreadex**显式以终止线程; 但是， **_endthread**或者 **_endthreadex**称为自动当线程返回例程作为参数传递给 **_beginthread**或 **_beginthreadex**。 终止线程通过调用**endthread**或 **_endthreadex**有助于确保适当恢复为线程分配的资源。
 
 > [!NOTE]
-> 对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API；这将阻止运行时系统回收已分配的资源。 **_endthread**和 **_endthreadex**回收分配的线程资源，然后调用**ExitThread**。
+> 对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API；这将阻止运行时系统回收已分配的资源。 **_endthread**并 **_endthreadex**回收分配的线程资源，然后调用**ExitThread**。
 
-**_endthread**会自动关闭线程句柄。 (此行为不同于 Win32 **ExitThread** API。)因此，当你使用 **_beginthread**和 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。
+**_endthread**会自动关闭线程句柄。 (此行为不同于 Win32 **ExitThread** API。)因此，当你使用 **_beginthread**并 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。
 
-与 Win32 **ExitThread** API， **_endthreadex**不会关闭线程句柄。 因此，当你使用 **_beginthreadex**和 **_endthreadex**，您必须通过调用 Win32 关闭线程句柄**CloseHandle** API。
+与 Win32 **ExitThread** API， **_endthreadex**不会关闭线程句柄。 因此，当你使用 **_beginthreadex**并 **_endthreadex**，您必须通过调用 Win32 关闭线程句柄**CloseHandle** API。
 
 > [!NOTE]
-> **_endthread**和 **_endthreadex**导致不会调用线程的挂起的 c + + 析构函数。
+> **_endthread**并 **_endthreadex**不会调用线程会导致挂起的 c + + 析构函数。
 
 ## <a name="requirements"></a>要求
 

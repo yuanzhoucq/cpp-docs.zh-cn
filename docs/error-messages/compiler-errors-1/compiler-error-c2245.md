@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170955"
 ---
 # <a name="compiler-error-c2245"></a>编译器错误 C2245
 将不存在的成员函数“function”指定为友元(成员函数签名与所有重载都不匹配)  

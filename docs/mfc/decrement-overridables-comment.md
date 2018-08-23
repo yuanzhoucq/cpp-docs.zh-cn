@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928722"
 ---
 # <a name="-overridables-comment"></a>// Overridables 注释
 MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时可在派生类中重写的虚拟函数。 它们的名称通常以“On”开头，但不是绝对必需的。 此处的函数设计为进行重写，并且一般实现或提供某种“回调”或“挂钩”。 通常，这些成员是受保护的。  
@@ -30,7 +31,7 @@ MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时
   
  `virtual void OnDraw( ) = 0;`  
   
- 在此示例中列出从类`CStdioFile`中[注释的示例](../mfc/an-example-of-the-comments.md)，该列表包含没有可重写部分。 类**CDocument**，另一方面，列出了大约 10 可重写成员函数。  
+ 在此示例中列出从类`CStdioFile`中[注释的示例](../mfc/an-example-of-the-comments.md)，该列表包含没有可重写部分。 类`CDocument`，另一方面，列出了大约 10 可重写成员函数。  
   
  在部分类中，您还可以查看注释 `// Advanced Overridables`。 这些是仅高级程序员应尝试重写的函数。 您可能从不需要重写它们。  
   

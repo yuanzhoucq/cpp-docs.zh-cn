@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: idisposable 接口 |Microsoft 文档'
+title: 'Platform:: idisposable 接口 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,15 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c5425d5d65acc194287a97068df7da15f37275
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3899c25d71ad08cc058280271080c19d11222ed
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589781"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable 接口
 用于释放非托管资源。  

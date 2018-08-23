@@ -1,5 +1,5 @@
 ---
-title: CComObject 类 |Microsoft 文档
+title: CComObject 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572912"
 ---
 # <a name="ccomobject-class"></a>CComObject 类
-此类实现**IUnknown**非聚合对象。  
+此类实现`IUnknown`非聚合对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,8 +40,8 @@ class CComObject : public Base
 ```  
   
 #### <a name="parameters"></a>参数  
- `Base`  
- 你的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持很好地从任何其他接口。  
+ *基本*  
+ 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。  
   
 ## <a name="members"></a>成员  
   
@@ -55,15 +56,15 @@ class CComObject : public Base
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComObject::AddRef](#addref)|递增上对象的引用计数。|  
+|[CComObject::AddRef](#addref)|递增该对象的引用计数。|  
 |[CComObject::CreateInstance](#createinstance)|（静态）创建一个新`CComObject`对象。|  
 |[CComObject::QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|  
 |[CComObject::Release](#release)|递减引用计数对象上。|  
   
 ## <a name="remarks"></a>备注  
- `CComObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合对象。 但是，调用`QueryInterface`， `AddRef`，和**版本**委派给`CComObjectRootEx`。  
+ `CComObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合对象。 但是，调用`QueryInterface`， `AddRef`，并`Release`委派给`CComObjectRootEx`。  
   
- 有关使用`CComObject`，请参阅文章[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。  
+ 有关使用详细信息`CComObject`，请参阅文章[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Base`  
@@ -74,17 +75,17 @@ class CComObject : public Base
  **标头：** atlcom.h  
   
 ##  <a name="addref"></a>  CComObject::AddRef  
- 递增上对象的引用计数。  
+ 递增该对象的引用计数。  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 此函数返回的对象上的新递增的引用计数。 此值可用于诊断或测试。  
+ 此函数返回的对象上的新递增的引用数。 此值可能可用于诊断或测试。  
   
 ##  <a name="ccomobject"></a>  CComObject::CComObject  
- 构造函数递增模块锁计数。  
+ 构造函数递增模块的锁计数。  
   
 ```
 CComObject(void* = NULL);
@@ -92,12 +93,12 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>参数  
  \*void  
- [in]未使用此未命名的参数。 它位于与其他对称性 **CCom * * * XXX*`Object`*XXX*构造函数。  
+ [in]未使用此未命名的参数。 它与其他对称性存在 **CCom * * * XXX*`Object`*XXX*构造函数。  
   
 ### <a name="remarks"></a>备注  
  析构函数递减它。  
   
- 如果`CComObject`-成功使用构造派生的对象**新**运算符，在初始引用计数为 0。 若要设置为适当的值 (1) 的引用计数，请调用[AddRef](#addref)函数。  
+ 如果`CComObject`-已成功使用构造派生的对象**新**运算符，在初始引用计数为 0。 若要将引用计数设置为适当的值 (1)，请调用[AddRef](#addref)函数。  
   
 ##  <a name="dtor"></a>  CComObject::~CComObject  
  析构函数。  
@@ -111,23 +112,23 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- 此静态函数使你可以创建一个新**CComObject <** `Base` **>** 对象，而无需开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此静态函数，可创建一个新**CComObject <** `Base` **>** 对象，而不需要的开销[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pp`  
- [out]指向的指针**CComObject <** `Base` **>** 指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
+ *pp*  
+ [out]一个指向**CComObject <** `Base` **>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 返回的对象具有引用计数为零，因此调用`AddRef`立即，然后使用**版本**以完成后释放对象指针上的引用。  
+ 返回的对象的引用计数为零，因此请调用`AddRef`立即，然后使用`Release`来完成后释放的对象指针上的引用。  
   
- 如果不执行需要直接访问的对象，但仍想要创建一个新的对象，而无需开销`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)相反。  
+ 如果确实不需要通过直接访问对象，但仍想要创建新的对象而不需要的开销`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)相反。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
@@ -144,17 +145,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iid`  
+ *iid*  
  [in]所请求的接口的标识符。  
   
- `ppvObject`  
- [out]指向由标识的接口指针的指针`iid`。 如果对象不支持此接口，`ppvObject`设置为**NULL**。  
+ *ppvObject*  
+ [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。  
   
- `pp`  
- [out]指向由类型标识的接口指针的指针`Q`。 如果对象不支持此接口，`pp`设置为**NULL**。  
+ *pp*  
+ [out]由类型标识的接口指针的指针`Q`。 如果该对象不支持此接口， *pp*设置为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="release"></a>  CComObject::Release  
  递减引用计数对象上。  
@@ -164,7 +165,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 此函数返回的对象上的新递减引用计数。 在调试版本中，返回的值可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
+ 此函数返回的对象上的新递减引用计数。 在调试版本中，返回值可能是有用的诊断或测试。 在非调试版本中，`Release`始终返回 0。  
   
 ## <a name="see-also"></a>请参阅  
  [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   

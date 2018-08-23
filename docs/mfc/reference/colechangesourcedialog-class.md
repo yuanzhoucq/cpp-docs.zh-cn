@@ -1,5 +1,5 @@
 ---
-title: COleChangeSourceDialog 类 |Microsoft 文档
+title: COleChangeSourceDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853480"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 类
 用于 OLE“更改源”对话框。  
@@ -61,11 +62,11 @@ class COleChangeSourceDialog : public COleDialog
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleChangeSourceDialog::DoModal](#domodal)|OLE 更改源对话框中显示。|  
-|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|获取完整的源的显示名称。|  
-|[COleChangeSourceDialog::GetFileName](#getfilename)|源名称中获取文件名。|  
-|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|获取上一个源的前缀。|  
-|[COleChangeSourceDialog::GetItemName](#getitemname)|源名称中获取的项名称。|  
+|[COleChangeSourceDialog::DoModal](#domodal)|显示 OLE 更改源对话框。|  
+|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|获取完整的源代码显示名称。|  
+|[COleChangeSourceDialog::GetFileName](#getfilename)|源名称获取文件名。|  
+|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|获取以前的源的前缀。|  
+|[COleChangeSourceDialog::GetItemName](#getitemname)|获取与源名称的项名称。|  
 |[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|获取新的源的前缀|  
 |[COleChangeSourceDialog::IsValidSource](#isvalidsource)|指示源是否有效。|  
   
@@ -73,14 +74,14 @@ class COleChangeSourceDialog : public COleDialog
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleChangeSourceDialog::m_cs](#m_cs)|结构，它控制的对话框中的行为。|  
+|[COleChangeSourceDialog::m_cs](#m_cs)|结构，它控制对话框的行为。|  
   
 ## <a name="remarks"></a>备注  
- 创建类的对象`COleChangeSourceDialog`如果想要调用此对话框。 后`COleChangeSourceDialog`构造对象，则可以使用[m_cs](#m_cs)结构初始化的值或在对话框中的控件的状态。 `m_cs`结构属于类型[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+ 创建类的对象`COleChangeSourceDialog`时您想要调用此对话框。 之后`COleChangeSourceDialog`构造对象，则可以使用[m_cs](#m_cs)结构初始化的值或在对话框中的控件的状态。 `m_cs`结构属于类型[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
   
- 关于 OLE 特定对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -101,7 +102,7 @@ class COleChangeSourceDialog : public COleDialog
  **标头：** afxodlgs.h  
   
 ##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
- 此函数构造`COleChangeSourceDialog`对象。  
+ 此函数将构造`COleChangeSourceDialog`对象。  
   
 ```  
 explicit COleChangeSourceDialog(
@@ -110,16 +111,16 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向链接[COleClientItem](../../mfc/reference/coleclientitem-class.md)其源是要更新。  
   
- `pParentWnd`  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口将设置为应用程序主窗口。  
+ *pParentWnd*  
+ 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象属于的。 如果它为 NULL，父窗口的对话框的将设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
- 若要显示对话框中，调用[DoModal](#domodal)函数。  
+ 若要显示的对话框，请调用[DoModal](#domodal)函数。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构和[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构并[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  调用此函数可显示 OLE 更改源对话框。  
@@ -131,16 +132,16 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>返回值  
  对话框中的完成状态。 以下值之一：  
   
-- **IDOK**如果成功显示该对话框。  
+- IDOK 如果成功显示的对话框。  
   
-- **IDCANCEL**如果用户已取消对话框。  
+- 如果用户已取消对话框的，IDCANCEL。  
   
-- **IDABORT**如果发生错误。 如果**IDABORT**是返回，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型详细信息。 有关可能的错误的列表，请参阅[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要通过设置成员的初始化各种对话框控件[m_cs](#m_cs)结构，应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
+ 如果你想要通过设置的成员初始化各种对话框控件[m_cs](#m_cs)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
   
- 如果`DoModal`返回**IDOK**，可调用成员函数来从对话框中检索用户输入的设置或信息。 以下列表命名了典型查询函数：  
+ 如果`DoModal`返回 IDOK，您可以调用成员函数从对话框中检索用户输入设置或信息。 以下列表命名了典型查询函数：  
   
 - [GetFileName](#getfilename)  
   
@@ -156,50 +157,50 @@ CString GetDisplayName();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 完整源显示名称 (moniker) [COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
+ 完整源显示名称 （名字对象） [COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
   
 ##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
- 调用此函数可检索链接的客户端项的显示名称的文件标记部分。  
+ 调用此函数可检索链接的客户端项的显示名称的文件的名字对象部分。  
   
 ```  
 CString GetFileName();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 源显示名称的文件标记部分[COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
+ 源的显示名称的文件的名字对象部分[COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
   
 ### <a name="remarks"></a>备注  
- 项名字对象以及文件名字对象提供完整的显示名称。  
+ 项名字对象以及文件名字对象提供了完整的显示名称。  
   
 ##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
- 调用此函数可获取源的以前的前缀字符串。  
+ 调用此函数可获取上一个前缀字符串的源。  
   
 ```  
 CString GetFromPrefix();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 以前的源的前缀字符串。  
+ 源的上一个前缀字符串。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数后，才[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 此值是直接来自**lpszFrom**的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
+ 此值源于直接`lpszFrom`的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
- 调用此函数可检索链接的客户端项的显示名称的项标记部分。  
+ 调用此函数可检索链接的客户端项的显示名称的项名字对象部分。  
   
 ```  
 CString GetItemName();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 源显示名称的项标记部分[COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
+ 源的显示名称的项名字对象部分[COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
   
 ### <a name="remarks"></a>备注  
- 项名字对象以及文件名字对象提供完整的显示名称。  
+ 项名字对象以及文件名字对象提供了完整的显示名称。  
   
 ##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  调用此函数可获取新的前缀字符串的源。  
@@ -209,12 +210,12 @@ CString GetToPrefix();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 新的源的前缀字符串。  
+ 源的新前缀字符串。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数后，才[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 此值是直接来自**lpszTo**的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
+ 此值源于直接`lpszTo`的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
   
@@ -226,7 +227,7 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>备注  
- `OLEUICHANGESOURCE` 用于控制 OLE 更改源对话框中的行为。 此结构的成员可以直接修改。  
+ `OLEUICHANGESOURCE` 用于控制 OLE 更改源对话框中的行为。 可以直接修改此结构的成员。  
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
   
@@ -238,14 +239,14 @@ BOOL IsValidSource();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果新的源是有效的否则为 0。  
+ 非零，如果新的源有效，否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数后，才[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [COleDialog 类](../../mfc/reference/coledialog-class.md)

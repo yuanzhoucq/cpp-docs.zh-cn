@@ -1,5 +1,5 @@
 ---
-title: '-FU (命名强制 #using 文件) |Microsoft 文档'
+title: '-FU (命名强制 #using 文件) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597496"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
-你可以使用作为传递的源文件名的替代方法的编译器选项[#using 指令](../../preprocessor/hash-using-directive-cpp.md)源代码中。  
+可以使用作为传递到的文件名称的替代方法的编译器选项[#using 指令](../../preprocessor/hash-using-directive-cpp.md)源代码中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>备注  
  /FU 开关只采用一个文件名。 若要指定多个文件，请对每个文件使用 /FU。  
   
- 如果你使用[!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)]并引用元数据来使用[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用 **/FU**。 您必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 中不支持友元程序集。  
+ 如果使用的 C + + /cli CLI 并引用要使用元数据[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用 **/FU**。 您必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 友元程序集不支持在 Visual c + + 组件扩展 C + + /cli CX。  
   
- 有关如何创建一个程序集或模块为公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 有关如何生成[!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]，请参阅[生成应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。  
+ 有关如何创建程序集或模块的公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 了解如何构建在 C + + /CX 中，请参阅[构建应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

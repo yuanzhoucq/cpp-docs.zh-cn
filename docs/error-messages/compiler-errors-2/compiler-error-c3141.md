@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249975"
 ---
 # <a name="compiler-error-c3141"></a>编译器错误 C3141
 interface_name： 接口只支持公共继承  

@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Queryinterface 方法 |Microsoft 文档'
+title: 'Activationfactory:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613227"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 方法
-检索指向指定接口的指针。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `riid`  
- 接口 ID。  
-  
- `ppvObject`  
- 此操作完成时，指向指定参数的接口的指针`riid`。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK；否则为描述失败的 HRESULT。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [ActivationFactory 类](../windows/activationfactory-class.md)
+
+检索指向指定接口的指针。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>参数
+
+*riid*  
+接口 ID。
+
+*ppvObject*  
+完成此操作后，指向由参数指定的接口的指针*riid*。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为描述失败的 HRESULT。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[ActivationFactory 类](../windows/activationfactory-class.md)

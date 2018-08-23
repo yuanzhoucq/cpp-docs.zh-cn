@@ -1,5 +1,5 @@
 ---
-title: selectany |Microsoft 文档
+title: selectany |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dec78827ac269c91ab84facfbfa7f9dbbd2eca07
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461625"
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 专用**  
@@ -35,21 +36,21 @@ __declspec( selectany ) declarator
 ```  
   
 ## <a name="remarks"></a>备注  
- 在链接时，如果显示了 COMDAT 的多个定义，则链接器会选取一个定义并丢弃其余的定义。 如果链接器选项[/opt: ref](../build/reference/opt-optimizations.md) （优化） 为选中状态，则将进行 COMDAT 清除以链接器输出中删除所有未引用的数据的项。  
+ 在链接时，如果显示了 COMDAT 的多个定义，则链接器会选取一个定义并丢弃其余的定义。 如果链接器选项[/opt: ref](../build/reference/opt-optimizations.md) （优化） 选择，然后将进行 COMDAT 清除以链接器输出中删除所有未引用的数据项目。  
   
  声明中的构造函数和全局函数或静态方法的赋值不创建引用，并且不会阻止 /OPT: REF 清除。 此类代码的副作用不应依赖于不存在对数据的其他引用的情况。  
   
- 对于动态初始化的全局对象，`selectany` 也将放弃一个未引用对象的初始化代码。  
+ 对于动态初始化的全局对象， **selectany**将放弃未引用的对象的初始化代码，以及。  
   
- 全局数据项一般只能在 EXE 或 DLL 项目中初始化一次。 当相同的标头出现在多个源文件中时，`selectany` 可用于初始化由标头定义的全局数据。 `selectany` 可用于 C 和 C++ 编译器。  
+ 全局数据项一般只能在 EXE 或 DLL 项目中初始化一次。 **selectany**可以用于初始化由标头，定义时相同的标头出现在多个源代码文件中的全局数据。 **selectany**在 C 和 c + + 编译器中可用。  
   
 > [!NOTE]
->  `selectany` 只能应用于外部可见的全局数据项的实际初始化。  
+>  **selectany**只能应用于外部可见的全局数据项的实际初始化。  
   
 ## <a name="example"></a>示例  
- 此代码演示如何使用 `selectany` 特性：  
+ 此代码演示如何使用**selectany**属性：  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -80,9 +81,9 @@ __declspec(selectany) X x(1);
 ```  
   
 ## <a name="example"></a>示例  
- 此代码演示如何使用`selectany`特性来确保数据 COMDAT 折叠，当你同时使用[/opt: icf](../build/reference/opt-optimizations.md)链接器选项。 请注意，数据必须标有`selectany`并放置在**const** （只读） 部分。 您必须显式指定只读部分。  
+ 此代码演示如何使用**selectany**属性，以确保数据 COMDAT 折叠时还使用[/opt: icf](../build/reference/opt-optimizations.md)链接器选项。 请注意，数据必须标有**selectany** ，且位于**const** （只读） 部分。 您必须显式指定只读部分。  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  

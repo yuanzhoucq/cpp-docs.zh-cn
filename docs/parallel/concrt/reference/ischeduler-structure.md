@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693986"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
 工作计划程序的抽象的接口。 并发运行时的资源管理器使用此接口与工作计划程序进行通信。  

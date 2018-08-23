@@ -16,24 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d46b0f9744f192d677d7b2df27b67e734de1b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c5469e4f7be3c164cc63fa30f5069009846be48
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705018"
 ---
 # <a name="compiler-error-c2812"></a>编译器错误 C2812
-\#导入不支持使用 /clr: pure 和 /clr: safe  
-  
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
- [#import 指令](../../preprocessor/hash-import-directive-cpp.md)不支持 **/clr: pure**和 **/clr: safe**因为`#import`需要本机编译器支持库的使用。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2812。  
-  
-```  
-// C2812.cpp  
-// compile with: /clr:pure /c  
-#import "importlib.tlb"   // C2812  
+
+> \#导入不支持使用 /clr: pure 和 /clr: safe
+
+## <a name="remarks"></a>备注
+
+**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+
+[#import 指令](../../preprocessor/hash-import-directive-cpp.md)不支持 **/clr: pure**和 **/clr: safe**因为`#import`需要本机编译器支持库的使用。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2812。
+
+```cpp
+// C2812.cpp
+// compile with: /clr:pure /c
+#import "importlib.tlb"   // C2812
 ```

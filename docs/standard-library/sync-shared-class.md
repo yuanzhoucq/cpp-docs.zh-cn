@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963454"
 ---
 # <a name="syncshared-class"></a>sync_shared 类
 
@@ -43,7 +44,7 @@ class sync_shared
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*缓存*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -93,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -112,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|与同步筛选器相关联的缓存类型。|
-|`Other`|要比较是否相等的缓存。|
+|*缓存*|与同步筛选器相关联的缓存类型。|
+|*其他*|要比较是否相等的缓存。|
 
 ### <a name="return-value"></a>返回值
 
-如果 `cache.equals(Other.cache)` 的结果为 `true`（其中 `cache` 表示缓存对象），则为 `true`；否则为 `false`。
+**true**如果的结果`cache.equals(Other.cache)`，其中`cache`表示缓存对象，则不**true**; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 

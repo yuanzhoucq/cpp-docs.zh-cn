@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5db832a7c6c380e43fcf5edb3f36ce1a1bf692e6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404712"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C++)
-执行*语句*重复直到指定的终止条件 (*表达式*) 计算结果为零。  
+执行*语句*重复之前指定的终止条件 (*表达式*) 计算结果为零。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>备注  
- 终止条件的测试将在每次执行循环后进行；因此 `do-while` 循环将执行一次或多次，具体取决于终止表达式的值。 `do-while`时，还可以终止语句[中断](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[返回](../cpp/return-statement-cpp.md)在语句体中执行语句。  
+ 在每次执行循环; 后进行终止条件的测试因此，**执行操作-虽然**循环将执行一个或多个时间，具体取决于终止表达式的值。 **执行操作-虽然**时，还可以终止语句[中断](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[返回](../cpp/return-statement-cpp.md)在语句体中执行语句。  
   
  expression 必须具有算法或指针类型。 执行过程如下所示：  
   
 1.  执行语句体。  
   
-2.  接着，计算 expression。 如果 expression 为 false，则 `do-while` 语句将终止，控制将传递到程序中的下一条语句。 如果 expression 为 true（非零），则将从第 1 步开始重复此过程。  
+2.  接着，计算 expression。 如果*表达式*为 false，**执行-虽然**语句将终止，控制权将传递给程序中的下一个语句。 如果 expression 为 true（非零），则将从第 1 步开始重复此过程。  
   
 ## <a name="example"></a>示例  
- 以下示例演示了 `do-while` 语句：  
+ 下面的示例演示如何**执行操作-虽然**语句：  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  

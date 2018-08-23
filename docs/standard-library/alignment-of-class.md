@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d9ba59d7f1539f690d7b04c70139c263490368
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb492c1c804aacd79f1552afb5293b8b40a8b648
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539749"
 ---
 # <a name="alignmentof-class"></a>alignment_of 类
 
@@ -36,11 +37,11 @@ struct alignment_of;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型查询可保存 `Ty` 类型的对齐方式的值。
+类型查询保留的值类型的对齐方式*Ty*。
 
 ## <a name="requirements"></a>要求
 

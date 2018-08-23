@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320201"
 ---
 # <a name="resource-compiler-error-rc2148"></a>资源编译器错误 RC2148
 子语言 ID 太大  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956422"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>服务器：实现就地框架窗口
 本文介绍如果您不使用应用程序向导创建服务器应用程序，则在可视编辑服务器应用程序中实现就地框架窗口时必须执行的操作。 代替遵循本文中概述的过程，你可以使用应用程序向导生成的应用程序或 Visual c + + 提供的示例从现有的就地框架窗口类。  
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
   
 1.  从 `COleIPFrameWnd` 派生就地框架窗口类。  
   
-    -   在类的标头文件中使用 `DECLARE_DYNCREATE` 宏。  
+    -   类标头文件中使用 DECLARE_DYNCREATE 宏。  
   
-    -   在类的实现 (.cpp) 文件中使用 `IMPLEMENT_DYNCREATE` 宏。 这使得此类的对象由框架创建。  
+    -   类实现 (.cpp) 文件中使用 IMPLEMENT_DYNCREATE 宏。 这使得此类的对象由框架创建。  
   
 2.  在框架窗口类中声明 `COleResizeBar` 成员。 这在您需要在服务器应用程序中支持就地重设大小时是必需的。  
   
-     声明`OnCreate`消息处理程序 (使用**属性**窗口)，并调用**创建**为你`COleResizeBar`成员，当你已定义。  
+     声明`OnCreate`消息处理程序 (使用**属性**窗口)，并调用`Create`为你`COleResizeBar`成员，当你已定义。  
   
 3.  如果您有一个工具栏，请在框架窗口类中声明 `CToolBar` 成员。  
   

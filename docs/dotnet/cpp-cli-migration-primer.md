@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108681"
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 迁移入门
 这是你的 Visual c + + 程序将从移动 Managed Extensions for c + + 到 Visual c + + 的指南。 

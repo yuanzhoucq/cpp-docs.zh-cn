@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341441"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 控件的容器
 你可以使用在 Visual c + + 中开发的其他应用程序中的 ActiveX 控件，只要它们支持 ActiveX 控件包含。 大量的开头列出，版本的 Microsoft 应用程序支持 ActiveX 控件包含。  

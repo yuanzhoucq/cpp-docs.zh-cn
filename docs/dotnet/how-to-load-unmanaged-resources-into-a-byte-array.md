@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130144"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
 本主题讨论几种方法可以加载到非托管的资源<xref:System.Byte>数组。  

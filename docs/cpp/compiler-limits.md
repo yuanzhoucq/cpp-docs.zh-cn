@@ -1,5 +1,5 @@
 ---
-title: 编译器限制 |Microsoft 文档
+title: 编译器限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7cd26add0a46bab8df7669fb6dfb6060b0010e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01260500a564e6cb18b4477a423ce1ef70444201
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402180"
 ---
 # <a name="compiler-limits"></a>编译器限制
 C++ 标准建议对各种语言构造施加限制。 下面是 Visual C++ 编译器不会在其中实施建议的限制的情况的列表。 第一个数字是 ISO C++ 11 标准（INCITS/ISO/IEC 14882-2011[2012]，附件 B）中建立的限制，而第二个数字是由 Visual C++ 实现的限制：  
@@ -29,7 +30,7 @@ C++ 标准建议对各种语言构造施加限制。 下面是 Visual C++ 编译
   
 -   自变量在一个宏调用的 C++ 标准： 256，Visual C++ 编译器： 127。   
   
--   中的字符 （串联后） 的字符串文本或宽字符串文本 C++ 标准： 65536，Visual C++ 编译器： 65535 单字节字符，包括`null`终止符和 32767 双字节字符，包括`null`终止符。   
+-   中的字符字符串文本或宽字符串文本 （串联后） 的 c + + 标准： 65536，Visual c + + 编译器： 65535 的单字节字符，包括 NULL 终止符，并包括 NULL 终止符的 32767 双字节字符。  
   
 -   单个 `struct-declaration-list` 中的嵌套类、结构或联合定义的级别 [C++ 标准：256]（Visual C++ 编译器：16）。  
   
@@ -37,7 +38,7 @@ C++ 标准建议对各种语言构造施加限制。 下面是 Visual C++ 编译
   
 -   范围限定一个标识符的 C++ 标准： 256，Visual C++ 编译器： 127。   
   
--   嵌套 `extern` 规范 [C++ 标准：1024]（Visual C++ 编译器：9（未计算全局范围中的隐式 `extern` 规范；如果计算全局范围中的隐式 `extern` 规范，则为 10。）。  
+-   嵌套**extern**规范的 c + + 标准： 1024，Visual c + + 编译器： 9 (不包括的隐式**extern**规范在全局作用域或 10，如果您要计算的隐式**extern**全局作用域中的规范...  
   
 -   模板声明的 C++ 标准中的模板自变量： 1024，Visual C++ 编译器： 2046年。  
   

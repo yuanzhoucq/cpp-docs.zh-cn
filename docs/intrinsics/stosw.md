@@ -1,5 +1,5 @@
 ---
-title: __stosw |Microsoft 文档
+title: __stosw |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540381"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft 专用**  
   
- 生成一个存储字符串指令 (`rep stosw`)。  
+ 生成的存储字符串指令 (`rep stosw`)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,24 +42,24 @@ void __stosw(
   
 #### <a name="parameters"></a>参数  
  [out] `Dest`  
- 操作的目标。  
+ 该操作的目标。  
   
  [in] `Data`  
  要存储的数据。  
   
  [in] `Count`  
- 要写入的词块的长度。  
+ 中的单词写入块的长度。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 结果是，字`Data`写入到的块`Count`中指定的词`Dest`字符串。  
+ 结果是，字`Data`写入到块`Count`词中`Dest`字符串。  
   
  此例程仅可用作内部函数。  
   

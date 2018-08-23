@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT 结构 |Microsoft 文档
+title: RuntimeClassBaseT 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,41 +15,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b0bae186a0c4d4e9a6c7eec8553c296428b3a59
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597186"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 结构
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template <  
-   unsigned int RuntimeClassTypeT  
->  
-friend struct Details::RuntimeClassBaseT;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `RuntimeClassTypeT`  
- 指定一个或多个标志的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。  
-  
-## <a name="remarks"></a>备注  
- 提供用于 helper 方法`QueryInterface`操作和获取的接口 Id。  
-  
-## <a name="members"></a>成员  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `RuntimeClassBaseT`  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [参考 （Windows 运行时库）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   unsigned int RuntimeClassTypeT
+>
+friend struct Details::RuntimeClassBaseT;
+```
+
+### <a name="parameters"></a>参数
+
+*RuntimeClassTypeT*  
+指定一个或多个标记的字段[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举器。
+
+## <a name="remarks"></a>备注
+
+提供的帮助器方法`QueryInterface`操作和入门的接口 Id。
+
+## <a name="members"></a>成员
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`RuntimeClassBaseT`
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[参考 （Windows 运行时库）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

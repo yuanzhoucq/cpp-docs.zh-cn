@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208804"
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
@@ -194,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- 宏 `MOUT` 解析为 *g_pmout，这是类型为 `mstream` 的对象。 Mstream 类派生自标准输出字符串类 `std::basic_ostream<TCHAR>.`，但字符串文本周围有 _T，我们放置此宏的目的在于为转换到 Unicode 做准备，运算符 << 的重载解决方案失败，并出现以下错误消息：  
+ 宏 `MOUT` 解析为 \*g_pmout，这是类型为 `mstream` 的对象。 Mstream 类派生自标准输出字符串类 `std::basic_ostream<TCHAR>.`，但字符串文本周围有 _T，我们放置此宏的目的在于为转换到 Unicode 做准备，运算符 << 的重载解决方案失败，并出现以下错误消息：  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

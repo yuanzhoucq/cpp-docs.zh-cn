@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391023"
 ---
 # <a name="type-cast-conversions"></a>类型强制转换的转换
 可以使用类型强制转换来显式转换类型。  

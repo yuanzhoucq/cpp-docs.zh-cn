@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964491"
 ---
 # <a name="onceflag-structure"></a>once_flag 结构
 
-表示与模板函数 [call_once](../standard-library/mutex-functions.md#call_once) 结合使用的 `struct`，以确保即使出现多个执行线程，初始化代码只调用一次。
+表示**struct**模板函数一起使用[call_once](../standard-library/mutex-functions.md#call_once)以确保初始化代码调用一次，即使出现多个执行线程。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +31,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 ## <a name="remarks"></a>备注
 
-`once_flag` `struct`具有默认构造函数。
+`once_flag` **结构**只有一个默认构造函数。
 
 可以创建 `once_flag` 类型的对象，但不能复制它们。
 

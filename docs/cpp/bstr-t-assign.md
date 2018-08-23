@@ -1,5 +1,5 @@
 ---
-title: '_bstr_t:: assign |Microsoft 文档'
+title: '_bstr_t:: assign |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403902"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 专用**  
   
- 副本`BSTR`到`BSTR`包装 **_**`bstr_t`。  
+ 副本`BSTR`成`BSTR`由包装 **_**`bstr_t`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +37,15 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>参数  
- `s`  
+ *s*  
  要复制到 `BSTR` 包装的 `BSTR` 中的 `_bstr_t`。  
   
 ## <a name="remarks"></a>备注  
- `Assign` 执行二进制副本，这意味着将在不考虑内容的情况下复制 `BSTR` 的整个长度。  
+ **将分配**执行二进制副本，这意味着的整个长度`BSTR`复制，而不管内容如何。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  

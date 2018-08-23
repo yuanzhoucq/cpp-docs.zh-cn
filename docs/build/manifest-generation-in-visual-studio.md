@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370444"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio 中的清单生成
 可以在项目中控制生成清单文件的特定项目**属性页**对话框。 上**配置属性**选项卡上，单击**链接器**，然后**清单文件**，然后**生成清单**。 默认情况下，新项目的项目属性将设置为生成清单文件。 但是很可能禁用生成的清单项目使用**生成清单**项目属性。 当此属性设置为**是**，生成此项目的清单。 则链接器忽略程序集信息时解决应用程序代码的依赖关系，并且不生成清单。  

@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405209"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -54,27 +55,27 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>参数
 
-*size*<br/>
+*size*  
 请求的内存分配的大小。
 
-*对齐方式*<br/>
+*对齐方式*  
 对齐值，必须是 2 的整数次幂。
 
 ## <a name="return-value"></a>返回值
 
-指向已分配的内存块的指针或**NULL**如果操作失败。 在指针位于的倍数*对齐*。
+已分配的内存块的指针或如果操作失败，则为 NULL。 在指针位于的倍数*对齐*。
 
 ## <a name="remarks"></a>备注
 
 **_aligned_malloc**基于[malloc](malloc.md)。
 
-**_aligned_malloc**标记`__declspec(noalias)`和`__declspec(restrict)`，这意味着，保证函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**_aligned_malloc**砆`__declspec(noalias)`和`__declspec(restrict)`，这意味着确保该函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
-此函数将**errno**到**ENOMEM**如果内存分配失败或请求的大小大于 **_HEAP_MAXREQ**。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**验证其参数。 如果*对齐*不是 2 的幂或*大小*为零，则此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回**NULL**和设置**errno**到**EINVAL**。
+如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**验证其参数。 如果*对齐*不是 2 的幂或*大小*为零，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回 NULL 并集`errno`到`EINVAL`。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 
@@ -162,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>请参阅
 
-[数据对齐](../../c-runtime-library/data-alignment.md)<br/>
+[数据对齐](../../c-runtime-library/data-alignment.md)  

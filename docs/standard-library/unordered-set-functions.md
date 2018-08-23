@@ -7,11 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 515d16cf8b9f11f5e9eb0b9699a0f72a19a64053
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956665"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 函数
 
@@ -33,17 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`Key` 键的类型。
+*Key*  
+ 密钥类型。
 
-`Hash` 哈希函数对象类型。
+*哈希*  
+ 哈希函数对象类型。
 
-`Pred` 相等比较函数对象类型。
+*Pred*  
+ 相等比较函数对象类型。
 
-`Alloc` 分配器类中。
+*分配*  
+ allocator 类。
 
-`left` 第一个要交换的容器。
+*left*  
+ 第一个要交换的容器。
 
-`right` 第二个要交换的容器。
+*right*  
+ 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
@@ -119,17 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`Key` 键的类型。
+*Key*  
+ 密钥类型。
 
-`Hash` 哈希函数对象类型。
+*哈希*  
+ 哈希函数对象类型。
 
-`Pred` 相等比较函数对象类型。
+*Pred*  
+ 相等比较函数对象类型。
 
-`Alloc` 分配器类中。
+*分配*  
+ allocator 类。
 
-`left` 第一个要交换的容器。
+*left*  
+ 第一个要交换的容器。
 
-`right` 第二个要交换的容器。
+*right*  
+ 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 

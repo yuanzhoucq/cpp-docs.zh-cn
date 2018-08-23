@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef 类 |Microsoft 文档
+title: ComPtrRef 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,66 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d961ed0a675927846788c013e61767f99b408c6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aaeb641fc7b2276567edfb30fd36c46db6cfc5ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613684"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 类
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template <  
-   typename T  
->  
-class ComPtrRef : public ComPtrRefBase<T>;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是 ComPtr 所表示的接口。  
-  
-## <a name="remarks"></a>备注  
- 表示类型 ComPtr 的对象的引用\<T >。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[ComPtrRef::ComPtrRef 构造函数](../windows/comptrref-comptrref-constructor.md)|初始化中的指定指针到另一个 ComPtrRef 对象的 ComPtrRef 类的新实例。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[ComPtrRef::GetAddressOf 方法](../windows/comptrref-getaddressof-method.md)|检索用当前 ComPtrRef 对象表示的接口的指针的地址。|  
-|[ComPtrRef::ReleaseAndGetAddressOf 方法](../windows/comptrref-releaseandgetaddressof-method.md)|删除当前 ComPtrRef 对象并返回指向由 ComPtrRef 对象表示的接口的指针。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[ComPtrRef::operator InterfaceType** 运算符](../windows/comptrref-operator-interfacetype-star-star-operator.md)|删除当前 ComPtrRef 对象并返回指向由 ComPtrRef 对象表示的接口的指针。|  
-|[ComPtrRef::operator T* 运算符](../windows/comptrref-operator-t-star-operator.md)|返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。|  
-|[ComPtrRef::operator void** 运算符](../windows/comptrref-operator-void-star-star-operator.md)|删除当前 ComPtrRef 对象，作为指针-到-指针-到由 ComPtrRef 对象表示的接口的指针转换`void`，然后返回强制转换指针。|  
-|[ComPtrRef::operator* 运算符](../windows/comptrref-operator-star-operator.md)|检索指向由当前 ComPtrRef 对象表示的接口的指针。|  
-|[ComPtrRef::operator== 运算符](../windows/comptrref-operator-equality-operator.md)|指示两个 ComPtrRef 对象是否相等。|  
-|[ComPtrRef::operator!= 运算符](../windows/comptrref-operator-inequality-operator.md)|指示两个 ComPtrRef 对象是否不相等。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `ComPtrRefBase`  
-  
- `ComPtrRef`  
-  
-## <a name="requirements"></a>要求  
- **标头：** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRef : public ComPtrRefBase<T>;
+```
+
+#### <a name="parameters"></a>参数
+
+*T*  
+一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口`ComPtr`。
+
+## <a name="remarks"></a>备注
+
+表示类型的对象的引用`ComPtr<T>`。
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[ComPtrRef::ComPtrRef 构造函数](../windows/comptrref-comptrref-constructor.md)|初始化的新实例**ComPtrRef**到另一个类从指定的指针**ComPtrRef**对象。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[ComPtrRef::GetAddressOf 方法](../windows/comptrref-getaddressof-method.md)|检索指向当前所表示接口的指针的地址**ComPtrRef**对象。|
+|[ComPtrRef::ReleaseAndGetAddressOf 方法](../windows/comptrref-releaseandgetaddressof-method.md)|删除当前**ComPtrRef**对象并返回到由表示的接口的指针到-的指针**ComPtrRef**对象。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[ComPtrRef::operator InterfaceType** 运算符](../windows/comptrref-operator-interfacetype-star-star-operator.md)|删除当前**ComPtrRef**对象并返回到由表示的接口的指针到-的指针**ComPtrRef**对象。|
+|[ComPtrRef::operator T* 运算符](../windows/comptrref-operator-t-star-operator.md)|返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。|
+|[ComPtrRef::operator void** 运算符](../windows/comptrref-operator-void-star-star-operator.md)|删除当前**ComPtrRef**对象，将强制转换到由表示的接口指针**ComPtrRef**对象作为指针-到-指针-若要**void**，，然后返回转换的指针。|
+|[ComPtrRef::operator* 运算符](../windows/comptrref-operator-star-operator.md)|检索指向当前所表示接口的指针**ComPtrRef**对象。|
+|[ComPtrRef::operator== 运算符](../windows/comptrref-operator-equality-operator.md)|指示两个**ComPtrRef**对象是否相等。|
+|[ComPtrRef::operator!= 运算符](../windows/comptrref-operator-inequality-operator.md)|指示两个**ComPtrRef**对象是否不相等。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`ComPtrRefBase`
+
+`ComPtrRef`
+
+## <a name="requirements"></a>要求
+
+**标头：** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

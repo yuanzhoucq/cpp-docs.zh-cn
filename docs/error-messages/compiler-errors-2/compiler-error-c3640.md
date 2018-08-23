@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267181"
 ---
 # <a name="compiler-error-c3640"></a>编译器错误 C3640
 member： 必须定义的本地类的引用或虚拟成员函数  

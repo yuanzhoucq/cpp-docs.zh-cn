@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181167"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -91,20 +92,20 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，将指针返回到的第一个位置*c*中*缓冲区*。 否则它将返回**NULL**。
+如果成功，返回的第一个位置指向*c*中*缓冲区*。 否则，它返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-**memchr**和**wmemchr**查找第一个匹配项*c*中第一个*计数*字节的*缓冲区*。 在找到时将它停止*c*或检查第一个*计数*字节。
+`memchr` 和`wmemchr`的第一个匹配项看起来*c*在第一个*计数*字节*缓冲区*。 它将停止时找到*c*或检查第一个*计数*字节。
 
-在 C 中，这些函数采用 * * const * * 的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 * * const * * 返回一个指向**const **; 采用指向非版本**const * * 返回指向非**const **。如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const * * 和非-** const * * 提供了这些函数的版本。如果需要非**const * * 这两个 c + +，重载的行为定义符号 _CONST_RETURN。
+在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const** c + +，这两个 c + + 中的行为定义符号 _CONST_RETURN。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**memchr**|\<memory.h> 或 \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> 或 \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

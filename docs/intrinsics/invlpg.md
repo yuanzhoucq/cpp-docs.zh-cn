@@ -1,5 +1,5 @@
 ---
-title: __invlpg |Microsoft 文档
+title: __invlpg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539369"
 ---
 # <a name="invlpg"></a>__invlpg
 **Microsoft 专用**  
   
- 生成 x86`invlpg`指令，这使转换旁视缓冲区 (TLB) 无效与指向的内存页`Address`。  
+ 生成 x86`invlpg`指令，这会转换旁路缓冲器 (TLB) 使指向的内存与关联的页为`Address`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,12 +46,12 @@ void __invlpg(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 内部函数`__invlpg`发出特权的指令和选项仅适用于 0 的特权级别 (CPL) 内核模式。  
+ 内部函数`__invlpg`发出特权的指令和选项仅适用于内核模式权限级别 (CPL) 为 0。  
   
  此例程仅可用作内部函数。  
   

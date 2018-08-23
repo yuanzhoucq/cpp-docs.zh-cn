@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129744"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
 你可以访问的字符<xref:System.String>对象到非托管的高性能调用函数采用`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定和传递给需要一个普通函数`wchar_t`字符串。  

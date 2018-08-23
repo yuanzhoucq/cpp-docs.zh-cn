@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344508"
 ---
 # <a name="creating-the-header-control"></a>创建标题控件
 标头控件不可直接在对话框编辑器中 （尽管你可以添加一个列表控件，其中包括标头控件）。  

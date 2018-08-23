@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265280"
 ---
 # <a name="compiler-error-c3752"></a>编译器错误 C3752
 属性类： 不能将属性;keyword 不应在此上下文中  

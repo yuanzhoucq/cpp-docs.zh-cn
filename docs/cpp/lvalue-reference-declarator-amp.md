@@ -1,5 +1,5 @@
 ---
-title: 左值引用声明符： &amp; |Microsoft 文档
+title: 左值引用声明符： &amp; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff47c9a1b5aed197381a0d3ab0f24456fe75bad4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405144"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>左值引用声明符： &amp;
 保留对象的地址，但行为方式在语法上与对象相似。  
@@ -29,7 +30,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 type-id & cast-expression  
 ```  
   
@@ -38,12 +38,12 @@ type-id & cast-expression
   
  地址可转换为给定指针类型的任何对象也可转换为相似的引用类型。 例如，地址可转换为类型 `char *` 的任何对象也可转换为类型 `char &`。  
   
- 不要混淆引用声明与使用[address-of 运算符](../cpp/address-of-operator-amp.md)。 当`&`*标识符*前面是一种类型，如`int`或`char`，*标识符*声明为对类型的引用。 当`&`*标识符*前面没有一种类型，通过使用情况是，address-of 运算符。  
+ 请不要将引用声明与使用混淆[address-of 运算符](../cpp/address-of-operator-amp.md)。 当`&`*标识符*前面都有一个类型，如**int**或**char**，*标识符*声明为对的引用类型。 当`&`*标识符*前面没有类型，用法就是 address-of 运算符的。  
   
 ## <a name="example"></a>示例  
  以下示例通过声明 `Person` 对象和对该对象的引用演示了引用声明符。 由于 `rFriend` 是对 `myFriend` 的引用，因此更新任一变量都将更改同一对象。  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

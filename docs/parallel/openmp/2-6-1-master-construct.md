@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689550"
 ---
 # <a name="261-master-construct"></a>2.6.1 master 构造
 **Master**指令标识一个构造，用于指定由主线程的团队执行的结构化的块。 语法**master**指令是，如下所示：  

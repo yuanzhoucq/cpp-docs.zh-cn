@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Handle_ 数据成员 |Microsoft 文档'
+title: 'Handlet:: Handle_ 数据成员 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4873e2a0ccd3b6e3b3c274203e952552d220bb85
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f0a609785b46c13f899961ceae1678b4cfbc026
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592886"
 ---
 # <a name="handlethandle-data-member"></a>HandleT::handle_ 数据成员
-包含由 HandleT 对象的句柄。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-typename HandleTraits::Type handle_;  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>请参阅  
- [HandleT 类](../windows/handlet-class.md)
+
+包含由表示的句柄**HandleT**对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
+typename HandleTraits::Type handle_;
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>请参阅
+
+[HandleT 类](../windows/handlet-class.md)

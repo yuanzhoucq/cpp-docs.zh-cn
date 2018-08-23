@@ -1,5 +1,5 @@
 ---
-title: COM 映射宏 |Microsoft 文档
+title: COM 映射宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879304"
 ---
 # <a name="com-map-macros"></a>COM 映射宏
 这些宏定义 COM 接口映射。  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|将 COM 接口映射条目的开始标记。|  
-|[END_COM_MAP](#end_com_map)|标记 COM 接口映射条目的末尾。|  
+|[BEGIN_COM_MAP](#begin_com_map)|表示 COM 接口映射项的开头。|  
+|[END_COM_MAP](#end_com_map)|表示 COM 接口映射项的结尾。|  
 
 ## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
@@ -46,7 +47,7 @@ BEGIN_COM_MAP(x)
  [in]你将在公开接口的类对象的名称。  
   
 ### <a name="remarks"></a>备注  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)只返回中的 COM 映射的接口的指针。 开始使用你接口映射`BEGIN_COM_MAP`宏，为每个具有你接口添加条目[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其任一变体，并完成对地图[END_COM_MAP](#end_com_map)宏。  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)仅在 COM 映射中返回的接口指针。 启动与 BEGIN_COM_MAP 宏保持一致的接口映射，您的接口的每个添加的条目[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)宏或其一个变体，并完成对地图[END_COM_MAP](#end_com_map)宏。  
 
   
 ### <a name="example"></a>示例  

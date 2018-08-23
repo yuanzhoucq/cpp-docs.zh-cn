@@ -1,5 +1,5 @@
 ---
-title: _variant_t 运算符 |Microsoft 文档
+title: _variant_t 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154dd2fb284b5db8902f8d80b23b8fb5306e63d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6652f46eb33cf40a5503f522dd7a99a16edaf9d2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466096"
 ---
 # <a name="variantt-operators"></a>_variant_t 运算符
 璝惠 **_variant_t**运算符，请参阅[_variant_t 类](../cpp/variant-t-class.md)。  

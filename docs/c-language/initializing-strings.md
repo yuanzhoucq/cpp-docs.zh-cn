@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383974"
 ---
 # <a name="initializing-strings"></a>初始化字符串
 您可以使用字符串文本（或宽字符串文本）初始化字符（或宽字符）的数组。 例如:  

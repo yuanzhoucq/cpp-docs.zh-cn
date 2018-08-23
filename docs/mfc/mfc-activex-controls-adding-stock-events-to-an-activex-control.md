@@ -52,14 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930782"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
-常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 常用事件的事件映射条目始终前面带有**EVENT_STOCK**前缀。  
+常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 事件映射条目 stock EVENT_STOCK 前缀始终前面带有事件。  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> 常用支持的事件添加事件向导  
  `COleControl`类提供了十个常用的事件下, 表中列出。 你可以指定希望你使用在控件中的事件[添加事件向导](../ide/add-event-wizard.md)。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/04/2018
 |KeyPress|**void FireKeyPress (短\***`pnChar`**)** |时激发`WM_CHAR`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYPRESS （)**|  
 |KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)** |时激发`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYUP （)**|  
 |MouseDown|**void FireMouseDown (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果任何激发**BUTTONDOWN**收到 （左、 中间或向右）。 激发此事件之前，捕获了鼠标。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEDOWN （)**|  
-|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |时激发`WM_MOUSEMOVE`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEMOVE （)**|  
+|MouseMove|**void FireMouseMove (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |当收到 WM_MOUSEMOVE 消息时激发。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEMOVE （)**|  
 |MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果任何激发**BUTTONUP**收到 （左、 中间或向右）。 激发此事件之前，释放鼠标捕获。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEUP （)**|  
 |ReadyStateChange|**void FireReadyStateChange （)**|在控件转换到下一步收到的数据量由于就绪状态时激发。<br /><br /> 事件映射条目： **EVENT_STOCK_READYSTATECHANGE （)**|  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- 添加此代码将触发 KeyPress 事件时`WM_CHAR`接收消息并且该控件处于活动状态。 通过调用其触发函数，可以在其他时间激发 KeyPress 事件 (例如， `FireKeyPress`) 从该控件代码中。  
+ 添加此代码将触发 KeyPress 事件接收 WM_CHAR 消息和控件处于活动状态时。 通过调用其触发函数，可以在其他时间激发 KeyPress 事件 (例如， `FireKeyPress`) 从该控件代码中。  
   
  添加事件向导将以下代码行添加到控件的。IDL 文件：  
   

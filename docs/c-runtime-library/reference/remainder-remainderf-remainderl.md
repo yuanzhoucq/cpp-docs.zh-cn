@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209412"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -70,13 +71,13 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>返回值
 
-浮点余数*x* / *y*。 如果值*y*为 0.0，**余数**返回 quiet NaN。 璝惠的表示形式通过一个静态 NaN **printf**系列，请参阅[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+浮点余数*x* / *y*。 如果的值*y*为 0.0，**余数**返回静态 NaN。 有关安静 NaN 的表示形式**printf**系列，请参阅[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**余数**函数计算的浮点余数*r*的*x* / *y*以便*x*  =  *n* * *y* + *r*，其中*n*是整数值到最接近*x* / *y*和*n*为偶数每当&#124; *n*  - *x* / *y* &#124; = 1/2。 当*r* = 0， *r*有相同的符号作为*x*。
+**余数**函数计算的浮点余数*r*的*x* / *y*以便*x*  =  *n* \* *y* + *r*，其中*n*是整数值到最接近*x* / *y*并*n*甚至是每当&#124; *n*  - *x* / *y* &#124; = 1/2。 当*r* = 0， *r*具有相同的符号*x*。
 
-由于 c + + 允许重载，你可以调用的重载**余数**采用并返回**float**或**长** **double**值。 在 C 程序中，**余数**始终采用两个**double**自变量和返回**double**。
+由于 c + + 允许重载，可以调用的重载**余数**采用并返回**float**或**长** **double**值。 在 C 程序中，**余数**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

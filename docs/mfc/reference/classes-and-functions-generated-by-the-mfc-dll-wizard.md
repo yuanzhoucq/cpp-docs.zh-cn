@@ -1,5 +1,5 @@
 ---
-title: 类和函数由 MFC DLL 向导生成 |Microsoft 文档
+title: 类和 MFC DLL 向导生成的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339574"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 向导生成的类和函数
-MFC DLL 向导生成的代码取决于你创建的 DLL 和你选择的选项的类型。 MFC DLL 向导生成的 MFC 的规则 Dll 这两个窗体相同的代码。  
+MFC DLL 向导生成的代码取决于要创建的 DLL 和所选的选项的类型。 MFC DLL 向导生成的两种形式的规则 MFC Dll 相同的代码。  
   
-|类型的 DLL|选项|类|函数|  
+|DLL 类型|选项|类|函数|  
 |-----------------|------------|-------------|---------------|  
 |[扩展](../../build/extension-dlls-overview.md)|无|无|`DllMain`|  
 |[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|无|应用程序类派生自 `CWinApp`|无|  
-|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|自动化|应用程序类派生自 `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|自动化|应用程序类派生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[扩展](../../build/extension-dlls-overview.md)|窗口套接字|无|`DllMain`|  
-|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|窗口套接字|应用程序类派生自 `CWinApp`|`InitInstance` 包含调用 `AfxSocketInit`|  
+|[正则](../../build/regular-dlls-dynamically-linked-to-mfc.md)|窗口套接字|应用程序类派生自 `CWinApp`|`InitInstance` 包含对调用 `AfxSocketInit`|  
   
 ## <a name="see-also"></a>请参阅  
  [MFC DLL 向导](../../mfc/reference/mfc-dll-wizard.md)

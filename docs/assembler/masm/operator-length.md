@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057167"
 ---
 # <a name="operator-length"></a>运算符 LENGTH
 返回的数据中的项数*变量*创建第一个初始值设定项。  

@@ -28,11 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957618"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 类
 
@@ -111,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `mutex` 的所有权，或如果调用线程已拥有 `mutex`，则为 `true`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 `mutex`，则该函数将立即返回 `true`，并且上一锁定一直保持有效。
+如果调用线程已拥有`mutex`，该函数将立即返回**true**，和上一锁定保持有效。
 
 ## <a name="try_lock_for"></a>try_lock_for
 
@@ -128,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>参数
 
-`Rel_time` A [chrono:: duration](../standard-library/duration-class.md)对象，它指定的最大方法尝试获取的所有权的时间量`mutex`。
+*Rel_time* A [chrono:: duration](../standard-library/duration-class.md)对象，它指定该方法尝试获取所有权的最大时长`mutex`。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `mutex` 的所有权，或如果调用线程已拥有 `mutex`，则为 `true`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 `mutex`，则该方法将立即返回 `true`，同时上一锁定保持有效。
+如果调用线程已拥有`mutex`，该方法立即返回**true**，和上一锁定保持有效。
 
 ## <a name="try_lock_until"></a>try_lock_until
 
@@ -151,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-`Abs_time` 一个指定之后此方法不再尝试获取的所有权的阈值的时间点在`mutex`。
+*Abs_time*指定在其后方法不再尝试获取的所有权的阈值的时间点`mutex`。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功获取 `mutex` 的所有权，或如果调用线程已拥有 `mutex`，则为 `true`；否则为 `false`。
+**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有 `mutex`，则该方法将立即返回 `true`，同时上一锁定保持有效。
+如果调用线程已拥有`mutex`，该方法立即返回**true**，和上一锁定保持有效。
 
 ## <a name="unlock"></a>unlock
 

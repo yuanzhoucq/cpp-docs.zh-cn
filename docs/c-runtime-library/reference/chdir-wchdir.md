@@ -42,11 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451532"
 ---
 # <a name="chdir-wchdir"></a>_chdir、_wchdir
 
@@ -70,7 +71,7 @@ int _wchdir(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径， **errno**设置为**ENOENT**。 如果*dirname*为 NULL，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
+如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径， **errno**设置为**ENOENT**。 如果*dirname*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
 
 ## <a name="remarks"></a>备注
 

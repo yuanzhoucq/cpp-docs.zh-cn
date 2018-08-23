@@ -1,5 +1,5 @@
 ---
-title: 如何： 将 C/c + + 应用程序清单嵌入 |Microsoft 文档
+title: 如何： 将 C/c + + 应用程序清单嵌入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573018"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将清单嵌入到 C/C++ 应用程序
-建议的 C/c + + 应用程序 （或库） 具有其清单嵌入到最终二进制文件，因为这可保证在大多数情况下正确运行时行为。 默认情况下，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]尝试将清单嵌入在构建源文件一个项目时，请参阅[Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则必须对现有的生成文件的一些更改。 本部分演示如何更改现有的生成文件，以便自动将嵌入最终二进制文件中的清单。  
+建议 C/c + + 应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。  
   
 ## <a name="two-approaches"></a>两种方法  
- 有两个方法可将嵌入在应用程序或库内的清单。  
+ 有两种方法将嵌入在应用程序或库的清单。  
   
--   如果你不进行增量生成可以直接将嵌入清单作为生成后步骤中使用类似于以下命令行：  
+-   如果不执行增量生成可以直接将嵌入的清单作为后期生成步骤中使用命令行如下所示：  
   
      **mt.exe-清单 MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
@@ -38,18 +39,18 @@ ms.lasthandoff: 05/03/2018
   
      (EXE、 dll 2 1)。  
   
--   如果你正在增量生成，直接编辑资源，如下所示将禁用增量生成，并且导致完全重新生成;因此应采取不同的方法：  
+-   如果正在执行增量生成，直接编辑该资源，如下所示将禁用增量生成，并导致完全重新生成;因此，应采取不同的方法：  
   
-    -   将二进制文件来生成 MyApp.exe.manifest 文件的链接。  
+    -   链接生成 MyApp.exe.manifest 文件的二进制文件。  
   
-    -   将清单转换到的资源文件。  
+    -   转换为资源文件的清单。  
   
     -   重新链接 （增量） 的清单资源嵌入二进制文件。  
   
- 下面的示例演示如何更改生成文件以合并这两种技术。  
+ 以下示例演示如何更改生成文件将合并这两种技术。  
   
-## <a name="makefiles-before"></a>（之前） 的生成文件  
- MyApp.exe，从一个文件构建的简单应用程序，请考虑 nmake 脚本：  
+## <a name="makefiles-before"></a>生成文件 （之前）  
+ 为 MyApp.exe，从一个文件生成一个简单应用程序，请看 nmake 脚本：  
   
 ```  
 # build MyApp.exe  
@@ -69,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- 如果运行此脚本使用 Visual c + + 不变，它已成功创建 MyApp.exe。 它还创建了外部清单文件 MyApp.exe.manifest，以供操作系统加载在运行时的依赖程序集。  
+ 如果运行此脚本使用 Visual c + + 不变，它已成功创建 MyApp.exe。 它还会创建由操作系统加载依赖程序集在运行时使用的外部清单文件 MyApp.exe.manifest。  
   
- MyLibrary.dll nmake 脚本看起来很相似：  
+ MyLibrary.dll nmake 脚本看起来非常类似：  
   
 ```  
 # build MyLibrary.dll  
@@ -95,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>生成文件 （之后）  
- 若要使用嵌入的清单，你必须对原始的生成文件进行四个小型更改。 为 MyApp.exe 生成文件：  
+ 若要使用生成嵌入您必须对原始生成文件进行四个较小的更改的清单。 为 MyApp.exe 生成文件：  
   
 ```  
 # build MyApp.exe  

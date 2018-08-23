@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d460733eff0f5ef78ae92a98347f2eec5f84dc0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fc2777e32fb6ad95248b266b1ff62b1983c83c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255578"
 ---
 # <a name="atl-macros"></a>ATL 宏
 若要按类别查找 ATL 宏，请参阅以下主题。  
@@ -86,6 +87,6 @@ ms.lasthandoff: 05/03/2018
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   
- [结构](../../atl/reference/atl-structures.md)   
- [Typedef](../../atl/reference/atl-typedefs.md)   
- [类](../../atl/reference/atl-classes.md)
+ [类和结构](../../atl/reference/atl-classes.md)  
+ [Typedefs](../../atl/reference/atl-typedefs.md)   
+

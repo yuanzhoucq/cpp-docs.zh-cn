@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381803"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>字符常量和条件包含
 **ANSI 3.8.1** 控制条件包含的常量表达式中的单个字符的字符常量的值是否与执行字符集中的相同字符常量的值匹配。 此类字符常量是否可具有负值  

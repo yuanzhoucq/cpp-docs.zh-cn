@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088058"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC 安装和入门
 以下主题帮助你安装你需要以开始使用开放式数据库连接 (ODBC) 的组件。  

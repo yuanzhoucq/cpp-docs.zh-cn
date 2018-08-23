@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391943"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式规范字段：scanf 和 wscanf 函数
 此处的信息适用于整个 `scanf` 函数系列（包括安全版本），并描述了用于告诉 `scanf` 函数如何将输入流（如 `stdin` 的输入流 `scanf`）分析为插入到程序变量中的值。  

@@ -28,22 +28,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 453bb40e94c1d345adbe22f8792b59d1e584499a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704823"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>纯代码和可验证代码 (C++/CLI)
-对于.NET 编程，Visual c + + 在 Visual Studio 2017 支持创建混合程序集的使用[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)编译器选项。 **/Clr: pure**和 **: safe**选项从 Visual Studio 2015 开始弃用，并且将编译器的未来版本中删除。 如果你的代码必须是可验证，我们建议你对 C# 移植它。
-  
-## <a name="mixed-clr"></a>混合 (/ clr)  
- 混合程序集 (使用编译 **/clr**)、 非托管同时包含和托管的部分，使它们使用.NET 功能，同时仍包含本机代码。 这允许应用程序和组件进行更新，而无需重写整个项目中使用.NET 功能。 使用 Visual c + + 混合托管代码和本机代码以这种方式被调用 c + + 互操作。 有关详细信息，请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)和[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)。  
-  
-  
-从托管程序集进行到本机 Dll 通过 P/Invoke 的调用将编译，但在运行时，具体取决于安全设置可能会失败。  
-  
-没有一个编码方案，将通过编译器，但这将导致无法验证的程序集： 调用通过使用范围解析运算符的对象实例的虚拟函数。  例如：`MyObj -> A::VirtualFunction();`。  
-  
-## <a name="see-also"></a>请参阅  
- [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+# <a name="pure-and-verifiable-code-ccli"></a>纯代码和可验证代码 (C + + /cli CLI)
+
+对于.NET 编程，Visual c + + 在 Visual Studio 2017 支持创建混合程序集的使用[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)编译器选项。 **/Clr: pure**和 **: safe**选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。 如果你的代码必须是安全或可验证，我们建议你对 C# 移植它。
+
+## <a name="mixed-clr"></a>混合 (/ clr)
+
+混合程序集 (使用编译 **/clr**)、 非托管同时包含和托管的部分，使它们使用.NET 功能，同时仍包含本机代码。 这允许应用程序和组件进行更新，而无需重写整个项目中使用.NET 功能。 使用 Visual c + + 混合托管代码和本机代码以这种方式被调用 c + + 互操作。 有关详细信息，请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)和[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)。
+
+从托管程序集进行到本机 Dll 通过 P/Invoke 的调用将编译，但在运行时，具体取决于安全设置可能会失败。
+
+没有一个编码方案，将通过编译器，但这将导致无法验证的程序集： 调用通过使用范围解析运算符的对象实例的虚拟函数。  例如：`MyObj -> A::VirtualFunction();`。
+
+## <a name="see-also"></a>请参阅
+
+- [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+

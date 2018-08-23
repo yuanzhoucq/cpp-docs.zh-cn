@@ -17,30 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929713"
 ---
 # <a name="containers-client-item-states"></a>容器：客户端项状态
 此文章介绍了在其生存期内，通过传递客户端项的不同状态。  
   
- 客户端项经过若干种状态，因为它是创建、 激活、 修改和保存。 每次项的状态发生更改，框架调用[COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange)与`OLE_CHANGED_STATE`通知。 第二个参数是一个介于**COleClientItem::ItemState**枚举。 它可以是以下项之一：  
+ 客户端项经过若干种状态，因为它是创建、 激活、 修改和保存。 每次项的状态发生更改，框架调用[COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange)与**OLE_CHANGED_STATE**通知。 第二个参数是一个介于`COleClientItem::ItemState`枚举。 它可以是以下项之一：  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  在空状态下，客户端项尚不完全项。 内存已分配，但它尚未已初始化 OLE 项的数据。 这是通过调用创建完毕后，客户端项处于的状态**新**但未经过通常分两步创建的第二步。  
   
- 在第二个步骤中，通过调用执行`COleClientItem::CreateFromFile`或另一个 **CreateFrom * * * xxxx*函数，完全创建相应的项。 OLE 数据 （从文件或某些其他源，如剪贴板） 与`COleClientItem`-派生对象。 现在项处于加载状态。  
+ 在第二个步骤中，通过调用执行`COleClientItem::CreateFromFile`或另一个`CreateFrom` *xxxx*函数，完全创建相应的项。 OLE 数据 （从文件或某些其他源，如剪贴板） 与`COleClientItem`-派生对象。 现在项处于加载状态。  
   
  当项具有已在服务器的窗口中打开而不是在容器的文档中的位置中打开时，它会处于打开 （或完全打开） 状态。 在此状态下，跨阴影通常绘制的表示形式来指明，在其他位置的项处于活动状态的容器的窗口中的项上。  
   

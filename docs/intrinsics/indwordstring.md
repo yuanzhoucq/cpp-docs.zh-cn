@@ -1,5 +1,5 @@
 ---
-title: __indwordstring |Microsoft 文档
+title: __indwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe9f7616a20dc09265028cf414aa15340b68c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540154"
 ---
 # <a name="indwordstring"></a>__indwordstring
 **Microsoft 专用**  
@@ -44,16 +45,16 @@ void __indwordstring(
  要读取的端口。  
   
  [out] `Buffer`  
- 此处编写从端口读取的数据。  
+ 读取从端口将数据写入此处。  
   
  [in] `Count`  
- 要读取数据的字节数。  
+ 要读取的数据的字节数。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__indwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indwordstring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

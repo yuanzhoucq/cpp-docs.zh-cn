@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953140"
 ---
 # <a name="tree-control-styles"></a>树控件样式
-树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 样式控制方面的树控件的外观。 创建树控件时，你可以设置的初始样式。 可以检索，还可以通过使用创建树控件后更改样式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数，指定**GWL_STYLE**为`nIndex`参数。 样式的完整列表，请参阅[树视图控件的窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
+树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 样式控制方面的树控件的外观。 创建树控件时，你可以设置的初始样式。 可以检索，还可以通过使用创建树控件后更改样式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数，指定**GWL_STYLE**为*nIndex*参数。 样式的完整列表，请参阅[树视图控件的窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
   
  **TVS_HASLINES**样式通过绘制将子项链接到其相应的父项的线条增强的图形表示形式树控件的层次结构。 此样式不链接层次结构的根处的项。 若要执行此操作，你需要合并**TVS_HASLINES**和**TVS_LINESATROOT**样式。  
   

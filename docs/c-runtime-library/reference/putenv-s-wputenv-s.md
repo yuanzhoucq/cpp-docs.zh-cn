@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - putenv_s
@@ -40,11 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84d7a68530a748c9b1ad7c553fad80ed4e7c86b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de777c05d3b5186966e78b80e6fb1b10221d031a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572713"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s、_wputenv_s
 
@@ -85,11 +87,11 @@ errno_t _wputenv_s(
 |**NULL**|任何|**EINVAL**|
 |任何|**NULL**|**EINVAL**|
 
-如果发生某个错误条件，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果发生某个错误条件，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Putenv_s**函数将新环境变量添加或修改现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv_s**是宽字符版本的 **_putenv_s**; *envstring*参数 **_wputenv_s**是宽字符字符串。
+**_Putenv_s**函数将新环境变量添加或修改现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv_s**是宽字符版本 **_putenv_s**; *envstring*参数 **_wputenv_s**是宽字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,20 +99,20 @@ errno_t _wputenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*varname*是要添加或修改的环境变量的名称和*value_string*是变量的值。 如果*varname*已属于该环境，其值将由替换*value_string*; 否则为新*varname*变量并将其*value_string*添加到环境。 可以从环境中删除变量通过指定一个空字符串 (即，"") 为*value_string*。
+*varname*是要添加或修改的环境变量的名称和*value_string*是变量的值。 如果*varname*已经是环境，其值将替换为*value_string*; 否则为新*varname*变量并将其*value_string*添加到环境。 可以从环境中删除变量通过指定一个空字符串 (即，"") 的*value_string*。
 
-**_putenv_s**和 **_wputenv_s**影响本地到当前进程环境; 不能用于修改命令级别环境。 这些函数仅对运行库可访问的数据结构执行，而不对操作系统为进程创建的环境“段”运行。 在当前进程终止时，环境将还原到调用进程的级别，它在大多数情况下为操作系统级别。 但是，修改后的环境可以传递给任何新进程，由 **_spawn**， **_exec**，或**系统**，这些新进程将获取任何新项通过添加 **_putenv_s**和 **_wputenv_s**。
+**_putenv_s**并 **_wputenv_s**影响的当前进程局部环境; 不能用于修改命令级别环境。 这些函数仅对运行库可访问的数据结构执行，而不对操作系统为进程创建的环境“段”运行。 在当前进程终止时，环境将还原到调用进程的级别，它在大多数情况下为操作系统级别。 但是，修改后的环境可以传递到创建的任何新进程 **_spawn**， **_exec**，或**系统**，这些新进程将获取的任何新项通过添加 **_putenv_s**并 **_wputenv_s**。
 
-不要直接; 更改环境条目请改用 **_putenv_s**或 **_wputenv_s**若要更改它。 具体而言，直接释放的元素 **_environ []** 全局数组可能会导致无效内存寻址。
+不要直接调用更改环境条目请改用 **_putenv_s**或 **_wputenv_s**若要对其进行更改。 具体而言，直接释放的元素 **_environ []** 全局数组可能会导致无效内存寻址。
 
-**getenv**和 **_putenv_s**使用全局变量 **_environ**访问环境表;**_wgetenv**和 **_wputenv_s**使用 **_wenviron**。 **_putenv_s**和 **_wputenv_s**也可能更改的值 **_environ**和 **_wenviron**，从而使*envp*参数**主要**和 **_wenvp**参数**wmain**。 因此，它是安全使用 **_environ**或 **_wenviron**访问环境信息。 有关详细信息的关系的 **_putenv_s**和 **_wputenv_s**全局变量，请参阅[_environ、 _wenviron](../../c-runtime-library/environ-wenviron.md)。
+**getenv**并 **_putenv_s**使用全局变量 **_environ**访问环境表;**_wgetenv**并 **_wputenv_s**使用 **_wenviron**。 **_putenv_s**并 **_wputenv_s**可能会更改的值 **_environ**并 **_wenviron**，并因此使无效*envp*自变量**主**并 **_wenvp**参数**wmain**。 因此，它是使用更为安全的做法 **_environ**或 **_wenviron**访问环境信息。 有关关系的详细信息 **_putenv_s**并 **_wputenv_s**与全局变量，请参阅[_environ、 _wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv_s**和 **_getenv_s**系列的函数不是线程安全。 **_getenv_s**无法返回字符串指针时 **_putenv_s**是修改该字符串，从而导致随机失败。 确保对这些函数的调用同步。
+> **_Putenv_s**并 **_getenv_s**系列函数不是线程安全。 **_getenv_s**返回时字符串指针 **_putenv_s**是修改的字符串，从而导致随机失败。 确保对这些函数的调用同步。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putenv_s**|\<stdlib.h>|
 |**_wputenv_s**|\<stdlib.h> 或 \<wchar.h>|
@@ -119,7 +121,7 @@ errno_t _wputenv_s(
 
 ## <a name="example"></a>示例
 
-有关示例，演示如何使用 **_putenv_s**，请参阅[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)。
+有关演示如何使用的示例 **_putenv_s**，请参阅[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)。
 
 ## <a name="see-also"></a>请参阅
 

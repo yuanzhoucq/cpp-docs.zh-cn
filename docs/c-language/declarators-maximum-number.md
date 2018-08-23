@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382141"
 ---
 # <a name="declarators-maximum-number"></a>声明符：最大数目
 **ANSI 3.5.4** 可以修改算术、结构或联合类型的声明符的最大数量  

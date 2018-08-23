@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367142"
 ---
 # <a name="function-pointers"></a>函数指针
 函数指针是函数的只需指向相应的标签。 有的函数指针的目录 (TOC) 要求没有表。  

@@ -1,5 +1,5 @@
 ---
-title: 虚函数 |Microsoft 文档
+title: 虚函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467915"
 ---
 # <a name="virtual-functions"></a>虚函数
 虚函数是应在派生类中重新定义的成员函数。 当使用指针或对基类的引用来引用派生的类对象时，可以为该对象调用虚函数并执行该函数的派生类版本。  
   
  虚函数确保为该对象调用正确的函数，这与用于进行函数调用的表达式无关。  
   
- 假定基类包含声明为函数[虚拟](../cpp/virtual-cpp.md)并派生的类定义了相同的函数。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现  
+ 假定基类包含声明为一个函数[虚拟](../cpp/virtual-cpp.md)和派生的类定义相同的功能。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  以下示例说明在通过指针调用时虚函数和非虚函数的行为：  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>输出  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  请注意，无论 `NameOf` 函数是通过指向 `Base` 的指针还是通过指向 `Derived` 的指针进行调用，它都会调用 `Derived` 的函数。 它调用 `Derived` 的函数，因为 `NameOf` 是虚函数，并且 `pBase` 和 `pDerived` 都指向类型 `Derived` 的对象。  
   
- 因为仅为类类型的对象调用虚函数时，你不能声明为全局或静态函数**虚拟**。  
+ 仅为类类型的对象调用虚函数，因为不能声明为全局或静态函数**虚拟**。  
   
- **虚拟**派生类中声明重写函数时，可以使用关键字但它是不必要的; 虚函数的重写始终是虚拟。  
+ **虚拟**派生类中声明重写函数时，可以使用关键字，但它是必需的; 虚函数的重写始终是虚拟。  
   
- 必须定义在基类中的虚拟函数，除非它们声明为使用*纯说明符*。 (有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。)  
+ 必须定义在基类中的虚函数，除非它们声明为使用*纯说明符*。 (有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。)  
   
  可通过使用范围解析运算符 (`::`) 显式限定函数名称来禁用虚函数调用机制。 考虑先前涉及 `Account` 类的示例。 若要调用基类中的 `PrintBalance`，请使用如下所示的代码：  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  在前面的示例中，对 `PrintBalance` 的调用将禁用虚函数调用机制。  
-  

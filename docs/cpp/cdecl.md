@@ -1,5 +1,5 @@
 ---
-title: __cdecl |Microsoft 文档
+title: __cdecl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406541"
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft 专用**  
   
- `__cdecl` 是 C 和 C++ 程序的默认调用约定。 由于由调用方清理堆栈的方式，它可以完成**vararg**函数。 `__cdecl`调用约定创建更大的可执行文件比[__stdcall](../cpp/stdcall.md)，因为它要求每个函数调用包括堆栈清理代码。 以下列表显示此调用约定的实现。  
+ **__cdecl**是默认调用约定的 C 和 c + + 程序。 由调用方清理堆栈，因为它可以执行`vararg`函数。 **__Cdecl**调用约定创建更大的可执行文件比[__stdcall](../cpp/stdcall.md)，因为它要求每个函数调用包括堆栈清理代码。 以下列表显示此调用约定的实现。  
   
 |元素|实现|  
 |-------------|--------------------|  
 |自变量传递顺序|从右到左。|  
 |堆栈维护职责|调用函数从堆栈中弹出参数。|  
-|名称修饰约定|下划线字符 (_) 前缀的名称，除非\_导出使用 C 链接的 _cdecl 函数。|  
+|名称修饰约定|下划线字符 (_) 前缀的名称，除非当\_导出使用 C 链接的 _cdecl 函数。|  
 |大小写转换约定|不执行任何大小写转换。|  
   
 > [!NOTE]
 >  有关相关信息，请参阅[修饰名](../build/reference/decorated-names.md)。  
   
- 将 `__cdecl` 修饰符放置在变量或者函数名称的前面。 由于 C 命名和调用约定为默认值，时，才必须使用`__cdecl`在 x86 代码是指定了 **/Gv** (vectorcall)、 **/Gz** (stdcall) 或 **/Gr** (fastcall) 编译器选项。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项强制`__cdecl`调用约定。  
+ 位置 **__cdecl**在变量或者函数名称前面的修饰符。 由于 C 命名和调用约定为默认值，时，才必须使用 **__cdecl**在 x86 代码是在指定`/Gv`(vectorcall)、 `/Gz` (stdcall) 或`/Gr`(fastcall)编译器选项。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项强制执行 **__cdecl**调用约定。  
   
- 在 ARM 和 x64 处理器上，接受 `__cdecl`，但编译器一般会忽略它。 按照 ARM 和 x64 上的约定，自变量将尽可能传入寄存器，后续自变量传递到堆栈中。 在 x64 代码中，使用`__cdecl`重写 **/Gv**编译器选项并使用默认 x64 调用约定。  
+ 在 ARM 和 x64 处理器， **__cdecl**是接受，但编译器一般会忽略。 按照 ARM 和 x64 上的约定，自变量将尽可能传入寄存器，后续自变量传递到堆栈中。 在 x64 代码中，使用 **__cdecl**重写 **/Gv**编译器选项并使用默认的 x64 调用约定。  
   
  对于非静态类函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。 也就是说，对于类非静态成员方法，在定义时假定声明期间指定的调用约定。 给定此类定义：  
   

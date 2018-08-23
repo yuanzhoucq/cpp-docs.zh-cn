@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171844"
 ---
 # <a name="value-type-semantics"></a>值类型语义
 值类型语义已从托管扩展中的 c + + 更改为 Visual c + +。  

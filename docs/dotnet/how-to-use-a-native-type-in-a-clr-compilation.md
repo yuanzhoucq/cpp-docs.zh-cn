@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128402"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 编译中使用本机类型
 你可以定义中的本机类型 **/clr**编译和程序集内从该本机类型的任何使用无效。 但是，本机类型不是可用于从引用的元数据。  

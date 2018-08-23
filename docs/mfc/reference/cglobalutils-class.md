@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils 类 |Microsoft 文档
+title: CGlobalUtils 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,14 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d5e2c1938a975da956502f3b071c8c51c6ad48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538620"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 类
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -103,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `rect`  
- [in] `pRectDelta`  
+ [in、 out]*rect*  
+ [in]*pRectDelta*  
   
 ### <a name="remarks"></a>备注  
   
@@ -122,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `barContainerManager`  
- [in] `pWndTodock`  
- [in] `ptMouse`  
- [out] `rectResult`  
- [out] `bDrawTab`  
- [out] `ppTargetBar`  
+ [in]*barContainerManager*  
+ [in]*pWndTodock*  
+ [in]*ptMouse*  
+ [out]*rectResult*  
+ [out]*bDrawTab*  
+ [out]*ppTargetBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -139,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -153,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -175,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `pBar`  
- [in] `nSensitivity`  
- [in] `pDockManager`  
- [in] `bOuterEdge`  
- [out] `dwAlignment`  
- [in] `dwEnabledDockBars`  
- [in] `lpRectBounds`  
+ [in]*点*  
+ [in]*pBar*  
+ [in]*nSensitivity*  
+ [in]*pDockManager*  
+ [in]*bOuterEdge*  
+ [out]*dwAlignment*  
+ [in]*dwEnabledDockBars*  
+ [in]*lpRectBounds*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -198,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `cy`  
- [in] `psz`  
+ [out]*cy*  
+ [in]*psz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -215,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `decimal`  
- [in] `psz`  
+ [out]*十进制*  
+ [in]*psz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -232,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `rect`  
- [in] `nDegrees`  
+ [in、 out]*rect*  
+ [in]*nDegrees*  
   
 ### <a name="remarks"></a>备注  
   
@@ -248,9 +249,9 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `pDockManager`  
- [in] `bForce`  
- [in] `bForceInvisible`  
+ [in、 out]*pDockManager*  
+ [in]*bForce*  
+ [in]*bForceInvisible*  
   
 ### <a name="remarks"></a>备注  
   
@@ -262,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -276,7 +277,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwAlign`  
+ [in]*dwAlign*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -296,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `barContainerManager`  
- [in] `pt`  
- [out] `ppTargetControlBar`  
- [out] `dwAlignment`  
- [out] `bTabArea`  
- [out] `bCaption`  
+ [in]*barContainerManager*  
+ [in]*pt*  
+ [out]*ppTargetControlBar*  
+ [out]*dwAlignment*  
+ [out]*bTabArea*  
+ [out]*bCaption*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -315,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -332,9 +333,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lstControlBars`  
- [in] `pNewParent`  
- [in] `bCheckVisibility`  
+ [in]*lstControlBars*  
+ [in]*pNewParent*  
+ [in]*bCheckVisibility*  
   
 ### <a name="remarks"></a>备注  
   
@@ -348,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `str`  
- [in] `cy`  
+ [out]*str*  
+ [in]*cy*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -365,13 +366,13 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `str`  
- [in] `decimal`  
+ [out]*str*  
+ [in]*十进制*  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

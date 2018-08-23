@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361279"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>生成 C/C++ 独立应用程序和并行程序集
 Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础是 [独立应用程序](http://msdn.microsoft.com/library/aa375190) 和 [并行程序集](http://msdn.microsoft.com/library/ff951640)。 默认情况下，Visual C++ 将所有本机 C/C++ 应用程序都作为独立应用程序来生成，这些应用程序使用 [清单](http://msdn.microsoft.com/library/aa375365) 来描述其在 Visual C++ 库上的依赖关系。  

@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Ftmbase 构造函数 |Microsoft 文档'
+title: 'Ftmbase:: Ftmbase 构造函数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15a2373a10df10012e4b2d2685b413014d2ea3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 801799c3472d156825149c83fb51ffe586de0997
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611013"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase 构造函数
-初始化 FtmBase 类的新实例。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-FtmBase();  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** ftm.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [FtmBase 类](../windows/ftmbase-class.md)
+
+初始化的新实例**FtmBase**类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+FtmBase();
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** ftm.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[FtmBase 类](../windows/ftmbase-class.md)

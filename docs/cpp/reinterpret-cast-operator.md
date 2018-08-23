@@ -1,5 +1,5 @@
 ---
-title: reinterpret_cast 运算符 |Microsoft 文档
+title: reinterpret_cast 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27522cb4d3bb15912b7988e0152a121616480330
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464829"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 运算符
 允许将任何指针转换为任何其他指针类型。 也允许将任何整数类型转换为任何指针类型以及反向转换。  
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>备注  
- 滥用 `reinterpret_cast` 运算符可能很容易带来风险。 除非所需转换本身是低级别的，否则应使用其他强制转换运算符之一。  
+ 误用**reinterpret_cast**运算符可能很容易。 除非所需转换本身是低级别的，否则应使用其他强制转换运算符之一。  
   
- `reinterpret_cast` 运算符可用于 `char*` 到 `int*` 或 `One_class*` 到 `Unrelated_class*` 之类的转换，这本身并不安全。  
+ **Reinterpret_cast**运算符可用于转换如`char*`到`int*`，或`One_class*`到`Unrelated_class*`，哪些是本质上是不安全。  
   
- `reinterpret_cast` 的结果不能安全地用于除强制转换回其原始类型以外的任何用途。 在最好的情况下，其他用途也是不可移植的。  
+ 结果**reinterpret_cast**中不能安全地使用强制转换回其原始类型之外的任何内容。 在最好的情况下，其他用途也是不可移植的。  
   
- `reinterpret_cast`运算符不能丢掉**const**， `volatile`，或 **__unaligned**属性。 请参阅[const_cast 运算符](../cpp/const-cast-operator.md)有关移除这些特性的信息。  
+ **Reinterpret_cast**运算符无法转换掉**const**，**易失性**，或者 **__unaligned**属性。 请参阅[const_cast 运算符](../cpp/const-cast-operator.md)有关删除这些属性的信息。  
   
- `reinterpret_cast` 运算符将 null 指针值转换为目标类型的 null 指针值。  
+ **Reinterpret_cast**运算符将 null 指针值转换为目标类型的 null 指针值。  
   
- `reinterpret_cast` 的一个实际用途是在哈希函数中，即，通过让两个不同的值几乎不以相同的索引结尾的方式将值映射到索引。  
+ 一个实际用途**reinterpret_cast**是在哈希函数中，哪些将值映射到两个不同的方式中的索引的值几乎不结束了相同的索引。  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` 允许将指针视为整数类型。 结果随后将按位移位并与自身进行“异或”运算以生成唯一的索引（具有唯一性的概率非常高）。 该索引随后被标准 C 样式强制转换截断为函数的返回类型。  
+ **Reinterpret_cast**允许要被视为一种整型类型的指针。 结果随后将按位移位并与自身进行“异或”运算以生成唯一的索引（具有唯一性的概率非常高）。 该索引随后被标准 C 样式强制转换截断为函数的返回类型。  
   
 ## <a name="see-also"></a>请参阅  
  [强制转换运算符](../cpp/casting-operators.md)   

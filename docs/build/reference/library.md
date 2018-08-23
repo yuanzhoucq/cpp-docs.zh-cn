@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371159"
 ---
 # <a name="library"></a>LIBRARY
 告知链接以创建 DLL。 同时，LINK 将创建导入库，除非在生成中使用了.exp 文件。  

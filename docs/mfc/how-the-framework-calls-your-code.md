@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348174"
 ---
 # <a name="how-the-framework-calls-your-code"></a>框架如何调用你的代码
 了解源代码和 MFC 框架中的代码之间的关系至关重要。 当应用程序运行时，大多数控件流位于框架的代码中。 框架管理一个消息循环，当用户在视图中选择命令和编辑数据时，此消息循环将会从 Windows 中获取消息。 框架可以单独处理的事件根本不用依赖你的代码。 例如，框架知道如何关闭窗口以及如何退出应用程序以响应用户命令。 在处理这些任务时，框架会使用消息处理程序和 C++ 虚函数，以便为你提供响应这些事件的机会。 但是，你的代码没有控制权，控制权在框架手中。  

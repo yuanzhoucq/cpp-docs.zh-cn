@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299921"
 ---
 # <a name="command-line-warning-d9040"></a>命令行警告 D9040
 选项忽略 '/ 分析';代码分析警告不在此版本的编译器中可用  

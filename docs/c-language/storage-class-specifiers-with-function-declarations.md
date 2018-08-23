@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389658"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>具有函数声明的存储类说明符
 在函数声明中，可以使用 static 或 `extern` 存储类说明符。 函数始终具有全局生存期。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385427"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C)
 利用 `do-while` 语句，您可以重复语句或复合语句，直到指定的表达式的计算结果为 false。  

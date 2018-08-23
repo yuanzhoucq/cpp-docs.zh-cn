@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381924"
 ---
 # <a name="c-language-syntax-summary"></a>C 语言语法摘要
 本节提供 C 语言和 Microsoft 特定的 C 语言功能的完整说明。 可以使用本节中的语法表示法，确定任意语言组件的确切语法。 该语法的说明将显示在本手册讨论主题的节中。  

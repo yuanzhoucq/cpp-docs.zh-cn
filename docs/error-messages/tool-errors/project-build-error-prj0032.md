@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318658"
 ---
 # <a name="project-build-error-prj0032"></a>项目生成错误 PRJ0032
 项目级自定义生成步骤的 Outputs 属性包含计算出结果为 macro_expansion 的宏。  

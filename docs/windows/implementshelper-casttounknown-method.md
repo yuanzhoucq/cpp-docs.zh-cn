@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown 方法 |Microsoft 文档'
+title: 'Implementshelper:: Casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598057"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 指向基础的 IUnknown 接口指针。  
-  
-## <a name="remarks"></a>备注  
- 获取当前的实现结构的基础的 IUnknown 接口指针。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [ImplementsHelper 结构](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>返回值
+
+对基础指针`IUnknown`接口。
+
+## <a name="remarks"></a>备注
+
+获取一个指针指向的基础`IUnknown`当前接口`Implements`结构。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ImplementsHelper 结构](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

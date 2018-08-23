@@ -1,7 +1,7 @@
 ---
 title: setjmp | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4673485577f5a12024d31e94063c82a8c7b8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573133"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -52,28 +53,35 @@ int setjmp(
 
 ### <a name="parameters"></a>参数
 
-*env*<br/>
+*env*  
 存储变量的环境。
 
 ## <a name="return-value"></a>返回值
 
-保存堆栈环境后，返回 0。 如果**setjmp**返回的结果**longjmp**调用，它将返回**值**参数**longjmp**，或者如果**值**参数**longjmp**为 0， **setjmp**返回 1。 无错误返回。
+保存堆栈环境后，返回 0。 如果**setjmp**为返回`longjmp`调用，它将返回*值*参数`longjmp`，或者如果*值*自变量的`longjmp`为 0，**setjmp**返回 1。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Setjmp**函数将保存的堆栈环境，你可以随后将还原，使用**longjmp**。 一起使用时， **setjmp**和**longjmp**提供一种执行非本地**goto**。 它们通常用于将执行控制传递给之前调用的例程中的错误处理或恢复代码，而不使用常规调用或返回约定。
+**Setjmp**函数保存堆栈环境，你可以随后还原，使用`longjmp`。 结合使用时， **setjmp**并`longjmp`提供一种方法来执行非本地**goto**。 它们通常用于将执行控制传递给之前调用的例程中的错误处理或恢复代码，而不使用常规调用或返回约定。
 
-调用**setjmp**将保存当前的堆栈环境的*env*。 后续调用**longjmp**还原保存的环境和相应后立即将控制权返回给点**setjmp**调用。 （除外寄存器变量） 可供接收控件的例程访问的所有变量都包含的值，它们具有**longjmp**调用。
+调用**setjmp**将在当前堆栈环境保存*env*。 随后调用`longjmp`还原保存的环境并将控件返回到点，紧跟在对应**setjmp**调用。 可供接收控件的例程访问的所有变量（寄存器变量除外）包含在调用 `longjmp` 时它们具有的值。
 
-不能使用**setjmp**从托管代码的本机跳转。
+不能使用**setjmp**从托管代码到本机跳转。
 
-**请注意** **setjmp**和**longjmp**不支持 c + + 对象语义。 在 C++ 程序中，使用 C++ 异常处理机制。
+**Microsoft 专用**
+
+在 Windows 中，Microsoft c + + 代码中**longjmp**为异常处理代码中使用相同的堆栈展开语义。 它可以安全地使用可引发 c + + 异常的相同位置。 但是，这种用法是不可移植，并附带的一些重要注意事项。 有关详细信息，请参阅[longjmp](longjmp.md)。
+
+**结束 Microsoft 专用**
+
+> [!NOTE]  
+> 在可移植 c + + 代码中，不能假定`setjmp`和`longjmp`支持 c + + 对象语义。 具体而言， `setjmp` / `longjmp`调用对行为未定义如果替换`setjmp`并`longjmp`通过**捕获**并**引发**像调用任何自动对象的任何非平常的析构函数。 在 c + + 程序中，我们建议使用 c + + 异常处理机制。
 
 有关详细信息，请参阅[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**setjmp**|\<setjmp.h>|
 
@@ -85,6 +93,5 @@ int setjmp(
 
 ## <a name="see-also"></a>请参阅
 
-[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[longjmp](longjmp.md)<br/>
-[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>
+[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)  
+[longjmp](longjmp.md)  

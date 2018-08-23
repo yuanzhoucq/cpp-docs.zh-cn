@@ -1,5 +1,5 @@
 ---
-title: Lambda 表达式的示例 |Microsoft 文档
+title: Lambda 表达式的示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404956"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 本文演示如何在你的程序中使用 lambda 表达式。 有关 lambda 表达式的概述，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。 有关 lambda 表达式结构的详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="declaringLambdaExpressions"></a> 声明 Lambda 表达式  
   
 ### <a name="example-1"></a>示例 1  
- 由于 lambda 表达式已类型化，你可以将其分配给`auto`变量或[函数](../standard-library/function-class.md)对象，如下所示：  
+ 由于 lambda 表达式类型化，您可以将其分配给**自动**变量或设置为[函数](../standard-library/function-class.md)对象，如下所示：  
   
 ### <a name="code"></a>代码  
   
@@ -61,7 +62,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[自动](../cpp/auto-cpp.md)，[函数类](../standard-library/function-class.md)，和[函数调用](../cpp/function-call-cpp.md)。  
+ 有关详细信息，请参阅[自动](../cpp/auto-cpp.md)， [function 类](../standard-library/function-class.md)，并[函数调用](../cpp/function-call-cpp.md)。  
   
  虽然 lambda 表达式多在函数的主体中声明，但是可以在初始化变量的任何地方声明。  
   
@@ -132,7 +133,7 @@ int main()
 ```  
   
 ### <a name="example-2"></a>示例 2  
- 以下示例将 lambda 表达式作为参数传递给 `find_if` 函数。 如果 lambda 表达式的参数是偶数，则返回 `true`。  
+ 以下示例将 lambda 表达式作为参数传递给 `find_if` 函数。 Lambda 表达式将返回 **，则返回 true**在其参数为偶数。  
   
 ### <a name="code"></a>代码  
   
@@ -203,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>输出  
@@ -255,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>输出  
@@ -269,13 +268,12 @@ int main()
 ##  <a name="methodLambdaExpressions"></a> 在函数中使用 Lambda 表达式  
   
 ### <a name="example"></a>示例  
- 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获 `this` 指针，以提供对封闭类的函数和数据成员的访问路径。  
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 捕获`this`通过值 (`[*this]`) 当 lambda 将使用在异步或并行操作中代码的可能位置执行后的原始对象超出范围。
+ 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**这**指针，以提供对封闭类的函数和数据成员的访问权限。  
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 捕获**这**按值 (`[*this]`) 时将异步或并行操作中使用 lambda之后执行的代码可能会在原始对象超出范围。
   
- 你可以在函数中显式使用 `this` 指针，如下所示：  
+ 可以使用**这**指针显式在函数中，如下所示：  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -289,12 +287,11 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
- 你也可以隐式捕获 `this` 指针：  
+ 此外可以捕获**这**指针隐式：  
   
-```  
+```cpp 
 void ApplyScale(const vector<int>& v) const  
 {  
    for_each(v.begin(), v.end(),   
@@ -343,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>输出  
@@ -353,18 +349,17 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
- `ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。 lambda 表达式隐式捕获 `this` 指针，以便访问 `_scale` 成员。  
+ `ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。 Lambda 表达式隐式捕获**这**，以便它可以访问`_scale`成员。  
   
  [[本文内容](#top)]  
   
 ##  <a name="templateLambdaExpressions"></a> 与模板配合使用 Lambda 表达式  
   
 ### <a name="example"></a>示例  
- 由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all` 函数将一元 `operator-` 应用于 `vector` 对象中的每个元素。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。  
+ 由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all`函数将应用一元**运算符-** 中的所有元素`vector`对象。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。  
   
 ### <a name="code"></a>代码  
   
@@ -404,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>输出  
@@ -417,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>备注  
@@ -428,7 +421,7 @@ After negate_all():
 ##  <a name="ehLambdaExpressions"></a> 处理异常  
   
 ### <a name="example"></a>示例  
- lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 以下示例使用 `for_each` 函数和 lambda 表达式将一个 `vector` 对象的值填充到另一个中。 它使用`try` / `catch`块来处理无效访问第一个向量。  
+ lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 下面的示例使用**for_each**函数和 lambda 表达式来填充`vector`对象的另一个的值。 它使用**尝试**/**捕获**块来处理无效访问第一个向量。  
   
 ### <a name="code"></a>代码  
   
@@ -501,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>输出  
@@ -514,7 +506,7 @@ Hello!
  你还可以配合使用 lambda 表达式和 STL/CLR 库。 有关详细信息，请参阅[STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)。  
   
 > [!IMPORTANT]
->  以下公共语言运行时 (CLR) 托管实体中不支持 Lambda：`ref class`、`ref struct`、`value class` 和 `value struct`。  
+>  这些公共语言运行时 (CLR) 托管实体中不支持 lambda: **ref 类**， **ref 结构**，**值类**，和**值结构**.  
   
  [[本文内容](#top)]  
   

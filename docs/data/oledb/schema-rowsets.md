@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104277"
 ---
 # <a name="schema-rowsets"></a>架构行集合
 架构 （或元数据） 是数据库的结构或组织，如提供程序、 行集、 表和列上的信息有关的任何信息或实际的数据库除内容之外的其他信息。 OLE DB 允许你不必使用架构行集打开行集合即可获得此类信息。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380704"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>针对 MFC 模块状态中的激活上下文的支持
 MFC 使用用户模块提供的清单资源创建激活上下文。 有关如何创建激活上下文的详细信息，请参阅下列主题：  

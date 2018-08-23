@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; （Visual c + +） |Microsoft 文档'
+title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325112"
 ---
-# <a name="ltparagt-visual-c"></a>&lt;para&gt; （Visual c + +）
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 \<para> 标记用于标记内，例如 [\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md) 或 [\<returns>](../ide/returns-visual-cpp.md)，允许向文本添加结构。  
   
 ## <a name="syntax"></a>语法  

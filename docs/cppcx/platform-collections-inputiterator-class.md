@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::InputIterator 类 |Microsoft 文档
+title: Platform::Collections::InputIterator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 303b93f986777c249062236efd977f7ac387e6e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598424"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 类
-在 Windows 运行时中派生的集合提供标准模板库 InputIterator。  
+派生自 Windows 运行时的集合提供标准模板库 InputIterator。  
   
 ## <a name="syntax"></a>语法  
   
@@ -101,7 +102,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  Inputiterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  Inputiterator:: Operator\*运算符
 检索对当前 InputIterator 指定的元素的引用。  
   
 ### <a name="syntax"></a>语法  

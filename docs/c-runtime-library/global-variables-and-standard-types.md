@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388989"
 ---
 # <a name="global-variables-and-standard-types"></a>全局变量和标准类型
 Microsoft 运行库包含库例程使用的[全局变量](../c-runtime-library/global-variables.md)、[控制标志](../c-runtime-library/control-flags.md)和[标准类型](../c-runtime-library/standard-types.md)的定义。 访问这些变量、标志和类型，方式为在程序中声明它们或包括相应的标头文件。  

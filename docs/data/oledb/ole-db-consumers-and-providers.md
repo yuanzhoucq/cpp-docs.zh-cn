@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111385"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 使用者和提供程序
 OLE DB 体系结构使用的模型使用者和提供程序。 使用者发出数据请求。 一个提供程序通过将数据放在以表格格式并将其返回给使用者响应这些请求。 必须提供程序中实现任何使用者可以进行的调用。  

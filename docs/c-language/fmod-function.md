@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384406"
 ---
 # <a name="fmod-function"></a>fmod 函数
 **ANSI 4.5.6.4** 当 `fmod` 函数的第二个参数为零时，是发生域错误还是返回零  

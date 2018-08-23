@@ -1,5 +1,5 @@
 ---
-title: 程序终止 |Microsoft 文档
+title: 程序终止 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fa65e0c1d910791bed416a1b31f9de46dfb2299
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407278"
 ---
 # <a name="program-termination"></a>程序终止
 在 C++ 中，可通过多种方式退出程序：  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 -   调用[中止](../cpp/abort-function.md)函数。  
   
--   执行[返回](../cpp/return-statement-in-program-termination-cpp.md)语句从**主要**。  
+-   执行[返回](../cpp/return-statement-in-program-termination-cpp.md)语句从`main`。  
   
 ## <a name="see-also"></a>请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961859"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-定义支持存储于 `char` 对象的分配数组中的序列上的 iostreams 操作的几个类。 这类序列可轻松地转换为 C 字符串或者从 C 字符串进行转换。
+定义支持存储在已分配的数组中的序列上的 iostreams 操作的多个类**char**对象。 这类序列可轻松地转换为 C 字符串或者从 C 字符串进行转换。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/08/2018
 
 |类|描述|
 |-|-|
-|[strstreambuf 类](../standard-library/strstreambuf-class.md)|此类描述了一种流缓冲区，它对向存储在 `char` 数组对象中的元素序列传输元素和从该序列传输出元素进行控制。|
+|[strstreambuf 类](../standard-library/strstreambuf-class.md)|此类描述了控制元素与序列中存储的元素的传输的流缓冲区**char**数组对象。|
 |[istrstream 类](../standard-library/istrstream-class.md)|此类描述了一种对象，该对象可控制从 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区提取元素和编码对象。|
 |[ostrstream 类](../standard-library/ostrstream-class.md)|此类描述了一种对象，该对象可控制在 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区中插入元素和编码对象。|
 |[strstream 类](../standard-library/strstream-class.md)|此类描述了一种对象，该对象使用 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区控制元素和编码对象的插入和提取。|

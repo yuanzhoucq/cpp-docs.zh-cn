@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375877"
 ---
 # <a name="filetime-structure"></a>FILETIME 结构
 `FILETIME`结构是 64 位值表示从 1601 年 1 月 1 日的 100 毫微秒隔数。  

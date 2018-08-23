@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954062"
 ---
 # <a name="addconst-class"></a>add_const 类
 
@@ -36,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 要修改的类型。
+*Ty*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-类型修饰符的实例会保留修改后的类型，当 `Ty` 为引用、函数或常量限定类型时，修改后的类型为 `Ty`，否则为 `const Ty`。
+类型修饰符的实例保留修改的类型是*Ty*如果*Ty*是一个引用、 函数或常量限定的类型，否则`const Ty`。
 
 ## <a name="example"></a>示例
 

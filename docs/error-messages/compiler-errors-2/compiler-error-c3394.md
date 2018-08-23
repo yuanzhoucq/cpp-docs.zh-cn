@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251672"
 ---
 # <a name="compiler-error-c3394"></a>编译器错误 C3394
 constraint 子句有语法错误：应为类型却发现“identifier”  

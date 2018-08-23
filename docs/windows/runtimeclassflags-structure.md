@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags 结构 |Microsoft 文档
+title: RuntimeClassFlags 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0a32fc373900af1a4322f4f2511c44417d2916a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594269"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 结构
-包含的实例类型[RuntimeClass](../windows/runtimeclass-class.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template <  
-   unsigned int flags  
->  
-struct RuntimeClassFlags;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `flags`  
- A [RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constants"></a>公共常量  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[RuntimeClassFlags::value 常量](../windows/runtimeclassflags-value-constant.md)|包含[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `RuntimeClassFlags`  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+
+包含的类型的实例[RuntimeClass](../windows/runtimeclass-class.md)。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   unsigned int flags
+>
+struct RuntimeClassFlags;
+```
+
+### <a name="parameters"></a>参数
+
+*flags*  
+一个[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。
+
+## <a name="members"></a>成员
+
+### <a name="public-constants"></a>公共常量
+
+|name|描述|
+|----------|-----------------|
+|[RuntimeClassFlags::value 常量](../windows/runtimeclassflags-value-constant.md)|包含[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`RuntimeClassFlags`
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

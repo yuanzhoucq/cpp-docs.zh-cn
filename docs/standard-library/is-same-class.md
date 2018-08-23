@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964972"
 ---
 # <a name="issame-class"></a>is_same 类
 
@@ -36,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>参数
 
-`Ty1` 查询的第一个类型。
+*Ty1*查询的第一个类型。
 
-`Ty2` 查询的第二个类型。
+*Ty2*查询的第二个类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty1` 和 `Ty2` 是相同类型，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty1*并*Ty2*属于同一类型，否则为 false。
 
 ## <a name="example"></a>示例
 

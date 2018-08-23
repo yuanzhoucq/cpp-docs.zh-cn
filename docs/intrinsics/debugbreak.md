@@ -1,5 +1,5 @@
 ---
-title: __debugbreak |Microsoft 文档
+title: __debugbreak |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541536"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 专用**  
@@ -39,13 +40,13 @@ void __debugbreak();
   
 |内部函数|体系结构|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86、 ARM、 x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>备注  
- `__debugbreak`编译器内部函数，类似于[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是用于引起断点的可移植 Win32 方式。  
+ `__debugbreak`编译器内部函数，类似于[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是会导致断点的可移植 Win32 方式。  
   
 > [!NOTE]
->  使用编译时 **/clr**，函数包含`__debugbreak`将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。  
+>  使用编译时 **/clr**，一个函数，其中包含`__debugbreak`将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。  
   
  例如：  
   

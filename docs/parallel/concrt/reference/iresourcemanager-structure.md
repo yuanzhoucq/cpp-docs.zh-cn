@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693492"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
 并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。  

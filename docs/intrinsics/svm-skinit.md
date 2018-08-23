@@ -1,5 +1,5 @@
 ---
-title: __svm_skinit |Microsoft 文档
+title: __svm_skinit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539204"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft 专用**  
@@ -40,20 +41,20 @@ void __svm_skinit(
   
 |参数|描述|  
 |---------------|-----------------|  
-|`SLB`|64k 字节的 32 位物理地址安全加载程序块 (SLB)。|  
+|`SLB`|32 位物理地址的 64k 字节安全加载程序块 (SLB)。|  
   
 ## <a name="remarks"></a>备注  
- `__svm_skinit`函数等同于`SKINIT`计算机指令。 此函数是使用的处理器和受信任平台模块 (TPM) 来验证并加载调用安全内核 (SK) 的受信任的软件安全系统的一部分。 虚拟机监视器是一种安全内核。 安全系统验证程序组件加载在初始化过程中，并且防止篡改由中断，设备的访问或另一个程序，如果计算机是多处理器组件。  
+ `__svm_skinit`函数等同于`SKINIT`计算机指令。 此函数是使用处理器和受信任平台模块 (TPM) 来验证并加载名为安全内核 (SK) 受信任的软件安全系统的一部分。 虚拟机监视器是安全内核的示例。 安全系统将验证程序组件初始化过程中加载，并防止篡改被中断，设备的访问或另一个程序，如果计算机是多处理器组件。  
   
- `SLB`参数指定的内存称为 64k 块的物理地址*安全加载程序块*(SLB)。 SLB 包含一个名为安全加载程序建立操作环境的计算机，并随后加载安全内核程序。  
+ `SLB`参数指定的内存中，调用 64k 块的物理地址*安全加载程序块*(SLB)。 SLB 包含一个名为建立操作环境的计算机，并随后将加载安全内核安全加载程序程序。  
   
- 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构程序员手动卷 2： 系统编程中，"在文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

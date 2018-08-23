@@ -1,5 +1,5 @@
 ---
-title: '&lt;示例&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;example&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321426"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;示例&gt;（Visual c + +）
-借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。 通常情况下，这将涉及使用[\<代码 >](../ide/code-visual-cpp.md)标记。  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。 通常情况下，这将涉及使用 [\<code>](../ide/code-visual-cpp.md)标记。  
   
 ## <a name="syntax"></a>语法  
   

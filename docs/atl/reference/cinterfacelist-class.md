@@ -1,5 +1,5 @@
 ---
-title: CInterfaceList 类 |Microsoft 文档
+title: CInterfaceList 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33cfcc072e000bc903cceb4ac5551071e35610d9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884371"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 类
-构造的 COM 接口指针的列表时，此类提供有用的方法。  
+构造的 COM 接口指针的列表时，此类提供了有用的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +38,11 @@ class CInterfaceList
 ```  
   
 #### <a name="parameters"></a>参数  
- `I`  
- COM 接口，指定要存储的指针的类型。  
+ *I*  
+ 指定要存储的指针的类型的 COM 接口。  
   
- `piid`  
- 指向 IID 的`I`。  
+ *piid*  
+ 指向 IID*我*。  
   
 ## <a name="members"></a>成员  
   
@@ -52,7 +53,7 @@ class CInterfaceList
 |[CInterfaceList::CInterfaceList](#cinterfacelist)|接口列表构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供一个构造函数和派生的方法用于创建 COM 接口指针的列表。 使用[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)需要数组时。  
+ 此类提供一个构造函数和创建的 COM 接口指针的列表的派生的方法。 使用[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)需要数组时。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
@@ -72,11 +73,11 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
- 块的大小，默认值为 10。  
+ *nBlockSize*  
+ 块大小，默认值为 10。  
   
 ### <a name="remarks"></a>备注  
- 块大小是内存的分配需要一个新的元素时量的度量值。 更大的块大小减少到内存分配例程的调用，但使用更多资源。  
+ 块大小为分配的新元素时所需的内存量的度量值。 更大的块大小降低对内存分配例程的调用，但使用更多的资源。  
   
 ## <a name="see-also"></a>请参阅  
  [CAtlList 类](../../atl/reference/catllist-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: __super |Microsoft 文档
+title: __super |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4faf0130ab34b61dc19f5ac3bd615e2e6162b616
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467376"
 ---
 # <a name="super"></a>__super
 **Microsoft 专用**  
@@ -30,25 +31,21 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-__super::  
-member_function  
-();  
-  
+__super::member_function();  
 ```  
   
 ## <a name="remarks"></a>备注  
  在重载决策阶段将考虑所有可访问的基类方法，可提供最佳匹配项的函数就是调用的函数。  
   
- `__super` 只能在成员函数体内显示。  
+ **__super**只能出现在成员函数体内。  
   
- `__super` 不能与声明一起使用。 请参阅[using 声明](../cpp/using-declaration.md)有关详细信息。  
+ **__super**不能一起使用声明。 请参阅[using 声明](../cpp/using-declaration.md)有关详细信息。  
   
- 通过引入[属性](../windows/cpp-attributes-reference.md)插入代码，你的代码可能包含一个或多个基类，您可能不知道但其名称包含你想要调用的方法。  
+ 通过引入[属性](../windows/cpp-attributes-reference.md)注入代码中，你的代码可能包含一个或多个基类，但可能不知道其名称中包含你想要调用的方法。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  

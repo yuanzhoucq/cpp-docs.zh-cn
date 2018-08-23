@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402782"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -81,7 +82,7 @@ int _mbtowc_l(
 
 ## <a name="remarks"></a>备注
 
-**Mbtowc**函数将转换*计数*或更少字节数的指向*mbchar*，如果*mbchar*不**NULL**，到对应的宽字符。 **mbtowc**将存储在生成的宽字符*wchar，*如果*wchar*不**NULL**。 **mbtowc**不检查多个**MB_CUR_MAX**字节。 **mbtowc**的区域设置相关行为，则使用当前区域设置 **_mbtowc_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Mbtowc**函数将转换*计数*或更少字节数的指向*mbchar*，如果*mbchar*不**NULL**，到对应的宽字符。 **mbtowc**将存储在生成的宽字符*wchar，* 如果*wchar*不**NULL**。 **mbtowc**不检查多个**MB_CUR_MAX**字节。 **mbtowc**的区域设置相关行为，则使用当前区域设置 **_mbtowc_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

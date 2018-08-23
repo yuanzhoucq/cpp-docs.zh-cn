@@ -1,5 +1,5 @@
 ---
-title: __alignof 运算符 |Microsoft 文档
+title: __alignof 运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408822"
 ---
 # <a name="alignof-operator"></a>__alignof 运算符
-C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式（以字节为单位）。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。  
+C + + 11 引入了**alignof**返回的对齐方式，以字节为单位指定类型的运算符。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。  
   
  **Microsoft 专用**  
   
- 返回类型的值**size_t** ，它是类型的对齐要求。  
+ 返回类型的值`size_t`类型的对齐要求。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
 ## <a name="remarks"></a>备注  
  例如：  
   
-|表达式|值|  
+|表达式|“值”|  
 |----------------|-----------|  
 |**__alignof( char )**|1|  
 |**__alignof （短）**|2|  
@@ -54,26 +55,26 @@ C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式
 |**__alignof( double )**|8|  
 |**__alignof( char\* )**|4|  
   
- `__alignof` 值与基本类型的 `sizeof` 的值相同。 但是，请考虑该示例：  
+ **__Alignof**值是相同的值为`sizeof`针对基本类型。 但是，请考虑该示例：  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- 在该示例中，`__alignof` 值是结构中的最大元素的对齐要求。  
+ 在这种情况下， **__alignof**值是结构中的最大元素的对齐需求。  
   
  同样，  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
  `__alignof(S)` 等于 `32`。  
   
- `__alignof` 的用途之一是作为某个内存分配例程的参数。 例如，假定下面定义的结构 `S`，您可以调用名为 `aligned_malloc` 的内存分配例程以在特定对齐边界上分配内存。  
+ 一个用于 **__alignof**会作为一个自己的内存分配例程的参数。 例如，假定下面定义的结构 `S`，您可以调用名为 `aligned_malloc` 的内存分配例程以在特定对齐边界上分配内存。  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  

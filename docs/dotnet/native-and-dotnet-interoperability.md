@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134086"
 ---
 # <a name="native-and-net-interoperability"></a>本机和 .NET 的互操作性
 Visual c + + 支持互操作性功能，允许托管和非托管构造共存和交互操作在相同的程序集中，甚至在同一文件。 此功能，例如 P/Invoke，一小部分支持的其他.NET 语言，但大部分由 Visual c + + 提供的互操作性支持不是有其他语言版本。  

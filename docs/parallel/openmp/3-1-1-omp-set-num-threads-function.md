@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688435"
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads 函数
 `omp_set_num_threads`函数设置默认线程数以用于后续的并行区域未指定`num_threads`子句。 格式如下所示：  

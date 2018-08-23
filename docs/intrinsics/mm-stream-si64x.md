@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_si64x |Microsoft 文档
+title: _mm_stream_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539773"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Microsoft 专用**  
   
- 生成 MOVNTI 指令。 中写入数据，`Source`到指定的内存位置`Dest`，而无需污染缓存。  
+ 生成 MOVNTI 指令。 将数据写入`Source`到指定的内存位置`Dest`，而无需污染缓存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ void _mm_stream_si64x(
 #### <a name="parameters"></a>参数  
   
  [out] `Dest`  
- 指向要写入到的源数据的位置的指针。  
+ 指向要写入到源数据的位置的指针。  
   
  [in] `Source`  
  要写入的数据。  
@@ -50,7 +51,7 @@ void _mm_stream_si64x(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|X64|  
   
  **标头文件** \<intrin.h >  
   

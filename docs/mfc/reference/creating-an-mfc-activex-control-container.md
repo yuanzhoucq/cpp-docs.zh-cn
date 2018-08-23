@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372477"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>创建 MFC ActiveX 控件容器
 ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控件运行环境。 你可以创建应用程序能够包含 ActiveX 控件或无需 MFC，但它是可以更轻松地使用 MFC 执行的操作。  

@@ -1,5 +1,5 @@
 ---
-title: strict_gs_check |Microsoft 文档
+title: strict_gs_check |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540147"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 此杂注提供了增强的安全检查。  
@@ -35,16 +36,18 @@ ms.lasthandoff: 05/07/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。 默认情况下，/GS（缓冲区安全检查）编译器选项不会为所有函数插入 Cookie。 有关详细信息，请参阅 [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。  
+ 
+指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。 默认情况下， `/GS` （缓冲区安全检查） 编译器选项不会插入的所有函数的 cookie。 有关详细信息，请参阅 [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。  
   
- 您必须使用 /GS（缓冲区安全检查）进行编译才能启用 strict_gs_check。  
+必须使用进行编译`/GS`（缓冲区安全检查） 以启用**strict_gs_check**。  
   
- 请在公开给可能有害的数据的代码模块中使用此杂注。 此杂注攻击性非常强，应用于可能不需要此防御的函数，但它为了最大程度降低其对生成的应用程序的性能的影响而进行优化。  
+请在公开给可能有害的数据的代码模块中使用此杂注。 此杂注攻击性非常强，应用于可能不需要此防御的函数，但它为了最大程度降低其对生成的应用程序的性能的影响而进行优化。  
   
- 即使您使用此杂注，也应尽可能写入安全的代码。 也就是说，请确保你的代码具有没有缓冲区溢出。 strict_gs_check 可能从你的代码中仍存在的缓冲区溢出保护你的应用程序。  
+即使您使用此杂注，也应尽可能写入安全的代码。 也就是说，请确保你的代码具有没有缓冲区溢出。 **strict_gs_check**可能会从你的代码中仍存在缓冲区溢出保护你的应用程序。  
   
 ## <a name="example"></a>示例  
- 在以下代码中，缓冲区溢出出现在我们将数组复制到本地数组时。 使用 /GS 编译此代码时，不会在堆栈中插入任何 Cookie，因为数组数据类型为指针。 添加 strict_gs_check 杂注会将堆栈 Cookie 强制插入函数堆栈。  
+ 
+在以下代码中，缓冲区溢出出现在我们将数组复制到本地数组时。 当编译此代码与`/GS`，因为数组数据类型为一个指针，在堆栈中插入任何 cookie。 添加**strict_gs_check**杂注会将堆栈 cookie 强制插入函数堆栈。  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -69,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)

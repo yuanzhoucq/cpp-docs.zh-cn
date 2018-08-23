@@ -43,6 +43,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686641"
 ---
 # <a name="float2-class"></a>float_2 类
 表示短矢量的两个浮点数。  

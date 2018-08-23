@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368481"
 ---
 # <a name="precedence-in-inference-rules"></a>推理规则中的优先级
 如果有多个定义推理规则，NMAKE 使用优先级最高的定义。 以下列表显示优先级从高到最低的顺序：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137622"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>以 MFC 视图的形式承载 Windows 窗体用户控件
 MFC 使用 CWinFormsView 类承载 Windows 窗体用户控件在 MFC 视图。 MFC Windows 窗体视图是 ActiveX 控件。 用户控件的本机视图子级作为托管且占用整个工作区的本机视图。  

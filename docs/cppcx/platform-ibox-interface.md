@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: ibox 接口 |Microsoft 文档'
+title: 'Platform:: ibox 接口 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -10,15 +10,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7894eceb2f345303400eec9b0490db58b3c3583f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586867"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox 接口
 [Platform::IBox](../cppcx/platform-ibox-interface.md) 接口是 `Windows::Foundation::IReference` 接口的 C++ 名称。  

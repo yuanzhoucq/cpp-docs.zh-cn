@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694740"
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 并行模式库 (PPL) 包括多个容器和对象，它提供对其元素的线程安全访问。  

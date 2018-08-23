@@ -1,5 +1,5 @@
 ---
-title: 'Weakreference:: Decrementstrongreference 方法 |Microsoft 文档'
+title: 'Weakreference:: Decrementstrongreference 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3620a4b82aabb0058773f68938f545119f90791
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605593"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-ULONG DecrementStrongReference();  
-```  
-  
-## <a name="remarks"></a>备注  
- 递减当前 WeakReference 对象的强引用计数。  
-  
- 当强引用计数变为零时，强引用设置为`nullptr`。  
-  
-## <a name="return-value"></a>返回值  
- 递减的强引用计数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ULONG DecrementStrongReference();
+```
+
+## <a name="remarks"></a>备注
+
+当前的强引用计数的递减**WeakReference**对象。
+
+当强引用计数变为零时，强引用设置为**nullptr**。
+
+## <a name="return-value"></a>返回值
+
+递减的强引用计数。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
 [WeakReference 类](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

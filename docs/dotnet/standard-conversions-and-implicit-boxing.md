@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163200"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>标准转换和隐式装箱
 编译器将选择一个标准转换而不是一个需要装箱的转换。  

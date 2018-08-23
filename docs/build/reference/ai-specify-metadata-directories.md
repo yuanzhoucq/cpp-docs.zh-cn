@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369427"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI（指定元数据目录）
 指定在解析传递给 `#using` 指令的文件引用时编译器将搜索的目录。  

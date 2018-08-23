@@ -18,26 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d9e21589fde2ff53d56908342620fe23aca5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931705"
 ---
 # <a name="ready-to-use-map-classes"></a>随时可用的映射类
 以下类是随时可用映射的类。  
   
  [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- 使用`void`指针作为键用于查找其他`void`指针。  
+ 使用**void**指针作为键用于查找其他**void**指针。  
   
  [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- 使用`void`作为键用于查找类型的数据的指针**WORD**。  
+ 使用**void**作为键用于查找类型的数据的指针**WORD**。  
   
  [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
  使用`CString`作为查找的键的对象`CObject`指针。  
   
  [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- 使用`CString`作为查找的键的对象`void`指针。  
+ 使用`CString`作为查找的键的对象**void**指针。  
   
  [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
  使用`CString`对象作为键用于查找其他`CString`对象。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
  使用类型的数据**WORD**查找`CObject`指针。  
   
  [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- 使用类型的数据**WORD**查找`void`指针。  
+ 使用类型的数据**WORD**查找**void**指针。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 对象映射宏 |Microsoft 文档
+title: 对象映射宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671fd80bc2c4ad320efb282fd659899756c2ecbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0e2e14309b7175b003fbab9214d9dffde63af63
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026012"
 ---
 # <a name="object-map-macros"></a>对象映射宏
-这些宏定义对象图和条目。  
+这些宏定义对象映射和条目。  
   
 |||  
 |-|-|  
-|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|使用此选项可以指定将进入在对象映射的类对象的文本说明。|  
-|[OBJECT_ENTRY_AUTO](#object_entry_auto)|在对象映射进入 ATL 对象、 更新注册表中，并创建对象的实例。|  
+|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|可以指定将输入对象映射到的类对象的文本说明。|  
+|[OBJECT_ENTRY_AUTO](#object_entry_auto)|在对象映射中输入的 ATL 对象、 更新注册表中，并创建对象的实例。|  
 |[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|允许你指定应该注册和初始化对象，但不应可经由 `CoCreateInstance` 在外部创建对象。|  
 
 ## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
    
 ##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION  
- 使用此选项可以指定你的类对象的文本说明。  
+ 可以指定您的类对象的文本说明。  
   
 ```
 DECLARE_OBJECT_DESCRIPTION( x )
@@ -46,39 +47,39 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in]类对象的说明。  
   
 ### <a name="remarks"></a>备注  
- ATL 在对象映射通过进入此说明[OBJECT_ENTRY](http://msdn.microsoft.com/en-us/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)宏。  
+ 通过在对象映射到 ATL 进入此说明[OBJECT_ENTRY](http://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)宏。  
   
- `DECLARE_OBJECT_DESCRIPTION` 实现`GetObjectDescription`函数，可用于重写[CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)方法。  
+ 实现 DECLARE_OBJECT_DESCRIPTION`GetObjectDescription`函数，可用于重写[CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)方法。  
 
   
- `GetObjectDescription`函数调用**IComponentRegistrar::GetComponents**。 **IComponentRegistrar**是自动化接口，您可以注册和取消注册在 DLL 中的各个组件。 当使用 ATL 项目向导创建的组件注册机构对象时，向导将自动执行**IComponentRegistrar**接口。 **IComponentRegistrar**通常由 Microsoft Transaction Server。  
+ `GetObjectDescription`调用函数`IComponentRegistrar::GetComponents`。 `IComponentRegistrar` 是，可注册和注销 DLL 中的各个组件的自动化接口。 当使用 ATL 项目向导创建的支持组件注册对象时，该向导将自动执行`IComponentRegistrar`接口。 `IComponentRegistrar` 通常使用 Microsoft Transaction Server。  
   
- 有关 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
+ ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
 ##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO  
- 在对象映射进入 ATL 对象、 更新注册表中，并创建对象的实例。  
+ 在对象映射中输入的 ATL 对象、 更新注册表中，并创建对象的实例。  
   
 ```
 OBJECT_ENTRY_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
- [in] 由名为 `class` 的 C++ 类实现的 COM 类的 CLSID。  
+ *clsid*  
+ [in]由名为的 c + + 类实现的 COM 类的 CLSID*类*。  
   
- `class`  
- [in] 实现由 `clsid` 表示的 COM 类的 C++ 类的名称。  
+ *class*  
+ [in]实现表示的 COM 类的 c + + 类名称*clsid*。  
   
 ### <a name="remarks"></a>备注  
  对象项宏置于项目中的全局范围内，以提供对类的注册、初始化和创建的支持。  
   
- `OBJECT_ENTRY_AUTO` 进入的创建者类和类工厂创建者类的函数指针`CreateInstance`自动生成 ATL 对象映射到此对象的函数。 当[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)是调用，更新在对象映射中每个对象在系统注册表。  
+ OBJECT_ENTRY_AUTO 输入创建者类和类工厂创建者类的函数指针`CreateInstance`自动生成 ATL 对象映射到此对象的函数。 当[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)是调用，更新系统注册表对象映射中每个对象。  
 
   
- 下表描述了如何从第二个参数提供给此宏的类获取添加到对象图的信息。  
+ 下表描述了如何从第二个参数提供给此宏类获取添加到对象图的信息。  
   
 |有关的信息|从获取|  
 |---------------------|-------------------|  
@@ -97,16 +98,16 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
- [in] 由名为 `class` 的 C++ 类实现的 COM 类的 CLSID。  
+ *clsid*  
+ [in]由名为的 c + + 类实现的 COM 类的 CLSID*类*。  
   
- `class`  
- [in] 实现由 `clsid` 表示的 COM 类的 C++ 类的名称。  
+ *class*  
+ [in]实现表示的 COM 类的 c + + 类名称*clsid*。  
   
 ### <a name="remarks"></a>备注  
  对象项宏置于项目中的全局范围内，以提供对类的注册、初始化和创建的支持。  
   
- `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` 允许你指定的对象应注册并初始化 (请参阅[OBJECT_ENTRY_AUTO](#object_entry_auto)有关详细信息)，但它不应为可通过创建`CoCreateInstance`。  
+ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 允许您指定的对象应注册并初始化 (请参阅[OBJECT_ENTRY_AUTO](#object_entry_auto)有关详细信息)，但它不应为可通过创建`CoCreateInstance`。  
   
 ## <a name="see-also"></a>请参阅  
  [宏](../../atl/reference/atl-macros.md)

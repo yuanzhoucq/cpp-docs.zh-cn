@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055231"
 ---
 # <a name="operator-lt"></a>运算符 LT
 如果返回 true (-1) *expression1*是小于*expression2*，或如果它不返回 false (0)。  

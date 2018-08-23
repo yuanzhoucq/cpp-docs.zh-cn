@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347729"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 Microsoft 基础类 (MFC) 通过 Win32 提供面向 C++ 对象的包装，以便实现本机桌面应用程序的快速开发。 活动模板库 (ATL) 是一个包装库，它简化了 COM 开发，广泛用于创建 ActiveX 控件。  

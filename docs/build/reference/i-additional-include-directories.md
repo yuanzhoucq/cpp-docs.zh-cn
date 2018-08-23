@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373122"
 ---
 # <a name="i-additional-include-directories"></a>/I（附加包含目录）
 将目录添加到用于搜索包含文件的目录的目录列表。  

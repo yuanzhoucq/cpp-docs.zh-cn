@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694880"
 ---
 # <a name="parallel-algorithms"></a>并行算法
 并行模式库 (PPL) 提供了同时对集合的数据执行工作的算法。 这些算法类似于所提供的 c + + 标准库。  

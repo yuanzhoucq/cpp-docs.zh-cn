@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384174"
 ---
 # <a name="view-classes-windows"></a>视图类 (Windows)
 `CView` 而其派生的类是表示框架窗口的工作区的子窗口。 视图显示数据，并接受输入文档。  

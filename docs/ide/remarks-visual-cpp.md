@@ -1,5 +1,5 @@
 ---
-title: '&lt;备注&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;remarks&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 380a2c27a761154e59826259d3e1e682ae7fbd87
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334462"
 ---
-# <a name="ltremarksgt-visual-c"></a>&lt;备注&gt;（Visual c + +）
+# <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
 \<remarks> 标记用于添加有关某个类型的信息，从而补充由 [\<summary>](../ide/summary-visual-cpp.md) 指定的信息。 此信息显示在[对象浏览器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)和代码注释 Web 报表中。  
   
 ## <a name="syntax"></a>语法  

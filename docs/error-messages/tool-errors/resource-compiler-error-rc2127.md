@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321683"
 ---
 # <a name="resource-compiler-error-rc2127"></a>资源编译器错误 RC2127
 版本以预期的逗号分隔的单词  

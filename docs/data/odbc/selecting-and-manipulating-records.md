@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090073"
 ---
 # <a name="selecting-and-manipulating-records"></a>选择和操作记录
 通常当你选择记录从数据源使用的 SQL**选择**语句，会得到一个结果集，这是一组从表或查询的记录。 与数据库类中，你可以使用记录集对象来选择和访问结果集。 这是特定于应用程序类派生自的类的一个对象[CRecordset](../../mfc/reference/crecordset-class.md)。 当定义记录集类时，指定要与之相关的数据源、 若要使用，表和表的列。 MFC 应用程序向导或**添加类**(中所述[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 创建一个具有与特定数据源的连接类。 向导编写[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)类的成员函数`CRecordset`返回的表名称。 有关使用向导创建记录集类的详细信息，请参阅[数据库支持，MFC 应用程序向导](../../mfc/reference/database-support-mfc-application-wizard.md)和[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  

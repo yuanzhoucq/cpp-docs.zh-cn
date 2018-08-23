@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368221"
 ---
 # <a name="makefile-preprocessing"></a>生成文件预处理
 你可以通过使用预处理指令和表达式控制 NMAKE 会话。 或 Tools.ini 中生成文件预处理指令可以放置。 Using 指令，可以有条件地处理你的生成文件、 显示错误消息，包括其他生成文件、 取消定义宏，并打开或关闭某些选项。  

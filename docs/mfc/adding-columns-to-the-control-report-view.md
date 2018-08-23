@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341824"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>向控件添加列（报表视图）
 > [!NOTE]

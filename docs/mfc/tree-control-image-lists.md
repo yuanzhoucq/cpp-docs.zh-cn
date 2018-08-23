@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382188"
 ---
 # <a name="tree-control-image-lists"></a>树控件图像列表
 树控件中的每个项 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以具有与之关联的位图图像的对。 在左侧的项的标签上显示图像。 当选定了项，并显示其他时未选择项目时，会显示一个图像。 例如，某一项可能显示选中时打开的文件夹和关闭的文件夹，如果未选择。  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa06581dc28293073e8094dad779be0eebabbd10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953485"
 ---
 # <a name="cformview-class"></a>CFormView 类
 用于窗体视图的基类。  
@@ -83,10 +84,10 @@ CFormView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含是对话框模板资源的名称的以 null 结尾的字符串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
 ### <a name="remarks"></a>备注  

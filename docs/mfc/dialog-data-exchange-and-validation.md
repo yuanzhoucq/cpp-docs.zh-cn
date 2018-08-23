@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343770"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>对话框数据交换和验证
 对话框数据交换 (DDX) 是一种在对话框中初始化控件以及按用户收集数据输入的简单方式。 对话框数据验证 (DDV) 是一种在对话框中验证数据输入的简单方式。 若要利用 DDX 和 DDV 在对话框中，使用[添加成员变量向导](../ide/add-member-variable-wizard.md)创建数据成员并设置其数据类型和指定验证规则。  

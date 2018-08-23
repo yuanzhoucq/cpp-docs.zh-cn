@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381532"
 ---
 # <a name="trackers"></a>跟踪器
 [CRectTracker](../mfc/reference/crecttracker-class.md)类提供在你的应用程序和你的用户通过提供各种显示样式的矩形项之间的用户界面。 这些样式包括纯色、 阴影，或虚线边框。阴影的图案涵盖项;和调整大小图柄，可在外部或内部边框位于。 跟踪器通常与 OLE 项结合使用，对象即，派生自`COleClientItem`。 跟踪器矩形提供项的当前状态的视觉提示。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347881"
 ---
 # <a name="frame-window-classes"></a>框架窗口类
 每个应用程序都有一个"主框架窗口，"一个桌面窗口，通常在其标题中具有的应用程序名称。 每个文档通常有一个"文档框架窗口。" 文档框架窗口包含至少一个视图，它显示了文档的数据。  

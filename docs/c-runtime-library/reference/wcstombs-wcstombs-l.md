@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451727"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -94,11 +95,11 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wcstombs**成功转换多字节字符串，它将返回为多字节输出字符串，不包括终止的字符串写入的字节数**NULL** （如果有）。 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。 如果**wcstombs**遇到宽字符不能转换为多字节字符，则返回-1 转换为类型**size_t**和设置**errno**到**EILSEQ**.
+如果**wcstombs**成功转换多字节字符串，它将返回写入到不包括终止 null （如果有） 的多字节输出字符串的字节数。 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。 如果**wcstombs**遇到宽字符不能转换为多字节字符，则返回-1 转换为类型**size_t**和设置**errno**到**EILSEQ**.
 
 ## <a name="remarks"></a>备注
 
-**Wcstombs**函数将指向的宽字符字符串转换*wcstr*到相应的多字节字符，并将存储中的结果*mbstr*数组。 *计数*参数指示的最大可以存储在多字节输出字符串的字节数 (即，大小*mbstr*)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串中每个宽字符的多字节输出字符串中有两个字节 (包括的宽字符**NULL**)，结果保证适合。
+**Wcstombs**函数将指向的宽字符字符串转换*wcstr*到相应的多字节字符，并将存储中的结果*mbstr*数组。 *计数*参数指示的最大可以存储在多字节输出字符串的字节数 (即，大小*mbstr*)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果每个宽字符 （包括宽字符 null） 的输入字符串中的多字节输出字符串中有两个字节，结果被保证以适合。
 
 如果**wcstombs**之前或当遇到宽字符 null 字符 (L \0')*计数*发生，它将其转换为 8 位 0 并且停止。 因此，在多字节字符字符串*mbstr*是以 null 结尾的仅当**wcstombs**在转换过程中遇到宽字符 null 字符。 如果指向的序列*wcstr*和*mbstr*重叠的行为**wcstombs**是不确定的。
 

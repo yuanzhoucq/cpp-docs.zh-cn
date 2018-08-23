@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257239"
 ---
 # <a name="compiler-error-c3488"></a>编译器错误 C3488
 当默认捕获模式为按引用捕获时，不允许使用“var”  

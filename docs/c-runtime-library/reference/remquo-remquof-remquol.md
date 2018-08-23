@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207648"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -62,24 +63,24 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>参数
 
-*两数值*<br/>
+*号码*<br/>
 分子。
 
 *denom*<br/>
 分母。
 
-*通用*<br/>
+*现有*<br/>
 指向整数值的指针，以存储带有商的符号和近似值的值。
 
 ## <a name="return-value"></a>返回值
 
-**remquo**返回的浮点余数*x* / *y*。 如果值*y*为 0.0， **remquo**返回 quiet NaN。 璝惠的表示形式通过一个静态 NaN **printf**系列，请参阅[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**返回的浮点余数*x* / *y*。 如果的值*y*为 0.0， **remquo**返回静态 NaN。 有关安静 NaN 的表示形式**printf**系列，请参阅[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Remquo**函数计算的浮点余数*f*的*x* / *y*以便*x*  = *我* * *y* + *f*，其中*我*是一个整数*f*有相同的符号作为*x*，和数值的绝对值*f*小于绝对值的数值的*y*。
+**Remquo**函数计算的浮点余数*f*的*x* / *y*以便*x*  = *我* \* *y* + *f*，其中*我*是一个整数*f*具有相同的符号*x*，和值的绝对值*f*是值的绝对值小于*y*。
 
-C + + 允许重载，因此您可以调用的重载**remquo**采用并返回**float**或**长** **double**值。 在 C 程序中， **remquo**始终采用两个**double**自变量和返回**double**。
+C + + 允许重载，因此可以调用的重载**remquo**采用并返回**float**或**长** **double**值。 在 C 程序中， **remquo**始终采用两个**double**自变量并返回**double**。
 
 ## <a name="requirements"></a>要求
 

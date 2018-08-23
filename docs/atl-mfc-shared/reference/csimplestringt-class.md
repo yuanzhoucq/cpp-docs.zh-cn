@@ -1,5 +1,5 @@
 ---
-title: CSimpleStringT 类 |Microsoft 文档
+title: CSimpleStringT 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,11 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dc68cd1d91cb7b651dbeb68422f6a89fb9f2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571834"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 此类表示`CSimpleStringT`对象。  
@@ -63,14 +64,14 @@ class CSimpleStringT
 ```  
   
 ### <a name="parameters"></a>参数  
- `BaseType`  
- 此字符串类字符类型。 可以是以下各项之一：  
+ *BaseType*  
+ 字符串类的字符类型。 可以是以下各项之一：  
   
-- `char` （对于 ANSI 字符字符串）。  
+- **char** （适用于 ANSI 字符串）。  
   
-- `wchar_t` （对于 Unicode 字符串）。  
+- **wchar_t** （适用于 Unicode 字符串）。  
   
-- **TCHAR** （针对 ANSI 和 Unicode 字符串）。  
+- TCHAR （针对 ANSI 和 Unicode 字符串）。  
 
 ## <a name="members"></a>成员  
   
@@ -85,7 +86,7 @@ class CSimpleStringT
   
 |名称|描述|  
 |----------|-----------------|  
-|[CSimpleStringT::CSimpleStringT](#ctor)|构造`CSimpleStringT`中各种方法的对象。|  
+|[CSimpleStringT::CSimpleStringT](#ctor)|构造`CSimpleStringT`以各种方式的对象。|  
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|析构函数。|  
 
   
@@ -93,49 +94,49 @@ class CSimpleStringT
   
 |名称|描述|  
 |----------|-----------------|  
-|[CSimpleStringT::Append](#append)|追加`CSimpleStringT`到一个现有对象`CSimpleStringT`对象。|  
+|[CSimpleStringT::Append](#append)|将追加`CSimpleStringT`到现有对象`CSimpleStringT`对象。|  
 |[CSimpleStringT::AppendChar](#appendchar)|将字符追加到现有`CSimpleStringT`对象。|  
 |[CSimpleStringT::CopyChars](#copychars)|将一个字符复制到另一个字符串。|  
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|将一个字符复制到另一个缓冲区中，重叠的字符串。|  
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|将一个字符复制到另一个缓冲区与重叠的字符串。|  
 |[CSimpleStringT::Empty](#empty)|强制的长度为零的字符串。|  
 |[CSimpleStringT::FreeExtra](#freeextra)|释放以前分配的字符串对象的任何额外内存。|  
-|[CSimpleStringT::GetAllocLength](#getalloclength)|检索分配的长度`CSimpleStringT`对象。|  
-|[CSimpleStringT::GetAt](#getat)|返回位于给定位置的字符。|  
-|[CSimpleStringT::GetBuffer](#getbuffer)|将指针返回到中的字符`CSimpleStringT`。|  
-|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|将指针返回到中的字符`CSimpleStringT`、 截断到指定的长度。|  
+|[CSimpleStringT::GetAllocLength](#getalloclength)|检索已分配的长度`CSimpleStringT`对象。|  
+|[CSimpleStringT::GetAt](#getat)|返回位于给定位置处的字符。|  
+|[CSimpleStringT::GetBuffer](#getbuffer)|返回一个指向的字符`CSimpleStringT`。|  
+|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|返回一个指向的字符`CSimpleStringT`、 截断为指定的长度。|  
 |[CSimpleStringT::GetLength](#getlength)|返回中的字符数`CSimpleStringT`对象。|  
-|[CSimpleStringT::GetManager](#getmanager)|检索内存管理器的`CSimpleStringT`对象。|  
+|[CSimpleStringT::GetManager](#getmanager)|检索的内存管理器`CSimpleStringT`对象。|  
 |[CSimpleStringT::GetString](#getstring)|检索字符字符串|  
 |[CSimpleStringT::IsEmpty](#isempty)|测试是否`CSimpleStringT`对象不包含任何字符。|  
-|[CSimpleStringT::LockBuffer](#lockbuffer)|禁用引用计数，并保护缓冲区中的字符串。|  
-|[CSimpleStringT::Preallocate](#preallocate)|为字符缓冲区中分配了特定的内存量。|  
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|释放控件返回的缓冲区`GetBuffer`。|  
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|释放控件返回的缓冲区`GetBuffer`。|  
-|[CSimpleStringT::SetAt](#setat)|设置给定位置处的字符。|  
+|[CSimpleStringT::LockBuffer](#lockbuffer)|禁用引用计数，并可保护在缓冲区中的字符串。|  
+|[CSimpleStringT::Preallocate](#preallocate)|为字符缓冲区分配特定量的内存。|  
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|返回的缓冲区的控制权`GetBuffer`。|  
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|返回的缓冲区的控制权`GetBuffer`。|  
+|[CSimpleStringT::SetAt](#setat)|给定位置处设置一个字符。|  
 |[CSimpleStringT::SetManager](#setmanager)|设置内存管理器的`CSimpleStringT`对象。|  
 |[CSimpleStringT::SetString](#setstring)|设置的字符串`CSimpleStringT`对象。|  
 |[CSimpleStringT::StringLength](#stringlength)|返回指定字符串中的字符数。|  
 |[CSimpleStringT::Truncate](#truncate)|将截断到指定长度的字符串。|  
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|使引用计数，并释放缓冲区中的字符串。|  
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|使引用计数并释放缓冲区中的字符串。|  
 
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接访问存储在字符`CSimpleStringT`对象作为 C 样式字符串。|  
-|[CSimpleStringT::operator\[\]](#operator_at)|返回位于给定位置的字符-运算符替换`GetAt`。|  
+|[CSimpleStringT::operator\[\]](#operator_at)|返回位于给定位置处的字符 — 运算符替换为`GetAt`。|  
 |[CSimpleStringT::operator + =](#operator_add_eq)|连接到现有字符串的末尾的新字符串。|  
-|[CSimpleStringT::operator =](#operator_eq)|将新值赋给`CSimpleStringT`对象。|  
+|[CSimpleStringT::operator =](#operator_eq)|将一个新值赋给`CSimpleStringT`对象。|  
   
 ### <a name="remarks"></a>备注  
- `CSimpleStringT` 是由 Visual c + + 支持各种字符串类的基类。 它提供对的字符串对象和基本缓冲区操作的内存管理的最小支持。 有关更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。  
+ `CSimpleStringT` 是由 Visual c + + 支持的各种字符串类的基类。 它提供对基本缓冲区操作的字符串对象的内存管理的最小支持。 对于更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="requirements"></a>要求  
  **标头：** atlsimpstr.h  
 
 
 ## <a name="append"></a> CSimpleStringT::Append
-追加`CSimpleStringT`到一个现有对象`CSimpleStringT`对象。  
+将追加`CSimpleStringT`到现有对象`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -145,17 +146,17 @@ void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
 ```  
 #### <a name="parameters"></a>参数  
- `strSrc`  
+ *strSrc*  
  `CSimpleStringT`要追加的对象。  
   
- `pszSrc`  
+ *pszSrc*  
  指向包含要追加的字符的字符串的指针。  
   
- `nLength`  
+ *nLength*  
  要追加的字符数。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法要追加的现有`CSimpleStringT`到另一个对象`CSimpleStringT`对象。  
+ 调用此方法要追加的现有`CSimpleStringT`对象和另一个`CSimpleStringT`对象。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::Append` 的用法。  
@@ -181,10 +182,10 @@ void AppendChar(XCHAR ch);
  要追加的字符  
   
 ### <a name="remarks"></a>备注  
- 调用此函数可将指定的字符追加到现有末尾`CSimpleStringT`对象。  
+ 调用此函数可将指定的字符追加到现有的最终`CSimpleStringT`对象。  
   
 ##  <a name="copychars"></a> CSimpleStringT::CopyChars  
- 将复制的字符或字符到`CSimpleStringT`对象。  
+ 将复制的字符或字符`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -195,17 +196,17 @@ static void CopyChars(
   int nChars) throw();
 ```  
 #### <a name="parameters"></a>参数  
- `pchDest`  
+ *pchDest*  
  指向字符字符串的指针。  
   
- `pchSrc`  
+ *pchSrc*  
  指向包含要复制的字符的字符串的指针。  
   
- `nChars`  
- 数`pchSrc`要复制的字符。  
+ *nChars*  
+ 数*pchSrc*要复制的字符。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将复制的字符`pchSrc`到`pchDest`字符串。  
+ 调用此方法来复制中的字符*pchSrc*到*pchDest*字符串。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::CopyChars` 的用法。  
@@ -219,7 +220,7 @@ _tprintf_s(_T("%s\n"), str);
 ```
   
 ##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
-将复制的字符或字符到`CSimpleStringT`对象。  
+将复制的字符或字符`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -230,20 +231,20 @@ static void CopyCharsOverlapped(
   int nChars) throw(); 
 ```  
 #### <a name="parameters"></a>参数  
- `pchDest`  
+ *pchDest*  
  指向字符字符串的指针。  
   
- `pchSrc`  
+ *pchSrc*  
  指向包含要复制的字符的字符串的指针。  
   
- `nChars`  
- 数`pchSrc`要复制的字符。  
+ *nChars*  
+ 数*pchSrc*要复制的字符。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将复制的字符`pchSrc`到`pchDest`字符串。 与不同`CopyChars`，`CopyCharsOverlapped`提供了可能重叠的字符缓冲区中复制的安全方法。  
+ 调用此方法来复制中的字符*pchSrc*到*pchDest*字符串。 与不同`CopyChars`，`CopyCharsOverlapped`提供用于从可能重叠的字符缓冲区复制的安全方法。  
   
 ### <a name="example"></a>示例  
- 请参阅示例[CSimpleStringT::CopyChars](#copychars)，或为源代码`CSimpleStringT::SetString`（位于 atlsimpstr.h）。  
+ 有关示例，请参阅[CSimpleStringT::CopyChars](#copychars)，或为源代码`CSimpleStringT::SetString`（位于 atlsimpstr.h）。  
   
 ##  <a name="ctor"></a>  CSimpleStringT::CSimpleStringT  
  构造 `CSimpleStringT` 对象。  
@@ -257,26 +258,26 @@ CSimpleStringT(const CSimpleStringT& strSrc);
 explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw(); 
 ```  
 #### <a name="parameters"></a>参数  
- `strSrc`  
- 现有`CSimpleStringT`要复制到此对象`CSimpleStringT`对象。  
+ *strSrc*  
+ 将现有`CSimpleStringT`复制到此对象`CSimpleStringT`对象。  
   
- `pchSrc`  
- 指向字符长度的数组的指针`nLength`，null 结尾。  
+ *pchSrc*  
+ 指向数组的长度的字符的指针*nLength*，null 终止。  
   
- `pszSrc`  
+ *pszSrc*  
  以 null 结尾的字符串复制到此`CSimpleStringT`对象。  
   
- `nLength`  
+ *nLength*  
  中的字符数的计数`pch`。  
   
- `pStringMgr`  
+ *pStringMgr*  
  指向的内存管理器的`CSimpleStringT`对象。 有关详细信息`IAtlStringMgr`和内存管理`CSimpleStringT`，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。  
   
 ### <a name="remarks"></a>备注  
  构造一个新`CSimpleStringT`对象。 因为构造函数将输入的数据复制到新的已分配存储，可能会导致内存异常。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示了利用`CSimpleStringT::CSimpleStringT`使用 ATL `typedef` `CSimpleString`。 `CSimpleString` 类模板的常用专用`CSimpleStringT`。  
+ 下面的示例演示如何将`CSimpleStringT::CSimpleStringT`通过使用 ATL **typedef** `CSimpleString`。 `CSimpleString` 是常用的类模板专用化`CSimpleStringT`。  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -295,7 +296,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 
   
 ##  <a name="empty"></a>  CSimpleStringT::Empty
-使此`CSimpleStringT`对象为空字符串并释放为相应的内存。  
+这样，您`CSimpleStringT`对象为空字符串，并释放相应的内存。  
   
 ### <a name="syntax"></a>语法  
   
@@ -314,7 +315,7 @@ ASSERT(s.IsEmpty());
 ```  
   
 ##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
-释放以前分配的字符串，但不再需要的任何额外内存。  
+释放以前分配的字符串，但不再需要任何额外内存。  
   
 ### <a name="syntax"></a>语法  
   
@@ -322,7 +323,7 @@ ASSERT(s.IsEmpty());
 void FreeExtra(); 
 ```  
 ### <a name="remarks"></a>备注  
- 这应减少使用的字符串对象的内存开销。 该方法将重新分配到返回的最精确长度的缓冲区[GetLength](#getlength)。  
+ 这应减少字符串对象占用的内存开销。 该方法将重新分配到返回的确切长度的缓冲区[GetLength](#getlength)。  
   
 ### <a name="example"></a>示例  
 ```cpp  
@@ -360,7 +361,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
  `Alloc length is 15, String length is 15`  
   
 ##  <a name="getalloclength"></a>  CSimpleStringT::GetAllocLength  
-检索分配的长度`CSimpleStringT`对象。  
+检索已分配的长度`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -368,13 +369,13 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 int GetAllocLength() const throw();  
 ```  
 ### <a name="return-value"></a>返回值  
- 为此对象分配的字符数。  
+ 分配给此对象的字符数。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以确定此分配的字符数`CSimpleStringT`对象。 请参阅[FreeExtra](#freeextra)有关调用此函数的示例。  
+ 调用此方法来确定此分配的字符数`CSimpleStringT`对象。 请参阅[FreeExtra](#freeextra)有关调用此函数的示例。  
   
 ##  <a name="getat"></a>  CSimpleStringT::GetAt  
-返回一个字符从`CSimpleStringT`对象。  
+返回从一个字符`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -382,14 +383,14 @@ int GetAllocLength() const throw();
 XCHAR GetAt(int iChar) const;
 ```  
 #### <a name="parameters"></a>参数  
- `iChar`  
- 中的字符的从零开始索引`CSimpleStringT`对象。 `iChar`参数必须大于或等于 0 并且小于返回的值[GetLength](#getlength)。 否则为`GetAt`将产生异常。  
+ *iChar*  
+ 中的字符的从零开始索引`CSimpleStringT`对象。 *IChar*参数必须是大于或等于 0 且小于返回的值[GetLength](#getlength)。 否则为`GetAt`将生成一个异常。  
   
 ### <a name="return-value"></a>返回值  
- `XCHAR` ，其中包含在字符串中指定的位置的字符。  
+ `XCHAR` ，其中包含的字符在字符串中指定的位置。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以返回由指定的一个字符`iChar`。 重载的下标 (`[]`) 运算符是的方便别名`GetAt`。 Null 终止符是可寻址的而不会生成异常通过`GetAt`。 但是，不计算的`GetLength`，并且返回的值为 0。  
+ 调用此方法以返回由指定的一个字符*iChar*。 重载的下标 (**[]**) 运算符是的方便别名`GetAt`。 Null 终止符是可寻址的而不会生成异常使用`GetAt`。 但是，不计入`GetLength`，并且返回的值为 0。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`CSimpleStringT::GetAt`。  
@@ -409,26 +410,26 @@ PXSTR GetBuffer(int nMinBufferLength);
 PXSTR GetBuffer();
 ```  
 #### <a name="parameters"></a>参数  
- `nMinBufferLength`  
+ *nMinBufferLength*  
  最小字符缓冲区可以容纳的字符数。 此值不包括 null 终止符的占用空间。  
   
- 如果`nMinBufferLength`大于当前缓冲区的长度`GetBuffer`销毁当前缓冲区，其替换为所请求的大小的缓冲区并将对象引用计数重置为零。 如果以前已调用[LockBuffer](#lockbuffer)上此缓冲区，则会丢失缓冲区锁。  
+ 如果*nMinBufferLength*大于当前缓冲区的长度`GetBuffer`销毁当前缓冲区、 替换请求的大小的缓冲区并将对象引用计数重置为零。 如果您以前称为[LockBuffer](#lockbuffer)上此缓冲区，则会丢失缓冲区锁。  
   
 ### <a name="return-value"></a>返回值  
- `PXSTR`到的对象 （以 null 结尾） 字符缓冲区的指针。  
+ `PXSTR`指向的对象 （以 null 结尾） 字符缓冲区的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以返回的缓冲区内容`CSimpleStringT`对象。 返回`PXSTR`不是常量，从而允许直接修改的`CSimpleStringT`内容。  
+ 调用此方法返回的缓冲区内容`CSimpleStringT`对象。 返回`PXSTR`不是常量，从而允许直接修改`CSimpleStringT`内容。  
   
- 如果使用返回的指针`GetBuffer`若要更改的字符串内容，必须调用[ReleaseBuffer](#releasebuffer)使用任何其他之前`CSimpleStringT`成员方法。  
+ 如果使用返回的指针`GetBuffer`若要更改字符串内容，必须调用[ReleaseBuffer](#releasebuffer)在使用任何其他之前`CSimpleStringT`成员方法。  
   
- 通过返回的地址`GetBuffer`可能不是有效的调用后`ReleaseBuffer`因为其他`CSimpleStringT`操作可能会导致`CSimpleStringT`要重新分配缓冲区。 如果不更改的长度，不重新分配缓冲区`CSimpleStringT`。  
+ 返回的地址`GetBuffer`可能不是有效的调用后`ReleaseBuffer`因为其他`CSimpleStringT`操作可能会导致`CSimpleStringT`要重新分配缓冲区。 如果不更改的长度，不重新分配缓冲区`CSimpleStringT`。  
   
  缓冲区内存将自动释放时`CSimpleStringT`对象被销毁。  
   
- 如果您跟踪的字符串长度自己，您不应追加终止 null 字符。 但是，你必须指定最终的字符串长度，当你释放具有缓冲区`ReleaseBuffer`。 如果执行追加终止 null 字符，你应传递-1 （默认值） 的长度。 `ReleaseBuffer` 然后，确定缓冲区长度。  
+ 如果您跟踪字符串长度自己，您不应追加终止 null 字符。 但是，必须指定最终的字符串长度，在您发布了具有缓冲区`ReleaseBuffer`。 如果您执行追加终止 null 字符，则应传递长度为-1 （默认值）。 `ReleaseBuffer` 然后确定缓冲区长度。  
   
- 如果没有足够的内存来满足`GetBuffer`请求，此方法将引发 CMemoryException *。  
+ 如果没有足够的内存来满足`GetBuffer`请求时，此方法将引发 CMemoryException *。  
   
 ### <a name="example"></a>示例  
 ```cpp  
@@ -443,7 +444,7 @@ s.ReleaseBuffer();
 ```
   
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength  
-将指针返回到的内部字符缓冲区`CSimpleStringT`对象，截断或增长其长度，如有必要以完全匹配中指定的长度`nLength`。  
+将指针返回到的内部字符缓冲区`CSimpleStringT`对象，截断或如有必要以完全匹配中指定的长度不断增加其长度*nLength*。  
   
 ### <a name="syntax"></a>语法  
   
@@ -451,30 +452,30 @@ s.ReleaseBuffer();
 PXSTR GetBufferSetLength(int nLength);
 ```  
 #### <a name="parameters"></a>参数  
- `nLength`  
+ *nLength*  
  确切大小`CSimpleStringT`以字符为单位的字符缓冲区。  
   
 ### <a name="return-value"></a>返回值  
- A`PXSTR`到的对象 （以 null 结尾） 字符缓冲区的指针。  
+ 一个`PXSTR`指向的对象 （以 null 结尾） 字符缓冲区的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以检索在指定的内部缓冲区的长度`CSimpleStringT`对象。 返回`PXSTR`指针不是`const`从而可以直接修改的`CSimpleStringT`内容。  
+ 调用此方法以检索指定的内部缓冲区的长度`CSimpleStringT`对象。 返回`PXSTR`指针不是**const**从而可以直接修改`CSimpleStringT`内容。  
   
- 如果使用返回的指针[GetBufferSetLength](#getbuffersetlength)若要更改的字符串内容，请调用`ReleaseBuffer`更新的内部状态`CsimpleStringT`使用任何其他之前`CSimpleStringT`方法。  
+ 如果使用返回的指针[GetBufferSetLength](#getbuffersetlength)若要更改字符串内容，请调用`ReleaseBuffer`若要更新的内部状态`CsimpleStringT`然后才能使用任何其他`CSimpleStringT`方法。  
   
- 通过返回的地址`GetBufferSetLength`可能不是有效的调用后`ReleaseBuffer`因为其他`CSimpleStringT`操作可能会导致`CSimpleStringT`要重新分配缓冲区。 如果不更改的长度，不重新分配缓冲区`CSimpleStringT`。  
+ 返回的地址`GetBufferSetLength`可能不是有效的调用后`ReleaseBuffer`因为其他`CSimpleStringT`操作可能会导致`CSimpleStringT`要重新分配缓冲区。 如果不更改的长度，不重新分配缓冲区`CSimpleStringT`。  
   
  缓冲区内存将自动释放时`CSimpleStringT`对象被销毁。  
   
- 如果您跟踪的字符串长度自己，不对不追加终止 null 字符。 当你通过使用释放缓冲区，必须指定最终的字符串长度`ReleaseBuffer`。 如果在调用时，不要追加终止 null 字符`ReleaseBuffer`，将为-1 （默认值） 传递到长度`ReleaseBuffer`，和`ReleaseBuffer`将执行`strlen`上要确定其长度的缓冲区。  
+ 如果您跟踪字符串长度自己，不要将追加终止 null 字符。 当使用释放缓冲区时，必须指定最终的字符串长度`ReleaseBuffer`。 如果在调用时，执行追加终止 null 字符`ReleaseBuffer`，将为-1 （默认值） 传递到长度`ReleaseBuffer`，并`ReleaseBuffer`将执行`strlen`上要确定其长度的缓冲区。  
   
  有关引用计数的详细信息，请参阅以下文章：  
   
-- [管理通过引用计数对象生存期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中。 
+- [管理对象生存期通过引用计数](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中。 
   
 - [实现引用计数](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK 中。
   
-- [用于管理引用计数的规则](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中。  
+- [用于管理引用计数规则](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::GetBufferSetLength` 的用法。  
@@ -505,12 +506,12 @@ int GetLength() const throw();
  在字符串中字符数。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以返回对象中的字符数。 计数不包括 null 终止符的占用。  
+ 调用此方法返回的对象中的字符数。 计数不包括 null 终止符。  
   
- 为多字节字符集 (MBCS)`GetLength`一个多字节字符中的每个 8 位字符; 即，主管和跟踪字节被视为两个字节的计数。 请参阅[FreeExtra](#freeextra)有关调用此函数的示例。  
+ 对于多字节字符集 (MBCS)`GetLength`一个多字节字符中的每个 8 位字符; 即，为潜在顾客和线索字节计为两个字节的计数。 请参阅[FreeExtra](#freeextra)有关调用此函数的示例。  
   
 ##  <a name="getmanager"></a>  CSimpleStringT::GetManager  
-检索内存管理器的`CSimpleStringT`对象。  
+检索的内存管理器`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -521,7 +522,7 @@ IAtlStringMgr* GetManager() const throw();
  指向的内存管理器的`CSimpleStringT`对象。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以检索内存管理器使用`CSimpleStringT`对象。 有关内存管理器和字符串对象的详细信息，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。  
+ 调用此方法以检索内存管理器使用的`CSimpleStringT`对象。 有关内存管理器和字符串对象的详细信息，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。  
   
 ##  <a name="getstring"></a>  CSimpleStringT::GetString
 检索字符字符串。  
@@ -538,7 +539,7 @@ PCXSTR GetString() const throw();
  调用此方法以检索与关联的字符字符串`CSimpleStringT`对象。  
   
 > [!NOTE]
->  返回`PCXSTR`指针`const`，并且不允许直接修改的`CSimpleStringT`内容。  
+>  返回`PCXSTR`指针是**const** ，并且不允许直接修改`CSimpleStringT`内容。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::GetString` 的用法。  
@@ -558,10 +559,10 @@ _tprintf_s(_T("%s"), str.GetString());
 bool IsEmpty() const throw();  
 ```  
 ### <a name="return-value"></a>返回值  
- 返回**true**如果`CSimpleStringT`对象具有零长度; 否则为**false**。  
+ 返回 true; 否则`CSimpleStringT`对象具有 0 长度; 否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以确定对象是否包含空字符串。  
+ 调用此方法来确定对象是否包含空字符串。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::IsEmpty` 的用法。  
@@ -572,7 +573,7 @@ ASSERT(s.IsEmpty());
 ```
   
 ##  <a name="lockbuffer"></a>  CSimpleStringT::LockBuffer  
-禁用引用计数，并保护缓冲区中的字符串。  
+禁用引用计数，并可保护在缓冲区中的字符串。  
   
 ### <a name="syntax"></a>语法  
   
@@ -580,29 +581,29 @@ ASSERT(s.IsEmpty());
 PXSTR LockBuffer();
 ```  
 ### <a name="return-value"></a>返回值  
- 指向的指针`CSimpleStringT`对象或以 null 结尾的字符串。  
+ 一个指向`CSimpleStringT`对象或以 null 结尾的字符串。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以锁定的缓冲区`CSimpleStringT`对象。 通过调用`LockBuffer`，使用引用计数为-1 创建字符串的副本。 当引用计数值为-1 时，缓冲区中的字符串被视为处于"锁定"状态。 当处于锁定状态时，字符串在两种方法进行保护：  
+ 调用此方法可锁定的缓冲区`CSimpleStringT`对象。 通过调用`LockBuffer`，使用引用计数为-1，则创建字符串的副本。 当引用计数值为-1 时，缓冲区中的字符串被视为可"锁定"状态。 处于锁定状态，该字符串是受保护的两种方式：  
   
--   没有其他字符串可以获取在锁定的字符串中，对数据的引用，即使该字符串分配给锁定的字符串。  
+-   任何其他字符串可以在锁定的字符串中，不获取对数据的引用，即使该字符串分配给已锁定的字符串。  
   
--   锁定的字符串永远不会将引用另一个字符串，即使该另一个字符串复制到锁定的字符串。  
+-   锁定的字符串永远不会将引用另一个字符串，即使该其他字符串复制到锁定的字符串。  
   
- 通过锁定字符串缓冲区中，可以确保字符串的独占持有对缓冲区将保持不变。  
+ 通过锁定缓冲区中的字符串，可确保缓冲区的字符串的排他暂停状态将保持不变。  
   
- 用完后`LockBuffer`，调用[UnlockBuffer](#unlockbuffer)的引用计数重置为 1。  
+ 您用完后`LockBuffer`，调用[UnlockBuffer](#unlockbuffer)引用计数重置为 1。  
   
 > [!NOTE]
->  如果调用[GetBuffer](#getbuffer)上锁定的缓冲区和你设置`GetBuffer`参数`nMinBufferLength`为大于当前的缓冲区的长度，则将失去缓冲区锁。 此类调用`GetBuffer`销毁当前缓冲区，其替换为所请求的大小的缓冲区并将引用计数重置为零。  
+>  如果您调用[GetBuffer](#getbuffer)上锁定的缓冲区，并设置`GetBuffer`参数`nMinBufferLength`为大于当前缓冲区的长度，你将失去缓冲区锁。 此类调用到`GetBuffer`销毁当前缓冲区、 替换请求的大小的缓冲区并将引用计数重置为零。  
   
  有关引用计数的详细信息，请参阅以下文章：  
   
-- [管理通过引用计数对象生存期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中  
+- [管理对象生存期通过引用计数](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中  
   
 - [实现引用计数](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK 中  
   
-- [用于管理引用计数的规则](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中  
+- [用于管理引用计数规则](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::LockBuffer` 的用法。  
@@ -618,7 +619,7 @@ str.UnlockBuffer();
 ```
   
 ##  <a name="operator_at"></a>  CSimpleStringT::operator\[\]  
-调用此函数可访问单个字符的字符数组。  
+调用此函数可访问的字符数组的单个字符。  
   
 ### <a name="syntax"></a>语法  
   
@@ -626,17 +627,17 @@ str.UnlockBuffer();
 XCHAR operator[](int iChar) const;
 ```  
 #### <a name="parameters"></a>参数  
- `iChar`  
+ *iChar*  
  字符串中字符的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
- 重载的下标 (`[]`) 运算符将返回由中从零开始的索引指定单个字符`iChar`。 此运算符是一个方便替代[GetAt](#getat)成员函数。  
+ 重载的下标 (**[]**) 运算符将返回指定的从零开始的索引中的单个字符*iChar*。 此运算符是一个便捷替代[GetAt](#getat)成员函数。  
   
 > [!NOTE]
->  您可以使用下标 (`[]`) 运算符来获取的值中的字符`CSimpleStringT`，但不是能使用它来更改中的字符值`CSimpleStringT`。  
+>  您可以使用下标 (**[]**) 运算符来获取的值中的字符`CSimpleStringT`，但不能使用它来更改中的字符值`CSimpleStringT`。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示了利用**CSimpleStringT::operator []**。  
+ 以下示例演示了 `CSimpleStringT::operator []` 的用法。  
   
 ```cpp  
 CSimpleString s(_T("abc"), pMgr);
@@ -644,7 +645,7 @@ ASSERT(s[1] == _T('b'));
 ```
   
 ## <a name="operator_at"></a>  CSimpleStringT::operator \[\]
-调用此函数可访问单个字符的字符数组。  
+调用此函数可访问的字符数组的单个字符。  
   
 ### <a name="syntax"></a>语法  
   
@@ -653,18 +654,18 @@ XCHAR operator[](int iChar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `iChar`  
+ *iChar*  
  字符串中字符的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
- 重载的下标 (`[]`) 运算符将返回由中从零开始的索引指定单个字符`iChar`。 此运算符是一个方便替代[GetAt](#getat)成员函数。  
+ 重载的下标 (**[]**) 运算符将返回指定的从零开始的索引中的单个字符*iChar*。 此运算符是一个便捷替代[GetAt](#getat)成员函数。  
   
 > [!NOTE]
->  您可以使用下标 (`[]`) 运算符来获取的值中的字符`CSimpleStringT`，但不是能使用它来更改中的字符值`CSimpleStringT`。  
+>  您可以使用下标 (**[]**) 运算符来获取的值中的字符`CSimpleStringT`，但不能使用它来更改中的字符值`CSimpleStringT`。  
   
   
 ##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =  
-将一个新字符串或字符联接到现有字符串的末尾。  
+联接到现有字符串的末尾的新字符串或字符。  
   
 ### <a name="syntax"></a>语法  
   
@@ -678,20 +679,20 @@ CSimpleStringT& operator +=(unsigned char ch);
 CSimpleStringT& operator +=(wchar_t ch);
 ```  
 #### <a name="parameters"></a>参数  
- `pszSrc`  
+ *pszSrc*  
  指向以 null 结尾的字符串的指针。  
   
- `strSrc`  
- 指向现有`CSimpleStringT`对象。  
+ *strSrc*  
+ 一个指向现有`CSimpleStringT`对象。  
   
  *ch*  
  要追加的字符。  
   
 ### <a name="remarks"></a>备注  
- 运算符可接受另一个`CSimpleStringT`对象或字符。 请注意该内存可能会发生异常，每当你使用此串联运算符，因为可能的字符添加到此分配新存储`CSimpleStringT`对象。  
+ 运算符可接受另一个`CSimpleStringT`对象或字符。 请注意，内存可能会发生异常，每当你使用此串联运算符，因为可能会分配新存储的字符添加到此`CSimpleStringT`对象。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示了利用**CSimpleStringT::operator + =**。  
+ 以下示例演示了 `CSimpleStringT::operator +=` 的用法。  
   
 ```cpp  
 CSimpleString str(_T("abc"), pMgr);
@@ -699,7 +700,7 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
   
 ##  <a name="operator_eq"></a>  CSimpleStringT::operator =  
-将新值赋给`CSimpleStringT`对象。  
+将一个新值赋给`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -708,17 +709,17 @@ CSimpleStringT& operator =(PCXSTR pszSrc);
 CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```  
 #### <a name="parameters"></a>参数  
- `pszSrc`  
+ *pszSrc*  
  指向以 null 结尾的字符串的指针。  
   
- `strSrc`  
- 指向现有`CSimpleStringT`对象。  
+ *strSrc*  
+ 一个指向现有`CSimpleStringT`对象。  
   
 ### <a name="remarks"></a>备注  
- 如果目标字符串 （左侧） 已足够大，无法存储新数据，则会不执行任何新的内存分配。 请注意该内存可能会发生异常，每当你使用赋值运算符，因为通常分配新存储，以保存所生成`CSimpleStringT`对象。  
+ 如果目标字符串 （左侧） 已足够空间来存储新数据，会不执行任何新的内存分配。 请注意，内存可能会发生异常，每当你使用赋值运算符，因为通常分配新存储，用于保存所生成`CSimpleStringT`对象。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示了利用**CSimpleStringT::operator =**。  
+ 以下示例演示了 `CSimpleStringT::operator =` 的用法。  
   
 ```cpp  
 CSimpleString s1(pMgr), s2(pMgr);
@@ -753,10 +754,10 @@ operator PCXSTR() const throw();
  指向字符串的数据的字符指针。  
   
 ### <a name="remarks"></a>备注  
- 没有的字符所复制;仅指针会返回。 请慎用此运算符。 如果你更改`CString`对象获取的字符指针后，你可能会导致重新分配的内存使指针无效。  
+ 任何字符被不复制;只有指针返回。 谨慎使用此运算符。 如果更改`CString`对象获取的字符指针后，你可能会导致重新分配的内存，使指针无效。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示了利用**CSimpleStringT::operator PCXSTR**。  
+ 以下示例演示了 `CSimpleStringT::operator PCXSTR` 的用法。  
   
 ```cpp  
 // If the prototype of a function is known to the compiler, 
@@ -805,13 +806,13 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 void Preallocate( int nLength);
 ```  
 #### <a name="parameters"></a>参数  
- `nLength`  
+ *nLength*  
  确切大小`CSimpleStringT`以字符为单位的字符缓冲区。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法可分配的特定缓冲区大小`CSimpleStringT`对象。  
+ 调用此方法来分配的特定的缓冲区大小`CSimpleStringT`对象。  
   
- `CSimpleStringT` 生成`STATUS_NO_MEMORY`异常如果无法为字符缓冲区分配空间。 默认情况下，内存分配执行通过 WIN32 API 函数`HeapAlloc`或`HeapReAlloc`。  
+ `CSimpleStringT` 如果无法为字符缓冲区的分配空间，则生成 STATUS_NO_MEMORY 异常。 默认情况下，内存分配执行由 WIN32 API 函数`HeapAlloc`或`HeapReAlloc`。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::Preallocate` 的用法。  
@@ -832,7 +833,7 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
 ```  
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer  
-释放分配的缓冲区的控制[GetBuffer](#getbuffer)。  
+释放控件分配的缓冲区[GetBuffer](#getbuffer)。  
   
 ### <a name="syntax"></a>语法  
   
@@ -840,11 +841,11 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 void ReleaseBuffer(int nNewLength = -1);
 ```  
 #### <a name="parameters"></a>参数  
- `nNewLength`  
- 以字符为单位，不包括 null 终止符的占用字符串的新长度。 如果字符串为 null 终止，则为-1 默认值将设置`CSimpleStringT`大小到字符串的当前长度。  
+ *nNewLength*  
+ 以字符为单位，不包括 null 终止符的字符串的新长度。 如果字符串为 null 终止，则为-1 默认值设置`CSimpleStringT`大小到字符串的当前长度。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以重新分配或释放字符串对象的缓冲区。 如果你知道，缓冲区中的字符串是以 null 结尾，则可以省略`nNewLength`自变量。 如果你的字符串不是 null 终止，则使用`nNewLength`指定其长度。 通过返回的地址[GetBuffer](#getbuffer)无效的调用后`ReleaseBuffer`或任何其他`CSimpleStringT`操作。  
+ 调用此方法以重新分配或释放的缓冲区的字符串对象。 如果您知道，在缓冲区中的字符串以 null 终止，则可以省略*nNewLength*参数。 如果您的字符串不为 null 终止，则使用*nNewLength*来指定它的长度。 返回的地址[GetBuffer](#getbuffer)无效调用后面`ReleaseBuffer`或任何其他`CSimpleStringT`操作。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::ReleaseBuffer` 的用法。  
@@ -869,7 +870,7 @@ ASSERT(s.GetLength() == 3);
   
 ##  <a name="releasebuffersetlength"></a>  CSimpleStringT::ReleaseBufferSetLength
 
-释放分配的缓冲区的控制[GetBuffer](#getbuffer)。  
+释放控件分配的缓冲区[GetBuffer](#getbuffer)。  
   
 ### <a name="syntax"></a>语法  
   
@@ -877,11 +878,11 @@ ASSERT(s.GetLength() == 3);
 void ReleaseBufferSetLength(int nNewLength);
 ```  
 #### <a name="parameters"></a>参数  
- `nNewLength`  
- 正在发布的字符串的长度  
+ *nNewLength*  
+ 发布字符串的长度  
   
 ### <a name="remarks"></a>备注  
- 此函数在功能上等同于[ReleaseBuffer](#releasebuffer)只不过必须传递的字符串对象的有效长度。  
+ 此函数是功能上类似于[ReleaseBuffer](#releasebuffer)只不过必须传递的字符串对象的有效长度。  
   
 ##  <a name="setat"></a>  CSimpleStringT::SetAt  
 设置中的单个字符`CSimpleStringT`对象。  
@@ -892,14 +893,14 @@ void ReleaseBufferSetLength(int nNewLength);
 void SetAt(int iChar, XCHAR ch);
 ```  
 #### <a name="parameters"></a>参数  
- `iChar`  
- 中的字符的从零开始索引`CSimpleStringT`对象。 `iChar`参数必须大于或等于 0 并且小于返回的值[GetLength](#getlength)。  
+ *iChar*  
+ 中的字符的从零开始索引`CSimpleStringT`对象。 *IChar*参数必须是大于或等于 0 且小于返回的值[GetLength](#getlength)。  
   
  *ch*  
- 新的字符。  
+ 新字符。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以覆盖位于字符`iChar`。 此方法将不会扩大字符串，如果`iChar`超出了现有字符串的界限。  
+ 调用此方法来覆盖位于处的字符*iChar*。 此方法将不会增大该字符串，如果*iChar*超出了现有字符串的界限。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::SetAt` 的用法。  
@@ -919,11 +920,11 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 void SetManager(IAtlStringMgr* pStringMgr);
 ```  
 #### <a name="parameters"></a>参数  
- `pStringMgr`  
- 指向新的内存管理器的指针。  
+ *pStringMgr*  
+ 指向新内存管理器的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以指定新的内存管理器使用`CSimpleStringT`对象。 有关内存管理器和字符串对象的详细信息，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。  
+ 调用此方法，以指定新的内存管理器使用的`CSimpleStringT`对象。 有关内存管理器和字符串对象的详细信息，请参阅[内存管理和 CStringT](../memory-management-with-cstringt.md)。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::SetManager` 的用法。  
@@ -943,22 +944,22 @@ void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```  
 #### <a name="parameters"></a>参数  
- `pszSrc`  
+ *pszSrc*  
  指向以 null 结尾的字符串的指针。  
   
- `nLength`  
- 中的字符数的计数`pszSrc`。  
+ *nLength*  
+ 中的字符数的计数*pszSrc*。  
   
 ### <a name="remarks"></a>备注  
  复制到字符串`CSimpleStringT`对象。 `SetString` 将覆盖缓冲区中的较旧字符串数据。  
   
- 这两个版本`SetString`检查是否`pszSrc`是 null 指针，并且如果是，则引发**E_INVALIDARG**错误。  
+ 这两个版本`SetString`检查是否*pszSrc*是 null 指针，并且如果是，引发 E_INVALIDARG 错误。  
   
- 一个参数版本`SetString`需要`pszSrc`以指向以 null 结尾的字符串。  
+ 单参数版本`SetString`预期*pszSrc*为指向以 null 结尾的字符串。  
   
- 两个参数版本`SetString`还预期`pszSrc`为以 null 结尾的字符串。 它使用`nLength`作为字符串长度除非首先遇到 null 终止符的占用。  
+ 两个参数版本`SetString`还预期*pszSrc*为以 null 结尾的字符串。 它使用*nLength*按字符串长度除非首先遇到 null 终止符。  
   
- 两个参数版本`SetString`还检查是否`pszSrc`指向当前缓冲区中的某一位置`CSimpleStringT`。 在此特殊的情况下，`SetString`使用内存复制函数，不会覆盖字符串数据，并在返回到其缓冲区复制的字符串数据。  
+ 两个参数版本`SetString`还会检查是否*pszSrc*指向当前缓冲区中的位置`CSimpleStringT`。 在此特殊情况下，`SetString`使用不会覆盖的字符串数据，并在返回到其缓冲区复制的字符串数据的内存复制函数。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::SetString` 的用法。  
@@ -979,14 +980,14 @@ ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```  
 #### <a name="parameters"></a>参数  
- `psz`  
+ *psz*  
  指向以 null 结尾的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 中的字符数`psz`; 不包括 null 终止符的占用。  
+ 中的字符数*psz*; 不包括 null 终止符。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法来检索指向字符串中的字符数`psz`。  
+ 调用此方法来检索指向字符串中的字符数*psz*。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::StringLength` 的用法。  
@@ -996,7 +997,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ``` 
   
 ##  <a name="truncate"></a>  CSimpleStringT::Truncate
-将截断到新的长度的字符串。  
+将截断为新的长度的字符串。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1004,14 +1005,14 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 void Truncate(int nNewLength);
 ```  
 #### <a name="parameters"></a>参数  
- `nNewLength`  
- 字符串的新长度。  
+ *nNewLength*  
+ 新字符串的长度。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法进行截断操作的新长度的字符串的内容。  
+ 调用此方法来截断为新的长度的字符串的内容。  
   
 > [!NOTE]
->  这不会影响已分配缓冲区的长度。 若要减小或增大当前缓冲区，请参阅[FreeExtra](#freeextra)和[Preallocate](#preallocate)。  
+>  这不会影响已分配缓冲区的长度。 若要减小或增大当前缓冲区，请参阅[FreeExtra](#freeextra)并[Preallocate](#preallocate)。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::Truncate` 的用法。  
@@ -1026,7 +1027,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 ``` 
   
 ##  <a name="unlockbuffer"></a>  CSimpleStringT::UnlockBuffer
- 解锁的缓冲区`CSimpleStringT`对象。  
+ 解锁的缓冲区的`CSimpleStringT`对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1034,9 +1035,9 @@ _tprintf_s(_T("Contents: %s\n"), str);
 void UnlockBuffer() throw();
 ```  
 ### <a name="remarks"></a>备注  
- 调用此方法以将字符串的引用计数重置为 1。  
+ 调用此方法以字符串的引用计数重置为 1。  
   
- `CSimpleStringT`析构函数自动调用`UnlockBuffer`以确保调用析构函数时未锁定缓冲区。 此方法的示例，请参阅[LockBuffer](#lockbuffer)。  
+ `CSimpleStringT`析构函数自动调用`UnlockBuffer`以确保调用的析构函数时未锁定缓冲区。 此方法的示例，请参阅[LockBuffer](#lockbuffer)。  
   
 ##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
 销毁 `CSimpleStringT` 对象。  
@@ -1047,8 +1048,8 @@ void UnlockBuffer() throw();
 ~CSimpleStringT() throw();
 ```  
 ### <a name="remarks"></a>备注  
- 调用此方法以销毁`CSimpleStringT`对象。  
+ 调用此方法来销毁`CSimpleStringT`对象。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

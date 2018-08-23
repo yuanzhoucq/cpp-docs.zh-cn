@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957242"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 类
 ID2D1LinearGradientBrush 包装器。  
@@ -86,7 +87,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|起点和终点的渐变。|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|指向 ID2D1LinearGradientBrush 的指针。|  
@@ -120,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -139,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `gradientStops`  
+ *gradientStops*  
  指向 D2D1_GRADIENT_STOP 结构的数组的指针。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  一个值大于或等于 1 gradientStops 数组中指定的数梯度停止点。  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  起点和终点的渐变。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  在哪种颜色执行之间的渐变停止点的内插的空间。  
   
- `extendMode`  
+ *extendMode*  
  [0，1] 的规范化范围之外的渐变的行为。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -171,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -256,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  画笔的坐标空间中的线性渐变的二维终止坐标  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -267,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  画笔的坐标空间中的线性渐变的二维起始坐标  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: float_control |Microsoft 文档
+title: 浮点控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539170"
 ---
 # <a name="floatcontrol"></a>float_control
 指定函数的浮点行为。  
@@ -34,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Flags  
- `value``setting` **[推送]**  
- 指定浮点行为。 `value` 可以是**精确**或**除**。 有关详细信息，请参阅 [/fp（指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。 `setting` 可以是**上**或**关闭**。  
+ 
+*值*，*设置* *[推送]*  
+指定浮点行为。 *值*可以是`precise`或`except`。 有关详细信息，请参阅 [/fp（指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。 *设置*可以处于`on`或`off`。  
   
- 如果`value`是**精确**的设置**精确**和**除**指定了。 **除**只能设置为**上**时**精确**也设置为**上**。  
+如果*值*是`precise`，为设置`precise`和`except`指定了。 `except` 只能设置为`on`时`precise`也设置为`on`。  
   
- 如果可选**推送**令牌添加，当前设置`value`推送到内部编译器堆栈。  
+如果可选*推送*令牌添加，当前设置为*值*推送到内部编译器堆栈。  
   
- **push**  
- 将当前的 `float_control` 设置推送到内部编译器堆栈  
+*push*  
+推送当前**float_control**设置到内部编译器堆栈  
   
- **pop**  
- 删除`float_control`从内部编译器堆栈顶部的设置，并成为新`float_control`设置。  
+*pop*  
+移除**float_control**从内部编译器堆栈的顶部设置，并成为新**float_control**设置。  
   
 ## <a name="remarks"></a>备注  
- 无法打开`float_control precise`关闭时**除**上。 同样，**精确**无法关闭时`fenv_access`上。 若要通过 `float_control` 杂注从严格模式转到快速模式，请使用以下代码：  
+ 
+当 `float_control precise` 打开时，无法关闭 `except`。 同样，当 `precise` 打开时，无法关闭 `fenv_access`。 若要从严格模式转到快速模式与**float_control**杂注，使用以下代码：  
   
 ```  
 #pragma float_control(except, off)  
@@ -56,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- 若要通过 `float_control` 杂注从快速模式转到严格模式，请使用以下代码：  
+若要从快速模式转到严格模式，与**float_control**杂注，使用以下代码：  
   
 ```  
 #pragma float_control(precise, on)  
@@ -64,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- 其他浮点杂注包括：  
+其他浮点杂注包括：  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何通过使用杂注 `float_control` 捕获溢出浮点异常。  
+ 
+下面的示例演示如何通过使用杂注捕获溢出浮点异常**float_control**。  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -112,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

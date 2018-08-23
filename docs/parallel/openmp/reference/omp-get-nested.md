@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686875"
 ---
 # <a name="ompgetnested"></a>omp_get_nested
 返回一个值，该值指示是否启用了嵌套并行度。  

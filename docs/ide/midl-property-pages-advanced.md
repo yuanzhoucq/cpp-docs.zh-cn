@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页： 高级 |Microsoft 文档
+title: MIDL 属性页：高级 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207755"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 属性页：高级
-**高级**中的属性页**MIDL**文件夹指定以下 MIDL 编译器选项：  
+MIDL 文件夹中的“高级”属性页指定以下 MIDL 编译器选项：  
   
 -   启用错误检查 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
@@ -45,19 +46,19 @@ ms.lasthandoff: 05/04/2018
   
 -   检查引用指针 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查存根 （stub） 数据 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查存根(Stub)数据 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   验证参数 ([/ 可靠](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   验证参数 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   结构成员对齐 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   将输出重定向 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   重定向输出 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
 -   C 预处理选项 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
 -   取消定义预处理器定义 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / 可靠只能用于为 Windows 2000 或更高版本的计算机进行生成时。 如果你生成 ATL 项目，并想要使用 / 可靠，将此行 dlldatax.c 文件中的更改：  
+ \* /robust 仅适用于生成 Windows 2000 或更高版本计算机。 如果生成 ATL 项目并想使用 /robust，请在 dlldatax.c 文件中更改此行：  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,9 +66,9 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- 有关如何访问信息**高级**中的属性页**MIDL**文件夹，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 有关如何访问 MIDL 文件夹中“高级”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
- 有关如何以编程方式访问 c + + 项目的 MIDL 选项的信息，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
+ 有关如何以编程方式访问 C++ 项目的 MIDL 选项的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
   
 ## <a name="see-also"></a>请参阅  
  [“MIDL”属性页](../ide/midl-property-pages.md)

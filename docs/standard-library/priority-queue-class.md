@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149d255dd82d0dff2d2ddb1101b38bf05c69673a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954755"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 
@@ -49,17 +50,17 @@ class priority_queue
 
 ### <a name="parameters"></a>参数
 
-*类型*存储在 priority_queue 的元素数据类型。
+*类型*要存储在 priority_queue 中的元素数据类型。
 
-`Container` 用于实现 priority_queue 的基础容器的类型。
+*容器*用来实现 priority_queue 的基础容器的类型。
 
-*比较*提供函数对象，可将两个元素值作为排序键以确定其在 priority_queue 相对顺序比较的类型。 此参数是可选为二元谓词**较少***\<*** typename** *容器 ***:: value_type*** >* 是默认值。
+*比较*提供两个元素值作为排序键以确定其在 priority_queue 中的相对顺序进行比较的函数对象的类型。 此参数是可选的二元谓词**更少***\<*** typename** *容器 ***:: value_type*** >* 是默认值。
 
 ## <a name="remarks"></a>备注
 
-队列对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。
+类的元素`Type`经过第一个模板中指定的队列对象的参数是使用同义词[value_type](#value_type) ，并且必须匹配的基础容器类中的元素类型`Container`规定的第二个模板参数。 `Type`必须是可赋值的以便它才能复制该类型的对象，并将值分配到该类型的变量。
 
-Priority_queue 通过调用存储的 **Traits** 类的函数对象，对它控制的序列进行排序。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
+Priority_queue 通过调用类的存储的函数对象控制的序列进行排序`Traits`。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
 
 适用于 Priority_queue 的基础容器类包括 [deque 类](../standard-library/deque-class.md)和默认的 [vector 类](../standard-library/vector-class.md)，或任何支持 `front`、`push_back`、`pop_back` 的操作和随机访问迭代器的其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
@@ -248,23 +249,23 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>参数
 
-*_ comp*类型的比较函数**constTraits**使用的元素进行排序 priority_queue，默认为比较函数的基容器中。
+*_ comp*类型的比较函数**constTraits**用于 priority_queue，它默认为基容器的比较函数中元素排序。
 
-`_Cont` 构造的 priority_queue 是为复制其中基容器。
+*_Cont*构造的 priority_queue 的要作为其副本的基容器。
 
-`right` Priority_queue 种构造的集是为复制。
+*右*构造的集将成为副本的 priority_queue。
 
-`first` 要复制的元素范围中第一个元素的位置。
+*第一个*要复制的元素范围中第一个元素的位置。
 
-`last` 要复制的元素范围外的第一个元素的位置。
+*最后一个*超出范围的元素要复制的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
-前三个构造函数中的每个函数均指定空的初始 priority_queue，第二个函数还指定用于建立元素顺序的比较函数 (`comp`) 的类型，第三个函数明确指定要使用的 `container_type` (`_Cont`)。 关键字 **explicit** 取消某些种类的自动类型转换。
+每个前三个构造函数指定空的初始 priority_queue，第二个指定的比较函数类型 (`comp`) 用于建立元素和第三个的顺序显式指定`container_type`(`_Cont`) 使用。 关键字 **explicit** 取消某些种类的自动类型转换。
 
-第四个构造函数指定 priority_queue `right` 副本。
+第四个构造函数指定 priority_queue 的副本*右*。
 
-最后三个构造函数复制范围 [* 首先上, 一次 *) 的某些容器和使用这些值来初始化不断增加的实现中指定的比较函数的类类型 priority_queue**特征**和`container_type`.
+最后三个构造函数复制范围 [* 第一个，最后一个 *) 的某个容器，使用的值来初始化 priority_queue，其指定的比较函数的类类型**特征**和`container_type`.
 
 ### <a name="example"></a>示例
 
@@ -387,7 +388,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-`val` 添加到 priority_queue 顶部的元素。
+*val*添加到 priority_queue 顶部的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -492,7 +493,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>返回值
 
-对由 priority_queue 的对象**特征**函数确定的最大元素的引用。
+对由确定的最大元素的引用`Traits`函数、 priority_queue 的对象。
 
 ### <a name="remarks"></a>备注
 

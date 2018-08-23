@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078416"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>创建文件资源管理器样式的 MFC 应用程序
 许多 Windows 系统应用程序为文件资源管理器使用用户界面 (UI)。 当你启动文件资源管理器时，例如，你看到具有垂直拆分条分割的工作区的应用程序。 客户端区域的左侧提供导航和浏览功能，并右端的客户端区域显示详细信息与所选内容相关的左窗格中。 当用户单击左窗格中的项时，应用程序重新填充右侧窗格。 在 MDI 应用程序，可以使用命令，在**视图**菜单更改显示在右窗格中的详细信息量。 （在 SDI 或多个顶级文档应用程序中，可以更改使用的工具栏按钮的详细信息。）  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
  向导为你创建的以下类：  
   
--   **CLeftView**类定义的工作区的左窗格。 它始终派生自[CTreeView](../../mfc/reference/ctreeview-class.md)。  
+-   `CLeftView`类定义的工作区的左窗格。 它始终派生自[CTreeView](../../mfc/reference/ctreeview-class.md)。  
   
 -   C*ProjName*视图类定义的工作区的右窗格。 默认情况下，它派生自[CListView](../../mfc/reference/clistview-class.md)但可以是另一种具体取决于您指定的类的视图**基类**列入[生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md)页向导。  
   

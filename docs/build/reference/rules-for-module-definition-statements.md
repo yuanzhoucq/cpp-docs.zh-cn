@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376385"
 ---
 # <a name="rules-for-module-definition-statements"></a>模块定义语句的规则
 下面的语法规则应用于.def 文件中的所有语句。 与每个语句描述了适用于特定语句其他规则。  

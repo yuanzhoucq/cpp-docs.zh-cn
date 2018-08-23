@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380467"
 ---
 # <a name="unprototyped-functions"></a>非原型函数
 对于不是完全原型的函数，调用方将整数值将作为传递整数和浮点值为双精度数字。 仅对于浮点值，整数寄存器和浮点寄存器将包含的 float 值在被调用方期望整数寄存器中的值的情况下。  

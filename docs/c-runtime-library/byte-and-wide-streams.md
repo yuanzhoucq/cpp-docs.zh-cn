@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389879"
 ---
 # <a name="byte-and-wide-streams"></a>字节和宽流
 字节流将文件视作一个字节序列。 在程序中，字节流是相同的字节序列。  

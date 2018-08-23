@@ -1,5 +1,5 @@
 ---
-title: 逗号运算符:，|Microsoft 文档
+title: 逗号运算符:，|Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409182"
 ---
 # <a name="comma-operator-"></a>逗号运算符：,
 允许对两个语句进行分组，其中有一个是预期的。  
@@ -28,7 +29,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -45,7 +45,7 @@ expression , expression
   
  在通常将逗号用作分隔符的方案中（例如，在函数或聚合初始值设定项的实参中），逗号运算符及其操作数必须包含在括号中。 例如：  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -73,6 +73,6 @@ int main () {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
+ [使用二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [顺序评估运算符](../c-language/sequential-evaluation-operator.md)

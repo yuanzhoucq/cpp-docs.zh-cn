@@ -1,5 +1,5 @@
 ---
-title: _BitScanForward、 _BitScanForward64 |Microsoft 文档
+title: _Bitscanforward、_bitscanforward64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540750"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
 **Microsoft 专用**  
@@ -62,8 +63,8 @@ unsigned char _BitScanForward64(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_BitScanForward`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86、 ARM、 x64|  
+|`_BitScanForward64`|ARM、 x64|  
   
  **标头文件** \<intrin.h >  
   

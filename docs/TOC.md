@@ -26,6 +26,7 @@
 # [C++ 安全性最佳做法](security/security-best-practices-for-cpp.md)
 ## [作为用户组的成员运行](security/running-as-a-member-of-the-users-group.md)
 ## [用户帐户控制 (UAC) 如何影响应用程序](security/how-user-account-control-uac-affects-your-application.md)
+## [推理执行端通道的 C++ 开发人员指南](security/developer-guidance-speculative-execution.md)
 # [Visual C++ 示例](visual-cpp-samples.md)
 # [Visual C++ 帮助和社区](visual-cpp-help-and-community.md)
 # [如何使用 Visual C++ 工具集报告问题](how-to-report-a-problem-with-the-visual-cpp-toolset.md)

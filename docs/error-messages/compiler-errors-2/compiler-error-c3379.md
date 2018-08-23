@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258278"
 ---
 # <a name="compiler-error-c3379"></a>编译器错误 C3379
 class： 嵌套的类不能将作为其声明的一部分的程序集访问说明符  

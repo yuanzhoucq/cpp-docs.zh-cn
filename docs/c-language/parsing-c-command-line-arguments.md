@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388596"
 ---
 # <a name="parsing-c-command-line-arguments"></a>分析 C 命令行自变量
 **Microsoft 专用**  

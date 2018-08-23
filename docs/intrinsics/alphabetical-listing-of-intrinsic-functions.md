@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336500"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
 以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 请参阅[ARM 内部函数](../intrinsics/arm-intrinsics.md)， [x86 内部函数](../intrinsics/x86-intrinsics-list.md)，和[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)有关制造商文档的链接的部分。 具有为其实现的内部函数的 C 运行时库 (CRT) 函数未在此处; 介绍这些函数均记录在[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。  

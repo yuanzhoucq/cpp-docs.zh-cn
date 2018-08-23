@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686534"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   指定固定数目的线程
 某些程序依赖于固定、 预先指定的正确执行的线程数。  由于线程数的动态调整的默认设置是实现定义，此类程序可以选择关闭动态线程功能和设置显式要确保可移植性的线程数。 下面的示例演示如何执行此操作使用`omp_set_dynamic`([部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上)，和`omp_set_num_threads`([部分 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)在页上 36):  

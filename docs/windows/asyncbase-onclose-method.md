@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Onclose 方法 |Microsoft 文档'
+title: 'Asyncbase:: Onclose 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a0cce7f51ef7974d0520f0bdfd2f025a09ecaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd6bd03b1e5aa3f690d93a5c51cc6664e0547c2e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597344"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose 方法
-当在派生类中重写，关闭异步操作。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-virtual void OnClose(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)   
- [AsyncBase::Close 方法](../windows/asyncbase-close-method.md)
+
+当在派生类中重写，会关闭一个异步操作。
+
+## <a name="syntax"></a>语法
+
+```cpp
+virtual void OnClose(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)  
+[AsyncBase::Close 方法](../windows/asyncbase-close-method.md)

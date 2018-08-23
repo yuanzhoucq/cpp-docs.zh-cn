@@ -16,26 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402915"
 ---
 # <a name="mutable-data-members-c"></a>可变数据成员 (C++)
-此关键字只能应用于类的非静态和非常量数据成员。 如果声明数据成员`mutable`，则它是合法将值分配给从该数据成员**const**成员函数。  
+此关键字只能应用于类的非静态和非常量数据成员。 如果声明数据成员**可变**，然后是合法将值分配到此数据成员从**const**成员函数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   
 ## <a name="remarks"></a>备注  
- 例如，以下代码在编译时不会出错，因为 `m_accessCount` 已声明为 `mutable`，因此可以由 `GetFlag` 修改，即使 `GetFlag` 是常量成员函数。  
+ 例如，下面的代码由于将编译没有错误`m_accessCount`已声明为**可变**，并因此可以通过修改`GetFlag`即使`GetFlag`是 const 成员函数。  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

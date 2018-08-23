@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: writeonlyarray 类 |Microsoft 文档'
+title: 'Platform:: writeonlyarray 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,15 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603341"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。  
@@ -42,15 +43,15 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>公共方法  
  这些方法具有内部可访问性，即，只能在 C++ 应用或组件中访问这些方法。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 
 |[Writeonlyarray:: Begin](#begin)|指向数组的第一个元素的迭代器。 |  
 |[Writeonlyarray:: Data](#data)|指向数据缓冲区的指针。 |  
-|[Writeonlyarray:: End](#end)|指向一个过去的数组中的最后一个元素的迭代器。 |  
-|[Writeonlyarray:: Fastpass](#fastpass)|指示数组能否使用 FastPass 机制，后者是系统透明执行的优化。 请勿在你的代码使用此 |  
-|[Writeonlyarray:: Length](#length)|返回数组中元素的数目。 |  
-|[Writeonlyarray:: Set](#set)|将指定的元素设置为指定的值。 |  
+|[Writeonlyarray:: End](#end)|指向一个数组中的最后一个元素之后的迭代器。 |  
+|[Writeonlyarray:: Fastpass](#fastpass)|指示数组能否使用 FastPass 机制，它是一种优化系统以透明方式执行。 不要在代码中使用此 |  
+|[Writeonlyarray:: Length](#length)|返回数组中的元素数。 |  
+|[Writeonlyarray:: Set](#set)|指定的元素设置为指定的值。 |  
 
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  

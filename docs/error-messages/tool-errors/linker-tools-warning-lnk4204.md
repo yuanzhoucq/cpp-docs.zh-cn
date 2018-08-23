@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300587"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>链接器工具警告 LNK4204
 filename 缺少的调试信息引用模块中;正在链接对象，如同没有调试信息  

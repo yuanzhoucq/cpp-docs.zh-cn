@@ -98,11 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff022d6bf28904328ace7cab543fe72b60236b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027740"
 ---
 # <a name="map-class"></a>map 类
 
@@ -122,15 +123,15 @@ class map;
 
 ### <a name="parameters"></a>参数
 
-`Key` 要存储在映射中的键数据类型。
+*密钥*键数据类型存储在映射中。
 
-`Type` 要存储在映射中的元素数据类型。
+*类型*要存储在映射中的元素数据类型。
 
-`Traits` 提供可比较两个元素值作为排序键以确定它们在映射中的相对顺序的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
+*特征*提供两个元素值作为排序键以确定映射中的其相对顺序进行比较的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
 
 在 C++ 14 中可以通过指定没有类型参数的 std:: less <> 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-`Allocator` 表示存储的分配器对象封装有关映射的分配和解除分配内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
+*分配器*表示存储的分配器对象封装有关映射的分配和解除分配的内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>备注
 
@@ -157,7 +158,7 @@ map 类提供的迭代器是双向迭代器，但 [insert](#insert) 和 [map](#m
 map 通过调用存储的 [key_compare](#key_compare) 类型的函数对象，对它控制的元素进行排序。 此存储的对象是比较函数，可通过调用 [key_comp](#key_comp) 方法访问。 通常，将比较任意两个给当元素，以确定其中一个是否小于另一个或两者是否等效。 比较所有元素后，将创建非等效元素的排序序列。
 
 > [!NOTE]
-> 比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 f(x,y) 是包含两个参数对象（x 和 y）以及一个返回值（`true` 或 `false`）的函数对象。 如果二元谓词具有反自反性、反对称性和传递性且等式具有传递性，则强加于集上的排序是严格弱序，当 f(x,y) 和 f(y,x) 函数的值均为 `false` 时，其中的 x 和 y 两个对象等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+> 比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二进制谓词 f(x,y) 是具有两个参数对象的函数对象 x 和 y 以及一个返回值 **，则返回 true**或**false**。 对集进行排序将为严格弱排序如果二元谓词具有自反性、 反对称性和传递性且等效可传递，其中两个对象 x 和 y 定义为在等效 f(x,y) 和等时**false**. 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 >
 > 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
@@ -174,16 +175,16 @@ map 通过调用存储的 [key_compare](#key_compare) 类型的函数对象，�
 |类型名称|描述|
 |-|-|
 |[allocator_type](#allocator_type)|映射对象的 `allocator` 类的 typedef。|
-|[const_iterator](#const_iterator)|可读取映射中 `const` 元素的双向迭代器的 typedef。|
-|[const_pointer](#const_pointer)|指向映射中的 `const` 元素的指针的 typedef。|
-|[const_reference](#const_reference)|对存储在映射中的 `const` 元素的引用（用于读取和执行 `const` 操作）的 typedef。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取映射中的任何 `const` 元素的双向迭代器。|
+|[const_iterator](#const_iterator)|可以读取的双向迭代器的 typedef **const**映射中的元素。|
+|[const_pointer](#const_pointer)|指向指针的 typedef **const**映射中的元素。|
+|[const_reference](#const_reference)|对引用的 typedef **const**用于读取和执行映射中存储的元素**const**操作。|
+|[const_reverse_iterator](#const_reverse_iterator)|提供可读取映射中任何 **const** 元素的双向迭代器的类型。|
 |[difference_type](#difference_type)|映射中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|
 |[Iterator](#iterator)|可读取或修改映射中任何元素的双向迭代器的 typedef。|
 |[key_compare](#key_compare)|可比较两个排序键以确定映射中两个元素的相对顺序的函数对象的 typedef。|
 |[key_type](#key_type)|存储在映射内每个元素中的排序键的 typedef。|
 |[mapped_type](#mapped_type)|存储在映射内每个元素中的数据的 typedef。|
-|[pointer](#pointer)|指向映射中的 `const` 元素的指针的 typedef。|
+|[pointer](#pointer)|指向指针的 typedef **const**映射中的元素。|
 |[reference](#reference)|对映射中存储的元素的引用的 typedef。|
 |[reverse_iterator](#reverse_iterator)|可读取或修改反向映射中的元素的双向迭代器的 typedef。|
 |[size_type](#size_type)|映射中元素数量的无符号整数 typedef。|
@@ -203,7 +204,7 @@ map 通过调用存储的 [key_compare](#key_compare) 类型的函数对象，�
 |[crend](#crend)|返回一个常量迭代器，此迭代器指向反向映射中最后一个元素之后的位置。|
 |[emplace](#emplace)|将就地构造的元素插入到映射。|
 |[emplace_hint](#emplace_hint)|将就地构造的元素插入到映射，附带位置提示。|
-|[empty](#empty)|如果映射为空，则返回 `true`。|
+|[empty](#empty)|返回 **，则返回 true**映射是否为空。|
 |[end](#end)|返回超过末尾迭代器。|
 |[equal_range](#equal_range)|返回一对迭代器。 此迭代器对中的第一个迭代器指向 `map` 中其键大于指定键的第一个元素。 此迭代器对中的第二个迭代器指向 `map` 中其键等于或大于指定键的第一个元素。|
 |[erase](#erase)|从指定位置移除映射中的元素或元素范围。|
@@ -260,7 +261,7 @@ const Type& at(const Key& key) const;
 |参数|描述|
 |-|-|
 |参数|描述|
-|`key`|要查找的键值。|
+|*key*|要查找的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -353,7 +354,7 @@ The first element of m1 is now 1
 
 ## <a name="cbegin"></a>map::cbegin
 
-返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
+返回**const**刚超出范围中的最后一个元素的位置的迭代器。
 
 ```cpp
 const_iterator cbegin() const;
@@ -361,13 +362,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一种 `const` 双向迭代器，此迭代器定址到范围的第一个元素，或恰好超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。
+一个**const**范围或刚超出空范围末尾的位置中的第一个元素的双向迭代器 (对于空范围， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -379,7 +380,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>map::cend
 
-返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
+返回**const**刚超出范围中的最后一个元素的位置的迭代器。
 
 ```cpp
 const_iterator cend() const;
@@ -387,13 +388,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>返回值
 
-指向刚超出范围末尾的位置的 `const` 双向访问迭代器。
+一个**const**指向刚超出范围末尾的双向访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -463,7 +464,7 @@ typedef implementation-defined const_iterator;
 
 map 定义的 `const_iterator` 指向 [value_type](#value_type) 的对象的元素，它的类型是 `pair`\< **constKey**, **Type**>，其第一个成员是元素的键，第二个成员是元素的 map 值。
 
-若要取消引用`const_iterator``cIter`指向映射中的元素，使用**->** 运算符。
+若要取消引用`const_iterator``cIter`指向的元素在映射中，使用`->`运算符。
 
 若要访问元素的键值，请使用 `cIter` -> **first**，其作用与 (\* `cIter`). **first** 相同。
 
@@ -549,13 +550,13 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问映射。
 
-`const_reverse_iterator`定义的映射指向的对象的元素[value_type](#value_type)，该类型的`pair<const Key, Type>`、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。
+`const_reverse_iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair<const Key, Type>`、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用指向映射中元素的 `const_reverse_iterator crIter`，请使用 **->** 运算符。
+若要取消引用`const_reverse_iterator crIter`指向的元素在映射中，使用`->`运算符。
 
-若要访问的元素的键的值，使用`crIter`  -> **第一个**，这等同于 (\* `crIter`)。**第一个**。
+若要访问元素的键的值，请使用`crIter`  -> **第一个**，这等同于 (\* `crIter`)。**第一个**。
 
-若要访问的元素映射的基准值，使用`crIter`  -> **第二个**，这等同于 (\* `crIter`)。**第一个**。
+若要访问的元素的映射基准值，请使用`crIter`  -> **第二个**，这等同于 (\* `crIter`)。**第一个**。
 
 ### <a name="example"></a>示例
 
@@ -571,7 +572,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 从映射中匹配的元素的键值。
+*密钥*映射中匹配的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -803,13 +804,13 @@ emplace(
 |参数|描述|
 |-|-|
 |参数|描述|
-|`args`|被转发的参数，用于构造要插入到映射中的元素（除非它已包含一个具有相对有序的值的元素）。|
+|*参数*|被转发的参数，用于构造要插入到映射中的元素（除非它已包含一个具有相对有序的值的元素）。|
 
 ### <a name="return-value"></a>返回值
 
-一个 [pair](../standard-library/pair-structure.md)，如果插入完成，其 `bool` 组件为 true，如果 map 已包含一个在排序中具有等效值的元素，该组件为 false。 返回值对的迭代器组件将指向新插入的元素（如果 `bool` 组件为 true）或现有元素（如果 `bool` 组件为 false）。
+一个[对](../standard-library/pair-structure.md)其**bool**组件为 true，则如果完成插入操作，如果映射已经包含在排序中具有等效值的元素，则为 false。 返回值对的迭代器组件指向新插入的元素如果**bool**组件为 true，或指向现有元素如果**bool**组件为 false。
 
-若要访问的迭代器组件`pair` `pr`，使用`pr.first`; 若要将取消引用指针，请使用`*pr.first`。 要访问 `bool` 组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
+若要访问的迭代器组件`pair` `pr`，使用`pr.first`; 若要对其取消引用，使用`*pr.first`。 访问**bool**组件，请使用`pr.second`。 有关示例，请参阅本文后面的示例代码。
 
 ### <a name="remarks"></a>备注
 
@@ -892,8 +893,8 @@ iterator emplace_hint(
 |参数|描述|
 |-|-|
 |参数|描述|
-|`args`|用于构造要插入 map 中的元素的转发参数，除非 map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
-|`where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|
+|*参数*|用于构造要插入 map 中的元素的转发参数，除非 map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。|
+|*where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 
 ### <a name="return-value"></a>返回值
 
@@ -1016,9 +1017,9 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-**end** 用于测试迭代器是否超过了 map 的末尾。
+`end` 用于测试是否超过其 map 的末尾迭代器。
 
-不应对 **end** 返回的值取消引用。
+不应对 `end` 返回的值取消引用。
 
 有关代码示例，请参阅 [map::find](#find)。
 
@@ -1034,7 +1035,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与要搜索的映射中的元素的排序键进行比较。
+*密钥*参数键值与要搜索的映射中元素的排序键进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -1120,13 +1121,13 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-`Where` 要删除的元素的位置。
+*其中*要移除的元素位置。
 
-`First` 要移除的第一个元素的位置。
+*第一个*要删除的第一个元素的位置。
 
-`Last` 要移除的最后一个元素以外的位置。
+*最后一个*刚超出最后一个元素的位置，要删除。
 
-`Key` 要移除的元素的键值。
+*密钥*要移除的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1228,17 +1229,17 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从要搜索的映射的元素的排序键匹配的键值。
+*密钥*要与当前搜索的 map 中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
-引用具有指定键的元素的位置的迭代器，如果找不到具有键的匹配项，则引用 map 中 (`map::end()`) 最后一个元素后面的位置。
+引用具有指定键的元素的位置的迭代器，如果找不到具有键的匹配项，则引用映射中 (`map::end()`) 最后一个元素后面的位置。
 
 ### <a name="remarks"></a>备注
 
 成员函数返回引用映射中其排序键与二元谓词下的参数键等效的元素的迭代器，该谓词基于小于比较关系进行顺序。
 
-如果 **find** 的返回值赋给了 **const_iterator**，则无法修改 map 对象。 如果 **find** 的返回值赋给了 **iterator**，则可以修改 map 对象
+如果将 `find` 的返回值分配给 `const_iterator`，则无法修改 map 对象。 如果返回值`find`分配给`iterator`，可以修改 map 对象
 
 ### <a name="example"></a>示例
 
@@ -1421,17 +1422,17 @@ IList);
 |参数|描述|
 |-|-|
 |参数|描述|
-|`Val`|要插入到映射中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
-|`Where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `Where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|
-|`ValTy`|指定 map 可用于构造 [value_type](#value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|
-|`First`|要复制的第一个元素的位置。|
-|`Last`|要复制的最后一个元素以外的位置。|
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](#value_type) 对象的类型的元素。|
-|`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|要插入到映射中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
+|*Where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
+|*ValTy*|指定映射可用于构造的元素的自变量类型的模板参数[value_type](#value_type)，和完美转发*Val*作为自变量。|
+|*第一个*|要复制的第一个元素的位置。|
+|*最后一个*|要复制的最后一个元素以外的位置。|
+|*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](#value_type) 对象的类型的元素。|
+|*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>返回值
 
-单个元素成员函数 (1) 和 (2) 将返回 [pair](../standard-library/pair-structure.md)，如果完成插入，则其 `bool` 组件为 true；如果 map 已经包含一个其键在排序中具有等效值的元素，则为 false。 返回值对的迭代器组件将指向新插入的元素（如果 `bool` 组件为 true）或现有元素（如果 `bool` 组件为 false）。
+单个元素成员函数 （1） 和 (2) 返回[对](../standard-library/pair-structure.md)其**bool**组件为 true，则如果完成插入操作，如果映射已经包含一个其键具有等效值的元素，则为 false中的顺序。 返回值对的迭代器组件指向新插入的元素如果**bool**组件为 true，或指向现有元素如果**bool**组件为 false。
 
 附带提示的单个元素成员函数 (3) 和 (4) 将返回迭代器，该迭代器指向将新元素插入到映射中的位置，如果具有等效键的元素已经存在，则指向现有元素。
 
@@ -1441,7 +1442,7 @@ IList);
 
 在插入单个元素的过程中，如果引发异常，则不会修改该容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
-要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 要访问 `bool` 组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
+要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 访问**bool**组件，请使用`pr.second`。 有关示例，请参阅本文后面的示例代码。
 
 容器的 [value_type](#value_type) 是属于该容器的 typedef；对于 map ，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -1560,15 +1561,15 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>备注
 
-**迭代器**定义的映射指向的对象的元素[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。
+`iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用指向 map 中元素的 **iterator**`Iter`，请使用 **->** 运算符。
+若要取消引用**迭代器**`Iter`指向的元素在映射中，使用`->`运算符。
 
 若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second** 相同。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。
+示例，请参阅[开始](#begin)有关如何声明和使用的示例`iterator`。
 
 ## <a name="key_comp"></a>map::key_comp
 
@@ -1651,9 +1652,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>备注
 
-`key_compare` 是模板参数 `Traits` 的同义词。
+`key_compare` 是模板参数的同义词*特征*。
 
-有关 `Traits` 的详细信息，请参阅 [map 类](../standard-library/map-class.md)主题。
+有关详细信息*特征*请参阅[map 类](../standard-library/map-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -1669,9 +1670,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-`key_type` 是模板参数 `Key` 的同义词。
+`key_type` 是模板参数的同义词*密钥*。
 
-有关 `Key` 的详细信息，请参阅 [map 类](../standard-library/map-class.md)主题的备注部分。
+有关详细信息*键*，请参阅备注部分[map 类](../standard-library/map-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -1689,13 +1690,13 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与要搜索的映射中的元素的排序键进行比较。
+*密钥*参数键值与要搜索的映射中元素的排序键进行比较。
 
 ### <a name="return-value"></a>返回值
 
-一个 **iterator** 或 `const_iterator`，其会寻址 map 中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则寻址 map 中最后一个元素之后的位置。
+`iterator`或`const_iterator`地址的中，其键等于或大于参数键，或如果未成功映射中的最后一个元素的位置匹配的映射的元素的位置找到的密钥。
 
-如果将 `lower_bound` 的返回值分配给 `const_iterator`，则无法修改 map 对象。 如果 `lower_bound` 的返回值赋给了 **iterator**，则可以修改 map 对象。
+如果将 `lower_bound` 的返回值分配给 `const_iterator`，则无法修改 map 对象。 如果返回值`lower_bound`分配给`iterator`，可以修改 map 对象。
 
 ### <a name="example"></a>示例
 
@@ -1803,12 +1804,12 @@ map(
 |参数|描述|
 |-|-|
 |参数|描述|
-|`Al`|要用于此 map 对象的存储分配器类，默认为 `Allocator`。|
-|`Comp`|用于对 map 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|
-|`Right`|所构造集要作为其副本的 map 。|
-|`First`|要复制的范围元素中的第一个元素的位置。|
-|`Last`|要复制的元素范围以外的第一个元素的位置。|
-|`IList`|要从中复制元素的 initializer_list。|
+|*Al*|要用于此 map 对象的存储分配器类，默认为 `Allocator`。|
+|*Comp*|用于对 map 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|
+|右侧|所构造集要作为其副本的 map 。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*IList*|要从中复制元素的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
@@ -1818,11 +1819,11 @@ map(
 
 所有构造函数会存储类型 Traits 的函数对象，此对象用于在 map 的键之间建立排序，且稍后可通过调用 [key_comp](#key_comp) 进行返回。
 
-前三个构造函数均指定空的初始 map ，此外，第二个函数还指定用于建立元素顺序的比较函数 ( `Comp`) 的类型，第三个函数显式指定了要使用的分配器类型 ( `Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。
+前三个构造函数均指定空的初始 map，第二个指定的比较函数类型 (*Comp*) 用于显式建立的元素和第三个顺序指定分配器类型 (*Al*) 使用。 关键字**显式**取消某些种类的自动类型转换。
 
-第四个构造函数指定 map `Right` 的副本。
+第四个构造函数指定的映射副本*右*。
 
-第五个构造函数通过移动 `Right` 指定 map 的副本。
+第五个构造函数通过移动指定的映射副本*右*。
 
 第六个、第七个和第八个构造函数使用要从中复制成员的 initializer_list。
 
@@ -1955,9 +1956,9 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>备注
 
-类型 `mapped_type` 是类的 `Type` 模板参数的同义词。
+类型`mapped_type`是类的一个同义词*类型*模板参数。
 
-有关 `Type` 的详细信息，请参阅 [map 类](../standard-library/map-class.md)主题。
+有关详细信息*类型*请参阅[map 类](../standard-library/map-class.md)主题。
 
 ### <a name="example"></a>示例
 
@@ -2011,7 +2012,7 @@ Type& operator[](Key&& key);
 |参数|描述|
 |-|-|
 |参数|描述|
-|`key`|要插入的元素的键值。|
+|*key*|要插入的元素的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2021,7 +2022,7 @@ Type& operator[](Key&& key);
 
 如果未找到自变量键值，则它将与数据类型的默认值一起插入。
 
-`operator[]` 可用于将元素插入使用 `m[ key] = DataValue;`（其中 `DataValue` 是具有键值 `key` 的元素 `mapped_type` 的值）的 map `m`。
+`operator[]` 可用于将元素插入到映射`m`使用`m[ key] = DataValue;`其中`DataValue`的值`mapped_type`与密钥值的元素的*密钥*。
 
 使用 `operator[]` 插入元素时，返回的引用不指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](#find) 和 [insert](#insert) 可用于确定具有指定键的元素在插入前是否已存在。
 
@@ -2111,11 +2112,11 @@ map& operator=(map&& right);
 |参数|描述|
 |-|-|
 |参数|描述|
-|`right`|要复制到 `map` 中的 [map](../standard-library/map-class.md)。|
+|*right*|要复制到 `map` 中的 [map](../standard-library/map-class.md)。|
 
 ### <a name="remarks"></a>备注
 
-清除 `map` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 map。
+在清除中的任何现有元素后`map`，`operator=`复制或移动的内容*右*到映射。
 
 ### <a name="example"></a>示例
 
@@ -2164,7 +2165,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-**pointer** 类型可用于修改元素的值。
+一种类型`pointer`可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问映射对象中的元素。
 
@@ -2401,9 +2402,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 类型无法修改元素的值，它用于反向循环访问映射。
 
-`reverse_iterator`定义的映射指向的对象的元素[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。
+`reverse_iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用`reverse_iterator``rIter`指向映射中的元素，使用**->** 运算符。
+若要取消引用`reverse_iterator``rIter`指向的元素在映射中，使用`->`运算符。
 
 若要访问元素的键值，请使用 `rIter` -> **first**，其作用与 (\* `rIter`). **first** 相同。 若要访问元素的映射值，请使用 `rIter` -> **second**，其作用与 (\* `rIter`). **first** 相同。
 
@@ -2478,7 +2479,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`right` 提供的元素与目标映射交换自变量映射。
+*右*参数 map，提供要与目标 map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2548,13 +2549,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 自变量的键值与要搜索的映射中的元素的排序键值进行比较。
+*密钥*参数键值与要搜索的映射中元素的排序键值进行比较。
 
 ### <a name="return-value"></a>返回值
 
-一个 **iterator** 或 `const_iterator`，其会寻址 map 中其键大于参数键的元素的位置，或如果未找到键的匹配项，则寻址 map 中最后一个元素之后的位置。
+`iterator`或`const_iterator`地址的中，其键大于参数键，或如果未成功映射中的最后一个元素的位置匹配的映射的元素的位置找到的密钥。
 
-如果将返回值赋给 `const_iterator`，则无法修改 map 对象。 如果将返回值赋给 **iterator**，则可以修改 map 对象。
+如果将返回值赋给 `const_iterator`，则无法修改 map 对象。 如果返回值分配给`iterator`，可以修改 map 对象。
 
 ### <a name="example"></a>示例
 
@@ -2737,7 +2738,7 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[\<映射 > 成员](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<映射 > 成员](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

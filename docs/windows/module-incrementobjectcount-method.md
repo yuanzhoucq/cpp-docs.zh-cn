@@ -1,5 +1,5 @@
 ---
-title: 'Module:: incrementobjectcount 方法 |Microsoft 文档'
+title: 'Module:: incrementobjectcount 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c5b1b50b096bf7fcda2aa26bf3e2b7820499267
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599420"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount 方法
-递增模块所跟踪对象的数量。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-virtual long IncrementObjectCount();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 递增操作之前的计数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [Module 类](../windows/module-class.md)
+
+递增模块所跟踪对象的数量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+virtual long IncrementObjectCount();
+```
+
+## <a name="return-value"></a>返回值
+
+递增操作之前的计数。
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[Module 类](../windows/module-class.md)

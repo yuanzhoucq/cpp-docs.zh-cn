@@ -1,5 +1,5 @@
 ---
-title: 提高时间关键代码的技巧 |Microsoft 文档
+title: 提高时间关键代码的技巧 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,11 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbc04563ffa16dfb9471bd0a54fa53df159538e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572931"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>提高时间关键代码的技巧
 编写快速代码需要了解应用程序的所有方面和它如何与系统交互。 此主题建议的方法可替代一些更明显的编码方法，帮助确保代码的时间关键部分满意地执行。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 -   将排序推迟到非性能关键时间。  
   
--   对数据进行排序在较早的、 非性能关键时间。  
+-   对数据进行排序的较早的、 非性能关键时间。  
   
 -   只排序数据中真正需要排序的部分。  
   
@@ -112,19 +113,19 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="_core_mfc_and_class_libraries"></a> MFC 和类库  
  Microsoft 基础类 (MFC) 可以在很大程度上简化代码的编写。 当编写时间关键代码时，应该注意一些类中的固有系统开销。 检查时间关键代码使用的 MFC 代码，查看它是否满足性能要求。 下面的列表标识了应该注意的 MFC 类和函数：  
   
--   `CString` MFC 调用 C 运行时库分配的内存[CString](../../atl-mfc-shared/reference/cstringt-class.md)动态。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../../c-runtime-library/string-manipulation-crt.md)可能更快。  
+-   `CString` MFC 调用 C 运行时库分配的内存[CString](../../atl-mfc-shared/reference/cstringt-class.md)动态。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../../c-runtime-library/string-manipulation-crt.md)可能会更快。  
   
--   `CArray` A [CArray](../../mfc/reference/carray-class.md)提供了规则数组不，但你的程序可能不需要它的灵活性。 如果知道数组的特定限制，反而可以使用全局固定数组。 如果使用 `CArray`，当需要重新分配时，使用 `CArray::SetSize` 建立它的大小并指定增长的元素数。 否则，添加元素可能导致数组经常重新分配和复制，这样做效率很低而且可能产生内存碎片。 还需注意的是，如果将一项插入数组中，则 `CArray` 移动内存中后面的项并且可能需要增长数组。 这些操作可能导致缓存未命中和页错误。 如果浏览 MFC 使用的代码，你可能会发现可编写一些更特定于方案的内容以提高性能。 例如，由于 `CArray` 是一个模板，可以提供特定类型的 `CArray` 专用化。  
+-   `CArray` 一个[CArray](../../mfc/reference/carray-class.md)提供了规则数组不能但您的程序可能不需要它的灵活性。 如果知道数组的特定限制，反而可以使用全局固定数组。 如果使用 `CArray`，当需要重新分配时，使用 `CArray::SetSize` 建立它的大小并指定增长的元素数。 否则，添加元素可能导致数组经常重新分配和复制，这样做效率很低而且可能产生内存碎片。 还需注意的是，如果将一项插入数组中，则 `CArray` 移动内存中后面的项并且可能需要增长数组。 这些操作可能导致缓存未命中和页错误。 如果浏览 MFC 使用的代码，你可能会发现可编写一些更特定于方案的内容以提高性能。 例如，由于 `CArray` 是一个模板，可以提供特定类型的 `CArray` 专用化。  
   
--   `CList` [CList](../../mfc/reference/clist-class.md)是双向链表，因此元素插入快速位于头尾和已知位置 (`POSITION`) 列表中。 按值或索引查找需要顺序搜索，但是，如果列表很长，则搜索速度可能会较慢。 如果代码不要求双向链接列表，则可能需要重新考虑使用 `CList`。 使用单向链接表可省去更新所有操作的附加指针以及该指针的内存的系统开销。 这种附加内存不太好，但却是解决缓存未命中或页错误的另一种可能的方法。  
+-   `CList` [CList](../../mfc/reference/clist-class.md)插入元素的头，因此是双向链接的列表尾和已知位置 (`POSITION`) 列表中。 按值或索引查找需要顺序搜索，但是，如果列表很长，则搜索速度可能会较慢。 如果代码不要求双向链接列表，则可能需要重新考虑使用 `CList`。 使用单向链接表可省去更新所有操作的附加指针以及该指针的内存的系统开销。 这种附加内存不太好，但却是解决缓存未命中或页错误的另一种可能的方法。  
   
--   `IsKindOf` 此函数可生成许多调用和访问大量的内存中不同的数据区域，从而导致极差引用地址的引用。 它对于调试版本是有用的（例如，在 ASSERT 调用中），但应尽量避免在发布版本中使用它。  
+-   `IsKindOf` 此函数可生成许多调用和访问大量的内存中不同的数据区域，从而导致差的引用地址。 它对于调试版本是有用的（例如，在 ASSERT 调用中），但应尽量避免在发布版本中使用它。  
   
--   `PreTranslateMessage` 使用`PreTranslateMessage`当特定的 windows 目录树需要不同的键盘快捷键或者必须将消息处理插入到消息泵。 `PreTranslateMessage` 更改 MFC 调度消息。 如果重写 `PreTranslateMessage`，只在需要的级别上这样做。 例如，如果只对转到特定视图子级的消息感兴趣，则不必重写 `CMainFrame::PreTranslateMessage`。 而应重写视图类的 `PreTranslateMessage`。  
+-   `PreTranslateMessage` 使用`PreTranslateMessage`windows 特定树需要不同的键盘快捷键或者必须将消息处理插入到消息泵。 `PreTranslateMessage` 更改 MFC 调度消息。 如果重写 `PreTranslateMessage`，只在需要的级别上这样做。 例如，如果只对转到特定视图子级的消息感兴趣，则不必重写 `CMainFrame::PreTranslateMessage`。 而应重写视图类的 `PreTranslateMessage`。  
   
-     不要为了规避正常调度路径而使用 `PreTranslateMessage` 处理发送到任何窗口的任何消息。 使用[窗口过程](../../mfc/registering-window-classes.md)和 MFC 消息映射为该目的。  
+     不要为了规避正常调度路径而使用 `PreTranslateMessage` 处理发送到任何窗口的任何消息。 使用[窗口过程](../../mfc/registering-window-classes.md)和 MFC 消息映射实现此目的。  
   
--   `OnIdle` 空闲事件可能会发生有时你不希望，如之间`WM_KEYDOWN`和`WM_KEYUP`事件。 计时器可能是触发代码的更有效方法。 不要强制 `OnIdle` 通过生成错误信息或者总是从 `TRUE` 的重写返回 `OnIdle` 被反复调用，它从来都不允许线程休眠。 同样，计时器或者单独的线程可能更合适。  
+-   `OnIdle` 空闲事件可能有时你不希望，此类之间`WM_KEYDOWN`和`WM_KEYUP`事件。 计时器可能是触发代码的更有效方法。 不要强制 `OnIdle` 通过生成错误信息或者总是从 `TRUE` 的重写返回 `OnIdle` 被反复调用，它从来都不允许线程休眠。 同样，计时器或者单独的线程可能更合适。  
   
 ##  <a name="vcovrsharedlibraries"></a> 共享的库  
  代码重用是需要的。 然而，如果打算使用他人的代码，则应确保完全知道此代码在那些性能对你很重要的情况中的作用。 了解这一点的最好方法是通过单步执行源代码，或者用 PView 或性能监视器这类工具测量。  
@@ -136,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
  然而，在某些情况下，使用默认堆可以减少引用地址。 使用 Process Viewer、Spy++ 或性能监视器测量在堆之间移动对象的效果。  
   
- 测量堆以便可以解决堆上的每个分配。 使用 C 运行时[调试堆例程](/visualstudio/debugger/crt-debug-heap-details)到检查点堆并转储它。 可以将输出读入像 Microsoft Excel 这样的电子表格程序并使用数据透视表查看结果。 注意分配的总数、大小和分布。 将这些数据同工作集的大小进行比较。 还要注意相关大小对象的群集。  
+ 测量堆以便可以解决堆上的每个分配。 使用 C 运行时[调试堆例程](/visualstudio/debugger/crt-debug-heap-details)到检查点并转储堆。 可以将输出读入像 Microsoft Excel 这样的电子表格程序并使用数据透视表查看结果。 注意分配的总数、大小和分布。 将这些数据同工作集的大小进行比较。 还要注意相关大小对象的群集。  
   
  还可以使用性能计数器监视内存使用。  
   
@@ -147,14 +148,14 @@ ms.lasthandoff: 05/03/2018
   
  线程也提出了通信问题。 必须用消息列表或者通过分配和使用共享内存，管理线程间的通信链接。 管理通信链接通常需要同步以避免争用条件和死锁问题。 此复杂性可以很容易转变为 Bug 和性能问题。  
   
- 有关详细信息，请参阅[空闲循环处理](../../mfc/idle-loop-processing.md)和[多线程处理](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+ 有关详细信息，请参阅[空闲循环处理](../../mfc/idle-loop-processing.md)并[多线程处理](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
 ##  <a name="_core_small_working_set"></a> 小工作集  
  较小的工作集意味着更好的引用地址、更少的页错误和更多的缓存命中。 进程工作集是操作系统为测量引用地址直接提供的最接近的尺度。  
   
--   若要设置的工作集的上限和下限限制，使用[SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx)。  
+-   若要设置的工作集的上限和下限限制，请使用[SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize)。  
   
--   若要获取的工作集的上限和下限，请使用[GetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms686234.aspx)。  
+-   若要获取的工作集的上限和下限限制，请使用[GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize)。  
   
 -   若要查看工作集的大小，请使用 Spy++。  
   

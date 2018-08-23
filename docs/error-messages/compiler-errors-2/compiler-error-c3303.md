@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249149"
 ---
 # <a name="compiler-error-c3303"></a>编译器错误 C3303
 “特性”: 特性只能在“用法”上使用  

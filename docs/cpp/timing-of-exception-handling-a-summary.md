@@ -1,5 +1,5 @@
 ---
-title: 异常处理的计时： 摘要 |Microsoft 文档
+title: 异常处理的计时： 摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465004"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
-无论 `__try` 语句块如何终止，都要执行终止处理程序。 原因包括跳出 `__try` 块（用于将控制权转交给块的 `longjmp` 语句外部）以及为了进行异常处理而展开堆栈。  
+终止处理程序执行了无论 **__try**终止语句块。 原因包括跳出 **__try**块中，`longjmp`语句将控制权传出块和异常处理而堆栈展开。  
   
 > [!NOTE]
 >  Visual C++ 支持 `setjmp` 和 `longjmp` 语句两种形式。 快速版本会跳过终止处理，但更高效。 若要使用此版本，包括文件\<setjmp.h >。 另一个版本支持上一段中所述的终止处理。 若要使用此版本，包括文件\<setjmpex.h >。 快速版本的性能提升取决于硬件配置。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  如果此筛选器传递控制权（返回 0），过程将继续，直到发现筛选器不传递控制权。  
   
-4.  如果此筛选器返回-1，其中引发了异常，并且不会发生终止持续执行。  
+4.  如果此筛选器返回-1，继续执行，其中引发了异常，并且不会发生终止。  
   
 5.  如果筛选器返回 1，则发生以下事件：  
   

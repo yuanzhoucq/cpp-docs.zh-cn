@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380100"
 ---
 # <a name="specifying-an-inline-file"></a>指定内联文件
 指定两个命令的尖括号 (<<) 在命令中其中*filename*要显示。 尖括号不能为宏扩展。  

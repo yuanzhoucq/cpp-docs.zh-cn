@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228009"
 ---
 # <a name="compiler-error-c2550"></a>编译器错误 C2550
 identifier： 构造函数定义上只允许构造函数初始值设定项列表  

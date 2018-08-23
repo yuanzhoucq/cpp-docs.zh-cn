@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTINPUT （指定清单输入） |Microsoft 文档
+title: -MANIFESTINPUT （指定清单输入） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1b5ed266f1b8929deee3ffb60a10b18b7604afc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575447"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT（指定清单输入）
-指定要包含在映像中嵌入的清单中的清单输入的文件。  
+指定要在图像中嵌入的清单中包含的清单输入的文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/03/2018
  要在嵌入的清单中包含的清单文件。  
   
 ## <a name="remarks"></a>备注  
- **/MANIFESTINPUT**选项指定要用于在可执行映像中创建嵌入的清单输入文件的路径。 如果你有多个清单输入文件，请使用交换机多次 — 一次针对每个输入文件。 清单输入的文件合并，以创建嵌入的清单。 此选项需要 **/manifest： 嵌入**选项。  
+ **/MANIFESTINPUT**选项用于指定要用于创建可执行映像中嵌入的清单输入文件的路径。 如果有多个清单输入文件，多次使用切换 — 一次针对每个输入文件。 清单输入的文件经过合并以创建嵌入的清单。 此选项需要 **/manifest： 嵌入**选项。  
   
- 不能直接在中设置此选项[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 请改用**其他清单文件**项目来指定要包括的其他清单文件属性。 有关详细信息，请参阅[输入和输出、 清单工具、 配置属性\<项目名称 > 属性页对话框中](../../ide/input-and-output-manifest-tool.md)。  
+ 不能直接在 Visual Studio 中设置此选项。 请改用**附加清单文件**要指定其他要包含的清单文件的项目的属性。 有关详细信息，请参阅[输入和输出、 清单工具、 配置属性\<项目名称 > 属性页对话框](../../ide/input-and-output-manifest-tool.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   

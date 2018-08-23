@@ -1,5 +1,5 @@
 ---
-title: 多个基类 |Microsoft 文档
+title: 多个基类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406186"
 ---
 # <a name="multiple-base-classes"></a>多个基类
-中所述[多重继承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)，可以从多个基类派生的类。 在多重继承模型中 （其中，类派生自多个基类），使用指定基类*基列表*语法元素。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：  
+可以从多个基类派生的类。 在多重继承模型中 （其中类派生自多个基类），使用指定基类*基列表*语法元素。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：  
   
-```  
+```cpp 
 // deriv_MultipleBaseClasses.cpp  
 // compile with: /LD  
 class Collection {  
@@ -39,14 +40,14 @@ class CollectionOfBook : public Book, public Collection {
   
  指定基类的顺序并不重要，只不过在某些情况下，将调用构造函数和析构函数。 在这些情况下，指定基类的顺序将影响：  
   
--   构造函数进行初始化的顺序。 如果您的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化发生在指定类的顺序*基列表*。  
+-   构造函数进行初始化的顺序。 如果您的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化发生在类中指定的顺序*基列表*。  
   
 -   调用析构函数以进行清理的顺序。 同样，如果在销毁另一部分时必须呈现类的特定“部分”，则顺序非常重要。 中指定的类的相反顺序调用析构函数*基列表*。  
   
     > [!NOTE]
     >  基类的规范顺序会影响类的内存布局。 不要基于内存中基成员的顺序做出任何编程决策。  
   
- 指定时*基列表*，不能多次指定相同的类名称。 但是，可以将类多次作为派生类的间接基。  
+ 指定时*基列表*，不能多次指定相同的类名。 但是，可以将类多次作为派生类的间接基。  
   
 ## <a name="virtual-base-classes"></a>虚拟基类  
  由于一个类可能多次成为派生类的间接基类，因此 C++ 提供了一种优化这种基类的工作方式的方法。 虚拟基类提供了一种节省空间和避免使用多重继承的类层次结构中出现多义性的方法。  
@@ -55,11 +56,11 @@ class CollectionOfBook : public Book, public Collection {
   
  当将某个基类指定为虚拟基时，该基类可以多次作为间接基而无需复制其数据成员。 基类的数据成员的单个副本由将其用作虚拟基的所有基类共享。  
   
- 声明虚拟基类时**虚拟**关键字出现在派生类的基列表中。  
+ 当声明虚拟基类**虚拟**关键字出现在派生类的基列表中。  
   
  请考虑下图中的类层次结构，它演示了模拟的午餐排队。  
   
- ![模拟的午餐排队图](../cpp/media/vc38xp1.gif "vc38XP1")  
+ ![关系图的模拟的午餐](../cpp/media/vc38xp1.gif "vc38XP1")  
 模拟午餐排队图  
   
  在该图中，`Queue` 是 `CashierQueue` 和 `LunchQueue` 的基类。 但是，当将这两个类组合成 `LunchCashierQueue` 时，会出现以下问题：新类包含类型 `Queue` 的两个子对象，一个来自 `CashierQueue`，另一个来自 `LunchQueue`。 下图显示了概念上的内存布局（实际物理内存布局可能会进行优化）。  
@@ -69,7 +70,7 @@ class CollectionOfBook : public Book, public Collection {
   
  请注意，`Queue` 对象中有两个 `LunchCashierQueue` 子对象。 以下代码将 `Queue` 声明为虚拟基类：  
   
-```  
+```cpp 
 // deriv_VirtualBaseClasses.cpp  
 // compile with: /LD  
 class Queue {};  
@@ -78,32 +79,32 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- `virtual` 关键字可确保只包含子对象 `Queue` 的一个副本（请参阅下图）。  
+ **虚拟**关键字可确保只有一个子对象的副本`Queue`包含 （请参阅下图）。  
   
  ![模拟午餐&#45;行对象、 虚拟基类](../cpp/media/vc38xp3.gif "vc38XP3")  
 使用虚拟基类模拟午餐排队对象  
   
  一个类可以同时具有一个给定类型的虚拟组件和非虚拟组件。 下图演示了这种情况。  
   
- ![类的虚拟和非虚拟组件](../cpp/media/vc38xp4.gif "vc38XP4")  
+ ![虚拟和非虚拟组件的类](../cpp/media/vc38xp4.gif "vc38XP4")  
 同一个类的虚拟组件与非虚拟组件  
   
  在图中，`CashierQueue` 和 `LunchQueue` 将 `Queue` 用作虚拟基类。 但是，`TakeoutQueue` 将 `Queue` 指定为基类而不是虚拟基类。 因此，`LunchTakeoutCashierQueue` 具有类型 `Queue` 的两个子对象：一个来自包含 `LunchCashierQueue` 的继承路径，另一个来自包含 `TakeoutQueue` 的路径。 下图对此进行了演示。  
   
- ![中的对象布局的虚拟继承](../cpp/media/vc38xp5.gif "vc38XP5")  
+ ![对象布局中的虚拟和非虚拟继承](../cpp/media/vc38xp5.gif "vc38XP5")  
 带虚拟和非虚拟继承的对象布局  
   
 > [!NOTE]
 >  与非虚拟继承相比较，虚拟继承提供了显著的大小优势。 但是，它可能会引入额外的处理开销。  
   
- 如果派生类重写它从虚拟基类继承的虚函数，并且派生基类的构造函数或析构函数使用指向虚拟基类的指针调用该虚函数，则编译器可能会将其他隐藏的“vtordisp”字段引入到具有虚拟基的类中。 /vd0 编译器选项将禁止添加隐藏的 vtordisp 构造函数/析构函数置换成员。 默认的 /vd1 编译器选项会在必要时启用它们。 仅当确定所有类构造函数和析构函数以虚拟方式调用虚函数时才关闭 vtordisps。  
+ 如果派生类重写它从虚拟基类继承的虚函数，并且派生基类的构造函数或析构函数使用指向虚拟基类的指针调用该虚函数，则编译器可能会将其他隐藏的“vtordisp”字段引入到具有虚拟基的类中。 `/vd0`编译器选项将禁止添加隐藏的 vtordisp 构造函数/析构函数置换成员。 `/vd1`编译器选项，默认情况下，让它们将在必要时。 仅当确定所有类构造函数和析构函数以虚拟方式调用虚函数时才关闭 vtordisps。  
   
- /vd 编译器选项会影响整个编译模块。 使用**vtordisp**杂注来禁止显示，然后重新启用 vtordisp 字段基于类的类：  
+ `/vd`编译器选项会影响整个编译模块。 使用`vtordisp`杂注，然后重新启用`vtordisp`个类的类的字段：  
   
-```  
+```cpp 
 #pragma vtordisp( off )  
 class GetReal : virtual public { ... };  
-#pragma vtordisp( on )  
+\#pragma vtordisp( on )  
 ```  
   
 ## <a name="name-ambiguities"></a>名称多义性  
@@ -111,7 +112,7 @@ class GetReal : virtual public { ... };
   
  任何引用类成员的表达式必须采用明确的引用。 以下示例说明如何产生多义性：  
   
-```  
+```cpp 
 // deriv_NameAmbiguities.cpp  
 // compile with: /LD  
 // Declare two base classes, A and B.  
@@ -134,7 +135,7 @@ class C : public A, public B {};
   
  对于前面的类声明，如下所示的代码是不明确的，因为 `b` 所指的 `b` 是在 `A` 中还是在 `B` 中并不清楚：  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->b();  
@@ -152,7 +153,7 @@ pc->b();
   
  在表达式通过继承产生多义性时，您可以通过限定考虑中的名称及其类名来手动消除该多义性。 若要适当编译上面的示例而不产生多义性，请使用如下代码：  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->B::a();  
@@ -166,7 +167,7 @@ pc->B::a();
   
  如果某个名称在两个类中定义并且一个类派生自另一个类，则该名称可控制另一个名称。 基准名称是派生类中的名称；此名称在本应出现多义性时使用，如以下示例所示：  
   
-```  
+```cpp 
 // deriv_Dominance.cpp  
 // compile with: /LD  
 class A {  
@@ -201,7 +202,7 @@ public:
   
  到类型 `A*`（指向 `A` 的指针）的转换是不明确的，因为无法辩明 `A` 类型的哪个子对象是正确的。 请注意，您可以通过显式指定要使用的子对象来避免多义性，如下所示：  
   
-```  
+```cpp 
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  

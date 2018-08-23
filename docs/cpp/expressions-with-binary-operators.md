@@ -1,5 +1,5 @@
 ---
-title: 使用二元运算符的表达式 |Microsoft 文档
+title: 使用二进制运算符的表达式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406814"
 ---
 # <a name="expressions-with-binary-operators"></a>使用二元运算符的表达式
 二元运算符在表达式中操作两个操作数。 二元运算符为：  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
     -   左移 (<<)  
   
--   [关系和相等运算符](../cpp/relational-operators-equal-and-equal.md)  
+-   [关系运算符和相等运算符](../cpp/relational-operators-equal-and-equal.md)  
   
     -   小于 (\<)  
   
@@ -61,11 +62,11 @@ ms.lasthandoff: 05/03/2018
   
 -   位运算符  
   
-    -   [按位 AND (&)](../cpp/bitwise-and-operator-amp.md)  
+    -   [位与 (&)](../cpp/bitwise-and-operator-amp.md)  
   
     -   [按位异或 (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [按位或 (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [按位异或 (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   逻辑运算符  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
     -   按位“异或”赋值 (^=)  
   
-    -   按位与或赋值 (&#124;=)  
+    -   按位非独占 OR 赋值 (&#124;=)  
   
 -   [逗号运算符](../cpp/comma-operator.md)（，）  
   

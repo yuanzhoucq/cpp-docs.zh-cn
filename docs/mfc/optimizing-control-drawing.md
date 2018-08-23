@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351289"
 ---
 # <a name="optimizing-control-drawing"></a>优化控件绘制
 在指示某个控件将自身绘制到容器提供的设备上下文中时，它通常会将 GDI 对象（如钢笔、画笔和字体）选择到设备上下文中，执行其绘制操作，并还原之前的 GDI 对象。 假设容器有多个要绘制到相同设备上下文中的控件，且每个控件选择其所需的 GDI 对象，那么，如果控件不单个地还原之前选中的对象，则可以节省时间。 绘制所有控件之后，容器可以自动还原原始对象。  

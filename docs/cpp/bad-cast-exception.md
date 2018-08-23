@@ -1,5 +1,5 @@
 ---
-title: bad_cast 异常 |Microsoft 文档
+title: bad_cast 异常 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401362"
 ---
 # <a name="badcast-exception"></a>bad_cast 异常
-由于强制转换为引用类型失败，`bad_cast` 运算符引发 `dynamic_cast` 异常。  
+**Bad_cast**引发异常**dynamic_cast**作为失败的强制转换为引用类型的结果的运算符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +36,9 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>备注  
- `bad_cast` 的接口为：  
+ 接口**bad_cast**是：  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -46,9 +47,9 @@ public:
 };  
 ```  
   
- 以下代码包含失败的 `dynamic_cast` 引发 `bad_cast` 异常的示例。  
+ 下面的代码包含失败的示例**dynamic_cast** ，将引发**bad_cast**异常。  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -79,14 +80,14 @@ int main() {
   
  由于强制转换的对象 (Shape) 不是派生自指定的强制转换类型 (Circle)，因此引发异常。 若要避免此异常，请将下列声明添加到 `main`：  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- 然后在 `try` 块中反转强制转换的意义，如下所示：  
+ 然后反转中强制转换的意义**尝试**阻止按如下所示：  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   

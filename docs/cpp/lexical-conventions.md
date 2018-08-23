@@ -1,5 +1,5 @@
 ---
-title: 词法约定 |Microsoft 文档
+title: 词法约定 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405904"
 ---
 # <a name="lexical-conventions"></a>词法约定
 本节介绍 C++ 程序的基本元素。 你将使用这些名为“词法元素”或“标记”的元素构造用于构造完整程序的语句、定义和声明等。 本节将讨论以下词法元素：
@@ -44,5 +45,5 @@ ms.lasthandoff: 05/03/2018
 - [用户定义的文本](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>请参阅
-- [C++ 语言参考](../cpp/cpp-language-reference.md)
-- [程序和链接](program-and-linkage-cpp.md)
+ [C++ 语言参考](../cpp/cpp-language-reference.md)  
+ [程序和链接](program-and-linkage-cpp.md)

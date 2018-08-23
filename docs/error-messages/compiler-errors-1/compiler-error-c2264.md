@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168940"
 ---
 # <a name="compiler-error-c2264"></a>编译器错误 C2264
 function： 函数定义或声明; 中的错误未调用的函数  

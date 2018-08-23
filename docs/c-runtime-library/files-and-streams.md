@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390513"
 ---
 # <a name="files-and-streams"></a>文件和流
 程序通过读取和写入文件来与目标环境进行通信。 文件可以是：  

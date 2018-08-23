@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369305"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导的控件名称
 指定控件类和属性页类，类型名称的名称和类型为您的控件的标识符。 除**短名称**，所有其他字段可单独进行编辑。 如果你更改的文本**短名称**，在此页中的所有其他字段的名称中会反映更改。 此命名行为旨在使所有名称轻松地识别为您开发您的控件。  

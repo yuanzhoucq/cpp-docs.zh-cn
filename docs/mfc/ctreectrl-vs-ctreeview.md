@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342028"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs。CTreeView
 MFC 提供封装树控件的两个类： [CTreeCtrl](../mfc/reference/ctreectrl-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。 每个类是在不同情况下有用。  

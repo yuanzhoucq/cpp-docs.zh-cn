@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105886"
 ---
 # <a name="boxing-ccli"></a>装箱 (C++/CLI)
 装箱是将值类型转换为类型的过程`object`或由值类型实现任何接口类型。 当公共语言运行时 (CLR) 装箱值类型时, 它所包装中的值`System.Object`并将其存储在托管堆上。 取消装箱将从对象中提取值类型。 装箱是隐式的；取消装箱是显式的。  

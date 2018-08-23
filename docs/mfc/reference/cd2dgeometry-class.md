@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955097"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 类
 ID2D1Geometry 包装器。  
@@ -111,7 +112,7 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|指向 ID2D1Geometry 的指针。|  
   
@@ -140,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -153,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -172,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `inputGeometry`  
+ *inputGeometry*  
  要与此实例合并的几何图形。  
   
- `combineMode`  
+ *combineMode*  
  要执行的合并操作的类型。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  要应用于 inputGeometry 合并之前的转换。  
   
- `geometrySink`  
+ *geometrySink*  
  合并操作的结果。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的多边形几何图形的近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -201,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `inputGeometry`  
+ *inputGeometry*  
  要测试的几何图形。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  要应用于 inputGeometry 的转换。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的多边形几何图形的近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -224,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- `worldTransform`  
+ *转变*  
  要计算其区域之前应用于该几何图形的转换。  
   
- `area`  
+ *区域*  
  此方法返回时，包含该几何图形的转换后的平展版本的区域的指针。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -247,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>参数  
- `worldTransform`  
+ *转变*  
  要计算其长度之前应用于几何图形的转换。  
   
- `length`  
+ *length*  
  此方法返回时，包含该几何图形的长度的指针。 对于已关闭的几何图形，长度包括隐式右段。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -272,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>参数  
- `length`  
+ *length*  
  点和查找的正切值的几何图形的距离。 如果此距离少于 0，则此方法计算几何图形中的第一个点。 如果此距离大于该几何图形的长度，则此方法计算几何图形中的最后一个点。  
   
- `worldTransform`  
+ *转变*  
  要计算指定的点和正切值之前应用于几何图形的转换。  
   
- `point`  
+ *点*  
  在指定的距离该几何图形的位置。 几何图形是否为空，则此点包含 NaN 作为其 x 和 y 值。  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  此方法返回时，包含在指定的距离该几何图形处的切线向量的指针。 如果该几何图形为空，则此向量包含 NaN 作为其 x 和 y 值。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -319,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  要测试的点。  
   
- `worldTransform`  
+ *转变*  
  要应用于之前包含测试几何图形的转换。  
   
- `contains`  
+ *包含*  
  当此方法返回时，包含由该几何图形填充该区域包含点; 如果为 TRUE 的 bool 值否则为 FALSE。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  数值的准确性，但其精确几何路径以及路径交集计算。 内仍被视为小于容差缺失填充的点。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -353,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `worldTransform`  
- `bounds`  
+ *转变*  
+ *边界*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -371,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strokeWidth`  
+ *strokeWidth*  
  扩展方法是通过描边轮廓的几何图形的数量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  扩大几何图形的笔划的样式。  
   
- `worldTransform`  
+ *转变*  
  要应用于该几何图形，并在描边几何图形之后几何图形转换后的转换。  
   
- `bounds`  
+ *边界*  
  此方法返回时，包含该扩大几何图形的边界。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的多边形几何图形的近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -427,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>参数  
- `worldTransform`  
+ *转变*  
  要应用于该几何图形边框的转换。  
   
- `geometrySink`  
+ *geometrySink*  
  向其中追加几何转换后的大纲 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -451,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>参数  
- `simplificationOption`  
+ *simplificationOption*  
  一个值，指定的简化的几何图形是否应包含曲线。  
   
- `worldTransform`  
+ *转变*  
  要应用于简化几何图形的转换。  
   
- `geometrySink`  
+ *geometrySink*  
  向其中追加的简化的几何图形 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -480,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  要测试包含的点。  
   
- `strokeWidth`  
+ *strokeWidth*  
  要应用的笔划的粗细。  
   
- `strokeStyle`  
+ *strokeStyle*  
  要应用的笔划的样式。  
   
- `worldTransform`  
+ *转变*  
  要应用于绘制几何图形的转换。  
   
- `contains`  
+ *包含*  
  当此方法返回时，包含几何图形的笔画包含指定的点; 如果设置为 TRUE 的布尔值否则为 FALSE。 必须为此参数来分配存储空间。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  数值的准确性，但其精确几何路径以及路径交集计算。 内仍被视为小于容差缺失笔画的点。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -512,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `worldTransform`  
+ *转变*  
  要应用于此的几何图形或为 NULL 的转换。  
   
- `tessellationSink`  
+ *tessellationSink*  
  分割追加到 ID2D1TessellationSink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  
@@ -537,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strokeWidth`  
+ *strokeWidth*  
  若要扩大范围几何图形依据的数量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  要应用于的几何图形或为 NULL 的笔划的样式。  
   
- `worldTransform`  
+ *转变*  
  要应用于该几何图形扩大它后的转换。  
   
- `geometrySink`  
+ *geometrySink*  
  向其中追加扩大的几何图形 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  中的几何图形的多边形近似的点之间距离上限。 较小值生成更准确的结果，但会使执行速度变慢。  
   
 ### <a name="return-value"></a>返回值  

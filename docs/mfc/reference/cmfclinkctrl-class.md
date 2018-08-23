@@ -1,5 +1,5 @@
 ---
-title: CMFCLinkCtrl 类 |Microsoft 文档
+title: CMFCLinkCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851582"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
-`CMFCLinkCtrl`类按钮显示为超链接并单击该按钮时调用链接的目标。  
+`CMFCLinkCtrl`类按钮显示为超链接，并单击该按钮时调用链接的目标。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,20 +47,20 @@ class CMFCLinkCtrl : public CMFCButton
 |名称|描述|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::SetURL](#seturl)|将指定的 URL 显示为按钮文本。|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|设置的隐式的协议 (例如，"http:") 的 URL。|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|调整大小时，包含按钮文本或位图按钮。|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|设置隐式协议 (例如，"http:") 的 url。|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|调整大小的按钮，以包含按钮文本或位图。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|绘制聚焦框的按钮之前，由框架调用。|  
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|在绘制聚焦框的按钮之前由框架调用。|  
   
 ## <a name="remarks"></a>备注  
- 当你单击一个按钮来派生自`CMFCLinkCtrl`类，则框架会将按钮的 URL 传递作为参数传递给`ShellExecute`方法。 则`ShellExecute`方法打开的 URL 目标。  
+ 当您单击一个按钮来派生自`CMFCLinkCtrl`类，则框架会将按钮的 URL 传递的参数作为`ShellExecute`方法。 然后`ShellExecute`方法打开的 url 目标。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何设置的大小`CMFCLinkCtrl`对象，以及如何设置 url 和中的工具提示`CMFCLinkCtrl`对象。 此示例摘自[新控件示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何设置的大小`CMFCLinkCtrl`对象，以及如何设置 url 和中的工具提示`CMFCLinkCtrl`对象。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
@@ -81,7 +82,7 @@ class CMFCLinkCtrl : public CMFCButton
  **标头：** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
- 绘制聚焦框的按钮之前，由框架调用。  
+ 在绘制聚焦框的按钮之前由框架调用。  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -90,14 +91,14 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectClient`  
- 限定链接控件的矩形。  
+ [in]*rectClient*  
+ 限定为链接控件的矩形。  
   
 ### <a name="remarks"></a>备注  
- 当你想要使用你自己的代码绘制按钮的聚焦框时，重写此方法。  
+ 当你想要使用你自己的代码来绘制按钮的聚焦框时，重写此方法。  
   
 ##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  将指定的 URL 显示为按钮文本。  
@@ -107,27 +108,27 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszURL`  
+ [in]*lpszURL*  
  要显示的按钮文本。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
- 设置的隐式的协议 (例如，"http:") 的 URL。  
+ 设置隐式协议 (例如，"http:") 的 url。  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPrefix`  
+ [in]*lpszPrefix*  
  URL 协议的前缀。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法设置的 URL 前缀。 前缀不会显示在按钮的表面，但可以使用它来帮助浏览到的 URL 目标。  
+ 使用此方法设置的 URL 前缀。 前缀不会显示在按钮的人脸，但可以使用它来帮助浏览到的 URL 目标。  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
- 调整大小时，包含按钮文本或位图按钮。  
+ 调整大小的按钮，以包含按钮文本或位图。  
   
 ```  
 virtual CSize SizeToContent(
@@ -136,19 +137,19 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bVCenter`  
- `TRUE` 到中心按钮文本和位图的顶部和底部的链接控件; 之间的垂直对齐否则为`FALSE`。 默认值为 `FALSE`。  
+ [in]*bVCenter*  
+ 为 TRUE，则按钮文本和位图的顶部和底部的链接控件; 之间的垂直居中否则为 FALSE。 默认值为 FALSE。  
   
- [in] `bHCenter`  
- `TRUE` 到中心按钮文本和位图水平之间的左侧和右侧的链接控件;否则为`FALSE`。 默认值为 `FALSE`。  
+ [in]*bHCenter*  
+ 为 TRUE，则按钮文本和位图的左侧和右侧的链接控件; 之间的水平居中否则为 FALSE。 默认值为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其中包含链接控件的新大小。  
+ 一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其中包含链接控件的新大小。  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CLinkCtrl 类](../../mfc/reference/clinkctrl-class.md)   
  [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)

@@ -41,6 +41,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694415"
 ---
 # <a name="arrayview-class"></a>array_view 类
 表示 N 维视图对保存在另一个容器中的数据。  

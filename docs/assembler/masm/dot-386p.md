@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049712"
 ---
 # <a name="386p"></a>.386P
 可以使程序集的所有说明 （包括特权） 80386 处理器;禁用引入更高版本的处理器指令集的程序的集。  

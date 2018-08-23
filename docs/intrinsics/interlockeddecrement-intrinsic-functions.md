@@ -1,5 +1,5 @@
 ---
-title: _InterlockedDecrement 内部函数 |Microsoft 文档
+title: _InterlockedDecrement 内部函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,16 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539594"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
 **Microsoft 专用**  
   
- 提供编译器内部支持为 Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx)函数。  
+提供了编译器内部函数支持 Win32 Windows SDK [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -117,7 +118,7 @@ __int64 _InterlockedDecrement64_nf(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、 ARM、 x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **标头文件** \<intrin.h >  

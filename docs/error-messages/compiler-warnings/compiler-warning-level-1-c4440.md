@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276966"
 ---
 # <a name="compiler-warning-level-1-c4440"></a>编译器警告（等级 1）C4440
 重新从 calling_convention1 到 calling_convention2 忽略的调用约定定义  

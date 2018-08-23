@@ -52,11 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451407"
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +119,11 @@ int _swprintf_p_l(
 
 ## <a name="remarks"></a>备注
 
-**_Sprintf_p**函数格式并将存储中的字符和值的一系列*缓冲区*。 在每个自变量*argument_list* （如果有） 进行转换和输出中的相应格式规范根据*格式*。 *格式*自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 A **NULL**字符追加后写入的最后一个字符。 如果在重叠的字符串之间发生复制，则此行为不确定。 之间的差异 **_sprintf_p**和**sprintf_s**在于 **_sprintf_p**支持位置参数，这允许指定的自变量是在其中的顺序格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Sprintf_p**函数格式并将存储中的字符和值的一系列*缓冲区*。 在每个自变量*argument_list* （如果有） 进行转换和输出中的相应格式规范根据*格式*。 *格式*自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。 之间的差异 **_sprintf_p**和**sprintf_s**在于 **_sprintf_p**支持位置参数，这允许指定的自变量是在其中的顺序格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
 **_swprintf_p**是宽字符版本的 **_sprintf_p**; 的指针参数 **_swprintf_p**是宽字符字符串。 编码错误检测 **_swprintf_p**可能不同于在 **_sprintf_p**。 **_swprintf_p**和**fwprintf_p**行为方式相同，只不过 **_swprintf_p**将输出一个字符串，而不是类型的目标**文件**，和 **_swprintf_p**需要*计数*参数来指定要写入的字符的最大数。 使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
 
-**_sprintf_p**返回存储中的字节数*缓冲区*，不包括终止**NULL**字符。 **_swprintf_p**返回的存储中的宽字符数*缓冲区*，不包括终止**NULL**宽字符。 如果*缓冲区*或*格式*是 null 指针，或如果格式字符串包含无效格式字符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+**_sprintf_p**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **_swprintf_p**返回的存储中的宽字符数*缓冲区*，不包括终止 null 宽字符。 如果*缓冲区*或*格式*是 null 指针，或如果格式字符串包含无效格式字符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

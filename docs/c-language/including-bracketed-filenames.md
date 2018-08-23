@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383821"
 ---
 # <a name="including-bracketed-filenames"></a>包含用括号括起来的文件名
 **ANSI 3.8.2** 查找可包含源文件的方法  

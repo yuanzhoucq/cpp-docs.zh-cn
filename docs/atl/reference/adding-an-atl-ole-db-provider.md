@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357553"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>添加的 ATL OLE DB 提供程序
 使用此向导以向项目中添加的 ATL OLE DB 提供程序。 ATL OLE DB 提供程序由数据源、 会话、 命令和行集类组成。 必须为 ATL COM 应用程序创建项目。  

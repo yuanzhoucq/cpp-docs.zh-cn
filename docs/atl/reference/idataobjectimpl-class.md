@@ -1,5 +1,5 @@
 ---
-title: IDataObjectImpl 类 |Microsoft 文档
+title: IDataObjectImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,17 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3ffcdd8cc8320b2534d928171fe75619062b300
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef7db05e8e8eb0a723354bcd6f53fb283aebe0c8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880880"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 类
 此类提供用于支持统一数据传输和管理连接的方法。  
   
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,8 +51,8 @@ class IDataObjectImpl
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类，派生自`IDataObjectImpl`。  
+ *T*  
+ 您的类，派生自`IDataObjectImpl`。  
   
 ## <a name="members"></a>成员  
   
@@ -59,23 +60,23 @@ class IDataObjectImpl
   
 |名称|描述|  
 |----------|-----------------|  
-|[IDataObjectImpl::DAdvise](#dadvise)|建立数据对象和通知接收器之间的连接。 这使通知接收器对象中接收的更改的通知。|  
-|[IDataObjectImpl::DUnadvise](#dunadvise)|终止通过以前建立的连接`DAdvise`。|  
+|[IDataObjectImpl::DAdvise](#dadvise)|建立数据对象和通知接收器之间的连接。 这使通知接收器对象中接收的更改通知。|  
+|[IDataObjectImpl::DUnadvise](#dunadvise)|终止先前通过建立的连接`DAdvise`。|  
 |[IDataObjectImpl::EnumDAdvise](#enumdadvise)|创建一个枚举器循环访问当前的通知连接。|  
-|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|创建一个枚举器循环访问**FORMATETC**数据对象支持的结构。 ATL 实现返回**E_NOTIMPL**。|  
-|[IDataObjectImpl::FireDataChange](#firedatachange)|将更改通知发送回每个通知接收器。|  
-|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|检索逻辑上等效**FORMATETC**为一个更复杂的结构。 ATL 实现返回**E_NOTIMPL**。|  
-|[IDataObjectImpl::GetData](#getdata)|将数据从数据对象传输到客户端。 数据描述中**FORMATETC**结构以及通过传输**STGMEDIUM**结构。|  
-|[IDataObjectImpl::GetDataHere](#getdatahere)|类似于`GetData`，只是客户端必须分配**STGMEDIUM**结构。 ATL 实现返回**E_NOTIMPL**。|  
-|[IDataObjectImpl::QueryGetData](#querygetdata)|确定数据对象是否支持特定**FORMATETC**传输数据的结构。 ATL 实现返回**E_NOTIMPL**。|  
-|[IDataObjectImpl::SetData](#setdata)|将数据从客户端传输到数据对象。 ATL 实现返回**E_NOTIMPL**。|  
+|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|创建要循环访问的枚举数`FORMATETC`数据对象支持的结构。 ATL 实现返回 E_NOTIMPL。|  
+|[IDataObjectImpl::FireDataChange](#firedatachange)|返回到每个通知接收器发送更改通知。|  
+|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|检索逻辑上等效`FORMATETC`为一个更复杂的结构。 ATL 实现返回 E_NOTIMPL。|  
+|[IDataObjectImpl::GetData](#getdata)|将数据从数据对象传输到客户端。 数据描述中`FORMATETC`结构，以及通过传输`STGMEDIUM`结构。|  
+|[IDataObjectImpl::GetDataHere](#getdatahere)|类似于`GetData`，但客户端必须分配`STGMEDIUM`结构。 ATL 实现返回 E_NOTIMPL。|  
+|[IDataObjectImpl::QueryGetData](#querygetdata)|确定数据对象是否支持特定`FORMATETC`传输数据的结构。 ATL 实现返回 E_NOTIMPL。|  
+|[IDataObjectImpl::SetData](#setdata)|将数据从客户端传输到数据对象。 ATL 实现返回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>备注  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)接口提供了用于支持统一数据传输方法。 `IDataObject` 使用标准格式结构[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)和[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)以检索和存储数据。  
+ [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)接口提供了方法，以支持统一数据传输。 `IDataObject` 使用标准格式结构[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)并[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)检索和存储数据。  
   
- `IDataObject` 此外管理连接来建议接收器，以处理数据更改通知。 为了使客户端接收此数据对象中的数据更改通知，在客户端必须实现[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)调用建议接收器对象接口。 当客户端然后调用**IDataObject::DAdvise**，数据对象和通知接收器之间建立的连接。  
+ `IDataObject` 此外可管理向建议接收器来处理数据更改通知的连接。 为了使客户端以接收此数据对象中的数据更改通知，客户端必须实现[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)上一个名为通知接收器对象的接口。 当客户端然后调用`IDataObject::DAdvise`，数据对象和通知接收器之间建立连接。  
   
- 类`IDataObjectImpl`提供的默认实现`IDataObject`并实现**IUnknown**信息发送给转储设备在调试生成。  
+ 类`IDataObjectImpl`提供的默认实现`IDataObject`并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -99,14 +100,14 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>备注  
- 这使通知接收器对象中接收的更改的通知。  
+ 这使通知接收器对象中接收的更改通知。  
   
- 若要终止连接，调用[DUnadvise](#dunadvise)。  
+ 若要终止的连接，调用[DUnadvise](#dunadvise)。  
   
  请参阅[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) Windows SDK 中。  
   
 ##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
- 终止通过以前建立的连接[DAdvise](#dadvise)。  
+ 终止先前通过建立的连接[DAdvise](#dadvise)。  
   
 ```
 HRESULT DUnadvise(DWORD dwConnection);
@@ -130,7 +131,7 @@ HRESULT DAdvise(
  请参阅[IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) Windows SDK 中。  
   
 ##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
- 创建一个枚举器循环访问**FORMATETC**数据对象支持的结构。  
+ 创建要循环访问的枚举数`FORMATETC`数据对象支持的结构。  
   
 ```
 HRESULT EnumFormatEtc(  
@@ -142,27 +143,27 @@ HRESULT EnumFormatEtc(
  请参阅[IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
- 将更改通知发送回当前管理每个通知接收器。  
+ 返回到当前管理的每个通知接收器发送更改通知。  
   
 ```
 HRESULT FireDataChange();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+ 标准的 HRESULT 值。  
   
 ##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
- 检索逻辑上等效**FORMATETC**为一个更复杂的结构。  
+ 检索逻辑上等效`FORMATETC`为一个更复杂的结构。  
   
 ```
 HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) Windows SDK 中。  
@@ -177,12 +178,12 @@ HRESULT GetData(
 ```  
   
 ### <a name="remarks"></a>备注  
- *PformatetcIn*参数必须指定的存储介质类型**TYMED_MFPICT**。  
+ *PformatetcIn*参数必须指定 TYMED_MFPICT 存储介质类型。  
   
  请参阅[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
 ##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
- 类似于`GetData`，只是客户端必须分配**STGMEDIUM**结构。  
+ 类似于`GetData`，但客户端必须分配`STGMEDIUM`结构。  
   
 ```
 HRESULT GetDataHere(
@@ -191,20 +192,20 @@ HRESULT GetDataHere(
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) Windows SDK 中。  
   
 ##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
- 确定数据对象是否支持特定**FORMATETC**传输数据的结构。  
+ 确定数据对象是否支持特定`FORMATETC`传输数据的结构。  
   
 ```
 HRESULT QueryGetData(FORMATETC* pformatetc);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) Windows SDK 中。  
@@ -220,7 +221,7 @@ HRESULT SetData(
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**E_NOTIMPL**。  
+ 返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
  请参阅[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK 中。  

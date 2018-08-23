@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorIterator 类 |Microsoft 文档
+title: Platform::Collections::VectorIterator 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,20 +11,21 @@ dev_langs:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af033a2e67885b35bb0f6341cb50f022efb14c53
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613038"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 类
-从 Windows 运行时 IVector 接口派生的对象提供标准模板库迭代器。  
+为从 Windows 运行时 IVector 接口派生的对象提供标准模板库迭代器。  
   
- VectorIterator 是存储的类型 VectorProxy 元素的代理迭代器\<T >。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ VectorIterator 是存储类型 VectorProxy 元素的代理迭代器\<T >。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +46,7 @@ class VectorIterator;
 |----------|-----------------|  
 |`difference_type`|指针差异 (ptrdiff_t)。|  
 |`iterator_category`|随机访问迭代器 (::std::random_access_iterator_tag) 的类别。|  
-|`pointer`|指向内部类型，Platform::Collections::Details::VectorProxy\<T >，即实现 VectorIterator 所需。|  
+|`pointer`|指向内部的类型，Platform::Collections::Details::VectorProxy\<T >，即实现 VectorIterator 所需。|  
 |`reference`|引用的内部类型，Platform::Collections::Details::VectorProxy\<T >、、，它是实现 VectorIterator 所需。|  
 |`value_type`|`T` 类型名称。|  
   
@@ -120,7 +121,7 @@ VectorIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>  Vectoriterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  Vectoriterator:: Operator\*运算符
 检索当前 VectorIterator 指定的元素的地址。  
   
 ### <a name="syntax"></a>语法  
@@ -285,7 +286,7 @@ difference_type operator-(const VectorIterator& other) const;
  另一 VectorIterator。  
   
 ### <a name="return-value"></a>返回值  
- 第一个运算符语法返回一个 VectorIterator 对象，它是`n`元素小于当前 VectorIterator。 第二个运算符语法返回介于当前之间的元素数与`other`VectorIterator。  
+ 第一个运算符语法返回一个 VectorIterator 对象，它是`n`元素小于当前 VectorIterator。 第二个运算符语法返回介于当前之间的元素数和`other`VectorIterator。  
   
 
 
@@ -396,7 +397,7 @@ explicit VectorIterator(
  IVector\<T > 对象。  
   
 ### <a name="remarks"></a>备注  
- 第一个语法示例是默认构造函数。 第二个语法示例是用于从 IVector 构造 VectorIterator 的显式构造函数\<T > 对象。  
+ 第一个语法示例是默认构造函数。 第二个语法示例是用来构造从 IVector VectorIterator 的显式构造函数\<T > 对象。  
   
 
 

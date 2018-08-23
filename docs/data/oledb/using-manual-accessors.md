@@ -1,5 +1,5 @@
 ---
-title: 使用手动访问器 |Microsoft 文档
+title: 使用手动访问器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee82a780690c6d5eba7b30debdc592a26ef2cbcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340859"
 ---
 # <a name="using-manual-accessors"></a>使用手动访问器
-有四个事项需要时处理未知的命令执行的操作：  
+有四件事情时处理未知的命令：  
   
 -   确定参数  
   
@@ -32,27 +33,27 @@ ms.lasthandoff: 05/04/2018
   
 -   确定输出列  
   
--   查看是否存在多个返回行集  
+-   查看是否有多个返回行集  
   
- 若要使用 OLE DB 使用者模板执行此操作，使用`CManualAccessor`类并按照以下步骤：  
+ 若要使用 OLE DB 使用者模板执行此操作，请使用`CManualAccessor`类，请执行以下步骤：  
   
-1.  打开`CCommand`对象`CManualAccessor`作为模板参数。  
+1.  打开`CCommand`对象与`CManualAccessor`作为模板参数。  
   
-    ```  
+    ```cpp  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  查询的会话**IDBSchemaRowset**接口，并使用过程参数行集。 如果**IDBSchemaRowset**接口不可用，查询`ICommandWithParameters`接口。 调用`GetParameterInfo`有关信息。 如果两个接口都可用，你可以假定没有参数。  
+2.  查询的会话`IDBSchemaRowset`接口，并使用过程参数行集。 如果`IDBSchemaRowset`接口不可用，查询`ICommandWithParameters`接口。 调用`GetParameterInfo`有关信息。 如果两个接口都可用，可以假定没有任何参数。  
   
-3.  对于每个参数，调用`AddParameterEntry`必须添加参数并设置它们。  
+3.  对于每个参数，调用`AddParameterEntry`以添加参数并将其设置。  
   
 4.  打开行集，但将绑定参数设置为**false**。  
   
 5.  调用`GetColumnInfo`检索输出列。 使用`AddBindEntry`向绑定添加输出列。  
   
-6.  调用`GetNextResult`以确定多个行集是否可用。 重复步骤 2 至 5。  
+6.  调用`GetNextResult`以确定多个行集是否可用。 重复步骤 2 到 5。  
   
- 手动访问器的示例，请参阅**CDBListView::CallProcedure**中[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)示例。  
+ 手动访问器的示例，请参阅`CDBListView::CallProcedure`中[DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例。  
   
 ## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

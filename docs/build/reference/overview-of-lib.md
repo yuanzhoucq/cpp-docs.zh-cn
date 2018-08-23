@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379193"
 ---
 # <a name="overview-of-lib"></a>LIB 概述
 LIB 创建标准库，导入库和导出的文件可与[链接](../../build/reference/linker-options.md)时生成程序。 从命令提示符运行 LIB。  

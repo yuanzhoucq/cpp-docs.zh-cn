@@ -1,5 +1,5 @@
 ---
-title: CAtlDllModuleT 类 |Microsoft 文档
+title: CAtlDllModuleT 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1ea8b5922454d32961f0e7d87eda16f55fe52c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86fae3c77f06ab7dd3fb2104eda928c1a72b8cc3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883539"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 类
-此类表示对 DLL 的模块。  
+此类表示对 dll 的模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,8 +42,8 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 你的类派生自`CAtlDllModuleT`。  
+ *T*  
+ 您的类派生自`CAtlDllModuleT`。  
   
 ## <a name="members"></a>成员  
   
@@ -60,14 +61,14 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|测试是否可以卸载 DLL。|  
 |[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|返回类工厂。|  
 |[CAtlDllModuleT::DllMain](#dllmain)|动态链接库 (DLL) 可选入口点。|  
-|[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|将条目添加到 DLL 中的对象在系统注册表。|  
-|[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|在 DLL 中的对象在系统注册表中删除条目。|  
+|[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|将条目添加到系统注册表的 DLL 中的对象。|  
+|[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|在 DLL 中的对象在系统注册表中移除项。|  
 |[CAtlDllModuleT::GetClassObject](#getclassobject)|返回类工厂。 通过调用[DllGetClassObject](#dllgetclassobject)。|  
   
 ## <a name="remarks"></a>备注  
- `CAtlDllModuleT` 表示一个动态链接库 (DLL) 的模块并提供使用 DLL 的所有项目的函数。 此专用化[CAtlModuleT](../../atl/reference/catlmodulet-class.md)类包括支持注册。  
+ `CAtlDllModuleT` 表示动态链接库 (DLL) 的模块，并提供使用 DLL 的所有项目的函数。 此专用化[CAtlModuleT](../../atl/reference/catlmodulet-class.md)类包括支持进行注册。  
   
- ATL 中的模块的详细信息，请参阅[ATL Module 类](../../atl/atl-module-classes.md)。  
+ 在 ATL 中的模块的详细信息，请参阅[ATL Module 类](../../atl/atl-module-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -103,7 +104,7 @@ HRESULT DllCanUnloadNow() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果它不能，返回如果 DLL 可以卸载，则为 S_OK 或 S_FALSE。  
+ 如果不能，返回如果 DLL 可以卸载，则为 S_OK 或 S_FALSE。  
   
 ##  <a name="dllgetclassobject"></a>  CAtlDllModuleT::DllGetClassObject  
  返回类工厂。  
@@ -116,17 +117,17 @@ HRESULT DllGetClassObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rclsid`  
- 要创建对象的 CLSID。  
+ *rclsid*  
+ 若要创建的对象的 CLSID。  
   
- `riid`  
+ *riid*  
  所请求的接口的 IID。  
   
- `ppv`  
- 指向由标识的接口指针的指针`riid`。 如果对象不支持此接口，`ppv`设置为 NULL。  
+ *ppv*  
+ 通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败的错误 HRESULT。  
+ 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ##  <a name="dllmain"></a>  CAtlDllModuleT::DllMain  
  动态链接库 (DLL) 可选入口点。  
@@ -136,45 +137,45 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwReason`  
- 如果设置为 DLL_PROCESS_ATTACH、 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知调用处于禁用状态。  
+ *dwReason*  
+ 如果设置为 DLL_PROCESS_ATTACH、 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知调用被禁用。  
   
- *lpReserved*  
+ *lpreserved，请将*  
  保留。  
   
 ### <a name="return-value"></a>返回值  
  始终返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 禁用 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 调用可以进行优化的有用具有许多 Dll 的多线程应用程序通知，，频繁创建和删除线程，并且是其 Dll 不需要的这些线程级别通知附件/分离。  
+ 禁用 DLL_THREAD_ATTACH 和 dll_thread_detach 发生时通知调用可以进行多线程应用程序具有许多 Dll 的一项实用优化的频繁地创建和删除线程，和是其 Dll 不需要的这些线程级别通知附件/分离。  
   
 ##  <a name="dllregisterserver"></a>  CAtlDllModuleT::DllRegisterServer  
- 将条目添加到 DLL 中的对象在系统注册表。  
+ 将条目添加到系统注册表的 DLL 中的对象。  
   
 ```
 HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `bRegTypeLib`  
- 如果类型库是要注册，则为 TRUE。 默认值为 TRUE。  
+ *bRegTypeLib*  
+ 如果类型库的注册，则为 TRUE。 默认值为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败的错误 HRESULT。  
+ 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ##  <a name="dllunregisterserver"></a>  CAtlDllModuleT::DllUnregisterServer  
- 在 DLL 中的对象在系统注册表中删除条目。  
+ 在 DLL 中的对象在系统注册表中移除项。  
   
 ```
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `bUnRegTypeLib`  
- 如果类型库是从注册表中删除，则为 TRUE。 默认值为 TRUE。  
+ *bUnRegTypeLib*  
+ 如果类型库，则若要从注册表中删除，则为 TRUE。 默认值为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败的错误 HRESULT。  
+ 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ##  <a name="getclassobject"></a>  CAtlDllModuleT::GetClassObject  
  创建指定的 CLSID 的对象。  
@@ -187,20 +188,20 @@ HRESULT GetClassObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rclsid`  
- 要创建对象的 CLSID。  
+ *rclsid*  
+ 若要创建的对象的 CLSID。  
   
- `riid`  
+ *riid*  
  所请求的接口的 IID。  
   
- `ppv`  
- 指向由标识的接口指针的指针`riid`。 如果对象不支持此接口，`ppv`设置为 NULL。  
+ *ppv*  
+ 通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败的错误 HRESULT。  
+ 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)和包含是为了向后兼容。  
+ 调用此方法[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)是为了向后兼容。  
   
 ## <a name="see-also"></a>请参阅  
  [CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)   

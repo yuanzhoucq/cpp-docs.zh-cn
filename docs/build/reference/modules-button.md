@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372238"
 ---
 # <a name="modules-button"></a>“模块”按钮
 单击**模块**按钮以打开**用于错误搜索的其他模块**对话框。 编辑框中输入所需的 EXE 或 DLL 的名称，然后单击**添加**在错误消息搜索中加入的模块。 通过突出显示它，然后单击从列表中移除该模块**删除**按钮。  

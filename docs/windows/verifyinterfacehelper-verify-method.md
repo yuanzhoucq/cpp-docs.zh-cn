@@ -1,5 +1,5 @@
 ---
-title: 'Verifyinterfacehelper:: Verify 方法 |Microsoft 文档'
+title: 'Verifyinterfacehelper:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f33935bcb042a961494f7da6d34a07b0aeda9af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580933"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify 方法
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>备注  
- 验证当前的模板参数指定的接口满足某些要求。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [VerifyInterfaceHelper 结构](../windows/verifyinterfacehelper-structure.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>备注
+
+验证当前的模板参数指定的接口满足某些要求。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[VerifyInterfaceHelper 结构](../windows/verifyinterfacehelper-structure.md)  
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

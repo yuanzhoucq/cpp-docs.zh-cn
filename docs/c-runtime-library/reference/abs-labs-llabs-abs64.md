@@ -46,11 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408123"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -75,27 +76,27 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>参数
 
-*n*<br/>
+*n*  
 数值。
 
 ## <a name="return-value"></a>返回值
 
-**Abs**，**实验室**， **llabs**和 **_abs64**函数返回参数的绝对值的数值*n*. 无错误返回。
+**Abs**，**实验室**， **llabs**并 **_abs64**函数返回参数的绝对值*n*. 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，你可以调用的重载**abs**采用并返回**长**，**长****长**， **float**， **double**，和**长** **double**值。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回 int。
+由于 c + + 允许重载，可以调用的重载**abs**采用并返回**长**，**长****长**， **float**，**双**，和**长** **double**值。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
 
-**Microsoft 专用**： 因为负数可以通过使用任何整数类型表示的整数的范围大于可以通过使用该类型表示的正整数的范围，就可以提供对这些自变量不能转换的函数。 如果绝对值的数值自变量不能由返回类型，表示**abs**函数返回自变量值保持不变。 具体而言，`abs(INT_MIN)`返回**INT_MIN**，`labs(LONG_MIN)`返回**LONG_MIN**，`llabs(LLONG_MIN)`返回**LLONG_MIN**，和`_abs64(_I64_MIN)`返回 **_I64_MIN**。 这意味着， **abs**函数不能用于保证是正数值。
+**特定于 Microsoft**： 可以使用任何整型表示的负整数的范围大于可使用该类型表示的正整数的范围，因为它是可以提供这些参数不能转换的函数。 如果自变量的绝对值无法由返回类型，表示**abs**函数返回参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着**abs**函数不能用于保证正值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的 C 标头|必需的 C++ 标头|
+|例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|-----------------------|---------------------------|
 |**abs**，**实验室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的重载的版本**abs** c + + 中必须包括\<t h > 标头。
+若要使用的重载的版本**abs** c + + 中必须包括\<cmath > 标头。
 
 ## <a name="example"></a>示例
 
@@ -156,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>请参阅
 
-[数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[数据转换](../../c-runtime-library/data-conversion.md)  
+[浮点支持](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

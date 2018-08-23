@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMapView 类 |Microsoft 文档
+title: Platform::Collections::UnorderedMapView 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,15 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613569"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -38,10 +39,10 @@ ref class UnorderedMapView sealed;
  键值对中值的类型。  
   
  `C`  
- 提供可比较两个键值是否相等的函数对象的类型。 默认情况下， [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
+ 提供可比较两个键值是否相等的函数对象的类型。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>备注  
- UnorderedMapView 是的具体 c + + 实现[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ UnorderedMapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成员  
   
@@ -84,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  指定映射视图中第一个元素的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMapView->First();`。  
+ 保留 first （） 返回的迭代器的简便方法是将返回值分配为使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMapView->First();`。  
   
 
 
@@ -99,7 +100,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>参数  
  `key`  
- 用于定位元素的键。 一种`key`名称*K*。  
+ 用于定位元素的键。 类型`key`是 typename *K*。  
   
 ### <a name="return-value"></a>返回值  
  如果找到该键，则为 `true`；否则为 `false`。  
@@ -117,15 +118,15 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>参数  
  `key`  
- 用于定位 UnorderedMapView 中的元素的键。 一种`key`名称*K*。  
+ 用于定位 UnorderedMapView 中的元素的键。 类型`key`是 typename *K*。  
   
 ### <a name="return-value"></a>返回值  
- 与 `key` 配对的值。 返回值的类型是 e *V*。  
+ 与 `key` 配对的值。 返回值的类型是 typename *V*。  
   
 
 
 ## <a name="size"></a>  UnorderedMapView::Size 方法
-返回的数目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的元素。  
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的元素。  
   
 ### <a name="syntax"></a>语法  
   
@@ -220,10 +221,10 @@ UnorderedMapView(
  UnorderedMapView 的类型名称。  
   
  `H`  
- 可以为键生成哈希值的函数对象。 默认为[std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)的类型，`std::hash`支持。  
+ 可以为键生成哈希值的函数对象。 默认情况下[std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)类型的`std::hash`支持。  
   
  `P`  
- 提供可比较两个键以确定其相等性的函数对象的类型。 默认为[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
+ 提供可比较两个键以确定其相等性的函数对象的类型。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
   
  `m`  
  引用或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std:: unordered_map](../standard-library/unordered-map-class.md)用于初始化 UnorderedMapView。  

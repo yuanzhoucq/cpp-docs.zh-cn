@@ -1,5 +1,5 @@
 ---
-title: -vd （禁用构造置换） |Microsoft 文档
+title: -vd （禁用构造置换） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605863"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd（禁用构造置换）
 ## <a name="syntax"></a>语法  
@@ -41,26 +42,26 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="arguments"></a>自变量  
  `0`  
- 取消 vtordisp 构造函数/析构函数置换成员。 选择此选项仅当你确信所有类的构造函数和析构函数都调用虚函数几乎。  
+ 禁止显示 vtordisp 构造函数/析构函数置换成员。 选择此选项仅当你确信所有类构造函数和析构函数都调用虚拟函数几乎。  
   
  `1`  
- 允许隐藏的 vtordisp 构造函数/析构函数置换成员的创建。 此选项是默认值。  
+ 启用隐藏的 vtordisp 构造函数/析构函数置换成员的创建。 选择此选项默认值。  
   
  `2`  
- 允许你使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)上正在构造的对象。 例如，dynamic_cast 从虚拟基类派生的类。  
+ 可以使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)上正在构造的对象。 例如，从虚拟基类到派生类的 dynamic_cast。  
   
- **/vd2**当具有虚拟基具有虚函数时添加一个 vtordisp 字段。 **/vd1**就足够了。 最常见情况 **/vd2**是必需的虚拟基中的唯一虚函数是析构函数时。  
+ **/ vd2**将 vtordisp 字段添加具有虚拟基具有虚函数时。 **/ vd1**应该是够用的。 最常见的情况 **/vd2**必须是虚拟基中唯一的虚拟函数是析构函数。  
   
 ## <a name="remarks"></a>备注  
  这些选项仅适用于使用虚拟基的 c + + 代码。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 在使用虚拟继承的情况下实现 c + + 构造置换支持。 构造置换解决造成时在虚拟基中声明并在派生类中重写的虚拟函数的问题，在进一步的派生类的构造过程中从构造函数调用。  
+ Visual c + + 中使用虚拟继承的情况下实现 c + + 构造置换支持。 构造置换解决问题创建的虚函数，在虚拟基中声明，派生类中重写时，在进一步的派生类的构造过程中从构造函数调用。  
   
- 问题是，可能不正确传递的虚函数`this`指针因此到虚拟置换之间的差异的基类的类及其派生类到置换。 解决方案提供的 vtordisp 字段中，调用类的每个虚拟基的单个构造偏移量调整。  
+ 问题在于，可能会不正确传递虚拟函数`this`指针作为结果的到虚拟置换之间的差异的基的类和派生类的位移。 该解决方案提供了为每个虚拟基的类调用的 vtordisp 字段中，单个构造置换调整。  
   
- 默认情况下，代码定义用户定义的构造函数和析构函数，并且还将重写虚拟基的虚函数时引入 vtordisp 字段。  
+ 默认情况下，代码定义了用户定义的构造函数和析构函数，并且还将重写虚函数的虚拟基时引入 vtordisp 字段。  
   
- 这些选项会影响整个源文件。 使用[vtordisp](../../preprocessor/vtordisp.md)禁止显示，然后再重新启用 vtordisp 字段基于类的类。  
+ 这些选项会影响整个源文件。 使用[vtordisp](../../preprocessor/vtordisp.md)禁止显示，然后重新启用 vtordisp 字段基于类的类。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

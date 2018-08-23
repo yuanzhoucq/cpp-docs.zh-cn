@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343918"
 ---
 # <a name="destroying-the-dialog-box"></a>销毁对话框
 有模式对话框通常在堆栈帧上创建和销毁创建它们在函数结束时。 当对象超出范围时，调用对话框对象的析构函数。  

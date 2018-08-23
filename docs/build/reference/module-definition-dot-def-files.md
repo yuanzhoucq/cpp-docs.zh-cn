@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374721"
 ---
 # <a name="module-definition-def-files"></a>模块定义 (.Def) 文件
 模块定义 (.def) 文件提供有关导出、 属性和有关要链接的程序的其他信息的信息链接器。 .Def 文件生成 DLL 时最有用。 由于没有[链接器选项](../../build/reference/linker-options.md)，可以使用而不是模块定义语句.def 文件，则通常不需要。 你还可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)作为一种方式指定导出的函数。  

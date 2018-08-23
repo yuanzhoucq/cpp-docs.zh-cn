@@ -1,5 +1,5 @@
 ---
-title: 支持使用 wmain |Microsoft 文档
+title: 支持使用 wmain |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,30 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b82b9f13da1b7c4884001fed5afce832147714
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604058"
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
-Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：  
+Visual c + + 支持定义**wmain**函数，并将宽字符自变量传递给 Unicode 应用程序。 您将形参声明为**wmain**，使用的格式类似于`main`。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：  
   
 ```  
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )  
 ```  
   
 > [!NOTE]
->  MFC Unicode 应用程序使用**wWinMain**作为入口点。 在这种情况下，`CWinApp::m_lpCmdLine`为 Unicode 字符串。 请务必设置**wWinMainCRTStartup**与[/ENTRY](../build/reference/entry-entry-point-symbol.md)链接器选项。  
+>  MFC Unicode 应用程序使用`wWinMain`作为入口点。 在这种情况下，`CWinApp::m_lpCmdLine`是 Unicode 字符串。 请务必设置`wWinMainCRTStartup`与[/ENTRY](../build/reference/entry-entry-point-symbol.md)链接器选项。  
   
- 如果程序使用 main 函数，则多字节字符环境由运行时库在程序启动时创建。 环境的宽字符副本仅在需要时创建（如调用 `_wgetenv` 或 `_wputenv` 函数时）。 在第一个调用`_wputenv`，或在首次调用上`_wgetenv`如果 MBCS 环境已存在，创建一个对应的宽字符字符串环境。 然后通过指向环境`_wenviron`全局变量，这是宽字符版本的`_environ`全局变量。 此时，两个副本 （MBCS 和 Unicode） 环境的同时存在，由程序的整个生存期的运行时系统维护。  
+ 如果程序使用`main`函数，则多字节字符环境由运行时库在程序启动时创建。 环境的宽字符副本仅在需要时创建（如调用 `_wgetenv` 或 `_wputenv` 函数时）。 在首次调用`_wputenv`，或在首次调用`_wgetenv`如果 MBCS 环境已存在，创建一个相应的宽字符字符串环境。 在环境并指向通过`_wenviron`全局变量是宽字符版本的`_environ`全局变量。 此时，两个副本 （MBCS 和 Unicode） 环境的同时存在，并由运行时系统的整个程序的生命期维护。  
   
- 同样，如果程序使用 wmain 函数，则在程序启动时创建宽字符环境并用 `_wenviron` 全局变量指向该环境。 在首次调用上创建 MBCS (ASCII) 环境`_putenv`或`getenv`和指向`_environ`全局变量。  
+ 同样，如果程序使用 wmain 函数，则在程序启动时创建宽字符环境并用 `_wenviron` 全局变量指向该环境。 在首次调用创建 MBCS (ASCII) 环境`_putenv`或`getenv`和指向`_environ`全局变量。  
   
 ## <a name="see-also"></a>请参阅  
  [有关 Unicode 的支持](../text/support-for-unicode.md)   

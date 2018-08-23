@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346176"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>对话框的生命周期
 对话框中的生命周期，用户调用该对话框、 通常内的命令处理程序创建并初始化的对话框对象，在用户交互的对话框中，和关闭该对话框。  

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Currentstatus 方法 |Microsoft 文档'
+title: 'Asyncbase:: Currentstatus 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b9a07fd88caa9db7f2f145069b0d8857b79fe9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f4d26f7e163707092f3d0bc8f981a02611a22
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603697"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus 方法
-检索当前的异步操作的状态。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-inline void CurrentStatus(  
-   Details::AsyncStatusInternal *status  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `status`  
- 此操作存储的当前状态的位置。  
-  
-## <a name="remarks"></a>备注  
- 此操作是线程安全的。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)   
- [AsyncStatusInternal 枚举](../windows/asyncstatusinternal-enumeration.md)
+
+检索当前的异步操作的状态。
+
+## <a name="syntax"></a>语法
+
+```cpp
+inline void CurrentStatus(
+   Details::AsyncStatusInternal *status
+);
+```
+
+### <a name="parameters"></a>参数
+
+*status*  
+此操作存储的当前状态的位置。
+
+## <a name="remarks"></a>备注
+
+此操作是线程安全的。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)  
+[AsyncStatusInternal 枚举](../windows/asyncstatusinternal-enumeration.md)

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353127"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>关于选择集合类的建议
 本文包含旨在帮助你选择满足特定应用程序需求的集合类的详细信息。  

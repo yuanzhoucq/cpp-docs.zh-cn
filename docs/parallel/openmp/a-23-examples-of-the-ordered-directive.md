@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692740"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23   ordered 指令的示例
 可以具有多个有序的部分`for`指定`ordered`子句。 第一个示例是不符合要求，因为指定以下 API:  

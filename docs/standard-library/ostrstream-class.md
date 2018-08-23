@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966572"
 ---
 # <a name="ostrstream-class"></a>ostrstream 类
 
@@ -76,7 +77,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>参数
 
-`_Freezeit` A `bool` ，该值指示你是否想要被冻结的流。
+*_Freezeit* A **bool** ，该值指示是否要冻结的流。
 
 ### <a name="remarks"></a>备注
 
@@ -84,7 +85,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>示例
 
-有关使用 **freeze** 的示例，请参阅 [strstream::freeze](../standard-library/strstreambuf-class.md#freeze)。
+请参阅[strstream:: freeze](../standard-library/strstreambuf-class.md#freeze)有关的示例，使用`freeze`。
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -100,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>参数
 
-`ptr` 缓冲区。
+*ptr*缓冲区。
 
-`count` 以字节为单位的缓冲区大小。
+*计数*以字节为单位的缓冲区的大小。
 
-`_Mode` 缓冲区输入和输出模式。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 缓冲区的输入和输出模式。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="remarks"></a>备注
 
-这两个构造函数均可通过调用 [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**)（其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 类的存储的对象）初始化基类。 第一个构造函数还可通过调用 `strstreambuf` 初始化 **sb**。 第二个构造函数以下列两种方式之一初始化基类：
+这两个构造函数通过调用初始化基类[ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**)，其中`sb`是类的存储的对象[strstreambuf](../standard-library/strstreambuf-class.md)。 第一个构造函数还可以初始化`sb`通过调用`strstreambuf`。 第二个构造函数以下列两种方式之一初始化基类：
 
-- 如果 `_Mode` & **ios_base::app**== 0，则 `ptr` 必须指定 `count` 元素数组的第一个元素，且构造函数调用 `strstreambuf`( `ptr`, `count`, `ptr`)。
+- 如果`_Mode`  &  **ios_base:: app**= = 0，然后`ptr`必须将指定的数组的第一个元素`count`元素以及构造函数调用`strstreambuf`(`ptr`， `count`, `ptr`).
 
-- 否则，`ptr` 必须指定包含 C 字符串（其第一个元素由 `ptr` 指定）的计数元素数组的第一个元素，且构造函数调用 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )。
+- 否则为`ptr`必须将指定的计数元素包含的数组的 C 字符串由指定的第一个元素的第一个元素`ptr`，并构造函数调用`strstreambuf`(`ptr`， `count`， `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -148,7 +149,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>备注
 
-此成员函数将**指针**类型的已存储流缓冲区的地址返回到 [strstreambuf](../standard-library/strstreambuf-class.md)。
+此成员函数返回类型的存储的流缓冲区的地址`pointer`到[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>示例
 
@@ -172,7 +173,7 @@ char *str();
 
 ### <a name="example"></a>示例
 
-有关使用 **str** 的示例，请参阅 [strstream::str](../standard-library/strstreambuf-class.md#str)。
+请参阅[strstream:: str](../standard-library/strstreambuf-class.md#str)有关的示例，使用`str`。
 
 ## <a name="see-also"></a>请参阅
 

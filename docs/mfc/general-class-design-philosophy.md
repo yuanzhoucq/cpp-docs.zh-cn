@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344358"
 ---
 # <a name="general-class-design-philosophy"></a>常规类设计理念
 Microsoft Windows 旨在长时间之前的 c + + 语言被广泛接受。 因为数千个应用程序使用 C 语言 Windows 应用程序编程接口 (API)，该接口将保持为可预见未来中。 因此必须基于过程的 C 语言 API 使用任何 c + + Windows 界面。 这可保证 c + + 应用程序将能够与 C 应用程序共存。  

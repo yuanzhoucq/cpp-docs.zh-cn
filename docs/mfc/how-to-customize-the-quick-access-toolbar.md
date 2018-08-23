@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349641"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自定义快速访问工具栏
 快速访问工具栏 (QAT) 是一个可自定义的工具栏，其中包含一组显示在“应用程序”按钮旁边或类别选项卡下面的命令。 下图显示了一个典型的快速访问工具栏。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>添加或移除快速访问工具栏上的命令  
   
-1.  在**属性**窗口中，单击**QAT 项**，然后单击省略号按钮**（...）**.  
+1.  在**属性**窗口中，单击**QAT 项**，然后单击省略号按钮 **（...）**.  
   
 2.  在**QAT 项编辑器**对话框中，使用**添加**和**删除**按钮可以修改的快速访问工具栏上的命令的列表。  
   

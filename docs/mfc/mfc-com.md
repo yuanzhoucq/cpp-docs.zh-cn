@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347768"
 ---
 # <a name="mfc-com"></a>MFC COM
 MFC 的子集旨在为支持 COM，虽然大多数的活动模板库 (ATL) 专为 COM 编程。 此部分的主题介绍 MFC 的支持的 com。  

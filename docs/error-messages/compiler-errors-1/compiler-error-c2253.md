@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33176387"
 ---
 # <a name="compiler-error-c2253"></a>编译器错误 C2253
 function： 纯说明符或抽象重写说明符仅允许对虚拟函数  

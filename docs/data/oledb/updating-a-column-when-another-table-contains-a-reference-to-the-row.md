@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102880"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>当另一个表包含行引用时更新列
 某些提供程序可以检测哪些列入行更改时，但许多提供程序不能。 因此，更新的列可以导致错误时尝试更新行的引用。 若要解决此问题，请创建包含你想要更改的列单独的访问器。 应传递到该访问器数`SetData`。  

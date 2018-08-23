@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695413"
 ---
 # <a name="a-examples"></a>答： 示例
 本文档中定义的构造的示例如下。 请注意，指令后的语句是复合仅在必要时，非复合语句相对于其前面的指令缩进。

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961586"
 ---
 # <a name="iscompound-class"></a>is_compound 类
 
@@ -36,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型谓词的实例为`false`如果的一种`Ty`是基本类型 (即，如果[is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 保存`true`); 否则为为`true`。 因此，如果 `Ty` 是数组类型、函数类型、指向 `void` 或对象、函数、引用、类、联合、枚举的指针或指向非静态类成员的指针或它们其中一个的*限定了 CV* 的形式，则谓词为 `true`。
+类型谓词的实例将保留**false**如果的类型*Ty*是一种基本类型 (即，如果[is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 保存**true**);否则，它存储 **，则返回 true**。 因此，谓词 **，则返回 true**如果*Ty*是数组类型、 函数类型、 指向**void**或对象或函数、 引用、 类、 联合、 枚举，或指向非静态类成员的指针或*限定了 cv*其中之一的窗体。
 
 ## <a name="example"></a>示例
 

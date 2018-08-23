@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954230"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 运算符
 
@@ -55,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-`left` 要测试不相等的对象之一。
+*左*测试是否不相等的对象之一。
 
-`right` 要测试不相等的对象之一。
+*右*测试是否不相等的对象之一。
 
-`Ty1` 由左侧共享指针控制的类型。
+*Ty1*由左侧控制的类型共享指针。
 
-`Ty2` 由右侧共享指针控制的类型。
+*Ty2*由权限控制的类型共享指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -153,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`left` 要测试相等的对象之一。
+*左*测试是否相等的对象之一。
 
-`right` 要测试相等的对象之一。
+*右*测试是否相等的对象之一。
 
-`Ty1` 由左侧共享指针控制的类型。
+*Ty1*由左侧控制的类型共享指针。
 
-`Ty2` 由右侧共享指针控制的类型。
+*Ty2*由权限控制的类型共享指针。
 
 ### <a name="return-value"></a>返回值
 
-如果对象相等，则为 `true`，如果对象不相等，则为 `false`。
+**true**对象是否相等，如果**false**如果对象不相等。
 
 ### <a name="remarks"></a>备注
 
 第一个模板运算符返回 true。 （所有默认分配器都相等。）
 
-第二个和第三个模板运算符返回 ` left.get() ==  right.get()`。
+第二个和第三个模板运算符返回 `left.get() ==  right.get()`。
 
 ### <a name="example"></a>示例
 
@@ -257,13 +258,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-`left` 要比较的对象之一。
+*左*的其中一个对象进行比较。
 
-`right` 要比较的对象之一。
+*右*的其中一个对象进行比较。
 
-`Ty1` 由左侧共享指针控制的类型。
+*Ty1*由左侧控制的类型共享指针。
 
-`Ty2` 由右侧共享指针控制的类型。
+*Ty2*由权限控制的类型共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -287,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-`left` 要比较的对象之一。
+*左*的其中一个对象进行比较。
 
-`right` 要比较的对象之一。
+*右*的其中一个对象进行比较。
 
-`Ty1` 由左侧指针控制的类型。
+*Ty1*由左侧指针控制的类型。
 
-`Ty2` 由右侧指针控制的类型。
+*Ty2*由右侧指针控制的类型。
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -313,13 +314,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-`left` 要比较的对象之一。
+*左*的其中一个对象进行比较。
 
-`right` 要比较的对象之一。
+*右*的其中一个对象进行比较。
 
-`Ty1` 由左侧共享指针控制的类型。
+*Ty1*由左侧控制的类型共享指针。
 
-`Ty2` 由右侧共享指针控制的类型。
+*Ty2*由权限控制的类型共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -343,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-`left` 要比较的对象之一。
+*左*的其中一个对象进行比较。
 
-`right` 要比较的对象之一。
+*右*的其中一个对象进行比较。
 
-`Ty1` 由左侧共享指针控制的类型。
+*Ty1*由左侧控制的类型共享指针。
 
-`Ty2` 由右侧共享指针控制的类型。
+*Ty2*由权限控制的类型共享指针。
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -363,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>参数
 
-`Elem` 流元素的类型。
+*Elem*流元素的类型。
 
-`Tr` 类型的流元素特征。
+*Tr*类型流元素特征。
 
-`Ty` 由共享指针控制的类型。
+*Ty*由共享指针控制的类型。
 
-`out` 输出流中。
+*out*输出流。
 
-`sp` 共享的指针。
+*sp*共享的指针。
 
 ### <a name="remarks"></a>备注
 

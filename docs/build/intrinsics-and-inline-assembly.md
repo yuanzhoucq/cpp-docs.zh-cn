@@ -1,5 +1,5 @@
 ---
-title: 内部和内联程序集 |Microsoft 文档
+title: 内部和内联程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b8651bea0b1ee9f54ec0af704d92feef0722368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2b99eedcdd81a96dc3091046a4f62ffe002509
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572530"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>内部和内联程序集
-约束之一[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]编译器是没有内联汇编程序支持。 这意味着，函数无法写入在 C 或 c + + 中将已作为子例程或内部函数编译器支持写入。 某些函数是敏感的性能，而有些则不是。 性能敏感的函数应作为内部函数实现。  
+一个编译器不是内联汇编程序支持 x64 的约束。 函数，这意味着不能编写 C 或 c + + 将必须编写为子例程或编译器支持的内部函数。 某些功能是敏感的性能，而有些则不然。 性能敏感的函数应作为内部函数实现。  
   
  编译器支持的内部函数中所述[编译器内部函数](../intrinsics/compiler-intrinsics.md)。  
   

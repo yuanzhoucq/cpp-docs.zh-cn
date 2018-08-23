@@ -1,5 +1,5 @@
 ---
-title: CPaintDC 类 |Microsoft 文档
+title: CPaintDC 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848910"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 类
 设备上下文类派生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -53,16 +54,16 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[CPaintDC::m_hWnd](#m_hwnd)|`HWND`此`CPaintDC`附加对象。|  
+|[CPaintDC::m_hWnd](#m_hwnd)|此 HWND`CPaintDC`附加对象。|  
   
 ## <a name="remarks"></a>备注  
- 它执行[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)在构造时和[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在析构时。  
+ 它将执行[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)在构造时并[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在析构时。  
   
- A`CPaintDC`对象仅可在时响应[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息时，通常在你`OnPaint`消息处理程序成员函数。  
+ 一个`CPaintDC`响应时，仅可以使用对象[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息，通常在您`OnPaint`消息处理程序成员函数。  
   
- 有关详细信息使用`CPaintDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。  
+ 有关使用的详细信息`CPaintDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,18 +76,18 @@ class CPaintDC : public CDC
  **标头:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
- 构造`CPaintDC`对象，为绘制，准备应用程序窗口，并将存储[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构[m_ps](#m_ps)成员变量。  
+ 构造`CPaintDC`对象，用于绘制，准备应用程序窗口，并将存储[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构[m_ps](#m_ps)成员变量。  
   
 ```  
 explicit CPaintDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
- 指向`CWnd`对象`CPaintDC`对象所属。  
+ *pWnd*  
+ 指向`CWnd`到对象`CPaintDC`所属对象。  
   
 ### <a name="remarks"></a>备注  
- 异常 (类型的`CResourceException`) 如果则会引发 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)调用将失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序竞争可用在任何给定时间在 Windows 下的五个常见显示上下文。  
+ 异常 (类型的`CResourceException`) 如果则会引发 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
@@ -99,27 +100,27 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_hWnd` 是一个受保护的类型变量`HWND`。  
+ *m_hWnd*是受保护的类型的变量的 HWND。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>  CPaintDC::m_ps  
- `m_ps` 是类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
+ `m_ps` 类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
   
 ```  
 PAINTSTRUCT m_ps;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 它是`PAINTSTRUCT`是传递给，可以通过填写[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)。  
+ 它是`PAINTSTRUCT`传递给且通过填写[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)。  
   
- `PAINTSTRUCT`包含应用程序使用绘制与关联的窗口的客户端区域的信息`CPaintDC`对象。  
+ `PAINTSTRUCT`包含应用程序用来绘制与关联的窗口的工作区信息`CPaintDC`对象。  
   
- 请注意，你可以访问的设备上下文句柄通过`PAINTSTRUCT`。 但是，你可以访问的句柄更直接通过`m_hDC`成员变量，`CPaintDC`继承自`CDC`。  
+ 请注意，您可以访问的设备上下文句柄通过`PAINTSTRUCT`。 但是，可以访问的句柄更直接地通过`m_hDC`成员变量的`CPaintDC`继承自 CDC。  
   
 ### <a name="example"></a>示例  
-  请参阅示例[CPaintDC::m_hWnd](#m_hwnd)。  
+  有关示例，请参阅[CPaintDC::m_hWnd](#m_hwnd)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   

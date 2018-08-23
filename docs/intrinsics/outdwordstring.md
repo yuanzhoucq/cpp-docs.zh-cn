@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring |Microsoft 文档
+title: __outdwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539558"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Microsoft 专用**  
   
- 生成`rep outsd`指令，这将发送`Count`双字数组开始`Buffer`出指定的 I/O 端口`Port`。  
+ 将生成`rep outsd`指令，将发送`Count`双字数组开始`Buffer`出指定的 I/O 端口`Port`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ void __outdwordstring(
   
 #### <a name="parameters"></a>参数  
  [in] `Port`  
- 要将数据发送到的端口。  
+ 要向其发送数据的端口。  
   
  [in] `Buffer`  
  指向要指定的端口发送的数据的指针。  
@@ -53,7 +54,7 @@ void __outdwordstring(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

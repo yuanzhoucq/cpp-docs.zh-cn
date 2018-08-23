@@ -1,5 +1,5 @@
 ---
-title: 特性上下文 |Microsoft 文档
+title: 特性上下文 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e220eb0e7eb80d01d70aed82e773c46fe6704c7d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600795"
 ---
 # <a name="attribute-contexts"></a>特性上下文
-可以使用四个基本字段描述 c + + 特性： 它们可以应用到的目标 (**适用于**)，如果它们是可重复的还是不 (**可重复**)，则需要其他特性 (是否存在**必需的属性**)，并与其他属性不兼容 (**无效的特性**)。 这些字段在每个属性的参考主题的相关表中列出。 下面描述了每个这些字段。  
+可以使用四个基本字段描述 c + + 特性： 它们可以应用到的目标 (**适用于**)，如果它们是可重复的还是不 (**Repeatable**)，则所需的其他属性 (存在**所需属性**)，并与其他属性的不兼容性 (**无效属性**)。 在每个属性的参考主题中的相关表中列出这些字段。 下面描述了每个字段。
   
-## <a name="applies-to"></a>适用于  
- 此字段描述是指定的属性的合法目标的不同 c + + 语言元素。 例如，如果属性中指定"类"**适用于**字段，这指示该属性可以只能应用于合法的 c + + 类。 如果该属性应用于类的成员函数，则会导致语法错误。  
+## <a name="applies-to"></a>适用于
+ 此字段描述了不同的 c + + 语言元素的指定属性的合法目标。 例如，如果属性中指定"的类"**适用于**字段中，这表示该属性可以仅应用于合法的 c + + 类。 如果该特性应用于类的成员函数，会产生语法错误。
   
- 有关详细信息，请参阅[按用法分的特性](../windows/attributes-by-usage.md)。  
+ 有关详细信息，请参阅[按使用情况的特性](../windows/attributes-by-usage.md)。
   
-## <a name="repeatable"></a>可重复  
- 此字段，指出是否该属性可以重复应用于相同的目标。 大部分属性不是可重复的。  
+## <a name="repeatable"></a>可重复
+ 此字段规定是否该属性可以重复应用于同一个目标。 属性的大多数都不是可重复。
   
-## <a name="required-attributes"></a>必需的特性  
- 此字段列出了需要其他特性存在指定的属性才能正常工作 （即，应用到相同目标）。 它是常见的属性以包含此字段的任何条目。  
+## <a name="required-attributes"></a>必需的特性
+ 此字段中列出了需要其他属性指定的属性才能正常运行 （即，应用到同一目标） 存在。 它是常见的一个属性以包含此字段的任何条目。
   
-## <a name="invalid-attributes"></a>无效的特性  
- 此字段会列出与指定的属性不兼容的其他特性。 它是常见的属性以包含此字段的任何条目。  
+## <a name="invalid-attributes"></a>无效的属性
+ 此字段中列出了与指定的特性不兼容的其他属性。 它是常见的一个属性以包含此字段的任何条目。
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
  [C++ 特性参考](../windows/cpp-attributes-reference.md)

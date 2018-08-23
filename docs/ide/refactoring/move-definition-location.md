@@ -1,5 +1,5 @@
 ---
-title: 移动定义位置 |Microsoft 文档
+title: 移动定义位置 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327835"
 ---
 # <a name="move-definition-location"></a>移动定义位置
-**新增功能：**允许您立即将函数定义移到相应的标头文件。
+功能：让你可以将函数定义立即移动到相应的头文件。
 
-**何时：**具有你想要将移到标头文件的函数。  
+时间：具有一个想要移动到头文件的函数时使用该功能。  
 
-**原因：**你无法手动移动函数，但此功能将会移动它自动，必要时创建的标头文件。
+原因：可以手动移动该函数，但此功能将自动移动函数，在必要时创建头文件。
 
 方法：
 
-1. 文本或鼠标光标置于想要移动的函数。
+1. 将文本或鼠标光标置于要移动的函数上。
 
    ![突出显示的代码](images/movedefinition_highlight.png)
 
 1. 接下来，执行以下操作之一：
    * **键盘**
-     * 按“Ctrl+.” 向触发器**快速操作和重构**菜单，然后选择**移动定义位置**从上下文菜单。
+     * 按“Ctrl+.” 触发“快速操作和重构”菜单，然后从快捷菜单选择“移动定义位置”。
    * **鼠标**
-     * 右键单击并选择**快速操作和重构**菜单，然后选择**移动定义位置**从上下文菜单。
+     * 右键单击并选择“快速操作和重构”菜单，然后从快捷菜单选择“移动定义位置”。
 
-1. 该函数将被移动到相应的头文件，你将看到在弹出窗口的预览窗口中。  如果标头文件不存在，将还会创建并放在项目中。
+1. 此函数随即被移动到相应的头文件中，你将在弹出预览窗口看到此内容。  如果头文件不存在，也将创建它并将其放置在项目中。
 
-   ![创建声明 / 定义导致](images/movedefinition_result.png)
+   ![“创建声明/定义”结果](images/movedefinition_result.png)

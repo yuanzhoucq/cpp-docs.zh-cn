@@ -1,5 +1,5 @@
 ---
-title: 提取数据 |Microsoft 文档
+title: 提取数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab03da7c303552a715c6766af7829e74025866ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339151"
 ---
 # <a name="fetching-data"></a>提取数据
-打开数据源、 会话和行集对象后，你可以提取数据。 根据你使用的访问器的类型，你可能需要将列绑定。  
+打开数据源、 会话和行集对象后，可以提取数据。 具体取决于正在使用的访问器的类型，可能需要将列绑定。  
   
-### <a name="to-fetch-data"></a>提取数据  
+### <a name="to-fetch-data"></a>若要提取的数据  
   
 1.  打开使用相应的行集**打开**命令。  
   
-2.  如果你使用`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要将绑定列，请调用`GetColumnInfo`，然后创建使用绑定，访问器，如下面的示例中所示：  
+2.  如果使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：  
   
-    ```  
+    ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
     // Get the column information  
     ULONG ulColumns       = 0;  
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/04/2018
     rs.Bind();  
     ```  
   
-3.  编写`while`循环来检索数据。 在循环中，调用`MoveNext`向前移动光标和测试，则为 S_OK，对返回的值，如下面的示例中所示：  
+3.  编写`while`循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：  
   
-    ```  
+    ```cpp  
     while (rs.MoveNext() == S_OK)  
     {  
         // Add code to fetch data here  
@@ -58,11 +59,11 @@ ms.lasthandoff: 05/04/2018
     }  
     ```  
   
-4.  在`while`循环中，你可以根据你的访问器类型提取数据。  
+4.  在`while`循环中，您可以根据你访问器的类型获取数据。  
   
-    -   如果你使用[CAccessor](../../data/oledb/caccessor-class.md)类，你应该具有包含数据成员的用户记录。 你可以访问使用这些数据成员，您的数据，如以下示例所示：  
+    -   如果您使用[CAccessor](../../data/oledb/caccessor-class.md)类，您应该具有一个包含数据成员的用户记录。 可以访问使用这些数据成员，您的数据，如下面的示例中所示：  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members directly. In this case, m_nFooID  
@@ -72,9 +73,9 @@ ms.lasthandoff: 05/04/2018
         }  
         ```  
   
-    -   如果你使用`CDynamicAccessor`或`CDynamicParameterAccessor`类，你可以通过使用访问函数提取数据`GetValue`和`GetColumn`，下面的示例中所示。 如果你想要确定数据的类型使用，请使用`GetType`。  
+    -   如果您使用`CDynamicAccessor`或`CDynamicParameterAccessor`类，就可以通过使用访问函数获取数据`GetValue`和`GetColumn`，如以下示例所示。 如果你想要确定的数据类型使用，请使用`GetType`。  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the dynamic accessor functions to retrieve your data.  
@@ -87,9 +88,9 @@ ms.lasthandoff: 05/04/2018
         }  
         ```  
   
-    -   如果你使用`CManualAccessor`，你必须指定你自己的数据成员，将它们绑定你自己，并直接访问它们，如下面的示例中所示：  
+    -   如果使用`CManualAccessor`，必须指定您自己的数据成员，将其绑定自己，并直接访问它们，如下面的示例中所示：  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members you specified in the calls to  

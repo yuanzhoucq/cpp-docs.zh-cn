@@ -1,5 +1,5 @@
 ---
-title: COleIPFrameWndEx 类 |Microsoft 文档
+title: COleIPFrameWndEx 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -104,15 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543106"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
-`COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须从 `COleIPFrameWndEx` 类派生应用程序的就地框架窗口类，而不是从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类派生。 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+`COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须从 `COleIPFrameWndEx` 类派生应用程序的就地框架窗口类，而不是从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类派生。 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。   
   
 ## <a name="syntax"></a>语法  
   
@@ -216,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
- [in] `bTail`  
+ [in]*pControlBar*  
+ [in]*bTail*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hdwp`  
+ [in]*hdwp*  
   
 ### <a name="remarks"></a>备注  
   
@@ -246,9 +246,9 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `nDockBarID`  
- [in] `lpRect`  
+ [in]*pBar*  
+ [in]*nDockBarID*  
+ [in]*lpRect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -262,17 +262,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- 指向要将停靠的窗格的指针。  
+ [in]*pBar*  
+ 指向要停靠的窗格的指针。  
   
- [in] `pLeftOf`  
+ [in]*pLeftOf*  
  指向用作源的窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
- 返回`TRUE`如果操作成功。 否则返回 `FALSE`。  
+ 如果操作成功，则返回 TRUE。 否则返回 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以停靠顺序预定义的多个窗格对象。 此方法由指定窗格停靠`pBar`左边的窗格中，指定`pLeftOf`。  
+ 调用此方法以停靠在预定义顺序中的多个窗格对象。 此方法将由指定的窗格停靠*pBar*指定的窗格的左侧*pLeftOf*。  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -282,7 +282,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -296,7 +296,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -316,27 +316,27 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
- [in] `uiCustomizeCmd`  
- [in] `strCustomizeLabel`  
- [in] `uiViewToolbarsMenuEntryID`  
- [in] `bContextMenuShowsToolbarsOnly`  
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in]*bEnable*  
+ [in]*uiCustomizeCmd*  
+ [in]*strCustomizeLabel*  
+ [in]*uiViewToolbarsMenuEntryID*  
+ [in]*bContextMenuShowsToolbarsOnly*  
+ [in]*bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup  
- 返回指向当前显示的弹出菜单的指针。  
+ 返回一个指向当前显示的弹出菜单。  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向活动的弹出菜单;否则为`NULL`。  
+ 一个指向活动的弹出菜单;否则为，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法用于获取指向[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)当前显示的对象。  
+ 使用此方法获取的指针[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)当前显示的对象。  
   
 ##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow  
 
@@ -350,7 +350,7 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId  
- 返回已的菜单资源 ID 指定时，框架窗口加载菜单。  
+ 返回时的菜单资源 ID 指定的框架窗口加载菜单时。  
   
 ```  
 UINT GetDefaultResId() const;  
@@ -360,7 +360,7 @@ UINT GetDefaultResId() const;
  如果框架窗口没有菜单栏，请返回菜单上，则为 0 的资源 ID。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数可检索的资源 ID 的指定当通过调用加载框架窗口的菜单资源`COleIPFrameWndEx::LoadFrame`。  
+ 调用此函数可检索时的资源 ID 指定的框架窗口时加载该菜单资源通过调用`COleIPFrameWndEx::LoadFrame`。  
   
 ##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame  
 
@@ -406,7 +406,7 @@ const CMFCMenuBar* GetMenuBar() const;
  指向菜单栏对象的指针。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数可检索指向所属的菜单栏对象的指针`COleIPFrameWndEx`对象。  
+ 使用此函数来检索指向菜单栏对象所属的`COleIPFrameWndEx`对象。  
   
 ##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane  
 
@@ -416,7 +416,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -433,7 +433,7 @@ const CObList& GetTearOffBars() const;
  对引用`CObList`对象，其中包含指向的指针的集合[CBasePane 类](../../mfc/reference/cbasepane-class.md)-派生的对象。  
   
 ### <a name="remarks"></a>备注  
- `COleIPFrameWndEx`对象保持作为列表的拖曳菜单集合[CBasePane 类](../../mfc/reference/cbasepane-class.md)-派生的对象。 使用此方法来检索到此列表的引用。  
+ `COleIPFrameWndEx`对象保持为一系列的拖曳菜单集合[CBasePane 类](../../mfc/reference/cbasepane-class.md)-派生的对象。 使用此方法来检索到此列表的引用。  
   
 ##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText  
  在显示按钮的工具提示之前由框架调用。  
@@ -445,20 +445,20 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
- 为该按钮的指针。  
+ [in]*pButton*  
+ 指向按钮。  
   
- [in] `strTTText`  
- 为工具提示文本的指针。  
+ [in]*strTTText*  
+ 显示工具提示文本的指针。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现返回 0。  
+ 默认实现将返回 0。  
   
 ### <a name="remarks"></a>备注  
- 重写此函数可自定义工具栏按钮上的工具提示的显示。  
+ 重写此函数可自定义工具栏按钮上的工具提示显示。  
   
 ##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars  
- 指定控件框架将分配给用户定义的工具栏的 Id 的范围。  
+ 指定一系列控件框架将分配给用户定义的工具栏的 Id。  
   
 ```  
 void InitUserToolbars(
@@ -468,17 +468,17 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszRegEntry`  
- 其中库存储用户工具栏设置注册表项。  
+ [in]*lpszRegEntry*  
+ 库在其中存储用户工具栏设置注册表项。  
   
- [in] `uiUserToolbarFirst`  
- 分配给第一个用户定义工具栏的控件 ID。  
+ [in]*uiUserToolbarFirst*  
+ 分配给第一个用户定义的工具栏的控件 ID。  
   
- [in] `uiUserToolbarLast`  
- 分配给最后一个用户定义工具栏的控件 ID。  
+ [in]*uiUserToolbarLast*  
+ 分配给最后一个用户定义的工具栏的控件 ID。  
   
 ### <a name="remarks"></a>备注  
- 此函数用于初始化分配给用户动态定义的工具栏的控件 Id 的范围。 参数`uiUserToolbarFirst`和`uiUserToolbarLast`定义允许的工具栏控件 Id 的范围。 若要禁用的用户定义的工具栏创建，设置`uiUserToolbarFirst`或`uiUserToolbarLast`为-1。  
+ 使用此函数来初始化的控件 Id 分配给用户动态定义的工具栏的范围。 参数*uiUserToolbarFirst*并*uiUserToolbarLast*定义允许的工具栏控件 Id 的范围。 若要禁用的用户定义的工具栏创建，请设置*uiUserToolbarFirst*或*uiUserToolbarLast*为-1。  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -491,16 +491,16 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in]*pControlBar*  
+ [in]*pTarget*  
+ [in]*bAfter*  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable  
- 确定指向菜单栏对象的指针是否不是 `NULL`  
+ 确定指向菜单栏对象的指针是否不为 NULL  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
@@ -510,7 +510,7 @@ BOOL IsMenuBarAvailable() const;
  如果框架窗口包含菜单栏; 返回非零值否则返回 0。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以确定是否框架窗口维护一个非`NULL`到其菜单栏对象的指针。  
+ 调用此方法以确定是否框架窗口保留指向其菜单栏对象的非 NULL 指针。  
   
 ##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite  
 
@@ -523,9 +523,9 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `dwBarAlignment`  
- [in] `bOuterEdge`  
+ [in]*点*  
+ [in]*dwBarAlignment*  
+ [in]*bOuterEdge*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -543,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIDResource`  
- [in] `dwDefaultStyle`  
- [in] `pParentWnd`  
- [in] `pContext`  
+ [in]*nIDResource*  
+ [in]*dwDefaultStyle*  
+ [in]*pParentWnd*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -560,7 +560,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDockablePane*`  
+ [in]*CDockablePane**  
   
 ### <a name="return-value"></a>返回值  
   
@@ -574,25 +574,25 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CPaneFrameWnd*`  
+ [in]*CPaneFrameWnd\**  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
- 当活动的弹出菜单处理时由框架调用`WM_DESTROY`消息。  
+ 当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuPopup`  
+ [in]*pMenuPopup*  
  指向弹出菜单对象的指针。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法以从接收通知`CMFCPopupMenu`对象时在处理`WM_DESTROY`消息。  
+ 重写此方法以接收来自通知`CMFCPopupMenu`对象时它们处理 WM_DESTROY 消息。  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -606,17 +606,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in]*nID*  
+ [in]*nCode*  
+ [in]*pExtra*  
+ [in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawmenuimage"></a>  COleIPFrameWndEx::OnDrawMenuImage  
- 绘制与菜单项关联的映像时，由框架调用。  
+ 绘制与菜单项关联的图像时由框架调用。  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -626,23 +626,23 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 指向设备上下文的指针。  
+ [in]*pDC*  
+ 指向设备上下文指针。  
   
- [in] `pMenuButton`  
- 指向菜单按钮的指针。  
+ [in]*pMenuButton*  
+ 指针，指向菜单按钮。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  与菜单项关联的图像。  
   
 ### <a name="return-value"></a>返回值  
  默认实现不执行任何操作，并返回 0。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法，如果你想要自定义映像为属于拥有的菜单栏的菜单项绘制`COleIPFrameWndEx`-派生对象。  
+ 重写此方法，如果你想要自定义图像属于拥有的菜单栏的菜单项绘制`COleIPFrameWndEx`-派生的对象。  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
- 由框架调用时[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)对象进程`WM_PAINT`消息。  
+ 当 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)对象处理 WM_PAINT 消息时由框架调用。  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -652,20 +652,20 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 指向设备上下文的指针。  
+ [in]*pDC*  
+ 指向设备上下文指针。  
   
- [in] `pMenu`  
+ [in]*pMenu*  
  对弹出菜单对象的指针。  
   
- [in] `rectLogo`  
+ [in]*rectLogo*  
  指向要显示的徽标。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法以显示在菜单栏归与关联的弹出菜单上的一个徽标`COleIPFrameWndEx`-派生对象。 默认实现不执行任何操作。  
+ 重写此方法以在菜单栏中拥有的与关联的弹出菜单上显示徽标`COleIPFrameWndEx`-派生的对象。 默认实现不执行任何操作。  
   
 ##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest  
- 由框架调用时[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象进程`WM_NCHITTEST`消息。  
+ 由框架调用时[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理 WM_NCHITTEST 消息。  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -675,13 +675,13 @@ virtual BOOL OnMenuButtonToolHitTest(
   
 ### <a name="parameters"></a>参数  
  [] in pButton  
- 指向菜单按钮的指针。  
+ 指向菜单按钮。  
   
  [] out pTI  
  指向 `TOOLINFO` 结构的指针。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现不执行任何操作，并返回 0。 您的实现应返回非零值，如果它已满`pTI`参数。  
+ 默认实现不执行任何操作，并返回 0。 您的实现应返回非零值，如果它已满*pTI*参数。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以提供有关特定菜单项的工具提示信息。  
@@ -694,7 +694,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFrame`  
+ [in]*pFrame*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -710,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bPreview`  
- [in] `pState`  
+ [in]*bPreview*  
+ [in]*pState*  
   
 ### <a name="remarks"></a>备注  
   
@@ -725,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuPane`  
- [in] `uiToolbarID`  
+ [in]*pMenuPane*  
+ [in]*uiToolbarID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -740,7 +740,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -754,14 +754,14 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `[in] pMenuPopup`  
- 指向要显示的弹出菜单的指针。  
+ [in]*pMenuPopup*  
+ 指向要显示的弹出菜单。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现不执行任何操作，并返回一个非零值。 您的实现应返回`FALSE`无法显示弹出菜单。  
+ 默认实现不执行任何操作，并返回一个非零值。 如果不能显示弹出菜单，您的实现应返回 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法以自定义的弹出菜单显示。 例如，你无法将菜单按钮更改为颜色菜单按钮或初始化拖曳栏。  
+ 重写此方法以自定义显示内容的弹出菜单。 例如，无法更改为颜色菜单按钮的菜单按钮，或初始化拖曳栏。  
   
 ##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu  
  当用户选择具有拖曳栏的菜单时由框架调用。  
@@ -773,14 +773,14 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuPopup`  
+ [in]*pMenuPopup*  
  指向用户选择的弹出菜单的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向承载菜单的窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果你想要激活弹出菜单; 的框架否则为`FALSE`。 默认值为 `TRUE`。  
+ 如果您想让框架以激活弹出菜单; 则为 TRUE否则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义拖曳栏的安装程序，重写此函数。  
@@ -803,11 +803,11 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bExactBar`  
- [in] `pRTCBarType`  
- [in] `dwAlignment`  
+ [in]*点*  
+ [in]*nSensitivity*  
+ [in]*bExactBar*  
+ [in]*pRTCBarType*  
+ [in]*dwAlignment*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -821,7 +821,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -835,7 +835,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bNotify`  
+ [in]*bNotify*  
   
 ### <a name="remarks"></a>备注  
   
@@ -852,27 +852,27 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
- [in] `bDestroy`  
- [in] `bAdjustLayout`  
- [in] `bAutoHide`  
- [in] `pBarReplacement`  
+ [in]*pControlBar*  
+ [in]*bDestroy*  
+ [in]*bAdjustLayout*  
+ [in]*bAutoHide*  
+ [in]*pBarReplacement*  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setdockstate"></a>  COleIPFrameWndEx::SetDockState  
- 将指定的停靠状态应用到属于框架窗口的窗格。  
+ 指定的停靠状态应用于属于框架窗口的窗格。  
   
 ```  
 void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `state`  
- 指定的停靠状态。  
+ [in]*状态*  
+ 指定的插接状态。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数可指定属于的窗格的新停靠状态`COleIPFrameWndEx`对象。  
+ 使用此函数指定的新的停靠状态的窗格，其中属于`COleIPFrameWndEx`对象。  
   
 ##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu  
  通过搜索虚拟项并将其替换为指定的用户定义项修改工具栏对象。  
@@ -885,13 +885,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `menu`  
- 对引用[CMenu](../../mfc/reference/cmenu-class.md)要修改的对象。  
+ [in]*菜单*  
+ 对引用[CMenu](../../mfc/reference/cmenu-class.md)要修改对象。  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in]*uiViewUserToolbarCmdFirst*  
  指定用户定义的第一个命令。  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in]*uiViewUserToolbarCmdLast*  
  指定用户定义的最后一个命令。  
   
 ### <a name="remarks"></a>备注  
@@ -908,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in]*pBar*  
+ [in]*bShow*  
+ [in]*bDelay*  
+ [in]*bActivate*  
   
 ### <a name="remarks"></a>备注  
   
@@ -926,15 +926,15 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>参数  
  [in] dwData  
- 根据由 `nCmd`指定的帮助类型的要求指定数据。  
+ 指定所需的帮助由指定类型的数据*nCmd*。  
   
- [in] `nCmd`  
- 指定请求的帮助的类型。 有关可能值的列表和这些值是如何影响 `dwData` 参数的相关信息，请参阅 Windows SDK 中的 [WinHelp 函数](http://msdn.microsoft.com/library/windows/desktop/bb762267) 。  
+ [in]*nCmd*  
+ 指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp 函数](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)   
  [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)

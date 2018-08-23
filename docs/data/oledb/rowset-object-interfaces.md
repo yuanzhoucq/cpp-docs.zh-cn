@@ -1,5 +1,5 @@
 ---
-title: 行集合对象接口 |Microsoft 文档
+title: 行集对象接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,43 +19,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aaed092d0a67c80852216b6342d32820c7028c4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572446"
 ---
 # <a name="rowset-object-interfaces"></a>行集合对象接口
-下表显示由 OLE DB 行集对象定义的必需和可选接口。  
+下表显示了由 OLE DB 行集对象定义的必需和可选接口。  
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)|强制|是|  
-|[IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|强制|是|  
-|[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)|强制|是|  
-|[IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)|强制|是|  
-|[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|强制|是|  
-|[IChapteredRowset](https://msdn.microsoft.com/en-us/library/ms718180.aspx)|Optional|否|  
-|[IColumnsInfo2](https://msdn.microsoft.com/en-us/library/ms712953.aspx)|Optional|否|  
-|[IColumnsRowset](https://msdn.microsoft.com/en-us/library/ms722657.aspx)|Optional|否|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|强制|是|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|强制|是|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|强制|是|  
+|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|强制|是|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|强制|是|  
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|否|  
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|否|  
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|否|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|是 （通过 ATL)|  
-|[IDBAsynchStatus](https://msdn.microsoft.com/en-us/library/ms709832.aspx)|Optional|否|  
-|[IGetRow](https://msdn.microsoft.com/en-us/library/ms718047.aspx)|Optional|否|  
-|[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)|Optional|是|  
-|[IRowsetChapterMember](https://msdn.microsoft.com/en-us/library/ms725430.aspx)|Optional|否|  
-|[IRowsetCurrentIndex](https://msdn.microsoft.com/en-us/library/ms709700.aspx)|Optional|否|  
-|[IRowsetFind](https://msdn.microsoft.com/en-us/library/ms724221.aspx)|Optional|否|  
-|[IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx)|可选 （但对于级别 0 提供程序为必需）|是|  
-|[IRowsetIndex](https://msdn.microsoft.com/en-us/library/ms719604.aspx)|Optional|否|  
-|[IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)|Optional|是|  
-|[IRowsetRefresh](https://msdn.microsoft.com/en-us/library/ms714892.aspx)|Optional|否|  
-|[IRowsetScroll](https://msdn.microsoft.com/en-us/library/ms712984.aspx)|Optional|否|  
-|[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)|Optional|是|  
-|[IRowsetView](https://msdn.microsoft.com/en-us/library/ms709755.aspx)|Optional|否|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|是|  
-|[IRowsetBookmark](https://msdn.microsoft.com/en-us/library/ms714246.aspx)|Optional|否|  
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|否|  
+|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|否|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|是|  
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|否|  
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|否|  
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|否|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|可选 （但对于级别 0 提供程序为必需）|是|  
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|否|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|是|  
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|否|  
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|否|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|是|  
+|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|否|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|是|  
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|否|  
   
- 向导生成行集对象实现`IAccessor`， `IRowset`，和`IRowsetInfo`通过继承。 `IAccessorImpl`将这两个输出列绑定。 `IRowset`接口处理提取行和数据。 `IRowsetInfo`接口处理的行集属性。  
+ 该向导生成行集对象实现`IAccessor`， `IRowset`，和`IRowsetInfo`通过继承。 `IAccessorImpl`将这两个输出的列。 `IRowset`接口处理提取行和数据。 `IRowsetInfo`接口处理行集属性。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

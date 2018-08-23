@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368000"
 ---
 # <a name="macros-and-nmake"></a>宏和 NMAKE
 宏将生成文件中的特定字符串替换为另一个字符串。 使用宏，你可以：  

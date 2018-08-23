@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405777"
 ---
 # <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="declaring-events"></a>声明事件
 
-在事件源类中，使用[__event](../cpp/event.md)方法声明来声明为事件的方法上的关键字。 请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。 本机事件可以是带有零个或多个参数的方法。 返回类型可以是 void 或任何整型。  
+在事件源类中，使用[__event](../cpp/event.md)关键字来声明为事件的方法在方法声明。 请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。 本机事件可以是带有零个或多个参数的方法。 返回类型可以是 void 或任何整型。  
   
 ## <a name="defining-event-handlers"></a>定义事件处理程序
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="hooking-event-handlers-to-events"></a>将事件处理程序挂钩到事件  
 
-此外在事件接收器类中，使用内部函数[__hook](../cpp/hook.md)若要将事件与事件处理程序关联和[__unhook](../cpp/unhook.md)取消事件与事件处理程序。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
+此外在事件接收器类中，使用内部函数[__hook](../cpp/hook.md)若要将事件与事件处理程序相关联并[__unhook](../cpp/unhook.md)取消事件与事件处理程序。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
   
 ## <a name="firing-events"></a>激发事件  
 
@@ -98,6 +99,4 @@ MyHandler1 was called with value 123.
 ```  
   
 ## <a name="see-also"></a>请参阅
-
-[事件处理](../cpp/event-handling.md)  
-
+ [事件处理](../cpp/event-handling.md)  

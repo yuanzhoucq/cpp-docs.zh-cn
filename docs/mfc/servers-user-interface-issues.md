@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379666"
 ---
 # <a name="servers-user-interface-issues"></a>服务器：用户界面问题
 服务器应用程序的一些功能必须添加到用户界面才能向容器应用程序提供 OLE 项。 在菜单和需要添加到服务器应用程序的其他资源的进一步信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。  

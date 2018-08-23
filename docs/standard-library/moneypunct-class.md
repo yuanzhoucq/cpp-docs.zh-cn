@@ -56,15 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957504"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
-此模板类描述一个对象来充当区域设置 facet，以便描述用来表示货币输入字段或货币输出字段的 `CharType` 类序列。 如果模板参数 `Intl` 为 `true`，则遵守国际约定。
+此模板类描述一个对象来充当区域设置 facet，以便描述类型的序列*CharType*用来表示货币输入的字段或货币输出字段。 如果模板参数*Intl*是*true*，则遵守国际约定。
 
 ## <a name="syntax"></a>语法
 
@@ -75,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 用于在程序内的字符进行编码的类型。
+*CharType*在程序中用于对字符进行编码的类型。
 
-`Intl` 一个标志，指定是否要遵守国际约定。
+*Intl*标志，指定是否要遵守国际约定。
 
 ## <a name="remarks"></a>备注
 
 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。
 
-常量静态对象 intl 用于存储模板参数 **Intl** 的值。
+常量静态对象 intl 用于存储模板参数 *Intl* 的值。
 
 ### <a name="constructors"></a>构造函数
 
@@ -284,7 +285,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅 [grouping](#grouping) 的示例，其中虚拟成员函数由 **grouping** 调用。
+有关示例，请参阅[分组](#grouping)，其中虚拟成员函数由调用`grouping`。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -296,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 **pattern::field** 的四个元素中的每一个都可以具有以下值：
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 每个四个元素的`pattern::field`可以具有值：
 
-- **none** - 用于匹配零个或多个空格，或不生成任何内容。
+- `none` 若要匹配零个或多个空格，或不生成任何内容。
 
-- **sign** - 用于匹配或生成正负号。
+- `sign` 用于匹配或生成正负号。
 
-- **space** - 用于匹配零个或多个空格，或生成空格。
+- `space` 用于匹配零个或多个空格，或生成空格。
 
-- **symbol** - 用于匹配或生成货币符号。
+- `symbol` 用于匹配或生成货币符号。
 
-- **value** - 用于匹配或生成货币值。
+- `value` 用于匹配或生成货币值。
 
-生成货币输出字段组件和匹配货币输入字段组件都以这些元素在 **pattern::field** 中的显示的顺序进行。 每个值 **sign**、**symbol**、**value**、**none** 或 **space** 必须出现一次。 值 **none** 不能第一个出现。 值 **space** 不能第一个或最后一个出现。 如果 **Intl** 为 true，则顺序为 **symbol**、**sign**、**none**，然后是 **value**。
+生成货币输出字段组件和这些元素中出现的顺序匹配货币输入字段组件`pattern::field`。 每个值`sign`， `symbol`， `value`，并将`none`或`space`必须出现一次。 值`none`不能出现第一个。 值 **space** 不能第一个或最后一个出现。 如果`Intl`为 true，顺序`symbol`， `sign`， `none`，然后`value`。
 
 `moneypunct`\< **CharType**, **Intl**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -530,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 

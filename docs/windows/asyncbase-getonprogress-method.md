@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Getonprogress 方法 |Microsoft 文档'
+title: 'Asyncbase:: Getonprogress 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5439e1c17b7ad654d44fad575ba51b9ebc4095bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592251"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress 方法
-将当前进度事件处理程序的地址复制到指定的变量。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-STDMETHOD(  
-   GetOnProgress  
-)(TProgress** progressHandler);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `progressHandler`  
- 存储当前进度事件处理程序的地址的位置。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+将当前进度事件处理程序的地址复制到指定的变量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+STDMETHOD(
+   GetOnProgress
+)(TProgress** progressHandler);
+```
+
+### <a name="parameters"></a>参数
+
+*progressHandler*  
+存储当前进度事件处理程序的地址的位置。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054089"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 将标记内的条件块备用块的开头。  

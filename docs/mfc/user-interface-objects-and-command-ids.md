@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385594"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>用户界面对象和命令 ID
 菜单项、工具栏按钮和快捷键是能够生成命令的“用户界面对象”。 每个此类用户界面对象都有一个 ID。 您可通过为用户界面对象和命令分配同一 ID 来将它们关联。 中所述[消息](../mfc/messages.md)，命令作为特殊消息实现。 下面的图“Framework 中的命令”演示了框架如何管理命令。 当用户界面对象生成某个命令（如 `ID_EDIT_CLEAR_ALL`）时，应用程序中的对象之一将处理命令 - 在下图中，将通过文档的消息映射调用文档对象的 `OnEditClearAll`。  

@@ -1,5 +1,5 @@
 ---
-title: 重试-除非语句 |Microsoft 文档
+title: 请尝试-除非语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02d2f75a9abbba44bd1900e2410ff73cf75cbb72
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466294"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="remarks"></a>备注
 
-**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言，使目标应用程序能够获得控制正常终止程序执行的事件发生时。 此类事件称为*异常*，和处理异常的机制称为*结构化异常处理*(SEH)。
+**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言，使目标应用程序能够获得控制正常终止程序执行的事件发生时。 此类事件称为*异常*，并处理异常的机制称为*结构化异常处理*(SEH)。
 
 有关相关信息，请参阅[try-finally 语句](../cpp/try-finally-statement.md)。
 
@@ -68,37 +69,37 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 > 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
 
-在 `__try` 子句后的复合语句是主体或受保护节。 在 `__except` 子句后的复合语句是异常处理程序。 处理程序指定在执行受保护节的主体时引发了异常的情况下要执行的一组操作。 执行过程如下所示：
+后的复合语句 **__try**子句是主体或受保护的节。 后的复合语句 **__except**子句是异常处理程序。 处理程序指定在执行受保护节的主体时引发了异常的情况下要执行的一组操作。 执行过程如下所示：
 
 1. 执行受保护节。
 
-2. 如果在受保护节执行过程中未发生异常，则继续执行 `__except` 子句之后的语句。  
+2. 如果在受保护节执行过程中不发生任何异常，则继续执行之后的语句 **__except**子句。  
 
-3. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用， `__except` *表达式*(调用*筛选器*表达式) 计算和值确定如何处理异常。 有三个值：
+3. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用的 **__except** *表达式*(称为*筛选器*表达式)进行评估，值将确定异常的处理方式。 有三个值：
 
-   **EXCEPTION_CONTINUE_EXECUTION (-1)** 异常已消除。 从出现异常的点继续执行。
+   EXCEPTION_CONTINUE_EXECUTION (-1) 异常已消除。 从出现异常的点继续执行。
 
-   **EXCEPTION_CONTINUE_SEARCH (0)** 无法识别异常。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   EXCEPTION_CONTINUE_SEARCH (0) 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
 
-   **EXCEPTION_EXECUTE_HANDLER (1)** 识别异常。 通过执行 `__except` 复合语句将控制权传输到异常处理程序，然后在 `__except` 块之后继续执行。
+   EXCEPTION_EXECUTE_HANDLER (1) 异常可识别。 将控件传输到异常处理程序，通过执行 **__except**复合语句，然后继续执行后的 **__except**块。
 
-由于 `__except` 表达式将作为 C 表达式来计算，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
+因为 **__except**作为 C 表达式计算表达式，它被限制为单个值、 条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
 每个应用程序都可以有各自的异常处理程序。
 
-跳转到 `__try` 语句是无效的，但是，跳出这样一个语句是有效的。 如果在执行终止进程，不调用异常处理程序**重-除**语句。  
+它不是有效的跳转到 **__try**语句，但有效跳出。 如果在执行会终止进程不调用异常处理程序**试用-除**语句。  
   
 有关详细信息，请参阅知识库文章 Q315937：“如何：捕获 Visual C++ 应用程序中的堆栈溢出”。  
   
 ## <a name="the-leave-keyword"></a>__leave 关键字
 
-`__leave`关键字是有效的受保护节中仅**重-除**语句和其效果是跳转到受保护节的结尾处。 将继续执行异常处理程序后的第一个语句。
+**__Leave**关键字是仅在受保护节的有效**试用-除**语句和其效果是跳转到受保护部分的结尾。 将继续执行异常处理程序后的第一个语句。
 
-A`goto`语句还可以跳出受保护的部分中，并且它不降低性能中的一样**的 try-finally**语句因为堆栈展开不会发生。 但是，建议使用 `__leave` 关键字而不是 `goto` 语句，这样在受保护节很大或者很复杂的情况下出现编程错误的可能性小一些。
+一个**goto**语句也可以跳出受保护节，它不会不会降低性能中的一样**的 try-finally**语句由于堆栈展开不会出现。 但是，我们建议你使用 **__leave**关键字而非**goto**语句由于您不太可能进行编程错误，如果受保护的节很大或很复杂。
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>结构化异常处理内部函数
 
-结构化的异常处理提供了可供使用的两个内部函数**重-除**语句：`GetExceptionCode`和`GetExceptionInformation`。
+结构化的异常处理提供了两个可用于内部函数**试用-除**语句：`GetExceptionCode`和`GetExceptionInformation`。
 
 `GetExceptionCode` 返回异常的代码 （32 位整数）。
 
@@ -111,13 +112,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-将指针类型`PEXCEPTION_RECORD`和`PCONTEXT`包含文件中定义\<winnt.h >，和`_EXCEPTION_RECORD`和`_CONTEXT`包含文件中定义\<excpt.h >
+指针类型`PEXCEPTION_RECORD`并`PCONTEXT`在包含文件中定义\<winnt.h 中的 >，和`_EXCEPTION_RECORD`并`_CONTEXT`包含文件中定义\<excpt.h >
 
-你可以使用`GetExceptionCode`在异常处理程序。 但是，你可以使用`GetExceptionInformation`只能在异常筛选器表达式。 它指向的信息通常位于堆栈上，并且这些信息在控制权转交给异常处理程序之后不再可用。
+可以使用`GetExceptionCode`在异常处理程序。 但是，可以使用`GetExceptionInformation`仅在异常筛选器表达式中。 它指向的信息通常位于堆栈上，并且这些信息在控制权转交给异常处理程序之后不再可用。
 
-内部函数`AbnormalTermination`终止处理程序内可用。 如果将返回 0 的正文**的 try-finally**语句将按顺序终止。 在所有其他情况下，它将返回 1。
+内部函数`AbnormalTermination`终止处理程序中可用。 如果将返回 0 的正文**的 try-finally**语句按顺序终止。 在所有其他情况下，它将返回 1。
 
-excpt.h 定义为这些内部函数一些替代名称：
+excpt.h 定义这些内部函数的一些替代名称：
 
 `GetExceptionCode` 等效于 `_exception_code`
 
@@ -177,7 +178,7 @@ int main()
   
 ## <a name="output"></a>输出  
   
-```  
+```Output 
 hello  
 in try  
 in try  
@@ -192,7 +193,6 @@ world
 **结束 Microsoft 专用**  
 
 ## <a name="see-also"></a>请参阅
-
-[编写异常处理程序](../cpp/writing-an-exception-handler.md)   
-[结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
-[关键字](../cpp/keywords-cpp.md)
+ [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
+ [结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
+ [关键字](../cpp/keywords-cpp.md)

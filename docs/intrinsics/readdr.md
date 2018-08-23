@@ -1,5 +1,5 @@
 ---
-title: __readdr |Microsoft 文档
+title: __readdr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538594"
 ---
 # <a name="readdr"></a>__readdr
 读取指定的调试寄存器的值。  
@@ -40,13 +41,13 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
  指定的调试寄存器的值。  
   
 ## <a name="remarks"></a>备注  
- 这些内部函数仅在内核模式下适用而例程只能用作内部函数。  
+ 这些内部函数仅在内核模式中可用，例程只能用作内部函数。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345776"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>框架如何搜索消息映射
 框架搜索的匹配项与传入的消息的消息映射表。 一旦您编写了所需的类来处理，并编写相应的处理每条消息的消息映射条目，框架会自动调用处理程序。 以下主题说明了消息映射搜索：  

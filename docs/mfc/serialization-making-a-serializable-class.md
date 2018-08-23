@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b8e52750f6f4589f90048e248305b2f0f5b4855
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953069"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：定义可序列化的类
 使类可序列化所需的五个主要步骤。 下面列出了这些步骤，后续章节中对它们进行了说明：  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/04/2018
  你还可以使用[carchive:: Read](../mfc/reference/carchive-class.md#read)和[carchive:: Write](../mfc/reference/carchive-class.md#write)成员函数来读取和写入大量的非类型化数据。  
   
 ##  <a name="_core_using_the_declare_serial_macro"></a> 使用 DECLARE_SERIAL 宏  
- 声明支持序列化的类需要 `DECLARE_SERIAL` 宏，如下所示：  
+ DECLARE_SERIAL 宏要求将支持序列化的类声明中，如下所示：  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
@@ -80,18 +81,18 @@ ms.lasthandoff: 05/04/2018
  此构造函数可声明为公共、受保护或私有。 如果您使它成为受保护或私有构造函数，您就帮助确保了它只会由序列化函数使用。 构造函数必须将对象设为允许它在必要时删除的状态。  
   
 > [!NOTE]
->  如果忘记在使用 `DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL` 宏的类中定义没有参数的构造函数，您将在使用 `IMPLEMENT_SERIAL` 宏的行上获得“没有默认构造函数可用”编译器警告。  
+>  如果你忘记了使用 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 宏的类中定义不带任何参数的构造函数，你将使用 IMPLEMENT_SERIAL 宏的位置的行上获得"没有默认构造函数可用"编译器警告。  
   
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> 在实现文件中使用 IMPLEMENT_SERIAL 宏  
- `IMPLEMENT_SERIAL` 宏用于定义从 `CObject` 派生可序列化类时所需的各种功能。 您为您的类在实现文件 (.cpp) 中使用此宏。 此宏的前两个自变量是类的名称和其直接基类的名称。  
+ IMPLEMENT_SERIAL 宏用于定义需要派生时从可序列化类的各种函数`CObject`。 您为您的类在实现文件 (.cpp) 中使用此宏。 此宏的前两个自变量是类的名称和其直接基类的名称。  
   
  该宏的第三个自变量是一个架构数字。 架构数字本质上是类的对象的版本号。 请对架构数字使用大于或等于 0 的整数值。 （不要将此架构数字与数据库术语混淆。）  
   
  MFC 序列化代码在将对象读入内存时检查架构数字。 如果磁盘上的对象的架构数字与内存中的架构数字不匹配，库将引发 `CArchiveException`，这会阻止您的程序读取不正确的版本的对象。  
   
- 如果你想你`Serialize`成员函数能够读取多个版本 — 也就是说，用不同版本的应用程序编写的文件-你可以使用的值**VERSIONABLE_SCHEMA**的自变量作为`IMPLEMENT_SERIAL`宏。 有关用法信息和示例，请参阅类 `GetObjectSchema` 的 `CArchive` 成员函数。  
+ 如果你想你`Serialize`成员函数能够读取多个版本 — 也就是说，用不同版本的应用程序编写的文件-你可以使用的值*VERSIONABLE_SCHEMA*作为 IMPLEMENT_SERIAL 的自变量宏。 有关用法信息和示例，请参阅类 `GetObjectSchema` 的 `CArchive` 成员函数。  
   
- 以下示例演示如何为派生自 `IMPLEMENT_SERIAL` 的类 `CPerson` 使用 `CObject`：  
+ 下面的示例演示如何为类，使用 IMPLEMENT_SERIAL `CPerson`，即派生自`CObject`:  
   
  [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   

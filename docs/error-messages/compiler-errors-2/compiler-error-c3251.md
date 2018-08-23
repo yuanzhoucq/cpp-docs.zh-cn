@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250119"
 ---
 # <a name="compiler-error-c3251"></a>编译器错误 C3251
 无法调用在数值类型实例上的基类方法  

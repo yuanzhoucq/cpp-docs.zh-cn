@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229061"
 ---
 # <a name="compiler-error-c2541"></a>编译器错误 C2541
 'delete': 删除： 无法删除不是指针的对象  

@@ -28,11 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959227"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 类
 
@@ -110,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-`Lck` A`mutex`任何类型的对象。
+*一个 Lck* A`mutex`任何类型的对象。
 
-`Pred` 返回的任何表达式`true`或`false`。
+*Pred*返回的任何表达式**true**或**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -139,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>参数
 
-`Lck` A`mutex`任何类型的对象。
+*一个 Lck* A`mutex`任何类型的对象。
 
-`Rel_time` A`chrono::duration`对象，它指定线程之前的时间量唤醒。
+*Rel_time* A`chrono::duration`对象，它指定之前在线程的时间量唤醒。
 
-`Pred` 返回的任何表达式`true`或`false`。
+*Pred*返回的任何表达式**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果在已用 `Rel_time` 时间时等待终止，则第一种方法返回 `cv_status::timeout`。 否则，该方法将返回 `cv_status::no_timeout`。
+第一种方法返回`cv_status::timeout`如果时等待终止*Rel_time*已过。 否则，该方法将返回 `cv_status::no_timeout`。
 
-第二种方法返回值 `Pred`。
+第二种方法返回的值*Pred*。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable_any` 对象发出信号，或直到已用 `Rel_time` 时间间隔。 它还可错误唤醒。
+第一种方法进行阻止，直到`condition_variable_any`对象通过调用发出信号[notify_one](../standard-library/condition-variable-class.md#notify_one)或[notify_all](../standard-library/condition-variable-class.md#notify_all)，或直到时间间隔*Rel_time*已过。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -191,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>参数
 
-`Lck` Mutex 对象。
+*一个 Lck* mutex 对象。
 
-`Abs_time` A [chrono::](../standard-library/time-point-class.md)对象。
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)对象。
 
-`Pred` 返回的任何表达式`true`或`false`。
+*Pred*返回的任何表达式**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果在已用 `Abs_time` 时间时等待终止，则返回 `cv_status` 类型的方法返回 `cv_status::timeout`。 否则，方法返回 `cv_status::no_timeout`。
+返回的方法`cv_status`键入返回`cv_status::timeout`如果时等待终止*Abs_time*结束。 否则，方法返回 `cv_status::no_timeout`。
 
-返回 `bool` 的方法返回值 `Pred`。
+返回的方法`bool`返回的值*Pred*。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable` 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。
+第一种方法进行阻止，直到`condition_variable`对象通过调用发出信号[notify_one](../standard-library/condition-variable-class.md#notify_one)或[notify_all](../standard-library/condition-variable-class.md#notify_all)，或直到*Abs_time*。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 

@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929739"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 许可支持，ActiveX 控件的一个可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的授权问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
  实现授权的 ActiveX 控件允许您，作为控件开发人员，以确定其他人使用 ActiveX 控件的方式。 与该控件提供控件购买者和。许可证文件，与购买者可以但不是发布该控件，该协议。具有使用控件的应用程序的许可证文件。 这样可以防止编写新的应用程序无需第一个授权控件从你使用的控件，该应用程序的用户。  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> 授权的 ActiveX 控件概述  
- 为 ActiveX 控件，提供许可支持[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)类提供多个函数的实现**IClassFactory2**接口： **IClassFactory2:: RequestLicKey**， **IClassFactory2::GetLicInfo**，和**IClassFactory2::CreateInstanceLic**。 当容器应用程序开发人员发出请求以创建该控件，调用的实例`GetLicInfo`进行验证的控件。许可证文件存在。 如果控件授予许可，则可以创建控件的实例，并将其放在容器中。 开发人员已完成构造容器应用程序后，另一个函数调用，此时间`RequestLicKey`，进行。 此函数将返回到容器应用程序的许可密钥 （简单字符字符串）。 然后将其应用程序中嵌入则返回的键。  
+ 为 ActiveX 控件，提供许可支持[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)类提供多个函数的实现`IClassFactory2`接口： `IClassFactory2::RequestLicKey`， `IClassFactory2::GetLicInfo`，和`IClassFactory2::CreateInstanceLic`。 当容器应用程序开发人员发出请求以创建该控件，调用的实例`GetLicInfo`进行验证的控件。许可证文件存在。 如果控件授予许可，则可以创建控件的实例，并将其放在容器中。 开发人员已完成构造容器应用程序后，另一个函数调用，此时间`RequestLicKey`，进行。 此函数将返回到容器应用程序的许可密钥 （简单字符字符串）。 然后将其应用程序中嵌入则返回的键。  
   
  下图演示在容器应用程序的开发期间将使用的 ActiveX 控件的许可证验证。 如前所述，容器应用程序开发人员必须已将正确。若要创建的控件实例的开发计算机上安装的许可证文件。  
   
@@ -78,15 +79,15 @@ ms.lasthandoff: 05/04/2018
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     验证控件通过检查系统中存在的控件许可证文件的允许设计时使用。 处理过程中由框架调用此函数**IClassFactory2::GetLicInfo**和**IClassFactory::CreateInstanceLic**。  
+     验证控件通过检查系统中存在的控件许可证文件的允许设计时使用。 处理过程中由框架调用此函数`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     从控件 DLL 请求的唯一键。 此密钥嵌入到容器应用程序，并结合使用更高版本， `VerifyLicenseKey`，若要创建的控件实例。 处理过程中由框架调用此函数**IClassFactory2::RequestLicKey**。  
+     从控件 DLL 请求的唯一键。 此密钥嵌入到容器应用程序，并结合使用更高版本， `VerifyLicenseKey`，若要创建的控件实例。 处理过程中由框架调用此函数`IClassFactory2::RequestLicKey`。  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     验证嵌入的键和控件的唯一键相同。 这样，要创建它的使用控件的实例的容器。 处理过程中由框架调用此函数**IClassFactory2::CreateInstanceLic**并且可以重写提供的许可证密钥的自定义的验证。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义的 ActiveX 控件许可](#_core_customizing_the_licensing_of_an_activex_control)，本文稍后的。  
+     验证嵌入的键和控件的唯一键相同。 这样，要创建它的使用控件的实例的容器。 处理过程中由框架调用此函数`IClassFactory2::CreateInstanceLic`并且可以重写提供的许可证密钥的自定义的验证。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义的 ActiveX 控件许可](#_core_customizing_the_licensing_of_an_activex_control)，本文稍后的。  
   
 ###  <a name="_core_header_file_modifications"></a> 标头文件修改  
  ActiveX 控件向导将下面的代码放在控件头文件。 在此示例中，两个成员函数的`CSampleCtrl`的对象`factory`声明，另一个验证控件的状态。许可证文件和另一个用于检索要在包含控件的应用程序中使用的许可证密钥：  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/04/2018
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  如果你修改**szLicString**以任何方式，还必须修改控件中的第一行。许可证文件或授权将无法正常工作。  
+>  如果你修改`szLicString`以任何方式，还必须修改控件中的第一行。许可证文件或授权将无法正常工作。  
   
  ActiveX 控件向导将以下代码放在控件实现文件中定义的控件类的`VerifyUserLicense`和`GetLicenseKey`函数：  
   

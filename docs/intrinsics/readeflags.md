@@ -1,5 +1,5 @@
 ---
-title: __readeflags |Microsoft 文档
+title: __readeflags |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539197"
 ---
 # <a name="readeflags"></a>__readeflags
 读取程序状态和控制 (EFLAGS) 注册。  
@@ -33,16 +34,16 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>返回值  
- EFLAGS 寄存器的值。 返回值为 32 位长时间在 32 位平台上和 64 位长时间在 64 位平台上。  
+ EFLAGS 寄存器的值。 返回值为 32 位长时间在 32 位平台上和 64 位的 64 位平台上长时间。  
   
 ## <a name="remarks"></a>备注  
- 这些例程只能用作内部函数不可用。  
+ 这些例程只能用作内部函数可使用。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112636"
 ---
 # <a name="declaration-of-a-managed-class-type"></a>托管类类型的声明
 声明托管扩展中更改 c + + 为 Visual c + + 引用类类型的方法。  

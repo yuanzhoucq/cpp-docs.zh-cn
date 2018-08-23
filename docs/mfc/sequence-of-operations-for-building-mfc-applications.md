@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383804"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>用于生成 MFC 应用程序的操作顺序
 下表说明您开发 MFC 应用程序时通常应遵循的一般顺序。  

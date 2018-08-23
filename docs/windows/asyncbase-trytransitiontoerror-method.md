@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft 文档'
+title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1244b87410a09996d946408ff77dbb552b339c85
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591149"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError 方法
-指示指定的错误代码是否可以修改的内部错误状态。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-bool TryTransitionToError(  
-   const HRESULT error  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `error`  
- HRESULT 错误。  
-  
-## <a name="return-value"></a>返回值  
- `true` 如果内部错误状态发生了更改;否则为`false`。  
-  
-## <a name="remarks"></a>备注  
- 此操作修改的错误状态，仅当错误状态已设置为，则为 S_OK。 如果错误状态已为错误，取消、 完成或已关闭，则此操作无效。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+指示指定的错误代码是否可以修改的内部错误状态。
+
+## <a name="syntax"></a>语法
+
+```cpp
+bool TryTransitionToError(
+   const HRESULT error
+);
+```
+
+### <a name="parameters"></a>参数
+
+*error*  
+错误的 HRESULT。
+
+## <a name="return-value"></a>返回值
+
+**true**内部错误状态已更改; 否则为如果**false**。
+
+## <a name="remarks"></a>备注
+
+仅当错误状态已设置为，则为 S_OK，则此操作修改的错误状态。 如果错误状态已经是错误，已取消、 已完成，或已关闭，则此操作无效。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)

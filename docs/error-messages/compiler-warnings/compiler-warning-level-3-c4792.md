@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292095"
 ---
 # <a name="compiler-warning-level-3-c4792"></a>编译器警告（等级 3）C4792
 函数“function”使用 sysimport 声明并从本机代码引用；需要链接导入库  

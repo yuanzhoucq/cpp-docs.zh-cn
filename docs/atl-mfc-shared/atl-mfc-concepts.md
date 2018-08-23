@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354536"
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 概念
 本部分提供概念性和基于任务的主题来帮助你计划使用活动模板库 (ATL) 和 Microsoft 基础类 (MFC) 库之间共享的类。  

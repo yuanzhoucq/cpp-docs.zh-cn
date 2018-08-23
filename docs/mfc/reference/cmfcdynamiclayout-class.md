@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042360"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 类
 指定窗口中的控件如何随着用户重设窗口大小而移动和重设大小。  
@@ -74,7 +75,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>嵌套类型  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Movesettings 结构](#movesettings_structure)|封装动态布局中控件的移动数据。|  
 |[Cmfcdynamiclayout:: Sizesettings 结构](#sizesettings_structure)|封装动态布局中控件的大小更改数据。|  
@@ -104,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hwnd`  
+ *hwnd*  
  要添加的窗口句柄。  
   
- `nID`  
+ *nID*  
  要添加的子控件 ID。  
   
- `moveSettings`  
+ *moveSettings*  
  描述控件如何随窗口大小的更改而移动的结构。  
   
- `sizeSettings`  
+ *sizeSettings*  
  描述控件如何随窗口大小的更改而调整大小的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -140,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- pHostWnd  
+ *pHostWnd*  
  指向主机窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -182,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  函数返回后，此参数将包含布局区域的边框。 这是一个 out 参数；输入的值将被覆盖。  
   
 ### <a name="remarks"></a>备注  
@@ -195,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hwnd`  
+ *hwnd*  
  控件的窗口句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -225,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>参数  
- `pHostWnd`  
+ *pHostWnd*  
  指向主机窗口的指针。  
   
- `lpResource`  
+ *lpResource*  
  指向包含 AFX_DIALOG_LAYOUT 资源的缓冲区的指针。  
   
- `dwSize`  
+ *dwSize*  
  缓冲区大小（以字节为单位）。  
   
 ### <a name="return-value"></a>返回值  
@@ -247,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRatio`  
+ *nRatio*  
  以百分比形式定义在用户调整承载窗口大小时水平移动子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
@@ -263,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nXRatio`  
+ *nXRatio*  
  以百分比形式定义在用户调整承载窗口大小时水平移动子控件的距离。  
   
- `nYRatio`  
+ *nYRatio*  
  以百分比形式定义在用户调整承载窗口大小时垂直移动子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
@@ -335,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRatio`  
+ *nRatio*  
  以百分比形式定义在用户调整承载窗口大小时垂直移动子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
@@ -351,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>参数  
- `size`  
+ *size*  
  所需大小，低于此大小则不调整布局。  
   
 ### <a name="remarks"></a>备注  
@@ -365,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRatio`  
+ *nRatio*  
  以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
@@ -381,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nXRatio`  
+ *nXRatio*  
  以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。  
   
- `nYRatio`  
+ *nYRatio*  
  以百分比形式定义在用户调整承载窗口大小时垂直调整子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
@@ -452,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRatio`  
+ *nRatio*  
  以百分比形式定义在用户调整承载窗口大小时垂直调整子控件的距离。  
   
 ### <a name="return-value"></a>返回值  

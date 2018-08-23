@@ -1,5 +1,5 @@
 ---
-title: 文本和字符串在 Visual c + + |Microsoft 文档
+title: 文本和字符串在 Visual c + + |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,31 +30,32 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610709"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文本和字符串
-开发国际市场的应用程序的一个重要方面是适当地表示的本地字符集。 ASCII 字符集在 0x00 到 0x7F 范围内定义字符。 有其他字符集，主要是欧洲字符集，于 ASCII 字符集相同定义中的范围 0x00 到 0x7F 的字符和还定义为扩展的字符设置为从 0x80 到 0xFF。 因此，一个 8 位、 单字节字符的集 (SBCS) 足以表示 ASCII 字符集，以及许多欧洲语言的字符集。 但是，一些非欧洲字符集，如日本汉字包括许多更多的字符不是单字节编码方案可以表示，并因此需要多字节字符集 (MBCS) 编码。  
+开发适用于国际市场的应用程序的一个重要方面是足够有代表性的本地字符集。 ASCII 字符集在 0x00 到 0x7F 范围内定义字符。 有其他字符集，主要是欧洲的相同定义 0x00 到 0x7F 范围内的字符到 ASCII 字符集，还可定义一个设置为从 0x80 到 0xFF 的扩展的字符。 因此，一个 8 位的单字节字符的集 (SBCS) 足以表示 ASCII 字符集以及许多欧洲语言的字符集。 但是，一些非欧洲语言的字符集，如日本汉字包括很多更多的字符不是单字节编码方案可表示，，因此需要使用多字节字符集 (MBCS) 编码。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)  
- 讨论为 Unicode 和 MBCS 编程的 Visual c + + 支持。  
+ 讨论对 Unicode 和 MBCS 编程的 Visual c + + 支持。  
   
  [支持 Unicode](../text/support-for-unicode.md)  
- 描述 Unicode，它支持所有字符集，包括字符不能表示单字节的规范。  
+ 介绍 Unicode，支持所有字符集，包括字符不能表示单字节的规范。  
   
- [多字节字符集 (MBCS) 的支持](../text/support-for-multibyte-character-sets-mbcss.md)  
- 讨论 MBCS，以支持字符集，如日语和中文，不能表示单字节 Unicode 的替代方法。  
+ [对多字节字符集 (MBCS) 的支持](../text/support-for-multibyte-character-sets-mbcss.md)  
+ 讨论 MBCS 到 Unicode 支持的字符集，如日语和中文，不能以单个字节表示的替代方法。  
   
  [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)  
- 提供多种数据类型、 例程和其他对象的特定于 Microsoft 的一般文本映射。  
+ 为多种数据类型、 例程和其他对象提供特定于 Microsoft 的一般文本映射。  
   
  [如何：在各种字符串类型之间进行转换](../text/how-to-convert-between-various-string-types.md)  
  演示如何将各种 Visual c + + 字符串类型转换为其他字符串。  
@@ -63,8 +64,8 @@ ms.lasthandoff: 05/08/2018
  [国际化](../c-runtime-library/internationalization.md)  
  讨论 C 运行时库中的国际支持。  
   
- [国际示例](http://msdn.microsoft.com/en-us/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
- 提供指向演示 Visual c + + 中的国际化的示例。  
+ [国际示例](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ 提供指向演示 Visual c + + 中的国际化示例。  
   
  [语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
- 提供的 C 运行时库中的语言和国家/地区字符串。
+ 提供了 C 运行时库中的语言和国家/地区字符串。

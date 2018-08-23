@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130498"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>如何：使用 for each 循环访问数组
 本主题演示如何使用[对于每一个，在](../dotnet/for-each-in.md)上不同类型的数组的关键字。  

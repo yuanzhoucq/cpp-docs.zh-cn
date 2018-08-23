@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451636"
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +70,16 @@ void *_realloc_dbg(
 请求重新分配的块类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指向已请求的源文件名**realloc**操作或 NULL。
+指向已请求的源文件名**realloc**操作或**NULL**。
 
 *linenumber*<br/>
-源文件中的行数其中**realloc**操作已请求或 NULL。
+源文件中的行数其中**realloc**请求操作或**NULL**。
 
 *Filename*和*linenumber*参数才可用 **_realloc_dbg**显式调用或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)已定义预处理器常量。
 
 ## <a name="return-value"></a>返回值
 
-成功完成时，此函数将返回指向重新分配的内存块的用户部分的指针、调用新处理程序函数，或者返回 NULL。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [realloc](realloc.md) 函数。
+在成功完成，此函数返回指向重新分配的内存块的用户部分的指针、 调用新处理程序函数，或者返回**NULL**。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [realloc](realloc.md) 函数。
 
 ## <a name="remarks"></a>备注
 

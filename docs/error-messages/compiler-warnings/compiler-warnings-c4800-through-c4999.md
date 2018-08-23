@@ -1,6 +1,6 @@
 ---
 title: 编译器警告 C4800 通过 C5999 |Microsoft 文档
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322327"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800 通过 C5999
 
@@ -242,10 +243,11 @@ ms.lasthandoff: 05/04/2018
 |编译器警告 C5035|使用的功能*功能*将导致函数*函数*编译为访客代码|
 |编译器警告 （等级 1） C5036|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type2*|
 |编译器警告 （错误） C5037|*成员函数*： 类模板的成员的超行定义不能具有默认自变量|
-|[编译器警告 C5038](c5038.md)|数据成员*member1*将数据成员后初始化*member2*|
-|编译器警告 C5039|*函数*： 指针或对可能引发函数引用传递给下-EHc extern C 函数。 如果此函数将引发异常，则可能出现未定义的行为。|
-|编译器警告 C5040|动态异常规范是有效的仅在 C + + 14 及更早版本;将视为 noexcept （false）|
-|编译器警告 C5041|*定义*: constexpr 静态数据成员的超行定义，则不需要而且在 C + + 17 中已弃用|
-|编译器警告 C5042|*声明*： 在块范围的函数声明不能指定为内联，在标准 c + +; 中删除内联说明符|
-|编译器警告 C5043|*规范*： 异常规范与前面的声明不匹配|
-|编译器警告 C5044|命令行选项的自变量*选项*指向路径*路径*不存在|
+|[编译器警告 （等级 4） C5038](c5038.md)|数据成员*member1*将数据成员后初始化*member2*|
+|编译器警告 （等级 4） C5039|*函数*： 指针或对可能引发函数引用传递给下-EHc extern C 函数。 如果此函数将引发异常，则可能出现未定义的行为。|
+|编译器警告 （等级 3） C5040|动态异常规范是有效的仅在 C + + 14 及更早版本;将视为 noexcept （false）|
+|编译器警告 （等级 1） C5041|*定义*: constexpr 静态数据成员的超行定义，则不需要而且在 C + + 17 中已弃用|
+|编译器警告 （等级 3） C5042|*声明*： 在块范围的函数声明不能指定为内联，在标准 c + +; 中删除内联说明符|
+|编译器警告 （等级 2） C5043|*规范*： 异常规范与前面的声明不匹配|
+|编译器警告 （等级 4） C5044|命令行选项的自变量*选项*指向路径*路径*不存在|
+|[编译器警告 C5045](c5045.md)|为内存负载如果 /Qspectre 切换指定，编译器将插入 Spectre 缓解|

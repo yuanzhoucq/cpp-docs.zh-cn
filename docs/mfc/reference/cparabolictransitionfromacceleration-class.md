@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078890"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 类
 封装抛物线加速转换。  
@@ -87,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblFinalValue`  
+ *dblFinalValue*  
  在转换结束动画变量的值。  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  在转换结束动画变量的速度。  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  在转换期间动画变量的加速。  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -106,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  指向转换库，它是负责创建的标准转换的指针。  
   
 ### <a name="return-value"></a>返回值  

@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954671"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 类
 实现可对大小对象的维度进行动画处理的大小对象功能。  
@@ -85,7 +86,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|封装的动画变量表示动画大小的宽度。|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|封装的动画变量表示动画大小的高度。|  
@@ -113,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCXTransition`  
+ *pCXTransition*  
  指向宽度的转换的指针。  
   
- `pCYTransition`  
+ *pCYTransition*  
  指向高度的转换的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -137,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- `szDefault`  
+ *szDefault*  
  指定默认大小。  
   
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  指定用户定义的数据。  
   
 ### <a name="remarks"></a>备注  
@@ -162,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  当函数返回时，它包含指向表示的宽度和高度的两个 CAnimationVariable 对象的指针。  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -212,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `szValue`  
+ *szValue*  
  输出。 此方法返回时包含的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -256,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `szSrc`  
+ *szSrc*  
  指 CSize 或大小。  
   
 ### <a name="remarks"></a>备注  
@@ -270,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>参数  
- `szDefault`  
+ *szDefault*  
  指定新的默认大小。  
   
 ### <a name="remarks"></a>备注  

@@ -1,5 +1,5 @@
 ---
-title: 关系函数模板 |Microsoft 文档
+title: 关系函数模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3147ae06e4deedf48415b4ae605e524458343c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96fd147214b80002eb2fba60ce046072e8c9e842
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461638"
 ---
 # <a name="relational-function-templates"></a>关系函数模板
 **Microsoft 专用**  
@@ -26,8 +27,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      template<typename _InterfaceType> bool operator==(  
+template<typename _InterfaceType> bool operator==(  
    int NULL,  
    _com_ptr_t<_InterfaceType>& p   
 );  
@@ -83,11 +83,11 @@ template<typename _Interface,
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  *i*  
  原始接口指针。  
   
- `p`  
+ *p*  
  智能指针。  
   
 ## <a name="remarks"></a>备注  

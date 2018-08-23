@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041268"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
 实现回调，它在必须计算动画变量的新值时由动画 API 调用。  
@@ -103,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInterpolator`  
+ *pInterpolator*  
  指向自定义插值程序的指针。  
   
- `ppHandler`  
+ *ppHandler*  
  输出。 在函数返回时包含指向 CInterpolatorBase 实例的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -122,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  输出。 各个方面插值程序依赖于初始的值传递给 SetInitialValueAndVelocity。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  输出。 各个方面插值程序依赖于的初始速度传递给 SetInitialValueAndVelocity。  
   
- `durationDependencies`  
+ *durationDependencies*  
  输出。 各个方面插值程序持续时间取决于传递给 SetDuration。  
   
 ### <a name="return-value"></a>返回值  
@@ -142,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  输出。 转换，以秒为单位的持续时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -156,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>参数  
- `value`  
+ *value*  
  输出。 变量在转换结束最终值。  
   
 ### <a name="return-value"></a>返回值  
@@ -172,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `offset`  
+ *offset*  
  从转换的开始的偏移量。 偏移量始终是大于或等于零且小于转换的持续时间。 如果转换的持续时间为零，不会调用此方法。  
   
- `value`  
+ *value*  
  输出。 内插的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -191,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `offset`  
+ *offset*  
  从转换的开始的偏移量。 偏移量始终是大于或等于零且小于或等于转换的持续时间。 如果转换的持续时间为零，不会调用此方法。  
   
- `velocity`  
+ *速度*  
  输出。 偏移量处变量的速度。  
   
 ### <a name="return-value"></a>返回值  
@@ -208,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInterpolator`  
+ *pInterpolator*  
  指向自定义插值程序的指针。  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -219,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -235,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialValue`  
+ *initialValue*  
  在转换的开始的变量的值。  
   
- `initialVelocity`  
+ *initialVelocity*  
  在转换的开始的变量的速度。  
   
 ### <a name="return-value"></a>返回值  

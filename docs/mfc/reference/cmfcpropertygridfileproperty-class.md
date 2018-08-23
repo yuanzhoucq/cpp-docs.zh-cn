@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty 类 |Microsoft 文档
+title: CMFCPropertyGridFileProperty 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541577"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
-`CMFCPropertyGridFileProperty`类支持打开文件选择对话框中的属性列表控件项。  
+`CMFCPropertyGridFileProperty`类支持用于打开文件选择对话框中的属性列表控件项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +47,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 |名称|描述|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(重写[cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|  
   
 ### <a name="remarks"></a>备注  
@@ -77,34 +78,34 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strName`  
+ [in]*strName*  
  属性名称。  
   
- [in] `bOpenFileDialog`  
- `TRUE` 若要打开**打开文件**对话框;`FALSE`以打开**保存文件**对话框。  
+ [in]*bOpenFileDialog*  
+ 为 true，则打开**打开文件**对话框;如果为 FALSE，打开**保存文件**对话框。  
   
- [in] `strFileName`  
+ [in]*strFileName*  
  初始文件名。  
   
- [in] `lpszDefExt`  
- 一个或多个文件扩展名字符串。 默认值为 `NULL`。  
+ [in]*lpszDefExt*  
+ 一个或多个文件扩展名字符串。 默认值为 NULL。  
   
- [in] `dwFlags`  
- 对话框标志。 默认值是 `OFN_HIDEREADONLY` 和 `OFN_OVERWRITEPROMPT` 的按位组合 (OR)。  
+ [in]*dwFlags*  
+ 对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。  
   
- [in] `lpszFilter`  
- 一个或多个文件筛选器的字符串。 默认值为 `NULL`。  
+ [in]*lpszFilter*  
+ 一个或多个文件筛选器的字符串。 默认值为 NULL。  
   
- [in] `lpszDescr`  
- 属性项说明。 默认值为 `NULL`。  
+ [in]*lpszDescr*  
+ 属性项说明。 默认值为 NULL。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与属性项相关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ### <a name="example"></a>示例  
  以下示例演示如何使用 `CMFCPropertyGridFileProperty` 类的构造函数创建对象。 此示例摘自[Visual Studio 演示示例](../../visual-cpp-samples.md)。  
@@ -112,7 +113,7 @@ CMFCPropertyGridFileProperty(
  [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)   
  [CMFCPropertyGridProperty 类](../../mfc/reference/cmfcpropertygridproperty-class.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270433"
 ---
 # <a name="compiler-warning-c4485"></a>编译器警告 C4485
 override_function: ref 基类类方法 base_class_function 相匹配，但不是标记 new 或重写';假定 new （和虚拟）  

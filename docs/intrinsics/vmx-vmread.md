@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmread |Microsoft 文档
+title: __vmx_vmread |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541198"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 专用**  
   
- 从当前虚拟机控件结构 (VMCS) 中读取指定的字段，并将其放在指定的位置。  
+ 从当前的虚拟机控件结构 (VMCS) 读取指定的字段并将其放在指定的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,20 +47,20 @@ unsigned char __vmx_vmread(
   
 ## <a name="return-value"></a>返回值  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |0|操作成功。|  
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
 |2|操作失败，无可用状态。|  
   
 ## <a name="remarks"></a>备注  
- `__vmx_vmread`函数等同于`VMREAD`计算机指令。 值`Field`参数是 Intel 文档所述的编码的字段索引。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点，则请查阅该文档的附录 C.  
+ `__vmx_vmread`函数等同于`VMREAD`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点，则请查阅该文档的附录 C.  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
  **标头文件** \<intrin.h >  
   
