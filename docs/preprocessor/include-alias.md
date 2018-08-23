@@ -1,5 +1,5 @@
 ---
-title: include_alias |Microsoft 文档
+title: include_alias |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838925"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539547"
 ---
 # <a name="includealias"></a>include_alias
 
-指定*short_filename*要使用的别名作为*long_filename*。
+指定的*short_filename*是要用作别名*long_filename*。
 
 ## <a name="syntax"></a>语法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>杂注 include_alias ("*long_filename*"，"*short_filename*")  
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>杂注 include_alias (*long_filename*， *short_filename*)
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 ("*long_filename*"，"*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias 杂注 (*long_filename*， *short_filename*)
 
 ## <a name="remarks"></a>备注
 
-某些文件系统允许长度超过 8.3 FAT 文件系统限制的头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*long_filename*字符串，它将替换*short_filename*，并查找的标头文件*short_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
+某些文件系统允许长度超过 8.3 FAT 文件系统限制的头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*long_filename*字符串，它将替代*short_filename*，并查找标头文件*short_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -58,7 +58,7 @@ ms.locfileid: "33838925"
 #include "sys/mymath.h"
 ```
 
-将不执行指定别名（替换）操作，因为头文件字符串不完全匹配。 此外，用作 /Yu 和 /Yc 编译器选项，自变量的头文件名或**hdrstop**杂注时，将不会替换。 例如，如果源文件包含以下指令，
+将不执行指定别名（替换）操作，因为头文件字符串不完全匹配。 此外，用作自变量的头文件名`/Yu`并`/Yc`编译器选项或`hdrstop`杂注时，将不会替换。 例如，如果源文件包含以下指令，
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -68,7 +68,7 @@ ms.locfileid: "33838925"
 
 > /YcAppleSystemHeaderStop.h
 
-你可以使用**include_alias**杂注将任何标头文件名映射到另一个。 例如：
+可以使用**include_alias**杂注将任何标头文件名映射到另一个。 例如：
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -77,7 +77,7 @@ ms.locfileid: "33838925"
 #include <stdio.h>
 ```
 
-不要将用双引号括起来的文件名与用尖括号括起的文件名组合在一起。 例如，给定上述两个 **#pragma include_alias**指令，编译器执行以下任何替换`#include`指令：
+不要将用双引号括起来的文件名与用尖括号括起的文件名组合在一起。 例如，给定上述两个`#pragma include_alias`指令，编译器对以下执行任何替换`#include`指令：
 
 ```cpp
 #include <api.h>
@@ -90,14 +90,14 @@ ms.locfileid: "33838925"
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-请注意，filename 报告错误消息中或作为预定义的值 **&#95;&#95;文件&#95;&#95;** 宏，已执行替换后的文件的名称。 例如，完成以下指令后看到的输出：
+请注意，文件名报告错误消息中或作为预定义值`__FILE__`宏，在执行替换后的文件的名称。 例如，以下指令后看到输出：
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
 #include "VeryLongFileName.H"
 ```
 
-VERYLONGFILENAME 中的错误。H 产生以下错误消息：
+VERYLONGFILENAME 中的错误。H 生成以下错误消息：
 
 ```Output
 myfile.h(15) : error C2059 : syntax error

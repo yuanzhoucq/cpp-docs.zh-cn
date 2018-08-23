@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340080"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573125"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 对应于一个 OLE DB 数据源对象，该对象表示通过提供程序建立的与数据源的连接。  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbproperties:: Getproperties](https://msdn.microsoft.com/library/ms714344.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ 请参阅[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in]`CLSID`的数据提供程序。  
   
  *pPropSet*  
- [in]指向数组的指针[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构包含要设置属性和值。 请参阅[属性设置和属性组](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
   
  *nPropertySets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构传入*pPropSet*参数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
   
  *pName*  
  [in] 要连接的数据库的名称。  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [in] 用户的密码。  
   
  *nInitMode*  
- [in] 数据库初始化模式。 请参阅[初始化属性](https://msdn.microsoft.com/library/ms723127.aspx)中*OLE DB 程序员参考*Windows SDK for 有效初始化模式的列表中。 如果*nInitMode*是零个、 未初始化模式包含在用于打开连接的属性集。  
+ [in] 数据库初始化模式。 请参阅[初始化属性](/previous-versions/windows/desktop/ms723127\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK for 有效初始化模式的列表中。 如果*nInitMode*是零个、 未初始化模式包含在用于打开连接的属性集。  
   
  *szProgID*  
  [in] 一个程序标识符。  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] 文件的名称，通常是数据源连接 (.UDL) 文件。  
   
- 有关数据链接文件 （.udl 文件） 的详细信息，请参阅[数据链接 API 概述](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK 中。  
+ 有关数据链接文件 （.udl 文件） 的详细信息，请参阅[数据链接 API 概述](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [in] 数据提供程序的程序 ID。  
   
  *pPropset*  
- [in]指向数组的指针[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构包含要设置属性和值。 请参阅[属性设置和属性组](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程序员参考*Windows SDK 中。 如果数据源对象进行初始化，则属性必须属于数据源属性组。 如果相同的属性中指定了不止一次*pPropset*，则使用的值是特定于提供程序。 如果*ulPropSets*为零，则忽略此参数。  
+ [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。 如果数据源对象进行初始化，则属性必须属于数据源属性组。 如果相同的属性中指定了不止一次*pPropset*，则使用的值是特定于提供程序。 如果*ulPropSets*为零，则忽略此参数。  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构传入*pPropSet*参数。 如果这是零，该提供程序将忽略*pPropset*。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。 如果这是零，该提供程序将忽略*pPropset*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  

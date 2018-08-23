@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852260"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539174"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 `CNetAddressCtrl` 类表示网络地址控件，可使用此控件输入和验证 IPv4、IPv6 与命名的 DNS 地址的格式。  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  下图描绘了一个对话框，其中包含一个网络地址控件。 文本框 （1） 的网络地址控件包含一个无效的网络地址。 如果网络地址无效，将显示信息提示消息 (2)。  
   
- ![具有网络地址控件和信息提示的对话框。] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![具有网络地址控件和信息提示的对话框。](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>示例  
  下面的代码示例是一个对话框，验证网络地址的一部分。 三个单选按钮的事件处理程序指定的网络地址可以是下列三种地址类型。 用户在文本框中的网络控件中，输入的地址，然后按下按钮以验证地址。 如果地址是有效的被显示一条成功消息;否则，显示预定义的信息提示错误消息。  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
- 中支持此类[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
+ 在 Windows Vista 及更高版本支持此类。  
   
  此类的其他要求中所述[生成要求的 Windows Vista 公共控件](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   

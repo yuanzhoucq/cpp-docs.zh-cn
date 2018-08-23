@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326158"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539556"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft 专用**  
   
- 生成定义的指令。  
+ 生成未定义的指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,22 +36,22 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果在执行了定义的指令，处理器将引发无效的操作码异常。  
+ 如果您执行未定义的指令，处理器将引发无效操作码异常。  
   
- `__ud2`函数等同于`UD2`计算机指令，并仅在内核模式中可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2： 指令集引用，"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__ud2`函数等同于`UD2`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 **结束 Microsoft 专用**  
   
 ## <a name="example"></a>示例  
- 下面的示例执行定义的指令，将引发异常。 异常处理程序然后将从 0 到 1 更改返回代码。  
+ 以下示例将执行未定义的指令，会引发异常。 然后，异常处理程序从零到其中一个更改返回代码。  
   
 ```  
 // __ud2_intrinsic.cpp  

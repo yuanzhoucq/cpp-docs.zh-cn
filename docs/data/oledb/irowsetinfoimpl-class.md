@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337068"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572718"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
-提供一个实现[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)接口。  
+提供一个实现[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowsetinfo:: Getproperties](https://msdn.microsoft.com/library/ms719611.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[irowsetinfo:: Getproperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 一个书签所应用于行集返回的接口指针。  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx)中*OLE DB 程序员参考*。 *IOrdinal*参数必须为书签列。 
+ 请参阅[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\))中*OLE DB 程序员参考*。 *IOrdinal*参数必须为书签列。 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 返回的接口指针上创建一个行集合的对象 （命令或会话）。  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
  将此方法用于[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)来从数据源对象检索属性。  

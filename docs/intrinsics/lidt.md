@@ -1,5 +1,5 @@
 ---
-title: __lidt |Microsoft 文档
+title: __lidt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd972d2a7e8d75f7149b2dc2766ffca86b0b2e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6f73e37c8fddc54e91be13d83c54f126ab6b5a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326506"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541734"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft 专用**  
@@ -41,18 +41,18 @@ void __lidt(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `Source`|指向要复制到 IDTR 的值的指针。|  
+|[in] `Source`|指向要复制到 IDTR 的值。|  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__lidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__lidt`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- `__lidt`函数等同于`LIDT`计算机指令，并仅在内核模式中可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2： 指令集引用，"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__lidt`函数等同于`LIDT`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
 **结束 Microsoft 专用**  
   

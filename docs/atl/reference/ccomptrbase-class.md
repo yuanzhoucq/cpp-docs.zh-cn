@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209217"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572533"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 此类为使用基于 COM 的内存例程的智能指针类提供了基础。  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  与数据和将用于创建对象的代码相关联的 CLSID。  
   
 ### <a name="return-value"></a>返回值  
- 在失败时返回成功，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE，则为 S_OK。 请参阅[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)并[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)有关这些错误的说明。  
+ 在失败时返回成功，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE，则为 S_OK。 请参阅[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)并[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)有关这些错误的说明。  
   
 ### <a name="remarks"></a>备注  
- 如果调用方法的第一种形式，则[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用于恢复 CLSID。 然后调用这两个窗体[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 如果调用方法的第一种形式，则[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用于恢复 CLSID。 然后调用这两个窗体[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
  在调试版本中，如果出现断言错误[CComPtrBase::p](#p)不等于 NULL。  
   

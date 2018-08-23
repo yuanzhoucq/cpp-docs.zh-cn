@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337377"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539198"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>备注  
  如果的值*nStyle*参数不是有效的此方法断言在调试模式并引发[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在发布模式下。 对于其他运行时错误，此方法在调试模式中断言并引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
   
- 此方法会影响编写的应用程序中的菜单状态[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
+ 此方法会影响编写适用于 Windows Vista 及更高版本的应用程序中的菜单的状态。  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  调用此函数将字符串置于 id 为 0 的状态栏窗格。  

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c79981b41bf7b74cb1aa44b98b44e0b5acbc90
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e1c3ccdba1de9191079630989facf154ccf62d7f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337916"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540377"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 表示 MFC ODBC 类的变量数据类型。  
@@ -200,7 +200,7 @@ void Clear();
 ### <a name="remarks"></a>备注  
  `m_pdate`属于联合数据成员。 在访问之前`m_pdate`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_DATE，则`m_pdate`包含有效的指针; 否则为访问`m_pdate`将生成不可靠的结果。  
   
- 有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](https://msdn.microsoft.com/library/ms714556.aspx)中的附录 D *ODBC 程序员参考*Windows SDK 中。  
+ 有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/previous-versions/windows/desktop/ms714556\(v=vs.85\))中的附录 D *ODBC 程序员参考*Windows SDK 中。  
   
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  存储指向类型的对象的指针[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  

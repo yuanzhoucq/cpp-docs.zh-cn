@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852439"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540558"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
 `CMFCRibbonStatusBar`类实现状态栏控件可以显示功能区元素。  
@@ -259,7 +259,7 @@ BOOL CreateEx(
  如果状态栏成功创建，FALSE 否则，则为 TRUE。  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -426,7 +426,7 @@ virtual void OnDrawInformation(
  如果你想要自定义状态栏上的信息字符串的外观，重写此方法在派生类中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法来将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格并显示指定的信息字符串*strInfo*。  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual void RecalcLayout();

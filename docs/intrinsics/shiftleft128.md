@@ -1,5 +1,5 @@
 ---
-title: __shiftleft128 |Microsoft 文档
+title: __shiftleft128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339990"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541368"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft 专用**  
@@ -55,7 +55,7 @@ unsigned __int64 __shiftleft128(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|X64|  
   
  **标头文件** \<intrin.h >  
   

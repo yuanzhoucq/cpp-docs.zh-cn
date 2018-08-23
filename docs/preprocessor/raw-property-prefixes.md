@@ -1,5 +1,5 @@
 ---
-title: raw_property_prefixes |Microsoft 文档
+title: raw_property_prefixes |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f548c9513a086dd4741a9c61c51acebebb25db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 423a66b698f4e421ff29e6ac3dfddd11fa11c58f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840124"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538585"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 **C + + 专用**  
   
- 指定用于三个属性方法的备用前缀。  
+指定用于三个属性方法的备用前缀。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33840124"
 raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>参数  
- `GetPrefix`  
- 前缀用于**propget**方法。  
+### <a name="parameters"></a>参数  
+*GetPrefix*  
+前缀用于`propget`方法。  
   
- `PutPrefix`  
- 前缀用于**propput**方法。  
+*PutPrefix*  
+前缀用于`propput`方法。  
   
- `PutRefPrefix`  
- 前缀用于**propputref**方法。  
+*PutRefPrefix*  
+前缀用于`propputref`方法。  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，低级别**propget**， **propput**，和**propputref**方法公开的成员函数使用前缀名为**get_**， **put_**，和**putref_** 分别。 这些前缀与在 MIDL 生成的标头文件中使用的名称兼容。  
+ 
+默认情况下，低级别`propget`， `propput`，并`propputref`具有前缀的命名的成员函数公开方法**get_**， **put_**，和**putref_** 分别。 这些前缀与在 MIDL 生成的标头文件中使用的名称兼容。  
   
- **结束 c + + 专用**  
+**结束 c + + 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import 指令](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 指令](../preprocessor/hash-import-directive-cpp.md)

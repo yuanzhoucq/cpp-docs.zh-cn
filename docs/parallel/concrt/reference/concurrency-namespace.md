@@ -1,5 +1,5 @@
 ---
-title: 并发 Namespace |Microsoft 文档
+title: 并发 Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2bf60ecf57a23de52575e3e2563c07e4f574194a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695182"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540153"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -81,8 +81,8 @@ namespace concurrency;
 |[concurrent_queue 类](concurrent-queue-class.md)|`concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。|  
 |[concurrent_unordered_map 类](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|  
 |[concurrent_unordered_multimap 类](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|  
-|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
-|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
+|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
+|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
 |[concurrent_vector 类](concurrent-vector-class.md)|`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|  
 |[Context 类](context-class.md)|表示执行上下文的抽象。|  
 |[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|  
@@ -137,7 +137,7 @@ namespace concurrency;
 |[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|  
 |[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)，为已取消的任务。|  
 |[task_completion_event 类](task-completion-event-class.md)|`task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|  
-|[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用从 UWP 应用此类。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|  
+|[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用此类从 UWP 应用。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|  
 |[task_group 类](task-group-class.md)|`task_group` 类表示可以等待或取消的并行工作的集合。|  
 |[task_handle 类](task-handle-class.md)|`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。|  
 |[task_options 类（并发运行时）](task-options-class-concurrency-runtime.md)|表示可用于创建任务的选项|  
@@ -165,11 +165,11 @@ namespace concurrency;
 |[IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)|表示来自资源管理器的通知，说明阻止并触发返回到计划程序的指定计划上下文的线程代理已解除阻止，并已准备好进行计划。 一旦重新计划该线程代理的关联执行上下文（从 `GetContext` 方法返回），此接口将变得无效。|  
 |[IVirtualProcessorRoot 结构](ivirtualprocessorroot-structure.md)|线程代理可在其中执行的硬件线程的抽象。|  
 |[scheduler_interface 结构](scheduler-interface-structure.md)|计划程序接口|  
-|[scheduler_ptr 结构（并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 来允许指定共享生存期，或通过使用原始指针来允许指定无格式引用。|  
+|[scheduler_ptr 结构（并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类存在是为了通过使用 shared_ptr 或无格式引用通过使用原始指针允许指定共享生存期。|  
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|  

@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339587"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539975"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>返回值  
  对于单行编辑控件的返回值是文本的编辑控件中的长度，以 TCHARs。  
   
- 对于多行编辑控件，则返回值是由指定的行的长度，以 TCHARs， *n 行*参数。 有关[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]文本，长度是在行中的字节数; 对于 Unicode 文本长度是在行中的字符数。 长度不包括位于行末尾处的回车字符。  
+ 对于多行编辑控件，则返回值是由指定的行的长度，以 TCHARs， *n 行*参数。 对于 ANSI 文本长度是行; 中的字节数对于 Unicode 文本，长度为行中的字符数。 长度不包括位于行末尾处的回车字符。  
   
  如果*n 行*参数为多个控件中的字符数，返回值为零。  
   

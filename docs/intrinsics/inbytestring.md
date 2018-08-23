@@ -1,5 +1,5 @@
 ---
-title: __inbytestring |Microsoft 文档
+title: __inbytestring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb619a3fbc38925f2d91ae344b00bf1be34db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327854"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540559"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Microsoft 专用**  
@@ -45,16 +45,16 @@ void __inbytestring(
  要读取的端口。  
   
  [out] `Buffer`  
- 此处编写从端口读取的数据。  
+ 读取从端口将数据写入此处。  
   
  [in] `Count`  
- 要读取数据的字节数。  
+ 要读取的数据的字节数。  
   
 ## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbytestring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

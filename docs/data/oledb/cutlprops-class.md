@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575457"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 实现多个 OLE DB 属性接口的属性 (例如， `IDBProperties`， `IDBProperties`，和`IRowsetInfo`)。  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  属性集数组; 中的索引如果只有一个属性集，则为零。  
   
  *pDBProp*  
- 属性 ID 和中的新值[DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)结构。  
+ 属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))结构。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。 默认返回值为 S_OK。  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  属性集数组; 中的索引如果只有一个属性集，则为零。  
   
  *pDBProp*  
- 属性 ID 和中的新值[DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)结构。  
+ 属性 ID 和中的新值[DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))结构。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。 默认返回值为 S_OK。  

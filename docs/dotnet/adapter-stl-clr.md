@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 7023ef21258a5b93d889d02c1b586b524c8b98be
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376103"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575444"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`并`range_adapter`)，并且该模板函数`make_collection`。  
@@ -307,7 +307,7 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter(Coll^ collection);`  
   
- 初始化存储与句柄与`collection`。  
+ 初始化与存储句柄`collection`。  
   
 ### <a name="example"></a>示例  
   

@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854130"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540560"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 类
 `CMFCVisualManagerOffice2003` 向应用程序提供 Microsoft Office 2003 外观。  
@@ -720,7 +720,7 @@ virtual void OnDrawBarGripper(
  此方法的默认实现将显示标准的控制手柄。 若要自定义控制手柄的外观，重写此方法中的自定义类派生自[CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)类。  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual BOOL OnDrawBrowseButton(

@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress |Microsoft 文档
+title: _AddressOfReturnAddress |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326906"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541174"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Microsoft 专用**  
   
- 提供保留当前函数的返回地址的内存位置的地址。 不可能使用此地址用于访问其他内存位置 （例如，函数的自变量）。  
+ 提供了保留当前函数的返回地址的内存位置的地址。 不可能使用此地址来访问其他内存位置 （例如，函数的自变量）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 当`_AddressOfReturnAddress`在编译的程序中使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函数包含`_AddressOfReturnAddress`调用编译为本机函数。 当函数编译为托管调入函数包含`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能无法按预期方式。  
+ 当`_AddressOfReturnAddress`编译的程序中使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函数包含`_AddressOfReturnAddress`调用编译为本机函数。 当函数编译为托管函数包含调用`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能会发生意外行为。  
   
  此例程仅可用作内部函数。  
   

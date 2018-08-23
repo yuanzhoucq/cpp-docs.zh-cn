@@ -1,5 +1,5 @@
 ---
-title: Variadic 宏 |Microsoft 文档
+title: Variadic 宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850530"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540150"
 ---
 # <a name="variadic-macros"></a>Variadic 宏
-Variadic 宏是包含参数个数可变的类似函数的宏。  
+Variadic 宏是包含数目可变的参数的类似函数的宏。  
   
 ## <a name="remarks"></a>备注  
- 若要使用可变参数宏，可以将省略号指定为中的宏定义和替换标识符的最终形式自变量`__VA_ARGS__`可能定义中使用插入的额外自变量。  `__VA_ARGS__` 替换所有匹配的省略号，包括以逗号分隔的自变量。  
+ 
+若要使用可变参数宏，可以将省略号指定为最终形式自变量的宏定义和替换标识符中`__VA_ARGS__`可能定义中使用插入多余的参数。  `__VA_ARGS__` 将替换所有匹配的省略号，包括以逗号分隔的参数。  
   
- C 标准，则指定必须将至少一个参数传递给省略号，以确保宏未解析为具有尾随逗号的表达式。  Visual c + + 实现将取消显示尾随逗号，如果没有自变量传递给旁边的省略号。  
+C 标准，则指定必须将至少一个参数传递给的省略号，以确保该宏无法解析为具有尾随逗号的表达式。  如果为省略号不传递任何参数时，Visual c + + 实现将禁止显示尾随逗号。  
   
 ## <a name="example"></a>示例  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>输出  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [宏 (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[宏 (C/C++)](../preprocessor/macros-c-cpp.md)

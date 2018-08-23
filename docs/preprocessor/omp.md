@@ -1,5 +1,5 @@
 ---
-title: omp |Microsoft 文档
+title: omp |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849465"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540146"
 ---
 # <a name="omp"></a>omp
 将一个或多个 OpenMP 指令与任何可选指令子句一起使用。  
@@ -31,12 +31,13 @@ ms.locfileid: "33849465"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>备注  
- 请参阅[OpenMP 指令](../parallel/openmp/reference/openmp-directives.md)有关详细信息。  
+ 
+请参阅[OpenMP 指令](../parallel/openmp/reference/openmp-directives.md)有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

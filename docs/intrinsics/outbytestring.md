@@ -1,5 +1,5 @@
 ---
-title: __outbytestring |Microsoft 文档
+title: __outbytestring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334618"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539177"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Microsoft 专用**  
   
- 生成`rep outsb`指令，这将发送第一个`Count`字节的数据的指向`Buffer`到指定的端口`Port`。  
+ 将生成`rep outsb`指令，将发送第一个`Count`指向的数据的字节`Buffer`到指定的端口`Port`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ void __outbytestring(
   
 #### <a name="parameters"></a>参数  
  [in] `Port`  
- 要将数据发送到的端口。  
+ 要向其发送数据的端口。  
   
  [in] `Buffer`  
  要指定的端口发送的数据。  
@@ -54,7 +54,7 @@ void __outbytestring(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86、x64|  
   
  **标头文件** \<intrin.h >  
   

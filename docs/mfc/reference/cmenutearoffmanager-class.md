@@ -1,5 +1,5 @@
 ---
-title: CMenuTearOffManager 类 |Microsoft 文档
+title: CMenuTearOffManager 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540755"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
 管理可拖曳菜单。 可拖曳菜单是菜单栏上的菜单。 用户可以从菜单栏移开可拖曳菜单，从而使可拖拽菜单浮动。  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
    
 ## <a name="syntax"></a>语法  
   
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>备注  
- 若要在你的应用程序中使用拖曳菜单，您必须`CMenuTearOffManager`对象。 在大多数情况下，不会创建或初始化`CMenuTearOffManager`直接对象。 这在调用时为你处理[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函数。  
+ 为了在您的应用程序中使用拖曳菜单，您必须具有`CMenuTearOffManager`对象。 在大多数情况下，不会创建或初始化`CMenuTearOffManager`直接对象。 这在调用时为您处理[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函数。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何构造并初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。  
+ 下面的示例演示如何构造和初始化`CMenuTearOffManager`对象通过调用`CWinAppEX::EnableTearOffMenus`方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>备注  
- 在大多数情况下，不应创建`CMenuTearOffManager`手动。 你的应用程序的框架创建`CMenuTearOffManager`对象在调用时[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
+ 在大多数情况下，不应创建`CMenuTearOffManager`手动。 你的应用程序框架创建`CMenuTearOffManager`对象在调用时[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -137,19 +137,19 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>参数  
  [in]*lpszRegEntry*  
- 包含注册表项的路径的字符串。 你的应用程序将拖曳栏的设置存储在此注册表项。  
+ 一个字符串，包含注册表项的路径。 您的应用程序在此注册表项中存储的分离式条形图的设置。  
   
  [in]*uiTearOffMenuFirst*  
- 第一个拖曳菜单的菜单 ID。  
+ 分离式菜单第一个菜单 ID。  
   
  [in]*uiTearOffMenuLast*  
- 最后一个拖曳菜单的菜单 ID。  
+ 分离式菜单最后一个菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 从菜单 Id 的范围*uiTearOffMenuFirst*到*uiTearOffMenuLast*必须是连续的间隔。 间隔定义可以出现在应用程序中的相同时间拖曳菜单数。  
+ 从菜单 Id 的范围*uiTearOffMenuFirst*到*uiTearOffMenuLast*必须是连续的时间间隔。 间隔用于定义可以出现在应用程序中同时拖曳菜单数。  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -219,6 +219,6 @@ void SetupTearOffMenus(HMENU hMenu);
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)

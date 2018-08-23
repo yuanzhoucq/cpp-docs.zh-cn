@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340288"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572532"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
-提供一个实现[ICommandText](https://msdn.microsoft.com/library/ms714914.aspx)接口。  
+提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
 
@@ -87,7 +87,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx)中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
+ 请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
 
 ## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
 设置替换现有命令文本的命令文本。  
@@ -100,7 +100,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandtext:: Setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)中*OLE DB 程序员参考*。 
+ 请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
 存储命令文本字符串。  

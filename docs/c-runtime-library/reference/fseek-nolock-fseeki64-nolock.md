@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397348"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572433"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -78,11 +79,11 @@ int _fseeki64_nolock(
 
 ## <a name="return-value"></a>返回值
 
-与相同[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)分别。
+与相同[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md)分别。
 
 ## <a name="remarks"></a>备注
 
-这些函数是的非锁定版本[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)分别。 这些是等于[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md) ，只不过它们不受干扰其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+这些函数是的非锁定版本[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md)分别。 这些是与相同[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md) ，只不过它们不受干扰从其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ## <a name="requirements"></a>要求
 

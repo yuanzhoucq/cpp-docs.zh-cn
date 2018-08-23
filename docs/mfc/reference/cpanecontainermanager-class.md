@@ -1,5 +1,5 @@
 ---
-title: CPaneContainerManager 类 |Microsoft 文档
+title: CPaneContainerManager 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079372"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539779"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 类
-`CPaneContainerManager`类所管理的存储和显示当前停靠布局。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CPaneContainerManager`类管理存储和显示当前停靠布局。  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -191,9 +191,9 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>备注  
- 框架会自动创建的实例`CPaneContainerManager`对象，并可以将它们嵌入到[CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)对象或[CMultiPaneFrameWnd 类](../../mfc/reference/cmultipaneframewnd-class.md)对象。  
+ 框架会自动创建的实例`CPaneContainerManager`对象，并可以将其嵌入到[CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)对象或到[CMultiPaneFrameWnd 类](../../mfc/reference/cmultipaneframewnd-class.md)对象。  
   
- `CPaneContainerManager`类存储一个指向生成的二进制树的根[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)对象。  
+ `CPaneContainerManager`类将从生成的二进制树的根指针存储[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)对象。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何获取对引用`CPaneContainerManager`对象。 此代码片段属于[设置窗格大小示例](../../visual-cpp-samples.md)。  
@@ -835,7 +835,7 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nSide*  
+ [in]*深入剖析*  
  [in]*bExpand*  
  [in]*nOffset*  
  [in]*hdwp*  
@@ -904,7 +904,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [CPaneContainer 类](../../mfc/reference/cpanecontainer-class.md)   

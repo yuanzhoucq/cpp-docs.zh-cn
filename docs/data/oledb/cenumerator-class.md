@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336961"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572928"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
-使用公开的 OLE DB 枚举器对象[ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx)接口以返回行集描述所有数据源和枚举器。  
+使用公开的 OLE DB 枚举器对象[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))接口以返回行集描述所有数据源和枚举器。  
   
 ## <a name="syntax"></a>语法
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **true**如果已找到的名称。 否则为**false**。  
   
 ### <a name="remarks"></a>备注  
- 此名称将映射到`SOURCES_NAME`的成员[ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx)接口。  
+ 此名称将映射到`SOURCES_NAME`的成员[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))接口。  
   
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 分析要提取的字符串可以转换为一个名字对象的组件的显示名称。  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  标准的 HRESULT。  
 
 ## <a name="open"></a> Cenumerator:: Open
-将名字对象绑定枚举器，如果其中一个指定，则检索行集枚举器通过调用[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)。  
+将名字对象绑定枚举器，如果其中一个指定，则检索行集枚举器通过调用[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))。  
   
 ### <a name="syntax"></a>语法  
   

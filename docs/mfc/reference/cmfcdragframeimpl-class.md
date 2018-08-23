@@ -1,5 +1,5 @@
 ---
-title: CMFCDragFrameImpl 类 |Microsoft 文档
+title: CMFCDragFrameImpl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040943"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541729"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 类
 `CMFCDragFrameImpl`类绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
    
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>备注  
- 此类的对象嵌入在每个[CPane 类](../../mfc/reference/cpane-class.md)对象。 因此，使用每个窗格`CanFloat`方法显示拖动矩形，当用户拖动它。  
+ 此类的一个对象嵌入到每个[CPane 类](../../mfc/reference/cpane-class.md)对象。 因此，使用每个窗格`CanFloat`方法会在用户拖动它时显示拖动矩形。  
   
- 你可以通过使用来控制的拖动矩形粗细[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)和[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。  
+ 可以通过使用控制的拖动矩形粗细[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)并[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
@@ -120,6 +120,6 @@ void ResetState();
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPane 类](../../mfc/reference/cpane-class.md)

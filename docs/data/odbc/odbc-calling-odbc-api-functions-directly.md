@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336590"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572622"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接调用 ODBC API 函数
 数据库类为提供更简单的接口[数据源](../../data/odbc/data-source-odbc.md)比 ODBC。 因此，类不封装所有 ODBC API。 类的功能以外的任何功能，您必须直接调用 ODBC API 函数。 例如，你必须调用 ODBC 目录函数 (`::SQLColumns`， `::SQLProcedures`， `::SQLTables`，等等) 直接。  
@@ -48,7 +48,7 @@ ms.locfileid: "39336590"
   
 -   完成后，解除分配存储空间。  
   
- 有关这些步骤的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) MSDN 文档中的 SDK。  
+ 有关这些步骤的详细信息，请参阅[开放式数据库连接 (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN 文档中的 SDK。  
   
  除了这些步骤中，您需要采取额外步骤来检查函数返回值，确保您的程序不等待的异步调用完成后，依次类推。 可以通过使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 宏来简化这些最后几个步骤。 有关详细信息，请参阅[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 参考*。  
 

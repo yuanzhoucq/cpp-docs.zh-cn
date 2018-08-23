@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849944"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541365"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
-`CMFCVisualManagerWindows7`向应用程序提供的外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。  
+`CMFCVisualManagerWindows7`向应用程序提供的 Windows 7 应用程序的外观。  
   
 ## <a name="syntax"></a>语法  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|将配色方案设置`CMFCVisualManagerWindows7`GUI。|  
   
 ## <a name="remarks"></a>备注  
- 使用`CMFCVisualManagerWindows7`类，以更改你的应用程序来模拟默认外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。 此类可能不是有效的 Windows 版本上运行你的应用程序如果早于[!INCLUDE[win7](../../build/includes/win7_md.md)]。 在这种情况下，应用程序使用默认视觉管理器中定义[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
+ 使用`CMFCVisualManagerWindows7`类，以更改你的应用程序来模拟的默认 Windows 7 应用程序的外观。 此类可能不是 Windows 7 之前的版本的 Windows 上运行你的应用程序时才有效。 在这种情况下，应用程序使用默认视觉管理器中定义[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
  CMFCVisualManagerWindows7 继承多个方法从这两个[CMFCVisualManagerWindows 类](../../mfc/reference/cmfcvisualmanagerwindows-class.md)和`CMFCVisualManager`类。 在上一部分中列出的方法是为新方法`CMFCVisualManagerWindows7`类。  
   

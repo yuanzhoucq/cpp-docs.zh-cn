@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wmktemp_s
@@ -41,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed525f44150943496cddde57699035d8b62b6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb4fcd681cc5286d02f0a7b8cb4ff95b8f3dd911
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405219"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572911"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s、_wmktemp_s
 
@@ -79,7 +80,7 @@ errno_t _wmktemp_s(
 文件名模式。
 
 *sizeInChars*<br/>
-在中的单字节字符的缓冲区大小 **_mktemp_s**; 宽字符在 **_wmktemp_s**，包括 null 终止符。
+中的单字节字符中的缓冲区的大小 **_mktemp_s**; 宽字符 **_wmktemp_s**，包括 null 终止符。
 
 ## <a name="return-value"></a>返回值
 
@@ -90,14 +91,14 @@ errno_t _wmktemp_s(
 |*nameTemplate*|*sizeInChars*|返回值|中的新值*nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
 |**NULL**|任何|**EINVAL**|**NULL**|
-|格式不正确 (请参阅备注部分以了解正确的格式)|任何|**EINVAL**|空字符串|
+|格式不正确 (请参阅备注部分，了解正确的格式)|任何|**EINVAL**|空字符串|
 |任何|<= X 的数量|**EINVAL**|空字符串|
 
-如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**和函数返回**EINVAL**。
+如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**且该函数返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Mktemp_s**函数通过修改创建唯一的文件名*nameTemplate*自变量，以便在调用后， *nameTemplate*指针指向一个字符串包含新的文件名称。 **_mktemp_s**自动处理多字节字符字符串自变量，根据需要，识别运行时系统根据当前正在使用的多字节代码页的多字节字符序列。 **_wmktemp_s**是宽字符版本的 **_mktemp_s**; 的自变量 **_wmktemp_s**是宽字符字符串。 **_wmktemp_s**和 **_mktemp_s**行为方式相同，只不过 **_wmktemp_s**不处理多字节字符字符串。
+**_Mktemp_s**函数创建唯一的文件名通过修改*nameTemplate*参数，以便在调用后， *nameTemplate*指针指向为字符串包含新的文件名称。 **_mktemp_s**自动处理多字节字符字符串参数，根据需要，通过运行时系统识别根据当前正在使用的多字节代码页的多字节字符序列。 **_wmktemp_s**是宽字符版本 **_mktemp_s**; 的自变量 **_wmktemp_s**是宽字符字符串。 **_wmktemp_s**并 **_mktemp_s**行为方式相同，不同之处在于 **_wmktemp_s**不处理多字节字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -105,9 +106,9 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*NameTemplate*自变量具有窗体**baseXXXXXX**，其中*基*是你提供的新文件名的部分，而每个 X 是一个占位符，供提供的字符 **_mktemp_s**。 中的每个占位符字符*nameTemplate*必须是大写 X **_mktemp_s**保留*基*，将第一个尾随 X 替换为字母字符。 **_mktemp_s**后面的尾随 X 替换为五位数值; 此值是标识调用进程，或在多线程程序中，调用线程的唯一编号。
+*NameTemplate*自变量具有窗体**baseXXXXXX**，其中*基*为您提供的新文件名称的一部分并且每个 X 为提供的字符的占位符 **_mktemp_s**。 中的每个占位符字符*nameTemplate*必须是大写 x。 **_mktemp_s**保留*基*并将第一个尾随 X 替换为字母字符。 **_mktemp_s**替换将后面的尾随 five 位数字值; 此值是标识调用进程中，或在多线程程序中，调用线程的唯一编号。
 
-每次成功调用 **_mktemp_s**修改*nameTemplate*。 中的相同进程或具有相同的线程从每个后续调用*nameTemplate*自变量， **_mktemp_s**检查返回的名称匹配的文件名称 **_mktemp_s**在以前的调用。 如果给定名称的文件不存在 **_mktemp_s**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp_s**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的之前返回名称中使用的字母字符创建一个新名称。 例如，如果*基*是：
+每次成功调用 **_mktemp_s**修改*nameTemplate*。 在每个后续调用中从同一个进程或线程具有相同*nameTemplate*自变量， **_mktemp_s**检查返回的名称匹配的文件名称 **_mktemp_s**在以前的调用。 如果给定名称的文件不存在 **_mktemp_s**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp_s**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的以前返回名称中使用的字母字符替换为创建的新名称。 例如，如果*基*是：
 
 > **fn**
 
@@ -115,7 +116,7 @@ errno_t _wmktemp_s(
 
 > **fna12345**
 
-如果此名称用于创建文件 FNA12345 并且此文件仍存在下, 一步的名称的调用返回的相同进程或具有相同的线程从*基*为*nameTemplate*是：
+如果此名称用于创建文件 FNA12345 并且此文件仍然存在，从相同进程或线程具有相同调用返回的下一个名称*基*有关*nameTemplate*是：
 
 > **fnb12345**
 
@@ -123,13 +124,13 @@ errno_t _wmktemp_s(
 
 > **fna12345**
 
-**_mktemp_s** 26 唯一的文件名的任意给定组合最多可以创建*基*和*nameTemplate*值。 因此，FNZ12345 是最后一个唯一文件名 **_mktemp_s**可以为创建*基*和*nameTemplate*此示例中使用的值。
+**_mktemp_s**可以创建最多 26 的唯一文件名的任意给定组合*基*并*nameTemplate*值。 因此，FNZ12345 是最后一个唯一的文件名 **_mktemp_s**可以为创建*基*并*nameTemplate*在此示例中使用的值。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> 或 \<wchar.h>|

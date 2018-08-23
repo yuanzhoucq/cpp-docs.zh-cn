@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853844"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541733"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 类
 `CMFCRibbonStatusBarPane`类实现可添加到功能区状态栏的功能区元素。  
@@ -210,7 +210,7 @@ BOOL IsExtended() const;
  如果窗格上状态栏扩展区域，则为 TRUE。 FALSE 否则为。  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual void OnDrawBorder(CDC*);
@@ -222,7 +222,7 @@ virtual void OnDrawBorder(CDC*);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);

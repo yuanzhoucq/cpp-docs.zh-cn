@@ -1,5 +1,5 @@
 ---
-title: const_seg |Microsoft 文档
+title: const_seg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984dc392b6ffa51d662d3ab56b1c0dc0dbc92233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839150"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541725"
 ---
 # <a name="constseg"></a>const_seg
-指定的段其中[const](../cpp/const-cpp.md)变量形式存储在.obj 文件中。  
+指定的段位置[const](../cpp/const-cpp.md)变量存储在.obj 文件中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,34 +35,35 @@ ms.locfileid: "33839150"
 ```  
   
 ## <a name="remarks"></a>备注  
- 这些术语的含义*段*和*部分*是可互换的本主题。  
+ 
+这些术语的含义*段*并*部分*是本主题中可互换的。  
   
- 可以使用查看 OBJ 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 .obj 文件中针对 `const` 变量的默认段是 .rdata。 某些 `const` 变量（如标量）将自动内联到代码流中。 内联代码将不会显示在 .rdata 中。  
+可以使用查看 OBJ 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 .obj 文件中针对 `const` 变量的默认段是 .rdata。 某些 `const` 变量（如标量）将自动内联到代码流中。 内联代码将不会显示在 .rdata 中。  
   
- 在 `const_seg` 中定义需要动态初始化的对象会导致未定义的行为。  
+在 `const_seg` 中定义需要动态初始化的对象会导致未定义的行为。  
   
- 不带参数的 `#pragma const_seg` 会将段重置为 .rdata。  
+不带参数的 `#pragma const_seg` 会将段重置为 .rdata。  
   
- `push`（可选）  
- 将一个记录置于内部编译器堆栈上。 `push` 可以有一个 `identifier` 和 `segment-name`。  
+*推送*（可选）  
+将一个记录置于内部编译器堆栈上。 一个*推送*可以*标识符*并*段名称*。  
   
- `pop`（可选）  
- 从内部编译器堆栈的顶部移除一个记录。  
+*pop* （可选）  
+从内部编译器堆栈的顶部移除一个记录。  
   
- `identifier`（可选）  
- 当与 `push` 一起使用时，为内部编译器堆栈上的记录指定名称。 当与 `pop` 一起使用时，从内部堆栈中弹出记录，直到移除 `identifier`；如果未在内部堆栈上找到 `identifier`，则不会弹出任何内容。  
+*标识符*（可选）  
+与一起使用时*推送*，将名称分配给内部编译器堆栈上的记录。 与一起使用时*pop*，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
   
- 使用 `identifier` 可实现只用一个 `pop` 命令弹出多个记录。  
+使用*标识符*使多个记录只用一个*pop*命令。  
   
- “`segment-name`”（可选）  
- 段的名称。 堆栈与 `pop` 配合使用时将弹出，并且 `segment-name` 会成为活动段名称。  
+"*段名称*"（可选）  
+段的名称。 与一起使用时*pop*，在堆栈中弹出和*段名称*将成为活动段名称。  
   
- “`segment-class`”（可选）  
- 包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
+"*段类*"（可选）  
+包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // pragma_directive_const_seg.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,11 @@ test4
 ```  
   
 ## <a name="comments"></a>注释  
- 请参阅[/部分](../build/reference/section-specify-section-attributes.md)的创建部分时不应使用的名称列表。  
+ 
+请参阅[/section](../build/reference/section-specify-section-attributes.md)的名称创建一个部分时，不应使用的列表。  
   
- 你还可以指定为初始化的数据部分 ([data_seg](../preprocessor/data-seg.md))，未初始化的数据 ([bss_seg](../preprocessor/bss-seg.md))，和函数 ([code_seg](../preprocessor/code-seg.md))。  
+此外可以指定部分，用于初始化的数据 ([data_seg](../preprocessor/data-seg.md))，未初始化的数据 ([bss_seg](../preprocessor/bss-seg.md))，和函数 ([code_seg](../preprocessor/code-seg.md))。  
   
 ## <a name="see-also"></a>请参阅  
- [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

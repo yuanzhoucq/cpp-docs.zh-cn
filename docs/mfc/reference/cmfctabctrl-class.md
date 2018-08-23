@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852583"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544416"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`类提供的选项卡控件的功能。 选项卡控件在其顶部或底部显示具有平面或三维选项卡的可停靠窗口。 选项卡可以显示文本和图像，并可在处于活动状态时更改颜色。  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   可拆分的选项卡式的窗口。  
   
- `CMFCTabCtrl`类可用于对话框中，但适用于在应用程序使用停靠控件条等[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]和[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 有关详细信息，请参阅[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
+ `CMFCTabCtrl`类可用于对话框中，但适用于应用程序使用停靠控件条像 Microsoft Excel 和 Visual Studio 进行的。 有关详细信息，请参阅[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
   
  请按照这些步骤添加可调整大小，停靠在应用程序中的选项卡控件：  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  显示，则为-1 以指定当前处于活动状态的选项卡上的选项卡的从零开始的索引。  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

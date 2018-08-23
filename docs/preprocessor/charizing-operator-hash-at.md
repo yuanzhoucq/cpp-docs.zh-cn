@@ -1,5 +1,5 @@
 ---
-title: 字符化运算符 (#@) |Microsoft 文档
+title: 字符化运算符 (#@) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e0c0d140d937b7359ff3abf9c0eae145a89210
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912727"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544384"
 ---
 # <a name="charizing-operator-"></a>字符化运算符 (#@)
 **Microsoft 专用**  
   
- charizing 运算符只能与宏的自变量一起使用。 如果**#@** 的形参前在宏的定义，实际自变量是用单引号括起来，在扩展宏时视为一个字符。 例如：  
+charizing 运算符只能与宏的自变量一起使用。 如果`#@`的形参前有宏的定义，在实际自变量是括在单引号内，扩展宏时视为一个字符。 例如：  
   
 ```  
 #define makechar(x)  #@x  
 ```  
   
- 导致以下语句  
+导致以下语句  
   
 ```  
 a = makechar(b);  
 ```  
   
- 扩展为  
+扩展为  
   
 ```  
 a = 'b';  
 ```  
   
- 单引号字符不能与 charizing 运算符一起使用。  
+单引号字符不能与 charizing 运算符一起使用。  
   
- **结束 Microsoft 专用**  
+**结束 Microsoft 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [预处理器运算符](../preprocessor/preprocessor-operators.md)
+ 
+[预处理器运算符](../preprocessor/preprocessor-operators.md)

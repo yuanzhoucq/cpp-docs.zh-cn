@@ -1,5 +1,5 @@
 ---
-title: 内部函数 |Microsoft 文档
+title: 内部函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844785"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538389"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -37,11 +37,11 @@ ms.locfileid: "33844785"
 
 ## <a name="remarks"></a>备注
 
-**内部**杂注告知编译器某个函数已了解行为。  编译器可以调用函数，并且不将函数调用替换为内联说明（如果将实现更好的性能）。
+**内部函数**杂注告知编译器某个函数已了解行为。  编译器可以调用函数，并且不将函数调用替换为内联说明（如果将实现更好的性能）。
 
-下面列出了带内部形式的库函数。 一次**内部**杂注显示，在包含指定的内部函数的第一个函数定义新设置将生效。 该效果持续到源文件的末尾或的外观**函数**杂注指定相同内部函数。 **内部**杂注可以仅在函数定义之外使用-在全局级别。
+下面列出了带内部形式的库函数。 一次**内部函数**杂注，它将包含指定的内部函数的第一个函数定义处生效。 该效果持续到源文件的末尾或外观的`function`杂注指定相同内部函数。 **内部函数**杂注可以使用仅在函数定义之外，在全局级别。
 
-以下函数具有内部形式，指定时使用这些内部形式[/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+以下函数具有内部形式和指定时，会使用内部函数的窗体[/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -56,11 +56,11 @@ ms.locfileid: "33844785"
 
 **x86 特定**
 
-**_Disable**和 **_e**内部函数生成内核模式说明以禁用/启用中断，并且可能在内核模式驱动程序很有用。
+`_disable`和`_enable`内部函数生成内核模式说明以禁用/启用中断，可以是内核模式驱动程序中很有用。
 
 ### <a name="example"></a>示例
 
-利用“cl -c -FAs sample.c”从命令行中编译以下代码，并查看 sample.asm 以了解它们是否转换为 x86 说明 CLI 和 STI：
+从命令行中使用以下代码编译`cl -c -FAs sample.c`并查看 sample.asm 以了解它们是否为 x86 说明 CLI 和 STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -86,7 +86,7 @@ int main() {
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- 下面列出的浮点函数具有真正的内部形式指定时[/Oi](../build/reference/oi-generate-intrinsic-functions.md)， [/Og](../build/reference/og-global-optimizations.md)，和[/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) (或任何包含 /Og 的选项： [/Ox](../build/reference/ox-full-optimization.md)， [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)，和 /O2):
+ 下面列出的浮点函数没有真正的内部形式指定时[/Oi](../build/reference/oi-generate-intrinsic-functions.md)， [/Og](../build/reference/og-global-optimizations.md)，并[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (或任何包含 /Og 的选项： [/Ox](../build/reference/ox-full-optimization.md)， [/o1](../build/reference/o1-o2-minimize-size-maximize-speed.md)，和/o2):
 
 |||||
 |-|-|-|-|
@@ -94,11 +94,11 @@ int main() {
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-你可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或[/Za](../build/reference/za-ze-disable-language-extensions.md)重写真正内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将自变量直接传递到浮点芯片，而不是将自变量推送到程序堆栈。
+可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或[/Za](../build/reference/za-ze-disable-language-extensions.md)重写的则返回 true 的内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将自变量直接传递到浮点芯片，而不是将自变量推送到程序堆栈。
 
-请参阅[#pragma 函数](../preprocessor/function-c-cpp.md)有关信息和有关如何启用/禁用内部源文本块的示例。
+请参阅[#pragma 函数](../preprocessor/function-c-cpp.md)有关信息和有关如何启用/禁用的源文本块的内部函数的示例。
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)  

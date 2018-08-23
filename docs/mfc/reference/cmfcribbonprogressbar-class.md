@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541730"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 实现用于直观指示较长操作进度的控件。  
@@ -151,7 +151,7 @@ int GetRangeMin() const;
  当前范围的最小值。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -178,7 +178,7 @@ BOOL IsInfiniteMode() const;
  在无限模式下，进度条填满反复从最小值的最大值。 无限模式可能用于指示操作正在进行，但完成时间未知。  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual void OnDraw(CDC* pDC);
