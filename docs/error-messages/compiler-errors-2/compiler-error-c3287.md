@@ -28,7 +28,7 @@ ms.locfileid: "33254427"
   
  用户定义的集合类必须包含对 `MoveNext` 和 `Current`的定义。  
   
- 有关更多信息，请参见 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。  
+ 有关更多信息，请参见 [如何：使用 for each 循环访问用户定义集合](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。  
   
 ## <a name="example"></a>示例  
  以下示例生成 C3287。  
