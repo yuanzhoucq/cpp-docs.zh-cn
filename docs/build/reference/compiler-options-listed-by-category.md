@@ -1,7 +1,7 @@
 ---
-title: 按类别列出的编译器选项 |Microsoft 文档
+title: 按类别列出的编译器选项 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a255259af5f660a11007005fd71f85bff80a8e05
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379323"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42575467"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
-本文包含编译器选项的分类列表。 按字母顺序排列的列表，请参阅[按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)。
+本文包含编译器选项的分类列表。 按字母顺序排列的列表，请参阅[Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
 
 ### <a name="optimization"></a>优化
 
@@ -67,9 +67,9 @@ ms.locfileid: "32379323"
 |[/Gw](gw-optimize-global-data.md)|启用全程序全局数据优化。|
 |[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 (与相同[/RTC1](rtc-run-time-error-checks.md))|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 (与相同[/rtc1](rtc-run-time-error-checks.md))|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定。 (仅限 x86)|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 编译器（本机编译和跨平台编译）。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86)|
@@ -77,10 +77,10 @@ ms.locfileid: "32379323"
 |[/Qpar](qpar-auto-parallelizer.md)|启用循环的自动并行化。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|启用自动并行化的报告级别。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
-|[/Qspectre](qspectre.md)|启用 CVE 2017 5753，Spectre 攻击的类的缓解措施。|
+|[/Qspectre](qspectre.md)|启用 CVE 2017-5753，针对一类 Spectre 攻击的缓解措施。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
-|[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
+|[/ 易失性](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 
 ### <a name="output-files"></a>输出文件
 
@@ -119,7 +119,7 @@ ms.locfileid: "32379323"
 
 |选项|目标|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|控制在编译时的 constexpr 评估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用 [#pragma omp](../../preprocessor/omp.md) 。|
 |[/vd](vd-disable-construction-displacements.md)|取消或启用隐藏的 `vtordisp` 类成员。|
 |[/vmb](vmb-vmg-representation-method.md)|对指向成员的指针使用最佳的基。|
@@ -131,7 +131,7 @@ ms.locfileid: "32379323"
 |[/Za](za-ze-disable-language-extensions.md)|禁用语言扩展。|
 |[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
-|[/Zf](zf.md)|提高 PDB 中并行生成的生成时间。|
+|[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名。|
@@ -169,6 +169,7 @@ ms.locfileid: "32379323"
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
+|[/ JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/MP](mp-build-with-multiple-processes.md)|同时生成多个源文件。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|取消显示登录版权标志。|
@@ -177,7 +178,7 @@ ms.locfileid: "32379323"
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定的所有源代码文件都的 c + +。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都的 c + +。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
@@ -195,14 +196,14 @@ ms.locfileid: "32379323"
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略当前生成中的所有其他预编译头编译器选项。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|
-|[await /](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
-|[/source-charset](source-charset-set-source-character-set.md)|组源字符集。|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|集执行字符集。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集为 utf-8。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证仅兼容的字符的 utf-8 文件。|
+|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
+|[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制诊断消息的格式。|
-|[/permissive-](permissive-standards-conformance.md)|将标准一致性模式设置。|
-|[/std](std-specify-language-standard-version.md)|C + + 标准版本兼容性选择器。|
+|[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
+|[/std](std-specify-language-standard-version.md)|C + + 标准的版本兼容性选择器。|
 
 ### <a name="deprecated-and-removed-compiler-options"></a>已弃用并删除编译器选项
 
@@ -212,7 +213,7 @@ ms.locfileid: "32379323"
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已否决。 创建无局部变量的浏览信息文件。|
 |[/Ge](ge-enable-stack-probes.md)|已否决。 激活堆栈探测。 默认开启。|
 |[/GX](gx-enable-exception-handling.md)|已否决。 启用同步异常处理。 使用[/EH](eh-exception-handling-model.md)相反。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 使用[/RTC1](rtc-run-time-error-checks.md)相反。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 使用[/rtc1](rtc-run-time-error-checks.md)相反。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
 |[QIfist](qifist-suppress-ftol.md)|已否决。 曾用来指定如何从浮点类型转换到整型类型。|
