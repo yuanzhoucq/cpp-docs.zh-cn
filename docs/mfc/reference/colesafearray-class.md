@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
-ms.translationtype: HT
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027633"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538229"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 类
 与任意类型和维度的数组一起使用的类。  
@@ -379,7 +379,7 @@ VARIANT Detach();
  基础`VARIANT`中的值`COleSafeArray`对象。  
   
 ### <a name="remarks"></a>备注  
- 该函数将安全数组中的数据分离通过设置[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) VT_EMPTY 于的对象。 它是调用方负责通过调用 Windows 函数来释放数组[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)。  
+ 该函数将安全数组中的数据分离通过设置[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) VT_EMPTY 于的对象。 它是调用方负责通过调用 Windows 函数来释放数组[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)。  
   
  出现错误时，该函数将引发[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -607,7 +607,7 @@ void PutElement(
  指向要分配给数组的数据的指针。 VT_DISPATCH、 VT_UNKNOWN 和 VT_BSTR 变体类型都是指针，不需要另一级间接寻址。  
   
 ### <a name="remarks"></a>备注  
- 此函数将自动调用 Windows 函数[SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx)并[SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx)之前和之后分配元素。 如果数据元素是字符串、对象或变量，则函数将正确复制它，而如果现有元素是字符串、对象或变量，则将正确清除它。  
+ 此函数将自动调用 Windows 函数[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)并[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之后分配元素。 如果数据元素是字符串、对象或变量，则函数将正确复制它，而如果现有元素是字符串、对象或变量，则将正确清除它。  
   
  请注意，你可以在一个数组上拥有多个锁，以便在数组被其他操作锁定时可以将元素放入该数组。  
   

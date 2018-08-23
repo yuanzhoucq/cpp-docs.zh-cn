@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1ca0d5a4dfd8139c0941dffd22397f296b7b4354
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338858"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573306"
 ---
 # <a name="csession-class"></a>CSession 类
 表示单个数据库访问会话。  
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[itransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[itransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。 
@@ -127,13 +127,13 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[itransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[itransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[itransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx)。  
+ 有关详细信息，请参阅[itransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))。  
 
 ## <a name="gettransactioninfo"></a> Csession:: Gettransactioninfo
 返回有关事务的信息。  
@@ -145,13 +145,13 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx)中*OLE DB 程序员参考*。 
+ 有关详细信息，请参阅[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="open"></a> Csession:: Open
 为数据源对象打开新会话。  
@@ -169,10 +169,10 @@ HRESULT Open(const CDataSource& ds,
  [in]该会话将打开数据源。  
   
  *pPropSet*  
- [in]指向数组的指针[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构包含要设置属性和值。 请参阅[属性设置和属性组](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
+ [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。  
   
  *ulPropSets*  
- [in]数[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)结构传入*pPropSet*参数。  
+ [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
@@ -193,13 +193,13 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[itransactionlocal:: Starttransaction](https://msdn.microsoft.com/library/ms709786.aspx)中*OLE DB 程序员参考*。  
+ 请参阅[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[itransactionlocal:: Starttransaction](https://msdn.microsoft.com/library/ms709786.aspx)中*OLE DB 程序员参考*。 
+ 有关详细信息，请参阅[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))中*OLE DB 程序员参考*。 
   
 ## <a name="see-also"></a>请参阅  
  [CatDB](../../visual-cpp-samples.md)   

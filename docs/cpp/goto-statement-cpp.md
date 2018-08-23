@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402567"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572550"
 ---
 # <a name="goto-statement-c"></a>goto 语句 (C++)
 **Goto**语句无条件将控制转移到由指定的标识符标记的语句。  
@@ -36,6 +36,25 @@ goto identifier;
  由 `identifier` 指定的标记语句必须位于当前函数中。 所有 `identifier` 名称都是内部命名空间的成员，因此不会干扰其他标识符。  
   
  语句标签是仅对有意义**goto**语句; 否则，语句标签将被忽略。 不能重新声明标签。  
+
+一个**goto**语句不允许将控制转移到跳过在该位置中的范围内的任何变量初始化的位置。 下面的示例引发 C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  它是一个良好的编程样式，以使用**中断**，**继续**，并**返回**语句而不是**goto**语句时可能。 但是，由于**中断**语句从只有一个级别的循环中退出，则可能必须使用**goto**语句退出深度嵌套的循环。  
   

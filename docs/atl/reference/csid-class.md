@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208853"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573322"
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装`SID`（安全标识符） 结构。  
@@ -332,13 +332,13 @@ bool LoadAccount(
  系统名称。 此字符串可以是远程计算机的名称。 如果此字符串为 NULL，则改为使用本地系统。  
   
  *pSid*  
- 一个指向[SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx)结构。  
+ 一个指向[SID](/windows/desktop/api/winnt/ns-winnt-_sid)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。 若要获得扩展的错误信息，请调用 `GetLastError`。  
   
 ### <a name="remarks"></a>备注  
- `LoadAccount` 尝试查找指定名称的安全标识符。 请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)的更多详细信息。  
+ `LoadAccount` 尝试查找指定名称的安全标识符。 请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)的更多详细信息。  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  赋值运算符。  

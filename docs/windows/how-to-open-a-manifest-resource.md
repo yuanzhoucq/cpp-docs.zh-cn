@@ -16,36 +16,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 53b414507fe2d21f610be1cd6a4db3bfce9628d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014346"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42550656"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：打开清单资源
-如果从 [资源视图](../windows/resource-view-window.md)打开清单资源，则资源将以二进制格式打开。 若要以可视效果更好的格式查看清单资源的内容，必须打开的资源**解决方案资源管理器**。  
-  
-### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>若要在文本编辑器中打开清单资源  
-  
-1.  在中打开项目**解决方案资源管理器**，展开**资源文件**文件夹。  
-  
-2.  双击 .manifest 文件。  
-  
-     在中打开清单资源**文本编辑器**。  
-  
-### <a name="to-open-a-manifest-resource-in-another-editor"></a>若要在另一个编辑器中打开清单资源  
-  
-1.  在中**解决方案资源管理器**，右键单击该.manifest 文件，然后选择**打开方式...** 从快捷菜单。  
-  
-2.  在 **“打开方式”** 对话框中，指定想要使用的编辑器，然后单击 **“打开”**。  
-  
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [清单资源](../windows/manifest-resources.md)   
- [控件](../mfc/controls-mfc.md)   
- [使用资源文件](../windows/working-with-resource-files.md)
+
+如果从 [资源视图](../windows/resource-view-window.md)打开清单资源，则资源将以二进制格式打开。 若要以可视效果更好的格式查看清单资源的内容，必须打开的资源**解决方案资源管理器**。
+
+### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>若要在文本编辑器中打开清单资源
+
+1. 在中打开项目**解决方案资源管理器**，展开**资源文件**文件夹。
+
+2. 双击 .manifest 文件。
+
+   在中打开清单资源**文本编辑器**。
+
+### <a name="to-open-a-manifest-resource-in-another-editor"></a>若要在另一个编辑器中打开清单资源
+
+1. 在中**解决方案资源管理器**，右键单击该.manifest 文件，然后选择**打开方式...** 从快捷菜单。
+
+2. 在 **“打开方式”** 对话框中，指定想要使用的编辑器，然后单击 **“打开”**。
+
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[清单资源](../windows/manifest-resources.md)  
+[控件](../mfc/controls-mfc.md)  
+[使用资源文件](../windows/working-with-resource-files.md)

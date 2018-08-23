@@ -17,45 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c998f7e0814c5acae55dd3e9b747faed0242e1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e6f720d0a918a22aee4a4cade6af1cb02a90e8d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016218"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588864"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
-在释放模块中的最后一个对象时调用事件处理程序。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-class ReleaseNotifier;  
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier 析构函数](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|取消初始化的当前实例**module:: releasenotifier**类。|  
-|[Module::ReleaseNotifier::ReleaseNotifier 构造函数](../windows/module-releasenotifier-releasenotifier-constructor.md)|初始化的新实例**module:: releasenotifier**类。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[Module::ReleaseNotifier::Invoke 方法](../windows/module-releasenotifier-invoke-method.md)|实现后，在释放模块中的最后一个对象时调用事件处理程序。|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|删除当前**module:: releasenotifier**对象如果对象使用参数的构造**true**。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `ReleaseNotifier`  
-  
-## <a name="requirements"></a>要求  
- **标头：** module.h  
-  
- **命名空间：** Microsoft::WRL
- 
- ## <a name="see-also"></a>请参阅
- [Module 类](../windows/module-class.md)
+
+在释放模块中的最后一个对象时调用事件处理程序。
+
+## <a name="syntax"></a>语法
+
+```cpp
+class ReleaseNotifier;
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[Module::ReleaseNotifier::~ReleaseNotifier 析构函数](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|取消初始化的当前实例**module:: releasenotifier**类。|
+|[Module::ReleaseNotifier::ReleaseNotifier 构造函数](../windows/module-releasenotifier-releasenotifier-constructor.md)|初始化的新实例**module:: releasenotifier**类。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[Module::ReleaseNotifier::Invoke 方法](../windows/module-releasenotifier-invoke-method.md)|实现后，在释放模块中的最后一个对象时调用事件处理程序。|
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|删除当前**module:: releasenotifier**对象如果对象使用参数的构造**true**。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`ReleaseNotifier`
+
+## <a name="requirements"></a>要求
+
+**标头：** module.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+[Module 类](../windows/module-class.md)

@@ -1,7 +1,7 @@
 ---
 title: 导出 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322184"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572549"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-如果您导出的名称是从其他模块，指定导出的名称在 DLL 中使用*other_module.exported_name*。 例如，如果 DLL 导出函数 `other_module.func1`，并且你希望调用方将其用作 `func2`，则应指定：
+如果您导出的名称是从另一个模块，指定导出的名称在 DLL 中使用*other_module.exported_name*。 例如，如果 DLL 导出函数 `other_module.func1`，并且你希望调用方将其用作 `func2`，则应指定：
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+如果从另一个按序号导出的模块导出的名称，指定导出的序号在 DLL 中使用*other_module。 #ordinal_number*。 例如，如果您的 DLL 导出函数，从其他模块，它是序号 42 和希望调用方将其用作`func2`，则会指定：
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 因为 Visual c + + 编译器针对 c + + 函数使用名称修饰，必须使用修饰的名 internal_name 或通过使用 extern"C"在源代码中的定义导出的函数。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定与下划线 (_) 前缀和后缀组成 at 符号 (@) 后接参数列表中 （采用十进制） 的字节数。  

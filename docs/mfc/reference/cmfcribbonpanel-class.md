@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850165"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540188"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 实现包含一组功能区元素的面板。 在绘制面板时，系统将根据面板的大小显示尽可能多的元素。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
  
   
 ## <a name="syntax"></a>语法  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885291"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573039"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 此类提供用于操作在系统注册表中的条目的方法。  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx)值写入注册表。  
+ 此方法使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)值写入注册表。  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  调用此方法以将数据存储在指定的值字段中的[m_hKey](#m_hkey)。 此方法的早期版本不再受支持，并被标记为 ATL_DEPRECATED。  

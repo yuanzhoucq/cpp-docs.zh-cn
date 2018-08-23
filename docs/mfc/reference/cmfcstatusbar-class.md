@@ -82,17 +82,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f97eb2bce0bb39641aeceeaaa57d73dd45994e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854026"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540988"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 `CMFCStatusBar`类实现类似于状态栏`CStatusBar`类。 但是，`CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。 
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。   
   
 ## <a name="syntax"></a>语法  
   

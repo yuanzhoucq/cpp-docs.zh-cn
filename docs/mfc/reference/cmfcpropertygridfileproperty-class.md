@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851595"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541577"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
 `CMFCPropertyGridFileProperty`类支持用于打开文件选择对话框中的属性列表控件项。  
@@ -105,7 +105,7 @@ CMFCPropertyGridFileProperty(
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ### <a name="example"></a>示例  
  以下示例演示如何使用 `CMFCPropertyGridFileProperty` 类的构造函数创建对象。 此示例摘自[Visual Studio 演示示例](../../visual-cpp-samples.md)。  

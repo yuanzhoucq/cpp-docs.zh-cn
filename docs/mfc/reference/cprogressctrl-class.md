@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850152"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538625"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in]*clrBar*|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
- 前一种颜色的进度指示条，表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示符栏的颜色为默认颜色。  
+
+前一种颜色的进度指示条，表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示符栏的颜色为默认颜色。  
   
 ### <a name="remarks"></a>备注  
- `SetBarColor`方法设置进度栏颜色才[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)][主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)不起作用。  
+
+`SetBarColor`方法设置进度栏颜色仅当 Windows Vista[主题](/windows/desktop/Controls/visual-styles-overview)不起作用。  
   
  此方法将发送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)消息，Windows SDK 中所述。  
   

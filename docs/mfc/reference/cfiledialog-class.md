@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028000"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538621"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于打开文件或保存操作的文件的公共对话框。  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  *LpszFilter*参数用于确定文件必须具有要显示的文件列表中的文件名称的类型。 字符串对中的第一个字符串描述筛选器;第二个字符串指示要使用的文件扩展名。 可通过使用分号 （; 字符） 作为分隔符指定多个扩展。 具有两个结尾的字符串&#124;字符后, 跟 NULL 字符。 此外可以使用[CString](../../atl-mfc-shared/using-cstring.md)为此参数的对象。  
   
- 例如，[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]允许用户打开具有扩展.xlc （图表） 或.xls （工作表） 中，文件的其他项中。 用于 Excel 的筛选器可写为：  
+ 例如，Microsoft Excel 允许用户打开具有扩展.xlc （图表） 或.xls （工作表），以及其他文件。 用于 Excel 的筛选器可写为：  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  指向包含要为控件设置文本的字符串的指针。  
   
 ### <a name="remarks"></a>备注  
- 此函数的两个版本均有效使用 Unicode 的应用程序。 但是，仅与 LPCSTR 类型版本是有效的应用程序使用[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]。  
+ 此函数的两个版本均有效使用 Unicode 的应用程序。 但是，仅具有 LPCSTR 类型的版本是有效的使用 ANSI 的应用程序。  
   
  若要使用此方法，必须使用 OFN_EXPLORER 样式创建对话框。 否则，该函数将失败并断言。  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  包含在非-资源管理器的模板资源的 ID 号`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
   
  [in]*nWin4ID*  
- 资源管理器中包含的模板资源的 ID 号`CFileDialog`对象。 仅在使用此模板[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更高版本、 Windows 95 和更高版本，或在没有 OFN_EXPLORER 样式时。  
+ 资源管理器中包含的模板资源的 ID 号`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
   
  [in]*lpWin3ID*  
  包含在非-资源管理器模板资源的名称`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
   
  [in]*lpWin4ID*  
- 包含在资源管理器的模板资源名称`CFileDialog`对象。 仅在使用此模板[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更高版本、 Windows 95 和更高版本，或在没有 OFN_EXPLORER 样式时。  
+ 包含在资源管理器的模板资源名称`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
   
 ### <a name="remarks"></a>备注  
- 系统将使用指定的模板之一。 系统将确定要使用哪个模板基于 OFN_EXPLORER 样式和应用程序运行的操作系统存在。 通过指定的非资源管理器和资源管理器样式模板，它是易于支持 Windows NT 3.51[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更高版本和 Windows 95 和更高版本。  
+ 系统将使用指定的模板之一。 系统将确定要使用哪个模板基于 OFN_EXPLORER 样式和应用程序运行的操作系统存在。 通过指定的非资源管理器和资源管理器样式模板，很容易地支持 Windows NT 3.51、 Windows NT 4.0 和更高版本和 Windows 95 和更高版本。  
   
 > [!NOTE]
 > Windows Vista 或更高版本的样式文件对话框不支持此函数。 尝试在 Windows Vista 或更高版本的样式文件对话框使用此函数将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 一种替代方法是使用自定义的对话框。 有关使用自定义详细信息`CFileDialog`，请参阅[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)。  

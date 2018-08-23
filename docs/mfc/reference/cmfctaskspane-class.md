@@ -204,15 +204,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da86312e425f6b54abf6422af09a04c45aa733f2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028377"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540589"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
  `CMFCTasksPane` 类实现可点击项（任务）的列表。  
   

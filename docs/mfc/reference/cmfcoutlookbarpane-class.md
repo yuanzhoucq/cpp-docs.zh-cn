@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851335"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540991"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
  派生的控件[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)可插入到 Outlook 栏 ( [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md))。 Outlook 栏窗格包含一列大按钮。 如果按钮列表大于窗格，用户可以上下滚动按钮列表。 当用户将 Outlook 栏中的一个窗格与 Outlook 栏分离时，此窗格可以浮动或停靠在主框架窗口中。  
   
@@ -222,7 +222,7 @@ BOOL AddButton(
  如果指定的索引*iInsertAt*为-1，该按钮将添加到页的末尾。  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ```  
 virtual BOOL CanBeAttached() const;  

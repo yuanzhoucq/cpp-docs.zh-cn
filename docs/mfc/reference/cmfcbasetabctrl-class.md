@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337473"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539207"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 实现选项卡式窗口的基本功能。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>备注  
  `CMFCBaseTabCtrl` 类是抽象类。 因此，不能将它实例化。 若要创建选项卡式窗口，则必须从 `CMFCBaseTabCtrl`派生类。 MFC 库包含一些派生的类示例，其中两个是 [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) 和 [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)。  
   
- 从 [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)]开始，此类支持 Microsoft Active Accessibility。  
+ 从 Visual Studio 2015 开始，此类支持 Microsoft Active Accessibility。  
   
 ## <a name="customization-tips"></a>自定义提示  
  以下提示适用于 `CMFCBaseTabCtrl Class` 和从其继承的任何类：  

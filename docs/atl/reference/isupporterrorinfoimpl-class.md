@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026168"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572452"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 类
-此类提供的默认实现[ISupportErrorInfo 接口](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)和单个接口在生成对象上的错误时，可以使用。  
+此类提供的默认实现[ISupportErrorInfo 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)和单个接口在生成对象上的错误时，可以使用。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>参数  
  *piid*  
- 指向支持的接口的 IID [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)。  
+ 指向支持的接口的 IID [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)。  
   
 ## <a name="members"></a>成员  
   
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |名称|描述|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|指示标识接口是否`riid`支持[IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)接口。|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|指示标识接口是否`riid`支持[IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)接口。|  
   
 ## <a name="remarks"></a>备注  
- [ISupportErrorInfo 接口](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)可确保错误信息，可以返回到客户端。 对象使用`IErrorInfo`必须实现`ISupportErrorInfo`。  
+ [ISupportErrorInfo 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)可确保错误信息，可以返回到客户端。 对象使用`IErrorInfo`必须实现`ISupportErrorInfo`。  
   
  类`ISupportErrorInfoImpl`提供的默认实现`ISupportErrorInfo`和单个接口在生成对象上的错误时，可以使用。 例如：  
   
@@ -69,14 +69,14 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **标头：** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- 指示标识接口是否`riid`支持[IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)接口。  
+ 指示标识接口是否`riid`支持[IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)接口。  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) Windows SDK 中。  
+ 请参阅[ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) Windows SDK 中。  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  调用此方法以获取池中的线程数。  

@@ -17,60 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18f7f08362c14ab0d09019a5b9348750c96ddbd7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d51bbad058766af6e5e2e75f17866403ba588cd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643405"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602695"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
-支持 WRL 基础结构，不应在代码中直接使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template <  
-   typename T  
->  
-class ComPtrRefBase;  
-```  
-  
-### <a name="parameters"></a>参数  
- *T*  
- 一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口**ComPtr**。  
-  
-## <a name="remarks"></a>备注  
- 表示类的基类[ComPtrRef](../windows/comptrref-class.md)类。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-typedefs"></a>公共 Typedef  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`InterfaceType`|模板参数的类型的同义词*T*。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IInspectable`接口。|  
-|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IUnknown`接口。|  
-  
-### <a name="protected-data-members"></a>受保护的数据成员  
-  
-|name|描述|  
-|----------|-----------------|  
-|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|为当前的模板参数指定的类型的指针。|  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `ComPtrRefBase`  
-  
-## <a name="requirements"></a>要求  
- **标头：** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRefBase;
+```
+
+### <a name="parameters"></a>参数
+
+*T*  
+一个[ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是所表示接口**ComPtr**。
+
+## <a name="remarks"></a>备注
+
+表示类的基类[ComPtrRef](../windows/comptrref-class.md)类。
+
+## <a name="members"></a>成员
+
+### <a name="public-typedefs"></a>公共 Typedef
+
+|名称|描述|
+|----------|-----------------|
+|`InterfaceType`|模板参数的类型的同义词*T*。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IInspectable`接口。|
+|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前[ptr_](../windows/comptrrefbase-ptr-data-member.md)数据成员添加到指针-到-a-指针-到`IUnknown`接口。|
+
+### <a name="protected-data-members"></a>受保护的数据成员
+
+|name|描述|
+|----------|-----------------|
+|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|为当前的模板参数指定的类型的指针。|
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`ComPtrRefBase`
+
+## <a name="requirements"></a>要求
+
+**标头：** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

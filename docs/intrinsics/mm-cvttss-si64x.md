@@ -1,5 +1,5 @@
 ---
-title: _mm_cvttss_si64x |Microsoft 文档
+title: _mm_cvttss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333624"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540587"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft 专用**  
   
- 发出扩展 x64 版本的与截断为 64 位整数的单精度浮点数字转换 (`cvttss2si`) 指令。  
+ 发出扩展的 x64 版本的截断为 64 位整数的单精度浮点数字使用 Convert (`cvttss2si`) 指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,12 +48,12 @@ __int64 _mm_cvttss_si64x(
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 内部函数不同于`_mm_cvtss_si64x`仅在于准确转换舍去小数。 因为`__m128`结构表示的 XMM 寄存器，生成的指令将数据从的 XMM 寄存器移到系统内存。  
+ 内部函数不同于`_mm_cvtss_si64x`仅在于不精确的转换将向零截断。 因为`__m128`结构表示 XMM 寄存器，生成的指令将数据从 XMM 寄存器移动到系统内存。  
   
  此例程仅可用作内部函数。  
   

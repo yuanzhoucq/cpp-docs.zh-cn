@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b941013e2acfcee7a0f6fec16410ae7e200e56e0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012324"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578649"
 ---
 # <a name="resource-view-window"></a>“资源视图”窗口
+
 > [!NOTE]
->  在 Express 版本中不受支持。  
-  
- 资源视图显示项目中包含的资源文件。 展开顶部文件夹（如 Project1.rc）将显示该 .rc 文件中的资源类型。 展开每种资源类型将显示该类型的各个资源。  
-  
+> 在 Express 版本中不受支持。
+
+资源视图显示项目中包含的资源文件。 展开顶部文件夹（如 Project1.rc）将显示该 .rc 文件中的资源类型。 展开每种资源类型将显示该类型的各个资源。
+
 > [!NOTE]
->  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
-  
+> 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+
 > [!TIP]
->  您可以右键单击**资源视图**窗口来启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
-  
-### <a name="to-open-the-resource-view-window"></a>打开资源视图窗口  
-  
-1.  单击**资源视图**上**视图**菜单。  
-  
-     \- 或 -  
-  
-2.  按**Ctrl**+**Shift**+**E**。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [使用资源文件](../windows/working-with-resource-files.md)
+> 您可以右键单击**资源视图**窗口来启动命令的快捷菜单。 也可以在标题栏上双击以停靠或取消停靠该窗口。 在标题栏上右击将提供允许控制窗口行为的其他命令。 有关详细信息，请参阅[Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
+
+### <a name="to-open-the-resource-view-window"></a>打开资源视图窗口
+
+1. 单击**资源视图**上**视图**菜单。
+
+   \- 或 -
+
+2. 按**Ctrl**+**Shift**+**E**。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[使用资源文件](../windows/working-with-resource-files.md)

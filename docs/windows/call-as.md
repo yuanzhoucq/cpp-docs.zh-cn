@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b5fffe1490587e36d39a959f75796093cbc32a0f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644942"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601989"
 ---
 # <a name="callas"></a>call_as
-使[本地](../windows/local-cpp.md)函数以便远程函数调用时，调用本地函数要映射到远程函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-[ call_as(  
-   function  
-) ]  
-```  
-  
-### <a name="parameters"></a>参数  
- *函数*  
- 你想要远程函数调用时调用本地函数。  
-  
-## <a name="remarks"></a>备注  
- **Call_as** c + + 属性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 特性。  
-  
-## <a name="example"></a>示例  
- 下面的代码演示如何使用**call_as**映射不可远程处理函数 (`f1`) 到可远程处理函数 (`Remf1`):  
-  
-```cpp  
-// cpp_attr_ref_call_as.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="MyLib")];  
-[dual, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMInterface {  
-   [local] HRESULT f1 ( int i );  
-   [call_as(f1)] HRESULT Remf1 ( int i );   
-};  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|接口方法|  
-|**可重复**|否|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [方法特性](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
+
+使[本地](../windows/local-cpp.md)函数以便远程函数调用时，调用本地函数要映射到远程函数。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[ call_as(
+   function
+) ]
+```
+
+### <a name="parameters"></a>参数
+
+*函数*  
+你想要远程函数调用时调用本地函数。
+
+## <a name="remarks"></a>备注
+
+**Call_as** c + + 属性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 特性。
+
+## <a name="example"></a>示例
+
+下面的代码演示如何使用**call_as**映射不可远程处理函数 (`f1`) 到可远程处理函数 (`Remf1`):
+
+```cpp
+// cpp_attr_ref_call_as.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="MyLib")];
+[dual, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMInterface {
+   [local] HRESULT f1 ( int i );
+   [call_as(f1)] HRESULT Remf1 ( int i );
+};
+```
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|接口方法|
+|**可重复**|否|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[方法特性](../windows/method-attributes.md)  
+[local](../windows/local-cpp.md)  

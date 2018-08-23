@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efaf7b51da1e4a4e744133884b92ac78db3b3f66
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 988580a34c030c84c50adfff2741408be4b249cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017760"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586353"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown 方法
-获取一个指针指向基础`IUnknown`接口。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 此操作始终成功并返回`IUnknown`指针。  
-  
-## <a name="remarks"></a>备注  
- 内部帮助器函数。  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [Implements 结构](../windows/implements-structure.md)
+
+获取一个指针指向基础`IUnknown`接口。
+
+## <a name="syntax"></a>语法
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>返回值
+
+此操作始终成功并返回`IUnknown`指针。
+
+## <a name="remarks"></a>备注
+
+内部帮助器函数。
+
+## <a name="requirements"></a>要求
+
+**标头：** implements.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[Implements 结构](../windows/implements-structure.md)

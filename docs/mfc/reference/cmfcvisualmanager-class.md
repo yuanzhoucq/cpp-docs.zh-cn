@@ -354,17 +354,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853558"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539403"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
   
 ## <a name="syntax"></a>语法  
   

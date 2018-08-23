@@ -17,61 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94e33eea3dc367634b3cae9a025b0189598bbdd1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2b1ba0c95a87ce1743d225fd6af4bffee148d6ab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648946"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601888"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-指定要用于执行文档字符串查找 （本地化） DLL 的名称。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-[ helpstringdll(  
-   "string"  
-) ]  
-```  
-  
-### <a name="parameters"></a>参数  
- *string*  
- 要用于执行文档字符串查找 DLL。  
-  
-## <a name="remarks"></a>备注  
- **Helpstringdll** c + + 属性具有相同的功能[helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 特性。  
-  
-## <a name="example"></a>示例  
-  
-```cpp  
-// cpp_attr_ref_helpstringdll.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib", helpstringdll="xx.dll")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI   
-{  
-   HRESULT xxx();  
-};  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-### <a name="attribute-context"></a>特性上下文  
-  
-|||  
-|-|-|  
-|**适用对象**|**类**，**接口**，接口方法|  
-|**可重复**|否|  
-|**必需的特性**|无|  
-|**无效的特性**|无|  
-  
- 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDL 特性](../windows/idl-attributes.md)   
- [接口特性](../windows/interface-attributes.md)   
- [类特性](../windows/class-attributes.md)   
- [方法特性](../windows/method-attributes.md)   
+
+指定要用于执行文档字符串查找 （本地化） DLL 的名称。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[ helpstringdll(
+   "string"
+) ]
+```
+
+### <a name="parameters"></a>参数
+
+*string*  
+要用于执行文档字符串查找 DLL。
+
+## <a name="remarks"></a>备注
+
+**Helpstringdll** c + + 属性具有相同的功能[helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 特性。
+
+## <a name="example"></a>示例
+
+```cpp
+// cpp_attr_ref_helpstringdll.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib", helpstringdll="xx.dll")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI
+{
+   HRESULT xxx();
+};
+```
+
+## <a name="requirements"></a>要求
+
+### <a name="attribute-context"></a>特性上下文
+
+|||
+|-|-|
+|**适用对象**|**类**，**接口**，接口方法|
+|**可重复**|否|
+|**必需的特性**|无|
+|**无效的特性**|无|
+
+有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>请参阅
+
+[IDL 特性](../windows/idl-attributes.md)  
+[接口特性](../windows/interface-attributes.md)  
+[类特性](../windows/class-attributes.md)  
+[方法特性](../windows/method-attributes.md)  

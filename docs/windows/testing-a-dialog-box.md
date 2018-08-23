@@ -17,41 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587515"
 ---
 # <a name="testing-a-dialog-box"></a>测试对话框
-当您设计对话框时，无需编译程序即可模拟并测试其运行时行为。 在此模式中，您可以：  
-  
--   键入文本、从组合框列表中选择、打开或关闭选项，以及选择命令。  
-  
--   测试 Tab 键顺序。  
-  
--   测试控件的分组，如单选按钮和复选框。  
-  
--   在对话框中测试控件的键盘快捷键。  
-  
-    > [!NOTE]
-    >  与使用向导生成的对话框代码的连接不包括在此模拟中。  
-  
- 当测试对话框时，它通常显示在与主程序窗口相对的位置。 如果你已设置对话框的**Absolute Align**属性设置为**True**，对话框会显示在相对于屏幕的左上角的位置。  
-  
-### <a name="to-test-a-dialog-box"></a>测试对话框  
-  
-1.  当**对话框中**编辑器为活动窗口时，在菜单栏上的，选择**格式** > **测试对话框**。  
-  
-2.  若要结束此模拟，按**Esc**，或只需选择**关闭**正在测试的对话框中的按钮。  
-  
- 有关如何将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)。  
-  
-## <a name="requirements"></a>要求  
- Win32  
-  
-## <a name="see-also"></a>请参阅  
- [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
- [对话框编辑器](../windows/dialog-editor.md)   
- [显示或隐藏对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+
+当您设计对话框时，无需编译程序即可模拟并测试其运行时行为。 在此模式中，您可以：
+
+- 键入文本、从组合框列表中选择、打开或关闭选项，以及选择命令。
+
+- 测试 Tab 键顺序。
+
+- 测试控件的分组，如单选按钮和复选框。
+
+- 在对话框中测试控件的键盘快捷键。
+
+   > [!NOTE]
+   > 与使用向导生成的对话框代码的连接不包括在此模拟中。
+
+当测试对话框时，它通常显示在与主程序窗口相对的位置。 如果你已设置对话框的**Absolute Align**属性设置为**True**，对话框会显示在相对于屏幕的左上角的位置。
+
+### <a name="to-test-a-dialog-box"></a>测试对话框
+
+1. 当**对话框中**编辑器为活动窗口时，在菜单栏上的，选择**格式** > **测试对话框**。
+
+2. 若要结束此模拟，按**Esc**，或只需选择**关闭**正在测试的对话框中的按钮。
+
+有关如何将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)。
+
+## <a name="requirements"></a>要求
+
+Win32
+
+## <a name="see-also"></a>请参阅
+
+[对话框中的控件](../windows/controls-in-dialog-boxes.md)  
+[对话框编辑器](../windows/dialog-editor.md)  
+[显示或隐藏对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

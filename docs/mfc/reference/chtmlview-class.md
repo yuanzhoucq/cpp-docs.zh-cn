@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027854"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541576"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器控件功能。  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|检索 WebBrowser 当前正在显示的资源的 URL。|  
 |[CHtmlView::GetMenuBar](#getmenubar)|检索一个值，该值确定菜单栏是否可见。|  
 |[CHtmlView::GetOffline](#getoffline)|检索一个值，该值确定控件是否处于脱机状态。|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|检索指向 `IDispatch` 接口的指针。 有关详细信息，请参阅[实现 IDispatch 接口](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|检索指向 `IDispatch` 接口的指针。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。|  
 |[CHtmlView::GetProperty](#getproperty)|检索与给定对象关联的属性的当前值。|  
 |[CHtmlView::GetReadyState](#getreadystate)|检索 web 浏览器对象的就绪状态。|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|指示是否将 WebBrowser 控件注册为目标名称解析的顶级浏览器。|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个指向`IDispatch`活动文档对象的接口。 有关详细信息，请参阅[实现 IDispatch 接口](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 一个指向`IDispatch`活动文档对象的接口。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
@@ -1080,7 +1080,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ### <a name="remarks"></a>备注  
  不是每个帧将触发此事件，但将触发的每个帧[OnDownloadBegin](#ondownloadbegin)事件将激发相应`OnDocumentComplete`事件。  
   
- URL 指示*lpszURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为" http://www.microsoft.com/ "。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。  
+ URL 指示*lpszURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"http://www.microsoft.com/"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  从 Internet Explorer 或 MSHTML 实现调用`IOleInPlaceActiveObject::OnDocWindowActivate`，这会激活或停用容器文件窗口时通知活动的就地对象。  
@@ -1299,7 +1299,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 ### <a name="remarks"></a>备注  
  URL 参数可以是在没有任何 URL 表示形式的命令行程序名称空间实体的情况下 PIDL。  
   
- 请注意，在 URL 中包含*strURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为" http://www.microsoft.com/ "。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。  
+ 请注意，在 URL 中包含*strURL*可以不同于在浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"的调用中到的 URL [Navigate](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将为"http://www.microsoft.com/"。 此外，如果服务器具有定向到不同的 URL 的浏览器，重定向的 URL 将会反映在此处。  
   
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError  
  当导航到超链接失败时由框架调用。  

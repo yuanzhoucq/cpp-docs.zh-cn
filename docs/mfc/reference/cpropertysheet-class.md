@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853199"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538228"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 表示属性表，也称为选项卡对话框。  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>备注  
  属性表组成`CPropertySheet`对象和一个或多个[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象。 框架显示属性表为具有一组选项卡索引和区域，其中包含当前所选的页面的窗口。 用户导航到特定页通过使用相应的选项卡。  
   
- `CPropertySheet` 提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构中引入[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]和 Windows NT 2000。 该结构包含其他标志和支持使用"水印"背景位图的成员。  
+ `CPropertySheet` 提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 和 Windows NT 2000 中引入的结构。 该结构包含其他标志和支持使用"水印"背景位图的成员。  
   
  若要在属性表对象中自动显示这些新映像，对的调用中传递的位图和调色板映像的有效值[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).  
   

@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853545"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543124"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 封装月历控件的功能。  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in]*cxyBorder*|以像素为单位的边框宽度。|  
   
 ### <a name="remarks"></a>备注  
- 如果此方法成功，边框宽度设置为*cxyBorder*参数。 否则，边框宽度将重置为当前指定的默认值[主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或为零则不使用主题。  
+ 如果此方法成功，边框宽度设置为*cxyBorder*参数。 否则，边框宽度将重置为当前指定的默认值[主题](/windows/desktop/Controls/visual-styles-overview)，或为零则不使用主题。  
   
  此方法将发送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)消息，Windows SDK 中所述。  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>备注  
- 边框宽度设置为当前指定的默认值[主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或为零则不使用主题。  
+ 边框宽度设置为当前指定的默认值[主题](/windows/desktop/Controls/visual-styles-overview)，或为零则不使用主题。  
   
  此方法将发送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)消息，Windows SDK 中所述。  
   

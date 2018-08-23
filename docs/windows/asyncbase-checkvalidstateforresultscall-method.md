@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398f46d5f8eb15d961d80b9a7a20b758fffd09c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651903"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584231"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall 方法
-测试是否可以在当前的异步状态中收集的异步操作结果。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-inline HRESULT CheckValidStateForResultsCall();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果可以收集结果; 则为 S_OK否则为 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。  
-  
-## <a name="requirements"></a>要求  
- **标头：** async.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>请参阅  
- [AsyncBase 类](../windows/asyncbase-class.md)
+
+测试是否可以在当前的异步状态中收集的异步操作结果。
+
+## <a name="syntax"></a>语法
+
+```cpp
+inline HRESULT CheckValidStateForResultsCall();
+```
+
+## <a name="return-value"></a>返回值
+
+如果可以收集结果; 则为 S_OK否则为 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。
+
+## <a name="requirements"></a>要求
+
+**标头：** async.h
+
+**命名空间：** Microsoft::WRL
+
+## <a name="see-also"></a>请参阅
+
+[AsyncBase 类](../windows/asyncbase-class.md)
