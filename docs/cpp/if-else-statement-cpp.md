@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405105"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131886"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 控制条件分支。 中的语句*if 块*仅当执行*if 表达式*的计算结果为非零值 （或 TRUE）。 如果的值*表达式*为非零值，*语句 1*和块中的任何其他语句执行和其他的块，如果存在，则跳过。 如果的值*表达式*是零，则跳过 if 块，并且执行其他的块，（如果存在）。 表达式的计算结果为非零值。
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>如果语句具有初始值设定项
+## <a name="if_with_init"></a> 如果语句具有初始值设定项
+
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  **Else**子句`if...else`语句是与最接近以前**如果**不具有相应的同一范围中的语句**其他**语句。   
 
-## <a name="constexpr-if-statements"></a>constexpr 如果语句
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用`constexpr if`语句进行编译时分支决策，而不必求助于多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）： 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 语句
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而无需不必使用多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）： 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

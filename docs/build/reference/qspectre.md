@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375872"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130984"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ ms.locfileid: "39375872"
 
 ## <a name="remarks"></a>备注
 
-**/Qspectre**选项将使编译器插入以缓解特定的说明[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推理执行旁道攻击*、 会影响许多操作系统和现代处理器中，包括来自 Intel、 AMD 处理器和 ARM。
+**/Qspectre**选项是可用在 Visual Studio 2017 版本 15.7 及更高版本。 它会导致编译器插入以缓解特定的说明[Spectre 安全漏洞](https://spectreattack.com/spectre.pdf)。 调用这些漏洞*推理执行旁道攻击*、 会影响许多操作系统和现代处理器中，包括来自 Intel、 AMD 处理器和 ARM。
 
 **/Qspectre**选项默认情况下处于关闭状态。
 
