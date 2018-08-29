@@ -1,5 +1,5 @@
 ---
-title: constexpr C++ 中的 Lambda 表达式 |Microsoft 文档
+title: constexpr lambda 表达式在 c + + |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408198"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131394"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr C++ 中的 Lambda 表达式
+# <a name="constexpr-lambda-expressions-in-c"></a>c + + 中的 constexpr lambda 表达式
 **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能作为声明的 lambda 表达式**constexpr**或固定表达式中使用时的每个初始化常量表达式中允许包含它捕获或引入的数据成员。  
 
 ```cpp

@@ -1,5 +1,5 @@
 ---
-title: -宽松-（标准一致性） |Microsoft 文档
+title: -permissive-（标准符合性） |Microsoft Docs
 ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 1f2f0b1ca5351fbf2cfa2ab4b3233f8e709fae44
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322259"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131211"
 ---
-# <a name="permissive--standards-conformance"></a>/ 宽松-（标准一致性）
+# <a name="permissive--standards-conformance"></a>触发-（标准符合性）
 
-指定到编译器的标准一致性模式。 使用此选项可帮助你标识和修复代码，以使其更正确并更易于移植中的一致性问题。
+指定到编译器的标准符合性模式。 使用此选项以帮助你发现并纠正在代码中，以使其更正确并更易于移植的一致性问题。
 
 ## <a name="syntax"></a>语法
 
@@ -36,25 +36,27 @@ ms.locfileid: "36322259"
 
 ## <a name="remarks"></a>备注
 
-你可以使用 **/ 宽松-** 编译器选项来指定符合标准的编译器行为。 此选项禁用宽松行为，并设置[/Zc](../../build/reference/zc-conformance.md)严格一致性的编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎下划线不符合要求代码。
+在 Visual Studio 2017 及更高版本支持此选项。
 
-默认情况下， **/ 宽松-** 在通过 Visual Studio 2017 版本 15.5 和更高版本创建的新项目中设置选项。 未设置默认情况下，在早期版本中。 当将选项设置，编译器将生成诊断错误或警告非标准语言构造时是否检测到你的代码时，在预包括一些常见的 bug 的 C + + 11 代码。
+可以使用**触发-** 编译器选项来指定符合标准的编译器行为。 此选项禁用宽松的行为，并设置[/Zc](../../build/reference/zc-conformance.md)严格的一致性的编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎下划线非符合代码。
 
-**/ 宽松-** 选项适用于几乎所有最新的 Windows 套件，如软件开发工具包 (SDK) 或 Windows 驱动程序工具包 (WDK)，从 Windows 秋季创建者 SDK (10.0.16299.0) 开始的标头文件。 较旧版本的 SDK 可能无法在下编译 **/ 宽松-** 各种源代码一致性方面的考虑。 编译器和不同的发布时间线上的 Sdk 装运因此有一些剩余的问题。 有关特定标头文件问题，请参阅[Windows 标头问题](#windows-header-issues)下面。
+默认情况下**触发-** 在通过 Visual Studio 2017 版本 15.5 及更高版本创建的新项目中设置选项。 未设置默认情况下，在早期版本中。 当设置此选项，编译器将生成诊断错误或警告非标准的语言构造时检测到在代码中时，在预包括一些常见 bug 的 C + + 11 代码。
 
-**/ 宽松-** 选项集[/zc: strictstrings](../../build/reference/zc-conformance.md)和[/zc: rvaluecast](../../build/reference/zc-conformance.md)符合标准行为的选项。 它们默认为不符合要求的行为。 你可以将传递特定 **/Zc**选项后 **/ 宽松-** 重写此行为在命令行上。
+**触发-** 选项适用于几乎所有最新的 Windows 工具包，例如软件开发工具包 (SDK) 或 Windows Driver Kit (WDK)，从 Windows Fall Creators SDK (10.0.16299.0) 中的标头文件。 较旧版本的 SDK 可能无法在编译**触发-** 各种源代码一致性方面的考虑。 编译器和 Sdk 飞船上不同的发布时间线，因此有一些其他问题。 有关特定的标头文件问题，请参阅[Windows 标头问题](#windows-header-issues)下面。
 
-在版本的 Visual Studio 2017 版本 15.3，在编译器开始 **/ 宽松-** 选项集[/Zc:ternary](../../build/reference/zc-ternary.md)选项。 编译器还实现两阶段的名称查找的要求的详细信息。 当 **/ 宽松-** 设置选项，编译器分析函数和类模板定义中，标识了模板中使用的相关和非依赖名称。 在此版本中，执行仅名称依赖项分析。
+**触发-** 选项集[/zc: strictstrings](../../build/reference/zc-conformance.md)并[/zc: rvaluecast](../../build/reference/zc-conformance.md)符合标准行为的选项。 但默认为不符合要求的行为。 您可以将传递特定 **/Zc**选项后**触发的**用于重写此行为的命令行上。
 
-不受特定于环境的扩展和标准离开的实现的语言区域 **/ 宽松-**。 例如，特定于 Microsoft 的`__declspec`，不会调用约定和结构化的异常处理关键字，和特定于编译器的杂注指令或属性中的编译器将标记 **/ 宽松-** 模式。
+在 Visual Studio 2017 版本 15.3 中，编译器从开始版本中**触发-** 选项集[/zc: ternary](../../build/reference/zc-ternary.md)选项。 编译器还实现两阶段名称查找的要求的详细信息。 当**触发-** 设置选项，编译器分析函数和类模板定义，标识在模板中使用相关和非依赖名称。 在此版本中，执行仅名称依赖项分析。
 
-**/ 宽松-** 选项使用的一致性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合 c + + 标准的特定版本。 若要启用针对最新草稿标准的所有实现的编译器支持，使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制对当前实现 C + + 17 标准编译器支持，请使用[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制以更接近 C + + 14 标准的编译器支持，使用[/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)选项，这是默认值。
+不受特定于环境的扩展语言的区域，以及由该实现标准离开**触发-**。 例如，Microsoft 专用`__declspec`，调用约定和结构化的异常处理关键字，和特定于编译器的杂注指令或属性不在编译器标记**触发-** 模式。
 
-未列出所有 C + + 11、 C + + 14 中或 C + + 17 符合标准的代码支持 Visual Studio 自 2017 年中的 Visual c + + 编译器。 具体取决于 Visual Studio 中，版本 **/ 宽松-** 选项可能无法检测到问题有关的两阶段的名称查找某些方面，绑定到临时的非常量引用，将复制 init 视为直接 init，允许多个用户定义的转换中初始化或备用令牌对于逻辑运算符和其他不受支持的一致性区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要充分利用获取 **/ 宽松-**，更新到最新版本的 Visual Studio。
+**触发-** 选项使用的符合性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合特定版本的 c + + 标准。 若要启用所有实现的编译器对最新草案标准的支持，请使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制当前实现中 C + + 17 标准编译器支持，使用[/std: c + + 17](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制的编译器支持以更接近 C + + 14 标准，请使用[/std: c + + 14](../../build/reference/std-specify-language-standard-version.md)选项，这是默认值。
+
+未列出所有 C + + 11、 C + + 14 或 C + + 17 符合标准的 Visual Studio 2017 中 Visual c + + 编译器支持代码。 具体取决于版本的 Visual Studio 中，**触发-** 选项可能无法检测到问题有关的两阶段名称查找某些方面，绑定到一个临时的非常量引用、 复制 init 视为直接 init，允许多个用户定义的转换中进行初始化或替代标记的逻辑运算符和不受支持的符合性的其他区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要获取最大程度**触发-**，Visual Studio 更新到最新版本。
 
 ### <a name="how-to-fix-your-code"></a>如何修复你的代码
 
-下面是一些示例检测为不符合要求时使用的代码 **/ 宽松-**，以及建议如何修复问题。
+下面是一些示例被检测为不符合要求时使用的代码**触发-**，以及修复这些问题的建议方法。
 
 #### <a name="use-default-as-an-identifier-in-native-code"></a>使用默认值为本机代码中的标识符
 
@@ -63,7 +65,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>查找依赖基中的成员
+#### <a name="lookup-members-in-dependent-base"></a>依赖库中的查找成员
 
 ```cpp
 template <typename T>
@@ -91,7 +93,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>使用成员声明中的限定名称
+#### <a name="use-of-qualified-names-in-member-declarations"></a>使用的成员声明中的限定名称
 
 ```cpp
 struct A {
@@ -144,7 +146,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>在数组边界内使用区分范围的枚举
+#### <a name="use-scoped-enums-in-array-bounds"></a>在数组边界内使用作用域内的枚举
 
 ```cpp
 enum class Color {
@@ -156,7 +158,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>使用本机代码中的 for each
+#### <a name="use-for-each-in-native-code"></a>为每个本机代码中使用
 
 ```cpp
 void func() {
@@ -240,21 +242,21 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 };
 ```
 
-#### <a name="ambiguous-conditional-operator-arguments"></a>不明确的条件运算符的自变量
+#### <a name="ambiguous-conditional-operator-arguments"></a>不明确的条件运算符的参数
 
-在 Visual Studio 2017 版本 15.3 之前编译器的版本中，编译器接受的条件运算符 （或三元运算符） 参数`?:`，它们将被视为不明确的标准。 在 **/ 宽松-** 模式下，编译器现将发出一个或多个诊断在编译而无需在早期版本中的诊断的情况下。
+在 Visual Studio 2017 版本 15.3 之前的编译器版本中，编译器接受的条件运算符 （或三元运算符） 参数`?:`被视为不明确的标准。 在中**触发-** 模式下，编译器现将发出一个或多个诊断的情况下，编译而无需在早期版本中的诊断。
 
-此更改，可能会导致的常见错误包括：
+此更改，可能会导致该列错误包括：
 
 - 错误 C2593: operator？ 不明确
 
 - 错误 C2679： 二进制？： 没有找到运算符采用 B 的右操作数的类型 （或没有可接受的转换）
 
-- 错误 C2678： 二进制？： 未找到接受的左操作数的类型 A （或没有可接受的转换）
+- 错误 C2678： 二进制？： 没有找到运算符接受类型 A 的左侧操作数 （或没有可接受的转换）
 
-- 错误 C2446::： 从 B 不转换为 A
+- 错误 C2446::： 没有从 'B' 到 'A' 转换
 
-C 的某个类为类型为 t。 提供从另一种类型 T 的隐式构造函数和非显式转换运算符时可能会导致此问题的典型代码模式在这种情况下，第二个自变量转换的一种第三和第三个自变量到的第二个类型的转换是有效的转换，从而使不明确根据标准。
+某些类 C 到 T 类型提供了从另一种类型 T 的非显式构造函数而非显式转换运算符时，可能会导致此问题的典型代码模式在这种情况下，第二个自变量转换为第三种和第三参数转换为第二个类型的转换是有效的转换，不根据标准明确的。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -274,7 +276,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-没有为此通用模式重要异常时 T 表示 null 结尾的字符串类型之一 (例如， `const char *`， `const char16_t *`，依次类推) 和实际自变量`?:`是字符串文本的相应的类型。 C + + 17 已从 C + + 14 更改语义。 因此，示例 2 中的代码接受下 **/std:c + + 14**和拒绝下 **/std:c + + 17**时 **/Zc:ternary**或 **/permissive-** 使用。
+没有为此通用模式的一个重要异常时 T 表示一个以 null 结尾的字符串类型 (例如， `const char *`， `const char16_t *`，依此类推) 的实际自变量和`?:`是一个字符串，相应类型的文本。 C + + 17 已从 C + + 14 更改语义。 因此，示例 2 中的代码接受下 **/std: c + + 14**或将其拒绝下 **/std: c + + 17**时 **/zc: ternary**或 **/permissive-** 使用。
 
 ```cpp
 // Example 2: exception from the above
@@ -295,7 +297,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-其中可能会看到错误的另一种是在带有一个自变量的类型的条件运算符`void`。 这种情况下可能很常见中断言类似宏。
+其中可能会看到错误的另一种情况是在带有一个自变量类型的条件运算符`void`。 这种情况下可能都在类似于 ASSERT 的宏的位置相同。
 
 ```cpp
 // Example 3: void arguments
@@ -306,7 +308,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-您还可能看到的模板元编程，条件运算符的结果类型在其中下可能更改中的错误 **/Zc:ternary**和 **/ 宽松-**。 解决此问题是使用一种方法[std::remove_reference](../../standard-library/remove-reference-class.md)上生成的类型。
+您还可能看到的模板元编程，其中条件运算符的结果类型可能会更改下中的错误 **/zc: ternary**并**触发的**。 解决此问题是使用一种方法[std::remove_reference](../../standard-library/remove-reference-class.md)上生成的类型。
 
 ```cpp
 // Example 4: different result types
@@ -318,9 +320,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>两阶段的名称查找
+#### <a name="two-phase-name-look-up"></a>两阶段名称查找
 
-当 **/ 宽松-** 设置选项，编译器分析函数和类模板定义中，标识所需的模板中用于两阶段的名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非相关名称导致作为按 ISO c + + 标准所需的诊断消息。 在 Visual Studio 2017 15.7 版，还完成的需要自变量依赖查找定义上下文中的非依赖名称的绑定。
+当**触发-** 设置选项，编译器分析函数和类模板定义，标识所需的模板中使用的两阶段名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3 中，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非依赖名称会导致所需的 ISO c + + 标准的诊断消息。 在 Visual Studio 2017 版本 15.7 中，需要参数依赖查找定义上下文中的非依赖名称的绑定是也可以完成。
 
 ```cpp
 // dependent base
@@ -346,15 +348,15 @@ int main()
 }
 ```
 
-如果希望将旧行为两阶段 lookup 来说，但否则 **/ 宽松-** 行为，添加 **/Zc:twoPhase-** 选项。
+如果为两阶段查找希望旧行为，但想**触发-** 行为，添加 **/zc: twophase-** 选项。
 
 ### <a name="windows-header-issues"></a>Windows 标头问题
 
-**/ 宽松-** 选项设置为之前 Windows 秋季创建者更新 SDK (10.0.16299.0)，Windows 工具包的版本或 Windows 驱动程序工具包 (WDK) 版本 1709年太严格。 我们建议你更新到最新版本的 Windows 套件，以便使用 **/ 宽松-** 在 Windows 或设备驱动程序代码。
+**触发-** 选项设置为 Windows Fall Creators Update SDK (10.0.16299.0) 之前 Windows 工具包的版本或 Windows Driver Kit (WDK) 版本 1709年太严格。 我们建议你更新到最新版本的 Windows 工具包，以便使用**触发-** Windows 或设备驱动程序代码中。
 
-某些 Windows 年 4 月 2018年更新 SDK (10.0.17134.0)、 Windows 秋季创建者更新 SDK (10.0.16299.0) 或 Windows 驱动程序工具包 (WDK) 1709 中的标头文件仍具有使它们与使用的不兼容的问题 **/permissive-**. 若要解决这些问题，我们建议你将使用这些标头限制到源代码的那些文件，需要它们，并删除 **/ 宽松-** 选项编译这些特定的源代码文件时。
+在 Windows 年 4 月 2018年更新 SDK (10.0.17134.0)、 Windows Fall Creators Update SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709，某些标头文件仍有问题，使它们与使用的不兼容 **/permissive-**. 若要解决这些问题，我们建议使用这些标头，限制对那些源的代码文件需要它们，并删除**触发-** 选项编译这些特定的源代码文件时。
 
-发布这些 WinRT WRL 标头在窗口中年 4 月 2018年更新 SDK (10.0.17134.0) 不是使用干净 **/ 宽松-**。 若要解决这些问题，请不要将 **/ 宽松-**，或使用 **/ 宽松-** 与 **/Zc:twoPhase-** 时使用这些标头：
+发布这些 WinRT WRL 标头在 Windows 中 2018 年 4 月更新 SDK (10.0.17134.0) 不是使用干净**触发-**。 若要解决这些问题，请不要将**触发-**，或使用**触发-** 与 **/zc: twophase-** 时使用这些标头：
 
 - Winrt/wrl/async.h 中的问题
 
@@ -371,7 +373,7 @@ int main()
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-发布这些用户模式下标头在窗口中年 4 月 2018年更新 SDK (10.0.17134.0) 不是使用干净 **/ 宽松-**。 若要解决这些问题，不要使用 **/ 宽松-** 时使用这些标头：
+发布这些用户模式下标头在 Windows 中 2018 年 4 月更新 SDK (10.0.17134.0) 不是使用干净**触发-**。 若要解决这些问题，不要使用**触发-** 时使用这些标头：
 
 - Um/Tune.h 中的问题
 
@@ -396,11 +398,11 @@ int main()
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-这些问题是特定于用户模式下在 Windows 秋季创建者更新 SDK (10.0.16299.0) 中的标头：
+这些问题是特定于用户模式下在 Windows Fall Creators Update SDK (10.0.16299.0) 中的标头：
 
 - 发出 um/Query.h 中
 
-   使用时 **/ 宽松-** 编译器开关，`tagRESTRICTION`结构不能编译由于 case(RTOr) 成员 '。
+   使用时**触发-** 编译器开关，`tagRESTRICTION`结构不会由于 case(RTOr) 成员进行编译或。
 
    ```cpp
    struct tagRESTRICTION
@@ -422,21 +424,21 @@ int main()
    };
    ```
 
-   若要解决此问题，程序文件编译包括而无需 Query.h **/ 宽松-** 选项。
+   若要解决此问题，编译文件，其中包括无需 Query.h**触发-** 选项。
 
 - 发出 um/cellularapi_oem.h 中
 
-   使用时 **/ 宽松-** 编译器开关、 的前向声明`enum UICCDATASTOREACCESSMODE`导致警告：
+   使用时**触发-** 编译器开关、 的前向声明`enum UICCDATASTOREACCESSMODE`导致警告：
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   未区分范围的前向声明是枚举的 Microsoft 扩展。 若要解决此问题，编译包含而无需 cellularapi_oem.h 文件 **/ 宽松-** 选项，或使用[/wd](../../build/reference/compiler-option-warning-level.md)静音警告 C4471 的选项。
+   未区分范围枚举的前向声明是 Microsoft 扩展。 若要解决此问题，编译文件，其中包括无需 cellularapi_oem.h**触发-** 选项，或使用[/wd](../../build/reference/compiler-option-warning-level.md)提示警告 C4471 的选项。
 
 - 发出 um/omscript.h 中
 
-   在 C + + 03 中，从字符串转换为 BSTR (即的 typedef wchar_t *) 是不推荐使用，但允许。 在 C + + 11 中，不再允许转换。
+   在 C + + 03，从字符串文字转换为 BSTR (即的 typedef wchar_t *) 是不推荐使用，但允许。 在 C + + 11 中，不再允许转换。
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -445,25 +447,25 @@ int main()
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   若要解决此问题，程序文件编译包括而无需 omscript.h **/ 宽松-** 选项，或使用 **/Zc:strictStrings-** 相反。
+   若要解决此问题，编译文件，其中包括无需 omscript.h**触发-** 选项，或使用 **/Zc:strictStrings-** 相反。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
 在 Visual Studio 2017 版本 15.5 和更高版本中，使用此过程：
 
-1. 打开你的项目的**属性页**对话框。
+1. 打开你的项目**属性页**对话框。
 
 1. 选择**配置属性** > **C/c + +** > **语言**属性页。
 
-1. 更改**一致性模式**属性值设置为**是 (/ 宽松-)**。 选择**确定**或**应用**以保存所做的更改。
+1. 更改**符合模式**属性值设置为**是 (触发的)**。 选择**确定**或**应用**以保存所做的更改。
 
 在 Visual Studio 2017 版本 15.5 之前的版本，使用此过程：
 
-1. 打开你的项目的**属性页**对话框。
+1. 打开你的项目**属性页**对话框。
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 输入 **/ 宽松-** 中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
+1. 输入**触发-** 中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

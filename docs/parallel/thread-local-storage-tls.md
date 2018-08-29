@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541210"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132071"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 线程本地存储 (TLS) 是一种方法，给定的多线程进程中的每个线程可以使用这种方法分配用以存储线程特定的数据的位置。 动态绑定 （运行时） 线程特定的数据支持 TLS api ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  Win32 和 Visual C++ 编译器现在除了支持现有的 API 实现外，还支持静态绑定（负载时）每线程数据。  
@@ -117,4 +117,4 @@ __declspec( thread ) int tls_i = 1;
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)   
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)   

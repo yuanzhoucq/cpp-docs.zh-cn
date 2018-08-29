@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的并行编程 |Microsoft 文档
+title: Visual c + + 中的并行编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b93a28c8e3a1b7ca765f671e58ee54abbcfde9e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5402f2eda294003d58f40e52e800a4cfaefb1b23
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692226"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131568"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Visual C++ 中的并行编程
-Visual c + + 提供了以下技术可帮助你创建多线程和并行程序充分利用的多个核心和 GPU 用于常规用途编程。  
+Visual c + + 提供了以下技术来帮助你创建多线程和并行程序，充分利用多个核心，并将 GPU 用于常规目的编程。  
   
 ## <a name="related-articles"></a>相关文章  
   
 |标题|描述|  
 |-----------|-----------------|  
-|[自动并行化和自动矢量化](../parallel/auto-parallelization-and-auto-vectorization.md)|加速代码的编译器优化。|  
-|[并发运行时](../parallel/concrt/concurrency-runtime.md)|简化的数据并行或任务并行使用的程序编写的类。|  
-|[C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|启用现代图形处理器用于常规用途的编程的类。|  
-|[针对旧代码的多线程支持 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)|在较旧的应用程序可能很有用的旧技术。 对于新的应用程序，使用并发运行时或 c + + AMP。|  
-|[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)|Microsoft 实现的 OpenMP API 中。|  
+|[自动并行化和自动矢量化](auto-parallelization-and-auto-vectorization.md)|加速代码的编译器优化。|  
+|[并发运行时](concrt/concurrency-runtime.md)|简化的数据并行或任务并行使用的程序编写的类。|  
+|[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|允许使用现代图形处理器进行通用编程的类。|  
+|[针对旧代码的多线程支持 (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|在较旧的应用程序可能有用的较旧技术。 对于新应用程序，使用并发运行时或 c + + AMP。|  
+|[OpenMP](openmp/openmp-in-visual-cpp.md)|OpenMP API 的 Microsoft 实现。|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|文档的此部分包含有关的大多数功能的 Visual c + + 的信息。|

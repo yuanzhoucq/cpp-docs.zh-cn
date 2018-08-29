@@ -1,19 +1,19 @@
 ---
-title: C++ 标准属性 |Microsoft 文档
+title: C + + 中的属性 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 06/01/2018
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459663eca36110209445ad20c4a10a258d43733f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42575465"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131794"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 

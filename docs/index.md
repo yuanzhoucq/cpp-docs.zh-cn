@@ -3,12 +3,16 @@ layout: HubPage
 ms.topic: hub-page
 title: Visual C++ 文档| Microsoft Docs
 description: 了解如何使用 C++ 针对平台和设备开发应用程序、服务和工具。
-ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c4ae5b3f4ffed0c41c3d519a99b7608893813872
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794191"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43130660"
 ---
 <div id="main" class="v2">
     <div class="container">

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571852"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900695"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
+
+注意：在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现此错误 C3861：“unwind_type”：找不到标识符，请参阅 Boostorg 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](vcpkg.md) Boost 包，所以，如果你从 vcpkg 获取或升级你的 Boost 源，则无需单独应用此修补。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空间 std 中的转发声明和定义
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538391"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131849"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>线程控制的 C 运行库函数
 所有 Win32 程序都具有至少一个线程。 任何线程都可以创建其他线程。 一个线程可以快速完成其工作，然后终止; 或它可以将保持活动状态的程序的生命周期。  
@@ -54,4 +54,4 @@ LIBCMT 和 msvcrt 系统 C 运行时库提供用于线程创建和终止的以�
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)

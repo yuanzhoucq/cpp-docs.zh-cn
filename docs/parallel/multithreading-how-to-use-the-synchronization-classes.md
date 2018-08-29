@@ -1,7 +1,7 @@
 ---
-title: 多线程处理： 如何使用同步类 |Microsoft Docs
+title: 多线程处理： 如何使用 MFC 同步类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597884"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131257"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>多线程处理：如何使用同步类
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多线程处理： 如何使用 MFC 同步类
 编写多线程应用程序时，同步在线程之间的资源访问权限是一个常见问题。 具有两个或多个线程同时访问相同的数据可能会导致不必要和不可预知的结果。 例如，一个线程可能正在更新结构的内容而另一个线程正在读取相同的结构的内容。 不知道哪些数据读取线程将收到： 旧的数据、 新写入的数据，或可能是两者的混合。 MFC 提供了多个同步和同步访问类，以帮助解决此问题。 本主题介绍可用的类以及如何使用它们在典型的多线程应用程序创建线程安全类。  
   
 典型的多线程应用程序有一个类，表示要在线程之间共享的资源。 正确设计的完全线程安全类不需要您可以调用任意同步函数。 所有内容到类，从而可以专注于如何充分利用类，关于如何可能会遭到损坏不在内部处理。 创建完全线程安全类的有效方法是同步类合并到的资源类。 将同步类合并到共享的类是一个简单的过程。  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 此方法的缺点是，该类将比同一类稍慢而无需添加的同步对象。 此外，如果有多个线程可能会删除该对象的机会，合并的方法不始终有效。 在这种情况下，它是更好的做法维护单独的同步对象。  
   
-有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理： 何时使用同步类](../parallel/multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用 c + + 和 MFC 多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)。  
+有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理： 何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)
+[使用 C++ 和 MFC 进行多线程编程](multithreading-with-cpp-and-mfc.md)

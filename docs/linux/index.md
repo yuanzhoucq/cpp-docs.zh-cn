@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
 ms.topic: landing-page
 title: 使用 C++ 文档的 Linux 开发
 description: 创建和调试在 Linux 上运行的应用程序。
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: adedfd2a6589d7d7d0fad453428d409932007e15
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794175"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131900"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 
-创建和调试在 Linux 上运行的应用程序。
+使用 Visual Studio 2017 创建和调试在 Linux 上运行的应用程序。
 
 <ul class="panelContent cardsF">
     <li>
@@ -29,7 +31,7 @@ ms.locfileid: "29794175"
                     </div>
                     <div class="cardText">
                         <h3>安装和配置 Linux 工作负荷</h3>
-                        <p>了解如何安装 Visual Studio 以使用 C++ 生成 Linux 应用程序。</p>
+                        <p>了解如何安装 Visual Studio 2017 及更高版本以使用以 C++ 生成 Linux 应用程序。</p>
                     </div>
                 </div>
             </div>

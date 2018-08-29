@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f83037258ebd279f7c9ed80086a34ebf497efeed
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879363"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131678"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>格式化时间值： 通用类
 以下过程说明如何设置时间值的格式。  
@@ -41,6 +41,5 @@ ms.locfileid: "37879363"
   
 -   [自动化的日期和时间编程的支持](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间：通用类](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 

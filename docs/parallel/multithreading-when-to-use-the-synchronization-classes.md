@@ -1,7 +1,7 @@
 ---
 title: 多线程处理： 何时使用同步类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d88bb98388aaedac9499ab91ad94bef085c0b702
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606059"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132261"
 ---
-# <a name="multithreading-when-to-use-the-synchronization-classes"></a>多线程处理：何时使用同步类
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多线程处理： 何时使用同步类
 MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/reference/csyncobject-class.md)， [CSemaphore](../mfc/reference/csemaphore-class.md)， [CMutex](../mfc/reference/cmutex-class.md)， [CCriticalSection](../mfc/reference/ccriticalsection-class.md)，并[CEvent](../mfc/reference/cevent-class.md)) 和同步访问对象 ([CMultiLock](../mfc/reference/cmultilock-class.md)并[CSingleLock](../mfc/reference/csinglelock-class.md))。  
   
 当必须控制对资源的访问以确保资源的完整性时，使用同步类。 同步访问类用于获取对这些受控资源的访问权限。 本主题介绍何时使用每个类。  
@@ -61,8 +61,8 @@ MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/r
  
 选择要使用的同步访问类更简单。 如果你的应用程序与访问单个的受控的资源仅而言，使用`CSingleLock`。 如果它需要访问多个受控任何的资源一个，请使用`CMultiLock`。 示例 1 中，`CSingleLock`应使用，因为每种情况下在任何特定时间需要一个资源。  
   
-有关如何使用同步类的信息，请参阅[多线程处理： 如何使用同步类](../parallel/multithreading-how-to-use-the-synchronization-classes.md)。 有关同步的信息，请参阅[同步](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK 中。 有关在 MFC 中的多线程处理支持信息，请参阅[使用 c + + 和 MFC 多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)。  
+有关如何使用同步类的信息，请参阅[多线程处理： 如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)。 有关同步的信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程处理支持信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)
+[使用 C++ 和 MFC 进行多线程编程](multithreading-with-cpp-and-mfc.md)
