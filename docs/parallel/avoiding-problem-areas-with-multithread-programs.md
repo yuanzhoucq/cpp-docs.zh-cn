@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543080"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131057"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免与多线程程序有关的问题
-有几个创建、 链接，或执行多线程 C 程序中可能会遇到的问题。 一些较为常见的问题是下表中所述。 (从 MFC 的角度的类似讨论，请参阅[多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)。)  
+有几个创建、 链接，或执行多线程 C 程序中可能会遇到的问题。 一些较为常见的问题是下表中所述。 (从 MFC 的角度的类似讨论，请参阅[多线程处理： 编程提示](multithreading-programming-tips.md)。)  
   
 |问题|可能的原因|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ ms.locfileid: "42543080"
   
 ## <a name="see-also"></a>请参阅  
 
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)

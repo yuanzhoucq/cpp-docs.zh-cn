@@ -1,7 +1,7 @@
 ---
 title: 针对旧代码 （Visual c + +） 的多线程处理支持 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540152"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132097"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
 Visual c + + 可以具有多个并发线程的同时运行的执行。 使用多线程处理，可以派生出后台任务、 管理同时发生的输入流、 管理用户界面，以及更多内容。  
   
 ## <a name="in-this-section"></a>本节内容  
  
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)  
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)  
 为与 Microsoft Windows 中创建多线程应用程序提供支持  
   
-[使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)  
+[使用 C++ 和 MFC 进行多线程编程](multithreading-with-cpp-and-mfc.md)  
 描述什么是进程和线程以及 MFC 的方法的多线程处理是。  
   
-[多线程和区域设置](../parallel/multithreading-and-locales.md)  
+[多线程和区域设置](multithreading-and-locales.md)  
 讨论如何使用 C 运行时库和 c + + 标准库中的多线程应用程序的区域设置功能时出现的问题。  
   
 ## <a name="related-sections"></a>相关章节  
