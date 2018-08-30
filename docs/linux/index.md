@@ -1,18 +1,18 @@
 ---
 layout: LandingPage
-ms.topic: landing-page
+ms.topic: conceptual
 title: 使用 C++ 文档的 Linux 开发
 description: 创建和调试在 Linux 上运行的应用程序。
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adedfd2a6589d7d7d0fad453428d409932007e15
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: c17106038bc79742351efef07a5900a4709c9569
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213908"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 
