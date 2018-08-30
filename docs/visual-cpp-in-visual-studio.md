@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 中的 Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 08/22/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,21 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b43f9ac9edb0d19af4002bb839f857ae71ad4a11
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: b4d4005479c1808ba2d396dfe8807f8a415f9322
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762047"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131771"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
+> [!NOTE]  
+> 此开发人员文档适用于 Visual Studio 2015 和 Visual Studio 2017。 
+
+> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/) ，并在搜索框中输入“Visual C++”。  
+  
+
 Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
 
-## <a name="general-information-about-visual-c"></a>有关 Visual C++ 的常规信息
+## <a name="whats-new-and-conformance-history"></a>新增功能和符合性历史记录
 
-[Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-查明 Visual C++ 中的新增功能。
+[Visual Studio 2017 中 C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+了解 Visual Studio 2017 中的新增功能。
+
+[Visual Studio 2003 到 2015 中 C++ 新增功能](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+Visual Studio 2003 到 2015 每个版本中的 C++ 新增功能。
 
 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)<br/>
 了解 Visual Studio 2017 中 C++ 的符合性改进情况。
@@ -42,20 +51,13 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)<br/>
 了解先前版本中的重大更改。
 
-[欢迎回到 C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-基于可使你快速、安全地编写代码并避免 C 样式编程的多个缺陷的 C++11 和 C++14，了解有关现代 C++ 编程技术的详细信息。
+## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>安装 Visual Studio 并从早期版本升级
 
-[如何使用 Visual C++ 工具集报告问题](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
-了解如何针对 Visual C++ 工具集（编译器、链接器和其他工具）创建有效的错误报告，以及提交报告的方法。
+[在 Visual Studio 中安装 C++ 支持](build/vscpp-step-0-installation.md)<br/>
+下载 Visual Studio 2015 或 Visual Studio 2017 并安装 Visual C++ 工具集。
 
 [Visual C++ 移植和升级指南](porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-有关移植代码并将项目升级到 Visual Studio 2017 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。
-
-[Visual C++ 团队博客](http://blogs.msdn.com/b/vcblog/)<br/>
-详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]开发人员发布的新功能和最新信息。
-
-[Visual Studio 下载](http://go.microsoft.com/fwlink/p/?linkid=235233)<br/>
-下载 Visual Studio。
+有关在 Visual Studio 2017 中移植代码并将项目升级到 Visual Studio 2015 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 查明不同的 Visual Studio 版本。
@@ -63,19 +65,38 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [支持的平台](supported-platforms-visual-cpp.md)<br/>
 查明支持哪些平台。
 
+## <a name="learn-c"></a>了解 C++
+
+[欢迎回到 C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+基于可使你快速、安全地编写代码并避免 C 样式编程的多个缺陷的 C++11 和 C++14，了解有关现代 C++ 编程技术的详细信息。
+
+[标准 C++](http://isocpp.org/)<br/>
+了解 C++、获取现代 C++ 的概述，并查找各种书籍、文章、谈话和会议的链接
+
+[学习 Visual C++](build/vscpp-step-1-create.md)<br/>
+开始学习 C++。
+
 [Visual C++ 示例](visual-cpp-samples.md)<br/>
 有关示例的信息。
 
-[Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)<br/>
-查明如何获取帮助、报告 Bug，并提出 Visual Studio 建议。
+## <a name="c-development-tools"></a>C++ 开发工具
 
-## <a name="writing-applications-in-c"></a>使用 C++ 编写应用程序
+[IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)。
+如何使用 Visual Studio IDE 来创建项目、处理源代码文件、链接到库、编译、调试、创建单元测试、执行静态分析、部署等。
+
+[编译器和生成工具](build/building-c-cpp-programs.md) Microsoft C++ 编译器和链接器选项、错误消息、命令行示例、不同平台的配置以及生成参考主题。 
+
+## <a name="write-applications-in-c"></a>使用 C++ 编写应用程序
 
 [通用 Windows 应用](windows/universal-windows-apps-cpp.md)<br/>
 在 Windows 开发人员中心查找指南和参考内容。 有关开发 UWP 应用的信息，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 创建第一个 UWP 应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 [桌面应用程序 (C++)](windows/desktop-applications-visual-cpp.md)<br/>
-了解如何创建具有消息循环和回调的桌面应用程序。
+了解如何创建适用于 Windows 的传统本机 C++ 桌面应用程序。
+
+[使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) 了解如何创建 DLL，在本机 C++ 和以 C# 或 Visual Basic 等语言编写的 .NET 程序之间实现互操作性。
+
+[Linux 编程](linux/index.md)使用 Visual Studio IDE 编写代码，并将其部署到远程 Linux 计算机上，以便使用 GCC 进行编译。
 
 [Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)<br/>
 查明如何使用 Win32、ATL 和 MFC 创建 Windows 桌面 DLL，并提供有关如何编译和注册 DLL 的信息。
@@ -94,10 +115,6 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 [文本和字符串](text/text-and-strings-in-visual-cpp.md)<br/>
 了解有关处理不同的文本和字符串格式以及针对本地和国际开发编码的信息。
-
-## <a name="c-development-tools"></a>C++ 开发工具
-
-要了解有关如何创建项目、使用源代码文件、链接到库、编译、调试、分析、部署等的信息，请参阅 [IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)。
 
 ## <a name="c-language-reference"></a>C++ 语言参考
 
@@ -133,19 +150,20 @@ C++ 标准库。
 [使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 公共语言运行时 (CLR) 编程。
 
-另请参阅 [STL/CLR](dotnet/stl-clr-library-reference.md) 和 [C++ Support Library](dotnet/cpp-support-library.md)文档。
+## <a name="third-party-open-source-c-libraries"></a>第三方开源 C++ 库
 
-## <a name="other-c-libraries"></a>其他 Visual C++ 库
+跨平台 vcpkg 命令行工具，可以显著简化 900 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](vcpkg.md)。
 
-使用 vcpkg 命令行工具，可以显著简化 600 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](vcpkg.md)。
+## <a name="feedback-and-community"></a>反馈和社区
 
-## <a name="more-resources"></a>更多资源
+[如何使用 Visual C++ 工具集报告问题](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+了解如何针对 Visual C++ 工具集（编译器、链接器和其他工具）创建有效的错误报告，以及提交报告的方法。
 
-[标准 C++](http://isocpp.org/)<br/>
-了解 C++、获取现代 C++ 的概述，并查找各种书籍、文章、谈话和会议的链接
+[Visual C++ 团队博客](http://blogs.msdn.com/b/vcblog/)<br/>
+详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]开发人员发布的新功能和最新信息。
 
-[学习 Visual C++](build/vscpp-step-1-create.md)<br/>
-开始学习 C++。
+[Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)<br/>
+查明如何获取帮助、报告 Bug，并提出 Visual Studio 建议。
 
 ## <a name="see-also"></a>请参阅
 

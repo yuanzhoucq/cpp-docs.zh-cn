@@ -1,7 +1,7 @@
 ---
 title: Visual C++ 中的“打开文件夹”项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337280"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131318"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的“打开文件夹”项目
-Visual Studio 2017 引入了“打开文件夹”功能，让你可以打开源文件的文件夹并借助 IntelliSense、浏览、重构、调试及更多方面的支持立即开始进行编码。 不加载 .sln 或 .vcxproj 文件；如有需要，可以通过简单的 .json 文件指定自定义任务和生成及启动参数。 借助“打开文件夹”的支持，Visual C++ 现在不仅支持文件的松散集合，还几乎支持所有的生成系统，包括 CMake、Ninja、QMake（用于 Qt 项目）、gyp、SCons、Gradle、Buck 及更多其他系统。 
+
+Visual Studio 2017 及更高版本中提供了“打开文件夹”功能，可通过它打开源文件的文件夹并借助 IntelliSense、浏览、重构、调试及更多方面的支持立即开始进行编码。 不加载 .sln 或 .vcxproj 文件；如有需要，可以通过简单的 .json 文件指定自定义任务和生成及启动参数。 借助“打开文件夹”的支持，Visual C++ 现在不仅支持文件的松散集合，还几乎支持所有的生成系统，包括 CMake、Ninja、QMake（用于 Qt 项目）、gyp、SCons、Gradle、Buck 及更多其他系统。 
 
 若要使用“打开文件夹”，请从主菜单选择“文件 | 打开 | 文件夹”或按 Ctrl+Shift+Alt+O。解决方案资源管理器会立即显示该文件夹中的所有文件。 可以单击任何文件开始编辑。 在后台，Visual Studio 开始对文件编制索引，以启用 IntelliSense、导航和重构功能。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。 
   
@@ -30,7 +31,7 @@ Visual Studio 2017 引入了“打开文件夹”功能，让你可以打开源�
 CMake 作为 Visual C++ 的 CMake 工具集成在 Visual Studio IDE 中，是 C++ 桌面工作负载的一个组件。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>面向 Qt 框架的 QMake 项目
-可以使用 Visual C++ 的 CMake 工具面向 Qt 生成 Qt 项目，或者可以使用 Qt Visual Studio 扩展。 请注意：截止 2017 年 8 月，[Visual Studio 2017 的 Qt Visual Studio 扩展支持](https://download.qt.io/development_releases/vsaddin/)可作为 beta 版本使用。
+可以使用 Visual C++ 的 CMake 工具面向 Qt 生成 Qt 项目，或者可以使用适用于 Visual Studio 2015 或 Visual Studio 2017 的 [Qt Visual Studio 扩展](https://download.qt.io/development_releases/vsaddin/)。
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck 等等
 可使用以 Visual C++ 进行编写的任何生成系统，并依然能享受 Visual C++ IDE 和调试程序的优势。 打开项目的根文件夹时，Visual C++ 使用试探法将源文件编入索引用于 IntelliSense 和浏览。 可以通过编辑 CppProperties.json 文件提供关于代码结构的提示。 还可以用同样的方式，通过编辑 launch.vs.json 文件配置生成程序。 

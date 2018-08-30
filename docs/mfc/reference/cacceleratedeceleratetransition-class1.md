@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition Class1 |Microsoft 文档
+title: Cacceleratedeceleratetransition 类 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954703"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220129"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 类
+# <a name="cacceleratedeceleratetransition-class"></a>Cacceleratedeceleratetransition 类类
 实现加速-减速转换。  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +39,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|构造转换对象。|  
+|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|构造一个转换对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -51,13 +51,13 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|所用的时间加快了持续时间的比率。|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|所用的时间减速持续时间的比率。|  
-|[CAccelerateDecelerateTransition::m_duration](#m_duration)|转换的持续时间。|  
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|在转换结束动画变量的值。|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|持续时间为所用的时间的比率。|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|持续时间减速所用的时间的比率。|  
+|[CAccelerateDecelerateTransition::m_duration](#m_duration)|过渡的持续时间。|  
+|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|转换结束时的动画变量的值。|  
   
 ## <a name="remarks"></a>备注  
- 期间加速-减速转换、 动画变量的速度，然后降低期间的结束时间的指定值的转换。 你可以控制如何快速变量独立加速和减速，通过指定不同的加速和减速比率。 零的初始速度时，加速比，则该变量将用于加快; 的持续时间的部分同样使用减速比率。 如果的初始速度为非零，则速度接近零和转换末尾之间的时间的部分。 最大为 1.0 总和应加速比率和减速比率。 由于所有转换并自动都清除，则建议你到分配它们使用新的运算符。 封装的 IUIAnimationTransition COM 对象被创建通过 CAnimationController::AnimateGroup，直到，然后它为 NULL。 在创建此 COM 对象不起作用后，请更改成员变量。  
+ 在包含加速-减速转换、 动画变量的速度并再减速的转换，结束时间的指定值的持续时间内。 您可以控制如何快速变量独立加速和减速，通过指定不同的加速和减速比率。 初始速度为零，加速比率时，该变量将用于加速; 的持续时间的比例同样与的减速度比。 如果初始速度为非零，则速度接近零和转换结束之间的时间部分。 加速比率和减速度比应总和为 1.0 的最大值。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -70,7 +70,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
- 构造转换对象。  
+ 构造一个转换对象。  
   
 ```  
 CAccelerateDecelerateTransition(
@@ -82,16 +82,16 @@ CAccelerateDecelerateTransition(
   
 ### <a name="parameters"></a>参数  
  *持续时间*  
- 转换的持续时间。  
+ 过渡的持续时间。  
   
  *finalValue*  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
  *accelerationRatio*  
- 所用的时间加快了持续时间的比率。  
+ 持续时间为所用的时间的比率。  
   
  *decelerationRatio*  
- 所用的时间减速持续时间的比率。  
+ 持续时间减速所用的时间的比率。  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
@@ -104,34 +104,34 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
 *pLibrary*  
- 指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
+ 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- 所用的时间加快了持续时间的比率。  
+ 持续时间为所用的时间的比率。  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- 所用的时间减速持续时间的比率。  
+ 持续时间减速所用的时间的比率。  
   
 ```  
 DOUBLE m_decelerationRatio;  
 ```  
   
 ##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration  
- 转换的持续时间。  
+ 过渡的持续时间。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
 ##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ```  
 DOUBLE m_finalValue;  

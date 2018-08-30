@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217341"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>并行诊断工具（并发运行时）
 Visual Studio 为调试和分析多线程应用程序提供了广泛的支持。  
@@ -31,7 +31,7 @@ Visual Studio 为调试和分析多线程应用程序提供了广泛的支持。
  分析工具提供了三个数据视图用于显示有关多线程应用程序与自身和其他程序的交互的图形、 表格和数字信息。 视图使你能够快速确定方面的问题，并导航从上到调用堆栈，该图形显示的点调用站点和源代码。 有关详细信息，请参阅[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。  
   
 ## <a name="event-tracing"></a>事件跟踪  
- 并发运行时使用[Windows 的事件跟踪](http://msdn.microsoft.com/library/windows/desktop/bb968803)(ETW) 以在发生各种事件时通知检测工具，探查器，如。 这些事件包括当激活或停用计划程序时，上下文开始、 结束、 阻止、 取消阻止，或生成时, 和并行算法开始或结束时。  
+ 并发运行时使用[Windows 的事件跟踪](/windows/desktop/ETW/event-tracing-portal)(ETW) 以在发生各种事件时通知检测工具，探查器，如。 这些事件包括当激活或停用计划程序时，上下文开始、 结束、 阻止、 取消阻止，或生成时, 和并行算法开始或结束时。  
   
  这样的工具[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)利用此功能; 因此，您通常不必直接使用这些事件。 但是，这些事件很有用的当你正在开发自定义探查器，或者在使用事件跟踪工具如[Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628)。  
   

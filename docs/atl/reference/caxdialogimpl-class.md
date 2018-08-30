@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196005"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 类
 此类实现一个对话框 （模式或无模式） 承载 ActiveX 控件。  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>参数  
  *hWndParent*  
- [in]向所有者窗口句柄。 默认值是返回的值[正在](http://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。  
+ [in]向所有者窗口句柄。 默认值是返回的值[正在](https://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。  
   
  *dwInitParam*  
  [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>参数  
  *pMsg*  
- 指向[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)结构，其中包含要检查的消息。  
+ 指向[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)结构，其中包含要检查的消息。  
   
 ### <a name="return-value"></a>返回值  
  如果消息已处理，则返回 FALSE 否则，则返回 TRUE。  
