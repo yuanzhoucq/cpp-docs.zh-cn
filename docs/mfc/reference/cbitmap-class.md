@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195847"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 封装一个 Windows 图形设备接口 (GDI) 位图并提供成员函数以操作位图。  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>备注  
  尽管不能为显示设备直接选择位图，但它可以选择作为内存设备上下文的当前位图使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)和复制到任何兼容的设备上下文的使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函数。 ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt)函数可以将当前画笔的位图复制直接到显示设备上下文。)  
   
- 如果`BITMAP`指向结构*lpBitmap*使用已填写参数`GetObject`函数中，未指定位图的位和位图未初始化。 若要初始化位图，应用程序可以使用一个函数如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)若要将位数复制中的第一个参数所标识的位图`CGdiObject::GetObject`到创建的位图`CreateBitmapIndirect`.  
+ 如果`BITMAP`指向结构*lpBitmap*使用已填写参数`GetObject`函数中，未指定位图的位和位图未初始化。 若要初始化位图，应用程序可以使用一个函数如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits)若要将位数复制中的第一个参数所标识的位图`CGdiObject::GetObject`到创建的位图`CreateBitmapIndirect`.  
   
  完成通过`CBitmap`使用创建的对象`CreateBitmapIndirect`函数，首先选择设备上下文中的位图，然后删除`CBitmap`对象。  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>备注  
  默认情况下，`LoadMappedBitmap`将映射按钮标志符号中常用的颜色。  
   
- 有关创建映射的位图的信息，请参阅 Windows 函数[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)并[颜色映射](http://msdn.microsoft.com/library/windows/desktop/bb760448)Windows SDK 中的结构。  
+ 有关创建映射的位图的信息，请参阅 Windows 函数[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)并[颜色映射](/windows/desktop/api/commctrl/ns-commctrl-_colormap)Windows SDK 中的结构。  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  加载 Windows 所使用的预定义的位图。  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>备注  
  此运算符是强制转换运算符，支持直接使用`HBITMAP`对象。  
   
- 有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 有关使用图形对象的详细信息，请参阅[图形对象](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  将位图的位设置为给定的位值*lpBits*。  

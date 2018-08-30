@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196185"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
+ 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
   
 - PBS_VERTICAL 显示垂直进度的信息，请从上到下。 如果没有此标志，进度栏控件可显示水平、 左到右。  
   
 - PBS_SMOOTH 显示逐步，平滑填充进度栏控件。 如果没有此标志，该控件将填充与块中。  
   
  *rect*  
- 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为该控件必须是子窗口，指定的坐标是相对于客户端区域*pParentWnd*。  
+ 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为该控件必须是子窗口，指定的坐标是相对于客户端区域*pParentWnd*。  
   
  *pParentWnd*  
  通常指定进度栏控件的父窗口`CDialog`。 它不能为 NULL。  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 当前进度栏的颜色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示器栏颜色为默认颜色。  
+ 当前进度栏的颜色表示为[COLORREF](/windows/desktop/gdi/colorref)值或 CLR_DEFAULT 如果进度指示器栏颜色为默认颜色。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor)消息，Windows SDK 中所述。  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  获取当前进度栏的背景色。  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 表示为当前进度栏的背景色[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。  
+ 表示为当前进度栏的背景色[COLORREF](/windows/desktop/gdi/colorref)值。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor)消息，Windows SDK 中所述。  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  检索进度栏的当前位置。  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|已暂停|  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>备注  
  步骤增量是所根据的数量对的调用[CProgressCtrl::StepIt](#stepit)增加进度栏的当前位置。  
   
- 此方法将发送[PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
+|[in]*clrBar*|一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
 
-前一种颜色的进度指示条，表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果进度指示符栏的颜色为默认颜色。  
+前一种颜色的进度指示条，表示为[COLORREF](/windows/desktop/gdi/colorref)值或 CLR_DEFAULT 如果进度指示符栏的颜色为默认颜色。  
   
 ### <a name="remarks"></a>备注  
 
 `SetBarColor`方法设置进度栏颜色仅当 Windows Vista[主题](/windows/desktop/Controls/visual-styles-overview)不起作用。  
   
- 此方法将发送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  一个 COLORREF 值，该值指定新背景色。 指定要用于进度栏的默认背景色的 CLR_DEFAULT 值。  
   
 ### <a name="return-value"></a>返回值  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示以前的背景色或 CLR_DEFAULT 如果背景色为默认颜色。  
+ [COLORREF](/windows/desktop/gdi/colorref)值，该值指示以前的背景色或 CLR_DEFAULT 如果背景色为默认颜色。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>备注  
  当打开字幕模式、 进度栏的动画和滚动等登录影院字幕。  
   
- 此方法将发送[PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  
@@ -484,7 +484,7 @@ int SetState(int iState);
  当前进度栏控件的前一个状态。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850)消息，Windows SDK 中所述。  
+ 此方法将发送[PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量 `m_progressCtrl`，该变量用于以编程方式访问进度栏控件。 此变量将在下一个示例中使用。  

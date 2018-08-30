@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027681"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197467"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 类[CObject](../../mfc/reference/cobject-class.md)并[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
    
 ### <a name="remarks"></a>备注  
- 使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。  
+ 使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。  
    
 ### <a name="requirements"></a>要求  
  afxcomctl32.h，afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
    
 ### <a name="remarks"></a>备注  
- 使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。  
+ 使用此宏可确定公共控件库函数指定是否*proc* (而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。  
    
 ### <a name="requirements"></a>要求  
  afxcomctl32.h，afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` ThreadingModel 注册表中设置线程模型 = 单元。    
     -   `afxRegFreeThreading` ThreadingModel 注册表中设置线程模型 = 免费。  
       
-         你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) Windows SDK for 线程处理模型注册的详细信息中。 
+         你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](/windows/desktop/com/inprocserver32) Windows SDK for 线程处理模型注册的详细信息中。 
    
  *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  类的 CLSID 的组件。  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID 项](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  包含控件的外部名称的字符串资源 ID。  
   
  *dwOleMisc*  
- 一个枚举，包含一个或多个标志。 此枚举的详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ 一个枚举，包含一个或多个标志。 此枚举的详细信息，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。  
    
 ### <a name="remarks"></a>备注  
  除了 IMPLEMENT_OLECTLTYPE，您必须将 DECLARE_OLECTLTYPE 宏添加到控件类声明中。  
   
- `GetUserTypeNameID`成员函数将返回用于标识你的控件类的资源字符串。 `GetMiscStatus` 返回控件的 OLEMISC 位。 此枚举指定描述控件的其他特征的设置的集合。 OLEMISC 设置的完整说明，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ `GetUserTypeNameID`成员函数将返回用于标识你的控件类的资源字符串。 `GetMiscStatus` 返回控件的 OLEMISC 位。 此枚举指定描述控件的其他特征的设置的集合。 OLEMISC 设置的完整说明，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。  
   
 > [!NOTE]
 >  使用 ActiveX 控件向导的默认设置是： OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。  

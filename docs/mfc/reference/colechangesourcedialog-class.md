@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a8b2ca6ebbc0201a3c56c9239b665c55ccd9eb13
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202740"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 类
 用于 OLE“更改源”对话框。  
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|结构，它控制对话框的行为。|  
   
 ## <a name="remarks"></a>备注  
- 创建类的对象`COleChangeSourceDialog`时您想要调用此对话框。 之后`COleChangeSourceDialog`构造对象，则可以使用[m_cs](#m_cs)结构初始化的值或在对话框中的控件的状态。 `m_cs`结构属于类型[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+ 创建类的对象`COleChangeSourceDialog`时您想要调用此对话框。 之后`COleChangeSourceDialog`构造对象，则可以使用[m_cs](#m_cs)结构初始化的值或在对话框中的控件的状态。 `m_cs`结构属于类型[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK 中的结构。  
   
  有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -120,7 +120,7 @@ explicit COleChangeSourceDialog(
 ### <a name="remarks"></a>备注  
  若要显示的对话框，请调用[DoModal](#domodal)函数。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构并[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)结构并[OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) Windows SDK 中的函数。  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  调用此函数可显示 OLE 更改源对话框。  
@@ -136,7 +136,7 @@ virtual INT_PTR DoModal();
   
 - 如果用户已取消对话框的，IDCANCEL。  
   
-- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要通过设置的成员初始化各种对话框控件[m_cs](#m_cs)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
@@ -185,9 +185,9 @@ CString GetFromPrefix();
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 此值源于直接`lpszFrom`的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
+ 此值源于直接`lpszFrom`的成员[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)结构。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK 中的结构。  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  调用此函数可检索链接的客户端项的显示名称的项名字对象部分。  
@@ -215,12 +215,12 @@ CString GetToPrefix();
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 此值源于直接`lpszTo`的成员[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构。  
+ 此值源于直接`lpszTo`的成员[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)结构。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK 中的结构。  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- 此数据成员是类型的结构[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。  
+ 此数据成员是类型的结构[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea)。  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -229,7 +229,7 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>备注  
  `OLEUICHANGESOURCE` 用于控制 OLE 更改源对话框中的行为。 可以直接修改此结构的成员。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK 中的结构。  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  调用此函数可确定新的源是否有效。  
@@ -244,7 +244,7 @@ BOOL IsValidSource();
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886162"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196392"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 类
 此参数适配器类允许资源名称 (LPCTSTRs) 或资源 Id （示） 要传递给函数，而无需调用方将 ID 转换为使用 MAKEINTRESOURCE 宏的字符串。  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|资源标识符中。|  
   
 ## <a name="remarks"></a>备注  
- 此类用于实现与 Windows 资源管理 API 的包装器，例如[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)， [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，并[LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990)函数，接受LPCTSTR 参数可能是资源的名称或其 id。  
+ 此类用于实现与 Windows 资源管理 API 的包装器，例如[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)， [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，并[LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua)函数，接受LPCTSTR 参数可能是资源的名称或其 id。  
   
  该类定义两个构造函数重载： 一个接受 LPCTSTR 参数和另一个接受 UINT 参数。 UINT 参数转换为资源类型使用 MAKEINTRESOURCE 宏和结果存储在类的单个数据成员中的 Windows 资源管理功能与兼容[m_lpstr](#_u_stringorid__m_lpstr)。 转换不直接存储 LPCTSTR 构造函数的参数。  
   

@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400559"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194313"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
 
-读取从一个字符**stdin**。
+读取从字符**stdin**。
 
 ## <a name="syntax"></a>语法
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>返回值
 
-**_fgetchar**返回作为读取的字符**int**或返回**EOF**以指示错误或文件结尾。 **_ * * * fgetwchar**返回时，作为[wint_t](../../c-runtime-library/standard-types.md)，对应于读取的字符或返回的宽字符**WEOF**以指示错误或文件结尾。 对于这两个函数中，使用**feof**或**ferror**来区分错误和文件尾条件。
+**\_fgetchar**返回读取的字符**int**或返回`EOF`以指示错误或文件结尾。 **\_fgetwchar**返回时，作为[wint_t](../../c-runtime-library/standard-types.md)，对应于读取的字符或返回的宽字符`WEOF`以指示错误或文件结尾。 对于这两个函数，使用**feof**或**ferror**区分错误和文件尾条件。
 
 ## <a name="remarks"></a>备注
 
-这些函数读取单个字符从**stdin**。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
+这些函数读取中的单个字符**stdin**。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
 
-**_fgetchar**等效于`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数，而不是作为函数和宏实现。 **_fgetwchar**是宽字符版本的 **_fgetchar**。
+**_fgetchar**等效于`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数，而不是作为函数和宏实现。 **_fgetwchar**是宽字符版本 **_fgetchar**。
 
 这些函数不符合 ANSI 标准。
 
@@ -85,7 +85,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄-**stdin**， **stdout**，和**stderr**-必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄 —**stdin**， **stdout**，并**stderr**— C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

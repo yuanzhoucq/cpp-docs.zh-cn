@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203656"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 结构
 `CREATESTRUCT`结构定义传递给应用程序的窗口过程的初始化参数。  
@@ -77,7 +77,7 @@ typedef struct tagCREATESTRUCT {
  指向一个以 null 结尾的字符串，指定新窗口的名称。  
   
  *lpszClass*  
- 指向一个以 null 结尾的字符串，指定新窗口的 Windows 类名称 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。  
+ 指向一个以 null 结尾的字符串，指定新窗口的 Windows 类名称 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。  
   
  *dwExStyle*  
  指定[扩展样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新窗口。  

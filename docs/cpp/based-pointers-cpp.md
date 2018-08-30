@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407505"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196202"
 ---
 # <a name="based-pointers-c"></a>基指针 (C++)
 **Microsoft 专用**  
@@ -56,7 +56,7 @@ struct llist_t {
  将指针 `vpBuffer` 分配给程序中后面某个时间点分配的内存地址。 相对于 `vpBuffer` 的值重新定位链接的列表。  
   
 > [!NOTE]
->  此外可以通过实现保留包含指针的标识符[内存映射文件](http://msdn.microsoft.com/library/windows/desktop/aa366556)。  
+>  此外可以通过实现保留包含指针的标识符[内存映射文件](/windows/desktop/Memory/file-mapping)。  
   
  当取消对基指针的引用时，必须显式指定基或通过声明隐式公开基。  
   

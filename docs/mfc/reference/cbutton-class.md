@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027883"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196706"
 ---
 # <a name="cbutton-class"></a>CButton 类
 提供 Windows 按钮控件功能。  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟 BCM_GETIDEALSIZE 消息的功能，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成员函数模拟 BCM_GETIDEALSIZE 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  调用此方法以从按钮控件获取映像列表。  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟 BCM_GETIMAGELIST 消息的功能，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成员函数模拟 BCM_GETIMAGELIST 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  检索与当前命令链接控件相关联的注释文本。  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 其按钮样式。  
   
- 此方法将发送[BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote)消息，Windows SDK 中所述。  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  检索当前命令链接控件的注释文本的长度。  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 其按钮样式。  
   
- 此方法将发送[BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength)消息，Windows SDK 中所述。  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  检索与当前的拆分按钮控件关联的标志符号。  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_GLYPH 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从字形`himlGlyph`结构中的成员。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_GLYPH 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从字形`himlGlyph`结构中的成员。  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  检索[图像列表](../../mfc/reference/cimagelist-class.md)当前的拆分按钮控件。  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_IMAGE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从图像列表`himlGlyph`结构中的成员。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_IMAGE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从图像列表`himlGlyph`结构中的成员。  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  检索参数，以确定 Windows 绘制当前的拆分按钮控件的方式。  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pInfo*|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)接收当前的拆分按钮控件的相关信息的结构。 调用方负责分配结构。|  
+|[out]*pInfo*|指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收当前的拆分按钮控件的相关信息的结构。 调用方负责分配结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 此方法将发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)消息，Windows SDK 中所述。  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  检索当前的拆分按钮控件的下拉部分的边框。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pSize*|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
+|[out]*pSize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  展开拆分按钮控件时，它可以显示下拉列表组件，如列表控件或页导航控件。 此方法检索包含下拉列表组件的边界矩形。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_SIZE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从边框`size`结构中的成员。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_SIZE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)中所述的消息Windows SDK。 当消息函数返回时，此方法检索从边框`size`结构中的成员。  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  检索定义当前的拆分按钮控件的拆分按钮样式。  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。  
+ 拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构。  
   
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
  拆分按钮样式指定的对齐方式、 纵横比和图形格式与 Windows 绘制拆分按钮图标。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_STYLE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息Windows SDK。 当消息函数返回时，此方法检索中的拆分按钮样式`uSplitStyle`结构中的成员。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_STYLE 标志，然后将该结构中发送具有结构[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)中所述的消息Windows SDK。 当消息函数返回时，此方法检索中的拆分按钮样式`uSplitStyle`结构中的成员。  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  检索一个按钮控件的状态。  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟 BCM_GETTEXTMARGIN 消息的功能，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成员函数模拟 BCM_GETTEXTMARGIN 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  调用此成员函数以将新的位图与按钮相关联。  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 拆分按钮控件具有 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的样式，且包含一个按钮和其右侧的下拉箭头。 有关详细信息，请参阅[按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。 通常情况下，当用户单击下拉箭头设置下拉列表状态。 使用此方法以编程方式设置控件的下拉列表状态。 下拉列表箭头绘制带阴影来指示的状态。  
+ 拆分按钮控件具有 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的样式，且包含一个按钮和其右侧的下拉箭头。 有关详细信息，请参阅[按钮样式](/windows/desktop/Controls/button-styles)。 通常情况下，当用户单击下拉箭头设置下拉列表状态。 使用此方法以编程方式设置控件的下拉列表状态。 下拉列表箭头绘制带阴影来指示的状态。  
   
- 此方法将发送[BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_splitButton*，即用于以编程方式访问拆分按钮控件。 在下面的示例使用此变量。  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>备注  
  如果按钮或命令链接控件需要提升的安全权限以执行操作，将控件设置为`elevation required`状态。 随后，Windows 会在控件上显示用户帐户控制 (UAC) 防火墙图标。 有关详细信息，查看"用户帐户控制" [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。  
   
- 此方法将发送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield)消息，Windows SDK 中所述。  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  调用此成员函数以将新图标与按钮相关联。  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟 BCM_SETIMAGELIST 消息的功能，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成员函数模拟 BCM_SETIMAGELIST 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  设置当前命令链接控件的说明文本。  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 其按钮样式。  
   
- 此方法将发送[BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_cmdLink*，即用于以编程方式访问命令链接控件。 在下面的示例使用此变量。  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  标志符号为特定字体中字符的物理表示形式。 *ChGlyph*参数不用作符号，但改为使用要从系统定义标志符号的一组选择标志符号。 默认值下拉列表箭头标志符号指定的字符"6"，类似于黑色向下指三角形 (U + 25BC) 的 Unicode 字符。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_GLYPH 标志的结构和`himlGlyph`具有成员*chGlyph*参数，然后将发送的结构中[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中描述的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_GLYPH 标志的结构和`himlGlyph`具有成员*chGlyph*参数，然后将发送的结构中[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中描述的消息。  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  将相关联[图像列表](../../mfc/reference/cimagelist-class.md)与当前的拆分按钮控件。  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_IMAGE 标志的结构和`himlGlyph`具有成员*pSplitImageList*参数，然后将发送在该结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中描述的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_IMAGE 标志的结构和`himlGlyph`具有成员*pSplitImageList*参数，然后将发送在该结构[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中描述的消息。  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  指定参数，以确定 Windows 绘制当前的拆分按钮控件的方式。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pInfo*|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构，它定义当前的拆分按钮控件。|  
+|[in]*pInfo*|指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构，它定义当前的拆分按钮控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 此方法将发送[BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981)消息，Windows SDK 中所述。  
+ 此方法将发送[BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pSize*|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构描述的绑定矩形。|  
+|[in]*pSize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构描述的绑定矩形。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  展开拆分按钮控件时，它可以显示下拉列表组件，如列表控件或页导航控件。 此方法指定包含下拉列表组件的边界矩形的大小。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_SIZE 标志的结构和`size`具有成员*pSize*参数，然后将该结构发送在中[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中描述的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_SIZE 标志的结构和`size`具有成员*pSize*参数，然后将该结构发送在中[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中描述的消息。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。 在下面的示例使用此变量。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uSplitStyle*|拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。|  
+|[in]*uSplitStyle*|拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 其按钮样式。  
   
- 拆分按钮样式指定的对齐方式、 纵横比和图形格式与 Windows 绘制拆分按钮图标。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。  
+ 拆分按钮样式指定的对齐方式、 纵横比和图形格式与 Windows 绘制拆分按钮图标。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_STYLE 标志的结构和`uSplitStyle`具有成员*uSplitStyle*参数，然后将发送的结构中[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中描述的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_STYLE 标志的结构和`uSplitStyle`具有成员*uSplitStyle*参数，然后将发送的结构中[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中描述的消息。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如中所述[按钮](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

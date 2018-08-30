@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206115"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 类
 `CComMultiThreadModel` 提供用于递增和递减变量的值的线程安全方法。  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  请参阅[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- 此静态函数将调用 Win32 函数[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，指向变量的值的递减*p*。  
+ 此静态函数将调用 Win32 函数[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)，指向变量的值的递减*p*。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` 防止多个线程同时使用此变量。  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- 此静态函数将调用 Win32 函数[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，指向的变量的值时都会增加*p*。  
+ 此静态函数将调用 Win32 函数[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)，指向的变量的值时都会增加*p*。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

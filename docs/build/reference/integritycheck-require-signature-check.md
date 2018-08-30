@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a10594391b0f3be490608f7dfa006b0c32aa2e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197051"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK（需要签名检查）
 指定必须在加载时检查数字签名的二进制图像。  
@@ -47,5 +47,5 @@ ms.locfileid: "42609275"
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)   
  [强制的完整性签名的可移植可执行文件 (PE) 文件](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [内核模式代码签名演练](http://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [Windows 7 和 Windows Server 2008 中的 AppInit Dll](http://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+ [内核模式代码签名演练](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
+ [Windows 7 和 Windows Server 2008 中的 AppInit Dll](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575448"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194722"
 ---
 # <a name="appearance-atl-control-wizard"></a>外观，ATL 控件向导
 在此处插入摘要的"搜索结果"。  
@@ -32,7 +32,7 @@ ms.locfileid: "42575448"
 **查看状态**  
 设置容器内控件的外观。  
   
- -   **不透明**： 设置位 VIEWSTATUS_OPAQUE [VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)枚举和绘制整个控件矩形传递给[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 显示完全不透明的该控件和容器的任何控件边界后面显示。      
+ -   **不透明**： 设置位 VIEWSTATUS_OPAQUE [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)枚举和绘制整个控件矩形传递给[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 显示完全不透明的该控件和容器的任何控件边界后面显示。      
       
         此设置有助于更快地绘制控件的容器。 如果未选择此选项，该控件可以包含透明部分。  
       
@@ -82,7 +82,7 @@ ms.locfileid: "42575448"
   
  -   **在运行时不可见**： 设置要在运行时不可见的控件。 不可见的控件可用于在后台，如时间间隔内触发事件执行操作。  
       
- -   **作用类似于按钮**： 设置位 OLEMISC_ACTSLIKEBUTTON [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)枚举，以使控件执行操作就像按钮一样。 如果容器已标记为默认按钮的控件的客户端站点，选择此选项可使按钮控件以将它用较粗的框架绘制自身显示为默认按钮。 请参阅[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)有关详细信息。  
+ -   **作用类似于按钮**： 设置位 OLEMISC_ACTSLIKEBUTTON [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)枚举，以使控件执行操作就像按钮一样。 如果容器已标记为默认按钮的控件的客户端站点，选择此选项可使按钮控件以将它用较粗的框架绘制自身显示为默认按钮。 请参阅[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)有关详细信息。  
       
   -   **作用类似于标签**： 设置 OLEMISC_ACTSLIKELABEL 位 OLEMISC 枚举中以启用要替换容器的本机标签控件。 容器确定应如何处理此标志，如果任何内容。  
   

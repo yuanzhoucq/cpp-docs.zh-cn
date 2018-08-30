@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882944"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202929"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 和多字节字符集 (MBCS) 支持
 
@@ -67,9 +67,9 @@ Microsoft 建议所有新开发的 MFC Unicode 库并在 Visual Studio 2013 和 
 
    - 使用，会使用的 TCHAR **char**。
 
-   - 使用，会使用的 LPTSTR **char\***。
+   - 使用，会使用的 LPTSTR **char**<strong>\*</strong>。
 
-   - 使用，会使用的 LPCTSTR **const char\***。 `CString` 提供了运算符 LPCTSTR 之间进行转换`CString`和 LPCTSTR。
+   - 使用，会使用的 LPCTSTR **const char**<strong>\*</strong>。 `CString` 提供了运算符 LPCTSTR 之间进行转换`CString`和 LPCTSTR。
 
 `CString` 此外提供了识别 Unicode 的构造函数、 赋值运算符和比较运算符。
 
@@ -101,7 +101,7 @@ Microsoft 建议所有新开发的 MFC Unicode 库并在 Visual Studio 2013 和 
 
 所有运行时字符串处理例程的一般文本函数映射中都讨论[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。 有关列表，请参阅[国际化](../c-runtime-library/internationalization.md)。
 
-同样，`CString`方法实现通过使用通用数据类型映射。 若要启用 MBCS 和 Unicode，MFC 使用的 TCHAR **char**或`wchar_t`，为 LPTSTR **char\*** 或`wchar_t*`，和有关 LPCTSTR **const char\*** 或`const wchar_t*`。 这可确保正确的映射为 MBCS 或 Unicode。
+同样，`CString`方法实现通过使用通用数据类型映射。 若要启用 MBCS 和 Unicode，MFC 使用的 TCHAR **char**或`wchar_t`，为 LPTSTR **char** <strong>\*</strong>或`wchar_t*`，和有关LPCTSTR**const char** <strong>\*</strong>或`const wchar_t*`。 这可确保正确的映射为 MBCS 或 Unicode。
 
 ## <a name="see-also"></a>请参阅
 

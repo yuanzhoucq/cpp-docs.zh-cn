@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201117"
 ---
 # <a name="general-mbcs-programming-advice"></a>常规 MBCS 编程建议
 使用以下提示：  
@@ -41,7 +41,7 @@ ms.locfileid: "42596790"
   
 -   要为应用程序中，选择字体时小心因为某些字体不可用的所有系统上。  
   
--   选择时对话框的字体，请使用[MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112)而不是 MS Sans Serif 或 Helvetica。 MS Shell Dlg 将被替换为正确的字体由系统创建对话框的之前。 使用 MS Shell Dlg 可确保的要处理此字体的操作系统中的任何更改将自动在可用。 （MFC 替换 MS Shell Dlg DEFAULT_GUI_FONT 或 Windows 95、 Windows 98 和 Windows NT 4 中的系统字体因为这些系统未正确地处理 MS Shell Dlg。）  
+-   选择时对话框的字体，请使用[MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2)而不是 MS Sans Serif 或 Helvetica。 MS Shell Dlg 将被替换为正确的字体由系统创建对话框的之前。 使用 MS Shell Dlg 可确保的要处理此字体的操作系统中的任何更改将自动在可用。 （MFC 替换 MS Shell Dlg DEFAULT_GUI_FONT 或 Windows 95、 Windows 98 和 Windows NT 4 中的系统字体因为这些系统未正确地处理 MS Shell Dlg。）  
   
 -   在设计你的应用程序时，决定进行本地化的字符串。 如果有疑问，假定任何给定的字符串会被本地化。 在这种情况下，不要使用不能混合可本地化的字符串。  
   

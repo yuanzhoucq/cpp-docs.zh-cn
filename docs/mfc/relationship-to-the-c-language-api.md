@@ -1,5 +1,5 @@
 ---
-title: 与 C 语言 API 的关系 |Microsoft 文档
+title: 与 C 语言 API 的关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d06c4adfa5493929a24c233fa923451c7bf0f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200107"
 ---
 # <a name="relationship-to-the-c-language-api"></a>与 C 语言 API 的关系
-将 Microsoft 基础类 (MFC) 库与其他 Windows 类库区分开的一个特性是，它几乎完全映射到用 C 语言编写的 Windows API。 此外，您通常可以随意地将对该类库的调用与对 Windows API 的直接调用混合在一起。 但是，这种直接访问并不意味着这些类可以完全替代相应的 API。 开发人员仍有时必须进行直接调用对某些 Windows 函数，如[SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393)和[GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385)，例如。 一个类成员函数可以包装一个 Windows 函数（前提是这样做具有明显优点）。  
+将 Microsoft 基础类 (MFC) 库与其他 Windows 类库区分开的一个特性是，它几乎完全映射到用 C 语言编写的 Windows API。 此外，您通常可以随意地将对该类库的调用与对 Windows API 的直接调用混合在一起。 但是，这种直接访问并不意味着这些类可以完全替代相应的 API。 开发人员必须偶尔仍然会直接对进行调用某些 Windows 功能，如[SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor)并[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)，例如。 一个类成员函数可以包装一个 Windows 函数（前提是这样做具有明显优点）。  
   
  由于您有时需要进行本机 Windows 函数调用，因此您应该具有访问 C 语言 Windows API 文档的权限。 此文档随 Microsoft Visual C++ 一起提供。  
   
 > [!NOTE]
->  MFC 库框架的工作方式的概述，请参阅[使用类编写 Windows 应用程序到](../mfc/using-the-classes-to-write-applications-for-windows.md)。  
+>  MFC 库框架的运行方式的概述，请参阅[使用为 Windows 编写应用程序类](../mfc/using-the-classes-to-write-applications-for-windows.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [常规类设计理念](../mfc/general-class-design-philosophy.md)

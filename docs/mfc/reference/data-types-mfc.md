@@ -1,5 +1,5 @@
 ---
-title: 数据类型 (MFC) |Microsoft 文档
+title: 数据类型 (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121009"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199864"
 ---
 # <a name="data-types-mfc"></a>数据类型 (MFC)
 本主题列出了 Microsoft 基础类库中最常使用的数据类型。 大部分数据类型与平台软件开发工具包 (SDK) 中的相同，而其他数据类型对于 MFC 是唯一的。  
   
- 有关在 Windows SDK 和 MFC 中使用的数据类型的信息，请参阅[Windows 数据类型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
+ 有关在 Windows SDK 和 MFC 中使用的数据类型的信息，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。  
   
  对 Microsoft 基础类库唯一的数据类型包括：  
   
