@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209996"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 此类提供使用多个 ATL module 类的方法。  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  在调试版本中，如果出现断言错误*ppGIT*等于 NULL，或如果无法获取全局接口表指针。  
   
- 请参阅[IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517)有关全局接口表的信息。  
+ 请参阅[IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable)有关全局接口表的信息。  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  返回的锁计数。  

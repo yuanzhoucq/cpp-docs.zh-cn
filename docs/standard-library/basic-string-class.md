@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209079"
 ---
 # <a name="basicstring-class"></a>basic_string 类
 
@@ -881,7 +881,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>备注
 
-属于 C++ 模板类 basic_string\<char> 的字符串类型对象并不一定是以 null 结尾的。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 存在从常量 **char\*** 到字符串的自动转换，但是字符串类并不提供从 C 样式字符串到 **basic_string\<char>** 类型对象的自动转换。
+属于 C++ 模板类 basic_string\<char> 的字符串类型对象并不一定是以 null 结尾的。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 从自动转换**const char** <strong>\*</strong>到字符串，但是字符串类不提供从 C 样式字符串到类型的对象的自动转换为**basic_string\<char >**。
 
 不应修改返回的 C 样式字符串，这可能使指向字符串的指针无效；也不应将其删除，因为该字符串具有有限的生存期且归属于类字符串。
 
@@ -1652,7 +1652,7 @@ const value_type *data() const;
 
 属于 C++ 模板类 basic_string\<char> 的字符串类型对象并不一定是以 null 结尾的。 返回类型`data`不是一个有效的 C 字符串，因为获取不附加任何空字符。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在字符串类型对象中并无特殊含义，且可能像其他字符一样是字符串对象的一部分。
 
-存在从常量 **char\*** 到字符串的自动转换，但是字符串类并不提供从 C 样式字符串到 **basic_string\<char>** 类型对象的自动转换。
+从自动转换**const char** <strong>\*</strong>到字符串，但是字符串类不提供从 C 样式字符串到类型的对象的自动转换为**basic_string \<char >**。
 
 不应修改返回的字符串，这可能使指向字符串的指针无效或将其删除，原因是字符串具有有限的生存期且归类字符串所有。
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 该类型是 `allocator_type::pointer` 的同义词。
 
-为类型`string`，它相当于**char\***。
+为类型`string`，它相当于**char**<strong>\*</strong>。
 
 ### <a name="example"></a>示例
 

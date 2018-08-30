@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207918"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> 自 Visual Studio 2017，发布\<文件系统 > 标头尚不是 c + + 标准。 Visual C++ 2017 实现 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的最终稿标准。
+> 截至当前版本的 Visual Studio 2017，\<文件系统 > 标头尚不是 c + + 标准。 Visual C++ 2017 实现 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的最终稿标准。
 
 此标头支持两大类主机操作系统（即 Microsoft Windows 和 Posix）之一的文件系统。
 
@@ -112,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="structs"></a>结构
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[space_info 结构](../standard-library/space-info-structure.md)|保存有关卷的信息。|
 
@@ -126,9 +126,9 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>枚举
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|

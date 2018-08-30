@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337611"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221520"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 表示 Windows 套接字 — 网络通信的终结点。  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  在静态链接的 MFC 应用程序中的辅助线程中使用 MFC 套接字时，您必须在使用套接字的每个线程中调用 `AfxSocketInit` 来初始化套接字库。 默认情况下，仅在主线程中调用 `AfxSocketInit`。  
   
- 有关详细信息，请参阅[Windows 套接字： 使用类 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)和相关文章。，又能[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
+ 有关详细信息，请参阅[Windows 套接字： 使用类 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)和相关文章。，又能[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` 是**不**线程安全。  如果你正在调用它在多线程环境中它可以调用的同时由不同的线程，请务必保护使用互斥体或其他同步锁的每个调用。  
   
- 有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)并[Windows 套接字： 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ 有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)并[Windows 套接字： 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  调用此成员函数可分离在 SOCKET 句柄*m_hSocket*中的数据成员`CAsyncSocket`对象，并将*m_hSocket*为 NULL。  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>备注  
  当某个特定成员函数指示已发生错误，`GetLastError`应调用以检索相应的错误代码。 请参阅适用的错误代码的单个成员函数说明的列表。  
   
- 有关错误代码的详细信息，请参阅[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
+ 有关错误代码的详细信息，请参阅[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  调用此成员函数以获取此套接字连接到的对等方套接字地址。  

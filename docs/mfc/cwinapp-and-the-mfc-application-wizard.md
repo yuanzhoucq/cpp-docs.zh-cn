@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702c20fc9f303670d2add4ebf840785acff7750d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0a716119acc857419dcf128c39ab2c20921cd2d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211386"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 应用程序向导
 MFC 应用程序向导创建主干应用程序时, 声明应用程序类派生自[CWinApp](../mfc/reference/cwinapp-class.md)。 MFC 应用程序向导还会生成一个包含以下各项的实现文件：  
@@ -36,7 +36,7 @@ MFC 应用程序向导创建主干应用程序时, 声明应用程序类派生�
   
 -   标准实现你`InitInstance`成员函数。  
   
- 应用程序类位于项目标头和主源代码文件中。 类和创建文件的名称基于在 MFC 应用程序向导中提供的项目名称。 若要查看这些类的代码的最简单方法是通过[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+ 应用程序类位于项目标头和主源代码文件中。 类和创建文件的名称基于在 MFC 应用程序向导中提供的项目名称。 若要查看这些类的代码的最简单方法是通过[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
   
  标准实现和消息映射提供足够用于多种用途，但你可以根据需要修改它们。 这些实现最有趣的是`InitInstance`成员函数。 通常情况下，会将代码添加到的主干实现`InitInstance`。  
   

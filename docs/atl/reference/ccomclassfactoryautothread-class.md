@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: dbd258761bef7789e73fe61ac288b414902d2af8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214069"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 类
-此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，并允许在多个单元中创建的对象。  
+此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，并允许在多个单元中创建的对象。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -114,7 +114,7 @@ STDMETHODIMP LockServer(BOOL fLock);
  调用`LockServer`允许客户端，以便可以快速创建多个对象保存到一个类工厂。  
   
 ## <a name="see-also"></a>请参阅  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 类](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   

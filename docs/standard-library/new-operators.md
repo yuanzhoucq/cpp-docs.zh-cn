@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216183"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 运算符
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 第一个函数调用由 delete 表达式的值呈现*ptr*无效。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为就是接受的值*ptr* ，它是 null 或返回到以前通过调用[运算符 new](../standard-library/new-operators.md#op_new)(**size_t**)。
 
-Null 值的默认行为*ptr*是不执行任何操作。 任何其他值*ptr*必须按前面所述的调用之前返回的值。 此类非 null 的值的默认行为*ptr*是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储分配到的后续调用`operator new`(**size_t**)，或任何`calloc`( **size_t**)， `malloc`( **size_t**)，或`realloc`( **void\***， **size_t**)。
+Null 值的默认行为*ptr*是不执行任何操作。 任何其他值*ptr*必须按前面所述的调用之前返回的值。 此类非 null 的值的默认行为*ptr*是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储分配到的后续调用`operator new`(**size_t**)，或任何`calloc`( **size_t**)， `malloc`( **size_t**)，或`realloc`( **void**<strong>\*</strong>， **size_t**)。
 
 第二个函数由对应于 **new**( **std::size_t**) 形式的新表达式的 placement delete 表达式调用。 它不执行任何操作。
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>备注
 
-第一个函数调用`delete[]`表达式的值呈现*ptr*无效。 该函数为可替换，因为该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为就是接受的值*ptr* ，它是 null 或返回到以前通过调用[new 运算符&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 值的默认行为*ptr*是不执行任何操作。 任何其他值*ptr*必须按前面所述的调用之前返回的值。 此类非 null 的值的默认行为*ptr*是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储分配到的后续调用[运算符 new](../standard-library/new-operators.md#op_new)(**size_t**)，或任何`calloc`(**size_t**)， `malloc`(**size_t**)，或`realloc`( **void\***， **size_t**)。
+第一个函数调用`delete[]`表达式的值呈现*ptr*无效。 该函数为可替换，因为该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为就是接受的值*ptr* ，它是 null 或返回到以前通过调用[new 运算符&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 值的默认行为*ptr*是不执行任何操作。 任何其他值*ptr*必须按前面所述的调用之前返回的值。 此类的非 null 值的默认行为*ptr*是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储分配到的后续调用[运算符 new](../standard-library/new-operators.md#op_new)(**size_t**)，或任何`calloc`(**size_t**)， `malloc`(**size_t**)，或`realloc`( **void**<strong>\*</strong>， **size_t**).
 
 第二个函数调用的 placement`delete[]`表达式对应于`new[]`形式的表达式`new[]`(**std:: size_t**)。 它不执行任何操作。
 

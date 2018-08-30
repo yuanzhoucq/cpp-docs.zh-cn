@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3e221c3546e0f9d02a9da7433ca2a353888a57a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9b90337b48c46d335bfccf405b2ba7e0628b9f99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606198"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209487"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>图标和光标：显示设备的图像资源（图标的图像编辑器）
 
@@ -85,5 +85,5 @@ ms.locfileid: "42606198"
 ## <a name="see-also"></a>请参阅
 
 [图标的图像编辑器](../windows/image-editor-for-icons.md)  
-[图标](http://msdn.microsoft.com/library/windows/desktop/ms646973)  
-[游标](http://msdn.microsoft.com/library/windows/desktop/ms646970)
+[图标](https://msdn.microsoft.com/library/windows/desktop/ms646973)  
+[游标](https://msdn.microsoft.com/library/windows/desktop/ms646970)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a55daa9f8c742d847944ddb0459db208c7edf9cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221538"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -36,7 +36,7 @@ ms.locfileid: "42608119"
 
 ## <a name="remarks"></a>备注
 
-**Noncreatable** c + + 属性具有相同的功能[不可创建](http://msdn.microsoft.com/library/windows/desktop/aa367118)MIDL 特性和自动传递到生成。由编译器的 IDL 文件。
+**Noncreatable** c + + 属性具有相同的功能[不可创建](/windows/desktop/Midl/noncreatable)MIDL 特性和自动传递到生成。由编译器的 IDL 文件。
 
 当使用 ATL 的项目中使用此属性时，该属性的行为更改。 除了上述行为，该属性还注入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)宏。 此宏对 ATL 指示不能从外部创建对象。
 

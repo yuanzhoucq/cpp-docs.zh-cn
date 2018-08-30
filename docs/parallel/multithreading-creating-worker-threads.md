@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211632"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>多线程处理： 在 MFC 中创建工作线程数
 工作线程通常用于处理后台任务，用户不必等待即可继续使用你的应用程序。 重新计算和后台打印等任务，这样工作线程。 本主题详细介绍创建工作线程所需的步骤。 包括以下主题：  
@@ -46,13 +46,13 @@ ms.locfileid: "43131184"
   
 - 要传递到控制函数的参数。  
   
-- （可选）所需的线程优先级。 默认值为正常优先级。 有关可用的优先级级别的详细信息，请参阅[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+- （可选）所需的线程优先级。 默认值为正常优先级。 有关可用的优先级级别的详细信息，请参阅[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
 - （可选）线程所需的堆栈大小。 默认值为同一个与创建线程堆栈大小。  
   
 - （可选）如果你想要创建一个处于挂起状态的线程，CREATE_SUSPENDED。 默认值为 0，或正常启动线程。  
   
-- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 `AfxBeginThread` 创建并初始化`CWinThread`对象，启动它，并返回其地址，因此可以对其进行引用更高版本。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。  
   

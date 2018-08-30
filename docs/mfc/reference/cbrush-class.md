@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336629"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215730"
 ---
 # <a name="cbrush-class"></a>CBrush 类
 封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -62,14 +62,14 @@ class CBrush : public CGdiObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)结构。|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|初始化具有指定的与设备无关位图 (DIB) 模式的画笔。|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|初始化具有指定阴影的模式和颜色的画笔。|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|初始化具有指定的位图模式的画笔。|  
 |[CBrush::CreateSolidBrush](#createsolidbrush)|初始化具有指定纯色画笔。|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|创建为默认系统颜色的画笔。|  
 |[CBrush::FromHandle](#fromhandle)|返回一个指向`CBrush`对象时提供给 Windows 的一个句柄`HBRUSH`对象。|  
-|[CBrush::GetLogBrush](#getlogbrush)|获取[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
+|[CBrush::GetLogBrush](#getlogbrush)|获取[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)结构。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -131,7 +131,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  如果你使用不带任何参数的构造函数，则必须初始化生成`CBrush`对象使用[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果你使用采用参数的构造函数之一，则无需再初始化是所必需。 如果遇到错误，而不带任何参数的构造函数将始终成功，则使用参数的构造函数可以引发异常。  
   
- 使用单个构造函数[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数构造具有指定颜色的实心画笔。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
+ 使用单个构造函数[COLORREF](/windows/desktop/gdi/colorref)参数构造具有指定颜色的实心画笔。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
   
  具有两个参数的构造函数构造阴影画笔。 *NIndex*参数指定的索引的阴影模式。 *CrColor*参数指定的颜色。  
   
@@ -141,7 +141,7 @@ explicit CBrush(CBitmap* pBitmap);
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- 初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。  
+ 初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)结构。  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>参数  
  *lpLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
+ 指向[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)结构，其中包含有关画笔的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
@@ -208,11 +208,11 @@ BOOL CreateDIBPatternBrush(
   
  有关使用以下 Windows 功能的信息，请参阅 Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (此函数仅用于与 Windows 的版本早于 3.0 编写的应用程序兼容性; 使用`CreateDIBPatternBrushPt`函数。)  
+- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (此函数仅用于与 Windows 的版本早于 3.0 编写的应用程序兼容性; 使用`CreateDIBPatternBrushPt`函数。)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （此函数应基于 Win32 的应用程序。）  
+- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) （此函数应基于 Win32 的应用程序。）  
   
-- [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
@@ -243,7 +243,7 @@ BOOL CreateHatchBrush(
 - HS_VERTICAL 垂直阴影  
   
  *crColor*  
- 指定为的 RGB 颜色 （阴影的颜色） 的前景色的画笔。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK for 的详细信息中。  
+ 指定为的 RGB 颜色 （阴影的颜色） 的前景色的画笔。 请参阅[COLORREF](/windows/desktop/gdi/colorref) Windows SDK for 的详细信息中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -277,7 +277,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  使用单色位图 （每像素 1 位 1 平面） 创建一个画笔是使用当前的文本和背景色绘制字符。 使用当前的文本颜色绘制像素位设置为 0 表示。 使用当前的背景色绘制像素为单位表示的位设置为 1。  
   
- 有关使用信息[CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508)，Windows 函数中，请参阅 Windows SDK。  
+ 有关使用信息[CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush)，Windows 函数中，请参阅 Windows SDK。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
@@ -291,7 +291,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>参数  
  *crColor*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定画笔的颜色。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)结构，它指定画笔的颜色。 颜色指定 RGB 值，并可以构造与 WINDOWS 中的 RGB 宏。H.  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>参数  
  *nIndex*  
- 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 值的列表中。  
+ 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 值的列表中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -343,7 +343,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="remarks"></a>备注  
  如果`CBrush`对象尚未附加到句柄，临时`CBrush`创建并附加对象。 此临时`CBrush`对象仅在应用程序必须在其事件循环内的空闲时间的下一步时间前是否有效。 在此期间，会删除所有临时图形对象。 换而言之，仅在一个窗口消息处理期间的临时对象有效。  
   
- 有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 有关使用图形对象的详细信息，请参阅[图形对象](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CBrush::CBrush](#cbrush)。  
@@ -357,7 +357,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>参数  
  *pLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
+ 指向[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)结构，其中包含有关画笔的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果函数成功，并*pLogBrush*是有效的指针，返回值是存储到缓冲区的字节数。  
@@ -387,7 +387,7 @@ operator HBRUSH() const;
 ### <a name="remarks"></a>备注  
  此运算符是强制转换运算符，支持直接使用 HBRUSH 对象。  
   
- 有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 有关使用图形对象的详细信息，请参阅[图形对象](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

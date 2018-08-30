@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027727"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220103"
 ---
 # <a name="multimap-class"></a>multimap 类
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>参数
 
-*密钥*的键数据类型存储在多重映射中。
+*Key*<br/>
+ 要存储在多重映射中的键数据类型。
 
-*类型*要存储在多重映射中的元素数据类型。
+*类型*<br/>
+ 要存储在多重映射中的元素数据类型。
 
-*特征*提供两个元素值作为排序键以确定多重映射中其相对顺序进行比较的函数对象的类型。 默认值是二元谓词 `less<Key>`。
+*特征*<br/>
+ 一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重映射中的相对顺序。 默认值是二元谓词 `less<Key>`。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-*分配器*表示存储的分配器对象封装有关映射的分配和解除分配的内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<pair <const Key, Type> >`。
+*分配器*<br/>
+ 一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair <const Key, Type> >`。
 
 ## <a name="remarks"></a>备注
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` 类型不能用于修改元素的值。
 
-`const_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` * \< * **const Key**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
+`const_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair<const Key, Type>`。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
 
-若要取消引用`const_iterator``cIter`多重映射中指向的元素，使用**->** 运算符。
+若要取消引用`const_iterator` *cIter*多重映射中指向的元素，使用**->** 运算符。
 
-若要访问元素的键值，请使用 `cIter` -> **first**，其作用与 (\* `cIter`). **first** 相同。 若要访问元素的映射值，请使用 `cIter` -> **second**，其作用与 (\* `cIter`). **second** 相同。
+若要访问元素的键的值，请使用`cIter->first`，这等同于`(*cIter).first`。 若要访问的元素的映射基准值，请使用`cIter->second`，这等同于`(*cIter).second`。
 
 ### <a name="example"></a>示例
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重映射。
 
-`const_reverse_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` * \< * **const Key**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
+`const_reverse_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair<const Key, Type>`。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
 
-若要取消引用`const_reverse_iterator``crIter`多重映射中指向的元素，使用**->** 运算符。
+若要取消引用`const_reverse_iterator` *crIter*多重映射中指向的元素，使用**->** 运算符。
 
-若要访问元素的键值，请使用 `crIter` -> **first**，其作用与 (\* `crIter`). **first** 相同。 若要访问元素的映射值，请使用 `crIter` -> **second**，其作用与 (\* `crIter`). **first** 相同。
+若要访问元素的键的值，请使用`crIter->first`，这等同于`(*crIter).first`。 若要访问的元素的映射基准值，请使用`crIter->second`，这等同于`(*crIter).first`。
 
 ### <a name="example"></a>示例
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*的多重映射中匹配的元素的键。
+*key*<br/>
+ 要从 multimap 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*与要搜索的多重映射中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*其中*要移除的元素位置。
+*Where*<br/>
+ 要移除的元素的位置。
 
-*第一个*要删除的第一个元素的位置。
+*第一个*<br/>
+ 要移除的第一个元素的位置。
 
-*最后一个*刚超出最后一个元素的位置，要删除。
+*最后一个*<br/>
+ 要移除的刚超出最后一个元素的位置。
 
-*密钥*要移除的元素的键。
+*Key*<br/>
+ 要移除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*要搜索的多重映射中元素的排序键匹配的键值。
+*key*<br/>
+ 要搜索的多重映射中的元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>备注
 
-`iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` * \< * **const Key**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
+`iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair<const Key, Type>`。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
 
-若要取消引用**迭代器**`Iter`多重映射中指向的元素，使用`->`运算符。
+若要取消引用`iterator` *Iter*多重映射中指向的元素，使用**->** 运算符。
 
-若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second** 相同。
+若要访问元素的键的值，请使用`Iter->first`，这等同于`(*Iter).first`。 若要访问的元素的映射基准值，请使用`Iter->second`，这等同于`(*Iter).second`。
 
 一种类型`iterator`可用于修改元素的值。
 
@@ -1378,7 +1389,7 @@ key_compare key_comp() const;
 
 存储对象会定义成员函数
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 如果在排序顺序中 *x* 严格位于 *y* 之前，则返回 true。
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*与要搜索的多重映射中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 类型用于反向循环访问多重映射。
 
-`reverse_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair` * \< * **const Key**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
+`reverse_iterator` Multimap 指向的对象定义[value_type](#value_type)，其为类型`pair<const Key, Type>`。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。
 
-若要取消引用`reverse_iterator``rIter`多重映射中指向的元素，使用-> 运算符。
+若要取消引用`reverse_iterator` *rIter*多重映射中指向的元素，使用**->** 运算符。
 
-若要访问元素的键值，请使用 `rIter` -> **first**，其作用与 (\* `rIter`). **first** 相同。 若要访问元素的映射值，请使用 `rIter` -> **second**，其作用与 (\* `rIter`). **first** 相同。
+若要访问元素的键的值，请使用`rIter->first`，这等同于`(*rIter).first`。 若要访问的元素的映射基准值，请使用`rIter->second`，这等同于`(*rIter).second`。
 
 ### <a name="example"></a>示例
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*右*多重映射提供要交换的元素或其元素将要进行交换的多重映射使用的多重映射`left`。
+*right*<br/>
+ 多重映射提供要交换的元素或其元素要与多重映射 `left` 的元素进行交换。
 
 ### <a name="remarks"></a>备注
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*与要搜索的多重映射中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[\<映射 > 成员](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<映射 > 成员](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

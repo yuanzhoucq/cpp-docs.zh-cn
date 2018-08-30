@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214616"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
 **Microsoft 专用**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>备注  
  `_InterlockedCompareExchangePointer` 执行 `Destination` 地址与 `Comparand` 地址之间的原子比较。 如果 `Destination` 地址与 `Comparand` 地址相等，则 `Exchange` 地址将存储在由 `Destination` 指定的地址中。 否则，不会执行任何操作。  
   
- `_InterlockedCompareExchangePointer` 提供了编译器内部函数支持 Win32 Windows SDK [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx)函数。  
+ `_InterlockedCompareExchangePointer` 提供了编译器内部函数支持 Win32 Windows SDK [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)函数。  
   
  有关如何使用的示例`_InterlockedCompareExchangePointer`，请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
   

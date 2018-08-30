@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543106"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217036"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
 `COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须从 `COleIPFrameWndEx` 类派生应用程序的就地框架窗口类，而不是从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类派生。 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  指定所需的帮助由指定类型的数据*nCmd*。  
   
  [in]*nCmd*  
- 指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp 函数](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK 中。  
+ 指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp 函数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
   

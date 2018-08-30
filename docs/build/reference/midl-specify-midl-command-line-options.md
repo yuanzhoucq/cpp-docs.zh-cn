@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571651"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222676"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL（指定 MIDL 命令行选项）
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571651"
  其中：  
   
  `file`  
- 包含文件的名称[MIDL 命令行选项](http://msdn.microsoft.com/library/windows/desktop/aa366839)。  
+ 包含文件的名称[MIDL 命令行选项](/windows/desktop/Midl/general-midl-command-line-syntax)。  
   
 ## <a name="remarks"></a>备注  
  必须给定的 IDL 文件转换为 TLB 文件的所有选项`file`;不能链接器的命令行上指定 MIDL 命令行选项。 如果未指定 /MIDL，MIDL 编译器将调用使用 IDL 文件名称和任何其他选项。  

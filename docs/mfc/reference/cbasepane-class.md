@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337533"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218678"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 MFC 中的所有窗格的基类。  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` 不使用此方法。|  
 |`CBasePane::OnUpdateCmdUI`|内部使用。|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|返回包含给定的点的窗格。|  
-|`CBasePane::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|`CBasePane::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` 不使用此方法。|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从列表中到停靠管理器删除。|  
 |[CBasePane::SaveState](#savestate)|将窗格的状态保存到注册表。|  
@@ -1388,7 +1388,7 @@ virtual HDWP MoveWindow(
  句柄的延迟的窗口位置结构，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)或通过将存储以前调用此方法的返回值。  
+ 如果传递 NULL 作为*hdwp*参数，此方法通常移动窗口。 如果传递的句柄，此方法将执行延迟的窗口移动。 可以通过调用获取句柄[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)或通过将存储以前调用此方法的返回值。  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  在窗格的父级更改后由框架调用。  

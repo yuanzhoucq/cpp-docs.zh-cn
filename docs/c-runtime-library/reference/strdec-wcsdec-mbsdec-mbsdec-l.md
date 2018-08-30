@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211469"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
 比字符串指针退后一个字符。
 
 > [!IMPORTANT]
-> **mbsdec**和**mbsdec_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **mbsdec**并**mbsdec_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -89,28 +89,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>参数
 
 *start*<br/>
-指向任何字符 (或 **_mbsdec**和 **_mbsdec_l**，任何多字节字符的第一个字节) 中的源字符串;*启动*必须位于之前*当前*源字符串中。
+为任意字符的指针 (或 **_mbsdec**并 **_mbsdec_l**，任一多字节字符的第一个字节); 源字符串*启动*必须位于之前*当前*源字符串中。
 
 *current*<br/>
-指向任何字符 (或 **_mbsdec**和 **_mbsdec_l**，任何多字节字符的第一个字节) 中的源字符串;*当前*必须遵循*启动*源字符串中。
+为任意字符的指针 (或 **_mbsdec**并 **_mbsdec_l**，任一多字节字符的第一个字节); 源字符串*当前*必须遵循*启动*源字符串中。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**_mbsdec**， **_mbsdec_l**， **_strdec**，和 **_wcsdec**每个返回一个指向紧跟字符*当前*;**_mbsdec**返回**NULL**如果的值*启动*大于或等于该*当前*。 **_tcsdec**映射到这些函数和其返回值之一取决于映射。
+**_mbsdec**， **_mbsdec_l**， **_strdec**，并且 **_wcsdec**每个返回一个指向紧跟的字符*当前*;**_mbsdec**返回**NULL**如果的值*启动*大于或等于*当前*。 **_tcsdec**映射到之一，这些函数和它的返回值取决于映射。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsdec**和 **_mbsdec_l**函数返回一个指向紧跟的多字节字符的第一个字节*当前*中包含的字符串*启动*。
+**_Mbsdec**并 **_mbsdec_l**函数返回一个指向紧跟的多字节字符的第一个字节*当前*中包含的字符串*启动*。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。  **_mbsdec**根据当前正在使用的区域设置识别多字节字符序列时 **_mbsdec_l**具有完全相同，只不过它改用已传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。  **_mbsdec**根据当前正在使用的区域设置识别多字节字符序列时 **_mbsdec_l**具有完全相同，只不过它改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*启动*或*当前*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+如果*启动*或*当前*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回**EINVAL** ，并设置**errno**到**EINVAL**。
 
 > [!IMPORTANT]
-> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -118,13 +118,13 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**和 **_wcsdec**单字节字符和宽字符版本的 **_mbsdec**和 **_mbsdec_l**。 **_strdec**和 **_wcsdec**仅为此映射提供，否则不应该使用。
+**_strdec**并 **_wcsdec**单字节字符和宽字符版本的 **_mbsdec**并 **_mbsdec_l**。 **_strdec**并 **_wcsdec**仅为此映射提供，否则不应使用。
 
 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_mbsdec**|\<mbstring.h>|\<mbctype.h>|
 |**_mbsdec_l**|\<mbstring.h>|\<mbctype.h>|
@@ -135,7 +135,7 @@ unsigned char *_mbsdec_l(
 
 ## <a name="example"></a>示例
 
-下面的示例演示使用 **_tcsdec**。
+下面的示例演示的一种用法 **_tcsdec**。
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-下面的示例演示使用 **_mbsdec**。
+下面的示例演示的一种用法 **_mbsdec**。
 
 ```cpp
 // crt_mbsdec.cpp

@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 4） C4565 |Microsoft 文档
+title: 编译器警告 （等级 C4565 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211257"
 ---
 # <a name="compiler-warning-level-4-c4565"></a>编译器警告（等级 4）C4565
-function： 重定义;与 __declspec(modifier) 之前声明符号  
-  
- 符号已重新定义或重新声明和第二个定义或声明中的，与第一个定义或声明中，不同没有`__declspec`修饰符 (***修饰符***)。 此警告为信息性。 若要解决此警告，请删除其中一个定义。  
-  
- 下面的示例生成 C4565:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+
+> '*函数*： 重定义; 符号之前声明的使用 __declspec (*修饰符*)
+
+## <a name="remarks"></a>备注
+
+已重新定义或重新声明一个符号和第二个定义或声明中的，不同于第一个定义或声明中，没有`__declspec`修饰符 (*修饰符*)。 此警告为信息性。 若要解决此警告，请删除其中一个定义。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4565:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339538"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211892"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  指定的窗口样式特性。 默认情况下，设置 WS_VISIBLE 和 WS_CHILD Windows 样式。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 *RectDefault*值，则允许 Windows 指定大小和新窗口的位置。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 *RectDefault*值，则允许 Windows 指定大小和新窗口的位置。  
   
  *pParentWnd*  
  指向控件的父窗口的指针。  

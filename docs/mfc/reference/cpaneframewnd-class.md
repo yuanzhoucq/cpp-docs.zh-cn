@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcd45226c85238ddd9e3d6d5a35460f0bb58916
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214986"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|隐藏或显示微型框架窗口的窗格时，由框架进行调用。|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果窗格在微型框架窗口内包含用户提供的点，则返回窗格。|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。|  
+|`CPaneFrameWnd::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|重绘所有微型框架窗口。|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|由框架调用以删除非有效窗格。|  
 |[CPaneFrameWnd::RemovePane](#removepane)|从微型框架窗口删除窗格。|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  以像素为单位的微型框架窗口的高度。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法来确定微型框架窗口的高度。 默认情况下，高度设置为 SM_CYSMCAPTION。 有关详细信息，请参阅[GetSystemMetrics 函数](http://msdn.microsoft.com/library/windows/desktop/ms724385)。  
+ 调用此方法来确定微型框架窗口的高度。 默认情况下，高度设置为 SM_CYSMCAPTION。 有关详细信息，请参阅[GetSystemMetrics 函数](https://msdn.microsoft.com/library/windows/desktop/ms724385)。  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  计算微型框架窗口标题的边框矩形。  

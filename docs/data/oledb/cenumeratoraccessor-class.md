@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215606"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
 通过使用[CEnumerator](../../data/oledb/cenumerator-class.md)从枚举器行集访问数据。  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|一个，该值指示是否行所说明的数据源或枚举数的变量。|  
 |[m_szDescription](#szdescription)|数据源或枚举器的说明。|  
 |[m_szName](#szname)|枚举器的数据源的名称。|  
-|[m_szParseName](#szparsename)|要传递给字符串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)若要获取的数据源或枚举器的名字对象。|  
+|[m_szParseName](#szparsename)|要传递给字符串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)若要获取的数据源或枚举器的名字对象。|  
   
 ## <a name="remarks"></a>备注  
  此行包含数据源和枚举器当前枚举器中可见。  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
-要传递给字符串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)若要获取的数据源或枚举器的名字对象。  
+要传递给字符串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)若要获取的数据源或枚举器的名字对象。  
   
 ### <a name="syntax"></a>语法  
   

@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5ed2a88e8963bae06e33835f3982d8651445929
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215935"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>在设备图像中创建透明或反色区域（图标的图像编辑器）
 
@@ -44,7 +44,7 @@ ms.locfileid: "42599515"
 屏幕和反转颜色将应用于图标和光标形状，颜色派生的映像或者指定反转区域。 这些颜色指示图像中具有这些属性的部分。 您可以更改表示屏幕颜色和反色中编辑属性的颜色。 这些更改不会影响应用程序中的光标的图标的外观。
 
 > [!NOTE]
-> 显示的对话框和菜单命令可能与“帮助”中的描述不同，具体取决于现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 显示的对话框和菜单命令可能与“帮助”中的描述不同，具体取决于现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>若要创建透明或反转区域
 

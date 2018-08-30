@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211549"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -132,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[Cheaderctrl:: Setorderarray](#setorderarray)|设置标头控件中项的从左到右顺序。|  
   
 ## <a name="remarks"></a>备注  
- 标头控件是一个窗口通常位于上面的一组列的文本或数字。 它包含每个列的标题和分为部分。 用户可以将分隔的各个部分，设置每列的宽度的分隔条。 标头控件的说明，请参阅[标头控件](http://msdn.microsoft.com/library/windows/desktop/bb775238)。  
+ 标头控件是一个窗口通常位于上面的一组列的文本或数字。 它包含每个列的标题和分为部分。 用户可以将分隔的各个部分，设置每列的宽度的分隔条。 标头控件的说明，请参阅[标头控件](/windows/desktop/Controls/header-controls)。  
   
  此控件 (并因此`CHeaderCtrl`类) 仅适用于 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。  
   
@@ -183,7 +183,7 @@ BOOL ClearAllFilters();
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法实现的 Win32 消息的行为[HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)列值为-1，Windows SDK 中所述。  
+ 此方法实现的 Win32 消息的行为[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)列值为-1，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
@@ -203,7 +203,7 @@ BOOL ClearFilter(int nColumn);
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法实现的 Win32 消息的行为[HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)，如 Windows SDK 中所述。  
+ 此方法实现的 Win32 消息的行为[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
@@ -221,10 +221,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。  
+ 指定标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。  
   
  *rect*  
- 指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ 指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
  指定标头控件的父窗口中，通常`CDialog`。 它不能为 NULL。  
@@ -238,7 +238,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  构造`CHeaderCtrl`两个步骤中的对象。 首先，调用构造函数，然后调用`Create`，它创建标头控件并将其附加到`CHeaderCtrl`对象。  
   
- 除了标头控件样式，您可以使用以下常见控件样式以确定标头控件定位和调整自身大小的方式 (请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)有关详细信息):  
+ 除了标头控件样式，您可以使用以下常见控件样式以确定标头控件定位和调整自身大小的方式 (请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)有关详细信息):  
   
 - CCS_BOTTOM 导致控件来为自身定位在父窗口工作区的底部，窗口的宽度设置为父项相同的宽度。  
   
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。  
+ 标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -318,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)如果成功，否则该值为 NULL 的对象。 返回的列表包含只能有一个图像。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308)，如 Windows SDK 中所述。 它旨在支持标头项拖放功能。  
+ 此成员函数可实现 Win32 消息的行为[HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage)，如 Windows SDK 中所述。 它旨在支持标头项拖放功能。  
   
  `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理中删除。  
   
@@ -348,7 +348,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>参数  
  *lpDrawItemStruct*  
- 一个指向[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)结构描述要绘制的项。  
+ 一个指向[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构描述要绘制的项。  
   
 ### <a name="remarks"></a>备注  
  `itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。  
@@ -374,7 +374,7 @@ BOOL EditFilter(
  要编辑的列。  
   
  *bDiscardChanges*  
- 一个值，指定如何处理用户的编辑更改，如果用户正在编辑筛选器时[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)发送消息。  
+ 一个值，指定如何处理用户的编辑更改，如果用户正在编辑筛选器时[HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)发送消息。  
   
  指定 TRUE，则放弃所做的更改的用户，或 FALSE 以接受用户所做的更改。  
   
@@ -382,7 +382,7 @@ BOOL EditFilter(
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法实现的 Win32 消息的行为[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)，如 Windows SDK 中所述。  
+ 此方法实现的 Win32 消息的行为[HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
@@ -398,7 +398,7 @@ int GetBitmapMargin() const;
  以像素为单位的位图边距的宽度。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
@@ -414,7 +414,7 @@ int GetFocusedItem() const;
  具有焦点的标题项的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330)消息，Windows SDK 中所述。  
+ 此方法将发送[HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_headerCtrl`，即用于访问当前标头控件。 此变量将在下一个示例中使用。  
@@ -437,7 +437,7 @@ CImageList* GetImageList() const;
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332)，如 Windows SDK 中所述。 `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理中删除。  
+ 此成员函数可实现 Win32 消息的行为[HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist)，如 Windows SDK 中所述。 `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理中删除。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
@@ -456,7 +456,7 @@ BOOL GetItem(
  指定要检索的项的从零开始索引。  
   
  *pHeaderItem*  
- 指向[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)接收新项的结构。 此结构用于`InsertItem`和`SetItem`成员函数。 在中设置任何标志`mask`元素确保中的相应元素的值返回时正确填写。 如果`mask`元素设置为零，在其他结构元素中的值为无意义。  
+ 指向[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)接收新项的结构。 此结构用于`InsertItem`和`SetItem`成员函数。 在中设置任何标志`mask`元素确保中的相应元素的值返回时正确填写。 如果`mask`元素设置为零，在其他结构元素中的值为无意义。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -490,14 +490,14 @@ BOOL GetItemDropDownRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构。|  
-|[out]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
+|[in]*iItem*|其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|  
+|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339)消息，Windows SDK 中所述。  
+ 此方法将发送[HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_headerCtrl`，即用于访问当前标头控件。 此变量将在下一个示例中使用。  
@@ -523,13 +523,13 @@ BOOL GetItemRect(
  标头控件项的从零开始索引。  
   
  *lpRect*  
- 指向的地址的指针[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。  
+ 指向的地址的指针[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法实现的 Win32 消息的行为[HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341)，如 Windows SDK 中所述。  
+ 此方法实现的 Win32 消息的行为[HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect)，如 Windows SDK 中所述。  
   
 ##  <a name="getorderarray"></a>  Cheaderctrl:: Getorderarray  
  检索标头控件中的项的从左到右顺序。  
@@ -551,7 +551,7 @@ BOOL GetOrderArray(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
+ 此成员函数可实现 Win32 消息的行为[HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
@@ -567,15 +567,15 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
+|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 如果标头控件包含更多的项超过了可同时显示，该控件可以显示溢出按钮滚动到不可见的项。 标头控件必须具有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 样式，以显示溢出按钮。 边界矩形包含溢出按钮，并存在仅当显示溢出按钮。 有关详细信息，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)。  
+ 如果标头控件包含更多的项超过了可同时显示，该控件可以显示溢出按钮滚动到不可见的项。 标头控件必须具有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 样式，以显示溢出按钮。 边界矩形包含溢出按钮，并存在仅当显示溢出按钮。 有关详细信息，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)。  
   
- 此方法将发送[HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345)消息，Windows SDK 中所述。  
+ 此方法将发送[HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_headerCtrl`，即用于访问当前标头控件。 此变量将在下一个示例中使用。  
@@ -598,13 +598,13 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in、 out]*phdhti*|指向[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)结构，它指定要测试的点并接收测试的结果。|  
+|[in、 out]*phdhti*|指向[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)结构，它指定要测试的点并接收测试的结果。|  
   
 ### <a name="return-value"></a>返回值  
  如果任何指定的位置; 处的标头项的从零开始的索引否则为-1。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349)消息，Windows SDK 中所述。  
+ 此方法将发送[HDM_HITTEST](/windows/desktop/Controls/hdm-hittest)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_headerCtrl`，即用于访问当前标头控件。 此变量将在下一个示例中使用。  
@@ -630,7 +630,7 @@ int InsertItem(
  要插入的项的索引（索引从零开始）。 如果值为零，标头控件的开始处插入项。 如果值大于最大值，标头控件的末尾插入项。  
   
  *phdi*  
- 指向[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构，其中包含要插入的项有关的信息。  
+ 指向[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构，其中包含要插入的项有关的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则新项的索引否则为-1。  
@@ -647,7 +647,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>参数  
  *pHeaderLayout*  
- 指向[HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249)结构，其中包含用来设置的大小和位置标头控件的信息。  
+ 指向[HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout)结构，其中包含用来设置的大小和位置标头控件的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -673,7 +673,7 @@ int OrderToIndex(int nOrder) const;
  基于标头控件中的顺序的项的索引。 索引对从左到右，从 0 开始计数。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现 Win32 宏的行为[HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
+ 此成员函数实现 Win32 宏的行为[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  设置标头控件中的位图的边距的宽度。  
@@ -690,13 +690,13 @@ int SetBitmapMargin(int nWidth);
  以像素为单位的位图边距的宽度。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- 设置之间的时间更改发生在筛选器特性和的文章的超时间隔[HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277)通知。  
+ 设置之间的时间更改发生在筛选器特性和的文章的超时间隔[HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange)通知。  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  正在修改的筛选器控件的索引。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
@@ -732,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361)消息，Windows SDK 中所述。  
+ 此方法将发送[HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_headerCtrl`，即用于访问当前标头控件。 此变量将在下一个示例中使用。  
@@ -763,7 +763,7 @@ int SetHotDivider(int nIndex);
  突出显示分隔线的索引。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363)，如 Windows SDK 中所述。 它旨在支持标头项拖放功能。  
+ 此成员函数可实现 Win32 消息的行为[HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider)，如 Windows SDK 中所述。 它旨在支持标头项拖放功能。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
@@ -783,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)以前分配给标头控件的对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365)，如 Windows SDK 中所述。 `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理中删除。  
+ 此成员函数可实现 Win32 消息的行为[HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist)，如 Windows SDK 中所述。 `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理中删除。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CHeaderCtrl::GetImageList](#getimagelist)。  
@@ -802,7 +802,7 @@ BOOL SetItem(
  要操作的项的从零开始的索引。  
   
  *pHeaderItem*  
- 指向[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构，其中包含新项目的信息。  
+ 指向[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构，其中包含新项目的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -830,7 +830,7 @@ BOOL SetOrderArray(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现 Win32 宏的行为[HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
+ 此成员函数实现 Win32 宏的行为[HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray)，如 Windows SDK 中所述。 它旨在支持标头项排序。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[cheaderctrl:: Getorderarray](#getorderarray)。  

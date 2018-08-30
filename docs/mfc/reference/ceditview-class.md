@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338487"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220825"
 ---
 # <a name="ceditview-class"></a>CEditView 类
 视图类的类型，提供 Windows 编辑控件功能并可用于实现简单的文本编辑器功能。  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  类的默认实现`CEditView`处理以下命令： ID_EDIT_SELECT_ALL、 ID_EDIT_FIND、 ID_EDIT_REPLACE、 ID_EDIT_REPEAT 和 ID_FILE_PRINT。  
   
- 默认字符限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 这可以通过调用基础编辑控件的 EM_LIMITTEXT 函数更改。 但是，限制取决于操作系统各不相同，并且类型的编辑控件 （单个或多行）。 有关这些限制的详细信息，请参阅[EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)。  
+ 默认字符限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 这可以通过调用基础编辑控件的 EM_LIMITTEXT 函数更改。 但是，限制取决于操作系统各不相同，并且类型的编辑控件 （单个或多行）。 有关这些限制的详细信息，请参阅[EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)。  
   
  若要更改此限制在控件中的，重写`OnCreate()`函数在`CEditView`类，并插入以下代码行：  
   

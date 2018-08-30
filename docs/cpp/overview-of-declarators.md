@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209356"
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，如类型和存储类的属性传递。 在本部分中并在讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **指针、 引用和数组的声明符**  
   
- 在名称前面插入的指针运算符使对象成为指针或引用。  **\*** 运算符声明为指针; 名称**&** 运算符会将它声明为引用。  
+ 在名称前面插入的指针运算符使对象成为指针或引用。  <strong>\*</strong>运算符声明为指针; 名称**&** 运算符会将它声明为引用。  
   
 ```cpp 
 int *i; // declarator is *i  

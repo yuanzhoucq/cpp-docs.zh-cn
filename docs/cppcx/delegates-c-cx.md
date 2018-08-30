@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222738"
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
 `delegate`关键字用于声明 Windows 运行时等效于标准 c + + 中的函数对象的引用类型。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：  
@@ -29,7 +29,7 @@ ms.locfileid: "42592768"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- 当声明跨 Windows 运行时应用程序二进制接口向客户端将公开的委托，使用[Windows::Foundation::TypedEventHandler\<，TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委托已预定义代理和存根二进制文件，使其可以由 Javascript 客户端使用。  
+ 当声明跨 Windows 运行时应用程序二进制接口向客户端将公开的委托，使用[Windows::Foundation::TypedEventHandler\<，TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委托已预定义代理和存根二进制文件，使其可以由 Javascript 客户端使用。  
   
 ## <a name="consuming-delegates"></a>使用委托  
  创建通用 Windows 平台应用时，通常使用作为 Windows 运行时类公开的事件类型的委托。 若要订阅事件，请通过指定匹配委托签名的函数或 lambda 创建其委托类型的一个实例。 然后使用 `+=` 运算符将委托对象传递到类上的事件成员。 这称为“订阅事件”。 当类实例“触发”事件时，你的函数随同由你的对象或其他对象添加的任何其他处理程序一起被调用。  

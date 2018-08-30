@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220445"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 使用指向参数列表的指针写入格式化的输出。 提供这些函数的更多安全版本；请参阅 [vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)。
@@ -132,7 +132,7 @@ int _vswprintf_l(
 输出的存储位置
 
 *count*<br/>
-要在此函数的宽字符串版本中存储的字符的最大数量。
+要在此函数的宽字符串版本中存储的字符的最大数目。
 
 *format*<br/>
 格式规范。
@@ -145,20 +145,20 @@ int _vswprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**vsprintf**和**vswprintf**返回写入的字符数，不包括终止 null 字符或为负值，如果发生输出错误。 如果*缓冲区*或*格式*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+**vsprintf**并**vswprintf**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。 如果*缓冲区*或*格式*是 null 指针，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数采用指向自变量列表，然后设置格式和指向的内存中写入给定的数据*缓冲区*。
+每个函数采用一个指向参数列表，然后设置格式并将给定的数据写入到指向的内存*缓冲区*。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 > [!IMPORTANT]
-> 使用**vsprintf**、 那里限制的字符数写入，这意味着使用此函数的代码很容易受到缓冲区溢出。 改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 或调用 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 以确定需要多大的缓冲区。 此外，确保*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 使用**vsprintf**、 那里限制的字符数写入，这意味着使用此函数的代码容易受到缓冲区溢出。 改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 或调用 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 以确定需要多大的缓冲区。 此外，确保*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-**vswprintf**符合 ISO C 标准，其需要第二个参数，*计数*，类型的**size_t**。 若要强制旧的非标准行为，定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 这一旧行为可能不在未来版本中，因此应将代码更改为使用新的符合标准行为。
+**vswprintf**符合 ISO C 标准，这要求第二个参数，*计数*，类型的**size_t**。 若要强制旧的非标准行为，定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 这一旧行为可能不在未来版本中，因此应将代码更改为使用新的符合标准行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -171,7 +171,7 @@ int _vswprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**vsprintf**， **_vsprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vswprintf**， **_vswprintf_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

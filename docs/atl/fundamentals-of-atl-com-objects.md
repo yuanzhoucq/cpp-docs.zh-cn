@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209982"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 对象的基础知识
 下图描绘了类和接口，用于定义 ATL COM 对象之间的关系。  
@@ -40,7 +40,7 @@ ms.locfileid: "37852308"
   
  因为客户端不具有为通过外部对象能够与内部对象进行交互，聚合的对象是通常更高效。 此外，外层对象无需知道功能的聚合的对象，聚合对象的接口是直接提供给客户端。 但是，并非所有对象可进行都聚合。 要聚合的对象，它需要记住的聚合设计。  
   
- ATL 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分两个阶段：  
+ ATL 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)分两个阶段：  
   
 -   [CComObject](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../atl/reference/ccompolyobject-class.md)实现`IUnknown`方法。  
   

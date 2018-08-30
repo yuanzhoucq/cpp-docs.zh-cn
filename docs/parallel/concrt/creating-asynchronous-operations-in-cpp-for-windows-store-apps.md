@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afe558ad5d17c7c9741a1c211bb838c615c8542
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b83531c1452174403f3ead3c5bd3d1b59b0c7d4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213444"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
 本文档介绍了一些使用任务类生成通用 Windows 运行时 (UWP) 应用程序中基于 Windows 线程池的异步操作时，需要注意的关键点。  
   
- 异步编程的使用是 Windows 运行时应用模型中的关键组件，因为它使应用程序保持响应用户输入。 可以启动长期运行的任务，而不必阻止 UI 线程，并且可以在以后接收任务的结果。 也可以在任务在后台运行时取消任务和接收进度通知。 文档[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)提供现已推出 Visual c + + 创建 UWP 应用的异步模式的概述。 此文档介绍如何使用和创建异步 Windows 运行时操作链。 本部分介绍如何使用 ppltasks.h 中的类型来生成可供另一个 Windows 运行时组件的异步操作和执行如何控制异步工作。 此外可以考虑阅读[异步编程模式和提示 Hilo （使用 c + + 和 XAML 的 Windows 应用商店应用） 中](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)若要了解我们如何使用任务类实现异步操作在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用。  
+ 异步编程的使用是 Windows 运行时应用模型中的关键组件，因为它使应用程序保持响应用户输入。 可以启动长期运行的任务，而不必阻止 UI 线程，并且可以在以后接收任务的结果。 也可以在任务在后台运行时取消任务和接收进度通知。 文档[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)提供现已推出 Visual c + + 创建 UWP 应用的异步模式的概述。 此文档介绍如何使用和创建异步 Windows 运行时操作链。 本部分介绍如何使用 ppltasks.h 中的类型来生成可供另一个 Windows 运行时组件的异步操作和执行如何控制异步工作。 此外可以考虑阅读[异步编程模式和提示 Hilo （使用 c + + 和 XAML 的 Windows 应用商店应用） 中](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)若要了解我们如何使用任务类实现异步操作在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用。  
   
 > [!NOTE]
 >  可以使用[并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL) 和[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)UWP 应用中。 但是，不能使用任务计划程序或资源管理器。 本文档介绍更多 PPL 提供的可用只向 UWP 应用，而不适用于桌面应用程序功能。  
@@ -61,16 +61,16 @@ ms.locfileid: "42545733"
   
  通过使用 Windows 运行时，可以使用各种编程语言的最佳功能，并将它们合并到一个应用。 例如，可以在 JavaScript 中创建 UI，在 C++ 组件中执行计算密集型应用程序逻辑。 在后台执行这些计算密集型操作的能力是使 UI 保持响应状态的一个关键因素。 因为`task`类是特定于 c + +，则必须使用 Windows 运行时接口以异步操作传达给其他组件 （c + + 之外的语言编写可能）。 Windows 运行时提供可用来表示异步操作的四个接口：  
   
- [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
+ [Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  表示异步操作。  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  表示报告进度的异步操作。  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  表示返回结果的异步操作。  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<，TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<，TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  表示返回结果并报告进度的异步操作。  
   
  *动作* 的概念是指异步任务不生成值（想一想返回 `void`的函数）。 *操作* 的概念是指异步任务确实会生成值。 *进程* 的概念是指任务可以向调用方报告进程消息。 JavaScript、.NET Framework 和 Visual C++ 均提供自己的方式来创建这些接口的实例，以便跨 ABI 边界使用。 对于 Visual C++，PPL 提供 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函数。 此函数创建 Windows 运行时异步动作或表示任务完成的操作。 `create_async`函数采用一个工作函数 （通常是 lambda 表达式），会在内部创建`task`对象，并将此任务中的四个异步 Windows 运行时接口的一个包装。  
@@ -102,7 +102,7 @@ ms.locfileid: "42545733"
  [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]  
   
 ##  <a name="example-component"></a> 示例: 创建 c++ 窗口运行时组件和从 C# 使用它  
- 请考虑使用 XAML 和 C# 来定义 UI 和 c + + Windows 运行时组件来执行计算密集型操作的应用程序。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。  
+ 请考虑使用 XAML 和 C# 来定义 UI 和 c + + Windows 运行时组件来执行计算密集型操作的应用程序。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。  
   
  [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]  
   
@@ -113,7 +113,7 @@ ms.locfileid: "42545733"
   
  [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]  
   
- 每个方法首先执行验证，以确保输入的参数为非负值。 如果输入值为负，则方法会引发 [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)。 本节后面部分会对错误处理进行说明。  
+ 每个方法首先执行验证，以确保输入的参数为非负值。 如果输入的值为负，则该方法将引发[platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)。 本节后面部分会对错误处理进行说明。  
   
  若要使用这些方法从 UWP 应用，使用 Visual C#**空白应用 (XAML)** 模板将第二个项目添加到 Visual Studio 解决方案。 此示例将项目命名为 `Primes`。 然后，从 `Primes` 项目中将一个引用添加到 `PrimesLibrary` 项目中。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "42545733"
   
  这些方法使用 `async` 和 `await` 关键字在异步操作完成后更新 UI。 有关 UWP 应用中的异步编程的信息，请参阅[线程处理和异步编程](/windows/uwp/threading-async)。  
   
- `getPrimesCancellation` 和 `cancelGetPrimes` 方法协同工作以使用户能够取消操作。 当用户选择**取消**按钮，`cancelGetPrimes`方法调用[IAsyncOperationWithProgress\<TResult，TProgress >:: 取消](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)取消该操作。 并发运行时，它管理基础异步操作，将引发由 Windows 运行时进行通信取消完成后捕获内部异常类型。 有关取消模型的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。  
+ `getPrimesCancellation` 和 `cancelGetPrimes` 方法协同工作以使用户能够取消操作。 当用户选择**取消**按钮，`cancelGetPrimes`方法调用[IAsyncOperationWithProgress\<TResult，TProgress >:: 取消](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)取消该操作。 并发运行时，它管理基础异步操作，将引发由 Windows 运行时进行通信取消完成后捕获内部异常类型。 有关取消模型的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)。  
   
 > [!IMPORTANT]
 >  若要使 PPL 能够正确地报告给 Windows 运行时它已取消操作，不要捕捉此内部异常类型。 这意味着也不应捕捉所有异常 (`catch (...)`)。 如果必须捕捉所有异常，重新引发异常以确保 Windows 运行时，可以完成取消操作。  
@@ -136,7 +136,7 @@ ms.locfileid: "42545733"
   
  ![Windows 运行时 Primes 应用](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
- 有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。  
+ 有关示例，请使用`create_async`若要创建可供其他语言的异步任务，请参阅[使用 c + + 中的必应地图行程优化器示例](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx)和[使用 PPLc++中的Windows8异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
 ##  <a name="exethread"></a> 控制执行线程  
  Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处理其同步的方式，对象被托管在不同的单元中。 线程安全对象托管在多线程单元 (MTA) 中。 必须通过单个线程访问的对象托管在单线程单元 (STA) 中。  
@@ -165,7 +165,7 @@ ms.locfileid: "42545733"
 >  对于在 STA 中运行的延续的主体，请不要调用 [concurrency::task::wait](reference/task-class.md#wait) 。 否则，运行时会引发 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](reference/task-class.md#get) 方法来接收基于任务的延续中的先行任务的结果。  
   
 ##  <a name="example-app"></a> 示例： 控制在使用 c + + 和 XAML 的 Windows 运行时应用的执行  
- 假设有一个 C++ XAML 应用程序，该应用程序从磁盘读取一个文件，在该文件中查找最常见的单词，然后在 UI 中显示结果。 若要创建此应用，首先，在 Visual Studio 中，创建**空白应用 (通用 Windows)** 项目并将其命名`CommonWords`。 在应用程序清单中，指定“文档库”  功能以使应用程序能够访问“文档”文件夹。 同时将文本 (.txt) 文件类型添加到应用程序清单的声明部分。 有关应用功能和声明的详细信息，请参阅 [应用包和部署](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。  
+ 假设有一个 C++ XAML 应用程序，该应用程序从磁盘读取一个文件，在该文件中查找最常见的单词，然后在 UI 中显示结果。 若要创建此应用，首先，在 Visual Studio 中，创建**空白应用 (通用 Windows)** 项目并将其命名`CommonWords`。 在应用程序清单中，指定“文档库”  功能以使应用程序能够访问“文档”文件夹。 同时将文本 (.txt) 文件类型添加到应用程序清单的声明部分。 有关应用功能和声明的详细信息，请参阅[应用包和部署](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。  
   
  更新 MainPage.xaml 中的 `Grid` 元素，以包含 `ProgressRing` 元素和 `TextBlock` 元素。 `ProgressRing` 指示操作正在进行， `TextBlock` 显示计算的结果。  
   

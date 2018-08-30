@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849745"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216256"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 类
 包含使用户能够从系统字体的列表中选择一种字体组合框控件的工具栏按钮。  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  若要同步使用字体组合框中选定文档的字体，请使用[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)方法以检索所选字体属性并使用这些属性创建[CFont 类](../../mfc/reference/cfont-class.md)对象。  
   
- 字体组合框按钮调用 Win32 函数[EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620)来确定可用于系统的屏幕和打印机字体。  
+ 字体组合框按钮调用 Win32 函数[EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa)来确定可用于系统的屏幕和打印机字体。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in]*nCharSet*  
- 如果设置为 DEFAULT_CHARSET，组合框包含所有唯一命名的字体中字符的所有集。 （如果有两个具有相同名称的字体，组合框包含其中一个。）如果设置为有效的字符设置值，组合框包含仅在指定的字符集的字体。 请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)有关可能的字符的列表设置。  
+ 如果设置为 DEFAULT_CHARSET，组合框包含所有唯一命名的字体中字符的所有集。 （如果有两个具有相同名称的字体，组合框包含其中一个。）如果设置为有效的字符设置值，组合框包含仅在指定的字符集的字体。 请参阅[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)有关可能的字符的列表设置。  
   
  [in]*dwStyle*  
  组合框的样式。 (请参阅[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

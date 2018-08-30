@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cbfd0e8b9ef95aac083b367980571c5535e6a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219378"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 C + + Accelerated Massive Parallelism (c + + AMP) 通过利用离散图像卡上的数据并行硬件，例如图形处理单元 (GPU) 加快了 c + + 代码的执行。 通过使用 c + + AMP，可使用，以便可以通过使用并行性异类硬件上加速执行代码多维数据算法。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 C + + AMP 语言扩展可用于控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。  
@@ -464,7 +464,7 @@ C + + AMP 包括为加速的图形编程设计的图形库。 仅在支持本地
   
 - [writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)： 提供对任何纹理的只写访问。  
   
-- [短矢量库](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f)： 定义一组的短矢量类型的长度 2、 3 和 4 上，基于**int**， `uint`， **float**， **double**， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。  
+- [短矢量库](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f)： 定义一组的短矢量类型的长度 2、 3 和 4 上，基于**int**， `uint`， **float**， **double**， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用程序  
  

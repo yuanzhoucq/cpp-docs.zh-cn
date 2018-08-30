@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853805"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215510"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 类
 包含一个编辑控件的工具栏按钮 ( [CEdit 类](../../mfc/reference/cedit-class.md))。  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|确定当用户单击按钮时是否显示按钮的边框。 (重写[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)。)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|确定是否编辑框按钮具有平面样式。|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。 (重写[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。 (重写[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|由框架调用时该按钮添加到**自定义**对话框。 (重写[CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)。)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|由框架调用以计算指定的设备上下文和停靠状态的按钮的大小。 (重写[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|按钮插入到一个新的工具栏中时由框架调用。 (重写[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  默认情况下，编辑框按钮具有平面样式。 使用[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)方法，以更改你的应用程序的平面样式外观。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- 指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。  
+ 指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  如果按钮处理 WM_COMMAND 消息或 FALSE 以指示消息必须由在父级工具栏，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 框架调用此方法时将要发送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)向父窗口的消息。  
+ 框架调用此方法时将要发送[WM_COMMAND](/windows/desktop/menurc/wm-command)向父窗口的消息。  
   
- 此方法扩展的基类实现 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 通过处理[EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687)通知。 对于每个具有相同的命令 ID，作为此对象的编辑框，它设置其文本标签，为此对象的文本标签。  
+ 此方法扩展的基类实现 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 通过处理[EN_UPDATE](/windows/desktop/Controls/en-update)通知。 对于每个具有相同的命令 ID，作为此对象的编辑框，它设置其文本标签，为此对象的文本标签。  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  由框架调用时该按钮添加到**自定义**对话框。  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883139"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222867"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 类
 此类提供用于创建和使用的临时文件的方法。  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>参数  
  *pszDir*  
- 临时文件的路径。 如果此值为 NULL， [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992)将调用分配路径。  
+ 临时文件的路径。 如果此值为 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)将调用分配路径。  
   
  *dwDesiredAccess*  
- 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK 中。  
+ 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  返回指向文件名称 LPCTSTR。  
   
 ### <a name="remarks"></a>备注  
- 在中生成的文件的名称[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)通过调用[GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)Windows SDK 函数。 文件扩展名将始终为临时文件"TFR"。  
+ 在中生成的文件的名称[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)通过调用[GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK 函数。 文件扩展名将始终为临时文件"TFR"。  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  调用此方法以解锁的临时文件的区域。  

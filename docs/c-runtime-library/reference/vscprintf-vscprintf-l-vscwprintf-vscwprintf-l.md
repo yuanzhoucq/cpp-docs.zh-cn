@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414163"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213641"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
@@ -101,18 +101,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vscprintf**返回如果就会产生指向的字符串自变量列表的字符数打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf**对宽字符执行相同的功能。
+**_vscprintf**返回，如果将生成指向的字符串自变量列表的字符数是打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf**对于宽字符执行相同的功能。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
-如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-每个*参数*（如果有） 根据中的相应格式规范转换*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每个*自变量*（如果有） 根据中的相应格式规范转换*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 > [!IMPORTANT]
-> 确保，如果*格式*为用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型参数。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保，如果*格式*是用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型的参数。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -123,7 +123,7 @@ int _vscwprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_vscprintf**， **_vscprintf_l**|\<stdio.h>|
 |**_vscwprintf**， **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|

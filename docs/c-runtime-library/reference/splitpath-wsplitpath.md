@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220e2befc40dba342a7f8c2aa4c94294bc667ce0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221603"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -77,19 +77,19 @@ void _wsplitpath(
 
 *路径*完整路径。
 
-*驱动器*驱动器号后跟一个冒号 (**:**)。 你可以将传递**NULL**为此参数，如果你不需要的驱动器号。
+*驱动器*驱动器号后, 接一个冒号 (**:**)。 可以将传递**NULL**为此参数，如果不需要驱动器号。
 
-*dir*目录路径，包括尾部反斜杠。 正斜杠 ( **/** )，反斜杠 ( **\\** )，或者可能使用两者。 你可以将传递**NULL**为此参数，如果你不需要的目录路径。
+*dir*目录路径，包括尾部反斜杠。 正斜杠 ( **/** )，反斜杠 ( **\\** )，或两者均使用。 可以将传递**NULL**为此参数，如果不需要的目录路径。
 
-*fname*基文件名 （无扩展名）。 你可以将传递**NULL**为此参数，如果你不需要文件名。
+*fname*基文件名 （无扩展名）。 可以将传递**NULL**为此参数，如果不需要文件名。
 
-*ext*文件名扩展，包括前导段 (**。**)。 你可以将传递**NULL**为此参数，如果你不需要文件扩展名。
+*ext*文件扩展名，包括前导句点 (**。**)。 可以将传递**NULL**为此参数，如果不需要文件扩展名。
 
 ## <a name="remarks"></a>备注
 
-**_Splitpath**函数将路径分成其四个组件。 **_splitpath**自动处理多字节字符字符串自变量，根据需要，根据当前正在使用的多字节代码页识别多字节字符序列。 **_wsplitpath**是宽字符版本的 **_splitpath**; 的自变量 **_wsplitpath**是宽字符字符串。 否则这些函数具有相同行为。
+**_Splitpath**函数将路径分解成四个组件。 **_splitpath**自动处理多字节字符字符串参数，根据需要，根据当前正在使用的多字节代码页识别多字节字符序列。 **_wsplitpath**是宽字符版本 **_splitpath**; 的自变量 **_wsplitpath**都是宽字符字符串。 否则这些函数具有相同行为。
 
-**安全说明**这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 提供这些函数的更多安全版本；请参阅 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
+**安全说明**这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。 提供这些函数的更多安全版本；请参阅 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,28 +97,28 @@ void _wsplitpath(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-每个组件的完整路径存储在单独的缓冲区;清单常量 **_MAX_DRIVE**， **_MAX_DIR**， **_MAX_FNAME**，和 **_MAX_EXT** （在 STDLIB 中定义。H） 指定每个文件组件的最大大小。 文件组件大于相应清单常量会导致堆损坏。
+每个组件的完整路径存储在单独的缓冲区中;清单常量 **_MAX_DRIVE**， **_MAX_DIR**， **_MAX_FNAME**，以及 **_MAX_EXT** （STDLIB 中定义。H） 指定每个文件组件的最大大小。 文件组件大于相应清单常量会导致堆损坏。
 
 每个缓冲区必须与其相应的清单常量一样大，以避免潜在的缓冲区溢出。
 
 下表列出了清单常量的值。
 
-|名称|值|
+|name|“值”|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-如果完整路径不包含组件 （例如，文件名）， **_splitpath**分配为空字符串转换为对应的缓冲区。
+如果完整路径不包含组件 （例如，文件名）， **_splitpath**空字符串分配给相应的缓冲区。
 
-你可以将传递**NULL**到 **_splitpath**以外的其他任何参数*路径*不需要。
+可以将传递**NULL**到 **_splitpath**以外的其他任何参数*路径*不需要的。
 
-如果*路径*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**EINVAL**。
+如果*路径*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
 |**_wsplitpath**|\<stdlib.h> 或 \<wchar.h>|

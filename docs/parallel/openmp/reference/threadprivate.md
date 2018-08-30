@@ -1,5 +1,5 @@
 ---
-title: threadprivate |Microsoft 文档
+title: threadprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217740"
 ---
 # <a name="threadprivate"></a>threadprivate
-指定的变量是私有的线程。  
+指定一个变量是线程私有的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,22 +36,22 @@ ms.locfileid: "33692907"
  其中，  
   
  `var`  
- 你想要为某个线程设为专用的变量的以逗号分隔列表。 `var` 必须是全局或命名空间的范围变量或静态局部变量。  
+ 你想要对线程进行私有变量的以逗号分隔列表。 `var` 必须是全局或命名空间的范围内的变量或静态局部变量。  
   
 ## <a name="remarks"></a>备注  
- `threadprivate`指令支持没有 OpenMP 子句。  
+ `threadprivate`指令支持任何 OpenMP 子句。  
   
  有关详细信息，请参阅[2.7.1 threadprivate 指令](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。  
   
  `threadprivate`指令基于[线程](../../../cpp/thread.md)`__declspec`特性; 限制 **__declspec （thread)** 适用于`threadprivate`。  
   
- 不能使用`threadprivate`中将通过加载的任何 DLL [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)。  这包括与加载的 Dll [/DELAYLOAD （延迟加载导入）](../../../build/reference/delayload-delay-load-import.md)，该列也会使用**LoadLibrary**。  
+ 不能使用`threadprivate`中将通过加载任意 DLL [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)。  这包括与加载的 Dll [/DELAYLOAD （延迟加载导入）](../../../build/reference/delayload-delay-load-import.md)，该列也会使用**LoadLibrary**。  
   
- 你可以使用`threadprivate`进程启动时以静态方式加载的 DLL 中。  
+ 可以使用`threadprivate`以静态方式在进程启动时加载的 DLL 中。  
   
- 因为`threadprivate`基于 **__declspec （thread)**、`threadprivate`变量中启动在过程中，而不仅仅是这些线程属于线程团队由并行区域生成的任何线程不会存在。  这是你可能想要注意的因为你可能注意到，例如，构造函数的实现细节`threadprivate`调用通常则期的望多个用户定义类型。  
+ 因为`threadprivate`基于 **__declspec （thread)**、`threadprivate`变量将在任何线程已启动的过程中，而不仅仅是这些线程属于按并行区域生成一个线程团队中存在。  这是要注意的因为您可能会注意到，例如，构造函数的实现细节`threadprivate`通常则预期更多调用用户定义类型。  
   
- A `threadprivate` destructable 类型的变量不能保证具有调用其析构函数。  例如：  
+ 一个`threadprivate`destructable 类型的变量不能保证具有调用其析构函数。  例如：  
   
 ```  
 struct MyType   
@@ -68,10 +68,10 @@ int main()
 }  
 ```  
   
- 用户不具有控制并构成并行区域的线程将终止时。  如果这些线程存在在进程退出时，线程将不会通知有关进程退出，并且析构函数不会为调用`threaded_var`退出的一个以外的任何线程上 （此处，主线程）。  使代码不应依靠的正确析构`threadprivate`变量。  
+ 用户具有关于构成并行区域的线程将终止时无法控制。  如果这些线程存在时在进程退出，线程将不会通知有关进程退出，并且析构函数不会为调用`threaded_var`除退出任何线程上 （此处，主线程）。  使代码不应统计上的正确析构`threadprivate`变量。  
   
 ## <a name="example"></a>示例  
- 有关的使用示例`threadprivate`，请参阅[私有](../../../parallel/openmp/reference/private-openmp.md)。  
+ 有关使用的示例`threadprivate`，请参阅[专用](../../../parallel/openmp/reference/private-openmp.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [指令](../../../parallel/openmp/reference/openmp-directives.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a19635b635b80d65e0da99b8f50606154a5b4b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9b85a10c68b7379f0e59bf859b3d8badf7413195
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594763"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208336"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass 宏
 
@@ -40,7 +40,7 @@ InspectableClass(
 运行时类的完整文本名称。
 
 *trustLevel*  
-之一[TrustLevel](http://msdn.microsoft.com/library/br224625.aspx)枚举值。
+之一[TrustLevel](https://msdn.microsoft.com/library/br224625.aspx)枚举值。
 
 ## <a name="remarks"></a>备注
 

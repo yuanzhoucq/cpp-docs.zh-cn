@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880555"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223046"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 类
 此类提供用于实现一个管理单元中属性的 page 对象的方法。  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>备注  
  使用此结构在构造之后初始化的属性页的外观。  
   
- 此结构，包括其成员的列表的详细信息请参阅[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
+ 此结构，包括其成员的列表的详细信息请参阅[PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  当用户单击时调用此成员函数**确定**或**立即应用**按钮。  

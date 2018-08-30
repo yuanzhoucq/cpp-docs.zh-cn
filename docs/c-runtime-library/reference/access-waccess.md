@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404637"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209598"
 ---
 # <a name="access-waccess"></a>_access、_waccess
 
@@ -96,7 +96,7 @@ int _waccess(
 |04|只读|
 |06|读取和写入|
 
-此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
+此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](/windows/desktop/SecAuthZ/access-tokens)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
 
 **_waccess**是宽字符版本 **_access**;*路径*参数 **_waccess**是宽字符字符串。 **_waccess**并 **_access**行为相同。
 

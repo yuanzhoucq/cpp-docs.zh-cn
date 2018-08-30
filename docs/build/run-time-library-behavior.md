@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572050"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217287"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 运行时库行为  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 某些库包装`DllMain`为你的函数。 例如，在规则 MFC DLL，实现`CWinApp`对象的`InitInstance`和`ExitInstance`成员函数来执行初始化和终止所需的 DLL。 有关更多详细信息，请参阅[regular 初始化 MFC Dll](#initializing-regular-dlls)部分。  
   
 > [!WARNING]
-> 您可以安全地执行的操作中的 DLL 入口点有明显的限制。 请参阅[的常规最佳做法](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices)不安全调用中的特定 Windows api `DllMain`。 如果需要任何内容，但是最简单的初始化然后执行该操作初始化函数中的 dll。 你可以要求应用程序调用初始化函数之后，`DllMain`具有运行和前调用任何其他函数在 DLL 中。  
+> 您可以安全地执行的操作中的 DLL 入口点有明显的限制。 请参阅[的常规最佳做法](/windows/desktop/Dlls/dynamic-link-library-best-practices)不安全调用中的特定 Windows api `DllMain`。 如果需要任何内容，但是最简单的初始化然后执行该操作初始化函数中的 dll。 你可以要求应用程序调用初始化函数之后，`DllMain`具有运行和前调用任何其他函数在 DLL 中。  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 因为规则 MFC Dll`CWinApp`对象，它们应在与 MFC 应用程序相同的位置执行初始化和终止任务： 在`InitInstance`并`ExitInstance`成员函数的 DLL 的`CWinApp`-派生类。 由于 MFC 提供了`DllMain`由调用的函数`_DllMainCRTStartup`有关`DLL_PROCESS_ATTACH`并`DLL_PROCESS_DETACH`，不应编写你自己`DllMain`函数。 提供 MFC`DllMain`函数调用`InitInstance`时加载 DLL 和它调用`ExitInstance`卸载 DLL 之前。  
   
-规则 MFC DLL 可以跟踪的多个线程通过调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)并[TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812)中其`InitInstance`函数。 这些函数使跟踪特定于线程的数据的 DLL。  
+规则 MFC DLL 可以跟踪的多个线程通过调用[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)并[TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)中其`InitInstance`函数。 这些函数使跟踪特定于线程的数据的 DLL。  
   
 在规则 MFC DLL 动态链接到 MFC，如果使用的任何 MFC OLE，MFC 数据库 （或 DAO），或 MFC 套接字支持，分别调试 MFC 扩展 Dll MFCO*版本*D.dll，MFCD*版本*D.dll 和 MFCN*版本*D.dll (其中*版本*是版本号) 中自动链接。 必须为每个规则 MFC DLL 的中使用这些 Dll 调用以下预定义的初始化函数之一`CWinApp::InitInstance`。  
   
@@ -179,14 +179,14 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
   
 因为时完全初始化 MFCx0.dll`DllMain`是调用，可以分配内存，并调用中的 MFC 函数`DllMain`（不同于 MFC 的 16 位版本）。  
   
-扩展 Dll 可以负责通过处理多线程处理`DLL_THREAD_ATTACH`并`DLL_THREAD_DETACH`情况下，在`DllMain`函数。 这种情况下传递给`DllMain`时线程附加和分离从 DLL。 调用[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)时附加一个 DLL 可确保 DLL 可以维护的线程本地存储 (TLS) 索引为每个线程附加到 DLL。  
+扩展 Dll 可以负责通过处理多线程处理`DLL_THREAD_ATTACH`并`DLL_THREAD_DETACH`情况下，在`DllMain`函数。 这种情况下传递给`DllMain`时线程附加和分离从 DLL。 调用[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)时附加一个 DLL 可确保 DLL 可以维护的线程本地存储 (TLS) 索引为每个线程附加到 DLL。  
   
 请注意，头文件 Afxdllx.h 包含特殊的定义，MFC 扩展 Dll，如的定义中使用结构`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`。 MFC 扩展 DLL 中，应包括此标头文件。  
   
 > [!NOTE]
 >  非常重要，就既不定义也不能取消定义的任何`_AFX_NO_XXX`Stdafx.h 中的宏。 这些宏仅用于检查特定的目标平台是否支持该功能，或不存在。 可以编写应用程序来检查这些宏 (例如， `#ifndef _AFX_NO_OLE_SUPPORT`)，但您的程序应永远不会定义或取消定义这些宏。  
   
-中包含的多线程处理的句柄的示例初始化函数[使用线程本地存储在动态链接库](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 请注意，该示例包含名为入口点函数`LibMain`，但您应将此函数命名`DllMain`，使其可以使用 MFC 和 C 运行时库。  
+中包含的多线程处理的句柄的示例初始化函数[使用线程本地存储在动态链接库](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library)Windows SDK 中。 请注意，该示例包含名为入口点函数`LibMain`，但您应将此函数命名`DllMain`，使其可以使用 MFC 和 C 运行时库。  
   
 ## <a name="see-also"></a>请参阅  
   

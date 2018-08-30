@@ -9,22 +9,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613025"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212500"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>获取数据缓冲区的指针 (C++/CX)
-在 Windows 运行时中， [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) 接口提供了一种基于流的非特定语言方式来访问数据缓冲区。 在 C++ 中，可使用 robuffer.h 中定义的 Windows 运行时 IBufferByteAccess 接口获取指向基础字节数组的原始指针。 通过这种方式，可就地修改字节数组，而不必创建任何数据副本。  
+在 Windows 运行时[Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx)接口提供了一种与语言无关的基于流的方式来访问数据缓冲区。 在 C++ 中，可使用 robuffer.h 中定义的 Windows 运行时 IBufferByteAccess 接口获取指向基础字节数组的原始指针。 通过这种方式，可就地修改字节数组，而不必创建任何数据副本。  
   
- 下图显示了一个 XAML 图像元素，其源是一个 [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何语言编写的客户端应用程序均可将对 `WriteableBitmap` 的引用传递到 C++ 代码，随后 C++ 可使用该引用获取基础缓冲区。 在通用 Windows 平台应用中用 c + + 编写的可以在以下示例中的源代码中直接使用函数，而无需在 Windows 运行时组件打包。  
+ 下图显示了一个 XAML 图像元素，其源是[Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)。 以任何语言编写的客户端应用程序均可将对 `WriteableBitmap` 的引用传递到 C++ 代码，随后 C++ 可使用该引用获取基础缓冲区。 在通用 Windows 平台应用中用 c + + 编写的可以在以下示例中的源代码中直接使用函数，而无需在 Windows 运行时组件打包。  
   
  ![C&#43; &#43;直接访问像素数据的代码](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- 以下方法接受 [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) 并返回指向基础字节数组的原始指针。 若要调用函数，请传入 [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) 属性。  
+ 以下方法接受[Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) ，并返回指向基础字节数组的原始指针。 若要调用该函数，传入[writeablebitmap:: Pixelbuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx)属性。  
   
 ```  
   

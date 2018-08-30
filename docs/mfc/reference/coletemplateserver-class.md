@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212271"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 用于 OLE 可视编辑服务器、自动化服务器和链接容器（支持链接到嵌入的应用程序）。  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  指示是否在应用程序的单个实例可以支持多个实例化。 如果为 TRUE，为每个请求创建的对象启动的应用程序的多个实例。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 有关详细信息，请参阅[CLSID 项](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  取消注册关联的文档模板。  

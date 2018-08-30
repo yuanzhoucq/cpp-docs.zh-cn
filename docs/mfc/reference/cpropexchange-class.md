@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f431ab86762e50f91571a85f0fc60e41d8d711
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f8b63de74a044a55362c2ebafc814fcf0136434d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216837"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 类
 支持 OLE 控件持久性的实现。  
@@ -131,7 +131,7 @@ virtual BOOL ExchangeFontProp(
  对引用[CFontHolder](../../mfc/reference/cfontholder-class.md)对象，其中包含字体属性。  
   
  *pFontDesc*  
- 一个指向[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)结构，它包含用于初始化的字体属性的默认状态的值时*pFontDispAmbient*为 NULL。  
+ 一个指向[FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)结构，它包含用于初始化的字体属性的默认状态的值时*pFontDispAmbient*为 NULL。  
   
  *pFontDispAmbient*  
  一个指向`IFontDisp`接口的一种字体用于初始化的字体属性的默认状态。  

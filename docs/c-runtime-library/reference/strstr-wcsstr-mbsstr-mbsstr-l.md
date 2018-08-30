@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: cf7e7e009d1f56d71e8f1b26a2e0eeefb8855492
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214082"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 返回指向字符串中的搜索字符串的第一个匹配项的指针。
@@ -143,7 +143,7 @@ const unsigned char *_mbsstr_l(
 `strstr`函数的第一个匹配项返回一个指针*strSearch*中*str*。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则`_mbsstr`设置`errno`到 EINVAL 并且将返回 0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
-> 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 将指针传递到重载**const**返回一个指向**const**; 采用指向非版本**const**返回一个指向非**const**。 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**行为对于这两个 c + + 重载，定义符号 _CONST_RETURN。
 

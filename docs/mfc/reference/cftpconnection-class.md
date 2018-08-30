@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217853"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 类
 管理与 Internet 服务器的 FTP 连接，并允许直接操作目录和该服务器上的文件。  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` 预期响应。  
   
  *dwFlags*  
- 包含控制此函数的标志的值。 有关完整列表，请参阅[FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)。  
+ 包含控制此函数的标志的值。 有关完整列表，请参阅[FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)。  
   
  *dwContext*  
  指向一个值的指针，该值包含用于在回调中标识应用程序上下文的应用程序定义的值。  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)函数，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)函数，如 Windows SDK 中所述。  
   
  如果发生错误，则 MFC 会引发类型的异常[CInternetException](../../mfc/reference/cinternetexception-class.md)。  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  指向包含要创建的目录的名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Windows 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Windows 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  使用`GetCurrentDirectory`来确定此连接到服务器的当前工作目录。 不要假定远程系统具有已您连接到的根目录。  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |返回时|存储到的字符数*pstrDirName*。 如果此成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后*lpdwLen*包含应用程序必须分配才能接收字符串的字节数。|  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  若要改为获取作为 URL 的目录名称，请调用[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)。  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |返回时|存储到的字符数*pstrDirName*。 如果此成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后*lpdwLen*包含应用程序必须分配才能接收字符串的字节数。|  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  `GetCurrentDirectoryAsURL` 行为与相同[GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY 文件用于临时存储。 仅当绝对必要，应用程序应写入到文件。 大多数文件的数据保留在内存中而无需因为即将被删除的文件刷新到该媒体。  
   
  *dwFlags*  
- 指定在其下传输发生的条件。 此参数可以是任一*dwFlags*值中所述[FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) Windows SDK 中。  
+ 指定在其下传输发生的条件。 此参数可以是任一*dwFlags*值中所述[FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) Windows SDK 中。  
   
  *dwContext*  
  文件检索上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  `GetFile` 是处理所有从 FTP 服务器读取文件并将其本地存储与相关的高级例程。 应用程序，只检索文件数据，或者要求关闭控制文件传输，应使用`OpenFile`并[cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read)相反。  
@@ -410,7 +410,7 @@ BOOL PutFile(
  放置文件的上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  `PutFile` 是处理所有与存储 FTP 服务器上的文件关联的操作的高级例程。 应用程序，只发送的数据，或需要进一步控制文件传输，应使用[OpenFile](#openfile)并[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)。  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  指向包含要删除的文件名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  *PstrFileName*参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `Remove`函数将转换为相应的字符的目录名称分隔符，在使用之前。  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  指向包含要删除的目录的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  使用[GetCurrentDirectory](#getcurrentdirectory)以确定服务器的当前工作目录。 不要假定远程系统具有已您连接到的根目录。  
@@ -470,7 +470,7 @@ BOOL Rename(
  指向包含新文件名的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  *PstrExisting*并*pstrNew*参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `Rename` 在使用之前，将转换为相应的字符的目录名称分隔符。  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  指向包含的目录的名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  *PstrDirName*参数可以是相对于当前目录的任一部分或完全限定的文件名。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `SetCurrentDirectory` 在使用之前，将转换为相应的字符的目录名称分隔符。  

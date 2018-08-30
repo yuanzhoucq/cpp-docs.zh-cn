@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220460"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ function declaration
 该类型库的帮助 ID。
 
 *隐藏*（可选）  
-一个参数，阻止显示库。 更多详细信息，请参阅 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 特性。
+一个参数，阻止显示库。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
 
 *受限*（可选）  
-不能随意调用库中的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。
+不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
 
 *函数声明*  
 您将定义该函数。
@@ -77,7 +77,7 @@ function declaration
 
 **Idl_module** c + + 属性可以在.dll 文件，这允许您从一个.dll 文件导入指定的入口点。
 
-**Idl_module**属性具有类似于的功能[模块](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 特性。
+**Idl_module**属性具有类似于的功能[模块](/windows/desktop/Midl/module)MIDL 特性。
 
 你可以从一个 COM 对象，可以通过将 DLL 入口点置于.idl 文件中的 library 块中导出的.dll 文件从导出的任何内容。
 

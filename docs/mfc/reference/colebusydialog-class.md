@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210823"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 类
 用于 OLE“服务器未响应”或“服务器忙”对话框。  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  应用程序向导生成的容器的代码使用此类。  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK 中的结构。  
   
  特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>备注  
  若要显示的对话框，请调用[DoModal](#domodal)。  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK 中的结构。  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  调用此函数可显示 OLE 服务器忙或服务器未响应对话框。  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - 如果用户已取消对话框的，IDCANCEL。  
   
-- IDABORT 是否发生错误。 如果返回 IDABORT，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要通过设置的成员初始化各种对话框控件[m_bz](#m_bz)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>备注  
  直接或通过成员函数，可以修改此结构的成员。  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   

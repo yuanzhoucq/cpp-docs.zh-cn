@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210077"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 
-追加，最多，第一个**n**字节的多字节字符字符串。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
+至多，追加第一个**n**字节多字节字符字符串。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -94,24 +94,24 @@ unsigned char *_mbsnbcat_l(
 以 null 终止的多字节字符源字符串。
 
 *count*<br/>
-从的字节数*src*要追加到*dest*。
+中的字节数*src*要追加到*dest*。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-**_mbsnbcat**将指针返回到目标字符串。 没有保留任何返回值以指示错误。
+**_mbsnbcat**返回指向目标字符串的指针。 没有保留任何返回值以指示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcat**函数最多，追加第一个*计数*字节的*src*到*dest*。 如果的上一页中的 null 字符的字节*dest*是前导字节的初始字节*src*覆盖此前导字节。 否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加， **_mbsnbcat**追加从所有字节*src*，直到 null 字符。 如果*计数*大于的长度*src*的长度*src*代替使用*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**_Mbsnbcat**函数至多，追加第一个*计数*字节*src*到*dest*。 如果前面紧邻 null 字符中的字节*dest*是前导字节的初始字节*src*将覆盖此前导字节。 否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加 **_mbsnbcat**追加从所有字节*src*，直到 null 字符。 如果*计数*大于的长度*src*，时长*src*用来代替*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**函数版本使用当前区域设置区域设置相关的行为; **_mbsnbcat_l**版本是相同，但它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**的函数版本使用当前区域设置的区域设置相关的行为; **_mbsnbcat_l**版本是完全相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果*dest*或*src*是**NULL**中, 所述，该函数将生成无效参数错误，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果处理了错误，则该函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+如果*dest*或*src*是**NULL**，该函数将生成无效参数错误，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果处理错误，则该函数将返回**EINVAL** ，并设置**errno**到**EINVAL**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -124,7 +124,7 @@ unsigned char *_mbsnbcat_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|

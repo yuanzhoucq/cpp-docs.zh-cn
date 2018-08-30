@@ -1,5 +1,5 @@
 ---
-title: 使用 CListCtrl |Microsoft 文档
+title: 使用 CListCtrl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210485"
 ---
 # <a name="using-clistctrl"></a>使用 CListCtrl
-像在文件资源管理器或带或不带图标的分栏式文本列表中，使用列表控件显示图标与标签的任何排列。 有关的四个可能"视图"（不将其与 MFC 视图混淆） 的说明你可以在列表控件 — 图标视图、 小图标视图、 列表视图和报表视图-请参阅中的视图[CListCtrl](../mfc/reference/clistctrl-class.md)类概述。  
+像在文件资源管理器或带或不带图标的分栏式文本列表中，使用列表控件显示图标与标签的任何排列。 列表控件中可以有四个可能"视图"（不会与 MFC 视图混淆） 的说明 — 图标视图、 小图标视图、 列表视图和报表视图，请参阅中的视图[CListCtrl](../mfc/reference/clistctrl-class.md)类概述。  
   
  在一些视图中，用户可以将图标拖动到不同的位置或编辑图标标签。 例如，请看文件资源管理器的右侧窗格，其在非对话框窗口中使用列表控件。 您可以尝试使用资源管理器的“视图”菜单中的可用视图。  
   
- 有关相关信息，请参阅[关于列表视图控件](http://msdn.microsoft.com/library/windows/desktop/bb774735)Windows SDK 中。  
+ 有关相关信息，请参阅[关于列表视图控件](/windows/desktop/Controls/list-view-controls-overview)Windows SDK 中。  
   
 > [!NOTE]
->  Windows SDK 将与列表控件称为"列表视图控件"。 这里的“视图”用法不是指 MFC 视图类（具体是指 `CListView`）。 有关详细信息，请参阅[列表控件和列表视图](../mfc/list-control-and-list-view.md)。  
+>  Windows SDK 将与列表控件称为"列表视图控件。 这里的“视图”用法不是指 MFC 视图类（具体是指 `CListView`）。 有关详细信息，请参阅[列表控件和列表视图](../mfc/list-control-and-list-view.md)。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   [列表控件和列表视图](../mfc/list-control-and-list-view.md)  
   

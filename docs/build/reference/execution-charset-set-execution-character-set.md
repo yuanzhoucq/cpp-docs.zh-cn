@@ -1,5 +1,5 @@
 ---
-title: -执行-charset （集执行字符集） |Microsoft 文档
+title: -执行-字符集 （设置执行字符集） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bffe1e39aa181a6d53784fbb4501bf8f662b221
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02f3e4273e9fc4064b26c6e32d708c4e6d586ae1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212667"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset （设置执行字符集）
 允许您指定可执行文件的执行字符集。  
@@ -43,11 +43,11 @@ ms.locfileid: "32375947"
  代码页标识符。  
   
 ## <a name="remarks"></a>备注  
- 你可以使用 **/execution-charset**选项以指定执行字符集。 执行字符集是用于输入到所有预处理步骤在编译阶段你程序的文本的编码。 此字符集用于编译的代码的任何字符串或字符文本的内部表示。 设置此选项以指定要在你的源文件包括基本执行字符集中可表示的字符时使用的扩展的执行字符集。 你可以使用任一 IANA 或 ISO 的字符集名称，或句点 （.） 后跟以指定要使用的字符集的 3 到 5 数字十进制代码页标识符。 支持代码页标识符的列表和字符集名称，请参阅[代码页标识符](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
+ 可以使用 **/execution-charset**选项以指定执行字符集。 执行字符集是用于程序中的所有预处理步骤编译阶段输入的文本的编码。 此字符集用于在已编译的代码中的任何字符串或字符文本的内部表示形式。 设置此选项以指定的源文件包含基本执行字符集中可表示的字符时要使用的扩展的执行字符集。 可以使用任一 IANA 或 ISO 字符集名称，或句点 （.） 后跟 3 至 5 个数字的十进制代码页标识符，以指定要使用的字符集。 支持代码页标识符的列表和字符集的名称，请参阅[代码页标识符](/windows/desktop/Intl/code-page-identifiers)。  
   
- 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非你指定一个字符名称或代码页的设置方式使用 **/source-charset**选项或 **/utf-8**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的信息，请参阅[字符集](../../cpp/character-sets.md)语言文档中。  
+ 默认情况下，Visual Studio 会检测以确定源文件是否已编码的 Unicode 格式，例如，utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源代码文件的编码使用当前用户的代码页，除非已指定一个字符设置使用的名称或代码页 **/source-charset**选项或 **/utf-8**选项。 Visual Studio，可使用任何几个字符编码保存 c + + 源代码。 有关源和执行字符集的信息，请参阅[最小字符集数](../../cpp/character-sets.md)语言文档中。  
   
- 如果你想要设置的源字符集和执行字符集为 utf-8，则可以使用 **/utf-8**作为快捷方式的编译器选项。 它等效于指定 **/源-charset:utf-8 /execution-charset:utf-8**命令行上。 所有这些选项还允许 **/validate-charset**默认情况下的选项。  
+ 如果你想要将源字符集和执行字符集设置为 utf-8，则可以使用 **/utf-8**编译器选项的快捷方式。 它相当于同时指定 **/ 无源-charset:utf-8 /execution-charset:utf-8**命令行上。 其中的任何选项还允许 **/validate-charset**默认情况下的选项。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -55,7 +55,7 @@ ms.locfileid: "32375947"
   
 2.  展开**配置属性**， **C/c + +**，**命令行**文件夹。  
   
-3.  在**高级选项**，添加 **/execution-charset**选项，并指定你的首选编码。  
+3.  在中**高级选项**，添加 **/execution-charset**选项，并指定你的首选编码。  
   
 4.  选择**确定**以保存所做的更改。  
   
@@ -63,5 +63,5 @@ ms.locfileid: "32375947"
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [/source-charset （设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)   
- [/utf-8 （设为源和可执行文件字符集为 utf-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
+ [/utf-8 （设置源和可执行字符集设置为 utf-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
  [/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)

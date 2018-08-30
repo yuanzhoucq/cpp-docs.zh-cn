@@ -1,5 +1,5 @@
 ---
-title: -Fp （名称。Pch 文件） |Microsoft 文档
+title: -Fp （名称。Pch 文件） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,26 +25,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217986"
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 提供的预编译标头而不是使用默认路径名称的路径名称。  
   
 ## <a name="syntax"></a>语法  
   
-> **/Fp**_路径名_  
+> **/Fp**<em>路径名</em>  
   
 ## <a name="remarks"></a>备注  
- 使用此选项与[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 你还可以使用 **/Fp**与 **/Yc**来指定不同于预编译的头文件的用法 **/Yc * * * filename*自变量和源文件的基名称。  
+ 使用此选项与[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 此外可以使用 **/Fp**与 **/Yc**若要指定不同于预编译的头文件使用 **/Yc**<em>文件名</em>参数和从源代码文件的基名称。  
   
- 如果不指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定没有文件名称的目录，默认文件名是 VC*x*0.pch，其中*x*是在使用 Visual c + + 的主要版本。  
+ 如果未指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定的目录不包含文件名称，默认文件名称是 VC*x*0.pch，其中*x*是 Visual c + + 中使用的主要版本。  
   
- 你还可以使用 **/Fp**选项与 **/Yu**。  
+ 此外可以使用 **/Fp**选项与 **/Yu**。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -54,21 +54,21 @@ ms.locfileid: "32376327"
   
 3.  单击**预编译标头**属性页。  
   
-4.  修改**预编译标头文件**属性。  
+4.  修改**预编译头文件**属性。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
 -   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>。  
   
 ## <a name="example"></a>示例  
- 如果你想要创建你的程序的调试版本的预编译标头文件，并且您正在标头文件和源代码进行编译，你可以如指定的命令：  
+ 如果你想要创建您的程序的调试版本的预编译标头文件和标头文件和源代码进行编译，可以如指定的命令：  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>示例  
- 以下命令指定一个名为 MYPCH.pch 的预编译标头文件使用。 编译器将假定已预 PROG.cpp 中的源代码编译通过 MYAPP.h 和预编译的代码驻留在 MYPCH.pch。 它使用 MYPCH.pch 的内容，并且编译 PROG.cpp 若要创建的.obj 文件中的其余部分。 此示例的输出是名为 PROG.exe 的文件。  
+ 以下命令指定使用名为 MYPCH.pch 的预编译标头文件。 编译器将假定已预 PROG.cpp 中的源代码编译通过 MYAPP.h 和预编译的代码位于 MYPCH.pch。 它使用 MYPCH.pch 的内容，并将编译 PROG.cpp 创建的.obj 文件的其余部分。 此示例的输出是名为 PROG.exe 的文件。  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

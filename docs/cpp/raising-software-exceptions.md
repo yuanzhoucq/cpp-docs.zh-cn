@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219656"
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。  
   
- 但是，您可以将任何条件视为异常通过在代码中检测该条件并随后通过调用报告它[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函数。 通过按此方式标记错误，您可以将结构化异常处理的优点引入任何类型的运行时错误中。  
+ 但是，您可以将任何条件视为异常通过在代码中检测该条件并随后通过调用报告它[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)函数。 通过按此方式标记错误，您可以将结构化异常处理的优点引入任何类型的运行时错误中。  
   
  对错误使用结构化异常处理：  
   
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- 如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Windows SDK for 的详细信息中的函数。  
+ 如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) Windows SDK for 的详细信息中的函数。  
   
  在异常处理筛选器中，你随后可以测试已定义的代码。 例如：  
   

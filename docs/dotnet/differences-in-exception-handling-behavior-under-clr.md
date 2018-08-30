@@ -1,5 +1,5 @@
 ---
-title: 异常处理的 CLR 下的行为差异 |Microsoft 文档
+title: 异常处理-CLR 下的行为差异 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df2f04e89175855db36790f22e8fd718288603b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217427"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR 下的异常处理行为的差异
-[使用托管异常中的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)讨论托管应用程序中的异常处理。 本主题中详细讨论了异常处理的标准行为中的差异以及某些限制。 有关详细信息，请参阅[_set_se_translator 函数](../c-runtime-library/reference/set-se-translator.md)。  
+[使用托管异常中的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)讨论托管应用程序中处理的异常。 本主题中详细讨论了异常处理的标准行为中的差异以及某些限制。 有关详细信息，请参阅[_set_se_translator 函数](../c-runtime-library/reference/set-se-translator.md)。  
   
 ##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 块  
- 在本机 C/c + + 代码中，跳出 __**最后**允许使用结构化的异常处理 (SEH) 的块，但将产生警告。  下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最后**块将导致错误：  
+ 在本机 C/c + + 代码中，跳出 __**最后**尽管它会生成一条警告，但允许使用结构化的异常处理 (SEH) 的块。  下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最后**块将导致错误：  
   
 ```  
 // clr_exception_handling_4.cpp  
@@ -41,9 +41,9 @@ int main() {
 ```  
   
 ##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> 异常筛选器中引发异常  
- 在处理期间引发异常时[异常筛选器](../cpp/writing-an-exception-filter.md)异常是在托管代码中，捕获和处理筛选器返回 0。  
+ 在处理过程中时引发异常[异常筛选器](../cpp/writing-an-exception-filter.md)在托管代码中，此异常将捕获并视为该筛选器将返回 0。  
   
- 此行为是相反的在本机代码中，将引发嵌套的异常， **Exception_record**字段**EXCEPTION_RECORD**结构 (如返回[GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) 设置，和**ExceptionFlags**字段设置 0x10 位。 以下示例阐释了这种行为差异：  
+ 在本机代码中引发嵌套的异常的位置，这是与行为相比**ExceptionRecord**字段中**EXCEPTION_RECORD**结构 (如返回[GetExceptionInformation](/windows/desktop/Debug/getexceptioninformation)) 设置，并**ExceptionFlags**字段设置 0x10 位。 以下示例阐释了这种行为差异：  
   
 ```  
 // clr_exception_handling_5.cpp  
@@ -104,7 +104,7 @@ We should execute this handler if compiled to native
 ```  
   
 ##  <a name="vccondisassociatedrethrows"></a> 解除关联的重新引发  
- **/clr**不支持重新引发异常之外 catch 处理程序 （称为解除关联的重新引发）。 此类型的异常被视为一个标准的 C++ 重新引发。 如果在存在活动的托管异常时遇到解除关联的重新引发，则此异常将包装为 C++ 异常，然后重新引发。 此类型的异常可以仅作为类型的异常被捕获[system:: sehexception](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx)。  
+ **/clr**不支持重新引发 catch 处理程序 （称为解除关联的重新引发） 之外的异常。 此类型的异常被视为一个标准的 C++ 重新引发。 如果在存在活动的托管异常时遇到解除关联的重新引发，则此异常将包装为 C++ 异常，然后重新引发。 仅可以作为类型的异常捕获到此类型的异常[system:: sehexception](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)。  
   
  以下示例演示了作为 C++ 异常重新引发的托管异常：  
   
@@ -155,7 +155,7 @@ caught an SEH Exception
 ```  
   
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 异常筛选器和 EXCEPTION_CONTINUE_EXECUTION  
- 如果筛选器在托管应用程序中返回 `EXCEPTION_CONTINUE_EXECUTION`，则将按照筛选器返回 `EXCEPTION_CONTINUE_SEARCH` 对其进行处理。 有关这些常量的详细信息，请参阅[重-除非语句](../cpp/try-except-statement.md)。  
+ 如果筛选器在托管应用程序中返回 `EXCEPTION_CONTINUE_EXECUTION`，则将按照筛选器返回 `EXCEPTION_CONTINUE_SEARCH` 对其进行处理。 有关这些常量的详细信息，请参阅[试用-除非语句](../cpp/try-except-statement.md)。  
   
  以下示例演示了这一差异：  
   

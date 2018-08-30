@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954000"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221338"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述一个对象，用于存储这两种类型的对象的有序的对 **float * * *，* 首先表示第二个复数的实部表示虚数部分。
+描述一个对象，用于存储这两种类型的对象的有序的对**float**，则首先表示第二个复数的实部表示虚数部分。
 
 ## <a name="syntax"></a>语法
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*类型的值**float**正在构造的复数的实部。
+*_RealVal*<br/>
+正在构造的复数实部的 **float** 类型值。
 
-*_ImagVal*类型的值**float**正在构造的复数虚部。
+*_ImagVal*<br/>
+正在构造的复数虚部的 **float** 类型值。
 
-*complexNum*类型的复数**双**或类型的**长双精度型**其实部和虚部用于初始化类型的复数**float**正在构造。
+*complexNum*<br/>
+类型的复数**双**类型或类型**长双精度型**其实部和虚部用于初始化类型的复数**float**正在构造。
 
 ## <a name="return-value"></a>返回值
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592809"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215365"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>向对话框添加控件导致对话框不再工作
 
@@ -61,11 +61,11 @@ ms.locfileid: "42592809"
 
 ## <a name="the-fix-for-common-controls"></a>公共控件的修复
 
-若要使用公共控件出现在对话框中，您需要调用[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)或`AFXInitCommonControls`创建对话框的之前。
+若要使用公共控件出现在对话框中，您需要调用[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)或`AFXInitCommonControls`创建对话框的之前。
 
 ## <a name="the-fix-for-richedit-controls"></a>对 RichEdit 控件的修复
 
-必须调用`LoadLibrary`rich edit 控件。 有关详细信息，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有关 Rich Edit 控件](http://msdn.microsoft.com/library/windows/desktop/bb787873)在 Windows SDK 中，并[格式文本编辑控件的概述](../mfc/overview-of-the-rich-edit-control.md)。
+必须调用`LoadLibrary`rich edit 控件。 有关详细信息，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有关 Rich Edit 控件](/windows/desktop/Controls/about-rich-edit-controls)在 Windows SDK 中，并[格式文本编辑控件的概述](../mfc/overview-of-the-rich-edit-control.md)。
 
 ## <a name="requirements"></a>要求
 

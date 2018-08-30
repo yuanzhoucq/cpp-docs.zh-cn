@@ -71,19 +71,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b4ec53451b750e92d952a57257709e9a0cde09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f01e69129b0884b3385b7a17289a067f36f65e3a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213232"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
 将一个字符串的字符复制到另一个字符串。 这些函数的更安全版本已经发布；请参阅 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncpy**和 **_mbsncpy_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncpy**并 **_mbsncpy_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -182,16 +182,16 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>备注
 
-**Strncpy**函数将复制初始*计数*字符*strSource*到*strDest*并返回*strDest*. 如果*计数*小于或等于的长度*strSource*，null 字符不自动追加到复制的字符串。 如果*计数*大于的长度*strSource*，用最长度的 null 字符填充目标字符串*计数*。 行为**strncpy**是不确定的如果源和目标字符串重叠。
+**Strncpy**函数将复制初始*计数*字符*strSource*到*strDest* ，并返回*strDest*. 如果*计数*小于或等于的长度*strSource*，向复制的字符串不会自动追加 null 字符。 如果*计数*大于的长度*strSource*的最长度的 null 字符填补目标字符串*计数*。 行为**strncpy**如果源和目标字符串重叠，则是未定义。
 
 > [!IMPORTANT]
-> **strncpy**不会检查足够空间*strDest*; 这样，就可能会造成缓冲区溢出。 *计数*自变量将限制复制的字符数，但并不了的大小限制*strDest*。 请参见以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> **strncpy**不会有足够的空间中检查*strDest*; 这样就可能会造成缓冲区溢出。 *计数*参数将限制复制的字符数; 它不是限制的大小*strDest*。 请参见以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*是**NULL**指针，或如果*计数*小于或等于零，将调用无效参数处理程序，中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*strDest*或*strSource*是**NULL**指针，或者如果*计数*小于或等于零，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
-**wcsncpy**和 **_mbsncpy**宽字符及多字节字符版本的**strncpy**。 参数和返回值的**wcsncpy**和 **_mbsncpy**相应变化。 否则这六个函数具有相同行为。
+**wcsncpy**并 **_mbsncpy**宽字符及多字节字符版本的**strncpy**。 参数和返回值**wcsncpy**并 **_mbsncpy**会相应地变化。 否则这六个函数具有相同行为。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递区域设置而不是当前区域设置其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -203,11 +203,11 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**具有任何区域设置依赖; 它们只是为了提供 **_tcsncpy_l**并且不应直接调用。
+> **_strncpy_l**并 **_wcsncpy_l**没有区域设置相关性; 它们只是为了提供 **_tcsncpy_l** ，不应直接调用。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> 或 \<wchar.h>|
@@ -217,7 +217,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>示例
 
-下面的示例演示了利用**strncpy**和如何误用它导致程序 bug 和安全问题。 编译器将生成每次调用警告**strncpy**类似于**crt_strncpy_x86.c(15)： 警告 C4996: strncpy： 此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
+下面的示例演示如何将**strncpy**和如何误用它会导致程序 bug 和安全问题。 编译器将生成每次调用警告**strncpy**类似于**crt_strncpy_x86.c(15： 警告 C4996: strncpy： 此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
 
 ```C
 // crt_strncpy_x86.c

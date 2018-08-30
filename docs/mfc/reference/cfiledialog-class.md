@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210800"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于打开文件或保存操作的文件的公共对话框。  
@@ -261,16 +261,16 @@ class CFileDialog : public CCommonDialog
   
  为 windows 消息`CFileDialog`类差异取决于正在使用什么操作系统。 例如，Windows XP 不支持[CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)并[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)为`CFileDialog`类。 但是，Windows Vista 和更高版本操作系统支持它们。 有关生成的不同消息和接收它们的顺序的详细信息，请参阅[CFileDialog 示例： 日志记录事件的顺序](../../visual-cpp-samples.md)。  
   
- 若要使用`CFileDialog`对象，请首先创建该对象使用`CFileDialog`构造函数。 已构造对话框的后，可以设置或修改中的任何值[CFileDialog::m_ofn](#m_ofn)结构初始化的值或对话框控件的状态。 `m_ofn`类型的结构是`OPENFILENAME`。 有关详细信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 中的结构。  
+ 若要使用`CFileDialog`对象，请首先创建该对象使用`CFileDialog`构造函数。 已构造对话框的后，可以设置或修改中的任何值[CFileDialog::m_ofn](#m_ofn)结构初始化的值或对话框控件的状态。 `m_ofn`类型的结构是`OPENFILENAME`。 有关详细信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。  
   
  初始化对话框控件后，调用[CFileDialog::DoModal](#domodal)方法来显示对话框框，以便用户可以键入路径和文件名称。 `DoModal` 返回用户是否单击确定 (IDOK) 或取消 (IDCANCEL) 按钮。 如果`DoModal`返回 IDOK，您可以使用其中一个`CFileDialog`公共成员函数来检索该信息放入该用户。  
   
 > [!NOTE]
-> Windows vista 或更高版本，多次调用[IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980)将导致错误。 第二次调用`SetFileTypes`的任何实例`CFileDialog`将返回 E_UNEXPECTED 在 Windows Vista 或更高版本。 某些`CFileDialog`方法函数会调用`SetFileTypes`。 例如，两次调用`CFileDialog::DoModal`的相同实例`CFileDialog`生成[ASSERT](diagnostic-services.md#assert)。  
+> Windows vista 或更高版本，多次调用[IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980)将导致错误。 第二次调用`SetFileTypes`的任何实例`CFileDialog`将返回 E_UNEXPECTED 在 Windows Vista 或更高版本。 某些`CFileDialog`方法函数会调用`SetFileTypes`。 例如，两次调用`CFileDialog::DoModal`的相同实例`CFileDialog`生成[ASSERT](diagnostic-services.md#assert)。  
   
  `CFileDialog` 包含使您能够执行共享冲突，文件名称验证和列表框中更改通知的自定义处理的多个受保护的成员。 这些受保护的成员都是大多数应用程序无需使用，因为默认处理自动执行的回调函数。 不需要这些函数的消息映射条目，因为它们是标准的虚拟函数。  
   
- 可以使用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定在对话框中的初始化过程中是否发生了错误并了解有关错误的详细信息。  
+ 可以使用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定在对话框中的初始化过程中是否发生了错误并了解有关错误的详细信息。  
   
  析构`CFileDialog`自动处理对象。 无需调用[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)。  
   
@@ -532,7 +532,7 @@ explicit CFileDialog(
  在文件名框中显示的初始文件名称。 如果为 NULL，则会不显示任何初始文件名称。  
   
  [in]*dwFlags*  
- 可用于自定义对话框中的一个或多个标志的组合。 有关这些标志的说明，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 中的结构。 如果您修改`m_ofn.Flags`结构成员，请使用按位 OR 运算符中所做的更改保持不变的默认行为。  
+ 可用于自定义对话框中的一个或多个标志的组合。 有关这些标志的说明，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。 如果您修改`m_ofn.Flags`结构成员，请使用按位 OR 运算符中所做的更改保持不变的默认行为。  
   
  [in]*lpszFilter*  
  指定筛选器的字符串对一系列你可以应用于文件。 如果指定文件筛选器，只有与筛选条件匹配的文件会在文件列表中。 请参阅有关如何使用文件筛选器的详细信息备注部分。  
@@ -582,7 +582,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>返回值  
- IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定是否发生了错误。  
+ IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。  
   
  IDOK 和 IDCANCEL 是常数，用于指示是否在用户选择了确定或取消按钮。  
   
@@ -775,7 +775,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 ### <a name="remarks"></a>备注  
  使用此函数仅在 Windows Vista 或更高版本使用的对象具有*bVistaStyle*设置为 TRUE。 如果您使用此函数时*bVistaStyle*为 FALSE 时，它将在发布模式下返回 NULL 并在调试模式下引发断言。  
   
- 有关详细信息`IFileDialogCustomize`接口，请参阅[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)。  
+ 有关详细信息`IFileDialogCustomize`接口，请参阅[IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。  
   
 ### <a name="example"></a>示例  
  此示例检索内部的 COM 对象。 若要运行此代码示例，您必须在 Windows Vista 或更高版本编译它。  
@@ -795,7 +795,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 ### <a name="remarks"></a>备注  
  使用此函数仅在 Windows Vista 或更高版本使用的对象具有*bVistaStyle*设置为 TRUE。 如果此函数将返回 NULL`CFileDialog`不是**开放**对话框的或者如果*bVistaStyle*设置为 FALSE。 在此最后一种情况下，此函数仅返回了 NULL 在发布模式下-在调试模式下，将引发断言。  
   
- 有关详细信息`IFileOpenDialog`接口，请参阅[IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834)。  
+ 有关详细信息`IFileOpenDialog`接口，请参阅[IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834)。  
   
 ### <a name="example"></a>示例  
  此示例检索内部的 COM 对象。 若要运行此代码，您必须在 Windows Vista 或更高版本编译它。  
@@ -815,7 +815,7 @@ IFileSaveDialog* GetIFileSaveDialog();
 ### <a name="remarks"></a>备注  
  使用此函数仅在 Windows Vista 或更高版本使用的对象具有*bVistaStyle*设置为 TRUE。 如果此函数将返回 NULL`CFileDialog`不是**保存**对话框的或者如果*bVistaStyle*设置为 FALSE。 在此最后一种情况下，此函数仅返回了 NULL 在发布模式下-在调试模式下，将引发断言。  
   
- 有关详细信息`IFileSaveDialog`接口，请参阅[IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688)。  
+ 有关详细信息`IFileSaveDialog`接口，请参阅[IFileSaveDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog)。  
   
 ### <a name="example"></a>示例  
  此示例检索内部的 COM 对象。 若要运行此代码示例，您必须在 Windows Vista 或更高版本编译它。  
@@ -851,7 +851,7 @@ OPENFILENAME& GetOFN();
 ```  
   
 ### <a name="return-value"></a>返回值  
- [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)结构。  
+ [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)结构。  
   
 ### <a name="remarks"></a>备注  
  使用此函数的第二个版本来初始化的外观**文件打开**或**另存为文件**构造它之后，但之前该脚本显示对话框`DoModal`成员函数。 例如，可以设置`lpstrTitle`的成员`m_ofn`想对话框具有到链接的标题。  
@@ -1016,7 +1016,7 @@ BOOL IsPickFoldersMode() const;
   
 -   OFN_SHOWHELP  
   
- 有关此结构的详细信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 中的结构。  
+ 有关此结构的详细信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。  
   
 ##  <a name="makeprominent"></a>  CFileDialog::MakeProminent  
  位置的控件在对话框中，以便它更醒目相比于其他控件。  
@@ -1085,7 +1085,7 @@ virtual void OnFileNameChange();
 ### <a name="remarks"></a>备注  
  在用户的文件列表中选择新文件或文件夹时，系统会发送 CDN_SELCHANGE 消息**开放**或**另存为**对话框。 如果你想要在响应此消息中执行任何操作，重写此方法。  
   
- 仅当对话框的已创建具有开启了 OFN_EXPLORER 标志，系统会发送此消息。 有关通知的详细信息，请参阅[CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865)。 有关 OFN_EXPLORER 标志的信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)结构并[打开和保存为对话框](http://msdn.microsoft.com/library/windows/desktop/ms646960)。  
+ 仅当对话框的已创建具有开启了 OFN_EXPLORER 标志，系统会发送此消息。 有关通知的详细信息，请参阅[CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange)。 有关 OFN_EXPLORER 标志的信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)结构并[打开和保存为对话框](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。  
   
 ##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK  
  仅当你想要提供自定义验证的通用文件对话框中输入的文件名，重写此函数。  
@@ -1112,7 +1112,7 @@ virtual void OnFolderChange();
 ### <a name="remarks"></a>备注  
  在打开或另存为对话框中打开一个新的文件夹时发送通知消息。  
   
- 仅当使用 OFN_EXPLORER 样式创建对话框中，会发送通知。 有关通知的详细信息，请参阅[CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)结构并[打开和保存为对话框](http://msdn.microsoft.com/library/windows/desktop/ms646960)。  
+ 仅当使用 OFN_EXPLORER 样式创建对话框中，会发送通知。 有关通知的详细信息，请参阅[CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)结构并[打开和保存为对话框](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。  
   
 ##  <a name="oninitdone"></a>  CFileDialog::OnInitDone  
  重写此函数以处理 WM_NOTIFY CDN_INITDONE 消息。  
@@ -1124,7 +1124,7 @@ virtual void OnInitDone();
 ### <a name="remarks"></a>备注  
  当系统完成排列中的控件时，系统会发送此通知消息**开放**或**另存为**对话框的子对话框中的控件留出空间。  
   
- 系统将此发送仅当对话框的创建使用 OFN_EXPLORER 样式。 有关通知的详细信息，请参阅[CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)结构并[打开和保存为对话框](http://msdn.microsoft.com/library/windows/desktop/ms646960)。  
+ 系统将此发送仅当对话框的创建使用 OFN_EXPLORER 样式。 有关通知的详细信息，请参阅[CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)结构并[打开和保存为对话框](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。  
   
 > [!NOTE]
 > Windows Vista 或更高版本的样式文件对话框不支持此函数。 尝试在 Windows Vista 或更高版本的样式文件对话框上使用此函数将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 
@@ -1213,7 +1213,7 @@ virtual void OnTypeChange();
 ### <a name="remarks"></a>备注  
  当用户选择从列表中打开的文件类型的新文件类型或另存为对话框的发送通知消息。  
   
- 仅当使用 OFN_EXPLORER 样式创建对话框中，会发送通知。 有关通知的详细信息，请参阅[CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)结构并[打开和保存为对话框](http://msdn.microsoft.com/library/windows/desktop/ms646960)。  
+ 仅当使用 OFN_EXPLORER 样式创建对话框中，会发送通知。 有关通知的详细信息，请参阅[CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange)。 OFN_EXPLORER 样式有关的信息，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)结构并[打开和保存为对话框](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。  
   
 ##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem  
  从对话框中的容器控件中移除的项。  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>参数  
  *lpszPropList*  
- 由“;”分隔的预定义的属性列表。 标志的列表，请参阅**标志**一部分[OPENFILENAME](http://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)。  
+ 由“;”分隔的预定义的属性列表。 标志的列表，请参阅**标志**一部分[OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1451,7 +1451,7 @@ void SetTemplate(
  系统将使用指定的模板之一。 系统将确定要使用哪个模板基于 OFN_EXPLORER 样式和应用程序运行的操作系统存在。 通过指定的非资源管理器和资源管理器样式模板，很容易地支持 Windows NT 3.51、 Windows NT 4.0 和更高版本和 Windows 95 和更高版本。  
   
 > [!NOTE]
-> Windows Vista 或更高版本的样式文件对话框不支持此函数。 尝试在 Windows Vista 或更高版本的样式文件对话框使用此函数将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 一种替代方法是使用自定义的对话框。 有关使用自定义详细信息`CFileDialog`，请参阅[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)。  
+> Windows Vista 或更高版本的样式文件对话框不支持此函数。 尝试在 Windows Vista 或更高版本的样式文件对话框使用此函数将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 一种替代方法是使用自定义的对话框。 有关使用自定义详细信息`CFileDialog`，请参阅[IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。  
   
 ##  <a name="startvisualgroup"></a>  CFileDialog::StartVisualGroup  
  在对话框中将 visual 组声明。 对任何"add"方法的后续调用将这些元素添加到此组。  
@@ -1481,7 +1481,7 @@ void UpdateOFNFromShellDialog();
 ### <a name="remarks"></a>备注  
  在 Windows Vista，该成员之前的 Windows 版本[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)持续的状态同步数据结构`CFileDialog`。 对任何更改[m_ofn](#m_ofn)成员变量直接影响对话框的状态。 此外，对对话框中的状态的任何更改立即更新 m_ofn 成员变量。  
   
- 在 Windows Vista 或更高版本，`m_ofn`数据结构不会自动更新。 若要保证中的数据的准确性`m_ofn`成员变量，则应调用`UpdateOFNFromShellDialog`之前访问的数据的函数。 Windows 将调用此函数会自动处理期间[IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879)。  
+ 在 Windows Vista 或更高版本，`m_ofn`数据结构不会自动更新。 若要保证中的数据的准确性`m_ofn`成员变量，则应调用`UpdateOFNFromShellDialog`之前访问的数据的函数。 Windows 将调用此函数会自动处理期间[IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)。  
   
  有关如何使用详细信息`CFileDialog`类在 Windows Vista 或更高版本，请参阅[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)。  
   

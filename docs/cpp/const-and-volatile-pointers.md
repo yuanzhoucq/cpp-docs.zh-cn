@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408185"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212256"
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 [Const](../cpp/const-cpp.md)并[易失性](../cpp/volatile-cpp.md)关键字更改指针的方式。 **Const**关键字指定指针不能在初始化之后修改; 此后修改保护指针。  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  前面的语句声明一个函数[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中两个三个参数是指针类型的**char**。 因为通过引用传递的参数，并且不由值，该函数可以随意修改这两`strDestination`并`strSource`如果`strSource`未声明为**const**。 声明`strSource`作为**const**调用方保证`strSource`所调用的函数不能更改。  
   
 > [!NOTE]
->  因为没有从的标准转换*typename* **\*** 到**const** *typename*  **\***，它是合法的类型的自变量传递`char *`到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不成立;删除的目的是隐式转换**const**从对象或指针的属性。  
+> 因为没有从的标准转换*typename* <strong>\*</strong>到**const** *typename*  <strong>\*</strong>，它是合法的类型的自变量传递`char *`到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不成立;删除的目的是隐式转换**const**从对象或指针的属性。  
   
  一个**const**给定类型的指针可以分配给同一类型的指针。 但是，指针的不是**const**不能分配给**const**指针。 以下代码显示了正确和错误的赋值：  
   

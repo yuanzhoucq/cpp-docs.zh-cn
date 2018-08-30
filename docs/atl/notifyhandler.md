@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e39b0b1ac94a759c4a8b30fce8c634ed49be4ff9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848332"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209474"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 消息映射中的 NOTIFY_HANDLER 宏的第三个参数标识的函数的名称。  
@@ -43,7 +43,7 @@ ms.locfileid: "37848332"
  发送消息的控件的标识符。  
   
  *pnmh*  
- 地址[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)结构，其中包含通知代码和其他信息。 对于某些通知消息，此参数指向具有较大结构`NMHDR`结构作为其第一个成员。  
+ 地址[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)结构，其中包含通知代码和其他信息。 对于某些通知消息，此参数指向具有较大结构`NMHDR`结构作为其第一个成员。  
   
  *bHandled*  
  消息映射集*bHandled*为 TRUE，然后才能*NotifyHandler*调用。 如果*NotifyHandler*不完全处理该消息，应设置*bHandled*到**FALSE**来指示该消息需要进一步处理。  
@@ -57,5 +57,5 @@ ms.locfileid: "37848332"
 ## <a name="see-also"></a>请参阅  
  [实现窗口](../atl/implementing-a-window.md)   
  [消息映射](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

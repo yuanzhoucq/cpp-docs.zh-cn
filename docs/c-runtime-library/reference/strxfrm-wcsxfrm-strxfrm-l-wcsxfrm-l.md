@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 96f459c8360969146f8cf76a48c9141000066745
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451714"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214288"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -92,24 +92,24 @@ size_t wcsxfrm_l(
 源字符串。
 
 *count*<br/>
-最大字符将放入数*strDest*。
+最大数目的字符将放入*strDest*。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-返回转换的字符串的长度（不算结尾的 null 字符）。 返回的值是否大于或等于*计数*，则内容的*strDest*是不可预知的。 发生错误时，每个函数设置**errno**并返回**INT_MAX**。 对于无效字符， **errno**设置为**EILSEQ**。
+返回转换的字符串的长度（不算结尾的 null 字符）。 如果返回值是大于或等于*计数*，则内容*strDest*是不可预知的。 发生错误时，每个函数可设置**errno** ，并返回**INT_MAX**。 无效的字符，对于**errno**设置为**EILSEQ**。
 
 ## <a name="remarks"></a>备注
 
-**Strxfrm**指向的字符串转换函数*strSource*到新的排序格式存储在*strDest*。 不能超过*计数*个字符，包括 null 字符，进行转换并放入到结果字符串。 使用的区域设置进行转换**LC_COLLATE**类设置。 有关详细信息**LC_COLLATE**，请参阅[setlocale](setlocale-wsetlocale.md)。 **strxfrm**使用当前区域设置为其区域设置相关的行为;**_strxfrm_l**是相同，只不过它使用而不是当前区域设置中传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Strxfrm**指向的字符串函数转换*strSource*中新的排序中存储的窗体*strDest*。 不能超过*计数*字符，包括 null 字符，已转换并放入生成的字符串。 使用的区域设置进行转换**LC_COLLATE**类别设置。 有关详细信息**LC_COLLATE**，请参阅[setlocale](setlocale-wsetlocale.md)。 **strxfrm**其区域设置相关的行为; 使用当前区域设置 **_strxfrm_l**是完全相同，只不过它使用传入中而不是当前区域设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-转换完成之后，调用**strcmp**使用两个已转换字符串生成的结果相同的调用**strcoll**应用于原始的两个字符串。 与**strcoll**和**stricoll**， **strxfrm**自动处理根据多字节字符字符串。
+转换到的调用完成之后**strcmp**与两个已转换的字符串将产生与调用相同的结果**strcoll**应用到原始的两个字符串。 如同**strcoll**并**stricoll**， **strxfrm**自动处理的是根据多字节字符字符串。
 
-**wcsxfrm**是宽字符版本的**strxfrm**; 的字符串自变量**wcsxfrm**都是宽字符指针。 有关**wcsxfrm**之后，在字符串转换，调用**wcscmp**使用两个已转换字符串生成的结果相同的调用**wcscoll**应用于原始的两个字符串。 **wcsxfrm**和**strxfrm**否则具有相同行为。 **wcsxfrm**使用当前区域设置为其区域设置相关的行为;**_wcsxfrm_l**而不是当前区域设置中传入的区域设置。
+**wcsxfrm**是宽字符版本**strxfrm**; 的字符串参数**wcsxfrm**都是宽字符指针。 有关**wcsxfrm**后，将字符串转换，先调用**wcscmp**与两个已转换的字符串将产生与调用相同的结果**wcscoll**应用于原始的两个字符串。 **wcsxfrm**并**strxfrm**行为相同。 **wcsxfrm**其区域设置相关的行为; 使用当前区域设置 **_wcsxfrm_l**使用而不是当前区域设置中传入的区域设置。
 
-这些函数验证其参数。 如果*strSource*是 null 指针，或*strDest*是**NULL**指针 （除非计数为零），或者如果*计数*大于**INT_MAX**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回**INT_MAX**。
+这些函数验证其参数。 如果*strSource*是空指针，或*strDest*是**NULL**指针 （除非计数为零），或者如果*计数*大于**INT_MAX**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**INT_MAX**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,15 +120,15 @@ size_t wcsxfrm_l(
 
 在“C”区域设置中，字符集（ASCII 字符集）中的字符顺序与字典中的字符顺序相同。 但是在其他区域设置中，字符集中的字符顺序可能与字典中的字符顺序不同。 例如，在某些欧洲区域设置中，字符集中的字符“a”（值 0x61）位于字符“&\#x00E4;”（值 0xE4）之前，但在字典顺序中字符“ä”位于字符“a”之前。
 
-在为其字符集和字典字符顺序不同的区域设置，使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串，以生成按字典顺序的字符串根据当前区域设置的比较**LC_COLLATE**类设置。 因此，若要比较两个字符串字典顺序中的上述的区域设置，请使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串。 或者，可以使用**strcoll**而非**strcmp**对原始字符串。
+在为其的字符集和字典字符顺序不同的区域设置中，使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串以生成按字典顺序的字符串根据当前区域设置的比较**LC_COLLATE**类别设置。 因此，若要比较两个以上的区域设置中按字典顺序的字符串，请使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串。 或者，可以使用**strcoll**而非**strcmp**对原始字符串。
 
-**strxfrm**基本上是周围的包装器[LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700)与**LCMAP_SORTKEY**。
+**strxfrm**基本上是一个包装[LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)与**LCMAP_SORTKEY**。
 
-下面的表达式的值是包含所需的数组的大小**strxfrm**源字符串内的转换：
+下面的表达式的值是包含所需的数组的大小**strxfrm**转换源字符串：
 
 `1 + strxfrm( NULL, string, 0 )`
 
-在"C"区域设置仅， **strxfrm**等效于以下：
+在"C"区域设置仅**strxfrm**等效于以下：
 
 ```C
 strncpy( _string1, _string2, _count );
@@ -137,7 +137,7 @@ return( strlen( _string1 ) );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strxfrm**|\<string.h>|
 |**wcsxfrm**|\<string.h> 或 \<wchar.h>|

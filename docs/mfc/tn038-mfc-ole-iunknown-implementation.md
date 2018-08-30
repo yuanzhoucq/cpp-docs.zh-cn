@@ -28,23 +28,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf33139250e6876dde6d86f7e8ed144dbe23180
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42545775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215171"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 尽管[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口被称为 c + + 类，但是 COM 并不特定于任何一种语言，它可以在 C、 PASCAL 或任何其他可以支持的 COM 对象二进制布局的语言中实现。
+OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 尽管[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口被称为 c + + 类，但是 COM 并不特定于任何一种语言，它可以在 C、 PASCAL 或任何其他可以支持的 COM 对象二进制布局的语言中实现。
 
-OLE 将所有类派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)作为"接口。 这是一个重要的区别，因为"接口"例如[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)携带没有实现。 它只定义对象借由通信的协议，而不定义这些实现可以完成的具体事项。 这对于允许最大灵活性的系统而言是合理的。 MFC 的作用是实现 MFC/C++ 程序的默认行为。
+OLE 将所有类派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)作为"接口。 这是一个重要的区别，因为"接口"例如[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)携带没有实现。 它只定义对象借由通信的协议，而不定义这些实现可以完成的具体事项。 这对于允许最大灵活性的系统而言是合理的。 MFC 的作用是实现 MFC/C++ 程序的默认行为。
 
-若要了解 MFC 的实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)必须先了解此接口是什么。 简化的版本[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)定义如下：
+若要了解 MFC 的实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)必须先了解此接口是什么。 简化的版本[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)定义如下：
 
 ```cpp
 class IUnknown
@@ -59,9 +59,9 @@ public:
 > [!NOTE]
 > 此例中省略了某些必要的调用约定详细信息，例如 `__stdcall`。
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)并[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在所有者用完时释放对象使用它，该对象的[释放](http://msdn.microsoft.com/library/windows/desktop/ms682317)成员调用 （而不是使用 delete 运算符，如像传统的 c + + 对象）。 引用计数机制允许管理单个对象的多个引用。 实现[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)并[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)维护引用计数对象 — 其引用计数达到零时才会删除该对象。
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在所有者用完时释放对象使用它，该对象的[释放](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成员调用 （而不是使用 delete 运算符，如像传统的 c + + 对象）。 引用计数机制允许管理单个对象的多个引用。 实现[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)维护引用计数对象 — 其引用计数达到零时才会删除该对象。
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)并[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)从实现的角度而言相当简单明了。 此处为普通实现：
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)从实现的角度而言相当简单明了。 此处为普通实现：
 
 ```cpp
 ULONG CMyObj::AddRef()
@@ -80,7 +80,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数是一些更有趣。 不是非常有趣的事情有一个对象，其唯一的成员函数是[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)— 很高兴告诉对象来完成更多的事情，比[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)提供了。 这就是[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)非常有用。 它允许你在同一对象上获取不同的“接口”。 这些接口通常派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)并通过添加新的成员函数添加附加功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，应用于对象的
+[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))成员函数是一些更有趣。 不是非常有趣的事情有一个对象，其唯一的成员函数是[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)和[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)— 很高兴告诉对象来完成更多的事情，比[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)提供了。 这就是[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))非常有用。 它允许你在同一对象上获取不同的“接口”。 这些接口通常派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)并通过添加新的成员函数添加附加功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，应用于对象的
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -90,7 +90,7 @@ public:
 };
 ```
 
-若要获取 IPrintInterface，如果只有[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，调用[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的`IPrintInterface`。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果*pUnk*指向的指针[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)对象，若要从中检索 IPrintInterface 的代码可能是：
+若要获取 IPrintInterface，如果只有[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，调用[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))使用`IID`的`IPrintInterface`。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果*pUnk*指向的指针[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)对象，若要从中检索 IPrintInterface 的代码可能是：
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -102,7 +102,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-这种方法似乎相当容易，但您将如何实现同时支持 IPrintInterface 的对象和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口在这种情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — 通过实现 IPrintInterface， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)则会自动支持。 例如：
+这种方法似乎相当容易，但您将如何实现同时支持 IPrintInterface 的对象和[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口在这种情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) — 通过实现 IPrintInterface， [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)则会自动支持。 例如：
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -114,7 +114,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-实现[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)并[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)将完全相同实现更高版本。 `CPrintObj::QueryInterface` 将如下所示：
+实现[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)将完全相同实现更高版本。 `CPrintObj::QueryInterface` 将如下所示：
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -129,7 +129,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-可以看到，如果接口标识符 (IID) 得到识别，指针会返回到对象；否则会出现错误。 另请注意，成功[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)导致隐式[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 当然，你还必须实现 CEditObj::Print。 这是简单的因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口。 但是，如果你想要支持两个不同的接口，派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，请考虑以下：
+可以看到，如果接口标识符 (IID) 得到识别，指针会返回到对象；否则会出现错误。 另请注意，成功[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))导致隐式[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)。 当然，你还必须实现 CEditObj::Print。 这是简单的因为 IPrintInterface 直接派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口。 但是，如果你想要支持两个不同的接口，派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，请考虑以下：
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -244,7 +244,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-请注意，大部分[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)实现放置在 CEditPrintObj 类而不会复制 ceditprintobj:: Ceditobj 和 ceditprintobj:: Cprintobj 中的代码。 这样可以减少代码量并避免 Bug。 此处的关键点在于从 IUnknown 接口可以调用[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)以检索任何接口可能支持该对象，并从每个接口就可以执行相同操作。 这意味着，所有[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)从每个接口可用的函数必须具有行为完全相同的方式。 为了让这些嵌入对象调用“外部对象”中的实现，使用了后向指针 (m_pParent)。 m_pParent 指针在 CEditPrintObj 构造函数计算期间初始化。 然后还会实现 CEditPrintObj::CPrintObj::PrintObject 和 CEditPrintObj::CEditObj::EditObject。 添加了相当多的代码来添加编辑对象的能力这一功能。 幸运的是，接口只有一个成员函数的情况相当罕见（尽管确实存在），并且在这种情况下，通常会将 EditObject 和 PrintObject 合并到单个接口中。
+请注意，大部分[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)实现放置在 CEditPrintObj 类而不会复制 ceditprintobj:: Ceditobj 和 ceditprintobj:: Cprintobj 中的代码。 这样可以减少代码量并避免 Bug。 此处的关键点在于从 IUnknown 接口可以调用[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))以检索任何接口可能支持该对象，并从每个接口就可以执行相同操作。 这意味着，所有[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))从每个接口可用的函数必须具有行为完全相同的方式。 为了让这些嵌入对象调用“外部对象”中的实现，使用了后向指针 (m_pParent)。 m_pParent 指针在 CEditPrintObj 构造函数计算期间初始化。 然后还会实现 CEditPrintObj::CPrintObj::PrintObject 和 CEditPrintObj::CEditObj::EditObject。 添加了相当多的代码来添加编辑对象的能力这一功能。 幸运的是，接口只有一个成员函数的情况相当罕见（尽管确实存在），并且在这种情况下，通常会将 EditObject 和 PrintObject 合并到单个接口中。
 
 对于如此简单的方案而言，解释和代码都相当多。 MFC/OLE 类提供更简单的替代方案。 MFC 实现使用的技术与使用消息映射包装 Windows 消息的方法类似。 此功能称为*接口映射*和下一节中讨论。
 
@@ -252,11 +252,11 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 
 MFC/OLE 包括一个与 MFC 的“消息映射”和“分派映射”在概念和执行上类似的“接口映射”实现。 MFC 的接口映射的核心功能如下所示：
 
-- 标准实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，内置`CCmdTarget`类。
+- 标准实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，内置`CCmdTarget`类。
 
-- 维护的引用计数，修改[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)
+- 维护的引用计数，修改[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)和[版本](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)
 
-- 数据驱动实现[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)
+- 数据驱动实现[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 
 此外，接口映射支持以下高级功能：
 
@@ -268,7 +268,7 @@ MFC/OLE 包括一个与 MFC 的“消息映射”和“分派映射”在概念�
 
 有关聚合的详细信息，请参阅[聚合](/windows/desktop/com/aggregation)主题。
 
-MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*具有一个*"引用计数以及所有与关联的成员函数[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)实现 (例如位于引用计数`CCmdTarget`)。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。
+MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*具有一个*"引用计数以及所有与关联的成员函数[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)实现 (例如位于引用计数`CCmdTarget`)。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。
 
 ## <a name="interface-map-basics"></a>接口映射基本知识
 
@@ -288,7 +288,7 @@ MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*具有一�
 
 7. METHOD_PROLOGUE 宏用于访问父代、 `CCmdTarget`-派生的对象。
 
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可以委派给`CCmdTarget`这些函数的实现 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。
+8. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，和[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))可以委派给`CCmdTarget`这些函数的实现 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。
 
 以上 CPrintEditObj 示例可按下列方式实现：
 
@@ -312,7 +312,7 @@ protected:
 };
 ```
 
-以上声明创建派生自 `CCmdTarget` 的类。 DECLARE_INTERFACE_MAP 宏告知框架，此类将具有自定义接口映射。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏定义嵌套的类，在这种情况下使用名称为 CEditObj 和 CPrintObj （X 仅用于区分嵌套的类从其开始使用"C"和接口的类的全局类"I"开头）。 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，并[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函数中; 因此仅声明函数特定于此接口：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 宏，以便 **_stdcall**和虚拟关键字提供了以适合目标平台)。
+以上声明创建派生自 `CCmdTarget` 的类。 DECLARE_INTERFACE_MAP 宏告知框架，此类将具有自定义接口映射。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏定义嵌套的类，在这种情况下使用名称为 CEditObj 和 CPrintObj （X 仅用于区分嵌套的类从其开始使用"C"和接口的类的全局类"I"开头）。 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，并[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))函数中; 因此仅声明函数特定于此接口：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 宏，以便 **_stdcall**和虚拟关键字提供了以适合目标平台)。
 
 实现此类的接口映射：
 
@@ -323,9 +323,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-这将分别连接 IID_IPrintInterface IID 和 m_CPrintObj 以及 IID_IEditInterface 和 m_CEditObj。 `CCmdTarget`的实现[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) 使用此映射返回指向 m_CPrintObj 和 m_CEditObj 请求时。 无需包括 `IID_IUnknown` 的条目；请求 `IID_IUnknown` 时，框架将使用映射中的第一个接口（在此例中为 m_CPrintObj）。
+这将分别连接 IID_IPrintInterface IID 和 m_CPrintObj 以及 IID_IEditInterface 和 m_CEditObj。 `CCmdTarget`的实现[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (`CCmdTarget::ExternalQueryInterface`) 使用此映射返回指向 m_CPrintObj 和 m_CEditObj 请求时。 无需包括 `IID_IUnknown` 的条目；请求 `IID_IUnknown` 时，框架将使用映射中的第一个接口（在此例中为 m_CPrintObj）。
 
-尽管 BEGIN_INTERFACE_PART 宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)并[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)为你的函数，您仍需要实现它们：
+尽管 BEGIN_INTERFACE_PART 宏自动声明[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)并[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))为你的函数，您仍需要实现它们：
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -381,7 +381,7 @@ CEditPrintObj::CPrintObj 的实现将与上面对 CEditPrintObj::CEditObj 的定
 
 ### <a name="using-an-aggregate-object"></a>使用聚合对象
 
-要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 那么，如何会除了 INTERFACE_PART 宏，MFC 的接口映射机制中的此绑定的嵌套的对象映射到 IID，还可以声明聚合对象作为的一部分在`CCmdTarget`派生的类。 若要执行此操作，请使用 INTERFACE_AGGREGATE 宏。 这允许您指定的成员变量 (它必须是一个指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或派生类)，这是集成到接口映射机制。 如果指针不为 NULL`CCmdTarget::ExternalQueryInterface`是调用，框架将自动调用聚合对象[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数，如果`IID`请求不是一个本机`IID`s支持的`CCmdTarget`对象本身。
+要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 那么，如何会除了 INTERFACE_PART 宏，MFC 的接口映射机制中的此绑定的嵌套的对象映射到 IID，还可以声明聚合对象作为的一部分在`CCmdTarget`派生的类。 若要执行此操作，请使用 INTERFACE_AGGREGATE 宏。 这允许您指定的成员变量 (它必须是一个指向[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)或派生类)，这是集成到接口映射机制。 如果指针不为 NULL`CCmdTarget::ExternalQueryInterface`是调用，框架将自动调用聚合对象[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))成员函数，如果`IID`请求不是一个本机`IID`s支持的`CCmdTarget`对象本身。
 
 #### <a name="to-use-the-interfaceaggregate-macro"></a>使用 INTERFACE_AGGREGATE 宏
 
@@ -432,15 +432,15 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-m_lpAggrInner 变量在构造函数中初始化为 NULL。 该框架将忽略 NULL 成员变量中的默认实现[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。 `OnCreateAggregates` 是实际创建聚合对象的适合位置。 如果要在 `COleObjectFactory` 的 MFC 实现外部创建对象，那么必须显式调用它。 讨论聚合对象的创建时，在 `CCmdTarget::OnCreateAggregates` 中创建聚合以及使用 `CCmdTarget::GetControllingUnknown` 的原因就会变得很明显。
+m_lpAggrInner 变量在构造函数中初始化为 NULL。 该框架将忽略 NULL 成员变量中的默认实现[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。 `OnCreateAggregates` 是实际创建聚合对象的适合位置。 如果要在 `COleObjectFactory` 的 MFC 实现外部创建对象，那么必须显式调用它。 讨论聚合对象的创建时，在 `CCmdTarget::OnCreateAggregates` 中创建聚合以及使用 `CCmdTarget::GetControllingUnknown` 的原因就会变得很明显。
 
-此技术可为你的对象提供聚合对象支持的所有接口及其本机接口。 如果只需要聚合支持的一部分接口，可以替代 `CCmdTarget::GetInterfaceHook`。 这使您非常低级的 hookability，类似于[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。 你通常会想要拥有聚合支持的所有接口。
+此技术可为你的对象提供聚合对象支持的所有接口及其本机接口。 如果只需要聚合支持的一部分接口，可以替代 `CCmdTarget::GetInterfaceHook`。 这使您非常低级的 hookability，类似于[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。 你通常会想要拥有聚合支持的所有接口。
 
 ### <a name="making-an-object-implementation-aggregatable"></a>使对象实现可聚合
 
-对象可聚合，实现[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，并[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)必须委托到"控制未知"。 换而言之，它是对象的一部分，它必须委托[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，并[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)到不同的对象，也派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 此“控制未知”在创建对象时就会提供给对象，即提供给 `COleObjectFactory` 的实现。 将其实现需要花费一小笔开销，并且在某些情况下并不必要，因此 MFC 使其成为可选项。 要使对象可聚合，请从该对象的构造函数调用 `CCmdTarget::EnableAggregation`。
+对象可聚合，实现[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，并[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))必须委托到"控制未知"。 换而言之，它是对象的一部分，它必须委托[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，并[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))到不同的对象，也派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 此“控制未知”在创建对象时就会提供给对象，即提供给 `COleObjectFactory` 的实现。 将其实现需要花费一小笔开销，并且在某些情况下并不必要，因此 MFC 使其成为可选项。 要使对象可聚合，请从该对象的构造函数调用 `CCmdTarget::EnableAggregation`。
 
-如果对象还使用聚合，则必须确保将正确的“控制未知”传递给聚合对象。 通常这[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)创建聚合时，将指针传递给对象。 例如，pUnkOuter 参数对于使用 `CoCreateInstance` 创建的对象而言是“控制未知”。 正确的“控制未知”指针可通过调用 `CCmdTarget::GetControllingUnknown` 进行检索。 但是，从该函数返回的值在构造函数计算期间无效。 因此，建议只在 `CCmdTarget::OnCreateAggregates` 替代中创建自己的聚合，该替代中 `GetControllingUnknown` 的返回值是可靠的，即使聚合是从 `COleObjectFactory` 实现创建的。
+如果对象还使用聚合，则必须确保将正确的“控制未知”传递给聚合对象。 通常这[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)创建聚合时，将指针传递给对象。 例如，pUnkOuter 参数对于使用 `CoCreateInstance` 创建的对象而言是“控制未知”。 正确的“控制未知”指针可通过调用 `CCmdTarget::GetControllingUnknown` 进行检索。 但是，从该函数返回的值在构造函数计算期间无效。 因此，建议只在 `CCmdTarget::OnCreateAggregates` 替代中创建自己的聚合，该替代中 `GetControllingUnknown` 的返回值是可靠的，即使聚合是从 `COleObjectFactory` 实现创建的。
 
 添加或释放人工引用计数时，对象操作正确的引用计数十分重要。 为确保这一点，请始终调用 `ExternalAddRef` 和 `ExternalRelease`，而不要调用 `InternalRelease` 和 `InternalAddRef`。 很少在支持聚合的类上调用 `InternalRelease` 或 `InternalAddRef`。
 
@@ -528,7 +528,7 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="remarks"></a>备注
 
-对于每个类将实现的接口，需要具有 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 对。 这些宏定义从你定义的 OLE 接口派生的本地类以及该类的嵌入成员变量。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，并[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)自动声明的成员。 必须包括属于要实现的接口的其他成员函数的声明 （这些声明放 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间）。
+对于每个类将实现的接口，需要具有 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 对。 这些宏定义从你定义的 OLE 接口派生的本地类以及该类的嵌入成员变量。 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，并[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))自动声明的成员。 必须包括属于要实现的接口的其他成员函数的声明 （这些声明放 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间）。
 
 *Iface*自变量是你想要实现，例如 OLE 接口`IAdviseSink`，或`IPersistStorage`（或你自己的自定义接口）。
 
@@ -598,7 +598,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-如果对象实现`IOleInPlaceFrameWindow`，客户端可能`QueryInterface`上任意一个接口： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除"派生程度最高"接口`IOleInPlaceFrameWindow`（即实际上是实现）。 若要处理这种情况可以使用多个 INTERFACE_PART 宏将映射到每个基接口`IOleInPlaceFrameWindow`接口：
+如果对象实现`IOleInPlaceFrameWindow`，客户端可能`QueryInterface`上任意一个接口： `IOleUIWindow`， `IOleWindow`，或[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，除"派生程度最高"接口`IOleInPlaceFrameWindow`（即实际上是实现）。 若要处理这种情况可以使用多个 INTERFACE_PART 宏将映射到每个基接口`IOleInPlaceFrameWindow`接口：
 
 在类定义文件中：
 
@@ -634,7 +634,7 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="remarks"></a>备注
 
-此宏用于告知框架，类正在使用聚合对象。 它必须显示 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间。 聚合对象是单独的对象，派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 通过使用聚合和 INTERFACE_AGGREGATE 宏，可以使聚合支持似乎由该对象直接支持的所有接口。 *TheAggr*参数是只需从派生类的成员变量的名称[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或间接）。 所有 INTERFACE_AGGREGATE 宏必须都遵循 INTERFACE_PART 宏放置到接口映射中时。
+此宏用于告知框架，类正在使用聚合对象。 它必须显示 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间。 聚合对象是单独的对象，派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 通过使用聚合和 INTERFACE_AGGREGATE 宏，可以使聚合支持似乎由该对象直接支持的所有接口。 *TheAggr*参数是只需从派生类的成员变量的名称[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) （直接或间接）。 所有 INTERFACE_AGGREGATE 宏必须都遵循 INTERFACE_PART 宏放置到接口映射中时。
 
 ## <a name="see-also"></a>请参阅
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848260"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217878"
 ---
 # <a name="interfaces-atl"></a>接口 (ATL)
 接口是一个对象用于公开到外界其功能的方法。 在 COM 中，接口是由对象实现的函数的指针 （如 c + + vtable) 的表。 表表示的接口，和它所指向的函数是该接口的方法。 对象可以公开它选择任意数目的接口。  
@@ -34,5 +34,5 @@ ms.locfileid: "37848260"
   
 ## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
- [COM 对象和接口](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM 对象和接口](/windows/desktop/com/com-objects-and-interfaces)
 

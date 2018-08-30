@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9884cd8aec09bfcefaa8455457a3a4d3bb5b3d3d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541536"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219226"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 专用**  
@@ -43,7 +43,7 @@ void __debugbreak();
 |`__debugbreak`|x86、 ARM、 x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>备注  
- `__debugbreak`编译器内部函数，类似于[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是会导致断点的可移植 Win32 方式。  
+ `__debugbreak`编译器内部函数，类似于[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是会导致断点的可移植 Win32 方式。  
   
 > [!NOTE]
 >  使用编译时 **/clr**，一个函数，其中包含`__debugbreak`将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。  

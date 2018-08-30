@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219147"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  通用字符名称不能对代理项码位范围 D800-DFFF 内的值进行编码。 对于 Unicode 代理项对，通过使用 `\UNNNNNNNN`（其中，NNNNNNNN 是字符的八位数码位）指定通用字符名称。 如果需要，编译器将生成一个代理项对。  
   
- 在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 这在 C++11 标准中进行了修复。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  有关通用字符名称的详细信息，请参阅[字符集](../cpp/character-sets.md)。 有关 Unicode 的详细信息，请参阅 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 有关代理项对的详细信息，请参阅[代理项对与补充字符](/windows/desktop/Intl/surrogates-and-supplementary-characters)。  
+ 在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 这在 C++11 标准中进行了修复。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  有关通用字符名称的详细信息，请参阅[字符集](../cpp/character-sets.md)。 有关 Unicode 的详细信息，请参阅[Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 有关代理项对的详细信息，请参阅[代理项对与补充字符](/windows/desktop/Intl/surrogates-and-supplementary-characters)。  
   
 ## <a name="string-literals"></a>字符串文本  
  字符串文本表示字符序列，这些字符合起来可组成以 null 结尾的字符串。 字符必须放在双引号之间。 字符串文本有以下类型：  

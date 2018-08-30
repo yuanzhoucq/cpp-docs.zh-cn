@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 56a6211ac26a31b1ec01fdd2ad0579e4d9b52038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223382"
 ---
 # <a name="ccomenum-class"></a>CComEnum 类
 此类定义基于数组的 COM 枚举器对象。  
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
 #### <a name="parameters"></a>参数  
  *基本*  
- COM 枚举器 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 接口。  
+ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。 
   
  *piid*  
  一个指向枚举器接口的接口 ID。  

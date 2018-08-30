@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210959"
 ---
 # <a name="carchive-class"></a>CArchive 类
 可以在这些对象删除后仍然存在以永久二进制形式 （通常为磁盘存储） 中保存的对象的复杂网络。  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  必须使用运行时类[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)并[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`ReadClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 如果*pSchema*为 NULL，可以通过调用检索的架构的存储类[CArchive::GetObjectSchema](#getobjectschema); 否则为 **\** * * pSchema*将包含以前存储的运行时类的架构。  
+ 如果*pSchema*为 NULL，可以通过调用检索的架构的存储类[CArchive::GetObjectSchema](#getobjectschema); 否则为<strong>\*</strong> *pSchema*将包含以前存储的运行时类的架构。  
   
  可以使用[SerializeClass](#serializeclass)而不是`ReadClass`，用于处理读取和写入的类引用。  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211415"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 本文档演示如何使用并发运行时移动到工作线程的 Microsoft 基础类 (MFC) 应用程序中的用户界面 (UI) 线程执行的工作。 本文档还演示如何提高长的绘制操作的性能。  
@@ -40,7 +40,7 @@ ms.locfileid: "42612098"
   
 -   [PPL 中的取消操作](cancellation-in-the-ppl.md)  
   
- 我们还建议在开始本演练之前了解 MFC 应用程序开发和 GDI + 的基础知识。 有关 MFC 的详细信息，请参阅[MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)。 关于 GDI + 的详细信息，请参阅[GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798)。  
+ 我们还建议在开始本演练之前了解 MFC 应用程序开发和 GDI + 的基础知识。 有关 MFC 的详细信息，请参阅[MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)。 关于 GDI + 的详细信息，请参阅[GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)。  
   
 ##  <a name="top"></a> 部分  
  本演练包含以下各节：  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214342"
 ---
 # <a name="string-data-management"></a>字符串数据管理
 Visual c + + 提供多种方式来管理字符串数据：  
@@ -67,7 +67,7 @@ Visual c + + 提供多种方式来管理字符串数据：
  一个`CString`对象可以存储为 INT_MAX (2147483647) 个字符。 TCHAR 数据类型用于获取或设置内的单个字符`CString`对象。 与字符数组不同`CString`类具有内置的内存分配功能。 这允许`CString`对象以根据需要自动增加 (即，不需要担心如何增长`CString`对象以适应较长的字符串)。  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Cstring 和 const char 指针  
- 一个`CString`对象也可以充当 C 样式字符串 ( `PCXSTR`，这是与相同**const char\*** 如果不在 Unicode)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)转换运算符允许`CString`对象自由地替换为函数调用中的字符指针。 **CString (LPCWSTR** `pszSrc` **)** 构造函数允许字符指针来替换的`CString`对象。  
+ 一个`CString`对象也可以充当 C 样式字符串 ( `PCXSTR`，这是与相同**const char** <strong>\*</strong>如果不在 Unicode)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)转换运算符允许`CString`对象自由地替换为函数调用中的字符指针。 **CString (LPCWSTR** `pszSrc` **)** 构造函数允许字符指针来替换的`CString`对象。  
   
  未尝试折叠`CString`对象。 如果使两个`CString`对象包含`Chicago`，例如，在字符`Chicago`存储在两个位置中。 （这可能不为 true 的未来版本的 MFC，因此不应依赖于它。）  
   

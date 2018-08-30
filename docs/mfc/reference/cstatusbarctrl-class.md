@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221351"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 提供 Windows 公共状态栏控件的功能。  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。  
+ 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。  
   
  *rect*  
- 指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ 指定状态栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
  通常指定控件的父窗口状态栏`CDialog`。 它不能为 NULL。  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。  
+ 指定状态栏控件的样式。 应用状态栏控件样式中列出的任意组合[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 此参数必须包含 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>参数  
  *lpDrawItemStruct*  
- 指向的长指针[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)结构，其中包含有关绘图所需的类型的信息。  
+ 指向的长指针[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构，其中包含有关绘图所需的类型的信息。  
   
 ### <a name="remarks"></a>备注  
  `itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  图标的句柄如果成功，则该方法否则，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744)消息，Windows SDK 中所述。  
+ 此方法将发送[SB_GETICON](/windows/desktop/Controls/sb-geticon)消息，Windows SDK 中所述。  
   
  状态栏控件包含文本输出窗格，它们是也称为部分的行。 有关状态栏的详细信息，请参阅[MFC 中的状态栏实现](../../mfc/status-bar-implementation-in-mfc.md)并[设置 CStatusBarCtrl 对象的模式](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  其边框是要检索的部件的从零开始索引。  
   
  *lpRect*  
- 地址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。  
+ 地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含要在工具提示中使用的文本。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  如果状态窗口控件在简单模式，则为非零值否则为零。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple)，如 Windows SDK 中所述。  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  在状态栏中设置的背景色。  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  COLORREF 值，该值指定新背景色。 指定 CLR_DEFAULT 值以使状态栏使用其默认背景色。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值表示以前的默认背景色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值表示以前的默认背景色。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[SB_SETICON](/windows/desktop/Controls/sb-seticon)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CStatusBarCtrl::SetBkColor](#setbkcolor)。  
@@ -576,7 +576,7 @@ void SetTipText(
  指向包含工具提示文本的字符串的指针。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217328"
 ---
 # <a name="cdialog-class"></a>CDialog 类
 用于在屏幕上显示对话框的基类。  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  若要创建模式对话框中，构造使用派生的对话框类的构造函数在堆栈上的对象，然后调用`DoModal`创建对话框窗口和其控件。 如果你想要创建无模式对话框，则调用`Create`对话框类的构造函数中。  
   
- 您还可以创建一个模板在内存中使用[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)数据结构，如 Windows SDK 中所述。 在构造之后`CDialog`对象，请调用[CreateIndirect](#createindirect)若要创建无模式对话框中或调用[InitModalIndirect](#initmodalindirect)并[DoModal](#domodal)创建在安装结束时对话框。  
+ 您还可以创建一个模板在内存中使用[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)数据结构，如 Windows SDK 中所述。 在构造之后`CDialog`对象，请调用[CreateIndirect](#createindirect)若要创建无模式对话框中或调用[InitModalIndirect](#initmodalindirect)并[DoModal](#domodal)创建在安装结束时对话框。  
   
  在交换和验证数据映射写入中的重写`CWnd::DoDataExchange`添加到新的对话框类。 请参阅[DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)成员函数在`CWnd`有关交换和验证功能的详细信息。  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  `Create`成员函数将创建该对话框后立即返回。  
   
- 如果创建父窗口时，应显示该对话框，请使用对话框模板中的 WS_VISIBLE 样式。 否则，必须调用`ShowWindow`。 有关进一步的对话框样式和其应用程序，请参阅[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的结构和[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 参考*。  
+ 如果创建父窗口时，应显示该对话框，请使用对话框模板中的 WS_VISIBLE 样式。 否则，必须调用`ShowWindow`。 有关进一步的对话框样式和其应用程序，请参阅[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的结构和[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 参考*。  
   
  使用`CWnd::DestroyWindow`函数来销毁对话框中创建的`Create`函数。  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>参数  
  *lpDialogTemplate*  
- 指向包含用于创建对话框中的对话框模板的内存。 此模板是中的窗体[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)结构和控制信息，如 Windows SDK 中所述。  
+ 指向包含用于创建对话框中的对话框模板的内存。 此模板是中的窗体[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)结构和控制信息，如 Windows SDK 中所述。  
   
  *pParentWnd*  
  指向对话框对象的父窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md))。 如果它为 NULL，对话框对象的父窗口设置为应用程序主窗口。  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>备注  
  `CreateIndirect`成员函数将创建该对话框后立即返回。  
   
- 如果创建父窗口时，应显示该对话框，请使用对话框模板中的 WS_VISIBLE 样式。 否则，必须调用`ShowWindow`以使其显示。 有关如何在模板中指定其他对话框样式的详细信息，请参阅[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的结构。  
+ 如果创建父窗口时，应显示该对话框，请使用对话框模板中的 WS_VISIBLE 样式。 否则，必须调用`ShowWindow`以使其显示。 有关如何在模板中指定其他对话框样式的详细信息，请参阅[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的结构。  
   
  使用`CWnd::DestroyWindow`函数来销毁对话框中创建的`CreateIndirect`函数。  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>返回值  
- **Int**值，该值指定的值*n 结果*参数传递给[CDialog::EndDialog](#enddialog)成员函数，用于关闭对话框。 返回值为-1，如果发生某些其他错误，在这种情况下，输出窗口将包含错误信息从函数无法创建对话框中或 IDABORT [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ **Int**值，该值指定的值*n 结果*参数传递给[CDialog::EndDialog](#enddialog)成员函数，用于关闭对话框。 返回值为-1，如果发生某些其他错误，在这种情况下，输出窗口将包含错误信息从函数无法创建对话框中或 IDABORT [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  对话框中处于活动状态时，此成员函数将处理与用户的所有交互。 这是什么工作使得对话框成为模式;也就是说，用户不能前进行交互与其他窗口对话框的已关闭。  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>参数  
  *lpDialogTemplate*  
- 指向包含用于创建对话框中的对话框模板的内存。 此模板是中的窗体[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)结构和控制信息，如 Windows SDK 中所述。  
+ 指向包含用于创建对话框中的对话框模板的内存。 此模板是中的窗体[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)结构和控制信息，如 Windows SDK 中所述。  
   
  *hDialogTemplate*  
  包含指向包含对话框模板的全局内存句柄。 此模板中的窗体是`DLGTEMPLATE`结构和每个控件在对话框中的数据。  

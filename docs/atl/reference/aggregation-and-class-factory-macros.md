@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210937"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 这些宏提供控制聚合的并声明类工厂的方法。  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  CComClassFactory 类  
- 此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口。  
+ 此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口。  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>备注  
- `CComClassFactory` 实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，它包含用于创建特定的 CLSID 的对象，以及锁定的内存，这样更快地创建新对象中的类工厂方法。 `IClassFactory` 必须为每个类都可以注册在系统注册表中并向你分配 CLSID 实现。  
+ `CComClassFactory` 实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，它包含用于创建特定的 CLSID 的对象，以及锁定的内存，这样更快地创建新对象中的类工厂方法。 `IClassFactory` 必须为每个类都可以注册在系统注册表中并向你分配 CLSID 实现。  
   
  ATL 对象通常通过继承获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要重写此默认值，指定一个 DECLARE_CLASSFACTORY*XXX*在类定义中的宏。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)宏类工厂使用指定的类：  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 类  
- 此类实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口。  
+ 此类实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口。  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *许可证*  
  实现以下静态函数的类：  
   
-- **静态 BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **静态 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **静态 BOOL IsLicenseValid （);**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>备注  
- `CComClassFactory2` 实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口，这是扩展的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 `IClassFactory2` 控件通过许可证创建的对象。 已授权的计算机上类工厂执行可以提供运行时许可证密钥。 此许可证密钥允许应用程序的完整计算机许可证不存在时实例化对象。  
+ `CComClassFactory2` 实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口，这是扩展的[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)。 `IClassFactory2` 控件通过许可证创建的对象。 已授权的计算机上类工厂执行可以提供运行时许可证密钥。 此许可证密钥允许应用程序的完整计算机许可证不存在时实例化对象。  
   
  ATL 对象通常通过继承获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)对象的类定义中的宏。 例如：  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread 类  
- 此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，并允许在多个单元中创建的对象。  
+ 此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，并允许在多个单元中创建的对象。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>参数  
  *statusFlags*  
- [in]VIEWSTATUS 标志中。 请参阅[VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)标志的列表。  
+ [in]VIEWSTATUS 标志中。 请参阅[VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)标志的列表。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

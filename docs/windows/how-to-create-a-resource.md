@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d269dbc83c11fa4ece55d8df8f6629d1afd52c03
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221015"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 
@@ -48,7 +48,7 @@ ms.locfileid: "42594508"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>在“类视图”中创建新资源
 
-1. 在中[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。
+1. 在中[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。
 
 2. 在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。
 

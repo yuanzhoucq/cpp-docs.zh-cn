@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592077"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211092"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
 > [!WARNING]
-> 本节适用于采用 C++ 编写的 Windows 桌面应用程序。 有关 c + + 编写的通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
+> 本节适用于采用 C++ 编写的 Windows 桌面应用程序。 有关 c + + 编写的通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
 >
 > 有关将资源添加到 C + + /cli 项目，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
 
@@ -53,7 +53,7 @@ ms.locfileid: "42592077"
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 提供 Visual C++ 文档的链接。
 
-[Visual Studio 简介](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Visual Studio 简介](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 描述开发工具的完整集合，这些开发工具全都使用相同的集成开发环境 (IDE)，从而使它们可以共享工具并促进混合语言解决方案的创建。
 
 [与我们交流](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ ms.locfileid: "42592077"
 ## <a name="see-also"></a>请参阅
 
 [Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)  
-[菜单和其他资源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[菜单和其他资源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

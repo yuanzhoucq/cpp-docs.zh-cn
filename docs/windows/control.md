@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18a53f75f783f5843e3bdf603d21dbacf6746e2b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 06261ba87806bd5eada0d7daaa955b8ec395f3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222841"
 ---
 # <a name="control"></a>控件
 
@@ -36,7 +36,7 @@ ms.locfileid: "42591776"
 
 ## <a name="remarks"></a>备注
 
-**控制**属性对应[组件类](../windows/coclass.md)属性。 **控制**c + + 属性具有相同的功能[控制](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 特性。
+**控制**属性对应[组件类](../windows/coclass.md)属性。 **控制**c + + 属性具有相同的功能[控制](/windows/desktop/Midl/control)MIDL 特性。
 
 ## <a name="example"></a>示例
 

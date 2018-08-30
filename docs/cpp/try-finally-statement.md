@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215526"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 **Microsoft 专用**  
@@ -90,7 +90,7 @@ __finally {
 ## <a name="abnormal-termination"></a>异常终止  
  退出**的 try-finally**语句使用[longjmp](../c-runtime-library/reference/longjmp.md)运行时函数被视为异常终止。 您不能跳转到 **__try**语句，但跳出的法律。 所有 **__finally**终点之间处于活动状态的语句 (的正常终止 **__try**块) 和目标 ( **__except**块处理异常） 必须运行。 这称为本地展开。  
   
- 如果**尝试**块过早终止出于任何原因，包括跳出该块，则系统将执行关联**最后**块的堆栈展开过程的一部分。 在这种情况下， [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265)函数将返回**true**如果从内部调用**最后**阻止; 否则，它将返回**false**.  
+ 如果**尝试**块过早终止出于任何原因，包括跳出该块，则系统将执行关联**最后**块的堆栈展开过程的一部分。 在这种情况下， [AbnormalTermination](/windows/desktop/Debug/abnormaltermination)函数将返回**true**如果从内部调用**最后**阻止; 否则，它将返回**false**.  
   
  如果在执行结束进程不调用终止处理程序**的 try-finally**语句。  
   
@@ -100,4 +100,4 @@ __finally {
  [编写终止处理程序](../cpp/writing-a-termination-handler.md)   
  [结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
- [终止处理程序语法](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [终止处理程序语法](/windows/desktop/Debug/termination-handler-syntax)

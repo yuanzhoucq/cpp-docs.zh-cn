@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214941"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 辅助 Gopher 服务器的 Internet 文件搜索。  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING 如果可能，请重复使用现有连接到服务器的新`FindFile`请求，而不是创建新的会话的每个请求。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  在调用`FindFile`若要检索的第一个 gopher 对象，可以调用[FindNextFile](#findnextfile)检索后续 gopher 文件。  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
+ 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  获取当前文件的创建时间。  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>参数  
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含该文件的创建的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含该文件的创建的时间。  
   
  *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetCreationTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  获取上次访问指定的文件的时间。  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值如果不成功，则为 0。 `GetLastAccessTime` 仅当返回 0 [FindNextFile](#findnextfile)永远不会对此已调用`CGopherFileFind`对象。  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastAccessTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  获取已更改的文件的最后一个时间。  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>参数  
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，其中包含上次写入文件的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，其中包含上次写入文件的时间。  
   
  *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastWriteTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 在某些操作系统上返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  调用此成员函数要获取长度，以字节为单位的找到的文件。  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  找到的文件长度 （字节）。  
   
 ### <a name="remarks"></a>备注  
- `GetLength` 使用 Win32 结构[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)若要获取的文件大小的值以字节为单位。  
+ `GetLength` 使用 Win32 结构[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)若要获取的文件大小的值以字节为单位。  
   
 > [!NOTE]
 >  截至 MFC 7.0`GetLength`支持 64 位整数类型。 使用此较新版本的库生成的之前存在的代码可能会导致截断警告。  

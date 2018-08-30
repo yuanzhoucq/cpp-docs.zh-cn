@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215323"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 `CMFCColorButton`并[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)类一起用于实现颜色选取器控件。  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|一个布尔值。 如果为 TRUE，框架显示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)颜色对话框*其他*单击按钮时，或如果为 FALSE，系统颜色对话框。 默认值为 TRUE。 有关详细信息，请参阅[CMFCColorButton::EnableOtherButton](#enableotherbutton)。|  
 |`m_bAutoSetFocus`|一个布尔值。 如果为 TRUE，框架菜单显示时，或如果为 FALSE，不会更改焦点时设置焦点在颜色菜单上。 默认值为 TRUE。|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|指示是否为颜色按钮启用自定义模式。|  
-|`m_Color`|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含当前选定的颜色。|  
-|`m_ColorAutomatic`|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含当前所选的默认颜色。|  
-|`m_Colors`|一个[CArray](../../mfc/reference/carray-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含当前可用的颜色。|  
-|`m_lstDocColors`|一个[CList](../../mfc/reference/clist-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含当前文档种颜色。|  
+|`m_Color`|一个[COLORREF](/windows/desktop/gdi/colorref)值。 包含当前选定的颜色。|  
+|`m_ColorAutomatic`|一个[COLORREF](/windows/desktop/gdi/colorref)值。 包含当前所选的默认颜色。|  
+|`m_Colors`|一个[CArray](../../mfc/reference/carray-class.md)的[COLORREF](/windows/desktop/gdi/colorref)值。 包含当前可用的颜色。|  
+|`m_lstDocColors`|一个[CList](../../mfc/reference/clist-class.md)的[COLORREF](/windows/desktop/gdi/colorref)值。 包含当前文档种颜色。|  
 |`m_nColumns`|一个整数。 包含要颜色选择菜单中的颜色在网格中显示列的数。|  
 |`m_pPalette`|一个指向[CPalette](../../mfc/reference/cpalette-class.md)。 包含当前颜色选择菜单中的颜色。|  
 |`m_pPopup`|一个指向[CMFCColorPopupMenu 类](../../mfc/reference/cmfccolorpopupmenu-class.md)对象。 单击颜色按钮时显示颜色选择菜单。|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)   
  [CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [CPalette 类](../../mfc/reference/cpalette-class.md)   
  [CArray 类](../../mfc/reference/carray-class.md)   
  [CList 类](../../mfc/reference/clist-class.md)   

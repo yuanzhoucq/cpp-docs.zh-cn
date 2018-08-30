@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 422952ae459d6a6e4d9f768eb111c9c01cfbb5d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337455"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219737"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 类
 提供请求和读取 HTTP 服务器上文件的功能。  
@@ -130,7 +130,7 @@ BOOL AddRequestHeaders(
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含请求标头或标头来添加。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  `AddRequestHeaders` 将附加的自由格式的标头追加到 HTTP 请求句柄。 它被供需要细致的控制发送到 HTTP 服务器的确切请求的复杂客户端。  
@@ -197,10 +197,10 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>参数  
  *dwFlags*  
- 描述操作的标志。 适当的标记的列表，请参阅[HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) Windows SDK 中。  
+ 描述操作的标志。 适当的标记的列表，请参阅[HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) Windows SDK 中。  
   
  *lpBuffIn*  
- 指向一个初始化指针[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) ，描述用于该操作的输入的缓冲区。  
+ 指向一个初始化指针[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) ，描述用于该操作的输入的缓冲区。  
   
  *dwContext*  
  上下文标识符`CHttpFile`操作。 有关此参数的详细信息，请参阅备注。  
@@ -279,7 +279,7 @@ BOOL QueryInfo(
   
 - HTTP_QUERY_FLAG_REQUEST_HEADERS 通常情况下，应用程序在查询响应标头，但应用程序可以通过使用此标志来查询请求标头。  
   
-- 标头的值为日期/时间字符串，如"上次修改时间，"HTTP_QUERY_FLAG_SYSTEMTIME 此标志返回的标头值与标准 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)不需要为应用程序的结构分析的数据。 如果使用此标志，你可能想要使用`SYSTEMTIME`函数的重写。  
+- 标头的值为日期/时间字符串，如"上次修改时间，"HTTP_QUERY_FLAG_SYSTEMTIME 此标志返回的标头值与标准 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)不需要为应用程序的结构分析的数据。 如果使用此标志，你可能想要使用`SYSTEMTIME`函数的重写。  
   
 - 其值是一个数字，例如状态代码，这些标头的 HTTP_QUERY_FLAG_NUMBER 此标志为 32 位数字，返回的数据。  
   
@@ -301,10 +301,10 @@ BOOL QueryInfo(
  一个索引值。 请参阅*lpdwIndex*。  
   
  *pSysTime*  
- 一个指向 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
+ 一个指向 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`已成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
@@ -379,7 +379,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
  对状态代码的引用。 状态代码指示成功或失败的请求的事件。 请参阅**备注**的一系列状态代码说明。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`已成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  要在请求中发送的字节数。  
   
  *dwFlags*  
- 描述操作的标志。 适当的标记的列表，请参阅[HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) Windows SDK 中。  
+ 描述操作的标志。 适当的标记的列表，请参阅[HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) Windows SDK 中。  
   
  *dwContext*  
  上下文标识符`CHttpFile`操作。 有关此参数的详细信息，请参阅备注。  
   
  *lpBuffIn*  
- 指向一个初始化指针[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) ，描述用于该操作的输入的缓冲区。  
+ 指向一个初始化指针[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) ，描述用于该操作的输入的缓冲区。  
   
  *lpBuffOut*  
  指向介绍了用于该操作的输出缓冲区初始化 INTERNET_BUFFERS 指针。  

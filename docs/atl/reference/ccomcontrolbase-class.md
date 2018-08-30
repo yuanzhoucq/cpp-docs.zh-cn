@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208577"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 此类提供用于创建和管理 ATL 控件的方法。  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|以像素为单位的控件，以容器的坐标表示的位置。|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|以 HIMETRIC 为单位 （每个单位是 0.01 毫米） 的特定显示控件的范围。|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|控件以 HIMETRIC 为单位 （每个单位是 0.01 毫米） 的物理大小。|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|指向通知连接在容器上的直接指针 (该容器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|指向通知连接在容器上的直接指针 (该容器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|一个`CComDispatchDriver`对象，它允许您检索和设置容器的属性通过`IDispatch`指针。|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|指向控件的客户端站点容器中的指针。|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|提供了一种标准方法来保存数据对象之间的通知连接，以及建议接收器。|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|对容器的指针[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口指针。|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|对容器的指针[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)接口指针。|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|提供了一种方法来保存通知连接的标准实现。|  
   
 ## <a name="remarks"></a>备注  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果控件有窗口，`~CComControlBase`销毁它通过调用[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)。  
+ 如果控件有窗口，`~CComControlBase`销毁它通过调用[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)。  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  检索指向所请求的接口的指针。  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>参数  
  *ppFont*  
- 指向容器的环境[IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673)接口。  
+ 指向容器的环境[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)接口。  
   
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>参数  
  *ppFont*  
- 指向容器的环境[IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695)调度接口。  
+ 指向容器的环境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)调度接口。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 如果您将添加**自动调整大小**选项卡上[常用属性](../../atl/reference/stock-properties-atl-control-wizard.md)ATL 控件向导，该向导的选项卡自动在你的控件类中创建此数据成员、 创建 put 和 get 方法的属性并支持[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)属性发生更改时自动通知容器。  
+ 如果您将添加**自动调整大小**选项卡上[常用属性](../../atl/reference/stock-properties-atl-control-wizard.md)ATL 控件向导，该向导的选项卡自动在你的控件类中创建此数据成员、 创建 put 和 get 方法的属性并支持[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)属性发生更改时自动通知容器。  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  标志，指示`IDataObjectImpl::GetData`并`CComControlBase::GetZoomInfo`应设置从控件的大小`m_sizeNatural`而不是从`m_sizeExtent`。  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于值`m_bWndLess`和`m_bInPlaceSiteEx`标志。 (数据成员`m_bNegotiatedWnd`必须为 TRUE 的`m_spInPlaceSite`指针有效。)  
+ 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)接口，具体取决于值`m_bWndLess`和`m_bInPlaceSiteEx`标志。 (数据成员`m_bNegotiatedWnd`必须为 TRUE 的`m_spInPlaceSite`指针有效。)  
   
  如果`m_bWndLess`为 FALSE 并`m_bInPlaceSiteEx`为 TRUE，`m_spInPlaceSite`是`IOleInPlaceSiteEx`接口指针。 请参阅[m_spInPlaceSite](#m_spinplacesite)显示以下三个数据成员之间的关系的表。  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 通过检查此标志[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)和，如果为 TRUE，`SetExtent`通知查看更改的容器。 如果设置此标志，OLEMISC_RECOMPOSEONRESIZE 位[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)枚举还应设置。  
+ 通过检查此标志[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)和，如果为 TRUE，`SetExtent`通知查看更改的容器。 如果设置此标志，OLEMISC_RECOMPOSEONRESIZE 位[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)枚举还应设置。  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  指示自上次保存以来已更改控件的标记。  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于值`m_bWndLess`并[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)标志。 (数据成员[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必须为 TRUE 的[CComControlBase::m_spInPlaceSite](#m_spinplacesite)指针有效。)  
+ 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)接口，具体取决于值`m_bWndLess`并[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)标志。 (数据成员[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必须为 TRUE 的[CComControlBase::m_spInPlaceSite](#m_spinplacesite)指针有效。)  
   
  如果`m_bWndLess`为 TRUE 时，`m_spInPlaceSite`是`IOleInPlaceSiteWindowless`接口指针。 请参阅[CComControlBase::m_spInPlaceSite](#m_spinplacesite)显示这些数据成员之间的完成关系表。  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  可以将大小转换为全局函数的像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- 指向通知连接在容器上的直接指针 (该容器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。  
+ 指向通知连接在容器上的直接指针 (该容器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 数据对象是一个控件，可将数据传输，并实现[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)，其方法指定的数据格式和传输媒体。  
+ 数据对象是一个控件，可将数据传输，并实现[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)，其方法指定的数据格式和传输媒体。  
   
- 接口`m_spDataAdviseHolder`实现[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)并[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)建立和删除通知连接到容器的方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)接口。  
+ 接口`m_spDataAdviseHolder`实现[IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise)并[IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise)建立和删除通知连接到容器的方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)接口。  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- 对容器的指针[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口指针。  
+ 对容器的指针[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)接口指针。  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  若要使用此数据成员在你的控件类内，你必须将其声明为数据成员控件类中。 基类中联合中声明，因此，你的控件类不将从基类继承此数据成员。  
   
- 接口`m_spOleAdviseHolder`实现[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)并[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)建立和删除通知连接到容器的方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)接口。  
+ 接口`m_spOleAdviseHolder`实现[IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise)并[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise)建立和删除通知连接到容器的方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)接口。  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  重写此方法以绘制控件。  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>参数  
  *一个指针*  
- 建议标志，用于指定如何在调用[IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283)进行。 值取自[一个指针](http://msdn.microsoft.com/library/windows/desktop/ms693742)枚举。  
+ 建议标志，用于指定如何在调用[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)进行。 值取自[一个指针](/windows/desktop/api/objidl/ne-objidl-tagadvf)枚举。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `SendOnViewChange` 调用[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一的值*索引*目前支持为-1，指示感兴趣的是整个视图。  
+ `SendOnViewChange` 调用[IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange)。 唯一的值*索引*目前支持为-1，指示感兴趣的是整个视图。  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  设置或删除与该控件的键盘焦点。  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  如果该控件已成功接收到焦点，则将返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 对于有窗口控件，Windows API 函数[SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312)调用。 对于无窗口控件[IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745)调用。 通过此调用，无窗口控件获取键盘焦点，并能够响应窗口消息。  
+ 对于有窗口控件，Windows API 函数[SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312)调用。 对于无窗口控件[IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus)调用。 通过此调用，无窗口控件获取键盘焦点，并能够响应窗口消息。  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  设置的数据成员`m_bRequiresSave`中的值*bDirty*。  
