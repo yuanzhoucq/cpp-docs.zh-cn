@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900695"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132238"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
 
@@ -55,19 +55,19 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="constexpr-lambdas"></a>constexpr lambda
 
-现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf)。
+现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [C++ 中的常量表达式 lambda 表达式](cpp/lambda-expressions-constexpr.md)。
 
 ### <a name="if-constexpr-in-function-templates"></a>函数模板中的 if constexpr
 
-函数模板可能包含 `if constexpr` 语句，用于启用编译时创建分支。 有关详细信息，请参阅 [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html)。
+函数模板可能包含 `if constexpr` 语句，用于启用编译时创建分支。 有关详细信息，请参阅 [if constexpr 语句](cpp/if-else-statement-cpp.md#if_constexpr)。
 
 ### <a name="selection-statements-with-initializers"></a>具有初始化表达式的选择语句
 
-`if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的选择语句](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html)。
+`if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的 if 语句](cpp/if-else-statement-cpp.md#if_with_init)。
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] 和 [[nodiscard]] 属性
 
-不使用实体时不提示警告的新属性，或在放弃函数调用的返回值时创建一个警告的新属性。 有关详细信息，请参阅 [maybe_unused 属性的用词](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf)和 [unused、nodiscard 和 fallthrough 属性的建议](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)。
+不使用实体时不提示警告的新属性，或在放弃函数调用的返回值时创建一个警告的新属性。 有关详细信息，请参阅 [C++ 中的属性](cpp/attributes.md)。
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>不重复使用属性命名空间
 
@@ -75,11 +75,11 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="structured-bindings"></a>结构化绑定
 
-现在可以在单个声明中存储具有其各组件名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)。
+现在可以在单个声明中存储具有其各组件名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)和[从一个函数返回多个值](cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>枚举类值的构造规则
 
-现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
+现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)和[枚举](cpp/enumerations-cpp.md#no_enumerators)。
 
 ### <a name="capturing-this-by-value"></a>按值捕获 \*this
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+有关详细信息，请参阅[构造函数](cpp/constructors-cpp.md#inheriting_constructors)。
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17 扩展的聚合初始化
 
