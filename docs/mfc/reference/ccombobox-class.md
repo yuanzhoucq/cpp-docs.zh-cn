@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205282"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 提供 Windows 组合框功能。  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  如果不通过创建列表框[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，则字符串添加到列表的末尾。 否则为该字符串插入到列表中，并且对列表进行排序。  
   
 > [!NOTE]
->  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
  若要将一个字符串插入到列表中的特定位置，请使用[InsertString](#insertstring)成员函数。  
   
@@ -493,7 +493,7 @@ int Dir(
  如果返回值是大于或等于 0，它是最后一个文件名添加到列表中的从零开始的索引。 返回值是 CB_ERR，如果发生错误;如果没有足够空间可用于存储新字符串，返回值将为 CB_ERRSPACE。  
   
 ### <a name="remarks"></a>备注  
- 此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+ 此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  如果返回值是大于或等于 0，它是匹配项的从零开始的索引。 如果搜索未成功，则 CB_ERR。  
   
 ### <a name="remarks"></a>备注  
- 此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+ 此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>参数  
  *pcbi*  
- 一个指向[COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798)结构。  
+ 一个指向[COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo)消息，如 Windows SDK 中所述。  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  调用此成员函数以检索在组合框的列表框部分中的项的数目。  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>备注  
  提示文本是组合框控件的输入区域中显示的提示。 用户提供输入才显示提示文本。  
   
- 此方法将发送[CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)消息，Windows SDK 中所述。  
+ 此方法将发送[CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner)消息，Windows SDK 中所述。  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  调用此成员函数可确定选择哪一项组合框中。  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  如果发生错误的项或 CB_ERR 与关联的 32 位值。  
   
 ### <a name="remarks"></a>备注  
- 32 位值可以设置与*dwItemData*的参数[SetItemData](#setitemdata)成员函数调用。 使用`GetItemDataPtr`成员函数要检索的 32 位值是否为指针 ( **void\***)。  
+ 32 位值可以设置与*dwItemData*的参数[SetItemData](#setitemdata)成员函数调用。 使用`GetItemDataPtr`成员函数要检索的 32 位值是否为指针 (**void** <strong>\*</strong>)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- 检索与指定的组合框项作为指针关联的应用程序提供 32 位值 ( **void\***)。  
+ 检索与指定的组合框项作为指针关联的应用程序提供 32 位值 (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  当前的下拉列表中的可见项的最小数量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息，Windows SDK 中所述。  
+ 此方法将发送[CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)消息，Windows SDK 中所述。  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  检索在组合框的列表框部分中的第一个可见项的从零开始的索引。  
@@ -939,7 +939,7 @@ int InsertString(
  与不同[AddString](#addstring)成员函数`InsertString`成员函数不会导致与列表[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式进行排序。  
   
 > [!NOTE]
->  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>备注  
  提示文本是组合框控件的输入区域中显示的提示。 用户提供输入才显示提示文本。  
   
- 此方法将发送[CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897)消息，Windows SDK 中所述。  
+ 此方法将发送[CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_combobox*，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  从零开始的位置。 若要选择的编辑控件的第一个字符，则指定起始位置为 0。 若要选择的最后一个字符之后的字符是结束位置。 例如，若要选择的编辑控件的前四个字符，将使用的起始位置为 0 和 4 的结束位置。  
   
 > [!NOTE]
->  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  此函数不受 Windows`ComboBoxEx`控件。 有关此控件的详细信息，请参阅[ComboBoxEx 控件](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CComboBox::GetEditSel](#geteditsel)。  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- 设置与组合框，为指定的指针中的指定项关联的 32 位值 ( **void\***)。  
+ 设置与组合框，为指定的指针中的指定项关联的 32 位值 (**void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息，Windows SDK 中所述。  
+ 此方法将发送[CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_combobox*，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  

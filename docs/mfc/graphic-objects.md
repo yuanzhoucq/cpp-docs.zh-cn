@@ -1,5 +1,5 @@
 ---
-title: 图形对象 |Microsoft 文档
+title: 图形对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197180"
 ---
 # <a name="graphic-objects"></a>图形对象
 Windows 提供了各种可在设备上下文中使用的绘图工具。 它提供了用于绘制线条的笔、用于填充内部的画笔以及用于绘制文本的字体。 MFC 提供等效于 Windows 中的绘图工具的图形对象类。 下表显示可用类以及等效的 Windows 图形设备接口 (GDI) 句柄类型。  
   
 > [!NOTE]
->  有关详细信息，请参阅在 GDI + SDK 文档： [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
+>  有关详细信息，请参阅上的 GDI + SDK 文档： [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
   
  本文说明了这些图形对象类的用法：  
   
@@ -78,7 +78,7 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
->  类[CImage](../atl-mfc-shared/reference/cimage-class.md)提供增强的位图支持。  
+>  该类[中的 CImage](../atl-mfc-shared/reference/cimage-class.md)提供增强的位图支持。  
   
  类库中的每个图形对象类都具有一个构造函数，使你可以创建该类的图形对象，随后必须使用适当的创建函数（如 `CreatePen`）初始化这些对象。  
   
@@ -90,9 +90,9 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
   
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>在设备上下文中创建图形对象  
   
-1.  在堆栈帧上定义图形对象。 使用特定于类型的创建函数（如 `CreatePen`）初始化对象。 或者，在构造函数中初始化对象。 请参阅的讨论[一阶段和两阶段构造](../mfc/one-stage-and-two-stage-construction-of-objects.md)，其中提供了示例代码。  
+1.  在堆栈帧上定义图形对象。 使用特定于类型的创建函数（如 `CreatePen`）初始化对象。 或者，在构造函数中初始化对象。 请参阅的讨论[一阶段和两个阶段创建](../mfc/one-stage-and-two-stage-construction-of-objects.md)，其中提供了示例代码。  
   
-2.  [选择对象进入当前设备上下文](../mfc/selecting-a-graphic-object-into-a-device-context.md)以前, 保存的旧图形对象选择。  
+2.  [选择对象进入当前设备上下文](../mfc/selecting-a-graphic-object-into-a-device-context.md)之前, 选择了保存旧图形对象。  
   
 3.  处理了当前图形对象之后，选择旧图形对象返回设备上下文以还原其状态。  
   
@@ -101,7 +101,7 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
 > [!NOTE]
 >  如果重复使用图形对象，则可以分配它一次，然后在每次需要时选择它进入设备上下文中。 请务必在不再需要时删除这类对象。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   [图形对象的一阶段和两阶段构建](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   

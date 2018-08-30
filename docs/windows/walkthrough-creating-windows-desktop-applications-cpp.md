@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590289"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204733"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
 
@@ -219,7 +219,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    }
    ```
 
-   此函数将返回`HWND`，它是窗口的句柄。 句柄是某种程度上类似于 Windows 使用以跟踪打开的窗口的指针。 有关详细信息，请参阅[Windows 数据类型](https://msdn.microsoft.com/library/windows/desktop/aa383751)。
+   此函数将返回`HWND`，它是窗口的句柄。 句柄是某种程度上类似于 Windows 使用以跟踪打开的窗口的指针。 有关详细信息，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。
 
 1. 此时已创建窗口，但我们仍需要告诉 Windows，使其可见。 这是此代码的作用：
 
@@ -340,9 +340,9 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 1. 若要启用 `WndProc` 函数以处理应用程序收到的消息，请实现 switch 语句。
 
-   有一条重要的消息来处理[WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213)消息。 应用程序收到此消息，此时必须更新其显示窗口的一部分。 当用户将窗口移动您窗口的前面，然后将它重新移动消失时，会发生此事件。 你的应用程序不知道此类事件的发生时间;仅 Windows 知道，因此它会告诉您使用`WM_PAINT`。 当第一次显示窗口时，必须更新所有它。
+   有一条重要的消息来处理[WM_PAINT](/windows/desktop/gdi/wm-paint)消息。 应用程序收到此消息，此时必须更新其显示窗口的一部分。 当用户将窗口移动您窗口的前面，然后将它重新移动消失时，会发生此事件。 你的应用程序不知道此类事件的发生时间;仅 Windows 知道，因此它会告诉您使用`WM_PAINT`。 当第一次显示窗口时，必须更新所有它。
 
-   若要处理`WM_PAINT`消息，首先应调用[BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362)，然后处理所有的逻辑进行布局文本、 按钮和在窗口中，其他控件，然后调用[EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598)。 为此应用程序，开始调用和结束调用之间的逻辑是显示字符串"Hello，Windows 桌面 ！" “Hello，World!”。 在下面的代码，请注意[TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133)函数用于显示的字符串。
+   若要处理`WM_PAINT`消息，首先应调用[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然后处理所有的逻辑进行布局文本、 按钮和在窗口中，其他控件，然后调用[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 为此应用程序，开始调用和结束调用之间的逻辑是显示字符串"Hello，Windows 桌面 ！" “Hello，World!”。 在下面的代码，请注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函数用于显示的字符串。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
    `HDC` 在此代码是设备上下文，即 Windows 用来启用你的应用程序与图形子系统进行通信的数据结构的句柄。 `BeginPaint`和`EndPaint`函数确保你的应用程序的行为类似于一个好市民一样，但不超出其所需到更长时间使用的设备上下文。 这有助于确保图形子系统是可供其他应用程序。
 
-1. 应用程序通常会处理许多其他消息，例如[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)首先创建一个窗口，并[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)窗口关闭时。 以下代码显示基本但完整的 `WndProc` 函数。
+1. 应用程序通常会处理许多其他消息，例如[WM_CREATE](/windows/desktop/winmsg/wm-create)首先创建一个窗口，并[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)窗口关闭时。 以下代码显示基本但完整的 `WndProc` 函数。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb66d7435331124b4455c476c10986931b4c6e1d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 95eea7434fdaa12a6178ebd9648e8088b24b4dc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850044"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205943"
 ---
 # <a name="coledocument-class"></a>COleDocument 类
 支持可视编辑的 OLE 文档的基类。  
@@ -176,11 +176,11 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="remarks"></a>备注  
  此函数将更新打印目标设备的所有项，但不会刷新这些项的演示文稿缓存。 若要更新某个项的演示文稿缓存，请调用[COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)。  
   
- 此函数的参数包含 OLE 使用来标识目标设备的信息。 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)结构包含 Windows 用来初始化通用打印对话框信息。 用户关闭对话框后，Windows 将在此结构中返回有关用户的选择信息。 `m_pd`的成员[CPrintDialog](../../mfc/reference/cprintdialog-class.md)对象是`PRINTDLG`结构。  
+ 此函数的参数包含 OLE 使用来标识目标设备的信息。 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)结构包含 Windows 用来初始化通用打印对话框信息。 用户关闭对话框后，Windows 将在此结构中返回有关用户的选择信息。 `m_pd`的成员[CPrintDialog](../../mfc/reference/cprintdialog-class.md)对象是`PRINTDLG`结构。  
   
- 有关详细信息，请参阅[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK 中的结构。  
   
 ##  <a name="coledocument"></a>  COleDocument::COleDocument  
  构造 `COleDocument` 对象。  

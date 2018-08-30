@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206367"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 此类实现`IUnknown`聚合或非聚合对象。  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|委托`IUnknown`调用到未知的外部，如果对象聚合或`IUnknown`如果对象未聚合的对象。|  
   
 ## <a name="remarks"></a>备注  
- `CComPolyObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合或非聚合对象。  
+ `CComPolyObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)聚合或非聚合对象。  
   
  实例时`CComPolyObject`创建的外部值检查未知。 如果值为 NULL，`IUnknown`为非聚合对象实现。 如果未知的外部不为 NULL，`IUnknown`为聚合对象实现。  
   

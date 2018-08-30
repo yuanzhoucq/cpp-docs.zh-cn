@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd54c27f4208dce317d9c09720cb63b65af4a54b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e4e7776688fa95a81cd76e6db48f38f82bc076d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415736"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195289"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
@@ -109,20 +109,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vfprintf_p**和 **_vfwprintf_p**返回写入的字符数，不包括终止 null 字符或为负值，如果发生输出错误。
+**_vfprintf_p**并 **_vfwprintf_p**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数采用指向自变量列表，然后格式化和写入到给定的数据*流*。 这些函数与不同 **_vfprint_s**和 **_vfwprint_s**版本仅在于后者支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+每个函数采用一个指向参数列表，然后格式化和写入到给定的数据*流*。 这些函数与差异 **_vfprint_s**并 **_vfwprint_s**版本仅在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vfwprintf_p**是宽字符版本的 **_vprintf_p**; 如果在 ANSI 模式下打开流，则两个函数的行为完全相同。 **_vprintf_p**当前不支持输出到 UNICODE 流。
+**_vfwprintf_p**是宽字符版本 **_vprintf_p**; 如果在 ANSI 模式下打开流，则两个函数行为相同。 **_vprintf_p**当前不到 UNICODE 流支持输出。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果任一*流*或*格式*是 null 指针，或如果格式字符串包含无效格式字符，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果任一*流*或*格式*是 null 指针，或如果格式字符串包含无效格式字符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -133,7 +133,7 @@ int _vfwprintf_p_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_vfprintf_p**， **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vfwprintf_p**， **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

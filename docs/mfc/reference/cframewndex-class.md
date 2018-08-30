@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207819"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展了[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|创建框架后，由框架调用。|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|销毁框架时由框架调用。|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|当应用程序绘制与菜单项关联的图像时由框架调用。|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由框架调用时`CMFCPopupMenu`对象的进程[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息。|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由框架调用时`CMFCPopupMenu`对象的进程[WM_PAINT](/windows/desktop/gdi/wm-paint)消息。|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|桌面窗口管理器 (DWM) 组合已启用或禁用时由框架调用。|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|当帧停止移动或大小调整时由框架调用。|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|当帧调整大小，以设置窗口维度限制时，由框架调用。|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  句柄的结构包含多个窗口的位置。 .  
   
 ### <a name="remarks"></a>备注  
- 通过初始化 hdwp 结构[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)方法。  
+ 通过初始化 hdwp 结构[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)方法。  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  设置框架的菜单，然后更新其命令处理处于空闲状态时。  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>参数  
  [in]*lpMMI*  
- 指向[MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605)结构。  
+ 指向[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)结构。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>参数  
  [in]*nFlags*  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)。  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)。  
   
  [in]*点*  
  指定的 x 和指针的 y 坐标，相对于窗口的左上角。  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>参数  
  [in]*nFlags*  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)。  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)。  
   
  [in]*点*  
  指定的 x 和指针的 y 坐标，相对于窗口的左上角。  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>参数  
  [in]*nFlags*  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)。  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)。  
   
  [in]*点*  
  指定的 x 和 y 坐标相对于窗口的左上角的指针。  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  以屏幕坐标表示的指针的位置。  
   
 ### <a name="return-value"></a>返回值  
- 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+ 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>参数  
  [in]*nHitTest*  
- 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+ 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)。  
   
  [in]*点*  
  以屏幕坐标表示的指针的位置。  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>参数  
  [in]*wp*  
- 电源管理事件。 有关可能的值的列表，请参阅[WM_POWERBROADCAST 消息](http://msdn.microsoft.com/library/windows/desktop/aa373247)。  
+ 电源管理事件。 有关可能的值的列表，请参阅[WM_POWERBROADCAST 消息](/windows/desktop/Power/wm-powerbroadcast)。  
   
  [in]*lp*  
  未使用此参数。  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  为窗口的文本指针。  
   
 ### <a name="return-value"></a>返回值  
- 从调用返回值[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)。  
+ 从调用返回值[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>参数  
  [in]*n 类型*  
- 调整大小的类型。 有关可能的值，请参阅参数*wParam*中[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)。  
+ 调整大小的类型。 有关可能的值，请参阅参数*wParam*中[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)。  
   
  [in]*cx*  
  新帧的宽度以像素为单位。  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>参数  
  [in]*fwSide*  
- 移动的帧边缘。 请参阅参数*wParam*中[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)。  
+ 移动的帧边缘。 请参阅参数*wParam*中[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)。  
   
  [in、 out]*pRect*  
  指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](../../mfc/reference/rect-structure1.md)结构，其中包含框架的坐标。  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>参数  
  *dwData*  
- 取决于数据*nCmd*参数。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ 取决于数据*nCmd*参数。 有关可能的值的列表，请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)。  
   
  *nCmd*  
- 帮助命令。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ 帮助命令。 有关可能的值的列表，请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)。  
   
 ### <a name="remarks"></a>备注  
   

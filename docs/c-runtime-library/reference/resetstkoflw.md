@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08779311cc6a2ff0df622d69cf94ced07e67e9e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412408"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207571"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -60,9 +60,9 @@ int _resetstkoflw( void );
 
 ## <a name="remarks"></a>备注
 
-**_Resetstkoflw**函数从堆栈溢出的情况，从而使程序继续而不是失败并出现异常错误恢复。 如果 **_resetstkoflw**将不调用函数，在前一个异常后有任何受保护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。
+**_Resetstkoflw**函数从堆栈溢出的情况，从而使程序继续而不会出现致命异常错误中恢复。 如果 **_resetstkoflw**不调用函数，在前一个异常后没有任何保护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。
 
-如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](http://msdn.microsoft.com/library/windows/desktop/aa366549)。
+如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](/windows/desktop/Memory/creating-guard-pages)。
 
 当代码导致堆栈指针指向此页上的一个地址时，会发生异常，并且系统将执行以下三个操作：
 
@@ -84,7 +84,7 @@ int _resetstkoflw( void );
 
 请注意，此时堆栈不再具有保护页。 当程序下一次将堆栈增大到堆栈结尾（此处应有一个保护页）时，程序将在堆栈结尾之外写入并导致访问冲突。
 
-调用 **_resetstkoflw**还原保护页，只要在出现堆栈溢出异常后完成恢复。 此函数可以在主正文中的内调用从 **__except**块或外部 **__except**块。 但是，对于何时使用该函数有一些限制。 **_resetstkoflw**永远不应从调用：
+调用 **_resetstkoflw**只要恢复执行堆栈溢出异常后还原保护页。 此函数可以从调用的主体内部 **__except**块或外部 **__except**块。 但是，对于何时使用该函数有一些限制。 **_resetstkoflw**应永远不会从调用：
 
 - 筛选器表达式。
 
@@ -94,21 +94,21 @@ int _resetstkoflw( void );
 
 - **catch** 块。
 
-- A **__finally**块。
+- 一个 **__finally**块。
 
 在这些点上，堆栈尚未充分展开。
 
-堆栈溢出异常生成为结构化异常而不是 c + + 异常，因此 **_resetstkoflw**并不十分有用一个普通**捕获**进行阻止，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
+堆栈溢出异常生成为结构化异常而非 c + + 异常，因此 **_resetstkoflw**不是普通有用**捕获**阻止，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
 
 在 C++ catch 块中调用 **_resetstkoflw** 是不安全的，因为这是从通过结构化的异常转换器函数引发的异常到达的。 在这种情况下，不会释放堆栈空间，并且堆栈指针只有在 catch 块之外才会重置，即使已先于 catch 块对任何易损坏的对象调用析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 catch 块中应尽可能少地使用堆栈空间，因为在 catch 块自行尝试从上一个堆栈溢出中恢复时出现的堆栈溢出是不可恢复的，并且在 catch 块中的溢出触发其本身由同一个 catch 处理的异常时可能会导致程序停止响应。
 
 在某些情况下，即使在正确的位置（例如，在 **__except** 块中）使用 **_resetstkoflw**，它也会失败。 甚至在展开堆栈后，如果仍未留下足够的堆栈空间来执行 **_resetstkoflw**，而且未写入到堆栈的最后一页，则 **_resetstkoflw** 无法将堆栈的最后一页重置为保护页并且将返回 0（这指示失败）。 因此，此函数的安全用法应包括检查返回值而不是假定可安全使用堆栈。
 
-将不会捕获结构化的异常处理**STATUS_STACK_OVERFLOW**异常时应用程序编译与 **/clr** (请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)).
+将不会捕获结构化的异常处理**STATUS_STACK_OVERFLOW**与编译应用程序时出现异常 **/clr** (请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)).
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_resetstkoflw**|\<malloc.h>|
 
@@ -187,7 +187,7 @@ int main(int ac)
 }
 ```
 
-示例输出没有程序参数：
+没有程序参数输出的示例：
 
 ```Output
 loop #1
@@ -222,7 +222,7 @@ resetting stack overflow
 
 ### <a name="description"></a>描述
 
-下面的示例演示的推荐的用法 **_resetstkoflw**在其中将结构化的异常转换为 c + + 异常的程序。
+下面的示例演示的建议的用法 **_resetstkoflw**在程序中，将结构化的异常转换为 c + + 异常。
 
 ### <a name="code"></a>代码
 

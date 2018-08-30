@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 3） C4686 |Microsoft 文档
+title: 编译器警告 （等级 3） C4686 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202075"
 ---
 # <a name="compiler-warning-level-3-c4686"></a>编译器警告（等级 3）C4686
-**“**   
- ***用户定义类型*： 行为可能有更改，UDT 中的更改返回调用约定**  
-  
- 类模板专用化未返回类型中使用它之前定义。 实例化类的任何内容将解决此 C4686 警告;声明一个实例或访问成员 (C\<int >:: 任何内容) 也是选项。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 相反，请尝试以下  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+
+> '*用户定义类型*： 行为可能有更改，UDT 中的更改返回调用约定
+
+## <a name="remarks"></a>备注
+
+类模板专用化不是之前在返回类型用于定义。 实例化类的任何内容将解决此 C4686 警告;声明一个实例或访问成员 (C\<int >:: 任何内容) 还提供了选项。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+## <a name="example"></a>示例
+
+改为尝试以下：
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

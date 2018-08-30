@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199283"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -221,7 +221,7 @@ class CEdit : public CWnd
   
  如果您创建`CEdit`对象内一个窗口，您可能还需要将其销毁。 如果您创建`CEdit`对象在堆栈上被自动销毁。 如果您创建`CEdit`通过使用堆上的对象**新**函数，必须调用**删除**用户终止 Windows 时销毁该对象上编辑控件。 如果分配任何内存`CEdit`对象，请重写`CEdit`析构函数释放的分配。  
   
- 若要修改某些样式 （如 ES_READONLY) 的编辑控件中必须将特定消息发送到控件而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 请参阅[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK 中。  
+ 若要修改某些样式 （如 ES_READONLY) 的编辑控件中必须将特定消息发送到控件而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 请参阅[编辑控件样式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中。  
   
  有关详细信息`CEdit`，请参阅：  
   
@@ -252,7 +252,7 @@ BOOL CanUndo() const;
  如果可以通过调用撤消上一个编辑操作，非零值`Undo`成员函数; 如果无法撤消，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_CANUNDO](/windows/desktop/Controls/em-canundo) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::Undo](#undo)。  
@@ -289,7 +289,7 @@ int CharFromPos(CPoint pt) const;
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。  
   
- 有关详细信息，请参阅[EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
@@ -306,7 +306,7 @@ void Clear();
   
  若要删除当前所选内容并将已删除的内容放到剪贴板，请调用[剪切](#cut)成员函数。  
   
- 有关详细信息，请参阅[WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) Windows SDK 中。  
+ 有关详细信息，请参阅[WM_CLEAR](/windows/desktop/dataxchg/wm-clear) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
@@ -319,7 +319,7 @@ void Copy();
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) Windows SDK 中。  
+ 有关详细信息，请参阅[WM_COPY](/windows/desktop/dataxchg/wm-copy) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
@@ -354,7 +354,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  构造`CEdit`两个步骤中的对象。 首先，调用`CEdit`构造函数，然后调用`Create`，它创建 Windows 编辑控件并将其附加到`CEdit`对象。  
   
- 当`Create`执行时，Windows 将发送[WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635)， [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634)， [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619)，并且[WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626)在编辑控件的消息。  
+ 当`Create`执行时，Windows 将发送[WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate)， [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize)， [WM_CREATE](/windows/desktop/winmsg/wm-create)，并且[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)在编辑控件的消息。  
   
  默认情况下处理这些消息[OnNcCreate](cwnd-class.md#onnccreate)， [OnNcCalcSize](cwnd-class.md#onnccalcsize)， [OnCreate](cwnd-class.md#oncreate)，以及[OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，从派生类`CEdit`、 将消息映射添加到新的类，并重写上面的消息处理程序成员函数。 重写`OnCreate`，例如，若要执行的新类所需的初始化。  
   
@@ -385,7 +385,7 @@ void Cut();
   
  若要删除当前所选内容，而无需将已删除的文本放入剪贴板，请调用[清除](#clear)成员函数。  
   
- 有关详细信息，请参阅[WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) Windows SDK 中。  
+ 有关详细信息，请参阅[WM_CUT](/windows/desktop/dataxchg/wm-cut) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
@@ -402,7 +402,7 @@ void EmptyUndoBuffer();
   
  撤消标志将自动清除每当[SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)或[SetHandle](#sethandle) `CWnd`调用成员函数。  
   
- 有关详细信息，请参阅[EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
@@ -426,9 +426,9 @@ BOOL FmtLines(BOOL bAddEOL);
   
  如果仅将响应 Windows`CEdit`对象是一个多行编辑控件。  
   
- `FmtLines` 只会影响返回的缓冲区[GetHandle](#gethandle)和返回的文本[WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627)。 它将不会影响对内编辑控件中文本的显示。  
+ `FmtLines` 只会影响返回的缓冲区[GetHandle](#gethandle)和返回的文本[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext)。 它将不会影响对内编辑控件中文本的显示。  
   
- 有关详细信息，请参阅[EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
@@ -457,7 +457,7 @@ CString GetCueBanner() const;
  对于第二个重载[CString](../../atl-mfc-shared/using-cstring.md) ，包含提示文本，该方法是否成功; 否则为空字符串 ("")。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695)宏。  
+ 此方法将发送[EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext)宏。  
   
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
  调用此函数可确定的编辑控件中可见的最上面一行。  
@@ -470,7 +470,7 @@ int GetFirstVisibleLine() const;
  最顶层的可见行的从零开始的索引。 对于单行编辑控件，则返回值为 0。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
@@ -495,7 +495,7 @@ HLOCAL GetHandle() const;
 > [!NOTE]
 > `GetHandle` 不会使用 Windows 95/98。 如果调用`GetHandle`在 Windows 95/98，它将返回 NULL。 `GetHandle` 将按下 Windows NT 版本 3.51 及更高版本记录工作。  
   
- 有关详细信息，请参阅[EM_GETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761576) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578)消息，Windows SDK 中所述。  
+ 此方法将发送[EM_GETHILITE](/windows/desktop/Controls/em-gethilite)消息，Windows SDK 中所述。  
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  调用此成员函数可获取此文本限制`CEdit`对象。  
@@ -538,7 +538,7 @@ UINT GetLimitText() const;
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。  
   
- 有关详细信息，请参阅[EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
@@ -573,7 +573,7 @@ int GetLine(
 ### <a name="remarks"></a>备注  
  复制的行不包含 null 终止字符。  
   
- 有关详细信息，请参阅[EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETLINE](/windows/desktop/Controls/em-getline) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::GetLineCount](#getlinecount)。  
@@ -591,7 +591,7 @@ int GetLineCount() const;
 ### <a name="remarks"></a>备注  
  `GetLineCount` 只能处理由多行编辑控件。  
   
- 有关详细信息，请参阅[EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
@@ -612,7 +612,7 @@ DWORD GetMargins() const;
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。  
   
- 有关详细信息，请参阅[EM_GETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761590) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
@@ -630,7 +630,7 @@ BOOL GetModify() const;
 ### <a name="remarks"></a>备注  
  Windows 维护，该值指示是否已更改的编辑控件内容的内部标志。 编辑控件第一次创建，并还可以通过调用清除时清除此标志[SetModify](#setmodify)成员函数。  
   
- 有关详细信息，请参阅[EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
@@ -646,9 +646,9 @@ TCHAR GetPasswordChar() const;
  指定要显示而不是用户键入的字符的字符。 如果没有密码字符存在，则返回值为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 如果使用 ES_PASSWORD 样式创建编辑控件，支持控件的 DLL 将确定默认密码字符。 清单或[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)方法确定将哪个 DLL 支持编辑控件。 如果 user32.dll 支持编辑控件，默认密码字符是星号 (*，U + 002A)。 如果 comctl32.dll 版本 6 支持编辑控件的默认字符是黑色圆圈 （U + 25CF ●）。 详细了解哪些 DLL 和版本支持的公共控件，请参阅[Shell 和公共控件版本](http://msdn.microsoft.com/library/windows/desktop/bb776779)。  
+ 如果使用 ES_PASSWORD 样式创建编辑控件，支持控件的 DLL 将确定默认密码字符。 清单或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法确定将哪个 DLL 支持编辑控件。 如果 user32.dll 支持编辑控件，默认密码字符是星号 (*，U + 002A)。 如果 comctl32.dll 版本 6 支持编辑控件的默认字符是黑色圆圈 （U + 25CF ●）。 详细了解哪些 DLL 和版本支持的公共控件，请参阅[Shell 和公共控件版本](https://msdn.microsoft.com/library/windows/desktop/bb776779)。  
   
- 此方法将发送[EM_GETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761594)消息，Windows SDK 中所述。  
+ 此方法将发送[EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
@@ -669,7 +669,7 @@ void GetRect(LPRECT lpRect) const;
   
  可以通过修改多行编辑控件的格式设置矩形[SetRect](#setrect)并[SetRectNP](#setrectnp)成员函数。  
   
- 有关详细信息，请参阅[EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETRECT](/windows/desktop/Controls/em-getrect) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::LimitText](#limittext)。  
@@ -696,7 +696,7 @@ void GetSel(
  返回一个 dword 值的版本返回一个值，包含的高序位字中的选定内容结尾后的低序位字中的起始位置和未选定的第一个字符的位置。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[EM_GETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761598) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_GETSEL](/windows/desktop/Controls/em-getsel) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
@@ -712,7 +712,7 @@ BOOL HideBalloonTip();
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此函数发送[EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604)消息，Windows SDK 中所述。  
+ 此函数发送[EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip)消息，Windows SDK 中所述。  
   
 ##  <a name="limittext"></a>  CEdit::LimitText  
  调用此函数，以限制用户可以输入到编辑控件的文本的长度。  
@@ -731,7 +731,7 @@ void LimitText(int nChars = 0);
 > [!NOTE]
 >  在 Win32 中 （Windows NT 和 Windows 95/98） [SetLimitText](#setlimittext)替换此函数。  
   
- 有关详细信息，请参阅[EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
@@ -755,7 +755,7 @@ int LineFromChar(int nIndex = -1) const;
   
  此成员函数仅供多行编辑控件。  
   
- 有关详细信息，请参阅[EM_LINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761609) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
@@ -779,7 +779,7 @@ int LineIndex(int nLine = -1) const;
   
  此成员函数仅由多行编辑控件处理。  
   
- 有关详细信息，请参阅[EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
@@ -804,10 +804,10 @@ int LineLength(int nLine = -1) const;
   
  如果*n 行*参数是-1，返回值是未选定字符中包含所选的字符的行数。 例如，如果所选内容覆盖从一行到下一行末尾的八个字符的第四个字符，则返回值为 10。 它是三个字符的第一行和七个下一步。  
   
- TCHAR 类型有关的详细信息，请参阅中的表中的 TCHAR 一行[Windows 数据类型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
+ TCHAR 类型有关的详细信息，请参阅中的表中的 TCHAR 一行[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。  
   
 ### <a name="remarks"></a>备注  
- 此方法支持通过[EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613)消息，Windows SDK 中所述。  
+ 此方法支持通过[EM_LINELENGTH](/windows/desktop/Controls/em-linelength)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::LineIndex](#lineindex)。  
@@ -835,7 +835,7 @@ void LineScroll(
   
  `LineScroll` 可用于水平滚动过去的任意行的最后一个字符。  
   
- 有关详细信息，请参阅[EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::GetFirstVisibleLine](#getfirstvisibleline)。  
@@ -850,7 +850,7 @@ void Paste();
 ### <a name="remarks"></a>备注  
  仅当剪贴板包含 CF_TEXT 格式的数据插入数据。  
   
- 有关详细信息，请参阅[WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) Windows SDK 中。  
+ 有关详细信息，请参阅[WM_PASTE](/windows/desktop/dataxchg/wm-paste) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
@@ -875,7 +875,7 @@ CPoint PosFromChar(UINT nChar) const;
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。  
   
- 有关详细信息，请参阅[EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::LineFromChar](#linefromchar)。  
@@ -899,7 +899,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
   
  如果当前没有选定内容，在当前光标位置插入替换文本。  
   
- 有关详细信息，请参阅[EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::LineIndex](#lineindex)。  
@@ -931,7 +931,7 @@ BOOL SetCueBanner(
  如果该方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703)宏。  
+ 此方法将发送[EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused)宏。  
   
 ### <a name="example"></a>示例  
  下面的示例演示[CEdit::SetCueBanner](#setcuebanner)方法。  
@@ -947,7 +947,7 @@ void SetHandle(HLOCAL hBuffer);
   
 ### <a name="parameters"></a>参数  
  *hBuffer*  
- 包含的句柄的本地内存。 此句柄必须通过以前调用创建[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) Windows 函数使用 LMEM_MOVEABLE 标志。 假定内存包含以 null 结尾的字符串。 如果这不是这种情况，则已分配的内存的第一个字节应设置为 0。  
+ 包含的句柄的本地内存。 此句柄必须通过以前调用创建[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) Windows 函数使用 LMEM_MOVEABLE 标志。 假定内存包含以 null 结尾的字符串。 如果这不是这种情况，则已分配的内存的第一个字节应设置为 0。  
   
 ### <a name="remarks"></a>备注  
  然后，编辑控件将使用此缓冲区来存储当前显示的文本而不是分配自己的缓冲区。  
@@ -963,7 +963,7 @@ void SetHandle(HLOCAL hBuffer);
 > [!NOTE]
 > `GetHandle` 不会使用 Windows 95/98。 如果调用`GetHandle`在 Windows 95/98，它将返回 NULL。 `GetHandle` 将按下 Windows NT 版本 3.51 及更高版本记录工作。  
   
- 有关详细信息，请参阅[EM_SETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761641)， [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723)，并[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETHANDLE](/windows/desktop/Controls/em-sethandle)， [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)，并[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in]*ichEnd*|要突出显示的文本范围中的最后一个字符的从零开始索引。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643)消息，Windows SDK 中所述。  
+ 此方法将发送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)消息，Windows SDK 中所述。  
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  调用此成员函数以设置此文本限制`CEdit`对象。  
@@ -1005,7 +1005,7 @@ void SetLimitText(UINT nMax);
   
  此函数将替换[LimitText](#limittext)在 Win32 中。  
   
- 有关详细信息，请参阅[EM_SETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761647) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
@@ -1031,7 +1031,7 @@ void SetMargins(
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。  
   
- 有关详细信息，请参阅[EM_SETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761649) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
@@ -1050,7 +1050,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="remarks"></a>备注  
  修改的标志指示已修改的文本编辑控件中。 它将自动设置的每当用户更改的文本。 其值可能会检索与[GetModify](#getmodify)成员函数。  
   
- 有关详细信息，请参阅[EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::GetModify](#getmodify)。  
@@ -1073,9 +1073,9 @@ void SetPasswordChar(TCHAR ch);
   
  当`SetPasswordChar`调用成员函数时，`CEdit`将重绘所有可见的字符使用指定的字符*ch*。  
   
- 如果使用创建编辑控件[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式，默认密码字符设置为星号 ( **\***)。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
+ 如果使用创建编辑控件[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式，默认密码字符设置为星号 ( <strong>\*</strong>)。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
   
- 有关详细信息，请参阅[EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
@@ -1097,7 +1097,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="remarks"></a>备注  
  可以通过测试发现的当前设置[ES_READONLY](styles-used-by-mfc.md#edit-styles)中的返回值的标志[CWnd::GetStyle](cwnd-class.md#getstyle)。  
   
- 有关详细信息，请参阅[EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
@@ -1122,7 +1122,7 @@ void SetRect(LPCRECT lpRect);
   
  当`SetRect`调用时，编辑控件的文本还重新格式化和重新显示。  
   
- 有关详细信息，请参阅[EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETRECT](/windows/desktop/Controls/em-setrect) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
@@ -1149,7 +1149,7 @@ void SetRectNP(LPCRECT lpRect);
   
  此成员仅由多行编辑控件处理。  
   
- 有关详细信息，请参阅[EM_SETRECTNP](http://msdn.microsoft.com/library/windows/desktop/bb761659) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::SetRect](#setrect)。  
@@ -1183,7 +1183,7 @@ void SetSel(
  指定的结束位置。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[EM_SETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761661) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETSEL](/windows/desktop/Controls/em-setsel) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEdit::GetSel](#getsel)。  
@@ -1223,7 +1223,7 @@ BOOL SetTabStops(
   
  `SetTabStops` 不会自动刷新编辑窗口。 如果更改已在编辑控件中的文本的制表位，请调用[CWnd::InvalidateRect](cwnd-class.md#invalidaterect)重绘编辑窗口。  
   
- 有关详细信息，请参阅[EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663)并[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops)并[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CEditView::SetTabStops](ceditview-class.md#settabstops)。  
@@ -1245,16 +1245,16 @@ BOOL ShowBalloonTip(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pEditBalloonTip*|指向[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)结构描述的气球状提示。|  
+|[in]*pEditBalloonTip*|指向[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构描述的气球状提示。|  
 |[in]*lpszTitle*|包含标题的气球状提示的 Unicode 字符串指针。|  
 |[in]*lpszText*|包含气球状提示文本的 Unicode 字符串指针。|  
-|[in]*ttiIcon*|**INT**指定类型的图标的气球状提示相关联。 默认值为 TTI_NONE。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)结构。|  
+|[in]*ttiIcon*|**INT**指定类型的图标的气球状提示相关联。 默认值为 TTI_NONE。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此函数发送[EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707)宏。  
+ 此函数发送[EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip)消息，Windows SDK 中所述。 有关详细信息，请参阅[Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip)宏。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义一个变量， `m_cedit`，即用于访问当前的编辑控件。 此变量将在下一个示例中使用。  
@@ -1279,7 +1279,7 @@ BOOL Undo();
 ### <a name="remarks"></a>备注  
  撤消操作还可以撤消。 例如，可以还原已删除的文本与首次调用`Undo`。 只要没有干预编辑操作，可以删除再次通过第二个调用文本`Undo`。  
   
- 有关详细信息，请参阅[EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) Windows SDK 中。  
+ 有关详细信息，请参阅[EM_UNDO](/windows/desktop/Controls/em-undo) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  

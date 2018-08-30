@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200265"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 实现用于控制主框架窗口中停靠布局的核心功能。  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>参数  
  [in]*hdwp*  
- 指定延迟的窗口位置结构。 有关详细信息，请参阅 [Windows 数据类型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
+ 指定延迟的窗口位置结构。 有关详细信息，请参阅[Windows 数据类型](/windows/desktop/WinProg/windows-data-types)。  
   
 ### <a name="remarks"></a>备注  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个指向[智能停靠管理器](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)。  
+ 一个指向[智能停靠管理器](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)。  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  检索指向智能停靠管理器。  

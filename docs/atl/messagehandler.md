@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 74a5e50eae425340bcb0f9a455422b43db0be0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207105"
 ---
 # <a name="messagehandler"></a>消息处理程序
 `MessageHandler` 是由消息映射中的 MESSAGE_HANDLER 宏的第二个参数标识的名称。  
@@ -61,5 +61,5 @@ ms.locfileid: "37848397"
 ## <a name="see-also"></a>请参阅  
  [实现窗口](../atl/implementing-a-window.md)   
  [消息映射](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

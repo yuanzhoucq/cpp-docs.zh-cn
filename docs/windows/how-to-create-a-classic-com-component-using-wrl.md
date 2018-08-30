@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75111fc172b232c7e488e6a6f81bc696d09be939
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3844c0ad304c1ebd18a707ca1821b72b60e92707
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198014"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 创建传统型 COM 组件
 
@@ -38,7 +38,7 @@ Windows 运行时 c + + 模板库 (WRL) 可用于创建桌面应用程序，除�
 
    [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. 在 CalculatorComponent.cpp 中，定义 `CalculatorComponent` 类。 `CalculatorComponent`类继承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的类派生[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)而不[IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`仅适用于 Windows 运行时应用程序组件。)`CoCreatableClass`创建一个工厂可以如与函数一起使用的类[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
+5. 在 CalculatorComponent.cpp 中，定义 `CalculatorComponent` 类。 `CalculatorComponent`类继承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的类派生[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)而不[IInspectable](https://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`仅适用于 Windows 运行时应用程序组件。)`CoCreatableClass`创建一个工厂可以如与函数一起使用的类[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
 
    [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 

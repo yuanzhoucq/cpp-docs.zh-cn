@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205698"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 
@@ -25,7 +25,7 @@ ms.locfileid: "39209113"
 
 ## <a name="arm-exception-handling"></a>ARM 异常处理
 
-使用 ARM 上的 Windows*展开代码*控制堆栈展开期间[结构化异常处理](http://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 展开代码是存储在可执行映像的 .xdata 部分中的字节序列。 它们以抽象的方式描述了函数序言和尾声代码的操作，以便可以撤消函数序言的效果，从而准备展开调用方的堆栈帧。
+使用 ARM 上的 Windows*展开代码*控制堆栈展开期间[结构化异常处理](https://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 展开代码是存储在可执行映像的 .xdata 部分中的字节序列。 它们以抽象的方式描述了函数序言和尾声代码的操作，以便可以撤消函数序言的效果，从而准备展开调用方的堆栈帧。
 
 ARM EABI（嵌入应用程序二进制接口）指定使用展开代码的异常展开模式，但这对于在 Windows 中进行 SEH 展开是不够的，SEH 展开必须处理处理器位于函数序言或尾声中间的异步情况。 Windows 还将展开控制分为函数级展开和特定于语言范围展开，然而展开控制在 ARM EABI 中是统一的。 出于这些原因，ARM 上的 Windows 指定了有关展开数据和过程的详细信息。
 

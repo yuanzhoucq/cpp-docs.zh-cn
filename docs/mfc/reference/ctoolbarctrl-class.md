@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541195"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196585"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 提供 Windows 工具栏公共控件的功能。  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|检索的当前宽度和高度的工具栏按钮，以像素为单位。|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|检索当前的工具栏控件的配色方案。|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|检索工具栏控件使用于显示禁用的按钮的图像列表。|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|检索[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)工具栏控件的接口。|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|检索[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)工具栏控件的接口。|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|检索工具栏控件的扩展的样式。|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|检索工具栏控件用于显示"热"按钮的图像列表。 当鼠标指针位于其上方时突出显示热按钮。|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|检索在工具栏中的热项的索引。|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|设置指定的按钮按下时要发送到所有者窗口的命令标识符。|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|设置当前的工具栏控件的颜色方案。|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|将工具栏控件将使用的图像列表设置为显示禁用按钮。|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Win32 函数中设置标志[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)，用于根据标志的设置方式设置格式的指定矩形中绘制文本。|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Win32 函数中设置标志[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)，用于根据标志的设置方式设置格式的指定矩形中绘制文本。|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|设置工具栏控件的扩展的样式。|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|设置工具栏控件将显示"热"按钮的图像列表。|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|在工具栏中设置的热项。|  
@@ -386,7 +386,7 @@ int AddBitmap(
  如果成功，则第一个的新图像的从零开始的索引否则为-1。  
   
 ### <a name="remarks"></a>备注  
- 可以使用 Windows API [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467)映射之前添加到工具栏的位图的颜色。 如果传递一个指向`CBitMap`对象，则必须确保工具栏被销毁后，位图不销毁之前。  
+ 可以使用 Windows API [CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap)映射之前添加到工具栏的位图的颜色。 如果传递一个指向`CBitMap`对象，则必须确保工具栏被销毁后，位图不销毁之前。  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  将一个或多个按钮添加到工具栏控件。  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>备注  
  如果此方法成功，系统将显示在指定的按钮中指定的图像。  
   
- 此方法将发送[TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例将更改的位图**文件保存**的位图按钮**有关**按钮。  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如下所述**备注**。  
   
  *rect*  
- （可选） 指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ （可选） 指定工具栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
  指定工具栏控件的父窗口。 它不能为 NULL。  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED 很少  
   
- 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)的窗口样式说明 Windows SDK 中。  
+ 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)的窗口样式说明 Windows SDK 中。  
   
- （可选） 将应用的组合[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)，如 Windows SDK 中所述。  
+ （可选） 将应用的组合[常见控件样式](/windows/desktop/Controls/common-control-styles)，如 Windows SDK 中所述。  
   
- 将工具栏样式的组合应用于控件或按钮本身。 主题中所述样式[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK 中。  
+ 将工具栏样式的组合应用于控件或按钮本身。 主题中所述样式[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK 中。  
   
  若要使用扩展的工具栏样式，请调用[SetExtendedStyle](#setextendedstyle)调用后`Create`。 若要创建具有扩展的窗口样式的一个工具栏，请调用[CToolBarCtrl::CreateEx](#createex)而不是`Create`。  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
  指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如中所述**备注**一部分[创建](#create)。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。 `CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 TBSTYLE_EX_DRAWDDARROWS。 有关详细信息，请参阅中所述的样式[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK 中。  
+ 使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。 `CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 TBSTYLE_EX_DRAWDDARROWS。 有关详细信息，请参阅中所述的样式[工具栏扩展样式](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK 中。  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  构造 `CToolBarCtrl` 对象。  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  如果非零值，则启用定位点突出显示。 如果为零，定位点突出显示已禁用。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight)，如 Windows SDK 中所述。  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  检索与按钮在工具栏中关联的位图的索引。  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  返回位图，如果成功，则否则为零的索引。  
   
 ### <a name="remarks"></a>备注  
- 实现的功能[TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) Windows SDK 中。  
+ 实现的功能[TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) Windows SDK 中。  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  检索从工具栏的位图标志。  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  按钮标识符。  
   
  *ptbbi*  
- 一个指向[TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478)接收按钮信息的结构。  
+ 一个指向[TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa)接收按钮信息的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则按钮的从零开始的索引否则为-1。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo)，如 Windows SDK 中所述。  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  获取工具栏按钮的大小。  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  一个[CString](../../atl-mfc-shared/using-cstring.md) ，包含指定的按钮的显示文本。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext)消息，Windows SDK 中所述。  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  检索当前的工具栏控件的配色方案。  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|指向[要添加的配色](http://msdn.microsoft.com/library/windows/desktop/bb775502)结构，它接收的颜色方案信息。 此方法返回时，该结构描述的突出显示颜色和阴影颜色的工具栏控件。|  
+|[out]*lpColorScheme*|指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)结构，它接收的颜色方案信息。 此方法返回时，该结构描述的突出显示颜色和阴影颜色的工具栏控件。|  
   
 ### <a name="return-value"></a>返回值  
 如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme)消息，Windows SDK 中所述。  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  检索工具栏控件使用于显示禁用的按钮的图像列表。  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)对象，或者如果没有禁用的图像列表设置为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329)，如 Windows SDK 中所述。 MFC 实现`GetDisabledImageList`使用`CImageList`对象，包含工具栏控件的按钮映像，而不是图像列表的句柄。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist)，如 Windows SDK 中所述。 MFC 实现`GetDisabledImageList`使用`CImageList`对象，包含工具栏控件的按钮映像，而不是图像列表的句柄。  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- 检索[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)工具栏控件的接口。  
+ 检索[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)工具栏控件的接口。  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>参数  
  *ppDropTarget*  
- 一个指向[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)接口指针。 如果发生错误，则将为 NULL 指针放置在该地址。  
+ 一个指向[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)接口指针。 如果发生错误，则将为 NULL 指针放置在该地址。  
   
 ### <a name="return-value"></a>返回值  
  返回一个 HRESULT 值，指示成功或失败的操作。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETOBJECT](/windows/desktop/Controls/tb-getobject)，如 Windows SDK 中所述。  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  检索工具栏控件的扩展的样式。  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 表示当前正在使用工具栏控件的扩展的样式 DWORD。 有关样式的列表，请参阅[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)，Windows SDK 中。  
+ 表示当前正在使用工具栏控件的扩展的样式 DWORD。 有关样式的列表，请参阅[工具栏扩展样式](/windows/desktop/Controls/toolbar-extended-styles)，Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle)，如 Windows SDK 中所述。  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  检索工具栏控件用于显示"热"按钮的图像列表。 当鼠标指针位于其上方时突出显示热按钮。  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)对象，或者如果没有禁用的图像列表设置为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334)，如 Windows SDK 中所述。 当鼠标指针位于其上方时突出显示热按钮。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist)，如 Windows SDK 中所述。 当鼠标指针位于其上方时突出显示热按钮。  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  检索在工具栏中的热项的索引。  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  在工具栏中的热项的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem)，如 Windows SDK 中所述。  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  检索工具栏控件用于在其默认状态中显示按钮的图像列表。  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)对象，或者如果没有图像列表设置为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist)，如 Windows SDK 中所述。  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  检索当前插入标记的工具栏。  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>参数  
  *ptbim*  
- 一个指向[TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480)接收插入标记的结构。  
+ 一个指向[TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)接收插入标记的结构。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark)，如 Windows SDK 中所述。  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  检索用来绘制工具栏插入标记的颜色。  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  一个 COLORREF 值，该值包含当前插入标记颜色。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor)，如 Windows SDK 中所述。  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  检索工具栏控件中的按钮的边框。  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  要为其检索信息的按钮的从零开始索引。  
   
  *lpRect*  
- 地址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它接收的边框的坐标。  
+ 地址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它接收的边框的坐标。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>参数  
  *pSize*  
- 一个指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的项的大小。  
+ 一个指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的项的大小。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize)，如 Windows SDK 中所述。  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  检索的最大的工具栏按钮上显示的文本行数。  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>参数  
  *ptbm*  
- 一个指向[TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)的结构`CToolBarCtrl`对象。  
+ 一个指向[TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics)的结构`CToolBarCtrl`对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics)消息，如 Windows SDK 中所述。  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  检索当前的工具栏控件的水平和垂直填充。  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_GETPADDING](/windows/desktop/Controls/tb-getpadding)消息，Windows SDK 中所述。  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  检索当前的工具栏控件使用以表示处于按下状态的按钮的图像列表。  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  指向[CImageList](../../mfc/reference/cimagelist-class.md)其中包含当前控件，则为 NULL 的映像列表，如果没有此类图像列表设置。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist)消息，Windows SDK 中所述。  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  检索指定的工具栏按钮的边框。  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  按钮标识符。  
   
  *lpRect*  
- 一个指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。  
+ 一个指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为 TRUE；否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETRECT](/windows/desktop/Controls/tb-getrect)，如 Windows SDK 中所述。  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  检索由工具栏控件当前显示的按钮的行数。  
@@ -1158,7 +1158,7 @@ int GetString(
  如果成功，该字符串的长度则不为-1。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_GETSTRING](/windows/desktop/Controls/tb-getstring)，如 Windows SDK 中所述。  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  获取当前应用于工具栏控件的样式。  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个 dword 值，其中包含组成[工具栏控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，如 Windows SDK 中所述。  
+ 一个 dword 值，其中包含组成[工具栏控件样式](/windows/desktop/Controls/toolbar-control-and-button-styles)，如 Windows SDK 中所述。  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  如果任何，与工具栏控件相关联，请检索工具提示控件，句的柄。  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>参数  
  *ppt*  
- 一个指向[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含中的命中测试的 x 坐标`x`成员和 y 坐标的命中测试中`y`成员。 坐标是相对于工具栏的工作区。  
+ 一个指向[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含中的命中测试的 x 坐标`x`成员和 y 坐标的命中测试中`y`成员。 坐标是相对于工具栏的工作区。  
   
 ### <a name="return-value"></a>返回值  
  一个整数值，该值指示工具栏上的点的位置。 如果值为零或正数，则此返回值是点存在于 nonseparator 项的从零开始的索引。  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  如果返回值为负，点不位于其中一个按钮。 返回值的绝对值是分隔符项或最接近的 nonseparator 项的索引。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_HITTEST](/windows/desktop/Controls/tb-hittest)，如 Windows SDK 中所述。  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  隐藏或显示指定的按钮在工具栏控件中。  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>参数  
  *ppt*  
- 一个指向[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，其中包含了点击的测试协调，相对于客户端区域的工具栏。  
+ 一个指向[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，其中包含了点击的测试协调，相对于客户端区域的工具栏。  
   
  *ptbim*  
- 一个指向[TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480)接收插入标记信息的结构。  
+ 一个指向[TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)接收插入标记信息的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest)，如 Windows SDK 中所述。  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  确定工具栏控件中指定的按钮是否被选中。  
@@ -1415,7 +1415,7 @@ void LoadImages(
  程序实例句柄调用应用程序。 此参数可以是 HINST_COMMCTRL 加载标准映像列表。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages)，如 Windows SDK 中所述。  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  将快捷键字符映射到工具栏按钮。  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator)，如 Windows SDK 中所述。  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  在工具栏控件中设置给定按钮的突出显示状态。  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton)，如 Windows SDK 中所述。  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  将一个按钮从一个索引移到另一个。  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton)，如 Windows SDK 中所述。  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  按下或释放指定的按钮在工具栏控件中。  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>备注  
  如果你想要更改多个按钮的状态，请考虑调用[SetState](#setstate)相反。  
   
- 此方法将发送[TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton)消息，Windows SDK 中所述。  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  使用新的位图替换当前的工具栏控件中现有的位图。  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|指向[TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484)结构描述要替换的位图和新的位图。|  
+|[in]*pReplaceBitmap*|指向[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)结构描述要替换的位图和新的位图。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例使用不同的位图替换标准工具栏的位图。  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  以前的定位点设置。 如果启用了突出显示，此值不为零。 如果未启用突出显示，此值为零。  
   
 ### <a name="remarks"></a>备注  
- 此方法实现的 Win32 消息的行为[TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396)，如 Windows SDK 中所述。  
+ 此方法实现的 Win32 消息的行为[TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight)，如 Windows SDK 中所述。  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  设置要添加到工具栏控件的实际位图化图像的大小。  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  按钮标识符。  
   
  *ptbbi*  
- 一个指向[TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478)接收按钮信息的结构。  
+ 一个指向[TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa)接收按钮信息的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 成员函数可实现 Win32 消息的行为[TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413)，如 Windows SDK 中所述。  
+ 成员函数可实现 Win32 消息的行为[TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo)，如 Windows SDK 中所述。  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  工具栏控件中设置按钮的大小。  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth)，如 Windows SDK 中所述。  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  设置指定的按钮按下时将发送到所有者窗口的命令标识符。  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|指向[要添加的配色](http://msdn.microsoft.com/library/windows/desktop/bb775502)介绍突出显示颜色和阴影颜色的工具栏控件的结构。|  
+|[in]*lpColorScheme*|指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)介绍突出显示颜色和阴影颜色的工具栏控件的结构。|  
   
 ### <a name="remarks"></a>备注  
  如果 Windows Vista 视觉主题设置，则此方法无效。  
   
- 此方法将发送[TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例设置为当前的工具栏控件的颜色方案。 代码示例将右侧和底部边缘和红色的每个工具按钮的左侧和顶部边缘蓝色。 当用户按下按钮时，按钮的红色边缘变为蓝色和其蓝色边缘变为红色。  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)以前使用过显示禁用按钮图像的工具栏控件的对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423)，如 Windows SDK 中所述。 MFC 实现`SetDisabledImageList`使用`CImageList`对象，包含工具栏控件的禁用的按钮映像，而不是图像列表的句柄。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist)，如 Windows SDK 中所述。 MFC 实现`SetDisabledImageList`使用`CImageList`对象，包含工具栏控件的禁用的按钮映像，而不是图像列表的句柄。  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Win32 函数中设置标志[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)，用于根据标志的设置方式设置格式的指定矩形中绘制文本。  
+ Win32 函数中设置标志[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)，用于根据标志的设置方式设置格式的指定矩形中绘制文本。  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>参数  
  *dwMask*  
- 一个或多个 Win32 函数中指定的 DT_ 标志的组合[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)，，该值指示在这位*dwDTFlags*将绘制文本时使用。  
+ 一个或多个 Win32 函数中指定的 DT_ 标志的组合[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)，，该值指示在这位*dwDTFlags*将绘制文本时使用。  
   
  *dwDTFlags*  
  一个或多个 Win32 函数中指定的 DT_ 标志的组合`DrawText`，指示将如何绘制按钮文本。 此值传递给`DrawText`时绘制按钮文本。  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  包含上一个绘制的文本的 DWORD 标记。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425)，如 Windows SDK 中所述。 此成员函数的 Win32 函数中设置标志`DrawText`，它可根据标志的设置方式设置格式的指定矩形中绘制文本。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags)，如 Windows SDK 中所述。 此成员函数的 Win32 函数中设置标志`DrawText`，它可根据标志的设置方式设置格式的指定矩形中绘制文本。  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  设置工具栏控件的扩展的样式。  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  指定新的扩展的样式的值。 此参数可以是工具栏扩展样式的组合。  
   
 ### <a name="return-value"></a>返回值  
- 表示上一个扩展样式 DWORD。 有关样式的列表，请参阅[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)，Windows SDK 中。  
+ 表示上一个扩展样式 DWORD。 有关样式的列表，请参阅[工具栏扩展样式](/windows/desktop/Controls/toolbar-extended-styles)，Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle)，如 Windows SDK 中所述。  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  设置工具栏控件将显示"热"按钮的图像列表。  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)以前用由工具栏控件来显示热按钮图像的对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist)，如 Windows SDK 中所述。  
   
  MFC 实现`SetHotImageList`使用`CImageList`对象，包含工具栏控件的热按钮映像，而不是图像列表的句柄。 当指针位于其上方时突出显示热按钮。  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  上一热项，则为-1 如果没有任何热项的索引。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem)，如 Windows SDK 中所述。  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  设置工具栏将显示处于其默认状态的按钮的图像列表。  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)以前用由工具栏控件来显示其默认状态的按钮的图像的对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist)，如 Windows SDK 中所述。  
   
  MFC 实现`SetImageList`使用`CImageList`对象，包含工具栏控件的按钮映像，而不是图像列表的句柄。  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>参数  
  *ptbim*  
- 一个指向[TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480)结构，其中包含插入标记。  
+ 一个指向[TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)结构，其中包含插入标记。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark)，如 Windows SDK 中所述。  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  设置用于绘制的工具栏插入标记的颜色。  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  一个 COLORREF 值，该值包含以前的插入标记颜色。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor)，如 Windows SDK 中所述。  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  设置最大的工具栏按钮上显示的文本行数。  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>参数  
  *ptbm*  
- 一个指向[TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)的结构`CToolBarCtrl`对象。  
+ 一个指向[TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics)的结构`CToolBarCtrl`对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics)消息，如 Windows SDK 中所述。  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  设置工具栏控件的所有者窗口。  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  一个 dword 值，其低位字包含以前的水平填充值，而其高位字包含以前的垂直填充值。 以像素为单位测量的空白值。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_SETPADDING](/windows/desktop/Controls/tb-setpadding)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例将当前的工具栏控件的水平和垂直填充设置为 20 像素。  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  指向[CImageList](../../mfc/reference/cimagelist-class.md)如果不设置了任何此类图像列表包含当前控件，则为 NULL 的上一个图像列表。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453)消息，Windows SDK 中所述。  
+ 此方法将发送[TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例设置要默认图像列表相同的按下的图像列表。  
@@ -2011,7 +2011,7 @@ void SetRows(
  指示是否使用更多的行或更少的行，如果不能将工具栏大小调整至请求的行数。  
   
  *lpRect*  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收工具栏的新边框。  
+ 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收工具栏的新边框。  
   
 ### <a name="remarks"></a>备注  
  如果工具栏不能调整自身大小为请求的数或行中，它将调整自身大小为下一个更大或下一个较小有效的大小，具体取决于值*bLarger*。 如果*bLarger*为 TRUE 时，新的行数将大于请求的数目。 如果*bLarger*为 FALSE 时，新的行数会小于请求的数目。  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 一个 dword 值，其中包含组成[工具栏控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，如 Windows SDK 中所述。  
+ 一个 dword 值，其中包含组成[工具栏控件样式](/windows/desktop/Controls/toolbar-control-and-button-styles)，如 Windows SDK 中所述。  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  将工具提示控件与工具栏控件相关联。  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  不使用返回的值。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme)消息，如 Windows SDK 中所述。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)   

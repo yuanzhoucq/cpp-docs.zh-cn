@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cf41a5d827bd3834cffdd7d229d01d4a4889c9b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 396043d78ae1b93f7089d1518c26e982d0ad3974
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609997"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205107"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -36,7 +36,7 @@ ms.locfileid: "42609997"
 
 ## <a name="remarks"></a>备注
 
-**Defaultcollelem** c + + 属性具有相同的功能[defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 特性。
+**Defaultcollelem** c + + 属性具有相同的功能[defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL 特性。
 
 ## <a name="example"></a>示例
 

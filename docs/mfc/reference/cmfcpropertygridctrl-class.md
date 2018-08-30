@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541760"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205090"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|指示是否在 framework 重绘当前属性网格控件的名称和值列时用户调整列的大小。|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|指示属性网格控件的外观是否使用与.net 的样式。|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|指定如何显示修改后的属性。|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|从属性网格控件中删除所有属性对象。|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|还原所有属性的原始值。|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|设置或重置字母顺序模式。|  

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a472a100a03f8a03947eedb3aa8dc04edadb588
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202229"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -58,11 +58,11 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="remarks"></a>备注
 
-如果想要针对 CRT 堆调用 [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) 并启用低分片堆，请使用此函数。
+如果想要针对 CRT 堆调用 [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) 并启用低分片堆，请使用此函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 

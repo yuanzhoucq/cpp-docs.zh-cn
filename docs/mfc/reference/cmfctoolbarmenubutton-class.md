@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205140"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 类
 包含一个弹出菜单的工具栏按钮。  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|指定是否可以拖动按钮。 (重写[CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag)。)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|由框架调用以计算指定的设备上下文和停靠状态的按钮的大小。 (重写[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|由框架调用以处理[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)消息。 (重写[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode)。)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|由框架调用以处理[WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)消息。 (重写[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode)。)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|按钮插入到一个新的工具栏中时由框架调用。 (重写[CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|当用户单击鼠标按钮时由框架调用。 (重写[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|当用户选择某个项的弹出菜单中，由框架调用。|  

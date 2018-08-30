@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206887"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|重写以执行特定于应用程序空闲时处理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用以从文件打开文档。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|分析每个参数和命令行中的标志。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|处理命令行参数和标志。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|截获由应用程序的消息和命令处理程序引发的所有未处理的异常。|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>参数
 
 *pPrintDlg*  
-一个指向[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)结构。
+一个指向[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -912,7 +912,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary` 分配一个缓冲区，并返回其地址中的\* *ppData*。 调用方负责释放缓冲区使用**delete []**。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -953,7 +953,7 @@ UINT GetProfileInt(
 此成员函数不区分大小写，因此中的字符串*lpszSection*并*lpszEntry*写可能不同的参数。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -990,7 +990,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 重写`InitInstance`初始化在 Windows 下运行的应用程序的每个新实例。 通常情况下，重写`InitInstance`来构造您的主窗口对象和设置`CWinThread::m_pMainWnd`数据成员，使其指向该窗口。 重写此成员函数的详细信息，请参阅[CWinApp： 应用程序类](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。
+> MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。
 
 ### <a name="example"></a>示例
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 指向包含游标资源的名称的以 null 结尾的字符串。 可以使用`CString`为此参数。
 
 *nIDResource*  
-游标资源的 ID。 有关资源的列表，请参阅[LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) Windows SDK 中。
+游标资源的 ID。 有关资源的列表，请参阅[LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -1152,7 +1152,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 可以使用[LoadStandardIcon](#loadstandardicon)或[LoadOEMIcon](#loadoemicon)成员函数来访问预定义的 Windows 图标。
 
 > [!NOTE]
-> 此成员函数将调用 Win32 API 函数[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，其中只能加载 SM_CXICON 和 SM_CYICON 系统指标值符合其大小的图标。
+> 此成员函数将调用 Win32 API 函数[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，其中只能加载 SM_CXICON 和 SM_CYICON 系统指标值符合其大小的图标。
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>参数
 
 *lpszIconName*  
-指定预定义的 Windows 图标清单常量标识符。 这些标识符是在 WINDOWS 中定义的。H. 预定义的可能值及其说明的列表，请参阅*lpIconName*中的参数[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) Windows SDK 中。
+指定预定义的 Windows 图标清单常量标识符。 这些标识符是在 WINDOWS 中定义的。H. 预定义的可能值及其说明的列表，请参阅*lpIconName*中的参数[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 应用程序名称可以来自参数传递给[CWinApp](#cwinapp)构造函数，或者，如果未指定，到使用 AFX_IDS_APP_TITLE ID 的资源字符串。 如果在资源中找不到应用程序名称，它将来自该程序。EXE 文件名。
 
-全局函数返回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 是类型的公共变量**const char\***。
+全局函数返回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果你将值赋给`m_pszAppName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>备注
 
-与不同[m_pszAppName](#m_pszappname)，此名称不能包含空格。 `m_pszExeName` 是类型的公共变量**const char\***。
+与不同[m_pszAppName](#m_pszappname)，此名称不能包含空格。 `m_pszExeName` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果你将值赋给`m_pszExeName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，框架初始化`m_pszHelpFilePath`到与应用程序的名称"。HLP"追加。 若要更改的帮助文件的名称，设置`m_pszHelpFilePath`以指向包含所需的帮助文件的完整名称的字符串。 若要执行此操作方便位置是在应用程序的[InitInstance](#initinstance)函数。 `m_pszHelpFilePath` 是类型的公共变量**const char\***。
+默认情况下，框架初始化`m_pszHelpFilePath`到与应用程序的名称"。HLP"追加。 若要更改的帮助文件的名称，设置`m_pszHelpFilePath`以指向包含所需的帮助文件的完整名称的字符串。 若要执行此操作方便位置是在应用程序的[InitInstance](#initinstance)函数。 `m_pszHelpFilePath` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果你将值赋给`m_pszHelpFilePath`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>备注
 
-`m_pszProfileName` 是类型的公共变量**const char\***。
+`m_pszProfileName` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果你将值赋给`m_pszProfileName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
+重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 句柄[DEVNAMES](../../mfc/reference/devnames-structure.md)标识驱动程序、 设备和特定打印机的输出端口名称的结构。
 
 *hDevMode*  
-句柄[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构，它指定有关设备初始化和环境的打印机信息。
+句柄[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)结构，它指定有关设备初始化和环境的打印机信息。
 
 *bFreeOld*  
 释放以前选定的打印机。
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 指定其他数据。 使用的值取决于的值*nCmd*参数。
 
 *nCmd*  
-指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 函数。
+指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 函数。
 
 ### <a name="remarks"></a>备注
 

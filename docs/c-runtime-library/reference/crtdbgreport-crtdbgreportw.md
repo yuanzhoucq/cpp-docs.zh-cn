@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572154"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204418"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
 
@@ -108,8 +108,8 @@ int _CrtDbgReportW(
 
 |报告模式|报告文件|**_CrtDbgReport**， **_CrtDbgReportW**行为|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|不适用|使用 Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API 写入消息。|
-|**_CRTDBG_MODE_WNDW**|不适用|调用 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API 创建消息框，以显示该消息以及“ **中止**”、“**重试**”和“**忽略**”按钮。 如果用户单击**中止**， **_CrtDbgReport**或 **_CrtDbgReport**立即中止。 如果用户单击“**重试**”，它将返回 1。 如果用户单击**忽略**，则继续执行并 **_CrtDbgReport**并 **_CrtDbgReportW**返回 0。 请注意，在存在错误条件时单击“**忽略**”通常会导致“未定义的行为”。|
+|**_CRTDBG_MODE_DEBUG**|不适用|使用 Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API 写入消息。|
+|**_CRTDBG_MODE_WNDW**|不适用|调用 Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API 创建消息框，以显示该消息以及“ **中止**”、“**重试**”和“**忽略**”按钮。 如果用户单击**中止**， **_CrtDbgReport**或 **_CrtDbgReport**立即中止。 如果用户单击“**重试**”，它将返回 1。 如果用户单击**忽略**，则继续执行并 **_CrtDbgReport**并 **_CrtDbgReportW**返回 0。 请注意，在存在错误条件时单击“**忽略**”通常会导致“未定义的行为”。|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|用户提供将消息写入**处理**，使用 Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API 而不会验证文件句柄的有效性; 应用程序负责打开报告文件并传递有效的文件句柄。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|将消息写入**stderr**。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|将消息写入**stdout**。|

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4188c099e676ba58b0194953110fc2e62e8aced8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959633"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204914"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 结构
 
@@ -57,7 +57,7 @@ struct iterator_traits {
 
 - `reference`： 的同义词`Iterator::reference`。
 
-部分专用化决定与类型 **Type \*** 或常量 **Type \*** 关联的关键类型。
+部分专用化决定与类型的对象指针相关联的关键类型**类型** <strong>\*</strong>或**const 类型** <strong>\*</strong>.
 
 在此实现中，还可使用几个不会使用部分专用化的模板函数：
 

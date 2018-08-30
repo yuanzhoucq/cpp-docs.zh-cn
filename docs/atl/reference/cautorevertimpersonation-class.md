@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885316"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196314"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 类
 此类将恢复[CAccessToken](../../atl/reference/caccesstoken-class.md) nonimpersonating 状态时超出范围的对象。  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|检索访问令牌当前与此对象相关联。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows NT 或 Windows 2000 系统。 这些访问令牌可以用来表示`CAccessToken`类。  
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows NT 或 Windows 2000 系统。 这些访问令牌可以用来表示`CAccessToken`类。  
   
  此外，有时需要模拟访问令牌。 为方便起见，提供此类，但它不执行模拟的访问令牌;它只能执行到 nonimpersonated 状态自动还原操作。 这是因为令牌访问模拟可以执行多种不同的方式。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>请参阅  
  [ATLSecurity 示例](../../visual-cpp-samples.md)   
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)   
  [类概述](../../atl/atl-class-overview.md)

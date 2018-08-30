@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200289"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
@@ -100,18 +100,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>返回值
 
-**_vscprintf_p**返回如果就会产生指向的字符串自变量列表的字符数打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf_p**对宽字符执行相同的功能。
+**_vscprintf_p**返回，如果将生成指向的字符串自变量列表的字符数是打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf_p**对于宽字符执行相同的功能。
 
 ## <a name="remarks"></a>备注
 
-这些函数与不同 **_vscprintf**和 **_vscwprintf**仅在于它们支持指定使用参数的顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+这些函数与差异 **_vscprintf**并 **_vscwprintf**仅在于它们支持指定参数的使用顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
-如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
 
 > [!IMPORTANT]
-> 确保，如果*格式*为用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型参数。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保，如果*格式*是用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型的参数。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -122,7 +122,7 @@ int _vscwprintf_p _l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_vscprintf_p**， **_vscprintf_p_l**|\<stdio.h>|
 |**_vscwprintf_p**， **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|

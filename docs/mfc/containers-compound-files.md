@@ -1,5 +1,5 @@
 ---
-title: 容器： 复合文件 |Microsoft 文档
+title: 容器： 复合文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33a50c36bf41b8685c711cf6fb2e3797787a5b3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206946"
 ---
 # <a name="containers-compound-files"></a>容器：复合文件
 本文介绍了复合文件的组件和实现以及在 OLE 应用程序中使用复合文件的优缺点。  
@@ -46,7 +46,7 @@ ms.locfileid: "36930220"
   
 -   存储对象（如目录）可以包含其他存储和流对象。  
   
--   `LockBytes` 对象表示的存储对象和物理硬件之间的接口。 它们确定实际字节如何写入任何存储设备`LockBytes`访问对象，例如硬盘或全局内存的区域。 有关详细信息`LockBytes`对象和`ILockBytes`接口，请参阅*OLE 程序员参考*。  
+-   `LockBytes` 对象表示存储对象和物理硬件之间的接口。 它们确定实际字节如何写入任何存储设备`LockBytes`访问对象，例如硬盘或全局内存的区域。 有关详细信息`LockBytes`对象和`ILockBytes`接口，请参阅*OLE 程序员参考*。  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 复合文件的优点和缺点  
  复合文件提供了之前的文件存储方式不具备的好处。 它们包括：  
@@ -79,10 +79,10 @@ ms.locfileid: "36930220"
   
  影响性能的另一个问题是复合文件碎片。 复合文件的大小由文件使用的第一个和最后一个磁盘扇区之间的差异确定。 零碎的文件可包含可用空间中不包含数据、但在计算大小时会进行计数的许多区域。 在复合文件的生存期内，这些区域将通过插入或删除存储对象来创建。  
   
-##  <a name="_core_using_compound_files_format_for_your_data"></a> 使用复合文件格式为你的数据  
+##  <a name="_core_using_compound_files_format_for_your_data"></a> 使用复合文件格式的数据  
  在成功创建文档类派生自 `COleDocument` 的应用程序之后，确保您的主文档构造函数调用 `EnableCompoundFile`。 应用程序向导创建 OLE 容器应用程序之后，将为您插入此调用。  
   
- 在*OLE 程序员参考*，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)， [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015)，和[ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238)。  
+ 在中*OLE 程序员参考*，请参阅[IStream](/windows/desktop/api/objidl/nn-objidl-istream)， [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage)，以及[ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes)。  
   
 ## <a name="see-also"></a>请参阅  
  [容器](../mfc/containers.md)   

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208184"
 ---
 # <a name="queryinterface"></a>QueryInterface
-虽然有依据对象可以表示它提供以静态方式 （它实例化之前） 的功能的机制，但基本的 COM 机制是使用`IUnknown`方法调用[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。  
+虽然有依据对象可以表示它提供以静态方式 （它实例化之前） 的功能的机制，但基本的 COM 机制是使用`IUnknown`方法调用[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。  
   
  每个接口派生自`IUnknown`，因此每个接口的实现`QueryInterface`。 无论实现中，此方法将查询使用向其调用方想指针的接口的 IID 的对象。 如果对象支持该接口`QueryInterface`同时调用检索指向接口的指针`AddRef`。 否则，它将返回 E_NOINTERFACE 错误代码。  
   
@@ -34,5 +34,5 @@ ms.locfileid: "38953416"
   
 ## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
- [在对象中导航的 QueryInterface:](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [在对象中导航的 QueryInterface:](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201200"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 类
 表示通常在浮动工具条周围出现的半高框架窗口。  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  指定的扩展的样式`CMiniFrameWnd`正在创建。 应用的任何[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)到窗口。  
   
  *lpClassName*  
- 指向以 null 结尾的字符串命名的 Windows 类 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名可以是任何名称注册到全局[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函数或任何预定义的控件类名称。 它不能为 NULL。  
+ 指向以 null 结尾的字符串命名的 Windows 类 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名可以是任何名称注册到全局[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函数或任何预定义的控件类名称。 它不能为 NULL。  
   
  *lpWindowName*  
  指向包含窗口名称的以 null 结尾的字符字符串。  

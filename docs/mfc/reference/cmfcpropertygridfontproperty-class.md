@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208861"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 类
 `CMFCPropertyGridFileProperty`类支持用于打开字体选择对话框中的属性列表控件项。  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  逻辑字体结构，它指定字体的属性。  
   
  [in]*dwFontDialogFlags*  
- 应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*的参数[CHOOSEFONT 结构](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
+ 应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*的参数[CHOOSEFONT 结构](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
   
  [in]*lpszDescr*  
  字体属性的说明。 默认值为 NULL。  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个指向[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)描述所选的字体的结构。  
+ 一个指向[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)描述所选的字体的结构。  
   
 ### <a name="remarks"></a>备注  
   

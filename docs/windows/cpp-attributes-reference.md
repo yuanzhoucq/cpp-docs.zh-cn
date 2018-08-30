@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72ee57a4556bc8e6e761db0ea96f7b312d9948d9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201923"
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 
@@ -48,7 +48,7 @@ Microsoft 定义一的组属性，用于简化 COM 编程和.NET Framework 公�
 [特性化的编程](../windows/attributed-programming-concepts.md)  
 提供属性的概念性概述。
 
-[参考](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+[参考](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
 提供一些链接，它们指向描述 C 和 C++ 语言参考、Visual C++ 随附的库、Visual C++ 扩展性对象模型和 Microsoft 宏汇编 (MASM) 的主题。
 
 [Visual C++ 示例](../visual-cpp-samples.md)  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338820"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205458"
 ---
 # <a name="cevent-class"></a>CEvent 类
 表示一个事件，这是支持一个线程通知另一个事件发生的同步对象。  
@@ -113,7 +113,7 @@ CEvent(
  `CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。  
   
  *lpsaAttribute*  
- 事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+ 事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  访问或释放`CEvent`对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，并调用其[锁](../../mfc/reference/csinglelock-class.md#lock)并[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。  
@@ -121,7 +121,7 @@ CEvent(
  若要更改的状态`CEvent`对象为终止状态 （线程不必等待），调用[SetEvent](#setevent)或[PulseEvent](#pulseevent)。 若要设置的状态`CEvent`为非终止的对象 （线程必须等待），调用[ResetEvent](#resetevent)。  
   
 > [!IMPORTANT]
->  在创建后`CEvent`对象，请使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体的位置不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。  
+>  在创建后`CEvent`对象，请使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体的位置不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  设置要发出信号的事件的状态 （可用）、 释放任何正在等待的线程，并将其重置为非终止 （不可用） 自动。  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  如果没有线程处于等待状态，或没有线程可以立即释放`PulseEvent`到事件状态设置非终止，并返回。  
   
- `PulseEvent` 使用基础 Win32`PulseEvent`函数，可暂时从等待状态的内核模式下异步过程调用。 因此，`PulseEvent`不可靠，因此不应通过新的应用程序。 有关详细信息，请参阅[PulseEvent 函数](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
+ `PulseEvent` 使用基础 Win32`PulseEvent`函数，可暂时从等待状态的内核模式下异步过程调用。 因此，`PulseEvent`不可靠，因此不应通过新的应用程序。 有关详细信息，请参阅[PulseEvent 函数](/windows/desktop/api/winbase/nf-winbase-pulseevent)。  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  设置的状态的事件信号之前显式设置为终止通过[SetEvent](#setevent)成员函数。  

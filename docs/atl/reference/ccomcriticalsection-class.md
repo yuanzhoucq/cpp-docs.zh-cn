@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b5957d55ae75723331e35984b9ab3c8e34c4fa78
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204953"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 类
 此类提供方法用于获取并释放关键节对象的所有权。  
@@ -84,7 +84,7 @@ CComCriticalSection() throw();
  集[m_sec](#m_sec)数据成员为 NULL。  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- 调用 Win32 函数[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，其中初始化中包含的关键部分对象[m_sec](#m_sec)数据成员。  
+ 调用 Win32 函数[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)，其中初始化中包含的关键部分对象[m_sec](#m_sec)数据成员。  
   
 ```
 HRESULT Init() throw();
@@ -94,7 +94,7 @@ HRESULT Init() throw();
  如果成功，E_OUTOFMEMORY 或 E_FAIL 失败时返回 S_OK。  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- 调用 Win32 函数[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，哪个等待线程可以获得中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。  
+ 调用 Win32 函数[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，哪个等待线程可以获得中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。  
   
 ```
 HRESULT Lock() throw();
@@ -114,7 +114,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- 调用 Win32 函数[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)，以释放使用中包含的关键部分对象的所有资源[m_sec](#m_sec)数据成员。  
+ 调用 Win32 函数[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)，以释放使用中包含的关键部分对象的所有资源[m_sec](#m_sec)数据成员。  
   
 ```
 HRESULT Term() throw();
@@ -127,7 +127,7 @@ HRESULT Term() throw();
  一次`Term`已调用的关键部分不能再用于同步。  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- 调用 Win32 函数[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，该版本中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。  
+ 调用 Win32 函数[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，该版本中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。  
   
 ```
 HRESULT Unlock() throw();

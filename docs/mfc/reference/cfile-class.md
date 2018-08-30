@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203051"
 ---
 # <a name="cfile-class"></a>CFile 类
 Microsoft 基础类文件类的基类。  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  基础文件的标题。  
   
 ### <a name="remarks"></a>备注  
- 此方法调用[GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)检索文件的标题。 如果成功，该方法将返回系统将使用要向用户显示的文件的名称的字符串。 否则，该方法会调用[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)检索基础文件的文件名称 （包括文件扩展名）。 因此，文件扩展名将始终是字符串中未包含返回的文件标题。 有关详细信息，请参阅[GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)并[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) Windows SDK 中。  
+ 此方法调用[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)检索文件的标题。 如果成功，该方法将返回系统将使用要向用户显示的文件的名称的字符串。 否则，该方法会调用[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)检索基础文件的文件名称 （包括文件扩展名）。 因此，文件扩展名将始终是字符串中未包含返回的文件标题。 有关详细信息，请参阅[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)并[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) Windows SDK 中。  
   
  若要返回整个文件的路径，包括名称、 调用[GetFilePath](#getfilepath)。 若要返回只是文件的名称，请调用[GetFileName](#getfilename)。  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator 句柄  
- 使用此运算符传递的句柄`CFile`对象传递给函数如[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)并[GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320)的预期`HANDLE`。  
+ 使用此运算符传递的句柄`CFile`对象传递给函数如[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)并[GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)的预期`HANDLE`。  
   
 ```  
 operator HANDLE() const;  

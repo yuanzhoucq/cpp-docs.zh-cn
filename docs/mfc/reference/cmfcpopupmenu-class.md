@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540580"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204207"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
 实现 Windows 弹出菜单功能，并通过添加可拖曳菜单和工具提示等功能进行扩展。
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  否则为 FALSE 启用声音，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 如果启用声音，框架将调用[PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)方法，当用户打开一个弹出菜单，或选择菜单命令。 默认情况下启用此功能。  
+ 如果启用声音，框架将调用[PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound)方法，当用户打开一个弹出菜单，或选择菜单命令。 默认情况下启用此功能。  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17f50f5e4fb8b9330a09d4964aa99fbf01f4b34d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849322"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206966"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 与[CRichEditView](../../mfc/reference/cricheditview-class.md)并[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。  
@@ -84,7 +84,7 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>参数  
  *preo*  
- 指向[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，客户端项为空。  
+ 指向[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，客户端项为空。  
   
  *pContainer*  
  指向将包含此项的容器文档的指针。 如果*pContainer*为 NULL，必须显式调用[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)若要将此客户端项目添加到文档。  
@@ -92,10 +92,10 @@ CRichEditCntrItem(
 ### <a name="remarks"></a>备注  
  此函数不执行任何 OLE 初始化。  
   
- 有关详细信息，请参阅[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的结构。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 调用此函数可同步设备方面[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，此`CRichEditCntrltem`到指定的*reo*。  
+ 调用此函数可同步设备方面[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)，此`CRichEditCntrltem`到指定的*reo*。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,10 +103,10 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>参数  
  *reo*  
- 引用[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)结构描述 OLE 项。  
+ 引用[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) Windows SDK 中。  
+ 有关详细信息，请参阅[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例写字板](../../visual-cpp-samples.md)   

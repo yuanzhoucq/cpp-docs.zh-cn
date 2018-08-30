@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883669"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206910"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
 此类提供一个 Windows 线程的创建函数。 如果该线程不会使用的 CRT 函数，请使用此类。  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|（静态）调用此函数可创建不应使用的 CRT 函数的线程。|  
   
 ## <a name="remarks"></a>备注  
- 线程特征是线程的为特定类型提供创建函数的类。 创建函数将具有与 Windows 相同的签名和语义[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。  
+ 线程特征是线程的为特定类型提供创建函数的类。 创建函数将具有与 Windows 相同的签名和语义[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)函数。  
   
  以下类使用线程特征：  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out]成功后，接收新创建的线程的线程 ID 的 DWORD 变量的地址。  
   
 ### <a name="return-value"></a>返回值  
- 在失败时返回的新创建的线程或为 NULL 的图柄。 调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要获得扩展错误信息。  
+ 在失败时返回的新创建的线程或为 NULL 的图柄。 调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)若要获得扩展错误信息。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)有关此函数的参数的详细信息。  
+ 请参阅[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)有关此函数的参数的详细信息。  
   
  此函数将调用`CreateThread`创建的线程。  
   

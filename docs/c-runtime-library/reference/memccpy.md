@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199535"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,17 +70,17 @@ void *_memccpy(
 
 ## <a name="return-value"></a>返回值
 
-如果字符*c*复制， **_memccpy**将指针返回到在 char *dest*紧跟字符。 如果*c*不复制，则它将返回**NULL**。
+如果字符*c*复制 **_memccpy**将指针返回到 char *dest*紧跟在字符。 如果*c*不复制，则它将返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Memccpy**函数将复制的 0 个或多个字符*src*到*dest*，停止时字符*c*已复制，或者当*计数*已复制字符、 为准第一个。
+**_Memccpy**函数将复制的 0 或更多个字符*src*到*dest*，终止字符*c*已复制，或者当*计数*已复制的字符，具体取决于第一个。
 
-**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> 或 \<string.h>|
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d458fb5805b99c8dcc5cc25abc9f85f88f08e92
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b3f866d56d0c0ab89a91b13e238d9503c1ca9e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957642"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205070"
 ---
 # <a name="connection-points-classes"></a>连接点类
 以下类提供支持的连接点：  
@@ -31,7 +31,7 @@ ms.locfileid: "38957642"
   
 -   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)实现连接点。  
   
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)实现连接点表示[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接口。  
+-   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)实现连接点表示[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)接口。  
   
 -   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)管理不受限制的连接点和其接收器之间的连接。  
   

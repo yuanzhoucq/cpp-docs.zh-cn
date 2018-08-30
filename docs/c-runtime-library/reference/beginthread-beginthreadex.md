@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572641"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206392"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -93,7 +93,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 要传递给一个新线程，参数列表或**NULL**。
 
 *安全性*<br/>
-指向 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*是**NULL**，不能继承句柄。 必须是**NULL** Windows 95 应用程序。
+指向 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*是**NULL**，不能继承句柄。 必须是**NULL** Windows 95 应用程序。
 
 *initflag*<br/>
 控制新线程的初始状态的标志。 设置*initflag*为 0 以立即运行，或**CREATE_SUSPENDED**创建的线程处于挂起状态; 使用[ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)来执行此线程。 设置*initflag*到**STACK_SIZE_PARAM_IS_A_RESERVATION**若要使用的标志*stack_size*如初始保留以字节为单位的堆栈大小; 如果此标志为未指定， *stack_size*指定提交大小。
@@ -131,7 +131,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 可以调用[_endthread](endthread-endthreadex.md)或 **_endthreadex**显式以终止线程; 但是， **_endthread**或者 **_endthreadex**称为将自动当线程返回从作为参数传递的例程。 终止线程通过调用 **_endthread**或 **_endthreadex**有助于确保正确恢复为线程分配的资源。
 
-**_endthread**会自动关闭线程句柄，而 **_endthreadex**却没有。 因此，当你使用 **_beginthread**并 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。 该行为与 Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API 不同。
+**_endthread**会自动关闭线程句柄，而 **_endthreadex**却没有。 因此，当你使用 **_beginthread**并 **_endthread**，不要显式关闭线程句柄通过调用 Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。 该行为与 Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API 不同。
 
 > [!NOTE]
 > 对于与 Libcmt.lib 链接的可执行文件，不要调用 Win32 **ExitThread** API，以便您不会阻止运行时系统回收已分配资源。 **_endthread**并 **_endthreadex**回收分配的线程资源，然后调用**ExitThread**。
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread、_endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit、_Exit、_exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

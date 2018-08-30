@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882106"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203866"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 类
-此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。  
+此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)分离式接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|一个`CComContainedObject`对象派生自您分离式的类 (该类`contained`)。|  
   
 ## <a name="remarks"></a>备注  
- `CComCachedTearOffObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。 此类不同于`CComTearOffObject`在于`CComCachedTearOffObject`都有自己`IUnknown`、 独立于所有者对象`IUnknown`（所有者为正在为其分离式创建的对象）。 `CComCachedTearOffObject` 保留自己的引用计数在其`IUnknown`和将自身删除后其引用计数为零。 但是，如果其分开的任何查询接口，所有者对象的引用计数`IUnknown`将递增。  
+ `CComCachedTearOffObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)分离式接口。 此类不同于`CComTearOffObject`在于`CComCachedTearOffObject`都有自己`IUnknown`、 独立于所有者对象`IUnknown`（所有者为正在为其分离式创建的对象）。 `CComCachedTearOffObject` 保留自己的引用计数在其`IUnknown`和将自身删除后其引用计数为零。 但是，如果其分开的任何查询接口，所有者对象的引用计数`IUnknown`将递增。  
   
  如果`CComCachedTearOffObject`对象实现分离式已实例化，并为同样，相同的查询分离式接口`CComCachedTearOffObject`对象将重复使用。 相反，如果分离式接口由实现`CComTearOffObject`所有者对象中，通过再次查询的另一个`CComTearOffObject`将实例化。  
   

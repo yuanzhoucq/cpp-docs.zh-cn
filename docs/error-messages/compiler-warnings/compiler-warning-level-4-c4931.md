@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 4） C4931 |Microsoft 文档
+title: 编译器警告 （等级 C4931 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f77d30a7e7d2386404c02c1b72cc30309bb6876c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20e39eda9f06330a84243634eba28fc9d351cafe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201537"
 ---
 # <a name="compiler-warning-level-4-c4931"></a>编译器警告（等级 4）C4931
-我们假定类型库是为 number 位指针生成的  
-  
- 与未提供显式信息**ptrsize**属性[#import](../../preprocessor/hash-import-directive-cpp.md)指令; 编译器结论，指针大小的类型库是***数***。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+> 我们假定类型库为生成*数*-位指针
+
+与未提供显式信息**ptrsize**的属性[#import](../../preprocessor/hash-import-directive-cpp.md)指令; 编译器得出的结论是，类型库的指针大小是*数*。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。

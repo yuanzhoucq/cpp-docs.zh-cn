@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539371"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196377"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 实现停靠的菜单栏。  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  应使用此函数，而不是[CMFCMenuBar::Create](#create)时想要指定除工具栏样式的样式。 一些常用的其他样式是 TBSTYLE_TRANSPARENT 和 CBRS_TOP。  
   
- 有关其他样式的列表，请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)，并[常见窗口样式](http://msdn.microsoft.com/library/windows/desktop/ms632600)。  
+ 有关其他样式的列表，请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)，[常见控件样式](/windows/desktop/Controls/common-control-styles)，并[常见窗口样式](https://msdn.microsoft.com/library/windows/desktop/ms632600)。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`CreateEx`方法的`CMFCMenuBar`类。 此代码片段属于[IE 演示示例](../../visual-cpp-samples.md)。  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>参数  
  [in]*lpLogFont*  
- 一个指向[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)结构，它定义要设置的字体。  
+ 一个指向[LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)结构，它定义要设置的字体。  
   
  [in]*bHorz*  
  如果你想为 TRUE *lpLogFont*参数，以使用垂直字体，FALSE，如果想要用于水平字体。  

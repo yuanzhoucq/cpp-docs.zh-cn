@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203023"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **命名空间：** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First 方法
-返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。  
+返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。  
   
 ### <a name="syntax"></a>语法  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  UnorderedMapView::Size 方法
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的元素。  
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 中的元素。  
   
 ### <a name="syntax"></a>语法  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  UnorderedMapView 的类型名称。  
   
  `H`  
- 可以为键生成哈希值的函数对象。 默认情况下[std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)类型的`std::hash`支持。  
+ 可以为键生成哈希值的函数对象。 默认情况下[std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104)类型的`std::hash`支持。  
   
  `P`  
  提供可比较两个键以确定其相等性的函数对象的类型。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  

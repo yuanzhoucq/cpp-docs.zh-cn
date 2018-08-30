@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901083"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200141"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |名称|描述|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构。 提供对基本属性表参数访问。|
+|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)结构。 提供对基本属性表参数访问。|
 
 ## <a name="remarks"></a>备注
 
 属性表组成`CPropertySheet`对象和一个或多个[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象。 框架显示属性表为具有一组选项卡索引和区域，其中包含当前所选的页面的窗口。 用户导航到特定页通过使用相应的选项卡。
 
-`CPropertySheet` 提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 和 Windows NT 2000 中引入的结构。 该结构包含其他标志和支持使用"水印"背景位图的成员。
+`CPropertySheet` 提供对扩展的支持[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) Windows 98 和 Windows NT 2000 中引入的结构。 该结构包含其他标志和支持使用"水印"背景位图的成员。
 
 若要在属性表对象中自动显示这些新映像，对的调用中传递的位图和调色板映像的有效值[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ CTabCtrl* GetTabControl() const;
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-其成员存储的特征的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。
+其成员存储的特征的结构[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)。
 
 ### <a name="remarks"></a>备注
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*  
-指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它包含对话框中要转换的坐标。
+指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它包含对话框中要转换的坐标。
 
 ### <a name="remarks"></a>备注
 
 对话框单位是派生自的平均宽度和高度用于对话框文本的字体中字符的当前对话框基本单位根据所述。 一个水平单元是一个第四个对话框基本宽度单位 （） 的一个垂直的单位的八分之一对话框基本高度单元。
 
-[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 函数将返回系统字体的大小信息，但如果在资源定义文件中使用 DS_SETFONT 样式，则可以指定每个属性页不同的字体。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows 函数，在 Windows SDK 中，将会介绍此对话框为使用合适的字体。
+[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows 函数将返回系统字体的大小信息，但如果在资源定义文件中使用 DS_SETFONT 样式，则可以指定每个属性页不同的字体。 [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) Windows 函数，在 Windows SDK 中，将会介绍此对话框为使用合适的字体。
 
 `MapDialogRect`成员函数将替换中的对话框单元*lpRect*与屏幕单位 （像素），使该矩形可以用于创建一个对话框，或将控件放在一个框。
 
@@ -683,9 +683,9 @@ n 按钮： 标识按钮按下。 此参数可以是下列值之一：
 
 ### <a name="remarks"></a>备注
 
-请参阅[PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597)有关 Windows SDK Pressbutton 消息详细信息。
+请参阅[PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton)有关 Windows SDK Pressbutton 消息详细信息。
 
-调用`PressButton`将不会发送[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)框架在属性页中的通知。 若要发送此通知，请调用[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
+调用`PressButton`将不会发送[PSN_APPLY](/windows/desktop/Controls/psn-apply)框架在属性页中的通知。 若要发送此通知，请调用[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
 
 ### <a name="example"></a>示例
 

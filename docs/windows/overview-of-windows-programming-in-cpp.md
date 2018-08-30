@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206712"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -58,7 +58,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 ##  <a name="BK_Native"></a> 桌面和服务器应用程序
 
-若要了解桌面 Windows 客户端应用程序的基础知识，请参阅 [使用 C++ 开发 Windows 应用程序](http://msdn.microsoft.com/vstudio//hh304489) 和 [使用 C++ 的 Windows 编程介绍](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
+若要了解桌面 Windows 客户端应用程序的基础知识，请参阅[c + + 中开发 Windows 应用程序](https://msdn.microsoft.com/vstudio//hh304489)并[c + + 中 Windows 编程介绍](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
 
 在 Windows 10 中，您可以使用 Visual c + + 创建多种桌面程序：
 

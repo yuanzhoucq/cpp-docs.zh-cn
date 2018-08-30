@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 3） C4638 |Microsoft 文档
+title: 编译器警告 （等级 3） C4638 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9481820e540b70b7ab119fc9418b9c9e32fa3afd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29febc17f041fee27064fc085896c892eecd5c56
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198227"
 ---
 # <a name="compiler-warning-level-3-c4638"></a>编译器警告（等级 3）C4638
-XML 文档注释目标：引用未知符号“symbol”  
-  
- 编译器无法解析符号 (***symbol***)。 该符号在编译中必须有效。  
-  
- 下面的示例生成 C4638：  
-  
-```  
-// C4638.cpp  
-// compile with: /clr /doc /LD /W3  
-using namespace System;  
-  
-/// Text for class MyClass.  
-public ref class MyClass {   
-public:  
-   /// <summary> Text </summary>  
-   /// <see cref="aSymbolThatAppearsNowhereInMyProject"/>  
-   // Try the following line instead:  
-   // /// <see cref="System::Console::WriteLine"/>  
-   void MyMethod() {}  
-};   // C4638  
+
+> XML 文档注释目标： 引用未知符号*符号*
+
+## <a name="remarks"></a>备注
+
+编译器无法解析符号 (*符号*)。 该符号在编译中必须有效。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4638：
+
+```cpp
+// C4638.cpp
+// compile with: /clr /doc /LD /W3
+using namespace System;
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <summary> Text </summary>
+   /// <see cref="aSymbolThatAppearsNowhereInMyProject"/>
+   // Try the following line instead:
+   // /// <see cref="System::Console::WriteLine"/>
+   void MyMethod() {}
+};   // C4638
 ```

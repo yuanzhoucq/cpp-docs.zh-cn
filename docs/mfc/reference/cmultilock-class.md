@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849868"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198107"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 类
 表示多线程程序中用于控制对多个资源的访问的访问控制机制。  
@@ -128,7 +128,7 @@ DWORD Lock(
  指定是否必须在同一时间在返回之前收到信号等待的所有对象。 如果为 FALSE，`Lock`等待的对象之一发出的信号时，将返回。  
   
  *dwWakeMask*  
- 指定允许中止在等待其他条件。 此参数的可用选项的完整列表，请参阅[MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) Windows SDK 中。  
+ 指定允许中止在等待其他条件。 此参数的可用选项的完整列表，请参阅[MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  如果`Lock`失败，则返回-1。 如果成功，则返回以下值之一：  

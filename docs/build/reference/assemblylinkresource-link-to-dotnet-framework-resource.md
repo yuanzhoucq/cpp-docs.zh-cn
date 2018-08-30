@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE （链接到.NET Framework 资源） |Microsoft 文档
+title: -ASSEMBLYLINKRESOURCE （链接到.NET Framework 资源） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374045"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206483"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE（链接到 .NET Framework 资源）
 ```  
@@ -38,17 +38,17 @@ ms.locfileid: "32374045"
  希望从程序集链接到的 .NET Framework 资源文件。  
   
 ## <a name="remarks"></a>备注  
- /ASSEMBLYLINKRESOURCE 选项创建到.NET Framework 资源链接到输出文件; 中资源文件不位于输出文件中。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)将资源文件嵌入到输出文件中。  
+ /ASSEMBLYLINKRESOURCE 选项创建指向.NET Framework 资源的链接在输出文件中。资源文件不会放入输出文件。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)将资源文件嵌入到输出文件中。  
   
- 链接的资源是公共的中创建链接器时，该程序集。  
+ 链接的资源则是公有的程序集时使用链接器创建的。  
   
- /ASSEMBLYLINKRESOURCE 要求编译包含[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE 不允许。  
+ /ASSEMBLYLINKRESOURCE 要求编译包括[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)不允许使用 /ASSEMBLYLINKRESOURCE。  
   
- 如果*filename*是.NET Framework 创建的资源文件，例如，通过[Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，它可以访问其成员保持**System.Resources**命名空间。 有关详细信息，请参阅[System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**System.Reflection.Assembly**类在运行时访问资源。  
+ 如果*文件名*是.NET Framework 创建的资源文件，例如，通过[Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间。 有关详细信息，请参阅[System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。  
   
- *filename*可以是任何文件格式。 例如，你可能想要使本机 DLL 是程序集的一部分，以便它可以安装到全局程序集缓存并且从程序集中的托管代码访问。  
+ *文件名*可以是任何文件格式。 例如，你可能想要使程序集的本机 DLL 部分，以便它可以安装到全局程序集缓存并从程序集中的托管代码访问。  
   
- 影响程序集生成其他链接器选项包括：  
+ 影响的程序集生成其他链接器选项有：  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   

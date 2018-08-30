@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540586"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201454"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 当用户按住顶层工具栏按钮时显示的工具栏。  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|（重写 `CMFCToolBar::OnSendCommand`。）|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80)。)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80)。)|  
   
 ### <a name="remarks"></a>备注  
  一个`CMFCDropDownToolBar`对象将弹出菜单的行为与相结合的可视外观的工具栏。 当用户按下并包含一个下拉工具栏按钮 (请参阅[CMFCDropDownToolbarButton 类](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))、 下拉工具栏将出现，并且用户可以通过滚动到并释放鼠标从下拉列表工具栏中选择一个按钮按钮。 用户在下拉工具栏中选择某个按钮后，该按钮显示为顶层工具栏上的当前按钮。  

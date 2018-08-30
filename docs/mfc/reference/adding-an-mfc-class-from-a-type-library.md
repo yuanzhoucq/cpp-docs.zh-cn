@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662754ae4f0f95160f18682f35eb2f7951e7e344
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 656d5c357874a7b470eb2fd630c91ad0aefa5a0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026547"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205368"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>从类型库添加 MFC 类
 使用此向导创建 MFC 类从可用的类型库中的接口。 可以将 MFC 类添加到 [MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "39026547"
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要从类型库添加 MFC 类  
   
-1.  在上述**解决方案资源管理器**或[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击你想要将类添加的项目的名称。  
+1.  在上述**解决方案资源管理器**或[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击你想要将类添加的项目的名称。  
   
 2.  从快捷菜单中，单击“添加”，然后单击“添加类”。  
   

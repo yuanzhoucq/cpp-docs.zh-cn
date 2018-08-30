@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202390"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -837,7 +837,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="remarks"></a>备注
 
-此方法调用[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)它会返回 S_OK 之前。
+此方法调用[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)它会返回 S_OK 之前。
 
 重写此方法在派生类来实现自定义行为。
 
@@ -1619,7 +1619,7 @@ HRESULT TaskDialogCallback(
 |TDN_CREATED|未使用。|未使用。|
 |TDN_NAVIGATED|未使用。|未使用。|
 |TDN_BUTTON_CLICKED|命令按钮控件 id。|未使用。|
-|TDN_HYPERLINK_CLICKED|未使用。|一个[LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751)结构，它包含的链接。|
+|TDN_HYPERLINK_CLICKED|未使用。|一个[LPCWSTR](/windows/desktop/WinProg/windows-data-types)结构，它包含的链接。|
 |TDN_TIMER|时间 （毫秒） 以来`CTaskDialog`创建或已重置计时器。|未使用。|
 |TDN_DESTROYED|未使用。|未使用。|
 |TDN_RADIO_BUTTON_CLICKED|单选按钮 id。|未使用。|

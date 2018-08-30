@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205808"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First 方法
 
-返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。
+返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。
 
 ### <a name="syntax"></a>语法
 
@@ -223,7 +223,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)并[CollectionChange 枚举](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)并[CollectionChange 枚举](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
@@ -247,7 +247,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
 
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的元素。
+返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的元素。
 
 ### <a name="syntax"></a>语法
 

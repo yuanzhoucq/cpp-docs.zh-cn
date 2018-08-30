@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9e098890a90b76da8452fb2a2ca86222b49c296
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198250"
 ---
 # <a name="deriving-a-class-from-cobject"></a>从 CObject 派生类
 本文介绍从派生类所需的最小步骤[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`类文章介绍了利用特定于所需的步骤`CObject`序列化和诊断的调试支持等功能。  
@@ -68,7 +68,7 @@ ms.locfileid: "39026112"
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- 通常情况下，但是，你可能想要重写某些`CObject`的成员函数来处理您的新类的具体情况。 例如，您可能通常想要重写`Dump`函数的`CObject`为您的类的内容提供调试输出。 有关如何重写的详细信息`Dump`，请参阅文章[诊断： 转储对象内容](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)。 您可能还想要重写`AssertValid`函数的`CObject`以提供自定义测试以验证数据成员的类对象的一致性。 有关如何重写的说明`AssertValid`，请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6)。  
+ 通常情况下，但是，你可能想要重写某些`CObject`的成员函数来处理您的新类的具体情况。 例如，您可能通常想要重写`Dump`函数的`CObject`为您的类的内容提供调试输出。 有关如何重写的详细信息`Dump`，请参阅文章[诊断： 转储对象内容](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))。 您可能还想要重写`AssertValid`函数的`CObject`以提供自定义测试以验证数据成员的类对象的一致性。 有关如何重写的说明`AssertValid`，请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\))。  
   
  文章[指定级别的功能](../mfc/specifying-levels-of-functionality.md)介绍如何指定其他级别的功能，包括运行时类信息、 动态对象创建和序列化。  
   
