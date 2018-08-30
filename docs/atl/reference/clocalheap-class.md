@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6f30208cbe3ebb72014f027533c7b3c659e4ac23
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880110"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213268"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本地堆函数。  
@@ -55,7 +55,7 @@ class CLocalHeap : public IAtlMemMgr
  `CLocalHeap` 实现使用 Win32 本地堆函数的内存分配函数。  
   
 > [!NOTE]
->  本地堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。  
+>  本地堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](/windows/desktop/Memory/heap-functions)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。  
   
 ## <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调用[clocalheap:: Free](#free)或[clocalheap:: Reallocate](#reallocate)来释放由此方法分配的内存。  
   
- 使用实现[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) LMEM_FIXED 的标记参数。  
+ 使用实现[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) LMEM_FIXED 的标记参数。  
   
 ##  <a name="free"></a>  Clocalheap:: Free  
  调用此方法来释放此内存管理器分配的内存块。  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。  
   
 ### <a name="remarks"></a>备注  
- 使用实现[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)。  
+ 使用实现[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)。  
   
 ##  <a name="getsize"></a>  CLocalHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块的分配的大小。  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  以字节为单位返回已分配的内存块的大小。  
   
 ### <a name="remarks"></a>备注  
- 使用实现[LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)。  
+ 使用实现[LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize)。  
   
 ##  <a name="reallocate"></a>  Clocalheap:: Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调用[clocalheap:: Free](#free)来释放由此方法分配的内存。  
   
- 使用实现[LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)。  
+ 使用实现[LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   

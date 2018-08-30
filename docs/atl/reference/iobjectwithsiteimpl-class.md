@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219033"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 类
 此类提供允许其站点进行通信的对象的方法。  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理站点的`IUnknown`指针。|  
   
 ## <a name="remarks"></a>备注  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)接口允许对象与其站点通信。 类`IObjectWithSiteImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
+ [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)接口允许对象与其站点通信。 类`IObjectWithSiteImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  `IObjectWithSiteImpl` 指定两种方法。 客户端首次调用`SetSite`，并传递站点的`IUnknown`指针。 此指针在对象中存储和更高版本可以通过调用检索`GetSite`。  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>备注  
  如果站点支持此接口，通过返回的指针`ppvSite`。 否则为`ppvSite`设置为 NULL。  
   
- 请参阅[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
+ 请参阅[IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) Windows SDK 中。  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  管理站点的`IUnknown`指针。  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) Windows SDK 中。  
+ 请参阅[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

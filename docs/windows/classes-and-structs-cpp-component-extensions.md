@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33fba76d39811b0fed777f057c5936a29f8c8a1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29b141ff89a37cee59f55624d7fecadbe6acc4c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215865"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 
@@ -93,7 +93,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>备注
 
-请参阅[Ref 类和结构](../cppcx/ref-classes-and-structs-c-cx.md)并[值类和结构](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。
+请参阅[Ref 类和结构](../cppcx/ref-classes-and-structs-c-cx.md)并[值类和结构](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。
 
 ### <a name="parameters"></a>参数
 

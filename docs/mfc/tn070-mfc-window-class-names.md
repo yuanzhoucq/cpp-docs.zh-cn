@@ -1,5 +1,5 @@
 ---
-title: 'TN070: MFC 窗口类名称 |Microsoft 文档'
+title: 'TN070: MFC 窗口类名称 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220843"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 窗口类名称
 > [!NOTE]
@@ -30,14 +30,14 @@ ms.locfileid: "33385347"
   
  MFC 窗口使用可反映窗口功能的动态创建的类名。 MFC 动态生成框架窗口、视图以及由应用程序生成的弹出式窗口的类名。 MFC 应用程序生成的对话框和控件具有上述窗口类的 Windows 提供的类名。  
   
- 你可以通过注册自己的窗口类并使用它的重写中替换动态提供的类名称[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)。 其 MFC 提供的类名适合下列两种形式之一：  
+ 可以通过注册您自己的窗口类并使用它的重写中替换动态提供的类名[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)。 其 MFC 提供的类名适合下列两种形式之一：  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- 替换的十六进制数`%x`字符中的从的数据填充[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构。 MFC 使用此方法，以便需要相同的多个 c + + 类**WNDCLASS**结构可以共享相同的已注册的窗口类。 与大多数简单的 Win32 应用程序，MFC 应用程序只能有一个**WNDPROC**，因此你可以轻松地共享**WNDCLASS**结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：  
+ 替换为十六进制数字`%x`字符中的从的数据填充[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构。 MFC 使用此方法，以便需要相同的多个 c + + 类**WNDCLASS**结构可以共享相同的已注册的窗口类。 在大多数简单的 Win32 应用程序，MFC 应用程序只能有一个**WNDPROC**，因此可以轻松地共享**WNDCLASS**结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：  
   
 - **WNDCLASS.hInstance**  
   
@@ -49,7 +49,7 @@ Afx:%x:%x:%x:%x:%x
   
 - **WNDCLASS.hIcon**  
   
- 第一个窗体 (`Afx:%x:%x`) 时使用**hCursor**， **hbrBackground**，和**任务栏**全部**NULL**。  
+ 第一种形式 (`Afx:%x:%x`) 时使用**hCursor**， **hbrBackground**，并且**hIcon**同时**NULL**。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

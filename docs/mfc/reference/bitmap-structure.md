@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339340"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220756"
 ---
 # <a name="bitmap-structure"></a>BITMAP 结构
 **位图**结构定义的高度、 宽度、 颜色格式和逻辑位图位值 **。**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  所有设备都支持具有 RC_BITBLT 位集的 RASTERCAPS 索引中的位图[CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps)成员函数。  
   
- 每台设备都具有自己的唯一颜色格式。 为了将位图从一台设备传输到另一种，使用[GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)并[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 函数。  
+ 每台设备都具有自己的唯一颜色格式。 为了将位图从一台设备传输到另一种，使用[GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits)并[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Windows 函数。  
   
 ## <a name="requirements"></a>要求  
  **标头：** wingdi.h  

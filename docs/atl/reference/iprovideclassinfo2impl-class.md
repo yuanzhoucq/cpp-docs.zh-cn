@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220175"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 类
-此类提供的默认实现[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)并[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。  
+此类提供的默认实现[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)并[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|管理用于 coclass 的类型信息。|  
   
 ## <a name="remarks"></a>备注  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)接口扩展[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)通过添加`GetGUID`方法。 此方法允许客户端检索对象的输出接口 IID 为其默认事件集。 类`IProvideClassInfo2Impl`提供的默认实现`IProvideClassInfo`和`IProvideClassInfo2`方法。  
+ [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)接口扩展[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)通过添加`GetGUID`方法。 此方法允许客户端检索对象的输出接口 IID 为其默认事件集。 类`IProvideClassInfo2Impl`提供的默认实现`IProvideClassInfo`和`IProvideClassInfo2`方法。  
   
  `IProvideClassInfo2Impl` 包含类型的静态成员`CComTypeInfoHolder`管理用于 coclass 的类型信息。  
   
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) Windows SDK 中。  
+ 请参阅[IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) Windows SDK 中。  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  检索对象的传出调度接口的 GUID。  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) Windows SDK 中。  
+ 请参阅[IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) Windows SDK 中。  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  构造函数。  

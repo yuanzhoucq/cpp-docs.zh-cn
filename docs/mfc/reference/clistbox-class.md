@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221722"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 提供 Windows 列表框功能。  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- 检索与指定的列表框项作为指针关联的应用程序提供 32 位值 ( **void\***)。  
+ 检索与指定的列表框项作为指针关联的应用程序提供 32 位值 (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  每个列的项目数`CListBox`对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo)消息，如 Windows SDK 中所述。  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  检索列表框中使用的区域设置。  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- 设置为指定的指针的列表框中的指定项关联的 32 位值 ( **void\***)。  
+ 设置为指定的指针的列表框中的指定项关联的 32 位值 ( **void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(

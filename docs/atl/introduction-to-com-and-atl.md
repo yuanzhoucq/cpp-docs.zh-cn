@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572545"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222545"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 简介
 本部分提供了简要介绍了 COM 和 atl。  
@@ -34,7 +34,7 @@ ms.locfileid: "42572545"
  进行了简要介绍，什么活动模板库 (ATL) 设计的模板库和 ATL 的版本号。 包含关于选择 ATL 和 MFC 的建议。  
   
 ## <a name="related-sections"></a>相关章节  
- [组件对象模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [组件对象模型](/windows/desktop/com/the-component-object-model)  
  Windows SDK 材料上 com。  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

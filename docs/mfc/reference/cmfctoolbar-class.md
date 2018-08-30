@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541398"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208553"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 `CMFCToolBar`类相似[CToolBar 类](../../mfc/reference/ctoolbar-class.md)，但为用户界面功能提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。
@@ -916,7 +916,7 @@ virtual BOOL Create(
  指向工具栏的父窗口的指针。  
   
  [in]*dwStyle*  
- Styl toolbar。 请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK for 样式的列表中。  
+ Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK for 样式的列表中。  
   
  [in]*nID*  
  子窗口的工具栏的 ID。  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  用于创建嵌入的控件条对象的其他样式。  
   
  [in]*dwStyle*  
- Styl toolbar。 请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)的相应样式的列表。  
+ Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)的相应样式的列表。  
   
  [in]*rcBorders*  
  一个`CRect`对象，它指定工具栏窗口边框的宽度。  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值表示当前突出显示的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值表示当前突出显示的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  调用[CMFCToolBar::SetHotTextColor](#sethottextcolor)设置新的文本颜色突出显示的工具栏按钮。  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  如果工具栏和其同级是否定位于同一行; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- [Cmfccustomizebutton:: Createpopupmenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法调用此方法来确定如何显示**自定义**弹出菜单。 如果此方法返回 TRUE，框架显示**一行上显示按钮**按钮。 否则，该框架将显示**两个行显示按钮**按钮。  
+ [Cmfccustomizebutton:: Createpopupmenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法调用此方法来确定如何显示**自定义**弹出菜单。 如果此方法返回 TRUE，框架显示**一行上显示按钮**按钮。 否则，该框架将显示**两个行显示按钮**按钮。  
   
  通常不需要使用此方法。 若要启用**一行上显示按钮**或**两个行显示按钮**按钮，请调用[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   

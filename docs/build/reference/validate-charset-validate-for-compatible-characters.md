@@ -1,5 +1,5 @@
 ---
-title: -验证-charset （验证兼容字符） |Microsoft 文档
+title: -验证-字符集 （验证兼容的字符） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0804d9d2714cc8c4f065b6908788c067c34ca44b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adfda3d287bbea6c85ae6d4bcebe009b610d719e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377383"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219287"
 ---
-# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容字符）
+# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （验证兼容的字符）
 验证源文件文本包含字符仅可表示为 utf-8。  
   
 ## <a name="syntax"></a>语法  
@@ -35,11 +35,11 @@ ms.locfileid: "32377383"
 ```  
   
 ## <a name="remarks"></a>备注  
- 你可以使用 **/validate-charset**选项来验证源的代码包含仅可以表示源字符集中的字符的设置和执行字符集。 当你指定自动启用此检查 **/source-charset**， **/execution-charset**，或 **/utf-8**编译器选项。 你可以通过指定显式禁用此检查 **/ 验证-charset-** 选项。  
+ 可以使用 **/validate-charset**选项来验证源的代码包含仅可在这两个源字符集中表示的字符设置和执行字符集。 指定时，此检查会自动启用 **/source-charset**， **/execution-charset**，或 **/utf-8**编译器选项。 您可以通过指定显式禁用此检查 **/validate-字符集-** 选项。  
   
- 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非使用指定代码页 **/utf-8**或 **/source-charset**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的信息，请参阅[字符集](../../cpp/character-sets.md)语言文档中。 支持代码页标识符的列表和字符集名称，请参阅[代码页标识符](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
+ 默认情况下，Visual Studio 会检测以确定源文件是否已编码的 Unicode 格式，例如，utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源代码文件的编码使用当前用户的代码页，除非你通过使用指定代码页 **/utf-8**或 **/source-charset**选项。 Visual Studio，可使用任何几个字符编码保存 c + + 源代码。 有关源和执行字符集的信息，请参阅[最小字符集数](../../cpp/character-sets.md)语言文档中。 支持代码页标识符的列表和字符集的名称，请参阅[代码页标识符](/windows/desktop/Intl/code-page-identifiers)。  
   
- Visual Studio 使用的源字符集和执行字符集之间的转换的过程的内部字符编码为 utf-8。 如果不能执行字符集中表示的源文件中的字符，utf-8 转换将替换一个问号？ 字符。 **/Validate-charset**选项导致编译报告一个警告，如果发生这种情况。  
+ Visual Studio 使用的源字符集和执行字符集之间的转换过程的内部字符编码为 utf-8。 如果不能在执行字符集中表示源文件中的字符，utf-8 转换将替换为问号？ 字符。 **/Validate-charset**选项将导致编译报告一条警告，如果发生这种情况。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -47,7 +47,7 @@ ms.locfileid: "32377383"
   
 2.  展开**配置属性**， **C/c + +**，**命令行**文件夹。  
   
-3.  在**高级选项**，添加 **/validate-charset**选项，并指定你的首选编码。  
+3.  在中**高级选项**，添加 **/validate-charset**选项，并指定你的首选编码。  
   
 4.  选择**确定**以保存所做的更改。  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885034"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218560"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 类
 此类实现分离式接口。  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *基本*  
  分离式类，派生自`CComTearOffObjectBase`和希望分离式对象以支持接口。  
   
- ATL 在两个阶段中实现其分离式接口 —`CComTearOffObjectBase`方法处理引用计数并`QueryInterface`，而`CComTearOffObject`实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
+ ATL 在两个阶段中实现其分离式接口 —`CComTearOffObjectBase`方法处理引用计数并`QueryInterface`，而`CComTearOffObject`实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。  
   
 ## <a name="members"></a>成员  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa45822d51d704022e773f6c8220db34b010a805
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 76f21f93bbd8386bbf0b4b63f3cf7c8b34057145
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210652"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 结构
 包含用于呈现到各种目标，如打印机、 图元文件或 ActiveX 控件的信息。  
@@ -53,13 +53,13 @@ struct ATL_DRAWINFO {
  结构，以字节为单位的大小。  
   
  `dwDrawAspect`  
- 指定目标的方式来表示。 表示可以包括内容、 图标、 缩略图或打印的文档。 有关可能的值的列表，请参阅[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)并[DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644)。  
+ 指定目标的方式来表示。 表示可以包括内容、 图标、 缩略图或打印的文档。 有关可能的值的列表，请参阅[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)并[DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2)。  
   
  `lindex`  
  目标的绘制操作有关的值得关注的部分。 中的值而异其解释`dwDrawAspect`成员。  
   
  `ptd`  
- 指向[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)启用绘制优化，具体取决于指定的方面的结构。 请注意，较新的对象和支持优化绘图接口的容器支持以及此成员。 较旧的对象和容器始终不支持优化绘图接口指定为空，此成员。  
+ 指向[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)启用绘制优化，具体取决于指定的方面的结构。 请注意，较新的对象和支持优化绘图接口的容器支持以及此成员。 较旧的对象和容器始终不支持优化绘图接口指定为空，此成员。  
   
  `hicTargetDev`  
  指向目标设备的信息上下文`ptd`对象可以从其提取设备量度并测试设备的功能。 如果`ptd`为 NULL，该对象应忽略中的值`hicTargetDev`成员。  
@@ -68,10 +68,10 @@ struct ATL_DRAWINFO {
  在其上绘制的设备上下文。 对于无窗口的对象，`hdcDraw`成员是在`MM_TEXT`其逻辑坐标为匹配包含窗口的工作区映射模式。 此外，设备上下文应处于相同状态通常通过传递一个`WM_PAINT`消息。  
   
  `prcBounds`  
- 指向[RECTL](http://msdn.microsoft.com/library/windows/desktop/dd162907)结构，它在指定矩形`hdcDraw`和在绘制该对象。 此成员控制的定位和拉伸的对象。 此成员应为 NULL，以绘制无窗口的就地活动对象。 在每个其他情况下，NULL 不是合法的值，并应导致`E_INVALIDARG`错误代码。 如果该容器将非 NULL 值传递给无窗口对象，该对象应呈现到指定的设备上下文和矩形请求的方面。 容器应用程序可以请求从无窗口对象来呈现该对象的第二个、 非活动视图或打印对象。  
+ 指向[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)结构，它在指定矩形`hdcDraw`和在绘制该对象。 此成员控制的定位和拉伸的对象。 此成员应为 NULL，以绘制无窗口的就地活动对象。 在每个其他情况下，NULL 不是合法的值，并应导致`E_INVALIDARG`错误代码。 如果该容器将非 NULL 值传递给无窗口对象，该对象应呈现到指定的设备上下文和矩形请求的方面。 容器应用程序可以请求从无窗口对象来呈现该对象的第二个、 非活动视图或打印对象。  
   
  `prcWBounds`  
- 如果`hdcDraw`是图元文件设备上下文 (请参阅[GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) Windows SDK 中)，这是一个指向`RECTL`结构，它的基础元文件中指定的边框。 该矩形结构包含的窗口区和窗口来源。 这些值可用于绘制图元文件。 指示矩形`prcBounds`嵌套在此`prcWBounds`矩形; 它们处于相同的坐标空间。  
+ 如果`hdcDraw`是图元文件设备上下文 (请参阅[GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) Windows SDK 中)，这是一个指向`RECTL`结构，它的基础元文件中指定的边框。 该矩形结构包含的窗口区和窗口来源。 这些值可用于绘制图元文件。 指示矩形`prcBounds`嵌套在此`prcWBounds`矩形; 它们处于相同的坐标空间。  
   
  `bOptimize`  
  如果该控件的绘图是经过优化，否则为 0，非零值。 在完成时，如果优化绘图，自动还原设备上下文的状态呈现。  
@@ -97,7 +97,7 @@ struct ATL_DRAWINFO {
  **标头：** atlctl.h  
   
 ## <a name="see-also"></a>请参阅  
-  [类和结构](../../atl/reference/atl-classes.md) [iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+  [类和结构](../../atl/reference/atl-classes.md) [iviewobject:: Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 

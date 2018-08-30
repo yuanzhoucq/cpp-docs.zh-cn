@@ -1,5 +1,5 @@
 ---
-title: CLinearTransition 类 |Microsoft 文档
+title: CLinearTransition 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211736"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 类
 封装线性转换。  
@@ -46,7 +46,7 @@ class CLinearTransition : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|构造线性转换对象并初始化其持续时间和最终值。|  
+|[CLinearTransition::CLinearTransition](#clineartransition)|构造的线性转换对象并初始化其持续时间和最终值。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -58,11 +58,11 @@ class CLinearTransition : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|在转换结束动画变量的值。|  
-|[CLinearTransition::m_duration](#m_duration)|转换的持续时间。|  
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|  
+|[CLinearTransition::m_duration](#m_duration)|过渡的持续时间。|  
   
 ## <a name="remarks"></a>备注  
- 在期间线性转换，动画变量的值转换以线性方式从其初始值为指定的最终值。 由于所有转换并自动都清除，则建议你到分配它们使用新的运算符。 封装的 IUIAnimationTransition COM 对象被创建通过 CAnimationController::AnimateGroup，直到，然后它为 NULL。 在创建此 COM 对象不起作用后，请更改成员变量。  
+ 在期间线性转换，动画变量的值转换以线性方式从其初始值为指定的最终值。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransition : public CBaseTransition;
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- 构造线性转换对象并初始化其持续时间和最终值。  
+ 构造的线性转换对象并初始化其持续时间和最终值。  
   
 ```  
 CLinearTransition(
@@ -85,10 +85,10 @@ CLinearTransition(
   
 ### <a name="parameters"></a>参数  
  *持续时间*  
- 转换的持续时间。  
+ 过渡的持续时间。  
   
  *dblFinalValue*  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
@@ -101,20 +101,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
 *pLibrary*  
- 指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
+ 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_duration"></a>  CLinearTransition::m_duration  
- 转换的持续时间。  
+ 过渡的持续时间。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  

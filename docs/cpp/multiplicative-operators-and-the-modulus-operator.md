@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209723"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法运算符和取模运算符
 ## <a name="syntax"></a>语法  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>备注  
  乘法运算符为：  
   
--   乘法 (**\***)  
+-   乘法 (<strong>\*</strong>)  
   
 -   除法 (**/**)  
   
--   取模（除法运算的余数）(`%`)  
+-   取模 （除法运算的余数） (**%**)  
   
  这些二进制运算符具有从左至右的关联性。  
   
- 乘法运算符采用算术类型的操作数。 取模运算符 (`%`) 具有更严格的要求，即其操作数必须是整型。 (若要获取浮点除法的余数，请使用运行时函数[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵盖的转换[标准转换](standard-conversions.md)适用于操作数，结果为转换的类型。  
+ 乘法运算符采用算术类型的操作数。 取模运算符 (**%**) 具有更严格的要求，即其操作数必须是整型。 (若要获取浮点除法的余数，请使用运行时函数[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵盖的转换[标准转换](standard-conversions.md)适用于操作数，结果为转换的类型。  
   
  除法运算符产生的结果为将第一个操作数乘以第二个操作数所获得的结果。  
   

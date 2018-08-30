@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d623df9fcab776a42fda7ca13269554b9f38b56c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c8cdb3633b6f5b76e1918471132e7cdd142172fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208474"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 类
 此类表示为内存管理器的接口。  
@@ -54,7 +54,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
  此接口由实现[CComHeap](../../atl/reference/ccomheap-class.md)， [CCRTHeap](../../atl/reference/ccrtheap-class.md)， [CLocalHeap](../../atl/reference/clocalheap-class.md)， [CGlobalHeap](../../atl/reference/cglobalheap-class.md)，或[CWin32Heap](../../atl/reference/cwin32heap-class.md).  
   
 > [!NOTE]
->  本地和全局堆函数慢于其他内存管理函数，并且不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。  
+>  本地和全局堆函数慢于其他内存管理函数，并且不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](/windows/desktop/Memory/heap-functions)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]  

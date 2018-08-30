@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210868"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
 通过使用当前区域设置或传入的指定区域设置，查找在字符串中的下一个标记。 提供这些函数的更多安全版本；请参阅 [strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbstok**和 **_mbstok_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbstok**并 **_mbstok_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -104,16 +104,16 @@ unsigned char *_mbstok(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到下一步中找到的令牌*strToken*。 它们返回**NULL**当找到没有更多的令牌时。 每个调用修改*strToken*通过用在返回的令牌之后的第一个分隔符 null 字符替换。
+返回一个指向下一个令牌中找到*strToken*。 它们将返回**NULL**找到没有更多标记时。 每个调用都会修改*strToken* ，只需替换 null 字符在返回的令牌后发生的第一个分隔符。
 
 ## <a name="remarks"></a>备注
 
-**Strtok**函数查找字符串中的下一个标记*strToken*。 中的字符组*strDelimit*指定可能要在中找到的标记分隔符*strToken*上当前的调用。 **wcstok**和 **_mbstok**宽字符及多字节字符版本的**strtok**。 参数和返回值的**wcstok**是宽字符字符串; 而的 **_mbstok**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**Strtok**函数查找字符串中的下一个标记*strToken*。 中的字符组*strDelimit*指定的令牌中找到可能的分隔符*strToken*在当前调用上。 **wcstok**并 **_mbstok**宽字符及多字节字符版本的**strtok**。 参数和返回值**wcstok**是宽字符字符串; **_mbstok**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
-> 这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-在第一个调用**strtok**，该函数跳过前导分隔符，并将指针返回到中的第一个标记*strToken*，终止 null 字符的标记。 多个令牌的更改会损坏外的其余部分*strToken*对的调用一系列**strtok**。 每次调用**strtok**修改*strToken*的方法是插入 null 字符后**令牌**该调用返回。 若要读取下一个令牌以从*strToken*，调用**strtok**与**NULL**值*strToken*自变量。 **NULL** *strToken*参数可以使**strtok**搜索中修改后的下一个标记*strToken*。 *StrDelimit*自变量可以采用到下一次调用之间的任何值，以便分隔符集可能会有所不同。
+在首次调用**strtok**，函数跳过前导分隔符并返回一个指针中的第一个标记*strToken*，终止空字符的标记。 更多标记可以分离出的余数*strToken*的调用的一系列**strtok**。 每次调用**strtok**修改*strToken*的方法是插入 null 字符之后**令牌**通过调用返回。 若要读取的下一个令牌*strToken*，调用**strtok**与**NULL**值*strToken*参数。 **NULL** *strToken*参数可以使**strtok**搜索中的修改后的下一个标记*strToken*。 *StrDelimit*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -129,7 +129,7 @@ unsigned char *_mbstok(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> 或 \<wchar.h>|

@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405752"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210157"
 ---
 # <a name="rands"></a>rand_s
 
-生成一个伪随机数。 这是一个更安全的函数版本[rand](rand.md)，具有安全增强功能中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
+生成一个伪随机数。 这是一个更安全的函数版本[rand](rand.md)，具有安全增强功能，如中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -57,28 +57,28 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>参数
 
 *randomValue*<br/>
-指向要保存生成的值的整数的指针。
+指向一个整数，用于保存所生成的值的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零，否则返回错误代码。 如果输入的指针_randomValue_是 null 指针，该函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回**EINVAL**和设置**errno**到**EINVAL**。 如果函数失败的任何其他原因，*_randomValue_设置为 0。
+如果成功，则返回零，否则返回错误代码。 如果输入的指针_randomValue_是空指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**EINVAL** ，并设置**errno**到**EINVAL**。 如果函数失败的任何其他原因，*_randomValue_设置为 0。
 
 ## <a name="remarks"></a>备注
 
-**Rand_s**函数范围为 0 到中写入一个伪随机整数**UINT_MAX**到的输入指针。 **Rand_s**函数使用操作系统来生成加密性极安全的随机数字。 它不使用由生成的种子[srand](srand.md)函数，也不会影响使用的随机数字序列[rand](rand.md)。
+**Rand_s**函数将介于 0 到写入一个伪随机整数**UINT_MAX**输入指针。 **Rand_s**函数使用操作系统生成加密型安全随机数。 它不使用由生成的种子[srand](srand.md)函数，也不会影响使用的随机数字序列[rand](rand.md)。
 
-**Rand_s**函数需要该常量 **_CRT_RAND_S**之前，当函数为声明，如以下示例所示的包含语句定义：
+**Rand_s**函数要求该常量 **_CRT_RAND_S**函数声明，如以下示例所示的包含语句之前定义：
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s**取决于[RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API，才可在 Windows XP 及更高版本。
+**rand_s**取决于[RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，它才可在 Windows XP 及更高版本。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221127"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包装 Windows API 函数，提供用于访问注册表的面向对象的接口。  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>备注  
  如果*bAdmin*设置为 TRUE，`m_hKey`成员变量设置为**HKEY_LOCAL_MACHINE**。 如果您设置*bAdmin*为 FALSE，`m_hKey`设置为**HKEY_CURRENT_USER**。  
   
- 安全访问权限取决于*bReadOnly*参数。 如果*bReadonly*为 FALSE 时，安全访问权限将设置为**KEY_ALL_ACCESS**。 如果*bReadyOnly*为 TRUE 时，安全访问权限将设置为的组合**KEY_QUERY_VALUE、 KEY_NOTIFY**并**KEY_ENUMERATE_SUB_KEYS**。 有关安全访问以及注册表的详细信息，请参阅[注册表项安全和访问权限](http://msdn.microsoft.com/library/windows/desktop/ms724878)。  
+ 安全访问权限取决于*bReadOnly*参数。 如果*bReadonly*为 FALSE 时，安全访问权限将设置为**KEY_ALL_ACCESS**。 如果*bReadyOnly*为 TRUE 时，安全访问权限将设置为的组合**KEY_QUERY_VALUE、 KEY_NOTIFY**并**KEY_ENUMERATE_SUB_KEYS**。 有关安全访问以及注册表的详细信息，请参阅[注册表项安全和访问权限](/windows/desktop/SysInfo/registry-key-security-and-access-rights)。  
   
  析构函数`CSettingsStore`释放`m_hKey`自动。  
   

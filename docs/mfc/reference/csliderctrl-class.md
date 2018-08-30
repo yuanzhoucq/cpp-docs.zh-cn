@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850204"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215352"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 类
 提供 Windows 公共滑块控件的功能。  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定滑块控件的样式。 应用的任意组合[滑块控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK，向控件中所述。  
+ 指定滑块控件的样式。 应用的任意组合[滑块控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK，向控件中所述。  
   
  *rect*  
- 指定滑块控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ 指定滑块控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
  通常指定滑块控件的父窗口， `CDialog`。 它不能为 NULL。  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定滑块控件的样式。 应用的任意组合[滑块控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK，向控件中所述。  
+ 指定滑块控件的样式。 应用的任意组合[滑块控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK，向控件中所述。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  一个指向[CWnd](../../mfc/reference/cwnd-class.md)对象，它是指定的位置在合作者窗口*fLocation*，或如果该位置不存在任何合作者窗口，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)，如 Windows SDK 中所述。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 此成员函数可实现 Win32 消息的行为[TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy)，如 Windows SDK 中所述。 滑块控件样式的说明，请参阅[Trackbar 控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  检索的大小和位置的滑块控件的通道的边界矩形。  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  滑块，以像素为单位的长度。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201)消息，Windows SDK 中所述。  
+ 此方法将发送[TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength)消息，Windows SDK 中所述。  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  检索的大小和滑块控件中的滑块 （滚动块） 的边界矩形的位置。  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  一个指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象，或者如果未使用的工具提示，则为 NULL。 如果滑块控件不使用 TBS_TOOLTIPS 样式，返回值为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209)，如 Windows SDK 中所述。 请注意，此成员函数返回`CToolTipCtrl`对象而不是控件的句柄。  
+ 此成员函数可实现 Win32 消息的行为[TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips)，如 Windows SDK 中所述。 请注意，此成员函数返回`CToolTipCtrl`对象而不是控件的句柄。  
   
- 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 滑块控件样式的说明，请参阅[Trackbar 控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  将窗口分配为滑块控件的合作者窗口。  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  一个指向[CWnd](../../mfc/reference/cwnd-class.md)了之前分配给该位置处的滑块控件的对象。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213)，如 Windows SDK 中所述。 请注意，此成员函数使用指向`CWnd`对象，而不是为其返回值和参数的窗口句柄。  
+ 此成员函数可实现 Win32 消息的行为[TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy)，如 Windows SDK 中所述。 请注意，此成员函数使用指向`CWnd`对象，而不是为其返回值和参数的窗口句柄。  
   
- 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 滑块控件样式的说明，请参阅[Trackbar 控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  设置滑块控件的行的大小。  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in]*nLength*|滑块，以像素为单位的长度。|  
   
 ### <a name="remarks"></a>备注  
- 此方法要求 trackbar 控件设置为[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)样式。  
+ 此方法要求 trackbar 控件设置为[TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles)样式。  
   
- 此方法将发送[TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234)消息，Windows SDK 中所述。  
+ 此方法将发送[TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_sliderCtrl`，即用于访问当前的跟踪条控件。 该示例还定义一个变量， `thumbLength`，即用于存储跟踪条控件的 thumb 组件的默认长度。 在下一步的示例中使用这些变量。  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>参数  
  *n 位置*  
- 值，该值表示要显示工具提示控件的位置。 有关可能的值的列表，请参阅 Win32 消息[TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)，如 Windows SDK 中所述。  
+ 值，该值表示要显示工具提示控件的位置。 有关可能的值的列表，请参阅 Win32 消息[TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)，如 Windows SDK 中所述。  
   
 ### <a name="return-value"></a>返回值  
  一个值，表示工具提示控件的上一位置。 返回的值等于的可能值之一*n 位置*。  
   
 ### <a name="remarks"></a>备注  
- Windows SDK 中所述，此成员函数实现 Win32 消息 TBM_SETTIPSIDE 的行为。 使用 TBS_TOOLTIPS 样式的滑块控件将显示工具提示。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ Windows SDK 中所述，此成员函数实现 Win32 消息 TBM_SETTIPSIDE 的行为。 使用 TBS_TOOLTIPS 样式的滑块控件将显示工具提示。 滑块控件样式的说明，请参阅[Trackbar 控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  将工具提示控件分配给一个滑块控件。  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  一个指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象，其中包含要用于滑块控件的工具提示。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)，如 Windows SDK 中所述。 使用 TBS_TOOLTIPS 样式创建滑块控件时，它会创建默认工具提示控件旁边的滑块，显示当前的滑块的位置显示。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 此成员函数可实现 Win32 消息的行为[TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips)，如 Windows SDK 中所述。 使用 TBS_TOOLTIPS 样式创建滑块控件时，它会创建默认工具提示控件旁边的滑块，显示当前的滑块的位置显示。 滑块控件样式的说明，请参阅[Trackbar 控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)   

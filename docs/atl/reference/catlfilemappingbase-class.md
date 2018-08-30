@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218157"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 类
 此类表示一个内存映射文件。  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>备注  
  文件映射是与进程的虚拟地址空间的一部分的文件的内容关联。 此类提供用于创建使程序轻松地访问和共享数据的文件映射对象的方法。  
   
- 有关详细信息，请参阅[文件映射](http://msdn.microsoft.com/library/windows/desktop/aa366556)Windows SDK 中。  
+ 有关详细信息，请参阅[文件映射](/windows/desktop/Memory/file-mapping)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  映射的开始位置的文件偏移量。 偏移量的值必须是系统的内存分配粒度的倍数。  
   
  *dwMappingProtection*  
- 所需的文件视图的映射文件时保护。 请参阅*flProtect*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ 所需的文件视图的映射文件时保护。 请参阅*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。  
   
  *dwViewDesiredAccess*  
- 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 创建文件映射对象后，文件的大小不能超过文件映射对象中; 的大小如果是这样，并非所有文件的内容可供共享。 有关更多详细信息，请参阅[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)并[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 创建文件映射对象后，文件的大小不能超过文件映射对象中; 的大小如果是这样，并非所有文件的内容可供共享。 有关更多详细信息，请参阅[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)并[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  有关示例，请参阅[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  指向一个 BOOL 值，设置为 TRUE 的映射对象已存在。  
   
  *lpsa*  
- 将指针与`SECURITY_ATTRIBUTES`结构，它确定返回的句柄能否由子进程继承。 请参阅*lpAttributes*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ 将指针与`SECURITY_ATTRIBUTES`结构，它确定返回的句柄能否由子进程继承。 请参阅*lpAttributes*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。  
   
  *dwMappingProtection*  
  在文件视图中，映射文件时所需的保护。 请参阅*flProtect*中`CreateFileMapping`Windows SDK 中。  
   
  *dwViewDesiredAccess*  
- 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `MapShareMem` 允许创建的现有文件映射对象[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)，以在不同进程之间共享。  
+ `MapShareMem` 允许创建的现有文件映射对象[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)，以在不同进程之间共享。  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  调用此方法以打开指定文件的命名的文件映射对象。  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  映射的开始位置的文件偏移量。 偏移量的值必须是系统的内存分配粒度的倍数。  
   
  *dwViewDesiredAccess*  
- 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882)适用于更多详细信息的 Windows SDK 中。  
+ 请参阅[UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882)适用于更多详细信息的 Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [CAtlFileMapping 类](../../atl/reference/catlfilemapping-class.md)   

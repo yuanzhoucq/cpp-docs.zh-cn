@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 878f7b31d98a26a76b8466e7a93cd3d165ed145f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6b06fa02420b70538faa70b24137df634420dd8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583452"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222639"
 ---
 # <a name="creating-pop-up-menus"></a>创建弹出菜单
 
 [弹出菜单](../mfc/menus-mfc.md) 显示常用命令。 它们对指针的位置可以区分上下文。 在应用程序中使用弹出菜单需要先生成菜单，然后将菜单连接到应用程序代码。
 
-创建菜单资源后，应用程序代码需要加载该菜单资源，并使用 [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) 显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。
+创建菜单资源后，应用程序代码需要加载该菜单资源并使用[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)才会显示该菜单。 用户通过单击弹出菜单之外的位置关闭弹出菜单后，或用户单击某个命令后，该函数将返回。 如果用户选择一个命令，该命令消息将被发送到传递了其句柄的窗口。
 
 ### <a name="to-create-a-pop-up-menu"></a>创建弹出菜单
 

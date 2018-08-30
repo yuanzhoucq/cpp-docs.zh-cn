@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573125"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217224"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 对应于一个 OLE DB 数据源对象，该对象表示通过提供程序建立的与数据源的连接。  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 使用的方法重载*hWnd*参数使用 oledb32.dll 中的服务组件打开数据源对象; 此 DLL 包含服务组件功能，例如资源池、 自动的实现事务登记等。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
+ 使用的方法重载*hWnd*参数使用 oledb32.dll 中的服务组件打开数据源对象; 此 DLL 包含服务组件功能，例如资源池、 自动的实现事务登记等。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
   
  不使用的方法重载*hWnd*参数无需使用 oledb32.dll 中的服务组件打开数据源对象。 一个[CDataSource](../../data/oledb/cdatasource-class.md)使用这些函数重载打开的对象将不能使用任何服务组件的功能。  
   
@@ -299,7 +299,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
+ 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
 
 ## <a name="openfrominitializationstring"></a> Cdatasource:: Openfrominitializationstring
 打开由用户提供初始化字符串指定数据源。  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。
+ 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。
 
 ## <a name="openwithservicecomponents"></a> Cdatasource:: Openwithservicecomponents
 使用 oledb32.dll 中的服务组件打开数据源对象。  
@@ -385,7 +385,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。    
+ 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅"OLE DB 服务"在 OLE DB 程序员参考中[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。    
 
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

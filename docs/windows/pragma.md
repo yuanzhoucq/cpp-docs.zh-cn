@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ff470af7b7c825fb1c1dc7bf118e969a4b992
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209109"
 ---
 # <a name="pragma"></a>pragma
 
@@ -43,7 +43,7 @@ ms.locfileid: "42603048"
 
 ## <a name="remarks"></a>备注
 
-**杂注**c + + 属性具有相同的功能[杂注](http://msdn.microsoft.com/library/windows/desktop/aa367143)MIDL 特性。
+**杂注**c + + 属性具有相同的功能[杂注](/windows/desktop/Midl/pragma)MIDL 特性。
 
 ## <a name="example"></a>示例
 

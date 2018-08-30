@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222089"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 `CMFCFontInfo`类描述的名称和字体的其他属性。  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>参数  
  [in]*lpszName*  
- 字体的名称。 有关详细信息，请参阅`lfFaceName`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
+ 字体的名称。 有关详细信息，请参阅`lfFaceName`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
  [in]*lpszScript*  
  脚本 （字符集） 的字体的名称。  
   
  [in]*nCharSet*  
- 一个值，指定的字体的字符集 （脚本）。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
+ 一个值，指定的字体的字符集 （脚本）。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
  [in]*nPitchAndFamily*  
- 一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
+ 一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
  [in]*n 类型*  
  一个值，指定的字体类型。 此参数可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- 本文档使用术语*字符集*并*脚本*互换。 一个*脚本*，这也称为是书写系统，是一系列字符和一个或多个语言中编写这些字符的规则。 字符的集合包括的字母表和标点在该脚本中使用。 例如，拉丁语脚本使用英语解说在美国，以及其字母表中包含从 A 到 Z 的字符。`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构指定字符集。 例如，值 ANSI_CHARSET 指定 ANSI 字符集，其中包括拉丁语脚本的字母表。  
+ 本文档使用术语*字符集*并*脚本*互换。 一个*脚本*，这也称为是书写系统，是一系列字符和一个或多个语言中编写这些字符的规则。 字符的集合包括的字母表和标点在该脚本中使用。 例如，拉丁语脚本使用英语解说在美国，以及其字母表中包含从 A 到 Z 的字符。`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构指定字符集。 例如，值 ANSI_CHARSET 指定 ANSI 字符集，其中包括拉丁语脚本的字母表。  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  检索串联的字体和它的字符的名称集 （脚本）。  

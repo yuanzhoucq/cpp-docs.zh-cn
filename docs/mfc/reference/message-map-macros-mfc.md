@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216698"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 为了支持消息映射，MFC 提供了以下宏：  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  函数的类型必须为`afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`。  
   
 ### <a name="remarks"></a>备注  
- 用户定义的消息是不是标准 Windows WM_MESSAGE 消息的任何消息。 消息 ID，在选择时必须为 0xBFFF 0x7FFF 或 WM_APP (0x8000) 使用范围的 WM_USER (0x0400) 中的值。 有关消息 Id 的详细信息，请参阅[WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930)。  
+ 用户定义的消息是不是标准 Windows WM_MESSAGE 消息的任何消息。 消息 ID，在选择时必须为 0xBFFF 0x7FFF 或 WM_APP (0x8000) 使用范围的 WM_USER (0x0400) 中的值。 有关消息 Id 的详细信息，请参阅[WM_APP](/windows/desktop/winmsg/wm-app)。  
   
  应在必须映射到消息处理程序函数每个用户定义的消息的消息映射中的一个 ON_MESSAGE 宏语句。  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **标头：** afxmsg_.h  
   
 ### <a name="see-also"></a>请参阅  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [用户定义的处理程序](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

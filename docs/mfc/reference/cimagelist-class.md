@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e6a7a45fc119309ce99640ab74006ae44a05bf
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bed3e80534a651e1e5a3d7228d0746ef8f552a9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339128"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208836"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 提供 Windows 公共图像列表控件的功能。  
@@ -260,7 +260,7 @@ CImageList();
 ```  
   
 ##  <a name="copy"></a>  CImageList::Copy  
- 此成员函数可实现 Win32 函数的行为[ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 函数的行为[ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy)，如 Windows SDK 中所述。  
   
 ```  
 BOOL Copy(
@@ -588,16 +588,16 @@ BOOL DrawEx(
  在其中绘制指定的设备上下文中的位置。  
   
  *sz*  
- 相对于图像的左上角绘制图像的部分的大小。 请参阅*dx*并*dy*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ 相对于图像的左上角绘制图像的部分的大小。 请参阅*dx*并*dy*中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK 中。  
   
  *clrBk*  
- 图像的背景色。 请参阅*rgbBk*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ 图像的背景色。 请参阅*rgbBk*中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK 中。  
   
  *clrFg*  
- 图像的前景色。 请参阅*rgbFg*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ 图像的前景色。 请参阅*rgbFg*中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK 中。  
   
  *nStyle*  
- 标志，指定的绘制样式。 请参阅*fStyle*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ 标志，指定的绘制样式。 请参阅*fStyle*中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -632,7 +632,7 @@ BOOL DrawIndirect(
   
 ### <a name="parameters"></a>参数  
  *pimldp*  
- 一个指向[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构，其中包含与绘制操作有关的信息。  
+ 一个指向[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)结构，其中包含与绘制操作有关的信息。  
   
  *pDC*  
  指向目标设备上下文的指针。 必须删除这[CDC](../../mfc/reference/cdc-class.md)对象都完成。  
@@ -641,23 +641,23 @@ BOOL DrawIndirect(
  要绘制的图像的从零开始的索引。  
   
  *pt*  
- 一个[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标绘制图像的位置。  
+ 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标绘制图像的位置。  
   
  *sz*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，指示要绘制的图像的大小。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，指示要绘制的图像的大小。  
   
  *ptOrigin*  
- 一个[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。  
+ 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标指定相对于映像自身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。  
   
  *fStyle*  
  标志，指定的绘制样式和覆盖层图像 （可选）。 上覆盖图像，请参阅备注部分的信息。 MFC 默认实现，ILD_NORMAL，绘制图像的图像列表中使用的背景色。 如果背景色为 CLR_NONE 值，以透明方式使用掩码绘制图像。  
   
- 其他可能的样式下所述*fStyle*的成员[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。  
+ 其他可能的样式下所述*fStyle*的成员[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)结构。  
   
  *dwRop*  
  值，该值指定光栅操作代码。 这些代码定义源矩形的颜色数据与目标矩形来实现的最终颜色的颜色数据组合的方式。 MFC 的默认实现，SRCCOPY，将源矩形复制直接到目标矩形。 如果忽略此参数*fStyle*参数不包括 ILD_ROP 标志。  
   
- 其他可能的值下所述*dwRop*的成员[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。  
+ 其他可能的值下所述*dwRop*的成员[2&AMP;GT;IMAGELISTDRAWPARAMS&AMP;LT;2](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)结构。  
   
  *rgbBack*  
  图像背景色，默认情况下 CLR_DEFAULT。 此参数可以是应用程序定义的 RGB 值或以下值之一：  
@@ -688,7 +688,7 @@ BOOL DrawIndirect(
  当与 ILS_APLHA 一起使用，此成员将保留 alpha 通道值。 此值可以介于 0 到 255，0 表示完全透明，255 完全不透明。  
   
  *crEffect*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值用于发光和阴影效果。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值用于发光和阴影效果。  
   
 ### <a name="return-value"></a>返回值  
  如果成功地绘制图像; 则为 TRUE否则为 FALSE。  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>备注  
  如果你想要自己填充 Win32 结构，使用的第一个版本。 如果你想要充分利用一个或多个 MFC 的默认自变量，或避免管理这种结构，请使用第二个版本。  
   
- 覆盖图像是在通过此成员函数中指定的主图像之上绘制的图像*nImage*参数。 使用绘制覆盖掩码[绘制](#draw)成员函数使用指定覆盖掩码的基于 1 的索引[INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408)宏。  
+ 覆盖图像是在通过此成员函数中指定的主图像之上绘制的图像*nImage*参数。 使用绘制覆盖掩码[绘制](#draw)成员函数使用指定覆盖掩码的基于 1 的索引[INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)宏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -729,7 +729,7 @@ HICON ExtractIcon(int nImage);
  如果成功，则该图标的句柄否则为，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此方法依赖的行为[ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)宏来创建图标。 请参阅[ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)图标创建和清理的详细信息的宏。  
+ 此方法依赖的行为[ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)宏来创建图标。 请参阅[ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)图标创建和清理的详细信息的宏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
@@ -798,7 +798,7 @@ static CImageList* PASCAL GetDragImage(
   
 ### <a name="parameters"></a>参数  
  *lpPoint*  
- 地址[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收当前拖动位置。  
+ 地址[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收当前拖动位置。  
   
  *lpPointHotSpot*  
  地址`POINT`接收拖动图像相对于拖动位置的偏移量的结构。  
@@ -833,7 +833,7 @@ BOOL GetImageInfo(
  图像的从零开始索引。  
   
  *pImageInfo*  
- 指向[IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393)结构，它接收有关映像的信息。 此结构中的信息可以用于直接操作图像的位图。  
+ 指向[IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo)结构，它接收有关映像的信息。 此结构中的信息可以用于直接操作图像的位图。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -994,7 +994,7 @@ BOOL SetDragCursorImage(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 由于拖动函数在拖动操作过程中使用新映像，应使用 Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396)函数来调用后隐藏实际鼠标光标`CImageList::SetDragCursorImage`。 否则，系统在拖动操作期间可能看起来具有两个鼠标光标。  
+ 由于拖动函数在拖动操作过程中使用新映像，应使用 Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor)函数来调用后隐藏实际鼠标光标`CImageList::SetDragCursorImage`。 否则，系统在拖动操作期间可能看起来具有两个鼠标光标。  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  调用此成员函数以重置中的图像数`CImageList`对象。  

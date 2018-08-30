@@ -1,5 +1,5 @@
 ---
-title: 命令修饰符 |Microsoft 文档
+title: 命令修饰符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3739c053797bdccd08310e17bf669413ead0db48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e1d883e0c7a2b214842b096fdf697ffc7d0192
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221736"
 ---
 # <a name="command-modifiers"></a>命令修饰符
-你可以指定前面的命令，可以选择用空格或制表符分隔的一个或多个命令修饰符。 与命令一样，必须缩进修饰符。  
+可以指定前面的命令，可以选择用空格或制表符分隔的一个或多个命令修饰符。 与命令一样，必须缩进修饰符。  
   
 |修饰符|目标|  
 |--------------|-------------|  
-|@*命令*|禁止显示的命令。 不禁止显示由命令。 默认情况下，NMAKE 回显所有执行的命令。 使用 /S 来取消显示整个生成文件;使用 **。无提示**禁止显示生成文件的一部分。|  
-|**-**[`number` ]*命令*|关闭的错误检查*命令*。 默认情况下，当命令返回非零退出代码时，NMAKE 暂停。 If-`number`是使用，NMAKE 停止如果退出代码超过`number`。 空格或制表符不能出现之间短划线和*数。* 至少一个空格或制表符必须之间出现`number`和*命令*。 使用 /i 选项关闭错误检查整个生成文件;使用 **。忽略**若要关闭的生成文件的一部分的错误检查。|  
-|**!** *command*|执行*命令*每个依赖文件如果*命令*使用**$ \* \*** （依赖项中的所有依赖文件） 或 **$?** （所有依赖文件中更高版本的时间戳比目标的依赖关系）。|  
+|@*命令*|禁止显示该命令。 不取消显示由命令。 默认情况下，NMAKE 回显所有执行的命令。 使用 /S 取消显示整个生成文件;使用 **。无提示**取消生成文件的一部分显示。|  
+|**-**\[*数字*]*命令*|关闭的错误检查*命令*。 默认情况下，当命令返回非零退出代码时，NMAKE 暂停。 如果-*数量*是使用，NMAKE 停止如果退出代码超过*数*。 空格或制表符不能出现之间短划线和*数。* 之间必须有至少一个空格或制表符`number`并*命令*。 使用 /I 关闭检查整个生成文件; 时出错使用 **。忽略**关闭检查生成文件的一部分时出错。|  
+|**!** *command*|执行*命令*为每个依赖文件如果*命令*使用<strong>$ \* \*</strong> （在依赖项中的所有依赖文件） 或 **$?** （所有依赖文件中更高版本的时间戳比目标对象的依赖项）。|  
   
 ## <a name="see-also"></a>请参阅  
  [生成文件中的命令](../build/commands-in-a-makefile.md)

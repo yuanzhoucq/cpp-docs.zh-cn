@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451727"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217129"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -95,25 +95,25 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wcstombs**成功转换多字节字符串，它将返回写入到不包括终止 null （如果有） 的多字节输出字符串的字节数。 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。 如果**wcstombs**遇到宽字符不能转换为多字节字符，则返回-1 转换为类型**size_t**和设置**errno**到**EILSEQ**.
+如果**wcstombs**成功转换多字节字符串，它将返回到不包括终止 null （如果有） 的多字节输出字符串写入的字节数。 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。 如果**wcstombs**遇到无法转换为多字节字符的宽字符则返回-1 强制转换为类型**size_t**并设置**errno**到**EILSEQ**.
 
 ## <a name="remarks"></a>备注
 
-**Wcstombs**函数将指向的宽字符字符串转换*wcstr*到相应的多字节字符，并将存储中的结果*mbstr*数组。 *计数*参数指示的最大可以存储在多字节输出字符串的字节数 (即，大小*mbstr*)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果每个宽字符 （包括宽字符 null） 的输入字符串中的多字节输出字符串中有两个字节，结果被保证以适合。
+**Wcstombs**函数将转换的指向的宽字符字符串*wcstr*到相应的多字节字符，并将存储中的结果*mbstr*数组。 *计数*参数指示的最大可以为多字节输出字符串中存储的字节数 (即，大小*mbstr*)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串 （包括宽字符 null） 中的每个宽字符的多字节输出字符串中有两个字节，保证结果以适合。
 
-如果**wcstombs**之前或当遇到宽字符 null 字符 (L \0')*计数*发生，它将其转换为 8 位 0 并且停止。 因此，在多字节字符字符串*mbstr*是以 null 结尾的仅当**wcstombs**在转换过程中遇到宽字符 null 字符。 如果指向的序列*wcstr*和*mbstr*重叠的行为**wcstombs**是不确定的。
+如果**wcstombs**遇到宽字符 null 字符 (L '\0) 之前或当*计数*发生时，会将其转换为 8 位 0 并停止。 因此，在多字节字符字符串*mbstr*是 null 终止的仅当**wcstombs**在转换期间遇到宽字符 null 字符。 如果指向的序列*wcstr*并*mbstr*重叠的行为**wcstombs**是不确定的。
 
 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。
 
-**wcstombs**验证其参数。 如果*wcstr*是**NULL**，或者如果*计数*大于**INT_MAX**中, 所述，此函数将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将设置**errno**到**EINVAL**并返回-1。
+**wcstombs**验证其参数。 如果*wcstr*是**NULL**，或者，如果*计数*大于**INT_MAX**，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将设置**errno**到**EINVAL**并返回-1。
 
-**wcstombs**的任何区域设置相关行为，则使用当前区域设置 **_wcstombs_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs**的任何区域设置相关的行为; 使用当前区域设置 **_wcstombs_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

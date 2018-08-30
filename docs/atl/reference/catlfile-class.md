@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220644"
 ---
 # <a name="catlfile-class"></a>CAtlFile 类
 此类提供了 Windows 的薄包装器文件处理 API。  
@@ -132,7 +132,7 @@ HRESULT Create(
  文件名。  
   
  *dwDesiredAccess*  
- 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK 中。  
+ 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。  
   
  *dwShareMode*  
  共享模式中。 请参阅*dwShareMode*中`CreateFile`。  
@@ -153,7 +153,7 @@ HRESULT Create(
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)若要创建或打开文件。  
+ 调用[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)若要创建或打开文件。  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  调用此方法以清除文件缓冲区并导致所有缓冲的数据写入到文件。  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)将缓冲的数据刷新到文件。  
+ 调用[FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers)将缓冲的数据刷新到文件。  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  调用此方法以获取对该文件的重叠操作的结果。  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>参数  
  *给 pOverlapped*  
- 重叠的结构。 请参阅*lpOverlapped*中[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) Windows SDK 中。  
+ 重叠的结构。 请参阅*lpOverlapped*中[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK 中。  
   
  *dwBytesTransferred*  
  传送的字节数。 请参阅*lpNumberOfBytesTransferred*中`GetOverlappedResult`。  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)来获取对该文件的重叠操作的结果。  
+ 调用[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult)来获取对该文件的重叠操作的结果。  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  调用此方法以获取当前文件指针位置。  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)来获取当前文件指针位置。  
+ 调用[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)来获取当前文件指针位置。  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  调用此方法以获取以字节为单位的文件的大小。  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)以获取以字节为单位的文件的大小。  
+ 调用[GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize)以获取以字节为单位的文件的大小。  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  调用此方法以锁定以防止其他进程对其进行访问的文件中的区域。  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[锁定文件](http://msdn.microsoft.com/library/windows/desktop/aa365202)锁定文件中的区域。 锁定文件中的字节将阻止其他进程访问这些字节。 可锁定多个区域文件，但允许使用任何重叠区域。 如果解除锁定区域，使用[CAtlFile::UnlockRange](#unlockrange)，字节范围必须完全对应以前锁定的区域。 `LockRange` 不会合并相邻区域;如果有两种锁定的区域相邻，必须单独解锁每个。  
+ 调用[锁定文件](/windows/desktop/api/fileapi/nf-fileapi-lockfile)锁定文件中的区域。 锁定文件中的字节将阻止其他进程访问这些字节。 可锁定多个区域文件，但允许使用任何重叠区域。 如果解除锁定区域，使用[CAtlFile::UnlockRange](#unlockrange)，字节范围必须完全对应以前锁定的区域。 `LockRange` 不会合并相邻区域;如果有两种锁定的区域相邻，必须单独解锁每个。  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  指向 `CAtlTransactionManager` 对象的指针。  
@@ -293,16 +293,16 @@ HRESULT Read(
  读取的字节数。  
   
  *给 pOverlapped*  
- 重叠的结构。 请参阅*lpOverlapped*中[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) Windows SDK 中。  
+ 重叠的结构。 请参阅*lpOverlapped*中[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK 中。  
   
  *pfnCompletionRoutine*  
- 完成例程。 请参阅*lpCompletionRoutine*中[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) Windows SDK 中。  
+ 完成例程。 请参阅*lpCompletionRoutine*中[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 前三个窗体调用[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)，上次[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)从文件读取数据。 使用[CAtlFile::Seek](#seek)移动文件指针。  
+ 前三个窗体调用[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile)，上次[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)从文件读取数据。 使用[CAtlFile::Seek](#seek)移动文件指针。  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  调用此方法以将该文件的文件指针移动。  
@@ -324,7 +324,7 @@ HRESULT Seek(
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)移动文件指针。  
+ 调用[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)移动文件指针。  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  调用此方法以设置文件的大小。  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)并[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)设置文件的大小。 返回时，文件指针定位在文件末尾。  
+ 调用[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)并[SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile)设置文件的大小。 返回时，文件指针定位在文件末尾。  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  调用此方法以解锁该文件的区域。  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 调用[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)解锁该文件的区域。  
+ 调用[UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile)解锁该文件的区域。  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  调用此方法将数据写入文件指针指示的位置开始的文件。  
@@ -392,10 +392,10 @@ HRESULT Write(
  要从缓冲区传输的字节数。  
   
  *给 pOverlapped*  
- 重叠的结构。 请参阅*lpOverlapped*中[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) Windows SDK 中。  
+ 重叠的结构。 请参阅*lpOverlapped*中[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK 中。  
   
  *pfnCompletionRoutine*  
- 完成例程。 请参阅*lpCompletionRoutine*中[writefileex 只写入](http://msdn.microsoft.com/library/windows/desktop/aa365748)Windows SDK 中。  
+ 完成例程。 请参阅*lpCompletionRoutine*中[writefileex 只写入](/windows/desktop/api/fileapi/nf-fileapi-writefileex)Windows SDK 中。  
   
  *pnBytesWritten*  
  写入的字节数。  
@@ -404,7 +404,7 @@ HRESULT Write(
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 前三个窗体调用[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)，最后一个调用[writefileex 只写入](http://msdn.microsoft.com/library/windows/desktop/aa365748)将数据写入该文件。 使用[CAtlFile::Seek](#seek)移动文件指针。  
+ 前三个窗体调用[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile)，最后一个调用[writefileex 只写入](/windows/desktop/api/fileapi/nf-fileapi-writefileex)将数据写入该文件。 使用[CAtlFile::Seek](#seek)移动文件指针。  
   
 ## <a name="see-also"></a>请参阅  
  [字幕示例](../../visual-cpp-samples.md)   

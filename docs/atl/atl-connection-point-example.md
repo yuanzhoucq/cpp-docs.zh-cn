@@ -1,5 +1,5 @@
 ---
-title: ATL 连接点示例 |Microsoft 文档
+title: ATL 连接点示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a265d26e8733a7eb2982fb84e8d69ed621922d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a35b1e40718c26eb094eddb420f885a37907071
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355176"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212589"
 ---
 # <a name="atl-connection-point-example"></a>ATL 连接点示例
-此示例演示了支持的对象[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)的传出接口为：  
+此示例显示了支持的对象[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作为传出接口：  
   
  [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
   
- 指定时`IPropertyNotifySink`作为传出接口，你可以使用类[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)而不是`IConnectionPointImpl`。 例如：  
+ 指定时`IPropertyNotifySink`为传出接口，您可以使用类[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)而不是`IConnectionPointImpl`。 例如：  
   
  [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
   

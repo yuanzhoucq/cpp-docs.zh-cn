@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216972"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -103,7 +103,7 @@ errno_t _wcstombs_s_l(
 指向要转换的宽字符字符串的指针。
 
 *count*<br/>
-最大存储中的字节数*mbstr*缓冲区，不包括终止 null 字符，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+要在中存储的字节的最大数*mbstr*缓冲区，不包括终止 null 字符，或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
 要使用的区域设置。
@@ -114,42 +114,42 @@ errno_t _wcstombs_s_l(
 
 |错误条件|返回值和**errno**|
 |---------------------|------------------------------|
-|*mbstr*是**NULL**和*sizeInBytes* > 0|**EINVAL**|
+|*mbstr*是**NULL**并*sizeInBytes* > 0|**EINVAL**|
 |*wcstr*是**NULL**|**EINVAL**|
-|目标缓冲区是太小，无法包含转换的字符串 (除非*计数*是 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
+|目标缓冲区因过小，无法包含转换后的字符串 (除非*计数*是 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
 
-如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码和设置**errno**表中所示。
+如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码，并设置**errno**如下表所示。
 
 ## <a name="remarks"></a>备注
 
-**Wcstombs_s**函数将指向的宽字符字符串转换*wcstr*到存储指向的缓冲区中的多字节字符*mbstr*。 在满足以下条件之一前，该转换将一直对每个字符执行：
+**Wcstombs_s**函数将转换的指向的宽字符字符串*wcstr*指向的缓冲区中存储的多字节字符*mbstr*。 在满足以下条件之一前，该转换将一直对每个字符执行：
 
 - 遇到 null 宽字符
 
 - 遇到无法转换的宽字符
 
-- 存储中的字节数*mbstr*缓冲等于*计数*。
+- 存储中的字节数*mbstr*缓冲 equals*计数*。
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*计数*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然后**wcstombs_s**将尽可能多的字符串作为将放入目标缓冲区中，同时仍保持 null 的空间终结器。 如果字符串被截断，则返回值是**STRUNCATE**，和转换仍被视为成功。
+如果*计数*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然后**wcstombs_s**多地将字符串转换根据目标缓冲区，同时仍保留为空的空间终结器。 如果该字符串被截断，则返回值是**STRUNCATE**，和转换仍被视为成功。
 
-如果**wcstombs_s**成功转换了源字符串，它会将大小，以字节为单位的转换的字符串，包括 null 终止符，更改为 *&#42;pReturnValue* (提供*pReturnValue*不**NULL**)。 发生这种情况即使*mbstr*自变量是**NULL** ，并提供了一种方法来确定所需的缓冲区大小。 请注意，如果*mbstr*是**NULL**，*计数*将被忽略。
+如果**wcstombs_s**成功转换了源字符串，它的大小放以字节为单位的转换后的字符串，包括 null 终止符 *&#42;pReturnValue* (提供*pReturnValue*不是**NULL**)。 发生这种情况即使*mbstr*自变量是**NULL** ，并提供了一种方法来确定所需的缓冲区大小。 请注意，如果*mbstr*是**NULL**，*计数*将被忽略。
 
-如果**wcstombs_s**遇到宽字符不能转换为多字节字符，它将 0 放在 *&#42;pReturnValue*，将目标缓冲区设置为一个空字符串，设置**errno**到**EILSEQ**，并返回**EILSEQ**。
+如果**wcstombs_s**遇到无法转换为多字节字符的宽字符它将 0 放入 *&#42;pReturnValue*，将目标缓冲区设置为空字符串，设置**errno**到**EILSEQ**，并返回**EILSEQ**。
 
-如果指向的序列*wcstr*和*mbstr*重叠的行为**wcstombs_s**是不确定的。
+如果指向的序列*wcstr*并*mbstr*重叠的行为**wcstombs_s**是不确定的。
 
 > [!IMPORTANT]
-> 确保*wcstr*和*mbstr*未重叠，且*计数*正确地反映了要转换的宽字符数。
+> 絋粄*wcstr*和*mbstr*未重叠，并且*计数*是否正确反映了要转换的宽字符数。
 
-**wcstombs_s**的任何区域设置相关行为，则使用当前区域设置 **_wcstombs_s_l**等同于**wcstombs**只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs_s**的任何区域设置相关的行为; 使用当前区域设置 **_wcstombs_s_l**等同于**wcstombs**只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcstombs_s**|\<stdlib.h>|
 
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

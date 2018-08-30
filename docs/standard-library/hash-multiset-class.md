@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965466"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210427"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 类
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>参数
 
-*密钥*要存储在 hash_multiset 中的元素数据类型。
+*Key*<br/>
+ 要存储在 hash_multiset 中的元素数据类型。
 
-*特征*的类型，其中包括两个函数对象，其中一个是类，它是比较二元谓词，能够将两个元素值作为排序键以确定其相对顺序是一元谓词映射键值的哈希函数进行比较元素类型的无符号整数到`size_t`。 此参数是可选的并且`hash_compare` *< 键，* **无 * * *\<密钥 >>* 是默认值。
+*特征*<br/>
+ 该类型包括两个函数对象，其中一个类，它是比较二元谓词，能够将两个元素值作为排序键以确定其相对顺序是为无符号的元素的一元谓词映射键值的哈希函数进行比较类型的整数`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
-*分配器*表示存储的分配器对象封装有关 hash_multiset 的分配和解除分配的内存的详细信息的类型。 此参数是可选参数，默认值为 **分配器 * * *\<密钥 >。*
+*分配器*<br/>
+ 一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -145,7 +148,7 @@ hash_multiset 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_multiset 作为关联容器。 hash_multiset 的元素可以是多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用 hash_set 作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则 hash_map 应为包含此数据的适当结构。 如果定义不唯一，则应选择 hash_multimap 作为容器。
 
-hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类的对象相同`hash_compare` *< 键，* **无 * * *\<密钥 >>。* 具体而言，对于所有值*键*类型的`Key`，在调用**特征**(*密钥*) 将生成的类型的值的分布`size_t`。
+hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类的对象相同`hash_compare<Key, less<Key> >`。 具体而言，对于所有值*键*类型的`Key`，在调用`Trait(Key)`生成的类型的值的分布`size_t`。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_multiset 进行的排序将为严格弱排序，其中在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时两个对象 x 和 y 定义为等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*匹配的 hash_multiset 的元素的键。
+*key*<br/>
+ 要从 hash_multiset 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1017,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1105,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-*_Where*要从 hash_multiset 中移除的元素的位置。
+*_Where*<br/>
+ 要从 hash_multiset 移除的元素的位置。
 
-*第一个*从 hash_multiset 中移除的第一个元素的位置。
+*first*<br/>
+ 要从 hash_multiset 中移除的第一个元素的位置。
 
-*最后一个*从 hash_multiset 中移除的刚超出最后一个元素的位置。
+*最后一个*<br/>
+ 紧接要从 hash_multiset 中移除的最后一个元素的位置。
 
-*密钥*要从 hash_multiset 中移除的元素的键。
+*key*<br/>
+ 要从 hash_multiset 中移除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1222,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 hash_multiset 中元素的排序键匹配的参数键。
+*key*<br/>
+ 要与当前搜索的 hash_multiset 中元素的排序键匹配的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1656,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2138,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>参数
 
-*右*参数 hash_multiset，提供要与目标 hash_multiset 进行交换的元素。
+*right*<br/>
+ 参数 hash_multiset，提供要与目标 hash_multiset 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2213,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
+*key*<br/>
+ 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 

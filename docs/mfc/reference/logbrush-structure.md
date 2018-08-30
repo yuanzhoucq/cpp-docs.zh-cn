@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b868efed07f786a78c516862e1f88d2310a7c05d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208773"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 结构
-`LOGBRUSH`结构定义样式、 颜色和物理画笔的模式。 它由 Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)并[ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)函数。  
+`LOGBRUSH`结构定义样式、 颜色和物理画笔的模式。 它由 Windows [CreateBrushIndirect](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect)并[ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)函数。  
   
 ## <a name="syntax"></a>语法  
   

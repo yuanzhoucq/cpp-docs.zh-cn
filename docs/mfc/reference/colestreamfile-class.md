@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab7b12c26854903379da0b67f9f64e2158195587
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852753"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211123"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
 表示作为 OLE 结构化存储一部分的复合文件中的数据流 (`IStream`)。  
@@ -72,7 +72,7 @@ class COleStreamFile : public CFile
   
  有关操作流和存储的详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...  
   
- 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)并[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
+ 有关详细信息，请参阅[IStream](/windows/desktop/api/objidl/nn-objidl-istream)并[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -98,7 +98,7 @@ void Attach(LPSTREAM lpStream);
 ### <a name="remarks"></a>备注  
  对象已不得与 OLE 流相关联。  
   
- 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 有关详细信息，请参阅[IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  创建一个 `COleStreamFile` 对象。  
@@ -114,7 +114,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="remarks"></a>备注  
  如果*lpStream*为 NULL，该对象不是与 OLE 流相关联，否则，该对象是与所提供的 OLE 流相关联。  
   
- 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 有关详细信息，请参阅[IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  安全地创建其中失败是正常的预期条件的新流全局、 共享内存不足。  
@@ -133,7 +133,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="remarks"></a>备注  
  由 OLE 子系统分配内存。  
   
- 有关详细信息，请参阅[CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
+ 有关详细信息，请参阅[CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) Windows SDK 中。  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  安全地在其中失败是正常的预期条件所提供的存储区对象中创建新的流。  
@@ -165,7 +165,7 @@ BOOL CreateStream(
 ### <a name="remarks"></a>备注  
  如果打开失败，将引发文件异常并*pError*不为 NULL。  
   
- 有关详细信息，请参阅[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
+ 有关详细信息，请参阅[IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) Windows SDK 中。  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  解除对象中的流未关闭流的关联。  
@@ -180,7 +180,7 @@ LPSTREAM Detach();
 ### <a name="remarks"></a>备注  
  程序终止之前，必须以某种其他方式关闭流。  
   
- 有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 有关详细信息，请参阅[IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  调用此函数可将指针返回到当前流。  
@@ -190,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向当前的流接口的指针 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
+ 指向当前的流接口的指针 ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream))。  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  打开现有的流。  
@@ -222,7 +222,7 @@ BOOL OpenStream(
 ### <a name="remarks"></a>备注  
  如果打开失败，将引发文件异常并*pError*不为 NULL。  
   
- 有关详细信息，请参阅[IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
+ 有关详细信息，请参阅[IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [CFile 类](../../mfc/reference/cfile-class.md)   

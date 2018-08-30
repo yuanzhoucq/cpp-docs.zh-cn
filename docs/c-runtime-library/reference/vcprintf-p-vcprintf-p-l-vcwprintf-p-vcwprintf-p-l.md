@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415629"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210356"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 
@@ -103,22 +103,22 @@ int _vcwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数，如果发生输出错误，则为一个负值。 如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
+写入的字符数，如果发生输出错误，则为一个负值。 如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数采用指向自变量列表，，然后使用 **_putch**函数进行格式化和给定的数据写入控制台。 (**_vcwprintf_p**使用 **_putwch**而不是 **_putch**。 **_vcwprintf_p**是宽字符版本的 **_vcprintf_p**。 它将采用一个宽字符字符串作为参数。）
+每个函数采用一个指向参数列表，然后使用 **_putch**函数来设置格式，并将给定的数据写入到控制台。 (**_vcwprintf_p**使用 **_putwch**而不是 **_putch**。 **_vcwprintf_p**是宽字符版本 **_vcprintf_p**。 它将采用一个宽字符字符串作为参数。）
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
-每个*参数*（如果有） 转换和输出中的相应格式规范根据*格式*。 格式规范支持位置参数，以便你可以指定自变量在格式字符串中的使用顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+每个*自变量*（如果有） 转换和输出中的相应格式规范根据*格式*。 格式规范支持位置参数，以便你可以指定自变量在格式字符串中的使用顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
 当输出换行字符时，这些函数不会将它们转换为回车-换行符 (CR-LF) 组合。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-这些函数将验证输入指针和格式字符串。 如果*格式*或*参数*是**NULL**，或如果格式字符串包含无效格式字符，这些函数将调用无效参数处理程序，如所述在[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+这些函数将验证输入指针和格式字符串。 如果*格式*或*自变量*是**NULL**，或如果格式字符串包含无效格式字符，这些函数将调用无效参数处理程序，如所述在中[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -129,7 +129,7 @@ int _vcwprintf_p_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_vcprintf_p**， **_vcprintf_p_l**|\<conio.h> 和 \<stdarg.h>|
 |**_vcwprintf_p**， **_vcwprintf_p_l**|\<conio.h> 和 \<stdarg.h>|

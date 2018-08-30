@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336181"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215435"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 表示由基于数据访问对象 (DAO) 的 MFC 数据库类引起的异常条件。  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>备注  
  这是 OLE 代码。 很少需要使用此值，因为在几乎所有情况下，更具体的 MFC 或 DAO 错误信息现已推出其他`CDaoException`数据成员。  
   
- SCODE 有关的信息，请参阅主题[OLE 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 中。 SCODE 数据类型映射到 HRESULT 的数据类型。  
+ SCODE 有关的信息，请参阅主题[OLE 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。 SCODE 数据类型映射到 HRESULT 的数据类型。  
   
 ## <a name="see-also"></a>请参阅  
  [CException 类](../../mfc/reference/cexception-class.md)   

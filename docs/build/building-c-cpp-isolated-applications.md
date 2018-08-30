@@ -1,5 +1,5 @@
 ---
-title: 生成 C/c + + 独立应用程序 |Microsoft 文档
+title: 生成 C/c + + 独立应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69de94159ef792aedff35efe81e8bb663d571105
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26a21eb12d9da1caaae3dbd12fe2f3ffd1194bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360144"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219088"
 ---
 # <a name="building-cc-isolated-applications"></a>生成 C/C++ 独立应用程序
-独立应用程序仅取决于通过并行程序集，并将绑定到使用清单及其依赖项。 不需要应用程序，以便在 Windows; 上正确运行完全隔离但是，通过在造成应用程序完全隔离方面的投资，你可能节省时间，如果需要应用程序在将来提供服务。 使应用程序完全独立的好处的详细信息，请参阅[独立应用程序](http://msdn.microsoft.com/library/aa375190)。  
+独立应用程序仅取决于通过并行程序集，并将绑定到使用清单及其依赖项。 这不是必需的应用程序以完全隔离要在 Windows; 上正确运行但是，通过投资使你完全隔离的应用程序，可能会节省时间如果你需要服务在将来，你的应用程序。 使应用程序完全独立的优势详细信息，请参阅[独立应用程序](/windows/desktop/SbsCs/isolated-applications)。  
   
- 生成使用 Visual c + + 本机 C/c + + 应用程序时，则在默认情况下，Visual Studio 项目系统将生成清单文件描述 Visual c + + 库上的应用程序的依赖关系。 如果这些是唯一的依赖项你的应用程序就会具有，则它将成为独立应用程序，只要它使用 Visual Studio 重新生成。 如果你的应用程序在运行时，使用其他库，则可能需要重新这些库生成为通过并行程序集[构建 C/c + + 端并行程序集](../build/building-c-cpp-side-by-side-assemblies.md)。  
+ 生成使用 Visual c + + 本机 C/c + + 应用程序时，则在默认情况下，Visual Studio 项目系统将生成描述 Visual c + + 库上的应用程序的依赖项的清单文件。 如果这些是唯一的依赖项应用程序就会具有，则它将成为独立应用程序，只要它使用 Visual Studio 重新生成。 如果你的应用程序在运行时，使用其他库，则可能需要重新为通过并行程序集生成这些库[生成 C/c + +-并行程序集](../build/building-c-cpp-side-by-side-assemblies.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [独立应用程序和通过并行程序集的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

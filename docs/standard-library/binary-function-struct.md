@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6019f2bb3d425b8ebfa4c49c3b6623d331fa5534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964153"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212563"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 结构
 
@@ -41,11 +41,9 @@ struct binary_function {
 
 模板结构可作为一些类的基础，这些类可定义以下窗体的成员函数：
 
-**result_type operator()**( **constfirst_argument_type&**,
+> *result_type* * * operator （) (const * * <em>first_argument_type</em>**&、 const** <em>second_argument_type</em>**&) 常量**
 
-**const second_argument_type&** ) **const**
-
-所有此类二元函数可以作为其第一个参数类型，请参阅`first_argument_type`，其第二个自变量类型作为`second_argument_type`，并为其返回类型***result_type***。
+所有的此类二元函数都可将其第一个参数类型引用为 *first_argument_type*，将其第二个参数类型引用为 *second_argument_type*，并将其返回类型引用为 *result_type*。
 
 ## <a name="example"></a>示例
 

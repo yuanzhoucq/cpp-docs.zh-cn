@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460705"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220085"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "39460705"
 
 - **局部范围**声明函数或 lambda，包括参数名称中的名称具有局部范围。 它们通常被称为"局部变量"。 它们只是从其声明的点对函数或 lambda 体的结尾可见。 本地作用域是一种类型的块范围，这将在本文后面部分进行讨论。
 
-- **类范围内使用**类成员的名称具有类范围内，整个类定义，而不考虑声明点扩展。 类成员可访问性是由控制进一步**公共**，**专用**，并**受保护的**关键字。 公共或受保护的成员可以访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。\*** 或**-> \***)。
+- **类范围内使用**类成员的名称具有类范围内，整个类定义，而不考虑声明点扩展。 类成员可访问性是由控制进一步**公共**，**专用**，并**受保护的**关键字。 公共或受保护的成员可以访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。**<strong>\*</strong>或**->** <strong>\*</strong>)。
 
 - **语句作用域**中声明的名称**有关**，**如果**，**虽然**，或**切换**语句结束时才是可见语句块。
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > 此示例中所示的标识符名称的重用被视为较差的编程样式。
 
- 有关指针的详细信息，请参阅[派生类型](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
+ 有关指针的详细信息，请参阅[派生类型](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隐藏具有全局作用域的名称
 

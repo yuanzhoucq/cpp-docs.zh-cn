@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219405"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 此类实现一种服务。  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  可选的额外字符串写入到事件日志。  
   
 ### <a name="remarks"></a>备注  
- 此方法写出到事件日志，使用该函数的详细信息[ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679)。 如果没有服务正在运行，则将字符串发送到控制台。  
+ 此方法写出到事件日志，使用该函数的详细信息[ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa)。 如果没有服务正在运行，则将字符串发送到控制台。  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  指示作为服务运行该程序的标记。  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>备注  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)结构包含有关服务的信息。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)结构包含有关服务的信息。  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  存储当前服务的状态信息结构的成员变量。  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>备注  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)结构包含有关服务的信息。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)结构包含有关服务的信息。  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  正在注册的服务的名称。  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>参数  
  *nShowCmd*  
- 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。  
+ 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>参数  
  *dwState*  
- 新的状态。 请参阅[SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)有关可能的值。  
+ 新的状态。 请参阅[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)有关可能的值。  
   
 ### <a name="remarks"></a>备注  
  更新服务的服务控制管理器的状态信息。 调用[catlservicemodulet:: Run](#run)， [catlservicemodulet:: Servicemain](#servicemain)和其他处理程序方法。 状态也存储在成员变量[CAtlServiceModuleT::m_status](#m_status)。  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>参数  
  *nShowCmd*  
- 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
+ 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>参数  
  *nShowCmd*  
- 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
+ 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
   
 ### <a name="return-value"></a>返回值  
  返回服务的返回值。  

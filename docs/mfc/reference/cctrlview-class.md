@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210198"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 类
 使文档视图体系结构适应 Windows 98 和 Windows NT 版本 3.51 及更高版本所支持的公共控件。  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>参数  
  *cs*  
- 一个[CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603)结构。  
+ 一个[CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果应继续窗口创建; 非零值0 以指示创建失败。  

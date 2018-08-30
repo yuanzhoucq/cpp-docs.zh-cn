@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212425"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 类
-有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  
+有关详细信息，请参阅[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>备注  
  若要显示的对话框，请调用[DoModal](#domodal)函数。  
   
- 有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)并[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)结构。  
+ 有关详细信息，请参阅[CLSID 项](/windows/desktop/com/clsid-key-hklm)并[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta)结构。  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  调用此函数中，从成功返回后[DoModal](#domodal)，而是将转换或激活类型的对象[COleClientItem](../../mfc/reference/coleclientitem-class.md)。  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - 如果用户已取消对话框的，IDCANCEL。  
   
-- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要通过设置的成员初始化各种对话框控件[m_cv](#m_cv)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 有关详细信息，请参阅[CLSID 项](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  调用此函数可确定是否在用户选择以图标形式显示选定的项。  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回 IDOK。  
   
- 绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的数据结构。  
+ 绘制方面的详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的数据结构。  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  调用此函数可获取包含选定项的图标方面的图元文件的句柄。  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>备注  
  直接或通过成员函数，可以修改此结构的成员。  
   
- 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336594"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212038"
 ---
 # <a name="event-sink-maps"></a>事件接收器映射
 当嵌入 OLE 控件触发事件时，控件的容器将使用 MFC 提供的名为“事件接收器映射”的机制接收事件。 此事件接收器映射为每个特定事件指定处理程序函数，以及这些事件的参数。 事件接收器映射的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  在通知中所涉及的属性的调度 ID。  
   
  *pfnRequest*  
- 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有一个布尔值，返回类型和一个**BOOL\*** 参数。 此函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
+ 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有一个布尔值，返回类型和一个**BOOL** <strong>\*</strong>参数。 此函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
   
  *pfnChanged*  
  指向成员函数处理`OnChanged`此属性的通知。 该函数应具有一个布尔值，返回类型和 UINT 参数。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  在通知中所涉及的属性的调度 ID。  
   
  *pfnRequest*  
- 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有一个布尔值，返回类型和 UINT 并**BOOL\*** 参数。 该函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
+ 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有`BOOL`返回类型和`UINT`和`BOOL*`参数。 该函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
   
  *pfnChanged*  
- 指向成员函数处理`OnChanged`此属性的通知。 该函数应具有一个布尔值，返回类型和 UINT 参数。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
+ 指向成员函数处理`OnChanged`此属性的通知。 此函数应该拥有`BOOL`返回类型和一个`UINT`参数。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  在通知中所涉及的属性的调度 ID。  
   
  *pfnRequest*  
- 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有一个布尔值，返回类型和一个**BOOL\*** 参数。 此函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
+ 指向成员函数处理`OnRequestEdit`此属性的通知。 此函数应具有一个布尔值，返回类型和一个**BOOL** <strong>\*</strong>参数。 此函数应将参数设置为 TRUE 以允许更改属性，则为 FALSE，则不允许。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  
   
  *pfnChanged*  
  指向成员函数处理`OnChanged`此属性的通知。 该函数应具有一个布尔值，返回类型和任何参数。 该函数应返回 TRUE 以指示已处理通知;否则为 FALSE。  

@@ -1,7 +1,7 @@
 ---
-title: 项目生成错误 PRJ0004 |Microsoft 文档
+title: 项目生成错误 PRJ0004 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216061"
 ---
 # <a name="project-build-error-prj0004"></a>项目生成错误 PRJ0004
-无法生成工具工具的命令行。  
-  
- 在使到调用语法的方式，指定一个或多个属性***工具***非法：  
-  
--   你可能已指定的格式不正确或未知的宏。  
-  
--   你的计算机的可用磁盘空间可能不足。  
-  
- 你可能想要查看该工具的设置，通过查看[命令行属性页](../../ide/command-line-property-pages.md)。
+
+> 无法生成命令行*工具*工具。
+
+在此类的方式使调用语法指定的一个或多个属性*工具*非法：
+
+- 你可能已指定的格式不正确或未知的宏。
+
+- 您的计算机的可用磁盘空间可能不足。
+
+你可能想要查看该工具的设置，通过查看[命令行属性页](../../ide/command-line-property-pages.md)。

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336057"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211572"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 管理与 HTTP 服务器的连接。  
@@ -129,7 +129,7 @@ CHttpConnection(
 |非 NULL 字符串|非 NULL 字符串|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- 任意组合**INTERNET_ FLAG_\*** 标志。 请参阅中的表**备注**一部分[chttpconnection::](#openrequest)有关的说明*dwFlags*值。  
+ 任意组合`INTERNET_FLAG_*`标志。 请参阅中的表**备注**一部分[chttpconnection::](#openrequest)有关的说明*dwFlags*值。  
   
 ### <a name="remarks"></a>备注  
  永远不会创建`CHttpConnection`直接。 而是通过调用创建对象[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  

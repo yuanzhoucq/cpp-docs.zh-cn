@@ -1,5 +1,5 @@
 ---
-title: .Obj 文件作为链接器输入 |Microsoft 文档
+title: .Obj 文件作为链接器输入 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -19,24 +19,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57907beaa30418ce31e6c46202149048d5c9dea1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219557"
 ---
 # <a name="obj-files-as-linker-input"></a>用作链接器输入的 .Obj 文件
 
-链接器工具 （链接。EXE) 接受在通用对象文件格式 (COFF) 的.obj 文件。
+链接器工具 （链接。EXE) 接受是通用对象文件格式 (COFF) 中的.obj 文件。
 
 ## <a name="remarks"></a>备注
 
-Microsoft 提供了通用对象文件格式的完整说明。 有关详细信息，请参阅[PE 格式](https://msdn.microsoft.com/library/windows/desktop/ms680547)。
+Microsoft 提供了通用对象文件格式的完整说明。 有关详细信息，请参阅[PE 格式](/windows/desktop/Debug/pe-format)。
 
 ## <a name="unicode-support"></a>Unicode 支持
 
-Microsoft Visual c + + 编译器从 Visual Studio 2005 开始，支持 ISO/IEC C 和 c + + 标准定义的标识符中的 Unicode 字符。 以前版本的编译器支持在标识符中仅包含 ASCII 字符。 若要支持 Unicode 支持的函数、 类和静态对象的名称中，编译器和链接器，请使用 COFF 符号.obj 文件中的 Unicode utf-8 编码。 Utf-8 编码是与使用 Visual Studio 的早期版本的 ASCII 编码上级兼容。
+从 Visual Studio 2005 开始，Microsoft Visual c + + 编译器支持在标识符 ISO/IEC C 和 c + + 标准定义的 Unicode 字符。 以前版本的编译器支持在标识符中仅包含 ASCII 字符。 若要支持 Unicode 的函数、 类和静态变量的名称中，编译器和链接器，请使用.obj 文件中的 COFF 符号的 Unicode utf-8 编码。 Utf-8 编码是与使用 Visual Studio 的早期版本的 ASCII 编码向上兼容。
 
 有关编译器和链接器的详细信息，请参阅[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)。 有关 Unicode 标准的详细信息，请参阅[Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123)组织。
 
@@ -47,4 +47,4 @@ Microsoft Visual c + + 编译器从 Visual Studio 2005 开始，支持 ISO/IEC C
 [支持 Unicode](../../text/support-for-unicode.md)  
 [编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
 [Unicode 标准](http://go.microsoft.com/fwlink/p/?linkid=37123)  
-[PE 格式](https://msdn.microsoft.com/library/windows/desktop/ms680547)  
+[PE 格式](/windows/desktop/Debug/pe-format)  

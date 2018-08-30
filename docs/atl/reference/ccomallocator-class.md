@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221096"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
 此类提供用于管理内存使用 COM 内存例程的方法。  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  返回指向已分配空间的 void 指针；如果可用内存不足，则返回 NULL。  
   
 ### <a name="remarks"></a>备注  
- 分配内存。 请参阅[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)的更多详细信息。  
+ 分配内存。 请参阅[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)的更多详细信息。  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  调用此静态函数以释放已分配的内存。  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  指向已分配内存的指针。  
   
 ### <a name="remarks"></a>备注  
- 释放已分配的内存。 请参阅[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)的更多详细信息。  
+ 释放已分配的内存。 请参阅[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)的更多详细信息。  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  调用此静态函数以重新分配内存。  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  如果没有足够的内存分配的空间，或者为 NULL 返回 void 指针  
   
 ### <a name="remarks"></a>备注  
- 调整已分配内存的大小。 请参阅[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)的更多详细信息。  
+ 调整已分配内存的大小。 请参阅[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)的更多详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   

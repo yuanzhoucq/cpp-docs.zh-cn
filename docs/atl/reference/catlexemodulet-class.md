@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880045"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214270"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 类
 此类表示应用程序的模块。  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>参数  
  *nShowCmd*  
- 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。  
+ 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 默认情况下此方法只是调用[CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715)和从析构函数调用。 重写此方法，如果重写[CAtlExeModuleT::InitializeCom](#initializecom)。  
+ 默认情况下此方法只是调用[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)和从析构函数调用。 重写此方法，如果重写[CAtlExeModuleT::InitializeCom](#initializecom)。  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  模块的锁计数递减。  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>参数  
  *nShowCmd*  
- 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
+ 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。  
   
 ### <a name="return-value"></a>返回值  
  返回可执行文件的返回值。  

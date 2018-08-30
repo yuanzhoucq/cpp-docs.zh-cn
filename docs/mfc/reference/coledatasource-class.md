@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d67165d3869ffdd60eff86fa8c33abf275e070b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209772"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 充当应用程序将数据放置到的缓存，应用程序将在数据传输操作（如剪贴板或拖放操作）期间提供这些数据。  
@@ -92,7 +92,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="remarks"></a>备注  
  您可以直接创建 OLE 数据源。 或者， [COleClientItem](../../mfc/reference/coleclientitem-class.md)并[COleServerItem](../../mfc/reference/coleserveritem-class.md)类创建 OLE 数据源来响应其`CopyToClipboard`和`DoDragDrop`成员函数。 请参阅[COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard)有关的简要说明。 重写`OnGetClipboardData`若要将附加剪贴板格式添加到 OLE 数据源中的数据在客户端项目或服务器项类成员函数为创建`CopyToClipboard`或`DoDragDrop`成员函数。  
   
- 只要您想要准备用于传输的数据，应创建此类的对象并填充数据针对数据使用最合适的方法。 插入到数据源的方式直接受是否立即提供数据 （立即呈现） 或按需 （延迟的呈现）。 对于每个在其中将提供数据，通过传递要使用的剪贴板格式的剪贴板格式 (和可选[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构)，调用[DelayRenderData](#delayrenderdata)。  
+ 只要您想要准备用于传输的数据，应创建此类的对象并填充数据针对数据使用最合适的方法。 插入到数据源的方式直接受是否立即提供数据 （立即呈现） 或按需 （延迟的呈现）。 对于每个在其中将提供数据，通过传递要使用的剪贴板格式的剪贴板格式 (和可选[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构)，调用[DelayRenderData](#delayrenderdata)。  
   
  有关数据源和数据传输的详细信息，请参阅文章[数据对象和数据源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。 此外，本文[剪贴板主题](../../mfc/clipboard.md)描述 OLE 剪贴板机制。  
   
@@ -118,26 +118,26 @@ void CacheData(
   
 ### <a name="parameters"></a>参数  
  *cfFormat*  
- 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它包含指定的格式中的数据。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)结构，它包含指定的格式中的数据。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
   
 ### <a name="remarks"></a>备注  
  您必须提供数据，因为此函数提供了通过使用直接呈现它。 需要时才被缓存数据。  
   
- 提供使用数据[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构。 此外可以使用`CacheGlobalData`成员函数，如果你所提供的数据量是足够小，能够有效地使用 HGLOBAL 传输。  
+ 提供使用数据[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)结构。 此外可以使用`CacheGlobalData`成员函数，如果你所提供的数据量是足够小，能够有效地使用 HGLOBAL 传输。  
   
  在调用`CacheData``ptd`的成员`lpFormatEtc`的内容*lpStgMedium*所拥有的数据对象，不是由调用方。  
   
  若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)并[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)并[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  调用此函数可指定在其中数据在提供安全更新的数据传输操作的格式。  
@@ -151,22 +151,22 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>参数  
  *cfFormat*  
- 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。  
   
  *hGlobal*  
  包含指定的格式中的数据的全局内存块的句柄。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用立即呈现，因此调用函数; 时，必须提供数据的数据需要时才被缓存数据。 使用`CacheData`成员函数，如果你所提供的大量数据，或如果需要结构化的存储介质。  
   
  若要使用延迟的呈现，调用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成员函数。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  构造 `COleDataSource` 对象。  
@@ -186,10 +186,10 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>参数  
  *cfFormat*  
- 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用延迟呈现，因此不立即提供数据的数据。 [OnRenderData](#onrenderdata)或[OnRenderGlobalData](#onrenderglobaldata)成员函数调用以请求数据。  
@@ -198,9 +198,9 @@ void DelayRenderData(
   
  若要使用立即呈现，调用[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成员函数。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  调用此函数可指定在其中数据在提供安全更新的数据传输操作的格式。  
@@ -213,10 +213,10 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>参数  
  *cfFormat*  
- 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ 剪贴板格式，数据将会提供。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构描述，数据将提供的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用延迟呈现，因此不立即提供数据的数据。 [OnRenderFileData](#onrenderfiledata)成员函数调用以请求数据。  
@@ -225,9 +225,9 @@ void DelayRenderFileData(
   
  若要使用立即呈现，调用[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成员函数。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  调用此函数可支持更改数据源的内容。  
@@ -240,17 +240,17 @@ void DelaySetData(
   
 ### <a name="parameters"></a>参数  
  *cfFormat*  
- 剪贴板格式，数据将放置。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ 剪贴板格式，数据将放置。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述，数据将被替换的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构描述，数据将被替换的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果，则为 NULL，将对其他字段中使用默认值`FORMATETC`结构。  
   
 ### <a name="remarks"></a>备注  
  [OnSetData](#onsetdata)发生此情况时由框架调用。 这仅用时则框架将返回从数据源[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未调用你`OnSetData`将永远不会调用的函数。 `DelaySetData` 应为每个剪贴板调用或`FORMATETC`你支持的格式。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的结构。  
   
- 有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="dodragdrop"></a>  Coledatasource:: Dodragdrop  
  调用`DoDragDrop`成员函数中通常执行此数据源，拖放操作[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)处理程序。  
@@ -294,7 +294,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 拖动延迟时间将存储在 WIN 的缓存版本。INI。  
   
- 详细了解如何将拖动的延迟信息存储在任一注册表或。INI 文件，请参阅[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK 中。  
+ 详细了解如何将拖动的延迟信息存储在任一注册表或。INI 文件，请参阅[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK 中。  
   
  有关详细信息，请参阅文章[拖放： 实现放置源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
   
@@ -308,7 +308,7 @@ void Empty();
 ### <a name="remarks"></a>备注  
  同时缓存，以便可以重用延迟呈现格式将清空。  
   
- 有关详细信息，请参阅[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK 中。  
+ 有关详细信息，请参阅[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) Windows SDK 中。  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  呈现数据，可在剪贴板上，然后您可以将数据从剪贴板粘贴后关闭应用程序。  
@@ -341,10 +341,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>参数  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定为请求信息的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构，它指定为请求信息的格式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) ，数据将返回的结构。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) ，数据将返回的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -356,7 +356,7 @@ virtual BOOL OnRenderData(
   
  这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你的数据较小且大小固定，重写`OnRenderGlobalData`。 如果数据是在文件中，或者是大小可变的重写`OnRenderFileData`。  
   
- 有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)枚举类型，以及[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)在 Windows SDK 中。  
+ 有关详细信息，请参阅[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)和[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构[TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)枚举类型，以及[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)在 Windows SDK 中。  
   
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  由框架调用以检索指定格式的数据时指定的存储介质是一个文件。  
@@ -369,7 +369,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>参数  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定为请求信息的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构，它指定为请求信息的格式。  
   
  *pFile*  
  指向[CFile](../../mfc/reference/cfile-class.md) ，数据将呈现的对象。  
@@ -382,7 +382,7 @@ virtual BOOL OnRenderFileData(
   
  这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写`OnRenderFileData`。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构并[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构并[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  由框架调用以检索指定格式的数据时指定的存储介质是全局内存。  
@@ -395,7 +395,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>参数  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定为请求信息的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构，它指定为请求信息的格式。  
   
  *phGlobal*  
  指向全局内存，数据将返回的句柄。 如果其中一个具有尚未分配，此参数可以为 NULL。  
@@ -410,7 +410,7 @@ virtual BOOL OnRenderGlobalData(
   
  这是一种高级可重写。 重写此函数可提供请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果数据是在文件中，或者是大小可变的重写[OnRenderFileData](#onrenderfiledata)。 有关详细信息延迟呈现为 mfc 已处理，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构并[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
+ 有关详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构并[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  由框架调用以设置或替换中的数据`COleDataSource`中指定的格式对象。  
@@ -424,10 +424,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>参数  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中替换数据的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构，它指定在其中替换数据的格式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它包含的数据的当前内容将替换为`COleDataSource`对象。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)结构，它包含的数据的当前内容将替换为`COleDataSource`对象。  
   
  *bRelease*  
  指示谁完成函数调用后有存储介质的所属权。 调用方决定由谁来负责释放存储介质代表分配的资源。 调用方通过设置执行此*bRelease*。 如果*bRelease*为非零值，数据源将获得所有权，使用它完成时释放该介质。 当*bRelease*为 0、 保留所有权，调用方和数据源可以专用于在调用期间使用的存储介质。  
@@ -436,11 +436,11 @@ virtual BOOL OnSetData(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 它已成功地获取它，数据源才会对数据所有权。 也就是说，它不会所有权如果`OnSetData`返回 0。 如果数据源采用所有权，它通过调用释放存储介质[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)函数。  
+ 它已成功地获取它，数据源才会对数据所有权。 也就是说，它不会所有权如果`OnSetData`返回 0。 如果数据源采用所有权，它通过调用释放存储介质[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)函数。  
   
  默认实现不执行任何操作。 重写此函数可替换指定的格式中的数据。 这是一种高级可重写。  
   
- 有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)并[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构并[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)并[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)Windows SDK 中的函数。  
+ 有关详细信息，请参阅[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)并[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)结构并[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)并[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)Windows SDK 中的函数。  
   
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  中包含的数据将放`COleDataSource`调用下列函数之一后在剪贴板上的对象： [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  

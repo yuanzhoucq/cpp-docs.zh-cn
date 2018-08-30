@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222771"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 `CMFCShellTreeCtrl`类用于扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |名称|描述|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|启用或禁用的快捷菜单。|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|返回传递给的标志的组合[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|返回传递给的标志的组合[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|检索项的路径。|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|返回一个指向[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)与这一起使用的对象`CMFCShellTreeCtrl`对象来创建类似于资源管理器的窗口。|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|接收应用于该窗口的通知消息时，将通过此窗口的父窗口调用此成员函数。 (重写[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify)。)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  设置指定标志的组合当前为 DWORD 值。  
   
 ### <a name="remarks"></a>备注  
- 设置的标志`CMFCShellTreeCtrl`发送到方法[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)每当刷新对象。 你可以使用的标志[CMFCShellTreeCtrl::SetFlags](#setflags)方法。  
+ 设置的标志`CMFCShellTreeCtrl`发送到方法[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)每当刷新对象。 你可以使用的标志[CMFCShellTreeCtrl::SetFlags](#setflags)方法。  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  检索中的项的路径[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象。  
@@ -254,7 +254,7 @@ void SetFlags(
  一个布尔值，指定是否`CMFCShellTreeCtrl`应立即进行刷新。  
   
 ### <a name="remarks"></a>备注  
- `CMFCShellTreeCtrl`传递所有标志设置为[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。 有关不同的标志的值的详细信息，请参阅[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。  
+ `CMFCShellTreeCtrl`传递所有标志设置为[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。 有关不同的标志的值的详细信息，请参阅[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  将相关联[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象。  

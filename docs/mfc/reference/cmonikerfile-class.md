@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853642"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212112"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 类
-表示数据的流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 由命名[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
+表示数据的流 ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 由命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` 不能用于绑定到一个流之外的任何内容。 如果你想要将绑定到存储或一个对象，则必须使用`IMoniker`直接接口。  
   
- 流和名字对象的详细信息，请参阅[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 参考*并[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)并[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中Windows SDK。  
+ 流和名字对象的详细信息，请参阅[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 参考*并[IStream](/windows/desktop/api/objidl/nn-objidl-istream)并[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)中Windows SDK。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  指向文件异常的指针。 发生错误，必须先将它设置为原因。  
   
 ### <a name="return-value"></a>返回值  
- 绑定上下文的指针[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)要与绑定，如果成功，否则该值为 NULL。 如果通过打开的实例`IBindHost`接口，从检索的绑定上下文`IBindHost`。 如果没有任何`IBindHost`接口未能返回绑定上下文、 绑定上下文创建。 有关的说明[IBindHost](http://msdn.microsoft.com/library/ie/ms775076)接口，请参阅 Windows SDK。  
+ 绑定上下文的指针[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要与绑定，如果成功，否则该值为 NULL。 如果通过打开的实例`IBindHost`接口，从检索的绑定上下文`IBindHost`。 如果没有任何`IBindHost`接口未能返回绑定上下文、 绑定上下文创建。 有关的说明[IBindHost](https://msdn.microsoft.com/library/ie/ms775076)接口，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
  绑定上下文是存储特定的名字对象绑定操作有关的信息的对象。 您可以重写此函数可提供自定义绑定上下文。  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向当前名字对象接口的指针 ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+ 指向当前名字对象接口的指针 ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker))。  
   
 ### <a name="remarks"></a>备注  
- 由于`CMonikerFile`不是一个接口，返回的指针不会递增引用计数 (通过[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，名字对象被释放时`CMonikerFile`释放对象。 如果你想要保存到名字对象上或自己发布，则必须`AddRef`它。  
+ 由于`CMonikerFile`不是一个接口，返回的指针不会递增引用计数 (通过[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref))，名字对象被释放时`CMonikerFile`释放对象。 如果你想要保存到名字对象上或自己发布，则必须`AddRef`它。  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  调用此成员函数，以打开文件或名字对象的对象。  

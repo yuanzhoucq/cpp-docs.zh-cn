@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f0994eb1b0293bb31fdb1cd4659256b978ebd69d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219360"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 允许将数据拖动到放置目标。  
@@ -63,7 +63,7 @@ class COleDropSource : public CCmdTarget
   
  拖放操作的详细信息使用 OLE，请参阅文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
   
- 有关详细信息，请参阅[IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,7 +109,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="remarks"></a>备注  
  重写此函数向用户如果此时发生放置会发生什么情况提供反馈。 默认实现使用 OLE 默认光标。 拖放操作的详细信息使用 OLE，请参阅文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
   
- 有关详细信息，请参阅[IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，并[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback)， [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover)，并[IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK 中。  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  由框架事件发生时无法开始拖动操作，例如，按下鼠标左键。  

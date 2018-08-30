@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: aa231a2f232c6c834e05edfbca5d6023e0326d54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216731"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 类
 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。  
@@ -102,7 +102,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
  对一个 dword 值，将接收定位符类型的引用。 请参阅**备注**定位符类型的表。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  可能的类型如下所示：  

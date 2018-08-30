@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392460cde35096bc1c61db4d7e6bd2143932838d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0555b050770d5fbd411e1720282e3fb50769385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208399"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Microsoft 专用**  
@@ -59,7 +59,7 @@ HRESULT GetActiveObject(
   
 -   **GetActiveObject (**`clsidString`**)** 附加到给定的 Unicode 字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`.  
   
--   **GetActiveObject (**`clsidStringA`**)** 附加到给定的多字节字符字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`. 调用[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。  
+-   **GetActiveObject (**`clsidStringA`**)** 附加到给定的多字节字符字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`. 调用[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。  
   
  **结束 Microsoft 专用**  
   

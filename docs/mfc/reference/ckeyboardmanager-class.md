@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338980"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212886"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 管理主框架窗口和子框架窗口的快捷键表。  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |参数|描述|  
 |[in]*nKey*|要检查的键。|  
-|[in]*fVirt*|指定的快捷键的行为。 有关可能的值的列表，请参阅[加速结构](http://msdn.microsoft.com/library/windows/desktop/ms646340)。|  
+|[in]*fVirt*|指定的快捷键的行为。 有关可能的值的列表，请参阅[加速结构](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
 |[in]*pWndFrame*|框架窗口。 此方法确定是否在此帧中处理的快捷键。|  
 |[in]*bIsDefaultFrame*|一个布尔参数，指示是否*pWndFrame*是默认框架窗口。|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  非零值可打印字符是否为零则不是。  
   
 ### <a name="remarks"></a>备注  
- 如果调用此方法将失败[GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299)失败。  
+ 如果调用此方法将失败[GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299)失败。  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  指示菜单显示所有关联的快捷键与菜单命令或默认快捷键。  

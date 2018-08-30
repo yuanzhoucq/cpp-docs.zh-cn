@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 93427eb8e842687e9bba3dc1eef12bcd07e7e167
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881196"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208006"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 此类是 DACL （自由访问控制列表） 结构的包装器。  
@@ -74,7 +74,7 @@ class CDacl : public CAcl
   
  使用类方法提供用于创建、 添加、 删除和删除 Ace 从`CDacl`对象。 另请参阅[AtlGetDacl](security-global-functions.md#atlgetdacl)并[AtlSetDacl](security-global-functions.md#atlsetdacl)。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -123,7 +123,7 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>备注  
  一个`CDacl`对象包含零个或多个 Ace （访问控制项） 的标识的用户和组有权访问该对象。 此方法将添加一个允许访问的 ACE`CDacl`对象。  
   
- 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关的各种标志可设置中的说明`AceFlags`参数。  
+ 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)有关的各种标志可设置中的说明`AceFlags`参数。  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  将拒绝的 ACE （访问控制项） 添加到`CDacl`对象。  
@@ -164,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>备注  
  一个`CDacl`对象包含零个或多个 Ace （访问控制项） 的标识的用户和组有权访问该对象。 此方法将添加一个拒绝访问的 ACE`CDacl`对象。  
   
- 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关的各种标志可设置中的说明`AceFlags`参数。  
+ 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)有关的各种标志可设置中的说明`AceFlags`参数。  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  构造函数。  
@@ -245,7 +245,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [CAcl 类](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Acl](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Ace](/windows/desktop/SecAuthZ/access-control-entries)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

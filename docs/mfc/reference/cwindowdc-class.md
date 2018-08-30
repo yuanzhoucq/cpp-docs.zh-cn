@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212516"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 类
 从 `CDC`派生。  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  窗口设备上下文对象将访问其工作区中。  
   
 ### <a name="remarks"></a>备注  
- 构造函数将调用 Windows 函数[GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947)。  
+ 构造函数将调用 Windows 函数[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)。  
   
  异常 (类型的`CResourceException`) 如果则会引发 Windows`GetWindowDC`调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
   

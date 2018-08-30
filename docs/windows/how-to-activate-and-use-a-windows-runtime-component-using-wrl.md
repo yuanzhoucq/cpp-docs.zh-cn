@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3dc1743b0c0b795d7aaa10a7a47689de2336094
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219187"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 
@@ -46,7 +46,7 @@ ms.locfileid: "42600390"
 
    我们建议您在 .cpp 文件中使用 `using namespace` 指令使代码更具可读性。
 
-2. 初始化应用程序在其中执行的线程。 每个应用必须初始化其线程和线程模型。 此示例使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)类来初始化 Windows 运行时和指定[RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx)作为线程模型。 `RoInitializeWrapper`类调用`Windows::Foundation::Initialize`在构建过程中和`Windows::Foundation::Uninitialize`时销毁。
+2. 初始化应用程序在其中执行的线程。 每个应用必须初始化其线程和线程模型。 此示例使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)类来初始化 Windows 运行时和指定[RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx)作为线程模型。 `RoInitializeWrapper`类调用`Windows::Foundation::Initialize`在构建过程中和`Windows::Foundation::Uninitialize`时销毁。
 
    [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "42600390"
 
    [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx)函数检索基础 Unicode 形式的 URI 字符串。
+   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx)函数检索基础 Unicode 形式的 URI 字符串。
 
 下面是完整的示例：
 

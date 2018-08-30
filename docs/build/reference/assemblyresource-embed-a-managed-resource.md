@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYRESOURCE （嵌入托管的资源） |Microsoft 文档
+title: -ASSEMBLYRESOURCE （嵌入托管的资源） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213396"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE（嵌入托管资源）
 ```  
@@ -40,16 +40,16 @@ ms.locfileid: "32372173"
  *name*  
  可选。 资源; 的逻辑名称用来加载资源的名称。 默认值是文件的名称。  
   
- 或者，你可以指定是否该文件应为私有程序集清单中。 默认情况下，*名称*在程序集是公共的。  
+ 或者，可以指定是否该文件应为私有程序集清单中。 默认情况下*名称*在程序集是公共的。  
   
 ## <a name="remarks"></a>备注  
  /ASSEMBLYRESOURCE 选项用于在程序集中嵌入资源。  
   
- 资源是在程序集中创建链接器时，公共。 链接器不允许您重命名的程序集中的资源。  
+ 资源是在公共程序集时使用链接器创建的。 链接器不允许你重命名的程序集中的资源。  
   
- 如果*filename*是.NET Framework 创建的资源 (.resources) 文件，例如，通过[资源文件生成器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，它可以访问与中的成员**System.Resources**命名空间 (请参阅[System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx)有关详细信息)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**System.Reflection.Assembly**类在运行时访问资源。  
+ 如果*文件名*是.NET Framework 创建的资源 (.resources) 文件的示例中，通过[资源文件生成器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间 (请参阅[System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)有关详细信息)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。  
   
- 影响程序集生成其他链接器选项包括：  
+ 影响的程序集生成其他链接器选项有：  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 常见的 Visual c + + 64 位迁移问题 |Microsoft 文档
+title: Visual c + + 64 位迁移的常见问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208153"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位迁移的常见问题
 
@@ -35,7 +35,7 @@ ms.locfileid: "32367724"
   
 -   在 64 位 Windows 操作系统中，`int` 和 `long` 是 32 位值。 对于计划为 64 位平台编译的程序，应注意不要将指针赋给 32 位变量。 在 64 位平台上，指针为 64 位，如果将该指针赋给 32 位变量，则将截断该指针值。  
   
--   `size_t``time_t`，和`ptrdiff_t`是在 64 位 Windows 操作系统上的 64 位值。  
+-   `size_t``time_t`，和`ptrdiff_t`是 64 位 Windows 操作系统上的 64 位值。  
   
 -   在 Visual C++ 2005 之前的 Visual C++ 版本中，`time_t` 在 32 位 Windows 操作系统中是 32 位值。 默认情况下，`time_t` 现在为 64 位整数。 有关详细信息，请参阅[时间管理](../c-runtime-library/time-management.md)。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "32367724"
   
 -   [编译器选项](../build/reference/compiler-options.md)  
   
--   [迁移提示](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [迁移提示](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>请参阅  
 
-[配置用于 64 位 x64 Visual c + + 目标](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[配置 Visual c + + 64 位 x64 目标](../build/configuring-programs-for-64-bit-visual-cpp.md)   
 [Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

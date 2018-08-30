@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853688"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218223"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
 显示控件中数据库记录的视图。  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>备注  
  该视图是直接连接到的窗体视图`CRowset`对象。 该视图通过对话框模板资源创建和显示字段的`CRowset`对话框模板的控件中的对象。 `COleDBRecordView`对象使用对话框数据交换 (DDX) 和导航功能内置到`CRowset`，以自动执行窗体上的控件和行集的字段之间的数据移动。 `COleDBRecordView` 此外提供了一个默认实现来移动到第一个下, 一步上, 一个，或最后一个记录和更新当前在视图上的记录的接口。  
   
- 您可以使用 DDX 函数与`COleDbRecordView`以直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\*** 方法 (如`DDX_Text`)，而不**DDX_Field\*** 函数 (如`DDX_FieldText`) 与`COleDbRecordView`。 `DDX_FieldText` 不会使用`COleDbRecordView`因为`DDX_FieldText`使用类型的其他参数**CRecordset\***  (对于`CRecordView`) 或**CDaoRecordset\***  （适用于`CDaoRecordView`).  
+ 您可以使用 DDX 函数与`COleDbRecordView`以直接从数据库记录集获取数据并将其显示在对话框控件。 应使用`DDX_*`方法 (如`DDX_Text`)，而非`DDX_Field*`函数 (如`DDX_FieldText`) 与`COleDbRecordView`。 `DDX_FieldText` 不会使用`COleDbRecordView`因为`DDX_FieldText`使用类型的其他参数`CRecordset*`(对于`CRecordView`) 或`CDaoRecordset*`(为`CDaoRecordView`)。  
   
 > [!NOTE]
 >  如果您正在使用的数据访问对象 (DAO) 类而不是 OLE DB 使用者模板类，使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。  

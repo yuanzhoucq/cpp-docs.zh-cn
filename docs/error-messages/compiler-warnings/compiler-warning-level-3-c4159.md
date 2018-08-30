@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4159 |Microsoft 文档
+title: 编译器警告 （等级 3） C4159 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a21f5fbb7ce279d96f9df8be6008c2f092287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43e3d63ad1d482222c4ffa7aa7435d0e660f3985
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223313"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>编译器警告 （等级 3） C4159
-\#杂注 pragma(pop,...)： 具有弹出先前入栈的标识符 identifier  
-  
- 你的源代码包含**推送**带有杂注标识符与指令跟**pop**指令不含标识符。 因此，***标识符***的弹出，和后续用于***标识符***可能导致意外的行为。  
-  
- 若要避免此警告，请提供一个标识符**pop**指令。 例如：  
-  
-```  
-// C4159.cpp  
-// compile with: /W3  
-#pragma pack(push, f)  
-#pragma pack(pop)   // C4159  
-  
-// using the identifier resolves the warning  
-// #pragma pack(pop, f)  
-  
-int main()  
-{  
-}  
+
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>杂注 pragma(pop,...)： 将先前入栈的标识符*标识符*
+
+## <a name="remarks"></a>备注
+
+你的源代码包含**推送**标识符的杂注指令后, 跟**pop**指令不含标识符。 因此，*标识符*是弹出，并且后续的用法*标识符*可能导致意外的行为。
+
+## <a name="example"></a>示例
+
+若要避免此警告，在中提供的标识符**pop**指令。 例如：
+
+```cpp
+// C4159.cpp
+// compile with: /W3
+#pragma pack(push, f)
+#pragma pack(pop)   // C4159
+
+// using the identifier resolves the warning
+// #pragma pack(pop, f)
+
+int main()
+{
+}
 ```

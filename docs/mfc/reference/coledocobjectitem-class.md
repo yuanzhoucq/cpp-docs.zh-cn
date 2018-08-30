@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849764"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216325"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 实现活动文档包容。  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  要执行的命令标识符。 必须在由标识的组*pguidCmdGroup*。  
   
  *nCmdExecOpt*  
- 指定命令执行选项。 默认情况下，设置为不提示用户执行命令。 请参阅[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)有关值的列表。  
+ 指定命令执行选项。 默认情况下，设置为不提示用户执行命令。 请参阅[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)有关值的列表。  
   
  *pguidCmdGroup*  
  命令组的唯一标识符。 默认情况下，NULL，指定标准的组。 该命令中传递*nCmdID*必须属于的组。  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个指向[IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455)当前处于活动状态的视图的接口。 如果没有当前视图，则返回 NULL。  
+ 一个指向[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)当前处于活动状态的视图的接口。 如果没有当前视图，则返回 NULL。  
   
 ### <a name="remarks"></a>备注  
  对返回的引用计数`IOleDocumentView`此函数返回之前，不会增加指针。  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  对其进行查询的命令标识符。  
   
  *pdwStatus*  
- 指向作为查询结果返回的标志的指针。 有关可能的值的列表，请参阅[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)。  
+ 指向作为查询结果返回的标志的指针。 有关可能的值的列表，请参阅[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)。  
   
  *pCmdText*  
- 指向[OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314)中要返回其单个命令的名称和状态信息的结构。 可以为 NULL 以指示调用方不需要此信息。  
+ 指向[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext)中要返回其单个命令的名称和状态信息的结构。 可以为 NULL 以指示调用方不需要此信息。  
   
  *pguidCmdGroup*  
  命令组; 的唯一标识符可以为 NULL，以指定标准的组。  
   
 ### <a name="return-value"></a>返回值  
- 返回值的完整列表，请参阅[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK 中。  
+ 返回值的完整列表，请参阅[IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法，如 Windows SDK 中所述。  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  释放为 OLE 链接项连接并关闭它，如果它处于打开状态。 不会销毁的客户端项。  

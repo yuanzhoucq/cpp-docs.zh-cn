@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208880"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 当您编写的应用程序时，创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)-派生的对象。 有时，可能想要获取有关从外部此对象的信息`CWinApp`-派生的对象。 或者，您可能需要与其他全局"mananger"对象的访问。
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  参数要传递到控制函数的参数中的函数声明中所示*pfnThreadProc*。  
   
  *nPriority*  
- 所需的线程优先级。 有关完整列表和可用优先级的说明，请参阅[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+ 所需的线程优先级。 有关完整列表和可用优先级的说明，请参阅[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
  *nStackSize*  
  以字节为单位的新线程的堆栈中指定的大小。 如果为 0，堆栈大小默认为同一个与创建线程堆栈大小。  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0**创建后立即启动线程。  
   
  *lpSecurityAttrs*  
- 指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定线程的安全属性。 如果为 NULL，则将使用与创建线程相同的安全属性。 此结构的详细信息，请参阅 Windows SDK。  
+ 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定线程的安全属性。 如果为 NULL，则将使用与创建线程相同的安全属性。 此结构的详细信息，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  
  指向新创建的线程对象，或者如果发生故障，则为 NULL 指针。  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  指向包含资源 ID 的字符串的指针。    
  *lpszType*  
- 指向资源的类型的指针。 资源类型的列表，请参阅[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) Windows SDK 中。  
+ 指向资源的类型的指针。 资源类型的列表，请参阅[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) Windows SDK 中。  
    
 ### <a name="return-value"></a>返回值  
  包含资源的模块的句柄。  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  如果函数成功，返回值是模块的句柄。 如果函数失败，返回值为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 它将返回一个句柄，可在[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。  
+ 它将返回一个句柄，可在[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。  
   
  每个进程维护每个已加载的库模块引用的计数。 此引用计数会在每次递增`AfxLoadLibrary`称为，将减少每次`AfxFreeLibrary`调用。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>参数  
  *lpWndClass*  
- 指向[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构，它包含有关要注册的窗口类信息。 此结构的详细信息，请参阅 Windows SDK。  
+ 指向[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构，它包含有关要注册的窗口类信息。 此结构的详细信息，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功注册的类; 则为 TRUE否则为 FALSE。  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>参数  
  *nClassStyle*  
- 指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;**) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：  
+ 指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;**) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：  
   
 -   将鼠标样式设置为 CS_DBLCLKS，它会将双击消息到窗口过程当用户双击鼠标。  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  指定要在从窗口类创建的每个窗口中安装的光标资源的句柄。 如果使用默认值为**0**，将显示标准的 IDC_ARROW 光标。  
   
  *hbrBackground*  
- 指定要在从窗口类创建的每个窗口中安装的画笔资源的句柄。 如果使用默认值为**0**，将拥有 NULL 背景画笔，并且您的窗口，默认情况下，不会擦除其背景处理时[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)。  
+ 指定要在从窗口类创建的每个窗口中安装的画笔资源的句柄。 如果使用默认值为**0**，将拥有 NULL 背景画笔，并且您的窗口，默认情况下，不会擦除其背景处理时[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)。  
   
  *hIcon*  
  指定要在从窗口类创建的每个窗口中安装的图标资源的句柄。 如果使用默认值为**0**，您将获得标准的飘扬标志 Windows 徽标图标。  

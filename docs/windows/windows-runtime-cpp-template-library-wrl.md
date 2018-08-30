@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593972"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211699"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -63,7 +63,7 @@ Windows 运行时 c + + 模板库和 C + + /cli CX 提供不同的优点。 以�
 演示如何使用 Windows 运行时 c + + 模板库来订阅和处理 Windows 运行时对象的事件。
 
 [演练：使用 WRL 和媒体基础创建 UWP 应用](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
-了解如何创建使用的 UWP 应用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。
+了解如何创建使用的 UWP 应用[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 [如何： 创建传统型 COM 组件](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
 演示如何使用 Windows 运行时 c + + 模板库创建基本的 COM 组件和注册和使用 COM 组件从桌面应用程序的基本方法。

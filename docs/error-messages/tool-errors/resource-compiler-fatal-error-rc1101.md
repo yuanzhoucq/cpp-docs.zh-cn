@@ -1,7 +1,7 @@
 ---
-title: 资源编译器错误 RC1101 |Microsoft 文档
+title: 资源编译器错误 RC1101 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef8024ebb2058e9bce2a3b911ead23ca1c131a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a989184af03de460c006606c40d82e59c50fd924
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214218"
 ---
 # <a name="resource-compiler-fatal-error-rc1101"></a>资源编译器错误 RC1101
-未指定的资源二进制文件名  
-  
- 重命名输出 (/ fo) 选项后面不是文件名。  
-  
- /Fo 选项使用以下语法：  
-  
- **RC /fo**   
- ***outfilename infilename。* rc**
+
+> 指定的任何资源二进制文件名
+
+重命名输出 (/ fo) 选项后没有文件名。
+
+/Fo 选项使用以下语法：
+
+> **RC /fo** *outfilename* <em>infilename</em>**.rc**

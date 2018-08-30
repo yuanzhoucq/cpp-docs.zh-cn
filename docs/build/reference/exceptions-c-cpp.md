@@ -1,5 +1,5 @@
 ---
-title: 异常 （C/c + +） |Microsoft 文档
+title: 异常 （C/c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216878"
 ---
 # <a name="exceptions-cc"></a>异常 (C/C++)
 遇到故障时，可以引发两个异常代码：  
@@ -46,9 +46,9 @@ ms.locfileid: "32373382"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- 引发的异常代码为标准 VcppException （ERROR_SEVERITY_ERROR，ERROR_MOD_NOT_FOUND），VcppException （ERROR_SEVERITY_ERROR，ERROR_PROC_NOT_FOUND） 值。 异常将传递指向的指针**DelayLoadInfo**中可以通过检索 LPDWORD 值结构**GetExceptionInformation**中[EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082)结构，ExceptionInformation [0] 字段。  
+ 引发的异常代码是标准 VcppException （ERROR_SEVERITY_ERROR，ERROR_MOD_NOT_FOUND） 和 VcppException （ERROR_SEVERITY_ERROR，ERROR_PROC_NOT_FOUND） 值。 异常将传递一个指向**DelayLoadInfo**来检索 LPDWORD 值中的结构**GetExceptionInformation**中[EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record)结构，ExceptionInformation [0] 字段。  
   
- 此外，如果 grAttrs 字段中设置不正确的位、 ERROR_INVALID_PARAMETER 是引发异常。 此异常是出于何种目的，致命的。  
+ 此外，如果不正确的位将设置 grAttrs 字段中，ERROR_INVALID_PARAMETER 是引发异常。 此异常是用于所有目的和用途，致命的。  
   
  请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)有关详细信息。  
   

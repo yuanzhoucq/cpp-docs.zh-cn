@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216283"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 扩展的功能[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多文档界面 (MDI) 框架窗口。  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|由框架调用以更新框架的菜单。 （重写 `CMDIFrameWnd::OnUpdateFrameMenu`。）|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|返回包含指定的点的停靠窗格。|  
-|`CMDIFrameWndEx::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|  
+|`CMDIFrameWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|由框架调用以重新计算框架窗口的布局。 (重写[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从到停靠管理器中删除。|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|保存 MDI 选项卡式组的当前布局和以前打开的文档列表。|  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  工具栏按钮。  
   
  [out]*pTI*  
- 指向[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)结构。  
+ 指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果应用程序已满，则返回 TRUE *pTI*参数。 默认实现将返回 FALSE。  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  指定所需的帮助由指定类型的数据*nCmd*。  
   
  [in]*nCmd*  
- 指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp 函数](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK 中。  
+ 指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp 函数](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  此方法重写[cwnd:: Winhelp](../../mfc/reference/cwnd-class.md#winhelp)。  

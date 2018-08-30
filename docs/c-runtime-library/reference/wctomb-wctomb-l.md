@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451534"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215156"
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -73,17 +73,17 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctomb**将宽字符转换为多字节字符，它将返回的字节数 (即永远不会大于**MB_CUR_MAX**) 中的宽字符。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb**返回 1。 如果目标指针*mbchar*是**NULL**， **wctomb**返回 0。 如果转换不在当前区域设置，可能**wctomb**返回-1 和**errno**设置为**EILSEQ**。
+如果**wctomb**将宽字符转换为多字节字符，它返回的字节数 (即永远不会大于**MB_CUR_MAX**) 中的宽字符。 如果*wchar*是宽字符 null 字符 (L '\0)， **wctomb**返回 1。 如果目标指针*mbchar*是**NULL**， **wctomb**返回 0。 如果在当前区域设置中不支持转换，则**wctomb**将返回-1 并**errno**设置为**EILSEQ**。
 
 ## <a name="remarks"></a>备注
 
-**Wctomb**函数将其*wchar*的相应的多字节字符的自变量，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。 **wctomb**的任何区域设置相关行为，则使用当前区域设置 **_wctomb_l**等同于**wctomb**只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Wctomb**函数将其*wchar*参数的相应多字节字符，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。 **wctomb**的任何区域设置相关的行为; 使用当前区域设置 **_wctomb_l**等同于**wctomb**只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**wctomb**验证其参数。 如果*mbchar*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
+**wctomb**验证其参数。 如果*mbchar*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208674"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 
-将转换**tm**时间为字符字符串的结构。 这些函数是 [asctime、_wasctime](asctime-wasctime.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+将转换**tm**时间结构转换为字符串。 这些函数是 [asctime、_wasctime](asctime-wasctime.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -79,13 +79,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>参数
 
 *buffer*<br/>
-指向用于存储字符字符串结果的缓冲区的指针。 此函数假设指向有效的内存位置的指针具有指定大小*numberOfElements*。
+指向用于存储字符串结果的缓冲区的指针。 此函数假定指向有效内存位置的指针与由指定的大小*numberOfElements*。
 
 *numberOfElements*<br/>
-使用存储的结果的缓冲区大小。
+若要将结果存储所使用的缓冲区的大小。
 
 *tmSource*<br/>
-时间/日期结构。 此函数假设为有效的指针**结构** **tm**对象。
+时间/日期结构。 此函数假定为指向有效**struct** **tm**对象。
 
 ## <a name="return-value"></a>返回值
 
@@ -96,35 +96,35 @@ errno_t _wasctime_s(
 |*buffer*|*numberOfElements*|*tmSource*|返回|中的值*缓冲区*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|任意|任意|**EINVAL**|未修改|
-|不**NULL** （指向有效的内存）|0|任意|**EINVAL**|未修改|
+|不**NULL** （指向有效内存）|0|任意|**EINVAL**|未修改|
 |不**NULL**|0< 大小 < 26|任意|**EINVAL**|空字符串|
 |不**NULL**|>= 26|**NULL**|**EINVAL**|空字符串|
 |不**NULL**|>= 26|无效的时间结构或超出时间组件值范围|**EINVAL**|空字符串|
 
 > [!NOTE]
-> 错误条件的**wasctime_s**类似于**asctime_s**与以单词为单位的大小限制的异常。
+> 错误条件**wasctime_s**类似于**asctime_s**使用以字为单位的大小限制的异常。
 
 ## <a name="remarks"></a>备注
 
-**Asctime**函数将转换为字符字符串的结构存储的时间。 *TmSource*值通常从调用中获取**gmtime**或**localtime**。 可以使用这两个函数来填充**tm**结构，在时间中定义。H。
+**Asctime**函数将存储为结构转换为字符串的时间转换。 *TmSource*值通常从调用获取**gmtime**或**localtime**。 这两个函数可用于填写**tm**结构，如定义的时间。H.
 
-|timeptr 成员|值|
+|timeptr 成员|“值”|
 |--------------------|-----------|
-|**tm_hour**|小时，自午夜 (0-23)|
+|**tm_hour**|午夜 (0-23) 以后的小时数|
 |**tm_isdst**|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|
-|**tm_mday**|月 (1-31) 天|
-|**tm_min**|分钟后小时 (0-59)|
+|**tm_mday**|一天的月份 (1-31)|
+|**tm_min**|小时 (0-59) 后的分钟数|
 |**tm_mon**|月 (0-11;年 1 月 = 0）|
-|**tm_sec**|分钟 (0-59) 之后的秒|
-|**tm_wday**|周的天 (0-6;星期日 = 0）|
-|**tm_yday**|年份 (0-365; 天1 月 1 日 = 0)|
+|**tm_sec**|分钟 (0-59) 后的秒数|
+|**tm_wday**|一天的周 (0-6;星期天 = 0）|
+|**tm_yday**|某一日 (0-365;1 月 1 日 = 0)|
 |**tm_year**|年（当前年份减去 1900）|
 
 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time、_time32、_time64](time-time32-time64.md) 和 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 以及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](tzset.md) 函数。
 
-生成的字符串结果**asctime_s**包含完全 26 个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果它是更短，错误代码， **EINVAL**，将返回。
+生成的字符串结果**asctime_s**包含完全 26 个字符，其形式`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 作为第二个参数传入的值应该至少应是此大小。 如果是更小，错误代码**EINVAL**，将返回。
 
-**_wasctime_s**是宽字符版本的**asctime_s**。 **_wasctime_s**和**asctime_s**否则具有相同行为。
+**_wasctime_s**是宽字符版本**asctime_s**。 **_wasctime_s**并**asctime_s**行为相同。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射
 
@@ -136,20 +136,20 @@ errno_t _wasctime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> 或 \<wchar.h>|
 
 ## <a name="security"></a>安全性
 
-如果缓冲区指针不是**NULL**且指针不指向有效的缓冲区，该函数将覆盖任何位于的位置。 该操作还将导致访问冲突。
+如果缓冲区指针不是**NULL**和指针不指向有效的缓冲区，则函数将覆盖任何位于的位置。 该操作还将导致访问冲突。
 
-如果传入的大小参数大于缓冲区的实际大小，则可能会发生[缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+如果传入的大小参数大于缓冲区的实际大小，则可能会发生[缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="example"></a>示例
 
-此程序将系统时间放置在该长整型**时钟的人脸**，将它转换结构**newtime**并将它转换为字符串形式输出，使用**asctime_s**函数。
+此程序将系统时间置于长整型**时钟的人脸**，将其转换为结构**newtime** ，然后将它转换为字符串形式的输出，请使用**asctime_s**函数。
 
 ```C
 // crt_asctime_s.c

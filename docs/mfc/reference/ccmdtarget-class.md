@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221705"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  该谓词的数字标识符。  
   
  *lpMsg*  
- 指向[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)结构描述调用此谓词的事件 （如双击）。  
+ 指向[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)结构描述调用此谓词的事件 （如双击）。  
   
  *hWndParent*  
  包含该对象的文档窗口的句柄。  
   
  *lpRect*  
- 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它包含的坐标，以像素为单位，用于定义对象的边界中的矩形*hwndParent*。  
+ 指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它包含的坐标，以像素为单位，用于定义对象的边界中的矩形*hwndParent*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，否则为 FALSE，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数基本上是实现[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)。 通过枚举可能的操作[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
+ 此成员函数基本上是实现[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb)。 通过枚举可能的操作[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  调用此函数可启用 OLE 自动化对象。  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>参数  
  *ppenumOleVerb*  
- 指针到指向[IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084)接口。  
+ 指针到指向[IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb)接口。  
   
 ### <a name="return-value"></a>返回值  
  如果对象支持至少一个 OLE 谓词，则返回 TRUE (在这种情况下\* *ppenumOleVerb*指向`IEnumOLEVERB`枚举数接口)，否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数基本上是实现[ioleobject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
+ 此成员函数基本上是实现[ioleobject:: Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs)。  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  调用此函数可将映射`IDispatch`指针，从自动化成员函数的类，接收到`CCmdTarget`实现的接口的对象`IDispatch`对象。  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>参数  
  *pIID*  
- 一个指向接口 ID ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931))。  
+ 一个指向接口 ID ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931))。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，否则为 FALSE，则为 TRUE。 如果成功， \* *pIID*设置为主调度接口 id。  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch`与对象关联的指针。  
   
 ### <a name="remarks"></a>备注  
- 为对象调用`EnableAutomation`在其构造函数，使其自动化已启用，此函数返回一个指向的基础类实现`IDispatch`通过进行通信的客户端使用`IDispatch`接口。 自动调用此函数添加到指针的引用，因此不需要调用[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。  
+ 为对象调用`EnableAutomation`在其构造函数，使其自动化已启用，此函数返回一个指向的基础类实现`IDispatch`通过进行通信的客户端使用`IDispatch`接口。 自动调用此函数添加到指针的引用，因此不需要调用[iunknown:: Addref](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)。  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  检索对象提供的类型信息接口的数量。  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  区域设置标识符 ( `LCID`)。  
   
  *guid*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)的类型说明。  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)的类型说明。  
   
  *ppTypeInfo*  
  指针到指向`ITypeInfo`接口。  

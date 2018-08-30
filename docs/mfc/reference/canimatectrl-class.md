@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213764"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 提供 Windows 公共动画控件的功能。  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定动画控件的样式。 应用的 windows 详见下面的备注部分和动画控件样式的样式中所述的任意组合[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
+ 指定动画控件的样式。 应用的 windows 详见下面的备注部分和动画控件样式的样式中所述的任意组合[动画控件样式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。  
   
  *rect*  
  指定动画控件的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  如果想要扩展的 windows 样式用于动画控件，调用[CreateEx](#createex)而不是`Create`。  
   
- 除了上面列出的窗口样式，您可能想要应用于动画控件的一个或多个动画控件样式。 请参阅 Windows SDK 的详细信息[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)。  
+ 除了上面列出的窗口样式，您可能想要应用于动画控件的一个或多个动画控件样式。 请参阅 Windows SDK 的详细信息[动画控件样式](/windows/desktop/Controls/animation-control-styles)。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定动画控件的样式。 应用窗口的任意组合和动画控件样式中所述[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
+ 指定动画控件的样式。 应用窗口的任意组合和动画控件样式中所述[动画控件样式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  如果正在播放 AVI 剪辑; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895)消息，Windows SDK 中所述。  
+ 此方法将发送[ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying)消息，Windows SDK 中所述。  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  调用此函数可打开 AVI 剪辑并显示其第一个帧。  

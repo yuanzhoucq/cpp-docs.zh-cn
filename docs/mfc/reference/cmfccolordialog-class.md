@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849732"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214147"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 `CMFCColorDialog`类表示颜色选择对话框。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|返回当前所选的颜色。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|返回该颜色的调色板。|  
-|`CMFCColorDialog::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CDialogEx::PreTranslateMessage`。）|  
+|`CMFCColorDialog::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CDialogEx::PreTranslateMessage`。）|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|从系统调色板派生调色板。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|设置当前所选的颜色。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|设置颜色最等效于指定的 RGB 值。|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值包含在颜色对话框中选择的颜色的 RGB 信息。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值包含在颜色对话框中选择的颜色的 RGB 信息。  
   
 ### <a name="remarks"></a>备注  
  调用后调用此函数`DoModal`方法。  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>参数  
  [in]*rgb*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，它指定的 RGB 颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref) ，它指定的 RGB 颜色。  
   
 ### <a name="remarks"></a>备注  
   

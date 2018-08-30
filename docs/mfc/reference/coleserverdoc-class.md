@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217584"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 OLE 服务器文档的基类。  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 检索对基础指针[IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)接口。  
+ 检索对基础指针[IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)接口。  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  重写此函数可创建一个新`CDocObjectServer`项，然后返回一个指向。  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>备注  
  默认实现将调用`CDocument::OnCloseDocument`。  
   
- 有关详细信息和其他值，请参阅[OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) Windows SDK 中。  
+ 有关详细信息和其他值，请参阅[OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) Windows SDK 中。  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  当用户将是当前处于就地活动状态的嵌入或链接项，由框架调用。  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>备注  
  此函数调整大小，并调整工具栏和其他用户界面元素根据新的窗口大小。  
   
- 有关详细信息，请参阅[IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) Windows SDK 中。  
+ 有关详细信息，请参阅[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) Windows SDK 中。  
   
  这是一种高级可重写。  
   

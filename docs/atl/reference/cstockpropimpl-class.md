@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219805"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 类
 此类提供支持的常用属性值的方法。  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>参数  
  *ppPicture*  
- 接收指向照片的属性的变量。 请参阅[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
+ 接收指向照片的属性的变量。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>参数  
  *pPicture*  
- 一个指向照片的属性。 请参阅[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
+ 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>参数  
  *pPicture*  
- 一个指向照片的属性。 请参阅[IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
+ 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  

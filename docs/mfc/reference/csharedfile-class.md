@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853723"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215578"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 类
 [CMemFile](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>备注  
  内存文件类似于磁盘文件的不同是该文件存储在 RAM 中，而不是磁盘上。 对于快速临时存储，或者传输原始字节或序列化的对象之间独立进程内存文件。  
   
- 共享的内存文件不同于其他内存文件，因为它们的内存分配带有[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数。 `CSharedFile`类将数据存储在全局范围内分配的内存块 (使用创建`GlobalAlloc`)，并且该内存块可以共享使用 DDE、 剪贴板或其他 OLE/COM 统一数据传输操作，例如，使用`IDataObject`。  
+ 共享的内存文件不同于其他内存文件，因为它们的内存分配带有[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函数。 `CSharedFile`类将数据存储在全局范围内分配的内存块 (使用创建`GlobalAlloc`)，并且该内存块可以共享使用 DDE、 剪贴板或其他 OLE/COM 统一数据传输操作，例如，使用`IDataObject`。  
   
  `GlobalAlloc` 返回 HGLOBAL 处理而不是指向内存，如所返回的指针的指针[malloc](../../c-runtime-library/reference/malloc.md)。 在某些应用程序需要 HGLOBAL 句柄。 例如，若要将数据放到剪贴板上需要 HGLOBAL 句柄。  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>参数  
  *nAllocFlags*  
- 标志，指示内存的分配方式。 请参阅[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)有关有效的标志值的列表。  
+ 标志，指示内存的分配方式。 请参阅[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)有关有效的标志值的列表。  
   
  *nGrowBytes*  
  内存分配的增量以字节为单位。  

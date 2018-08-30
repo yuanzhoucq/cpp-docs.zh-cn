@@ -1,5 +1,5 @@
 ---
-title: CComAutoCriticalSection 类 |Microsoft 文档
+title: CComAutoCriticalSection 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef8cc6fe14dc2c636b02ce2002787a74b12b5528
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217895"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 类
-`CComAutoCriticalSection` 提供用于获取和释放的关键部分对象所有权方法。  
+`CComAutoCriticalSection` 提供方法用于获取并释放关键节对象的所有权。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ class CComAutoCriticalSection : public CComCriticalSection
 |[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|析构函数。|  
   
 ## <a name="remarks"></a>备注  
- `CComAutoCriticalSection` 类似于类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)，除`CComAutoCriticalSection`自动初始化构造函数中的关键部分对象。  
+ `CComAutoCriticalSection` 类似于类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)，除`CComAutoCriticalSection`自动初始化的构造函数中的关键部分对象。  
   
  通常情况下，使用`CComAutoCriticalSection`通过`typedef`名称[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)。 此名称引用`CComAutoCriticalSection`时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。  
 
   
- `Init`和`Term`方法从[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)时使用此类不可用。  
+ `Init`并`Term`方法从[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)时使用此类不可用。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -67,7 +67,7 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>备注  
- 调用 Win32 函数[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，其中初始化关键部分对象。  
+ 调用 Win32 函数[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)，其中初始化关键部分对象。  
   
 ##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  析构函数。  
@@ -77,7 +77,7 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>备注  
- 析构函数调用[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)，以释放使用的关键部分对象的所有系统资源。  
+ 析构函数调用[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)，以释放关键节对象使用的所有系统资源。  
   
 ## <a name="see-also"></a>请参阅  
  [CComFakeCriticalSection 类](../../atl/reference/ccomfakecriticalsection-class.md)   

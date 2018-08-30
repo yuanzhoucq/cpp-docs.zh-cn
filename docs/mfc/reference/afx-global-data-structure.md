@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539407"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222298"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -64,13 +64,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|初始化 `D2D``DirectWrite` 和 `WIC` 工厂。 在初始化主窗口之前调用此方法。|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|指示是否支持预定义的 32 位图标。|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|确定是否已初始化 `D2D` 。|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法。|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|指示当前是否以高对比度显示图像。|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|检测桌面菜单动画和任务栏自动隐藏功能的当前状态。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|注册指定的 MFC 窗口类。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|释放通过 GetITaskbarList 和 GetITaskbarList3 方法获取的接口。|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows 的方法的内部函数指针[主题和视觉样式](/windows/desktop/Controls/visual-styles-overview)。|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法。|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|创建指定的逻辑字体。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|创建并初始化分析名称中的 Shell 项对象。|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|重新初始化框架使用的逻辑字体。|  
@@ -205,16 +205,16 @@ BOOL DrawTextOnGlass(
  [in]*hTheme*  
  句柄主题数据的一个窗口，则为 NULL。 该框架使用指定的主题用于绘制文本，如果此参数不为 NULL，并且支持主题。 否则，该框架将不使用主题来绘制文本。  
   
- 使用[OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821)方法来创建 HTHEME。  
+ 使用[OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata)方法来创建 HTHEME。  
   
  [in]*pDC*  
  指向设备上下文的指针。  
   
  [in]*iPartId*  
- 具有所需文本外观的控件部件。 有关详细信息，请参阅 [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“部件”列。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。  
+ 具有所需文本外观的控件部件。 有关详细信息，请参阅中的表的部分列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。  
   
  [in]*iStateId*  
- 具有所需文本外观的控件状态。 有关详细信息，请参阅 [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“状态”列。  
+ 具有所需文本外观的控件状态。 有关详细信息，请参阅中的表的状态列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
   
  [in]*strText*  
  要绘制的文本。  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in]*dwFlags*  
  指定如何绘制指定文本的标志的按位组合 (OR)。  
   
- 如果*hTheme*参数是`NULL`或不受支持且已启用，主题*nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*的参数[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法描述有效的标志。  
+ 如果*hTheme*参数是`NULL`或不受支持且已启用，主题*nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*的参数[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)方法描述有效的标志。  
   
  [in]*nGlowSize*  
  在背景上绘制，然后指定绘制的文本之前发光效果的大小。 默认值为 0。  
@@ -237,16 +237,16 @@ BOOL DrawTextOnGlass(
  如果主题用于绘制指定的文本; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数为 NULL，或者如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支持方法，或者，如果[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合已禁用。  
+ 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数为 NULL，或者如果[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)不支持方法，或者，如果[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)(DWM) 组合已禁用。  
   
 ### <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [启用和控制 DWM 组合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [桌面窗口管理器](/windows/desktop/dwm/dwm-overview)   
+ [启用和控制 DWM 组合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 启用或禁用 Microsoft Active Accessibility 支持。  
@@ -323,19 +323,19 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>参数   
  [in]*nColor*  
- 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>返回值  
  指定的用户界面元素的 RGB 颜色值。 有关更多信息，请参见“备注”。  
   
 ### <a name="remarks"></a>备注  
- 如果*nColor*参数的值超出范围，返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，如果颜色不受支持，则返回 NULL。  
+ 如果*nColor*参数的值超出范围，返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)方法，如果颜色不受支持，则返回 NULL。  
   
 ### <a name="see-also"></a>请参阅  
 
- [GetSysColor 函数](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor 函数](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  返回指向存储在全局数据中的 ID2D1Factory 接口的指针。 如果接口未初始化，则创建具有默认参数的接口。  
@@ -369,14 +369,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>参数   
  [in、 out]*信息*  
- 一个[NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
+ 一个[NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
  
   
 ### <a name="see-also"></a>请参阅   
- [NONCLIENTMETRICS 结构](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [NONCLIENTMETRICS 结构](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  检索当前字体中的文本字符高度。  
@@ -483,7 +483,7 @@ BOOL IsD2DInitialized() const;
  如果已初始化 D2D; 则为 TRUE否则为 FALSE。  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法。  
+提供了一种简单的方法来调用 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。  
   
   
 ```  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 则为 TRUE[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合，则启用; 否则为 FALSE。  
+ 则为 TRUE[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)(DWM) 组合，则启用; 否则为 FALSE。  
   
 ### <a name="see-also"></a>请参阅    
- [桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [启用和控制 DWM 组合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [桌面窗口管理器](/windows/desktop/dwm/dwm-overview)   
+ [启用和控制 DWM 组合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  指示当前是否以高对比度显示图像。    
@@ -649,7 +649,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  要注册的窗口类的名称。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则已注册的类的限定的名称否则为[资源异常](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
+ 如果此方法成功，则已注册的类的限定的名称否则为[资源异常](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>备注  
  返回值是冒号分隔的列表*lpszClassNamePrefix*参数字符串和十六进制文本表示形式的句柄的当前的应用程序实例; 应用程序光标，它是箭头其标识符为 IDC_ARROW 的游标和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
@@ -670,10 +670,10 @@ BOOL Resume();
  如果此方法成功，则为 TRUE否则为 FALSE。 在调试模式下，此方法要声明此方法不成功。  
   
 ### <a name="remarks"></a>备注  
- 当框架接收时调用此方法[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)消息。  
+ 当框架接收时调用此方法[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)消息。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法。  
+提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。  
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL SetLayeredAttrib(
  分层窗口的句柄。  
   
  [in]*crKey*  
- 透明度颜色键[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)用于组成分层的窗口。  
+ 透明度颜色键[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)用于组成分层的窗口。  
   
  [in]*bAlpha*  
  用于描述分层窗口的暗度的 alpha 值。  
@@ -701,8 +701,8 @@ BOOL SetLayeredAttrib(
  如果此方法成功，则为 TRUE否则为 FALSE。   
  
 ### <a name="see-also"></a>请参阅   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 创建指定的逻辑字体。  

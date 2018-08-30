@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854078"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220429"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 类
 包含日期和时间选取器控件的工具栏按钮。  
@@ -96,10 +96,10 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|返回一个指向日期和时间选取器控件。|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|检索与工具栏按钮相关联的窗口句柄。 (重写[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)。)|  
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|从日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|从日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|  
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|从具有指定的命令 id。 时间选取器控件按钮返回所选的时间|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|确定当用户选择按钮时是否显示按钮的边框。 (重写[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)。)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。 (重写[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。 (重写[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|  
 |[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|由框架调用时该按钮添加到**自定义**对话框。 (重写[CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)。)|  
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|由框架调用以计算指定的设备上下文和停靠状态的按钮的大小。 (重写[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|按钮插入到一个新的工具栏中时由框架调用。 (重写[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
@@ -250,7 +250,7 @@ virtual HWND GetHwnd();
  此方法重写[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)方法。  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- 从关联的日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构  
+ 从关联的日期和时间选取器控件中获取所选的时间，并将其放在指定的[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -263,13 +263,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
   
  [out]*pTimeDest*  
- 一个指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
+ 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 在第一个重载中，如果时间成功写入到非零[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象; 否则为 0。 中的第二个和第三个重载，则返回值为 dword 值，它等于在中设置的 dwFlag 成员[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)结构。  
+ 在第一个重载中，如果时间成功写入到非零[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象; 否则为 0。 中的第二个和第三个重载，则返回值为 dword 值，它等于在中设置的 dwFlag 成员[NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange)结构。  
   
 ### <a name="remarks"></a>备注  
- 方法设置[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)结构成员 dwFlags 以指示是否为日期和时间设置的日期和时间选取器。 如果值等于 GDT_NONE，该控件设置为`no date`状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，已成功在目标位置中存储的系统时间。  
+ 方法设置[NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange)结构成员 dwFlags 以指示是否为日期和时间设置的日期和时间选取器。 如果值等于 GDT_NONE，该控件设置为`no date`状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，已成功在目标位置中存储的系统时间。  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  返回具有指定的命令 id。 时间选取器控件按钮从用户选择的时间  
@@ -296,7 +296,7 @@ static DWORD GetTimeAll(
  在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
   
  [out]*pTimeDest*  
- 一个指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
+ 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  如果框架找不到匹配的命令 ID 的工具栏按钮*uiCmd*，返回值是在第一个重载中，零和 GDT_NONE 中其他重载。 如果找到工具栏按钮，则返回值是从调用的返回值相同[CMFCToolBarDateTimeCtrl::GetTime](#gettime)该按钮。 返回值为零或 GDT_NONE 可能找到按钮时，它指示在调用`GetTime`未返回某些其他原因是有效的日期。  
@@ -318,7 +318,7 @@ virtual BOOL HaveHotBorder() const;
  如果该控件可见，则此方法返回一个非零值。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- 指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。  
+ 指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -332,9 +332,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  如果按钮处理 WM_COMMAND 消息或 FALSE 以指示消息应由在父级工具栏，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 框架调用此方法时将要发送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)向父窗口的消息。  
+ 框架调用此方法时将要发送[WM_COMMAND](/windows/desktop/menurc/wm-command)向父窗口的消息。  
   
- 此方法扩展的基类实现 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 通过处理[DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737)通知。 更新内部时间状态，并更新的时间属性的所有`CMFCToolBarDateTimeCtrl`对象具有相同命令 id。  
+ 此方法扩展的基类实现 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 通过处理[DTN_DATETIMECHANGE](/windows/desktop/Controls/dtn-datetimechange)通知。 更新内部时间状态，并更新的时间属性的所有`CMFCToolBarDateTimeCtrl`对象具有相同命令 id。  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  由框架调用时该按钮添加到**自定义**对话框。  
@@ -502,7 +502,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
  在第一个版本中，对引用[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
   
  [in]*pTimeNew*  
- 一个指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
+ 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -535,7 +535,7 @@ static BOOL SetTimeAll(
  在第一个版本中， [COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
   
  [in]*pTimeNew*  
- 一个指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
+ 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  

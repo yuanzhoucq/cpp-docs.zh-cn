@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954925"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211587"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>参数
 
-*密钥*的键数据类型存储在 hash_map 中。
+*Key*<br/>
+ 要存储在 hash_map 中的键数据类型。
 
-*类型*要存储在 hash_map 中的元素数据类型。
+*类型*<br/>
+ 要存储在 hash_map 中的元素数据类型。
 
-*特征*类型包括两个函数对象，其中一个是类 compare，可将两个元素值作为排序键以确定其相对顺序是一个一元谓词的元素的键值映射到未签名的哈希函数进行比较类型的整数`size_t`。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
+*特征*<br/>
+ 此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
 
-*分配器*表示存储的分配器对象封装有关 hash_map 的分配和解除分配的内存的详细信息的类型。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
+*分配器*<br/>
+ 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>备注
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 类型不能用于修改元素的值。
 
-`const_iterator` Hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的`pair` *\< ***const Key，Type*** >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
+`const_iterator` Hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的`pair< const Key, Type >`、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
 若要取消引用`const_iterator``cIter`指向 hash_map 中的元素，使用`->`运算符。
 
-若要访问元素的键值，请使用 `cIter` **-> first**，其等同于 (\* `cIter`) **.first**。 若要访问元素的映射基准值，请使用 `cIter` **-> second**，其等同于 (\* `cIter`) **.second**。
+若要访问元素的键的值，请使用`cIter->first`，这等同于`(*cIter).first`。 若要访问的元素的映射基准值，请使用`cIter->second`，这等同于`(*cIter).second`。
 
 ### <a name="example"></a>示例
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*匹配的 hash_map 的元素的键值。
+*key*<br/>
+ 要从 hash_map 中进行匹配的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与当前搜索的 hash_map 中元素的排序键进行比较。
+*key*<br/>
+ 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-*_Where*要从 hash_map 中移除的元素的位置。
+*_Where*<br/>
+ 要从 hash_map 移除的元素的位置。
 
-*第一个*从 hash_map 中移除的第一个元素的位置。
+*first*<br/>
+ 要从 hash_map 中移除的第一个元素的位置。
 
-*最后一个*从 hash_map 中移除的刚超出最后一个元素的位置。
+*最后一个*<br/>
+ 紧接要从 hash_map 中移除的最后一个元素的位置。
 
-*密钥*要从 hash_map 中移除的元素的键值。
+*key*<br/>
+ 要从 hash_map 中移除的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 hash_map 中元素的排序键匹配的键值。
+*key*<br/>
+ 要与当前搜索的 hash_map 中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与当前搜索的 hash_map 中元素的排序键进行比较。
+*key*<br/>
+ 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>参数
 
-*右*参数 hash_map 提供与目标 hash_map 进行交换的元素。
+*right*<br/>
+ 参数 hash_map 提供与目标 hash_map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与当前搜索的 hash_map 中元素的排序键值进行比较。
+*key*<br/>
+ 要与当前搜索的 hash_map 中元素的排序键值进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type` 被声明为`pair`  *\< * **const**[key_type](#key_type)， [mapped_type](#mapped_type)*> *，而不`pair`  **\<key_type，mapped_type >** 因为不可能使用的非常量迭代器或引用更改关联容器的键。
+`value_type` 被声明为`pair<const key_type, mapped_type>`而不`pair<key_type, mapped_type>`因为不可能使用的非常量迭代器或引用更改关联容器的键。
 
 ### <a name="example"></a>示例
 

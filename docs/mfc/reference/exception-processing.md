@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221266"
 ---
 # <a name="exception-processing"></a>异常处理
 程序执行时，会发生的异常情况和名为"异常"的错误数。 其中可能包括耗尽内存、 资源分配错误和查找文件失败。  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果调用此函数对基础系统内存分配器的调用 (如**malloc**并[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数) 失败。 不需要调用它的**新**因为**新**自动将引发内存异常，如果内存分配失败。  
+ 如果调用此函数对基础系统内存分配器的调用 (如**malloc**并[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函数) 失败。 不需要调用它的**新**因为**新**自动将引发内存异常，如果内存分配失败。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  指示异常原因的结果代码的句柄。  
   
 ### <a name="remarks"></a>备注  
- Hresult 作为参数的版本将相应 SCODE 转换为该结果代码。 HRESULT 和 SCODE 的详细信息，请参阅[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 中。  
+ Hresult 作为参数的版本将相应 SCODE 转换为该结果代码。 HRESULT 和 SCODE 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdao.h  

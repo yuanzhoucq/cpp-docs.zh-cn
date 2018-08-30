@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTDEPENDENCY （指定清单依赖关系） |Microsoft 文档
+title: -MANIFESTDEPENDENCY （指定清单依赖项） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213894"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY（指定清单依赖项）
 ```  
@@ -31,11 +31,11 @@ ms.locfileid: "32376567"
 ```  
   
 ## <a name="remarks"></a>备注  
- /MANIFESTDEPENDENCY 允许您指定特性来将放入\<依赖项 > 部分中的清单文件。  
+ /MANIFESTDEPENDENCY 允许您指定将放入特性\<依赖项 > 部分中的清单文件。  
   
- 请参阅[/MANIFEST （创建并行程序集清单）](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)有关如何创建清单文件的信息。  
+ 请参阅[/MANIFEST （创建并行程序集清单）](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)有关如何创建一个清单文件的信息。  
   
- 有关详细信息\<依赖项 > 节的清单文件，请参阅[发行者配置文件](http://msdn.microsoft.com/library/aa375682)。  
+ 有关详细信息\<依赖项 > 节的清单文件，请参阅[发行者配置文件](/windows/desktop/SbsCs/publisher-configuration-files)。  
   
  /MANIFESTDEPENDENCY 信息可以传递给链接器在两种方式之一：  
   
@@ -43,13 +43,13 @@ ms.locfileid: "32376567"
   
 -   通过[注释](../../preprocessor/comment-c-cpp.md)杂注。  
   
- 下面的示例演示 /MANIFESTDEPENDENCY 注释杂注，通过传递  
+ 下面的示例显示了 /MANIFESTDEPENDENCY 注释杂注，通过传递  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
 ```  
   
- 这将导致清单文件中的以下条目：  
+ 这会导致清单文件中的以下条目：  
   
 ```  
 <dependency>  
@@ -59,19 +59,19 @@ ms.locfileid: "32376567"
 </dependency>  
 ```  
   
- 可以在命令行，如下所示传递的相同 /MANIFESTDEPENDENCY 注释：  
+ 可以在命令行，如下所示传递相同的 /MANIFESTDEPENDENCY 注释：  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- 链接器将收集 /MANIFESTDEPENDENCY 注释消除重复项，然后将生成的 XML 字符串添加到清单文件。  如果链接器查找有冲突的条目，清单文件将会损坏应用程序将无法启动 （条目可能添加到事件日志中，指示失败原因）。  
+ 链接器将收集 /MANIFESTDEPENDENCY 注释，消除重复项，然后到清单文件添加生成的 XML 字符串。  如果链接器发现有冲突的条目，清单文件将变为已损坏，应用程序将无法启动 （条目可能会添加到事件日志中，指示失败的原因）。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
 1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  展开**配置属性**节点。  
+2.  展开“配置属性”节点。  
   
 3.  展开**链接器**节点。  
   
