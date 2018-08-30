@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200302"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -78,15 +78,15 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**mbchar**不**NULL**如果该对象的*mbchar*指向窗体是有效的多字节字符， **mbtowc**返回中的长度多字节字符的字节数。 如果*mbchar*是**NULL**或它所指向的对象是宽字符 null 字符 (L \0')，则函数返回 0。 如果该对象的*mbchar*指向未形成有效的多字节字符，在第一个*计数*字符，则返回-1。
+如果**mbchar**不是**NULL** ; 如果该对象的*mbchar*指向窗体是有效的多字节字符**mbtowc**返回的长度以多字节字符的字节数。 如果*mbchar*是**NULL**或它指向的对象是宽字符 null 字符 (L '\0)，则函数返回 0。 如果该对象的*mbchar*指向未构成有效多字节字符中第一个*计数*字符，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-**Mbtowc**函数将转换*计数*或更少字节数的指向*mbchar*，如果*mbchar*不**NULL**，到对应的宽字符。 **mbtowc**将存储在生成的宽字符*wchar，* 如果*wchar*不**NULL**。 **mbtowc**不检查多个**MB_CUR_MAX**字节。 **mbtowc**的区域设置相关行为，则使用当前区域设置 **_mbtowc_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Mbtowc**函数转换*计数*或更少的字节由指向*mbchar*，如果*mbchar*不是**NULL**，为相应的宽字符。 **mbtowc**存储生成的宽字符*wchar*如果*wchar*不是**NULL**。 **mbtowc**不检查多个**MB_CUR_MAX**字节。 **mbtowc**的区域设置相关的行为; 使用当前区域设置 **_mbtowc_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

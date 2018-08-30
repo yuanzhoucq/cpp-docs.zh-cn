@@ -1,5 +1,5 @@
 ---
-title: 树控件样式 |Microsoft 文档
+title: 树控件样式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,25 +29,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953140"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200426"
 ---
 # <a name="tree-control-styles"></a>树控件样式
-树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 样式控制方面的树控件的外观。 创建树控件时，你可以设置的初始样式。 可以检索，还可以通过使用创建树控件后更改样式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数，指定**GWL_STYLE**为*nIndex*参数。 样式的完整列表，请参阅[树视图控件的窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
+树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 样式可以控制以下方面的树控件的外观。 创建树控件时，设置初始样式。 您可以检索和创建使用树控件后更改样式[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)并[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数，指定**GWL_STYLE**为*nIndex*参数。 有关样式的完整列表，请参阅[树视图控件的窗口样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中。  
   
- **TVS_HASLINES**样式通过绘制将子项链接到其相应的父项的线条增强的图形表示形式树控件的层次结构。 此样式不链接层次结构的根处的项。 若要执行此操作，你需要合并**TVS_HASLINES**和**TVS_LINESATROOT**样式。  
+ **TVS_HASLINES**样式绘制链接到其相应的父项的子项的行，从而增强了树控件的层次结构的图形表示形式。 此样式不会链接层次结构的根处的项。 若要执行此操作，你需要合并**TVS_HASLINES**并**TVS_LINESATROOT**样式。  
   
- 用户可以展开或折叠父项的子项列表，通过双击父项。 树控件具有**TVS_SINGLEEXPAND**样式会导致正在选定以展开的项和正在取消折叠的项。 如果用鼠标单击选定的项并关闭该项目，它将展开。 如果所选的项目用鼠标单击打开时，它将会自动折叠。  
+ 用户可以展开或折叠通过双击父项的父项的子项列表。 树控件具有**TVS_SINGLEEXPAND**样式会导致以展开所选定的项和正在取消选择折叠项。 如果使用鼠标单击所的选项并关闭该项目，它将展开。 如果所选的项用鼠标单击打开时，它将折叠状态。  
   
- 树控件具有**TVS_HASBUTTONS**样式将按钮添加到每个父项的左侧。 用户可以单击按钮以展开或折叠子项作为双击父项的替代方法。 **TVS_HASBUTTONS**不将按钮添加到层次结构的根处的项。 若要执行此操作，必须组合**TVS_HASLINES**， **TVS_LINESATROOT**，和**TVS_HASBUTTONS**。  
+ 树控件具有**TVS_HASBUTTONS**样式将按钮添加到左侧和右侧的每个父项。 用户可以单击按钮以展开或折叠子项目作为双击父项的替代方法。 **TVS_HASBUTTONS**不会将按钮添加到层次结构的根处的项。 若要执行此操作，必须组合**TVS_HASLINES**， **TVS_LINESATROOT**，并**TVS_HASBUTTONS**。  
   
- **TVS_EDITLABELS**样式，使用户可以编辑树控件项标签。 有关编辑标签的详细信息，请参阅[树控件标签编辑](../mfc/tree-control-label-editing.md)本主题中更高版本。  
+ **TVS_EDITLABELS**样式，使用户可以编辑树控件项的标签。 有关编辑标签的详细信息，请参阅[树控件标签编辑](../mfc/tree-control-label-editing.md)本主题中更高版本。  
   
- **TVS_NOTOOLTIPS**样式禁用树视图控件的自动工具提示功能。 此功能会自动显示工具提示，如果整个标题不是当前可见包含鼠标光标下的项的标题。  
+ **TVS_NOTOOLTIPS**样式可禁用自动工具提示功能的树视图控件。 此功能将自动显示工具提示，其中包含鼠标光标下的项的标题，如果整个标题不是当前可见。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   

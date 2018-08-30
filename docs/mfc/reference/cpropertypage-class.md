@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203398"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 表示属性表的各个页，也称为选项卡对话框。  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|更改确定按钮以阅读关闭，并禁用取消按钮，无法恢复在发生更改后的模式属性表页。|  
 |[CPropertyPage::Construct](#construct)|构造 `CPropertyPage` 对象。 使用`Construct`如果你想要在运行时，指定你的参数，或者如果正在使用数组。|  
-|[CPropertyPage::GetPSP](#getpsp)|检索 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)与关联的结构`CPropertyPage`对象。|  
+|[CPropertyPage::GetPSP](#getpsp)|检索 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)与关联的结构`CPropertyPage`对象。|  
 |[CPropertyPage::OnApply](#onapply)|单击立即应用按钮时由框架调用。|  
 |[CPropertyPage::OnCancel](#oncancel)|单击取消按钮时由框架调用。|  
 |[Cpropertypage:: Onkillactive](#onkillactive)|当前页不再是活动的页面时由框架调用。 执行数据验证。|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |名称|描述|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)结构。 提供对基本属性页参数的访问。|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)结构。 提供对基本属性页参数的访问。|  
   
 ## <a name="remarks"></a>备注  
  如与标准对话框，您从派生类`CPropertyPage`属性表中每一页。 若要使用`CPropertyPage`-派生的对象，首先创建[CPropertySheet](../../mfc/reference/cpropertysheet-class.md)对象，然后创建属性表中每个页的对象。 调用[cpropertysheet:: Addpage](../../mfc/reference/cpropertysheet-class.md#addpage)每个工作表，在页上，并通过调用显示属性表[cpropertysheet:: Domodal](../../mfc/reference/cpropertysheet-class.md#domodal)模式属性表，或[CPropertySheet::创建](../../mfc/reference/cpropertysheet-class.md#create)无模式属性表。  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- 检索 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)与关联的结构`CPropertyPage`对象。  
+ 检索 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)与关联的结构`CPropertyPage`对象。  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  对引用`PROPSHEETPAGE`结构。  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` 是一种结构的成员将存储的特征[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)。  
+ `m_psp` 是一种结构的成员将存储的特征[PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)。  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  默认实现`OnApply`调用`OnOK`。  
   
- 当用户按属性表中的立即应用或确定按钮时发送通知消息的详细信息，请参阅[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Windows SDK 中。  
+ 当用户按属性表中的立即应用或确定按钮时发送通知消息的详细信息，请参阅[PSN_APPLY](/windows/desktop/Controls/psn-apply) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CPropertyPage::OnOK](#onok)。  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>备注  
- 当用户选择确定或立即应用按钮时，该框架接收[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)属性页的通知。 在调用`OnOK`如果调用不会进行[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)因为属性页不会在这种情况下发送通知。  
+ 当用户选择确定或立即应用按钮时，该框架接收[PSN_APPLY](/windows/desktop/Controls/psn-apply)属性页的通知。 在调用`OnOK`如果调用不会进行[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)因为属性页不会在这种情况下发送通知。  
   
  重写此成员函数以实现特定于当前处于活动状态的页的其他行为，当用户关闭整个属性表。  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  您可以重写此成员函数以指定在按下完成按钮时，用户必须执行一些操作。 当重写此函数，返回 FALSE 可阻止属性表被销毁。  
   
- 当用户在向导属性表中按完成按钮时发送通知消息的详细信息，请参阅[PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) Windows SDK 中。  
+ 当用户在向导属性表中按完成按钮时发送通知消息的详细信息，请参阅[PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) Windows SDK 中。  
   
  有关如何使向导类型的属性表的详细信息，请参阅[CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。  
   

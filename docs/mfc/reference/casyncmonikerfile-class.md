@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339342"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196327"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 提供功能以在 ActiveX 控件（原为 OLE 控件）中使用异步名字对象。  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|当异步传输已停止时调用。|  
   
 ## <a name="remarks"></a>备注  
- 派生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)，后者又派生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md)，`CAsyncMonikerFile`使用[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)接口来访问任何数据的流以异步方式，包括从 URL 异步加载文件。 文件可以是 ActiveX 控件的数据路径属性。  
+ 派生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)，后者又派生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md)，`CAsyncMonikerFile`使用[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)接口来访问任何数据的流以异步方式，包括从 URL 异步加载文件。 文件可以是 ActiveX 控件的数据路径属性。  
   
  异步名字对象主要是在连接 Internet 的应用程序和 ActiveX 控件中用于文件传输过程中提供响应式用户界面。 最好的例子是使用[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)为 ActiveX 控件提供异步属性。 `CDataPathProperty`对象将重复进行回调以在较长时间的属性交换过程中指示新数据的可用性。  
   
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open)调用`CreateBindStatusCallback`。  
   
- 有关异步名字对象和异步绑定的详细信息，请参阅[IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)接口并[如何异步绑定和存储工作](http://msdn.microsoft.com/library/windows/desktop/aa379152)。 有关聚合的讨论，请参阅[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 所有三个主题，请在 Windows SDK 中。  
+ 有关异步名字对象和异步绑定的详细信息，请参阅[IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060)接口并[如何异步绑定和存储工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 有关聚合的讨论，请参阅[聚合](/windows/desktop/com/aggregation)。 所有三个主题，请在 Windows SDK 中。  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  从异步名字对象的客户端向它想要绑定的异步名字对象调用。  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向 Windows 结构的指针[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)为当前打开的流。 如果名字对象没有绑定，如果不是异步的或者未开始异步操作返回 NULL。  
+ 指向 Windows 结构的指针[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)为当前打开的流。 如果名字对象没有绑定，如果不是异步的或者未开始异步操作返回 NULL。  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  调用异步名字对象的客户端从绑定进程开始接收为线程指定绑定操作的优先级。  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 异步传输会发生的优先级。 一个标准的线程优先级标志： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)有关这些值的说明。  
+ 异步传输会发生的优先级。 一个标准的线程优先级标志： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 请参阅 Windows 函数[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)有关这些值的说明。  
   
 ### <a name="remarks"></a>备注  
  `GetPriority` 应不直接调用。 THREAD_PRIORITY_NORMAL 返回的默认实现。  

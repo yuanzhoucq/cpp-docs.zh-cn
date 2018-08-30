@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195533"
 ---
 # <a name="coccmanager-class"></a>COccManager 类
 管理多个自定义控件站点；通过 `COleControlContainer` 和 `COleControlSite` 对象实现。  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  控件必须具有 OLEMISC_ACTSLIKEBUTTON 位的状态集。 OLEMISC 标志的详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中的主题。  
+>  控件必须具有 OLEMISC_ACTSLIKEBUTTON 位的状态集。 OLEMISC 标志的详细信息，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中的主题。  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  由框架调用以拆分从公共对话框控件的 ActiveX 控件。  

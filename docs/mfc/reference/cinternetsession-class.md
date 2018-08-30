@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197434"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 
@@ -237,7 +237,7 @@ DWORD_PTR GetContext() const;
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-此成员函数可实现 Win32 函数的行为[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)，如 Windows SDK 中所述。
+此成员函数可实现 Win32 函数的行为[InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea)，如 Windows SDK 中所述。
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>返回值
 
-否则返回如果成功，则为 TRUE 或 FALSE。 如果调用失败，调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确定错误的原因。 应用以下的错误值：
+否则返回如果成功，则为 TRUE 或 FALSE。 如果调用失败，调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确定错误的原因。 应用以下的错误值：
 
 - ERROR_NO_MORE_ITEMS 没有任何 cookie 为指定的 URL 和其父项。
 
@@ -476,7 +476,7 @@ virtual void OnStatusCallback(
 |INTERNET_STATUS_RESPONSE_RECEIVED|已成功从服务器收到的响应。 *LpvStatusInformation*参数为 NULL。|
 |INTERNET_STATUS_CLOSING_CONNECTION|正在关闭服务器的连接。 *LpvStatusInformation*参数为 NULL。|
 |INTERNET_STATUS_CONNECTION_CLOSED|已成功关闭了连接到服务器。 *LpvStatusInformation*参数为 NULL。|
-|INTERNET_STATUS_HANDLE_CREATED|使用 Win32 API 函数[InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363)以指示它已创建新的句柄。 这可让应用程序调用 Win32 函数[InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350)从另一个线程如果连接所需时间太长。 请参阅 Windows SDKfor 有关这些函数的详细信息。|
+|INTERNET_STATUS_HANDLE_CREATED|使用 Win32 API 函数[InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta)以指示它已创建新的句柄。 这可让应用程序调用 Win32 函数[InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle)从另一个线程如果连接所需时间太长。 请参阅 Windows SDKfor 有关这些函数的详细信息。|
 |INTERNET_STATUS_HANDLE_CLOSING|已成功终止此句柄值。|
 
 重写此成员函数以执行状态回调例程之前需要执行一些操作。
@@ -589,7 +589,7 @@ static BOOL SetCookie(
 
 ### <a name="remarks"></a>备注
 
-此成员函数可实现 Win32 消息的行为[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)，如 Windows SDK 中所述。
+此成员函数可实现 Win32 消息的行为[InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea)，如 Windows SDK 中所述。
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>参数
 
 *dwOption*  
-若要设置 Internet 选项。 请参阅[选项标志](http://msdn.microsoft.com/library/windows/desktop/aa385328)Windows SDKfor 的可能的选项列表中。
+若要设置 Internet 选项。 请参阅[选项标志](/windows/desktop/WinInet/option-flags)Windows SDKfor 的可能的选项列表中。
 
 *lpBuffer*  
 包含的选项设置的缓冲区。
@@ -632,7 +632,7 @@ BOOL SetOption(
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则返回值为 TRUE。 如果遇到错误，则返回值为 FALSE。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。
+如果操作成功，则返回值为 TRUE。 如果遇到错误，则返回值为 FALSE。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。
 
 ## <a name="see-also"></a>请参阅
 

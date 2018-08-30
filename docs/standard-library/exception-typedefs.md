@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 35cc0d25d16831ae5de61f04c4e66763278c10d8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 93feda8c6359c5ec24fd4fd9dd38c632726b676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197020"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
 
@@ -35,7 +35,7 @@ typedef unspecified exception_ptr;
 
 用于实现 `exception_ptr` 类型的未指定的内部类。
 
-使用 `exception_ptr` 对象可引用当前异常或用户指定异常的实例。 在 Microsoft 实现中，异常由 [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) 结构表示。 每个 `exception_ptr` 对象包含一个异常引用字段，该字段指向表示异常的 `EXCEPTION_RECORD` 结构的副本。
+使用 `exception_ptr` 对象可引用当前异常或用户指定异常的实例。 在 Microsoft 实现中，异常由 [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) 结构表示。 每个 `exception_ptr` 对象包含一个异常引用字段，该字段指向表示异常的 `EXCEPTION_RECORD` 结构的副本。
 
 当你声明 `exception_ptr` 变量时，该变量不与任何异常相关联。 也就是说，其异常引用字段为 NULL。 此类 `exception_ptr` 对象称为 *null exception_ptr*。
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196998"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 类
 实现一个 Windows 图元文件，此文件包含一系列图形设备接口 (GDI) 命令，你可以重播此命令来创建所需图像或文本。  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  已发送的图元文件的所需的命令后，调用`Close`成员函数，其关闭图元文件设备上下文，返回的图元文件句柄。 然后释放`CMetaFileDC`对象。  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然后可以使用图元文件句柄重复播放图元文件。 图元文件还可以操作 Windows 函数如[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)，这将图元文件复制到磁盘。  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然后可以使用图元文件句柄重复播放图元文件。 图元文件还可以操作 Windows 函数如[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)，这将图元文件复制到磁盘。  
   
- 当不再需要图元文件时，它从内存中删除具有[DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Windows 函数。  
+ 当不再需要图元文件时，它从内存中删除具有[DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows 函数。  
   
  您还可以实现`CMetaFileDC`对象，以便它可以处理，同时输出调用和属性如 GDI 调用`GetTextExtent`。 此类图元文件更灵活的详细信息可以轻松地重用常规的 GDI 代码，通常包含多个输出和属性调用。 `CMetaFileDC`类继承的两个设备上下文，`m_hDC`和`m_hAttribDC`，从 CDC。 `m_hDC`设备上下文将处理所有[CDC](../../mfc/reference/cdc-class.md) GDI 输出调用和`m_hAttribDC`设备上下文处理所有 CDC GDI 属性调用。 通常情况下，这些两个设备上下文引用同一个设备。 情况下`CMetaFileDC`，默认情况下将 DC 的属性设置为 NULL。  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  如果函数成功，则有效 HMETAFILE否则为，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- Windows 图元文件句柄也可用于处理 Windows 函数使用图元文件，如[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)。  
+ Windows 图元文件句柄也可用于处理 Windows 函数使用图元文件，如[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)。  
   
- 在使用后删除图元文件，通过调用 Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函数。  
+ 在使用后删除图元文件，通过调用 Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile)函数。  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  关闭增强型图元文件设备上下文，并返回标识增强格式图元文件的句柄。  

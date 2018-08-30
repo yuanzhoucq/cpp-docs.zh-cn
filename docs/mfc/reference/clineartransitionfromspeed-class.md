@@ -1,5 +1,5 @@
 ---
-title: CLinearTransitionFromSpeed 类 |Microsoft 文档
+title: CLinearTransitionFromSpeed 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039477"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203303"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 类
 封装线性速度转换。  
@@ -46,7 +46,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|构造线性速度转换对象并初始化与速度和最终值。|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|构造一个线性速度转换对象并初始化速度和最终值。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -58,11 +58,11 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|在转换结束动画变量的值。|  
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|绝对值的数值的变量的速度。|  
+|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|  
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|变量的速度的绝对值。|  
   
 ## <a name="remarks"></a>备注  
- 在线性速度转换，过程动画变量的值更改按照指定的速率。 转换的持续时间取决于初始的值和指定的最终值之间的差异。 由于所有转换并自动都清除，则建议你到分配它们使用新的运算符。 封装的 IUIAnimationTransition COM 对象被创建通过 CAnimationController::AnimateGroup，直到，然后它为 NULL。 在创建此 COM 对象不起作用后，请更改成员变量。  
+ 线性速度转换，过程在指定的速率将更改动画变量的值。 过渡的持续时间取决于初始值和指定的最终值之间的差异。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- 构造线性速度转换对象并初始化与速度和最终值。  
+ 构造一个线性速度转换对象并初始化速度和最终值。  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -85,10 +85,10 @@ CLinearTransitionFromSpeed(
   
 ### <a name="parameters"></a>参数  
  *dblSpeed*  
- 绝对值的数值的变量的速度。  
+ 变量的速度的绝对值。  
   
  *dblFinalValue*  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
  调用要创建封装的转换 COM 对象的转换库。  
@@ -101,20 +101,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
 *pLibrary*  
- 指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
+ 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
- 绝对值的数值的变量的速度。  
+ 变量的速度的绝对值。  
   
 ```  
 DOUBLE m_dblSpeed;  

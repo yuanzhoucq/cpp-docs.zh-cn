@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338432"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196792"
 ---
 # <a name="clongbinary-class"></a>CLongBinary 类
 简化对数据库中超大二进制数据对象（经常称作 BLOB，即“二进制大对象”）的使用。  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此大小可能小于分配的数据的内存块的大小。 调用 Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)函数以获取已分配的大小。  
+ 此大小可能小于分配的数据的内存块的大小。 调用 Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)函数以获取已分配的大小。  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  将存储的 Windows HGLOBAL 句柄的实际二进制大型对象数据。  

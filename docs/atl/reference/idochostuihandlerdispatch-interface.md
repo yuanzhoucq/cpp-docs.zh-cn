@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936d9b30f18f5ef84c68c55a1607cfcd88d45525
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 57dbb9e5ed73ce8ed85d7c90d05705cefdd4ed9b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194762"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 Microsoft HTML 分析和呈现引擎的接口。  
@@ -45,19 +45,19 @@ interface IDocHostUIHandlerDispatch : IDispatch
   
 |||  
 |-|-|  
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115)。 也称为 MSHTML 显示模式 UI 时。|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)。 也称为 MSHTML 显示模式 UI 时。|  
 |[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|调用由 MSHTML 以允许主机替换 MSHTML 的数据对象在主机上。|  
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|当它被用作拖放目标以允许主机提供替代时，调用 MSHTML [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|当它被用作拖放目标以允许主机提供替代时，调用 MSHTML [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|  
 |[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|由 MSHTML 获取主机的 IDispatch 接口调用。|  
 |[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|检索 MSHTML 主机的用户界面功能。|  
 |[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|返回 MSHTML 在其下存储用户首选项的注册表项。|  
 |[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|当 MSHTML 删除其菜单和工具栏时调用。|  
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)。|  
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|从 MSHTML 实现调用[ioleinplaceactiveobject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969)。|  
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)。|  
+|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)。|  
+|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|从 MSHTML 实现调用[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)。|  
+|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|从 MSHTML 实现调用[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)。|  
 |[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|从 MSHTML 以显示上下文菜单调用。|  
 |[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|允许主机替换 MSHTML 菜单和工具栏。|  
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|由 MSHTML 调用时[:: Translateaccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360)或[iolecontrolsite:: Translateaccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756)调用。|  
+|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|由 MSHTML 调用时[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)或[iolecontrolsite:: Translateaccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)调用。|  
 |[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|由 MSHTML 以允许主机有机会修改要加载的 URL 调用。|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|通知主机命令状态已更改。|  
   

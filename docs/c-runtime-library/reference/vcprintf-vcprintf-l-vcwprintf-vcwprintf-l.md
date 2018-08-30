@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7ccf2db8447b51757f5c8a90b2e9a5b6558929
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d31ebd1e4df65ef35449c374a5cbb99b878f00a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415788"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196779"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
@@ -105,16 +105,16 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数，如果发生输出错误，则为一个负值。 如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
+写入的字符数，如果发生输出错误，则为一个负值。 如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
 
 ## <a name="remarks"></a>备注
 
-每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf**是宽字符版本的 **_vcprintf**。 它将采用一个宽字符字符串作为参数。
+每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf**是宽字符版本 **_vcprintf**。 它将采用一个宽字符字符串作为参数。
 
-使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前区域设置的区域设置参数。
+使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -125,7 +125,7 @@ int _vcwprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_vcprintf**， **_vcprintf_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf**， **_vcwprintf_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

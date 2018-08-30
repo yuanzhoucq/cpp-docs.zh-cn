@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539366"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195883"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 类
 `concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  要搜索的密钥值。  
   
 ### <a name="return-value"></a>返回值  
- 一个[对](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d)其中第一个元素是开头的迭代器，第二个元素是指向范围末尾的迭代器。  
+ 一个[对](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d)其中第一个元素是开头的迭代器，第二个元素是指向范围末尾的迭代器。  
   
 ### <a name="remarks"></a>备注  
  很可能并发插入操作会导致其他密钥，从而在插入之后开始迭代器和之前末尾迭代器。  

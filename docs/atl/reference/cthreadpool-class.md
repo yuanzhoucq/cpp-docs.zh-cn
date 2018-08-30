@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196957"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 此类提供处理的工作项队列的工作线程的池。  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>备注  
  池中的线程创建和销毁时初始化、 调整大小，或关闭的情况下该池。 类的实例*辅助*将在池中每个工作线程的堆栈上创建。 每个实例将实时线程的生存期内。  
   
- 创建一个线程后立即*辅助角色*::`Initialize`将与该线程关联的对象上调用。 之前的某个线程，析构*辅助角色*::`Terminate`将调用。 这两种方法必须接受**void\*** 参数。 此参数的值传递给线程池通过*pvWorkerParam*的参数[CThreadPool::Initialize](#initialize)。  
+ 创建一个线程后立即*辅助角色*::`Initialize`将与该线程关联的对象上调用。 之前的某个线程，析构*辅助角色*::`Terminate`将调用。 这两种方法必须接受**void** <strong>\*</strong>参数。 此参数的值传递给线程池通过*pvWorkerParam*的参数[CThreadPool::Initialize](#initialize)。  
   
- 工作线程时有可用的工作项队列和辅助角色线程中工作，将提取队列并调用某一项`Execute`方法*辅助*该线程的对象。 三个项然后传递给该方法： 从队列中相同的项`pvWorkerParam`传递给*辅助角色*::`Initialize`并*辅助*:: `Terminate`，和指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)结构用于 IO 完成端口队列。  
+ 工作线程时有可用的工作项队列和辅助角色线程中工作，将提取队列并调用某一项`Execute`方法*辅助*该线程的对象。 三个项然后传递给该方法： 从队列中相同的项`pvWorkerParam`传递给*辅助角色*::`Initialize`并*辅助*:: `Terminate`，和指向[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)结构用于 IO 完成端口队列。  
   
  *辅助角色*类声明了将通过提供一个 typedef，线程池排队的项的类型*辅助*:: `RequestType`。 此类型必须能够与 ULONG_PTR 要强制转换。  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  以毫秒为单位，线程池将等待一个线程来关闭请求的最大时间。 如果提供 0 或空值，则此方法将使用设置的超时[CThreadPool::SetTimeout](#settimeout)。  
   
 ### <a name="remarks"></a>备注  
- 此方法将池中发布的全部线程的关闭请求。 如果在超时到期，则此方法将调用[TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717)上不存在任何线程。 从类的析构函数自动调用此方法。  
+ 此方法将池中发布的全部线程的关闭请求。 如果在超时到期，则此方法将调用[TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread)上不存在任何线程。 从类的析构函数自动调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)   

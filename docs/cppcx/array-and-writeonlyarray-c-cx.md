@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203747"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 你可以自由使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)在 C + + /CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在任何 API 中的元数据中发布，您必须将转换为 C 样式数组或到矢量[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)根据使用方式的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。  
@@ -82,12 +82,12 @@ ms.locfileid: "42606107"
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>使用 ArrayReference 可避免复制数据  
  在某些情况下，数据将通过 ABI 传递给 [Platform::Array](../cppcx/platform-array-class.md)，并且你最终需要在 C 样式数组中处理数据以实现较高的效率，对于这些情况你可以使用 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 来避免额外的复制操作。 在将 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 作为实参传递给采用 `Platform::Array`的形参时， `ArrayReference` 会直接将数据存储到你指定的 C 样式数组中。 需要了解的是， `ArrayReference` 未锁定源数据，因此，如果在调用完成之前在另一个线程上修改或删除此数据，则结果将是未定义的。  
   
- 下面的代码片段演示如何将 [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 操作的结果复制到 `Platform::Array` （通常模式）中，以及如何替代 `ArrayReference` 以将数据直接复制到 C 样式数组中：  
+ 下面的代码段演示如何将复制的结果[DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx)操作`Platform::Array`（通常模式），以及如何替代`ArrayReference`直接到 C 样式数组中复制数据：  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免将数组公开为属性  
- 通常，应避免将 `Platform::Array` 类型公开为 ref 类中的属性，因为将返回整个数组，即使在客户端代码仅尝试访问单个元素时也是如此。 当需要将序列容器公开为公共 ref 类的属性时， [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 是更好的选择。 在私有或内部 API 中（未发布到元数据），请考虑使用标准 C++ 容器（如 [std::vector](../standard-library/vector-class.md)）。  
+ 通常，应避免将 `Platform::Array` 类型公开为 ref 类中的属性，因为将返回整个数组，即使在客户端代码仅尝试访问单个元素时也是如此。 当您需要将序列容器公开为公共 ref 类的属性时[Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)是更好的选择。 在私有或内部 API 中（未发布到元数据），请考虑使用标准 C++ 容器（如 [std::vector](../standard-library/vector-class.md)）。  
   
 ## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   

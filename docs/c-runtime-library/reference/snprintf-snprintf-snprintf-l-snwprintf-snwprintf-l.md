@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451740"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203513"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 将格式化的数据写入字符串。 提供这些函数的更多安全版本，请参阅 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
@@ -156,32 +156,32 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-让**len**为不包括终止 null 的格式化的数据字符串的长度。 同时**len**和*计数*以字节为单位的**snprintf**和 **_snprintf**，宽字符为 **_snwprintf**.
+让**len**为不包括终止 null 的带格式的数据字符串的长度。 这两**len**并*计数*中的字节数**snprintf**并 **_snprintf**的宽字符 **_snwprintf**.
 
-对于所有函数，如果**len** < *计数*， **len**个字符存储在*缓冲区*，附加 null 终止符，和**len**返回。
+对于所有函数，如果**len** < *计数*， **len**个字符存储在*缓冲区*，附加 null 终止符，并**len**返回。
 
-**Snprintf**函数截断输出时**len**大于或等于*计数*，通过将放置在一个 null 终止符`buffer[count-1]`。 返回的值为**len**，已经是输出如果的字符数*计数*是否足够大。 **Snprintf**函数返回一个负值，如果发生编码错误。
+**Snprintf**函数将截断输出时**len**大于或等于*计数*，通过将放置在一个 null 终止符`buffer[count-1]`。 返回的值为**len**，可能会输出如果的字符数*计数*是否足够大。 **Snprintf**函数返回一个负值，如果发生编码错误。
 
-所有函数以外**snprintf**，如果**len** = *计数*， **len**个字符存储在*缓冲区*，不附加任何 null 终止符，和**len**返回。 如果**len** > *计数*，*计数*个字符存储在*缓冲区*，任何 null 终止符不追加，因此负返回值。
+用于所有函数以外**snprintf**，则**len** = *计数*， **len**个字符存储在*缓冲区*，不附加任何 null 终止符，并**len**返回。 如果**len** > *计数*，*计数*个字符存储在*缓冲区*，任何 null 终止符已追加，以及负返回值。
 
-如果*缓冲区*是 null 指针和*计数*为零， **len**返回为所需以格式化输出，不包括终止 null 的字符数。 若要进行成功调用具有相同*参数*和*区域设置*参数，分配至少容纳缓冲区**len** + 1 个字符。
+如果*缓冲区*为 null 指针并且*计数*为零， **len**以格式化输出，不包括终止 null 所需的字符计数的形式返回。 若要进行成功调用具有相同*自变量*并*区域设置*参数，分配至少容纳缓冲区**len** + 1 个字符。
 
-如果*缓冲区*是 null 指针和*计数*不为零，或者如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*缓冲区*为 null 指针和*计数*为零，或者，如果*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Snprintf**函数和 **_snprintf**系列的函数的格式和存储*计数*或更少字符中的*缓冲区*。 **Snprintf**函数始终存储终止 null 字符，如有必要截断输出。 **_Snprintf**系列函数才附加终止 null 字符，当格式化的字符串的长度严格小于*计数*字符。 每个*参数*（如果有） 转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Snprintf**函数和 **_snprintf**系列函数格式和应用商店*计数*或更少字符中的*缓冲区*。 **Snprintf**函数始终存储终止 null 字符，如有必要截断输出。 **_Snprintf**系列函数才附加终止 null 字符，当格式化的字符串的长度严格小于*计数*字符。 每个*自变量*（如果有） 转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 因为 **_snprintf**函数不保证 null 终止，特别是，当返回的值是*计数*-确保，在其后追加用于添加 null 终止符的代码。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保 format 不是用户定义的字符串。 因为 **_snprintf**函数不保证 null 终止，特别是，当返回值是*计数*— 请确保，在其后添加 null 终止符的代码。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始**snprintf**不再等同于 **_snprintf**。 **Snprintf**函数行为现在是符合 C99 标准。
 
-**_snwprintf**是宽字符版本的 **_snprintf**; 的指针参数 **_snwprintf**是宽字符字符串。 编码错误检测 **_snwprintf**可能会与不同，在 **_snprintf**。 **_snwprintf**，就像**swprintf**，将输出写入字符串，而不是类型的目标**文件**。
+**_snwprintf**是宽字符版本 **_snprintf**; 的指针参数 **_snwprintf**都是宽字符字符串。 检测到的编码中的错误 **_snwprintf**可能不同于在 **_snprintf**。 **_snwprintf**，就像**swprintf**，将输出写入到字符串而不是类型的目标**文件**。
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
 
 在 C++ 中，这些函数具有模板重载，可调用更新、更安全的版本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -194,7 +194,7 @@ int _snwprintf_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**snprintf**， **_snprintf**， **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**， **_snwprintf_l**|\<stdio.h> 或 \<wchar.h>|

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340438"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199746"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>确定要使用的访问器类型
 在编译时或在运行时，您可以确定行集上的数据类型。  
@@ -38,7 +38,7 @@ ms.locfileid: "39340438"
 |`CDynamicAccessor`|自动。|不是。|如果不知道的行集中的数据类型，这很有用。|  
 |`CDynamicParameterAccessor`|自动进行的但可以是[重写](../../data/oledb/overriding-a-dynamic-accessor.md)。|是的如果提供程序支持`ICommandWithParameters`。 自动绑定参数。|低于`CDynamicAccessor`但可用于调用泛型存储的过程。|  
 |`CDynamicStringAccessor[A,W]`|自动。|不是。|检索从字符串数据作为数据存储区访问的数据。|  
-|`CManualAccessor`|手动使用`AddBindEntry`。|使用手动`AddParameterEntry`。|非常快;参数和列绑定仅一次。 确定要使用数据的类型。 (请参阅[DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例有关的示例。)需要更多代码`CDynamicAccessor`或`CAccessor`。 而是要直接调用 OLE DB。|  
+|`CManualAccessor`|手动使用`AddBindEntry`。|使用手动`AddParameterEntry`。|非常快;参数和列绑定仅一次。 确定要使用数据的类型。 (请参阅[DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例有关的示例。)需要更多代码`CDynamicAccessor`或`CAccessor`。 而是要直接调用 OLE DB。|  
 |`CXMLAccessor`|自动。|不是。|检索从字符串数据作为数据存储区访问的数据，并将其格式化为 XML 标记数据。|  
   
 ## <a name="see-also"></a>请参阅  

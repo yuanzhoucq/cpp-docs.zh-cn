@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026219"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196215"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 类
 用于 OLE“插入对象”对话框。  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  应用程序向导生成的容器的代码使用此类。  
   
- 有关详细信息，请参阅[OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) Windows SDK 中的结构。  
   
  有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -184,7 +184,7 @@ INT_PTR
   
 -   如果用户已取消对话框的，IDCANCEL。  
   
--   IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) Windows SDK 中的函数。  
+-   IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIInsertObject](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要通过设置的成员初始化各种对话框控件[m_io](#m_io)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  返回与所选的项相关联的 CLSID。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 有关详细信息，请参阅[CLSID 项](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  调用此函数可确定用户选择以图标形式显示选定的项。  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>备注  
  调用此函数仅当[DoModal](#domodal)返回 IDOK。  
   
- 绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的数据结构。  
+ 绘制方面的详细信息，请参阅[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的数据结构。  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  调用此函数可获取包含选定项的图标方面的图元文件的句柄。  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>备注  
  直接或通过成员函数，可以修改此结构的成员。  
   
- 有关详细信息，请参阅[OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   

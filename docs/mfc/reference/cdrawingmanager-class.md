@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196055"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 `CDrawingManager`类实现复杂的绘图算法。  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  如果此方法成功，则新创建 DIB 位图的句柄否则为，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 有关如何创建 DIB 位图的详细信息，请参阅[CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)。  
+ 有关如何创建 DIB 位图的详细信息，请参阅[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)。  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  显示透明或半透明的像素的位图。  
@@ -196,7 +196,7 @@ void DrawAlpha(
  源矩形。  
   
 ### <a name="remarks"></a>备注  
- 此方法执行两个位图的 alpha 值混合处理。 Alpha 值混合处理的详细信息，请参阅[AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) Windows SDK 中。  
+ 此方法执行两个位图的 alpha 值混合处理。 Alpha 值混合处理的详细信息，请参阅[AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) Windows SDK 中。  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  绘制一个椭圆使用提供的填充和边框颜色。  

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401238"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202005"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -78,13 +78,13 @@ wchar_t *wmemset(
 
 ## <a name="remarks"></a>备注
 
-设置的第一个*计数*字符*dest*为字符*c*。
+设置第一个*计数*个字符*dest*的字符*c*。
 
-**安全说明**请确保目标缓冲区至少具有足够的空间*计数*字符。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明**请确保目标缓冲区至少具有足够的空间存放*计数*字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memset**|\<memory.h> 或 \<string.h>|
 |**wmemset**|\<wchar.h>|

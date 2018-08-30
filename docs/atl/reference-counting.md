@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850808"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194593"
 ---
 # <a name="reference-counting"></a>引用计数
 COM 本身不会自动尝试从内存中移除对象时它认为不再使用的对象。 相反，该对象的程序员必须删除未使用的对象。 程序员确定是否可以删除对象根据引用计数。  
   
- COM 用途`IUnknown`方法， [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)并[发行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，以管理对某个对象的接口的引用计数。 调用这些方法的一般规则是：  
+ COM 用途`IUnknown`方法， [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，以管理对某个对象的接口的引用计数。 调用这些方法的一般规则是：  
   
 -   每当在客户端接收的接口指针，`AddRef`必须调用该接口上。  
   
@@ -43,5 +43,5 @@ COM 本身不会自动尝试从内存中移除对象时它认为不再使用的�
   
 ## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
- [管理对象生存期通过引用计数](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [管理对象生存期通过引用计数](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

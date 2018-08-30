@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959924"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195810"
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-`write`到达 null 字符，因此，编写完整的类结构时，函数不会停止。 该函数采用两个参数： **char**指针和要写入的字符计数。 在对结构对象寻址之前，请注意需要强制转换为 **char\***。
+`write`到达 null 字符，因此，编写完整的类结构时，函数不会停止。 该函数采用两个参数： **char**指针和要写入的字符计数。 请注意需要强制转换为**char** <strong>\*</strong>之前对结构对象的地址。
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函数
 
@@ -114,12 +114,12 @@ int main( )
 
 |函数|返回值|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果存在不可恢复的错误，则返回 **true**。|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 通常可以在调用后恢复处理`clear`使用零个自变量。|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|在文件结尾时返回 **true**。|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|返回当前错误状态。|
+|[bad](basic-ios-class.md#bad)|如果存在不可恢复的错误，则返回 **true**。|
+|[fail](basic-ios-class.md#fail)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 通常可以在调用后恢复处理`clear`使用零个自变量。|
+|[good](basic-ios-class.md#good)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|
+|[eof](basic-ios-class.md#eof)|在文件结尾时返回 **true**。|
+|[clear](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
+|[rdstate](basic-ios-class.md #rdstate|返回当前错误状态。|
 
 重载 **!** 运算符重载来执行相同的功能`fail`函数。 因此表达式：
 

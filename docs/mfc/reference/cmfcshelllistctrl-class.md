@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195827"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 `CMFCShellListCtrl`类提供 Windows 列表控件功能并通过包含显示 shell 项的列表的功能会将其展开。  
@@ -212,7 +212,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个指向[IShellFolder 接口](http://msdn.microsoft.com/library/windows/desktop/bb775075)为所选对象。  
+ 一个指向[IShellFolder 接口](https://msdn.microsoft.com/library/windows/desktop/bb775075)为所选对象。  
   
 ### <a name="remarks"></a>备注  
  如果当前没有选定任何对象，此方法将返回 NULL。  
@@ -247,7 +247,7 @@ SHCONTF GetItemTypes() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)值，该值包含的项中列出的类型`CMFCShellListCtrl`。  
+ 一个[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)值，该值包含的项中列出的类型`CMFCShellListCtrl`。  
   
 ### <a name="remarks"></a>备注  
  若要设置的项中列出的类型`CMFCShellListCtrl`，调用[CMFCShellListCtrl::SetItemTypes](#setitemtypes)。  
@@ -406,7 +406,7 @@ void SetItemTypes(SHCONTF nTypes);
  项的列表类型`CMFCShellListCtrl`对象支持。  
   
 ### <a name="remarks"></a>备注  
- 项类型的列表的详细信息，请参阅[SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)。  
+ 项类型的列表的详细信息，请参阅[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409122"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200488"
 ---
 # <a name="indirection-operator-"></a>间接寻址运算符：*
 ## <a name="syntax"></a>语法  
@@ -32,7 +32,7 @@ ms.locfileid: "39409122"
 ```  
   
 ## <a name="remarks"></a>备注  
- 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 利用**\*** 运算符在此上下文中的是不同于其含义为二元运算符，后者是乘法。  
+ 一元间接寻址运算符 (<strong>\*</strong>) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 利用<strong>\*</strong>运算符在此上下文中的是不同于其含义为二元运算符，后者是乘法。  
   
  如果操作数指向函数，则结果是函数指示符。 如果它指向存储位置，则结果是指定存储位置的左值。  
   

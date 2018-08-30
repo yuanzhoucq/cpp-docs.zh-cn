@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598875"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203587"
 ---
 # <a name="boxing-ccx"></a>装箱 (C++/CX)
- 装箱就是当一个值类型变量（如 [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)）或基础标量类型（如 `int`）传递给以 [Platform::Object^](../cppcx/platform-object-class.md) 作为其输入类型的方法时，将该变量或类型包装在一个 ref 类中的过程。  
+*装箱*正如包装值类型变量[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基础标量类型，如`int`— 在一个 ref 类变量传递给采用的方法时[Platform:: object ^](../cppcx/platform-object-class.md)作为其输入类型。  
   
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>将值类型传递给 Object^ 参数  
  虽然无需显式装箱变量以将该其传递给类型 [Platform::Object^](../cppcx/platform-object-class.md)的方法参数，但当你检索之前已装箱的值时，必须显式转换回原始类型。  

@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203108"
 ---
 # <a name="fpo"></a>.FPO
-。FPO 指令控制调试记录与.debug$ F 段或部分显示。  
+。FPO 指令控制调试与.debug$ F 段或部分的记录的显示。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,13 +48,13 @@ cbFrame
   
 #### <a name="parameters"></a>参数  
  `cdwLocals`  
- 无符号的 32 位值的本地变量数。  
+ 无符号的 32 位值的本地变量的数量。  
   
  `cdwParams`  
- Dword 值，一个 16 位无符号的值中的参数的大小。  
+ Dword 值，无符号 16 位值中的参数的大小。  
   
  *cbProlog*  
- 在函数 prolog 代码中，一个 8 位无符号的值的字节数。  
+ 在函数 prolog 代码中，无符号 8 位值的字节数。  
   
  `cbRegs`  
  保存的寄存器号。  
@@ -63,7 +63,7 @@ cbFrame
  指示是否已分配的 EBP 寄存器。 0 或 1。  
   
  *cbFrame*  
- 指示的帧类型。  请参阅[FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352)有关详细信息。  
+ 指示的帧类型。  请参阅[FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data)有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

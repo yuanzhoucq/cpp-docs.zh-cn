@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d5e0fac0d9ab89ef14a3bfafc78fe1c1138673
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd546f6d3eb3b2eae60b4bbc8c8fa9b0b4ed00f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602002"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201020"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -36,7 +36,7 @@ ms.locfileid: "42602002"
 
 ## <a name="remarks"></a>备注
 
-**Immediatebind** c + + 属性具有相同的功能[immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL 特性。
+**Immediatebind** c + + 属性具有相同的功能[immediatebind](/windows/desktop/Midl/immediatebind) MIDL 特性。
 
 ## <a name="example"></a>示例
 

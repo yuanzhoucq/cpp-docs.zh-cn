@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203500"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 类
 用于 OLE“编辑链接”对话框。  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  应用程序向导生成的容器的代码使用此类。  
   
- 有关详细信息，请参阅[OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的结构。  
   
  有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - 如果用户已取消对话框的，IDCANCEL。  
   
-- IDABORT 是否发生错误。 如果返回 IDABORT，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) Windows SDK 中的函数。  
+- IDABORT 是否发生错误。 如果返回 IDABORT，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要通过设置的成员初始化各种对话框控件[m_el](#m_el)结构，你应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>备注  
  直接或通过成员函数，可以修改此结构的成员。  
   
- 有关详细信息，请参阅[OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   

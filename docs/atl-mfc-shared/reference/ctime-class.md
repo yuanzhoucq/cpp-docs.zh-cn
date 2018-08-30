@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205982"
 ---
 # <a name="ctime-class"></a>CTime 类
 表示一个绝对时间和日期。  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|将转换`CTime`格式化的字符串对象 — 基于本地时区。|  
 |[CTime::FormatGmt](#formatgmt)|将转换`CTime`格式化的字符串对象 — UTC 为基础。|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|将时间信息存储在转换`CTime`对象与 Win32 兼容 DBTIMESTAMP 结构。|  
-|[CTime::GetAsSystemTime](#getassystemtime)|将时间信息存储在转换`CTime`对象与 Win32 兼容[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|  
+|[CTime::GetAsSystemTime](#getassystemtime)|将时间信息存储在转换`CTime`对象与 Win32 兼容[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。|  
 |[CTime::GetCurrentTime](#getcurrenttime)|创建`CTime`对象，表示当前时间 （静态成员函数）。|  
 |[CTime::GetDay](#getday)|返回由一天表示`CTime`对象。|  
 |[CTime::GetDayOfWeek](#getdayofweek)|返回表示星期几`CTime`对象。|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  构造函数使用`DBTIMESTAMP`参数包括 OLEDB.h 时才可用。  
   
- 有关详细信息，请参阅[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)并[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。 另请参阅[MS-DOS 日期和时间](http://msdn.microsoft.com/library/windows/desktop/ms724503)Windows SDK 中的条目。  
+ 有关详细信息，请参阅[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)并[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。 另请参阅[MS-DOS 日期和时间](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 中的条目。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- 调用此成员函数将转换中存储的时间信息`CTime`对象与 Win32 兼容[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
+ 调用此成员函数将转换中存储的时间信息`CTime`对象与 Win32 兼容[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>参数  
  *timeDest*  
- 对引用[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将保存转换后的日期/时间值的`CTime`对象。  
+ 对引用[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它将保存转换后的日期/时间值的`CTime`对象。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为 TRUE；否则为 FALSE。  
