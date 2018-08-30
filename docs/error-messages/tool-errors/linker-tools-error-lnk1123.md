@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1123 |Microsoft 文档
+title: 链接器工具错误 LNK1123 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206783"
 ---
 # <a name="linker-tools-error-lnk1123"></a>链接器工具错误 LNK1123
 
@@ -35,13 +35,13 @@ ms.locfileid: "33300272"
 
 - 将所有服务包和更新应用到你的 Visual Studio 版本。 这对于 Visual Studio 2010 尤为重要。
 
-- 禁用了尝试使用增量链接生成。 在菜单栏上，依次选择“项目”、“属性”。 在**属性页**对话框框中，展开**配置属性**，**链接器**。 更改的值**启用增量链接**到**否**。
+- 禁用了尝试使用增量链接生成。 在菜单栏上，依次选择“项目”、“属性”。 在中**属性页**对话框框中，展开**配置属性**，**链接器**。 更改的值**启用增量链接**到**否**。
 
 - 验证在 PATH 环境变量中首次发现的 CVTRES.EXE 版本是否与由你的项目使用的生成工具的版本或平台工具集的版本相匹配。
 
-- 尝试关闭嵌入清单选项。 在菜单栏上，依次选择“项目”、“属性”。 在**属性页**对话框框中，展开**配置属性**，**清单工具**，**输入和输出**。 更改的值**嵌入清单**到**否**。
+- 尝试关闭嵌入清单选项。 在菜单栏上，依次选择“项目”、“属性”。 在中**属性页**对话框框中，展开**配置属性**，**清单工具**，**输入和输出**。 更改的值**嵌入清单**到**否**。
 
-- 确保文件类型有效。 例如，确保 OMF 对象是 32 位而不是 16 位。 有关详细信息，请参阅[。Obj 文件作为链接器输入](../../build/reference/dot-obj-files-as-linker-input.md)和[PE 格式](https://msdn.microsoft.com/library/windows/desktop/ms680547)。
+- 确保文件类型有效。 例如，确保 OMF 对象是 32 位而不是 16 位。 有关详细信息，请参阅[。Obj 文件作为链接器输入](../../build/reference/dot-obj-files-as-linker-input.md)并[PE 格式](/windows/desktop/Debug/pe-format)。
 
 - 确保文件未损坏。 如有必要，请重新生成。
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966545"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201746"
 ---
 # <a name="moneyget-class"></a>money_get 类
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序内使用的区域设置的字符进行编码的类型。
+*CharType*<br/>
+ 在程序中用于对区域设置中的字符进行编码的类型。
 
-*InputIterator*获取函数从中读取其输入的迭代器的类型。
+*InputIterator*<br/>
+ 获取函数从中读取其输入的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*第一个*用于确定待转换序列开头的输入迭代器。
+*first*<br/>
+ 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*用于确定待转换序列末尾的输入迭代器。
+*最后一个*<br/>
+ 确定待转换序列末尾位置的输入迭代器。
 
-*Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
+*Intl*<br/>
+ 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需。
+*iosbase*<br/>
+ 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*状态*设置流状态根据操作成功与否的相应位掩码元素。
+*状态*<br/>
+ 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*val*存储已转换的序列的字符串。
+*val*<br/>
+ 存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*第一个*用于确定待转换序列开头的输入迭代器。
+*first*<br/>
+ 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*用于确定待转换序列末尾的输入迭代器。
+*最后一个*<br/>
+ 确定待转换序列末尾位置的输入迭代器。
 
-*Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
+*Intl*<br/>
+ 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
+*iosbase*<br/>
+ 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*状态*设置流状态根据操作是否成功的相应位掩码元素。
+*状态*<br/>
+ 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*val*存储已转换的序列的字符串。
+*val*<br/>
+ 存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+ 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
@@ -294,7 +309,7 @@ explicit money_get(size_t _Refs = 0);
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。
+构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 
 ## <a name="string_type"></a>  money_get::string_type
 

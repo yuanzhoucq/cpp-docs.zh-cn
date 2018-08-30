@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 095d0d74fe5ff6eb30866b619e201a029b754d38
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202171"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 类
 字符串转换宏 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W 使用此类。  
@@ -110,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  要转换的文本字符串。  
   
  *nCodePage*  
- 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)的更多详细信息。  
+ 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)的更多详细信息。  
   
 ### <a name="remarks"></a>备注  
  分配在转换过程中所使用的缓冲区。  

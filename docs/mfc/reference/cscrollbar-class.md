@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850038"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199196"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 类
 提供 Windows 滚动条控件功能。  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>参数  
  *pScrollInfo*  
- 一个指向[SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535)结构。  
+ 一个指向[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)消息，如 Windows SDK 中所述。  
+ 此成员函数模拟的功能[SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)消息，如 Windows SDK 中所述。  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  检索 `SCROLLINFO` 结构维护的有关滚动条的信息。  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>参数  
  *lpScrollInfo*  
- 一个指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。 请参阅 Windows SDK，了解有关此结构的详细信息。  
+ 一个指向[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)结构。 请参阅 Windows SDK，了解有关此结构的详细信息。  
   
  *nMask*  
  指定要检索的滚动栏参数。 典型的用法，SIF_ALL，指定 SIF_PAGE、 SIF_POS、 SIF_TRACKPOS 和 SIF_RANGE 的组合。 请参阅`SCROLLINFO`nMask 值的详细信息。  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>备注  
  `GetScrollInfo` 使应用程序可以使用 32 位滚动位置。  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含滚动条，其中包括的最小值和最大滚动位置、 页面大小和滚动框 （滚动块） 的位置有关的信息。 请参阅`SCROLLINFO`结构适用于有关更改结构的默认值的详细信息的 Windows SDK 中的主题。  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)结构包含滚动条，其中包括的最小值和最大滚动位置、 页面大小和滚动框 （滚动块） 的位置有关的信息。 请参阅`SCROLLINFO`结构适用于有关更改结构的默认值的详细信息的 Windows SDK 中的主题。  
   
  MFC Windows 消息处理程序指示滚动条的位置， [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)并[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供仅 16 位的位置数据。 `GetScrollInfo` 和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`时处理`CWnd::OnHScroll`或`CWnd::OnVScroll`获取 32 位滚动条位置数据。  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>参数  
  *lpScrollInfo*  
- 一个指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。  
+ 一个指向[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)结构。  
   
  *bRedraw*  
  指定是否重绘滚动条，以反映新的信息。 如果*bRedraw*为 TRUE 时，重绘滚动条。 如果为 FALSE，则它不重绘。 默认情况下，重绘滚动条。  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>备注  
  你必须提供所需的值`SCROLLINFO`结构参数，包括标志值。  
   
- `SCROLLINFO`结构包含滚动条，其中包括的最小值和最大滚动位置、 页面大小和滚动框 （滚动块） 的位置有关的信息。 请参阅[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构适用于有关更改结构的默认值的详细信息的 Windows SDK 中的主题。  
+ `SCROLLINFO`结构包含滚动条，其中包括的最小值和最大滚动位置、 页面大小和滚动框 （滚动块） 的位置有关的信息。 请参阅[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)结构适用于有关更改结构的默认值的详细信息的 Windows SDK 中的主题。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

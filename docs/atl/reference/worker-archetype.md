@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204849"
 ---
 # <a name="worker-archetype"></a>辅助原型
 类符合*辅助*原型提供线程池上排队进程的工作项的代码。  
@@ -31,8 +31,8 @@ ms.locfileid: "37881300"
 |方法|描述|  
 |------------|-----------------|  
 |[Initialize](#initialize)|调用以初始化辅助对象之前的任何请求传递给[Execute](#execute)。|  
-|[执行](#execute)|调用以处理工作项。|  
-|[终止](#terminate)|被调用的所有请求都传递给后取消初始化辅助对象[Execute](#execute)。|  
+|[Execute](#execute)|调用以处理工作项。|  
+|[Terminate](#terminate)|被调用的所有请求都传递给后取消初始化辅助对象[Execute](#execute)。|  
   
 |Typedef|描述|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`Terminate`。  
   
  *给 pOverlapped*  
- 一个指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)用来创建的队列的工作项排队等待的结构。  
+ 一个指向[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)用来创建的队列的工作项排队等待的结构。  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 调用以初始化辅助对象之前的任何请求传递给`WorkerArchetype::Execute`。  

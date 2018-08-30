@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884924"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205539"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 类
 此类提供用于实现管理单元中节点对象的方法。  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **标头：** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- 此方法实现的 Win32 函数[IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)。  
+ 此方法实现的 Win32 函数[IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)。  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - CCT_UNINITIALIZED 数据对象具有无效的类型。  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- 此方法实现的 Win32 函数[IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)。  
+ 此方法实现的 Win32 函数[IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)。  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - CCT_UNINITIALIZED 数据对象具有无效的类型。  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- 此方法实现的 Win32 函数[IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)。  
+ 此方法实现的 Win32 函数[IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)。  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)管理单元中的数据对象的结构。  
+ [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)管理单元中的数据对象的结构。  
   
 ```
 RESULTDATAITEM m_resultDataItem;

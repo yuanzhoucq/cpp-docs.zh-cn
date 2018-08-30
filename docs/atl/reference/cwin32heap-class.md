@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571944"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195326"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 堆分配函数。  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|堆对象的句柄。|  
   
 ## <a name="remarks"></a>备注  
- `CWin32Heap` 实现使用 Win32 堆分配函数，包括内存分配方法[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)并[HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)。 其他堆与类不同，`CWin32Heap`需要有效的堆句柄来提供，然后分配内存： 其他类默认为使用进程堆。 构造函数或可以提供句柄[CWin32Heap::Attach](#attach)方法。 请参阅[CWin32Heap::CWin32Heap](#cwin32heap)更多详细信息的方法。  
+ `CWin32Heap` 实现使用 Win32 堆分配函数，包括内存分配方法[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)并[HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree)。 其他堆与类不同，`CWin32Heap`需要有效的堆句柄来提供，然后分配内存： 其他类默认为使用进程堆。 构造函数或可以提供句柄[CWin32Heap::Attach](#attach)方法。 请参阅[CWin32Heap::CWin32Heap](#cwin32heap)更多详细信息的方法。  
   
 ## <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调用[CWin32Heap::Free](#free)或[CWin32Heap::Reallocate](#reallocate)来释放由此方法分配的内存。  
   
- 使用实现[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)。  
+ 使用实现[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)。  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
  将堆对象附加到现有堆。  

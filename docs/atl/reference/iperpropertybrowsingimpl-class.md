@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c018b5c7ffa8e72ae9ce68fb23799d712a879df8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883100"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206671"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 类
 此类实现`IUnknown`和允许客户端访问对象的属性页中的信息。  
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 |[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|检索与给定属性相关联的属性页的 CLSID。|  
   
 ## <a name="remarks"></a>备注  
- [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432)接口允许客户端访问对象的属性页中的信息。 类`IPerPropertyBrowsingImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
+ [IPerPropertyBrowsing](/windows/desktop/api/ocidl/nn-ocidl-iperpropertybrowsing)接口允许客户端访问对象的属性页中的信息。 类`IPerPropertyBrowsingImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
 > [!NOTE]
 >  如果使用的 Microsoft Access 作为容器应用程序，您必须派生您的类从`IPerPropertyBrowsingImpl`。 否则，访问不会加载您的控件。  
@@ -86,7 +86,7 @@ STDMETHOD(GetDisplayString)(
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) Windows SDK 中。  
+ 请参阅[IPerPropertyBrowsing::GetDisplayString](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) Windows SDK 中。  
   
 ##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings  
  填充每个数组具有零个项目。  
@@ -102,7 +102,7 @@ STDMETHOD(GetPredefinedStrings)(
  ATL 的实现[GetPredefinedValue](#getpredefinedvalue)返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) Windows SDK 中。  
+ 请参阅[IPerPropertyBrowsing::GetPredefinedStrings](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings) Windows SDK 中。  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
  检索包含由给定 DISPID 标识属性的值的变量。 使用从检索的字符串名称关联的 DISPID 是`GetPredefinedStrings`。  
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedValue)(
 ### <a name="remarks"></a>备注  
  ATL 的实现[GetPredefinedStrings](#getpredefinedstrings)检索没有相应的字符串。  
   
- 请参阅[IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) Windows SDK 中。  
+ 请参阅[IPerPropertyBrowsing::GetPredefinedValue](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue) Windows SDK 中。  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
  检索与指定的属性关联的属性页的 CLSID。  
@@ -134,7 +134,7 @@ STDMETHOD(MapPropertyToPage)(
 ### <a name="remarks"></a>备注  
  ATL 使用对象的属性映射来获取此信息。  
   
- 请参阅[IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) Windows SDK 中。  
+ 请参阅[IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [IPropertyPageImpl 类](../../atl/reference/ipropertypageimpl-class.md)   

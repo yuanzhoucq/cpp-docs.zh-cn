@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201036"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 类
-此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)通过将委派给所有者对象`IUnknown`。  
+此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)通过将委派给所有者对象`IUnknown`。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|递减引用计数在所有者对象上。|  
   
 ## <a name="remarks"></a>备注  
- 使用 ATL`CComContainedObject`类中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，并且[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)通过将委派给所有者对象`IUnknown`。 （所有者为外部对象的聚合或为其创建分离式接口的对象）。`CComContainedObject`调用`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，并`OuterRelease`、 通过所有继承`Base`。  
+ 使用 ATL`CComContainedObject`类中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，并且[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)通过将委派给所有者对象`IUnknown`。 （所有者为外部对象的聚合或为其创建分离式接口的对象）。`CComContainedObject`调用`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，并`OuterRelease`、 通过所有继承`Base`。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Base`  

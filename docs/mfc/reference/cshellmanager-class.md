@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852376"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207387"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 实现可使你使用指向标识符列表 (PIDL) 的指针的几种方法。  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  对话框标题。  
   
  [in]*ulFlags*  
- 指定有关对话框中选项的标志。 请参阅[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)详细说明。  
+ 指定有关对话框中选项的标志。 请参阅[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)详细说明。  
   
  [out]*piFolderImage*  
  指向方法写入所选文件夹的图像索引位置的整数值的指针。  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  一个指向新的项列表，如果函数成功，否则为空。  
   
 ### <a name="remarks"></a>备注  
- 此方法创建一个新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)足够大，使之同时包含*pidl1*并*pidl2*。 然后将复制*pidl1*并*pidl2*到新列表。  
+ 此方法创建一个新[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)足够大，使之同时包含*pidl1*并*pidl2*。 然后将复制*pidl1*并*pidl2*到新列表。  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  将复制的项列表。  

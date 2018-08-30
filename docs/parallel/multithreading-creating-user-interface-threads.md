@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131555"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206509"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>多线程处理： 创建 MFC 用户界面线程
 用户界面线程通常用于处理用户输入并响应用户事件独立于执行的应用程序其他部分的线程。 主应用程序线程 (中提供你`CWinApp`的派生类) 已创建并启动。 本主题介绍创建其他用户界面线程所需的步骤。  
@@ -49,13 +49,13 @@ MFC 通过参数重载提供两个版本的 `AfxBeginThread`：一个只能创�
   
 - [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)类派生自的`CWinThread`。  
   
-- （可选）所需的优先级。 默认值为正常优先级。 有关可用的优先级级别的详细信息，请参阅[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+- （可选）所需的优先级。 默认值为正常优先级。 有关可用的优先级级别的详细信息，请参阅[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
 - （可选）线程所需的堆栈大小。 默认值为同一个与创建线程堆栈大小。  
   
 - （可选）如果你想要创建一个处于挂起状态的线程，CREATE_SUSPENDED。 默认值为 0，或正常启动线程。  
   
-- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 `AfxBeginThread` 为您完成大部分工作。 它创建您的类的新对象，使用你提供的信息，并调用其进行初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)开始执行线程。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。  
   

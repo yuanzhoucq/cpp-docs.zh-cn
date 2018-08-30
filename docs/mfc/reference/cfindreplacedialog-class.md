@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338644"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204000"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 类
 可以在你的应用程序中实现的标准字符串查找/替换对话框。  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  一次`CFindReplaceDialog`构造对象，必须调用[创建](#create)成员函数来创建和显示该对话框。  
   
- 使用[m_fr](#m_fr)结构初始化之前，调用对话框`Create`。 `m_fr`结构属于类型[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 此结构的详细信息，请参阅 Windows SDK。  
+ 使用[m_fr](#m_fr)结构初始化之前，调用对话框`Create`。 `m_fr`结构属于类型[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 此结构的详细信息，请参阅 Windows SDK。  
   
- 为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)在帧中的消息映射宏处理此已注册的消息的窗口。  
+ 为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)在帧中的消息映射宏处理此已注册的消息的窗口。  
   
  您可以确定用户是否已决定终止使用对话框`IsTerminating`成员函数。  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  在对话框出现时的默认值替换字符串的指针。 如果为 NULL，则对话框的不包含默认替换字符串。  
   
  *dwFlags*  
- 可以使用自定义对话框中，使用按位 OR 运算符组合的设置的一个或多个标志。 默认值为 FR_DOWN，指定要向下继续执行搜索。 请参阅[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)适用于这些标志的详细信息的 Windows SDK 中的结构。  
+ 可以使用自定义对话框中，使用按位 OR 运算符组合的设置的一个或多个标志。 默认值为 FR_DOWN，指定要向下继续执行搜索。 请参阅[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)适用于这些标志的详细信息的 Windows SDK 中的结构。  
   
  *pParentWnd*  
  指向对话框的父级或所有者窗口的指针。 这是将收到指示请求的查找/替换操作的特殊消息的窗口。 如果为 NULL，则使用该应用程序的主窗口。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  已成功创建对话框对象; 如果非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函数的返回值是唯一的应用程序的实例的消息号。 框架窗口应具有一个声明回调函数的消息映射条目 (`OnFindReplace`后面的示例中) 用于处理此已注册的消息。 下面的代码片段示范了如何执行此操作的名为的框架窗口类`CMyRichEditView`:  
+ 为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函数的返回值是唯一的应用程序的实例的消息号。 框架窗口应具有一个声明回调函数的消息映射条目 (`OnFindReplace`后面的示例中) 用于处理此已注册的消息。 下面的代码片段示范了如何执行此操作的名为的框架窗口类`CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_fr` 是一种类型的结构[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 其成员存储对话框对象的特征。 构造后`CFindReplaceDialog`对象，可以使用`m_fr`修改在对话框中的各种值。  
+ `m_fr` 是一种类型的结构[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 其成员存储对话框对象的特征。 构造后`CFindReplaceDialog`对象，可以使用`m_fr`修改在对话框中的各种值。  
   
  此结构的详细信息，请参阅`FINDREPLACE`Windows SDK 中的结构。  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc95eef2c3cca678ae291846c2ebe0e5c1e80997
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d7933aeb5b9b12e761c684a1a9b62c4201ef4bdb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609077"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204833"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>移动和复制菜单和菜单命令
 
@@ -54,7 +54,7 @@ ms.locfileid: "42609077"
    > [!NOTE]
    > 还可以拖动、复制和粘贴到其他菜单窗口中的其他菜单中。
 
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息以及 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源，并分配的资源字符串应用于属性。
 
 ## <a name="requirements"></a>要求
 

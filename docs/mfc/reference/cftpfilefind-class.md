@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 795261da81fbe8082e279bc3830f004d845e1ea7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336014"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196931"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 辅助 FTP 服务器的 Internet 文件搜索。  
@@ -120,14 +120,14 @@ virtual BOOL FindFile(
   
 -   INTERNET_FLAG_DONT_CACHE 不缓存数据，本地或在任何网关。  
   
--   INTERNET_FLAG_RAW_DATA 重写默认设置，以便返回原始数据 ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) FTP 的结构)。  
+-   INTERNET_FLAG_RAW_DATA 重写默认设置，以便返回原始数据 ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) FTP 的结构)。  
   
 -   INTERNET_FLAG_SECURE 保护与安全套接字层或百分比在网络上的事务 此标志为适用于仅 HTTP 请求。  
   
 -   INTERNET_FLAG_EXISTING_CONNECT 如果可能，请重复使用现有连接到服务器的新`FindFile`而不是创建新的会话的每个请求的请求。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  在调用`FindFile`若要检索的第一个 FTP 文件，可以调用[FindNextFile](#findnextfile)检索后续 FTP 文件。  
@@ -143,12 +143,12 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
+ 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
   
 ### <a name="remarks"></a>备注  
  您必须至少一次调用属性的任何函数之前调用此函数 (请参阅[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile` 包装 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包装 Win32 函数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。  
   
 ### <a name="example"></a>示例  
   请参阅本主题前面的示例。  

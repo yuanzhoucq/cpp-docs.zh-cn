@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4191 |Microsoft 文档
+title: 编译器警告 （等级 3） C4191 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291487"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197493"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>编译器警告（等级 3）C4191
 “operator/operation”：从“type of expression”到“type required”的不安全转换  
@@ -36,7 +36,7 @@ ms.locfileid: "33291487"
   
 -   不同的参数列表长度（在 `__cdecl`上，仅在从较长列表到较短列表的强制转换中，即使较短的列表为 varargs）。  
   
--   指向数据的指针 (而不**void\***) 的函数指针作为别名。  
+-   指向数据的指针 (而不**void**<strong>\*</strong>) 的函数的指针作为别名。  
   
 -   任何其他将在 `reinterpret_cast`上产生错误或警告的类型差异。  
   

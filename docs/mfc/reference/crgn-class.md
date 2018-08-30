@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853857"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204875"
 ---
 # <a name="crgn-class"></a>CRgn 类
 封装一个 Windows 图形设备接口 (GDI) 区域。  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>备注  
  此运算符是强制转换运算符，它支持 HRGN 对象的直接使用。  
   
- 有关使用图形对象的详细信息，请参阅文章[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 有关使用图形对象的详细信息，请参阅文章[图形对象](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  检查是否提供的点*x*并*y*存储在区域中`CRgn`对象。  

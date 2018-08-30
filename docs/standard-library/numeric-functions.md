@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199183"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
 
@@ -62,7 +62,7 @@ Type accumulate(
 
 ### <a name="remarks"></a>备注
 
-初始值确保，将有明确定义的结果时的范围为空，这种情况下*val*返回。 二元运算不需要具有关联性或可交换性。 结果将初始化为初始值*val* ，然后*结果* =  `binary_op` (*结果*， **\***`Iter`) 范围内，通过以迭代方式计算其中`Iter`是指向范围内的连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
+初始值确保，将有明确定义的结果时的范围为空，这种情况下*val*返回。 二元运算不需要具有关联性或可交换性。 结果将初始化为初始值*val* ，然后*结果* =  `binary_op` (*结果*， <strong>\*</strong>`Iter`) 范围内，通过以迭代方式计算其中`Iter`是指向范围内的连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
 
 ### <a name="example"></a>示例
 

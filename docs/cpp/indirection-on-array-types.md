@@ -15,15 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fd8d4f02bd40764d2a6132333aecde6dd8cd6063
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406154"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208595"
 ---
 # <a name="indirection-on-array-types"></a>数组类型的间接寻址
-使用间接寻址运算符 (**\***) 上*n*-一维数组类型生成*n*-1 维数组。 如果*n*为 1，生成标量 （或数组元素）。  
+
+使用间接寻址运算符 (<strong>\*</strong>) 上*n*-一维数组类型生成*n*-1 维数组。 如果*n*为 1，生成标量 （或数组元素）。  
   
 ## <a name="see-also"></a>请参阅  
  [数组](../cpp/arrays-cpp.md)

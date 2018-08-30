@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198655"
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 此类实现`IUnknown`非聚合对象。  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|递减引用计数对象上。|  
   
 ## <a name="remarks"></a>备注  
- `CComObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合对象。 但是，调用`QueryInterface`， `AddRef`，并`Release`委派给`CComObjectRootEx`。  
+ `CComObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非聚合对象。 但是，调用`QueryInterface`， `AddRef`，并`Release`委派给`CComObjectRootEx`。  
   
  有关使用详细信息`CComObject`，请参阅文章[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -93,7 +93,7 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>参数  
  \*void  
- [in]未使用此未命名的参数。 它与其他对称性存在 **CCom * * * XXX*`Object`*XXX*构造函数。  
+ [in]未使用此未命名的参数。 存在与其他对称性`CComXXXObjectXXX`构造函数。  
   
 ### <a name="remarks"></a>备注  
  析构函数递减它。  

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204294"
 ---
 # <a name="adding-an-mfc-class"></a>添加 MFC 类
-若要添加到你的项目从 Microsoft 基础类 (MFC) 库类派生的类，请使用**添加类**中的可用命令[类视图](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新类的名称、 选择基类，并选择它与之关联 （如果有） 对话框中的 ID。 代码向导创建一个标头文件和实现文件，并将它们添加到你的项目。  
+若要添加到你的项目从 Microsoft 基础类 (MFC) 库类派生的类，请使用**添加类**中的可用命令[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新类的名称、 选择基类，并选择它与之关联 （如果有） 对话框中的 ID。 代码向导创建一个标头文件和实现文件，并将它们添加到你的项目。  
   
 > [!NOTE]
 >  可以将 MFC 类添加到 ATL COM 应用程序中，如果您最初[创建的应用程序具有 MFC 支持](../../atl/reference/mfc-support-in-atl-projects.md)。 您还可以向具有 MFC 支持的 Win32 项目添加 MFC 类。  

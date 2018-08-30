@@ -1,5 +1,5 @@
 ---
-title: CSemaphore 类 |Microsoft 文档
+title: CSemaphore 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00e7e1bc42317b4028264a49006b40de4fbb507
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: feb595a5b963e3898c1ce467a5a0487062dd9bca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198506"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 类
-类的对象`CSemaphore`表示一个"信号量"-在一个或多个进程访问资源，并保持当前访问指定的资源的线程数的计数允许有限的数量的线程的同步对象。  
+类的对象`CSemaphore`表示一个"信号量"— 允许有限的数量的线程中一个或多个进程访问资源，并保持当前访问指定的资源的线程数的计数的同步对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,17 +43,17 @@ class CSemaphore : public CSyncObject
 |[CSemaphore::CSemaphore](#csemaphore)|构造 `CSemaphore` 对象。|  
   
 ## <a name="remarks"></a>备注  
- 信号量可用于控制对仅支持有限的数量用户的共享资源的访问。 当前计数`CSemaphore`对象是允许的其他用户数目。 在计数变为零时，所有尝试使用由控制资源`CSemaphore`对象将插入到系统队列并等待，直到它们任一超时或计数高于 0。 构造期间指定的最大可以一次访问受控的资源的用户数`CSemaphore`对象。  
+ 信号量可控制到仅支持有限的数量的用户的共享资源的访问。 当前计数`CSemaphore`对象是其他允许的用户数。 所有计数达到零时，尝试使用由控制资源`CSemaphore`对象将插入到系统队列，并等待直到它们任一超时或计数大于 0。 构造期间指定的最大可以一次访问受控的资源的用户数`CSemaphore`对象。  
   
- 若要使用`CSemaphore`对象，构造`CSemaphore`对象时需要它。 指定你想要等待，信号量的名称和你的应用程序最初应拥有它。 然后，在构造函数将返回时，就可以访问信号量。 调用[CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock)完成后访问受控的资源。  
+ 若要使用`CSemaphore`对象，构造`CSemaphore`对象时需要它。 指定你想要等待信号量的名称和你的应用程序最初应拥有它。 构造函数返回时，您就可以访问信号量。 调用[CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock)完成后访问受控的资源。  
   
- 一种方法来使用`CSemaphore`对象是添加类型的变量的`CSemaphore`为想要控制的类数据成员。 在受控的对象的构造，过程调用的构造函数`CSemaphore`数据成员指定初始访问计数，最大访问次数，信号量 （如果跨进程边界，将使用它） 的名称和所需的安全属性。  
+ 使用一种替代方法`CSemaphore`对象将添加一个类型的变量`CSemaphore`为想要控制此类数据成员。 在受控的对象的构造，过程调用的构造函数`CSemaphore`指定初始数据成员访问计数、 最大访问次数、 信号量 （如果跨进程边界，将使用它） 的名称和所需的安全属性。  
   
- 由控制访问资源`CSemaphore`对象以这种方式，先创建任一类型的变量的[CSingleLock](../../mfc/reference/csinglelock-class.md)或类型[CMultiLock](../../mfc/reference/cmultilock-class.md)中资源的访问成员函数。 然后，调用的锁对象`Lock`成员函数 (例如， [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此时，你的线程将获取对资源的访问，等待要释放并获取访问权限，或者等待的资源要释放和超时值，不能对资源的访问的资源。 在任何情况下，所需的资源已被访问以线程安全的方式。 若要释放资源，使用的锁对象`Unlock`成员函数 (例如， [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允许未能超出范围的锁对象。  
+ 由控制访问资源`CSemaphore`对象以这种方式，首先创建任一类型的变量[CSingleLock](../../mfc/reference/csinglelock-class.md)或类型[CMultiLock](../../mfc/reference/cmultilock-class.md)中资源的访问成员函数。 然后，调用的锁对象`Lock`成员函数 (例如， [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此时，你的线程将获取对资源的访问权限，等待资源释放并获取访问权限，或等待资源释放和超时，无法获取对资源的访问权限。 在任何情况下，以线程安全的方式访问所需的资源。 若要释放资源，使用的锁对象`Unlock`成员函数 (例如， [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允许离开作用域的锁对象。  
   
- 或者，你可以创建`CSemaphore`对象独立，并尝试访问受控的资源之前对它进行显式访问。 此方法，时更清晰的某个人可以读取你的源代码，是更不易出错。  
+ 或者，可以创建`CSemaphore`对象独立的并尝试访问受控的资源之前显式访问。 此方法，同时更清晰的某个人可以读取源代码，很多容易出现错误。  
   
- 有关详细信息如何使用`CSemaphore`对象，请参阅文章[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ 有关如何使用的详细信息`CSemaphore`对象，请参阅文章[多线程处理： 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CSemaphore : public CSyncObject
  **标头：** afxmt.h  
   
 ##  <a name="csemaphore"></a>  CSemaphore::CSemaphore  
- 命名的或未命名的构造`CSemaphore`对象。  
+ 构造一个已命名或未命名的`CSemaphore`对象。  
   
 ```  
 CSemaphore(
@@ -78,22 +78,22 @@ CSemaphore(
   
 ### <a name="parameters"></a>参数  
  *lInitialCount*  
- 初始的使用情况计数的信号。 必须大于或等于 0，并且小于或等于*lMaxCount*。  
+ 初始的使用情况的信号量计数。 必须是大于或等于 0，且小于或等于*lMaxCount*。  
   
  *lMaxCount*  
- 信号量最大使用率计数。 必须大于 0。  
+ 最大使用率的信号量计数。 必须大于 0。  
   
  *pstrName*  
- 信号量的名称。 将跨进程边界访问信号量时，必须提供。 如果`NULL`，该对象将为未命名。 如果名称匹配的现有信号，构造函数将生成新`CSemaphore`即在引用该名称的信号量的对象。 如果名称与匹配不是的信号量的现有同步对象，构造将失败。  
+ 信号量的名称。 将跨进程边界访问信号量时，必须提供。 如果`NULL`，该对象将是未命名。 如果名称与现有的信号量相匹配，构造函数将生成新`CSemaphore`对象引用该名称的信号量。 如果名称与现有同步对象不是一个信号量相匹配，构造将失败。  
   
  *lpsaAttributes*  
- 信号量对象的安全属性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+ 信号量对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 若要访问或释放`CSemaphore`对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象并调用其[锁](../../mfc/reference/csinglelock-class.md#lock)和[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。  
+ 访问或释放`CSemaphore`对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，并调用其[锁](../../mfc/reference/csinglelock-class.md#lock)并[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。  
   
 > [!IMPORTANT]
->  在创建后`CSemaphore`对象，请使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确保，互斥体已不存在。 如果互斥体未意外存在，则可能表示一个恶意进程是占用和可能想要恶意使用互斥体。 在这种情况下，建议的安全意识过程是关闭句柄并继续就像在创建对象时失败。  
+>  在创建后`CSemaphore`对象，请使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体已不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。  
   
 ## <a name="see-also"></a>请参阅  
  [CSyncObject 类](../../mfc/reference/csyncobject-class.md)   

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592464"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202343"
 ---
 # <a name="strings-ccx"></a>字符串 (C++/CX)
 Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`或与其他 Windows 运行时组件交互跨应用程序二进制接口 (ABI) 边界时将字符串传递来回 Windows 运行时类中的方法。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。  
@@ -76,4 +76,4 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [内置类型](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)
+ [内置类型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

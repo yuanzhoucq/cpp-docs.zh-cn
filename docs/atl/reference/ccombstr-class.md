@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954926"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202204"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 类
 此类是 Bstr 的包装器。  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- 请参阅[LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) Windows SDK 中。  
+ 请参阅[LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功加载字符串; 将返回 TRUE否则，返回 FALSE。  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>参数  
  *pStream*  
- [in]一个指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)上包含数据的流接口。  
+ [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含数据的流接口。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT 值。  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>参数  
  *pStream*  
- [in]一个指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)流上的接口。  
+ [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)流上的接口。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT 值。  

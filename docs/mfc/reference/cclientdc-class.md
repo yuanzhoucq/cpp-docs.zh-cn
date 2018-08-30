@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205930"
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
-负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时并[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
+负责调用 Windows 函数[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在构造时并[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在析构时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  窗口设备上下文对象将访问其工作区中。  
   
 ### <a name="remarks"></a>备注  
- 构造函数将调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
+ 构造函数将调用 Windows 函数[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)。  
   
  异常 (类型的`CResourceException`) 如果则会引发 Windows`GetDC`调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
   

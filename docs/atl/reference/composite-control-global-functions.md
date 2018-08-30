@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882427"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203711"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 用于创建对话框框中，以及用于创建、 托管和授权 ActiveX 控件，这些函数提供支持。  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in]标识其可执行文件包含对话框模板的模块的实例。  
   
  *lpTemplateName*  
- [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。  
+ [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。  
   
  *hWndParent*  
  [in]标识拥有对话框的窗口。  
   
  *lpDialogProc*  
- [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)。  
+ [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。  
   
  *dwInitParam*  
  [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- 编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](http://msdn.microsoft.com/library/windows/desktop/aa380902)在 Windows SDK *: SDK Tools*。  
+ 编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](/windows/desktop/menurc/common-control-parameters)在 Windows SDK *: SDK Tools*。  
   
- 有关常规中的对话框的详细信息，请参阅[DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452)并[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
+ 有关常规中的对话框的详细信息，请参阅[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)并[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  从用户提供的对话框模板创建无模式对话框。  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in]标识其可执行文件包含对话框模板的模块的实例。  
   
  *lpTemplateName*  
- [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。  
+ [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。  
   
  *hWndParent*  
  [in]标识拥有对话框的窗口。  
   
  *lpDialogProc*  
- [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)。  
+ [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。  
   
  *dwInitParam*  
  [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>备注  
  随后出现的对话框中可以包含 ActiveX 控件。  
   
- 请参阅[CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434)并[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
+ 请参阅[CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga)并[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  创建 ActiveX 控件，初始化它并在指定窗口中承载它。  
@@ -159,7 +159,7 @@ ATLAPI AtlAxCreateControl(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID  
   
--   URL，例如" http://www.microsoft.com "  
+-   URL，例如"http://www.microsoft.com"  
   
 -   对等活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
@@ -207,7 +207,7 @@ ATLAPI AtlAxCreateControlEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID  
   
--   URL，例如" http://www.microsoft.com "  
+-   URL，例如"http://www.microsoft.com"  
   
 -   对等活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
@@ -262,7 +262,7 @@ ATLAPI AtlAxCreateControlLic(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID  
   
--   URL，例如" http://www.microsoft.com "  
+-   URL，例如"http://www.microsoft.com"  
   
 -   对等活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
@@ -312,7 +312,7 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"CLSID  
   
--   URL，例如" http://www.microsoft.com "  
+-   URL，例如"http://www.microsoft.com"  
   
 -   对等活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控件承载代码的初始化成功，则非零值否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)，如 Windows SDK 中所述。  
+ 使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)，如 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  此函数取消初始化 ATL 的控件承载代码通过注销 **"AtlAxWin80"** 并 **"AtlAxWinLic80"** 窗口类。  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  始终返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 此函数将只需调用[UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。  
+ 此函数将只需调用[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。  
   
  调用此函数已被销毁所有现有主机窗口，如果您调用之后进行清理[AtlAxWinInit](#atlaxwininit)和不再需要创建宿主窗口。 如果不调用此函数，窗口类将自动取消注册在进程终止时。  
   

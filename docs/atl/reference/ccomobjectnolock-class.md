@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208170"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 此类实现`IUnknown`的非聚合的对象，但不会递增模块锁计数的构造函数中。  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|递减引用计数对象上。|  
   
 ## <a name="remarks"></a>备注  
- `CComObjectNoLock` 类似于[CComObject](../../atl/reference/ccomobject-class.md) ，其中实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合的对象; 但是，`CComObjectNoLock`没有构造函数中不递增模块锁计数。  
+ `CComObjectNoLock` 类似于[CComObject](../../atl/reference/ccomobject-class.md) ，其中实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非聚合的对象; 但是，`CComObjectNoLock`没有构造函数中不递增模块锁计数。  
   
  使用 ATL`CComObjectNoLock`在内部的类工厂。 一般情况下，您不会直接使用此类。  
   
@@ -91,7 +91,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>参数  
  \*void  
- [in]未使用此未命名的参数。 它与其他对称性存在 **CCom * * * XXX*`Object`*XXX*构造函数。  
+ [in]未使用此未命名的参数。 存在与其他对称性`CComXXXObjectXXX`构造函数。  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  析构函数。  

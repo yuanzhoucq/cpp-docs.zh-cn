@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 1） C4325 |Microsoft 文档
+title: 编译器警告 （等级 1） C4325 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197480"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>编译器警告（等级 1）C4325
-**忽略标准节**   
- ***部分*忽略**  
-  
- 你不能更改的标准部分的属性。 例如：  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- 这将覆盖`.sdata`标准部分使用**短**数据类型，为**长**数据类型。  
-  
- 标准节你不能更改其属性包括：  
-  
--   .data  
-  
--   .sdata  
-  
--   .bss  
-  
--   .sbss  
-  
--   .text  
-  
--   .const  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- 可能在以后添加其他部分。  
-  
-## <a name="see-also"></a>请参阅  
- [section](../../preprocessor/section.md)
+
+> 忽略标准节*部分*被忽略
+
+## <a name="remarks"></a>备注
+
+您不能更改标准节的特性。 例如：
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+这会覆盖`.sdata`使用标准节**短**数据类型为**长**数据类型。
+
+标准节您不能更改其属性包括：
+
+- .data
+
+- .sdata
+
+- .bss
+
+- .sbss
+
+- .text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+可能在以后添加其他部分。
+
+## <a name="see-also"></a>请参阅
+
+[section](../../preprocessor/section.md)

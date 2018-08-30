@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417582"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202863"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
 向字符串追加字符。 这些函数的更安全版本已经发布，请参阅 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncat**和 **_mbsncat_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncat**并 **_mbsncat_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -152,12 +152,12 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**Strncat**函数最多，追加第一个*计数*字符*strSource*到*strDest*。 初始字符*strSource*覆盖的终止 null 字符*strDest*。 如果遇到 null 字符出现在*strSource*之前*计数*追加字符， **strncat**追加中的所有字符*strSource*，直到 null 字符。 如果*计数*大于的长度*strSource*的长度*strSource*代替使用*计数*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**Strncat**函数至多，追加第一个*计数*字符*strSource*到*strDest*。 初始字符*strSource*覆盖的终止 null 字符*strDest*。 如果中出现 null 字符*strSource*之前*计数*追加字符， **strncat**追加中的所有字符*strSource*，直到 null 字符。 如果*计数*大于的长度*strSource*，时长*strSource*用来代替*计数*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> **strncat**不会检查足够空间*strDest*; 因此是一个潜在原因的缓冲区溢出。 请记住，*计数*限制数字符追加，但并不了的大小限制*strDest*。 请参见下面的示例。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> **strncat**不会有足够的空间中检查*strDest*; 因此，是可能会造成缓冲区溢出。 请记住*计数*限制数字符追加; 它不是限制的大小*strDest*。 请参见下面的示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-**wcsncat**和 **_mbsncat**宽字符及多字节字符版本的**strncat**。 字符串自变量和返回值**wcsncat**是宽字符字符串; 而的 **_mbsncat**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcsncat**并 **_mbsncat**宽字符及多字节字符版本的**strncat**。 字符串参数和返回值**wcsncat**是宽字符字符串; **_mbsncat**是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -171,11 +171,11 @@ null 终止的源字符串。
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**具有任何区域设置依赖项，并且不应直接调用。 它们提供供内部使用 **_tcsncat_l**。
+> **_strncat_l**并 **_wcsncat_l**没有区域设置相关性，并且不应直接调用。 它们提供供内部使用 **_tcsncat_l**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
 |**wcsncat**|\<string.h> 或 \<wchar.h>|

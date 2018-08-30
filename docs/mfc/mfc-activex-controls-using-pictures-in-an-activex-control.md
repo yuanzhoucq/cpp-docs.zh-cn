@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控件： 在 ActiveX 控件中使用图片 |Microsoft 文档
+title: MFC ActiveX 控件： 在 ActiveX 控件中使用图片 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ebe0c28f1f2d6ee2eab81d9de2af3c033ecd484a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199669"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 本文介绍常见的图片类型以及如何在 ActiveX 控件中实现该图片类型。 包括以下主题：  
@@ -71,7 +71,7 @@ ms.locfileid: "36930643"
      对用于绘制 ActiveX 控件的若干函数进行修改。  
   
 ##  <a name="_core_additions_to_your_control_project"></a> 向控件项目添加内容  
- 若要添加标准图片属性页的属性页 ID，可在控件实现文件中的 BEGIN_PROPPAGEIDS 宏后插入以下行 (。CPP):  
+ 若要添加标准图片属性页的属性页 ID，在控件实现文件中的 BEGIN_PROPPAGEIDS 宏后插入以下行 (。CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36930643"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- 不需要命名数据成员*m_pic*; 的任何名称就足够了。  
+ 不需要对数据成员*m_pic*; 的任何名称就足够了。  
   
  接下来，添加支持图片类型的自定义属性：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36930643"
   
 5.  在“属性名称”  框中，键入属性名称。 本过程中使用 `ControlPicture` 作为示例。  
   
-6.  在**属性类型**框中，选择**IPictureDisp\*** 属性类型。  
+6.  在中**属性类型**框中，选择**IPictureDisp** <strong>\*</strong>属性类型。  
   
 7.  对于“实现类型” ，请单击“Get/Set 方法” 。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36930643"
 >  你的控件类和函数名称可能与上面的示例不同。  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> 修改控件项目的内容  
- 对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。 (请注意，在此示例中调用的控件类`CSampleCtrl`、`CPictureHolder`数据成员称为*m_pic*，并且自定义图片属性名称为`ControlPicture`。)  
+ 对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。 (请注意，在此示例中调用控件类`CSampleCtrl`，则`CPictureHolder`数据成员称为*m_pic*，并且自定义图片属性名称为`ControlPicture`。)  
   
  在控件的 `OnResetState` 函数中，在 `COleControl::OnResetState`的调用后添加以下可选行：  
   

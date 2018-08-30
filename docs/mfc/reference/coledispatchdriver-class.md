@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540993"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209563"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 实现 OLE 自动化的客户端。  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  此函数将参数转换为 VARIANTARG 值，然后调用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果返回 SCODE （状态代码），那么`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
- 有关详细信息，请参阅[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 有关详细信息，请参阅[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[coledispatchdriver:: Createdispatch](#createdispatch)。  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>备注  
  默认情况下，`m_bAutoRelease`构造函数中设置为 TRUE。  
   
- 释放 COM 对象的详细信息，请参阅[实现引用计数](http://msdn.microsoft.com/library/windows/desktop/ms693431)并[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK 中。  
+ 释放 COM 对象的详细信息，请参阅[实现引用计数](/windows/desktop/com/implementing-reference-counting)并[iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

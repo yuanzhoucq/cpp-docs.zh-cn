@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4312 |Microsoft 文档
+title: 编译器警告 （等级 1） C4312 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18039e44a5616330c66603e448bcafd6d18ff7aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b30d020532935c925b1ecab25d17cd43a7e8663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205897"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>编译器警告（等级 1）C4312
 “operation”: 从“type1”转换到更大的“type2”  
@@ -30,7 +30,7 @@ ms.locfileid: "33279670"
   
  这可能是不安全的转换，即使对于在发生符号扩展时适应 32 位的指针值也是如此。 如果为 64 位指针类型分配负 32 位整数，则符号扩展会导致指针值引用的内存地址与整数的值不同。  
   
- 仅对 64 位编译目标发出此警告。 有关详细信息，请参阅[使用指针的规则](http://msdn.microsoft.com/library/windows/desktop/aa384242)。  
+ 仅对 64 位编译目标发出此警告。 有关详细信息，请参阅[使用指针的规则](/windows/desktop/WinProg64/rules-for-using-pointers)。  
   
  以下代码示例在其针对 64 位目标进行编译时将生成 C4312：  
   

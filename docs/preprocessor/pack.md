@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538983"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207487"
 ---
 # <a name="pack"></a>pack
 指定结构、联合和类成员的封装对齐。  
@@ -38,7 +38,7 @@ ms.locfileid: "42538983"
 
 封装类是在内存中将其一个成员直接放在另一个后面，这可能表示对齐部分或全部成员的边界可以小于默认对齐目标体系结构。 **包**提供了数据声明级别的控制。 这不同于编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md)，只提供模块级别控制。 **包**第一处生效**struct**，**联合**，或**类**声明后杂注。 **包**对定义没有影响。 调用**pack**使用任何参数集*n*编译器选项中设置的值为`/Zp`。 如果未设置编译器选项，则默认值为 8。  
   
-如果更改某个结构的对齐方式，它可能不会使用像内存中一样多的空间，但您可能会发现性能降低或者甚至是因未对齐访问而遇到硬件产生的异常。  您可以通过修改此异常行为[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)。  
+如果更改某个结构的对齐方式，它可能不会使用像内存中一样多的空间，但您可能会发现性能降低或者甚至是因未对齐访问而遇到硬件产生的异常。  您可以通过修改此异常行为[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)。  
   
 *显示*（可选）  
 显示封装对齐的当前字节值。 该值由警告消息显示。  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201849"
 ---
 # <a name="crebar-class"></a>CReBar 类
 提供 Rebar 控件的布局、持久性和状态信息的控件条。  
@@ -105,7 +105,7 @@ BOOL AddBar(
  一个指向`CBitmap`rebar 背景上显示的对象。 默认情况下为 NULL。  
   
  *dwStyle*  
- 一个 dword 值，包含的样式应用于 rebar。 请参阅`fStyle`函数在 Win32 结构中的说明[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)有关带样式的完整列表。  
+ 一个 dword 值，包含的样式应用于 rebar。 请参阅`fStyle`函数在 Win32 结构中的说明[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)有关带样式的完整列表。  
   
  *clrFore*  
  一个 COLORREF 值，该值表示 rebar 的前景色。  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  指向`CWnd`其 Windows 窗口是状态栏的父对象。 通常情况下您的框架窗口。  
   
  *dwCtrlStyle*  
- Rebar 控件样式。 默认情况下，RBS_BANDBORDERS，其中显示了窄行来分隔相邻 rebar 控件中的带区。 请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK for 样式的列表中。  
+ Rebar 控件样式。 默认情况下，RBS_BANDBORDERS，其中显示了窄行来分隔相邻 rebar 控件中的带区。 请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK for 样式的列表中。  
   
  *dwStyle*  
  Rebar 的窗口样式。  

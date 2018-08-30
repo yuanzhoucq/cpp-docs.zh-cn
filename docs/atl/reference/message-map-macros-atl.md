@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201675"
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 这些宏定义消息映射和条目。  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **标头：** atlwin.h   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据通知代码。  
+ 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](/windows/desktop/menurc/wm-command)消息仅根据通知代码。  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- 映射 COMMAND_HANDLER [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)为指定的处理程序函数，根据通知代码和控件标识符的消息。 例如：  
+ 映射 COMMAND_HANDLER [WM_COMMAND](/windows/desktop/menurc/wm-command)为指定的处理程序函数，根据通知代码和控件标识符的消息。 例如：  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **标头：** atlwin.h   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据菜单项、 控件或加速器的标识符。  
+ 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](/windows/desktop/menurc/wm-command)消息仅根据菜单项、 控件或加速器的标识符。  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **标头：** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- 类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)含特定通知代码，通过一系列的控件的单个处理程序函数的消息。  
+ 类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但映射[WM_COMMAND](/windows/desktop/menurc/wm-command)含特定通知代码，通过一系列的控件的单个处理程序函数的消息。  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **标头：** atlwin.h   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息从一系列控件到单个处理程序函数。  
+ 类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](/windows/desktop/menurc/wm-command)消息从一系列控件到单个处理程序函数。  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  始终以使用消息映射[BEGIN_MSG_MAP](#begin_msg_map)。 然后，您可以声明使用后续的备用消息映射[ALT_MSG_MAP](#alt_msg_map)。 [END_MSG_MAP](#end_msg_map)宏标记消息映射的末尾。 每个消息映射必须有且只有一个实例 BEGIN_MSG_MAP 和 END_MSG_MAP。  
   
- 除了 MESSAGE_HANDLER，你可以使用[COMMAND_HANDLER](#command_handler)并[NOTIFY_HANDLER](#notify_handler)映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)并[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息分别。  
+ 除了 MESSAGE_HANDLER，你可以使用[COMMAND_HANDLER](#command_handler)并[NOTIFY_HANDLER](#notify_handler)映射[WM_COMMAND](/windows/desktop/menurc/wm-command)并[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息分别。  
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **标头：** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据通知代码。  
+ 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据通知代码。  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- 映射 NOTIFY_HANDLER [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)为指定的处理程序函数，根据通知代码和控件标识符的消息。  
+ 映射 NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)为指定的处理程序函数，根据通知代码和控件标识符的消息。  
   
  必须按如下所示定义 NOTIFY_HANDLER 宏中指定任何函数：  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **标头：** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅基于的控件标识符。  
+ 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅基于的控件标识符。  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **标头：** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- 类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)含特定通知代码，通过一系列的控件的单个处理程序函数的消息。  
+ 类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)含特定通知代码，通过一系列的控件的单个处理程序函数的消息。  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **标头：** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息从一系列控件到单个处理程序函数。  
+ 类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息从一系列控件到单个处理程序函数。  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

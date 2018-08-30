@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204564"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控件的持久性
 OLE 控件的一项功能是属性持久化（或称为“序列化”），它允许 OLE 控件在文件或流中读取或写入属性值。 即使在容器应用程序销毁该控件之后，该应用程序仍可以使用序列化来存储控件的属性值。 之后，当创建控件的新实例时，OLE 控件的属性值可从文件或流中读取。  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   包含实际的二进制数据的内存块。  
   
- 请注意，`PX_Blob`将分配内存，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，当加载 BLOB 类型属性。 你负责释放此内存。 因此，您的控件的析构函数应调用[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)句柄，以释放 BLOB 类型的任何属性上向上分配到控件中的任何内存。  
+ 请注意，`PX_Blob`将分配内存，使用 Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API，当加载 BLOB 类型属性。 你负责释放此内存。 因此，您的控件的析构函数应调用[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)句柄，以释放 BLOB 类型的任何属性上向上分配到控件中的任何内存。  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型 BOOL 的属性。  

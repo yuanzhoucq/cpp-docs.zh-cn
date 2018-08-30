@@ -1,5 +1,5 @@
 ---
-title: MFC 中的 OLE |Microsoft 文档
+title: MFC 中的 OLE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef23f0b7e031c6866b7792bca61c5e4d5bd470da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6c39c47762f4ac61e3192d5d3ecef997c3078bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204109"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 本文介绍使用 MFC 进行 OLE 编程的基础知识。 MFC 提供了写入使用 OLE 的程序的最简单的方法：  
@@ -40,7 +40,7 @@ ms.locfileid: "33353623"
   
 -   管理 MFC 模块的状态数据，包括导出的 DLL 函数入口点，OLE/COM 接口入口点和窗口过程入口点。  
   
- 你还可以使用[自动化](../mfc/automation.md)。  
+ 此外可以使用[自动化](../mfc/automation.md)。  
   
 > [!NOTE]
 >  OLE 一词表示与链接和嵌入关联的技术，包括 OLE 容器、OLE 服务器、OLE 项、就地激活（也称为可视编辑）跟踪器、拖放和菜单合并。 Active 一词适用于组件对象模型 (COM) 和基于 COM 的对象（如 ActiveX 控件）。 OLE 自动化现在称为自动化。  
@@ -80,7 +80,7 @@ ms.locfileid: "33353623"
  [服务器/容器 COM 组件](../mfc/containers-advanced-features.md)  
  介绍将可选高级功能合并到现有容器应用程序中所需的步骤。  
   
- [组件对象模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [组件对象模型](/windows/desktop/com/the-component-object-model)  
  介绍如何在没有 MFC 的情况下使用 OLE。  
   
 ## <a name="see-also"></a>请参阅  

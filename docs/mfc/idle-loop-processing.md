@@ -1,5 +1,5 @@
 ---
-title: 空闲循环处理 |Microsoft 文档
+title: 空闲循环处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8673b9610ab77535a74b110a6b97a4421d80a253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929551"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197746"
 ---
 # <a name="idle-loop-processing"></a>空闲循环处理
-很多应用程序“在后台”执行长时间的处理。 有时候，出于性能考虑，不得不对此类工作使用多线程处理。 线程会产生额外的开发开销，因此不建议将其用于简单任务，例如 MFC 在空闲时间工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函数。 本文将重点介绍空闲处理。 有关多线程处理，请参阅详细信息[多线程处理主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+很多应用程序“在后台”执行长时间的处理。 有时候，出于性能考虑，不得不对此类工作使用多线程处理。 线程会产生额外的开发开销，因此它们不建议用于简单任务，例如 MFC 中的空闲时间工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函数。 本文将重点介绍空闲处理。 详细了解多线程处理，请参阅[多线程主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
- 某些类型的后台处理会在用户未以其他方式与应用程序交互的时间间隔内适当地完成。 在为 Microsoft Windows 操作系统开发的应用程序中，应用程序可通过将漫长的过程拆分为很多小片段来执行空闲处理。 在处理每个片段之后, 应用程序将生成执行控制权让给 Windows 使用[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943)循环。  
+ 某些类型的后台处理会在用户未以其他方式与应用程序交互的时间间隔内适当地完成。 在为 Microsoft Windows 操作系统开发的应用程序中，应用程序可通过将漫长的过程拆分为很多小片段来执行空闲处理。 在处理每个片段之后, 该应用程序将执行控制权让给 Windows 使用[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943)循环。  
   
  本文将介绍两种在应用程序中执行空闲处理的方法：  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36929551"
 -   嵌入另一个**PeekMessage**循环在应用程序的其他位置。  
   
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC 消息循环中的 PeekMessage  
- 在使用 MFC 开发的应用，主消息循环中`CWinThread`类包含调用的消息循环[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 此循环也称为消息之间的 `OnIdle` 的 `CWinThread` 成员函数。 应用程序可通过重写 `OnIdle` 函数处理此空闲时间中的消息。  
+ 使用 MFC 开发的应用程序中的主消息循环中`CWinThread`类包含调用的消息循环[PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 此循环也称为消息之间的 `OnIdle` 的 `CWinThread` 成员函数。 应用程序可通过重写 `OnIdle` 函数处理此空闲时间中的消息。  
   
 > [!NOTE]
 >  `Run``OnIdle`，和某些其他成员函数现在是类的成员`CWinThread`而不是类`CWinApp`。 `CWinApp` 派生自 `CWinThread`。  
   
  有关执行空闲处理的详细信息，请参阅[OnIdle](../mfc/reference/cwinthread-class.md#onidle)中*MFC 参考*。  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> 在你的应用程序的其他位置的 PeekMessage  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> 你的应用程序中的其他位置的 PeekMessage  
  在应用程序中执行空闲处理的另一个方法涉及在您的其中一个函数中嵌入消息循环。 此消息循环是非常类似于 MFC 的主消息循环中, 找到[cwinthread:: Run](../mfc/reference/cwinthread-class.md#run)。 这意味着使用 MFC 开发的应用程序中的此类循环必须执行很多与主消息循环相同的函数。 以下代码片段演示了编写与 MFC 兼容的消息循环：  
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  

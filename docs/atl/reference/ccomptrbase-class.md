@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ae23f641becea5a7bdb47eefbdee59e18c2f27a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572533"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205590"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 此类为使用基于 COM 的内存例程的智能指针类提供了基础。  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  与数据和将用于创建对象的代码相关联的 CLSID。  
   
 ### <a name="return-value"></a>返回值  
- 在失败时返回成功，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE，则为 S_OK。 请参阅[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)并[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)有关这些错误的说明。  
+ 在失败时返回成功，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE，则为 S_OK。 请参阅[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)并[CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid)有关这些错误的说明。  
   
 ### <a name="remarks"></a>备注  
- 如果调用方法的第一种形式，则[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用于恢复 CLSID。 然后调用这两个窗体[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
+ 如果调用方法的第一种形式，则[CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid)用于恢复 CLSID。 然后调用这两个窗体[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
  在调试版本中，如果出现断言错误[CComPtrBase::p](#p)不等于 NULL。  
   
@@ -339,7 +339,7 @@ template <class Q> HRESULT QueryInterface(Q
  返回成功，则 E_NOINTERFACE 失败，则为 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 此方法调用[iunknown:: Queryinterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。  
+ 此方法调用[iunknown:: Queryinterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。  
   
  在调试版本中，如果出现断言错误*pp*不等于 NULL。  
   

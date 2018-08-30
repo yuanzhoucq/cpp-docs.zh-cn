@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131433"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206470"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 类
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>参数
 
-*类型*正在其属性的基础元素数据类型进行测试、 查询或设置。
+*类型*<br/>
+ 正在测试、查询或设置其属性的基础元素数据类型。
 
 ## <a name="remarks"></a>备注
 
-标头定义的类型的显式专用化**wchar_t**， **bool**， **char**，**签名 char**，**无符号char**，**短**， **unsigned short**， **int**，**无符号的 int**，**长时间**，**无符号长**， **float**， **double**，**长双精度 * * *，** **长长时间**，**无符号长长**， `char16_t`，和`char32_t`。 对于这些显式专用化，成员[numeric_limits:: is_specialized](#is_specialized)是**true**，和所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能的实现**float**。
+标头定义的类型的显式专用化**wchar_t**， **bool**， **char**，**签名 char**，**无符号char**，**短**， **unsigned short**， **int**，**无符号的 int**，**长时间**，**无符号长**， **float**， **double**，**长双精度型**，**长长时间**， **unsigned long long**， **char16_t**，并**char32_t**。 对于这些显式专用化，成员[numeric_limits:: is_specialized](#is_specialized)是**true**，和所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能的实现**float**。
 
 对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零 (或**false**)，并不返回有意义的值的成员函数返回`Type(0)`。
 

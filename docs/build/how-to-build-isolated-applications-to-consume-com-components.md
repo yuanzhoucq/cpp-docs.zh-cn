@@ -1,5 +1,5 @@
 ---
-title: 如何： 生成独立的应用程序使用 COM 组件 |Microsoft 文档
+title: 如何： 生成独立应用程序以使用 COM 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed2f43721eb698552ccde3e1b51ed4d6e467179
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b94a41aef1122a507a8966c475b9a87c69e3789
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367880"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196827"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>如何：生成独立应用程序以使用 COM 组件
-独立应用程序是具有内置在程序的清单的应用程序。 你可以创建独立的应用程序使用 COM 组件。  
+独立应用程序是具有内置于程序的清单的应用程序。 您可以创建独立应用程序以使用 COM 组件。  
   
-### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>COM 将引用添加到独立的应用程序清单  
+### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>若要添加到独立的应用程序的清单中的 COM 引用  
   
 1.  打开独立的应用程序的项目属性页。  
   
 2.  展开**配置属性**节点，然后展开**清单工具**节点。  
   
-3.  选择**独立 COM**属性页，然后将设置**组件文件名称**属性设置为你想要使用的独立应用程序的 COM 组件的名称。  
+3.  选择**独立 COM**属性页，然后将设置**组件文件名**属性设置为你想要使用的独立应用程序的 COM 组件的名称。  
   
 4.  单击 **“确定”**。  
   
-### <a name="to-build-manifests-into-isolated-applications"></a>要生成为独立应用程序的清单  
+### <a name="to-build-manifests-into-isolated-applications"></a>若要构建到独立的应用程序的清单  
   
 1.  打开独立的应用程序的项目属性页。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "32367880"
 5.  生成解决方案。  
   
 ## <a name="see-also"></a>请参阅  
- [独立应用程序](http://msdn.microsoft.com/library/aa375190)   
- [有关通过并行程序集](http://msdn.microsoft.com/library/ff951640)
+ [独立的应用程序](/windows/desktop/SbsCs/isolated-applications)   
+ [有关通过并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)

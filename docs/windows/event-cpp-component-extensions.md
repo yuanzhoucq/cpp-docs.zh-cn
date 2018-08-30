@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606835"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206456"
 ---
 # <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
 
@@ -85,7 +85,7 @@ modifiereventdelegate^ event_name
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[事件 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx)。
+有关详细信息，请参阅[事件 (C + + /cli CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx)。
 
 如果想要添加，然后删除事件处理程序，则必须保存添加操作返回的 EventRegistrationToken 结构。 然后在删除操作中，必须使用已保存的 EventRegistrationToken 结构来标识要删除的事件处理程序。
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197608"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 类
 `CMFCFontComboBox`类创建包含字体列表的一个组合框控件。  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|由框架调用以在当前的字体组合框控件中绘制指定的项。 (重写[CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem)。)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|检索有关当前所选字体的信息。|  
 |`CMFCFontComboBox::MeasureItem`|由框架调用以通知 Windows 列表框中当前的字体组合框控件的维度。 (重写[CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem)。)|  
-|`CMFCFontComboBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|`CMFCFontComboBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|选择符合指定的条件从字体组合框的字体。|  
 |[CMFCFontComboBox::Setup](#setup)|初始化字体组合框中项的列表。|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  指定的字体名称。  
   
  [in]*nCharSet*  
- 指定字符组。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
+ 指定字符组。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果字体组合框中的项匹配的说明对象指定的字体或字体名称和字符集; 则为 TRUE否则为 FALSE。  

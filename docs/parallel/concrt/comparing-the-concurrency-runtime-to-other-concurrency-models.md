@@ -1,5 +1,5 @@
 ---
-title: 并发运行时与其他并发模型进行比较 |Microsoft 文档
+title: 比较并发运行时与其他并发模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207206"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 本文档介绍了并发运行时与其他技术在功能和编程模型上的区别。 通过了解并发运行时与其他编程模型各自优点的比较，你可以选择最能满足应用程序要求的技术。  
@@ -64,7 +64,7 @@ ms.locfileid: "33694064"
  Windows API 使用 C 编程语言来公开编程模型。 并发运行时提供一个采用 C++ 语言中最新功能的 C++ 编程接口。 例如，lambda 函数提供简洁、类型安全的机制，用于定义并行工作函数。 有关并发运行时使用的最新 C++ 功能的详细信息，请参阅[概述](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ### <a name="threads-and-thread-pools"></a>线程和线程池  
- Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 函数来创建线程。 尽管线程的创建和使用相对简单，但操作系统需要分配大量的时间和其他资源来对管理它们。 此外，虽然每个线程都保证能够收到与其他任何同一优先级的线程相同的执行时间，但相关开销要求你创建足够大的任务。 对于更小或更精细的任务，与并发相关的开销会超过并行运行任务的收益。  
+ Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) 函数来创建线程。 尽管线程的创建和使用相对简单，但操作系统需要分配大量的时间和其他资源来对管理它们。 此外，虽然每个线程都保证能够收到与其他任何同一优先级的线程相同的执行时间，但相关开销要求你创建足够大的任务。 对于更小或更精细的任务，与并发相关的开销会超过并行运行任务的收益。  
   
  线程池是一种降低线程管理成本的方式。 Windows API 提供的自定义线程池和线程池实现都使小型工作项可以高效并行运行。 Windows 线程池维护先入先出 (FIFO) 队列中的工作项。 每个工作项都按其添加到池的顺序依次启动。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33694064"
   
  在 Windows 7 和 Windows Server 2008 R2 中，操作系统进一步支持并发和可伸缩性。 例如，这些操作系统支持具有 64 个以上硬件线程的计算机。 使用 Windows API 的现有应用程序必须进行修改才能利用这些新功能。 然而，使用并发运行时的应用程序无需修改就能自动使用这些功能。  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[返回页首](#top)]  
   

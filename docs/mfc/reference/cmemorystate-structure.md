@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203144"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 提供了方便地检测您的程序中的内存泄漏。  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   当前使用的程序 （以字节为单位） 的总内存  
   
- 可用块是如果时延迟释放的块的数目`afxMemDF`已设置为`delayFreeMemDF`。 有关详细信息，请参阅[afxMemDF](diagnostic-services.md#afxmemdf)，在"MFC 宏和全局变量"部分。 请参阅[调试堆的块类型](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)详细信息，这些块类型。  
+ 可用块是如果时延迟释放的块的数目`afxMemDF`已设置为`delayFreeMemDF`。 有关详细信息，请参阅[afxMemDF](diagnostic-services.md#afxmemdf)，在"MFC 宏和全局变量"部分。 请参阅[调试堆的块类型](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)详细信息，这些块类型。  
   
 ### <a name="example"></a>示例  
   下面的代码应置于*projname*app.cpp。 定义以下全局变量：  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208697"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195739"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 此类是包装`TOKEN_PRIVILEGES`结构。  
@@ -79,13 +79,13 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
   
- 访问令牌用于描述授予每个用户的各种安全权限。 一项权限包含名为本地唯一标识符的 64 位数字 ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) 和描述符字符串。  
+ 访问令牌用于描述授予每个用户的各种安全权限。 一项权限包含名为本地唯一标识符的 64 位数字 ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) 和描述符字符串。  
   
- `CTokenPrivileges`类是包装[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构，并包含 0 或更多的权限。 已删除，或查询使用提供的类方法，可以添加权限。  
+ `CTokenPrivileges`类是包装[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构，并包含 0 或更多的权限。 已删除，或查询使用提供的类方法，可以添加权限。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  如果为 true，则启用特权。 如果为 false，则禁用特权。  
   
  *rPrivileges*  
- 引用[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构。 此结构中复制并添加到特权和属性`CTokenPrivileges`对象。  
+ 引用[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构。 此结构中复制并添加到特权和属性`CTokenPrivileges`对象。  
   
 ### <a name="return-value"></a>返回值  
  此方法的第一种形式返回权限已成功添加，false 否则如果为 true。  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `CTokenPrivileges`对象要分配给新对象。  
   
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构，以分配给新`CTokenPrivileges`对象。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构，以分配给新`CTokenPrivileges`对象。  
   
 ### <a name="remarks"></a>备注  
  `CTokenPrivileges` （可选） 可以使用创建对象`TOKEN_PRIVILEGES`结构或以前定义`CTokenPrivileges`对象。  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>参数  
  *pPrivileges*  
- 指向数组的指针[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)对象。 `CLUIDArray` typedef 定义为`CAtlArray<LUID> CLUIDArray`。  
+ 指向数组的指针[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)对象。 `CLUIDArray` typedef 定义为`CAtlArray<LUID> CLUIDArray`。  
   
  *pAttributes*  
  指向 DWORD 对象的数组的指针。 如果省略或为 NULL，此参数，不会检索属性。 `CAttributes` typedef 定义为`CAtlArray <DWORD> CAttributes`。  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回一个指向[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构。  
+ 返回一个指向[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构。  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  检索与给定的特权名称关联的属性。  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>参数  
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构，以将分配给`CTokenPrivileges`对象。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构，以将分配给`CTokenPrivileges`对象。  
   
  *rhs*  
  `CTokenPrivileges`要分配给对象的对象。  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 将值转换为一个指向[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构。  
+ 将值转换为一个指向[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)结构。  
   
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

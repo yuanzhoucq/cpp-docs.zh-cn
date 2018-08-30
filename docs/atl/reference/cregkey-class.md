@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573039"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203553"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 此类提供用于操作在系统注册表中的条目的方法。  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` 为给定计算机提供对系统注册表的编程接口。 例如，若要打开的特定注册表项，调用`CRegKey::Open`。 若要检索或修改的数据值，调用`CRegKey::QueryValue`或`CRegKey::SetValue`分别。 若要关闭一个密钥，请调用`CRegKey::Close`。  
   
- 当关闭某个键时，其注册表数据写入 （刷新） 硬盘。 此过程可能需要几秒钟。 如果你的应用程序必须显式注册表数据写入硬盘，则可以调用[RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 函数。 但是，`RegFlushKey`使用很多系统资源，应仅在绝对必要时调用。  
+ 当关闭某个键时，其注册表数据写入 （刷新） 硬盘。 此过程可能需要几秒钟。 如果你的应用程序必须显式注册表数据写入硬盘，则可以调用[RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32 函数。 但是，`RegFlushKey`使用很多系统资源，应仅在绝对必要时调用。  
   
 > [!IMPORTANT]
->  允许调用方指定的注册表位置的任何方法有可能读取不能为受信任的数据。 方法，可以利用[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)应考虑到，此函数不显式处理的 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  允许调用方指定的注册表位置的任何方法有可能读取不能为受信任的数据。 方法，可以利用[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)应考虑到，此函数不显式处理的 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  指定要创建或打开的键的类。 默认值为 REG_NONE。  
   
  *dwOptions*  
- 密钥的选项。 默认值为 REG_OPTION_NON_VOLATILE。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK 中。  
+ 密钥的选项。 默认值为 REG_OPTION_NON_VOLATILE。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。  
   
  *samDesired*  
  该密钥的安全访问。 默认值是 KEY_READ &#124; KEY_WRITE。 有关可能的值和说明的列表，请参阅`RegCreateKeyEx`。  
   
  *lpSecAttr*  
- 一个指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，指示是否可以由子进程继承该密钥的句柄。 默认情况下，此参数为 NULL （即不能继承句柄）。  
+ 一个指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，指示是否可以由子进程继承该密钥的句柄。 默认情况下，此参数为 NULL （即不能继承句柄）。  
   
  *lpdwDisposition*  
  [out]如果非 NULL，检索 REG_CREATED_NEW_KEY （如果该键不存在并已创建） 或 REG_OPENED_EXISTING_KEY （如果该键存在并已打开）。  
@@ -308,7 +308,7 @@ LONG EnumKey(
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 若要枚举子项，请调用`CRegKey::EnumKey`索引为零。 递增索引值并重复，直到该方法将返回 ERROR_NO_MORE_ITEMS。 有关详细信息，请参阅[RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) Windows SDK 中。  
+ 若要枚举子项，请调用`CRegKey::EnumKey`索引为零。 递增索引值并重复，直到该方法将返回 ERROR_NO_MORE_ITEMS。 有关详细信息，请参阅[RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) Windows SDK 中。  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  调用此方法将写入注册表的所有打开的注册表项的属性。  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) Windows SDK 中。  
+ 有关详细信息，请参阅[RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) Windows SDK 中。  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  调用此方法以检索保护打开注册表项的安全描述符的副本。  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>参数  
  *si*  
- [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)值，该值指示请求的安全信息。  
+ [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)值，该值指示请求的安全信息。  
   
  *psd*  
  指向该缓冲区用于接收请求的安全描述符的副本的指针。  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)。  
+ 有关详细信息，请参阅[RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)。  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  包含与关联的注册表密钥的句柄`CRegKey`对象。  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  如果删除指定的键，此方法不会通知调用方。  
   
- 有关更多详细信息和示例程序，请参阅[RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)。  
+ 有关更多详细信息和示例程序，请参阅[RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)。  
   
 ##  <a name="open"></a>  CRegKey::Open  
  调用此方法以打开指定的密钥，并设置[m_hKey](#m_hkey)到此密钥的句柄。  
@@ -424,7 +424,7 @@ LONG Open(
  指定创建或打开密钥的名称。 此名称必须是某个项的子项*hKeyParent*。  
   
  *samDesired*  
- 该密钥的安全访问。 默认值为 KEY_ALL_ACCESS。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK 中。  
+ 该密钥的安全访问。 默认值为 KEY_ALL_ACCESS。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，返回 ERROR_SUCCESS;否则，WINERROR 中定义了非零错误值。H.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果引用的数据不是 REG_BINARY 类型，则返回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)的更多详细信息。  
+ 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)的更多详细信息。  
   
 > [!IMPORTANT]
->  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  调用此方法以检索指定的值名称的 DWORD 数据。  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果引用的数据不是类型 REG_DWORD，则返回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)的更多详细信息。  
+ 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)的更多详细信息。  
   
 > [!IMPORTANT]
->  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  调用此方法以检索指定的值名称的 GUID 数据。  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果引用的数据不是有效的 GUID，则返回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`CRegKey::QueryStringValue`，并将字符串转换为 GUID，并使用[CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589)。  
+ 此方法利用了`CRegKey::QueryStringValue`，并将字符串转换为 GUID，并使用[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)。  
   
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果不是类型 REG_MULTI_SZ 引用的数据，则返回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)的更多详细信息。  
+ 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)的更多详细信息。  
   
 > [!IMPORTANT]
->  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  调用此方法以检索指定的值名称的 QWORD 数据。  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果不是类型 REG_QWORD 引用的数据，则返回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)的更多详细信息。  
+ 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)的更多详细信息。  
   
 > [!IMPORTANT]
->  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  调用此方法以检索指定的值名称的字符串数据。  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  如果该方法成功，则返回 ERROR_SUCCESS。 如果该方法无法读取值，则返回 WINERROR 中定义一个非零错误代码。H. 如果引用的数据不是类型为 REG_SZ，则返回 ERROR_INVALID_DATA。 如果该方法返回 ERROR_MORE_DATA， *pnChars*等于零，不是以字节为单位的所需的缓冲区大小。  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)的更多详细信息。  
+ 此方法利用了`RegQueryValueEx`，并确认返回正确的数据类型。 请参阅[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)的更多详细信息。  
   
 > [!IMPORTANT]
->  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
+>  此方法允许调用方指定任何注册表位置中，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)函数使用此方法不显式处理均为 NULL 终止的字符串。 调用代码，应为检查这两个条件。  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  调用此方法以检索指定的值字段的数据[m_hKey](#m_hkey)。 此方法的早期版本不再受支持，并被标记为 ATL_DEPRECATED。  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
+ 此方法使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)值写入注册表。  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  调用此方法以设置注册表项 DWORD 值。  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
+ 此方法使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)值写入注册表。  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  调用此方法以设置注册表项的 GUID 值。  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法利用了`CRegKey::SetStringValue`，并将 GUID 转换为字符串，并使用[StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)。  
+ 此方法利用了`CRegKey::SetStringValue`，并将 GUID 转换为字符串，并使用[StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2)。  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  调用此方法以使用指定的项的指定的值字段中存储数据。  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|设置密钥的自由访问控制列表 (DACL)。 该密钥必须拥有 WRITE_DAC 访问权限，或调用进程必须是对象的所有者。|  
 |GROUP_SECURITY_INFORMATION|设置密钥的主要组安全标识符 (SID)。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者。|  
 |OWNER_SECURITY_INFORMATION|设置密钥的所有者的 SID。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者或具有启用了 SE_TAKE_OWNERSHIP_NAME 特权。|  
-|SACL_SECURITY_INFORMATION|设置密钥的系统访问控制列表 (SACL)。 该密钥必须拥有 ACCESS_SYSTEM_SECURITY 访问。 若要获得此访问权限的正确方法是启用 SE_SECURITY_NAME[特权](http://msdn.microsoft.com/library/windows/desktop/aa379306)在调用方的当前访问令牌中，打开 ACCESS_SYSTEM_SECURITY 访问的句柄，然后又禁用特权。|  
+|SACL_SECURITY_INFORMATION|设置密钥的系统访问控制列表 (SACL)。 该密钥必须拥有 ACCESS_SYSTEM_SECURITY 访问。 若要获得此访问权限的正确方法是启用 SE_SECURITY_NAME[特权](https://msdn.microsoft.com/library/windows/desktop/aa379306)在调用方的当前访问令牌中，打开 ACCESS_SYSTEM_SECURITY 访问的句柄，然后又禁用特权。|  
   
  *psd*  
- 指向[SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)结构，它指定要为指定的键设置的安全属性。  
+ 指向[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)结构，它指定要为指定的键设置的安全属性。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 设置密钥的安全属性。 请参阅[RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314)的更多详细信息。  
+ 设置密钥的安全属性。 请参阅[RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity)的更多详细信息。  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  调用此方法以设置注册表项的多字符串值。  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
+ 此方法使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)值写入注册表。  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  调用此方法以设置注册表项的 QWORD 值。  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  如果该方法成功，返回值为 ERROR_SUCCESS。 如果方法失败，返回值是 WINERROR 中定义一个非零错误代码。H.  
   
 ### <a name="remarks"></a>备注  
- 此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
+ 此方法使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)值写入注册表。  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  调用此方法以设置注册表项的字符串值。  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>备注  
  两个原始版本`SetValue`标记为 ATL_DEPRECATED 和应不再使用。 如果使用了这些窗体，编译器将发出警告。  
   
- 第三个方法调用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)。  
+ 第三个方法调用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)。  
   
 ## <a name="see-also"></a>请参阅  
  [DCOM 示例](../../visual-cpp-samples.md)   

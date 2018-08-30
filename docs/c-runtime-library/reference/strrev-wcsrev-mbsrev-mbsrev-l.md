@@ -56,19 +56,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415421"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198089"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 反转字符串的字符。
 
 > [!IMPORTANT]
-> **_mbsrev**和 **_mbsrev_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsrev**并 **_mbsrev_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -102,14 +102,14 @@ unsigned char *_mbsrev_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strrev**函数中的字符的顺序反转*str*。 终止 null 字符保留在原位。 **_wcsrev**和 **_mbsrev**宽字符及多字节字符版本的 **_strrev**。 参数和返回值的 **_wcsrev**是宽字符字符串; 而的 **_mbsrev**是多字节字符字符串。 有关 **_mbsrev**中的每个多字节字符中的字节顺序*str*不会更改。 否则这三个函数否则具有相同行为。
+**_Strrev**函数中的字符的顺序反转*str*。 终止 null 字符保留在原位。 **_wcsrev**并 **_mbsrev**宽字符及多字节字符版本的 **_strrev**。 参数和返回值 **_wcsrev**是宽字符字符串; **_mbsrev**是多字节字符字符串。 有关 **_mbsrev**，在每个多字节字符中的字节顺序*str*不会更改。 否则这三个函数否则具有相同行为。
 
-**_mbsrev**验证其参数。 如果任一*string1*或*string2*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsrev**返回**NULL**和设置**errno**到**EINVAL**。 **_strrev**和 **_wcsrev**不会验证其参数。
+**_mbsrev**验证其参数。 如果任一*string1*或*string2*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsrev**返回**NULL**并设置**errno**到**EINVAL**。 **_strrev**并 **_wcsrev**不会验证其参数。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的只不过不是具有 **_l**后缀使用当前区域设置的以及是否有 **_l**后缀改为使用的区域设置参数的在中传递。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的不同之处在于不具有 **_l**后缀使用当前区域设置以及是否有那些 **_l**后缀改为使用区域设置参数的传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,7 +120,7 @@ unsigned char *_mbsrev_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> 或 \<wchar.h>|

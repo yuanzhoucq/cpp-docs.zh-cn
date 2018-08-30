@@ -1,5 +1,5 @@
 ---
-title: 控件 (MFC) |Microsoft 文档
+title: 控件 (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353671"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206870"
 ---
 # <a name="controls-mfc"></a>控件 (MFC)
 控件是用户可与之交互以便输入或操作数据的对象。 它们通常显示在对话框中或工具栏上。 本主题介绍三种主要类型的控件：  
@@ -81,7 +81,7 @@ ms.locfileid: "33353671"
 |[工具提示](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|描述工具栏按钮或其他工具用途的小型弹出窗口|是|  
 |[树](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|显示项的分层列表的窗口|是|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   单个控件：请参阅本主题中表 [Windows 公共控件与 MFC 类](#_core_windows_common_controls_and_mfc_classes) ，了解所有控件的链接。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33353671"
   
 -   [示例](../mfc/common-control-sample-list.md)  
   
- 在 Windows SDK 中的 Windows 公共控件有关的信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)。  
+ 有关 Windows SDK 中的 Windows 公共控件的信息，请参阅[公共控件](/windows/desktop/Controls/common-controls-intro)。  
   
 ## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)   

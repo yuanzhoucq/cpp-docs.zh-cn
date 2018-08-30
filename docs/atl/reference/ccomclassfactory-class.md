@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205207"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 类
-此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口。  
+此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|锁定在内存中的类工厂。|  
   
 ## <a name="remarks"></a>备注  
- `CComClassFactory` 实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，它包含用于创建特定的 CLSID 的对象，以及锁定的内存，这样更快地创建新对象中的类工厂方法。 `IClassFactory` 必须为每个类都可以注册在系统注册表中并向你分配 CLSID 实现。  
+ `CComClassFactory` 实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，它包含用于创建特定的 CLSID 的对象，以及锁定的内存，这样更快地创建新对象中的类工厂方法。 `IClassFactory` 必须为每个类都可以注册在系统注册表中并向你分配 CLSID 实现。  
   
  ATL 对象通常通过继承获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要重写此默认值，指定一个`DECLARE_CLASSFACTORY` *XXX*在类定义中的宏。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)宏类工厂使用指定的类：  
   

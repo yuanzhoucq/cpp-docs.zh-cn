@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3fddd187dd6df58c4013b9c1fc7a08d5f644a0db
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203158"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 类
-此类公开[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作为可连接对象上的传出接口的接口。  
+此类公开[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作为可连接对象上的传出接口的接口。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -50,7 +50,7 @@ class IPropertyNotifySinkCP
 ## <a name="remarks"></a>备注  
  `IPropertyNotifySinkCP` 继承通过其基类，所有方法[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)。  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接口允许接收器对象以接收有关属性更改通知。 类`IPropertyNotifySinkCP`作为可连接对象上的传出接口公开此接口。 客户端必须实现`IPropertyNotifySink`接收器上的方法。  
+ [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)接口允许接收器对象以接收有关属性更改通知。 类`IPropertyNotifySinkCP`作为可连接对象上的传出接口公开此接口。 客户端必须实现`IPropertyNotifySink`接收器上的方法。  
   
  从类派生`IPropertyNotifySinkCP`当你想要创建的连接点的表示`IPropertyNotifySink`接口。  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204185"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 类和结构
 活动模板库 (ATL) 包括以下类和结构。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。  
@@ -71,20 +71,20 @@ ms.locfileid: "37881287"
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|此类提供用于操作承载 ActiveX 控件的窗口的方法。|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|此类提供用于操作的窗口，承载 ActiveX 控件并具有的用于托管授权的 ActiveX 控件支持的方法。|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|此类实现 `IBindStatusCallback` 接口。|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合对象。|atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)聚合对象。|atlcom.h|  
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|此类提供用于管理内存使用 COM 内存例程的方法。|atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|此类用于管理线程放入池中 EXE 模块中的某个单元提供支持。|atlbase.h|  
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|此类提供方法用于获取并释放关键节对象的所有权。|atlcore.h|  
 |[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|ATL 7.0 起`CComAutoThreadModule`已过时： 请参阅[ATL 模块](../../atl/atl-module-classes.md)的更多详细信息。|atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|此类是 Bstr 的包装器。|atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。|atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口。|atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|此类实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口。|atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，并允许在多个单元中创建的对象。|atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)分离式接口。|atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口。|atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|此类实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口。|atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|此类实现[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)接口，并允许在多个单元中创建的对象。|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|此类派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造一个单一对象。|atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|此类提供用于创建类的实例并获取其属性的方法。|atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|此类提供用于实现复合控件所需的方法。|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)通过将委派给所有者对象`IUnknown`。|atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)通过将委派给所有者对象`IUnknown`。|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|此类提供用于创建和管理 ATL 控件的方法。|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|此类提供用于创建和管理 ATL 控件的方法。|atlctl.h|  
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|此类提供方法用于获取并释放关键节对象的所有权。|atlcore.h|  
@@ -208,20 +208,20 @@ ms.locfileid: "37881287"
 |[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)|此类实现`IUnknown`是通过该容器与控件进行通信的主体接口。|atlctl.h|  
 |[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)|此类实现`IUnknown`和允许客户端访问对象的属性页中的信息。|atlctl.h|  
 |[IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)|此类实现`IUnknown`和允许对象将其属性保存到客户端提供的属性包。|atlcom.h|  
-|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|此类实现[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)接口。|atlcom.h|  
-|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)接口。|atlcom.h|  
-|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|此类实现`IUnknown`并[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)接口方法。|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|此类公开[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作为可连接对象上的传出接口的接口。|atlctl.h|  
+|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|此类实现[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)接口。|atlcom.h|  
+|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)接口。|atlcom.h|  
+|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|此类实现`IUnknown`并[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive)接口方法。|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|此类公开[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作为可连接对象上的传出接口的接口。|atlctl.h|  
 |[IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)|此类实现`IUnknown`和继承的默认实现[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)。|atlctl.h|  
-|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口。|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|此类提供的默认实现[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)并[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。|atlcom.h|  
+|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)接口。|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|此类提供的默认实现[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)并[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。|atlcom.h|  
 |[IQuickActivateImpl](../../atl/reference/iquickactivateimpl-class.md)|此类将合并到一个调用容器的控件初始化。|atlctl.h|  
-|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)接口。|atlctl.h|  
+|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)接口。|atlctl.h|  
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|此类提供的默认实现`IServiceProvider`接口。|atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)接口。|atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|此类实现`IUnknown`，并提供的默认实现[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)接口。|atlcom.h|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|此类提供的默认实现`ISupportErrorInfo Interface`接口，并只有一个接口生成的对象上的错误时可以使用。|atlcom.h|  
 |[IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)|此接口提供用于配置的线程池的方法。|atlutil.h|  
-|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|此类实现`IUnknown`并提供的默认实现[IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)， [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)，并且[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)接口。|atlctl.h|  
+|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|此类实现`IUnknown`并提供的默认实现[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)， [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)，并且[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)接口。|atlctl.h|  
 |[IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是的客户端实现的接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)类。|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|此类提供包装`CreateWindow`和`CreateWindowEx`。|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|此参数适配器类允许`RECT`指针或引用要传递给实现方面的指针的函数。|atlwin.h|  

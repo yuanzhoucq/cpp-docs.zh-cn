@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613214"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199459"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
 非 MFC DLL 是在内部，不使用 MFC 的 DLL 和可由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 通常从非 MFC DLL 使用标准的 C 接口导出函数。  
   
- 有关非 MFC Dll 的详细信息，请参阅[动态链接库](http://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK 中。  
+ 有关非 MFC Dll 的详细信息，请参阅[动态链接库](https://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK 中。  
   
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609494"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197928"
 ---
 # <a name="cstringt-class"></a>CStringT 类
 此类表示`CStringT`对象。  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` 尝试为新格式的字符串分配系统内存。 如果此尝试失败，是自动引发内存异常。  
   
- 每次插入必须具有相应的参数下面*pszFormat*或*nFormatID*参数。 消息文本中的动态设置消息的格式支持多个转义序列。 有关详细信息，请参阅 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 中的函数。  
+ 每次插入必须具有相应的参数下面*pszFormat*或*nFormatID*参数。 消息文本中的动态设置消息的格式支持多个转义序列。 有关详细信息，请参阅 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` 调用[CStringT::FormatMessage](#formatmessage)，它会尝试为新格式的字符串分配系统内存。 如果此尝试失败，是自动引发内存异常。  
   
- 有关详细信息，请参阅 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 中的函数。  
+ 有关详细信息，请参阅 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函数。  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  设置使用变量参数列表的消息字符串的格式。  

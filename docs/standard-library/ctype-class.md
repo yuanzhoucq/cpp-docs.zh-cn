@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208632"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204862"
 ---
 # <a name="ctype-class"></a>ctype 类
 
@@ -66,7 +66,8 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序中用于对字符进行编码的类型。
+*CharType*<br/>
+ 在程序中用于对字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -74,17 +75,17 @@ class ctype : public ctype_base;
 
 C++ 标准库定义了此模板类的两个显式专用化：
 
-- [ctype](../standard-library/ctype-char-class.md)< `char`>，此显式专用化的不同之处将单独说明。
+- `ctype<char>`显式专用化的不同之处将单独说明。 有关详细信息，请参阅[ctype&lt;char&gt;类](../standard-library/ctype-char-class.md)。
 
-- **ctype**<`wchar_t`>，将元素视为宽字符。
+- `ctype<wchar_t>`将元素视为宽字符。
 
-模板类 **ctype**\< **CharType**> 的其他专用化：
+模板类的其他专用化`ctype<CharType>`:
 
-- 将值转换***ch***类型的`CharType`类型的值为**char**使用表达式 (`char`) **ch**。
+- 将值转换*ch*类型的*CharType*类型的值为**char**表达式`(char)ch`。
 
-- 将值转换***字节***类型的**char**类型的值为`CharType`与表达式**CharType** (**字节**)。
+- 将值转换*字节*类型的**char**类型的值为*CharType*表达式`CharType(byte)`。
 
-在执行所有其他操作**char**中的相同方式与显式专用化的值**ctype**<`char`>。
+在执行所有其他操作**char**中的相同方式与显式专用化的值`ctype<char>`。
 
 ### <a name="constructors"></a>构造函数
 
@@ -149,7 +150,8 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+ 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
@@ -183,15 +185,20 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*为要测试字符的掩码值。
+*maskVal*<br/>
+ 要为其测试字符的掩码值。
 
-*ch*其属性是要测试的字符。
+*ch*<br/>
+ 要测试其属性的字符。
 
-*第一个*指向其属性进行分类的范围中的第一个字符的指针。
+*first*<br/>
+ 指向范围内要对其属性进行分类的第一个字符的指针。
 
-*最后一个*指向其属性进行分类的范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
-*dest*描述的每个字符属性特征的掩码值的存储位置的数组的开头的指针。
+*dest*<br/>
+ 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。
 
 ### <a name="return-value"></a>返回值
 
@@ -226,15 +233,20 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>参数
 
-*ch*类型的字符`Chartype`由要转换的区域设置。
+*ch*<br/>
+ `Chartype` 类型的字符由区域设置用于转换。
 
-*默认值*到字符类型的成员函数分配的默认值`CharType`不具有的类型与字符**char**。
+*default*<br/>
+ 为字符类型的成员函数分配的默认值`CharType`不具有的类型与字符**char**。
 
-*第一个*指向要转换的字符范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*指向要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest*类型的第一个字符常量指针**char**目标范围存储经过转换的字符范围内。
+*dest*<br/>
+ 指向类型的第一个字符的 const 指针**char**目标范围存储经过转换的字符范围内。
 
 ### <a name="return-value"></a>返回值
 
@@ -263,11 +275,14 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*要通过字符匹配的掩码值。
+*maskVal*<br/>
+ 要通过字符匹配的掩码值。
 
-*第一个*指向要扫描的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -294,11 +309,14 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*不要通过字符匹配的掩码值。
+*maskVal*<br/>
+ 不通过字符匹配的掩码值。
 
-*第一个*指向要扫描的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -327,11 +345,14 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为小写的字符。
+*ch*<br/>
+ 要转换为小写的字符。
 
-*第一个*指向字符的情况下是要转换的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*的要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -360,11 +381,14 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为大写的字符。
+*ch*<br/>
+ 要转换为大写的字符。
 
-*第一个*指向字符的情况下是要转换的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*指向的要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换大小写的字符范围内的第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -394,13 +418,17 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>参数
 
-*字节*类型的字符**char**中设置要转换的本机字符。
+*byte*<br/>
+ 类型的字符**char**中设置要转换的本机字符。
 
-*第一个*指向要转换的字符范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*指向要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest*类型的第一个字符的指针`CharType`目标范围存储经过转换的字符范围内。
+*dest*<br/>
+ 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。
 
 ### <a name="return-value"></a>返回值
 
@@ -432,15 +460,20 @@ const CharType *is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*为要测试字符的掩码值。
+*maskVal*<br/>
+ 要为其测试字符的掩码值。
 
-*ch*其属性是要测试的字符。
+*ch*<br/>
+ 要测试其属性的字符。
 
-*第一个*指向其属性进行分类的范围中的第一个字符的指针。
+*first*<br/>
+ 指向范围内要对其属性进行分类的第一个字符的指针。
 
-*最后一个*指向其属性进行分类的范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
-*dest*描述的每个字符属性特征的掩码值的存储位置的数组的开头的指针。
+*dest*<br/>
+ 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。
 
 ### <a name="return-value"></a>返回值
 
@@ -508,15 +541,20 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>参数
 
-*ch*类型的字符`Chartype`由要转换的区域设置。
+*ch*<br/>
+ `Chartype` 类型的字符由区域设置用于转换。
 
-*默认值*到字符类型的成员函数分配的默认值`CharType`不具有的类型与字符**char**。
+*default*<br/>
+ 为字符类型的成员函数分配的默认值`CharType`不具有的类型与字符**char**。
 
-*第一个*指向要转换的字符范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*指向要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest*类型的第一个字符常量指针**char**目标范围存储经过转换的字符范围内。
+*dest*<br/>
+ 指向类型的第一个字符的 const 指针**char**目标范围存储经过转换的字符范围内。
 
 ### <a name="return-value"></a>返回值
 
@@ -567,11 +605,14 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*要通过字符匹配的掩码值。
+*maskVal*<br/>
+ 要通过字符匹配的掩码值。
 
-*第一个*指向要扫描的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -620,11 +661,14 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>参数
 
-*maskVal*不要通过字符匹配的掩码值。
+*maskVal*<br/>
+ 不通过字符匹配的掩码值。
 
-*第一个*指向要扫描的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要扫描的范围内的第一个字符的指针。
 
-*最后一个*指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -673,11 +717,14 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为小写的字符。
+*ch*<br/>
+ 要转换为小写的字符。
 
-*第一个*指向字符的情况下是要转换的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*的要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -725,11 +772,14 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为大写的字符。
+*ch*<br/>
+ 要转换为大写的字符。
 
-*第一个*指向字符的情况下是要转换的范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换大小写的字符范围内的第一个字符的指针。
 
-*最后一个*的要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -777,13 +827,17 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>参数
 
-*字节*本机字符集中 char 类型的字符设置要转换。
+*byte*<br/>
+ 要转换的本机字符集中的 char 类型字符。
 
-*第一个*指向要转换的字符范围内的第一个字符的指针。
+*first*<br/>
+ 指向要转换的字符范围内的第一个字符的指针。
 
-*最后一个*指向要转换的字符范围中最后一个字符之后紧跟的字符的指针。
+*最后一个*<br/>
+ 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest*类型的第一个字符的指针`CharType`目标范围存储经过转换的字符范围内。
+*dest*<br/>
+ 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。
 
 ### <a name="return-value"></a>返回值
 

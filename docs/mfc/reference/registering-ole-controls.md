@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196548"
 ---
 # <a name="registering-ole-controls"></a>注册 OLE 控件
 与其他 OLE 服务器对象一样，OLE 控件可由其他 OLE 感知应用程序访问。 这是通过注册控件的类型库和类来实现的。  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` ThreadingModel 注册表中设置线程模型 = 免费。  
   
-     你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) Windows SDK for 线程处理模型注册的详细信息中。  
+     你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](/windows/desktop/com/inprocserver32) Windows SDK for 线程处理模型注册的详细信息中。  
   
 > [!NOTE]
 >  在 MFC 4.2 之前的 MFC 版本**int** *nRegFlags*参数是一个 BOOL 参数*bInsertable*的允许或不允许插入进行插入的控件对象对话框。  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  如果已注册的控件类; 非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 这样，要使用的是 OLE 控件可识别的容器的控件。 `AfxOleRegisterControlClass` 使用控件的名称和位置在系统上的更新注册表，并还会设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 这样，要使用的是 OLE 控件可识别的容器的控件。 `AfxOleRegisterControlClass` 使用控件的名称和位置在系统上的更新注册表，并还会设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  如果已注册的控件类; 非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 这允许属性页可由 OLE 控件可识别的容器。 `AfxOleRegisterPropertyPageClass` 使用属性页名称和其位置在系统上的更新注册表，并还会设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 这允许属性页可由 OLE 控件可识别的容器。 `AfxOleRegisterPropertyPageClass` 使用属性页名称和其位置在系统上的更新注册表，并还会设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK 中。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  

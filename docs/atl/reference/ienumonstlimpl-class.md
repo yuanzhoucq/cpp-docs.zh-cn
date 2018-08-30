@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883003"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206201"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 此类定义基于 c + + 标准库集合的枚举器接口。  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>参数  
  *基本*  
- COM 枚举器 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 接口。  
+ COM 的枚举器。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。
   
  *piid*  
  一个指向枚举器接口的接口 ID。  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |名称|描述|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
+|[IEnumOnSTLImpl::Clone](#clone)|实现**克隆**。|  
 |[IEnumOnSTLImpl::Init](#init)|初始化枚举器。|  
-|[IEnumOnSTLImpl::Next](#next)|实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)。|  
-|[IEnumOnSTLImpl::Reset](#reset)|实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)。|  
-|[IEnumOnSTLImpl::Skip](#skip)|实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)。|  
+|[IEnumOnSTLImpl::Next](#next)|实现**下一步**。|  
+|[IEnumOnSTLImpl::Reset](#reset)|实现**重置**。|  
+|[IEnumOnSTLImpl::Skip](#skip)|实现**跳过**。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  将指针传递到返回到任何客户端的枚举数接口前，必须调用此方法。  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- 此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法通过创建类型的对象`CComEnumOnSTL`，具有相同的集合和迭代器使用的当前对象，初始化并返回该接口上新创建的对象。  
+ 此方法提供的实现**克隆**方法通过创建类型的对象`CComEnumOnSTL`，具有相同的集合和迭代器使用的当前对象，初始化并返回该接口上新创建的对象。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- 此方法提供的实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
+ 此方法提供的实现**下一步**方法。  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  标准的 HRESULT 值。  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- 此方法提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
+ 此方法提供的实现**重置**方法。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  标准的 HRESULT 值。  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- 此方法提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
+ 此方法提供的实现**跳过**方法。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

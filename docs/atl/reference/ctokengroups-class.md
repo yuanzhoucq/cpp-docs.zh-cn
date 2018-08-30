@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6c186302c1c59e73e63e20ae29aa665f600fe23
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 72fd8530a05bb0b61af266ca78a1c2fa6716ee6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206611"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 类
 此类是包装`TOKEN_GROUPS`结构。  
@@ -75,11 +75,11 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
   
- `CTokenGroups`类是包装[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构，其中包含访问令牌中的组安全标识符 (Sid) 有关的信息。  
+ `CTokenGroups`类是包装[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构，其中包含访问令牌中的组安全标识符 (Sid) 有关的信息。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
@@ -100,7 +100,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
  要将与相关联的特性`CSid`对象。  
   
  *rTokenGroups*  
- 一个[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构。  
+ 一个[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构。  
   
 ### <a name="remarks"></a>备注  
  这些方法将添加一个或多个`CSid`对象和其关联的属性到`CTokenGroups`对象。  
@@ -116,7 +116,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
   
 ### <a name="parameters"></a>参数  
  *rhs*  
- `CTokenGroups`对象或[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构用来构造`CTokenGroups`对象。  
+ `CTokenGroups`对象或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构用来构造`CTokenGroups`对象。  
   
 ### <a name="remarks"></a>备注  
  `CTokenGroups` （可选） 可以使用创建对象`TOKEN_GROUPS`结构或以前定义`CTokenGroups`对象。  
@@ -180,7 +180,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 检索一个指向[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构属于`CTokenGroups`访问令牌的对象。  
+ 检索一个指向[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构属于`CTokenGroups`访问令牌的对象。  
   
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes  
  检索`CSid`对象和 （可选） 的属性属于`CTokenGroups`对象。  
@@ -233,7 +233,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
   
 ### <a name="parameters"></a>参数  
  *rhs*  
- `CTokenGroups`对象或[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构，以将分配给`CTokenGroups`对象。  
+ `CTokenGroups`对象或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构，以将分配给`CTokenGroups`对象。  
   
 ### <a name="return-value"></a>返回值  
  返回已更新`CTokenGroups`对象。  
@@ -246,7 +246,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 将值转换为一个指向[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构。  
+ 将值转换为一个指向[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)结构。  
   
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   

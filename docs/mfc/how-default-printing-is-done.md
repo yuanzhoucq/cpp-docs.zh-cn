@@ -1,5 +1,5 @@
 ---
-title: 如何执行默认打印 |Microsoft 文档
+title: 如何执行默认打印 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f6559459bed9376dba8b7d9059761e9ace5ac8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358910"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202825"
 ---
 # <a name="how-default-printing-is-done"></a>如何执行默认打印
 本文介绍 Windows 中与 MFC 框架有关的默认打印过程。  
   
- 在 MFC 应用程序中，视图类具有名为 `OnDraw` 的成员函数，其包含所有绘图代码。 `OnDraw` 将指针传递到[CDC](../mfc/reference/cdc-class.md)对象作为参数。 `CDC` 对象表示用于接收 `OnDraw` 所生成图像的设备上下文。 当显示文档的窗口收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息时，框架调用`OnDraw`并将其传递屏幕设备上下文 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)对象，为特定)。 因此，`OnDraw` 的输出将显示在屏幕上。  
+ 在 MFC 应用程序中，视图类具有名为 `OnDraw` 的成员函数，其包含所有绘图代码。 `OnDraw` 将指针传递到[CDC](../mfc/reference/cdc-class.md)对象作为参数。 `CDC` 对象表示用于接收 `OnDraw` 所生成图像的设备上下文。 当显示文档的窗口收到[WM_PAINT](/windows/desktop/gdi/wm-paint)消息，框架将调用`OnDraw`并将其传递屏幕设备上下文 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)对象，使其具体)。 因此，`OnDraw` 的输出将显示在屏幕上。  
   
  在面向 Windows 的编程中，将输出发送到打印机非常类似于将输出发送到屏幕。 这是因为 Windows 图形设备接口 (GDI) 与硬件无关。 通过使用适当的设备上下文，您可使用相同的 GDI 函数进行屏幕显示或打印。 如果 `CDC` 对象收到表示打印机的 `OnDraw`，则 `OnDraw` 的输出将发送到打印机。  
   

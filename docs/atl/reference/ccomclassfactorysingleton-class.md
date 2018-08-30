@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201150"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 类
 此类派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造一个单一对象。  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  请注意，当前的窗体`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`用作类工厂，同时在服务器初始化过程中创建对象。 在 Visual c + +.NET 2003 中，创建对象，第一次请求。 此更改可能导致程序依赖于早期的初始化错误。  
   
 ## <a name="see-also"></a>请参阅  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 类](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread 类](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
