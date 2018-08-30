@@ -1,7 +1,7 @@
 ---
 title: 用于 Visual C++ 开发的 IDE 和工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705395"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132015"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和工具
 
@@ -29,7 +29,11 @@ ms.locfileid: "34705395"
 
 ## <a name="creating-a-solution-and-projects"></a>创建解决方案和项目
 
-一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。 Visual Studio 2017 可支持要使用的任何生成系统或自定义生成工具，且完全支持 IntelliSense、浏览和调试：
+一个项目基本上就是一组植入进可执行文件的源代码文件和资源（例如图像或数据文件）。 
+
+Visual Studio 2015 提供对 MSBuild 项目的支持。 可下载适用于其他生成系统（例如 Qt 或 CMake）的 Visual Studio 扩展。
+
+Visual Studio 2017 可支持要使用的任何生成系统或自定义生成工具，且完全支持 IntelliSense、浏览和调试：
 
 - MSBuild 是 Visual Studio 的本机生成系统，通常是使用 MFC 或 ATL 的通用 Windows 平台 (UWP) 应用或旧版 Windows 桌面应用程序的最佳选择。 有关基于 MSBuild 的 C++ 项目的详细信息，请参阅[创建并管理基于 MSBuild 的项目](creating-and-managing-visual-cpp-projects.md)。
 - CMake 是一个跨平台生成系统，在安装使用 C++ 的桌面开发时集成在 Visual Studio IDE 中。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](cmake-tools-for-visual-cpp.md)。
@@ -105,13 +109,17 @@ Visual Studio 桌面项目上下文中的术语“资源”包括许多内容，
 
 Visual Studio 包含一个用于本机 C++ 和 C++/CLI 的单元测试框架。 有关详细信息，请参阅[使用单元测试验证代码](/visualstudio/test/unit-test-your-code)和[用适用于 C++ 的 Microsoft 单元测试框架编写 C/C++ 单元测试](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
+## <a name="analyze"></a>分析
+
+Visual Studio 包含用于 C++ 的静态代码分析工具，包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 规则检查器的实现。 有关详细信息，请参阅 [C/C++ 代码分析概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+
 ## <a name="debug"></a>调试
 
 将项目配置设置为“调试”时，按 F5 即可调试程序。 在调试期间，可通过按 F9 设置断点、按 F10 逐步执行代码、查看指定变量或寄存器的值，甚至还可在某些情况下在代码中进行更改并继续调试，而无需重新编译。 有关详细信息，请参阅[使用 Visual Studio 进行调试](/visualstudio/debugger/debugging-in-visual-studio)。
 
 ## <a name="deploy-completed-applications"></a>部署已完成的应用程序
 
-使用“项目” > “Microsoft Store”菜单选项，可通过 Microsoft Store 向客户部署 UWP 应用。 将在后台自动处理 CRT 的部署。 有关更多信息，请参阅 [将你的应用投入市场](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
+使用“项目” > “Microsoft Store”菜单选项，可通过 Microsoft Store 向客户部署 UWP 应用。 将在后台自动处理 CRT 的部署。 有关详细信息，请参阅[发布 Windows 应用和游戏](/windows/uwp/publish/)。 
 
 将本机 C++ 桌面应用程序部署到另一台计算机时，必须安装该应用程序及其依赖的任何库文件。 可通过三种方式使用应用程序部署通用 C++ 运行时 (UCRT)：集中部署、本地部署或静态链接。 有关详细信息，请参阅[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 

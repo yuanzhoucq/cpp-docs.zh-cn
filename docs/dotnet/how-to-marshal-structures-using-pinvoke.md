@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 PInvoke 封送结构 |Microsoft 文档
+title: 如何： 使用 PInvoke 封送结构 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219879"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
-本文档说明如何本机接受 C 样式结构可以从托管函数调用通过使用 P/Invoke 的函数。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
+本文档介绍如何将纯函数接受 C 样式结构可以从托管函数调用通过使用 P/Invoke。 不过，我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供小的编译时错误报告，因为不是类型安全和可能乏善可陈，若要实现，如果非托管的 API 打包为 DLL 并不是源代码可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
   
 -   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
 -   [如何：使用 PInvoke 封送处理字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
- 默认情况下，本机和托管结构的布局以不同方式在内存中，成功跨托管/非托管边界传递结构要求额外的步骤来保持数据的完整性。  
+ 默认情况下，本机和托管结构的布局方式以不同的方式在内存中，成功跨托管/非托管边界传递结构需要额外的步骤来保持数据的完整性。  
   
- 本文档说明定义本机结构和如何将得到的结构传递到非托管函数的托管等效项所需的步骤。 本文档假定简单结构-那些不包含字符串或指针-使用。 有关非本机互操作性的信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将作为返回值的非通用类型。 通用类型在托管和非托管代码中有相同的表示形式。 有关详细信息，请参阅[本机结构中和非 Blittable 类型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
+ 本文档介绍了定义的本机结构，以及如何将得到的结构传递到非托管函数的托管等效项所需的步骤。 本文档假定的简单结构，不包含字符串或指针的那些 — 使用。 有关非 blittable 互操作性的信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将非 blittable 类型作为返回值。 可直接复制类型在托管和非托管代码中具有相同的表示形式。 有关详细信息，请参阅[Blittable 和非 Blittable 类型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
   
- 封送处理简单，本机结构中的结构跨托管/非托管边界首先需要定义的每个本机结构的托管的版本。 这些结构可以具有任何合法的名称;其数据布局以外的两个结构的本机和托管版本之间没有任何关系。 因此，很重要的托管的版本包含相同的大小和本机版本的顺序相同的字段。 （没有任何机制可确保结构的托管和本机版本等效，因此不兼容问题会在运行时之前出现。 它位于程序员有责任确保两个结构具有相同的数据布局）。  
+ 封送处理简单，可直接复制结构跨托管/非托管边界首先需要定义的每个本机结构的托管的版本。 这些结构可以具有任何合法的名称;其数据的布局以外的两个结构的本机和托管版本之间没有任何关系。 因此，非常重要的托管的版本包含相同的大小和本机版本的相同顺序中的字段。 （没有任何机制，用于确保结构的托管和本机版本等效的因此不兼容性会运行之前出现。 它是程序员的责任，以确保两个结构具有相同的数据布局）。  
   
- 由于托管结构的成员有时排列以提高性能，因此有必要使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>特性以指示结构布局按顺序。 它也是一个好办法显式设置封装设置要使用的本机结构相同的结构。 （尽管默认情况下，Visual c + + 使用这两个托管代码的装箱的 8 字节结构。）  
+ 由于有时出于性能考虑排列的托管结构的成员，因此有必要使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>特性以指示该结构顺序依次布局。 它也是最好显式设置打包设置要使用的本机结构相同的结构。 （尽管默认情况下，Visual c + + 使用这两个托管代码打包的 8 字节结构。）  
   
-1.  接下来，使用<xref:System.Runtime.InteropServices.DllImportAttribute>来声明对应接受该结构中，任何非托管函数的入口点，但使用这些函数的签名，这是没有任何意义点，如果你使用这两个版本的相同名称的结构的托管的版本结构。  
+1.  接下来，使用<xref:System.Runtime.InteropServices.DllImportAttribute>声明对应于接受结构，任何非托管函数的入口点，但使用的函数签名，这是毫无意义，如果使用这两个版本的相同名称的结构的托管的版本结构。  
   
-2.  现在托管的代码可以通过结构的托管的版本到非托管函数就像它们是实际托管的函数。 这些结构可以通过值或通过引用传递以下示例所示。  
+2.  现在托管的代码可传递结构的托管的的版本的非托管函数就好像它们是实际托管的函数。 这些结构可以传递值或引用，如以下示例所示。  
   
 ## <a name="example"></a>示例  
- 下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义结构称为位置和 GetDistance 接受位置结构的两个实例时调用的函数。 第二个模块是托管的命令行应用程序将导入 GetDistance 函数，但在位置结构，MLocation 的托管等效项方面对其进行定义。 在实践中相同的名称将可能用于结构; 这两个版本但是，不同的名称用于此处演示 DllImport 原型定义根据托管版本。  
+ 下面的代码由非托管和托管的模块组成。 非托管的模块是一个 DLL，它定义了称为位置和一个名为接受两个位置结构实例的 GetDistance 函数的结构。 第二个模块是托管的命令行应用程序将导入 GetDistance 函数，但其定义的托管等效项的位置结构 MLocation 方面。 在实践中相同的名称可能用于结构; 这两个版本但是，不同的名称用于此处演示的 DllImport 原型定义根据托管版本。  
   
- 请注意，对使用传统的托管代码公开的 DLL 没有一部分 #include 指令。 实际上，会在运行时仅，访问 DLL，以便与使用 DllImport 导入的函数的问题将不会在编译时检测多。  
+ 请注意该 DLL 的任何部分公开给托管代码使用的传统 #include 指令。 事实上，DLL 访问在运行时仅，因此不会在编译时检测问题的函数与 DllImport 导入。  
   
 ```  
 // TraditionalDll3.cpp  
