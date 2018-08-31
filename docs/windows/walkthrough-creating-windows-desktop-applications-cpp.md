@@ -559,7 +559,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    }
    ```
 
-1. 在 **“生成”** 菜单上，选择 **“生成解决方案”**。 编译的结果应出现在**输出**Visual Studio 窗口中的。
+1. 在“生成”菜单上，选择“生成解决方案”。 编译的结果应出现在 Visual Studio 的“输出”窗口中。
 
    ![生成 DesktopApp 项目](../build/media/desktop-app-project-build-150.gif "生成 DesktopApp 项目")
 
