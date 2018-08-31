@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 224f4d78aec432a27b2a0258d0d6b3d4a8f2174d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026083"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209503"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 效用函数
 
@@ -27,7 +27,7 @@ ms.locfileid: "39026083"
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|获取与特定 Internet 协议或方案关联的默认端口号。|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|确定字符是否在 URL 中安全使用。|  
 |[AtlUnescapeUrl](#atlunescapeurl)|转义字符转换回其原始值。|  
-|[RGBToHtml](#rgbtohtml)|将转换[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)该颜色值对应的 HTML 文本的值。|
+|[RGBToHtml](#rgbtohtml)|将转换[COLORREF](/windows/desktop/gdi/colorref)该颜色值对应的 HTML 文本的值。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。|
 
 ## <a name="requirements"></a>要求  
@@ -69,10 +69,10 @@ inline BOOL AtlCanonicalizeUrl(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 行为类似于最新版[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ，但不需要 WinInet 或 Internet Explorer 安装。  
+ 行为类似于最新版[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) ，但不需要 WinInet 或 Internet Explorer 安装。  
   
 ### <a name="see-also"></a>请参阅  
- [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
+ [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
  调用此函数可将基 URL 和相对 URL 合并为单个规范 URL。  
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 行为类似于最新版[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ，但不需要 WinInet 或 Internet Explorer 安装。  
+ 行为类似于最新版[InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) ，但不需要 WinInet 或 Internet Explorer 安装。  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  调用此函数可将所有不安全字符转换为转义序列。  
@@ -214,7 +214,7 @@ inline BOOL AtlUnescapeUrl(
  反转转换过程由应用[AtlEscapeUrl](#atlescapeurl)。  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-将转换[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)该颜色值对应的 HTML 文本的值。  
+将转换[COLORREF](/windows/desktop/gdi/colorref)该颜色值对应的 HTML 文本的值。  
   
 ```  
 bool inline RGBToHtml(  

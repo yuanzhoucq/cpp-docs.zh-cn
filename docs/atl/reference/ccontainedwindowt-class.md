@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882840"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207191"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象内的窗口。  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|  
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in]父级或所有者窗口的句柄。  
   
  *rect*  
- [in]一个[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。  
+ [in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。  
   
  *szWindowName*  
  [in]指定窗口的名称。 默认值为 NULL。  
   
  *dwStyle*  
- [in]窗口的样式。 默认值是 WS_CHILD &#124; WS_VISIBLE。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]窗口的样式。 默认值是 WS_CHILD &#124; WS_VISIBLE。 有关可能的值的列表，请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  *dwExStyle*  
- [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *MenuOrID*  
  [in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。  
   
  *lpCreateParam*  
- [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，新创建的窗口; 的句柄否则，为 NULL。  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  消息处理的结果。  
   
 ### <a name="remarks"></a>备注  
- 默认情况下`DefWindowProc`调用[CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32 函数来发送消息给中指定的窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
+ 默认情况下`DefWindowProc`调用[CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32 函数来发送消息给中指定的窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  返回当前消息 (`m_pCurrentMsg`)。  

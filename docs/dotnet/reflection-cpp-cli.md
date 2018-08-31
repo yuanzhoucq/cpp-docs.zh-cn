@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110003"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212164"
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
 
@@ -42,12 +42,12 @@ ms.locfileid: "39110003"
 
 请注意，提供的程序集名称是强名称 (请参阅[创建和使用具有强名称程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))，其中包括程序集版本、 区域性和签名信息。 另请注意，在其中定义数据类型的命名空间的名称可以检索，以及类的基类的名称。
 
-若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的[system:: object](https://msdn.microsoft.com/en-us/library/system.object.aspx)，从垃圾收集的所有类都派生的。
+若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的[system:: object](https://msdn.microsoft.com/library/system.object.aspx)，从垃圾收集的所有类都派生的。
 
 > [!NOTE]
 > 如果使用生成.exe 只允许对用 Visual c + + 编译器生成的.exe 的反射 **/clr: pure**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
 
-有关详细信息，请参阅[System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+有关详细信息，请参阅[System.Reflection Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>示例： GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>程序集的示例： 检查
 
-如果上面的代码编译为 DLL 调用 vcpp_reflection_6.dll，可以使用反射来检查此程序集的内容。 这涉及到使用静态反射 API 函数[Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx)加载程序集。 此函数返回的地址**程序集**然后可以查询有关模块中的类型的对象。
+如果上面的代码编译为 DLL 调用 vcpp_reflection_6.dll，可以使用反射来检查此程序集的内容。 这涉及到使用静态反射 API 函数[Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx)加载程序集。 此函数返回的地址**程序集**然后可以查询有关模块中的类型的对象。
 
-反射系统已成功加载程序集的数组后**类型**与检索对象[Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx)函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
+反射系统已成功加载程序集的数组后**类型**与检索对象[Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx)函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
 
 请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是在 Visual c + + 语法中所描述的一部分，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是由 Visual c + + 编译器支持反射。
 

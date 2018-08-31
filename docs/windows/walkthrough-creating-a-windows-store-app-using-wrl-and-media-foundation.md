@@ -13,16 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4967be81e45e52ce7c321ceb552b13a1dc59bd0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214826"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和媒体基础的 UWP 应用
 
-了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建使用的通用 Windows 平台 (UWP) 应用程序[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。
+了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建使用的通用 Windows 平台 (UWP) 应用程序[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 此示例将创建一个向捕捉自网络摄像头的图像应用灰度效果的自定义媒体基础转换。 该应用利用 C++ 定义自定义转换，并利用 C# 将该组件用于转换捕捉的图像。
 
@@ -36,7 +36,7 @@ ms.locfileid: "42604885"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 经验[Windows 运行时](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)。
+- 经验[Windows 运行时](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)。
 
 - 熟悉 COM。
 
@@ -52,7 +52,7 @@ ms.locfileid: "42604885"
 
 - [InspectableClass](../windows/inspectableclass-macro.md)宏实现基本的 COM 功能，比如引用计数和`QueryInterface`方法，并设置运行时类名称和信任级别。
 
-- 使用 microsoft:: wrl::[模块类](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)若要实现的 DLL 入口点函数，例如[DllGetActivationFactory](http://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
+- 使用 microsoft:: wrl::[模块类](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)若要实现的 DLL 入口点函数，例如[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
 
 - 将组件 DLL 链接到 runtimeobject.lib。 此外指定[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md)链接器行生成 Windows 元数据。
 
@@ -113,7 +113,7 @@ ms.locfileid: "42604885"
 
 3. 在中`Package.appxmanifest`，然后在**功能**选项卡上，选择**麦克风**并**网络摄像头**。 从网络摄像头中捕捉照片时需要这两项功能。
 
-4. 在中`MainPage.xaml`，将此代码添加到根目录[网格](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)元素：
+4. 在中`MainPage.xaml`，将此代码添加到根目录[网格](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)元素：
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -132,5 +132,5 @@ ms.locfileid: "42604885"
 ## <a name="see-also"></a>请参阅
 
 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)  
+[Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
 [媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

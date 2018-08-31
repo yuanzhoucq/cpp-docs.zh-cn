@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f312267d83f73e30eecb569b50678e7cf5da5e7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199063"
 ---
 # <a name="public-c-attributes"></a>public（C++ 特性）
 
@@ -36,7 +36,7 @@ ms.locfileid: "42607273"
 
 ## <a name="remarks"></a>备注
 
-**公共**c + + 属性具有相同的功能[公共](http://msdn.microsoft.com/library/windows/desktop/aa367150)MIDL 特性。
+**公共**c + + 属性具有相同的功能[公共](/windows/desktop/Midl/public)MIDL 特性。
 
 ## <a name="example"></a>示例
 

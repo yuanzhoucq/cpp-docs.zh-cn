@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203938"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。  
@@ -107,7 +107,7 @@ ms.locfileid: "42608262"
   
 |||  
 |-|-|  
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|  
+|[异步编程模式和提示在 Hilo （使用 c + + 和 XAML 的 Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|  
 |[并发运行时和 Visual Studio 2010 中的并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|  
 |[本机代码博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|  
 |[C + + 和本机代码论坛中的并行计算](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|  

@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222147"
 ---
 # <a name="writing-an-exception-filter"></a>编写异常筛选器
 您可以通过跳转到异常处理程序的级别或通过继续执行来处理异常。 不使用异常处理程序代码来处理异常和故障，则可以使用*筛选器*来清理问题，然后，通过返回-1，但不清除堆栈继续正常流。  
   
 > [!NOTE]
->  有些异常无法继续。 如果*筛选器*的计算结果为-1 的此类异常，系统会引发新异常。 当您调用[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)，确定异常是否将继续。  
+>  有些异常无法继续。 如果*筛选器*的计算结果为-1 的此类异常，系统会引发新异常。 当您调用[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)，确定异常是否将继续。  
   
  例如，以下代码使用中的函数调用*筛选器*表达式： 此函数处理的问题，然后返回-1 以继续正常控制流：  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  它是一个使用中的函数调用的好办法*筛选器*表达式每当*筛选器*需要执行任何复杂操作。 计算表达式将导致函数的执行，在此示例中，`Eval_Exception`。  
   
- 请注意，使用[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)以确定异常。 您必须在筛选器内部调用此函数。 `Eval_Exception` 不能调用`GetExceptionCode`，但是它必须具有传递给它的异常代码。  
+ 请注意，使用[GetExceptionCode](/windows/desktop/Debug/getexceptioncode)以确定异常。 您必须在筛选器内部调用此函数。 `Eval_Exception` 不能调用`GetExceptionCode`，但是它必须具有传递给它的异常代码。  
   
  除非异常是整数或浮点溢出，否则此处理程序会将控制权传递给其他处理程序。 如果异常是整数或浮点溢出，则处理程序将调用一个函数（`ResetVars` 只是一个示例，不是 API 函数）以重置某些全局变量。 *语句块 2*，在此示例为空，可以永远不会执行，因为`Eval_Exception`绝不返回 EXCEPTION_EXECUTE_HANDLER (1)。  
   

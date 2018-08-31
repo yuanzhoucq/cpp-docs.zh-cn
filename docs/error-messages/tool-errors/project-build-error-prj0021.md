@@ -1,7 +1,7 @@
 ---
-title: 项目生成错误 PRJ0021 |Microsoft 文档
+title: 项目生成错误 PRJ0021 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324452"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203334"
 ---
 # <a name="project-build-error-prj0021"></a>项目生成错误 PRJ0021
-工具，属性 property 包含无效的文件名。  
-  
- 在属性中，指定的文件名***属性***，该工具的***工具***，无效。  
-  
- 您可能使用了一个未知或无效的宏。  
-  
- 请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)有关如何访问您的项目的属性的信息。
+
+> 工具*工具*，属性*属性*包含无效的文件名称。
+
+在属性中指定的文件名称*属性*工具*工具*无效。
+
+您可能使用了未知或无效宏。
+
+请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)有关如何访问你的项目的属性的信息。

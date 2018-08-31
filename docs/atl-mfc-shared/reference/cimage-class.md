@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213609"
 ---
 # <a name="cimage-class"></a>CImage 类
 `CImage` 提供了增强的位图支持，包括加载和保存 JPEG、 GIF、 BMP、 和可移植网络图形 (PNG) 格式图像的能力。  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  对源和目标位图、 要应用于整个源位图和源位图的格式信息的全局 alpha 值的 alpha 值混合处理函数。 目前仅限于 AC_SRC_OVER 源和目标 blend 函数。  
   
  *pointDest*  
- 对引用[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。  
+ 对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。  
   
  *nDestWidth*  
  使用逻辑单位，目标矩形的宽度。  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  使用逻辑单位，源矩形的高度。  
   
  *rectDest*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
   
  *rectSrc*  
  对引用`RECT`结构，用于标识源。  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  目标矩形左上角逻辑 y 坐标。  
   
  *dwROP*  
- 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK for 其他光栅操作代码及其说明的列表中。  
+ 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。  
   
  *pointDest*  
- 一个[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示目标矩形左上的角。  
+ 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示目标矩形左上的角。  
   
  *nDestWidth*  
  使用逻辑单位，目标矩形的宽度。  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  源矩形左上角逻辑 y 坐标。  
   
  *rectDest*  
- 一个[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，指示目标矩形。  
+ 一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，指示目标矩形。  
   
  *pointSrc*  
  一个`POINT`结构，指示源矩形左上的角。  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中。  
+ 有关详细信息，请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中。  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  构造 `CImage` 对象。  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - 未压缩 BI_BITFIELDS 格式和颜色表包含三个 DWORD 颜色掩码，每个像素分别指定红色、 绿色和蓝色组件。 此值与 16 和 32 bpp 位图一起使用时有效。  
   
  *pdwBitfields*  
- 仅当使用*eCompression*设置到 BI_BITFIELDS，否则它必须为 NULL。 指向的三个 DWORD 位掩码，指定颜色的红色、 绿色和蓝色组件分别使用每个像素的位数组的指针。 有关限制的位域的信息，请参阅[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
+ 仅当使用*eCompression*设置到 BI_BITFIELDS，否则它必须为 NULL。 指向的三个 DWORD 位掩码，指定颜色的红色、 绿色和蓝色组件分别使用每个像素的位数组的指针。 有关限制的位域的信息，请参阅[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
   
  *dwFlags*  
  指定位图对象是否具有 alpha 通道。 可以是零个或多个以下值的组合：  
@@ -578,13 +578,13 @@ BOOL Draw(
  使用逻辑单位，源矩形的高度。  
   
  *rectDest*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
   
  *rectSrc*  
  对引用`RECT`结构，用于标识源。  
   
  *pointDest*  
- 对引用[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。  
+ 对引用[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)标识中的逻辑单元的目标矩形左上的角的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>备注  
  此值确定的定义每个像素的位数和颜色位图中的最大数目。  
   
- 1、 4、 8、 16、 24、 或 32，通常是每个像素的位数。 请参阅`biBitCount`的成员[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)适用于此值有关的详细信息的 Windows SDK 中。  
+ 1、 4、 8、 16、 24、 或 32，通常是每个像素的位数。 请参阅`biBitCount`的成员[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)适用于此值有关的详细信息的 Windows SDK 中。  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  从控制板的 DIB 部分中的项的范围中检索红、 绿、 蓝 (RGB) 颜色值。  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  若要检索的颜色表条目数。  
   
  *prgbColors*  
- 指向数组的指针[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)结构以检索颜色表条目。  
+ 指向数组的指针[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)结构以检索颜色表条目。  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  检索当前具有到它所选择的映像的设备上下文。  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  单色位图左上角 y 坐标。  
   
  *rectSrc*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定源矩形的坐标。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定源矩形的坐标。  
   
  *pointMask*  
- 一个[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示掩码位图左上的角。  
+ 一个[点](https://msdn.microsoft.com/library/windows/desktop/dd162805)结构，指示掩码位图左上的角。  
   
 ### <a name="return-value"></a>返回值  
  非零，如果成功，否则为 0。  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>备注  
  如果*hbmMask*标识有效的单色位图，`PlgBit`使用此位图掩码中的源矩形的颜色数据的位。  
   
- 此方法适用于 Windows NT，版本 4.0 及更高版本。 请参阅[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)适用于更多详细信息的 Windows SDK 中。  
+ 此方法适用于 Windows NT，版本 4.0 及更高版本。 请参阅[PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt)适用于更多详细信息的 Windows SDK 中。  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  释放设备上下文。  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  若要设置的颜色表条目数。  
   
  *prgbColors*  
- 指向数组的指针[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)结构，以设置颜色表条目。  
+ 指向数组的指针[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)结构，以设置颜色表条目。  
   
 ### <a name="remarks"></a>备注  
  此方法支持仅 DIB 部分位图。  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  使用逻辑单位，目标矩形的高度。  
   
  *dwROP*  
- 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK for 其他光栅操作代码及其说明的列表中。  
+ 要执行的光栅操作。 光栅操作代码定义了如何结合在一起的源、 目标和模式的位 （根据当前选定的画笔的定义） 形成目标。 请参阅[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK for 其他光栅操作代码及其说明的列表中。  
   
  *rectDest*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
   
  *xSrc*  
  X 坐标，以逻辑单元的源矩形左上角。  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  非零，如果成功，否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
+ 有关详细信息，请参阅[StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) Windows SDK 中。  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  将位图从源设备上下文复制到此当前设备上下文。  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  中要被视为透明的源位图的颜色。 通过默认情况下，CLR_INVALID，指示应使用当前设置为图像的透明色的颜色。  
   
  *rectDest*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，确定目标。  
   
  *xSrc*  
  X 坐标，以逻辑单元的源矩形左上角。  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>请参阅  
  [MMXSwarm 示例](../../visual-cpp-samples.md)   
  [SimpleImage 示例](../../visual-cpp-samples.md)   
- [与设备无关位图](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)[独立于设备的位图](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [与设备无关位图](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)[独立于设备的位图](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

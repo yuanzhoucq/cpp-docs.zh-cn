@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214777"
 ---
 # <a name="example-implementing-a-property-page"></a>示例： 实现属性页
 此示例演示如何生成属性页的显示 （并允许您更改） 的属性[文档类](../mfc/document-classes.md)接口。  
@@ -70,7 +70,7 @@ ms.locfileid: "37852262"
  这些控件将用于显示文档和其只读状态的文件名称。  
   
 > [!NOTE]
->  对话框资源不包括框架或命令按钮，也不具有您可能希望的选项卡式的外观。 例如通过调用创建一个属性页框架通过提供这些功能[OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437)。  
+>  对话框资源不包括框架或命令按钮，也不具有您可能希望的选项卡式的外观。 例如通过调用创建一个属性页框架通过提供这些功能[OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe)。  
   
 ##  <a name="vcconadding_message_handlers"></a> 添加消息处理程序  
  控制，则你可以添加消息处理程序的任何一个控件的值发生更改时更新脏页的状态：  

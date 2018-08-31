@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882892"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197141"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 类
 此类实现`IUnknown`和继承的默认实现[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)。  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|指定哪些属性控件接收焦点时激活的属性页。 ATL 实现返回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>备注  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)接口扩展[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)通过添加`EditProperty`方法。 此方法允许客户端在属性页对象中选择的特定属性。  
+ [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2)接口扩展[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)通过添加`EditProperty`方法。 此方法允许客户端在属性页对象中选择的特定属性。  
   
  类`IPropertyPage2Impl`只返回 E_NOTIMPL 为`IPropertyPage2::EditProperty`。 但是，它将继承的默认实现[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) Windows SDK 中。  
+ 请参阅[IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [IPerPropertyBrowsingImpl 类](../../atl/reference/iperpropertybrowsingimpl-class.md)   

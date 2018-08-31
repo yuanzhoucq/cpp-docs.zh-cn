@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206261"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 提供 Windows 公共热键控件的功能。  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  当用户已选择的组合键时，应用程序可以从控件检索指定的键组合，并使用 WM_SETHOTKEY 消息系统中设置热键。 每当用户按热键此后，在系统中，任何部分 WM_SETHOTKEY 消息中指定的窗口接收指定 SC_HOTKEY WM_SYSCOMMAND 消息。 此消息激活接收它的窗口。 热键之前调用 WM_SETHOTKEY 退出该应用程序将保持有效。  
   
- 此机制是依赖于 WM_HOTKEY 消息和 Windows 的热密钥支持不同[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)并[UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327)函数。  
+ 此机制是依赖于 WM_HOTKEY 消息和 Windows 的热密钥支持不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)并[UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327)函数。  
   
  有关使用的详细信息`CHotKeyCtrl`，请参阅[控件](../../mfc/controls-mfc.md)并[使用 CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)。  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定热键控件的样式。 将应用控件样式的任意组合。 请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK for 的详细信息中。  
+ 指定热键控件的样式。 将应用控件样式的任意组合。 请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK for 的详细信息中。  
   
  *rect*  
  指定热键控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)。  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定热键控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
+ 指定热键控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  

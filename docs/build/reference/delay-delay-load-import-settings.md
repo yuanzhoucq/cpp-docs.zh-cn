@@ -1,5 +1,5 @@
 ---
-title: 延迟 （延迟加载导入设置） |Microsoft 文档
+title: -DELAY （延迟加载导入设置） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c898727504a8ae530bcdffb3e01bde68c31c8e87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7920c8a3fe002c0d3ef9c9a64872a07ec75ebd8b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213473"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY（延迟加载导入设置）
 ```  
@@ -44,11 +44,11 @@ ms.locfileid: "32373330"
   
 -   NOBIND 限定符通知链接器不要在最终图像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 无法静态绑定生成的图像。 （可以在执行之前静态绑定包含可绑定 IAT 的图像。）请参阅[/绑定](../../build/reference/bind.md)。  
   
-     如果绑定了 DLL，则 helper 函数将尝试使用绑定的信息，而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每个引用的导入。 如果时间戳或首选地址与加载的 DLL 的时间戳或首选地址不匹配，则 Helper 函数将假定绑定的 IAT 已经过期并继续执行，就像绑定的 IAT 不存在一样。  
+     如果绑定了 DLL，该帮助器函数将尝试使用绑定的信息，而不是调用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每个引用的导入。 如果时间戳或首选地址与加载的 DLL 的时间戳或首选地址不匹配，则 Helper 函数将假定绑定的 IAT 已经过期并继续执行，就像绑定的 IAT 不存在一样。  
   
      NOBIND 导致程序图像比较大，但是可以加快 DLL 的加载时间。 如果从不打算绑定 DLL，则 NOBIND 将禁止生成绑定的 IAT。  
   
- 若要指定要延迟加载的 Dll，使用[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)选项。  
+ 若要指定 Dll 延迟加载，请使用[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)选项。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   

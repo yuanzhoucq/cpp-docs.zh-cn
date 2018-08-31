@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217084"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 类
 `CMFCVisualManagerOffice2003` 向应用程序提供 Microsoft Office 2003 外观。  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|框架将调用此方法绘制突出显示时快速-自定义菜单按钮。 （重写 `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`。）|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|绘制突出显示的菜单命令时，框架将调用此方法。 （重写 `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`。）|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|当系统颜色更改时，框架将调用此函数。 （重写 `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`。）|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定是否视觉管理器应使用本机 Windows XP 主题颜色或颜色来自[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定是否视觉管理器应使用本机 Windows XP 主题颜色或颜色来自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|指定应使用 Windows XP 全局主题。|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|指定视觉管理器是否使用全局主题。|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>参数  
  [in]*clrBaseGroupBackground*  
- 引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)将设置为背景色。  
+ 引用[COLORREF](/windows/desktop/gdi/colorref)将设置为背景色。  
   
  [in]*clrBaseGroupBorder*  
- 引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)将设置为的边框颜色。  
+ 引用[COLORREF](/windows/desktop/gdi/colorref)将设置为的边框颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，其中包含突出显示的色调颜色。  
+ 返回[COLORREF](/windows/desktop/gdi/colorref) ，其中包含突出显示的色调颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  指向其中框架绘制一个选项卡的选项卡式窗口的指针。  
   
  [out]*clrDark*  
- 对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，此方法将存储的选项卡上的深色边框的颜色。  
+ 对引用[COLORREF](/windows/desktop/gdi/colorref)参数，此方法将存储的选项卡上的深色边框的颜色。  
   
  [out]*clrBlack*  
  对此方法存储的选项卡窗口边框的颜色的位置的 COLORREF 参数的引用。 边框的默认颜色为黑色。  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，其中包含已禁用的颜色。  
+ 返回[COLORREF](/windows/desktop/gdi/colorref) ，其中包含已禁用的颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  指定标题按钮的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示标题的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示标题的文本颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  指向标题栏的指针。 视觉管理器绘制这[CMFCRibbonContextCaption 类](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示在标题栏文本的颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示在标题栏文本的颜色。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类以自定义功能区类别的标题栏的外观。  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  框架调用此方法处理 WM_SYSCOLORCHANGE 消息的一部分。 重写此方法在派生的视觉管理器中，如果你想要在应用程序中的颜色更改时执行自定义代码。  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- 指定是否视觉管理器应使用本机 Windows XP 主题颜色或颜色来自[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。  
+ 指定是否视觉管理器应使用本机 Windows XP 主题颜色或颜色来自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

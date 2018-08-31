@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406840"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199387"
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：  
@@ -54,7 +54,7 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
   
 - 一个预定义的宏， `__cplusplus`，仅为 c + + 定义。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考 》* 有关详细信息。  
   
-- C 预处理器无法识别 C++ 运算符： **。\***， **-> \***，和`::`。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
+- C 预处理器不能识别 c + + 运算符： **。**<strong>\*</strong>， **->** <strong>\*</strong>，并 **::**。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)

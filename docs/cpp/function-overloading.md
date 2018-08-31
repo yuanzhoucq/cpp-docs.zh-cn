@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221434"
 ---
 # <a name="function-overloading"></a>函数重载
 C++ 允许同一范围内具有相同名称的多个函数的规范。 这些被称为*重载*函数。 重载的函数，可提供不同的语义，对于函数，具体取决于类型和数量的参数。 
@@ -43,8 +43,9 @@ C++ 允许同一范围内具有相同名称的多个函数的规范。 这些被
 |**const**或**易失性**|是的当应用于整个函数|
 |[ref-qualifier](#ref-qualifier)|是|  
   
-## <a name="example"></a>示例  
- 以下示例阐述如何使用重载。  
+## <a name="example"></a>示例
+
+以下示例阐述如何使用重载。  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  完全匹配。 用于调用函数的类型与函数原型中声明的类型之间的完全匹配始终是最佳匹配。 常用转换的序列将归类为完全匹配。 但是，不进行任何转换的序列被视为比进行转换的序列更佳：  
   
-    -   从指针，指向**const** (`type` **\*** 到**const** `type` **\***).  
+    -   从指针，指向**const** (`type` <strong>\*</strong>到**const** `type` <strong>\*</strong>).  
   
-    -   从指针，指向**可变**(`type` **\*** 到**易失性** `type` **\***).  
+    -   从指针，指向**可变**(`type` <strong>\*</strong>到**易失性** `type` <strong>\*</strong>).  
   
     -   从引用，到对引用**const** (`type` **&** 到**const** `type` **&**).  
   

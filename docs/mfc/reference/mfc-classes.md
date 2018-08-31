@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213187"
 ---
 # <a name="mfc-classes"></a>MFC 类
 下面列出的类包含在 Microsoft 基础类 (MFC) 库中。  
@@ -135,7 +135,7 @@ ms.locfileid: "42539986"
  提供 Windows 检查表框功能。  
   
  [CClientDC 类](../../mfc/reference/cclientdc-class.md)  
- 处理 Windows 函数 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) （在构造时）和 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) （在析构时）的调用。  
+ 处理 Windows 函数调用[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在构造时并[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在析构时。  
   
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)  
  用于 Microsoft 基础类库消息映射体系结构的基类。  
@@ -861,7 +861,7 @@ ms.locfileid: "42539986"
  表示通常在浮动工具条周围出现的半高框架窗口。  
   
  [CMonikerFile 类](../../mfc/reference/cmonikerfile-class.md)  
- 表示由[IMoniker](http://msdn.microsoft.com/library/windows/desktop/aa380034)命名的数据流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+ 表示数据的流 ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 由命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。  
   
  [CMonthCalCtrl 类](../../mfc/reference/cmonthcalctrl-class.md)  
  封装月历控件的功能。  
@@ -930,7 +930,7 @@ ms.locfileid: "42539986"
  提供自定义客户端控件接口支持。  
   
  [COleConvertDialog 类](../../mfc/reference/coleconvertdialog-class.md)  
- 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的结构。  
   
  [COleCurrency 类](../../mfc/reference/colecurrency-class.md)  
  封装 OLE 自动化的 `CURRENCY` 数据类型。  
@@ -1173,7 +1173,7 @@ ms.locfileid: "42539986"
  封装其幅度由动画变量的初始速度决定的正弦速度转换。  
   
  [CSize 类](../../atl-mfc-shared/reference/csize-class.md)  
- 类似于实现相对坐标或位置的 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 结构。  
+ 类似于 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它实现相对坐标或位置。  
   
  [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)  
  提供 Windows 公共滑块控件的功能。  

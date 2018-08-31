@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196140"
 ---
 # <a name="aggregation"></a>聚合
 有些的时候对象的实现者希望充分利用预构建的另一个对象提供的服务。 此外，它想要此第二个对象显示为第一个自然组成部分。 COM 来实现这两个通过包含关系和聚合目标。  
@@ -31,5 +31,5 @@ ms.locfileid: "37847864"
   
 ## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
- [重用对象](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [重用对象](/windows/desktop/com/reusing-objects)
 

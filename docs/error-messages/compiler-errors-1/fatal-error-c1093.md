@@ -1,5 +1,5 @@
 ---
-title: 错误 C1093 |Microsoft 文档
+title: 错误 C1093 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226338"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202021"
 ---
 # <a name="fatal-error-c1093"></a>错误 C1093
-API 调用函数名称失败的调用的位置: 运行时从文本  
+
+> API 调用*函数名称*'失败'*调用的位置*': '*运行时中的文本*  
   
- 对.NET 函数的调用失败。 ***从运行时文本***可能或可能未提供的 COM 运行时。  
+对.NET 函数的调用失败。 *运行时中的文本*字符串可能会或可能未提供的 COM 运行时。  
   
- 有关系统错误消息的详细信息，请参阅 winerror.h 系统文件，和[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)。
+有关系统错误消息的详细信息，请参阅 winerror.h 系统文件，并[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)。

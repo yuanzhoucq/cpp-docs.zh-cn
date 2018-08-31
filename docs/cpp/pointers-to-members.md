@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208511"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 指向成员的指针的声明是指针声明的特例。  使用以下序列来声明它们：  
@@ -45,7 +45,7 @@ ms.locfileid: "39407775"
   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
 1. 包含要指向的成员的类的限定名。  
   - :: 运算符。  
-  - **\*** 运算符。  
+  - <strong>\*</strong>运算符。  
   - 可选**const**和/或**易失性**说明符。  
   - 命名指向成员的指针的标识符。  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之间的差异 **。\*** 并**-> \*** 运算符 （指向成员的指针运算符） 是 **。\*** 运算符选择成员给定的对象或对象引用，而**-> \*** 运算符选择通过指针的成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之间的差异 **。**<strong>\*</strong>并**->** <strong>\*</strong>运算符 （指向成员的指针运算符） 是 **。**<strong>\*</strong>运算符选择成员给定的对象或对象引用，而**->** <strong>\*</strong>运算符选择通过指针的成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
  指针到成员运算符的结果是成员的类型，在这种情况下， `char *`。  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>针对指向成员的指针的限制  
- 静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 因为只存在一个实例的静态成员的所有对象的给定类，普通 address-of **(）** 和取消引用 **(\*)** 可以使用运算符。  
+ 静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 因为只存在一个实例的静态成员的所有对象的给定类，普通 address-of (**&**) 和取消引用 (<strong>\*</strong>) 可以使用运算符。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>指向成员和虚函数的指针  
  通过指向成员函数的指针调用虚函数就如同直接调用函数一样；将在 v 表中查找并调用正确的函数。  

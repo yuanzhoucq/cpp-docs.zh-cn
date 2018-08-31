@@ -9,31 +9,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569691"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131715"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新增功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具方面超过 250 个 bug 及所报告的问题，其中某些问题是客户通过“发送反馈”下的[报告问题](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建议](https://visualstudio.uservoice.com/)提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请访问 中的[新增功能[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481)。
+Visual Studio 2017 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具方面超过 250 个 bug 及所报告的问题，其中某些问题是客户通过“发送反馈”下的[报告问题](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建议](https://visualstudio.uservoice.com/)提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2017 中的新增功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>C++ 编译器
 
 ### <a name="c-conformance-improvements"></a>C++ 的符合性改进
 
 在此版本中，我们更新了 C++ 编译器和标准库，不仅增强了对 C++11 和 C++14 功能的支持，还初步提出了对预期推出的特定 C++17 标准功能的支持。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)。
-**Visual Studio 2017 版本 15.5**：  
 
-   编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
+Visual Studio 2017 版本 15.5：编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
 
-**Visual Studio 2017 15.7 版**：  
-
-Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)和 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
+Visual Studio 2017 版本 15.7：Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)和 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
 
 ### <a name="new-compiler-options"></a>新的编译器选项
 
@@ -43,7 +40,7 @@ Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有�
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md)：通过避免将所有调试信息复制到 PDB 文件，实现最高达 30％ 更快的增量链接时间（与Visual Studio 2015 相比）。 PDB 文件改为指向用于创建可执行文件的对象和库文件的调试信息。 请参阅 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)（使用 /Debug:fastlink 在 VS “15” 中缩短生成周期）和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)（在 Visual Studio 中加速 C++ 生成的建议）。
 
-- 可在 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中结合使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md)。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
+- Visual Studio 2017 允许结合使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md)。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
    **Visual Studio 2017 版本15.3**：  
 - [/std:c++14 和 /std:c++latest](build/reference/std-specify-language-standard-version.md)：通过这些编译器开关可选择在项目中加入特定版本的 ISO C++ 编程语言。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
@@ -406,7 +403,7 @@ C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动�
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具集
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这对生成大项目来说至关重要。 它还在编译器的前端和后端进行了多项重要的 bug 修复。
+Visual Studio 2017 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这对生成大项目来说至关重要。 它还在编译器的前端和后端进行了多项重要的 bug 修复。
 
 ## <a name="c-code-analysis"></a>C++ 代码分析
 

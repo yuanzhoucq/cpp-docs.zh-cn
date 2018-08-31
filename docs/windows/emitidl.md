@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 566e78820dd382a4b4e05742a410057b681d1fdc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee155bd47097dc5ac52fd00590e377e941923e5c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603145"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194433"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -79,4 +79,4 @@ ms.locfileid: "42603145"
 
 [编译器特性](../windows/compiler-attributes.md)  
 [独立特性](../windows/stand-alone-attributes.md)  
-[属性示例](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[属性示例](https://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

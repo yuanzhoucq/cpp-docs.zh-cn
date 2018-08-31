@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195207"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 全局堆函数。  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` 实现使用 Win32 全局堆函数的内存分配函数。  
   
 > [!NOTE]
->  全局堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。 DDE 和剪贴板函数仍使用全局函数。  
+>  全局堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](/windows/desktop/Memory/heap-functions)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。 DDE 和剪贴板函数仍使用全局函数。  
   
 ## <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调用[cglobalheap:: Free](#free)或[cglobalheap:: Reallocate](#reallocate)来释放由此方法分配的内存。  
   
- 使用实现[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) GMEM_FIXED 的标记参数。  
+ 使用实现[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) GMEM_FIXED 的标记参数。  
   
 ##  <a name="free"></a>  Cglobalheap:: Free  
  调用此方法来释放此内存管理器分配的内存块。  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。  
   
 ### <a name="remarks"></a>备注  
- 使用实现[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)。  
+ 使用实现[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)。  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块的分配的大小。  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  以字节为单位返回已分配的内存块的大小。  
   
 ### <a name="remarks"></a>备注  
- 使用实现[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)。  
+ 使用实现[GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)。  
   
 ##  <a name="reallocate"></a>  Cglobalheap:: Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调用[cglobalheap:: Free](#free)来释放由此方法分配的内存。  
   
- 使用实现[GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590)。  
+ 使用实现[GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   

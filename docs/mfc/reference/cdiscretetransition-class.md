@@ -1,5 +1,5 @@
 ---
-title: CDiscreteTransition 类 |Microsoft 文档
+title: CDiscreteTransition 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4c8cc3c6ad476f0a1d69c81dad4eabfed3cc34bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219901"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 封装离散转换。  
@@ -60,12 +60,12 @@ class CDiscreteTransition : public CBaseTransition;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|在转换结束动画变量的值。|  
-|[CDiscreteTransition::m_delay](#m_delay)|延迟即时切换到的最终值所依据的时间量。|  
-|[CDiscreteTransition::m_hold](#m_hold)|用来保存该变量在其最终值的时间量。|  
+|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|  
+|[CDiscreteTransition::m_delay](#m_delay)|若要延迟到最后一个值的即时切换所依据的时间量。|  
+|[CDiscreteTransition::m_hold](#m_hold)|要保存该变量在其最终值的时间量。|  
   
 ## <a name="remarks"></a>备注  
- 离散在转换期间，动画变量保持为初始值为指定的延迟时间，然后切换到指定的最终值并保留该值即时的方式为给定的保留时间。 由于所有转换并自动都清除，则建议你到分配它们使用新的运算符。 封装的 IUIAnimationTransition COM 对象被创建通过 CAnimationController::AnimateGroup，直到，然后它为 NULL。 在创建此 COM 对象不起作用后，请更改成员变量。  
+ 在离散的转换过程的动画变量保持为初始值为指定的延迟时间，然后切换到指定的最终值并且该值在保持在瞬间完成为给定的保留时间。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,13 +89,13 @@ CDiscreteTransition(
   
 ### <a name="parameters"></a>参数  
  *延迟*  
- 延迟即时切换到的最终值所依据的时间量。  
+ 若要延迟到最后一个值的即时切换所依据的时间量。  
   
  *dblFinalValue*  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
  *保存*  
- 用来保存该变量在其最终值的时间量。  
+ 要保存该变量在其最终值的时间量。  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
@@ -107,28 +107,28 @@ virtual BOOL Create(
 ```  
   
 *pLibrary*  
- 指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
+ 一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。  
 
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
- 在转换结束动画变量的值。  
+ 转换结束时的动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
- 延迟即时切换到的最终值所依据的时间量。  
+ 若要延迟到最后一个值的即时切换所依据的时间量。  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
 ##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
- 用来保存该变量在其最终值的时间量。  
+ 要保存该变量在其最终值的时间量。  
   
 ```  
 UI_ANIMATION_SECONDS m_hold;  

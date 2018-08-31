@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339457"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206078"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 用于创建使用 HTML 对话框，而不是对话框资源来实现其用户界面。  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|检索指定 ActiveX 控件的请求的属性。|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|检索与当前文档关联的统一资源定位器 (URL)。|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|检索对当前加载的 HTML 文档的 IHTMLDocument2 接口。|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|包含的 web 浏览器控件时它被用作拖放目标以允许对话框提供一种替代方法，调用[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|包含的 web 浏览器控件时它被用作拖放目标以允许对话框提供一种替代方法，调用[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|  
 |[CDHtmlDialog::GetElement](#getelement)|获取 HTML 元素上的接口。|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|检索`innerHTML`HTML 元素的属性。|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|从 HTML 元素中检索请求的接口指针。|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  标准的 HRESULT。 如果成功，则会返回 S_OK。  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- 包含的 web 浏览器控件时它被用作拖放目标以允许对话框提供一种替代方法，调用[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。  
+ 包含的 web 浏览器控件时它被用作拖放目标以允许对话框提供一种替代方法，调用[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。  
   
 ```  
 STDMETHOD(GetDropTarget)(

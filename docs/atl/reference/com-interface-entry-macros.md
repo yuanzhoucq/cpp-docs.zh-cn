@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883370"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196042"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
  这些宏的对象的接口输入到其 COM 映射，以便可以通过访问这些`QueryInterface`。 COM 映射中的条目的顺序是顺序接口将检查期间匹配 IID `QueryInterface`。  
@@ -48,7 +48,7 @@ ms.locfileid: "37883370"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，只不过查询任何 IID 导致转发到查询*punk*。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*为 NULL，它会自动创建所描述的聚合*clsid*。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询*punk*，并且如果*punk*为 NULL，会自动创建所描述的聚合*clsid*。|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|导致你的程序来调用[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|导致你的程序来调用[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|将保存每个实例的特定于接口的数据。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|公开您分离式接口。|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|当处理到达的 COM 映射中的此条目时处理的基类的 COM 映射。|  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- 导致你的程序来调用[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。  
+ 导致你的程序来调用[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

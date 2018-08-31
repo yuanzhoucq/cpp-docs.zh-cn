@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206696"
 ---
 # <a name="importlib"></a>importlib
 
@@ -43,7 +43,7 @@ ms.locfileid: "42607668"
 
 ## <a name="remarks"></a>备注
 
-**Importlib** c + + 属性会导致`importlib`语句生成的.idl 文件的库块中放置。 **Importlib**属性具有相同的功能[importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 特性。
+**Importlib** c + + 属性会导致`importlib`语句生成的.idl 文件的库块中放置。 **Importlib**属性具有相同的功能[importlib](/windows/desktop/Midl/importlib) MIDL 特性。
 
 ## <a name="example"></a>示例
 

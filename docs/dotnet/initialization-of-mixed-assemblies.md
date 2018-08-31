@@ -1,5 +1,5 @@
 ---
-title: 混合程序集的初始化 |Microsoft 文档
+title: 混合程序集的初始化 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204537"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
 
-Windows 开发人员必须始终谨防加载程序锁时运行过程中的代码`DllMain`。 但是，有一些其他注意事项的派上用场在处理 C + + /cli clr 混合模式程序集。
+Windows 开发人员必须始终为持谨慎态度的加载程序锁时运行过程中的代码`DllMain`。 但是，有一些其他注意事项的派上用场时面对的 C + + /cli clr 混合模式程序集。
 
-[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) 中的代码不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
+中的代码[DllMain](/windows/desktop/Dlls/dllmain)不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。
   
 ## <a name="causes-of-loader-lock"></a>加载程序锁定的原因
 
@@ -97,7 +97,7 @@ CObject* op = new CObject(arg1, arg2);
 
 ### <a name="user-supplied-functions-affecting-startup"></a>影响启动的用户提供的函数
 
-在启动过程中，库依赖一些由用户提供的函数进行初始化。 例如，当中全局重载运算符 c + + 如`new`和`delete`运算符，用户提供的版本使用无处不在包括在 c + + 标准库初始化和析构。 因此，c + + 标准库和用户提供的静态初始值设定项将会调用这些运算符的任何用户提供的版本。
+在启动过程中，库依赖一些由用户提供的函数进行初始化。 有关示例，如全局重载 c + + 中的运算符时`new`和`delete`运算符，用户提供的版本随处使用，包括 c + + 标准库初始化和析构中的。 因此，c + + 标准库和用户提供的静态初始值设定项将调用这些运算符的任何用户提供的版本。
 
 如果将用户提供的版本编译为 MSIL，这些初始值设定项在加载程序锁被保留时会尝试执行 MSIL 指令。 用户提供`malloc`具有同样的结果。 若要解决此问题，必须使用 #pragma `unmanaged` 指令将所有这些重载或用户提供的定义实现为本机代码。
 
@@ -123,9 +123,9 @@ CObject* op = new CObject(arg1, arg2);
 
 在某些情况下，头文件中的函数实现会使诊断变得复杂。 内联函数和模板代码都要求在头文件中指定函数。  C++ 语言指定单一定义规则，该规则强制具有相同名称的函数的所有实现在语义上相等。 因此，C++ 链接器在合并具有给定函数的重复实现的对象文件时没有任何特别注意事项。
 
-在 Visual Studio 2005 中之前, 链接器只是选择这些在语义上等效的定义，则还以适应前向声明和方案，为不同的源文件使用不同的优化选项的最大值。 对于混合本机 .NET DLL 来说，这就会产生问题。
+在 Visual Studio 2005 中之前, 链接器只需选择这些在语义上等效的定义，则还以适应前向声明和方案，不同的优化选项用于不同的源文件时的最大值。 对于混合本机 .NET DLL 来说，这就会产生问题。
 
-因为同一个标头可能包含具有 c + + 文件 **/clr**启用和禁用，或 #include 可以被包装在 #pragma`unmanaged`块，很可能有 MSIL 和本机版本的提供的函数标头中的实现。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 为确保模板或内联函数的 MSIL 版本永远不会在有加载程序锁时被调用，在有加载程序锁时调用的每个此类函数的每个定义都必须用 #pragma `unmanaged` 指令进行修改。 如果头文件来自第三方，实现此操作的最简单的方法是为有问题的头文件推送 #pragma unmanaged 指令，然后在 #include 指令周围弹出 #pragma unmanaged 指令。 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)有关示例。)但是，对于那些包含必须直接调用 .NET API 的其他代码的头文件，该策略无效。
+因为相同的标头可能包含 c + + 文件 **/clr**启用和禁用，或 #include 可以被包装在 #pragma`unmanaged`块，就可以具有 MSIL 和本机版本的提供的函数标头中的实现。 MSIL 和本机实现在有加载程序锁时的初始化方面具有不同的语义，而这实际上违反了单一定义规则。 因此，当链接器选择最大的实现时，即使在其他位置使用 #pragma unmanaged 指令将一个函数显式编译为本机代码，它也可能选择该函数的 MSIL 版本。 为确保模板或内联函数的 MSIL 版本永远不会在有加载程序锁时被调用，在有加载程序锁时调用的每个此类函数的每个定义都必须用 #pragma `unmanaged` 指令进行修改。 如果头文件来自第三方，实现此操作的最简单的方法是为有问题的头文件推送 #pragma unmanaged 指令，然后在 #include 指令周围弹出 #pragma unmanaged 指令。 (请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)有关的示例。)但是，对于那些包含必须直接调用 .NET API 的其他代码的头文件，该策略无效。
 
 为方便用户处理加载程序锁，当两种版本同时出现时，链接器将选择本机实现，而不选择托管实现。 这样可以避免上述问题。 但是，由于编译器中有两个未解决的问题，所以在此发行版中此规则有两种例外情况：
 
@@ -161,37 +161,37 @@ void DuringLoaderlock(C & c)
 
 1. 确保 mscoree.dll 和 mscorwks.dll 的符号可用。
 
-   有两种方法可以做到这一点。 首先，可将 mscoree.dll 和 mscorwks.dll 的 PDB 添加到符号搜索路径中。 为此，请打开符号搜索路径选项对话框。 (从**工具**菜单上，选择**选项**。 在左窗格中**选项**对话框中，打开**调试**节点，然后选择**符号**。)将 mscoree.dll 和 mscorwks.dll PDB 文件的路径添加到搜索列表中。 将这些 PDB 安装到 %VSINSTALLDIR%\SDK\v2.0\symbols 中。 选择 **“确定”**。
+   有两种方法可以做到这一点。 首先，可将 mscoree.dll 和 mscorwks.dll 的 PDB 添加到符号搜索路径中。 为此，请打开符号搜索路径选项对话框。 (从**工具**菜单中，选择**选项**。 在左窗格中**选项**对话框中，打开**调试**节点，然后选择**符号**。)将 mscoree.dll 和 mscorwks.dll PDB 文件的路径添加到搜索列表中。 将这些 PDB 安装到 %VSINSTALLDIR%\SDK\v2.0\symbols 中。 选择 **“确定”**。
 
-   其次，可以从 Microsoft Symbol Server 中下载 mscoree.dll 和 mscorwks.dll 的 PDB。 若要配置 Symbol Server，请打开符号搜索路径选项对话框。 (从**工具**菜单上，选择**选项**。 在左窗格中**选项**对话框中，打开**调试**节点，然后选择**符号**。)将下面的搜索路径添加到搜索列表： http://msdl.microsoft.com/download/symbols。 向符号服务器缓存文本框中添加一个符号缓存目录。 选择 **“确定”**。
+   其次，可以从 Microsoft Symbol Server 中下载 mscoree.dll 和 mscorwks.dll 的 PDB。 若要配置 Symbol Server，请打开符号搜索路径选项对话框。 (从**工具**菜单中，选择**选项**。 在左窗格中**选项**对话框中，打开**调试**节点，然后选择**符号**。)将下面的搜索路径添加到搜索列表： http://msdl.microsoft.com/download/symbols。 向符号服务器缓存文本框中添加一个符号缓存目录。 选择 **“确定”**。
 
 1. 将调试程序模式设置为仅限本机模式。
 
-   若要执行此操作，打开**属性**网格为解决方案中的启动项目。 选择**配置属性** > **调试**。 设置**调试器类型**到**仅限本机**。
+   若要执行此操作，打开**属性**网格中解决方案的启动项目。 选择**配置属性** > **调试**。 设置**调试器类型**到**仅限本机的**。
 
 1. 启动调试器 (F5)。
   
-1. 当 **/clr**生成诊断，选择**重试**，然后选择**中断**。
+1. 当 **/clr**生成诊断中，选择**重试**，然后选择**中断**。
   
-1. 打开“调用堆栈”窗口。 (在菜单栏上，选择**调试** > **Windows** > **调用堆栈**。)有问题`DllMain`或带绿色箭头标识静态初始值设定项。 如果未标识出有问题的函数，必须执行以下步骤来找到该函数。
+1. 打开“调用堆栈”窗口。 (在菜单栏上依次选择**调试** > **Windows** > **调用堆栈**。)有问题`DllMain`或带绿色箭头标识静态初始值设定项。 如果未标识出有问题的函数，必须执行以下步骤来找到该函数。
 
-1. 打开**即时**窗口 (在菜单栏上，选择**调试** > **Windows** > **即时**。)
+1. 打开**即时**窗口 (在菜单栏上依次选择**调试** > **Windows** > **即时**。)
 
-1. 键入.load sos.dll 到**即时**窗口以加载 SOS 调试服务。
+1. 键入到.load sos.dll**即时**窗口以加载 SOS 调试服务。
   
-1. 类型 ！ dumpstack**即时**时段以获取内部的完整列表 **/clr**堆栈。
+1. 键入 ！ dumpstack**即时**时段以获取完整的内部列表 **/clr**堆栈。
 
 1. 查找 _CorDllMain 的 （最接近堆栈的底部） 的第一个实例 (如果`DllMain`导致问题) 或 _VTableBootstrapThunkInitHelperStub 或 GetTargetForVTableEntry （如果静态初始值设定项导致问题）。 紧挨着位于此调用下方的堆栈项是 MSIL 实现的函数的调用，该函数曾试图在有加载程序锁时执行。
 
-1. 转到源文件和行号上一步中标识和正确使用方案和方案一节中所述的解决方案的问题。
+1. 转到的源文件和行号上一步中标识和正确使用方案和方案一节中所述的解决方案时的问题。
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-下面的示例演示如何通过移动从代码来避免加载程序锁`DllMain`到全局对象的构造函数。
+下面的示例演示如何通过将移动中的代码来避免加载程序锁`DllMain`到全局对象的构造函数。
 
-在此示例中，没有其构造函数包含最初中的托管的对象的全局托管的对象`DllMain`。 该示例的第二部分引用程序集，并创建托管对象的一个实例以调用执行初始化的模块构造函数。
+在此示例中，没有其构造函数包含在最初的托管的对象的全局托管的对象`DllMain`。 该示例的第二部分引用程序集，并创建托管对象的一个实例以调用执行初始化的模块构造函数。
 
 ### <a name="code"></a>代码
 
@@ -222,7 +222,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-此示例演示在初始化混合程序集的问题：
+此示例演示了混合程序集的初始化中的问题：
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp

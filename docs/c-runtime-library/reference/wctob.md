@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cff2dcb8d6b0ad3756a8a0047fcc9b982fb7bb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61d92c02c4410bdc01b76ac6307fb9bb2652880a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411440"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203603"
 ---
 # <a name="wctob"></a>wctob
 
@@ -59,17 +59,17 @@ int wctob(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctob**成功转换的宽字符，它将返回多字节字符表示形式，仅当多字节字符是完全有 1 个字节长。 如果**wctob**遇到它不能将其转换为多字节字符或多字节字符的宽字符不完全是 1 个字节长，它将返回-1。
+如果**wctob**成功转换宽字符，它返回多字节字符表示形式，仅当多字节字符正好为一个字节长。 如果**wctob**遇到它不能转换为多字节字符或多字节字符的宽字符不完全是一个字节长，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-**Wctob**函数中包含的宽字符转换为*wchar*传递可通过返回的相应的多字节字符**int**值，如果多字节字符是完全有 1 个字节长。
+**Wctob**函数将转换的宽字符中包含*wchar*传递由返回的相应多字节字符**int**值，如果多字节字符正好为一个字节长。
 
-如果**wctob**失败，并找到没有相应的多字节字符，该函数设置**errno**到**EILSEQ**并返回-1。
+如果**wctob**不成功，没有相应的多字节字符未找到，该函数设置**errno**到**EILSEQ**并返回-1。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
@@ -118,4 +118,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

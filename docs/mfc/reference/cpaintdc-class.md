@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848910"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208365"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 类
 设备上下文类派生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>备注  
  它将执行[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)在构造时并[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在析构时。  
   
- 一个`CPaintDC`响应时，仅可以使用对象[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息，通常在您`OnPaint`消息处理程序成员函数。  
+ 一个`CPaintDC`响应时，仅可以使用对象[WM_PAINT](/windows/desktop/gdi/wm-paint)消息，通常在您`OnPaint`消息处理程序成员函数。  
   
  有关使用的详细信息`CPaintDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  指向`CWnd`到对象`CPaintDC`所属对象。  
   
 ### <a name="remarks"></a>备注  
- 异常 (类型的`CResourceException`) 如果则会引发 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
+ 异常 (类型的`CResourceException`) 如果则会引发 Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

@@ -58,19 +58,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209444"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
 通过使用当前区域设置或指定区域设置获取字符串的长度。 这些函数的更安全版本已经发布，请参阅 [strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**， **_mbslen_l**， **_mbstrlen**，和 **_mbstrlen_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbslen**， **_mbslen_l**， **_mbstrlen**，并且 **_mbstrlen_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -107,13 +107,13 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数返回中的字符数*str*，不包括终端 null。 没有返回值保留以指示错误，除 **_mbstrlen**和 **_mbstrlen_l**，将返回`((size_t)(-1))`如果字符串包含无效的多字节字符。
+这些函数均返回中的字符数*str*，不包括终端的为 null。 没有返回值保留以指示错误，除了 **_mbstrlen**并 **_mbstrlen_l**，将返回`((size_t)(-1))`如果字符串包含无效的多字节字符。
 
 ## <a name="remarks"></a>备注
 
-**strlen**将字符串解释为单字节字符字符串，以便其返回值也始终等于字节数，即使该字符串包含多字节字符。 **wcslen**是宽字符版本的**strlen**; 的自变量**wcslen**是宽字符字符串且字符计数采用宽 （双字节） 字符。 **wcslen**和**strlen**否则具有相同行为。
+**strlen**将字符串解释为单字节字符字符串，因此其返回值也始终等于字节数，即使该字符串包含多字节字符。 **wcslen**是宽字符版本**strlen**; 的自变量**wcslen**是宽字符字符串和字符数为宽 （双字节） 字符。 **wcslen**并**strlen**行为相同。
 
-**安全说明**这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明**这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -123,13 +123,13 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**和 **_mbslen_l**一个多字节字符字符串中返回的多字节字符数，但它们不会测试多字节字符的有效性。 **_mbstrlen**和 **_mbstrlen_l**测试多字节字符的有效性并识别多字节字符序列。 如果字符串传递给 **_mbstrlen**或 **_mbstrlen_l**包含的代码页，函数将返回-1 并集的无效多字节字符**errno**到**EILSEQ**。
+**_mbslen**并 **_mbslen_l**返回多字节字符字符串中的多字节字符数，但它们不会测试多字节字符的有效性。 **_mbstrlen**并 **_mbstrlen_l**测试多字节字符的有效性并识别多字节字符序列。 如果将字符串传递给 **_mbstrlen**或 **_mbstrlen_l**包含的代码页，函数将返回-1 并集的无效多字节字符**errno**到**EILSEQ**。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> 或 \<wchar.h>|

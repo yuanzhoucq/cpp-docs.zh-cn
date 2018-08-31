@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850350"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202850"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 提供自定义客户端控件接口支持。  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|控制站点的维度。|  
   
 ## <a name="remarks"></a>备注  
- 此支持仅通过其嵌入的 ActiveX 控件获取的位置和其显示站点、 其名字对象，其用户界面，其环境属性和提供其容器的其他资源的范围有关的信息的主要方式。 `COleControlSite` 完全实现[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （提供对环境属性和事件接收器的支持）。  
+ 此支持仅通过其嵌入的 ActiveX 控件获取的位置和其显示站点、 其名字对象，其用户界面，其环境属性和提供其容器的其他资源的范围有关的信息的主要方式。 `COleControlSite` 完全实现[IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite)， [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)， [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （提供对环境属性和事件接收器的支持）。  
   
  若要创建使用 ActiveX 控件站点`COleControlSite`，从派生类`COleControlSite`。 在你`CWnd`的容器 （例如，在对话框中） 的派生的类重写`CWnd::CreateControlSite`函数。  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>备注  
  通过控件的直接调用此函数`IOleObject`接口以执行指定的谓词。 如果通过此函数调用将引发异常，则返回一个 HRESULT 错误代码。  
   
- 有关详细信息，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 有关详细信息，请参阅[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  使数据源控件站点。  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此信息存储在[CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734)结构。  
+ 此信息存储在[CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo)结构。  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  包含控件的事件接收器的连接点的 cookie。  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK 中。  
+ 有关详细信息，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK 中。  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- 包含[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie。  
+ 包含[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) cookie。  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- 包含[IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)控件的接口。  
+ 包含[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)控件的接口。  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- 包含`IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)控件的接口。  
+ 包含`IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)控件的接口。  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- 包含`IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304)控件的接口。  
+ 包含`IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)控件的接口。  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  要添加从当前窗口样式的样式。  
   
  *nFlags*  
- 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果更改样式，否则为零，非零值。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>备注  
  将修改控件的股票 Enabled 属性来匹配 WS_DISABLED 的设置。 将修改控件的边框样式的常用属性以匹配为 WS_BORDER 所请求的设置。 所有其他样式是直接应用于控件的窗口句柄，如果不存在。  
   
- 修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
+ 修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  若要从当前窗口样式添加扩展的样式。  
   
  *nFlags*  
- 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果更改样式，否则为零，非零值。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>备注  
  将修改控件的股票外观属性来匹配 WS_EX_CLIENTEDGE 的设置。 所有其他扩展的窗口样式是直接应用于控件的窗口句柄，如果不存在。  
   
- 修改扩展的控件站点对象的样式的窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
+ 修改扩展的控件站点对象的样式的窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  新窗口的高度。  
   
  *nFlags*  
- 指定窗口大小调整和定位标志。 有关可能的值，请参阅备注部分[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 指定窗口大小调整和定位标志。 有关可能的值，请参阅备注部分[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  非零值如果成功，否则为零。  

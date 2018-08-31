@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214464"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 生成事件是在生成过程中的某个特定阶段执行 MSBuild 的命令。 *预生成*事件发生在生成开始之前;*预链接*事件发生之前链接步骤开始; 并*后期生成*发生在生成后事件已成功结束。 仅当关联的生成步骤发生时，生成事件才会发生。 例如，如果链接步骤不会运行，也不会发生预链接事件。  
   
  每个生成三个事件由命令元素表示在项定义组中 (`<Command>`)，它执行和消息元素 (`<Message>`)，它是显示时**MSBuild**执行生成事件。 每个元素是可选的并且如果多次指定同一个元素，最后一个匹配项优先。  
   
- 一个可选*在生成中使用*元素 (`<`* 生成的事件 ***UseInBuild**`>`) 可以指定属性组，以指示是否执行生成事件中。 内容的价值*在生成中使用*元素是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。  
+ 一个可选*在生成中使用*元素 (`<`*生成事件*`UseInBuild>`) 可以指定属性组，以指示是否执行生成事件中。 内容的价值*在生成中使用*元素是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。  
   
  下表列出了每个生成事件 XML 元素：  
   

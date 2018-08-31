@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4076 |Microsoft 文档
+title: 编译器警告 （等级 1） C4076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198473"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>编译器警告（等级 1）C4076
-“typemod”: 不能和“typename”类型一起使用  
-  
- 类型修饰符（无论是 **有符号** 还是 `unsigned`）不能用于非整数类型。 ***typemod*** 将被忽略。  
+
+> '*的类型修饰符*： 不能使用类型*typename*
+
+## <a name="remarks"></a>备注
+
+类型修饰符，它是否**签名**或**无符号**，不能用于非整数类型。 *类型修饰符*将被忽略。
   
 ## <a name="example"></a>示例  
- 以下示例生成 C4076:  
-  
-```  
+
+下面的示例生成 C4076;若要修复此错误，请删除**无符号**类型修饰符：
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

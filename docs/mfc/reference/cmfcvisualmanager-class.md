@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203637"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  指向一个自动隐藏按钮的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指定的文本颜色*pButton*。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指定的文本颜色*pButton*。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类自定义应用程序中的自动隐藏按钮的文本颜色。 若要执行此操作，返回所需应用程序以使用作为文本颜色的颜色。  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  指向标题栏的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示中的文本的颜色*pBar*。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示中的文本的颜色*pBar*。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类自定义标题栏的文本颜色。 在重写方法中，返回所需的颜色。  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  指向绘制框架的属性列表的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示的背景色*pPropList*。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示的背景色*pPropList*。  
   
 ### <a name="remarks"></a>备注  
  重写此函数可自定义应用程序中的属性列表的背景色。  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  指向的属性列表的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示的属性列表的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示的属性列表的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  重写此函数可自定义应用程序中的属性列表的文本颜色。  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  指向其中框架绘制一个选项卡的选项卡式窗口的指针。  
   
  [out]*clrDark*  
- 对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，此方法将存储的选项卡上的深色边框的颜色。  
+ 对引用[COLORREF](/windows/desktop/gdi/colorref)参数，此方法将存储的选项卡上的深色边框的颜色。  
   
  [out]*clrBlack*  
  对此方法存储的选项卡窗口边框的颜色的位置的 COLORREF 参数的引用。 边框的默认颜色为黑色。  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  一个枚举的值，指定按钮的状态。  
   
  [out]*clrText*  
- 对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 这是保留的值，表示当前未使用。  
+ 对引用[COLORREF](/windows/desktop/gdi/colorref)参数。 这是保留的值，表示当前未使用。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为 TRUE；否则为 FALSE。  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  指定标题按钮的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示标题的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示标题的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  重写此方法中派生视觉管理器，以自定义窗格隐藏式字幕的外观。  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  指向标题栏的指针。 视觉管理器绘制这[CMFCRibbonContextCaption 类](../../mfc/reference/cmfcribboncontextcaption-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示在标题栏文本的颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示在标题栏文本的颜色。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类以自定义功能区类别的标题栏的外观。 有关标题栏的详细信息，请参阅[CMFCRibbonContextCaption 类](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  当前进度的进度栏。  
   
  [in]*clrBar*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示进度栏的初始颜色。 值是颜色渐变的开始或完成的进度栏的颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示进度栏的初始颜色。 值是颜色渐变的开始或完成的进度栏的颜色。  
   
  [in]*clrProgressBarDest*  
  指示进度栏的颜色渐变的结束一个 COLORREF 参数。 如果*clrProgressBarDest*为-1，该框架不绘制为颜色渐变的进度栏。 相反，使用指定的颜色填充整个进度栏*clrBar*。  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  指定的标题栏的边界矩形。  
   
  [out]*clrText*  
- 对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 该方法将在标题栏上的文本颜色写入到此参数。  
+ 对引用[COLORREF](/windows/desktop/gdi/colorref)参数。 该方法将在标题栏上的文本颜色写入到此参数。  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现将填充与基于当前外观的阴影的颜色的标题栏。 重写此方法中派生视觉管理器，以自定义 Outlook 标题栏的颜色。  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  一个布尔参数，指定是否按下按钮。  
   
  [out]*clrText*  
- 对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 此方法将此参数中存储的 outlook 页按钮的文本颜色。  
+ 对引用[COLORREF](/windows/desktop/gdi/colorref)参数。 此方法将此参数中存储的 outlook 页按钮的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  重写此函数中派生视觉管理器，以自定义 Outlook 的页按钮的外观。  

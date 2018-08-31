@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220797"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 封装 Windows `HMENU`。  
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  如果函数成功，返回值是标识符或菜单项的位置。 如果函数失败，返回值为-1。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 函数的行为[GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 函数的行为[GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CMenu::InsertMenu](#insertmenu)。  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>参数  
  *lpcmi*  
- 一个指向[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
+ 一个指向[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)结构，它包含菜单上的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果函数成功，返回值为非零值;否则，返回值为零。  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  标识符或要获取其相关信息的菜单项的位置。 此参数的含义取决于值`ByPos`。  
   
  *lpMenuItemInfo*  
- 一个指向[MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578)，如下所述在 Windows SDK 中，其中包含关于菜单的信息。  
+ 一个指向[MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa)，如下所述在 Windows SDK 中，其中包含关于菜单的信息。  
   
  *fByPos*  
  值，该值指定的含义`nIDItem`。 默认情况下，`ByPos`为 FALSE，指示该 uItem 是菜单项标识符。 如果`ByPos`未设置为 FALSE，它表示菜单项位置。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。  
+ 如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 函数[GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980)，如 Windows SDK 中所述。 请注意，在的 MFC 实现`GetMenuItemInfo`，不要使用到菜单的句柄。  
+ 此成员函数实现的行为的 Win32 函数[GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa)，如 Windows SDK 中所述。 请注意，在的 MFC 实现`GetMenuItemInfo`，不要使用到菜单的句柄。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|LpszNewItem 的解释|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|包含一个应用程序提供的 32 位值，该应用程序可用于维护与菜单项关联的其他数据。 此 32 位的值是可用于在应用程序`itemData`提供的结构中的成员[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)并[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)消息。 菜单项的初始显示或更改时，将发送这些消息。|  
+|MF_OWNERDRAW|包含一个应用程序提供的 32 位值，该应用程序可用于维护与菜单项关联的其他数据。 此 32 位的值是可用于在应用程序`itemData`提供的结构中的成员[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)并[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)消息。 菜单项的初始显示或更改时，将发送这些消息。|  
 |MF_STRING|包含指向以 null 结尾的字符串的长指针。 这是默认值解释。|  
 |MF_SEPARATOR|*LpszNewItem*参数将被忽略 （不需要）。|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>参数  
  *uItem*  
- 请参阅的说明*uItem*中[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) Windows SDK 中。  
+ 请参阅的说明*uItem*中[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) Windows SDK 中。  
   
  *lpMenuItemInfo*  
  请参阅的说明*lpmii*中`InsertMenuItem`Windows SDK 中。  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  请参阅的说明*fByPosition*中`InsertMenuItem`Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 此函数包装[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)Windows SDK 中所述。  
+ 此函数包装[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema)Windows SDK 中所述。  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  从应用程序的可执行文件加载菜单资源，并将其附加到`CMenu`对象。  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>参数  
  *lpMenuTemplate*  
- 指向菜单模板 (即单个[MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583)结构和集合的一个或多个[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)结构)。 有关这些两个结构的详细信息，请参阅 Windows SDK。  
+ 指向菜单模板 (即单个[MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader)结构和集合的一个或多个[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)结构)。 有关这些两个结构的详细信息，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则加载该菜单资源，非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 菜单模板是后跟一个或多个集合的标头[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)结构，其中每个可能包含一个或多个菜单项和弹出菜单。  
+ 菜单模板是后跟一个或多个集合的标头[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)结构，其中每个可能包含一个或多个菜单项和弹出菜单。  
   
  版本号应为 0。  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  值，该值指定的含义*uItem*。 如果此参数为 FALSE 时， *uItem*是菜单项标识符。 否则，它是菜单项位置。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。  
+ 如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 函数的行为[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 函数的行为[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CMenu::InsertMenu](#insertmenu)。  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>参数  
  *lpcmi*  
- 一个指向[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
+ 一个指向[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)结构，它包含菜单上的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果函数成功，返回值为非零值;否则，返回值为零。  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>参数  
  *uItem*  
- 请参阅的说明*uItem*中[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) Windows SDK 中。  
+ 请参阅的说明*uItem*中[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) Windows SDK 中。  
   
  *lpMenuItemInfo*  
  请参阅的说明*lpmii*中`SetMenuItemInfo`Windows SDK 中。  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  请参阅的说明*fByPosition*中`SetMenuItemInfo`Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
- 此函数包装[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)Windows SDK 中所述。  
+ 此函数包装[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa)Windows SDK 中所述。  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  在指定位置显示一个浮动的弹出菜单，并在弹出菜单上跟踪选定的项。  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>参数  
  *nFlags*  
- 指定屏幕位置和鼠标位置的标志。 请参阅[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)有关可用标志的列表。  
+ 指定屏幕位置和鼠标位置的标志。 请参阅[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)有关可用标志的列表。  
   
  *x*  
  指定弹出菜单的屏幕坐标的水平位置。 具体取决于值*nFlags*参数菜单可以为左对齐、 右对齐或居中相对于此位置。  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  已忽略。  
   
 ### <a name="return-value"></a>返回值  
- 此方法返回调用的结果[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) Windows SDK 中。  
+ 此方法返回调用的结果[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  浮动的弹出菜单可以出现在屏幕上的任何位置。  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>参数  
  *fuFlags*  
- 指定有关扩展菜单上的各种函数。 所有值的列表和它们的含义，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+ 指定有关扩展菜单上的各种函数。 所有值的列表和它们的含义，请参阅[TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。  
   
  *x*  
  指定弹出菜单的屏幕坐标的水平位置。  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  指向拥有的弹出菜单和创建菜单上从接收消息的窗口的指针。 此窗口可以是从当前应用程序的任何窗口，但不能为 NULL。 如果指定在 TPM_NONOTIFY *fuFlags*参数，该函数不会发送到任何消息*pWnd*。 该函数必须返回为指向窗口*pWnd*接收 WM_COMMAND 消息。  
   
  *lptpm*  
- 指向[TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586)不应重叠结构，它指定菜单的屏幕区域。 此参数可以为 NULL。  
+ 指向[TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams)不应重叠结构，它指定菜单的屏幕区域。 此参数可以为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  如果指定在 TPM_RETURNCMD *fuFlags*参数，则返回值是用户选择的项的菜单项标识符。 如果用户取消菜单不做任何选择，或如果出错，则返回值为 0。  
   
- 如果未指定在 TPM_RETURNCMD *fuFlags*参数，返回值为非零，如果函数成功，0 失败。 若要获得扩展错误信息，请调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果未指定在 TPM_RETURNCMD *fuFlags*参数，返回值为非零，如果函数成功，0 失败。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
- 浮动的弹出菜单可以出现在屏幕上的任何位置。 创建弹出菜单时处理错误的详细信息，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+ 浮动的弹出菜单可以出现在屏幕上的任何位置。 创建弹出菜单时处理错误的详细信息，请参阅[TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   

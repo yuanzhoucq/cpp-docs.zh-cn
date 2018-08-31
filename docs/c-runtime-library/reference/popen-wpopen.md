@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404475"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218381"
 ---
 # <a name="popen-wpopen"></a>_popen、_wpopen
 
@@ -80,15 +80,15 @@ const wchar_t *mode
 
 ## <a name="return-value"></a>返回值
 
-返回一个与创建的管道一端相关联的流。 管道的另一端与生成的命令的标准输入或标准输出相关联。 函数针对错误返回 **NULL**。 如果错误是无效的参数，如*命令*或*模式*是 null 指针，或*模式*不是有效的模式下， **errno**设置为**EINVAL**。 有关有效模式的信息，请参阅“备注”部分。
+返回一个与创建的管道一端相关联的流。 管道的另一端与生成的命令的标准输入或标准输出相关联。 函数针对错误返回 **NULL**。 如果错误是无效的参数，例如，如果*命令*或*模式*是 null 指针，或*模式*不是有效模式**errno**设置为**EINVAL**。 有关有效模式的信息，请参阅“备注”部分。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Popen**函数创建的管道，并以异步方式执行命令处理器以指定字符串的生成的副本*命令*。 字符串 *mode* 指定请求的访问类型，如下所示。
+**_Popen**函数创建一个管道，并以异步方式执行使用指定的字符串的命令处理器的衍生的副本*命令*。 字符串 *mode* 指定请求的访问类型，如下所示。
 
-**"r"** 调用进程可以读取使用返回的流的生成的命令的标准输出。
+**"r"** 调用进程可以读取生成的命令的标准输出使用返回的流。
 
 **"w"** 调用进程可以写入到生成的命令的标准输入使用返回的流。
 
@@ -97,9 +97,9 @@ const wchar_t *mode
 **"t"** 在文本模式下打开。
 
 > [!NOTE]
-> 如果在 Windows 程序中，使用 **_popen**函数返回导致程序停止响应; 如果无限期的无效的文件指针。 **_popen**在一个控制台应用程序中工作正常。 若要创建的 Windows 应用程序将重定向输入和输出，请参阅[创建重定向输入和输出的子进程](http://msdn.microsoft.com/library/windows/desktop/ms682499)Windows SDK 中。
+> 如果在 Windows 程序中使用 **_popen**函数返回无效的文件指针，从而导致程序无限期停止响应。 **_popen**控制台应用程序中可正常工作。 若要创建 Windows 应用程序将重定向输入和输出，请参阅[重定向输入和输出创建的子进程](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output)Windows SDK 中。
 
-**_wpopen**是宽字符版本的 **_popen**;*路径*参数 **_wpopen**是宽字符字符串。 **_wpopen**和 **_popen**否则具有相同行为。
+**_wpopen**是宽字符版本 **_popen**;*路径*参数 **_wpopen**是宽字符字符串。 **_wpopen**并 **_popen**行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,7 +109,7 @@ const wchar_t *mode
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> 或 \<wchar.h>|

@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544408"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131331"
 ---
 # <a name="sample-multithread-c-program"></a>多线程 C 程序示例
-Bounce.c 是一个示例多线程程序创建新的线程每次以字母`a`或`A`类型化。 每个线程在屏幕上四处不同颜色的笑脸。 可以创建多达 32 个线程。 发生程序的正常终止时`q`或`Q`类型化。 有关编译和链接 Bounce.c 的信息，请参阅[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  
+Bounce.c 是一个示例多线程程序创建新的线程每次以字母`a`或`A`类型化。 每个线程在屏幕上四处不同颜色的笑脸。 可以创建多达 32 个线程。 发生程序的正常终止时`q`或`Q`类型化。 有关编译和链接 Bounce.c 的信息，请参阅[编译和链接多线程程序](compiling-and-linking-multithread-programs.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>请参阅  
 
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)

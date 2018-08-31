@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025651"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217662"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 本地文件系统中和在网络上，Web 浏览器样式的应用程序可以从 （如 HTML 或活动文档） Internet 或 intranet，以及文件夹访问信息。 通过派生应用程序的视图类从[CHtmlView](../../mfc/reference/chtmlview-class.md)，从而有效地通过为视图提供 WebBrowser 控件使应用程序的 Web 浏览器。  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MFC 示例 MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [MFC 示例 MFCIE](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
  [使用项目属性](../../ide/working-with-project-properties.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   
  [使用项目属性](../../ide/working-with-project-properties.md)   
- [部署应用程序](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署应用程序](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330292"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578130"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>准备用于运行调试可执行文件的测试计算机
 若要准备计算机以测试使用 Visual C++ 生成的应用程序的调试版本，你必须部署应用程序依赖的 Visual C++ 库 DLL 的调试版本。 要验证必须部署哪些 DLL，请遵循[了解 Visual C++ 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)中的步骤。 通常，Visual C++ 库 DLL 的调试版本具有以“d”结尾的名称；例如，msvcr100.dll 的调试版本名为 msvcr100d.dll。  
@@ -43,5 +43,5 @@ ms.locfileid: "33330292"
 ## <a name="see-also"></a>请参阅  
  
  [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)   
- [Windows Installer 命令行选项](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Windows Installer 命令行选项](/windows/desktop/Msi/command-line-options)   
  [部署示例](../ide/deployment-examples.md) [远程调试](/visualstudio/debugger/remote-debugging.md)

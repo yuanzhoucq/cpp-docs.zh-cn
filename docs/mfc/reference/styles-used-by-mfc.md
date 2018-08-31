@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539555"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199916"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式  
   
@@ -308,7 +308,7 @@ ms.locfileid: "42539555"
   
 ## <a name="edit-styles"></a>  编辑样式  
   
-编辑样式应用于[CEdit 类](../../mfc/reference/cedit-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 有关在 Windows 中的编辑控件样式的详细信息，请参阅[编辑控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+编辑样式应用于[CEdit 类](../../mfc/reference/cedit-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 有关在 Windows 中的编辑控件样式的详细信息，请参阅[编辑控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ ms.locfileid: "42539555"
   
 ## <a name="scroll-bar-styles"></a> 滚动条样式  
   
-滚动条样式应用于[CScrollBar 类](../../mfc/reference/cscrollbar-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 有关滚动条在 Windows 中的控件样式的详细信息，请参阅[滚动条控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)。  
+滚动条样式应用于[CScrollBar 类](../../mfc/reference/cscrollbar-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 有关滚动条在 Windows 中的控件样式的详细信息，请参阅[滚动条控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ ms.locfileid: "42539555"
   
 ## <a name="static-styles"></a> 静态样式  
   
-静态样式应用于[CStatic 类](../../mfc/reference/cstatic-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 有关在 Windows 中的静态控件样式的详细信息，请参阅[静态控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)。  
+静态样式应用于[CStatic 类](../../mfc/reference/cstatic-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 有关在 Windows 中的静态控件样式的详细信息，请参阅[静态控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ ms.locfileid: "42539555"
 |WS_EX_CONTEXTHELP|在窗口的标题栏中包含一个问号。 当用户单击问号光标更改为使用指针的问号。 如果用户随后单击子窗口，子窗口将收到 WM_HELP 消息。|  
 |WS_EX_CONTROLPARENT|允许用户使用 TAB 键在窗口的子窗口之间导航。|  
 |WS_EX_DLGMODALFRAME|指定具有可能 （可选） 使用标题栏中的 WS_CAPTION 样式标志指定时创建的双边框窗口*dwStyle*参数。|  
-|WS_EX_LAYERED|该窗口[分层窗口](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果窗口具有不能使用此样式[类样式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 但是，Microsoft Windows 8 支持 WS_EX_LAYERED 样式的子窗口，其中仅为顶级窗口早期 Windows 版本支持它。|  
+|WS_EX_LAYERED|该窗口[分层窗口](/windows/desktop/winmsg/window-features)。 如果窗口具有不能使用此样式[类样式](/windows/desktop/winmsg/about-window-classes)CS_OWNDC 或 CS_CLASSDC。 但是，Microsoft Windows 8 支持 WS_EX_LAYERED 样式的子窗口，其中仅为顶级窗口早期 Windows 版本支持它。|  
 |WS_EX_LEFT|为提供窗口一般左对齐属性。 这是默认设置。|  
 |WS_EX_LEFTSCROLLBAR|将垂直滚动条放置到客户端区域的左侧。|  
 |WS_EX_LTRREADING|显示窗口文本使用从左到右读取顺序属性。 这是默认设置。|  
@@ -524,14 +524,14 @@ ms.locfileid: "42539555"
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [按钮样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [组合框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[编辑控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[编辑控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [列表框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox 函数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[滚动条控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[静态控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[滚动条控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[静态控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [扩展的窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

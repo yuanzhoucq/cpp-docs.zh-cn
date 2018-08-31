@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604058"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205711"
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
 Visual c + + 支持定义**wmain**函数，并将宽字符自变量传递给 Unicode 应用程序。 您将形参声明为**wmain**，使用的格式类似于`main`。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>请参阅  
  [有关 Unicode 的支持](../text/support-for-unicode.md)   
  [Unicode 编程摘要](../text/unicode-programming-summary.md)   
- [WinMain 函数](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [WinMain 函数](https://msdn.microsoft.com/library/windows/desktop/ms633559)

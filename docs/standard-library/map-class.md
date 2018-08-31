@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027740"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218628"
 ---
 # <a name="map-class"></a>map 类
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>参数
 
-*密钥*键数据类型存储在映射中。
+*Key*<br/>
+ 要存储在映射中的键数据类型。
 
-*类型*要存储在映射中的元素数据类型。
+*类型*<br/>
+ 要存储在映射中的元素数据类型。
 
-*特征*提供两个元素值作为排序键以确定映射中的其相对顺序进行比较的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
+*特征*<br/>
+ 一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在映射中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
 
 在 C++ 14 中可以通过指定没有类型参数的 std:: less <> 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配器*表示存储的分配器对象封装有关映射的分配和解除分配的内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
+*分配器*<br/>
+ 一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>备注
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*映射中匹配的元素的键值。
+*key*<br/>
+ 要从 map 中进行匹配的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与要搜索的映射中元素的排序键进行比较。
+*key*<br/>
+ 要与当前搜索的映射中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*其中*要移除的元素位置。
+*Where*<br/>
+ 要移除的元素的位置。
 
-*第一个*要删除的第一个元素的位置。
+*第一个*<br/>
+ 要移除的第一个元素的位置。
 
-*最后一个*刚超出最后一个元素的位置，要删除。
+*最后一个*<br/>
+ 要移除的刚超出最后一个元素的位置。
 
-*密钥*要移除的元素的键值。
+*Key*<br/>
+ 要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*要与当前搜索的 map 中元素的排序键匹配的键值。
+*key*<br/>
+ 要搜索的映射中的元素的排序键与之匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>备注
 
-`iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
+迭代器，用于定义映射的对象的元素指向[value_type](#value_type)，该类型的`pair<const Key, Type>`、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用**迭代器**`Iter`指向的元素在映射中，使用`->`运算符。
+若要取消引用迭代器*Iter*指向的元素在映射中，使用`->`运算符。
 
-若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second** 相同。
+若要访问元素的键的值，请使用`Iter->first`，这等同于`(*Iter).first`。 若要访问的元素的映射基准值，请使用`Iter->second`，这等同于`(*Iter).second`。
 
 ### <a name="example"></a>示例
 
@@ -1587,7 +1598,7 @@ key_compare key_comp() const;
 
 存储对象会定义成员函数
 
-**bool operator**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 如果 `left` 在排序顺序中先于且不等于 `right`，则该函数会返回 **true**。
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与要搜索的映射中元素的排序键进行比较。
+*key*<br/>
+ 要与当前搜索的映射中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 类型无法修改元素的值，它用于反向循环访问映射。
 
-`reverse_iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
+`reverse_iterator`定义的地图点元素的对象的[value_type](#value_type)，该类型的`pair<const Key, Type>`、 其第一个成员是元素的键和其第二个成员是此元素保留的映射的基准。
 
-若要取消引用`reverse_iterator``rIter`指向的元素在映射中，使用`->`运算符。
+若要取消引用`reverse_iterator` *rIter*指向的元素在映射中，使用`->`运算符。
 
 若要访问元素的键值，请使用 `rIter` -> **first**，其作用与 (\* `rIter`). **first** 相同。 若要访问元素的映射值，请使用 `rIter` -> **second**，其作用与 (\* `rIter`). **first** 相同。
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*右*参数 map，提供要与目标 map 进行交换的元素。
+*right*<br/>
+ 参数 map，提供与目标 map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*密钥*参数键值与要搜索的映射中元素的排序键值进行比较。
+*key*<br/>
+ 要与当前搜索的 map 中元素的排序键值进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[\<映射 > 成员](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<映射 > 成员](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df130c2d5eee3e661f7ead2db156d2ac33349f68
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027753"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213851"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 扩展 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 的功能以支持创建选项卡式窗口。  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|重新计算在窗格的布局信息。 (重写[cpane:: Recalclayout](../../mfc/reference/cpane-class.md#recalclayout)。)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|从选项卡式窗格中删除一个窗格。|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|在序列化期间在内部使用。|  
-|`CBaseTabbedPane::Serialize`|(重写[cdockablepane:: Serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
+|`CBaseTabbedPane::Serialize`|(重写[cdockablepane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
 |`CBaseTabbedPane::SerializeTabWindow`|在序列化期间在内部使用。|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|确定是否将自动销毁选项卡式的控件条。|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|切换停靠窗格之间显示和自动隐藏模式。 (重写[CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode)。)|  

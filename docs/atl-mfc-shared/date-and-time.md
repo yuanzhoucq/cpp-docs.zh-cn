@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879554"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132202"
 ---
 # <a name="date-and-time"></a>日期和时间
 MFC 支持多种不同的使用日期和时间。 这些方法包括：  
@@ -34,8 +34,6 @@ MFC 支持多种不同的使用日期和时间。 这些方法包括：
 -   支持自动化[日期数据类型](../atl-mfc-shared/date-type.md)。 日期支持日期、 时间和日期/时间值。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)并[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)类封装了此功能。 它们适用于[COleVariant](../mfc/reference/colevariant-class.md)类使用自动化的支持。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
-  
--   [日期和时间：通用类](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [日期和时间：SYSTEMTIME 支持](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

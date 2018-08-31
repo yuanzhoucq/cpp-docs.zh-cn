@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207623"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 提供 Windows 多文档界面 (MDI) 子窗口功能，并提供管理窗口的成员。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *lpszClassName*  
- 指向以 null 结尾的字符串命名的 Windows 类 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名可以是任何名称与注册[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数。 应为 NULL 的一种标准`CMDIChildWnd`。  
+ 指向以 null 结尾的字符串命名的 Windows 类 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名可以是任何名称与注册[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数。 应为 NULL 的一种标准`CMDIChildWnd`。  
   
  *lpszWindowName*  
  指向以 null 结尾的字符串的字符串表示窗口名称。 用作标题栏文本。  

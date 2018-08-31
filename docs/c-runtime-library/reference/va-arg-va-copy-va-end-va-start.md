@@ -47,12 +47,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f634e713bcf87aa6d97ed4e49595e4c0f8b72ab3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33c8dbfe55008c084daf8f6b9f4700f13281012
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195424"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
 
@@ -90,33 +90,33 @@ void va_start(
 指向参数列表的指针。
 
 *dest*<br/>
-指向自变量从初始化列表*src*
+指向要从初始化的参数列表的*src*
 
 *src*<br/>
-指向要将复制到自变量的初始化列表*dest*。
+指向要复制到的参数初始化列表*dest*。
 
 *prev_param*<br/>
 位于第一个可选实参之前的形参。
 
 ## <a name="return-value"></a>返回值
 
-**va_arg**返回当前的自变量。 **va_copy**， **va_start**和**va_end**不返回值。
+**va_arg**返回当前参数。 **va_copy**， **va_start**并**va_end**不返回值。
 
 ## <a name="remarks"></a>备注
 
-**Va_arg**， **va_copy**， **va_end**，和**va_start**宏提供用于访问函数的自变量的可移植方法时函数采用数目可变的参数。 有两种版本的宏：STDARG.H 中定义的宏符合 ISO C99 标准；弃用了 VARARGS.H 中定义的宏但是将其保留以保证与写于 ANSI C89 标准之前的代码的后向兼容性。
+**Va_arg**， **va_copy**， **va_end**，以及**va_start**宏提供可移植的方式来访问函数的自变量时函数采用数目可变的参数。 有两种版本的宏：STDARG.H 中定义的宏符合 ISO C99 标准；弃用了 VARARGS.H 中定义的宏但是将其保留以保证与写于 ANSI C89 标准之前的代码的后向兼容性。
 
 这些宏假定函数采用固定数量的必需参数，后面是可变数量的可选参数。 将必需参数声明为函数的普通参数，且可通过参数名称访问它们。 可选参数可通过 STDARG.H 中的宏访问（对于在 ANSI C89 标准之前编写的代码，通过 VARARGS.H），其将指针设置为参数列表中的第一个可选参数、检索列表中的参数并在参数处理完成后重置指针。
 
 STDARG.H 中定义的 C 标准宏使用方法如下：
 
-- **va_start**设置*arg_ptr*到传递给函数的参数列表中第一个可选参数。 自变量*arg_ptr*必须具有**va_list**类型。 自变量*prev_param*是所需的参数列表中紧跟第一个可选参数的参数的名称。 如果*prev_param*声明使用寄存器存储类，则该宏的行为是不确定。 **va_start**之前，必须使用**va_arg**首次使用。
+- **va_start**设置*arg_ptr*到传递给函数的参数列表中的第一个可选参数。 自变量*arg_ptr*必须具有**va_list**类型。 自变量*prev_param*是紧跟在参数列表中的第一个可选参数的必需参数的名称。 如果*prev_param*声明使用寄存器存储类，则未定义宏的行为。 **va_start**前必须使用**va_arg**首次使用。
 
-- **va_arg**检索的值*类型*从给定的位置*arg_ptr*，、 增量*arg_ptr*以指向按列表中的下一个参数使用的大小*类型*确定下一个参数从何处开始。 **va_arg**可以是用于任意次数函数中，从列表中检索自变量。
+- **va_arg**检索的值*类型*的位置中由给定*arg_ptr*，并增加*arg_ptr*以指向下一个参数的列表中使用的大小*类型*以确定下一个参数的开始位置。 **va_arg**可以是函数中使用任意数量的时间以从列表中检索参数。
 
-- **va_copy**在其当前状态生成的参数列表的副本。 *Src*参数必须已使用初始化**va_start**; 它可能已使用的更新**va_arg**调用，但必须不已重置与**va_end**. 通过检索下一个参数**va_arg**从*dest*从检索到的下一步自变量相同*src*。
+- **va_copy**在其当前状态生成的参数列表的副本。 *Src*参数必须已使用初始化**va_start**; 它可能已与更新**va_arg**调用，但必须不具有已重置与**va_end**. 通过检索到的下一个参数**va_arg**从*dest*从检索到的下一个参数相同*src*。
 
-- 检索所有自变量后， **va_end**重置到指针**NULL**。 **va_end**必须对使用初始化每个自变量列表调用**va_start**或**va_copy**函数返回之前。
+- 检索所有参数后， **va_end**重置到指针**NULL**。 **va_end**必须与初始化每个自变量列表上调用**va_start**或**va_copy**函数返回前。
 
 > [!NOTE]
 > VARARGS.H 中的宏已弃用，将其保留只为保证与写于 ANSI C89 标准之前的代码的后向兼容性。 在所有其他情况下，请使用 STDARGS.H 中的宏。
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-请注意， **testit**第二个参数可以是以下之一应**int**或**char\***。 传递的自变量是 0xffffffff (**无符号** **int**，而不**int**) 和**NULL** (实际**int**，而不**char\***)。 为本机代码编译程序后，其生成以下输出：
+请注意， **testit**要求其第二个参数应是**int**或**char**<strong>\*</strong>。 正在传递的参数是 0xffffffff (**无符号** **int**，而不**int**) 和**NULL** (实际是**int**，而非**char**<strong>\*</strong>)。 为本机代码编译程序后，其生成以下输出：
 
 ```Output
 -1

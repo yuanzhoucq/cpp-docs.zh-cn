@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222333"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
 提供 Windows 公共 IP 地址控件的功能。  
@@ -76,7 +76,7 @@ class CIPAddressCtrl : public CWnd
   
  此控件 (并因此`CIPAddressCtrl`类) 仅供运行在 Microsoft Internet Explorer 4.0 及更高版本的程序。 它们也将在未来版本的 Windows 和 Windows NT 下可用。  
   
- IP 地址控件有关的更多常规信息，请参阅[IP 地址控件](http://msdn.microsoft.com/library/windows/desktop/bb761372)Windows SDK 中。  
+ IP 地址控件有关的更多常规信息，请参阅[IP 地址控件](/windows/desktop/Controls/ip-address-controls)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress)，如 Windows SDK 中所述。  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。  
@@ -120,10 +120,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
+ IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
   
  *rect*  
- 对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ 对 IP 地址控件的大小和位置的引用。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
  *pParentWnd*  
  指向 IP 地址控件的父窗口的指针。 它不能为 NULL。  
@@ -157,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
+ IP 地址控件的样式。 应用窗口样式的组合。 必须包括 WS_CHILD 样式，因为该控件必须是子窗口。 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 样式的列表中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
   
  *pParentWnd*  
  指向控件的父级的窗口的指针。  
@@ -210,7 +210,7 @@ int GetAddress(DWORD& dwAddress);
  在 IP 地址控件中的非空字段数。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
+ 此成员函数可实现 Win32 消息的行为[IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
   
 |字段|包含字段值的位|  
 |-----------|-------------------------------------|  
@@ -230,7 +230,7 @@ BOOL IsBlank() const;
  如果所有的 IP 地址控件字段都是空，则为非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank)，如 Windows SDK 中所述。  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  设置 IP 地址控件中的所有四个字段的地址值。  
@@ -262,7 +262,7 @@ void SetAddress(DWORD dwAddress);
  一个 DWORD 值，该值包含新的 IP 地址。 请参阅**备注**的表显示了如何填充 DWORD 值。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)，如 Windows SDK 中所述。 在上面的第一个原型中, 读取的字段 0 到 3 的控件中的数字从左到右分别，填充的四个参数。 在上面的第二个原型*dwAddress*填充，如下所示。  
   
 |字段|包含字段值的位|  
 |-----------|-------------------------------------|  
@@ -283,7 +283,7 @@ void SetFieldFocus(WORD nField);
  应将焦点设置到的从零开始的字段索引。 如果此值大于的字段数，则会将焦点设置到第一个空白字段。 如果所有字段都均为非空，则会将焦点设置到的第一个字段。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus)，如 Windows SDK 中所述。  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  在 IP 地址控件中的指定字段中设置的范围。  
@@ -306,7 +306,7 @@ void SetFieldRange(
  对此 IP 地址控件在接收指定的字段的上限的整数的引用。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)，如 Windows SDK 中所述。 使用两个参数， *nLower*并*nUpper*，以指示该字段的下限和上限限制而不是*wRange* Win32 消息所使用的参数。  
+ 此成员函数可实现 Win32 消息的行为[IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange)，如 Windows SDK 中所述。 使用两个参数， *nLower*并*nUpper*，以指示该字段的下限和上限限制而不是*wRange* Win32 消息所使用的参数。  
   
 ## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

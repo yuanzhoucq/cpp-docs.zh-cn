@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ae5547e2cc650c65b4a67d9734f00cf88b76c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 69d25b87c03216b151a29c7688e61fcc278d0dd7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885609"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199164"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 此类是访问令牌的包装器。  
@@ -140,9 +140,9 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|调用此方法以设置的主要组`CAccessToken`对象。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)是一个对象，用于描述进程或线程的安全上下文并分配给每个用户登录到 Windows 系统。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
@@ -212,13 +212,13 @@ bool CreateImpersonationToken(
  指向新`CAccessToken`对象。  
   
  *sil*  
- 指定[SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)枚举类型，提供新的令牌模拟级别。  
+ 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)枚举类型，提供新的令牌模拟级别。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- `CreateImpersonationToken` 调用[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。  
+ `CreateImpersonationToken` 调用[DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  调用此方法以创建新的主令牌。  
@@ -235,16 +235,16 @@ bool CreatePrimaryToken(
  指向新`CAccessToken`对象。  
   
  *dwDesiredAccess*  
- 指定新的令牌的请求的访问权限。 默认情况下，MAXIMUM_ALLOWED，请求有效的调用方的所有访问权限。 请参阅[的访问权限和访问掩码](http://msdn.microsoft.com/library/windows/desktop/aa374902)的多个打开的访问权限。  
+ 指定新的令牌的请求的访问权限。 默认情况下，MAXIMUM_ALLOWED，请求有效的调用方的所有访问权限。 请参阅[的访问权限和访问掩码](/windows/desktop/SecAuthZ/access-rights-and-access-masks)的多个打开的访问权限。  
   
  *pTokenAttributes*  
- 指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的令牌的安全描述符，并确定是否子进程可以继承标记。 如果*pTokenAttributes*为 NULL，该令牌获取的默认安全描述符，不能继承句柄。  
+ 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的令牌的安全描述符，并确定是否子进程可以继承标记。 如果*pTokenAttributes*为 NULL，该令牌获取的默认安全描述符，不能继承句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- `CreatePrimaryToken` 调用[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)若要创建新的主令牌。  
+ `CreatePrimaryToken` 调用[DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617)若要创建新的主令牌。  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  调用此方法以创建新的进程所表示的用户的安全上下文中运行`CAccessToken`对象。  
@@ -271,22 +271,22 @@ bool CreateProcessAsUser(
  指向一个以 null 结尾的字符串，指定要执行的命令行。  
   
  *pProcessInformation*  
- 指向[PROCESS_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/ms684873)接收有关新进程的标识信息的结构。  
+ 指向[PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)接收有关新进程的标识信息的结构。  
   
  *pStartupInfo*  
- 指向[STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331)结构，它指定新的进程的主窗口应如何显示。  
+ 指向[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)结构，它指定新的进程的主窗口应如何显示。  
   
  *dwCreationFlags*  
- 指定用于控制优先级类和过程的创建的其他标志。 请参阅 Win32 函数[CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429)标志的列表。  
+ 指定用于控制优先级类和过程的创建的其他标志。 请参阅 Win32 函数[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)标志的列表。  
   
  *bLoadProfile*  
- 如果为 TRUE，加载用户的配置文件[LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281)。  
+ 如果为 TRUE，加载用户的配置文件[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。  
   
  *pProcessAttributes*  
- 指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的进程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pProcessAttributes*为 NULL，该过程获取的默认安全描述符，不能继承句柄。  
+ 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的进程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pProcessAttributes*为 NULL，该过程获取的默认安全描述符，不能继承句柄。  
   
  *pThreadAttributes*  
- 指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新线程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pThreadAttributes*为 NULL，该线程将获取的默认安全描述符，不能继承句柄。  
+ 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新线程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pThreadAttributes*为 NULL，该线程将获取的默认安全描述符，不能继承句柄。  
   
  *bInherit*  
  指示新进程是否继承自调用进程句柄。 如果为 TRUE，由新进程继承调用进程中的每个可继承打开句柄。 继承句柄具有相同的值和访问权限的原始句柄。  
@@ -298,7 +298,7 @@ bool CreateProcessAsUser(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- `CreateProcessAsUser` 使用`CreateProcessAsUser`Win32 函数来创建新的进程所表示的用户的安全上下文中运行`CAccessToken`对象。 请参阅的说明[CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429)函数所需的参数的完整讨论。  
+ `CreateProcessAsUser` 使用`CreateProcessAsUser`Win32 函数来创建新的进程所表示的用户的安全上下文中运行`CAccessToken`对象。 请参阅的说明[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)函数所需的参数的完整讨论。  
   
  此方法才能成功， `CAccessToken` （除非它是受限制的令牌），对象必须保留 AssignPrimaryToken 和 IncreaseQuota 特权。  
   
@@ -330,7 +330,7 @@ bool CreateRestrictedToken(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- `CreateRestrictedToken` 使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 函数来创建一个新`CAccessToken`具有限制的对象。  
+ `CreateRestrictedToken` 使用[CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 函数来创建一个新`CAccessToken`具有限制的对象。  
   
 > [!IMPORTANT]
 >  使用时`CreateRestrictedToken`，确保满足以下： 现有令牌是否有效 （且不由用户输入） 和*SidsToDisable*并*PrivilegesToDelete*同时有效 （且不由用户输入）。 如果该方法返回 FALSE，则拒绝功能。  
@@ -486,7 +486,7 @@ bool GetImpersonationLevel(
   
 ### <a name="parameters"></a>参数  
  *pImpersonationLevel*  
- 指向[SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)将接收模拟级别信息的枚举类型。  
+ 指向[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)将接收模拟级别信息的枚举类型。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -500,7 +500,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>参数  
  *pluid*  
- 指向[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)中有哪些将接收登录会话的 id。  
+ 指向[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)中有哪些将接收登录会话的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -591,7 +591,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 调用[OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函数。  
+ 调用[OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函数。  
   
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  调用此方法以获取指向关联的用户配置文件的句柄`CAccessToken`对象。  
@@ -612,7 +612,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
   
 ### <a name="parameters"></a>参数  
  *pSource*  
- 指向[TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631)结构。  
+ 指向[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -626,7 +626,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
   
 ### <a name="parameters"></a>参数  
  *pStatistics*  
- 指向[TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632)结构。  
+ 指向[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -679,7 +679,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>参数  
  *pluid*  
- 指向[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)中有哪些将接收令牌的 id。  
+ 指向[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)中有哪些将接收令牌的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -693,7 +693,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
   
 ### <a name="parameters"></a>参数  
  *pType*  
- 地址[TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633)的成功后，收到的令牌的类型的变量。  
+ 地址[TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type)的成功后，收到的令牌的类型的变量。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -805,16 +805,16 @@ bool LogonUser(
  指定指定的用户帐户的明文密码的以 null 结尾的字符串指针*pszUserName*。  
   
  *dwLogonType*  
- 指定要执行的登录操作的类型。 请参阅[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)的更多详细信息。  
+ 指定要执行的登录操作的类型。 请参阅[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)的更多详细信息。  
   
  *dwLogonProvider*  
- 指定登录提供程序。 请参阅[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)的更多详细信息。  
+ 指定登录提供程序。 请参阅[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)的更多详细信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 从登录令牌生成将与关联的访问`CAccessToken`。 此方法才能成功，`CAccessToken`对象必须保留 SE_TCB_NAME 权限，识别持有者作为基的受信任计算机的一部分。 请参阅[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)详细了解所需的特权。  
+ 从登录令牌生成将与关联的访问`CAccessToken`。 此方法才能成功，`CAccessToken`对象必须保留 SE_TCB_NAME 权限，识别持有者作为基的受信任计算机的一部分。 请参阅[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)详细了解所需的特权。  
   
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  中调用此方法从 COM 服务器处理来自客户端执行调用以初始化`CAccessToken`从 COM 客户端的访问令牌。  
@@ -834,7 +834,7 @@ bool OpenCOMClientToken(
  如果为 TRUE，则当前线程将模拟调用 COM 客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。  
   
  *bOpenAsSelf*  
- 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)方法或对调用线程的过程的安全上下文。  
+ 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。  
   
  如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。  
   
@@ -866,7 +866,7 @@ bool OpenNamedPipeClientToken(
  如果为 TRUE，则当前线程将模拟调用管道客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。  
   
  *bOpenAsSelf*  
- 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)方法或对调用线程的过程的安全上下文。  
+ 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。  
   
  如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。  
   
@@ -898,7 +898,7 @@ bool OpenRPCClientToken(
  如果为 TRUE，则当前线程将模拟调用的 RPC 客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。  
   
  *bOpenAsSelf*  
- 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)方法或对调用线程的过程的安全上下文。  
+ 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。  
   
  如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。  
   
@@ -927,12 +927,12 @@ bool OpenThreadToken(
  如果为 TRUE，该线程将保留在请求的模拟级别中，此方法完成后。 如果为 FALSE，该线程将恢复到其原始的模拟级别。  
   
  *bOpenAsSelf*  
- 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182)方法或对调用线程的过程的安全上下文。  
+ 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。  
   
  如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。  
   
  *sil*  
- 指定[SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572)枚举类型，用于提供令牌的模拟级别。  
+ 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)枚举类型，用于提供令牌的模拟级别。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -953,7 +953,7 @@ bool PrivilegeCheck(
   
 ### <a name="parameters"></a>参数  
  *RequiredPrivileges*  
- 指向[PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307)结构。  
+ 指向[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)结构。  
   
  *pbResult*  
  指向的值的方法设置指示是否在启用任何或所有指定的特权`CAccessToken`对象。  
@@ -962,7 +962,7 @@ bool PrivilegeCheck(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 当`PrivilegeCheck`返回时，`Attributes`的每个成员[LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)结构设置为 SE_PRIVILEGE_USED_FOR_ACCESS，如果启用了相应的权限。 此方法调用[PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函数。  
+ 当`PrivilegeCheck`返回时，`Attributes`的每个成员[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)结构设置为 SE_PRIVILEGE_USED_FOR_ACCESS，如果启用了相应的权限。 此方法调用[PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函数。  
   
 ##  <a name="revert"></a>  CAccessToken::Revert  
  调用此方法以停止从使用模拟标记的线程。  
@@ -1034,5 +1034,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
   
 ## <a name="see-also"></a>请参阅  
  [ATLSecurity 示例](../../visual-cpp-samples.md)   
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [访问令牌](/windows/desktop/SecAuthZ/access-tokens)   
  [类概述](../../atl/atl-class-overview.md)

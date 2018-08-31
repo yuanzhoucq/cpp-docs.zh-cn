@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885635"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195327"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 此类创建工作线程或使用现有工作区，等待上一个或多个内核对象句柄，并发出一个句柄的信号时执行指定的客户端函数。  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 删除句柄的时间[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将传递到关联的对象上调用[AddHandle](#addhandle)。 如果此调用失败，`CWorkerThread`将调用 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)句柄上的函数。  
+ 删除句柄的时间[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将传递到关联的对象上调用[AddHandle](#addhandle)。 如果此调用失败，`CWorkerThread`将调用 Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)句柄上的函数。  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  调用此方法以关闭该工作线程。  

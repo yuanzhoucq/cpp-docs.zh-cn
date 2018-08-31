@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 1） C4952 |Microsoft 文档
+title: 编译器警告 （等级 1） C4952 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42696dfae816742c958bca23e25e311e834dd62a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62f4c18380d89eb516a5fa49ef63e92ab79a6f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292137"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207146"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>编译器警告（等级 1）C4952
-“function”：在程序数据库“pgd_file”中未找到配置文件数据  
-  
- 当使用 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)时，编译器检测到一个在 `/LTCG:PGINSTRUMENT` 后被重新编译且具有一个新的函数 (***function***) 存在的输入模块。  
-  
- 此警告为信息性。 若要解决此警告，请运行 `/LTCG:PGINSTRUMENT`，重做所有测试，并运行 `/LTCG:PGOPTIMIZE`。  
-  
- 如果已使用 `/LTCG:PGOPTIMIZE` ，此警告将替换为一个错误。
+
+> '*函数*： 在程序数据库中找到的任何配置文件数据'*pgd_file*
+
+使用时[/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，编译器检测到之后重新编译输入的模块`/LTCG:PGINSTRUMENT`并且有一个新函数 (*函数*) 存在。
+
+此警告为信息性。 若要解决此警告，请运行 `/LTCG:PGINSTRUMENT`，重做所有测试，并运行 `/LTCG:PGOPTIMIZE`。
+
+如果已使用 `/LTCG:PGOPTIMIZE` ，此警告将替换为一个错误。

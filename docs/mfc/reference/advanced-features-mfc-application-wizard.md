@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539591"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198121"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
 本主题列出了应用程序的附加功能选项，如帮助、打印支持等。 在每个部分中，指定这些高级功能的附加支持。  
@@ -47,17 +47,17 @@ ms.locfileid: "42539591"
  支持 Windows 套接字，可以使用这些套接字编写通过 TCP/IP 网络进行通信的应用程序。  
   
  **活动辅助功能**  
- 添加了对支持[IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466)到[CWnd](../../mfc/reference/cwnd-class.md)的派生类，可用于自定义与辅助功能客户端更好的交互的用户界面。  
+ 添加了对支持[IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)到[CWnd](../../mfc/reference/cwnd-class.md)的派生类，可用于自定义与辅助功能客户端更好的交互的用户界面。  
   
  **公共控件清单**  
  默认情况下启用。 生成应用程序清单以启用 Microsoft Windows XP 或更新版本操作系统附带的公共控件 DLL。  
   
  第 6 版公共控件 DLL 不自动更新现有应用程序所使用的早期版本的公共控件。 若要使用第 6 版公共控件 DLL，你必须创建一个指示应用程序加载 DLL 的应用程序清单。 此公共控件 DLL 还支持 Windows XP 主题。  
   
- 应用程序清单还可指定应用程序需要的其他 DLL 和版本。 有关应用程序清单的详细信息，请参阅[独立应用程序和通过并行程序集](http://msdn.microsoft.com/library/dd408052)Windows SDK 中。  
+ 应用程序清单还可指定应用程序需要的其他 DLL 和版本。 有关应用程序清单的详细信息，请参阅[独立应用程序和通过并行程序集](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)Windows SDK 中。  
   
  **支持重新启动管理器**  
- 添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现： 使用新的重新启动管理器](http://msdn.microsoft.com/vstudio/ee886407)。  
+ 添加了对支持[Windows 重新启动管理器](/windows/desktop/RstMgr/using-restart-manager)。 此视频介绍如何使用 MFC 中的重新启动管理器：[如何实现： 使用新的重新启动管理器](https://msdn.microsoft.com/vstudio/ee886407)。  
   
  **高级的框架窗格**  
  |选项|描述|  

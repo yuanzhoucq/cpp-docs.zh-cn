@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220356"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "42600416"
 
 **自定义**c + + 属性会导致信息会放入类型库。 你将需要一种工具，从类型库中读取自定义值。
 
-**自定义**属性具有相同的功能[自定义](http://msdn.microsoft.com/library/windows/desktop/aa366766)MIDL 特性。
+**自定义**属性具有相同的功能[自定义](/windows/desktop/Midl/custom)MIDL 特性。
 
 ## <a name="requirements"></a>要求
 

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569844"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215693"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,11 +61,11 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>返回值
 
-如果返回操作系统文件句柄*fd*有效。 否则，将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回**INVALID_HANDLE_VALUE** (-1)，并将设置**errno**到**EBADF**，指示无效文件句柄。 若要避免编译器警告，在预期的 Win32 文件句柄的例程中使用结果时，将它转换到**处理**类型。
+如果返回的操作系统文件句柄*fd*有效。 否则，将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数返回**INVALID_HANDLE_VALUE** (-1)，并设置**errno**到**EBADF**，指示无效的文件句柄。 若要避免编译器警告，在预期的 Win32 文件句柄的例程中使用结果时，将其转换为**处理**类型。
 
 ## <a name="remarks"></a>备注
 
-若要关闭一个通过获取其操作系统 (OS) 的文件句柄的文件 **_get_osfhandle**，调用[_close](close.md)上的文件描述符*fd*。 不要调用**CloseHandle**此函数在返回值上。 基础的操作系统文件句柄拥有的*fd*文件描述符，并关闭时[_close](close.md)上调用*fd*。 如果由所拥有的文件描述符**文件\*** 流，然后调用[fclose](fclose-fcloseall.md)上**文件\*** 流关闭这两个的文件描述符和基础的操作系统文件句柄。 在这种情况下，不要调用[_close](close.md)上的文件描述符。
+若要关闭其操作系统 (OS) 的文件句柄通过的文件 **_get_osfhandle**，调用[_close](close.md)上的文件描述符*fd*。 不要调用**CloseHandle**上此函数的返回值。 基础 OS 文件句柄归*fd*的文件说明符，并关闭时[_close](close.md)上调用*fd*。 如果文件描述符归`FILE *`流，然后调用[fclose](fclose-fcloseall.md)上的`FILE *`流关闭文件描述符和基础 OS 文件句柄。 在这种情况下，不要调用[_close](close.md)上的文件描述符。
 
 ## <a name="requirements"></a>要求
 

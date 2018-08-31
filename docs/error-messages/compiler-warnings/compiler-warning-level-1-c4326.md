@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 1） C4326 |Microsoft 文档
+title: 编译器警告 （等级 1） C4326 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283125"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210999"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>编译器警告（等级 1）C4326
-function 的返回类型应为 type1 而不是 type2  
-  
- 函数返回的类型以外***type1***。 例如，使用[/Za](../../build/reference/za-ze-disable-language-extensions.md)，main 未返回`int`。  
-  
- 下面的示例生成 C4326:  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> 返回类型*函数*'应是'*type1*而不是 of*type2*
+
+## <a name="remarks"></a>备注
+
+一个函数返回的类型不是*type1*。 例如，使用[/Za](../../build/reference/za-ze-disable-language-extensions.md)，**主要**未返回**int**。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4326 并演示如何修复此错误：
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

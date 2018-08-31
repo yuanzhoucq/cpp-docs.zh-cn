@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207636"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 `CSplitButton`类表示拆分按钮控件。 当用户单击按钮的主要部分时，拆分按钮控件将执行一个默认行为，而当用户单击按钮的下拉箭头时，控件将显示一个下拉菜单。  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|处理系统发送当用户单击当前的拆分按钮控件的下拉箭头的 BCN_DROPDOWN 通知。|  
   
 ## <a name="remarks"></a>备注  
- `CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式 BS_SPLITBUTTON 按钮控件。 当用户单击下拉箭头时，它会显示一个自定义菜单。 有关详细信息，请参阅中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式[按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。  
+ `CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式 BS_SPLITBUTTON 按钮控件。 当用户单击下拉箭头时，它会显示一个自定义菜单。 有关详细信息，请参阅中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式[按钮样式](/windows/desktop/Controls/button-styles)。  
   
  下图描绘了一个包含页导航控件和一个 (1) 的拆分按钮控件的对话框。 已单击的 (2) 的下拉箭头，并显示 (3) 的子菜单。  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |参数|描述|  
 |---------------|-----------------|  
 |[in]*dwStyle*|按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
-|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
+|[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
 |[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
 |[in]*nID*|控件的 ID。|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|指向[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)结构，其中包含有关的信息[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
-|[out]*pResult*|（未使用; 不返回任何值。）返回的值[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
+|[in]*pNMHDR*|指向[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)结构，其中包含有关的信息[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|[out]*pResult*|（未使用; 不返回任何值。）返回的值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
   
 ### <a name="remarks"></a>备注  
  当用户单击拆分按钮控件上的下拉箭头时，系统会发送 BCN_DROPDOWN 通知消息，其中`OnDropDown`方法句柄。 但是，`CSplitButton`对象不转发到包含拆分按钮控件的控件的 BCN_DROPDOWN 通知。 因此，包含控件不能响应与通知中支持自定义操作。  

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200383"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571936"
 ```  
   
  BOOT_APPLICATION  
- 在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[关于 BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)。  
+ 在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[关于 BCD](/previous-versions/windows/desktop/bcd/about-bcd)。  
   
  CONSOLE  
  Win32 字符模式应用程序。 操作系统提供为控制台应用程序提供控制台。 如果`main`或`wmain`为本机代码中，定义`int main(array<String ^> ^)`为托管代码中，定义或应用程序完全使用生成`/clr:safe`，控制台是默认值。  

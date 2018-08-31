@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b433befdec72b000bc83d2087bc5eb15e2d00496
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538589"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131914"
 ---
 # <a name="library-support-for-multithreading"></a>多线程编程的库支持
 所有版本的 CRT 现在都支持多线程处理，但某些函数的非锁定版本除外。 请参阅[多线程库性能](../c-runtime-library/multithreaded-libraries-performance.md)有关详细信息。  
@@ -29,4 +29,4 @@ ms.locfileid: "42538589"
   
 ## <a name="see-also"></a>请参阅  
 
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)

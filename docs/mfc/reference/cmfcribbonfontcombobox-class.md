@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216469"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 类
 实现包含字体列表的组合框。 将组合框置于功能区面板上。  
@@ -144,9 +144,9 @@ CMFCRibbonFontComboBox(
  指定以像素为单位，组合框的宽度。  
   
 ### <a name="remarks"></a>备注  
- 有关可能的详细信息*nFontType*参数值，请参阅[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
+ 有关可能的详细信息*nFontType*参数值，请参阅[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
   
- 详细了解可以分配给有效字符集*nCharSet*，并可以分配给的有效值*nPitchAndFamily*，请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)中Windows SDK 文档。  
+ 详细了解可以分配给有效字符集*nCharSet*，并可以分配给的有效值*nPitchAndFamily*，请参阅[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)中Windows SDK 文档。  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  

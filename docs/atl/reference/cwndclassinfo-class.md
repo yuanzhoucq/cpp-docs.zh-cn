@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201657"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 类
 此类提供了用于注册窗口类信息的方法。  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- 有关窗口类的详细信息，请参阅[窗口类](http://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
+ 有关窗口类的详细信息，请参阅[窗口类](https://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
   
  有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` 使用`m_szAutoName`仅当将 NULL 传递`WndClassName`参数[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)，则[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)或者[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL 窗口类注册时将构造的名称。  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- 维护中的窗口类信息[WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577)结构。  
+ 维护中的窗口类信息[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)结构。  
   
 ```
 WNDCLASSEX m_wc;

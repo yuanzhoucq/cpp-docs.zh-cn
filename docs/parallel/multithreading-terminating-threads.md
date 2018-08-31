@@ -1,7 +1,7 @@
 ---
-title: 多线程处理： 终止线程 |Microsoft Docs
+title: 多线程处理： 终止线程在 MFC 中的 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205417"
 ---
-# <a name="multithreading-terminating-threads"></a>多线程处理：终止线程
+# <a name="multithreading-terminating-threads-in-mfc"></a>多线程处理： 终止线程在 MFC 中
 两个正常的情况下会导致线程终止： 控制函数退出或不允许线程运行到完成。 如果字处理器使用后台打印线程，如果已成功打印已完成控制函数将正常终止。 如果用户想要取消打印，但是，后台打印线程必须提前终止。 本主题说明如何实现每种情况以及如何在终止后获取线程的退出代码。  
   
 - [正常线程终止](#_core_normal_thread_termination)  
@@ -43,7 +43,7 @@ ms.locfileid: "42608839"
  
 对于辅助线程，正常线程终止很简单： 退出控制函数并返回一个值，表示终止的原因。 你可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函数或**返回**语句。 通常情况下，0 表示成功完成，但这取决于您。  
   
-对于用户界面线程，该过程也很简单： 从在用户界面线程中，调用[PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的参数的`PostQuitMessage`采用是线程的退出代码。 对于辅助线程，0 通常表示成功完成。  
+对于用户界面线程，该过程也很简单： 从在用户界面线程中，调用[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的参数的`PostQuitMessage`采用是线程的退出代码。 对于辅助线程，0 通常表示成功完成。  
   
 ##  <a name="_core_premature_thread_termination"></a> 过早的线程终止  
  
@@ -53,7 +53,7 @@ ms.locfileid: "42608839"
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> 检索线程的退出代码  
  
-若要获取的辅助角色或用户界面线程的退出代码，调用[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)函数。 有关此函数的信息，请参阅 Windows SDK。 此函数采用到线程句柄 (存储在`m_hThread`的数据成员`CWinThread`对象) 和一个 dword 值的地址。  
+若要获取的辅助角色或用户界面线程的退出代码，调用[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)函数。 有关此函数的信息，请参阅 Windows SDK。 此函数采用到线程句柄 (存储在`m_hThread`的数据成员`CWinThread`对象) 和一个 dword 值的地址。  
   
 如果线程仍处于活动状态， `GetExitCodeThread` STILL_ACTIVE 置于所提供的 DWORD 地址; 否则，退出代码放置在该地址。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "42608839"
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 c + + 和 MFC 多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)   
+[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)   
 [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

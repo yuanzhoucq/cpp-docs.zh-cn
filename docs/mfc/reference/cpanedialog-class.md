@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213145"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 类
 `CPaneDialog`类支持无模式可停靠的对话框。  
@@ -54,12 +54,12 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::Create](#create)|创建可停靠对话框，并将其附加到`CPaneDialog`对象。|  
 |`CPaneDialog::CreateObject`|由框架用于创建此类类型的动态实例。|  
 |`CPaneDialog::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。 (重定义`CBasePane::HandleInitDialog`。)|  
-|`CPaneDialog::OnEraseBkgnd`|处理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息。 (重新定义[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
-|`CPaneDialog::OnLButtonDblClk`|处理[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。 (重新定义[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
-|`CPaneDialog::OnLButtonDown`|处理[WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)消息。 (重新定义[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
-|`CPaneDialog::OnUpdateCmdUI`|由框架调用以更新对话框窗口。 (重写[cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
-|`CPaneDialog::OnWindowPosChanging`|处理[WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)消息。 (重新定义[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|处理[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)消息。 (重定义`CBasePane::HandleInitDialog`。)|  
+|`CPaneDialog::OnEraseBkgnd`|处理[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)消息。 (重新定义[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
+|`CPaneDialog::OnLButtonDblClk`|处理[需知道 WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk)消息。 (重新定义[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
+|`CPaneDialog::OnLButtonDown`|处理[WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown)消息。 (重新定义[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
+|`CPaneDialog::OnUpdateCmdUI`|由框架调用以更新对话框窗口。 (重写[cdockablepane:: Onupdatecmdui](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
+|`CPaneDialog::OnWindowPosChanging`|处理[WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging)消息。 (重新定义[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定的 OLE 控件容器的对话框的模板。|  
   
 ## <a name="remarks"></a>备注  
@@ -161,7 +161,7 @@ BOOL Create(
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- 处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。  
+ 处理[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)消息。  
   
 ```  
 afx_msg LRESULT HandleInitDialog(

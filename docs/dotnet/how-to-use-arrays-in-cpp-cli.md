@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用数组中 C + + /cli CLI |Microsoft 文档
+title: 如何： 使用数组中 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213000"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用数组
-本文介绍如何将使用数组中 C + + /cli CLI。  
+本文介绍如何使用数组中 C + + /cli CLI。  
   
 ## <a name="single-dimension-arrays"></a>一维数组  
- 下面的示例演示如何创建一维数组的引用、 值和本机指针类型。 它还显示如何从函数返回一个一维数组，以及如何将一维数组作为自变量传递给函数。  
+ 下面的示例演示如何创建一维数组的引用、 值和本机指针类型。 它还显示如何从函数返回的单维数组以及如何将单维数组作为参数传递给函数。  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- 下一步的示例演示如何在一维托管数组上执行聚合初始化。  
+ 下一个示例演示如何在一维托管数组上执行聚合初始化。  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -213,7 +213,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11  
 ```  
   
- 此示例演示如何在多维度托管数组上执行聚合初始化：  
+ 此示例演示如何对多维度托管数组执行聚合初始化：  
   
 ```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
@@ -258,7 +258,7 @@ int main() {
 ```  
   
 ## <a name="jagged-arrays"></a>交错数组  
- 本部分演示如何创建托管数组的引用、 值和本机指针类型的一维数组。 它还显示如何从函数返回托管数组的一维数组以及如何将一维数组作为自变量传递给函数。  
+ 本部分演示如何创建托管数组的引用、 值和本机指针类型的一维数组。 它还显示如何从函数返回托管数组的单维数组以及如何将单维数组作为参数传递给函数。  
   
 ```cpp  
 // mcppv2_array_of_arrays.cpp  
@@ -355,7 +355,7 @@ IntArray[1] = 11
 41  
 ```  
   
- 下面的示例演示如何执行与交错数组的聚合初始化。  
+ 下面的示例演示如何执行聚合初始化交错数组使用。  
   
 ```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
@@ -461,7 +461,7 @@ MyClass0[1] = 1
 ```  
   
 ## <a name="managed-arrays-as-template-type-parameters"></a>托管数组用作模板类型参数  
- 此示例演示如何使用托管的数组作为参数传递给模板：  
+ 此示例演示如何将托管的数组用作模板的参数：  
   
 ```cpp  
 // mcppv2_template_type_params.cpp  
@@ -489,7 +489,7 @@ int main() {
 Return Code: 0  
 ```  
   
-## <a name="typedefs-for-managed-arrays"></a>托管数组的 typedef  
+## <a name="typedefs-for-managed-arrays"></a>托管数组的的类型定义  
  此示例演示如何使托管数组的 typedef:  
   
 ```cpp  
@@ -506,9 +506,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays"></a>对数组进行排序  
- 标准 c + + 与数组不同，托管的数组隐式从它们从其继承常见行为数组基类派生。 一个示例是`Sort`方法，可用于任何数组中的项进行排序。  
+ 标准 c + + 与数组不同，托管的数组隐式派生自数组基类它们均从中继承常见行为。 例如，`Sort`方法，可用于任何数组中的项进行排序。  
   
- 对于包含基本的内部类型的数组，你可以调用`Sort`方法。 你可以重写的排序条件，并且此操作是必需时要进行排序的复杂类型数组。 在这种情况下，数组元素类型必须实现[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
+ 对于包含基本的内部类型的数组，可以调用`Sort`方法。 您可以重写的排序条件，而这又是必需时想要为复杂类型的数组进行排序。 在这种情况下，数组元素类型必须实现[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。  
   
 ```cpp  
 // array_sort.cpp  
@@ -523,10 +523,10 @@ int main() {
 }  
 ```  
   
-## <a name="sorting-arrays-by-using-custom-criteria"></a>使用自定义的条件对数组进行排序  
- 若要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 不过，若要包含复杂类型或若要重写默认排序条件，请重写的排序数组[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>通过使用自定义条件对数组进行排序  
+ 要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 但是，对包含复杂类型，或若要重写默认排序条件，请重写的排序数组[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)方法。  
   
- 在下面的示例中，一个名为`Element`派生自<xref:System.IComparable>，并已写入到提供<xref:System.IComparable.CompareTo%2A>用作排序条件的两个整数的平均值的方法。  
+ 在以下示例中，一种结构名为`Element`派生自<xref:System.IComparable>，并已写入到提供<xref:System.IComparable.CompareTo%2A>用作排序条件的两个整数平均值的方法。  
   
 ```cpp  
 using namespace System;  
@@ -584,9 +584,9 @@ int main() {
 }  
 ```  
   
- 向数组元素赋值应是赋值兼容与动态类型的数组。 向具有不兼容的类型的数组元素赋值会导致`System::ArrayTypeMismatchException`引发。  
+ 对数组元素赋值应是赋值兼容与动态类型的数组。 向具有不兼容的类型的数组元素赋值会导致`System::ArrayTypeMismatchException`引发。  
   
- 数组协方差不适用于值类类型的数组。 例如，Int32 数组无法转换为对象 ^ 数组，甚至不通过使用装箱。  
+ 数组协方差不适用于值类类型的数组。 例如，Int32 数组不能转换为对象 ^ 数组，甚至不通过使用装箱。  
   
 ```cpp  
 // clr_array_covariance2.cpp  

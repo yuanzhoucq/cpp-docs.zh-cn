@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575450"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220882"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供程序模板参考
 类和接口的 OLE DB 提供程序模板可分为以下类别。 参考资料还包括有关的信息[OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "42575450"
  实现 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))接口，可更新的现有行，删除行，并将插入新行中列的值。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)并重写[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl` 执行相同的功能`IObjectWithSite`还可以启用 OLE DB 属性，但`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
+ 此类继承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)并重写[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 `IRowsetCreatorImpl` 执行相同的功能`IObjectWithSite`还可以启用 OLE DB 属性，但`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  实现`IRowsetIdentity`接口，可用于比较无论两行数据是否相同。  

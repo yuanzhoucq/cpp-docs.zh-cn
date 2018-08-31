@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573322"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218023"
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装`SID`（安全标识符） 结构。  
@@ -105,7 +105,7 @@ class CSid
   
  应用程序不应修改`SID`结构直接，但改为使用此包装类中提供的方法。 另请参阅[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)， [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)， [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)，以及[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  返回指向的帐户的名称 LPCTSTR。  
   
 ### <a name="remarks"></a>备注  
- 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166)。  
+ 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。  
   
  如果没有帐户名称`SID`可以找到`AccountName`返回空字符串。 原因可能是网络超时可防止此方法查找名称。 它也会发生没有相应的帐户名称，例如登录安全标识符`SID`标识登录会话。  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  返回`LPCTSTR`指向域。  
   
 ### <a name="remarks"></a>备注  
- 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166)。  
+ 此方法会尝试查找指定的名称`SID`（安全标识符）。 有关完整详细信息，请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。  
   
  如果没有帐户名称`SID`可以找到`Domain`返回空字符串作为域。 原因可能是网络超时可防止此方法查找名称。 它也会发生没有相应的帐户名称，例如登录安全标识符`SID`标识登录会话。  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)适用于更多详细信息的 Windows SDK 中。  
+ 请参阅[EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621)适用于更多详细信息的 Windows SDK 中。  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  返回的长度`CSid`对象。  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回`SID`以适合显示、 存储或传输的格式的字符串的结构。 等效于[ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)。  
+ 返回`SID`以适合显示、 存储或传输的格式的字符串的结构。 等效于[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  返回的状态的说明`CSid`对象。  

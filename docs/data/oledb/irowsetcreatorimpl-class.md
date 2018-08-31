@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c828708a088c8fe31075a8fe8504f3a1f8c14b4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222034"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
 执行相同的功能`IObjectWithSite`但也可以启用 OLE DB 属性`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`。  
@@ -64,10 +64,10 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |[SetSite](#setsite)|设置包含行集对象的站点。|  
   
 ## <a name="remarks"></a>备注  
- 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)并重写[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 当提供程序命令或会话对象创建行集时，它将调用`QueryInterface`寻找对行集对象`IObjectWithSite`并调用`SetSite`将行集对象传递`IUnkown`作为站点接口的接口。  
+ 此类继承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)并重写[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 当提供程序命令或会话对象创建行集时，它将调用`QueryInterface`寻找对行集对象`IObjectWithSite`并调用`SetSite`将行集对象传递`IUnkown`作为站点接口的接口。  
 
 ## <a name="setsite"></a> Irowsetcreatorimpl:: Setsite
-设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
+设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。  
   
 ### <a name="syntax"></a>语法  
   

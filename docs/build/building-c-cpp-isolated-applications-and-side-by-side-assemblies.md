@@ -1,5 +1,5 @@
 ---
-title: 生成 C/c + + 独立应用程序和通过并行程序集 |Microsoft 文档
+title: 生成 C/c + + 独立应用程序和通过并行程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8d806af709d6d6e2a5754bc80a34a473900177f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212907"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>生成 C/C++ 独立应用程序和并行程序集
-Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础是 [独立应用程序](http://msdn.microsoft.com/library/aa375190) 和 [并行程序集](http://msdn.microsoft.com/library/ff951640)。 默认情况下，Visual C++ 将所有本机 C/C++ 应用程序都作为独立应用程序来生成，这些应用程序使用 [清单](http://msdn.microsoft.com/library/aa375365) 来描述其在 Visual C++ 库上的依赖关系。  
+Visual c + + 的理论基础是 Windows 客户端应用程序支持的部署模型[独立应用程序](/windows/desktop/SbsCs/isolated-applications)并[通过并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。 默认情况下，Visual c + + 生成的所有本机 C/c + + 应用程序作为独立的应用程序使用[清单](https://msdn.microsoft.com/library/aa375365)来描述其在 Visual c + + 库上的依赖关系。  
   
- 将 C/C++ 程序生成为独立应用程序具有一系列的好处。 例如，当其他 C/C++ 应用程序安装或卸载 Visual C++ 库时，不会影响独立应用程序。 仍可将独立应用程序使用的 Visual C++ 库重新发布到应用程序的本地文件夹中或通过安装重新发布到本机程序集缓存 (WinSxS)；但是，通过使用 [发布者配置文件](http://msdn.microsoft.com/library/aa375680)，为已部署的应用程序提供 Visual C++ 库服务时会更加简单。 借助于独立应用程序部署模型，更加容易确保在特定计算机上运行的 C/C++ 应用程序使用 Visual C++ 库的最新版本，同时使系统管理员和应用程序的作者仍可以控制应用程序与其依赖 DLL 的显式版本绑定。  
+ 将 C/C++ 程序生成为独立应用程序具有一系列的好处。 例如，当其他 C/C++ 应用程序安装或卸载 Visual C++ 库时，不会影响独立应用程序。 独立应用程序使用的 visual c + + 库应用程序本地文件夹，或通过安装到本机程序集缓存 (WinSxS); 仍可以再分发但是，为已部署的应用程序可以通过使用简化的 Visual c + + 库维护[发布服务器配置文件](/windows/desktop/SbsCs/publisher-configuration)。 借助于独立应用程序部署模型，更加容易确保在特定计算机上运行的 C/C++ 应用程序使用 Visual C++ 库的最新版本，同时使系统管理员和应用程序的作者仍可以控制应用程序与其依赖 DLL 的显式版本绑定。  
   
  本节讨论如何将 C/C++ 应用程序生成为独立应用程序并确保使用清单将它绑定到 Visual C++ 库。 本部分中的信息主要适用于本机或非托管的 Visual C++ 应用程序。 有关部署使用 Visual C++ 生成的本机应用程序的信息，请参阅 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。  
   
@@ -49,6 +49,6 @@ Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础
  [C/C++ 独立应用程序和并行程序集疑难解答](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [独立应用程序和并行程序集](http://msdn.microsoft.com/library/dd408052)  
+ [独立应用程序和通过并行程序集](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)  
   
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

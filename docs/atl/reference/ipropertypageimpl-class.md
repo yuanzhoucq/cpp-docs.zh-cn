@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884745"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210106"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 类
-此类实现`IUnknown`，并提供的默认实现[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口。  
+此类实现`IUnknown`，并提供的默认实现[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)接口。  
   
 > [!IMPORTANT]
 >  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|存储的高度和宽度的属性页对话框中，以像素为单位。|  
   
 ## <a name="remarks"></a>备注  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)接口允许对象管理的属性表中的特定属性页面。 类`IPropertyPageImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
+ [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)接口允许对象管理的属性表中的特定属性页面。 类`IPropertyPageImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>备注  
  默认情况下，对话框的始终是无模式，而不考虑的值*bModal*参数。  
   
- 请参阅[IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) Windows SDK 中。  
+ 请参阅[IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) Windows SDK 中。  
   
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply  
  适用于通过指定的基础对象的属性页的当前值`SetObjects`。  
@@ -143,7 +143,7 @@ HRESULT Apply();
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) Windows SDK 中。  
+ 请参阅[IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) Windows SDK 中。  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  销毁对话框窗口使用创建[激活](#activate)。  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) Windows SDK 中。  
+ 请参阅[IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) Windows SDK 中。  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  填充*pPageInfo*结构中的数据成员包含的信息。  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>备注  
  `GetPageInfo` 加载与关联的字符串资源[m_dwDocString](#m_dwdocstring)， [m_dwHelpFile](#m_dwhelpfile)，并[m_dwTitle](#m_dwtitle)。  
   
- 请参阅[IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) Windows SDK 中。  
+ 请参阅[IPropertyPage::GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) Windows SDK 中。  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  调用属性页面的 Windows 帮助。  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) Windows SDK 中。  
+ 请参阅[IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) Windows SDK 中。  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  构造函数。  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- 指向[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)通过其属性页与属性框架进行通信的接口。  
+ 指向[IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)通过其属性页与属性框架进行通信的接口。  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) Windows SDK 中。  
+ 请参阅[IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) Windows SDK 中。  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty  
  标记为已更改或不变，具体取决于值的属性页的状态*bDirty*。  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) Windows SDK 中。  
+ 请参阅[IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) Windows SDK 中。  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- 提供了与属性页[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)指针，通过该属性页与属性框架进行通信。  
+ 提供了与属性页[IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)指针，通过该属性页与属性框架进行通信。  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) Windows SDK 中。  
+ 请参阅[IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) Windows SDK 中。  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  使属性页对话框中可见或不可见。  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) Windows SDK 中。  
+ 请参阅[IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) Windows SDK 中。  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  处理中指定的击键`pMsg`。  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) Windows SDK 中。  
+ 请参阅[IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [IPropertyPage2Impl 类](../../atl/reference/ipropertypage2impl-class.md)   

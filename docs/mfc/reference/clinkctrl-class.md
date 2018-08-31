@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208005"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200999"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 提供 Windows 公共 SysLink 控件的功能。  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  此控件 (并因此`CLinkCtrl`类) 仅供运行在 Windows XP 及更高版本的程序。  
   
- 有关详细信息，请参阅[SysLink 控件](http://msdn.microsoft.com/library/windows/desktop/bb760706)Windows SDK 中。  
+ 有关详细信息，请参阅[SysLink 控件](/windows/desktop/Controls/syslink-overview)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>参数  
  *lpszLinkMarkup*  
- 以零结尾的字符串，包含要显示的文本标记的指针。 有关详细信息，请参阅主题中的"标记和链接访问"一节[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
+ 以零结尾的字符串，包含要显示的文本标记的指针。 有关详细信息，请参阅主题中的"标记和链接访问"一节[SysLink 控件概述](/windows/desktop/Controls/syslink-overview)。  
   
  *dwStyle*  
- 指定链接控件的样式。 将应用控件样式的任意组合。 请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中`Windows SDK`有关详细信息。  
+ 指定链接控件的样式。 将应用控件样式的任意组合。 请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)中`Windows SDK`有关详细信息。  
   
  *rect*  
  指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>参数  
  *lpszLinkMarkup*  
- 以零结尾的字符串，包含要显示的文本标记的指针。 有关详细信息，请参阅主题中的"标记和链接访问"一节[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
+ 以零结尾的字符串，包含要显示的文本标记的指针。 有关详细信息，请参阅主题中的"标记和链接访问"一节[SysLink 控件概述](/windows/desktop/Controls/syslink-overview)。  
   
  *dwExStyle*  
- 指定链接控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定链接控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *dwStyle*  
- 指定链接控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
+ 指定链接控件的样式。 将应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。  
   
  *rect*  
  指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  控件，以像素为单位的理想高度。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight)，如 Windows SDK 中所述。  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  计算当前的链接控件，具体取决于指定宽度的链接的链接文本的首选的高度。  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |参数|描述|  
 |---------------|-----------------|  
 |[in]*cxMaxWidth*|该链接，以像素为单位的最大宽度。|  
-|[out]\* *pSize*|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|  
+|[out]\* *pSize*|指向 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|  
   
 ### <a name="return-value"></a>返回值  
  链接文本，以像素为单位的首选的高度。 返回值是相同的值*cy*的成员`SIZE`结构。  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>备注  
  有关的示例`GetIdealSize`方法，请参阅中的示例[CLinkCtrl::Create](#create)。  
   
- 此方法将发送[LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718)消息，Windows SDK 中所述。  
+ 此方法将发送[LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize)消息，Windows SDK 中所述。  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  检索状态和属性的链接控件项。  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>参数  
  *pItem*  
- 一个指向[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构，以接收项的信息。  
+ 一个指向[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)结构，以接收项的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[LM_GETITEM](/windows/desktop/Controls/lm-getitem)，如 Windows SDK 中所述。  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  检索的链接控件项的 ID。  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  此函数也返回 FALSE，如果的缓冲区*szID 或 strID*小于 MAX_LINKID_TEXT。  
   
 ### <a name="remarks"></a>备注  
- 检索特定链接控件项的 ID。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 检索特定链接控件项的 ID。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  检索链接控件项的状态。  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  指定的状态项的值。  
   
  *stateMask*  
- 描述要获取的状态项的标志的组合。 值的列表，请参阅的说明`state`中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项目是与允许在相同`state`。  
+ 描述要获取的状态项的标志的组合。 值的列表，请参阅的说明`state`中的成员[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)结构。 允许的项目是与允许在相同`state`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 检索指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 检索指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  检索由链接控件项的 URL。  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  此函数也返回 FALSE，如果的缓冲区*szUrl 或 strUrl*小于 MAX_LINKID_TEXT。  
   
 ### <a name="remarks"></a>备注  
- 检索由指定的链接控件项的 URL。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 检索由指定的链接控件项的 URL。 有关详细信息，请参阅 Win32 消息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  确定用户是否单击指定的链接。  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[LM_HITTEST](/windows/desktop/Controls/lm-hittest)，如 Windows SDK 中所述。  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  设置的状态和属性的链接控件项。  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>参数  
  *pItem*  
- 一个指向[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构，它包含要设置的信息。  
+ 一个指向[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)结构，它包含要设置的信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[LM_SETITEM](/windows/desktop/Controls/lm-setitem)，如 Windows SDK 中所述。  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  检索的链接控件项的 ID。  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 设置特定链接控件项的 ID。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 设置特定链接控件项的 ID。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  检索链接控件项的状态。  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  设置指定的状态项的值。  
   
  *stateMask*  
- 描述要设置状态项的标志的组合。 值的列表，请参阅的说明`state`中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项目是与允许在相同`state`。  
+ 描述要设置状态项的标志的组合。 值的列表，请参阅的说明`state`中的成员[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)结构。 允许的项目是与允许在相同`state`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 设置指定的状态的项的特定链接控件项的值。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 设置指定的状态的项的特定链接控件项的值。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  设置由链接控件项的 URL。  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- 设置由指定的链接控件项的 URL。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 设置由指定的链接控件项的 URL。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6008d97b0fab437a9ba2e6b8e0af8d3bc111532a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955424"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218952"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-描述一个对象，用于存储这两种类型的对象的有序的对 **双 * * *，* 首先表示第二个复数的实部表示虚数部分。
+描述一个对象，用于存储这两种类型的对象的有序的对**double**，则首先表示第二个复数的实部表示虚数部分。
 
 ## <a name="syntax"></a>语法
 
@@ -46,11 +46,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*RealVal*类型的值**double**正在构造的复数的实部。
+*RealVal*<br/>
+正在构造的复数实部的 **double** 类型值。
 
-*ImagVal*类型的值**double**正在构造的复数虚部。
+*ImagVal*<br/>
+正在构造的复数虚部的 **double** 类型值。
 
-*complexNum*类型的复数**float**或类型的**长双精度型**其实部和虚部用于初始化类型的复数**双**正在构造。
+*complexNum*<br/>
+类型的复数**float**类型或类型**长双精度型**其实部和虚部用于初始化类型的复数**double**正在构造。
 
 ## <a name="return-value"></a>返回值
 
@@ -104,7 +107,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type double gives c1 = (4,5)
 Implicit conversion from type float to type double,
@@ -114,7 +117,7 @@ Explicit conversion from type float to type double,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>要求

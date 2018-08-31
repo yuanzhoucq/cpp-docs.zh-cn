@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208658"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202598"
 ---
 # <a name="cfiletime-class"></a>CFileTime 类
 此类提供用于管理与文件相关联的日期和时间值的方法。  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |天|小时\*24|  
 |周|一天\*7|  
   
- **请注意**不是所有的文件系统可以记录创建和上次访问时间并不是所有的文件系统记录这些相同的方式。 示例中的，在 Windows NT FAT 文件系统上，则可以创建时具有的分辨率为 10 毫秒、 写入时具有的分辨率为 2 秒和访问时间具有的分辨率为 1 天 （访问日期）。 在 NTFS 中，访问时间程序的分辨率为 1 小时。 此外，FAT 记录在磁盘上的时间以本地时间，但 NTFS 在 UTC 中记录在磁盘上的时间。 有关详细信息，请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
+ **请注意**不是所有的文件系统可以记录创建和上次访问时间并不是所有的文件系统记录这些相同的方式。 示例中的，在 Windows NT FAT 文件系统上，则可以创建时具有的分辨率为 10 毫秒、 写入时具有的分辨率为 2 秒和访问时间具有的分辨率为 1 天 （访问日期）。 在 NTFS 中，访问时间程序的分辨率为 1 小时。 此外，FAT 记录在磁盘上的时间以本地时间，但 NTFS 在 UTC 中记录在磁盘上的时间。 有关详细信息，请参阅[文件时间](/windows/desktop/SysInfo/file-times)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>参数  
  *ft*  
- 一个[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构。  
+ 一个[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构。  
   
  *nTime*  
  日期和时间表示为一个 64 位值。  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  有关示例，请参阅[CFileTime::Millisecond](#millisecond)。  
   
 ## <a name="see-also"></a>请参阅  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTimeSpan 类](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [层次结构图表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

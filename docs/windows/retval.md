@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d29d619f8e561f1c506b69ffd132c46276026e13
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7ff83b156054774a06a371e7832dc73dc95a579c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221253"
 ---
 # <a name="retval"></a>retval
 
@@ -36,7 +36,7 @@ ms.locfileid: "42604585"
 
 ## <a name="remarks"></a>备注
 
-**Retval** c + + 属性具有相同的功能[retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 特性。
+**Retval** c + + 属性具有相同的功能[retval](/windows/desktop/Midl/retval) MIDL 特性。
 
 **retval**必须出现在函数声明中的最后一个参数。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571924"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131837"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -598,7 +598,7 @@ public:
 
 ## <a name="inheriting_constructors">继承构造函数 (C++ 11)</a>
 
-派生类可以使用 using 声明从直接基类继承构造函数，如下面的示例所示：
+在派生的类可以通过使用从直接基类继承构造函数**使用**声明如下面的示例中所示：
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-using 语句可将来自基类的所有构造函数引入范围（除了签名与派生类中的构造函数相同的构造函数）。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
+**Visual Studio 2017 版本 15.7 及更高版本**:**使用**中的语句 **/std: c + + 17**模式将引入作用域从基类除具有相同签名的所有构造函数在派生类中的构造函数。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本 15.7 中的改进](../cpp-conformance-improvements-2017.md#improvements_157)。
 
 如果类型指定基类，则类模板可以从类型参数继承所有构造函数：
 

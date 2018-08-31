@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852869"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211047"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 类
 无模式选项卡对话框 ( [CPropertySheet 类](../../mfc/reference/cpropertysheet-class.md))，使用户能够自定义工具栏、 菜单、 键盘快捷方式、 用户定义的工具和应用程序中的视觉样式。 通常，用户可从 **“工具”** 菜单中选择 **“自定义”** 来访问此对话框。  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>参数  
  [in、 out]*pAccel*  
- 指向表示为的建议的键盘分配[加速](http://msdn.microsoft.com/library/windows/desktop/ms646340)结构。  
+ 指向表示为的建议的键盘分配[加速](/windows/desktop/api/winuser/ns-winuser-tagaccel)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果该密钥可以是已分配或 FALSE，如果不能分配的密钥，则为 TRUE。 默认实现始终返回 TRUE。  

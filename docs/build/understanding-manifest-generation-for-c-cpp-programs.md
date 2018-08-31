@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 691a2adf5269be0047ee6eee474406b036cad200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222590"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程序的清单生成
-一个[清单](http://msdn.microsoft.com/library/aa375365)嵌入到应用程序或程序集可以是外部 XML 文件或资源的 XML 文档。 清单[独立应用程序](http://msdn.microsoft.com/library/aa375190)用于管理的名称和版本的应用程序应在运行时绑定到共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集及其依赖项。  
+一个[清单](https://msdn.microsoft.com/library/aa375365)嵌入到应用程序或程序集可以是外部 XML 文件或资源的 XML 文档。 清单[独立应用程序](/windows/desktop/SbsCs/isolated-applications)用于管理的名称和版本的应用程序应在运行时绑定到共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集及其依赖项。  
   
  有两种方法来创建独立应用程序或通过并行程序集清单。 首先，该程序集的作者可以手动创建以下规则和命名要求的清单文件。 或者，如果某个程序仅依赖于 CRT、 MFC、 ATL 或其他人等的 Visual c + + 程序集，然后清单可以自动生成链接器。  
   

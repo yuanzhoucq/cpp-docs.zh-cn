@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027522"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219168"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 此类提供方法以处理非聚合和聚合对象的对象引用计数管理。  
@@ -99,7 +99,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  使用的优点`CComPolyObject`避免同时`CComAggObject`和`CComObject`处理聚合和非聚合的情况下在模块中。 单个`CComPolyObject`对象将处理这两种情况。 因此，只有一份 vtable 和函数的一个副本存在于你的模块。 如果你 vtable 很大，这可以显著减少模块大小。 但是，如果你 vtable 很小，则使用`CComPolyObject`可能导致稍大模块大小，因为它不优化聚合或非聚合对象，因为`CComAggObject`和`CComObject`。  
   
- 如果您的对象进行了聚合， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)由实现`CComAggObject`或`CComPolyObject`。 这些类委托`QueryInterface`， `AddRef`，并`Release`调用`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`将转发到未知的外部。 通常情况下，重写`CComObjectRootEx::FinalConstruct`在您的类来创建聚合的任何对象，并重写`CComObjectRootEx::FinalRelease`以释放任何聚合对象。  
+ 如果您的对象进行了聚合， [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)由实现`CComAggObject`或`CComPolyObject`。 这些类委托`QueryInterface`， `AddRef`，并`Release`调用`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`将转发到未知的外部。 通常情况下，重写`CComObjectRootEx::FinalConstruct`在您的类来创建聚合的任何对象，并重写`CComObjectRootEx::FinalRelease`以释放任何聚合对象。  
   
  如果您的对象不会聚合，`IUnknown`由实现`CComObject`或`CComPolyObject`。 在这种情况下，调用`QueryInterface`， `AddRef`，并`Release`委派给`CComObjectRootEx`的`InternalQueryInterface`， `InternalAddRef`，和`InternalRelease`执行实际操作。  
   
@@ -222,7 +222,7 @@ ULONG InternalRelease();
  如果线程模型为多线程，`InterlockedDecrement`用于防止多个线程同时更改引用计数。  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- 如果线程模型为多线程，此方法会调用 Win32 API 函数[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，通过私有数据成员获取的等待线程可以获得关键部分对象的所有权。  
+ 如果线程模型为多线程，此方法会调用 Win32 API 函数[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，通过私有数据成员获取的等待线程可以获得关键部分对象的所有权。  
   
 ```
 void Lock();
@@ -279,7 +279,7 @@ IUnknown*
  如果对象聚合，未知的外部指向存储在`m_pOuterUnknown`。 如果该对象不会聚合，引用计数的访问`AddRef`并`Release`存储在[m_dwRef](#m_dwref)。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 每个类中列出[对象映射](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)后初始化模块时，调用此函数并再次时已终止。  
+ 每个类中列出[对象映射](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)后初始化模块时，调用此函数并再次时已终止。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -292,7 +292,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>备注  
  值*bStarting*参数指示是否将模块正在初始化或终止。 默认实现`ObjectMain`不执行任何操作，但可以在您的类初始化或清理资源，你想要分配的类中重写此函数。 请注意，`ObjectMain`类的任何实例都请求之前调用。  
   
- `ObjectMain` 从调用的 dll 的入口点的入口点函数可以执行的操作的类型是受限制。 有关这些限制的详细信息，请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)并[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
+ `ObjectMain` 从调用的 dll 的入口点的入口点函数可以执行的操作的类型是受限制。 有关这些限制的详细信息，请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)并[DllMain](/windows/desktop/Dlls/dllmain)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
@@ -335,7 +335,7 @@ ULONG OuterRelease();
  在非调试版本中，始终返回 0。 在调试版本中返回一个值，可能是有用的诊断或测试。  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- 如果线程模型为多线程，此方法会调用 Win32 API 函数[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，通过私有数据成员获取关键节对象的哪些版本所有权。  
+ 如果线程模型为多线程，此方法会调用 Win32 API 函数[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，通过私有数据成员获取关键节对象的哪些版本所有权。  
   
 ```
 void Unlock();

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205335"
 ---
 # <a name="bitset-class"></a>bitset 类
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>参数
 
-*N*类型的非零整数 bitset 对象中指定的位数`size_t`必须在编译时已知的。
+*N*<br/>
+ 类型的非零整数 bitset 对象中指定的位数`size_t`必须在编译时已知的。
 
 ## <a name="remarks"></a>备注
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>参数
 
-*val*其二进制表示用于初始化正在构造的位组中的位的无符号的整数。
+*val*<br/>
+ 使用其二进制表示法初始化正在构造的位组中的位的无符号整数。
 
-*str* 0 和 1 用于初始化位组位值组成的字符串。
+*str*<br/>
+ 由 0 和 1 组成的用于初始化位组位值的字符串。
 
-*_CStr* 0 和 1 用于初始化位组位值组成的 C 样式字符串。
+*_CStr*<br/>
+ 由 0 和 1 组成的用于初始化位组位值的 C 类型字符串。
 
-*_Pos*用于初始化位组中的第一位在字符串中，范围为从左到右和从零开始的字符的位置。
+*_Pos*<br/>
+ 字符串中的字符位置，从左到右计数，且从 0 开始，用于初始化位组中的第一位。
 
-*计数*中使用的位组中提供初始的值的字符串的字符数。
+*count*<br/>
+ 字符串中的字符数，用于提供位组中位的初始值。
 
-*_Zero*用于表示零的字符。 默认值为“0”。
+*_Zero*<br/>
+ 用于表示 0 的字符。 默认值为“0”。
 
-*（_o)* 用于表示一个字符。 默认值为“1”。
+*（_o)*<br/>
+ 用于表示 1 的字符。 默认值为“1”。
 
 ### <a name="remarks"></a>备注
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*其值将反转的位的位置。
+*_Pos*<br/>
+ 要将其值反转的位的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -473,7 +482,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="remarks"></a>备注
 
-第二个成员函数将引发[out_of_range](../standard-library/out-of-range-class.md)异常指定为参数的位置是否大于大小*N*的**bitset\<***N*** >** 其位已经过反转。
+第二个成员函数将引发[out_of_range](../standard-library/out-of-range-class.md)异常指定为参数的位置是否大于大小*N*的**bitset\<** *N* **>** 其位已经过反转。
 
 ### <a name="example"></a>示例
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*与目标位组是否不相等比较的位组。
+*right*<br/>
+ 要与目标位组比较是否不相等的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*是与目标位组按位组合的位组。
+*right*<br/>
+ 要与目标位组按位组合的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>参数
 
-*_Pos*左边的位组中的位均为要移动的位置数。
+*_Pos*<br/>
+ 位组中的位要向左侧移动的位置数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*的位组中的位均为要移动到左侧的位置数。
+*_Pos*<br/>
+ 位组中的位要向左侧移动的位置数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*与目标位组相等性比较的位组。
+*right*<br/>
+ 要与目标位组比较是否相等的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>参数
 
-*_Pos*的位组中的位均为要移动到右侧的位置数。
+*_Pos*<br/>
+ 位组中的位要向右侧移动的位置数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*的位组中的位均为要移动到右侧的位置数。
+*_Pos*<br/>
+ 位组中的位要向右侧移动的位置数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*所处的位组内的位的位置。
+*_Pos*<br/>
+ 位在位组内所处的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*是与目标位组按位组合的位组。
+*right*<br/>
+ 要与目标位组按位组合的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*是与目标位组按位组合的位组。
+*right*<br/>
+ 要与目标位组按位组合的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*val*类型的对象的值**bool**要分配给有点位组中。
+*val*<br/>
+ 类型的对象的值**bool**要分配给有点位组中。
 
-*_Bitref*窗体的引用*x [i]* 位置处的位*我*位组中*x*。
+*_Bitref*<br/>
+ 窗体 *x [ i ]* 对位组 *x* 中 *i* 位置上的位的引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -1213,7 +1234,7 @@ public:
 
 ### <a name="remarks"></a>备注
 
-`reference` 类仅作为位组 `operator[]` 的帮助程序类存在。 成员类描述可以访问位组中的单个位的对象。 让*b*是类型的对象**bool**， *x*并*y*类型的对象**bitset\<***N*** >** ，和*我*并*j*中对此类对象的有效位置。 表示法 *x [i]* 引用位组 *x* 中的 *i* 位置上的位。 `reference` 类的成员函数按顺序提供以下操作：
+`reference` 类仅作为位组 `operator[]` 的帮助程序类存在。 成员类描述可以访问位组中的单个位的对象。 让*b*是类型的对象**bool**， *x*并*y*类型的对象**bitset\<** *N* **>**，并且*我*并*j*中对此类对象的有效位置。 表示法 *x [i]* 引用位组 *x* 中的 *i* 位置上的位。 `reference` 类的成员函数按顺序提供以下操作：
 
 |操作|定义|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*重置为 0 的位组中的位的位置。
+*_Pos*<br/>
+ 要重置为 0 的位组中的位的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>参数
 
-*_Pos*设置为的位组中的位的位置分配一个值。
+*_Pos*<br/>
+ 要设置为分配值的位组中的位的位置。
 
-*val*要分配给指定的位置处的位的值。
+*val*<br/>
+ 要向指定位置的位分配的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>参数
 
-*_Pos*测试其值的位组中的位的位置。
+*_Pos*<br/>
+ 要测试其值的位组中位的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>备注
 
 成员函数引发 [out_of_range](../standard-library/out-of-range-class.md)
-

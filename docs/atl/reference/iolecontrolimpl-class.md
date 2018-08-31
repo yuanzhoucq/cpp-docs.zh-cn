@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201332"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 类
 此类提供的默认实现`IOleControl`接口并实现`IUnknown`。  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|通知控件用户已按指定的键击。 ATL 实现返回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>备注  
- 类`IOleControlImpl`提供的默认实现[IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320)接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
+ 类`IOleControlImpl`提供的默认实现[IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol)接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>备注  
  `FreezeEvents` 然后，返回 S_OK。  
   
- 请参阅[iolecontrol:: Freezeevents](http://msdn.microsoft.com/library/windows/desktop/ms678482) Windows SDK 中。  
+ 请参阅[iolecontrol:: Freezeevents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) Windows SDK 中。  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  填写有关控件的键盘行为的信息。  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) Windows SDK 中。  
+ 请参阅[IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  返回 E_NOTIMPL。  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) Windows SDK 中。  
+ 请参阅[IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) Windows SDK 中。  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  通知控件用户已按指定的键击。  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) Windows SDK 中。  
+ 请参阅[IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [IOleObjectImpl 类](../../atl/reference/ioleobjectimpl-class.md)   
- [ActiveX 控件接口](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)   
  [类概述](../../atl/atl-class-overview.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538391"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195230"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>线程控制的 C 运行库函数
 所有 Win32 程序都具有至少一个线程。 任何线程都可以创建其他线程。 一个线程可以快速完成其工作，然后终止; 或它可以将保持活动状态的程序的生命周期。  
@@ -40,7 +40,7 @@ LIBCMT 和 msvcrt 系统 C 运行时库提供用于线程创建和终止的以�
  
 `_beginthread`和`_beginthreadex`函数创建一个新线程。 线程与进程中的其他线程共享进程的代码和数据段，但有其自己唯一的寄存器值、 堆栈空间和当前指令地址。 系统向每个线程，提供 CPU 时间，使进程中的所有线程可并发都执行。  
   
-`_beginthread` 并`_beginthreadex`类似于[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API 中的函数，但具有这些差异：  
+`_beginthread` 并`_beginthreadex`类似于[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 API 中的函数，但具有这些差异：  
   
 - 它们初始化某些 C 运行时库变量。 这一点只有在您的线程中使用 C 运行时库。  
   
@@ -54,4 +54,4 @@ LIBCMT 和 msvcrt 系统 C 运行时库提供用于线程创建和终止的以�
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)

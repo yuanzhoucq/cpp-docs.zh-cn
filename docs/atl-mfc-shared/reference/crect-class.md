@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196643"
 ---
 # <a name="crect-class"></a>CRect 类
 类似于 Windows [RECT](../../mfc/reference/rect-structure1.md)结构。  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  指定要 deflate 顶部和底部的单位数`CRect`。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要 deflate 的单位数`CRect`。 `cx`值指定要 deflate 左侧和右侧的单位数和`cy`值指定要 deflate 的顶部和底部的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要 deflate 的单位数`CRect`。 `cx`值指定要 deflate 左侧和右侧的单位数和`cy`值指定要 deflate 的顶部和底部的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`，指定要 deflate 每一侧的单位数。  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  指定要放大量顶部和底部的单位数`CRect`。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要放大量的单位数`CRect`。 `cx`值指定要放大量左侧和右侧的单位数和`cy`值指定要放大量的顶部和底部的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](csize-class.md) ，指定要放大量的单位数`CRect`。 `cx`值指定要放大量左侧和右侧的单位数和`cy`值指定要放大量的顶部和底部的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`，指定要放大量每一侧的单位数。  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  包含[点](../../mfc/reference/point-structure1.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动这两个维度。  
   
  *size*  
- 包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动这两个维度。  
+ 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动这两个维度。  
   
 ### <a name="remarks"></a>备注  
  将移动`CRect` *x*沿 x 轴单位并*y*沿 y 轴的单位。 *X*并*y*参数是有符号的值，因此`CRect`可以向左移动或向右和向上或向下。  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  一个[点](../../mfc/reference/point-structure1.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`对象，其中包含要放大量的每一侧的单位数`CRect`。  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  一个[点](../../mfc/reference/point-structure1.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动矩形的单位数。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动矩形的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`对象，其中包含要 deflate 的每一侧的单位数`CRect`。  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  一个[点](../../mfc/reference/point-structure1.md)结构或[CPoint](cpoint-class.md)对象，它指定要移动的返回值的单位数。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动的返回值的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或[CSize](csize-class.md)对象，它指定要移动的返回值的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`对象，其中包含要放大量双方的返回值的单位数。  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  一个[点](../../mfc/reference/point-structure1.md)结构或`CPoint`对象，它指定要移动的返回值的单位数。  
   
  *size*  
- 一个[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，它指定要移动的返回值的单位数。  
+ 一个[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，它指定要移动的返回值的单位数。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或`CRect`对象，其中包含要 deflate 双方的返回值的单位数。  

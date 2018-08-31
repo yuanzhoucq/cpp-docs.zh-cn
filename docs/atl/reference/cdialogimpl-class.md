@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206636"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 此类提供用于创建模式对话框或无模式对话框的方法。  
@@ -102,7 +102,7 @@ template <class T,
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的对话框|[ATL 窗口类](../../atl/atl-window-classes.md)|  
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
-|对话框|[对话框](http://msdn.microsoft.com/library/windows/desktop/ms632588)和 Windows SDK 中的后续主题|  
+|对话框|[对话框](https://msdn.microsoft.com/library/windows/desktop/ms632588)和 Windows SDK 中的后续主题|  
   
 ## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in]向所有者窗口句柄。  
   
  **RECT &** *rect*  
- [in]一个[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定对话框的大小和位置。  
+ [in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定对话框的大小和位置。  
   
  *dwInitParam*  
  [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>参数  
  *hWndParent*  
- [in]向所有者窗口句柄。 默认值是返回的值[正在](http://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。  
+ [in]向所有者窗口句柄。 默认值是返回的值[正在](https://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。  
   
  *dwInitParam*  
  [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。  

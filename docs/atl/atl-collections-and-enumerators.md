@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204808"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 一个`collection`是提供一个允许对一组数据 （原始数据或其他对象） 的项的访问接口的 COM 对象。 为提供对一组对象的访问被称为遵循标准的接口*集合接口*。  
@@ -31,7 +31,7 @@ ms.locfileid: "37848789"
   
  `enumerator`是一个用于遍历集合中的项提供一个接口的 COM 对象。 枚举器接口提供串行访问通过四个所需的方法集合的元素： `Next`， `Skip`， `Reset`，和`Clone`。  
   
- 可以了解有关枚举器接口的详细信息，请参阅 （但完全假想的） 典型[IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)接口。  
+ 你可以了解有关通过阅读的枚举器接口的详细信息如参考内容[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)接口。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ATL 集合和枚举器类](../atl/atl-collection-and-enumerator-classes.md)  

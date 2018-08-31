@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218484"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 类
 提供窗口和 OLE 库之间的通信机制。  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>备注  
  重写此函数，以允许删除操作发生在窗口中。 默认实现调用[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，这只是默认情况下返回 DROPEFFECT_NONE。  
   
- 有关详细信息，请参阅[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK 中。  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  当光标离开在窗口实际上拖放操作时由框架调用。  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  如果要使用特殊行为拖放操作离开指定的窗口时，重写此函数。 此函数的默认实现调用[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)。  
   
- 有关详细信息，请参阅[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) Windows SDK 中。  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  当光标拖至窗口上时，由框架调用。  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>备注  
  应重写此函数以允许删除操作发生在窗口中。 此函数的默认实现调用[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，其默认情况下返回 DROPEFFECT_NONE。 因为在拖放操作频繁调用此函数时，应尽可能多地进行优化。  
   
- 有关详细信息，请参阅[IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ virtual BOOL OnDrop(
   
  默认实现`COleDropTarget::OnDrop`调用[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)，这只是默认情况下返回 FALSE。  
   
- 有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  发生放置操作时由框架调用。  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或目标中不存在。  
   
- 有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
+ 有关详细信息，请参阅[IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  调用此函数向 OLE Dll 作为有效的放置目标注册您的窗口。  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  拖放操作可以被接受，必须调用此函数。  
   
- 有关详细信息，请参阅[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows SDK 中。  
+ 有关详细信息，请参阅[RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) Windows SDK 中。  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  销毁已注册为放置目标，通过调用任何窗口之前调用此函数[注册](#register)从放置目标的列表中删除它。  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>备注  
  从自动调用此函数[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)处理程序已注册，因此通常需要显式调用此函数的窗口。  
   
- 有关详细信息，请参阅[RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) Windows SDK 中。  
+ 有关详细信息，请参阅[RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   

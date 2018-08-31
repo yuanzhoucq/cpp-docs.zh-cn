@@ -16,15 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7dfc909f5842220bf22d7e411c3155c4c8f8d1c5
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882093"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131346"
 ---
 # <a name="formatting-time-automation-classes"></a>格式化时间： 自动化类
-#### <a name="to-format-a-time"></a>时间格式  
+
+## <a name="to-format-a-time"></a>时间格式  
   
  使用`Format`的成员函数[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)或[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)创建表示已用时间字符串。  
   
@@ -32,13 +33,11 @@ ms.locfileid: "37882093"
   
  有关详细信息，请参阅类[COleVariant](../mfc/reference/colevariant-class.md)。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [常规日期和时间编程 MFC 中](../atl-mfc-shared/date-and-time.md)  
+- [常规日期和时间编程 MFC 中](../atl-mfc-shared/date-and-time.md)  
   
--   [日期和时间编程的通用类](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
-  
--   [使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+- [使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
 ## <a name="see-also"></a>请参阅  
  [日期和时间：自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)

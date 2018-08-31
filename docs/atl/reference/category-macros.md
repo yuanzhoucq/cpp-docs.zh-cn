@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206770"
 ---
 # <a name="category-macros"></a>分类宏
 这些宏定义类别映射。  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL 使用标准组件类别管理器注册组件类别。 如果管理器不存在于系统中注册该模块时，注册成功，但为该类将不会注册组件类别。  
   
- 组件类别的详细信息，请参阅[什么是组件类别以及它们如何工作](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK 中。  
+ 组件类别的详细信息，请参阅[什么是组件类别以及它们如何工作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  客户端可以使用为类注册的类别信息以确定其功能和要求，而无需创建它的一个实例。  
   
- 组件类别的详细信息，请参阅[什么是组件类别以及它们如何工作](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK 中。  
+ 组件类别的详细信息，请参阅[什么是组件类别以及它们如何工作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。  
   
 ### <a name="a-selection-of-stock-categories"></a>选择的股票类别  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |简单数据绑定|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |高级的数据绑定|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |无窗口控件|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|可识别 Internet 的对象|请参阅[Internet 注意对象](http://msdn.microsoft.com/library/windows/desktop/ms690561)Windows SDK for 示例列表中。||  
+|可识别 Internet 的对象|请参阅[Internet 注意对象](/windows/desktop/com/internet-aware-objects)Windows SDK for 示例列表中。||  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  客户端可以使用为类注册的类别信息以确定其功能和要求，而无需创建它的一个实例。 例如，控件可能需要一个容器，支持数据绑定。 容器可以找出是否必要的功能来通过查询该控件所需的类别的类别管理器中承载该控件。 如果容器不支持所需的功能，它可以拒绝托管 COM 对象。  
   
- 详细了解组件类别，包括示例列表，请参阅[什么是组件类别以及它们如何工作](http://msdn.microsoft.com/library/windows/desktop/ms694322)Windows SDK 中。  
+ 详细了解组件类别，包括示例列表，请参阅[什么是组件类别以及它们如何工作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。  
   
 ### <a name="a-selection-of-stock-categories"></a>选择的股票类别  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |简单数据绑定|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |高级的数据绑定|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |无窗口控件|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|可识别 Internet 的对象|请参阅[Internet 注意对象](http://msdn.microsoft.com/library/windows/desktop/ms690561)Windows SDK for 示例列表中。||  
+|可识别 Internet 的对象|请参阅[Internet 注意对象](/windows/desktop/com/internet-aware-objects)Windows SDK for 示例列表中。||  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

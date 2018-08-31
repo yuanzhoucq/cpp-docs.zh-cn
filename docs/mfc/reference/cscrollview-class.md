@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214972"
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 一个[CView](../../mfc/reference/cview-class.md)带滚动功能。  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   它会自动滚动以响应消息从键盘、 非滚动鼠标或智能鼠标滚轮。  
   
- 若要在响应消息从键盘自动滚动，添加对 WM_KEYDOWN 消息，并测试 VK_DOWN、 VK_PREV 和调用[SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)。  
+ 若要在响应消息从键盘自动滚动，添加对 WM_KEYDOWN 消息，并测试 VK_DOWN、 VK_PREV 和调用[SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos)。  
   
- 您可以处理鼠标滚轮滚动自己通过重写消息映射[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)并[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成员函数。 因为它们是用于`CScrollView`，这些成员函数支持的建议的行为[对 wm_mousewheel 进行](http://msdn.microsoft.com/library/windows/desktop/ms645617)，鼠标轮旋转消息。  
+ 您可以处理鼠标滚轮滚动自己通过重写消息映射[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)并[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成员函数。 因为它们是用于`CScrollView`，这些成员函数支持的建议的行为[对 wm_mousewheel 进行](/windows/desktop/inputdev/wm-mousewheel)，鼠标轮旋转消息。  
   
  若要充分利用自动滚动，派生视图类从`CScrollView`而不是从`CView`。 该视图是首次创建时，如果你想要计算的基于大小的文档，调用的可滚动视图大小`SetScrollSizes`通过重写的成员函数[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必须编写您自己的代码来查询文档的大小。 有关示例，请参阅[Scribble 示例](../../visual-cpp-samples.md)。)  
   

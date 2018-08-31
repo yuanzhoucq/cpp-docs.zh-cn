@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330701c4fcc75d40e782d25baa55044b88852f50
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3e31e7e9a7a15c70c74193d77181122c022a938a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217306"
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 必须先初始化 OLE 系统并验证 DLL 是否是正确版本，然后应用程序才能使用 OLE 系统服务。 `AfxOleInit`函数将初始化 OLE 系统 Dll。  
@@ -63,15 +63,15 @@ BOOL AFXAPI AfxOleInit();
 ### <a name="remarks"></a>备注  
  调用此函数以初始化 OLE 支持 MFC 应用程序。 当调用此函数时，将执行以下操作：  
   
--   初始化 COM 库调用的应用程序的当前单元上。 有关详细信息，请参阅[OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)。  
+-   初始化 COM 库调用的应用程序的当前单元上。 有关详细信息，请参阅[OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize)。  
   
--   创建消息筛选器对象，实现[IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740)接口。 此消息筛选器可以访问通过调用[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
+-   创建消息筛选器对象，实现[IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter)接口。 此消息筛选器可以访问通过调用[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
   
 > [!NOTE]
 >  如果**AfxOleInit**调用从非 MFC DLL，则调用将失败。 出现故障，因为该函数假定，如果调用从 DLL 时，OLE 系统之前已初始化的调用应用程序。  
   
 > [!NOTE]
->  MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
 
 ### <a name="requirements"></a>要求  
  **标头：** afxdisp.h

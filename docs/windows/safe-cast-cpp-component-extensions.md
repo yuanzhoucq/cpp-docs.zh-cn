@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b09bbb831218c073b590233c572d5a5453659ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222921"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
 
@@ -46,7 +46,7 @@ expression
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-**safe_cast**允许您更改指定表达式的类型。 在完全可预期变量或参数会转换为特定类型的情况下，可以使用**safe_cast**而无需**try catch**块在开发过程中检测编程错误。 有关详细信息，请参阅[强制转换 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx)。
+**safe_cast**允许您更改指定表达式的类型。 在完全可预期变量或参数会转换为特定类型的情况下，可以使用**safe_cast**而无需**try catch**块在开发过程中检测编程错误。 有关详细信息，请参阅[强制转换 (C + + /cli CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx)。
 
 ### <a name="syntax"></a>语法
 

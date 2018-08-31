@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208983"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
@@ -107,16 +107,16 @@ int _vcwprintf_s_l(
 
 写入的字符数，如果发生输出错误，则为一个负值。
 
-如这些函数的安全级别较低版本，如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 此外，与这些函数的安全级别较低版本不同的是如果*格式*未指定有效格式，则会生成无效参数异常。 如果允许执行继续，则这些函数返回错误代码和集**errno**该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
+如果喜欢这些函数的安全级别较低版本*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 此外，与这些函数的不安全版本不同的是如果*格式*未指定有效格式，则会生成无效参数异常。 如果允许执行继续，则这些函数将返回错误代码并设置**errno**为该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
 
 ## <a name="remarks"></a>备注
 
-每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s**是宽字符版本的 **_vcprintf_s**。 它将采用一个宽字符字符串作为参数。
+每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s**是宽字符版本 **_vcprintf_s**。 它将采用一个宽字符字符串作为参数。
 
-这些函数具有的版本 **_l**后缀是相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
+具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,7 +127,7 @@ int _vcwprintf_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

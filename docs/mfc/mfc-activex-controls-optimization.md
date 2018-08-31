@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220501"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 本文介绍了可以用来优化更好的性能将 ActiveX 控件的方法。  
@@ -53,7 +53,7 @@ ms.locfileid: "39028169"
 |**将鼠标指针通知不活动时**复选框|选择|[不活动时提供鼠标交互](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**优化绘制代码**复选框|选择|[优化控件绘制](../mfc/optimizing-control-drawing.md)|  
   
- 有关实现这些优化的成员函数的详细信息，请参阅[COleControl](../mfc/reference/colecontrol-class.md)。 通过使用，如列出的成员函数[无窗口操作](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)并[处于非活动状态的指针处理函数](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)。  
+ 有关实现这些优化的成员函数的详细信息，请参阅[COleControl](../mfc/reference/colecontrol-class.md)。  
   
  有关详细信息，请参见:  
   

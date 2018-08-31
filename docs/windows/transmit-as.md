@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32dec06fe458ceba26aaf9348d3fb12647a2a2ae
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0082626926e711d5c8f122b10552328fac52a069
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222948"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -43,7 +43,7 @@ ms.locfileid: "42593698"
 
 ## <a name="remarks"></a>备注
 
-**Transmit_as** c + + 属性具有相同的功能[transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 特性。
+**Transmit_as** c + + 属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
 
 ## <a name="example"></a>示例
 

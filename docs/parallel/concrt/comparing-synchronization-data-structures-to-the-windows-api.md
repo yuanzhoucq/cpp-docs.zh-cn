@@ -1,5 +1,5 @@
 ---
-title: 将同步数据结构与 Windows API 进行比较 |Microsoft 文档
+title: 比较同步数据结构与 Windows API |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,47 +15,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1470911b13243a7c8b3befc627801368e89f04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cb6dc90a272c8e288a4370ae18ad3d1fda150eed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687369"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197543"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>将同步数据结构与 Windows API 进行比较
-本主题比较由并发运行时与所提供的 Windows API 提供的同步数据结构的行为。  
+本主题将比较并发运行时与所提供的 Windows API 提供的同步数据结构的行为。  
   
- 通过并发运行时提供的同步数据结构效仿*线程处理模型的协作*。 协作的线程模型，在同步基元显式产生其他线程对其处理资源。 这不同于*preemptive 线程处理模型*，其中处理资源被传输到其他线程的控制计划程序或操作系统。  
+ 并发运行时提供的同步数据结构遵循*线程模型的合作*。 协作式的线程模型，在同步基元显式产生其处理资源的其他线程。 这不同于*抢先线程模型*，其中处理资源都传输到其他线程的控制计划程序或操作系统。  
   
 ## <a name="criticalsection"></a>critical_section  
- [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)类类似于 Windows`CRITICAL_SECTION`结构，因为它可仅由一个进程的线程。 有关 Windows API 中的临界区的详细信息，请参阅[关键部分对象](http://msdn.microsoft.com/library/windows/desktop/ms682530)。  
+ [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)类类似于 Windows`CRITICAL_SECTION`结构，因为它可以使用仅由一个进程的线程。 有关 Windows API 中的关键部分的详细信息，请参阅[Critical Section Objects](/windows/desktop/Sync/critical-section-objects)。  
   
 ## <a name="readerwriterlock"></a>reader_writer_lock  
- [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)类类似于 Windows 精简读取器/编写 (SRW) 器锁。 下表说明的相似性和差异。  
+ [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)类类似于 Windows slim 读取器/写入器 (SRW) 锁。 下表说明的相似性和差异。  
   
 |功能|`reader_writer_lock`|SRW 锁|  
 |-------------|--------------------------|--------------|  
 |非可重入|是|是|  
 |可以将提升到编写器 （升级支持） 的读取器|否|否|  
 |可以降级到读取器 （降级支持） 的编写器|否|否|  
-|写入首选项锁|是|否|  
+|写首选项锁|是|否|  
 |编写器的先进先出访问|是|否|  
   
- 有关 SRW 锁的详细信息，请参阅[精简读取器/编写器 (SRW) 锁](http://msdn.microsoft.com/library/windows/desktop/aa904937)平台 SDK 中。  
+ 有关 SRW 锁的详细信息，请参阅[Slim 读取器/编写器 (SRW) 锁](https://msdn.microsoft.com/library/windows/desktop/aa904937)Platform SDK 中。  
   
 ## <a name="event"></a>Event — 事件  
- [Concurrency:: event](../../parallel/concrt/reference/event-class.md)类类似于未命名，Windows 手动重置事件。 但是，`event`对象以协作方式工作，而 Windows 事件的行为优先。 有关 Windows 事件的详细信息，请参阅[事件对象](http://msdn.microsoft.com/library/windows/desktop/ms682655)。  
+ [Concurrency:: event](../../parallel/concrt/reference/event-class.md)类类似于未命名，Windows 手动重置事件。 但是，`event`对象以协作方式工作，而 Windows 事件的提前行为。 有关 Windows 事件的详细信息，请参阅[事件对象](/windows/desktop/Sync/event-objects)。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 若要更好地了解之间的差异`event`类和 Windows 事件，请考虑下面的示例。 此示例将启用的计划程序创建最多两个同时进行的任务，然后两个相似函数使用的调用`event`类和 Windows 手动重置事件。 每个函数首先创建若干个任务，等待共享事件变为终止状态。 每个函数然后生成到正在运行的任务，并用信号通知事件。 每个函数然后等待已终止事件。  
+ 若要更好地理解之间的差异`event`类和 Windows 事件，请考虑下面的示例。 此示例将启用计划程序创建最多两个同时发生的任务，然后调用两个相似函数使用`event`类和 Windows 手动重置事件。 每个函数首先会创建多个任务等待共享事件收到信号。 每个函数然后生成到正在运行的任务，然后以信号通知事件。 每个函数然后等待终止的事件。  
   
 ### <a name="code"></a>代码  
  [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/cpp/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]  
   
 ### <a name="comments"></a>注释  
- 该示例产生下面的示例输出：  
+ 此示例产生下面的示例输出：  
   
 ```Output  
 Cooperative event:  
@@ -84,7 +84,7 @@ Windows event:
     Context 13: received the event.  
 ```  
   
- 因为`event`类，其行为以协作方式，当事件正在等待进入终止的状态时，计划程序可以重新分配到另一个上下文的处理资源。 因此，更多的工作通过使用版本来实现`event`类。 使用 Windows 事件的版本，该下一步的任务开始之前，每个正在等待的任务必须进入终止的状态。  
+ 因为`event`类的行为以协作方式，当正在等待某个事件进入终止的状态时，计划程序可以重新分配到另一个上下文的处理资源。 因此，更多的工作通过使用版本来实现`event`类。 使用 Windows 事件的版本，在启动下一个任务之前，每个正在等待的任务必须进入终止的状态。  
   
  有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   

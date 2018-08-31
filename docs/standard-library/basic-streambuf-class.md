@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202787"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 类
 
@@ -664,7 +664,7 @@ int_type sbumpc();
 
 ### <a name="remarks"></a>备注
 
-如果读取位置可用，则成员函数返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) 并递增输入缓冲区的下一个指针。 否则，返回 [uflow](#uflow)。
+如果读取位置可用，则成员函数返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr)) 并递增输入缓冲区的下一个指针。 否则，返回 [uflow](#uflow)。
 
 ### <a name="example"></a>示例
 

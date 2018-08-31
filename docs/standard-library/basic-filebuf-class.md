@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222716"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 类
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*文件缓冲区的基本元素。
+*Elem*<br/>
+ 文件缓冲区的基本元素。
 
-*Tr*文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+ 文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+ 要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+ 默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="return-value"></a>返回值
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*的右值引用[basic_filebuf](../standard-library/basic-filebuf-class.md)对象。
+*right*<br/>
+ 对 [basic_filebuf](../standard-library/basic-filebuf-class.md) 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区的字符或`traits_type::eof`。
+*_Meta*<br/>
+ 要插入到缓冲区的字符或`traits_type::eof`。
 
 ### <a name="return-value"></a>返回值
 
@@ -484,7 +491,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>备注
 
-如果 _ * 元 ***！ = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保护虚拟成员函数尝试将元素插入**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *元*) 到输出缓冲区。 它可以用多种方法执行此操作：
+如果 *_Meta* **！ = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保护虚拟成员函数尝试插入该元素**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) 到输出缓冲区。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并递增输出缓冲区的下一个指针。
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区中的字符或`traits_type::eof`。
+*_Meta*<br/>
+ 要插入到缓冲区的字符或 `traits_type::eof`。
 
 ### <a name="return-value"></a>返回值
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>参数
 
-*_Off*要搜寻的相对于的位置 *_Way*。
+*_Off*<br/>
+ 要搜寻的相对于的位置 *_Way*。
 
-*_Way*偏移操作的起始点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*<br/>
+ 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+ 指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>参数
 
-*_Sp*要搜寻的位置。
+*_Sp*<br/>
+ 要搜寻的位置。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+ 指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>参数
 
-*_Buffer*指向的缓冲区。
+*_Buffer*<br/>
+ 指向缓冲区的指针。
 
-*计数*缓冲区的大小。
+*count*<br/>
+ 缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -604,8 +619,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="remarks"></a>备注
 
-
-  `setbuf` 调用 `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) )，以提供从 _*Buffer* 开始的 `count` 个元素组成的数组作为流的缓冲区。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 表示成功。
+`setbuf` 调用 `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) )，以提供从 _*Buffer* 开始的 `count` 个元素组成的数组作为流的缓冲区。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 表示成功。
 
 ## <a name="swap"></a>  basic_filebuf::swap
 
@@ -617,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`lvalue`到另一个引用`basic_filebuf`。
+*right*<br/>
+ 对另一个 `basic_filebuf` 的 `lvalue` 引用。
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

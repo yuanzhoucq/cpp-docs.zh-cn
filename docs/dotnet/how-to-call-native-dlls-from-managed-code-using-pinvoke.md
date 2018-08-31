@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 PInvoke 从托管代码调用本机 Dll |Microsoft 文档
+title: 如何： 使用 PInvoke 从托管代码调用本机 Dll |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195661"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 从托管代码调用本机 DLL
-可以使用平台调用 (P/Invoke) 的功能的托管代码中调用在非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项来进行互操作。 但是，不同于其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+可以从使用平台调用 (P/Invoke) 功能的托管代码调用非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项之间的互操作。 但是，与其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用 Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385)函数以检索屏幕以像素为单位的当前分辨率。  
+ 下面的代码示例使用 Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)函数以检索屏幕以像素为单位的当前分辨率。  
   
- 对于只使用内部类型作为自变量和返回值的函数，任何额外工作不是必需的。 其他数据类型，如函数指针、 数组和结构，需要确保正确地执行数据封送处理的其他属性。  
+ 对于仅使用内部类型作为参数和返回值的函数，没有额外的工作是必需的。 其他数据类型，如函数指针、 数组和结构，需要确保正确的数据封送处理的其他属性。  
   
- 尽管这不是必需的但是很好的做法，若要使 P/Invoke 声明的值类的静态成员，以便它们不存在于全局命名空间，在此示例中所示。  
+ 尽管不是必需的很好的做法使 P/Invoke 声明的值类的静态成员，以便它们不在全局命名空间，在此示例中所示。  
   
 ```  
 // pinvoke_basic.cpp  

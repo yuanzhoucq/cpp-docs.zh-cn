@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209320"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 类
 使用此类将调试报告发送到命名管道。  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>备注  
  在你的服务或应用程序将调试报告发送到命名管道的调试版本中创建此类的实例。 通过调用生成调试报告[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)或使用此函数的包装器，如[ATLTRACE](debugging-and-error-reporting-macros.md#atltrace)并[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)宏。  
   
- 使用此类允许您以交互方式调试组件运行非交互式[窗口站](http://msdn.microsoft.com/library/windows/desktop/ms687096)。  
+ 使用此类允许您以交互方式调试组件运行非交互式[窗口站](/windows/desktop/winstation/window-stations)。  
   
  请注意调试报告发送使用的线程的基础安全上下文。 模拟暂时禁用状态，以便可以在其中的低特权用户的模拟正在进行，如在 web 应用程序的情况下查看调试报告。  
   

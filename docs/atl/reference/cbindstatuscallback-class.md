@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202457"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 类
 此类实现 `IBindStatusCallback` 接口。  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|读取的总字节数。|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|数据可用时调用的函数指针。|  
 |[CBindStatusCallback::m_pT](#m_pt)|对请求进行异步数据传输对象的指针。|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指向[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)当前绑定操作的接口。|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指向[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)当前绑定操作的接口。|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|指向`IBinding`当前绑定操作的接口。|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指向[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)界面要使用的 URL。|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)接口的数据传输。|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指向[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)界面要使用的 URL。|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)接口的数据传输。|  
   
 ## <a name="remarks"></a>备注  
  `CBindStatusCallback` 类实现 `IBindStatusCallback` 接口。 `IBindStatusCallback` 必须由实现你的应用程序以便它可以从异步数据传输接收通知。 由系统提供的异步名字对象使用`IBindStatusCallback`方法来发送和接收异步数据有关的信息传输到和从您的对象。  
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback`对象针对此对象的类模板化。  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- 一个指向[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)提供的绑定上下文 （存储特定的名字对象绑定操作的相关信息的对象） 的访问接口。  
+ 一个指向[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)提供的绑定上下文 （存储特定的名字对象绑定操作的相关信息的对象） 的访问接口。  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  在初始化`OnStartBinding`且已在发布`OnStopBinding`。  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- 一个指向[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)界面要使用的 URL。  
+ 一个指向[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)界面要使用的 URL。  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  在初始化`StartAsyncDownload`。  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- 一个指向[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)当前绑定操作的接口。  
+ 一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)当前绑定操作的接口。  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in]数据可用后的绑定的开始累积量 （以字节为单位）。 可以是零，表示没有相关的数据量或特定数量变得可用。  
   
  *pformatetc*  
- [in]指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242)结构，其中包含可用数据的格式。 如果没有格式，可以是 CF_NULL。  
+ [in]指向[FORMATETC](/windows/desktop/com/the-formatetc-structure)结构，其中包含可用数据的格式。 如果没有格式，可以是 CF_NULL。  
   
  *pstgmed*  
- [in]指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269)保存现已推出的实际数据的结构。  
+ [in]指向[STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)保存现已推出的实际数据的结构。  
   
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  

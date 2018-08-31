@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0698dbcb27e471218c39517676654156634aa022
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883562"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131381"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和时间： SYSTEMTIME 支持
 [CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受来自 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。  
@@ -52,8 +52,6 @@ ms.locfileid: "37883562"
 -   [常规日期和时间编程 MFC 中](../atl-mfc-shared/date-and-time.md)  
   
 -   [自动化的日期和时间编程的支持](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [日期和时间编程的通用类](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>请参阅  
  [日期和时间](../atl-mfc-shared/date-and-time.md)

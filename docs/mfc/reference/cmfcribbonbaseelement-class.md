@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213657"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 `CMFCRibbonBaseElement`类是可以将添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  指向此方法已成功; 如果的功能区元素的父窗口的指针否则，为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 功能区元素的父窗口是[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)或[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
+ 功能区元素的父窗口是[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)或[CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  检索指向功能区元素的指针，如果用户当前按下它。  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法通过调用重绘功能区元素的显示矩形[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)与 RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 标志设置。  
+ 此方法通过调用重绘功能区元素的显示矩形[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)与 RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 标志设置。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata  
  设置功能区元素的可访问性数据。  

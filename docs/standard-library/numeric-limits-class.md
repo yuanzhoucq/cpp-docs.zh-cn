@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206470"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 类
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>参数
 
-*类型*正在其属性的基础元素数据类型进行测试、 查询或设置。
+*类型*<br/>
+ 正在测试、查询或设置其属性的基础元素数据类型。
 
 ## <a name="remarks"></a>备注
 
-标头定义的类型的显式专用化**wchar_t**， **bool**， **char**，**签名 char**，**无符号char**，**短**， **unsigned short**， **int**，**无符号的 int**，**长时间**，**无符号长**， **float**， **double**，**长双精度 * * *，** **长长时间**，**无符号长长**， `char16_t`，和`char32_t`。 对于这些显式专用化，成员[numeric_limits:: is_specialized](#is_specialized)是**true**，和所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能的实现**float**。
+标头定义的类型的显式专用化**wchar_t**， **bool**， **char**，**签名 char**，**无符号char**，**短**， **unsigned short**， **int**，**无符号的 int**，**长时间**，**无符号长**， **float**， **double**，**长双精度型**，**长长时间**， **unsigned long long**， **char16_t**，并**char32_t**。 对于这些显式专用化，成员[numeric_limits:: is_specialized](#is_specialized)是**true**，和所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能的实现**float**。
 
 对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零 (或**false**)，并不返回有意义的值的成员函数返回`Type(0)`。
 
@@ -156,7 +157,7 @@ class numeric_limits
 返回最小的非规范化非零值。
 
 ```cpp
-static Type denorm_min() throw();
+static constexpr Type denorm_min() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -215,7 +216,7 @@ The smallest nonzero denormalized value
 返回类型可以表示而不会降低精度的基数数字的位数。
 
 ```cpp
-static const int digits = 0;
+static constexpr int digits = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -259,7 +260,7 @@ int main( )
 返回类型可以表示而不会降低精度的十进制数字的位数。
 
 ```cpp
-static const int digits10 = 0;
+static constexpr int digits10 = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -303,7 +304,7 @@ The float is; 100000000
 该函数返回数据类型可以表示的 1 与大于 1 的最小值之间的差值。
 
 ```cpp
-static Type epsilon() throw();
+static constexpr Type epsilon() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -355,7 +356,7 @@ The difference between 1 and the smallest value greater than 1
 测试类型是否允许非规范化值。
 
 ```cpp
-static const float_denorm_style has_denorm = denorm_absent;
+static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -401,7 +402,7 @@ Whether long int objects allow denormalized values: 0
 测试是否将准确度降低检测为非规范化损失，而不是不准确结果。
 
 ```cpp
-static const bool has_denorm_loss = false;
+static constexpr bool has_denorm_loss = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -447,7 +448,7 @@ Whether long int objects can detect denormalized loss: 0
 测试某一类型是否能够表示正无穷。
 
 ```cpp
-static const bool has_infinity = false;
+static constexpr bool has_infinity = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -493,7 +494,7 @@ Whether long int objects have infinity: 0
 测试某一类型是否能表示非信号性沉寂非数值 (NAN)。
 
 ```cpp
-static const bool has_quiet_NaN = false;
+static constexpr bool has_quiet_NaN = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -539,7 +540,7 @@ Whether long int objects have quiet_NaN: 0
 测试某一类型是否能表示信号性沉寂非数值 (NAN)。
 
 ```cpp
-static const bool has_signaling_NaN = false;
+static constexpr bool has_signaling_NaN = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -585,7 +586,7 @@ Whether long int objects have a signaling_NaN: 0
 用于表示某一类型的正无穷的值（若适用）。
 
 ```cpp
-static Type infinity() throw();
+static constexpr Type infinity() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -639,7 +640,7 @@ The representation of infinity for type long double is: inf
 测试某一类型可表示的值设置是否为有限。
 
 ```cpp
-static const bool is_bounded = false;
+static constexpr bool is_bounded = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -693,7 +694,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 测试针对某一类型进行的计算是否不产生舍入错误。
 
 ```cpp
-static const bool is_exact = false;
+static constexpr bool is_exact = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -747,7 +748,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 测试某一类型是否符合 IEC 559 标准。
 
 ```cpp
-static const bool is_iec559 = false;
+static constexpr bool is_iec559 = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -797,7 +798,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 测试某一类型是否具有具有整数表示形式。
 
 ```cpp
-static const bool is_integer = false;
+static constexpr bool is_integer = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -847,7 +848,7 @@ Whether unsigned char objects have an integral representation: 1
 测试某一**类型**是否具有取模表示形式。
 
 ```cpp
-static const bool is_modulo = false;
+static constexpr bool is_modulo = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -897,7 +898,7 @@ Whether unsigned char objects have a modulo representation: 1
 测试某一类型是否具有带符号的表示形式。
 
 ```cpp
-static const bool is_signed = false;
+static constexpr bool is_signed = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -947,7 +948,7 @@ Whether unsigned char objects have a signed representation: 0
 测试某一类型是否具有在模板类 `numeric_limits`中定义的显式专用化。
 
 ```cpp
-static const bool is_specialized = false;
+static constexpr bool is_specialized = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1001,7 +1002,7 @@ Whether int* objects have an explicit specialization in the class: 0
 返回最小的负有限值。
 
 ```cpp
-static Type lowest() throw();
+static constexpr Type lowest() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1017,7 +1018,7 @@ static Type lowest() throw();
 返回某个类型的最大有限值。
 
 ```cpp
-static Type max() throw();
+static constexpr Type max() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1059,7 +1060,7 @@ int main() {
 返回所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
 ```cpp
-static int max_digits10 = 0;
+static constexpr int max_digits10 = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1075,7 +1076,7 @@ static int max_digits10 = 0;
 返回最大正整数指数，当计算基数的该指数次幂时，浮点类型可将其表示为有限值。
 
 ```cpp
-static const int max_exponent = 0;
+static constexpr int max_exponent = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1121,7 +1122,7 @@ The maximum radix-based exponent for type long double is:  1024
 返回最大正整数指数，当计算 10 的该指数次幂时，浮点类型可将其表示为有限值。
 
 ```cpp
-static const int max_exponent10 = 0;
+static constexpr int max_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1167,7 +1168,7 @@ The maximum base 10 exponent for type long double is:  308
 返回某个类型的最小规范化值。
 
 ```cpp
-static Type min() throw();
+static constexpr Type min() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1217,7 +1218,7 @@ The minimum value for type short int is:  -32768
 返回最大负整数指数，当计算基数的该指数次幂时，浮点类型可将其表示为有限值。
 
 ```cpp
-static const int min_exponent = 0;
+static constexpr int min_exponent = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1263,7 +1264,7 @@ The minimum radix-based exponent for type long double is:  -1021
 返回最大负整数指数，当计算 10 的该指数次幂时，浮点类型可将其表示为有限值。
 
 ```cpp
-static const int min_exponent10 = 0;
+static constexpr int min_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1309,7 +1310,7 @@ The minimum base 10 exponent for type long double is:  -307
 返回类型的静默非数值 (NAN) 表示形式。
 
 ```cpp
-static Type quiet_NaN() throw();
+static constexpr Type quiet_NaN() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1355,7 +1356,7 @@ The quiet NaN for type long double is:  1.#QNAN
 返回用于表示类型的整数底数（称为基数）。
 
 ```cpp
-static const int radix = 0;
+static constexpr int radix = 0;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1401,7 +1402,7 @@ The base for type long double is:  2
 返回类型的最大舍入误差值。
 
 ```cpp
-static Type round_error() throw();
+static constexpr Type round_error() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1443,7 +1444,7 @@ The maximum rounding error for type long double is:  0.5
 返回一个值，该值描述可供实现选择用于将浮点值舍入为整数值的各种方法。
 
 ```cpp
-static const float_round_style round_style = round_toward_zero;
+static constexpr float_round_style round_style = round_toward_zero;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1490,7 +1491,7 @@ The rounding style for an int type is: 0
 返回类型的信令非数值 (NAN) 表示形式。
 
 ```cpp
-static Type signaling_NaN() throw();
+static constexpr Type signaling_NaN() throw();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1530,7 +1531,7 @@ int main( )
 测试某个类型是否可在舍入某个值之前确定该值太小而无法表示为规范化值。
 
 ```cpp
-static const bool tinyness_before = false;
+static constexpr bool tinyness_before = false;
 ```
 
 ### <a name="return-value"></a>返回值
@@ -1580,7 +1581,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 测试是否为某个类型实现了报告算术异常的捕获。
 
 ```cpp
-static const bool traps = false;
+static constexpr bool traps = false;
 ```
 
 ### <a name="return-value"></a>返回值

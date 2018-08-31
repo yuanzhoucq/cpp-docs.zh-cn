@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222803"
 ---
 # <a name="attributed-programming-concepts"></a>特性化编程概念
 
 Visual c + + 包含多种材料，帮助您在程序中使用属性。 属性，Visual c + + 中的新功能旨在简化 COM 编程和.NET Framework 公共语言运行时开发。 当在源文件中包含的属性时，编译器可使用提供程序动态链接库 (DLL)，用于插入代码或修改生成的对象文件中的代码。 有帮助的.idl 文件、 接口、 类型库和其他 COM 元素创建的属性。 在集成的开发环境 (IDE) 中，通过这些向导和属性窗口支持属性。
 
-虽然属性消除一些详细编写 COM 对象所需的编码，您需要在后台[COM 基础知识](http://msdn.microsoft.com/library/windows/desktop/ms694363)以最佳方式使用它们。
+虽然属性消除一些详细编写 COM 对象所需的编码，您需要在后台[COM 基础知识](/windows/desktop/com/the-component-object-model)以最佳方式使用它们。
 
 ## <a name="in-this-section"></a>本节内容
 

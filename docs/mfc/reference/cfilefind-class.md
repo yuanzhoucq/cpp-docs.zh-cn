@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82639ff7d4c4f6c6e33778b47509a2744cb12f13
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 796a717faf86d10e789dec8ea0ca0e77517414a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215275"
 ---
 # <a name="cfilefind-class"></a>CFileFind 类
 执行本地文件搜索，并且是类的基类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)并[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，执行 Internet 文件搜索。  
@@ -207,7 +207,7 @@ virtual BOOL FindFile(
  保留以使`FindFile`多态关系派生的类。 必须为 0。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  在调用`FindFile`若要开始搜索文件，请调用[FindNextFile](#findnextfile)检索后续文件。 必须调用`FindNextFile`至少一次之前调用以下属性的任何成员函数：  
@@ -261,7 +261,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
+ 非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。  
   
 ### <a name="remarks"></a>备注  
  必须调用`FindNextFile`至少一次之前调用以下属性的任何成员函数：  
@@ -304,7 +304,7 @@ virtual BOOL FindNextFile();
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile` 包装 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包装 Win32 函数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CFileFind::IsDirectory](#isdirectory)。  
@@ -319,7 +319,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>参数  
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含该文件的创建的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含该文件的创建的时间。  
   
  *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
@@ -331,7 +331,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetCreationTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CFileFind::GetLength](#getlength)。  
@@ -439,7 +439,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值如果不成功，则为 0。 `GetLastAccessTime` 仅当返回 0 [FindNextFile](#findnextfile)永远不会对此已调用`CFileFind`对象。  
@@ -448,7 +448,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastAccessTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CFileFind::GetLength](#getlength)。  
@@ -463,7 +463,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>参数  
  *pTimeStamp*  
- 一个指向[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，其中包含上次写入文件的时间。  
+ 一个指向[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)结构，其中包含上次写入文件的时间。  
   
  *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
@@ -475,7 +475,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastWriteTime`。  
   
 > [!NOTE]
->  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
+>  不是所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的基础文件系统或服务器不支持保留的时间属性时，返回的其他时间戳函数的值。 请参阅[Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构有关的时间格式的信息。 某些操作在系统上，返回的时间是在区域本地计算机到了该文件的所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API 的详细信息。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CFileFind::GetLength](#getlength)。  
@@ -493,7 +493,7 @@ ULONGLONG GetLength() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLength`。  
   
- `GetLength` 使用 Win32 结构[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)获得和以字节为单位返回文件大小的值。  
+ `GetLength` 使用 Win32 结构[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)获得和以字节为单位返回文件大小的值。  
   
 > [!NOTE]
 >  截至 MFC 7.0`GetLength`支持 64 位整数类型。 以前使用此较新版本的库生成的现有代码可能会导致截断警告。  
@@ -530,7 +530,7 @@ BOOL IsArchived() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 应用程序将标记一个存档文件，其中是要备份或删除与 FILE_ATTRIBUTE_ARCHIVE，文件属性中标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。  
+ 应用程序将标记一个存档文件，其中是要备份或删除与 FILE_ATTRIBUTE_ARCHIVE，文件属性中标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsArchived`。  
   
@@ -550,7 +550,7 @@ BOOL IsCompressed() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 压缩的文件都标有 FILE_ATTRIBUTE_COMPRESSED、 文件属性中标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 对于文件，此属性指示所有文件中的数据进行压缩。 对于目录，此属性指示压缩为新创建的文件和子目录的默认值。  
+ 压缩的文件都标有 FILE_ATTRIBUTE_COMPRESSED、 文件属性中标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 对于文件，此属性指示所有文件中的数据进行压缩。 对于目录，此属性指示压缩为新创建的文件和子目录的默认值。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsCompressed`。  
   
@@ -570,7 +570,7 @@ BOOL IsDirectory() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 是一个目录文件都标有文件属性中标识的 FILE_ATTRIBUTE_DIRECTORY [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。  
+ 是一个目录文件都标有文件属性中标识的 FILE_ATTRIBUTE_DIRECTORY [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsDirectory`。  
   
@@ -608,7 +608,7 @@ BOOL IsHidden() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- FILE_ATTRIBUTE_HIDDEN 标记，隐藏的文件中标识的文件属性[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 一个隐藏的文件不包括在普通的目录列表。  
+ FILE_ATTRIBUTE_HIDDEN 标记，隐藏的文件中标识的文件属性[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 一个隐藏的文件不包括在普通的目录列表。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsHidden`。  
   
@@ -628,7 +628,7 @@ BOOL IsNormal() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 中的标记与 FILE_ATTRIBUTE_NORMAL 的文件，文件属性标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 普通文件没有设置任何其他属性。 所有其他文件属性重写此属性。  
+ 中的标记与 FILE_ATTRIBUTE_NORMAL 的文件，文件属性标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 普通文件没有设置任何其他属性。 所有其他文件属性重写此属性。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsNormal`。  
   
@@ -648,7 +648,7 @@ BOOL IsReadOnly() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 与 FILE_ATTRIBUTE_READONLY 标记只读文件，文件属性中标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 应用程序可以读取此类文件，但不是能向其中写入或删除它。  
+ 与 FILE_ATTRIBUTE_READONLY 标记只读文件，文件属性中标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 应用程序可以读取此类文件，但不是能向其中写入或删除它。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsReadOnly`。  
   
@@ -668,7 +668,7 @@ BOOL IsSystem() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用 FILE_ATTRIBUTE_SYSTEM，标记的系统文件、 文件属性中标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 系统文件的一部分，或以独占方式由，操作系统使用。  
+ 使用 FILE_ATTRIBUTE_SYSTEM，标记的系统文件、 文件属性中标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 系统文件的一部分，或以独占方式由，操作系统使用。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsSystem`。  
   
@@ -688,7 +688,7 @@ BOOL IsTemporary() const;
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 临时文件都标有 FILE_ATTRIBUTE_TEMPORARY、 文件属性中标识[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构。 临时文件用于临时存储。 仅当绝对必要，应用程序应写入到文件。 大多数文件的数据保留在内存中而无需因为即将被删除的文件刷新到该媒体。  
+ 临时文件都标有 FILE_ATTRIBUTE_TEMPORARY、 文件属性中标识[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构。 临时文件用于临时存储。 仅当绝对必要，应用程序应写入到文件。 大多数文件的数据保留在内存中而无需因为即将被删除的文件刷新到该媒体。  
   
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`IsTemporary`。  
   
@@ -715,7 +715,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
   
 ### <a name="parameters"></a>参数  
  *dwMask*  
- 指定一个或多个标识中的文件属性[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构，找到的文件。 若要搜索的多个属性，请使用按位 OR (&#124;) 运算符。 以下属性的任何组合都是可接受：  
+ 指定一个或多个标识中的文件属性[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)结构，找到的文件。 若要搜索的多个属性，请使用按位 OR (&#124;) 运算符。 以下属性的任何组合都是可接受：  
   
 -   FILE_ATTRIBUTE_ARCHIVE 文件是一个存档文件。 应用程序使用此特性标记的备份或删除的文件。  
   
@@ -734,7 +734,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 -   FILE_ATTRIBUTE_TEMPORARY 文件用于临时存储。 仅当绝对必要，应用程序应写入到文件。 大多数文件的数据保留在内存中而无需因为即将被删除的文件刷新到该媒体。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`MatchesMask`。  

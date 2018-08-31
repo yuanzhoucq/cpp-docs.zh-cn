@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852505"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221796"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 类
 与[CRichEditView](../../mfc/reference/cricheditview-class.md)并[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>参数  
  *preo*  
- 指向[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，新的客户端项为空。  
+ 指向[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，新的客户端项为空。  
   
 ### <a name="return-value"></a>返回值  
  指向新指针[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)已添加到本文档的对象。  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>备注  
  此函数不执行任何 OLE 初始化。  
   
- 有关详细信息，请参阅[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的结构。  
+ 有关详细信息，请参阅[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的结构。  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  调用此函数可确定文本格式的流式处理格式文本编辑的内容。  

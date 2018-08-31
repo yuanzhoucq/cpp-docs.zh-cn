@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203621"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 此类提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>参数  
  *基本*  
- COM 枚举器 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 接口。  
+ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。 
   
  *piid*  
  一个指向枚举器接口的接口 ID。  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |名称|描述|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
+|[CComEnumImpl::Clone](#clone)|实现**克隆**枚举接口方法。|  
 |[CComEnumImpl::Init](#init)|初始化枚举器。|  
-|[CComEnumImpl::Next](#next)|实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)。|  
-|[CComEnumImpl::Reset](#reset)|实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)。|  
-|[CComEnumImpl::Skip](#skip)|实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)。|  
+|[CComEnumImpl::Next](#next)|实现**下一步**。|  
+|[CComEnumImpl::Reset](#reset)|实现**重置**。|  
+|[CComEnumImpl::Skip](#skip)|实现**跳过**。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown`提供要枚举的集合对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CComEnumImpl` 提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于 c + + 标准库容器。  
+请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法实现的示例。 `CComEnumImpl` 提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于 c + + 标准库容器。  
   
 > [!NOTE]
 >  有关进一步之间的差异的详细信息`CComEnumImpl`并`IEnumOnSTLImpl`，请参阅[CComEnumImpl::Init](#init)。  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  此方法的原型为类型指定的数组元素`T`，其中`T`被定义为类的模板参数。 这是通过 COM 接口方法公开的相同类型[CComEnumImpl::Next](#next)。 这是的与不同[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)，此类不支持不同的存储和公开的数据类型。 数组中元素的数据类型必须是通过 COM 接口公开的数据类型相同。  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- 此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法通过创建类型的对象`CComEnum`，具有相同的数组和迭代器使用的当前对象，初始化并返回该接口上新创建的对象。  
+ 此方法提供的实现**克隆**方法通过创建类型的对象`CComEnum`，具有相同的数组和迭代器使用的当前对象，初始化并返回新创建的接口对象。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- 此方法提供的实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
+ 此方法提供的实现**下一步**方法。  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  标准的 HRESULT 值。  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- 此方法提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
+ 此方法提供的实现**重置**方法。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  标准的 HRESULT 值。  
   
 ##  <a name="skip"></a>  CComEnumImpl::Skip  
- 此方法提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
+ 此方法提供的实现**跳过**方法。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

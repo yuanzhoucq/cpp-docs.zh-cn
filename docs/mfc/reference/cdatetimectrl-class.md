@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f9dfd76348859513875c2dfca98d5fd11c96d2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338693"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210182"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 封装日期和时间选取器控件功能。  
@@ -98,7 +98,7 @@ class CDateTimeCtrl : public CWnd
 ## <a name="remarks"></a>备注  
  日期和时间选取器控件 （DTP 控件） 提供了简单的界面来交换与用户的日期和时间信息。 此接口包含的字段，其中每个显示存储在控件中的日期和时间信息的一部分。 用户可以更改存储在控件中的更改的给定字段中的字符串内容的信息。 用户可以移动域之间使用鼠标或键盘。  
   
- 可以在创建时对该对象应用多种样式自定义日期和时间选取器控件。 请参阅[日期和时间选取器控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761728)适用于特定于日期和时间选取器控件的样式有关的详细信息的 Windows SDK 中。 可以设置使用格式样式在 DTP 控件的显示格式。 在"格式样式"下，Windows SDK 主题中介绍这些格式样式[日期和时间选取器控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761728)。  
+ 可以在创建时对该对象应用多种样式自定义日期和时间选取器控件。 请参阅[日期和时间选取器控件样式](/windows/desktop/Controls/date-and-time-picker-control-styles)适用于特定于日期和时间选取器控件的样式有关的详细信息的 Windows SDK 中。 可以设置使用格式样式在 DTP 控件的显示格式。 在"格式样式"下，Windows SDK 主题中介绍这些格式样式[日期和时间选取器控件样式](/windows/desktop/Controls/date-and-time-picker-control-styles)。  
   
  日期和时间选取器控件还使用通知和中所述的回调[使用 CDateTimeCtrl](../../mfc/using-cdatetimectrl.md)。  
   
@@ -129,7 +129,7 @@ void CloseMonthCal() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753)消息，Windows SDK 中所述。  
+ 此方法将发送[DTM_CLOSEMONTHCAL](/windows/desktop/Controls/dtm-closemonthcal)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_dateTimeCtrl*，即用于以编程方式访问日期和时间选取器控件。 此变量将在下一个示例中使用。  
@@ -154,10 +154,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定日期时间控件样式的组合。 请参阅[日期和时间选取器控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761728)有关日期和时间选取器样式的详细信息 Windows SDK 中。  
+ 指定日期时间控件样式的组合。 请参阅[日期和时间选取器控件样式](/windows/desktop/Controls/date-and-time-picker-control-styles)有关日期和时间选取器样式的详细信息 Windows SDK 中。  
   
  *rect*  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它是位置和日期和时间选取器控件的大小。  
+ 对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它是位置和日期和时间选取器控件的大小。  
   
  *pParentWnd*  
  一个指向[CWnd](../../mfc/reference/cwnd-class.md)是日期和时间选取器控件的父窗口的对象。 它不能为 NULL。  
@@ -192,13 +192,13 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pDateTimePickerInfo*|一个指向[DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)结构，它接收当前日期和时间选取器控件的说明。<br /><br /> 调用方负责分配此结构。 但是，此方法初始化*cbSize*结构中的成员。|  
+|[out]*pDateTimePickerInfo*|一个指向[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)结构，它接收当前日期和时间选取器控件的说明。<br /><br /> 调用方负责分配此结构。 但是，此方法初始化*cbSize*结构中的成员。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755)消息，Windows SDK 中所述。  
+ 此方法将发送[DTM_GETDATETIMEPICKERINFO](/windows/desktop/Controls/dtm-getdatetimepickerinfo)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_dateTimeCtrl*，即用于以编程方式访问日期和时间选取器控件。 此变量将在下一个示例中使用。  
@@ -225,7 +225,7 @@ COLORREF GetMonthCalColor(int iColor) const;
  一个 COLORREF 值，该值表示如果成功，则将 month calendar 控件的指定部分的颜色设置。 如果不成功，则该函数返回-1。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[DTM_GETMCCOLOR](/windows/desktop/Controls/dtm-getmccolor)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
@@ -267,10 +267,10 @@ DWORD GetMonthCalStyle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 样式的日期和时间选取器控件样式的下拉月历控件，这是一个按位组合 （或者）。 有关详细信息，请参阅[个月日历控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。  
+ 样式的日期和时间选取器控件样式的下拉月历控件，这是一个按位组合 （或者）。 有关详细信息，请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763)消息，Windows SDK 中所述。  
+ 此方法将发送[DTM_GETMCSTYLE](/windows/desktop/Controls/dtm-getmcstyle)消息，Windows SDK 中所述。  
   
 ##  <a name="getrange"></a>  CDateTimeCtrl::GetRange  
  检索当前最小值和最大允许将日期和时间选取器控件的系统时间。  
@@ -304,7 +304,7 @@ DWORD GetRange(
  然后第一个参数是有效的。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767)，如 Windows SDK 中所述。 在 MFC 的实现中，您可以指定`COleDateTime`或`CTime`用法。  
+ 此成员函数可实现 Win32 消息的行为[DTM_GETRANGE](/windows/desktop/Controls/dtm-getrange)，如 Windows SDK 中所述。 在 MFC 的实现中，您可以指定`COleDateTime`或`CTime`用法。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
@@ -323,15 +323,15 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  在第一个版本中，对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个版本中，对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
   
  *pTimeDest*  
- 一个指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
+ 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
   
 ### <a name="return-value"></a>返回值  
- 在第一个版本中，如果时间成功写入到非零`COleDateTime`对象; 否则为 0。 在第二个和第三个版本中，DWORD 值等于*dwFlag*成员中设置[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)结构。 请参阅**备注**部分获取详细信息。  
+ 在第一个版本中，如果时间成功写入到非零`COleDateTime`对象; 否则为 0。 在第二个和第三个版本中，DWORD 值等于*dwFlag*成员中设置[NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange)结构。 请参阅**备注**部分获取详细信息。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)，如 Windows SDK 中所述。 中的 MFC 实现`GetTime`，可以使用`COleDateTime`或`CTime`类，也可以使用`SYSTEMTIME`结构，用于存储的时间信息。  
+ 此成员函数可实现 Win32 消息的行为[DTM_GETSYSTEMTIME](/windows/desktop/Controls/dtm-getsystemtime)，如 Windows SDK 中所述。 中的 MFC 实现`GetTime`，可以使用`COleDateTime`或`CTime`类，也可以使用`SYSTEMTIME`结构，用于存储的时间信息。  
   
- DWORD 的返回值在第二个和第三个版本中，更高版本，指示是否将日期和时间选取器控件设置为"无日期"状态，如下所示[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)结构成员*dwFlags*. 如果返回的值等于 GDT_NONE，该控件设置为"无日期"状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，已成功在目标位置中存储的系统时间。  
+ DWORD 的返回值在第二个和第三个版本中，更高版本，指示是否将日期和时间选取器控件设置为"无日期"状态，如下所示[NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange)结构成员*dwFlags*. 如果返回的值等于 GDT_NONE，该控件设置为"无日期"状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，已成功在目标位置中存储的系统时间。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
@@ -347,13 +347,13 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*psize*|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，其中包含该控件的理想大小。|  
+|[out]*psize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，其中包含该控件的理想大小。|  
   
 ### <a name="return-value"></a>返回值  
  返回值始终为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757)消息，Windows SDK 中所述。  
+ 此方法将发送[DTM_GETIDEALSIZE](/windows/desktop/Controls/dtm-getidealsize)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_dateTimeCtrl*，即用于以编程方式访问日期和时间选取器控件。 此变量将在下一个示例中使用。  
@@ -383,7 +383,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 >  用户输入不确定成功或失败的此调用。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[DTM_SETFORMAT](/windows/desktop/Controls/dtm-setformat)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
@@ -417,7 +417,7 @@ COLORREF SetMonthCalColor(
  COLORREF 值表示的指定部分的月历控件如果成功，则以前的颜色设置。 否则，消息将返回-1。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[DTM_SETMCCOLOR](/windows/desktop/Controls/dtm-setmccolor)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)。  
@@ -439,7 +439,7 @@ void SetMonthCalFont(
  指定是否应立即绘该控件后设置该字体。 此参数设置为 TRUE，则会导致控件重绘自身。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775)，如 Windows SDK 中所述。  
+ 此成员函数可实现 Win32 消息的行为[DTM_SETMCFONT](/windows/desktop/Controls/dtm-setmcfont)，如 Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
@@ -458,13 +458,13 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwStyle*|新月份的日历控件样式，这是个月日历控件样式的按位组合 (OR)。 有关详细信息，请参阅[个月日历控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
+|[in]*dwStyle*|新月份的日历控件样式，这是个月日历控件样式的按位组合 (OR)。 有关详细信息，请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  上一个下拉月历控件的样式。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778)消息，Windows SDK 中所述。  
+ 此方法将发送[DTM_SETMCSTYLE](/windows/desktop/Controls/dtm-setmcstyle)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， *m_dateTimeCtrl*，即用于以编程方式访问日期和时间选取器控件。 此变量将在下一个示例中使用。  
@@ -501,7 +501,7 @@ BOOL SetRange(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780)，如 Windows SDK 中所述。 在 MFC 的实现中，您可以指定`COleDateTime`或`CTime`用法。 如果`COleDateTime`对象中的 NULL 状态，将删除范围。 如果`CTime`指针或`COleDateTime`指针为 NULL，则将删除范围。  
+ 此成员函数可实现 Win32 消息的行为[DTM_SETRANGE](/windows/desktop/Controls/dtm-setrange)，如 Windows SDK 中所述。 在 MFC 的实现中，您可以指定`COleDateTime`或`CTime`用法。 如果`COleDateTime`对象中的 NULL 状态，将删除范围。 如果`CTime`指针或`COleDateTime`指针为 NULL，则将删除范围。  
   
 ### <a name="example"></a>示例  
   有关示例，请参阅[CDateTimeCtrl::GetRange](#getrange)。  
@@ -520,13 +520,13 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含为控件设置。  
   
  *pTimeNew*  
- 在上面的指针的第二个版本[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。 在上面的指针的第三个版本[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含将控件设置的时间。  
+ 在上面的指针的第二个版本[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。 在上面的指针的第三个版本[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含将控件设置的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数可实现 Win32 消息的行为[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)，如 Windows SDK 中所述。 中的 MFC 实现`SetTime`，可以使用`COleDateTime`或`CTime`类，也可以使用`SYSTEMTIME`结构，若要设置的时间信息。  
+ 此成员函数可实现 Win32 消息的行为[DTM_SETSYSTEMTIME](/windows/desktop/Controls/dtm-setsystemtime)，如 Windows SDK 中所述。 中的 MFC 实现`SetTime`，可以使用`COleDateTime`或`CTime`类，也可以使用`SYSTEMTIME`结构，若要设置的时间信息。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  

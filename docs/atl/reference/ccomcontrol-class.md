@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198450"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 类
 此类提供用于创建和管理 ATL 控件的方法。  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有连接`IPropertyNotifySink`接口指定的控件属性已更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。 
+ 如果你的控件类派生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，此方法调用[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有连接`IPropertyNotifySink`接口指定的控件属性已更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。 
   
  此方法可以安全地调用即使控件不支持连接点。  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 如果你的控件类派生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口指定控件属性是将要更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。  
+ 如果你的控件类派生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口指定控件属性是将要更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。  
 
   
  此方法可以安全地调用即使控件不支持连接点。  
@@ -205,10 +205,10 @@ int MessageBox(
  对话框的标题。 如果为 NULL （默认值），使用"错误"的标题。  
   
  *n 类型*  
- 指定的内容和对话框中的行为。 请参阅[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供了一个简单**确定**按钮。  
+ 指定的内容和对话框中的行为。 请参阅[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供了一个简单**确定**按钮。  
   
 ### <a name="return-value"></a>返回值  
- 返回一个整数值，指定下列出的菜单项值之一[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文档中。  
+ 返回一个整数值，指定下列出的菜单项值之一[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Windows SDK 文档中。  
   
 ### <a name="remarks"></a>备注  
  `MessageBox` 在开发期间以及作为方便地向用户显示的错误或警告消息，则很有用。  

@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridToolTipCtrl 类 |Microsoft 文档
+title: CMFCPropertyGridToolTipCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040956"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211960"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
-实现的工具提示控制[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)使用来显示工具提示。  
+实现工具提示控件的[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)用于显示工具提示。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,13 +64,13 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Create](#create)|创建工具提示控件的窗口。|  
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|停用并隐藏工具提示控件。|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|返回工具提示控件的最后一个位置的坐标。|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|隐藏的工具提示控件。|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|隐藏工具提示控件。|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|设置工具提示文本和工具提示窗口的边框之间的间距。|  
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|显示工具提示控件。|  
   
 ## <a name="remarks"></a>备注  
- 当鼠标指针停留在属性名称时，将显示工具提示。 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)类显示工具提示，以便用户可以轻松地读取。 通常情况下，由指针的位置确定工具提示的位置。 通过使用此类，工具提示将显示在属性名称和类似于自然的属性扩展，因此属性名称完全可见。  
+ 当指针停留在属性名称上时显示工具提示。 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)类显示工具提示，以便用户可以轻松地读取。 通常情况下，工具提示的位置是由指针的位置来确定。 通过使用此类，工具提示将出现在属性名称和类似于自然属性扩展中，从而使属性名称完全可见。  
   
  MFC 自动创建此控件，并使用它在[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
   
@@ -110,7 +110,7 @@ BOOL Create(CWnd* pWndParent);
  指向父窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
- 已成功创建窗口; 如果为 TRUE否则为 FALSE。  
+ 如果已成功创建窗口; 则为 TRUE否则为 FALSE。  
   
 ##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  停用并隐藏工具提示控件。  
@@ -120,7 +120,7 @@ void Deactivate();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法的最后一个位置和设置文本为空值，以便将来调用[CMFCPropertyGridToolTipCtrl::Track](#track)显示工具提示。  
+ 此方法设置的最后一个位置和文本为空值，以便以后调用[CMFCPropertyGridToolTipCtrl::Track](#track)显示工具提示。  
   
 ##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  返回工具提示控件的最后一个位置的坐标。  
@@ -131,10 +131,10 @@ void GetLastRect(CRect& rect) const;
   
 ### <a name="parameters"></a>参数  
  [out]*rect*  
- 包含的工具提示控件的最后一个位置。  
+ 包含工具提示控件的最后一个位置。  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
- 隐藏的工具提示控件。  
+ 隐藏工具提示控件。  
   
 ```  
 void Hide();
@@ -168,8 +168,8 @@ void Track(
  指定要在工具提示中显示的文本。  
   
 ### <a name="remarks"></a>备注  
- 此方法会显示工具提示控件的位置和大小由指定*rect*。 如果位置、 大小和文本没有调用过此方法的上次更改，则此方法无效。  
+ 此方法显示工具提示控件的位置和大小由指定*rect*。 如果自上次调用此方法未更改位置、 大小和文本，则此方法无效。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

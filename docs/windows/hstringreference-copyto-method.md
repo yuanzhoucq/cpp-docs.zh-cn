@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22886621760ed53649d26180877b1463ec2d3f2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0299f469f9cd2757c72e05a8717171ec32aa2c6c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592159"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198519"
 ---
 # <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo 方法
 
@@ -39,7 +39,7 @@ HRESULT CopyTo(
 
 ## <a name="remarks"></a>备注
 
-此方法调用[WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx)函数。
+此方法调用[WindowsDuplicateString](https://msdn.microsoft.com/library/br224634.aspx)函数。
 
 ## <a name="requirements"></a>要求
 

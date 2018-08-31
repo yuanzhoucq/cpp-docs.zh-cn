@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200213"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ ms.locfileid: "42593352"
 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (** *libraryname* **)**。
 
 *lcid*  
-本地化参数。 有关详细信息，请参阅 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。
+本地化参数。 请参阅[lcid](/windows/desktop/Midl/lcid)有关详细信息。
 
 *控制*（可选）  
 指定库中的所有组件为控件。
@@ -82,7 +82,7 @@ ms.locfileid: "42593352"
 指定类型库。
 
 *helpstringdll* （可选）  
-设置要用于执行文档字符串查找的.dll 文件名称。 有关详细信息，请参阅 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。
+设置要用于执行文档字符串查找的.dll 文件名称。 请参阅[helpstringdll](/windows/desktop/Midl/helpstringdll)有关详细信息。
 
 *helpfile* （可选）  
 名称**帮助**类型库文件。
@@ -94,10 +94,10 @@ ms.locfileid: "42593352"
 有关详细信息，请参阅 [helpstringcontext](../windows/helpstringcontext.md) 。
 
 *隐藏*（可选）  
-禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 更多详细信息，请参阅 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 特性。
+禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
 
 *受限*（可选）  
-不能随意调用库中的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。
+不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
 
 *自定义*（可选）  
 一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 第一个参数*自定义*是该特性的 GUID。 例如：
@@ -124,15 +124,15 @@ ms.locfileid: "42593352"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) 用作基类，并使用需要 COM 服务器的标准 DLL 入口点。 这些入口点为 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)、 [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162)、 [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457)/ [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)和 [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891)。
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) 用作基类，并使用需要 COM 服务器的标准 DLL 入口点。 这些入口点为[DllMain](/windows/desktop/Dlls/dllmain)， [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162)， [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)。
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) 用作基类和标准可执行文件的入口点 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md)用作基类和标准可执行文件的入口点[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) 用作基类和标准可执行文件的入口点 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)。
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)用作基类和标准可执行文件的入口点[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [独立特性](../windows/stand-alone-attributes.md)  
 [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[库](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[库](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

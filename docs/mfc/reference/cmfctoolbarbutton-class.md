@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210845"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 提供为工具栏按钮功能。  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|确定按钮是否为提供的窗口句柄的所有者。|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|确定工具栏按钮是否可见。|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|确定基础窗口句柄的按钮是否可见。|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|由框架调用时该按钮添加到**自定义**对话框。|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|指定是否可以拖动按钮。|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|指定用户是否可以删除到目标工具栏上的按钮。|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|由框架调用以计算指定的设备上下文和停靠状态的按钮的大小。|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|由框架调用以处理[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)消息。|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|由框架调用以处理[WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)消息。|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|按钮插入到一个新的工具栏中时由框架调用。|  
 |[CMFCToolBarButton::OnClick](#onclick)|当用户单击鼠标按钮时由框架调用。|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|当用户释放鼠标按钮时由框架调用。|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|当在父级工具栏处理 WM_HELPHITTEST 消息时由框架调用。|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|当在父级工具栏处理 WM_CTLCOLOR 消息时由框架调用。|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|允许修改提供的菜单时应用程序将显示在父级工具栏上的快捷菜单的按钮。|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|当在父级工具栏处理时由框架调用[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|当在父级工具栏处理时由框架调用[需知道 WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk)消息。|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|由框架调用以绘制按钮通过使用指定的样式和选项。|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|由框架调用以将按钮画入**命令**窗格**自定义**对话框。|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|由框架调用以检索按钮的自定义工具提示文本。|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  此参数设置为 true 可启用输入，或为 FALSE 可禁用输入。  
   
 ### <a name="remarks"></a>备注  
- 此方法调用`EnableWindow`函数来启用或禁用输入。 有关详细信息，请参阅[EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK 中。  
+ 此方法调用`EnableWindow`函数来启用或禁用输入。 有关详细信息，请参阅[EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK 中。  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  副本中的工具栏按钮的文本复制到菜单。  
@@ -884,7 +884,7 @@ CString m_strText;
  此数据成员包含按钮的文本标签。 文本标签能为空。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- 指定是否处理按钮[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。  
+ 指定是否处理按钮[WM_COMMAND](/windows/desktop/menurc/wm-command)消息。  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  此方法返回 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 框架调用此方法时将要发送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)向父窗口的消息。  
+ 框架调用此方法时将要发送[WM_COMMAND](/windows/desktop/menurc/wm-command)向父窗口的消息。  
   
  默认情况下，此方法返回 FALSE。 重写此方法以返回 TRUE，如果你想要处理 WM_COMMAND 消息或 FALSE 以指示在父级工具栏应处理消息。  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  如果你想要提供非标准按钮 （例如，一个编辑框按钮） 的大小，重写此方法。  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- 由框架调用以处理[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)消息。  
+ 由框架调用以处理[WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)消息。  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法的默认实现没有任何影响。 重写此方法，如果你想要处理[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)消息。  
+ 此方法的默认实现没有任何影响。 重写此方法，如果你想要处理[WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)消息。  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  按钮插入到一个新的工具栏中时由框架调用。  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  默认实现不执行任何操作，并返回 FALSE。 重写此方法并返回一个非零值，如果你想要修改提供的菜单的内容。  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- 当在父级工具栏处理时由框架调用[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。  
+ 当在父级工具栏处理时由框架调用[需知道 WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk)消息。  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   按钮的父窗口。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法`CMFCToolBar::OnLButtonDblClk`方法时在父级工具栏处理[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。  
+ 调用此方法`CMFCToolBar::OnLButtonDblClk`方法时在父级工具栏处理[需知道 WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk)消息。  
   
  此方法的默认实现没有任何影响。  
   

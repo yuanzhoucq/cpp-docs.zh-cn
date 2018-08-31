@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572922"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202470"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
-此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合对象接口。 根据定义，聚合的对象包含在外部对象。 `CComAggObject`类是类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开一个接口，可向外部客户端直接访问。  
+此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)聚合对象接口。 根据定义，聚合的对象包含在外部对象。 `CComAggObject`类是类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开一个接口，可向外部客户端直接访问。  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|委托`IUnknown`未知的外部调用。|  
   
 ## <a name="remarks"></a>备注  
- `CComAggObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合对象。 `CComAggObject` 具有其自己`IUnknown`接口，独立于外部对象的`IUnknown`接口，并维护其自身的引用计数。  
+ `CComAggObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)聚合对象。 `CComAggObject` 具有其自己`IUnknown`接口，独立于外部对象的`IUnknown`接口，并维护其自身的引用计数。  
   
  有关聚合的详细信息，请参阅文章[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>参数  
  *pp*  
- [out]一个指向 **CComAggObject\<* * * 包含* **>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。  
+ [out]一个指向**CComAggObject\<**<em>包含</em>**>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  标准的 HRESULT 值。  

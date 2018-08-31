@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214847"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ ms.locfileid: "42601584"
 
 ## <a name="remarks"></a>备注
 
-**可绑定**c + + 属性具有相同的功能[可绑定](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 特性。 可以使用它具有定义的属性上[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)属性，或者你可以手动定义一个可绑定的方法。
+**可绑定**c + + 属性具有相同的功能[可绑定](/windows/desktop/Midl/bindable)MIDL 特性。 可以使用它具有定义的属性上[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)属性，或者你可以手动定义一个可绑定的方法。
 
 以下的 MFC 示例显示了如何使用**可绑定**:
 
-- [控件示例： 基于 MFC 的 ActiveX 控件](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [控件示例： 基于 MFC 的 ActiveX 控件](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [CIRC 示例： ActiveX 控件](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [CIRC 示例： ActiveX 控件](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [使用工具提示和帮助 TESTHELP 示例： ActiveX 控件](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [使用工具提示和帮助 TESTHELP 示例： ActiveX 控件](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>示例
 

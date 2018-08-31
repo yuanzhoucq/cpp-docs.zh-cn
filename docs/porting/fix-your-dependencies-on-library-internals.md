@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839055"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578178"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>在库的内部修复依赖项
 
@@ -34,9 +34,9 @@ Microsoft 为标准库、绝大多数 C 运行时库和众多 Visual Studio 版�
   
 删除此依赖项的方法有几种。  
 
--   如果要使用和 `basic_string` 相同的哈希代码机制将 `const char *` 序列加入无序的容器，则可利用使用 `std::string_view` 的 `std::hash` 模板重载，它将以可移植的方式返回哈希代码。 在未来，字符串库可能依赖（也可能不依赖） FNV-1a 哈希的使用，因此这是避免特定哈希算法上的依赖项的最佳方法。 
+- 如果要使用和 `basic_string` 相同的哈希代码机制将 `const char *` 序列加入无序的容器，则可利用使用 `std::string_view` 的 `std::hash` 模板重载，它将以可移植的方式返回哈希代码。 在未来，字符串库可能依赖（也可能不依赖） FNV-1a 哈希的使用，因此这是避免特定哈希算法上的依赖项的最佳方法。 
   
--   如果要通过任意内存生成 FNV-1a 哈希，则可使用 GitHub 上的 [VCSamples]( https://github.com/Microsoft/vcsamples) 存储库的独立头文件 - [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq)（在 [MIT license](https://github.com/Microsoft/VCSamples/blob/master/license.txt) 下）中的代码。 为方便起见，我们还在此处添加了副本。 可将此代码复制到头文件，将标头添加到任何受影响的代码，然后通过 `fnv1a_hash_bytes` 查找和替换 `_Hash_seq`。 你将在 `_Hash_seq` 中获得与内部实现相同的行为。 
+- 如果要通过任意内存生成 FNV-1a 哈希，则可使用 GitHub 上的 [VCSamples]( https://github.com/Microsoft/vcsamples) 存储库的独立头文件 - [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq)（在 [MIT license](https://github.com/Microsoft/VCSamples/blob/master/license.txt) 下）中的代码。 为方便起见，我们还在此处添加了副本。 可将此代码复制到头文件，将标头添加到任何受影响的代码，然后通过 `fnv1a_hash_bytes` 查找和替换 `_Hash_seq`。 你将在 `_Hash_seq` 中获得与内部实现相同的行为。 
 
 ```cpp  
 /*

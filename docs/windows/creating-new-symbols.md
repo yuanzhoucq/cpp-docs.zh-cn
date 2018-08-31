@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604045"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209585"
 ---
 # <a name="creating-new-symbols"></a>创建新符号
 
@@ -45,7 +45,7 @@ ms.locfileid: "42604045"
 
 如果输入的符号名已存在，则会出现一个消息框，表明已定义具有该名称的符号。 无法定义具有相同名称的两个或多个符号，但是可以定义具有相同数值的不同符号。 有关详细信息，请参阅[符号名限制](../windows/symbol-name-restrictions.md)并[符号值限制](../windows/symbol-value-restrictions.md)。
 
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息以及 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源，并分配的资源字符串应用于属性。
 
 ## <a name="requirements"></a>要求
 

@@ -1,7 +1,7 @@
 ---
 title: C++ 的一致性改进 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220211"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 中 C++ 的一致性改进
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
 
 Microsoft Visual C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -55,19 +55,19 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="constexpr-lambdas"></a>constexpr lambda
 
-现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf)。
+现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [C++ 中的常量表达式 lambda 表达式](cpp/lambda-expressions-constexpr.md)。
 
 ### <a name="if-constexpr-in-function-templates"></a>函数模板中的 if constexpr
 
-函数模板可能包含 `if constexpr` 语句，用于启用编译时创建分支。 有关详细信息，请参阅 [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html)。
+函数模板可能包含 `if constexpr` 语句，用于启用编译时创建分支。 有关详细信息，请参阅 [if constexpr 语句](cpp/if-else-statement-cpp.md#if_constexpr)。
 
 ### <a name="selection-statements-with-initializers"></a>具有初始化表达式的选择语句
 
-`if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的选择语句](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html)。
+`if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的 if 语句](cpp/if-else-statement-cpp.md#if_with_init)。
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] 和 [[nodiscard]] 属性
 
-不使用实体时不提示警告的新属性，或在放弃函数调用的返回值时创建一个警告的新属性。 有关详细信息，请参阅 [maybe_unused 属性的用词](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf)和 [unused、nodiscard 和 fallthrough 属性的建议](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)。
+不使用实体时不提示警告的新属性，或在放弃函数调用的返回值时创建一个警告的新属性。 有关详细信息，请参阅 [C++ 中的属性](cpp/attributes.md)。
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>不重复使用属性命名空间
 
@@ -75,11 +75,11 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="structured-bindings"></a>结构化绑定
 
-现在可以在单个声明中存储具有其各组件名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)。
+现在可以在单个声明中存储具有其各组件名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)和[从一个函数返回多个值](cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>枚举类值的构造规则
 
-现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
+现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)和[枚举](cpp/enumerations-cpp.md#no_enumerators)。
 
 ### <a name="capturing-this-by-value"></a>按值捕获 \*this
 
@@ -93,7 +93,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 这样可以在并
 
 之前弃用（且被编译器忽略的）`register` 关键字现已从语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
 
-有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx)（Visual C++ 2003 至 2015 中的新增功能）。
+有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/library/mt723604.aspx)（Visual C++ 2003 至 2015 中的新增功能）。
 
 ## <a name="improvements_155"></a>Visual Studio 2017 版本 15.5 中的改进
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+有关详细信息，请参阅[构造函数](cpp/constructors-cpp.md#inheriting_constructors)。
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17 扩展的聚合初始化
 
@@ -1625,6 +1627,8 @@ int main() {
 
 ## <a name="update_158"></a>Visual Studio 2017 版本 15.8 中的 bug 修复和行为更改
 
+Visual Studio 2017 版本 15.8 中的编译器更改全部归为 Bug 修复和行为更改类别，如下所示：
+
 ### <a name="typename-on-unqualified-identifiers"></a>非限定标识符的类型名称
 
 在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，编译器不再接受别名模板定义中非限定标识符上的虚假 `typename` 关键字。 现在，以下代码生成 C7511“T”：“typename”关键字后必须有限定名称：
@@ -1678,6 +1682,8 @@ struct S : Base<T> {
 ```
 
 要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
+
+注意：在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现此错误 C3861：“unwind_type”：找不到标识符，请参阅 Boostorg 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](vcpkg.md) Boost 包，所以，如果你从 vcpkg 获取或升级你的 Boost 源，则无需单独应用此修补。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空间 std 中的转发声明和定义
 

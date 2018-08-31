@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407583"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200635"
 ---
 # <a name="argument-definitions"></a>自变量定义
 原型中的自变量  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  第一个命令行参数始终是`argv` **[1]** 和最后一项`argv` **[** `argc` -1 **]**。  
   
 > [!NOTE]
->  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且使用第一个和第二个参数 (*lpApplicationName*并*lpCommandLine*)， `argv`**[0]** 可能不是可执行名称; 而使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)来检索可执行文件的名称和其完全限定的路径。  
+>  按照约定，`argv`[0] 是用于调用程序的命令。  但是，就可以生成进程使用[CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197)并且使用第一个和第二个参数 (*lpApplicationName*并*lpCommandLine*)， `argv`**[0]** 可能不是可执行名称; 而使用[GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197)来检索可执行文件的名称和其完全限定的路径。  
   
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  *envp*  

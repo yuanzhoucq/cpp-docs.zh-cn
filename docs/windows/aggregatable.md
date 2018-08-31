@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200563"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "42595237"
 
 ## <a name="remarks"></a>备注
 
-**聚合**c + + 属性具有相同的功能[聚合](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
+**聚合**c + + 属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
 
 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 
@@ -97,4 +97,4 @@ class CMyClass {};
 [IDL 特性](../windows/idl-attributes.md)  
 [类特性](../windows/class-attributes.md)  
 [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[聚合](/windows/desktop/com/aggregation)  

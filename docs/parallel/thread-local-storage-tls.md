@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e5720fcbc5c52936a0e29c2ccf0847309636b5f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541210"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211852"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 线程本地存储 (TLS) 是一种方法，给定的多线程进程中的每个线程可以使用这种方法分配用以存储线程特定的数据的位置。 动态绑定 （运行时） 线程特定的数据支持 TLS api ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  Win32 和 Visual C++ 编译器现在除了支持现有的 API 实现外，还支持静态绑定（负载时）每线程数据。  
@@ -113,8 +113,8 @@ __declspec( thread ) int tls_i = 1;
   
      因为将来可能要对线程本地存储功能进行增强，C++ 不允许对线程数据进行此类的动态初始化。  
   
-- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的需求加静态链接的所有 DLL 的需求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。  
+- Windows Vista 之前的 Windows 操作系统上`__declspec`（线程） 具有一些限制。 如果 DLL 将任何数据或对象声明为 `__declspec`（线程），可能会导致保护错误（如果动态加载）。 与加载 DLL 后[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)，它会导致系统故障，只要代码引用`__declspec`（线程） 数据。 由于线程的全局变量空间在运行时进行分配，此空间的大小基于对应用程序的需求加静态链接的所有 DLL 的需求的计算。 使用 `LoadLibrary` 时，不能扩展此空间以允许用 `__declspec`（线程）声明的线程本地变量。 使用 TLS Api，如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，在您的 DLL 来分配 TLS，如果使用可能加载了 DLL `LoadLibrary`。  
   
 ## <a name="see-also"></a>请参阅  
  
-[使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)   
+[使用 C 和 Win32 进行多线程编程](multithreading-with-c-and-win32.md)   

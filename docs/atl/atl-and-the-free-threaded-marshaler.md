@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848345"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218043"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 和自由线程封送拆收器
 ATL 简单对象向导的属性页提供了一个允许您的类聚合自由线程封送处理程序 (FTM) 选项。  
   
- 该向导生成代码，以创建自由线程封送处理程序中的实例`FinalConstruct`和释放该实例中的`FinalRelease`。 COM_INTERFACE_ENTRY_AGGREGATE 宏自动添加到 COM 映射，以确保`QueryInterface`请求[IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)自由线程封送处理程序处理。  
+ 该向导生成代码，以创建自由线程封送处理程序中的实例`FinalConstruct`和释放该实例中的`FinalRelease`。 COM_INTERFACE_ENTRY_AGGREGATE 宏自动添加到 COM 映射，以确保`QueryInterface`请求[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)自由线程封送处理程序处理。  
   
  自由线程封送处理程序允许直接访问你的对象的接口从在同一进程中任何线程加快跨单元调用。 此选项适用于使用这两个线程模型的类。  
   
@@ -36,8 +36,8 @@ ATL 简单对象向导的属性页提供了一个允许您的类聚合自由线�
   
 ## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [何时使用全局接口表](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [进程内服务器线程处理问题](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [何时使用全局接口表](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [进程内服务器线程处理问题](/windows/desktop/com/in-process-server-threading-issues)
 

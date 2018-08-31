@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202971"
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 用户工具是运行外部应用程序的菜单项。 **工具**选项卡**自定义**对话框的 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 使用户添加用户工具，并指定名称、 命令、 参数和初始目录的每个用户工具。  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  如果成功，则执行该命令，非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 调用[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)执行与用户工具关联的命令。 函数失败，该命令是否为空，或如果[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)失败。  
+ 调用[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)执行与用户工具关联的命令。 函数失败，该命令是否为空，或如果[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)失败。  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  加载用户工具的默认图标。  

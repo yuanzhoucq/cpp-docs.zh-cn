@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201440"
 ---
 # <a name="member-access-operators--and--gt"></a>成员访问运算符:。 和-&gt;
 ## <a name="syntax"></a>语法  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  在第一种形式，*后缀表达式*表示的结构、 类或联合类型值和*名称*命名指定的结构、 联合或类的成员。 操作的值为*名称*是左值，如果*后缀表达式*是左值。  
   
-2.  在第二个窗体*后缀表达式*表示指向结构、 联合或类的指针和*名称*命名指定的结构、 联合或类的成员。 值为*名称*和是左值。 **->** 运算符取消引用指针。 因此，表达式 * e ***->** `member`并 **(\****e***)**。`member` (其中*e*表示的指针) 会产生相同的结果 (例外运算符**->** 或**\*** 重载)。  
+2.  在第二个窗体*后缀表达式*表示指向结构、 联合或类的指针和*名称*命名指定的结构、 联合或类的成员。 值为*名称*和是左值。 **->** 运算符取消引用指针。 因此，表达式`e->member`并`(*e).member`(其中*e*表示的指针) 会产生相同的结果 (例外运算符**->** 或 <strong>\*</strong>重载)。  
   
 ## <a name="example"></a>示例  
  以下示例演示成员访问运算符的两种形式。  

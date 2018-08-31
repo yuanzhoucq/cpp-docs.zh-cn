@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572453"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200837"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 导入延迟加载有一些约束。  
@@ -42,9 +42,9 @@ ms.locfileid: "42572453"
   
 ## <a name="see-also"></a>请参阅  
  [延迟加载 Dll 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [LoadLibrary 函数](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [GetModuleHandle 函数](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [GetProcAddress 函数](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
+ [LoadLibrary 函数](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
+ [GetModuleHandle 函数](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
+ [GetProcAddress 函数](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
  [TlsAlloc 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
  [TlsFree 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
  [TlsGetValue 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338413"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209122"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 为各种 Windows 图形设备接口 (GDI) 对象（如位图、区域、画笔、笔、调色板和字体）提供基类。  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>参数  
  *nIndex*  
- 一个常数，指定所需的常用对象的类型。 请参阅参数*fnObject*有关[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows SDK 的适当值的说明中。  
+ 一个常数，指定所需的常用对象的类型。 请参阅参数*fnObject*有关[GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) Windows SDK 的适当值的说明中。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[位图](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|不支持|  
   
  如果对象是`CBitmap`对象，`GetObject`返回宽度、 高度和颜色位图的格式信息。 可以通过使用来检索实际的位[CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits)。  
   
- 如果对象是`CPalette`对象，`GetObject`检索调色板中指定的条目数的词。 该函数不会检索[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)结构，它定义调色板。 应用程序可以通过调用获取调色板条目的信息[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
+ 如果对象是`CPalette`对象，`GetObject`检索调色板中指定的条目数的词。 该函数不会检索[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)结构，它定义调色板。 应用程序可以通过调用获取调色板条目的信息[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  检索的 GDI 对象的类型。  

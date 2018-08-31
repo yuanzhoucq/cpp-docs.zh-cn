@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965521"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198297"
 ---
 # <a name="valarray-class"></a>valarray 类
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>参数
 
-*_Func(Type)* 要应用于操作数 valarray 的每个元素的函数对象。
+_Func(Type)<br/>
+ 函数对象将应用于操作数 valarray 的每个元素。
 
-*_Func(const Type&)* 要应用于操作数 valarray 的每个元素的常量的函数对象。
+_Func(const Type&)<br/>
+ const 的函数对象将应用于操作数 valarray 的每个元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -141,7 +143,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的对象，长度为 [size](#size)，其中每个元素 `I` 为 **func**(( **\*this**)[ `I`])。
+此成员函数返回类的对象[valarray](../standard-library/valarray-class.md)**\<类型 >**，长度的[大小](#size)，每个元素*我*是`_Func((*this)[I])`。
 
 ### <a name="example"></a>示例
 
@@ -1247,7 +1249,7 @@ _Boolarray
 
 ### <a name="remarks"></a>备注
 
-成员运算符将重载以提供了多种方法中进行控制的元素的序列中进行选择 *\****这**。 五个成员运算符中的第一组将配合 [operator=](#op_eq)（以及其他赋值运算符）的各种重载进行工作，从而允许受控序列的选择性替换（切片）。 所选的元素必须存在。
+成员运算符将重载以提供了多种方法中进行控制的元素的序列中进行选择<strong>\*这</strong>。 五个成员运算符中的第一组将配合 [operator=](#op_eq)（以及其他赋值运算符）的各种重载进行工作，从而允许受控序列的选择性替换（切片）。 所选的元素必须存在。
 
 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问 valarray 的边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 

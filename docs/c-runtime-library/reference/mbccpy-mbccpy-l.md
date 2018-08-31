@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201382"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
 
@@ -74,21 +74,21 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>参数
 
-*目标*复制目标。
+*dest*复制目标。
 
 *src*要复制的多字节字符。
 
-*区域设置*要使用的区域设置。
+*区域设置*要使用区域设置。
 
 ## <a name="remarks"></a>备注
 
-**_Mbccpy**函数将复制一个多字节字符从*src*到*dest*。
+**_Mbccpy**函数将复制从一个多字节字符*src*到*dest*。
 
-此函数验证其参数。 如果 **_mbccpy**为传递 null 指针*dest*或*src*，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则**errno**设置为**EINVAL**。
+此函数验证其参数。 如果 **_mbccpy**为传递了 null 指针*dest*或*src*，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则**errno**设置为**EINVAL**。
 
-**_mbccpy**的任何区域设置相关行为使用当前区域设置。 **_mbccpy_l**等同于 **_mbccpy**只不过 **_mbccpy_l**使用为任何区域设置相关的行为传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**的任何区域设置相关行为使用当前区域设置。 **_mbccpy_l**等同于 **_mbccpy**只不过 **_mbccpy_l**使用任何区域设置相关的行为的传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。
+**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -99,7 +99,7 @@ void _mbccpy_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|

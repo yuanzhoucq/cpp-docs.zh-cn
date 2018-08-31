@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217972"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 一个`CMFCReBar`对象是提供了布局、 持久性和 rebar 控件的状态信息的控件条。  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|提供直接访问权限的基础[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)公共控件。|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(重写[cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(重写[CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest)。)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(重写[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment)。)|  
   
 ## <a name="remarks"></a>备注  
@@ -120,7 +120,7 @@ BOOL AddBar(
  指定要在 rebar 背景上显示的位图。  
   
  [in]*dwStyle*  
- 包含要应用于带区的样式。 带样式的完整列表，请参阅的说明`fStyle`中[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 文档中的结构。  
+ 包含要应用于带区的样式。 带样式的完整列表，请参阅的说明`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文档中的结构。  
   
  [in]*clrFore*  
  表示 rebar 的前景色。  
@@ -147,7 +147,7 @@ BOOL Create(
  指向此 rebar 控件的父窗口的指针。  
   
  [in]*dwCtrlStyle*  
- 指定对 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，它显示缩小范围行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文档中。  
+ 指定对 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，它显示缩小范围行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文档中。  
   
  [in]*dwStyle*  
  Rebar 控件的窗口样式。 有关有效的样式的列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  

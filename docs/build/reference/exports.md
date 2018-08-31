@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572549"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219488"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ EXPORTS
   
 可以使用*序号*指定一个数字，而不是函数名称，将转到 DLL 的导出表。 许多 Windows DLL 将导出序号以支持旧版代码。 通常使用采用 16 位 Windows 编码的序号，因为这有助于最大程度地减小 DLL 的大小。 除非 DLL 的客户端需要按序号导出函数以支持旧版，否则我们不建议你执行此操作。 由于 .LIB 文件将包含序号与函数之间的映射，因此你可以像通常在使用 DLL 的项目中那样使用函数名。  
   
-通过使用可选 `NONAME` 关键字，你可以只按序号导出，并减小结果 DLL 中导出表的大小。 但是，如果你想要使用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上 DLL，您必须知道序号，因为名称将无效。  
+通过使用可选 `NONAME` 关键字，你可以只按序号导出，并减小结果 DLL 中导出表的大小。 但是，如果你想要使用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上 DLL，您必须知道序号，因为名称将无效。  
   
 可选的关键字`PRIVATE`可防止*entryname*包括在由 LINK 生成的导入库中。 它不会影响同样是由 LINK 生成的映像中的导出。  
   

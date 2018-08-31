@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200871"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。  
@@ -88,12 +88,12 @@ class CPagerCtrl : public CWnd
 |----------|-----------------|  
 |[CPagerCtrl::Create](#create)|使用指定的样式创建的页导航控件，并将其附加到当前`CPagerCtrl`对象。|  
 |[CPagerCtrl::CreateEx](#createex)|使用指定的扩展样式创建的页导航控件，并将其附加到当前`CPagerCtrl`对象。|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|启用或禁用转发[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)对包含在当前的页导航控件的窗口消息。|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|启用或禁用转发[WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove)对包含在当前的页导航控件的窗口消息。|  
 |[CPagerCtrl::GetBkColor](#getbkcolor)|检索当前的页导航控件的背景色。|  
 |[CPagerCtrl::GetBorder](#getborder)|检索当前的页导航控件的边框大小。|  
 |[CPagerCtrl::GetButtonSize](#getbuttonsize)|检索当前的页导航控件按钮大小。|  
 |[CPagerCtrl::GetButtonState](#getbuttonstate)|检索当前的页导航控件中的指定按钮的状态。|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|检索[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)当前的页导航控件的接口。|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|检索[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)当前的页导航控件的接口。|  
 |[CPagerCtrl::GetScrollPos](#getscrollpos)|检索当前的页导航控件的滚动位置。|  
 |[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|指示当前的页导航控件指定的按钮是否处于`pressed`状态。|  
 |[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|指示当前的页导航控件指定的按钮是否处于`grayed`状态。|  
@@ -112,7 +112,7 @@ class CPagerCtrl : public CWnd
   
  例如，如果你的应用程序有一个不是足够宽，以显示其所有项的工具栏，您可以分配的页导航控件的工具栏和用户将能够向下滚动到左侧或右侧，若要访问的所有项工具栏。 Microsoft Internet Explorer 版本 4.0 （commctrl.dll 版本 4.71） 引入了页导航控件。  
   
- `CPagerCtrl`类派生自[CWnd](../../mfc/reference/cwnd-class.md)类。 有关详细信息和的页导航控件的说明，请参阅[页导航控件](http://msdn.microsoft.com/library/windows/desktop/bb760855)。  
+ `CPagerCtrl`类派生自[CWnd](../../mfc/reference/cwnd-class.md)类。 有关详细信息和的页导航控件的说明，请参阅[页导航控件](/windows/desktop/Controls/pager-controls)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -151,8 +151,8 @@ virtual BOOL Create(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwStyle*|按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于该控件。|  
-|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|  
+|[in]*dwStyle*|按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](/windows/desktop/Controls/pager-control-styles)要应用于该控件。|  
+|[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|  
 |[in]*pParentWnd*|一个指向[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为 NULL。|  
 |[in]*nID*|控件的 ID。|  
   
@@ -183,9 +183,9 @@ virtual BOOL CreateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
-|[in]*dwStyle*|按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于该控件。|  
-|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|  
+|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
+|[in]*dwStyle*|按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](/windows/desktop/Controls/pager-control-styles)要应用于该控件。|  
+|[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|  
 |[in]*pParentWnd*|一个指向[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为 NULL。|  
 |[in]*nID*|控件的 ID。|  
   
@@ -196,7 +196,7 @@ virtual BOOL CreateEx(
  若要创建的页导航控件，声明`CPagerCtrl`变量，然后调用[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)该变量上的方法。  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
- 启用或禁用转发[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)对包含在当前的页导航控件的窗口消息。  
+ 启用或禁用转发[WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove)对包含在当前的页导航控件的窗口消息。  
   
 ```  
 void ForwardMouse(BOOL bForward);
@@ -209,7 +209,7 @@ void ForwardMouse(BOOL bForward);
 |[in]*bForward*|为 true，则正向鼠标消息或 FALSE 以转发鼠标消息。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse)消息，Windows SDK 中所述。  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  检索当前的页导航控件的边框大小。  
@@ -222,7 +222,7 @@ int GetBorder() const;
  当前的边框大小，以像素度量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_GETBORDER](/windows/desktop/Controls/pgm-getborder)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::GetBorder](#getborder)方法来检索页导航控件的边框的粗细。  
@@ -237,10 +237,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值包含页导航控件的当前背景色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值包含页导航控件的当前背景色。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_GETBKCOLOR](/windows/desktop/Controls/pgm-getbkcolor)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::SetBkColor](#setbkcolor)方法以设置页导航控件的背景色为红色，并[CPagerCtrl::GetBkColor](#getbkcolor)方法来确认已进行了更改。  
@@ -258,9 +258,9 @@ int GetButtonSize() const;
  当前的按钮大小，以像素度量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_GETBUTTONSIZE](/windows/desktop/Controls/pgm-getbuttonsize)消息，Windows SDK 中所述。  
   
- 如果页导航控件具有 PGS_HORZ 样式，该按钮的大小确定页导航按钮的宽度和如果页导航控件具有 PGS_VERT 样式，该按钮的大小确定页导航按钮的高度。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
+ 如果页导航控件具有 PGS_HORZ 样式，该按钮的大小确定页导航按钮的宽度和如果页导航控件具有 PGS_VERT 样式，该按钮的大小确定页导航按钮的高度。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  检索当前的页导航控件中的指定的滚动按钮的状态。  
@@ -273,16 +273,16 @@ DWORD GetButtonState(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
- 指定的按钮的状态*iButton*参数。 状态为 PGF_INVISIBLE、 PGF_NORMAL、 PGF_GRAYED、 PGF_DEPRESSED 或 PGF_HOT。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 指定的按钮的状态*iButton*参数。 状态为 PGF_INVISIBLE、 PGF_NORMAL、 PGF_GRAYED、 PGF_DEPRESSED 或 PGF_HOT。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
- 检索[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)当前的页导航控件的接口。  
+ 检索[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)当前的页导航控件的接口。  
   
 ```  
 IDropTarget* GetDropTarget() const;  
@@ -294,7 +294,7 @@ IDropTarget* GetDropTarget() const;
 ### <a name="remarks"></a>备注  
  `IDropTarget` 是一个接口到实现应用程序中支持拖放操作。  
   
- 此方法将发送[PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872)消息，Windows SDK 中所述。 此方法的调用方负责调用`Release`的成员[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)时不再需要该接口的接口。  
+ 此方法将发送[PGM_GETDROPTARGET](/windows/desktop/Controls/pgm-getdroptarget)消息，Windows SDK 中所述。 此方法的调用方负责调用`Release`的成员[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)时不再需要该接口的接口。  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  检索当前的页导航控件的滚动位置。  
@@ -307,7 +307,7 @@ int GetScrollPos() const;
  当前的滚动位置，以像素度量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_GETPOS](/windows/desktop/Controls/pgm-getpos)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::GetScrollPos](#getscrollpos)方法来检索当前的页导航控件的滚动位置。 如果页导航控件没有浏览为零，最左侧的位置，该示例使用[CPagerCtrl::SetScrollPos](#setscrollpos)方法将滚动位置设置为零。  
@@ -325,13 +325,13 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮处于按下状态，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_DEPRESSED。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_DEPRESSED。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  指示当前的页导航控件的指定的滚动按钮是否处于灰显状态。  
@@ -344,13 +344,13 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮灰显状态，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_GRAYED。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_GRAYED。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  指示当前的页导航控件的指定的滚动按钮是否处于热状态。  
@@ -363,13 +363,13 @@ BOOL IsButtonHot(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮处于热状态，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_HOT。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_HOT。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  指示当前的页导航控件的指定的滚动按钮是否处于不可见状态。  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮不可见状态，则为 TRUE否则为 FALSE。  
@@ -390,7 +390,7 @@ BOOL IsButtonInvisible(int iButton) const;
 ### <a name="remarks"></a>备注  
  Windows 会使滚动按钮以特定方向不可见时所包含的窗口滚动到其最远的区，因为单击更多按钮不能将多个所包含窗口放入视图。  
   
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_INVISIBLE。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_INVISIBLE。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)方法，以确定是否页导航控件左边缘和右滚动按钮是可见的。  
@@ -408,13 +408,13 @@ BOOL IsButtonNormal(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示要检索其状态的按钮。 如果页导航控件样式 PGS_HORZ，为右侧的按钮的左键和 PGB_BOTTOMORRIGHT 指定 PGB_TOPORLEFT。 如果页导航控件样式，PGS_VERT 指定 PGB_TOPORLEFT 顶部按钮和 PGB_BOTTOMORRIGHT 底部按钮。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮处于正常状态，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_NORMAL。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 此方法将发送[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息，Windows SDK 中所述。 然后，它测试是否返回的状态为 PGF_NORMAL。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)消息。  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  导致当前的页导航控件，以重新计算包含窗口的大小。  
@@ -424,7 +424,7 @@ void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876)消息，Windows SDK 中所述。 因此，页导航控件将发送[PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864)通知以获取包含窗口的可滚动维数。  
+ 此方法将发送[PGM_RECALCSIZE](/windows/desktop/Controls/pgm-recalcsize)消息，Windows SDK 中所述。 因此，页导航控件将发送[PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize)通知以获取包含窗口的可滚动维数。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::RecalcSize](#recalcsize)方法来请求当前的页导航控件，重新计算其大小。  
@@ -432,7 +432,7 @@ void RecalcSize();
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>示例  
- 下面的示例使用[消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)以便重新计算它自身的大小而不是请求来执行计算的控件的父对话框的页导航控件。 该示例从`MyPagerCtrl`类派生[CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)，然后使用消息映射将关联[PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864)通知`OnCalcsize`通知处理程序。 在此示例中，通知处理程序将宽度和页导航控件的高度设置为固定值。  
+ 下面的示例使用[消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)以便重新计算它自身的大小而不是请求来执行计算的控件的父对话框的页导航控件。 该示例从`MyPagerCtrl`类派生[CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)，然后使用消息映射将关联[PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize)通知`OnCalcsize`通知处理程序。 在此示例中，通知处理程序将宽度和页导航控件的高度设置为固定值。  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
@@ -447,13 +447,13 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*clrBk*|一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值包含新的页导航控件的背景色。|  
+|[in]*clrBk*|一个[COLORREF](/windows/desktop/gdi/colorref)值，该值包含新的页导航控件的背景色。|  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值包含页导航控件的上一个背景色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值包含页导航控件的上一个背景色。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_SETBKCOLOR](/windows/desktop/Controls/pgm-setbkcolor)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  下面的示例使用[CPagerCtrl::SetBkColor](#setbkcolor)方法以设置页导航控件的背景色为红色，并[CPagerCtrl::GetBkColor](#getbkcolor)方法来确认已进行了更改。  
@@ -477,7 +477,7 @@ int SetBorder(int iBorder);
  以前的边框大小，以像素度量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_SETBORDER](/windows/desktop/Controls/pgm-setborder)消息，Windows SDK 中所述。  
   
 ### <a name="example"></a>示例  
  以下示例创建的页导航控件，然后使用[CPagerCtrl::SetChild](#setchild)方法能够很长的按钮控件相关联的页导航控件。 该示例然后使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法以将页导航控件的高度设置为 20 像素，并且[CPagerCtrl::SetBorder](#setborder)方法设置为 1 个像素的边框粗细。  
@@ -501,9 +501,9 @@ int SetButtonSize(int iButtonSize);
  上一个按钮大小，以像素度量。  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_SETBUTTONSIZE](/windows/desktop/Controls/pgm-setpos)消息，Windows SDK 中所述。  
   
- 如果页导航控件具有 PGS_HORZ 样式，该按钮的大小确定页导航按钮的宽度和如果页导航控件具有 PGS_VERT 样式，该按钮的大小确定页导航按钮的高度。 默认按钮大小为四分之三的滚动条的宽度，最小按钮大小为 12 像素。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
+ 如果页导航控件具有 PGS_HORZ 样式，该按钮的大小确定页导航按钮的宽度和如果页导航控件具有 PGS_VERT 样式，该按钮的大小确定页导航按钮的高度。 默认按钮大小为四分之三的滚动条的宽度，最小按钮大小为 12 像素。 有关详细信息，请参阅[页导航控件样式](/windows/desktop/Controls/pager-control-styles)。  
   
 ### <a name="example"></a>示例  
  以下示例创建的页导航控件，然后使用[CPagerCtrl::SetChild](#setchild)方法能够很长的按钮控件相关联的页导航控件。 该示例然后使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法以将页导航控件的高度设置为 20 像素，并且[CPagerCtrl::SetBorder](#setborder)方法设置为 1 个像素的边框粗细。  
@@ -524,7 +524,7 @@ void SetChild(HWND hwndChild);
 |[in]*hwndChild*|要包含窗口句柄。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild)消息，Windows SDK 中所述。  
   
  此方法不会更改所包含的窗口; 的父它仅分配到页导航控件中滚动的窗口句柄。 在大多数情况下，包含的窗口将在页导航控件的子窗口。  
   
@@ -547,12 +547,12 @@ void SetScrollPos(int iPos);
 |[in]*iPos*|新的滚动位置，以像素度量。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将发送[PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886)消息，Windows SDK 中所述。  
+ 此方法将发送[PGM_SETPOS](/windows/desktop/Controls/pgm-setpos)消息，Windows SDK 中所述。  
   
 ## <a name="see-also"></a>请参阅  
  [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)   
  [层次结构图表](../../mfc/hierarchy-chart.md)   
- [页导航控件](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+ [页导航控件](/windows/desktop/Controls/pager-controls)
 
 
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613196"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202152"
 ---
 # <a name="build-system-changes"></a>有关生成系统的更改
 MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 和早期版本中，使用了 VCBuild 系统。 某些文件类型和依赖 VCBuild 的概念不存在，或在当前系统中以不同的方式表示。 本文档讨论在当前的生成系统中的差异。  
@@ -55,7 +55,7 @@ MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 
   
  在当前版本中，通过指定属性的值的串联的一个或多个文本值和属性宏支持继承。 **$ （inherit)** 并 **$ （noinherit)** 宏不受支持。  
   
- 在以下示例中，以分号分隔的列表被分配给属性页上的属性。 列表包含的串联*\<值 >* 文字和的值`MyProperty`属性，它通过使用宏表示法访问时， **$(***MyProperty***)**.  
+ 在以下示例中，以分号分隔的列表被分配给属性页上的属性。 列表包含的串联*\<值 >* 文字和的值`MyProperty`属性，它通过使用宏表示法访问时， **$(** <em>MyProperty</em>**)**。  
   
 ```  
 Property=<value>;$(MyProperty)  

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964454"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200023"
 ---
 # <a name="basicistream-class"></a>basic_istream 类
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-通过调用 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`)，每个函数均可提取字段，并将其转换为数字值。 [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`)。 在这里， **InIt**指`istreambuf_iterator` \< **Elem**， **Tr**>，并`val`具有类型**长**，**无符号长**，或**void \*** 根据需要。
+通过调用 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`)，每个函数均可提取字段，并将其转换为数字值。 [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`)。 在这里， **InIt**指`istreambuf_iterator` \< **Elem**， **Tr**>，并`val`具有类型**长**， **无符号长**，或**void** <strong>\*</strong>根据需要。
 
 如果转换后的值不能表示为的类型`val`，该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 不管怎样，该函数均将返回 **\*this**。
 

@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880299"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220898"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 类
 此类实现`IUnknown`是通过该容器与控件进行通信的主体接口。  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|更新控件。 ATL 实现返回 S_OK。|  
   
 ## <a name="remarks"></a>备注  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)接口是通过该容器与控件进行通信的主体接口。 类`IOleObjectImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject)接口是通过该容器与控件进行通信的主体接口。 类`IOleObjectImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) Windows SDK 中。  
+ 请参阅[IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) Windows SDK 中。  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  从运行加载到控件状态更改。  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  指针位于控件类数据成员[CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite)并[CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)会被释放，和数据成员[CComControlBase::m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd)， [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)，和[CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex)设置为 FALSE。  
   
- 请参阅[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK 中。  
+ 请参阅[IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) Windows SDK 中。  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  指示要执行一个其枚举操作的控件。  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- 请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 请参阅[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  告知要放弃为维护任何撤消状态的控件。  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 通过调用激活就地控件[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)。 除非控件类数据成员`m_bWindowOnly`为 TRUE 时，`DoVerbInPlaceActivate`首次尝试激活该控件作为无窗口控件 (仅当容器支持的可能[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300))。 如果失败，该函数尝试激活具有扩展功能的控件 (仅当容器支持的可能[IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461))。 如果失败，该函数尝试激活具有任何扩展功能的控件 (仅当容器支持的可能[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586))。 如果激活成功，该函数将通知容器控件已激活。  
+ 通过调用激活就地控件[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)。 除非控件类数据成员`m_bWindowOnly`为 TRUE 时，`DoVerbInPlaceActivate`首次尝试激活该控件作为无窗口控件 (仅当容器支持的可能[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless))。 如果失败，该函数尝试激活具有扩展功能的控件 (仅当容器支持的可能[IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex))。 如果失败，该函数尝试激活具有任何扩展功能的控件 (仅当容器支持的可能[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite))。 如果激活成功，该函数将通知容器控件已激活。  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  导致要在单独的窗口将打开编辑的控件。  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) Windows SDK 中。  
+ 请参阅[IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) Windows SDK 中。  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  通过调用提供的针对此控件的已注册操作 （谓词） 枚举`OleRegEnumVerbs`。  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>备注  
  可以将谓词添加到你的项目的.rgs 文件。 有关示例，请参阅 CIRCCTL。在 RGS [CIRC](../../visual-cpp-samples.md)示例。  
   
- 请参阅[ioleobject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) Windows SDK 中。  
+ 请参阅[ioleobject:: Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) Windows SDK 中。  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  将指针放在控件类数据成员[CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite)成*ppClientSite*并递增指针的引用计数。  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) Windows SDK 中。  
+ 请参阅[IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) Windows SDK 中。  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  从剪贴板检索数据。  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) Windows SDK 中。  
+ 请参阅[IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) Windows SDK 中。  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  检索正在运行控件的显示尺寸以 HIMETRIC 为单位 （每个单位为 0.01 毫米）。  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>备注  
  大小存储在控件类数据成员[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。  
   
- 请参阅[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK 中。  
+ 请参阅[IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) Windows SDK 中。  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  返回一个指向该控件的已注册的状态信息通过调用`OleRegGetMiscStatus`。  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>备注  
  状态信息包括支持的控件和呈现数据的行为。 可以将状态信息添加到你的项目的.rgs 文件。  
   
- 请参阅[IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Windows SDK 中。  
+ 请参阅[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Windows SDK 中。  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  检索控件的名字对象。  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) Windows SDK 中。  
+ 请参阅[IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) Windows SDK 中。  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  返回控件的类标识符。  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) Windows SDK 中。  
+ 请参阅[IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) Windows SDK 中。  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  通过调用返回控件的用户类型名称`OleRegGetUserType`。  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>备注  
  用户类型名称用于在用户界面元素，如菜单和对话框中显示。 可以更改项目的.rgs 文件中的用户类型名称。  
   
- 请参阅[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK 中。  
+ 请参阅[IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) Windows SDK 中。  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  初始化从所选数据控件。  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK 中。  
+ 请参阅[IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) Windows SDK 中。  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  检查该控件是最新的。  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK 中。  
+ 请参阅[IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) Windows SDK 中。  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  调用[DoVerbDiscardUndo](#doverbdiscardundo)放弃撤消状态后。  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>备注  
  该方法随后返回 S_OK。  
   
- 请参阅[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) Windows SDK 中。  
+ 请参阅[IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) Windows SDK 中。  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  如果任何到控件的应用程序，建议配色方案。  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows SDK 中。  
+ 请参阅[IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) Windows SDK 中。  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  设置控件的显示区域的范围。  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  如果该控件类数据成员[CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize)为 TRUE，`SetExtent`调用`SendOnDataChange`和`SendOnViewChange`通知注册控件大小都有建议持有者的所有通知接收器更改。  
   
- 请参阅[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK 中。  
+ 请参阅[IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) Windows SDK 中。  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  通知控件容器应用程序和容器文档的名称。  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK 中。  
+ 请参阅[IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) Windows SDK 中。  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  其名字对象是可告知控件。  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) Windows SDK 中。  
+ 请参阅[IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) Windows SDK 中。  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  删除通知连接存储在控件类`m_spOleAdviseHolder`数据成员。  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) Windows SDK 中。  
+ 请参阅[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) Windows SDK 中。  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  更新控件。  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) Windows SDK 中。  
+ 请参阅[IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
- [ActiveX 控件接口](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)   
  [类概述](../../atl/atl-class-overview.md)

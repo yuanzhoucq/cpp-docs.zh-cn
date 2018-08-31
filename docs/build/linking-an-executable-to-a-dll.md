@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9641545721776530ccf09a5a1ea99485f510265
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42575462"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196682"
 ---
 # <a name="link-an-executable-to-a-dll"></a>链接到 DLL 的可执行文件  
   
@@ -76,7 +76,7 @@ ms.locfileid: "42575462"
   
 -   如果 DLL 具有`DllMain`入口点函数，操作系统将调用的线程中调用的上下文中该函数`LoadLibrary`。 如果 DLL 已附加到进程由于以前调用，将不会调用入口点函数`LoadLibrary`已有没有相应地调用`FreeLibrary`函数。 显式链接可能导致问题，如果 DLL 使用`DllMain`函数来执行的进程的每个线程初始化，因为线程已存在时`LoadLibrary`(或`AfxLoadLibrary`) 称为未初始化。  
   
--   如果 DLL 声明静态作用域数据作为`__declspec(thread)`，如果显式链接，它可能会导致保护错误。 通过调用加载 DLL 后`LoadLibrary`，它会导致保护错误，只要代码引用此数据。 （静态作用域数据包括全局和局部静态项。）因此，当您创建 DLL，您应避免使用线程本地存储或提示 DLL 用户有关的动态加载 DLL 的隐患。 有关详细信息，请参阅[在动态链接库 (Windows SDK) 中使用线程本地存储区](http://msdn.microsoft.com/library/windows/desktop/ms686997)。  
+-   如果 DLL 声明静态作用域数据作为`__declspec(thread)`，如果显式链接，它可能会导致保护错误。 通过调用加载 DLL 后`LoadLibrary`，它会导致保护错误，只要代码引用此数据。 （静态作用域数据包括全局和局部静态项。）因此，当您创建 DLL，您应避免使用线程本地存储或提示 DLL 用户有关的动态加载 DLL 的隐患。 有关详细信息，请参阅[在动态链接库 (Windows SDK) 中使用线程本地存储区](https://msdn.microsoft.com/library/windows/desktop/ms686997)。  
   
 <a name="linking-implicitly"></a>  
   

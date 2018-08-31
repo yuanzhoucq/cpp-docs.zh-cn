@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852297"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222854"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 充当 ActiveX 控件的控件容器。  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|站点图中。|  
   
 ## <a name="remarks"></a>备注  
- 这是通过提供的一个或多个 ActiveX 控件站点的支持 (由实现`COleControlSite`)。 `COleControlContainer` 完全实现[IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)并[IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103)接口，使包含的 ActiveX 控件，以满足他们作为就地项的资格。  
+ 这是通过提供的一个或多个 ActiveX 控件站点的支持 (由实现`COleControlSite`)。 `COleControlContainer` 完全实现[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)并[IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer)接口，使包含的 ActiveX 控件，以满足他们作为就地项的资格。  
   
  通常，此类使用结合`COccManager`和`COleControlSite`实现自定义 ActiveX 控件容器，具有一个或多个 ActiveX 控件的自定义站点。  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  指向布尔变量来接收函数成功/失败值 （TRUE 表示成功，FALSE 表示失败）。  
   
  *bSigned*  
- 指定函数是否应检查负号开头的文本并返回一个有符号的整数值，如果它找到一个。 如果*bSigned*参数为 TRUE 时，指定要检索的值一个有符号的整数值，将返回值强制转换**int**类型。 若要获得扩展错误信息，请调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 指定函数是否应检查负号开头的文本并返回一个有符号的整数值，如果它找到一个。 如果*bSigned*参数为 TRUE 时，指定要检索的值一个有符号的整数值，将返回值强制转换**int**类型。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，该变量指向*lpTrans*设置为 TRUE，返回值是控件文本的已翻译的值。  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>返回值  
  如果函数成功，返回的值指定字符复制到缓冲区，不包括终止 null 字符的数。  
   
- 如果函数失败，则返回值为零。 若要获得扩展错误信息，请调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果函数失败，则返回值为零。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  确定是否容器处理 WM_SETFOCUS 消息。  

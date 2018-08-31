@@ -1,5 +1,5 @@
 ---
-title: 标题控件示例 |Microsoft 文档
+title: 标题控件示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20cdf22a91f7c144c2bbdb96d6789ca45778994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342756"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208109"
 ---
 # <a name="header-control-examples"></a>标题控件示例
-标头控件的示例，请参阅[标头控件](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  
+标头控件的示例，请参阅[标头控件](/windows/desktop/Controls/header-controls)Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   

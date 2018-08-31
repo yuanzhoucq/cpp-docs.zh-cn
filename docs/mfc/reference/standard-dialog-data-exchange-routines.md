@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885970"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198492"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 本主题列出了用于常见的 MFC 对话框控件的标准对话框数据交换 (DDX) 例程。  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  对对话框、 窗体视图或控件视图对象与其交换数据的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
- 当`DDX_Check`调用时，*值*设置为复选框控件的当前状态。 有关可能的状态值的列表，请参阅[BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) Windows SDK 中。  
+ 当`DDX_Check`调用时，*值*设置为复选框控件的当前状态。 有关可能的状态值的列表，请参阅[BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) Windows SDK 中。  
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 到 23|  
 |0|24 到 31|  
   
- 使用 Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)读取值，或使用[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)来填充值。 Windows SDK 中描述了这些消息。  
+ 使用 Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)读取值，或使用[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)来填充值。 Windows SDK 中描述了这些消息。  
   
 ### <a name="remarks"></a>备注  
  当`DDX_IPAddress`调用时，*值*是从 IP 地址控件，读取或*值*写入到该控件，具体取决于交换的方向。  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
- 当`DDX_Scroll`调用时，*值*设置为当前控件的滚动块的位置。 有关与控件的滚动块的当前位置相关联的值的详细信息，请参阅[GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) Windows SDK 中。  
+ 当`DDX_Scroll`调用时，*值*设置为当前控件的滚动块的位置。 有关与控件的滚动块的当前位置相关联的值的详细信息，请参阅[GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK 中。  
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   

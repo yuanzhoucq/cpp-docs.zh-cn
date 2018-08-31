@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541726"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132176"
 ---
 # <a name="multithreading-and-locales"></a>多线程和区域设置
 C 运行时库和 c + + 标准库更改您的程序的区域设置提供支持。 本主题讨论使用这两个库中的多线程应用程序的区域设置功能时出现的问题。  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>请参阅  
 
-[针对旧代码 （Visual c + +） 的多线程处理支持](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[针对旧代码 （Visual c + +） 的多线程处理支持](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   

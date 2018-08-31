@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451519"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578441"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函数
 此系列中的每个函数都会加载并执行新进程：  
@@ -90,7 +90,7 @@ ms.locfileid: "34451519"
 |`v`|将指向命令行参数的指针数组 `argv` 传递给 `_exec`。 通常在新进程的参数数量可变时使用。|  
   
 ## <a name="remarks"></a>备注  
- 每个 `_exec` 函数都会加载并执行新进程。 所有 `_exec` 函数均使用同一个操作系统函数 ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx))。 `_exec` 函数将适当自动处理多字节字符字符串参数，从而根据当前正在使用的多字节代码页识别多字节字符序列。 `_wexec` 函数是 `_exec` 函数的宽字符版本。 `_wexec` 函数的行为与其对应系列 `_exec` 完全相同，差别在于这些函数不处理多字节字符字符串。  
+ 每个 `_exec` 函数都会加载并执行新进程。 所有 `_exec` 函数均使用同一个操作系统函数 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa))。 `_exec` 函数将适当自动处理多字节字符字符串参数，从而根据当前正在使用的多字节代码页识别多字节字符序列。 `_wexec` 函数是 `_exec` 函数的宽字符版本。 `_wexec` 函数的行为与其对应系列 `_exec` 完全相同，差别在于这些函数不处理多字节字符字符串。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34451519"
 >  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_exec` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。  
   
 > [!IMPORTANT]
->  如果没有显式地检查其内容，请不要将用户输入传递给 `_exec`。 `_exec` 将导致调用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。  
+>  如果没有显式地检查其内容，请不要将用户输入传递给 `_exec`。 `_exec` 将导致调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。  
   
  `_exec` 函数将验证其参数。 如果预期参数是空指针、空字符串或省略了预期参数，则 `_exec` 函数调用的参数处理程序无效，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。 不执行任何新进程。  
   
@@ -237,7 +237,7 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
  **标头：** process.h  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540992"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214674"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些诊断服务包括宏和全局函数，让你能够跟踪程序的内存分配，在运行时转储对象的内容并打印调试消息。 诊断服务的宏和全局函数可分为以下几类：  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  若要成功使用此函数：  
   
--   该文件了内部错误。DLL 必须位于你的路径。 如果您不具备此 DLL，该函数将显示一条错误消息。 请参阅[图像帮助库](http://msdn.microsoft.com/library/windows/desktop/ms680321)上提供了内部错误的函数集的信息。  
+-   该文件了内部错误。DLL 必须位于你的路径。 如果您不具备此 DLL，该函数将显示一条错误消息。 请参阅[图像帮助库](/windows/desktop/Debug/image-help-library)上提供了内部错误的函数集的信息。  
   
 -   对堆栈帧的模块必须包含调试信息。 如果它们不包含调试信息，该函数仍将生成堆栈跟踪，但将不详细跟踪。  
 ### <a name="requirements"></a>要求  

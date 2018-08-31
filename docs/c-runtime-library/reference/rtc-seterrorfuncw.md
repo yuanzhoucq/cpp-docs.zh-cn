@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199586"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -65,37 +65,50 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ## <a name="remarks"></a>备注
 
-在新代码，仅使用 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**仅包含在库中的向后兼容性。
+在新代码中，仅使用 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**仅包含用于向后兼容性的库中。
 
-**_RTC_SetErrorFuncW**回调仅适用于它在中，链接组件但不是全局。
+**_RTC_SetErrorFuncW**回调仅适用于它链接，该组件但不是全局。
 
 请确保传递到的地址 **_RTC_SetErrorFuncW**是有效的错误处理函数。
 
-如果错误已被分配为-1 的类型使用[_RTC_SetErrorType](rtc-seterrortype.md)，就会失败的错误处理函数。
+如果错误已分配为-1 的类型使用[_RTC_SetErrorType](rtc-seterrortype.md)，则不会调用错误处理函数。
 
 在可以调用此函数之前，首先必须调用其中一个运行时错误检查初始化函数。 有关更多信息，请参见 [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)。
 
 **_RTC_error_fnW** 定义如下：
 
-> **typedef int (__cdecl \*_RTC_error_fnW) (int** *errorType* **，const wchar_t \***  *filename* **，int***linenumber* **，const wchar_t \***  *moduleName* **，const wchar_t \*** *格式* **，...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 其中：
 
-*errorType*由指定的错误类型的[_RTC_SetErrorType](rtc-seterrortype.md)。
+*错误类型*<br/>
+由 [_RTC_SetErrorType](rtc-seterrortype.md) 指定的错误类型。
 
-*filename*发生故障的源文件或如果没有调试信息则为 null。
+*filename*<br/>
+为发生故障的源文件，或者，如果没有调试信息，则为 null。
 
-*linenumber*中的行*filename*发生故障或如果没有调试信息，则为 0。
+*linenumber*<br/>
+为其中发生故障的 *filename* 中的行，或者，如果没有调试信息，则为 0。
 
-*moduleName* DLL 或发生故障的可执行文件名称。
+*moduleName*<br/>
+DLL 或发生故障的可执行文件的名称。
 
-*格式*要显示错误消息，使用剩余的参数的 printf 样式字符串。 VA_ARGLIST 的第一个参数是出现的 RTC 错误号。
+*format*<br/>
+要使用剩余的参数显示错误消息的 printf 样式字符串。 VA_ARGLIST 的第一个自变量是出现的 RTC 错误号。
 
 有关演示如何使用 **_RTC_error_fnW** 的示例，请参阅[本机运行时检查自定义](/visualstudio/debugger/native-run-time-checks-customization)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_RTC_SetErrorFuncW**|\<rtcapi.h>|
 

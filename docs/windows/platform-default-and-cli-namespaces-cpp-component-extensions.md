@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cde444e807aa6fe2276b4bfe9b0b9c4bc0476103
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610549"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194644"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空间（C++ 组件扩展）
 
@@ -36,7 +36,7 @@ ms.locfileid: "42610549"
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-有关详细信息，请参阅[命名空间和类型可见性 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。
+有关详细信息，请参阅[命名空间和类型可见性 (C + + /cli CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。
 
 ### <a name="requirements"></a>要求
 

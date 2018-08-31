@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219574"
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  一个 `IResourceManager` 接口。  
   
 ### <a name="remarks"></a>备注  
- 多个后续调用此方法将返回同一实例的资源管理器。 每次调用此方法会递增引用计数在资源管理器中，并必须通过调用匹配[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成你的计划程序时使用资源管理器进行通信。  
+ 多个后续调用此方法将返回同一实例的资源管理器。 每次调用此方法会递增引用计数在资源管理器中，并必须通过调用匹配[iresourcemanager:: Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成你的计划程序时使用资源管理器进行通信。  
   
  [unsupported_os](unsupported-os-class.md)如果操作系统不支持并发运行时引发。  
   
 ##  <a name="create_task"></a>  create_task  
- 创建 PPL[任务](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。  
+ 创建 PPL[任务](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。  
   
 ```
 template<typename T>

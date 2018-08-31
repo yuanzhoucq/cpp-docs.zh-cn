@@ -1,5 +1,5 @@
 ---
-title: -防护 （启用控制流保护） |Microsoft 文档
+title: -guard （启用控制流保护） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377399"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131665"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard（启用控制流保护）
 允许编译器生成控制流保护安全性检查。  
@@ -32,7 +32,9 @@ ms.locfileid: "32377399"
 ```  
   
 ## <a name="remarks"></a>备注  
- **/guard:cf** 选项使编译器在编译时为间接调用目标分析控制流，然后插入代码以在运行时验证目标。 默认情况下， **/guard:cf** 处于关闭状态，必须显式启用它。 若要显式禁用此选项，请使用 **/guard:cf-**。  
+ **/guard:cf** 选项使编译器在编译时为间接调用目标分析控制流，然后插入代码以在运行时验证目标。 默认情况下， **/guard:cf** 处于关闭状态，必须显式启用它。 若要显式禁用此选项，请使用 **/guard:cf-**。 
+
+**Visual Studio 2017 和更高版本**： 此选项将添加为临界**切换**生成的语句跳转表。
   
  当指定 **/guard:cf** 控制流监护 (CFG) 选项时，编译器和链接器会插入额外的运行时安全性检查，以检测会危及你的代码的尝试。 在编译和链接期间，将分析代码中的所有间接调用以查找当代码正确时它能够到达的每个位置。 此信息存储在你二进制文件标头的额外结构中。 编译器还会在代码中的每个间接调用之前插入检查，以确保目标是已验证过的位置之一。 如果运行时 CFG 感知的操作系统上检查失败，操作系统将关闭该程序。  
   

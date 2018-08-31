@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610200"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220577"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 
@@ -34,7 +34,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 
 C + + /cli CX 是子集 C + + /cli CLI。 扩展插件所共有的 C + + /CX 和 C + + /cli CLI，其语义取决您面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译您的应用程序在 Windows 运行时上运行，请指定`/ZW`编译器选项。 要将其编译为在 CLR 上运行，请指定 `/clr` 编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。
 
-有关如何在 c + + 中创建通用 Windows 平台应用的详细信息，请参阅[路线图的 Windows 运行时应用使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
+有关如何在 c + + 中创建通用 Windows 平台应用的详细信息，请参阅[路线图的 Windows 运行时应用使用 c + +](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
 
 C + + /cli CLI 扩展了 ISO/ANSI c + + 标准，并且定义在 Ecma C + + /cli 标准 CLI。 有关详细信息，请参阅[.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 

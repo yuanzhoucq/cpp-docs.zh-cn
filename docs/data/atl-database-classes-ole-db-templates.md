@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337880"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218983"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 数据库类（OLE DB 模板）
 Microsoft 提供了几个 OLE DB，一组提供对各种信息源和格式中的数据的统一访问的 COM 接口的实现。  OLE DB 正式不推荐使用;本文档适用于开发人员要保留旧代码。 新的应用程序应使用 ODBC 连接到 SQL 数据源。
@@ -46,4 +46,4 @@ Microsoft 提供了几个 OLE DB，一组提供对各种信息源和格式中的
  [创建 OLE DB 提供程序](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB 使用者模板参考](../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 提供程序模板参考](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB 模板示例](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB 模板示例](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

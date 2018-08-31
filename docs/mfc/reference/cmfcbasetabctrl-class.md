@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198563"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 实现选项卡式窗口的基本功能。  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|在将窗口消息发送到 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) Windows 函数之前，由 [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) 类用于对此消息进行转换。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|重新计算选项卡式窗口的内部布局。|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|从选项卡式窗口中移除所有选项卡。|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|从选项卡式窗口中移除一个选项卡。|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定活动选项卡的背景色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定活动选项卡的背景色。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，活动选项卡的背景色为 COLOR_WINDOW。 可以使用该方法来更改活动选项卡的背景色[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)。  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定活动选项卡的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定活动选项卡的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，活动选项卡的文本颜色为 COLOR_WINDOWTEXT。 使用方法，可以更改文本颜色[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)。  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对的数组的引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)的值[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象使用的自动选项卡着色。  
+ 对的数组的引用[COLORREF](/windows/desktop/gdi/colorref)的值[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象使用的自动选项卡着色。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，框架初始化库定义的颜色的颜色数组。 可以通过调用该方法提供一个自定义颜色数组[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)。  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  该选项卡的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示指定的选项卡的背景色; 如果*iTab*不在范围。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指示指定的选项卡的背景色; 如果*iTab*不在范围。  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  检索选项卡控件中的选项卡边框的大小。  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  该选项卡的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示指定的选项卡的文本颜色; 如果*iTab*不在范围。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示指定的选项卡的文本颜色; 如果*iTab*不在范围。  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  返回指向驻留在指定的选项卡的窗格的指针。  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  指定新背景色。  
   
 ### <a name="remarks"></a>备注  
- 框架获取从活动选项卡的默认背景色[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 框架获取从活动选项卡的默认背景色[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  设置活动选项卡的文本颜色。  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>参数  
  [in]*clr*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指定新的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指定新的文本颜色。  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，该框架获取从文本颜色[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。 通过使用重写此默认颜色`SetActiveTabTextColor`方法。  
+ 默认情况下，该框架获取从文本颜色[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。 通过使用重写此默认颜色`SetActiveTabTextColor`方法。  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  自动配色模式中设置的选项卡控件框架使用的颜色。  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  以像素为单位的每个图像的宽度。  
   
  [in]*clrTransp*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，指示图像的透明色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，指示图像的透明色。  
   
  [in]*hImageList*  
  句柄的预加载的图像列表。  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  该选项卡的从零开始的索引。  
   
  [in]*颜色*  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指示新的文本颜色。  
+ 一个[COLORREF](/windows/desktop/gdi/colorref)参数，用于指示新的文本颜色。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  

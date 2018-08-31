@@ -1,5 +1,5 @@
 ---
-title: -诊断 （编译器诊断选项） |Microsoft 文档
+title: -诊断 （编译器诊断选项） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/11/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f1dce7c7c48e7c7c94da95ca187e0388b3f5d4d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371767"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131636"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （编译器诊断选项）  
   
@@ -37,21 +37,24 @@ ms.locfileid: "32371767"
 ```  
 
 ## <a name="remarks"></a>备注  
+
+在 Visual Studio 2017 及更高版本支持此选项。
+
 **/Diagnostics**编译器选项控制显示的错误和警告信息。  
   
-**/Diagnostics:classic**选项是默认情况下，报告仅发现此问题的行数。  
+**/Diagnostics:classic**选项是默认情况下，报告只发现此问题的行数。  
   
-**/Diagnostics:column**选项还包括在其中找到问题的列。 这可以帮助你标识特定的语言构造或导致问题的字符。  
+**/Diagnostics:column**选项还包括发现此问题的列。 这可以帮助您确定特定的语言构造或导致此问题的字符。  
   
-**/Diagnostics:caret**选项包括其中问题找并将插入符号 (^) 放在其中检测到问题中的代码行的位置下的列。  
+**/Diagnostics:caret**选项包括其中问题找，并将插入符号 (^) 放在其中检测到问题中的代码行的位置下的列。  
   
-请注意，在某些情况下，编译器不会检测它发生的问题。 例如，缺少分号可能不会检测到之前遇到了其他、 意外的符号。 报告列和脱字号位于其中编译器检测到出现了问题，它并不总是需要进行你更正。  
+请注意，在某些情况下，编译器不会检测的问题发生的位置。 例如，缺少分号可能不会检测在遇到其他、 意外符号之前。 报告列和脱字号位于其中编译器检测到出现了问题，它并不总是需要使所做的更正。  
   
-**/Diagnostics**选项是在 Visual Studio 2017 中开始提供。  
+**/Diagnostics**选项是从 Visual Studio 2017 开始，提供。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1. 打开你的项目的**属性页**对话框。   
+1. 打开你的项目**属性页**对话框。   
   
 2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**常规**属性页。  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858924"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217944"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ ms.locfileid: "33858924"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|此模板类描述一个对象，用于管理 **Type** 类对象数组的存储分配和释放。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述一个对象，用于确定支持分配器的容器所需要的全部信息。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述一个对象，用于存储指向 **Type \*** 类分配对象的指针，此指针可确保当它的封闭 auto_ptr 被销毁后，将会删除它所指向的对象。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述的对象将存储指向类型的已分配的对象的指针**类型** <strong>\*</strong>确保它点后，会删除它的封闭 auto_ptr 获取的对象销毁。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|报告不良的 weak_ptr 异常。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|帮助生成一个 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。|

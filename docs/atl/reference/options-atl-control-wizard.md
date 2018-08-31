@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208756"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
 在此处插入摘要的"搜索结果"。  
@@ -78,7 +78,7 @@ ms.locfileid: "37880085"
   
 -   **自定义**： 创建一个直接通过 VTBL 公开方法的接口。  
   
-     如果选择**自定义**，则可以指定的控件是**自动化兼容**。 如果选择**自动化兼容**，然后该向导将添加[oleautomation](../../windows/oleautomation.md)属性到 idl，接口和接口可以封送处理中 oleaut32.dll 通用封送处理程序。 请参阅[封送处理的详细信息](http://msdn.microsoft.com/library/windows/desktop/ms692621)Windows SDK for 的详细信息中。  
+     如果选择**自定义**，则可以指定的控件是**自动化兼容**。 如果选择**自动化兼容**，然后该向导将添加[oleautomation](../../windows/oleautomation.md)属性到 idl，接口和接口可以封送处理中 oleaut32.dll 通用封送处理程序。 请参阅[封送处理的详细信息](/windows/desktop/com/marshaling-details)Windows SDK for 的详细信息中。  
   
      此外，如果您选择**自动化兼容**，则在控件中的所有方法的所有参数必须都是变体兼容。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "37880085"
   
 -   **连接点**： 使对象的类派生来使您的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)并使其能够公开源接口。  
   
--   **许可**： 将支持添加到的控件[许可](http://msdn.microsoft.com/library/windows/desktop/ms690543)。 如果客户端计算机具有正确的许可证，则仅可以托管授权的控件。  
+-   **许可**： 将支持添加到的控件[许可](/windows/desktop/com/licensing)。 如果客户端计算机具有正确的许可证，则仅可以托管授权的控件。  
   
 ## <a name="see-also"></a>请参阅  
  [ATL 控件向导](../../atl/reference/atl-control-wizard.md)

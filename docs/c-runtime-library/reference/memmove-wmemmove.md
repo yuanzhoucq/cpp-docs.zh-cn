@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204623"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -69,7 +69,7 @@ wchar_t *wmemmove(
 源对象。
 
 *count*<br/>
-字节数 (**memmove**) 或字符 (**wmemmove**) 来复制。
+字节数 (**memmove**) 或多个字符 (**wmemmove**) 复制。
 
 ## <a name="return-value"></a>返回值
 
@@ -77,11 +77,11 @@ wchar_t *wmemmove(
 
 ## <a name="remarks"></a>备注
 
-副本*计数*字节 (**memmove**) 或字符 (**wmemmove**) 从*src*到*dest*。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
+副本*计数*字节 (**memmove**) 或多个字符 (**wmemmove**) 从*src*到*dest*。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
 
-**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-**Memmove**和**wmemmove**如果才会弃用函数常量 **_CRT_SECURE_DEPRECATE_MEMORY**之前以便于包含语句定义函数已弃用，如以下示例所示：
+**Memmove**并**wmemmove**函数将仅会弃用常量 **_CRT_SECURE_DEPRECATE_MEMORY**顺序中的包含语句之前定义要为不推荐使用，例如以下示例所示的函数：
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -97,7 +97,7 @@ wchar_t *wmemmove(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|

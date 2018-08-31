@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16d78d590201ea637dd6153edb40a1c6d89a82c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210336"
 ---
 # <a name="creating-an-ole-db-provider"></a>创建 OLE DB 提供程序
 创建 OLE DB 提供程序的建议的方法是使用这些向导创建的 ATL COM 项目和提供程序，然后修改使用 OLE DB 模板的文件。 自定义您的提供程序，你可以注释掉不需要的属性并添加可选接口。  
@@ -36,7 +36,7 @@ ms.locfileid: "39338787"
   
 4.  更新 PROVIDER_COLUMN_MAP，可以找到 MyProviderRS.h 中。 有关示例，请参阅[存储字符串中的 OLE DB 提供程序](../../data/oledb/storing-strings-in-the-ole-db-provider.md)。  
   
-5.  当准备好测试你的提供商，可以通过尝试查找提供程序枚举中的提供程序对它进行测试。 枚举中找到提供程序的测试代码的示例，请参阅[CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)并[DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例或中的示例[实现简单使用的者](../../data/oledb/implementing-a-simple-consumer.md)。  
+5.  当准备好测试你的提供商，可以通过尝试查找提供程序枚举中的提供程序对它进行测试。 枚举中找到提供程序的测试代码的示例，请参阅[CATDB](https://github.com/Microsoft/VCSamples)并[DBVIEWER](https://github.com/Microsoft/VCSamples)示例或中的示例[实现简单使用的者](../../data/oledb/implementing-a-simple-consumer.md)。  
   
 6.  添加所需的任何其他接口。 有关示例，请参阅[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
   
@@ -44,5 +44,5 @@ ms.locfileid: "39338787"
     >  默认情况下，向导生成是符合 OLE DB 级别 0 的代码。 为确保你的应用程序保持符合级别 0，不要删除任何向导生成的接口从代码。  
   
 ## <a name="see-also"></a>请参阅  
- [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](https://github.com/Microsoft/VCSamples)   
+ [DBVIEWER](https://github.com/Microsoft/VCSamples)

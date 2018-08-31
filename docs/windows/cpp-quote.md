@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610595"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205661"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -47,7 +47,7 @@ C 的指令。
 
 此外可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果必须使用 c + + IDL 特性，但不能使用此文件执行一些任务的 c + + 头文件，然后您可以编译它创建 MIDL 生成.h 文件，您应能够使用。
 
-**Cpp_quote**属性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 特性。
+**Cpp_quote**属性具有相同的功能[cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL 特性。
 
 ## <a name="example"></a>示例
 

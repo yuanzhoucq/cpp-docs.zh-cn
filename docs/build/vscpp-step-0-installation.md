@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中安装 c + + 支持 |Microsoft Docs
+title: 在 Visual Studio 2017 中安装 c + + 支持 |Microsoft Docs
 description: 安装 Visual c + + 的 Visual Studio 支持
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572714"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130886"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 c + + 支持
 
-如果尚未下载，并且尚未安装 Visual Studio 和 Visual c + + 工具，下面介绍了如何开始。
+如果尚未下载，并且尚未安装 Visual Studio 2017 和 Visual c + + 工具，下面介绍了如何开始。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -35,7 +35,13 @@ ms.locfileid: "42572714"
 
 有关磁盘空间和操作系统要求的详细信息，请参阅[Visual Studio 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-vs)。 安装程序报告磁盘空间量是需要您选择的选项。
 
-## <a name="installation"></a>安装
+## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
+
+ 若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序，然后选择**自定义安装**，然后选择 c + + 组件。 
+
+ 一般情况下，我们强烈建议使用 Visual Studio 2017，即使您需要编译你的代码使用 Visual Studio 2015 编译器。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
+
+## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安装
 
 1. 下载 Windows 的最新 Visual Studio 2017 安装程序。
 

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202725"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 类
 允许访问使用 Internet 协议的远程系统上的文件。  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，它接收读取的行。  
   
 ### <a name="return-value"></a>返回值  
- 指向包含从检索到的纯数据的缓冲区的指针[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象。 传递给此方法的缓冲区的数据类型，无论它执行任何操作 （例如，转换为 Unicode） 的数据，因此必须将返回的数据映射到结构希望，如同**void\*** 返回类型。  
+ 指向包含从检索到的纯数据的缓冲区的指针[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象。 传递给此方法的缓冲区的数据类型，无论它执行任何操作 （例如，转换为 Unicode） 的数据，因此必须将返回的数据映射到结构希望，如同**void** <strong>\*</strong> 返回类型。  
   
  如果未读取任何数据; 已达到文件结尾，则为 NULL或者，如果布尔值，则为 FALSE 的文件结束已达到未读取任何数据。  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  所需的缓冲区大小（以字节为单位）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  基础的 WinInet Api 不要执行缓冲，因此请选择使应用程序能够高效地读取数据，而不考虑要读取的数据量的缓冲区大小。 如果每个调用[读取](#read)通常涉及大型 aount 的数据 （例如，四个或多个千字节为单位），则无需使用一个缓冲区。 但是，如果您调用`Read`以获取小区的数据，或者如果您使用[ReadString](#readstring)来一次读取单独的行，则读取的缓冲区可提高应用程序的性能。  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  缓冲区的大小（以字节为单位）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+ 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
  基础 WinInet Api 不执行缓冲，因此选择使应用程序能够写入数据，无论要写入的数据量的有效数据的缓冲区大小。 如果每个调用[编写](#write)通常涉及到大量的数据 （例如，四个或多个千字节为单位一次），则无需使用一个缓冲区。 但是，如果您调用[编写](#write)编写小块数据，写入缓冲区，可提高应用程序的性能。  

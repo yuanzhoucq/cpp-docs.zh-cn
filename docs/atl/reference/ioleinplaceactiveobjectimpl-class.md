@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885596"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213318"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 类
 此类提供方法，可帮助在就地控件与其容器之间的通信。  
@@ -66,7 +66,7 @@ class IOleInPlaceActiveObjectImpl
   
   
 ## <a name="remarks"></a>备注  
- [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)界面可帮助在就地控件与其容器之间的通信; 例如，通信活动状态的控件和容器，并通知控件其需要重新调整大小本身。 类`IOleInPlaceActiveObjectImpl`提供的默认实现`IOleInPlaceActiveObject`，并支持`IUnknown`信息发送给转储调试中的设备生成。  
+ [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)界面可帮助在就地控件与其容器之间的通信; 例如，通信活动状态的控件和容器，并通知控件其需要重新调整大小本身。 类`IOleInPlaceActiveObjectImpl`提供的默认实现`IOleInPlaceActiveObject`，并支持`IUnknown`信息发送给转储调试中的设备生成。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
  返回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) Windows SDK 中。  
+ 请参阅[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK 中。  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  启用无模式对话框。  
@@ -102,7 +102,7 @@ HRESULT EnableModeless(BOOL fEnable);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) Windows SDK 中。  
+ 请参阅[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) Windows SDK 中。  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  容器调用此函数可获取该控件的窗口句柄。  
@@ -114,7 +114,7 @@ HRESULT GetWindow(HWND* phwnd);
 ### <a name="remarks"></a>备注  
  某些容器不会使用已无窗口，即使它是当前窗口的控件。 在 ATL 的实现中，如果`CComControl::m_bWasOnceWindowless`数据成员为 TRUE 时，该函数将返回 E_FAIL。 否则为如果\* *phwnd*不为 NULL，`GetWindow`分配*phwnd*到控件类数据成员`m_hWnd`，并返回 S_OK。  
   
- 请参阅[IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) Windows SDK 中。  
+ 请参阅[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK 中。  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  激活或停用容器文件窗口时通知控件。  
@@ -127,7 +127,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) Windows SDK 中。  
+ 请参阅[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) Windows SDK 中。  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  激活或停用容器的顶级框架窗口时通知控件。  
@@ -140,7 +140,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[ioleinplaceactiveobject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) Windows SDK 中。  
+ 请参阅[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) Windows SDK 中。  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  通知控件需要调整其边框的大小。  
@@ -156,7 +156,7 @@ HRESULT ResizeBorder(
  返回 S_OK。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) Windows SDK 中。  
+ 请参阅[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) Windows SDK 中。  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  处理来自容器的菜单快捷键消息。  
@@ -173,9 +173,9 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
  如果不转换该消息，S_FALSE。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[:: Translateaccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) Windows SDK 中。  
+ 请参阅[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)  
- [ActiveX 控件接口](http://msdn.microsoft.com/library/windows/desktop/ms692724)  
+ [ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)  
  [类概述](../../atl/atl-class-overview.md)

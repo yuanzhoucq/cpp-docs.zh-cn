@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 892cccea65b9e1b6f0c1eec21d3973e84a0fba03
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223254"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 类
 此类提供用于实现复合控件所需的方法。  
@@ -174,7 +174,7 @@ HWND Create(
  保留。  
   
  *dwInitParam*  
- 若要控制创建期间传递给控件的数据。 数据作为传递*dwInitParam*将显示为的 LPARAM 参数[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息，它获取创建时将发送到复合控件。  
+ 若要控制创建期间传递给控件的数据。 数据作为传递*dwInitParam*将显示为的 LPARAM 参数[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)消息，它获取创建时将发送到复合控件。  
   
 ### <a name="return-value"></a>返回值  
  新创建的复合控件的对话框句柄。  

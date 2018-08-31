@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211182"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 类
 此类提供包装`CreateWindow`和`CreateWindowEx`。  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>备注  
  此参数适配器类允许调用方的部分 Id （示） 或菜单句柄 (HMENUs) 传递到函数，而无需显式强制转换。  
   
- 此类用于实现对 Windows API 的包装器特别[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)并[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数，这两种接受可能的子窗口的 HMENU 参数标识符 (UINT) 而不是菜单句柄。 例如，可以看到正在使用此类作为参数[CWindowImpl::Create](cwindowimpl-class.md#create)。  
+ 此类用于实现对 Windows API 的包装器特别[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)并[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函数，这两种接受可能的子窗口的 HMENU 参数标识符 (UINT) 而不是菜单句柄。 例如，可以看到正在使用此类作为参数[CWindowImpl::Create](cwindowimpl-class.md#create)。  
 
   
  该类定义两个构造函数重载： 一个接受 UINT 参数和另一个接受的 HMENU 参数。 UINT 参数只是强制转换为构造函数和类的单个数据成员中存储的结果中 HMENU [m_hMenu](#_u_menuorid__m_hmenu)。 转换不直接存储 HMENU 构造函数的参数。  

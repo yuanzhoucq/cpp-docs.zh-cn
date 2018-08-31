@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197452"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 封装由 Windows 公共 OLE“页面设置”对话框提供的服务以及对于设置和修改打印边距的额外支持。  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION 禁用页面方向对话框控件。  
   
-- PSD_RETURNDEFAULT 会导致`CPageSetupDialog`以返回[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)并[DEVNAMES](../../mfc/reference/devnames-structure.md)而不会显示一个对话框中的系统的默认打印机初始化的结构。 假定这两个`hDevNames`和`hDevMode`NULL; 否则，该函数将返回错误。 如果系统默认打印机支持的旧的打印机驱动程序 （早于 Windows 版本 3.0） 仅`hDevNames`返回;`hDevMode`为 NULL。  
+- PSD_RETURNDEFAULT 会导致`CPageSetupDialog`以返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)而不会显示一个对话框中的系统的默认打印机初始化的结构。 假定这两个`hDevNames`和`hDevMode`NULL; 否则，该函数将返回错误。 如果系统默认打印机支持的旧的打印机驱动程序 （早于 Windows 版本 3.0） 仅`hDevNames`返回;`hDevMode`为 NULL。  
   
 - PSD_DISABLEPAPER 禁用纸张选择控件。  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- 创建打印机设备上下文中的从[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。  
+ 创建打印机设备上下文中的从[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)并[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>返回值  
- IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定是否发生了错误。  
+ IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。  
   
  IDOK 和 IDCANCEL 是常数，用于指示是否在用户选择了确定或取消按钮。  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)数据结构，其中包含有关设备初始化和环境的打印驱动程序的信息。 您必须解除锁定此结构与 Windows 所占用的内存[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)函数，Windows SDK 中所述。  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)数据结构，其中包含有关设备初始化和环境的打印驱动程序的信息。 您必须解除锁定此结构与 Windows 所占用的内存[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函数，Windows SDK 中所述。  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  调用此函数后调用[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)检索系统定义的打印机设备驱动程序的名称。  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  如果您修改`m_psd`数据成员直接，您将重写任何默认行为。  
   
- 有关详细信息[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)结构，请参阅 Windows SDK。  
+ 有关详细信息[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)结构，请参阅 Windows SDK。  
   
  有关示例，请参阅[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>参数  
  *wPaper*  
- 指定一个值，指示的纸张大小。 此值可以是之一**DMPAPER_** 说明中列出的值[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
+ 指定一个值，指示的纸张大小。 此值可以是之一**DMPAPER_** 说明中列出的值[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)结构。  
   
  *wFlags*  
  指示的方向的纸张或信封，并且打印机已点阵或为 HPPCL （Hewlett Packard 打印机控制语言） 设备。 此参数可以具有下列值之一：  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f 信封纵向模式 （点阵）  
   
  *pPSD*  
- 指向 `PAGESETUPDLG` 结构的指针。 有关详细信息[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)，请参阅 Windows SDK。  
+ 指向 `PAGESETUPDLG` 结构的指针。 有关详细信息[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  
  如果处理; 的非零值否则为 0。  

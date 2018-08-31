@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955002"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223230"
 ---
 # <a name="sample-container-class"></a>Sample Container 类
 
@@ -34,7 +34,7 @@ ms.locfileid: "38955002"
 
 - 如果表达式`~Ty`引发异常，容器对象的结果状态是不确定。
 
-- 如果容器存储分配器对象*al*，并*al*会引发异常而不因调用而 * al ***.allocate**，生成的容器的状态对象是未定义。
+- 如果容器存储分配器对象*al*，并*al*会引发异常而不因调用而`al.allocate`，生成的容器对象的状态是未定义。
 
 - 如果容器存储函数对象 *comp* 来确定如何对受控序列进行排序，且 *comp* 引发任何类型的异常，则容器对象的结果状态将不确定。
 

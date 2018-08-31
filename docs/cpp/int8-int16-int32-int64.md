@@ -24,55 +24,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1be48b2e6972ca3a291ab57dbcb1976e6a56d87
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194246"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
-## <a name="microsoft-specific"></a>Microsoft 专用  
- Microsoft C/C++ 功能支持固定大小整数类型。 可以通过使用声明 8 位、 16 位、 32 位或 64 位整数变量 **__int * * * n*类型说明符，其中*n*是 8、 16、 32 或 64。  
-  
- 以下示例为这些类型的固定大小整数声明了一个变量：  
-  
-```cpp 
-__int8 nSmall;      // Declares 8-bit integer  
-__int16 nMedium;    // Declares 16-bit integer  
-__int32 nLarge;     // Declares 32-bit integer  
-__int64 nHuge;      // Declares 64-bit integer  
-```  
-  
- 类型 **__int8**， **__int16**，并 **__int32**是同义词，具有相同的 ANSI 类型的大小，并可用于编写的行为相同的可移植代码跨多个平台。 **__Int8**数据类型是同义词，具有类型**char**， **__int16**是类型的同义词**短**，和 **__int32**是类型的同义词**int**。**__Int64**类型是同义词，具有类型**超长**。  
-  
-## <a name="example"></a>示例  
- 下面的示例说明 __int*xx*参数将提升为**int**:  
-  
-```cpp 
-// sized_int_types.cpp  
-  
-#include <stdio.h>  
-  
-void func(int i) {  
-    printf_s("%s\n", __FUNCTION__);  
-}  
-  
-int main()  
-{  
-    __int8 i8 = 100;  
-    func(i8);   // no void func(__int8 i8) function  
-                // __int8 will be promoted to int  
-}  
-```  
-  
-```Output  
-func  
-```  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [关键字](../cpp/keywords-cpp.md)   
- [基本类型](../cpp/fundamental-types-cpp.md)   
- [数据类型范围](../cpp/data-type-ranges.md)
+
+**Microsoft 专用**
+
+Microsoft C/C++ 功能支持固定大小整数类型。 可以通过使用声明 8 位、 16 位、 32 位或 64 位整数变量 **__int**<em>n</em>类型说明符，其中*n*是 8、 16、 32 或 64。
+
+以下示例为这些类型的固定大小整数声明了一个变量：
+
+```cpp
+__int8 nSmall;      // Declares 8-bit integer
+__int16 nMedium;    // Declares 16-bit integer
+__int32 nLarge;     // Declares 32-bit integer
+__int64 nHuge;      // Declares 64-bit integer
+```
+
+类型 **__int8**， **__int16**，并 **__int32**是同义词，具有相同的 ANSI 类型的大小，并可用于编写的行为相同的可移植代码跨多个平台。 **__Int8**数据类型是同义词，具有类型**char**， **__int16**是类型的同义词**短**，和 **__int32**是类型的同义词**int**。**__Int64**类型是同义词，具有类型**超长**。
+
+## <a name="example"></a>示例
+
+下面的示例说明 __int*xx*参数将提升为**int**:
+
+```cpp
+// sized_int_types.cpp
+
+#include <stdio.h>
+
+void func(int i) {
+    printf_s("%s\n", __FUNCTION__);
+}
+
+int main()
+{
+    __int8 i8 = 100;
+    func(i8);   // no void func(__int8 i8) function
+                // __int8 will be promoted to int
+}
+```
+
+```Output
+func
+```
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[关键字](../cpp/keywords-cpp.md)<br/>
+[基本类型](../cpp/fundamental-types-cpp.md)<br/>
+[数据类型范围](../cpp/data-type-ranges.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 对 MFC 模块状态中的激活上下文的支持 |Microsoft 文档
+title: MFC 模块状态中的激活上下文的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2713e0025c0587a4ab76813d4d07eed0825db447
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6116452a3fa0fabc2b2f458c4c597e103607aafe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217709"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>针对 MFC 模块状态中的激活上下文的支持
 MFC 使用用户模块提供的清单资源创建激活上下文。 有关如何创建激活上下文的详细信息，请参阅下列主题：  
   
--   [激活上下文](http://msdn.microsoft.com/library/aa374153)  
+-   [激活上下文](/windows/desktop/SbsCs/activation-contexts)  
   
--   [应用程序清单](http://msdn.microsoft.com/library/aa374191)  
+-   [应用程序清单](/windows/desktop/SbsCs/application-manifests)  
   
--   [程序集清单](http://msdn.microsoft.com/library/aa374219)  
+-   [程序集清单](/windows/desktop/SbsCs/assembly-manifests)  
   
 ## <a name="remarks"></a>备注  
- 在读取这些 Windows SDK 主题，请注意，MFC 激活上下文机制类似的 Windows SDK 激活上下文，只不过 MFC 不使用 Windows SDK 激活上下文 API。  
+ 在读取这些 Windows SDK 主题，请注意，MFC 激活上下文机制类似 Windows SDK 的激活上下文，只不过 MFC 不使用 Windows SDK 激活上下文 API。  
   
- 激活上下文在 MFC 应用程序、 用户 Dll 和 MFC 扩展 Dll 中工作，通过以下方式：  
+ 按以下方式将激活上下文的工作方式在 MFC 应用程序、 用户 Dll 和 MFC 扩展 Dll:  
   
 -   MFC 应用程序为其清单资源使用资源 ID 1。 在这种情况下，MFC 不会创建其自己的激活上下文，但将使用默认应用程序上下文。  
   
@@ -42,16 +42,16 @@ MFC 使用用户模块提供的清单资源创建激活上下文。 有关如何
   
 -   MFC 扩展 DLL 依赖其承载应用程序或用户 DLL 建立其激活上下文。  
   
- 尽管可以使用上述过程中在修改的激活上下文状态[使用激活上下文 API](http://msdn.microsoft.com/library/aa376620)，使用 MFC 激活上下文机制将非常有用，在基于 DLL 的插件体系结构的开发时未被轻松 （或不可能） 来手动切换激活状态之前和之后外部的即插即用的外接程序的单个调用。  
+ 尽管可以使用下描述的过程修改激活上下文状态[使用激活上下文 API](/windows/desktop/SbsCs/using-the-activation-context-api)，使用 MFC 激活上下文机制时非常有用开发基于 DLL 的插件体系结构它不是简单 （或不可能） 单独调用外部插件前后手动切换激活状态。  
   
- 在中创建的激活上下文[AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)。 它将在 `AFX_MODULE_STATE` 析构函数中销毁。 激活上下文句柄保留在 `AFX_MODULE_STATE` 中。 (`AFX_MODULE_STATE`中所述[AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)。)  
+ 在中创建激活上下文[AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)。 它将在 `AFX_MODULE_STATE` 析构函数中销毁。 激活上下文句柄保留在 `AFX_MODULE_STATE` 中。 (`AFX_MODULE_STATE`中所述[AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)。)  
   
- [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)宏激活和停用的激活上下文。 将为静态 MFC 库以及 MFC DLL 启用 `AFX_MANAGE_STATE`，以使 MFC 代码在用户 DLL 选择的正确激活上下文中执行。  
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)宏激活和停用激活上下文。 将为静态 MFC 库以及 MFC DLL 启用 `AFX_MANAGE_STATE`，以使 MFC 代码在用户 DLL 选择的正确激活上下文中执行。  
   
 ## <a name="see-also"></a>请参阅  
- [激活上下文](http://msdn.microsoft.com/library/aa374153)   
- [应用程序清单](http://msdn.microsoft.com/library/aa374191)   
- [程序集清单](http://msdn.microsoft.com/library/aa374219)   
+ [激活上下文](/windows/desktop/SbsCs/activation-contexts)   
+ [应用程序清单](/windows/desktop/SbsCs/application-manifests)   
+ [程序集清单](/windows/desktop/SbsCs/assembly-manifests)   
  [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)   
  [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)   
  [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)

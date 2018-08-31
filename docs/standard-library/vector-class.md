@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199490"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -120,7 +120,7 @@ class vector
  要存储在矢量中的元素数据类型
 
 *分配器*  
- 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数是可选的默认值为 **分配器 * * *\<类型 >。*
+ 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<Type>`。
 
 ## <a name="remarks"></a>备注
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>参数
 
-*Val*要分配给添加到矢量末尾的元素的值。
+*val*<br/>
+ 要赋给添加到矢量末尾处的元素的值。
 
 ### <a name="example"></a>示例
 

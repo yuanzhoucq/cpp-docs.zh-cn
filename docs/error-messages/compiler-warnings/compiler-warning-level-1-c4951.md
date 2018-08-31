@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 1） C4951 |Microsoft 文档
+title: 编译器警告 （等级 1） C4951 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204230"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>编译器警告（等级 1）C4951
-收集配置文件数据后已编辑过“函数”，没有使用函数配置文件数据  
-  
- 在输入模块中已将函数编辑为 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，因此配置文件数据现在无效。 在 **/ltcg: pginstrument** 后已重新编译输入模块并且有一个函数（***函数***），使用的控制流不是在执行 **/ltcg: pginstrument** 操作时模块中的控制流。  
-  
- 此警告为信息性。 若要解决此警告，请运行 **/LTCG:PGINSTRUMENT**，重做所有测试，并运行 **/LTCG:PGOPTIMIZE**。  
-  
- 如果已使用 **/LTCG:PGOPTIMIZE** ，此警告将替换为一个错误。
+
+> '*函数*已编辑过收集配置文件数据后，没有使用函数配置文件数据
+
+在输入模块中已将函数编辑为 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，因此配置文件数据现在无效。 输入的模块后已重新编译 **/ltcg: pginstrument**并且有一个函数 (*函数*) 的控件不是模块中的时间不同的流与 **/ltcg: pginstrument**操作。
+
+此警告为信息性。 若要解决此警告，请运行 **/LTCG:PGINSTRUMENT**，重做所有测试，并运行 **/LTCG:PGOPTIMIZE**。
+
+如果已使用 **/LTCG:PGOPTIMIZE** ，此警告将替换为一个错误。
