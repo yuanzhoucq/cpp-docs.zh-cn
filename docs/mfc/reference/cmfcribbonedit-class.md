@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850217"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216454"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 类
 在功能区栏上实现位于一个编辑控件。  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  向父窗口的指针`CMFCRibbonEdit`对象。  
   
  [in]*dwEditStyle*  
- 指定文本框的样式。 你可以组合备注部分中列出的窗口样式[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)的 Windows SDK 中所述。  
+ 指定文本框的样式。 你可以组合备注部分中列出的窗口样式[编辑控件样式](/windows/desktop/Controls/edit-control-styles)的 Windows SDK 中所述。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新的文本框中，如果该方法成功，则否则，为 NULL。  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT**为右对齐  
   
- 有关这些样式的详细信息，请参阅[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ 有关这些样式的详细信息，请参阅[编辑控件样式](/windows/desktop/Controls/edit-control-styles)。  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  检索的宽度，以像素为单位， [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
@@ -482,7 +482,7 @@ virtual void OnDrawOnList(
  指向设备上下文指针`CMFCRibbonEdit`控件。  
   
  [in]*strText*  
- 显示文本[](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 类")。  
+ 显示文本[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 类")。  
   
  [in]*nTextOffset*  
  距离，以像素为单位，从左侧和右侧的显示文本的列表框。  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法将重新绘制的显示矩形`CMFCRibbonEdit`通过间接调用的对象[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)与 RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 标志设置。  
+ 此方法将重新绘制的显示矩形`CMFCRibbonEdit`通过间接调用的对象[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)与 RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 标志设置。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  设置的可访问性数据[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT 为右对齐的  
   
- 有关这些样式的详细信息，请参阅[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ 有关这些样式的详细信息，请参阅[编辑控件样式](/windows/desktop/Controls/edit-control-styles)。  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  设置文本框的宽度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  

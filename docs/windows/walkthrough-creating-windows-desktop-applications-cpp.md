@@ -1,4 +1,4 @@
----
+﻿---
 title: 演练： 创建传统的 Windows 桌面应用程序 （c + +） |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 06/12/2018

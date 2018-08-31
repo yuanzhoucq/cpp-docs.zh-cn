@@ -12,69 +12,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 084c689ad7720e36670130d552522aa2f593218e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846592"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578465"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 本主题提供有关升级 Visual c++ 代码的指南。 它包括获取要编译和在新版本的工具上运行的代码，以及利用新语言和 Visual Studio 功能。 本主题还包括有关将原有应用迁移到更现代的平台的信息。  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>升级 Visual C++ 代码的原因  
- 应考虑出于以下原因升级你的代码：  
+
+应考虑出于以下原因升级你的代码：  
   
--   由于改进了编译器优化，可实现更快的代码。  
+- 由于改进了编译器优化，可实现更快的代码。  
   
--   由于编译器本身性能的改进，可实现更快的生成。  
+- 由于编译器本身性能的改进，可实现更快的生成。  
   
--   改进了标准符合性。 现在 Visual C++ 可依照最新的 C++ 标准实现许多功能。  
+- 改进了标准符合性。 现在 Visual C++ 可依照最新的 C++ 标准实现许多功能。  
   
--   更好的安全性。 安全功能，如保护检查。  
+- 更好的安全性。 安全功能，如保护检查。  
   
 ### <a name="porting-your-code"></a>移植代码  
- 升级时，首先考虑应用程序代码和项目。 你的应用程序是使用 Visual Studio 生成的吗？  如果是，确定所涉及的项目。  是否拥有自定义生成脚本？  如果拥有自定义生成脚本，而不是使用 Visual Studio 的生成系统，升级中将需要完成更多的工作，因为无法通过使用 Visual Studio 升级项目文件和生成设置来节省时间。  
+升级时，首先考虑应用程序代码和项目。 你的应用程序是使用 Visual Studio 生成的吗？ 如果是，确定所涉及的项目。  是否拥有自定义生成脚本？ 如果拥有自定义生成脚本，而不是使用 Visual Studio 的生成系统，升级中将需要完成更多的工作，因为无法通过使用 Visual Studio 升级项目文件和生成设置来节省时间。  
   
- Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及之前版本中的 vcbuild 更改为 Visual Studio 2010 及之后版本中的 MSBuild。 如果是从 2010 之前的版本升级，并且具有高度自定义的生成系统，可能不得不完成更多的工作以进行升级。  如果是从 Visual Studio 2010 及之后的版本升级，则你的项目已经在使用 MSBuild 了，所以为应用程序升级项目和生成应该会比较容易。  
+Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及之前版本中的 vcbuild 更改为 Visual Studio 2010 及之后版本中的 MSBuild。 如果是从 2010 之前的版本升级，并且具有高度自定义的生成系统，可能不得不完成更多的工作以进行升级。 如果是从 Visual Studio 2010 及之后的版本升级，则你的项目已经在使用 MSBuild 了，所以为应用程序升级项目和生成应该会比较容易。  
   
- 如果不使用 Visual Studio 的生成系统，则应考虑升级以使用 MSBuild。 如果升级以使用 MSBuild，可能在以后的升级中会更轻松，使用诸如 Visual Studio Online 等服务将会更容易。 MSBuild 支持 Visual Studio 支持的所有目标平台。  
+如果不使用 Visual Studio 的生成系统，则应考虑升级以使用 MSBuild。 如果升级以使用 MSBuild，可能在以后的升级中会更轻松，使用诸如 Visual Studio Online 等服务将会更容易。 MSBuild 支持 Visual Studio 支持的所有目标平台。  
   
 ### <a name="porting-visual-studio-projects"></a>移植 Visual Studio 项目  
-  要开始升级项目或解决方案，只需在新版本的 Visual Studio 中打开解决方案，然后按提示开始对其进行升级。  升级项目时，你将获取一个升级报告，该报告也将在你的项目文件夹中保存为 UpgradeLog.htm。 该升级报告显示有关升级过程中所遇到的问题的总结和有关所做更改或无法自动解决的问题的一些信息。  
+要开始升级项目或解决方案，只需在新版本的 Visual Studio 中打开解决方案，然后按提示开始对其进行升级。  升级项目时，你将获取一个升级报告，该报告也将在你的项目文件夹中保存为 UpgradeLog.htm。 该升级报告显示有关升级过程中所遇到的问题的总结和有关所做更改或无法自动解决的问题的一些信息。  
   
-1.  项目属性  
+1. 项目属性  
   
-2.  包含文件  
+2. 包含文件  
   
-3.  由于编译器符合性的改进或标准中的更改而无法完全编译的代码  
+3. 由于编译器符合性的改进或标准中的更改而无法完全编译的代码  
   
-4.  依赖于不再可用的 Visual Studio 或 Windows 功能或未包含在 Visual Studio 默认安装中或已从产品中移除的标头文件的代码  
+4. 依赖于不再可用的 Visual Studio 或 Windows 功能或未包含在 Visual Studio 默认安装中或已从产品中移除的标头文件的代码  
   
-5.  由于 API 中的更改（如 API 重命名、函数签名更改或函数弃用）而不再编译的代码  
+5. 由于 API 中的更改（如 API 重命名、函数签名更改或函数弃用）而不再编译的代码  
   
-6.  由于诊断中的更改（如警告变为错误）而不再编译的代码  
+6. 由于诊断中的更改（如警告变为错误）而不再编译的代码  
   
-7.  由于库更改导致的链接器错误（尤其是使用 /NODEFAULTLIB 时）。  
+7. 由于库更改导致的链接器错误（尤其是使用 /NODEFAULTLIB 时）。  
   
-8.  行为更改所导致的运行时错误或意外结果  
+8. 行为更改所导致的运行时错误或意外结果  
   
 9. 由于这些工具中引入的错误而导致的错误。 如果遇到问题，请通过正常支持渠道或通过使用 [Visual Studio 反馈中心](http://connect.microsoft.com/VisualStudio/Feedback)将其报告给 Visual C++ 团队。  
   
- 除了由于编译器错误所导致的无法避免的更改，某些更改在升级过程中是可选的，如：  
+除了由于编译器错误所导致的无法避免的更改，某些更改在升级过程中是可选的，如：  
   
-1.  新的警告可能意味着你想要清理你的代码。 具体取决于特定诊断，这可以提高你的代码的可移植性、标准符合性和安全性。  
+1. 新的警告可能意味着你想要清理你的代码。 具体取决于特定诊断，这可以提高你的代码的可移植性、标准符合性和安全性。  
   
-2.  利用添加对未授权代码执行的检查的编译器新功能，如 [/guard:cf（启用流控制保护）](../build/reference/guard-enable-control-flow-guard.md)编译器选项。  
+2. 利用添加对未授权代码执行的检查的编译器新功能，如 [/guard:cf（启用流控制保护）](../build/reference/guard-enable-control-flow-guard.md)编译器选项。  
   
-3.  你可能想要更新一些代码以使用可简化代码的新语言功能、提高程序的性能，或更新代码以使用现代库并遵循现代标准和最佳做法。  
+3. 你可能想要更新一些代码以使用可简化代码的新语言功能、提高程序的性能，或更新代码以使用现代库并遵循现代标准和最佳做法。  
   
- 升级并测试项目后，可能需要考虑进一步改善代码或规划代码的未来方向，或甚至重新考虑项目的体系结构。 它是否会接收进行中的开发工作？ 代码可在其他平台上运行是否重要？  如果是，是哪些平台？  C++ 是充分考虑了可移植性和跨平台开发而设计的标准化语言，但许多 Windows 应用程序的代码在很大程度上依赖于 Windows 平台。 是否想重构代码以分隔出那些更依赖于 Windows 平台的那部分代码？  
+升级并测试项目后，可能需要考虑进一步改善代码或规划代码的未来方向，或甚至重新考虑项目的体系结构。 它是否会接收进行中的开发工作？ 代码可在其他平台上运行是否重要？  如果是，是哪些平台？  C++ 是充分考虑了可移植性和跨平台开发而设计的标准化语言，但许多 Windows 应用程序的代码在很大程度上依赖于 Windows 平台。 是否想重构代码以分隔出那些更依赖于 Windows 平台的那部分代码？  
   
- 你的用户界面呢？  如果你正在使用 MFC，可能会想要更新 UI。  你是否正在使用在 2008 年作为功能包引入的任何更新的 MFC 功能？  如果只是想要让应用获得更新的外观和感觉，而不重写整个应用，则可以考虑使用 MFC 中的功能区 API 或使用 MFC 的一些新功能。  
+你的用户界面呢？ 如果你正在使用 MFC，可能会想要更新 UI。 你是否正在使用在 2008 年作为功能包引入的任何更新的 MFC 功能？ 如果只是想要让应用获得更新的外观和感觉，而不重写整个应用，则可以考虑使用 MFC 中的功能区 API 或使用 MFC 的一些新功能。  
   
- 如果想要为程序提供 XAML 用户界面，但不想创建 UWP 应用，可以将 C# 与 WPF 搭配使用以创建 UI 层，并将标准 C ++ 逻辑重构到 DLL。 在 C++/CLI 中创建互操作性层，以连接 C# 和本机代码。 创建 UWP 应用的另一种方法是使用 [C++/CX](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh699871.aspx) 或 [C++/WinRT](https://github.com/microsoft/cppwinrt)。 在 Windows 10 中，可以使用 [Desktop App Converter](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) 将现有桌面应用程序打包为 UWP 应用，而无需修改任何代码。   
- 或者，也许你现在有新的需求，或可以预见到需要面向除 Windows 桌面外的平台，如 Windows Phone 或 Android 设备。 你可以将你的用户界面代码移植到跨平台的 UI 库。 通过这些 UI 框架，可以面向多个设备并仍然使用 Visual Studio 和 Visual Studio 调试器作为开发环境。  
+如果想要为程序提供 XAML 用户界面，但不想创建 UWP 应用，可以将 C# 与 WPF 搭配使用以创建 UI 层，并将标准 C ++ 逻辑重构到 DLL。 在 C++/CLI 中创建互操作性层，以连接 C# 和本机代码。 创建 UWP 应用的另一种方法是使用 [C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) 或 [C++/WinRT](https://github.com/microsoft/cppwinrt)。 在 Windows 10 中，可以使用 [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) 将现有桌面应用程序打包为 UWP 应用，而无需修改任何代码。   
+
+或者，也许你现在有新的需求，或可以预见到需要面向除 Windows 桌面外的平台，如 Windows Phone 或 Android 设备。 你可以将你的用户界面代码移植到跨平台的 UI 库。 通过这些 UI 框架，可以面向多个设备并仍然使用 Visual Studio 和 Visual Studio 调试器作为开发环境。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -93,4 +95,5 @@ ms.locfileid: "33846592"
 |[C++/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)|详细演示如何升级 C++ 语法的托管扩展来使用新的语法。 有关详细信息，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [Visual C++](../visual-cpp-in-visual-studio.md)
+
+[Visual C++](../visual-cpp-in-visual-studio.md)
