@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132238"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220211"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 和 [15.8](#update_158) 中 C++ 的一致性改进
 
@@ -93,7 +93,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 这样可以在并
 
 之前弃用（且被编译器忽略的）`register` 关键字现已从语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
 
-有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx)（Visual C++ 2003 至 2015 中的新增功能）。
+有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/library/mt723604.aspx)（Visual C++ 2003 至 2015 中的新增功能）。
 
 ## <a name="improvements_155"></a>Visual Studio 2017 版本 15.5 中的改进
 
