@@ -1,7 +1,7 @@
 ---
 title: CMFCButton 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217504"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352711"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 `CMFCButton`类添加了功能[CButton](../../mfc/reference/cbutton-class.md)如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |name|描述|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指示是否绘制一个聚焦框按钮周围。|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指示是否在光标悬停时突出显示 BS_CHECKBOX 样式的按钮。|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|指示是否在按钮的右侧显示的图像。|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|指示按钮是否是透明的。|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|指定按钮文本的对齐方式。|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|指定是否使用 Windows XP 主题。|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指示是否绘制一个聚焦框按钮周围。| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|指定的按钮，如无边距、 平面的以平面或 3D 样式。|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|为 TRUE 时，启用已禁用的按钮绘制为灰显。|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指示是否在光标悬停时突出显示 BS_CHECKBOX 样式的按钮。|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|指示是否对按钮按下事件做出响应。|
+|[CMFCButton::m_bRightImage](#m_brightimage)|指示是否在按钮的右侧显示的图像。|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| 指示图像是否为该按钮上。|
+|[CMFCButton::m_bTransparent](#m_btransparent)|指示按钮是否是透明的。|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| 指示最后一个单击事件是一次双击。|
   
 ## <a name="remarks"></a>备注  
  其他类型的按钮派生自`CMFCButton`类，如[CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md)类，该类支持超链接，并`CMFCColorButton`类，该类支持颜色选取器对话框。  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>返回值  
  如果按钮边框的样式对应于当前的 Windows 主题; 则为 TRUE否则为 FALSE。  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+指定是否在绘制按钮时使用 Windows XP 主题。
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  指示是否绘制一个聚焦框按钮周围。  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  设置`m_bDrawFocus`为 TRUE 的成员才能指定该框架将周围绘制聚焦框按钮的文本和图像，如果该按钮将接收焦点。  
   
  `CMFCButton`构造函数初始化此成员为 TRUE。  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+为 TRUE 时，启用已禁用的按钮绘制为灰显。
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  指示是否在光标悬停时突出显示 BS_CHECKBOX 样式的按钮。  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>备注  
  设置`m_bHighlightChecked`为 TRUE，框架将时突出显示 BS_CHECKBOX 样式的按钮的鼠标悬停在其上指定的成员。  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+指示是否对按钮按下事件做出响应。
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  指示是否在按钮的右侧显示的图像。  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+指示图像是否为该按钮上。
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>备注  
  设置`m_bRightImage`为 TRUE 来指定该框架将右侧的按钮的文本标签中显示按钮的图像的成员。  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|对齐到右侧的按钮的按钮文本。|  
   
  `CMFCButton`构造函数初始化到 ALIGN_CENTER 此成员。  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+指示最后一个单击事件是一次双击。 |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  指定的按钮，如无边距、 平面的以平面或 3D 样式。  
   
