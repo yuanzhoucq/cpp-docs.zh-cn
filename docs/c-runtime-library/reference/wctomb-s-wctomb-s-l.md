@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195114"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -77,7 +77,7 @@ errno_t _wctomb_s_l(
 多字节字符的地址。
 
 *sizeInBytes*<br/>
-缓冲区大小*mbchar*。
+缓冲区的大小*mbchar*。
 
 *wchar*<br/>
 宽字符。
@@ -97,19 +97,19 @@ errno_t _wctomb_s_l(
 |任何|>**INT_MAX**|**EINVAL**|未修改|
 |任何|过小|**EINVAL**|未修改|
 
-如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**wctomb**返回**EINVAL**和设置**errno**到**EINVAL**。
+如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**wctomb**返回**EINVAL**并设置**errno**到**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Wctomb_s**函数将其*wchar*的相应的多字节字符的自变量，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。
+**Wctomb_s**函数将其*wchar*参数的相应多字节字符，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。
 
-如果**wctomb_s**将宽字符转换为多字节字符，它会将字节数 (即永远不会大于**MB_CUR_MAX**) 中为指向整数的宽字符*pRetValue*。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb_s**填充*pRetValue* 1。 如果目标指针*mbchar*是**NULL**， **wctomb_s**将 0 放入*pRetValue*。 如果转换不在当前区域设置，可能**wctomb_s** -1 放*pRetValue*。
+如果**wctomb_s**将宽字符转换为多字节字符，它会将字节数 (即永远不会大于**MB_CUR_MAX**) 中由指向整数的宽字符*pRetValue*。 如果*wchar*是宽字符 null 字符 (L '\0)， **wctomb_s**填充*pRetValue* 1。 如果目标指针*mbchar*是**NULL**， **wctomb_s**将 0 放入*pRetValue*。 如果在当前区域设置中不支持转换，则**wctomb_s** -1 放*pRetValue*。
 
-**wctomb_s**使用当前区域设置依赖于区域设置的信息; 以及 **_wctomb_s_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wctomb_s**的区域设置相关的信息; 使用当前区域设置 **_wctomb_s_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

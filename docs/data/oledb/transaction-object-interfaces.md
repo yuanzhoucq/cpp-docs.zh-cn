@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2d84d9a072d3eeaa84246a6692487be5c71679c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194569"
 ---
 # <a name="transaction-object-interfaces"></a>事务对象接口
 事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，必须创建你自己的对象）。  
@@ -34,7 +34,7 @@ ms.locfileid: "42572327"
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|强制|否|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|强制|否|  
 |[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|强制|否|  
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|否|  
   

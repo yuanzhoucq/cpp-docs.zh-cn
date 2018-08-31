@@ -1,5 +1,5 @@
 ---
-title: DEVNAMES 结构 |Microsoft 文档
+title: DEVNAMES 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e2ba459a2ee98a89e264be452b04f116072d41e6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194606"
 ---
 # <a name="devnames-structure"></a>DEVNAMES 结构
 `DEVNAMES` 结构包含标识打印机的驱动程序、设备和输出端口名称的字符串。  
@@ -44,13 +44,13 @@ typedef struct tagDEVNAMES { /* dvnm */
  （输入/输出）指定字符相对于包含设备驱动程序文件名（无扩展名）的不以 null 结尾的字符串的偏移量。 对于输入，此字符串用于确定打印机最初显示在对话框中。  
   
  *wDeviceOffset*  
- （输入/输出）指定字符相对于包含设备名称的以 null 结尾的字符串（最大值为包含 null 的 32 个字节）的偏移量。 此字符串必须与相同`dmDeviceName`的成员[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
+ （输入/输出）指定字符相对于包含设备名称的以 null 结尾的字符串（最大值为包含 null 的 32 个字节）的偏移量。 此字符串必须与相同`dmDeviceName`的成员[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)结构。  
   
  *wOutputOffset*  
  （输入/输出）指定字符相对于包含物理输出媒体（输出端口）的 DOS 设备名称的以 null 结尾的字符串的偏移量。  
   
  *wDefault*  
- 指定 `DEVNAMES` 结构中包含的字符串是否标识默认打印机。 此字符串用于验证默认打印机自上次打印操作以来是否更改。 在输入时，如果设置 DN_DEFAULTPRN 标志，其他值在`DEVNAMES`针对当前默认打印机检查结构。 如果任意字符串不匹配，则将显示警告消息，通知用户文档可能需要重新设置格式。 在输出时，`wDefault`成员发生变化时，仅当显示打印设置对话框中，且用户选择确定按钮。 如果选择默认打印机，设置 DN_DEFAULTPRN 标志。 如果选择特定打印机，则将不会设置此标志。 此成员的所有其他位将保留供“打印对话框”过程内部使用。  
+ 指定 `DEVNAMES` 结构中包含的字符串是否标识默认打印机。 此字符串用于验证默认打印机自上次打印操作以来是否更改。 在输入时，如果设置了 DN_DEFAULTPRN 标志，另外一些值在`DEVNAMES`结构进行检查当前的默认打印机。 如果任意字符串不匹配，则将显示警告消息，通知用户文档可能需要重新设置格式。 在输出时，`wDefault`成员发生变化时，才显示打印设置对话框中，并且用户选择确定按钮。 如果选择默认打印机，设置 DN_DEFAULTPRN 标志。 如果选择特定打印机，则将不会设置此标志。 此成员的所有其他位将保留供“打印对话框”过程内部使用。  
   
 ## <a name="remarks"></a>备注  
  `PrintDlg`函数使用这些字符串初始化系统定义打印对话框中的成员。 当用户关闭对话框后，此结构中将返回有关选定打印机的信息。  

@@ -1,7 +1,7 @@
 ---
-title: NMAKE 错误 U1000 |Microsoft 文档
+title: NMAKE 错误 U1000 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194883"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE 错误 U1000
-语法错误:) 宏调用中缺少  
-  
- 左的括号， **(**，却没有匹配的右括号， **)**，宏调用中。 正确的窗体是 **$(***名称***)**;`$` *n*所允许的一个字符的名称。
+
+> 语法错误:) 宏调用中缺少
+
+左的圆括号 **(**，而无需匹配的右括号，却 **)**，宏调用中。 正确的格式 **$(**<em>名称</em>**)**;**$** <em>n</em>允许为一个字符的名称。

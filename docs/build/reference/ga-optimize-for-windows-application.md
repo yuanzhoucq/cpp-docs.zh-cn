@@ -1,5 +1,5 @@
 ---
-title: -GA （Windows 应用程序优化） |Microsoft 文档
+title: -GA （Windows 应用程序优化） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194658"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA（Windows 应用程序优化）
-有关访问线程本地存储 (TLS) 变量的.exe 文件更高效的代码中的结果。  
+中的.exe 文件的访问线程本地存储 (TLS) 的变量更高效的代码的结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ ms.locfileid: "32374253"
 ```  
   
 ## <a name="remarks"></a>备注  
- **/GA**加快对数据的访问声明与[__declspec （thread)](../../cpp/declspec.md)在基于 Windows 的程序中。 当设置此选项时， [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749)宏被假定为 0。  
+ **/GA**对数据的速度访问使用声明[__declspec （thread)](../../cpp/declspec.md)在基于 Windows 的程序中。 设置此选项， [__tls_index](/windows/desktop/ProcThread/thread-local-storage)宏被假定为 0。  
   
  使用 **/GA**为 DLL 可能会导致代码生成错误。  
   
