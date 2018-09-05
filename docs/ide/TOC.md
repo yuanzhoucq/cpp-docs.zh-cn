@@ -75,7 +75,6 @@
 ## [重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)
 ### [使用合并模块重新分发组件](redistributing-components-by-using-merge-modules.md)
 ### [重新分发 Visual C++ ActiveX 控件](redistributing-visual-cpp-activex-controls.md)
-### [重新分发数据库支持文件](redistributing-database-support-files.md)
 ### [重新分发 MFC 库](redistributing-the-mfc-library.md)
 ### [重新分发 ATL 应用程序](redistributing-an-atl-application.md)
 ## [部署示例](deployment-examples.md)
