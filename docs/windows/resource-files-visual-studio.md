@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678366"
 ---
 # <a name="resource-files-visual-studio"></a>资源文件 (Visual Studio)
 
 > [!NOTE]
-> 本材料适用于 Windows 桌面应用程序。 有关通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
+> 本材料适用于 Windows 桌面应用程序。 有关通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](/windows/uwp/app-resources/)。
 >
 > 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 >

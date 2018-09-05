@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c8bbd345e2d3fe0c5571407d41f590c6cc8d7ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676818"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>正在创建空的 Windows 桌面应用程序
 
@@ -42,7 +42,3 @@ ms.locfileid: "43197771"
 项目会出现在“解决方案资源管理器”  中，具有三个目录，用于包含源文件、头文件和资源文件。
 
 接下来，可以 [将文件添加到空的 Visual C++ 项目](../windows/adding-files-to-an-empty-win32-applications.md)。
-
-## <a name="see-also"></a>请参阅
-
-[部署应用程序](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

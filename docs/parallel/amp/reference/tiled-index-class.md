@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680190"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 提供的索引[tiled_extent](tiled-extent-class.md)对象。 该类具有访问相对于本地平铺原点和相对于全局原点的元素的属性。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[barrier 常量](#tiled_index__barrier)|存储[tile_barrier](tile-barrier-class.md)对象，表示当前线程的平铺屏障。|  
 |||  
-|[全局常量](#tiled_index__global)|存储[索引](index-class.md)对象中的级别 1、 2 或 3 表示全局索引[网格](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)对象。|  
+|[全局常量](#tiled_index__global)|存储[索引](index-class.md)表示网格对象中的全局索引的级别 1、 2 或 3 的对象。|  
 |[局部常量](#tiled_index__local)|存储`index`对象的当前磁贴中的索引，级别 1、 2 或 3，表示相对[tiled_extent](tiled-extent-class.md)对象。|  
 |[rank 常量](#tiled_index__rank)|将存储的秩`tiled_index`对象。|  
 |[tile 常量](#tiled_index__tile)|存储`index`对象的秩为 1、 2 或 3 表示当前 tile 的坐标`tiled_extent`对象。|  

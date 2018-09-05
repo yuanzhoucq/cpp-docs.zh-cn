@@ -1,7 +1,7 @@
 ---
-title: 运算符 (MASM) |Microsoft 文档
+title: 运算符 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dda3210dcc7ee9c8971ad279054e7c4c29b5308
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5b43080018c1193321887cd2e79b06e79d10bab8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686752"
 ---
 # <a name="operators-masm"></a>运算符 (MASM)
-有关 Microsoft 宏汇编程序语言中运算符的详细信息，请参阅[运算符引用](../../assembler/masm/operators-reference.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+有关 Microsoft 宏汇编程序语言中的运算符的详细信息，请参阅[运算符引用](../../assembler/masm/operators-reference.md)。
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

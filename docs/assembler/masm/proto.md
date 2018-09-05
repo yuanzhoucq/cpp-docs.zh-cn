@@ -1,7 +1,7 @@
 ---
-title: PROTO |Microsoft 文档
+title: PROTO |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02fcc94e6e5e5bd175c7b56b79a150c0c2bde3a7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 29f7d49832b23ac9db7555d47dd8d7069ec4de46
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684937"
 ---
 # <a name="proto"></a>PROTO
-函数原型。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-label  
- PROTO [[distance]] [[langtype]] [[, [[parameter]]:tag]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+一个函数的原型。
+
+## <a name="syntax"></a>语法
+
+> *标签*PROTO [[*距离*]] [[*langtype*]] [[，[[*参数*]]:*标记*]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

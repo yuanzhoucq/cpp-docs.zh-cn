@@ -1,7 +1,7 @@
 ---
-title: 联合 |Microsoft 文档
+title: UNION |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a2d7644e14903d2c4a9c4191ce54c8fea14849
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3b2d6ea844881961bdfb4a26a5e6cf79d8308de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682467"
 ---
 # <a name="union"></a>UNION
-声明的一个或多个数据类型的联合。 *Fielddeclarations*必须是有效的数据定义。 省略[结束](../../assembler/masm/ends-masm.md)*名称*上的标签嵌套**联合**定义。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      name   
-      UNION [[alignment]] [[, NONUNIQUE]]  
-   fielddeclarations  
-[[name]] ENDS  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+声明一个或多个数据类型的联合。 *字段声明*必须是有效的数据定义。 省略[结束](../../assembler/masm/ends-masm.md)*名称*标签上的嵌套**联合**定义。
+
+## <a name="syntax"></a>语法
+
+> *名称*UNION [[*对齐*]] [[，唯一，则]]<br/>
+> *字段声明*<br/>
+> [[*名称*]] 结束
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

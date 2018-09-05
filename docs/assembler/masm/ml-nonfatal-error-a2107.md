@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2107 |Microsoft 文档
+title: ML 非致命错误 A2107 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0aa38e50c9cd1756865c1369357980a497edf7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0c121f45a2d5074d985ff3f81f3e8289d6e4d757
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683599"
 ---
 # <a name="ml-nonfatal-error-a2107"></a>ML 非致命错误 A2107
-**不能具有隐式的远端跳转或调用到接近标签**  
-  
- 尝试进行隐式远跳转或调用另一个段中的 near 标签。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**不能具有隐式最跳转或调用到接近其标签**
+
+尝试进行隐式得跳转或调用另一个段中接近的标签。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

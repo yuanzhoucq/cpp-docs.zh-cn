@@ -1,7 +1,7 @@
 ---
-title: 时 (MASM) |Microsoft 文档
+title: 时 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174872d6be33441159aa326d207a79804233a8e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 91d79c6b2ad3db2dfa9fd7ddf9105afc21c92f2b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685452"
 ---
 # <a name="while-masm"></a>WHILE (MASM)
-重复的块的程序集`statements`，只要*表达式*将保持为 true。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-   WHILE expression  
-statements  
-ENDM  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+重复的块的程序集*语句*只要*表达式*将保持为 true。
+
+## <a name="syntax"></a>语法
+
+> 虽然*表达式*<br/>
+> *语句*<br/>
+> ENDM
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

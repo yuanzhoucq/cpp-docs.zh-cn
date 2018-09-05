@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213823"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679982"
 ---
 # <a name="using-manual-accessors"></a>使用手动访问器
 有四件事情时处理未知的命令：  
@@ -53,7 +53,7 @@ ms.locfileid: "43213823"
   
 6.  调用`GetNextResult`以确定多个行集是否可用。 重复步骤 2 到 5。  
   
- 手动访问器的示例，请参阅`CDBListView::CallProcedure`中[DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例。  
+ 手动访问器的示例，请参阅`CDBListView::CallProcedure`中[DBVIEWER](https://github.com/Microsoft/VCSamples)示例。  
   
 ## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

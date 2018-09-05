@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ef60fc542b38c7619ce7b65cc7f39db79ed1b228
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596995"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679019"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 表示在应用程序执行过程中发生的 COM 错误。 COMException 是一组预定义的标准异常的基类。  
@@ -113,7 +113,7 @@ public:property int HResult {    int get();}
  一个指定错误的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
+ 有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。  
 
 ## <a name="message"></a> Comexception:: Message 属性
 描述异常的消息。  

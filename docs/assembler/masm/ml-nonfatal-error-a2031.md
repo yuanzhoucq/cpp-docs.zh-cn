@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2031 |Microsoft 文档
+title: ML 非致命错误 A2031 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ab35776944604f3133254532d2631460c755983
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bf6744224847e114e76df6e7ad6470696d3e8387
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057141"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682653"
 ---
 # <a name="ml-nonfatal-error-a2031"></a>ML 非致命错误 A2031
-**必须是索引或基本寄存器**  
-  
- 尝试使用未在内存表达式中的基 / 索引寄存器的寄存器。  
-  
- 例如，以下表达式会导致此错误：  
-  
-```  
-[ax]  
-[bl]  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**必须是索引或基寄存器**
+
+尝试使用不是内存表达式中的基 / 索引寄存器的寄存器。
+
+例如，以下表达式会导致此错误：
+
+```asm
+[ax]
+[bl]
+```
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

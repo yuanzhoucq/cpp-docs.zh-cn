@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677147"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 在大多数情况下，可以从任意线程访问 Windows 运行时类，类似于标准的 c + + 对象的实例。 此类称为“敏捷类”。 但是，少数预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准 c + + 对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。  
@@ -100,7 +100,7 @@ ref class MyOptions
  Visual c + + 中创建对已为"None"封送处理行为的进程内 Windows 运行时类的引用时编译器会发出警告 C4451，但不建议您考虑使用`Platform::Agile<T>`。  编译器无法提供超过此警告的任何帮助，因此，你有责任正确使用该类，并确保你的代码只从用户界面线程调用 STA 组件，以及只从后台线程调用 MTA 组件。  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>创作敏捷 Windows 运行时组件  
- 在定义的 ref 类在 C + + /CX 中，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 运行时 c + + 模板库，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。 有关详细信息，请参阅[创建和使用对象 (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e)。  
+ 在定义的 ref 类在 C + + /CX 中，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 运行时 c + + 模板库，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。   
   
  可以修改 ref 类的线程处理模型和封送处理行为。 但是，如果所做的更改会使类为非敏捷类，则必须了解与这些更改关联的影响。  
   

@@ -1,7 +1,7 @@
 ---
 title: DW | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e0127ccec8aaac43955087ee4a4b0e8fdbcad5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 15457e99ecaa312ad5e442203c8b058c8fda3bf0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681887"
 ---
 # <a name="dw"></a>DW
-分配和 （可选） 为每个初始化一个字 （2 个字节） 存储的`initializer`。 此外可作为类型说明符类型是合法的任何位置。 `DW` 同义词[WORD](../../assembler/masm/word.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[[name]] DW initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令引用](../../assembler/masm/directives-reference.md)   
- [SWORD](../../assembler/masm/sword.md)
+
+分配并根据需要为每个初始化存储一个单词 （2 个字节） `initializer`。 也可以用作类型说明符类型是合法的任何位置。 `DW` 是的同义词[WORD](../../assembler/masm/word.md)。
+
+## <a name="syntax"></a>语法
+
+> [[name]]DW 初始值设定项 [[，初始值设定项]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[SWORD](../../assembler/masm/sword.md)<br/>

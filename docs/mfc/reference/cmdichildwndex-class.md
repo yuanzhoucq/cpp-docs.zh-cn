@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219104"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677686"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 `CMDIChildWndEx`类提供的功能的 Windows 多文档界面 (MDI) 子窗口。 它扩展的功能[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|需要拉伸的 MDI 子窗体的 Windows 7 任务栏选项卡缩略图预览的位图时由框架调用。|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|由框架调用以更新框架标题。 （重写 `CMDIChildWnd::OnUpdateFrameTitle`。）|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|返回包含给定的点的窗格。|  
-|`CMDIChildWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|`CMDIChildWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|重新计算窗口的布局。|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|注册 Windows 7 任务栏选项卡的 MDI 子窗体。|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|从到停靠管理器中删除一个窗格。|  

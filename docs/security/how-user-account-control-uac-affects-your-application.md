@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600647"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682078"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>用户帐户控制 (UAC) 如何影响应用程序
 用户帐户控制 (UAC) 是 Windows Vista 的一项功能，其中用户帐户具有有限的特权。 可以在下列站点找到关于 UAC 的详细信息：  
   
--   [Windows Vista 用户帐户控制分步指南](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [了解和配置 Windows Vista 中的用户帐户控制](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>在启用 UAC 后生成项目  
  如果在禁用 UAC 的 Windows Vista 中生成 Visual C++ 项目，并在以后启用 UAC，则必须清除并重新生成项目，该项目才能正常工作。  

@@ -5,6 +5,6 @@ Visual Studio 编译器和生成工具可报告多种类型的错误和警告。
 > [!NOTE]
 > 记录不是每个 Visual Studio 错误或警告。 在许多情况下，诊断消息提供了所有可用的信息。 如果您在使用时，在此页上位于**F1**和您认为错误或警告消息需要更多说明，请告诉我们。 你可以使用此页上的反馈窗体，在备注部分中，添加注释或[引发在 GitHub 上](https://github.com/MicrosoftDocs/cpp-docs/issues)。 您还可以发送反馈，并输入在 IDE 中的 bug。 在 Visual Studio 中，转到菜单栏并选择**帮助 > 发送反馈 > 报告问题**，或使用提交建议**帮助 > 发送反馈 > 发送建议**。
 
-在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 可以上搜索的错误或警告编号[开发人员社区](https://go.microsoft.com/fwlink/p/?linkid=820594)站点。 [Visual c + + 语言](http://go.microsoft.com/fwlink/p/?linkid=158195)论坛提供有关的问题和讨论有关 c + + 语言语法和 MSVC 编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/p/?linkid=158194)论坛是有关 Visual c + + 其他论坛中未涉及的问题。 此外可以搜索错误和警告，并上提问[Stack Overflow](http://stackoverflow.com/)查找解决方案。
+在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 可以上搜索的错误或警告编号[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)站点。 此外可以搜索错误和警告，并上提问[Stack Overflow](http://stackoverflow.com/)查找解决方案。
 
 有关更多帮助和社区资源的链接，请参阅[Visual c + + 帮助和社区](../../visual-cpp-help-and-community.md)。

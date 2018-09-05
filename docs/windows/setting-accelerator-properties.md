@@ -19,18 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d47dffb782da1094c157a7bbd21c40ab6ba9fef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b89f409fcf5a856a2207dd8efa655728f57b3fe8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606699"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680130"
 ---
 # <a name="setting-accelerator-properties"></a>设置快捷键属性
 
 可以设置快捷键属性[属性窗口](/visualstudio/ide/reference/properties-window)在任何时间。 此外可以使用**Accelerator**编辑器修改快捷键对应表中的快捷键属性。 使用所做更改**属性**窗口或**Accelerator**编辑器具有相同的结果： 在快捷键对应表中都即时反映编辑。
 
-有三个属性的每个加速器[ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160):
+有三个属性的每个快捷键 ID:
 
 - [Modifier 属性](../windows/accelerator-modifier-property.md)设置快捷键的组合键的控件。
 

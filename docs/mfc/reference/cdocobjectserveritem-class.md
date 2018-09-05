@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682038"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
@@ -58,11 +58,12 @@ class CDocObjectServerItem : public COleServerItem
   
 |名称|描述|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|如果框架试图隐藏 DocObject 项，将引发异常。|
 |[CDocObjectServerItem::OnHide](#onhide)|如果框架试图隐藏 DocObject 项，将引发异常。|  
 |[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使该文档项就地活动状态。 如果项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
   
 ## <a name="remarks"></a>备注  
- `CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd)，并[OnShow](#onshow)。  
+ `CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnDoVerb](#ondoverb)，并[OnShow](#onshow)。  
   
  若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写中你`COleServerDoc`-派生的类返回一个新`CDocObjectServerItem`对象。 如果需要更改你的项中的任何功能，可以创建自己的新实例`CDocObjectServerItem`-派生的类。  
   

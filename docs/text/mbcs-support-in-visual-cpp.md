@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e66254e9e2e0090fafb1a1c0d2aa061d6e70806
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680854"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
 MBCS 启用的 Windows 版本上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 时，MBCS 启用的除了内存窗口。  
@@ -47,13 +47,13 @@ MBCS 启用的 Windows 版本上运行，Visual c + + 开发系统 （包括集�
  Visual c + + 接受双字节字符，只要适合执行此操作。 这包括对话框和 Visual c + + 资源编辑器 （例如，在对话框编辑器中的静态文本） 和图标编辑器中的静态文本项中的文本项中的路径名和文件名。 此外，预处理器可识别某些双字节指令，例如，文件中的名称`#include`语句，并作为参数`code_seg`和`data_seg`杂注。 在源代码编辑器中，双字节字符的注释和字符串文本中接受，尽管不在 C/c + + 语言元素 （如变量的名称）。  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支持的输入法编辑器 (IME)  
- 编写用于输入这两个单字节和双字节字符的东亚语言市场的正常使用 MBCS （例如，日本） 支持 Windows IME 的应用程序。 Visual c + + 开发环境包含完全 IME 支持。 有关详细信息，请参阅[IME 示例： 演示如何控制输入法模式和实现 IME 级别 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
+ 编写用于输入这两个单字节和双字节字符的东亚语言市场的正常使用 MBCS （例如，日本） 支持 Windows IME 的应用程序。 Visual c + + 开发环境包含完全 IME 支持。
   
  日语键盘不直接支持日文汉字字符。 IME 转换拼音的字符串，其可能的日文汉字表示形式输入其他日文字母表 （罗马字、 片假名或平假名） 之一。 如果存在多义性，可以从多种可选方案中进行选择。 当选择了日文的汉字字符时，IME 传递两个`WM_CHAR`控制应用程序的消息。  
   
  IME，激活的 ALT +\`组合键，将显示为一系列按钮 （指标） 和转换窗口。 应用程序定位文本插入点处的窗口。 应用程序必须处理`WM_MOVE`和`WM_SIZE`通过重新定位转换窗口的消息，以符合新位置或目标窗口的大小。  
   
- 如果你希望用户的应用程序输入日文汉字字符的功能，该应用程序必须处理 Windows IME 消息。 有关输入法进行编程的详细信息，请参阅[输入法编辑器](/previous-versions/windows/desktop/ms776145\(v=vs.85\))。  
+ 如果你希望用户的应用程序输入日文汉字字符的功能，该应用程序必须处理 Windows IME 消息。 有关输入法进行编程的详细信息，请参阅[输入法管理器](/windows/desktop/intl/input-method-manager)。  
   
 ## <a name="visual-c-debugger"></a>Visual c + + 调试器  
  Visual c + + 调试器提供 IME 消息上设置断点的能力。 此外，内存窗口可以显示双字节字符。  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5063081c219090486db64ce308411d12ec23cb7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677542"
 ---
 # <a name="internet-information-by-task"></a>按任务划分的 Internet 信息
 根据所需完成的任务按本主题中列出的任务。  
@@ -43,8 +43,6 @@ ms.locfileid: "43209969"
 -   [了解 Internet 上下文中的活动文档](../mfc/active-documents-on-the-internet.md)  
   
 -   [优化的 ActiveX 控件](../mfc/mfc-activex-controls-optimization.md)  
-  
--   [MFC 和 ATL 控件创建签名的 CAB 文件](https://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
   
 ###  <a name="_core_wininet_tasks"></a> WinInet 任务  
   

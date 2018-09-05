@@ -1,7 +1,7 @@
 ---
-title: ML 错误 A1010 |Microsoft 文档
+title: ML 错误 A1010 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676292"
 ---
 # <a name="ml-fatal-error-a1010"></a>ML 错误 A1010
-**不匹配的块嵌套：**  
-  
- 开头的块没有匹配的结束，或块结束没有匹配的开头。 下列情况之一可能会涉及到：  
-  
--   如高级指令[。如果](../../assembler/masm/dot-if.md)， [。重复](../../assembler/masm/dot-repeat.md)，或[。虽然](../../assembler/masm/dot-while.md)。  
-  
--   如条件程序集指令[如果](../../assembler/masm/if-masm.md)，[重复](../../assembler/masm/repeat.md)，或**时**。  
-  
--   结构或联合定义中。  
-  
--   过程定义。  
-  
--   段定义。  
-  
--   A [POPCONTEXT](../../assembler/masm/popcontext.md)指令。  
-  
--   条件程序集指令，如[ELSE](../../assembler/masm/else-masm.md)， [ELSEIF](../../assembler/masm/elseif-masm.md)，或**ENDIF**没有与其匹配的[如果](../../assembler/masm/if-masm.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**不匹配的块嵌套：**
+
+块开头没有匹配的结束，或块结尾没有匹配的开头。 可能涉及以下项之一：
+
+- 如高级指令[。如果](../../assembler/masm/dot-if.md)， [。重复](../../assembler/masm/dot-repeat.md)，或[。虽然](../../assembler/masm/dot-while.md)。
+
+- 例如一个条件程序集指令[IF](../../assembler/masm/if-masm.md)，[重复](../../assembler/masm/repeat.md)，或**而**。
+
+- 结构或联合定义中。
+
+- 过程定义。
+
+- 段定义。
+
+- 一个[POPCONTEXT](../../assembler/masm/popcontext.md)指令。
+
+- 条件程序集指令，如[ELSE](../../assembler/masm/else-masm.md)， [ELSEIF](../../assembler/masm/elseif-masm.md)，或**ENDIF**没有匹配[如果](../../assembler/masm/if-masm.md)。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216283"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678809"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 扩展的功能[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多文档界面 (MDI) 框架窗口。  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|由框架调用以更新框架的菜单。 （重写 `CMDIFrameWnd::OnUpdateFrameMenu`。）|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|返回包含指定的点的停靠窗格。|  
-|`CMDIFrameWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|  
+|`CMDIFrameWndEx::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。  （重写 `CMDIFrameWnd::PreTranslateMessage`。）|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|由框架调用以重新计算框架窗口的布局。 (重写[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从到停靠管理器中删除。|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|保存 MDI 选项卡式组的当前布局和以前打开的文档列表。|  

@@ -1,7 +1,7 @@
 ---
-title: 运算符 XOR |Microsoft 文档
+title: 运算符 XOR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81b05f46f9be6bb84b7f853121d9d6129f33969
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4bf250821f2a04e5b1099f2f33dfe28c3ff916d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677769"
 ---
 # <a name="operator-xor"></a>运算符 XOR
-返回的按位结果**XOR**操作*expression1*和*expression2*。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-expression1 XOR expression2  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+返回结果的按位**XOR**操作*expression1*并*expression2*。
+
+## <a name="syntax"></a>语法
+
+> expression1 XOR expression2
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

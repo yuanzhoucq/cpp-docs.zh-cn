@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683673"
 ---
 # <a name="clr-integration-ccx"></a>CLR 集成 (C++/CX)
 某些 Windows 运行时类型中接收特殊处理在 C + + /cli CX 和基于公共语言运行时 (CLR) 的语言。 本文讨论一种语言中的几种类型如何映射到另一种语言。 例如，CLR 将 Windows.Foundation.IVector 映射到 System.Collections.IList，将 Windows.Foundation.IMap 映射到 System.Collections.IDictionary，等等。 同样，C + + /cli CX 特别映射如 platform:: delegate 和 platform:: string 类型。  
@@ -22,7 +22,7 @@ ms.locfileid: "43212983"
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>将 Windows 运行时映射到 C + + /cli CX  
  当 C + + /cli CX 读取 Windows 元数据 (.winmd) 文件，编译器会自动映射公共 Windows 运行时命名空间和类型到 C + + /CX 命名空间和类型。 例如，数值的 Windows 运行时类型`UInt32`自动映射到`default::uint32`。  
   
- C + + /cli CX 映射到多个其他 Windows 运行时类型**平台**命名空间。 例如， **windows:: foundation** HSTRING 句柄，它表示只读 Unicode 文本字符串，映射到 C + + /cli CX`Platform::String`类。 如果 Windows 运行时操作返回的错误 HRESULT，它将映射到 C + + /cli CX `Platform::Exception`。 有关详细信息，请参阅[内置类型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)。  
+ C + + /cli CX 映射到多个其他 Windows 运行时类型**平台**命名空间。 例如， **windows:: foundation** HSTRING 句柄，它表示只读 Unicode 文本字符串，映射到 C + + /cli CX`Platform::String`类。 如果 Windows 运行时操作返回的错误 HRESULT，它将映射到 C + + /cli CX `Platform::Exception`。   
   
  C + + /cli CX 还会将映射 Windows 运行时命名空间中的某些类型以增强类型的功能。 对于这些类型，C + + /cli CX 提供帮助器构造函数和方法的特定于 c + + 和类型的标准.winmd 文件中不可用。  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680632"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft 专用**  
@@ -44,7 +44,7 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|VMCB 物理地址。|  
   
 ## <a name="remarks"></a>备注  
- `__svm_vmsave`函数等同于`VMSAVE`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档编号 24593、 3.11 或更高版本，在修订[AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ `__svm_vmsave`函数等同于`VMSAVE`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档编号 24593、 3.11 或更高版本，在修订[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。  
   
 ## <a name="requirements"></a>要求  
   

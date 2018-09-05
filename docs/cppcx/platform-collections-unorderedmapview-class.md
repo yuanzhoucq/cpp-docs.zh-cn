@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684004"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  提供可比较两个键值是否相等的函数对象的类型。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>备注  
- UnorderedMapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ UnorderedMapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView\<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成员  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  UnorderedMapView 的类型名称。  
   
  `H`  
- 可以为键生成哈希值的函数对象。 默认情况下[std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104)类型的`std::hash`支持。  
+ 可以为键生成哈希值的函数对象。 默认情况下[std:: hash\<K >](../standard-library/hash-class.md)类型的`std::hash`支持。  
   
  `P`  
  提供可比较两个键以确定其相等性的函数对象的类型。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>请参阅  
  [Platform:: collections Namespace](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

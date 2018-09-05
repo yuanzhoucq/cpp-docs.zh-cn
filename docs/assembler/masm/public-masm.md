@@ -1,7 +1,7 @@
 ---
-title: 公共 (MASM) |Microsoft 文档
+title: 公共 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e5fda1ec5da794749f3c462aa5c5b660a4515c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5bc9bbc865cb2a4f074cf37aded0bcbd8002150b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056004"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682514"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
-使每个变量、 标签或指定为绝对符号*名称*可用于在程序中的所有其他模块。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-PUBLIC [[langtype]] name [[, [[langtype]] name]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+使每个变量、 标签或指定为绝对符号*名称*提供给程序中的所有其他模块。
+
+## <a name="syntax"></a>语法
+
+> 公共 [langtype 名称 [[，[langtype 名称]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

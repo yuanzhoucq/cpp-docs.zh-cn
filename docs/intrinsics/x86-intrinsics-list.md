@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdd0c5d8e89d41e24bf980093f5994c1c9fc495
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed65ff0e608740ae5747ec9cd708c119d79a3829
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685707"
 ---
 # <a name="x86-intrinsics-list"></a>x86 内部函数列表
 
@@ -31,13 +31,13 @@ ms.locfileid: "39209269"
 
 - [Intel 内部函数指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)。 使用搜索框查找特定的内部函数。
 
-- [Intel 64 和 IA-32 体系结构软件开发人员手册](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 和 IA-32 体系结构软件开发人员手册](https://software.intel.com/articles/intel-sdm)
 
-- [Intel 体系架构指令集扩展编程参考](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Intel 体系架构指令集扩展编程参考](https://software.intel.com/isa-extensions)
 
-- [Intel 高级矢量扩展简介](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Intel 高级矢量扩展简介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD 开发人员指南、 手册和 ISA 文档](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD 开发人员指南、 手册和 ISA 文档](https://developer.amd.com/resources/developer-guides-manuals/)
 
 下表列出了 x86 处理器上可用的内部函数。 “技术”列列出了所需的指令集支持。 使用 [__cpuid](../intrinsics/cpuid-cpuidex.md) 内部函数确定运行时的指令集支持。 如果两个条目均在一行中，则它们表示同一内部函数的不同入口点。 [1] 表示内部函数仅适用于 AMD 处理器。 [2] 表示内部函数仅适用于 Intel 处理器。 [3] 指示该原型是一个宏。 “标题”列中列出了函数原型所需的标题。 为简明起见，Intrin.h 标头同时包含 immintrin.h 和 ammintrin.h。
 

@@ -1,7 +1,7 @@
 ---
 title: 运算符 OVERFLOW? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aee81eb229fa54b20b6ea9b50685cabf688ac68
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fe21109db3c03b50c2dec824572628a6f86a733
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679000"
 ---
 # <a name="operator-overflow"></a>运算符 OVERFLOW?
-溢出标志的状态。 只能在使用[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)拦截并在运行时，不是在程序集时计算。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-OVERFLOW?  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+溢出标志的状态。 仅在[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)阻止并在运行时，不是在程序集时计算。
+
+## <a name="syntax"></a>语法
+
+> OVERFLOW？
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

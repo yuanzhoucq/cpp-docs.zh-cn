@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2050 |Microsoft 文档
+title: ML 非致命错误 A2050 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd2e0e6c2fc818ef9286fd303c07a26bdd8b4e5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056189"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680666"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>ML 非致命错误 A2050
-**实时或不允许的 BCD 数字**  
-  
- 浮点 （实际） 数字或二进制编码的十进制 (BCD) 常量使用了除为数据初始值设定项。  
-  
- 出现以下之一：  
-  
--   一个实数或 BCD 在表达式中使用了。  
-  
--   一个实数用来初始化指令以外[DWORD](../../assembler/masm/dword.md)， [QWORD](../../assembler/masm/qword.md)，或[TBYTE](../../assembler/masm/tbyte.md)。  
-  
--   BCD 用来初始化指令以外`TBYTE`。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**实际或不允许使用 BCD 数字**
+
+（实际） 的浮点数或二进制编码的十进制 (BCD) 常量而不使用作为数据初始值设定项。
+
+出现下列情况之一：
+
+- 表达式中使用的一个实数或者 BCD。
+
+- 一个实数用于初始化一个指令之外[DWORD](../../assembler/masm/dword.md)， [QWORD](../../assembler/masm/qword.md)，或[TBYTE](../../assembler/masm/tbyte.md)。
+
+- BCD 用于初始化一个指令之外`TBYTE`。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

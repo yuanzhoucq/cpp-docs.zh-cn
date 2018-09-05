@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195661"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681276"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 从托管代码调用本机 DLL
 可以从使用平台调用 (P/Invoke) 功能的托管代码调用非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项之间的互操作。 但是，与其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用 Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)函数以检索屏幕以像素为单位的当前分辨率。  
+ 下面的代码示例使用 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)函数以检索屏幕以像素为单位的当前分辨率。  
   
  对于仅使用内部类型作为参数和返回值的函数，没有额外的工作是必需的。 其他数据类型，如函数指针、 数组和结构，需要确保正确的数据封送处理的其他属性。  
   

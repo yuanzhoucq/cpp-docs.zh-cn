@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215115"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680897"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>如何：使用 C++ 互操作封送结构
 本主题演示 Visual c + + 互操作性的一个方面。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "43215115"
  下面的代码示例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指令以实现托管和非托管函数中同一文件中，但如果在单独的文件中定义，这些函数互操作方式相同。 文件仅包含非托管的函数无需使用编译[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示按值和按引用从托管到非托管函数传递一个结构。 因为在此示例结构包含仅简单内部数据类型 (请参阅[Blittable 和非 Blittable 类型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，没有特殊封送处理是必需。 若要封送非 blittable 结构，例如包含的指针，请参阅[如何： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+ 下面的示例演示按值和按引用从托管到非托管函数传递一个结构。 因为在此示例结构包含仅简单内部数据类型 (请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，没有特殊封送处理是必需。 若要封送非 blittable 结构，例如包含的指针，请参阅[如何： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示按值和按引用从非托管到托管的函数，传递结构。 因为在此示例结构包含仅简单内部数据类型 (请参阅[Blittable 和非 Blittable 类型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，是必需的任何特殊的封送。 若要封送非 blittable 结构，例如包含的指针，请参阅[如何： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+ 下面的示例演示按值和按引用从非托管到托管的函数，传递结构。 因为在此示例结构包含仅简单内部数据类型 (请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types))，是必需的任何特殊的封送。 若要封送非 blittable 结构，例如包含的指针，请参阅[如何： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct2.cpp  

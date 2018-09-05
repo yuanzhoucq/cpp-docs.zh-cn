@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 84ea10c87e463e797b4c35b1f94843228c4cb063
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403033"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681497"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：创建和使用 shared_ptr 实例
 `shared_ptr` 类型是 C++ 标准库中的一个智能指针，是为多个所有者可能必须管理对象在内存中的生命周期的方案设计的。 在您初始化一个 `shared_ptr` 之后，您可复制它，按值将其传入函数参数，然后将其分配给其他 `shared_ptr` 实例。 所有实例均指向同一个对象，并共享对一个“控制块”（每当新的 `shared_ptr` 添加、超出范围或重置时增加和减少引用计数）的访问权限。 当引用计数达到零时，控制块将删除内存资源和自身。  
   
  下图显示了指向一个内存位置的几个 `shared_ptr` 实例。  
   
- [![共享的指针](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![共享指针](../cpp/media/shared_ptr.png "shared_ptr")]  
   
 ## <a name="example"></a>示例  
  只要可能，使用[make_shared](../standard-library/memory-functions.md#make_shared)函数来创建`shared_ptr`首次创建内存资源时。 `make_shared` 异常安全。 它使用同一调用为控制块和资源分配内存，从而减少构造开销。 如果您不使用 `make_shared`，则您在将此对象传递给 `shared_ptr` 构造函数之前，必须使用新的显式表达式创建它。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。  

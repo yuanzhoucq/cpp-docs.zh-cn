@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c60db67450c3a3f46b8d434b7a8416ce85161c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211453"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678505"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset 类
 `concurrent_unordered_multiset`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  要搜索的密钥值。  
   
 ### <a name="return-value"></a>返回值  
- 一个[对](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff)其中第一个元素是开头的迭代器，第二个元素是指向范围末尾的迭代器。  
+ 一个[对](../../../standard-library/pair-structure.md)其中第一个元素是开头的迭代器，第二个元素是指向范围末尾的迭代器。  
   
 ### <a name="remarks"></a>备注  
  很可能并发插入操作会导致其他密钥，从而在插入之后开始迭代器和之前末尾迭代器。  

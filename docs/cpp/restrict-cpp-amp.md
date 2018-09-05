@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e3385e68b7a5a112e5ff63b63afe5dd83603cf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461883"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678191"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 可将限制说明符应用于函数和 lambda 声明。 它会强制对函数中的代码以及使用 C++ Accelerated Massive Parallelism (C++ AMP) 运行时的应用程序中的函数的行为实施限制。  
@@ -87,7 +87,7 @@ ms.locfileid: "39461883"
   
     -   Varargs。  
   
- 有关函数限制的讨论，请参阅[restrict （amp) 限制](http://go.microsoft.com/fwlink/p/?LinkId=251089)。  
+ 有关函数限制的讨论，请参阅[限制 (amp) 限制](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用`restrict(amp)`子句。  

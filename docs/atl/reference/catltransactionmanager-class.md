@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a7f6ad0620591e51d1382cd1199c52dde222ac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b3776f95db1a1e6fad8f885e23bb0dc8836a31ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681653"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 CAtlTransactionManager 类提供了对内核事务管理器 (KTM) 函数的包装器。  
@@ -467,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  文件或目录的名称。  
   
  *dwAttributes*  
- 若要为文件设置文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699)。  
+ 若要为文件设置文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)。  
   
 ### <a name="remarks"></a>备注  
  此包装器调用`SetFileAttributesTransacted`函数。  

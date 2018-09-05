@@ -1,7 +1,7 @@
 ---
-title: FORC |Microsoft 文档
+title: FORC |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e804083069243c333d3ac87dc701ada13afd739f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f4a16af6b8af984c887402669469e4ba9ea5ab28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054466"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685045"
 ---
 # <a name="forc"></a>FORC
-将块，它将为在每个字符一次重复标记`string`，与当前的字符替换`parameter`上每次重复。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-   FORC  
-parameter, <string> statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>备注  
- 与相同[IRPC](../../assembler/masm/irpc.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+将标记将为在每个字符一次重复的块*字符串*，使用当前的字符替换*参数*上每次重复。
+
+## <a name="syntax"></a>语法
+
+> FORC*参数*， \<*字符串*><br/>
+> *语句*<br/>
+> ENDM
+
+## <a name="remarks"></a>备注
+
+与相同[IRPC](../../assembler/masm/irpc.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

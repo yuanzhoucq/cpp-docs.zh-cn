@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2096 |Microsoft 文档
+title: ML 非致命错误 A2096 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e5d07afa864c9f6f4214de953aa9e03fe0e7e4f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 82f4ef76dca10b1208a931bc3e1cc09d82a639d2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679593"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>ML 非致命错误 A2096
-**段、 组或预期的段寄存器**  
-  
- 段或组应但未找到。  
-  
- 出现以下之一：  
-  
--   左的操作数指定使用了段重写运算符 (**:**) 未段寄存器 （CS、 DS、 SS、 ES、 FS 或 GS），组名、 段名称或段表达式。  
-  
--   [假定](../../assembler/masm/assume.md)指令提供而不是有效的段地址、 段寄存器，组中或这两个特殊的段寄存器**平面**组。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**段、 组或预期的段寄存器**
+
+段或组应，但找不到。
+
+出现下列情况之一：
+
+- 左的操作数指定的段重写运算符 (**:**) 段寄存器 （CS、 DS、 SS、 ES、 FS 中或 GS），组名、 段名称或段表达式不是。
+
+- [ASSUME](../../assembler/masm/assume.md)指令提供的段寄存器，而无需有效段地址、 段注册、 组或这两个特殊**平面**组。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

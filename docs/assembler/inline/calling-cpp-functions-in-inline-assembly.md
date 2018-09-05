@@ -1,7 +1,7 @@
 ---
-title: 在内联汇编程序内调用 c + + 函数 |Microsoft 文档
+title: 在内联汇编程序内调用 c + + 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049618"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678939"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C++ 函数
-## <a name="microsoft-specific"></a>Microsoft 专用  
- `__asm` 块只能调用未重载的全局 C++ 函数。 如果调用重载的全局 C++ 函数或 C++ 成员函数，则编译器会发出错误。  
-  
- 你还可以调用使用声明的任何函数**extern"C"** 链接。 这允许`__asm`调用 C 库函数，因为所有标准标头文件都声明库函数具有 c + + 程序中的块**extern"C"** 链接。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [内联汇编程序](../../assembler/inline/inline-assembler.md)
+
+**Microsoft 专用**
+
+`__asm` 块只能调用未重载的全局 C++ 函数。 如果调用重载的全局 C++ 函数或 C++ 成员函数，则编译器会发出错误。
+
+您还可以调用任何函数使用声明**extern"C"** 链接。 这允许`__asm`块内调用 C 库函数，因为所有标准标头文件都声明库函数具有 c + + 程序**extern"C"** 链接。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203711"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677843"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 用于创建对话框框中，以及用于创建、 托管和授权 ActiveX 控件，这些函数提供支持。  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控件承载代码的初始化成功，则非零值否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)，如 Windows SDK 中所述。  
+ 使用 ATL 控件承载 API 之前，必须调用此函数。 向此函数中调用 **"AtlAxWin"** 窗口类可用于调用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)或[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)，如 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  此函数取消初始化 ATL 的控件承载代码通过注销 **"AtlAxWin80"** 并 **"AtlAxWinLic80"** 窗口类。  

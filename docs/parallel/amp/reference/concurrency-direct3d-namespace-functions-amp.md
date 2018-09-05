@@ -1,7 +1,7 @@
 ---
 title: Concurrency::direct3d 命名空间函数 (AMP) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/31/2018
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -11,6 +11,7 @@ f1_keywords:
 - amp/Concurrency::direct3d::d3d_access_unlock
 - amp/Concurrency::direct3d::firstbithigh
 - amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::get_device
 - amp/Concurrency::direct3d::imax
 - amp/Concurrency::direct3d::is_timeout_disabled
 - amp/Concurrency::direct3d::mad
@@ -28,20 +29,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a1a4bcc194f2d762e48144be2c2bdb84376ed31b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208947"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682163"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空间函数 (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
-|[create_accelerator_view](#create_accelerator_view)|||
-|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
+|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|  
+|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[干扰](#noise)|  
 |[弧度为单位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
@@ -236,10 +237,24 @@ IUnknown *get_buffer(
   
 ### <a name="return-value"></a>返回值  
  对应于数组的基础 Direct3D 缓冲区 IUnknown 接口指针。  
-  
+
+## <a name="a-namegetdevice-getdevice"></a><a name="get_device"> get_device
+获取基础 accelerator_view D3D 设备接口。
+
+```
+IUnknown* get_device(const accelerator_view Av);
+```
+
+### <a name="parameters"></a>参数
+`Av` 为其返回基础 D3D 设备接口的 D3D accelerator_view。
+
+
+### <a name="return-value"></a>返回值
+`IUnknown`基础 accelerator_view D3D 设备的接口指针。
+
 ##  <a name="imax"></a>  imax  
  确定自变量的最大数值  
-  
+
 ```  
 inline int imax(
     int _X,  

@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d762aef0dd48f3eac8eaeeddee558c4f237b29f
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352734"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677452"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -118,7 +118,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|注册指定的 MFC 窗口类。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|释放通过 GetITaskbarList 和 GetITaskbarList3 方法获取的接口。|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化访问支持 Windows 的方法的内部函数指针[主题和视觉样式](/windows/desktop/Controls/visual-styles-overview)。|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)方法。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|创建指定的逻辑字体。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|创建并初始化分析名称中的 Shell 项对象。|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|重新初始化框架使用的逻辑字体。|  
@@ -371,7 +371,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>参数   
  [in]*nColor*  
- 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
   
 ### <a name="return-value"></a>返回值  
  指定的用户界面元素的 RGB 颜色值。 有关更多信息，请参见“备注”。  
@@ -381,7 +381,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="see-also"></a>请参阅  
 
- [GetSysColor 函数](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [GetSysColor 函数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
  [COLORREF](/windows/desktop/gdi/colorref)   
  [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
@@ -697,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  要注册的窗口类的名称。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则已注册的类的限定的名称否则为[资源异常](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
+ 如果此方法成功，则已注册的类的限定的名称否则为[资源异常](exception-processing.md#afxthrowresourceexception)。  
   
 ### <a name="remarks"></a>备注  
  返回值是冒号分隔的列表*lpszClassNamePrefix*参数字符串和十六进制文本表示形式的句柄的当前的应用程序实例; 应用程序光标，它是箭头其标识符为 IDC_ARROW 的游标和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
@@ -721,7 +721,7 @@ BOOL Resume();
  当框架接收时调用此方法[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)消息。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。  
+提供了一种简单的方法来调用 Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)方法。  
   
   
 ```  
@@ -750,7 +750,7 @@ BOOL SetLayeredAttrib(
  
 ### <a name="see-also"></a>请参阅   
  [COLORREF](/windows/desktop/gdi/colorref)   
- [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 创建指定的逻辑字体。  

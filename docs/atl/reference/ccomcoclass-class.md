@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677877"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 类
 此类提供用于创建类的实例并获取其属性的方法。  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|（静态）重写以返回对象的说明。|  
   
 ## <a name="remarks"></a>备注  
- `CComCoClass` 提供用于检索对象的 CLSID 以及设置错误的信息，创建类的实例方法。 任何类中注册[对象映射](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)应派生自`CComCoClass`。  
+ `CComCoClass` 提供用于检索对象的 CLSID 以及设置错误的信息，创建类的实例方法。 在对象映射中注册的任何类应派生自`CComCoClass`。  
   
  `CComCoClass` 此外定义了您的对象的默认类工厂和聚合模型。 `CComCoClass` 使用以下两个宏：  
   

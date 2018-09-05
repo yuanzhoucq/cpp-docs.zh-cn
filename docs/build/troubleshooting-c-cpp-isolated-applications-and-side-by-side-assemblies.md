@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681380"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 如果找不到依赖库，则加载 C/C++ 应用程序可能会失败。 本文介绍 C/C++ 应用程序未能加载的一些常见原因，并提供了用于解决问题的建议步骤。  
@@ -46,7 +46,7 @@ ms.locfileid: "43218664"
   
 3.  如果应用程序依赖于并行程序集，但不存在清单，则必须确保链接器为项目生成清单。 检查链接器选项**生成清单**中**项目属性**项目对话框。  
   
-4.  如果清单嵌入在二进制文件中，请确保 RT_MANIFEST 的 ID 对于此类型的二进制文件是正确的。 若要使用的资源 id 的详细信息，请参阅[作为资源 (Windows) 使用的并行程序集](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx)。 如果清单位于单独文件中，请在 XML 编辑器或文本编辑器中打开它。 有关清单和部署规则的详细信息，请参阅[清单](https://msdn.microsoft.com/library/aa375365)。  
+4.  如果清单嵌入在二进制文件中，请确保 RT_MANIFEST 的 ID 对于此类型的二进制文件是正确的。 若要使用的资源 id 的详细信息，请参阅[作为资源 (Windows) 使用的并行程序集](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果清单位于单独文件中，请在 XML 编辑器或文本编辑器中打开它。 有关清单和部署规则的详细信息，请参阅[清单](https://msdn.microsoft.com/library/aa375365)。  
   
     > [!NOTE]
     >  如果嵌入式清单和单独清单文件同时存在，则操作系统加载程序使用嵌入式清单，忽略单独文件。 但是，在 Windows XP 中，情况相反 — 使用单独清单文件，而忽略嵌入式清单。  

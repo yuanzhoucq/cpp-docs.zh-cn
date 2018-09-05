@@ -1,7 +1,7 @@
 ---
-title: DT |Microsoft 文档
+title: DT |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c945276154f77003557539737adc5bafda351a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 243911e42d9c41de7ddf7d8778b27e0526cdd355
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679443"
 ---
 # <a name="dt"></a>DT
-分配和 （可选） 为每个初始化 10 个字节的存储`initializer`。 此外可作为类型说明符类型是合法的任何位置。 `DT` 同义词[TBYTE](../../assembler/masm/tbyte.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[[name]] DT initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+分配并根据需要为每个初始化的存储空间的 10 个字节`initializer`。 也可以用作类型说明符类型是合法的任何位置。 `DT` 是的同义词[TBYTE](../../assembler/masm/tbyte.md)。
+
+## <a name="syntax"></a>语法
+
+> [[name]]DT 初始值设定项 [[，初始值设定项]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

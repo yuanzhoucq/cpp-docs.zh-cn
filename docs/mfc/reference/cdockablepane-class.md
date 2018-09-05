@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679459"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 实现可在停靠站点停靠或包含在选项卡式窗格中的窗格。  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否将选项卡位于顶部或底部窗格中。|  
 |[CDockablePane::IsTracked](#istracked)|指定是否正在由用户拖动一个窗格。|  
 |[CDockablePane::IsVisible](#isvisible)|确定当前窗格是否可见。|  
-|[Cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|内部使用。|  
+|[Cdockablepane:: Loadstate](#loadstate)|内部使用。|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|一个窗格的父级发生更改时由框架调用。 (重写[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|浮动的停靠栏将停靠在框架窗口时由框架调用。|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|在窗格的父即将更改时由框架调用。 (重写[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  如果可停靠窗格处于自动隐藏模式和`IsHideInAutoHideMode`返回 TRUE 的可见性状态取决于相关的自动隐藏工具栏的可见性状态。  
   
  如果在自动隐藏模式下不是可停靠窗格中，来确定的可见性状态[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)方法。  
-  
+
+## ##  <a name="loadstate"></a>  Cdockablepane:: Loadstate  
+仅限内部使用。 有关详细信息，请参阅所安装的 Visual Studio 的 VC\atlmfc\src\mfc 文件夹中的源代码。
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  指定是否禁用自动隐藏可停靠窗格的动画。  
   

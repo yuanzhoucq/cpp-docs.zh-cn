@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681732"
 ---
 # <a name="single-inheritance"></a>单个继承
 在“单继承”（继承的常见形式）中，类仅具有一个基类。 考虑下图中阐释的关系。  
@@ -63,7 +63,7 @@ class PaperbackBook : public Book {};
  在上面显示的名为“有向非循环图”（或“DAG”）的关系图中，一些类是多个派生类的基类。 但反过来却行不通；任何给定的派生类只有一个直接基类。 该图中的关系图描述“单继承”结构。  
   
 > [!NOTE]
->  有向非循环图对于单继承不是唯一的。 它们还用于表示多重继承关系图。 本主题中介绍了[多重继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)。  
+>  有向非循环图对于单继承不是唯一的。 它们还用于表示多重继承关系图。  
   
  在继承中，派生类包含基类的成员以及您添加的所有新成员。 因此，派生类可以引用基类的成员（除非在派生类中重新定义这些成员）。 当在派生类中重新定义了直接或间接基类的成员时，范围解析运算符 (`::`) 可用于引用这些成员。 请看以下示例：  
   

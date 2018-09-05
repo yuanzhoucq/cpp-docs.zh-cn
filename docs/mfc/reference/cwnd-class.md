@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678402"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|当剪贴板查看器窗口工作区的大小已更改时调用。|
 |[CWnd::OnSizing](#onsizing)|指示用户正在调整矩形大小。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|每当对打印管理器队列添加或移除作业时，从打印管理器调用。|
-|[CWnd::OnStyleChanged](#onstylechanged)|指示[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数已更改一个或多个窗口的样式。|
-|[CWnd::OnStyleChanging](#onstylechanging)|指示[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数即将更改一个或多个窗口的样式。|
+|[CWnd::OnStyleChanged](#onstylechanged)|指示[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函数已更改一个或多个窗口的样式。|
+|[CWnd::OnStyleChanging](#onstylechanging)|指示[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函数即将更改一个或多个窗口的样式。|
 |[CWnd::OnSysChar](#onsyschar)|当击键转换为系统字符时调用。|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|当在系统颜色设置中进行更改时，针对所有顶级窗口进行调用。|
 |[CWnd::OnSysCommand](#onsyscommand)|当用户从控件菜单中选择命令时，或是当用户选择最大化或最小化按钮时调用。|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|调用中指定每个时间间隔过后[SetTimer](#settimer)。|
 |[CWnd::OnTouchInput](#ontouchinput)|处理来自 Windows 触摸屏的单个输入。|
 |[CWnd::OnTouchInputs](#ontouchinputs)|处理来自 Windows 触摸屏的输入。|
-|[CWnd::OnUniChar](#onunichar)|当按下键时调用。 即，当前窗口具有键盘焦点和一个[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)消息进行解释[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)函数。|
+|[CWnd::OnUniChar](#onunichar)|当按下键时调用。 即，当前窗口具有键盘焦点和一个[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)消息进行解释[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函数。|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|在下拉菜单或子菜单已销毁时调用。|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|调用以更改指定窗口及其所有子窗口的用户界面 (UI) 状态。|
 |[CWnd::OnUserChanged](#onuserchanged)|在用户登录或注销之后调用。|
@@ -2244,7 +2244,7 @@ void CreateGrayCaret(
 
 参数*nWidth*并*nHeight*指定插入符号的宽度和高度 （以逻辑单位）; 确切宽度和高度 （以像素为单位） 取决于映射模式。
 
-可以通过检索系统的窗口边框宽度或高度[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER 和 SM_CYBORDER 索引使用的 Windows 函数。 使用窗口边框宽度或高度可确保将插入符号将在高分辨率显示器上可见。
+可以通过检索系统的窗口边框宽度或高度[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) SM_CXBORDER 和 SM_CYBORDER 索引使用的 Windows 函数。 使用窗口边框宽度或高度可确保将插入符号将在高分辨率显示器上可见。
 
 `CreateGrayCaret`成员函数自动销毁以前的插入符号形状，如果有，而不考虑哪个窗口拥有将插入符号。 创建后，一开始就隐藏插入符号。 若要显示插入符号[ShowCaret](#showcaret)必须调用成员函数。
 
@@ -2278,7 +2278,7 @@ void CreateSolidCaret(
 
 参数*nWidth*并*nHeight*指定插入符号的宽度和高度 （以逻辑单位）; 确切宽度和高度 （以像素为单位） 取决于映射模式。
 
-可以通过检索系统的窗口边框宽度或高度[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER 和 SM_CYBORDER 索引使用的 Windows 函数。 使用窗口边框宽度或高度可确保将插入符号将在高分辨率显示器上可见。
+可以通过检索系统的窗口边框宽度或高度[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) SM_CXBORDER 和 SM_CYBORDER 索引使用的 Windows 函数。 使用窗口边框宽度或高度可确保将插入符号将在高分辨率显示器上可见。
 
 `CreateSolidCaret`成员函数自动销毁以前的插入符号形状，如果有，而不考虑哪个窗口拥有将插入符号。 创建后，一开始就隐藏插入符号。 若要显示插入符号[ShowCaret](#showcaret)必须调用成员函数。
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>备注
 
-MFC 的默认 Active Accessibility 的支持足以满足标准的 windows 和控件，包括 ActiveX 控件;但是，如果你`CWnd`的派生的类包含 nonwindowed 用户界面元素，MFC 有没有办法知道有关它们。 在这种情况下，您必须重写适当[Active Accessibility 成员函数](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74)在类中，并且你必须调用`EnableActiveAccessibility`类的构造函数中。
+MFC 的默认 Active Accessibility 的支持足以满足标准的 windows 和控件，包括 ActiveX 控件;但是，如果你`CWnd`的派生的类包含 nonwindowed 用户界面元素，MFC 有没有办法知道有关它们。 在这种情况下，您必须重写适当[Active Accessibility 成员函数](/windows/desktop/winauto/sdk-components)在类中，并且你必须调用`EnableActiveAccessibility`类的构造函数中。
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC` 旨在用于特殊的绘制效果内`CWnd`非工作区。 不建议在任何窗口的非工作区区域中绘制。
 
-[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 函数可用于检索非工作区，如标题栏、 菜单和滚动条的不同部件的维度。
+[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 函数可用于检索非工作区，如标题栏、 菜单和滚动条的不同部件的维度。
 
 绘制完成后[ReleaseDC](#releasedc)必须调用成员函数以释放显示上下文。 发布显示上下文失败将会严重影响绘制由应用程序由于一次可以打开的设备上下文的数量限制请求。
 
@@ -5441,7 +5441,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 当`IsDialogMessage`函数处理消息时，它会检查键盘消息，并将其转换为相应的对话框中的选择命令。 例如，TAB 键选择下一个控件或组控件，并向下箭头键选择下一个控件组中。
 
-您必须通过处理的消息`IsDialogMessage`到[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)或[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数，因为已处理。
+您必须通过处理的消息`IsDialogMessage`到[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)或[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数，因为已处理。
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>备注
 
-可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[的窗口样式](https://msdn.microsoft.com/library/windows/desktop/ms632600)并[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息 Windows SDK 中。
+可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[的窗口样式](https://msdn.microsoft.com/library/windows/desktop/ms632600)并[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)有关可用的窗口样式信息 Windows SDK 中。
 
-如果*nFlags*为非零值，`ModifyStyle`调用 Windows API 函数[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)并重绘窗口通过组合*nFlags*与以下四个预设标志：
+如果*nFlags*为非零值，`ModifyStyle`调用 Windows API 函数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)并重绘窗口通过组合*nFlags*与以下四个预设标志：
 
 - SWP_NOSIZE 保留当前的大小。
 
@@ -5787,9 +5787,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>备注
 
-可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本书中并[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的信息在 Windows sdk 扩展样式
+可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本书中并[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)有关可用的信息在 Windows sdk 扩展样式
 
-如果*nFlags*为非零值，`ModifyStyleEx`调用 Windows API 函数[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)并重绘窗口通过组合*nFlags*与以下四个预设标志：
+如果*nFlags*为非零值，`ModifyStyleEx`调用 Windows API 函数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)并重绘窗口通过组合*nFlags*与以下四个预设标志：
 
 - SWP_NOSIZE 保留当前的大小。
 
@@ -8113,7 +8113,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>备注
 
-除非重写，否则`OnMouseWheel`调用的默认[对 wm_mousewheel 进行](/windows/desktop/inputdev/wm-mousewheel)。 Windows 会自动将消息路由到具有焦点的控件或子窗口。 Win32 函数[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)传播父链对其进行处理的窗口消息。
+除非重写，否则`OnMouseWheel`调用的默认[对 wm_mousewheel 进行](/windows/desktop/inputdev/wm-mousewheel)。 Windows 会自动将消息路由到具有焦点的控件或子窗口。 Win32 函数[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)传播父链对其进行处理的窗口消息。
 
 *ZDelta*参数是倍数 WHEEL_DELTA，设置为 120。 此值是要执行的操作的阈值和一个此类操作 （例如，滚动向前一个陷波） 应发生的每个增量。
 
@@ -9464,7 +9464,7 @@ afx_msg void OnSpoolerStatus(
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-框架将调用此成员函数之后， [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)函数已更改一个或多个窗口的样式。
+框架将调用此成员函数之后， [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函数已更改一个或多个窗口的样式。
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-框架将调用此成员函数时[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)函数即将更改一个或多个窗口的样式。
+框架将调用此成员函数时[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函数即将更改一个或多个窗口的样式。
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>备注
 
-[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数发送[WM_TIMER](/windows/desktop/winmsg/wm-timer)消息应用程序的消息队列中没有其他消息时。
+[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数发送[WM_TIMER](/windows/desktop/winmsg/wm-timer)消息应用程序的消息队列中没有其他消息时。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。
@@ -9960,7 +9960,7 @@ TOUCHINPUT 的数组。
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-当按下某个键时，框架将调用此成员函数。 即，当前窗口具有键盘焦点和一个[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)消息进行解释[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)函数。
+当按下某个键时，框架将调用此成员函数。 即，当前窗口具有键盘焦点和一个[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)消息进行解释[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函数。
 
 ```
 afx_msg void OnUniChar(
@@ -10207,7 +10207,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-框架在大小、 位置或 Z 顺序已因调用而更改时调用此成员函数[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)成员函数或另一个窗口管理函数。
+框架在大小、 位置或 Z 顺序已因调用而更改时调用此成员函数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成员函数或另一个窗口管理函数。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-框架在大小、 位置或 Z 顺序即将因调用而更改时调用此成员函数[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)成员函数或另一个窗口管理函数。
+框架在大小、 位置或 Z 顺序即将因调用而更改时调用此成员函数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成员函数或另一个窗口管理函数。
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10602,7 +10602,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。
+类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ int ScrollWindowEx(
 
 如果[SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)并[SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)未指定，`ScrollWindowEx`成员函数不会导致失效离开滚动的区域。 如果设置了这些标志之一，则`ScrollWindowEx`使此区域无效。 区域不更新后，应用程序调用直至[UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow)成员函数，将调用[RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)成员函数 (指定[RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)或[RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow))，或检索[WM_PAINT](/windows/desktop/gdi/wm-paint)从应用程序队列的消息。
 
-如果窗口具有[WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679)样式，返回由指定的区域*prgnUpdate*并*lpRectUpdate*表示必须滚动窗口的总区域更新，包括需要更新的子窗口中的任何区域。
+如果窗口具有[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)样式，返回由指定的区域*prgnUpdate*并*lpRectUpdate*表示必须滚动窗口的总区域更新，包括需要更新的子窗口中的任何区域。
 
 如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定标志时，Windows 不会正确更新屏幕如果滚动的子窗口的一部分。 位于源矩形外滚动的子窗口的一部分不会被删除，并将不会重绘正确地在其新的目标位置中。 使用[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows 函数来执行不包含同时位于完全内移动子窗口*lpRectScroll*矩形。 如果设置了 SW_SCROLLCHILDREN 标志和插入符号矩形相交滚动矩形，重新定位光标。
 
@@ -11497,7 +11497,7 @@ BOOL SetLayeredWindowAttributes(
 用于描述分层窗口的暗度的 alpha 值。 有关详细信息，请参阅`SourceConstantAlpha`的成员[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)结构。 当*bAlpha*为 0，则窗口是完全透明。 当*bAlpha*为 255，窗口是不透明。
 
 *dwFlags*  
-指定要采取的操作。 此参数可以是一个或多个以下值。 有关可能的值的列表，请参阅[SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)。
+指定要采取的操作。 此参数可以是一个或多个以下值。 有关可能的值的列表，请参阅[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)。
 
 ### <a name="return-value"></a>返回值
 
@@ -11505,7 +11505,7 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数的功能[SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)，如 Windows SDK 中所述。
+此成员函数模拟函数的功能[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)，如 Windows SDK 中所述。
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 

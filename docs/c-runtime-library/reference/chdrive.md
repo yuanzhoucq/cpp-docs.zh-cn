@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684318"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -67,15 +67,15 @@ int _chdrive(
 
 ## <a name="remarks"></a>备注
 
-如果*驱动器*是不在 1 到 26 之间的范围，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_chdrive**函数返回-1， **errno**设置为**EACCES**，和 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
+如果*驱动器*是不在 1 到 26 的范围，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_chdrive**函数返回-1， **errno**设置为**EACCES**，以及 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
 
-**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息，请转到 [MSDN 库](http://go.microsoft.com/fwlink/p/?linkid=150542)，然后搜索 **SetCurrentDirectory**。
+**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息，请参阅[SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory)。
 
 **_chdrive** 函数仅更改当前工作驱动器；**_chdir** 更改当前工作目录。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_chdrive**|\<direct.h>|
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197196"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678623"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 提供创建或子类化窗口的方法。  
@@ -156,16 +156,16 @@ HWND Create(
  [in]指定窗口的名称。 默认值为 NULL。  
   
  *dwStyle*  
- [in]窗口的样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]窗口的样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *dwExStyle*  
- [in]扩展的窗口样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]扩展的窗口样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *MenuOrID*  
  [in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。  
   
  *lpCreateParam*  
- [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，新创建的窗口的句柄。 否则，为 NULL。  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |类型的窗口|窗口过程|  
 |--------------------|----------------------|  
-|一个窗口，基于一个新的窗口类，通过指定[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)宏。|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) Win32 函数。|  
+|一个窗口，基于一个新的窗口类，通过指定[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)宏。|[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) Win32 函数。|  
 |修改现有类，通过指定的窗口类上基于窗口[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。|现有窗口类的窗口过程。|  
 |子类化的窗口。|子类化的窗口的原始窗口过程。|  
   

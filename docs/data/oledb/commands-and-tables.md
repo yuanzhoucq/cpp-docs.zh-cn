@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213705"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685568"
 ---
 # <a name="commands-and-tables"></a>命令和表
 命令和表允许你访问行集;也就是说，打开行集、 执行命令，并将列绑定。 [CCommand](../../data/oledb/ccommand-class.md)并[CTable](../../data/oledb/ctable-class.md)类实例化的命令和表的对象，分别。 这些类派生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)下图中所示。  
@@ -43,7 +43,7 @@ ms.locfileid: "43213705"
   
 -   对于支持命令的数据源，可以使用`CCommand`类。 若要执行的命令，调用[打开](../../data/oledb/ccommand-open.md)此类。 或者，可以调用`Prepare`准备你想要多次执行的命令。  
   
-     `CCommand` 包含三个模板参数： 取值函数类型、 行集类型和结果类型 (`CNoMultipleResults`，默认情况下，或`CMultipleResults`)。 如果指定`CMultipleResults`，则`CCommand`类支持`IMultipleResults`接口，并处理多个行集。 [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)示例演示如何处理多个结果。  
+     `CCommand` 包含三个模板参数： 取值函数类型、 行集类型和结果类型 (`CNoMultipleResults`，默认情况下，或`CMultipleResults`)。 如果指定`CMultipleResults`，则`CCommand`类支持`IMultipleResults`接口，并处理多个行集。 [DBVIEWER](https://github.com/Microsoft/VCSamples)示例演示如何处理多个结果。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)
