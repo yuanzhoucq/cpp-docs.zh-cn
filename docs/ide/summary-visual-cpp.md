@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692297"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> 标记应当用于描述类型或类型成员。 使用 [\<remarks>](../ide/remarks-visual-cpp.md) 可针对某个类型说明添加补充信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "43199078"
  对象的摘要。  
   
 ## <a name="remarks"></a>备注  
- \<summary> 标记的文本是 IntelliSense 中类型相关信息的唯一源，它也在[对象浏览器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)和代码注释 Web 报表中显示。  
+ \<summary> 标记的文本是 IntelliSense 中类型相关信息的唯一源，它也在[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中显示。  
   
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
