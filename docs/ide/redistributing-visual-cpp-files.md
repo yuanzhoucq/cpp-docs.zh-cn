@@ -18,19 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d65a19ecf573cc11d71fe49cdb40c1a748aafa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337543"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681912"
 ---
 # <a name="redistributing-visual-c-files"></a>重新分发 Visual C++ 文件
 
 > [!NOTE]
 > 你转到此处是否因为想下载某个 Visual C++ 运行时文件？ 请转到 [Microsoft](http://www.microsoft.com/) 网站并在搜索框输入“Visual C++ 可再发行组件”。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本（例如 2015 版）。
 
-部署应用程序时，还必须部署支持该应用程序所需的文件。 如果其中有任何文件由 Microsoft 提供，请检查是否允许你重新发布这些文件。 若要查看 Visual Studio 许可条款，请在 IDE 中的“关于 Microsoft Visual Studio”对话框查看许可条款链接，或下载 [Microsoft 软件许可条款](http://go.microsoft.com/fwlink/p/?LinkId=831114)文件。 若要查看某些版本的 Visual Studio 的 Microsoft 软件许可条款中“可分发代码”部分引用的“REDIST 列表”，请参阅 [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK 的可分发代码（包括实用程序和 BuildServer 文件）](http://go.microsoft.com/fwlink/p/?LinkId=823098)，或者如果使用的是 Visual Studio 2015，请参阅 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=523763)。 有关可再发行文件的详细信息，请参阅[确定要重新分发的 Dll](../ide/determining-which-dlls-to-redistribute.md) 和[部署示例](../ide/deployment-examples.md)。
+部署应用程序时，还必须部署支持该应用程序所需的文件。 如果其中有任何文件由 Microsoft 提供，请检查是否允许你重新发布这些文件。 若要查看 Visual Studio 许可条款，请在 IDE 中的“关于 Microsoft Visual Studio”对话框查看许可条款链接，或下载 [Microsoft 软件许可条款](https://visualstudio.microsoft.com/license-terms/mlt687465/)文件。 若要查看某些版本的 Visual Studio 的 Microsoft 软件许可条款中“可分发代码”部分引用的“REDIST 列表”，请参阅 [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK 的可分发代码（包括实用程序和 BuildServer 文件）](/visualstudio/productinfo/2017-redistribution-vs)，或者如果使用的是 Visual Studio 2015，请参阅 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码](/visualstudio/productinfo/2015-redistribution-vs)。 有关可再发行文件的详细信息，请参阅[确定要重新分发的 Dll](../ide/determining-which-dlls-to-redistribute.md) 和[部署示例](../ide/deployment-examples.md)。
 
 若要部署可再发行 Visual C++ 文件，可以使用包含在 Visual Studio 中的 Visual C++ 可再发行组件包（VCRedist\_x86.exe、VCRedist\_x64.exe 或 VCRedist\_arm.exe）。 在 Visual Studio 2017 中，可在 Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ 文件夹中找到这些文件，其中 _edition_ 是所安装的 Visual Studio 版本，_lib-version_ 是要重新分发的库的版本。 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Microsoft Visual Studio version\VC\redist\\locale\\ 中的 Visual Studio 安装目录下找到这些文件。 另一个选项是使用可再发行合并模块（.msm 文件），可在 Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ 文件夹中的 Visual Studio 2017 找到该文件。 在 Visual Studio 2015 中，可在 Program Files [(x86)]\Common Files\Merge Modules\\ 找到这些文件。 还可以在应用程序本地文件夹（这是包含可执行应用程序文件的文件夹）中直接安装可再发行 Visual C++ DLL。 出于维护原因，不建议使用此安装位置。
 
@@ -52,7 +52,6 @@ Visual C++ Redistributable Package 将安装并注册所有 Visual C++ 库。 �
 |-----------|-----------------|
 |[使用合并模块重新分发](../ide/redistributing-components-by-using-merge-modules.md)|描述如何使用 Visual C++ 可再发行合并模块将 Visual C++ 运行库作为共享 DLL 安装到 %windir%\system32\ 文件夹中。|
 |[重新分发 Visual C++ ActiveX 控件](../ide/redistributing-visual-cpp-activex-controls.md)|描述如何重新发布使用 ActiveX 控件的应用程序。|
-|[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)|讨论如何重新发布用于数据访问对象 (DAO) 以及 Microsoft 数据访问 SDK 中的数据库技术的支持文件。|
 |[重新分发 MFC 库](../ide/redistributing-the-mfc-library.md)|描述如何重新发布使用 MFC 的应用程序。|
 |[重新分发 ATL 应用程序](../ide/redistributing-an-atl-application.md)|描述如何重新发布使用 ATL 的应用程序。 从 Visual Studio 2012 开始，无需 ATL 的可再发行库。|
 |[部署示例](../ide/deployment-examples.md)|指向演示如何部署 Visual C++ 应用程序的示例的链接。|
