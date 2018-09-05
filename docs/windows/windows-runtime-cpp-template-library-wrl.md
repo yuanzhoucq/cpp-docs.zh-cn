@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211699"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684819"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -157,5 +157,5 @@ Windows 运行时 c + + 模板库提供表示了一些基本概念的类型。 �
 |-|-|
 |[按类别列出的关键 Api](../windows/key-wrl-apis-by-category.md)|重点介绍主要的 Windows 运行时 c + + 模板库类型、 函数和宏。|
 |[参考](../windows/wrl-reference.md)|包含 Windows 运行时 c + + 模板库的参考信息。|
-|[快速参考 （Windows 运行时和 Visual c + +）](http://go.microsoft.com/fwlink/p/?linkid=229180)|简要介绍了 C + + /cli CX 功能支持 Windows 运行时。|
-|[在 Visual c + + 中使用 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?linkid=229155)|演示如何使用 C + + /cli CX 创建基本 Windows 运行时组件。|
+|[快速参考 （Windows 运行时和 Visual c + +）](../cppcx/quick-reference-c-cx.md)|简要介绍了 C + + /cli CX 功能支持 Windows 运行时。|
+|[在 Visual c + + 中使用 Windows 运行时组件](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|演示如何使用 C + + /cli CX 创建基本 Windows 运行时组件。|

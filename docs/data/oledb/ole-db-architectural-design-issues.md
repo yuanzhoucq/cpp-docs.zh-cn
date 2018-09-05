@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340558"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676831"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 启动 OLE DB 应用程序之前，应考虑以下问题：  
@@ -39,15 +39,9 @@ ms.locfileid: "39340558"
  **你是否使用另一种数据访问技术 （ADO、 ODBC 或 DAO） 的较旧代码？**  
  给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下已超出 Visual c + + 文档的讨论范围。 但是，涉及各种方案的许多文章有以下 Microsoft 网站上：  
   
--   [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Microsoft 帮助和支持](https://support.microsoft.com/)  
   
--   [Microsoft 数据访问技术文章概述](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Visual Studio 解决方案中心](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [搜索 Microsoft.com](http://search.microsoft.com/)  
-  
- 在执行搜索时，输入关键字的组合，用于最适合自己方案;例如： 如果已通过 OLE DB 访问接口使用 ADO 对象，请尝试布尔搜索与**ADO 和"OLE DB"**。 如果你想要将较早的 DAO 代码迁移到 ODBC，选择"所有词语"并指定字符串，如**迁移 DAO**。  
+-   [Microsoft 数据访问技术文章概述](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 编程](../../data/oledb/ole-db-programming.md)   

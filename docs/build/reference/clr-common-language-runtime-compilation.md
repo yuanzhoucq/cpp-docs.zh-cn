@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676980"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。  
@@ -68,9 +68,7 @@ ms.locfileid: "42606858"
  在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。  
   
  **/clr:initialAppDomain**  
- 可以将 Visual c + + 应用程序在 CLR 版本 1 上运行。 如果您使用**initialAppDomain**，那么你可能会看到的一些问题中所述[BUG: AppDomainUnloaded 异常时使用的托管 Visual c + + 组件扩展](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoft支持网站。  
-  
- 使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。  
+ 可以将 Visual c + + 应用程序在 CLR 版本 1 上运行。  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。  
   
  **/clr:nostdlib**  
  指示编译器忽略默认 \clr 目录。 如果包含 DLL 的多个版本（如 System.dll），则编译器将产生错误。 使用此选项可指定编译过程中要使用的特定框架。  

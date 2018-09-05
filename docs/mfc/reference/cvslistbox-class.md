@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680575"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 `CVSListBox`类支持的可编辑列表控件。  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。 （重写 `CVSListBoxBase::GetItemData`。）|  
 |[CVSListBox::GetItemText](#getitemtext)|检索可编辑列表控件项的文本。 （重写 `CVSListBoxBase::GetItemText`。）|  
 |[CVSListBox::GetSelItem](#getselitem)|检索一个可编辑列表控件中当前选定项的从零开始的索引。 （重写 `CVSListBoxBase::GetSelItem`。）|  
-|`CVSListBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|  
+|`CVSListBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|  
 |[CVSListBox::RemoveItem](#removeitem)|从一个可编辑列表控件中移除的项。 （重写 `CVSListBoxBase::RemoveItem`。）|  
 |[CVSListBox::SelectItem](#selectitem)|选择一个可编辑列表控件字符串。 （重写 `CVSListBoxBase::SelectItem`。）|  
 |[CVSListBox::SetItemData](#setitemdata)|将特定于应用程序的 32 位值的可编辑列表控件项与相关联。 （重写 `CVSListBoxBase::SetItemData`。）|  

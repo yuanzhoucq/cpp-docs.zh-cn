@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678952"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -55,9 +55,9 @@ void __security_init_cookie(void);
 
 全局安全 Cookie 用于在使用 [/GS（缓冲区安全检查）](../../build/reference/gs-buffer-security-check.md)编译的代码中和使用异常处理的代码中提供缓冲区溢出保护。 进入受到溢出保护的函数时，Cookie 被置于堆栈之上；退出时，会将堆栈上的值与全局 Cookie 进行比较。 它们之间存在任何差异则表示已经发生缓冲区溢出，并导致该程序的立即终止。
 
-通常情况下， **__security_init_cookie**由 CRT 初始化时调用。 如果绕开 CRT 初始化-例如，如果你使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)指定入口点，则必须调用 **__security_init_cookie**自己。 如果 **__security_init_cookie**不调用，全局安全 cookie 将设定为默认值和缓冲区溢出保护将受到威胁。 因为攻击者可以利用此默认 cookie 值来攻克缓冲区溢出检查，我们建议你始终调用 **__security_init_cookie**当定义你自己的入口点。
+通常情况下， **__security_init_cookie** CRT 初始化时调用。 如果绕开 CRT 初始化-例如，如果您使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)来指定一个入口点，则必须调用 **__security_init_cookie**自己。 如果 **__security_init_cookie**不调用时，全局安全 cookie 将设定为默认值和缓冲区溢出保护将受到威胁。 由于攻击者可以利用此默认 cookie 值以击败的缓冲区溢出检查，我们建议，始终调用 **__security_init_cookie**定义入口点时。
 
-调用 **__security_init_cookie**必须在任何受到溢出保护之前进行输入函数; 否则将检测到虚假的缓冲区溢出。 有关详细信息，请参阅 [C 运行时错误 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)。
+在调用 **__security_init_cookie**必须在任何受到溢出保护之前进行输入函数; 否则将检测到虚假的缓冲区溢出。 有关详细信息，请参阅 [C 运行时错误 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)。
 
 ## <a name="example"></a>示例
 
@@ -65,12 +65,12 @@ void __security_init_cookie(void);
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**__security_init_cookie**是标准的 C 运行库的 Microsoft 扩展。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**__security_init_cookie**是标准的 C 运行时库的 Microsoft 扩展。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器安全检查深入介绍](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>
+[Microsoft 安全响应中心](https://www.microsoft.com/en-us/msrc?rtc=1)

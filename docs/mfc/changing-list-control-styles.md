@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676762"
 ---
 # <a name="changing-list-control-styles"></a>更改列表控件样式
 可以更改列表控件的窗口样式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何时间在创建后。 通过更改窗口样式，您可以更改该控件使用的视图的种类。 例如，若要模拟在资源管理器，可能会提供不同的视图之间切换控件的工具栏按钮或菜单项： 图标视图、 列表视图中，依次类推。  
   
- 例如，当用户选择菜单项，您可以进行调用[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)来检索控件的当前样式，然后调用[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)重置样式。 有关详细信息，请参阅[使用列表视图控件](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
+ 例如，当用户选择菜单项，您可以进行调用[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)来检索控件的当前样式，然后调用[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)重置样式。 有关详细信息，请参阅[使用列表视图控件](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
   
  中列出了可用样式[创建](../mfc/reference/clistctrl-class.md#create)。 样式**LVS_ICON**， **LVS_SMALLICON**， **LVS_LIST**，以及**LVS_REPORT**指定四个列表的控件视图。  
   

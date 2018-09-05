@@ -1,7 +1,7 @@
 ---
-title: 在内联汇编程序内调用 C 函数 |Microsoft 文档
+title: 在内联汇编程序内调用 C 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f6d03ba77c7a4cdb3478a1bfe8729019dea002
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a080c05aee58a2e6ffae17d14e99c66922aa1f17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049513"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686682"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C 函数
-## <a name="microsoft-specific"></a>Microsoft 专用  
- `__asm` 块可以调用 C 函数（包括 C 库例程）。 以下示例调用 `printf` 库例程：  
-  
-```  
-// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
-// processor: x86  
-#include <stdio.h>  
-  
-char format[] = "%s %s\n";  
-char hello[] = "Hello";  
-char world[] = "world";  
-int main( void )  
-{  
-   __asm  
-   {  
-      mov  eax, offset world  
-      push eax  
-      mov  eax, offset hello  
-      push eax  
-      mov  eax, offset format  
-      push eax  
-      call printf  
-      //clean up the stack so that main can exit cleanly  
-      //use the unused register ebx to do the cleanup  
-      pop  ebx  
-      pop  ebx  
-      pop  ebx  
-   }  
-}  
-```  
-  
- 由于函数参数在堆栈上传递，因此仅需在调用函数之前推入所需参数（前面示例中的字符串指针）。 参数以相反顺序被推动，因此可按所需顺序结束堆栈。 模拟 C 语句  
-  
-```  
-printf( format, hello, world );  
-```  
-  
- 此示例按照该顺序推送指向 `world`、`hello` 和 `format` 的指针，然后调用 `printf`。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [内联汇编程序](../../assembler/inline/inline-assembler.md)
+
+**Microsoft 专用**
+
+`__asm` 块可以调用 C 函数（包括 C 库例程）。 以下示例调用 `printf` 库例程：
+
+```cpp
+// InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
+// processor: x86
+#include <stdio.h>
+
+char format[] = "%s %s\n";
+char hello[] = "Hello";
+char world[] = "world";
+int main( void )
+{
+   __asm
+   {
+      mov  eax, offset world
+      push eax
+      mov  eax, offset hello
+      push eax
+      mov  eax, offset format
+      push eax
+      call printf
+      //clean up the stack so that main can exit cleanly
+      //use the unused register ebx to do the cleanup
+      pop  ebx
+      pop  ebx
+      pop  ebx
+   }
+}
+```
+
+由于函数参数在堆栈上传递，因此仅需在调用函数之前推入所需参数（前面示例中的字符串指针）。 参数以相反顺序被推动，因此可按所需顺序结束堆栈。 模拟 C 语句
+
+```cpp
+printf( format, hello, world );
+```
+
+此示例按照该顺序推送指向 `world`、`hello` 和 `format` 的指针，然后调用 `printf`。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

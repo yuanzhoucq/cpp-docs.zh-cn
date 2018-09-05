@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bcd86606ef1d8e874abf2c7ad5f57ebf6deeed
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9a2d898a6aad20788c0d77b42f3ca6107af5e9c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678602"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 **Microsoft 专用**  
@@ -47,7 +47,7 @@ unsigned char __vmx_vmresume(
 ## <a name="remarks"></a>备注  
  应用程序可以通过使用 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) 或 `__vmx_vmresume` 函数执行 VM 输入操作。 `__vmx_vmlaunch` 函数只可用于启动状态为 `Clear`的 VMCS，而 `__vmx_vmresume` 函数只可用于启动状态为 `Launched`的 VMCS。 因此，使用 [__vmx_vmclear](../intrinsics/vmx-vmclear.md) 函数将 VMCS 的启动状态设置为 `Clear`，然后对第一个 VM 输入操作使用 `__vmx_vmlaunch` 函数，对后续 VM 输入操作使用 `__vmx_vmresume` 函数。  
   
- `__vmx_vmresume` 函数等同于 `VMRESUME` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索 PDF 文档"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"在文档数字 C97063 002 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__vmx_vmresume` 函数等同于 `VMRESUME` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索 PDF 文档"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。  
   
 ## <a name="requirements"></a>要求  
   

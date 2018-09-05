@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678004"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 提供自定义客户端控件接口支持。  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  要添加从当前窗口样式的样式。  
   
  *nFlags*  
- 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果更改样式，否则为零，非零值。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>备注  
  将修改控件的股票 Enabled 属性来匹配 WS_DISABLED 的设置。 将修改控件的边框样式的常用属性以匹配为 WS_BORDER 所请求的设置。 所有其他样式是直接应用于控件的窗口句柄，如果不存在。  
   
- 修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
+ 修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  若要从当前窗口样式添加扩展的样式。  
   
  *nFlags*  
- 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ 窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果更改样式，否则为零，非零值。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>备注  
  将修改控件的股票外观属性来匹配 WS_EX_CLIENTEDGE 的设置。 所有其他扩展的窗口样式是直接应用于控件的窗口句柄，如果不存在。  
   
- 修改扩展的控件站点对象的样式的窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
+ 修改扩展的控件站点对象的样式的窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)适用于有关可用的窗口样式的信息的 Windows SDK 中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  新窗口的高度。  
   
  *nFlags*  
- 指定窗口大小调整和定位标志。 有关可能的值，请参阅备注部分[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 指定窗口大小调整和定位标志。 有关可能的值，请参阅备注部分[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  非零值如果成功，否则为零。  

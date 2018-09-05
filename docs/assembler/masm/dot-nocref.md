@@ -1,7 +1,7 @@
 ---
-title: .NOCREF |Microsoft 文档
+title: .NOCREF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee936ebbbd2136f14fecf51bfe0b7d69c61a476
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9ad9e4d84d8d49b4d1b5c71cc695031da9cd878e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055074"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679995"
 ---
 # <a name="nocref"></a>.NOCREF
-禁止显示符号表和浏览器文件中的符号的列表。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.NOCREF [[name[[, name]]...]]  
-```  
-  
-## <a name="remarks"></a>备注  
- 如果已指定了名称，则禁止仅给定名称。 与相同[。XCREF](../../assembler/masm/dot-xcref.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+禁止显示符号表和浏览器文件中的符号的列表。
+
+## <a name="syntax"></a>语法
+
+> .NOCREF [[名称 [[，名称]]...]]
+
+## <a name="remarks"></a>备注
+
+如果指定了名称，则会抑制仅给定名称。 与相同[。XCREF](../../assembler/masm/dot-xcref.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679276"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用程序——从有趣而刺激的游戏，到高性能的科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，人们使用 C++ 解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃了过时的 C 样式编程，转而使用使用现代 C++。   
@@ -134,7 +134,7 @@ void f()
   
 -   [ABI 边界处的可移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 有关详细信息，请参阅 StackOverflow 文章[哪些 C++ 用法在 C++ 11 中已经弃用用](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ 有关详细信息，请参阅 StackOverflow 文章[哪些 c + + 惯例在 C + + 11 中已弃用](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。  
   
 ## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)   

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8f06ae0021a95e9b4ae40506cfc91d6a8ae99b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678459"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>更改图像上文本的字体（图标的图像编辑器）
 
@@ -32,7 +32,7 @@ ms.locfileid: "43200809"
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>若要更改图像上文本的字体
 
-1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\))。 [Windows 窗体应用程序模板](https://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)将添加一个名为文件`app.ico`到你的项目默认情况下。
+1. 创建 c + + Windows 窗体应用程序。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\))。 `app.ico`默认情况下将文件添加到你的项目。
 
 2. 在中**解决方案资源管理器**，双击文件 app.ico。 [的图像编辑器](../windows/image-editor-for-icons.md)将打开。
 

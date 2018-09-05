@@ -1,7 +1,7 @@
 ---
-title: .虽然 |Microsoft 文档
+title: .虽然 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0769138c11ea69b6a6ea5577f001477ef569a2eb
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7f30a204fccb1d565c173f3422e6c7f9148c1fed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053400"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680933"
 ---
 # <a name="while"></a>.WHILE
-生成执行的块的代码`statements`时`condition`将保持为 true。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-   .WHILE condition  
-statements  
-.ENDW  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+生成的代码执行的块`statements`虽然`condition`将保持为 true。
+
+## <a name="syntax"></a>语法
+
+> .WHILE 条件<br/>
+> 语句<br/>
+> .ENDW
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676919"
 ---
 # <a name="summary-of-scope-rules"></a>范围规则摘要
 名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称保持明确[成员访问](../cpp/member-access-control-cpp.md)规则。  
   
 ## <a name="constructor-initializers"></a>构造函数初始值设定项  
- 构造函数初始值设定项 (中所述[初始化基和成员](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) 指定它们的构造函数的最外层块的作用域中计算。 因此，它们可使用构造函数的参数名。  
+ [构造函数初始值设定项](constructors-cpp.md#member_init_list)指定它们的构造函数的最外层块的作用域中计算。 因此，它们可使用构造函数的参数名。  
   
 ## <a name="global-names"></a>全局名称  
  在以下情况下，对象、函数或枚举器的名称为全局名称：在任何函数或类的外部引用该名称或将全局一元范围运算符 (`::`) 作为其前缀，以及未将该名称与上述任何二元运算符结合使用：  

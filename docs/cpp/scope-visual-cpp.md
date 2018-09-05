@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679692"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > 此示例中所示的标识符名称的重用被视为较差的编程样式。
 
- 有关指针的详细信息，请参阅[派生类型](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
+有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隐藏具有全局作用域的名称
 

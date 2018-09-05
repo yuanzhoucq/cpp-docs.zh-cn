@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2074 |Microsoft 文档
+title: ML 非致命错误 A2074 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8715323f181472e1234143dcf04023463bdf0bc4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ae6c5338544d29ed4288459d5c09cce998971c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055386"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677218"
 ---
 # <a name="ml-nonfatal-error-a2074"></a>ML 非致命错误 A2074
-**无法访问通过段寄存器的标签**  
-  
- 尝试通过已不假定其段或组的段寄存器访问标签。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**不能通过段寄存器访问标签**
+
+尝试通过段寄存器，不能判定其段或组访问标签。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

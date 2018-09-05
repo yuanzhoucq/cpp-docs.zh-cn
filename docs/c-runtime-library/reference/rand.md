@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5289b27ae0749d85b3e4ee60717212acc95536d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405700"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681130"
 ---
 # <a name="rand"></a>rand
 
-通过使用的已知和完全可重现的算法生成一个伪随机数。 有可用; 此函数的以编程方式更安全版本请参阅[rand_s](rand-s.md)。 由生成编号**rand**不安全加密。 有关详细信息加密型安全随机数生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。
+通过使用已知且完全可重现的算法生成一个伪随机数。 此函数的以编程方式更安全版本可用，请参阅[rand_s](rand-s.md)。 由生成编号**rand**不是安全加密。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -54,17 +54,17 @@ int rand( void );
 
 ## <a name="return-value"></a>返回值
 
-**rand**返回伪随机数，如上面所述。 无错误返回。
+**rand**返回伪随机数字，如上文所述。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Rand**函数返回一个伪随机整数在范围 0 到**RAND_MAX** (32767)。 使用[srand](srand.md)函数之前调用伪随机数生成器种子**rand**。
+**Rand**函数在范围 0 到返回一个伪随机整数**RAND_MAX** (32767)。 使用[srand](srand.md)函数之前调用伪随机数生成器的种子**rand**。
 
-**Rand**函数将生成的已知的序列，并不适合用作加密功能。 有关详细信息加密型安全随机数生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。 有关问题信息**rand**以及如何\<随机 > 处理这些不足，请参阅[此视频](http://go.microsoft.com/fwlink/?LinkId=397615)。
+**Rand**函数生成的已知序列并不适合用作加密功能。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。 有关什么是不妥**rand**以及如何\<随机 > 处理这些不足，请参阅本视频中标题为[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 

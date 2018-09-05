@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b82299db31a7452a05cdfe709221facda09c3615
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217454"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676070"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 类
 此类提供的默认实现[ISupportErrorInfo 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)和单个接口在生成对象上的错误时，可以使用。  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  如果*nNumThreads*是负数，其绝对值的数值将乘以中要获取的线程总数的计算机的处理器数。  
   
- 如果*nNumThreads*为零， [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)将乘以机后，若要获取的线程总数中的处理器数。  
+ 如果*nNumThreads*为零，ATLS_DEFAULT_THREADSPERPROC 将乘以中要获取的线程总数的计算机的处理器数。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败时的错误 HRESULT。  

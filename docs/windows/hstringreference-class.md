@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b80ae92671b2ee78cd2f48e9a35958c89232e4e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683036"
 ---
 # <a name="hstringreference-class"></a>HStringReference 类
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>备注
 
-在新 HSTRING 的后备缓冲区的生存期不受 Windows 运行时。 调用方分配堆栈帧，以避免堆分配并消除内存泄漏的风险上的源字符串。 此外，调用方必须确保源字符串在附加 HSTRING 的生存期内保持不变。 有关详细信息，请参阅[WindowsCreateStringReference 函数](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。
+在新 HSTRING 的后备缓冲区的生存期不受 Windows 运行时。 调用方分配堆栈帧，以避免堆分配并消除内存泄漏的风险上的源字符串。 此外，调用方必须确保源字符串在附加 HSTRING 的生存期内保持不变。 有关详细信息，请参阅[WindowsCreateStringReference 函数](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference)。
 
 ## <a name="members"></a>成员
 

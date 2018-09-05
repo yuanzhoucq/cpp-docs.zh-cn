@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676427"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定资源的包含目录
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220593"
 
 2. 在中**属性页**对话框中，单击**资源**节点，在左窗格中，然后指定附加的包含目录**附加包含目录**属性。
 
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 
 
 ## <a name="requirements"></a>要求
 

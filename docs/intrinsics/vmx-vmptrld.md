@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fd04350df17b6d2dfed65526d0f7681c314f07f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682615"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Microsoft 专用**  
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>备注  
  VMCS 指针是一个 64 位物理地址。  
   
- `__vmx_vmptrld`函数等同于`VMPTRLD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__vmx_vmptrld`函数等同于`VMPTRLD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。  
   
 ## <a name="requirements"></a>要求  
   

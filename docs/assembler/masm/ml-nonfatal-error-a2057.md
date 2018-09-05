@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2057 |Microsoft 文档
+title: ML 非致命错误 A2057 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b397b47e3761613e1a412af2d5a82ff56f10aac0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8f90298295e7ee68cbdaed9cd12a0865c413333d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685261"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>ML 非致命错误 A2057
-**强制错误： 空白字符串**  
-  
- 条件错误指令[。ERRB](../../assembler/masm/dot-errb.md)用于生成此错误。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**强制错误： 字符串为空**
+
+条件 error 指令[。ERRB](../../assembler/masm/dot-errb.md)用于生成此错误。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

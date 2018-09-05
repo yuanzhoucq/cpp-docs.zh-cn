@@ -1,7 +1,7 @@
 ---
-title: 运算符 TYPE |Microsoft 文档
+title: 运算符 TYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93e786a2d28413ec3d4f1ac27b3c4d1619d2b4ea
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5913377d4e7a9758f0a5fbab8c889efabc03d1f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682342"
 ---
 # <a name="operator-type"></a>运算符 TYPE
-返回的类型*表达式*。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-TYPE expression  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+返回的类型*表达式*。
+
+## <a name="syntax"></a>语法
+
+> 类型表达式
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

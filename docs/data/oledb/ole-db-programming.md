@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5d5804a7437dabd688abab04ebdd50a79decbaaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677204"
 ---
 # <a name="ole-db-programming"></a>OLE DB 编程
 Microsoft OLE DB 是一项传统技术;对于新的应用程序是链接 SQL 服务器的所需的数据访问 API。 所有其他新的应用程序应使用 ODBC。 SQL Server 的当前 OLE DB 访问接口是 SQLNCLI11。DLL。 提供程序仍将在 SQL Server 2016 发布。 本文档适用于开发人员要保留已在使用 OLE DB 的现有应用程序。
@@ -40,7 +40,7 @@ Microsoft OLE DB 是一项传统技术;对于新的应用程序是链接 SQL 服
 |OLE DB 模板类和宏|[OLE DB 模板参考](../../data/oledb/ole-db-templates.md)（Visual c + +）|  
 |OLE DB 使用者特性|[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)|  
 |OLE DB 接口|[OLE DB 程序员参考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))（在 Windows SDK 中)|  
-|OLE DB 模板示例|[OLE DB 模板示例](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|OLE DB 模板示例|[OLE DB 模板示例](https://github.com/Microsoft/VCSamples)| 
 |数据访问编程概述 (Visual C++)|[数据访问编程](../../data/data-access-programming-mfc-atl.md)|  
 |ODBC 概念主题|[开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 

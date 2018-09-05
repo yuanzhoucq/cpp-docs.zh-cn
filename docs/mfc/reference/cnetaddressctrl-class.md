@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680754"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 `CNetAddressCtrl` 类表示网络地址控件，可使用此控件输入和验证 IPv4、IPv6 与命名的 DNS 地址的格式。  
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合 (OR)。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
+|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合 (OR)。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函数。|  
 |[in]*dwStyle*|按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
 |[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
 |[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  

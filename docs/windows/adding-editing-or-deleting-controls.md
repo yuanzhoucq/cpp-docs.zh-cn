@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686267"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>添加、编辑或删除控件
 
 使用**对话框**编辑器中，您可以添加、 重设大小、 编辑和删除控件在对话框中的。 此外可以编辑的控件，如其 ID 属性或者它是否最初可见在运行时。
 
-可以使用中的快捷菜单**对话框中**编辑器来快速添加注册 ActiveX 控件到对话框中，并且可以添加到 ActiveX 控件**工具箱**以便快速访问 （有关详细信息，请参阅[自定义工具箱对话框](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。
+可以使用中的快捷菜单**对话框中**编辑器来快速添加注册 ActiveX 控件到对话框中，并且可以添加到 ActiveX 控件**工具箱**以便快速访问 （有关详细信息，请参阅[工具箱](/visualstudio/ide/reference/toolbox))。
 
 - [将控件添加到对话框](adding-a-control-to-a-dialog-box.md)
 

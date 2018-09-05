@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2079 |Microsoft 文档
+title: ML 非致命错误 A2079 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ab53021540be406dbd9fbe1b877e905f894585
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2c5b97e515f916ea9ecc53d51d7146d50f1319f3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054711"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682911"
 ---
 # <a name="ml-nonfatal-error-a2079"></a>ML 非致命错误 A2079
-**指令不允许更直接寻址**  
-  
- 向不同的段或组不能为条件跳转或循环。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**指令不允许更直接寻址**
+
+条件跳转或循环不能为另一个网段或组。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

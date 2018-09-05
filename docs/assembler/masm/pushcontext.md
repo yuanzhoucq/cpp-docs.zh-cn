@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT |Microsoft 文档
+title: PUSHCONTEXT |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677423"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-将保存部分或全部当前`context`： 段寄存器假定，基数值、 列表和 cref 标志或处理器/协处理器的值。 `context`可以是**假设**， `RADIX`，**列出**， **CPU**，或**所有**。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+将保存当前的部分或全部`context`： 段寄存器假定基数值、 列表和 cref 标志或处理器/协处理器值。 `context`可以是**假设**， `RADIX`，**列出**， **CPU**，或**所有**。
+
+## <a name="syntax"></a>语法
+
+> PUSHCONTEXT 上下文
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

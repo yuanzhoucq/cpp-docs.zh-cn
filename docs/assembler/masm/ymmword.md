@@ -1,7 +1,7 @@
 ---
-title: YMMWORD |Microsoft 文档
+title: YMMWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82d9c8066334ff0d8765e1aa4da41a253d3064
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 67ea3d2319f6c89abccc3acbba4e1fea94197210
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057105"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682178"
 ---
 # <a name="ymmword"></a>YMMWORD
-使用 256 位多媒体操作数与 Intel 高级矢量扩展 (AVX) 说明。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-YMMWORD  
-```  
-  
-## <a name="remarks"></a>备注  
- `YMMWORD` 用于表示与相同的类型`__m256`对 AVX 内部函数。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+使用 256 位多媒体操作数与 Intel 高级矢量扩展 (AVX) 指令。
+
+## <a name="syntax"></a>语法
+
+> YMMWORD
+
+## <a name="remarks"></a>备注
+
+`YMMWORD` 用于表示与相同的类型`__m256`AVX 内部函数的。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

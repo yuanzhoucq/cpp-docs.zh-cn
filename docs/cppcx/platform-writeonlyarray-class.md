@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680920"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>备注  
- 有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
+ 有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。  
   
   
 ## <a name="see-also"></a>请参阅  

@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678657"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 此类提供用于处理窗口的方法。  
@@ -547,10 +547,10 @@ HWND Create(
  [in]指定窗口的名称。 默认值为 NULL。  
   
  *dwStyle*  
- [in]窗口的样式。 默认值为 0，这意味着任何样式指定。 有关可能的值的列表，请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]窗口的样式。 默认值为 0，这意味着任何样式指定。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *dwExStyle*  
- [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式指定。 有关可能的值的列表，请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式指定。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *MenuOrID*  
  [in]类型的变量[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定一个菜单或窗口标识符的句柄。 默认值为 0U。  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>备注  
  `CWindow::rcDefault` 定义为`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。  
   
- 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for 的详细信息中。  
+ 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK for 的详细信息中。  
   
  **请注意**如果使用 0 的值作为*MenuOrID*参数，则必须指定为 0U （默认值） 以避免编译器错误。  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  初始化[m_hWnd](#m_hwnd)成员添加到*hWnd*，默认情况下为 NULL。  
   
 > [!NOTE]
-> `CWindow::CWindow` 不会创建一个窗口。 类[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，并[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (所有这些派生`CWindow`) 提供一个用于创建窗口或对话框中，这是方法然后，分配到`CWindow::m_hWnd`。 此外可以使用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 函数。  
+> `CWindow::CWindow` 不会创建一个窗口。 类[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，并[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (所有这些派生`CWindow`) 提供一个用于创建窗口或对话框中，这是方法然后，分配到`CWindow::m_hWnd`。 此外可以使用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Win32 函数。  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  更新指定窗口的指定的窗口的多个位置结构。  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) Windows SDK 中。  
+ 请参阅[DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Windows SDK 中。  
   
  它不会销毁`CWindow`对象本身。  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK 中。  
+ 请参阅[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。  
   
 > [!NOTE]
 >  若要编写与 32 位和 64 位版本的 Windows 兼容的代码，请使用[CWindow::GetWindowLongPtr](#getwindowlongptr)。  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK 中。  
+ 请参阅[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  在对话框中，键盘焦点设置到控件。  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in]指定要添加样式修改期间的窗口样式。  
   
  *nFlags*  
- [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果修改窗口样式; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式的 Windows SDKfor 信息中的函数。  
+ 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)有关可用的窗口样式的 Windows SDKfor 信息中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in]指定要添加样式修改期间的扩展的样式。  
   
  *nFlags*  
- [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
+ [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
  如果修改扩展的窗口样式; 则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的扩展样式的 Windows SDKfor 信息中的函数。  
+ 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)有关可用的扩展样式的 Windows SDKfor 信息中的函数。  
   
  如果*nFlags*为非零值，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK 中。  
+ 请参阅[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。  
   
 > [!NOTE]
 >  若要编写与 32 位和 64 位版本的 Windows 兼容的代码，请使用[CWindow::SetWindowLongPtr](#setwindowlongptr)。  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。  
   
  此方法的第二个版本使用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构来设置窗口的新位置、 宽度和高度。  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK 中。  
+ 请参阅[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  显示系统插入符号。  

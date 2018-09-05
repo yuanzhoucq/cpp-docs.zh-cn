@@ -1,7 +1,7 @@
 ---
 title: '@fardata | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7498d9cc4a28ded2fb14b271b5c23a3fefdb2769
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b1a4a9ac90b510dece949362a94efea0913d8430
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684910"
 ---
 # <a name="fardata"></a>@fardata
-通过定义的段的名称[。FARDATA](../../assembler/masm/dot-fardata.md)指令 （文本宏）。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-@fardata  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [符号参考](../../assembler/masm/symbols-reference.md)
+
+由定义的段的名称[。FARDATA](../../assembler/masm/dot-fardata.md)指令 （text 宏）。
+
+## <a name="syntax"></a>语法
+
+> @fardata
+
+## <a name="see-also"></a>请参阅
+
+[符号参考](../../assembler/masm/symbols-reference.md)<br/>

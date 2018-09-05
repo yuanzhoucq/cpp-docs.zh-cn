@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685738"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于打开文件或保存操作的文件的公共对话框。  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>参数  
  *lpszPropList*  
- 由“;”分隔的预定义的属性列表。 标志的列表，请参阅**标志**一部分[OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)。  
+ 由“;”分隔的预定义的属性列表。 标志的列表，请参阅**标志**一部分[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ### <a name="remarks"></a>备注  
   

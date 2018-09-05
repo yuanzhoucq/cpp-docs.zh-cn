@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219168"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684788"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 此类提供方法以处理非聚合和聚合对象的对象引用计数管理。  
@@ -279,7 +279,7 @@ IUnknown*
  如果对象聚合，未知的外部指向存储在`m_pOuterUnknown`。 如果该对象不会聚合，引用计数的访问`AddRef`并`Release`存储在[m_dwRef](#m_dwref)。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 每个类中列出[对象映射](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)后初始化模块时，调用此函数并再次时已终止。  
+ 对于每个对象映射中列出的类后初始化模块时，调用此函数并再次时已终止。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

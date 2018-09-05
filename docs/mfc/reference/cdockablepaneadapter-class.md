@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 196264f417874904e0aba4df815d42e4e50d690d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205036"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676358"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 类
 为 `CWnd`派生窗格提供停靠支持。  
@@ -47,8 +47,8 @@ class CDockablePaneAdapter : public CDockablePane
 |名称|描述|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|返回包装的窗口。|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(重写[cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(重写[cdockablepane:: Savestate](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(重写[cdockablepane:: Loadstate](cdockablepane-class.md#loadstate)。)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(重写[cdockablepane:: Savestate](cdockablepane-class.md)。)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>备注  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676775"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
 实现工具提示控件的[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)用于显示工具提示。  
@@ -65,7 +65,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|停用并隐藏工具提示控件。|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|返回工具提示控件的最后一个位置的坐标。|  
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|隐藏工具提示控件。|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息调度到之前转换[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|  
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|设置工具提示文本和工具提示窗口的边框之间的间距。|  
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|显示工具提示控件。|  
   

@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210246"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679242"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 公共树视图控件的功能。  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
+ 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
   
  *rect*  
  指定树视图控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
- 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
+ 指定树视图控件的样式。 应用窗口样式中, 所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，和的任意组合[树视图控件样式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
   
  *rect*  
  对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  

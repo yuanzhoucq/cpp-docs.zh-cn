@@ -1,7 +1,7 @@
 ---
-title: MMWORD |Microsoft 文档
+title: MMWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679229"
 ---
 # <a name="mmword"></a>MMWORD
-用于 64 位多媒体操作数与 MMX 和 SSE (XMM) 说明。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>备注  
- `MMWORD` 是一种类型。  在添加到 MASM MMWORD 之前, 的等效功能可能达到使用：  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- 在这两个说明使用 64 位操作数，同时`QWORD`是 64 位无符号整数的类型和`MMWORD`是 64 位多媒体值的类型。  
-  
- `MMWORD` 用于表示与相同的类型[__m64](../../cpp/m64.md)。  
-  
-## <a name="example"></a>示例  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+用于 64 位多媒体操作数与 MMX 和 SSE (XMM) 说明。
+
+## <a name="syntax"></a>语法
+
+> MMWORD
+
+## <a name="remarks"></a>备注
+
+`MMWORD` 是一种。  在添加到 MASM MMWORD 之前, 的等效功能可能达到使用：
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+虽然这两个说明适用于 64 位操作数`QWORD`是 64 位无符号整数的类型和`MMWORD`是 64 位多媒体值的类型。
+
+`MMWORD` 用于表示与相同的类型[__m64](../../cpp/m64.md)。
+
+## <a name="example"></a>示例
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

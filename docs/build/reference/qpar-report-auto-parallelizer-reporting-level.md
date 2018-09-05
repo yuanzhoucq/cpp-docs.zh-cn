@@ -1,5 +1,5 @@
 ---
-title: -/Qpar-report （自动并行化程序报告等级） |Microsoft 文档
+title: -Qpar-report （自动并行化程序报告等级） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376009"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681690"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report（自动并行化程序报告等级）
-启用编译器的报表功能[自动并行化](../../parallel/auto-parallelization-and-auto-vectorization.md)并在编译期间指定的输出信息性消息的级别。  
+启用报表功能的编译器[自动并行化程序](../../parallel/auto-parallelization-and-auto-vectorization.md)，并在编译期间指定的输出信息性消息的级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +29,7 @@ ms.locfileid: "32376009"
 ```  
   
 ## <a name="remarks"></a>备注  
- **/Qpar-报表： 1**  
+ **/Qpar-报告： 1**  
  为并行化的循环输出提供相关信息的消息。  
   
  **/Qpar-报表： 2**  
@@ -41,9 +41,9 @@ ms.locfileid: "32376009"
   
 1.  在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。  
   
-2.  在**属性页**对话框中，在**C/c + +**，选择**命令行**。  
+2.  在中**属性页**对话框中的**C/c + +**，选择**命令行**。  
   
-3.  在**其他选项**框中，输入`/Qpar-report:1`或`/Qpar-report:2`。  
+3.  在中**其他选项**框中，输入`/Qpar-report:1`或`/Qpar-report:2`。  
   
 ### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>以编程方式设置 /Qpar-report 编译器选项  
   
@@ -53,4 +53,4 @@ ms.locfileid: "32376009"
  [/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [本机代码中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [本机代码中的并行编程](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

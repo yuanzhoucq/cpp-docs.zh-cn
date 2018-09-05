@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467835"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685071"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 专用**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>备注  
- **/GS**编译器选项将使编译器通过插入在堆栈上的安全检查来测试缓冲区溢出。 中介绍了符合安全检查的条件的数据结构的类型[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。 有关缓冲区溢出检测的详细信息，请参阅[编译器安全检查深入介绍](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN 网站上。  
+ **/GS**编译器选项将使编译器通过插入在堆栈上的安全检查来测试缓冲区溢出。 中介绍了符合安全检查的条件的数据结构的类型[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。 有关缓冲区溢出检测的详细信息，请参阅[MSVC 中的安全功能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)。  
   
  专家手动代码评审或外部分析可能确定函数不会出现缓冲区溢出。 在这种情况下，可以通过应用取消安全检查的函数 **__declspec （safebuffers)** 函数声明的关键字。  
   

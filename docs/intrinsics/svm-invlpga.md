@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680083"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 专用**  
@@ -45,7 +45,7 @@ void __svm_invlpga(
 |[in] `ASID`|地址空间标识符 (ASID) 页上，要使之无效。|  
   
 ## <a name="remarks"></a>备注  
- `__svm_invlpga`函数等同于`INVLPGA`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ `__svm_invlpga`函数等同于`INVLPGA`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。  
   
 ## <a name="requirements"></a>要求  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215977"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683167"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>如何：在资源中搜索符号
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215977"
 
 1. 从**编辑**菜单中，选择**查找符号**。
 
-2. 在中[查找符号对话框](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)，在**查找内容**框中，从下拉列表中选择以前的搜索字符串或键入想要查找 （例如 ID_ACCEL1） 的加速键。
+2. 在中[查找符号对话框](/visualstudio/ide/go-to)，在**查找内容**框中，从下拉列表中选择以前的搜索字符串或键入想要查找 （例如 ID_ACCEL1） 的加速键。
 
    > [!TIP]
-   > 若要使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)为你的搜索，必须使用[在文件中查找](/visualstudio/ide/reference/find-command)从**编辑**而不是菜单**查找符号**命令。 若要启用正则表达式，必须具有**使用： 正则表达式**中所选的复选框[查找对话框](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600)。 然后，您可以单击右侧的向右箭头按钮**查找内容**框，以显示搜索正则表达式的列表。 当从此列表中选择一个表达式时，它将替换中的搜索文本**查找内容**框。
+   > 若要使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)为你的搜索，必须使用[在文件中查找](/visualstudio/ide/reference/find-command)从**编辑**而不是菜单**查找符号**命令。 若要启用正则表达式，必须具有**使用： 正则表达式**中所选的复选框[查找对话框](/visualstudio/ide/finding-and-replacing-text)。 然后，您可以单击右侧的向右箭头按钮**查找内容**框，以显示搜索正则表达式的列表。 当从此列表中选择一个表达式时，它将替换中的搜索文本**查找内容**框。
 
 3. 选择任一**查找**选项。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0786ada9a9548fa4e3517cb74fe37e5b7f244be2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4810113158673002f20e36b7b17e93df6e68c3e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679034"
 ---
 # <a name="object-map-macros"></a>对象映射宏
 这些宏定义对象映射和条目。  
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in]类对象的说明。  
   
 ### <a name="remarks"></a>备注  
- 通过在对象映射到 ATL 进入此说明[OBJECT_ENTRY](https://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)宏。  
+ 通过在对象映射到 ATL 进入此说明[OBJECT_ENTRY_AUTO](#object_entry_auto)宏。  
   
  实现 DECLARE_OBJECT_DESCRIPTION`GetObjectDescription`函数，可用于重写[CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)方法。  
 
