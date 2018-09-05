@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751973"
 ---
 # <a name="boxing-ccx"></a>装箱 (C++/CX)
 *装箱*正如包装值类型变量[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基础标量类型，如`int`— 在一个 ref 类变量传递给采用的方法时[Platform:: object ^](../cppcx/platform-object-class.md)作为其输入类型。  

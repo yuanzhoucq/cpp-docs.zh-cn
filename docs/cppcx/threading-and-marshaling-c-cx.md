@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677147"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756208"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 在大多数情况下，可以从任意线程访问 Windows 运行时类，类似于标准的 c + + 对象的实例。 此类称为“敏捷类”。 但是，少数预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准 c + + 对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。  

@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963558"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751454"
 ---
 # <a name="adding-an-atl-com-10-component"></a>添加 ATL COM + 1.0 组件
-此向导将对象添加到项目，支持 COM + 1.0 服务，包括事务。  
-  
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>若要向项目添加 ATL COM + 1.0 组件  
-  
-1.  在上述**解决方案资源管理器**或[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击你想要添加的 ATL COM + 1.0 组件的项目的名称。  
-  
-2.  在快捷菜单上，单击**外**，然后单击**添加类**。  
-  
-3.  在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL COM + 1.0 组件**，然后单击**打开**以显示[ATL COM + 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
-  
-## <a name="see-also"></a>请参阅  
- [添加类](../../ide/adding-a-class-visual-cpp.md)   
- [添加方法](../../ide/adding-a-method-visual-cpp.md)
+
+此向导将对象添加到项目，支持 COM + 1.0 服务，包括事务。
+
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>若要向项目添加 ATL COM + 1.0 组件
+
+1. 在上述**解决方案资源管理器**或[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击你想要添加的 ATL COM + 1.0 组件的项目的名称。
+
+2. 在快捷菜单上，单击**外**，然后单击**添加类**。
+
+3. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ATL COM + 1.0 组件**，然后单击**打开**以显示[ATL COM + 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+
+## <a name="see-also"></a>请参阅
+
+[添加类](../../ide/adding-a-class-visual-cpp.md)   
+[添加方法](../../ide/adding-a-method-visual-cpp.md)
 

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597868"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754190"
 ---
 # <a name="fundamental-types-ccx"></a>基本类型 (C++/CX)
 除了标准 c + + 内置类型，C + + /CX 支持的类型系统的基本 Windows 运行时类型映射到标准 c + + 类型提供 typedef 定义由 Windows 运行时体系结构... C + + /cli CX 实现一个布尔值、 字符和数值基本类型。 这些 typedef 在永远不需要显式指定的 `default` 命名空间中进行定义。 此外，C + + /cli CX 提供了包装和具体实现某些 Windows 运行时类型和接口。  
