@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 491b3cabd8003664a34543d8bb7a640759bd50ee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207400"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765016"
 ---
 # <a name="attributes-ccx"></a>特性 (C++/CX)
 属性是一种特殊的 ref 类，可以附加到 Windows 运行时类型和方法，以指定元数据创建中的某些行为的方括号中。 几个预定义属性 — 例如， [Windows::Foundation::Metadata::WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— 通常用在 C + + /CX 代码。 此示例演示如何将特性应用于类：  

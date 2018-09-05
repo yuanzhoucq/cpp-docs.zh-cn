@@ -117,11 +117,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539198"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764870"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  

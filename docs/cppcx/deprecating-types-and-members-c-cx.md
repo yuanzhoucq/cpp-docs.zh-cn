@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205475"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764405"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>要弃用的类型和成员 (C++/CX)
 在 C + + /CX 中，生成者和使用者通过使用 Windows 运行时类型和成员的不推荐使用[已弃用](/uwp/api/windows.foundation.metadata.deprecatedattribute)支持属性。 如果你使用的 API 已应用此特性，将显示一条编译时警告消息，指示该 API 已弃用并建议使用其他 API。 在你自己的公共类型和方法中，可应用此特性并提供自己的自定义消息。  

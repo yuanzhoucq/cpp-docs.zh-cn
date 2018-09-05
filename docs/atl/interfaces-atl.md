@@ -15,24 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04f77981bd922f73c99102c444a7c95f7240adbc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217878"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764615"
 ---
 # <a name="interfaces-atl"></a>接口 (ATL)
-接口是一个对象用于公开到外界其功能的方法。 在 COM 中，接口是由对象实现的函数的指针 （如 c + + vtable) 的表。 表表示的接口，和它所指向的函数是该接口的方法。 对象可以公开它选择任意数目的接口。  
-  
- 在基本的 COM 接口上基于每个接口[IUnknown](../atl/iunknown.md)。 方法`IUnknown`允许导航到由对象公开其他接口。  
-  
- 此外，每个接口有一个唯一的接口 ID (IID)。 此唯一性轻松支持接口的版本控制。 接口的新版本是只是一个新接口，使用新的 IID。  
-  
+
+接口是一个对象用于公开到外界其功能的方法。 在 COM 中，接口是由对象实现的函数的指针 （如 c + + vtable) 的表。 表表示的接口，和它所指向的函数是该接口的方法。 对象可以公开它选择任意数目的接口。
+
+在基本的 COM 接口上基于每个接口[IUnknown](../atl/iunknown.md)。 方法`IUnknown`允许导航到由对象公开其他接口。
+
+此外，每个接口有一个唯一的接口 ID (IID)。 此唯一性轻松支持接口的版本控制。 接口的新版本是只是一个新接口，使用新的 IID。
+
 > [!NOTE]
->  预定义的标准的 COM 和 OLE 接口的 Iid。  
-  
-## <a name="see-also"></a>请参阅  
- [COM 简介](../atl/introduction-to-com.md)   
- [COM 对象和接口](/windows/desktop/com/com-objects-and-interfaces)
+>  预定义的标准的 COM 和 OLE 接口的 Iid。
+
+## <a name="see-also"></a>请参阅
+
+[COM 简介](../atl/introduction-to-com.md)   
+[COM 对象和接口](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -1,5 +1,5 @@
 ---
-title: ATL MFC 概念 |Microsoft 文档
+title: ATL-MFC 概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e278dd7d261ae3470981207f55b3696c475b1d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0132cdfb291c7c8691a6b31f00de125cb08b702d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354536"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764641"
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 概念
-本部分提供概念性和基于任务的主题来帮助你计划使用活动模板库 (ATL) 和 Microsoft 基础类 (MFC) 库之间共享的类。  
-  
-## <a name="in-this-section"></a>本节内容  
- [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
- 描述如何管理应用程序中的字符串数据。  
-  
-## <a name="see-also"></a>请参阅  
- [ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)
+
+本部分提供了概念性和基于任务的主题可帮助您计划使用活动模板库 (ATL) 和 Microsoft 基础类 (MFC) 库之间共享的类。
+
+## <a name="in-this-section"></a>本节内容
+
+[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+介绍如何管理应用程序中的字符串数据。
+
+## <a name="see-also"></a>请参阅
+
+[ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

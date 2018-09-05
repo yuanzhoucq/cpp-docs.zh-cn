@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600850"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764301"
 ---
 # <a name="properties-ccx"></a>属性 (C++/CX)
 Windows 运行时类型将作为属性公开公共数据。 客户端代码像公共数据成员一样访问该属性。 在内部，该属性实现为包含一个 get 访问器方法、一个 set 访问器方法或二者的块。 通过使用访问器方法，你可以在检索值的前后执行其他操作，例如，可以触发事件或执行验证检查。  

@@ -1,5 +1,5 @@
 ---
-title: C.1 表示法 |Microsoft 文档
+title: C.1 表示法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39e8610524e20aa99ea316d62f36b512700e377e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686810"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766147"
 ---
 # <a name="c1-notation"></a>C.1 表示法
-语法规则包含非-终端，该名称后接冒号，在单独的行上其后替换的替代项。  
-  
- 语法表达式 termopt 指示术语是可选中替换。  
-  
- 语法的表达式*术语*optseq 相当于*术语 seq*选择具有以下额外规则：  
-  
- *术语 seq* :  
-  
- *术语*  
-  
- *术语 seq 术语*  
-  
- *术语 seq* ，*术语*
+语法规则包含非终端，该名称后接一个冒号，跟在单独的行替换替代项。
+
+语法的表达式项<sub>选择</sub>指示该字词是替换中的可选。
+
+语法的表达式*术语*<sub>optseq</sub>等效于*术语 seq*<sub>选择</sub>具有下列附加规则：
+
+*术语 seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*术语*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*术语 seq* *术语*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*术语 seq* **，** *术语*

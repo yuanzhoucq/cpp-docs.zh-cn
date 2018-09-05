@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963649"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766400"
 ---
 # <a name="persistence-classes"></a>持久性类
-以下类实现对象持久性：  
-  
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)允许客户端加载和保存到一个属性包对象的属性。  
-  
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md)允许客户端加载和保存到流对象的持久性数据。  
-  
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md)允许客户端加载和保存到存储的对象的持久性数据。  
-  
-## <a name="related-articles"></a>相关文章  
- [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)   
- [属性映射宏](../atl/reference/property-map-macros.md)
+
+以下类实现对象持久性：
+
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)允许客户端加载和保存到一个属性包对象的属性。
+
+- [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md)允许客户端加载和保存到流对象的持久性数据。
+
+- [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md)允许客户端加载和保存到存储的对象的持久性数据。
+
+## <a name="related-articles"></a>相关文章
+
+[ATL 教程](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)   
+[属性映射宏](../atl/reference/property-map-macros.md)
 

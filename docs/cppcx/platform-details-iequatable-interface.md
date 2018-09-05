@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3c3475eeadef19ee74fdafb7da758c79556f42ab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597694"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765185"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable 接口
 此接口仅供内部使用，不用于开发。  
