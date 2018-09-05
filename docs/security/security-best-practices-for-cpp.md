@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6cb76b2802b1f582621e3e0bacb565a974894d75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610048"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693340"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -78,7 +78,8 @@ ms.locfileid: "42610048"
 -   安全性  
   
 ## <a name="windows-application-verifier"></a>Windows 应用程序验证工具  
- 应用程序验证工具 (AppVerifier) 可帮助您识别潜在应用程序兼容性、稳定性和安全性问题。  
+ [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
+)可帮助你识别潜在的应用程序兼容性、 稳定性和安全问题。  
   
  AppVerifier 可监视应用程序使用操作系统的方式。 在应用程序运行的过程中，此工具会监视文件系统、注册表、内存和 API，并针对它发现的问题给出源代码修复的建议。  
   
@@ -89,8 +90,6 @@ ms.locfileid: "42610048"
 -   检查应用程序是否存在内存相关问题。  
 
 -   确定应用程序中的潜在安全问题。  
-  
- AppVerifier 是可从应用程序兼容性工具包的一部分[应用程序兼容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 网站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 用户帐户  

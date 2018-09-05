@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693462"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -283,7 +283,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。  

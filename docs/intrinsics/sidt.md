@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685972"
 ---
 # <a name="sidt"></a>__sidt
 **Microsoft 专用**  
@@ -51,7 +51,7 @@ void __sidt(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- `__sidt`函数等同于`SIDT`计算机指令。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__sidt`函数等同于`SIDT`计算机指令。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。  
   
 **结束 Microsoft 专用**  
   

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955301"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687982"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 类
 
@@ -84,7 +84,7 @@ class subtract_with_carry_engine;
 `ranlux48_base`：用作 `ranlux48` 的基础。
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-有关带进位减法引擎算法的详细信息，请参阅 Wikipedia 文章 [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/p/?linkid=402445)（滞后斐波纳契生成器）。
+有关带进位减法引擎算法的详细信息，请参阅 Wikipedia 文章 [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)（滞后斐波纳契生成器）。
 
 ## <a name="requirements"></a>要求
 

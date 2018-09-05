@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687930"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
-处理调用[LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 以显式链接到 DLL。 如果函数成功，它将指定的 DLL 映射到调用进程的地址空间，并返回的句柄可用于在显式链接中的其他函数的 DLL — 例如，`GetProcAddress`和`FreeLibrary`。
+处理调用[LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或[LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 以显式链接到 DLL。 如果函数成功，它将指定的 DLL 映射到调用进程的地址空间，并返回的句柄可用于在显式链接中的其他函数的 DLL — 例如，`GetProcAddress`和`FreeLibrary`。
 
 `LoadLibrary` 尝试使用用于隐式链接的相同搜索序列来定位 DLL。 如果系统找不到 DLL 或入口点函数返回 FALSE，`LoadLibrary`返回 NULL。 如果在调用`LoadLibrary`指定已映射到调用进程的地址空间的 DLL 模块函数返回的句柄的 DLL 和增量的模块的引用计数。
 
@@ -59,5 +59,3 @@ ms.locfileid: "42572819"
 ## <a name="see-also"></a>请参阅
 
 - [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

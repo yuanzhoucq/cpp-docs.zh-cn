@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201521"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687711"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 类
 通过为图像列表提供支持扩展组合框控件。  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  组合框控件的样式。 请参阅[创建](#create)有关样式的列表。  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  一个指向[CImageList](../../mfc/reference/cimagelist-class.md)对象，其中包含以前使用过的映像`CComboBoxEx`控件。 如果任何图像列表之前已不设置为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数实现消息的功能[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)，如 Windows SDK 中所述。 如果更改默认编辑控件的高度，调用 Win32 函数[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)来调整控件大小调用后`SetImageList`，或不会正确显示。  
+ 此成员函数实现消息的功能[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)，如 Windows SDK 中所述。 如果更改默认编辑控件的高度，调用 Win32 函数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)来调整控件大小调用后`SetImageList`，或不会正确显示。  
   
  `CImageList`返回值指向的对象是临时对象并在下一步的空闲处理期间被销毁。  
   

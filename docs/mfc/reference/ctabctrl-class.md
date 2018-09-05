@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690466"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 提供 Windows 公共选项卡控件的功能。  
@@ -240,7 +240,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**中[创建](#create)还可以应用到控件的窗口样式的列表。  

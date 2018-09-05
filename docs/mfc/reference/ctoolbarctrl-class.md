@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686080"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 提供 Windows 工具栏公共控件的功能。  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED 很少  
   
- 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)的窗口样式说明 Windows SDK 中。  
+ 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)的窗口样式说明 Windows SDK 中。  
   
  （可选） 将应用的组合[常见控件样式](/windows/desktop/Controls/common-control-styles)，如 Windows SDK 中所述。  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如中所述**备注**一部分[创建](#create)。  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218418"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687581"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -72,7 +72,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是 c + + 具体实现[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 运行时接口的公共之间传递的类型。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262408)。
+映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是 c + + 具体实现[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 运行时接口的公共之间传递的类型。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 

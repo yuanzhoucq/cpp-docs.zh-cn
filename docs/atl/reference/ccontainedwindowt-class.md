@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690941"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象内的窗口。  
@@ -220,16 +220,16 @@ HWND Create(
  [in]指定窗口的名称。 默认值为 NULL。  
   
  *dwStyle*  
- [in]窗口的样式。 默认值是 WS_CHILD &#124; WS_VISIBLE。 有关可能的值的列表，请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]窗口的样式。 默认值是 WS_CHILD &#124; WS_VISIBLE。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *dwExStyle*  
- [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *MenuOrID*  
  [in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。  
   
  *lpCreateParam*  
- [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，新创建的窗口; 的句柄否则，为 NULL。  

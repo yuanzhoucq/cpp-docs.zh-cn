@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222363"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693967"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，它是有选择性地包含浏览按钮可编辑文本框。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|重绘当前编辑浏览控件。|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|由框架调用以绘制浏览按钮。|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|当编辑控件中输入文件名非法时由框架调用。|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|设置自定义映像的浏览按钮。|  
   
 ## <a name="remarks"></a>备注  

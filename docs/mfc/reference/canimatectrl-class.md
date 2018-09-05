@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688223"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 提供 Windows 公共动画控件的功能。  
@@ -193,7 +193,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定动画控件的样式。 应用窗口的任意组合和动画控件样式中所述[动画控件样式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。  

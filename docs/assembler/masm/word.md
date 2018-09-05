@@ -1,7 +1,7 @@
 ---
-title: WORD |Microsoft 文档
+title: WORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ce8ed64d8cbb9e840c3457cfb621297e9474607
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 50cb0f9748d5c6d1bdae07b5671c79c6794a371c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687755"
 ---
 # <a name="word"></a>WORD
-分配和 （可选） 为每个初始化一个字 （2 个字节） 存储的`initializer`。 此外可作为类型说明符类型是合法的任何位置。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[[name]] WORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令引用](../../assembler/masm/directives-reference.md)   
- [SWORD](../../assembler/masm/sword.md)   
- [DW](../../assembler/masm/dw.md)
+
+分配并根据需要为每个初始化存储一个单词 （2 个字节） `initializer`。 也可以用作类型说明符类型是合法的任何位置。
+
+## <a name="syntax"></a>语法
+
+> [[*名称*]] WORD*初始值设定项*[[，*初始值设定项*]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[SWORD](../../assembler/masm/sword.md)<br/>
+[DW](../../assembler/masm/dw.md)<br/>

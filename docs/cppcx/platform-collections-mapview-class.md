@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605466"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689466"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -51,7 +51,7 @@ ref class MapView sealed;
  提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下[std:: less\<K >](../standard-library/less-struct.md)。  
   
 ### <a name="remarks"></a>备注  
- MapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ MapView 是具体的 c + + 实现[Windows::Foundation::Collections::IMapView \<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成员  
   

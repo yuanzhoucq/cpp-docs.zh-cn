@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30906b3851357942873e3926151d5a195161a6e5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4e9e33ace99cded551abbb43bc9ada1c6c625eb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205178"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693698"
 ---
 # <a name="using-cobject"></a>使用 CObject
 [CObject](../mfc/reference/cobject-class.md)对于大多数的 Microsoft 基础类库 (MFC) 是根的基类。 `CObject`类包含许多有用的功能，您可能想要合并到您自己的程序对象，包括序列化支持、 运行时类信息，以及诊断输出对象。 如果派生您的类从`CObject`，你的类可以利用这些`CObject`功能。  
@@ -42,7 +42,7 @@ ms.locfileid: "43205178"
   
 -   [对象的数据转储以进行诊断](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))  
   
--   验证对象的内部状态 (请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](https://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   验证对象的内部状态 (请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](reference/diagnostic-services.md#assert_valid))  
   
 -   [类将自行序列化到持久存储](../mfc/serialization-in-mfc.md)  
   

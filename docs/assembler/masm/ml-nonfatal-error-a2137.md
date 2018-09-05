@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2137 |Microsoft 文档
+title: ML 非致命错误 A2137 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0566458a868d1463a59566840090a853b442f80d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16d09737bda1b29f8f47f46d0053cbe14fc286ca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058054"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691334"
 ---
 # <a name="ml-nonfatal-error-a2137"></a>ML 非致命错误 A2137
-**对 INVOKE 的参数太少**  
-  
- 使用传递的参数的数目[INVOKE](../../assembler/masm/invoke.md)指令是从中调用该过程的原型中指定的所需参数数目少于。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**对 INVOKE 的参数太少**
+
+使用传递的参数的数目[INVOKE](../../assembler/masm/invoke.md)指令是数少于所需的参数调用该过程的原型中指定的数。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

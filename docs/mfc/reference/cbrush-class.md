@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215730"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689102"
 ---
 # <a name="cbrush-class"></a>CBrush 类
 封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>参数  
  *nIndex*  
- 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 值的列表中。  
+ 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) Windows SDK for 值的列表中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  

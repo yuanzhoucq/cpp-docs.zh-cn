@@ -1,7 +1,7 @@
 ---
-title: IFNB |Microsoft 文档
+title: IFNB |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2546bd0c299129047aa7cb575fd90ff66d6b04
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 19142b4d00ed78aaef7a23ae681e3e3bdaa5a7a7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690650"
 ---
 # <a name="ifnb"></a>IFNB
-如果授予程序集*textitem*不为空。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-IFNB textitem  
-```  
-  
-## <a name="remarks"></a>备注  
- 请参阅[如果](../../assembler/masm/if-masm.md)有关完整的语法。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+如果授予程序集*textitem*不为空。
+
+## <a name="syntax"></a>语法
+
+> IFNB textitem
+
+## <a name="remarks"></a>备注
+
+请参阅[如果](../../assembler/masm/if-masm.md)有关完整语法。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

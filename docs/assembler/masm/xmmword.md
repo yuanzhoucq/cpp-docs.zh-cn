@@ -1,7 +1,7 @@
 ---
-title: XMMWORD |Microsoft 文档
+title: XMMWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8fd8e6c82a3275161e519eeead490473e8d64ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fbb578c5e168f53bc1b4e217713efa1ea329743
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689209"
 ---
 # <a name="xmmword"></a>XMMWORD
-用于 128 位多媒体操作数与 MMX 和 SSE (XMM) 说明。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-XMMWORD  
-```  
-  
-## <a name="remarks"></a>备注  
- `XMMWORD` 用于表示与相同的类型[__m128](../../cpp/m128.md)。  
-  
-## <a name="example"></a>示例  
-  
-```  
-movdqa   xmm0, xmmword ptr [ebx]  
+
+使用 128 位多媒体操作数与 MMX 和 SSE (XMM) 说明。
+
+## <a name="syntax"></a>语法
+
+> XMMWORD
+
+## <a name="remarks"></a>备注
+
+`XMMWORD` 用于表示与相同的类型[__m128](../../cpp/m128.md)。
+
+## <a name="example"></a>示例
+
+```asm
+    movdqa   xmm0, xmmword ptr [ebx]
 ```

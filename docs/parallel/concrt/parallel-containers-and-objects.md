@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212457"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692284"
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 并行模式库 (PPL) 包括多个容器和对象，它提供对其元素线程安全的访问。  
@@ -186,14 +186,14 @@ ms.locfileid: "43212457"
   
 |运算符|描述|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|前进到下一项在队列中。 此运算符重载来提供的预先递增和后递增语义。|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|检索对当前项的引用。|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|检索指向当前项的指针。|  
+|`operator++`|前进到下一项在队列中。 此运算符重载来提供的预先递增和后递增语义。|  
+|`operator*`|检索对当前项的引用。|  
+|`operator->`|检索指向当前项的指针。|  
   
  [[返回页首](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map 类  
- [超链接"file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622"concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)类是关联容器类，就像[std:: unordered_map](../../standard-library/unordered-map-class.md)类中，控件类型的元素的不同长度序列[std:: pair\<const Key，Ty >](../../standard-library/pair-structure.md)。 将无序映射视为一个字典，其中可以添加到的键 / 值对，也可以按键查找的值。 当有多个线程或同时访问共享的容器，将插入它，或更新它所需要的任务时，此类很有用。  
+ [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)类是一样的关联容器类[std:: unordered_map](../../standard-library/unordered-map-class.md)类中，控制变长序列的元素的类型[std:: pair\<const Key，Ty >](../../standard-library/pair-structure.md)。 将无序映射视为一个字典，其中可以添加到的键 / 值对，也可以按键查找的值。 当有多个线程或同时访问共享的容器，将插入它，或更新它所需要的任务时，此类很有用。  
   
  下面的示例显示了使用的基本结构`concurrent_unordered_map`。 此示例在范围 [a、 i] 中插入字符键。 操作的顺序是不确定的因为每个密钥的最终值也是不确定的。 但是，它是安全地并行执行插入操作。  
   

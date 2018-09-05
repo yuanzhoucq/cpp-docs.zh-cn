@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692037"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展了[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  为窗口的文本指针。  
   
 ### <a name="return-value"></a>返回值  
- 从调用返回值[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)。  
+ 从调用返回值[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)。  
   
 ### <a name="remarks"></a>备注  
   

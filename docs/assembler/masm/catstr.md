@@ -1,7 +1,7 @@
 ---
-title: CATSTR |Microsoft 文档
+title: CATSTR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d0fbe41d81671b509eef6d0724fd8a4b6880484
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 975d3a0776a6b2228dedba54cbd47a18d363921b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689375"
 ---
 # <a name="catstr"></a>CATSTR
-串联文本项。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-name CATSTR [[textitem1 [[, textitem2]] ...]]  
-```  
-  
-## <a name="remarks"></a>备注  
- 每个文本项可以是文本字符串，前面是一个常数`%`，或通过宏函数返回的字符串。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+将文本项连接在一起。
+
+## <a name="syntax"></a>语法
+
+> 命名 CATSTR [[textitem1 [[，textitem2]]...]]
+
+## <a name="remarks"></a>备注
+
+每个文本项可以是文字字符串，前面有一个常量`%`，或通过宏函数返回的字符串。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

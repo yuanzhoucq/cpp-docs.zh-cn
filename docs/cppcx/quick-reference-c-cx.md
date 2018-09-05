@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692583"
 ---
 # <a name="quick-reference-ccx"></a>快速参考 (C++/CX)
-Windows 运行时支持仅在可信操作系统环境中执行，使用授权的功能、 数据类型和设备，并通过 Microsoft Store 分发的通用 Windows 平台 (UWP) 应用。 C + + /cli CX 简化为 Windows 运行时编写应用程序。 本文仅作为快速参考;有关更完整的文档，请参阅[类型系统](../cppcx/type-system-c-cx.md)并[运行时平台的组件扩展](http://go.microsoft.com/fwlink/p/?linkid=228720)。  
+Windows 运行时支持仅在可信操作系统环境中执行，使用授权的功能、 数据类型和设备，并通过 Microsoft Store 分发的通用 Windows 平台 (UWP) 应用。 C + + /cli CX 简化为 Windows 运行时编写应用程序。 本文仅作为快速参考;有关更完整的文档，请参阅[类型系统](../cppcx/type-system-c-cx.md)。  
   
  在命令行上生成时，使用 **/ZW**编译器选项生成的 UWP 应用或 Windows 运行时组件。 若要访问 Windows 运行时声明，Windows 运行时元数据 (.winmd) 文件中定义，指定`#using`指令或 **/FU**编译器选项。 创建 UWP 应用程序的项目时，默认情况下的 Visual Studio 设置这些选项，并将对所有 Windows 运行时库的引用。  
   

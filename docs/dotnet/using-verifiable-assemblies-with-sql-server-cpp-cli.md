@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690698"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
-扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用 Visual c + + 开发的函数。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)并[聚合函数](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da)（例如 SUM 或 AVG）。  
+扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用 Visual c + + 开发的函数。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。  
   
  当客户端执行扩展存储的过程时，SQL Server DLL 的搜索与扩展存储过程相关联，并加载此 DLL。 SQL Server 调用请求的扩展存储的过程，并指定的安全上下文下执行。 扩展存储，然后传递结果集，并将参数返回给服务器的过程。  
   

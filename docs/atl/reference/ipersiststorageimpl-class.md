@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223208"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693711"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 类
 此类实现[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)接口。  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>备注  
  `IPersistStorageImpl` 实现[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)接口，它允许客户端请求的对象加载和保存使用存储其持久性数据。  
   
- 此类的实现需要类`T`进行的实现`IPersistStreamInit`接口可通过`QueryInterface`。 通常这意味着该类`T`应派生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的条目`IPersistStreamInit`中[COM 映射](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)，并使用[属性映射](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)来描述类的持久性数据。  
+ 此类的实现需要类`T`进行的实现`IPersistStreamInit`接口可通过`QueryInterface`。 通常这意味着该类`T`应派生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的条目`IPersistStreamInit`中[COM 映射](com-map-macros.md)，并使用[属性映射](property-map-macros.md)来描述类的持久性数据。  
   
  **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   

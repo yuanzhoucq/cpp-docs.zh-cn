@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336435"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690260"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>向导生成的访问器中的字段状态数据成员
 当使用 ATL OLE DB 使用者向导来创建使用者时，向导生成数据成员中指定列映射中每个字段的用户记录类。 每个数据成员是类型的`DWORD`和包含其各自的字段相对应的状态值。  
@@ -85,7 +85,7 @@ END_COLUMN_MAP()
   
  Status 值还可用于设置特定字段的 NULL 值。 这样做可帮助您在想要将字段值为 NULL，而不是零区分开来的情况下。 它是由您来决定 NULL 是否是有效的值或特殊值，并决定你的应用程序应如何处理它。 OLE DB 定义为指定的泛型的 NULL 值的正确方式 DBSTATUS_S_ISNULL。 如果使用者读取数据的值为 null，则将状态字段设置为 DBSTATUS_S_ISNULL。 如果使用者想要设置为 NULL 值，使用者将状态值设置为 DBSTATUS_S_ISNULL 之前调用提供程序。  
   
- 接下来，打开 Oledb.h 并搜索`DBSTATUSENUM`。 然后可以匹配的非零状态对数值`DBSTATUSENUM`枚举值。 如果枚举名称不足以告诉您怎么了，请参阅"状态"主题中的"绑定数据值"一节[OLE DB 程序员指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。 本主题包含的状态时使用的值获取或设置数据的表。 有关长度值的信息，请参阅中的同一部分的"长度"主题。  
+ 接下来，打开 Oledb.h 并搜索`DBSTATUSENUM`。 然后可以匹配的非零状态对数值`DBSTATUSENUM`枚举值。 如果枚举名称不足以告诉您怎么了，请参阅"状态"主题中的"绑定数据值"一节[OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。 本主题包含的状态时使用的值获取或设置数据的表。 有关长度值的信息，请参阅中的同一部分的"长度"主题。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>检索的长度或列的状态  
  您可以检索可变长度列的长度或列 （若要检查为 DBSTATUS_S_ISNULL，例如） 的状态：  

@@ -1,7 +1,7 @@
 ---
-title: 运算符 NE |Microsoft 文档
+title: 运算符 NE |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90fe971e24b955455fa989cda8b40696532c3d4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cefe87cad5d755c752e3ad6972a43cc568f962a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052045"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687325"
 ---
 # <a name="operator-ne"></a>运算符 NE
-如果返回 true (-1) *expression1*不等于*expression2*，或者如果是这样，则返回 false (0)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-expression1 NE expression2  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+如果返回 true (-1) *expression1*不等于*expression2*，或如果是这样，则返回 false (0)。
+
+## <a name="syntax"></a>语法
+
+> expression1 NE expression2
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

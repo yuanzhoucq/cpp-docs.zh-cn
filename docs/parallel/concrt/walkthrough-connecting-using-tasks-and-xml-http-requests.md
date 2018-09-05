@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90a9cdaf5d0b99e2ad746655f67e3ab9a68aad1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688394"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 此示例演示如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)并[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务以将 HTTP GET 和 POST 请求发送到通用 Windows 平台 (UWP 中的 web 服务结合使用) 应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，您可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。  
@@ -33,7 +33,7 @@ ms.locfileid: "43201163"
   
  本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后，它演示如何使用此类从使用 c + + 和 XAML 的 UWP 应用。  
   
- 有关更完整的示例使用`HttpReader`类描述在此文档中，请参阅[开发必应地图行程优化器、 JavaScript 和 c + + 中的 Windows 应用商店应用](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)。 有关使用的另一个示例`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)。  
+有关使用示例`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))。  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` 和`IXMLHTTPRequest2Callback`是我们建议在 UWP 应用中使用的接口。 还可以调整此示例，以用于桌面应用程序。  
@@ -121,6 +121,6 @@ ms.locfileid: "43201163"
  [PPL 中取消操作](cancellation-in-the-ppl.md)   
  [C + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [在 c + + 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](/previous-versions/windows/apps/hh770550\(v=win.10\))   
  [task 类 （并发运行时）](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event 类](../../parallel/concrt/reference/task-completion-event-class.md)

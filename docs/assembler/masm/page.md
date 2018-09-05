@@ -1,7 +1,7 @@
 ---
-title: 页 |Microsoft 文档
+title: 页 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692475"
 ---
 # <a name="page"></a>PAGE
-第一个指令将设置行*长度*和字符*宽度*的程序列表。 如果未提供参数，将生成一个分页符。 第二个指令形式递增的节号，并将页码重置为 1。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+第一个指令设置行*长度*和字符*宽度*的程序列表。 如果不给定任何参数时，将生成一个分页符。 第二个指令的节号会递增，并且将页码重置为 1。
+
+## <a name="syntax"></a>语法
+
+> 页 [[*长度*]] [[，*宽度*]]<br/><br/>
+> 页 +
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

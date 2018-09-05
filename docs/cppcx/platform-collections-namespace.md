@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612526"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686542"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空间
 
-Platform:: collections 命名空间包含`Map`， `MapView`， `Vector`，和`VectorView`类。 这些类是在 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空间中定义的对应接口的具体实现。 具体集合类型在 ABI 之间是不可移植的（例如，当 Javascript 或 C# 程序调用到 C++ 组件时）时，但它们可以隐式转换为其相应的接口类型。 例如，如果你实现了一个填充并返回集合的公共方法，则使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在内部实现该集合并使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作为返回类型。 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)并[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+Platform:: collections 命名空间包含`Map`， `MapView`， `Vector`，和`VectorView`类。 这些类是在中定义的对应接口的具体实现[Windows::Foundation::Collections](/uwp/api/Windows.Foundation.Collections)命名空间。 具体集合类型在 ABI 之间是不可移植的（例如，当 Javascript 或 C# 程序调用到 C++ 组件时）时，但它们可以隐式转换为其相应的接口类型。 例如，如果你实现一个填充并返回集合的公共方法，则使用[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md)若要在内部实现该集合并使用[Windows::Foundation::Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)用作返回类型。 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)并[c + + 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 可以从 [std::vector](../standard-library/vector-class.md) 构造 Platform::Collections::Vector，从 [std::map](../cppcx/platform-collections-map-class.md) 构造 [Platform::Collections::Map](../standard-library/map-class.md)。
 

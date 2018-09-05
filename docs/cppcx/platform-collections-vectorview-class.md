@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584101"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690602"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 表示可按照索引单独访问的对象的顺序集合的只读视图。 集合中每个对象的类型由模板参数指定。  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  使用 `T`类型的值指定测试相等性的二进制谓词。 默认值为 `std::equal_to<T>`。  
   
 ### <a name="remarks"></a>备注  
- `VectorView`类实现[Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)接口，并支持标准模板库迭代器。  
+ `VectorView`类实现[Windows::Foundation::Collections::IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)接口，并支持标准模板库迭代器。  
   
 ### <a name="members"></a>成员  
   

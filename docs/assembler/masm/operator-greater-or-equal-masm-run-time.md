@@ -1,7 +1,7 @@
 ---
-title: 运算符&gt;= （MASM 运行时间） |Microsoft 文档
+title: 运算符&gt;= （MASM 运行时间） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd5f6e9c2d4a5bd92e838aa780701a84a046c50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d535152045f9bd03d80098fbe79fab8141ff8f74
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054619"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688777"
 ---
 # <a name="operator-gt-masm-run-time"></a>运算符&gt;= （MASM 运行时间）
-是大于或等于。 只能在使用[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)拦截并在运行时，不是在程序集时计算。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-expression1 >= expression2  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+大于或等于。 仅在[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)阻止并在运行时，不是在程序集时计算。
+
+## <a name="syntax"></a>语法
+
+> expression1 > = expression2
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

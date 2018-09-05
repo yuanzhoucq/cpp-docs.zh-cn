@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201471"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691103"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  当前为 RGB 颜色值的文本颜色。  
   
 ### <a name="remarks"></a>备注  
- 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor)设置 Outlook 栏的当前 （常规和所选） 的文本颜色。 你可以通过调用获取的默认文本颜色[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) COLOR_WINDOW 索引的函数。  
+ 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor)设置 Outlook 栏的当前 （常规和所选） 的文本颜色。 你可以通过调用获取的默认文本颜色[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) COLOR_WINDOW 索引的函数。  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  确定是否加载 Outlook 栏窗格的背景图像。  

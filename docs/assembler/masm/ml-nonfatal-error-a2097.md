@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2097 |Microsoft 文档
+title: ML 非致命错误 A2097 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c18351a1a812d27ec72ffdc19fd73a1fc345272
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8951a1164aee405b510f3b51a4ad2cbb103a01ec
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693475"
 ---
 # <a name="ml-nonfatal-error-a2097"></a>ML 非致命错误 A2097
-**预期的段： 标识符**  
-  
- [组](../../assembler/masm/group.md)指令提供的未定义的段的标识符。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**预期的段： 标识符**
+
+[组](../../assembler/masm/group.md)指令提供不定义的段的标识符。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

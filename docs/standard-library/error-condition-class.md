@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869eba484a5ffa4e9c57c9c65a9b74e0962114e3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66096fcfee62e869577527b632f3409fea231b35
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690826"
 ---
 # <a name="errorcondition-class"></a>error_condition 类
 
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 第一个构造函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
-第二个构造函数存储*val*作为错误代码值和指向[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
+第二个构造函数存储*val*作为错误代码值和指向[error_category](../standard-library/error-category-class.md)。
 
 第三个构造函数存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 

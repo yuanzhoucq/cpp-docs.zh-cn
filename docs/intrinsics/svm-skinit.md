@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687280"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft 专用**  
@@ -48,7 +48,7 @@ void __svm_skinit(
   
  `SLB`参数指定的内存中，调用 64k 块的物理地址*安全加载程序块*(SLB)。 SLB 包含一个名为建立操作环境的计算机，并随后将加载安全内核安全加载程序程序。  
   
- 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。  
   
 ## <a name="requirements"></a>要求  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae151d25af5ad1c77f2dcfc7af1902e562ffde51
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 40c8404ad2f2ab56849bed22a15bd10805888d3c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690685"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 类
 此类提供方法来标准化创建窗口对象时所用的样式。  
@@ -108,6 +108,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
  对象扩展的窗口样式。  
   
 ## <a name="see-also"></a>请参阅  
- [类成员](https://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [类概述](../../atl/atl-class-overview.md)   
  [了解窗口特征](../../atl/understanding-window-traits.md)

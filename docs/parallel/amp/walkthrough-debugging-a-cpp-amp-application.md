@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689751"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：  
@@ -398,4 +398,4 @@ GPU 线程窗口中的活动线程
 [调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)   
 [如何： 使用 GPU 线程窗口](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [如何： 使用并行监视窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[使用并发可视化工具分析 c + + AMP 代码](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[使用并发可视化工具分析 c + + AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

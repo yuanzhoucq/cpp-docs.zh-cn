@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688540"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|重写以执行特定于应用程序空闲时处理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用以从文件打开文档。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|分析每个参数和命令行中的标志。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|处理命令行参数和标志。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|截获由应用程序的消息和命令处理程序引发的所有未处理的异常。|
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
+重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

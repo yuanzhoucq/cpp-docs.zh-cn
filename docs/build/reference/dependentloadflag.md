@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f7667d7da8d8e9cd7ef38cb01d0f03b0da82e3
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0b6d5099e90e4a4bf83874fe8e761280bc277830
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573221"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688112"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG （设置默认依赖加载标志）
 
@@ -39,17 +39,17 @@ ms.locfileid: "42573221"
 
 |||
 |-|-|
-*loadflags*|一个可选的"C"样式 16 位整数值在十进制、 八进制带前导零，或带有前导十六进制`0x`，指定要应用于所有的依赖加载标志[LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)调用。 默认值为 0。
+*loadflags*|一个可选的"C"样式 16 位整数值在十进制、 八进制带前导零，或带有前导十六进制`0x`，指定要应用于所有的依赖加载标志[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)调用。 默认值为 0。
 
 ## <a name="remarks"></a>备注
 
 此选项在 Visual Studio 2017 中，新，仅适用于 Windows 10 RS1 和更高版本上运行的应用。 通过运行应用其他操作系统，则忽略此选项。
 
-上支持的操作系统，此选项已更改为调用的效果`LoadLibrary("dependent.dll")`为等于`LoadLibraryEx("dependent.dll", 0, loadflags)`。 调用[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)不会受到影响。 此选项不适用于您的应用程序所加载的 Dll 以递归方式。
+上支持的操作系统，此选项已更改为调用的效果`LoadLibrary("dependent.dll")`为等于`LoadLibraryEx("dependent.dll", 0, loadflags)`。 调用[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)不会受到影响。 此选项不适用于您的应用程序所加载的 Dll 以递归方式。
 
 可以使用此标志，以防止 DLL 植入攻击。 例如，如果一个应用程序使用`LoadLibrary`若要加载的依赖 DLL，攻击者无法计划具有相同名称的 DLL 中使用的搜索路径`LoadLibrary`，如当前目录中，这可能前检查系统目录是否安全 DLL 搜索模式已禁用。 安全 DLL 搜索模式更高版本中的搜索顺序，将用户的当前目录，并在 Windows XP SP2 和更高版本上的默认情况下启用。 有关详细信息，请参阅[动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)。
 
-如果指定了链接选项`/DEPENDENTLOADFLAG:0xA00`(组合的标志的值`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)，则即使在用户计算机上禁用安全 DLL 搜索模式，则 DLL 搜索路径是限制为受保护到攻击者更难的目录，更改。 了解可用的标志和其符号和数字值，请参阅*dwFlags*中的参数说明[LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)。
+如果指定了链接选项`/DEPENDENTLOADFLAG:0xA00`(组合的标志的值`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)，则即使在用户计算机上禁用安全 DLL 搜索模式，则 DLL 搜索路径是限制为受保护到攻击者更难的目录，更改。 了解可用的标志和其符号和数字值，请参阅*dwFlags*中的参数说明[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)。
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置 DEPENDENTLOADFLAG 链接器选项
 
@@ -69,6 +69,5 @@ ms.locfileid: "42573221"
 - [链接器选项](linker-options.md)
 - [如何隐式链接到 DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [确定要使用的链接方法](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)
+- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)

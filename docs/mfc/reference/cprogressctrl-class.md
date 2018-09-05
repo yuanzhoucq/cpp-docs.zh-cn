@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196185"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690147"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
+ 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
   
 - PBS_VERTICAL 显示垂直进度的信息，请从上到下。 如果没有此标志，进度栏控件可显示水平、 左到右。  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *rect*  
  对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  

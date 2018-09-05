@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684952"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  
@@ -653,7 +653,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定列表控件的样式。 应用于控件的列表控件样式的任意组合。 这些样式的完整列表，请参阅[列表视图的窗口样式](/windows/desktop/Controls/list-view-window-styles)Windows SDK 中。  
