@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eaf582d364ddddb41c066c901af7ccd806c5484d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956678"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767811"
 ---
 # <a name="class-information-classes"></a>类信息类
-下面的类提供了支持检索类信息：  
-  
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md)提供类型信息的访问权限。 检索对象的默认事件集的传出 IID。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)
+
+下面的类提供了支持检索类信息：
+
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md)提供类型信息的访问权限。 检索对象的默认事件集的传出 IID。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)
 

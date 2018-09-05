@@ -1,5 +1,5 @@
 ---
-title: 创建 ATL 注册器脚本 |Microsoft 文档
+title: 创建 ATL 注册器脚本 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e140e66ee24d8333d25c0c2942924c7a9db4965b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abffe3c8d0a107c48c3a14a9bf584122229ad3b7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354428"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767255"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
-注册器脚本提供对系统注册表的数据驱动的而不是驱动 API 访问。 数据驱动的访问是通常更高效，因为它采用一个脚本来向注册表添加项只能将一个或两个行。  
-  
- [ATL 控件向导](../atl/reference/atl-control-wizard.md)自动生成用于您的 COM 服务器的注册器脚本。 你可以在与你的对象关联的.rgs 文件中找到此脚本。  
-  
- ATL 注册机构的脚本引擎处理在运行时的注册器脚本。 ATL 在服务器安装过程会自动调用脚本引擎。  
-  
- 本文介绍如何注册器脚本相关的以下主题：  
-  
--   [了解巴科斯范式 (BNF) 语法](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
-  
--   [了解分析树](../atl/understanding-parse-trees.md)  
-  
--   [注册表脚本示例](../atl/registry-scripting-examples.md)  
-  
--   [使用可替换参数（注册器预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
-  
--   [调用脚本](../atl/invoking-scripts.md)  
-  
-## <a name="see-also"></a>请参阅  
- [注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
+
+注册器脚本提供数据驱动的而不是 API 驱动，访问系统注册表。 数据驱动的访问是通常效率更高，因为它需要向注册表添加项的脚本中只能将一个或两个行。
+
+[ATL 控件向导](../atl/reference/atl-control-wizard.md)自动生成您的 COM 服务器的注册器脚本。 可以在与您的对象关联的.rgs 文件中找到此脚本。
+
+ATL 注册器脚本引擎在运行时处理注册器脚本。 ATL server 安装过程会自动调用脚本引擎。
+
+本文介绍如何注册器脚本与相关的以下主题：
+
+- [了解巴科斯范式 (BNF) 语法](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+
+- [了解分析树](../atl/understanding-parse-trees.md)
+
+- [注册表脚本示例](../atl/registry-scripting-examples.md)
+
+- [使用可替换参数（注册器预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)
+
+- [调用脚本](../atl/invoking-scripts.md)
+
+## <a name="see-also"></a>请参阅
+
+[注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
 

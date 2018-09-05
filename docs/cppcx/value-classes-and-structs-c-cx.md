@@ -13,11 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589051"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764197"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 一个*值结构*或*值类*是 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。  

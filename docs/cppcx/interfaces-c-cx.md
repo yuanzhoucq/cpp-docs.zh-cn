@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592547"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764437"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 虽然一个 ref 类最多从一个具体基类继承，它可以实现任意数量的接口类。 一个接口类（或接口结构）自身可继承（或需要）多个接口类、可重载其成员函数，也可具有类型参数。  

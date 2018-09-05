@@ -19,43 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880003"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764324"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 结构
-此结构包含在 atl。 窗口化代码中的类实例数据  
-  
-## <a name="syntax"></a>语法  
-  
+
+此结构包含在 atl。 窗口化代码中的类实例数据
+
+## <a name="syntax"></a>语法
+
 ```
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
     _AtlCreateWndData* m_pNext;
 };
-```  
-  
-## <a name="members"></a>成员  
- `m_pThis`  
- **这**用于获得在窗口过程中对类实例的指针。  
-  
- `m_dwThreadID`  
- 当前类实例的线程 ID。  
-  
- `m_pNext`  
- 指向下一个指针`_AtlCreateWndData`对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlbase.h  
-  
-## <a name="see-also"></a>请参阅  
- [类和结构](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>成员
 
+`m_pThis`  
+**这**用于获得在窗口过程中对类实例的指针。
 
+`m_dwThreadID`  
+当前类实例的线程 ID。
 
+`m_pNext`  
+指向下一个指针`_AtlCreateWndData`对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlbase.h
+
+## <a name="see-also"></a>请参阅
+
+[类和结构](../../atl/reference/atl-classes.md)
 
