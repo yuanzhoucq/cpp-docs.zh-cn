@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff661394bd3b1ea9d01e8c1e1c29f747135f7aa8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194370"
 ---
 # <a name="web-references-property-page"></a>“Web 引用”属性页
-“Web 引用”属性页指定 XML Web 服务代理类生成的方式。 如果向项目添加 Web 引用，将生成 XML Web 服务代理类。 请参阅[添加 Web 引用](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)，获取详细信息。  
+“Web 引用”属性页指定 XML Web 服务代理类生成的方式。 如果向项目添加 Web 引用，将生成 XML Web 服务代理类。 请参阅[添加 Web 引用](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)，获取详细信息。  
   
  “Web 引用”属性页包含下列属性：  
   

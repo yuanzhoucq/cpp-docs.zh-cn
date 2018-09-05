@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388901"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196971"
 ---
 # <a name="one-dimensional-arrays"></a>一维数组
 后跟用方括号 ([ ]) 括起的表达式的后缀表达式是数组对象元素的下标表示形式。 下标表达式表示在表示为以下形式时位于超出 postfix-expression 的 expression 位置的地址的值  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  通常，postfix-expression 表示的值是一个指针值（如数组标识符），而 expression 是一个整数值。 但是，从语法上来说，只需要一个表达式是指针类型，另一个表达式是整型。 因此整数值可以位于 postfix-expression 位置，指针值可以位于 expression 的方括号中或“下标”位置。 例如，以下代码是合法的：  

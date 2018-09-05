@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200315"
 ---
 # <a name="add-class-dialog-box"></a>“添加类”对话框
 “添加类”  对话框包含的模板允许你：  
@@ -32,7 +32,7 @@ ms.locfileid: "33339769"
   
 -   通过向项目中添加相应的文件和源代码，自动创建新类。  
   
- 可以从“项目”菜单、“解决方案资源管理器”或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)访问“添加类”对话框。  
+ 可以从“项目”菜单、“解决方案资源管理器”或[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)访问“添加类”对话框。  
   
 > [!NOTE]
 >  如果尝试将不适合的类添加到当前项目，则会收到错误信息。 单击“确定”  返回到“添加类”  对话框。  

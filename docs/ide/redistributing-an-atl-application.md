@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e0309c420754c0da8f09bb38e088e473362de0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676744"
 ---
 # <a name="redistributing-an-atl-application"></a>重新分发 ATL 应用程序
 从 Visual Studio 2012 开始，活动模板库 (ATL) 是仅包含标头的库。 ATL 项目没有指向 ATL 选项的动态链接。 不需要任何可再发行 ATL 库。  
@@ -50,8 +50,6 @@ filename /regserver
 ```  
   
  其中，`filename` 是可执行文件的名称。  
-  
- 对于 OLE DB 模板应用程序，确保目标计算机具有最新版本的 Microsoft 数据访问组件 (MDAC) 文件。 有关详细信息，请参阅[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)

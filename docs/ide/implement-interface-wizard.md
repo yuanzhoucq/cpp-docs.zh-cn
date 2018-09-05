@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340536"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195190"
 ---
 # <a name="implement-interface-wizard"></a>实现接口向导
 本向导实现 COM 对象的接口。 Visual Studio 和 Windows 提供的 COM 库中包含许多接口的实现。 创建某个对象的实例时，接口实现即与该对象相关联，并提供该对象提供的服务。  
   
- 有关接口和实现的讨论，请参阅 Windows SDK 中的[接口和接口实现](http://msdn.microsoft.com/library/windows/desktop/ms694356)。  
+ 有关接口和实现的讨论，请参阅 Windows SDK 中的[接口和接口实现](/windows/desktop/com/interfaces-and-interface-implementations)。  
   
  **实现接口的位置**  
  指定从中创建接口的类型库的位置。  

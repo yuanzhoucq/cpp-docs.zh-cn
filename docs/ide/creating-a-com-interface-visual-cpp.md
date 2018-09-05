@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194959"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>创建 COM 接口 (Visual C++)
 Visual C++ 提供了向导和模板，它们用于创建使用 COM 为 COM 对象和自动化类定义接口和调度接口的项目。  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  有关详细信息，请参阅[实现接口](../ide/implementing-an-interface-visual-cpp.md)和[向 ATL 项目添加对象和控件](../atl/reference/adding-objects-and-controls-to-an-atl-project.md)。  
   
- Visual C++ 提供了多种方式来查看和[编辑为项目定义的 COM 接口](../ide/editing-a-com-interface.md)。 [类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)显示 C++ 项目中 .idl 文件内定义的任何接口或调度接口的图标。  
+ Visual C++ 提供了多种方式来查看和[编辑为项目定义的 COM 接口](../ide/editing-a-com-interface.md)。 [类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)显示 C++ 项目中 .idl 文件内定义的任何接口或调度接口的图标。  
   
  对于基于 ATL 的 COM 对象类，“类视图”读取 ATL 类中的 COM 映射，以显示 ATL 类与其实现的任何接口之间的关系。  
   
@@ -79,6 +79,6 @@ interface IMyInterface {
   
 -   双击项目直接跳转到该项的接口代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用应用程序向导创建桌面项目](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)

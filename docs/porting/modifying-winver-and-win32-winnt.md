@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912636"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194174"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>修改 WINVER 和 _WIN32_WINNT
 
@@ -59,11 +59,11 @@ Visual C++ 不再支持面向 Windows 95、Windows 98、Windows ME、Windows NT 
 如果你查看的 SDKDDKVer.h 的一个副本中没有列出以上所有 Windows 版本，则很可能是由于你正在使用 Windows SDK 的较旧版本。 默认情况下，Visual Studio 2017 中的 Win32 项目使用 Windows 10 SDK。   
   
 > [!NOTE]
->  如果将内部 MFC 头文件包含到应用程序中，则无法保证这些值有效。  
+> 如果将内部 MFC 头文件包含到应用程序中，则无法保证这些值有效。  
   
-你还可以使用 **/D** 编译器选项定义此宏。 有关详细信息，请参阅 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
+你还可以使用 `/D` 编译器选项定义此宏。 有关详细信息，请参阅 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
   
-若要深入了解这些宏的含义，请参阅 [使用 Windows 头文件](https://msdn.microsoft.com/library/windows/desktop/aa383745)。  
+若要深入了解这些宏的含义，请参阅 [使用 Windows 头文件](/windows/desktop/WinProg/using-the-windows-headers)。  
   
 ## <a name="see-also"></a>请参阅  
 

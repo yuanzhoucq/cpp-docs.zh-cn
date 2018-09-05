@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310f462414ce5e579ea16b40c44ce543bd74b107
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204055"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -58,7 +58,7 @@ ms.locfileid: "39337513"
 
 ## <a name="troubleshooting-deployment-issues"></a>部署问题疑难解答
 
-Visual C++ 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅 [Dynamic-Link Library Search Order (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)（动态链接库搜索顺序 (Windows)）。
+Visual C++ 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅 [Dynamic-Link Library Search Order (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)（动态链接库搜索顺序 (Windows)）。
 
 ## <a name="see-also"></a>请参阅
 

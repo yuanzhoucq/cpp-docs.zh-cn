@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46018d2ec8747b1fac459e1ac1d28b59eea2385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392297"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203467"
 ---
 # <a name="debug-routines"></a>调试例程
 
@@ -73,7 +73,7 @@ C 运行时库的调试版本提供了很多诊断服务，便于调试程序并
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配指定数量的内存块|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|通过展开或收缩块调整堆上指定内存块的大小|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|释放堆上的内存块|
-|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|创建指定相对路径名称的绝对或完整路径名称，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|
+|[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|创建指定相对路径名称的绝对或完整路径名称，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
 |[_getcwd_dbg、_wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|获取当前工作目录，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配内存块|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|计算堆上的内存块大小|

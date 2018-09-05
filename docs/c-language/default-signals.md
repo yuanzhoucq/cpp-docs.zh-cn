@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4295c0fbd0542ad6c7c819b6ef7024b2384304d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204445"
 ---
 # <a name="default-signals"></a>默认信号
-**ANSI 4.7.1.1** 调用信号处理程序前未执行 signal (sig, SIG_DFL) 的等效项时，对所执行信号的阻止  
+**ANSI 4.7.1.1** 调用信号处理程序前未执行 signal (sig, SIG_DFL) 的等效项时，对执行的信号的阻止  
   
  程序开始运行时，信号将设置为其默认状态。  
   

@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332320"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213528"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 应用程序的 ClickOnce 部署
-Visual Studio 提供了两种不同的技术来部署 Windows 应用程序：ClickOnce 部署或 [Windows Installer](http://msdn.microsoft.com/library/cc185688) 部署。  
+Visual Studio 提供了两种不同的技术来部署 Windows 应用程序：ClickOnce 部署或 [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 部署。  
   
 ## <a name="clickonce-deployment-in-c"></a>C++ 中的 ClickOnce 部署  
  Visual C++ 部署环境不直接支持使用 ClickOnce 部署 Visual C++ 项目，但提供了使用它的工具。  
@@ -47,13 +47,13 @@ Visual Studio 提供了两种不同的技术来部署 Windows 应用程序：Cli
   
  有关此技术的更详细说明，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关 ClickOnce 部署的详细示例，请参阅[演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [Makecert.exe（证书创建工具）](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Windows Installer 部署](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [创建引导程序包](/visualstudio/deployment/creating-bootstrapper-packages)   
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

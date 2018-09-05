@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212790"
 ---
 # <a name="adding-a-property-visual-c"></a>添加属性 (Visual C++)
 可以使用[添加属性向导](../ide/names-add-property-wizard.md)，向项目中的接口添加方法。  
   
 ### <a name="to-add-a-property-to-your-object"></a>向对象添加属性  
   
-1.  在[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中单击要向其添加属性的接口的名称。  
+1.  在[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中单击要向其添加属性的接口的名称。  
   
     > [!NOTE]
     >  也可以将属性添加到调度接口，它嵌套在库节点中（除非该项目已特性化）。  
@@ -49,5 +49,5 @@ ms.locfileid: "33327575"
 ## <a name="see-also"></a>请参阅  
  [创建 COM 接口](../ide/creating-a-com-interface-visual-cpp.md)   
  [编辑 COM 接口](../ide/editing-a-com-interface.md)   
- [组件对象模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [接口指针和接口](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [组件对象模型](/windows/desktop/com/the-component-object-model)   
+ [接口指针和接口](/windows/desktop/com/interface-pointers-and-interfaces)

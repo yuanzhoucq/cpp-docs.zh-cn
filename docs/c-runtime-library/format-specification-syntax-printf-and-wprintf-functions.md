@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216667"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
@@ -85,7 +85,7 @@ ms.locfileid: "32392531"
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|
 |**秒**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**S**|String|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
-|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) 或 [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
+|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
 
 从 Visual Studio 2015 开始，如果对应浮点转换说明符（**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**）的参数为无穷大、不定或 NaN，格式化的输出则符合 C99 标准。 下表列出了格式化的输出：
 

@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d816d932ce518e006e5537075fe4ac7782362ad4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206979"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>使用合并模块重新发布组件
-Visual Studio 包括获许与应用程序一起重新发布的每个 Visual C++ 组件的[合并模块](http://msdn.microsoft.com/library/aa367434)。 合并模块在 Windows Installer 安装文件中编译后，便可以将特定的 DLL 部署到具有特定平台的计算机。 在你的安装文件中，请指定合并模块是应用程序的先决条件。 Visual Studio 安装后，合并模块将安装在\Program Files\Common Files\Merge Modules\\。 （只能重新发布 Visual C++ DLL 的非调试版本。）有关更多信息以及获许重新发布的合并模块列表的链接，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
+Visual Studio 包括获许与应用程序一起重新发布的每个 Visual C++ 组件的[合并模块](/windows/desktop/Msi/about-merge-modules)。 合并模块在 Windows Installer 安装文件中编译后，便可以将特定的 DLL 部署到具有特定平台的计算机。 在你的安装文件中，请指定合并模块是应用程序的先决条件。 Visual Studio 安装后，合并模块将安装在\Program Files\Common Files\Merge Modules\\。 （只能重新发布 Visual C++ DLL 的非调试版本。）有关更多信息以及获许重新发布的合并模块列表的链接，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
   
  你可以使用合并模块将可再发行的 Visual C++ DLL 安装到 %SYSTEMROOT%\system32\ 文件夹。 （Visual Studio 本身使用此技术。）但是，安装的用户必须具有管理员权限才能成功安装到该文件夹。  
   

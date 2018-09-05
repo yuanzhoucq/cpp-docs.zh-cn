@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337036"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213131"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>用代码向导添加功能 (C++)
 创建项目后，你会需要更改或添加该项目的功能。 这类任务包括创建新类、添加新成员函数和变量以及添加自动化方法和属性。 可使用代码向导执行所有这些操作。  
@@ -56,7 +56,7 @@ ms.locfileid: "33337036"
   
 -   在“解决方案资源管理器”中，右键单击任一文件夹并单击快捷菜单中的“添加”，可将新文件或现有文件、更多文件夹、项、类、资源和 Web 引用添加到项目。  
   
--   从[类视图窗口](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击适当的节点并单击快捷菜单中的“添加”，可将函数、变量、类、属性、方法、事件、接口、连接点或其他代码添加到项目。  
+-   从[类视图窗口](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击适当的节点并单击快捷菜单中的“添加”，可将函数、变量、类、属性、方法、事件、接口、连接点或其他代码添加到项目。  
   
     > [!NOTE]
     >  Visual Studio 不提供将接口添加到项目的向导。 可将接口添加到 ATL 项目或通过使用 [ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)添加一个简单项目，从而[向 MFC 项目添加 ATL 支持](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。 或者打开项目的 .idl 文件并通过键入以下内容创建接口：  

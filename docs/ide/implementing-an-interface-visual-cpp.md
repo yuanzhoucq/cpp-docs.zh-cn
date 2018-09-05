@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211207"
 ---
 # <a name="implementing-an-interface-visual-c"></a>实现接口 (Visual C++)
 要实现接口，必须将项目创建为 ATL COM 应用程序或包含 ATL 支持的 MFC 应用程序。 可使用 [ATL 项目向导](../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[将 ATL 对象添加到 MFC 应用程序](../mfc/reference/adding-atl-support-to-your-mfc-project.md)以实现 MFC 应用程序的 ATL 支持。  
@@ -46,7 +46,7 @@ ms.locfileid: "33332762"
 4.  在类视图中，展开对象的基项和接口节点以查看已实现的接口，然后展开接口节点以查看其可用属性、方法和事件。  
   
     > [!NOTE]
-    >  还可使用[对象浏览器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)检查接口的成员。  
+    >  还可使用[对象浏览器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)检查接口的成员。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 COM 接口](../ide/creating-a-com-interface-visual-cpp.md)   

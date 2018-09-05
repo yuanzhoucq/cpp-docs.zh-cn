@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332418"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222238"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>创建和管理基于 MSBuild 的 Visual C++ 项目
 MSBuild 是 Visual C++ 的本机生成系统，通常非常适合用于 UWP 应用以及使用 MFC 或 ATL 库的桌面应用程序。 MSBuild 与 Visual Studio IDE 和项目系统紧密集成，但也可从命令行使用它。 自 Visual Studio 2017 起，Visual C++ [通过“打开文件夹”功能支持 CMake 和其他非 MSBuild 系统](non-msbuild-projects.md)。
@@ -68,8 +68,8 @@ MSBuild 是 Visual C++ 的本机生成系统，通常非常适合用于 UWP 应�
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)  
  提供一些链接，它们指向描述如何从命令行或 Visual Studio 的集成开发环境构建程序的主题。  
   
- [Visual C++ 引用](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Visual C++ 引用](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  提供一些链接，它们指向描述 C 和 C++ 语言参考、Visual C++ 随附的库、Visual C++ 扩展性对象模型和 Microsoft 宏汇编 (MASM) 的主题。  
   
 ## <a name="see-also"></a>请参阅  
- [Visual Studio SDK](http://msdn.microsoft.com/vstudio/extend)
+ [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

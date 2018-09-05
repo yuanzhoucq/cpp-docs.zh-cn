@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325726"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207293"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>添加成员变量 (Visual C++)
-可以使用类视图向类添加成员变量。 成员变量可以是[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导专门采用相关信息并使用其将元素插入源文件中的适当位置。 可以从[资源视图](../windows/resource-view-window.md)中的[对话框编辑器](../windows/dialog-editor.md)或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)添加成员变量。  
+可以使用类视图向类添加成员变量。 成员变量可以是[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导专门采用相关信息并使用其将元素插入源文件中的适当位置。 可以从[资源视图](../windows/resource-view-window.md)中的[对话框编辑器](../windows/dialog-editor.md)或[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)添加成员变量。  
   
 > [!NOTE]
 >  设计和实现对话框时，可能会发现使用对话框编辑器添加对话框控件，然后实现控件的成员变量更为有效。  
@@ -49,7 +49,7 @@ ms.locfileid: "33325726"
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>使用添加成员变量向导从类视图中添加成员变量  
   
-1.  在[“类视图”](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，展开项目节点，显示项目中的类。  
+1.  在[“类视图”](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，展开项目节点，显示项目中的类。  
   
 2.  右键单击要向其添加变量的类。  
   

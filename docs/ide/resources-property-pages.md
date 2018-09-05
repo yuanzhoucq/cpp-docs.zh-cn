@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bc63eede971bed0b726c633f0ef7d52793f39ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322869"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219463"
 ---
 # <a name="resources-property-pages"></a>“资源”属性页
-有关使用资源编译器的详细信息，请参阅[使用 RC（RC 命令行）](http://msdn.microsoft.com/library/windows/desktop/aa381055)。  
+有关使用资源编译器的详细信息，请参阅[使用 RC（RC 命令行）](https://msdn.microsoft.com/library/windows/desktop/aa381055)。  
   
  有关如何访问“资源”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
