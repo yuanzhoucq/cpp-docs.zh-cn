@@ -1,5 +1,5 @@
 ---
-title: ASP，ATL Active Server Page 组件向导 |Microsoft 文档
+title: ASP，ATL Active Server Page 组件向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe27a64a2086f08c5a29e2961d069771fdbc4e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356134"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761938"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
-使用 ATL Active Server Page 组件向导的此页指定用于处理信息和状态与 ASP 组件相关的可选设置。  
-  
- **可选方法**  
- 添加可选的 ASP 方法， **OnStartPage**和**OnEndPage**，对你的对象。 必须选择此选项设置任何 Active Server Pages 的内部对象。 默认情况下，选中该选项。  
-  
--   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)称为第一次脚本尝试访问的对象。 **OnEndPage**对象完成时，将调用处理脚本。  
-  
- **内部对象**  
- 必须选择**OnStartPage/OnEndPage**选项可设置任何 ASP 内部对象。  
-  
-|选项|描述|  
-|------------|-----------------|  
-|**请求**|提供对内部 Active Server Pages 访问**请求**对象。 请求对象用于通过 HTTP 请求。|  
-|**响应**|提供对内部 Active Server Pages 访问**响应**对象。 在对请求的响应，则响应对象将信息发送到浏览器将向用户显示。|  
-|**会话**|提供对内部 Active Server Pages 访问**会话**对象。 **会话**对象维护有关当前用户会话，包括存储和检索状态信息的信息。|  
-|**应用程序**|提供对内部 Active Server Pages 访问**应用程序**对象。 **应用程序**对象管理在多个 ASP 对象之间共享的状态。|  
-|**服务器**|提供对内部 Active Server Pages 访问**服务器**对象。 **服务器**对象允许你创建其他 ASP 对象。|  
-  
-## <a name="see-also"></a>请参阅  
- [ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)
+
+ATL Active Server Page 组件向导此页用于指定用于处理信息和状态与 ASP 组件相关的可选设置。
+
+**可选方法**  
+添加了可选的 ASP 方法， **onstartpage 是否**并**OnEndPage**，对你的对象。 若要设置任何 Active Server Pages 内部对象，必须选择此选项。 默认情况下，选择它。
+
+- **Onstartpage 是否/OnEndPage** [onstartpage 是否](https://msdn.microsoft.com/library/ms691624.aspx)脚本会尝试访问该对象在首次调用。 **OnEndPage**对象完成时调用处理脚本。
+
+**内部对象**  
+必须选择**onstartpage 是否/OnEndPage**选项可以设置任何 ASP 内部对象。
+
+|选项|描述|
+|------------|-----------------|
+|**请求**|提供对内部 Active Server Pages 的访问**请求**对象。 请求对象用于将 HTTP 请求传递。|
+|**响应**|提供对内部 Active Server Pages 的访问**响应**对象。 在对请求的响应，则响应对象将信息发送到浏览器，以向用户显示。|
+|**会话**|提供对内部 Active Server Pages 的访问**会话**对象。 **会话**对象维护有关当前用户会话，包括存储和检索状态信息的信息。|
+|**应用程序**|提供对内部 Active Server Pages 的访问**应用程序**对象。 **应用程序**对象管理跨多个 ASP 对象共享的状态。|
+|**服务器**|提供对内部 Active Server Pages 的访问**Server**对象。 **Server**对象使用户可以创建其他 ASP 对象。|
+
+## <a name="see-also"></a>请参阅
+
+[ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)   
+[ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

@@ -26,156 +26,181 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213318"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763810"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 类
-此类提供方法，可帮助在就地控件与其容器之间的通信。  
-  
+
+此类提供方法，可帮助在就地控件与其容器之间的通信。
+
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
-  
-## <a name="syntax"></a>语法  
-  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+
+## <a name="syntax"></a>语法
+
 ```
 template<class T>
 class IOleInPlaceActiveObjectImpl
-```  
-  
-#### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IOleInPlaceActiveObjectImpl`。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|使上下文相关帮助。 ATL 实现返回 E_NOTIMPL。|  
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|启用无模式对话框。 ATL 实现返回 S_OK。|  
-|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|获取窗口句柄。|  
-|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|激活或停用容器文件窗口时通知控件。 ATL 实现返回 S_OK。|  
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|激活或停用容器的顶级框架窗口时通知控件。 ATL 实现返回|  
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|通知控件需要调整其边框的大小。 ATL 实现返回 S_OK。|  
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|处理来自容器的菜单快捷键消息。 ATL 实现返回 E_NOTIMPL。|  
-  
-  
-## <a name="remarks"></a>备注  
- [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)界面可帮助在就地控件与其容器之间的通信; 例如，通信活动状态的控件和容器，并通知控件其需要重新调整大小本身。 类`IOleInPlaceActiveObjectImpl`提供的默认实现`IOleInPlaceActiveObject`，并支持`IUnknown`信息发送给转储调试中的设备生成。  
-  
- **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `IOleInPlaceActiveObject`  
-  
- `IOleInPlaceActiveObjectImpl`  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlctl.h  
-  
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
- 使上下文相关帮助。  
-  
+```
+
+#### <a name="parameters"></a>参数
+
+*T*  
+您的类，派生自`IOleInPlaceActiveObjectImpl`。
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|使上下文相关帮助。 ATL 实现返回 E_NOTIMPL。|
+|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|启用无模式对话框。 ATL 实现返回 S_OK。|
+|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|获取窗口句柄。|
+|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|激活或停用容器文件窗口时通知控件。 ATL 实现返回 S_OK。|
+|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|激活或停用容器的顶级框架窗口时通知控件。 ATL 实现返回|
+|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|通知控件需要调整其边框的大小。 ATL 实现返回 S_OK。|
+|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|处理来自容器的菜单快捷键消息。 ATL 实现返回 E_NOTIMPL。|
+
+## <a name="remarks"></a>备注
+
+[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)界面可帮助在就地控件与其容器之间的通信; 例如，通信活动状态的控件和容器，并通知控件其需要重新调整大小本身。 类`IOleInPlaceActiveObjectImpl`提供的默认实现`IOleInPlaceActiveObject`，并支持`IUnknown`信息发送给转储调试中的设备生成。
+
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`IOleInPlaceActiveObject`
+
+`IOleInPlaceActiveObjectImpl`
+
+## <a name="requirements"></a>要求
+
+**标头：** atlctl.h
+
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+
+使上下文相关帮助。
+
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 E_NOTIMPL。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK 中。  
-  
-##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
- 启用无模式对话框。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回 E_NOTIMPL。
+
+### <a name="remarks"></a>备注
+
+请参阅[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK 中。
+
+##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless
+
+启用无模式对话框。
+
 ```
 HRESULT EnableModeless(BOOL fEnable);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) Windows SDK 中。  
-  
-##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
- 容器调用此函数可获取该控件的窗口句柄。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) Windows SDK 中。
+
+##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow
+
+容器调用此函数可获取该控件的窗口句柄。
+
 ```
 HRESULT GetWindow(HWND* phwnd);
-```  
-  
-### <a name="remarks"></a>备注  
- 某些容器不会使用已无窗口，即使它是当前窗口的控件。 在 ATL 的实现中，如果`CComControl::m_bWasOnceWindowless`数据成员为 TRUE 时，该函数将返回 E_FAIL。 否则为如果\* *phwnd*不为 NULL，`GetWindow`分配*phwnd*到控件类数据成员`m_hWnd`，并返回 S_OK。  
-  
- 请参阅[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK 中。  
-  
-##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
- 激活或停用容器文件窗口时通知控件。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+某些容器不会使用已无窗口，即使它是当前窗口的控件。 在 ATL 的实现中，如果`CComControl::m_bWasOnceWindowless`数据成员为 TRUE 时，该函数将返回 E_FAIL。 否则为如果\* *phwnd*不为 NULL，`GetWindow`分配*phwnd*到控件类数据成员`m_hWnd`，并返回 S_OK。
+
+请参阅[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK 中。
+
+##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+
+激活或停用容器文件窗口时通知控件。
+
 ```
 HRESULT OnDocWindowActivate(BOOL fActivate);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) Windows SDK 中。  
-  
-##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
- 激活或停用容器的顶级框架窗口时通知控件。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) Windows SDK 中。
+
+##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+
+激活或停用容器的顶级框架窗口时通知控件。
+
 ```
 HRESULT OnFrameWindowActivate(BOOL fActivate);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) Windows SDK 中。  
-  
-##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
- 通知控件需要调整其边框的大小。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[ioleinplaceactiveobject:: Onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) Windows SDK 中。
+
+##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder
+
+通知控件需要调整其边框的大小。
+
 ```
 HRESULT ResizeBorder(
     LPRECT prcBorder,
     IOleInPlaceUIWindow* pUIWindow,
     BOOL fFrameWindow);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) Windows SDK 中。  
-  
-##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
- 处理来自容器的菜单快捷键消息。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) Windows SDK 中。
+
+##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator
+
+处理来自容器的菜单快捷键消息。
+
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
-```  
-  
-### <a name="return-value"></a>返回值  
- 此方法支持下列返回值：  
-  
- 如果消息已成功转换，则为 S_OK。  
-  
- 如果不转换该消息，S_FALSE。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) Windows SDK 中。  
-  
-## <a name="see-also"></a>请参阅  
- [CComControl 类](../../atl/reference/ccomcontrol-class.md)  
- [ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)  
- [类概述](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>返回值
+
+此方法支持下列返回值：
+
+如果消息已成功转换，则为 S_OK。
+
+如果不转换该消息，S_FALSE。
+
+### <a name="remarks"></a>备注
+
+请参阅[:: Translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) Windows SDK 中。
+
+## <a name="see-also"></a>请参阅
+
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)  
+[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)  
+[类概述](../../atl/atl-class-overview.md)

@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ff07c1b26649ffd591bcab9917cf45fa4c67f30a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131609"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756511"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>已用时间： 通用类
-下面的过程演示如何计算两个之间的差异`CTime`对象并获取`CTimeSpan`结果。 使用`CTime`和`CTimeSpan`对象来计算经过的时间，按如下所示：  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
-  
+
+下面的过程演示如何计算两个之间的差异`CTime`对象并获取`CTimeSpan`结果。 使用`CTime`和`CTimeSpan`对象来计算经过的时间，按如下所示：
+
+   [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]
+
 一旦具有计算`elapsedTime`，可以使用的成员函数的`CTimeSpan`提取已用时间值的组件。  
 

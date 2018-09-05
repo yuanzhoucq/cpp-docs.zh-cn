@@ -1,5 +1,5 @@
 ---
-title: 调试提示 (ATL) |Microsoft 文档
+title: 调试提示 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d35a05fc54f3358c567e293573a9a5352b359a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfbc23250acf751072e14b75f18944a5083e18cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355189"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756806"
 ---
 # <a name="debugging-tips"></a>调试提示
-以下主题概述用于调试你的服务的一些有用步骤：  
-  
--   [使用任务管理器](../atl/using-task-manager.md)  
-  
--   [显示断言](../atl/displaying-assertions.md)  
-  
--   [将程序作为本地服务器运行](../atl/running-the-program-as-a-local-server.md)  
-  
-## <a name="see-also"></a>请参阅  
- [服务](../atl/atl-services.md)
+
+以下主题概述了一些有用的步骤，以调试您的服务：
+
+- [使用任务管理器](../atl/using-task-manager.md)
+
+- [显示断言](../atl/displaying-assertions.md)
+
+- [将程序作为本地服务器运行](../atl/running-the-program-as-a-local-server.md)
+
+## <a name="see-also"></a>请参阅
+
+[服务](../atl/atl-services.md)
 

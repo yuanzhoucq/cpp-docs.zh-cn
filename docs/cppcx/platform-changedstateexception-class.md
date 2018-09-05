@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 029242a466b7fbac0d967596c114eb0ad45aa569
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603207"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760664"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException 类
 当对象的内部状态发生更改进而导致方法的结果失效时引发。  

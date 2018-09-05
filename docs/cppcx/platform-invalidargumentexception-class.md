@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593994"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761376"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException 类
 当提供给方法的参数之一无效时引发。  

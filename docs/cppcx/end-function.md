@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596645"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759094"
 ---
 # <a name="end-function"></a>end 函数
 返回指向集合末尾以外的迭代器，该集合由指定的接口参数访问。  

@@ -1,5 +1,5 @@
 ---
-title: 将连接点添加到对象 |Microsoft 文档
+title: 将连接点添加到对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,60 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71f9d136ccdeded02303894195c7b8126acafd9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762543"
 ---
 # <a name="adding-connection-points-to-an-object"></a>将连接点添加到对象
-[ATL 教程](../atl/active-template-library-atl-tutorial.md)演示如何创建与连接点支持的控件、 如何添加事件，以及如何实现连接点。 ATL 实现连接点与[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)类。  
-  
- 若要实现连接点，你有两个选择：  
-  
--   实现你自己传出的事件源，通过将连接点添加到控件或对象。  
-  
--   重复使用另一个类型库中定义的连接点接口。  
-  
- 在任一情况下，实现连接点向导使用类型库来完成其工作。  
-  
-### <a name="to-add-a-connection-point-to-a-control-or-object"></a>若要添加的控件或对象的连接点  
-  
-1.  在.idl 文件的库块中定义的调度接口。 如果你启用连接点支持使用 ATL 控件向导创建控件时，将已创建调度接口。 如果你未启用连接点支持你在创建控件时，必须手动将调度接口添加到.idl 文件中。 下面是调度接口的示例。 输出接口不是需要调度接口，但如 VBScript 和 JScript 的许多脚本语言要求执行此操作，因此本示例使用两个支持：  
-  
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
-  
-     使用 uuidgen.exe 或 guidgen.exe 实用工具以生成 GUID。  
-  
-2.  添加作为调度接口`[default,source]`中项目的.idl 文件中的对象的组件类的接口。 同样，如果你在创建控件时启用连接点的支持，ATL 控件向导将创建`[default,source`] 条目。 若要手动添加此项，请以粗体显示添加行：  
-  
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
-  
-     请参阅中的.idl 文件[Circ](../visual-cpp-samples.md)有关示例的 ATL 示例。  
-  
-3.  使用类视图将方法和属性添加到事件接口。 右键单击类视图中的类，指向**添加**快捷菜单，然后单击**添加连接点**。  
-  
-4.  在**源接口**实现连接点向导中，选择列表框**项目的接口**。 如果你选择用于你的控件和按的接口**确定**，你将：  
-  
-    -   生成事件代理类中实现的代码，将进行传出调用事件的标头文件。  
-  
-    -   将条目添加到连接点图。  
-  
-     此外会在你的计算机上所有的类型库的列表。 你只应使用这些其他类型库之一定义你的连接点，如果你想要实现完全相同传出的接口在另一个类型库中找到。  
-  
-### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>若要重用的连接点接口定义另一个类型库中  
-  
-1.  在类视图中，右键单击一个类以实现**BEGIN_COM_MAP**宏，指向**添加**快捷菜单，然后单击**添加连接点**。  
-  
-2.  在实现连接点向导中，选择在类型库中的类型库和接口，然后单击**添加**。  
-  
-3.  编辑.idl 文件为：  
-  
-    -   从正在使用其事件源的对象的.idl 文件复制调度接口。  
-  
-    -   使用**importlib**该类型库的说明。  
-  
-## <a name="see-also"></a>请参阅  
- [连接点](../atl/atl-connection-points.md)
+
+[ATL 教程](../atl/active-template-library-atl-tutorial.md)演示如何创建连接点支持控件、 如何添加事件，以及如何实现连接点。 ATL 实现连接点[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)类。
+
+若要实现连接点，您有两种选择：
+
+- 通过将连接点添加到控件或对象来实现您自己传出的事件源。
+
+- 重复使用另一个类型库中定义的连接点接口。
+
+在任一情况下，实现连接点向导使用类型库来完成其工作。
+
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>若要添加到控件或对象的连接点
+
+1. 定义.idl 文件的库块中的调度接口。 如果您启用了对连接点，使用 ATL 控件向导创建控件时，将已创建调度接口。 如果您不启用支持连接点的创建控件时，必须手动将调度接口添加到.idl 文件中。 下面是调度接口的示例。 传出接口不需要为调度接口，但许多脚本编写语言，如 VBScript 和 JScript 需要此操作，因此此示例使用两个调度接口：
+
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+
+     使用 uuidgen.exe 或 guidgen.exe 实用程序生成的 GUID。
+
+2. 添加作为调度接口`[default,source]`中项目的.idl 文件中的对象的组件类的接口。 同样，如果你在创建控件时启用对连接点的支持，ATL 控件向导将创建`[default,source`] 条目。 若要手动添加此项，添加以粗体显示的行：
+
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+
+     请参阅中的.idl 文件[Circ](../visual-cpp-samples.md) ATL 示例有关的示例。
+
+3. 使用类视图将方法和属性添加到事件接口。 右键单击类视图中的类，指向**外**快捷菜单，然后单击**添加连接点**。
+
+4. 在中**源接口**的实现连接点向导，选择列表框**项目的接口**。 如果您选择的接口控制并按**确定**，你将：
+
+   - 生成具有事件代理类实现的代码，将进行传出调用的事件的标头文件。
+
+   - 连接点映射到添加一个条目。
+
+     此外会在计算机上所有的类型库的列表。 仅应使用这些其他类型库之一来定义连接点，如果你想要实现在另一个类型库中找到的完全相同的输出接口。
+
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>若要重复使用连接点接口中定义另一个类型库
+
+1. 在类视图中，右键单击实现的类**BEGIN_COM_MAP**宏，依次指向**添加**快捷菜单，然后单击**添加连接点**。
+
+2. 在实现连接点向导中，选择类型库中的类型库和一个接口并单击**添加**。
+
+3. 编辑为.idl 文件：
+
+   - 将从其事件源正在使用的对象的.idl 文件复制调度接口。
+
+   - 使用**importlib**该类型库的说明。
+
+## <a name="see-also"></a>请参阅
+
+[连接点](../atl/atl-connection-points.md)
 
