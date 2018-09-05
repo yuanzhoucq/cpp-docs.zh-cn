@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238560"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900662"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 项目
 
@@ -125,7 +125,7 @@ Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”
 
 也可以从 CMake 菜单启动调试会话。
 
-要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 在子菜单中选择 CMake 目标时，会创建一个名为 launch.vs.json 的文件。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 要引用 CMakeSettings.json 文件中的任何键，只需在 launch.vs.json 中 在该键前加上“CMake.”。 下面的示例演示了一个简单的 launch.vs.json 文件，该文件从当前所选配置的 CMakeSettings.json 文件拉取“remoteCopySources”键的值：
+要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 在子菜单中选择 CMake 目标时，会创建一个名为 launch.vs.json 的文件。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 要引用 CMakeSettings.json 文件中的任何键，只需在 launch.vs.json 中 在该键前加上“cmake.”。 下面的示例演示了一个简单的 launch.vs.json 文件，该文件从当前所选配置的 CMakeSettings.json 文件拉取“remoteCopySources”键的值：
 
 ```json
 {
@@ -221,6 +221,8 @@ JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件：
 1. **variables**：包含将作为 -D_name_=_value_ 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。
 1. **cmakeCommandArgs**：指定任何要传递到 CMake.exe 的其他开关。
 1. **configurationType**：定义所选生成器的生成配置类型。 当前支持的值为“Debug”、“MinSizeRel”、“Release”和“RelWithDebInfo”。
+1. ctestCommandArgs：指定运行测试时传递给 CTest 的其他开关。
+1. buildCommandArgs：指定传递给基础生成系统的其他开关。 例如，使用 Ninja 生成器强制输出命令行使用 Ninja 时，传递 -v。
 
 ### <a name="environment-variables"></a>环境变量
 

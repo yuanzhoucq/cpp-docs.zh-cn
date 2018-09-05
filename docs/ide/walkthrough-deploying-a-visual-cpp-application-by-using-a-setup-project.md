@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332775"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605826"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>演练：使用安装项目部署 Visual C++ 应用程序
 介绍如何使用安装项目部署 Visual C++ 应用程序。  
@@ -27,7 +27,7 @@ ms.locfileid: "33332775"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   已安装 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 的计算机。  
+-   已安装 Visual Studio 2012 的计算机。  
   
 -   另一台没有 Visual C++ 库的计算机。  
   

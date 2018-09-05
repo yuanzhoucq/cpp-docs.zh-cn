@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841897"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578491"
 ---
 # <a name="floating-point-migration-issues"></a>浮点迁移问题  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33841897"
   
 许多浮点数学库函数具有不同 CPU 体系结构的不同实现。 例如，相比 64 位 x64 CRT，32 位 x86 CRT 可能具有不同的实现。 此外，某些函数可能有适用于给定 CPU 体系结构的多个实现。 在运行时动态地选择最有效的实现，具体取决于受 CPU 支持的指令集。 例如，在 32 位 x86 CRT 中，一些函数同时具有 x87 实现和 SSE2 实现。 在支持 SSE2 的 CPU 上运行时，使用速度更快的 SSE2 实现。 在不支持 SSE2 的 CPU 上运行时，使用速度较慢的 x87 实现。 迁移旧代码时可能会看到，因为 Visual Studio 2012 中默认的 x86 编译器体系结构选项已更改为 [/arch:SSE2](../build/reference/arch-x86.md)。 数学库函数的不同实现可能会使用不同的 CPU 指令和不同的算法来生成其结果，因此，这些函数可能会在各平台上产生不同的结果。 在大多数情况下，结果在正确舍入结果的 +/-1 ulp 范围内，但实际结果在各 CPU 中可能会有所不同。  
   
-将旧代码与新代码比较时，甚至在使用同一编译器标志时，Visual Studio 中不同的浮动点模式下提高代码生成的正确性也会影响浮点运算的结果。 例如，指定 [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md)（默认值）或 **/fp:strict** 时，Visual Studio 2010 生成的代码可能未通过表达式正确传播中间非数字 (NaN) 值。 因此，在较旧的编译器中产生数值结果的某些表达式现在可能会产生正确的 NaN 结果。 你还可能看到差异，因为针对 **/fp:fast** 启用的代码优化现能够利用更多处理器功能。 这些优化可以使用更少的说明，但可能会影响生成的结果，因为某些先前可见的中间操作已删除。  
+将旧代码与新代码比较时，甚至在使用同一编译器标志时，Visual Studio 中不同的浮动点模式下提高代码生成的正确性也会影响浮点运算的结果。 例如，指定 [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md)（默认值）或 `/fp:strict` 时，Visual Studio 2010 生成的代码可能未通过表达式正确传播中间非数字 (NaN) 值。 因此，在较旧的编译器中产生数值结果的某些表达式现在可能会产生正确的 NaN 结果。 由于针对 `/fp:fast` 启用的代码优化现能够利用更多处理器功能，因此可能也存在差异。 这些优化可以使用更少的说明，但可能会影响生成的结果，因为某些先前可见的中间操作已删除。  
   
 ## <a name="how-to-get-identical-results"></a>如何获得相同的结果  
   

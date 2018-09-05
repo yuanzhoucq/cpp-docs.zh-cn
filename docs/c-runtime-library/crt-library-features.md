@@ -1,7 +1,7 @@
 ---
 title: CRT 库功能 |Microsoft 文档
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
-ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
+ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799189"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42578298"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -64,6 +64,8 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 |libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
+
+发生 UCRT 重构时，并发运行时函数会移到 C++ 可再发行包中的 concrt140.dll。 此 DLL 是 C++ 并行容器和算法（如 `concurrency::parallel_for`）所必需的。 此外，C++ 标准库需要 Windows XP 版的此 DLL 来支持同步基元，因为 Windows XP 不具有条件变量。
 
 初始化 CRT 的代码是几个库中的一个，根据 CRT 库是采用静态或动态链接还是本机、托管或混合代码而定。 此代码处理 CRT 启动、内部逐线程数据初始化和终止。 它特定于所用编译器的版本。 此库始终采用动态链接，即使使用动态链接的 UCRT 也是如此。
 

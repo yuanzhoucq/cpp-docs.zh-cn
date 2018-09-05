@@ -21,19 +21,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e8020bbb7649d78232025ef9c63c1dc868fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409002"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613477"
 ---
 # <a name="windows-platforms-crt"></a>Windows 平台 (CRT)
 
-用于 Visual Studio 的 C 运行时库支持当前版本的 Windows 和 Windows Server、[!INCLUDE[win8](../build/reference/includes/win8_md.md)]、[!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)]、[!INCLUDE[win7](../build/includes/win7_md.md)]、[!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)] 和 Windows Vista ，并选择性地支持适用于 x86 的 [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3)、适用于 x64 的 [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) 和同时适用于 x86 和 x64 的 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2)。 所有这些操作系统都支持 Windows 桌面 API (Win32) 并提供 Unicode 支持。 此外，所有 Win32 应用程序都能使用多字节字符集 (MBCS)。
+用于 Visual Studio 的 C 运行时库支持当前版本的 Windows 和 Windows Server、Windows 8、Windows Server 2012、Windows 7、Windows Server 2008 和 Windows Vista；并选择性地支持适用于 x86 的 Windows XP Service Pack 3 (SP3)、适用于 x64 的 Windows XP Service Pack 2 (SP2)，以及同时适用于 x86 和 x64 的 Windows Server 2003 Service Pack 2 (SP2)。 所有这些操作系统都支持 Windows 桌面 API (Win32) 并提供 Unicode 支持。 此外，所有 Win32 应用程序都能使用多字节字符集 (MBCS)。
 
 > [!NOTE]
-> Visual Studio 2017 中的**使用 C++ 的桌面开发**工作负载的默认安装不包括 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 支持和 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 开发。 必须安装可选组件**针对 C++ 的 Windows XP 支持**，用于启用 Windows XP 平台工具集。
+> 在 Visual Studio 2017 中，“使用 C++ 的桌面开发”工作负载的默认安装不包括对 Windows XP 和 Windows Server 2003 开发的支持。 必须安装可选组件**针对 C++ 的 Windows XP 支持**，用于启用 Windows XP 平台工具集。
 
 ## <a name="see-also"></a>请参阅
 
