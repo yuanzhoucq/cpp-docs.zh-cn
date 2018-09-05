@@ -43,11 +43,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687995"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757096"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 提供 Windows 公共数值调节钮控件的功能。  

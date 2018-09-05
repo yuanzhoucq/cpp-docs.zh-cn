@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960399"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762520"
 ---
 # <a name="registry-support-classes"></a>注册表支持类
-下面的类提供注册表支持：  
-  
--   [CRegKey](../atl/reference/cregkey-class.md)包含用于处理在系统注册表中的值的方法。  
-  
-## <a name="related-articles"></a>相关文章  
- [ATL 注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)   
- [注册表宏](../atl/reference/registry-macros.md)
+
+下面的类提供注册表支持：
+
+- [CRegKey](../atl/reference/cregkey-class.md)包含用于处理在系统注册表中的值的方法。
+
+## <a name="related-articles"></a>相关文章
+
+[ATL 注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)   
+[注册表宏](../atl/reference/registry-macros.md)
 

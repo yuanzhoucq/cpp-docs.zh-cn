@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601916"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764090"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 值类
 表示对象大小。 SizeT 是无符号数据类型。  

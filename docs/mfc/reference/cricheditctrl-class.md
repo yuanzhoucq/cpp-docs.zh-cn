@@ -163,11 +163,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678492"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759696"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 提供 Rich Edit 控件功能。  

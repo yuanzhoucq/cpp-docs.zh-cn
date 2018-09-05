@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 528534abd396827815ea4913af4a0b42a5703f31
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961605"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759289"
 ---
 # <a name="dual-interfaces-classes"></a>双重接口类
-下面的类提供双重接口支持：  
-  
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md)实现`IDispatch`双重接口的一部分。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)
+
+下面的类提供双重接口支持：
+
+- [IDispatchImpl](../atl/reference/idispatchimpl-class.md)实现`IDispatch`双重接口的一部分。 有关详细信息，请参阅[实现 IDispatch 接口](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)
 
