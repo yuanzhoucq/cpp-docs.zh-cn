@@ -1,5 +1,5 @@
 ---
-title: 支持 IDispatch 和 IErrorInfo |Microsoft 文档
+title: 支持 IDispatch 和 IErrorInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360944"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753603"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>支持 IDispatch 和 IErrorInfo
-你可以使用此模板类[IDispatchImpl](../atl/reference/idispatchimpl-class.md)提供的默认实现`IDispatch Interface`上你的对象的任何双重接口的一部分。  
-  
- 如果你的对象使用`IErrorInfo`接口来报告错误返回到客户端，则你的对象必须支持`ISupportErrorInfo Interface`接口。 此模板类[ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md)可以轻松地实现这一如果你只有单个接口生成你的对象上的错误。  
-  
-## <a name="see-also"></a>请参阅  
- [ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)
+
+可以使用此模板类[IDispatchImpl](../atl/reference/idispatchimpl-class.md)提供的默认实现`IDispatch Interface`您的对象上的任何双接口的一部分。
+
+如果您的对象使用`IErrorInfo`接口来报告错误返回到客户端，则您的对象必须支持`ISupportErrorInfo Interface`接口。 此模板类[ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md)提供要实现这一点如果只有一个界面，您的对象上生成错误的简便方法。
+
+## <a name="see-also"></a>请参阅
+
+[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)
 

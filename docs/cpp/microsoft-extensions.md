@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408370"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752234"
 ---
 # <a name="microsoft-extensions"></a>Microsoft 扩展
-*asm 语句*:  
- **__asm***程序集指令* **;** 选择    
-  
- **__asm {***程序集指令列表***};** 选择      
-  
- *程序集指令列表*:  
- *程序集指令* **;** 选择  
-  
- *程序集指令* **;***程序集指令列表* **;** 选择  
-  
- *ms 修饰符列表*:  
- *ms 修饰符 ms 修饰符列表*选择  
-  
- *ms 修饰符*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **__syscall** （为将来的实现保留）  
-  
- **__oldcall** （为将来的实现保留）  
-  
- **__unaligned** （为将来的实现保留）  
-  
- *基于修饰符*  
-  
- *基于修饰符*:  
- **__based (** *基于类型* **)**  
-  
- *基于类型*:  
- *name*  
+
+*asm 语句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm***程序集指令* **;**<sub>选择  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {***程序集指令列表***};**<sub>选择    </sub>
+
+*程序集指令列表*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;**<sub>选择</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;***程序集指令列表* **;**<sub>选择</sub>
+
+*ms 修饰符列表*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ms 修饰符* *ms 修饰符列表*<sub>选择</sub>
+
+*ms 修饰符*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** （为将来的实现保留）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** （为将来的实现保留）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** （为将来的实现保留）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*基于修饰符*
+
+*基于修饰符*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *基于类型* **)**
+
+*基于类型*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*名称*

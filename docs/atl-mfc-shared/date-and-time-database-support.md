@@ -1,5 +1,5 @@
 ---
-title: 日期和时间： 数据库支持 |Microsoft 文档
+title: 日期和时间： 数据库支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5047dfb2d8a162cf6d82c07007504df897afa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c077ec376155f576b9cd0db9662f47a9d747c8a3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353882"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751464"
 ---
 # <a name="date-and-time-database-support"></a>日期和时间： 数据库支持
-从 4.0 版本开始，MFC 数据库编程使用[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)和[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)类表示日期和时间数据。 在自动化中，还使用这些类派生自类[COleVariant](../mfc/reference/colevariant-class.md)。 它们提供更好地支持管理日期和时间数据比[CTime](../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
-  
--   [日期和时间编程的自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
-## <a name="see-also"></a>请参阅  
- [日期和时间](../atl-mfc-shared/date-and-time.md)
 
+从 4.0 版本开始，MFC 数据库编程使用[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)并[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)类来表示日期和时间数据。 在 Automation 中，还使用这些类派生自类[COleVariant](../mfc/reference/colevariant-class.md)。 它们提供更好地支持管理日期和时间数据比[CTime](../atl-mfc-shared/reference/ctime-class.md)并[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)。
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+
+- [自动化的日期和时间编程的支持](../atl-mfc-shared/date-and-time-automation-support.md)
+
+## <a name="see-also"></a>请参阅
+
+[日期和时间](../atl-mfc-shared/date-and-time.md)
 

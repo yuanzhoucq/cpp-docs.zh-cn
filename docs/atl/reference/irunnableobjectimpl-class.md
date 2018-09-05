@@ -26,120 +26,141 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035d59d71dc7166b12b6e894803645aacda83887
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218693"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755094"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl 类
-此类实现`IUnknown`，并提供的默认实现[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)接口。  
-  
+
+此类实现`IUnknown`，并提供的默认实现[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)接口。
+
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
-  
-## <a name="syntax"></a>语法  
-  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+
+## <a name="syntax"></a>语法
+
 ```
 template<class T>  
 class IRunnableObjectImpl
-```  
-  
-#### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IRunnableObjectImpl`。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|返回正在运行的控件的 CLSID。 ATL 实现设置为 GUID_NULL 的 CLSID，并返回 E_UNEXPECTED。|  
-|[IRunnableObjectImpl::IsRunning](#isrunning)|确定控件是否正在运行。 ATL 实现，则返回 TRUE。|  
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|锁定到正在运行状态的控件。 ATL 实现返回 S_OK。|  
-|[IRunnableObjectImpl::Run](#run)|强制控件运行。 ATL 实现返回 S_OK。|  
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|该值指示控件嵌入。 ATL 实现返回 S_OK。|  
-  
-## <a name="remarks"></a>备注  
- [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)接口，若要确定控件是否正在运行，强制其运行，或将其锁定到正在运行状态的容器。 类`IRunnableObjectImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。  
-  
- **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `IRunnableObject`  
-  
- `IRunnableObjectImpl`  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlctl.h  
-  
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
- 返回正在运行的控件的 CLSID。  
-  
+```
+
+#### <a name="parameters"></a>参数
+
+*T*  
+您的类，派生自`IRunnableObjectImpl`。
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|返回正在运行的控件的 CLSID。 ATL 实现设置为 GUID_NULL 的 CLSID，并返回 E_UNEXPECTED。|
+|[IRunnableObjectImpl::IsRunning](#isrunning)|确定控件是否正在运行。 ATL 实现，则返回 TRUE。|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|锁定到正在运行状态的控件。 ATL 实现返回 S_OK。|
+|[IRunnableObjectImpl::Run](#run)|强制控件运行。 ATL 实现返回 S_OK。|
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|该值指示控件嵌入。 ATL 实现返回 S_OK。|
+
+## <a name="remarks"></a>备注
+
+[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)接口，若要确定控件是否正在运行，强制其运行，或将其锁定到正在运行状态的容器。 类`IRunnableObjectImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。
+
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`IRunnableObject`
+
+`IRunnableObjectImpl`
+
+## <a name="requirements"></a>要求
+
+**标头：** atlctl.h
+
+##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+
+返回正在运行的控件的 CLSID。
+
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
-```  
-  
-### <a name="return-value"></a>返回值  
- ATL 实现集\* *lpClsid* GUID_NULL 和返回 E_UNEXPECTED。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) Windows SDK 中。  
-  
-##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
- 确定控件是否正在运行。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+ATL 实现集\* *lpClsid* GUID_NULL 和返回 E_UNEXPECTED。
+
+### <a name="remarks"></a>备注
+
+请参阅[IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) Windows SDK 中。
+
+##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
+
+确定控件是否正在运行。
+
 ```
 virtual BOOL IsRunning();
-```  
-  
-### <a name="return-value"></a>返回值  
- ATL 实现，则返回 TRUE。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) Windows SDK 中。  
-  
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
- 锁定到正在运行状态的控件。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+ATL 实现，则返回 TRUE。
+
+### <a name="remarks"></a>备注
+
+请参阅[IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) Windows SDK 中。
+
+##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+
+锁定到正在运行状态的控件。
+
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
-```  
-  
-### <a name="return-value"></a>返回值  
- ATL 实现返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) Windows SDK 中。  
-  
-##  <a name="run"></a>  IRunnableObjectImpl::Run  
- 强制控件运行。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+ATL 实现返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) Windows SDK 中。
+
+##  <a name="run"></a>  IRunnableObjectImpl::Run
+
+强制控件运行。
+
 ```
 HRESULT Run(LPBINDCTX lpbc);
-```  
-  
-### <a name="return-value"></a>返回值  
- ATL 实现返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) Windows SDK 中。  
-  
-##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
- 该值指示控件嵌入。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+ATL 实现返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) Windows SDK 中。
+
+##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
+
+该值指示控件嵌入。
+
 ```
 HRESULT SetContainedObject(BOOL fContained);
-```  
-  
-### <a name="return-value"></a>返回值  
- ATL 实现返回 S_OK。  
-  
-### <a name="remarks"></a>备注  
- 请参阅[IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) Windows SDK 中。  
-  
-## <a name="see-also"></a>请参阅  
- [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
- [类概述](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>返回值
+
+ATL 实现返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+请参阅[IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) Windows SDK 中。
+
+## <a name="see-also"></a>请参阅
+
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
+[类概述](../../atl/atl-class-overview.md)

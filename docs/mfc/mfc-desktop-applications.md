@@ -1,5 +1,5 @@
 ---
-title: MFC 桌面应用程序 |Microsoft 文档
+title: MFC 桌面应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350230"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754990"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。  
@@ -38,7 +38,7 @@ Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对�
  仅记录通常用于应用程序或派生类的公共类成员和受保护类成员。 有关类成员的完整列表，请参见类头文件。  
   
 > [!IMPORTANT]
->  MFC 类及其成员无法在 Windows 运行时环境中执行的应用中使用。  
+>  不能在 Windows 运行时环境中执行的应用程序中使用 MFC 类和其成员。  
 >   
 >  用于多字节字符编码 (MBCS) 的 MFC 库 (DLL) 不再包含于 Visual Studio 中，但可用作 Visual Studio 加载项。 有关详细信息，请参阅[MFC MBCS DLL 加载项](mfc-mbcs-dll-add-on.md)。  
   
