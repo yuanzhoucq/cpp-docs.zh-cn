@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201258"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函数
 每个 `_spawn` 函数将创建并执行一个新进程：  
@@ -134,7 +134,7 @@ ms.locfileid: "34451766"
 >  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_spawn` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。  
   
 > [!IMPORTANT]
->  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。  
+>  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。  
   
  您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34451766"
 ## <a name="redirecting-output"></a>重定向输出  
  如果从 DLL 或 GUI 应用程序调用 `_spawn` 并希望将输出重定向至管道，则您具有两个选择：  
   
--   使用 Win32 API 创建管道，然后调用 [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944)，在启动结构中设置句柄值，然后调用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)。  
+-   使用 Win32 API 创建管道，然后调用 [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944)，在启动结构中设置句柄值，然后调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)。  
   
 -   调用 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) 以创建管道，并使用 **cmd.exe /c**（或 **command.exe /c**）调用应用。  
   

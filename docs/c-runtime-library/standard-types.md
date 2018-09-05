@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216999"
 ---
 # <a name="standard-types"></a>标准类型
 Microsoft 运行库定义下列标准类型和 typedef。  
@@ -211,7 +211,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`div_t`、`ldiv_t` 和 `lldiv_t` 结构|存储由 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 分别返回的值。|STDLIB.H|  
 |`errno_t` integer|用于处理 `errno` 的错误代码的函数返回类型或参数。|STDDEF.H、<br /><br /> CRTDEFS.H|  
 |`_exception` 结构|存储 [_matherr](../c-runtime-library/reference/matherr.md) 的错误信息。|MATH.H|  
-|`_EXCEPTION_POINTERS`|包含一个异常记录。 有关详细信息，请参阅 [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331)。|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|包含一个异常记录。 有关详细信息，请参阅 [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers)。|FPIEEE.H|  
 |`FILE` 结构|存储有关流的当前状态的信息；在所有流 I/O 操作中使用。|STDIO.H|  
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` 结构|存储由 [_findfirst、_wfindfirst 和相关函数](../c-runtime-library/reference/findfirst-functions.md)及 [_findnext、_wfindnext 和相关函数](../c-runtime-library/reference/findnext-functions.md)返回的文件特性信息。 有关结构成员的信息，请参阅[文件名称搜索函数](../c-runtime-library/filename-search-functions.md)。|IO.H、WCHAR.H|  
 |`_FPIEEE_RECORD` 结构|包含有关 IEEE 浮点异常的信息；由 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) 传递给用户定义的陷阱处理程序。|FPIEEE.H|  

@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410835"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592714"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 应用、Windows 运行时和 C 运行时
 
-通用 Windows 平台 (UWP) 应用是在 [!INCLUDE[win8](../build/reference/includes/win8_md.md)] 上执行的 Windows 运行时中运行的程序。 Windows 运行时是一个控制函数、变量以及可用于 UWP 应用的资源的可信环境。 但依据设计，Windows 运行时限制会阻止在 UWP 应用中使用大多数 C 运行库 (CRT) 功能。
+通用 Windows 平台 (UWP) 应用是一些程序，它们在 Windows 8 上执行的 Windows 运行时中运行。 Windows 运行时是一个控制函数、变量以及可用于 UWP 应用的资源的可信环境。 但依据设计，Windows 运行时限制会阻止在 UWP 应用中使用大多数 C 运行库 (CRT) 功能。
 
 Windows 运行时不支持以下 CRT 功能：
 

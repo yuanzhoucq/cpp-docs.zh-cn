@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ea2039cd9fa1c5071da143f557406d028f464d7e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34257057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676703"
 ---
 # <a name="deployment-concepts"></a>部署概念
 
@@ -61,4 +61,4 @@ Visual C++ 库打包为 DLL，所有用于 C/C++ 应用程序的必要库都由 
 
 - [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [了解 Visual C++ 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+

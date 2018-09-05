@@ -13,26 +13,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 4f80def64c62420fff47b0476822fb3eb612ca4b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209048"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588243"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
 本页面包括从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++ 版本的“新增功能”页。 提供这些信息的目的是方便用户从早期版本的 Visual C++ 进行升级。
 
-**注意**：有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
+> [!NOTE]
+> 有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Visual Studio 2015 中 C++ 的新增功能
 
 在 Visual Studio 2015 及更高版本中，对编译器符合性的持续改进有时会改变编译器理解现有源代码的方式。 发生这种情况时，可能会在生成过程中遇到新的或不同的错误，甚至以前生成且似乎运行正常的代码也可能出现行为差异。
 
- 幸运的是，这些差异对大部分源代码没有影响或影响极小，而且需要更改源代码或进行其他更改以解决这些差异时，修补程序通常小型且简单。 我们列出了以前可接受、现在可能需要更改的许多源代码示例（之前）及其修补程序（之后）。
+幸运的是，这些差异对大部分源代码没有影响或影响极小，而且需要更改源代码或进行其他更改以解决这些差异时，修补程序通常小型且简单。 我们列出了以前可接受、现在可能需要更改的许多源代码示例（之前）及其修补程序（之后）。
 
- 虽然这些差异可能会影响源代码或其他生成项目，但其不会影响 Visual C++ 版本更新之间的二进制文件兼容性。 重大更改是严重性较高的更改，可能会影响二进制文件兼容性，但此类二进制文件兼容性中断问题仅发生在 Visual C++ 的主版本之间。 例如，在 Visual C ++ 2013 和 Visual C ++ 2015 之间。 有关 Visual C++ 2013 和 Visual C++ 2015 之间的重大更改的详细信息，请参阅 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)。
+虽然这些差异可能会影响源代码或其他生成项目，但其不会影响 Visual C++ 版本更新之间的二进制文件兼容性。 重大更改是严重性较高的更改，可能会影响二进制文件兼容性，但此类二进制文件兼容性中断问题仅发生在 Visual C++ 的主版本之间。 例如，在 Visual C ++ 2013 和 Visual C ++ 2015 之间。 有关 Visual C++ 2013 和 Visual C++ 2015 之间的重大更改的详细信息，请参阅 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)。
 
 - [Visual Studio 2015 的符合性改进](#VS_RTM)
 
@@ -44,13 +45,13 @@ ms.locfileid: "39209048"
 
 ### <a name="VS_RTM"></a>Visual Studio 2015 的符合性改进
 
-- **/Zc:forScope- option** 编译器选项 /Zc:forScope- 已弃用，并且将在将来版本中删除。
+- /Zc:forScope- option：编译器选项 `/Zc:forScope-` 已弃用，并将在未来的版本中删除。
 
    ```output
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
    ```
 
-   以前会经常用到此选项，以便允许非标准代码在点的位置之后使用循环变量，根据标准规范，这些变量本应该在范围之外。 仅当使用 /Za 选项进行编译时才需要，因为没有 /Za，将始终允许在循环结束后使用 for 循环变量。 如果你不关心标准符合性（例如，如果你的代码不是为了移植到其他编译器），你可以关闭 /Za 选项（或将“禁用语言扩展”属性设置为“否”）。 如果你确实关心编写可移植且符合标准的代码，则应重写代码，以便通过将此类变量的声明移到循环以外的点使其符合标准。
+   以前会经常用到此选项，以便允许非标准代码在点的位置之后使用循环变量，根据标准规范，这些变量本应该在范围之外。 仅在使用 `/Za` 选项进行编译时才需要，因为如果没有 `/Za`，将始终允许在循环结束后使用 for 循环变量。 如果你不在乎标准符合性（例如，如果你的代码并不要移植到其他编译器），则可关闭 `/Za` 选项（或将“禁用语言扩展”属性设置为“否”）。 如果你确实关心编写可移植且符合标准的代码，则应重写代码，以便通过将此类变量的声明移到循环以外的点使其符合标准。
 
    ```cpp
     // zc_forScope.cpp
@@ -65,11 +66,11 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **/Zg 编译器选项** /Zg 编译器选项（生成函数原型）不再可用。 此此编译器选项已被弃用。
+- **/Zg 编译器选项** `/Zg` 编译器选项（生成函数原型）不再可用。 此此编译器选项已被弃用。
 
 - 你无法再使用 mstest.exe 从命令行运行 C++/CLI 单元测试。 请改用 vstest.console.exe
 
-- **可变关键字** 在之前其正确编译的位置，不再允许存在 `mutable` 存储类说明符。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员。
+- **可变关键字** 在其之前正确编译的位置，不再允许存在可变存储类说明符。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员。
 
    例如，考虑以下代码：
 
@@ -85,9 +86,9 @@ ms.locfileid: "39209048"
     error C2071: 'S::r': illegal storage class
    ```
 
-   若要修复此错误，只需删除冗余的可变关键字。
+   要消除此错误，只需删除冗余的可变关键字即可。
 
-- **char_16_t and char32_t** 不能再使用 `char16_t` 或 `char32_t` 作为 typedef 中的别名，因为这些类型现在被视为内置。 用户和库作者过去通常将 `char16_t` 和 `char32_t` 分别定义为 `uint16_t` 和 `uint32_t` 的别名。
+- ：不能再使用 `char16_t` 或 `char32_t` 作为 typedef 中的别名，因为这些类型现在被视为内置 **。 用户和库作者过去通常将 `char16_t` 和 `char32_t` 分别定义为 `uint16_t` 和 `uint32_t` 的别名。
 
    ```cpp
     #include <cstdint>
@@ -104,9 +105,9 @@ ms.locfileid: "39209048"
     }
    ```
 
-   若要更新你的代码，请删除 typedef 声明，并重命名与这些名称发生冲突的任何其他标识符。
+   要更新代码，请删除 typedef 声明，并重命名与这些名称冲突的其他所有标识符。
 
-- **非类型模板参数** 现在会在提供显式模板参数时准确检查包含非类型模板参数的某些代码的类型符合性。 例如，在早期版本的 Visual C++ 中正确编译的以下代码。
+- 非类型模板参数：现在会在提供显式模板参数时准确检查包含非类型模板参数的某些代码的类型符合性。 例如，在早期版本的 Visual C++ 中正确编译的以下代码。
 
    ```cpp
     struct S1
@@ -125,7 +126,6 @@ ms.locfileid: "39209048"
         S2 s2;
         s2.f<S1, &S1::f>();
     }
-
    ```
 
    当前编译器可以准确报告错误，因为模板参数类型不匹配模板参数（该参数是指向 const 成员的指针，但函数为非 const）：
@@ -136,7 +136,7 @@ ms.locfileid: "39209048"
 
    若要在代码中修复此错误，请确保你使用的模板自变量类型匹配模板参数声明的类型。
 
-- **__declspec(align)** 编译器不再接受函数上的 `__declspec(align)`。 以前会始终忽略此项，但现在会产生编译器错误。
+- __declspec(align)：编译器不再接受函数上的 `__declspec(align)`。 以前会始终忽略此项，但现在会产生编译器错误。
 
    ```cpp
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations
@@ -144,7 +144,7 @@ ms.locfileid: "39209048"
 
    若要解决此问题，请从函数声明中删除 `__declspec(align)` 。 因为它不起作用，将其删除不会更改任何内容。
 
-- **异常处理** 有几个对异常处理的更改。 首先，异常对象必须可复制或可移动。 在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中编译的以下代码却不能在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中进行编译：
+- 异常处理：有几个对异常处理的更改。 首先，异常对象必须可复制或可移动。 下列代码在 Visual Studio 2013 中进行编译，但不在 Visual Studio 2015 中进行编译：
 
    ```cpp
     struct S {
@@ -158,10 +158,9 @@ ms.locfileid: "39209048"
     {
         throw S(); // error
     }
-
    ```
 
-   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 当复制构造函数为声明的 `explicit`时，这同样适用。
+   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 当复制构造函数声明为显式时，这同样适用。
 
    ```cpp
     struct S {
@@ -173,12 +172,11 @@ ms.locfileid: "39209048"
     {
         throw S(); // error
     }
-
    ```
 
-   若要更新你的代码，请确保异常对象的复制构造函数是公用的且未标记为 `explicit`。
+   要更新代码，请确保异常对象的复制构造函数是公用的且未标记为显式。
 
-   通过值捕获异常还要求异常对象可复制。 在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中编译的以下代码却不能在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中进行编译：
+   通过值捕获异常还要求异常对象可复制。 下列代码在 Visual Studio 2013 中进行编译，但不在 Visual Studio 2015 中进行编译：
 
    ```cpp
     struct B {
@@ -200,10 +198,9 @@ ms.locfileid: "39209048"
         {
         }
     }
-
    ```
 
-   可以通过将 `catch` 的参数类型更改为引用来解决此问题。
+   可通过将 catch 的参数类型更改为“引用”来解决此问题。
 
    ```cpp
     catch(D& d)
@@ -211,7 +208,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **后跟宏的字符串文本** 编译器现在支持用户定义的文本。 因此，宏之前没有任何干预空格的字符串文本被视为用户定义的文本，这可能会产生错误或意外结果。 例如，在早期的编译器中，成功编译了以下代码：
+- 后跟宏的字符串文本：编译器现在支持用户定义的文本。 因此，宏之前没有任何干预空格的字符串文本被视为用户定义的文本，这可能会产生错误或意外结果。 例如，在早期的编译器中，成功编译了以下代码：
 
    ```cpp
     #define _x "there"
@@ -225,7 +222,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-   编译器将此视为后跟宏的字符串文本“hello”，该宏是展开的“there”，然后两个字符串串联成一个。 在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，编译器将此解释为用户定义的文字，但由于没有定义匹配的用户定义的 _x 文本，它将报告错误。
+   编译器将此视为后跟宏的字符串文本“hello”，该宏是展开的“there”，然后两个字符串串联成一个。 在 Visual Studio 2015 中，编译器将其解释为用户定义的文本，但由于未定义所匹配的用户定义文本 _x，它将报告错误。
 
    ```cpp
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found
@@ -235,7 +232,7 @@ ms.locfileid: "39209048"
 
    若要解决此问题，请在字符串文本和宏之间添加一个空格。
 
-- **相邻字符串文本** 与上文类似，由于字符串分析中的相关变化，没有任何空格的相邻字符串文本（或宽或窄的字符字符串文本）被视为 Visaul C++ 早期版本中的单个串联字符串。 在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，现在必须在两个字符串之间添加空格。 例如，必须更改以下代码：
+- 相邻字符串文本：与上文类似，由于字符串分析中的相关变化，没有任何空格的相邻字符串文本（或宽或窄的字符字符串文本）被视为 Visaul C++ 早期版本中的单个串联字符串。 在 Visual Studio 2015 中，现必须在两个字符串之间添加空格。 例如，必须更改以下代码：
 
    ```cpp
     char * str = "abc""def";
@@ -247,34 +244,32 @@ ms.locfileid: "39209048"
     char * str = "abc" "def";
    ```
 
-- **placement new 和 placement delete** 对 delete 运算符做出更改以使其符合 C++14 标准。 标准更改的详细信息位于 [C++ 调整了大小的释放](http://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式。 重大更改为，如果你之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），你将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）。
+- placement new 和 placement delete：更改了 delete 运算符，使其符合 C++14 标准。 标准更改的详细信息位于 [C++ 调整了大小的释放](http://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式。 重大更改为，如果你之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），你将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）。
 
-   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数“void \* operator new(size_t, size_t)”对应的 placement delete 运算符。 使用 C++14 调整了大小的释放，此 delete 函数现在是 *常用释放函数* （全局 delete 运算符）。 标准要求为，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
+   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符。 使用 C++14 调整了大小的释放，此 delete 函数现在是常用释放函数 （全局 delete 运算符）。 标准要求，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
 
    例如，假设你的代码同时定义了 placement new 和 placement delete：
 
    ```cpp
     void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
-
    ```
 
-   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题。 考虑是否可以使用任何 placement new 和 placement delete 运算符的其他类型（size_t 除外）。  请注意，size_t typedef 的类型取决于编译器；在 Visual C++ 中，它是一个无符号整型的 typedef。 较好的解决办法就是使用如下的枚举类型：
+   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外）。  请注意，`size_t` typedef 的类型取决于编译器；在 Visual C++ 中，它是一个无符号整型的 typedef。 较好的解决办法就是使用如下的枚举类型：
 
    ```cpp
     enum class my_type : size_t {};
-
    ```
 
-   然后，更改你对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 size_t）。 你还需要更新对 placement new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新 new 和 delete 的定义以强制转换回整数类型。 你无需为此使用枚举；具有 size_t 成员的类类型也将起作用。
+   然后，更改对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 `size_t`）。 你还需要更新对 placement new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新 new 和 delete 的定义以强制转换回整数类型。 你无需为此使用枚举；具有 `size_t` 成员的类类型也将起作用。
 
    你还可以将 placement new 全部消除作为备选解决方案。 如果你的代码使用 placement new 实现内存池，其中位置参数是分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自定义的内存池代码，且你可以去掉位置函数，仅使用自己两个参数的 delete 运算符（而不是位置函数）。
 
-   如果你不想立即更新代码，可以通过使用编译器选项 /Zc:sizedDealloc- 恢复到旧行为。 如果使用此选项，则不存在两个参数的 delete 函数，并且也不会导致与 placement delete 运算符发生冲突。
+   如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则不存在两个参数的 delete 函数，并且也不会导致与 placement delete 运算符发生冲突。
 
 - **联合数据成员**
 
-   联合数据成员不再具有引用类型。 以下代码在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)]中成功编译，但在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中产生错误。
+   联合数据成员不再具有引用类型。 下列代码在 Visual Studio 2013 中成功编译，但在 Visual Studio 2015 中引发错误。
 
    ```cpp
     union U1 {
@@ -297,7 +292,7 @@ ms.locfileid: "39209048"
 
    若要解决此问题，请将引用类型更改为指针或值。 更改指针类型需要对使用联合字段的代码进行更改。 将代码更改为值将更改存储在联合中的数据，这会影响其他字段，因为联合类型中的字段共享相同的内存。 根据值的大小，它还可能更改联合的大小。
 
-- **匿名联合**现在更符合标准。 早期版本的编译器生成了匿名联合的显式构造函数和析构函数。 这些在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中已删除。
+- **匿名联合**现在更符合标准。 早期版本的编译器生成了匿名联合的显式构造函数和析构函数。 Visual Studio 2015 中已将其删除。
 
    ```cpp
     struct S {
@@ -311,7 +306,7 @@ ms.locfileid: "39209048"
      } u; // C2280
    ```
 
-   前面的代码在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中生成以下错误：
+   前述代码在 Visual Studio 2015 中生成以下错误：
 
    ```cpp
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function
@@ -333,7 +328,7 @@ ms.locfileid: "39209048"
     } u;
    ```
 
-- **具有匿名结构的联合** 为了符合标准，已对联合中的匿名结构的成员更改了运行时行为。 创建此类联合时，将不再隐式调用联合中的匿名结构成员的构造函数。   此外，联合超出范围时，不再隐式调用联合中的匿名结构成员的析构函数。 请考虑以下代码，其中联合 U 包含一个匿名结构，此匿名结构包含的成员是一个具有析构函数的命名结构 S。
+- 具有匿名结构的联合：为了符合标准，已对联合中的匿名结构的成员更改了运行时行为。 创建此类联合时，将不再隐式调用联合中的匿名结构成员的构造函数。 此外，联合超出范围时，不再隐式调用联合中的匿名结构成员的析构函数。 请考虑以下代码，其中联合 U 包含一个匿名结构，此匿名结构包含的成员是一个具有析构函数的命名结构 S。
 
    ```cpp
     #include <stdio.h>
@@ -366,7 +361,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-   在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中，创建联合时会调用 S 的构造函数，清理函数 f 的堆栈时会调用 S 的析构函数。 但在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，不会调用构造函数和析构函数。 编译器会对关于此行为的更改发出警告。
+   在 Visual Studio 2013 中，创建联合时会调用 S 的构造函数，清理函数 f 的堆栈时会调用 S 的析构函数。 但在 Visual Studio 2015 中，不调用构造函数和析构函数。 编译器会对关于此行为的更改发出警告。
 
    ```Output
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called
@@ -438,7 +433,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **模板解析** 对模板的名称解析进行了更改。 在 C++ 中，考虑名称解析的候选对象时，可能会出现作为潜在匹配项考虑的一个或多个名称生成无效的模板实例化的情况。 这些无效的实例化通常不会导致编译器错误，这被称为 SFINAE（替换失败不是错误）原则。
+- 模板解析：对模板的名称解析进行了更改。 在 C++ 中，考虑名称解析的候选对象时，可能会出现作为潜在匹配项考虑的一个或多个名称生成无效的模板实例化的情况。 这些无效的实例化通常不会导致编译器错误，这被称为 SFINAE（替换失败不是错误）原则。
 
    现在，如果 SFINAE 要求编译器将类模板专用化进行实例化，则在此过程中发生的任何错误都是编译器错误。 在早期版本中，编译器会忽略此类错误。 例如，考虑以下代码：
 
@@ -477,7 +472,6 @@ ms.locfileid: "39209048"
     S<D> s1;
         S<D> s2(s1);
     }
-
    ```
 
    如果使用当前编译器进行编译，将得到以下错误：
@@ -497,11 +491,11 @@ ms.locfileid: "39209048"
 
    在这种情况下，解决方法是在定义类之前，不使用此类类型特征。 如果将 D 和 B 的定义移到代码文件的开头，错误将得到解决。 如果定义位于标头文件中，请检查标头文件的 include 语句的顺序，以确保在使用有问题的模板之前，对任何类定义进行了编译。
 
-- **复制构造函数** 在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 Visual Studio 2015 中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。
+- 复制构造函数：在 Visual Studio 2013 和 Visual Studio 2015 中，如果某个类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成该类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。
 
 ### <a name="VS_Update1"></a> Visual Studio 2015 Update 1 的符合性改进
 
-- **私有虚拟基类和间接继承** 早期版本的编译器允许派生类调用间接派生 `private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
+- 私有虚拟基类和间接继承：早期版本的编译器允许派生类调用间接派生 `private virtual` 基类的成员函数。 这种旧行为不正确，也不符合 C++ 标准。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2280。
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -553,7 +547,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **重载的 new 运算符和 delete 运算符** 早期版本的编译器允许非成员 `operator new` 和非成员 `operator delete` 声明为静态，并在全局命名空间之外的命名空间中声明。  这种旧行为会引发风险，导致程序无法按按程序员的预期调用 `new` 或 `delete` 运算符实现，从而导致无提示的运行时行为错误。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
+- 重载的 new 运算符和 delete 运算符：在早期版本的编译器，非成员 new 运算符和非成员 delete 运算符可声明为静态，并可在全局命名空间之外的命名空间中声明。  之前的这种行为存在风险，导致程序不调用程序员期望的 new 或 delete 运算符实现，进而导致无提示的运行时行为错误。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
 
    ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -605,7 +599,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **详细的类型说明符中的多余 typename** 早期版本的编译器允许详细的类型说明符中出现 `typename`；用这种方式编写的代码在语义上不正确。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
+- 详细的类型说明符中的多余 typename：在早期版本的编译器，详细的类型说明符中可出现 typename；按此方式编写的代码存在语义错误。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
 
    ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -709,7 +703,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **switch 语句警告的还原** 前一个版本的编译器删除了之前存在的与 `switch` 语句相关的警告；现在已还原所有这些警告。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个可能有问题的用例上面的行。 以下是还原的警告。
+- switch 语句警告的还原：上一版本的编译器删除了之前存在的与 switch 语句相关的警告；这些警告现已全部还原。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个可能有问题的用例上面的行。 以下是还原的警告。
 
    ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -804,7 +798,7 @@ ms.locfileid: "39209048"
 
    在其文档中提供了其他还原警告的示例。
 
-- **#include：在路径名中使用父目录说明符“..”** （只影响 /Wall/WX）
+- #include：在路径名中使用父目录说明符“..”（只影响 `/Wall` `/WX`）
 
      早期版本的编译器没有检测到使用父目录说明符“..” （在  `#include` 指令的路径名中）。 以这种方式编写的代码通常用于包含因不正确使用项目相对路径而留在项目外的标头。 这一旧行为会引发风险，导致编译程序时包含了程序员不需要的源文件来，或这些相对路径不能移植到其他生成环境中。 编译器现在会检测以这种方式编写的代码并通知程序员，并发出可选编译器警告 C4464（如果已启用）。
 
@@ -826,7 +820,7 @@ ms.locfileid: "39209048"
 
    此外，虽然编译器并不会进行具体诊断，但建议不应将父目录说明符“..”用于指定项目的包含目录。
 
-- **#pragma optimize() 超出标头文件的末尾** （只影响 /Wall/WX）
+- #pragma optimize() 超出标头文件的末尾 （只影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到对转义翻译单元中包含的标头文件的优化标志设置的更改。 编译器现在会检测以这种方式编写的代码并通知程序员，并在有问题的 `#include`的位置发出可选编译器警告 C4426（如果已启用）。 只有更改与编译器命令行参数设置的优化标志发生冲突时，才发出此警告。
 
@@ -859,9 +853,9 @@ ms.locfileid: "39209048"
     #include "C4426.h"
    ```
 
-- **#pragma warning(push)** 和 **#pragma warning(pop)** （只影响 /Wall/WX）
+- #pragma warning(push) 和 #pragma warning(pop)（只影响 `/Wall` `/WX`）
 
-   早期版本的编译器无法检测到不同源文件中与 `#pragma warning(pop)` 状态更改配对的 `#pragma warning(push)` 状态更改，这并不是我们所预期的。 这种旧行为会引发风险，导致程序编译时会启用一组程序员不希望出现的警告，可能会导致无提示的运行时行为错误。 编译器现在能够检测以这种方式编写的代码并通知程序员，并在匹配 `#pragma warning(pop)` 位置发出可选编译器警告 C5031（如果已启用）。 此警告包括引用相应 #pragma warning(push) 的位置的注释。
+   早期版本的编译器无法检测到不同源文件中与 `#pragma warning(pop)` 状态更改配对的 `#pragma warning(push)` 状态更改，这并不是我们所预期的。 这种旧行为会引发风险，导致程序编译时会启用一组程序员不希望出现的警告，可能会导致无提示的运行时行为错误。 编译器现在能够检测以这种方式编写的代码并通知程序员，并在匹配 `#pragma warning(pop)` 位置发出可选编译器警告 C5031（如果已启用）。 此警告中有一个注释，其中引用了相应 `#pragma warning(push)` 的位置。
 
    ```Output
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file
@@ -887,7 +881,6 @@ ms.locfileid: "39209048"
     ...
     #include "C5031_part2.h" // matches 'dangling' #pragma warning(push), resulting in warning C5031
     ...
-
    ```
 
    示例（之后）
@@ -912,12 +905,11 @@ ms.locfileid: "39209048"
     ...
     #include "C5031_part2.h"
     ...
-
    ```
 
    虽然不常见，但是有时会故意以这种方式编写代码。 以这种方式编写的代码对于 `#include` 顺序的更改比较敏感；如果可能，我们建议源代码文件以自包含的方式管理警告状态。
 
-- **#pragma warning(push) 不匹配**（只影响 /Wall/WX） 早期版本的编译器无法检测到翻译单元末尾出现的不匹配 `#pragma warning(push)` 状态更改。 编译器现在能够检测以这种方式编写的代码并通知程序员，并在不匹配的 #pragma warning(push) 位置发出可选编译器警告 C5032（如果已启用）。 只有翻译单元中没有任何编译错误时，才会发出此警告。
+- #pragma warning(push) 不匹配（只影响 `/Wall` `/WX`）：早期版本的编译器无法检测到翻译单元末尾出现的不匹配的 `#pragma warning(push)` 状态更改。 而现在，编译器可检测按此方式编写的代码并通知程序员，还可在 `#pragma warning(push)` 不匹配的位置发出编译器警告 C5032（如已启用）。 只有翻译单元中没有任何编译错误时，才会发出此警告。
 
    ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -954,9 +946,9 @@ ms.locfileid: "39209048"
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)
    ```
 
-- **#pragma 警告状态跟踪改进后可能会发出更多警告** 早期版本的编译器无法有效跟踪 #pragma 警告状态更改，因而无法发出所有所需的警告。 这种行为会引发风险，导致在程序不希望的情况下有效禁止显示某些警告。 编译器现在能够更加可靠地跟踪 #pragma 警告状态，尤其与模板内部的 #pragma 警告状态更改相关，并选择性发出新警告 C5031 和 C5032，旨在帮助程序员找到意外使用 `#pragma warning(push)` 和 `#pragma warning(pop)`。
+- #pragma 警告状态跟踪改进后可能会发出更多警告：早期版本的编译器无法有效跟踪 `#pragma warning` 警告状态更改，因而无法发出所有所需的警告。 这种行为会引发风险，导致在程序不希望的情况下有效禁止显示某些警告。 而现在，编译器可更加可靠地跟踪 `#pragma warning` 警告状态，尤其与模板内部的 `#pragma warning` 警告状态更改相关的，并选择性发出新警告 C5031 和 C5032，目的是帮助程序员了解意外使用 `#pragma warning(push)` 和 `#pragma warning(pop)` 的情况。
 
-   由于改进了 #pragma 警告状态更改跟踪，现在可能会发出以前错误地禁止显示的警告或与以前误诊问题的相关警告。
+   由于 `#pragma warning` 警告状态更改跟踪得到了改进，现在可能会发出之前误禁的警告或与之前误诊问题相关的警告。
 
 - **对无法访问代码标识的改进** 针对早期版本的编译器进行的 C++ 标准库的更改和内联函数调用能力改进可能会使编译器能够证明某些代码现在无法访问。 这一新行为可能导致新警告并更频繁地发出警告 C4720 实例。
 
@@ -964,7 +956,7 @@ ms.locfileid: "39209048"
     warning C4720: unreachable code
    ```
 
-   在许多情况下，只有启用优化进行编译时，才会发出此警告，因为优化可能嵌入更多函数调用，消除冗余代码或者能够确定某些代码是否无法访问。 我们观察到，警告 C4720 的新实例在 try/catch 块中经常发生，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True)时。
+   在许多情况下，只有启用优化进行编译时，才会发出此警告，因为优化可能嵌入更多函数调用，消除冗余代码或者能够确定某些代码是否无法访问。 我们观察到，try/catch 块中频繁发生警告 C4720 的新实例，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True) 时。
 
    示例（之前）
 
@@ -994,9 +986,9 @@ ms.locfileid: "39209048"
 
 ### <a name="VS_Update2"></a>Visual Studio 2015 Update 2 的符合性改进
 
-- **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误** 由于缺少对表达式 SFINAE 的支持，编译器的早期版本无法分析 `decltype` 说明符中特定类型的表达式。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
+- 可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误：由于缺少对表达式 SFINAE 的支持，早期版本的编译器无法分析 decltype 说明符中特定类型的表达式。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
 
-   此新行为分析包含尚未声明类型的 `decltype` 表达式时，将导致编译器发出编译器错误 C2039。
+   这种新行为分析包含尚未声明类型的 decltype 表达式时，将导致编译器发出编译器错误 C2039。
 
    ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -1030,7 +1022,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-   此新行为分析 `decltype` 表达式时（该表达式缺少将依赖名称指定为类型所必须使用的关键字 `typename`），编译器将发出编译器警告 C4346 和编译器错误 C2923。
+   在这个新行为分析 decltype 表达式时（将依赖名称指定为类型时必须使用 关键字 typename，而此表达式未使用），编译器将发出编译器警告 C4346 和编译器错误 C2923。
 
    ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -1081,7 +1073,7 @@ ms.locfileid: "39209048"
     };
    ```
 
-- `volatile` **成员变量将防止出现隐式定义的构造函数和赋值运算符** 编译器的早期版本允许具有 `volatile` 成员变量的类自动生成默认复制/移动构造函数和默认复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。  当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
+- `volatile` 成员变量将防止出现隐式定义的构造函数和赋值运算符：在早期版本的编译器，具有 volatile 成员变量的类可自动生成默认的复制/移动构造函数和默认的复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 如果尝试构造或复制联合（或包含匿名联合的类）而不显示定义它们是错误的，将导致编译器发出编译器错误 C2280。
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1150,7 +1142,6 @@ ms.locfileid: "39209048"
     };
 
     void A::func() const {}  // C2511
-
    ```
 
    示例（之后）
@@ -1162,10 +1153,9 @@ ms.locfileid: "39209048"
     };
 
     void A::func() {}  // removed const
-
    ```
 
-- **WinRT 代码中不允许枚举的前向声明**（仅影响 /ZW） 为 Windows 运行时 (WinRT) 编译的代码不允许前向声明 `enum` 类型，这与使用 /clr 编译器开关为 .Net Framework 编译托管 C++ 代码时相似。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
+- WinRT 代码中不允许枚举的前向声明（仅影响 `/ZW`） ：为 Windows 运行时 (WinRT) 编译的代码禁止前向声明 enum 类型，这与使用 `/clr` 编译器开关为 .Net Framework 编译托管 C++ 代码时相似。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
 
    ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -1203,7 +1193,6 @@ ms.locfileid: "39209048"
 
    ```cpp
               // forward declaration of CustomEnum removed
-
     namespace A {
       public enum class CustomEnum: int32
       {
@@ -1221,7 +1210,7 @@ ms.locfileid: "39209048"
     };
    ```
 
-- **重载的非成员 new 运算符和 delete 运算符可能不是以内联方式声明的**（默认开启等级 1 (/W1)） 当以内联方式声明非成员 new 运算符和 delete 运算符函数时，编译器的早期版本不会发出警告。 以这种方式编写的代码格式不正确（无需诊断），并且可能由于不匹配的 new 和 delete 运算符（尤其是与调整了大小的释放共同使用时）而导致难以诊断的内存问题。   编译器现将发出编译器警告 C4595 以帮助识别以这种方式编写的代码。
+- 重载的非成员 new 运算符和 delete 运算符可能不是以内联方式声明的（默认开启等级 1 (`/W1`)）：当以内联方式声明非成员 new 运算符和 delete 运算符函数时，编译器的早期版本不发出警告。 按方式编写的代码格式有误（无需诊断），并且可能由于不匹配的 new 和 delete 运算符（尤其是与调整了大小的释放共同使用时）而导致难以诊断的内存问题。 编译器现将发出编译器警告 C4595 以帮助识别以这种方式编写的代码。
 
    ```Output
     warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
@@ -1230,7 +1219,7 @@ ms.locfileid: "39209048"
    示例（之前）
 
    ```cpp
-              inline void* operator new(size_t sz)  // warning C4595
+    inline void* operator new(size_t sz)  // warning C4595
     {
       ...
     }
@@ -1239,7 +1228,7 @@ ms.locfileid: "39209048"
    示例（之后）
 
    ```cpp
-              void* operator new(size_t sz)  // removed inline
+    void* operator new(size_t sz)  // removed inline
     {
       ...
     }
@@ -1249,7 +1238,7 @@ ms.locfileid: "39209048"
 
 ### <a name="VS_Update3"></a>Visual Studio 2015 Update 3 的符合性改进
 
-- **现在，std::is_convertable 可以检测自我赋值**（标准库） 以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在，当应用于具有已删除或私有复制构造函数的类类型时，`std::is_convertable<>::value` 已正确设置为 `false`。
+- **现在，std::is_convertable 可以检测自我赋值**（标准库） 以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在，当应用于具有已删除或私有复制构造函数的类类型时，`std::is_convertable<>::value` 已正确设置为 false。
 
    没有与此更改相关联的编译器诊断。
 
@@ -1273,7 +1262,7 @@ ms.locfileid: "39209048"
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
    ```
 
-   在以前版本的 Visual C++ 中，此示例底部的静态断言可传递，因为 `std::is_convertable<>::value` 错误地设置为 `true`。 现在，`std::is_convertable<>::value` 正确设置为 `false`，使静态断言失败。
+   在先前版本的 Visual C++ 中，此示例底部的静态断言可传递，因为 `std::is_convertable<>::value` 错误地设置为 true。 现在，`std::is_convertable<>::value` 正确设置为 false，使静态断言失败。
 
 - **默认设置或已删除的日常复制和移动构造函数遵从访问说明符** 对于默认设置或已删除的日常复制和移动构造函数的访问说明符，早期版本的编译器在允许调用之前不进行检查。 这种旧行为不正确，也不符合 C++ 标准。 在某些情况下，这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 现在，编译器检查默认设置或已删除的日常复制和移动构造函数的访问说明符，以确定是否能调用它，如果不能，则发出编译器警告 C2248。
 
@@ -1319,7 +1308,7 @@ ms.locfileid: "39209048"
     }
    ```
 
-- **弃用属性化 ATL 代码支持**（默认开启等级 1 (/W1)） 早期版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
+- 弃用属性化 ATL 代码支持（默认开启等级 1 (`/W1`)）：早期版本的编译器支持属性化的 ATL 代码。 由于下一阶段将删除[从 Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -1338,7 +1327,6 @@ ms.locfileid: "39209048"
 
    ```cpp
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};
-
    ```
 
    有时需要创建 IDL 文件以避免使用已弃用的 ATL 属性，如以下示例代码所示
@@ -1415,7 +1403,7 @@ ms.locfileid: "39209048"
     };
    ```
 
-- **预编译标头 (PCH) 文件和不匹配的 #include 指令**（仅影响 /Wall /WX）使用预编译标头 (PCH) 文件时，以前版本的编译器接受 `-Yc` 和 `-Yu` 编译之间的源文件中不匹配的 `#include` 指令。 编译器不再接受以这种方式编写的代码。   使用 PCH 文件时，编译器现将发出编译器警告 CC4598 以帮助识别不匹配的 `#include` 指令。
+- 预编译标头 (PCH) 文件和不匹配的 #include 指令（仅影响 `/Wall` `/WX`）：使用预编译标头 (PCH) 文件时，先前版本的编译器接受 `-Yc` 和 `-Yu` 编译之间的源文件中不匹配的 `#include` 指令。 编译器不再接受以这种方式编写的代码。 使用 PCH 文件时，编译器现将发出编译器警告 CC4598 以帮助识别不匹配的 `#include` 指令。
 
    ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -1457,7 +1445,7 @@ ms.locfileid: "39209048"
     #include "c.h"
    ```
 
-- **预编译标头 (PCH) 文件和不匹配的包含目录**（仅影响 /Wall /WX） 使用预编译标头 (PCH) 文件时，对于 `-Yc` 和 `-Yu` 编译之间的编译器，以前版本的编译器接受不匹配的包含目录 (`-I`) 命令行参数。 编译器不再接受以这种方式编写的代码。   使用 PCH 文件时，编译器现将发出编译器警告 CC4599 以帮助识别不匹配的包含目录 (`-I`) 命令行参数。
+- 预编译标头 (PCH) 文件和不匹配的包含目录（仅影响 `/Wall` `/WX`）：使用预编译标头 (PCH) 文件时，对于 `-Yc` 和 `-Yu` 编译之间的编译器，先前版本的编译器接受不匹配的包含目录 (`-I`) 命令行参数。 编译器不再接受以这种方式编写的代码。   使用 PCH 文件时，编译器现将发出编译器警告 CC4599 以帮助识别不匹配的包含目录 (`-I`) 命令行参数。
 
    ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -1500,9 +1488,11 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 - 复合文本。
 - 指定的初始值设定项。
 - 组合带有代码的声明。
-- 字符串文本转换为可修改的值可通过使用新编译器选项 /Zc:strictStrings 禁用。 在 C++98 中，已弃用从字符串文本转换至 char\*（和将宽字符串文本转换为 wchar_t\*）。 在 C++11 中，已将转换完全移除。 虽然编译器可以严格遵循该标准，但提供了 /Zc:strictStrings 选项，以便控制转换。 默认情况下，该选项是关闭的。 注意，当您在调试模式下使用此选项，STL 将无法编译。
-- rvalue/lvalue 引用转换。 通过 rvalue 引用，C++11 可清晰地区分 lvalue 和 rvalue。 过去，在特定强制转换方案中，编译器不提供此功能。 添加了新编译器选项 /Zc:rvalueCast，以使编译器与 C++ 语言的工作文件相符（请参阅第 5.4 节，[expr.cast]/1）。 未指定选项时，该默认行为与 Visual Studio 2012 中的相同。
-  - 请注意：默认函数不支持使用 =default 逐一请求成员移动构造函数和赋值运算符。
+- 字符串文本转换为可修改的值可通过使用新编译器选项 `/Zc:strictStrings` 禁用。 在 C++98 中，已弃用从字符串文本转换至 `char*`（和将宽字符串文本转换为 `wchar_t*`）。 在 C++11 中，已将转换完全移除。 虽然编译器可以严格遵循该标准，但提供了 `/Zc:strictStrings` 选项，以便您控制转换。 默认情况下，该选项是关闭的。 注意，当您在调试模式下使用此选项，STL 将无法编译。
+- rvalue/lvalue 引用转换。 通过 rvalue 引用，C++11 可清晰地区分 lvalue 和 rvalue。 过去，在特定强制转换方案中，编译器不提供此功能。 已添加新编译器选项（`/Zc:rvalueCast`），以使编译器与 C++ 语言的工作文件相符（请参阅第 5.4 节 [expr.cast]/1）。 未指定选项时，该默认行为与 Visual Studio 2012 中的相同。
+
+> [!NOTE]
+> 对于默认函数，不支持使用 =default 请求逐一移动成员的构造函数和移动赋值运算符。
 
 ### <a name="c99-libraries"></a>C99 库
 
@@ -1535,7 +1525,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 - 自动向量化现在可以识别和优化更多 C++ 模式，加快代码运行速度。
 - ARM 平台和 Atom 微型体系结构代码质量增强功能。
 - 添加了 __vectorcall 调用约定。 使用 __vectorcall 调用约定来传递向量类型参数，从而使用向量寄存器。
-- 新链接器选项。 使用 /Gw（编译器）和 /Gy（汇编程序）开关，优化链接器以生成更精简的二进制代码。
+- 新链接器选项。 使用 `/Gw`（编译器）和 `/Gy`（汇编）开关，使链接器优化生成精简二进制文件。
 - C++ AMP 共享内存支持，可减少或消除 CPU 和 GPU 间的数据复制。
 
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>按配置优化选项 (PGO) 增强
@@ -1545,12 +1535,14 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 ### <a name="windows-runtime-app-development-support"></a>Windows 运行时应用开发支持
 
-- **支持值结构中的装箱类型。** 现在可以使用可以为空的字段（例如与 IBox\<int>^ 相对的 int）来定义值类型。这意味着字段可以具有值，或者与 nullptr 相等。
+- **支持值结构中的装箱类型。** 现可使用可为空的字段（例如与 int 相对的 `IBox<int>^`）来定义值类型。这意味着字段可以具有值，或者与 nullptr 相等。
 - **更丰富的异常信息。** C++/CX 支持能够在整个应用程序二进制接口 (ABI) 中获取和传播各种异常信息的新 Windows 错误模型；这包括调用堆栈和自定义消息字符串。
 - **Object::ToString() 现在为虚拟。** 现在可以重写用户定义的 Windows 运行时引用类型中的 ToString。
 - **支持已弃用的 API。** 公共 Windows 运行时 API 现在可标记为已弃用并可收到一条自定义消息，此消息显示为生成警告并可提供迁移指南。
 - **调试器改进。** 支持本机/JavaScript 互操作调试、Windows 运行时异常诊断和异步代码调试（windows 运行时和 PPL）。
-  - 请注意：除本节中介绍的 C++ 特定功能和增强功能外，Visual Studio 中的其他增强功能还可帮助你编写更好的 Windows 运行时应用。
+
+> [!NOTE]
+> 除本节中介绍的 C++ 特定功能和增强功能外，Visual Studio 中的其他增强功能还可帮助你编写更好的 Windows 运行时应用。
 
 ### <a name="diagnostics-enhancements"></a>诊断增强功能
 
@@ -1589,7 +1581,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 **查找所有引用**在后台引用显示出文本匹配列表后自动对其进行解析和筛选。
 
-**基于上下文的成员列表筛选。** 无法访问的成员已从 IntelliSense 成员列表中筛选出来。 例如，私有成员不会在成员列表中显示，除非您修改了实现此类型的代码。 当成员列表中处于打开状态时，您可以按 Ctrl+J 移除筛选的一个级别（仅适用于当前成员列表窗口）。 可以再次按 Ctrl+J 移除文本筛选和显示每个成员。
+**基于上下文的成员列表筛选。** 无法访问的成员已从 IntelliSense 成员列表中筛选出来。 例如，私有成员不会在成员列表中显示，除非您修改了实现此类型的代码。 当成员列表中处于打开状态时，可按 Ctrl+J 来移除筛选的一个级别（仅适用于当前成员列表窗口）。 可再次按 Ctrl+J 移除文本筛选项并显示每个成员。
 
 **参数帮助滚动。** 参数帮助工具提示中显示的函数签名现在将根据实际输入参数的数量而改变，而不是只显示一个随机的签名且不根据当前上下文更新。 函数显示在嵌套函数上时，参数也会适当地帮助函数。
 
@@ -1612,7 +1604,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 #### <a name="standard-template-library"></a>标准模板库
 
 - 对新 STL 标头的支持：\<atomic>、\<chrono>、\<condition_variable>、\<filesystem>、\<future>、\<mutex>、\<ratio> 和 \<thread>。
-- 为了优化内存资源的使用，现在减小了容器。 例如，在具有默认设置的 x86 发布模式下，std::vector 从 Visual Studio 2010 中的 16 字节缩小为 Visual Studio 2012 中的 12 字节，此外 std::map 也从 Visual Studio 2010 中的 16 字节缩小为 Visual Studio 2012 中的 8 字节。
+- 为了优化内存资源的使用，现在减小了容器。 例如，在具有默认设置的 x86 发布模式下，`std::vector` 从 Visual Studio 2010 中的 16 字节缩小为 Visual Studio 2012 中的 12 字节，而 `std::map` 也从 Visual Studio 2010 中的 16 字节缩小为 Visual Studio 2012 中的 8 字节。
 - 作为 C++ 11 标准的一个可选项，SCARY 迭代器也得到了实现。
 
 #### <a name="other-c11-enhancements"></a>其他 C + + 11 增强功能
@@ -1639,7 +1631,7 @@ func1(Element::Helium); // OK
 ### <a name="compiler-and-linker"></a>编译器和链接器
 
 - **自动向量化**。 编译器会分析代码中的循环，如果可能，还会发出使用向量寄存器的指令和显示在所有新式处理器上的指令。 这使循环运行得更快。 （处理器指令被称为 SSE，即流式处理 SIMD 扩展）。 此项优化自动应用，无需启用或请求。
-- **自动并行化程序**。 编译器可以分析编码中的循环并发出指令，向多个核心或处理器分散计算。 这能让循环运行得更快。 此项优化不会自动启用，必须进行请求。 在许多情况下，这都有助于在想并行化的循环之前将 #pragma 循环 (hint_parallel(N)) 包含在你的代码中。
+- **自动并行化程序**。 编译器可以分析编码中的循环并发出指令，向多个核心或处理器分散计算。 这能让循环运行得更快。 此项优化不会自动启用，必须进行请求。 在许多情况下，这都有助于在想并行化的循环之前将 `#pragma loop(hint_parallel(N))` 循环 (hint_parallel(N)) 包含在你的代码中。
 - 自动向量化和自动并行化可以共同协作以便向多个核心分散计算，并且每个核心上的代码都使用该核心的向量寄存器。
 
 ### <a name="new-in-visual-studio-2012-update-1"></a>Visual Studio 2012 Update 1 中的新功能
@@ -1670,7 +1662,7 @@ Visual Studio 2010 中引入了像并行模式库这样功能强大的 C++ 并�
 
 ##### <a name="general-parallel-debugging-enhancements"></a>并行调试的常规增强功能
 
-除了并行任务窗口和并行堆栈窗口以外，Visual Studio 2012 还提供了新的 并行监视窗口，以便跨所有线程和进程检查表达式的值，以及对结果进行排序和筛选。 也可使用可视化工具来扩展窗口，并可利用跨所有工具窗口的全新多进程支持。
+除了并行任务窗口和并行堆栈窗口以外，Visual Studio 2012 还提供了新的并行监视窗口，以便跨所有线程和进程检查表达式的值，以及对结果进行排序和筛选。 也可使用可视化工具来扩展窗口，并可利用跨所有工具窗口的全新多进程支持。
 
 ### <a name="ide"></a>IDE
 
@@ -1686,13 +1678,13 @@ Visual Studio 2010 中引入了像并行模式库这样功能强大的 C++ 并�
 
 **C++ 代码构造。** 主干代码可用于 switch、if-else、for 循环以及列表成员下拉列表中的其他基本代码构造。 从列表中选择一部分代码插入到你的代码中，然后填写需要的逻辑。 还可以创建自己的自定义代码片段，以便在编辑器中使用。
 
-**列表成员的增强功能。** 在代码编辑器中键入代码时，列表成员下拉列表将自动显示。 结果是筛选过的，所以只会显示与你的类型相关的成员。 你可以控制列表成员采用的筛选逻辑，要实现此操作，请在“文本编辑器”>“C/C++”>“高级”下的“选项”对话框中操作。
+**列表成员的增强功能。** 在代码编辑器中键入代码时，列表成员下拉列表将自动显示。 结果是筛选过的，所以只会显示与你的类型相关的成员。 可控制成员列表采用的筛选逻辑。为此，请在“文本编辑器” > “C/C++” > “高级”下的“选项”对话框中操作。
 
 **语义着色。** 现在默认对类型、枚举、宏和其他 C++ 标记进行着色。
 
-**引用突出显示。** 选择一个符号现在将在当前文件中突出显示该符号的所有实例。 按 Ctrl+Shift+向上键或 Ctrl+Shift+向下键可以在突出显示的引用之间移动。 可以在“文本编辑器”>“C/C++”>“高级”下的“选项”对话框中关闭此功能。
+**引用突出显示。** 选择一个符号现在将在当前文件中突出显示该符号的所有实例。 按 Ctrl+Shift+向上键或 Ctrl+Shift+向下键可以在突出显示的引用之间移动。 可在“文本编辑器” > “C/C++” > “高级”下的“选项”对话框中关闭此功能。
 
-### <a name="application-lifecycle-management-tools"></a>应用程序生命周期管理 工具
+### <a name="application-lifecycle-management-tools"></a>应用程序生命周期管理工具
 
 #### <a name="static-code-analysis"></a>静态代码分析
 
@@ -1702,50 +1694,49 @@ Visual Studio 2012 的大部分版本都包含代码分析。 Professional 版�
 
 - 新的并发警告可确保在多线程 C/C++ 程序中使用正确的锁定方式，帮助规避并发 Bug。 分析器检测潜在的争用条件、锁定顺序反转、调用方/被调用方锁定协定冲突、不匹配的同步操作和其他并发 Bug。
 - 你可以通过使用规则集指定想应用于代码分析的 C++ 规则。
-- 在代码分析窗口，你可以将取消显示所选警告的杂注插入到源代码中。
+- 在“代码分析”窗口，可将取消显示所选警告的杂注插入到源代码中。
 - 通过使用新版的 Microsoft 源代码注释语言 (SAL) 描述函数使用参数的方式、关于参数做出的假设以及对完成结果的保证，可以增强静态代码分析的准确性和完整性。
 - 支持 64 位 C++ 项目。
 
 #### <a name="updated-unit-test-framework"></a>已更新的单元测试框架
 
-可使用 Visual Studio 中新的 C++ 单元测试框架编写 C++ 单元测试。 可通过在“新建项目”对话框的“Visual C++ 类别”下找到 C++ 单元测试项目模板，将新的单元测试项目添加到现有 C++ 解决方案。 开始在生成的 TEST_METHOD 代码（在 Unittest1.cpp 文件中存根）中编写你的单元测试。 编写测试代码时，生成解决方案。 若要运行测试，请从“视图”>“其他窗口”>“单元测试管理器”打开“单元测试资源管理器”窗口，然后在所需测试用例的快捷菜单上选择“运行所选测试”。 测试运行完成以后，可以在同一窗口查看结果和其他堆栈跟踪信息。
+可使用 Visual Studio 中新的 C++ 单元测试框架编写 C++ 单元测试。 可通过在“新建项目”对话框的“Visual C++ 类别”下找到 C++ 单元测试项目模板，将新的单元测试项目添加到现有 C++ 解决方案。 开始在生成的 TEST_METHOD 代码（在 Unittest1.cpp 文件中存根）中编写你的单元测试。 编写测试代码时，生成解决方案。 要运行测试，请通过“视图” > “其他窗口” > “单元测试管理器”打开“单元测试资源管理器”窗口，然后在所需测试用例的快捷菜单上选择“运行所选测试”。 测试运行完成以后，可以在同一窗口查看结果和其他堆栈跟踪信息。
 
 #### <a name="architecture-dependency-graphs"></a>体系结构依赖项关系图
 
-为了更好地理解代码，可以对二进制、类、命名空间和解决方案中的包含文件生成依赖项关系图。 在菜单栏上，选择体系结构、生成依赖项关系图，然后为解决方案或包含文件生成依赖项关系图。 生成关系图后，可以展开各个节点进行浏览，还可以在节点间移动来了解依赖关系，并可通过在节点的快捷菜单上选择“查看内容”来浏览源代码。 若要对包含文件生成依赖项关系图，请在 *.cpp 源代码文件或 *.h 头文件的快捷菜单上选择“生成包含文件的关系图”。
+为了更好地理解代码，可以对二进制、类、命名空间和解决方案中的包含文件生成依赖项关系图。 在菜单栏上，选择“体系结构” > “生成依赖项关系图”，然后选择“针对解决方案”或“针对包含文件”，生成依赖项关系图。 生成关系图后，可展开各个节点进行浏览，可在节点间移动来了解依赖关系，也可在节点的快捷菜单上选择“查看内容”来浏览源代码。 要对包含文件生成依赖项关系图，请在 *.cpp 源代码文件或 *.h 头文件的快捷菜单上选择“生成包含文件的关系图”。
 
 #### <a name="architecture-explorer"></a>体系结构资源管理器
 
-使用体系结构资源管理器，可以浏览 C++ 解决方案、项目或文件中的资产。 在菜单栏上，选择体系结构、窗口、体系结构管理器。 可以选择一个感兴趣的节点，例如“类视图”。 这时工具窗口的右侧会展开一个命名空间列表。 如果选择一个命名空间，会出现一个新列，显示此命名空间中的类、结构和枚举列表。 你可以继续浏览这些资产，也可以返回最左侧的那一列开始另一项查询。 查看如何使用体系结构资源管理器查找代码。
+可使用体系结构资源管理器浏览 C++ 解决方案、项目或文件中的资产。 在菜单栏上，选择“体系结构” > “窗口” > “体系结构资源管理器”。 可选择一个感兴趣的节点，例如“类视图”。 这时工具窗口的右侧会展开一个命名空间列表。 如果选择一个命名空间，会出现一个新列，显示此命名空间中的类、结构和枚举列表。 你可以继续浏览这些资产，也可以返回最左侧的那一列开始另一项查询。 查看如何使用体系结构资源管理器查找代码。
 
 #### <a name="code-coverage"></a>代码覆盖率
 
-已更新代码覆盖率，在运行时动态检测二进制。 这降低了配置开销，提升了性能。 你还可以从 C++ 应用的单元测试收集代码覆盖率数据。 如果已创建 C++ 单元测试，可以使用测试单元资源管理器来查看解决方案中的测试。 若要运行单元测试并为它们收集代码覆盖率数据，请在单元测试资源管理器中选择“分析代码覆盖率”。 你可以在“代码覆盖率结果”窗口（在菜单栏上，选择“测试”>“窗口”>“代码覆盖率结果”）中检查代码覆盖率结果。
+已更新代码覆盖率，在运行时动态检测二进制。 这降低了配置开销，提升了性能。 你还可以从 C++ 应用的单元测试收集代码覆盖率数据。 如果已创建 C++ 单元测试，可使用测试单元资源管理器来查看解决方案中的测试。 要运行单元测试并为其收集代码覆盖率数据，请在单元测试资源管理器中选择“分析代码覆盖率”。 可在“代码覆盖率结果”窗口（在菜单栏上选择“测试” > “窗口” > “代码覆盖率结果”）中查看代码覆盖率结果。
 
 ## <a name="whats-new-for-c-in-visual-studio-2010"></a>Visual Studio 2010 中 C++ 的新增功能
 
 ### <a name="c-compiler-and-linker"></a>C++ 编译器和链接器
 
-**auto 关键字。** auto 关键字有了新的用途。 使用 auto 关键字的默认含义声明一种变量，该变量的类型是从变量声明中的初始化表达式推导出来的。 通过 /Zc:auto 编译器选项，可调用新版或旧版的 auto 关键字的含义。
+**auto 关键字。** auto 关键字有了新的用途。 使用 auto 关键字的默认含义声明一种变量，该变量的类型是从变量声明中的初始化表达式推导出来的。 通过 `/Zc:auto` 编译器选项，可调用 auto 关键字的新旧含义。
 
 **decltype 类型说明符。** decltype 类型说明符返回指定表达式的类型。 结合使用 decltype 类型说明符和 auto 关键字可声明复杂的或仅为编译器所知的类型。 例如，将这个组合用于声明返回类型取决于其模板自变量类型的模板函数。 或者声明调用其他函数且返回被调用函数类型的模板函数。
 
-**Lambda 表达式。** Lambda 函数有函数体但没有名称。 lambda 函数兼具函数指针和函数对象的最佳特性。
-将 lambda 函数本身用作模板函数参数而不是函数对象，或者将其与 auto 关键字组合使用，可以声明类型为 lambda 的变量。
+**Lambda 表达式。** Lambda 函数有函数体但没有名称。 lambda 函数兼具函数指针和函数对象的最佳特性。 将 lambda 函数本身用作模板函数参数而不是函数对象，或者将其与 auto 关键字组合使用，可以声明类型为 lambda 的变量。
 
 **Rvalue 引用。** Rvalue 引用声明符 (&&) 声明对 rvalue 的引用。 通过 rvalue 引用，可以使用更多语义和完美转移编写出更有效的构造函数、函数和模板。
 
 **static_assert 声明。** static_assert 声明在编译时测试软件断言，这与在运行时进行测试的其他断言机制不同。 如果断言失败，则编译将失败，并且会发出特定的错误消息。
 
-**nullptr 和 __nullptr 关键字。** 通过 Visual C++ 编译器，可以对本机代码或托管代码使用 nullptr 关键字。 nullptr 关键字指示对象句柄、内部指针或本机指针类型不指向对象。 如果使用 /clr 编译器选项，编译器会将 nullptr 解释为托管代码；如果不使用 /clr 选项，则解释为本机代码。
-Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者仅适用于本机代码。 如果使用 /clr 编译器选项编译本机 C/C++ 代码，则编译器无法确定 nullptr 关键字是本机项还是托管项。 若要使编译器清楚地了解你的意图，请使用 nullptr 关键字指定托管项，使用 __nullptr 指定本机项。
+**nullptr 和 __nullptr 关键字。** 通过 Visual C++ 编译器，可以对本机代码或托管代码使用 nullptr 关键字。 nullptr 关键字指示对象句柄、内部指针或本机指针类型不指向对象。 如果使用 `/clr` 编译器选项，编译器会将 nullptr 解释为托管代码；如果不使用 `/clr` 选项，则解释为本机代码。
+Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者仅适用于本机代码。 如果使用 `/clr` 编译器选项编译本机 C/C++ 代码，则编译器无法确定 nullptr 关键字是本机项还是托管项。 若要使编译器清楚地了解你的意图，请使用 nullptr 关键字指定托管项，使用 __nullptr 指定本机项。
 
-**/Zc: trigraphs 编译器选项。** 默认情况下，禁用对三元组的支持。 使用 /Zc: trigraphs 编译器选项以启用三元祖支持。
+**/Zc: trigraphs 编译器选项。** 默认情况下，禁用对三元组的支持。 使用 `/Zc:trigraphs` 编译器选项实现三元祖支持。
 三元祖由两个连续的问号 (??) 及后跟的唯一的第三个字符组成。 编译器将三元组替换为相应的标点字符。 例如，编译器会将三元祖 ??= 替换为字符 #（数字字符）。 对于使用的字符集未包含某些标点字符的 C 源文件，可在其中使用三元组。
 
 **新的按配置优化选项。** PogoSafeMode 是一个新的按配置优化选项，使用此选项可以指定在优化应用程序时使用安全模式还是快速模式。 安全模式是线程安全的，但比快速模式的运行速度慢。 快速模式是默认行为。
 
-**新的公共语言运行时 (CLR) 选项/clr:nostdlib。** 为 /clr（公共语言运行时编译）新增了一个选项。 如果包含同一库的不同版本，则会发出编译器错误。 使用该新选项可以排除默认的 CLR 库，以便程序可以使用指定版本。
+**新的公共语言运行时 (CLR) 选项/clr:nostdlib。** 为 `/clr`（公共语言运行时编译）新增了一个选项。 如果包含同一库的不同版本，则会发出编译器错误。 使用该新选项可以排除默认的 CLR 库，以便程序可以使用指定版本。
 
 **新的杂注指令 detect_mistmatch。** 杂注指令 detect_mismatch 能够在文件中放置一个要与其他具有相同名称的标记进行比较的标记。 如果同一个名称存在多个值，则链接器将发出错误。
 
@@ -1768,12 +1759,12 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 **标准 C++ 库。** 下表描述了对标准 C++ 库进行的很多更改。
 
 - 使用了新的 rvalue 引用 C++ 语言功能来为标准模板库中的很多函数实现移动语义和完美转移。 移动语义和完美转移极大地提高了分配或指派变量或参数操作的性能。
-- 还使用了 rvalue 引用来实现新的 unique_ptr 类，这个新类是一个比 auto_ptr 类更安全的智能指针类型。 unique_ptr 类可移动但不可复制，在不影响安全的情况下实现严格的所有权语义，并且可以很好地与可识别 rvalue 引用的容器结合使用。 auto_ptr 类已被弃用。
-- 新增了 15 个函数，例如在 \<algorithm> 标头中添加了 find_if_not、copy_if 和 is_sorted。
+- 还使用了 rvalue 引用来实现新的 `unique_ptr` 类，此类是一个比 `auto_ptr` 类更安全的智能指针类型。 `unique_ptr` 类可移动但不可复制，在不影响安全的情况下实现严格的所有权语义，并且可以很好地与可识别 rvalue 引用的容器结合使用。 `auto_ptr` 类已弃用。
+- 新增了 15 个函数，例如在 \<algorithm> 标头中添加了 `find_if_not`、`copy_if` 和 `is_sorted`。
 - 在 \<memory> 标头中，利用新的 make_shared 函数可以在构造某个对象的同时轻松、可靠、高效地创建指向该对象的共享指针。
 - \<forward_list> 标头支持单独链接的列表。
-- 新的 cbegin、cend、crbegin 和 crend 成员函数提供可在整个容器中向前或向后移动的 const_iterator。
-- \<system_error> 标头和相关模板支持处理低级别系统错误。 exception_ptr 类的成员可用于在线程之间传输异常。
+- 新的 `cbegin`、`cend`、`crbegin` 和 `crend` 成员函数提供可在整个容器中前后移动的 `const_iterator`。
+- \<system_error> 标头和相关模板支持处理低级别系统错误。 `exception_ptr` 类的成员可用于在线程之间传输异常。
 - \<codecvt> 标头支持将 Unicode 字符的各种编码转换为其他编码。
 - \<allocators> 标头定义了可帮助基于节点的容器分配和释放内存块的多种模板。
 - 对 \<random> 标头进行了大量更新。
@@ -1786,9 +1777,9 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 **高 DPI 识别。** 默认情况下，MFC 应用程序现在可以识别高 DPI。 如果应用程序可以识别高 DPI（每英寸像素数），则操作系统可将窗口、文本和其他 UI 元素缩放至当前屏幕分辨率。 这意味着，缩放的图像更可能是经过正确布局的，而不是经过剪切或像素化的。
 
-**重启管理器。** 重新启动管理器会在应用程序意外关闭或重新启动时，自动保存文档并重新启动该应用程序。 例如，在自动更新关闭了某个应用程序后，可以使用重新启动管理器来启动该应用程序。 有关如何将应用程序配置为使用重启管理器的更多信息，请参阅“如何：添加重启管理器支持”。
+**重启管理器。** 重新启动管理器会在应用程序意外关闭或重新启动时，自动保存文档并重新启动该应用程序。 例如，在自动更新关闭了某个应用程序后，可以使用重新启动管理器来启动该应用程序。 要详细了解如何将应用程序配置为使用重启管理器，请参阅“如何：添加重启管理器支持”。
 
-**CTaskDialog。** 可以使用 CTaskDialog 类来代替标准 AfxMessageBox 消息框。 CTaskDialog 类能够显示和收集比标准消息框更多的信息。
+**CTaskDialog。** `CTaskDialog` 类可用来替代标准的 `AfxMessageBox` 消息框。 `CTaskDialog` 类显示和收集的信息与标准消息框的多。
 
 #### <a name="safeint-library"></a>SafeInt 库
 
@@ -1800,7 +1791,7 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 #### <a name="analyze-warnings"></a>/analyze 警告
 
-已从 C 运行时 (CRT)、MFC 和 ATL 库中删除了大多数 /analyze（企业代码分析）警告。
+已从 C 运行时 (CRT)、MFC 和 ATL 库中删除了大多数 `/analyze`（企业代码分析）警告。
 
 #### <a name="animation-and-d2d-support"></a>动画和 D2D 支持
 
@@ -1814,7 +1805,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 
 **改进的 IntelliSense 错误。** IDE 可更好地检测可能会损失 IntelliSense 的错误，并在错误下显示红色波浪下划线。 此外，IDE 还会在“错误列表窗口”中报告 IntelliSense 错误。 若要显示导致问题的代码，请在“错误列表窗口”中双击错误。
 
-**#include 自动完成功能。** IDE 支持 #include 关键字自动完成。 在键入 #include 时，IDE 会创建一个包含有效头文件的下拉列表框。 如果继续键入文件名，则 IDE 会基于输入内容筛选该列表。 可以随时从该列表中选择要包含的文件。 这样可快速地包含文件，而无需知道确切的文件名。
+**#include 自动完成功能。** IDE 支持 `#include` 关键字自动完成。 在键入 `#include` 时，IDE 会创建一个包含有效头文件的下拉列表框。 如果继续键入文件名，则 IDE 会基于输入内容筛选该列表。 可以随时从该列表中选择要包含的文件。 这样可快速地包含文件，而无需知道确切的文件名。
 
 **定位到。** 可以利用“导航到”对话框搜索项目中与指定字符串匹配的所有符号和文件。 随着你在搜索字符串中键入其他字符，搜索结果会即时进行修改。 “结果”反馈字段会告知已找到的项数，并帮助决定是否要限制搜索。 “种类/范围”、“位置”和“预览”反馈字段可帮助排除名称类似的项。 此外，你可以扩展此功能以支持其他编程语言。
 
@@ -1828,7 +1819,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 
 **MFC 类向导。** Visual C++ 2010 恢复了备受好评的 MFC 类向导工具。 通过使用 MFC 类向导，可以很方便地向项目中添加类、消息和变量，而不必手动修改源文件集。
 
-**ATL 控件向导。** ATL 控件向导不再自动填充 ProgID 字段。 如果某个 ATL 控件没有 ProgID，则其他工具可能无法使用该控件。 例如，“插入活动控件”对话框就是一种需要控件具有 ProgID 的工具。 有关此对话框的更多信息，请参阅“插入 ActiveX 控件对话框”。
+**ATL 控件向导。** ATL 控件向导不再自动填充 `ProgID` 字段。 如果某个 ATL 控件没有 `ProgID`，则其他工具可能无法使用该控件。 例如，“插入活动控件”对话框需要控件具有 `ProgID`。 有关此对话框的更多信息，请参阅“插入 ActiveX 控件对话框”。
 
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 
@@ -1838,7 +1829,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 
 ### <a name="visual-c-integrated-development-environment-ide"></a>Visual C++ 集成开发环境 (IDE)
 
-- 在 ATL、MFC 和 Win32 应用程序中创建的对话框现在符合 Windows Vista 样式指南。 使用 Visual Studio 2008 创建新项目时，插入应用程序中的所有对话框将符合 Windows Vista 样式指南。 如果重新编译使用早期版本的 Visual Studio 创建的项目，所有现有对话框将保持以前的外观。 有关如何将对话框插入应用程序的更多信息，请参阅“对话框编辑器”。
+- 在 ATL、MFC 和 Win32 应用程序中创建的对话框现在符合 Windows Vista 样式指南。 使用 Visual Studio 2008 创建新项目时，插入应用程序中的所有对话框将符合 Windows Vista 样式指南。 如果重新编译使用早期版本的 Visual Studio 创建的项目，所有现有对话框将保持以前的外观。 要详细了解如何将对话框插入应用程序，请参阅“对话框编辑器”。
 
 - ATL 项目向导现在具有一个用于为所有用户注册组件的选项。 从 Visual Studio 2008 开始，ATL 项目向导创建的 COM 组件和类型库都在注册表的 HKEY_CURRENT_USER 节点中注册，除非选择的是为所有用户注册组件。
 - ATL 项目向导不再提供用于创建属性化 ATL 项目的选项。 从 Visual Studio 2008 开始，ATL 项目向导不再具有用于更改新项目属性化状态的选项。 该向导创建的所有新 ATL 项目现在都未经属性化。
@@ -1859,9 +1850,9 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 #### <a name="mfc-library"></a>MFC 库
 
 - Windows Vista 支持公共控件。 已经添加了 18 个新类或现有类中的 150 多个方法，用于支持 Windows Vista 中的功能，或改进当前 MFC 类中的功能。
-- 使用新的 CNetAddressCtrl 类可以输入和验证 IPv4 和 IPv6 地址或 DNS 名称。
-- 新的 CPagerCtrl 类简化了 Windows 页导航控件的使用。
-- 新的 CSplitButton 类简化了 Windows 拆分按钮控件的使用以选择默认或可选操作。
+- 新的 `CNetAddressCtrl` 类让你能够输入和验证 IPv4 和 IPv6 地址或 DNS 名称。
+- 新的 `CPagerCtrl` 类简化了 Windows 页导航控件的使用。
+- 新的 `CSplitButton` 类让你能更轻松地使用 Windows 拆分按钮控件来选择默认或可选操作。
 
 #### <a name="c-support-library"></a>C++ 支持库
 
@@ -1882,16 +1873,16 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 - 不再支持与 ATL 服务器相关的属性。 编译器不再支持曾与 ATL 服务器直接相关的一些属性。 有关已删除属性的完整列表，请参阅“重大更改”。
 - 编译器支持 Intel 内核微架构。 编译器包含在代码生成过程中对 Intel 内核微架构进行的优化。 该优化默认启用，并且不能禁用，因为它也用于 Pentium 4 和其他处理器。
 - 内部函数支持更新的 AMD 和 Intel 处理器。 多条新的内部函数指令在新型 AMD 和 Intel 处理器中提供更强大的功能。 有关新增内部函数的更多信息，请参阅“流式处理 SIMD 扩展 3 的补充指令”、“流式处理 SIMD 扩展 4 的指令”、“SSE4A 和高级位操作内部函数”、“AES 内部函数”、“_mm_clmulepi64_si128”和“__rdtscp”。
-- __cpuid 函数已更新。 __cpuid、__cpuidex 函数现在支持最新修订版的 AMD 和 Intel 处理器的多项新功能。 __cpuidex 内部函数是新增的，并且能从最新处理器收集更多信息。
-- /MP 编译器选项缩短了总生成时间。 /MP 选项通过创建多个同时编译文件的进程，显著减少了编译多个源文件需要的总时间。 此选项在支持超线程、多处理器或多内核的计算机上尤其有用。
-- /Wp64 编译器选项和 __w64 关键字已弃用。 /Wp64 编译器选项和 __w64 关键字（用于检测 64 位可移植性问题）已弃用，并将从未来版本的编译器中删除。 请改用面向 64 位平台的 Visual C++ 编译器来代替此编译器选项和关键字。
-- /Qfast_transcendentals 生成先验函数的内联代码。
-- /Qimprecise_fwaits 在使用 /fp:except 编译器选项时删除 try 块内部的 fwait 命令。
+- `__cpuid` 函数已更新。 `__cpuid` 和 `__cpuidex` 函数现支持最新修订版的 AMD 和 Intel 处理器的多项新功能。 `__cpuidex` 内部函数是新增的，它能从最新处理器收集更多信息。
+- `/MP` 编译器选项缩短了总生成时间。 `/MP` 选项通过创建多个同时编译文件的进程，显著减少了编译多个源文件需要的总时间。 此选项在支持超线程、多处理器或多内核的计算机上尤其有用。
+- `/Wp64` 编译器选项和 __w64 关键字已弃用。 `/Wp64` 编译器选项和 __w64 关键字（用于检测 64 位可移植性问题）已弃用，并将从未来版本的编译器中删除。 请改用面向 64 位平台的 Visual C++ 编译器来代替此编译器选项和关键字。
+- `/Qfast_transcendentals` 生成先验函数的内联代码。
+- `/Qimprecise_fwaits` 在使用 `/fp:except` 编译器选项时删除 try 块内部的 fwait 命令。
 
 ### <a name="linker-changes"></a>链接器的更改
 
-- 用户帐户控制信息现在由 Visual C++ 链接器 (link.exe) 嵌入到可执行文件的清单文件中。 默认情况下启用此功能。   有关如何禁用此功能或如何修改默认行为的更多信息，请参阅“/MANIFESTUAC（将 UAC 信息嵌入到清单中）”。
-- 链接器现在具有 /DYNAMICBASE 选项，用于启用 Windows Vista 的地址空间布局随机化功能。 此选项修改可执行文件标头，以指示是否应在加载时对应用程序进行随机变基。
+- 用户帐户控制信息现在由 Visual C++ 链接器 (link.exe) 嵌入到可执行文件的清单文件中。 默认情况下启用此功能。 要详细了解如何禁用此功能或如何修改默认行为，请参阅 `/MANIFESTUAC`（将 UAC 信息嵌入到清单中）。
+- 链接器现具有 `/DYNAMICBASE` 选项，它用于实现 Windows Vista 的地址空间布局随机化功能。 此选项修改可执行文件标头，以指示是否应在加载时对应用程序进行随机变基。
 
 ## <a name="whats-new-for-c-in-visual-studio-2005"></a>Visual Studio 2005 中 C++ 的新增功能
 
@@ -1935,71 +1926,71 @@ __sptr、__uptr
 此版本对编译器进行了重大更改。
 
 - 64 位本机和跨平台编译器。
-- 添加了 /analyze（企业代码分析）编译器选项。
-- 添加了 /bigobj 编译器选项。
-- 添加了 /clr:pure、/clr:safe 和 /clr:oldSyntax。 （后来已在 Visual Studio 2015 中弃用，并已从 Visual Studio 2017 中删除。）
+- 添加了 `/analyze`（企业代码分析）编译器选项。
+- 添加了 `/bigobj` 编译器选项。
+- 添加了 `/clr:pure`、`/clr:safe` 和 `/clr:oldSyntax`。 （后来已在 Visual Studio 2015 中弃用，并已从 Visual Studio 2017 中删除。）
 - 已弃用的编译器选项：此版本中很多编译器选项已弃用，请参阅“已弃用的编译器选项”以获取详细信息。
-- 减少了 /clr 代码中的双重形式转换；请参阅“双重形式转换 (C++)”以获取详细信息。
-- /EH（异常处理模型）或 /EHs 将不能再用于捕捉非引发性异常；请使用 /EHa。
-- 添加了 /errorReport（报告内部编译器错误）编译器选项。
-- 添加了 /favor（64 位优化）编译器选项。
-- 添加了 /FA、/Fa（列表文件）编译器选项。
-- 添加了 /FC（所诊断源代码文件的完整路径）编译器选项。
-- 添加了 /fp（指定浮点行为）编译器选项。
-- 添加了 /G（处理器优化）选项编译器选项。
-- 添加了 /G（处理器优化）选项编译器选项。
-- 删除了 /G3、/G4、/G5、/G6、/G7 和 /GB 编译器选项。 该编译器现在使用“混合模式”，会尝试为所有体系结构创建最佳输出文件。
-- /Gf 已被移除。 请改用 /GF（消除重复的字符串）。
-- /GL（全程序优化）现与 /CLRHEADER 兼容。
-- 现在 /GR 默认为打开状态。
-- /GS（缓冲区安全检查）现在可对容易受到攻击的指针参数提供安全保护。 现在 /GS 默认为打开状态。 /GS 现在也可用于通过 /clr（公共语言运行时编译）编译为 MSIL 的函数。
-- 添加了 /homeparams（将寄存器参数复制到堆栈）编译器选项。
-- 添加了 /hotpatch（创建可热修补的映像）编译器选项。
-- 更新了内联函数试探法；请参阅 inline、__inline、__forceinline 和 inline_depth 以获取详细信息
+- 减少了 `/clr` 代码中的双重形式转换；详情请参阅“双重形式转换 (C++)”。
+- `/EH`（异常处理模型）或 `/EHs` 无法再用于捕捉非引发性异常；请使用 `/EHa`。
+- 添加了 `/errorReport`（报告内部编译器错误）编译器选项。
+- 添加了 `/favor`（64 位优化）编译器选项。
+- 添加了 `/FA`、`/Fa`（列表文件）编译器选项。
+- 添加了 `/FC`（所诊断源代码文件的完整路径）编译器选项。
+- 添加了 `/fp`（指定浮点行为）编译器选项。
+- 添加了 `/G`（处理器优化）选项编译器选项。
+- 添加了 `/G`（处理器优化）选项编译器选项。
+- 删除了 `/G3`、`/G4`、`/G5`、`/G6`、`/G7` 和 `/GB` 编译器选项。 该编译器现在使用“混合模式”，会尝试为所有体系结构创建最佳输出文件。
+- 删除了 `/Gf`。 请改用 `/GF`（消除重复的字符串）。
+- `/GL`（全程序优化）现与 `/CLRHEADER` 兼容。
+- `/GR` 现默认为打开状态。
+- `/GS`（缓冲区安全检查）现可对容易受到攻击的指针参数提供安全保护。 `/GS` 现默认为打开状态。 `/GS` 现在也可用于通过 `/clr`（公共语言运行时编译）编译为 MSIL 的函数。
+- 添加了 `/homeparams`（将寄存器参数复制到堆栈）编译器选项。
+- 添加了 `/hotpatch`（创建可热修补的映像）编译器选项。
+- 更新了内联函数试探法；详情请参阅 inline、__inline、__forceinline 和 inline_depth
 - 添加了很多内部函数，而且很多以前未记录的内部函数现在都已记录。
 - 默认情况下，任何对 new 的调用失败都将引发异常。
-- 删除了 /ML 和 /MLd 编译器选项。 Visual C++ 不再支持单线程静态链接的 CRT 库支持。
-- 编译器已实现命名返回值优化，当你用 /O1、/O2（最小化大小、最大化速度）、/Og（全局优化）和 /Ox（完全优化）进行编译时会启用此优化。
-- 删除了 /Oa 编译器选项，它将被忽略且没有提示；请使用 noalias 或 restrict__declspec 修饰符来指定编译器命名别名的方式。
-- 删除了 /Op 编译器选项。 请改用 /fp（指定浮点行为）。
+- 删除了 `/ML` 和 `/MLd` 编译器选项。 Visual C++ 不再支持单线程静态链接的 CRT 库支持。
+- 编译器实现了命名返回值优化。当你使用 `/O1`、`/O2`（最小化大小、最大化速度）、`/Og`（全局优化）和 `/Ox`（完全优化）进行编译时，会启用此优化。
+- 删除了 `/Oa` 编译器选项，它将被忽略且没有提示；请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
+- 删除了 `/Op` 编译器选项。 请改用 `/fp`（指定浮点行为）。
 - Visual C++ 现在支持 OpenMP。
-- 添加了 /openmp（启用 OpenMP 2.0 支持）编译器选项。
-- 删除了 /Ow 编译器选项，它将被忽略且没有提示。 请使用 noalias 或 restrict__declspec 修饰符来指定编译器命名别名的方式。
+- 添加了 `/openmp`（启用 OpenMP 2.0 支持）编译器选项。
+- 删除了 `/Ow` 编译器选项，它将被忽略且没有提示。 请使用 `noalias` 或 `restrict__declspec` 修饰符来指定编译器命名别名的方式。
 
 ### <a name="profile-guided-optimizations"></a>按配置文件优化
 
-- /QI0f 已被移除。
-- /QIfdiv 已被移除。
-- 添加了 /QIPF_B（B CPU 单步执行的勘误表）编译器选项。
-- 添加了 /QIPF_C（C CPU 单步执行的勘误表）编译器选项。
-- 添加了 /QIPF_fr32（不使用高 96 浮点寄存器）编译器选项。
-- 添加了 /QIPF_noPIC（生成依赖于位置的代码）编译器选项。
-- 添加了 /QIPF_restrict_plabels（假定运行时不创建任何函数）编译器选项。
+- 删除了 `/QI0f`。
+- 删除了 `/QIfdiv`。
+- 添加了 `/QIPF_B`（B CPU 单步执行的勘误表）编译器选项。
+- 添加了 `/QIPF_C`（C CPU 单步执行的勘误表）编译器选项。
+- 添加了 `/QIPF_fr32`（不使用高 96 浮点寄存器）编译器选项。
+- 添加了 `/QIPF_noPIC`（生成依赖于位置的代码）编译器选项。
+- 添加了 `/QIPF_restrict_plabels`（假定运行时不创建任何函数）编译器选项。
 
 ### <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
-- /vd（禁用构造置换）现在允许你对正在构造（使用 /vd2）的对象使用 dynamic_cast 运算符
-- /YX 编译器选项已被移除。 请改用 /Yc（创建预编译头文件） 或 /Yu（使用预编译头文件）。 如果从生成配置中删除 /YX，且不提供替换项，则可能会加快生成速度。
-- 现在 /Zc:forScope 默认为打开状态。
-- 现在 /Zc:wchar_t 默认为打开状态。
-- /Zd 编译器选项已被移除。 不再支持仅限行号的调试信息。 请改用 /Zi（有关更多信息，请参见 /Z7、/Zi、/ZI（调试信息格式））。
-- /Zg 现在仅对 C 源代码文件有效，对 C++ 源代码文件无效。
-- 添加了 /Zx（调试经过优化的 Itanium 代码）编译器选项。
+- `/vd`（禁用构造置换）现在允许你对正在构造（使用 /vd2）的对象使用 dynamic_cast 运算符
+- 删除了 `/YX` 编译器选项。 请改用 `/Yc`（创建预编译头文件） 或 `/Yu`（使用预编译头文件）。 如果从生成配置中删除 `/YX`，且不提供替换项，则可能会加快生成速度。
+- `/Zc:forScope` 现默认为打开状态。
+- `/Zc:wchar_t` 现默认为打开状态。
+- 删除了 `/Zd` 编译器选项。 不再支持仅限行号的调试信息。 请改用 `/Zi`（详情请参见 /Z7、/Zi、/ZI（调试信息格式））。
+- `/Zg` 现仅对 C 源代码文件有效，对 C++ 源代码文件无效。
+- 添加了 `/Zx`（调试经过优化的 Itanium 代码）编译器选项。
 
 ### <a name="new-language-features"></a>新语言功能
 
 - Attributeattribute 现已弃用。
-- 添加了 appdomain__declspec 修饰符。
-- 添加了 __clrcall 调用约定。
-- 借助于已弃用的 (C++)declspec 修饰符，用户可以在试图访问已弃用的类或函数时，指定将在编译时显示的字符串。
+- 添加了 `appdomain__declspec` 修饰符。
+- 添加了 `__clrcall` 调用约定。
+- 借助于已弃用的 (C++) declspec 修饰符，用户可以在试图访问已弃用的类或函数时，指定将在编译时显示的字符串。
 - dynamic_cast 运算符有重大更改。
 - 本机枚举现在允许指定基础类型。
-- 添加了 jitintrinsicdeclspec 修饰符。
-- 添加了 noaliasdeclspec 修饰符。
-- 添加了 process__declspec 修饰符。
+- 添加了 `jitintrinsicdeclspec` 修饰符。
+- 添加了 `noaliasdeclspec` 修饰符。
+- 添加了 `process__declspec` 修饰符。
 - abstract、override 和 sealed 对本机编译有效。
 - 添加了 __restrict 关键字。
-- 添加了 restrictdeclspec 修饰符。
+- 添加了 `restrictdeclspec` 修饰符。
 - __thiscall 现在是关键字。
 - __unaligned 关键字现已记录。
 - volatile (C++) 已更新与优化相关的行为。
@@ -2007,11 +1998,11 @@ __sptr、__uptr
 ### <a name="new-preprocessor-features"></a>预处理器的新增功能
 
 - 添加了预定义宏 __CLR_VER。
-- 注释 (C/C++) 杂注现在接受 /MANIFESTDEPENDENCY 作为链接器注释。 注释的 exestr 选项现已弃用。
-- embedded_idl 属性（#import 指令）现在具有可选参数。
-- fenv_access 杂注
-- float_control 杂注
-- fp_contract 杂注
+- 注释 (C/C++) 杂注现在接受 `/MANIFESTDEPENDENCY` 作为链接器注释。 注释的 exestr 选项现已弃用。
+- `embedded_idl` 属性（`#import` 指令）现具有可选参数。
+- `fenv_access` 杂注
+- `float_control` 杂注
+- `fp_contract` 杂注
 - 如果杂注的托管和非托管部分中存在全局变量，则不会按照声明全局变量的顺序初始化全局变量。 这是一项潜在的重大更改，例如，如果使用托管的全局变量来初始化非托管全局变量，则需要一个构造完整的托管对象。
 - 用 init_seg 指定的部分现为只读状态，而不是早期版本中的读/写。
 - inline_depth 默认值现为 16。 在 Visual C++ .NET 2003 中，默认值 16 也有效。
@@ -2019,61 +2010,61 @@ __sptr、__uptr
 - 添加了预定义宏 _M_CEE、_M_CEE_PURE 和 _M_CEE_SAFE，请参阅“预定义宏”。
 - 添加了预定义宏 _M_IX86_FP。
 - 添加了预定义宏 _M_X64。
-- make_public 杂注
-- 更新了托管和非托管的杂注语法（现在有推送和弹出）
-- 现在 #using 指令在所有 /clr 编译中隐式引用 mscorlib.dll。
+- `make_public` 杂注
+- 更新了 `managed`、`unmanaged` 杂注语法（现具有 `push` 和 `pop`）
+- `#using` 指令现在所有 `/clr` 编译中隐式引用 mscorlib.dll。
 - 添加了预定义宏 _OPENMP。
 - 更新了优化杂注，a 和 w 不再是有效参数。
 - 添加了 no_registry#import 属性。
-- 添加了 region、endregion 杂注
+- 添加了 `region`、`endregion` 杂注
 - 添加了预定义宏 _VC_NODEFAULTLIB。
 - 现在实现了 Variadic 宏。
-- vtordisp 已弃用，并将从 Visual C++ 的未来版本移除。
-- warning 杂注现在具有 suppress 说明符。
+- `vtordisp` 已弃用，并将从 Visual C++ 的未来版本中移除。
+- `warning` 杂注现在具有 suppress 说明符。
 
 ### <a name="new-linker-features"></a>链接器的新增功能
 
 - 现在允许将模块（非程序集 MSIL 输出文件）作为链接器的输入内容。
-- 添加了 /ALLOWISOLATION（清单查找）链接器选项。
-- 更新了 /ASSEMBLYRESOURCE（嵌入托管资源），现在可以指定程序集中的资源名称，以及指定该资源在程序集中为私有。
-- 添加了 /CLRIMAGETYPE（指定 CLR 映像的类型）链接器选项。
-- 添加了 /CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）链接器选项。
-- 添加了 /CLRTHREADATTRIBUTE（设置 CLR 线程属性）链接器选项。
-- 添加了 /CLRUNMANAGEDCODECHECK（添加 SupressUnmanagedCodeSecurityAttribute）链接器选项。
-- 添加了 /ERRORREPORT（报告内部链接器错误）链接器选项。
-- /EXETYPE 链接器选项已被移除。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 EXETYPE 关键字不再对模块定义文件有效。
-- 添加了 /FUNCTIONPADMIN（创建可热修补的映像）链接器选项。
-- 使用 /clr 编译的模块现在支持 /LTCG 链接器选项。 还更新了 /LTCG ，支持按配置优化。
-- 添加了 /MANIFEST（创建并行程序集清单）链接器选项。
-- 添加了 /MANIFESTDEPENDENCY（指定清单依赖项）连接器选项。
-- 添加了 /MANIFESTFILE（命名清单文件）链接器选项。
-- /MAPINFO:LINES 链接器选项已被移除。
-- 添加了 /NXCOMPAT（与数据执行保护兼容）链接器选项。
-- 添加了 /PGD（为按配置文件优化指定数据库）链接器选项。
-- 添加了 /PROFILE（性能工具分析器）链接器选项。
-- /SECTION（指定节属性）链接器选项现在支持属性求反，而不再支持 L 或 D（与 VxD 相关）属性。
+- 添加了 `/ALLOWISOLATION`（清单查找）链接器选项。
+- 更新了 `/ASSEMBLYRESOURCE`（嵌入托管资源），现可指定程序集中的资源名称，还可在程序集中将此资源指定为“私有”。
+- 添加了 `/CLRIMAGETYPE`（指定 CLR 映像的类型）链接器选项。
+- 添加了 `/CLRSUPPORTLASTERROR`（为 PInvoke 调用保留上次的错误代码）链接器选项。
+- 添加了 `/CLRTHREADATTRIBUTE`（设置 CLR 线程属性）链接器选项。
+- 添加了 `/CLRUNMANAGEDCODECHECK`（添加 SupressUnmanagedCodeSecurityAttribute）链接器选项。
+- 添加了 `/ERRORREPORT`（报告内部链接器错误）链接器选项。
+- 删除了 `/EXETYPE` 链接器选项。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 EXETYPE 关键字不再对模块定义文件有效。
+- 添加了 `/FUNCTIONPADMIN`（创建可热修补的映像）链接器选项。
+- 使用 `/clr` 编译的模块现支持 `/LTCG` 链接器选项。 还更新了 `/LTCG`，使其支持按配置优化。
+- 添加了 `/MANIFEST`（创建并行程序集清单）链接器选项。
+- 添加了 `/MANIFESTDEPENDENCY`（指定清单依赖项）连接器选项。
+- 添加了 `/MANIFESTFILE`（命名清单文件）链接器选项。
+- 删除了 `/MAPINFO:LINES` 链接器选项。
+- 添加了 `/NXCOMPAT`（与数据执行保护兼容）链接器选项。
+- 添加了 `/PGD`（为按配置文件优化指定数据库）链接器选项。
+- 添加了 `/PROFILE`（性能工具分析器）链接器选项。
+- `/SECTION`（指定节属性）链接器选项现支持属性求反，而不再支持 L 或 D（与 VxD 相关）属性。
 - 编译器和链接器中的 Unicode 支持
-- /VERBOSE（打印进度消息）链接器选项现在也接受 ICF 和 REF。
-- /VXD 链接器选项已被移除。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 VXD 关键字不再对模块定义文件有效。
-- /WS 链接器选项已被移除。 /WS 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 /WS。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
-- /WX（将链接器警告视为错误）链接器选项现已记录。
+- `/VERBOSE`（打印进度消息）链接器选项现还接受 ICF 和 REF。
+- 删除了 `/VXD` 链接器选项。 链接器不再支持创建 Windows 95 和 Windows 98 设备驱动程序。 使用适当的 DDK 来创建这些设备驱动程序。 VXD 关键字不再对模块定义文件有效。
+- 删除了 `/WS` 链接器选项。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
+- `/WX`（将链接器警告视为错误）链接器选项现已记录。
 
 ### <a name="new-linker-utility-features"></a>链接器实用工具的新增功能
 
-- 添加了 /ALLOWISOLATION editbin 选项
+- 添加了 `/ALLOWISOLATION` editbin 选项
 - 删除了 DESCRIPTION 模块定义文件语句。 链接器不再支持生成虚拟设备驱动程序。
-- 在 bscmake.exe、dumpbin.exe、editbin.exe 和 lib.exe 中添加了 /ERRORREPORT 选项。
-- 添加了 /LTCG lib 选项。
-- 添加了 /NXCOMPAT editbin 选项。
-- 添加了 /RANGE dumpbin 选项。
-- 添加了 /TLS dumpbin 选项。
-- /WS editbin 选项已被移除。 /WS 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 /WS。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
+- 在 bscmake.exe、dumpbin.exe、editbin.exe 和 lib.exe 中添加了 `/ERRORREPORT` 选项。
+- 添加了 `/LTCG` lib 选项。
+- 添加了 `/NXCOMPAT` editbin 选项。
+- 添加了 `/RANGE` dumpbin 选项。
+- 添加了 `/TLS` dumpbin 选项。
+- 删除了 `/WS` editbin 选项。 `/WS` 用于修改针对 Windows NT 4.0 的映像。 可使用 IMAGECFG.exe -R 文件名代替 `/WS`。 可在 Windows NT 4.0 CD-ROM 上找到 IMAGECFG.exe，路径为 SUPPORT\DEBUG\I386\IMAGECFG.EXE。
 - 添加了 /WX[:NO] lib 选项。
 
 ### <a name="new-nmake-features"></a>NMAKE 的新增功能
 
-- 添加了 /ERRORREPORT。
-- 添加了 /G。
+- 添加了 `/ERRORREPORT`。
+- 添加了 `/G`。
 - 更新了预定义规则。
 - 递归宏中记录的 $(MAKE) 宏现在提供 nmake.exe 的完整路径。
 
@@ -2082,7 +2073,7 @@ __sptr、__uptr
 - MASM 表达式现在为 64 位值。 在早期版本中，MASM 表达式为 32 位值。
 - 现在指令 __asm int 3 可使函数被编译到本机中。
 - ALIAS (MASM) 现已记录。
-- 添加了 /ERRORREPORT ml.exe 和 ml64.exe 选项。
+- 添加了 `/ERRORREPORT` ml.exe 和 ml64.exe 选项。
 - .FPO 现已记录。
 - Visual C++ 2005 中将不提供 H2INC.exe。 如果需要继续使用 H2INC，请使用 Visual C++ 早期版本中的 H2INC.exe。
 - 添加了运算符 IMAGEREL。
@@ -2097,7 +2088,7 @@ __sptr、__uptr
 - .SAVEXMM128
 - .SETFRAME。此外，已用仅适用于 x64 的语法更新了 PROC 指令。
 - 添加了 MMWORD 指令
-- /omf（ML.exe 命令行选项）现表示 /c。 ML.exe 不支持链接 OMF 格式对象。
+- `/omf`（ML.exe 命令行选项）现表示 `/c`。 ML.exe 不支持链接 OMF 格式对象。
 - SEGMENT 指令现支持附加属性。
 - 添加了运算符 SECTIONREL。
 - 添加了 XMMWORD 指令
@@ -2107,39 +2098,39 @@ __sptr、__uptr
 - 添加了一些函数的安全版本。 这些函数以更好的方式处理错误，并强制对缓冲区实施更严格的控制以避免常见的安全漏洞。 新的安全版本由 _s 后缀标识。
 - 已弃用许多函数现有的安全性较低的版本。 若要禁用弃用警告，请定义 _CRT_SECURE_NO_WARNINGS。
 - 许多现有函数现在会验证其参数，并在传递了无效参数时调用无效参数处理程序。
-- 许多现有函数现在在过去没有设置 errno 的地方对其进行了设置。
-- 添加了具有整数类型的 typedef errno_t。 每当函数返回类型或参数处理来自 errno 的错误代码时，就会使用 errno_t。 errno_t 替换 errcode。
-- 依赖于区域设置的函数现在有了新的版本，这些版本将区域设置作为参数，而不是使用当前的区域设置。 这些新的函数具有 _l 后缀。 添加了一些新函数，用于区域设置对象。 新的函数包括 _get_current_locale、_create_locale 和 _free_locale。
+- 许多现有函数现在之前未设置 `errno` 的位置对其进行了设置。
+- 添加了具有整数类型的 typedef `errno_t`。 每当函数返回类型或参数处理来自 `errno` 的错误代码时，就会使用 `errno_t`。 `errno_t` 替代 `errcode`。
+- 依赖于区域设置的函数现在有了新的版本，这些版本将区域设置作为参数，而不是使用当前的区域设置。 这些新的函数具有 _l 后缀。 添加了一些新函数，用于区域设置对象。 新函数包括 `_get_current_locale`、`_create_locale` 和 `_free_locale`。
 - 添加了新函数，以支持锁定和解锁文件句柄。
-- _spawn 系列函数不会像在早期版本中那样，在成功时将 errno 重置为零。
-- 提供了可用于指定参数使用顺序的 printf 系列函数版本。
-- 现已支持 Unicode 文本格式。 函数 _open 支持 _O_TEXTW、_O_UTF8 和 _O_UTF16 属性。 fopen 函数支持指定 Unicode 格式的“ccs=ENCODING”方法。
-- 现在提供以托管代码 (MSIL) 生成的 CRT 库的新版本，可在用 /clr（公共语言运行时编译）选项进行编译时使用。
-- _fileinfo 已被移除。
-- time_t 的默认大小现在为 64 位，可以将 time_t 和一些时间函数的范围扩展到 3000 年。
-- CRT 现在支持按每个线程进行区域设置。 添加了 _configthreadlocale 函数以支持此功能。
-- 添加了 _statusfp2 和 __control87_2 函数，以允许对 x87 和 SSE2 浮点处理器上的浮点控制字进行访问和控制。
-- 添加了 _mkgmtime 和 _mkgmtime64 函数，以支持将时间 (struct tm) 转换为格林威治标准时间 (GMT)。
-- 对 swprintf 和 vswprintf 进行了更改以更好地符合标准。
+- `_spawn` 系列函数不会像在早期版本中那样，在成功时将 errno 重置为零。
+- 提供了可用于指定参数使用顺序的 `printf` 系列函数版本。
+- 现已支持 Unicode 文本格式。 函数 `_open` 支持 _O_TEXTW、_O_UTF8 和 _O_UTF16 属性。 `fopen` 函数支持指定 Unicode 格式的“ccs=ENCODING”方法。
+- 现提供以托管代码 (MSIL) 生成的 CRT 库的新版本，可在用 `/clr`（公共语言运行时编译）选项进行编译时使用。
+- 删除了 _fileinfo。
+- `time_t` 的默认大小现为 64 位，可将 `time_t` 和一些时间函数的范围扩展到 3000 年。
+- CRT 现在支持按每个线程进行区域设置。 添加了 `_configthreadlocale` 函数，使其支持此功能。
+- 添加了 `_statusfp2` 和 `__control87_2` 函数，让你能够对 x87 和 SSE2 浮点处理器上的浮点控制字进行访问和控制。
+- 添加了 `_mkgmtime` 和 `_mkgmtime64` 函数，以支持将时间 (struct tm) 转换为格林威治标准时间 (GMT)。
+- 更改了 `swprintf` 和 `vswprintf`，使其更好地符合标准。
 - 新的头文件 INTRIN.H 提供了某些内部函数的原型。
-- fopen 函数现在具有一个 N 属性。
-- _open 函数现在具有一个 _O_NOINHERIT 属性。
-- atoi 函数现在会在溢出时返回 INT_MAX 并将 errno 设置为 ERANGE。 早期版本中未定义溢出行为。
-- printf 系列函数支持根据 ANSI C99 标准使用格式类型说明符 %a 和 %A 实现的十六进制浮点输出。
-- printf 系列现在支持“ll”(long long) 大小前缀。
-- 优化了 _controlfp 函数，以提供更好的性能。
+- `fopen` 函数现在具有一个 N 属性。
+- `_open` 函数现在具有一个 _O_NOINHERIT 属性。
+- `atoi` 函数现会在溢出时返回 INT_MAX 并将 `errno` 设置为 ERANGE。 早期版本中未定义溢出行为。
+- `printf` 系列函数支持根据 ANSI C99 标准使用格式类型说明符 %a 和 %A 实现的十六进制浮点输出。
+- `printf` 系列现在支持“ll”(long long) 大小前缀。
+- 优化了 `_controlfp` 函数，以提供更好的性能。
 - 添加了某些函数的调试版本。
-- 添加了 _chgsignl 和 _cpysignl（long double 版本）。
-- 将 _locale_t 类型添加到了类型表。
-- 添加了新的 _countof Macro 宏，用于计算数组中的元素数量。
+- 添加了 `_chgsignl` 和 `_cpysignl`（长双精度版本）。
+- 将 `_locale_t` 类型添加到了类型表。
+- 添加了新的 `_countof` 宏，用于计算数组中的元素数量。
 - 在每个函数主题中，添加了一节有关 .NET Framework 等效项的内容。
 - 一些字符串函数现在可以选择在输出缓冲区太小时截断字符串，而不会失败；请参阅“_TRUNCATE”。
-- _set_se_translator 现在需要使用 /EHa 编译器选项。
-- 现在，在 /Za 下（对于 C 代码）和手动设置 __STDC__（对于 C++ 代码）时，fpos_t 会变为 __int64。 以前它是一个结构。
+- `_set_se_translator` 现需要使用`/EHa` 编译器选项。
+- 现在，在 `/Za` 下（对于 C 代码）和手动设置 STDC（对于 C++ 代码）时，`fpos_t` 会变为 __int64。 以前它是一个结构。
 - _CRT_DISABLE_PERFCRIT_LOCKS 可以提高单线程程序的 I/O 性能。
-- 在对符合 ISO C++ 名称的优选中，弃用了 POSIX 名称（例如，使用 _getch 而不是 getch）。
+- 在对符合 ISO C++ 名称的优选中，弃用了 POSIX 名称（例如使用 `_getch` 而不是 `getch`）。
 - 新的链接选项 .obj 文件可用于纯模式
-- _recalloc 合并了 realloc 和 calloc 的功能。
+- `_recalloc` 将 `realloc` 和 `calloc` 功能组合在一起。
 
 ## <a name="whats-new-for-c-in-visual-studio-2003"></a>Visual Studio 2003 中 C++ 的新增功能
 
@@ -2150,13 +2141,13 @@ __sptr、__uptr
 - 添加了一个演练，演示如何移植现有本机应用程序以使用 Managed Extensions for C++：“演练：移植现有本机 C++ 应用程序，使其能与 .NET Framework 组件进行交互”。
 - 现在可以在值类型的方法上创建委托。
 - Visual C++ .NET 2003 已极大地增强了编译器与 C++ 标准的符合性。
-- 添加了 /arch 编译器选项。
-- 已弃用 /Gf，并将从 Visual C++ 的下一个版本中删除。
-- 添加了 /G7 编译器选项。
-- 已增强 /GS 编译器选项以帮助保护本地变量，防止直接缓冲区溢出。
-- /noBool 编译器选项已被移除。 编译器现在允许 bool 在 C++ 源代码文件中仅作为关键字（而不是标识符）出现。
+- 添加了 `/arch` 编译器选项。
+- 已弃用 `/Gf`，并将从 Visual C++ 的下一版本中删除。
+- 添加了 `/G7` 编译器选项。
+- 改进了 `/GS` 编译器选项，使其帮助保护本地变量，防止直接缓冲区溢出。
+- 删除了 `/noBool` 编译器选项。 编译器现在允许 bool 在 C++ 源代码文件中仅作为关键字（而不是标识符）出现。
 - long long 类型现在可用作 __int64 的 typedef。请注意，在 CRT 中还不支持 longlong。
-- /Zm 编译器选项现在指定预编译标头内存分配限制。
+- `/Zm` 编译器选项现在指定预编译标头内存分配限制。
 - _InterlockedCompareExchange 内部函数现已记录。
 - _InterlockedDecrement 内部函数现已记录。
 - _InterlockedExchange 内部函数现已记录。
@@ -2181,7 +2172,7 @@ __sptr、__uptr
 
 ### <a name="masm"></a>MASM
 
-天界了 .SAFESEH 指令和 /safeseh ml.exe 选项。
+添加了 .SAFESEH 指令和 `/safeseh` ml.exe 选项。
 
 ## <a name="see-also"></a>请参阅
 

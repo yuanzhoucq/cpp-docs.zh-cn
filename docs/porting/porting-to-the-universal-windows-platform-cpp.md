@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55fbe59128aef6fbc7df20dd14afd102b493f2fd
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322493"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578331"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
@@ -27,9 +27,9 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 本主题包含以下用于将代码移植到 UWP 的过程。
 
-1. [将 Windows 8.1 应用商店应用移植到 UWP](#BK_81StoreApp)
+- [将 Windows 8.1 应用商店应用移植到 UWP](#BK_81StoreApp)
 
-2. [将 Windows 8.1 运行时组件移植到 UWP](#BK_81Component)
+- [将 Windows 8.1 运行时组件移植到 UWP](#BK_81Component)
 
 如果具有经典的桌面 Win32 DLL，并且想要从 UWP 应用程序调用它，也可以执行此操作。 使用此类过程，可以为现有经典 Windows 桌面 C++ 应用程序或跨平台标准 C++ 代码创建 UWP 用户界面层。 请参阅[如何在通用 Windows 平台应用中使用现有 C++ 代码](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
 
@@ -41,9 +41,9 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 如果尚未完成此操作，则在 Visual Studio 2017 中打开 Windows 8.1 应用项目，并按照说明来升级项目文件。
 
-   需要在 Visual Studio 安装程序中安装 Windows 8.1 工具。 如果没有安装这些工具，请从“程序和功能”窗口启动 Visual Studio 安装程序，选择 Visual Studio 2017，并在安装程序窗口中选择“修改”。 找到 Windows 8.1 工具，确保其已选中，然后选择“确定”。
+   需要在 Visual Studio 安装程序中安装 Windows 8.1 工具。 如果没有安装这些工具，请从“程序和功能”窗口启动 Visual Studio 安装程序，选择 Visual Studio 2017，再在安装程序窗口中选择“修改”。 找到 Windows 8.1 工具，确保已将其选中，然后选择“确定”。
 
-2. 打开“项目属性”窗口，在 C++ 的“常规”下，将平台工具集设置为 Visual Studio 2017 的工具集 v141。
+2. 打开“项目属性”窗口，在“C++” > “常规”下将平台工具集设置为 Visual Studio 2017 的工具集 v141。
 
 3. 将该项目生成为 Windows 8.1 项目，并解决任何生成错误。 在此阶段的任何错误可能是由于生成工具和库中的重大更改所引起的。 有关可能会影响代码的更改的详细说明，请参阅 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)。
 
@@ -51,21 +51,21 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 4. 使用空白模板创建一个新的通用 Windows 应用项目。 你可能想要将其命名为与你现有的项目相同的名称，但是若要执行此操作，项目必须存在于不同的目录中。
 
-5. 关闭解决方案，然后使用 Windows 资源管理器或命令行，将 Windows 8.1 项目中的代码文件（具有扩展名 .cpp、.h 和 .xaml）复制到在步骤 1 中为该项目创建的项目文件 (.vcxproj) 所在的文件夹中。 请不要复制 Package.appxmanifest 文件，并且如果拥有 Windows 8.1 桌面和手机的单独代码，则选择其中一个代码首先进行移植（之后需要执行一些工作以适应另一个代码）。 请确保复制子文件夹及其内容。 如出现系统提示，请选择替换具有相同名称的所有文件。
+5. 关闭解决方案，然后使用 Windows 资源管理器或命令行将 Windows 8.1 项目中的代码文件（具有扩展名 .cpp、.h 和 .xaml）复制到在步骤 1 中为该项目创建的项目文件 (.vcxproj) 所在的文件夹中。 请不要复制 Package.appxmanifest 文件，并且如果拥有 Windows 8.1 桌面和手机的单独代码，则选择其中一个代码首先进行移植（之后需要执行一些工作以适应另一个代码）。 请确保复制子文件夹及其内容。 如出现系统提示，请选择替换具有相同名称的所有文件。
 
-6. 重新打开该解决方案，并从项目节点的快捷菜单中选择 **“添加”、“现有项”** 。 选择所有复制的文件，任何已存在于项目中的文件除外。
+6. 重新打开该解决方案，并从项目节点的快捷菜单中选择“添加” > “现有项”。 选择所有复制的文件，任何已存在于项目中的文件除外。
 
    检查所有子文件夹，并确保也在其中添加这些文件。
 
-7. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映应用类的命名空间名称。
+7. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映 `App` 类的命名空间名称。
 
-   Package.appxmanifest 文件中的 **“入口点”** 字段包含应用类的范围名称，其中包括包含应用类的命名空间。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
+   Package.appxmanifest 文件中的“入口点”字段包含 `App` 类的范围名称，其中的命名空间包含 `App` 类。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
 
 8. 生成项目并解决由不同版本的 Windows SDK 之间的重大更改所引发的任何生成错误。
 
 9. 在本地桌面上运行该项目。 验证不存在部署错误，并且应用的布局看起来合理，能在桌面上正常工作。
 
-10. 如果有单独的代码文件和 .xaml 用于其他设备（如 Windows Phone 8.1），则检查此代码并确定其与标准设备的差异。 如果其差异仅存在于布局中，则可能能够在 xaml 中使用“视觉状态管理器”根据屏幕大小自定义显示。 对于其他区别，可使用运用以下 #if 语句的代码中的条件部分。
+10. 如果有单独的代码文件和 .xaml 用于其他设备（如 Windows Phone 8.1），则检查此代码并确定其与标准设备的差异。 如果只有布局中存在差异，则可能能够在 xaml 中使用“视觉状态管理器”根据屏幕大小自定义显示效果。 对于其他区别，可使用运用以下 #if 语句的代码中的条件部分。
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)

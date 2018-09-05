@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322363"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583907"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -335,7 +335,7 @@ CONTEXT:
 
 1. 输入 mkdir linkrepro，创建链接重现的目录。
 
-1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为刚刚创建的目录。
+1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为刚刚创建的目录。 如果生成从其他目录中运行（更加复杂的项目通常如此），则转而将 ink\_repro 设置为 linkrepro 目录的完整路径。
 
 1. 要在 Visual Studio 中生成重现项目，请在开发人员命令提示控制台窗口中输入命令 devenv。 这可确保 link\_repro 环境变量的值对 Visual Studio 可见。 要在命令行生成项目，请使用前面捕获的命令行参数来复制重现生成。
 

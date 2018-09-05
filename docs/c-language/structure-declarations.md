@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391895"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207265"
 ---
 # <a name="structure-declarations"></a>结构声明
 “结构声明”用于为类型命名和指定一系列可具有不同类型的变量值（称为结构的“成员”或“字段”）。 可选标识符（称为“标记”）为结构类型命名并可用于结构类型的后续引用。 该结构类型的变量保留该类型定义的整个序列。 C 中的结构类似于其他语言中称为“记录”的类型。  
@@ -163,7 +163,7 @@ struct somestruct
   
  编译器允许未确定大小或零大小的数组作为结构的最后一个成员。 如果常量数组在不同的情况下大小不同，这可能很有用。 此类结构的声明类似于以下形式：  
   
- `struct` identifier{set-of-declarations type array-name[ ];};* *  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  未确定大小的数组仅在作为结构的最后一个成员时才出现。 只要所有封闭结构中都不再进一步声明成员，那么包含未确定大小的数组声明的结构就可以嵌入其他结构中。 不允许有此类结构的数组。 当应用于此类型的变量或应用于此类型本身时，`sizeof` 运算符假定数组的大小为 0。  
   

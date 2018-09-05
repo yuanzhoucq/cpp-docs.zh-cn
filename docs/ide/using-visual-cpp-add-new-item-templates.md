@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332811"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197898"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 的“添加新项”模板
 可使用“添加新项”命令轻松添加 Visual C++ 项目中常见的项。 使用“添加新项”命令时，将显示带有项模板列表的 `Add New Item` 对话框，这些模板将向项目添加相应的文件。  
@@ -44,7 +44,7 @@ ms.locfileid: "33332811"
 |头文件 (.h)|创建 C++ 头文件。|  
 |HTML 页 (.htm)|创建空白 HTML 文件。|  
 |图标文件 (.ico)|创建 Win32 图标文件。|  
-|安装程序类|使用 CLR 功能添加从[安装程序类](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx)继承的类。|  
+|安装程序类|使用 CLR 功能添加从[安装程序类](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx)继承的类。|  
 |MIDL 文件 (.idl)|创建接口定义语言文件。|  
 |模块定义文件 (.def)|创建 DLL 导出定义文件。|  
 |属性表 (.props)|创建 Visual C++ 属性表文件。|  

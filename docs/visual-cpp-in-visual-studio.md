@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d4005479c1808ba2d396dfe8807f8a415f9322
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684486"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -144,7 +144,7 @@ C++ 标准库。
 [C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 在 GPU 上执行的大量并行算法。
 
-[Windows 运行时模板库 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
+[Windows 运行时模板库 (WRL)](windows/windows-runtime-cpp-template-library-wrl.md)<br/>
 通用 Windows 平台 (UWP) 应用和组件。
 
 [使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

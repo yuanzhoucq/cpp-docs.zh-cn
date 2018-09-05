@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 505d982d0418e3dfd33b1989e42885e8336aafa8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322401"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687382"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>从 ActiveX 控件添加类 (Visual C++)
 使用此向导从可用的 ActiveX 控件中的接口创建 MFC 类。 可以将 MFC 类添加到 [MFC 应用程序](../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "33322401"
   
 ### <a name="to-add-an-mfc-class-from-an-activex-control"></a>从 ActiveX 控件添加 MFC 类  
   
-1.  在“解决方案资源管理器”或“[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)”中，右键单击要向其添加 ActiveX 控件类的项目的名称。  
+1.  在“解决方案资源管理器”或“[类视图](/visualstudio/ide/viewing-the-structure-of-code)”中，右键单击要向其添加 ActiveX 控件类的项目的名称。  
   
 2.  从快捷菜单中，单击“添加”，然后单击“添加类”。  
   

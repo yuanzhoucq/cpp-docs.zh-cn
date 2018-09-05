@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330734"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677323"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>应用程序设置，生成文件项目向导
 提供项目信息。 指定的选项反映在项目的[属性页](../ide/working-with-project-properties.md)中。 创建项目后，可在项目属性页的“Nmake”页中查看和编辑以下每个选项。  
@@ -44,4 +44,4 @@ ms.locfileid: "33330734"
  [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)   
  [使用应用程序向导创建桌面项目](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [属性页](../ide/property-pages-visual-cpp.md)   
- [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ 

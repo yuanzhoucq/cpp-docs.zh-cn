@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269535"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900507"
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
 
@@ -30,7 +30,7 @@ ms.locfileid: "39269535"
 本主题假定你基本了解 Visual Studio 中的 CMake 支持。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 有关 CMake 本身的详细信息，请参阅[使用 CMake 生成、测试并打包软件](https://cmake.org/)。
 
 > [!NOTE]  
-> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如果包管理器提供旧版 CMake，解决方法为[从源生成 CMake](#build-a-supported-cmake release-from-source)，或从官方 [CMake 下载页](https://cmake.org/download/)下载它。 如需支持 Visual Studio 中 [CMake 目标视图](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的，由 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下载最新预生成二进制文件。
+> 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 如需支持 Visual Studio 中 [CMake 目标视图](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的，由 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下载最新预生成二进制文件。 如果包管理器提供的版本低于 CMake 3.8，则可通过[基于源生成 CMake](#build-a-supported-cmake-release-from-source) 进行解决；如果更喜欢使用标准版 CMake，也可从官方 [CMake 下载页](https://cmake.org/download/)下载它。 
 
 ## <a name="open-a-folder"></a>打开文件夹
 
@@ -87,10 +87,16 @@ add_executable(hello-cmake hello.cpp)
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ add_executable(hello-cmake hello.cpp)
 }
 ```
 
-可按需设置 `name` 值。 `remoteMachineName` 值指定了目标远程系统（以防存在多个系统）。 此字段启用了 IntelliSense，可帮助你选择正确的系统。 字段 `remoteCMakeListsRoot` 指定将项目源复制到远程系统上的何处。 字段 `remoteBuildRoot` 是远程系统上生成“生成输出”的位置。 还会在本地将该输出复制到由 `buildRoot` 指定的位置。
+可按需设置 `name` 值。 `remoteMachineName` 值指定了目标远程系统（以防存在多个系统）。 此字段启用了 IntelliSense，可帮助你选择正确的系统。 字段 `remoteCMakeListsRoot` 指定将项目源复制到远程系统上的何处。 字段 `remoteBuildRoot` 是远程系统上生成“生成输出”的位置。 还会在本地将该输出复制到由 `buildRoot` 指定的位置。 `remoteInstallRoot` 和 `installRoot` 字段与 `remoteBuildRoot` 和 `buildRoot` 类似，只不过在执行 cmake 安装时应用它们。 `remoteCopySources` 项控制是否将本地源复制到远程计算机。 如果具有大量文件且已自行同步源，则可能要将其设置为 false。 `remoteCopyOutputVerbosity` 值控制复制步骤的详细级别，以防需要诊断错误。 `remoteCopySourcesConcurrentCopies` 项控制要生成多少进程来执行复制。 `remoteCopySourcesMethod` 值可以是任一 rsync 或 sftp。 `remoteCopySourcesExclusionList` 字段可用于控制复制到远程计算机上的内容。 `rsyncCommandArgs` 值可用于控制复制的 rsync 方法。 `remoteCopyBuildOutput` 字段控制是否要将远程生成输出复制到本地生成文件夹。
+
+还有一些可选设置，可用于其他控制：
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+这些选项可用于生成前后以及 CMake 生成前在远程框中运行命令。 它们可以是远程框上的任何有效命令。 输出通过管道传递回 Visual Studio。
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>从源生成受支持的 CMake 版本
 

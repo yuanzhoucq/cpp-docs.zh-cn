@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705434"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42583923"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -35,11 +35,11 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
 
 ## <a name="installation"></a>安装 
 
-从 GitHub 克隆 vcpkg 存储库：https://github.com/Microsoft/vcpkg. 可凭喜好下载到任意文件夹位置。
+从 GitHub 克隆 vcpkg 存储库： https://github.com/Microsoft/vcpkg. 可凭喜好下载到任意文件夹位置。
 
 在根文件夹中运行 bootstrapper： 
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-对于 CMAKE 项目，使用 CMAKE_TOOLCHAIN_FILE 实现库与 `find_package()` 的结合使用。 例如:  
+对于 CMAKE 项目，通过 CMAKE_TOOLCHAIN_FILE 来配合使用库和 `find_package()`。 例如:  
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)

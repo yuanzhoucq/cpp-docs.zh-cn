@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337244"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578197"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
@@ -45,8 +45,8 @@ ms.locfileid: "33337244"
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |32 位 X86 编译器|X|X|X|X|
 |X86_arm 跨平台编译器|X||X|X|
-|64 位 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 编译器|||X|X|
-|X86_ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 跨平台编译器|X|X|X|X|
+|64 位 x64 编译器|||X|X|
+|X86_ x64 跨平台编译器|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>库和标头
 
