@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688138"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。  
@@ -183,7 +183,7 @@ virtual BOOL CreateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
+|[in]*dwExStyle*|若要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅*dwExStyle*的参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函数。|  
 |[in]*dwStyle*|按位组合 (OR)[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)并[页导航控件样式](/windows/desktop/Controls/pager-control-styles)要应用于该控件。|  
 |[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的工作区坐标中的控件。|  
 |[in]*pParentWnd*|一个指向[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为 NULL。|  

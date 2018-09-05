@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219147"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688755"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)  
- 原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C++ 11 的 Bjarne Stroustrup 常见问题](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
+ 原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C++ 11 的 Bjarne Stroustrup 常见问题](http://www.stroustrup.com/C++11FAQ.html)。  
   
 ```cpp  
 // represents the string: An unescaped \ character  

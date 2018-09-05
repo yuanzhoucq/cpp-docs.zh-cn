@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688381"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 类
 支持数据库类使用的记录字段交换 (RFX) 和批量记录字段交换 (Bulk RFX) 例程。  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |SetFieldType 参数值|参数数据成员的类型|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|输入的参数。 一个值，传递到记录集的查询或存储的过程。|  
-|' ieldExchange::param * *`ame as **CFieldExchange::inputParam`。|  
+|`CFieldExchange::param` | 与相同`CFieldExchange::inputParam`。|  
 |`CFieldExchange::outputParam`|输出参数。 记录集的存储过程的返回值。|  
 |`CFieldExchange::inoutParam`|输入/输出参数。 传递到和从记录集的存储过程返回一个值。|  
   

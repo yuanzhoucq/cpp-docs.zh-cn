@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213061"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689553"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 表示应用程序中的执行线程。  
@@ -96,7 +96,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|检查的特殊消息。|  
 |[CWinThread::OnIdle](#onidle)|重写以执行特定于线程的空闲时间处理。|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|发布到另一条消息`CWinThread`对象。|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|截获由线程的消息和命令处理程序引发的所有未处理的异常。|  
 |[CWinThread::PumpMessage](#pumpmessage)|包含线程的消息循环。|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  在调用 Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)内 MFC 应用程序，MFC 消息处理程序不会调用的函数。 有关详细信息，请参阅知识库文章"PRB:: MFC 消息处理程序未调用与 PostThreadMessage()"(Q142415)。  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- 重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。  
+ 重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -520,7 +520,7 @@ virtual int Run();
  **Int**线程返回的值。 此值可以通过调用来检索[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)。  
   
 ### <a name="remarks"></a>备注  
- `Run` 获取并将 Windows 消息调度之前，应用程序收到[WM_QUIT](/windows/desktop/winmsg/wm-quit)消息。 如果当前线程的消息队列不包含任何消息中，`Run`调用`OnIdle`来执行空闲处理。 传入消息转到[PreTranslateMessage](#pretranslatemessage)成员函数以进行特殊处理，然后对 Windows 函数[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)标准键盘翻译。 最后， [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)调用 Windows 函数。  
+ `Run` 获取并将 Windows 消息调度之前，应用程序收到[WM_QUIT](/windows/desktop/winmsg/wm-quit)消息。 如果当前线程的消息队列不包含任何消息中，`Run`调用`OnIdle`来执行空闲处理。 传入消息转到[PreTranslateMessage](#pretranslatemessage)成员函数以进行特殊处理，然后对 Windows 函数[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)标准键盘翻译。 最后， [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)调用 Windows 函数。  
   
  `Run` 很少被重写，但您可以重写以使其实现特殊行为。  
   

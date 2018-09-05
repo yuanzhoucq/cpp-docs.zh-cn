@@ -1,7 +1,7 @@
 ---
-title: DB |Microsoft 文档
+title: DB |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d3ced7397769d78ea979a52f3106e2764e54a6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 229e92a8ab3b057a96dfdf05c715c0216bb5f6fe
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688937"
 ---
 # <a name="db"></a>DB
-分配和 （可选） 为每个初始化存储的字节`initializer`。 `DB` 同义词[字节](../../assembler/masm/byte-masm.md)  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[[name]] DB initializer [[, initializer]] ...  
-```  
-  
-## <a name="remarks"></a>备注  
- 此外可作为类型说明符类型是合法的任何位置。  
-  
-## <a name="see-also"></a>请参阅  
- [指令引用](../../assembler/masm/directives-reference.md)   
- [DB](../../assembler/masm/db.md)   
- [SBYTE](../../assembler/masm/sbyte-masm.md)
+
+分配并根据需要初始化每个字节的存储空间`initializer`。 `DB` 是的同义词[字节](../../assembler/masm/byte-masm.md)
+
+## <a name="syntax"></a>语法
+
+> [[name]]数据库初始值设定项 [[，初始值设定项]]...
+
+## <a name="remarks"></a>备注
+
+也可以用作类型说明符类型是合法的任何位置。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>
+[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>

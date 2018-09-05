@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617f4703b72ff2a077a20b61fe17851144672ef7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687293"
 ---
 # <a name="default-atl-project-configurations"></a>默认 ATL 项目配置
 默认情况下，ATL 项目向导创建两个项目配置：  
@@ -35,6 +35,6 @@ ms.locfileid: "43201936"
 ## <a name="see-also"></a>请参阅  
  [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [使用项目属性](../../ide/working-with-project-properties.md)   
- [配置管理器对话框](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [配置管理器对话框](/visualstudio/ide/understanding-build-configurations)   
  [编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

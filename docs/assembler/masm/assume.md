@@ -1,7 +1,7 @@
 ---
-title: 假定 |Microsoft 文档
+title: 假定 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8898895d2e107e522fe88dc954146d64e6f62b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693803"
 ---
 # <a name="assume"></a>ASSUME
-启用错误检查寄存器值的值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-ASSUME segregister:name [[, segregister:name]]...  
-ASSUME dataregister:type [[, dataregister:type]]...  
-ASSUME register:ERROR [[, register:ERROR]]...  
-ASSUME [[register:]] NOTHING [[, register:NOTHING]]...  
-```  
-  
-## <a name="remarks"></a>备注  
- 后`ASSUME`放入起作用，汇编程序监视的给定寄存器的值的更改。 **错误**生成一个错误，如果使用寄存器。 **执行任何操作**中删除注册错误检查。 你可以组合不同类型的一个语句中的假设。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+启用错误检查寄存器的值。
+
+## <a name="syntax"></a>语法
+
+> 假设*segregister*:*名称*[[， *segregister*:*名称*]]...<br/>
+> 假设*dataregister*:*类型*[[， *dataregister*:*类型*]]...<br/>
+> 假设*注册*： 错误 [[，*注册*： 错误]]...<br/>
+> 假设 [[*注册*:]] 执行任何操作 [[，*注册*： 执行任何操作]]...
+
+
+## <a name="remarks"></a>备注
+
+之后`ASSUME`放入的效果，则组装器会监视对给定的寄存器的值进行更改。 **错误**如果使用寄存器，将生成错误。 **执行任何操作**删除注册的错误检查。 你可以组合不同种类的假设在一个语句中。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

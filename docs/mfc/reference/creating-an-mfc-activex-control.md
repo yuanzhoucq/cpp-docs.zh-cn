@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687141"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 ActiveX 控件程序是功能的模块化设计用于为特定类型提供到父应用程序的程序。 例如，您可以在对话框中或在网页中使用的工具栏中创建等使用的按钮控件。  
@@ -49,5 +49,5 @@ ActiveX 控件程序是功能的模块化设计用于为特定类型提供到父
 ## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   
- [部署应用程序](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

@@ -1,7 +1,7 @@
 ---
 title: .SEQ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f621d9caacde2e1303da4215d6e19b581aa03766
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a1f60ab9ef42a3af13125ab124f86533a0f89800
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050137"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689798"
 ---
 # <a name="seq"></a>.SEQ
-按顺序排序段 （默认顺序）。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.SEQ  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+按顺序进行排序段 （默认顺序）。
+
+## <a name="syntax"></a>语法
+
+> .SEQ
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

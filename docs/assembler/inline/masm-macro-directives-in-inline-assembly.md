@@ -1,7 +1,7 @@
 ---
-title: 内联程序集中的 MASM 宏指令 |Microsoft 文档
+title: 内联程序集中的 MASM 宏指令 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfd8e3ca5fb6bf65a288c17b1754d567b2b081a8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 35ad22a9a4b79a31665ab6b156f8174d395bb0ee
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687968"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>内联程序集中的 MASM 宏指令
-## <a name="microsoft-specific"></a>Microsoft 专用  
- 内联汇编程序不是宏汇编程序。 不能使用的 MASM 宏指令 (**宏**， `REPT`， **IRC**， `IRP`，和`ENDM`) 或宏运算符 (**<>**，**!**， **&**， `%`，和`.TYPE`)。 但是，`__asm` 块可以使用 C 预处理器指令。 请参阅[使用 C 或 c + + 在 __asm 块中](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)有关详细信息。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 专用**
+
+内联汇编程序不是宏汇编程序。 不能使用 MASM 宏指令 (**宏**， `REPT`， **IRC**， `IRP`，以及`ENDM`) 或宏运算符 (**<>**，**!**， **&**， `%`，并`.TYPE`)。 但是，`__asm` 块可以使用 C 预处理器指令。 请参阅[使用 C 或 c + + 在 __asm 块中的](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)有关详细信息。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

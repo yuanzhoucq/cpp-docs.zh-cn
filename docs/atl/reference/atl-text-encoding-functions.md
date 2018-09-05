@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218367"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688567"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 这些函数支持文本编码和解码。
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  指向包含以字节为单位的长度的变量*szDest*。 如果函数成功，则该变量接收写入到缓冲区的字节数。 如果函数失败，该变量接收所需的长度以字节为单位的缓冲区。  
   
  [in]*dwFlags*  
- 描述如何执行转换的标志。 请参阅[ATLSMTP_QPENCODE 标志](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4)。  
+ 描述如何执行转换的 ATLSMTP_QPENCODE 标志。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  

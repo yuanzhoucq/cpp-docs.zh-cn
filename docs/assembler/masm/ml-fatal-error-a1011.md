@@ -1,7 +1,7 @@
 ---
-title: ML 错误 A1011 |Microsoft 文档
+title: ML 错误 A1011 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843d676cba61e0da5f917a48408e56e79abb9efd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 32949773b869d189516a381ca7df941760a1e4e4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057196"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690803"
 ---
 # <a name="ml-fatal-error-a1011"></a>ML 错误 A1011
-**指令必须在控制块**  
-  
- 汇编程序找到其中一个不期望值高级指令。 找到以下指令之一：  
-  
--   [.其他](../../assembler/masm/dot-else.md)而无需[。如果](../../assembler/masm/dot-if.md)  
-  
--   [.ENDIF](../../assembler/masm/dot-endif.md)而无需[。如果](../../assembler/masm/dot-if.md)  
-  
--   [.ENDW](../../assembler/masm/dot-endw.md)而无需[。WHILE](../../assembler/masm/dot-while.md)  
-  
--   [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)而无需[。重复](../../assembler/masm/dot-repeat.md)  
-  
--   [.继续](../../assembler/masm/dot-continue.md)而无需[。虽然](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)  
-  
--   [.中断](../../assembler/masm/dot-break.md)而无需[。虽然](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)  
-  
--   [.其他](../../assembler/masm/dot-else.md)以下 `.ELSE`  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**指令必须是在控制块**
+
+在组装器找到其中一个不期望值的高级别指令。 已找到一个以下指令：
+
+- [.其他](../../assembler/masm/dot-else.md)而无需[。如果](../../assembler/masm/dot-if.md)
+
+- [.ENDIF](../../assembler/masm/dot-endif.md)而无需[。如果](../../assembler/masm/dot-if.md)
+
+- [.ENDW](../../assembler/masm/dot-endw.md)而无需[。WHILE](../../assembler/masm/dot-while.md)
+
+- [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)而无需[。重复](../../assembler/masm/dot-repeat.md)
+
+- [.继续](../../assembler/masm/dot-continue.md)而无需[。虽然](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)
+
+- [.中断](../../assembler/masm/dot-break.md)而无需[。虽然](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)
+
+- [.其他](../../assembler/masm/dot-else.md)以下 `.ELSE`
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

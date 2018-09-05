@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690444"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 本文档说明并行模式库 (PPL) 中取消操作的角色、如何取消并行工作以及如何确定取消并行工作的时间。  
@@ -150,7 +150,7 @@ ms.locfileid: "43221750"
   
 #### <a name="cancellation-tokens-and-task-composition"></a>取消标记和任务复合  
 
- [并发:: 超链接"https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)并[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数可帮助你组合多个任务以实现常见模式。 本节描述这些函数如何与取消标记配合使用。  
+ [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)并[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数可帮助你组合多个任务以实现常见模式。 本节描述这些函数如何与取消标记配合使用。  
   
  向任一 `when_all` 和 `when_any` 函数提供取消标记时，仅当该取消标记被取消，或者一个参与任务以已取消状态结束或引发异常时，该函数才会取消。  
   

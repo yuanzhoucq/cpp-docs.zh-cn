@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a3a31125d8489551f1eec143013661bf385f29a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212440"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691568"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 结构
 
@@ -70,5 +70,4 @@ friend struct Details::ImplementsHelper;
 
 ## <a name="see-also"></a>请参阅
 
-[参考 （Windows 运行时库）](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
 [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

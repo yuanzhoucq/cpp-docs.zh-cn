@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2054 |Microsoft 文档
+title: ML 非致命错误 A2054 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a9c754cdd1ea33c004f5dea431829bea5532cd0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 026699a1ce41681fc10a7fbc37a76b86c7caef4c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688239"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>ML 非致命错误 A2054
-**强制错误： 值不等于 0**  
-  
- 条件错误指令[。ERRNZ](../../assembler/masm/dot-errnz.md)用于生成此错误。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**强制错误： 值不等于 0**
+
+条件 error 指令[。ERRNZ](../../assembler/masm/dot-errnz.md)用于生成此错误。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

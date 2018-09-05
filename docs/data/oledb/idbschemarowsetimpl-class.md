@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6780927732d0f555cc5778fe9564c9225a50aa80
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204123"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691802"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 类
 提供架构行集的实现。  
@@ -279,8 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  若要实现此函数，用户在会话类中必须有架构映射。 然后，该函数会利用架构映射信息，使用映射中架构的 GUID 数组进行响应。 这表示提供程序支持的架构。  
 
 ## <a name="see-also"></a>请参阅  
- [IDBSchemaRowsetImpl 类成员](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    
- [UpdatePV](../../visual-cpp-samples.md)
+ [UpdatePV](https://github.com/Microsoft/VCSamples)

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693073"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /CX 程序，可任意使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，当你传递集合来回跨 Windows 运行时应用程序二进制接口 (ABI) — 例如，到 XAML 控件或 JavaScript 客户端，必须使用 Windows 运行时集合类型。  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
- [内置类型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

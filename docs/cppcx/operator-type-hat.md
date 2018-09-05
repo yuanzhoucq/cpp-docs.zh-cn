@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8abccf48219b70040ce728ba0dff9fa02b57bfc0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208082"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688460"
 ---
 # <a name="operator-type"></a>运算符 Type^
 启用从转换[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)到`Platform::Type`。  
@@ -49,7 +49,7 @@ Type^ tx2 = (Type^)(tn);
 ```  
   
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- .NET Framework 程序将 `TypeName` 投影为 [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True)的转换。  
+ .NET framework 程序项目`TypeName`作为 <xref:System.Type>
   
 ### <a name="requirements"></a>要求  
   

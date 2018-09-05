@@ -1,7 +1,7 @@
 ---
-title: 运算符 THIS |Microsoft 文档
+title: 运算符 THIS |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692568"
 ---
 # <a name="operator-this"></a>运算符 THIS
-指定返回的操作数`type`其偏移量和段的值是等于当前的位置计数器值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+返回的一个操作数指定`type`其偏移量和段的值是等于当前的位置计数器值。
+
+## <a name="syntax"></a>语法
+
+> 此类型
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

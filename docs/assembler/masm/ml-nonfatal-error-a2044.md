@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2044 |Microsoft 文档
+title: ML 非致命错误 A2044 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e7c3e3c5122298e853a80d5abd45ffda912167
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 21a4ef6a11b52221b86ec791c864505b79b7e6bb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055500"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686952"
 ---
 # <a name="ml-nonfatal-error-a2044"></a>ML 非致命错误 A2044
-**文件中包含无效字符**  
-  
- 源文件包含注释，字符串，以外的字符或文本，未识别为操作员或其他合法字符。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**文件中的字符无效**
+
+源代码文件包含注释、 字符串、 以外的字符或文本的未识别为操作员或其他法律的字符。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

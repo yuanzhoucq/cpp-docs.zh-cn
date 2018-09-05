@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eef4c0e7e32b85e26fbdc6adb7a2ebd26850b2ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573219"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691730"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
 可以更改 Visual c + + 项目设置以面向不同版本的.NET framework 并使用不同的平台工具集。 默认情况下，项目系统将使用对应于你用于创建该项目的 Visual Studio 版本的 .NET Framework 版本和工具集版本。 可以通过修改项目属性来更改目标平台工具集。 可以通过修改项目 (.vcxproj) 文件来更改目标框架。 不必为每个编译目标都维护一个单独的基本代码。  
@@ -34,7 +34,7 @@ ms.locfileid: "42573219"
 > [!NOTE]
 >  若要更改目标平台工具集，你必须安装相关版本的 Visual Studio 或 Windows Platform SDK。 例如，要面向具有“Windows7.1SDK”  平台工具集的 Itanium 平台，你必须安装 [适用于 Windows 7 的 Microsoft Windows SDK 和 .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ；但是，只要面向正确的 Framework 版本和平台工具集，你就可以使用 Visual Studio 的其他兼容版本来完成开发工作。  
   
- 可以通过创建自定义平台工具集来扩展目标平台。 有关详细信息，请参阅[c + + 本机多目标](http://go.microsoft.com/fwlink/p/?linkid=196619)Visual c + + 博客上。  
+ 可以通过创建自定义平台工具集来扩展目标平台。 有关详细信息，请参阅[c + + 本机多目标](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)Visual c + + 博客上。  
   
 ### <a name="to-change-the-target-framework"></a>更改目标框架  
   

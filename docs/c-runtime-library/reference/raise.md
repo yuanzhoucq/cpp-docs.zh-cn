@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a41f88bc6883af1db4bbde8729a3638ded64a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1bc3f52b97159a9caba6f80b4798d9588ec341d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685903"
 ---
 # <a name="raise"></a>raise
 
 将信号发送到正在执行的程序。
 
 > [!NOTE]
-> 不要使用此方法可以在测试或调试方案中关闭除 Microsoft 应用商店应用。 编程或 UI 方式关闭应用商店应用程序不允许根据[Microsoft 存储策略](http://go.microsoft.com/fwlink/?LinkId=865936)。 有关详细信息，请参阅[UWP 应用生命周期](http://go.microsoft.com/fwlink/p/?LinkId=865934)。
+> 不使用此方法来关闭的情况下的 Microsoft Store 应用，除非在测试或调试方案。 以编程或 UI 方式关闭应用商店应用程序不允许根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)。 有关详细信息，请参阅[UWP 应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>语法
 
@@ -77,11 +77,11 @@ int raise(
 |**SIGSEGV**|非法存储区访问|终止调用程序|
 |**SIGTERM**|发送到程序的终止请求|忽略信号|
 
-如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未得到处理，该函数将设置**errno**到**EINVAL**并返回一个非零值。
+如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，该函数将设置**errno**到**EINVAL** ，并返回一个非零值。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 

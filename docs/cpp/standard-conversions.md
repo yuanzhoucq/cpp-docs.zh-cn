@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c2e8a69cf7f118af8753ebcb9e0e150c8dfc0859
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687308"
 ---
 # <a name="standard-conversions"></a>标准转换
-C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
+C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为*标准转换*。  
   
  本节讨论下列标准转换：  
   
@@ -210,7 +210,7 @@ int main() {
 ||Protected|是|  
 ||Public|是|  
   
- 第二种情况是，在您使用显式类型转换时，指向类的指针可转换为指向基类的指针。 (请参阅[带显式类型转换的表达式](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)显式类型转换有关的详细信息。)  
+ 第二种情况是，在您使用显式类型转换时，指向类的指针可转换为指向基类的指针。 (请参阅[显式类型转换运算符](explicit-type-conversion-operator-parens.md)显式类型转换有关的详细信息。)  
   
  此类转换的结果是指向完全由基类描述的对象部分（即“子对象”）的指针。  
   
@@ -249,7 +249,7 @@ int main()
  指向一个函数的指针可以转换为类型`void *`，如果类型`void *`足够大以容纳该指针。  
   
 ### <a name="pointer-to-void"></a>指向 void 的指针  
- 指向类型**void**可以转换为指针的显式类型强制转换为任何其他类型，但仅 (不同于在 C 中)。 (请参阅[带显式类型转换的表达式](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)有关类型强制转换的详细信息。)指向任何类型的指针可以隐式转换为指向类型的指针**void**。指向不完整类型的对象的指针可以转换为指向**void** （隐式） 和 back （显式）。 此类转换的结果与原始指针的值相等。 对象被视为是不完整的（如果已声明对象），但未提供足够多的可用信息，无法确定其大小或基类。  
+ 指向类型**void**可以转换为指针的显式类型强制转换为任何其他类型，但仅 (不同于在 C 中)。 指向任何类型的指针可以隐式转换为指向类型的指针**void**。指向不完整类型的对象的指针可以转换为指向**void** （隐式） 和 back （显式）。 此类转换的结果与原始指针的值相等。 对象被视为是不完整的（如果已声明对象），但未提供足够多的可用信息，无法确定其大小或基类。  
   
  指向不是任何对象的指针**const**或**易失性**可以隐式转换为类型的指针`void *`。  
   

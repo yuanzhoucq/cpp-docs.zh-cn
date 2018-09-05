@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 333bdbd88d554e3fe3e3f233ce9968df75d73dfc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211182"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690885"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 类
 此类提供包装`CreateWindow`和`CreateWindowEx`。  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>备注  
  此参数适配器类允许调用方的部分 Id （示） 或菜单句柄 (HMENUs) 传递到函数，而无需显式强制转换。  
   
- 此类用于实现对 Windows API 的包装器特别[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)并[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函数，这两种接受可能的子窗口的 HMENU 参数标识符 (UINT) 而不是菜单句柄。 例如，可以看到正在使用此类作为参数[CWindowImpl::Create](cwindowimpl-class.md#create)。  
+ 此类用于实现对 Windows API 的包装器特别[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)并[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函数，这两种接受可能的子窗口的 HMENU 参数标识符 (UINT) 而不是菜单句柄。 例如，可以看到正在使用此类作为参数[CWindowImpl::Create](cwindowimpl-class.md#create)。  
 
   
  该类定义两个构造函数重载： 一个接受 UINT 参数和另一个接受的 HMENU 参数。 UINT 参数只是强制转换为构造函数和类的单个数据成员中存储的结果中 HMENU [m_hMenu](#_u_menuorid__m_hmenu)。 转换不直接存储 HMENU 构造函数的参数。  
