@@ -1,7 +1,7 @@
 ---
-title: 编译器错误 C3850 |Microsoft 文档
+title: 编译器错误 C3850 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,30 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2068a283fc54a86b09f2af05b177f2151e940b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daa4b6128672b47891c563acfd4399952a17e7e6
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268480"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894533"
 ---
 # <a name="compiler-error-c3850"></a>编译器错误 C3850
-“char”：通用字符名称指定的字符无效  
-  
- 表示为通用字符名称的字符必须表示 0-10FFFF 范围内的有效 Unicode 码位。 通用字符名称不能包含 Unicode 代理项范围、D800-DFFF 或编码的代理项对中的值。 编译器从有效码位自动生成代理项对。  
-  
- 在编译为 C 语言的代码中，通用字符名称不能表示 0000-009F（含）范围内的字符，024（“$”）、0040（“@”）和 0060（“`”）除外。  
-  
- 在编译为 C++ 的代码中，通用字符名称可以使用字符串或字符文本中的任意有效 Unicode 码位。 在文字之外，通用字符名称不能表示 0000-001F 或 007F-009F（均含）范围内的控制字符或基本源字符集成员。  有关详细信息，请参阅[字符集](../../cpp/character-sets.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3850，并演示如何修复此错误：  
-  
-```cpp  
-// C3850.cpp  
-int main() {  
-   int \u0019 = 0;   // C3850, not in allowed range for an identifier  
-   const wchar_t * wstr_bad  = L"\UD840DC8A"; // C3850, UCN is surrogate pair  
-   const wchar_t * wstr_good = L"\U0002008A"; // Okay, UCN is valid code point  
-}  
+
+> '*char*： 通用字符名称指定的字符无效
+
+## <a name="remarks"></a>备注
+
+表示为通用字符名称的字符必须表示 0-10FFFF 范围内的有效 Unicode 码位。 通用字符名称不能包含 Unicode 代理项范围、D800-DFFF 或编码的代理项对中的值。 编译器从有效码位自动生成代理项对。
+
+在作为 C 编译的代码中，通用字符名称可能不表示 0000-009F 的范围中的字符 （含 0024 （' $'） 的异常) 0040 (\@) 和 0060 (' ')。
+
+在编译为 C++ 的代码中，通用字符名称可以使用字符串或字符文本中的任意有效 Unicode 码位。 在文字之外，通用字符名称不能表示 0000-001F 或 007F-009F（均含）范围内的控制字符或基本源字符集成员。  有关详细信息，请参阅[字符集](../../cpp/character-sets.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3850，并演示如何修复此错误：
+
+```cpp
+// C3850.cpp
+int main() {
+   int \u0019 = 0;   // C3850, not in allowed range for an identifier
+   const wchar_t * wstr_bad  = L"\UD840DC8A"; // C3850, UCN is surrogate pair
+   const wchar_t * wstr_good = L"\U0002008A"; // Okay, UCN is valid code point
+}
 ```

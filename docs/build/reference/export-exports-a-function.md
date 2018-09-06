@@ -1,7 +1,7 @@
 ---
-title: -导出 （导出函数） |Microsoft 文档
+title: -EXPORT （导出函数） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374487"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894789"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT（导出函数）
-```  
-/EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
-```  
-  
-## <a name="remarks"></a>备注  
- 使用此选项，你可以从你的程序导出函数，以便其他程序可以调用该函数。 你还可以导出数据。 通常在 DLL 中定义导出。  
-  
- *Entryname*是函数或数据项的名称，因为它是用于调用程序。 `ordinal` 索引指定到的导出表中的范围 1 到 65535;如果不指定`ordinal`，链接将分配一个。 **NONAME**关键字仅作为是执行序号，导出该函数不带*entryname*。  
-  
- **数据**关键字指定导出的项是数据项。 必须使用声明中客户端程序的数据项**extern __declspec （dllimport)**。  
-  
- 有三种方法，用于导出的定义，建议使用的顺序依次列出：  
-  
-1.  [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)的源代码中  
-  
-2.  [导出](../../build/reference/exports.md)在.def 文件语句  
-  
-3.  LINK 命令中 /EXPORT 规范  
-  
- 可以在同一个程序使用所有三个方法。 当 LINK 在生成包含导出的程序时，还创建导入库，除非在生成中使用了.exp 文件。  
-  
- 链接使用修饰形式的标识符。 创建的.obj 文件时，编译器将修饰标识符。 如果*entryname*指定到链接器在其未修饰窗体 （即显示在源代码中） 中，链接尝试与名称匹配。 如果它找不到唯一的匹配项，则链接将发出错误消息。 使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具以获取[修饰名](../../build/reference/decorated-names.md)时需要指定到链接器标识符的形式。  
-  
+
+导出函数按名称或序号或数据，从您的程序。
+
+## <a name="syntax"></a>语法
+
+> **/EXPORT:**<em>entryname</em>[**，\@**<em>序号</em>[**，NONAME**]] [**，数据**]
+
+## <a name="remarks"></a>备注
+
+使用 /EXPORT 选项时，可以从您的程序导出函数，以便其他程序可以调用该函数。 此外可以导出数据。 通常在 DLL 中定义导出。
+
+*Entryname*是函数或数据的项的名称，因为它是由调用程序。 `ordinal` 指定索引到的导出表中范围是 1 到 65,535如果未指定`ordinal`，链接将分配一个。 **NONAME**关键字仅作为序号，导出该函数不带*entryname*。
+
+**数据**关键字指定导出的项目的数据项。 必须使用声明中的客户端程序的数据项**extern __declspec （dllimport)**。
+
+有三种方法用于导出的定义，建议使用的顺序依次列出：
+
+1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)中的源代码
+
+2. [导出](../../build/reference/exports.md).def 文件语句
+
+3. LINK 命令中 /EXPORT 规范
+
+可以在同一程序中使用所有三个方法。 当 LINK 在生成包含导出的程序时，它还创建导入库，除非生成中使用了.exp 文件。
+
+链接使用修饰形式的标识符。 创建的.obj 文件时，编译器将修饰标识符。 如果*entryname*中其未修饰链接器指定窗体 （即显示在源代码中） 中，尝试与名称匹配链接。 如果它找不到唯一的匹配项，链接会发出一条错误消息。 使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具来获取[修饰名](../../build/reference/decorated-names.md)窗体时需要指定链接器的标识符。
+
 > [!NOTE]
->  未指定 C 标识符声明的修饰的形式`__cdecl`或`__stdcall`。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击**链接器**文件夹。  
-  
-3.  点击“命令行”  属性页。  
-  
-4.  该选项键入**其他选项**框。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+> 未指定 C 标识符声明的修饰的形式`__cdecl`或`__stdcall`。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+
+2. 选择**配置属性** > **链接器** > **命令行**属性页。
+
+3. 该选项输入**其他选项**框。
+
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[设置链接器选项](../../build/reference/setting-linker-options.md)   
+[链接器选项](../../build/reference/linker-options.md)

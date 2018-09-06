@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753721"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895287"
 ---
 # <a name="curl-class"></a>CUrl 类
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` 允许操作的 URL，如路径或端口号的字段。 `CUrl` 了解以下形式的 Url:
 
-\<方案 >://\<用户名 >:\<密码 > @\<主机名 >:\<端口号 > /\<UrlPath >\<ExtraInfo >
+\<方案 >://\<用户名 >:\<密码 >\@\<主机名 >:\<端口号 > /\<UrlPath >\<ExtraInfo >
 
 （某些字段是可选的。）例如，考虑此 URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl)对其进行分析，如下所示：
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - 密码:"机密"
 
-- 主机名:"www.microsoft.com"
+- 主机名:"`www.microsoft.com`"
 
 - 端口号： 80
 
@@ -235,7 +235,7 @@ inline BOOL CreateUrl(
 
 此方法将其各个字段追加才能构建完整的 URL 字符串，使用以下格式：
 
-**\<方案 >://\<用户 >:\<传递 > @\<域 >:\<端口 >\<路径 >\<额外 >**
+**\<方案 >://\<用户 >:\<传递 >\@\<域 >:\<端口 >\<路径 >\<额外 >**
 
 调用此方法时*pdwMaxLength*参数最初应包含引用的字符串缓冲区的最大长度*lpszUrl*参数。 值*pdwMaxLength*参数将更新与 URL 字符串的实际长度。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a93a9c4e8cf9059d80b602d80043809fb75152a
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956067"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895326"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函数
 
@@ -64,7 +64,8 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*要测试是否存在某一 facet 的区域设置。
+*Loc*  
+测试其中是否存在 facet 的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -106,9 +107,11 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要测试的字母数字元素。
+*ch*  
+要测试的字母数字元素。
 
-*Loc*包含要测试的字母数字元素的区域设置。
+*Loc*  
+包含要测试的字母数字元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -171,9 +174,11 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的字母元素的区域设置。
+*Loc*  
+包含要测试的字母元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -234,9 +239,11 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -297,9 +304,11 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -360,9 +369,11 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -423,9 +434,11 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -486,9 +499,11 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -548,9 +563,11 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -611,9 +628,11 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -674,9 +693,11 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -737,9 +758,11 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*Ch*要进行测试的元素。
+*ch*  
+要进行测试的元素。
 
-*Loc*包含要测试的元素的区域设置。
+*Loc*  
+包含要测试的元素的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -802,9 +825,11 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为小写的字符。
+*ch*  
+要转换为小写的字符。
 
-*Loc*包含要转换的字符的区域设置。
+*Loc*  
+包含要转换的字符的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -849,9 +874,11 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换为大写的字符。
+*ch*  
+要转换为大写的字符。
 
-*Loc*包含要转换的字符的区域设置。
+*Loc*  
+包含要转换的字符的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -896,7 +923,8 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*包含方面所引用的类型的 const 区域设置。
+*Loc*  
+包含所引用的 facet 类型的 const 区域设置。
 
 ### <a name="return-value"></a>返回值
 
