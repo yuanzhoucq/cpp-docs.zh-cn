@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403136"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895157"
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 后缀表达式包含主表达式或者其中的后缀运算符跟在主表达式之后的表达式。 下表列出了后缀运算符。  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 在上述表达式中，`func`是主表达式`func(1)`是函数后缀表达式`func(1)->GetData`是指定类的成员的后缀表达式`func(1)->GetData()`是另一个函数后缀表达式，并且整个表达式是增加 GetData 的返回值的后缀表达式。  该表达式的整体含义是作为自变量传递 1 的 "call func，并作为返回值获取一个指向类的指针。  然后，调用`GetValue()`对该类，然后递增返回的值。  
+ 在上述表达式中，`func`是主表达式`func(1)`是函数后缀表达式`func(1)->GetValue`是指定类的成员的后缀表达式`func(1)->GetValue()`是另一个函数后缀表达式，并且整个表达式是递增 GetValue 的返回值的后缀表达式。  该表达式的整体含义是作为自变量传递 1 的 "call func，并作为返回值获取一个指向类的指针。  然后，调用`GetValue()`对该类，然后递增返回的值。  
   
  上面列出的表达式是赋值表达式，这意味着这些表达式的结果必须为右值。  
   

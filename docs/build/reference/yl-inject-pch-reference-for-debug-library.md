@@ -1,5 +1,5 @@
 ---
-title: -Yl （为调试库插入 PCH 引用） |Microsoft 文档
+title: -Yl （为调试库插入 PCH 引用） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73e79cd50343292ae63dfa831a7638d6444fc64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378465"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894650"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl（为调试库插入 PCH 引用）
 
@@ -45,15 +45,15 @@ ms.locfileid: "32378465"
 
 ## <a name="remarks"></a>备注
 
-**/Yl**编译器选项通过使用创建的预编译的头文件中创建唯一的符号定义[/Yc](../../build/reference/yc-create-precompiled-header-file.md)选项。 通过使用包括预编译标头的所有文件中自动注入到此符号的引用[/Yu](../../build/reference/yu-use-precompiled-header-file.md)编译器选项。 **/Yl**默认情况下启用选项时 **/Yc**用于创建预编译的头文件。
+**/Yl**编译器选项会通过使用创建的预编译的头文件中创建唯一的符号定义[/Yc](../../build/reference/yc-create-precompiled-header-file.md)选项。 通过使用包含预编译标头的所有文件中，对此符号的引用会自动注入[/Yu](../../build/reference/yu-use-precompiled-header-file.md)编译器选项。 **/Yl**默认情况下启用选项时 **/Yc**用于创建预编译标头文件。
 
-**/Yl**_名称_选项用于创建预编译的头文件中的身份的符号。 编译器使用*名称*自变量作为修饰的符号名称的一部分创建，类似于\_ \_ @@ \_PchSym\_@00@..。 @*名称*，其中一个唯一的编译器生成省略号 （...） 表示字符字符串。 如果*名称*省略自变量，编译器会自动生成的符号名称。 通常情况下，不需要知道的符号的名称。 但是，当你的项目使用多个预编译的头文件， **/Yl**_名称_选项可能有助于确定哪些对象文件使用的预编译标头。 你可以使用*名称*作为搜索字符串在转储文件中查找符号引用。
+**/Yl**_名称_选项用于在预编译标头文件中创建一个易于识别的符号。 编译器将使用*名称*自变量作为符号修饰的名称的一部分创建，类似于`__@@_PchSym_@00@...@name`，其中一个唯一的编译器生成的省略号 （...） 表示字符字符串。 如果*名称*省略参数，编译器将自动生成的符号名称。 通常情况下，不需要知道的符号名称。 但是，当你的项目使用多个预编译的头文件， **/Yl**_名称_选项可能有助于确定哪个对象的文件使用的预编译标头。 可以使用*名称*作为搜索字符串的转储文件中查找符号引用。
 
-**/Yl-** 禁用默认行为并不会将预编译标头文件中标识的符号。 包括此预编译标头的已编译的文件并不获取通用的符号引用。
+**/Yl-** 禁用默认行为并不会将预编译标头文件中标识的符号。 包含此预编译标头的已编译的文件不会收到通用的符号引用。
 
-当 **/Yc**未指定任何 **/Yl**选项不起作用，但如果指定它必须匹配任何 **/Yl**选项传递时 **/Yc**是指定。
+当 **/Yc**未指定任何 **/Yl**选项没有任何影响，但如果指定它必须匹配任何 **/Yl**选项传递时 **/Yc**是指定。
 
-如果你使用 **/Yl-**， **/Yc**和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)选项生成预编译标头文件，调试信息存储在对象文件中用于创建源文件的文件名预编译标头，而不是单独的.pdb 文件。 如果此对象文件然后进行的库的一部分[LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md)错误或[LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)如果源文件用于创建，可以使用此库和预编译标头文件的生成中出现警告预编译的头文件未定义任何符号本身。 在对象文件中为 nothing 引用在库客户端时，链接器可能从该链接，以及关联的调试信息，排除对象文件。 若要解决此问题，请指定 **/Yl** (或删除 **/Yl-** 选项) 时使用 **/Yc**创建预编译标头文件。 这可确保在生成中获取链接的包含调试信息的库中的对象文件。
+如果您使用 **/Yl-**， **/Yc**并[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)用来创建的源代码文件的对象文件中存储用于生成预编译标头文件，调试信息选项预编译标头，而不是单独的.pdb 文件。 如果此对象文件然后将库的一部分[LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md)错误或[LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)如果源文件使用创建可能出现在使用此库和预编译标头文件的生成警告预编译标头文件未定义任何符号本身。 库客户端中引用的对象文件中的任何内容时，链接器可能会从该链接，以及关联的调试信息，排除对象文件。 若要解决此问题，请指定 **/Yl** (或删除 **/Yl-** 选项) 时使用 **/Yc**创建预编译标头文件。 这可确保从包含调试信息的库对象文件获取链接在生成中。
 
 预编译标头的详细信息，请参阅：
 

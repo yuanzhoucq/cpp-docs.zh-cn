@@ -1,7 +1,7 @@
 ---
-title: 生成导入库和导出文件 |Microsoft 文档
+title: 生成导入库和导出文件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -35,44 +35,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372095"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894611"
 ---
 # <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
-若要生成导入库和导出文件，请使用以下语法：  
-  
-```  
-LIB /DEF[:deffile] [options] [objfiles] [libraries]  
-```  
-  
- 当指定 /DEF 时，LIB 从 LIB 命令中传递的导出规范创建输出文件。 有三种方法，用于指定导出，建议使用的顺序依次列出：  
-  
-1.  A **__declspec （dllexport)** 之一定义*objfiles*或*库*  
-  
-2.  /EXPORT 规范：*名称*LIB 命令行上  
-  
-3.  中的定义**导出**中的语句 `deffile`  
-  
- 这些是你用于链接的导出程序时，指定导出的相同方法。 程序可以使用多个方法。 你可以指定部分的 LIB 命令 (如多个*objfiles*或 /EXPORT 规范) 在 LIB 命令中的命令文件，就像你可以在 LINK 命令中。  
-  
- 以下选项适用于生成导入库和导出文件：  
-  
- / 输入输出：*导入*  
- 重写的默认输出文件名*导入*正在创建的库。 如果未指定 /OUT，默认名称是第一个对象文件或库中 LIB 命令和扩展名的基名称。 lib。 导出文件有相同的基名称作为导入库和扩展。 exp。  
-  
- / 导出： *entryname*[= *internalname*] [，@ `ordinal`[， **NONAME**]] [，**数据**]  
- 从程序，以允许其他程序调用该函数导出函数。 你还可以导出数据 (使用**数据**关键字)。 通常在 DLL 中定义导出。  
-  
- *Entryname*是函数或数据项的名称，因为它是用于调用程序。 或者，可以指定*internalname*已知定义的程序中; 默认情况下，该函数作为*internalname*相同*entryname*。 `ordinal`到的导出表中 1 到 65535; 范围内指定索引，如果不指定`ordinal`，LIB 将分配一个。 **NONAME**关键字仅作为是执行序号，导出该函数不带*entryname*。 **数据**关键字用来导出仅包含数据的对象。  
-  
- / 包括： `symbol`  
- 将指定的符号添加到符号表。 此选项可用于强制库对象，否则不会包含的使用。  
-  
- 请注意，是否创建.dll 之前，可以在初步步骤中，创建你导入的库，你必须传递同一套对象文件时，生成.dll 为通过生成导入库时。  
-  
-## <a name="see-also"></a>请参阅  
- [使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+若要生成的导入库和导出文件，使用以下语法：
+
+> **LIB /DEF**[**:**<em>deffile</em>] [*选项*] [*objfiles*] [*库*]
+
+当指定 /DEF 时，LIB 从 LIB 命令中传递的导出规范创建输出文件。 有三种方法用于指定导出，建议使用的顺序依次列出：
+
+1. 一个 **__declspec （dllexport)** 中的一个定义*objfiles*或*库*
+
+2. /EXPORT 规范：*名称*LIB 命令行上
+
+3. 中的定义**导出**中的语句*deffile*
+
+这些是用于链接的导出程序时，指定导出的相同方法。 程序可以使用多个方法。 您可以指定部件的 LIB 命令 (如多个*objfiles*或 /EXPORT 规范) 中的 LIB 命令中的命令文件，正如您可以在 LINK 命令中。
+
+以下选项将应用于生成导入库和导出文件：
+
+> **/ 输入输出：** *导入*  
+
+重写默认输出文件名*导入*创建库。 默认名称如果未指定 /OUT，是第一个对象文件或库中的 LIB 命令和扩展的基名称。 lib。 导出的文件都有相同的基名称作为导入库和扩展。 exp。
+
+> **/Export:** *entryname* \[ **=** *internalname*]\[，**\@**<em>序号</em>\[， **NONAME**]]\[，**数据**]
+
+从你的程序，使其他程序可以调用该函数中导出函数。 您还可以导出数据 (使用**数据**关键字)。 通常在 DLL 中定义导出。
+
+*Entryname*是函数或数据的项的名称，因为它是由调用程序。 或者，您可以指定*internalname*与函数定义的程序中; 默认情况下，已知*internalname*相同*entryname*。 *序号*如果不指定到的导出表中 1 到 65,535; 范围内指定索引*序号*，LIB 将分配一个。 **NONAME**关键字仅作为序号，导出该函数不带*entryname*。 **数据**关键字用于导出仅限数据的对象。
+
+> **/INCLUDE:** *符号*
+
+添加指定*符号*到符号表。 此选项可用于强制库对象，否则不会包含的使用。
+
+请注意，是否创建.dll 之前，可以在初始步骤中，创建导入库，则必须通过同一组对象文件时生成.dll 文件，为通过生成导入库时。
+
+## <a name="see-also"></a>请参阅
+
+[使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)
