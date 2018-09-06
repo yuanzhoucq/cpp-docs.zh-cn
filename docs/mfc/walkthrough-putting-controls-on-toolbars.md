@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693570"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>演练：将控件置于工具栏上
 本主题介绍如何将一个包含 Windows 控件的工具栏按钮添加到工具栏。 在 MFC 中，工具栏按钮必须是[CMFCToolBarButton 类](../mfc/reference/cmfctoolbarbutton-class.md)-派生的类，例如[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 类](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 类](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 类](../mfc/reference/cmfctoolbarmenubutton-class.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "43199259"
  启用自定义，当您创建**自定义**自定义处理程序中的对话框中`OnViewCustomize`通过[CMFCToolBarsCustomizeDialog 类](../mfc/reference/cmfctoolbarscustomizedialog-class.md)类。 在显示前**自定义**对话框中，通过调用[CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create)，调用[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)替换带有新控件的标准按钮。  
   
 ## <a name="example-creating-a-find-combo-box"></a>示例：创建一个 Find 组合框  
- 本部分介绍如何创建**查找**出现在工具栏上，其中包含最近使用过的搜索字符串的组合框控件。 用户可在控件中键入一个字符串，然后按 Enter 键来搜索文档，或按 Esc 键将焦点返回主框架。 此示例假定文档 [CEditView 类](../mfc/reference/ceditview-class.md)-派生的视图。  
+ 本部分介绍如何创建**查找**出现在工具栏上，其中包含最近使用过的搜索字符串的组合框控件。 用户可在控件中键入一个字符串，然后按 Enter 键来搜索文档，或按 Esc 键将焦点返回主框架。 此示例假定文档穦 [CEditView 类](../mfc/reference/ceditview-class.md)-派生的视图。  
   
 ### <a name="creating-the-find-control"></a>创建 Find 控件  
  首先，创建 `Find` 组合框控件：  
@@ -73,7 +73,7 @@ ms.locfileid: "43199259"
   
     1.  将 `ID_EDIT_FIND_COMBO` 作为命令 ID 传递。  
   
-    2.  使用[CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca)与`ID_EDIT_FIND`若要获取的图像索引。  
+    2.  使用[CCommandManager::GetCmdImage](reference/internal-classes.md)与`ID_EDIT_FIND`若要获取的图像索引。  
   
     3.  有关可用组合框样式的列表，请参阅[组合框样式](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)。  
   
