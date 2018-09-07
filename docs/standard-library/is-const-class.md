@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83c929548d95ec0a741fd4b65c372402d22f2679
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956080"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099546"
 ---
 # <a name="isconst-class"></a>is_const 类
 
@@ -37,7 +37,8 @@ struct is_const;
 
 ### <a name="parameters"></a>参数
 
-*Ty*查询的类型。
+*Ty*<br/>
+要查询的类型。
 
 ## <a name="remarks"></a>备注
 
