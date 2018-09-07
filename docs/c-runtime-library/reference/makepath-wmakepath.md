@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204899"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105082"
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>参数
 
-*路径*完整路径缓冲区。
+*path*<br/>
+完整路径缓冲区。
 
-*驱动器*包含一个字母 （A、 B 和等等） 对应于所需的驱动器和可选的尾随冒号。 **_makepath**缺少时自动插入复合路径中的冒号。 如果*驱动器*是**NULL**或指向空字符串，无驱动器号出现在复合*路径*字符串。
+*驱动器*<br/>
+包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 **_makepath**缺少时自动插入复合路径中的冒号。 如果*驱动器*是**NULL**或指向空字符串，无驱动器号出现在复合*路径*字符串。
 
-*dir*包含路径的目录，不包括驱动器指示符或实际文件名。 尾随斜杠是可选的并且是正斜杠 （/） 或反斜杠 (\\) 或两者可能使用在单个*dir*参数。 如果未指定尾随斜杠（\ 或 \\），将自动插入。 如果*dir*是**NULL**或为空字符串，没有目录路径的点插入在复合*路径*字符串。
+*dir*<br/>
+包含目录路径，但不包括驱动器指示符或实际文件名。 尾随斜杠是可选的并且是正斜杠 （/） 或反斜杠 (\\) 或两者可能使用在单个*dir*参数。 如果未指定尾随斜杠（\ 或 \\），将自动插入。 如果*dir*是**NULL**或为空字符串，没有目录路径的点插入在复合*路径*字符串。
 
-*fname*包含无任何文件名称扩展的基本文件名称。 如果*fname*是**NULL**或指向空字符串，任何文件名插入在复合*路径*字符串。
+*fname*<br/>
+包含无任何文件扩展名的基文件名。 如果*fname*是**NULL**或指向空字符串，任何文件名插入在复合*路径*字符串。
 
-*ext*包含实际的文件扩展名，带或不带前导句点 （.）。 **_makepath**如果未出现在自动插入句点*ext*。如果*ext*是**NULL**或为空字符串，不扩展点插入在复合*路径*字符串。
+*ext*<br/>
+包含实际的文件扩展名（带有或不带前导句点 (.)）。 **_makepath**如果未出现在自动插入句点*ext*。如果*ext*是**NULL**或为空字符串，不扩展点插入在复合*路径*字符串。
 
 ## <a name="remarks"></a>备注
 

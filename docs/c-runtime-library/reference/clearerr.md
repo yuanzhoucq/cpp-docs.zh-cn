@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395297"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105271"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,19 +54,20 @@ void clearerr(
 
 ### <a name="parameters"></a>参数
 
-*流*指向**文件**结构。
+*流*<br/>
+指向**文件**结构的指针。
 
 ## <a name="remarks"></a>备注
 
-**Clearerr**函数重置错误指示器和的文件尾指示器*流*。 错误指示符不自动清除;设置指定的流的错误指示器后，该流上继续执行操作来返回之前的错误值**clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[rewind](rewind.md)调用。
+**Clearerr**函数将重置错误指示符和文件尾指示符*流*。 不会自动清除错误指示符;一旦设置指定流的错误指示符，继续该流上的操作，以返回错误值上的，直到**clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或者[rewind](rewind.md)调用。
 
-如果*流*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回。 有关详细信息**errno**和错误代码，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回。 有关详细信息**errno**和错误代码，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
 
 提供此函数的一个更安全的版本；请参阅 [clearerr_s](clearerr-s.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
