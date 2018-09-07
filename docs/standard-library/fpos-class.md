@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966597"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105872"
 ---
 # <a name="fpos-class"></a>fpos 类
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>参数
 
-*Statetype*状态信息。
+*Statetype*<br/>
+状态信息。
 
 ### <a name="constructors"></a>构造函数
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>参数
 
-*_Off*到流中的偏移量。
+*_Off*<br/>
+进入流的偏移量。
 
-*_State*的起始状态`fpos`对象。
+*（_s)*<br/>
+`fpos` 对象的起始状态。
 
-*_Filepos*到流中的偏移量。
+*_Filepos*<br/>
+进入流的偏移量。
 
 ### <a name="remarks"></a>备注
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*要与之比较的文件位置指示器。
+*right*<br/>
+要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*要按其递增文件位置指示器的偏移量。
+*_Off*<br/>
+要按其递增文件位置指示器的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*要按其递增文件位置指示器的偏移量。
+*_Off*<br/>
+要按其递增文件位置指示器的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*右*文件位置。
+*right*<br/>
+文件位置。
 
-*_Off* Stream 偏移量。
+*_Off*<br/>
+流偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off* Stream 偏移量。
+*_Off*<br/>
+流偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*要与之比较的文件位置指示器。
+*right*<br/>
+要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>参数
 
-*_State*新的转换状态。
+*（_s)*<br/>
+新的转换状态。
 
 ### <a name="return-value"></a>返回值
 

@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956838"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110013"
 ---
 # <a name="basicios-class"></a>basic_ios 类
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>参数
 
-*Elem*类型。
+*Elem*<br/>
+一种类型。
 
-*特征*类型的变量的`char_traits`。
+*特征*<br/>
+`char_traits` 类型的变量。
 
 ## <a name="remarks"></a>备注
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>参数
 
-*sb*标准缓冲区来存储输入或输出元素。
+*sb*<br/>
+用于存储输入或输出元素的标准缓冲区。
 
 ### <a name="remarks"></a>备注
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*你想要复制其标志的流。
+*right*<br/>
+要复制其标志的流。
 
 ### <a name="return-value"></a>返回值
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>参数
 
-*Newexcept*你想要引发异常的标志。
+*Newexcept*<br/>
+希望抛出异常的标志。
 
 ### <a name="return-value"></a>返回值
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>参数
 
-*Char*希望用作填充字符的字符。
+*Char*<br/>
+希望用作填充字符的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*区域设置字符串。
+*Loc*<br/>
+区域设置字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>参数
 
-*_Sb*标准缓冲区来存储输入或输出元素。
+*_Sb*<br/>
+用于存储输入或输出元素的标准缓冲区。
 
-*_Isstd*指定这是否是一个标准流。
+*_Isstd*<br/>
+指定这是否是一个标准流。
 
 ### <a name="remarks"></a>备注
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`ios_base`从中移动值的对象。
+*right*<br/>
+从中移动值的 `ios_base` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>参数
 
-*Char* **char**转换。
+*Char*<br/>
+**Char**转换。
 
-*默认值* **char**想要返回如果找到没有等效项。
+*默认*<br/>
+**Char**想要返回如果找到没有等效项。
 
 ### <a name="return-value"></a>返回值
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>参数
 
-*_Sb*流。
+*_Sb*<br/>
+一个流。
 
 ### <a name="remarks"></a>备注
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>参数
 
-*_State*要设置其他标志。
+*（_s)*<br/>
+要设置的其他标志。
 
 ### <a name="remarks"></a>备注
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>参数
 
-*strbuf*要成为读取的缓冲区的流缓冲区。
+*strbuf*<br/>
+要成为读取缓冲区的流缓冲区。
 
 ### <a name="remarks"></a>备注
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>参数
 
-*str*流。
+*str*<br/>
+一个流。
 
 ### <a name="return-value"></a>返回值
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>参数
 
-*Char*要转换的字符。
+*Char*<br/>
+要转换的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`basic_ios`用于交换值的对象。
+*right*<br/>
+用于交换值的 `basic_ios` 对象。
 
 ### <a name="remarks"></a>备注
 

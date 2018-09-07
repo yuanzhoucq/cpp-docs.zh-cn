@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954807"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108897"
 ---
 # <a name="moneyput-class"></a>money_put 类
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序内使用的区域设置的字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对区域设置中的字符进行编码的类型。
 
-*OutputIterator*写入其输出到供货币放置函数的迭代器的类型。
+*OutputIterator*<br/>
+供货币放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*下一步*发现插入的字符串的第一个元素的迭代器。
+*next*<br/>
+发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
+*_Intl*<br/>
+一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
+*_Iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*出现用于调整间距的字符。
+*_Fill*<br/>
+用于调整间距的字符。
 
-*val*要转换的字符串对象。
+*val*<br/>
+要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-*下一步*发现插入的字符串的第一个元素的迭代器。
+*next*<br/>
+发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*布尔值，该值指示在序列中预期的货币符号的类型： **true**国际，如果**false**如果国内。
+*_Intl*<br/>
+一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*一种格式标志时集表示货币符号是可选项; 否则，它是必需
+*_Iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*出现用于调整间距的字符。
+*_Fill*<br/>
+用于调整间距的字符。
 
-*val*要转换的字符串对象。
+*val*<br/>
+要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
 

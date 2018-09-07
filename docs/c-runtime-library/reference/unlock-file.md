@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407767"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107520"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,15 +56,16 @@ void _unlock_file(
 
 ### <a name="parameters"></a>参数
 
-*文件*文件句柄。
+文件<br/>
+文件句柄。
 
 ## <a name="remarks"></a>备注
 
-**_Unlock_file**函数解锁指定的文件*文件*。 解锁文件可允许其他进程访问此文件。 除非，不应该调用此函数 **_lock_file**之前已调用上*文件*指针。 调用 **_unlock_file**对不会锁定的文件可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
+**_Unlock_file**函数解锁由指定的文件*文件*。 解锁文件可允许其他进程访问此文件。 除非，不应调用此函数 **_lock_file**之前已调用*文件*指针。 调用 **_unlock_file**上不会锁定的文件可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 

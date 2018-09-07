@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956134"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101711"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 类
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*Elem*字符串的基本元素的类型。
+*Elem*<br/>
+字符串的基本元素的类型。
 
-*Tr*字符串的基本元素上专用的字符特征。
+*Tr*<br/>
+字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>参数
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*str*类型的对象[basic_string](../standard-library/basic-string-class.md)。
+*str*<br/>
+类型 [basic_string](../standard-library/basic-string-class.md) 的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区中的字符或`traits_type::eof`。
+*_Meta*<br/>
+要插入到缓冲区的字符或 `traits_type::eof`。
 
 ### <a name="return-value"></a>返回值
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区中的字符或`traits_type::eof`。
+*_Meta*<br/>
+要插入到缓冲区的字符或 `traits_type::eof`。
 
 ### <a name="return-value"></a>返回值
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>参数
 
-*_Off*要搜寻的相对于的位置 *_Way*。 有关详细信息，请参阅 [basic_stringbuf::off_type](#off_type)。
+*_Off*<br/>
+要搜寻的相对于的位置 *_Way*。 有关详细信息，请参阅 [basic_stringbuf::off_type](#off_type)。
 
-*_Way*偏移操作的起始点。 请参阅 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*<br/>
+偏移操作的起点。 请参阅 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*模式 （_m)* 指定指针位置的模式。 默认允许修改读取和写入位置。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+指定指针位置的模式。 默认值允许修改读取和写入位置。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="return-value"></a>返回值
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>参数
 
-*_Sp*要搜寻的位置。
+*_Sp*<br/>
+要搜寻的位置。
 
-*模式 （_m)* 指定指针位置的模式。 默认允许修改读取和写入位置。
+*模式 （_m)*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-*_Newstr*新字符串。
+*_Newstr*<br/>
+新字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>参数
 
-*其他*将交换其内容与此 basic_stringbuf 的 basic_stringbuf。
+*other*<br/>
+其内容将与此 basic_stringbuf 交换的 basic_stringbuf 。
 
 ### <a name="remarks"></a>备注
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>参数
 
-*其他*将 basic_stringbuf 中其内容，包括区域设置特征将分配给该运算符左侧的 stringbuf。
+*other*<br/>
+将 basic_stringbuf 中的内容（包括区域设置特征）赋予运算符左侧的 stringbuf。
 
 ### <a name="remarks"></a>备注
 

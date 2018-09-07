@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107648"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>参数
 
-*左*其各自的元素将与按位组合的两个位组的第一个`AND`。
+*left*<br/>
+要将其各自的元素使用按位 `AND` 组合的两个位组中的第一个。
 
-*右*其各自的元素是将与按位合并两个 valarray 中的第二个`AND`。
+*right*<br/>
+要将其各自的元素使用按位 `AND` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*右*类型的对象**bitset\<N >** 这是要插入到字符串形式的输出流。
+*right*<br/>
+要作为字符串插入到输出流的 **bitset\<N>** 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>参数
 
-*_Istr*输入到输入流以插入位组的字符串。
+*_Istr*<br/>
+输入到输入流以插入位组的字符串。
 
-*右*从输入流接收位的位组。
+*right*<br/>
+正在从输入流接收位的位组。
 
 ### <a name="return-value"></a>返回值
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>参数
 
-*左*其各自的元素将与按位组合的两个位组的第一个`EXCLUSIVE-OR`。
+*left*<br/>
+要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个位组中的第一个。
 
-*右*其各自的元素是将与按位合并两个 valarray 中的第二个`EXCLUSIVE-OR`。
+*right*<br/>
+要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>参数
 
-*左*其各自的元素将与按位组合的两个位组的第一个`OR`。
+*left*<br/>
+要将其各自的元素使用按位 `OR` 组合的两个位组中的第一个。
 
-*右*其各自的元素是将与按位合并两个 valarray 中的第二个`OR`。
+*right*<br/>
+要将其各自的元素使用按位 `OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 

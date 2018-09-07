@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958544"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100295"
 ---
 # <a name="promise-class"></a>promise 类
 
@@ -75,7 +75,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-`promise`
+*承诺*<br/>
 
 ## <a name="requirements"></a>要求
 
@@ -107,7 +107,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*A`promise`对象。
+*其他*<br/>
+一个 `promise` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -130,9 +131,11 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Al*内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。
+*Al*<br/>
+内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。
 
-*其他*A`promise`对象。
+*其他*<br/>
+一个 `promise` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -152,7 +155,8 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-*独占* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
+*独占*<br/>
+通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>备注
 
@@ -172,7 +176,8 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-*独占* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)存储通过此方法为异常结果。
+*独占*<br/>
+通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>备注
 
@@ -195,7 +200,8 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>参数
 
-*Val*作为结果存储的值。
+*val*<br/>
+要存储为结果的值。
 
 ### <a name="remarks"></a>备注
 
@@ -226,7 +232,8 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>参数
 
-*Val*作为结果存储的值。
+*val*<br/>
+要存储为结果的值。
 
 ### <a name="remarks"></a>备注
 
@@ -254,7 +261,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*A`promise`对象。
+*其他*<br/>
+一个 `promise` 对象。
 
 ## <a name="see-also"></a>请参阅
 

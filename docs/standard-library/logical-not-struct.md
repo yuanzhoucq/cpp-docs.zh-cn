@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961634"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108702"
 ---
 # <a name="logicalnot-struct"></a>logical_not 结构
 
@@ -44,14 +44,16 @@ struct logical_not<void>
   template <class Type>
   auto operator()(Type&& Left) const`
      -> decltype(!std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
-*类型*支持任何类型`operator!`接受指定或推断类型的操作数。
+*类型*<br/>
+支持 `operator!` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*的操作数的逻辑非运算。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
+左侧<br/>
+逻辑“非”运算的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
 
 ## <a name="return-value"></a>返回值
 
@@ -96,10 +98,10 @@ int main( )
 }
 /* Output:
 Original deque:
- d1 = ( false true false true false true false )
+d1 = ( false true false true false true false )
 The deque with its values negated is:
- d2 = ( true false true false true false true )
- */
+d2 = ( true false true false true false true )
+*/
 ```
 
 ## <a name="requirements"></a>要求

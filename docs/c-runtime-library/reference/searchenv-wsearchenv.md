@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408910"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100393"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
 
@@ -87,25 +87,28 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>参数
 
-*filename*要搜索的文件的名称。
+*filename*<br/>
+要搜索的文件名称。
 
-*varname*要搜索的环境。
+*varname*<br/>
+要搜索的环境。
 
-*路径名*用于存储的完整路径缓冲区。
+*路径名*<br/>
+用于存储完整路径的缓冲区。
 
 ## <a name="remarks"></a>备注
 
-**_Searchenv**例程搜索指定的域中的目标文件。 *Varname*变量可以是任何环境或用户定义变量 — 例如，**路径**， **LIB**，或**包括**-，它指定目录路径的列表。 因为 **_searchenv**区分大小写， *varname*应匹配的环境变量的大小写。
+**_Searchenv**例程搜索指定的域中的目标文件。 *Varname*变量可以是任何环境或用户定义的变量，例如，**路径**， **LIB**，或**INCLUDE**—，它指定目录路径的列表。 因为 **_searchenv**区分大小写， *varname*应匹配的环境变量的大小写。
 
-例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件在其中一个目录，则新创建的路径复制到*路径名*。 如果*filename*找不到文件，*路径名*包含一个空的以 null 结尾的字符串。
+例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件是在其中一个目录中，新创建的路径复制到*pathname*。 如果*文件名*找不到文件，*路径名*包含空的以 null 结尾的字符串。
 
-*路径名*缓冲区至少应为 **_MAX_PATH**长度个字符，以便容纳构建的路径名称的完整长度。 否则为 **_searchenv**可能溢出*路径名*缓冲并导致意外的行为。
+*Pathname*缓冲区应至少 **_MAX_PATH**字符很长时间才能容纳构建的路径名称的完整长度。 否则为 **_searchenv**可能溢出*路径名*缓冲区并导致意外的行为。
 
-**_wsearchenv**是宽字符版本的 **_searchenv**，和的自变量 **_wsearchenv**是宽字符字符串。 **_wsearchenv**和 **_searchenv**否则具有相同行为。
+**_wsearchenv**是宽字符版本 **_searchenv**，并为参数 **_wsearchenv**都是宽字符字符串。 **_wsearchenv**并 **_searchenv**行为相同。
 
-如果*filename*为空字符串，这些函数将返回**ENOENT**。
+如果*文件名*是空字符串，这些函数将返回**ENOENT**。
 
-如果*filename*或*路径名*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*文件名*或*路径名*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
 
 有关详细信息**errno**和错误代码，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
 
@@ -119,7 +122,7 @@ void _wsearchenv(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> 或 \<wchar.h>|

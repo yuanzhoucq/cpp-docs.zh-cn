@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397127"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103314"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>参数
 
-*区域设置*要释放的区域设置对象。
+*locale*<br/>
+要释放的区域设置对象。
 
 ## <a name="remarks"></a>备注
 
 **_Free_locale**函数用于释放通过调用获取的区域设置对象 **_get_current_locale**或 **_create_locale**。
 
-此函数的以前名称 **__free_locale** （带两个前导下划线） 已弃用。
+此函数的以前名称 **__free_locale** （带两个前导下划线） 已被弃用。
 
 ## <a name="requirements"></a>要求
 

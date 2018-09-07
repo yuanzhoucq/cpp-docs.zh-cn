@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767707"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110028"
 ---
 # <a name="atl-dialog-wizard"></a>ATL 对话框向导
 
@@ -35,7 +35,7 @@ ms.locfileid: "43767707"
 **短名称**  
 设置 ATL 对话框对象的缩写的名称。 所提供的名称确定类名称和文件 （.cpp 和.h） 名称，除非您单独更改这些字段。
 
-`Class`  
+**类**  
 设置要创建的类的名称。 此名称基于中提供的名称**短名称**后, 跟 C，这是典型的类名前缀。
 
 **.h 文件**  

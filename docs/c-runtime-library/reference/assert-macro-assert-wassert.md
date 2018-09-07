@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200662"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101932"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>参数
 
-*表达式*计算结果不为零的标量表达式 （包括指针表达式） (**true**) 或 0 (**false**)。
+*表达式*<br/>
+计算结果不为零的标量表达式 （包括指针表达式） (**，则返回 true**) 或 0 (**false**)。
 
-*消息*要显示的消息。
+*message*<br/>
+要显示的消息。
 
-*文件名*文件中的失败的断言的源的名称。
+*filename*<br/>
+断言失败的源文件的名称。
 
-*行*失败的断言的源文件中的行号。
+*行*<br/>
+断言失败处所在的源文件行号。
 
 ## <a name="remarks"></a>备注
 

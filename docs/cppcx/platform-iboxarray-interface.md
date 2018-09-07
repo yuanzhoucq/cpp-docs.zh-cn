@@ -16,56 +16,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 66e3ff5a2daf0ddef41ea478b55ca2fc67298c01
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765689"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108443"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 接口
-`IBoxArray` 是在应用程序二进制接口 (ABI) 之间传递或在 `Platform::Object^` 元素的集合中存储（如 XAML 控件）的值类型数组的包装器。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-template <typename T>  
-interface class IBoxArray  
-```  
-  
-#### <a name="parameters"></a>参数  
- `T`  
- 每个数组元素中的装箱值的类型。  
-  
-### <a name="remarks"></a>备注  
- `IBoxArray` 是 C + + /cli CX 名称`Windows::Foundation::IReferenceArray`。  
-  
-### <a name="members"></a>成员  
- `IBoxArray` 接口继承自 `IValueType` 接口。 `IBoxArray` 还包括这些成员：  
-  
-|方法|描述|  
-|------------|-----------------|  
-|[值](#value)|返回此 `IBoxArray` 实例以前存储的未装箱数组。|  
+
+`IBoxArray` 是在应用程序二进制接口 (ABI) 之间传递或在 `Platform::Object^` 元素的集合中存储（如 XAML 控件）的值类型数组的包装器。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <typename T>
+interface class IBoxArray
+```
+
+#### <a name="parameters"></a>参数
+
+*T*<br/>
+每个数组元素中的装箱值的类型。
+
+### <a name="remarks"></a>备注
+
+`IBoxArray` 是 C + + /cli CX 名称`Windows::Foundation::IReferenceArray`。
+
+### <a name="members"></a>成员
+
+`IBoxArray` 接口继承自 `IValueType` 接口。 `IBoxArray` 还包括这些成员：
+
+|方法|描述|
+|------------|-----------------|
+|[值](#value)|返回此 `IBoxArray` 实例以前存储的未装箱数组。|
 
 ## <a name="value"></a> Iboxarray:: Value 属性
-返回此对象中最初存储的值。  
-  
-### <a name="syntax"></a>语法  
-  
-```cpp  
-property T Value {T get();}  
-```  
-  
-### <a name="parameters"></a>参数  
- `T`  
- 装箱值的类型。  
-  
-### <a name="property-valuereturn-value"></a>属性值/返回值  
- 返回此对象中最初存储的值。  
-  
-### <a name="remarks"></a>备注  
- 有关示例，请参阅[装箱](../cppcx/boxing-c-cx.md)。  
-  
-  
-## <a name="see-also"></a>请参阅  
- [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+
+返回此对象中最初存储的值。
+
+### <a name="syntax"></a>语法
+
+```cpp
+property T Value {T get();}
+```
+
+### <a name="parameters"></a>参数
+
+*T*<br/>
+装箱值的类型。
+
+### <a name="property-valuereturn-value"></a>属性值/返回值
+
+返回此对象中最初存储的值。
+
+### <a name="remarks"></a>备注
+
+有关示例，请参阅[装箱](../cppcx/boxing-c-cx.md)。
+
+## <a name="see-also"></a>请参阅
+
+[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

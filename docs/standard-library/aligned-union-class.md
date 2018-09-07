@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4017fceab100689847ea99df80016aaba2fbd10f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962108"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107654"
 ---
 # <a name="alignedunion-class"></a>aligned_union 类
 
@@ -39,9 +39,11 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>参数
 
-*Len*联合中的最大类型的对齐值。
+*Len*<br/>
+联合中的最大类型的对齐值。
 
-*类型*基础联合中的不同类型。
+*类型*<br/>
+基础联合中的不同类型。
 
 ## <a name="remarks"></a>备注
 

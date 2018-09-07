@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35a40b016fa8fb25782393ea462b5cff2a3c3fac
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3690eab417f4c817e571026e501f36a19671da2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963248"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100984"
 ---
 # <a name="isvoid-class"></a>is_void 类
 
@@ -37,7 +37,8 @@ struct is_void;
 
 ### <a name="parameters"></a>参数
 
-*T*查询的类型。
+*T*<br/>
+要查询的类型。
 
 ## <a name="remarks"></a>备注
 

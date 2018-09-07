@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965978"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100919"
 ---
 # <a name="numput-class"></a>num_put 类
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序内使用的区域设置的字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对区域设置中的字符进行编码的类型。
 
-*OutputIterator*写入其输出结果的数值将函数放的迭代器的类型。
+*OutputIterator*<br/>
+数值输出函数将其输出写入到的迭代器的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*下一步*发现插入的字符串的第一个元素的迭代器。
+*next*<br/>
+发现插入的字符串中第一个元素的迭代器。
 
-*_Iosbase*指定其中包含用于向输出和设置输出格式标志加标点以便的 numpunct facet 的区域设置的流。
+*_Iosbase*<br/>
+指定包含区域设置的流，以及用于向输出和标志加标点以便对输出进行格式设置的 numpunct facet。
 
-*_Fill*用于调整间距的字符。
+*_Fill*<br/>
+用于调整间距的字符。
 
-*val*数字或布尔值将成为输出的类型。
+*val*<br/>
+将输出的数字或布尔类型。
 
 ### <a name="return-value"></a>返回值
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-*dest*发现插入的字符串的第一个元素的迭代器。
+*dest*<br/>
+发现插入的字符串中第一个元素的迭代器。
 
-*_Iosbase*指定包含用于向输出和设置输出格式标志加标点以便的 numpunct facet 的区域设置的流。
+*_Iosbase*<br/>
+指定包含区域设置的流，以及用于向输出和标志加标点以便对输出进行格式设置的 numpunct facet。
 
-*_Fill*用于调整间距的字符。
+*_Fill*<br/>
+用于调整间距的字符。
 
-*val*数字或布尔值将成为输出的类型。
+*val*<br/>
+将输出的数字或布尔类型。
 
 ### <a name="return-value"></a>返回值
 

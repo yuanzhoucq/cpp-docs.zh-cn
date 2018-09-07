@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9e53d9344e56f9efc4f20b834ce31bcb05f9fbb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961716"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103972"
 ---
 # <a name="binder1st-class"></a>binder1st 类
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*func*二元函数对象转换为一元函数对象。
+*Func*<br/>
+要转换为一元函数对象的二元函数对象。
 
-*左*二元函数对象的第一个参数是要绑定的值。
+*left*<br/>
+要将二元函数对象的第一个参数绑定到的值。
 
-*右*改编的二元对象将与第二个参数的固定值进行比较的参数的值。
+*right*<br/>
+改编的二元对象将其与第二个参数进行比较的参数值。
 
 ## <a name="return-value"></a>返回值
 

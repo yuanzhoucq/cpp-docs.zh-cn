@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956802"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110625"
 ---
 # <a name="codecvt-class"></a>codecvt 类
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序中用于对字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对字符进行编码的类型。
 
-*字节*用于对程序外的字符进行编码的类型。
+*Byte*<br/>
+用于对程序外的字符进行编码的类型。
 
-*StateType*可用于表示字符表示形式的内部和外部类型之间转换的中间状态的类型。
+*StateType*<br/>
+一种类型，此类型可用于表示字符表示形式的内部和外部类型之间转换的中间状态。
 
 ## <a name="remarks"></a>备注
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
@@ -216,7 +220,7 @@ explicit codecvt(size_t _Refs = 0);
 
 - 1：必须手动管理对象的生存期。
 
-- \> 1： 未定义这些值。
+- 2： 未定义这些值。
 
 构造函数初始化其`locale::facet`基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向待转换序列的开头。
+*First1*<br/>
+指向待转换序列开头的指针。
 
-*last1*指向待转换序列末尾的指针。
+*Last1*<br/>
+指向待转换序列末尾的指针。
 
-*next1*指向超出已转换序列，到第一个未转换字符的末尾的指针。
+*next1*<br/>
+指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*first2*的已转换序列开头的指针。
+*First2*<br/>
+指向已转换序列开头的指针。
 
-*last2*到的已转换序列末尾的指针。
+*Last2*<br/>
+指向已转换序列末尾的指针。
 
-*next2*指针，指向`CharType`最后一个转换后都`CharType`，目标序列中的第一个未更改字符。
+*next2*<br/>
+指向`CharType`最后一个转换后都`CharType`，目标序列中的第一个未更改字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向外部序列开头的指针。
+*First1*<br/>
+指向外部序列开头的指针。
 
-*last1*指向外部序列末尾的指针。
+*Last1*<br/>
+指向外部序列末尾的指针。
 
-*_Len2*的最大数目`Byte`可由成员函数返回的 s。
+*_Len2*<br/>
+最大数目`Byte`可由成员函数返回的 s。
 
 ### <a name="return-value"></a>返回值
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向待转换序列的开头。
+*First1*<br/>
+指向待转换序列开头的指针。
 
-*last1*指向待转换序列末尾的指针。
+*Last1*<br/>
+指向待转换序列末尾的指针。
 
-*next1*引用指向第一个已`CharType`，在最后一个`CharType`转换。
+*next1*<br/>
+引用指向第一个已`CharType`，在最后一个`CharType`转换。
 
-*first2*的已转换序列开头的指针。
+*First2*<br/>
+指向已转换序列开头的指针。
 
-*last2*到的已转换序列末尾的指针。
+*Last2*<br/>
+指向已转换序列末尾的指针。
 
-*next2*引用指向第一个已`Byte`，在最后一个`Byte`转换。
+*next2*<br/>
+引用指向第一个已`Byte`，在最后一个`Byte`转换。
 
 ### <a name="return-value"></a>返回值
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first2*指向目标范围内的第一个位置。
+*First2*<br/>
+指向目标范围内第一个位置的指针。
 
-*last2*指向目标范围内的最后一个位置。
+*Last2*<br/>
+指向目标范围内最后一个位置的指针。
 
-*next2*指向目标序列中的第一个未更改元素的指针。
+*next2*<br/>
+指向目标序列中第一个未更改元素的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向待转换序列的开头。
+*First1*<br/>
+指向待转换序列开头的指针。
 
-*last1*指向待转换序列末尾的指针。
+*Last1*<br/>
+指向待转换序列末尾的指针。
 
-*next1*指向超出已转换的第一个未转换字符序列末尾的指针。
+*next1*<br/>
+指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*first2*的已转换序列开头的指针。
+*First2*<br/>
+指向已转换序列开头的指针。
 
-*last2*到的已转换序列末尾的指针。
+*Last2*<br/>
+指向已转换序列末尾的指针。
 
-*next2*指针，指向`CharType`最后一个转换后都`Chartype`到目标序列中的第一个未更改字符。
+*next2*<br/>
+指向`CharType`最后一个转换后都`Chartype`到目标序列中的第一个未更改字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向外部序列开头的指针。
+*First1*<br/>
+指向外部序列开头的指针。
 
-*last1*指向外部序列末尾的指针。
+*Last1*<br/>
+指向外部序列末尾的指针。
 
-*_Len2*的最大可由成员函数返回的字节数。
+*_Len2*<br/>
+可由成员函数返回的最大字节数。
 
 ### <a name="return-value"></a>返回值
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first1*指向待转换序列的开头。
+*First1*<br/>
+指向待转换序列开头的指针。
 
-*last1*指向待转换序列末尾的指针。
+*Last1*<br/>
+指向待转换序列末尾的指针。
 
-*next1*引用指向第一个已`CharType`后的最后一个`CharType`转换。
+*next1*<br/>
+引用指向第一个已`CharType`后的最后一个`CharType`转换。
 
-*first2*的已转换序列开头的指针。
+*First2*<br/>
+指向已转换序列开头的指针。
 
-*last2*到的已转换序列末尾的指针。
+*Last2*<br/>
+指向已转换序列末尾的指针。
 
-*next2*引用指向第一个已`Byte`最后一个转换后`Byte`。
+*next2*<br/>
+引用指向第一个已`Byte`最后一个转换后`Byte`。
 
 ### <a name="return-value"></a>返回值
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>参数
 
-*_State*维护对成员函数的调用之间的转换状态。
+*（_s)*<br/>
+每次调用成员函数时保留的转换状态。
 
-*first2*指向目标范围内的第一个位置。
+*First2*<br/>
+指向目标范围内第一个位置的指针。
 
-*last2*指向目标范围内的最后一个位置。
+*Last2*<br/>
+指向目标范围内最后一个位置的指针。
 
-*next2*指向目标序列中的第一个未更改元素的指针。
+*next2*<br/>
+指向目标序列中第一个未更改元素的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -857,5 +905,5 @@ result unshift(
 
 [\<locale>](../standard-library/locale.md)<br/>
 [代码页](../c-runtime-library/code-pages.md)<br/>
-[区域设置名称、 语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

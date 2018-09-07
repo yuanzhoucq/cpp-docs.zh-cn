@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029242a466b7fbac0d967596c114eb0ad45aa569
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9fa22457626892e1ebbf02d6859577b2795f7d04
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105258"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException 类
-当对象的内部状态发生更改进而导致方法的结果失效时引发。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-public ref class ChangedStateException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>备注  
- 例如，如果在父集合更改后调用集合迭代器或集合视图的方法，即会导致方法的结果失效，这时就会引发此异常。  
-  
- 有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。  
-  
-### <a name="requirements"></a>要求  
- **支持的最低客户端：** Windows 8  
-  
- **支持的最低服务器：** Windows Server 2012  
-  
- **命名空间：** Platform  
-  
- **元数据：** platform.winmd  
-  
-## <a name="see-also"></a>请参阅  
- [Platform::COMException 类](../cppcx/platform-comexception-class.md)
+
+当对象的内部状态发生更改进而导致方法的结果失效时引发。
+
+## <a name="syntax"></a>语法
+
+```cpp
+public ref class ChangedStateException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>备注
+
+例如，如果在父集合更改后调用集合迭代器或集合视图的方法，即会导致方法的结果失效，这时就会引发此异常。
+
+有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。
+
+### <a name="requirements"></a>要求
+
+**支持的最低客户端：** Windows 8
+
+**支持的最低服务器：** Windows Server 2012
+
+**命名空间：** Platform
+
+**元数据：** platform.winmd
+
+## <a name="see-also"></a>请参阅
+
+[Platform::COMException 类](../cppcx/platform-comexception-class.md)

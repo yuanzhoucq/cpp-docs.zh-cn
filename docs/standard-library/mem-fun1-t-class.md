@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0d9950d9198aec27ec3114d8a2b5151d105ee0b1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963149"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110000"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t 类
 
@@ -44,11 +44,14 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>参数
 
-*_Pm*指向的类成员函数的指针`Type`可转换为函数对象。
+*_Pm*<br/>
+一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*_Pleft*对象的 *_Pm*上调用成员函数。
+*_Pleft*<br/>
+该对象的 *_Pm*上调用成员函数。
 
-*右*自变量提供给 *_Pm*。
+*right*<br/>
+为指定的参数 *_Pm*。
 
 ## <a name="return-value"></a>返回值
 

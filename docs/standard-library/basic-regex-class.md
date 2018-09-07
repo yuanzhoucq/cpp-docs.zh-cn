@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959743"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100880"
 ---
 # <a name="basicregex-class"></a>basic_regex 类
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>参数
 
-*Elem*要匹配的元素的类型。
+*Elem*<br/>
+要匹配的元素的类型。
 
-*RXtraits*元素的特征类。
+*RXtraits*<br/>
+元素的特征类。
 
 ## <a name="remarks"></a>备注
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>参数
 
-*STtraits*字符串源的特征类。
+*STtraits*<br/>
+字符串源的特征类。
 
-*STalloc*字符串源的分配器类。
+*STalloc*<br/>
+字符串源的分配器类。
 
-*InIt*输入迭代器范围源的类型。
+*InIt*<br/>
+范围源的输入迭代器类型。
 
-*右*要复制的正则表达式源。
+*right*<br/>
+要复制的正则表达式源。
 
-*ptr*要复制到序列的开头的指针。
+*ptr*<br/>
+指向要复制的序列开头的指针。
 
-*标志*复制时要添加的语法选项标志。
+*flags*<br/>
+复制时要添加的语法选项标志。
 
 *len/t D >* 要复制的序列的长度。
 
-*str*要复制的字符串。
+*str*<br/>
+要复制的字符串。
 
-*第一个*的要复制的序列的开头。
+*first*<br/>
+要复制的序列的开头。
 
-*最后一个*序列的末尾来复制。
+*最后一个*<br/>
+要复制的序列的结尾。
 
-*IList*要复制的 initializer_list。
+*IList*<br/>
+要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>参数
 
-*STtraits*字符串源的特征类。
+*STtraits*<br/>
+字符串源的特征类。
 
-*STalloc*字符串源的分配器类。
+*STalloc*<br/>
+字符串源的分配器类。
 
-*InIt*输入迭代器范围源的类型。
+*InIt*<br/>
+范围源的输入迭代器类型。
 
-*右*要复制的正则表达式源。
+*right*<br/>
+要复制的正则表达式源。
 
-*ptr*要复制到序列的开头的指针。
+*ptr*<br/>
+指向要复制的序列开头的指针。
 
-*标志*复制时要添加的语法选项标志。
+*flags*<br/>
+复制时要添加的语法选项标志。
 
 *len/t D >* 要复制的序列的长度。
 
-*str*要复制的字符串。
+*str*<br/>
+要复制的字符串。
 
-*第一个*的要复制的序列的开头。
+*first*<br/>
+要复制的序列的开头。
 
-*最后一个*序列的末尾来复制。
+*最后一个*<br/>
+要复制的序列的结尾。
 
-*IList*要复制的 initializer_list。
+*IList*<br/>
+要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*loc*要存储的区域设置对象。
+*Loc*<br/>
+要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>参数
 
-*STtraits*字符串源的特征类。
+*STtraits*<br/>
+字符串源的特征类。
 
-*STalloc*字符串源的分配器类。
+*STalloc*<br/>
+字符串源的分配器类。
 
-*右*要复制的正则表达式源。
+*right*<br/>
+要复制的正则表达式源。
 
-*str*要复制的字符串。
+*str*<br/>
+要复制的字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>参数
 
-*右*要交换的正则表达式对象。
+*right*<br/>
+要交换的正则表达式对象。
 
 ### <a name="remarks"></a>备注
 

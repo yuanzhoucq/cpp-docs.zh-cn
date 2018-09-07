@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 63712f6eb7efd9c52db5480b7f13babe9601dea2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958499"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110222"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 类
 
@@ -46,9 +46,11 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*文件缓冲区的基本元素。
+*Elem*<br/>
+文件缓冲区的基本元素。
 
-*Tr*文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
 
@@ -141,11 +143,14 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
 ### <a name="remarks"></a>备注
 
@@ -242,11 +247,14 @@ void open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
 ### <a name="remarks"></a>备注
 
@@ -266,7 +274,8 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*的右值引用`basic_ifstream`对象。
+*right*<br/>
+对 `basic_ifstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -302,7 +311,8 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*对另一个流缓冲区的引用。
+*right*<br/>
+对另一个流缓冲区的引用。
 
 ### <a name="remarks"></a>备注
 

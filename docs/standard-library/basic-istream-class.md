@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102611"
 ---
 # <a name="basicistream-class"></a>basic_istream 类
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>参数
 
-*strbuf*类型的对象[basic_streambuf](../standard-library/basic-streambuf-class.md)。
+*strbuf*<br/>
+类型 [basic_streambuf](../standard-library/basic-streambuf-class.md) 的对象。
 
-*_Isstd* **true**如果这是一个标准流; 否则为**false**。
+*_Isstd*<br/>
+**true**如果这是一个标准流; 否则为**false**。
 
-*右*A`basic_istream`要复制对象。
+*right*<br/>
+要复制的 `basic_istream` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>参数
 
-*计数*要读取的字符数`strbuf`。
+*count*<br/>
+要从 `strbuf` 读取的字符数。
 
-*Delim*前遇到如果应终止读取的字符*计数*。
+*Delim*<br/>
+如果遇到之前应终止读取的字符*计数*。
 
-*str*中要写入的字符串。
+*str*<br/>
+写入的字符串。
 
-*Ch*要获取的字符。
+*ch*<br/>
+要获取的字符。
 
-*strbuf*中要写入的缓冲区。
+*strbuf*<br/>
+要写入的缓冲区。
 
 ### <a name="return-value"></a>返回值
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>参数
 
-*计数*要读取的字符数`strbuf`。
+*count*<br/>
+要从 `strbuf` 读取的字符数。
 
-*Delim*前遇到如果应终止读取的字符*计数*。
+*Delim*<br/>
+如果遇到之前应终止读取的字符*计数*。
 
-*str*中要写入的字符串。
+*str*<br/>
+写入的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>参数
 
-*计数*要从当前跳过的元素的数字读取位置。
+*count*<br/>
+要从当前读取位置跳过的元素数。
 
-*Delim*的元素如果遇到计数前、 会导致`ignore`返回并允许之后的所有元素*Delim*要读取。
+*Delim*<br/>
+元素如果遇到计数前、 会导致`ignore`以返回并允许之后的所有元素*Delim*要读取。
 
 ### <a name="return-value"></a>返回值
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>参数
 
-*Pfn*函数指针。
+*pfn*<br/>
+函数指针。
 
-*strbuf*类型的对象`stream_buf`。
+*strbuf*<br/>
+一个 `stream_buf` 类型的对象。
 
-*val*要从流中读取的值。
+*val*<br/>
+要从流中读取的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`rvalue`引用`basic_ifstream`对象。
+*right*<br/>
+对 `basic_ifstream` 对象的 `rvalue` 引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>参数
 
-*Ch*要放回到流的字符。
+*ch*<br/>
+要放回到流中的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>参数
 
-*str*中读取字符的数组。
+*str*<br/>
+要从中读取字符的数组。
 
-*计数*要读取的字符数。
+*count*<br/>
+要读取的字符数。
 
 ### <a name="return-value"></a>返回值
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>参数
 
-*str*在其中的数组`readsome`存储它所读取的字符。
+*str*<br/>
+`readsome` 存储它所读取字符的数组。
 
-*计数*要读取的字符数。
+*count*<br/>
+要读取的字符数。
 
 ### <a name="return-value"></a>返回值
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>参数
 
-*pos*移动读取的指针的绝对位置。
+*pos*<br/>
+要将读取指针移动到的绝对位置。
 
-*关闭*偏移量移动读取的指针相对于*方式*。
+*关闭*<br/>
+若要移动读取的指针相对于的偏移量*方式*。
 
-*方式*之一[ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir)枚举。
+*方法*<br/>
+其中一个 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 枚举。
 
 ### <a name="return-value"></a>返回值
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*左值引用到`basic_istream`对象。
+*right*<br/>
+对 `basic_istream` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 

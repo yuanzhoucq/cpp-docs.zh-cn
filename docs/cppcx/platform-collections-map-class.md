@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758373"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103874"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>参数
 
-*K*  
- 键值对中键的类型。
+*K*<br/>
+键值对中键的类型。
 
-*V*  
+*V*<br/>
 键值对中值的类型。
 
-*C*  
+*C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下[std:: less\<K >](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type()*  
-编译器生成的函数，用于验证的类型*K*并*V*和此类型不能存储在映射中时提供友好错误消息。
+*__is_valid_winrt_type()* 验证的类型的编译器生成函数*K*并*V*和此类型不能存储在映射中时提供友好错误消息。
 
 ### <a name="remarks"></a>备注
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 用于定位 Map 元素的键。 类型*键*是 typename *K*。
 
 ### <a name="return-value"></a>返回值
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
-*value*  
+*value*<br/>
 键值对中的值部分。 类型*值*是 typename *V*。
 
 ### <a name="return-value"></a>返回值
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 用于定位映射中的元素的键。 类型*键*是 typename *K*。
 
 ### <a name="return-value"></a>返回值
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>参数
 
-*InIt*  
+*InIt*<br/>
 当前映射的类型名称。
 
-*comp*  
+*comp*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。
 
-*m*  
+*m*<br/>
 引用或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用于初始化当前映射。
 
-*first*  
+*first*<br/>
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 用于初始化当前映射的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
 ## <a name="size"></a>  Map:: size 方法
@@ -304,5 +303,5 @@ Map 中的元素数目。
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)  
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

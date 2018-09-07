@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956447"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101685"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>参数
 
-*（_e)* [事件](#event)。
+*_E*<br/>
+[事件](#event)。
 
-*（_b)* 调用了事件的流。
+*（_b)*<br/>
+其中调用了事件的流。
 
-*_I*用户定义的数字。
+*_I*<br/>
+用户定义的数字。
 
 ### <a name="remarks"></a>备注
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>参数
 
-*fmtfl*新`fmtflags`设置。
+*fmtfl*<br/>
+新的 `fmtflags` 设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-*_Loc*新的区域设置。
+*_Loc*<br/>
+新的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>参数
 
-*idx*的值存储为索引`iword`。
+*idx*<br/>
+要存储为 `iword` 的值的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>参数
 
-*右*类型的对象`ios_base`。
+*right*<br/>
+一个 `ios_base` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>参数
 
-*_Prec*有效位数来显示或固定表示法中小数点后的位数。
+*_Prec*<br/>
+要显示的有效位的数目或固定表示法中小数点后的位数。
 
 ### <a name="return-value"></a>返回值
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>参数
 
-*上 _Idx*的值存储为索引`pword`。
+*上 _Idx*<br/>
+要存储为 `pword` 的值的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>参数
 
-*pfn*指向回调函数的指针。
+*pfn*<br/>
+回调函数的指针。
 
-*idx*用户定义的数字。
+*idx*<br/>
+用户定义的数字。
 
 ### <a name="remarks"></a>备注
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)* 要启用的标志。
+*掩码 （_m)*<br/>
+要打开的标志。
 
-*_Unset*要关闭的标志。
+*_Unset*<br/>
+要关闭的标志。
 
 ### <a name="return-value"></a>返回值
 
-    The previous format flags
+以前的格式标志
 
 ### <a name="remarks"></a>备注
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+第一个成员函数有效地调用[标志](#flags)(_*掩码* &#124; \_ *标志*) （将所选的位设置），然后返回以前的格式标志。 第二个成员函数有效地调用**标志**(\_ *掩码* **& fmtfl，标志 & ~**`_Mask`) （替换下一个掩码，所选的位）然后返回以前的格式标志。
 
 ### <a name="example"></a>示例
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>参数
 
-*_Sync*所有流都是否与同步`stdio`。
+*_Sync*<br/>
+所有流都是否与同步`stdio`。
 
 ### <a name="return-value"></a>返回值
 
-    Previous setting for this function.
+此函数的以前的设置。
 
 ### <a name="remarks"></a>备注
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+静态成员函数存储`stdio`同步标志，它最初是**true**。 当 **，则返回 true**，此标志可确保对同一文件的操作都正确同步之间[iostreams](../standard-library/iostreams-conventions.md)函数和 c + + 标准库中所定义的。 否则为同步可能会或可能不保证，但可能会提高性能。 函数存储 *_Sync*中`stdio`同步标志，并返回其先前的存储的值。 您可以调用它可靠地仅在执行对标准流的任何操作之前。
 
 ## <a name="unsetf"></a>ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)* 要关闭的标志。
+*掩码 （_m)*<br/>
+要关闭的标志。
 
 ### <a name="remarks"></a>备注
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+成员函数有效地调用[标志](#flags)(`~`*_Mask* **& 标志**) （清除所选的位）。
 
 ### <a name="example"></a>示例
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+请参阅[ios_base:: setf](#setf)有关的使用示例`unsetf`。
 
 ## <a name="width"></a>ios_base::width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>参数
 
-*_Wide*的输出流的所需的大小。
+*_Wide*<br/>
+所需的输出流大小。
 
 ### <a name="return-value"></a>返回值
 
-    The current width setting.
+当前的宽度设置。
 
 ### <a name="remarks"></a>备注
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+第一个成员函数返回存储的字段宽度。 第二个成员函数存储 *_Wide*字段宽度，并返回其先前的存储值。
 
 ### <a name="example"></a>示例
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a>ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+指定一个变量是流的一部分。
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>返回值
 
-    The static member function returns a stored static value, which it increments on each call.
+静态成员函数返回存储的静态值，则在每次调用会递增。
 
 ### <a name="remarks"></a>备注
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+调用该成员函数时，可以作为唯一索引参数使用返回值[iword](#iword)或[pword](#pword)。
 
 ### <a name="example"></a>示例
 

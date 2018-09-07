@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100282"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,26 @@ void rewind(
 
 ### <a name="parameters"></a>参数
 
-*流*指向**文件**结构。
+*流*<br/>
+指向**文件**结构的指针。
 
 ## <a name="remarks"></a>备注
 
-**Rewind**函数将与关联的文件指针重新定位*流*到文件的开头。 对 **rewind** 的调用类似于
+**Rewind**函数与关联的文件指针重新定位*流*到该文件的开头。 对 **rewind** 的调用类似于
 
-**(void) fseek (** _流_**，0 L，SEEK_SET);**
+**(void) fseek (** _流_**，0l、 SEEK_SET);**
 
-但是，与不同[fseek](fseek-fseeki64.md)， **rewind**清除流的错误指示符以及文件尾指示器。 此外，与不同[fseek](fseek-fseeki64.md)， **rewind**不返回一个值以指示是否已成功移动指针。
+但是，与不同[fseek](fseek-fseeki64.md)， **rewind**清除流的错误指示符和文件尾指示符。 此外，与不同[fseek](fseek-fseeki64.md)， **rewind**不返回指示是否已成功移动指针的值。
 
-若要清除键盘缓冲区，使用**rewind**与流**stdin**，这是默认情况下与键盘关联。
+若要清除键盘缓冲区，使用**rewind**与流**stdin**，这是默认情况下与键盘相关联。
 
-如果流是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回和**errno**设置为**EINVAL**。
+如果流**NULL**指针，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回并**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 

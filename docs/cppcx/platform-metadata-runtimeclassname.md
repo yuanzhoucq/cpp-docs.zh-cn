@@ -14,61 +14,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f7f81397be93de0080f2d6e8668d3cd5880ecc38
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765478"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104049"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
-在应用于类定义时，请确保私有类从 GetRuntimeClassName 函数返回有效名称。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-[Platform::Metadata::RuntimeClassName] name  
-```  
-  
-#### <a name="parameters"></a>参数  
- name  
-  
- Windows 运行时中可见的现有公共类型的名称。  
-  
-### <a name="remarks"></a>备注  
- 在私有 ref 类上使用此特性指定自定义运行时类型名称并且/或者指定现有名称未满足要求。 指定为类实现的公共接口名称。  
-  
-### <a name="example"></a>示例  
- 下面的示例演示如何使用此特性。 在此示例中，HellowWorldImpl 的运行时类型名称为 Test::Native::MyComponent::IHelloWorld  
-  
-```  
-  
-namespace Test  
-{  
-    namespace Native  
-    {  
-        namespace MyComponent  
-        {  
-            public interface class IHelloWorld  
-            {  
-                Platform::String^ SayHello();  
-            };  
-  
-            private ref class HelloWorldImpl sealed :[Platform::Metadata::RuntimeClassName] IHelloWorld  
-            {  
-            public:  
-                HelloWorldImpl();  
-                virtual Platform::String^ SayHello();  
-            };  
-  
-            Platform::String^ HelloWorldImpl::SayHello()  
-            {  
-                return L"Hello World!";  
-            }  
-        }  
-    }  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [Platform::Metadata 命名空间](../cppcx/platform-metadata-namespace.md)
+
+在应用于类定义时，请确保私有类从 GetRuntimeClassName 函数返回有效名称。
+
+## <a name="syntax"></a>语法
+
+```cpp
+[Platform::Metadata::RuntimeClassName] name
+```
+
+#### <a name="parameters"></a>参数
+
+*name*<br/>
+Windows 运行时中可见的现有公共类型的名称。
+
+### <a name="remarks"></a>备注
+
+在私有 ref 类上使用此特性指定自定义运行时类型名称并且/或者指定现有名称未满足要求。 指定为类实现的公共接口名称。
+
+### <a name="example"></a>示例
+
+下面的示例演示如何使用此特性。 在此示例中，HellowWorldImpl 的运行时类型名称为 Test::Native::MyComponent::IHelloWorld
+
+```cpp
+namespace Test
+{
+    namespace Native
+    {
+        namespace MyComponent
+        {
+            public interface class IHelloWorld
+            {
+                Platform::String^ SayHello();
+            };
+
+            private ref class HelloWorldImpl sealed :[Platform::Metadata::RuntimeClassName] IHelloWorld
+            {
+            public:
+                HelloWorldImpl();
+                virtual Platform::String^ SayHello();
+            };
+
+            Platform::String^ HelloWorldImpl::SayHello()
+            {
+                return L"Hello World!";
+            }
+        }
+    }
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[Platform::Metadata 命名空间](../cppcx/platform-metadata-namespace.md)

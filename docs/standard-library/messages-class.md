@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106446"
 ---
 # <a name="messages-class"></a>messages 类
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序内使用的区域设置的字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*要关闭的目录。
+*_Catval*<br/>
+要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*要关闭的目录。
+*_Catval*<br/>
+要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*标识值，该值指定要搜索的消息目录。
+*_Catval*<br/>
+指定要搜索的消息目录的标识值。
 
-*_ 设置*的第一个标识用于在消息目录中查找一条消息。
+*（_s)*<br/>
+用于在消息目录中查找消息的第一个标识。
 
-*消息 （_m)* 第二个标识用于在消息目录中查找一条消息。
+*消息 （_m)*<br/>
+用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*失败时返回的字符串。
+*_Dfault*<br/>
+失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*要搜索的目录的名称。
+*_Catname*<br/>
+要搜索的目录的名称。
 
-*_Loc*要搜索的目录中的区域设置。
+*_Loc*<br/>
+目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*标识值，该值指定要搜索的消息目录。
+*_Catval*<br/>
+指定要搜索的消息目录的标识值。
 
-*_ 设置*的第一个标识用于在消息目录中查找一条消息。
+*（_s)*<br/>
+用于在消息目录中查找消息的第一个标识。
 
-*消息 （_m)* 第二个标识用于在消息目录中查找一条消息。
+*消息 （_m)*<br/>
+用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*失败时返回的字符串。
+*_Dfault*<br/>
+失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
-*_Locname*的区域设置名称。
+*_Locname*<br/>
+区域设置的名称。
 
 ### <a name="remarks"></a>备注
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*要搜索的目录的名称。
+*_Catname*<br/>
+要搜索的目录的名称。
 
-*_Loc*要搜索的目录中的区域设置。
+*_Loc*<br/>
+目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
 

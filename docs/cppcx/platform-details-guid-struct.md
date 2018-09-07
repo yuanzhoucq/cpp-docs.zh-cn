@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aaaffb4254fc676e95f6c6bb315d5f257d64e48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 984af1944a6181382207d33a8ee60799cfcee634
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754899"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101817"
 ---
 # <a name="platformdetailsguid-struct"></a>Platform::Details::__GUID 结构
-此结构仅供内部使用，不用于开发。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-  
-ref struct __GUID;  
-```  
-  
-### <a name="remarks"></a>备注  
- 仅出于完整性的考虑提供此结构，因为可以通过浏览器对其进行检查。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `Platform`  
-  
-### <a name="requirements"></a>要求  
- **元数据：** platform.winmd  
-  
- **命名空间：** Platform::Details  
-  
-## <a name="see-also"></a>请参阅  
- [平台 Namespace](platform-namespace-c-cx.md)
+
+此结构仅供内部使用，不用于开发。
+
+## <a name="syntax"></a>语法
+
+```cpp
+ref struct __GUID;
+```
+
+### <a name="remarks"></a>备注
+
+仅出于完整性的考虑提供此结构，因为可以通过浏览器对其进行检查。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`Platform`
+
+### <a name="requirements"></a>要求
+
+**元数据：** platform.winmd
+
+**命名空间：** Platform::Details
+
+## <a name="see-also"></a>请参阅
+
+[平台 Namespace](platform-namespace-c-cx.md)

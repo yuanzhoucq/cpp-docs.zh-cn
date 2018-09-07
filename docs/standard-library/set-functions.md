@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0baea9b63bb012396847c6408625bbcc62001d0d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966327"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110287"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt; 函数
 
@@ -31,9 +31,11 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>参数
 
-*右*提供要交换的元素的集或其元素将要进行交换的一组与一组*左*。
+*right*<br/>
+提供要交换的元素的集或其元素将要进行交换的一组与一组*左*。
 
-*左*其元素将要与这些集的交换的集*右*。
+*left*<br/>
+其元素将要进行交换的一组与在集中*右*。
 
 ### <a name="remarks"></a>备注
 
@@ -58,9 +60,11 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>参数
 
-*右*多重集提供要交换的元素或其元素将要进行交换的多重集与多重*左*。
+*right*<br/>
+多重集提供要交换的元素或其元素将要进行交换的多重集与多重*左*。
 
-*左*其元素将要进行交换的多重集与多重*右*。
+*left*<br/>
+其元素将要进行交换的多重集与多重*右*。
 
 ### <a name="remarks"></a>备注
 

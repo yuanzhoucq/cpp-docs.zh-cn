@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81dee8442d38a4436b503da83f2853c030b652da
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965725"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103209"
 ---
 # <a name="plus-struct"></a>plus 结构
 
@@ -44,16 +44,18 @@ struct plus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
 *类型*， *T*， *U*支持二进制文件的类型`operator+`接受指定或推断类型的操作数。
 
-*左侧*加法运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+加法运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*加法运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+加法运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a55109683a18415638cacd9cd15dbcaa3164fc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105778"
 ---
 # <a name="directoryentry-class"></a>directory_entry 类
 
@@ -67,7 +67,44 @@ class directory_entry;
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
-## <a name="assign"></a>assign
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[directory_entry](#directory_entry)|默认构造函数行为符合预期。 第四个构造函数初始化`mypath`到*pval*，`mystat`到*stat_arg*，以及`mysymstat`到*symstat_arg*。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[assign](#assign)|成员函数将分配*pval*到`mypath`， *stat*到`mystat`，以及*将 symstat 分配*到`mysymstat`。|
+|[path](#path)|成员函数返回 `mypath`。|
+|[replace_filename](#replace_filename)|成员函数将替换`mypath`与`mypath.parent_path()`  /  *pval*，`mystat`与*stat_arg*，并`mysymstat`与*为 ymstat_arg*|
+|[status](#status)|这两个成员函数返回`mystat`可能是第一次更改。|
+|[symlink_status](#symlink_status)|这两个成员函数返回`mysymstat`可能是第一次更改。|
+
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator!=](#op_neq)|用另一个列表的副本替换列表中的元素。|
+|[operator=](#op_as)|默认成员赋值运算符的行为符合预期。|
+|[operator==](#op_eq)|返回 `mypath == right.mypath`。|
+|[operator<](#op_lt)|返回 `mypath < right.mypath`。|
+|[operator<=](#op_lteq)|返回 `!(right < *this)`。|
+|[operator>](#op_gt)|返回 `right < *this`。|
+|[operator>=](#op_gteq)|返回 `!(*this < right)`。|
+|[运算符 const path_type （& a)](#path_type)|返回 `mypath`。|
+
+## <a name="requirements"></a>要求
+
+**标头：** \<实验性/文件系统&gt;
+
+**命名空间：** std::experimental::filesystem
+
+## <a name="assign"></a> 分配
+
+成员函数将分配*pval*到`mypath`， *stat_arg*到`mystat`，以及*symstat_arg*到`mysymstat`。
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -75,9 +112,20 @@ void assign(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-成员函数将 pval 分配到 mypath，stat 分配到 mystat，并将 symstat 分配到 mysymstat。
+### <a name="parameters"></a>参数
 
-## <a name="directoryentry"></a>directory_entry
+*pval*<br/>
+存储的文件名称路径。  
+
+*stat_arg*<br/>
+存储的文件名称的状态。  
+
+*为 ymstat_arg*<br/>
+存储的文件名称的符号链接状态。  
+
+## <a name="directory_entry"></a> directory_entry
+
+默认构造函数行为符合预期。 第四个构造函数初始化`mypath`到*pval*，`mystat`到*stat_arg*，以及`mysymstat`到*symstat_arg*。
 
 ```cpp
 directory_entry() = default;
@@ -88,82 +136,128 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-默认构造函数行为符合预期。 第四个构造函数将 mypath 初始化到 pval，mystat 初始化到 stat_arg，并将 mysymstat 初始化到 symstat_arg。
+### <a name="parameters"></a>参数
 
-## <a name="operator"></a>operator!=
+*pval*<br/>
+存储的文件名称路径。  
+
+*stat_arg*<br/>
+存储的文件名称的状态。  
+
+*为 ymstat_arg*<br/>
+存储的文件名称的符号链接状态。  
+
+## <a name="op_neq"></a> 运算符 ！ =
+
+成员函数返回 `!(*this == right)`。
 
 ```cpp
 bool operator!=(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 !(*this == right)。
+### <a name="parameters"></a>参数
 
-## <a name="operator"></a>operator=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="op_as"></a> 运算符 =
+
+默认成员赋值运算符的行为符合预期。
 
 ```cpp
 directory_entry& operator=(const directory_entry&) = default;
 directory_entry& operator=(directory_entry&&) noexcept = default;
 ```
 
-默认成员赋值运算符的行为符合预期。
+### <a name="parameters"></a>参数
 
-## <a name="operator"></a>operator==
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)复制到`directory_entry`。  
+
+## <a name="op_eq"></a> 运算符 = =
+
+成员函数返回 `mypath == right.mypath`。
 
 ```cpp
 bool operator==(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 mypath == right.mypath。
+### <a name="parameters"></a>参数
 
-## <a name="operatorlt"></a>运算符&lt;
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="op_lt"></a> 运算符&lt;
+
+成员函数返回 `mypath < right.mypath`。
 
 ```cpp
 bool operator<(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 mypath &lt; right.mypath。
+### <a name="parameters"></a>参数
 
-## <a name="operatorlt"></a>operator&lt;=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="op_lteq"></a> 运算符&lt;=
+
+成员函数返回 `!(right < *this)`。
 
 ```cpp
 bool operator&lt;=(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 !(right \< *this)。
+### <a name="parameters"></a>参数
 
-## <a name="operatorgt"></a>运算符&gt;
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="op_gt"></a> 运算符&gt;
+
+成员函数返回 `right < *this`。
 
 ```cpp
 bool operator&gt;(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 right \< *this。
+### <a name="parameters"></a>参数
 
-## <a name="operatorgt"></a>operator&gt;=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="op_gteq"></a> 运算符&gt;=
+
+成员函数返回 `!(*this < right)`。
 
 ```cpp
 bool operator&gt;=(const directory_entry& right) const noexcept;
 ```
 
-此成员函数返回 ！(* 这\<右)。
+### <a name="parameters"></a>参数
 
-## <a name="operator-const-pathtype"></a>operator const path_type&
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+
+## <a name="path_type"></a> 运算符 const path_type （& a)
+
+该成员运算符将返回 `mypath`。
 
 ```cpp
 operator const std::experimental::filesystem::path&() const;
 ```
 
-该成员运算符将返回 mypath。
+## <a name="path"></a> 路径
 
-## <a name="path"></a>path
+成员函数返回 `mypath`。
 
 ```cpp
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-此成员函数返回 mypath。
+## <a name="replace_filename"></a> replace_filename
 
-## <a name="replacefilename"></a>replace_filename
+成员函数将替换`mypath`与`mypath.parent_path()`  /  *pval*，`mystat`与*stat_arg*，并`mysymstat`与*为 ymstat_arg*
 
 ```cpp
 void replace_filename(
@@ -172,37 +266,50 @@ void replace_filename(
     file_status symstat_arg = file_status());
 ```
 
-此成员函数将 mypath 替换为 mypath.parent_path() / pval，mystat 替换为 stat_arg，并将 mysymstat 替换为 ymstat_arg
+### <a name="parameters"></a>参数
 
-## <a name="status"></a>status
+*pval*<br/>
+存储的文件名称路径。  
+
+*stat_arg*<br/>
+存储的文件名称的状态。  
+
+*为 ymstat_arg*<br/>
+存储的文件名称的符号链接状态。  
+
+## <a name="status"></a> 状态
+
+这两个成员函数返回`mystat`可能是第一次更改，如下所示：
+
+1. 如果`status_known(mystat)`然后不执行任何操作。
+
+1. 否则为如果`!status_known(mysymstat) && !is_symlink(mysymstat)`然后`mystat = mysymstat`。
 
 ```cpp
 file_status status() const;
 file_status status(error_code& ec) const noexcept;
 ```
 
-这两个成员函数均返回第一次可能按如下更改的 mystat：
+### <a name="parameters"></a>参数
 
-1. 如果为 status_known(mystat)，则不执行任何操作。
+*ec*<br/>
+状态错误代码。  
 
-1. 如果为 !status_known(mysymstat) && !is_symlink(mysymstat)，则 mystat = mysymstat。
+## <a name="symlink_status"></a> symlink_status
 
-## <a name="symlinkstatus"></a>symlink_status
+这两个成员函数返回`mysymstat`可能是第一次更改，如下所示： 如果`status_known(mysymstat)`然后不执行任何操作。 否则为 `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;
 file_status symlink_status(error_code& ec) const noexcept;
 ```
 
-这两个成员函数均返回第一次可能按如下更改的 mysymstat：如果为 status_known(mysymstat)，则不执行任何操作。 否则为 mysymstat = symlink_status(mypval)。
+### <a name="parameters"></a>参数
 
-## <a name="requirements"></a>要求
-
-**标头：** \<实验/文件系统&gt;
-
-**命名空间：** std::experimental::filesystem
+*ec*<br/>
+状态错误代码。  
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem&gt;](../standard-library/filesystem.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)  
+[\<filesystem&gt;](../standard-library/filesystem.md)  

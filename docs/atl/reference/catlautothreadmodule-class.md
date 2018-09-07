@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763651"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110638"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 类
 
 此类实现为在线程池的单元模型 COM 服务器。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
->  此类替换已过时[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)类。
+> 此类替换已过时[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 

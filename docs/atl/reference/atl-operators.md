@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767938"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103694"
 ---
 # <a name="atl-operators"></a>ATL 运算符
 
@@ -43,15 +43,15 @@ ms.locfileid: "43767938"
 比较`CSid`对象或`SID`（安全标识符） 结构是否相等。
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-`lhs`  
+*lhs*  
 第一个`CSid`对象或`SID`结构进行比较。
 
-`rhs`  
+*rhs*  
 第二个`CSid`对象或`SID`结构进行比较。
 
 ### <a name="return-value"></a>返回值
@@ -63,7 +63,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 比较`CSid`对象或`SID`（安全标识符） 结构是否不相等。
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -83,7 +83,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 如果测试`CSid`对象或`SID`运算符左侧的结构是不会早于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -107,7 +107,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 如果测试`CSid`对象或`SID`运算符左侧的结构是否大于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -131,7 +131,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 如果测试`CSid`对象或`SID`运算符左侧的结构是否小于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -155,7 +155,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 如果测试`CSid`对象或`SID`运算符左侧的结构是大于或等于`CSid`对象或`SID`（适用于 c + + 标准库兼容性） 右侧的结构。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>参数

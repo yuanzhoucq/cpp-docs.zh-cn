@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964205"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108754"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*<br/>
+整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstW*从中构造分布的列表中的第一个迭代器。
+*firstW*<br/>
+从中构造分布的列表中的第一个迭代器。
 
-*lastW*从中构造分布 （不包含因为迭代器的末尾使用空元素） 列表中的最后一个迭代器。
+*lastW*<br/>
+从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist* [initializer_list](../cpp/initializers.md)从中构造分布。
+*weightlist*<br/>
+从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*计数*分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。
+*count*<br/>
+分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。
 
-*低*分布范围中的最小值。
+*low*<br/>
+分布范围中的最低值。
 
-*高*分布范围中的最高值。
+*high*<br/>
+分布范围中的最高值。
 
-*weightfunc*表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*<br/>
+表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
 
-*parm* `param_type`用于构造分布的结构。
+*parm*<br/>
+用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*firstW*从中构造分布的列表中的第一个迭代器。
+*firstW*<br/>
+从中构造分布的列表中的第一个迭代器。
 
-*lastW*从中构造分布 （不包含因为迭代器的末尾使用空元素） 列表中的最后一个迭代器。
+*lastW*<br/>
+从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist* [initializer_list](../cpp/initializers.md)从中构造分布。
+*weightlist*<br/>
+从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*计数*分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。
+*count*<br/>
+分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。
 
-*低*分布范围中的最小值。
+*low*<br/>
+分布范围中的最低值。
 
-*高*分布范围中的最高值。
+*high*<br/>
+分布范围中的最高值。
 
-*weightfunc*表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*<br/>
+表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
 
-*右*`param_type`要与此比较的对象。
+*right*<br/>
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

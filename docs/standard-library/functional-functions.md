@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208645"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107380"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函数
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>参数
 
-*Fty*要调用的对象的类型。
+*Fty*<br/>
+要调用的对象的类型。
 
-*TN*第 n 个调用参数的类型。
+*TN*<br/>
+第 N 个调用参数的类型。
 
-*fn*要调用的对象。
+*fn*<br/>
+要调用的对象。
 
-*tN*第 n 个调用参数。
+*TN*<br/>
+第 N 个调用参数。
 
 ### <a name="remarks"></a>备注
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>参数
 
-*func*二元函数对象转换为一元函数对象。
+*func*<br/>
+要转换为一元函数对象的二元函数对象。
 
-*左*二元函数对象的第一个参数是要绑定的值。
+*left*<br/>
+要将二元函数对象的第一个参数绑定到的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*func*二元函数对象转换为一元函数对象。
+*func*<br/>
+要转换为一元函数对象的二元函数对象。
 
-*右*二元函数对象的第二个参数是要绑定的值。
+*right*<br/>
+要将二元函数对象的第二个参数绑定到的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *类型*， *T*， *U*支持任何类型`operator&`接受指定或推断类型的操作数。
 
-*左侧*按位 AND 运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+按位 AND 运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*按位 AND 运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+按位 AND 运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ### <a name="return-value"></a>返回值
 
@@ -383,24 +393,26 @@ struct bit_and<void>
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
-*类型*支持一元类型`operator~`。
+*类型*<br/>
+支持一元 `operator~` 的类型。
 
-*右*按位求补运算的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移推断类型的左值或右值引用参数*类型*。
+右侧<br/>
+按位求补运算的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移推断类型的左值或右值引用参数*类型*。
 
 ### <a name="return-value"></a>返回值
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *类型*， *T*， *U*支持任何类型`operator|`接受指定或推断类型的操作数。
 
-*左侧*位或运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+按位或运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*位或运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+按位或运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ### <a name="return-value"></a>返回值
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *类型*， *T*， *U*支持任何类型`operator^`接受指定或推断类型的操作数。
 
-*左侧*按位 XOR 运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+按位 XOR 运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*按位 XOR 运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+按位 XOR 运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ### <a name="return-value"></a>返回值
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>参数
 
-*Ty*要包装的参数的类型。
+*Ty*<br/>
+要包装的参数的类型。
 
-*arg*要包装的参数。
+*arg*<br/>
+要包装的参数。
 
 ### <a name="remarks"></a>备注
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>参数
 
-*Ret*已包装函数的返回类型。
+*ret*<br/>
+包装函数的返回类型。
 
-*Ty*成员函数指针的类型。
+*Ty*<br/>
+成员函数指针的类型。
 
 ### <a name="remarks"></a>备注
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>参数
 
-*pmem*指向的类成员函数的指针`Type`可转换为函数对象。
+*pmem*<br/>
+一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
 ### <a name="return-value"></a>返回值
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>参数
 
-*pmem*指向的类成员函数的指针`Type`可转换为函数对象。
+*pmem*<br/>
+一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
 ### <a name="return-value"></a>返回值
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>参数
 
-*pred*要进行求反的一元谓词。
+*Pred*<br/>
+要求反的一元谓词。
 
 ### <a name="return-value"></a>返回值
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>参数
 
-*func*要进行求反的二元谓词。
+*func*<br/>
+要进行求反的二元谓词。
 
 ### <a name="return-value"></a>返回值
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>参数
 
-*pfunc*一元或二元函数指针转换为自适应函数。
+*pfunc*<br/>
+要转换为自适应函数的一元或二元函数指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>参数
 
-*Fty*由函数对象控制的类型。
+*Fty*<br/>
+由函数对象控制的类型。
 
-*f1*的第一个函数对象。
+*F1*<br/>
+第一个函数对象。
 
-*f2*第二个函数对象。
+*F2*<br/>
+第二个函数对象。
 
 ### <a name="remarks"></a>备注
 

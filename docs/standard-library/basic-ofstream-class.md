@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 31637c1c194754e193970a4ff5efef500228115b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964803"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105245"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream 类
 
@@ -46,9 +46,11 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*文件缓冲区的基本元素。
+*Elem*<br/>
+文件缓冲区的基本元素。
 
-*Tr*文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
 
@@ -129,13 +131,17 @@ basic_ofstream(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
-*右*对的右值引用`basic_ofstream`对象用于初始化此`basic_ofstream`对象。
+*right*<br/>
+对 `basic_ofstream` 对象的右值引用用于初始化此 `basic_ofstream` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -247,11 +253,14 @@ void open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于`shflag`中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
 ### <a name="remarks"></a>备注
 
@@ -271,7 +280,8 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*的右值引用`basic_ofstream`对象。
+*right*<br/>
+对 `basic_ofstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -307,7 +317,8 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`lvalue`到另一个引用`basic_ofstream`对象。
+*right*<br/>
+对另一个 `basic_ofstream` 对象的 `lvalue` 引用。
 
 ### <a name="remarks"></a>备注
 

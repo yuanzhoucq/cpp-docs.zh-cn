@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d64c848e69cd7670b966159128ff340ac7dbf5f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107090"
 ---
 # <a name="packagedtask-class"></a>packaged_task 类
 
@@ -123,7 +123,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>参数
 
-*右*A`packaged_task`对象。
+右侧<br/>
+一个 `packaged_task` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -178,11 +179,14 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-*右*A`packaged_task`对象。
+右侧<br/>
+一个 `packaged_task` 对象。
 
-*分配*内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。
+*分配*<br/>
+内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。
 
-*fn*函数对象。
+*fn*<br/>
+一个函数对象。
 
 ### <a name="remarks"></a>备注
 
@@ -228,7 +232,8 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*右*A`packaged_task`对象。
+右侧<br/>
+一个 `packaged_task` 对象。
 
 ## <a name="valid"></a>  packaged_task::valid
 

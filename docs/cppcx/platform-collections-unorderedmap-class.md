@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205808"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105830"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 键值对中键的类型。
 
-*V*  
+*V*<br/>
 键值对中值的类型。
 
-*C*  
+*C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
 
 ### <a name="remarks"></a>备注
@@ -118,7 +118,7 @@ virtual void Clear();
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 用于定位 UnorderedMap 元素的键。 类型*键*是 typename *K*。
 
 ### <a name="return-value"></a>返回值
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
-*value*  
+*value*<br/>
 键值对中的值部分。 类型*值*是 typename *V*。
 
 ### <a name="return-value"></a>返回值
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 用于定位 UnorderedMap 中的元素的键。 类型*键*是 typename *K*。
 
 ### <a name="return-value"></a>返回值
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键值对中的键部分。 类型*键*是 typename *K*。
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>参数
 
-*InIt*  
+*InIt*<br/>
 当前 UnorderedMap 的类型名称。
 
-*P*  
+*P*<br/>
 可比较两个键以确定它们是否相等的函数对象。 此参数默认为[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
 
-*H*  
+*H*<br/>
 可以为键生成哈希值的函数对象。 此参数默认为[哈希类 1](../standard-library/hash-class.md)类的键类型的支持。
 
-*m*  
+*m*<br/>
 引用或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std:: unordered_map](../standard-library/unordered-map-class.md)用于初始化当前 UnorderedMap。
 
-*il* A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std:: pair](../standard-library/pair-structure.md)用于初始化映射的对象。
+*il*<br/>
+一个[std:: initializer_list](../standard-library/initializer-list-class.md)的[std:: pair](../standard-library/pair-structure.md)用于初始化映射的对象。
 
-*first*  
+*first*<br/>
 用于初始化当前 UnorderedMap 的一系列元素中的第一个元素的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 用于初始化当前 UnorderedMap 的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)  
-[Platform::Collections 命名空间](../cppcx/platform-collections-namespace.md)  
-[Platform::Collections::Map 类](../cppcx/platform-collections-map-class.md)  
-[Platform::Collections::UnorderedMapView 类](../cppcx/platform-collections-unorderedmapview-class.md)  
-[集合](../cppcx/collections-c-cx.md)  
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Collections 命名空间](../cppcx/platform-collections-namespace.md)<br/>
+[Platform::Collections::Map 类](../cppcx/platform-collections-map-class.md)<br/>
+[Platform::Collections::UnorderedMapView 类](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[集合](../cppcx/collections-c-cx.md)<br/>
+[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

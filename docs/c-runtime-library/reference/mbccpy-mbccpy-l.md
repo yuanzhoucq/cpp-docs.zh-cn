@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebc03a459a190144217ca15a9ab13bef395d5128
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201382"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103718"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
 
@@ -74,11 +74,14 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>参数
 
-*dest*复制目标。
+*dest*<br/>
+复制目标。
 
-*src*要复制的多字节字符。
+*src*<br/>
+要复制的多字节字符。
 
-*区域设置*要使用区域设置。
+*locale*<br/>
+要使用的区域设置。
 
 ## <a name="remarks"></a>备注
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961066"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108716"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函数
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*索引*元素偏移量。
+*Tuple*<br/>
+元素偏移量。
 
-*T*元素的类型。
+*T*<br/>
+元素的类型。
 
-*N*中数组的元素数。
+*N*<br/>
+数组中的元素数。
 
-*arr*要从选择的数组。
+*arr*<br/>
+要从中进行选择的数组。
 
 ### <a name="example"></a>示例
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>参数
 
-*Ty*元素的类型。
+*Ty*<br/>
+元素的类型。
 
-*N*数组的大小。
+*N*<br/>
+数组大小。
 
-*左*要交换的第一个数组。
+*left*<br/>
+要交换的第一个数组。
 
-*右*要交换的第二个数组。
+*right*<br/>
+要交换的第二个数组。
 
 ### <a name="remarks"></a>备注
 

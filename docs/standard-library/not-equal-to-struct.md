@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8be70ac575d5459ea6f88ed19d60dbfe0ddfda14
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966350"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108780"
 ---
 # <a name="notequalto-struct"></a>not_equal_to 结构
 
@@ -51,9 +51,11 @@ struct not_equal_to<void>
 
 *类型*， *T*， *U*支持任何类型`operator!=`接受指定或推断类型的操作数。
 
-*左侧*不等于运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+不等运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*不等于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+不等运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 

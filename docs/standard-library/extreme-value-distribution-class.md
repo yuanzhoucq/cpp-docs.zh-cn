@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 10c93374a1ed9ed4fa875c78310d9ffa34406b83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958014"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100827"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 类
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG* 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*URNG*<br/>
+随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -200,11 +202,14 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a_value* `a`分布参数。
+*a_value*<br/>
+`a` 分布参数。
 
-*b_value* `b`分布参数。
+*b_value*<br/>
+`b` 分布参数。
 
-*parm* `param_type`用于构造分布的结构。
+*parm*<br/>
+用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -232,11 +237,14 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a_value* `a`分布参数。
+*a_value*<br/>
+`a` 分布参数。
 
-*b_value* `b`分布参数。
+*b_value*<br/>
+`b` 分布参数。
 
-*右*`param_type`要与此比较的对象。
+*right*<br/>
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
