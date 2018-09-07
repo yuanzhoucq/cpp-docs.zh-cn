@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959922"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104129"
 ---
 # <a name="function-class"></a>function 类
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*Fty*要包装的函数类型。
+*Fty*<br/>
+要包装的函数类型。
 
-*Ax*分配器函数。
+*Ax*<br/>
+allocator 函数。
 
 ## <a name="remarks"></a>备注
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-*_Func*可调用对象。
+*_Func*<br/>
+可调用的对象。
 
-*_Fnref*包含可调用对象的引用包装器。
+*_Fnref*<br/>
+包含可调用对象的引用包装器。
 
-*Ax*分配器对象。
+*Ax*<br/>
+分配器对象。
 
 ### <a name="remarks"></a>备注
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-*右*要复制的函数对象。
+*right*<br/>
+要复制的函数对象。
 
-*Fx*可调用对象的类型。
+*Fx*<br/>
+可调用对象的类型。
 
-*_Func*要包装的可调用对象。
+*_Func*<br/>
+要包装的可调用对象。
 
-*分配*的分配器类型。
+*分配*<br/>
+分配器类型。
 
-*Ax*分配器。
+*Ax*<br/>
+分配器。
 
-*_Fnref*要包装的可调用对象引用。
+*_Fnref*<br/>
+要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>参数
 
-*TN*第 n 个调用参数的类型。
+*TN*<br/>
+第 N 个调用参数的类型。
 
-*tN*第 n 个调用参数。
+*TN*<br/>
+第 N 个调用参数。
 
 ### <a name="remarks"></a>备注
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>参数
 
-*npc* null 指针常量。
+*npc*<br/>
+空指针常量。
 
-*右*要复制的函数对象。
+*right*<br/>
+要复制的函数对象。
 
-*fn*要包装的可调用对象。
+*fn*<br/>
+要包装的可调用对象。
 
-*fnref*要包装的可调用对象引用。
+*fnref*<br/>
+要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>参数
 
-*右*要交换的函数对象。
+*right*<br/>
+要进行交换的函数对象。
 
 ### <a name="remarks"></a>备注
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>参数
 
-*Fty2*要测试的目标可调用对象类型。
+*Fty2*<br/>
+要测试的目标可调用对象类型。
 
 ### <a name="remarks"></a>备注
 

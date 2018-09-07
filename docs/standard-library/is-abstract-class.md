@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ed218405fac96e926aefc3a15ebc81dd44863f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961690"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108248"
 ---
 # <a name="isabstract-class"></a>is_abstract 类
 
@@ -37,7 +37,8 @@ struct is_abstract;
 
 ### <a name="parameters"></a>参数
 
-*Ty*查询的类型。
+*Ty*<br/>
+要查询的类型。
 
 ## <a name="remarks"></a>备注
 

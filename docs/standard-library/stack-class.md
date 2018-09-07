@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963220"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110407"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>参数
 
-*类型*元素数据类型存储在堆栈中。
+*类型*<br/>
+要存储在堆栈中的元素数据类型。
 
-*容器*用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
+*容器*<br/>
+用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
 
 ## <a name="remarks"></a>备注
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*添加到堆栈顶部的元素。
+*val*<br/>
+添加到堆栈顶部的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*右*所构造的堆栈是为复制其中的容器。
+*right*<br/>
+所构造堆栈要成为其副本的矢量。
 
 ### <a name="example"></a>示例
 

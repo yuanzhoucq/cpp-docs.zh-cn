@@ -1,7 +1,7 @@
 ---
 title: 导出 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894546"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104285"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ EXPORTS
 
 导出的语法*定义*是：
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_序号_ \[ **NONAME**]] \[ \[**专用**] |\[**数据**]]
 
 *entryname*是你想要导出的函数或变量名称。 这是必选项。 如果您导出的名称与 DLL 中名称不同，导出的 DLL 中通过使用指定名称*internal_name*。 例如，如果 DLL 导出函数 `func1`，并且你希望调用方将其用作 `func2`，则应指定：
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-如果从另一个按序号导出的模块导出的名称，指定导出的序号在 DLL 中使用*other_module。 #ordinal_number*。 例如，如果您的 DLL 导出函数，从其他模块，它是序号 42 和希望调用方将其用作`func2`，则会指定：
+如果从另一个按序号导出的模块导出的名称，指定导出的序号在 DLL 中使用*other_module*。__#__ *序号*。 例如，如果您的 DLL 导出函数，从其他模块，它是序号 42 和希望调用方将其用作`func2`，则会指定：
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-因为 Visual c + + 编译器针对 c + + 函数使用名称修饰，必须使用修饰的名 internal_name 或通过使用 extern"C"在源代码中的定义导出的函数。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
+因为 Visual c + + 编译器针对 c + + 函数使用名称修饰，您必须使用修饰的名*internal_name*或者通过使用定义导出的函数`extern "C"`的源代码中。 编译器还将修饰使用的 C 函数[__stdcall](../../cpp/stdcall.md)调用约定以下划线 (\_) 前缀和后缀组成 at 符号 (\@) 跟 in （采用十进制） 的字节数参数列表。
 
 若要查找由编译器产生的修饰的名，请使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具或链接器[/map](../../build/reference/map-generate-mapfile.md)选项。 修饰名特定于编译器。 如果要将修饰名导出到 .DEF 文件中，则链接到 DLL 的可执行文件也必须通过使用同一版本的编译器生成。 这可确保调用方中的修饰名与 .DEF 文件中的导出名相匹配。
 
-可以使用\@*序号*指定一个数字，而不是函数名称，将转到 DLL 的导出表。 许多 Windows DLL 将导出序号以支持旧版代码。 通常使用采用 16 位 Windows 编码的序号，因为这有助于最大程度地减小 DLL 的大小。 除非 DLL 的客户端需要按序号导出函数以支持旧版，否则我们不建议你执行此操作。 由于 .LIB 文件将包含序号与函数之间的映射，因此你可以像通常在使用 DLL 的项目中那样使用函数名。
+可以使用\@*序号*指定一个数字，而不是函数名称，将进入 DLL 的导出表。 许多 Windows DLL 将导出序号以支持旧版代码。 通常使用采用 16 位 Windows 编码的序号，因为这有助于最大程度地减小 DLL 的大小。 除非 DLL 的客户端需要按序号导出函数以支持旧版，否则我们不建议你执行此操作。 由于 .LIB 文件将包含序号与函数之间的映射，因此你可以像通常在使用 DLL 的项目中那样使用函数名。
 
 通过使用可选**NONAME**关键字，可以只按序号导出并减小结果 DLL 中导出表的大小。 但是，如果你想要使用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上 DLL，您必须知道序号，因为名称将无效。
 
@@ -88,9 +86,16 @@ EXPORTS
 
 3. [/Export](../../build/reference/export-exports-a-function.md) LINK 命令中的规范
 
-4. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体 `#pragma comment(linker, "/export: definition ")`  
+4. 一个[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码的窗体`#pragma comment(linker, "/export: definition ")`。 下面的示例演示一个 #pragma 注释指令之前函数声明中，其中`PlainFuncName`是未修饰的名称，和`_PlainFuncName@4`是该函数的修饰的名：
 
-所有这四种方法可以用在同一个程序中。 LINK 在生成包含导出的程序时还创建导入库，除非生成中使用了 .EXP 文件。
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+#Pragma 指令很有用，如果你需要导出未修饰的函数名，并且具有不同的导出，具体取决于生成配置 （例如，在 32 位或 64 位版本）。
+
+所有这四种方法可以用在同一个程序中。 LINK 在生成包含导出的程序时还创建导入库，除非生成中使用了 .EXP 文件。 
 
 下面是 EXPORTS 节的一个示例：
 

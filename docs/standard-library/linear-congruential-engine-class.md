@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3b5ed9880a29e0738f67ca30695ea87c81de6b7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958274"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110209"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 类
 
@@ -55,13 +55,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>参数
 
-*UIntType*无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*一个***乘数**。 **前置条件**：请参阅“备注”部分。
+*A*<br/>
+**乘数**。 **前置条件**：请参阅“备注”部分。
 
-*C* **增量**。 **前置条件**：请参阅“备注”部分。
+*C*<br/>
+**递增**。 **前置条件**：请参阅“备注”部分。
 
-*M* **取模**。 **前置条件**：请参阅“备注”。
+*M*<br/>
+**取模**。 **前置条件**：请参阅“备注”。
 
 ## <a name="members"></a>成员
 

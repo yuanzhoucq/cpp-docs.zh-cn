@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 688252b4b361357f4dba862574ce6698d61b7c86
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102754"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable 类
 
@@ -36,7 +36,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-*T*查询的类型。
+*T*<br/>
+要查询的类型。
 
 ## <a name="remarks"></a>备注
 

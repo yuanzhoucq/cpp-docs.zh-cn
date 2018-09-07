@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965173"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109831"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 类
 
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* A [unique_lock\<互斥体 >](../standard-library/unique-lock-class.md)对象。
+*一个 Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* A [unique_lock\<互斥体 >](../standard-library/unique-lock-class.md)对象。
+*一个 Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Rel_time* A`chrono::duration`对象，它指定之前在线程的时间量唤醒。
+*Rel_time*<br/>
+`chrono::duration` 对象指定线程唤醒前的时间。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* A [unique_lock\<互斥体 >](../standard-library/unique-lock-class.md)对象。
+*一个 Lck*<br/>
+[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)对象。
+*Abs_time*<br/>
+[chrono::time_point](../standard-library/time-point-class.md) 对象。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 

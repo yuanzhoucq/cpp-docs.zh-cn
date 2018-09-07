@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30cf00a1e551c8d25b17d3a876d556ecea40c9e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957618"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107635"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 类
 
@@ -129,7 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>参数
 
-*Rel_time* A [chrono:: duration](../standard-library/duration-class.md)对象，它指定该方法尝试获取所有权的最大时长`mutex`。
+*Rel_time*<br/>
+一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
 
@@ -152,7 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*指定在其后方法不再尝试获取的所有权的阈值的时间点`mutex`。
+*Abs_time*<br/>
+一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
 

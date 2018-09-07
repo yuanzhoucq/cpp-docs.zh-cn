@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954898"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106735"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>参数
 
-*是*所要提取的字符串的输入的流。
+*is*<br/>
+要从其中提取字符串的输入流。
 
-*str*到其中读取的字符从输入流的字符串。
+*str*<br/>
+从输入流读取的字符将放入的字符串。
 
-*delim*行分隔符。
+*Delim*<br/>
+行分隔符。
 
 ### <a name="return-value"></a>返回值
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>参数
 
-*左*一个字符串，其元素是与另一个字符串交换。
+*left*<br/>
+要与另一个字符串交换元素的字符串。
 
-*右*其元素将要与第一个字符串进行交换的其他字符串。
+*right*<br/>
+要与第一个字符串交换元素的另一个字符串。
 
 ### <a name="remarks"></a>备注
 

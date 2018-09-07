@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcee56d93059e30bc07e3f964b581624f0bb555d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955327"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108808"
 ---
 # <a name="pair-structure"></a>pair 结构
 
@@ -54,11 +54,14 @@ struct pair
 
 ### <a name="parameters"></a>参数
 
-*Val1*初始化的第一个元素的值`pair`。
+*Val1*<br/>
+初始化 `pair` 的第一个元素的值。
 
-*Val2*初始化的第二个元素的值`pair`。
+*Val2*<br/>
+初始化 `pair` 的第二个元素的值。
 
-*右*其值是要用来初始化另一对元素的对。
+右侧<br/>
+一个对，其值将用于初始化另一对的元素。
 
 ## <a name="return-value"></a>返回值
 
@@ -158,8 +161,8 @@ The pair p3 is: ( 10, 0.011 ).
 The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).
 The element (4,40) was inserted successfully in m1.
 The element with a key value of
- ( (pr2.first) -> first ) = 1 is already in m1,
- so the insertion failed.
+( (pr2.first) -> first ) = 1 is already in m1,
+so the insertion failed.
 *\
 ```
 

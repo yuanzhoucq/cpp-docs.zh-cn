@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957998"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108884"
 ---
 # <a name="autoptr-class"></a>auto_ptr 类
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>参数
 
-*右*`auto_ptr`从中获取现有资源。
+*right*<br/>
+可从中获取现有资源的 `auto_ptr`。
 
-*ptr*指定用于替换已存储的指针的指针。
+*ptr*<br/>
+指定用于替换已存储指针的指针。
 
 ## <a name="remarks"></a>备注
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>参数
 
-*ptr*对象的指针的`auto_ptr`封装。
+*ptr*<br/>
+指向 `auto_ptr` 封装的对象的指针。
 
-*右*`auto_ptr`复制构造函数对象。
+*right*<br/>
+由构造函数复制的 `auto_ptr` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>参数
 
-*右*类型的对象`auto_ptr`。
+*right*<br/>
+一个 `auto_ptr` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>参数
 
-*ptr*指定用于替换已存储的指针的指针`myptr`。
+*ptr*<br/>
+指定用于替换已存储的指针的指针`myptr`。
 
 ### <a name="example"></a>示例
 

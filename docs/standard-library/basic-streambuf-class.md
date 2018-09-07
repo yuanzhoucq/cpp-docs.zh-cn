@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202787"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100958"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 类
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>参数
 
-*Elem* A [char_type](#char_type)。
+*Elem*<br/>
+一个 [char_type](#char_type)。
 
-*Tr*字符[traits_type](#traits_type)。
+*Tr*<br/>
+字符 [traits_type](#traits_type)。
 
 ## <a name="remarks"></a>备注
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>参数
 
-*右*的左值引用`basic_streambuf`对象，用于为此参数设置值`basic_streambuf`对象。
+*right*<br/>
+对用于为此 `basic_streambuf` 对象设置值的 `basic_streambuf` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>参数
 
-*计数*让指针前进的量。
+*count*<br/>
+让指针前进的量。
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-*_Loc*对区域设置的引用。
+*_Loc*<br/>
+对区域设置的引用。
 
 ### <a name="remarks"></a>备注
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>参数
 
-*右*左值引用到`basic_streambuf`用于将值分配给此对象的对象。
+*right*<br/>
+对用于为此对象赋值的 `basic_streambuf` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*<br/>
+要插入到缓冲区中的字符或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>返回值
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-*_Meta*要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*<br/>
+要插入到缓冲区中的字符或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>返回值
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>参数
 
-*计数*移动写入的字符数向前定位。
+*count*<br/>
+向前移动写入位置的字符数。
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-*_Loc*对区域设置的引用。
+*_Loc*<br/>
+对区域设置的引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>参数
 
-*_Off*要搜寻的相对于的位置 *_Way*。
+*_Off*<br/>
+要搜寻的相对于的位置 *_Way*。
 
-*_Way*偏移操作的起始点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*<br/>
+偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>参数
 
-*_Sp*要搜寻的位置。
+*_Sp*<br/>
+要搜寻的位置。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>参数
 
-*_Buffer*指向的`char_type`此实例化。
+*_Buffer*<br/>
+指向此实例化的 `char_type` 的指针。
 
-*计数*缓冲区的大小。
+*count*<br/>
+缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>参数
 
-*_Off*要搜寻的相对于的位置 *_Way*。
+*_Off*<br/>
+要搜寻的相对于的位置 *_Way*。
 
-*_Way*偏移操作的起始点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*<br/>
+偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>参数
 
-*_Sp*要搜寻的位置。
+*_Sp*<br/>
+要搜寻的位置。
 
-*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>参数
 
-*_Buffer*指向的缓冲区。
+*_Buffer*<br/>
+指向缓冲区的指针。
 
-*计数*缓冲区的大小。
+*count*<br/>
+缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>参数
 
-*_Gbeg*指向缓冲区开头的指针。
+*_Gbeg*<br/>
+指向缓冲区开头的指针。
 
-*_Gnext*指向某个位置的指针缓冲区中间。
+*_Gnext*<br/>
+指向缓冲区中间某处的指针。
 
-*_Gend*指向缓冲区末尾的指针。
+*_Gend*<br/>
+指向缓冲区末尾的指针。
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>参数
 
-*_Pbeg*指向缓冲区开头的指针。
+*_Pbeg*<br/>
+指向缓冲区开头的指针。
 
-*_Pend*指向缓冲区末尾的指针。
+*_Pend*<br/>
+指向缓冲区末尾的指针。
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>参数
 
-*ptr*要包含提取的字符的缓冲区。
+*ptr*<br/>
+要包含提取字符的缓冲区。
 
-*计数*要读取的元素数。
+*count*<br/>
+要读取的元素数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*字符。
+*_Ch*<br/>
+字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*字符。
+*_Ch*<br/>
+字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-*ptr*字符字符串。
+*ptr*<br/>
+字符串。
 
-*计数*字符数。
+*count*<br/>
+字符数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>参数
 
-*ptr*要包含提取的字符的缓冲区。
+*ptr*<br/>
+要包含提取字符的缓冲区。
 
-*计数*要提取的元素数。
+*count*<br/>
+要提取的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向元素要插入。
+*ptr*<br/>
+指向要插入的元素的指针。
 
-*计数*要插入的元素数。
+*count*<br/>
+要插入的元素数。
 
 ### <a name="return-value"></a>返回值
 

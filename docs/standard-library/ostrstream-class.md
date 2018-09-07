@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966572"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106039"
 ---
 # <a name="ostrstream-class"></a>ostrstream 类
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>参数
 
-*_Freezeit* A **bool** ，该值指示是否要冻结的流。
+*_Freezeit*<br/>
+一个**bool** ，该值指示是否要冻结的流。
 
 ### <a name="remarks"></a>备注
 
@@ -101,11 +102,14 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>参数
 
-*ptr*缓冲区。
+*ptr*<br/>
+缓冲区。
 
-*计数*以字节为单位的缓冲区的大小。
+*count*<br/>
+缓冲区的大小（以字节为单位）。
 
-*模式 （_m)* 缓冲区的输入和输出模式。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+缓冲区的输入和输出模式。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="remarks"></a>备注
 

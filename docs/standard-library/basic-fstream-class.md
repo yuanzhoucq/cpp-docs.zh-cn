@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2b4712a76be411d237ee2abc97ddbdd4b67e57f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959886"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108353"
 ---
 # <a name="basicfstream-class"></a>basic_fstream 类
 
@@ -46,9 +46,11 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*文件缓冲区的基本元素。
+*Elem*<br/>
+文件缓冲区的基本元素。
 
-*Tr*文件缓冲区的基本元素的特征 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
 
@@ -135,11 +137,14 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -215,11 +220,14 @@ void open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*要打开的文件的名称。
+*_Filename*<br/>
+要打开的文件的名称。
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+默认文件打开保护，等同于*shflag*中的参数[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -239,7 +247,8 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*左值引用到`basic_fstream`对象。
+*right*<br/>
+对 `basic_fstream` 对象的左值引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -275,7 +284,8 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`lvalue`引用`basic_fstream`对象。
+*right*<br/>
+对 `basic_fstream` 对象的 `lvalue` 引用。
 
 ### <a name="remarks"></a>备注
 

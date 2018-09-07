@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962912"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107460"
 ---
 # <a name="list-class"></a>list 类
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>参数
 
-*类型*要存储在列表中的元素数据类型。
+*类型*<br/>
+要存储在列表中的元素数据类型。
 
-*分配器*表示存储的分配器对象封装有关列表的分配和解除分配的内存的详细信息的类型。 该参数为可选的并且默认值是**allocator**\<*类型*>。
+*分配器*<br/>
+表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 该参数为可选的并且默认值是**allocator**\<*类型*>。
 
 ## <a name="remarks"></a>备注
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的第一个元素范围内的位置的元素要复制从参数列表。
+*第一个*<br/>
+要从自变量列表中复制的一系列元素中的第一个元素的位置。
 
-*最后一个*以外的元素范围的第一个元素的位置，若要从参数列表中复制。
+*最后一个*<br/>
+超出要从参数列表中复制的一系列元素的范围的第一个元素的位置。
 
-*计数*插入到列表的元素副本数。
+“计数”<br/>
+要插入列表中的元素副本的数目。
 
-*Val*插入到列表的元素的值。
+*val*<br/>
+要插入到列表中的元素的值。
 
-*IList*包含要插入的元素的 initializer_list。
+*IList*<br/>
+包含要插入的元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>参数
 
-*其中*的元素的位置，若要从列表中删除。
+*Where*<br/>
+要从列表中移除的元素的位置。
 
-*第一个*从列表中移除的第一个元素的位置。
+*first*<br/>
+要从列表中移除的第一个元素的位置。
 
-*最后一个*从列表中移除最后一个元素以外的位置。
+*最后一个*<br/>
+要从列表中移除的刚超出最后一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>参数
 
-*右*要与目标列表合并的参数列表。
+*right*<br/>
+要与目标列表合并的自变量列表。
 
-*comp*使用目标列表的元素进行排序的比较运算符。
+*comp*<br/>
+用于排列目标列表元素的比较运算符。
 
 ### <a name="remarks"></a>备注
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*这，如果某个元素，包含将导致从列表中删除该元素的值。
+*val*<br/>
+一个值，如果某个元素包含该值，则会导致从列表中删除该元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>参数
 
-*pred*的一元谓词的元素，满足如果会导致该元素从列表中的删除。
+*Pred*<br/>
+一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
 
 ### <a name="example"></a>示例
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>参数
 
-*_Newsize*列表的新大小。
+*_Newsize*<br/>
+列表的新大小。
 
-*val*要添加到列表中，如果新大小较大的新元素的值的原始大小。 如果省略此值，则会赋给新元素该类的默认值。
+*val*<br/>
+新的大小大于原始大小时要添加至列表的新元素的值。 如果省略此值，则会赋给新元素此类的默认值。
 
 ### <a name="remarks"></a>备注
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>参数
 
-*comp*用于排列连续元素的比较运算符。
+*comp*<br/>
+用于排列连续元素的比较运算符。
 
 ### <a name="remarks"></a>备注
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>参数
 
-*其中*在其前插入目标列表中的位置。
+*Where*<br/>
+目标列表中要在其前面进行插入的位置。
 
-*源*要插入到目标列表的源列表。
+*Source*<br/>
+要插入目标列表中的源列表。
 
-*Iter*要从源列表中进行插入的元素。
+*Iter*<br/>
+要从源列表中进行插入的元素。
 
-*第一个*要从源列表中进行插入的范围内的第一个元素。
+*第一个*<br/>
+要从源列表中进行插入的范围中的第一个元素。
 
-*最后一个*源列表中进行插入的范围中超出最后一个元素的第一个位置。
+*最后一个*<br/>
+要从源列表中进行插入的范围中的最后一个元素之外的第一个位置。
 
 ### <a name="remarks"></a>备注
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>参数
 
-*右*提供要交换的元素的列表或其元素将要进行交换的列表与列表*左*。
+*right*<br/>
+提供要交换的元素的列表或其元素将要与列表的列表*左*。
 
-*左*其元素将要进行交换的列表与列表*右*。
+*left*<br/>
+其元素将要与列表的列表*右*。
 
 ### <a name="example"></a>示例
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>参数
 
-*pred*用于比较连续元素的二元谓词。
+*Pred*<br/>
+用于比较连续元素的二元谓词。
 
 ### <a name="remarks"></a>备注
 

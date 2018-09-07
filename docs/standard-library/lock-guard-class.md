@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5e096d21699d4e6218bbadedcd1cc0bcc65f92f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953742"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108184"
 ---
 # <a name="lockguard-class"></a>lock_guard 类
 
@@ -70,7 +70,8 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>参数
 
-*使用 Mtx* A*互斥体类型*对象。
+*使用 Mtx*<br/>
+一个 mutex 类型对象。
 
 ### <a name="remarks"></a>备注
 

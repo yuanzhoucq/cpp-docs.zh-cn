@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960057"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109883"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 类
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*Elem*字符串的基本元素的类型。
+*Elem*<br/>
+字符串的基本元素的类型。
 
-*Tr*字符串的基本元素上专用的字符特征。
+*Tr*<br/>
+字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>参数
 
-*模式 （_m)* 中枚举之一[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*str*类型的对象`basic_string`。
+*str*<br/>
+一个 `basic_string` 类型的对象。
 
-*右*的右值引用`basic_istringstream`对象。
+*right*<br/>
+`basic_istringstream` 对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*的右值引用`basic_istringstream`对象。
+*right*<br/>
+对 `basic_istringstream` 对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-*_Newstr*新字符串。
+*_Newstr*<br/>
+新字符串。
 
 ### <a name="return-value"></a>返回值
 

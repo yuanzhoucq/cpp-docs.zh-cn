@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 667de3f580734230cbc70afbe29c17aee8e35950
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961537"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107024"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 运算符
 
@@ -70,15 +70,20 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -181,15 +186,20 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -262,17 +272,23 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>参数
 
-*Elem*元素类型。
+*Elem*<br/>
+元素类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*os*输出流。
+*操作系统*<br/>
+输出流。
 
-*右*要插入的对象。
+*right*<br/>
+要插入的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -342,15 +358,20 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -452,15 +473,20 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -571,15 +597,20 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -677,15 +708,20 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*的迭代器类型。
+*BidIt*<br/>
+迭代器类型。
 
-*IOtraits*字符串特征类。
+*IOtraits*<br/>
+字符串特征类。
 
-*分配*的分配器类。
+*分配*<br/>
+allocator 类。
 
-*左*要比较的左的对象。
+*left*<br/>
+要比较的左边的对象。
 
-*右*要比较的右对象。
+*right*<br/>
+要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 95ac984ad164c242dcd470ed4d31f3921fa7ec56
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953018"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103261"
 ---
 # <a name="resultof-class"></a>result_of 类
 
@@ -48,9 +48,11 @@ template<class T>
 
 ### <a name="parameters"></a>参数
 
-*Fn*查询的可调用类型。
+*fn*<br/>
+要查询的可调用类型。
 
-*ArgTypes*查询的可调用类型的参数列表的类型。
+*ArgTypes*<br/>
+供可调用类型查询的参数列表的类型。
 
 ## <a name="remarks"></a>备注
 

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221603"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103913"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>参数
 
-*路径*完整路径。
+*path*<br/>
+完整路径。
 
-*驱动器*驱动器号后, 接一个冒号 (**:**)。 可以将传递**NULL**为此参数，如果不需要驱动器号。
+*驱动器*<br/>
+驱动器号后, 接一个冒号 (**:**)。 可以将传递**NULL**为此参数，如果不需要驱动器号。
 
-*dir*目录路径，包括尾部反斜杠。 正斜杠 ( **/** )，反斜杠 ( **\\** )，或两者均使用。 可以将传递**NULL**为此参数，如果不需要的目录路径。
+*dir*<br/>
+目录路径，包括尾部反斜杠。 正斜杠 ( **/** )，反斜杠 ( **\\** )，或两者均使用。 可以将传递**NULL**为此参数，如果不需要的目录路径。
 
-*fname*基文件名 （无扩展名）。 可以将传递**NULL**为此参数，如果不需要文件名。
+*fname*<br/>
+基文件名（无扩展名）。 可以将传递**NULL**为此参数，如果不需要文件名。
 
-*ext*文件扩展名，包括前导句点 (**。**)。 可以将传递**NULL**为此参数，如果不需要文件扩展名。
+*ext*<br/>
+文件扩展名，包括前导句点 (**。**)。 可以将传递**NULL**为此参数，如果不需要文件扩展名。
 
 ## <a name="remarks"></a>备注
 

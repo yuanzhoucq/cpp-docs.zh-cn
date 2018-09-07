@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954989"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100775"
 ---
 # <a name="sharedfuture-class"></a>shared_future 类
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>参数
 
-*右*A`shared_future`对象。
+右侧<br/>
+一个 `shared_future` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>参数
 
-*右*A[将来](../standard-library/future-class.md)或`shared_future`对象。
+右侧<br/>
+一个 [future](../standard-library/future-class.md) 或 一个 `shared_future` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>参数
 
-*Rel_time* A [chrono:: duration](../standard-library/duration-class.md)对象，指定最大时间间隔，此线程受到阻止。
+*Rel_time*<br/>
+一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定线程阻止的最大时间间隔。
 
 ### <a name="return-value"></a>返回值
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>参数
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)对象，它指定在其后可取消阻止线程的时间。
+*Abs_time*<br/>
+一个 [chrono::time_point](../standard-library/time-point-class.md) 对象，指定在其后可取消阻止线程的时间。
 
 ### <a name="return-value"></a>返回值
 

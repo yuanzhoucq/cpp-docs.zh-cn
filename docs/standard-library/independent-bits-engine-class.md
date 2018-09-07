@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb76c477c54192dc6b6b969ecd4cdd32850c015f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964218"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110300"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine 类
 
@@ -36,11 +36,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>参数
 
-*引擎*基引擎类型。
+*引擎*<br/>
+基引擎类型。
 
-*W* **字大小**。 生成的每个数字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**字大小**。 生成的每个数字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="members"></a>成员
 

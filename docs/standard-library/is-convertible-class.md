@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 350fd6007ab6b89064ed6d0a7070a21e57427018
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 52a062d29124cd5ba4c0008c554d72f59aa8c645
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956317"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110534"
 ---
 # <a name="isconvertible-class"></a>is_convertible 类
 
@@ -37,9 +37,11 @@ struct is_convertible;
 
 ### <a name="parameters"></a>参数
 
-*从*要从转换的类型。
+*From*<br/>
+要转换的类型。
 
-*Ty*要将转换为的类型。
+*Ty*<br/>
+要转换为的类型。
 
 ## <a name="remarks"></a>备注
 

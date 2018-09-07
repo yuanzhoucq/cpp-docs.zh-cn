@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3c95b3510c9cdd839f7428d62af9b428287a83f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964972"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101698"
 ---
 # <a name="issame-class"></a>is_same 类
 
@@ -37,9 +37,11 @@ struct is_same;
 
 ### <a name="parameters"></a>参数
 
-*Ty1*查询的第一个类型。
+*Ty1*<br/>
+要查询的第一个类型。
 
-*Ty2*查询的第二个类型。
+*Ty2*<br/>
+要查询的第二个类型。
 
 ## <a name="remarks"></a>备注
 

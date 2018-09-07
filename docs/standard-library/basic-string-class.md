@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209079"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105661"
 ---
 # <a name="basicstring-class"></a>basic_string 类
 
@@ -146,11 +146,14 @@ class basic_string;
 
 ### <a name="parameters"></a>参数
 
-*CharType*单个字符，用于在字符串中存储的数据类型。 C + + 标准库提供的类型定义此模板类专用化[字符串](../standard-library/string-typedefs.md#string)类型的元素**char**， [wstring](../standard-library/string-typedefs.md#wstring)，对于**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string)有关`char16_t`，并[u32string](../standard-library/string-typedefs.md#u32string)有关`char32_t`。
+*CharType*<br/>
+要存储在字符串中的单个字符的数据类型。 C + + 标准库提供的类型定义此模板类专用化[字符串](../standard-library/string-typedefs.md#string)类型的元素**char**， [wstring](../standard-library/string-typedefs.md#wstring)，对于**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string)有关`char16_t`，并[u32string](../standard-library/string-typedefs.md#u32string)有关`char32_t`。
 
-*特征*的各种重要属性`CharType`basic_string 专用化中的元素描述由类`Traits`。 默认值为 `char_traits`< `CharType`>。
+*特征*<br/>
+各种重要属性`CharType`basic_string 专用化中的元素描述由类`Traits`。 默认值为 `char_traits`< `CharType`>。
 
-*分配器*表示存储的分配器对象封装有关字符串的分配和解除分配的内存的详细信息的类型。 默认值为 **allocator**< `CharType`>。
+*分配器*<br/>
+一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值为 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>构造函数
 
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>参数
 
-*ptr*要追加的 C 字符串。
+*ptr*<br/>
+要追加的 C 字符串。
 
-*str*其字符是要追加的字符串。
+*str*<br/>
+要追加字符的字符串。
 
-*_Off*提供要追加的字符的源字符串部分的索引。
+*_Off*<br/>
+提供要追加的字符的源字符串部分的索引。
 
-*计数*要追加，最多，从源字符串的字符数。
+*count*<br/>
+要从源字符串追加的字符的最大数目。
 
-*_Ch*要追加的字符值。
+*_Ch*<br/>
+要追加的字符值。
 
-*第一个*的输入迭代器范围中的第一个元素追加。
+*first*<br/>
+一种输入迭代器。用于寻址要追加的范围中的第一个元素。
 
-*最后一个*要追加的输入迭代器、 const_pointer 或 const_iterator 寻址的范围中超出最后一个元素的位置。
+*最后一个*<br/>
+一种输入迭代器（const_pointer 或 const_iterator），用于寻址要追加的范围中超出最后一个元素的元素位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向要分配给目标字符串的 C 字符串的字符的指针。
+*ptr*<br/>
+指向要分配给目标字符串的 C 字符串字符的指针。
 
-*计数*要从源字符串分配的字符数。
+*count*<br/>
+要从源字符串分配的字符数。
 
-*str*其字符是分配给目标字符串的源字符串。
+*str*<br/>
+要分配给目标字符串的字符的源字符串。
 
-*_Ch*要分配的字符值。
+*_Ch*<br/>
+要分配的字符值。
 
-*第一个*要分配给目标范围的输入迭代器、 const_pointer 或 const_iterator 寻址的源字符串范围内的第一个字符。
+*first*<br/>
+一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中的第一个字符。
 
-*最后一个*要分配给目标范围的输入迭代器、 const_pointer 或 const_iterator 寻址的范围中的最后一个字符之外的源字符串。
+*最后一个*<br/>
+一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中超出最后一个字符的字符。
 
-*关闭*新字符开始要分配的位置。
+*关闭*<br/>
+开始分配新字符的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*要引用的元素的位置的索引。
+*_Off*<br/>
+要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>参数
 
-*ptr* C 的字符串，其字符是要用来初始化`string`正在构造。 此值不能为 null 指针。
+*ptr*<br/>
+C 字符串，其字符将用于初始化正在构造的 `string`。 此值不能为 null 指针。
 
-*_Al*正在构造的字符串对象的存储分配器类。
+*_Al*<br/>
+正在构造的字符串对象的存储分配器类。
 
-*计数*要初始化的字符数。
+*count*<br/>
+要初始化的字符数。
 
-*右*要初始化正在构造的字符串的字符串。
+*right*<br/>
+用于初始化正在构造的字符串的字符串。
 
-*_Roff*中是第一个要用于初始化正在构造的字符串的字符值的字符串的字符的索引。
+*_Roff*<br/>
+字符串中字符的索引，该字符串会最先用于初始化正在构造的字符串的字符值。
 
-*_Ch*要复制到正在构造的字符串的字符值。
+*_Ch*<br/>
+要复制到正在构造的字符串中的字符值。
 
-*第一个*要插入的输入迭代器、 const_pointer 或 const_iterator 寻址源范围中的第一个元素。
+*first*<br/>
+输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*最后一个*要插入的输入迭代器、 const_pointer 或 const_iterator 寻址源范围中超出最后一个元素的位置。
+*最后一个*<br/>
+输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>参数
 
-*str*与操作数字符串比较的字符串。
+*str*<br/>
+要与操作数字符串比较的字符串。
 
-*_Pos1*开始比较的操作数字符串的索引。
+*_Pos1*<br/>
+开始进行比较的操作数字符串的索引。
 
-*_Num1*的最大中要进行比较的操作数字符串的字符数。
+*_Num1*<br/>
+要比较的操作数字符串的最大字符数。
 
-*_Num2*的最大的参数字符串进行比较的字符数。
+*_Num2*<br/>
+要比较的参数字符串的最大字符数。
 
-*_Off*开始比较的参数字符串的索引。
+*_Off*<br/>
+开始进行比较的参数字符串的索引。
 
-*计数*的最大的参数字符串进行比较的字符数。
+*count*<br/>
+要比较的参数字符串的最大字符数。
 
-*ptr*到操作数字符串比较的 C-字符串。
+*ptr*<br/>
+要与操作数字符串比较的 C 字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>参数
 
-*ptr*元素都要复制的目标字符数组。
+*ptr*<br/>
+要复制的元素的目标字符数组。
 
 _*计数*要最多从复制的源字符串的字符数。
 
-*_Off*中要从其副本的源字符串的开始位置。
+*_Off*<br/>
+要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*dest*元素都要复制的目标字符数组。
+*dest*<br/>
+要复制的元素的目标字符数组。
 
-*dest_size*的大小*dest*。
+*dest_size*<br/>
+大小*dest*。
 
 _*计数*要最多从复制的源字符串的字符数。
 
-*_Off*中要从其副本的源字符串的开始位置。
+*_Off*<br/>
+要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现范围中的第一个元素位置的迭代器被清除。
+*first*<br/>
+一种迭代器，用于寻址要清除范围中的第一个元素的位置。
 
-*最后一个*发现之后的位置之一的最后一个元素的范围中要清除的迭代器。
+*最后一个*<br/>
+一种迭代器，用于寻址要清除范围中最后一个元素之后下一个元素的位置。
 
-*_It*发现字符串中的元素的位置的迭代器被清除。
+*_It*<br/>
+一种迭代器，用于寻址要清除字符串中的元素位置。
 
-*_Pos*中要删除的字符串的第一个字符的索引。
+*_Pos*<br/>
+要删除的字符串中的第一个字符的索引。
 
-*计数*将被删除，如果有任意数量的字符串开头的范围内的元素数 *_Pos*。
+*count*<br/>
+如果在字符串范围中有同样数量的以 *_Pos*.开头的元素，将删除该元素数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索即将开始的位置的索引。
+*_Off*<br/>
+搜索开始处的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索即将开始的位置的索引。
+*_Off*<br/>
+搜索开始处的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索即将开始的位置的索引。
+*_Off*<br/>
+搜索开始处的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索将完成的位置的索引。
+*_Off*<br/>
+搜索结束位置的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索将完成的位置的索引。
+*_Off*<br/>
+搜索结束位置的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>参数
 
-*_P0*的插入点之后的位置的索引的新字符。
+*_P0*<br/>
+新字符插入点之后的位置的索引。
 
-*ptr*要进行完全或部分插入到字符串的 C 字符串。
+*ptr*<br/>
+将要完全或部分插入到字符串中的 C 字符串。
 
-*计数*要插入的字符数。
+*count*<br/>
+要插入的字符数。
 
-*str*要完全或部分插入到目标字符串的字符串。
+*str*<br/>
+将要完全或部分插入到目标字符串中的字符串。
 
-*_Off*提供要追加的字符的源字符串部分的索引。
+*_Off*<br/>
+提供要追加的字符的源字符串部分的索引。
 
-*_Ch*元素要插入的字符值。
+*_Ch*<br/>
+要插入的元素的字符值。
 
-*_It*发现隐藏其中一个字符是要插入的位置的迭代器。
+*_It*<br/>
+对要在其后插入一个字符的位置进行寻址的迭代器。
 
-*第一个*要插入的输入迭代器、 const_pointer 或 const_iterator 寻址源范围中的第一个元素。
+*first*<br/>
+输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*最后一个*要插入的输入迭代器、 const_pointer 或 const_iterator 寻址源范围中超出最后一个元素的位置。
+*最后一个*<br/>
+输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*要追加的字符。
+*_Ch*<br/>
+要追加的字符。
 
-*ptr*要追加的 C 字符串的字符。
+*ptr*<br/>
+要追加的 C 字符串的字符。
 
-*右*要追加的字符串的字符。
+*right*<br/>
+要追加的字符串的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*要分配的字符值。
+*_Ch*<br/>
+要分配的字符值。
 
-*ptr*指向要分配给目标字符串的 C 字符串的字符的指针。
+*ptr*<br/>
+指向要分配给目标字符串的 C 字符串字符的指针。
 
-*右*其字符是分配给目标字符串的源字符串。
+*right*<br/>
+要分配给目标字符串的字符的源字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*要引用的元素的位置的索引。
+*_Off*<br/>
+要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*要添加到字符串的末尾的字符。
+*_Ch*<br/>
+要添加到字符串末尾的字符。
 
 ### <a name="remarks"></a>备注
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>参数
 
-*str*要作为操作数字符串字符的源的字符串。
+*str*<br/>
+要作为操作数字符串字符的源的字符串。
 
-*_Pos1*操作数字符串替换开始的索引。
+*_Pos1*<br/>
+开始进行替换的操作数字符串的索引。
 
-*_Num1*的最大操作数字符串中要替换的字符数。
+*_Num1*<br/>
+操作数字符串中要替换的最大字符数。
 
-*_Pos2*复制开始处的参数字符串的索引。
+*_Pos2*<br/>
+开始进行复制的参数字符串的索引。
 
-*_Num2*的最大参数 C 字符串中使用的字符数。
+*_Num2*<br/>
+要从参数 C 字符串使用的最大字符数。
 
-*ptr*要作为操作数字符串字符源的 C 字符串。
+*ptr*<br/>
+要作为操作数字符串字符的源的 C 字符串。
 
-*_Ch*要复制到操作数字符串的字符。
+*_Ch*<br/>
+要复制到操作数字符串的字符。
 
 * first0 * 的迭代器，用于寻址第一个字符操作数字符串中删除。
 
 * last0 * 用于确定最后一个字符的迭代器的操作数字符串中要删除的。
 
-*第一个*参数字符串中要复制的迭代器、 const_pointer 或 const_iterator 寻址的第一个字符。
+*first*<br/>
+一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的第一个字符。
 
-*最后一个*参数字符串中要复制的迭代器、 const_pointer 或 const_iterator 寻址的最后一个字符。
+*最后一个*<br/>
+一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的最后一个字符。
 
-*计数*的次数 *_Ch*复制到操作数字符串。
+*count*<br/>
+次数 *_Ch*复制到操作数字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>参数
 
-*计数*为其保留内存的字符数。
+*count*<br/>
+具有保留内存的字符数。
 
 ### <a name="remarks"></a>备注
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>参数
 
-*计数*字符串的新大小。
+*count*<br/>
+字符串的新大小。
 
-*_Ch*追加字符的值使用如果需要其他元素的初始化。
+*_Ch*<br/>
+在需要其他元素的情况下，用于初始化追加字符的值。
 
 ### <a name="remarks"></a>备注
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*为其成员函数是要搜索的字符值。
+*_Ch*<br/>
+成员函数要搜索的字符值。
 
-*_Off*搜索即将开始的位置的索引。
+*_Off*<br/>
+搜索开始处的索引。
 
-*ptr* C-为其成员函数要搜索字符串。
+*ptr*<br/>
+成员函数要搜索的 C 字符串。
 
-*计数*数量的字符，从为其成员函数是要搜索的 C 字符串中的第一个字符开始计数。
+*count*<br/>
+在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str*为其成员函数是要搜索的字符串。
+*str*<br/>
+成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>参数
 
-*_Off*查找从该字符串的副本，默认值为 0 位置处的元素的索引。
+*_Off*<br/>
+从进行字符串复制所在的位置查找元素的索引，默认值为 0。
 
-*计数*它们是否存在要复制的字符数。
+*count*<br/>
+要复制的字符数（如果存在）。
 
 ### <a name="return-value"></a>返回值
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*str*其元素将要进行交换与目标字符串中的源字符串。
+*str*<br/>
+要与目标字符串中的元素进行交换的元素的源字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

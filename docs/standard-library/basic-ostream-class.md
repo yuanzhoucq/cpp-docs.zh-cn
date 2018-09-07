@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100971"
 ---
 # <a name="basicostream-class"></a>basic_ostream 类
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem* A `char_type`。
+*Elem*<br/>
+`char_type`。
 
-*Tr*字符`traits_type`。
+*Tr*<br/>
+字符 `traits_type`。
 
 ## <a name="remarks"></a>备注
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>参数
 
-*strbuf*类型的对象[basic_streambuf](../standard-library/basic-streambuf-class.md)。
+*strbuf*<br/>
+类型 [basic_streambuf](../standard-library/basic-streambuf-class.md) 的对象。
 
-*_Isstd* **true**如果这是一个标准流; 否则为**false**。
+*_Isstd*<br/>
+**true**如果这是一个标准流; 否则为**false**。
 
-*右*类型的对象的右值引用`basic_ostream`。
+*right*<br/>
+对 `basic_ostream` 类型的对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>参数
 
-*Pfn*函数指针。
+*pfn*<br/>
+函数指针。
 
-*strbuf*指向的`stream_buf`对象。
+*strbuf*<br/>
+一个指向`stream_buf`对象。
 
-*val*要写入到流的元素。
+*val*<br/>
+要写入到流的元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`rvalue`引用`basic_ostream`对象。
+*right*<br/>
+对 `basic_ostream` 对象的 `rvalue` 引用。
 
 ### <a name="remarks"></a>备注
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*字符。
+*_Ch*<br/>
+一个字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*流中的位置。
+*_Pos*<br/>
+流中的位置。
 
-*_Off*相对于的偏移量 *_Way*。
+*_Off*<br/>
+相对于的偏移量 *_Way*。
 
-*_Way*之一[ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir)枚举。
+*_Way*<br/>
+其中一个 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 枚举。
 
 ### <a name="return-value"></a>返回值
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*对的引用`basic_ostream`对象。
+*right*<br/>
+对 `basic_ostream` 对象的引用。
 
 ### <a name="remarks"></a>备注
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-*计数*要放入流的字符计数。
+*count*<br/>
+要放入流中的字符计数。
 
-*str*字符放入流。
+*str*<br/>
+要放入流中的字符。
 
 ### <a name="return-value"></a>返回值
 

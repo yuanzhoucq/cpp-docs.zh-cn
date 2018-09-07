@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963789"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100749"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>参数
 
-*Loc*包含要插入到目标区域设置 facet 的区域设置。
+*Loc*<br/>
+包含要插入到目标区域设置的 facet 的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*要由该程序用作默认区域设置的区域设置。
+*Loc*<br/>
+要由该程序用作默认区域设置的区域设置。
 
 ### <a name="return-value"></a>返回值
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>参数
 
-*Locname*区域设置的名称。
+*Locname*<br/>
+区域设置的名称。
 
-*Loc*将被复制构造新的区域设置的区域设置。
+*Loc*<br/>
+要进行复制以便用于构造新区域设置的区域设置。
 
-*其他*从中选择一个类别的区域设置。
+*其他*<br/>
+要从中选择一种类别的区域设置。
 
-*Cat*要替换为构造的区域设置的类别。
+*Cat*<br/>
+要替换为构造的区域设置的类别。
 
-*Fac*方面要替换为构造的区域设置。
+*Fac*<br/>
+要替换为构造的区域设置的 facet。
 
 ### <a name="remarks"></a>备注
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*测试是否不相等的区域设置之一。
+*right*<br/>
+要测试不相等的区域设置之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>参数
 
-*左*左侧的字符串。
+*left*<br/>
+左侧的字符串。
 
-*右*右侧的字符串。
+*right*<br/>
+右侧的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*测试是否相等的区域设置之一。
+*right*<br/>
+要测试相等的区域设置之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -734,14 +745,14 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)<br/>
 [代码页](../c-runtime-library/code-pages.md)<br/>
-[区域设置名称、 语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

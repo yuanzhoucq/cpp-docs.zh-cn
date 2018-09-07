@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103685"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>参数
 
-*类型*要存储在队列中的元素数据类型
+*类型*<br/>
+要存储在队列中的元素数据类型
 
-*容器*用来实现队列的基础容器的类型。
+*容器*<br/>
+用来实现队列的基础容器的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*添加到队列的后部的元素。
+*val*<br/>
+添加到队列后部的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*右* **const**构造的队列是为复制其中的容器。
+*right*<br/>
+要以构造的队列为副本的 **const** 容器。
 
 ### <a name="remarks"></a>备注
 

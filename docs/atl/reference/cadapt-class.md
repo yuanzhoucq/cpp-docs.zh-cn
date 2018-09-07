@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a04f9ba199205d84d94b9b3792c4bafb570319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766485"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105343"
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 
@@ -169,9 +169,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ### <a name="parameters"></a>参数
 
 *rSrc*  
-对要复制已适配类型的对象的引用。 
+对要复制已适配类型的对象的引用。
 
-*rSrCA*对要移动的对象的引用。
+*rSrCA*  
+对要移动的对象的引用。
 
 ### <a name="return-value"></a>返回值
 

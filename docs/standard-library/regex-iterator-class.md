@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962551"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108274"
 ---
 # <a name="regexiterator-class"></a>regex_iterator 类
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>参数
 
-*BidIt*子匹配项的迭代器类型。
+*BidIt*<br/>
+子匹配项的迭代器类型。
 
-*Elem*要匹配的元素的类型。
+*Elem*<br/>
+要匹配的元素的类型。
 
-*RXtraits*元素的特征类。
+*RXtraits*<br/>
+元素的特征类。
 
 ## <a name="remarks"></a>备注
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*右*迭代器进行比较。
+*right*<br/>
+要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*右*迭代器进行比较。
+*right*<br/>
+要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>参数
 
-*第一个*的序列匹配的开头。
+*first*<br/>
+要匹配的序列的开头。
 
-*最后一个*序列的末尾匹配。
+*最后一个*<br/>
+要匹配的序列的结尾。
 
-*re*正则表达式的匹配项。
+*re*<br/>
+匹配项正则表达式。
 
-*f*的匹配项的标志。
+*f*<br/>
+匹配标志。
 
 ### <a name="remarks"></a>备注
 

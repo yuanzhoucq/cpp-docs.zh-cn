@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957517"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109870"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 类
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>参数
 
-*sp*要复制的共享的指针。
+*sp*<br/>
+要复制的共享指针。
 
-*亚太*要复制的自动指针。
+*亚太*<br/>
+要复制的自动指针。
 
 ### <a name="remarks"></a>备注
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>参数
 
-*ptr* `lvalue`引用`shared_ptr`或`weak_ptr`。
+*ptr*<br/>
+对 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 引用。
 
 ### <a name="remarks"></a>备注
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>参数
 
-*其他*由自变量指针控制的类型。
+*其他*<br/>
+由自变量指针控制的类型。
 
-*D*删除器的类型。
+*D*<br/>
+删除器的类型。
 
-*ptr*要复制的指针。
+*ptr*<br/>
+要复制的指针。
 
-*dtor*要复制的删除器。
+*dtor*<br/>
+要复制的删除器。
 
-*一个*分配器的类型。
+*A*<br/>
+分配器的类型。
 
-*分配*要复制的分配器。
+*分配*<br/>
+要复制的分配器。
 
 ### <a name="remarks"></a>备注
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>参数
 
-*其他*由自变量指针控制的类型。
+*其他*<br/>
+由自变量指针控制的类型。
 
-*ptr*要复制的指针。
+*ptr*<br/>
+要复制的指针。
 
-*D*删除器的类型。
+*D*<br/>
+删除器的类型。
 
-*一个*分配器的类型。
+*A*<br/>
+分配器的类型。
 
-*dtor*删除器。
+*dtor*<br/>
+删除器。
 
-*ator*分配器。
+*ator*<br/>
+分配器。
 
-*sp*要复制的智能指针。
+*sp*<br/>
+要复制的智能指针。
 
-*wp*的弱指针。
+*wp*<br/>
+弱指针。
 
-*亚太*要复制的自动指针。
+*亚太*<br/>
+要复制的自动指针。
 
 ### <a name="remarks"></a>备注
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>参数
 
-*sp*要交换的共享的指针。
+*sp*<br/>
+要交换的共享指针。
 
 ### <a name="remarks"></a>备注
 

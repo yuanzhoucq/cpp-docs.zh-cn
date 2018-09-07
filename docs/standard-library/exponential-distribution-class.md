@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960191"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103274"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 类
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG* 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*URNG*<br/>
+随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*lambda* `lambda`分布参数。
+*lambda*<br/>
+`lambda` 分布参数。
 
-*parm*用于构造分布的参数包。
+*parm*<br/>
+用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*lambda* `lambda`分布参数。
+*lambda*<br/>
+`lambda` 分布参数。
 
-*右*`param_type`要与此比较的对象。
+*right*<br/>
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

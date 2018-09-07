@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956861"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100906"
 ---
 # <a name="duration-class"></a>duration 类
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Rep2*算术类型来表示计时周期数。
+*Rep2*<br/>
+表示计时周期数的算术类型。
 
-*Period2* A`std::ratio`模板专用化来表示的秒为单位的时钟周期。
+*Period2*<br/>
+表示以秒为单位的计时周期时间段的 `std::ratio` 专用模板。
 
-*R*默认时间段的计时周期数。
+*R*<br/>
+默认时间段的计时周期数。
 
-*Dur*指定的时间段的计时周期数*Period2*。
+*Dur*<br/>
+指定的时间段的计时周期数*Period2*。
 
 ### <a name="remarks"></a>备注
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*的第一种方法， *Div*表示的计时周期计数。 对于第二个方法，请*Div*是`duration`对象，其中包含的计时周期计数。
+*Div*<br/>
+对于第一个方法，请*Div*表示的计时周期计数。 对于第二个方法，请*Div*是`duration`对象，其中包含的计时周期计数。
 
 ### <a name="return-value"></a>返回值
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>参数
 
-*Mult*由指定类型的值`duration::rep`。
+*Mult*<br/>
+`duration::rep` 指定的类型的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*由指定类型的值`duration::rep`。
+*Div*<br/>
+`duration::rep` 指定的类型的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur* A`duration`对象。
+*Dur*<br/>
+一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur* A`duration`对象。
+*Dur*<br/>
+一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*除数，即一个持续时间对象或值，该值表示刻度计数。
+*Div*<br/>
+除数是表示滴答计数的 duration 对象或值。
 
 ### <a name="remarks"></a>备注
 

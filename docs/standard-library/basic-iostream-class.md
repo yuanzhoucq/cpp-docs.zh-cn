@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954703"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106433"
 ---
 # <a name="basiciostream-class"></a>basic_iostream 类
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>参数
 
-*strbuf*的现有`basic_streambuf`对象。
+*strbuf*<br/>
+一个现有的 `basic_streambuf` 对象。
 
-*右*的现有`basic_iostream`对象，用于构造新`basic_iostream`。
+*right*<br/>
+用于构造新 `basic_iostream` 的现有 `basic_iostream` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`rvalue`引用`basic_iostream`对象中的分配。
+*right*<br/>
+对从其中进行赋值的 `basic_iostream` 对象的 `rvalue` 引用。
 
 ### <a name="remarks"></a>备注
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>参数
 
-*右*`basic_iostream`要交换的对象。
+*right*<br/>
+要交换的 `basic_iostream` 对象。
 
 ### <a name="remarks"></a>备注
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407309"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100348"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,19 +54,21 @@ void setbuf(
 
 ### <a name="parameters"></a>参数
 
-*流*指向**文件**结构。
+*流*<br/>
+指向**文件**结构的指针。
 
-*缓冲区*用户分配的缓冲区。
+*buffer*<br/>
+用户分配的缓冲区。
 
 ## <a name="remarks"></a>备注
 
-**Setbuf**函数控制缓冲为*流*。 *流*参数必须引用未读取或写入打开的文件。 如果*缓冲区*自变量是**NULL**，流是无缓冲。 如果不是，缓冲区必须指向长度的字符数组**BUFSIZ**，其中**BUFSIZ**中 STDIO 定义是缓冲区大小。H。 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 **Stderr**流是无缓冲默认情况下，但你可以使用**setbuf**要分配到的缓冲区**stderr**。
+**Setbuf**函数控制缓冲*流*。 *流*参数必须引用打开的文件的已读取或写入。 如果*缓冲区*自变量是**NULL**，流是无缓冲。 如果不是，缓冲区必须指向字符数组的长度**BUFSIZ**，其中**BUFSIZ**是 STDIO 中定义的缓冲区大小。H. 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 **Stderr**流是无缓冲的默认值，但你可以使用**setbuf**若要将分配到的缓冲区**stderr**。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，对于新代码的首选例程。 **setbuf**保留用于与现有代码兼容。
+**setbuf**已被取代[setvbuf](setvbuf.md)，对于新代码的首选例程。 **setbuf**保留与现有代码的兼容性。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

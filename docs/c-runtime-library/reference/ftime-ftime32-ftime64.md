@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401433"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107050"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -66,11 +66,12 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>参数
 
-*timeptr*指向 **_timeb**， **__timeb32**，或 **__timeb64**结构。
+*timeptr*<br/>
+指向 **_timeb**， **__timeb32**，或 **__timeb64**结构。
 
 ## <a name="remarks"></a>备注
 
-**_Ftime**函数获取当前本地时间，并将其存储在通过指向的结构*timeptr*。 **_Timeb**， **__timeb32**，和 **__timeb64**结构定义中\<sys\\timeb.h >。 它们包含下表中列出的四个字段。
+**_Ftime**函数获取当前本地时间，并将其存储在由指向的结构*timeptr*。 **_Timeb**， **__timeb32**，并 **__timeb64**结构定义中\<sys\\timeb.h >。 它们包含下表中列出的四个字段。
 
 |字段|描述|
 |-|-|
@@ -79,11 +80,11 @@ void _ftime64( struct __timeb64 *timeptr );
 |**time**|自 1970 年 1 月 1 日午夜 (00: 00:00) 以来的时间（以秒为单位），格式为协调世界时 (UTC)。|
 |**timezone**|从东向西，UTC 与本地时间之间的差值（以分钟为单位）。 值**时区**设置全局变量的值从 **_timezone** (请参阅 **_tzset**)。|
 
-**_Ftime64**函数，使用 **__timeb64**结构，请允许文件创建的日期以向上表示通过 23:59:59，3000 年 12 月 31 日，UTC; 而 **_ftime32**仅表示到 23:59:59 2038 年 1 月 18 日，UTC 日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+**_Ftime64**函数，使用 **__timeb64**结构，允许文件创建日期最大表示为 23:59:59，3000 年 12 月 31 日，UTC; 而 **_ftime32**只能表示截至 23:59:59 2038 年 1 月 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-**_Ftime**函数等同于 **_ftime64**，和 **_timeb**包含 64 位时间，除非 **_USE_32BIT_TIME_T**定义，在这种情况下这一旧行为已生效;**_ftime**使用 32 位时间和 **_timeb**包含 32 位时间。
+**_Ftime**函数等同于 **_ftime64**，并 **_timeb**包含 64 位时间，除非 **_USE_32BIT_TIME_T**定义，则在这种情况下旧行为有效; 是 **_ftime**使用 32 位时间并且 **_timeb**包含 32 位时间。
 
-**_ftime**验证其参数。 如果传递 null 指针作为*timeptr*，函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将设置**errno**到**EINVAL**。
+**_ftime**验证其参数。 如果传递 null 指针视为*timeptr*，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将设置**errno**到**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

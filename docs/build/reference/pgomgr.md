@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198310"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105310"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -50,7 +50,8 @@ ms.locfileid: "43198310"
 *pgcfiles*<br/>
 一个或多个.pgc 文件，你想要合并到.pgd 文件的配置文件数据。 您可以指定单个.pgc 文件或多个.pgc 文件。 如果未指定任何的.pgc 文件， **pgomgr**合并所有其文件名将与.pgd 文件相同的.pgc 文件。
 
-*pgdfile* .pgd 文件到其中要合并的.pgc 文件中的数据。
+*pgdfile*<br/>
+.Pgd 文件到其中要合并的.pgc 文件中的数据。
 
 ## <a name="remarks"></a>备注
 

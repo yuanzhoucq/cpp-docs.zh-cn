@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 74b230aca540f03bf8c9e94fe65ede3ac4ae8681
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102780"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution 类
 
@@ -76,9 +76,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*URNG*<br/>
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -243,9 +245,11 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*n* `n`分布参数。
+*n*<br/>
+`n` 分布参数。
 
-*parm*用于构造分布的参数结构。
+*parm*<br/>
+用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
@@ -272,9 +276,11 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*n* `n`分布参数。
+*n*<br/>
+`n` 分布参数。
 
-*右*`param_type`要与此比较的对象。
+*right*<br/>
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

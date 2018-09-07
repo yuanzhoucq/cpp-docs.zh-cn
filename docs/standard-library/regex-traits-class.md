@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106465"
 ---
 # <a name="regextraits-class"></a>regex_traits 类
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*Elem*要描述的字符元素类型。
+*Elem*<br/>
+要描述的字符元素类型。
 
 ## <a name="remarks"></a>备注
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*loc*要存储的区域设置对象。
+*Loc*<br/>
+要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要测试的元素。
+*ch*<br/>
+要测试的元素。
 
-*cls*要用于测试的类。
+*符合 cls*<br/>
+要测试的类。
 
 ### <a name="remarks"></a>备注
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>参数
 
-*str*
+*str*<br/>
 
 Null 终止的序列。
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*的要查找的序列的开头。
+*first*<br/>
+要查找的序列的开头。
 
-*最后一个*序列末尾的位置查找。
+*最后一个*<br/>
+要查找的序列的结尾。
 
 ### <a name="remarks"></a>备注
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*的要查找的序列的开头。
+*first*<br/>
+要查找的序列的开头。
 
-*最后一个*序列末尾的位置查找。
+*最后一个*<br/>
+要查找的序列的结尾。
 
 ### <a name="remarks"></a>备注
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*的要转换的序列的开头。
+*first*<br/>
+要转换的序列的开头。
 
-*最后一个*序列的末尾来转换。
+*最后一个*<br/>
+要转换的序列的结尾。
 
 ### <a name="remarks"></a>备注
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*的要转换的序列的开头。
+*first*<br/>
+要转换的序列的开头。
 
-*最后一个*序列的末尾来转换。
+*最后一个*<br/>
+要转换的序列的结尾。
 
 ### <a name="remarks"></a>备注
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换的元素。
+*ch*<br/>
+要转换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换的元素。
+*ch*<br/>
+要转换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>参数
 
-*ch*要转换的元素。
+*ch*<br/>
+要转换的元素。
 
-*基数*的算术基数来使用。
+*radix*<br/>
+要使用的算术基数。
 
 ### <a name="remarks"></a>备注
 

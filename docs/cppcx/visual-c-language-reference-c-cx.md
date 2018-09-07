@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219634"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105693"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 语言参考 (C++/CX)
 
@@ -24,7 +24,6 @@ C + + /cli CX 是一套用于 Windows 应用程序和 Windows 运行时组件中
 > C + + / WinRT 是新的标准 C + + 17 语言投影的 Windows 运行时 Api。 它是从版本 1803年以后最新的 Windows 10 SDK 中提供。 C + + / WinRT 是完全在标头文件中实现，旨在提供对新式 Windows API 的优先访问权限。
 
 > 使用 C + + / WinRT，您可以使用和编写 Windows 运行时 Api 使用任何符合标准的 C + + 17 编译器。 C + + WinRT 通常更好地执行，并生成较小的二进制文件比 Windows 运行时的任何其他语言选项。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议新的应用程序使用 C + + WinRT。 有关详细信息，请参阅[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
-
 
 通过使用 C + + /CX 中，您可以创建：
 

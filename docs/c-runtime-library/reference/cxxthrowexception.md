@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3ab2994359e99e490422fbb2f11cf28a05d6e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7adf4c285646e6a3f4706a9a56995f4440cc1e8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395655"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103810"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
@@ -54,9 +54,11 @@ extern "C" void __stdcall _CxxThrowException(
 
 ### <a name="parameters"></a>参数
 
-*pExceptionObject*生成异常的对象。
+*pExceptionObject*<br/>
+生成异常的对象。
 
-*pThrowInfo*处理异常所需的信息。
+*pThrowInfo*<br/>
+处理异常所需的信息。
 
 ## <a name="remarks"></a>备注
 
