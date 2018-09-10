@@ -1,5 +1,5 @@
 ---
-title: 查看和编辑资源在资源编辑器中 |Microsoft Docs
+title: 查看和编辑资源在资源编辑器中 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,28 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
-- rc files, viewing resources
-- Resource View pane
+- resources [C++], viewing
 - layouts, previewing resource
-- code, viewing resources
-- resource editors, viewing resources
-- .rc files, viewing resources
-- resources [Visual Studio], editing
+- resource editors [C++], viewing resources
+- .rc files [C++], viewing resources
+- resources [C++], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 742bdd9d869d6a913315229bb6b5c896584a5269
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4fd8ed4e1257c8f780f1b1ac733aa8dd2261685c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593199"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316687"
 ---
-# <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在资源编辑器中查看和编辑资源
+# <a name="viewing-and-editing-resources-in-a-resource-editor-c"></a>查看和编辑资源在资源编辑器中 （c + +）
 
 每种资源类型具有**资源**特定于该资源类型的编辑器。 可以重新排列、 调整大小、 添加控件和功能，或以其他方式修改资源使用相关联的编辑器的方面。 此外可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)并[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。
 

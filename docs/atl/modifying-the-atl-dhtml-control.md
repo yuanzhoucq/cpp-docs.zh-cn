@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764545"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314230"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 
@@ -51,7 +51,7 @@ ATL 控件向导提供了起始代码，这样可以生成并运行该控件，�
 
    可以使用**IWebBrowser2**方法因为 ATL.h 文件中为您提供指向该接口的指针。
 
-接下来，修改要调用的方法创建的 HTML 资源。 您将添加用于调用这些方法的三个按钮。  
+接下来，修改要调用的方法创建的 HTML 资源。 您将添加用于调用这些方法的三个按钮。
 
 #### <a name="to-modify-the-html-resource"></a>若要修改 HTML 资源
 
@@ -72,9 +72,9 @@ ATL 控件向导提供了起始代码，这样可以生成并运行该控件，�
 3. 将调用添加到`HelloHTML`方法创建。 例如：
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    此方法将创建一个按钮，标记为**HelloHTML**，用户可以单击以显示`HelloHTML`消息框。

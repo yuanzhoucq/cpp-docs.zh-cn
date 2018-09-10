@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee79ccad55d2fd360166b9d693f3d4757fe2049f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3f34a6bc42f1c01783e21e1c3b0f9f04adad46f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339223"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317753"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>宏和用于管理 Dll 函数
 
@@ -99,7 +99,7 @@ void AFXAPI AfxOleInitModule( );
  如果你要构建 OLE 控件并将使用`COleControlModule`，不应调用`AfxOleInitModule`因为`InitInstance`成员函数`COleControlModule`调用`AfxOleInitModule`。  
    
 ### <a name="requirements"></a>要求  
- **标头**: < afxdll_.h >  
+ **标头**: \<afxdll_.h >  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
@@ -117,7 +117,7 @@ void AFXAPI AfxNetInitModule( );
  MFC 套接字 DLL 是 MFC 扩展 DLL;MFC 扩展 DLL 才能连接到`CDynLinkLibrary`链，它必须创建`CDynLinkLibrary`将使用它的每个模块的上下文中的对象。 `AfxNetInitModule` 创建`CDynLinkLibrary`对象在规则 MFC DLL 的上下文中，以便它连接到`CDynLinkLibrary`对象的规则 MFC DLL 链。  
    
 ### <a name="requirements"></a>要求  
- **标头：** < afxdll_.h >  
+ **标头：** \<afxdll_.h >  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   

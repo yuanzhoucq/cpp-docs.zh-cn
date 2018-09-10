@@ -1,5 +1,5 @@
 ---
-title: 版本信息编辑器 |Microsoft Docs
+title: 版本信息编辑器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Version Information editor, about Version Information editor
+- Version Information editor [C++], about Version Information editor
 - editors, Version Information
-- resource editors, Version Information editor
+- resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7eb767d3969f964f2605aaebc8c4adb743cd1fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d8a4eb57996bcc2afd9ddc92a9eecf354f88116
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199761"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313689"
 ---
-# <a name="version-information-editor"></a>版本信息编辑器
+# <a name="version-information-editor-c"></a>版本信息编辑器 （c + +）
 
 版本信息包括公司和产品标识、产品发行版号以及版权与商标通知。 与**版本信息**编辑器中，创建和维护此存储在版本信息资源中的数据。 虽然应用程序不需要版本信息资源，但它是收集应用程序标识信息的有用位置。 安装 API 也使用版本信息。
 

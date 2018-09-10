@@ -1,5 +1,5 @@
 ---
-title: 资源包括对话框的 |Microsoft Docs
+title: 资源包括对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,29 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Resource Includes dialog box
-- rc files, changing storage
-- symbol header files, changing
-- compiling source code, including resources
-- .rc files, changing storage
-- symbol header files, read-only
-- symbols, symbol header files
+- Resource Includes dialog box [C++]
+- rc files [C++], changing storage
+- symbol header files [C++], changing
+- .rc files [C++], changing storage
+- symbol header files [C++], read-only
+- symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610656"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313333"
 ---
-# <a name="resource-includes-dialog-box"></a>“资源包括”对话框
+# <a name="resource-includes-dialog-box-c"></a>资源包括对话框 （c + +）
 
-可以使用**资源包括**对话框来修改在项目.rc 文件和所有中存储的所有资源的环境的正常工作安排[符号](../windows/symbols-resource-identifiers.md)在 Resource.h 中。
+可以使用**资源包括**对话框中 c + + 项目以修改将所有资源存储在项目.rc 文件中，所有环境的正常工作安排[符号](../windows/symbols-resource-identifiers.md)在 Resource.h 中。
 
 若要打开**资源包括**对话框中，右键单击.rc 文件中[资源视图](../windows/resource-view-window.md)，然后选择**资源包括**从快捷菜单。
 

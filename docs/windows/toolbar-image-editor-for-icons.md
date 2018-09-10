@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （图标的图像编辑器） |Microsoft Docs
+title: 工具栏 （图标的图像编辑器 c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604131"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314399"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>工具栏（图标的图像编辑器）
+# <a name="toolbar-c-image-editor-for-icons"></a>工具栏 （图标的图像编辑器 c + +）
 
 **的图像编辑器**工具栏包含用于绘制、 绘制、 输入文本、 擦除和操作视图的工具。 它还包含选项选择器，可以选择使用每个工具的选项。 例如，你可以选择从各种画笔宽度、 放大因子和行样式。
 

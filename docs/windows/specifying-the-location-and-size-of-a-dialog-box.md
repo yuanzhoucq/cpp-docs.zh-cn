@@ -1,5 +1,5 @@
 ---
-title: 指定的位置和一个对话框的大小 |Microsoft Docs
+title: 指定的位置和大小的对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, size
-- dialog boxes, positioning
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be3db9c689b79edd17af567831d62071d79cad2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604614"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316567"
 ---
-# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>指定对话框的位置和大小
+# <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>指定的位置和大小的对话框 （c + +）
 
-位置和大小的对话框中，并将位置和大小的控件，以对话框单元为单位测量。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
+位置和大小的 c + + 对话框中，并将位置和大小的控件，以对话框单元为单位测量。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
 
 有三个属性，您可以在设置[属性窗口](/visualstudio/ide/reference/properties-window)指定对话框将出现在屏幕上。 **Center**属性是一个布尔值; 如果将值设置为**True**，对话框中将始终显示在屏幕的中心。 如果设置为**False**，然后，可以设置**XPos**并**YPos**属性来显式定义在屏幕上将显示此对话框。 位置属性是从查看区域，该常数定义为左上角的偏移量的值`{X=0, Y=0}`。 位置也基于**Absolute Align**属性： 如果**True**，坐标是相对于屏幕; 如果**False**，坐标都相对于对话框所有者的窗口。
 

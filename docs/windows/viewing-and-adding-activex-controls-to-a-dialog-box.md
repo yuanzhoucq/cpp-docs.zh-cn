@@ -1,5 +1,5 @@
 ---
-title: 查看并将 ActiveX 控件添加到对话框中 |Microsoft Docs
+title: 查看和将 ActiveX 控件添加到对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,7 +11,6 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - dialog boxes [C++], adding ActiveX controls
-- Insert ActiveX Control command
 - ActiveX controls [C++], adding to dialog boxes
 ms.assetid: e1c2e3ae-e1b0-40d3-9766-623007073856
 author: mikeblome
@@ -19,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e97393aa6989b7af0a7f3a9a97adaf529f21ba8a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc5360a90690b27f1c52f97cd8b3746ddee5d60a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318377"
 ---
-# <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>查看 ActiveX 控件并将其添加到对话框
+# <a name="viewing-and-adding-activex-controls-to-a-dialog-box-c"></a>查看和将 ActiveX 控件添加到对话框 （c + +）
 
 Visual Studio 使你可以将 ActiveX 控件插入对话框中。
 

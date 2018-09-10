@@ -1,5 +1,5 @@
 ---
-title: 新建工具栏资源对话框 |Microsoft Docs
+title: 新建工具栏资源对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602165"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316297"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>“新建工具栏资源”对话框
+# <a name="new-toolbar-resource-dialog-box-c"></a>新建工具栏资源对话框 （c + +）
 
-**新建工具栏资源**对话框允许您指定的宽度和高度为工具栏资源要添加的按钮。 默认值为 16 × 15 像素。
+**新建工具栏资源**对话框允许您指定的宽度和高度的要添加到 c + + 项目中的工具栏资源按钮。 默认值为 16 × 15 像素。
 
 用于创建工具栏位图有 2048年的最大宽度。 因此，如果您设置**按钮宽度**为 512，只能有四个按钮。 如果将宽度设置为 513，您只能有三个按钮。
 

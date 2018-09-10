@@ -1,5 +1,5 @@
 ---
-title: 对话框编辑器选项卡，工具箱 |Microsoft Docs
+title: 对话框编辑器选项卡上，工具箱 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,10 +10,10 @@ dev_langs:
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
-- syslink controls ino dialog boxes
-- custom controls [Visual Studio], dialog boxes
+- syslink controls in dialog boxes
+- custom controls [C++], dialog boxes
 - controls [C++], standard
-- Dialog editor, creating controls
+- Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a528ece23301f707b267ed7cefd30649b34c5e60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613507"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316206"
 ---
-# <a name="dialog-editor-tab-toolbox"></a>“对话框编辑器”选项卡，工具箱
+# <a name="dialog-editor-tab-toolbox-c"></a>对话框编辑器选项卡上，工具箱 （c + +）
 
 **对话框编辑器**选项卡中将显示[工具箱窗口](/visualstudio/ide/reference/toolbox)工作时**对话框**编辑器。 若要将控件添加到新的对话框中，将控件从**工具箱**到要创建的对话框 (有关详细信息，请参阅[将控件添加到对话框](adding-a-control-to-a-dialog-box.md))。 然后，可以移动控件或更改其大小和形状。
 

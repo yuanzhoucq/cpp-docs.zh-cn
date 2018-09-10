@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850415"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319079"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>由编译器版本的编译器警告
 
@@ -404,7 +404,7 @@ C4694|'*类型*： 密封的抽象类不能有基类'*类型*
 C4720|内联汇编程序报告:*说明*
 C4721|'*说明*： 不可用作内部函数
 C4722|'*说明*： 析构函数永远不会返回，可能会发生内存泄漏
-C4726|ARM arch4/4T 仅支持 < cpsr_f > 或 < spsr_f > 与即时值
+C4726|ARM arch4/4T 仅支持\<cpsr_f > 或\<spsr_f > 与即时值
 C4727|名为的 PCH*名称*具有相同时间戳中找到*名称*并*名称*。  使用第一个 PCH。
 C4729|根据警告，函数对于流图形太大
 C4730|'*说明*： 混合 _m64 和浮点表达式可能会导致不正确的代码

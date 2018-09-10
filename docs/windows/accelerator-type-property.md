@@ -1,5 +1,5 @@
 ---
-title: 快捷键 Type 属性 |Microsoft Docs
+title: 快捷键 Type 属性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59fae6d0809e32883d5d56e43e64525e23643d91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d38d5a78eb37a028f29da430a762604b2e50d632
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602321"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315686"
 ---
-# <a name="accelerator-type-property"></a>快捷键 Type 属性
+# <a name="accelerator-type-property-c"></a>快捷键 Type 属性 （c + +）
 
 快捷键**类型**属性确定与快捷键 ID 相关联的快捷键组合是否为虚拟键组合或 ASCII/ANSI 密钥值：
 

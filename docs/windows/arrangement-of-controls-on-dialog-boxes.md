@@ -1,5 +1,5 @@
 ---
-title: 对话框上的控件排列 |Microsoft Docs
+title: 对话框 （c + +） 上的控件排列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], positioning
-- dialog box controls, placement
-- Dialog editor, arranging controls
+- dialog box controls [C++], placement
+- Dialog Editor [C++], arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d47e3602e151f64fab0a543882c759225410f6dc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46bc2d627c9efbb49227e17c809d188aa3a8b5fc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583562"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315231"
 ---
-# <a name="arrangement-of-controls-on-dialog-boxes"></a>对话框上的控件排列
+# <a name="arrangement-of-controls-on-dialog-box-ces"></a>对话框上的控件排列框 （c + +） es
 
 **对话框**编辑器提供了布局工具一致，并自动调整控件的大小。 对于大多数任务，你可以使用[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 所有**对话框编辑器**工具栏命令还位于**格式**菜单中和大多数具有[键盘快捷方式](../windows/accelerator-keys-for-the-dialog-editor.md)。
 

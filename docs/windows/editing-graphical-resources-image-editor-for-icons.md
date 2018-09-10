@@ -1,5 +1,5 @@
 ---
-title: 编辑图形资源 （图标的图像编辑器） |Microsoft Docs
+title: 编辑图形资源 （图标的图像编辑器 c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608856"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312631"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>编辑图形资源（图标的图像编辑器）
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>编辑图形资源 （图标的图像编辑器 c + +）
 
 图形资源是为应用程序定义的映像。 可以手工绘制或绘制使用的形状。 可以选择编辑、 翻转或调整其大小的图像的部分也可以从所选映像的一部分创建自定义画笔，并用此画笔绘制。 可以定义图像属性、 将映像保存在不同的格式，并将图像从一种格式转换为另一个。
 
