@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540749"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319066"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>编译器错误 C3500-c3999
 
@@ -496,7 +496,7 @@ ms.locfileid: "42540749"
 |[编译器错误 C3721](compiler-error-c3721.md)|'*签名*： 不兼容的事件的签名|
 |[编译器错误 C3722](compiler-error-c3722.md)|不允许泛型事件|
 |[编译器错误 C3723](compiler-error-c3723.md)|'*函数*： 无法解析事件|
-|[编译器错误 C3724](compiler-error-c3724.md)|使用具有事件的多线程处理必须 #include <windows.h>|
+|[编译器错误 C3724](compiler-error-c3724.md)|必须 #include \<windows.h > 若要使用多线程处理的事件|
 |编译器错误 C3725|已过时。|
 |编译器错误 C3726|已过时。|
 |[编译器错误 C3727](compiler-error-c3727.md)|'*事件*： 托管的事件必须是成员函数或是指向委托的指针的数据成员|

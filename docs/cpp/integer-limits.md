@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406014"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315180"
 ---
 # <a name="integer-limits"></a>整数限制
 
 **Microsoft 专用**
 
-下表列出了整数类型的限制。 标准标头文件 < limits.h > 中还定义了这些限制。
+下表列出了整数类型的限制。 标准标头文件中也定义了这些限制\<limits.h >。
 
 ## <a name="limits-on-integer-constants"></a>对整数常量的限制
 
@@ -59,4 +59,5 @@ ms.locfileid: "39406014"
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [浮点限制](../cpp/floating-limits.md)  
+
+[浮点限制](../cpp/floating-limits.md)

@@ -1,5 +1,5 @@
 ---
-title: 在对话框中的控件 |Microsoft Docs
+title: 控件在对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591953"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317102"
 ---
-# <a name="controls-in-dialog-boxes"></a>对话框中的控件
+# <a name="controls-in-dialog-box-ces"></a>Es 控件在对话框中 （c + +）
 
 可以将控件添加到对话框框中使用[对话框编辑器选项卡](../windows/dialog-editor-tab-toolbox.md)中[工具箱窗口](/visualstudio/ide/reference/toolbox)，这样您就可以选择所需控件并将其拖到对话框的。 默认情况下，工具箱窗口设置为自动隐藏。 它为你的解决方案在左边距上的选项卡时显示对话框编辑器处于打开状态。 但是，您可以将固定**工具箱**通过单击位置到窗口**自动隐藏**窗口右上角的按钮。 有关如何控制此窗口的行为的详细信息，请参阅[窗口管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 

@@ -1,5 +1,5 @@
 ---
-title: 如何： 复制时更改语言或资源的条件 |Microsoft Docs
+title: 如何： 复制 （c + +） 时更改语言或资源的条件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,22 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Language property
-- condition property of resource
+- Language property [C++]
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 26ec8987b22444c98bb7a88c791c4f941737ceae
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218084"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313307"
 ---
-# <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在复制时更改资源的语言或条件
+# <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>如何： 复制 （c + +） 时更改语言或资源的条件
 
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。
 

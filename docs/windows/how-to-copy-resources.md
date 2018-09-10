@@ -1,5 +1,5 @@
 ---
-title: 如何： 复制资源 |Microsoft Docs
+title: 如何： 复制资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,26 +11,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], moving between files
-- resources [Visual Studio], copying
-- resource files, copying or moving resources between
-- resource files, tiling
-- .rc files, copying resources between
-- rc files, copying resources between
+- resources [C++], moving between files
+- resources [C++], copying
+- resource files [C++], copying or moving resources between
+- resource files [C++], tiling
+- .rc files [C++], copying resources between
+- rc files [C++], copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20abc194f1286e47477c4510f9ceef6250b9b3f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc0fc8f3177baa01742df84c926a3c6421aa9a16
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687214"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314569"
 ---
-# <a name="how-to-copy-resources"></a>如何：复制资源
+# <a name="how-to-copy-resources-c"></a>如何： 复制资源 （c + +）
 
 您可以将复制资源从一个文件到另一个而不更改它们，也可以[将其复制时更改语言或资源的条件](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。
 

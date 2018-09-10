@@ -1,5 +1,5 @@
 ---
-title: 菜单命令属性 |Microsoft Docs
+title: 菜单命令属性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34fa9944d1daa443850454560f8e5741e881f6f8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598706"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317910"
 ---
-# <a name="menu-command-properties"></a>菜单命令属性
+# <a name="menu-command-properties-c"></a>菜单命令属性 （c + +）
 
 根据组织以下信息**菜单**中显示的属性[属性窗口](/visualstudio/ide/reference/properties-window)选择菜单命令时。 这些字母顺序列出，尽管**属性**窗口还可以按类别查看这些属性。
 

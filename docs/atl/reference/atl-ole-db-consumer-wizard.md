@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763063"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315363"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 
@@ -106,23 +106,23 @@ ms.locfileid: "43763063"
 
    选择数据源后，使用基于的表或您选择的存储的过程的默认类名称填充此框 (请参阅**选择数据源**下面)。 您可以编辑类名称。
 
-- **.h 文件**  
+- **.h 文件**
 
    选择数据源后，使用基于的表或您选择的存储的过程的默认标头类名称填充此框 (请参阅**选择数据源**下面)。 可以编辑该标头文件的名称，也可以选择现有的头文件。
 
-- **特性化**  
+- **特性化**
 
    此选项指定向导是否将创建使用者使用属性或模板声明的类。 在选择此选项，该向导使用特性而不是模板声明 （这是默认选项）。 当取消选择此选项时，向导使用模板声明而不是属性。
 
    - 如果选择使用者**类型**的**表**，则向导将使用`db_source`并`db_table`属性来创建表和表访问器类声明中，并使用`db_column`到创建列映射。 例如，它将创建此映射：
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ ms.locfileid: "43763063"
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - 如果选择使用者**类型**的**命令**，则向导将使用`db_source`并`db_command`属性，并使用`db_column`创建列映射。 例如，它将创建此映射：
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       而不是使用的命令和命令访问器在类声明命令类的.h 文件，例如：
@@ -193,6 +193,6 @@ ms.locfileid: "43763063"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)  
+[ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 [连接字符串和数据链接 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

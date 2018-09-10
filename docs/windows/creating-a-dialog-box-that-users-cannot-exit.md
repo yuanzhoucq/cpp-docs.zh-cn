@@ -1,5 +1,5 @@
 ---
-title: 创建用户无法退出的对话框 |Microsoft Docs
+title: 创建用户无法退出的对话框 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,8 +8,8 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, creating
-- modal dialog boxes, logon screens
+- dialog boxes [C++], creating
+- modal dialog boxes [C++], logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e68d89ce0a2ece83876b6afcd6aa09e59ed93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598215"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314542"
 ---
-# <a name="creating-a-dialog-box-that-users-cannot-exit"></a>创建用户无法退出的对话框
+# <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>创建一个对话框 （c + +） 该用户无法退出
 
 可以创建用户无法退出的运行时对话框。 这种类型的对话框对于登录、应用程序或文档锁定非常有用。
 

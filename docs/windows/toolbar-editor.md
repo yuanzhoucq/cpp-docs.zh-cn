@@ -1,5 +1,5 @@
 ---
-title: 工具栏编辑器 |Microsoft Docs
+title: 工具栏编辑器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Toolbar editor
+- resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0f9c4977ff82bd3f4af40af657a4bfed3a90568
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197871"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316947"
 ---
-# <a name="toolbar-editor"></a>工具栏编辑器
+# <a name="toolbar-editor-c"></a>工具栏编辑器 （c + +）
 
-**工具栏**编辑器，您可以创建工具栏资源并将位图转换为工具栏资源。 **工具栏**编辑器使用的图形化显示来显示工具栏和按钮，非常类似于它们的外观中完成的应用程序。
+**工具栏**编辑器，您可以创建 c + + 工具栏资源并将位图转换为工具栏资源。 **工具栏**编辑器使用的图形化显示来显示工具栏和按钮，非常类似于它们的外观中完成的应用程序。
 
 与**工具栏**编辑器，你可以：
 

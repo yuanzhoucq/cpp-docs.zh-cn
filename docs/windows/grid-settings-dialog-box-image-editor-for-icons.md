@@ -1,5 +1,5 @@
 ---
-title: 网格设置对话框 （图标的图像编辑器） |Microsoft Docs
+title: 网格设置对话框 （c + +） （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Grid Settings dialog box
+- Grid Settings dialog box [C++]
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9d312e7a2d13c13aefe3adaa51531af498fe638
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52f6aea7bb934f3dd7b3c42c2c13ff7939a8b168
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578726"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316219"
 ---
-# <a name="grid-settings-dialog-box-image-editor-for-icons"></a>“网格设置”对话框（图标的图像编辑器）
+# <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>网格设置对话框 （c + +） （图标的图像编辑器）
 
 可以指定你的映像的网格设置和编辑图像上显示网格线。 行可用于编辑映像，但不是保存为图像本身的一部分。
 

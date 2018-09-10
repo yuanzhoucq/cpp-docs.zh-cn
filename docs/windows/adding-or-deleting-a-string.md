@@ -1,5 +1,5 @@
 ---
-title: 添加或删除字符串 |Microsoft Docs
+title: 添加或删除字符串资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
-- string tables, deleting strings
+- string tables [C++], deleting strings
 - strings [C++], deleting in string tables
-- string tables, adding strings
+- string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952531a846fe48e9f093f016efd67d73c386d82c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c22990c504700ab82ae0d7542420a3f82db4d73
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204482"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314035"
 ---
-# <a name="adding-or-deleting-a-string"></a>添加或删除字符串
+# <a name="adding-or-deleting-a-string-resource-c"></a>添加或删除字符串资源 （c + +）
 
 可快速插入到字符串表使用的新条目**字符串**编辑器。 新字符串放在表的末尾，并将给定的下一步提供标识符。 然后，你可以编辑**ID**，**值**，或**标题**中的属性[属性窗口](/visualstudio/ide/reference/properties-window)根据需要。
 

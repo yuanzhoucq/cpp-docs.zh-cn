@@ -1,5 +1,5 @@
 ---
-title: 将位图转换为工具栏 |Microsoft Docs
+title: 将位图转换为工具栏 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602395"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317221"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>将位图转换为工具栏
+# <a name="converting-bitmaps-to-toolbars-c"></a>将位图转换为工具栏 （c + +）
 
-可以通过将位图转换来创建新工具栏。 从位图图将转换为工具栏按钮图像。 通常，位图包含在单个位图中，使用每个按钮的一个映像的多个按钮映像。 图像可以是任何大小;默认值为 16 像素宽和图像的高度。 可以指定中的按钮图像的大小[新建工具栏资源对话框](../windows/new-toolbar-resource-dialog-box.md)选择时**工具栏编辑器**从**图像**与图像编辑器中的菜单。
+通过将位图转换，可以在 c + + 项目中创建一个新的工具栏。 从位图图将转换为工具栏按钮图像。 通常，位图包含在单个位图中，使用每个按钮的一个映像的多个按钮映像。 图像可以是任何大小;默认值为 16 像素宽和图像的高度。 可以指定中的按钮图像的大小[新建工具栏资源对话框](../windows/new-toolbar-resource-dialog-box.md)选择时**工具栏编辑器**从**图像**与图像编辑器中的菜单。
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>若要将位图转换为工具栏
 

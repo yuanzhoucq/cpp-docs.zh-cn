@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954255"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319014"
 ---
 # <a name="timepoint-class"></a>time_point 类
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 第一个构造函数构造一个对象，该对象的存储 `duration` 值等于 [duration::zero](../standard-library/duration-class.md#zero)。
 
-第二个构造函数将构造一个对象，其存储的持续时间值为等于*Dur*。 除非 `is_convertible<Duration2, duration>`*为 true*，否则第二个构造函数不参与重载决策。 有关详细信息，请参见 [<type_traits>](../standard-library/type-traits.md)。
+第二个构造函数将构造一个对象，其存储的持续时间值为等于*Dur*。 除非`is_convertible<Duration2, duration>`保持为 true，第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 第三个构造函数使用 `Tp.time_since_epoch()` 来初始化其`duration` 值。
 
