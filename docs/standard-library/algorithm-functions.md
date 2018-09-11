@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691712"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101672"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -268,11 +268,14 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*最后一个*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*comp*提供要搜索的范围中的相邻元素的值满足条件的二元谓词。
+*comp*<br/>
+给定要搜索范围内相邻元素的值需满足的条件的二元谓词。
 
 ### <a name="return-value"></a>返回值
 
@@ -341,9 +344,9 @@ int main()
 ```Output
 L = ( 50 40 10 20 20 )
 There are two adjacent elements that are equal.
- They have a value of 20.
+They have a value of 20.
 There are two adjacent elements where the second is twice the first.
- They have values of 10 & 20.
+They have values of 10 & 20.
 ```
 
 ## <a name="all_of"></a>  all_of
@@ -360,11 +363,14 @@ bool all_of(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示从何处着手来检查条件的输入迭代器。 该迭代器将标记元素范围的起始位置。
+*first*<br/>
+一种输入迭代器，指示检查条件的起始位置。 该迭代器将标记元素范围的起始位置。
 
-*最后一个*输入迭代器，指示要检查的条件的元素范围的结束。
+*最后一个*<br/>
+一种输入迭代器，指示在元素范围内检查条件的结束位置。
 
-*comp*要用于测试的条件。 这是用户定义的谓词函数对象，定义被检查元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要测试的条件。 这是用户定义的谓词函数对象，定义被检查元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -388,11 +394,14 @@ bool any_of(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示检查条件的元素范围的起始位置的输入迭代器。
+*first*<br/>
+一种输入迭代器，指示在元素范围内检查条件的起始位置。
 
-*最后一个*输入迭代器，指示要检查的条件的元素范围的结束。
+*最后一个*<br/>
+一种输入迭代器，指示在元素范围内检查条件的结束位置。
 
-*comp*要用于测试的条件。 这是由用户定义的谓词函数对象提供的。 谓词定义所测试的元素应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要测试的条件。 这是由用户定义的谓词函数对象提供的。 谓词定义所测试的元素应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -426,13 +435,17 @@ bool binary_search(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*最后一个*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*值*所需的元素或的值进行匹配的值必须满足的条件与通过二元谓词指定的元素值。
+*value*<br/>
+需要与元素的值匹配或者必须满足元素值由二元谓词指定这一条件的值。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -546,11 +559,14 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址源范围中的第一个元素位置的输入迭代器。
+*first*<br/>
+发现源范围内的第一个元素的位置的输入迭代器。
 
-*最后一个*发现是一个源范围中的最后一个元素之后的位置的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，用于确定源范围内最后一个元素之后下一个元素的位置。
 
-*destBeg*发现目标范围中第一个元素的位置的输出迭代器。
+*destBeg*<br/>
+一种输出迭代器，用于定址目标范围内第一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -636,11 +652,14 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址源范围中的第一个元素位置的双向迭代器。
+*first*<br/>
+一种双向迭代器，用于定址源范围内第一个元素的位置。
 
-*最后一个*发现是一个源范围中的最后一个元素之后的位置的双向迭代器。
+*最后一个*<br/>
+一种双向迭代器，用于定址源范围内最后元素之后下一个元素的位置。
 
-*destEnd*发现目标范围中一个元素的最后一个元素的位置的双向迭代器。
+*destEnd*<br/>
+一种双向迭代器，用于定址目标范围内最后元素之后下一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -724,13 +743,17 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*输入迭代器，指示在范围内检查条件的开始。
+*first*<br/>
+一种输入迭代器，指示在一个范围内检查条件的开始位置。
 
-*最后一个*输入迭代器，指示范围的结束。
+*最后一个*<br/>
+一种输入迭代器，指示范围的结束位置。
 
-*dest*指示复制元素的目标的输出迭代器。
+*dest*<br/>
+输出迭代器，指示复制元素的目标。
 
-*_Pred*针对其测试的范围中的每个元素的条件。 由用户定义的谓词函数对象提供这一条件。 谓词采用一个参数并返回 **，则返回 true**或**false**。
+*_Pred*<br/>
+在范围内每个元素对其进行测试的条件。 由用户定义的谓词函数对象提供这一条件。 谓词采用一个参数并返回 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -758,11 +781,14 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示复制元素的位置的输入迭代器。
+*first*<br/>
+指示复制元素的位置的输入迭代器。
 
-*计数*一个签名或无符号整数类型指定的元素数复制。
+*count*<br/>
+指定要复制的元素的数目的有符号或无符号整数类型。
 
-*dest*输出迭代器，指示将元素复制到的位置。
+*dest*<br/>
+指示将元素复制到的位置的输出迭代器。
 
 ### <a name="return-value"></a>返回值
 
@@ -786,11 +812,14 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的输入迭代器寻址的范围中的第一个元素的位置进行遍历。
+*first*<br/>
+一种输入迭代器，用于寻址要遍历的范围中第一个元素的位置。
 
-*最后一个*的输入迭代器发现一个元素的位置的最后一个元素的范围中要遍历。
+*最后一个*<br/>
+一种输入迭代器，用于寻址要遍历的范围中最后元素之后下一个元素的位置。
 
-*val*要计数的元素的值。
+*val*<br/>
+要计算的元素的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -853,11 +882,14 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的输入迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*最后一个*的输入迭代器发现一个元素的位置的最后一个元素的范围中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*_Pred*用户定义的谓词函数对象，用于定义要计算其数目元素是否满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*_Pred*<br/>
+用户定义的谓词函数对象，用于定义如果计入元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -950,15 +982,20 @@ bool equal(
 
 ### <a name="parameters"></a>参数
 
-*First1*输入迭代器，用于寻址第一个范围中第一个元素的位置进行测试。
+*First1*<br/>
+用于确定要测试的第一个范围中第一个元素的位置的输入迭代器。
 
-*Last1*输入迭代器，用于寻址第一个范围中的最后一个元素过去一个元素的位置进行测试。
+*Last1*<br/>
+用于确定要测试的第一个范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*First2*的输入迭代器寻址第二个范围中第一个元素的位置进行测试。
+*First2*<br/>
+用于确定要测试的第二个范围中第一个元素的位置的输入迭代器。
 
-*First2*的输入迭代器发现第二个范围中最后一个元素之后的位置进行测试。
+*First2*<br/>
+用于确定要测试的第二个范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*Comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -1027,13 +1064,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*最后一个*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*val*排序范围中要搜索的值。
+*val*<br/>
+在已排序范围中搜索的值。
 
-*comp*定义意义上说，一个元素是否小于另一个用户定义的谓词函数对象。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。
 
 ### <a name="return-value"></a>返回值
 
@@ -1183,11 +1224,14 @@ void fill(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置进行遍历。
+*first*<br/>
+一种向前迭代器，用于寻址要遍历的范围内第一个元素的位置。
 
-*最后一个*的前向迭代一个元素的位置的最后一个元素的范围中要遍历。
+*最后一个*<br/>
+一种向前迭代器，用于寻址要遍历的范围内最后一个元素之后下一个元素的位置。
 
-*val*要分配给范围中的元素的值 [*第一个*，*最后一个*)。
+*val*<br/>
+要分配给范围中的元素的值 [*第一个*，*最后一个*)。
 
 ### <a name="remarks"></a>备注
 
@@ -1248,11 +1292,14 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现范围中的第一个元素位置的输出迭代器值分配给*Val*。
+*第一个*<br/>
+发现范围中的第一个元素位置的输出迭代器值分配给*Val*。
 
-*计数*一个签名或无符号整数类型指定的元素数要分配值。
+“计数”<br/>
+指定要分配该值的元素数目的有符号或无符号整数类型。
 
-*Val*要分配给范围中的元素的值 [*第一个*， *First + Count*)。
+*val*<br/>
+要分配给范围中的元素的值 [*第一个*， *First + Count*)。
 
 ### <a name="return-value"></a>返回值
 
@@ -1325,11 +1372,14 @@ InputIterator find(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的输入迭代器寻址的范围中的第一个元素的位置要在其中搜索指定的值。
+*first*<br/>
+用于确定要在范围中搜索其指定值的第一个元素的位置的输入迭代器。
 
-*最后一个*的输入迭代器寻址的范围中的最后一个元素的一个元素的位置要在其中搜索指定的值。
+*最后一个*<br/>
+用于确定要在范围中搜索其指定值的最后一个元素之后下一个元素的位置的输入迭代器。
 
-*val*要在其中搜索的值。
+*val*<br/>
+要搜索的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1364,15 +1414,20 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>参数
 
-*First1*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*First1*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*Last1*的前向迭代之后的位置之一的最后一个元素的范围中要在其中搜索。
+*Last1*<br/>
+用于确定要搜索范围中最后一个元素之后下一个元素的位置的前向迭代器。
 
-*First2*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*First2*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*Last2*的向前迭代器寻址之后的位置之一的最后一个元素的范围中搜索。
+*Last2*<br/>
+用于确定要搜索范围中最后一个元素之后下一个元素的位置的前向迭代器。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*Comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -1477,7 +1532,7 @@ List L1 = ( 5 10 15 20 )
 Vector v2 = ( 20 30 40 )
 There is a match of L1 in v1 that begins at position 7.
 There is a sequence of elements in v1 that are equivalent to those
- in v2 under the binary predicate twice and that begins at position 8.
+in v2 under the binary predicate twice and that begins at position 8.
 ```
 
 ## <a name="find_first_of"></a>  find_first_of
@@ -1503,15 +1558,20 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>参数
 
-*First1*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*first1*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*last1*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*last1*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*first2*的向前迭代器寻址的范围中的第一个元素的位置相匹配。
+*first2*<br/>
+用于确定要匹配范围中的第一个元素的位置的前向迭代器。
 
-*last2*的前向迭代一个元素的位置的最后一个元素的范围中要进行匹配。
+*last2*<br/>
+用于确定要匹配范围中的最后元素之后的位置的前向迭代器。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -1616,10 +1676,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 15 20 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 3.
+and the first one begins at position 3.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="find_if"></a>  find_if
@@ -1636,11 +1696,14 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的输入迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*最后一个*的输入迭代器发现一个元素的位置的最后一个元素的范围中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*pred*用户定义的谓词函数对象或[lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，它定义要搜索的元素应满足的条件。 谓词采用单个参数并返回 **，则返回 true** （满足） 或**false** （不满足条件）。 签名*pred*必须有效地`bool pred(const T& arg);`，其中`T`是一种类型到`InputIterator`取消引用时可以隐式转换。 **Const**关键字所示，仅为说明函数对象或 lambda 不应修改参数。
+*Pred*<br/>
+用户定义的谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素应满足的条件。 谓词采用单个参数并返回 **，则返回 true** （满足） 或**false** （不满足条件）。 签名*pred*必须有效地`bool pred(const T& arg);`，其中`T`是一种类型到`InputIterator`取消引用时可以隐式转换。 **Const**关键字所示，仅为说明函数对象或 lambda 不应修改参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1750,11 +1813,14 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的输入迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*最后一个*的输入迭代器发现一个元素的位置的最后一个元素的范围中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*pred*用户定义的谓词函数对象或[lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素不满足条件。 谓词采用单个参数并返回 **，则返回 true** （满足） 或**false** （不满足条件）。 签名*pred*必须有效地`bool pred(const T& arg);`，其中`T`是一种类型到`InputIterator`取消引用时可以隐式转换。 **Const**关键字所示，仅为说明函数对象或 lambda 不应修改参数。
+*Pred*<br/>
+用户定义谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素不满足的条件。 谓词采用单个参数并返回 **，则返回 true** （满足） 或**false** （不满足条件）。 签名*pred*必须有效地`bool pred(const T& arg);`，其中`T`是一种类型到`InputIterator`取消引用时可以隐式转换。 **Const**关键字所示，仅为说明函数对象或 lambda 不应修改参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1780,11 +1846,14 @@ Function for_each(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址上操作的范围中第一个元素的位置的输入迭代器。
+*first*<br/>
+一种输入迭代器，用于寻址要操作的范围中第一个元素的位置。
 
-*最后一个*发现一个元素的位置的最后一个元素的范围中的输入迭代器对其进行操作。
+*最后一个*<br/>
+一种输入迭代器，用于寻址要操作的范围中最后一个元素之后下一个元素的位置。
 
-*_Func*应用于每个元素的范围中的用户定义的函数对象。
+*_Func*<br/>
+用户定义的应用于范围内每个元素的函数对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -1902,13 +1971,13 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
- by the factor -2 gives:
- v1mod1 = ( 8 6 4 2 0 -2 -4 ).
+by the factor -2 gives:
+v1mod1 = ( 8 6 4 2 0 -2 -4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 gives:
- v1mod2 = ( 40 30 20 10 0 -10 -20 ).
+by the factor 5 gives:
+v1mod2 = ( 40 30 20 10 0 -10 -20 ).
 The average of the elements of v1 is:
- Average ( v1mod2 ) = 10.
+Average ( v1mod2 ) = 10.
 ```
 
 ## <a name="generate"></a>  generate
@@ -1925,11 +1994,14 @@ void generate(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的值是要分配的范围中第一个元素的位置的向前迭代器。
+*first*<br/>
+一种前向迭代器，用于寻址要分配值的范围中第一个元素的位置。
 
-*最后一个*寻址的值是要分配的范围中的最后一个元素的一个元素的位置的向前迭代器。
+*最后一个*<br/>
+一种前向迭代器，用于寻址要分配值的范围中最后一个元素之后下一个元素的位置。
 
-*_Gen*的函数对象调用不带任何参数，用于生成要分配给每个范围中元素的值。
+*_Gen*<br/>
+用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1996,11 +2068,14 @@ void generate_n(
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现第一个元素的值是要分配的范围中的位置的输出迭代器。
+*第一个*<br/>
+寻址要分配值的范围中的第一个元素位置的输出迭代器。
 
-*计数*一个有符号或无符号整数类型指定的元素数的值分配给生成器函数。
+“计数”<br/>
+指定生成器函数要将值分配到的元素数的有符号或无符号整型。
 
-*常规*的函数对象调用不带任何参数，用于生成要分配给每个范围中元素的值。
+*常规*<br/>
+用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。
 
 ### <a name="remarks"></a>备注
 
@@ -2077,15 +2152,20 @@ bool includes(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址在两个已排序的源范围的第一个要测试的第二个的所有元素是否都包含在第一个元素的第一个元素的位置的输入迭代器。
+*first1*<br/>
+一种输入迭代器，用于寻址第一个元素在两个已排序源范围的第一个中的位置，以便测试第二个已排序源范围的所有元素是否包含在第一个中。
 
-*last1*的输入迭代器寻址之后的位置之一的最后一个元素在第一个的两个已排序的源范围的第二个的所有元素是否都包含在第一个测试。
+*last1*<br/>
+一种输入迭代器，用于寻址在两个已排序源范围的第一个中最后一个元素之后下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
-*first2*的输入迭代器寻址第一个元素中的两个连续第二个排序源范围的元素的位置的第二个的所有元素是否都包含在第一个测试。
+*first2*<br/>
+一种输入迭代器，用于寻址第一个元素在两个连续已排序源范围的第二个中的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
-*last2*的输入迭代器寻址的最后一个元素中的两个连续第二个排序源范围之后的位置的第二个的所有元素是否都包含在第一个测试。
+*last2*<br/>
+一种输入迭代器，用于寻址在两个连续已排序源范围的第二个中最后一个元素之后的下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -2238,17 +2318,17 @@ int main()
 
 ```Output
 Original vector v1a with range sorted by the
- binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
+binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
 Original vector v1b with range sorted by the
- binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
+binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
 Original vector v2a with range sorted by the
- binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
+binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
 Original vector v2b with range sorted by the
- binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
+binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
 Original vector v3a with range sorted by the
- binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
+binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
 Original vector v3b with range sorted by the
- binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
+binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
@@ -2275,13 +2355,17 @@ void inplace_merge(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址要合并且排序为一个范围的第一个元素中的两个连续的第一个排序范围的位置的双向迭代器。
+*first*<br/>
+一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第一个源范围内第一个元素的位置。
 
-*中间*寻址要合并且排序为一个范围的第一个元素中的两个连续第二个排序范围的位置的双向迭代器。
+*中间*<br/>
+一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内第一个元素的位置。
 
-*最后一个*寻址要合并且排序为一个范围的最后一个元素中的两个连续第二个排序范围之后的位置的双向迭代器。
+*最后一个*<br/>
+一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内最后一个元素之后下一个元素的位置。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -2389,17 +2473,17 @@ int main()
 
 ```Output
 Original vector v1 with subranges sorted by the
- binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
- binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
- binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
+binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
 Merged inplace with default order,
- vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
+vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
 Merged inplace with binary predicate greater specified,
- vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Merged inplace with binary predicate mod_lesser specified,
- vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
+vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
 ## <a name="is_heap"></a>  is_heap
@@ -2421,11 +2505,14 @@ bool is_heap(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的随机访问迭代器，指示在范围内检查堆的开始。
+*first*<br/>
+一种随机访问迭代器，指示在一个范围内检查堆的开始位置。
 
-*最后一个*的随机访问迭代器，指示范围的结尾。
+*最后一个*<br/>
+一种随机访问迭代器，指示一个范围内的结束位置。
 
-*comp*要测试或者排序元素的条件。 二元谓词采用单个参数并返回 **，则返回 true**或**false**。
+*comp*<br/>
+要测试或者排序元素的条件。 二元谓词采用单个参数并返回 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -2458,11 +2545,14 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>参数
 
-*开始*指定范围内检查堆的第一个元素的随机访问迭代器。
+*begin*<br/>
+一个随机访问迭代器，它为堆指定范围中要检查的第一个元素。
 
-*结束*的随机访问迭代器，指定要检查堆的范围的结尾。
+*end*<br/>
+一个随机访问迭代器，它为堆指定要检查的范围的末尾。
 
-*比较*二元谓词，指定严格弱排序条件，定义一个堆。 时，默认谓词*比较*未指定为`std::less<>`。
+*compare*<br/>
+一个二元谓词，它指定定义堆的严格弱排序条件。 时，默认谓词*比较*未指定为`std::less<>`。
 
 ### <a name="return-value"></a>返回值
 
@@ -2488,11 +2578,14 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示范围开始检查条件的位置的输入迭代器。
+*first*<br/>
+一种输入迭代器，指示一个范围开始检查条件的位置。
 
-*最后一个*指示范围的结尾的输入迭代器。
+*最后一个*<br/>
+一种输入迭代器，指示范围的结束位置。
 
-*comp*要用于测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -2539,15 +2632,20 @@ bool is_permutation(
 
 ### <a name="parameters"></a>参数
 
-*First1*指的是范围的第一个元素的向前迭代器。
+*First1*<br/>
+引用范围的第一个元素的向前迭代器。
 
-*Last1*引用一个范围的最后一个元素之后的向前迭代器。
+*Last1*<br/>
+引用范围最后一个元素过去一个元素的向前迭代器。
 
-*First2*指的是第二个范围，用于比较的第一个元素的向前迭代器。
+*First2*<br/>
+引用第二个范围的第一个元素的向前迭代器（用于比较）。
 
-*Last2*指的是最后一个元素之后的第二个范围，用于比较的向前迭代器。
+*Last2*<br/>
+引用第二个范围最后一个元素过去一个元素的向前迭代器（用于比较）。
 
-*Pred*谓词，它的等效性测试并返回**bool**。
+*Pred*<br/>
+谓词，它的等效性测试并返回**bool**。
 
 ### <a name="return-value"></a>返回值
 
@@ -2637,11 +2735,14 @@ bool is_sorted(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示要检查的范围的开始位置的向前迭代器。
+*first*<br/>
+一种前向迭代器，指示范围开始检查的位置。
 
-*最后一个*向前迭代器，指示范围的结尾。
+*最后一个*<br/>
+一种前向迭代器，指示范围的结束位置。
 
-*comp*条件进行测试，以确定两个元素之间的顺序。 谓词采用一个参数并返回 **true** 或 **false**。 此设置执行与 `operator<` 相同的任务。
+*comp*<br/>
+要进行测试以确定两个元素之间顺序的条件。 谓词采用一个参数并返回 **true** 或 **false**。 此设置执行与 `operator<` 相同的任务。
 
 ### <a name="remarks"></a>备注
 
@@ -2659,21 +2760,24 @@ bool is_sorted(
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
-    ForwardIterator last); 
+    ForwardIterator last);
 template<class ForwardIterator, class BinaryPredicate>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*向前迭代器，指示要检查的范围的开始位置。
+*first*<br/>
+一种前向迭代器，指示范围开始检查的位置。
 
-*最后一个*向前迭代器，指示范围的结尾。
+*最后一个*<br/>
+一种前向迭代器，指示范围的结束位置。
 
-*comp*条件进行测试，以确定两个元素之间的顺序。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要进行测试以确定两个元素之间顺序的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -2697,9 +2801,11 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>参数
 
-*左*一个其值将进行交换的前向迭代器。
+*left*<br/>
+其值将进行交换的其中一个前向迭代器。
 
-*右*其值将进行交换的前向迭代器的第二个。
+*right*<br/>
+其值将进行交换的前向迭代器中的第二个前向迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -2830,14 +2936,14 @@ int main()
 ```Output
 The original deque of CInts is deq1 = ( CInt(5), CInt(1), CInt(10) ).
 The deque of CInts with first & last elements swapped is:
- deq1 = ( CInt(10), CInt(1), CInt(5) ).
+deq1 = ( CInt(10), CInt(1), CInt(5) ).
 The deque of CInts with first & last elements swapped back is:
- deq1 = ( CInt(5), CInt(1), CInt(10) ).
+deq1 = ( CInt(5), CInt(1), CInt(10) ).
 Vector v1 is ( 0 1 2 3 ).
 Deque deq2 is ( 4 5 ).
 After exchanging first elements,
- vector v1 is: v1 = ( 4 1 2 3 ).
- & deque deq2 is: deq2 = ( 0 5 ).
+vector v1 is: v1 = ( 4 1 2 3 ).
+& deque deq2 is: deq2 = ( 0 5 ).
 ```
 
 ## <a name="lexicographical_compare"></a>  lexicographical_compare
@@ -2864,15 +2970,20 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>参数
 
-*first1*输入迭代器，用于寻址第一个范围中第一个元素的位置进行比较。
+*First1*<br/>
+一种输入迭代器，用于寻址要比较的第一个范围中第一个元素的位置。
 
-*last1*输入迭代器，用于寻址第一个范围中的最后一个元素的一个元素的位置进行比较。
+*Last1*<br/>
+一种输入迭代器，用于寻址要比较的第一个范围中最后一个元素之后下一个元素的位置。
 
-*first2*输入迭代器，用于寻址第二个范围中第一个元素的位置进行比较。
+*First2*<br/>
+一种输入迭代器，用于寻址要比较的第二个范围中第一个元素的位置。
 
-*last2*输入迭代器，用于寻址第二个范围中的最后一个元素的一个元素的位置进行比较。
+*Last2*<br/>
+一种输入迭代器，用于寻址要比较的第二个范围中最后一个元素之后下一个元素的位置。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -3005,13 +3116,17 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*first*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*最后一个*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*最后一个*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*值*的第一个位置或可能的第一个位置进行搜索时排序范围中的值。
+*value*<br/>
+正在已排序范围中搜索其第一个位置或可能的第一个位置的值。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -3140,11 +3255,14 @@ void make_heap(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址要转换为堆的范围内的第一个元素位置的随机访问迭代器。
+*first*<br/>
+一种随机访问迭代器，用于寻址要转换为堆的范围中第一个元素的位置。
 
-*最后一个*寻址要转换为堆的范围内的最后一个元素的一个元素的位置的随机访问迭代器。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -3208,30 +3326,34 @@ int main() {
 template<class Type>
 constexpr Type& max(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type& max(
     initializer_list<Type> ,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*左*要比较的两个对象的第一个。
+*left*<br/>
+要比较的两个对象中的第一个对象。
 
-*右*两个第二个对象进行比较。
+*right*<br/>
+要比较的两个对象中的第二个对象。
 
-*comp*二元谓词，用于比较两个对象。
+*comp*<br/>
+用于比较两个对象的二元谓词。
 
-*_IList*包含要进行比较的对象初始值设定项列表。
+*_IList*<br/>
+包含要比较的对象的初始值设定项列表。
 
 ### <a name="return-value"></a>返回值
 
@@ -3424,11 +3546,14 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置在其中搜索最大元素。
+*first*<br/>
+一个前向迭代器，用于确定要在其中搜索最大元素的范围中的第一个元素的位置。
 
-*最后一个*的向前迭代器寻址的范围中的最后一个元素的一个元素的位置在其中搜索最大元素。
+*最后一个*<br/>
+一个前向迭代器，用于确定要在其中搜索最大元素的范围中的最后一个元素的位置。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -3566,17 +3691,23 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址要合并且排序为一个范围的两个已排序的源范围的第一个中的第一个元素位置的输入迭代器。
+*First1*<br/>
+一个输入迭代器，用于确定要合并且排序为一个范围的两个已排序源范围中第一个源范围内第一个元素的位置。
 
-*last1*发现其中一个的之后的位置的最后一个元素在第一个要合并且排序为一个范围的两个已排序的源范围的输入迭代器。
+*Last1*<br/>
+一个输入迭代器，用于确定要合并且排序为一个范围的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*寻址要合并且排序为一个范围为第一个元素中的两个连续第二个排序源范围的元素的位置的输入迭代器。
+*First2*<br/>
+一个输入迭代器，用于确定要合并且排序为一个范围的两个连续已排序源范围中第二个源范围内第一个元素的位置。
 
-*last2*发现最后一个元素中的两个连续第二个排序源范围要合并且排序为一个范围为过去的一个元素的位置的输入迭代器。
+*Last2*<br/>
+一个输入迭代器，用于确定要合并且排序为一个范围的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*结果*发现其中的两个源范围的目标范围中第一个元素的位置的输出迭代器是以合并为一个已排序范围。
+*结果*<br/>
+一个输出迭代器，用于确定要将两个源范围合并为一个已排序范围的目标范围内第一个元素的位置。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -3716,31 +3847,35 @@ int main() {
 template<class Type>
 constexpr const Type& min(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type min( 
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>参数
 
-*左*要比较的两个对象的第一个。
+*left*<br/>
+要比较的两个对象中的第一个对象。
 
-*右*两个第二个对象进行比较。
+*right*<br/>
+要比较的两个对象中的第二个对象。
 
-*comp*二元谓词，用于比较两个对象。
+*comp*<br/>
+用于比较两个对象的二元谓词。
 
-*_IList*包含要进行比较的成员的 initializer_list。
+*_IList*<br/>
+包含要比较的成员的 initializer_list。
 
 ### <a name="return-value"></a>返回值
 
@@ -3935,11 +4070,14 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素的位置在其中搜索最小元素。
+*first*<br/>
+一种前向迭代器，用于寻址要在其中搜索最小元素的范围中第一个元素的位置。
 
-*最后一个*的向前迭代器寻址的范围中的最后一个元素的一个元素的位置在其中搜索最小元素。
+*最后一个*<br/>
+一种前向迭代器，用于寻址要在其中搜索最小元素的范围中最后一个元素之后下一个元素的位置。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4058,7 +4196,7 @@ The smallest element in s1 is: CInt( -3 )
 Vector v1 is ( 0 1 2 3 -2 -4 -6 -8 ).
 The smallest element in v1 is: -8
 The smallest element in v1 under the mod_lesser
- binary predicate is: 0
+binary predicate is: 0
 ```
 
 ## <a name="minmax_element"></a>  minmax_element
@@ -4069,21 +4207,24 @@ The smallest element in v1 under the mod_lesser
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last); 
+    ForwardIterator Last);
 template<class ForwardIterator, class BinaryPredicate>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
-    BinaryPredicate  comp); 
+    BinaryPredicate  comp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示范围的开始位置的向前迭代器。
+*first*<br/>
+一种前向迭代器，指示范围的开始位置。
 
-*最后一个*向前迭代器，指示范围的结尾。
+*最后一个*<br/>
+一种前向迭代器，指示范围的结束位置。
 
-*comp*用于排序元素的可选测试。
+*comp*<br/>
+用于排序元素的可选测试。
 
 ### <a name="return-value"></a>返回值
 
@@ -4113,31 +4254,35 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
- constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> ); 
+constexpr pair<Type&, Type&> minmax(
+    initializer_list<Type> );
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>参数
 
-*左*要比较的两个对象的第一个。
+*left*<br/>
+要比较的两个对象中的第一个对象。
 
-*右*两个第二个对象进行比较。
+*right*<br/>
+要比较的两个对象中的第二个对象。
 
-*comp*二元谓词，用于比较两个对象。
+*comp*<br/>
+用于比较两个对象的二元谓词。
 
-*_IList*包含要进行比较的成员的 initializer_list。
+*_IList*<br/>
+包含要比较的成员的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -4190,15 +4335,20 @@ mismatch(
 
 ### <a name="parameters"></a>参数
 
-*First1*输入迭代器，用于寻址第一个范围中第一个元素的位置进行测试。
+*First1*<br/>
+用于确定要测试的第一个范围中第一个元素的位置的输入迭代器。
 
-*Last1*输入迭代器，用于寻址第一个范围中的最后一个元素过去一个元素的位置进行测试。
+*Last1*<br/>
+用于确定要测试的第一个范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*First2*的输入迭代器寻址第二个范围中第一个元素的位置进行测试。
+*First2*<br/>
+用于确定要测试的第二个范围中第一个元素的位置的输入迭代器。
 
-*Last2*的输入迭代器发现第二个范围中最后一个元素之后的位置进行测试。
+*Last2*<br/>
+用于确定要测试的第二个范围中最后元素之后下一个元素的位置的输入迭代器。
 
-*Comp*用户定义的谓词函数对象，进行比较的每个范围中的当前元素并确定它们是否等效。 满足条件时，它将返回 **true**，不满足时将返回 **false**。
+*Comp*<br/>
+用户定义的谓词函数对象，该对象将每个范围中的当前元素进行比较，并确定它们是否等效。 满足条件时，它将返回 **true**，不满足时将返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -4320,16 +4470,19 @@ template<class InputIterator, class OutputIterator>
 OutputIterator move(
     InputIterator first,
     InputIterator last,
-    OutputIterator dest); 
+    OutputIterator dest);
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示要移动的元素范围的起始位置的输入迭代器。
+*first*<br/>
+一个输入迭代器，指示在范围内移动元素的起始位置。
 
-*最后一个*指示要移动的元素范围的结尾的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，指示在范围内移动元素的结束位置。
 
-*dest*将包含已移动的元素的输出迭代器。
+*dest*<br/>
+将包含已移动元素的输出迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -4350,11 +4503,14 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示范围内移动元素的开始的迭代器。
+*first*<br/>
+指示范围内移动元素的开始位置的迭代器。
 
-*最后一个*指示一个范围内移动元素的末尾的迭代器。 此元素未移动。
+*最后一个*<br/>
+指示在范围内移动元素的结束位置的迭代器。 此元素未移动。
 
-*destEnd*发现目标范围中一个元素的最后一个元素的位置的双向迭代器。
+*destEnd*<br/>
+一种双向迭代器，用于定址目标范围内最后元素之后下一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -4377,11 +4533,14 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向范围中的第一个元素位置的双向迭代器要重新排序。
+*first*<br/>
+一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素的范围中的双向迭代器要重新排序。
+*最后一个*<br/>
+一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -4517,21 +4676,21 @@ The original deque of CInts is deq1 = ( CInt( 5 ), CInt( 1 ), CInt( 10 ) ).
 The lexicographically next permutation exists and has
 replaced the original ordering of the sequence in deq1.
 After one application of next_permutation,
- deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
+deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first next_permutation, vector v1 is:
- v1 = ( -3 -2 -1 0 1 3 2 ).
+v1 = ( -3 -2 -1 0 1 3 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 1 3 ).
+v1 =   ( -3 -2 -1 0 2 1 3 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 3 1 ).
+v1 =   ( -3 -2 -1 0 2 3 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 1 2 ).
+v1 =   ( -3 -2 -1 0 3 1 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 2 1 ).
+v1 =   ( -3 -2 -1 0 3 2 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 1 0 2 3 ).
+v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
 ## <a name="nth_element"></a>  nth_element
@@ -4543,19 +4702,23 @@ template<class RandomAccessIterator>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
- void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的随机访问迭代器进行分区。
+*first*<br/>
+一种随机访问迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*_Nth*发现元素的位置的随机访问迭代器进行正确排序的分区的边界上。
+*_Nth*<br/>
+一种随机访问迭代器，用于寻址要在分区边界上进行正确排序的元素的位置。
 
-*最后一个*寻址的范围中的最后一个元素的一个元素的位置的随机访问迭代器进行分区。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -4644,11 +4807,14 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示检查条件的元素范围的起始位置的输入迭代器。
+*first*<br/>
+一种输入迭代器，指示在元素范围内检查条件的起始位置。
 
-*最后一个*指示的元素范围的结尾的输入迭代器。
+*最后一个*<br/>
+一种输入迭代器，指示元素范围的结束位置。
 
-*comp*要用于测试的条件。 由定义条件的用户定义的谓词函数对象提供。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要测试的条件。 由定义条件的用户定义的谓词函数对象提供。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -4680,13 +4846,17 @@ void partial_sort(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的随机访问迭代器进行排序。
+*first*<br/>
+一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*sortEnd*发现一个元素的位置的子范围中的最后一个元素的随机访问迭代器进行排序。
+*sortEnd*<br/>
+一种随机访问迭代器，用于寻址要排序的子范围中最后元素之后下一个元素的位置。
 
-*最后一个*发现一个元素的位置的最后一个元素的范围中的随机访问迭代器部分排序。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址要部分排序的子范围中最后元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -4750,7 +4920,7 @@ int main()
 
    // A user-defined (UD) binary predicate can also be used
    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
- UDgreater );
+UDgreater );
    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
       cout << *Iter1 << " ";
@@ -4760,13 +4930,13 @@ int main()
 
 ```Output
 Original vector:
- v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
+v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
 Partially sorted vector:
- v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
+v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
 Partially resorted (greater) vector:
- v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
+v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
 Partially resorted (UDgreater) vector:
- v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
+v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
 ## <a name="partial_sort_copy"></a>  partial_sort_copy
@@ -4792,15 +4962,20 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址源范围中的第一个元素位置的输入迭代器。
+*First1*<br/>
+发现源范围内的第一个元素的位置的输入迭代器。
 
-*last1*发现一个元素的位置的最后一个元素的源范围中的输入迭代器。
+*Last1*<br/>
+一个输入迭代器，用于寻址源范围内最后一个元素之后下一个元素的位置。
 
-*first2*寻址排序的目标范围中第一个元素的位置的随机访问迭代器。
+*First2*<br/>
+一种随机访问迭代器，用于寻址排序目标范围中第一个元素的位置。
 
-*last2*发现一个元素的位置的最后一个元素的已排序的目标范围内的随机访问迭代器。
+*Last2*<br/>
+一种随机访问迭代器，用于寻址排序目标范围中最后一个元素之后下一个元素的位置。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -4903,11 +5078,14 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的双向迭代器进行分区。
+*first*<br/>
+一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*最后一个*寻址的范围中的最后一个元素的一个元素的位置的双向迭代器进行分区。
+*最后一个*<br/>
+一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义要分类元素是否满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -4972,20 +5150,25 @@ pair<OutputIterator1, OutputIterator2>
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred); 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*指示一个范围内检查条件的开始位置的输入迭代器。
+*first*<br/>
+一种输入迭代器，指示在一个范围中开始检查条件的位置。
 
-*最后一个*指示范围的结尾的输入迭代器。
+*最后一个*<br/>
+一种输入迭代器，指示范围的结束位置。
 
-*dest1*使用一个输出迭代器，用于将返回 true 的条件的元素复制测试 *_Pred*。
+*dest1*<br/>
+使用一个输出迭代器，用于将返回 true 的条件的元素复制测试 *_Pred*。
 
-*dest2*使用一个输出迭代器，用于将返回 false 的条件的元素复制测试 *_Pred*。
+*dest2*<br/>
+使用一个输出迭代器，用于将返回 false 的条件的元素复制测试 *_Pred*。
 
-*_Pred*要用于测试的条件。 由定义要测试条件的用户定义谓词函数对象提供。 谓词采用一个参数并返回 **true** 或 **false**。
+*_Pred*<br/>
+要测试的条件。 由定义要测试条件的用户定义谓词函数对象提供。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -5000,16 +5183,19 @@ template<class ForwardIterator, class Predicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp); 
+    Predicate comp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*A `ForwardIterator` ，该值指示一个范围内检查条件的开始。
+*first*<br/>
+一种 `ForwardIterator`，指示在一个范围内检查条件的开始位置。
 
-*最后一个*A `ForwardIterator` ，该值指示范围的结尾。
+*最后一个*<br/>
+一种 `ForwardIterator`，指示范围的结束位置。
 
-*comp*要用于测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*comp*<br/>
+要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -5034,11 +5220,14 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址堆中的第一个元素位置的随机访问迭代器。
+*first*<br/>
+一种随机访问迭代器，用于寻址堆中第一个元素的位置。
 
-*最后一个*发现一个元素的位置的最后一个元素的堆中的随机访问迭代器。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址堆中最后一个元素之后下一个元素的位置。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -5140,11 +5329,14 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向范围中的第一个元素位置的双向迭代器要重新排序。
+*first*<br/>
+一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素的范围中的双向迭代器要重新排序。
+*最后一个*<br/>
+一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -5272,24 +5464,24 @@ int main() {
 ```Output
 The original deque of CInts is deq1 = ( CInt( 1 ), CInt( 5 ), CInt( 10 ) ).
 The lexicographically previous permutation doesn't exist
- and the lexicographically smallest permutation
- has replaced the original ordering of the sequence in deq1.
+and the lexicographically smallest permutation
+has replaced the original ordering of the sequence in deq1.
 After one application of prev_permutation,
- deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
+deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first prev_permutation, vector v1 is:
- v1 = ( -3 -2 0 3 2 1 -1 ).
+v1 = ( -3 -2 0 3 2 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 2 1 ).
+v1 =   ( -3 -2 0 3 -1 2 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 1 2 ).
+v1 =   ( -3 -2 0 3 -1 1 2 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 3 1 -1 ).
+v1 =   ( -3 -2 0 2 3 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 3 1 ).
+v1 =   ( -3 -2 0 2 -1 3 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 1 3 ).
+v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
 ## <a name="push_heap"></a>  push_heap
@@ -5307,11 +5499,14 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址堆中的第一个元素位置的随机访问迭代器。
+*first*<br/>
+一种随机访问迭代器，用于寻址堆中第一个元素的位置。
 
-*最后一个*寻址要转换为堆的范围内的最后一个元素的一个元素的位置的随机访问迭代器。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -5408,17 +5603,20 @@ Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-lib
 
 ```cpp
 template<class ForwardIterator, class Type>
- ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现要从中删除元素范围中的第一个元素位置的前向迭代器。
+*first*<br/>
+寻址要删除元素的范围中的第一个元素位置的转发迭代器。
 
-*最后一个*寻址要从中删除元素的范围中的最后一个元素的一个元素的位置的向前迭代器。
+*最后一个*<br/>
+寻址要删除元素的范围中的最后一个元素的下一个位置的转发迭代器。
 
-*val*是从该范围中删除的值。
+*val*<br/>
+要从该范围删除的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -5488,19 +5686,23 @@ int main() {
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
- OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现要从中删除元素范围中的第一个元素位置的输入迭代器。
+*first*<br/>
+一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。
 
-*最后一个*发现要从中删除元素的范围中的最后一个元素的一个元素的位置的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。
 
-*结果*发现要向其删除元素的目标范围中第一个元素的位置的输出迭代器。
+*结果*<br/>
+一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。
 
-*val*是从该范围中删除的值。
+*val*<br/>
+要从该范围删除的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -5573,13 +5775,17 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现要从中删除元素范围中的第一个元素位置的输入迭代器。
+*first*<br/>
+一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。
 
-*最后一个*发现要从中删除元素的范围中的最后一个元素的一个元素的位置的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。
 
-*结果*发现要向其删除元素的目标范围中第一个元素的位置的输出迭代器。
+*结果*<br/>
+一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。
 
-*_Pred*必须满足的一元谓词是一个元素的值将被替换。
+*_Pred*<br/>
+必须满足的一元谓词是要替换的元素值。
 
 ### <a name="return-value"></a>返回值
 
@@ -5664,11 +5870,14 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*前向迭代器，指向要从中删除元素范围中的第一个元素的位置。
+*first*<br/>
+一种输入迭代器，指向从其中删除元素的范围中第一个元素的位置。
 
-*最后一个*向前迭代器指向要从中删除元素的范围中的最后一个元素的一个元素的位置。
+*最后一个*<br/>
+一种输入迭代器，指向从其中删除元素的范围中最后一个元素之后下一个元素的位置。
 
-*_Pred*必须满足的一元谓词是一个元素的值将被替换。
+*_Pred*<br/>
+必须满足的一元谓词是要替换的元素值。
 
 ### <a name="return-value"></a>返回值
 
@@ -5751,13 +5960,17 @@ void replace(
 
 ### <a name="parameters"></a>参数
 
-*第一个*前向迭代器，指向要从其中替换元素范围中的第一个元素的位置。
+*first*<br/>
+一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。
 
-*最后一个*向前迭代器指向要从其中替换元素的范围中的最后一个元素的一个元素的位置。
+*最后一个*<br/>
+一种输入迭代器，指向要从其中替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*_OldVal*要替换的元素的旧值。
+*_OldVal*<br/>
+要替换的元素的旧值。
 
-*_NewVal*赋给具有旧值的元素的新值。
+*_NewVal*<br/>
+要赋给具有旧值的元素的新值。
 
 ### <a name="remarks"></a>备注
 
@@ -5823,15 +6036,20 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>参数
 
-*第一个*输入迭代器，指向要从其中替换元素范围中的第一个元素的位置。
+*first*<br/>
+一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素将被替换元素的范围中的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*结果*输出迭代器指向要将序列已更改的元素复制到的目标范围内的第一个元素。
+*结果*<br/>
+一个输出迭代器，指向要将序列已更改的元素复制到的目标范围中的第一个元素。
 
-*_OldVal*要替换的元素的旧值。
+*_OldVal*<br/>
+要替换的元素的旧值。
 
-*_NewVal*赋给具有旧值的元素的新值。
+*_NewVal*<br/>
+要赋给具有旧值的元素的新值。
 
 ### <a name="return-value"></a>返回值
 
@@ -5921,15 +6139,20 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*输入迭代器，指向要从其中替换元素范围中的第一个元素的位置。
+*first*<br/>
+一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素将被替换元素的范围中的输入迭代器。
+*最后一个*<br/>
+一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*结果*输出迭代器指向第一个元素的元素复制到其中的目标范围内的位置。
+*结果*<br/>
+一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。
 
-*_Pred*必须满足的一元谓词是一个元素的值将被替换。
+*_Pred*<br/>
+必须满足的一元谓词是要替换的元素值。
 
-*val*赋给其旧值满足谓词的元素的新值。
+*val*<br/>
+要赋给其旧值满足谓词的元素的新值。
 
 ### <a name="return-value"></a>返回值
 
@@ -6025,13 +6248,17 @@ void replace_if(
 
 ### <a name="parameters"></a>参数
 
-*第一个*前向迭代器，指向要从其中替换元素范围中的第一个元素的位置。
+*first*<br/>
+一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。
 
-*最后一个*迭代器，指向要从其中替换元素的范围中的最后一个元素的一个元素的位置。
+*最后一个*<br/>
+一个迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*_Pred*必须满足的一元谓词是一个元素的值将被替换。
+*_Pred*<br/>
+必须满足的一元谓词是要替换的元素值。
 
-*val*赋给其旧值满足谓词的元素的新值。
+*val*<br/>
+要赋给其旧值满足谓词的元素的新值。
 
 ### <a name="remarks"></a>备注
 
@@ -6101,9 +6328,11 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向元素要在其中进行重排的范围中第一个元素的位置的双向迭代器。
+*first*<br/>
+一种双向迭代器，指向元素要进行重排的范围中第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素在其中元素要进行重排的范围中的双向迭代器。
+*最后一个*<br/>
+一个双向迭代器，指向元素要进行重排的范围中最后一个元素之后下一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -6146,9 +6375,9 @@ int main() {
 
 ```Output
 The original vector v1 is:
- ( 0 1 2 3 4 5 6 7 8 9 ).
+( 0 1 2 3 4 5 6 7 8 9 ).
 The modified vector v1 with values reversed is:
- ( 9 8 7 6 5 4 3 2 1 0 ).
+( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
 ## <a name="reverse_copy"></a>  reverse_copy
@@ -6166,11 +6395,14 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向在其中元素进行置换的源范围中第一个元素的位置的双向迭代器。
+*first*<br/>
+一个双向迭代器，指向元素进行置换的源范围中第一个元素的位置。
 
-*最后一个*指向一个元素的位置的最后一个元素内的元素进行置换的源范围中的双向迭代器。
+*最后一个*<br/>
+一个双向迭代器，指向元素进行置换的源范围中最后一个元素之后下一个元素的位置。
 
-*结果*输出迭代器指向第一个元素的元素复制到其中的目标范围内的位置。
+*结果*<br/>
+一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -6226,7 +6458,7 @@ int main() {
 
 ```cpp
 template<class ForwardIterator>
- void rotate(
+void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
@@ -6235,11 +6467,14 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素位置的旋转角度。
+*first*<br/>
+一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。
 
-*中间*解决了在其元素将要进行交换与范围的第一个部分中的范围的第二个部分中的第一个元素位置的范围内定义边界的向前迭代器。
+*中间*<br/>
+一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。
 
-*最后一个*的向前迭代器发现一个元素的位置的最后一个元素的范围中的旋转角度。
+*最后一个*<br/>
+一个向前迭代器，用于确定要轮换的范围内最后一个元素之后下一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -6309,17 +6544,17 @@ Vector v1 is ( -3 -2 -1 0 1 2 3 4 5 ).
 After rotating, vector v1 is ( 0 1 2 3 4 5 -3 -2 -1 ).
 The original deque d1 is ( 0 1 2 3 4 5 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 1 2 3 4 5 0 ).
+d1 is   ( 1 2 3 4 5 0 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 2 3 4 5 0 1 ).
+d1 is   ( 2 3 4 5 0 1 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 3 4 5 0 1 2 ).
+d1 is   ( 3 4 5 0 1 2 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 4 5 0 1 2 3 ).
+d1 is   ( 4 5 0 1 2 3 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 5 0 1 2 3 4 ).
+d1 is   ( 5 0 1 2 3 4 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 0 1 2 3 4 5 ).
+d1 is   ( 0 1 2 3 4 5 ).
 ```
 
 ## <a name="rotate_copy"></a>  rotate_copy
@@ -6338,13 +6573,16 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器寻址的范围中的第一个元素位置的旋转角度。
+*first*<br/>
+一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。
 
-*中间*解决了在其元素将要进行交换与范围的第一个部分中的范围的第二个部分中的第一个元素位置的范围内定义边界的向前迭代器。
+*中间*<br/>
+一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。
 
 _*最后一个*的向前迭代器发现一个元素的位置的最后一个元素的范围中的旋转角度。
 
-*结果*发现目标范围中第一个元素的位置的输出迭代器。
+*结果*<br/>
+一种输出迭代器，用于定址目标范围内第一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -6439,15 +6677,20 @@ ForwardIterator1 search(
 
 ### <a name="parameters"></a>参数
 
-*First1*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*First1*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*last1*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*Last1*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*first2*的向前迭代器寻址的范围中的第一个元素的位置相匹配。
+*First2*<br/>
+用于确定要匹配范围中的第一个元素的位置的前向迭代器。
 
-*last2*的前向迭代一个元素的位置的最后一个元素的范围中要进行匹配。
+*Last2*<br/>
+用于确定要匹配范围中的最后元素之后的位置的前向迭代器。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -6553,10 +6796,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 20 25 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 4.
+and the first one begins at position 4.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="search_n"></a>  search_n
@@ -6583,15 +6826,20 @@ ForwardIterator1 search_n(
 
 ### <a name="parameters"></a>参数
 
-*First1*的向前迭代器寻址的范围中的第一个元素的位置搜索。
+*First1*<br/>
+用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*last1*的前向迭代一个元素的位置的最后一个元素的范围中要在其中搜索。
+*Last1*<br/>
+用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*计数*要搜索的子序列的大小。
+*count*<br/>
+要搜索的子序列的大小。
 
-*val*要搜索序列中的元素的值。
+*val*<br/>
+要搜索的序列中元素的值。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -6683,9 +6931,9 @@ int main()
 ```Output
 Vector v1 = ( 0 5 10 15 20 25 5 5 5 0 5 10 15 20 25 10 10 10 )
 There is at least one match of a sequence ( 5 5 5 )
- in v1 and the first one begins at position 6.
+in v1 and the first one begins at position 6.
 There is a match of a sequence ( 5 5 5 ) under the equivalence
- predicate one_half in v1 and the first one begins at position 15.
+predicate one_half in v1 and the first one begins at position 15.
 ```
 
 ## <a name="set_difference"></a>  set_difference
@@ -6713,17 +6961,23 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址在两个已排序的源范围的第一个要相并且排序为一个范围的两个源范围的差价的第一个元素位置的输入迭代器。
+*First1*<br/>
+一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个已排序源范围中第一个源范围内第一个元素的位置。
 
-*last1*的输入迭代器寻址之后的位置之一的最后一个元素在第一个的两个已排序的源范围相并且排序为一个范围的两个源范围的差价。
+*Last1*<br/>
+一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*的输入迭代器中的位置的第一个元素的两个连续第二个排序源范围相并且排序为一个范围的两个源范围的差价。
+*First2*<br/>
+一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个连续已排序源范围中第二个源范围内第一个元素的位置。
 
-*last2*的输入迭代器寻址中之后位置的最后一个元素的两个连续第二个排序源范围相并且排序为一个范围的两个源范围的差价。
+*Last2*<br/>
+一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*结果*发现其中的两个源范围的目标范围中第一个元素的位置的输出迭代器是以两个源范围的差价为一个已排序范围相。
+*结果*<br/>
+一个输出迭代器，用于寻址要将两个源范围相并为一个已排序范围（表示两个源范围的差异）的目标范围内第一个元素的位置。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -6887,17 +7141,22 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址在两个已排序的源范围的第一个要相并且排序为表示两个源范围的交集为一个范围中的第一个元素位置的输入迭代器。
+*First1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个已排序源范围中第一个源范围内第一个元素的位置。
 
-*last1*的输入迭代器寻址之后的位置之一的最后一个元素在第一个的两个已排序的源范围相并且排序为一个范围表示两个源范围的交集。
+*Last1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*的输入迭代器中的位置的第一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的交集。
+*First2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个连续已排序源范围中第二个源范围内第一个元素的位置。
 
-*last2*的输入迭代器寻址中之后位置的最后一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的交集。
+*Last2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
 **_** *结果*发现其中的两个源范围的目标范围中第一个元素的位置的输出迭代器是以表示两个源的交集为一个已排序范围相范围。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -7036,7 +7295,7 @@ int main() {
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
- OutputIterator set_symmetric_difference(
+OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
@@ -7056,17 +7315,22 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址在两个已排序的源范围的第一个要相并且排序为一个范围表示两个源范围的对称差异的第一个元素位置的输入迭代器。
+*First1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个已排序源范围中第一个源范围内第一个元素的位置。
 
-*last1*的输入迭代器寻址之后的位置之一的最后一个元素在第一个的两个已排序的源范围相并且排序为一个范围表示两个源范围的对称差异。
+*Last1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*的输入迭代器中的位置的第一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的对称差异。
+*First2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个连续已排序源范围中第二个源范围内第一个元素的位置。
 
-*last2*的输入迭代器寻址中之后位置的最后一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的对称差异。
+*Last2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
 **_** *结果*发现其中的两个源范围的目标范围中第一个元素的位置的输出迭代器是以表示两个的对称差异为一个已排序范围相源范围。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -7230,17 +7494,22 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址在两个已排序的源范围的第一个要相并且排序为一个范围表示两个源范围的并集的第一个元素位置的输入迭代器。
+*First1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个已排序源范围中第一个源范围内第一个元素的位置。
 
-*last1*的输入迭代器寻址之后的位置之一的最后一个元素在第一个的两个已排序的源范围相并且排序为一个范围表示两个源范围的并集。
+*Last1*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*的输入迭代器中的位置的第一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的并集。
+*First2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个连续已排序源范围中第二个源范围内第一个元素的位置。
 
-*last2*的输入迭代器寻址中之后位置的最后一个元素的两个连续第二个排序源范围相并且排序为一个范围表示两个源范围的并集。
+*Last2*<br/>
+一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
 **_** *结果*发现其中的两个源范围的目标范围中第一个元素的位置的输出迭代器是以表示两个源范围的并集为一个已排序范围相。
 
-*comp*定义意义上说，在其中一个元素是否大于另一个用户定义的谓词函数对象。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -7392,11 +7661,14 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>参数
 
-*第一个*的范围中的第一个元素的迭代器是已打乱顺序 （含） 之间。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
+*first*<br/>
+指向范围中要重新排序的第一个元素的迭代器（包含第一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
 
-*最后一个*的范围中最后一个元素的迭代器是已打乱顺序、 排他。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
+*最后一个*<br/>
+指向范围中要重新排序的最后一个元素的迭代器（不包含最后一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
 
-*gen*随机数生成器的`shuffle()`函数将用于该操作。 必须满足 `UniformRandomNumberGenerator` 的要求。
+*常规*<br/>
+`shuffle()` 函数将用于运算的随机数生成器。 必须满足 `UniformRandomNumberGenerator` 的要求。
 
 ### <a name="remarks"></a>备注
 
@@ -7422,11 +7694,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的随机访问迭代器进行排序。
+*first*<br/>
+一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*最后一个*寻址的范围中的最后一个元素的一个元素的位置的随机访问迭代器进行排序。
+*最后一个*<br/>
+一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 此二元谓词采用两个参数并返回 **，则返回 true**如果两个参数的顺序并**false**否则为。 该比较器函数必须对序列中的元素对进行严格弱排序。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 此二元谓词采用两个参数并返回 **，则返回 true**如果两个参数的顺序并**false**否则为。 该比较器函数必须对序列中的元素对进行严格弱排序。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -7523,11 +7798,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址目标堆中的第一个元素位置的随机访问迭代器。
+*first*<br/>
+一种随机访问迭代器，用于寻址目标堆中第一个元素的位置。
 
-*最后一个*寻址目标堆中的最后一个元素的一个元素的位置的随机访问迭代器。
+*最后一个*<br/>
+一种随机访问迭代器，用于寻址目标堆中最后一个元素之后下一个元素的位置。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -7612,11 +7890,14 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的双向迭代器进行分区。
+*first*<br/>
+一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*最后一个*寻址的范围中的最后一个元素的一个元素的位置的双向迭代器进行分区。
+*最后一个*<br/>
+一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
-*_Pred*用户定义的谓词函数对象，用于定义要分类元素是否满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
+*_Pred*<br/>
+用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -7679,7 +7960,7 @@ int main() {
 
 ```cpp
 template<class BidirectionalIterator>
- void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
 
 template<class BidirectionalIterator, class BinaryPredicate>
 void stable_sort(
@@ -7691,11 +7972,14 @@ void stable_sort(
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址的范围中的第一个元素位置的双向迭代器进行排序。
+*first*<br/>
+一种双向迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*最后一个*寻址的范围中的最后一个元素的一个元素的位置的双向迭代器进行排序。
+*最后一个*<br/>
+一种双向迭代器，用于寻址要排序的范围中最后一个元素之后下一个元素的位置。
 
-*comp*用户定义的谓词函数对象，用于定义在排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="remarks"></a>备注
 
@@ -7790,9 +8074,11 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>参数
 
-*左*的第一个重写时，要交换其内容的第一个对象。 对于第二次重写，为交换其内容的第一个对象数组。
+*left*<br/>
+对于第一次重写，为交换其内容的第一个对象。 对于第二次重写，为交换其内容的第一个对象数组。
 
-*右*的第一个重写时，要交换其内容的第二个对象。 对于第二次重写，为交换其内容的第二个对象数组。
+*right*<br/>
+对于第一次重写，为交换其内容的第二个对象。 对于第二次重写，为交换其内容的第二个对象数组。
 
 ### <a name="remarks"></a>备注
 
@@ -7869,11 +8155,14 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>参数
 
-*first1*指向其元素将要进行交换的第一个范围的第一个位置的向前迭代器。
+*First1*<br/>
+一种前向迭代器，指向其元素将要进行交换的第一个范围的第一个位置。
 
-*last1*指向一个其元素将要进行交换的第一个范围的最后一个位置之后的向前迭代器。
+*Last1*<br/>
+一种前向迭代器，指向其元素将要进行交换的第一个范围的最后一个位置之后的位置。
 
-*first2*指向其元素将要进行交换的第二个范围的第一个位置的向前迭代器。
+*First2*<br/>
+一种前向迭代器，指向其元素将要进行交换的第二个范围的第一个位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -7969,15 +8258,20 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>参数
 
-*first1*寻址要操作的第一个源范围中的第一个元素位置的输入迭代器。
+*First1*<br/>
+一种输入迭代器，用于寻址要操作的第一个源范围内第一个元素的位置。
 
-*last1*发现第一个源范围中的最后一个元素的一个元素的位置的输入迭代器对其进行操作。
+*Last1*<br/>
+一种输入迭代器，用于寻址要操作的第一个源范围内最后一个元素之后下一个元素的位置。
 
-*first2*寻址要操作的第二个源范围中的第一个元素位置的输入迭代器。
+*First2*<br/>
+一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。
 
-*结果*发现目标范围中第一个元素的位置的输出迭代器。
+*结果*<br/>
+一种输出迭代器，用于定址目标范围内第一个元素的位置。
 
-*_Func*应用于第一个源范围或应用的算法的第二个版本中使用的用户定义 (UD) 二元函数对象中每个元素的算法的第一个版本中使用的用户定义的一元函数对象成对，以正向的顺序，对两个源范围。
+*_Func*<br/>
+在应用到第一个源范围中每个元素的第一版算法中使用的用户定义一元函数对象，或者在按前向顺序成对应用到两个源范围的第二版算法中使用的用户定义 (UD) 二元函数对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -8070,12 +8364,12 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
- v1mod = ( -8 -6 -4 -2 0 2 4 ).
+v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 & copying to v2 gives:
- v2 = ( -40 -30 -20 -10 0 10 20 ).
+by the factor 5 & copying to v2 gives:
+v2 = ( -40 -30 -20 -10 0 10 20 ).
 Multiplying elements of the vectors v1mod and v2 pairwise gives:
- v3 = ( 320 180 80 20 0 20 80 ).
+v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
 ## <a name="unique"></a>  unique
@@ -8098,11 +8392,14 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>参数
 
-*第一个*寻址要进行重复删除扫描的范围内的第一个元素位置的向前迭代器。
+*first*<br/>
+一种前向迭代器，用于寻址要进行重复删除扫描的范围中第一个元素的位置。
 
-*最后一个*发现一个元素的位置的最后一个元素要进行重复删除扫描的范围内的前向迭代器。
+*最后一个*<br/>
+一种前向迭代器，用于寻址要进行重复删除扫描的范围中最后一个元素之后下一个元素的位置。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -8201,10 +8498,10 @@ int main()
 ```Output
 Vector v1 is ( 5 -5 5 -5 5 -5 5 -5 4 4 4 4 7 ).
 Removing adjacent duplicates from vector v1 gives
- ( 5 -5 5 -5 5 -5 5 -5 4 7 ).
+( 5 -5 5 -5 5 -5 5 -5 4 7 ).
 Removing adjacent duplicates from vector v1 under the
   binary predicate mod_equal gives
- ( 5 4 7 ).
+( 5 4 7 ).
 Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
@@ -8228,13 +8525,17 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>参数
 
-*第一个*正向迭代器，用于寻址源范围中的第一个元素的位置复制。
+*first*<br/>
+一个向前迭代器，用于寻址源范围中要复制的第一个元素的位置。
 
-*最后一个*前向迭代器，用于寻址源范围中的最后一个元素的一个元素的位置复制。
+*最后一个*<br/>
+一个向前迭代器，用于寻址源范围中要复制的最后一个元素之后下一个元素的位置。
 
-*结果*发现正在接收连续副本的目标范围中第一个元素的位置的输出迭代器中删除。
+*结果*<br/>
+一个输出迭代器，用于寻址接收删除的连续副本的目标范围中第一个元素的位置。
 
-*Comp*用户定义的谓词函数对象，用于定义要执行两个元素是否满足的条件视为等效。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -8344,13 +8645,17 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>参数
 
-*第一个*要搜索的范围内第一个元素的位置。
+*first*<br/>
+要搜索的范围中第一个元素的位置。
 
-*最后一个*一个元素的位置的最后一个元素中进行搜索的范围。
+*最后一个*<br/>
+要搜索的范围中最后一个元素之后下一个元素的位置。
 
-*值*排序需要超出的迭代器寻址的元素的值的范围中的值返回。
+*value*<br/>
+返回排序范围中需要被迭代器寻址的元素值超越的值。
 
-*comp*中哪一个元素是否小于另一个用户定义的谓词函数对象，用于定义意义。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
+*comp*<br/>
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 ### <a name="return-value"></a>返回值
 
