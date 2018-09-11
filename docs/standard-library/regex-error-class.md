@@ -1,7 +1,7 @@
 ---
 title: regex_error 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cdf1f5a3a8477e0af7d6bb04426599df590fffa
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102676"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384977"
 ---
 # <a name="regexerror-class"></a>regex_error 类
 
@@ -32,19 +32,24 @@ ms.locfileid: "44102676"
 
 ```cpp
 class regex_error
-: public std::runtime_error {
-public:
-    explicit regex_error(regex_constants::error_code error);
-
-    regex_constants::error_code code() const;
-
-
-};
+: public std::runtime_error
 ```
 
 ## <a name="remarks"></a>备注
 
 该类描述一个异常对象，引发该异常的目的是为报告一个构造中的错误或 `basic_regex` 对象的使用错误。
+
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[regex_error](#regex_error)|构造对象。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[代码](#code)|返回错误代码。|
 
 ## <a name="requirements"></a>要求
 
@@ -52,22 +57,10 @@ public:
 
 **命名空间：** std
 
-## <a name="code"></a>  regex_error::code
-
-返回错误代码。
+## <a name="example"></a>示例
 
 ```cpp
-regex_constants::error_code code() const;
-```
-
-### <a name="remarks"></a>备注
-
-成员函数将返回传递给对象的构造函数的值。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_error_code.cpp
+// std__regex__regex_error.cpp
 // compile with: /EHsc
 #include <regex>
 #include <iostream>
@@ -83,8 +76,7 @@ int main()
     catch (const std::regex_error& rerr)
         {
         std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
+            << (rerr.code() == paren.code() ? "unbalanced parentheses" : "")
             << std::endl;
         }
     catch (...)
@@ -94,12 +86,23 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
 regex error: unbalanced parentheses
 ```
+
+## <a name="code"></a>  regex_error::code
+
+返回错误代码。
+
+```cpp
+regex_constants::error_code code() const;
+```
+
+### <a name="remarks"></a>备注
+
+成员函数将返回传递给对象的构造函数的值。
 
 ## <a name="regex_error"></a>  regex_error::regex_error
 
@@ -117,43 +120,6 @@ regex_error(regex_constants::error_code error);
 ### <a name="remarks"></a>备注
 
 构造函数将构造一个对象，保存值*错误*。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_error_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
 
 ## <a name="see-also"></a>请参阅
 

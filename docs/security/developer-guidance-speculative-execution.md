@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613241"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384951"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 
@@ -31,7 +31,7 @@ ms.locfileid: "42613241"
 
 本文提供的指导与漏洞所表示的类：
 
-1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 
+1. CVE-2017-5753，也称为 Spectre 变体 1。 此硬件漏洞类与相关端通道可能会出现由于条件分支预测时，会出现的推理执行。 （从 15.5.5 版开始） 的 Visual Studio 2017 中 Visual c + + 编译器支持`/Qspectre`开关这提供了一组有限的潜在易受攻击的编码模式编译时缓解与相关的 CVE 2017-5753。 `/Qspectre`开关也会出现在通过 Visual Studio 2015 Update 3 [KB 4338871](https://support.microsoft.com/help/4338871)。 文档[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)标志提供有关其效果和使用情况详细信息。 
 
 2. CVE-2018年-3639，也称为[推理存储区绕过 (SSB)](https://aka.ms/sescsrdssb)。 此硬件漏洞类与相关端通道可能会出现由于之前作为内存访问预测结果依赖于存储的负载的推理执行。
 
