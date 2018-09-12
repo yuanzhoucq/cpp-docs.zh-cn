@@ -1,7 +1,7 @@
 ---
 title: directory_iterator 类 | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105194"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691583"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 类
 
-描述通过目录中的文件名排序的输入迭代器。 对于迭代器 X，表达式 *X 计算到 directory_entry 类对文件名及与其状态有关的任何信息进行包装的对象。
+描述通过目录中的文件名排序的输入迭代器。 迭代器`X`，表达式`*X`的计算结果为类的对象`directory_entry`文件名和有关其状态的任何包装。
 
-该类存储类型路径，名为的对象`mydir`此处出于阐述，表示要进行序列化的目录的名称和类型 directory_entry 的对象调用`myentry`此处，它表示当前文件名中目录序列中。 类型 directory_entry 的默认构造对象具有空`mydir`路径名，表示序列末迭代器。
+类存储类型的对象`path`，称为`mydir`在此处阐述，它表示要进行序列化的目录的名称的目的和类型的对象供`directory_entry`调用`myentry`这里，表示当前目录序列中的文件名。 类型的默认构造对象`directory_entry`具有空`mydir`路径名，表示序列末迭代器。
 
-例如，给定具有条目 def 和 ghi 的目录 abc，则代码：
+例如，给定的目录`abc`与条目`def`和`ghi`，代码：
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-将调用`visit`参数路径和 path("abc/ghi")。
+将调用`visit`使用参数`path("abc/def")`和`path("abc/ghi")`。
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |成员函数|描述|
 |-|-|
-|[增量](#increment)|该函数尝试转到目录中的下一个文件名。|
+|[增量](#increment)|尝试转到目录中的下一个文件名。|
 
 ### <a name="operators"></a>运算符
 
