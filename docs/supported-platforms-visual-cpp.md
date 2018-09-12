@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6453d718454f7cfef3bb0211d05eb26a712eaf0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218308"
 ---
 # <a name="supported-platforms-visual-c"></a>支持的平台 (Visual C++)
 
@@ -28,8 +28,8 @@ ms.locfileid: "43130779"
 
 |操作系统|x86|X64|ARM|
 |----------------------|---------|---------|---------|
-|Windows XP|X*|X*||
-|Windows Server 2003|X*|X*||
+|Windows XP|X\*|X\*||
+|Windows Server 2003|X\*|X\*||
 |Windows Vista|X|X||
 |Windows Server 2008|X|X||
 |Windows 7|X|X||
@@ -37,9 +37,9 @@ ms.locfileid: "43130779"
 |Windows 8|X|X|X|
 |Windows 8.1|X|X|X|
 |Windows 10|X|X|X|
-|Android **|X|X|X|
-|iOS **|X|X|X|
-|Linux ***|X|X|X|
+|Android \*\*|X|X|X|
+|iOS \*\*|X|X|X|
+|Linux \*\*\*|X|X|X|
 
 \*可以使用 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 Update 1 或更高版本中包括的 Windows XP 平台工具集生成 Windows XP 和 Windows Server 2003 项目。 有关如何使用此平台工具集的信息，请参阅[配置适用于 Windows XP 的程序](build/configuring-programs-for-windows-xp.md)。 有关更改平台工具集的其他信息，请参阅[如何：修改目标框架和平台工具集](build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 

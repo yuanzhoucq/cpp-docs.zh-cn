@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42952525fe7332e40c2cbdf1be003ba29aae3382
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aee2818ab5020d1dc810ade6b389be52daa632c0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388943"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752335"
 ---
 # <a name="summary-of-keywords"></a>关键字摘要
-*keyword*：以下项之一  
-  
-|||||  
-|-|-|-|-|  
-|**auto**|**double**|`int`|`struct`|  
-|**break**|**else**|**long**|`switch`|  
-|**case**|`enum`|**register**|`typedef`|  
-|`char`|`extern`|`return`|**union**|  
-|**const**|**float**|**short**|`unsigned`|  
-|**continue**|**for**|**signed**|`void`|  
-|**default**|`goto`|`sizeof`|`volatile`|  
-|**do**|**if**|**static**|`while`|  
-  
-## <a name="see-also"></a>请参阅  
- [词法语法](../c-language/lexical-grammar.md)
+
+*keyword*：以下项之一<br/>
+|||||
+|-|-|-|-|
+|**auto**|**double**|**int**|**struct**|
+|**break**|**else**|**long**|**switch**|
+|**case**|**enum**|**register**|**typedef**|
+|**char**|**extern**|**return**|**union**|
+|**const**|**float**|**short**|**unsigned**|
+|**continue**|**for**|**signed**|**void**|
+|**default**|**goto**|**sizeof**|**volatile**|
+|**do**|**if**|**static**|**while**|
+
+## <a name="see-also"></a>请参阅
+
+[词法语法](../c-language/lexical-grammar.md)

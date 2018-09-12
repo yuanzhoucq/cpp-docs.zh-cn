@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340393"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694040"
 ---
 # <a name="redistributing-the-mfc-library"></a>重新分发 MFC 库
 如果将应用程序动态链接到 MFC 库，则必须重新分发匹配的 MFC DLL。 例如，如果 MFC 应用是使用 Visual Studio 2015 附带的 MFC 版本生成的，则必须重新分发 mfc140.dll 或 mfc140u.dll，具体取决于应用是针对窄字符还是 Unicode 支持编译的。  
@@ -36,7 +36,7 @@ ms.locfileid: "33340393"
   
  如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，[CHtmlView 类](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 类](../mfc/reference/chtmleditview-class.md)），建议同时安装最新版本的 Microsoft Internet Explorer，以便目标计算机具有最新的通用控件文件。 （至少需要 Internet Explorer 4.0。）有关如何安装 Internet Explorer 组件的信息，请参阅 Microsoft 支持部门网站上的“文章 185375：如何创建 Internet Explorer 的单一 EXE 安装”。  
   
- 如果应用程序使用 MFC 数据库类（例如 [CRecordset 类](../mfc/reference/crecordset-class.md)和 [CRecordView 类](../mfc/reference/crecordview-class.md)），则必须重新分发 ODBC 和应用程序使用的任何 ODBC 驱动程序。 有关详细信息，请参阅[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)。  
+ 如果应用程序使用 MFC 数据库类（例如 [CRecordset 类](../mfc/reference/crecordset-class.md)和 [CRecordView 类](../mfc/reference/crecordview-class.md)），则必须重新分发 ODBC 和应用程序使用的任何 ODBC 驱动程序。  
   
  如果 MFC 应用程序使用 Windows 窗体控件，则必须使用 应用程序重新分发 mfcmifc80.dll。 此 DLL 是一个强名称签名的 .NET 程序集，可使用应用程序本地文件夹中的应用程序重新分发它，也可通过使用 [Gacutil.exe（全局程序集缓存工具）](/dotnet/framework/tools/gacutil-exe-gac-tool)将其部署到全局程序集缓存 (GAC)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33340393"
   
  可再发行的 .msm 文件包含用于本地化的 DLL。 每种支持的语言都有一个 DLL。 安装进程会将这些 DLL 安装在目标计算机上的 %windir%\system32\ 文件夹中。  
   
- 有关如何本地化 MFC 应用程序的详细信息，请参阅 [TN057：MFC 组件的本地化](../mfc/tn057-localization-of-mfc-components.md)和 Microsoft 支持部门网站上的[文章 208983：如何使用 MFC LOC DLL](http://go.microsoft.com/fwlink/p/?linkid=198025)。  
+ 有关如何本地化 MFC 应用程序的详细信息，请参阅 [TN057：MFC 组件的本地化](../mfc/tn057-localization-of-mfc-components.md)。
   
  通过在应用程序本地文件夹中部署 MFC DLL，可重新分发 MFC 本地化 DLL。 有关如何重新分发 Visual C++ 库的详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
   

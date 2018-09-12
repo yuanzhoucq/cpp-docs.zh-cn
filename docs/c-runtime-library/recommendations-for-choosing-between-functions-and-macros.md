@@ -17,19 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5185b3b39ad74381113bd858f9db20ccddfe0fa8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389629"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752594"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>关于选择函数和宏的建议
 大多数 Microsoft 运行库例程都是编译的或汇编的函数，但有些例程是作为宏实现的。 当标头文件声明例程的函数和宏版本时，将优先考虑宏定义，因为它始终显示在函数声明之后。 在调用作为函数和宏实现的例程时，您可以通过两种方法强制编译器使用函数版本：  
   
 -   将例程名称用括号括起来。  
   
-    ```  
+    ```C
     #include <ctype.h>  
     a = _toupper(a);    // Use macro version of toupper.  
     a = (_toupper)(a);  // Force compiler to use   
@@ -38,12 +38,12 @@ ms.locfileid: "32389629"
   
 -   使用 `#undef` 指令“取消定义”宏：  
   
-    ```  
+    ```C
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- 如果您需要在库例程的函数和宏实现之间进行选择，请考虑以下折衷方案：  
+如果您需要在库例程的函数和宏实现之间进行选择，请考虑以下折衷方案：  
   
 -   **速度与大小** 使用宏的主要好处是执行速度更快。 在预处理期间，宏在被使用时将内联展开（由其定义替换）。 无论调用函数定义多少次，它仅执行一次。 宏可能会增加代码大小，但不会产生与函数调用关联的开销。  
   
@@ -52,4 +52,4 @@ ms.locfileid: "32389629"
 -   **类型检查** 在声明函数时，编译器会检查参数类型。 由于你不能声明宏，因此编译器无法检查宏自变量类型；尽管它可以检查传递给宏的自变量的数目。  
   
 ## <a name="see-also"></a>请参阅  
- [CRT 库功能](../c-runtime-library/crt-library-features.md)
+[CRT 库功能](../c-runtime-library/crt-library-features.md)

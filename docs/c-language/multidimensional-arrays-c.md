@@ -16,24 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214714"
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 下标表达式还可以有多个下标，如下所示：  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
  下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 在计算最后一个下标表达式之后应用间接寻址运算符 (\*)，除非最终指针值寻址数组类型（请参阅以下示例）。  
