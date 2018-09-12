@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197223"
 ---
 # <a name="c-type-specifiers"></a>C 类型说明符
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 为副作用计算类型 void 表达式。 无论如何，不能使用具有 void 类型的表达式的值（不存在），也不能将 void 表达式转换为除 void 以外的任何类型（通过隐式或显式转换）。 如果在需要 void 表达式的上下文中确实使用了任何其他类型的表达式，则其值将被丢弃。
 
-为了符合 ANSI 规范，void\*\* 不能用作 int\*\*。 仅 void\* 可用作指向未指定的类型的指针。
+为了符合 ANSI 规范，void\*\* 不能用作 int\*\*。 仅 **void**<strong>\*</strong> 可用作指向未指定的类型的指针。
 
 **结束 Microsoft 专用**
 
