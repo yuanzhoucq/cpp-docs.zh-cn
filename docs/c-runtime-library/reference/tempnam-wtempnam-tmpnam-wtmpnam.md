@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd853affc343a4f07c64d025cd73122fdb8d458
-ms.sourcegitcommit: 32fd693d092ea0b43c3916703364f494a5b502cf
+ms.openlocfilehash: ce1b0a495c2556b39a18937635d9109eaaeb2433
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44389479"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691414"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
 
@@ -100,7 +100,7 @@ wchar_t *_wtmpnam(
 
 ## <a name="remarks"></a>备注
 
-这些函数返回的文件名当前不存在。 **tmpnam**返回在指定返回的 Windows 临时目录中是唯一的名称[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)。 **\_tempnam**以外指定目录中生成的唯一名称。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。 
+这些函数返回的文件名当前不存在。 **tmpnam**返回在指定返回的 Windows 临时目录中是唯一的名称[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)。 **\_tempnam**以外指定目录中生成的唯一名称。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
 
 有关**tmpnam**，可以存储在此生成的文件名称*str*。 如果*str*是**NULL**，然后**tmpnam**将结果留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 通过生成的名称**tmpnam**包含的程序生成的文件名称，并在首次调用后**tmpnam**，基数 32 连续数字的文件扩展名 (.1-.vvu，当**TMP_MAX** STDIO 中。H 是 32,767）。
 
@@ -141,44 +141,69 @@ wchar_t *_wtmpnam(
 // crt_tempnam.c
 // compile with: /W3
 // This program uses tmpnam to create a unique filename in the
-// current working directory, then uses _tempnam to create
-// a unique filename with a prefix of stq.
+// temporary directory, and _tempname to create a unique filename
+// in C:\\tmp.
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main( void )
+int main(void)
 {
-   char* name1 = NULL;
-   char* name2 = NULL;
+   char * name1 = NULL;
+   char * name2 = NULL;
+   char * name3 = NULL;
 
    // Create a temporary filename for the current working directory:
-   if( ( name1 = tmpnam( NULL ) ) != NULL ) // C4996
+   if ((name1 = tmpnam(NULL)) != NULL) { // C4996
    // Note: tmpnam is deprecated; consider using tmpnam_s instead
-      printf( "%s is safe to use as a temporary file.\n", name1 );
-   else
-      printf( "Cannot create a unique filename\n" );
+      printf("%s is safe to use as a temporary file.\n", name1);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
    // Create a temporary filename in temporary directory with the
    // prefix "stq". The actual destination directory may vary
    // depending on the state of the TMP environment variable and
    // the global variable P_tmpdir.
 
-   if( ( name2 = _tempnam( "c:\\tmp", "stq" ) ) != NULL )
-      printf( "%s is safe to use as a temporary file.\n", name2 );
-   else
-      printf( "Cannot create a unique filename\n" );
+   if ((name2 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name2);
+   } else {
+      printf("Cannot create a unique filename\n");
+   }
 
-   // When name2 is no longer needed :
-   if(name2)
-     free(name2);
+   // When name2 is no longer needed:
+   if (name2) {
+      free(name2);
+   }
 
+   // Unset TMP environment variable, then create a temporary filename in C:\tmp.
+   if (_putenv("TMP=") != 0) {
+      printf("Could not remove TMP environment variable.\n");
+   }
+
+   // With TMP unset, we will use C:\tmp as the temporary directory.
+   // Create a temporary filename in C:\tmp with prefix "stq".
+   if ((name3 = _tempnam("c:\\tmp", "stq")) != NULL) {
+      printf("%s is safe to use as a temporary file.\n", name3);
+   }
+   else {
+      printf("Cannot create a unique filename\n");
+   }
+
+   // When name3 is no longer needed:
+   if (name3) {
+      free(name3);
+   }
+
+   return 0;
 }
 ```
 
 ```Output
-\s1gk. is safe to use as a temporary file.
-C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\sriw.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\stq2 is safe to use as a temporary file.
+c:\tmp\stq3 is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>请参阅

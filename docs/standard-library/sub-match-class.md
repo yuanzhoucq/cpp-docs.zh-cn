@@ -1,7 +1,7 @@
 ---
 title: sub_match 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964777"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691609"
 ---
 # <a name="submatch-class"></a>sub_match 类
 
@@ -46,24 +46,10 @@ ms.locfileid: "38964777"
 ```cpp
 template <class BidIt>
 class sub_match
- : public std::pair<BidIt, BidIt> {
-public:
-    bool matched;
-    int compare(const sub_match& right) const;
-    int compare(const basic_string<value_type>& right) const;
-    int compare(const value_type *right) const;
-    difference_type length() const;
-    operator basic_string<value_type>() const;
-    basic_string<value_type> str() const;
-
-    // typedefs
-    typedef typename iterator_traits<BidIt>::value_type value_type;
-    typedef typename iterator_traits<BidIt>::difference_type difference_type;
-    typedef BidIt iterator;
- };
+ : public std::pair<BidIt, BidIt>
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 *BidIt*  
  子匹配项的迭代器类型。
@@ -79,6 +65,81 @@ public:
 “^”匹配目标序列“a”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第一个字符。
 
 “b(a*)b”匹配目标序列“bb”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第二个字符。
+
+### <a name="typedefs"></a>Typedef
+
+|类型名称|描述|
+|-|-|
+|[difference_type](#difference_type)|迭代器差异的类型。|
+|[Iterator](#iterator)|迭代器的类型。|
+|[value_type](#value_type)|元素的类型。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[compare](#compare)|将子匹配项与序列进行比较。|
+|[length](#length)|返回子匹配项的长度。|
+|[匹配](#matched)|指示是否匹配成功。|
+|[str](#str)|将子匹配转换为字符串。|
+
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|将子匹配转换为字符串。|
+
+## <a name="example"></a>示例
+
+```cpp
+// std__regex__sub_match.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex rx("c(a*)|(b)");
+    std::cmatch mr;
+
+    std::regex_search("xcaaay", mr, rx);
+
+    std::csub_match sub = mr[1];
+    std::cout << "matched == " << std::boolalpha
+        << sub.matched << std::endl;
+    std::cout << "length == " << sub.length() << std::endl;
+
+    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
+    std::cout << "difference == " << dif << std::endl;
+
+    std::csub_match::iterator first = sub.first;
+    std::csub_match::iterator last = sub.second;
+    std::cout << "range == " << std::string(first, last)
+        << std::endl;
+    std::cout << "string == " << sub << std::endl;
+
+    std::csub_match::value_type const *ptr = "aab";
+    std::cout << "compare(\"aab\") == "
+        << sub.compare(ptr) << std::endl;
+    std::cout << "compare(string) == "
+        << sub.compare(std::string("AAA")) << std::endl;
+    std::cout << "compare(sub) == "
+        << sub.compare(sub) << std::endl;
+
+    return (0);
+    }
+```
+
+```Output
+matched == true
+length == 3
+difference == 3
+range == aaa
+string == aaa
+compare("aab") == -1
+compare(string) == 1
+compare(sub) == 0
+```
 
 ## <a name="requirements"></a>要求
 
@@ -119,59 +180,6 @@ int compare(const value_type *ptr) const;
 
 否则返回正值
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_compare.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="difference_type"></a>  sub_match::difference_type
 
 迭代器差异的类型。
@@ -183,59 +191,6 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ### <a name="remarks"></a>备注
 
 typedef 是 `iterator_traits<BidIt>::difference_type`的同义词。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_difference_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="iterator"></a>  sub_match::iterator
 
@@ -249,59 +204,6 @@ typedef BidIt iterator;
 
 typedef 是模板类型参数 `Bidit` 的同义词。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_iterator.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="length"></a>  sub_match::length
 
 返回子匹配项的长度。
@@ -313,59 +215,6 @@ difference_type length() const;
 ### <a name="remarks"></a>备注
 
 如果没有任何匹配的序列，则成员函数返回匹配的序列的长度或零。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_length.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="matched"></a>  sub_match::matched
 
@@ -379,59 +228,6 @@ bool matched;
 
 成员保留 **，则返回 true**仅当与关联的捕获组`*this`是正则表达式匹配的一部分。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_matched.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;
 
 将子匹配转换为字符串。
@@ -443,59 +239,6 @@ operator basic_string<value_type>() const;
 ### <a name="remarks"></a>备注
 
 该成员运算符将返回 `str()`。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_operator_str.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="str"></a>  sub_match::str
 
@@ -509,59 +252,6 @@ basic_string<value_type> str() const;
 
 成员函数返回 `basic_string<value_type>(first, second)`。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_str.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="value_type"></a>  sub_match::value_type
 
 元素的类型。
@@ -573,59 +263,6 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 ### <a name="remarks"></a>备注
 
 typedef 是 `iterator_traits<BidIt>::value_type`的同义词。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__sub_match_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="see-also"></a>请参阅
 

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415516"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691596"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s、_wtmpnam_s
 
@@ -90,17 +90,17 @@ errno_t _wtmpnam_s(
 |-|-|-|-|
 |*str*|*sizeInChars*|**返回值**|**内容***str* |
 |**NULL**|任何|**EINVAL**|未修改|
-|不**NULL** （指向有效的内存）|过短|**ERANGE**|未修改|
+|不**NULL** （指向有效内存）|过短|**ERANGE**|未修改|
 
-如果*str*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回**EINVAL**。
+如果*str*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-这些函数返回的文件名当前不存在。 **tmpnam_s**返回在当前工作目录中唯一的名称。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
+这些函数返回的文件名当前不存在。 **tmpnam_s**返回的名称在返回的指定 Windows 临时目录中唯一[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
 
-有关**tmpnam_s**，你可以存储在此生成的文件名称*str*。 通过返回的字符串的最大长度**tmpnam_s**是**L_tmpnam_s**在 STDIO 中定义。H。 如果*str*是**NULL**，然后**tmpnam_s**将结果留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 由生成的名**tmpnam_s**包含的程序生成的文件名称，并在第一个调用后**tmpnam_s**，顺序中的数字基 32 文件扩展名 (.1.1vvvvvu，当**TMP_MAX_S** STDIO 中。H 是**INT_MAX**)。
+有关**tmpnam_s**，可以存储在此生成的文件名称*str*。 返回的字符串的最大长度**tmpnam_s**是**L_tmpnam_s**STDIO 中定义。H. 如果*str*是**NULL**，然后**tmpnam_s**将结果留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 通过生成的名称**tmpnam_s**包含的程序生成的文件名称，并在首次调用后**tmpnam_s**，基数 32 连续数字的文件扩展名 (.1-.1vvvvvu，当**TMP_MAX_S** STDIO 中。H 是**INT_MAX**)。
 
-**tmpnam_s**句柄多字节字符字符串自变量，根据的 OEM 代码页识别多字节字符序列中自动从操作系统获取。 **_wtmpnam_s**是宽字符版本的**tmpnam_s**; 的自变量和返回值 **_wtmpnam_s**是宽字符字符串。 **_wtmpnam_s**和**tmpnam_s**行为方式相同，只不过 **_wtmpnam_s**不处理多字节字符字符串。
+**tmpnam_s**从操作系统句柄多字节字符字符串参数，根据 OEM 代码页识别多字节字符序列中自动获取。 **_wtmpnam_s**是宽字符版本**tmpnam_s**; 的自变量和返回值 **_wtmpnam_s**都是宽字符字符串。 **_wtmpnam_s**并**tmpnam_s**行为方式相同，只不过 **_wtmpnam_s**不处理多字节字符字符串。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -112,7 +112,7 @@ errno_t _wtmpnam_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**tmpnam_s**|\<stdio.h>|
 |**_wtmpnam_s**|\<stdio.h> 或 \<wchar.h>|
@@ -150,6 +150,24 @@ int main( void )
       }
    }
 }
+```
+
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>请参阅

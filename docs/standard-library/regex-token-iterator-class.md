@@ -1,7 +1,7 @@
 ---
 title: regex_token_iterator 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 32a281a3f9b6793047ae10b1d186e6a68002176a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100997"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691479"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator 类
 
@@ -50,42 +50,10 @@ ms.locfileid: "44100997"
 template<class BidIt,
    class Elem = typename std::iterator_traits<BidIt>::value_type,
    class RxTraits = regex_traits<Elem> >
-class regex_token_iterator {
-public:
-   typedef basic_regex<Elem, RXtraits> regex_type;
-   typedef sub_match<BidIt> value_type;
-   typedef std::forward_iterator_tag iterator_category;
-   typedef std::ptrdiff_t difference_type;
-   typedef const sub_match<BidIt> *pointer;
-   typedef const sub_match<BidIt>& reference;
-   regex_token_iterator();
-   regex_token_iterator(
-      BidIt first, BidIt last,
-      const regex_type& re, int submatch = 0,
-      regex_constants::match_flag_type f = regex_constants::match_default);
-   regex_token_iterator(
-      BidIt first, BidIt last,
-      const regex_type& re, const std::vector<int> submatches,
-      regex_constants::match_flag_type f = regex_constants::match_default);
-   template <std::size_t N>
-   regex_token_iterator(
-      BidIt first, BidIt last,
-      const regex_type& re, const int (&submatches)[N],
-      regex_constants::match_flag_type f = regex_constants::match_default);
-   bool operator==(const regex_token_iterator& right);
-   bool operator!=(const regex_token_iterator& right);
-   const basic_string<Elem>& operator*();
-   const basic_string<Elem> * operator->();
-   regex_token_iterator& operator++();
-   regex_token_iterator& operator++(int);
-private:
-   regex_iterator<BidIt, Elem, RXtraits> it; // exposition only
-   vector<int> subs;   // exposition only
-   int pos;  // exposition only
-   };
+class regex_token_iterator 
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 *BidIt*<br/>
 子匹配项的迭代器类型。
@@ -102,11 +70,142 @@ private:
 
 -1 索引值指定在上一个正则表达式匹配项末尾后立即开始（如果不存在上一个正则表达式匹配项，则为从字符序列的起始处开始）的字符序列，并扩展到但不包含当前正则表达式匹配项的第一个字符（如果不存在当前匹配项，则扩展到字符序列末尾）。 任何其他索引值 `idx` 指定承载于 `it.match[idx]`中捕获组的内容。
 
+### <a name="members"></a>成员
+
+|成员|默认值|
+|-|-|
+|`private regex_iterator<BidIt, Elem, RXtraits> it`||
+|`private vector<int> subs`||
+|`private int pos`||
+
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[regex_token_iterator](#regex_token_iterator)|构造迭代器。|
+
+### <a name="typedefs"></a>Typedef
+
+|类型名称|描述|
+|-|-|
+|[difference_type](#difference_type)|迭代器差异的类型。|
+|[iterator_category](#iterator_category)|迭代器类别的类型。|
+|[pointer](#pointer)|指向一个匹配的指针的类型。|
+|[reference](#reference)|对子匹配项的引用的类型。|
+|[regex_type](#regex_type)|要匹配的正则表达式类型。|
+|[value_type](#value_type)|子匹配项的类型。|
+
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator!=](#op_neq)|比较不相等的迭代器。|
+|[operator*](#op_star)|访问指定的子匹配项。|
+|[operator++](#op_add_add)|递增迭代器。|
+|[operator==](#op_eq_eq)|比较迭代器是否相等。|
+|[operator->](#op_arrow)|访问指定的子匹配项。|
+
 ## <a name="requirements"></a>要求
 
 **标头：**\<regex 1>
 
 **命名空间：** std
+
+## <a name="example"></a>示例
+
+```cpp
+#include <regex>
+#include <iostream>
+
+typedef std::regex_token_iterator<const char *> Myiter;
+int main()
+    {
+    const char *pat = "aaxaayaaz";
+    Myiter::regex_type rx("(a)a");
+    Myiter next(pat, pat + strlen(pat), rx);
+    Myiter end;
+
+// show whole match
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+    std::cout << std::endl;
+
+// show prefix before match
+    next = Myiter(pat, pat + strlen(pat), rx, -1);
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+    std::cout << std::endl;
+
+// show (a) submatch only
+    next = Myiter(pat, pat + strlen(pat), rx, 1);
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+    std::cout << std::endl;
+
+// show prefixes and submatches
+    std::vector<int> vec;
+    vec.push_back(-1);
+    vec.push_back(1);
+    next = Myiter(pat, pat + strlen(pat), rx, vec);
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+    std::cout << std::endl;
+
+// show prefixes and whole matches
+    int arr[] = {-1, 0};
+    next = Myiter(pat, pat + strlen(pat), rx, arr);
+    for (; next != end; ++next)
+        std::cout << "match == " << next->str() << std::endl;
+    std::cout << std::endl;
+
+// other members
+    Myiter it1(pat, pat + strlen(pat), rx);
+    Myiter it2(it1);
+    next = it1;
+
+    Myiter::iterator_category cat = std::forward_iterator_tag();
+    Myiter::difference_type dif = -3;
+    Myiter::value_type mr = *it1;
+    Myiter::reference ref = mr;
+    Myiter::pointer ptr = &ref;
+
+    dif = dif; // to quiet "unused" warnings
+    ptr = ptr;
+
+    return (0);
+    }
+```
+
+```Output
+match == aa
+match == aa
+match == aa
+
+match ==
+match == x
+match == y
+match == z
+
+match == a
+match == a
+match == a
+
+match ==
+match == a
+match == x
+match == a
+match == y
+match == a
+match == z
+
+match ==
+match == aa
+match == x
+match == aa
+match == y
+match == aa
+match == z
+```
 
 ## <a name="difference_type"></a>  regex_token_iterator::difference_type
 
@@ -118,103 +217,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::ptrdiff_t`的同义词。
-
-### <a name="example"></a>示例
-
-```cpp
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-```
+该类型是 `std::ptrdiff_t` 的同义词。
 
 ## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
 
@@ -226,107 +229,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::forward_iterator_tag`的同义词。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_iterator_category.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
+该类型是 `std::forward_iterator_tag` 的同义词。
 
 ## <a name="op_neq"></a>regex_token_iterator::operator!=
 
@@ -345,106 +248,6 @@ bool operator!=(const regex_token_iterator& right);
 
 成员函数返回 `!(*this == right)`。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_operator_ne.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
-
 ## <a name="op_star"></a>regex_token_iterator::operator*
 
 访问指定的子匹配项。
@@ -456,106 +259,6 @@ const sub_match<BidIt>& operator*();
 ### <a name="remarks"></a>备注
 
 成员函数返回一个 `sub_match<BidIt>` 对象，该对象表示由索引值 `subs[pos]`标识的捕获组。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_operator_star.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
 
 ## <a name="op_add_add"></a>regex_token_iterator::operator++
 
@@ -572,106 +275,6 @@ regex_token_iterator& operator++(int);
 如果存储的迭代器 `it` 是序列末尾迭代器，则第一个运算符将存储的值 `pos` 设置为 `subs.size()` 的值（从而生成序列末尾迭代器）。 否则，运算符递增存储的值 `pos`；如果结果等于值 `subs.size()`，则它将存储的值 `pos` 设置为零，并递增存储的迭代器 `it`。 如果递增存储的迭代器让它不等于序列结尾迭代器，则运算符不会进一步执行操作。 否则，如果前面匹配项的结尾位于字符序列的结尾，则运算符将 `pos` 的存储的值设置为 `subs.size()`。 否则，运算符重复递增存储的值 `pos`，直到 `pos == subs.size()` 或 `subs[pos] == -1`（从而确保其中一个索引值为 -1 时，迭代器的下一次取消引用将返回字符序列的结尾）。 在所有情况下，运算符都会返回对象。
 
 第二个运算符生成对象的副本，递增对象，然后返回副本。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_operator_inc.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
 
 ## <a name="op_eq_eq"></a>regex_token_iterator::operator==
 
@@ -690,106 +293,6 @@ bool operator==(const regex_token_iterator& right);
 
 成员函数返回 `it == right.it && subs == right.subs && pos == right.pos`。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_operator_eq.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
-
 ## <a name="op_arrow"></a>regex_token_iterator::operator-&gt;
 
 访问指定的子匹配项。
@@ -802,212 +305,12 @@ const sub_match<BidIt> * operator->();
 
 成员函数返回一个指向 `sub_match<BidIt>` 对象的指针，该对象表示由索引值 `subs[pos]`标识的捕获组。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_operator_arrow.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
-
 ## <a name="pointer"></a>  regex_token_iterator::pointer
 
 指向一个匹配的指针的类型。
 
 ```cpp
 typedef sub_match<BidIt> *pointer;
-```
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_pointer.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
 ```
 
 ### <a name="remarks"></a>备注
@@ -1025,106 +328,6 @@ typedef sub_match<BidIt>& reference;
 ### <a name="remarks"></a>备注
 
 类型是 `sub_match<BidIt>&` 的同义词，其中 `BidIt` 是模板参数。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_reference.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
 
 ## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
 
@@ -1171,106 +374,6 @@ regex_token_iterator(BidIt first, BidIt last,
 
 第四个构造函数将构造一个对象，其存储的迭代器 `it` 初始化为 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`，其存储的向量 `subs` 承载构造函数参数 `N` 指向的 `submatches`值，并且其存储的值 `pos` 为零。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
-
 ## <a name="regex_type"></a>regex_token_iterator::regex_type
 
 要匹配的正则表达式类型。
@@ -1283,106 +386,6 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 typedef 是 `basic_regex<Elem, RXtraits>`的同义词。
 
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_regex_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
-
 ## <a name="value_type"></a>  regex_token_iterator::value_type
 
 子匹配项的类型。
@@ -1394,106 +397,6 @@ typedef sub_match<BidIt> value_type;
 ### <a name="remarks"></a>备注
 
 类型是 `sub_match<BidIt>` 的同义词，其中 `BidIt` 是模板参数。
-
-### <a name="example"></a>示例
-
-```cpp
-// std__regex__regex_token_iterator_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-typedef std::regex_token_iterator<const char *> Myiter;
-int main()
-    {
-    const char *pat = "aaxaayaaz";
-    Myiter::regex_type rx("(a)a");
-    Myiter next(pat, pat + strlen(pat), rx);
-    Myiter end;
-
-// show whole match
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefix before match
-    next = Myiter(pat, pat + strlen(pat), rx, -1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show (a) submatch only
-    next = Myiter(pat, pat + strlen(pat), rx, 1);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and submatches
-    std::vector<int> vec;
-    vec.push_back(-1);
-    vec.push_back(1);
-    next = Myiter(pat, pat + strlen(pat), rx, vec);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// show prefixes and whole matches
-    int arr[] = {-1, 0};
-    next = Myiter(pat, pat + strlen(pat), rx, arr);
-    for (; next != end; ++next)
-        std::cout << "match == " << next->str() << std::endl;
-    std::cout << std::endl;
-
-// other members
-    Myiter it1(pat, pat + strlen(pat), rx);
-    Myiter it2(it1);
-    next = it1;
-
-    Myiter::iterator_category cat = std::forward_iterator_tag();
-    Myiter::difference_type dif = -3;
-    Myiter::value_type mr = *it1;
-    Myiter::reference ref = mr;
-    Myiter::pointer ptr = &ref;
-
-    dif = dif; // to quiet "unused" warnings
-    ptr = ptr;
-
-    return (0);
-    }
-
-```
-
-```Output
-match == aa
-match == aa
-match == aa
-
-match ==
-match == x
-match == y
-match == z
-
-match == a
-match == a
-match == a
-
-match ==
-match == a
-match == x
-match == a
-match == y
-match == a
-match == z
-
-match ==
-match == aa
-match == x
-match == aa
-match == y
-match == aa
-match == z
-
-```
 
 ## <a name="see-also"></a>请参阅
 
