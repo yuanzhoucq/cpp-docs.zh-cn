@@ -346,7 +346,7 @@
 #### [<regex> typedef](regex-typedefs.md)
 #### [basic_regex 类](basic-regex-class.md)
 #### [match_results 类](match-results-class.md)
-#### [regex_constants 类](regex-constants-class.md)
+#### [regex_constants 命名空间](regex-constants-class.md)
 #### [regex_error 类](regex-error-class.md)
 #### [regex_iterator 类](regex-iterator-class.md)
 #### [regex_token_iterator 类](regex-token-iterator-class.md)
