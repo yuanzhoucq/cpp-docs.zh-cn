@@ -15,43 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac843ef83d2de4f9cf84a44c67859becaead6ec6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218499"
 ---
 # <a name="overview-of-declarations"></a>声明概述
 “声明”指定一组标识符的解释和特性。 还将导致针对标识符命名的对象或函数保留存储的声明将称为“定义”。 用于变量、函数和类型的 C 声明都具有以下语法：  
   
-## <a name="syntax"></a>语法  
- `declaration`：  
- declaration-specifiers attribute-seqoptinit-declarator-listopt;  
-  
- /\* attribute-seqopt 是 Microsoft 专用的 */  
-  
- *declaration-specifiers*：  
- *storage-class-specifier declaration-specifiers*opt  
-  
- *type-specifier declaration-specifiers*opt  
-  
- *type-qualifier declaration-specifiers*opt  
-  
- *init-declarator-list*：  
- *init-declarator*  
-  
- init-declarator-list , init-declarator  
-  
- *init-declarator*：  
- *declarator*  
-  
- declarator  **=**  initializer  
+## <a name="syntax"></a>语法
+
+declaration：  
+&nbsp;&nbsp;&nbsp;&nbsp;declaration-specifiers attribute-seq<sub>opt</sub> init-declarator-list<sub>opt</sub>;
+
+/\* attribute-seq<sub>opt</sub> 是 Microsoft 专用的 */
+
+*declaration-specifiers*：  
+&nbsp;&nbsp;&nbsp;&nbsp;storage-class-specifier declaration-specifiers<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;type-specifier declaration-specifiers<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;type-qualifier declaration-specifiers<sub>opt</sub>  
+
+*init-declarator-list*：  
+&nbsp;&nbsp;&nbsp;&nbsp;init-declarator  
+&nbsp;&nbsp;&nbsp;&nbsp;init-declarator-list , init-declarator  
+
+*init-declarator*：  
+&nbsp;&nbsp;&nbsp;&nbsp;declarator  
+&nbsp;&nbsp;&nbsp;&nbsp;declarator = initializer  
   
 > [!NOTE]
->  用于 `declaration` 的这种语法在以下部分中不重复。 以下部分中的语法通常以 `declarator` 非终止符开头。  
+> 用于 declaration 的这种语法在以下部分中不重复。 以下部分中的语法通常以 declarator 非终止符开头。  
   
- init-declarator-list 中的声明包含已命名的标识符；init 是初始值设定项的缩写。 init-declarator-list 是逗号分隔的声明符序列，其中每个都可具有附加类型信息和/或初始值设定项。 `declarator` 包含要声明的标识符（如果有）。 declaration-specifiers 非终止符由一列类型和存储类说明符组成，这些说明符指示链接、存储持续时间，并且至少可以指示声明符表示的部分实体类型。 因此，声明由存储类说明符、类型说明符、类型限定符、声明符以及初始值的某种组合构成。  
+ init-declarator-list 中的声明包含已命名的标识符；init 是初始值设定项的缩写。 init-declarator-list 是逗号分隔的声明符序列，其中每个都可具有附加类型信息和/或初始值设定项。 declarator 包含要声明的标识符（如果有）。 declaration-specifiers 非终止符由一列类型和存储类说明符组成，这些说明符指示链接、存储持续时间，并且至少可以指示声明符表示的部分实体类型。 因此，声明由存储类说明符、类型说明符、类型限定符、声明符以及初始值的某种组合构成。  
   
  声明可以包含 attribute-seq 中列出的一个或多个可选特性；seq 是序列的缩写。 这些特定于 Microsoft 的特性会执行各种功能（本书中将进行详细介绍）。  
   

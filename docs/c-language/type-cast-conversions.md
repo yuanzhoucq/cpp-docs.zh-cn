@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391023"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205605"
 ---
 # <a name="type-cast-conversions"></a>类型强制转换的转换
 可以使用类型强制转换来显式转换类型。  
@@ -47,14 +47,14 @@ ms.locfileid: "32391023"
 |-----------------------|-----------------------|  
 |整型|整数类型或浮点类型，或者指向对象的指针|  
 |浮点|任何算术类型|  
-|指向对象的指针或 (void **\***)|任何整数类型、(void **\***)、指向对象的指针或函数指针|  
+|指向对象的指针或 (void<strong>\*</strong>)|任何整数类型、(void <strong>\*</strong>)、指向对象的指针或函数指针|  
 |函数指针|任何整数类型、指向对象的指针或函数指针|  
 |结构、联合或数组|无|  
 |Void 类型|任何类型|  
   
  任何标识符均可强制转换为 `void` 类型。 但是，如果 type-cast 表达式中指定的类型不是 `void`，则要强制转换为该类型的标识符不能是 `void` 表达式。 任何表达式均可转换为 `void`，但 `void` 类型的表达式不能强制转换为其他类型。 例如，带有 `void` 返回类型的函数不能将其返回值强制转换为另一类型。  
   
- 请注意，void **\*** 表达式具有指向 `void` 的类型指针，而不具有类型 `void`。 如果对象强制转换为 `void` 类型，则生成的表达式不能分配给任何项。 同样，type-cast 对象是不可接受的左值，因此不能对 type-cast 对象进行任何分配。  
+ 请注意，void <strong>\*</strong> 表达式具有指向 `void` 的类型指针，而不具有类型 `void`。 如果对象强制转换为 `void` 类型，则生成的表达式不能分配给任何项。 同样，type-cast 对象是不可接受的左值，因此不能对 type-cast 对象进行任何分配。  
   
  **Microsoft 专用**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "32391023"
   
  **结束 Microsoft 专用**  
   
- 可以使用强制转换将表达式转换为类型 `void`，但生成的表达式仅能用于不需要值的位置。 转换为 void **\*** 再转换回原始类型的对象指针将返回到其原始值。  
+ 可以使用强制转换将表达式转换为类型 `void`，但生成的表达式仅能用于不需要值的位置。 转换为 void <strong>\*</strong> 再转换回原始类型的对象指针将返回到其原始值。  
   
 ## <a name="see-also"></a>请参阅  
  [类型转换](../c-language/type-conversions-c.md)

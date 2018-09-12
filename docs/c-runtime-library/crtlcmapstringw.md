@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 163d6f90d31e27cc4d8a616074f7f4153ab58876
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451948"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685490"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 将一个字符串映射到另一个字符串，以执行指定的与区域设置相关的转换。 此函数还可用于生成输入字符串的排序键。  
@@ -78,9 +78,9 @@ int __crtLCMapStringW(
  零表示失败。 若要获得扩展的错误信息，请调用 `GetLastError` 函数。  
   
 ## <a name="remarks"></a>备注  
- 如果 `cchSrc` 大于零且 `lpSrcStr` 是一个以 null 结尾的字符串，则 `__crtLCMapStringW` 将 `cchSrc` 设置为字符串的长度。 然后， `__crtLCMapStringW` 使用指定的参数调用 `LCMapString` 函数的宽字符串 (Unicode) 版本。 有关此函数的参数和返回值的详细信息，请参阅 `LCMapString` MSDN 库 [中的](http://go.microsoft.com/fwlink/p/?linkid=150542)函数。  
+ 如果 `cchSrc` 大于零且 `lpSrcStr` 是一个以 null 结尾的字符串，则 `__crtLCMapStringW` 将 `cchSrc` 设置为字符串的长度。 然后， `__crtLCMapStringW` 使用指定的参数调用 `LCMapString` 函数的宽字符串 (Unicode) 版本。 有关此函数的参数和返回值的详细信息，请参阅 [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |例程所返回的值|必需的标头|  
 |-------------|---------------------|  

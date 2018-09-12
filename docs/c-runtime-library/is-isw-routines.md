@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391956"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206128"
 ---
 # <a name="is-isw-routines"></a>is、isw 例程
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391956"
  `__iscsymf`  
  字母或下划线。  
   
- **isdigit**  
+ `isdigit`  
  十进制数字 (0 - 9)。  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391956"
  `iswcntrl`  
  控制宽字符。  
   
- **__iswcsym**  
- **isalnum** 为 true 的任何宽字符，或“_”字符。  
+ `__iswcsym`  
+ `isalnum` 为 true 的任何宽字符，或“_”字符。  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  `iswalpha` 为 true 的任何宽字符，或“_”字符。  
   
  `iswctype`  
  字符的属性由 `desc` 参数指定。 `iswctype` 的 `desc` 参数的每个有效值都有一个等效的宽字符分类例程，如下表所示：  
   
- 其他 isw 测试例程的 **iswctype(**   
- ***c, desc* ) 等效项**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>iswctype(c, desc) 与其他 isw 测试例程的等效性
   
 |*desc* 参数的值|iswctype( *c, desc* ) 等效项|  
 |------------------------------|----------------------------------------|  
