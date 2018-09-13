@@ -1,28 +1,36 @@
 ---
 title: 实现结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603283"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535348"
 ---
 # <a name="implements-structure"></a>Implements 结构
 
@@ -104,23 +112,23 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
-|----------|-----------------|
-|`ClassFlags`|`RuntimeClassFlags<WinRt>` 的同义词。|
+| 名称        | 描述                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| `RuntimeClassFlags<WinRt>` 的同义词。 |
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|描述|
-|----------|-----------------|
-|[Implements::CanCastTo 方法](../windows/implements-cancastto-method.md)|获取一个指向指定接口。|
-|[Implements::CastToUnknown 方法](../windows/implements-casttounknown-method.md)|获取一个指针指向基础`IUnknown`接口。|
-|[Implements::FillArrayWithIid 方法](../windows/implements-fillarraywithiid-method.md)|将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。|
+| 名称                                              | 描述                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements:: cancastto](#cancastto)               | 获取一个指向指定接口。                                                                    |
+| [Implements:: casttounknown](#casttounknown)       | 获取一个指针指向基础`IUnknown`接口。                                                        |
+| [Implements:: fillarraywithiid](#fillarraywithiid) | 将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。 |
 
 ### <a name="protected-constants"></a>受保护的常量
 
-|name|描述|
-|----------|-----------------|
-|[Implements::IidCount 常量](../windows/implements-iidcount-constant.md)|存储实现的接口 Id 的数目。|
+| name                              | 描述                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements:: iidcount](#iidcount) | 存储实现的接口 Id 的数目。 |
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -142,6 +150,76 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="cancastto"></a>Implements:: cancastto
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+获取一个指向指定接口。
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>参数
+
+*riid*  
+对接口 id。
+
+*ppv*  
+如果成功，指向接口由指定*riid*。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK否则为一个 HRESULT，指示错误，例如 E_NOINTERFACE。
+
+### <a name="remarks"></a>备注
+
+这是执行 QueryInterface 操作内部帮助器函数。
+
+## <a name="casttounknown"></a>Implements:: casttounknown
+
+获取一个指针指向基础`IUnknown`接口。
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>返回值
+
+此操作始终成功并返回`IUnknown`指针。
+
+### <a name="remarks"></a>备注
+
+内部帮助器函数。
+
+## <a name="fillarraywithiid"></a>Implements:: fillarraywithiid
+
+将插入到指定的数组元素指定由当前第零个模板参数的接口 ID。
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>参数
+
+*index*  
+一个从零开始的索引，该值指示此操作的起始数组元素。 此操作完成后，*索引*都会增加 1。
+
+*iid*  
+类型 IID 的数组。
+
+### <a name="remarks"></a>备注
+
+内部帮助器函数。
+
+## <a name="iidcount"></a>Implements:: iidcount
+
+存储实现的接口 Id 的数目。
+
+```cpp
+static const unsigned long IidCount;
+```

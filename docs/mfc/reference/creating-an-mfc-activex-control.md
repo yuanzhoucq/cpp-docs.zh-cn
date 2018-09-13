@@ -1,7 +1,7 @@
 ---
 title: 创建 MFC ActiveX 控件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,15 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0278ce0349b24680252100704031645c995fef51
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687141"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535075"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 ActiveX 控件程序是功能的模块化设计用于为特定类型提供到父应用程序的程序。 例如，您可以在对话框中或在网页中使用的工具栏中创建等使用的按钮控件。  
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 有关详细信息，请参阅[ActiveX 控件](../activex-controls.md)。
   
  创建 MFC ActiveX 控件的最简单方法是使用[MFC ActiveX 控件向导](../../mfc/reference/mfc-activex-control-wizard.md)。  
   

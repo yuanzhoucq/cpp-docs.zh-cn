@@ -1,7 +1,7 @@
 ---
-title: MFC ActiveX 控件： 添加自定义方法 |Microsoft 文档
+title: MFC ActiveX 控件： 添加自定义方法 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,25 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b20d649bc89d9d66103f258ebdfdac767f431b5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3f0d52f3dec2967cc7a8d859e1f6845fe93c6fd6
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930043"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534880"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控件：添加自定义方法
-自定义方法不同于常用方法，因为它们并不已实现通过`COleControl`。 必须提供向控件添加的每个自定义方法的实现。  
+自定义方法不同于常用方法，它们未已实现的`COleControl`。 必须提供每个添加到控件的自定义方法的实现。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。  
   
- ActiveX 控件用户可以随时执行特定于控件的操作调用的自定义方法。 自定义方法的调度映射项的形式 DISP_FUNCTION。  
+ ActiveX 控件用户可以在任何时候执行特定于控件的操作调用的自定义方法。 自定义方法的调度映射条目的 DISP_FUNCTION 形式。  
   
 ##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 添加具有的自定义方法添加方法向导  
- 下面的过程演示将 PtInCircle 自定义的方法添加到 ActiveX 控件的主干代码。 PtInCircle 确定传递到的控件的坐标为内部或外部圆。 此外可以使用此相同的过程添加其他自定义的方法。 替换你自定义方法的名称和其 PtInCircle 方法名称和参数的参数。  
+ 以下过程演示如何将 PtInCircle 自定义的方法添加到 ActiveX 控件的主干代码。 PtInCircle 确定传递给控件的坐标为内部或外部圆。 此外可以使用此相同的过程来添加其他自定义方法。 替换为您的自定义方法名称和其参数 PtInCircle 方法名称和参数。  
   
 > [!NOTE]
 >  此示例使用`InCircle`事件的文章中的函数。 此函数的详细信息，请参阅文章[MFC ActiveX 控件： 向 ActiveX 控件添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)。  
   
-#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>若要添加使用添加方法向导 PtInCircle 自定义方法  
+#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>若要添加 PtInCircle 自定义的方法使用添加方法向导  
   
 1.  加载控件的项目。  
   
@@ -41,42 +44,42 @@ ms.locfileid: "36930043"
   
 3.  右键单击控件的接口节点（库节点的第二个节点）以打开快捷菜单。  
   
-4.  从快捷菜单中，单击**添加**，然后单击**添加方法**。  
+4.  从快捷菜单中，单击**外**，然后单击**添加方法**。  
   
      这将打开添加方法向导。  
   
-5.  在**方法名称**框中，键入*PtInCircle*。  
+5.  在中**方法名称**框中，键入*PtInCircle*。  
   
-6.  在**内部名称**框中，键入方法的内部函数的名称或使用默认值 (在这种情况下， *PtInCircle*)。  
+6.  在中**内部名称**框中，键入方法的内部函数的名称或使用默认值 (在这种情况下， *PtInCircle*)。  
   
-7.  在**返回类型**框中，单击**VARIANT_BOOL**方法的返回类型。  
+7.  在中**返回类型**框中，单击**VARIANT_BOOL**方法的返回类型。  
   
-8.  使用**参数类型**和**参数名称**控件，则添加名为的参数*xCoord* (类型*OLE_XPOS_PIXELS*)。  
+8.  使用**参数类型**并**参数名称**控件，添加名为的参数*xCoord* (类型*OLE_XPOS_PIXELS*)。  
   
-9. 使用**参数类型**和**参数名称**控件，则添加名为的参数*yCoord* (类型*OLE_YPOS_PIXELS*)。  
+9. 使用**参数类型**并**参数名称**控件，添加名为的参数*yCoord* (类型*OLE_YPOS_PIXELS*)。  
   
 10. 单击 **“完成”**。  
   
 ##  <a name="_core_classwizard_changes_for_custom_methods"></a> 添加方法向导正在更改的自定义方法  
- 当你添加自定义方法时，添加方法向导会对控件类标头进行一些更改 (。H） 和实现 (。CPP) 文件。 以下行添加到控件类标头中的调度映射声明 (。H） 文件：  
+ 添加方法向导时添加自定义方法，请对控制类标头进行一些更改 (。H） 和实现 (。CPP) 文件。 将以下行添加到控件类标头中的调度映射声明 (。H） 文件：  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- 此代码声明调度方法处理程序调用`PtInCircle`。 可以控制用户使用的外部名称调用此函数`PtInCircle`。  
+ 此代码声明一个名为调度方法处理程序`PtInCircle`。 可以控制用户使用的外部名称调用此函数`PtInCircle`。  
   
  以下行添加到控件的。IDL 文件：  
   
  [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- 此行将分配`PtInCircle`方法特定的 ID 号，添加方法向导方法和属性列表中的方法的位置。 添加方法向导用于添加自定义方法，因为它的条目已自动添加到项目的。IDL 文件。  
+ 此行将分配`PtInCircle`方法特定的 ID 号、 添加方法向导方法和属性列表中的方法的位置。 添加方法向导用于添加自定义的方法，因为它的条目已自动添加到项目的。IDL 文件。  
   
- 此外，以下行，位于实现 (。CPP) 文件中的控件类，已添加到控件的调度映射：  
+ 此外，以下行中，位于实现 (。控件类的 CPP) 文件添加到控件的调度映射：  
   
  [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- DISP_FUNCTION 宏映射方法`PtInCircle`到控件的处理程序函数， `PtInCircle`，声明返回类型为**VARIANT_BOOL**，并声明类型的两个参数**VTS_XPOS_PIXELS**和**VTS_YPOSPIXELS**要传递给`PtInCircle`。  
+ DISP_FUNCTION 宏映射方法`PtInCircle`到控件的处理程序函数`PtInCircle`，声明的返回类型为**VARIANT_BOOL**，并声明类型的两个参数**VTS_XPOS_PIXELS**并**VTS_YPOSPIXELS**要传递给`PtInCircle`。  
   
- 最后，添加方法向导添加存根 （stub） 函数`CSampleCtrl::PtInCircle`到底部的控件的实现 (。CPP) 文件。 有关`PtInCircle`能够按前面所述，必须能修改它，如下所示：  
+ 最后，添加方法向导添加存根 （stub） 函数`CSampleCtrl::PtInCircle`到底部的控件的实现 (。CPP) 文件。 有关`PtInCircle`能够按前面所述，它必须修改，如下所示：  
   
  [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   

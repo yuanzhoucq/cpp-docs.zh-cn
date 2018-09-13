@@ -1,7 +1,7 @@
 ---
-title: MFC ActiveX 控件： 使用常用属性页 |Microsoft 文档
+title: MFC ActiveX 控件： 使用常用属性页 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,37 +25,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cb1f1d9eed313fefc04a14a004af8c35309949bf
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932190"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534984"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控件：使用常用属性页
-本文讨论了常用属性页可用于 ActiveX 控件和如何使用它们。  
+本文介绍可用于 ActiveX 控件以及如何使用这些常用属性页。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。  
   
- 在 ActiveX 控件中使用属性页的详细信息，请参阅以下文章：  
+ 使用 ActiveX 控件中的属性页面的详细信息，请参阅以下文章：  
   
 -   [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)  
   
 -   [MFC ActiveX 控件：添加另一自定义属性页](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC 提供三个常用属性页，以供使用 ActiveX 控件： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 这些页面分别显示用于常用颜色、 字体和图片属性的用户界面。  
+ MFC 还提供了三个常用属性页，可用于 ActiveX 控件： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 这些页面分别显示用于常用颜色、 字体和图片属性的用户界面。  
   
- 若要将这些属性页合并到一个控件，请向初始化的属性页 Id 的控件的数组的代码添加及其 Id。 在下面的示例中，此代码位于控件实现文件 (。CPP) 中，初始化数组以包含所有三个常用属性页和的默认属性页 (名为`CMyPropPage`在此示例中):  
+ 若要将这些属性页合并到一个控件，将其 Id 添加到初始化的属性页 Id 的控件的数组的代码。 在以下示例中，此代码位于控件实现文件 (。CPP)，初始化该数组以包含所有三个常用属性页和默认属性页 (名为`CMyPropPage`在此示例中):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- 请注意，属性页中，在 BEGIN_PROPPAGEIDS 宏的计数 4。 这表示 ActiveX 控件支持的属性页中的数。  
+ 请注意属性页中，在 BEGIN_PROPPAGEIDS 宏的计数为 4。 这表示 ActiveX 控件支持的属性页面的数量。  
   
- 这些修改之后，重新生成项目。 控件现在具有字体、 图片和颜色属性的属性页。  
+ 在进行这些修改后，重新生成项目。 您的控件现在具有字体、 图片和颜色属性的属性页。  
   
 > [!NOTE]
->  如果无法访问控件常用属性页，则可能是因为 MFC DLL (MFCxx.DLL) 尚未正确注册与当前操作系统。 这通常导致在不同于当前正在运行的操作系统安装 Visual c + +。  
+>  如果不能访问控件常用属性页，则可能是因为 MFC DLL (MFCxx.DLL) 尚未正确注册与当前操作系统。 这通常会在不同于当前正在运行的操作系统安装 Visual c + +。  
   
 > [!TIP]
->  如果你的常用属性页不可见 （请参阅上一注释），通过对该 DLL 从命令行中使用的完整路径名称运行 RegSvr32.exe 注册 DLL。  
+>  如果常用属性页是不可见 （请参阅上一个便笺），通过运行 RegSvr32.exe 命令行中使用的完整路径名称从 dll 注册该 DLL。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   

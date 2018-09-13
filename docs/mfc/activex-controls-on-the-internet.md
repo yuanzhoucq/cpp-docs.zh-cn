@@ -1,7 +1,7 @@
 ---
-title: Internet 上的 ActiveX 控件 |Microsoft 文档
+title: 在 Internet 上的 ActiveX 控件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,15 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931972"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535309"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
-ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。  
+
+ActiveX 控件是 OLE 控件规范的更新版本。 
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 有关详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+
+控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。  
   
  ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中使用，前提是控件支持容器所需的接口。  
   
@@ -37,13 +43,13 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
 -   能够处于无窗口状态并始终处于就地活动状态。  
   
- **若要 ActiveX 控件，控件必须：**  
+ **若要成为 ActiveX 控件，控件必须：**  
   
 -   支持`IUnknown`接口。  
   
 -   是 COM 对象。  
   
--   导出**dllregisterserver 的调用**和**DLLUnRegisterServer**。  
+-   导出**DLLRegisterServer**并**DLLUnRegisterServer**。  
   
 -   支持功能所需的其他接口。  
   
@@ -52,7 +58,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
  若要提高控件的性能，请遵循下列有关效率注意事项的提示：  
   
--   实现文所述的技术[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。  
+-   实现本文所述的技术[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。  
   
 -   考虑如何实例化控件。  
   
@@ -87,13 +93,13 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
 1.  单击**新建**上**文件**菜单。  
   
-2.  选择**MFC ActiveX 控件向导**从 Visual c + + 项目并命名你的项目。  
+2.  选择**MFC ActiveX 控件向导**从 Visual c + + 项目，并将项目命名。  
   
 3.  上**控制设置**页上，选择**异步加载属性**。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。  
   
-     您还可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。  
+     此外可以选择其他优化，如**无窗口激活**中, 所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。  
   
-4.  选择**完成**以创建该项目。  
+4.  选择**完成**创建项目。  
   
 #### <a name="to-create-a-class-derived-from-cdatapathproperty"></a>创建派生自 CDataPathProperty 的类  
   
@@ -103,13 +109,13 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
 3.  在此类中，重写 `OnDataAvailable`。 将在数据可显示时调用此函数。 在数据变得可用后，您可以通过选择的任何方式（例如，逐渐呈现的方式）处理数据。  
   
-     下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意使用标志**BSCF_FIRSTDATANOTIFICATION**清除编辑控件。  
+     下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意，使用标志**BSCF_FIRSTDATANOTIFICATION**清除编辑控件。  
   
      [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]  
   
      请注意，您必须包括 AFXCMN.H 以使用 `CListCtrl` 类。  
   
-4.  当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果控件具有只有一个数据路径属性，可以将代码添加在上**BSCF_LASTDATANOTIFICATION**以通知容器您的下载已完成。 例如：  
+4.  当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果您的控件具有只有一个数据路径属性，可以将代码添加在**BSCF_LASTDATANOTIFICATION**以通知容器您的下载已完成。 例如：  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -119,9 +125,9 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
 #### <a name="to-add-a-property"></a>添加属性  
   
-1.  在**类视图**，右键单击库节点下的接口，并选择**添加**，然后**添加属性**。 这将启动**添加属性向导**。  
+1.  在中**类视图**，右键单击库节点下的接口，然后选择**添加**，然后**添加属性**。 这将启动**添加属性向导**。  
   
-2.  在**添加属性向导**，选择**Set/Get 方法**单选按钮，键入**属性名称**，例如，EditControlText，和选择 BSTR 作为**属性类型**。  
+2.  在中**添加属性向导**，选择**Set/Get 方法**单选按钮，键入**属性名称**，例如，EditControlText，和选择 BSTR 作为**属性类型**。  
   
 3.  单击 **“完成”**。  
   
@@ -133,11 +139,11 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
-6.  在[DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，添加以下行：  
+6.  在中[DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，添加以下行：  
   
      [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]  
   
-7.  重写[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)以通知属性重置其控件，通过添加以下行：  
+7.  重写[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)以通知属性重置其控件通过添加以下行：  
   
      [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]  
   
@@ -159,11 +165,11 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
  例如，如果仅提供 10 个字节并且对 1K 文件异步调用“读取”，则“读取”将不阻止，但与目前可用的 10 字节一起返回。  
   
- 你实现[异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`类。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。  
+ 您实现[异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`类。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。  
   
- ASYNDOWN 示例将演示如何使用计时器设置异步循环来读取数据。 ASYNDOWN 在知识库文章“如何：AsyncDown 演示了异步数据下载”(Q177244) 中有详细描述，并且可从 Microsoft 下载中心下载。 （有关从 Microsoft 下载中心下载文件的详细信息，请参阅 Microsoft 知识库文章“如何从联机服务获取 Microsoft 支持文件”(Q119591)）。你可以找到在知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
+ ASYNDOWN 示例将演示如何使用计时器设置异步循环来读取数据。 ASYNDOWN 在知识库文章“如何：AsyncDown 演示了异步数据下载”(Q177244) 中有详细描述，并且可从 Microsoft 下载中心下载。 （有关从 Microsoft 下载中心下载文件的详细信息，请参阅 Microsoft 知识库文章“如何从联机服务获取 Microsoft 支持文件”(Q119591)）。您可以找到知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
   
- ASYNDOWN 中使用的基本方法是在中设置计时器**cdatapathproperty:: Ondataavailable**以指示数据时可用。 接收计时器消息后，应用程序将读取 128 字节的数据块并填充编辑控件。 如果处理计时器消息后数据不可用，则将关闭计时器。 如果之后有更多数据到达，则 `OnDataAvailable` 将启用计时器。  
+ ASYNDOWN 中使用的基本方法是在中设置计时器**CDataPathProperty::OnDataAvailable**指示数据可用。 接收计时器消息后，应用程序将读取 128 字节的数据块并填充编辑控件。 如果处理计时器消息后数据不可用，则将关闭计时器。 如果之后有更多数据到达，则 `OnDataAvailable` 将启用计时器。  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>在网页上显示控件  
  以下是用于在网页上插入控件的对象标记和特性的示例。  
@@ -203,7 +209,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
  [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]  
   
- 将更新就绪状态，作为你的代码下载通过调用[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以调用 `InternalSetReadyState` 的一个位置是从 `OnProgress` 派生类的 `CDataPathProperty` 重写。  
+ 你将更新就绪状态，因为你的代码下载通过调用[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以调用 `InternalSetReadyState` 的一个位置是从 `OnProgress` 派生类的 `CDataPathProperty` 重写。  
   
 
   

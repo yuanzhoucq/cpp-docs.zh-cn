@@ -1,7 +1,7 @@
 ---
-title: MFC Internet 编程任务 |Microsoft 文档
+title: MFC Internet 编程任务 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8d8fab6fe78c6ca1e32f7973327d2285cfcd20
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347241"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534906"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC Internet 编程任务
-本节包含将 Internet 支持添加到应用程序的详细步骤。 主题包括如何使用 MFC 类使现有应用程序支持 Internet，以及如何为现有 COM 组件添加活动文档支持。 你想要创建文档包含最新股票行情、 匹兹堡的橄榄球比赛的比分和南极洲 Microsoft 中的最新温度提供了许多的技术来帮助您做到这一点通过 Internet。  
+本节包含将 Internet 支持添加到应用程序的详细步骤。 主题包括如何使用 MFC 类使现有应用程序支持 Internet，以及如何为现有 COM 组件添加活动文档支持。 你想要创建的文档与最新股票行情、 匹兹堡的橄榄球比赛的比分和南极洲 Microsoft 的最新温度提供了大量技术，以帮助您做到这一点通过 Internet。  
   
- Active 技术包括 ActiveX 控件（以前称为 OLE 控件）和活动文档；用于在 Internet 上轻松检索和保存文件的 WinInet；以及用于有效地下载数据的异步名字对象。 Visual C++ 提供了帮助您快速上手入门级应用程序的向导。 有关这些技术的介绍，请参阅[MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)和[MFC COM](../mfc/mfc-com.md)。  
+ Active 技术包括 ActiveX 控件（以前称为 OLE 控件）和活动文档；用于在 Internet 上轻松检索和保存文件的 WinInet；以及用于有效地下载数据的异步名字对象。 Visual C++ 提供了帮助您快速上手入门级应用程序的向导。 有关这些技术的简介，请参阅[MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)并[MFC COM](../mfc/mfc-com.md)。  
   
- 具有你始终希望 FTP 文件但尚未获知 WinSock 和网络编程协议 WinInet 类封装了这些协议，向你提供一组简单的函数可用于在 Internet 以下载文件上编写客户端应用程序使用 HTTP、 FTP 和 gopher。 您可以使用 WinInet 在硬盘上搜索目录或从世界各地搜索目录。 您可以透明地收集几种不同类型的数据，并在集成的界面中将其呈现给用户。  
+ 您始终希望 FTP 文件但尚未 WinSock 和网络编程协议 WinInet 类封装了这些协议，为您提供一组简单的函数可用于下载文件在 Internet 上编写客户端应用程序使用 HTTP、 FTP 和 gopher。 您可以使用 WinInet 在硬盘上搜索目录或从世界各地搜索目录。 您可以透明地收集几种不同类型的数据，并在集成的界面中将其呈现给用户。  
   
- 您有大量的数据要下载异步名字对象所提供的用于渐进式呈现大型对象的 COM （组件对象模型） 解决方案。 WinInet 也可以异步使用。  
+ 你有大量的数据来下载异步名字对象所提供的用于渐进式呈现大型对象的 COM （组件对象模型） 解决方案。 WinInet 也可以异步使用。  
   
  下表介绍了一些可使用这些技术执行的操作。  
   
@@ -48,8 +48,6 @@ ms.locfileid: "33347241"
 -   [Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)  
   
 -   [升级现有的 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)  
-  
--   [Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)  
   
 -   [Internet 上的异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)  
   

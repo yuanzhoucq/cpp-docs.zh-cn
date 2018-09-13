@@ -1,7 +1,7 @@
 ---
-title: ActiveX 控件的容器 |Microsoft 文档
+title: ActiveX 控件的容器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,40 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008cf9ea24958cad0866e180d74a43fb031416c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c40a158777622856942c4c436299470aba3e6f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341441"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534854"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 控件的容器
-你可以使用在 Visual c + + 中开发的其他应用程序中的 ActiveX 控件，只要它们支持 ActiveX 控件包含。 大量的开头列出，版本的 Microsoft 应用程序支持 ActiveX 控件包含。  
+只要它们支持 ActiveX 控件包容，可以使用其他应用程序，在 Visual c + + 中开发的 ActiveX 控件。 大量的 Microsoft 应用程序，从列出，版本支持 ActiveX 控件包容。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。  
   
 > [!NOTE]
->  下面的列表不是支持 ActiveX 控件，但是表示在测试中最常使用的集，应用程序的完整列表：  
+>  以下列表并不支持 ActiveX 控件，但表示一组测试中最常用的应用程序的完整列表：  
   
- 支持 ActiveX 控件包含应用程序包括：  
+ 支持 ActiveX 控件包含的应用程序包括：  
   
--   Internet Explorer 3.x 和更高版本  
+-   Internet Explorer 3.x 及更高版本  
   
--   Visual 基本 4.x 和更高版本  
+-   Visual 基本 4.x 及更高版本  
   
--   Visual c + + 4.x 和更高版本  
+-   Visual c + + 4.x 及更高版本  
   
--   访问 95 和更高版本  
+-   访问 95 及更高版本  
   
--   Excel 97 和更高版本  
+-   Excel 97 及更高版本  
   
--   Word 97 和更高版本  
+-   Word 97 及更高版本  
   
--   访问 97 和更高版本  
+-   访问 97 及更高版本  
   
--   FrontPage 97 和更高版本  
+-   FrontPage 97 及更高版本  
   
--   PowerPoint 97 和更高版本  
+-   PowerPoint 97 及更高版本  
   
--   Visual InterDev 97 和更高版本  
+-   Visual InterDev 97 及更高版本  
   
  以下是支持 ActiveX 控件包含的非 Microsoft 应用程序：  
   
@@ -57,7 +60,7 @@ ms.locfileid: "33341441"
   
 -   C + + 生成器  
   
--   NCompass 插件的 Netscape Navigator  
+-   NCompass 插件用于 Netscape Navigator  
   
 ## <a name="see-also"></a>请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)

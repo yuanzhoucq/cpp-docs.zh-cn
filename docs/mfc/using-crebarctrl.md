@@ -1,5 +1,5 @@
 ---
-title: 使用 CReBarCtrl |Microsoft 文档
+title: 使用 CReBarCtrl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383304"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
@@ -30,9 +30,9 @@ Rebar 控件充当子窗口的容器。 这些子窗口（通常是其他控件�
   
  下图显示了具有两个带区的 Rebar 控件。 其中一个带区包含一个手柄栏、一个文本标签（“地址”）和一个组合框子窗口。 另一个带区包含一个手柄栏、一个文本标签和一个平面工具栏（使用子窗口实现）。  
   
- ![Rebar 控件有两个带区](../mfc/media/vc4ruz1.gif "vc4ruz1")  
+ ![具有两个带区的 rebar 控件](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
+## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息  
   
 -   [CReBar 与CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: 标识符 （C++） |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405225"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535140"
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  
@@ -104,7 +104,7 @@ int main() {
   
  标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如，`Pint`是一个合法标识符，即使它包含**int**，这是一个关键字。  
   
- 在标识符开头使用两个顺序下划线字符 ( **__** ) 或在单个前导下划线后跟一个大写字母的用法是专为所有范围的 C++ 实现保留的。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。  
+ 使用两个顺序下划线字符 ( **__** ) 在一个标识符或在单个前导下划线后跟一个大写字母，将保留用于所有作用域中的 c + + 实现。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。  
   
 ## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)

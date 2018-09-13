@@ -1,7 +1,7 @@
 ---
 title: MFC ActiveX 控件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205837"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535192"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
-ActiveX 控件是基于组件对象模型 (COM) 的可重用软件组件，支持各种 OLE 功能，并且可以进行自定义来满足多种软件所需。 ActiveX 控件专供在普通的 ActiveX 控件容器和 World Wide Web 页面中在 Internet 上。 您可以创建 ActiveX 控件使用 MFC，在这里，或使用描述[活动模板库 (ATL)](../atl/active-template-library-atl-concepts.md)。  
+
+ActiveX 控件是基于组件对象模型 (COM) 的可重用软件组件，支持各种 OLE 功能，并且可以进行自定义来满足多种软件所需。 
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 有关详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+
+ActiveX 控件专供在普通的 ActiveX 控件容器和 World Wide Web 页面中在 Internet 上。 您可以创建 ActiveX 控件使用 MFC，在这里，或使用描述[活动模板库 (ATL)](../atl/active-template-library-atl-concepts.md)。  
   
  ActiveX 控件可以自我绘制在其自己的窗口中，响应事件 （如鼠标单击），并通过包括属性和方法中的自动化对象类似的界面进行管理。  
   

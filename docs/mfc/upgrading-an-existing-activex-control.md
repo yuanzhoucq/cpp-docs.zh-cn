@@ -1,7 +1,7 @@
 ---
 title: 升级现有 ActiveX 控件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686181"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535261"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
-现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
+现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+
+在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
   
  本文讨论以下主题：  
   
