@@ -1,7 +1,7 @@
 ---
-title: Win32 Internet 类 |Microsoft 文档
+title: Win32 Internet 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,30 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383219"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534932"
 ---
 # <a name="win32-internet-classes"></a>Win32 Internet 类
-MFC 包装的 Win32 Internet (WinInet) 和 ActiveX 技术，以使 Internet 编程更容易。  
+MFC 包装 Win32 Internet (WinInet) 和 ActiveX 技术，以使 Internet 编程更简单。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- 创建和初始化一个 Internet 会话或多个同时 Internet 会话，并如有必要，描述与代理服务器的连接。  
+ 创建和初始化一个 Internet 会话或多个同时 Internet 会话，并如有必要，描述向代理服务器连接。  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  管理与 Internet 服务器的连接。  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- 此类和派生的类允许访问在使用 Internet 协议的远程系统上的文件。  
+ 此类和其派生的类允许对使用 Internet 协议的远程系统上的文件的访问。  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
  管理与 HTTP 服务器的连接。  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- 提供查找和读取 HTTP 服务器上的文件的功能。  
+ 提供的功能来查找和读取 HTTP 服务器上的文件。  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  提供查找和读取 Gopher 服务器上文件的功能。  

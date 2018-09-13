@@ -1,7 +1,7 @@
 ---
 title: 按任务的 Internet 信息 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677542"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534997"
 ---
 # <a name="internet-information-by-task"></a>按任务划分的 Internet 信息
 根据所需完成的任务按本主题中列出的任务。  
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
   
  本主题中列出了任务的以下类别：  
   
@@ -34,13 +37,9 @@ ms.locfileid: "43677542"
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX 控件、 文档和异步名字对象任务  
   
--   [了解有关活动文档](../mfc/active-documents-on-the-internet.md)  
-  
 -   [了解有关异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [了解 Internet 上下文中的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)  
-  
--   [了解 Internet 上下文中的活动文档](../mfc/active-documents-on-the-internet.md)  
   
 -   [优化的 ActiveX 控件](../mfc/mfc-activex-controls-optimization.md)  
   

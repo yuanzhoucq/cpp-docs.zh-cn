@@ -1,5 +1,5 @@
 ---
-title: 层次结构图类别 |Microsoft 文档
+title: 层次结构图类别 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40b76075678fb91cc3c4dfde579d08ef0e6e538
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85b2fbd3f69e029678af96167eb18d6d9c1dc12c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33344992"
 ---
 # <a name="hierarchy-chart-categories"></a>层次结构图类别
 ![MFC 层次结构图类别](../mfc/media/vc369r1.png "vc369r1")  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../mfc/hierarchy-chart.md)   
+ [层次结构图表](../mfc/hierarchy-chart.md)   
  [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)
 

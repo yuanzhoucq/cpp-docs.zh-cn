@@ -1,7 +1,7 @@
 ---
 title: CDocObjectServer 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701cfc2f8a88f57a1c50c9c4310ecd21154ef09a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 156480c05833b9d653a903986a37f77878c37671
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337861"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535283"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 类
 实现将常规 `COleDocument` 服务器接入完整 DocObject 服务器所需的其他 OLE 接口： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
@@ -71,7 +71,7 @@ class CDocObjectServer : public CCmdTarget
   
  若要自定义 DocObject 服务器，派生您自己的类从`CDocObjectServer`并重写其查看安装程序函数， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，并[OnSaveViewState](#onsaveviewstate). 需要提供你到框架将调用的响应中的类的新实例。  
   
- DocObjects 的详细信息，请参阅[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。 另请参阅[Internet 前几个步骤： 活动文档](../../mfc/active-documents-on-the-internet.md)并[活动文档](../../mfc/active-documents-on-the-internet.md)。  
+ DocObjects 的详细信息，请参阅[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。  
   
  另请参阅以下知识库文章：  
   
