@@ -14,133 +14,116 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4a39de6b995f30daee33f6be178b486ecc0ab1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33367c468d8e499382c30642dd55c4cd7fd1a59a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391484"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760489"
 ---
 # <a name="summary-of-constants"></a>常量摘要
-`constant`：  
- *floating-point-constant*  
-  
- *integer-constant*  
-  
- *enumeration-constant*  
-  
- *character-constant*  
-  
- *floating-point-constant*：  
- *fractional-constant exponent-part* opt*floating-suffix* opt  
-  
- *digit-sequence exponent-part floating-suffix* opt  
-  
- *fractional-constant*：  
- digit-sequence opt.digit-sequence  
-  
- *digit-sequence*  **.**  
-  
- *exponent-part*：  
- **e**  *sign* opt*digit-sequence*  
-  
- **E**  *sign* opt*digit-sequence*  
-  
- *sign*: one of  
- **+ -**  
-  
- *digit-sequence*：  
- *digit*  
-  
- *digit-sequence digit*  
-  
- *floating-suffix*: one of  
- **f l F L**  
-  
- *integer-constant*:  
- *decimal-constant integer-suffix* opt  
-  
- *octal-constant integer-suffix* opt  
-  
- *hexadecimal-constant integer-suffix* opt  
-  
- *decimal-constant*:  
- *nonzero-digit*  
-  
- *decimal-constant digit*  
-  
- *octal-constant*:  
- **0**  
-  
- *octal-constant octal-digit*  
-  
- *hexadecimal-constant*:  
- **0x**  *hexadecimal-digit*  
-  
- **0X**  *hexadecimal-digit*  
-  
- *hexadecimal-constant hexadecimal-digit*  
-  
- *nonzero-digit*: one of  
- **1 2 3 4 5 6 7 8 9**  
-  
- *octal-digit*: one of  
- **0 1 2 3 4 5 6 7**  
-  
- *hexadecimal-digit*: one of  
- **0 1 2 3 4 5 6 7 8 9**  
-  
- **a b c d e f**  
-  
- **A B C D E F**  
-  
- *unsigned-suffix*: one of  
- **u U**  
-  
- *long-suffix*: one of  
- **l L**  
-  
- *character-constant*：  
- **'** *c-char-sequence*  
-  
- **'L'** *c-char-sequence* **'**  
-  
- *integer-suffix*:  
- *unsigned-suffix long-suffix* opt  
-  
- *long-suffix unsigned-suffix* opt  
-  
- *c-char-sequence*:  
- *c-char*  
-  
- *c-char-sequence c-char*  
-  
- *c-char*:  
- 除单引号 (')、反斜杠 (**\\**) 或换行符 *escape-sequence* 以外的所有源字符集成员  
-  
- *escape-sequence*:  
- *simple-escape-sequence*  
-  
- *octal-escape-sequence*  
-  
- *hexadecimal-escape-sequence*  
-  
- *simple-escape-sequence*: one of  
- **\a \b \f \n \r \t \v**  
-  
- **\\' \\" \\\ \\?**  
-  
- *octal-escape-sequence*:  
- **\\** *octal-digit*  
-  
- **\\** *octal-digit octal-digit*  
-  
- **\\** *octal-digit octal-digit octal-digit*  
-  
- *hexadecimal-escape-sequence*：  
- **\x**  *hexadecimal-digit*  
-  
- *hexadecimal-escape-sequence hexadecimal-digit*  
-  
-## <a name="see-also"></a>请参阅  
- [词法语法](../c-language/lexical-grammar.md)
+
+常数：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;floating-point-constant<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;integer-constant<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;enumeration-constant<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;character-constant
+
+*floating-point-constant*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;fractional-constant exponent-part<sub>opt</sub> floating-suffix<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;digit-sequence exponent-part floating-suffix<sub>opt</sub>
+
+*fractional-constant*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;digit-sequence<sub>opt</sub> . *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;digit-sequence  .
+
+*exponent-part*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;e sign<sub>opt</sub> digit-sequence<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;E sign<sub>opt</sub> digit-sequence
+
+*sign*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ -
+
+*digit-sequence*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;digit-sequence digit
+
+*floating-suffix*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;f l F L
+
+*integer-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;decimal-constant integer-suffix<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;binary-constant integer-suffix<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;octal-constant integer-suffix<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-constant integer-suffix<sub>opt</sub>
+
+*decimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;nonzero-digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;decimal-constant digit
+
+二进制常数：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0b binary-digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0B binary-digit
+
+*octal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;octal-constant octal-digit
+
+*hexadecimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0x  *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0X**  *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-constant hexadecimal-digit
+
+*nonzero-digit*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1 2 3 4 5 6 7 8 9
+
+*octal-digit*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7
+
+*hexadecimal-digit*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;a b c d e f<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;A B C D E F
+
+*unsigned-suffix*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;u U
+
+*long-suffix*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;l L
+
+*character-constant*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;' c-char-sequence '<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;L' c-char-sequence '
+
+*integer-suffix*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned-suffix long-suffix<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;long-suffix unsigned-suffix<sub>opt</sub>
+
+*c-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;c-char<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;c-char-sequence c-char
+
+*c-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;除单引号 (**'**)、反斜杠 (**\\**) 或换行符 escape-sequence 以外的源字符集中的任何成员
+
+*escape-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*simple-escape-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-escape-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence*
+
+*simple-escape-sequence*: one of<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \v**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\' \\" \\\ \\?**
+
+*octal-escape-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\\ octal-digit**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\\ octal-digit octal-digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\\ octal-digit octal-digit octal-digit
+
+*hexadecimal-escape-sequence*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\x hexadecimal-digit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;hexadecimal-escape-sequence hexadecimal-digit
+
+## <a name="see-also"></a>请参阅
+
+[词法语法](../c-language/lexical-grammar.md)<br/>
