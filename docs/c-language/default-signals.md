@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78c369665d398d4b326cf8d27ad0944a594fe1a4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204445"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758932"
 ---
 # <a name="default-signals"></a>默认信号
-**ANSI 4.7.1.1** 调用信号处理程序前未执行 signal (sig, SIG_DFL) 的等效项时，对执行的信号的阻止  
+
+ANSI 4.7.1.1 调用信号处理程序前未执行 `signal(sig, SIG_DFL)` 的等效项时，对所执行信号的阻止
+
+程序开始运行时，信号将设置为其默认状态。  
   
- 程序开始运行时，信号将设置为其默认状态。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

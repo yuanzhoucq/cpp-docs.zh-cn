@@ -18,35 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf56a409f9a76cdf401323d1425ee28fc6cf286b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cadad9f2f025db4f7c3a63a7948a6cbbcfbd3ac3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386409"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761425"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和标记语句 (C)
 `goto` 语句将控制权转交给一个标签。 给定标签必须位于同一函数中，并且只可以出现在同一函数中的一个语句前面。  
   
-## <a name="syntax"></a>语法  
- *statement*：  
- labeled-statement  
+## <a name="syntax"></a>语法
+
+*statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+
+*labeled-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+
+语句标签仅对 `goto` 语句有意义；在任何其他上下文中，在不考虑标签的情况下执行已标记的语句。  
   
- jump-statement  
+jump-statement 必须位于同一函数中，并且只能出现在同一函数中的一个语句前面。 跟在 `goto` 后的 identifier 名称集具有自己的命名空间，因此这些名称不影响其他标识符。 不能重新声明标签。 有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)。  
   
- *jump-statement*:  
- goto  identifier  ;  
+尽可能优先使用 break、continue 和 `return` 语句而不是 `goto` 是一种好的编程风格。 由于 break 语句只从一层循环中退出，因此从深度嵌套的循环中退出循环可能需要使用 `goto`。  
   
- *labeled-statement*:  
- identifier  :  statement  
-  
- 语句标签仅对 `goto` 语句有意义；在任何其他上下文中，在不考虑标签的情况下执行已标记的语句。  
-  
- jump-statement 必须位于同一函数中，并且只能出现在同一函数中的一个语句前面。 跟在 `goto` 后的 identifier 名称集具有自己的命名空间，因此这些名称不影响其他标识符。 不能重新声明标签。 有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)。  
-  
- 尽可能优先使用 break、continue 和 `return` 语句而不是 `goto` 是一种好的编程风格。 由于 break 语句只从一层循环中退出，因此从深度嵌套的循环中退出循环可能需要使用 `goto`。  
-  
- 此示例演示了 `goto` 语句：  
+此示例演示了 `goto` 语句：  
   
 ```  
 // goto.c  
@@ -74,7 +74,7 @@ int main()
 }  
 ```  
   
- 在此示例中，当 `goto` 等于 5 时，`stop` 语句将控制权转交给标记为 `i` 的点。  
+在此示例中，当 `goto` 等于 5 时，`stop` 语句将控制权转交给标记为 `i` 的点。  
   
 ## <a name="see-also"></a>请参阅  
- [语句](../c-language/statements-c.md)
+[语句](../c-language/statements-c.md)
