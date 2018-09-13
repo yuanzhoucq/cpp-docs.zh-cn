@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597568"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556749"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze（禁用语言扩展）
 **/Za**编译器选项将发出对与写于 ANSI C89 或 ISO C + + 11 不兼容的语言构造错误。 **/Ze**编译器选项，这是在默认情况下，将启用 Microsoft 扩展。  
@@ -54,8 +54,8 @@ ms.locfileid: "42597568"
   
  我们建议你禁用语言扩展，通过指定 **/Za**选项如果你打算将程序移植到其他环境。 当 **/Za**指定，则编译器会将 Microsoft 扩展关键字作为简单标识符、 禁用的其他 Microsoft 扩展，并会自动定义`__STDC__`C 程序的预定义的宏。  
   
- 与使用其他编译器选项 **/Za**可能会影响编译器如何确保标准符合性。 例如， **/Za**并[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)可能会导致不符合的浮点类型升级行为对 ISO C99 或 C + + 11 标准。  
-  
+ 与使用其他编译器选项 **/Za**可能会影响编译器如何确保标准符合性。
+
  若要指定特定符合标准行为设置的方式，请参阅[/Zc](../../build/reference/zc-conformance.md)编译器选项。  
   
  使用 Visual c + + 的一致性问题的详细信息，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。  
