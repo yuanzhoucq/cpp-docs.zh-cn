@@ -1,7 +1,7 @@
 ---
 title: 调试迭代器支持 | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959587"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601465"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ C++ 标准描述了成员函数可能会如何导致一个容器的迭代器无�
 
 - 通过使用推送或插入增加[向量](../standard-library/vector.md)的大小会导致进入 `vector` 的迭代器无效。
 
-## <a name="example"></a>示例
+## <a name="invalid-iterators"></a>无效的迭代器
 
 如果在调试模式下编译此示例程序，则在运行时它将断言并终止。
 
@@ -49,12 +49,7 @@ C++ 标准描述了成员函数可能会如何导致一个容器的迭代器无�
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="using-iteratordebuglevel"></a>使用 _ITERATOR_DEBUG_LEVEL
 
 可以使用预处理器宏 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 关闭调试版本中迭代器的调试功能。 此程序不会断言，但仍会触发未定义的行为。
 
@@ -81,11 +76,7 @@ int main() {
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>示例
+## <a name="unitialized-iterators"></a>未初始化的迭代器
 
 如果在初始化之前尝试使用迭代器，断言也会发生，如下所示：
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="incompatible-iterators"></a>不兼容的迭代器
 
 下面的代码示例引发断言，因为指向 [for_each](../standard-library/algorithm-functions.md#for_each) 算法的两个迭代器不兼容。 算法会执行检查以确定提供给它们的迭代器是否引用相同的容器。
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
 
-## <a name="example"></a>示例
+## <a name="iterators-going-out-of-scope"></a>接下来超出范围的迭代器
 
 调试迭代器检查也会导致中声明的迭代器变量**有关**循环，以采用正确的作用域时**为**循环作用域结束。
 
@@ -163,11 +148,7 @@ int main()
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="destructors-for-debug-iterators"></a>调试迭代器的析构函数
 
-调试迭代器具有不平常的析构函数。 如果析构函数不能运行，无论什么原因，可能发生访问冲突和数据损坏。 请看以下示例：
+调试迭代器具有不平常的析构函数。 如果析构函数不会运行，但释放对象的内存，可能会出现访问冲突和数据损坏。 请看以下示例：
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>请参阅
