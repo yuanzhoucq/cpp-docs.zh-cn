@@ -1,6 +1,6 @@
 ---
-title: 编译器警告 （等级 3） C4839 |Microsoft 文档
-ms.date: 10/25/2017
+title: 编译器警告 （等级 3） C4839 |Microsoft Docs
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -15,24 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14a79c6abb118fb173382be87ebda4316545c65a
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291952"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601400"
 ---
-# <a name="compiler-warning-level-4-c4839"></a>编译器警告 （等级 4） C4839
+# <a name="compiler-warning-level-3-c4839"></a>编译器警告 （等级 3） C4839
 
-> 类的非标准使用*类型*作为可变参数函数的自变量
+> 类的非标准用法*类型*作为可变参数函数的参数
 
-在 Visual Studio 2017，类或结构，传递给可变参数函数如`printf`必须完全可复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
+类或结构传递给 variadic 函数如`printf`必须完全可复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。
+
+此警告是 Visual Studio 2017 中的开始提供。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4839:
 
 ```cpp
+// C4839.cpp
+// compile by using: cl /EHsc /W3 C4839.cpp
 #include <atomic>
 #include <memory>
 #include <stdio.h>
@@ -42,20 +46,10 @@ int main()
     std::atomic<int> i(0);
     printf("%i\n", i); // error C4839: non-standard use of class 'std::atomic<int>'
                         // as an argument to a variadic function
-                        // note: the constructor and destructor will not be called; 
+                        // note: the constructor and destructor will not be called;
                         // a bitwise copy of the class will be passed as the argument
                         // error C2280: 'std::atomic<int>::atomic(const std::atomic<int> &)':
                         // attempting to reference a deleted function
-
-    struct S {
-        S(int i) : i(i) {}
-        S(const S& other) : i(other.i) {}
-        operator int() { return i; }
-    private:
-        int i;
-    } s(0);
-    printf("%i\n", s); // warning C4840 : non-portable use of class 'main::S'
-                      // as an argument to a variadic function
 }
 ```
 
@@ -66,14 +60,7 @@ int main()
     printf("%i\n", i.load());
 ```
 
-或者执行静态强制转换，以在传递对象之前将其进行转换：
-
-```cpp
-    struct S {/* as before */} s(0);
-    printf("%i\n", static_cast<int>(s))
-```
-
-字符串所建立和管理使用`CStringW`，提供`operator LPCWSTR()`应该用于强制转换`CStringW`对象与预期的格式字符串由 C 指针。
+对于字符串使用生成和管理`CStringW`，提供`operator LPCWSTR()`应该用于强制转换`CStringW`到所需的格式字符串的 C 指针的对象。
 
 ```cpp
     CStringW str1;
