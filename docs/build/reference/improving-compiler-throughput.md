@@ -1,5 +1,5 @@
 ---
-title: 提高编译器吞吐量 |Microsoft 文档
+title: 提高编译器吞吐量 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c78c0640e415f4a531149a47430833ba94770719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 883b4056226a3595f2255dcadfb4cc056e1150ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704128"
 ---
 # <a name="improving-compiler-throughput"></a>提高编译器吞吐量
-使用预编译标头文件更快地生成你的项目。 这是重要信息： 如果你使用 ATL、 MFC 中或 Windows SDK 标头文件。  
-  
- 请参阅[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。  
-  
- 有关预编译标头的详细信息，请参阅[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [优化代码](../../build/reference/optimizing-your-code.md)
+
+使用预编译标头文件更快地构建您的项目。 这是重要信息： 如果使用 ATL、 MFC 或 Windows SDK 标头文件。
+
+请参阅[/Yc](../../build/reference/yc-create-precompiled-header-file.md)并[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。
+
+有关预编译标头的详细信息，请参阅[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)。
+
+## <a name="see-also"></a>请参阅
+
+[优化代码](../../build/reference/optimizing-your-code.md)

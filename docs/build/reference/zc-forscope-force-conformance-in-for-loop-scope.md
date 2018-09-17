@@ -1,5 +1,5 @@
 ---
-title: '/Zc: forscope （强制在 for 循环范围一致性） |Microsoft 文档'
+title: '/Zc: forscope （强制的一致性在 for 循环范围） |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378608"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723588"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope（强制 for 循环范围中的一致性）
 
@@ -40,7 +40,7 @@ ms.locfileid: "32378608"
 
 标准行为是使 **for** 循环的初始值设定项在 **for** 循环之后超出范围。 在 **/Zc:forScope-** 和 [/Ze](../../build/reference/za-ze-disable-language-extensions.md)下， **for** 循环的初始值设定项保持在范围内，直到局部范围结束。
 
-**/Zc: forscope**选项默认处于启用。 **/Zc: forscope**时不会影响[/ 宽松-](permissive-standards-conformance.md)指定选项。
+**/Zc: forscope**选项默认为打开。 **/Zc: forscope**时不会影响[触发-](permissive-standards-conformance.md)指定选项。
 
 **/Zc:forScope-** 选项已弃用，并将从未来版本中删除。 使用 **/Zc:forScope-** 将生成弃用警告 D9035。
 
@@ -49,7 +49,7 @@ ms.locfileid: "32378608"
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -65,7 +65,7 @@ int main() {
 
 可通过使用 **conform** 杂注修改 [/Zc:forScope](../../preprocessor/conform.md) 的运行时行为。
 
-如果在包含现有 .pch 文件的项目中使用 **/Zc:forScope-** ，则将生成警告、忽略 **/Zc:forScope-** ，并使用现有 .pch 文件继续进行编译。 如果你希望生成新的.pch 文件，使用[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)。
+如果在包含现有 .pch 文件的项目中使用 **/Zc:forScope-** ，则将生成警告、忽略 **/Zc:forScope-** ，并使用现有 .pch 文件继续进行编译。 如果你想要生成新的.pch 文件，使用[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)。
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 

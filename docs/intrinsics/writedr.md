@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704946"
 ---
 # <a name="writedr"></a>__writedr
 将指定的值写入到指定的调试注册。  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `DebugRegister`  
- 一个介于 0 到 7 标识调试注册。  
+*DebugRegister*<br/>
+[in]一个介于 0 到 7 标识调试注册。  
   
- [in] `DebugValue`  
- 一个值，以写入调试注册。  
+*DebugValue*<br/>
+[in]一个值，以写入调试注册。  
   
 ## <a name="remarks"></a>备注  
  这些内部函数仅在内核模式中可用，例程只能用作内部函数。  

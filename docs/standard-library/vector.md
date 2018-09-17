@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c4ec16ba621ee268be65bfee11798fb4b358673
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720286"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,17 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>参数
 
-*类型*  
- 向量中所存储的数据类型的模板参数。
+*类型*<br/>
+向量中所存储的数据类型的模板参数。
 
-*分配器*  
- 负责分配和释放内存的已存储分配器对象的模板参数。
+*分配器*<br/>
+负责分配和释放内存的已存储分配器对象的模板参数。
 
-*left*  
- 比较操作中的第一个（左）向量
+*left*<br/>
+比较操作中的第一个（左）向量
 
-*right*  
- 比较操作中的第二个（右）向量。
+*right*<br/>
+比较操作中的第二个（右）向量。
 
 ### <a name="operators"></a>运算符
 

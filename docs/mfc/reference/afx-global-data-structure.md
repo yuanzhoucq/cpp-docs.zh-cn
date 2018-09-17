@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677452"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701917"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*pWnd*  
- 指向控件的窗口的指针。  
+*pWnd*<br/>
+[in]指向控件的窗口的指针。  
   
- [in]*pDC*  
- 指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文指针。  
   
- [in]*lpRect*  
- 指向用来限定要绘制的区域的矩形的指针。 默认值为 NULL。  
+*lpRect*<br/>
+[in]指向限定要绘制的区域的矩形的指针。 默认值为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*hTheme*  
- 句柄主题数据的一个窗口，则为 NULL。 该框架使用指定的主题用于绘制文本，如果此参数不为 NULL，并且支持主题。 否则，该框架将不使用主题来绘制文本。  
+*hTheme*<br/>
+[in]句柄主题数据的一个窗口，则为 NULL。 该框架使用指定的主题用于绘制文本，如果此参数不为 NULL，并且支持主题。 否则，该框架将不使用主题来绘制文本。  
   
  使用[OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata)方法来创建 HTHEME。  
   
- [in]*pDC*  
- 指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文指针。  
   
- [in]*iPartId*  
- 具有所需文本外观的控件部件。 有关详细信息，请参阅中的表的部分列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。  
+*iPartId*<br/>
+[in]具有所需的文本外观的控件部件。 有关详细信息，请参阅中的表的部分列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。  
   
- [in]*iStateId*  
- 具有所需文本外观的控件状态。 有关详细信息，请参阅中的表的状态列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
+*iStateId*<br/>
+[in]具有所需的文本外观的控件状态。 有关详细信息，请参阅中的表的状态列[部件和状态](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
   
- [in]*strText*  
- 要绘制的文本。  
+*strText*<br/>
+[in]要绘制的文本。  
   
- [in]*rect*  
- 在其中绘制指定文本的区域的边界。  
+*rect*<br/>
+[in]在其中绘制指定的文本的区域的边界。  
   
- [in]*dwFlags*  
- 指定如何绘制指定文本的标志的按位组合 (OR)。  
+*dwFlags*<br/>
+[in]指定如何绘制指定的文本的标志的按位组合 (OR)。  
   
  如果*hTheme*参数是`NULL`或不受支持且已启用，主题*nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*的参数[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)方法描述有效的标志。  
   
- [in]*nGlowSize*  
- 在背景上绘制，然后指定绘制的文本之前发光效果的大小。 默认值为 0。  
+*nGlowSize*<br/>
+[in]在背景绘制指定绘制的文本之前发光效果的大小。 默认值为 0。  
   
- [in]*clrText*  
- 在其中绘制指定文本的颜色。 默认值为默认颜色。  
+*clrText*<br/>
+[in]在其中绘制指定的文本颜色。 默认值为默认颜色。  
   
 ### <a name="return-value"></a>返回值  
  如果主题用于绘制指定的文本; 则为 TRUE否则为 FALSE。  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*bEnable*  
- 若要启用辅助功能的支持;如果为 FALSE，则禁用辅助功能支持。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]若要启用辅助功能的支持;如果为 FALSE，则禁用辅助功能支持。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*strBuffer*  
- 文本的缓冲区。  
+*strBuffer*<br/>
+[in]文本的缓冲区。  
   
- [in]*lpszTag*  
- 一对的开始和结束 XML 标记的名称。  
+*lpszTag*<br/>
+[in]一对的开始和结束 XML 标记的名称。  
   
- [out]*strTag*  
- 此方法返回时， *strTag*参数包含的文本之间的开始和结束 XML 标记由命名*lpszTag*参数。 从结果中任何前导或尾随空格被裁剪。  
+*strTag*<br/>
+[out]此方法返回时， *strTag*参数包含的文本之间的开始和结束 XML 标记由命名*lpszTag*参数。 从结果中任何前导或尾随空格被裁剪。  
   
- [in]*bIsCharsList*  
- 为 true，则转换中的转义字符的符号*strTag*到实际的转义符; 参数如果为 FALSE，则无法执行转换。默认值为 FALSE。 有关更多信息，请参见“备注”。  
+*bIsCharsList*<br/>
+[in]为 true，则转换中的转义字符的符号*strTag*到实际的转义符; 参数如果为 FALSE，则无法执行转换。默认值为 FALSE。 有关更多信息，请参见“备注”。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*nColor*  
- 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
+*nColor*<br/>
+[in]一个值，指定将检索其颜色的用户界面元素。 有关有效值的列表，请参阅*nIndex*的参数[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
   
 ### <a name="return-value"></a>返回值  
  指定的用户界面元素的 RGB 颜色值。 有关更多信息，请参见“备注”。  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in、 out]*信息*  
- 一个[NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
+*信息*<br/>
+[in、 out]一个[NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*bHorz*  
- 为 TRUE，则文本水平; 运行时检索字符的高度为 FALSE，则文本垂直运行时检索字符的高度。 默认值为 TRUE。  
+*bHorz*<br/>
+[in]为 TRUE，则文本水平; 运行时检索字符的高度为 FALSE，则文本垂直运行时检索字符的高度。 默认值为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  当前字体的高度，从字体上缘往字体下缘测量。  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*lpszClassNamePrefix*  
- 要注册的窗口类的名称。  
+*lpszClassNamePrefix*<br/>
+[in]要注册的窗口类的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则已注册的类的限定的名称否则为[资源异常](exception-processing.md#afxthrowresourceexception)。  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*hwnd*  
- 分层窗口的句柄。  
+*hwnd*<br/>
+[in]分层窗口的句柄。  
   
- [in]*crKey*  
- 透明度颜色键[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)用于组成分层的窗口。  
+*crKey*<br/>
+[in]透明度颜色键[桌面窗口管理器](/windows/desktop/dwm/dwm-overview)用于组成分层的窗口。  
   
- [in]*bAlpha*  
- 用于描述分层窗口的暗度的 alpha 值。  
+*bAlpha*<br/>
+[in]用于描述分层窗口的暗度的 alpha 值。  
   
- [in]*dwFlags*  
- 标志的按位组合 (OR)，其指定参数要使用的方法。 指定 LWA_COLORKEY 以使用*crKey*参数作为透明度颜色。 指定 LWA_ALPHA 以使用*bAlpha*参数确定分层窗口的不透明度。  
+*dwFlags*<br/>
+[in]指定要使用的方法参数的标志的按位组合 (OR)。 指定 LWA_COLORKEY 以使用*crKey*参数作为透明度颜色。 指定 LWA_ALPHA 以使用*bAlpha*参数确定分层窗口的不透明度。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in]*lpLogFont*  
- 指向包含的一种字体属性的结构的指针。  
+*lpLogFont*<br/>
+[in]指向包含的一种字体属性的结构的指针。  
   
- [in]*bHorz*  
- 为 TRUE，则指定水平; 运行的文本如果为 FALSE，以指定文本垂直运行。  
+*bHorz*<br/>
+[in]为 TRUE，则指定水平; 运行的文本如果为 FALSE，以指定文本垂直运行。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。 在调试模式下，此方法要声明此方法不成功。  

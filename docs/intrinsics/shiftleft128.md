@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 57846bab53e50f1644dcdc3ec817472e47793840
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541368"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725200"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft 专用**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftleft128(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `LowPart`  
- 要位移的 128 位数量的低 64 位。  
+*LowPart*<br/>
+[in]要位移的 128 位数量的低 64 位。  
   
- [in] `HighPart`  
- 要位移的 128 位数量的高 64 位。  
+*HighPart*<br/>
+[in]要位移的 128 位数量高 64 位。  
   
- [in] `Shift`  
- 要位移的位数。  
+*Shift*<br/>
+[in]移动的位数数。  
   
 ## <a name="return-value"></a>返回值  
  高 64 位的结果。  

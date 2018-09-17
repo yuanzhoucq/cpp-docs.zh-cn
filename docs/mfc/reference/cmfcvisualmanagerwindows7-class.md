@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541365"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720546"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
 `CMFCVisualManagerWindows7`向应用程序提供的 Windows 7 应用程序的外观。  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pEdit*  
- 指向编辑控件的指针。 此值不能为 NULL。  
+*pEdit*<br/>
+[in]指向编辑控件的指针。 此值不能为 NULL。  
   
- [out]*bIsHighlighted*  
- 返回是否突出显示功能区框。  
+*bIsHighlighted*<br/>
+[out]返回是否突出显示功能区框。  
   
- [out]*bIsPaneHighlighted*  
- 如果在功能区面板中，则为 TRUE 返回包含*pEdit*突出显示。  
+*bIsPaneHighlighted*<br/>
+[out]如果在功能区面板中，则为 TRUE 返回包含*pEdit*突出显示。  
   
- [out]*bIsDisabled*  
- 返回是否*pEdit*被禁用。  
+*bIsDisabled*<br/>
+[out]返回是否*pEdit*被禁用。  
   
 ### <a name="return-value"></a>返回值  
  在编辑框的背景色*pEdit*。  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向菜单按钮的设备上下文的指针。  
+*pDC*<br/>
+[in]指向菜单按钮的设备上下文的指针。  
   
- [in]*pButton*  
- 一个指向`CMFCToolBarButton`。 框架填充此按钮的背景。  
+*pButton*<br/>
+[in]一个指向`CMFCToolBarButton`。 框架填充此按钮的背景。  
   
- [in]*rect*  
- 指定菜单按钮图像区域的边界矩形。  
+*rect*<br/>
+[in]指定菜单按钮图像区域的边界矩形。  
   
- [in]*状态*  
- 按钮的状态。  
+*state*<br/>
+[in]按钮的状态。  
   
 ### <a name="remarks"></a>备注  
   

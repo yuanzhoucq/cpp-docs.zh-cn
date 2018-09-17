@@ -1,5 +1,5 @@
 ---
-title: 刷新 (OpenMP) |Microsoft 文档
+title: 刷新 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696235"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722054"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-指定所有线程都具有相同的所有共享对象的内存的视图。  
+指定的所有线程都都共享的所有对象的内存的相同视图。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33696235"
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+## <a name="arguments"></a>自变量
+
+*var*<br/>
+（可选）逗号分隔的变量表示你想要同步的对象的列表。 如果`var`未指定，则刷新所有内存。  
   
- `var` （可选）  
- 以逗号分隔的表示你想要同步的对象的变量列表。 如果`var`未指定，则刷新所有的内存。  
-  
 ## <a name="remarks"></a>备注  
- **刷新**指令支持没有 OpenMP 子句。  
+ **刷新**指令支持任何 OpenMP 子句。  
   
  有关详细信息，请参阅[2.6.5 flush 指令](../../../parallel/openmp/2-6-5-flush-directive.md)。  
   

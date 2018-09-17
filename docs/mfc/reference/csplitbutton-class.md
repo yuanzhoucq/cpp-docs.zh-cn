@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207636"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705271"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 `CSplitButton`类表示拆分按钮控件。 当用户单击按钮的主要部分时，拆分按钮控件将执行一个默认行为，而当用户单击按钮的下拉箭头时，控件将显示一个下拉菜单。  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwStyle*|按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
-|[in]*rect*|对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
-|[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
-|[in]*nID*|控件的 ID。|  
+|*dwStyle*|[in]按位组合 (OR) 要应用于控件的样式。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
+|*rect*|[in]对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
+|*pParentWnd*|[in]指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
+|*nID*|[in]控件的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|在菜单栏的资源 ID。|  
-|[in]*nSubMenuId*|子菜单资源 ID。|  
-|[in]*pMenu*|一个指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
+|*nMenuId*|[in]在菜单栏的资源 ID。|  
+|*nSubMenuId*|[in]子菜单资源 ID。|  
+|*pMenu*|[in]一个指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
   
 ### <a name="remarks"></a>备注  
  使用[CSplitButton::Create](#create)方法创建拆分按钮控件并将其附加到`CSplitButton`对象。  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|指向[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)结构，其中包含有关的信息[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
-|[out]*pResult*|（未使用; 不返回任何值。）返回的值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|*pNMHDR*|[in]指向[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)结构，其中包含有关的信息[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|*pResult*|[out]（未使用; 不返回任何值。）返回的值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
   
 ### <a name="remarks"></a>备注  
  当用户单击拆分按钮控件上的下拉箭头时，系统会发送 BCN_DROPDOWN 通知消息，其中`OnDropDown`方法句柄。 但是，`CSplitButton`对象不转发到包含拆分按钮控件的控件的 BCN_DROPDOWN 通知。 因此，包含控件不能响应与通知中支持自定义操作。  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|在菜单栏的资源 ID。|  
-|[in]*nSubMenuId*|子菜单资源 ID。|  
-|[in]*pMenu*|指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
+|*nMenuId*|[in]在菜单栏的资源 ID。|  
+|*nSubMenuId*|[in]子菜单资源 ID。|  
+|*pMenu*|[in]指向[CMenu](../../mfc/reference/cmenu-class.md)对象，它指定子菜单。 `CSplitButton`对象删除`CMenu`对象和其关联的 HMENU 时`CSplitButton`对象超出范围。|  
   
 ### <a name="remarks"></a>备注  
  *NMenuId*参数标识一个菜单栏，它是水平的菜单栏项的列表。 *NSubMenuId*参数是一个从零开始的索引号，用于标识子菜单中，这是与每个菜单栏项关联的菜单项的下拉列表。 例如，典型的应用程序有一个菜单，其中包含菜单栏项，"文件，""编辑"和"帮助"。 "文件"菜单栏项包含子菜单包含菜单项中，"，打开"状态"关闭"和"Exit"。 单击拆分按钮控件的下拉箭头时，该控件将显示指定的子菜单中，未在菜单栏。  

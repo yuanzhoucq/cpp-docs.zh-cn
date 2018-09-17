@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538993"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720221"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`类实现功能的无模式对话框会显示在屏幕上以通知用户有关的事件。  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in][out]*pWndOwner*  
  指定的通知窗口的所有者。 该所有者随后会收到在桌面警报窗口的所有通知。 此值不能为 NULL。  
   
- [in]*uiDlgResID*  
- 指定通知窗口的资源的 ID。  
+*uiDlgResID*<br/>
+[in]指定通知窗口的资源的 ID。  
   
- [in]*hMenu*  
- 指定当用户单击菜单按钮时显示的菜单。 如果为 NULL，不显示的菜单按钮。  
+*hMenu*<br/>
+[in]指定当用户单击菜单按钮时显示的菜单。 如果为 NULL，不显示的菜单按钮。  
   
- [in]*ptPos*  
- 指定通知窗口的显示位置的初始位置，使用屏幕坐标。 如果此参数为 （-1，-1），通知窗口显示在屏幕的右下角。  
+*ptPos*<br/>
+[in]指定通知窗口的显示位置的初始位置，使用屏幕坐标。 如果此参数为 （-1，-1），通知窗口显示在屏幕的右下角。  
   
- [in]*pRTIDlgBar*  
- 介绍了警报窗口的工作区的自定义的对话框类的运行时类信息。  
+*pRTIDlgBar*<br/>
+[in]介绍了警报窗口的工作区的自定义的对话框类的运行时类信息。  
   
- [in]*params*  
- 指定用于创建警报窗口的参数。  
+*params*<br/>
+[in]指定用于创建警报窗口的参数。  
   
 ### <a name="return-value"></a>返回值  
  如果通知窗口创建成功，则为 TRUE否则为 FALSE。  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 未使用此参数。  
+*uiCmdID*<br/>
+[in]未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
  始终为 FALSE。  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*wParam*  
- [in]*lParam*  
+*wParam*<br/>
+[in][in]*lParam*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nSpeed*  
- 指定新动画速度，以毫秒为单位。  
+*nSpeed*<br/>
+[in]指定新动画速度，以毫秒为单位。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置通知窗口的动画速度。 默认动画速度为 30 毫秒。  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*类型*  
- 指定的动画类型。  
+*type*<br/>
+[in]指定的动画类型。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置动画类型。 可以指定以下值之一：  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nTime*  
- 经过通知窗口会自动关闭之前的时间，以毫秒为单位。  
+*nTime*<br/>
+[in]经过通知窗口会自动关闭之前的时间，以毫秒为单位。  
   
 ### <a name="remarks"></a>备注  
  如果用户不会交互窗口在指定时间后自动关闭通知窗口。  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSmallCaption*  
- 为 TRUE，则指定通知窗口显示小标题;否则为 FALSE，则指定通知窗口显示的常规大小标题。  
+*bSmallCaption*<br/>
+[in]为 TRUE，则指定通知窗口显示小标题;否则为 FALSE，则指定通知窗口显示的常规大小标题。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以显示小或常规大小标题。 默认情况下，小标题为 7 个像素高。 你可以通过调用 Windows API 函数获取的正则标题大小`GetSystemMetrics(SM_CYCAPTION)`。  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nTransparency*  
- 指定透明度级别。 此值必须介于 0 和 255 之间 （含） 之间。 值越大，更多的不透明窗口。  
+*nTransparency*<br/>
+[in]指定透明度级别。 此值必须介于 0 和 255 之间 （含） 之间。 值越大，更多的不透明窗口。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可设置弹出窗口的透明度级别。  

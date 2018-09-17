@@ -21,14 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee09b3fe61c86015d8dc7464ef9925419fc745d9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706571"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc（处理文档注释）(C/C++)
+
 在源代码文件，以创建用于每个源代码文件，其中包含文档注释的.xdc 文件可让编译器处理文档注释。
 
 ## <a name="syntax"></a>语法
@@ -50,7 +51,7 @@ ms.locfileid: "44100322"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
 1. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
 
@@ -62,5 +63,5 @@ ms.locfileid: "44100322"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)   
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

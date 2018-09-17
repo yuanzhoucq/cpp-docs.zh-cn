@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214674"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712942"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些诊断服务包括宏和全局函数，让你能够跟踪程序的内存分配，在运行时转储对象的内容并打印调试消息。 诊断服务的宏和全局函数可分为以下几类：  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDump*  
- TRUE 表示已启用内存泄漏转储;FALSE 表示已禁用内存泄漏转储。  
+*bDump*<br/>
+[in]TRUE 表示已启用内存泄漏转储;FALSE 表示已禁用内存泄漏转储。  
   
 ### <a name="return-value"></a>返回值  
  此标志的上一个值。  

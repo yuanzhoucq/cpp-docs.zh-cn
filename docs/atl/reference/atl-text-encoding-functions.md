@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757466"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706831"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>参数
 
-[in]*pbSrcData*  
-包含要解码的数据的缓冲区。
+*pbSrcData*<br/>
+[in]包含要解码的数据的缓冲区。
 
-[in]*nSrcLen*  
-以字节为单位的长度*pbSrcData*。
+*nSrcLen*<br/>
+[in]以字节为单位的长度*pbSrcData*。
 
-[out]*szDest*  
-用于接收已解码的数据的调用方分配的缓冲区。
+*szDest*<br/>
+[out]用于接收已解码的数据的调用方分配的缓冲区。
 
-[out]*pnDestLen*  
-指向包含以字节为单位的长度的变量*szDest*。 如果函数成功，则该变量接收写入到缓冲区的字节数。 如果函数失败，该变量接收所需的长度以字节为单位的缓冲区。
+*pnDestLen*<br/>
+[out]指向包含以字节为单位的长度的变量*szDest*。 如果函数成功，则该变量接收写入到缓冲区的字节数。 如果函数失败，该变量接收所需的长度以字节为单位的缓冲区。
 
-[in]*dwFlags*  
-描述如何执行转换的 ATLSMTP_QPENCODE 标志。
+*dwFlags*<br/>
+[in]描述如何执行转换的 ATLSMTP_QPENCODE 标志。
 
 ### <a name="return-value"></a>返回值
 

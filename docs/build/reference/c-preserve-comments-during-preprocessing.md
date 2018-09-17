@@ -1,5 +1,5 @@
 ---
-title: -C （在预处理期间保留注释） |Microsoft 文档
+title: -C （在预处理期间保留注释） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,57 +22,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 350addc63807a338eb451c14e52340ef67998f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713175"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C（在预处理期间保留注释）
-在预处理期间保留注释。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/C  
-```  
-  
-## <a name="remarks"></a>备注  
- 此编译器选项需要 **/E**， **/P**，或 **/EP**选项。  
-  
- 下面的代码示例将显示源代码注释。  
-  
-```  
-// C_compiler_option.cpp  
-// compile with: /E /C /c  
-int i;   // a variable  
-```  
-  
- 此示例将生成以下输出。  
-  
-```  
-#line 1 "C_compiler_option.cpp"  
-int i;   // a variable  
-```  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击 **“C/C++”** 文件夹。  
-  
-3.  单击**预处理器**属性页。  
-  
-4.  修改**保留注释**属性。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [/E （预处理到 stdout）](../../build/reference/e-preprocess-to-stdout.md)   
- [/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)   
- [/EP（不使用 #line 指令预处理到 stdout）](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+
+在预处理期间保留注释。
+
+## <a name="syntax"></a>语法
+
+```
+/C
+```
+
+## <a name="remarks"></a>备注
+
+此编译器选项需要 **/E**， **/P**，或 **/EP**选项。
+
+下面的代码示例将显示源代码注释。
+
+```
+// C_compiler_option.cpp
+// compile with: /E /C /c
+int i;   // a variable
+```
+
+此示例将生成以下输出。
+
+```
+#line 1 "C_compiler_option.cpp"
+int i;   // a variable
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 单击 **“C/C++”** 文件夹。
+
+1. 单击**预处理器**属性页。
+
+1. 修改**保留注释**属性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[/E （预处理到 stdout）](../../build/reference/e-preprocess-to-stdout.md)
+[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)
+[/EP （不预处理到 stdout #line 指令)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

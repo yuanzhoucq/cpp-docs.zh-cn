@@ -17,23 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f505694cd0efed303558438b2c2ed2fbff888b7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704829"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>自定义映像对话框 （c + +） （图标的图像编辑器）
+
 可以使用自定义大小和颜色数创建新的映像。
- **宽度**  
- 提供空间以输入自定义图像的宽度以像素为单位 （1-512，限制 2048年）。
+
+- **宽度**
+
+   提供空间以输入自定义图像的宽度以像素为单位 （1-512，限制 2048年）。
   
- **高度**  
- 提供空间以输入自定义映像以像素为单位 （1-512，限制 2048年） 的高度。
+- **高度**
+
+   提供空间以输入自定义映像以像素为单位 （1-512，限制 2048年） 的高度。
   
- **颜色**  
- 提供空间以选择自定义图像的颜色数： 2、 16 或 256。
+- **颜色**
+
+   提供空间以选择自定义图像的颜色数： 2、 16 或 256。
   
 ## <a name="requirements"></a>要求
  无

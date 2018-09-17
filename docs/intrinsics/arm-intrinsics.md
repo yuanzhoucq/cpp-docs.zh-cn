@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712798"
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 有关 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)并[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  要从中读取或为其写入的内存位置的地址。  
   
- `Value`（仅存储内部函数）  
- 要写入到指定内存位置的值。  
+ `Value`  
+ 要写入到指定的内存位置 （仅存储内部函数） 的值。  
   
  **返回值 （仅加载内部函数）**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  你可以使用 `__iso_volatile_load8/16/32/64` 和 `__iso_volatile_store8/16/32/64` 内存函数显式执行不进行编译器优化的内存访问。 编译器不能删除、同步或更改这些操作的相对顺序，但不会生成隐式硬件内存屏障。 因此，硬件仍可能对跨多个线程的可观察内存访问进行重新排序。 更确切地说，这些内部函数是等效于以下表达式下编译 **/volatile: iso**。  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717114"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ ms.locfileid: "43201774"
 *db_table*  
 指定 （例如"产品"） 的数据库表的名称的字符串。
 
- 名称（可选）  
-句柄用于处理表的名称。 如果你想要返回多个行的结果，必须指定此参数。 **db_table**生成具有指定的变量*名称*可用来遍历行集或执行多个操作查询。
+*name*  
+（可选）句柄用于处理表的名称。 如果你想要返回多个行的结果，必须指定此参数。 **db_table**生成具有指定的变量*名称*可用来遍历行集或执行多个操作查询。
 
- source_name（可选）  
-将 `CSession` 特性应用到其（在其上运行命令）的类的 `db_source` 变量或实例。 请参阅 [db_source](../windows/db-source.md)。
+*source_name*  
+（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](../windows/db-source.md)。
 
-*hresult* （可选）  
-标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
+*hresult*  
+（可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
 ## <a name="remarks"></a>备注
 

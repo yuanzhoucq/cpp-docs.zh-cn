@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103770"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704234"
 ---
 # <a name="f-set-stack-size"></a>/F（设置堆栈大小）
+
 以字节为单位设置程序堆栈大小。
 
 ## <a name="syntax"></a>语法
@@ -47,9 +48,9 @@ ms.locfileid: "44103770"
 
 此外可以设置堆栈大小：
 
--   使用 **/stack**链接器选项。 有关详细信息，请参阅[/stack](../../build/reference/stack.md)。
+- 使用 **/stack**链接器选项。 有关详细信息，请参阅[/stack](../../build/reference/stack.md)。
 
--   使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。
+- 使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -65,5 +66,5 @@ ms.locfileid: "44103770"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)   
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

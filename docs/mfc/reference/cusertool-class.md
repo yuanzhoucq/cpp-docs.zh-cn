@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202971"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708989"
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 用户工具是运行外部应用程序的菜单项。 **工具**选项卡**自定义**对话框的 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 使用户添加用户工具，并指定名称、 命令、 参数和初始目录的每个用户工具。  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectImage*  
- 指定要显示的图标区域的坐标。  
+*rectImage*<br/>
+[in]指定要显示的图标区域的坐标。  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  返回一个字符串，包含与用户工具关联的命令的文本。  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszCmd*  
- 指定要与用户工具相关联的新应用程序。  
+*lpszCmd*<br/>
+[in]指定要与用户工具相关联的新应用程序。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置用户工具运行的新应用程序。 该方法销毁旧图标，并从给定应用程序中加载新图标。 如果它不能从应用程序加载一个图标，它通过调用加载用户工具的默认图标[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  

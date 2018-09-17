@@ -1,5 +1,5 @@
 ---
-title: 指定路径名 |Microsoft 文档
+title: 指定路径名 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dd121909fbe0aa2f9305b7bd5779b995a69719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d86052d6ca6e40926ed8d99990520044cef351d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375657"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719311"
 ---
 # <a name="specifying-the-pathname"></a>指定路径名
-每个输出文件选项接受*路径名*自变量可以指定的位置和输出文件的名称。 自变量可以包括驱动器名称、 目录和文件名称。 不允许有空格选项和自变量之间。  
-  
- 如果*路径名*包括文件名称不带扩展名，编译器将为输出的默认扩展。 如果*路径名*包括目录却没有文件名称，编译器指定目录中的默认名称创建一个文件。 默认名称基于源文件和基于输出文件的类型的默认扩展的基名称。 如果你离开*路径名*完全，编译器都创建一个文件，默认目录中的默认名称。  
-  
- 或者，*路径名*自变量可以是设备名称 （AUX、 CON、 PRN，或 NUL），而不是文件名。 不使用选项和设备名称或冒号之间空间的设备名称的一部分。  
-  
-|设备名称|表示|  
-|-----------------|----------------|  
-|AUX|辅助设备|  
-|CON|控制台|  
-|PRN|打印机|  
-|NUL|Null 设备 （创建任何文件）|  
-  
-## <a name="example"></a>示例  
- 下面的命令行将发送到打印机的映射文件：  
-  
-```  
-CL /FmPRN HELLO.CPP  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+
+每个输出文件选项接受*pathname*参数可以指定一个位置和输出文件的名称。 参数可以包含驱动器名称、 目录和文件的名称。 不允许有空格选项和参数之间。
+
+如果*pathname*包括文件名称不具有扩展名，编译器将为输出默认扩展插件。 如果*pathname*包括一个目录，但任何文件名称，包括编译器创建具有指定的目录中的默认名称的文件。 默认名称基于源代码文件和输出文件的类型的默认扩展的基名称。 如果不用*pathname*编译器完全，使用默认目录中的默认名称创建一个文件。
+
+或者， *pathname*参数可以是设备名称 （AUX、 CON、 PRN 或 NUL） 而不是文件名称。 不使用选项和设备名称或冒号之间有空格作为设备名称。
+
+|设备名称|表示|
+|-----------------|----------------|
+|AUX|辅助设备|
+|CON|控制台|
+|PRN|打印机|
+|NUL|空设备 （不创建任何文件）|
+
+## <a name="example"></a>示例
+
+下面的命令行发送到打印机映射文件：
+
+```
+CL /FmPRN HELLO.CPP
+```
+
+## <a name="see-also"></a>请参阅
+
+[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110131"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711381"
 ---
 # <a name="uniquelock-class"></a>unique_lock 类
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
+*其他*<br/>
 一个 `unique_lock` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
+*其他*<br/>
 一个 `unique_lock` 对象。
 
 ## <a name="try_lock"></a>try_lock
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*  
+*Rel_time*<br/>
 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*  
+*Abs_time*<br/>
 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>参数
 
-*使用 Mtx*  
+*使用 Mtx*<br/>
 一个 mutex 类型对象。
 
-*Rel_time*  
+*Rel_time*<br/>
 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
-*Abs_time*  
+*Abs_time*<br/>
 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
-*其他*  
+*其他*<br/>
 一个 `unique_lock` 对象。
 
 ### <a name="remarks"></a>备注

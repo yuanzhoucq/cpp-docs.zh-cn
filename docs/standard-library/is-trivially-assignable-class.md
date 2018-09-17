@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd0a8bbffd3a6e0f03635b659dd3743e12c9f077
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700760"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 类
 
@@ -37,9 +37,11 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>参数
 
-为接受赋值的对象的类型。
+*若要*<br/>
+接收赋值的对象的类型。
 
-从提供的值的对象的类型。
+*From*<br/>
+提供值的对象的类型。
 
 ## <a name="remarks"></a>备注
 

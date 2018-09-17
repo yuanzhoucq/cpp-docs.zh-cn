@@ -1,5 +1,5 @@
 ---
-title: 设置链接器选项 |Microsoft 文档
+title: 设置链接器选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18728994be3f44152a263fb8a6009728e33a42a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2fd99732c7f79b3c61ff5b31516b98a478ed4a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374916"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713071"
 ---
 # <a name="setting-linker-options"></a>设置链接器选项
-内部或外部开发环境，可以设置链接器选项。 每个链接器选项的主题讨论如何可以在开发环境中设置它。 请参阅[链接器选项](../../build/reference/linker-options.md)有关的完整列表。  
-  
- 在开发环境外部运行链接时，你可以指定一个或多个方面输入：  
-  
--   上[命令行](../../build/reference/linker-command-line-syntax.md)  
-  
--   使用[命令文件](../../build/reference/link-command-files.md)  
-  
--   在[环境变量](../../build/reference/link-environment-variables.md)  
-  
- 链接第一个处理指定的选项在链接环境变量中，然后按照在命令行指定它们的顺序和命令文件中的选项。 如果一个选项重复使用不同的自变量，处理的最后一个优先。  
-  
- 选项将应用于整个生成;无选项可以应用于特定的输入文件中。  
-  
-## <a name="see-also"></a>请参阅  
- [C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
- [链接器选项](../../build/reference/linker-options.md)
+
+内部或外部的开发环境，可以设置链接器选项。 每个链接器选项的主题讨论如何在开发环境中设置。 请参阅[链接器选项](../../build/reference/linker-options.md)有关的完整列表。
+
+当您在开发环境外部运行链接时，可以在一个或多个方面来指定输入：
+
+- 在[命令行](../../build/reference/linker-command-line-syntax.md)
+
+- 使用[命令文件](../../build/reference/link-command-files.md)
+
+- 在[环境变量](../../build/reference/link-environment-variables.md)
+
+链接第一个处理指定的选项在链接的环境变量中，然后按照它们在命令行指定的顺序和命令文件中的选项。 如果一个选项重复使用不同的参数，处理的最后一个优先。
+
+选项适用于整个生成;无选项可以应用于特定的输入文件。
+
+## <a name="see-also"></a>请参阅
+
+[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

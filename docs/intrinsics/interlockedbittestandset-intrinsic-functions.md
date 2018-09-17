@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5327470057928466c1aede37205ac4f35175b899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712213"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset 内部函数
 **Microsoft 专用**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `a`  
- 指向要检查的内存的指针。  
+*a*<br/>
+[in]指向要检查的内存的指针。  
   
- [in] `b`  
- 要测试的位位置。  
+*b*<br/>
+[in]要测试的位位置。  
   
 ## <a name="return-value"></a>返回值  
  在位置 `b` 上的位在其设置前的值。  

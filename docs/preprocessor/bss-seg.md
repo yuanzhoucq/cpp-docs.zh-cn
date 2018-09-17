@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711147"
 ---
 # <a name="bssseg"></a>bss_seg
 指定其中的未初始化变量存储在 .obj 文件中的段。  
@@ -35,27 +35,27 @@ ms.locfileid: "42541531"
 ```  
   
 ## <a name="remarks"></a>备注  
- 
+
 可以使用查看 Obj 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 未初始化数据的 .obj 文件中的默认段为 .bss。 在某些情况下使用的**bss_seg**可加快通过分组为一个部分未初始化的数据加载时间。  
   
 **bss_seg**不带任何参数将段重置为.bss。  
   
-*推送*（可选）  
-将一个记录置于内部编译器堆栈上。 一个*推送*可以*标识符*并*段名称*。  
+**push**<br/>
+（可选）将一个记录置于内部编译器堆栈上。 一个*pu*sh * 可以*标识符*并*段名称*。  
   
-*pop* （可选）  
-从内部编译器堆栈的顶部移除一个记录。  
+**pop**<br/>
+（可选）从内部编译器堆栈的顶部移除记录。  
   
-*标识符*（可选）  
-与一起使用时*推送*，将名称分配给内部编译器堆栈上的记录。 与一起使用时*pop*，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
+*identifier*<br/>
+（可选）与一起使用时**推送**，将名称分配给内部编译器堆栈上的记录。 与一起使用时**pop**，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
   
-*标识符*使多个记录只用一个*pop*命令。  
+*标识符*使多个记录只用一个**pop**命令。  
   
-*"段名称"*（可选）  
-段的名称。 与一起使用时*pop*，在堆栈中弹出和*段名称*将成为活动段名称。  
+*"段名称"*<br/>
+（可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。  
   
-*"段类"* （可选）  
-包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
+*"段类"*<br/>
+（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。  
   
 ## <a name="example"></a>示例  
   

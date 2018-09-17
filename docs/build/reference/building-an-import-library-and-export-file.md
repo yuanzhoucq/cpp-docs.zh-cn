@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723302"
 ---
 # <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
 
@@ -60,7 +60,7 @@ ms.locfileid: "43894611"
 
 以下选项将应用于生成导入库和导出文件：
 
-> **/ 输入输出：** *导入*  
+> **/ 输入输出：** *导入*
 
 重写默认输出文件名*导入*创建库。 默认名称如果未指定 /OUT，是第一个对象文件或库中的 LIB 命令和扩展的基名称。 lib。 导出的文件都有相同的基名称作为导入库和扩展。 exp。
 

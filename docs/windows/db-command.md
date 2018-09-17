@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709899"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
- 名称（可选）  
-用于处理行集的句柄名称。 如果指定名称 ， **db_command** 会生成具有指定名称 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 ，则无法向用户返回多个行的结果。
+*name*  
+（可选）用于处理行集的句柄的名称。 如果指定名称 ， **db_command** 会生成具有指定名称 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 ，则无法向用户返回多个行的结果。
 
- source_name（可选）  
-将 `CSession` 特性应用到其（在其上运行命令）的类的 `db_source` 变量或实例。 请参阅 [db_source](../windows/db-source.md)。
+*source_name*  
+（可选）`CSession`变量或具有的类的实例`db_source`特性应用于它执行命令。 请参阅 [db_source](../windows/db-source.md)。
 
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。
 
-*hresult* （可选）  
-标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
+*hresult*  
+（可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
- 绑定（可选）  
-允许从 OLE DB 命令分离绑定参数。
+*绑定*  
+（可选）可以从 OLE DB 命令分离绑定参数。
 
 如果指定的值*绑定*， **db_command**将分析相关联的值，但不会分析\[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定`Bindings=""`。
 
 如果未指定的值*绑定*， **db_command**将分析绑定参数块，查找 **(** 后, 跟 **\[** _bindtype_**]** 在方括号内后, 跟一个或多个以前声明 c + + 成员变量后, 接 **)**。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
 
-*bulk_fetch* （可选）  
-指定要提取的行数的整数值。
+*bulk_fetch*  
+（可选）一个整数值，指定要提取的行数。
 
 默认值为 1，指定单行提取（行集将为 [CRowset](../data/oledb/crowset-class.md)类型）。
 

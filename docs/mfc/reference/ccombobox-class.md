@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205282"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702086"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 提供 Windows 组合框功能。  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpszText*|指向该缓冲区用于接收的提示标志文本。|  
-|[in]*cchText*|缓冲区的大小， *lpszText*参数指向。|  
+|*lpszText*|[out]指向该缓冲区用于接收的提示标志文本。|  
+|*cchText*|[in]缓冲区的大小， *lpszText*参数指向。|  
   
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含的提示标志文本，如果存在; 否则为`CString`长度为零的对象。  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*lpszText*|指向以 null 结尾的缓冲区，其中包含提示文本。|  
+|*lpszText*|[in]指向以 null 结尾的缓冲区，其中包含提示文本。|  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iMinVisible*|指定可见项的最小数目。|  
+|*iMinVisible*|[in]指定可见项的最小数目。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

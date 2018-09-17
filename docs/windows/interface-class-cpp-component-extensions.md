@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714306"
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
 
@@ -50,8 +50,8 @@ interface class
 *inherit_access*  
 可访问性*base_interface*。  唯一允许的可访问性的基接口是**公共**（默认值）。
 
-*base_interface* （可选）  
-接口的基接口*名称*。
+*base_interface*  
+（可选）接口的基接口*名称*。
 
 ### <a name="remarks"></a>备注
 

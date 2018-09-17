@@ -1,5 +1,5 @@
 ---
-title: /Zc:externConstexpr （启用 extern constexpr 变量） |Microsoft 文档
+title: '/Zc: externconstexpr （启用 extern constexpr 变量） |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cbce8366fdd7be62c8d71f838b298d77849dcdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34aea466a3e673c3eebb3b415d544d9299fed615
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378413"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713136"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr （启用 extern constexpr 变量）
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc: externconstexpr （启用 extern constexpr 变量）
 
-**/Zc:externConstexpr**编译器选项告知编译器符合 c + + 标准，并允许为外部链接`constexpr`变量。 默认情况下，Visual Studio 始终为`constexpr`变量内部链接，即使你指定`extern`关键字。
+**/Zc: externconstexpr**编译器选项告知编译器符合 c + + 标准，并允许的外部链接`constexpr`变量。 默认情况下，Visual Studio 始终都提供`constexpr`变量内部链接，即使您指定`extern`关键字。
 
 ## <a name="syntax"></a>语法
 
@@ -34,9 +34,9 @@ ms.locfileid: "32378413"
 
 ## <a name="remarks"></a>备注
 
-**/Zc:externConstexpr**编译器选项将导致编译器要应用于通过使用声明的变量的外部链接`extern constexpr`。 在早期版本的 Visual Studio 中，并按默认或如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接`constexpr`变量即使`extern`使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 [/ 宽松-](permissive-standards-conformance.md)选项不会启用 **/Zc:externConstexpr**。
+**/Zc: externconstexpr**编译器选项将使编译器要应用于通过使用声明的变量的外部链接`extern constexpr`。 在早期版本的 Visual Studio 中，并且默认情况下或者如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接`constexpr`变量，即使`extern`使用关键字。 **/Zc: externconstexpr**选项是从开始在 Visual Studio 2017 更新 15.6 版中提供。 和默认情况下处于关闭状态。 [触发-](permissive-standards-conformance.md)选项不会启用 **/zc: externconstexpr**。
 
-如果标头文件包含声明的变量`extern constexpr`，它必须进行标记[__declspec （selectany)](../../cpp/selectany.md)以便重复声明合并到链接的二进制文件中的单个实例。 否则可能会看到链接器错误，例如，LNK2005 有关违反单个定义规则。
+如果标头文件包含声明的变量`extern constexpr`，必须将标记[__declspec （selectany)](../../cpp/selectany.md)以便合并到链接的二进制文件中的单个实例的重复声明。 否则可能会看到链接器错误，例如，LNK2005 违反单个定义规则。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项
 
@@ -44,9 +44,9 @@ ms.locfileid: "32378413"
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 添加 **/Zc:externConstexpr**或 **/Zc:externConstexpr-** 到**其他选项：** 窗格。
+1. 添加 **/zc: externconstexpr**或 **/Zc:externConstexpr-** 到**附加选项：** 窗格。
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)  
+[/Zc （一致性）](../../build/reference/zc-conformance.md)
 [auto 关键字](../../cpp/auto-keyword.md)

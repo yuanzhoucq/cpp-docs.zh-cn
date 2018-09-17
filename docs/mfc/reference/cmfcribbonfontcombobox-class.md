@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705678"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 类
 实现包含字体列表的组合框。 将组合框置于功能区面板上。  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nFontType*  
- 指定要添加的字体的字体类型。  
+*nFontType*<br/>
+[in]指定要添加的字体的字体类型。  
   
- [in]*nCharSet*  
- 指定要添加的字体的字符集。  
+*nCharSet*<br/>
+[in]指定要添加的字体的字符集。  
   
- [in]*nPitchAndFamily*  
- 指定的间距和要添加的字体系列。  
+*nPitchAndFamily*<br/>
+[in]指定的间距和要添加的字体系列。  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  构造并初始化[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)对象。  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 当用户从组合框中选择某个项时执行命令的命令 ID。  
+*nID*<br/>
+[in]当用户从组合框中选择某个项时执行命令的命令 ID。  
   
- [in]*nFontType*  
- 指定要在组合框中显示哪种字体类型。 有效选项是是 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 或是它们的任何按位组合。  
+*nFontType*<br/>
+[in]指定要在组合框中显示哪种字体类型。 有效选项是是 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 或是它们的任何按位组合。  
   
- [in]*nCharSet*  
- 筛选器中组合框为属于指定的字符集的字体...  
+*nCharSet*<br/>
+[in]筛选器中组合框为属于指定的字符集的字体...  
   
- [in]*nPitchAndFamily*  
- 指定的间距和组合框中显示的字体系列。  
+*nPitchAndFamily*<br/>
+[in]指定的间距和组合框中显示的字体系列。  
   
- [in]*nWidth*  
- 指定以像素为单位，组合框的宽度。  
+*nWidth*<br/>
+[in]指定以像素为单位，组合框的宽度。  
   
 ### <a name="remarks"></a>备注  
  有关可能的详细信息*nFontType*参数值，请参阅[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  

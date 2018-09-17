@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713591"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 表示与文件相关的异常条件。  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in、 out]*lpszError*  
- 指向接收一条错误消息的缓冲区。  
+*lpszError*<br/>
+[in、 out]指向接收一条错误消息的缓冲区。  
   
- [in]*nMaxError*  
- 最大可以容纳指定的缓冲区的字符数。 这包括终止 null 字符。  
+*nMaxError*<br/>
+[in]最大可以容纳指定的缓冲区的字符数。 这包括终止 null 字符。  
   
- [in、 out]*pnHelpContext*  
- 为接收帮助上下文 id。 无符号整数的指针 如果`NULL`，返回没有 ID。  
+*pnHelpContext*<br/>
+[in、 out]为接收帮助上下文 id。 无符号整数的指针 如果`NULL`，返回没有 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  

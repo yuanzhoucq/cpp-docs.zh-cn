@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706597"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 专用**  
@@ -41,8 +41,8 @@ void __svm_invlpga(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `Va`|要使之无效的页的虚拟地址。|  
-|[in] `ASID`|地址空间标识符 (ASID) 页上，要使之无效。|  
+|*Va*|[in]要使之无效的页的虚拟地址。|  
+|*ASID*|[in]地址空间标识符 (ASID) 页上，要使之无效。|  
   
 ## <a name="remarks"></a>备注  
  `__svm_invlpga`函数等同于`INVLPGA`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。  

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199490"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710225"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>参数
 
-*类型*  
- 要存储在矢量中的元素数据类型
+*类型*<br/>
+要存储在矢量中的元素数据类型
 
-*分配器*  
- 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<Type>`。
+*分配器*<br/>
+表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<Type>`。
 
 ## <a name="remarks"></a>备注
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>参数
 
-*第一个*  
- 要复制的元素范围内的第一个元素的位置。
+*第一个*<br/>
+要复制的元素范围内的第一个元素的位置。
 
-*最后一个*  
- 要复制的元素范围外的第一个元素的位置。
+*最后一个*<br/>
+要复制的元素范围外的第一个元素的位置。
 
-“计数”  
- 要插入到矢量的元素的副本数。
+“计数”<br/>
+要插入到矢量的元素的副本数。
 
-*val*  
- 插入到向量中的元素的值。
+*val*<br/>
+插入到向量中的元素的值。
 
-*IList*  
- 包含要插入的元素的 initializer_list。
+*IList*<br/>
+包含要插入的元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>参数
 
-*_Pos*  
- 要在矢量中引用的元素的下标或位置编号。
+*_Pos*<br/>
+要在矢量中引用的元素的下标或位置编号。
 
 ### <a name="return-value"></a>返回值
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>参数
 
 *val*<br/>
- 要赋给添加到矢量末尾处的元素的值。
+要赋给添加到矢量末尾处的元素的值。
 
 ### <a name="example"></a>示例
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>参数
 
-*count*  
- 要分配给向量的最小存储长度。
+*count*<br/>
+要分配给向量的最小存储长度。
 
 ### <a name="example"></a>示例
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>参数
 
-*Newsize*  
- 矢量的新大小。
+*Newsize*<br/>
+矢量的新大小。
 
-*val*  
- 新大小大于旧大小时添加至矢量的新元素的初始化值。 如果省略该值，则新对象将使用其默认构造函数。
+*val*<br/>
+新大小大于旧大小时添加至矢量的新元素的初始化值。 如果省略该值，则新对象将使用其默认构造函数。
 
 ### <a name="remarks"></a>备注
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 一个向量，提供要交换的元素或其元素将要与向量的交换的向量*左*。
+*right*<br/>
+一个向量，提供要交换的元素或其元素将要与向量的交换的向量*左*。
 
-*left*  
- 其元素将要与向量的交换的向量*右*。
+*left*<br/>
+其元素将要与向量的交换的向量*右*。
 
 ### <a name="example"></a>示例
 

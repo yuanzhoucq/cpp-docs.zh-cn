@@ -1,5 +1,5 @@
 ---
-title: 计划 |Microsoft 文档
+title: 计划 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712148"
 ---
 # <a name="schedule"></a>日程安排
 适用于[为](../../../parallel/openmp/reference/for-openmp.md)指令。  
@@ -34,7 +34,7 @@ schedule(type[,size])
   
 #### <a name="parameters"></a>参数  
  `type`  
- 计划类型：  
+ 计划的类型：  
   
 -   `dynamic`  
   
@@ -44,8 +44,8 @@ schedule(type[,size])
   
 -   `static`  
   
- `size`（可选）  
- 指定的迭代的大小。 `size` 必须为整数。 不是有效的在`type`是`runtime`。  
+*size*<br/>
+（可选）指定的迭代的大小。 `size` 必须是整数。 时未有效`type`是`runtime`。  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[2.4.1 for 构造](../../../parallel/openmp/2-4-1-for-construct.md)。  

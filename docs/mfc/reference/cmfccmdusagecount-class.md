@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853759"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719961"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
 跟踪 Windows 消息，例如当用户从菜单选择项的使用的计数。  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*uiCmd*|指定命令计数器递增。|  
+|*uiCmd*|[in]指定命令计数器递增。|  
   
 ### <a name="remarks"></a>备注  
  此方法将新条目添加到命令计数站点地图结构`m_CmdUsage`，如果该条目不存在。  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*uiCmd*|要检索命令计数器的 ID。|  
+|*uiCmd*|[in]要检索命令计数器的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  与给定的命令 ID 相关联的使用情况计数  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*uiCmd*|指定要检查的命令。|  
+|*uiCmd*|[in]指定要检查的命令。|  
   
 ### <a name="return-value"></a>返回值  
  如果经常使用该命令; 非零值否则为 0。  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*ar*|一个`CArchive`要从 / 向序列化对象。|  
+|*ar*|[in]一个`CArchive`要从 / 向序列化对象。|  
   
 ### <a name="remarks"></a>备注  
  此方法序列化的命令计数映射结构`m_CmdUsage`，并总命令的用法， `m_nTotalUsage`、 计数器或指定的存档。  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*nStartCount*|新初始计数为所有已跟踪的命令。|  
-|[in]*nMinUsagePercentage*|新的最小使用率百分比。|  
+|*nStartCount*|[in]新初始计数为所有已跟踪的命令。|  
+|*nMinUsagePercentage*|[in]新的最小使用率百分比。|  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，FALSE 如果为 TRUE *nMinUsagePercentage*参数为大于或等于 100。  

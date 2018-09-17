@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195827"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721183"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 `CMFCShellListCtrl`类提供 Windows 列表控件功能并通过包含显示 shell 项的列表的功能会将其展开。  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPath*  
- 一个字符串，包含一个文件夹的路径。  
+*lpszPath*<br/>
+[in]一个字符串，包含一个文件夹的路径。  
   
- [in]*lpItemInfo*  
- 一个指向`LPAFX_SHELLITEMINFO`结构描述要显示的文件夹。  
+*lpItemInfo*<br/>
+[in]一个指向`LPAFX_SHELLITEMINFO`结构描述要显示的文件夹。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 S_OK否则为 E_FAIL。  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 一个布尔值，指定是否使用此框架，快捷菜单。  
+*bEnable*<br/>
+[in]一个布尔值，指定是否使用此框架，快捷菜单。  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  检索当前所选文件夹中的路径[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strPath*  
- 对，则该方法将路径的字符串参数的引用。  
+*strPath*<br/>
+[out]对，则该方法将路径的字符串参数的引用。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strName*  
- 对，则该方法将名称的字符串参数的引用。  
+*strName*<br/>
+[out]对，则该方法将名称的字符串参数的引用。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strPath*  
- 对接收路径的字符串的引用。  
+*strPath*<br/>
+[out]对接收路径的字符串的引用。  
   
- [in]*iItem*  
- 列表项的索引。  
+*iItem*<br/>
+[in]列表项的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 TRUEFALSE 否则为。  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lParam1*  
- [in]*lParam2*  
+*lParam1*<br/>
+[in][in]*lParam2*  
  [in]*iColumn*  
   
 ### <a name="return-value"></a>返回值  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*tmFile*  
- 与文件相关联的日期。  
+*tmFile*<br/>
+[in]与文件相关联的日期。  
   
- [out]*str*  
- 一个字符串，包含格式的文件的日期。  
+*str*<br/>
+[out]一个字符串，包含格式的文件的日期。  
   
 ### <a name="remarks"></a>备注  
  当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象显示与文件相关联的日期时，它必须将该日期转换为字符串格式。 `CMFCShellListCtrl`使用此方法来执行该转换。 默认情况下，此方法使用当前区域设置来设置日期格式转换为字符串。  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lFileSize*  
- 该框架将显示文件的大小。  
+*lFileSize*<br/>
+[in]该框架将显示文件的大小。  
   
- [out]*str*  
- 一个字符串，包含格式的文件大小。  
+*str*<br/>
+[out]一个字符串，包含格式的文件大小。  
   
 ### <a name="remarks"></a>备注  
  当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象需要显示文件的大小，它必须转换为字符串格式的文件大小。 `CMFCShellListCtrl`使用此方法来执行该转换。 默认情况下，此方法将文件大小从字节转换为千字节为单位，并使用当前区域设置可以设置为字符串的大小。  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iItem*  
- 项索引。  
+*iItem*<br/>
+[in]项索引。  
   
- [in]*pItem*  
- LPAFX_SHELLITEMINFO 参数，用于描述项。  
+*pItem*<br/>
+[in]LPAFX_SHELLITEMINFO 参数，用于描述项。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则图标图像的索引如果函数失败，为-1。  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iItem*  
- 项索引。  
+*iItem*<br/>
+[in]项索引。  
   
- [in]*iColumn*  
- 感兴趣的列。  
+*iColumn*<br/>
+[in]感兴趣的列。  
   
- [in]*pItem*  
- LPAFX_SHELLITEMINFO 参数，用于描述项。  
+*pItem*<br/>
+[in]LPAFX_SHELLITEMINFO 参数，用于描述项。  
   
 ### <a name="return-value"></a>返回值  
  一个`CString`，包含与项关联的文本。  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nTypes*  
- 项的列表类型`CMFCShellListCtrl`对象支持。  
+*nTypes*<br/>
+[in]项的列表类型`CMFCShellListCtrl`对象支持。  
   
 ### <a name="remarks"></a>备注  
  项类型的列表的详细信息，请参阅[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)。  

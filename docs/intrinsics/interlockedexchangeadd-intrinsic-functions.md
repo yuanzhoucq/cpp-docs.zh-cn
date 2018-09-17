@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700909"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 内部函数
 **Microsoft 专用**  
@@ -164,11 +164,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Addend`  
- 要相加的值；由加法得出的结果代替。  
+*加数*<br/>
+[in、 out]要添加到; 的值替换为相加的结果。  
   
- [in] `Value`  
- 要相加的值。  
+*值*<br/>
+[in]要添加的值。  
   
 ## <a name="return-value"></a>返回值  
  返回值是由 `Addend` 参数指向的变量的初始值。  

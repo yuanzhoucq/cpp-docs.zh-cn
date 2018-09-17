@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715352"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 `CMFCColorDialog`类表示颜色选择对话框。  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrInit*  
- 默认颜色选择。 如果未不指定任何值，默认值为 RGB(0,0,0) （黑色）。  
+*clrInit*<br/>
+[in]默认颜色选择。 如果未不指定任何值，默认值为 RGB(0,0,0) （黑色）。  
   
- [in]*dwFlags*  
- （保留）。  
+*dwFlags*<br/>
+[in]保留。
   
- [in]*pParentWnd*  
- 指向对话框的父级或所有者窗口的指针。  
+*pParentWnd*<br/>
+[in]指向对话框的父级或所有者窗口的指针。  
   
- [in]*hPal*  
- 调色板的句柄颜色。  
+*hPal*<br/>
+[in]调色板的句柄颜色。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rgb*  
- RGB 颜色值  
+*rgb*<br/>
+[in]RGB 颜色值  
   
 ### <a name="remarks"></a>备注  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rgb*  
- 一个[COLORREF](/windows/desktop/gdi/colorref) ，它指定的 RGB 颜色。  
+*rgb*<br/>
+[in]一个[COLORREF](/windows/desktop/gdi/colorref) ，它指定的 RGB 颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*R*  
- 指定的 RGB 值的红色组件。  
+*R*<br/>
+[in]指定的 RGB 值的红色组件。  
   
- [in]*G*  
- 指定的 RGB 值的绿色组件。  
+*G*<br/>
+[in]指定的 RGB 值的绿色组件。  
   
- [in]*B*  
- 指定的 RGB 值的蓝色组件。  
+*B*<br/>
+[in]指定的 RGB 值的蓝色组件。  
   
 ### <a name="remarks"></a>备注  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*R*  
- 指定的 RGB 值的红色组件  
+*R*<br/>
+[in]指定的 RGB 值的红色组件  
   
- [in]*G*  
- 指定一个 RGB 值的绿色组件  
+*G*<br/>
+[in]指定一个 RGB 值的绿色组件  
   
- [in]*B*  
- 指定一个 RGB 值的蓝色组件  
+*B*<br/>
+[in]指定一个 RGB 值的蓝色组件  
   
 ### <a name="remarks"></a>备注  
   

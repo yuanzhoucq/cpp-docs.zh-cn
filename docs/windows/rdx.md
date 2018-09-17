@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605922"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719715"
 ---
 # <a name="rdx"></a>rdx
 
@@ -43,8 +43,8 @@ ms.locfileid: "42605922"
 *key*  
 若要创建或打开密钥的名称。
 
-*valuename* （可选）  
-指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。
+*valuename*  
+（可选）指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。
 
 *regtype*  
 要添加的注册表项的类型。 可以是以下之一： `text`， `dword`， `binary`，或`CString`。

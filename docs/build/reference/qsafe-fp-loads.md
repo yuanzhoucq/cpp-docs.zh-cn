@@ -1,5 +1,5 @@
 ---
-title: / Qsafe_fp_loads |Microsoft 文档
+title: /Qsafe_fp_loads |Microsoft Docs
 ms.custom: ''
 ms.date: 01/24/2018
 ms.technology:
@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378280"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713656"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -28,13 +28,13 @@ ms.locfileid: "32378280"
 
 ## <a name="remarks"></a>备注
 
-**/ Qsafe_fp_loads**选项仅适用于编译器面向 x86; 它不是面向 x64 或 ARM 的编译器中可用。
+**/Qsafe_fp_loads**才可在面向 x86 的; 它不是在面向 x64 或 ARM 的编译器中可用。
 
-**/ Qsafe_fp_loads**强制编译器使用整数移动指令而不是浮点移动指令内存和 MMX 之间移动数据寄存器。 多个控制路径中可加载的浮点值可能导致加载异常（例如 NaN 值）时，此选项还禁用这些值的寄存器加载优化。
+**/Qsafe_fp_loads**强制编译器使用整数移动指令而不是浮点移动指令内存和 MMX 之间移动数据寄存器。 多个控制路径中可加载的浮点值可能导致加载异常（例如 NaN 值）时，此选项还禁用这些值的寄存器加载优化。
 
-此选项将重写[/fp： 除](../../build/reference/fp-specify-floating-point-behavior.md)。 **/ Qsafe_fp_loads**指定由指定的编译器行为子集 **/fp： 除**。
+此选项重写[/fp： 除](../../build/reference/fp-specify-floating-point-behavior.md)。 **/Qsafe_fp_loads**指定由指定的编译器行为的子集 **/fp： 除**。
 
-**/ Qsafe_fp_loads**与不兼容[/clr](../../build/reference/clr-common-language-runtime-compilation.md)和[/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md)。 有关浮点点编译器选项的详细信息，请参阅[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)。
+**/Qsafe_fp_loads**与不兼容[/clr](../../build/reference/clr-common-language-runtime-compilation.md)并[/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md)。 有关浮点编译器选项的详细信息，请参阅[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -50,6 +50,6 @@ ms.locfileid: "32378280"
 
 ## <a name="see-also"></a>请参阅
 
-[/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)  
-[编译器选项](../../build/reference/compiler-options.md)  
-[设置编译器选项](../../build/reference/setting-compiler-options.md)  
+[/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

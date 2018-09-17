@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709834"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 定义文档模板基本功能的抽象基类。  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPathName*  
- 指向包含要打开的文档的文件的路径。  
+*lpszPathName*<br/>
+[in]指向包含要打开的文档的文件的路径。  
   
- [in]*bAddToMRU*  
- TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。  
+*bAddToMRU*<br/>
+[in]TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。  
   
 ### <a name="return-value"></a>返回值  
  对其文件由的文档的指针*lpszPathName*;如果不成功，则为 NULL。  

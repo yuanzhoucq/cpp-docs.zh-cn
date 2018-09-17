@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207387"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714651"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 实现可使你使用指向标识符列表 (PIDL) 的指针的几种方法。  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strOutFolder*  
- 该方法用于存储所选文件夹的路径的字符串。  
+*strOutFolder*<br/>
+[out]该方法用于存储所选文件夹的路径的字符串。  
   
- [in]*pWndParent*  
- 指向父窗口的指针。  
+*pWndParent*<br/>
+[in]指向父窗口的指针。  
   
- [in]*lplszInitialFolder*  
- 一个字符串，包含显示的对话框时，默认情况下选择的文件夹。  
+*lplszInitialFolder*<br/>
+[in]一个字符串，包含显示的对话框时，默认情况下选择的文件夹。  
   
- [in]*lpszTitle*  
- 对话框标题。  
+*lpszTitle*<br/>
+[in]对话框标题。  
   
- [in]*ulFlags*  
- 指定有关对话框中选项的标志。 请参阅[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)详细说明。  
+*ulFlags*<br/>
+[in]指定有关对话框中选项的标志。 请参阅[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)详细说明。  
   
- [out]*piFolderImage*  
- 指向方法写入所选文件夹的图像索引位置的整数值的指针。  
+*piFolderImage*<br/>
+[out]指向方法写入所选文件夹的图像索引位置的整数值的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果用户从对话框中，选择一个文件夹，非零值否则为 0。  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidl1*  
- 第一项。  
+*pidl1*<br/>
+[in]第一项。  
   
- [in]*pidl2*  
- 第二项。  
+*pidl2*<br/>
+[in]第二项。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新的项列表，如果函数成功，否则为空。  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidlSource*  
- 原来的项列表。  
+*pidlSource*<br/>
+[in]原来的项列表。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则新创建的项列表指向的指针否则为，为 NULL。  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*cbSize*  
- 项列表的大小。  
+*cbSize*<br/>
+[in]项列表的大小。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建的项列表指向的指针否则为，为 NULL。  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidl*  
- 若要删除一个项列表。  
+*pidl*<br/>
+[in]若要删除一个项列表。  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  将项列表中返回的项数。  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidl*  
- 指向一个项列表的指针。  
+*pidl*<br/>
+[in]指向一个项列表的指针。  
   
 ### <a name="return-value"></a>返回值  
  在项列表中的项的数目。  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidl*  
- 指向一个项列表的指针。  
+*pidl*<br/>
+[in]指向一个项列表的指针。  
   
 ### <a name="return-value"></a>返回值  
  项列表的大小。  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pidl*  
- 要循环访问的项的列表。  
+*pidl*<br/>
+[in]要循环访问的项的列表。  
   
 ### <a name="return-value"></a>返回值  
  指向列表中的下一项的指针。  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpidl*  
- 将检索其父 PIDL。  
+*lpidl*<br/>
+[in]将检索其父 PIDL。  
   
- [out]*lpidlParent*  
- 对该方法将在其中存储结果 PIDL 的引用。  
+*lpidlParent*<br/>
+[out]对该方法将在其中存储结果 PIDL 的引用。  
   
 ### <a name="return-value"></a>返回值  
  父级 PIDL 的级别。  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPath*  
- 一个字符串，指定项的路径。  
+*lpszPath*<br/>
+[in]一个字符串，指定项的路径。  
   
- [out]*pidl*  
- 对 PIDL 的引用。 该方法使用此 PIDL 存储指向其返回值的指针。  
+*pidl*<br/>
+[out]对 PIDL 的引用。 该方法使用此 PIDL 存储指向其返回值的指针。  
   
 ### <a name="return-value"></a>返回值  
  返回 NOERROR 如果成功，则一个 OLE 定义的错误值。  

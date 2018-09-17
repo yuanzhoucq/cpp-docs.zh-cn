@@ -1,5 +1,5 @@
 ---
-title: -J (默认 char 类型是无符号) |Microsoft 文档
+title: -J (默认 char 类型是无符号) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,45 +23,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a93172296b0e2e6d54dc428ffc62812ad979b160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 400985751d9ceebf7cc2c5f632cb33c5ba847bfe
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714280"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J（默认 char 类型是无符号的）
-将默认 `char` 类型从 `signed char` 更改为 `unsigned char`，并且在将 `char` 类型扩展到 `int` 类型时，将对其进行零扩展。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/J  
-```  
-  
-## <a name="remarks"></a>备注  
- 如果`char`值显式声明为`signed`、 **/J**选项不影响它，且值为符号扩展时扩展到`int`类型。  
-  
- **/J**选项定义`_CHAR_UNSIGNED`，与用于`#ifndef`LIMITS.h 文件定义的默认值的范围中`char`类型。  
-  
- ANSI C 和 c + + 不需要的特定实现`char`类型。 当你正在使用最终将转换为非英语语言的字符数据时，此选项非常有用。  
-  
+
+将默认 `char` 类型从 `signed char` 更改为 `unsigned char`，并且在将 `char` 类型扩展到 `int` 类型时，将对其进行零扩展。
+
+## <a name="syntax"></a>语法
+
+```
+/J
+```
+
+## <a name="remarks"></a>备注
+
+如果`char`值显式声明为`signed`，则 **/J**选项不会影响它，且值为符号扩展时它扩展为`int`类型。
+
+**/J**选项定义`_CHAR_UNSIGNED`，这用于`#ifndef`LIMITS.h 文件来定义默认值的范围中`char`类型。
+
+ANSI C 和 c + + 不需要的特定实现`char`类型。 使用最终将被转换为非英语语言的字符数据时，此选项非常有用。
+
 > [!NOTE]
->  如果您将此编译器选项用于 ATL/MFC，则可能产生错误。 尽管您可以通过定义 `_ATL_ALLOW_CHAR_UNSIGNED` 禁用此错误，但此解决方法不受支持可能不会总是有用。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。  
-  
-2.  在项目中**属性页**对话框中，在左窗格中下**配置属性**，展开**C/c + +** ，然后选择**命令行**.  
-  
-3.  在**其他选项**窗格中，指定 **/J**编译器选项。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [使用项目属性](../../ide/working-with-project-properties.md)
+>  如果您将此编译器选项用于 ATL/MFC，则可能产生错误。 尽管您可以通过定义 `_ATL_ALLOW_CHAR_UNSIGNED` 禁用此错误，但此解决方法不受支持可能不会总是有用。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。
+
+1. 在项目中**属性页**对话框中，在下的左窗格**配置属性**，展开**C/c + +** ，然后选择**命令行**.
+
+1. 在中**其他选项**窗格中，指定 **/J**编译器选项。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[使用项目属性](../../ide/working-with-project-properties.md)

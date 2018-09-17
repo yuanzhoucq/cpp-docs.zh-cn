@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721300"
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft 专用**  
@@ -39,14 +39,14 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Multiplier`  
- 要相乘的第一个 64 位整数。  
+*乘数*<br/>
+[in]要相乘的第一个 64 位整数。  
   
- [in] `Multiplicand`  
- 要相乘的第二个 64 位整数。  
+*被乘数*<br/>
+[in]要相乘的第二个 64 位整数。  
   
- [out] `HighProduct`  
- 产品的高 64 位。  
+*HighProduct*<br/>
+[out]该产品的高 64 位。  
   
 ## <a name="return-value"></a>返回值  
  产品的低 64 位。  

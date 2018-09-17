@@ -1,5 +1,5 @@
 ---
-title: __stosq |Microsoft 文档
+title: __stosq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332021"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715495"
 ---
 # <a name="stosq"></a>__stosq
 **Microsoft 专用**  
   
- 生成一个存储字符串指令 (`rep stosq`)。  
+ 生成的存储字符串指令 (`rep stosq`)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>参数  
- [out] `Dest`  
- 操作的目标。  
+*dest*<br/>
+[out]该操作的目标。  
   
- [in] `Data`  
- 要存储的数据。  
+*Data*<br/>
+[in]要存储的数据。  
   
- [in] `Count`  
- 四字要写入的块的长度。  
+“计数”<br/>
+[in]四字要写入的块的长度。  
   
 ## <a name="requirements"></a>要求  
   
@@ -59,7 +59,7 @@ void __stosb(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 结果是，四字`Data`写入到的块`Count`四字`Dest`字符串。  
+ 结果是，四字`Data`写入到块`Count`中的四字`Dest`字符串。  
   
  此例程仅可用作内部函数。  
   

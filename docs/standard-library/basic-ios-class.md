@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725317"
 ---
 # <a name="basicios-class"></a>basic_ios 类
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>参数
 
-*状态*（可选） 你想要清除所有标志后设置标志。 默认为 `goodbit`。
+*state*<br/>
+（可选）你想要清除所有标志后设置标志。 默认为 `goodbit`。
 
-*reraise* （可选） 指定是否应重新引发异常。 默认情况下**false** （不会重新引发异常）。
+*reraise*<br/>
+（可选）指定是否应重新引发异常。 默认情况下**false** （不会重新引发异常）。
 
 ### <a name="remarks"></a>备注
 

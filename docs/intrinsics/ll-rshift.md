@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8df70d0ba5c0f957620ee204256b6c92ce4c01f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544422"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722067"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 专用**  
@@ -40,11 +40,11 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Mask`  
- 要右移位的 64 位整数值。  
+*掩码*<br/>
+[in]要右移位的 64 位整数值。  
   
- [in] `nBit`  
- 要切换，请取模 64 在 x64 上，并取模运算在 x86 上的 32 位的数。  
+*nBit*<br/>
+[in]要切换，请取模 64 在 x64 上，并取模运算在 x86 上的 32 位的数。  
   
 ## <a name="return-value"></a>返回值  
  掩码移动`nBit`位。  

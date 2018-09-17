@@ -1,7 +1,7 @@
 ---
 title: const_seg |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541725"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705206"
 ---
 # <a name="constseg"></a>const_seg
 指定的段位置[const](../cpp/const-cpp.md)变量存储在.obj 文件中。  
@@ -34,33 +34,35 @@ ms.locfileid: "42541725"
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>备注  
- 
+### <a name="parameters"></a>参数
+
+**push**<br/>
+（可选）将一个记录置于内部编译器堆栈上。 一个**推送**可以*标识符*并*段名称*。  
+  
+**pop**<br/>
+（可选）从内部编译器堆栈的顶部移除记录。  
+  
+*identifier*<br/>
+（可选）与一起使用时**推送**，将名称分配给内部编译器堆栈上的记录。 与一起使用时**pop**，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
+  
+使用*标识符*使多个记录只用一个**pop**命令。  
+  
+"*段名称*"<br/>  
+（可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。  
+  
+"*段类*"<br/>
+（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。  
+  
+## <a name="remarks"></a>备注
+
 这些术语的含义*段*并*部分*是本主题中可互换的。  
   
 可以使用查看 OBJ 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 .obj 文件中针对 `const` 变量的默认段是 .rdata。 某些 `const` 变量（如标量）将自动内联到代码流中。 内联代码将不会显示在 .rdata 中。  
   
 在 `const_seg` 中定义需要动态初始化的对象会导致未定义的行为。  
   
-不带参数的 `#pragma const_seg` 会将段重置为 .rdata。  
-  
-*推送*（可选）  
-将一个记录置于内部编译器堆栈上。 一个*推送*可以*标识符*并*段名称*。  
-  
-*pop* （可选）  
-从内部编译器堆栈的顶部移除一个记录。  
-  
-*标识符*（可选）  
-与一起使用时*推送*，将名称分配给内部编译器堆栈上的记录。 与一起使用时*pop*，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
-  
-使用*标识符*使多个记录只用一个*pop*命令。  
-  
-"*段名称*"（可选）  
-段的名称。 与一起使用时*pop*，在堆栈中弹出和*段名称*将成为活动段名称。  
-  
-"*段类*"（可选）  
-包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
-  
+不带参数的 `#pragma const_seg` 会将段重置为 .rdata。
+
 ## <a name="example"></a>示例  
   
 ```cpp  

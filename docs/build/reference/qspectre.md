@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 5dde5d8bb2e7b973b505b467165a710546f2a6a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44385003"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716022"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -86,6 +86,6 @@ ms.locfileid: "44385003"
 
 ## <a name="see-also"></a>请参阅
 
-[/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)  
-[编译器选项](../../build/reference/compiler-options.md)  
-[设置编译器选项](../../build/reference/setting-compiler-options.md)  
+[/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540558"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710503"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
 `CMFCRibbonStatusBar`类实现状态栏控件可以显示功能区元素。  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElement*  
- 一个指向动态元素。  
+*pElement*<br/>
+[in]一个指向动态元素。  
   
 ### <a name="remarks"></a>备注  
  与正则元素不同的动态元素不是可自定义和状态栏的自定义菜单不显示它们。  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElement*  
- 指向添加的元素的指针。  
+*pElement*<br/>
+[in]指向添加的元素的指针。  
   
- [in]*lpszLabel*  
- 元素的文本标签。  
+*lpszLabel*<br/>
+[in]元素的文本标签。  
   
- [in]*bIsVisible*  
- 如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。  
+*bIsVisible*<br/>
+[in]如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  将功能区元素添加到功能区状态栏扩展区域。  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElement*  
- 指向添加的元素的指针。  
+*pElement*<br/>
+[in]指向添加的元素的指针。  
   
- [in]*lpszLabel*  
- 元素的文本标签。  
+*lpszLabel*<br/>
+[in]元素的文本标签。  
   
- [in]*bIsVisible*  
- 如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。  
+*bIsVisible*<br/>
+[in]如果你想要将元素添加为可见，则返回 FALSE 如果你想要将元素添加为隐藏，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  扩展区域位于状态栏控件的右侧。  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 指向父窗口的指针。  
+*pParentWnd*<br/>
+[in]指向父窗口的指针。  
   
- [in]*dwStyle*  
- 逻辑或组合的控件样式。  
+*dwStyle*<br/>
+[in]逻辑或组合的控件样式。  
   
- [in]*nID*  
- 状态栏控件 ID。  
+*nID*<br/>
+[in]状态栏控件 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果状态栏成功创建，FALSE 否则，则为 TRUE。  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- [in]*BOOL*  
+*uiCmdID*<br/>
+[in][in]*BOOL*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 元素的 ID。  
+*uiID*<br/>
+[in]元素的 ID。  
   
 ### <a name="return-value"></a>返回值  
  指向的元素具有指定的命令 id。 如果没有此类元素不为 NULL。  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定位于状态栏控件的主区域中的元素的从零开始索引。  
+*nIndex*<br/>
+[in]指定位于状态栏控件的主区域中的元素的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  指向位于指定索引处的元素的指针。 如果索引为负或超过状态栏中的元素数为 NULL。  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定元素的索引（从零开始），该元素位于状态栏控件的扩展区域中。  
+*nIndex*<br/>
+[in]指定位于状态栏控件的扩展区域中的元素的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 则为 NULL *nIndex*为负或超过功能区状态栏扩展区域中的元素数。  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*strInfo*  
- 信息字符串。  
+*strInfo*<br/>
+[in]信息字符串。  
   
- [in]*rectInfo*  
- 绑定矩形。  
+*rectInfo*<br/>
+[in]边界矩形。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义状态栏上的信息字符串的外观，重写此方法在派生类中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法来将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格并显示指定的信息字符串*strInfo*。  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 若要从状态栏中删除元素的 ID。  
+*uiID*<br/>
+[in]若要从状态栏中删除元素的 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果具有指定的元素则为 TRUE *uiID*中删除。 FALSE 否则为。  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszInfo*  
- 信息字符串。  
+*lpszInfo*<br/>
+[in]信息字符串。  
   
 ### <a name="remarks"></a>备注  
  使用此方法将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格并显示指定的信息字符串*lpszInfo*。  

@@ -1,5 +1,5 @@
 ---
-title: 累计依赖项 |Microsoft 文档
+title: 累计依赖项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d502912a8aeee2e6b3782e7795f44238386e1dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a66b153a52da06cca14845b9a58fcef0f42676d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725707"
 ---
 # <a name="cumulative-dependencies"></a>累计依赖项
-依赖项是在描述块中累积的如果重复目标，则。  
-  
- 这一组规则，例如，  
-  
-```Output  
-bounce.exe : jump.obj  
-bounce.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- 计算结果为此：  
-  
-```Output  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-```  
-  
- 如，如果每个已指定在单独的描述块，但不在最后的依赖项一行的目标不使用命令块，则会计算在单个描述块中的多个相关行中的多个目标。 NMAKE 尝试为此类目标使用的推理规则。  
-  
- 这一组规则，例如，  
-  
-```Output  
-leap.exe bounce.exe : jump.obj  
-bounce.exe climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- 计算结果为此：  
-  
-```Output  
-  
-leap.exe : jump.obj  
-# invokes an inference rule  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [目标](../build/targets.md)
+
+如果重复目标依赖关系是累积在描述块中。
+
+例如，此设置的规则，
+
+```Output
+bounce.exe : jump.obj
+bounce.exe : up.obj
+   echo Building bounce.exe...
+```
+
+计算如下：
+
+```Output
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+```
+
+评估单个描述块中的多个依赖关系行中的多个目标就像在单独的描述块中，指定了每个但不在最后一个依赖关系行中的目标不使用命令块。 NMAKE 尝试使用此类目标的推断规则。
+
+例如，此设置的规则，
+
+```Output
+leap.exe bounce.exe : jump.obj
+bounce.exe climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+计算如下：
+
+```Output
+
+leap.exe : jump.obj
+# invokes an inference rule
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+## <a name="see-also"></a>请参阅
+
+[目标](../build/targets.md)

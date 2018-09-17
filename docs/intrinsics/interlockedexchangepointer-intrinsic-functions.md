@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705011"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 内部函数
 **Microsoft 专用**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Target`  
- 指向要交换值的指针的指针。 函数将值设置为 `Value` 并返回之前的值。  
+*Target*<br/>
+[in、 out]指针到指向要交换的值。 函数将值设置为 `Value` 并返回之前的值。  
   
- [in] `Value`  
- 要与由 `Target` 指向的值交换的值。  
+*值*<br/>
+[in]指向值的值进行交换`Target`。  
   
 ## <a name="return-value"></a>返回值  
  函数返回由 `Target` 指向的初始值。  

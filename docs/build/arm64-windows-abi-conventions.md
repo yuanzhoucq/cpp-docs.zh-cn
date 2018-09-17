@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028537"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716633"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -173,7 +173,7 @@ TPIDR_EL1|指向当前处理器的 KPCR 结构
 
 11. NGRN 设置为 8。
 
-12. NSAA 向上舍入到较大的 8 或参数的类型的自然对齐方式... 
+12. NSAA 向上舍入到较大的 8 或参数的类型的自然对齐方式...
 
 13. 如果参数为复合类型则会将参数复制到内存中的调整后的 nsaa 处。 NSAA 按自变量的大小递增。 现在已分配参数。
 
@@ -189,7 +189,7 @@ TPIDR_EL1|指向当前处理器的 KPCR 结构
 
 2. 不使用单指令多数据和浮点寄存器。
 
-实际上，这相当于以下规则 C.12–C.15 分配虚部堆栈，其中第一个 64 个字节的堆栈被加载到 x0-x7，通常情况下放置任何剩余的 stack 参数的参数。 
+实际上，这相当于以下规则 C.12–C.15 分配虚部堆栈，其中第一个 64 个字节的堆栈被加载到 x0-x7，通常情况下放置任何剩余的 stack 参数的参数。
 
 ## <a name="return-values"></a>返回值
 
@@ -231,5 +231,5 @@ ARM EABI 还指定了利用展开代码的异常展开模式。 但是，规范�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM64 异常处理](../build/arm64-exception-handling.md)  
+[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64 异常处理](../build/arm64-exception-handling.md)

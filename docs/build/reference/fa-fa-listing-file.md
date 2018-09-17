@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101724"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717959"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 
@@ -49,38 +49,38 @@ ms.locfileid: "44101724"
 
 ### <a name="fa-arguments"></a>/FA 参数
 
-无  
+无<br/>
 只是组装器语言包含在列表中。
 
-**c**  
+**c**<br/>
 可选。 在列表中包括计算机代码。
 
-**秒**  
+**秒**<br/>
 可选。 在列表中包含源代码。
 
-**u**  
+**u**<br/>
 可选。 编码 utf-8 格式的列表文件，并包含字节顺序标记。 默认情况下，该文件编码为 ANSI。 使用`u`创建列表文件的任何系统上正确显示，或者如果使用 Unicode 作为编译器的输入源代码文件。
 
 如果这两个**s**并**u**指定，且如果源代码文件使用 Unicode 编码，而不是 utf-8，则.asm 文件中的代码行可能无法正确显示。
 
 ### <a name="fa-argument"></a>/Fa 参数
 
-无  
+无<br/>
 一个*源*为每个源代码文件编译中创建.asm 文件。
 
-*filename*  
+*filename*<br/>
 名为的列表文件*文件名*.asm 放在当前目录中。 编译单个源代码文件时，此值才有效。
 
-*将文件名.扩展名*  
+*将文件名.扩展名*<br/>
 名为的列表文件*文件名.扩展名*位于当前目录中。 编译单个源代码文件时，此值才有效。
 
-*目录*__\\__  
+*目录*__\\__<br/>
 一个*source_file*创建.asm 文件并将其放在指定*directory*为编译中每个源代码文件。 请注意所需的尾随反斜杠。 允许仅在当前磁盘上的路径。
 
-*目录*__\\__*文件名*  
+*目录*__\\__*文件名*<br/>
 名为的列表文件*文件名*.asm 放在指定*directory*。 编译单个源代码文件时，此值才有效。
 
-*目录*__\\__*文件名.扩展名*  
+*目录*__\\__*文件名.扩展名*<br/>
 名为的列表文件*文件名.扩展名*放置在指定*directory*。 编译单个源代码文件时，此值才有效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
@@ -98,6 +98,7 @@ ms.locfileid: "44101724"
 - 请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。 若要指定 **/fau 则**，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
 ## <a name="example"></a>示例
+
 下面的命令行生成合并的源和机器代码列表调用 HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
-[编译器选项](../../build/reference/compiler-options.md)   
-[设置编译器选项](../../build/reference/setting-compiler-options.md)   
+[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [指定路径名](../../build/reference/specifying-the-pathname.md)

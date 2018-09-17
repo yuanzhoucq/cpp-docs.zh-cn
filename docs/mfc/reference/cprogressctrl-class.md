@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690147"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705908"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
+|*clrBar*|[in]一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fMarqueeMode*|设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|  
-|[in]*n 间隔*|以毫秒为单位的字幕动画的更新之间的时间。|  
+|*fMarqueeMode*|[in]设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|  
+|*n 间隔*|[in]以毫秒为单位的字幕动画的更新之间的时间。|  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回 TRUE。  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iState*|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|  
+|*iState*|[in]要设置进度栏的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|  
   
 ### <a name="return-value"></a>返回值  
  当前进度栏控件的前一个状态。  

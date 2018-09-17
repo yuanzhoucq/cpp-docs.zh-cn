@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756358"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709795"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 类
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>参数
 
-[in]*T*  
-双重接口。
+*T*<br/>
+[in]双重接口。
 
-[in]*piid*  
-指向 IID *T*。
+*piid*<br/>
+[in]指向 IID *T*。
 
-[in]*plibid*  
-一个指向包含有关接口的信息的类型库的 LIBID。 默认情况下，传递服务器级类型库。
+*plibid*<br/>
+[in]一个指向包含有关接口的信息的类型库的 LIBID。 默认情况下，传递服务器级类型库。
 
-[in]*wMajor*  
-类型库的主版本。 默认情况下，值为 1。
+*wMajor*<br/>
+[in]类型库的主要版本。 默认情况下，值为 1。
 
-[in]*wMinor*  
-类型库的次版本。 默认情况下，值为 0。
+*wMinor*<br/>
+[in]类型库的次版本。 默认情况下，值为 0。
 
-[in]*tihclass*  
-用于管理的类型信息的类*T*。默认情况下，该值为 `CComTypeInfoHolder`。
+*tihclass*<br/>
+[in]用于管理的类型信息的类*T*。默认情况下，该值为 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成员
 

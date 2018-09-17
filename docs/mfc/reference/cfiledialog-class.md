@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722704"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于打开文件或保存操作的文件的公共对话框。  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bOpenFileDialog*  
- 此参数指定哪种类型的对话框来创建。 将其设置为 TRUE 来构造**文件打开**对话框。 将其设置为 FALSE 来构造**文件另存为**对话框。  
+*bOpenFileDialog*<br/>
+[in]此参数指定哪种类型的对话框来创建。 将其设置为 TRUE 来构造**文件打开**对话框。 将其设置为 FALSE 来构造**文件另存为**对话框。  
   
- [in]*lpszDefExt*  
- 默认的文件扩展名。 如果用户不在文件名框中包含的已知的扩展 （一个用户的计算机上未关联），指定的扩展*lpszDefExt*自动追加到的文件的名称。 如果此参数为 NULL，将追加没有扩展名。  
+*lpszDefExt*<br/>
+[in]默认文件扩展名。 如果用户不在文件名框中包含的已知的扩展 （一个用户的计算机上未关联），指定的扩展*lpszDefExt*自动追加到的文件的名称。 如果此参数为 NULL，将追加没有扩展名。  
   
- [in]*lpszFileName*  
- 在文件名框中显示的初始文件名称。 如果为 NULL，则会不显示任何初始文件名称。  
+*lpszFileName*<br/>
+[in]在文件名框中显示的初始文件名称。 如果为 NULL，则会不显示任何初始文件名称。  
   
- [in]*dwFlags*  
- 可用于自定义对话框中的一个或多个标志的组合。 有关这些标志的说明，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。 如果您修改`m_ofn.Flags`结构成员，请使用按位 OR 运算符中所做的更改保持不变的默认行为。  
+*dwFlags*<br/>
+[in]可用于自定义对话框中的一个或多个标志的组合。 有关这些标志的说明，请参阅[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的结构。 如果您修改`m_ofn.Flags`结构成员，请使用按位 OR 运算符中所做的更改保持不变的默认行为。  
   
- [in]*lpszFilter*  
- 指定筛选器的字符串对一系列你可以应用于文件。 如果指定文件筛选器，只有与筛选条件匹配的文件会在文件列表中。 请参阅有关如何使用文件筛选器的详细信息备注部分。  
+*lpszFilter*<br/>
+[in]指定筛选器的字符串对一系列你可以应用于文件。 如果指定文件筛选器，只有与筛选条件匹配的文件会在文件列表中。 请参阅有关如何使用文件筛选器的详细信息备注部分。  
   
- [in]*pParentWnd*  
- 指向文件对话框的父级或所有者窗口的指针。  
+*pParentWnd*<br/>
+[in]指向文件对话框的父级或所有者窗口的指针。  
   
- [in]*dwSize*  
- 大小`OPENFILENAME`结构。 此值取决于操作系统版本。 MFC 使用此参数确定适当类型的对话框来创建。 默认大小为 0 表示 MFC 代码将确定要使用的正确对话框框大小基于在其运行该程序的操作系统版本。  
+*dwSize*<br/>
+[in]大小`OPENFILENAME`结构。 此值取决于操作系统版本。 MFC 使用此参数确定适当类型的对话框来创建。 默认大小为 0 表示 MFC 代码将确定要使用的正确对话框框大小基于在其运行该程序的操作系统版本。  
   
- [in]*bVistaStyle*  
- **请注意**此参数在 Visual Studio 2008 和更高版本，将会导致只有运行在 Windows Vista 或更高版本才能使用新样式对话框。  
+*bVistaStyle*<br/>
+[in]**注意**此参数在 Visual Studio 2008 和更高版本，将会导致只有运行在 Windows Vista 或更高版本才能使用新样式对话框。  
   
  此参数指定文件对话框的样式。 将其设置为 true 将使用新的 Vista 样式的文件对话框。 否则，将使用旧样式的对话框。 请参阅备注部分的详细信息 Vista 下运行。  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 为其设置的文本的控件的 ID。  
+*nID*<br/>
+[in]为其设置的文本的控件的 ID。  
   
- [in]*lpsz*  
- 指向包含要为控件设置文本的字符串的指针。  
+*lpsz*<br/>
+[in]指向包含要为控件设置文本的字符串的指针。  
   
 ### <a name="remarks"></a>备注  
  此函数的两个版本均有效使用 Unicode 的应用程序。 但是，仅具有 LPCSTR 类型的版本是有效的使用 ANSI 的应用程序。  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nWin3ID*  
- 包含在非-资源管理器的模板资源的 ID 号`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
+*nWin3ID*<br/>
+[in]包含在非-资源管理器的模板资源的 ID 号`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
   
- [in]*nWin4ID*  
- 资源管理器中包含的模板资源的 ID 号`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
+*nWin4ID*<br/>
+[in]资源管理器中包含的模板资源的 ID 号`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
   
- [in]*lpWin3ID*  
- 包含在非-资源管理器模板资源的名称`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
+*lpWin3ID*<br/>
+[in]包含在非-资源管理器模板资源的名称`CFileDialog`对象。 仅用于 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时使用此模板。  
   
- [in]*lpWin4ID*  
- 包含在资源管理器的模板资源名称`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
+*lpWin4ID*<br/>
+[in]包含在资源管理器的模板资源名称`CFileDialog`对象。 仅在 Windows NT 4.0 和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时使用此模板。  
   
 ### <a name="remarks"></a>备注  
  系统将使用指定的模板之一。 系统将确定要使用哪个模板基于 OFN_EXPLORER 样式和应用程序运行的操作系统存在。 通过指定的非资源管理器和资源管理器样式模板，很容易地支持 Windows NT 3.51、 Windows NT 4.0 和更高版本和 Windows 95 和更高版本。  

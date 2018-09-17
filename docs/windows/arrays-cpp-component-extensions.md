@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314425"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714430"
 ---
 # <a name="arrays-c-component-extensions"></a>数组（C++ 组件扩展）
 
@@ -62,12 +62,14 @@ ms.locfileid: "44314425"
     {initialization-list [,...]}
 ```
 
-*限定符*[可选] 的一个或多个这些存储类说明符：[可变](../cpp/mutable-data-members-cpp.md)，[易失性](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[静态](../cpp/static-members-cpp.md)。
+*限定符*<br/>
+（可选）一个或多个这些存储类说明符：[可变](../cpp/mutable-data-members-cpp.md)，[易失性](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[静态](../cpp/static-members-cpp.md).
 
 *数组类型*  
 数组变量的类型。 有效类型为 Windows 运行时类和基本类型、 ref 类和结构、 值类和结构和本机指针 (`type*`)。
 
-*排名*[可选] 的数组的维数。 必须为 1。
+*rank*<br/>
+（可选）数组的维度数。 必须为 1。
 
 *identifier*  
 数组变量的名称。
@@ -75,7 +77,8 @@ ms.locfileid: "44314425"
 *初始化类型*  
 初始化数组的值的类型。 通常情况下，*数组类型*并*初始化类型*属于同一类型。 但是，类型可以是不同的转换是否*初始化类型*到*数组类型*— 例如，如果*初始化类型*派生自*数组类型*。
 
-*初始化列表*[可选] 中大值的以逗号分隔列表方括号该初始化数组的元素。 例如，如果*排名大小列表*已`(3)`，其中声明了 3 个元素的一维数组*初始化列表*可能是`{1,2,3}`。
+*初始化列表*<br/>
+（可选）以逗号分隔列表中初始化数组的元素的大括号的值。 例如，如果*排名大小列表*已`(3)`，其中声明了 3 个元素的一维数组*初始化列表*可能是`{1,2,3}`。
 
 ### <a name="remarks"></a>备注
 
@@ -115,12 +118,14 @@ int main() {
     {initialization-list [,...]}
 ```
 
-*限定符*[可选] 的一个或多个这些存储类说明符：[可变](../cpp/mutable-data-members-cpp.md)，[易失性](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[静态](../cpp/static-members-cpp.md)。
+*限定符*<br/>
+（可选）一个或多个这些存储类说明符：[可变](../cpp/mutable-data-members-cpp.md)，[易失性](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[静态](../cpp/static-members-cpp.md).
 
 *数组类型*  
 数组变量的类型。 有效类型是 Windows 运行时类和基本类型，ref 类和结构、 值类和结构，本机指针 (`type*`)，和 POD （纯旧数据） 的本机类型。
 
-*排名*[可选] 的数组的维数。 默认值为 1;最大值为 32。 每个维度本身就是数组的一个数组。
+*rank*<br/>
+（可选）数组的维度数。 默认值为 1;最大值为 32。 每个维度本身就是数组的一个数组。
 
 *identifier*  
 数组变量的名称。
@@ -131,7 +136,8 @@ int main() {
 *排名大小列表*  
 以逗号分隔的数组中每个维度的大小的列表。 或者，如果*初始化列表*指定为参数时，编译器可以推断出的每个维度的大小和*排名大小列表*可以省略。
 
-*初始化列表*[可选] 中大值的以逗号分隔列表方括号该初始化数组的元素。 或以逗号分隔列表的嵌套*初始化列表*初始化多维数组中的元素的项。
+*初始化列表*<br/>
+（可选）以逗号分隔列表中初始化数组的元素的大括号的值。 或以逗号分隔列表的嵌套*初始化列表*初始化多维数组中的元素的项。
 
 例如，如果*排名大小列表*已`(3)`，其中声明了 3 个元素的一维数组*初始化列表*可能是`{1,2,3}`。 如果*排名大小列表*已`(3,2,4)`，该声明的第一个维度、 2 个元素在第二个和第三个中的 4 个元素中的 3 个元素的三维数组*初始化列表*可能是`{{1,2,3},{0,0},{-5,10,-21,99}}`。)
 

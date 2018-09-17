@@ -1,5 +1,5 @@
 ---
-title: 名称 （C/C + +） |Microsoft 文档
+title: 名称 （C/C + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc37a96e50c6cd5bae2cc60661db04f3b92d162b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371809"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715749"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
-指定主输出文件的名称。  
-  
-```  
-NAME [application][BASE=address]  
-```  
-  
-## <a name="remarks"></a>备注  
- 指定输出文件的名称的等效方法是使用[/out](../../build/reference/out-output-file-name.md)链接器选项和设置的基址等效的方法均由[/base](../../build/reference/base-base-address.md)链接器选项。 如果同时指定了，/扩展重写**名称**。  
-  
- 如果你生成 DLL，名称只会影响 DLL 名称。  
-  
-## <a name="see-also"></a>请参阅  
- [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)
+
+指定主输出文件的名称。
+
+```
+NAME [application][BASE=address]
+```
+
+## <a name="remarks"></a>备注
+
+指定输出文件名称的等效方法是使用[/out](../../build/reference/out-output-file-name.md)链接器选项和设置的基址等效方法由[/base](../../build/reference/base-base-address.md)链接器选项。 如果同时指定两者，/扩展将重写**名称**。
+
+如果您生成 DLL 时，名称只会影响 DLL 名称。
+
+## <a name="see-also"></a>请参阅
+
+[模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

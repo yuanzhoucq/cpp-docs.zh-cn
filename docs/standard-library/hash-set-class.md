@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726019"
 ---
 # <a name="hashset-class"></a>hash_set 类
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在 hash_set 中的元素数据类型。
+要存储在 hash_set 中的元素数据类型。
 
 *特征*<br/>
- 该类型包括两个函数对象，其中一个类，它是比较二元谓词，能够将两个元素值作为排序键以确定其相对顺序是为无符号的元素的一元谓词映射键值的哈希函数进行比较类型的整数`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
+该类型包括两个函数对象，其中一个类，它是比较二元谓词，能够将两个元素值作为排序键以确定其相对顺序是为无符号的元素的一元谓词映射键值的哈希函数进行比较类型的整数`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
 *分配器*<br/>
- 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
+一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从 hash_set 中进行匹配的元素的键。
+要从 hash_set 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1030,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1117,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>参数
 
 *_Where*<br/>
- 要从 hash_set 中删除的元素的位置。
+要从 hash_set 中删除的元素的位置。
 
 *first*<br/>
- 要从 hash_set 中删除的第一个元素的位置。
+要从 hash_set 中删除的第一个元素的位置。
 
 *最后一个*<br/>
- 紧接要从 hash_set 中删除的最后一个元素的位置。
+紧接要从 hash_set 中删除的最后一个元素的位置。
 
 *key*<br/>
- 要从 hash_set 中删除的元素的键。
+要从 hash_set 中删除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1235,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_set 中元素的排序键匹配的参数键。
+要与当前搜索的 hash_set 中元素的排序键匹配的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1661,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2151,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- 参数 hash_set 提供与目标 hash_set 进行交换的元素。
+参数 hash_set 提供与目标 hash_set 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2227,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 

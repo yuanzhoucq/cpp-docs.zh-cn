@@ -1,5 +1,5 @@
 ---
-title: -SWAPRUN |Microsoft 文档
+title: -SWAPRUN |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e8af5b23d2e6cd0759f75c4054e0a811f687e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a93b854dba2855fa68bb3be163cecdcd3570df0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375043"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723087"
 ---
 # <a name="swaprun"></a>/SWAPRUN
-```  
-/SWAPRUN:{[!]NET|[!]CD}  
-```  
-  
-## <a name="remarks"></a>备注  
- 此选项编辑映像以告知操作系统的映像复制到一个交换文件，并从该处运行它。 将此选项用于驻留在网络或可移动媒体的映像。  
-  
- 你可以添加或删除的 NET 或 CD 限定符：  
-  
--   NET 指示图像驻留在网络上。  
-  
--   CD 指示图像驻留在 CD-ROM 或类似的可移动媒体。  
-  
--   使用 ！ NET 和 ！要反转的 NET 和 CD 的效果的 CD。  
-  
-## <a name="see-also"></a>请参阅  
- [EDITBIN 选项](../../build/reference/editbin-options.md)
+
+```
+/SWAPRUN:{[!]NET|[!]CD}
+```
+
+## <a name="remarks"></a>备注
+
+此选项编辑映像以告诉操作系统要将映像复制到交换文件，并从该处运行它。 使用此选项对于驻留在网络或可移动媒体的映像。
+
+您可以添加或删除的 NET 或 CD 限定符：
+
+- NET 指示图像驻留在网络上。
+
+- CD 指示图像驻留在 CD-ROM 或类似的可移动介质。
+
+- 使用 ！ NET 和 ！若要反转的 NET 和 CD 效果的 CD。
+
+## <a name="see-also"></a>请参阅
+
+[EDITBIN 选项](../../build/reference/editbin-options.md)

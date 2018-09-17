@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 146a764cd2b1fcc567a564a6995c191c4f838262
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722223"
 ---
 # <a name="systemclock-structure"></a>system_clock 结构
 
@@ -86,8 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Tm*  
- 一个 [time_t](../c-runtime-library/standard-types.md) 对象。
+*Tm*<br/>
+一个 [time_t](../c-runtime-library/standard-types.md) 对象。
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常量
 
@@ -143,8 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*时间*  
- 一个 [time_point](../standard-library/time-point-class.md) 对象。
+*时间*<br/>
+一个 [time_point](../standard-library/time-point-class.md) 对象。
 
 ## <a name="see-also"></a>请参阅
 

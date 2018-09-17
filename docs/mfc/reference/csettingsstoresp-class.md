@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716332"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
 `CSettingsStoreSP`类是可用于创建实例的一个帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bAdmin*  
- 一个布尔型参数，用于确定是否`CSettingsStore`在管理员模式下创建对象。  
+*bAdmin*<br/>
+[in]一个布尔型参数，用于确定是否`CSettingsStore`在管理员模式下创建对象。  
   
- [in]*bReadOnly*  
- 一个布尔型参数，用于确定是否`CSettingsStore`对象创建的只读访问权限。  
+*bReadOnly*<br/>
+[in]一个布尔型参数，用于确定是否`CSettingsStore`对象创建的只读访问权限。  
   
 ### <a name="return-value"></a>返回值  
  对新创建的引用`CSettingsStore`对象。  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwUserData*  
- 用户定义数据的`CSettingsStoreSP`对象存储。  
+*dwUserData*<br/>
+[in]用户定义数据的`CSettingsStoreSP`对象存储。  
   
 ### <a name="remarks"></a>备注  
  `CSettingsStoreSP`对象存储中的数据*dwUserData*在受保护的成员变量`m_dwUserData`。  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRTI*  
- 指向类的运行时类信息的指针派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
+*pRTI*<br/>
+[in]指向类的运行时类信息的指针派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 TRUE如果通过标识的类，则为 FALSE *pRTI*不派生自`CSettingsStore`。  

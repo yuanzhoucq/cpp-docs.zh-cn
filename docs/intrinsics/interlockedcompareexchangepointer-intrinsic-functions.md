@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711047"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
 **Microsoft 专用**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Destination`  
- 指向目标值的指针。 忽略此标记。  
+*目标*<br/>
+[in、 out]指针到指向目标值。 忽略此标记。  
   
- [in] `Exchange`  
- 交换指针。 忽略此标记。  
+*Exchange*<br/>
+[in]交换指针。 忽略此标记。  
   
- [in] `Comparand`  
- 与目标值比较的指针。 忽略此标记。  
+*比较对象*<br/>
+[in]若要与目标值比较的指针。 忽略此标记。  
   
 ## <a name="return-value"></a>返回值  
  返回值是目标的初始值。  

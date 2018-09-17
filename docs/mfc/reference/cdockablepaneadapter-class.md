@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676358"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712070"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 类
 为 `CWnd`派生窗格提供停靠支持。  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 配置文件名称。  
+*lpszProfileName*<br/>
+[in]配置文件名称。  
   
- [in]*nIndex*  
- 配置文件的索引。  
+*nIndex*<br/>
+[in]配置文件的索引。  
   
- [in]*uiID*  
- 窗格 id。  
+*uiID*<br/>
+[in]窗格 id。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 配置文件名称。  
+*lpszProfileName*<br/>
+[in]配置文件名称。  
   
- [in]*nIndex*  
- 配置文件的索引 （默认为窗口的控件 ID）。  
+*nIndex*<br/>
+[in]配置文件的索引 （默认为窗口的控件 ID）。  
   
- [in]*uiID*  
- 窗格 id。  
+*uiID*<br/>
+[in]窗格 id。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指向要包装的窗格中适配器的窗口的指针。  
+*pWnd*<br/>
+[in]指向要包装的窗格中适配器的窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
   

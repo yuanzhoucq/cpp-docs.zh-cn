@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960549"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719129"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 类
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>参数
 
-*_Freezeit*  
- 一个**bool** ，该值指示是否要冻结的流。
+*_Freezeit*<br/>
+一个**bool** ，该值指示是否要冻结的流。
 
 ### <a name="remarks"></a>备注
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*  
- 要插入到缓冲区的字符或 `EOF`。
+*_Meta*<br/>
+要插入到缓冲区的字符或 `EOF`。
 
 ### <a name="return-value"></a>返回值
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*  
- 要插入到缓冲区的字符或 `EOF`。
+*_Meta*<br/>
+要插入到缓冲区的字符或 `EOF`。
 
 ### <a name="return-value"></a>返回值
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>参数
 
-*_Off*  
- 要搜寻的相对于的位置 *_Way*。
+*_Off*<br/>
+要搜寻的相对于的位置 *_Way*。
 
-*_Way*  
- 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*<br/>
+偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*  
- 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>参数
 
-*_Sp*  
- 要搜寻的位置。
+*_Sp*<br/>
+要搜寻的位置。
 
-*_Which*  
- 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*<br/>
+指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>参数
 
-*_Allocfunc*  
- 用以分配缓冲区内存的函数。
+*_Allocfunc*<br/>
+用以分配缓冲区内存的函数。
 
-*count*  
- 确定指向缓冲区的长度 *_Getptr*。 如果 *_Getptr*不是参数 （第一个构造函数格式），建议的分配缓冲区的大小。
+*count*<br/>
+确定指向缓冲区的长度 *_Getptr*。 如果 *_Getptr*不是参数 （第一个构造函数格式），建议的分配缓冲区的大小。
 
-*_Freefunc*  
- 用来释放缓冲区内存的函数。
+*_Freefunc*<br/>
+用来释放缓冲区内存的函数。
 
-*_Getptr*  
- 用于输入的缓冲区。
+*_Getptr*<br/>
+用于输入的缓冲区。
 
-*_Putptr*  
- 用于输出的缓冲区。
+*_Putptr*<br/>
+用于输出的缓冲区。
 
 ### <a name="remarks"></a>备注
 

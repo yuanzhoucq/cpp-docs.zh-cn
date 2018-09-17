@@ -1,5 +1,5 @@
 ---
-title: 单个 |Microsoft 文档
+title: 单个 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716984"
 ---
 # <a name="single"></a>单个
-允许您指定的代码部分应在单个线程，不一定是主线程上执行。  
+可以指定一段代码应在单个线程，不一定是主线程上执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,8 +36,9 @@ ms.locfileid: "33691854"
 ```  
   
 #### <a name="parameters"></a>参数  
- `clause`（可选）  
- 零个或多个子句。 请参阅支持的子句列表的备注部分**单个**。  
+
+`clause`  
+（可选）零个或多个子句。 请参阅支持的子句的列表的备注部分**单个**。  
   
 ## <a name="remarks"></a>备注  
  **单个**指令支持以下 OpenMP 子句：  
@@ -50,9 +51,9 @@ ms.locfileid: "33691854"
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [Master](../../../parallel/openmp/reference/master.md)指令允许你指定应仅在主线程上执行的代码部分。  
+ [主](../../../parallel/openmp/reference/master.md)指令，可以指定应仅在主线程上执行的代码段。  
   
- 有关详细信息，请参阅[2.4.3 单个构造](../../../parallel/openmp/2-4-3-single-construct.md)。  
+ 有关详细信息，请参阅[2.4.3 单一构造](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
 ## <a name="example"></a>示例  
   

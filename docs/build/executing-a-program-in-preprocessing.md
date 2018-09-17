@@ -1,5 +1,5 @@
 ---
-title: 在预处理中执行程序 |Microsoft 文档
+title: 在预处理中执行程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da87a87a2e97736d202b7ddb9be2dbec54fed44d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2b0571e67e7c5d24cf31dce6fce548735cad966
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721456"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>在预处理中执行程序
-若要在预处理过程中使用命令的退出代码，请与任何参数，在方括号 ([]) 中指定的命令。 所有宏都扩展之前执行此命令。 NMAKE 替换命令的退出代码，以便可以在表达式中用来控制预处理命令规范。  
-  
-## <a name="see-also"></a>请参阅  
- [生成文件预处理中的表达式](../build/expressions-in-makefile-preprocessing.md)
+
+若要在预处理期间使用命令的退出代码，请用方括号 ([]) 内的任意参数指定命令。 任何宏被展开前执行此命令。 NMAKE 替换该命令的退出代码，可以在表达式中使用来控制预处理命令规范。
+
+## <a name="see-also"></a>请参阅
+
+[生成文件预处理中的表达式](../build/expressions-in-makefile-preprocessing.md)

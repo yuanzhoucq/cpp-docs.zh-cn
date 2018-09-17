@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687982"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721729"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 类
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>参数
 
-*UIntType*  
- 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*W*  
- **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **短滞后**。 整数值数。 **前提条件**：`0 < S < R`
+*S*<br/>
+**短滞后**。 整数值数。 **前提条件**：`0 < S < R`
 
-*R*  
- **长滞后**。 确定生成的系列中的重复。
+*R*<br/>
+**长滞后**。 确定生成的系列中的重复。
 
 ## <a name="members"></a>Members
 

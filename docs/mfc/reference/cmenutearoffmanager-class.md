@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700929"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
 管理可拖曳菜单。 可拖曳菜单是菜单栏上的菜单。 用户可以从菜单栏移开可拖曳菜单，从而使可拖拽菜单浮动。  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiTearOffBarID*  
- [in]*strText*  
+*uiTearOffBarID*<br/>
+[in][in]*strText*  
   
 ### <a name="remarks"></a>备注  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszRegEntry*  
- 一个字符串，包含注册表项的路径。 您的应用程序在此注册表项中存储的分离式条形图的设置。  
+*lpszRegEntry*<br/>
+[in]一个字符串，包含注册表项的路径。 您的应用程序在此注册表项中存储的分离式条形图的设置。  
   
- [in]*uiTearOffMenuFirst*  
- 分离式菜单第一个菜单 ID。  
+*uiTearOffMenuFirst*<br/>
+[in]分离式菜单第一个菜单 ID。  
   
- [in]*uiTearOffMenuLast*  
- 分离式菜单最后一个菜单 ID。  
+*uiTearOffMenuLast*<br/>
+[in]分离式菜单最后一个菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdId*  
- [in]*bUse*  
+*uiCmdId*<br/>
+[in][in]*bUse*  
   
 ### <a name="remarks"></a>备注  
   

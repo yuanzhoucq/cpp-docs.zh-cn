@@ -1,5 +1,5 @@
 ---
-title: 递归宏 |Microsoft 文档
+title: 递归宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2759deaff6014cbba40c97f9d627baf6a800732f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f91a5f327686a522608b6eec9fd7106cbab00028
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368956"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702035"
 ---
 # <a name="recursion-macros"></a>递归宏
-递归宏用于 NMAKE 递归调用。 递归会话将继承命令行和环境变量宏和 Tools.ini 信息。 他们不继承生成文件定义的推理规则或 **。后缀**和 **。宝贵**规范。 要传递到递归 NMAKE 会话的宏，请设置环境变量使用 SET 递归调用之前，递归调用，该命令中定义的宏，或者在 Tools.ini 中定义的宏。  
-  
-|宏|定义|  
-|-----------|----------------|  
-|**请**|最初用于调用 NMAKE 命令。<br /><br /> $(MAKE) 宏赋予 nmake.exe 的完整路径。|  
-|**MAKEDIR**|NMAKE 调用时的当前目录。|  
-|**MAKEFLAGS**|当前正在生效的选项。 使用作为`/$(MAKEFLAGS)`。  请注意，/F 不包含。|  
-  
-## <a name="see-also"></a>请参阅  
- [特殊 NMAKE 宏](../build/special-nmake-macros.md)
+
+使用递归宏调用 NMAKE 以递归方式。 递归会话继承命令行和环境变量宏和 Tools.ini 信息。 它们不会继承生成文件定义的推理规则或 **。后缀**和 **。宝贵**规范。 若要传递到递归 NMAKE 会话的宏，递归调用之前使用 SET 设置环境变量、 递归调用，在命令中定义的宏或 Tools.ini 中定义的宏。
+
+|宏|定义|
+|-----------|----------------|
+|**使**|最初用于调用 NMAKE 命令。<br /><br /> $ （make） 宏提供 nmake.exe 的完整路径。|
+|**MAKEDIR**|NMAKE 调用时的当前目录。|
+|**MAKEFLAGS**|当前正在生效的选项。 使用作为`/$(MAKEFLAGS)`。  请注意，/F 则不包含。|
+
+## <a name="see-also"></a>请参阅
+
+[特殊 NMAKE 宏](../build/special-nmake-macros.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710146"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 类
 `CPaneDialog`类支持无模式可停靠的对话框。  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszWindowName*  
- 停靠对话框中的名称。  
+*lpszWindowName*<br/>
+[in]停靠对话框中的名称。  
   
- [in]*pParentWnd*  
- 指向父窗口。  
+*pParentWnd*<br/>
+[in]指向父窗口。  
   
- [in]*bHasGripper*  
- 若要创建带有描述文字 （手柄）; 停靠对话框中，则返回 TRUE否则为 FALSE。  
+*bHasGripper*<br/>
+[in]若要创建带有描述文字 （手柄）; 停靠对话框中，则返回 TRUE否则为 FALSE。  
   
- [in]*lpszTemplateName*  
- 资源对话框模板的名称。  
+*lpszTemplateName*<br/>
+[in]资源对话框模板的名称。  
   
- [in]*nStyle*  
- Windows 样式中。  
+*nStyle*<br/>
+[in]Windows 样式中。  
   
- [in]*nID*  
- 控件 id。  
+*nID*<br/>
+[in]控件 id。  
   
- [in]*nIDTemplate*  
- 在对话框模板资源 ID。  
+*nIDTemplate*<br/>
+[in]在对话框模板资源 ID。  
   
- [in]*dwTabbedStyle*  
- 当用户将另一个控制窗格拖动到此控件窗格的标题上时，产生的选项卡式窗口的样式。 默认值为 AFX_CBRS_REGULAR_TABS。 有关详细信息，请参阅备注部分[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+*dwTabbedStyle*<br/>
+[in]当用户将另一个控制窗格拖动到此控件窗格的标题上时，产生的选项卡式窗口的样式。 默认值为 AFX_CBRS_REGULAR_TABS。 有关详细信息，请参阅备注部分[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
- [in]*dwControlBarStyle*  
- 其他样式特性。 默认值为 AFX_DEFAULT_DOCKING_PANE_STYLE。 有关详细信息，请参阅备注部分[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+*dwControlBarStyle*<br/>
+[in]其他样式特性。 默认值为 AFX_DEFAULT_DOCKING_PANE_STYLE。 有关详细信息，请参阅备注部分[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*wParam*  
- 若要接收的默认键盘焦点的控件的句柄。  
+*wParam*<br/>
+[in]若要接收的默认键盘焦点的控件的句柄。  
   
- [in]*lParam*  
- 指定附加的初始化数据。  
+*lParam*<br/>
+[in]指定附加的初始化数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。 此外，TRUE 将键盘焦点设置为指定的控件*wParam*参数;FALSE 会阻止设置的默认键盘焦点。  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pOccDialogInfo*  
- 到对话框模板用于创建对话框对象的指针。 此参数的值随后传递到[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
+*pOccDialogInfo*<br/>
+[in]到对话框模板用于创建对话框对象的指针。 此参数的值随后传递到[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
   
 ### <a name="return-value"></a>返回值  
  始终为 TRUE。  

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCustomizePropertyPage 类 |Microsoft 文档
+title: CMFCRibbonCustomizePropertyPage 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707495"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 类
-实现的自定义页**自定义**基于功能区的应用程序中的对话框。  
+实现的自定义页面**自定义**基于功能区的应用程序的对话框。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,11 +55,11 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |名称|描述|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|添加到自定义类别**命令**组合框。|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|当用户单击时，由系统调用**确定**上**自定义**对话框。|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|由系统调用，当用户单击**确定**上**自定义**对话框。|  
   
 ## <a name="remarks"></a>备注  
- 如果你想要添加到自定义命令**自定义**对话框中，你必须处理 AFX_WM_ON_RIBBON_CUSTOMIZE 消息。 在消息处理程序，实例化`CMFCRibbonCustomizePropertyPage`堆栈上的对象。 创建自定义命令的列表，然后调用`AddCustomCategory`要添加到新页**自定义**对话框。  
+ 如果你想要添加到自定义命令**自定义**对话框中，你必须处理 AFX_WM_ON_RIBBON_CUSTOMIZE 消息。 在消息处理程序中，实例化`CMFCRibbonCustomizePropertyPage`在堆栈上的对象。 创建自定义命令的列表，然后调用`AddCustomCategory`要添加到新页面**自定义**对话框。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何构造`CMFCRibbonCustomizePropertyPage`对象，并将添加一个自定义类别。  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*lpszName*|指定的自定义的类别名称。|  
-|[in]*lstIDS*|包含功能区命令 Id 显示在自定义的类别。|  
+|*lpszName*|[in]指定自定义类别名称。|  
+|*lstIDS*|[in]包含功能区命令 Id 的自定义的类别中显示。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将添加名为的类别*lpszName*到**命令**组合框。 当用户选择的类别时中, 指定的命令*lstIDS*命令列表中显示。  
+ 此方法将添加一个名为类别*lpszName*到**命令**组合框。 当用户选择类别时，这些命令中指定*lstIDS*命令列表中显示。  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  构造 `CMFCRibbonCustomizePropertyPage` 对象。  
@@ -112,19 +112,19 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRibbonBar*  
- 指向要为其功能区控件的自定义的选项。  
+*pRibbonBar*<br/>
+[in]指向要为其功能区控件的自定义的选项。  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
- 用户单击时，系统 Calleld**确定**上**自定义**对话框。  
+ 当用户单击系统 Calleld**确定**上**自定义**对话框。  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>备注  
- 默认实现将在中选择的选项应用**自定义**到快速访问工具栏的对话框。  
+ 默认实现将应用中选择的选项**自定义**对话框，以便快速访问工具栏。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

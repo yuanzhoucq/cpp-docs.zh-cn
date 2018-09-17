@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT （报告内部链接器错误） |Microsoft 文档
+title: -ERRORREPORT （报告内部链接器错误） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374331"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701085"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT（报告内部链接器错误）
 
@@ -32,23 +32,23 @@ ms.locfileid: "32374331"
 
 ## <a name="arguments"></a>自变量
 
-**none**  
+**none**<br/>
 不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。
 
-**提示**  
-当您收到内部编译器错误时，提示您发送报告。 **提示符**在开发环境中编译应用程序是默认设置。
+**提示**<br/>
+当您收到内部编译器错误时，提示您发送报告。 **提示符**时在开发环境中编译应用程序是默认值。
 
-**queue**  
-将错误报告排入队列。 当使用管理员特权登录时，将显示一个窗口，以便您可以记录中被记录的上次报告任何失败 （你不会提示发送故障报告一次以上每隔三天）。 **队列**时在命令提示符下编译的应用程序是默认设置。
+**queue**<br/>
+将错误报告排入队列。 当使用管理员权限登录时，将显示一个窗口，以便可以报告自上次登录以来的任何失败 （将不会提示您发送一次每隔三天的故障报告）。 **队列**时在命令提示符下编译应用程序是默认值。
 
-**发送**  
-如果报表通过 Windows 错误报告服务设置自动向 Microsoft 发送报告内部编译器错误。
+**发送**<br/>
+如果报告启用的 Windows 错误报告服务设置自动向 Microsoft 发送内部编译器错误报告。
 
 ## <a name="remarks"></a>备注
 
-**/ERRORREPORT**选项允许您直接向 Microsoft 提供内部编译器错误 (ICE) 信息。
+**/ERRORREPORT**选项允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。
 
-选项 **/errorreport:send**自动将错误信息发送给 Microsoft，如果启用了 Windows 错误报告服务设置。
+选项 **/errorreport: send**自动将错误信息发送给 Microsoft，如果启用通过 Windows 错误报告服务设置。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -64,6 +64,6 @@ ms.locfileid: "32374331"
 
 ## <a name="see-also"></a>请参阅
 
-[/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[设置链接器选项](../../build/reference/setting-linker-options.md)  
-[链接器选项](../../build/reference/linker-options.md)  
+[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

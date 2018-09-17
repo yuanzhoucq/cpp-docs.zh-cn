@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706610"
 ---
 # <a name="basicstring-class"></a>basic_string 类
 
@@ -3979,9 +3979,11 @@ basic_string<CharType, Traits, Allocator>& replace(
 *_Ch*<br/>
 要复制到操作数字符串的字符。
 
-* first0 * 的迭代器，用于寻址第一个字符操作数字符串中删除。
+*first0*<br/>
+一种迭代器，用于寻址操作数字符串中要删除的第一个字符。
 
-* last0 * 用于确定最后一个字符的迭代器的操作数字符串中要删除的。
+*last0*<br/>
+一种迭代器，用于寻址操作数字符串中要删除的最后一个字符。
 
 *first*<br/>
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的第一个字符。

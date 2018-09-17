@@ -1,5 +1,5 @@
 ---
-title: DLL 中的自动化 |Microsoft 文档
+title: DLL 中的自动化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5f31a72cf734296ecb281e0785d415c8043a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde5d0e400f1bdd3f5a851d47da581380273b04a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360649"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717766"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的自动化
-当你在 MFC DLL 向导中选择自动化选项时，该向导将提供你替换为以下内容：  
-  
--   起始对象描述语言 (。ODL) 文件  
-  
--   在 STDAFX.h 文件中为 Afxole.h include 指令  
-  
--   实现`DllGetClassObject`函数，该调用函数**AfxDllGetClassObject**函数  
-  
--   实现`DllCanUnloadNow`函数，该调用函数**AfxDllCanUnloadNow**函数  
-  
--   实现`DllRegisterServer`函数，该调用函数[COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)函数  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
-  
--   [自动化服务器](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>请参阅  
- [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+
+当在 MFC DLL 向导中选择自动化选项时，向导将为您提供以下：
+
+- 起始对象描述语言 (。ODL) 文件
+
+- 在 STDAFX.h 文件中为 Afxole.h include 指令
+
+- 实现`DllGetClassObject`函数，调用**AfxDllGetClassObject**函数
+
+- 实现`DllCanUnloadNow`函数，调用**AfxDllCanUnloadNow**函数
+
+- 实现`DllRegisterServer`函数，调用[COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)函数
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
+
+- [自动化服务器](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>请参阅
+
+[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

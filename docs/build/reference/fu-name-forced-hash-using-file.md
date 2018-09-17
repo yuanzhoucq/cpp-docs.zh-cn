@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf4afebc7288a953a0f8785e1f18097c21d71e3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107369"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720522"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
 
@@ -62,6 +62,6 @@ ms.locfileid: "44107369"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
-[编译器选项](../../build/reference/compiler-options.md)   
+[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

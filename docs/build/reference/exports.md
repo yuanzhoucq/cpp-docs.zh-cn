@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104285"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714516"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ ms.locfileid: "44104285"
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ EXPORTS
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 可通过采用建议的顺序列出的四种方式导出定义：
 
@@ -95,7 +95,7 @@ EXPORTS
 
 #Pragma 指令很有用，如果你需要导出未修饰的函数名，并且具有不同的导出，具体取决于生成配置 （例如，在 32 位或 64 位版本）。
 
-所有这四种方法可以用在同一个程序中。 LINK 在生成包含导出的程序时还创建导入库，除非生成中使用了 .EXP 文件。 
+所有这四种方法可以用在同一个程序中。 LINK 在生成包含导出的程序时还创建导入库，除非生成中使用了 .EXP 文件。
 
 下面是 EXPORTS 节的一个示例：
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 使用 .DEF 文件从 DLL 中导出变量时，不必在变量上指定 `__declspec(dllexport)`。 但是，在任何使用 DLL 的文件中，必须仍在数据的声明上使用 `__declspec(dllimport)`。
 

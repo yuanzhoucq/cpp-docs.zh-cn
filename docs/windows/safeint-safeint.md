@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606950"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721340"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>参数
 
-[in]*我*  
-新的值**SafeInt**对象。 这必须是类型 T 或 U，具体取决于构造函数的参数。
+*i*<br/>
+[in]新的值**SafeInt**对象。 这必须是类型 T 或 U，具体取决于构造函数的参数。
 
-[in]*b*  
-新的布尔值**SafeInt**对象。
+*b*<br/>
+[in]新的布尔值**SafeInt**对象。
 
-[in]*u*  
-一个**SafeInt**为类型 u。新**SafeInt**对象将具有相同的值*u*，但将类型为 t。
+*u*<br/>
+[in]一个**SafeInt**为类型 u。新**SafeInt**对象将具有相同的值*u*，但将类型为 t。
 
 U 中存储的数据类型**SafeInt**。 这可以是一个布尔值、 字符或整数类型。 如果它是整数类型，可以对其签名或未签名且长度在 8 到 64 位之间。
 

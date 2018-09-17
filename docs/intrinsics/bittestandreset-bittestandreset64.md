@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 84965abc66bf3aa58dce550dfb5e1b820fb25d12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715724"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset、_bittestandreset64
 **Microsoft 专用**  
@@ -47,11 +47,11 @@ unsigned char _bittestandreset64(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `a`  
- 指向要检查的内存的指针。  
+*a*<br/>
+[in、 out]指向要检查的内存的指针。  
   
- [in] `b`  
- 要测试的位位置。  
+*b*<br/>
+[in]要测试的位位置。  
   
 ## <a name="return-value"></a>返回值  
  指定位置的位。  

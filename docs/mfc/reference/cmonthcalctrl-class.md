@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206185"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719090"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 封装月历控件的功能。  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pmcGridInfo*|指向[MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)接收当前月历控件的相关信息的结构。 调用方负责分配和初始化此结构。|  
+|*pmcGridInfo*|[out]指向[MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)接收当前月历控件的相关信息的结构。 调用方负责分配和初始化此结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*cxyBorder*|以像素为单位的边框宽度。|  
+|*cxyBorder*|[in]以像素为单位的边框宽度。|  
   
 ### <a name="remarks"></a>备注  
  如果此方法成功，边框宽度设置为*cxyBorder*参数。 否则，边框宽度将重置为当前指定的默认值[主题](/windows/desktop/Controls/visual-styles-overview)，或为零则不使用主题。  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*calid*|之一[日历标识符](/windows/desktop/Intl/calendar-identifiers)常量。|  
+|*calid*|[in]之一[日历标识符](/windows/desktop/Intl/calendar-identifiers)常量。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwNewView*|每月、 年、 十年中或世纪视图指定以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|  
+|*dwNewView*|[in]每月、 年、 十年中或世纪视图指定以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义包含日历所需的数量的矩形。|  
+|*lpRect*|[in]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义包含日历所需的数量的矩形。|  
   
 ### <a name="return-value"></a>返回值  
  指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)由定义结构，它定义的矩形的大小小于或等于矩形*lpRect*参数。  

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37279ef28073e758be2ebc849d6657168c22339
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c97b80031c60dabb22d3dfea905c9a46f7731f67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716438"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 类
 
@@ -201,13 +201,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 随机值的下限（包含下限）。
 
-*b*  
+*b*<br/>
 随机值的上限（包含上限）。
 
-*parm*  
+*parm*<br/>
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -237,13 +237,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 随机值的下限（包含下限）。
 
-*b*  
+*b*<br/>
 随机值的上限（包含上限）。
 
-*right*  
+*right*<br/>
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c61d69c1ee5ad40191771dabd829514e3381e88
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701514"
 ---
 # <a name="directoryentry-class"></a>directory_entry 类
 
@@ -115,13 +115,13 @@ void assign(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>参数
 
 *pval*<br/>
-存储的文件名称路径。  
+存储的文件名称路径。
 
 *stat_arg*<br/>
-存储的文件名称的状态。  
+存储的文件名称的状态。
 
 *为 ymstat_arg*<br/>
-存储的文件名称的符号链接状态。  
+存储的文件名称的符号链接状态。
 
 ## <a name="directory_entry"></a> directory_entry
 
@@ -139,13 +139,13 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>参数
 
 *pval*<br/>
-存储的文件名称路径。  
+存储的文件名称路径。
 
 *stat_arg*<br/>
-存储的文件名称的状态。  
+存储的文件名称的状态。
 
 *为 ymstat_arg*<br/>
-存储的文件名称的符号链接状态。  
+存储的文件名称的符号链接状态。
 
 ## <a name="op_neq"></a> 运算符 ！ =
 
@@ -158,7 +158,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="op_as"></a> 运算符 =
 
@@ -172,7 +172,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)复制到`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)复制到`directory_entry`。
 
 ## <a name="op_eq"></a> 运算符 = =
 
@@ -185,7 +185,7 @@ bool operator==(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="op_lt"></a> 运算符&lt;
 
@@ -198,7 +198,7 @@ bool operator<(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="op_lteq"></a> 运算符&lt;=
 
@@ -211,7 +211,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="op_gt"></a> 运算符&gt;
 
@@ -224,7 +224,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="op_gteq"></a> 运算符&gt;=
 
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>参数
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。  
+[Directory_entry](../standard-library/directory-entry-class.md)要进行比较的`directory_entry`。
 
 ## <a name="path_type"></a> 运算符 const path_type （& a)
 
@@ -269,13 +269,13 @@ void replace_filename(
 ### <a name="parameters"></a>参数
 
 *pval*<br/>
-存储的文件名称路径。  
+存储的文件名称路径。
 
 *stat_arg*<br/>
-存储的文件名称的状态。  
+存储的文件名称的状态。
 
 *为 ymstat_arg*<br/>
-存储的文件名称的符号链接状态。  
+存储的文件名称的符号链接状态。
 
 ## <a name="status"></a> 状态
 
@@ -293,7 +293,7 @@ file_status status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>参数
 
 *ec*<br/>
-状态错误代码。  
+状态错误代码。
 
 ## <a name="symlink_status"></a> symlink_status
 
@@ -307,7 +307,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>参数
 
 *ec*<br/>
-状态错误代码。  
+状态错误代码。
 
 ## <a name="see-also"></a>请参阅
 

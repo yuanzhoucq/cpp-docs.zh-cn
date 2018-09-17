@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699610"
 ---
 # <a name="definitions-and-declarations-c"></a>定义和声明 (C++)
-**特定于 Microsoft** DLL 接口引用已知由此系统中导出某些程序的所有项 （函数和数据）; 即，声明为的所有项**dllimport**或**dllexport**. DLL 接口中包含的所有声明必须都指定**dllimport**或**dllexport**属性。 但是，定义必须仅指定**dllexport**属性。 例如，以下函数定义产生了一个编译器错误：
+**Microsoft 专用**
+
+ DLL 接口引用已知由此系统; 中的某个程序导出的所有项 （函数和数据）也就是说，声明为的所有项**dllimport**或**dllexport**。 DLL 接口中包含的所有声明必须都指定**dllimport**或**dllexport**属性。 但是，定义必须仅指定**dllexport**属性。 例如，以下函数定义产生了一个编译器错误：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

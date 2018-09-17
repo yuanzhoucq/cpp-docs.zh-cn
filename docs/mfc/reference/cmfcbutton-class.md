@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1ded79786aaed0bf917ef57f445882c3f7d05719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709951"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 `CMFCButton`类添加了功能[CButton](../../mfc/reference/cbutton-class.md)如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。  
@@ -223,8 +223,8 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bOn*  
- 为 TRUE，则显示所有属性。FALSE 截断的显示文本。  
+*bOn*<br/>
+[in]为 TRUE，则显示所有属性。FALSE 截断的显示文本。  
   
 ### <a name="remarks"></a>备注  
   
@@ -238,11 +238,11 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bOn*  
- 若要为按钮文本字体; 使用的应用程序菜单字体，则返回 TRUE为 FALSE，则使用系统字体。 默认值为 TRUE。  
+*bOn*<br/>
+[in]若要为按钮文本字体; 使用的应用程序菜单字体，则返回 TRUE为 FALSE，则使用系统字体。 默认值为 TRUE。  
   
- [in]*bRedraw*  
- 为 TRUE，则立即重绘屏幕上。否则为 FALSE。 默认值为 TRUE。  
+*bRedraw*<br/>
+[in]为 TRUE，则立即重绘屏幕上。否则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  如果此方法不执行用于指定按钮文本字体，则可以指定与字体[CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont)方法。 如果您根本不指定一种字体，框架将设置默认字体。  
@@ -255,8 +255,8 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则使用当前 Windows 主题来绘制按钮边框。为 FALSE，则不使用 Windows 主题。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 TRUE，则使用当前 Windows 主题来绘制按钮边框。为 FALSE，则不使用 Windows 主题。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  此方法会影响派生自应用程序中的所有按钮`CMFCButton`类。  
@@ -517,14 +517,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 对限定按钮的矩形的引用。  
+*rect*<br/>
+[in]对限定按钮的矩形的引用。  
   
- [in]*uiState*  
- 当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。  
+*uiState*<br/>
+[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以使用你自己的代码来绘制一个按钮。  
@@ -540,14 +540,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectClient*  
- 对限定按钮的矩形的引用。  
+*rectClient*<br/>
+[in]对限定按钮的矩形的引用。  
   
- [in]*uiState*  
- 当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。  
+*uiState*<br/>
+[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)主题。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以使用你自己的代码来绘制边框。  
@@ -562,11 +562,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectClient*  
- 对限定按钮的矩形的引用。  
+*rectClient*<br/>
+[in]对限定按钮的矩形的引用。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以使用你自己的代码来绘制聚焦框。  
@@ -584,20 +584,20 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 对限定按钮的矩形的引用。  
+*rect*<br/>
+[in]对限定按钮的矩形的引用。  
   
- [in]*strText*  
- 要绘制的文本。  
+*strText*<br/>
+[in]要绘制的文本。  
   
- [in]*uiDTFlags*  
- 指定如何设置文本格式的标志。 有关详细信息，请参阅*nFormat*的参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。  
+*uiDTFlags*<br/>
+[in]指定如何设置文本格式的标志。 有关详细信息，请参阅*nFormat*的参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。  
   
- [in]*uiState*  
- （保留）。  
+*uiState*<br/>
+[in]保留。
   
 ### <a name="remarks"></a>备注  
  重写此方法以使用你自己的代码来绘制按钮文本。  
@@ -612,11 +612,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectClient*  
- 对限定按钮的矩形的引用。  
+*rectClient*<br/>
+[in]对限定按钮的矩形的引用。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以使用你自己的代码用于绘制背景的按钮。  
@@ -629,8 +629,8 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
  重写此方法以使用你自己的代码来检索字体的字体。  
@@ -645,8 +645,8 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nTimeDelay*  
- 一个非负数字，指定发送到父窗口的消息之间的间隔。 以毫秒为单位的时间间隔，其默认值为 500 毫秒。 指定零以禁用自动重复消息模式。  
+*nTimeDelay*<br/>
+[in]一个非负数字，指定发送到父窗口的消息之间的间隔。 以毫秒为单位的时间间隔，其默认值为 500 毫秒。 指定零以禁用自动重复消息模式。  
   
 ### <a name="remarks"></a>备注  
  此方法会导致该按钮以不断向父窗口发送 WM_COMMAND 消息，直到释放按钮，或*nTimeDelay*参数设置为零。  
@@ -678,41 +678,41 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hIcon*  
- 包含位图和掩码为新映像的图标的句柄。  
+*hIcon*<br/>
+[in]包含位图和掩码为新映像的图标的句柄。  
   
- [in]*bAutoDestroy*  
- 为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。  
+*bAutoDestroy*<br/>
+[in]为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。  
   
- [in]*hIconHot*  
- 包含此图像可查看所选状态的图标的句柄。  
+*hIconHot*<br/>
+[in]包含此图像可查看所选状态的图标的句柄。  
   
- [in]*hBitmap*  
- 包含未选定状态的图像的位图的句柄。  
+*hBitmap*<br/>
+[in]包含未选定状态的图像的位图的句柄。  
   
- [in]*hBitmapHot*  
- 包含所选状态的图像的位图的句柄。  
+*hBitmapHot*<br/>
+[in]包含所选状态的图像的位图的句柄。  
   
- [in]*bMap3dColors*  
- 指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。  
+*bMap3dColors*<br/>
+[in]指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。  
   
- [in]*uiBmpResId*  
- 非选择图像的资源 ID。  
+*uiBmpResId*<br/>
+[in]非选择图像的资源 ID。  
   
- [in]*uiBmpHotResId*  
- 所选图像的资源 ID。  
+*uiBmpHotResId*<br/>
+[in]所选图像的资源 ID。  
   
- [in]*hIconDisabled*  
- 禁用图像的图标的句柄。  
+*hIconDisabled*<br/>
+[in]禁用图像的图标的句柄。  
   
- [in]*hBitmapDisabled*  
- 包含已禁用的图像的位图的句柄。  
+*hBitmapDisabled*<br/>
+[in]包含已禁用的图像的位图的句柄。  
   
- [in]*uiBmpDsblResID*  
- 已禁用的位图的资源 ID。  
+*uiBmpDsblResID*<br/>
+[in]已禁用的位图的资源 ID。  
   
- [in]*bAlphaBlend*  
- 为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。  
+*bAlphaBlend*<br/>
+[in]为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -726,11 +726,11 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*crFace*  
- RGB 颜色值。  
+*crFace*<br/>
+[in]RGB 颜色值。  
   
- [in]*bRedraw*  
- 为 TRUE，则立即; 重绘屏幕否则为 FALSE。  
+*bRedraw*<br/>
+[in]为 TRUE，则立即; 重绘屏幕否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此方法用于定义新的填充颜色按钮背景 （人脸）。 请注意，在后台不填充何时[CMFCButton::m_bTransparent](#m_btransparent)成员变量为 TRUE。  
@@ -762,41 +762,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hIcon*  
- 包含位图和掩码为新映像的图标的句柄。  
+*hIcon*<br/>
+[in]包含位图和掩码为新映像的图标的句柄。  
   
- [in]*bAutoDestroy*  
- 为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。  
+*bAutoDestroy*<br/>
+[in]为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。  
   
- [in]*hIconHot*  
- 包含此图像可查看所选状态的图标的句柄。  
+*hIconHot*<br/>
+[in]包含此图像可查看所选状态的图标的句柄。  
   
- [in]*hBitmap*  
- 包含未选定状态的图像的位图的句柄。  
+*hBitmap*<br/>
+[in]包含未选定状态的图像的位图的句柄。  
   
- [in]*hBitmapHot*  
- 包含所选状态的图像的位图的句柄。  
+*hBitmapHot*<br/>
+[in]包含所选状态的图像的位图的句柄。  
   
- [in]*uiBmpResId*  
- 非选择图像的资源 ID。  
+*uiBmpResId*<br/>
+[in]非选择图像的资源 ID。  
   
- [in]*uiBmpHotResId*  
- 所选图像的资源 ID。  
+*uiBmpHotResId*<br/>
+[in]所选图像的资源 ID。  
   
- [in]*bMap3dColors*  
- 指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。  
+*bMap3dColors*<br/>
+[in]指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。  
   
- [in]*hIconDisabled*  
- 禁用图像的图标的句柄。  
+*hIconDisabled*<br/>
+[in]禁用图像的图标的句柄。  
   
- [in]*hBitmapDisabled*  
- 包含已禁用的图像的位图的句柄。  
+*hBitmapDisabled*<br/>
+[in]包含已禁用的图像的位图的句柄。  
   
- [in]*uiBmpDsblResID*  
- 已禁用的位图的资源 ID。  
+*uiBmpDsblResID*<br/>
+[in]已禁用的位图的资源 ID。  
   
- [in]*bAlphaBlend*  
- 为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。  
+*bAlphaBlend*<br/>
+[in]为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -814,8 +814,8 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hcursor*  
- 光标的句柄。  
+*hcursor*<br/>
+[in]光标的句柄。  
   
 ### <a name="remarks"></a>备注  
  使用此方法将光标图像，如手形光标与按钮相关联。 从应用程序资源加载光标。  
@@ -847,14 +847,14 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*id*  
- 一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 Image 值指定如箭头、 pin 和单选按钮的图像。  
+*id*<br/>
+[in]一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 Image 值指定如箭头、 pin 和单选按钮的图像。  
   
- [in]*状态*  
- 在中定义的按钮图像状态标识符之一`CMenuImages::IMAGE_STATE`枚举。 映像状态指定按钮的颜色，例如黑色、 灰色、 浅灰色，白色和暗灰色。 默认值为 `CMenuImages::ImageBlack`。  
+*state*<br/>
+[in]在中定义的按钮图像状态标识符之一`CMenuImages::IMAGE_STATE`枚举。 映像状态指定按钮的颜色，例如黑色、 灰色、 浅灰色，白色和暗灰色。 默认值为 `CMenuImages::ImageBlack`。  
   
- [in]*idDisabled*  
- 一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 图指示了该按钮被禁用。 默认值是第一个按钮图像 ( `CMenuImages::IdArrowDown`)。  
+*idDisabled*<br/>
+[in]一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 图指示了该按钮被禁用。 默认值是第一个按钮图像 ( `CMenuImages::IdArrowDown`)。  
   
 ### <a name="remarks"></a>备注  
   
@@ -866,8 +866,8 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrText*  
- RGB 颜色值。  
+*clrText*<br/>
+[in]RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -879,8 +879,8 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrTextHot*  
- RGB 颜色值。  
+*clrTextHot*<br/>
+[in]RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -892,8 +892,8 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszToolTipText*  
- 为工具提示的文本指针。 指定 NULL 可禁用工具提示。  
+*lpszToolTipText*<br/>
+[in]为工具提示的文本指针。 指定 NULL 可禁用工具提示。  
   
 ### <a name="remarks"></a>备注  
   
@@ -905,8 +905,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bCalcOnly*  
- 若要计算，但不是更改按钮; 的新大小，则返回 TRUE如果为 FALSE，则若要更改按钮的大小。 默认值为 FALSE。  
+*bCalcOnly*<br/>
+[in]若要计算，但不是更改按钮; 的新大小，则返回 TRUE如果为 FALSE，则若要更改按钮的大小。 默认值为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，其中包含新按钮的大小。  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758126"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703841"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 类
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>参数
 
-[in]*p*  
-要存储在全局接口表 (GIT) 中一个接口指针。
+*p*<br/>
+[in]要存储在全局接口表 (GIT) 中一个接口指针。
 
-[in]*git*  
-向现有的引用`CComGITPtr`对象。
+*Git*<br/>
+[in]向现有的引用`CComGITPtr`对象。
 
-[in]*dwCookie*  
-一个用于标识的接口指针的 cookie。
+*dwCookie*<br/>
+[in]一个用于标识的接口指针的 cookie。
 
-[in]*rv*  
-源`CComGITPtr`对象移动中的数据。
+*rv*<br/>
+[in]源`CComGITPtr`对象移动中的数据。
 
 ### <a name="remarks"></a>备注
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>参数
 
-[in]*p*  
-指向一个接口的指针。
+*p*<br/>
+[in]指向一个接口的指针。
 
-[in]*git*  
-对 `CComGITPtr` 对象的引用。
+*Git*<br/>
+[in]对引用`CComGITPtr`对象。
 
-[in]*dwCookie*  
-一个用于标识的接口指针的 cookie。
+*dwCookie*<br/>
+[in]一个用于标识的接口指针的 cookie。
 
-[in]*rv*  
-`CComGITPtr`移动中的数据。
+*rv*<br/>
+[in]`CComGITPtr`移动中的数据。
 
 ### <a name="return-value"></a>返回值
 

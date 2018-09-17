@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693967"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707461"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，它是有选择性地包含浏览按钮可编辑文本框。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  `CMFCEditBrowseCtrl`类支持以下模式。  
   
- **自定义模式**  
- 当用户单击浏览按钮时执行自定义操作。 例如，可以显示特定于应用程序的对话框。  
+- **自定义模式**
+
+   当用户单击浏览按钮时执行自定义操作。 例如，可以显示特定于应用程序的对话框。  
   
- **文件模式**  
- 当用户单击浏览按钮显示标准文件选择对话框。  
+- **文件模式**
+
+   当用户单击浏览按钮显示标准文件选择对话框。  
   
- **文件夹模式下**  
- 当用户单击浏览按钮时显示一个标准文件夹选择对话框。  
+- **文件夹模式下**
+
+   当用户单击浏览按钮时显示一个标准文件夹选择对话框。  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>操作说明： 指定编辑浏览控件  
  执行以下步骤将合并你的应用程序中的一个编辑浏览控件：  

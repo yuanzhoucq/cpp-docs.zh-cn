@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209723"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713851"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法运算符和取模运算符
 ## <a name="syntax"></a>语法  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  由于在溢出或下溢条件不提供由乘法运算符执行的转换，因此，如果乘法操作的结果在转换后不能用操作数类型表示，则信息可能丢失。  
   
-## <a name="microsoft-specific"></a>Microsoft 专用  
- 在 Microsoft C++ 中，取模表达式的结果的符号始终与第一个操作数的符号相同。  
-  
-**结束 Microsoft 专用**  
- 如果两个整数的减法计算不准确，并且只有一个操作数为负，则结果是最大的整数（在数量级上，忽略符号），该整数小于减法运算所生成的准确值。 例如，-11 的计算的值除以 3 得-3.666666666。 该整数除法运算的结果为-3。  
+**Microsoft 专用**
+
+在 Microsoft C++ 中，取模表达式的结果的符号始终与第一个操作数的符号相同。
+
+**结束 Microsoft 专用**
+
+如果两个整数的减法计算不准确，并且只有一个操作数为负，则结果是最大的整数（在数量级上，忽略符号），该整数小于减法运算所生成的准确值。 例如，-11 的计算的值除以 3 得-3.666666666。 该整数除法运算的结果为-3。  
   
  乘法运算符之间的关系提供由标识 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
   

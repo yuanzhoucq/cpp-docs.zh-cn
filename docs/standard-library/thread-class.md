@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706883"
 ---
 # <a name="thread-class"></a>thread 类
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
- 一个**线程**对象。
+*其他*<br/>
+一个**线程**对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
- 一个**线程**对象。
+*其他*<br/>
+一个**线程**对象。
 
 ## <a name="thread"></a>  thread::thread 构造函数
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*F*  
- 要由线程执行的应用程序所定义的函数。
+*F*<br/>
+要由线程执行的应用程序所定义的函数。
 
-*A*  
- 传递给参数的列表*F*。
+*A*<br/>
+传递给参数的列表*F*。
 
-*其他*  
- 将现有**线程**对象。
+*其他*<br/>
+将现有**线程**对象。
 
 ### <a name="remarks"></a>备注
 

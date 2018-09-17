@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711134"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 类
 `CMFCTasksPaneTask`类是表示任务的任务窗格控件的帮助器类 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParent*  
- 表示当前任务的父窗口。  
+*pParent*<br/>
+[in]表示当前任务的父窗口。  
   
- [out]*数据*  
- 类型的对象`CAccessibilityData`填入当前任务的可访问性数据。  
+*data*<br/>
+[out]类型的对象`CAccessibilityData`填入当前任务的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE*数据*参数已成功使用当前任务的可访问性数据填充; 否则为 FALSE。  

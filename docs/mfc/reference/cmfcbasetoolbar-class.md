@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseToolBar 类 |Microsoft 文档
+title: CMFCBaseToolBar 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037839"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705232"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 类
 工具栏的基类。  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|由框架用于创建此类类型的动态实例。|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|返回停靠模式。 (重写[cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)。)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|返回一个工具栏的最小大小。 (重写[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|在窗格中的父更改后由框架调用。 (重写[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|在窗格的父级更改后由框架调用。 (重写[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,20 +90,20 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*大小*  
- 工具栏的最小大小。  
+*size*<br/>
+[out]工具栏的最小大小。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- 在窗格中的父更改后由框架调用。  
+ 在窗格的父级更改后由框架调用。  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndOldParent*  
- 指向上一个父窗口的指针。  
+*pWndOldParent*<br/>
+[in]指向上一个父窗口的指针。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

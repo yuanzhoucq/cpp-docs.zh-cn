@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960302"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718312"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>参数
 
-*val*  
- 将接收 new_val 的值的对象。
+*val*<br/>
+将接收 new_val 的值的对象。
 
-*new_val*  
- 其值将被复制或移到 val 中的对象。
+*new_val*<br/>
+其值将被复制或移到 val 中的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Tuple*  
- 指定元素从 0 开始的索引。
+*Tuple*<br/>
+指定元素从 0 开始的索引。
 
-T1  
- 第一个 pair 元素的类型。
+T1<br/>
+第一个 pair 元素的类型。
 
-T2  
- 第二个 pair 元素的类型。
+T2<br/>
+第二个 pair 元素的类型。
 
-*拉取请求*  
- 要从中进行选择的对。
+*拉取请求*<br/>
+要从中进行选择的对。
 
 ### <a name="remarks"></a>备注
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>参数
 
-*Val1*  
- 用于初始化第一个 `pair` 元素的值。
+*Val1*<br/>
+用于初始化第一个 `pair` 元素的值。
 
-*Val2*  
- 用于初始化第二个 `pair` 元素的值。
+*Val2*<br/>
+用于初始化第二个 `pair` 元素的值。
 
 ### <a name="return-value"></a>返回值
 

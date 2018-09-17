@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712759"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>参数
 
-*Tuple*  
- 要获取的元素的索引。
+*Tuple*<br/>
+要获取的元素的索引。
 
-*类型*  
- 元组中声明的序列顺序，按声明顺序排列。
+*类型*<br/>
+元组中声明的序列顺序，按声明顺序排列。
 
-*T*  
- 要获取的元素的类型。
+*T*<br/>
+要获取的元素的类型。
 
-*Tuple*  
- 包含任意数目元素的 std::tuple。
+*Tuple*<br/>
+包含任意数目元素的 std::tuple。
 
 ### <a name="remarks"></a>备注
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>参数
 
-*TN*  
- 第 N 个函数参数的类型。
+*TN*<br/>
+第 N 个函数参数的类型。
 
-*TN*  
- 第 N 个函数参数的值。
+*TN*<br/>
+第 N 个函数参数的值。
 
 ### <a name="remarks"></a>备注
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>参数
 
-*TN*  
- 第 N 个元组元素的基类型。
+*TN*<br/>
+第 N 个元组元素的基类型。
 
 ### <a name="remarks"></a>备注
 

@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541395"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724747"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 类
 实现 Office 2007 样式功能区库。  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszGroupName*  
- 指定组的名称。  
+*lpszGroupName*<br/>
+[in]指定的组的名称。  
   
- [in]*uiImagesPaletteResID*  
- 指定包含组的图像的图像列表的资源 ID。  
+*uiImagesPaletteResID*<br/>
+[in]指定包含组的图像的图像列表的资源 ID。  
   
- [in]*cxPaletteImage*  
- 指定以像素为单位的图像的宽度。  
+*cxPaletteImage*<br/>
+[in]指定以像素为单位的图像的宽度。  
   
- [in]*imagesGroup*  
- 对包含组图像的图像列表的引用。  
+*imagesGroup*<br/>
+[in]对包含组图像的图像列表的引用。  
   
- [in]*nIconsNum*  
- 指定组中的图标数目。 应仅为自定义 （所有者描述的） 指定此参数组。  
+*nIconsNum*<br/>
+[in]指定组中的图标数目。 应仅为自定义 （所有者描述的） 指定此参数组。  
   
 ### <a name="remarks"></a>备注  
  通过调用此方法，你可以将功能区库中的项划分为多个组。 每个组可以具有一个标题。  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pSubItem*  
- 指向要添加到菜单项的指针。  
+*pSubItem*<br/>
+[in]指向要添加到菜单项的指针。  
   
- [in]*nIndex*  
- 指定的位置的从零开始的索引位置插入项。  
+*nIndex*<br/>
+[in]指定的位置的从零开始的索引位置插入项。  
   
- [in]*bOnTop*  
- 若要指定应在功能区库中; 前插入项，则返回 TRUE否则为 FALSE。  
+*bOnTop*<br/>
+[in]若要指定应在功能区库中; 前插入项，则返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  通过调用此方法，您可以将弹出菜单项与弹出项库。 之前或之后库，可以放置菜单项。  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 若要启用菜单; 重设大小，则返回 TRUE否则为 FALSE。  
+*bEnable*<br/>
+[in]若要启用菜单; 重设大小，则返回 TRUE否则为 FALSE。  
   
- [in]*bVertcalOnly*  
- 若要指定可仅垂直; 调整库，则返回 TRUE为 FALSE，则指定库可以调整大小，同时垂直和水平。  
+*bVertcalOnly*<br/>
+[in]若要指定可仅垂直; 调整库，则返回 TRUE为 FALSE，则指定库可以调整大小，同时垂直和水平。  
   
 ### <a name="remarks"></a>备注  
  使用此方法启用或禁用功能区库重设大小。 启用重设大小后，功能区库将显示用户可用来重设其大小手柄。  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则指定已启用侧栏;否则为 FALSE。  
+*bEnable*<br/>
+[in]为 TRUE，则指定已启用侧栏;否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  调用此方法来启用或禁用在左侧和右侧的菜单中的 Office XP 样式侧栏。  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nGroupIndex*  
- 指定要检索其名称的组的从零开始索引。  
+*nGroupIndex*<br/>
+[in]指定要检索其名称的组的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  位于指定索引处的组的名称。 传递无效的索引将导致失败的断言。  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nItemIndex*  
- 指定要检索的工具提示文本的项的从零开始索引。  
+*nItemIndex*<br/>
+[in]指定要检索的工具提示文本的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  指向分配给功能区库中的项的工具提示字符串的指针。 如果没有工具提示分配到该项目，它可以为 NULL。  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 指定的菜单项，打开功能区库的命令 ID。  
+*uiCmdID*<br/>
+[in]指定的菜单项，打开功能区库的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  用户在功能区库中选择任何项，库将以及打开功能区库菜单按钮的命令 ID 的 WM_COMMAND 消息发送。  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向用于绘图的设备上下文的指针。  
+*pDC*<br/>
+[in]指向用于绘图的设备上下文的指针。  
   
- [in]*rectIcon*  
- 指定要绘制的图标的边框。  
+*rectIcon*<br/>
+[in]指定要绘制的图标的边框。  
   
- [in]*nIconIndex*  
- 指定库图标的图标可绘制的图像列表中的从零开始的索引。  
+*nIconIndex*<br/>
+[in]指定库图标的图标可绘制的图像列表中的从零开始的索引。  
   
- [in]*pIcon*  
- 指向所绘制的图标的指针。  
+*pIcon*<br/>
+[in]指向所绘制的图标的指针。  
   
- [in]*clrText*  
- 指定要绘制的项文本的颜色。  
+*clrText*<br/>
+[in]指定要绘制的项文本的颜色。  
   
 ### <a name="remarks"></a>备注  
  您可以重写此方法在派生类以自定义功能区库中。  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParent*  
- 功能区库窗口中的父窗口。  
+*pParent*<br/>
+[in]功能区库窗口的父窗口。  
   
- [out]*数据*  
- 一个 `CAccessibilityData` 对象，该对象从功能区库接收可访问性数据。  
+*data*<br/>
+[out]一个`CAccessibilityData`对象，它从功能区库接收可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 为 TRUE，则显示为下拉列表菜单按钮; 的功能区库如果为 FALSE，以直接在功能区上显示的功能区库内容。  
+*bSet*<br/>
+[in]为 TRUE，则显示为下拉列表菜单按钮; 的功能区库如果为 FALSE，以直接在功能区上显示的功能区库内容。  
   
 ### <a name="remarks"></a>备注  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nGroupIndex*  
- 指定将名称更改的组的从零开始索引。  
+*nGroupIndex*<br/>
+[in]指定将名称更改的组的从零开始索引。  
   
- [in]*lpszGroupName*  
- 指定组的新名称。  
+*lpszGroupName*<br/>
+[in]指定组的新名称。  
   
 ### <a name="remarks"></a>备注  
  正在更改其名称的组必须使用添加[CMFCRibbonGallery::AddGroup](#addgroup)方法。  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIconsInRow*  
- 指定库的每一行中显示的项目数。  
+*nIconsInRow*<br/>
+[in]指定库的每一行中显示的项目数。  
   
 ### <a name="remarks"></a>备注  
  使用此方法以指定功能区库的宽度。  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nItemIndex*  
- 若要将工具提示相关联的面板项的从零开始的索引。  
+*nItemIndex*<br/>
+[in]若要将工具提示相关联的面板项的从零开始的索引。  
   
- [in]*lpszToolTip*  
- 要在工具提示上显示的文本。  
+*lpszToolTip*<br/>
+[in]要在工具提示上显示的文本。  
   
 ### <a name="remarks"></a>备注  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*imagesPalette*  
- 指定包含要显示在库上的图标的图像列表。  
+*imagesPalette*<br/>
+[in]指定包含要显示在库上的图标的图像列表。  
   
- [in]*uiImagesPaletteResID*  
- 指定包含要显示在库上的图标的图像列表的资源 ID。  
+*uiImagesPaletteResID*<br/>
+[in]指定包含要显示在库上的图标的图像列表的资源 ID。  
   
- [in]*cxPaletteImage*  
- 指定以像素为单位，库上的图像的宽度。  
+*cxPaletteImage*<br/>
+[in]指定以像素为单位，库上的图像的宽度。  
   
 ### <a name="remarks"></a>备注  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定当用户选择库项时发送 WM_COMMAND 消息中的命令 ID。  
+*nID*<br/>
+[in]指定当用户选择库项时发送 WM_COMMAND 消息中的命令 ID。  
   
 ### <a name="remarks"></a>备注  
  若要确定用户选择了库中的特定项，请调用[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)静态方法。  

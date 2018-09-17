@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760378"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703790"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 
@@ -56,17 +56,20 @@ ms.locfileid: "43760378"
 
 为对象提供的 COM 功能有关的信息。
 
-**组件类**  
-设置包含一系列对象支持的接口的组件类的名称。
+- **组件类**
 
-> [!NOTE]
->  如果创建你的项目使用特性，或在此向导页上的属性页，使用属性，则不能更改此选项，因为 ATL 不包括`coclass`属性。
+   设置包含一系列对象支持的接口的组件类的名称。
 
-**Type**  
-设置会在注册表中的对象说明
+   > [!NOTE]
+   > 如果创建你的项目使用特性，或在此向导页上的属性页，使用属性，则不能更改此选项，因为 ATL 不包括`coclass`属性。
 
-**ProgID**  
-设置容器可以使用而不是对象的 CLSID 的名称。
+- **Type**
+
+   设置会在注册表中的对象说明
+
+- **ProgID**
+
+   设置容器可以使用而不是对象的 CLSID 的名称。
 
 ## <a name="see-also"></a>请参阅
 

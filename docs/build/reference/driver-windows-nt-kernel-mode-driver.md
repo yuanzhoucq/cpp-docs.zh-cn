@@ -1,5 +1,5 @@
 ---
-title: -驱动程序 （Windows NT 内核模式驱动程序） |Microsoft 文档
+title: -驱动程序 （Windows NT 内核模式驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373109"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705544"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER（Windows NT 内核模式驱动程序）
 
@@ -33,13 +33,13 @@ ms.locfileid: "32373109"
 
 ## <a name="remarks"></a>备注
 
-使用 **/DRIVER**链接器选项生成 Windows NT 内核模式驱动程序。
+使用 **/DRIVER**链接器选项以生成 Windows NT 内核模式驱动程序。
 
-**/DRIVER:UPONLY**导致链接器添加**IMAGE_FILE_UP_SYSTEM_ONLY**位与输出标头以指定它是单处理器 （向上） 驱动程序中的特征。 系统将拒绝加载 UP 驱动程序的多处理器 (MP) 系统上。
+**/DRIVER:UPONLY**导致链接器将添加**IMAGE_FILE_UP_SYSTEM_ONLY**位以指定它是单处理器 (UP) 驱动程序的输出标头中的特征。 操作系统将拒绝加载 UP 驱动程序的多处理器 (MP) 系统上。
 
-**/DRIVER:WDM**导致链接器设置**IMAGE_DLLCHARACTERISTICS_WDM_DRIVER**位可选标头的 DllCharacteristics 字段中。
+**/Driver: wdm**导致链接器设置**IMAGE_DLLCHARACTERISTICS_WDM_DRIVER**位在可选标头的 DllCharacteristics 字段中。
 
-如果 **/DRIVER**未指定，则链接器不设置这些位。
+如果 **/DRIVER**未指定，则这些位未设置由链接器。
 
 如果 **/DRIVER**指定：
 
@@ -63,5 +63,5 @@ ms.locfileid: "32373109"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)   
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
 [链接器选项](../../build/reference/linker-options.md)

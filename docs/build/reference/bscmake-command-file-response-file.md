@@ -19,39 +19,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a14e0ba315820eec0dd2fe17823f2c5c656fd87
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 69fb144bed21b00fc07107f3fa8d5e64c1afb10d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716507"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令文件（响应文件）
 
 您可以提供部分或全部命令文件中的命令行输入。 指定命令文件使用以下语法：
 
-```  
+```
 BSCMAKE @filename
-```  
+```
 
 允许只能有一个命令文件。 您可以指定带有路径*文件名*。 前加上*文件名*使用 at 符号 (**\@**)。 BSCMAKE 不会假设扩展。 您可以指定其他*sbrfiles*后在命令行上*filename*。 命令文件是包含 BSCMAKE 按相同顺序的输入，如您在命令行上指定的文本文件。 使用一个或多个空格、 制表符或换行字符分隔的命令行参数。
 
 以下命令调用 BSCMAKE 使用命令文件：
 
-```  
+```
 BSCMAKE @prog1.txt
-```  
+```
 
 下面是示例命令文件：
 
-```  
+```
 /n /v /o main.bsc /El
-/S (  
+/S (
 toolbox.h
 verdate.h c:\src\inc\screen.h
 )
 file1.sbr file2.sbr file3.sbr file4.sbr
-```  
+```
 
 ## <a name="see-also"></a>请参阅
 

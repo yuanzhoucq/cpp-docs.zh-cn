@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222089"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718089"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 `CMFCFontInfo`类描述的名称和字体的其他属性。  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 字体的名称。 有关详细信息，请参阅`lfFaceName`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
+*lpszName*<br/>
+[in]字体的名称。 有关详细信息，请参阅`lfFaceName`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
- [in]*lpszScript*  
- 脚本 （字符集） 的字体的名称。  
+*lpszScript*<br/>
+[in]脚本 （字符集） 的字体的名称。  
   
- [in]*nCharSet*  
- 一个值，指定的字体的字符集 （脚本）。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
+*nCharSet*<br/>
+[in]一个值，指定的字体的字符集 （脚本）。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
- [in]*nPitchAndFamily*  
- 一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
+*nPitchAndFamily*<br/>
+[in]一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
- [in]*n 类型*  
- 一个值，指定的字体类型。 此参数可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
+*n 类型*<br/>
+[in]一个值，指定的字体类型。 此参数可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
   
- [in]*src*  
- 将现有`CMFCFontInfo`对象，其成员用于构造此`CMFCFontInfo`对象。  
+*src*<br/>
+[in]将现有`CMFCFontInfo`对象，其成员用于构造此`CMFCFontInfo`对象。  
   
 ### <a name="return-value"></a>返回值  
   

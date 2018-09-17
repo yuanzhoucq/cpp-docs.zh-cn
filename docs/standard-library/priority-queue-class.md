@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714358"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 
@@ -51,13 +51,13 @@ class priority_queue
 ### <a name="parameters"></a>参数
 
 *类型*<br/>
- 要存储在 priority_queue 中的元素数据类型。
+要存储在 priority_queue 中的元素数据类型。
 
 *容器*<br/>
- 用来实现 priority_queue 的基础容器的类型。
+用来实现 priority_queue 的基础容器的类型。
 
 *Compare*<br/>
- 一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<typename Container::value_type>`。
+一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<typename Container::value_type>`。
 
 ## <a name="remarks"></a>备注
 
@@ -253,19 +253,19 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 ### <a name="parameters"></a>参数
 
 *_ comp*<br/>
- **constTraits** 类型的比较函数用于对 priority_queue 中的元素进行排序，它默认为基容器的比较函数。
+**constTraits** 类型的比较函数用于对 priority_queue 中的元素进行排序，它默认为基容器的比较函数。
 
 *_Cont*<br/>
- 要以构造的 priority_queue 为副本的基容器。
+要以构造的 priority_queue 为副本的基容器。
 
 *right*<br/>
- 要以构造的集为副本的 priority_queue。
+要以构造的集为副本的 priority_queue。
 
 *first*<br/>
- 要复制的范围元素中的第一个元素的位置。
+要复制的范围元素中的第一个元素的位置。
 
 *最后一个*<br/>
- 要复制的元素范围以外的第一个元素的位置。
+要复制的元素范围以外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -397,7 +397,7 @@ void push(const Type& val);
 ### <a name="parameters"></a>参数
 
 *val*<br/>
- 添加到 priority_queue 顶部的元素。
+添加到 priority_queue 顶部的元素。
 
 ### <a name="remarks"></a>备注
 

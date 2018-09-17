@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704374"
 ---
 # <a name="obj-files-as-linker-input"></a>用作链接器输入的 .Obj 文件
 
@@ -42,9 +42,9 @@ Microsoft 提供了通用对象文件格式的完整说明。 有关详细信息
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入文件](../../build/reference/link-input-files.md)  
-[链接器选项](../../build/reference/linker-options.md)  
-[支持 Unicode](../../text/support-for-unicode.md)  
-[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode 标准](http://www.unicode.org/)  
-[PE 格式](/windows/desktop/Debug/pe-format)  
+[LINK 输入文件](../../build/reference/link-input-files.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)<br/>
+[支持 Unicode](../../text/support-for-unicode.md)<br/>
+[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Unicode 标准](http://www.unicode.org/)<br/>
+[PE 格式](/windows/desktop/Debug/pe-format)

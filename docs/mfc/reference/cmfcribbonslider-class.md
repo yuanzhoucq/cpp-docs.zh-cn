@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709327"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 类
 `CMFCRibbonSlider`类实现可添加到功能区栏或功能区状态栏的滑块控件。 功能区滑块控件类似于显示在 Office 2007 应用程序中的缩放滑块。  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 滑块 id。  
+*nID*<br/>
+[in]滑块 id。  
   
  [in]。 *nWidth*  
  滑块以像素为单位的宽度。  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nPos*  
- 指定要为滑块设置的位置。 位置是相对于滑块的开头。  
+*nPos*<br/>
+[in]指定要为滑块设置的位置。 位置是相对于滑块的开头。  
   
- [in]*bRedraw*  
- 如果为 TRUE，则滑块将重新绘制。  
+*bRedraw*<br/>
+[in]如果为 TRUE，则滑块将重新绘制。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  设置范围滑块控件的值。  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nMin*  
- 指定滑块控件的最小的值。  
+*nMin*<br/>
+[in]指定滑块控件的最小的值。  
   
- [in]*最*  
- 指定滑块控件的最大的值。  
+*最*<br/>
+[in]指定滑块控件的最大的值。  
   
 ### <a name="remarks"></a>备注  
  通过设置最小值和最大值指定滑块控件的值的范围。  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nZoomIncrement*  
- 指定滑块控件的缩放增量。  
+*nZoomIncrement*<br/>
+[in]指定滑块控件的缩放增量。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

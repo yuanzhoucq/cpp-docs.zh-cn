@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540988"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708177"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 `CMFCStatusBar`类实现类似于状态栏`CStatusBar`类。 但是，`CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- [in]*dwStyle*  
+*pParentWnd*<br/>
+[in][in]*dwStyle*  
  [in]*nID*  
   
 ### <a name="return-value"></a>返回值  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- [in]*dwCtrlStyle*  
- [in]*dwStyle*  
- [in]*nID*  
+*pParentWnd*<br/>
+[in][in]*dwCtrlStyle*  
+*dwStyle*<br/>
+[in][in]*nID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 如果为 TRUE，使鼠标双击的处理。 否则禁用鼠标双击的处理。  
+*bEnable*<br/>
+[in]如果为 TRUE，使鼠标双击的处理。 否则禁用鼠标双击的处理。  
   
 ### <a name="remarks"></a>备注  
  如果启用状态栏来处理双点击，Windows 将以及资源 ID 的 WM_COMMAND 通知发送到每次用户双击状态栏窗格上状态栏的所有者。  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 若要启用其进度栏指定窗格的索引。  
+*nIndex*<br/>
+[in]若要启用其进度栏指定窗格的索引。  
   
- [in]*nTotal*  
- 指定进度栏的最大值。  
+*nTotal*<br/>
+[in]指定进度栏的最大值。  
   
- [in]*bDisplayText*  
- 指定进度栏是否应显示当前的进度值。  
+*bDisplayText*<br/>
+[in]指定进度栏是否应显示当前的进度值。  
   
- [in]*clrBar*  
- 指定进度栏的背景色。  
+*clrBar*<br/>
+[in]指定进度栏的背景色。  
   
- [in]*clrBarDest*  
- 指定进度栏背景的辅助颜色。 使用不同的值*clrBar*通过融入到渐变的颜色填充。  
+*clrBarDest*<br/>
+[in]指定进度栏背景的辅助颜色。 使用不同的值*clrBar*通过融入到渐变的颜色填充。  
   
- [in]*clrProgressText*  
- 指定进度栏的文本的颜色。  
+*clrProgressText*<br/>
+[in]指定进度栏的文本的颜色。  
   
 ### <a name="remarks"></a>备注  
  如果你想要禁用进度栏呼叫`EnablePaneProgressBar`与*nTotal*设置为-1。 默认情况下*nTotal*设置为 100。 因此，您不需要任何其他计算，以显示为百分比的进度。  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*lpRect*  
+*nIndex*<br/>
+[in][in]*lpRect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*nID*  
- [in]*nStyle*  
- [in]*cxWidth*  
+*nIndex*<br/>
+[in][in]*nID*  
+*nStyle*<br/>
+[in][in]*cxWidth*  
   
 ### <a name="remarks"></a>备注  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*s*  
+*nIndex*<br/>
+[in][in]*s*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定状态栏窗格的索引。  
+*nIndex*<br/>
+[in]指定状态栏窗格的索引。  
   
 ### <a name="return-value"></a>返回值  
  状态栏窗格的宽度的*nIndex*指定; 如果状态栏窗格中不存在，则为零。  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定要为其检索工具提示文本窗格中的索引。  
+*nIndex*<br/>
+[in]指定要为其检索工具提示文本窗格中的索引。  
   
 ### <a name="return-value"></a>返回值  
  状态栏窗格的工具提示文本的*nIndex*指定。 否则为空字符串状态栏窗格是否存在指定的*nIndex*或其工具提示文本是否为空。  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定用于失效并重新绘制其内容是: 窗格中的索引。  
+*nIndex*<br/>
+[in]指定用于失效并重新绘制其内容是: 窗格中的索引。  
   
 ### <a name="remarks"></a>备注  
  当状态栏将失效时，则将其标记为重绘。 Windows 重新绘制它时`UpdateWindow`方法将发送到 WM_PAINT 消息`OnPaint`方法。  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向设备上下文进行绘制的指针。  
+*pDC*<br/>
+[in]指向设备上下文进行绘制的指针。  
   
- [in]*pPane*  
- 一个指向`CMFCStatusBarPaneInfo`结构，其中包含有关窗格重绘的信息。  
+*pPane*<br/>
+[in]一个指向`CMFCStatusBarPaneInfo`结构，其中包含有关窗格重绘的信息。  
   
 ### <a name="remarks"></a>备注  
  默认情况下`OnDrawPane`使用的设备上下文来重绘窗格*pDC*根据窗格的样式和内容。  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpIDArray*  
- [in]*nIDCount*  
+*lpIDArray*<br/>
+[in][in]*nIDCount*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定你想要为其分配一个动画窗格中的索引。  
+*nIndex*<br/>
+[in]指定你想要为其分配一个动画窗格中的索引。  
   
- [in]*hImageList*  
- 指定的句柄保留动画帧的图像列表。  
+*hImageList*<br/>
+[in]指定的句柄保留动画帧的图像列表。  
   
- [in]*nFrameRate*  
- 指定以毫秒为单位，动画帧速率。  
+*nFrameRate*<br/>
+[in]指定以毫秒为单位，动画帧速率。  
   
- [in]*bUpdate*  
- 如果为 TRUE，则立即更新窗格内容。 否则，它失效时，被更新窗格内容。  
+*bUpdate*<br/>
+[in]如果为 TRUE，则立即更新窗格内容。 否则，它失效时，被更新窗格内容。  
   
 ### <a name="remarks"></a>备注  
  如果你想要禁用当前的动画，则调用`SetPaneAnimation`与`hImageList`设置为 NULL。  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定要为其设置新的背景色窗格中的索引。  
+*nIndex*<br/>
+[in]指定要为其设置新的背景色窗格中的索引。  
   
- [in]*clrBackground*  
- 指定新背景色。  
+*clrBackground*<br/>
+[in]指定新背景色。  
   
- [in]*bUpdate*  
- 如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
+*bUpdate*<br/>
+[in]如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  设置状态栏窗格的图标。  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定要为其设置的图像的窗格的索引。  
+*nIndex*<br/>
+[in]指定要为其设置的图像的窗格的索引。  
   
- [in]*hIcon*  
- 指定要设置为窗格图像的图标的句柄。  
+*hIcon*<br/>
+[in]指定要设置为窗格图像的图标的句柄。  
   
- [in]*bUpdate*  
- 指定是否要立即更新窗格内容。  
+*bUpdate*<br/>
+[in]指定是否要立即更新窗格内容。  
   
- [in]*hBmp*  
- 指定要设置为窗格图像的位图的句柄。  
+*hBmp*<br/>
+[in]指定要设置为窗格图像的位图的句柄。  
   
- [in]*clrTransparent*  
- 指定位图的透明颜色的*hBmp*指示。  
+*clrTransparent*<br/>
+[in]指定位图的透明颜色的*hBmp*指示。  
   
 ### <a name="remarks"></a>备注  
  可以将 HICON 或 HBITMAP 传递以及设置窗格的图像的透明色。 如果不希望再显示图像，作为图像句柄传递 NULL 值。  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*nID*  
- [in]*nStyle*  
- [in]*cxWidth*  
+*nIndex*<br/>
+[in][in]*nID*  
+*nStyle*<br/>
+[in][in]*cxWidth*  
   
 ### <a name="remarks"></a>备注  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定要为其更新进度指示器窗格中的索引。  
+*nIndex*<br/>
+[in]指定要为其更新进度指示器窗格中的索引。  
   
- [in]*nCurr*  
- 指定进度指示器的当前值。  
+*nCurr*<br/>
+[in]指定进度指示器的当前值。  
   
- [in]*bUpdate*  
- 指定是否应立即更新窗格。  
+*bUpdate*<br/>
+[in]指定是否应立即更新窗格。  
   
 ### <a name="remarks"></a>备注  
  当你想要更新指定的窗格中的进度栏的进度指示器，请调用此方法。  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*nStyle*  
+*nIndex*<br/>
+[in][in]*nStyle*  
   
 ### <a name="remarks"></a>备注  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- [in]*lpszNewText*  
+*nIndex*<br/>
+[in][in]*lpszNewText*  
  [in]*bUpdate*  
   
 ### <a name="return-value"></a>返回值  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定你想要分配新的文本颜色窗格中的索引。  
+*nIndex*<br/>
+[in]指定你想要分配新的文本颜色窗格中的索引。  
   
- [in]*clrText*  
- 指定的文本颜色。  
+*clrText*<br/>
+[in]指定的文本颜色。  
   
- [in]*bUpdate*  
- 如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
+*bUpdate*<br/>
+[in]如果为 TRUE，则立即更新窗格内容。 否则前, 不会更新窗格内容窗格失效的另一种方法。  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  设置状态栏窗格的宽度。  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 为其设置新宽度状态栏窗格的索引。  
+*nIndex*<br/>
+[in]为其设置新宽度状态栏窗格的索引。  
   
- [in]*cx*  
- 状态栏窗格，以像素为单位的新宽度。  
+*cx*<br/>
+[in]状态栏窗格，以像素为单位的新宽度。  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  设置状态栏窗格的工具提示文本。  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 你想要分配的工具提示文本窗格中的索引。  
+*nIndex*<br/>
+[in]你想要分配的工具提示文本窗格中的索引。  
   
- [in]*pszTipText*  
- 新的工具提示文本。  
+*pszTipText*<br/>
+[in]新的工具提示文本。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

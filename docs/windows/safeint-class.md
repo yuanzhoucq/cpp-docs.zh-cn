@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701748"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*rhs*|输入的参数，表示多个独立函数中的运算符右侧的值。|
-|[in]*我*|输入的参数，表示多个独立函数中的运算符右侧的值。|
-|[in]*bits*|输入的参数，表示多个独立函数中的运算符右侧的值。|
+|*rhs*|[in]输入的参数，表示多个独立函数中的运算符右侧的值。|
+|*i*|[in]输入的参数，表示多个独立函数中的运算符右侧的值。|
+|*Bits*|[in]输入的参数，表示多个独立函数中的运算符右侧的值。|
 
 ## <a name="members"></a>成员
 

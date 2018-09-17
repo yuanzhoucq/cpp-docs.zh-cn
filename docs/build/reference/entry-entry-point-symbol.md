@@ -1,5 +1,5 @@
 ---
-title: 输入 （入口点符号） |Microsoft 文档
+title: -/ENTRY （入口点符号） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,59 +20,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53f5a18b061cbd956731ced6788e86f871ea97bd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719571"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY（入口点符号）
-```  
-/ENTRY:function  
-```  
-  
-## <a name="remarks"></a>备注  
- 其中：  
-  
- *函数*  
- 一个函数，指定的用户定义起始地址的.exe 文件或 DLL。  
-  
-## <a name="remarks"></a>备注  
- /ENTRY 选项指定为一个.exe 文件或 DLL 的起始地址的入口点函数。  
-  
- 该函数必须定义要使用`__stdcall`调用约定。 参数和返回值取决于程序是否一个控制台应用程序、 windows 应用程序或 DLL。 建议你让链接器设置的入口点，以便 C 运行时库正确初始化，并执行的静态对象的 c + + 构造函数。  
-  
- 默认情况下，起始地址是从 C 运行时库函数名称。 链接器选择它的程序属性根据下表中所示。  
-  
-|功能名称|默认值为|  
-|-------------------|-----------------|  
-|**mainCRTStartup** (或**wmainCRTStartup**)|使用 /SUBSYSTEM:CONSOLE; 的应用程序调用`main`(或`wmain`)|  
-|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，其必须定义为使用 `__stdcall`|  
-|**_DllMainCRTStartup**|DLL;调用`DllMain`如果它存在，其必须定义以使用 `__stdcall`|  
-  
- 如果[/DLL](../../build/reference/dll-build-a-dll.md)或[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定选项、 链接器选择的子系统和条目的点，具体取决于是否`main`或`WinMain`定义。  
-  
- 函数`main`， `WinMain`，和`DllMain`是三种形式的用户定义入口点。  
-  
- 创建托管的映像时，指定到 /ENTRY 的函数必须具有的签名 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。  
-  
- 有关如何定义你自己的信息`DllMain`入口点，请参阅[Dll 和 Visual c + + 运行库行为](../../build/run-time-library-behavior.md)。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击**链接器**文件夹。  
-  
-3.  单击**高级**属性页。  
-  
-4.  修改**入口点**属性。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+
+```
+/ENTRY:function
+```
+
+## <a name="arguments"></a>自变量
+
+*函数*<br/>
+一个函数，指定用户定义的开始地址为.exe 文件或 DLL。
+
+## <a name="remarks"></a>备注
+
+/ENTRY 选项指定为.exe 文件或 DLL 的起始地址的入口点函数。
+
+该函数必须定义为使用`__stdcall`调用约定。 参数和返回值取决于如果程序是一个控制台应用程序、 windows 应用程序或 DLL。 建议您让链接器设置，以便 C 运行时库正确初始化，并执行的静态对象的 c + + 构造函数的入口点。
+
+默认情况下的起始地址是 C 运行时库中的函数名。 链接器来选择该程序的特性根据下表中所示。
+
+|功能名称|默认值为|
+|-------------------|-----------------|
+|**mainCRTStartup** (或**wmainCRTStartup**)|使用 /subsystem: console; 的应用程序调用`main`(或`wmain`)|
+|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，必须对其进行定义以使用 `__stdcall`|
+|**_DllMainCRTStartup**|DLL;调用`DllMain`如果存在，其必须进行定义以使用 `__stdcall`|
+
+如果[/DLL](../../build/reference/dll-build-a-dll.md)或[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定选项、 链接器会选择取决于是否的子系统和入口点`main`或`WinMain`定义。
+
+函数`main`， `WinMain`，和`DllMain`是三种形式的用户定义入口点。
+
+/ENTRY 到指定的函数创建托管的映像时，必须具有的签名 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。
+
+了解如何定义您自己`DllMain`入口点，请参阅[Dll 和 Visual c + + 运行时库行为](../../build/run-time-library-behavior.md)。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+
+1. 单击**链接器**文件夹。
+
+1. 单击**高级**属性页。
+
+1. 修改**入口点**属性。
+
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

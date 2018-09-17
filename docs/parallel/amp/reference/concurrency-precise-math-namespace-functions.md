@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107375"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711045"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空间函数
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 浮点值
 
-`_Iptr` (out 参数）  
-整数部分`_X`，作为浮点值。
+`_Iptr`  
+[out]整数部分`_X`，作为浮点值。
 
 ### <a name="return-value"></a>返回值
 有符号的小数部分的`_X`。
@@ -1891,8 +1891,8 @@ inline double remquo(
 `_Y`  
 第二个浮点自变量。
 
-`_Quo` (out 参数）  
-一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
+`_Quo`  
+[out]一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
 
 ### <a name="return-value"></a>返回值
 返回余数`_X`除以`_Y`。
@@ -1914,8 +1914,8 @@ inline float remquof(
 `_Y`  
 第二个浮点自变量。
 
-`_Quo` (out 参数）  
-一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
+`_Quo`  
+[out]一个整数，用于返回小数位数的商的地址`_X`小数位数除以`_Y`。
 
 ### <a name="return-value"></a>返回值
 返回余数`_X`除以`_Y`。

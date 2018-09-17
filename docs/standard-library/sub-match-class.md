@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691609"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722717"
 ---
 # <a name="submatch-class"></a>sub_match 类
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>参数
 
-*BidIt*  
- 子匹配项的迭代器类型。
+*BidIt*<br/>
+子匹配项的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要比较的子匹配项。
+*right*<br/>
+要比较的子匹配项。
 
-*str*  
- 要与之比较的字符串。
+*str*<br/>
+要与之比较的字符串。
 
-*ptr*  
- 要比较的以 null 结尾的序列。
+*ptr*<br/>
+要比较的以 null 结尾的序列。
 
 ### <a name="remarks"></a>备注
 

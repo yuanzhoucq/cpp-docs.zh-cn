@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539558"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704218"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Microsoft 专用**  
@@ -41,14 +41,14 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Port`  
- 要向其发送数据的端口。  
+*端口*<br/>
+[in]要向其发送数据的端口。  
   
- [in] `Buffer`  
- 指向要指定的端口发送的数据的指针。  
+*Buffer*<br/>
+[in]指向要指定的端口发送的数据的指针。  
   
- [in] `Count`  
- 双字数组发送的数。  
+“计数”<br/>
+[in]双字数组发送的数。  
   
 ## <a name="requirements"></a>要求  
   

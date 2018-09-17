@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9556aee6ef2d9d7cf10e0bb2bd24bdc61c9a0ecd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702528"
 ---
 # <a name="generic-delegates-visual-c"></a>泛型委托 (Visual C++)
 
@@ -39,8 +39,8 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>参数
 
-*属性*（可选）  
-附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。
+*特性*  
+（可选）声明性的其他信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
 *type-parameter-identifier(s)*  
 类型参数标识符的逗号分隔列表。
@@ -48,8 +48,8 @@ generic < [class | typename] type-parameter-identifiers>
 *类型形参约束子句*  
 将窗体中指定[泛型类型参数的约束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*可访问性修饰符*（可选）  
-可访问性修饰符 (例如**公共**，**专用**)。
+*可访问性修饰符*  
+（可选）可访问性修饰符 (例如**公共**，**专用**)。
 
 *result-type*  
 委托的返回类型。
@@ -57,8 +57,8 @@ generic < [class | typename] type-parameter-identifiers>
 *identifier*  
 委托的名称。
 
-*形参*（可选）  
-委托的参数列表。
+*形参*  
+（可选）委托的参数列表。
 
 ## <a name="example"></a>示例
 

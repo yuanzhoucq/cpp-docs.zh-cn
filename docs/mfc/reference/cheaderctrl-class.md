@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758851"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712724"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|  
-|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
+|*iItem*|[in]其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|  
+|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
+|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in、 out]*phdhti*|指向[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)结构，它指定要测试的点并接收测试的结果。|  
+|*phdhti*|[in、 out]指向[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)结构，它指定要测试的点并接收测试的结果。|  
   
 ### <a name="return-value"></a>返回值  
  如果任何指定的位置; 处的标头项的从零开始的索引否则为-1。  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|标头项的从零开始的索引。|  
+|*iItem*|[in]标头项的从零开始的索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

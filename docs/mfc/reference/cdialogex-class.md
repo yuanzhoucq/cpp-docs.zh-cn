@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335953"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716295"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 类
 `CDialogEx`类指定对话框的背景色和背景图像。  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIDTemplate*  
- 对话框模板资源 ID。  
+*nIDTemplate*<br/>
+[in]对话框模板资源 ID。  
   
- [in]*lpszTemplateName*  
- 对话框模板资源名称。  
+*lpszTemplateName*<br/>
+[in]对话框模板资源名称。  
   
- [in]*pParent*  
- 指向父窗口的指针。 默认值为 NULL。  
+*pParent*<br/>
+[in]指向父窗口的指针。 默认值为 NULL。  
   
- [in]*pParentWnd*  
- 指向父窗口的指针。 默认值为 NULL。  
+*pParentWnd*<br/>
+[in]指向父窗口的指针。 默认值为 NULL。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- RGB 颜色值。  
+*颜色*<br/>
+[in]RGB 颜色值。  
   
- [in]*bRepaint*  
- 为 TRUE，则立即更新屏幕上。否则为 FALSE。 默认值为 TRUE。  
+*bRepaint*<br/>
+[in]为 TRUE，则立即更新屏幕上。否则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hBitmap*  
- 句柄的背景图像。  
+*hBitmap*<br/>
+[in]句柄的背景图像。  
   
- [in]*uiBmpResId*  
- 背景图像的资源 ID。  
+*uiBmpResId*<br/>
+[in]背景图像的资源 ID。  
   
- [in]*位置*  
- 其中一个`CDialogEx::BackgroundLocation`指定的映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 默认值为 BACKGR_TILE。  
+*location*<br/>
+[in]其中一个`CDialogEx::BackgroundLocation`指定的映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 默认值为 BACKGR_TILE。  
   
- [in]*bAutoDestroy*  
- 为 TRUE，则自动销毁的背景图像;否则为 FALSE。  
+*bAutoDestroy*<br/>
+[in]为 TRUE，则自动销毁的背景图像;否则为 FALSE。  
   
- [in]*bRepaint*  
- 为 TRUE，则立即重绘对话框;否则为 FALSE。  
+*bRepaint*<br/>
+[in]为 TRUE，则立即重绘对话框;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  在第二个方法重载的语法，TRUE 成功，则该方法是否否则为 FALSE。  

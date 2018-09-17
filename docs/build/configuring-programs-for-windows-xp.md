@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598228"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720718"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>配置 Windows XP 的程序
 
 由于 Visual Studio 支持多个平台工具集，可面向的操作系统和不受默认工具集的运行时库。 例如，通过切换平台工具集，您可以使用 C + + 11、 C + + 14 和支持的 Visual Studio 中的 Visual c + + 编译器的 C + + 17 语言增强功能来创建面向 Windows XP 和 Windows Server 2003 的应用。 可以还使用较旧的平台工具集来维护二进制兼容旧代码，并仍充分利用 Visual Studio IDE 的最新功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安装 Windows XP 平台工具集
+
 若要在 Visual Studio 2017 中获取的平台工具集和目标 Windows XP 和 Windows Server 2003 的组件，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或在选择**修改**若要修改现有安装，请确保**使用 c + + 的桌面开发**选择工作负荷。 在为此工作负荷的可选组件列表中，选择**针对 c + + 的 Windows XP 支持**，然后选择**安装**或**修改**。
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 定向体验
@@ -72,7 +73,7 @@ ms.locfileid: "42598228"
 
 - **调试 DirectX 图形**
 
-     因为图形调试器不支持 Direct3D 9 API，它不能用于调试在 Windows XP 或 Windows Server 2003 上使用 Direct3D 的应用。 但是，如果应用程序可实现使用 Direct3D 10 或 Direct3D 11 API 的备用呈现器，则可以使用图形调试器来诊断有关这些 API 的使用情况的问题。
+   因为图形调试器不支持 Direct3D 9 API，它不能用于调试在 Windows XP 或 Windows Server 2003 上使用 Direct3D 的应用。 但是，如果应用程序可实现使用 Direct3D 10 或 Direct3D 11 API 的备用呈现器，则可以使用图形调试器来诊断有关这些 API 的使用情况的问题。
 
 - **正在生成 HLSL**
 

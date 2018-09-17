@@ -1,5 +1,5 @@
 ---
-title: 有关 (OpenMP) |Microsoft 文档
+title: 对于 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721651"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-导致中完成的工作划分到线程的并行区域内的循环。  
+导致中完成的工作有关要在线程之间划分的并行区域内的循环。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,14 +33,13 @@ ms.locfileid: "33694857"
    for_statement  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+## <a name="arguments"></a>自变量
+
+*子句*<br/>
+（可选）零个或多个子句。 请参阅支持的子句的列表的备注部分**为**。  
   
- `clause`（可选）  
- 零个或多个子句。 请参阅支持的子句列表的备注部分**为**。  
-  
- `for_statement`  
- For 循环的一个。 如果用户代码中未定义的行为将导致循环更改索引变量。  
+*for_statement*<br/>
+一个 for 循环。 如果用户代码中，将会导致未定义的行为的循环更改索引变量。  
   
 ## <a name="remarks"></a>备注  
  **为**指令支持以下 OpenMP 子句：  
@@ -59,7 +58,7 @@ ms.locfileid: "33694857"
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- 如果**并行**同时指定，则`clause`可以会被接受的任何子句**并行**或**为**指令，除**nowait**.  
+ 如果**并行**同时指定，则`clause`可以会被接受的任何子句**并行**或**有关**指令，除**nowait**.  
   
  有关详细信息，请参阅[2.4.1 for 构造](../../../parallel/openmp/2-4-1-for-construct.md)。  
   

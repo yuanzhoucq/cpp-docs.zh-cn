@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 369d7c1c6c5bf2201c52bab67361f196b309c6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702541"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
 **Microsoft 专用**  
@@ -108,8 +108,8 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `lpAddend`  
- 指向要递增的变量的指针。  
+*lpAddend*<br/>
+[in、 out]指向要递增的变量。  
   
 ## <a name="return-value"></a>返回值  
  返回值是生成的递增值。  

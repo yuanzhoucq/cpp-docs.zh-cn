@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761938"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700644"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
 
 ATL Active Server Page 组件向导此页用于指定用于处理信息和状态与 ASP 组件相关的可选设置。
 
-**可选方法**  
-添加了可选的 ASP 方法， **onstartpage 是否**并**OnEndPage**，对你的对象。 若要设置任何 Active Server Pages 内部对象，必须选择此选项。 默认情况下，选择它。
+- **可选方法**  
 
-- **Onstartpage 是否/OnEndPage** [onstartpage 是否](https://msdn.microsoft.com/library/ms691624.aspx)脚本会尝试访问该对象在首次调用。 **OnEndPage**对象完成时调用处理脚本。
+   添加了可选的 ASP 方法， **onstartpage 是否**并**OnEndPage**，对你的对象。 若要设置任何 Active Server Pages 内部对象，必须选择此选项。 默认情况下，选择它。
 
-**内部对象**  
-必须选择**onstartpage 是否/OnEndPage**选项可以设置任何 ASP 内部对象。
+- **Onstartpage / OnEndPage**
+
+   [Onstartpage 是否](https://msdn.microsoft.com/library/ms691624.aspx)脚本会尝试访问该对象在首次调用。 **OnEndPage**对象完成时调用处理脚本。
+
+- **内部对象**  
+
+   必须选择**onstartpage 是否/OnEndPage**选项可以设置任何 ASP 内部对象。
 
 |选项|描述|
 |------------|-----------------|

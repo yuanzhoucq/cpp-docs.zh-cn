@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539781"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712943"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 类
 `CMFCRibbonButton` 类实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pSubItem*  
- 指定指向要添加的新元素的指针。  
+*pSubItem*<br/>
+[in]指定指向要添加的新元素的指针。  
   
- [in]*nIndex*  
- 指定要将元素添加到按钮; 的菜单项的数组索引为-1 的菜单项的数组的末尾添加元素。  
+*nIndex*<br/>
+[in]指定要将元素添加到按钮; 的菜单项的数组索引为-1 的菜单项的数组的末尾添加元素。  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定按钮的命令 ID。  
+*nID*<br/>
+[in]指定按钮的命令 ID。  
   
- [in]*lpszText*  
- 指定按钮的文本标签。  
+*lpszText*<br/>
+[in]指定按钮的文本标签。  
   
- [in]*nSmallImageIndex*  
- 指定父类别的图像列表中的按钮的小图像的从零开始索引。  
+*nSmallImageIndex*<br/>
+[in]指定父类别的图像列表中的按钮的小图像的从零开始索引。  
   
- [in]*nLargeImageIndex*  
- 指定父类别的图像列表中的按钮的大型图像的从零开始索引。  
+*nLargeImageIndex*<br/>
+[in]指定父类别的图像列表中的按钮的大型图像的从零开始索引。  
   
- [in]*hIcon*  
- 指定应用程序用作按钮的图像的图标的句柄。  
+*hIcon*<br/>
+[in]指定应用程序用作按钮的图像的图标的句柄。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何构造`CMFCRibbonButton`对象。  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*bCalcOnly*  
+*pDC*<br/>
+[in][in]*bCalcOnly*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*类型*  
+*pDC*<br/>
+[in][in]*类型*  
  [in]*rectImage*  
   
 ### <a name="remarks"></a>备注  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*strText*  
- [in]*rectText*  
- [in]*uiDTFlags*  
+*pDC*<br/>
+[in][in]*strText*  
+*rectText*<br/>
+[in][in]*uiDTFlags*  
  [in]*clrText*  
   
 ### <a name="return-value"></a>返回值  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 指定弹出菜单项的命令 ID。  
+*uiID*<br/>
+[in]指定弹出菜单项的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  子与关联的项的从零开始的索引*uiID*。 如果没有此类子项，为-1。  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bLargeImage*  
- 如果为 TRUE，返回的图像索引中包含的大型图像; 图像列表否则返回的图像索引中包含较小的图像的图像列表。  
+*bLargeImage*<br/>
+[in]如果为 TRUE，返回的图像索引中包含的大型图像; 图像列表否则返回的图像索引中包含较小的图像的图像列表。  
   
 ### <a name="return-value"></a>返回值  
  关联的图像列表中的按钮的图像的索引。  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指定的鼠标单击的位置。  
+*点*<br/>
+[in]指定的鼠标单击的位置。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类中的，如果你想要处理此事件。  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定你想要删除的菜单项的从零开始索引。  
+*nIndex*<br/>
+[in]指定你想要删除的菜单项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则删除指定的项，则返回 TRUE如果; 否则为 FALSE *nIndex*为负或超过弹出菜单中的菜单项的数目。  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 如果为 TRUE，该按钮显示大图像。 否则，按钮将显示一个小图像。  
+*bSet*<br/>
+[in]如果为 TRUE，该按钮显示大图像。 否则，按钮将显示一个小图像。  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  启用功能区按钮的默认命令。  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 如果为 TRUE，该按钮可以执行其默认命令。 如果为 FALSE，该按钮不能执行其默认命令。  
+*bSet*<br/>
+[in]如果为 TRUE，该按钮可以执行其默认命令。 如果为 FALSE，该按钮不能执行其默认命令。  
   
 ### <a name="remarks"></a>备注  
  *bSet*是相关，仅当该按钮具有一个菜单。 如果*bSet*为 TRUE，该按钮可以执行其默认命令并且已分配的弹出菜单会出现仅当用户单击按钮右边缘箭头。 否则为该按钮不能执行其默认命令，并弹出菜单显示用户而不考虑哪些区域中按钮的单击。  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定的图像索引。  
+*nIndex*<br/>
+[in]指定的图像索引。  
   
- [in]*bLargeImage*  
- 如果为 TRUE，指定的索引引用的大型图像列表。 否则，索引引用的较小的图像列表。  
+*bLargeImage*<br/>
+[in]如果为 TRUE，指定的索引引用的大型图像列表。 否则，索引引用的较小的图像列表。  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  将弹出菜单分配给功能区按钮。  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 如果为 TRUE，菜单是右对齐。 否则，菜单是左对齐  
+*bSet*<br/>
+[in]如果为 TRUE，菜单是右对齐。 否则，菜单是左对齐  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

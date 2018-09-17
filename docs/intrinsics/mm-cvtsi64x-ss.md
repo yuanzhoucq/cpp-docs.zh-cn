@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699994"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 专用**  
@@ -39,11 +39,11 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `a`  
- `__m128`结构，它包含四个单精度浮点值。  
+*a*<br/>
+[in]`__m128`结构，它包含四个单精度浮点值。  
   
- [in] `b`  
- 要转换为浮点值 64 位整数。  
+*b*<br/>
+[in]要转换为浮点值 64 位整数。  
   
 ## <a name="return-value"></a>返回值  
  `__m128`结构，其第一个浮点值是转换的结果。 其他三个值复制相比并无变化`a`。  

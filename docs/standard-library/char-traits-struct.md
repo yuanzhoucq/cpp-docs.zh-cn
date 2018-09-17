@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106078"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724602"
 ---
 # <a name="chartraits-struct"></a>char_traits 结构
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 要为其分配字符值的元素。
 
-* strTo * 其初始元素是要分配字符值的字符串或字符数组。
+*strTo*<br/>
+要对其初始元素分配字符值的字符串或字符数组。
 
 *_Num*<br/>
 要为其分配值的元素数目。
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>参数
 
-* str1 * 两个字符串的第一个要进行比较。
+*str1*<br/>
+要进行比较的两个字符串中的第一个。
 
-* str2 * 两个字符串的第二个，要进行比较。
+*str2*<br/>
+要进行比较的两个字符串中的第二个。
 
 *_Num*<br/>
 要比较的字符串中的元素数。

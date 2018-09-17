@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595043"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706675"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual c + + 浮点优化
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 使用较低精度浮点单元，例如 SSE2，若要执行的中间计算的则可能会导致这种额外的舍入。 /Fp: fast 舍入的准确性因此与平台相关;适合一个处理器编译的代码可能不一定适合另一个处理器。 它由用户来确定速度利准确性的任何问题。
 
 如果 /fp: fast 优化是指特定功能的特别容易出现问题，浮点模式可以本地切换到 fp： 精确使用`float_control`编译器杂注。
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>/Fp: fast 下带来了代数转换
 

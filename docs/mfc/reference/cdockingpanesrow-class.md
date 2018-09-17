@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712122"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 类
 管理位于停靠站点中同一水平或垂直行（列）的窗格的列表。  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- [in]*dockMethod*  
- [in]*lpRect*  
- [in]*bAddLast*  
+*pControlBar*<br/>
+[in][in]*dockMethod*  
+*lpRect*<br/>
+[in][in]*bAddLast*  
   
 ### <a name="remarks"></a>备注  
   
@@ -218,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- [in]*dockMethod*  
+*pControlBar*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="remarks"></a>备注  
   
@@ -233,11 +233,11 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nMargin*  
- 指定的偏移量，以像素为单位从左上角的行的第一个窗格。  
+*nMargin*<br/>
+[in]指定的偏移量，以像素为单位从左上角的行的第一个窗格。  
   
- [in]*nSpacing*  
- 指定以像素为单位的窗格之间的间距。  
+*nSpacing*<br/>
+[in]指定以像素为单位的窗格之间的间距。  
   
 ### <a name="remarks"></a>备注  
  调用此方法来排列中的行，它们将停靠的窗格。 调用此方法后，必须调用`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -270,8 +270,8 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentDockBar*  
- [in]*nOffset*  
+*pParentDockBar*<br/>
+[in][in]*nOffset*  
  [in]*nHeight*  
   
 ### <a name="remarks"></a>备注  
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMoveBackToVirtualRect*  
- [in]*pBarToExclude*  
+*bMoveBackToVirtualRect*<br/>
+[in][in]*pBarToExclude*  
   
 ### <a name="remarks"></a>备注  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*lst*  
+*pBar*<br/>
+[in][in]*lst*  
   
 ### <a name="remarks"></a>备注  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- [in]*ptOffset*  
- [in]*bSwapControlBars*  
- [in]*hdwp*  
- [in]*rectTarget*  
- [in]*nOffset*  
- [in]*bForward*  
- [in]*nAbsolutOffset*  
+*pControlBar*<br/>
+[in][in]*ptOffset*  
+*bSwapControlBars*<br/>
+[in][in]*hdwp*  
+*rectTarget*<br/>
+[in][in]*nOffset*  
+*bForward*<br/>
+[in][in]*nAbsolutOffset*  
   
 ### <a name="remarks"></a>备注  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBarOld*  
- [in]*pBarNew*  
+*pBarOld*<br/>
+[in][in]*pBarNew*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectNewParentBarArea*  
- [in]*深入剖析*  
- [in]*bExpand*  
- [in]*nOffset*  
+*rectNewParentBarArea*<br/>
+[in][in]*深入剖析*  
+*bExpand*<br/>
+[in][in]*nOffset*  
   
 ### <a name="remarks"></a>备注  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nExtraSpace*  
- [in]*rowExtraAlign*  
+*nExtraSpace*<br/>
+[in][in]*rowExtraAlign*  
   
 ### <a name="remarks"></a>备注  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- [in]*bDelay*  
+*bShow*<br/>
+[in][in]*bDelay*  
   
 ### <a name="remarks"></a>备注  
   
@@ -760,8 +760,8 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- [in]*bShow*  
+*pControlBar*<br/>
+[in][in]*bShow*  
  [in]*bDelay*  
   
 ### <a name="return-value"></a>返回值  
