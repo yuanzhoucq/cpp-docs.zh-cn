@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37522cc2eaaa57abd5c3c7a0986532bb47d73f5e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7cd0355c4d0ce203617729142e03860e9960190a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726604"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 类
 `CMDITabInfo`类用于将参数传递给[cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 设置此类的成员以控制 MDI 选项卡式组的行为。  
@@ -235,8 +235,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ar*  
- 一个[CArchive 类](../../mfc/reference/carchive-class.md)要序列化对象。  
+*ar*<br/>
+[in]一个[CArchive 类](../../mfc/reference/carchive-class.md)要序列化对象。  
   
 ## <a name="see-also"></a>请参阅  
  [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)   

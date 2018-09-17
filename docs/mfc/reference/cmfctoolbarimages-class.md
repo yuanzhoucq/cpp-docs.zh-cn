@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 95d9da94e2fa7a79db6696649854fafa989941f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726266"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 类
 在工具栏上的映像。 `CMFCToolBarImages`类管理从应用程序资源或从文件加载工具栏图像。  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrBase*  
- [in]*clrTone*  
+*clrBase*<br/>
+[in][in]*clrTone*  
   
 ### <a name="remarks"></a>备注  
   
@@ -297,11 +297,11 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hIcon*  
- 要添加的图标的句柄。  
+*hIcon*<br/>
+[in]要添加的图标的句柄。  
   
- [in]*bAlphaBlend*  
- 如果该图标用于 alpha 值混合处理;否则为 FALSE。  
+*bAlphaBlend*<br/>
+[in]如果该图标用于 alpha 值混合处理;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则已添加的工具栏图像的从零开始的索引否则为-1。  
@@ -320,17 +320,17 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hbmp*  
- 要添加的位图句柄。  
+*hbmp*<br/>
+[in]要添加的位图句柄。  
   
- [in]*bSetBitPerPixel*  
- 如果`CMFCToolBarImages`对象使用新映像; 的颜色深度 （位 / 像素）False`CMFCToolbarImages`对象保留当前颜色深度。  
+*bSetBitPerPixel*<br/>
+[in]如果`CMFCToolBarImages`对象使用新映像; 的颜色深度 （位 / 像素）False`CMFCToolbarImages`对象保留当前颜色深度。  
   
- [in]*imageList*  
- 对引用`CMFCToolbarImages`对象，其中包含要添加的图像。  
+*ImageList*<br/>
+[in]对引用`CMFCToolbarImages`对象，其中包含要添加的图像。  
   
- [in]*nIndex*  
- 源中的索引`CMFCToolbarImages`对象要添加的图像。  
+*nIndex*<br/>
+[in]源中的索引`CMFCToolbarImages`对象要添加的图像。  
   
 ### <a name="return-value"></a>返回值  
  许多 toolbar 映像`CMFCToolBarImages`对象维护新位图已成功，则添加后操作失败，则为-1。  
@@ -397,8 +397,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*imageList*  
- 要用作工具栏图像源的图像列表。  
+*ImageList*<br/>
+[in]要用作工具栏图像源的图像列表。  
   
 ### <a name="return-value"></a>返回值  
  始终返回 TRUE。  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bmp*  
- [in]*clrTransparent*  
+*bmp*<br/>
+[in][in]*clrTransparent*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -431,8 +431,8 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iImage*  
- 指定要删除的图像的从零开始的索引。  
+*iImage*<br/>
+[in]指定要删除的图像的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果映像已删除成功，则为 TRUE如果图像索引是无效的则为 FALSE`CMFCToolbarImages`对象是临时的`CMFCToolbarImages`对象不包含用户定义的映像，或如果某一其他发生错误。  
@@ -455,35 +455,35 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*x*  
- 左侧和右侧图像将在绘制的矩形的 X 坐标。  
+*x*<br/>
+[in]左侧和右侧图像将在绘制的矩形的 X 坐标。  
   
- [in]*y*  
- 在绘制图像，其中矩形的顶部的 Y 坐标。  
+*y*<br/>
+[in]在绘制图像，其中矩形的顶部的 Y 坐标。  
   
- [in]*iImageIndex*  
- 要显示的图像的从零开始的索引。  
+*iImageIndex*<br/>
+[in]要显示的图像的从零开始的索引。  
   
- [in]*bHilite*  
- 如果图像是突出显示; 则为 TRUE否则为 FALSE。  
+*bHilite*<br/>
+[in]如果图像是突出显示; 则为 TRUE否则为 FALSE。  
   
- [in]*bDisabled*  
- 如果要在中已禁用的样式; 绘制的图像，则返回 TRUE否则为 FALSE。  
+*bDisabled*<br/>
+[in]如果要在中已禁用的样式; 绘制的图像，则返回 TRUE否则为 FALSE。  
   
- [in]*bIndeterminate*  
- 如果不确定状态样式; 绘制图像，则为 TRUE否则为 FALSE。  
+*bIndeterminate*<br/>
+[in]如果不确定状态样式; 绘制图像，则为 TRUE否则为 FALSE。  
   
- [in]*bShadow*  
- 如果图像，绘制带投影，则为 TRUE否则为 FALSE。  
+*bShadow*<br/>
+[in]如果图像，绘制带投影，则为 TRUE否则为 FALSE。  
   
- [in]*bInactive*  
- 如果要在中的非活动状态样式; 绘制的图像，则返回 TRUE否则为 FALSE。  
+*bInactive*<br/>
+[in]如果要在中的非活动状态样式; 绘制的图像，则返回 TRUE否则为 FALSE。  
   
- [in]*alphaSrc*  
- Alpha 通道 （透明度） 值中。 值为 255 表示图像是绘制不透明。 值为 0 表示图像绘制透明。 仅对于 32 位彩色图像和显示 Windows Vista 玻璃样式的图像，则使用此值。  
+*alphaSrc*<br/>
+[in]Alpha 通道 （透明度） 值中。 值为 255 表示图像是绘制不透明。 值为 0 表示图像绘制透明。 仅对于 32 位彩色图像和显示 Windows Vista 玻璃样式的图像，则使用此值。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则显示了指定的图像，则返回 TRUE如果图像索引无效或发生了一些其他错误，则为 FALSE。  
@@ -506,14 +506,14 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*rect*  
- [in]*iImageIndex*  
- [in]*horzAlign*  
- [in]*vertAlign*  
- [in]*rectSrc*  
- [in]*0*  
- [in]*0)*  
+*pDC*<br/>
+[in][in]*rect*  
+*iImageIndex*<br/>
+[in][in]*horzAlign*  
+*vertAlign*<br/>
+[in][in]*rectSrc*  
+*0*<br/>
+[in][in]*0)*  
  [in]*alphaSrc*  
   
 ### <a name="return-value"></a>返回值  
@@ -540,8 +540,8 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ds*  
- 对引用`CAfxDrawState`对象传递给`PrepareDrawImage`方法。  
+*ds*<br/>
+[in]对引用`CAfxDrawState`对象传递给`PrepareDrawImage`方法。  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  返回具有指定的图像索引，从工具栏图像的图标。  
@@ -551,8 +551,8 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 要提取为一个图标的图像所在位置的图像列表中的从零开始索引。  
+*nIndex*<br/>
+[in]要提取为一个图标的图像所在位置的图像列表中的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  一个句柄提取图标，或如果为 NULL *nIndex*不在范围。  
@@ -567,11 +567,11 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 若要填充的矩形的坐标。  
+*rect*<br/>
+[in]若要填充的矩形的坐标。  
   
 ### <a name="remarks"></a>备注  
  使用此方法使用的系统颜色 COLOR_BTNFACE 和 COLOR_BTNHIGHLIGHT 平均值的颜色填充矩形。 如果系统正在使用 256 色或更少颜色，将填充矩形与这两种颜色的抖动模式。  
@@ -629,8 +629,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDest*  
- 若要检索的目标大小;如果为 FALSE，以检索源映像大小。  
+*bDest*<br/>
+[in]若要检索的目标大小;如果为 FALSE，以检索源映像大小。  
   
 ### <a name="return-value"></a>返回值  
  一个`SIZE`结构，以像素为单位指定映像的大小。  
@@ -719,8 +719,8 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResId*  
- 映像资源 id。  
+*uiResId*<br/>
+[in]映像资源 id。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则图像索引如果不存在具有指定的资源 ID 的图像，为-1。  
@@ -744,8 +744,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nGrayImageLuminancePercentage*  
- 亮度百分比。  
+*nGrayImageLuminancePercentage*<br/>
+[in]亮度百分比。  
   
 ### <a name="return-value"></a>返回值  
  如果在集合中的映像已成功，则灰显，则返回 TRUE否则为 FALSE。  
@@ -844,20 +844,20 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- 位图资源的 ID。  
+*uiResID*<br/>
+[in]位图资源的 ID。  
   
- [in]*hinstRes*  
- 资源 DLL 的实例。  
+*hinstRes*<br/>
+[in]资源 DLL 的实例。  
   
- [in]*b 将*  
- 若要加载将该位图添加到现有的位图，或 FALSE 以替换现有的位图，则为 TRUE。  
+*b 将*<br/>
+[in]若要加载将该位图添加到现有的位图，或 FALSE 以替换现有的位图，则为 TRUE。  
   
- [in]*lpszBmpFileName*  
- 要从其加载位图磁盘文件的路径。  
+*lpszBmpFileName*<br/>
+[in]要从其加载位图磁盘文件的路径。  
   
- [in]*nMaxFileSize*  
- 最大位图文件中; 中的字节数或为 0 以加载而不考虑文件大小的位图。 如果文件的大小超过此最大大小，该方法返回 FALSE，并不会加载位图。  
+*nMaxFileSize*<br/>
+[in]最大位图文件中; 中的字节数或为 0 以加载而不考虑文件大小的位图。 如果文件的大小超过此最大大小，该方法返回 FALSE，并不会加载位图。  
   
 ### <a name="return-value"></a>返回值  
  如果位图加载成功，则为 TRUE否则为 FALSE。  
@@ -876,8 +876,8 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszResourceName*  
- [in]*hinstRes*  
+*lpszResourceName*<br/>
+[in][in]*hinstRes*  
  [in]*b 将*  
   
 ### <a name="return-value"></a>返回值  
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- [in]*bUseRGBQUAD*  
+*颜色*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -912,8 +912,8 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bUseRGBQUAD*  
- [in]*clrSrc*  
+*bUseRGBQUAD*<br/>
+[in][in]*clrSrc*  
  [in]*clrDest*  
   
 ### <a name="return-value"></a>返回值  
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- [in]*bUseRGBQUAD*  
+*颜色*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -974,11 +974,11 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in、 out]*hbmp*  
- 位图的句柄进行镜像。  
+*hbmp*<br/>
+[in、 out]位图的句柄进行镜像。  
   
- [in]*cxImage*  
- 以像素为单位的图像的宽度。  
+*cxImage*<br/>
+[in]以像素为单位的图像的宽度。  
   
 ### <a name="return-value"></a>返回值  
  如果图像已成功进行镜像; 则为 TRUE否则为 FALSE。  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hbmp*  
- [in]*cyImage*  
+*hbmp*<br/>
+[in][in]*cyImage*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hbmp*  
- [in]*bAutoCheckPremlt*  
+*hbmp*<br/>
+[in][in]*bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1066,14 +1066,14 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ds*  
- 对引用`CAfxDrawState`结构，它将存储图像呈现阶段之间分配的资源。  
+*ds*<br/>
+[in]对引用`CAfxDrawState`结构，它将存储图像呈现阶段之间分配的资源。  
   
- [in]*sizeImageDest*  
- 指定目标图像的大小。  
+*sizeImageDest*<br/>
+[in]指定目标图像的大小。  
   
- [in]*bFadeInactive*  
- 如果你希望处于非活动状态图像要绘制灰显，则为 TRUE。  
+*bFadeInactive*<br/>
+[in]如果你希望处于非活动状态图像要绘制灰显，则为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  如果要绘制的工具栏图像所需的资源分配成功，否则为 FALSE，则为 TRUE。  
@@ -1118,8 +1118,8 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*n 值*  
- 新的 alpha 通道值。  
+*n 值*<br/>
+[in]新的 alpha 通道值。  
   
 ### <a name="remarks"></a>备注  
  此方法用于设置已禁用映像的自定义 alpha 值。 默认值为 127，这将导致已禁用的按钮图像为半透明。 如果设置的值为 0，已禁用的映像将是完全透明的。 如果设置的值为 255，已禁用的映像将完全不透明。  
@@ -1146,8 +1146,8 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*sizeImage*  
- 工具栏图像的新大小。  
+*sizeImage*<br/>
+[in]工具栏图像的新大小。  
   
 ### <a name="remarks"></a>备注  
  默认情况下工具栏图像的大小是 16 x 15 像素为单位。 如果你想要使用不同大小的工具栏图像，请调用此方法。  
@@ -1205,8 +1205,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrTransparent*  
- RGB 值。  
+*clrTransparent*<br/>
+[in]RGB 值。  
   
 ### <a name="return-value"></a>返回值  
  以前的透明颜色。  
@@ -1224,11 +1224,11 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iImage*  
- 要更新的图像的从零开始的索引。  
+*iImage*<br/>
+[in]要更新的图像的从零开始的索引。  
   
- [in]*hbmp*  
- 位图的句柄从其更新的映像。  
+*hbmp*<br/>
+[in]位图的句柄从其更新的映像。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则更新映像，则返回 TRUE如果图像列表不是用户定义的或临时的则为 FALSE。  

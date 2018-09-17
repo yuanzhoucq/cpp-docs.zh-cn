@@ -1,5 +1,5 @@
 ---
-title: 编译器控制的 LINK 选项 |Microsoft 文档
+title: 编译器控制的 LINK 选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,37 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee952fe5152d98aa33c4ef7e98f8a2eb3ef077be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371991"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726422"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
-除非另行指定，/c 选项，则 CL 编译器将自动调用链接。 CL 提供一定的控制链接器通过命令行选项和自变量。 下表汇总了 CL 影响链接的功能。  
-  
-|CL 规范|影响链接的 CL 操作|  
-|----------------------|---------------------------------|  
-|.C、.cxx、.cpp 或.def 以外任何文件扩展名|将文件名传递作为输入链接|  
-|*filename*.def|将传递 /DEF:*filename*.def|  
-|/F*数*|传递 /STACK:*数*|  
-|/Fd*filename*|将传递 /PDB:*filename*|  
-|/Fe*filename*|将传递 /out:*filename*|  
-|/Fm*filename*|传递 /MAP:*filename*|  
-|/Gy|创建打包的函数 (Comdat);启用函数级链接|  
-|/LD|将传递 /DLL|  
-|/LDd|将传递 /DLL|  
-|/link|将命令行的其余部分传递给 LINK|  
-|/MD 或 /MT|将默认库名放入.obj 文件|  
-|/Mdd 或 /MTd|将默认库名放入.obj 文件中。 定义符号 **_DEBUG**|  
-|/nologo|将传递 /NOLOGO|  
-|/Zd|传递 /DEBUG|  
-|/Zi 或 /Z7|传递 /DEBUG|  
-|/Zl|省略.obj 文件中的默认库名称|  
-  
- 有关详细信息，请参阅[编译器选项](../../build/reference/compiler-options.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+
+CL 编译器会自动调用链接，除非指定了 /c 选项。 CL 提供了通过命令行选项和参数链接器的某些控制。 下表总结了 CL 影响链接的功能。
+
+|CL 规范|CL 操作会影响链接|
+|----------------------|---------------------------------|
+|.C、.cxx、.cpp 或.def 以外任何文件扩展名|将文件名传递作为输入链接|
+|*文件名*.def|将传递 /DEF:*文件名*.def|
+|/F*数*|传递 /STACK:*数*|
+|/Fd*文件名*|将传递 /PDB:*文件名*|
+|/Fe*文件名*|将传递 /out:*文件名*|
+|/Fm*文件名*|传递 /MAP:*文件名*|
+|/Gy|创建封装的函数 (Comdat);启用函数级链接|
+|/LD|将传递 /DLL|
+|/LDd|将传递 /DLL|
+|/link|将命令行的其余部分传递到链接|
+|/MD 或 /MT|将默认库名放入.obj 文件|
+|/Mdd 或 /MTd|将默认库名称放置在.obj 文件中。 定义符号 **_DEBUG**|
+|/nologo|将传递 /NOLOGO|
+|/Zd|传递 /DEBUG|
+|/Zi 或/z7 标识|传递 /DEBUG|
+|/Zl|省略.obj 文件中的默认库名称|
+
+有关详细信息，请参阅[编译器选项](../../build/reference/compiler-options.md)。
+
+## <a name="see-also"></a>请参阅
+
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

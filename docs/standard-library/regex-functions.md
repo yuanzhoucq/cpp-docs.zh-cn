@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 3b78ce35b20c3049c168ab23c512ae7ae23b9886
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: b3b5171e60e9f9348a4e4d86d0b8032db7eb4726
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691544"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726539"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
 
@@ -88,7 +88,8 @@ bool regex_match(
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/> 子匹配项的迭代器类型。 一般情况下的这个`string::const_iterator`， `wstring::const_iterator`，`const char*`或`const wchar_t*`。
+*BidIt*<br/>
+子匹配项的迭代器类型。 一般情况下的这个`string::const_iterator`， `wstring::const_iterator`，`const char*`或`const wchar_t*`。
 
 *分配*<br/>
 匹配结果分配器类。

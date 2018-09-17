@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726227"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
+*nbucket*<br/>
 存储桶编号。
 
 ### <a name="remarks"></a>备注
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>参数
 
-*Where*  
+*Where*<br/>
 要移除的元素的位置。
 
-*第一个*  
+*第一个*<br/>
 要移除的第一个元素的位置。
 
-*最后一个*  
+*最后一个*<br/>
 要移除的刚超出最后一个元素的位置。
 
-*Key*  
+*Key*<br/>
 要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-*factor*  
+*factor*<br/>
 新的最大加载因子。
 
 ### <a name="remarks"></a>备注
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets*  
+*nbuckets*<br/>
 请求的存储桶数。
 
 ### <a name="remarks"></a>备注
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
+*right*<br/>
 要交换的容器。
 
 ### <a name="remarks"></a>备注

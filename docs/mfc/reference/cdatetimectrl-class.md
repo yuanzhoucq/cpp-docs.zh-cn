@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210182"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726656"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 封装日期和时间选取器控件功能。  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pDateTimePickerInfo*|一个指向[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)结构，它接收当前日期和时间选取器控件的说明。<br /><br /> 调用方负责分配此结构。 但是，此方法初始化*cbSize*结构中的成员。|  
+|*pDateTimePickerInfo*|[out]一个指向[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)结构，它接收当前日期和时间选取器控件的说明。<br /><br /> 调用方负责分配此结构。 但是，此方法初始化*cbSize*结构中的成员。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*psize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，其中包含该控件的理想大小。|  
+|*psize*|[out]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，其中包含该控件的理想大小。|  
   
 ### <a name="return-value"></a>返回值  
  返回值始终为 TRUE。  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwStyle*|新月份的日历控件样式，这是个月日历控件样式的按位组合 (OR)。 有关详细信息，请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)。|  
+|*dwStyle*|[in]新月份的日历控件样式，这是个月日历控件样式的按位组合 (OR)。 有关详细信息，请参阅[个月日历控件样式](/windows/desktop/Controls/month-calendar-control-styles)。|  
   
 ### <a name="return-value"></a>返回值  
  上一个下拉月历控件的样式。  

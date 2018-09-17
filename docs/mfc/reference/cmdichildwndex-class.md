@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677686"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726708"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 `CMDIChildWndEx`类提供的功能的 Windows 多文档界面 (MDI) 子窗口。 它扩展的功能[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- 指向在窗格的指针。  
+*pControlBar*<br/>
+[in]指向在窗格的指针。  
   
- [in]*bTail*  
- 为 TRUE，则将窗格添加到窗格的列表的末尾，停靠管理器;否则为 FALSE。  
+*bTail*<br/>
+[in]为 TRUE，则将窗格添加到窗格的列表的末尾，停靠管理器;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  如果窗格已成功注册到停靠管理器; 则为 TRUE否则为 FALSE。  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- 指向在窗格的指针。  
+*pControlBar*<br/>
+[in]指向在窗格的指针。  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  调整停靠布局。  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hdwp*  
- 延迟的窗口位置结构的句柄。  
+*hdwp*<br/>
+[in]延迟的窗口位置结构的句柄。  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- 指向在窗格的指针。  
+*pBar*<br/>
+[in]指向在窗格的指针。  
   
- [in]*nDockBarID*  
- 在窗格的 ID。  
+*nDockBarID*<br/>
+[in]在窗格的 ID。  
   
- [in]*lpRect*  
- 指向一个矩形的指针。  
+*lpRect*<br/>
+[in]指向一个矩形的指针。  
   
 ### <a name="remarks"></a>备注  
  *LpRect*未使用参数。  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwDockStyle*  
- 指定启用的主框架窗口的边。 使用一个或多个下列标志。  
+*dwDockStyle*<br/>
+[in]指定启用的主框架窗口的边。 使用一个或多个下列标志。  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwDockStyle*  
- 指定要启用的扩展对齐方式。  
+*dwDockStyle*<br/>
+[in]指定要启用的扩展对齐方式。  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 TRUE否则为 FALSE。  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 要查找窗格的控件 ID。  
+*nID*<br/>
+[in]要查找窗格的控件 ID。  
   
 ### <a name="return-value"></a>返回值  
  到窗格中，如果找到，否则为 NULL 指针。  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- 指向要插入的窗格的指针。  
+*pControlBar*<br/>
+[in]指向要插入的窗格的指针。  
   
- [in]*pTarget*  
- 指向在相邻窗格的指针。  
+*pTarget*<br/>
+[in]指向在相邻窗格的指针。  
   
- [in]*bAfter*  
- 如果为 TRUE， *pControlBar*之后插入*pTarget*。 如果为 FALSE， *pControlBar*之前插入*pTarget*。  
+*bAfter*<br/>
+[in]如果为 TRUE， *pControlBar*之后插入*pTarget*。 如果为 FALSE， *pControlBar*之前插入*pTarget*。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则 FALSE 否则，则为 TRUE。  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指定的点。  
+*点*<br/>
+[in]指定的点。  
   
- [in]*dwBarAlignment*  
- 指定的点是附近的边缘。 可能的值为 CBRS_ALIGN_LEFT、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_TOP 和 CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in]指定的点是附近的边缘。 可能的值为 CBRS_ALIGN_LEFT、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_TOP 和 CBRS_ALIGN_BOTTOM  
   
- [in]*bOuterEdge*  
- 在点附近的外边框的停靠站点中; 如果为 TRUEFALSE 否则为。  
+*bOuterEdge*<br/>
+[in]在点附近的外边框的停靠站点中; 如果为 TRUEFALSE 否则为。  
   
 ### <a name="return-value"></a>返回值  
  在点附近停靠站点中; 如果为 TRUE否则为 FALSE。  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrame*  
- 指向微型框架窗口的指针。  
+*pFrame*<br/>
+[in]指向微型框架窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，否则为 FALSE，则为 TRUE。  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bPreview*  
- 如果为 TRUE，则输入打印预览模式。 如果为 FALSE，则退出打印预览模式。  
+*bPreview*<br/>
+[in]如果为 TRUE，则输入打印预览模式。 如果为 FALSE，则退出打印预览模式。  
   
- [in]*pState*  
- 指向打印预览状态结构的指针。  
+*pState*<br/>
+[in]指向打印预览状态结构的指针。  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  由框架调用以更新框架标题。  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bAddToTitle*  
- 如果为 TRUE，则为标题添加文档名称。  
+*bAddToTitle*<br/>
+[in]如果为 TRUE，则为标题添加文档名称。  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  返回包含给定的点的窗格。  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指定以屏幕坐标，以检查点。  
+*点*<br/>
+[in]指定以屏幕坐标，以检查点。  
   
- [in]*nSensitivity*  
- 搜索区域增加此数量。 如果给的定点落在更高的区域中，一个窗格，满足搜索条件。  
+*nSensitivity*<br/>
+[in]搜索区域增加此数量。 如果给的定点落在更高的区域中，一个窗格，满足搜索条件。  
   
- [in]*bExactBar*  
- 为 true，则忽略*nSensitivity*参数; 否则为 FALSE。  
+*bExactBar*<br/>
+[in]为 true，则忽略*nSensitivity*参数; 否则为 FALSE。  
   
- [in]*pRTCBarType*  
- 如果不为 NULL，则方法会搜索仅指定类型的窗格。  
+*pRTCBarType*<br/>
+[in]如果不为 NULL，则方法会搜索仅指定类型的窗格。  
   
- [in]*dwAlignment*  
- 如果指定点处找到一个窗格，则此参数将包含已接近指定点在窗格一侧。 有关详细信息，请参阅“备注”部分。  
+*dwAlignment*<br/>
+[in]如果指定点处找到一个窗格，则此参数将包含已接近指定点在窗格一侧。 有关详细信息，请参阅“备注”部分。  
   
 ### <a name="return-value"></a>返回值  
  一个指向`CBasePane`-派生的对象，包含给定的时间，则为 NULL，如果不找到任何窗格。  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bNotify*  
- 如果为 TRUE，在窗口的活动的就地项将接收此布局更改的通知。  
+*bNotify*<br/>
+[in]如果为 TRUE，在窗口的活动的就地项将接收此布局更改的通知。  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  从到停靠管理器中删除一个窗格。  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- 指向要删除的窗格的指针。  
+*pControlBar*<br/>
+[in]指向要删除的窗格的指针。  
   
- [in]*bDestroy*  
- 如果为 TRUE，将销毁已删除的窗格。  
+*bDestroy*<br/>
+[in]如果为 TRUE，将销毁已删除的窗格。  
   
- [in]*bAdjustLayout*  
- 如果为 TRUE，则立即调整停靠布局。  
+*bAdjustLayout*<br/>
+[in]如果为 TRUE，则立即调整停靠布局。  
   
- [in]*bAutoHide*  
- 如果为 TRUE，则停靠布局与自动隐藏栏列表。 如果为 FALSE，停靠布局与的正则窗格的列表。  
+*bAutoHide*<br/>
+[in]如果为 TRUE，则停靠布局与自动隐藏栏列表。 如果为 FALSE，停靠布局与的正则窗格的列表。  
   
- [in]*pBarReplacement*  
- 指向一个窗格，它将替换已删除的窗格的指针。  
+*pBarReplacement*<br/>
+[in]指向一个窗格，它将替换已删除的窗格的指针。  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*bShow*  
- [in]*bDelay*  
- [in]*bActivate*  
+*pBar*<br/>
+[in][in]*bShow*  
+*bDelay*<br/>
+[in][in]*bActivate*  
   
 ### <a name="remarks"></a>备注  
   
