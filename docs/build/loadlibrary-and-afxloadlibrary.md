@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687930"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726281"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
@@ -39,7 +39,7 @@ ms.locfileid: "43687930"
 
 如果 Windows 无法加载 DLL，进程可以尝试从错误中恢复。 例如，进程无法通知错误的用户，要求用户指定另一个 DLL 路径。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 请确保指定的任何 Dll 的完整路径。 加载文件时会首先搜索当前目录。 如果不符合条件的文件路径，可能会加载不是预期的文件。 若要防止这种情况的另一种方法是使用[/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md)链接器选项。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？

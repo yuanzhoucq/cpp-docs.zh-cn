@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726812"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iIndex*|组的从零开始的索引。|  
-|[out]*pGroup*|指向[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构，它接收由指定的组的相关信息*iIndex*参数。<br /><br /> 调用方负责初始化的成员[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构。 设置`cbSize`成员添加到结构的大小和所用的标志`mask`成员来指定要检索的信息。|  
+|*iIndex*|[in]组的从零开始的索引。|  
+|*pGroup*|[out]指向[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构，它接收由指定的组的相关信息*iIndex*参数。<br /><br /> 调用方负责初始化的成员[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构。 设置`cbSize`成员添加到结构的大小和所用的标志`mask`成员来指定要检索的信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iGroupId*|指定一组。|  
-|[in、 out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的组的矩形坐标*iGroupId*。|  
-|[in]*iCoords*|指定要检索的矩形坐标。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整个展开组 （默认值） 坐标。<br />-LVGGR_HEADER-仅标头 （已折叠组） 的坐标。<br />-LVGGR_SUBSETLINK-坐标仅子集链接 （标记子集）。|  
+|*iGroupId*|[in]指定一组。|  
+|*lpRect*|[in、 out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的组的矩形坐标*iGroupId*。|  
+|*iCoords*|[in]指定要检索的矩形坐标。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整个展开组 （默认值） 坐标。<br />-LVGGR_HEADER-仅标头 （已折叠组） 的坐标。<br />-LVGGR_SUBSETLINK-坐标仅子集链接 （标记子集）。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iGroupId*|组的从零开始的索引。|  
-|[in]*dwMask*|指定要检索有关指定组的状态值的掩码。 有关详细信息，请参阅`mask`的成员[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构。|  
+|*iGroupId*|[in]组的从零开始的索引。|  
+|*dwMask*|[in]指定要检索有关指定组的状态值的掩码。 有关详细信息，请参阅`mask`的成员[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)结构。|  
   
 ### <a name="return-value"></a>返回值  
  请求的状态为指定的组或如果找不到组，则为 0。  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为 NULL。|  
-|[in]*iColumn*|在控件中列的从零开始的索引。|  
-|[in]*rectType*|为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项，包括图标和标签的边框。<br /><br /> LVIR_ICON-返回的图标或小图标的子项的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|  
-|[out]*pRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收该子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 此参数不能为 NULL。|  
+|*pItemIndex*|[in]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为 NULL。|  
+|*iColumn*|[in]在控件中列的从零开始的索引。|  
+|*rectType*|[in]为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项，包括图标和标签的边框。<br /><br /> LVIR_ICON-返回的图标或小图标的子项的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|  
+|*pRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收该子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 此参数不能为 NULL。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fSmall*|要为其检索项间距的视图。 为小图标视图中，或 FALSE 的图标视图指定为 TRUE。|  
-|[out]*pnHorzSpacing*|包含项之间的水平间距。|  
-|[out]*pnVertSpacing*|包含项之间的垂直间距。|  
+|*fSmall*|[in]要为其检索项间距的视图。 为小图标视图中，或 FALSE 的图标视图指定为 TRUE。|  
+|*pnHorzSpacing*|[out]包含项之间的水平间距。|  
+|*pnVertSpacing*|[out]包含项之间的垂直间距。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in、 out]*pItemIndex*|指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构，它描述的项开始执行搜索，则为-1 以查找匹配中的标志的第一项*nFlags*参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述通过搜索找到的项。|  
-|[in]*nFlags*|按位组合 (OR) 标志，用于指定如何执行搜索。<br /><br /> 搜索可以依赖索引、 状态或目标项的外观或由指定的目标项的物理位置相对于项*pItemIndex*参数。 有关详细信息，请参阅*标志*中的参数[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)消息。|  
+|*pItemIndex*|[in、 out]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构，它描述的项开始执行搜索，则为-1 以查找匹配中的标志的第一项*nFlags*参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述通过搜索找到的项。|  
+|*nFlags*|[in]按位组合 (OR) 标志，用于指定如何执行搜索。<br /><br /> 搜索可以依赖索引、 状态或目标项的外观或由指定的目标项的物理位置相对于项*pItemIndex*参数。 有关详细信息，请参阅*标志*中的参数[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)消息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*索引*|当前列表视图控件中的项的从零开始索引。|  
+|*index*|[in]当前列表视图控件中的项的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果指定的项为可见; 否则为 FALSE，则为 TRUE。  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*id*|项的唯一 ID。|  
+|*id*|[in]项的唯一 ID。|  
   
 ### <a name="return-value"></a>返回值  
  当前索引为指定的 id。 的  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*索引*|项的从零开始的索引。|  
+|*index*|[in]项的从零开始的索引。|  
   
 ### <a name="return-value"></a>返回值  
  指定项的唯一 ID。  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*idItemFrom*  
- 要移动的项的索引。  
+*idItemFrom*<br/>
+[in]要移动的项的索引。  
   
- [in]*idGroupTo*  
- 项将移到的组的标识符。  
+*idGroupTo*<br/>
+[in]项将移到的组的标识符。  
   
 ### <a name="remarks"></a>备注  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|  
-|[in]*dwState*|要设置的项的状态即的按位组合[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。 指定零到重置，或另一个用于设置状态。|  
-|[in]*dwMask*|指定的状态的有效位掩码*dwState*参数。 指定的按位组合 (OR)[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。|  
+|*pItemIndex*|[in]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|  
+|*dwState*|[in]要设置的项的状态即的按位组合[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。 指定零到重置，或另一个用于设置状态。|  
+|*dwMask*|[in]指定的状态的有效位掩码*dwState*参数。 指定的按位组合 (OR)[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pfnCompare*  
- 应用程序定义比较函数的地址。  
+*pfnCompare*<br/>
+[in]应用程序定义比较函数的地址。  
   
  排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须是独立的函数不是任何类的成员或类的静态成员。  
   
- [in]*dwData*  
- 传递给比较函数的应用程序定义的值。  
+*dwData*<br/>
+[in]传递给比较函数的应用程序定义的值。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则该方法否则为 FALSE。  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pfnCompare*|应用程序定义比较函数的地址。<br /><br /> 排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须是独立的函数不是任何类的成员或类的静态成员。|  
-|[in]*dwData*|应用程序定义的值传递给比较函数。|  
+|*pfnCompare*|[in]应用程序定义比较函数的地址。<br /><br /> 排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须是独立的函数不是任何类的成员或类的静态成员。|  
+|*dwData*|[in]应用程序定义的值传递给比较函数。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

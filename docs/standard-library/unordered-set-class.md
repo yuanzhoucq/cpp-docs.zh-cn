@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726682"
 ---
 # <a name="unorderedset-class"></a>unordered_set 类
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*Keyval*  
- 要映射的键值。
+*keyval*<br/>
+要映射的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
- 存储桶编号。
+*nbucket*<br/>
+存储桶编号。
 
 ### <a name="remarks"></a>备注
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*Keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*Keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>参数
 
-*Where*  
- 要移除的元素的位置。
+*Where*<br/>
+要移除的元素的位置。
 
-*第一个*  
- 要移除的第一个元素的位置。
+*第一个*<br/>
+要移除的第一个元素的位置。
 
-*最后一个*  
- 要移除的刚超出最后一个元素的位置。
+*最后一个*<br/>
+要移除的刚超出最后一个元素的位置。
 
-*Key*  
- 要移除的元素的关键值。
+*Key*<br/>
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*Keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-*factor*  
- 新的最大加载因子。
+*factor*<br/>
+新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets*  
- 请求的存储桶数。
+*nbuckets*<br/>
+请求的存储桶数。
 
 ### <a name="remarks"></a>备注
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要交换的容器。
+*right*<br/>
+要交换的容器。
 
 ### <a name="remarks"></a>备注
 

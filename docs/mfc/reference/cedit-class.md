@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726630"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lpszText*  
- 指向包含提示文本的字符串的指针。  
+*lpszText*<br/>
+[out]指向包含提示文本的字符串的指针。  
   
- [in]*cchText*  
- 可以接收的字符数。 此数字包括终止 NULL 字符。  
+*cchText*<br/>
+[in]可以接收的字符数。 此数字包括终止 NULL 字符。  
   
 ### <a name="return-value"></a>返回值  
  用于第一个重载，真正的成功，则该方法是否否则为 FALSE。  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pichStart*|突出显示的文本范围中的第一个字符的从零开始索引。|  
-|[out]*pichEnd*|突出显示的文本范围中的最后一个字符的从零开始索引。|  
+|*pichStart*|[out]突出显示的文本范围中的第一个字符的从零开始索引。|  
+|*pichEnd*|[out]突出显示的文本范围中的最后一个字符的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszText*  
- 包含提示在编辑控件中显示的字符串指针。  
+*lpszText*<br/>
+[in]包含提示在编辑控件中显示的字符串指针。  
   
- [in]*fDrawWhenFocused*  
- 如果为 FALSE，当用户编辑控件中单击，并使控件具有焦点时不绘制提示标志。  
+*fDrawWhenFocused*<br/>
+[in]如果为 FALSE，当用户编辑控件中单击，并使控件具有焦点时不绘制提示标志。  
   
  如果为 TRUE，即使在控件有焦点时绘制提示标志。 当用户开始在控件中键入时，提示标志将消失。  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*ichStart*|要突出显示的文本范围中的第一个字符的从零开始索引。|  
-|[in]*ichEnd*|要突出显示的文本范围中的最后一个字符的从零开始索引。|  
+|*ichStart*|[in]要突出显示的文本范围中的第一个字符的从零开始索引。|  
+|*ichEnd*|[in]要突出显示的文本范围中的最后一个字符的从零开始索引。|  
   
 ### <a name="remarks"></a>备注  
  此方法将发送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)消息，Windows SDK 中所述。  此方法将发送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)消息，Windows SDK 中所述。 这两`SetHighlight`和`GetHighlight`启用了 UNICODE 仅生成。 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pEditBalloonTip*|指向[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构描述的气球状提示。|  
-|[in]*lpszTitle*|包含标题的气球状提示的 Unicode 字符串指针。|  
-|[in]*lpszText*|包含气球状提示文本的 Unicode 字符串指针。|  
-|[in]*ttiIcon*|**INT**指定类型的图标的气球状提示相关联。 默认值为 TTI_NONE。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构。|  
+|*pEditBalloonTip*|[in]指向[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构描述的气球状提示。|  
+|*lpszTitle*|[in]包含标题的气球状提示的 Unicode 字符串指针。|  
+|*lpszText*|[in]包含气球状提示文本的 Unicode 字符串指针。|  
+|*ttiIcon*|[in]**INT**指定类型的图标的气球状提示相关联。 默认值为 TTI_NONE。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

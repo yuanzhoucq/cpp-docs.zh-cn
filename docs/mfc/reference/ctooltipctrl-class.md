@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726747"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封装“工具提示控件”功能，此控件是一个小型弹出窗口，显示说明应用程序中工具用途的单行文本。  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpToolInfo*|指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收当前工具提示窗口的相关信息的结构。|  
+|*lpToolInfo*|[out]指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收当前工具提示窗口的相关信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则检索的信息则为 TRUE否则为 FALSE。  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pttgt*|指向[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构，其中包含工具提示控件有关的信息。 此方法返回时， *pszTitle*的成员[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构的标题的文本点。|  
+|*pttgt*|[out]指向[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构，其中包含工具提示控件有关的信息。 此方法返回时， *pszTitle*的成员[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构的标题的文本点。|  
   
 ### <a name="remarks"></a>备注  
  此方法将发送[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)消息，Windows SDK 中所述。  

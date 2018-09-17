@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726695"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ ms.locfileid: "38965664"
 
 通过表示复数*z* = (， *b*) 的形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，规则的实数集的代数可应用于复数集以及其组件。 例如：
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*我*) \* (2 + 3*我*) = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*i*)= (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>) = (2-6) + （3 + 4）*我*=-4 + 7*我*
 
 复数的系统是一个域，但它不是一个有序域。 任何排序的复杂数字没有表示的字段的实数值和其子集，因此能应用于复杂数字不相等，因为它们是为实数。
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541167"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726045"
 ---
 # <a name="section"></a>section
 在 .obj 文件中创建一个节。  
@@ -43,30 +43,17 @@ ms.locfileid: "42541167"
 *节名称*是一个必需的参数，将为节的名称。 该名称不得与任何标准节名称发生冲突。 请参阅[/section](../build/reference/section-specify-section-attributes.md)的名称创建一个部分时，不应使用的列表。  
   
 *属性*是包含一个或多个逗号分隔的特性，你想要分配给该节的一个可选参数。 可能*属性*是：  
-  
-**read**  
-允许对数据进行读取操作。  
-  
-**write**  
-允许对数据进行写入操作。  
-  
-**execute**  
-允许执行代码。  
-  
-**shared**  
-在所有加载图像的进程之间共享该节。  
-  
-**nopage**  
-将该节标记为不可分页：对于 Win32 设备驱动程序很有用。  
-  
-**nocache**  
-将该节标记为不可缓存：对于 Win32 设备驱动程序很有用。  
-  
-**discard**  
-将该节标记为可丢弃；对于 Win32 设备驱动程序很有用。  
-  
-**remove**  
-将为非内存驻留; 该节标记虚拟设备驱动程序 (V*x*D) 仅。  
+
+|特性|描述|
+|-|-|
+|**read**|允许对数据进行读取操作。|
+|**write**|允许对数据进行写入操作。|
+|**execute**|允许执行代码。|
+|**shared**|在所有加载图像的进程之间共享该节。|
+|**nopage**|将该节标记为不可分页：对于 Win32 设备驱动程序很有用。|
+|**nocache**|将该节标记为不可缓存：对于 Win32 设备驱动程序很有用。|
+|**discard**|将该节标记为可丢弃；对于 Win32 设备驱动程序很有用。|
+|**remove**|将为非内存驻留; 该节标记虚拟设备驱动程序 (V*x*D) 仅。|
   
 如果不指定特性，则该节将具有读写特性。  
   
