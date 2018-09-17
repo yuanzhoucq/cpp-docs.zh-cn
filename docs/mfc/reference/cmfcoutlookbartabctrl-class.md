@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718258"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndCtrl*  
- 指向要添加的控件的指针。  
+*pWndCtrl*<br/>
+[in]指向要添加的控件的指针。  
   
- [in]*lpszName*  
- 指定选项卡的名称。  
+*lpszName*<br/>
+[in]指定选项卡的名称。  
   
- [in]*bDetachable*  
- 如果为 TRUE，将创建页为可拆分。  
+*bDetachable*<br/>
+[in]如果为 TRUE，将创建页为可拆分。  
   
- [in]*nImageID*  
- 在新选项卡中显示的图像的内部图像列表中的图像索引。  
+*nImageID*<br/>
+[in]在新选项卡中显示的图像的内部图像列表中的图像索引。  
   
- [in]*dwControlBarStyle*  
- 指定已包装的停靠窗格 AFX_ CBRS_ * 样式。  
+*dwControlBarStyle*<br/>
+[in]指定已包装的停靠窗格 AFX_ CBRS_ * 样式。  
   
 ### <a name="remarks"></a>备注  
  使用此函数作为新页的 outlook 栏添加一个控件。  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- 指定的初始大小和位置，以像素为单位。  
+*rect*<br/>
+[in]指定的初始大小和位置，以像素为单位。  
   
- [in]*pParentWnd*  
- 指向父窗口。 不能为 NULL。  
+*pParentWnd*<br/>
+[in]指向父窗口。 不能为 NULL。  
   
- [in]*nID*  
- 控件 id。  
+*nID*<br/>
+[in]控件 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建控件，非零值否则为 0。  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 指定是否应启用或禁用动画。  
+*bEnable*<br/>
+[in]指定是否应启用或禁用动画。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可启用和禁用动画。 当用户打开选项卡页时，页面的标题幻灯片向上或向下如果启用动画。 如果禁用了动画，页面将立即变为活动状态。  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 确定是否显示滚动按钮。  
+*bEnable*<br/>
+[in]确定是否显示滚动按钮。  
   
- [in]*bIsUp*  
- 确定是否显示顶部的滚动条。  
+*bIsUp*<br/>
+[in]确定是否显示顶部的滚动条。  
   
- [in]*bIsDown*  
- 确定是否显示底部滚动条。  
+*bIsDown*<br/>
+[in]确定是否显示底部滚动条。  
   
 ### <a name="remarks"></a>备注  
  启用滚动按钮的显示功能。 活动选项卡更改要还原的滚动按钮时，由框架调用此方法。  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iTab*  
- 若要打开的选项卡的从零开始的索引。  
+*iTab*<br/>
+[in]若要打开的选项卡的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功，则打开指定的选项卡，非零值否则为 0。  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nBorderSize*  
- 以像素为单位指定新的边框大小。  
+*nBorderSize*<br/>
+[in]以像素为单位指定新的边框大小。  
   
 ### <a name="remarks"></a>备注  
  设置新边框大小并重新计算 outlook 窗口布局。  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiAlign*  
- 指定的文本对齐方式。  
+*uiAlign*<br/>
+[in]指定的文本对齐方式。  
   
- [in]*bRedraw*  
- 如果为 TRUE，则将重绘 outlook 窗口。  
+*bRedraw*<br/>
+[in]如果为 TRUE，则将重绘 outlook 窗口。  
   
 ### <a name="remarks"></a>备注  
  使用此函数更改页面按钮的文本对齐方式。  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 指定要加载图像的资源 ID。  
+*uiID*<br/>
+[in]指定要加载图像的资源 ID。  
   
- [in]*cx*  
- 在图像列表中，以像素为单位指定的图像的宽度。  
+*cx*<br/>
+[in]在图像列表中，以像素为单位指定的图像的宽度。  
   
- [in]*clrTransp*  
- 一个指定透明颜色的 RGB 值。  
+*clrTransp*<br/>
+[in]一个指定透明颜色的 RGB 值。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE否则返回 FALSE。  

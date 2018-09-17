@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541730"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711979"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 实现用于直观指示较长操作进度的控件。  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定功能区进度栏的命令 ID。  
+*nID*<br/>
+[in]指定功能区进度栏的命令 ID。  
   
- [in]*nWidth*  
- 指定以像素为单位，功能区进度条的宽度。  
+*nWidth*<br/>
+[in]指定以像素为单位，功能区进度条的宽度。  
   
- [in]*nHeight*  
- 指定以像素为单位，功能区进度条的高度。  
+*nHeight*<br/>
+[in]指定以像素为单位，功能区进度条的高度。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  返回进度栏的当前位置。  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 指定进度栏为无限模式，则为 TRUE否则为 FALSE。  
+*bSet*<br/>
+[in]指定进度栏为无限模式，则为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  通常情况下，如果进度栏为无限模式，它指示用户操作正在进行，但完成时间未知。 因此，进度条填满反复从最小值的最大值。  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nPos*  
- 指定为设置进度栏的位置。  
+*nPos*<br/>
+[in]指定为设置进度栏的位置。  
   
- [in]*bRedraw*  
- 指定是否需要重新绘制进度栏。  
+*bRedraw*<br/>
+[in]指定是否需要重新绘制进度栏。  
   
 ### <a name="remarks"></a>备注  
  要设置的范围必须是由指定的范围之内[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nMin*  
- 指定范围的最小值。  
+*nMin*<br/>
+[in]指定范围的最小值。  
   
- [in]*最*  
- 指定范围的最大值。  
+*最*<br/>
+[in]指定范围的最大值。  
   
 ### <a name="remarks"></a>备注  
  使用此方法通过设置最小和最大值来定义进度条的范围。  

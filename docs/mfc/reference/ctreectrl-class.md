@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712161"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 公共树视图控件的功能。  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fCancelWithoutSave*|若要结束编辑操作或为 FALSE，则结束该操作前将更改保存到树视图项前放弃对树视图项的更改，则为 TRUE。|  
+|*fCancelWithoutSave*|[in]若要结束编辑操作或为 FALSE，则结束该操作前将更改保存到树视图项前放弃对树视图项的更改，则为 TRUE。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|句柄的树视图控件项。|  
+|*hItem*|[in]句柄的树视图控件项。|  
   
 ### <a name="return-value"></a>返回值  
  若要指定的项处于展开状态时显示的图像的索引。  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|句柄的树视图控件项。|  
-|[in]*nPart*|部件的标识符。 必须设置为 TVGIPR_BUTTON。|  
-|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的部件的矩形坐标*hItem*并*nPart*。|  
+|*hItem*|[in]句柄的树视图控件项。|  
+|*nPart*|[in]部件的标识符。 必须设置为 TVGIPR_BUTTON。|  
+|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，该结构接收由指定的部件的矩形坐标*hItem*并*nPart*。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|句柄的树视图控件项。|  
+|*hItem*|[in]句柄的树视图控件项。|  
   
 ### <a name="return-value"></a>返回值  
  项的扩展的状态。 有关详细信息，请参阅`uStateEx`的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uAccId*|中的树视图项的元素可访问性标识符。|  
+|*uAccId*|[in]中的树视图项的元素可访问性标识符。|  
   
 ### <a name="return-value"></a>返回值  
  句柄的树视图项 ( `HTREEITEM`)，对应于*uAccId*参数。 有关详细信息，请参阅*hItem*的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|在控件中的树视图项的句柄。 有关详细信息，请参阅*hItem*的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
+|*hItem*|[in]在控件中的树视图项的句柄。 有关详细信息，请参阅*hItem*的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
   
 ### <a name="return-value"></a>返回值  
  对应的辅助功能标识符*hItem*参数。  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uPixelsPerSec*|每秒可滚动的像素数。|  
-|[in]*uUpdateTime*|控件的更新之间的时间间隔。|  
+|*uPixelsPerSec*|[in]每秒可滚动的像素数。|  
+|*uUpdateTime*|[in]控件的更新之间的时间间隔。|  
   
 ### <a name="return-value"></a>返回值  
  始终返回 TRUE。  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwExMask*|指定当前的树视图控件中的样式会影响此方法的位掩码。 如果此参数为零，它将忽略和的值*dwExStyles*参数分配给树视图控件。<br /><br /> 指定零个或样式中所述的按位组合 (OR)[树视图控件扩展样式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。|  
-|[in]*dwExStyles*|指定到设置或清除控件当前的树视图中的样式的位掩码。<br /><br /> 若要设置样式的组合，指定样式中所述的按位组合 (OR)[树视图控件扩展样式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。 若要清除的一组样式，请指定零。|  
+|*dwExMask*|[in]指定当前的树视图控件中的样式会影响此方法的位掩码。 如果此参数为零，它将忽略和的值*dwExStyles*参数分配给树视图控件。<br /><br /> 指定零个或样式中所述的按位组合 (OR)[树视图控件扩展样式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。|  
+|*dwExStyles*|[in]指定到设置或清除控件当前的树视图中的样式的位掩码。<br /><br /> 若要设置样式的组合，指定样式中所述的按位组合 (OR)[树视图控件扩展样式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。 若要清除的一组样式，请指定零。|  
   
 ### <a name="return-value"></a>返回值  
  一个包含以前的值扩展控件样式。  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|句柄的树视图控件项。|  
-|[in]*iExpandedImage*|若要指定的项处于展开状态时显示的图像的索引。|  
+|*hItem*|[in]句柄的树视图控件项。|  
+|*iExpandedImage*|[in]若要指定的项处于展开状态时显示的图像的索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|句柄的树视图控件项。|  
-|[in]*uStateEx*|项的扩展的状态。 有关详细信息，请参阅`uStateEx`的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
+|*hItem*|[in]句柄的树视图控件项。|  
+|*uStateEx*|[in]项的扩展的状态。 有关详细信息，请参阅`uStateEx`的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|在控件中的树视图项句柄。 有关详细信息，请参阅`hItem`的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
+|*hItem*|[in]在控件中的树视图项句柄。 有关详细信息，请参阅`hItem`的成员[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)结构。|  
   
 ### <a name="remarks"></a>备注  
  有关工具提示和信息提示之间的差异的详细信息，搜索上的"工具提示和信息提示"主题[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  

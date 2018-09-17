@@ -1,5 +1,5 @@
 ---
-title: 关键 |Microsoft 文档
+title: 关键 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716945"
 ---
 # <a name="critical"></a>critical
 指定代码仅执行一个线程上一次。  
@@ -35,14 +35,13 @@ ms.locfileid: "33691295"
 }  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+## <a name="arguments"></a>自变量
+
+*name*<br/>
+（可选）用于标识关键代码的名称。 请注意该名称必须括在括号中。  
   
- (`name`) （可选）  
- 一个名称以标识关键代码。 请注意该名称必须括在括号中。  
-  
 ## <a name="remarks"></a>备注  
- **关键**指令支持没有 OpenMP 子句。  
+ **关键**指令支持任何 OpenMP 子句。  
   
  有关详细信息，请参阅[2.6.2 关键构造](../../../parallel/openmp/2-6-2-critical-construct.md)。  
   

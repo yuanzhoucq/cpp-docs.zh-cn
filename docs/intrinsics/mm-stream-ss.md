@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss |Microsoft 文档
+title: _mm_stream_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339483"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714384"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>参数  
   
- [out] `Dest`  
- 指向写入源数据的位置的指针。  
+*dest*<br/>
+[out]指向写入源数据的位置的指针。  
   
- [in] `Source`  
- 包含一个 128 位数字`float`要写入在其下 32 位值...  
+*Source*<br/>
+[in]包含一个 128 位数字`float`32 位在其下中写入值...  
   
 ## <a name="return-value"></a>返回值  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>备注  
   
-此内部函数生成`movntss`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`和检查的第 6 位`CPUInfo[2] (ECX)`。 此位为 1 时该指令受支持和 0 否则。  
+此内部函数生成`movntss`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 6 位`CPUInfo[2] (ECX)`。 此位为 1 时支持的指令，则和 0 否则。  
   
-如果运行的代码，使用`_mm_stream_ss`内部函数不支持的硬件上`movntss`指令，则结果不可预知。  
+如果你运行使用的代码`_mm_stream_ss`内部函数不支持的硬件上`movntss`指令，则结果不可预知。  
   
 ## <a name="example"></a>示例  
   
@@ -99,7 +99,7 @@ f[2] = -3, f[3] = 3
   
 **结束 Microsoft 专用**  
 
-高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
   
 ## <a name="see-also"></a>请参阅  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962655"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706545"
 ---
 # <a name="timedmutex-class"></a>timed_mutex 类
 
@@ -129,8 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*  
- 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
+*Rel_time*<br/>
+一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
 
@@ -153,8 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*  
- 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
+*Abs_time*<br/>
+一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
 

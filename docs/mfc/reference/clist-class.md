@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339327"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726201"
 ---
 # <a name="clist-class"></a>CList 类
 支持可按顺序或值访问的不唯一对象的有序列表。  
@@ -115,7 +115,7 @@ class CList : public CObject
  *类型*  
  在列表中存储的对象的类型。  
   
- *ARG* *_* *类型*  
+ *ARG_TYPE*  
  用于引用存储在列表中的对象的类型。 可以为引用。  
   
 ## <a name="remarks"></a>备注  

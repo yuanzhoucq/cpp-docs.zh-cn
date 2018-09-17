@@ -1,5 +1,5 @@
 ---
-title: CMFCSpinButtonCtrl 类 |Microsoft 文档
+title: CMFCSpinButtonCtrl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712746"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 类
-`CMFCSpinButtonCtrl`类支持绘制数值调节钮控件的可视管理器。  
+`CMFCSpinButtonCtrl`类支持绘制数值调节钮按钮控件的可视管理器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,10 +47,10 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|重新绘制当前数值调节钮控件。|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|重新绘制当前数值调节按钮控件。|  
   
 ## <a name="remarks"></a>备注  
- 若要使用视觉管理器在你的应用程序中绘制数值调节钮控件的所有实例都替换`CSpinButtonCtrl`类，该类具有`CMFCSpinButtonCtrl`类。  
+ 若要使用视觉管理器在你的应用程序中绘制数值调节按钮控件，所有的实例替换为`CSpinButtonCtrl`类的`CMFCSpinButtonCtrl`类。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何创建的对象`CMFCSpinButtonCtrl`类并使用其`Create`方法。  
@@ -72,20 +72,20 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
  **标头：** afxspinbuttonctrl.h  
   
 ##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
- 重新绘制当前数值调节钮控件。  
+ 重新绘制当前数值调节按钮控件。  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
- 框架调用`CMFCSpinButtonCtrl::OnPaint`方法以处理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)消息和方法反过来调用这`CMFCSpinButtonCtrl::OnDraw`方法。 重写此方法以自定义框架绘制数值调节钮控件的方式。  
+ 框架将调用`CMFCSpinButtonCtrl::OnPaint`方法以处理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)消息，并且方法又调用这`CMFCSpinButtonCtrl::OnDraw`方法。 重写此方法以自定义框架绘制数值调节钮按钮控件的方式。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)

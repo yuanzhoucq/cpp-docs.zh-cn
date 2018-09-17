@@ -1,5 +1,5 @@
 ---
-title: 参考 （并发运行时） |Microsoft 文档
+title: 参考 （并发运行时） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693447"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723224"
 ---
 # <a name="reference-concurrency-runtime"></a>参考（并发运行时）
-本部分包含有关并发运行时的参考信息。
-**请注意**的 c + + 语言标准保留以实现，如库中的下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略了此类代码元素。
+本部分包含有关并发运行时参考信息。
+
+> [!Note]
+> C + + 语言标准保留的实现，如库以下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略此类代码元素。
 
 ## <a name="in-this-section"></a>本节内容
-[并发 Namespace](concurrency-namespace.md)并发命名空间提供类和函数，可让你访问的并发运行和并发编程框架的 c + +。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
 
-[std 命名空间中](std-namespace.md)
+[并发 Namespace](concurrency-namespace.md)并发命名空间提供类和函数，使您可以访问为并发运行时，c + + 的并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
+
+[std 命名空间](std-namespace.md)
+
 [stdx 命名空间](stdx-namespace.md)
-
-

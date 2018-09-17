@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722041"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>文本工具字体对话框 （c + +） （图标的图像编辑器）
 
@@ -34,20 +34,25 @@ ms.locfileid: "44315803"
 
 若要访问此对话框中，单击**字体**按钮**文本工具**对话框。
 
-**字体**  
-列出可用的字体。
+- **字体**
 
-**字体样式**  
-列出指定的字体的可用样式。
+   列出可用的字体。
 
-**Size**  
-列出指定的字体的可用点大小。
+- **字体样式**
 
-示例  
-显示文本与指定的字体设置的显示方式的示例。
+   列出指定的字体的可用样式。
 
-**脚本**  
-列出了可用的语言脚本对于指定的字体。 时选择不同的语言脚本，该语言的字符集可用于创建多语言文档。
+- **Size**
+
+   列出指定的字体的可用点大小。
+
+- 示例
+
+   显示文本与指定的字体设置的显示方式的示例。
+
+- **脚本**
+
+   列出了可用的语言脚本对于指定的字体。 时选择不同的语言脚本，该语言的字符集可用于创建多语言文档。
 
 ## <a name="requirements"></a>要求
 

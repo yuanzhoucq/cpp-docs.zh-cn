@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765926"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721716"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 类
 包含一个弹出菜单的工具栏按钮。  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*src*  
- 将现有`CMFCToolBarMenuButton`复制到此对象`CMFCToolBarMenuButton`对象。  
+*src*<br/>
+[in]将现有`CMFCToolBarMenuButton`复制到此对象`CMFCToolBarMenuButton`对象。  
   
- [in]*uiID*  
- 用户单击按钮; 时要执行的命令 ID或者 (UINT)-1 不直接执行命令的菜单按钮。  
+*uiID*<br/>
+[in]用户单击按钮; 时要执行的命令 ID或者 (UINT)-1 不直接执行命令的菜单按钮。  
   
- [in]*hMenu*  
- 句柄菜单;或者，如果该按钮不具有一个菜单，则为 NULL。  
+*hMenu*<br/>
+[in]句柄菜单;或者，如果该按钮不具有一个菜单，则为 NULL。  
   
- [in]*iImage*  
- 按钮; 的图像的索引或如果此按钮不具有一个图标，或由指定的命令中使用的图标为-1 *uiID*。 索引是相同的每个`CMFCToolBarImages`在应用程序中的对象。  
+*iImage*<br/>
+[in]按钮; 的图像的索引或如果此按钮不具有一个图标，或由指定的命令中使用的图标为-1 *uiID*。 索引是相同的每个`CMFCToolBarImages`在应用程序中的对象。  
   
- [in]*lpszText*  
- 工具栏菜单按钮的文本。  
+*lpszText*<br/>
+[in]工具栏菜单按钮的文本。  
   
- [in]*bUserButton*  
- 如果该按钮显示用户定义的图像; 则为 TRUE如果按钮将显示与指定的命令相关联的预定义的映像，则为 FALSE *uiID*。  
+*bUserButton*<br/>
+[in]如果该按钮显示用户定义的图像; 则为 TRUE如果按钮将显示与指定的命令相关联的预定义的映像，则为 FALSE *uiID*。  
   
 ### <a name="remarks"></a>备注  
  如果*uiID*是一个有效命令 ID，当用户单击它时请单击按钮执行该命令。 如果*hMenu*是有效的菜单的句柄，该按钮时它将显示在菜单中将出现一个工具栏或子菜单中提供下拉列表菜单。 如果这两个*uiID*并*hMenu*是否有效，该按钮是用户单击它时将执行该命令的一部分而有一个向下箭头，将的下拉列表菜单部分拆分按钮时用户单击它。 但是，如果*hMenu*有效，用户将不能单击按钮时要执行的命令按钮插入到一个菜单。  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hMenu*  
- 菜单句柄。  
+*hMenu*<br/>
+[in]菜单句柄。  
   
 ### <a name="remarks"></a>备注  
  工具栏菜单按钮可以显示一个下拉列表子菜单。  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectImage*  
- 图像边框的坐标。  
+*rectImage*<br/>
+[in]图像边框的坐标。  
   
- [in]*hIcon*  
- 图标句柄。  
+*hIcon*<br/>
+[in]图标句柄。  
   
 ### <a name="remarks"></a>备注  
  此方法接受文档图标，并将其绘制在指定的区域中居中显示的菜单按钮*rectImage*。  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*rectImage*  
- 对引用`CRect`对象，它接收图像边框的坐标。  
+*rectImage*<br/>
+[out]对引用`CRect`对象，它接收图像边框的坐标。  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  菜单在调色板模式下时，请在下拉列表菜单中返回行的数。  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*大小*  
+*pDC*<br/>
+[in][in]*大小*  
  [in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*bDelay*  
+*pWnd*<br/>
+[in][in]*bDelay*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*rect*  
- [in]*pImages*  
- [in]*bHorz*  
- [in]*bCustomizeMode*  
- [in]*bHighlight*  
- [in]*bDrawBorder*  
- [in]*bGrayDisabledButtons*  
+*pDC*<br/>
+[in][in]*rect*  
+*pImages*<br/>
+[in][in]*bHorz*  
+*bCustomizeMode*<br/>
+[in][in]*bHighlight*  
+*bDrawBorder*<br/>
+[in][in]*bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>备注  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*bSelected*  
   
 ### <a name="return-value"></a>返回值  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指定接收的下拉列表菜单命令的窗口。 仅当工具栏菜单按钮具有父窗口，它可以为 NULL。  
+*pWnd*<br/>
+[in]指定接收的下拉列表菜单命令的窗口。 仅当工具栏菜单按钮具有父窗口，它可以为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  TRUE 何时[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象已创建并打开成功; 否则为 FALSE。  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMenuOnly*  
- 若要当它具有有效的命令 ID 和子菜单，则返回 FALSE 时它具有有效的命令 ID 和子菜单的拆分按钮以显示此按钮时显示此按钮为菜单按钮，则为 TRUE。  
+*bMenuOnly*<br/>
+[in]若要当它具有有效的命令 ID 和子菜单，则返回 FALSE 时它具有有效的命令 ID 和子菜单的拆分按钮以显示此按钮时显示此按钮为菜单按钮，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  通常情况下，在时工具栏菜单按钮具有子菜单和命令 ID，菜单显示向下箭头按钮都有主要按钮和一个附加的拆分按钮。 如果调用此方法和*bMenuOnly*为 TRUE 时，该按钮改为显示为一个具有向下箭头按钮中的单个菜单按钮。 当用户单击其中任一模式下的箭头时，将打开子菜单，并且当用户单击其中任一模式下在 framework 中的按钮的非箭头一部分执行的命令。  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMenuPaletteMode*  
- 指定下拉列表菜单是否处于调色板模式。  
+*bMenuPaletteMode*<br/>
+[in]指定下拉列表菜单是否处于调色板模式。  
   
- [in]*nPaletteRows*  
- 在面板中的行数。  
+*nPaletteRows*<br/>
+[in]在面板中的行数。  
   
 ### <a name="remarks"></a>备注  
  在调色板模式下，所有菜单项都显示为多列的调色板。 使用指定的行数*nPaletteRows*。  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiBarID*  
- 指定新拖曳栏 id。  
+*uiBarID*<br/>
+[in]指定新拖曳栏 id。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以指定在用户拖动从菜单栏的菜单按钮时创建的拖曳栏的 ID。 如果*uiBarID*参数为 0，则用户不能拉出菜单按钮。  

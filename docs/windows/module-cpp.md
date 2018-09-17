@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200213"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711789"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,8 +52,8 @@ ms.locfileid: "43200213"
 
 ### <a name="parameters"></a>参数
 
-*类型*（可选）  
-可以是以下各项之一：
+*type*  
+（可选）可以是以下值之一：
 
 - `dll` 添加函数和类，使产生的 DLL 发挥进程内 COM 服务器。 这是默认值。
 
@@ -63,11 +63,11 @@ ms.locfileid: "43200213"
 
 - `unspecified` 禁用相关模块特性的 ATL 代码注入： 注入 ATL Module 类、 全局实例 _AtlModule 和入口点函数。 不要禁用该项目中的其他特性的 ATL 代码注入。
 
- 名称（可选）  
-库块的名称。
+*name*  
+（可选）库块的名称。
 
-*版本*（可选）  
-想要分配到库块的版本号。 默认值为 1.0。
+*version*  
+（可选）你想要分配到的库块的版本号。 默认值为 1.0。
 
 *uuid*  
 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (** *libraryname* **)**。
@@ -75,32 +75,32 @@ ms.locfileid: "43200213"
 *lcid*  
 本地化参数。 请参阅[lcid](/windows/desktop/Midl/lcid)有关详细信息。
 
-*控制*（可选）  
-指定库中的所有组件为控件。
+*control*  
+（可选）指定库中的所有组件的控件。
 
 *helpstring*  
 指定类型库。
 
-*helpstringdll* （可选）  
-设置要用于执行文档字符串查找的.dll 文件名称。 请参阅[helpstringdll](/windows/desktop/Midl/helpstringdll)有关详细信息。
+*helpstringdll*  
+（可选）设置要用于执行文档字符串查找的.dll 文件的名称。 请参阅[helpstringdll](/windows/desktop/Midl/helpstringdll)有关详细信息。
 
-*helpfile* （可选）  
-名称**帮助**类型库文件。
+*helpfile*  
+（可选）名称**帮助**类型库文件。
 
-*helpcontext* （可选）  
-**帮助 ID**该类型库。
+*helpcontext*  
+（可选）**帮助 ID**该类型库。
 
-*helpstringcontext* （可选）  
-有关详细信息，请参阅 [helpstringcontext](../windows/helpstringcontext.md) 。
+*helpstringcontext*  
+（可选）请参阅[helpstringcontext](../windows/helpstringcontext.md)有关详细信息。
 
-*隐藏*（可选）  
-禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
+*hidden*  
+（可选）禁止显示整个媒体库。 这种用法与控件一起使用。 主机需要创建新的类型库，该库对控件进行包装，使其具有扩展特性。 请参阅[隐藏](/windows/desktop/Midl/hidden)MIDL 特性的详细信息。
 
-*受限*（可选）  
-不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
+*restricted*  
+（可选）不能随意调用库中的成员。 请参阅[受限](/windows/desktop/Midl/restricted)MIDL 特性的详细信息。
 
-*自定义*（可选）  
-一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 第一个参数*自定义*是该特性的 GUID。 例如：
+*custom*  
+（可选）一个或多个属性则它类似于[自定义](../windows/custom-cpp.md)属性。 第一个参数*自定义*是该特性的 GUID。 例如：
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

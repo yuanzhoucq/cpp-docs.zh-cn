@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712836"
 ---
 # <a name="moneyget-class"></a>money_get 类
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>参数
 
 *CharType*<br/>
- 在程序中用于对区域设置中的字符进行编码的类型。
+在程序中用于对区域设置中的字符进行编码的类型。
 
 *InputIterator*<br/>
- 获取函数从中读取其输入的迭代器类型。
+获取函数从中读取其输入的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>参数
 
 *first*<br/>
- 确定待转换序列开头位置的输入迭代器。
+确定待转换序列开头位置的输入迭代器。
 
 *最后一个*<br/>
- 确定待转换序列末尾位置的输入迭代器。
+确定待转换序列末尾位置的输入迭代器。
 
 *Intl*<br/>
- 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
+一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
 *iosbase*<br/>
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*<br/>
- 根据操作是否成功，设置流状态的相应位掩码元素。
+根据操作是否成功，设置流状态的相应位掩码元素。
 
 *val*<br/>
- 存储已转换序列的字符串。
+存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>参数
 
 *first*<br/>
- 确定待转换序列开头位置的输入迭代器。
+确定待转换序列开头位置的输入迭代器。
 
 *最后一个*<br/>
- 确定待转换序列末尾位置的输入迭代器。
+确定待转换序列末尾位置的输入迭代器。
 
 *Intl*<br/>
- 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
+一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
 *iosbase*<br/>
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
 *状态*<br/>
- 根据操作是否成功，设置流状态的相应位掩码元素。
+根据操作是否成功，设置流状态的相应位掩码元素。
 
 *val*<br/>
- 存储已转换序列的字符串。
+存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>参数
 
 *_Refs*<br/>
- 用于指定对象的内存管理类型的整数值。
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 

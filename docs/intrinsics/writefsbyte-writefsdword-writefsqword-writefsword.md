@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft 文档
+title: __writefsbyte，__writefsdword，__writefsqword，__writefsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718466"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Microsoft 专用**  
   
- 将内存写入到指定的偏移量相对于 FS 段的开始的位置。  
+ 内存写入指定相对于 FS 段的开头的偏移量的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Offset`  
- 从 FS 要写入的开头的偏移量。  
+*偏移量*<br/>
+[in]从 FS 要写入到开头的偏移量。  
   
- [in] `Data`  
- 要写入的值。  
+*Data*<br/>
+[in]要写入的值。  
   
 ## <a name="requirements"></a>要求  
   
@@ -78,7 +78,7 @@ void __writefsqword(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 这些例程只能用作内部函数不可用。  
+ 这些例程只能用作内部函数可使用。  
   
 **结束 Microsoft 专用**  
   

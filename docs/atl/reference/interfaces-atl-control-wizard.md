@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb248442a1d687b98e8e97c8846d07a50e484564
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766556"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717504"
 ---
 # <a name="interfaces-atl-control-wizard"></a>接口，ATL 控件向导
 
 在向导的此页标识该控件支持的接口。 默认情况下，受支持的接口是通常由大多数容器。
 
 > [!NOTE]
->  如果所选**最低限度的控制**上[选项](../../atl/reference/options-atl-control-wizard.md)选项卡上，默认情况下会出现任何接口**支持**列表框。
+> 如果所选**最低限度的控制**上[选项](../../atl/reference/options-atl-control-wizard.md)选项卡上，默认情况下会出现任何接口**支持**列表框。
 
-**不支持**  
-指示控件当前不支持的可用接口。
+- **不支持**
 
-**支持**  
-指示控件当前支持的接口。
+   指示控件当前不支持的可用接口。
 
-|传输按钮|描述|
-|---------------------|-----------------|
-|**>**|将添加到**支持**列表中当前所选的接口名称**不支持**列表。|
-|**>>**|将添加到**支持**列表中可用的所有接口名称**不支持**都列表。|
-|**<**|移除中当前所选的接口名称**支持**列表。|
-|**<<**|删除所有接口名称中当前列出**支持**列表。|
+- **支持**
+
+   指示控件当前支持的接口。
+
+   |传输按钮|描述|
+   |---------------------|-----------------|
+   |**>**|将添加到**支持**列表中当前所选的接口名称**不支持**列表。|
+   |**>>**|将添加到**支持**列表中可用的所有接口名称**不支持**都列表。|
+   |**\<**|移除中当前所选的接口名称**支持**列表。|
+   |**\<\<**|删除所有接口名称中当前列出**支持**列表。|
 
 ## <a name="see-also"></a>请参阅
 

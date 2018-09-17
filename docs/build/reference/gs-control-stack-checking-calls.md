@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719261"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs（控制堆栈检查调用）
+
 控制堆栈探测。
 
 ## <a name="syntax"></a>语法
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>自变量
+
 *size*<br/>
 （可选）在启动堆栈探测之前局部变量可以占用的字节数。 如果 **/Gs**选项而未指定`size`参数，它是与指定相同 **/Gs0**，
 
 ## <a name="remarks"></a>备注
+
 堆栈探测是编译器插入到每个函数调用中的代码序列。 堆栈探测启动时，它在内存中良性延伸存储函数的局部变量所需的空间量。
 
 如果函数的局部变量需要的堆栈空间多于 `size` 字节，则启动它的堆栈探测。 默认情况下，当函数需要的堆栈空间多于一页时，编译器将生成启动堆栈探测的代码。 这相当于一个编译器选项 **/Gs4096** x86、 x64 和 ARM 平台。 此值使应用程序和 Windows 内存管理器可以动态增加运行时提交给程序堆栈的内存量。
@@ -58,18 +61,19 @@ ms.locfileid: "44104103"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-2.  选择**C/c + +** 文件夹。
+1. 选择**C/c + +** 文件夹。
 
-3.  选择**命令行**属性页。
+1. 选择**命令行**属性页。
 
-4.  在 **“附加选项”** 框中键入编译器选项。
+1. 在 **“附加选项”** 框中键入编译器选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
 ## <a name="see-also"></a>请参阅
-[编译器选项](../../build/reference/compiler-options.md)   
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538823"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711875"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager 类
 维护有关工具提示的运行时信息。 `CTooltipManager` 类在每个应用程序中实例化一次。  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*pToolTip*  
- 工具提示指针的引用。 它是设置为时该函数将返回指向新创建的工具提示。  
+*pToolTip*<br/>
+[out]工具提示指针的引用。 它是设置为时该函数将返回指向新创建的工具提示。  
   
- [in]*pWndParent*  
- 在工具提示的父级。  
+*pWndParent*<br/>
+[in]在工具提示的父级。  
   
- [in]*n 类型*  
- 在工具提示的类型。  
+*n 类型*<br/>
+[in]在工具提示的类型。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功创建工具提示，非零值。  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in、 out]*pToolTip*  
- 对指向要销毁的工具提示的指针的引用。  
+*pToolTip*<br/>
+[in、 out]对指向要销毁的工具提示的指针的引用。  
   
 ### <a name="remarks"></a>备注  
  调用此方法为每个[CToolTipCtrl 类](../../mfc/reference/ctooltipctrl-class.md)创建的[CTooltipManager::CreateToolTip](#createtooltip)。 父控件应调用此方法从其`OnDestroy`处理程序。 这需要从 framework 正确删除工具提示。 此方法设置*pToolTip*为之前它将返回 NULL。  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nTypes*  
- 指定控件类型。  
+*nTypes*<br/>
+[in]指定控件类型。  
   
- [in]*pRTC*  
- 自定义工具提示的运行时类。  
+*pRTC*<br/>
+[in]自定义工具提示的运行时类。  
   
- [in]*pParams*  
- 工具提示的参数。  
+*pParams*<br/>
+[in]工具提示的参数。  
   
 ### <a name="remarks"></a>备注  
  此方法设置的运行时类和初始参数的[CToolTipManager](../../mfc/reference/ctooltipmanager-class.md)创建工具提示时使用。 当控件调用[CTooltipManager::CreateToolTip](#createtooltip)和工具提示中将类型传递，它是一种类型由指示*nTypes*，工具提示管理器创建的一个实例的工具提示控件指定的运行时类*pRTC* ，并将指定的参数传递*pParams*到新的工具提示。  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTI*  
- 指向 TOOLINFO 对象的指针。  
+*PTI*<br/>
+[in]指向 TOOLINFO 对象的指针。  
   
- [in、 out]*pToolTip*  
- 指向要为其设置的文本和说明的工具提示控件的指针。  
+*pToolTip*<br/>
+[in、 out]指向要为其设置的文本和说明的工具提示控件的指针。  
   
- [in]*n 类型*  
- 指定该工具提示与之关联的控件的类型。  
+*n 类型*<br/>
+[in]指定该工具提示与之关联的控件的类型。  
   
- [in]*strText*  
- 要将设置为工具提示文本的文本。  
+*strText*<br/>
+[in]要将设置为工具提示文本的文本。  
   
- [in]*lpszDescr*  
- 指向的工具提示说明的指针。 可以为 NULL。  
+*lpszDescr*<br/>
+[in]指向的工具提示说明的指针。 可以为 NULL。  
   
 ### <a name="remarks"></a>备注  
  值*n 类型*必须是相同的值*n 类型*参数[CTooltipManager::CreateToolTip](#createtooltip)时创建工具提示。  

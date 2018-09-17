@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196706"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701828"
 ---
 # <a name="cbutton-class"></a>CButton 类
 提供 Windows 按钮控件功能。  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpszNote*|指向调用方负责分配和取消分配的缓冲区的指针。 如果返回值为 TRUE，该缓冲区包含与当前命令链接控件; 关联的注释文本否则，缓冲区保持不变。|  
-|[in、 out]*cchNote*|指向一个无符号的整数变量的指针。<br /><br /> 该变量时调用此方法时，包含指定的缓冲区的大小*lpszNote*参数。<br /><br /> 当此方法返回时，如果返回值为 TRUE 的变量包含与当前命令链接控件相关联的注释的大小。 如果返回值为 FALSE，该变量包含所需包含注释的缓冲区大小。|  
+|*lpszNote*|[out]指向调用方负责分配和取消分配的缓冲区的指针。 如果返回值为 TRUE，该缓冲区包含与当前命令链接控件; 关联的注释文本否则，缓冲区保持不变。|  
+|*cchNote*|[in、 out]指向一个无符号的整数变量的指针。<br /><br /> 该变量时调用此方法时，包含指定的缓冲区的大小*lpszNote*参数。<br /><br /> 当此方法返回时，如果返回值为 TRUE 的变量包含与当前命令链接控件相关联的注释的大小。 如果返回值为 FALSE，该变量包含所需包含注释的缓冲区大小。|  
   
 ### <a name="return-value"></a>返回值  
  在第一个重载[CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含与当前命令链接控件相关联的注释文本。  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pInfo*|指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收当前的拆分按钮控件的相关信息的结构。 调用方负责分配结构。|  
+|*pInfo*|[out]指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收当前的拆分按钮控件的相关信息的结构。 调用方负责分配结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pSize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
+|*pSize*|[out]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fDropDown*|若要将设置 BST_DROPDOWNPUSHED 状态;否则为 FALSE。|  
+|*fDropDown*|[in]若要将设置 BST_DROPDOWNPUSHED 状态;否则为 FALSE。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fElevationRequired*|则为 True`elevation required`状态; 否则为 FALSE。|  
+|*fElevationRequired*|[in]则为 True`elevation required`状态; 否则为 FALSE。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*lpszNote*|设置为 command link 控件的注释文本的 Unicode 字符串指针。|  
+|*lpszNote*|[in]设置为 command link 控件的注释文本的 Unicode 字符串指针。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*chGlyph*|一个指定要用作拆分按钮下拉箭头的标志符号的字符。|  
+|*chGlyph*|[in]一个指定要用作拆分按钮下拉箭头的标志符号的字符。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pSplitImageList*|指向[CImageList](../../mfc/reference/cimagelist-class.md)要分配给当前的拆分按钮控件。|  
+|*pSplitImageList*|[in]指向[CImageList](../../mfc/reference/cimagelist-class.md)要分配给当前的拆分按钮控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pInfo*|指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构，它定义当前的拆分按钮控件。|  
+|*pInfo*|[in]指向[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构，它定义当前的拆分按钮控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pSize*|指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构描述的绑定矩形。|  
+|*pSize*|[in]指向[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)结构描述的绑定矩形。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uSplitStyle*|拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构。|  
+|*uSplitStyle*|[in]拆分按钮样式的按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681620"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722236"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 提供 Windows 公共热键控件的功能。  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*wVirtualKeyCode*  
- 键盘快捷方式的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。  
+*wVirtualKeyCode*<br/>
+[out]键盘快捷方式的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。  
   
- [out]*wModifiers*  
- 按位组合 (OR) 这些标志指示键盘快捷方式中的修改键。  
+*wModifiers*<br/>
+[out]按位组合 (OR) 这些标志指示键盘快捷方式中的修改键。  
   
  修饰符标志如下所示：  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*wVirtualKeyCode*  
- 键盘快捷方式的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。  
+*wVirtualKeyCode*<br/>
+[in]键盘快捷方式的虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。  
   
- [in]*wModifiers*  
- 按位组合 (OR) 这些标志指示键盘快捷方式中的修改键。  
+*wModifiers*<br/>
+[in]按位组合 (OR) 这些标志指示键盘快捷方式中的修改键。  
   
  修饰符标志如下所示：  
   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965738"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713162"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -47,9 +47,10 @@ C++ 标准库中基于节点的容器（std::list、std::set、std::multiset、s
 
 分配器是此类型的所有模板：
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 其中模板参数 `Type` 是由分配器实例所管理的类型。 C++ 标准库提供默认分配器和在 [\<memory>](../standard-library/memory.md) 中定义的模板类 [allocator](../standard-library/allocator-class.md)。 \<allocators> 标头提供以下分配器：
 

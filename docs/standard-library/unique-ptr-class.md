@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725178"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 类
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>参数
 
-右侧  
- `unique_ptr`。
+右侧<br/>
+`unique_ptr`。
 
-*Nptr*  
- 类型为 `rvalue` 的 `std::nullptr_t`。
+*Nptr*<br/>
+类型为 `rvalue` 的 `std::nullptr_t`。
 
-*ptr*  
- `pointer`。
+*ptr*<br/>
+`pointer`。
 
-*删除器*  
- 绑定到 `deleter` 的 `unique_ptr` 函数。
+*删除器*<br/>
+绑定到 `deleter` 的 `unique_ptr` 函数。
 
 ## <a name="exceptions"></a>异常
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 用于交换指针的 `unique_ptr`。
+*right*<br/>
+用于交换指针的 `unique_ptr`。
 
 ### <a name="remarks"></a>备注
 

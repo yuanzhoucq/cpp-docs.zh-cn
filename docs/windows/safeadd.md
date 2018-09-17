@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e84b76f8079656da3ed19aa2c690bf240854015
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594351"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704882"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -41,14 +41,14 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>参数
 
-[in]*t*  
-要添加的第一个数。 其类型必须为 T。
+*t*<br/>
+[in]要添加的第一个数。 其类型必须为 T。
 
-[in]*u*  
-要添加的第二个数字。 其类型必须为 U。
+*u*<br/>
+[in]要添加的第二个数字。 其类型必须为 U。
 
-[out]*结果*  
-参数位置**SafeAdd**将结果存储。
+*结果*<br/>
+[out]参数位置**SafeAdd**将结果存储。
 
 ## <a name="return-value"></a>返回值
 

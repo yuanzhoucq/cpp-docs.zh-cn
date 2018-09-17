@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a35d65509de75e117bdbeef679618b8d49ef37a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711615"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1680,11 +1680,11 @@ virtual void CalcWindowRect(
 
 ### <a name="parameters"></a>参数
 
-[in、 out]*lpClientRect*  
-向矩形结构的指针。 在输入时，此结构包含客户端矩形。 该方法运行完毕后，此结构包含可以包含指定的客户端矩形窗口矩形。
+*lpClientRect*<br/>
+[in、 out]向矩形结构的指针。 在输入时，此结构包含客户端矩形。 该方法运行完毕后，此结构包含可以包含指定的客户端矩形窗口矩形。
 
-[in]*nAdjustType*  
-使用`CWnd::adjustBorder`来计算窗口坐标，而无需 WS_EX_CLIENTEDGE 样式; 否则，请使用`CWnd::adjustOutside`。
+*nAdjustType*<br/>
+[in]使用`CWnd::adjustBorder`来计算窗口坐标，而无需 WS_EX_CLIENTEDGE 样式; 否则，请使用`CWnd::adjustOutside`。
 
 ### <a name="remarks"></a>备注
 
@@ -1924,26 +1924,26 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszClassName*  
-包含已注册的系统窗口类，则名称的以 null 结尾的字符串指针或预定义的系统窗口类的名称。
+*lpszClassName*<br/>
+[in]包含已注册的系统窗口类，则名称的以 null 结尾的字符串指针或预定义的系统窗口类的名称。
 
-[in]*lpszWindowName*  
-包含窗口的以 null 结尾的字符串指针显示名称;无窗口的显示名称，否则为 NULL。
+*lpszWindowName*<br/>
+[in]包含窗口的以 null 结尾的字符串指针显示名称;无窗口的显示名称，否则为 NULL。
 
-[in]*dwStyle*  
-按位组合 (OR)[的窗口样式](styles-used-by-mfc.md#window-styles)。 WS_POPUP 选项不是有效的样式。
+*dwStyle*<br/>
+[in]按位组合 (OR)[的窗口样式](styles-used-by-mfc.md#window-styles)。 WS_POPUP 选项不是有效的样式。
 
-[in]*rect*  
-大小和窗口相对于父窗口的左上角的位置。
+*rect*<br/>
+[in]大小和窗口相对于父窗口的左上角的位置。
 
-[in]*pParentWnd*  
-向父窗口的指针。
+*pParentWnd*<br/>
+[in]向父窗口的指针。
 
-[in]*nID*  
-窗口的 ID。
+*nID*<br/>
+[in]窗口的 ID。
 
-[in]*pContext*  
-指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)用于自定义应用程序的文档视图体系结构的结构。
+*pContext*<br/>
+[in]指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)用于自定义应用程序的文档视图体系结构的结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -5985,10 +5985,10 @@ afx_msg void OnAppCommand(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*pWnd*|指向`CWnd`对象，表示用户已单击的命令按钮或按命令键的窗口。 此窗口可以接收消息的窗口的子窗口。|
-|[in]*nCmd*|指示应用程序命令。 有关可能的值的列表，请参阅下面的命令*cmd*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。|
-|[in]*nDevice*|输入生成的设备的输入的事件。 有关可能的值的列表，请参阅下的设备*uDevice*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。|
-|[in]*nKey*|指示都已关闭，例如鼠标左键或 CTRL 键的任何虚拟键。 有关可能的值的列表，请参阅下的项*dwKeys*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。 有关详细信息，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
+|*pWnd*|[in]指向`CWnd`对象，表示用户已单击的命令按钮或按命令键的窗口。 此窗口可以接收消息的窗口的子窗口。|
+|*nCmd*|[in]指示应用程序命令。 有关可能的值的列表，请参阅下面的命令*cmd*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。|
+|*nDevice*|[in]输入生成的设备的输入的事件。 有关可能的值的列表，请参阅下的设备*uDevice*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。|
+|*nKey*|[in]指示都已关闭，例如鼠标左键或 CTRL 键的任何虚拟键。 有关可能的值的列表，请参阅下的项*dwKeys*一部分*lParam*参数[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。 有关详细信息，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
 
 ### <a name="remarks"></a>备注
 
@@ -6273,8 +6273,8 @@ afx_msg void OnColorizationColorChanged(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*dwColorizationColor*|指定新的着色颜色。<br /><br /> 颜色格式是十六进制数的窗体 0xAARRGGBB，其中每个四个组件的范围从 0x00 通过 0xFF。 AA 组件是 alpha 值、 RR 是红色的颜色、 GG 为绿色，和 BB 为蓝色。|
-|[in]*bOpacity*|如果新的颜色混合使用不透明度，则为 TRUE如果不是，FALSE。|
+|*dwColorizationColor*|[in]指定新的着色颜色。<br /><br /> 颜色格式是十六进制数的窗体 0xAARRGGBB，其中每个四个组件的范围从 0x00 通过 0xFF。 AA 组件是 alpha 值、 RR 是红色的颜色、 GG 为绿色，和 BB 为蓝色。|
+|*bOpacity*|[in]如果新的颜色混合使用不透明度，则为 TRUE如果不是，FALSE。|
 
 ### <a name="remarks"></a>备注
 
@@ -7127,9 +7127,9 @@ afx_msg void OnHotKey(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nHotKeyId*|热键生成消息标识符。 如果消息由系统定义热键生成，此参数将为以下值之一：<br /><br /> -IDHOT_SNAPDESKTOP-管理单元桌面热键曾按下。<br />-IDHOT_SNAPWINDOW-管理单元窗口热键曾按下。|
-|[in]*nKey1*|表示与指定的键一起按下了结合使用的密钥的标志的按位组合 (OR) *nKey2*参数。 可能的值为：<br /><br /> -MOD_ALT-任一 ALT 键已按下。<br />-MOD_CONTROL-任一 CTRL 键已按下。<br />-MOD_SHIFT-任一 SHIFT 键已按下。<br />-MOD_WIN 的任一 WINDOWS 键已按下。 这些密钥标记为 Microsoft Windows 徽标。|
-|[in]*nKey2*|热键虚拟键代码。|
+|*nHotKeyId*|[in]热键生成消息标识符。 如果消息由系统定义热键生成，此参数将为以下值之一：<br /><br /> -IDHOT_SNAPDESKTOP-管理单元桌面热键曾按下。<br />-IDHOT_SNAPWINDOW-管理单元窗口热键曾按下。|
+|*nKey1*|[in]表示与指定的键一起按下了结合使用的密钥的标志的按位组合 (OR) *nKey2*参数。 可能的值为：<br /><br /> -MOD_ALT-任一 ALT 键已按下。<br />-MOD_CONTROL-任一 CTRL 键已按下。<br />-MOD_SHIFT-任一 SHIFT 键已按下。<br />-MOD_WIN 的任一 WINDOWS 键已按下。 这些密钥标记为 Microsoft Windows 徽标。|
+|*nKey2*|[in]热键虚拟键代码。|
 
 ### <a name="remarks"></a>备注
 
@@ -7321,7 +7321,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*uFlag*|此标志可以包含以下值：<br /><br /> -GIDC_ARRIVAL-一个新的设备已添加到系统。<br />已从系统删除-GIDC_REMOVAL-一个设备。|
+|*uFlag*|[in]此标志可以包含以下值：<br /><br /> -GIDC_ARRIVAL-一个新的设备已添加到系统。<br />已从系统删除-GIDC_REMOVAL-一个设备。|
 
 ### <a name="remarks"></a>备注
 
@@ -7344,8 +7344,8 @@ afx_msg void OnInputLangChange(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nCharSet*|新的区域设置的字符集。 有关详细信息，请参阅*lfCharSet*的参数[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。|
-|[in]*nLocaleId*|输入法区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
+|*nCharSet*|[in]新的区域设置的字符集。 有关详细信息，请参阅*lfCharSet*的参数[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。|
+|*nLocaleId*|[in]输入法区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
 
 ### <a name="remarks"></a>备注
 
@@ -7368,8 +7368,8 @@ afx_msg void OnInputLangChangeRequest(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示从上一或下一个区域设置的区域设置中，已安装列表中选择了新的区域设置或新输入区域设置的键盘布局可与系统字符集的标志的按位 (OR) 组合。<br /><br /> 可能的值为 INPUTLANGCHANGE_BACKWARD、 INPUTLANGCHANGE_FORWARD 和 INPUTLANGCHANGE_SYSCHARSET。|
-|[in]*nLocaleId*|输入法区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
+|*nFlags*|[in]指示从上一或下一个区域设置的区域设置中，已安装列表中选择了新的区域设置或新输入区域设置的键盘布局可与系统字符集的标志的按位 (OR) 组合。<br /><br /> 可能的值为 INPUTLANGCHANGE_BACKWARD、 INPUTLANGCHANGE_FORWARD 和 INPUTLANGCHANGE_SYSCHARSET。|
+|*nLocaleId*|[in]输入法区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
 
 ### <a name="remarks"></a>备注
 
@@ -7800,8 +7800,8 @@ afx_msg UINT OnMenuDrag(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nPos*|当拖动操作开始时的菜单项的索引位置。|
-|[in]*pMenu*|指向[CMenu](../../mfc/reference/cmenu-class.md)对象，其中包含菜单项。|
+|*nPos*|[in]当拖动操作开始时的菜单项的索引位置。|
+|*pMenu*|[in]指向[CMenu](../../mfc/reference/cmenu-class.md)对象，其中包含菜单项。|
 
 ### <a name="return-value"></a>返回值
 
@@ -7829,7 +7829,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*pMenu*|指向[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)上是结构，其中包含有关鼠标光标的拖放菜单的信息。|
+|*pMenu*|[in]指向[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)上是结构，其中包含有关鼠标光标的拖放菜单的信息。|
 
 ### <a name="return-value"></a>返回值
 
@@ -7859,8 +7859,8 @@ afx_msg void OnMenuRButtonUp(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nPos*|已释放鼠标右键按钮时的菜单项的索引位置。|
-|[in]*pMenu*|指向[CMenu](../../mfc/reference/cmenu-class.md)对象，其中包含菜单项。|
+|*nPos*|[in]已释放鼠标右键按钮时的菜单项的索引位置。|
+|*pMenu*|[in]指向[CMenu](../../mfc/reference/cmenu-class.md)对象，其中包含菜单项。|
 
 ### <a name="remarks"></a>备注
 
@@ -7977,8 +7977,8 @@ afx_msg void OnMouseHover(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8014,9 +8014,9 @@ afx_msg void OnMouseHWheel(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。<br /><br /> 有关标志列表，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
-|[in]*zDelta*|指示在序列图或部门 WHEEL_DELTA，表示这是 120 旋转鼠标滚轮的距离。 正值指示轮已转动向右;负值指示轮已转动的左侧。|
-|[in]*pt*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。<br /><br /> 有关标志列表，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
+|*zDelta*|[in]指示在序列图或部门 WHEEL_DELTA，表示这是 120 旋转鼠标滚轮的距离。 正值指示轮已转动向右;负值指示轮已转动的左侧。|
+|*pt*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8441,8 +8441,8 @@ afx_msg void OnNcMouseHover(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nHitTest*|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8586,7 +8586,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*bIsRendering*|如果窗口; 的非工作区中启用桌面窗口管理器 (DWM) 呈现，则返回 TRUE如果禁用呈现，则为 FALSE。|
+|*bIsRendering*|[in]如果窗口; 的非工作区中启用桌面窗口管理器 (DWM) 呈现，则返回 TRUE如果禁用呈现，则为 FALSE。|
 
 ### <a name="remarks"></a>备注
 
@@ -8610,9 +8610,9 @@ void OnNcXButtonDblClk(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nHitTest*|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|[in]*n 按钮*|如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
+|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8636,9 +8636,9 @@ afx_msg void OnNcXButtonDown(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nHitTest*|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|[in]*n 按钮*|值为按下第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被按下。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
+|*n 按钮*|[in]值为按下第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被按下。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8662,9 +8662,9 @@ afx_msg void OnNcXButtonUp(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nHitTest*|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
-|[in]*n 按钮*|值为释放第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮发布。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
+|*nHitTest*|[in]返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)消息。|
+|*n 按钮*|[in]值为释放第一个鼠标的 X 按钮时，如果 XBUTTON1 或 XBUTTON2 如果第二个 X 按钮发布。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于屏幕的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -8687,8 +8687,8 @@ afx_msg void OnNextMenu(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nKey*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。<br /><br /> 有关标志列表，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
-|[in]*lpMdiNextMenu*|指向[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)结构，其中包含要激活的菜单有关的信息。|
+|*nKey*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。<br /><br /> 有关标志列表，请参阅在"消息参数"副标题[有关鼠标输入](/windows/desktop/inputdev/about-mouse-input)。|
+|*lpMdiNextMenu*|[in]指向[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)结构，其中包含要激活的菜单有关的信息。|
 
 ### <a name="remarks"></a>备注
 
@@ -8745,8 +8745,8 @@ afx_msg UINT OnNotifyFormat(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*pWnd*|一个指向`CWnd`对象，表示窗口发送[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息。<br /><br /> 如果此参数是指向控件的*nCommand*参数是 NF_QUERY 或指向控件的父窗口的指针，如果*nCommand*是 NF_REQUERY。|
-|[in]*nCommand*|一个专门 WM_NOTIFY 消息的命令值。 可能的值为：<br /><br /> -NF_QUERY-<br />     该消息是一个查询来确定是否应在 WM_NOTIFY 消息中使用的 ANSI 或 Unicode 结构。 从控件的控件，以及在响应此消息 NF_REQUERY 窗体创建过程到其父窗口发送此消息。<br />-NF_REQUERY-<br />     消息是为了使控件可将此消息的 NF_QUERY 形式发送到其父窗口的请求。 此请求来自父窗口中，并询问要再次查询有关的类型的结构的父 WM_NOTIFY 消息中使用的控件。 如果*nCommand*参数是 NF_REQUERY，返回值是重新查询操作的结果。|
+|*pWnd*|[in]一个指向`CWnd`对象，表示窗口发送[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)消息。<br /><br /> 如果此参数是指向控件的*nCommand*参数是 NF_QUERY 或指向控件的父窗口的指针，如果*nCommand*是 NF_REQUERY。|
+|*nCommand*|[in]一个专门 WM_NOTIFY 消息的命令值。 可能的值为：<br /><br /> -NF_QUERY-<br />     该消息是一个查询来确定是否应在 WM_NOTIFY 消息中使用的 ANSI 或 Unicode 结构。 从控件的控件，以及在响应此消息 NF_REQUERY 窗体创建过程到其父窗口发送此消息。<br />-NF_REQUERY-<br />     消息是为了使控件可将此消息的 NF_QUERY 形式发送到其父窗口的请求。 此请求来自父窗口中，并询问要再次查询有关的类型的结构的父 WM_NOTIFY 消息中使用的控件。 如果*nCommand*参数是 NF_REQUERY，返回值是重新查询操作的结果。|
 
 ### <a name="return-value"></a>返回值
 
@@ -8910,8 +8910,8 @@ afx_msg UINT OnPowerBroadcast(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nPowerEvent*|电源管理事件。|
-|[in]*nEventData*|特定于事件的数据。|
+|*nPowerEvent*|[in]电源管理事件。|
+|*nEventData*|[in]特定于事件的数据。|
 
 ### <a name="return-value"></a>返回值
 
@@ -9022,8 +9022,8 @@ afx_msg void OnRawInput(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nInputCode*|指示发生时或未位于前景时应用程序输入的输入的代码。 在任一情况下，应用程序必须调用[CWnd::DefWindowProc](#defwindowproc)以便系统可以执行清理。<br /><br /> 此参数可以是下列值之一：<br /><br /> 在前台应用程序时，将发生-RIM_INPUT 的输入。<br />不在前台应用程序时，将发生-RIM_INPUTSINK 的输入。|
-|[in]*hRawInput*|句柄[RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562)结构，其中包含设备的原始输入。|
+|*nInputCode*|[in]指示发生时或未位于前景时应用程序输入的输入的代码。 在任一情况下，应用程序必须调用[CWnd::DefWindowProc](#defwindowproc)以便系统可以执行清理。<br /><br /> 此参数可以是下列值之一：<br /><br /> 在前台应用程序时，将发生-RIM_INPUT 的输入。<br />不在前台应用程序时，将发生-RIM_INPUTSINK 的输入。|
+|*hRawInput*|[in]句柄[RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562)结构，其中包含设备的原始输入。|
 
 ### <a name="remarks"></a>备注
 
@@ -9208,8 +9208,8 @@ afx_msg void OnSessionChange(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nSessionState*|状态代码描述会话状态更改。|
-|[in]*nId*|会话标识符。|
+|*nSessionState*|[in]状态代码描述会话状态更改。|
+|*nId*|[in]会话标识符。|
 
 ### <a name="remarks"></a>备注
 
@@ -9973,9 +9973,9 @@ afx_msg void OnUniChar(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nChar*|指定按下的键的字符代码。|
-|[in]*nRepCnt*|指定当前消息的重复次数。 值为击键是由于用户按下键而 autorepeated 次数。 如果击键会保留足够长的时间，将发送多条消息。 但是，重复次数不具有累积性。|
-|[in]*nFlags*|下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 上一项状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，例如增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 该标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 在内部使用。<br /><br /> **13:** 指定上下文代码。 如果当按下了键; 并按住 ALT 键，该标志为 1否则，值为 0。<br /><br /> **14:** 指定以前的密钥状态。 如果该键处于松开，该标志是如果密钥已关闭之前发送消息，则为 1 或 0。<br /><br /> **15:** 指定转换状态。 如果按下了键，该标志是如果正在释放键，则为 1 或 0。|
+|*NChar*|[in]指定按下的键的字符代码。|
+|*nRepCnt*|[in]指定当前消息的重复次数。 值为击键是由于用户按下键而 autorepeated 次数。 如果击键会保留足够长的时间，将发送多条消息。 但是，重复次数不具有累积性。|
+|*nFlags*|[in]下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 上一项状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，例如增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 该标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 在内部使用。<br /><br /> **13:** 指定上下文代码。 如果当按下了键; 并按住 ALT 键，该标志为 1否则，值为 0。<br /><br /> **14:** 指定以前的密钥状态。 如果该键处于松开，该标志是如果密钥已关闭之前发送消息，则为 1 或 0。<br /><br /> **15:** 指定转换状态。 如果按下了键，该标志是如果正在释放键，则为 1 或 0。|
 
 ### <a name="remarks"></a>备注
 
@@ -9998,8 +9998,8 @@ afx_msg void OnUnInitMenuPopup(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*pMenu*|指向[CMenu](../../mfc/reference/cmenu-class.md)对象，表示菜单或子菜单。|
-|[in]*nFlags*|已被销毁菜单。 目前，它只能是窗口菜单的 MF_SYSMENU。|
+|*pMenu*|[in]指向[CMenu](../../mfc/reference/cmenu-class.md)对象，表示菜单或子菜单。|
+|*nFlags*|[in]已被销毁菜单。 目前，它只能是窗口菜单的 MF_SYSMENU。|
 
 ### <a name="remarks"></a>备注
 
@@ -10196,7 +10196,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*bIsMaximized*|如果当前窗口已最大化，并且如果它不是 FALSE，则为 TRUE。|
+|*bIsMaximized*|[in]如果当前窗口已最大化，并且如果它不是 FALSE，则为 TRUE。|
 
 ### <a name="remarks"></a>备注
 
@@ -10324,9 +10324,9 @@ afx_msg void OnXButtonDblClk(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|[in]*n 按钮*|如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
+|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮是双击 XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮是双击。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -10362,9 +10362,9 @@ afx_msg void OnXButtonDown(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|[in]*n 按钮*|值为如果单击第一个 Microsoft 智能鼠标 X 按钮，XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被单击。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
+|*n 按钮*|[in]值为如果单击第一个 Microsoft 智能鼠标 X 按钮，XBUTTON1 或 XBUTTON2 如果第二个 X 按钮被单击。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 
@@ -10400,9 +10400,9 @@ afx_msg void OnXButtonUp(
 
 |参数|描述|
 |---------------|-----------------|
-|[in]*nFlags*|指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
-|[in]*n 按钮*|如果第一个 Microsoft 智能鼠标 X 按钮被单击，XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮被单击。|
-|[in]*点*|一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
+|*nFlags*|[in]指示哪个修改键被按下标志的按位组合 (OR)。 例如，MK_CONTROL 标志指示按下了 CTRL 键。|
+|*n 按钮*|[in]如果第一个 Microsoft 智能鼠标 X 按钮被单击，XBUTTON1 或 XBUTTON2 值如果第二个 X 按钮被单击。|
+|*点*|[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*并*y*光标相对于工作区的左上角的坐标。|
 
 ### <a name="remarks"></a>备注
 

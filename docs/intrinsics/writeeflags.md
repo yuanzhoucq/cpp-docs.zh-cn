@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540182"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704855"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定的值写入程序状态和控件 (EFLAGS) 注册。  
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `Value`|要写入到 EFLAGS 寄存器的值。 `Value`参数为 32 位长的 32 位平台和 64 位长的时间在 64 位平台。|  
+|*值*|[in]要写入到 EFLAGS 寄存器的值。 `Value`参数为 32 位长的 32 位平台和 64 位长的时间在 64 位平台。|  
   
 ## <a name="remarks"></a>备注  
  这些例程只能用作内部函数可使用。  

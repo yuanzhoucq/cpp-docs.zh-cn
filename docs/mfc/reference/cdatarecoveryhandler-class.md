@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339275"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701761"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 类
 `CDataRecoveryHandler`则自动保存文档并将其还原，如果应用程序意外退出。  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|一个指向`CDocument`保存。|  
-|[in]*bResetModifiedFlag*|TRUE 表示`CDataRecoveryHandler`认为*pDocument*要修改;FALSE 表示该框架会考虑*pDocument*是未修改。 请参阅备注部分有关效果的此标志的详细信息。|  
+|*pDocument*|[in]一个指向`CDocument`保存。|  
+|*bResetModifiedFlag*|[in]TRUE 表示`CDataRecoveryHandler`认为*pDocument*要修改;FALSE 表示该框架会考虑*pDocument*是未修改。 请参阅备注部分有关效果的此标志的详细信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果未设置相应标志为 TRUE 并*pDocument*是一个有效`CDocument`对象。  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*dwRestartManagerSupportFlags*|指示支持重新启动管理器的选项。|  
-|[in]*nAutosaveInterval*|则自动保存间隔时间。 此参数是以毫秒为单位。|  
+|*dwRestartManagerSupportFlags*|[in]指示支持重新启动管理器的选项。|  
+|*nAutosaveInterval*|[in]则自动保存间隔时间。 此参数是以毫秒为单位。|  
   
 ### <a name="remarks"></a>备注  
  MFC 框架会自动创建`CDataRecoveryHandler`为应用程序时使用的对象**新建项目**向导。 除非自定义数据恢复行为或重新启动管理器时，不应创建`CDataRecoveryHandler`对象。  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|一个指向`CDocument`。 此方法创建的文档信息`CDocument`。|  
+|*pDocument*|[in]一个指向`CDocument`。 此方法创建的文档信息`CDocument`。|  
   
 ### <a name="return-value"></a>返回值  
  默认实现，则返回 TRUE。  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*strAutosavedFile*|包含自动保存文件名称的字符串。|  
+|*strAutosavedFile*|[in]包含自动保存文件名称的字符串。|  
   
 ### <a name="return-value"></a>返回值  
  默认实现始终返回 TRUE。  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strDocumentName*  
- 包含文档名称的字符串。 `GenerateAutosaveFileName` 使用此文档名称来生成相应的自动保存文件名称。  
+*strDocumentName*<br/>
+[in]包含文档名称的字符串。 `GenerateAutosaveFileName` 使用此文档名称来生成相应的自动保存文件名称。  
   
 ### <a name="return-value"></a>返回值  
  从生成的自动保存文件名称*strDocumentName*。  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|一个指向`CDocument`。 `GetDocumentListName` 检索文档名从此`CDocument`。|  
+|*pDocument*|[in]一个指向`CDocument`。 `GetDocumentListName` 检索文档名从此`CDocument`。|  
   
 ### <a name="return-value"></a>返回值  
  中的文档名称*pDocument*。  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|一个指向`CDocument`。|  
+|*pDocument*|[in]一个指向`CDocument`。|  
   
 ### <a name="return-value"></a>返回值  
  正常的标题，为指定的文档的。  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strDocumentTitle*  
- 正常的文档的标题。  
+*strDocumentTitle*<br/>
+[in]正常的文档的标题。  
   
 ### <a name="return-value"></a>返回值  
  恢复后的文档标题。  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|指向要删除的文档的指针。|  
+|*pDocument*|[in]指向要删除的文档的指针。|  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE *pDocument*已从列表中; 删除如果出现错误，则为 FALSE。  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nAutosaveInterval*  
- 新的自动保存间隔以毫秒为单位。  
+*nAutosaveInterval*<br/>
+[in]新的自动保存间隔以毫秒为单位。  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  设置自动保存文件的存储位置的目录。  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*strAutosavePath*|存储自动保存文件的路径。|  
+|*strAutosavePath*|[in]存储自动保存文件的路径。|  
   
 ### <a name="remarks"></a>备注  
  自动保存目录的更改不会移动当前自动保存文件。  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*strRestartIdentifier*|重新启动管理器唯一标识符。|  
+|*strRestartIdentifier*|[in]重新启动管理器唯一标识符。|  
   
 ### <a name="remarks"></a>备注  
  有关在注册表中打开的文档的重新启动管理器记录信息。 此信息作为键存储具有唯一的重启标识符。 重启标识符是唯一的应用程序的每个实例，因为应用程序的多个实例可能会意外退出并重新启动管理器可以恢复每个。  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*bSaveOnIdle*|为 TRUE，则将保存在当前的空闲周期内; 文档信息为 FALSE，则不执行存储。|  
+|*bSaveOnIdle*|[in]为 TRUE，则将保存在当前的空闲周期内; 文档信息为 FALSE，则不执行存储。|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  设置是否以前退出该应用程序而引起的重新启动管理器。  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*bShutdownByRestartManager*|若要指示重新启动管理器，导致应用程序退出;如果为 FALSE，以指示该应用程序退出的另一个原因。|  
+|*bShutdownByRestartManager*|[in]若要指示重新启动管理器，导致应用程序退出;如果为 FALSE，以指示该应用程序退出的另一个原因。|  
   
 ### <a name="remarks"></a>备注  
  该框架的行为与基于上一个退出是否意外或它已启动重新启动管理器以不同方式。  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pDocument*|指向已保存的文档的指针。|  
+|*pDocument*|[in]指向已保存的文档的指针。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法删除自动保存文档并更新该文档信息，则为 TRUE如果出现错误，则为 FALSE。  

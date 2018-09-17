@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720130"
 ---
 # <a name="movsb"></a>__movsb
 **Microsoft 专用**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>参数  
- [out] `Destination`  
- 一个指向该副本的目标。  
+*目标*<br/>
+[out]一个指向该副本的目标。  
   
- [in] `Source`  
- 指向源的副本的指针。  
+*Source*<br/>
+[in]指向源的副本的指针。  
   
- [in] `Count`  
- 要复制的字节数。  
+“计数”<br/>
+[in]要复制的字节数。  
   
 ## <a name="requirements"></a>要求  
   

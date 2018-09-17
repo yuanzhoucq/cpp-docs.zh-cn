@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd7d581a632158154822f7ce51ac3dc5042b2a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589292"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723341"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -41,14 +41,14 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>参数
 
-[in]*t*  
-除数。 其类型必须为 T。
+*t*<br/>
+[in]除数。 其类型必须为 T。
 
-[in]*u*  
-被除数。 其类型必须为 U。
+*u*<br/>
+[in]被除数。 其类型必须为 U。
 
-[out]*结果*  
-参数位置**SafeDivide**将结果存储。
+*结果*<br/>
+[out]参数位置**SafeDivide**将结果存储。
 
 ## <a name="return-value"></a>返回值
 

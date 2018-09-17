@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849010"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701384"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 类
 实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”**、 **“保存”** 和 **“退出”**。  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiBmpResID*  
- 若要在应用程序按钮上显示的图像资源 ID。  
+*uiBmpResID*<br/>
+[in]若要在应用程序按钮上显示的图像资源 ID。  
   
- [in]*hBmp*  
- 若要在应用程序按钮上显示的位图句柄。  
+*hBmp*<br/>
+[in]若要在应用程序按钮上显示的位图句柄。  
   
 ### <a name="remarks"></a>备注  
  使用此方法将新映像分配到功能区应用程序按钮后创建按钮。 在应用程序窗口的左上角位于应用程序按钮。  

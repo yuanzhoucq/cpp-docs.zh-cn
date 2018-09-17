@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0d1d3e77dfc89fb67c467582c0ed7981ffae8022
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540587"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706337"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft 专用**  
@@ -38,8 +38,8 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `value`  
- `__m128`结构，它包含单精度浮点值。  
+*value*<br/>
+[in]`__m128`结构，它包含单精度浮点值。  
   
 ## <a name="return-value"></a>返回值  
  第一个浮点值转换为 64 位整数的结果。  

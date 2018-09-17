@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724823"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 类
 派生的视觉管理器和 Windows 主题 API 之间的层。  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文  
+*pDC*<br/>
+[in]一个指向设备上下文  
   
- [in]*rect*  
- 复选框的边框。  
+*rect*<br/>
+[in]复选框的边框。  
   
- [in]*bHighlighted*  
- 指定是否突出显示复选框。  
+*bHighlighted*<br/>
+[in]指定是否突出显示复选框。  
   
- [in]*nState*  
- 0 为未选中，1 表示选中正常  
+*nState*<br/>
+[in] 0 用于选中正常、 未选中，1  
   
  如混合常规 2。  
   
- [in]*bEnabled*  
- 指定是否启用复选框。  
+*bEnabled*<br/>
+[in]指定是否启用复选框。  
   
- [in]*bPressed*  
- 指定是否按下复选框。  
+*bPressed*<br/>
+[in]指定是否按下复选框。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 组合框边框的边框。  
+*rect*<br/>
+[in]组合框边框的边框。  
   
- [in]*bDisabled*  
- 指定是否禁用组合框边框。  
+*bDisabled*<br/>
+[in]指定是否禁用组合框边框。  
   
- [in]*bIsDropped*  
- 指定是否向下删除组合框边框。  
+*bIsDropped*<br/>
+[in]指定是否向下删除组合框边框。  
   
- [in]*bIsHighlighted*  
- 指定是否突出显示组合框边框。  
+*bIsHighlighted*<br/>
+[in]指定是否突出显示组合框边框。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pDC*|一个指向设备上下文的指针。|  
-|[in]*rect*|组合框下拉按钮的边框。|  
-|[in]*bDisabled*|指定是否禁用组合框下拉按钮。|  
-|[in]*bIsDropped*|指定是否向下删除组合框下拉按钮。|  
-|[in]*bIsHighlighted*|指定组合框下拉按钮是否突出显示。|  
+|*pDC*|[in]指向设备上下文的指针。|  
+|*rect*|[in]组合框下拉按钮的边框。|  
+|*bDisabled*|[in]指定是否禁用组合框下拉按钮。|  
+|*bIsDropped*|[in]指定是否向下删除组合框下拉按钮。|  
+|*bIsHighlighted*|[in]指定组合框下拉按钮是否突出显示。|  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 推送按钮的边框。  
+*rect*<br/>
+[in]推送按钮的边框。  
   
- [in]*pButton*  
- 一个指向[CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)对象来绘制。  
+*pButton*<br/>
+[in]一个指向[CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)对象来绘制。  
   
- [in]*uiState*  
- 已忽略。 状态取自*pButton*。  
+*uiState*<br/>
+[in]忽略。 状态取自*pButton*。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 单选按钮的边框。  
+*rect*<br/>
+[in]单选按钮的边框。  
   
- [in]*bHighlighted*  
- 指定是否突出显示的单选按钮。  
+*bHighlighted*<br/>
+[in]指定是否突出显示的单选按钮。  
   
- [in]*bChecked*  
- 指定是否已选中的单选按钮。  
+*bChecked*<br/>
+[in]指定是否已选中的单选按钮。  
   
- [in]*bEnabled*  
- 指定是否启用单选按钮。  
+*bEnabled*<br/>
+[in]指定是否启用单选按钮。  
   
- [in]*bPressed*  
- 指定是否按下的单选按钮。  
+*bPressed*<br/>
+[in]指定是否按下的单选按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*pStatusBar*  
- 指向状态栏的指针。 忽略此值。  
+*pStatusBar*<br/>
+[in]指向状态栏的指针。 忽略此值。  
   
- [in]*rectProgress*  
- 中的进度栏的边界矩形*pDC*坐标。  
+*rectProgress*<br/>
+[in]中的进度栏的边界矩形*pDC*坐标。  
   
- [in]*nProgressTotal*  
- 总进度值。  
+*nProgressTotal*<br/>
+[in]总进度值。  
   
- [in]*nProgressCurr*  
- 当前的进度值。  
+*nProgressCurr*<br/>
+[in]当前的进度值。  
   
- [in]*clrBar*  
- 开始颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
+*clrBar*<br/>
+[in]开始颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
   
- [in]*clrProgressBarDest*  
- 结束颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
+*clrProgressBarDest*<br/>
+[in]结束颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
   
- [in]*clrProgressText*  
- 进度文本颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 由定义的文本颜色`afxGlobalData.clrBtnText`。  
+*clrProgressText*<br/>
+[in]进度文本颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 由定义的文本颜色`afxGlobalData.clrBtnText`。  
   
- [in]*bProgressText*  
- 指定是否显示进度的文本。  
+*bProgressText*<br/>
+[in]指定是否显示进度的文本。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*pBar*  
- 指向一个窗格，应绘制其背景的指针。  
+*pBar*<br/>
+[in]指向一个窗格，应绘制其背景的指针。  
   
- [in]*rectClient*  
- 要填充的区域的边框。  
+*rectClient*<br/>
+[in]要填充的区域的边框。  
   
 ### <a name="return-value"></a>返回值  
  如果启用了主题 API，则为 TRUE否则为 FALSE。  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3777492212bbff368902acf589f0a3c46ea4ac18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679801"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718664"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Microsoft 专用**  
@@ -41,7 +41,7 @@ void __svm_vmrun(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|VMCB 物理地址。|  
+|*VmcbPhysicalAddress*|[in]VMCB 物理地址。|  
   
 ## <a name="remarks"></a>备注  
  `__svm_vmrun`函数使用在 VMCB 最少量的信息来开始执行虚拟机来宾代码。 使用[__svm_vmsave](../intrinsics/svm-vmsave.md)或[__svm_vmload](../intrinsics/svm-vmload.md)函数如果需要处理的复杂中断或切换到另一台来宾的详细信息。  

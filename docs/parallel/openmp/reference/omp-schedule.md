@@ -1,5 +1,5 @@
 ---
-title: OMP_SCHEDULE |Microsoft 文档
+title: OMP_SCHEDULE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720442"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 修改的行为[计划](../../../parallel/openmp/reference/schedule.md)子句时`schedule(runtime)`中指定`for`或`parallel for`指令。  
@@ -32,14 +32,13 @@ ms.locfileid: "33691750"
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
-  
- `size`（可选）  
- 指定的迭代的大小。 `size` 必须是正整数。 默认值为 1，除非`type`是静态的。 不是有效的在`type`是`runtime`。  
+## <a name="arguments"></a>自变量
+
+*size*<br/>
+（可选）指定的迭代的大小。 `size` 必须为正整数。 默认值为 1，除非当`type`是静态的。 时未有效`type`是`runtime`。  
   
  `type`  
- 计划类型：  
+ 计划的类型：  
   
 -   `dynamic`  
   

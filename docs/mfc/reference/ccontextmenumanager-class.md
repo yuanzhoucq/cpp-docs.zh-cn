@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338748"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713275"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 类
 `CContextMenuManager`对象管理快捷菜单，也称为上下文菜单。  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiMenuNameResId*  
- 包含为该新菜单的名称的字符串资源 ID。  
+*uiMenuNameResId*<br/>
+[in]包含为该新菜单的名称的字符串资源 ID。  
   
- [in]*uiMenuResId*  
- 菜单资源 id。  
+*uiMenuResId*<br/>
+[in]菜单资源 id。  
   
- [in]*lpszName*  
- 一个字符串，包含为该新菜单的名称。  
+*lpszName*<br/>
+[in]一个字符串，包含为该新菜单的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则非零值如果该方法将失败，则为 0。  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nMenuResId*  
- 在菜单资源 ID。  
+*nMenuResId*<br/>
+[in]在菜单资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  句柄关联的菜单或`NULL`如果找不到菜单。  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 一个字符串，包含要检索的菜单的名称。  
+*lpszName*<br/>
+[in]一个字符串，包含要检索的菜单的名称。  
   
- [out]*puiOrigResID*  
- UINT 指向的指针。 此参数包含指定的菜单中，资源 ID，如果找到。  
+*puiOrigResID*<br/>
+[out]UINT 指向的指针。 此参数包含指定的菜单中，资源 ID，如果找到。  
   
 ### <a name="return-value"></a>返回值  
  所指定的名称匹配的菜单的句柄*lpszName*。 如果调用没有菜单，则为 NULL *lpszName*。  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*listOfNames*  
- 对引用[CStringList](../../mfc/reference/cstringlist-class.md)参数。 此方法将写入到此参数的菜单名称的列表。  
+*listOfNames*<br/>
+[out]对引用[CStringList](../../mfc/reference/cstringlist-class.md)参数。 此方法将写入到此参数的菜单名称的列表。  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  加载与关联的信息[CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)从 Windows 注册表。  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszProfileName*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszProfileName*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 一个布尔型参数，用于控制是否要关闭活动的弹出菜单。 值为 TRUE 表示未关闭活动的弹出菜单。 FALSE 表示活动的弹出菜单已关闭。  
+*bSet*<br/>
+[in]一个布尔型参数，用于控制是否要关闭活动的弹出菜单。 值为 TRUE 表示未关闭活动的弹出菜单。 FALSE 表示活动的弹出菜单已关闭。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，`CContextMenuManager`关闭活动的弹出菜单。  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiMenuResId*  
- 此方法将显示的菜单资源 ID。  
+*uiMenuResId*<br/>
+[in]此方法将显示的菜单资源 ID。  
   
- [in]*x*  
- 水平工作区坐标中的快捷菜单的偏移量。  
+*x*<br/>
+[in]水平工作区坐标中的快捷菜单的偏移量。  
   
- [in]*y*  
- 垂直偏移量的工作区坐标中的快捷菜单  
+*y*<br/>
+[in]垂直偏移量的工作区坐标中的快捷菜单  
   
- [in]*pWndOwner*  
- 指向快捷菜单的父窗口的指针。  
+*pWndOwner*<br/>
+[in]指向快捷菜单的父窗口的指针。  
   
- [in]*bOwnMessage*  
- 一个布尔参数，指示如何路由消息。 如果*bOwnMessage*是 FALSE，标准 MFC 使用路由。 否则为*pWndOwner*接收的消息。  
+*bOwnMessage*<br/>
+[in]一个布尔参数，指示如何路由消息。 如果*bOwnMessage*是 FALSE，标准 MFC 使用路由。 否则为*pWndOwner*接收的消息。  
   
- [in]*hmenuPopup*  
- 此方法将显示菜单的句柄。  
+*hmenuPopup*<br/>
+[in]此方法将显示菜单的句柄。  
   
- [in]*bAutoDestroy*  
- 一个布尔参数，指示是否将自动销毁菜单。  
+*bAutoDestroy*<br/>
+[in]一个布尔参数，指示是否将自动销毁菜单。  
   
- [in]*bRightAlign*  
- 一个布尔参数，指示菜单项的对齐方式。 如果*bRightAlign*为 TRUE 时，菜单是从右到左的阅读顺序为右对齐。  
+*bRightAlign*<br/>
+[in]一个布尔参数，指示菜单项的对齐方式。 如果*bRightAlign*为 TRUE 时，菜单是从右到左的阅读顺序为右对齐。  
   
 ### <a name="return-value"></a>返回值  
  第一个方法重载方法返回非零，如果该方法成功，则显示的菜单否则为 0。 第二个方法重载方法返回一个指向[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)如果快捷方式菜单显示正确; 否则为 NULL。  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hmenuPopup*  
- 此方法显示的快捷菜单的句柄。  
+*hmenuPopup*<br/>
+[in]此方法显示的快捷菜单的句柄。  
   
- [in]*x*  
- 水平工作区坐标中的快捷菜单的偏移量。  
+*x*<br/>
+[in]水平工作区坐标中的快捷菜单的偏移量。  
   
- [in]*y*  
- 垂直工作区坐标中的快捷菜单的偏移量。  
+*y*<br/>
+[in]垂直工作区坐标中的快捷菜单的偏移量。  
   
- [in]*pWndOwner*  
- 指向快捷菜单的父窗口的指针。  
+*pWndOwner*<br/>
+[in]指向快捷菜单的父窗口的指针。  
   
- [in]*bRightAlign*  
- 一个布尔参数，指示菜单项的对齐方式。 如果*bRightAlign*为 TRUE 时，菜单是从右到左的阅读顺序为右对齐。 如果*bRightAlign*为 FALSE 时，菜单是从左到右读取顺序为左对齐。  
+*bRightAlign*<br/>
+[in]一个布尔参数，指示菜单项的对齐方式。 如果*bRightAlign*为 TRUE 时，菜单是从右到左的阅读顺序为右对齐。 如果*bRightAlign*为 FALSE 时，菜单是从左到右读取顺序为左对齐。  
   
 ### <a name="return-value"></a>返回值  
  用户选择; 命令的菜单命令 ID如果用户关闭而不选择菜单命令的快捷菜单，则为 0。  

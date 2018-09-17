@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840337"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719167"
 ---
 # <a name="1-object"></a>_1 对象
 
@@ -35,12 +35,12 @@ ms.locfileid: "33840337"
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>备注
 
-对象`_1, _2, ... _M`占位符指定第一个，第二个，...，月自变量，分别由返回的对象的函数调用中[绑定](../standard-library/functional-functions.md#bind)。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。
+对象`_1, _2, ... _M`占位符指定第一个，第二个、...、 第 m 个参数，在返回的对象的函数调用中分别[绑定](../standard-library/functional-functions.md#bind)。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。
 
 在此次实现中，`M` 的值为 20。
 

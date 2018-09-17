@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c8cd05dc5d4cdff535b8e571e94d9033d0220ccf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541729"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710159"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 类
 `CMFCDragFrameImpl`类绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。  
@@ -92,8 +92,8 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTabbedBar*  
- [in]*bFirstTime*  
+*pTabbedBar*<br/>
+[in][in]*bFirstTime*  
  [in]*pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>备注  

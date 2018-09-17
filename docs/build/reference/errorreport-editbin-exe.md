@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (editbin.exe) |Microsoft 文档
+title: -ERRORREPORT (editbin.exe) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61113d7260c11b3eb73db1f25445a6a0050c52d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38171db494a0d90bdb46491451dd1e7216d729d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718328"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
-```  
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
-```  
-  
-## <a name="remarks"></a>备注  
- 如果 editbin.exe 运行时失败，则可以使用 **/ERRORREPORT**信息向 Microsoft 发送有关这些内部错误。  
-  
- 有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [EDITBIN 选项](../../build/reference/editbin-options.md)
+
+```
+/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
+```
+
+## <a name="remarks"></a>备注
+
+如果 editbin.exe 在运行时失败，则可以使用 **/ERRORREPORT**有关这些内部错误向 Microsoft 发送信息。
+
+有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。
+
+## <a name="see-also"></a>请参阅
+
+[EDITBIN 选项](../../build/reference/editbin-options.md)

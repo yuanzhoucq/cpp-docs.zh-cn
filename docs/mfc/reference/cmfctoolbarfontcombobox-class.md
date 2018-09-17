@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216256"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704361"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 类
 包含使用户能够从系统字体的列表中选择一种字体组合框控件的工具栏按钮。  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 组合框命令 ID。  
+*uiID*<br/>
+[in]组合框命令 ID。  
   
- [in]*iImage*  
- 工具栏图像的从零开始的索引。 映像位于[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)对象的[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)类维护。  
+*iImage*<br/>
+[in]工具栏图像的从零开始的索引。 映像位于[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)对象的[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)类维护。  
   
- [in]*nFontType*  
- 字体组合框包含的类型。 此参数可以是以下值的组合 (布尔 OR):  
+*nFontType*<br/>
+[in]字体组合框包含的类型。 此参数可以是以下值的组合 (布尔 OR):  
   
  是 DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in]*nCharSet*  
- 如果设置为 DEFAULT_CHARSET，组合框包含所有唯一命名的字体中字符的所有集。 （如果有两个具有相同名称的字体，组合框包含其中一个。）如果设置为有效的字符设置值，组合框包含仅在指定的字符集的字体。 请参阅[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)有关可能的字符的列表设置。  
+*nCharSet*<br/>
+[in]如果设置为 DEFAULT_CHARSET，组合框包含所有唯一命名的字体中字符的所有集。 （如果有两个具有相同名称的字体，组合框包含其中一个。）如果设置为有效的字符设置值，组合框包含仅在指定的字符集的字体。 请参阅[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)有关可能的字符的列表设置。  
   
- [in]*dwStyle*  
- 组合框的样式。 (请参阅[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in]组合框的样式。 (请参阅[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in]*iWidth*  
- 以像素为单位在编辑控件的宽度。  
+*iWidth*<br/>
+[in]以像素为单位在编辑控件的宽度。  
   
- [in]*nPitchAndFamily*  
- 如果设置为 DEFAULT_PITCH，组合框包含而不考虑间距字体。 如果设置为 FIXED_PITCH 或 VARIABLE_PITCH，组合框包含仅与该间距类型的字体。 当前不支持基于字体系列的筛选。  
+*nPitchAndFamily*<br/>
+[in]如果设置为 DEFAULT_PITCH，组合框包含而不考虑间距字体。 如果设置为 FIXED_PITCH 或 VARIABLE_PITCH，组合框包含仅与该间距类型的字体。 当前不支持基于字体系列的筛选。  
   
- [out]*pLstFontsExternal*  
- 指向[CObList 类](../../mfc/reference/coblist-class.md)对象，它存储的可用字体。  
+*pLstFontsExternal*<br/>
+[out]指向[CObList 类](../../mfc/reference/coblist-class.md)对象，它存储的可用字体。  
   
 ### <a name="remarks"></a>备注  
  通常情况下，`CMFCToolBarFontComboBox`对象在单个共享存储的可用字体列表`CObList`对象。 如果使用构造函数的第二个重载并提供指向的有效指针*pLstFontsExternal*，则该`CMFCToolBarFontComboBox`对象将改为填充`CObList`的*pLstFontsExternal*指向以，可用的字体。  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 指定组合框项的从零开始索引。  
+*iIndex*<br/>
+[in]指定组合框项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  一个指向`CMFCFontInfo`对象。 如果*iIndex*不指定一个有效的项的索引，返回值为 NULL。  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 指定的字体名称或前缀。  
+*lpszName*<br/>
+[in]指定的字体名称或前缀。  
   
- [in]*nCharSet*  
- 指定的字符集。  
+*nCharSet*<br/>
+[in]指定的字符集。  
   
- [in]*bExact*  
- 指定是否*lpszName*包含字体名称或字体前缀。  
+*bExact*<br/>
+[in]指定是否*lpszName*包含字体名称或字体前缀。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则选择字体，则非零值否则为 0。  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711929"
 ---
 # <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
 
@@ -31,10 +31,11 @@ ms.locfileid: "43766238"
 
 ## <a name="uielement-list"></a>UIElement 列表
 
-**控件类型**  
+### <a name="control-type"></a>控件类型
+
 想要创建的控件类型。
 
-- **标准控件： ActiveX 控件。**
+- **标准控件**: ActiveX 控件。
 
 - **复合控件**: ActiveX 控件可以包含 （类似于一个对话框） 的其他 ActiveX 控件或 Windows 控件。 复合控件包括：
 
@@ -54,10 +55,12 @@ ms.locfileid: "43766238"
 
      有关详细信息，请参阅[标识 DHTML 控件项目的元素](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。
 
-**最低限度的控制**  
+### <a name="minimal-control"></a>最低限度的控制
+
 支持大多数容器绝对所需的接口。 可以设置**最低限度的控制**任何控件类型： 您可以创建最小标准控件、 最小的复合控件或最小的 DHTML 控件。
 
-**聚合**  
+### <a name="aggregation"></a>聚合
+
 添加聚合支持您创建的控件。 有关详细信息，请参阅[聚合](../../atl/aggregation.md)。
 
 - **是**： 创建可聚合的控件。
@@ -66,25 +69,28 @@ ms.locfileid: "43766238"
 
 - **仅**： 创建仅可以通过聚合实例化的控件。
 
-**线程处理模型**  
+### <a name="threading-model"></a>线程模型
+
 指定由控件使用的线程模型。
 
 - **单个**： 控件将仅在主 COM 线程中运行。
 
 - **单元**： 可以在任何单线程单元中创建控件。 默认值。
 
-**Interface**  
+### <a name="interface"></a>接口
+
 此控件向容器公开的接口的类型。
 
 - **双**： 创建属性和方法通过公开的接口`IDispatch`以及直接通过 VTBL。
 
 - **自定义**： 创建一个直接通过 VTBL 公开方法的接口。
 
-     如果选择**自定义**，则可以指定的控件是**自动化兼容**。 如果选择**自动化兼容**，然后该向导将添加[oleautomation](../../windows/oleautomation.md)属性到 idl，接口和接口可以封送处理中 oleaut32.dll 通用封送处理程序。 请参阅[封送处理的详细信息](/windows/desktop/com/marshaling-details)Windows SDK for 的详细信息中。
+   如果选择**自定义**，则可以指定的控件是**自动化兼容**。 如果选择**自动化兼容**，然后该向导将添加[oleautomation](../../windows/oleautomation.md)属性到 idl，接口和接口可以封送处理中 oleaut32.dll 通用封送处理程序。 请参阅[封送处理的详细信息](/windows/desktop/com/marshaling-details)Windows SDK for 的详细信息中。
 
-     此外，如果您选择**自动化兼容**，则在控件中的所有方法的所有参数必须都是变体兼容。
+   此外，如果您选择**自动化兼容**，则在控件中的所有方法的所有参数必须都是变体兼容。
 
-**支持**  
+### <a name="support"></a>支持
+
 设置控件的其他杂项支持。
 
 - **连接点**： 使对象的类派生来使您的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)并使其能够公开源接口。

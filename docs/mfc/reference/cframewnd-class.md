@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701709"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nState*|指定是否显示或隐藏菜单。 *NState*参数可以具有以下值：<br /><br /> -如果它隐藏的但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-如果可见，但如果它隐藏不起作用，AFX_MBS_HIDDEN (0x02)-隐藏菜单。|  
+|*nState*|[in]指定是否显示或隐藏菜单。 *NState*参数可以具有以下值：<br /><br /> -如果它隐藏的但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-如果可见，但如果它隐藏不起作用，AFX_MBS_HIDDEN (0x02)-隐藏菜单。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功更改菜单状态，则为 TRUE否则为 FALSE。  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nStyle*|指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|  
+|*nStyle*|[in]指定菜单是隐藏的默认情况下或可见且具有焦点。 *NStyle*参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单显示在任何时候，并且默认情况下没有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键以显示菜单，并为其提供焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 F10 键，以显示菜单，并为其提供焦点。 如果显示菜单上，则按 F10 键来切换打开或关闭菜单焦点。 直到按下 ALT 或 ESC 键，可以将其隐藏，则会显示菜单。|  
   
 ### <a name="remarks"></a>备注  
  如果的值*nStyle*参数不是有效的此方法断言在调试模式并引发[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在发布模式下。 对于其他运行时错误，此方法在调试模式中断言并引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  

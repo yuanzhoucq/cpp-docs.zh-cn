@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704036"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 类
 `CMFCKeyMapDialog`类支持将命令映射到键盘上的键的控件。  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParentFrame*  
- 向父窗口的指针`CMFCKeyMapDialog`对象。  
+*pWndParentFrame*<br/>
+[in]向父窗口的指针`CMFCKeyMapDialog`对象。  
   
- [in]*bEnablePrint*  
- 可以打印快捷键的列表; 如果为 TRUE否则为 FALSE。 默认值为 FALSE。  
+*bEnablePrint*<br/>
+[in]可以打印快捷键的列表; 如果为 TRUE否则为 FALSE。 默认值为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nItem*  
- 键映射的内部列表中项的从零开始的索引。  
+*nItem*<br/>
+[in]键映射的内部列表中项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个`CString`对象，其中包含带格式的项文本。  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 命令 id。  
+*uiCmdID*<br/>
+[in]命令 id。  
   
 ### <a name="return-value"></a>返回值  
  以分号分隔 （;） 的键盘快捷方式的列表与指定的命令相关联。  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 一个指向用于将键盘键组合映射到的命令名称和说明的工具栏按钮。 键映射项存储在一个内部列表控件中。  
+*pButton*<br/>
+[in]一个指向用于将键盘键组合映射到的命令名称和说明的工具栏按钮。 键映射项存储在一个内部列表控件中。  
   
- [in]*nItem*  
- 一个指定内部列表控件中插入新的键映射项的位置的从零开始索引。  
+*nItem*<br/>
+[in]一个指定内部列表控件中插入新的键映射项的位置的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dc*  
- 打印机设备上下文。  
+*dc*<br/>
+[in]打印机设备上下文。  
   
- [in]*n 页面*  
- 要打印的页码。  
+*n 页面*<br/>
+[in]要打印的页码。  
   
- [in]*cx*  
- 标头，以像素为单位的水平偏移量。  
+*cx*<br/>
+[in]标头，以像素为单位的水平偏移量。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则打印文本的高度。 有关详细信息，请参阅的返回值部分[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)。  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dc*  
- 打印机设备上下文。  
+*dc*<br/>
+[in]打印机设备上下文。  
   
- [in]*nItem*  
- 要打印的项的从零开始的索引。  
+*nItem*<br/>
+[in]要打印的项的从零开始的索引。  
   
- [in]*y*  
- 页面顶部和项的位置之间的垂直偏移量。  
+*y*<br/>
+[in]页面顶部和项的位置之间的垂直偏移量。  
   
- [in]*cx*  
- 在页面左侧和项的位置之间的水平偏移量。  
+*cx*<br/>
+[in]在页面左侧和项的位置之间的水平偏移量。  
   
- [in]*bCalcHeight*  
- 若要计算的打印项; 最佳高度，则返回 TRUE如果为 FALSE，使其适应默认空间截断打印的项。  
+*bCalcHeight*<br/>
+[in]若要计算的打印项; 最佳高度，则返回 TRUE如果为 FALSE，使其适应默认空间截断打印的项。  
   
 ### <a name="return-value"></a>返回值  
  打印的项的高度。  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b807f24f03c5880b4b60708d6919052183ec564f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3c1ec84569058b11b20270ea1006bfc438288cf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717142"
 ---
 # <a name="safemodulus"></a>SafeModulus
 
@@ -41,14 +41,14 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>参数
 
-[in]*t*  
-除数。 其类型必须为`T`。
+*t*<br/>
+[in]除数。 其类型必须为`T`。
 
-[in]*u*  
-被除数。 其类型必须为`U`。
+*u*<br/>
+[in]被除数。 其类型必须为`U`。
 
-[out]*结果*  
-参数位置**SafeModulus**将结果存储。
+*结果*<br/>
+[out]参数位置**SafeModulus**将结果存储。
 
 ## <a name="return-value"></a>返回值
 

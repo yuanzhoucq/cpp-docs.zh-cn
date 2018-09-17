@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719935"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 类
 `CMFCPropertyGridFileProperty`类支持用于打开字体选择对话框中的属性列表控件项。  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strName*  
- 属性的名称。  
+*strName*<br/>
+[in]属性的名称。  
   
- [in]*lf*  
- 逻辑字体结构，它指定字体的属性。  
+*lf*<br/>
+[in]逻辑字体结构，它指定字体的属性。  
   
- [in]*dwFontDialogFlags*  
- 应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*的参数[CHOOSEFONT 结构](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
+*dwFontDialogFlags*<br/>
+[in]应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*的参数[CHOOSEFONT 结构](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
   
- [in]*lpszDescr*  
- 字体属性的说明。 默认值为 NULL。  
+*lpszDescr*<br/>
+[in]字体属性的说明。 默认值为 NULL。  
   
- [in]*dwData*  
- 特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
+*dwData*<br/>
+[in]特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
- [in]*颜色*  
- 字体的颜色。 默认值为默认颜色。  
+*颜色*<br/>
+[in]字体的颜色。 默认值为默认颜色。  
   
 ### <a name="remarks"></a>备注  
  一个`CMFCPropertyGridFontProperty`对象表示在属性网格字体控件中的字体属性。  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217114"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713180"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -34,10 +34,10 @@ ms.locfileid: "43217114"
 
 ## <a name="grammar"></a>语法
 
-*try 除语句*:  
+*try 除语句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *复合语句* **__except** **(** *表达式* **)** *复合语句*
 
-*try-最后-语句*:  
+*try-最后-语句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *复合语句* **__finally** *复合语句*
 
 ## <a name="remarks"></a>备注
@@ -72,7 +72,7 @@ ms.locfileid: "43217114"
 
 - [编写终止处理程序](../cpp/writing-a-termination-handler.md)
 
-- [处理 c + + 中的结构化的异常](../cpp/exception-handling-differences.md)
+- [处理 C++ 中的结构性异常](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>示例
 

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539780"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722951"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 类
 显示或隐藏配置为隐藏的 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 按钮。  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentBar*  
- 指向在父级工具栏的指针。  
+*pParentBar*<br/>
+[in]指向在父级工具栏的指针。  
   
- [in]*pAutoHideWnd*  
- 一个指向[CDockablePane](../../mfc/reference/cdockablepane-class.md)对象。 此自动隐藏按钮隐藏和显示`CDockablePane`。  
+*pAutoHideWnd*<br/>
+[in]一个指向[CDockablePane](../../mfc/reference/cdockablepane-class.md)对象。 此自动隐藏按钮隐藏和显示`CDockablePane`。  
   
- [in]*dwAlignment*  
- 一个值，指定与主框架窗口按钮的对齐方式。  
+*dwAlignment*<br/>
+[in]一个值，指定与主框架窗口按钮的对齐方式。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的自动隐藏按钮的外观，创建一个新类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectBounds*  
- 自动隐藏按钮的边框。  
+*rectBounds*<br/>
+[in]自动隐藏按钮的边框。  
   
- [in]*rectBorderSize*  
- 自动隐藏按钮的每个边边框粗细。  
+*rectBorderSize*<br/>
+[in]自动隐藏按钮的每个边边框粗细。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的每个自动隐藏按钮的边框，创建一个新类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 自动隐藏按钮的边框。  
+*rect*<br/>
+[in]自动隐藏按钮的边框。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的自动隐藏按钮的背景，创建一个新类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 一个布尔值，指定此方法显示附加`CDockablePane`。  
+*bShow*<br/>
+[in]一个布尔值，指定此方法显示附加`CDockablePane`。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  显示或隐藏自动隐藏按钮。  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 一个布尔值，指定是否显示自动隐藏按钮。  
+*bShow*<br/>
+[in]一个布尔值，指定是否显示自动隐藏按钮。  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFirstBarInGroup*  
- 指向组中第一条栏的指针。  
+*pFirstBarInGroup*<br/>
+[in]指向组中的第一栏的指针。  
   
 ### <a name="remarks"></a>备注  
   

@@ -1,5 +1,5 @@
 ---
-title: CTabView 类 |Microsoft 文档
+title: CTabView 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ce47dc5fc0a1d05d2f7200539718fb11c60d810e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718856"
 ---
 # <a name="ctabview-class"></a>CTabView 类
-`CTabView`的类简化了使用选项卡控件类 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
+`CTabView`类简化了使用选项卡控件类 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,24 +56,24 @@ class CTabbedView : public CView
 |----------|-----------------|  
 |[CTabView::AddView](#addview)|将新视图添加到选项卡控件。|  
 |[CTabView::FindTab](#findtab)|返回选项卡控件中指定的视图的索引。|  
-|[CTabView::GetActiveView](#getactiveview)|将指针返回到当前处于活动状态视图|  
+|[CTabView::GetActiveView](#getactiveview)|返回一个指向当前处于活动状态的视图|  
 |[CTabView::GetTabControl](#gettabcontrol)|返回与视图相关联的选项卡控件的引用。|  
-|[CTabView::RemoveView](#removeview)|从选项卡控件中删除视图。|  
+|[CTabView::RemoveView](#removeview)|从选项卡控件中删除该视图。|  
 |[CTabView::SetActiveView](#setactiveview)|使视图处于活动状态。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CTabView::IsScrollBar](#isscrollbar)|创建选项卡视图，以确定此选项卡视图是否具有共享水平滚动条时，由框架调用。|  
-|[CTabView::OnActivateView](#onactivateview)|选项卡视图进行活动或非活动时，由框架调用。|  
+|[CTabView::IsScrollBar](#isscrollbar)|创建选项卡视图，以确定此选项卡视图是否具有共享水平滚动条时由框架调用。|  
+|[CTabView::OnActivateView](#onactivateview)|活动或非活动进行选项卡视图时，由框架调用。|  
   
 ## <a name="remarks"></a>备注  
- 此类可以轻松将选项卡式的视图放入文档/视图应用程序。 `CTabView` 是`CView`-派生类，该类包含一个嵌入`CMFCTabCtrl`对象。 `CTabView` 处理支持所需的所有消息`CMFCTabCtrl`对象。 只需从派生类`CTabView`，并将其插入你的应用程序，然后添加`CView`-通过使用派生类`AddView`方法。 选项卡控件将显示为选项卡的这些视图。  
+ 此类，可以轻松地将选项卡式的视图放到文档/视图应用程序。 `CTabView` 是`CView`的派生类，该类包含一个嵌入`CMFCTabCtrl`对象。 `CTabView` 处理支持所需的所有消息`CMFCTabCtrl`对象。 只需从派生类`CTabView`，并将其插入您的应用程序，然后添加`CView`-通过使用派生类`AddView`方法。 选项卡控件将显示为选项卡的这些视图。  
   
- 例如，你可能拥有的文档，可以表示不同的方式： 作为电子表格、 图表、 可编辑窗体中，依次类推。 你可以创建根据需要绘制数据的单个视图，它们插入你`CTabView`-派生对象并将它们而无需任何其他编码选项卡式。  
+ 例如，可能必须文档可以表示不同的方式： 作为电子表格、 图表、 可编辑窗体中，依次类推。 可以创建根据需要绘制数据的单个视图，它们插入您`CTabView`-派生的对象并将它们而无需任何额外的编码选项卡式。  
   
- [TabbedView 示例： MFC 选项卡式视图应用程序](../../visual-cpp-samples.md)阐释了的用法`CTabView`。  
+ [TabbedView 示例： MFC 选项卡式视图应用程序](../../visual-cpp-samples.md)说明了使用情况的`CTabView`。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何`CTabView`TabbedView 示例中使用。  
@@ -95,23 +95,23 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pViewClass*  
- 指向插入视图的运行时类的指针。  
+*pViewClass*<br/>
+[in]指向插入视图的运行时类的指针。  
   
- [in]*strViewLabel*  
- 指定选项卡的文本。  
+*strViewLabel*<br/>
+[in]指定选项卡的文本。  
   
- [in]*iIndex*  
- 指定在其中插入视图的从零开始的位置。 如果位置为-1 结尾处插入新选项卡。  
+*iIndex*<br/>
+[in]指定要插入该视图的从零开始的位置。 如果位置为-1 的末尾插入新选项卡。  
   
- [in]*pContext*  
- 一个指向`CCreateContext`的视图。  
+*pContext*<br/>
+[in]一个指向`CCreateContext`的视图。  
   
 ### <a name="return-value"></a>返回值  
- 视图索引，如果此方法成功。 否则为-1。  
+ 如果此方法成功将视图索引。 否则为-1。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数可将视图添加到选项卡控件嵌入在框架中。  
+ 调用此函数可将视图添加到嵌入在框架中的选项卡控件。  
   
 ##  <a name="findtab"></a>  CTabView::FindTab  
  返回选项卡控件中指定的视图的索引。  
@@ -121,24 +121,24 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hWndView*  
- 视图的句柄。  
+*hWndView*<br/>
+[in]视图的句柄。  
   
 ### <a name="return-value"></a>返回值  
- 如果它找到，则该视图的索引否则为-1。  
+ 如果它找到，则视图的索引否则为-1。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可检索具有指定的句柄的视图的索引。  
   
 ##  <a name="getactiveview"></a>  CTabView::GetActiveView  
- 将指针返回到当前处于活动状态的视图。  
+ 返回一个指向当前处于活动状态的视图。  
   
 ```  
 CView* GetActiveView() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向的活动视图或如果没有任何活动的视图的为 NULL 的有效指针。  
+ 指向活动的视图或如果没有活动的视图，则为 NULL 的有效指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -150,50 +150,50 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对与视图关联的选项卡控件的引用。  
+ 对选项卡控件与视图关联的引用。  
   
 ##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
- 创建选项卡视图，以确定此选项卡视图是否具有共享水平滚动条时，由框架调用。  
+ 创建选项卡视图，以确定此选项卡视图是否具有共享水平滚动条时由框架调用。  
   
 ```  
 virtual BOOL IsScrollBar() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果应与共享的滚动条一起创建选项卡视图，则为 TRUE。 否则为 FALSE。  
+ 如果选项卡视图应创建以及共享的滚动条，则为 TRUE。 否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 框架在调用此方法时*CTabView*正在创建对象。  
+ 框架将调用此方法时*CTabView*创建对象。  
   
- 重写*IsScrollBar*中的方法*CTabView*-派生类并将返回 TRUE，如果你想要创建具有共享水平滚动条的视图。  
+ 重写*IsScrollBar*中的方法*CTabView*的派生类并将返回 TRUE，如果你想要创建具有共享水平滚动条的视图。  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
- 选项卡视图进行活动或非活动时，由框架调用。  
+ 活动或非活动进行选项卡视图时，由框架调用。  
   
 ```  
 virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*视图*  
- 指向该视图的指针。  
+*视图*<br/>
+[in]指向该视图的指针。  
   
 ### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。 重写此方法在`CTabView`-派生类来处理此通知。  
+ 默认实现不执行任何操作。 重写此方法在`CTabView`的派生类来处理此通知。  
   
 ##  <a name="removeview"></a>  CTabView::RemoveView  
- 从选项卡控件中删除视图。  
+ 从选项卡控件中删除该视图。  
   
 ```  
 BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iTabNum*  
- 要删除的视图索引。  
+*iTabNum*<br/>
+[in]要删除的视图的索引。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，已删除的视图的索引。 否则为-1。  
+ 如果此方法成功删除的视图的索引。 否则为-1。  
   
 ### <a name="remarks"></a>备注  
   
@@ -205,8 +205,8 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iTabNum*  
- 选项卡视图的从零开始索引。  
+*iTabNum*<br/>
+[in]选项卡视图的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的视图已激活，则返回 FALSE 如果视图的索引无效，则为 TRUE。  
@@ -215,7 +215,7 @@ BOOL SetActiveView(int iTabNum);
  有关详细信息请参阅[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)   
  [CView 类](../../mfc/reference/cview-class.md)

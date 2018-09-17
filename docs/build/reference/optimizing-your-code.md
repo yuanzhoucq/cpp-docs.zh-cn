@@ -1,5 +1,5 @@
 ---
-title: 优化代码 |Microsoft 文档
+title: 优化代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -18,35 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714371"
 ---
 # <a name="optimizing-your-code"></a>优化代码
 
-通过优化可执行文件，你可以实现快速执行速度和较小代码大小之间的平衡。 本主题讨论一些 Visual c + + 提供帮助你优化代码的机制。
+通过优化可执行文件，可以实现快速执行速度和较小代码大小之间的平衡。 本主题讨论了一些 Visual c + + 提供的用于帮助您优化代码的机制。
 
 ## <a name="language-features"></a>语言功能
 
-以下主题介绍一些 C/c + + 语言中的优化功能。
+以下主题介绍了一些 C/c + + 语言中的优化功能。
 
-[优化杂注和关键字](../../build/reference/optimization-pragmas-and-keywords.md)  
-关键字和杂注，你可以使用在你的代码来提高性能的列表。
+[优化杂注和关键字](../../build/reference/optimization-pragmas-and-keywords.md)关键字和杂注，您可以使用在代码中以提高性能的列表。
 
-[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)  
-一份 **/O**专门影响执行速度或代码大小的编译器选项。
+[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)的列表 **/O**专门影响执行速度或代码大小的编译器选项。
 
-[规则引用声明符：&&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
-右值引用支持的实现*移动语义*。 如果移动语义用于实现模板库，使用这些模板的应用程序的性能可以显著提高。
+[右值引用声明符： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)右值引用支持的实现*移动语义*。 如果可以显著提高的移动语义用于实现模板库，使用这些模板的应用程序的性能。
 
 ### <a name="the-optimize-pragma"></a>优化杂注
 
-如果代码的优化的节将导致错误或速度变慢，则可以使用[优化](../../preprocessor/optimize.md)杂注关闭该部分的优化。
+如果已优化的代码节将导致错误或速度减慢，则可以使用[优化](../../preprocessor/optimize.md)杂注来关闭该部分的优化。
 
-将代码包含的两个杂注，如下所示：
+将两个杂注，代码如下所示：
 
 ```cpp
 #pragma optimize("", off)
@@ -56,21 +53,19 @@ ms.locfileid: "32378972"
 
 ## <a name="programming-practices"></a>编程做法
 
-编译用优化代码时，可能会注意到附加的警告消息。 需要此行为，因为一些警告仅与优化的代码。 如果你注意到这些警告，则可避免许多优化问题。
+当编译使用优化代码时，可能会注意到其他警告消息。 需要此行为，因为一些警告仅与优化的代码。 如果注意到这些警告，则可以避免很多优化问题。
 
-自相矛盾，优化速度的程序，这种情况可能会导致代码运行速度变慢。 这是因为某些优化速度，请增加代码大小。 例如，内联函数消除函数调用的开销。 但是，内联太多代码可能会使你的程序很大的虚拟内存页面数错误增加。 因此，通过消除函数调用获得的速度可能会丢失对内存换用。
+自相矛盾的是，优化速度的程序可能会导致代码运行速度变慢。 这是因为一些优化速度增加代码大小。 例如，内联函数消除函数调用的开销。 但是，内联太多代码可能会使您的程序很大的错误的虚拟内存页面数增加。 因此，获得通过消除函数调用的速度可能会丢失对内存换用。
 
-以下主题讨论好的编程做法。
+以下主题讨论最佳编程实践。
 
-[提高时间关键代码的技巧](../../build/reference/tips-for-improving-time-critical-code.md)  
-更好的编码技术可以产生更好的性能。 此主题建议的编码方法，可帮助你确保你的代码的时间关键部分满意地执行。
+[提高时间关键代码的提示](../../build/reference/tips-for-improving-time-critical-code.md)更好地编码技术可产生更好的性能。 本主题建议的编码技术可以帮助您确保你的代码的时间关键部分满意地执行。
 
-[优化最佳做法](../../build/reference/optimization-best-practices.md)  
-提供有关如何最好地优化你的应用程序的一般准则。
+[优化最佳做法](../../build/reference/optimization-best-practices.md)提供了有关如何最好地优化您的应用程序的一般准则。
 
-## <a name="debugging-optimized-code"></a>由于调试优化的代码
+## <a name="debugging-optimized-code"></a>调试优化的代码
 
-因为优化可能更改由编译器创建的代码，我们建议你调试应用程序和测量其性能，并随后优化代码。
+因为优化可能会更改由编译器创建的代码，我们建议您调试应用程序和测量其性能，然后优化您的代码。
 
 以下主题提供有关如何调试的基本信息。
 
@@ -94,8 +89,8 @@ ms.locfileid: "32378972"
 
 - [为 ATL 项目指定编译器优化](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [我应使用哪些优化技术来提高客户端应用程序的性能，在加载时？](../../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [我应该使用哪些优化技术来提高时加载的客户端应用程序的性能？](../../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)  
+[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)

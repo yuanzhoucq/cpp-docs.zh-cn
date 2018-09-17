@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5136826b62fb5c0e6b8e7affd06be3aa81c03d6
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713282"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
@@ -117,8 +117,8 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)  
-[设置编译器选项](../../build/reference/setting-compiler-options.md)  
-[错误和异常处理](../../cpp/errors-and-exception-handling-modern-cpp.md)  
-[异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)  
-[结构化异常处理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)  
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[错误和异常处理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)
+[结构化异常处理 （C/c + +）](../../cpp/structured-exception-handling-c-cpp.md)

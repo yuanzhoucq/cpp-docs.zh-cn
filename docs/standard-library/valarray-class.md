@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724810"
 ---
 # <a name="valarray-class"></a>valarray 类
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>参数
 
 _Func(Type)<br/>
- 函数对象将应用于操作数 valarray 的每个元素。
+函数对象将应用于操作数 valarray 的每个元素。
 
 _Func(const Type&)<br/>
- const 的函数对象将应用于操作数 valarray 的每个元素。
+const 的函数对象将应用于操作数 valarray 的每个元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*count*  
- 要向前移动元素的位数。
+*count*<br/>
+要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- Valarray 或值的元素相同的类型是将合并操作数 valarray 进行点算合并，通过逻辑`AND`与操作数 valarray。
+*right*<br/>
+Valarray 或值的元素相同的类型是将合并操作数 valarray 进行点算合并，通过逻辑`AND`与操作数 valarray。
 
 ### <a name="return-value"></a>返回值
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 指示右移位数或 valarray（其元素指示右移的元素指向值）。
+*right*<br/>
+指示右移位数或 valarray（其元素指示右移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 指示左移位数或 valarray（其元素指示左移的元素指向值）。
+*right*<br/>
+指示左移位数或 valarray（其元素指示左移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。
 
 ### <a name="return-value"></a>返回值
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。
 
 ### <a name="return-value"></a>返回值
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。
 
 ### <a name="return-value"></a>返回值
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要复制到操作数 valarray 中的 valarray。
+*right*<br/>
+要复制到操作数 valarray 中的 valarray。
 
-*val*  
- 要分配给操作数 valarray 的元素的值。
+*val*<br/>
+要分配给操作数 valarray 的元素的值。
 
-*_Slicearray*  
- 要复制到操作数 valarray 中的 slice_array。
+*_Slicearray*<br/>
+要复制到操作数 valarray 中的 slice_array。
 
-*_Gslicearray*  
- 要复制到操作数 valarray 中的 gslice_array。
+*_Gslicearray*<br/>
+要复制到操作数 valarray 中的 gslice_array。
 
-*_Maskarray*  
- 要复制到操作数 valarray 中的 mask_array。
+*_Maskarray*<br/>
+要复制到操作数 valarray 中的 mask_array。
 
-*_Indarray*  
- 要复制到操作数 valarray 中的 indirect_array。
+*_Indarray*<br/>
+要复制到操作数 valarray 中的 indirect_array。
 
 ### <a name="return-value"></a>返回值
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*  
- 要对其进行赋值的元素的索引。
+*_Off*<br/>
+要对其进行赋值的元素的索引。
 
-*_Slicearray*  
- 一个 valarray 的 slice_array，它指定要选择或返回到新 valarray 的子集。
+*_Slicearray*<br/>
+一个 valarray 的 slice_array，它指定要选择或返回到新 valarray 的子集。
 
-*_Gslicearray*  
- 一个 valarray 的 gslice_array，它指定要选择或返回到新 valarray 的子集。
+*_Gslicearray*<br/>
+一个 valarray 的 gslice_array，它指定要选择或返回到新 valarray 的子集。
 
-_Boolarray  
- 一个 valarray 的 bool_array，它指定要选择或返回到新 valarray 的子集。
+_Boolarray<br/>
+一个 valarray 的 bool_array，它指定要选择或返回到新 valarray 的子集。
 
-*_Indarray*  
- 一个 valarray 的 indirect_array，它指定要选择或返回到新 valarray 的子集。
+*_Indarray*<br/>
+一个 valarray 的 indirect_array，它指定要选择或返回到新 valarray 的子集。
 
 ### <a name="return-value"></a>返回值
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>参数
 
-*_Newsize*  
- 调整大小后的 valarray 中的元素数。
+*_Newsize*<br/>
+调整大小后的 valarray 中的元素数。
 
-*val*  
- 要提供给调整大小后的 valarray 的元素的值。
+*val*<br/>
+要提供给调整大小后的 valarray 的元素的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*count*  
- 要向前移动元素的位数。
+*count*<br/>
+要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>参数
 
-“计数”  
- 数值数组要包含的元素的数目。
+“计数”<br/>
+数值数组要包含的元素的数目。
 
-*val*  
- 要用于初始化数值数组中的元素的值。
+*val*<br/>
+要用于初始化数值数组中的元素的值。
 
-*ptr*  
- 指向要用于初始化数值数组中的元素的值的指针。
+*ptr*<br/>
+指向要用于初始化数值数组中的元素的值的指针。
 
-右侧  
- 用于初始化新数值数组的现有数值数组。
+右侧<br/>
+用于初始化新数值数组的现有数值数组。
 
-*SliceArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 slice_array。
+*SliceArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 slice_array。
 
-*GsliceArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 gslice_array。
+*GsliceArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 gslice_array。
 
-*MaskArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 mask_array。
+*MaskArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 mask_array。
 
-*IndArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 indirect_array。
+*IndArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 indirect_array。
 
-*IList*  
- 包含要复制的元素的 initializer_list。
+*IList*<br/>
+包含要复制的元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
 

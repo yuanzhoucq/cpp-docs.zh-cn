@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850178"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717101"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 `CMFCOutlookBar`对象包含[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 选项卡可以是[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象或`CWnd`-派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- 指向要停靠此窗格的另一个窗格的指针。  
+*pBar*<br/>
+[in]指向要停靠此窗格的另一个窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果可将另一个窗格停靠到 Outlook 栏窗格; 则为 TRUE否则为 FALSE。  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszCaption*  
- 指定窗口标题。  
+*lpszCaption*<br/>
+[in]指定窗口标题。  
   
- [in]*pParentWnd*  
- 指定指向父窗口的指针。 它不能为 NULL。  
+*pParentWnd*<br/>
+[in]指定指向父窗口的指针。 它不能为 NULL。  
   
- [in]*rect*  
- 指定的 outlook 栏大小和位置以像素为单位。  
+*rect*<br/>
+[in]指定的 outlook 栏大小和位置以像素为单位。  
   
- [in]*nID*  
- 指定控件 id。 必须不同于其他控件在应用程序中使用的 Id。  
+*nID*<br/>
+[in]指定控件 id。 必须不同于其他控件在应用程序中使用的 Id。  
   
- [in]*dwStyle*  
- 指定所需的控制条样式。 有关可能的值，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*dwStyle*<br/>
+[in]指定所需的控制条样式。 有关可能的值，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*dwControlBarStyle*  
- 指定特殊库定义的样式。  
+*dwControlBarStyle*<br/>
+[in]指定特殊库定义的样式。  
   
- [in]*pContext*  
- 创建上下文。  
+*pContext*<br/>
+[in]创建上下文。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPageName*  
- 页标签。  
+*lpszPageName*<br/>
+[in]页标签。  
   
- [in]*bActivatePage*  
- 如果为 TRUE，页面才会在创建时激活。  
+*bActivatePage*<br/>
+[in]如果为 TRUE，页面才会在创建时激活。  
   
- [in]*dwEnabledDocking*  
- 当页面分离指定已启用的停靠边 CBRS_ALIGN_ 标志的组合。  
+*dwEnabledDocking*<br/>
+[in]当页面分离指定已启用的停靠边 CBRS_ALIGN_ 标志的组合。  
   
- [in]*bEnableTextLabels*  
- 如果为 TRUE，则驻留在页面的按钮会启用文本标签。  
+*bEnableTextLabels*<br/>
+[in]如果为 TRUE，则驻留在页面的按钮会启用文本标签。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新创建的页上或如果创建失败，则为 NULL。  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- 指向为浮动窗格的指针。  
+*pBar*<br/>
+[in]指向为浮动窗格的指针。  
   
- [in]*nTabID*  
- 为浮动选项卡的从零开始的索引。  
+*nTabID*<br/>
+[in]为浮动选项卡的从零开始的索引。  
   
- [in]*dockMethod*  
- 指定要使用可使窗格浮动的方法。  有关详细信息，请参阅[cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。  
+*dockMethod*<br/>
+[in]指定要使用可使窗格浮动的方法。  有关详细信息，请参阅[cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。  
   
- [in]*bHide*  
- 为 TRUE，则浮点; 之前隐藏窗格否则为 FALSE。 与此方法的基类版本，此参数没有默认值。  
+*bHide*<br/>
+[in]为 TRUE，则浮点; 之前隐藏窗格否则为 FALSE。 与此方法的基类版本，此参数没有默认值。  
   
 ### <a name="return-value"></a>返回值  
  如果将浮动窗格; 则为 TRUE否则为 FALSE。  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*rectTabAreaTop*  
- 在函数返回时包含的大小和位置 （在客户端坐标中） 的顶部的选项卡区域。  
+*rectTabAreaTop*<br/>
+[out]在函数返回时包含的大小和位置 （在客户端坐标中） 的顶部的选项卡区域。  
   
- [out]*rectTabAreaBottom*  
- 在函数返回时包含的大小和底部选项卡区域的位置 （在客户端坐标中）。  
+*rectTabAreaBottom*<br/>
+[out]在函数返回时包含的大小和底部选项卡区域的位置 （在客户端坐标中）。  
   
 ### <a name="remarks"></a>备注  
  框架调用此方法以确定停靠到目标窗格中的类型。 当框架确定在用户拖动窗格停靠在目标窗格中的选项卡区域上时，它会作为新的选项卡的目标窗格中添加的第一个窗格。 否则，它将尝试为停靠在目标窗格中的相应侧的第一个窗格。 该框架与滑块，用于容纳其他停靠的窗格中创建一个新容器。  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*n 页面*  
- 进行活动选项卡页的从零开始的索引。  
+*n 页面*<br/>
+[in]进行活动选项卡页的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
  设置活动选项卡上的视觉效果取决于您是否已启用动画。 有关详细信息，请参阅[CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)。  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*n 页面*  
- 要设置活动选项卡页的从零开始的索引。  
+*n 页面*<br/>
+[in]要设置活动选项卡页的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果动画应在设置新的活动选项卡上，则为 TRUE 或 FALSE，如果应禁用动画返回。  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDown*  
- 如果 Outlook 栏向下滚动或如果向上滚动，则为 FALSE，则为 TRUE。  
+*bDown*<br/>
+[in]如果 Outlook 栏向下滚动或如果向上滚动，则为 FALSE，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiPage*  
- 父 Outlook 窗口中的页的从零开始索引。  
+*uiPage*<br/>
+[in]父 Outlook 窗口中的页的从零开始索引。  
   
- [in]*pTargetWnd*  
- Pointerto 父 Outlook 窗口。  
+*pTargetWnd*<br/>
+[in]Pointerto 父 Outlook 窗口。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则删除自定义页面了非零值否则为 0。  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFont*  
- 指定新的字体。  
+*pFont*<br/>
+[in]指定新的字体。  
   
- [in]*bRedraw*  
- 如果为 TRUE，则将重绘 Outlook 栏。  
+*bRedraw*<br/>
+[in]如果为 TRUE，则将重绘 Outlook 栏。  
   
 ### <a name="remarks"></a>备注  
  此方法用于设置 outlook 选项卡页按钮上显示的文本的字体。  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMode2003*  
- 如果为 TRUE，则启用 Office 2003 模式。  
+*bMode2003*<br/>
+[in]如果为 TRUE，则启用 Office 2003 模式。  
   
 ### <a name="remarks"></a>备注  
  使用此函数来启用或禁用 Office 2003 模式。 在此模式下，Outlook 栏有自定义按钮的其他工具栏。 Outlook 栏的行为符合在 Microsoft Office 2003 Outlook 栏的行为。  

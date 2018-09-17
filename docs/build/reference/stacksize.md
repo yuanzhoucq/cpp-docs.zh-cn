@@ -1,5 +1,5 @@
 ---
-title: STACKSIZE |Microsoft 文档
+title: STACKSIZE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2093762b3c6f21d319c53a85da5ec5b430a1fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d9b61febedde1a2647df6312a8588b08c6bdad7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705557"
 ---
 # <a name="stacksize"></a>STACKSIZE
-设置堆栈的大小（以字节为单位）。  
-  
-```  
-STACKSIZE reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>备注  
- 设置堆栈的等效方法是使用[堆栈分配](../../build/reference/stack-stack-allocations.md)（/ 堆栈） 选项。 请参阅该选项的详细信息上的文档，了解*保留*和`commit`自变量。  
-  
- 此选项不起在 Dll 上。  
-  
-## <a name="see-also"></a>请参阅  
- [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)
+
+设置堆栈的大小（以字节为单位）。
+
+```
+STACKSIZE reserve[,commit]
+```
+
+## <a name="remarks"></a>备注
+
+设置堆栈的等效方法是使用[堆栈分配](../../build/reference/stack-stack-allocations.md)(/stack) 选项。 了解有关该选项的详细信息的文档*保留*和`commit`参数。
+
+此选项对 Dll 无效。
+
+## <a name="see-also"></a>请参阅
+
+[模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: Varargs |Microsoft 文档
+title: Varargs |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7b71cd426bc89570f9d394f3e38dc7a002f6e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8305eaddf87a2e67b797bedff1944dbcbbbdbd41
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380503"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713636"
 ---
 # <a name="varargs"></a>Varargs
-如果通过 varargs （例如，省略号自变量） 传递的参数，实质上是正常的参数传递应用包括将溢出的第五个和后续参数。 它被调用采用其地址的转储自变量被调用方的责任。 仅对于浮点值，整数和浮点寄存器将包含的 float 值在被调用方期望整数寄存器中的值的情况下。  
-  
-## <a name="see-also"></a>请参阅  
- [调用约定](../build/calling-convention.md)
+
+如果通过 varargs （例如，省略号参数） 传递的参数，实质上是正常的参数传递应用包括溢出的第五个和后续参数。 负责再次被调用方的转储采用其地址的参数。 对于浮点值，包括整数和浮点寄存器将包含 float 值在被调用方需要采用整数寄存器的值的情况下。
+
+## <a name="see-also"></a>请参阅
+
+[调用约定](../build/calling-convention.md)

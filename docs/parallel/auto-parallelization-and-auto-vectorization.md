@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540552"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720379"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自动并行化和自动矢量化
 自动并行化程序和自动向量化旨在为代码中的循环提供自动性能提升。  
@@ -75,8 +75,10 @@ void test() {
   
  生成此输出：  
   
-**---正在分析函数： void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4)： 循环已并行化**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 使用此命令编译：  
   
@@ -84,9 +86,11 @@ void test() {
   
 生成此输出：  
   
-**---正在分析函数： void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4)： 循环已并行化**   
-**d:\myproject\mytest.cpp(4)： 循环未并行化由于原因"1008"**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 请注意，在输出中两个不同之间的差异[/Qpar-report （自动并行化程序报告等级）](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)选项。 `/Qpar-report:1` 仅为成功进行并行化的循环输出并行化程序消息。 `/Qpar-report:2` 为成功和不成功的循环并行化输出并行化程序消息。  
   

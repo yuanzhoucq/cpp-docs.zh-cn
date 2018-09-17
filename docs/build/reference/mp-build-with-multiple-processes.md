@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572339"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713422"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP（使用多个进程生成）
 
@@ -127,7 +127,7 @@ Visual Studio 将使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工
 
 解决方案生成时间在一定程度上取决于执行生成的进程数。 *数量*的参数[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 选项指定要在同一时间生成项目的最大数目。 同样， *processMax*的参数 **/MP**编译器选项指定的最大编译单元生成在同一时间数。 如果 **/maxcpucount**选项指定*P*项目并 **/MP**选项指定*C*处理时，最多为*P* x *C*进程执行一次。
 
- 确定是否使用 MSBuild 的准则或 **/MP**技术如下所示：
+确定是否使用 MSBuild 的准则或 **/MP**技术如下所示：
 
 - 如果存在多个项目与每个项目中的几个文件，使用 MSBuild 工具。
 

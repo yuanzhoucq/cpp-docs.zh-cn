@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753261"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701722"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>参数
 
-[out]*pEnabled*  
-TRUE 表示注册表信息将定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** (**HKCR**)。
+*pEnabled*<br/>
+[out]TRUE 表示注册表信息将定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>返回值
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>参数
 
-[in]*bEnable*  
-TRUE 表示注册表信息将定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** (**HKCR**)。
+*bEnable*  
+[in]TRUE 表示注册表信息将定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>返回值
 

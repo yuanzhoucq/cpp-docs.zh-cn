@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709354"
 ---
 # <a name="special-characters-in-a-makefile"></a>生成文件中的特殊字符
 
 若要使用 NMAKE 特殊字符作为文字字符，将它的前面放置插入符号 (^)。 NMAKE 会忽略前加上其他字符的插入符号。 特殊字符包括：
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 插入符号 (^) 中带引号的字符串视为文字插入符号字符。 行末尾的脱字号插入文本换行字符在字符串或宏。
 

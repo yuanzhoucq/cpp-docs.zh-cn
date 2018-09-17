@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313333"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705843"
 ---
 # <a name="resource-includes-dialog-box-c"></a>资源包括对话框 （c + +）
 
@@ -35,14 +35,17 @@ ms.locfileid: "44313333"
 
 若要打开**资源包括**对话框中，右键单击.rc 文件中[资源视图](../windows/resource-view-window.md)，然后选择**资源包括**从快捷菜单。
 
-**符号头文件**  
-允许更改头文件的名称，头文件是存储资源文件的符号定义的位置。 有关详细信息，请参阅[更改符号头文件的名称](../windows/changing-the-names-of-symbol-header-files.md)。
+- **符号头文件**
 
-**只读符号指令**  
-允许包含含有编辑会话期间不应修改的符号的头文件。 例如，可以包括在多个项目间共享的符号文件。 此外也可以包括 MFC.h 文件。 有关详细信息，请参阅[包括共享 （只读） 或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)。
+   允许更改头文件的名称，头文件是存储资源文件的符号定义的位置。 有关详细信息，请参阅[更改符号头文件的名称](../windows/changing-the-names-of-symbol-header-files.md)。
 
-**编译时指令**  
-允许包括所创建的资源文件，并可从主资源文件中的资源分别进行编辑，包含编译时指令（比如那些有条件地包括资源的指令），或者包含自定义格式的资源。 此外可以使用**编译时指令框**包括标准 MFC 资源文件。 有关详细信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。
+- **只读符号指令**
+
+   允许包含含有编辑会话期间不应修改的符号的头文件。 例如，可以包括在多个项目间共享的符号文件。 此外也可以包括 MFC.h 文件。 有关详细信息，请参阅[包括共享 （只读） 或计算符号](../windows/including-shared-read-only-or-calculated-symbols.md)。
+
+- **编译时指令**
+
+   允许包括所创建的资源文件，并可从主资源文件中的资源分别进行编辑，包含编译时指令（比如那些有条件地包括资源的指令），或者包含自定义格式的资源。 此外可以使用**编译时指令框**包括标准 MFC 资源文件。 有关详细信息，请参阅[编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。
 
 > [!NOTE]
 > 由标记.rc 文件中显示这些文本框中的项`TEXTINCLUDE 1`， `TEXTINCLUDE 2`，和`TEXTINCLUDE 3`分别。 有关详细信息，请参阅[TN035： 使用多个资源文件和使用 Visual c + + 头文件](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)。

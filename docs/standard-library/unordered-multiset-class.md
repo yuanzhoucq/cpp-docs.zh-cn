@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725902"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset 类
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-keyval 要映射的键值。
+*keyval*<br/>
+要映射的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
- 存储桶编号。
+*nbucket*<br/>
+存储桶编号。
 
 ### <a name="remarks"></a>备注
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
- 存储桶编号。
+*nbucket*<br/>
+存储桶编号。
 
 ### <a name="remarks"></a>备注
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*Where*  
- 要移除的元素的位置。
+*Where*<br/>
+要移除的元素的位置。
 
-*第一个*  
- 要移除的第一个元素的位置。
+*第一个*<br/>
+要移除的第一个元素的位置。
 
-*最后一个*  
- 要移除的刚超出最后一个元素的位置。
+*最后一个*<br/>
+要移除的刚超出最后一个元素的位置。
 
-*Key*  
- 要移除的元素的关键值。
+*Key*<br/>
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-*factor*  
- 新的最大加载因子。
+*factor*<br/>
+新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets*  
- 请求的存储桶数。
+*nbuckets*<br/>
+请求的存储桶数。
 
 ### <a name="remarks"></a>备注
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要交换的容器。
+*right*<br/>
+要交换的容器。
 
 ### <a name="remarks"></a>备注
 
@@ -2495,7 +2496,7 @@ unordered_multiset(
 |*Al*|要存储的分配器对象。|
 |*Comp*|要存储的比较函数对象。|
 |*哈希*|要存储的哈希函数对象。|
-|*bucket_count*|存储桶的最少数量。|
+|*Bucket_count*|存储桶的最少数量。|
 |右侧|要复制的容器。|
 |*IList*|要从中进行复制的 initializer_list。|
 

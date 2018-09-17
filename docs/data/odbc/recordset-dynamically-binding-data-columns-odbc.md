@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338806"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703114"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -91,19 +91,16 @@ ms.locfileid: "39338806"
      一种方法是向主要记录集的添加循环`DoFieldExchange`循环访问新列，对于列表中每个列调用相应的 RFX 函数的列表的函数。 每个 RFX 调用时，将从列名称列表和相应成员的结果值列表中的存储位置传递列名称。  
   
 ###  <a name="_core_lists_of_columns"></a> 列的列表  
- 下表中显示需要使用的四个列表。  
-  
- **当前的表的列 (在图中的列表 1)** 当前在数据源的表中列的列表。 此列表可能与匹配的记录集中当前绑定的列的列表。  
-  
- **绑定记录集列 (在图中的列表 2)**  
- 记录集中绑定列的列表。 这些列中已有 RFX 语句在`DoFieldExchange`函数。  
-  
- **列-到-动态绑定 (在图中的列表 3)**  
- 列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。  
-  
- **动态列值 (在图中的列表 4)**  
- 从动态绑定列中检索包含存储的值的列表。 此列表的元素与中的列-到-动态绑定，一相对应。  
-  
+
+下表中显示需要使用的四个列表。  
+
+|||
+|-|-|  
+**表的当前列**| （图中的列表 1）在数据源的表中当前列的列表。 此列表可能与匹配的记录集中当前绑定的列的列表。|
+|**记录集的绑定列**| （图中的列表 2）记录集中绑定列的列表。 这些列中已有 RFX 语句在`DoFieldExchange`函数。|
+|**列-到-动态绑定**| （图中的列表 3）列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。|
+|**列的动态值**| （图中的列表 4）从动态绑定列中检索包含存储的值的列表。 此列表的元素与中的列-到-动态绑定，一相对应。|
+
 ###  <a name="_core_building_your_lists"></a> 构建您的列表  
  记住的常规策略，就可以开始的详细信息。 本主题的其余部分中的过程演示如何生成列表中所示[的列列表](#_core_lists_of_columns)。 过程将指导你完成：  
   

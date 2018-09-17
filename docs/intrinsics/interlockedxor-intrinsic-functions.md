@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0b88c9a57b359c6cef7dc8587a4695b5590e69d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540178"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721872"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 内部函数
 **Microsoft 专用**  
@@ -158,11 +158,11 @@ __int64 _InterlockedXor64_rel(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Value`  
- 指向第一个操作数的指针，将由结果替换。  
+*值*<br/>
+[in、 out]指向要替换为结果的第一个操作数的指针。  
   
- [in] `Mask`  
- 第二个操作数。  
+*掩码*<br/>
+[in]第二个操作数。  
   
 ## <a name="return-value"></a>返回值  
  第一个操作数的原始值。  

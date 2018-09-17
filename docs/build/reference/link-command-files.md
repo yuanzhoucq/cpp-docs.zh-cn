@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8934758d8aa406ea7b7c959b1fc535cde32195b1
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2611fc0c16e4ff30d7802989518ca8c5d8dc33af
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713709"
 ---
 # <a name="link-command-files"></a>LINK 命令文件
 
@@ -50,5 +50,5 @@ link /dll @objlist.txt @liblist.txt @exports.txt
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)   
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
 [链接器选项](../../build/reference/linker-options.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848514"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709782"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 类
 `CMFCRibbonButtonsGroup`类使您可以将一组功能区按钮组织到组。 组中的所有按钮在水平位置上直接彼此相邻并位于边框中。  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 一个指向用于添加的按钮。  
+*pButton*<br/>
+[in]一个指向用于添加的按钮。  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  向组添加的按钮的列表。  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lstButtons*  
- 指向要添加的按钮的指针的列表。  
+*lstButtons*<br/>
+[in]指向要添加的按钮的指针的列表。  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  构造 `CMFCRibbonButtonsGroup` 对象。  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指定要添加到新创建的按钮`CMFCRibbonButtonsGroup`对象。  
+*pButton*<br/>
+[in]指定要添加到新创建的按钮`CMFCRibbonButtonsGroup`对象。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*我*  
- 按钮可返回一个从零开始的索引。  
+*i*<br/>
+[in]按钮可返回一个从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个指向位于指定索引处的按钮。 如果指定的索引超出范围，则为 NULL。  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向功能区组的设备上下文指针。  
+*pDC*<br/>
+[in]指向功能区组的设备上下文指针。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向设备上下文的`CMFCRibbonButtonsGroup`对象。  
+*pDC*<br/>
+[in]指向设备上下文的`CMFCRibbonButtonsGroup`对象。  
   
- [in]*rectImage*  
- 在其中绘制图像的矩形。  
+*rectImage*<br/>
+[in]在其中绘制图像的矩形。  
   
- [in]*pButton*  
- 要为其绘制图像按钮。  
+*pButton*<br/>
+[in]要为其绘制图像按钮。  
   
- [in]*nImageIndex*  
- （在一个正常、 突出显示或已禁用按钮的三个映像数组） 的按钮上绘制图像的索引。  
+*nImageIndex*<br/>
+[in]（在一个正常、 突出显示或已禁用按钮的三个映像数组） 的按钮上绘制图像的索引。  
   
 ### <a name="remarks"></a>备注  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pImages*  
- 常规映像。  
+*pImages*<br/>
+[in]常规映像。  
   
- [in]*pHotImages*  
- 热的映像。  
+*pHotImages*<br/>
+[in]热的映像。  
   
- [in]*pDisabledImages*  
- 已禁用的映像。  
+*pDisabledImages*<br/>
+[in]已禁用的映像。  
   
 ### <a name="remarks"></a>备注  
  调用`SetImages`将按钮添加到组之前。 映像数量必须大于或等于的按钮添加到组的数目。  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pCategory*  
- 指向要设置的父类别 （功能区控件中的选项卡式的组称为类别）。  
+*pCategory*<br/>
+[in]指向要设置的父类别 （功能区控件中的选项卡式的组称为类别）。  
   
 ### <a name="remarks"></a>备注  
   

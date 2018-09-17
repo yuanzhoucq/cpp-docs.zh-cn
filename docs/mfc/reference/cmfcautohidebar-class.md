@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539973"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719974"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 类
 `CMFCAutoHideBar` 类是实现自动隐藏功能的特殊工具栏类。  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pAutoHideWnd*  
- 你想要隐藏的窗口。  
+*pAutoHideWnd*<br/>
+[in]在你想要隐藏的窗口。  
   
- [in]*dwAlignment*  
- 用于指定自动隐藏按钮与应用程序窗口对齐方式的值。  
+*dwAlignment*<br/>
+[in]一个值，指定与应用程序窗口自动隐藏按钮的对齐方式。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszClassName*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*nID*  
- [in]*dwControlBarStyle*  
+*lpszClassName*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*nID*<br/>
+[in][in]*dwControlBarStyle*  
  [in]*pContext*  
   
 ### <a name="return-value"></a>返回值  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nLength*  
- 在基实现中未使用该值。 在派生的实现中，使用此值可指示已调整大小的窗格的长度。  
+*nLength*<br/>
+[in]在基实现中未使用该值。 在派生的实现中，使用此值可指示已调整大小的窗格的长度。  
   
- [in]*bVert*  
- 在基实现中未使用该值。 在派生实现中，使用 true 可自动隐藏栏垂直，折叠其中这种情况的句柄和 FALSE 的情况下，自动隐藏栏水平折叠的。  
+*bVert*<br/>
+[in]在基实现中未使用该值。 在派生实现中，使用 true 可自动隐藏栏垂直，折叠其中这种情况的句柄和 FALSE 的情况下，自动隐藏栏水平折叠的。  
   
 ### <a name="return-value"></a>返回值  
  已调整大小的窗格的最终大小。  

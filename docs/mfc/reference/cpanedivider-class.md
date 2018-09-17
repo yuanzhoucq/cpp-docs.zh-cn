@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6e4b62bdf31a88c0b8ea11198949de474b2a4eb2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701540"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider 类
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*barContainerManager*  
- [in]*bOuterEdge*  
- [in]*pTargetBar*  
- [in]*dwAlignment*  
+*barContainerManager*<br/>
+[in][in]*bOuterEdge*  
+*pTargetBar*<br/>
+[in][in]*dwAlignment*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -283,10 +283,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndToDock*  
- [in]*ptMouse*  
- [in]*rectResult*  
- [in]*bDrawTab*  
+*pWndToDock*<br/>
+[in][in]*ptMouse*  
+*rectResult*<br/>
+[in][in]*bDrawTab*  
  [in]*ppTargetBar*  
   
 ### <a name="remarks"></a>备注  
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDefaultSlider*  
- [in]*pParent*  
+*bDefaultSlider*<br/>
+[in][in]*pParent*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwStyleEx*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*nID*  
- [in]*pContext*  
+*dwStyleEx*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*nID*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*bLeftBar*  
+*pBar*<br/>
+[in][in]*bLeftBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -447,8 +447,8 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lstSliders*  
- 包含列表的窗格中的容器中存在的窗格中分隔线。  
+*lstSliders*<br/>
+[out]包含列表的窗格中的容器中存在的窗格中分隔线。  
   
 ### <a name="remarks"></a>备注  
  应针对默认窗格分隔符来调用此方法。 默认窗格分隔符是调整大小的窗格中整个容器的分隔符。  
@@ -472,8 +472,8 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lstBars*  
- 包含的窗格中的容器中存在的窗格的列表。  
+*lstBars*<br/>
+[out]包含的窗格中的容器中存在的窗格的列表。  
   
 ### <a name="remarks"></a>备注  
  应针对默认窗格分隔符来调用此方法。 默认窗格分隔符是调整大小的窗格中整个容器的分隔符。  
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDefaultSlider*  
- [in]*pParent*  
+*bDefaultSlider*<br/>
+[in][in]*pParent*  
   
 ### <a name="remarks"></a>备注  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBarToInsert*  
- [in]*pTargetBar*  
- [in]*dwAlignment*  
- [in]*lpRect*  
+*pBarToInsert*<br/>
+[in][in]*pTargetBar*  
+*dwAlignment*<br/>
+[in][in]*lpRect*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -586,8 +586,8 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ptOffset*  
- [in]*bAdjustLayout*  
+*ptOffset*<br/>
+[in][in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>备注  
   
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*bShow*  
+*pBar*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBarToReplace*  
- [in]*pBarToReplaceWith*  
+*pBarToReplace*<br/>
+[in][in]*pBarToReplaceWith*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectNew*  
- [in]*hdwp*  
+*rectNew*<br/>
+[in][in]*hdwp*  
   
 ### <a name="remarks"></a>备注  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockingBar*  
- [in]*pTabbedBar*  
+*pDockingBar*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   

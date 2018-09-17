@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719948"
 ---
 # <a name="timeput-class"></a>time_put 类
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*  
+*CharType*<br/>
 在程序中用于对字符进行编码的类型。
 
-*OutputIterator*  
+*OutputIterator*<br/>
 供时间放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*next*  
+*next*<br/>
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-*_Iosbase*  
+*_Iosbase*<br/>
 未使用。
 
-*_Pt*  
+*_Pt*<br/>
 输出的时间和日期信息。
 
-*_Fmt*  
+*_Fmt*<br/>
 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*  
+*_Mod*<br/>
 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>参数
 
-*next*  
+*next*<br/>
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-*_Iosbase*  
+*_Iosbase*<br/>
 未使用。
 
-*_Fill*  
+*_Fill*<br/>
 类型字符`CharType`用于调整间距。
 
-*_Pt*  
+*_Pt*<br/>
 输出的时间和日期信息。
 
-*_Fmt*  
+*_Fmt*<br/>
 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*  
+*_Mod*<br/>
 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*first*  
+*first*<br/>
 输出格式字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*最后一个*  
+*最后一个*<br/>
 输出格式字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值

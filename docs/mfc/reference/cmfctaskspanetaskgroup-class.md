@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849154"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701644"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
 `CMFCTasksPaneTaskGroup`类是由一个帮助器类[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParent*  
- 表示当前的任务组的父窗口。  
+*pParent*<br/>
+[in]表示当前的任务组的父窗口。  
   
- [out]*数据*  
- 类型的对象`CAccessibilityData`并且填充了当前的任务组的可访问性数据。  
+*data*<br/>
+[out]类型的对象`CAccessibilityData`并且填充了当前的任务组的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE*数据*参数已成功使用当前的任务组的可访问性数据填充; 否则为 FALSE。  

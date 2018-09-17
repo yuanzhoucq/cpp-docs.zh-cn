@@ -1,5 +1,5 @@
 ---
-title: -等待 （启用协同程序支持） |Microsoft 文档
+title: -await （启用协同程序支持） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,40 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78a62195ca28be49ed8c00dacacce003281699f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725486"
 ---
-# <a name="await-enable-coroutine-support"></a>/ await （启用协同程序支持）  
-  
-使用 **/ await**编译器选项来启用协同程序的编译器支持。  
-  
-## <a name="syntax"></a>语法  
-  
-> await /  
-  
-## <a name="remarks"></a>备注  
-  
-**/ Await**编译器选项启用 c + + 协同程序和关键字的编译器支持**co_await**， **co_yield**，和**co_return**. 默认情况下，此选项处于关闭状态。 有关 Visual Studio 中的协同程序支持的信息，请参阅[Visual Studio 团队博客](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)。 有关协同程序标准建议的详细信息，请参阅[N4628 工作草案、 协同程序的 c + + 扩展的技术规范](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)。  
+# <a name="await-enable-coroutine-support"></a>/await （启用协同程序支持）
 
-**/ Await**选项是 Visual Studio 2015 中的开始提供。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1. 打开你的项目的**属性页**对话框。   
-  
-2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**命令行**属性页。  
-  
-3. 输入 **/ await**中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>请参阅  
-  
-[编译器选项](../../build/reference/compiler-options.md)   
+使用 **/await**编译器选项来启用协同程序的编译器支持。
+
+## <a name="syntax"></a>语法
+
+> /await
+
+## <a name="remarks"></a>备注
+
+**/Await**编译器选项让编译器对 c + + 协同例程和关键字支持**co_await**， **co_yield**，和**co_return**. 默认情况下，此选项处于关闭状态。 在 Visual Studio 中的协同例程支持有关的信息，请参阅[Visual Studio 团队博客](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)。 有关协同例程标准建议的详细信息，请参阅[N4628 工作草案，协同例程的 c + + 扩展的技术规范](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)。
+
+**/Await**选项是在 Visual Studio 2015 开始提供。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开你的项目**属性页**对话框。
+
+2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**命令行**属性页。
+
+3. 输入 **/await**中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

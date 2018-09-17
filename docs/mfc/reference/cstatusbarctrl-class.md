@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677740"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711786"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 提供 Windows 公共状态栏控件的功能。  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iPart*|包含要检索的图标的部件的从零开始索引。 如果此参数为-1，状态栏被假定为简单模式状态栏。|  
+|*iPart*|[in]包含要检索的图标的部件的从零开始索引。 如果此参数为-1，状态栏被假定为简单模式状态栏。|  
   
 ### <a name="return-value"></a>返回值  
  图标的句柄如果成功，则该方法否则，为 NULL。  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSimple*  
- 显示类型标志。 如果此参数为 TRUE，控件将显示简单的文本;如果它为 FALSE 时，它将显示多个部分。  
+*bSimple*<br/>
+[in]显示类型标志。 如果此参数为 TRUE，控件将显示简单的文本;如果它为 FALSE 时，它将显示多个部分。  
   
 ### <a name="return-value"></a>返回值  
  始终返回 0。  

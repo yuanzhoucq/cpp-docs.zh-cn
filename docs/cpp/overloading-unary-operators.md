@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401875"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700671"
 ---
 # <a name="overloading-unary-operators"></a>重载一元运算符
 可重载的一元运算符如下：  
@@ -55,15 +55,15 @@ ms.locfileid: "39401875"
   
  以下规则适用于所有其他一元运算符。 若要将一元运算符函数声明为非静态成员，则必须用以下形式声明它：  
   
- `ret-type operator` `op` `()`  
+> *ret 类型***运算符** *op* **（)**  
   
- 其中 `ret-type` 是返回类型，`op` 是上表中列出的运算符之一。  
+ 其中*ret 类型*是返回类型和*op*运算符之一上表中列出。  
   
  若要将一元运算符函数声明为全局函数，则必须用以下形式声明它：  
   
- `ret-type operator` `op` (`arg` )  
+> *ret 类型***运算符** *op* **(** *arg* **)**  
   
- 其中 `ret-type` 和 `op` 如上所述用于成员运算符函数，`arg` 是要参与运算的类类型的参数。  
+ 其中*ret 类型*并*op*如上所述用于成员运算符函数并*arg*是用于执行操作的类类型的自变量。  
   
 > [!NOTE]
 >  一元运算符的返回类型没有限制。 例如，逻辑“非”(`!`) 返回整数值是合理的，但并非强制性的。  

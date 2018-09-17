@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539551"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719116"
 ---
 # <a name="codeseg"></a>code_seg
 指定 .obj 文件中存储函数的文本段。  
@@ -34,6 +34,25 @@ ms.locfileid: "42539551"
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>参数
+  
+**push**<br/>
+（可选）将一个记录置于内部编译器堆栈上。 一个**推送**可以*标识符*并*段名称*。  
+  
+**pop**<br/>
+（可选）从内部编译器堆栈的顶部移除记录。  
+  
+*identifier*<br/>
+（可选）与一起使用时**推送**，将名称分配给内部编译器堆栈上的记录。 与一起使用时**pop**，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
+  
+*标识符*使多个记录将只用一个**pop**命令。  
+  
+"*段名称*"<br/>  
+（可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*会成为活动文本段名称。  
+  
+"*段类*"<br/>
+（可选）被忽略，但包含与早于 2.0 版的 c + + 版本的兼容性。  
+  
 ## <a name="remarks"></a>备注  
  
 **Code_seg**杂注指令不控制为实例化模板生成的对象代码，也不由编译器隐式生成的代码的位置 — 例如，特殊成员函数。 我们建议你使用[__declspec(code_seg(...))](../cpp/code-seg-declspec.md)特性，因为这样可以控制所有对象代码的位置。 其中包括编译器生成的代码。  
@@ -43,24 +62,7 @@ ms.locfileid: "42539551"
 **Code_seg**杂注指令指示编译器将翻译单元中的所有后续对象代码放入名为的文本段*段名称*。 默认情况下，.obj 文件中用于函数的文本段的名称为 .text。  
   
 一个**code_seg**不带参数的杂注指令将后续对象代码的文本段名称重置为.text。  
-  
-*推送*（可选）  
-将一个记录置于内部编译器堆栈上。 一个*推送*可以*标识符*并*段名称*。  
-  
-*pop* （可选）  
-从内部编译器堆栈的顶部移除一个记录。  
-  
-*标识符*（可选）  
-与一起使用时*推送*，将名称分配给内部编译器堆栈上的记录。 与一起使用时*pop*，弹出之前内部堆栈中弹出记录*标识符*被删除; 如果*标识符*中找不到内部堆栈中，会弹出任何内容。  
-  
-*标识符*使多个记录将只用一个*pop*命令。  
-  
-"*段名称*"（可选）  
-段的名称。 与一起使用时*pop*，在堆栈中弹出和*段名称*会成为活动文本段名称。  
-  
-"*段类*"（可选）  
-忽略但被包含，以便与 2.0 版之前的 C++ 版本兼容。  
-  
+
 可以使用[DUMPBIN。EXE](../build/reference/dumpbin-command-line.md)应用程序查看.obj 文件。 使用 Visual Studio 包含适用于每个受支持的目标体系结构的 DUMPBIN 版本。  
   
 ## <a name="example"></a>示例  

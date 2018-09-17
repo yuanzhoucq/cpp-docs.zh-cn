@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712369"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl（为调试库插入 PCH 引用）
 
@@ -31,16 +31,16 @@ ms.locfileid: "43894650"
 
 ## <a name="syntax"></a>语法
 
->**/Yl**  
->**/Yl**_名称_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_名称_
+> **/Yl-**
 
 ### <a name="arguments"></a>自变量
 
-*name*  
+*name*<br/>
 使用唯一的符号的一部分的可选名称。
 
-*\-*  
+*\-*<br/>
 短划线 （-） 显式禁用 **/Yl**编译器选项。
 
 ## <a name="remarks"></a>备注
@@ -75,5 +75,5 @@ ms.locfileid: "43894650"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)  
-[设置编译器选项](../../build/reference/setting-compiler-options.md)  
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

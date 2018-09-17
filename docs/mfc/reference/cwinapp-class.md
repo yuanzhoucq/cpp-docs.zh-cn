@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688540"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712031"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpvParam*  
-留待将来使用。
+*lpvParam*<br/>
+[in]保留供将来使用。
 
 ### <a name="return-value"></a>返回值
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszFileName*  
-要打开的文件的名称。
+*lpszFileName*<br/>
+[in]要打开的文件的名称。
 
-[in]*bAddToMRU*  
-TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。
+*bAddToMRU*<br/>
+[in]TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bCompat*  
-TRUE 添加打印和打印到，允许用户直接从 shell 中，或通过将文件拖到打印机对象打印文件的 shell 命令的注册条目。 它还添加 DefaultIcon 密钥。 默认情况下，此参数为 FALSE 的向后兼容性。
+*bCompat*<br/>
+[in]TRUE 添加打印和打印到，允许用户直接从 shell 中，或通过将文件拖到打印机对象打印文件的 shell 命令的注册条目。 它还添加 DefaultIcon 密钥。 默认情况下，此参数为 FALSE 的向后兼容性。
 
 ### <a name="remarks"></a>备注
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |参数|描述|
-|[in]*bRegisterRecoveryCallback*|TRUE 表示应用程序的此实例使用恢复回调函数;FALSE 表示它没有。 应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*strRestartIdentifier*|用于标识此重新启动管理器实例的唯一字符串。 重新启动管理器标识符是唯一的应用程序的每个实例。|
-|[in]*pwzCommandLineArgs*|一个字符串，包含从命令行的任何额外参数。|
-|[in]*dwRestartFlags*|重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
-|[in]*pRecoveryCallback*|恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回一个 dword 值。 默认恢复回调函数是`CWinApp::ApplicationRecoveryCallback`。|
-|[in]*lpvParam*|恢复回调函数的输入的参数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*dwPingInterval*|有关恢复回调函数以返回等待重新启动管理器的时间长度。 此参数是以毫秒为单位。|
-|[in]*dwCallbackFlags*|标志传递给恢复回调函数。 留待将来使用。|
+|*bRegisterRecoveryCallback*|[in]TRUE 表示应用程序的此实例使用恢复回调函数;FALSE 表示它没有。 应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*strRestartIdentifier*|[in]用于标识此重新启动管理器实例的唯一字符串。 重新启动管理器标识符是唯一的应用程序的每个实例。|
+|*pwzCommandLineArgs*|[in]一个字符串，包含从命令行的任何额外参数。|
+|*dwRestartFlags*|[in]重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
+|*pRecoveryCallback*|[in]恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回一个 dword 值。 默认恢复回调函数是`CWinApp::ApplicationRecoveryCallback`。|
+|*lpvParam*|[in]恢复回调函数的输入的参数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*dwPingInterval*|[in]有关恢复回调函数以返回等待重新启动管理器的时间长度。 此参数是以毫秒为单位。|
+|*dwCallbackFlags*|[in]标志传递给恢复回调函数。 留待将来使用。|
 
 ### <a name="return-value"></a>返回值
 

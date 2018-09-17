@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte、 __readfsdword、 __readfsqword、 __readfsword |Microsoft 文档
+title: __readfsbyte、 __readfsdword、 __readfsqword、 __readfsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705675"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 **Microsoft 专用**  
   
- 从指定的偏移量相对于 FS 段的开始位置读取内存。  
+ 从指定相对于 FS 段的开头的偏移量的位置读取内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Offset`  
- 从开始处的偏移量`FS`要从其中进行读取。  
+*偏移量*<br/>
+[in]从开始处的偏移量`FS`读取。  
   
 ## <a name="return-value"></a>返回值  
- 字节、 单词、 双字或四字 （如所示调用的函数的名称） 的内存内容位置`FS:[Offset]`。  
+ 内存内容的字节、 字、 双字或四字 （如所示的调用的函数名称） 的位置`FS:[Offset]`。  
   
 ## <a name="requirements"></a>要求  
   
@@ -74,7 +74,7 @@ unsigned __int64 __readfsqword(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 这些例程只能用作内部函数不可用。  
+ 这些例程只能用作内部函数可使用。  
   
 **结束 Microsoft 专用**  
   

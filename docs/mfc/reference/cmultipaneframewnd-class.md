@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d4bc80f8370924377a089b3cb9838030943b9943
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538998"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706740"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 类
 `CMultiPaneFrameWnd`类用于扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个并动态创建多个浮动、 选项卡式windows。  
@@ -237,10 +237,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndToDock*  
- [in]*ptMouse*  
- [in]*rectResult*  
- [in]*bDrawTab*  
+*pWndToDock*<br/>
+[in][in]*ptMouse*  
+*rectResult*<br/>
+[in][in]*bDrawTab*  
  [in]*ppTargetBar*  
   
 ### <a name="remarks"></a>备注  
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockedFrame*  
- [in]*dockMethod*  
+*pDockedFrame*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -419,8 +419,8 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pControlBar*  
- [in]*pTarget*  
+*pControlBar*<br/>
+[in][in]*pTarget*  
  [in]*bAfter*  
   
 ### <a name="return-value"></a>返回值  
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- [in]*uiID*  
+*lpszProfileName*<br/>
+[in][in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*bShow*  
+*pBar*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -506,8 +506,8 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- [in]*nSensitivity*  
+*点*<br/>
+[in][in]*nSensitivity*  
  [in]*bCheckVisibility*  
   
 ### <a name="return-value"></a>返回值  
@@ -534,8 +534,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- [in]*bDestroy*  
+*pBar*<br/>
+[in][in]*bDestroy*  
  [in]*bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>备注  
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBarOrg*  
- [in]*pBarReplaceWith*  
+*pBarOrg*<br/>
+[in][in]*pBarReplaceWith*  
   
 ### <a name="remarks"></a>备注  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- [in]*uiID*  
+*lpszProfileName*<br/>
+[in][in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -619,8 +619,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*preDockState*  
- [in]*pBarToDock*  
+*preDockState*<br/>
+[in][in]*pBarToDock*  
  [in]*dockMethod*  
   
 ### <a name="return-value"></a>返回值  
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockingBar*  
- [in]*pTabbedBar*  
+*pDockingBar*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   

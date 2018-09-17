@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703577"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 C++ 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  
@@ -69,8 +69,9 @@ ms.locfileid: "39462246"
 ## <a name="kinds-of-smart-pointers"></a>智能指针的类型  
  下一节总结了 Windows 编程环境中可用的不同类型的智能指针，并说明了何时使用它们。  
   
- **C++ 标准库智能指针**  
- 使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。  
+### <a name="c-standard-library-smart-pointers"></a>C++ 标准库智能指针
+
+使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。  
   
 -   `unique_ptr`   
      只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。  替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 C++ 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。  
@@ -81,8 +82,9 @@ ms.locfileid: "39462246"
 -   `weak_ptr`   
     结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用共享 weak_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)并[weak_ptr 类](../standard-library/weak-ptr-class.md)。  
   
- **COM 对象 （经典 Windows 编程） 的智能指针**  
- 当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM 对象的智能指针（经典 Windows 编程）
+
+当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。  
   
  [CComPtr 类](../atl/reference/ccomptr-class.md)  
  除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅[如何： 创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。  
@@ -99,8 +101,9 @@ ms.locfileid: "39462246"
  [_com_ptr_t 类](../cpp/com-ptr-t-class.md)  
  在功能上类似于 `CComQIPtr`，但不依赖于 ATL 标头。  
   
- **POCO 对象的 ATL 智能指针**  
- 除 COM 对象的智能指针外，ATL 还为纯旧 C++ 对象定义了智能指针和智能指针集合。 在经典 Windows 编程中，这些类型可用于替代 C++ 标准库集合中，，尤其是在不需要代码可移植性时或当不需要混合的编程模型的 C++ 标准库和 atl。   
+### <a name="atl-smart-pointers-for-poco-objects"></a>POCO 对象的 ATL 智能指针
+
+除 COM 对象的智能指针外，ATL 还为纯旧 C++ 对象定义了智能指针和智能指针集合。 在经典 Windows 编程中，这些类型可用于替代 C++ 标准库集合中，，尤其是在不需要代码可移植性时或当不需要混合的编程模型的 C++ 标准库和 atl。   
   
  [CAutoPtr 类](../atl/reference/cautoptr-class.md)  
  通过转移副本所有权增强唯一所有权的智能指针。 等同于已弃用的 `std::auto_ptr` 类。  

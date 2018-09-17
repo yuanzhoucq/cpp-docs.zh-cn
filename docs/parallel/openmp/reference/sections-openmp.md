@@ -1,5 +1,5 @@
 ---
-title: 部分 (OpenMP) |Microsoft 文档
+title: 部分 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708027"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-标识要作为被除数所有线程间的代码部分。  
+标识代码段来分担所有线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +39,15 @@ ms.locfileid: "33692072"
 }  
 ```  
   
+## <a name="arguments"></a>自变量
+
+*子句*<br/>
+（可选）零个或多个子句。 请参阅支持的子句的列表的备注部分**各节**。
+
 ## <a name="remarks"></a>备注  
- 其中，  
+ **各节**指令可以包含零个或多**部分**指令。  
   
- `clause`（可选）  
- 零个或多个子句。 请参阅支持的子句列表的备注部分**部分**。  
-  
-## <a name="remarks"></a>备注  
- **部分**指令都可以包含零个或多**部分**指令。  
-  
- **部分**指令支持以下 OpenMP 子句：  
+ **各节**指令支持以下 OpenMP 子句：  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   

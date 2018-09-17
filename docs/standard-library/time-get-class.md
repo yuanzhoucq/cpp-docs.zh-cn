@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102741"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704869"
 ---
 # <a name="timeget-class"></a>time_get 类
 
@@ -69,10 +69,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*  
+*CharType*<br/>
 在程序中用于对字符进行编码的类型。
 
-*InputIterator*  
+*InputIterator*<br/>
 从中读取时间值的迭代器。
 
 ## <a name="remarks"></a>备注
@@ -320,19 +320,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -371,19 +371,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
 
-*ptm*  
+*ptm*<br/>
 指向要存储月份信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -414,19 +414,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -465,19 +465,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储的工作日信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -508,19 +508,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储的年份信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -563,31 +563,31 @@ iter_type get(
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 一个输入迭代器，它指示从何处开始转换序列。
 
-*最后一个*  
+*最后一个*<br/>
 一个输入迭代器，它指示在何处结束序列转换。
 
-*iosbase*  
+*iosbase*<br/>
 流。
 
-*state*  
+*state*<br/>
 为流状态设置适当的位掩码元素以指示错误。
 
-*ptm*  
+*ptm*<br/>
 一个指针，它指向要存储时间的时间结构。
 
-*fmt*  
+*fmt*<br/>
 一个转换说明符字符。
 
-*mod*  
+*mod*<br/>
 一个可选修饰符字符。
 
-*fmt_first*  
+*fmt_first*<br/>
 指向格式指令开始的位置。
 
-*fmt_last*  
+*fmt_last*<br/>
 指向格式指令结束的位置。
 
 ### <a name="return-value"></a>返回值
@@ -620,19 +620,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -714,19 +714,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
 
-*ptm*  
+*ptm*<br/>
 指向要存储月份信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -806,19 +806,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -887,19 +887,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储的工作日信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -964,19 +964,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
+*first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
+*最后一个*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
+*iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
+*state*<br/>
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
+*ptm*<br/>
 指向要存储的年份信息的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1050,7 +1050,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*refs*  
+*refs*<br/>
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注

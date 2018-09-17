@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9ee255afd70ff789a1d6fb833253b7114d9ad3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711394"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 `CMFCToolBar`类相似[CToolBar 类](../../mfc/reference/ctoolbar-class.md)，但为用户界面功能提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。
@@ -563,8 +563,8 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定要添加的命令。  
+*uiCmd*<br/>
+[in]指定要添加的命令。  
   
 ### <a name="remarks"></a>备注  
  打开菜单时，会始终显示基本命令。 当用户选择要查看最近使用的命令，此方法是有意义。  
@@ -579,8 +579,8 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCommand*  
- 指定命令计数器递增。  
+*uiCommand*<br/>
+[in]指定命令计数器递增。  
   
 ### <a name="remarks"></a>备注  
  当用户选择菜单项时，框架将调用此方法。  
@@ -603,23 +603,23 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- 资源 ID 加载带有图像的工具栏。  
+*uiResID*<br/>
+[in]资源 ID 加载带有图像的工具栏。  
   
- [in]*uiBmpResID*  
- 与工具栏图像的位图的资源 ID。  
+*uiBmpResID*<br/>
+[in]与工具栏图像的位图的资源 ID。  
   
- [in]*uiColdResID*  
- 使用"冷"工具栏图像的位图的资源 ID。  
+*uiColdResID*<br/>
+[in]使用"冷"工具栏图像的位图的资源 ID。  
   
- [in]*uiMenuResID*  
- 菜单图像的位图的资源 ID。  
+*uiMenuResID*<br/>
+[in]菜单图像的位图的资源 ID。  
   
- [in]*uiDisabledResID*  
- 使用禁用的工具栏图像的位图的资源 ID。  
+*uiDisabledResID*<br/>
+[in]使用禁用的工具栏图像的位图的资源 ID。  
   
- [in]*uiMenuDisabledResID*  
- 已禁用的菜单图像的位图的资源 ID。  
+*uiMenuDisabledResID*<br/>
+[in]已禁用的菜单图像的位图的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 TRUEFalse *uiResID*或*uiBmpResID*未指定有效的资源，或出现其他错误。  
@@ -709,14 +709,14 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 一个布尔值，指定是否 dim 处于非活动状态的图像。 如果此参数为 TRUE，灰显处于非活动状态的图像。 否则，处于非活动状态的图像未变暗。  
+*bEnable*<br/>
+[in]一个布尔值，指定是否 dim 处于非活动状态的图像。 如果此参数为 TRUE，灰显处于非活动状态的图像。 否则，处于非活动状态的图像未变暗。  
   
- [in]*nGrayImagePercentage*  
- 指定处于非活动状态的图像的亮度百分比。 如果*bEnable*为 FALSE 时，将忽略此值。  
+*nGrayImagePercentage*<br/>
+[in]指定处于非活动状态的图像的亮度百分比。 如果*bEnable*为 FALSE 时，将忽略此值。  
   
- [in]*bRedrawAllToolbars*  
- 一个布尔值，该值指定是否在应用程序中重绘所有工具栏。 如果此参数为 TRUE，则此方法重绘所有工具栏。  
+*bRedrawAllToolbars*<br/>
+[in]一个布尔值，该值指定是否在应用程序中重绘所有工具栏。 如果此参数为 TRUE，则此方法重绘所有工具栏。  
   
 ### <a name="remarks"></a>备注  
  如果*bEnable*为 TRUE，框架将使用*nGrayImagePercentage*与常规映像生成处于非活动状态的图像。 否则，必须通过使用提供的非活动状态的图像集[CMFCToolBar::GetColdImages](#getcoldimages)方法。 默认情况下，将禁用此选项。  
@@ -731,8 +731,8 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向工具栏按钮对象的指针。  
+*pButton*<br/>
+[in]指向工具栏按钮对象的指针。  
   
 ### <a name="return-value"></a>返回值  
  索引*pButton*的工具栏按钮; 否则为-1 指定的按钮不在此工具栏上的内部列表中。  
@@ -747,11 +747,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- 要延伸到父帧的大小工具栏，则为 TRUE。  
+*bStretch*<br/>
+[in]要延伸到父帧的大小工具栏，则为 TRUE。  
   
- [in]*bHorz*  
- 为 TRUE，则水平; 定位工具栏如果为 FALSE，则要垂直方向的工具栏。  
+*bHorz*<br/>
+[in]为 TRUE，则水平; 定位工具栏如果为 FALSE，则要垂直方向的工具栏。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，它指定工具栏的大小。  
@@ -784,8 +784,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bVertDock*  
- 为 TRUE，则指定垂直; 停靠工具栏为 FALSE，则指定水平停靠工具栏。  
+*bVertDock*<br/>
+[in]为 TRUE，则指定垂直; 停靠工具栏为 FALSE，则指定水平停靠工具栏。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，它指定在工具栏上的按钮的总体大小。  
@@ -887,11 +887,11 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIDFind*  
- 指定命令 id。  
+*nIDFind*<br/>
+[in]指定命令 id。  
   
- [in]*iIndexFirst*  
- 指定要从启动的初始索引。  
+*iIndexFirst*<br/>
+[in]指定要从启动的初始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则工具栏按钮的从零开始的索引如果没有具有指定 ID 的按钮为-1  
@@ -912,14 +912,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 指向工具栏的父窗口的指针。  
+*pParentWnd*<br/>
+[in]指向工具栏的父窗口的指针。  
   
- [in]*dwStyle*  
- Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK for 样式的列表中。  
+*dwStyle*<br/>
+[in]Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)Windows SDK for 样式的列表中。  
   
- [in]*nID*  
- 子窗口的工具栏的 ID。  
+*nID*<br/>
+[in]子窗口的工具栏的 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -943,20 +943,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 指向工具栏的父窗口的指针。  
+*pParentWnd*<br/>
+[in]指向工具栏的父窗口的指针。  
   
- [in]*dwCtrlStyle*  
- 用于创建嵌入的控件条对象的其他样式。  
+*dwCtrlStyle*<br/>
+[in]用于创建嵌入的控件条对象的其他样式。  
   
- [in]*dwStyle*  
- Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)的相应样式的列表。  
+*dwStyle*<br/>
+[in]Styl toolbar。 请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)的相应样式的列表。  
   
- [in]*rcBorders*  
- 一个`CRect`对象，它指定工具栏窗口边框的宽度。  
+*rcBorders*<br/>
+[in]一个`CRect`对象，它指定工具栏窗口边框的宽度。  
   
- [in]*nID*  
- 子窗口的工具栏的 ID。  
+*nID*<br/>
+[in]子窗口的工具栏的 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  
@@ -990,8 +990,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
  必须重新绘制工具栏的一部分时，由框架调用此方法。  
@@ -1011,20 +1011,20 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*pButton*  
- 指向要绘制一个按钮的指针。  
+*pButton*<br/>
+[in]指向要绘制一个按钮的指针。  
   
- [in]*pImages*  
- 指向工具栏图像的指针。  
+*pImages*<br/>
+[in]指向工具栏图像的指针。  
   
- [in]*bHighlighted*  
- 如果该按钮将突出显示; 则为 TRUE否则为 FALSE。  
+*bHighlighted*<br/>
+[in]如果该按钮将突出显示; 则为 TRUE否则为 FALSE。  
   
- [in]*bDrawDisabledImages*  
- 如果禁用的按钮为灰显; 则为 TRUE否则为 FALSE。  
+*bDrawDisabledImages*<br/>
+[in]如果禁用的按钮为灰显; 则为 TRUE否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  如果重新绘制按钮; 则为 TRUE如果按钮处于隐藏状态，则为 FALSE。  
@@ -1045,14 +1045,14 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rect*  
- 该分隔符在绘制，以像素为单位的位置的绑定矩形。  
+*rect*<br/>
+[in]该分隔符在绘制，以像素为单位的位置的绑定矩形。  
   
- [in]*bHorz*  
- 如果分隔符是水平的则返回 FALSE 如果分隔符是垂直的则为 TRUE。  
+*bHorz*<br/>
+[in]如果分隔符是水平的则返回 FALSE 如果分隔符是垂直的则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  [CMFCToolBar::DoPaint](#dopaint)调用此方法为每个[CMFCToolBar::DrawSeparator](#drawseparator)对象，它具有 TBBS_SEPARATOR 样式，而不是调用[CMFCToolBar::DrawButton](#drawbutton)对于那些按钮。  
@@ -1078,20 +1078,20 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 启用或禁用自定义按钮。  
+*bEnable*<br/>
+[in]启用或禁用自定义按钮。  
   
- [in]*iCustomizeCmd*  
- 自定义按钮的命令 ID。  
+*iCustomizeCmd*<br/>
+[in]自定义按钮的命令 ID。  
   
- [in]*strCustomizeText*  
- 自定义按钮的文本标签。  
+*strCustomizeText*<br/>
+[in]自定义按钮的文本标签。  
   
- [in]*uiCustomizeTextResId*  
- 自定义按钮标签字符串资源 ID。  
+*uiCustomizeTextResId*<br/>
+[in]自定义按钮标签字符串资源 ID。  
   
- [in]*bQuickCustomize*  
- 启用或禁用**添加或删除按钮**下拉从按钮菜单上的选项。  
+*bQuickCustomize*<br/>
+[in]启用或禁用**添加或删除按钮**下拉从按钮菜单上的选项。  
   
 ### <a name="remarks"></a>备注  
  如果*iCustomizeCmd*为-1，则框架显示自定义按钮时工具栏区域中不适合多个工具栏按钮。 按钮显示双精度的向左箭头或 v 形图标，指示有多个按钮。  
@@ -1108,8 +1108,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwAlignment*  
- 指定要启用的扩展对齐方式。  
+*dwAlignment*<br/>
+[in]指定要启用的扩展对齐方式。  
   
 ### <a name="remarks"></a>备注  
  此方法扩展基类实现[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)，通过设置`CBasePane::m_dwControlBarStyle`AFX_CBRS_FLOAT 到的数据成员。 然后，此方法将传递*dwAlignment*基类实现。  
@@ -1122,8 +1122,8 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 若要启用大图标，则返回 FALSE 来禁用大图标，则为 TRUE。  
+*bEnable*<br/>
+[in]若要启用大图标，则返回 FALSE 来禁用大图标，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，启用大图标。  
@@ -1136,8 +1136,8 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 若要启用快速自定义项，则返回 FALSE 来禁用快速自定义，则为 TRUE。  
+*bEnable*<br/>
+[in]若要启用快速自定义项，则返回 FALSE 来禁用快速自定义，则为 TRUE。  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  启用或禁用命令反射。  
@@ -1147,8 +1147,8 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则启用命令反射;如果为 FALSE 禁用命令反射。  
+*bEnable*<br/>
+[in]为 TRUE，则启用命令反射;如果为 FALSE 禁用命令反射。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以允许命令包含嵌入的控件，如组合框的工具栏按钮的反射。  
@@ -1177,8 +1177,8 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hwnd*  
- 若要查找的窗口句柄。  
+*hwnd*<br/>
+[in]若要查找的窗口句柄。  
   
 ### <a name="return-value"></a>返回值  
  一个指向`CMFCToolBar`对象，其中包含给定的窗口句柄，则为 NULL，如果没有相应的`CMFCToolBar`对象存在。  
@@ -1227,8 +1227,8 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 指定要返回的按钮的索引。  
+*iIndex*<br/>
+[in]指定要返回的按钮的索引。  
   
 ### <a name="return-value"></a>返回值  
  工具栏按钮，如果它存在，则指向的指针或者，如果没有此类按钮，则为 NULL。  
@@ -1245,17 +1245,17 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 在工具栏上的按钮列表中指定的按钮的索引。  
+*nIndex*<br/>
+[in]在工具栏上的按钮列表中指定的按钮的索引。  
   
- [out]*nID*  
- 按钮的命令 ID。  
+*nID*<br/>
+[out]按钮的命令 ID。  
   
- [out]*nStyle*  
- 按钮的样式。  
+*nStyle*<br/>
+[out]按钮的样式。  
   
- [out]*iImage*  
- 为按钮的图像的索引。  
+*iImage*<br/>
+[out]为按钮的图像的索引。  
   
 ### <a name="remarks"></a>备注  
  `GetButtonInfo`方法中指定索引处查找工具栏按钮，并检索按钮的命令 ID、 样式和图像索引。  
@@ -1283,8 +1283,8 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定工具栏按钮的索引。  
+*nIndex*<br/>
+[in]指定工具栏按钮的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个值，指定工具栏按钮的样式。 . 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)有关可能的样式的列表。  
@@ -1304,11 +1304,11 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 工具栏按钮的索引。  
+*nIndex*<br/>
+[in]工具栏按钮的索引。  
   
- [out]*rString*  
- 工具栏按钮的标签文本。  
+*rString*<br/>
+[out]工具栏按钮的标签文本。  
   
 ### <a name="return-value"></a>返回值  
  工具栏按钮的标签文本。  
@@ -1352,11 +1352,11 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 按钮的命令 ID。  
+*uiCmd*<br/>
+[in]按钮的命令 ID。  
   
- [out]*listButtons*  
- 对引用[CObList 类](../../mfc/reference/coblist-class.md)对象，它接收的工具栏按钮列表。  
+*listButtons*<br/>
+[out]对引用[CObList 类](../../mfc/reference/coblist-class.md)对象，它接收的工具栏按钮列表。  
   
 ### <a name="return-value"></a>返回值  
  具有指定的命令 ID 的按钮的数目  
@@ -1394,8 +1394,8 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 指定按钮的命令 ID。  
+*uiID*<br/>
+[in]指定按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  在共享的映像列表中的工具栏图像的索引。  
@@ -1437,8 +1437,8 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*pIndex*  
- 工具栏按钮集合中接收的按钮的索引。  
+*pIndex*<br/>
+[out]工具栏按钮集合中接收的按钮的索引。  
   
 ### <a name="return-value"></a>返回值  
  指向显示其子菜单或 NULL 如果没有菜单显示它的子菜单的菜单按钮对象的指针。  
@@ -1573,11 +1573,11 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 若要检索的工作区的按钮的索引。  
+*nIndex*<br/>
+[in]若要检索的工作区的按钮的索引。  
   
- [out]*lpRect*  
- 指向接收客户端区域的区域的 RECT 对象的指针。  
+*lpRect*<br/>
+[out]指向接收客户端区域的区域的 RECT 对象的指针。  
   
 ### <a name="remarks"></a>备注  
  *LpRect*参数不能为 NULL。 如果提供的索引处不存在任何按钮*lpRect*接收初始化为零的 RECT 对象。  
@@ -1590,8 +1590,8 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定工具栏按钮的索引。  
+*nIndex*<br/>
+[in]指定工具栏按钮的索引。  
   
 ### <a name="return-value"></a>返回值  
  工具栏按钮; 的命令 ID或如果不存在具有指定索引的按钮为零。  
@@ -1606,11 +1606,11 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定工具栏按钮的索引。  
+*nIndex*<br/>
+[in]指定工具栏按钮的索引。  
   
- [out]*lpRect*  
- 一个指向`CRect`对象，它接收图像边框的坐标。  
+*lpRect*<br/>
+[out]一个指向`CRect`对象，它接收图像边框的坐标。  
   
 ### <a name="remarks"></a>备注  
  `CRect`到对象*lpRect*点设置为 0，如果不存在的指定索引处的按钮。  
@@ -1904,8 +1904,8 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 要在工作区坐标中测试的点。  
+*点*<br/>
+[in]要在工作区坐标中测试的点。  
   
 ### <a name="return-value"></a>返回值  
  位于指定的位置，则为-1 如果没有此类或按钮的索引是按钮的一个分隔符。  
@@ -1925,11 +1925,11 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*按钮*  
- 指定要插入的按钮。  
+*按钮*<br/>
+[in]指定要插入的按钮。  
   
- [in]*iInsertAt*  
- 指定要插入的按钮的从零开始的位置。  
+*iInsertAt*<br/>
+[in]指定要插入的按钮的从零开始的位置。  
   
 ### <a name="return-value"></a>返回值  
  插入按钮或-1 如果检测到错误发生位置。  
@@ -1947,8 +1947,8 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iInsertAt*  
- 指定要插入的分隔符处的从零开始的位置。 此参数必须大于 0。  
+*iInsertAt*<br/>
+[in]指定要插入的分隔符处的从零开始的位置。 此参数必须大于 0。  
   
 ### <a name="return-value"></a>返回值  
  插入分隔符或-1 如果检测到错误发生位置。  
@@ -1968,8 +1968,8 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 在工具栏中按钮的从零开始的索引。  
+*nIndex*<br/>
+[in]在工具栏中按钮的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个指向`CMFCToolBarButton`位于提供的索引或为空的如果不存在任何此类对象的对象。  
@@ -2022,8 +2022,8 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定要检查的命令。  
+*uiCmd*<br/>
+[in]指定要检查的命令。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的命令所属的基本命令; 列表则为 TRUE否则为 FALSE。  
@@ -2054,8 +2054,8 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iButton*  
- 指定工具栏按钮的索引。  
+*iButton*<br/>
+[in]指定工具栏按钮的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮将突出显示; 则为 TRUE否则为 FALSE。  
@@ -2070,8 +2070,8 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定要检查的命令。  
+*uiCmd*<br/>
+[in]指定要检查的命令。  
   
 ### <a name="return-value"></a>返回值  
  如果允许指定的命令; 则为 TRUE否则为 FALSE。  
@@ -2089,8 +2089,8 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定要检查的命令。  
+*uiCmd*<br/>
+[in]指定要检查的命令。  
   
 ### <a name="return-value"></a>返回值  
  如果很少使用指定的命令; 则为 TRUE否则为 FALSE。  
@@ -2131,8 +2131,8 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向工具栏按钮。  
+*pButton*<br/>
+[in]指向工具栏按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的按钮正被拖动; 则为 TRUE否则为 FALSE。  
@@ -2187,8 +2187,8 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向按钮。  
+*pButton*<br/>
+[in]指向按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果已从按钮发送的最后一个命令为 TRUE， *pButton*指定; 否则为 FALSE。  
@@ -2272,23 +2272,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- 用于引用热工具栏图像的位图的资源 ID。  
+*uiResID*<br/>
+[in]用于引用热工具栏图像的位图资源 ID。  
   
- [in]*uiColdResID*  
- 用于引用冷工具栏图像的位图的资源 ID。  
+*uiColdResID*<br/>
+[in]用于引用冷工具栏图像的位图资源 ID。  
   
- [in]*uiMenuResID*  
- 用于引用常规菜单图像的位图的资源 ID。  
+*uiMenuResID*<br/>
+[in]用于引用常规菜单图像的位图资源 ID。  
   
- [in]*阻止*  
- 为 TRUE，则锁定工具栏;否则为 FALSE。  
+*被阻止*<br/>
+[in]为 TRUE，则锁定工具栏;否则为 FALSE。  
   
- [in]*uiDisabledResID*  
- 用于引用禁用工具栏图像的位图的资源 ID。  
+*uiDisabledResID*<br/>
+[in]用于引用禁用的工具栏图像的位图资源 ID。  
   
- [in]*uiMenuDisabledResID*  
- 用于引用禁用菜单图像的位图的资源 ID。  
+*uiMenuDisabledResID*<br/>
+[in]用于引用禁用的菜单图像的位图资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*params*  
- [in]*阻止*  
+*params*<br/>
+[in][in]*阻止*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2337,8 +2337,8 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 指定 Windows 注册表项的相对路径。  
+*lpszProfileName*<br/>
+[in]指定 Windows 注册表项的相对路径。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2359,14 +2359,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 指定 Windows 注册表项的相对路径。  
+*lpszProfileName*<br/>
+[in]指定 Windows 注册表项的相对路径。  
   
- [in]*nIndex*  
- 指定工具栏的控件 ID。  
+*nIndex*<br/>
+[in]指定工具栏的控件 ID。  
   
- [in]*uiID*  
- 指定工具栏的资源 ID。  
+*uiID*<br/>
+[in]指定工具栏的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2389,26 +2389,26 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- 工具栏资源 ID。  
+*uiResID*<br/>
+[in]工具栏资源 ID。  
   
- [in]*uiColdResID*  
- 用于引用冷工具栏图像的位图的资源 ID。  
+*uiColdResID*<br/>
+[in]用于引用冷工具栏图像的位图资源 ID。  
   
- [in]*uiMenuResID*  
- 用于引用常规菜单图像的位图的资源 ID。  
+*uiMenuResID*<br/>
+[in]用于引用常规菜单图像的位图资源 ID。  
   
- [in]*阻止*  
- 一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 *，则返回 TRUE*，工具栏处于锁定状态。 否则，未锁定工具栏。  
+*被阻止*<br/>
+[in]一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 *，则返回 TRUE*，工具栏处于锁定状态。 否则，未锁定工具栏。  
   
- [in]*uiDisabledResID*  
- 用于引用禁用工具栏图像的位图的资源 ID。  
+*uiDisabledResID*<br/>
+[in]用于引用禁用的工具栏图像的位图资源 ID。  
   
- [in]*uiMenuDisabledResID*  
- 用于引用禁用菜单图像的位图的资源 ID。  
+*uiMenuDisabledResID*<br/>
+[in]用于引用禁用的菜单图像的位图资源 ID。  
   
- [in]*uiHotResID*  
- 用于引用热工具栏图像的位图的资源 ID。  
+*uiHotResID*<br/>
+[in]用于引用热工具栏图像的位图资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2433,14 +2433,14 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiToolbarResID*  
- 工具栏资源 ID。  
+*uiToolbarResID*<br/>
+[in]工具栏资源 ID。  
   
- [in]*params*  
- 对引用`CMFCToolBarInfo`对象，包含工具栏图像的资源 Id。  
+*params*<br/>
+[in]对引用`CMFCToolBarInfo`对象，包含工具栏图像的资源 Id。  
   
- [in]*阻止*  
- 一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 TRUE，已锁定工具栏。 否则，未锁定工具栏。  
+*被阻止*<br/>
+[in]一个布尔值，该值指定工具栏或不处于锁定状态。 如果此参数为 TRUE，已锁定工具栏。 否则，未锁定工具栏。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2481,11 +2481,11 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 未使用。  
+*pButton*<br/>
+[in]未使用。  
   
- [in]*dropEffect*  
- 未使用。  
+*dropEffect*<br/>
+[in]未使用。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2499,8 +2499,8 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iHot*  
- 指定处于选中状态，工具栏按钮的索引或-1，如果没有工具栏按钮处于选中状态。  
+*iHot*<br/>
+[in]指定处于选中状态，工具栏按钮的索引或-1，如果没有工具栏按钮处于选中状态。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在用户选择了一个按钮在工具栏上的进程通知。  
@@ -2522,8 +2522,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
  [CMFCToolBar::DoPaint](#dopaint)已填充的一个工具栏背景时调用此方法。 默认实现不执行任何操作。  
@@ -2573,8 +2573,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向要设置其文本的按钮。  
+*pButton*<br/>
+[in]指向要设置其文本的按钮。  
   
 ### <a name="return-value"></a>返回值  
  已成功还原，则返回 TRUE 如果文本;否则为 FALSE。  
@@ -2594,11 +2594,11 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向为其工具提示是要显示的工具栏按钮。  
+*pButton*<br/>
+[in]指向为其工具提示是要显示的工具栏按钮。  
   
- [out]*strTTText*  
- 对引用`CString`对象，它接收的工具提示文本。  
+*strTTText*<br/>
+[out]对引用`CString`对象，它接收的工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE *strTTText*填充工具提示文本; 否则为 FALSE。  
@@ -2627,8 +2627,8 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 在工具栏上的按钮的指针。  
+*pButton*<br/>
+[in]在工具栏上的按钮的指针。  
   
 ### <a name="return-value"></a>返回值  
  此方法应始终返回 TRUE。 MFC 在内部使用 FALSE 值。  
@@ -2656,8 +2656,8 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 指定删除按钮的从零开始索引。  
+*iIndex*<br/>
+[in]指定删除按钮的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，或 FALSE 的指定的索引是否无效或索引引用则为 TRUE**自定义**按钮。  
@@ -2678,14 +2678,14 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 指定注册表项的状态信息所在的位置。  
+*lpszProfileName*<br/>
+[in]指定注册表项的状态信息所在的位置。  
   
- [in]*nIndex*  
- 工具栏控件 ID。  
+*nIndex*<br/>
+[in]工具栏控件 ID。  
   
- [in]*uiID*  
- 工具栏资源 ID。 如果此参数为-1，则此方法使用[CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)方法来检索资源 id。  
+*uiID*<br/>
+[in]工具栏资源 ID。 如果此参数为-1，则此方法使用[CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)方法来检索资源 id。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 要替换为按钮的命令 ID。  
+*uiCmd*<br/>
+[in]要替换为按钮的命令 ID。  
   
- [in]*按钮*  
- 对引用`CMFCToolBarButton`插入。  
+*按钮*<br/>
+[in]对引用`CMFCToolBarButton`插入。  
   
- [in]*球*  
- 一个布尔值，指定是否要替换具有指定的命令 ID 的所有按钮*uiCmd*。 如果此参数为 TRUE，将替换具有指定的命令 ID 的所有按钮。 否则，将替换为第一个按钮。  
+*球*<br/>
+[in]一个布尔值，指定是否要替换具有指定的命令 ID 的所有按钮*uiCmd*。 如果此参数为 TRUE，将替换具有指定的命令 ID 的所有按钮。 否则，将替换为第一个按钮。  
   
 ### <a name="return-value"></a>返回值  
  替换为的按钮的数目。 如果不存在一个具有指定的命令 ID 的按钮在工具栏上，此方法将返回 0。  
@@ -2805,14 +2805,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 指定 Windows 注册表项的相对路径。  
+*lpszProfileName*<br/>
+[in]指定 Windows 注册表项的相对路径。  
   
- [in]*nIndex*  
- 工具栏控件 ID。  
+*nIndex*<br/>
+[in]工具栏控件 ID。  
   
- [in]*uiID*  
- 工具栏资源 ID。  
+*uiID*<br/>
+[in]工具栏资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2828,8 +2828,8 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lstCommands*  
- 对引用`CList`对象，其中包含一系列命令。  
+*lstCommands*<br/>
+[in]对引用`CList`对象，其中包含一系列命令。  
   
 ### <a name="remarks"></a>备注  
  打开菜单时，会始终显示基本命令。 当用户选择要查看最近使用的命令，此方法是有意义。  
@@ -2850,17 +2850,17 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 其属性设置的按钮的从零开始的索引。  
+*nIndex*<br/>
+[in]其属性设置的按钮的从零开始的索引。  
   
- [in]*nID*  
- 按钮的命令 ID。  
+*nID*<br/>
+[in]按钮的命令 ID。  
   
- [in]*nStyle*  
- 按钮的样式。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)可用工具栏按钮样式的列表。  
+*nStyle*<br/>
+[in]按钮的样式。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)可用工具栏按钮样式的列表。  
   
- [in]*iImage*  
- 从零开始的图像的按钮的索引 （也就是说，集合中的工具栏图像索引）。  
+*iImage*<br/>
+[in]从零开始的图像的按钮的索引 （也就是说，集合中的工具栏图像索引）。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置工具栏按钮的属性。  
@@ -2880,14 +2880,14 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpIDArray*  
- 指向按钮的命令 Id，要插入数组的指针。  
+*lpIDArray*<br/>
+[in]指向按钮的命令 Id，要插入数组的指针。  
   
- [in]*nIDCount*  
- 中的项数*lpIDArray*。  
+*nIDCount*<br/>
+[in]中的项数*lpIDArray*。  
   
- [in]*bRemapImages*  
- 一个布尔值，该值指定是否要将现有的按钮图像关联的插入按钮。 如果此参数为 TRUE，将重新映射图像。  
+*bRemapImages*<br/>
+[in]一个布尔值，该值指定是否要将现有的按钮图像关联的插入按钮。 如果此参数为 TRUE，将重新映射图像。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -2907,11 +2907,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 设置其样式是工具栏按钮的从零开始的索引。  
+*nIndex*<br/>
+[in]设置其样式是工具栏按钮的从零开始的索引。  
   
- [in]*nStyle*  
- 按钮的样式。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)可用工具栏按钮样式的列表。  
+*nStyle*<br/>
+[in]按钮的样式。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)可用工具栏按钮样式的列表。  
   
 ### <a name="remarks"></a>备注  
  此方法移除 TBBS_PRESSED 样式，如果*nStyle*是 TBBS_DISABLED，因为用户不能单击禁用的按钮。  
@@ -2926,11 +2926,11 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 工具栏按钮的索引。  
+*nIndex*<br/>
+[in]工具栏按钮的索引。  
   
- [in]*lpszText*  
- 工具栏按钮的文本标签。 必须为非 NULL。  
+*lpszText*<br/>
+[in]工具栏按钮的文本标签。 必须为非 NULL。  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 TRUE否则为 FALSE。  
@@ -2948,11 +2948,11 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nStartCount*  
- 指定与框架显示仅基本和最近使用过的命令之前，必须执行的命令的次数。  
+*nStartCount*<br/>
+[in]指定与框架显示仅基本和最近使用过的命令之前，必须执行的命令的次数。  
   
- [in]*nMinUsagePercentage*  
- 必须执行命令视为最近使用过的命令的时间的百分比。  
+*nMinUsagePercentage*<br/>
+[in]必须执行命令视为最近使用过的命令的时间的百分比。  
   
 ### <a name="return-value"></a>返回值  
  False *nMinUsagePercentage*等于或大于 100; 否则为 TRUE。  
@@ -2970,8 +2970,8 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 一个布尔值，该值指定是否启用或禁用自定义模式。 此参数设置为 true 可启用自定义模式或 FALSE 以禁用它。  
+*bSet*<br/>
+[in]一个布尔值，该值指定是否启用或禁用自定义模式。 此参数设置为 true 可启用自定义模式或 FALSE 以禁用它。  
   
 ### <a name="return-value"></a>返回值  
  TRUE 如果调用此方法将更改的自定义模式;否则为 FALSE。  
@@ -2987,8 +2987,8 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bGrayDisabledButtons*  
- 一个布尔值，该值指定如何显示按钮不可用。 如果此参数为 TRUE，框架将使这些按钮变灰。 否则，框架将使用按钮不可用的映像的集合。  
+*bGrayDisabledButtons*<br/>
+[in]一个布尔值，该值指定如何显示按钮不可用。 如果此参数为 TRUE，框架将使这些按钮变灰。 否则，框架将使用按钮不可用的映像的集合。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，无法使用的按钮为灰显。  
@@ -3001,8 +3001,8 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*cyHeight*  
- 工具栏上，以像素为单位的高度。  
+*cyHeight*<br/>
+[in]工具栏上，以像素为单位的高度。  
   
 ### <a name="remarks"></a>备注  
  此方法重绘工具栏后设置的高度。  
@@ -3041,8 +3041,8 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShowHotBorder*  
- 一个布尔值，该值指定是否热跟踪工具栏按钮。 如果此参数为 TRUE 时，工具栏热跟踪其按钮。 否则为工具栏不会不热跟踪其按钮。  
+*bShowHotBorder*<br/>
+[in]一个布尔值，该值指定是否热跟踪工具栏按钮。 如果此参数为 TRUE 时，工具栏热跟踪其按钮。 否则为工具栏不会不热跟踪其按钮。  
   
 ### <a name="remarks"></a>备注  
  如果按钮是热跟踪，该框架，当鼠标移过它突出显示按钮。 默认情况下，每个工具栏热跟踪其按钮。  
@@ -3057,8 +3057,8 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrText*  
- 指定工具栏按钮的热跟踪的文本颜色。  
+*clrText*<br/>
+[in]指定工具栏按钮的热跟踪的文本颜色。  
   
 ### <a name="remarks"></a>备注  
  热跟踪工具栏按钮有关的详细信息，请参阅[CMFCToolBar::GetHotBorder](#gethotborder)并[CMFCToolBar::SetHotBorder](#sethotborder)。  
@@ -3083,8 +3083,8 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bLargeIcons*  
- 一个布尔值，该值指定要使用哪个图标。 如果此参数为 TRUE，框架将显示大图标。 否则，框架将显示常规图标。  
+*bLargeIcons*<br/>
+[in]一个布尔值，该值指定要使用哪个图标。 如果此参数为 TRUE，框架将显示大图标。 否则，框架将显示常规图标。  
   
 ### <a name="remarks"></a>备注  
  框架调用此方法，当用户更改的状态**大图标**中的复选框**选项**选项卡**自定义**对话框。 此方法调整应用程序中的所有工具栏的都大小。  
@@ -3104,11 +3104,11 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*sizeButton*  
- 指定锁定的工具栏按钮的大小。  
+*sizeButton*<br/>
+[in]指定锁定的工具栏按钮的大小。  
   
- [in]*sizeImage*  
- 指定锁定的工具栏图像的大小。  
+*sizeImage*<br/>
+[in]指定锁定的工具栏图像的大小。  
   
  *bDontScale*  
  指定是否要缩放锁定工具栏图像在高 DPI 模式下。  
@@ -3140,11 +3140,11 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*sizeButton*  
- 以像素为单位指定工具栏按钮的大小。  
+*sizeButton*<br/>
+[in]以像素为单位指定工具栏按钮的大小。  
   
- [in]*sizeImage*  
- 以像素为单位指定的工具栏图像的大小。  
+*sizeImage*<br/>
+[in]以像素为单位指定的工具栏图像的大小。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，菜单按钮和其映像具有未定义的大小。  
@@ -3161,8 +3161,8 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lstCommands*  
- 对引用`CList`对象，其中包含不能由用户执行的命令。  
+*lstCommands*<br/>
+[in]对引用`CList`对象，其中包含不能由用户执行的命令。  
   
 ### <a name="remarks"></a>备注  
  调用此方法将使用户无法选择某些命令。 例如，你可能想要防止用户选择出于安全原因某些命令。 请参阅有关示例，请使用此方法的 MDITabsDemo 和 MenuSubSet 示例。  
@@ -3203,8 +3203,8 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bPermament*  
- 一个布尔值，该值指定用户是否可以关闭工具栏。 如果此参数为 TRUE，用户不能关闭工具栏。 否则，用户可以关闭工具栏。  
+*bPermament*<br/>
+[in]一个布尔值，该值指定用户是否可以关闭工具栏。 如果此参数为 TRUE，用户不能关闭工具栏。 否则，用户可以关闭工具栏。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，用户可以关闭每个工具栏。  
@@ -3219,8 +3219,8 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bValue*  
- 如果此参数为 TRUE，则父框架将命令发送到工具栏。 否则，所有者将命令发送到工具栏。  
+*其中 bValue*<br/>
+[in]如果此参数为 TRUE，则父框架将命令发送到工具栏。 否则，所有者将命令发送到工具栏。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，父框架将命令发送到工具栏。 调用[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)方法，以确定是否与父框架或所有者将命令发送到工具栏。  
@@ -3233,8 +3233,8 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bValue*  
- 如果此参数为 TRUE，框架将显示工具提示。 否则，该框架将隐藏工具提示。  
+*其中 bValue*<br/>
+[in]如果此参数为 TRUE，框架将显示工具提示。 否则，该框架将隐藏工具提示。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，框架显示工具提示。  
@@ -3249,8 +3249,8 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBrotherToolbar*  
- 指向同级工具栏的指针。  
+*pBrotherToolbar*<br/>
+[in]指向同级工具栏的指针。  
   
 ### <a name="remarks"></a>备注  
  此方法使**一行上显示按钮**或**两个行显示按钮**用户显示时，将显示的按钮**自定义**弹出菜单。 当你想要使用户能够指定相关的工具栏显示在同一行上或在不同的行上时调用此方法。  
@@ -3269,11 +3269,11 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*sizeButton*  
- 工具栏按钮，以像素为单位的大小。  
+*sizeButton*<br/>
+[in]工具栏按钮，以像素为单位的大小。  
   
- [in]*sizeImage*  
- 工具栏按钮图像，以像素为单位的大小。  
+*sizeImage*<br/>
+[in]工具栏按钮图像，以像素为单位的大小。  
   
 ### <a name="remarks"></a>备注  
  工具栏按钮的默认大小为 23 x 22 像素。 工具栏按钮图像的默认大小为 16 x 15 像素。  
@@ -3292,17 +3292,17 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nBtnIndex*  
- 工具栏按钮在工具栏按钮列表中的从零开始的索引。  
+*nBtnIndex*<br/>
+[in]工具栏按钮在工具栏按钮列表中的从零开始的索引。  
   
- [in]*szText*  
- 指定工具栏按钮的文本标签。  
+*szText*<br/>
+[in]指定工具栏按钮的文本标签。  
   
- [in]*bShowText*  
- 如果此参数为 TRUE，框架将显示的文本标签。 否则，该框架将隐藏的文本标签。  
+*bShowText*<br/>
+[in]如果此参数为 TRUE，框架将显示的文本标签。 否则，该框架将隐藏的文本标签。  
   
- [in]*bShowImage*  
- 如果此参数为 TRUE，框架将显示工具栏按钮图像。 否则，该框架将隐藏工具栏按钮图像。  
+*bShowImage*<br/>
+[in]如果此参数为 TRUE，框架将显示工具栏按钮图像。 否则，该框架将隐藏工具栏按钮图像。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，框架显示的工具栏按钮图像，但不显示工具栏按钮的文本标签。  
@@ -3331,8 +3331,8 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pUserImages*  
- 指向用户定义的图像集合的指针。  
+*pUserImages*<br/>
+[in]指向用户定义的图像集合的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则非零值否则为 0 指定`CMFCToolBarImages`对象无效或者具有不同于默认的映像大小的工具栏图像大小。  
@@ -3356,11 +3356,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nLength*  
- 量 （以像素为单位，按其拉伸窗格）。  
+*nLength*<br/>
+[in]量 （以像素为单位，按其拉伸窗格）。  
   
- [in]*bVert*  
- 如果为 TRUE，垂直拉伸窗格。 如果为 FALSE，水平拉伸窗格。  
+*bVert*<br/>
+[in]如果为 TRUE，垂直拉伸窗格。 如果为 FALSE，水平拉伸窗格。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，它指定工具栏客户端区域的大小。  
@@ -3378,8 +3378,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nChar*  
- 指定虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h  
+*NChar*<br/>
+[in]指定虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h  
   
 ### <a name="return-value"></a>返回值  
  如果指定的键代码可以是 FALSE 不可打印或不对应于有效的键盘快捷方式;如果指定的键代码对应于一个下拉列表菜单选项; 则为 TRUE否则，返回值[CMFCToolBar::ProcessCommand](#processcommand)。  
@@ -3395,8 +3395,8 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 指定更新按钮的从零开始索引。  
+*nIndex*<br/>
+[in]指定更新按钮的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
   
@@ -3413,17 +3413,17 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nWidth*  
- 工具栏的最大宽度。  
+*nWidth*<br/>
+[in]工具栏的最大宽度。  
   
- [in]*nHeight*  
- 工具栏的最大高度。 如果浮动工具栏不使用。  
+*nHeight*<br/>
+[in]工具栏的最大高度。 如果浮动工具栏不使用。  
   
- [in]*pDC*  
- 指向设备上下文的指针。 如果为 NULL，则使用工具栏上的设备上下文。  
+*pDC*<br/>
+[in]指向设备上下文指针。 如果为 NULL，则使用工具栏上的设备上下文。  
   
- [in]*nColumnWidth*  
- 按钮宽度。 如果为-1，则使用当前的宽度。  
+*nColumnWidth*<br/>
+[in]按钮宽度。 如果为-1，则使用当前的宽度。  
   
  [in] m *nRowHeight*  
  按钮高度。 如果为-1，则使用当前的高度。  

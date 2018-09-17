@@ -1,5 +1,5 @@
 ---
-title: -范围 |Microsoft 文档
+title: -范围 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06d699500ba3ea441af61a2e2a5a0da3f96903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47e7525b8c1872616182141d624bff8f94571952
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374419"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712187"
 ---
 # <a name="range"></a>/RANGE
-修改 dumpbin 与其他 dumpbin 选项，如 /RAWDATA 或 /DISASM 一起使用时的输出。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/RANGE:vaMin[,vaMax]  
-```  
-  
-## <a name="flags"></a>Flags  
- **vaMin**  
- 您想要开始的 dumpbin 操作虚拟地址。  
-  
- **vaMax** （可选）  
- 您想要结束的 dumpbin 操作虚拟地址。 如果未指定，dumpbin 将转到文件末尾。  
-  
-## <a name="remarks"></a>备注  
- 若要查看的映像的虚拟地址，用于映射文件映像 （RVA + 基本） **/DISASM**或 **/HEADERS** dumpbin 或在 Visual Studio 调试器中的反汇编窗口的选项。  
-  
-## <a name="example"></a>示例  
- 在此示例中， **/范围**用于修改的显示 **/disasm**选项。 在此示例中，十进制数字的形式表示的起始值和结束值指定为十六进制数。  
-  
-```  
-dumpbin /disasm /range:4219334,0x004061CD t.exe  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [DUMPBIN 选项](../../build/reference/dumpbin-options.md)
+
+修改 dumpbin 与其他 dumpbin 选项，例如 /RAWDATA 或 /DISASM 一起使用时的输出。
+
+## <a name="syntax"></a>语法
+
+```
+/RANGE:vaMin[,vaMax]
+```
+
+## <a name="parameters"></a>参数
+
+*vaMin*<br/>
+要 dumpbin 操作以开始虚拟地址。
+
+*vaMax*<br/>
+（可选）想要结束的 dumpbin 操作虚拟地址。 如果未指定，dumpbin 将转到文件末尾。
+
+## <a name="remarks"></a>备注
+
+若要查看映像的虚拟地址，请使用映射文件 （RVA + Base） 的映像 **/DISASM**或 **/HEADERS** dumpbin 或在 Visual Studio 调试器中的反汇编窗口的选项。
+
+## <a name="example"></a>示例
+
+在此示例中， **/范围**用于修改的显示 **/disasm**选项。 在此示例中，以十进制数表示的起始值和结束值指定为十六进制数。
+
+```
+dumpbin /disasm /range:4219334,0x004061CD t.exe
+```
+
+## <a name="see-also"></a>请参阅
+
+[DUMPBIN 选项](../../build/reference/dumpbin-options.md)

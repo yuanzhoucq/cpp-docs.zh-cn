@@ -1,5 +1,5 @@
 ---
-title: 存根 （STUB) |Microsoft 文档
+title: 存根 （STUB) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 385e073f877a938a3b73fa79036d27cf50c1e4ec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 151d7b425a7f397a05e3a06e9d94489a0c76f899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725109"
 ---
 # <a name="stub"></a>STUB
-生成虚拟设备驱动程序 (VxD) 的模块定义文件中使用时，允许你指定的文件名称包含 IMAGE_DOS_HEADER 结构结构 （在 WINNT 中定义。H) 用于虚拟设备驱动程序 (VxD)，而不是默认标头。  
-  
-```  
-STUB:filename  
-```  
-  
-## <a name="remarks"></a>备注  
- 另一种方法指定*filename*与[/存根](../../build/reference/stub-ms-dos-stub-file-name.md)链接器选项。  
-  
- 存根是有效的模块定义文件中仅在生成 VxD 时。  
-  
-## <a name="see-also"></a>请参阅  
- [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)
+
+生成虚拟设备驱动程序 (VxD) 的模块定义文件中使用时，可以指定文件的名称包含 IMAGE_DOS_HEADER 结构 （WINNT 中定义。H) 若要在虚拟设备驱动程序 (VxD) 中使用而不是默认标头。
+
+```
+STUB:filename
+```
+
+## <a name="remarks"></a>备注
+
+另一种方法指定*文件名*是与[/存根](../../build/reference/stub-ms-dos-stub-file-name.md)链接器选项。
+
+存根 （stub） 是有效的模块定义文件中仅在生成 VxD 时。
+
+## <a name="see-also"></a>请参阅
+
+[模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

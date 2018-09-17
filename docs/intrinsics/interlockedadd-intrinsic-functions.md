@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAdd 内部函数 |Microsoft 文档
+title: _InterlockedAdd 内部函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709522"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd 内部函数
 **Microsoft 专用**  
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Addend`  
- 指向要相加的整数的指针；由加法结果代替。  
+*加数*<br/>
+[in、 out]指向要添加到; 的整数替换为相加的结果。  
   
- [in] `Value`  
- 要相加的值。  
+*值*<br/>
+[in]要添加的值。  
   
 ## <a name="return-value"></a>返回值  
  两个函数都将返回加法结果。  

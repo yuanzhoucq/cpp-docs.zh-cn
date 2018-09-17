@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850077"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718115"
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 `CMFCHeaderCtrl`类支持对标头控件中的多个列进行排序。  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 如果启用了多个列排序模式，则为若要禁用多个列排序模式，并从已排序的列的列表中删除任何列，则为 FALSE。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]如果启用了多个列排序模式，则为若要禁用多个列排序模式，并从已排序的列的列表中删除任何列，则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  使用此方法启用或禁用多个列排序模式。 如果标头控件是在多个列排序模式中两个或多个列可以参与排序。  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 列的从零开始的索引。  
+*iColumn*<br/>
+[in]列的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个值，指示指定列的排序状态。 下表列出了可能的值：  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*iItem*  
- 要绘制的项的从零开始的索引。  
+*iItem*<br/>
+[in]要绘制的项的从零开始的索引。  
   
- [in]*rect*  
- 要绘制的项的边框。  
+*rect*<br/>
+[in]要绘制的项的边框。  
   
- [in]*bIsPressed*  
- 为 TRUE，则在按下状态，则绘制项否则为 FALSE。  
+*bIsPressed*<br/>
+[in]为 TRUE，则在按下状态，则绘制项否则为 FALSE。  
   
- [in]*bIsHighlighted*  
- 为 TRUE，则绘制突出显示的状态; 中的项否则为 FALSE。  
+*bIsHighlighted*<br/>
+[in]为 TRUE，则绘制突出显示的状态; 中的项否则为 FALSE。  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  由框架调用以绘制的排序箭头。  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectArrow*  
- 排序箭头的边框。  
+*rectArrow*<br/>
+[in]排序箭头的边框。  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  由框架调用以填充标头控件列的背景。  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 要删除的列的从零开始的索引。  
+*iColumn*<br/>
+[in]要删除的列的从零开始的索引。  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  设置标头控件中的指定列的排序顺序。  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 标头控件列的从零开始的索引。 如果此参数小于零，此方法从列进行排序的列表中删除所有列。  
+*iColumn*<br/>
+[in]标头控件列的从零开始的索引。 如果此参数小于零，此方法从列进行排序的列表中删除所有列。  
   
- [in]*bAscending*  
- 指定列的排序顺序的*iColumn*参数指定。 为 TRUE，则设置按升序顺序;为 FALSE，则设置按降序排序。 默认值为 TRUE。  
+*bAscending*<br/>
+[in]指定列的排序顺序的*iColumn*参数指定。 为 TRUE，则设置按升序顺序;为 FALSE，则设置按降序排序。 默认值为 TRUE。  
   
- [in]*b 将*  
- 如果为列的排序顺序设置*iColumn*参数指定。  
+*b 将*<br/>
+[in]如果为列的排序顺序设置*iColumn*参数指定。  
   
  如果当前的标头控件处于*多个列的排序*模式下，此方法将指定的列添加到对列进行排序的列表。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)设置多个列排序模式。  
   

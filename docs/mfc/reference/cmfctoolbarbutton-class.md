@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702567"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 提供为工具栏按钮功能。  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pToolbar*  
- 未使用。  
+*pToolbar*<br/>
+[in]未使用。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 TRUE。  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 按钮的命令 ID。  
+*uiID*<br/>
+[in]按钮的命令 ID。  
   
- [in]*iImage*  
- 图像集合中的按钮图像索引。  
+*iImage*<br/>
+[in]图像集合中的按钮图像索引。  
   
- [in]*lpszText*  
- 按钮的文本标签。 可以为 NULL。  
+*lpszText*<br/>
+[in]按钮的文本标签。 可以为 NULL。  
   
- [in]*bUserButton*  
- 一个布尔值，该值确定按钮是否为用户定义。 如果此参数为 TRUE，该按钮是用户定义的。 否则，将从资源加载按钮图像。  
+*bUserButton*<br/>
+[in]一个布尔值，该值确定按钮是否为用户定义。 如果此参数为 TRUE，该按钮是用户定义的。 否则，将从资源加载按钮图像。  
   
- [in]*阻止*  
- 一个布尔值，该值确定是否可以自定义按钮。 如果此参数为 TRUE，则不能自定义按钮。 否则，可以自定义按钮。  
+*被阻止*<br/>
+[in]一个布尔值，该值确定是否可以自定义按钮。 如果此参数为 TRUE，则不能自定义按钮。 否则，可以自定义按钮。  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  将此实例与所提供`CMFCToolBarButton`对象。  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*其他*  
- 对要与此实例进行比较的对象的引用。  
+*other*<br/>
+[in]对要与此实例进行比较的对象的引用。  
   
 ### <a name="return-value"></a>返回值  
  如果所提供的对象等于此实例; 的值，非零值否则为为 0。  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*src*  
- 对源按钮从其复制的引用。  
+*src*<br/>
+[in]对源按钮从其复制的引用。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以将另一个工具栏按钮复制到此工具栏按钮。  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDataObject*  
- 源的 OLE 数据对象。  
+*pDataObject*<br/>
+[in]源的 OLE 数据对象。  
   
 ### <a name="return-value"></a>返回值  
  创建的 `CMFCToolBarButton` 对象。  
@@ -442,8 +442,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 此参数设置为 true 可启用输入，或为 FALSE 可禁用输入。  
+*bEnable*<br/>
+[in]此参数设置为 true 可启用输入，或为 FALSE 可禁用输入。  
   
 ### <a name="remarks"></a>备注  
  此方法调用`EnableWindow`函数来启用或禁用输入。 有关详细信息，请参阅[EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK 中。  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*menuButton*  
- 对目标菜单按钮的引用。  
+*MenuButton*<br/>
+[in]对目标菜单按钮的引用。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 TRUE。  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hwnd*  
- 窗口句柄。  
+*hwnd*<br/>
+[in]窗口句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果该按钮提供的窗口句柄; 的所有者，非零值否则为 0。  
@@ -891,8 +891,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iNotifyCode*  
- 与命令相关联的通知消息。  
+*iNotifyCode*<br/>
+[in]与命令相关联的通知消息。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTarget*  
- 拖放操作的目标。  
+*pTarget*<br/>
+[in]拖放操作的目标。  
   
 ### <a name="return-value"></a>返回值  
  如果该按钮可以放置到提供的目标工具栏; 则为 TRUE否则为 FALSE。  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*大小*  
- 按钮的默认大小。  
+*大小*<br/>
+[in]按钮的默认大小。  
   
- [in]*bHorz*  
- 在父级工具栏停靠状态。 如果垂直停靠工具栏，此参数是工具栏时水平停靠或浮动时，如果为 TRUE 或 FALSE。  
+*bHorz*<br/>
+[in]在父级工具栏停靠状态。 如果垂直停靠工具栏，此参数是工具栏时水平停靠或浮动时，如果为 TRUE 或 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  一个`SIZE`包含按钮，以像素为单位的维度的结构。  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParent*  
- 新的父窗口。  
+*pWndParent*<br/>
+[in]新的父窗口。  
   
 ### <a name="remarks"></a>备注  
  该按钮将插入到一个工具栏，例如，当用户拖动它从一个工具栏到另一个工具栏。  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 父窗口的工具栏按钮。  
+*pWnd*<br/>
+[in]父窗口的工具栏按钮。  
   
- [in]*bDelay*  
- 如果该消息应处理一定的延迟，则为 TRUE。  
+*bDelay*<br/>
+[in]如果该消息应处理一定的延迟，则为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 父窗口的工具栏按钮。  
+*pWnd*<br/>
+[in]父窗口的工具栏按钮。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*nCtlColor*  
- 特定颜色通知中。  
+*nCtlColor*<br/>
+[in]特定颜色通知中。  
   
 ### <a name="return-value"></a>返回值  
  Framework 用来绘制按钮的背景画笔对象的句柄。  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pMenu*  
- 要自定义的菜单。  
+*pMenu*<br/>
+[in]要自定义的菜单。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -1111,8 +1111,8 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- -   按钮的父窗口。  
+*pWnd*<br/>
+[in] 的按钮的父窗口。  
   
 ### <a name="remarks"></a>备注  
  调用此方法`CMFCToolBar::OnLButtonDblClk`方法时在父级工具栏处理[需知道 WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk)消息。  
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*rect*  
- 按钮的边框。  
+*rect*<br/>
+[in]按钮的边框。  
   
- [in]*pImages*  
- 是与按钮关联的工具栏图像集合。  
+*pImages*<br/>
+[in]是与按钮关联的工具栏图像集合。  
   
- [in]*bHorz*  
- 在父级工具栏停靠状态。 按钮停靠时 FALSE 水平和垂直停靠按钮时，此参数为 TRUE。  
+*bHorz*<br/>
+[in]在父级工具栏停靠状态。 按钮停靠时 FALSE 水平和垂直停靠按钮时，此参数为 TRUE。  
   
- [in]*bCustomizeMode*  
- 指定工具栏是否在自定义模式。 此参数为 TRUE 时工具栏不为自定义模式时，工具栏是在自定义模式和 FALSE。  
+*bCustomizeMode*<br/>
+[in]指定工具栏是否在自定义模式。 此参数为 TRUE 时工具栏不为自定义模式时，工具栏是在自定义模式和 FALSE。  
   
- [in]*bHighlight*  
- 指定按钮将突出显示。 此参数是如果按钮突出显示，则 TRUE 和 FALSE 时不突出显示按钮。  
+*bHighlight*<br/>
+[in]指定按钮将突出显示。 此参数是如果按钮突出显示，则 TRUE 和 FALSE 时不突出显示按钮。  
   
- [in]*bDrawBorder*  
- 指定按钮是否应显示其边框。 此参数为 TRUE 时该按钮应显示其边框和 FALSE 时不应显示其边框的按钮。  
+*bDrawBorder*<br/>
+[in]指定按钮是否应显示其边框。 此参数为 TRUE 时该按钮应显示其边框和 FALSE 时不应显示其边框的按钮。  
   
- [in]*bGrayDisabledButtons*  
- 指定是否添加阴影禁用的按钮或使用已禁用的图像集合。 禁用的按钮应为灰色并且 FALSE，此方法应使用已禁用的图像集合时，此参数为 TRUE。  
+*bGrayDisabledButtons*<br/>
+[in]指定是否添加阴影禁用的按钮或使用已禁用的图像集合。 禁用的按钮应为灰色并且 FALSE，此方法应使用已禁用的图像集合时，此参数为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以自定义工具栏按钮绘制。  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*rect*  
- 按钮的边框。  
+*rect*<br/>
+[in]按钮的边框。  
   
- [in]*bSelected*  
- 指定按钮处于选中状态。 如果此参数为 TRUE，按钮被选定。 如果此参数为 FALSE，则不选择按钮。  
+*bSelected*<br/>
+[in]指定按钮处于选中状态。 如果此参数为 TRUE，按钮被选定。 如果此参数为 FALSE，则不选择按钮。  
   
 ### <a name="return-value"></a>返回值  
  以像素为单位，指定的设备上下文上的按钮的宽度。  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strToolTip*  
- 一个`CString`对象，它接收的自定义工具提示文本。  
+*strToolTip*<br/>
+[out]一个`CString`对象，它接收的自定义工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 指定的按钮是否可见。 如果此参数为 TRUE，则按钮可见。 否则，该按钮不可见。  
+*bShow*<br/>
+[in]指定的按钮是否可见。 如果此参数为 TRUE，则按钮可见。 否则，该按钮不可见。  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现没有任何影响。 重写此方法以更新按钮的可见性。  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iSize*  
- 新按钮的宽度。  
+*iSize*<br/>
+[in]新按钮的宽度。  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现没有任何影响。 重写此方法以调整按钮大小的大小或在父级工具栏的位置发生更改时。  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 按钮的父窗口。 可以为 NULL。  
+*pWnd*<br/>
+[in]按钮的父窗口。 可以为 NULL。  
   
- [in]*pTI*  
- 一个`TOOLINFO`结构，其中包含有关在工具提示控件中工具的信息。  
+*PTI*<br/>
+[in]一个`TOOLINFO`结构，其中包含有关在工具提示控件中工具的信息。  
   
 ### <a name="return-value"></a>返回值  
  结果`OnMenuButtonToolHitTest`如果按钮可以检索一个指向父框架窗口; 否则为 FALSE。  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParent*  
- 父窗口中。  
+*pWndParent*<br/>
+[in]父窗口中。  
   
- [in]*iButtonIndex*  
- 父按钮集合中按钮的从零开始的索引。  
+*iButtonIndex*<br/>
+[in]父按钮集合中按钮的从零开始的索引。  
   
- [in]*wndToolTip*  
- 显示工具提示文本的控件。  
+*wndToolTip*<br/>
+[in]显示工具提示文本的控件。  
   
- [out]*str*  
- 一个`CString`对象，它接收的已更新的工具提示文本。  
+*str*<br/>
+[out]一个`CString`对象，它接收的已更新的工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 FALSE。  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*srcItem*  
- 一个`COleDataSource`对象，它存储有关拖放操作的状态信息。  
+*srcItem*<br/>
+[in]一个`COleDataSource`对象，它存储有关拖放操作的状态信息。  
   
 ### <a name="return-value"></a>返回值  
  如果操作成功，则为 TRUE否则为 FALSE。  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ar*  
- `CArchive`从中或向其进行序列化的对象。  
+*ar*<br/>
+[in]`CArchive`从中或向其进行序列化的对象。  
   
 ### <a name="remarks"></a>备注  
  此方法支持数据传输流程，如剪贴板或拖放操作。 它读取或写入如 ID、 文本标签和映像 ID 按钮的属性来自或发往所提供`CArchive`对象。  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParent*  
- 父窗口的工具栏按钮。  
+*pParent*<br/>
+[in]父窗口的工具栏按钮。  
   
- [in]*数据*  
- 一个`CAccessibilityData`使用工具栏按钮可访问性数据填充的对象。  
+*data*<br/>
+[in]一个`CAccessibilityData`使用工具栏按钮可访问性数据填充的对象。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 TRUE。  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 全局剪贴板格式的新名称。 不能为 NULL。  
+*lpszName*<br/>
+[in]全局剪贴板格式的新名称。 不能为 NULL。  
   
 ### <a name="remarks"></a>备注  
  此方法可以在多个应用程序之间发生的拖放操作。 每个应用程序必须提供相同的剪贴板格式名称。  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iImage*  
- 集合中的工具栏图像的图像的索引。  
+*iImage*<br/>
+[in]集合中的工具栏图像的图像的索引。  
   
 ### <a name="remarks"></a>备注  
  如果工具栏按钮是一个分隔符*iImage*指分隔符按钮的新宽度。  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lstCmds*  
- 受保护的命令的列表。  
+*lstCmds*<br/>
+[in]受保护的命令的列表。  
   
 ### <a name="remarks"></a>备注  
  在自定义模式下，框架会禁用受保护的工具栏按钮命令。 用户不能执行拖放和编辑已禁用的工具栏按钮上的操作。  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- 新按钮的边框。  
+*rect*<br/>
+[in]新按钮的边框。  
   
 ### <a name="remarks"></a>备注  
  此方法调用[CMFCToolBarButton::OnMove](#onmove)方法后设置新边框。  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nStyle*  
- 新的按钮样式。  
+*nStyle*<br/>
+[in]新的按钮样式。  
   
 ### <a name="remarks"></a>备注  
  默认实现集[CMFCToolBarButton::m_nStyle](#m_nstyle)数据成员添加到*nStyle*。 如果你想要执行其他处理，以处理在样式中的更改重写此方法。 请参阅[工具栏控件样式](toolbar-control-styles.md)有关有效的样式标志的列表。  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 一个布尔值，该值指定是否显示或隐藏按钮。 如果此参数为 TRUE，则会显示按钮。 如果参数为 FALSE，则按钮处于隐藏状态。  
+*bShow*<br/>
+[in]一个布尔值，该值指定是否显示或隐藏按钮。 如果此参数为 TRUE，则会显示按钮。 如果参数为 FALSE，则按钮处于隐藏状态。  
   
 ### <a name="remarks"></a>备注  
  此函数用于隐藏或显示的特定工具栏按钮。 调用[CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)方法后调用此方法。  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 一个布尔值，该值指定是否显示或隐藏按钮。 如果此参数为 TRUE，则会显示按钮。 如果参数为 FALSE，则按钮处于隐藏状态。  
+*bShow*<br/>
+[in]一个布尔值，该值指定是否显示或隐藏按钮。 如果此参数为 TRUE，则会显示按钮。 如果参数为 FALSE，则按钮处于隐藏状态。  
   
 ### <a name="remarks"></a>备注  
  框架调用此方法以调整其在父级工具栏时更新工具栏按钮的可见性。 框架将调用此方法替换*bShow*按钮不能被装入工具栏的边界内时，设置为 FALSE。 框架将调用此方法替换*bShow*后再次调整按钮处于的范围内的工具栏边界设置为 TRUE。  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221127"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706623"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包装 Windows API 函数，提供用于访问注册表的面向对象的接口。  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszPath*  
- 指定创建或打开密钥的名称。  
+*pszPath*<br/>
+[in]指定创建或打开密钥的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 0否则为一个非零值。  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bAdmin*  
- 布尔参数，用于指定是否`CSettingsStore`对象在管理员模式下起作用。  
+*bAdmin*<br/>
+[in]布尔参数，用于指定是否`CSettingsStore`对象在管理员模式下起作用。  
   
- [in]*bReadOnly*  
- 布尔参数，用于指定是否`CSettingsStore`在只读模式下创建对象。  
+*bReadOnly*<br/>
+[in]布尔参数，用于指定是否`CSettingsStore`在只读模式下创建对象。  
   
 ### <a name="remarks"></a>备注  
  如果*bAdmin*设置为 TRUE，`m_hKey`成员变量设置为**HKEY_LOCAL_MACHINE**。 如果您设置*bAdmin*为 FALSE，`m_hKey`设置为**HKEY_CURRENT_USER**。  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszPath*  
- 若要删除的密钥的名称。  
+*pszPath*<br/>
+[in]若要删除的密钥的名称。  
   
- [in]*bAdmin*  
- 指定要删除的密钥的位置的开关。  
+*bAdmin*<br/>
+[in]指定要删除的密钥的位置的开关。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszValue*  
- 指定要移除的值字段。  
+*pszValue*<br/>
+[in]指定要移除的值字段。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszPath*  
- 注册表项的名称。  
+*pszPath*<br/>
+[in]注册表项的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszKey*  
- 包含要从注册表中读取的值的名称的以 null 结尾的字符串指针。  
+*pszKey*<br/>
+[in]包含要从注册表中读取的值的名称的以 null 结尾的字符串指针。  
   
- [out]*iVal*  
- 对接收从注册表项中读取的值的整数变量的引用。  
+*iVal*<br/>
+[out]对接收从注册表项中读取的值的整数变量的引用。  
   
- [out]*dwVal*  
- 一个 32 位双字变量来接收从注册表项中读取的值对的引用。  
+*dwVal*<br/>
+[out]一个 32 位双字变量来接收从注册表项中读取的值对的引用。  
   
- [out]*sVal*  
- 一个字符串变量来接收从注册表项中读取的值对的引用。  
+*sVal*<br/>
+[out]一个字符串变量来接收从注册表项中读取的值对的引用。  
   
- [out]*scStringList*  
- 一个字符串列表变量来接收从注册表项中读取的值对的引用。  
+*scStringList*<br/>
+[out]一个字符串列表变量来接收从注册表项中读取的值对的引用。  
   
- [out]*scArray*  
- 一个字符串数组变量来接收从注册表项中读取的值对的引用。  
+*scArray*<br/>
+[out]一个字符串数组变量来接收从注册表项中读取的值对的引用。  
   
- [out]*dwcArray*  
- 一个 32 位双字数组变量来接收从注册表项中读取的值对的引用。  
+*dwcArray*<br/>
+[out]一个 32 位双字数组变量来接收从注册表项中读取的值对的引用。  
   
- [out]*wcArray*  
- 对一个 16 位字数组变量来接收从注册表项中读取的值的引用。  
+*wcArray*<br/>
+[out]对一个 16 位字数组变量来接收从注册表项中读取的值的引用。  
   
- [out]*bcArray*  
- 对一个字节数组变量来接收从注册表项中读取的值的引用。  
+*bcArray*<br/>
+[out]对一个字节数组变量来接收从注册表项中读取的值的引用。  
   
- [out]*lpPoint*  
- 引用指向`POINT`从注册表项读取收到的值的结构。  
+*lpPoint*<br/>
+[out]引用指向`POINT`从注册表项读取收到的值的结构。  
   
- [out]*rect*  
- 引用[CRect](../../atl-mfc-shared/reference/crect-class.md)从注册表项读取收到的值的变量。  
+*rect*<br/>
+[out]引用[CRect](../../atl-mfc-shared/reference/crect-class.md)从注册表项读取收到的值的变量。  
   
- [out]*ppData*  
- 从注册表项读取指针到指向接收的值的数据。  
+*ppData*<br/>
+[out]从注册表项读取指针到指向接收的值的数据。  
   
- [out]*pBytes*  
- 指向无符号的整数变量的指针。 此变量接收缓冲区的大小， *ppData*指向。  
+*pBytes*<br/>
+[out]指向无符号的整数变量的指针。 此变量接收缓冲区的大小， *ppData*指向。  
   
- [out]*列表*  
- 引用[CObList](../../mfc/reference/coblist-class.md)从注册表项读取收到的值的变量。  
+*list*<br/>
+[out]引用[CObList](../../mfc/reference/coblist-class.md)从注册表项读取收到的值的变量。  
   
- [out]*obj*  
- 引用[CObject](../../mfc/reference/cobject-class.md)从注册表项读取收到的值的变量。  
+*obj*<br/>
+[out]引用[CObject](../../mfc/reference/cobject-class.md)从注册表项读取收到的值的变量。  
   
- [out]*pObj*  
- 引用指向`CObject`从注册表项读取收到的值的变量。  
+*pObj*<br/>
+[out]引用指向`CObject`从注册表项读取收到的值的变量。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pszKey*  
- 包含要设置的值的名称的字符串指针。  
+*pszKey*<br/>
+[in]包含要设置的值的名称的字符串指针。  
   
- [in]*iVal*  
- 对包含要存储的数据的整数变量的引用。  
+*iVal*<br/>
+[in]对包含要存储的数据的整数变量的引用。  
   
- [in]*dwVal*  
- 对包含要存储的数据的 32 位双字变量引用。  
+*dwVal*<br/>
+[in]对包含要存储的数据的 32 位双字变量引用。  
   
- [in]*pszVal*  
- 指向包含要存储的数据的以 null 结尾的字符串变量的指针。  
+*pszVal*<br/>
+[in]指向包含要存储的数据的以 null 结尾的字符串变量的指针。  
   
- [in]*scStringList*  
- 引用[CStringList](../../mfc/reference/cstringlist-class.md)变量包含要存储的数据。  
+*scStringList*<br/>
+[in]引用[CStringList](../../mfc/reference/cstringlist-class.md)变量包含要存储的数据。  
   
- [in]*bcArray*  
- 对包含要存储的数据的字节数组变量的引用。  
+*bcArray*<br/>
+[in]对包含要存储的数据的字节数组变量的引用。  
   
- [in]*scArray*  
- 对包含要存储的数据的字符串数组变量的引用。  
+*scArray*<br/>
+[in]对包含要存储的数据的字符串数组变量的引用。  
   
- [in]*dwcArray*  
- 对包含要存储的数据的 32 位双字数组变量的引用。  
+*dwcArray*<br/>
+[in]对包含要存储的数据的 32 位双字数组变量的引用。  
   
- [in]*wcArray*  
- 对包含要存储的数据的 16 位字数组变量的引用。  
+*wcArray*<br/>
+[in]对包含要存储的数据的 16 位字数组变量的引用。  
   
- [in]*rect*  
- 引用[CRect](../../atl-mfc-shared/reference/crect-class.md)变量包含要存储的数据。  
+*rect*<br/>
+[in]引用[CRect](../../atl-mfc-shared/reference/crect-class.md)变量包含要存储的数据。  
   
- [in]*lpPoint*  
- 引用指向`POINT`变量包含要存储的数据。  
+*lpPoint*<br/>
+[in]引用指向`POINT`变量包含要存储的数据。  
   
- [in]*pData*  
- 指向包含要存储的数据的缓冲区的指针。  
+*pData*<br/>
+[in]指向包含要存储的数据的缓冲区的指针。  
   
- [in]*nBytes*  
- 指定的大小，以字节为单位的数据*pData*参数所指向。  
+*nBytes*<br/>
+[in]指定的大小，以字节为单位的数据*pData*参数所指向。  
   
- [in]*列表*  
- 引用[CObList](../../mfc/reference/coblist-class.md)变量包含要存储的数据。  
+*list*<br/>
+[in]引用[CObList](../../mfc/reference/coblist-class.md)变量包含要存储的数据。  
   
- [in]*obj*  
- 引用[CObject](../../mfc/reference/cobject-class.md)变量包含要存储的数据。  
+*obj*<br/>
+[in]引用[CObject](../../mfc/reference/cobject-class.md)变量包含要存储的数据。  
   
- [in]*pObj*  
- 指针到指向`CObject`变量包含要存储的数据。  
+*pObj*<br/>
+[in]指针到指向`CObject`变量包含要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为 TRUE；否则为 FALSE。  

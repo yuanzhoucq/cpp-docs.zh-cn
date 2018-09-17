@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339431"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717634"
 ---
 # <a name="carray-class"></a>CArray 类
 支持类似于 C 数组，但可以动态减小和增大的数组。  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>参数  
- *类型*  
- 指定数组中存储的对象类型的模板参数。 *类型*是一个参数，返回的`CArray`。  
-  
- *ARG* *_* *类型*  
- 指定用于访问存储在数组中对象的自变量类型的模板参数。 通常对的引用*类型*。 *ARG_TYPE*是一个参数，传递给`CArray`。  
+#### <a name="parameters"></a>参数
+
+*类型*<br/>
+指定数组中存储的对象类型的模板参数。 *类型*是一个参数，返回的`CArray`。
+
+*ARG_TYPE*<br/>
+指定用于访问存储在数组中对象的自变量类型的模板参数。 通常对的引用*类型*。 *ARG_TYPE*是一个参数，传递给`CArray`。  
   
 ## <a name="members"></a>成员  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>要求  
- `Header:` afxtempl.h  
+**标头：** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  将新元素添加到数组，按 1 增长数组的末尾。  

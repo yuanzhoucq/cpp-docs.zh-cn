@@ -1,5 +1,5 @@
 ---
-title: 并行 |Microsoft 文档
+title: 并行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692280"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705960"
 ---
 # <a name="parallel"></a>parallel
-定义并行区域，这是将由多个线程并行执行的代码。  
+定义并行区域，这是由多个线程并行执行的代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,10 @@ ms.locfileid: "33692280"
 }  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
-  
- `clause`（可选）  
- 零个或多个子句。  请参阅支持的子句列表的备注部分**并行**。  
+## <a name="arguments"></a>自变量
+
+*子句*<br/>
+（可选）零个或多个子句。  请参阅支持的子句的列表的备注部分**并行**。  
   
 ## <a name="remarks"></a>备注  
  **并行**指令支持以下 OpenMP 子句：  
@@ -60,12 +59,12 @@ ms.locfileid: "33692280"
   
 -   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **并行**也可以用于[部分](../../../parallel/openmp/reference/sections-openmp.md)和[为](../../../parallel/openmp/reference/for-openmp.md)指令。  
+ **并行**还可用于[部分](../../../parallel/openmp/reference/sections-openmp.md)并[为](../../../parallel/openmp/reference/for-openmp.md)指令。  
   
  有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何设置的线程数，并定义并行区域。 默认情况下，线程数等于计算机上的逻辑处理器数。 例如，如果你有具有一个具有已启用超线程的物理处理器的计算机，它将具有两个逻辑处理器和，因此，两个线程。  
+ 下面的示例演示如何设置的线程数，并定义某个并行区域。 默认情况下，线程数等于计算机上的逻辑处理器数。 例如，如果必须具有一个已启用超线程的物理处理器的计算机，它将具有两个逻辑处理器，因此，两个线程。  
   
 ```  
 // omp_parallel.cpp  

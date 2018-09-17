@@ -1,5 +1,5 @@
 ---
-title: CMFCAcceleratorKey 类 |Microsoft 文档
+title: CMFCAcceleratorKey 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7d87b7a2a76ea73989a9ab7dd845666625e91aa0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711589"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 类
 实现虚拟键映射和格式设置的帮助器类。  
@@ -50,11 +50,11 @@ class CMFCAcceleratorKey : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::Format](#format)|将转换为它的可视表示形式的加速结构。|  
+|[CMFCAcceleratorKey::Format](#format)|将转换为其可视表示形式的加速结构。|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|设置的快捷键`CMFCAcceleratorKey`对象。|  
   
 ## <a name="remarks"></a>备注  
- 加速键也称为是键盘快捷方式。 如果你想要显示用户输入的键盘快捷方式[CMFCAcceleratorKeyAssignCtrl 类](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)地图键盘快捷方式，如 Alt + Shift + S，为自定义文本的格式，如"Alt + Shift + S"。 每个`CMFCAcceleratorKey`对象映射到文本格式的单个快捷键。  
+ 快捷键也被称为键盘快捷方式。 如果你想要显示用户输入的键盘快捷方式[CMFCAcceleratorKeyAssignCtrl 类](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)映射的键盘快捷方式，如 Alt + Shift + S，为自定义文本的格式，如"Alt + Shift + S"。 每个`CMFCAcceleratorKey`对象将一个快捷方式键映射到文本格式。  
   
  有关如何使用键盘快捷方式和快捷键对应表的详细信息，请参阅[CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)。  
   
@@ -80,11 +80,11 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpAccel*  
- 指向的快捷键的指针。  
+*lpAccel*<br/>
+[in]快捷方式键指向的指针。  
   
 ### <a name="remarks"></a>备注  
- 如果在创建时，请勿提供的快捷键`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法将与快捷键关联起来你`CMFCAcceleratorKey`对象。  
+ 如果在创建时，没有提供的快捷键`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法将与快捷键关联起来你`CMFCAcceleratorKey`对象。  
   
 ##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  将转换为其关联的字符串值的加速结构。  
@@ -94,11 +94,11 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*str*  
- 对引用`CString`方法写入的已翻译的快捷键的位置的对象。  
+*str*<br/>
+[out]对引用`CString`对象，则该方法将已翻译的快捷键。  
   
 ### <a name="remarks"></a>备注  
- 此方法检索关联的快捷键的字符串格式。 您可以设置的字符串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象使用构造函数或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
+ 此方法检索关联的快捷键的字符串格式。 可以设置的字符串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象使用构造函数或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
   
 ##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  设置的快捷键[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象。  
@@ -108,13 +108,13 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpAccel*  
- 指向的快捷键的指针。  
+*lpAccel*<br/>
+[in]快捷方式键指向的指针。  
   
 ### <a name="remarks"></a>备注  
  使用此方法设置的快捷键`CMFCAcceleratorKey`如果你在创建时，未提供的快捷键`CMFCAcceleratorKey`。  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)

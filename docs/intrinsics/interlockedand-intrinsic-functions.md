@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540989"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707858"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
 **Microsoft 专用**  
@@ -180,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `value`  
- 指向第一个操作数的指针，将由结果替换。  
+*value*<br/>
+[in、 out]指向要替换为结果的第一个操作数的指针。  
   
- [in] `mask`  
- 第二个操作数。  
+*掩码*<br/>
+[in]第二个操作数。  
   
 ## <a name="return-value"></a>返回值  
  第一个操作数的原始值。  

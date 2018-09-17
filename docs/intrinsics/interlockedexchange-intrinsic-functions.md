@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716208"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
 **Microsoft 专用**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Target`  
- 指向要交换的值。 此函数会将此变量设置为 `Value` 并返回其之前的值。  
+*Target*<br/>
+[in、 out]指向要交换的值。 此函数会将此变量设置为 `Value` 并返回其之前的值。  
   
- [in] `Value`  
- 要与由 `Target` 指向的值交换的值。  
+*值*<br/>
+[in]指向值的值进行交换`Target`。  
   
 ## <a name="return-value"></a>返回值  
  返回由 `Target` 指向的初始值。  

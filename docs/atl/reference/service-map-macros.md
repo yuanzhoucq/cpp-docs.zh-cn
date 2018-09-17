@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765340"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702593"
 ---
 # <a name="service-map-macros"></a>服务映射宏
 
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>参数
 
-[IN]*guidService*  
-为服务标识符 (SID) 的指针。
+*guidService*<br/>
+[in]为服务标识符 (SID) 的指针。
 
-[IN]*riid*  
-调用方是访问接口的标识符。
+*riid*<br/>
+[in]调用方是访问接口的标识符。
 
-[OUT]*ppvObj*  
-指向所请求的接口的间接指针。
+*ppvObj*<br/>
+[out]指向所请求的接口的间接指针。
 
 ### <a name="return-value"></a>返回值
 

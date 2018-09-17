@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706532"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiImage*  
- 指定位图的资源标识符。  
+*uiImage*<br/>
+[in]指定位图的资源标识符。  
   
- [in]*lpszLabel*  
- 指定按钮的文本。  
+*lpszLabel*<br/>
+[in]指定按钮的文本。  
   
- [in]*iIdCommand*  
- 指定按钮控件的 id。  
+*iIdCommand*<br/>
+[in]指定按钮控件的 id。  
   
- [in]*iInsertAt*  
- 在 outlook 栏在该处插入该按钮的页上指定的从零开始的索引。  
+*iInsertAt*<br/>
+[in]在 outlook 栏在该处插入该按钮的页上指定的从零开始的索引。  
   
- [in]*uiLabel*  
- 一个字符串资源 id。  
+*uiLabel*<br/>
+[in]一个字符串资源 id。  
   
- [in]*szBmpFileName*  
- 指定要加载的磁盘图像文件的名称。  
+*szBmpFileName*<br/>
+[in]指定要加载的磁盘图像文件的名称。  
   
- [in]*szLabel*  
- 指定按钮的文本。  
+*szLabel*<br/>
+[in]指定按钮的文本。  
   
- [in]*hBmp*  
- 位图的句柄的按钮。  
+*hBmp*<br/>
+[in]位图的句柄的按钮。  
   
- [in]*hIcon*  
- 为按钮的图标的句柄。  
+*hIcon*<br/>
+[in]为按钮的图标的句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则添加一个按钮，则返回 TRUE否则为 FALSE。  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 指定 Outlook 栏窗格控件的父窗口。 不能为 NULL。  
+*pParentWnd*<br/>
+[in]指定 Outlook 栏窗格控件的父窗口。 不能为 NULL。  
   
- [in]*dwStyle*  
- 窗口样式。  窗口样式的列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*dwStyle*<br/>
+[in]窗口样式。  窗口样式的列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*uiID*  
- 控件 id。 必须为唯一以启用对保存的控件的状态。  
+*uiID*<br/>
+[in]控件 id。 必须为唯一以启用对保存的控件的状态。  
   
- [in]*dwControlBarStyle*  
- 指定特殊从 Outlook 栏分离时定义的行为的 Outlook 栏窗格控件的样式。  
+*dwControlBarStyle*<br/>
+[in]指定特殊从 Outlook 栏分离时定义的行为的 Outlook 栏窗格控件的样式。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向用户可单击的工具栏按钮的指针。  
+*pButton*<br/>
+[in]指向用户可单击的工具栏按钮的指针。  
   
- [in]*pPopup*  
- 指向快捷菜单的指针。  
+*pPopup*<br/>
+[in]指向快捷菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果应显示的快捷菜单，则将返回 TRUE否则为 FALSE。  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bPageScroll*  
- 如果为 TRUE，则启用页滚动模式。 如果为 FALSE，禁用页滚动模式。  
+*bPageScroll*<br/>
+[in]如果为 TRUE，则启用页滚动模式。 如果为 FALSE，禁用页滚动模式。  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  返回正常 (即，未选定) Outlook 栏窗格的文本颜色。  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIdCommand*  
- 指定要删除某个按钮的命令 ID。  
+*iIdCommand*<br/>
+[in]指定要删除某个按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果成功移除了该按钮; 则为 TRUE如果指定的命令 ID 无效，则为 FALSE。  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- 指定新背景色。  
+*颜色*<br/>
+[in]指定新背景色。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可设置 Outlook 栏的当前背景色。 仅当没有背景图像使用的背景色。  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiImageID*  
- 指定映像资源 id。  
+*uiImageID*<br/>
+[in]指定映像资源 id。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置 Outlook 栏的背景图像。 托管的背景图像列表的嵌入[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)对象。  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrRegText*  
- 指定未选定文本的新颜色。  
+*clrRegText*<br/>
+[in]指定未选定文本的新颜色。  
   
- [in]*clrSelText*  
- 指定所选文本的新颜色。  
+*clrSelText*<br/>
+[in]指定所选文本的新颜色。  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  设置 Outlook 栏窗格中的透明颜色。  

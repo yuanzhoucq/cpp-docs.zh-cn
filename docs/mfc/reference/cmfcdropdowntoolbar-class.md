@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692378"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719233"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 当用户按住顶层工具栏按钮时显示的工具栏。  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- 用于引用热工具栏图像的位图的资源 ID。  
+*uiResID*<br/>
+[in]用于引用热工具栏图像的位图资源 ID。  
   
- [in]*uiColdResID*  
- 用于引用冷工具栏图像的位图的资源 ID。  
+*uiColdResID*<br/>
+[in]用于引用冷工具栏图像的位图资源 ID。  
   
- [in]*uiMenuResID*  
- 用于引用常规菜单图像的位图的资源 ID。  
+*uiMenuResID*<br/>
+[in]用于引用常规菜单图像的位图资源 ID。  
   
- [in]*阻止*  
- 为 TRUE，则锁定工具栏;否则为 FALSE。  
+*被阻止*<br/>
+[in]为 TRUE，则锁定工具栏;否则为 FALSE。  
   
- [in]*uiDisabledResID*  
- 用于引用禁用工具栏图像的位图的资源 ID。  
+*uiDisabledResID*<br/>
+[in]用于引用禁用的工具栏图像的位图资源 ID。  
   
- [in]*uiMenuDisabledResID*  
- 用于引用禁用菜单图像的位图的资源 ID。  
+*uiMenuDisabledResID*<br/>
+[in]用于引用禁用的菜单图像的位图资源 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiResID*  
- [in]*uiColdResID*  
- [in]*uiMenuResID*  
- [in]*BOOL*  
- [in]*uiDisabledResID*  
- [in]*uiMenuDisabledResID*  
+*uiResID*<br/>
+[in][in]*uiColdResID*  
+*uiMenuResID*<br/>
+[in][in]*BOOL*  
+*uiDisabledResID*<br/>
+[in][in]*uiMenuDisabledResID*  
  [in]*uiHotResID*  
   
 ### <a name="return-value"></a>返回值  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nFlags*  
- [in]*点*  
+*nFlags*<br/>
+[in][in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nFlags*  
- [in]*点*  
+*nFlags*<br/>
+[in][in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTarget*  
- [in]*bDisableIfNoHndler*  
+*pTarget*<br/>
+[in][in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>备注  
   

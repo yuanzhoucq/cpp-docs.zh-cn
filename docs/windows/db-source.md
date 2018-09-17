@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201551"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716009"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -43,11 +43,11 @@ ms.locfileid: "43201551"
 *db_source*  
 用于连接到数据源的连接字符串。 有关连接字符串的格式，请参阅[连接字符串和数据链接](/previous-versions/windows/desktop/ms718376\(v=vs.85\))在 Microsoft 数据访问组件 (MDAC) SDK。
 
- 名称（可选）  
-当你使用**db_source**的类上*名称*是具有的数据源对象的实例**db_source**特性应用于它 （请参阅示例 1）。 当你使用**db_source**中的方法实现，以内联方式*名称*是一个变量 （本地到方法），可用于访问数据源 （请参见示例 2）。 将此传递*名称*到*source_name*参数的`db_command`若要将数据源与命令相关联。
+*name*  
+（可选）当你使用**db_source**的类上*名称*是具有的数据源对象的实例**db_source**特性应用于它 （请参阅示例 1）。 当你使用**db_source**中的方法实现，以内联方式*名称*是一个变量 （本地到方法），可用于访问数据源 （请参见示例 2）。 将此传递*名称*到*source_name*参数的`db_command`若要将数据源与命令相关联。
 
-*hresult* （可选）  
-标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
+*hresult*  
+（可选）标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
 ## <a name="remarks"></a>备注
 

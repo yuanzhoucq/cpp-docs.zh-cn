@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686794"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703919"
 ---
 # <a name="map-class"></a>map 类
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在映射中的键数据类型。
+要存储在映射中的键数据类型。
 
 *类型*<br/>
- 要存储在映射中的元素数据类型。
+要存储在映射中的元素数据类型。
 
 *特征*<br/>
- 一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在映射中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
+一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在映射中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<Key>`。
 
 在 C++ 14 中可以通过指定没有类型参数的 std:: less <> 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
 *分配器*<br/>
- 一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
+一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>备注
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从 map 中进行匹配的元素的键值。
+要从 map 中进行匹配的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的映射中元素的排序键进行比较的参数键值。
+要与当前搜索的映射中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>参数
 
 *Where*<br/>
- 要移除的元素的位置。
+要移除的元素的位置。
 
 *第一个*<br/>
- 要移除的第一个元素的位置。
+要移除的第一个元素的位置。
 
 *最后一个*<br/>
- 要移除的刚超出最后一个元素的位置。
+要移除的刚超出最后一个元素的位置。
 
 *Key*<br/>
- 要移除的元素的关键值。
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要搜索的映射中的元素的排序键与之匹配的键值。
+要搜索的映射中的元素的排序键与之匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的映射中元素的排序键进行比较的参数键值。
+要与当前搜索的映射中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- 参数 map，提供与目标 map 进行交换的元素。
+参数 map，提供与目标 map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 map 中元素的排序键值进行比较的参数键值。
+要与当前搜索的 map 中元素的排序键值进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 

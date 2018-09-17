@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540990"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721170"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 类
 实现上下文快捷工具栏。  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRibbonBar*  
- 浮动工具栏中搜索要显示的按钮在功能区栏。  
+*pRibbonBar*<br/>
+[in]浮动工具栏中搜索要显示的按钮在功能区栏。  
   
- [in]*lstCommands*  
- 要在浮动工具栏上显示的命令的列表。 所有功能区类别进行搜索以找到关联的按钮。  
+*lstCommands*<br/>
+[in]要在浮动工具栏上显示的命令的列表。 所有功能区类别进行搜索以找到关联的按钮。  
   
 ### <a name="remarks"></a>备注  
  使用此函数设置的命令显示在浮动工具栏的列表。  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*x*  
- 指定屏幕坐标中的浮动工具栏的水平位置。  
+*x*<br/>
+[in]指定屏幕坐标中的浮动工具栏的水平位置。  
   
- [in]*y*  
- 指定屏幕坐标中的浮动工具栏的垂直位置。  
+*y*<br/>
+[in]指定屏幕坐标中的浮动工具栏的垂直位置。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则显示浮动工具栏，则返回 TRUE否则为 FALSE。  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*x*  
- 屏幕坐标中指定的上下文菜单的水平位置。  
+*x*<br/>
+[in]屏幕坐标中指定的上下文菜单的水平位置。  
   
- [in]*y*  
- 屏幕坐标中指定的上下文菜单的垂直位置。  
+*y*<br/>
+[in]屏幕坐标中指定的上下文菜单的垂直位置。  
   
- [in]*uiMenuResID*  
- 指定要显示的上下文菜单的资源 ID。  
+*uiMenuResID*<br/>
+[in]指定要显示的上下文菜单的资源 ID。  
   
- [in]*pWndOwner*  
- 标识从上下文菜单中接收消息的窗口。  
+*pWndOwner*<br/>
+[in]标识从上下文菜单中接收消息的窗口。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功，则显示上下文菜单，则为 TRUE否则为 FALSE。  

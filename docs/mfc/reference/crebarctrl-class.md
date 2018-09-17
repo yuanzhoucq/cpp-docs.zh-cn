@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693875"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717582"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 封装 Rebar 控件的功能，此控件是一个子窗口容器。  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uBand*|Rebar 带区从零开始索引。|  
-|[in]*cxWidth*|新的 rebar 带区，以像素为单位的宽度。|  
+|*uBand*|[in]Rebar 带区从零开始索引。|  
+|*cxWidth*|[in]新的 rebar 带区，以像素为单位的宽度。|  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwMask*|指定在哪些标志的标志的按位组合 (OR) *dwStyleEx*参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示与拆分器上底部在水平模式下和向右垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)向父窗口的消息。|  
-|[in]*dwStyleEx*|按位组合 (OR) 标志，用于指定要应用的样式。 若要设置样式，请指定中使用的相同标志*dwMask*参数。 若要重置样式，请指定二进制零。|  
+|*dwMask*|[in]指定在哪些标志的标志的按位组合 (OR) *dwStyleEx*参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示与拆分器上底部在水平模式下和向右垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)向父窗口的消息。|  
+|*dwStyleEx*|[in]按位组合 (OR) 标志，用于指定要应用的样式。 若要设置样式，请指定中使用的相同标志*dwMask*参数。 若要重置样式，请指定二进制零。|  
   
 ### <a name="return-value"></a>返回值  
  以前的扩展的样式。  

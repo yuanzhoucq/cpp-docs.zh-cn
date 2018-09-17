@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851582"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709548"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
 `CMFCLinkCtrl`类按钮显示为超链接，并单击该按钮时调用链接的目标。  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文的指针。  
   
- [in]*rectClient*  
- 限定为链接控件的矩形。  
+*rectClient*<br/>
+[in]限定为链接控件的矩形。  
   
 ### <a name="remarks"></a>备注  
  当你想要使用你自己的代码来绘制按钮的聚焦框时，重写此方法。  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszURL*  
- 要显示的按钮文本。  
+*lpszURL*<br/>
+[in]要显示的按钮文本。  
   
 ### <a name="remarks"></a>备注  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPrefix*  
- URL 协议的前缀。  
+*lpszPrefix*<br/>
+[in]URL 协议的前缀。  
   
 ### <a name="remarks"></a>备注  
  使用此方法设置的 URL 前缀。 前缀不会显示在按钮的人脸，但可以使用它来帮助浏览到的 URL 目标。  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bVCenter*  
- 为 TRUE，则按钮文本和位图的顶部和底部的链接控件; 之间的垂直居中否则为 FALSE。 默认值为 FALSE。  
+*bVCenter*<br/>
+[in]为 TRUE，则按钮文本和位图的顶部和底部的链接控件; 之间的垂直居中否则为 FALSE。 默认值为 FALSE。  
   
- [in]*bHCenter*  
- 为 TRUE，则按钮文本和位图的左侧和右侧的链接控件; 之间的水平居中否则为 FALSE。 默认值为 FALSE。  
+*bHCenter*<br/>
+[in]为 TRUE，则按钮文本和位图的左侧和右侧的链接控件; 之间的水平居中否则为 FALSE。 默认值为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其中包含链接控件的新大小。  

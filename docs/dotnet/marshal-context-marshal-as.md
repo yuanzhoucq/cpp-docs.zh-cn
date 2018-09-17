@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as |Microsoft 文档
+title: marshal_context::marshal_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136202"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707897"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 对特定数据对象执行封送处理，以在托管和本机数据类型之间转换它。  
@@ -39,18 +39,18 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `input`  
- 你想要封送到的值`To_Type`变量。  
+*input*<br/>
+[in]你想要封送为的值`To_Type`变量。  
   
 ## <a name="return-value"></a>返回值  
- 类型的变量的`To_Type`的转换的值，它是`input`。  
+ 类型的变量`To_Type`的转换的值，它是`input`。  
   
 ## <a name="remarks"></a>备注  
- 此函数将对特定数据对象执行封送处理。 此函数只能用于由中的表的转换[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)。  
+ 此函数将对特定数据对象执行封送处理。 此函数只能用于指示表中的转换[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。  
   
- 如果你尝试封送数据类型不受支持的一对`marshal_as`将生成错误[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在编译时。 阅读出现此错误的详细信息提供的消息。 `C4996`可为多个仅已弃用的函数生成的错误。 将生成此错误的两个条件将尝试封送不支持的数据类型对，并尝试对需要上下文的转换使用 `marshal_as`。  
+ 如果你尝试封送数据类型不受支持的一对`marshal_as`将生成错误[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在编译时。 读取消息提供此错误以了解更多信息。 `C4996`可为多个只是已弃用的函数生成错误。 将生成此错误的两个条件将尝试封送不支持的数据类型对，并尝试对需要上下文的转换使用 `marshal_as`。  
   
- 封送处理库包含多个标头文件。 任何转换要求只有一个文件，但如果你需要进行其他转换，则可以包括其他文件。 `Marshaling Overview in C++`中的表指示每次转换应包含的封送处理文件。  
+ 封送处理库包含多个标头文件。 任何转换要求只有一个文件，但如果您需要为其他转换，则可以包含其他文件。 `Marshaling Overview in C++`中的表指示每次转换应包含的封送处理文件。  
   
 ## <a name="example"></a>示例  
  此示例将为从 `System::String` 到 `const char *` 变量类型的封送处理创建上下文。 转换数据在删除上下文的行之后是无效的。  

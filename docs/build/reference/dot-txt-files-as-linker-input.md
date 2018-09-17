@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd865772b3629939306d835728e5033da763eaa9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 73d6966844ae8dc6c41350aad57ad310310b3a32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895261"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714996"
 ---
 # <a name="txt-files-as-linker-input"></a>用作链接器输入的 .Txt 文件
 
@@ -29,5 +29,5 @@ ms.locfileid: "43895261"
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入的文件](../../build/reference/link-input-files.md)   
+[LINK 输入文件](../../build/reference/link-input-files.md)<br/>
 [链接器选项](../../build/reference/linker-options.md)

@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104601"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715593"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 类
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要映射的键值。
 
 ### <a name="remarks"></a>备注
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
+*nbucket*<br/>
 存储桶编号。
 
 ### <a name="remarks"></a>备注
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*Where*  
+*Where*<br/>
 要移除的元素的位置。
 
-*第一个*  
+*第一个*<br/>
 要移除的第一个元素的位置。
 
-*最后一个*  
+*最后一个*<br/>
 要移除的刚超出最后一个元素的位置。
 
-*Key*  
+*Key*<br/>
 要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
+*keyval*<br/>
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-*factor*  
+*factor*<br/>
 新的最大加载因子。
 
 ### <a name="remarks"></a>备注
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets*  
+*nbuckets*<br/>
 请求的存储桶数。
 
 ### <a name="remarks"></a>备注

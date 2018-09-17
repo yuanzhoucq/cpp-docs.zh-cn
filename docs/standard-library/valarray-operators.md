@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315023"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703555"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 运算符
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，将对此 valarray 的元素进行不相等测试。
+*left*<br/>
+两个 valarray 中的第一个，将对此 valarray 的元素进行不相等测试。
 
-*right*  
- 两个 valarray 中的第二个，将对此 valarray 的元素进行不相等测试。
+*right*<br/>
+两个 valarray 中的第二个，将对此 valarray 的元素进行不相等测试。
 
 ### <a name="return-value"></a>返回值
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 一个值或 valarray，它充当另一个值或 valarray 的被除数。
+*left*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的被除数。
 
-*right*  
- 一个值或 valarray，它充当另一个值或 valarray 的除数。
+*right*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的除数。
 
 ### <a name="return-value"></a>返回值
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*left*<br/>
+两个 valarray 中的第一个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*  
- 两个 valarray 中的第二个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*right*<br/>
+两个 valarray 中的第二个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
+*left*<br/>
+两个 valarray 中的第一个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
-*right*  
- 两个 valarray 中的第二个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
+*right*<br/>
+两个 valarray 中的第二个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 要移动的值，或要移动其元素的 valarray。
+*left*<br/>
+要移动的值，或要移动其元素的 valarray。
 
-*right*  
- 指示右移位数或 valarray（其元素指示右移的元素指向值）。
+*right*<br/>
+指示右移位数或 valarray（其元素指示右移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 要移动的值，或要移动其元素的 valarray。
+*left*<br/>
+要移动的值，或要移动其元素的 valarray。
 
-*right*  
- 指示左移位数或 valarray（其元素指示左移的元素指向值）。
+*right*<br/>
+指示左移位数或 valarray（其元素指示左移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
 
 ### <a name="return-value"></a>返回值
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
+*left*<br/>
+两个 valarray 中的第一个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
 
-*right*  
- 两个 valarray 中的第二个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
+*right*<br/>
+两个 valarray 中的第二个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
 
 ### <a name="return-value"></a>返回值
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 一个值或 valarray，它充当另一个值或 valarray 的被减数，并得出差值。
+*left*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的被减数，并得出差值。
 
-*right*  
- 一个值或 valarray，它充当另一个值或 valarray 的减数，并得出差值。
+*right*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的减数，并得出差值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 一个值或 valarray，它充当另一个值或 valarray 的被除数，并得出商。
+*left*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的被除数，并得出商。
 
-*right*  
- 一个值或 valarray，它充当另一个值或 valarray 的除数，并得出商。
+*right*<br/>
+一个值或 valarray，它充当另一个值或 valarray 的除数，并得出商。
 
 ### <a name="return-value"></a>返回值
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，将对此 valarray 的元素进行相等性测试。
+*left*<br/>
+两个 valarray 中的第一个，将对此 valarray 的元素进行相等性测试。
 
-*right*  
- 两个 valarray 中的第二个，将对此 valarray 的元素进行相等性测试。
+*right*<br/>
+两个 valarray 中的第二个，将对此 valarray 的元素进行相等性测试。
 
 ### <a name="return-value"></a>返回值
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*left*<br/>
+两个 valarray 中的第一个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*  
- 两个 valarray 中的第二个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*right*<br/>
+两个 valarray 中的第二个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*left*<br/>
+两个 valarray 中的第一个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
-*right*  
- 两个 valarray 中的第二个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
+*right*<br/>
+两个 valarray 中的第二个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 两个 valarray 中的第一个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
+*left*<br/>
+两个 valarray 中的第一个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
-*right*  
- 两个 valarray 中的第二个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
+*right*<br/>
+两个 valarray 中的第二个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
 
 ### <a name="return-value"></a>返回值
 

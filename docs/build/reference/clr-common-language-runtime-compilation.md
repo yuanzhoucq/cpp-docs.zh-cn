@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0f4660e9221855c93835a0a5ba5e0557178a66
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703815"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -40,7 +40,7 @@ ms.locfileid: "44109857"
 
 ## <a name="arguments"></a>自变量
 
-*options*  
+*options*<br/>
 下列开关中的一个或多个（以逗号分隔）。
 
 - 无
@@ -140,5 +140,5 @@ Visual C++ 不再支持 **/clr:oldsyntax** 选项。 此选项在 Visual Studio 
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)   
+[编译器选项](../../build/reference/compiler-options.md)<br/>
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

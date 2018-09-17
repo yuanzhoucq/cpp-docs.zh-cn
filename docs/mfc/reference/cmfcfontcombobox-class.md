@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686152"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725167"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 类
 `CMFCFontComboBox`类创建包含字体列表的一个组合框控件。  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDesc*  
- 指向字体描述对象。  
+*pDesc*<br/>
+[in]指向字体描述对象。  
   
- [in]*lpszName*  
- 指定的字体名称。  
+*lpszName*<br/>
+[in]指定的字体名称。  
   
- [in]*nCharSet*  
- 指定字符组。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
+*nCharSet*<br/>
+[in]指定字符组。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。  
   
 ### <a name="return-value"></a>返回值  
  如果字体组合框中的项匹配的说明对象指定的字体或字体名称和字符集; 则为 TRUE否则为 FALSE。  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nFontType*  
- 指定字体类型。 默认值是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
+*nFontType*<br/>
+[in]指定字体类型。 默认值是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
   
- [in]*nCharSet*  
- 指定字体的字符集。 默认值为 DEFAULT_CHARSET。  
+*nCharSet*<br/>
+[in]指定字体的字符集。 默认值为 DEFAULT_CHARSET。  
   
- [in]*nPitchAndFamily*  
- 指定的字体间距和系列。 默认值为 DEFAULT_PITCH。  
+*nPitchAndFamily*<br/>
+[in]指定的字体间距和系列。 默认值为 DEFAULT_PITCH。  
   
 ### <a name="return-value"></a>返回值  
  如果字体组合框初始化成功，则为 TRUE否则为 FALSE。  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849960"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725655"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 类
 `CMFCColorPickerCtrl`类提供用于选择颜色的控件的功能。  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向设备上下文的指针。  
+*pDC*<br/>
+[in]指向设备上下文指针。  
   
- [in]*rect*  
- 指定围绕所选颜色的矩形区域。  
+*rect*<br/>
+[in]指定围绕所选颜色的矩形区域。  
   
 ### <a name="remarks"></a>备注  
  当您需要更改的游标指向所选颜色的形状时，重写此方法。  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*hue*  
- 指向双精度值，接收 hue 信息类型的变量的指针。  
+*Hue*<br/>
+[out]指向双精度值，接收 hue 信息类型的变量的指针。  
   
- [out]*亮度*  
- 指向双精度值，接收亮度信息类型的变量的指针。  
+*亮度*<br/>
+[out]指向双精度值，接收亮度信息类型的变量的指针。  
   
- [out]*饱和度*  
- 指向双精度值，接收饱和度的信息类型的变量的指针。  
+*饱和度*<br/>
+[out]指向双精度值，接收饱和度的信息类型的变量的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*R*  
- 红色组件中。  
+*R*<br/>
+[in]红色组件中。  
   
- [in]*G*  
- 绿色组件中。  
+*G*<br/>
+[in]绿色组件中。  
   
- [in]*B*  
- 蓝色颜色组件中。  
+*B*<br/>
+[in]蓝色颜色组件中。  
   
- [in]*x*  
- 指向单元格六边形光标的 x 坐标。  
+*x*<br/>
+[in]指向单元格六边形光标的 x 坐标。  
   
- [in]*y*  
- 指向单元格六边形光标的 y 坐标。  
+*y*<br/>
+[in]指向单元格六边形光标的 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  此方法的第二个重载总是返回 FALSE。  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- RGB 颜色值。  
+*颜色*<br/>
+[in]RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hue*  
- 色调值。  
+*Hue*<br/>
+[in]色调值。  
   
- [in]*亮度*  
- 亮度值。  
+*亮度*<br/>
+[in]亮度值。  
   
- [in]*饱和度*  
- 饱和度值。  
+*饱和度*<br/>
+[in]饱和度值。  
   
- [in]*bInvalidate*  
- 若要强制立即更新为新的颜色; 该窗口，则返回 TRUE否则为 FALSE。 默认值为 TRUE。  
+*bInvalidate*<br/>
+[in]若要强制立即更新为新的颜色; 该窗口，则返回 TRUE否则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*Hue*  
- 色调值。  
+*Hue*<br/>
+[in]色调值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*亮度*  
- 亮度值。  
+*亮度*<br/>
+[in]亮度值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*w*  
- 亮度栏的宽度以像素度量。  
+*w*<br/>
+[in]亮度栏的宽度以像素度量。  
   
 ### <a name="remarks"></a>备注  
  此方法用于调整亮度栏，它位于**自定义**颜色选取器控件的选项卡。 *W*参数指定新的亮度栏的宽度。 如果它超出了四分之三的工作区宽度，则忽略宽度值。  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ref*  
- RGB 颜色值。  
+*ref*<br/>
+[in]RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
  初始化颜色选取器控件时调用此方法。  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pPalette*  
- 指向调色板颜色。  
+*pPalette*<br/>
+[in]指向调色板颜色。  
   
 ### <a name="remarks"></a>备注  
  调色板定义颜色选取器控件中显示的颜色数组。  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*饱和度*  
- 饱和度值。  
+*饱和度*<br/>
+[in]饱和度值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*colorType*  
- 颜色选取器控件类型。  
+*colorType*<br/>
+[in]颜色选取器控件类型。  
   
  类型由定义`CMFCColorPickerCtrl::COLORTYPE`枚举。 可能的类型为亮度、 选取器、 HEX 和 HEX_GREYSCALE。 默认类型为选取器。  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403662"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701684"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 类声明的主体中定义的函数是内联函数。  
@@ -156,7 +156,8 @@ private:
   
  递归函数可以内联替换为指定的深度[inline_depth](../preprocessor/inline-depth.md)杂注，最多 16 个调用。 该深度之后，递归函数调用被视为对函数实例的调用。  内联启发式对递归函数检查到的深度不能超过 16。 [Inline_recursion](../preprocessor/inline-recursion.md)杂注控制当前在扩展下的函数的内联扩展。 请参阅[内联函数展开](../build/reference/ob-inline-function-expansion.md)(/ Ob) 编译器选项设置为相关信息。  
   
-**结束 Microsoft 专用**  
+**结束 Microsoft 专用**
+
  有关使用的详细信息**内联**说明符，请参阅：  
   
 -   [内联类成员函数](../cpp/inline-functions-cpp.md)  

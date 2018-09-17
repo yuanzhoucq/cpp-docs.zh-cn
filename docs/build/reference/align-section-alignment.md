@@ -1,5 +1,5 @@
 ---
-title: /ALIGN （节对齐） |Microsoft 文档
+title: /ALIGN （节对齐） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 543ea30b06f62939f378167d8598c73f66061f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb92d4b16be7903004831ffb25e2891f498a8989
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370301"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718245"
 ---
 # <a name="align-section-alignment"></a>/ALIGN（节对齐）
 
@@ -36,18 +36,18 @@ ms.locfileid: "32370301"
 
 ### <a name="arguments"></a>自变量
 
-*数*  
-对齐值以字节为单位。
+*数量*<br/>
+对齐值 （字节）。
 
 ## <a name="remarks"></a>备注
 
-**/对齐**选项指定程序的线性地址空间中的每个节的对齐方式。 *数*参数是以字节为单位，必须为 2 的幂。 默认值为 4k (4096)。 如果对齐方式生成了无效的图像，则链接器将发出警告。
+**/Align**选项指定程序的线性地址空间中每一节的对齐方式。 *数*参数是以字节为单位，必须为 2 的幂。 默认值为 4 千字节 (4096)。 如果对齐方式产生无效的图像，则链接器将发出警告。
 
-除非你正在编写之类的设备驱动程序的应用程序，你应该不需要修改对齐方式。
+除非你正在编写设备驱动程序之类的应用程序，您应该不需要修改对齐方式。
 
-可以修改包含的对齐参数的特定部分的对齐方式[/部分](../../build/reference/section-specify-section-attributes.md)选项。
+可以修改使用的对齐参数的特定部分的对齐方式[/section](../../build/reference/section-specify-section-attributes.md)选项。
 
-你指定的对齐方式值不能小于最大的部分对齐。
+您指定的对齐值不能小于最大的节对齐。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
@@ -63,5 +63,5 @@ ms.locfileid: "32370301"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)  
-[链接器选项](../../build/reference/linker-options.md)  
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541206"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704985"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 专用**  
@@ -38,8 +38,8 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `a`  
- 一个常量，它指定段选择器。  
+*a*<br/>
+[in]一个常量，它指定段选择器。  
   
 ## <a name="return-value"></a>返回值  
  指定的段选择器的段限制`a`，前提是选择器在当前的权限级别是有效的并且可见。  

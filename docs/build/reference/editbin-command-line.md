@@ -1,5 +1,5 @@
 ---
-title: EDITBIN 命令行 |Microsoft 文档
+title: EDITBIN 命令行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371172"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700589"
 ---
 # <a name="editbin-command-line"></a>EDITBIN 命令行
-若要运行 EDITBIN，使用以下语法：  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- 指定的对象或图像要更改的一个或多个文件和一个或多个选项用于更改这些文件。  
-  
- 当你键入命令`editbin`EDITBIN 而无需任何其他命令行输入时，显示一条总结了其选项的用法语句。  
-  
-## <a name="see-also"></a>请参阅  
- [C/c + + 生成工具](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN 参考](../../build/reference/editbin-reference.md)
+
+若要运行 EDITBIN，使用以下语法：
+
+```
+EDITBIN [options] files...
+```
+
+指定的对象或要更改的图像的一个或多个文件和一个或多个选项用于更改这些文件。
+
+当你键入命令`editbin`EDITBIN 而无需任何其他命令行输入时，显示一条用法语句总结了其自己的选项。
+
+## <a name="see-also"></a>请参阅
+
+[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
+[EDITBIN 参考](../../build/reference/editbin-reference.md)

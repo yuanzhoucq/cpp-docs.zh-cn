@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680575"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721248"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 `CVSListBox`类支持的可编辑列表控件。  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strIext*  
- 对字符串的引用。  
+*strIext*<br/>
+[in]对字符串的引用。  
   
- [in]*dwData*  
- 一个与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
+*dwData*<br/>
+[in]一个与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
   
- [in]*iIndex*  
- 将保存的字符串的位置的从零开始的索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
+*iIndex*<br/>
+[in]将保存的字符串的位置的从零开始的索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
   
 ### <a name="return-value"></a>返回值  
  列表控件中字符串的位置的从零开始索引。  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果编辑操作启动成功，则为 TRUE否则为 FALSE。  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  与指定项关联的 32 位值。  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含指定项的文本。  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的项被删除; 则为 TRUE否则为 FALSE。  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iItem*  
- 可编辑列表控件项的从零开始的索引。  
+*iItem*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
- [in]*dwData*  
- 一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。  
+*dwData*<br/>
+[in]一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
 ### <a name="remarks"></a>备注  
   

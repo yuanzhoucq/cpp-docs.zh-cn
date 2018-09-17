@@ -1,5 +1,5 @@
 ---
-title: 指定内联文件 |Microsoft 文档
+title: 指定内联文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720559"
 ---
 # <a name="specifying-an-inline-file"></a>指定内联文件
-指定两个命令的尖括号 (<<) 在命令中其中*filename*要显示。 尖括号不能为宏扩展。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>备注  
- 当运行该命令时，用替换尖括号*filename*，如果指定，或通过 NMAKE 生成的唯一名称。 如果指定， *filename*必须遵循而无需空格或制表符的尖括号。允许的路径。 需要或采用无扩展名。 如果*filename*文件创建在当前的指定或指定的目录，该名称覆盖任何现有文件; 否则，在临时目录中创建 (或当前目录中，如果在 TMP 环境变量未定义）。 如果先前*filename*是重复使用，NMAKE 替换以前的文件。  
-  
-## <a name="see-also"></a>请参阅  
- [生成文件中的内联文件](../build/inline-files-in-a-makefile.md)
+
+指定两个尖括号 (<<) 命令中位置*文件名*将出现。 在尖括号内不能是宏扩展。
+
+## <a name="syntax"></a>语法
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>备注
+
+当运行该命令时，替换尖括号*文件名*、 如果指定，或通过将 NMAKE 生成的唯一名称。 如果指定，*文件名*必须遵循尖括号而无需空格或制表符。允许的路径。 需要或采用没有扩展名。 如果*文件名*文件创建在当前的指定或指定的目录，该名称覆盖任何现有文件; 否则为 TMP 目录中创建 (或当前目录中，如果 TMP 环境变量未定义）。 如果上一次*文件名*是重复使用，NMAKE 取代了以前的文件。
+
+## <a name="see-also"></a>请参阅
+
+[生成文件中的内联文件](../build/inline-files-in-a-makefile.md)

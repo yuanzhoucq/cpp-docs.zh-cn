@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721287"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -146,5 +146,5 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)  
-[设置链接器选项](../../build/reference/setting-linker-options.md)  
+[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)<br/>
+[设置链接器选项](../../build/reference/setting-linker-options.md)

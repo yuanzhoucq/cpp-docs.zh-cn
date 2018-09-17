@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708664"
 ---
 # <a name="cl-command-files"></a>CL 命令文件
 
@@ -37,25 +37,25 @@ ms.locfileid: "43894754"
 
 例如，如果以下命令在名为响应的文件：
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 指定以下 CL 命令：
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 改为 CL 命令如下所示：
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 请注意，有效地组合命令行和命令文件命令。
 
 ## <a name="see-also"></a>请参阅
 
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
 [编译器选项](../../build/reference/compiler-options.md)
