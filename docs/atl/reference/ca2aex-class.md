@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071206"
 ---
 # <a name="ca2aex-class"></a>CA2AEX 类
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>参数
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。
 
 ## <a name="members"></a>成员
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 要转换的文本字符串。
 
-*nCodePage*  
+*nCodePage*<br/>
 未使用此类。
 
 ### <a name="remarks"></a>备注
@@ -161,9 +161,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
-[CA2WEX 类](../../atl/reference/ca2wex-class.md)   
-[CW2AEX 类](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX 类](../../atl/reference/cw2wex-class.md)   
+[CA2CAEX 类](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX 类](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX 类](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX 类](../../atl/reference/cw2wex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

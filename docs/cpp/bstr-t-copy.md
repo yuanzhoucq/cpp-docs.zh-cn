@@ -17,40 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 50f9a17c93849dec49c2c9a72825a5797d8c040c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068619"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
-**Microsoft 专用**  
-  
- 构造封装的 `BSTR` 的副本。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-BSTR copy( bool fCopy = true ) const;  
-```  
-  
-#### <a name="parameters"></a>参数  
- *fCopy*  
- 如果为 TRUE，**副本**返回所包含的一个副本`BSTR`; 否则为**副本**返回实际的 BSTR。  
-  
-## <a name="remarks"></a>备注  
- 返回封装的 `BSTR` 对象的新分配的副本。  
-  
-## <a name="example"></a>示例  
-  
-```cpp 
-STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
-   *pVal = m_bsConStr.copy();  
-}  
-```  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_bstr_t 类](../cpp/bstr-t-class.md)
+
+**Microsoft 专用**
+
+构造封装的 `BSTR` 的副本。
+
+## <a name="syntax"></a>语法
+
+```
+BSTR copy( bool fCopy = true ) const;
+```
+
+#### <a name="parameters"></a>参数
+
+*fCopy*<br/>
+如果为 TRUE，**副本**返回所包含的一个副本`BSTR`; 否则为**副本**返回实际的 BSTR。
+
+## <a name="remarks"></a>备注
+
+返回封装的 `BSTR` 对象的新分配的副本。
+
+## <a name="example"></a>示例
+
+```cpp
+STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
+   *pVal = m_bsConStr.copy();
+}
+```
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_bstr_t 类](../cpp/bstr-t-class.md)

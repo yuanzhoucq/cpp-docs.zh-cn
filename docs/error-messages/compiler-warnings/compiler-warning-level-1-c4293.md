@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4293 |Microsoft 文档
+title: 编译器警告 （等级 1） C4293 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad588b69db1a0b46efa708b472bfc2218d17c0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29a42d5e06ededbcc4f16224b3e4332d56dbe03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050198"
 ---
 # <a name="compiler-warning-level-1-c4293"></a>编译器警告（等级 1）C4293
-operator： 移动计数负或太大、 未定义的行为  
-  
- 如果 shift 计数为负数或过大，则生成的映像的行为不确定。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4293:  
-  
-```  
-// C4293.cpp  
-// compile with: /c /W1  
-unsigned __int64 combine (unsigned lo, unsigned hi) {  
-  
-   return (hi << 32) | lo;   // C4293  
-  
-   // try the following line instead  
-   // return ( (unsigned __int64)hi << 32) | lo;  
-}  
+
+operator: shift 计数为负或过大、 未定义的行为
+
+如果 shift 计数为负或过大，生成的图像的行为未定义。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4293:
+
+```
+// C4293.cpp
+// compile with: /c /W1
+unsigned __int64 combine (unsigned lo, unsigned hi) {
+
+   return (hi << 32) | lo;   // C4293
+
+   // try the following line instead
+   // return ( (unsigned __int64)hi << 32) | lo;
+}
 ```

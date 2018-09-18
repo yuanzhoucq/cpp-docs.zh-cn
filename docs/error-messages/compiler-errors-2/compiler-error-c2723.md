@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2723 |Microsoft 文档
+title: 编译器错误 C2723 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01476218683205d0fb06e81847cfe9727b733158
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b1be2d81ecec7eb96fd9c1cd7e9938ce509f71e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072012"
 ---
 # <a name="compiler-error-c2723"></a>编译器错误 C2723
-“函数”：“specifier”说明符在函数定义上非法  
-  
- 说明符不能与类声明外部的函数定义同时出现。 仅能对类声明内的成员函数声明指定 `virtual` 说明符。  
-  
- 下面的示例生成 C2723 并显示如何修复它：  
-  
-```  
-// C2723.cpp  
-struct X {  
-   virtual void f();  
-   virtual void g();  
-};  
-  
-virtual void X::f() {}   // C2723  
-  
-// try the following line instead  
-void X::g() {}  
+
+“函数”：“specifier”说明符在函数定义上非法
+
+说明符不能与类声明外部的函数定义同时出现。 仅能对类声明内的成员函数声明指定 `virtual` 说明符。
+
+下面的示例生成 C2723 并显示如何修复它：
+
+```
+// C2723.cpp
+struct X {
+   virtual void f();
+   virtual void g();
+};
+
+virtual void X::f() {}   // C2723
+
+// try the following line instead
+void X::g() {}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2185 |Microsoft 文档
+title: 编译器错误 C2185 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063939"
 ---
 # <a name="compiler-error-c2185"></a>编译器错误 C2185
-identifier： 非法基于分配  
-  
- 寄存器变量或自动 （本地） 变量声明`__based`。 可以将仅全局变量声明`__based`。
+
+identifier： 非法基分配
+
+寄存器变量或自动 （本地） 变量声明`__based`。 只有全局变量可以声明`__based`。

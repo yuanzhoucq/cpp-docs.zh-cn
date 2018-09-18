@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09696f6a13c11fbb37fa6e89ccb9b1241cadd0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b38aabbb418a355f85917a2d287c2f473cb2e7df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062912"
 ---
 # <a name="ccomheap-class"></a>CComHeap 类
 
@@ -80,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -103,7 +103,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。
 
 ### <a name="remarks"></a>备注
@@ -120,7 +120,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。
 
 ### <a name="return-value"></a>返回值
@@ -141,10 +141,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。
 
-*nBytes*  
+*nBytes*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -159,10 +159,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[DynamicConsumer 示例](../../visual-cpp-samples.md)   
-[类概述](../../atl/atl-class-overview.md)   
-[CWin32Heap 类](../../atl/reference/cwin32heap-class.md)   
-[CLocalHeap 类](../../atl/reference/clocalheap-class.md)   
-[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)   
-[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)   
+[DynamicConsumer 示例](../../visual-cpp-samples.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[CWin32Heap 类](../../atl/reference/cwin32heap-class.md)<br/>
+[CLocalHeap 类](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)<br/>
 [IAtlMemMgr 类](../../atl/reference/iatlmemmgr-class.md)

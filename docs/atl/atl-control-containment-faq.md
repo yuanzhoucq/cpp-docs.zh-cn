@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed30097e54460b66ee9bf76293217b8fcc7656a3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052896"
 ---
 # <a name="atl-control-containment-faq"></a>ATL 控件包含常见问题
 
@@ -117,10 +117,10 @@ ATL 的控件承载 API 是允许任何窗口，使其作为 ActiveX 控件容�
 
 ## <a name="see-also"></a>请参阅
 
-[控件包含常见问题](../atl/atl-control-containment-faq.md)   
-[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
-[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
-[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
-[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
-[CAxWindow2T 类](../atl/reference/caxwindow2t-class.md)   
+[控件包含常见问题](../atl/atl-control-containment-faq.md)<br/>
+[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>
+[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
+[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)<br/>
+[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
+[CAxWindow2T 类](../atl/reference/caxwindow2t-class.md)<br/>
 [IAxWinHostWindowLic 接口](../atl/reference/iaxwinhostwindowlic-interface.md)

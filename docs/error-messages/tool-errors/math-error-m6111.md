@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6111 |Microsoft 文档
+title: 数学错误 M6111 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074820"
 ---
 # <a name="math-error-m6111"></a>数学错误 M6111
-堆栈下溢  
-  
- 浮点运算导致堆栈下溢 8087/287/387 协处理器或仿真程序上。  
-  
- 此错误通常导致通过调用`long double`不返回值的函数。 例如，以下时，将生成此错误编译和运行：  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- 程序终止，退出代码 139。
+
+堆栈下溢
+
+浮点运算导致堆栈下溢 8087/287/387 协处理器或仿真程序上。
+
+此错误通常通过调用引起`long double`不返回值的函数。 例如，以下生成此错误在编译和运行：
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+程序终止，退出代码为 139。

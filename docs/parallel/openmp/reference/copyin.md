@@ -1,5 +1,5 @@
 ---
-title: copyin |Microsoft 文档
+title: copyin |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688240"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059324"
 ---
 # <a name="copyin"></a>copyin
-允许访问主线程的值的线程[threadprivate](../../../parallel/openmp/reference/threadprivate.md)变量。  
+允许线程访问主线程的值为[threadprivate](../../../parallel/openmp/reference/threadprivate.md)变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,10 @@ ms.locfileid: "33688240"
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+## <a name="parameters"></a>参数
   
- `var`  
- `threadprivate`如同它存在并行构造之前，主线程中变量的值用于初始化的变量。  
+*var*<br/>
+`threadprivate`并行构造之前存在的主线程中的变量的值用于初始化的变量。  
   
 ## <a name="remarks"></a>备注  
  `copyin` 适用于以下指令：  

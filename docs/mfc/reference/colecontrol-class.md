@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050094"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 用于开发 OLE 控件的重要基类。
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 默认情况下`GetControlFlags`返回`fastBeginPaint | clipPaintDC`。
 
-`fastBeginPaint` 如果设置，请使用 begin 画图函数定制而不是 OLE 控件的[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API （默认设置）。
-
-`clipPaintDC` 如果未设置，禁用对`IntersectClipRect`所做的`COleControl`和获得小的速度优势。 如果使用无窗口激活，则该标志无效。
-
-`pointerInactive` 如果设置，提供鼠标交互，而您的控件处于非活动状态，从而`COleControl`的实现`IPointerInactive`接口，它默认处于禁用状态。
-
-`noFlickerActivate` 如果设置，又能避免额外绘制操作和伴随的可视闪烁。 当您的控件绘制自身相同处于非活动和活动状态时使用。 如果使用无窗口激活，则该标志无效。
-
-`windowlessActivate` 如果设置，则表示您的控件使用无窗口激活。
-
-`canOptimizeDraw` 如果设置，则指示该控件将执行优化的绘图，如果该容器支持它。
+|||
+|-|-|
+|`fastBeginPaint`|如果设置，请使用 begin 画图函数定制而不是 OLE 控件的[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API （默认设置）。|
+|`clipPaintDC`|如果未设置，禁用对`IntersectClipRect`所做的`COleControl`和获得小的速度优势。 如果使用无窗口激活，则该标志无效。|
+|`pointerInactive`|如果设置，提供鼠标交互，而您的控件处于非活动状态，从而`COleControl`的实现`IPointerInactive`接口，它默认处于禁用状态。|
+|`noFlickerActivate`|如果设置，又能避免额外绘制操作和伴随的可视闪烁。 当您的控件绘制自身相同处于非活动和活动状态时使用。 如果使用无窗口激活，则该标志无效。|
+|`windowlessActivate`|如果设置，则表示您的控件使用无窗口激活。|
+|`canOptimizeDraw`|如果设置，则指示该控件将执行优化的绘图，如果该容器支持它。|
 
 有关详细信息`GetControlFlags`和其他优化 OLE 控件，请参阅[ActiveX 控件： 优化](../../mfc/mfc-activex-controls-optimization.md)。
 

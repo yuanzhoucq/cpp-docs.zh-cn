@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6108 |Microsoft 文档
+title: 数学错误 M6108 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfeca48aa04ebfbc097649e5c25253166c50dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1624a89b472733b4adb5563c8ba52e0b03dcaa2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048612"
 ---
 # <a name="math-error-m6108"></a>数学错误 M6108
-平方根  
-  
- 平方根运算中的操作数为负。  
-  
- 程序终止，退出代码 136。  
-  
+
+平方根
+
+平方根操作中的操作数为负。
+
+程序终止，退出代码为 136。
+
 > [!NOTE]
->  `sqrt` C 运行时库和 FORTRAN 内部函数中的函数**SQRT**也不会生成此错误。 C`sqrt`函数在执行该操作之前检查自变量并返回一个错误值，如果操作数为负。 FORTRAN **SQRT**函数生成域错误[M6201](../../error-messages/tool-errors/math-error-m6201.md)而不是此错误。
+>  `sqrt`中的 C 运行时库和 FORTRAN 内部函数的函数**SQRT**不会生成此错误。 C`sqrt`函数在执行该操作之前检查参数和返回一个错误值，如果操作数为负。 FORTRAN **SQRT**函数生成域错误[M6201](../../error-messages/tool-errors/math-error-m6201.md)而不是此错误。

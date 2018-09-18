@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2069 |Microsoft 文档
+title: 编译器错误 C2069 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e182409ec0d9bc609daf96060386c374072cdef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 548342ed0d08de93af1288c57bed5067ad97ccf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032883"
 ---
 # <a name="compiler-error-c2069"></a>编译器错误 C2069
-“void”项到非“void”项的转换  
-  
- 类型 `void` 不能转换为其他任何类型。
+
+“void”项到非“void”项的转换
+
+类型 `void` 不能转换为其他任何类型。

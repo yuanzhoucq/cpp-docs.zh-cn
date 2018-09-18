@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3217 |Microsoft 文档
+title: 编译器错误 C3217 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eb8ee0f6e00ac1bfb2ad531f2236bb2d9208d27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c407e8f77990bdbeea143c252a27292ac282497e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063484"
 ---
 # <a name="compiler-error-c3217"></a>编译器错误 C3217
-“param”: 泛型参数不能在此声明中进行约束  
-  
- 约束的格式错误；约束泛型参数必须与泛型类模板参数一致。  
-  
- 下面的示例生成 C3217：  
-  
-```  
-// C3217.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   where T : A   // C3217  
-   void f();  
-};  
-```  
-  
- 以下示例演示了可能的解决方法：  
-  
-```  
-// C3217b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   where T1 : A  
-   void f();  
-};  
+
+“param”: 泛型参数不能在此声明中进行约束
+
+约束的格式错误；约束泛型参数必须与泛型类模板参数一致。
+
+下面的示例生成 C3217：
+
+```
+// C3217.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+ref class C {
+   generic <class T1>
+   where T : A   // C3217
+   void f();
+};
+```
+
+以下示例演示了可能的解决方法：
+
+```
+// C3217b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+ref class C {
+   generic <class T1>
+   where T1 : A
+   void f();
+};
 ```

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b712b44c2908df1163380a76909884e4ab87d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 788188814de37214f397632161de55b54a28421e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073260"
 ---
 # <a name="default-atl-project-configurations"></a>默认 ATL 项目配置
 
@@ -34,8 +34,8 @@ ms.locfileid: "43755739"
 
 ## <a name="see-also"></a>请参阅
 
-[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[使用项目属性](../../ide/working-with-project-properties.md)   
-[配置管理器对话框](/visualstudio/ide/understanding-build-configurations)   
+[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[使用项目属性](../../ide/working-with-project-properties.md)<br/>
+[配置管理器对话框](/visualstudio/ide/understanding-build-configurations)<br/>
 [编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

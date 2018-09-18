@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc931e643235bc6edb4a1121628ac5185b76cc7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a3403a09700ba6f84792cc570d9fb093026241d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070816"
 ---
 # <a name="compiler-com-support-classes"></a>编译器 COM 支持类
-**Microsoft 专用**  
-  
- 标准类用于支持某些 COM 类型。 在定义了类\<comdef.h > 并从类型库生成的标头文件。  
-  
-|类|目标|  
-|-----------|-------------|  
-|[_bstr_t](../cpp/bstr-t-class.md)|包装 `BSTR` 类型，以提供有用的运算符和方法。|  
-|[_com_error](../cpp/com-error-class.md)|定义引发的错误对象[_com_raise_error](../cpp/com-raise-error.md)在大多数失败中。|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封装 COM 接口指针，并自动执行对所需的调用`AddRef`， `Release`，和`QueryInterface`。|  
-|[_variant_t](../cpp/variant-t-class.md)|包装 `VARIANT` 类型，以提供有用的运算符和方法。|  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [编译器 COM 支持](../cpp/compiler-com-support.md)   
- [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)   
- [C++ 语言参考](../cpp/cpp-language-reference.md)
+
+**Microsoft 专用**
+
+标准类用于支持某些 COM 类型。 在定义了类\<comdef.h > 并从类型库生成的标头文件。
+
+|类|目标|
+|-----------|-------------|
+|[_bstr_t](../cpp/bstr-t-class.md)|包装 `BSTR` 类型，以提供有用的运算符和方法。|
+|[_com_error](../cpp/com-error-class.md)|定义引发的错误对象[_com_raise_error](../cpp/com-raise-error.md)在大多数失败中。|
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封装 COM 接口指针，并自动执行对所需的调用`AddRef`， `Release`，和`QueryInterface`。|
+|[_variant_t](../cpp/variant-t-class.md)|包装 `VARIANT` 类型，以提供有用的运算符和方法。|
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[编译器 COM 支持](../cpp/compiler-com-support.md)<br/>
+[编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)<br/>
+[C++ 语言参考](../cpp/cpp-language-reference.md)

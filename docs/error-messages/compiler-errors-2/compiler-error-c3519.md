@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3519 |Microsoft 文档
+title: 编译器错误 C3519 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740fef32484164e7439335686adce0a4aa8027f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ac9c1bfe01cee659ae8b637df23a86315b5310f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072779"
 ---
 # <a name="compiler-error-c3519"></a>编译器错误 C3519
-invalid_param: embedded_idl 特性的参数无效  
-  
- 参数传递到`embedded_idl`属性[#import](../../preprocessor/hash-import-directive-cpp.md)，但编译器无法识别的参数。  
-  
- 有关允许的唯一参数`embedded_idl`是`emitidl`和`no_emitidl`。  
-  
- 下面的示例生成 C3519:  
-  
-```  
-// C3519.cpp  
-// compile with: /LD  
-[module(name="MyLib2")];  
-#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidcl")     
-// C3519  
-#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidl")     
-// OK  
+
+invalid_param: embedded_idl 特性的参数无效
+
+一个参数传递给`embedded_idl`的属性[#import](../../preprocessor/hash-import-directive-cpp.md)，但编译器无法识别的参数。
+
+有关允许的唯一参数`embedded_idl`都`emitidl`和`no_emitidl`。
+
+下面的示例生成 C3519:
+
+```
+// C3519.cpp
+// compile with: /LD
+[module(name="MyLib2")];
+#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidcl")
+// C3519
+#import "C:\testdir\bin\importlib.tlb" embedded_idl("no_emitidl")
+// OK
 ```

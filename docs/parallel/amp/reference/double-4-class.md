@@ -1,5 +1,5 @@
 ---
-title: double_4 类 |Microsoft 文档
+title: double_4 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 92f0a8ed6842986e7f64279ab0c6b23a80dab293
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028436"
 ---
 # <a name="double4-class"></a>double_4 类
-表示短矢量的四个双精度数。  
+表示四个双精度型值的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -306,7 +306,7 @@ class double_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[double_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[double_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -464,7 +464,7 @@ class double_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#double_4__size)||  
   
@@ -611,7 +611,7 @@ class double_4;
   
 ##  <a name="ctor"></a> double_4 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 double_4() restrict(amp,
@@ -662,23 +662,23 @@ explicit inline double_4(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V3`  
- 要初始化元素 3 的值。  
+*_V3*<br/>
+要初始化元素 3 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="double_4__size"></a> 大小 
 

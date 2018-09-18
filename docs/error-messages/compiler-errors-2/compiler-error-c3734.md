@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3734 |Microsoft 文档
+title: 编译器错误 C3734 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0b27f449e61d6b80ad2d19eb09a3a55c5f3ad1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d304b3853986b54f9844f9e4968f7bb7d6a8af5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072740"
 ---
 # <a name="compiler-error-c3734"></a>编译器错误 C3734
-“class”: 托管或 WinRT 类不能是组件类  
-  
- [组件类](../../windows/coclass.md)属性不能用于托管或 WinRT 类。  
-  
- 下面的示例生成 C3734，并演示如何修复此错误：  
-  
-```  
-// C3734.cpp  
-// compile with: /clr /c  
-[module(name="x")];  
-  
-[coclass]  
-ref class CMyClass {   // C3734 remove the ref keyword to resolve  
-};  
-```  
+
+“class”: 托管或 WinRT 类不能是组件类
+
+[组件类](../../windows/coclass.md)属性不能用于托管或 WinRT 类。
+
+下面的示例生成 C3734，并演示如何修复此错误：
+
+```
+// C3734.cpp
+// compile with: /clr /c
+[module(name="x")];
+
+[coclass]
+ref class CMyClass {   // C3734 remove the ref keyword to resolve
+};
+```

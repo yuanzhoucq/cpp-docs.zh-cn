@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070153"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 
@@ -41,13 +41,13 @@ ms.locfileid: "43766582"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要引用的智能指针的对象类型。
 
 ## <a name="members"></a>成员
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 指向客户端的`IUnknown`。
 
-*iid*  
+*iid*<br/>
 连接点的 GUID。 通常情况下，这是与连接点管理输出接口相同。
 
-*pdw*  
+*pdw*<br/>
 一个指向唯一标识连接的 cookie。
 
 ### <a name="return-value"></a>返回值
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>参数
 
-*p2*  
+*p2*<br/>
 `CComPtrBase`对象将获得 this 指针的所有权。
 
 ### <a name="remarks"></a>备注
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*szProgID*  
+*szProgID*<br/>
 指向 ProgID，用来恢复 CLSID 的指针。
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 如果为 NULL，指示不创建对象的聚合的一部分。 如果非 NULL 是指向聚合对象的指针`IUnknown`接口 (控制`IUnknown`)。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 管理新创建的对象的代码将在其中运行的上下文。
 
-*rclsid*  
+*rclsid*<br/>
 与数据和将用于创建对象的代码相关联的 CLSID。
 
 ### <a name="return-value"></a>返回值
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>参数
 
-*ppT*  
+*ppT*<br/>
 将接收变量的地址`CComPtrBase`指针。
 
 ### <a name="return-value"></a>返回值
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>参数
 
-*pOther*  
+*pOther*<br/>
 要比较的 `IUnknown *`。
 
 ### <a name="return-value"></a>返回值
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 指向对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 指向对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -345,7 +345,7 @@ bool operator<(T* pT) const throw();
 
 强制转换运算符。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>参数
 
-*Q*  
+*Q*<br/>
 对象需要的类型的接口指针。
 
-*pp*  
+*pp*<br/>
 接收的请求的接口指针的输出变量的地址。
 
 ### <a name="return-value"></a>返回值
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>参数
 
-*punkParent*  
+*punkParent*<br/>
 一个指向`IUnknown`父级的接口。
 
 ### <a name="return-value"></a>返回值

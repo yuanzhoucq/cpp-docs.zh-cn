@@ -1,5 +1,5 @@
 ---
-title: 错误 C1080 |Microsoft 文档
+title: 错误 C1080 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1400478dc1bbef4ab435f96eaa75c9a6637b6bb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd3ad247bcdbfa30213eba57cdbbbc411438e79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029931"
 ---
 # <a name="fatal-error-c1080"></a>错误 C1080
-编译器限制： 命令行选项超出限制的数字字符  
-  
- 传递给编译器的参数超过 256 个字符。
+
+编译器限制： 命令行选项超出限制的数字字符
+
+传递给编译器的参数超过 256 个字符。

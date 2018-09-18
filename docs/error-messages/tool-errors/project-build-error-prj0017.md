@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0017 |Microsoft 文档
+title: 项目生成错误 PRJ0017 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 769c7b2d6c20fdc6daba6f1df2f576987c146641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28348626417f6b4c961be4486f6d7573a0a67780
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076055"
 ---
 # <a name="project-build-error-prj0017"></a>项目生成错误 PRJ0017
-当前工作目录是无效的。  
-  
- 当前工作目录的路径的长度超过 _MAXPATH。 若要解决此错误，不要在此类深的层级创建你的项目。
+
+当前工作目录是无效的。
+
+当前工作目录的路径的长度超过 _MAXPATH。 若要解决此错误，不要在这种深度级别创建你的项目。

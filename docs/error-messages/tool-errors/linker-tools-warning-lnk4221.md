@@ -1,5 +1,5 @@
 ---
-title: 链接器工具警告 LNK4221 |Microsoft 文档
+title: 链接器工具警告 LNK4221 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8906c4308b8586d5b1312739921f58063e820deb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 921f3a563b465332408c112deca61faa01e26cac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032899"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>链接器工具警告 LNK4221
-此对象文件未定义任何以前未定义的公共符号，因此它不使用通过使用此库的任何链接操作  
-  
- 请考虑以下两个代码段。  
-  
-```  
-// a.cpp  
-#include <atlbase.h>  
-```  
-  
-```  
-// b.cpp  
-#include <atlbase.h>  
-int function()  
-{  
-   return 0;  
-}  
-  
-```  
-  
- 若要编译文件并创建两个对象文件，运行**cl /c a.cpp b.cpp**在命令提示符。 如果你通过运行链接对象文件**链接/lib /out:test.lib a.obj b.obj**，你将收到 LNK4221 警告。 如果将对象链接通过运行**链接/lib /out:test.lib b.obj a.obj**，你将不会收到一条警告。  
-  
- 在第二个方案中会不发出任何警告，因为链接器会在后进先出 (LIFO) 方式运行。 在第一个方案中之前 a.obj，处理 b.obj 和 a.obj 已添加任何新符号。 指示链接器首先处理 a.obj，可以避免此警告。  
-  
- 此错误的常见原因是当两个源文件指定选项[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)同名标头文件中指定**预编译标头**字段。 由于默认情况下，stdafx.cpp 包括 stdafx.h 并不会添加任何新符号，导致此问题的常见原因涉及到 stdafx.h。 如果另一个源文件中包含与 stdafx.h **/Yc**和之前 stdafx.obj 处理关联的.obj 文件，则链接器将引发 LNK4221。  
-  
- 一种方法要解决此问题是确保对于每个预编译标头，没有只有一个源文件包含与它的 **/Yc**。 所有其他源文件必须使用预编译标头。 有关如何更改此设置的详细信息，请参阅[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)。
+
+此对象文件未定义任何之前未定义的公共符号，因此它不使用任何耗用此库的链接操作
+
+请考虑以下两个代码段。
+
+```
+// a.cpp
+#include <atlbase.h>
+```
+
+```
+// b.cpp
+#include <atlbase.h>
+int function()
+{
+   return 0;
+}
+
+```
+
+若要编译的文件并创建两个对象文件，运行**cl /c a.cpp b.cpp**在命令提示符。 如果通过运行链接对象文件**链接/lib /out:test.lib a.obj b.obj**，你将收到 LNK4221 警告。 如果将对象链接通过运行**链接/lib /out:test.lib b.obj a.obj**，您将不会收到一条警告。
+
+在第二个方案中会不发出任何警告，因为链接器以非后进先出 (LIFO) 方式工作。 在第一个方案中之前 a.obj，处理 b.obj 和 a.obj 有无新符号来添加。 指示链接器首先处理 a.obj，可以避免此警告。
+
+此错误的常见原因是当两个源文件指定选项[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)具有相同标头文件名称中指定**预编译标头**字段。 此问题的常见原因处理 stdafx.h 由于默认情况下，stdafx.cpp 包括 stdafx.h 并不会添加任何新的符号。 如果另一个源文件都包含与 stdafx.h **/Yc**和关联的.obj 文件中，在处理时会先 stdafx.obj，链接器将引发 LNK4221。
+
+一种方法来解决此问题是，确保为每个预编译标头，存在是只有一个源文件，其中包括其与 **/Yc**。 所有其他源文件必须使用预编译标头。 有关如何更改此设置的详细信息，请参阅[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)。

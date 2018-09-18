@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65995f24e58b0bdce4a15adc72de0b60ded644dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050549"
 ---
 # <a name="snap-in-object-macros"></a>单元对象宏
 
@@ -57,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>参数
 
-classname  
+classname<br/>
 [in]管理单元中扩展数据类的名称。
 
 ### <a name="remarks"></a>备注
@@ -78,7 +78,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>参数
 
-*（_c)*  
+*（_c)*<br/>
 [in]指定管理单元中的对象类。
 
 ### <a name="example"></a>示例
@@ -111,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>参数
 
-*（_c)*  
+*（_c)*<br/>
 [in]指定管理单元中的对象类。
 
 ### <a name="example"></a>示例
@@ -128,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>参数
 
-*dataClass*  
+*dataClass*<br/>
 [in]管理单元中扩展的数据类。
 
 ### <a name="remarks"></a>备注
@@ -149,7 +149,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>参数
 
-*dataClass*  
+*dataClass*<br/>
 [in]管理单元中扩展的数据类。
 
 ### <a name="remarks"></a>备注
@@ -170,7 +170,7 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]标识管理单元中对象的上下文菜单。
 
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
@@ -183,7 +183,7 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]标识工具栏控件。
 
 ### <a name="remarks"></a>备注

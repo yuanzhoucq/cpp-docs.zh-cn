@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039330"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 类
 
@@ -32,7 +32,7 @@ ms.locfileid: "43751418"
 ## <a name="syntax"></a>语法
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>参数
 
-*I*  
+*I*<br/>
 指定要存储的指针的类型的 COM 接口。
 
-*piid*  
+*piid*<br/>
 指向 IID*我*。
 
 ## <a name="members"></a>成员
@@ -84,7 +84,7 @@ CInterfaceArray() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CAtlArray 类](../../atl/reference/catlarray-class.md)   
-[CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlArray 类](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

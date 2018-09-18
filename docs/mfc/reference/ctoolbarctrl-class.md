@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047923"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 提供 Windows 工具栏公共控件的功能。  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>备注  
  *LpButtons*指针指向的数组`TBBUTTON`结构。 每个`TBBUTTON`结构将被添加为按钮的样式、 映像和/或字符串，命令 ID、 状态和用户定义数据的按钮相关联：  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  成员是按如下所示：  
   
- `iBitmap`  
- 按钮图像，则此按钮没有图像为-1 的从零开始的索引。  
+- `iBitmap`  
+
+   按钮图像，则此按钮没有图像为-1 的从零开始的索引。  
   
- `idCommand`  
- 与按钮关联的命令标识符。 选择该按钮时，此标识符将发送 WM_COMMAND 消息中。 如果`fsStyle`成员具有 TBSTYLE_SEP 的值，此成员必须为零。  
+-  `idCommand`  
+
+   与按钮关联的命令标识符。 选择该按钮时，此标识符将发送 WM_COMMAND 消息中。 如果`fsStyle`成员具有 TBSTYLE_SEP 的值，此成员必须为零。  
   
- `fsState`  
- 按钮状态标志。 它可以是下面列出的值的组合：  
+-  `fsState`  
+
+   按钮状态标志。 它可以是下面列出的值的组合：  
   
-- TBSTATE_CHECKED 按钮具有 TBSTYLE_CHECKED 样式和已按下。  
+   - TBSTATE_CHECKED 按钮具有 TBSTYLE_CHECKED 样式和已按下。  
   
-- TBSTATE_ENABLED 按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并就会变灰。  
+   - TBSTATE_ENABLED 按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并就会变灰。  
   
-- TBSTATE_HIDDEN 按钮不可见，并且不能接受用户输入。  
+   - TBSTATE_HIDDEN 按钮不可见，并且不能接受用户输入。  
   
-- TBSTATE_INDETERMINATE 按钮就会变灰。  
+   - TBSTATE_INDETERMINATE 按钮就会变灰。  
   
-- TBSTATE_PRESSED 已按下按钮。  
+   - TBSTATE_PRESSED 已按下按钮。  
   
-- 该按钮后跟 TBSTATE_WRAP 一个换行符。 该按钮还必须具有 TBSTATE_ENABLED 状态。  
+   - 该按钮后跟 TBSTATE_WRAP 一个换行符。 该按钮还必须具有 TBSTATE_ENABLED 状态。  
   
- `fsStyle`  
- 按钮样式。 它可以是下面列出的值的组合：  
+- `fsStyle`  
+
+   按钮样式。 它可以是下面列出的值的组合：  
   
-- TBSTYLE_BUTTON 创建标准的推送按钮。  
+   - TBSTYLE_BUTTON 创建标准的推送按钮。  
   
-- TBSTYLE_CHECK 创建一个按钮，每次按下和未按下状态之间切换用户单击它。 该按钮处于按下状态时具有不同的背景色。  
+   - TBSTYLE_CHECK 创建一个按钮，每次按下和未按下状态之间切换用户单击它。 该按钮处于按下状态时具有不同的背景色。  
   
-- TBSTYLE_CHECKGROUP 创建直到按下的组中的另一个按钮，按下保持复选按钮。  
+   - TBSTYLE_CHECKGROUP 创建直到按下的组中的另一个按钮，按下保持复选按钮。  
   
-- TBSTYLE_GROUP 创建直到按下的组中的另一个按钮，按下某个按钮保持。  
+   - TBSTYLE_GROUP 创建直到按下的组中的另一个按钮，按下某个按钮保持。  
   
-- TBSTYLE_SEP 创建分隔符，提供按钮组较小的差异。 包含此样式的按钮不会接收用户输入。  
+   - TBSTYLE_SEP 创建分隔符，提供按钮组较小的差异。 包含此样式的按钮不会接收用户输入。  
   
- `dwData`  
- 用户定义的数据。  
+- `dwData`  
+
+   用户定义的数据。  
   
- `iString`  
- 要用作按钮的字符串的从零开始的索引的标签，则此按钮没有字符串为-1。  
+- `iString`  
+
+   要用作按钮的字符串的从零开始的索引的标签，则此按钮没有字符串为-1。  
   
- 映像和/或你提供的索引必须之前已添加到工具栏控件的字符串列表使用[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
+映像和/或你提供的索引必须之前已添加到工具栏控件的字符串列表使用[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  添加一个新字符串，作为资源 ID，到工具栏的内部列表的字符串传递。  

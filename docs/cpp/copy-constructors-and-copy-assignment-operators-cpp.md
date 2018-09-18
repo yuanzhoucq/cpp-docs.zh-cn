@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e00190e7c7b4eacbd8f53b87f2e5ad3efd44d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 249182277473eebf5f11d4f6f3de1e8e7d275b61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032602"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 
@@ -95,4 +95,4 @@ int main()
 
 含义类似于复制构造函数的含义。 当自变量类型不是**const**，从赋值**const**对象生成一个错误。 反之不成立： 如果**const**值分配给值不是**const**，分配会取得成功。
 
-有关重载的赋值运算符的详细信息，请参阅[分配](../cpp/assignment.md)。  
+有关重载的赋值运算符的详细信息，请参阅[分配](../cpp/assignment.md)。

@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1287 |Microsoft 文档
+title: 链接器工具错误 LNK1287 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 944702897021f50ff1e7fea2931a9aa16c9d080a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61f016c9fb8de12dd690dee7dbcd2aec1ecf3a97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060767"
 ---
 # <a name="linker-tools-error-lnk1287"></a>链接器工具错误 LNK1287
-无效的托管的入口点函数  
-  
- 入口点无效，不能为托管的映像。 托管的入口点函数的返回类型只能是`void`或`int`。 托管的入口点函数的参数的类型只能是`void`或`String []`。
+
+无效的托管的入口点函数
+
+入口点不是有效的托管映像。 托管的入口点函数的返回类型只能是`void`或`int`。 托管的入口点函数的参数的类型只能`void`或`String []`。

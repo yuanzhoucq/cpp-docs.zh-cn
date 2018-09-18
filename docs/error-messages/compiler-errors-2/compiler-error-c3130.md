@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3130 |Microsoft 文档
+title: 编译器错误 C3130 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e338ff497ca0674b68ee25ba745d669a10468a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe26a86b85d6b38283a6ef21d081620237f8788a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030828"
 ---
 # <a name="compiler-error-c3130"></a>编译器错误 C3130
-内部编译器错误： 无法写入 PDB 插入的代码块  
-  
- 如果编译器无法插入的代码块写入.pdb 文件，则会发生此错误。 失败的最常见原因是缺乏磁盘空间。
+
+内部编译器错误： 未能插入的代码块写入 PDB
+
+如果编译器无法插入的代码块写入.pdb 文件，会发生此错误。 失败的最常见原因是缺少的磁盘空间。

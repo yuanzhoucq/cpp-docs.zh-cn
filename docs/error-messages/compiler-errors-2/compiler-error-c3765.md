@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3765 |Microsoft 文档
+title: 编译器错误 C3765 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8370a5c9c25fee211636214a82f22c05ccb311
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cac3930e4f5ec42587a9f557adc7a82d750b3819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042125"
 ---
 # <a name="compiler-error-c3765"></a>编译器错误 C3765
-event： 无法在 type 标记为 event_receiver 类/结构中定义事件  
-  
- 如果类用来标记[event_receiver](../../windows/event-receiver.md)属性，此类不能包含[__event](../../cpp/event.md)声明。  
-  
- 下面的示例生成 C3765:  
-  
-```  
-// C3765.cpp  
-[event_receiver(native)]  
-struct ER2 {  
-   __event void f();   // C3765  
-   __event void b(int);   // C3765  
-};  
+
+event： 不能在类/结构 type 标记为 event_receiver 中定义的事件
+
+如果标记的类[event_receiver](../../windows/event-receiver.md)属性中，类不能包含[__event](../../cpp/event.md)声明。
+
+下面的示例生成 C3765:
+
+```
+// C3765.cpp
+[event_receiver(native)]
+struct ER2 {
+   __event void f();   // C3765
+   __event void b(int);   // C3765
+};
 ```

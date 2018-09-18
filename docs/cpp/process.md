@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdad177231c02d2e6f6fad171ae1811ecb9ccc6c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65ae8eef828a8abd4bf726c99850089c0f30b71b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032557"
 ---
 # <a name="process"></a>进程
 
@@ -37,5 +37,6 @@ ms.locfileid: "39407177"
 请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)有关详细信息。
 
 ## <a name="see-also"></a>请参阅
- [__declspec](../cpp/declspec.md)  
- [关键字](../cpp/keywords-cpp.md)
+
+[__declspec](../cpp/declspec.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

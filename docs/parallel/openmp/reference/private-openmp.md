@@ -1,5 +1,5 @@
 ---
-title: 私有 (OpenMP) |Microsoft 文档
+title: 专用 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071232"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
-指定每个线程都应具有其自己的变量的实例。  
+指定每个线程应具有其自己的变量的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33692673"
 private(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `var`  
- 要在每个线程中具有实例的变量。  
+*var*<br/>
+要在每个线程中具有实例的变量。  
   
 ## <a name="remarks"></a>备注  
- **私有**适用于以下指令：  
+ **专用**适用于以下指令：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -49,11 +48,11 @@ private(var)
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- 有关详细信息，请参阅[2.7.2.1 私有](../../../parallel/openmp/2-7-2-1-private.md)。  
+ 有关详细信息，请参阅[2.7.2.1 专用](../../../parallel/openmp/2-7-2-1-private.md)。  
   
 ## <a name="example"></a>示例  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

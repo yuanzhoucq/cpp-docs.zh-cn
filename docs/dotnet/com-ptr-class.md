@@ -1,5 +1,5 @@
 ---
-title: 'com:: ptr 类 |Microsoft 文档'
+title: 'com:: ptr 类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066722"
 ---
 # <a name="comptr-class"></a>com::ptr 类
 可用作 CLR 类的成员的 COM 对象的包装器。  该包装器还可自动执行 COM 对象的生存期管理，并在调用对象的析构函数时释放对象上所有拥有的引用。 类似于[CComPtr 类](../atl/reference/ccomptr-class.md)。  
@@ -38,13 +38,13 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_interface_type`  
- COM 接口。  
+*_interface_type*<br/>
+COM 接口。  
   
 ## <a name="remarks"></a>备注  
  `com::ptr` 还可用作局部函数变量，用来简化各种 COM 任务和自动执行生成期管理。  
   
- A`com::ptr`不能直接作为函数参数; 使用[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)相反。  
+ 一个`com::ptr`不能直接用作函数参数; 使用[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)相反。  
   
  `com::ptr` 无法直接从函数返回；请改用句柄。  
   

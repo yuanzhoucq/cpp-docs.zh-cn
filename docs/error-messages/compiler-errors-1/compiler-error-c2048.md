@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2048 |Microsoft 文档
+title: 编译器错误 C2048 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d99b54300d3676039b2f2bda24b9bab302027e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dca0cf7e95f2a876760415d5c628287fab47227c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055827"
 ---
 # <a name="compiler-error-c2048"></a>编译器错误 C2048
-default 多于一个  
-  
- 一个 `switch` 语句包含多个 `default` 标签。 请删除其中一个 `default` 标签以解决该错误。  
-  
- 下面的示例生成 C2048：  
-  
-```  
-// C2048.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-      default:   // C2048  
-         a = 3;  
-   }  
-}  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2048b.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
+
+default 多于一个
+
+一个 `switch` 语句包含多个 `default` 标签。 请删除其中一个 `default` 标签以解决该错误。
+
+下面的示例生成 C2048：
+
+```
+// C2048.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+      default:   // C2048
+         a = 3;
+   }
+}
+```
+
+可能的解决方法：
+
+```
+// C2048b.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
 ```

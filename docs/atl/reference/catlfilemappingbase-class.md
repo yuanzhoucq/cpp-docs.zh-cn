@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045076"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 类
 
@@ -89,13 +89,13 @@ class CAtlFileMappingBase
 构造函数。
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*orig*  
+*orig*<br/>
 要复制以创建新对象的原始文件映射对象。
 
 ### <a name="remarks"></a>备注
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>参数
 
-*orig*  
+*orig*<br/>
 要从复制的原始文件映射对象。
 
 ### <a name="return-value"></a>返回值
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>参数
 
-*hFile*  
+*hFile*<br/>
 从其创建映射对象的文件的句柄。 *hFile*必须是有效并且不能设置为 INVALID_HANDLE_VALUE。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 映射的大小。 如果为 0，则文件映射对象的最大大小等同于由标识的文件的当前大小*hFile。*
 
-*nOffset*  
+*nOffset*<br/>
 映射的开始位置的文件偏移量。 偏移量的值必须是系统的内存分配粒度的倍数。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 所需的文件视图的映射文件时保护。 请参阅*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>参数
 
-*nMappingSize*  
+*nMappingSize*<br/>
 映射的大小。 如果为 0，最大大小的文件映射对象是否等于标识的文件映射对象的当前大小*szName*。
 
-*szName*  
+*szName*<br/>
 映射对象的名称。
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 指向一个 BOOL 值，设置为 TRUE 的映射对象已存在。
 
-*lpsa*  
+*lpsa*<br/>
 将指针与`SECURITY_ATTRIBUTES`结构，它确定返回的句柄能否由子进程继承。 请参阅*lpAttributes*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 在文件视图中，映射文件时所需的保护。 请参阅*flProtect*中`CreateFileMapping`Windows SDK 中。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>参数
 
-*szName*  
+*szName*<br/>
 映射对象的名称。 如果没有此名称的文件映射对象的打开句柄，并且所映射对象上的安全描述符不与冲突*dwViewDesiredAccess*参数打开操作成功。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 映射的大小。 如果为 0，最大大小的文件映射对象是否等于标识的文件映射对象的当前大小*szName*。
 
-*nOffset*  
+*nOffset*<br/>
 映射的开始位置的文件偏移量。 偏移量的值必须是系统的内存分配粒度的倍数。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定在文件视图和映射文件的页保护，因此，对的访问类型。 请参阅*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>参数
 
-*orig*  
+*orig*<br/>
 当前的文件映射对象。
 
 ### <a name="return-value"></a>返回值
@@ -328,5 +328,5 @@ HRESULT Unmap() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CAtlFileMapping 类](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping 类](../../atl/reference/catlfilemapping-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

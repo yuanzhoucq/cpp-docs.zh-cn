@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3382 |Microsoft 文档
+title: 编译器错误 C3382 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8bcca58aecc3d5a5e7b621f45e102690c9f138c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6da27531b95950a12cb9aa95e8e89da94c556d2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035952"
 ---
 # <a name="compiler-error-c3382"></a>编译器错误 C3382
-不支持将“sizeof”与 /clr:safe 一同使用  
-  
- **/clr:safe** 编译的输出文件是可验证类型安全的文件，不支持 sizeof ，因为 sizeof 运算符的返回值是 size_t，其大小因操作系统而异。  
-  
- 有关详细信息，请参阅  
-  
--   [sizeof 运算符](../../cpp/sizeof-operator.md)  
-  
--   [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Visual C++ 64 位迁移的常见问题](../../build/common-visual-cpp-64-bit-migration-issues.md)  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3382。  
-  
-```  
-// C3382.cpp  
-// compile with: /clr:safe  
-int main() {  
-   sizeof( char );   // C3382  
-}  
+
+不支持将“sizeof”与 /clr:safe 一同使用
+
+**/clr:safe** 编译的输出文件是可验证类型安全的文件，不支持 sizeof ，因为 sizeof 运算符的返回值是 size_t，其大小因操作系统而异。
+
+有关详细信息，请参阅
+
+- [sizeof 运算符](../../cpp/sizeof-operator.md)
+
+- [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Visual C++ 64 位迁移的常见问题](../../build/common-visual-cpp-64-bit-migration-issues.md)
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3382。
+
+```
+// C3382.cpp
+// compile with: /clr:safe
+int main() {
+   sizeof( char );   // C3382
+}
 ```

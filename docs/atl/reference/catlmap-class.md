@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075717"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 Key 元素类型。
 
-*V*值元素类型。
+*V*<br/>
+值元素类型。
 
-*KTraits*  
+*KTraits*<br/>
 用于复制或移动关键元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
 
-*VTraits*  
+*VTraits*<br/>
 用于复制或移动值元素的代码。
 
 ## <a name="members"></a>成员
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>参数
 
-*nBins*  
+*nBins*<br/>
 提供指向存储元素的指针的箱数。 请参阅的箱说明本主题后面的备注。
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最佳的负载之比。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 负载比率的阈值下限。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 负载比率的阈值上限。
 
-*nBlockSize*  
+*nBlockSize*<br/>
 块大小。
 
 ### <a name="remarks"></a>备注
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
-*key*  
+*key*<br/>
 指定地图的键的类型的模板参数。
 
-*value*  
+*value*<br/>
 指定地图的值的类型的模板参数。
 
 ### <a name="return-value"></a>返回值
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>返回值
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>返回值
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
-*key*  
+*key*<br/>
 指定地图的键的类型的模板参数。
 
-*value*  
+*value*<br/>
 指定地图的值的类型的模板参数。
 
 ### <a name="remarks"></a>备注
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>返回值
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>返回值
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>返回值
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>参数
 
-*nBins*  
+*nBins*<br/>
 使用的哈希表的箱数。 请参阅[CAtlMap::CAtlMap](#catlmap)的说明。
 
-*bAllocNow*  
+*bAllocNow*<br/>
 标志指示应分配内存时。
 
 ### <a name="return-value"></a>返回值
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 指定用于标识要查找的元素的键。
 
-*value*  
+*value*<br/>
 未接收到查找值的变量。
 
 ### <a name="return-value"></a>返回值
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要添加或替换的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>参数
 
-*nBins*  
+*nBins*<br/>
 新的哈希表中使用的箱数。 请参阅[CAtlMap::CAtlMap](#catlmap)的说明。
 
 ### <a name="remarks"></a>备注
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="remarks"></a>备注
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 你想要删除键相对应的元素对。
 
 ### <a name="return-value"></a>返回值
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要添加到密钥值`CAtlMap`对象。
 
-*value*  
+*value*<br/>
 要添加到值`CAtlMap`对象。
 
 ### <a name="return-value"></a>返回值
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>参数
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最佳的负载之比。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 负载比率的阈值下限。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 负载比率的阈值上限。
 
-*bRehashNow*  
+*bRehashNow*<br/>
 标志，用于指示是否应重新计算哈希表。
 
 ### <a name="remarks"></a>备注
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 通过以前调用返回的位置计数器[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。
 
-*value*  
+*value*<br/>
 要添加到值`CAtlMap`对象。
 
 ### <a name="remarks"></a>备注
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 Key 元素类型。
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>参数
 
-*V*  
+*V*<br/>
 值元素类型。
 
 ## <a name="see-also"></a>请参阅
 
-[字幕示例](../../visual-cpp-samples.md)   
-[UpdatePV 示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[字幕示例](../../visual-cpp-samples.md)<br/>
+[UpdatePV 示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [类概述](../../atl/atl-class-overview.md)

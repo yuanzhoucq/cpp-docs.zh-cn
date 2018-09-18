@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059480"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 类
 表示与调用上下文关联的当前计划程序的抽象。  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Policy`  
- 计划程序策略，用于描述新创建的计划程序的行为。  
+*策略 （_p)*<br/>
+计划程序策略，用于描述新创建的计划程序的行为。  
   
 ### <a name="remarks"></a>备注  
  计划程序附加到调用上下文隐式将引用计数放在计划程序上。  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Placement`  
- 对其中的计划组中的任务将偏向执行处的位置的引用。  
+*放置 （_p)*<br/>
+对其中的计划组中的任务将偏向执行处的位置的引用。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新创建的计划组。 这`ScheduleGroup`对象具有在其上放置的初始引用计数。  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Placement`  
- 对在当前计划程序中查询的位置的引用。  
+*放置 （_p)*<br/>
+对在当前计划程序中查询的位置的引用。  
   
 ### <a name="return-value"></a>返回值  
  有关 `_Placement` 参数指定的位置在当前计划程序中是否可用的指示。  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_ShutdownEvent`  
- Windows 事件对象时与当前上下文关联的计划程序关闭并销毁本身由运行时信号的句柄。  
+*_ShutdownEvent*<br/>
+Windows 事件对象时与当前上下文关联的计划程序关闭并销毁本身由运行时信号的句柄。  
   
 ### <a name="remarks"></a>备注  
  如果没有计划程序附加到调用上下文，调用此方法将导致[scheduler_not_attached](scheduler-not-attached-class.md)所引发异常。  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Proc`  
- 指向要执行要执行的轻量任务正文的函数的指针。  
+*_Proc*<br/>
+指向要执行要执行的轻量任务正文的函数的指针。  
   
- `_Data`  
- 指向将作为参数传递给任务的正文数据的 void 指针。  
+*数据 （_d)*<br/>
+指向将作为参数传递给任务的正文数据的 void 指针。  
   
- `_Placement`  
- 对偏向执行轻量任务的位置的引用。  
+*放置 （_p)*<br/>
+对偏向执行轻量任务的位置的引用。  
   
 ### <a name="remarks"></a>备注  
  如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。  

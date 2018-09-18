@@ -1,5 +1,5 @@
 ---
-title: COM 接口入口点 |Microsoft 文档
+title: COM 接口入口点 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 699c6e3dbe5ecd95c947c13374a2e7964307ff79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040006"
 ---
 # <a name="com-interface-entry-points"></a>COM 接口入口点
 对于 COM 接口的成员函数，使用[METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)宏维护适当的全局状态时调用导出接口的方法。  
@@ -37,13 +37,13 @@ ms.locfileid: "36929882"
   
  按如下方式定义 `METHOD_PROLOGUE` 宏：  
   
- `#define METHOD_PROLOGUE(theClass, localClass) \`  
-  
- `theClass* pThis = \`  
-  
- `((theClass*)((BYTE*)this - offsetof(theClass, m_x##localClass))); \`  
-  
- `AFX_MANAGE_STATE(pThis->m_pModuleState) \`  
+```cpp
+#define METHOD_PROLOGUE(theClass, localClass) \
+    theClass* pThis = \
+    ((theClass*)((BYTE*)this - offsetof(theClass, m_x##localClass))); \
+    AFX_MANAGE_STATE(pThis->m_pModuleState) \
+
+```
   
  与管理全局状态相关的宏的部分是：  
   

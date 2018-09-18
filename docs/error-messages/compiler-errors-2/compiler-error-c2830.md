@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2830 |Microsoft 文档
+title: 编译器错误 C2830 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31c5fef787328b4e3d34bb49078fc53354598264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d54028b50852fec4d525afa9a79f93edb4ae09ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033025"
 ---
 # <a name="compiler-error-c2830"></a>编译器错误 C2830
-仅放置到 operator new 的参数可以具有默认值  
-  
-标准形参[运算符 new](../../standard-library/new-operators.md#op_new)不能有默认值。 仅用户定义的位置参数可以指定默认值。
+
+只有 operator new 的位置参数可以具有默认值
+
+标准形参[运算符 new](../../standard-library/new-operators.md#op_new)不能具有默认值。 只有用户定义放置参数可以指定默认值。

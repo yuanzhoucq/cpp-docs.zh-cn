@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039538"
 ---
 # <a name="connection-point-macros"></a>连接点宏
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]包含连接点的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]正在添加连接点映射到的接口的 GUID。 
 
-*piid*  
+*piid*<br/>
 [in]指向要添加真正接口的 GUID 的指针。
 
 ### <a name="remarks"></a>备注
@@ -111,5 +111,5 @@ END_CONNECTION_POINT_MAP()
 
 ## <a name="see-also"></a>请参阅
 
-[宏](../../atl/reference/atl-macros.md)   
+[宏](../../atl/reference/atl-macros.md)<br/>
 [连接点全局函数](../../atl/reference/connection-point-global-functions.md)

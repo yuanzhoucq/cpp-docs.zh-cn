@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2010 |Microsoft 文档
+title: 编译器错误 C2010 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1f1a042881420c85670020e05ded3684a91268
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4be71136d02a563d4dde5d720fe5ae51e0c3c5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028957"
 ---
 # <a name="compiler-error-c2010"></a>编译器错误 C2010
-character： 意外宏形参表中  
-  
- 在宏定义的形参列表中错误地使用了该字符。 删除要解决该错误的字符。  
-  
- 下面的示例生成 C2010:  
-  
-```  
-// C2010.cpp  
-// compile with: /c  
-#define mymacro(a|) (2*a)   // C2010  
-#define mymacro(a) (2*a)   // OK  
+
+character： 宏形参表中的意外
+
+在宏定义的形参列表中错误地使用了该字符。 删除要解决此错误的字符。
+
+下面的示例生成 C2010:
+
+```
+// C2010.cpp
+// compile with: /c
+#define mymacro(a|) (2*a)   // C2010
+#define mymacro(a) (2*a)   // OK
 ```

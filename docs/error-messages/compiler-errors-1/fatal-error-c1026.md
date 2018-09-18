@@ -1,5 +1,5 @@
 ---
-title: 错误 C1026 |Microsoft 文档
+title: 错误 C1026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068983"
 ---
 # <a name="fatal-error-c1026"></a>错误 C1026
-分析器堆栈溢出，程序太复杂  
-  
- 分析程序所需的空间导致编译器堆栈溢出。  
-  
- 降低通过表达式的复杂性：  
-  
--   减少在中的使用嵌套`for`和`switch`语句。 将更深入地嵌套的语句放置在单独的函数。  
-  
--   中断性长涉及逗号运算符或函数调用的表达式。
+
+分析器堆栈溢出，程序太复杂
+
+分析程序所需的空间导致编译器堆栈溢出。
+
+降低所表达式的复杂程度：
+
+- 减少中的嵌套`for`和`switch`语句。 将更深的嵌套语句放在单独的函数。
+
+- 分解长涉及逗号运算符或函数调用的表达式。

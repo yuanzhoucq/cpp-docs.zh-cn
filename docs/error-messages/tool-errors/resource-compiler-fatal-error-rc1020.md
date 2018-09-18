@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1020 |Microsoft 文档
+title: 资源编译器错误 RC1020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032960"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>资源编译器错误 RC1020
-意外的 #endif  
-  
- `#endif`指令出现没有匹配`#if`， **#ifdef**，或 **#ifndef**指令。  
-  
- 请确保没有匹配`#endif`每个`#if`， **#ifdef**，和 **#ifndef**语句。
+
+意外的 #endif
+
+`#endif`指令没有匹配出现`#if`， **#ifdef**，或 **#ifndef**指令。
+
+请确保是否有匹配`#endif`为每个`#if`， **#ifdef**，并 **#ifndef**语句。

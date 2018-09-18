@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028332"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -72,8 +72,8 @@ ms.locfileid: "45701722"
 
 ### <a name="syntax"></a>语法
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>参数
@@ -101,22 +101,22 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="syntax"></a>语法
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函数将打开或创建的密钥的名称。
 
-*phkResult*  
+*phkResult*<br/>
 指向一个变量来接收打开或创建密钥的句柄的指针。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -133,19 +133,19 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="syntax"></a>语法
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 要删除的键的名称。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -162,19 +162,19 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="syntax"></a>语法
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>参数
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 指定处理程序的 CLSID。
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 指定处理程序的 ProgID。
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 指定注册到此处理程序的文件扩展名。
 
 ### <a name="requirements"></a>要求
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>参数
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 模块实例的句柄。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字符串"\\\N"，其中 N 是类型库资源的整数索引。 如果没有索引是必需的可以为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -203,7 +203,8 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="remarks"></a>备注
 
-使用此帮助器函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)并[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
+使用此帮助器函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)并[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。
+
 ### <a name="requirements"></a>要求
 
 **标头：** atlbase.h
@@ -214,22 +215,22 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="syntax"></a>语法
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函数将打开或创建的密钥的名称。
 
-*phkResult*  
+*phkResult*<br/>
 指向一个变量来接收创建密钥的句柄的指针。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -246,28 +247,28 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="syntax"></a>语法
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函数将打开或创建的密钥的名称。
 
-*ulOptions*  
+*ulOptions*<br/>
 此参数保留并必须为零。
 
-*samDesired*  
+*samDesired*<br/>
 一个屏蔽，它指定的键的所需的访问权限。
 
-*phkResult*  
+*phkResult*<br/>
 指向一个变量来接收打开密钥的句柄的指针。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -284,13 +285,13 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="syntax"></a>语法
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>参数
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 指定要注销的处理程序的 CLSID。
 
 ### <a name="requirements"></a>要求
@@ -303,13 +304,13 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="syntax"></a>语法
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>参数
 
-*bEnable*  
+*bEnable*<br/>
 [in]TRUE 表示注册表信息将定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>返回值
@@ -321,6 +322,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 默认情况下不启用注册表重定向。 如果启用此选项时，注册表访问重定向到**HKEY_CURRENT_USER\Software\Classes**。
 
 重定向不是全局的。 仅 MFC 和 ATL 框架受此注册表重定向。  
+
 ### <a name="requirements"></a>要求
 
 **标头：** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>参数
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 模块实例的句柄。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字符串"\\\N"，其中 N 是类型库资源的整数索引。 如果没有索引是必需的可以为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -352,6 +354,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>备注
 
 使用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)并[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
+
 ### <a name="requirements"></a>要求
 
 **标头：** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>参数
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 与类型库关联的模块的句柄。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字符串"\\\N"，其中 N 是类型库资源的整数索引。 如果没有索引是必需的可以为 NULL。
 
-*pbstrPath*  
+*pbstrPath*<br/>
 成功返回时，包含与该类型库相关联的模块的完整路径。
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 成功返回时，包含指向已加载的类型库的指针指向的指针。
 
 ### <a name="return-value"></a>返回值
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 指向当前对象的指针。
 
-*rdxOp*  
+*rdxOp*<br/>
 枚举值，该值指示哪个操作应在执行该函数。 请参阅允许的值的备注部分中的表。
 
-*pItem*  
+*pItem*<br/>
 指向要读取或写入注册表的数据。 数据还可以表示一个密钥，以从注册表中删除。 默认值为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -446,5 +449,5 @@ HRESULT RegistryDataExchange(
 
 ## <a name="see-also"></a>请参阅
 
-[函数](atl-functions.md)   
+[函数](atl-functions.md)<br/>
 [注册表数据交换宏](registry-data-exchange-macros.md)

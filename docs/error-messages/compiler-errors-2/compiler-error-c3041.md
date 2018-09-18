@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3041 |Microsoft 文档
+title: 编译器错误 C3041 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 766536426a0b183299d5028d90197fd058fb6126
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc19c13804eefe88b20542d4eb8c9bc8ead101e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066916"
 ---
 # <a name="compiler-error-c3041"></a>编译器错误 C3041
-“var”：”copyprivate”子句中的变量在封闭上下文中必须是私有的  
-  
- 传递给 [copyprivate](../../parallel/openmp/reference/copyprivate.md) 的变量不能在封闭上下文中共享。  
-  
- 以下示例生成 C3041：  
-  
-```  
-// C3041.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-double d;  
-int main() {  
-   #pragma omp parallel shared(d)  
-   // try the following line instead  
-   // #pragma omp parallel private(d)  
-   {  
-      // or don't make d copyprivate  
-      #pragma omp single copyprivate(d)   // C3041  
-      {  
-      }  
-   }  
-}  
+
+“var”：”copyprivate”子句中的变量在封闭上下文中必须是私有的
+
+传递给 [copyprivate](../../parallel/openmp/reference/copyprivate.md) 的变量不能在封闭上下文中共享。
+
+以下示例生成 C3041：
+
+```
+// C3041.cpp
+// compile with: /openmp /c
+#include "omp.h"
+double d;
+int main() {
+   #pragma omp parallel shared(d)
+   // try the following line instead
+   // #pragma omp parallel private(d)
+   {
+      // or don't make d copyprivate
+      #pragma omp single copyprivate(d)   // C3041
+      {
+      }
+   }
+}
 ```

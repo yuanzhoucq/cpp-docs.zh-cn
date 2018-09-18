@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062665"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 类
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>参数
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 默认窗口样式。
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 默认扩展的窗口样式。
 
 ## <a name="members"></a>成员
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwStyle*  
+*dwStyle*<br/>
 用于创建窗口的样式。
 
 ### <a name="return-value"></a>返回值
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwExStyle*  
+*dwExStyle*<br/>
 用于创建窗口的扩展的样式。
 
 ### <a name="return-value"></a>返回值
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [了解窗口特征](../../atl/understanding-window-traits.md)
 

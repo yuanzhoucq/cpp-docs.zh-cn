@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040851"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>参数
 
-*szHost*  
+*szHost*<br/>
 主机名或以点分隔的 IP 地址。
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 端口号或主机上的服务的名称。
 
-*nPortNo*  
+*nPortNo*<br/>
 端口号。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的组合。
 
-*addr_family*  
+*addr_family*<br/>
 地址系列 （例如 PF_INET)。
 
-*sock_type*  
+*sock_type*<br/>
 套接字类型 （如 SOCK_STREAM)。
 
-*ai_proto*  
+*ai_proto*<br/>
 协议 （如 IPPROTO_IP 或 IPPROTO_IPV6）。
 
 ### <a name="return-value"></a>返回值
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>参数
 
-*szHost*  
+*szHost*<br/>
 主机名或以点分隔的 IP 地址。
 
-*nPortNo*  
+*nPortNo*<br/>
 端口号。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的组合。
 
-*sock_type*  
+*sock_type*<br/>
 套接字类型 （如 SOCK_STREAM)。
 
 ### <a name="return-value"></a>返回值
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>参数
 
-*szHost*  
+*szHost*<br/>
 主机名或以点分隔的 IP 地址。
 
-*nPortNo*  
+*nPortNo*<br/>
 端口号。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的组合。
 
-*sock_type*  
+*sock_type*<br/>
 套接字类型 （如 SOCK_STREAM)。
 
 ### <a name="return-value"></a>返回值
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 对中的特定元素的引用[addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)列表。
 
 ### <a name="return-value"></a>返回值

@@ -18,27 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 888ec19eaedf881fed97a14a7f3f8b5ee673ce7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056282"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
-将函数标记为对 64 位公共语言运行时很有用。 这用于 Microsoft 提供的库中的某些函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-__declspec(jitintrinsic)  
-```  
-  
-## <a name="remarks"></a>备注  
- **jitintrinsic**添加 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 到函数签名。  
-  
- 禁止用户使用此 **__declspec**修饰符，意外的结果作为可以发生。  
-  
-## <a name="see-also"></a>请参阅  
- [__declspec](../cpp/declspec.md)   
- [关键字](../cpp/keywords-cpp.md)
+
+将函数标记为对 64 位公共语言运行时很有用。 这用于 Microsoft 提供的库中的某些函数。
+
+## <a name="syntax"></a>语法
+
+```
+__declspec(jitintrinsic)
+```
+
+## <a name="remarks"></a>备注
+
+**jitintrinsic**添加 MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 到函数签名。
+
+禁止用户使用此 **__declspec**修饰符，意外的结果作为可以发生。
+
+## <a name="see-also"></a>请参阅
+
+[__declspec](../cpp/declspec.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

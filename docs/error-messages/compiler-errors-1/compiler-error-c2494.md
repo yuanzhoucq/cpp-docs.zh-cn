@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2494 |Microsoft 文档
+title: 编译器错误 C2494 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071be235ac17fb541dc8c96871057f089646da5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e651e66ce571ddd084c470b52494235f35f2b008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066799"
 ---
 # <a name="compiler-error-c2494"></a>编译器错误 C2494
-keyword 不能在筛选器表达式调用从或 __finally/finally 块  
-  
- 不能使用`keyword`中`__finally`或 finally 块。  
-  
- 下面的示例生成 C2494:  
-  
-```  
-// C2494.cpp  
-#include <malloc.h>  
-  
-int main() {  
-   __try {}  
-   __except ( _alloca(100), 1 ) {}   // C2494  
-   __try {}  
-   __finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
-```  
-  
- 使用时也可能发生 C2494 **/clr**。  
-  
-```  
-// C2494b.cpp  
-// compile with: /clr  
-#include <malloc.h>  
-  
-int main() {  
-   char * buf;  
-   try {}  
-   catch (char * buf2) {}  
-   finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
+
+keyword 不能从调用中的筛选器表达式或 __finally/finally 块
+
+不能使用`keyword`在`__finally`或 finally 块中。
+
+下面的示例生成 C2494:
+
+```
+// C2494.cpp
+#include <malloc.h>
+
+int main() {
+   __try {}
+   __except ( _alloca(100), 1 ) {}   // C2494
+   __try {}
+   __finally {
+      _alloca(100);   // C2494
+   }
+}
+```
+
+当使用，也会发生 C2494 **/clr**。
+
+```
+// C2494b.cpp
+// compile with: /clr
+#include <malloc.h>
+
+int main() {
+   char * buf;
+   try {}
+   catch (char * buf2) {}
+   finally {
+      _alloca(100);   // C2494
+   }
+}
 ```

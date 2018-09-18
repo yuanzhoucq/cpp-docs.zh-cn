@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2193 |Microsoft 文档
+title: 编译器错误 C2193 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d6a5890a74fbb4f8a70ee86073c257cdf16ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecfadd6476b8ed65891b5cb8fcbb3e0d54b203ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071453"
 ---
 # <a name="compiler-error-c2193"></a>编译器错误 C2193
-identifier： 已在一段  
-  
- 一个函数被放在两个不同的网段使用`alloc_text`和`code_seg`杂注。  
-  
- 下面的示例生成 C2193:  
-  
-```  
-// C2193.cpp  
-// compile with: /c  
-extern "C" void MYFUNCTION();  
-#pragma alloc_text(MYCODE, MYFUNCTION)  
-#pragma code_seg("MYCODE2")  
-extern "C" void MYFUNCTION() {}   // C2193  
-extern "C" void MYFUNCTION2() {}  
+
+identifier： 已在段
+
+一个函数被放在使用两个不同的网段`alloc_text`和`code_seg`杂注。
+
+下面的示例生成 C2193:
+
+```
+// C2193.cpp
+// compile with: /c
+extern "C" void MYFUNCTION();
+#pragma alloc_text(MYCODE, MYFUNCTION)
+#pragma code_seg("MYCODE2")
+extern "C" void MYFUNCTION() {}   // C2193
+extern "C" void MYFUNCTION2() {}
 ```

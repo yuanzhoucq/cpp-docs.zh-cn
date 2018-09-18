@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3721 |Microsoft 文档
+title: 编译器错误 C3721 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275192"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039551"
 ---
 # <a name="compiler-error-c3721"></a>编译器错误 C3721
-签名： 事件不兼容的签名  
-  
- 未正确声明事件。 有关详细信息，请参阅[__event](../../cpp/event.md)。  
-  
- C3721 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+签名： 不兼容的事件的签名
+
+未正确声明事件。 有关详细信息，请参阅[__event](../../cpp/event.md)。
+
+C3721 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058492"
 ---
 # <a name="registry-macros"></a>注册表宏
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>参数
 
-*libid*  
+*libid*<br/>
 类型库的 GUID。
 
 ### <a name="remarks"></a>备注
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>参数
 
-*class*  
+*class*<br/>
 [in]包含用于向后兼容。
 
-pid  
+pid<br/>
 [in]是特定于版本的程序标识符 LPCTSTR。
 
-*vpid*  
+*vpid*<br/>
 [in]是独立于版本的程序标识符 LPCTSTR。
 
-*nid*  
+*nid*<br/>
 [in]UINT，是要用作程序的说明在注册表中的资源字符串的索引。
 
-*flags*  
+*flags*<br/>
 [in]一个 dword 值，包含程序的注册表中的线程模型。 必须是以下值之一： THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>备注
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>参数
 
-*resid*  
+*resid*<br/>
 Rgs 文件包含有关的信息的资源 id *appid*。
 
-*appid*  
+*appid*<br/>
 一个 GUID。
 
 ### <a name="remarks"></a>备注
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]字符串的所需的资源的标识符。
 
 ### <a name="remarks"></a>备注
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]向导生成所需的资源标识符。
 
 ### <a name="remarks"></a>备注

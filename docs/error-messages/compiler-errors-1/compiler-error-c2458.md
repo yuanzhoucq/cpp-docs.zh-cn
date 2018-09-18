@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2458 |Microsoft 文档
+title: 编译器错误 C2458 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0822c12e109cd5a89a8e1050197367b12a24efa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94a95ab1eab00424774d5117e3ae37685a2ac1fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035457"
 ---
 # <a name="compiler-error-c2458"></a>编译器错误 C2458
-identifier： 重定义内定义  
-  
- 类、 结构、 联合或枚举是在其自己的声明中重新定义。  
-  
- 下面的示例生成 C2458:  
-  
-```  
-// C2458.cpp  
-class C {  
-   enum i { C };   // C2458  
-};  
+
+identifier： 重定义中的定义
+
+类、 结构、 联合或枚举其自己的声明中已重新定义。
+
+下面的示例生成 C2458:
+
+```
+// C2458.cpp
+class C {
+   enum i { C };   // C2458
+};
 ```

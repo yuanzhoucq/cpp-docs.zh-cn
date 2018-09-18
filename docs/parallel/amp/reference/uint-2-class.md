@@ -1,5 +1,5 @@
 ---
-title: uint_2 类 |Microsoft 文档
+title: uint_2 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 375e9c8ce4c2060e41fbebc51f6512d293a15517
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059298"
 ---
 # <a name="uint2-class"></a>uint_2 类
 表示两个无符号整数的短矢量。  
@@ -66,7 +66,7 @@ class uint_2;
   
 |名称|描述|  
 |----------|-----------------|  
-|[uint_2 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[uint_2 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -106,7 +106,7 @@ class uint_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#uint_2__size)||  
   
@@ -133,7 +133,7 @@ class uint_2;
   
 ##  <a name="ctor"></a> uint_2 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 uint_2() restrict(amp,
@@ -182,17 +182,17 @@ explicit inline uint_2(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="uint_2__size"></a> 大小 
 

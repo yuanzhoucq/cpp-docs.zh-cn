@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2184 |Microsoft 文档
+title: 编译器错误 C2184 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068850ea37811cc68c070a968cc2ddc5aa0ce8a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c901dbbe97c47afd8096c89f33db6e3e355cba4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050484"
 ---
 # <a name="compiler-error-c2184"></a>编译器错误 C2184
-“type”：对 __except 表达式而言为非法类型，必须为整型  
-  
- [__except](../../c-language/try-except-statement-c.md) 语句中使用了某个类型，但不允许使用该类型。  
-  
- 下面的示例生成 C2184：  
-  
-```  
-// C2184.cpp  
-void f() {  
-   int * p;  
-   __try{}  
-   __except(p){};   // C2184  
-}  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2184b.cpp  
-// compile with: /c  
-void f() {  
-   int i = 0;  
-   __try{}  
-   __except(i){};  
-}  
+
+“type”：对 __except 表达式而言为非法类型，必须为整型
+
+[__except](../../c-language/try-except-statement-c.md) 语句中使用了某个类型，但不允许使用该类型。
+
+下面的示例生成 C2184：
+
+```
+// C2184.cpp
+void f() {
+   int * p;
+   __try{}
+   __except(p){};   // C2184
+}
+```
+
+可能的解决方法：
+
+```
+// C2184b.cpp
+// compile with: /c
+void f() {
+   int i = 0;
+   __try{}
+   __except(i){};
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: bad_target 类 |Microsoft 文档
+title: bad_target 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027630"
 ---
 # <a name="badtarget-class"></a>bad_target 类
 此类描述消息块被给予指向目标的指针，但该目标对于正在执行的操作无效时引发的异常。  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

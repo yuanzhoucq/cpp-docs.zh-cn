@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1223 |Microsoft 文档
+title: 链接器工具错误 LNK1223 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50d29af6ac563fadd3a52e5b1d3d15201289083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067971"
 ---
 # <a name="linker-tools-error-lnk1223"></a>链接器工具错误 LNK1223
-无效或已损坏的文件： 文件包含无效的.pdata 基值  
-  
- 对于使用 pdata 的 RISC 平台，如果编译器发出具有无序条目的 .pdata 部分，则将发生此错误。  
-  
- 若要解决此问题，请尝试编译而不[/GL （全程序优化）](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)启用。 在某些情况下，空的函数体也可能导致此错误。
+
+无效或损坏的文件： 文件包含无效的.pdata 基值
+
+对于使用 pdata 的 RISC 平台，如果编译器发出具有无序条目的 .pdata 部分，则将发生此错误。
+
+若要解决此问题，请尝试编译但不[/GL （全程序优化）](../../error-messages/tool-errors/linker-tools-error-lnk1223.md)启用。 在某些情况下，空的函数体也可能导致此错误。

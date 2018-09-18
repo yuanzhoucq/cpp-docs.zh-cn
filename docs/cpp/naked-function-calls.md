@@ -21,26 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e395bcb32858bc63b3e848f20a7d794156876e26
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ca1913376ef4b1e6afc19be81ce7814ce92699c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071934"
 ---
 # <a name="naked-function-calls"></a>Naked 函数调用
-## <a name="microsoft-specific"></a>Microsoft 专用  
- 使用声明函数**裸**属性发出而无需 prolog 或 epilog 代码，使您能够编写你自己使用的自定义 prolog/epilog 序列[内联汇编程序](../assembler/inline/inline-assembler.md)。 将裸函数作为高级功能提供。 利用这些函数，您可以声明从 C/C++ 之外的上下文中调用的函数，从而作出有关参数位置或保留哪些寄存器的各种假设。 示例包括例程（如中断处理程序）。 此功能对于虚拟设备驱动程序 (VxDs) 的编写器特别有用。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
-  
--   [naked](../cpp/naked-cpp.md)  
-  
--   [裸函数的规则和限制](../cpp/rules-and-limitations-for-naked-functions.md)  
-  
--   [有关编写 Prolog/Epilog 代码的注意事项](../cpp/considerations-for-writing-prolog-epilog-code.md)  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [调用约定](../cpp/calling-conventions.md)
+
+## <a name="microsoft-specific"></a>Microsoft 专用
+
+使用声明函数**裸**属性发出而无需 prolog 或 epilog 代码，使您能够编写你自己使用的自定义 prolog/epilog 序列[内联汇编程序](../assembler/inline/inline-assembler.md)。 将裸函数作为高级功能提供。 利用这些函数，您可以声明从 C/C++ 之外的上下文中调用的函数，从而作出有关参数位置或保留哪些寄存器的各种假设。 示例包括例程（如中断处理程序）。 此功能对于虚拟设备驱动程序 (VxDs) 的编写器特别有用。
+
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
+
+- [naked](../cpp/naked-cpp.md)
+
+- [裸函数的规则和限制](../cpp/rules-and-limitations-for-naked-functions.md)
+
+- [有关编写 Prolog/Epilog 代码的注意事项](../cpp/considerations-for-writing-prolog-epilog-code.md)
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[调用约定](../cpp/calling-conventions.md)

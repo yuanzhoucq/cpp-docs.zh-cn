@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1538d5148eeb1eb95c51150a43ef5dd7b107cae3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033545"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 类
 
@@ -64,10 +64,10 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>参数
 
-*pApt*  
+*pApt*<br/>
 不使用 ATL 的默认实现中。
 
-*nThreads*  
+*nThreads*<br/>
 最大 EXE 模块中的线程数。
 
 ### <a name="return-value"></a>返回值
@@ -82,5 +82,5 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ## <a name="see-also"></a>请参阅
 
-[CComApartment 类](../../atl/reference/ccomapartment-class.md)   
+[CComApartment 类](../../atl/reference/ccomapartment-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

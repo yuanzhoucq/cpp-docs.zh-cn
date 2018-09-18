@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 2） C4308 |Microsoft 文档
+title: 编译器警告 （等级 2） C4308 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3daff15f8e6eee179f04fd466f3595af1154e035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddb57d4d603be3182be8a77dc020ce0e0a673115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039629"
 ---
 # <a name="compiler-warning-level-2-c4308"></a>编译器警告（等级 2）C4308
-负整型常数转换为无符号类型  
-  
- 表达式将负整数常量转换为无符号类型。 该表达式的结果是可能无意义。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4308.cpp  
-// compile with: /W2  
-unsigned int u = (-5 + 3U);   // C4308  
-  
-int main()  
-{  
-}  
+
+负整型常数转换为无符号类型
+
+表达式将负整型常数转换为无符号类型。 该表达式的结果是可能毫无意义。
+
+## <a name="example"></a>示例
+
+```
+// C4308.cpp
+// compile with: /W2
+unsigned int u = (-5 + 3U);   // C4308
+
+int main()
+{
+}
 ```

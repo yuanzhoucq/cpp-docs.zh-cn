@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2272 |Microsoft 文档
+title: 编译器错误 C2272 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e969e7cadadf1102dadfb8089a847046731b568f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e17765ee0acbf20d76e631bf7fccfb3413c5dc1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040305"
 ---
 # <a name="compiler-error-c2272"></a>编译器错误 C2272
-function： 静态成员函数上不允许的修饰符  
-  
- A`static`成员函数使用内存模型说明符，如声明[const](../../cpp/const-cpp.md)或[易失性](../../cpp/volatile-cpp.md)，且此类修饰符不允许对`static`成员函数。  
-  
- 下面的示例生成 C2272:  
-  
-```  
-// C2272.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   static void func1() const volatile;   // C2272  func1 is static  
-   void func2() const volatile;   // OK  
-};  
+
+function： 静态成员函数上不允许修饰符
+
+一个`static`成员函数声明和内存模型说明符，如[const](../../cpp/const-cpp.md)或[易失性](../../cpp/volatile-cpp.md)，且此类修饰符不允许对`static`成员函数。
+
+下面的示例生成 C2272:
+
+```
+// C2272.cpp
+// compile with: /c
+class CMyClass {
+public:
+   static void func1() const volatile;   // C2272  func1 is static
+   void func2() const volatile;   // OK
+};
 ```

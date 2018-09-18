@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040799"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 类
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>参数
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果类型库的注册，则为 TRUE。 默认值为 FALSE。
 
-*pCLSID*  
+*pCLSID*<br/>
 指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。
 
 ### <a name="return-value"></a>返回值
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>参数
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字符串"\\\N"，其中 N 是类型库资源的整数索引。
 
 ### <a name="return-value"></a>返回值
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>参数
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果类型库，则要注销，则为 TRUE。 默认值为 FALSE。
 
-*pCLSID*  
+*pCLSID*<br/>
 指向要注销的对象的 CLSID。 如果为 NULL （默认值），在对象映射中的所有对象将为未注册。
 
 ### <a name="return-value"></a>返回值
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>参数
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字符串"\\\N"，其中 N 是类型库资源的整数索引。
 
 ### <a name="remarks"></a>备注
@@ -193,5 +193,5 @@ HRESULT UnRegisterTypeLib();
 
 ## <a name="see-also"></a>请参阅
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [类概述](../../atl/atl-class-overview.md)

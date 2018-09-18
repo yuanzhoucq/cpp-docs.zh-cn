@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefc7c3ed9177fb756e6298b54121a638ac8e253
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f91346febbb84ab7c1978740e0cbc6f0c43cbb4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052629"
 ---
 # <a name="implementing-ccomobjectrootex"></a>实现 CComObjectRootEx
 
@@ -36,6 +36,6 @@ ms.locfileid: "43767473"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL COM 对象的基础知识](../atl/fundamentals-of-atl-com-objects.md)   
+[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [COM 映射宏](../atl/reference/com-map-macros.md)
 

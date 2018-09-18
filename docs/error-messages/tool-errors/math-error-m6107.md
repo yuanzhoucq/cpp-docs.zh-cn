@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6107 |Microsoft 文档
+title: 数学错误 M6107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041384"
 ---
 # <a name="math-error-m6107"></a>数学错误 M6107
-unemulated  
-  
- 尝试执行的无效或不支持仿真程序的协处理器指令。  
-  
- 程序终止，退出代码 135。
+
+unemulated
+
+尝试执行无效或不受模拟器的协处理器指令。
+
+程序终止，退出代码为 135。

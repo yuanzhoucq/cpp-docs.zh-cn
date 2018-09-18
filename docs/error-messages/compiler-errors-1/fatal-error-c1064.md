@@ -1,5 +1,5 @@
 ---
-title: 错误 C1064 |Microsoft 文档
+title: 错误 C1064 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19d70d603b87168fe8d81843fae48989ab0c15e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83d6356a2da54e21fd03d10aa394d5a5bf60f6f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050926"
 ---
 # <a name="fatal-error-c1064"></a>错误 C1064
-编译器限制： 标记已溢出内部缓冲区  
-  
- 标识符超过标识符所使用的内部缓冲区的长度。 缩短的名称。
+
+编译器限制： 标记已溢出内部缓冲区
+
+标识符超出标识符所使用的内部缓冲区的长度。 缩短的名称。

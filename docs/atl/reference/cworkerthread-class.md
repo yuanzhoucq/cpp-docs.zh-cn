@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040227"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
@@ -42,13 +42,13 @@ ms.locfileid: "43752692"
 ## <a name="syntax"></a>语法
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>参数
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 类提供线程创建函数，如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
 
 ## <a name="members"></a>成员
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>参数
 
-*hObject*  
+*hObject*<br/>
 可等待对象句柄。
 
-*pClient*  
+*pClient*<br/>
 指向指针[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)句柄发出信号时要调用的对象上的接口。
 
-*dwParam*  
+*dwParam*<br/>
 参数将传递给[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)时发出信号的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>参数
 
-*dwInterval*  
+*dwInterval*<br/>
 以毫秒为单位指定的计时器的期限。
 
-*pClient*  
+*pClient*<br/>
 指向指针[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)句柄发出信号时要调用的对象上的接口。
 
-*dwParam*  
+*dwParam*<br/>
 参数将传递给[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)时发出信号的句柄。
 
-*phTimer*  
+*phTimer*<br/>
 [out]成功后，接收到新创建的计时器的句柄的句柄变量的地址。
 
 ### <a name="return-value"></a>返回值
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>参数
 
-*pThread*  
+*pThread*<br/>
 现有的工作线程。
 
 ### <a name="return-value"></a>返回值
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>参数
 
-*hObject*  
+*hObject*<br/>
 要删除的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwWait*  
+*dwWait*<br/>
 以毫秒为单位工作线程，若要关闭的情况下，等待时间。 ATL_WORKER_THREAD_WAIT 默认值为 10 秒。 如有必要，可以包括 atlutil.h 之前定义此符号自己的值。
 
 ### <a name="return-value"></a>返回值
@@ -285,7 +285,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[类](../../atl/reference/atl-classes.md)   
-[多线程处理： 创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[类](../../atl/reference/atl-classes.md)<br/>
+[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)

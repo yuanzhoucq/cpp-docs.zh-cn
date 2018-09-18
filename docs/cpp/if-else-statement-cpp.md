@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031439"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
+
 控制条件分支。 中的语句*if 块*仅当执行*if 表达式*的计算结果为非零值 （或 TRUE）。 如果的值*表达式*为非零值，*语句 1*和块中的任何其他语句执行和其他的块，如果存在，则跳过。 如果的值*表达式*是零，则跳过 if 块，并且执行其他的块，（如果存在）。 表达式的计算结果为非零值。
 - true
 - 非 null 指针，
-- 任何非零值的算术值，或 
-- 类定义明确转换为算术、 布尔值或指针类型。 (有关转换的信息，请参阅[标准转换](../cpp/standard-conversions.md)。)   
-  
-## <a name="syntax"></a>语法  
-  
-```  
-if ( expression )  
+- 任何非零值的算术值，或
+- 类定义明确转换为算术、 布尔值或指针类型。 (有关转换的信息，请参阅[标准转换](../cpp/standard-conversions.md)。)
+
+## <a name="syntax"></a>语法
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>示例  
+## <a name="example"></a>示例
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> 如果语句具有初始值设定项
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。 
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- 中的所有窗体**如果**语句*表达式*，它可以具有结构之外的任何值计算，包括所有副作用。 控制权将传递从**如果**语句在程序中的下一个语句除非之一*语句*s 包含[中断](../cpp/break-statement-cpp.md)，[继续](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。  
-  
- **Else**子句`if...else`语句是与最接近以前**如果**不具有相应的同一范围中的语句**其他**语句。   
+中的所有窗体**如果**语句*表达式*，它可以具有结构之外的任何值计算，包括所有副作用。 控制权将传递从**如果**语句在程序中的下一个语句除非之一*语句*s 包含[中断](../cpp/break-statement-cpp.md)，[继续](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。
+
+**Else**子句`if...else`语句是与最接近以前**如果**不具有相应的同一范围中的语句**其他**语句。
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 语句
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而无需不必使用多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）： 
+
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而无需不必使用多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）：
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>请参阅  
- [选择语句](../cpp/selection-statements-cpp.md)   
- [关键字](../cpp/keywords-cpp.md)   
- [switch 语句 (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>请参阅
+
+[选择语句](../cpp/selection-statements-cpp.md)<br/>
+[关键字](../cpp/keywords-cpp.md)<br/>
+[switch 语句 (C++)](../cpp/switch-statement-cpp.md)
