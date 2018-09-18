@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4369 |Microsoft 文档
+title: 编译器警告 （等级 1） C4369 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63445f0713b43ce7fde418ebd9d65403965c07ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8b292717168f7f6ead676528a5b7769b7c8ec4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024146"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>编译器警告（等级 1）C4369
-枚举： 枚举器值 value 不能表示为 type，值为 new_value  
-  
- 计算的枚举数大于指定的基础类型的最大值。  这会导致溢出，编译器包装类型的最低可能值的枚举器值。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4369。  
-  
-```  
-// C4369.cpp  
-// compile with: /W1  
-int main() {  
-   enum Color: char { red = 0x7e, green, blue };   // C4369  
-   enum Color2: char { red2 = 0x7d, green2, blue2};   // OK  
-}  
+
+枚举器： 不能为 type 表示枚举器值 value，值为 new_value
+
+一个枚举器的计算结果为大于指定的基础类型的最大值。  这会导致溢出，编译器包装类型的最小可能值的枚举器值。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4369。
+
+```
+// C4369.cpp
+// compile with: /W1
+int main() {
+   enum Color: char { red = 0x7e, green, blue };   // C4369
+   enum Color2: char { red2 = 0x7d, green2, blue2};   // OK
+}
 ```

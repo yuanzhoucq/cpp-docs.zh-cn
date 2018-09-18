@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2097 |Microsoft 文档
+title: 编译器错误 C2097 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b867c7f043d796f208fdc7100509893147daf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2da955f5382a1ebacdb507a69ed02627b11462e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021858"
 ---
 # <a name="compiler-error-c2097"></a>编译器错误 C2097
-初始化非法  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  使用一个非常量值变量的初始化。  
-  
-2.  使用长地址短地址初始化。  
-  
-3.  初始化的局部结构、 联合或数组时，用非常量表达式使用编译 **/Za**。  
-  
-4.  初始化包含逗号运算符的表达式。  
-  
-5.  既不常量，也不符号的表达式初始化。
+
+初始化非法
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 使用非常量值的变量的初始化。
+
+1. 具有一长串地址的短地址的初始化。
+
+1. 初始化的局部结构、 联合或数组时，用非常量表达式进行编译 **/Za**。
+
+1. 使用包含逗号运算符的表达式进行初始化。
+
+1. 使用一个表达式，不是常量或符号的初始化。

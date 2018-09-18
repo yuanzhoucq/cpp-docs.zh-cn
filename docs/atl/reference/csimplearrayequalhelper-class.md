@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2613a885dd5399c3655ecb853f3977be71928526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021052"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 类
 
@@ -32,13 +32,13 @@ ms.locfileid: "43758210"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelper
 ```
 
 #### <a name="parameters"></a>参数
 
-`T`  
+*T*<br/>
 在派生的类。
 
 ## <a name="members"></a>成员
@@ -69,10 +69,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>参数
 
-*T1*  
+*T1*<br/>
 一个对象类型为 t。
 
-*T2*  
+*T2*<br/>
 一个对象类型为 t。
 
 ### <a name="return-value"></a>返回值
@@ -81,6 +81,6 @@ static bool IsEqual(
 
 ## <a name="see-also"></a>请参阅
 
-[CSimpleArray 类](../../atl/reference/csimplearray-class.md)   
-[CSimpleArrayEqualHelperFalse 类](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[CSimpleArray 类](../../atl/reference/csimplearray-class.md)<br/>
+[CSimpleArrayEqualHelperFalse 类](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

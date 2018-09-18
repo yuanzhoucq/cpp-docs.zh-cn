@@ -21,57 +21,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 344f567ab014fc854dcb44eebadcd7346af8e851
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: cb6ed678cab6ecc08ac47275648c5cdd01a0cd6f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021156"
 ---
 # <a name="recordset-locking-records-odbc"></a>记录集：锁定记录 (ODBC)
+
 本主题适用于 MFC ODBC 类。  
   
- 本主题说明：  
+本主题说明：  
   
--   [类型的记录锁定可用](#_core_record.2d.locking_modes)。  
+- [类型的记录锁定可用](#_core_record.2d.locking_modes)。  
   
--   [如何在更新过程中锁定记录集中的记录集](#_core_locking_records_in_your_recordset)。  
+- [如何在更新过程中锁定记录集中的记录集](#_core_locking_records_in_your_recordset)。  
   
- 当使用记录集来更新数据源上的记录时，你的应用程序可以锁定记录，这样没有其他用户可以在同一时间更新的记录。 除非系统可以保证两个用户不能同时更新的记录，记录在同一时间更新两个用户的状态为未定义。  
+当使用记录集来更新数据源上的记录时，你的应用程序可以锁定记录，这样没有其他用户可以在同一时间更新的记录。 除非系统可以保证两个用户不能同时更新的记录，记录在同一时间更新两个用户的状态为未定义。  
   
 > [!NOTE]
 >  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，某些信息不适用。 例如，不能调用`Edit`和`Update`成员函数。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 ##  <a name="_core_record.2d.locking_modes"></a> 记录锁定模式  
- 数据库类提供两个[记录锁定模式](../../mfc/reference/crecordset-class.md#setlockingmode):  
+
+数据库类提供两个[记录锁定模式](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
--   乐观锁定 （默认值）  
+- 乐观锁定 （默认值）  
   
--   保守式锁定  
+- 保守式锁定  
   
- 更新记录发生在三个步骤：  
+更新记录发生在三个步骤：  
   
-1.  通过调用开始操作[编辑](../../mfc/reference/crecordset-class.md#edit)成员函数。  
+1. 通过调用开始操作[编辑](../../mfc/reference/crecordset-class.md#edit)成员函数。  
   
-2.  更改当前记录的相应字段。  
+1. 更改当前记录的相应字段。  
   
-3.  结束操作，并通常提交更新 — 通过调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数。  
+1. 结束操作，并通常提交更新 — 通过调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数。  
   
- 仅在对数据源的记录进行乐观锁定锁定`Update`调用。 如果您使用乐观锁定在多用户环境中，应用程序应处理`Update`失败条件。 保守式锁定调用时立即锁定记录`Edit`并不会释放它直到您调用`Update`(通过指示故障`CDBException`机制，不是由值为 FALSE 返回`Update`)。 保守式锁定有其他用户，对潜在性能产生负面影响，因为对同一条记录的并发访问可能需要等待完成的应用程序的`Update`过程。  
+仅在对数据源的记录进行乐观锁定锁定`Update`调用。 如果您使用乐观锁定在多用户环境中，应用程序应处理`Update`失败条件。 保守式锁定调用时立即锁定记录`Edit`并不会释放它直到您调用`Update`(通过指示故障`CDBException`机制，不是由值为 FALSE 返回`Update`)。 保守式锁定有其他用户，对潜在性能产生负面影响，因为对同一条记录的并发访问可能需要等待完成的应用程序的`Update`过程。  
   
 ##  <a name="_core_locking_records_in_your_recordset"></a> 锁定记录集中的记录  
- 如果你想要更改记录集对象的[锁定模式](#_core_record.2d.locking_modes)从默认情况下，您必须更改此模式，然后再调用`Edit`。  
+
+如果你想要更改记录集对象的[锁定模式](#_core_record.2d.locking_modes)从默认情况下，您必须更改此模式，然后再调用`Edit`。  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>若要更改您记录集的当前锁定模式  
   
-1.  调用[SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode)成员函数，指定`CRecordset::pessimistic`或`CRecordset::optimistic`。  
+1. 调用[SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode)成员函数，指定`CRecordset::pessimistic`或`CRecordset::optimistic`。  
   
- 新的锁定模式保持有效，直到你再次更改或关闭记录集。  
+新的锁定模式保持有效，直到你再次更改或关闭记录集。  
   
 > [!NOTE]
 >  当前，相对较少的 ODBC 驱动程序支持悲观锁定。  
   
 ## <a name="see-also"></a>请参阅  
- [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
- [记录集： 执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)   
- [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+
+[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

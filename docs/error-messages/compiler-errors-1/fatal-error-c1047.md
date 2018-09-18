@@ -1,5 +1,5 @@
 ---
-title: 错误 C1047 |Microsoft 文档
+title: 错误 C1047 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce88321173ee2c8cc286f18d8ab8f1bf5ec98e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1983fa0a18667d98f84dfe5049afd4e872d87d93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021585"
 ---
 # <a name="fatal-error-c1047"></a>错误 C1047
-对象或库文件“file”是使用比创建其他对象所用编译器旧的编译器创建的；请重新生成旧的对象和库  
-  
- 当使用 **/LTCG** 生成的对象文件或库链接在一起，而这些对象文件或库是用不同版本的 Visual C++ 工具集生成的，则会导致 C1047。  
-  
- 当你开始使用新版本的编译器，而不完全重新生成现有对象文件或库时，可能出现这种情况。  
-  
- 若要解决 C1047，请重新生成所有对象文件或库。
+
+对象或库文件“file”是使用比创建其他对象所用编译器旧的编译器创建的；请重新生成旧的对象和库
+
+当使用 **/LTCG** 生成的对象文件或库链接在一起，而这些对象文件或库是用不同版本的 Visual C++ 工具集生成的，则会导致 C1047。
+
+当你开始使用新版本的编译器，而不完全重新生成现有对象文件或库时，可能出现这种情况。
+
+若要解决 C1047，请重新生成所有对象文件或库。

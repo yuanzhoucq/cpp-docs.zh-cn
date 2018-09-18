@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020715"
 ---
 # <a name="taskgroup-class"></a>task_group 类
 `task_group` 类表示可以等待或取消的并行工作的集合。  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Function`  
- 将调用以执行任务句柄的主体的函数对象的类型。  
+*_Function*<br/>
+将调用以执行任务句柄的主体的函数对象的类型。  
   
- `_Func`  
- 一个函数，它将调用以调用任务正文。 这可能是 lambda 表达式或其他对象，支持具有签名的函数调用运算符的版本`void operator()()`。  
+*_Func*<br/>
+一个函数，它将调用以调用任务正文。 这可能是 lambda 表达式或其他对象，支持具有签名的函数调用运算符的版本`void operator()()`。  
   
- `_Placement`  
- 对应执行 `_Func` 参数所表示任务的位置的引用。  
+*放置 （_p)*<br/>
+对应执行 `_Func` 参数所表示任务的位置的引用。  
   
- `_Task_handle`  
- 句柄正在计划的工作。 请注意，调用方负责此对象的生存期。 在运行时将继续期望其存留，直至`wait`或`run_and_wait`对此调用方法`task_group`对象。  
+*_Task_handle*<br/>
+句柄正在计划的工作。 请注意，调用方负责此对象的生存期。 在运行时将继续期望其存留，直至`wait`或`run_and_wait`对此调用方法`task_group`对象。  
   
 ### <a name="remarks"></a>备注  
  运行时计划提供的工作函数，以在更高版本时，可以是在调用函数返回之后运行。 此方法使用[task_handle](task-handle-class.md)对象来保存一份提供工作函数。 因此，将传递给此方法的函数对象中发生的任何状态更改不会在该函数对象的副本中。 此外，请确保通过指针或引用此工作函数传递任何对象的生存期保持有效，直到工作函数返回。  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Function`  
- 将调用以执行任务主体的函数对象的类型。  
+*_Function*<br/>
+将调用以执行任务主体的函数对象的类型。  
   
- `_Task_handle`  
- 句柄将在调用上下文以内联方式运行的任务。 请注意，调用方负责此对象的生存期。 在运行时将继续期望其存留，直至`run_and_wait`方法完成执行。  
+*_Task_handle*<br/>
+句柄将在调用上下文以内联方式运行的任务。 请注意，调用方负责此对象的生存期。 在运行时将继续期望其存留，直至`run_and_wait`方法完成执行。  
   
- `_Func`  
- 一个函数，它将调用以调用该工作的正文。 这可能是 lambda 表达式或其他对象，支持具有签名的函数调用运算符的版本`void operator()()`。  
+*_Func*<br/>
+一个函数，它将调用以调用该工作的正文。 这可能是 lambda 表达式或其他对象，支持具有签名的函数调用运算符的版本`void operator()()`。  
   
 ### <a name="return-value"></a>返回值  
  指示是否满足该等待或任务组已取消，因显式取消操作或从其任务之一所引发的异常。 有关详细信息，请参阅[task_group_status](concurrency-namespace-enums.md#task_group_status)。  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_CancellationToken`  
- 与此任务组相关联的取消标记。 取消标记时，也将取消此任务组。  
+*_CancellationToken*<br/>
+与此任务组相关联的取消标记。 取消标记时，也将取消此任务组。  
   
 ### <a name="remarks"></a>备注  
  采用取消标记的构造函数会创建一个在取消与标记相关联的源时将会取消的 `task_group`。 提供显式取消标记也可以避免此任务组参与采用不同标记或没有标记的父组的隐式取消。  

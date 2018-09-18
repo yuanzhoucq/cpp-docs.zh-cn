@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015632"
 ---
 # <a name="persistence-classes"></a>持久性类
 
@@ -40,6 +40,6 @@ ms.locfileid: "43766400"
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../atl/atl-class-overview.md)   
+[类概述](../atl/atl-class-overview.md)<br/>
 [属性映射宏](../atl/reference/property-map-macros.md)
 

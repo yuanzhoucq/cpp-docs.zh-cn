@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025537"
 ---
 # <a name="connection-point-global-functions"></a>连接点全局函数
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>参数
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]一个指向`IUnknown`对象的客户端想要使用连接。
 
-*pUnk*  
+*pUnk*<br/>
 [in]指向客户端的`IUnknown`。
 
-*iid*  
+*iid*<br/>
 [in]连接点的 GUID。 通常情况下，这是与连接点管理输出接口相同。
 
-*pdw*  
+*pdw*<br/>
 [out]一个指向唯一标识连接的 cookie。
 
 ### <a name="return-value"></a>返回值
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>参数
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]一个指向`IUnknown`的客户端连接使用的对象。
 
-*iid*  
+*iid*<br/>
 [in]连接点的 GUID。 通常情况下，这是与连接点管理输出接口相同。
 
-*数据仓库*  
+*数据仓库*<br/>
 [in]唯一标识连接 cookie。
 
 ### <a name="return-value"></a>返回值
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 [in]指向包含接收器映射的对象的指针。
 
-*bAdvise*  
+*bAdvise*<br/>
 [in]如果接收器的所有项都都可以收到通知;如果将要 unadvised 接收器的所有条目，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
@@ -145,5 +145,5 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ## <a name="see-also"></a>请参阅
 
-[函数](../../atl/reference/atl-functions.md)   
+[函数](../../atl/reference/atl-functions.md)<br/>
 [连接点宏](../../atl/reference/connection-point-macros.md)

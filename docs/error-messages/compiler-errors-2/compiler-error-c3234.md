@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3234 |Microsoft 文档
+title: 编译器错误 C3234 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10964afb48e4a83830d0eb48a5f2147906a3543e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f701eb20743925913bf0eab754f2788e8bd3a9b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017036"
 ---
 # <a name="compiler-error-c3234"></a>编译器错误 C3234
-泛型类可能无法从泛型类型参数派生  
-  
- 泛型类不能继承自泛型类型参数。  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C3234。  
-  
-```  
-// C3234.cpp  
-// compile with: /clr /c  
-generic <class T>  
-public ref class C : T {};   // C3234  
-// try the following line instead  
-// public ref class C {};  
+
+泛型类可能无法从泛型类型参数派生
+
+泛型类不能继承自泛型类型参数。
+
+## <a name="example"></a>示例
+
+以下示例生成 C3234。
+
+```
+// C3234.cpp
+// compile with: /clr /c
+generic <class T>
+public ref class C : T {};   // C3234
+// try the following line instead
+// public ref class C {};
 ```

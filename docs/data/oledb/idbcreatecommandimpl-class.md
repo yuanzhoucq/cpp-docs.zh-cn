@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021559"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
+
 提供的实现[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 会话对象派生自`IDBCreateCommandImpl`。  
+
+*T*<br/>
+会话对象派生自`IDBCreateCommandImpl`。  
   
- *CommandClass*  
- 命令类。  
+*CommandClass*<br/>
+命令类。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|创建新的命令。|  
   
 ## <a name="remarks"></a>备注  
- 要获取新的命令的会话对象上一可选接口。  
+
+要获取新的命令的会话对象上一可选接口。  
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: Createcommand
+
 创建新的命令并返回所请求的接口。  
   
 ### <a name="syntax"></a>语法  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程序员参考*。  
   
- 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:  
+某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IDBCreateCommand::CreateCommand`:  
   
 |OLE DB 模板参数|*OLE DB 程序员参考*参数|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

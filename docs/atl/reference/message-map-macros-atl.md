@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024902"
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>参数
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]消息映射标识符。
 
 ### <a name="remarks"></a>备注
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 [in]包含在消息映射的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>参数
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]包含在消息映射的基类的名称。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]消息映射标识符。
 
 ### <a name="remarks"></a>备注
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>参数
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]包含在消息映射的数据成员的名称。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]消息映射标识符。
 
 ### <a name="remarks"></a>备注
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>参数
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]包含在消息映射的基类的名称。
 
 ### <a name="remarks"></a>备注
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>参数
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in]对象的消息映射为唯一标识符。
 
 ### <a name="remarks"></a>备注
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>参数
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]包含在消息映射的数据成员的名称。
 
 ### <a name="remarks"></a>备注
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>参数
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器的标识符。
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器发送消息的标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>参数
 
-*消息*  
+*消息*<br/>
 [in]Windows 消息。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>参数
 
-*msgFirst*  
+*msgFirst*<br/>
 [in]表示一组连续的消息的开头。
 
-*msgLast*  
+*msgLast*<br/>
 [in]表示一组连续的消息的结尾。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>参数
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]发送消息的控件的标识符。
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]发送消息的控件的标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>参数
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器的标识符。
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器的标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*代码*  
+*代码*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>参数
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器的标识符。
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]菜单项、 控件或加速器的标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。  
 
 ### <a name="requirements"></a>要求
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*cd*  
+*cd*<br/>
 [in]通知代码。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>参数
 
-*idFirst*  
+*idFirst*<br/>
 [in]表示连续范围的控件标识符的开头。
 
-*idLast*  
+*idLast*<br/>
 [in]标记的末尾连续范围的控件标识符。
 
-*func*  
+*func*<br/>
 [in]消息处理程序函数的名称。
 
 ## <a name="see-also"></a>请参阅

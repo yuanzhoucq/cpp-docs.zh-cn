@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019404"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>参数
 
-*error*  
+*error*<br/>
 要转换的错误值。
 
 ### <a name="remarks"></a>备注
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 [in]报告错误的对象的 CLSID。
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in]描述错误的字符串。 Unicode 版本指定*lpszDesc*属于类型 LPCOLESTR; ANSI 版本指定 LPCSTR 的类型。
 
-*iid*  
+*iid*<br/>
 [in]如果错误由操作系统定义的错误或 GUID_NULL 的接口的 IID。
 
-*hRes*  
+*hRes*<br/>
 [in]所需的 HRESULT 返回到调用方。
 
-*nID*  
+*nID*<br/>
 [in]资源标识符的错误描述字符串的存储位置。 此值应介于 0x0200 和 0xffff 内，之间 （含）。 在调试版本中， **ASSERT**如果会导致*nID*没有有效的字符串进行索引。 在发布版本中的错误描述字符串将设置为"未知错误。"
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]错误的帮助上下文标识符。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]路径和描述错误的帮助文件的名称。
 
-*hInst*  
+*hInst*<br/>
 [in]资源的句柄。 默认情况下，此参数是`__AtlBaseModuleModule::GetResourceInstance`，其中`__AtlBaseModuleModule`是全局实例[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)或从其派生的类。
 
 ### <a name="return-value"></a>返回值
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>参数
 
-*hr*  
+*hr*<br/>
 标准的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
@@ -233,6 +233,6 @@ inline void AtlThrowLastWin32();
 
 ## <a name="see-also"></a>请参阅
 
-[函数](../../atl/reference/atl-functions.md)   
+[函数](../../atl/reference/atl-functions.md)<br/>
 [调试和错误报告宏](../../atl/reference/debugging-and-error-reporting-macros.md)
 

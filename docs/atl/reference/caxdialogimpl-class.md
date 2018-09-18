@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024494"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 类
 
@@ -44,16 +44,16 @@ ms.locfileid: "43753053"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`CAxDialogImpl`。
 
-*TBase*  
+*TBase*<br/>
 基本窗口类`CDialogImplBaseT`。
 
 ## <a name="members"></a>成员
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>参数
 
-*bAdvise*  
+*bAdvise*<br/>
 如果接收器的所有项都都可以收到通知;，设置为 true如果所有 false 接收器项是为 unadvised。
 
 ### <a name="return-value"></a>返回值
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]向所有者窗口句柄。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
-*RECT （&AMP; A)*  
+*RECT （&AMP; A)*<br/>
 未使用此参数。 此参数由传入`CComControl`。
 
 ### <a name="return-value"></a>返回值
@@ -180,16 +180,16 @@ BOOL DestroyWindow();
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]向所有者窗口句柄。 默认值是返回的值[正在](https://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
 ### <a name="return-value"></a>返回值
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>参数
 
-*nRetCode*  
+*nRetCode*<br/>
 [in]要返回的值[DoModal](#domodal)。
 
 ### <a name="return-value"></a>返回值
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>参数
 
-*pMsg*  
+*pMsg*<br/>
 指向[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)结构，其中包含要检查的消息。
 
 ### <a name="return-value"></a>返回值
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>请参阅
 
-[CDialogImpl 类](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl 类](../../atl/reference/cdialogimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

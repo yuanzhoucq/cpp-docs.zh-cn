@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751314"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025144"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 类
 
@@ -35,25 +35,25 @@ ms.locfileid: "43751314"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 COM 集合接口。
 
-*CollType*  
+*CollType*<br/>
 C + + 标准库容器类。
 
-*ItemType*  
+*ItemType*<br/>
 容器接口所显示的项的类型。
 
-*CopyItem*  
+*CopyItem*<br/>
 一个[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
-*EnumType*  
+*EnumType*<br/>
 一个[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-兼容的枚举器类。
 
 ## <a name="members"></a>成员
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>参数
 
-*pcount*  
+*pcount*<br/>
 [out]集合中的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>参数
 
-*Tuple*  
+*Tuple*<br/>
 [in]集合中的项的从 1 开始的索引。
 
-*pvar*  
+*pvar*<br/>
 [out]对应的项*索引*。
 
 ### <a name="return-value"></a>返回值
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>参数
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]**IUnknown**新创建的枚举数对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>请参阅
 
-[ATLCollections 示例](../../visual-cpp-samples.md)   
+[ATLCollections 示例](../../visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

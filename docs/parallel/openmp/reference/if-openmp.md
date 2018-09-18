@@ -1,5 +1,5 @@
 ---
-title: 如果 (OpenMP) |Microsoft 文档
+title: 如果 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020948"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-指定是否应在并行或序列中执行循环。  
+指定并行或序列中是否应执行一个循环。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,10 @@ ms.locfileid: "33692227"
 if(expression)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `expression`  
- 一个整数表达式，如果其计算结果为 true （非零），则导致在并行区域来并行执行的代码。 如果表达式的计算结果为 false （零），则并行区域 （通过单个线程） 执行在序列中。  
+*表达式*<br/>
+整数表达式，如果其计算结果为 true （非零），将导致并行区域以并行执行的代码。 如果表达式的计算结果为 false （零），并行区域是在序列中执行 （由单线程）。  
   
 ## <a name="remarks"></a>备注  
  `if` 适用于以下指令：  

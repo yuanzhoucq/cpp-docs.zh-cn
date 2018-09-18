@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE 错误 BK1515 |Microsoft 文档
+title: BSCMAKE 错误 BK1515 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da10dc8d0287158da1d44300075d0ac9ebf3e296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52447d7e4e0485b4725ef582384125c138a1a48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016411"
 ---
 # <a name="bscmake-error-bk1515"></a>BSCMAKE 错误 BK1515
-bscfile： 版本不兼容： 无法以增量方式更新  
-  
- .Bsc 文件是使用 BSCMAKE 的另一个版本创建的。 重新创建.bsc 文件。
+
+bscfile： 版本不兼容： 不能以增量方式更新
+
+创建.bsc 文件时使用 BSCMAKE 的另一个版本。 重新创建.bsc 文件。

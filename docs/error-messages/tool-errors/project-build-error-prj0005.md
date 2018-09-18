@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0005 |Microsoft 文档
+title: 项目生成错误 PRJ0005 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016504"
 ---
 # <a name="project-build-error-prj0005"></a>项目生成错误 PRJ0005
-无法在目录中创建临时文件。  
-  
- 用于创建临时文件的调用失败。 失败的原因包括：  
-  
--   用尽了临时文件的名称。  
-  
--   临时目录是只读的。  
-  
--   没有临时目录或 TMP 环境变量。  
-  
--   你的计算机由可用磁盘空间不足。
+
+无法在目录 'directory' 中创建临时文件。
+
+若要创建临时文件的调用失败。 失败的原因包括：
+
+- 用尽了临时文件的名称。
+
+- 临时目录是只读的。
+
+- 没有临时目录或 TMP 环境变量。
+
+- 您的计算机由可用磁盘空间不足。

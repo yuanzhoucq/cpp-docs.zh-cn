@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2883 |Microsoft 文档
+title: 编译器错误 C2883 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019258"
 ---
 # <a name="compiler-error-c2883"></a>编译器错误 C2883
-name： 函数声明与由使用声明引入的 identifier 冲突  
-  
- 你尝试以不止一次定义的函数。 与一个命名空间中进行的第一个定义`using`声明。 第二种是本地的定义。  
-  
- 下面的示例生成 C2883:  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+
+name： 函数声明与 using 声明引入的 identifier 冲突
+
+你试图超过一次定义的函数。 第一个定义了包含的命名空间从`using`声明。 第二种是本地的定义。
+
+下面的示例生成 C2883:
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

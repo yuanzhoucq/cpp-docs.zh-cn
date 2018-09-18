@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9ec437be7c719c4ba65b31465f9112fa250284d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e104b5d471302b614852d98b379f941b2d9b7ead
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024930"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 类
 
@@ -38,13 +38,13 @@ ms.locfileid: "43751716"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IPersistPropertyBagImpl`。
 
 ## <a name="members"></a>成员
@@ -137,5 +137,5 @@ ATL 使用对象的属性映射来存储此信息。 默认情况下，此方法
 
 ## <a name="see-also"></a>请参阅
 
-[BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
+[BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

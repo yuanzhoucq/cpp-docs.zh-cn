@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017958"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 类
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>参数
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]使用链接的对象和其消息映射关联的唯一标识符。
 
-*hWnd*  
+*hWnd*<br/>
 [in]接收消息的窗口句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
-*lResult*  
+*lResult*<br/>
 [out]消息处理的结果。
 
 ### <a name="return-value"></a>返回值
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>参数
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]使用链接的对象和其消息映射关联的唯一标识符。 最初定义此值通过调用[SetChainEntry](#setchainentry)。
 
 ### <a name="return-value"></a>返回值
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>参数
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]使用链接的对象和其消息映射关联的唯一标识符。
 
-*pObject*  
+*pObject*<br/>
 [in]指向声明消息映射的链接对象的指针。 此对象必须派生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]消息映射中的链接对象的标识符。 默认值为 0，它标识使用声明的默认消息映射[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要指定备选的消息映射声明与[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，将传递`msgMapID`。
 
 ### <a name="return-value"></a>返回值
@@ -201,5 +201,5 @@ BOOL SetChainEntry(
 
 ## <a name="see-also"></a>请参阅
 
-[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3754 |Microsoft 文档
+title: 编译器错误 C3754 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8555732fbe3321c65a4da9689b0b8816ff356532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d25d09343cc2a8d341925727529be7d435d9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023470"
 ---
 # <a name="compiler-error-c3754"></a>编译器错误 C3754
-委托构造函数： 不能在类型 type 的实例上调用成员函数 function  
-  
- 通过为某种类型的值不包含函数指针的函数进行调用。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3754:  
-  
-```  
-// C3754a.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-delegate void MyDel();  
-  
-interface class MyInterface {};  
-  
-ref struct MyClass : MyInterface {  
-   void f() {}  
-};  
-  
-int main() {  
-   MyInterface^ p = gcnew MyClass;  
-   MyDel^ q = gcnew MyDel(p, &MyClass::f);   // C3754  
-   // try the following line instead  
-//   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);  
-}  
-```  
+
+委托构造函数： 不能在类型 type 的实例上调用成员函数 function
+
+通过对不包含该函数的类型指针的函数调用了。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3754:
+
+```
+// C3754a.cpp
+// compile with: /clr
+using namespace System;
+
+delegate void MyDel();
+
+interface class MyInterface {};
+
+ref struct MyClass : MyInterface {
+   void f() {}
+};
+
+int main() {
+   MyInterface^ p = gcnew MyClass;
+   MyDel^ q = gcnew MyDel(p, &MyClass::f);   // C3754
+   // try the following line instead
+//   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);
+}
+```

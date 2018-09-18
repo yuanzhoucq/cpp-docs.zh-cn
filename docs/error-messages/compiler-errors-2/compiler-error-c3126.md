@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3126 |Microsoft 文档
+title: 编译器错误 C3126 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 811377ef557cb690dcd8f1cf92b983d9bac60675
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f794565c9d8054d4b66e7817b5d63fb13795ac3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021657"
 ---
 # <a name="compiler-error-c3126"></a>编译器错误 C3126
-不能定义联合内托管类型 type 的联合  
-  
- 不能在托管类型内定义联合。  
-  
- 下面的示例生成 C3126:  
-  
-```  
-// C3126_2.cpp  
-// compile with: /clr /c  
-ref class Test  
-{  
-   union x  
-   {   // C3126  
-      int a;  
-      int b;  
-   };  
-};  
-```  
+
+不能定义联合 union 内托管类型 type
+
+联合不能在托管类型内定义。
+
+下面的示例生成 C3126:
+
+```
+// C3126_2.cpp
+// compile with: /clr /c
+ref class Test
+{
+   union x
+   {   // C3126
+      int a;
+      int b;
+   };
+};
+```

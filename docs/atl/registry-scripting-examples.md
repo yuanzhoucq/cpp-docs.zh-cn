@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022106"
 ---
 # <a name="registry-scripting-examples"></a>注册表脚本示例
 
@@ -32,17 +32,17 @@ ms.locfileid: "43753144"
 
 以下的分析树说明了一个简单的脚本，将单个密钥添加到系统注册表。 具体而言，该脚本会添加密钥，`MyVeryOwnKey`到`HKEY_CURRENT_USER`。 它还将分配的默认字符串值`HowGoesIt`为使用新密钥：
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 此脚本可以轻松地扩展来定义多个子项，如下所示：
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 现在，该脚本会添加一个子项`HasASubkey`到`MyVeryOwnKey`。 此子项，它将添加到这两`PrettyCool`子项 (默认值`DWORD`值为 55) 和`ANameValue`命名的值 (字符串值为`WithANamedValue`)。
@@ -61,8 +61,8 @@ HKCU
 
 以下脚本注册注册机构 COM 服务器本身。
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 在运行时，此分析树添加`ATL.Registrar`关键`HKEY_CLASSES_ROOT`。 此新注册表项，然后 it:
@@ -106,15 +106,15 @@ HKCR
 
 若要在脚本中指定多个分析树，只需将一个树放在另一端。 例如，以下脚本添加密钥， `MyVeryOwnKey`，为两个分析树`HKEY_CLASSES_ROOT`和`HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

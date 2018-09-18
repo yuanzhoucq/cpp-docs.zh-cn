@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020247"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 类
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>参数
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。
 
 ## <a name="members"></a>成员
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 要转换的文本字符串。
 
-*nCodePage*  
+*nCodePage*<br/>
 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)的更多详细信息。
 
 ### <a name="remarks"></a>备注
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 转换运算符。
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ operator LPWSTR() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CA2AEX 类](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
-[CW2AEX 类](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX 类](../../atl/reference/cw2wex-class.md)   
+[CA2AEX 类](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX 类](../../atl/reference/ca2caex-class.md)<br/>
+[CW2AEX 类](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX 类](../../atl/reference/cw2wex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)
