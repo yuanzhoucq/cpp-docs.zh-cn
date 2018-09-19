@@ -1,5 +1,5 @@
 ---
-title: 实现简单的只读提供程序 |Microsoft 文档
+title: 实现简单的只读提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec631c3a426a8cc27df1b9df749c813c0440640e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e82468713baaebfd9be366206aa85acd3b2a5df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062353"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>实现简单的只读提供程序
+
 本主题中的扩展的示例演示如何编辑向导创建的文件以创建简单的只读提供程序从文本文件读取两个字符串的一组。 若要从向导文件创建此提供程序，添加代码以完成以下任务：  
   
--   [将字符串读入提供程序](../../data/oledb/reading-strings-into-the-ole-db-provider.md)  
+- [对提供程序读取的字符串](../../data/oledb/reading-strings-into-the-ole-db-provider.md)  
   
--   [存储提供程序中的字符串](../../data/oledb/storing-strings-in-the-ole-db-provider.md)  
+- [将字符串存储在提供程序](../../data/oledb/storing-strings-in-the-ole-db-provider.md)  
   
 ## <a name="see-also"></a>请参阅  
- [创建简单的只读提供程序](../../data/oledb/creating-a-simple-read-only-provider.md)
+
+[创建简单的只读提供程序](../../data/oledb/creating-a-simple-read-only-provider.md)

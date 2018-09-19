@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069386"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 类
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>参数
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 默认标准的窗口样式。
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 默认扩展的窗口样式。
 
 ## <a name="members"></a>成员
@@ -68,14 +68,17 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 ATL 提供了三个预定义的专用化的窗口样式的常用组合此模板：
 
-`CControlWinTraits`  
-面向标准控件窗口。 使用以下标准样式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 没有扩展的样式。
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-为标准的框架窗口设计。 所用的标准样式包括： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 所用的扩展的样式包括： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
+   面向标准控件窗口。 使用以下标准样式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 没有扩展的样式。
 
-`CMDIChildWinTraits`  
-适用于标准的 MDI 子窗口。 所用的标准样式包括： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE，WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 所用的扩展的样式包括： WS_EX_MDICHILD。
+- `CFrameWinTraits`  
+
+   为标准的框架窗口设计。 所用的标准样式包括： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 所用的扩展的样式包括： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
+
+- `CMDIChildWinTraits`  
+
+   适用于标准的 MDI 子窗口。 所用的标准样式包括： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE，WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 所用的扩展的样式包括： WS_EX_MDICHILD。
 
 如果你想要确保同时允许根据每个实例，设置其他样式的窗口类的所有实例使用此选项设置特定的样式[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)相反。
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwStyle*  
+*dwStyle*<br/>
 用于创建窗口的标准样式。 如果*dwStyle*为 0，模板样式值 (`t_dwStyle`) 返回。 如果*dwStyle*为非零值， *dwStyle*返回。
 
 ### <a name="return-value"></a>返回值
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>参数
 
-*dwExStyle*  
+*dwExStyle*<br/>
 用于创建窗口的扩展的样式。 如果*dwExStyle*为 0，模板样式值 (`t_dwExStyle`) 返回。 如果*dwExStyle*为非零值， *dwExStyle*返回。
 
 ### <a name="return-value"></a>返回值
@@ -119,5 +122,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [了解窗口特征](../../atl/understanding-window-traits.md)

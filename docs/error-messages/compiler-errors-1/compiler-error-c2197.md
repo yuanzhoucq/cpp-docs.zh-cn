@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2197 |Microsoft 文档
+title: 编译器错误 C2197 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf90d53aaba9550cecd93603344e0af5ec3c2ab0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e13e21cbba3b6cbf6a4bd84a835270d7fee2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036808"
 ---
 # <a name="compiler-error-c2197"></a>编译器错误 C2197
-“function”: 用于调用的参数太多  
-  
- 编译器检测到用于函数调用的参数太多或函数声明不正确。  
-  
- 下面的示例生成 C2197：  
-  
-```  
-// C2197.c  
-// compile with: /Za /c  
-void func( int );  
-int main() {  
-   func( 1, 2 );   // C2197 two actual parameters  
-   func( 2 );   // OK  
-}  
+
+“function”: 用于调用的参数太多
+
+编译器检测到用于函数调用的参数太多或函数声明不正确。
+
+下面的示例生成 C2197：
+
+```
+// C2197.c
+// compile with: /Za /c
+void func( int );
+int main() {
+   func( 1, 2 );   // C2197 two actual parameters
+   func( 2 );   // OK
+}
 ```

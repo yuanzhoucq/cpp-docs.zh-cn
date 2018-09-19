@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0045 |Microsoft 文档
+title: 表达式计算器错误 CXX0045 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023197"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>表达式计算器错误 CXX0045
-不是函数  
-  
- 不是函数的名称的程序中的符号为提供的自变量列表。  
-  
-## <a name="example"></a>示例  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- 当`queue`不是函数。  
-  
- 此错误是与 CAN0045 相同。
+
+不是函数
+
+不是函数的名称的程序中的符号为提供的参数列表。
+
+## <a name="example"></a>示例
+
+```
+queue( alpha, beta )
+```
+
+当`queue`不是函数。
+
+此错误是与 CAN0045 相同。

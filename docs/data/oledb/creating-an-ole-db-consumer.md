@@ -1,5 +1,5 @@
 ---
-title: 创建 OLE DB 使用者 |Microsoft 文档
+title: 创建 OLE DB 使用者 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034074"
 ---
 # <a name="creating-an-ole-db-consumer"></a>创建 OLE DB 使用者
-尽管使用该向导是建议的方法，都可以使用或不使用 ATL OLE DB 使用者向导，创建 OLE DB 模板使用者。 使用者可以运行任何应用程序支持 atl。  
+
+尽管使用该向导是建议的方法，可以使用或不使用 ATL OLE DB 使用者向导，创建 OLE DB 模板使用者。 使用者可以运行任何应用程序都支持 atl。  
   
- 此节涵盖以下主题：  
+此节涵盖以下主题：  
   
--   [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [不使用向导创建 OLE DB 使用者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [不使用向导创建 OLE DB 使用者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

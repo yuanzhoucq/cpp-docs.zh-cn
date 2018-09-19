@@ -1,5 +1,5 @@
 ---
-title: context_self_unblock 类 |Microsoft 文档
+title: context_self_unblock 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1113abc814167912380b57ae7fc85d04284e77
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90774b304a4649c72b6232b5908bf9ff14a4412d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057348"
 ---
 # <a name="contextselfunblock-class"></a>context_self_unblock 类
 此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。  
@@ -64,8 +64,8 @@ context_self_unblock() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

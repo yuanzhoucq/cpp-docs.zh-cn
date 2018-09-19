@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e74df913b22684a61ab4f45ade561e55db18544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044504"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 类
 
@@ -49,7 +49,7 @@ class IOleInPlaceActiveObjectImpl
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IOleInPlaceActiveObjectImpl`。
 
 ## <a name="members"></a>成员
@@ -201,6 +201,6 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 
 ## <a name="see-also"></a>请参阅
 
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)  
-[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)  
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)<br/>
 [类概述](../../atl/atl-class-overview.md)

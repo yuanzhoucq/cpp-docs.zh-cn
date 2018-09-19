@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4166 |Microsoft 文档
+title: 编译器警告 （等级 1） C4166 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bc7ab78fc0fc2816f42db4b6e162838ad74f6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6112c684dc4896393b35309a0a3af7eedd455d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051992"
 ---
 # <a name="compiler-warning-level-1-c4166"></a>编译器警告（等级 1）C4166
-**构造函数/析构函数的非法调用约定**  
-  
- 构造函数和析构函数不能具有平台默认以外的调用约定（显式指定 **__clrcall**的情况除外）。
+
+**构造函数/析构函数的非法调用约定**
+
+构造函数和析构函数不能具有平台默认以外的调用约定（显式指定 **__clrcall**的情况除外）。

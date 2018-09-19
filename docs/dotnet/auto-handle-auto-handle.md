@@ -1,5 +1,5 @@
 ---
-title: auto_handle::auto_handle |Microsoft 文档
+title: auto_handle::auto_handle |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67cc2393feff127e2b4278f5a5257ea2be102237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018595"
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
 `auto_handle`构造函数。  
@@ -47,11 +47,11 @@ auto_handle(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_ptr`  
- 与自己的对象。  
+*_ptr*<br/>
+到自己的对象。  
   
- `_right`  
- 现有 `auto_handle`。  
+*（_r)*<br/>
+现有 `auto_handle`。  
   
 ## <a name="example"></a>示例  
   

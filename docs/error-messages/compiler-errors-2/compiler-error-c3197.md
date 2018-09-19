@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3197 |Microsoft 文档
+title: 编译器错误 C3197 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f362cad07af1192e9a67a7348ad7a0ad2cad354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83003a1538496d98dcc29d7a9954a68fb19c920e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022618"
 ---
 # <a name="compiler-error-c3197"></a>编译器错误 C3197
-keyword： 仅可用于定义  
-  
- 关键字用于声明中，但仅为定义中有效。  
-  
- 下面的示例生成 C3197:  
-  
-```  
-// C3197.cpp  
-// compile with: /clr /c  
-ref struct R abstract;   // C3197  
-ref struct R abstract {};   // OK  
-  
-public ref class MyObject;   // C3197  
-ref class MyObject;   // OK  
-public ref class MyObject {};   // OK  
+
+keyword： 只能在定义中
+
+关键字用于声明中，但只是在定义中有效。
+
+下面的示例生成 C3197:
+
+```
+// C3197.cpp
+// compile with: /clr /c
+ref struct R abstract;   // C3197
+ref struct R abstract {};   // OK
+
+public ref class MyObject;   // C3197
+ref class MyObject;   // OK
+public ref class MyObject {};   // OK
 ```

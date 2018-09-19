@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2683 |Microsoft 文档
+title: 编译器错误 C2683 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35619d93200c2f0e61dbf903f56a70bbe0c48d73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c13836c845e1efc33c409939bdbec49b25c84e63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027584"
 ---
 # <a name="compiler-error-c2683"></a>编译器错误 C2683
-cast: type 不是多态类型  
-  
- 不能使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)将从非多态类 （具有没有虚函数的类） 转换。  
-  
- 你可以使用[static_cast](../../cpp/static-cast-operator.md)来执行非多态类型的转换。 但是，`static_cast`不执行运行时检查。  
-  
- 下面的示例生成 C2683:  
-  
-```  
-// C2683.cpp  
-// compile with: /c  
-class B { };  
-class D : public B { };  
-  
-void f(B* pb) {  
-   D* pd1 = dynamic_cast<D*>(pb);  // C2683  
-   D* pd1 = static_cast<D*>(pb);   // OK  
-}  
+
+cast： 不是多态类型 type。
+
+不能使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)将从非多态类 （具有没有虚函数的类）。
+
+可以使用[static_cast](../../cpp/static-cast-operator.md)来执行非多态类型的转换。 但是，`static_cast`不会执行运行时检查。
+
+下面的示例生成 C2683:
+
+```
+// C2683.cpp
+// compile with: /c
+class B { };
+class D : public B { };
+
+void f(B* pb) {
+   D* pd1 = dynamic_cast<D*>(pb);  // C2683
+   D* pd1 = static_cast<D*>(pb);   // OK
+}
 ```

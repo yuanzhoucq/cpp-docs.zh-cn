@@ -1,5 +1,5 @@
 ---
-title: cancellation_token 类 |Microsoft 文档
+title: cancellation_token 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037953"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 类
 `cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。  
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+要复制或移动 cancellation_token。
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Registration`  
- 与将取消注册的回调对应的 `cancellation_token_registration` 对象。 此标记必须先前已从对 `register` 的调用中返回。  
+*_Registration*<br/>
+与将取消注册的回调对应的 `cancellation_token_registration` 对象。 此标记必须先前已从对 `register` 的调用中返回。  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
-  
+*_Src*<br/>
+要比较的 `cancellation_token`。
+
 ### <a name="return-value"></a>返回值  
   
 ##  <a name="operator_eq"></a> 运算符 = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+`cancellation_token`分配。
   
 ### <a name="return-value"></a>返回值  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+要比较的 `cancellation_token`。
   
 ### <a name="return-value"></a>返回值  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Function`  
- 取消此 `cancellation_token` 时将回调的函数对象的类型。  
+*_Function*<br/>
+取消此 `cancellation_token` 时将回调的函数对象的类型。  
   
- `_Func`  
- 取消此 `cancellation_token` 时将回调的函数对象。  
+*_Func*<br/>
+取消此 `cancellation_token` 时将回调的函数对象。  
   
 ### <a name="return-value"></a>返回值  
- 可在 `cancellation_token_registration` 方法中用于取消注册之前注册的回调并防止进行该回调的 `deregister` 对象。 该方法将引发[invalid_operation](invalid-operation-class.md)异常如果它调用`cancellation_token`使用创建的对象[cancellation_token:: none](#none)方法。  
+ 可在 `cancellation_token_registration` 方法中用于取消注册之前注册的回调并防止进行该回调的 `deregister` 对象。 该方法将引发[invalid_operation](invalid-operation-class.md)异常，如果在调用`cancellation_token`使用创建的对象[cancellation_token:: none](#none)方法。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

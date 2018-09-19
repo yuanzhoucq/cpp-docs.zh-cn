@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3242 |Microsoft 文档
+title: 编译器错误 C3242 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9c30ef9a2662a705b7fa9d3620f1d6d89edea8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a426ffa92337b227a9f79c8d30f2890b639a056
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026421"
 ---
 # <a name="compiler-error-c3242"></a>编译器错误 C3242
-“函数”: 只能显式重写虚函数  
-  
- 尝试显式重写非虚拟方法。
+
+“函数”: 只能显式重写虚函数
+
+尝试显式重写非虚拟方法。

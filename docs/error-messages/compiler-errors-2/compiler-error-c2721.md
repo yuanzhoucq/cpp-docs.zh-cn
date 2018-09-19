@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2721 |Microsoft 文档
+title: 编译器错误 C2721 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71e3cae8aa0ad505adb84c330f33751379aa3e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0fcded3d2a2a0bdd2eb2e7b9965abea0e09b35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054541"
 ---
 # <a name="compiler-error-c2721"></a>编译器错误 C2721
-specifier： 非法运算符关键字和类型之间的存储类说明符  
-  
- 用户定义的类型转换适用于所有存储类，所以不能在类型转换指定存储类。
+
+specifier： 非法运算符关键字和类型之间的存储类说明符
+
+用户定义的类型转换应用于所有存储类，因此不能在类型转换指定的存储类。

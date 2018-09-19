@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f0ab7906961936239ac564137d0760e6d64de9de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068205"
 ---
 # <a name="curl-class"></a>CUrl 类
 
@@ -154,7 +154,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwFlags*  
+*dwFlags*<br/>
 控制规范化标志。 如果未不指定任何标志 (*dwFlags* = 0)，该方法将所有不安全字符和 meta 序列 (如\\。，\...，和\\...) 进行转义序列。 *dwFlags*可以是下列值之一：
 
 - ATL_URL_BROWSER_MODE： 不会进行编码或解码字符后"#"或""并不会删除尾随空格后""。 如果未指定此值，编码整个 URL，并删除尾随空格。
@@ -195,10 +195,10 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszUrl*  
+*lpszUrl*<br/>
 URL。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定要转换中的所有转义字符的 ATL_URL_DECODE 或 ATL_URL_ESCAPE *lpszUrl*分析后其实际值。 （在 Visual c + + 2005 中之前, ATL_URL_DECODE 转换所有转义字符分析之前。）
 
 ### <a name="return-value"></a>返回值
@@ -218,13 +218,13 @@ inline BOOL CreateUrl(
 
 ### <a name="parameters"></a>参数
 
-*lpszUrl*  
+*lpszUrl*<br/>
 用于保存完整的 URL 字符串的字符串缓冲区。
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 最大长度*lpszUrl*字符串缓冲区。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定要转换中的所有转义字符的 ATL_URL_ESCAPE *lpszUrl*为其实际值。
 
 ### <a name="return-value"></a>返回值
@@ -256,7 +256,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>参数
 
-*Url*  
+*Url*<br/>
 `CUrl`对象，若要复制到创建的 URL。
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -457,7 +457,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>参数
 
-*Url*  
+*Url*<br/>
 `CUrl`对象要复制到当前的对象。
 
 ### <a name="return-value"></a>返回值
@@ -474,7 +474,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszInfo*  
+*lpszInfo*<br/>
 包含要在 URL 中包括的额外信息的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -491,7 +491,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszHost*  
+*lpszHost*<br/>
 主机名。
 
 ### <a name="return-value"></a>返回值
@@ -508,7 +508,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszPass*  
+*lpszPass*<br/>
 密码。
 
 ### <a name="return-value"></a>返回值
@@ -525,7 +525,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>参数
 
-*nPrt*  
+*nPrt*<br/>
 端口号。
 
 ### <a name="return-value"></a>返回值
@@ -542,7 +542,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>参数
 
-*nScheme*  
+*nScheme*<br/>
 之一[ATL_URL_SCHEME](atl-url-scheme-enum.md)方案的值。
 
 ### <a name="return-value"></a>返回值
@@ -563,7 +563,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszSchm*  
+*lpszSchm*<br/>
 URL 方案名称。
 
 ### <a name="return-value"></a>返回值
@@ -584,7 +584,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszPath*  
+*lpszPath*<br/>
 URL 路径中。
 
 ### <a name="return-value"></a>返回值
@@ -601,7 +601,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszUser*  
+*lpszUser*<br/>
 用户名。
 
 ### <a name="return-value"></a>返回值

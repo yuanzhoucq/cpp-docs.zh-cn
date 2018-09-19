@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d2bb81c430483f4dc2e96defba1d6ade0a0be9fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029996"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 类
 `concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。  
@@ -56,20 +56,20 @@ template <typename K,
 ```  
   
 #### <a name="parameters"></a>参数  
- `K`  
- 密钥类型。  
+*K*<br/>
+密钥类型。  
   
- `_Element_type`  
- 映射类型。  
+*_Element_type*<br/>
+映射类型。  
   
- `_Hasher`  
- 哈希函数对象类型。 此参数为可选参数，默认值为 `std::hash<K>`。  
+*_Hasher*<br/>
+哈希函数对象类型。 此参数为可选参数，默认值为 `std::hash<K>`。  
   
- `key_equality`  
- 相等比较函数对象类型。 此参数为可选参数，默认值为 `std::equal_to<K>`。  
+*key_equality*<br/>
+相等比较函数对象类型。 此参数为可选参数，默认值为 `std::equal_to<K>`。  
   
- `_Allocator_type`  
- 表示存储的分配器对象封装有关分配和解除分配的内存用于并发无序映射的详细信息的类型。 此参数是可选的默认值是`std::allocator<std::pair<K`， `_Element_type>>`。  
+*_Allocator_type*<br/>
+表示存储的分配器对象封装有关分配和解除分配的内存用于并发无序映射的详细信息的类型。 此参数是可选的默认值是`std::allocator<std::pair<K`， `_Element_type>>`。  
   
 ## <a name="members"></a>成员  
   
@@ -144,8 +144,8 @@ const mapped_type& at(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要查找的键值。  
+*KVal*<br/>
+要查找的键值。  
   
 ### <a name="return-value"></a>返回值  
  对找到的元素数据值的引用。  
@@ -230,29 +230,29 @@ concurrent_unordered_map(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Iterator`  
- 输入迭代器的类型。  
+*_Iterator*<br/>
+输入迭代器的类型。  
   
- `_Number_of_buckets`  
- 此无序映射的初始存储桶数。  
+*_Number_of_buckets*<br/>
+此无序映射的初始存储桶数。  
   
- `_Hasher`  
- 此无序映射的哈希函数。  
+*_Hasher*<br/>
+此无序映射的哈希函数。  
   
- `key_equality`  
- 此无序映射的相等性比较函数。  
+*key_equality*<br/>
+此无序映射的相等性比较函数。  
   
- `_Allocator`  
- 此无序映射的分配器。  
+*_Allocator*<br/>
+此无序映射的分配器。  
   
- `_Begin`  
- 要复制的范围元素中的第一个元素的位置。  
+*（_b)*<br/>
+要复制的范围元素中的第一个元素的位置。  
   
- `_End`  
- 要复制的元素范围以外的第一个元素的位置。  
+*（_e)*<br/>
+要复制的元素范围以外的第一个元素的位置。  
   
- `_Umap`  
- 要从中复制或移动元素的源 `concurrent_unordered_map` 对象。  
+*_Umap*<br/>
+要从中复制或移动元素的源 `concurrent_unordered_map` 对象。  
   
 ### <a name="remarks"></a>备注  
  所有构造函数都会存储一个分配器对象 `_Allocator` 并初始化无序映射。  
@@ -276,8 +276,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要搜索的键。  
+*KVal*<br/>
+要搜索的键。  
   
 ### <a name="return-value"></a>返回值  
  密钥容器中的出现次数的次数。  
@@ -324,8 +324,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要搜索的密钥值。  
+*KVal*<br/>
+要搜索的密钥值。  
   
 ### <a name="return-value"></a>返回值  
  一个[对](../../../standard-library/pair-structure.md)其中第一个元素是开头的迭代器，第二个元素是指向范围末尾的迭代器。  
@@ -344,8 +344,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要搜索的密钥值。  
+*KVal*<br/>
+要搜索的密钥值。  
   
 ### <a name="return-value"></a>返回值  
  迭代器指向匹配提供的键的第一个元素位置或迭代器`end()`如果此类元素不存在。  
@@ -403,23 +403,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Iterator`  
- 用于插入的迭代器类型。  
+*_Iterator*<br/>
+用于插入的迭代器类型。  
   
- `V`  
- 插入到映射的值的类型。  
+*V*<br/>
+插入到映射的值的类型。  
   
- `value`  
- 要插入的值。  
+*value*<br/>
+要插入的值。  
   
- `_Where`  
- 搜索插入点的起始位置。  
+*_Where*<br/>
+搜索插入点的起始位置。  
   
- `first`  
- 要插入的范围的开始处。  
+*first*<br/>
+要插入的范围的开始处。  
   
- `last`  
- 要插入的范围的结尾处。  
+*最后一个*<br/>
+要插入的范围的结尾处。  
   
 ### <a name="return-value"></a>返回值  
  一个对，包含一个迭代器，以及一个布尔值。 请参阅更多详细信息备注部分。  
@@ -496,8 +496,8 @@ mapped_type& operator[](key_type&& kval);
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要  
+*KVal*<br/>
+要  
   
  查找或插入的键值。  
   
@@ -522,8 +522,8 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Umap`  
- 源 `concurrent_unordered_map` 对象。  
+*_Umap*<br/>
+源 `concurrent_unordered_map` 对象。  
   
 ### <a name="return-value"></a>返回值  
  对此引用`concurrent_unordered_map`对象。  
@@ -540,8 +540,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Buckets`  
- 所需的存储桶数。  
+*_Buckets*<br/>
+所需的存储桶数。  
   
 ### <a name="remarks"></a>备注  
  成员函数将存储桶数更改为至少 `_Buckets` 并根据需要重新生成哈希表。 存储桶的数量必须是 2 的幂。 如果不 2 的幂，它将舍入到下一步最大的 2 次幂。  
@@ -571,8 +571,8 @@ void swap(concurrent_unordered_map& _Umap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Umap`  
- 要交换的 `concurrent_unordered_map` 对象。  
+*_Umap*<br/>
+要交换的 `concurrent_unordered_map` 对象。  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -585,8 +585,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Bucket`  
- 存储桶的索引。  
+*（_b)*<br/>
+存储桶的索引。  
   
 ### <a name="return-value"></a>返回值  
  迭代器指向的存储桶开头。  
@@ -600,8 +600,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `KVal`  
- 要搜索的元素键。  
+*KVal*<br/>
+要搜索的元素键。  
   
 ### <a name="return-value"></a>返回值  
  此容器中的密钥的的存储桶索引。  
@@ -626,8 +626,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Bucket`  
- 若要搜索的存储桶。  
+*（_b)*<br/>
+若要搜索的存储桶。  
   
 ### <a name="return-value"></a>返回值  
  当前此容器中的存储桶数。  
@@ -641,8 +641,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Bucket`  
- 存储桶的索引。  
+*（_b)*<br/>
+存储桶的索引。  
   
 ### <a name="return-value"></a>返回值  
  迭代器指向的存储桶开头。  
@@ -656,8 +656,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Bucket`  
- 存储桶的索引。  
+*（_b)*<br/>
+存储桶的索引。  
   
 ### <a name="return-value"></a>返回值  
  迭代器指向的存储桶开头。  
@@ -673,8 +673,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Bucket`  
- 存储桶的索引。  
+*（_b)*<br/>
+存储桶的索引。  
   
 ### <a name="return-value"></a>返回值  
  迭代器指向的存储桶末尾。  
@@ -696,17 +696,17 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Where`  
- 要从删除的迭代器位置。  
+*_Where*<br/>
+要从删除的迭代器位置。  
   
- `_Begin`  
- 要消除的元素范围中第一个元素的位置。  
+*（_b)*<br/>
+要消除的元素范围中第一个元素的位置。  
   
- `_End`  
- 要消除的元素范围之外的第一个元素的位置。  
+*（_e)*<br/>
+要消除的元素范围之外的第一个元素的位置。  
   
- `KVal`  
- 要清除的键值。  
+*KVal*<br/>
+要清除的键值。  
   
 ### <a name="return-value"></a>返回值  
  前两个成员函数返回一个迭代器，指定已删除的任何元素之外保留的第一个元素或`concurrent_unordered_map::end`（); 如果此类元素不存在。 第三个成员函数返回它会删除的元素数。  

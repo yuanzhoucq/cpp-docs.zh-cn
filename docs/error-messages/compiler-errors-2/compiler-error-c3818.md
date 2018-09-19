@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3818 |Microsoft 文档
+title: 编译器错误 C3818 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 270b48f014025f56b3055f21417cd49c7225420f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88821655ae559717eeb5e65403724ec1b1423a40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026408"
 ---
 # <a name="compiler-error-c3818"></a>编译器错误 C3818
-数组属性声明 property1 不应使过载索引属性 property2  
-  
- 当有一个索引器，另一个是数组属性，是不可能的属性重载。 
-  
- C3818 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+数组属性声明 property1 不会重载索引属性 property2
+
+当其中一个是索引器，另一个是数组属性，是不可能的属性重载。
+
+C3818 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf3455bb5e1f6dca08e01540af92536b2597a4fc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae357caad88e128fe9f3742887781d0096efe2c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058583"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>Catlservicemodulet:: Servicemain 函数
 
@@ -39,6 +39,6 @@ SCM 后，将调用`ServiceMain`，服务必须为 SCM 提供处理程序函数�
 
 ## <a name="see-also"></a>请参阅
 
-[服务](../atl/atl-services.md)   
+[服务](../atl/atl-services.md)<br/>
 [Catlservicemodulet:: Servicemain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

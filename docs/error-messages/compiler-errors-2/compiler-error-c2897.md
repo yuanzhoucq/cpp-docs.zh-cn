@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2897 |Microsoft 文档
+title: 编译器错误 C2897 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c3de4c0d3e6a93a783dfb660bc26f07be6fcacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d05663b913a3e310c091b62a81483f28bbf2c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049821"
 ---
 # <a name="compiler-error-c2897"></a>编译器错误 C2897
-析构函数/终结器不能为函数模板  
-  
- 析构函数或终结器无法进行重载，因此不允许声明析构函数作为模板 （这将定义一组析构函数）。  
-  
- 下面的示例生成 C2897:  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2897。  
-  
-```  
-// C2897.cpp  
-// compile with: /c  
-class X {  
-public:  
-   template<typename T> ~X() {}   // C2897  
-};  
-```  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2897。  
-  
-```  
-// C2897_b.cpp  
-// compile with: /c /clr  
-ref struct R2 {  
-protected:  
-   template<typename T> !R2(){}   // C2897 error  
-};  
+
+析构函数/终结器不能是函数模板
+
+析构函数或终结器不能重载，因此不允许将析构函数声明为模板 （这将定义一组析构函数）。
+
+下面的示例生成 C2897:
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2897。
+
+```
+// C2897.cpp
+// compile with: /c
+class X {
+public:
+   template<typename T> ~X() {}   // C2897
+};
+```
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2897。
+
+```
+// C2897_b.cpp
+// compile with: /c /clr
+ref struct R2 {
+protected:
+   template<typename T> !R2(){}   // C2897 error
+};
 ```

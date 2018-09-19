@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 87b8b6893c8fdd04374919ceff1d28a61bc315e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024655"
 ---
 # <a name="rowset-object-interfaces"></a>行集合对象接口
+
 下表显示了由 OLE DB 行集对象定义的必需和可选接口。  
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
@@ -56,7 +57,8 @@ ms.locfileid: "43217545"
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|是|  
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|否|  
   
- 该向导生成行集对象实现`IAccessor`， `IRowset`，和`IRowsetInfo`通过继承。 `IAccessorImpl`将这两个输出的列。 `IRowset`接口处理提取行和数据。 `IRowsetInfo`接口处理行集属性。  
+该向导生成行集对象实现`IAccessor`， `IRowset`，和`IRowsetInfo`通过继承。 `IAccessorImpl`将这两个输出的列。 `IRowset`接口处理提取行和数据。 `IRowsetInfo`接口处理行集属性。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c707eeb5a7899dd3ef7c8c2aa46098a70ab9c06d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044530"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 类和结构
 
@@ -231,9 +231,9 @@ ms.locfileid: "43753082"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
-[函数](../../atl/reference/atl-functions.md)   
-[全局变量](../../atl/reference/atl-global-variables.md)   
-[Typedef](../../atl/reference/atl-typedefs.md)   
+[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)<br/>
+[函数](../../atl/reference/atl-functions.md)<br/>
+[全局变量](../../atl/reference/atl-global-variables.md)<br/>
+[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [类概述](../../atl/atl-class-overview.md)
 

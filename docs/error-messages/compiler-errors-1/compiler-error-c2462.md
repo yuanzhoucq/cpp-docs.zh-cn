@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2462 |Microsoft 文档
+title: 编译器错误 C2462 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce82ed15bdb8844f69abc260446c1af2fd4a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65df7f4fe7f3822f2723a1709751e3b9b0f23ade
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082842"
 ---
 # <a name="compiler-error-c2462"></a>编译器错误 C2462
-identifier： 无法在新的表达式中定义的类型  
-  
- 不能定义一种类型的操作数字段中`new`运算符。 将类型定义放入单独的语句。  
-  
- 下面的示例生成 C2462:  
-  
-```  
-// C2462.cpp  
-int main() {  
-   new struct S { int i; };   // C2462  
-}  
+
+identifier： 无法在 new-expression 中定义类型
+
+不能定义一种类型的操作数字段中`new`运算符。 将类型定义放在一个单独的语句。
+
+下面的示例生成 C2462:
+
+```
+// C2462.cpp
+int main() {
+   new struct S { int i; };   // C2462
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0006 |Microsoft 文档
+title: 项目生成错误 PRJ0006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 151c22bf13c13de21e89a5c96185cf1c4c1ca349
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264b2f90a2d778b1545117ce5c3b1272626ebad6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073247"
 ---
 # <a name="project-build-error-prj0006"></a>项目生成错误 PRJ0006
-无法打开临时文件 file。 请确保文件存在，而且，目录未写入-受保护。  
-  
- Visual c + + 无法在生成过程中创建临时文件。 其中的原因包括：  
-  
--   没有临时目录。  
-  
--   只读的临时目录。  
-  
--   磁盘空间不足。  
-  
--   $ （intdir） 文件夹是只读的或包含临时文件的是只读的。  
-  
- 此错误也会出现以下错误 PRJ0007： 无法创建输出目录目录。 错误 PRJ0007 意味着无法创建的 $ （intdir） 目录，并暗示临时文件的创建也将失败。  
-  
- 只要你指定就会创建临时文件：  
-  
--   响应文件。  
-  
--   自定义生成步骤。  
-  
--   生成事件。
+
+无法打开临时文件 file。 请确保该文件存在并且，目录未被写保护。
+
+Visual c + + 无法在生成过程中创建临时文件。 其中的原因包括：
+
+- 没有临时目录。
+
+- 只读的临时目录。
+
+- 磁盘空间不足。
+
+- $ （intdir） 文件夹是只读的或包含临时文件的都是只读的。
+
+以下错误 PRJ0007 也将出现此错误： 无法创建输出目录 directory。 错误 PRJ0007 意味着无法创建 $ （intdir） 目录，这意味着临时文件的创建也将失败。
+
+在指定时，会创建临时文件：
+
+- 响应文件。
+
+- 一个自定义生成步骤。
+
+- 生成事件。

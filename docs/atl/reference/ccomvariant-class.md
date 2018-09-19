@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042541"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 类
 
@@ -43,9 +43,8 @@ ms.locfileid: "43753189"
 
 ## <a name="syntax"></a>语法
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>成员
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>参数
 
-*pSrc*  
+*pSrc*<br/>
 [in]指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要附加到对象。
 
 ### <a name="return-value"></a>返回值
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>参数
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`或用来初始化的变体`CComVariant`对象。 源变体的内容复制到目标而不进行转换。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]用于初始化的字符字符串`CComVariant`对象。 可以将零终止宽 (Unicode) 字符字符串传递给构造函数或 ANSI 字符串到 LPCSTR 版本的 LPCOLESTR 版本。 在任一情况下，此字符串将转换为 Unicode 使用分配的 BSTR `SysAllocString`。 类型`CComVariant`对象将成为 VT_BSTR。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**用来初始化`CComVariant`对象。 **Bool**参数转换为 VARIANT_BOOL 再将其存储。 类型`CComVariant`对象都是 VT_BOOL。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**，**字节**，**短**，**长**，LONGLONG、 ULONGLONG， **unsigned short**， **无符号长**，或**无符号的 int**用来初始化`CComVariant`对象。 类型`CComVariant`对象将分别为 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 为 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4。
 
-*vtSrc*  
+*vtSrc*<br/>
 [in]变体类型。 当第一个参数是**int**，有效类型为 VT_I4 和 VT_INT。 当第一个参数是**长**，有效类型为 VT_I4 和 VT_ERROR。 当第一个参数是**double**，有效类型是 VT_R8 和 VT_DATE。 当第一个参数是**无符号的 int**，有效类型是 VT_UI4 和 VT_UINT。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**Float**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R4。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**双**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R8。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_CY。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`或`IUnknown`指针用于初始化`CComVariant`对象。 `AddRef` 将接口指针上调用。 类型`CComVariant`对象将分别为 VT_DISPATCH 或 VT_UNKNOWN。
 
 或者，用来初始化 SAFERRAY 指针`CComVariant`对象。 SAFEARRAY 的副本存储在`CComVariant`对象。 类型`CComVariant`对象将是原始类型的 SAFEARRAY 和 VT_ARRAY 的组合。
 
-*cSrc*  
+*cSrc*<br/>
 [in]**Char**用来初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_I1。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]BSTR 用于初始化`CComVariant`对象。 类型`CComVariant`对象将成为 VT_BSTR。
 
 ### <a name="remarks"></a>备注
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>参数
 
-*vtNew*  
+*vtNew*<br/>
 [in]新类型`CComVariant`对象。
 
-*pSrc*  
+*pSrc*<br/>
 [in]一个指向其值将转换为新类型的变体。 默认值为 NULL，含义`CComVariant`将就地转换对象。
 
 ### <a name="return-value"></a>返回值
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>参数
 
-*pSrc*  
+*pSrc*<br/>
 [in]一个指向[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要复制。
 
 ### <a name="return-value"></a>返回值
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>参数
 
-*pstrDest*  
+*pstrDest*<br/>
 指向将接收的内容的副本的 BSTR`CComVariant`对象。
 
 ### <a name="return-value"></a>返回值
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>参数
 
-*pDest*  
+*pDest*<br/>
 [out]返回对象的基础的变体值。
 
 ### <a name="return-value"></a>返回值
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>参数
 
-*varSrc*  
+*varSrc*<br/>
 [in]`CComVariant`或[变体](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要分配给`CComVariant`对象。 源变体的内容复制到目标而不进行转换。
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]要分配给的 BSTR`CComVariant`对象。 类型`CComVariant`对象将成为 VT_BSTR。
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in]要分配给字符串`CComVariant`对象。 可以将零终止宽 (Unicode) 字符字符串传递给 LPCOLESTR 版本的运算符或到 LPCSTR 版本为 ANSI 字符串。 在任一情况下，此字符串将转换为 Unicode 使用分配的 BSTR `SysAllocString`。 类型`CComVariant`对象将成为 VT_BSTR。
 
-*bSrc*  
+*bSrc*<br/>
 [in]**Bool**要分配给`CComVariant`对象。 **Bool**参数转换为 VARIANT_BOOL 再将其存储。 类型`CComVariant`对象都是 VT_BOOL。
 
-*nSrc*  
+*nSrc*<br/>
 [in]**Int**，字节**短**，**长**，LONGLONG、 ULONGLONG， **unsigned short**，**无符号长**，或**无符号的 int**要分配给`CComVariant`对象。 类型`CComVariant`对象将分别为 VT_I4、 VT_UI1、 VT_I2、 VT_I4、 为 VT_I8、 VT_UI8、 VT_UI2、 VT_UI4 或 VT_UI4。
 
-*fltSrc*  
+*fltSrc*<br/>
 [in]**Float**要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R4。
 
-*dblSrc*  
+*dblSrc*<br/>
 [in]**双**要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_R8。
 
-*cySrc*  
+*cySrc*<br/>
 [in]`CY`要分配给`CComVariant`对象。 类型`CComVariant`对象将成为 VT_CY。
 
-*pSrc*  
+*pSrc*<br/>
 [in]`IDispatch`或`IUnknown`指针分配给`CComVariant`对象。 `AddRef` 将接口指针上调用。 类型`CComVariant`对象将分别为 VT_DISPATCH 或 VT_UNKNOWN。
 
 或者，若要分配给的 SAFEARRAY 指针`CComVariant`对象。 SAFEARRAY 的副本存储在`CComVariant`对象。 类型`CComVariant`对象将是原始类型的 SAFEARRAY 和 VT_ARRAY 的组合。
 
-*cSrc*  
+*cSrc*<br/>
 [in]要分配给 char`CComVariant`对象。 类型`CComVariant`对象将成为 VT_I1。
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含数据的流接口。
 
 ### <a name="return-value"></a>返回值
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 变体，例如，BSTR，类型**int**，或**char**。
 
-*pT*  
+*pT*<br/>
 用于初始化的指针`CComVariant`对象。
 
 ### <a name="remarks"></a>备注
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)流上的接口。
 
 ### <a name="return-value"></a>返回值

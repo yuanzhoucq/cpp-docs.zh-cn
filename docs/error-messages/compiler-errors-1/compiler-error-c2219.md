@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2219 |Microsoft 文档
+title: 编译器错误 C2219 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9993cd89501ba6d25786b58edb73161a9151024f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0433a9c0fd8cb81dffdf5122ff5c5116d272bc67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048014"
 ---
 # <a name="compiler-error-c2219"></a>编译器错误 C2219
-语法错误： 必须晚于类型限定符 *  
-  
- 类型限定符 (`const`或`volatile`) 将显示未被允许。
+
+语法错误： 类型限定符必须是后 *
+
+类型限定符 (`const`或`volatile`) 将显示未被允许。

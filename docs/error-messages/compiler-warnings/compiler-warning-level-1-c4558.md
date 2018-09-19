@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4558 |Microsoft 文档
+title: 编译器警告 （等级 1） C4558 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852e3d3e8bb1c8186232cbed2636ac890b0cd057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 404f4a343b35081a64267424c436063c085958e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056646"
 ---
 # <a name="compiler-warning-level-1-c4558"></a>编译器警告（等级 1）C4558
-操作数 value 的值超出了范围下限的上限  
-  
- 传递给程序集语言指令的值超出了范围的参数指定。 值将被截断。  
-  
- 下面的示例生成 C4558:  
-  
-```  
-// C4558.cpp  
-// compile with: /W1  
-// processor: x86  
-void asm_test() {  
-   __asm pinsrw   mm1, eax, 8;   // C4558  
-}  
-  
-int main() {  
-}  
+
+操作数 value 的值不在范围内 lowerbound-upperbound
+
+传递给程序集语言指令的值不在范围内的参数指定。 该值将被截断。
+
+下面的示例生成 C4558:
+
+```
+// C4558.cpp
+// compile with: /W1
+// processor: x86
+void asm_test() {
+   __asm pinsrw   mm1, eax, 8;   // C4558
+}
+
+int main() {
+}
 ```

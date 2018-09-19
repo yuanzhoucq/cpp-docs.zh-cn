@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059090"
 ---
 # <a name="reduction"></a>reduction
 指定对每个线程都是私有的一个或多个变量来降低操作并行区域末尾的使用者。  
@@ -32,14 +32,13 @@ ms.locfileid: "42545732"
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `operation`  
- 要在变量上执行该操作的运算符 (`var`) 并行区域的末尾。  
+*操作*<br/>
+要在变量上执行该操作的运算符 (`var`) 并行区域的末尾。  
   
- `var`  
- 要对其执行标量降低的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。  
+*var*<br/>
+要对其执行标量降低的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。  
   
 ## <a name="remarks"></a>备注  
  `reduction` 适用于以下指令：  

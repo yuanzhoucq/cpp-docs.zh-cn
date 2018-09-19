@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2403 |Microsoft 文档
+title: 编译器错误 C2403 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed937f2b6d0ca15b1c16470c239484a4996b019
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99de310b70b351730f181f332fc9ce8d68b7d45a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041878"
 ---
 # <a name="compiler-error-c2403"></a>编译器错误 C2403
-“identifier”: 寄存器必须为“context”中的基/索引寄存器  
-  
- 间接存储操作数中使用的寄存器必须是此上下文中的基/索引寄存器。
+
+“identifier”: 寄存器必须为“context”中的基/索引寄存器
+
+间接存储操作数中使用的寄存器必须是此上下文中的基/索引寄存器。

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051004"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 类
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>参数
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObj*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>参数
 
-*纷纷采用*  
+*纷纷采用*<br/>
 [in]如果为 TRUE，将增加的锁计数;否则，将减少锁计数。
 
 ### <a name="return-value"></a>返回值
@@ -117,6 +117,6 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ## <a name="see-also"></a>请参阅
 
-[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [类概述](../../atl/atl-class-overview.md)

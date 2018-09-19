@@ -1,5 +1,5 @@
 ---
-title: 错误 C1121 |Microsoft 文档
+title: 错误 C1121 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129bde75de99e979edd2bb5c7f23acd4ddbdb12f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e46196bdf7b3fea7d5884c3805b7244b516271a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071869"
 ---
 # <a name="fatal-error-c1121"></a>错误 C1121
-调用 CryptoAPI 失败  
-  
- 编译器会生成与 CryptoAPI 的调用和调用失败。 重新安装 Visual Studio，并可能重新安装操作系统。
+
+调用 CryptoAPI 失败
+
+编译器进行 CryptoAPI 调用和调用失败。 重新安装 Visual Studio，并可能重新安装操作系统。

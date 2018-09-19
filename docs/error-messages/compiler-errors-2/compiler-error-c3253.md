@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3253 |Microsoft 文档
+title: 编译器错误 C3253 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e1452c3893d30fa3beea0e436da61355b902a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f47ff3ab9094e7926453ec4eb5964485cf16f945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065592"
 ---
 # <a name="compiler-error-c3253"></a>编译器错误 C3253
-function： 显式重写时出错  
-  
- 显式重写未正确指定。 例如，不能指定的替代，你还指定为纯的实现。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
-  
- 下面的示例生成 C3253:  
-  
-```  
-// C3253.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void a();  
-   void b();  
-   void c();  
-};  
-  
-public ref struct R : I {  
-   virtual void a() = 0, I::a {}   // C3253  
-   virtual void b() = I::a {}   // OK  
-   virtual void c() = 0;   // OK  
-};  
+
+function： 显式重写错误
+
+显式重写未正确指定。 例如，不能指定一个替代以指定为纯的实现。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。
+
+下面的示例生成 C3253:
+
+```
+// C3253.cpp
+// compile with: /clr
+public interface struct I {
+   void a();
+   void b();
+   void c();
+};
+
+public ref struct R : I {
+   virtual void a() = 0, I::a {}   // C3253
+   virtual void b() = I::a {}   // OK
+   virtual void c() = 0;   // OK
+};
 ```

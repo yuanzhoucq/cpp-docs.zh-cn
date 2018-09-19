@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4411 |Microsoft 文档
+title: 编译器警告 （等级 1） C4411 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2a826103bd7055a9655c75b82a58fcf53b1d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eff4520c86332b3d547568fd643debdcdb61bf45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060819"
 ---
 # <a name="compiler-warning-level-1-c4411"></a>编译器警告（等级 1）C4411
-identifier： 符号将解析为置换寄存器  
-  
- 标识符是将解析为置换寄存器并因此可以在与另一个符号操作数一起使用的本地符号。
+
+identifier： 符号解析为置换寄存器
+
+标识符是解析为置换寄存器，因此可能会与另一个符号的操作数上使用的本地符号。

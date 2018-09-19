@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2846 |Microsoft 文档
+title: 编译器错误 C2846 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b217e37cf1eb9ed94f6b0a1e2a3ec01d82731f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f062445aac010b5ba1ac34129590edf7b1f16932
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067366"
 ---
 # <a name="compiler-error-c2846"></a>编译器错误 C2846
-constructor： 接口不能有一个构造函数  
-  
- Visual c + +[接口](../../cpp/interface.md)不能有一个构造函数。  
-  
- 下面的示例生成 C2846:  
-  
-```  
-// C2846.cpp  
-// compile with: /c  
-__interface C {  
-   C();   // C2846 constructor not allowed in an interface  
-};  
+
+constructor： 接口不能具有构造函数
+
+Visual c + +[接口](../../cpp/interface.md)不能具有构造函数。
+
+下面的示例生成 C2846:
+
+```
+// C2846.cpp
+// compile with: /c
+__interface C {
+   C();   // C2846 constructor not allowed in an interface
+};
 ```

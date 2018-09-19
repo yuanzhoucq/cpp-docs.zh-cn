@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033948"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 类
 
@@ -38,13 +38,13 @@ ms.locfileid: "45703841"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>参数
 
-`T`  
+*T*<br/>
 要存储在 GIT 中的接口指针的类型。
 
 ## <a name="members"></a>成员
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 要添加到 GIT 的接口指针。
 
-*dwCookie*  
+*dwCookie*<br/>
 用于标识的接口指针的 cookie。
 
 ### <a name="return-value"></a>返回值
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pp*  
+*pp*<br/>
 它将接收接口指针。
 
 ### <a name="return-value"></a>返回值
@@ -262,7 +262,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 返回与关联的 cookie`CComGITPtr`对象。
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ HRESULT Revoke() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[自由线程封送处理程序](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[各个单元访问接口](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[何时使用全局接口表](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[自由线程封送处理程序](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[各个单元访问接口](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[何时使用全局接口表](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [类概述](../../atl/atl-class-overview.md)

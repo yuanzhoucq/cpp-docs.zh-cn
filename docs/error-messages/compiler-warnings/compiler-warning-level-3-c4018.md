@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4018 |Microsoft 文档
+title: 编译器警告 （等级 3） C4018 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eb784c8a368b5f5836deaff17d07542519ba980
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99ca94a47925a64c91077ad5b363e953def186b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041319"
 ---
 # <a name="compiler-warning-level-3-c4018"></a>编译器警告 （等级 3） C4018
-expression： 有符号/无符号不匹配  
-  
- 比较有符号和无符号数量要求编译器将有符号的值转换为无符号。  
-  
- 如果测试签名和未签名的类型时，会转换的两种类型之一，可能会修复此警告。  
-  
- 下面的示例生成 C4018:  
-  
-```  
-// C4018.cpp  
-// compile with: /W3  
-int main() {  
-   unsigned int uc = 0;  
-   int c = 0;  
-   unsigned int c2 = 0;  
-  
-   if (uc < c) uc = 0;   // C4018  
-  
-   // OK  
-   if (uc == c2) uc = 0;  
-}  
+
+expression： 有符号/无符号不匹配
+
+比较符号和无符号数字所需的编译器将有符号的值转换为无符号。
+
+如果要转换的两种类型一个测试签名和未签名的类型时，可能会修复此警告。
+
+下面的示例生成 C4018:
+
+```
+// C4018.cpp
+// compile with: /W3
+int main() {
+   unsigned int uc = 0;
+   int c = 0;
+   unsigned int c2 = 0;
+
+   if (uc < c) uc = 0;   // C4018
+
+   // OK
+   if (uc == c2) uc = 0;
+}
 ```

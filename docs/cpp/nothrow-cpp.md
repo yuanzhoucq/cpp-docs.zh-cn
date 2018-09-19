@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023522"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -30,8 +30,8 @@ ms.locfileid: "39408061"
 
 一个 **__declspec**扩展的特性，可以在函数的声明中使用。
 
-## <a name="syntax"></a>语法  
-  
+## <a name="syntax"></a>语法
+
 > *返回类型*__declspec （nothrow) [*调用约定*]*函数名称*([*自变量列表*])
 
 ## <a name="remarks"></a>备注
@@ -57,6 +57,7 @@ void __stdcall f3() throw();
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [__declspec](../cpp/declspec.md)  
- [noexcept](noexcept-cpp.md)  
- [关键字](../cpp/keywords-cpp.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

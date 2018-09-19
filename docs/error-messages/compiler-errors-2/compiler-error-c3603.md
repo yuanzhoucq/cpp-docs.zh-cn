@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3603 |Microsoft 文档
+title: 编译器错误 C3603 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec4b4b1df536a176fa05ea9095878ab5e1492cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67adc99491a15503ee5580df37a612eb73013686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075877"
 ---
 # <a name="compiler-error-c3603"></a>编译器错误 C3603
-Symbol： 类型 Type 尚不支持  
-  
- 你尝试使用托管对象的.NET 运行时尚不支持的数据类型。
+
+Symbol： 类型 Type 尚不支持
+
+你试图使用.NET 运行时中的托管对象尚不支持的数据类型。

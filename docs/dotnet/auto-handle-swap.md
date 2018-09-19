@@ -1,5 +1,5 @@
 ---
-title: auto_handle::swap |Microsoft 文档
+title: auto_handle::swap |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87a0a59197a7ebe22c5419e992f681787cd3ea7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103913"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018023"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
-交换对象与另一个`auto_handle`。  
+交换与另一个对象`auto_handle`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_right`  
- `auto_handle`可供换用对象。  
+*（_r)*<br/>
+`auto_handle`要与其交换对象。  
   
 ## <a name="example"></a>示例  
   

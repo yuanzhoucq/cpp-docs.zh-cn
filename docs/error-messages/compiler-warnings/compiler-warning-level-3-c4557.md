@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4557 |Microsoft 文档
+title: 编译器警告 （等级 3） C4557 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055273"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>编译器警告（等级 3）C4557
-“__assume”包含效果“effect”  
-  
- 传递给值[__assume](../../intrinsics/assume.md) statement2 已修改。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 下面的示例生成 C4557:  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+
+“__assume”包含效果“effect”
+
+传递给的值[__assume](../../intrinsics/assume.md)语句 2 已修改。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+下面的示例生成 C4557:
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

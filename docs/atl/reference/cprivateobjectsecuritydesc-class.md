@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029008"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>参数
 
-*pParent*  
+*pParent*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象，用于引用该对象的父容器。 如果没有父容器，此参数为 NULL。
 
-*对象类型*  
+*对象类型*<br/>
 指向`GUID`结构，它标识与当前对象相关联的对象的类型。 设置*ObjectType*到; 如果对象不具有一个 GUID 为 NULL。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 指定新的对象是否可以包含其他对象。 值为 true 指示新对象是一个容器。 如果值为 false 指示新的对象不是容器。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)结构，它指定从每个通用的权限对象的特定权限的映射。
 
 ### <a name="return-value"></a>返回值
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>参数
 
-*pParent*  
+*pParent*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象，用于引用在其中创建新的对象的父目录。 如果没有父目录，则设置为 NULL。
 
-*pCreator*  
+*pCreator*<br/>
 指向对象的创建者提供的安全描述符的指针。 如果该对象的创建者显式传递的新对象的安全信息，请设置此参数为 NULL。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 指定新的对象是否可以包含其他对象。 值为 true 指示新对象是一个容器。 如果值为 false 指示新的对象不是容器。
 
-*令牌*  
+*令牌*<br/>
 引用[CAccessToken](../../atl/reference/caccesstoken-class.md)以其名义创建对象的客户端进程的对象。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)结构，它指定从每个通用的权限对象的特定权限的映射。
 
-*对象类型*  
+*对象类型*<br/>
 指向`GUID`结构，它标识与当前对象相关联的对象的类型。 设置*ObjectType*到; 如果对象不具有一个 GUID 为 NULL。
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 指定新的对象是否可以包含其他对象。 值为 true 指示新对象是一个容器。 如果值为 false 指示新的对象不是容器。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>参数
 
-*si*  
+*si*<br/>
 一组位标志，用于指示要检索的安全描述符的部分。 此值可以为组成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位标志。
 
-*pResult*  
+*pResult*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象，它接收从指定的安全描述符的所需的信息的副本。
 
 ### <a name="return-value"></a>返回值
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `CPrivateObjectSecurityDesc`要分配给当前对象的对象。
 
 ### <a name="return-value"></a>返回值
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>参数
 
-*si*  
+*si*<br/>
 一组位标志，用于指示要设置的安全描述符的部分。 此值可以为组成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位标志。
 
-*修改*  
+*修改*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象。 指示此安全说明符的组成部分*si*参数应用于对象的安全描述符。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)结构，它指定从每个通用的权限对象的特定权限的映射。
 
-*令牌*  
+*令牌*<br/>
 引用[CAccessToken](../../atl/reference/caccesstoken-class.md)以其名义创建对象的客户端进程的对象。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -287,7 +287,7 @@ bool Set(
 
 ## <a name="see-also"></a>请参阅
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[类概述](../../atl/atl-class-overview.md)   
-[安全全局函数](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[安全全局函数](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc 类](../../atl/reference/csecuritydesc-class.md)

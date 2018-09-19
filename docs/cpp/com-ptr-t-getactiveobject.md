@@ -16,52 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0555b050770d5fbd411e1720282e3fb50769385b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b9f77a894c39fc907367e5d4f8c7a687cc703331
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056503"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
-**Microsoft 专用**  
-  
- 将附加到给定的对象的现有实例`CLSID`或`ProgID`。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HRESULT GetActiveObject(  
-   const CLSID& rclsid   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCWSTR clsidString   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCSTR clsidStringA   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>参数  
- *rclsid*  
- `CLSID`的对象。  
-  
- *clsidString*  
- 由 Unicode 字符串，包含`CLSID`(从"**{**") 或`ProgID`。  
-  
- *clsidStringA*  
- 使用 ANSI 代码页，包含的多字节字符串`CLSID`(从"**{**") 或`ProgID`。  
-  
-## <a name="remarks"></a>备注  
- 这些成员函数调用**GetActiveObject**来检索指向已向 OLE 注册的正在运行对象的指针，然后查询此智能指针的接口类型。 生成的指针随后将封装在此 `_com_ptr_t` 对象内。 `Release` 调用以减少前面封装指针的引用计数。 此例程将返回 HRESULT，指示成功或失败。  
-  
--   **GetActiveObject (**`rclsid`**)** 将附加到给定的对象的现有实例`CLSID`。  
-  
--   **GetActiveObject (**`clsidString`**)** 附加到给定的 Unicode 字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`.  
-  
--   **GetActiveObject (**`clsidStringA`**)** 附加到给定的多字节字符字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`. 调用[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_com_ptr_t 类](../cpp/com-ptr-t-class.md)
+
+**Microsoft 专用**
+
+将附加到给定的对象的现有实例`CLSID`或`ProgID`。
+
+## <a name="syntax"></a>语法
+
+```
+HRESULT GetActiveObject(
+   const CLSID& rclsid
+) throw( );
+HRESULT GetActiveObject(
+   LPCWSTR clsidString
+) throw( );
+HRESULT GetActiveObject(
+   LPCSTR clsidStringA
+) throw( );
+```
+
+#### <a name="parameters"></a>参数
+
+*rclsid*<br/>
+`CLSID`的对象。
+
+*clsidString*<br/>
+由 Unicode 字符串，包含`CLSID`(从"**{**") 或`ProgID`。
+
+*clsidStringA*<br/>
+使用 ANSI 代码页，包含的多字节字符串`CLSID`(从"**{**") 或`ProgID`。
+
+## <a name="remarks"></a>备注
+
+这些成员函数调用**GetActiveObject**来检索指向已向 OLE 注册的正在运行对象的指针，然后查询此智能指针的接口类型。 生成的指针随后将封装在此 `_com_ptr_t` 对象内。 `Release` 调用以减少前面封装指针的引用计数。 此例程将返回 HRESULT，指示成功或失败。
+
+- **GetActiveObject (**`rclsid`**)** 将附加到给定的对象的现有实例`CLSID`。
+
+- **GetActiveObject (**`clsidString`**)** 附加到给定的 Unicode 字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`.
+
+- **GetActiveObject (**`clsidStringA`**)** 附加到给定的多字节字符字符串，包含对象的现有实例`CLSID`(从"**{**") 或`ProgID`. 调用[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_com_ptr_t 类](../cpp/com-ptr-t-class.md)

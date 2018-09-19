@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2795 |Microsoft 文档
+title: 编译器错误 C2795 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2431319c6da69dcb144dbb47b4fbb0e01c1eaa78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 628aa2c0465018b635d015c56a0b38f69365bd88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060078"
 ---
 # <a name="compiler-error-c2795"></a>编译器错误 C2795
-super::function 不是成员函数  
-  
- 每当您尝试使用时，会出现此错误消息[super](../../cpp/super.md)访问成员函数之外的成员。
+
+super::function 不是成员函数
+
+每当您尝试使用时，会出现此错误信息[super](../../cpp/super.md)访问而不是成员函数的成员。

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3396 |Microsoft 文档
+title: 编译器错误 C3396 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bc75aec0cd4f92ebced316c76f95598802e4e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e96231cf72b144c58e925fb2f74a6be29e9030f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047442"
 ---
 # <a name="compiler-error-c3396"></a>编译器错误 C3396
-“attribute”: 未能在“namespace”中发现自定义特性  
-  
- C3396 指示你正在使用的不是最新的公共语言运行时。  重新安装 CLR 以解决问题。
+
+“attribute”: 未能在“namespace”中发现自定义特性
+
+C3396 指示你正在使用的不是最新的公共语言运行时。  重新安装 CLR 以解决问题。

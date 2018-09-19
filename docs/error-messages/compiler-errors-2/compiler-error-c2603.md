@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2603 |Microsoft 文档
+title: 编译器错误 C2603 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bde3e3fd3319b4c37adcffad4e95aa2544f9fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a893a77fb3760f00fb7fe7b5cb3ce5b3db3346e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057673"
 ---
-# <a name="compiler-error-c2603"></a>编译器错误 C2603  
-  
-> *函数*： 太多块静态对象的范围与函数中的构造函数/析构函数  
-  
-在 Visual Studio 2015 之前, 的 Visual c + + 编译器的版本时，或者当[/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)指定编译器选项，没有为 31 个你可以在外部可见的内联函数中的静态对象数限制.  
-  
-若要解决此问题，我们建议你采用较新版本的 Visual c + + 编译器工具集，或如果可能，请删除 /Zc:threadSafeInit-编译器选项。 如果这是不可能，请考虑将静态对象。 如果同一类型的对象，请考虑使用该类型的单个静态数组，并且引用所需的各个成员。
-  
-## <a name="example"></a>示例  
-  
-下面的代码生成 C2603，并演示修复此错误的一种方法：  
-  
-```cpp  
-// C2603.cpp  
+# <a name="compiler-error-c2603"></a>编译器错误 C2603
+
+> '*函数*： 太多块范围静态对象构造函数/析构函数在函数中使用
+
+在 Visual Studio 2015 之前, 的 Visual c + + 编译器的版本时，或者当[/zc: threadsafeinit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)编译器选项指定，则为 31 个可以在外部可见的内联函数中的静态对象的数量限制.
+
+若要解决此问题，我们建议你采用较新版本的 Visual c + + 编译器工具集，或如果可能，删除 /zc: threadsafeinit-编译器选项。 如果这是不可能，请考虑将静态对象。 如果相同类型的对象，请考虑使用该类型的单个静态数组并引用所需的各个成员。
+
+## <a name="example"></a>示例
+
+下面的代码生成 C2603，并演示一种方法修复此错误：
+
+```cpp
+// C2603.cpp
 // Compile by using: cl /W4 /c /Zc:threadSafeInit- C2603.cpp
-struct C { C() {} };  
-extern inline void f1() {  
+struct C { C() {} };
+extern inline void f1() {
     static C C01, C02, C03, C04, C05, C06, C07, C08, C09, C10;
     static C C11, C12, C13, C14, C15, C16, C17, C18, C19, C20;
-    static C C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31;  
-    static C C32;   // C2603 Comment this line out to avoid error  
-}  
+    static C C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31;
+    static C C32;   // C2603 Comment this line out to avoid error
+}
 ```

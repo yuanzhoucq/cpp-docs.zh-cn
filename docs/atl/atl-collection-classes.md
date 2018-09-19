@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c40303e0353e9f7ef3740e55381306507878b72b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18369de567c830973bef26d886d5a2048bb0109f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048911"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合类
 
@@ -136,6 +136,6 @@ CTraits 类的列表，请参阅[集合类](../atl/collection-classes.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[概念](../atl/active-template-library-atl-concepts.md)   
+[概念](../atl/active-template-library-atl-concepts.md)<br/>
 [集合类](../atl/collection-classes.md)
 

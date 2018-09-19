@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2808 |Microsoft 文档
+title: 编译器错误 C2808 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 357dda3a6726fce3055f0d1eb2192ac4d135e8bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4d256fd07f717137f6afe890884f3c1f54944ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055918"
 ---
 # <a name="compiler-error-c2808"></a>编译器错误 C2808
-一元运算符 operator 具有过多的正式参数  
-  
- 一元运算符有非 void 参数列表。  
-  
- 下面的示例生成 C2808:  
-  
-```  
-// C2808.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator! ( X );   // C2808 nonvoid parameter list  
-   X operator! ( void );   // OK  
-};  
-  
+
+一元 operator operator 具有形参太多
+
+一元运算符具有非 void 参数列表。
+
+下面的示例生成 C2808:
+
+```
+// C2808.cpp
+// compile with: /c
+class X {
+public:
+   X operator! ( X );   // C2808 nonvoid parameter list
+   X operator! ( void );   // OK
+};
+
 ```

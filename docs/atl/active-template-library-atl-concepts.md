@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb07807934dcc5c665f0058ef869f62f0b2d3ea
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 554fddbb778a19555fc7342f08eaac2e5642d815
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019440"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 
@@ -29,86 +29,86 @@ ms.locfileid: "43755419"
 
 ## <a name="in-this-section"></a>本节内容
 
-[ATL 教程](../atl/active-template-library-atl-tutorial.md)  
+[ATL 教程](../atl/active-template-library-atl-tutorial.md)<br/>
 将引导你完成创建控件，并演示过程中的某些 ATL 基础知识。
 
-[COM 和 ATL 介绍](../atl/introduction-to-com-and-atl.md)  
+[COM 和 ATL 介绍](../atl/introduction-to-com-and-atl.md)<br/>
 介绍主要概念背后组件对象模型 (COM)。 本文还简要介绍什么是 ATL 以及何时应使用它。
 
-[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)  
+[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)<br/>
 讨论各种 ATL 类和如何实现这些类之间的关系。
 
-[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)  
+[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)<br/>
 介绍了双重接口从 ATL 的角度。
 
-[ATL 集合和枚举数](../atl/atl-collections-and-enumerators.md)  
+[ATL 集合和枚举数](../atl/atl-collections-and-enumerators.md)<br/>
 介绍了实现和创建集合和枚举器在 atl。
 
-[复合控件基础知识](../atl/atl-composite-control-fundamentals.md)  
+[复合控件基础知识](../atl/atl-composite-control-fundamentals.md)<br/>
 提供用于创建复合控件的分步说明。 复合控件是一种可以包含其他 ActiveX 控件或 Windows 控件的 ActiveX 控件。
 
-[ATL 控件包含常见问题解答](../atl/atl-control-containment-faq.md)  
+[ATL 控件包含常见问题解答](../atl/atl-control-containment-faq.md)<br/>
 介绍了与托管 atl。 与控件相关的基本问题。
 
-[ATL COM 属性页](../atl/atl-com-property-pages.md)  
+[ATL COM 属性页](../atl/atl-com-property-pages.md)<br/>
 演示如何指定和实现 COM 属性页。
 
-[ATL 支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)  
+[ATL 支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)<br/>
 提供用于创建 DHTML 控件的分步说明。
 
-[ATL 连接点](../atl/atl-connection-points.md)  
+[ATL 连接点](../atl/atl-connection-points.md)<br/>
 介绍连接点是什么以及如何 ATL 实现它们。
 
-[事件处理和 ATL](../atl/event-handling-and-atl.md)  
+[事件处理和 ATL](../atl/event-handling-and-atl.md)<br/>
 介绍需要执行来处理使用 ATL 的 COM 事件的步骤[IDispEventImpl](../atl/reference/idispeventimpl-class.md)并[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)类。
 
-[ATL 和自由线程封送拆收器](../atl/atl-and-the-free-threaded-marshaler.md)  
+[ATL 和自由线程封送拆收器](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
 提供允许您的类聚合自由线程封送处理程序 (FTM) 的 ATL 简单对象向导的选项的详细信息。
 
-[指定项目的线程模型](../atl/specifying-the-threading-model-for-a-project-atl.md)  
+[指定项目的线程模型](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
 介绍可用于控制运行时性能与您的项目中的线程处理相关的宏。
 
-[ATL Module 类](../atl/atl-module-classes.md)  
+[ATL Module 类](../atl/atl-module-classes.md)<br/>
 ATL 7.0 讨论新的模块类。 Module 类实现的基本功能所需的 atl。
 
-[ATL 服务](../atl/atl-services.md)  
+[ATL 服务](../atl/atl-services.md)<br/>
 介绍如何实现服务时所发生事件的序列。 此外讨论一些与开发服务相关的概念。
 
-[ATL 窗口类](../atl/atl-window-classes.md)  
+[ATL 窗口类](../atl/atl-window-classes.md)<br/>
 介绍如何创建、 超类，子类中和窗口 atl。 ATL 窗口类不是 COM 类。
 
-[ATL 集合类](../atl/atl-collection-classes.md)  
+[ATL 集合类](../atl/atl-collection-classes.md)<br/>
 介绍如何使用数组和映射在 atl。
 
-[ATL 注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)  
+[ATL 注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)<br/>
 讨论 ATL 脚本语法和可替换参数。 它还介绍了如何设置到注册机构的静态链接。
 
-[使用 ATL 和 C 运行时代码进行编程](../atl/programming-with-atl-and-c-run-time-code.md)  
+[使用 ATL 和 C 运行时代码进行编程](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 讨论将静态或动态链接到 C 运行时库 (CRT) 的优势。
 
-[使用 ccombstr 进行编程](../atl/programming-with-ccombstr-atl.md)  
+[使用 ccombstr 进行编程](../atl/programming-with-ccombstr-atl.md)<br/>
 讨论当使用编程时，需要注意的几种情况下`CComBSTR`。
 
-[编码引用](../atl/atl-encoding-reference.md)  
+[编码引用](../atl/atl-encoding-reference.md)<br/>
 提供函数和支持编码和中的一系列常见的 Internet 标准，如 uuencode，十六进制，UTF8 中保留的宏。
 
-[实用程序引用](../atl/atl-utilities-reference.md)  
+[实用程序引用](../atl/atl-utilities-reference.md)<br/>
 提供有关操作的窗体中的路径和 Url 的代码[CPathT](../atl/reference/cpatht-class.md)并[CUrl](../atl/reference/curl-class.md)。 线程池[CThreadPool](../atl/reference/cthreadpool-class.md)，可以在自己的应用程序中使用。 可以在 atlpath.h 和 atlutil.h 中找到此代码。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATL 示例](../visual-cpp-samples.md)  
+[ATL 示例](../visual-cpp-samples.md)<br/>
 提供的说明以及指向 ATL 示例程序。
 
-[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)  
+[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)<br/>
 包含 ATL 项目向导的信息。
 
-[ATL 控件向导](../atl/reference/atl-control-wizard.md)  
+[ATL 控件向导](../atl/reference/atl-control-wizard.md)<br/>
 讨论如何添加类。
 
-[特性化的编程](../windows/attributed-programming-concepts.md)  
+[特性化的编程](../windows/attributed-programming-concepts.md)<br/>
 提供使用属性来简化 COM 编程加上的其他详细主题的链接列表上的概述。
 
-[ATL 类概述](../atl/atl-class-overview.md)  
+[ATL 类概述](../atl/atl-class-overview.md)<br/>
 提供的参考信息以及指向 ATL 类。
 

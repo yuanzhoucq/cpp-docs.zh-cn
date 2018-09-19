@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019460"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752810"
 
 ## <a name="syntax"></a>语法
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>参数
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 通知代码。
 
-*wID*  
+*wID*<br/>
 菜单项、 控件或加速器的标识符。
 
-*hWndCtl*  
+*hWndCtl*<br/>
 窗口控件的句柄。
 
-*bHandled*  
+*bHandled*<br/>
 消息映射集*bHandled*为 TRUE，然后才能`CommandHandler`调用。 如果`CommandHandler`不完全处理该消息，应设置*bHandled*为 FALSE 以指示该消息需要进一步处理。
 
 ## <a name="return-value"></a>返回值
@@ -61,7 +61,7 @@ LRESULT CommandHandler(
 
 ## <a name="see-also"></a>请参阅
 
-[实现窗口](../atl/implementing-a-window.md)   
-[消息映射](../atl/message-maps-atl.md)   
+[实现窗口](../atl/implementing-a-window.md)<br/>
+[消息映射](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

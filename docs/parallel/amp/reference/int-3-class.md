@@ -1,5 +1,5 @@
 ---
-title: int_3 类 |Microsoft 文档
+title: int_3 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26add4a57fac2cb2dfed2a5bd32f2fe0a477e938
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042580"
 ---
 # <a name="int3-class"></a>int_3 类
 表示三个整数的短矢量。  
@@ -110,7 +110,7 @@ class int_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[int_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[int_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -175,7 +175,7 @@ class int_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
   
@@ -224,7 +224,7 @@ class int_3;
 
 ## <a name="ctor"></a> int_3 
 
-默认构造函数，将初始化为 0 的所有元素。  
+默认构造函数，初始化 0 的所有元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -259,20 +259,20 @@ explicit inline int_3(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ## <a name="size"></a> 大小 
 

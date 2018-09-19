@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030139"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在数组中的数据类型。
 
 ## <a name="members"></a>成员
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*psaSrc*  
+*psaSrc*<br/>
 一个指向`SAFEARRAY`对象。
 
-*ulCount*  
+*ulCount*<br/>
 要添加到数组的对象数。
 
-*pT*  
+*pT*<br/>
 指向要添加到数组的一个或多个对象的指针。
 
-*t*  
+*t*<br/>
 对要添加到数组的对象的引用。
 
-*bCopy*  
+*bCopy*<br/>
 指示是否应创建数据的副本。 默认值为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>参数
 
-*psaSrc*  
+*psaSrc*<br/>
 一个指向`SAFEARRAY`结构。
 
 ### <a name="return-value"></a>返回值
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>参数
 
-*绑定*  
+*绑定*<br/>
 `SAFEARRAYBOUND` 结构。
 
-*ulCount*  
+*ulCount*<br/>
 数组中的元素数。
 
-*lLBound*  
+*lLBound*<br/>
 下限值，则为即，数组中的第一个元素的索引。
 
-*pBound*  
+*pBound*<br/>
 一个指向`SAFEARRAYBOUND`结构。
 
-*uDims*  
+*uDims*<br/>
 数组中的维度数。
 
-*saSrc*  
+*saSrc*<br/>
 对引用`SAFEARRAY`结构或`CComSafeArray`对象。 在任一情况下构造函数使用此引用来使数组的副本，以便完成构造后所未引用的数组。
 
-*psaSrc*  
+*psaSrc*<br/>
 一个指向`SAFEARRAY`结构。 构造函数使用此地址来使数组的副本，以便完成构造后所未引用的数组。
 
 ### <a name="remarks"></a>备注
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>参数
 
-*ppArray*  
+*ppArray*<br/>
 指向`SAFEARRAY`复制。
 
 ### <a name="return-value"></a>返回值
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>参数
 
-*ppArray*  
+*ppArray*<br/>
 指向要在其中创建新的位置的指针`SAFEARRAY`。
 
 ### <a name="return-value"></a>返回值
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>参数
 
-*pBound*  
+*pBound*<br/>
 一个指向`SAFEARRAYBOUND`对象。
 
-*uDims*  
+*uDims*<br/>
 数组中的维度数。
 
-*ulCount*  
+*ulCount*<br/>
 数组中的元素数。
 
-*lLBound*  
+*lLBound*<br/>
 下限值，则为即，数组中的第一个元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*索引*  
+*索引*<br/>
 要返回的数组中的值的索引号。
 
 ### <a name="return-value"></a>返回值
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*uDim*  
+*uDim*<br/>
 数组维度中。
 
 ### <a name="return-value"></a>返回值
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*uDim*  
+*uDim*<br/>
 要为其获取下限数组维度。 如果省略，默认值为 0。
 
 ### <a name="return-value"></a>返回值
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*uDim*  
+*uDim*<br/>
 要为其获取上限数组维度。 如果省略，默认值为 0。
 
 ### <a name="return-value"></a>返回值
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>参数
 
-*alIndex*  
+*alIndex*<br/>
 指向数组中每个维度的索引的向量。 最左侧 （最不重要） 的维度是`alIndex[0]`。
 
-*t*  
+*t*<br/>
 对返回的数据的引用。
 
 ### <a name="return-value"></a>返回值
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>参数
 
-*alIndex*  
+*alIndex*<br/>
 指向数组中每个维度的索引的向量。 最右边 （最不重要） 的维度是`alIndex`[0]。
 
-*T*  
+*T*<br/>
 指定新元素的值。
 
 ### <a name="return-value"></a>返回值
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>参数
 
-*索引 nIndex*  
+*索引 nIndex*<br/>
 数组中所需元素的索引号。
 
 ### <a name="return-value"></a>返回值
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>参数
 
-*saSrc*  
+*saSrc*<br/>
 对 `CComSafeArray` 对象的引用。
 
-*psaSrc*  
+*psaSrc*<br/>
 一个指向`SAFEARRAY`对象。
 
 ### <a name="return-value"></a>返回值
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>参数
 
-*pBound*  
+*pBound*<br/>
 一个指向`SAFEARRAYBOUND`结构，其中包含的元素数以及数组的下限的信息。
 
-*ulCount*  
+*ulCount*<br/>
 请求的已调整大小的数组中的对象数。
 
-*lLBound*  
+*lLBound*<br/>
 下限。
 
 ### <a name="return-value"></a>返回值
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>参数
 
-*索引*  
+*索引*<br/>
 若要设置的数组元素的索引号。
 
-*t*  
+*t*<br/>
 指定元素的新值。
 
-*bCopy*  
+*bCopy*<br/>
 指示是否应创建数据的副本。 默认值为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -672,7 +672,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>请参阅
 
-[SAFEARRAY 数据类型](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[Ccomsafearray:: Create](#create)   
-[Ccomsafearray:: Destroy](#destroy)   
+[SAFEARRAY 数据类型](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [类概述](../../atl/atl-class-overview.md)

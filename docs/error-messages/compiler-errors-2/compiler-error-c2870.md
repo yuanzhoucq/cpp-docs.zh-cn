@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2870 |Microsoft 文档
+title: 编译器错误 C2870 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fe9f47a96422493d6d731a18add8c23ff683f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47101cbc2fb1be48ba54166b9c6ef99fc0c6c35e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073871"
 ---
 # <a name="compiler-error-c2870"></a>编译器错误 C2870
-name： 命名空间定义必须出现在文件范围内或在另一个命名空间定义立即  
-  
- 定义命名空间`name`不正确。 必须在文件范围内 （之外所有块和类） 定义命名空间或立即在另一个命名空间中。  
-  
- 下面的示例生成 C2870:  
-  
-```  
-// C2870.cpp  
-// compile with: /c  
-int main() {  
-   namespace A { int i; };   // C2870  
-}  
+
+name： 命名空间定义必须出现在文件范围内或在另一个命名空间定义立即出现
+
+定义命名空间`name`不正确。 必须在文件范围内 （之外的所有块和类） 定义的命名空间或立即在另一个命名空间内。
+
+下面的示例生成 C2870:
+
+```
+// C2870.cpp
+// compile with: /c
+int main() {
+   namespace A { int i; };   // C2870
+}
 ```

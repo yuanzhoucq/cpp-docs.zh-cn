@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2405 |Microsoft 文档
+title: 编译器错误 C2405 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e864d4e85b3422431cdf14dabd7083fafe04c04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f4993b32839fbd1dcdb18522021da685b865ed8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058375"
 ---
 # <a name="compiler-error-c2405"></a>编译器错误 C2405
-与偏移量的非法短前向引用  
-  
- 短的前向引用必须引用仅的标签。 无法使用附加的偏移量。
+
+与偏移量的非法短前向引用
+
+短前向引用必须引用仅一个标签。 不能使用其他的偏移量。

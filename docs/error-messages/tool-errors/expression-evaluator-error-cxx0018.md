@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0018 |Microsoft 文档
+title: 表达式计算器错误 CXX0018 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fbc4f2a4df7233b13579cb1dd4f9fa9679eb4e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d5bd4808d1e03252e5b3df4cee2955bb6a456d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051095"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>表达式计算器错误 CXX0018
-错误的寄存器名  
-  
- 指定的注册不存在或无法显示。  
-  
- 监视窗口可以显示的以下寄存器：  
-  
- AX SP DS IP  
-  
- BX BP ES FL  
-  
- CX SI SS GS  
-  
- DX DI CS SS  
-  
- EAX ESP DS EIP  
-  
- EBX EBP ES 推崇  
-  
- ECX ESI FS  
-  
- EDX EDI CS  
-  
- 此错误是与 CAN0018 相同。
+
+错误的寄存器名
+
+指定的注册不存在或无法显示。
+
+监视窗口可以显示以下寄存器：
+
+AX SP DS IP
+
+BX BP ES FL
+
+CX SI SS GS
+
+DX DI CS SS
+
+EAX ESP DS EIP
+
+EBX EBP ES 推崇
+
+ECX ESI FS
+
+EDX EDI CS
+
+此错误是与 CAN0018 相同。

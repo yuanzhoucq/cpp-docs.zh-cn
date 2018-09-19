@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RW1016 |Microsoft 文档
+title: 资源编译器错误 RW1016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff607f6b9e4b1bf74ff1c82c513737f0e20bba6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a2e2ac26b15529b86dc0e209b361feec6bf3d4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046103"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>资源编译器错误 RW1016
-预处理器错误后终止的 RC  
-  
- 资源编译器因其他错误而中止。 修复其他错误并重新编译。
+
+预处理器错误后终止 RC
+
+资源编译器受其他错误而被终止。 修复其他错误并重新编译。

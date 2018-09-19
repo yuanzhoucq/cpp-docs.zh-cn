@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2528 |Microsoft 文档
+title: 编译器错误 C2528 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072597"
 ---
 # <a name="compiler-error-c2528"></a>编译器错误 C2528
-name： 指针引用是非法的  
-  
- 不能声明为引用的指针。 在声明指向它的指针之前取消引用该变量。  
-  
- 下面的示例生成 C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+
+name： 指向引用的指针是非法的
+
+不能声明为引用的指针。 声明一个指针指向它之前取消引用该变量。
+
+下面的示例生成 C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2130 |Microsoft 文档
+title: 编译器错误 C2130 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4484d183def04f764ae75faaa503449e7bdf9984
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 954930522651fcee6c29bf019f366e056fe681ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071518"
 ---
 # <a name="compiler-error-c2130"></a>编译器错误 C2130
-\#行应包含文件名，却找到 token 的字符串  
-  
- 在 [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` 后面的可选文件名标记必须是字符串。  
-  
- 以下示例生成 C2130:  
-  
-```  
-// C2130.cpp  
-int main() {  
-   #line 1000 test   // C2130  
-   #line 1000 "test"   // OK  
-}  
+
+\#行应为包含文件名，却找到 token 字符串
+
+在 [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` 后面的可选文件名标记必须是字符串。
+
+以下示例生成 C2130:
+
+```
+// C2130.cpp
+int main() {
+   #line 1000 test   // C2130
+   #line 1000 "test"   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2766 |Microsoft 文档
+title: 编译器错误 C2766 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cd83bc18e30fb9b183e27597b1c5902f734c88a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee59a8ebc0de3c539d1c9b775dcf06525b1a77fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051524"
 ---
 # <a name="compiler-error-c2766"></a>编译器错误 C2766
-显式专用化;specialization 已定义  
-  
- 不允许重复的显式专用化。 有关详细信息，请参阅[函数模板的显式专用化](../../cpp/explicit-specialization-of-function-templates.md)。  
-  
- 下面的示例生成 C2766:  
-  
-```  
-// C2766.cpp  
-// compile with: /c  
-template<class T>   
-struct A {};  
-  
-template<>   
-struct A<int> {};  
-  
-template<>   
-struct A<int> {};   // C2766  
-// try the following line instead  
-// struct A<char> {};  
+
+显式专用化;specialization 已定义
+
+不允许重复的显式专用化。 有关详细信息，请参阅[函数模板的显式专用化](../../cpp/explicit-specialization-of-function-templates.md)。
+
+下面的示例生成 C2766:
+
+```
+// C2766.cpp
+// compile with: /c
+template<class T>
+struct A {};
+
+template<>
+struct A<int> {};
+
+template<>
+struct A<int> {};   // C2766
+// try the following line instead
+// struct A<char> {};
 ```

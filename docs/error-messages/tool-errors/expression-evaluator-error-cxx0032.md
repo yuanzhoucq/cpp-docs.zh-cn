@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0032 |Microsoft 文档
+title: 表达式计算器错误 CXX0032 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1df20ab022df9ce1321c2f6de77bf7591fec3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a320fb08eaf19b5ed53000ffecd17d747e7a3000
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019700"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>表达式计算器错误 CXX0032
-被 0 除  
-  
- 该表达式包含除数为零，这是非法。 此除数可能文本数字零，或者它可能是表达式计算结果为零。  
-  
- 此错误是与 CAN0032 相同。
+
+被 0 除
+
+表达式包含为零，这是非法的除数。 此除数可以是数字 0，也可能是一个表达式，计算结果为零。
+
+此错误是与 CAN0032 相同。

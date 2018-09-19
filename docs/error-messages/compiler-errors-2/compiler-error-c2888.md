@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2888 |Microsoft 文档
+title: 编译器错误 C2888 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d083ba049558c08c6070d13d0d7a61ad319add0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a80f99eb4fcf888462d1356d60cb4b22af0d0f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023119"
 ---
 # <a name="compiler-error-c2888"></a>编译器错误 C2888
-identifier： 无法在命名空间 namespace 中定义符号  
-  
- 必须包含 A.的命名空间中定义属于命名空间符号  
-  
- 下面的示例生成 C2888:  
-  
-```  
-// C2888.cpp  
-// compile with: /c  
-namespace M {  
-   namespace N {  
-      void f1();  
-      void f2();  
-   }  
-  
-   void N::f1() {}   // OK: namspace M encloses N  
-}  
-  
-namespace O {  
-   void M::N::f2() {}   // C2888 namespace O does not enclose M  
-}  
+
+identifier： 不能在命名空间 namespace 中定义符号
+
+必须包含 A.命名空间中定义属于命名空间的符号
+
+下面的示例生成 C2888:
+
+```
+// C2888.cpp
+// compile with: /c
+namespace M {
+   namespace N {
+      void f1();
+      void f2();
+   }
+
+   void N::f1() {}   // OK: namspace M encloses N
+}
+
+namespace O {
+   void M::N::f2() {}   // C2888 namespace O does not enclose M
+}
 ```

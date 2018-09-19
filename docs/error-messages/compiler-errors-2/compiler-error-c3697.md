@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3697 |Microsoft 文档
+title: 编译器错误 C3697 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4689365859ec121c716e5fb060d2985647bba30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cb5755cc737c0cc5524cb6abd980b70d08b6cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050653"
 ---
 # <a name="compiler-error-c3697"></a>编译器错误 C3697
-限定符： 不能使用此限定符 ^  
-  
- 跟踪句柄 (^) 已应用于它未设计为其的限定符。  
-  
- 下面的示例生成 C3697:  
-  
-```  
-// C3697.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String ^__restrict s;   // C3697  
-   String ^ s2;   // OK  
-}  
+
+限定符： 不能使用此限定符 ^
+
+跟踪句柄 (^) 应用于为其不针对的限定符。
+
+下面的示例生成 C3697:
+
+```
+// C3697.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String ^__restrict s;   // C3697
+   String ^ s2;   // OK
+}
 ```

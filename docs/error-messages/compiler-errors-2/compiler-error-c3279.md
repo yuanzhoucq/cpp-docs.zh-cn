@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3279 |Microsoft 文档
+title: 编译器错误 C3279 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a86f3dd637f84901559c4be8443a81425347237
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89c537da9bcf91e7774353cc1516a4c44e28649c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056763"
 ---
 # <a name="compiler-error-c3279"></a>编译器错误 C3279
-不允许对在 cli 命名空间中声明的类模板进行部分专用化、显式专用化和显式实例化  
-  
- `cli` 命名空间由 Microsoft 定义并包含伪模板。 Visual C++ 编译器不允许对此命名空间中的类模板进行用户定义专用化、部分专用化、显式专用化和显式实例化。  
-  
- 以下示例生成 C3279：  
-  
-```  
-// C3279.cpp  
-// compile with: /clr  
-namespace cli {  
-   template <> ref class array<int> {};   // C3279  
-   template <typename T> ref class array<T, 2> {};   // C3279  
-}  
+
+不允许对在 cli 命名空间中声明的类模板进行部分专用化、显式专用化和显式实例化
+
+`cli` 命名空间由 Microsoft 定义并包含伪模板。 Visual C++ 编译器不允许对此命名空间中的类模板进行用户定义专用化、部分专用化、显式专用化和显式实例化。
+
+以下示例生成 C3279：
+
+```
+// C3279.cpp
+// compile with: /clr
+namespace cli {
+   template <> ref class array<int> {};   // C3279
+   template <typename T> ref class array<T, 2> {};   // C3279
+}
 ```

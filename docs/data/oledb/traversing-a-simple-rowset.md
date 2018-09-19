@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028631"
 ---
 # <a name="traversing-a-simple-rowset"></a>遍历简单行集合
+
 下面的示例演示不涉及命令的快速而简便的数据库访问。 以下使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码会创建[CTable](../../data/oledb/ctable-class.md)取值函数的表对象基于用户记录类`CArtists`。 打开的连接、 打开该连接上的会话，并在会话中打开表。  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 用户记录`CArtists`，如下所示：  
+用户记录`CArtists`，如下所示：  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037354"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>参数
 
-*hInstance*  
+*hInstance*<br/>
 [in]标识其可执行文件包含对话框模板的模块的实例。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]标识拥有对话框的窗口。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
 ### <a name="return-value"></a>返回值
@@ -100,9 +100,9 @@ ATLAPI_(int) AtlAxDialogBox(
 
 若要使用`AtlAxDialogBox`与包含 ActiveX 控件的对话框模板，请指定有效的 CLSID、 应用程序标识或 URL 作为字符串*文本*字段**控制**对话框资源的部分以及"AtlAxWin80"作为*类名*字段下的同一部分。 以下内容演示的哪些是有效**控制**部分可能如下所示：
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](/windows/desktop/menurc/common-control-parameters)在 Windows SDK *: SDK Tools*。
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>参数
 
-*hInstance*  
+*hInstance*<br/>
 [in]标识其可执行文件包含对话框模板的模块的实例。
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in]标识对话框模板。 此参数是指向一个以 null 结尾的字符字符串，指定的对话框模板的名称的指针或整数值，该值指定对话框模板的资源标识符。 如果参数指定资源标识符，其高序位字必须为零，其低序位字必须包含标识符。 可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)宏来创建此值。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]标识拥有对话框的窗口。
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in]指向对话框过程。 有关对话框过程的详细信息，请参阅[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
 ### <a name="return-value"></a>返回值
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要传递给控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -179,13 +179,13 @@ ATLAPI AtlAxCreateControl(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。
 
-*hWnd*  
+*hWnd*<br/>
 [in]控件将附加到窗口句柄。
 
-*pStream*  
+*pStream*<br/>
 [in]指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要传递给控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -231,22 +231,22 @@ ATLAPI AtlAxCreateControlEx(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。
 
-*hWnd*  
+*hWnd*<br/>
 [in]控件将附加到窗口句柄。
 
-*pStream*  
+*pStream*<br/>
 [in]指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]将接收的指针的地址`IUnknown`的创建的控件。 可以为 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 包含的对象上的传出接口的接口标识符。
 
-*punkSink*  
+*punkSink*<br/>
 一个指向`IUnknown`接收器对象连接到由指定的连接点的接口*iidSink*上包含的对象后已成功创建包含的对象。
 
 ### <a name="return-value"></a>返回值
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要传递给控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -290,16 +290,16 @@ ATLAPI AtlAxCreateControlLic(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。
 
-*hWnd*  
+*hWnd*<br/>
 控件将附加到窗口句柄。
 
-*pStream*  
+*pStream*<br/>
 指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
-*bstrLic*  
+*bstrLic*<br/>
 包含控件的许可证 BSTR。
 
 ### <a name="return-value"></a>返回值
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要传递给控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -344,25 +344,25 @@ ATLAPI AtlAxCreateControlLicEx(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。
 
-*hWnd*  
+*hWnd*<br/>
 控件将附加到窗口句柄。
 
-*pStream*  
+*pStream*<br/>
 指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]将接收的指针的地址`IUnknown`的创建的控件。 可以为 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 包含的对象上的传出接口的接口标识符。
 
-*punkSink*  
+*punkSink*<br/>
 一个指向`IUnknown`接收器对象连接到由指定的连接点的接口*iidSink*上包含的对象后已成功创建包含的对象。
 
-*bstrLic*  
+*bstrLic*<br/>
 包含控件的许可证 BSTR。
 
 ### <a name="return-value"></a>返回值
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>参数
 
-*pControl*  
+*pControl*<br/>
 [in]一个指向`IUnknown`的控件。
 
-*hWnd*  
+*hWnd*<br/>
 [in]将承载控件的窗口的句柄。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]指针到指向`IUnknown`的容器对象。
 
 ### <a name="return-value"></a>返回值
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 [in]托管控件的窗口句柄。
 
-*pp*  
+*pp*<br/>
 [out]`IUnknown`的控件的容器。
 
 ### <a name="return-value"></a>返回值
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 [in]托管控件的窗口句柄。
 
-*pp*  
+*pp*<br/>
 [out]`IUnknown`正在承载的控件。
 
 ### <a name="return-value"></a>返回值
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>参数
 
-*punkChild*  
+*punkChild*<br/>
 [in]一个指向`IUnknown`子接口。
 
-*punkParent*  
+*punkParent*<br/>
 [in]一个指向`IUnknown`父级的接口。
 
 ### <a name="return-value"></a>返回值
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>参数
 
-*punkObj*  
+*punkObj*<br/>
 [in]指向为其返回信息的对象的指针。
 
-*plibid*  
+*plibid*<br/>
 [out]一个指向包含源接口的定义的类型库的 LIBID。
 
-*piid*  
+*piid*<br/>
 [out]指向对象的默认源接口的接口 ID 的指针。
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out]指向包含源接口的定义的类型库的主版本号的指针。
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out]指向包含源接口的定义的类型库的次版本号的指针。
 
 ### <a name="return-value"></a>返回值
@@ -553,5 +553,5 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ## <a name="see-also"></a>请参阅
 
-[函数](../../atl/reference/atl-functions.md)   
+[函数](../../atl/reference/atl-functions.md)<br/>
 [复合控件宏](../../atl/reference/composite-control-macros.md)

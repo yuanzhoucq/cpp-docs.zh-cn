@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2168 |Microsoft 文档
+title: 编译器错误 C2168 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313a07ba10275f4e9abed9442e3a8a82995d9577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06cb491974d6a13e5690401092222f0832313018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066125"
 ---
 # <a name="compiler-error-c2168"></a>编译器错误 C2168
-“function”：内部函数的实参太少  
-  
- 对 `intrinsic` 函数的引用具有的参数过少。
+
+“function”：内部函数的实参太少
+
+对 `intrinsic` 函数的引用具有的参数过少。

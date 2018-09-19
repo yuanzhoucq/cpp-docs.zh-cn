@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078512"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
+
 更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含记录集备份临时过程的当前记录的编辑缓冲区`AddNew`或`Edit`。 期间`Delete`事务内不备份操作，当前记录。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
   
 > [!NOTE]
 >  如果已实现批量行提取，则不能调用`AddNew`， `Edit`，或`Delete`。 而是必须编写您自己的函数来执行与数据源的更新。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 在事务期间`AddNew`， `Edit`，和`Delete`可以提交或回滚操作。 效果`CommitTrans`和`Rollback`可能会导致要还原为编辑缓冲区的当前记录。 为了确保正确还原当前记录，请务必了解如何`CommitTrans`并`Rollback`的成员函数`CDatabase`使用的更新函数`CRecordset`。  
+在事务期间`AddNew`， `Edit`，和`Delete`可以提交或回滚操作。 效果`CommitTrans`和`Rollback`可能会导致要还原为编辑缓冲区的当前记录。 为了确保正确还原当前记录，请务必了解如何`CommitTrans`并`Rollback`的成员函数`CDatabase`使用的更新函数`CRecordset`。  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> CommitTrans 如何影响更新  
- 下表说明的效果`CommitTrans`上的事务。  
+
+下表说明的效果`CommitTrans`上的事务。  
   
 ### <a name="how-committrans-affects-updates"></a>CommitTrans 如何影响更新  
   
@@ -48,7 +50,8 @@ ms.locfileid: "39338585"
 |`Delete` 然后 `CommitTrans`|从数据源中删除的记录。|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> 回滚的事务影响  
- 下表说明的效果`Rollback`上的事务。  
+
+下表说明的效果`Rollback`上的事务。  
   
 ### <a name="how-rollback-affects-transactions"></a>回滚的事务影响  
   
@@ -61,8 +64,9 @@ ms.locfileid: "39338585"
 |`Delete` 然后 `Rollback`|删除当前记录的内容。|调用`Requery`从数据源还原当前记录的内容。|撤消删除的数据源的数据。|  
   
 ## <a name="see-also"></a>请参阅  
- [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
- [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
- [事务： 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase 类](../../mfc/reference/cdatabase-class.md)   
- [CRecordset 类](../../mfc/reference/crecordset-class.md)
+
+[事务 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[事务 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[事务：在记录集中执行事务 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[CDatabase 类](../../mfc/reference/cdatabase-class.md)<br/>
+[CRecordset 类](../../mfc/reference/crecordset-class.md)

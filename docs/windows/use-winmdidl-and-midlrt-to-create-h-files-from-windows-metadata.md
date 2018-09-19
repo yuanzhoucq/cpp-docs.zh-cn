@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071350"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件
 
@@ -42,24 +42,25 @@ Winmdidl.exe 和 midlrt.exe 可在本机 C++ 代码与 Windows 运行时组件�
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 禁止控制台显示 winmdidl 版权消息和版本号。
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 未使用。
 
-`/time`  
+**/ 时间**<br/>
 在控制台输出中显示总执行时间。
 
-/outdir:\<dir > 指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是*\<驱动器 >*: \Users\\*\<用户名 >* \AppData\Local\VirtualStore\Program 文件 (x86) \Microsoft VisualStudio 12.0\\。
+**/outdir:**<em>dir</em><br/>
+指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是*\<驱动器 >*: \Users\\*\<用户名 >* \AppData\Local\VirtualStore\Program 文件 (x86) \Microsoft VisualStudio 12.0\\。
 
-`/banner:<file>`  
+**/ 横幅：**<em>文件</em><br/>
 指定一个文件，其中包含要在生成的 .idl 文件顶部追加到默认版权消息和 winmdidl 版本号前面的自定义文本。 如果路径包含空格，请使用引号。
 
-`/utf8`  
+/utf8<br/>
 使文件格式化为 UTF-8。
 
-`Winmdfile`  
+*Winmdfile*<br/>
 要分析的 .winmd 文件的名称。 如果路径包含空格，请使用引号。
 
 ## <a name="midlrt-command-line-arguments"></a>Midlrt 命令行自变量

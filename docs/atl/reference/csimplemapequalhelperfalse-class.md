@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052722"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 类
 
@@ -33,7 +33,7 @@ ms.locfileid: "43767990"
 ## <a name="syntax"></a>语法
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
 ```
 
@@ -66,10 +66,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>参数
 
-*版 k1*  
+*版 k1*<br/>
 第一个键。
 
-*k2*  
+*k2*<br/>
 第二个密钥。
 
 ### <a name="return-value"></a>返回值
@@ -98,5 +98,5 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 ## <a name="see-also"></a>请参阅
 
-[CSimpleMapEqualHelper 类](../../atl/reference/csimplemapequalhelper-class.md)   
+[CSimpleMapEqualHelper 类](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

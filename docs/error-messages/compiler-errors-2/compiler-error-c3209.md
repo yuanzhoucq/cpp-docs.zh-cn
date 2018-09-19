@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3209 |Microsoft 文档
+title: 编译器错误 C3209 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9723d444fb90ea4a8bbaac89f5fffd923ea75a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5df31170578c2462c3e437d6eb7f65d6b76af8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048404"
 ---
 # <a name="compiler-error-c3209"></a>编译器错误 C3209
-class： 泛型类必须是托管或 WinRTclass  
-  
- 泛型类必须是托管类或 Windows 运行时类。  
-  
- 下面的示例生成 C3209，并演示如何修复此错误：  
-  
-```  
-// C3209.cpp  
-// compile with: /clr  
-generic <class T>  
-class C {};   // C3209  
-  
-// OK - ref class can be generic  
-generic <class T>  
-ref class D {};  
+
+class： 泛型类必须是托管或 WinRTclass
+
+泛型类必须是托管类或 Windows 运行时类。
+
+下面的示例生成 C3209，并演示如何修复此错误：
+
+```
+// C3209.cpp
+// compile with: /clr
+generic <class T>
+class C {};   // C3209
+
+// OK - ref class can be generic
+generic <class T>
+ref class D {};
 ```

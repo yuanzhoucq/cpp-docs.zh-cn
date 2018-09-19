@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031140"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 
@@ -40,25 +40,25 @@ ms.locfileid: "43759241"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 COM 的枚举器。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。
 
-*piid*  
+*piid*<br/>
 一个指向枚举器接口的接口 ID。
 
-*T*  
+*T*<br/>
 枚举器接口所显示的项的类型。
 
-*复制*  
+*复制*<br/>
 一个[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
-*CollType*  
+*CollType*<br/>
 C + + 标准库容器类。
 
 ## <a name="members"></a>成员
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>参数
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in]`IUnknown`必须保持活动状态的枚举器的生命周期内的对象的指针。 如果没有此类对象存在，则传递 NULL。
 
-collection  
+collection<br/>
 对包含要枚举的项的 c + + 标准库容器的引用。
 
 ### <a name="return-value"></a>返回值
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>参数
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]从当前枚举数中克隆上新创建的对象的枚举器接口。
 
 ### <a name="return-value"></a>返回值
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>参数
 
-*celt*  
+*celt*<br/>
 [in]请求的元素数。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要填充元素的数组。
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out]中实际返回的元素数*rgelt*。 这可以是小于*celt*如果少于*celt*列表中剩余的元素。
 
 ### <a name="return-value"></a>返回值
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>参数
 
-*celt*  
+*celt*<br/>
 [in]要跳过的元素数。
 
 ### <a name="return-value"></a>返回值

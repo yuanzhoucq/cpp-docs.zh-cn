@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071726"
 ---
 # <a name="array-class"></a>array 类
 表示用于将数据移动到加速器的数据容器。
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>参数
-`value_type`  
+*value_type*<br/>
 数据元素类型。
 
-`_Rank`  
+*_Rank*<br/>
 数组的秩。
 
 ## <a name="members"></a>成员
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Associated_Av`  
+*_Associated_Av*<br/>
 指定数组首选的目标位置的 accelerator_view。
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md)对象，它指定数组的位置。
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 所需[access_type](concurrency-namespace-enums-amp.md#access_type)在 CPU 上数组。 此参数具有默认值为`access_type_auto`让 CPU`access_type`确定运行时。 实际 CPU`access_type`的数组可以使用查询`get_cpu_access_type`方法。
 
-`_Extent`  
+*_Extent*<br/>
 数组的每个维度中的范围。
 
-`_E0`  
+*_E0*<br/>
 本部分的范围的最高有效组件。
 
-`_E1`  
+*_E1*<br/>
 本部分的范围的下一步-到-最高有效组件。
 
-`_E2`  
+*_E2*<br/>
 本部分的范围的最低有效组件。
 
-`_InputIterator`  
+*_InputIterator*<br/>
 输入迭代器的类型。
 
-`_Src`  
+*_Src*<br/>
 若要要复制的对象。
 
-`_Src_first`  
+*_Src_first*<br/>
 进入源容器开始迭代器。
 
-`_Src_last`  
+*_Src_last*<br/>
 进入源容器结束迭代器。
 
-`_Other`  
+*_Other*<br/>
 其他数据源。
 
-`_Rank`  
+*_Rank*<br/>
 区域的等级。
 
-`value_type`  
+*value_type*<br/>
 复制的元素数据类型。
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>参数
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md)要复制到对象。
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`value_type`  
+*value_type*<br/>
 向量的元素数据类型。
 
 ### <a name="return-value"></a>返回值
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>参数
-`_Index`  
+*_Index*<br/>
 元素的位置。
 
-`_I0`  
+*_I0*<br/>
 本节原点的最高有效组件。
 
-`_I1`  
+*_I1*<br/>
 本节原点的下一步-到-最高有效组件。
 
-`_I2`  
+*_I2*<br/>
 本节原点的最低有效组件。
 
-`_I`  
+*_I*<br/>
 元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>参数
-`_Index`  
+*_Index*<br/>
 索引。
 
-`_I`  
+*_I*<br/>
 索引。
 
 ### <a name="return-value"></a>返回值
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>参数
-`_Other`  
+*_Other*<br/>
 `array`要从复制对象。
 
-`_Src`  
+*_Src*<br/>
 `array`要从复制对象。
 
 ### <a name="return-value"></a>返回值
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>参数
-`_E0`  
+*_E0*<br/>
 本部分的范围的最高有效组件。
 
-`_E1`  
+*_E1*<br/>
 本部分的范围的下一步-到-最高有效组件。
 
-`_E2`  
+*_E2*<br/>
 本部分的范围的最低有效组件。
 
-`_Ext`  
+*_Ext*<br/>
 [程度](extent-class.md)指定区域范围的对象。 原始是 0。
 
-`_Idx`  
+*上 _Idx*<br/>
 [索引](index-class.md)对象，它指定原点的位置。 子节是范围的其余部分。
 
-`_I0`  
+*_I0*<br/>
 本节原点的最高有效组件。
 
-`_I1`  
+*_I1*<br/>
 本节原点的下一步-到-最高有效组件。
 
-`_I2`  
+*_I2*<br/>
 本节原点的最低有效组件。
 
-`_Rank`  
+*_Rank*<br/>
 区域的等级。
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [程度](extent-class.md)指定区域范围的对象。
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [索引](index-class.md)对象，它指定原点的位置。
 
-`value_type`  
+*value_type*<br/>
 复制的元素数据类型。
 
 ### <a name="return-value"></a>返回值
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>参数
-`_New_rank`  
+*_New_rank*<br/>
 秩`extent`对象作为参数传递。
 
-`_View_extent`  
+*_View_extent*<br/>
 用于构造新的范围[array_view](array-view-class.md)对象。
 
-`value_type`  
+*value_type*<br/>
 在这两个原始元素的数据类型`array`对象和返回`array_view`对象。
 
 ### <a name="return-value"></a>返回值

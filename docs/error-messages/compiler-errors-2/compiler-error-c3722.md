@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3722 |Microsoft 文档
+title: 编译器错误 C3722 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c12b977fa0f0ac31eb6ba472e738bd5692725f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ec84898d413bd0b62c9b0d96e47ef82615a4b06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058973"
 ---
 # <a name="compiler-error-c3722"></a>编译器错误 C3722
-不允许泛型事件  
-  
- 编译器仅允许泛型类、 结构和函数。  有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。  
-  
- 下面的示例生成 C3722:  
-  
-```  
-// C3722.cpp  
-// compile with: /clr  
-generic <typename T>  
-public delegate void MyEventHandler(System::Object^ sender, System::EventArgs^ e, T optional);  
-  
-generic <class T>  
-public ref struct MyButton {  
-   generic<typename U>  
-   event MyEventHandler<U>^ Click;   // C3722  
-};  
+
+不允许泛型事件
+
+编译器仅允许泛型类、 结构和函数。  有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。
+
+下面的示例生成 C3722:
+
+```
+// C3722.cpp
+// compile with: /clr
+generic <typename T>
+public delegate void MyEventHandler(System::Object^ sender, System::EventArgs^ e, T optional);
+
+generic <class T>
+public ref struct MyButton {
+   generic<typename U>
+   event MyEventHandler<U>^ Click;   // C3722
+};
 ```

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2143b84a8a8906643b9fc8befd49ffd244aa9625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 34aa546561e13c2728c633db3f96861a1d3ec987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075678"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 类
 
@@ -32,13 +32,13 @@ ms.locfileid: "43764987"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultHashTraits
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合中的数据类型。
 
 ## <a name="members"></a>成员
@@ -69,7 +69,7 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>参数
 
-*元素*  
+*元素*<br/>
 元素。
 
 ### <a name="return-value"></a>返回值

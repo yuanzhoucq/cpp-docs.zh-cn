@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE 警告 BK4504 |Microsoft 文档
+title: BSCMAKE 警告 BK4504 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a17aa8b4e2a98d3bda5d21ea84962791b8051dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8a2da8903dade37faf3b14175b65f3169efd908
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049758"
 ---
 # <a name="bscmake-warning-bk4504"></a>BSCMAKE 警告 BK4504
-文件包含引用太多;忽略来自此源的更多参考  
-  
- .cpp 文件包含 64,000 个以上的符号引用。 当 BSCMAKE 在某个文件中遇到 64,000 个引用之后，它将会忽略所有后续的引用。  
-  
- 若要更正此问题，请将该文件拆分为两个或更多文件（每个文件包含 64,000 个以下的符号引用），或使用 `#pragma component(browser)` 预处理器指令限制为特定引用生成的符号。 有关详细信息，请参阅[组件](../../preprocessor/component.md)。
+
+文件包含引用太多;正在忽略来自此源的更多参考
+
+.cpp 文件包含 64,000 个以上的符号引用。 当 BSCMAKE 在某个文件中遇到 64,000 个引用之后，它将会忽略所有后续的引用。
+
+若要更正此问题，请将该文件拆分为两个或更多文件（每个文件包含 64,000 个以下的符号引用），或使用 `#pragma component(browser)` 预处理器指令限制为特定引用生成的符号。 有关详细信息，请参阅[组件](../../preprocessor/component.md)。

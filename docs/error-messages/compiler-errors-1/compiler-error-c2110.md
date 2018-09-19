@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2110 |Microsoft 文档
+title: 编译器错误 C2110 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18eafefb4aa7694874c1fbdf994189bbd763826b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 749e96748698da9b2c08e805d68e0c2ba333d22f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074898"
 ---
 # <a name="compiler-error-c2110"></a>编译器错误 C2110
-“+L”：不能添加两个指针  
-  
- 尝试使用加号 ( `+` ) 运算符添加两个指针值。  
-  
- 以下示例生成 C2110：  
-  
-```  
-// C2110.cpp  
-int main() {  
-   int a = 0;  
-   int *pa;  
-   int *pb;  
-   a = pa + pb;   // C2110  
-}  
+
+“+L”：不能添加两个指针
+
+尝试使用加号 ( `+` ) 运算符添加两个指针值。
+
+以下示例生成 C2110：
+
+```
+// C2110.cpp
+int main() {
+   int a = 0;
+   int *pa;
+   int *pb;
+   a = pa + pb;   // C2110
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 命令行警告 D9043 |Microsoft 文档
+title: 命令行警告 D9043 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65bf672418b49dbf6017374ab7cd18caa61d7403
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29371e147c693b2aa49f8dcf838841af3c75c8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031854"
 ---
 # <a name="command-line-warning-d9043"></a>命令行警告 D9043
-无效的值为 compiler_option; 后面的 warning_level假设 '4999';代码分析警告不与警告级别相关联  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C9043。  
-  
-```  
-// D9043.cpp  
-// compile with: /analyze /w16001  
-// D9043 warning expected  
-int main() {}  
+
+无效的值为 compiler_option; warning_level假定 '4999';代码分析警告与警告等级无关
+
+## <a name="example"></a>示例
+
+下面的示例生成 C9043。
+
+```
+// D9043.cpp
+// compile with: /analyze /w16001
+// D9043 warning expected
+int main() {}
 ```

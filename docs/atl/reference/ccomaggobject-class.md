@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039824"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
 
@@ -41,14 +41,14 @@ ms.locfileid: "43756319"
 ## <a name="syntax"></a>语法
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>参数
 
-*包含*  
+*包含*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>参数
 
-*pv*  
+*pv*<br/>
 [in]未知的外部。
 
 ### <a name="remarks"></a>备注
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pp*  
+*pp*<br/>
 [out]一个指向**CComAggObject\<**<em>包含</em>**>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>参数
 
-*包含*  
+*包含*<br/>
 [in]您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ### <a name="remarks"></a>备注
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的标识符。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
-*pp*  
+*pp*<br/>
 [out]由类型标识的接口指针的指针`Q`。 如果该对象不支持此接口， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -245,9 +245,9 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComObject 类](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComObject 类](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [类概述](../../atl/atl-class-overview.md)

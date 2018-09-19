@@ -32,30 +32,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 141e261af618cc6058a2a731b70e824582be303b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c9dd8af9b55ab022277737f2349b27eb257810f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135862"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln、_tcmdln、_wcmdln
-内部 CRT 全局变量。 命令行。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-char * _acmdln;  
-wchar_t * _wcmdln;  
-  
-#ifdef WPRFLAG  
-   #define _tcmdln _wcmdln  
-#else  
-   #define _tcmdln _acmdln  
-```  
-  
-## <a name="remarks"></a>备注  
- 这些 CRT 内部变量将存储完整的命令行。 将在 CRT 的导出符号中公开它们，但不会在代码中使用它们。 `_acmdln` 将数据存储为字符字符串。 `_wcmdln` 将数据存储为宽字符字符串。 可将 `_tcmdln` 定义为 `_acmdln` 或 `_wcmdln`，具体取决于哪一个是合适的。  
-  
-## <a name="see-also"></a>请参阅  
- [全局变量](../c-runtime-library/global-variables.md)
+
+内部 CRT 全局变量。 命令行。
+
+## <a name="syntax"></a>语法
+
+```
+char * _acmdln;
+wchar_t * _wcmdln;
+
+#ifdef WPRFLAG
+   #define _tcmdln _wcmdln
+#else
+   #define _tcmdln _acmdln
+```
+
+## <a name="remarks"></a>备注
+
+这些 CRT 内部变量将存储完整的命令行。 将在 CRT 的导出符号中公开它们，但不会在代码中使用它们。 `_acmdln` 将数据存储为字符字符串。 `_wcmdln` 将数据存储为宽字符字符串。 可将 `_tcmdln` 定义为 `_acmdln` 或 `_wcmdln`，具体取决于哪一个是合适的。
+
+## <a name="see-also"></a>请参阅
+
+[全局变量](../c-runtime-library/global-variables.md)

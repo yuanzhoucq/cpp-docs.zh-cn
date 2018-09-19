@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 063464fe58417cfce58160ccba12fbcd514c7320
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: fa493a886509a85cc45c14f003ff07886c435280
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036028"
 ---
 # <a name="name-decoration"></a>名称修饰
 
 名称修饰通常是指 C++ 命名约定，但也可应用于多个 C 情形。 默认情况下，C++ 使用函数名、参数和返回类型来为该函数创建链接器名称。 考虑以下函数：
 
 ```
-void CALLTYPE test(void)  
+void CALLTYPE test(void)
 ```
 
 下表显示了各种调用约定的链接器名称。

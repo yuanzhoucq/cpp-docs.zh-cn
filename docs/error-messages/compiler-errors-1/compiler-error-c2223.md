@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2223 |Microsoft 文档
+title: 编译器错误 C2223 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330786ca92becb5132194e5e25104bdaaa58c129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0ca3cd091b349536046b0ead8e52805db3dff9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067646"
 ---
 # <a name="compiler-error-c2223"></a>编译器错误 C2223
-“->identifier”的左侧必须指向结构/联合  
-  
- `->` 左侧的操作数不是指向类、结构或联合的指针。  
-  
- 此错误可能引起是未定义的变量的左操作数 (因此键入`int`)。
+
+“->identifier”的左侧必须指向结构/联合
+
+`->` 左侧的操作数不是指向类、结构或联合的指针。
+
+此错误可能引起是未定义的变量的左操作数 (因此键入`int`)。

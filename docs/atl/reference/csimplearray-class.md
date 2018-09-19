@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054501"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 类
 
@@ -40,16 +40,16 @@ ms.locfileid: "43766657"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在数组中的数据类型。
 
-*TEqual*  
+*TEqual*<br/>
 特征对象，用于定义类型的元素的相等性测试*T*。
 
 ## <a name="members"></a>成员
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>参数
 
-*t*  
+*t*<br/>
 要添加到数组的元素。
 
 ### <a name="return-value"></a>返回值
@@ -123,13 +123,13 @@ BOOL Add(const T& t);
 数组对象的构造函数。
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>参数
 
-*src*  
+*src*<br/>
 一个现有的 `CSimpleArray` 对象。
 
 ### <a name="remarks"></a>备注
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>参数
 
-*t*  
+*t*<br/>
 要搜索元素。
 
 ### <a name="return-value"></a>返回值
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>参数
 
-*src*  
+*src*<br/>
 要复制的数组。
 
 ### <a name="return-value"></a>返回值
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>参数
 
-*t*  
+*t*<br/>
 要从数组中移除的元素。
 
 ### <a name="return-value"></a>返回值
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 指向要移除的元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 若要更改的元素的索引。
 
-*t*  
+*t*<br/>
 要分配给指定元素的值。
 
 ### <a name="return-value"></a>返回值

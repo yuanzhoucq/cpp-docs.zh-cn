@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2351 |Microsoft 文档
+title: 编译器错误 C2351 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1660e5dfc4f17f7617c82eb3e633f345e2774495
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c92f955beaafa92a8259df4878301158d03c18ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034767"
 ---
 # <a name="compiler-error-c2351"></a>编译器错误 C2351
-已过时的 c + + 构造函数初始化语法  
-  
- 在新样式初始化列表中的构造函数，必须显式命名每个直接的基类，即使它是唯一的基类。  
-  
- 下面的示例生成 C2351:  
-  
-```  
-// C2351.cpp  
-// compile with: /c  
-class B {  
-public:   
-   B() : () {}   // C2351  
-   B() {}   // OK  
-};  
+
+已过时的 c + + 构造函数初始化语法
+
+在新式的初始化列表中的构造函数，必须显式命名每个直接基类，即使它是唯一的基类。
+
+下面的示例生成 C2351:
+
+```
+// C2351.cpp
+// compile with: /c
+class B {
+public:
+   B() : () {}   // C2351
+   B() {}   // OK
+};
 ```

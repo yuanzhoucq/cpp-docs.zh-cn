@@ -1,5 +1,5 @@
 ---
-title: 链接器工具警告 LNK4075 |Microsoft 文档
+title: 链接器工具警告 LNK4075 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd9a4ecdad30a0be2d45300367f6f79a65a6b31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a021a9345975dcb197ab578901baf22f76db846
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059649"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>链接器工具警告 LNK4075
-忽略由于"选项 2"规范的"选项 1"  
-  
- 第二个选项优先于第一个。  
-  
- 指定了互斥链接器选项。  检查链接器选项。  链接器选项指定的位置取决于你如何生成项目。  
-  
--   如果你要在开发环境中生成的在你的项目，链接器属性页中查看并了解这两个链接器选项的指定位置。  请参阅[使用项目属性](../../ide/working-with-project-properties.md)有关详细信息。  
-  
--   如果你的命令行生成，请查看此处指定的链接器选项。  
-  
--   如果生成使用生成脚本时，请查阅你的脚本，了解这些链接器选项的指定位置。  
-  
- 当你发现的互相排斥的链接器选项指定的位置时，请删除其中一个链接器选项。  
-  
- 一些特定的示例：  
-  
--   如果链接用编译的模块 **/ZI**，这意味着一个内部链接器选项调用意味着没有 /EDITANDCONTINUE /EDITANDCONTINUE 和用 /opt: ref、 /opt: icf 或 /incremental: no，编译的模块，你将获取 LNK4075。  请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)有关详细信息。
+
+忽略由于"option2"规范"选项 1"
+
+第二个选项可重写第一个。
+
+指定互相排斥的链接器选项。  检查链接器选项。  指定链接器选项的位置取决于如何构建您的项目。
+
+- 如果您正在构建开发环境中，查看你的项目，链接器属性页并了解这两个链接器选项的指定位置。  请参阅[使用项目属性](../../ide/working-with-project-properties.md)有关详细信息。
+
+- 如果在命令行生成时，查看此处指定的链接器选项。
+
+- 如果生成使用生成脚本，仔细查看您的脚本，请参阅这些链接器选项指定的位置。
+
+找到指定互斥链接器选项的位置后，删除其中一个链接器选项。
+
+一些特定的示例：
+
+- 如果使用编译时将模块链接 **/ZI**，这意味着内部链接器选项调用意味着没有 /EDITANDCONTINUE /EDITANDCONTINUE，并使用 /opt: ref，/opt: icf 或 /incremental: no，已编译的模块，将获取 LNK4075。  请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)有关详细信息。

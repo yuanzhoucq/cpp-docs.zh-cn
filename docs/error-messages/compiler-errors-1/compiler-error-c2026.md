@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2026 |Microsoft 文档
+title: 编译器错误 C2026 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b2952daa8cc7b3642cca5ba278990fde7d1ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 055ac47d036a1027817aa6b3433bfe0e2e88570e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019544"
 ---
 # <a name="compiler-error-c2026"></a>编译器错误 C2026
-字符串太大，已截断尾部字符  
-  
- 字符串的长度超出 16380 单字节字符的限制。  
-  
- 之前在连接的相邻字符串，字符串不能超过 16380 单字节字符。  
-  
- 此长度约 50%的 Unicode 字符串还会生成此错误。  
-  
- 如果你有定义，如下所示的字符串，则会生成 C2026:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really \  
-long string here\  
-";  
-```  
-  
- 你无法将其分解，如下所示：  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really "  
-"long string here\  
-";  
-```  
-  
- 你可能想要存储特别大的字符串 （32k 或更大） 自定义资源或外部文件中。 请参阅[创建新的自定义资源或数据资源](../../windows/creating-a-new-custom-or-data-resource.md)有关详细信息。
+
+字符串太大，已截断尾部字符
+
+字符串的长度超出 16380 单字节字符的限制。
+
+之前在连接的相邻字符串，不能大于 16380 单字节字符字符串。
+
+此长度大约一半的 Unicode 字符串还会生成此错误。
+
+如果必须按如下所示定义的字符串，则会生成 C2026:
+
+```
+char sz[] =
+"\
+imagine a really, really \
+long string here\
+";
+```
+
+您可以将其分解，如下所示：
+
+```
+char sz[] =
+"\
+imagine a really, really "
+"long string here\
+";
+```
+
+您可能想要存储特别大的字符串文本 （32k 个或多个） 自定义资源或外部文件中。 请参阅[创建新的自定义资源或数据资源](../../windows/creating-a-new-custom-or-data-resource.md)有关详细信息。

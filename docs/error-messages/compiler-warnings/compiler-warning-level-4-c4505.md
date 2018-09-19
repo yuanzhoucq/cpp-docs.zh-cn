@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4505 |Microsoft 文档
+title: 编译器警告 （等级 C4505 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054774"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>编译器警告（等级 4）C4505
-function： 已删除未引用的本地函数  
-  
- 给定的函数是模块的本地且不被引用中; 正文中因此，该函数是死代码。  
-  
- 编译器未生成此死函数代码。
+
+function： 未引用本地函数已移除
+
+给定的函数是模块的本地且不被引用中; 在正文中因此，该函数是死代码。
+
+编译器未生成此死函数代码。

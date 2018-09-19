@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042438"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>参数
 
-*bFallback*  
+*bFallback*<br/>
 TRUE 表示支持回退。 如果事务处理的函数失败，类会自动调用"非事务性"函数。 FALSE 表示未"回退"的调用。
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 TRUE 表示的构造函数中自动创建的事务处理程序。 FALSE 表示不是。
 
 ### <a name="remarks"></a>备注
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 若要创建或打开的对象的名称。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 对可归纳如下读取、 写入、 两个，或都不 （零） 的对象的访问。 最常用的值有 GENERIC_READ、 generic_write 外，或两者： GENERIC_READ &#124; GENERIC_WRITE。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 一个对象，它可以是读取、 写入，同时，删除，所有这些操作，或无共享模式： 0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 指向包含可选的安全描述符，并且还确定可以由子进程继承返回的句柄的 SECURITY_ATTRIBUTES 结构的指针。 参数可以为 NULL。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 要在存在并且不存在的文件上执行的操作。 此参数必须是以下值，不能组合之一： CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 文件属性和标志。 此参数可以包括可用的文件属性 （FILE_ATTRIBUTE_ *） 的任意组合。 所有其他文件属性重写 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含标志的组合 (FILE_FLAG_\*) 进行缓冲行为的控制，访问模式和其他专用的标志。 它们与任何 FILE_ATTRIBUTE_ 结合\*值。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 有效句柄 GENERIC_READ 访问权限的模板文件。 模板文件提供文件属性和为其创建的文件的扩展的属性。 此参数可以为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 要删除的文件的名称。
 
 ### <a name="remarks"></a>备注
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 目录或路径，以及要搜索的文件名称。 此参数可以包含通配符字符，如星号 （*） 或问号 （）。
 
-*pNextInfo*  
+*pNextInfo*<br/>
 指向接收找到的文件或子目录的相关信息的 WIN32_FIND_DATA 结构的指针。
 
 ### <a name="return-value"></a>返回值
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 文件或目录的名称。
 
 ### <a name="remarks"></a>备注
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 文件或目录的名称。
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 要检索的属性信息的级别。
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 指向接收属性信息的缓冲区的指针。 存储到此缓冲区的属性信息的类型确定的值*fInfoLevelId*。 如果*fInfoLevelId*参数是 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
 
 ### <a name="remarks"></a>备注
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>参数
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 当前的现有文件或本地计算机上的目录名称。
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 文件或目录的新名称。 此名称必须已存在。 一个新的文件可能位于不同的文件系统或驱动器。 新目录必须位于同一个驱动器上。
 
 ### <a name="remarks"></a>备注
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函数将打开或创建一个子项的名称。
 
-*dwReserved*  
+*dwReserved*<br/>
 此参数保留并必须为零。
 
-*lpClass*  
+*lpClass*<br/>
 此密钥的用户定义的类。 可能会忽略此参数。 此参数可以为 NULL。
 
-*dwOptions*  
+*dwOptions*<br/>
 此参数可以是下列值之一： REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
 
-*samDesired*  
+*samDesired*<br/>
 一个屏蔽，它指定密钥的访问权限。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 指向 SECURITY_ATTRIBUTES 结构，用于确定返回的句柄能否由子进程继承。 如果*lpSecurityAttributes*为 NULL，不能继承句柄。
 
-*phkResult*  
+*phkResult*<br/>
 指向一个变量来接收打开或创建密钥的句柄的指针。 如果键不是预定义的注册表项之一，则调用`RegCloseKey`函数使用句柄完成。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 指向一个变量来接收以下 disposition 值之一： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>返回值
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 打开注册表项句柄。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 若要打开的注册表子项的名称。
 
-*ulOptions*  
+*ulOptions*<br/>
 此参数保留并必须为零。
 
-*samDesired*  
+*samDesired*<br/>
 一个屏蔽，它指定密钥的访问权限。
 
-*phkResult*  
+*phkResult*<br/>
 指向一个变量来接收打开或创建密钥的句柄的指针。 如果键不是预定义的注册表项之一，则调用`RegCloseKey`函数使用句柄完成。
 
 ### <a name="return-value"></a>返回值
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>参数
 
-*lpFileName*  
+*lpFileName*<br/>
 文件或目录的名称。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 若要为文件设置文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)。
 
 ### <a name="remarks"></a>备注

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2285 |Microsoft 文档
+title: 编译器错误 C2285 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22a0a7b325a6659d683f870bd87e50255e5a186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1987c83e256f1c3bc6fd601be318437a02373fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067645"
 ---
 # <a name="compiler-error-c2285"></a>编译器错误 C2285
-已确定指针为成员表示形式-忽略杂注  
-  
- 类存在两个不同的表示形式。
+
+已确定指向成员表示形式-忽略杂注
+
+两个不同的表示形式存在的类。
