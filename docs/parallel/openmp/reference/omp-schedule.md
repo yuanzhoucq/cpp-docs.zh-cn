@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115031"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 修改的行为[计划](../../../parallel/openmp/reference/schedule.md)子句时`schedule(runtime)`中指定`for`或`parallel for`指令。  
@@ -37,8 +37,8 @@ set OMP_SCHEDULE[=type[,size]]
 *size*<br/>
 （可选）指定的迭代的大小。 `size` 必须为正整数。 默认值为 1，除非当`type`是静态的。 时未有效`type`是`runtime`。  
   
- `type`  
- 计划的类型：  
+*type*<br/>
+计划的类型：  
   
 -   `dynamic`  
   

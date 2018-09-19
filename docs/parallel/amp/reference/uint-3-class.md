@@ -1,5 +1,5 @@
 ---
-title: uint_3 类 |Microsoft 文档
+title: uint_3 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe59fc6f956c0e88cae1e5c737d3fe33d10d10b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052668"
 ---
 # <a name="uint3-class"></a>uint_3 类
 表示三个无符号整数的短矢量。  
@@ -110,7 +110,7 @@ class uint_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[uint_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[uint_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -174,7 +174,7 @@ class uint_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#uint_3__size)||  
   
@@ -223,7 +223,7 @@ class uint_3;
   
 ##  <a name="ctor"></a> uint_3 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 uint_3() restrict(amp,
@@ -273,20 +273,20 @@ explicit inline uint_3(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="uint_3__size"></a> 大小 
 

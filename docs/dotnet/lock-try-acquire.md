@@ -1,5 +1,5 @@
 ---
-title: lock::try_acquire |Microsoft 文档
+title: lock::try_acquire |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115952"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-获取对等待指定的时间量，并返回的对象的锁`bool`报告成功的收购而不是引发异常。  
+获取一个对象，等待指定的时间内，并返回了锁`bool`报告成功的收购而不是引发异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,8 +43,8 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_timeout`  
- 超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
+*超时) (_t*<br/>
+超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
 ## <a name="return-value"></a>返回值  
  `true` 如果已获取锁，`false`否则为。  
@@ -53,7 +53,7 @@ bool try_acquire(
  如果已获取锁，则此函数没有任何影响。  
   
 ## <a name="example"></a>示例  
- 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
+ 此示例跨多个线程使用单个类的实例。  类自身上使用锁来确保对其内部数据的访问是为每个线程保持一致。  主应用程序线程的类的同一实例上使用锁来定期检查以查看任何工作线程仍存在，并等待，直到所有工作线程退出已完成其任务。  
   
 ```  
 // msl_lock_try_acquire.cpp  

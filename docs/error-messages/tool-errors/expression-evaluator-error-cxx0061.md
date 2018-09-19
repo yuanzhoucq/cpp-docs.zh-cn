@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0061 |Microsoft 文档
+title: 表达式计算器错误 CXX0061 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5edff0556b5105a57d3cb8de1c644959d65a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f6954ce13c1a4b52b6d52e5f381f8732cc7b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047377"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>表达式计算器错误 CXX0061
-函数的嵌套深度超过  
-  
- 该表达式包含嵌套深度超过限制的函数。 修改表达式以减少嵌套深度。  
-  
- 此错误是与 CAN0061 相同。
+
+函数嵌套深度超过
+
+表达式包含嵌套深度超过限制的函数。 修改表达式以减少嵌套深度。
+
+此错误是与 CAN0061 相同。

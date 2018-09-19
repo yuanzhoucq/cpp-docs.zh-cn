@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136317"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>参数
 
-*hToken*  
+*hToken*<br/>
 句柄的访问令牌。
 
 ### <a name="remarks"></a>备注
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 引用[CSid 类](../../atl/reference/csid-class.md)对象。
 
-*pbIsMember*  
+*pbIsMember*<br/>
 指向一个变量来接收检查的结果。
 
 ### <a name="return-value"></a>返回值
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>参数
 
-*pImp*  
+*pImp*<br/>
 指向新`CAccessToken`对象。
 
-*sil*  
+*sil*<br/>
 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)枚举类型，提供新的令牌模拟级别。
 
 ### <a name="return-value"></a>返回值
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>参数
 
-*pPri*  
+*pPri*<br/>
 指向新`CAccessToken`对象。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定新的令牌的请求的访问权限。 默认情况下，MAXIMUM_ALLOWED，请求有效的调用方的所有访问权限。 请参阅[的访问权限和访问掩码](/windows/desktop/SecAuthZ/access-rights-and-access-masks)的多个打开的访问权限。
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的令牌的安全描述符，并确定是否子进程可以继承标记。 如果*pTokenAttributes*为 NULL，该令牌获取的默认安全描述符，不能继承句柄。
 
 ### <a name="return-value"></a>返回值
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>参数
 
-*pApplicationName*  
+*pApplicationName*<br/>
 指向一个以 null 结尾的字符串，指定要执行的模块。 此参数不能为 NULL。
 
-*pCommandLine*  
+*pCommandLine*<br/>
 指向一个以 null 结尾的字符串，指定要执行的命令行。
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 指向[PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)接收有关新进程的标识信息的结构。
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 指向[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)结构，它指定新的进程的主窗口应如何显示。
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 指定用于控制优先级类和过程的创建的其他标志。 请参阅 Win32 函数[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)标志的列表。
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 如果为 TRUE，加载用户的配置文件[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的进程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pProcessAttributes*为 NULL，该过程获取的默认安全描述符，不能继承句柄。
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新线程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pThreadAttributes*为 NULL，该线程将获取的默认安全描述符，不能继承句柄。
 
-*bInherit*  
+*bInherit*<br/>
 指示新进程是否继承自调用进程句柄。 如果为 TRUE，由新进程继承调用进程中的每个可继承打开句柄。 继承句柄具有相同的值和访问权限的原始句柄。
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 指向一个以 null 结尾的字符串，指定当前驱动器和目录的新进程。 字符串必须包含一个驱动器号的完整路径。 如果此参数为 NULL，新进程将与调用进程具有相同的当前驱动器和目录。
 
 ### <a name="return-value"></a>返回值
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>参数
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 将新的、 受限`CAccessToken`对象。
 
-*SidsToDisable*  
+*SidsToDisable*<br/>
 一个`CTokenGroups`对象，它指定仅拒绝 Sid。
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 一个`CTokenGroups`对象，它指定的限制 Sid。
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 一个`CTokenPrivileges`对象，它在受限令牌中指定要删除的特权。 默认值创建一个空的对象。
 
 ### <a name="return-value"></a>返回值
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>参数
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 包含在中禁用的特权的字符串指针`CAccessToken`对象。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指向`CTokenPrivileges`对象，它将包含以前的状态的特权。
 
 ### <a name="return-value"></a>返回值
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>参数
 
-*rPrivileges*  
+*rPrivileges*<br/>
 指向包含要在中禁用的特权的字符串数组`CAccessToken`对象。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指向`CTokenPrivileges`对象，它将包含以前的状态的特权。
 
 ### <a name="return-value"></a>返回值
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>参数
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 包含在中启用的特权的字符串指针`CAccessToken`对象。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指向`CTokenPrivileges`对象，它将包含以前的状态的特权。
 
 ### <a name="return-value"></a>返回值
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>参数
 
-*rPrivileges*  
+*rPrivileges*<br/>
 指向包含要在中启用的特权的字符串数组`CAccessToken`对象。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指向`CTokenPrivileges`对象，它将包含以前的状态的特权。
 
 ### <a name="return-value"></a>返回值
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pDacl*  
+*pDacl*<br/>
 指向[CDacl 类](../../atl/reference/cdacl-class.md)对象以接收`CAccessToken`对象的默认 DACL。
 
 ### <a name="return-value"></a>返回值
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
 ### <a name="return-value"></a>返回值
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pGroups*  
+*pGroups*<br/>
 指向[CTokenGroups 类](../../atl/reference/ctokengroups-class.md)对象以接收组信息。
 
 ### <a name="return-value"></a>返回值
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>参数
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 指向[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)将接收模拟级别信息的枚举类型。
 
 ### <a name="return-value"></a>返回值
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pluid*  
+*pluid*<br/>
 指向[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)中有哪些将接收登录会话的 id。
 
 ### <a name="return-value"></a>返回值
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pPrivileges*  
+*pPrivileges*<br/>
 指向[CTokenPrivileges 类](../../atl/reference/ctokenprivileges-class.md)对象以接收权限。
 
 ### <a name="return-value"></a>返回值
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*hProcess*  
+*hProcess*<br/>
 用于访问令牌已打开的进程的句柄。 如果使用默认值为 NULL，则使用当前进程。
 
 ### <a name="return-value"></a>返回值
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pSource*  
+*pSource*<br/>
 指向[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source)结构。
 
 ### <a name="return-value"></a>返回值
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pStatistics*  
+*pStatistics*<br/>
 指向[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics)结构。
 
 ### <a name="return-value"></a>返回值
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 终端服务会话 id。
 
 ### <a name="return-value"></a>返回值
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>参数
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*hThread*  
+*hThread*<br/>
 句柄的访问令牌已打开的线程。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 指示是否针对线程调用的安全上下文进行访问检查`GetThreadToken`方法或对调用线程的过程的安全上下文。
 
 如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pluid*  
+*pluid*<br/>
 指向[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)中有哪些将接收令牌的 id。
 
 ### <a name="return-value"></a>返回值
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pType*  
+*pType*<br/>
 地址[TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type)的成功后，收到的令牌的类型的变量。
 
 ### <a name="return-value"></a>返回值
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象。
 
 ### <a name="return-value"></a>返回值
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>参数
 
-*hThread*  
+*hThread*<br/>
 若要将分配到的模拟标记的线程的句柄。 必须使用 TOKEN_IMPERSONATE 的访问权限打开此句柄。 如果*hThread*为 NULL，该方法会导致线程停止使用的模拟令牌。
 
 ### <a name="return-value"></a>返回值
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>参数
 
-*pszUserName*  
+*pszUserName*<br/>
 指定用户名称的以 null 结尾的字符串指针。 这是用于登录到的用户帐户的名称。
 
-*pszDomain*  
+*pszDomain*<br/>
 指定的域或其帐户数据库中包含的服务器名称的以 null 结尾的字符串指针*pszUserName*帐户。
 
-*pszPassword*  
+*pszPassword*<br/>
 指定指定的用户帐户的明文密码的以 null 结尾的字符串指针*pszUserName*。
 
-*dwLogonType*  
+*dwLogonType*<br/>
 指定要执行的登录操作的类型。 请参阅[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)的更多详细信息。
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 指定登录提供程序。 请参阅[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>参数
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果为 TRUE，则当前线程将模拟调用 COM 客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。
 
 如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>参数
 
-*hPipe*  
+*hPipe*<br/>
 命名管道的句柄。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果为 TRUE，则当前线程将模拟调用管道客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。
 
 如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>参数
 
-*BindingHandle*  
+*BindingHandle*<br/>
 表示与客户端的绑定在服务器上的绑定句柄。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果为 TRUE，则当前线程将模拟调用的 RPC 客户端，如果此调用成功完成。 如果为 FALSE，将打开访问令牌，但该线程将无权模拟令牌，此调用完成时。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。
 
 如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>参数
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果为 TRUE，该线程将保留在请求的模拟级别中，此方法完成后。 如果为 FALSE，该线程将恢复到其原始的模拟级别。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 指示是否针对线程调用的安全上下文进行访问检查[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或对调用线程的过程的安全上下文。
 
 如果此参数为 FALSE，为调用线程使用的安全上下文执行访问检查。 如果线程正在模拟客户端，此安全上下文可为客户端进程。 此参数为 TRUE，则为调用线程使用该过程的安全上下文进行访问检查。
 
-*sil*  
+*sil*<br/>
 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)枚举类型，用于提供令牌的模拟级别。
 
 ### <a name="return-value"></a>返回值
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>参数
 
-*RequiredPrivileges*  
+*RequiredPrivileges*<br/>
 指向[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)结构。
 
-*pbResult*  
+*pbResult*<br/>
 指向的值的方法设置指示是否在启用任何或所有指定的特权`CAccessToken`对象。
 
 ### <a name="return-value"></a>返回值
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>参数
 
-*hThread*  
+*hThread*<br/>
 若要模拟从还原的线程的句柄。 如果*hThread*为 NULL，则假定为当前线程。
 
 ### <a name="return-value"></a>返回值
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rDacl*  
+*rDacl*<br/>
 新的默认[CDacl 类](../../atl/reference/cdacl-class.md)信息。
 
 ### <a name="return-value"></a>返回值
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 [CSid 类](../../atl/reference/csid-class.md)对象，其中包含所有者信息。
 
 ### <a name="return-value"></a>返回值
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 [CSid 类](../../atl/reference/csid-class.md)对象，其中包含的主要组信息。
 
 ### <a name="return-value"></a>返回值
@@ -1191,6 +1191,6 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ## <a name="see-also"></a>请参阅
 
-[ATLSecurity 示例](../../visual-cpp-samples.md)   
-[访问令牌](/windows/desktop/SecAuthZ/access-tokens)   
+[ATLSecurity 示例](../../visual-cpp-samples.md)<br/>
+[访问令牌](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [类概述](../../atl/atl-class-overview.md)

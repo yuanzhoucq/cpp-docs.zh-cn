@@ -1,5 +1,5 @@
 ---
-title: omp_set_nested |Microsoft 文档
+title: omp_set_nested |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116875"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 启用嵌套并行度。  
@@ -34,20 +34,19 @@ void omp_set_nested(
 );  
 ```  
   
+### <a name="parameters"></a>参数
+  
+*val*<br/>
+如果非零，使嵌套的并行度。 如果为零，则禁用嵌套并行度。  
+  
 ## <a name="remarks"></a>备注  
- 其中，  
+ OMP 嵌套并行度可以与开启`omp_set_nested`，或通过设置[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)环境变量。  
   
- `val`  
- 如果不为零，使嵌套的并行度。 如果为零，则禁用嵌套并行度。  
+ 设置`omp_set_nested`将覆盖的设置`OMP_NESTED`环境变量。  
   
-## <a name="remarks"></a>备注  
- OMP 嵌套并行可以与开启`omp_set_nested`，或通过设置[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)环境变量。  
+ 启用时，环境变量可以中断否则为正常运行的程序，因为线程数以指数方式增加嵌套并行区域时。  例如 recurses 6 次，并将设置为 4 的 OMP 线程数，需要 4096 (4 到 6 的强大功能) 的函数线程通常情况下，应用程序的性能会降低，如果线程数超过处理器的数量。 一个例外就是 I/O 绑定应用程序。  
   
- 有关设置`omp_set_nested`将替代的设置`OMP_NESTED`环境变量。  
-  
- 启用时，环境变量可以中断程序否则为操作，因为的线程数以指数级增加嵌套并行区域时。  例如 6 次，并将设置为 4 的 OMP 线程数 recurses 需要 4096 (4 的 6 次幂) 的函数线程一般情况下，你的应用程序的性能，如果线程数超过处理器的数目将会降低。 一个例外将 I/O 绑定应用程序。  
-  
- 使用[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)要显示的当前设置`omp_set_nested`。  
+ 使用[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)若要显示的当前设置`omp_set_nested`。  
   
  有关详细信息，请参阅[3.1.9 omp_set_nested 函数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。  
   

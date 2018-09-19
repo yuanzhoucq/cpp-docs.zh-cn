@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2212 |Microsoft 文档
+title: 编译器错误 C2212 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089874"
 ---
 # <a name="compiler-error-c2212"></a>编译器错误 C2212
-identifier： 不 __based 可用于指向函数的指针  
-  
- 不能声明为指向函数的指针`__based`。 如果你需要基于代码的数据，使用`__declspec`关键字或`data_seg`杂注。
+
+identifier: __based 不可用于指向函数的指针
+
+不能声明为指向函数的指针`__based`。 如果需要基于代码的数据，请使用`__declspec`关键字或`data_seg`杂注。

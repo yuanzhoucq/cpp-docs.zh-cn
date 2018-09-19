@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116238"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>初始化和委派构造函数
+
 在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。
 
 ## <a name="brace-initialization"></a>大括号初始化
+
 您可以为任何类、结构或联合使用大括号初始化。 如果类型具有隐式或显式声明的默认构造函数，则您可以使用默认大括号初始化（具有空大括号）。 例如，可通过使用默认和非默认大括号初始化来初始化以下类：
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list 构造函数
+
 [Initializer_list 类](../standard-library/initializer-list-class.md)表示只能在构造函数，并且在其他上下文中的指定类型的对象的列表。 您可通过使用大括号初始化构造 initializer_list：
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>委派构造函数
+
 许多类具有执行类似操作（例如参数验证）的多个构造函数
 
 ```cpp

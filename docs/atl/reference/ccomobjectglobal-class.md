@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076653"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 类
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]指向标识 iid，则为 NULL，如果找不到该接口的接口指针的指针。
 
 ### <a name="return-value"></a>返回值
@@ -174,7 +174,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComObjectStack 类](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 类](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack 类](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 类](../../atl/reference/ccomobject-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

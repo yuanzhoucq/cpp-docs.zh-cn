@@ -36,14 +36,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086832"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
+
 OLE DB 模板中的所有访问器从此类派生。 `CAccessorBase` 允许一个行集来管理多个访问器。 它还提供有关参数和输出列的绑定。  
   
 ## <a name="syntax"></a>语法
@@ -65,9 +66,11 @@ OLE DB 模板中的所有访问器从此类派生。 `CAccessorBase` 允许一�
 |[ReleaseAccessors](#release)|释放访问器。|  
 
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
 
 ## <a name="close"></a> Caccessorbase:: Close
+
 关闭访问器。  
   
 ### <a name="syntax"></a>语法  
@@ -77,9 +80,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>备注  
- 必须调用[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一个。  
+
+必须调用[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一个。  
 
 ## <a name="geth"></a> Caccessorbase:: Gethaccessor
+
 检索指定访问器的访问器句柄。  
   
 ### <a name="syntax"></a>语法  
@@ -89,13 +94,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>参数  
- *nAccessor*  
- [in] 访问器的零偏移量。  
+
+*nAccessor*<br/>
+[in] 访问器的零偏移量。  
   
 ### <a name="return-value"></a>返回值  
- 访问器句柄。  
+
+访问器句柄。  
 
 ## <a name="getnum"></a> Caccessorbase:: Getnumaccessors
+
 检索类创建的取值函数的数目。  
   
 ### <a name="syntax"></a>语法  
@@ -105,9 +113,11 @@ ULONG GetNumAccessors() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 访问器类创建的数。  
+
+访问器类创建的数。  
 
 ## <a name="isauto"></a> Caccessorbase:: Isautoaccessor
+
 如果自动检索数据的访问器在移动操作期间，则返回 true。  
   
 ### <a name="syntax"></a>语法  
@@ -117,13 +127,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>参数  
- *nAccessor*  
- [in] 访问器的零偏移量。  
+
+*nAccessor*<br/>
+[in] 访问器的零偏移量。  
   
 ### <a name="return-value"></a>返回值  
- 返回 **，则返回 true**如果访问器为自动访问器。 否则，返回 **false**。  
+
+返回 **，则返回 true**如果访问器为自动访问器。 否则，返回 **false**。  
 
 ## <a name="release"></a> Caccessorbase:: Releaseaccessors
+
 释放访问器类创建的。  
   
 ### <a name="syntax"></a>语法  
@@ -133,16 +146,20 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```  
   
 #### <a name="parameters"></a>参数  
- *pUnk*  
- [in]一个指向`IUnknown`为其创建访问器的 COM 对象的接口。  
+
+*pUnk*<br/>
+[in]一个指向`IUnknown`为其创建访问器的 COM 对象的接口。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 从调用[caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md)。 
+
+从调用[caccessorrowset:: Close](../../data/oledb/caccessorrowset-close.md)。 
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessorBase 类](../../data/oledb/caccessorbase-class.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessorBase 类](../../data/oledb/caccessorbase-class.md)

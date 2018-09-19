@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4393 |Microsoft 文档
+title: 编译器警告 （等级 1） C4393 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59a1022f54d22e97a11c0970cad6bcd8918c7190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79a77e73e87d8ebc6a4bcff76fba296188233c1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053851"
 ---
 # <a name="compiler-warning-level-1-c4393"></a>编译器警告（等级 1）C4393
-var: const literal 数据成员; 没有影响忽略  
-  
- A[文本](../../windows/literal-cpp-component-extensions.md)数据成员还被指定为常量。  因为 const literal 数据成员意味着，你不需要添加到声明 const。  
-  
- 下面的示例生成 C4393:  
-  
-```  
-// C4393.cpp  
-// compile with: /clr /W1 /c  
-ref struct Y1 {  
-   literal const int staticConst = 10;   // C4393  
-   literal int staticConst2 = 10;   // OK  
-};  
+
+var： 常量不会影响 literal 数据成员;忽略
+
+一个[文字](../../windows/literal-cpp-component-extensions.md)数据成员也被指定为常量。  Literal 数据成员暗指常量，因为您不需要添加到声明 const。
+
+下面的示例生成 C4393:
+
+```
+// C4393.cpp
+// compile with: /clr /W1 /c
+ref struct Y1 {
+   literal const int staticConst = 10;   // C4393
+   literal int staticConst2 = 10;   // OK
+};
 ```

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116771"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 类
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>参数
 
-*curSrc*  
+*curSrc*<br/>
 一个现有的 `CComCurrency` 对象。
 
-*cySrc*  
+*cySrc*<br/>
 货币类型的变量。
 
-*bSrc*， *dSrc*， *fSrc*， *lSrc*， *sSrc*， *ulSrc，usSrc*  
+*bSrc*， *dSrc*， *fSrc*， *lSrc*， *sSrc*， *ulSrc，usSrc*<br/>
 提供给成员变量的初始值`m_currency`。
 
-*cSrc*  
+*cSrc*<br/>
 字符，其中包含提供给成员变量的初始值`m_currency`。
 
-*nInteger*， *nFraction*  
+*nInteger*， *nFraction*<br/>
 整数和小数部分的初始货币值。 请参阅[CComCurrency](../../atl/reference/ccomcurrency-class.md)的详细信息的概述。
 
-*pDispSrc*  
+*pDispSrc*<br/>
 `IDispatch`指针。
 
-*varSrc*  
+*varSrc*<br/>
 类型的变量的变体。 使用当前线程的区域设置来执行此转换。
 
-*szSrc*  
+*szSrc*<br/>
 包含初始值的 Unicode 或 ANSI 字符串。 使用当前线程的区域设置来执行此转换。
 
 ### <a name="remarks"></a>备注
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 要比较的 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*nOperand*  
+*nOperand*<br/>
 乘数。
 
-*cur*  
+*cur*<br/>
 `CComCurrency`用作乘数对象。
 
 ### <a name="return-value"></a>返回值
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>参数
 
-*nOperand*  
+*nOperand*<br/>
 乘数。
 
-*cur*  
+*cur*<br/>
 `CComCurrency`用作乘数对象。
 
 ### <a name="return-value"></a>返回值
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>参数
 
-*nOperand*  
+*nOperand*<br/>
 除数。
 
 ### <a name="return-value"></a>返回值
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>参数
 
-*nOperand*  
+*nOperand*<br/>
 除数。
 
 ### <a name="return-value"></a>返回值
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 `CComCurrency`对象添加到原始对象。
 
 ### <a name="return-value"></a>返回值
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>参数
 
-*curSrc*  
+*curSrc*<br/>
 一个 `CComCurrency` 对象。
 
-*cySrc*  
+*cySrc*<br/>
 货币类型的变量。
 
-*sSrc*， *fSrc*， *lSrc*， *bSrc*， *usSrc*， *dSrc*， *cSrc*， *ulSrc*， *dSrc*  
+*sSrc*， *fSrc*， *lSrc*， *bSrc*， *usSrc*， *dSrc*， *cSrc*， *ulSrc*， *dSrc*<br/>
 要分配到的数字值`CComCurrency`对象。
 
 ### <a name="return-value"></a>返回值
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 `CComCurrency`要比较的对象。
 
 ### <a name="return-value"></a>返回值
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>参数
 
-*cur*  
+*cur*<br/>
 一个 `CComCurrency` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -571,7 +571,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 这些运算符用于强制转换`CComCurrency`为货币数据类型的对象。
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>参数
 
-*nDecimals*  
+*nDecimals*<br/>
 向其位数`m_currency`将舍入，在 0 到 4 范围内。
 
 ### <a name="return-value"></a>返回值
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>参数
 
-*nFraction*  
+*nFraction*<br/>
 要分配到的小数部分的值`m_currency`数据成员。 符号的小数部分必须与整数部分中，相同和的值必须在范围内 (CY_MIN_FRACTION) 是-9999 到 + 9999 (CY_MAX_FRACTION)。
 
 ### <a name="return-value"></a>返回值
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>参数
 
-*nInteger*  
+*nInteger*<br/>
 要分配给的整数部分的值`m_currency`数据成员。 符号的整数部分必须匹配现有的小数部分的符号。
 
 *nInteger*必须在范围内 CY_MIN_INTEGER 到 CY_MAX_INTEGER 非独占。 在 atlcur.h 中定义这些值。
@@ -651,6 +651,6 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ## <a name="see-also"></a>请参阅
 
-[COleCurrency 类](../../mfc/reference/colecurrency-class.md)   
-[货币](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[COleCurrency 类](../../mfc/reference/colecurrency-class.md)<br/>
+[货币](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [类概述](../../atl/atl-class-overview.md)

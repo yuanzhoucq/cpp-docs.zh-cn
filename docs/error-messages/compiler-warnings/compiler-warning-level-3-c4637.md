@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4637 |Microsoft 文档
+title: 编译器警告 （等级 3） C4637 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192cec5940cb813ab5057cf179b7f67feb1d0f78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 094182dd0e438a89ce3652130b411ab1ca1a0bd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111779"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>编译器警告（等级 3）C4637
-XML 文档注释目标：\<包括 > 丢弃的标记。  原因  
-  
- 语法[\<包括 >](../../ide/include-visual-cpp.md)标记的不正确。  
-  
- 下面的示例生成 C4637：  
-  
-```  
-// C4637.cpp  
-// compile with: /clr /doc /LD /W3  
-using namespace System;  
-  
-/// Text for class MyClass.  
-public ref class MyClass {   
-public:  
-   /// <include file="c:\davedata\jtest\xml_include.doc"/>  
-   // Try the following line instead:  
-   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />  
-   void MyMethod() {  
-   }  
-};   // C4637  
+
+XML 文档注释目标：\<包括 > 标记被丢弃。  原因
+
+语法[\<包括 >](../../ide/include-visual-cpp.md)标记的不正确。
+
+下面的示例生成 C4637：
+
+```
+// C4637.cpp
+// compile with: /clr /doc /LD /W3
+using namespace System;
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <include file="c:\davedata\jtest\xml_include.doc"/>
+   // Try the following line instead:
+   // /// <include file='xml_include.doc' path='MyDocs/MyMembers/*' />
+   void MyMethod() {
+   }
+};   // C4637
 ```

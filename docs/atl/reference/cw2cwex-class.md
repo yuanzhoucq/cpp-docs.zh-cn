@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4314e4f2d31e499c01049d1fbec579f16c2849
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b45945a0f91570d78d8c1e365fd70240c2385b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116797"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 类
 
@@ -36,13 +36,13 @@ ms.locfileid: "43765355"
 ## <a name="syntax"></a>语法
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2CWEX
 ```
 
 #### <a name="parameters"></a>参数
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。
 
 ## <a name="members"></a>成员
@@ -97,16 +97,16 @@ class CW2CWEX
 构造函数。
 
 ```
-CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2CWEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 要转换的文本字符串。
 
-*nCodePage*  
+*nCodePage*<br/>
 代码页中。 不使用此类中。
 
 ### <a name="remarks"></a>备注
@@ -137,7 +137,7 @@ LPCWSTR m_psz;
 
 转换运算符。
 
-```  
+```
 operator LPCWSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ operator LPCWSTR() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CA2AEX 类](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
-[CA2WEX 类](../../atl/reference/ca2wex-class.md)   
-[CW2AEX 类](../../atl/reference/cw2aex-class.md)   
-[CW2WEX 类](../../atl/reference/cw2wex-class.md)   
+[CA2AEX 类](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX 类](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX 类](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX 类](../../atl/reference/cw2aex-class.md)<br/>
+[CW2WEX 类](../../atl/reference/cw2wex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

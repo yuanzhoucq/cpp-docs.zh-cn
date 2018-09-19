@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084570"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 类
 
@@ -42,19 +42,19 @@ ms.locfileid: "43755705"
 ## <a name="syntax"></a>语法
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 源对象的唯一标识符。 当`IDispEventSimpleImpl`类的基类为复合控件，此参数使用所需的所包含控件的资源 ID。 在其他情况下，使用任意的正整数。
 
-*T*  
+*T*<br/>
 用户的类，该类派生自`IDispEventSimpleImpl`。
 
-*pdiid*  
+*pdiid*<br/>
 指向此类实现的事件调度接口的 IID 的指针。
 
 ## <a name="members"></a>成员
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 [in]一个指向`IUnknown`事件源对象的接口。
 
 ### <a name="return-value"></a>返回值
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 [in]一个指向`IUnknown`事件源对象的接口。
 
-*piid*  
+*piid*<br/>
 指向 IID 的事件源对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 [in]一个指向`IUnknown`事件源对象的接口。
 
-*piid*  
+*piid*<br/>
 指向 IID 的事件源对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 [in]一个指向`IUnknown`事件源对象的接口。
 
 ### <a name="return-value"></a>返回值
@@ -287,8 +287,8 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ## <a name="see-also"></a>请参阅
 
-[_ATL_FUNC_INFO 结构](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventImpl 类](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 结构](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl 类](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [类概述](../../atl/atl-class-overview.md)

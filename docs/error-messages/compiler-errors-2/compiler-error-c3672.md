@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3672 |Microsoft 文档
+title: 编译器错误 C3672 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaea09d89c192a1820c2a384144ce758fde90476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0002b6fdf25374ec0d977c5fa4f450e41d29335f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090641"
 ---
 # <a name="compiler-error-c3672"></a>编译器错误 C3672
-伪析构函数表达式仅用作函数调用的一部分  
-  
- 未正确调用析构函数。  有关详细信息，请参阅[析构函数](../../cpp/destructors-cpp.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3672。  
-  
-```  
-// C3672.cpp  
-template<typename T>  
-void f(T* pT) {  
-   &pT->T::~T;   // C3672  
-   pT->T::~T();   // OK  
-};  
-  
-int main() {  
-   int i;  
-   f(&i);  
-}  
+
+伪析构函数表达式只能用作函数调用的一部分
+
+未正确调用析构函数。  有关详细信息，请参阅[析构函数](../../cpp/destructors-cpp.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3672。
+
+```
+// C3672.cpp
+template<typename T>
+void f(T* pT) {
+   &pT->T::~T;   // C3672
+   pT->T::~T();   // OK
+};
+
+int main() {
+   int i;
+   f(&i);
+}
 ```

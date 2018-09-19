@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2045 |Microsoft 文档
+title: 编译器错误 C2045 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81e22214cf9f89a2b2bcabe1bc484647d7f9c0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c2de96f6f84e32de6b1eeae285a5210f16192ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115913"
 ---
 # <a name="compiler-error-c2045"></a>编译器错误 C2045
-“identifier”：标签已被重定义  
-  
- 标签出现在同一函数中的多个语句之前。  
-  
- 以下示例生成 C2045：  
-  
-```  
-// C2045.cpp  
-int main() {  
-   label: {  
-   }  
-   goto label;  
-   label: {}   // C2045  
-}  
+
+“identifier”：标签已被重定义
+
+标签出现在同一函数中的多个语句之前。
+
+以下示例生成 C2045：
+
+```
+// C2045.cpp
+int main() {
+   label: {
+   }
+   goto label;
+   label: {}   // C2045
+}
 ```

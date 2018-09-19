@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2145 |Microsoft 文档
+title: 编译器错误 C2145 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faccc0cc6c592df877517c6fd99ff539a1d65828
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eaaed259448fc55e28211a5eab69a129729433e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083114"
 ---
 # <a name="compiler-error-c2145"></a>编译器错误 C2145
-语法错误：标识符的前面缺少“token”  
-  
- 编译器预期 `token` ，却找到了标识符。  
-  
- 块中的最后一个声明后，缺少分号可能会导致此错误。
+
+语法错误：标识符的前面缺少“token”
+
+编译器预期 `token` ，却找到了标识符。
+
+块中的最后一个声明后，缺少分号可能会导致此错误。

@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1007 |Microsoft 文档
+title: NMAKE 错误 U1007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112299"
 ---
 # <a name="nmake-fatal-error-u1007"></a>NMAKE 错误 U1007
-双引号名称中不允许  
-  
- 指定的目标名称或文件名包含双引号 (**"**)。  
-  
- 两个双引号可括起的文件名，但不能包含在它。
+
+双引号名称中不允许
+
+指定的目标名称或文件名包含双引号 (**"**)。
+
+两个双引号可以括起来的文件名，但不能包含在其中。

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109335"
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据交换宏
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>参数
 
-*Rootkey*  
+*Rootkey*<br/>
 注册表项根。
 
-*子项*  
+*子项*<br/>
 注册表子项中。
 
-*valuename*  
+*valuename*<br/>
 注册表项中。
 
-*成员*  
+*成员*<br/>
 要与指定的注册表项相关联的成员变量。
 
-*member_size*  
+*member_size*<br/>
 以字节为单位的成员变量的大小。
 
 ### <a name="remarks"></a>备注
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>参数
 
-*Rootkey*  
+*Rootkey*<br/>
 注册表项根。
 
-*子项*  
+*子项*<br/>
 注册表子项中。
 
-*valuename*  
+*valuename*<br/>
 注册表项中。
 
-*成员*  
+*成员*<br/>
 要与指定的注册表项相关联的成员变量。
 
-*member_size*  
+*member_size*<br/>
 以字节为单位的成员变量的大小。
 
 ### <a name="remarks"></a>备注
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>参数
 
-*Rootkey*  
+*Rootkey*<br/>
 注册表项根。
 
-*子项*  
+*子项*<br/>
 注册表子项中。
 
-*valuename*  
+*valuename*<br/>
 注册表项中。
 
-*成员*  
+*成员*<br/>
 要与指定的注册表项相关联的成员变量。
 
-*member_size*  
+*member_size*<br/>
 以字节为单位的成员变量的大小。
 
 ### <a name="remarks"></a>备注
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>参数
 
-*Rootkey*  
+*Rootkey*<br/>
 注册表项根。
 
-*子项*  
+*子项*<br/>
 注册表子项中。
 
-*valuename*  
+*valuename*<br/>
 注册表项中。
 
-*成员*  
+*成员*<br/>
 要与指定的注册表项相关联的成员变量。
 
-*member_size*  
+*member_size*<br/>
 以字节为单位的成员变量的大小。
 
 ### <a name="remarks"></a>备注
@@ -212,6 +212,6 @@ RDX_TEXT(
 
 ## <a name="see-also"></a>请参阅
 
-[宏](../../atl/reference/atl-macros.md)   
+[宏](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

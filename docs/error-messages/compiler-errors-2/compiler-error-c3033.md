@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3033 |Microsoft 文档
+title: 编译器错误 C3033 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ec4bb8f59454f70c654157532c67ea9824157f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61e1b1c4a5711b18263f22ce8344beb383eeafdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051797"
 ---
 # <a name="compiler-error-c3033"></a>编译器错误 C3033
-“var”: “clause”子句中的变量不能是常量限定类型  
-  
- 传递给某些子句的值不能为 `const` 变量。  
-  
- 下面的示例生成 C3033：  
-  
-```  
-// C3033.cpp  
-// compile with: /openmp /link vcomps.lib  
-int main() {  
-   const int val = 1;  
-   int val2 = 1;  
-  
-   #pragma omp parallel reduction(+ : val)   // C3033  
-   ;  
-  
-   #pragma omp parallel reduction(+ : val2)   // OK  
-   ;  
-}  
+
+“var”: “clause”子句中的变量不能是常量限定类型
+
+传递给某些子句的值不能为 `const` 变量。
+
+下面的示例生成 C3033：
+
+```
+// C3033.cpp
+// compile with: /openmp /link vcomps.lib
+int main() {
+   const int val = 1;
+   int val2 = 1;
+
+   #pragma omp parallel reduction(+ : val)   // C3033
+   ;
+
+   #pragma omp parallel reduction(+ : val2)   // OK
+   ;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4513 |Microsoft 文档
+title: 编译器警告 （等级 C4513 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c3e89204ec30f9c96a5ea03ede5093dd013d0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75ae1c94d7a11fc9bb0049333c65a6677b04778a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087378"
 ---
 # <a name="compiler-warning-level-4-c4513"></a>编译器警告（等级 4）C4513
-class： 无法生成析构函数  
-  
- 编译器无法生成给定类; 在默认析构函数已不创建任何析构函数。 析构函数是不可访问到派生的类的基类中。 如果基类具有私有析构函数，使其公共或受保护。
+
+class： 未能生成析构函数
+
+编译器无法生成默认析构函数为给定的类;创建没有析构函数。 析构函数是不能由派生类访问基类中。 如果基类具有私有析构函数，使其公共或受保护。

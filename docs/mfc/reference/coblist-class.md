@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07949bdf7116f4a0eb1d598f90cb0be78b116259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112221"
 ---
 # <a name="coblist-class"></a>CObList 类
 有序列表的唯一，则 fSupports`CObject`指针可访问按顺序或指针值。  
@@ -173,11 +173,11 @@ void AddHead(CObList* pNewList);
   
  此程序的结果如下所示：  
   
- `AddHead example: A CObList with 2 elements`  
-  
- `a CAge at $44A8 40`  
-  
- `a CAge at $442A 21`  
+```Output
+AddHead example: A CObList with 2 elements
+a CAge at $44A8 40
+a CAge at $442A 21
+```
   
 ##  <a name="addtail"></a>  CObList::AddTail  
  将新元素的列表添加到此列表的结尾。  
@@ -214,11 +214,11 @@ void AddTail(CObList* pNewList);
   
  此程序的结果如下所示：  
   
- `AddTail example: A CObList with 2 elements`  
-  
- `a CAge at $444A 21`  
-  
- `a CAge at $4526 40`  
+```Output
+AddTail example: A CObList with 2 elements
+a CAge at $444A 21
+a CAge at $4526 40
+```
   
 ##  <a name="coblist"></a>  CObList::CObList  
  构造一个空`CObject`指针列表。  
@@ -458,9 +458,10 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  此程序的结果如下所示：  
   
- `a CAge at $479C 40`  
-  
- `a CAge at $46C0 21`  
+```Output
+a CAge at $479C 40
+a CAge at $46C0 21
+```
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
  获取标识的列表元素*rPosition*，然后设置*rPosition*列表的上一项的位置值。  
@@ -501,9 +502,10 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  此程序的结果如下所示：  
   
- `a CAge at $421C 21`  
-  
- `a CAge at $421C 40`  
+```Output
+a CAge at $421C 21
+a CAge at $421C 40
+```
   
 ##  <a name="getsize"></a>  CObList::GetSize  
  返回列表的元素数。  
@@ -611,13 +613,12 @@ POSITION InsertAfter(
   
  此程序的结果如下所示：  
   
- `InsertAfter example: A CObList with 3 elements`  
-  
- `a CAge at $4A44 40`  
-  
- `a CAge at $4A64 65`  
-  
- `a CAge at $4968 21`  
+```Output
+InsertAfter example: A CObList with 3 elements
+a CAge at $4A44 40
+a CAge at $4A64 65
+a CAge at $4968 21
+```
   
 ##  <a name="insertbefore"></a>  CObList::InsertBefore  
  将元素添加到此列表中指定位置处的元素之前。  
@@ -652,13 +653,12 @@ POSITION InsertBefore(
   
  此程序的结果如下所示：  
   
- `InsertBefore example: A CObList with 3 elements`  
-  
- `a CAge at $4AE2 40`  
-  
- `a CAge at $4B02 65`  
-  
- `a CAge at $49E6 21`  
+```Output
+InsertBefore example: A CObList with 3 elements
+a CAge at $4AE2 40
+a CAge at $4B02 65
+a CAge at $49E6 21
+```
   
 ##  <a name="isempty"></a>  CObList::IsEmpty  
  指示此列表是否包含任何元素。  
@@ -827,11 +827,11 @@ void SetAt(
   
  此程序的结果如下所示：  
   
- `SetAt example: A CObList with 2 elements`  
-  
- `a CAge at $4D98 40`  
-  
- `a CAge at $4DB8 65`  
+```Output
+SetAt example: A CObList with 2 elements
+a CAge at $4D98 40
+a CAge at $4DB8 65
+```
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2420 |Microsoft 文档
+title: 编译器错误 C2420 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e951c1007ccdd0885e19a6ef3b483128fcfc2a92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a85e638edc5710c8db13b324d58a5485df31819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053071"
 ---
 # <a name="compiler-error-c2420"></a>编译器错误 C2420
-“identifier”: 上下文中的非法符号  
-  
- 标识符在此上下文中无效。
+
+“identifier”: 上下文中的非法符号
+
+标识符在此上下文中无效。

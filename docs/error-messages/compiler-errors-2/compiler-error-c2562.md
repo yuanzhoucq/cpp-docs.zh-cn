@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2562 |Microsoft 文档
+title: 编译器错误 C2562 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114223"
 ---
 # <a name="compiler-error-c2562"></a>编译器错误 C2562
-identifier: void 函数返回值  
-  
- 该函数声明为`void`但返回一个值。  
-  
- 不正确的函数原型可以导致此错误。  
-  
- 如果函数声明中指定的返回类型，可能会修复此错误。  
-  
- 下面的示例生成 C2562:  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+
+identifier: void 函数返回值
+
+该函数声明为`void`但返回一个值。
+
+此错误可能引起错误的函数原型。
+
+如果在函数声明中指定的返回类型，可能会修复此错误。
+
+下面的示例生成 C2562:
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

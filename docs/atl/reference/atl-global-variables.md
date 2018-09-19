@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55844390b872cb0d94ff991ab79b8519388d009f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f32ff38008e55e656bf8901541ffc5ec7246bed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085987"
 ---
 # <a name="atl-global-variables"></a>ATL 全局变量
 
@@ -30,19 +30,20 @@ ms.locfileid: "43762455"
 
 存储指向当前模块的全局变量。  
 
-```cpp  
-__declspec(selectany) CAtlModule * _pAtlModule  
-```  
+```cpp
+__declspec(selectany) CAtlModule * _pAtlModule
+```
+
 ### <a name="remarks"></a>备注
 
 此全局变量的方法可以用于提供 （现在已过时） 类 CComModule Visual c + + 6.0 中提供的功能。
 
 ### <a name="example"></a>示例
 
-```cpp  
-LONG lLocks = _pAtlModule->GetLockCount();  
-```  
+```cpp
+LONG lLocks = _pAtlModule->GetLockCount();
+```
+
 ### <a name="requirements"></a>要求
 
-**标头：** atlbase.h  
-
+**标头：** atlbase.h

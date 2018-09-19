@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1099 |Microsoft 文档
+title: NMAKE 错误 U1099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be09691de4212d07b1452ffe33725a3978fc053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3ef75a1435d8c922087fcdd21d1941961bc82cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113378"
 ---
 # <a name="nmake-fatal-error-u1099"></a>NMAKE 错误 U1099
-堆栈溢出  
-  
- 生成文件中正在处理已过于复杂，NMAKE 中的当前堆栈分配。 NMAKE 具有 0x3000 (12 K) 分配。  
-  
- 若要增加 NMAKE 的堆栈分配，运行[editbin /stack](../../build/reference/stack.md)实用工具使用更大的堆栈选项：  
-  
- **editbin /STACK:reserve NMAKE。EXE**  
-  
- 其中*保留*是一个数字大于 NMAKE 中的当前堆栈分配。
+
+堆栈溢出
+
+正在处理的生成文件已过于复杂，NMAKE 中的当前的堆栈分配。 NMAKE 具有 0x3000 (12 K) 的分配。
+
+若要增加 NMAKE 的堆栈分配，请运行[editbin /stack](../../build/reference/stack.md)实用工具使用更大的堆栈选项：
+
+**editbin /STACK:reserve NMAKE。EXE**
+
+其中*保留*是一个数字大于 NMAKE 中的当前的堆栈分配。

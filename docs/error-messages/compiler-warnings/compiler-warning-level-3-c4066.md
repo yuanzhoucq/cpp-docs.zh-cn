@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4066 |Microsoft 文档
+title: 编译器警告 （等级 3） C4066 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81262a2fcb1eb3309fa5f3a4e5459ee1d3f0fe24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e3f20e8563b8ca62a96d3ae57f1bfa9f56698f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117059"
 ---
 # <a name="compiler-warning-level-3-c4066"></a>编译器警告（等级 3）C4066
-宽字符常量的第一个字符之外的字符被忽略  
-  
- 编译器仅处理宽字符常量的第一个字符。
+
+宽字符常量的第一个字符之外的字符被忽略
+
+编译器仅处理宽字符常量的第一个字符。

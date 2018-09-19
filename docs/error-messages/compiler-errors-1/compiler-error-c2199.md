@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2199 |Microsoft 文档
+title: 编译器错误 C2199 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31164597c9427dc5e915f5a0315d8e2bb7825e8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 616b155ad0ca22c3eb45fd881a22ff36b5430f81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083647"
 ---
 # <a name="compiler-error-c2199"></a>编译器错误 C2199
-语法错误： 找到标识符 (在全局范围内 （是否要使用声明）？  
-  
- 指定的上下文导致语法错误。 可能有不正确的声明语法。  
-  
- 下面的示例生成 C2199:  
-  
-```  
-// C2199.cpp  
-// compile with: /c  
-int j = int(1) int(1);   // C2199  
-int j = 1;   // OK  
+
+语法错误： 找到标识符 (在全局范围内 （是否使用声明？）
+
+指定的上下文导致语法错误。 可能不正确的声明语法。
+
+下面的示例生成 C2199:
+
+```
+// C2199.cpp
+// compile with: /c
+int j = int(1) int(1);   // C2199
+int j = 1;   // OK
 ```

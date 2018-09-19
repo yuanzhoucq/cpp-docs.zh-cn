@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0009 |Microsoft 文档
+title: 表达式计算器错误 CXX0009 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d579c22ee72992b16cd39a2cedb82e1219972c5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95c2706f4b1eb758eea24cc16ea16f4b561155c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109790"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>表达式计算器错误 CXX0009
-缺少后字符常量  
-  
- 缺少应有的末尾字符常量的单引号。 重新键入将括在单引号中的字符常量的表达式。  
-  
- 此错误是与 CAN0009 相同。
+
+缺少在字符串末尾
+
+单引号字符常量的末尾不应缺失。 重新键入表达式，用单引号括住字符常量。
+
+此错误是与 CAN0009 相同。

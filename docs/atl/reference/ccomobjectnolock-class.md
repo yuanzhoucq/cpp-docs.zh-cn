@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4f2ce063c817ee4bf0c9f8ee4fea3beffb075
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078954"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 
@@ -35,13 +35,13 @@ ms.locfileid: "43762900"
 ## <a name="syntax"></a>语法
 
 ```
-template<class Base>  
+template<class Base>
 class CComObjectNoLock : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -99,7 +99,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>参数
 
-\*void  
+\*void<br/>
 [in]未使用此未命名的参数。 存在与其他对称性`CComXXXObjectXXX`构造函数。
 
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
@@ -124,10 +124,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的标识符。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
 ### <a name="return-value"></a>返回值

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109764"
 ---
 # <a name="adding-an-atl-simple-object"></a>添加 ATL 简单对象
 
@@ -45,10 +45,10 @@ ms.locfileid: "43765591"
 
 ## <a name="see-also"></a>请参阅
 
-[添加类](../../ide/adding-a-class-visual-cpp.md)   
-[在 ATL 项目中添加新接口](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[将连接点添加到对象](../../atl/adding-connection-points-to-an-object.md)   
-[添加方法](../../ide/adding-a-method-visual-cpp.md)   
-[MFC 类](../../mfc/reference/adding-an-mfc-class.md)   
+[添加类](../../ide/adding-a-class-visual-cpp.md)<br/>
+[在 ATL 项目中添加新接口](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[将连接点添加到对象](../../atl/adding-connection-points-to-an-object.md)<br/>
+[添加方法](../../ide/adding-a-method-visual-cpp.md)<br/>
+[MFC 类](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [添加一般 C++ 类](../../ide/adding-a-generic-cpp-class.md)
 

@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086962"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>确定要使用的访问器类型
+
 在编译时或在运行时，您可以确定行集上的数据类型。  
   
- 如果您需要在编译时确定数据类型，使用静态访问器 (如`CAccessor`)。 手动或使用 ATL OLE DB 使用者向导，您可以确定数据类型。  
+如果您需要在编译时确定数据类型，使用静态访问器 (如`CAccessor`)。 手动或使用 ATL OLE DB 使用者向导，您可以确定数据类型。  
   
- 如果您需要在运行时确定的数据类型，使用动态 (`CDynamicAccessor`或其子级) 或手动访问器 (`CManualAccessor`)。 在这些情况下，您可以调用`GetColumnInfo`上要返回的列绑定信息，您可以确定类型的行集。  
+如果您需要在运行时确定的数据类型，使用动态 (`CDynamicAccessor`或其子级) 或手动访问器 (`CManualAccessor`)。 在这些情况下，您可以调用`GetColumnInfo`上要返回的列绑定信息，您可以确定类型的行集。  
   
- 下表列出了使用者模板中提供的访问器的类型。 每个访问器都有优点和缺点。 具体取决于您的具体情况，一个取值函数类型应满足你的需求。  
+下表列出了使用者模板中提供的访问器的类型。 每个访问器都有优点和缺点。 具体取决于您的具体情况，一个取值函数类型应满足你的需求。  
   
 |访问器类|绑定|参数|注释|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ ms.locfileid: "43679719"
 |`CXMLAccessor`|自动。|不是。|检索从字符串数据作为数据存储区访问的数据，并将其格式化为 XML 标记数据。|  
   
 ## <a name="see-also"></a>请参阅  
- [使用访问器](../../data/oledb/using-accessors.md)
+
+[使用访问器](../../data/oledb/using-accessors.md)

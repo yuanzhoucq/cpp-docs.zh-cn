@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088470"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 类
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>参数
 
-*hHeap*  
+*hHeap*<br/>
 现有堆句柄。
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 一个标志，该值指示如果`CWin32Heap`对象是资源在堆的所有权。
 
 ### <a name="remarks"></a>备注
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>参数
 
-*hHeap*  
+*hHeap*<br/>
 一个现有的堆对象。
 
-*dwFlags*  
+*dwFlags*<br/>
 在创建堆时使用的标志。
 
-*nInitialSize*  
+*nInitialSize*<br/>
 堆的初始大小。
 
-*nMaxSize*  
+*nMaxSize*<br/>
 堆的最大大小。
 
 ### <a name="remarks"></a>备注
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向要释放的内存块的指针。 NULL 是一个有效的值，不执行任何操作。
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 该方法将获取其大小的内存块的指针。 这是返回的指针[CWin32Heap::Allocate](#allocate)或[CWin32Heap::Reallocate](#reallocate)。
 
 ### <a name="return-value"></a>返回值
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向要重新分配的内存块的指针。
 
-*nBytes*  
+*nBytes*<br/>
 已分配块的新大小（以字节为单位）。 块可放大或缩小。
 
 ### <a name="return-value"></a>返回值
@@ -279,9 +279,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
-[IAtlMemMgr 类](../../atl/reference/iatlmemmgr-class.md)   
-[CLocalHeap 类](../../atl/reference/clocalheap-class.md)   
-[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)   
-[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
+[IAtlMemMgr 类](../../atl/reference/iatlmemmgr-class.md)<br/>
+[CLocalHeap 类](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)<br/>
 [CComHeap 类](../../atl/reference/ccomheap-class.md)

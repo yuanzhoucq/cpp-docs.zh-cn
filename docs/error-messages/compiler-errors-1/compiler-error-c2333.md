@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2333 |Microsoft 文档
+title: 编译器错误 C2333 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1613d560ef22c33ca1a19ac63584138a18c19c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 850ad69a84100106c7a29608aaf85ecf5d592cde
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114119"
 ---
 # <a name="compiler-error-c2333"></a>编译器错误 C2333
-function： 函数声明; 中的存在错误正在跳过的函数体  
-  
- 在另一个错误，有关其类中定义的成员函数后出现此错误。  
-  
- 下面的示例生成 C2333:  
-  
-```  
-// C2333.cpp  
-struct s1 {  
-   s1(s1) {}   // C2333  
-};  
+
+function： 函数声明; 中的错误跳过函数体
+
+在另一个错误，因为成员函数在其类定义后出现此错误。
+
+下面的示例生成 C2333:
+
+```
+// C2333.cpp
+struct s1 {
+   s1(s1) {}   // C2333
+};
 ```

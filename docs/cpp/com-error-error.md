@@ -17,31 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ddaefcf3bd46bf40b03c03d2d1fb00cf8fbbb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9d56fcf7faaee9d3b0e02964163aa62372a30a78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109285"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
-**Microsoft 专用**  
-  
- 检索传递给构造函数的 HRESULT。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HRESULT Error( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>返回值  
- 原始 HRESULT 项传递到构造函数。  
-  
-## <a name="remarks"></a>备注  
- 检索中的封装的 HRESULT 项`_com_error`对象。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_com_error 类](../cpp/com-error-class.md)
+
+**Microsoft 专用**
+
+检索传递给构造函数的 HRESULT。
+
+## <a name="syntax"></a>语法
+
+```
+HRESULT Error( ) const throw( );
+```
+
+## <a name="return-value"></a>返回值
+
+原始 HRESULT 项传递到构造函数。
+
+## <a name="remarks"></a>备注
+
+检索中的封装的 HRESULT 项`_com_error`对象。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_com_error 类](../cpp/com-error-class.md)

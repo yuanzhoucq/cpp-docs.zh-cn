@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136291"
 ---
 # <a name="composite-control-macros"></a>复合控件宏
 
@@ -34,7 +34,7 @@ ms.locfileid: "43761883"
 |[BEGIN_SINK_MAP](#begin_sink_map)|表示复合控件的事件接收器映射的开头。|
 |[END_SINK_MAP](#end_sink_map)|表示复合控件的事件接收器映射的结尾。|
 |[SINK_ENTRY](#sink_entry)|事件接收器映射到的项。|
-|[SINK_ENTRY_EX](#sink_entry_ex)|进入事件接收器映射带有一个附加参数。| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|进入事件接收器映射带有一个附加参数。|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017)类似 SINK_ENTRY_EX，只不过它采用一个指向 iid。|
 |[SINK_ENTRY_INFO](#sink_entry_info)|手动提供的类型信息以用于与事件接收器映射到条目[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)。|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)类似 SINK_ENTRY_INFO，只不过它采用一个指向 iid。|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>参数
 
-*（_c)*  
+*（_c)*<br/>
 [in]指定的控件。
 
 ### <a name="example"></a>示例
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]标识控件。
 
-*dispid*  
+*dispid*<br/>
 [in]标识在指定的事件。
 
-*fn*  
+*fn*<br/>
 [in]事件处理程序函数的名称。 此函数必须使用`_stdcall`调用约定和具有适当的调度接口风格的签名。
 
 ### <a name="example"></a>示例
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]标识控件。
 
-*iid*  
+*iid*<br/>
 [in]标识调度接口。  
 
-*piid*  
+*piid*<br/>
 [in]指向调度接口指针。
 
-*dispid*  
+*dispid*<br/>
 [in]标识在指定的事件。
 
-*fn*  
+*fn*<br/>
 [in]事件处理程序函数的名称。 此函数必须使用`_stdcall`调用约定和具有适当的调度接口风格的签名。
 
 ### <a name="example"></a>示例
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]标识事件源的无符号的整数。 此值必须匹配*nID*中的相关使用的模板参数[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基类。
 
-*iid*  
+*iid*<br/>
 [in]标识调度接口的 IID。  
 
-*piid*  
+*piid*<br/>
 [in]指针，指向标识调度接口的 IID。
 
-*dispid*  
+*dispid*<br/>
 [in]确定指定的事件的 DISPID。
 
-*fn*  
+*fn*<br/>
 [in]事件处理程序函数的名称。 此函数必须使用`_stdcall`调用约定和具有适当的调度接口风格的签名。
 
-*信息*  
+*信息*<br/>
 [in]类型的事件处理程序函数的信息。 指向的指针的形式提供此类型信息`_ATL_FUNC_INFO`结构。 CC_CDECL 是唯一的选项在 Windows CE 中支持的 CALLCONV 字段`_ATL_FUNC_INFO`结构。 任何其他值不受支持因此其行为未定义。
 
 ### <a name="remarks"></a>备注
@@ -176,5 +176,5 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ## <a name="see-also"></a>请参阅
 
-[宏](../../atl/reference/atl-macros.md)   
+[宏](../../atl/reference/atl-macros.md)<br/>
 [复合控件全局函数](../../atl/reference/composite-control-global-functions.md)

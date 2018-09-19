@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2114 |Microsoft 文档
+title: 编译器错误 C2114 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d781a63eeee0a39b923c7f31896e23d1dcc440cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 973a71096e3dee549140e7e1f070049a26dfc573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047052"
 ---
 # <a name="compiler-error-c2114"></a>编译器错误 C2114
-“operator”：左侧指针；需要右侧的整数值  
-  
- 如果 `operator` 的左操作数为一个指针，则右操作数不能为整数值。
+
+“operator”：左侧指针；需要右侧的整数值
+
+如果 `operator` 的左操作数为一个指针，则右操作数不能为整数值。

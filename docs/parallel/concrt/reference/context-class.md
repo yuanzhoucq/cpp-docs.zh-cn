@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136174"
 ---
 # <a name="context-class"></a>Context 类
 表示执行上下文的抽象。  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PObject`  
- 指向要删除的对象的指针。  
+*_PObject*<br/>
+指向要删除的对象的指针。  
   
 ##  <a name="oversubscribe"></a> 超额订阅 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_BeginOversubscription`  
- 如果`true`，则表示应过度订阅的持续时间添加额外虚拟处理器。 如果`false`，指示过度订阅应结束，并且应删除以前添加的虚拟处理器。  
+*_BeginOversubscription*<br/>
+如果`true`，则表示应过度订阅的持续时间添加额外虚拟处理器。 如果`false`，指示过度订阅应结束，并且应删除以前添加的虚拟处理器。  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

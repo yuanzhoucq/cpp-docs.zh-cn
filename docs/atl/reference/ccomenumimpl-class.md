@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082505"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 
@@ -43,22 +43,22 @@ ms.locfileid: "43759982"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。
 
-*piid*  
+*piid*<br/>
 一个指向枚举器接口的接口 ID。
 
-*T*  
+*T*<br/>
 枚举器接口所显示的项的类型。
 
-*复制*  
+*复制*<br/>
 同构[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
 ## <a name="members"></a>成员
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>参数
 
-*begin*  
+*begin*<br/>
 指向包含要枚举的项的数组的第一个元素的指针。
 
-*end*  
+*end*<br/>
 指向刚超出最后一个元素的数组，其中包含要枚举的项的位置的指针。
 
-*pUnk*  
+*pUnk*<br/>
 [in]`IUnknown`必须保持活动状态的枚举器的生命周期内的对象的指针。 如果没有此类对象存在，则传递 NULL。
 
-*flags*  
+*flags*<br/>
 指定枚举器应获得数组的所有权或制作一份的标志。 可能的值如下所述。
 
 ### <a name="return-value"></a>返回值
@@ -167,13 +167,13 @@ HRESULT Init(
 
 *标志*参数，可指定枚举器应如何处理传递给它的数组元素。 *标志*可接受的值从一个`CComEnumFlags`枚举如下所示：
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` 表示数组的生存期不控制由枚举器。 在这种情况下，其中一个数组将静态或标识的对象*pUnk*将负责在不再需要时释放数组。
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>参数
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]从当前枚举数中克隆上新创建的对象的枚举器接口。
 
 ### <a name="return-value"></a>返回值
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>参数
 
-*celt*  
+*celt*<br/>
 [in]请求的元素数。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要填充的元素的数组。
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out]中实际返回的元素数*rgelt*。 这可以是小于*celt*如果少于*celt*元素保持在列表中。
 
 ### <a name="return-value"></a>返回值
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>参数
 
-*celt*  
+*celt*<br/>
 [in]要跳过的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -304,6 +304,6 @@ STDMETHOD(Skip)(ULONG celt);
 
 ## <a name="see-also"></a>请参阅
 
-[IEnumOnSTLImpl 类](../../atl/reference/ienumonstlimpl-class.md)   
-[CComEnum 类](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl 类](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum 类](../../atl/reference/ccomenum-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

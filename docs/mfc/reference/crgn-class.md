@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080683"
 ---
 # <a name="crgn-class"></a>CRgn 类
 封装一个 Windows 图形设备接口 (GDI) 区域。  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  指向数组`POINT`结构或一组`CPoint`对象。 每个结构指定的 x 坐标和 y 坐标的多边形的一个顶点。 `POINT`结构具有以下形式：  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  指定的数量`POINT`结构或`CPoint`指向数组中的对象*lpPoints*。  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  指向数组`POINT`结构或一组`CPoint`定义多边形顶点的对象。 必须显式关闭每个多边形，因为系统不会自动关闭它们。 多边形指定连续。 `POINT`结构具有以下形式：  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  指向整数的数组。 第一个整数中的第一个多边形中指定的顶点数*lpPoints*数组，第二个整数指定的顶点数中的第二个多边形，依此类推。  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lpRect*  
  指向`RECT`结构或`CRect`对象，其中包含区域的左上角和右下角中的逻辑坐标。 `RECT`结构具有以下形式：  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>返回值  
  如果操作成功，则非零值否则为 0。  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lpRect*  
  指向`RECT`结构或`CRect`对象。 `RECT`结构具有以下形式：  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>返回值  
  如果指定任何的矩形部分的区域边界内，非零值否则为 0。  

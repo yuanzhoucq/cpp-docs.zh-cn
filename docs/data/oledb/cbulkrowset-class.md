@@ -113,14 +113,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116758"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
+
 提取和操作将通过检索一次调用多个行句柄中大容量的数据处理的行。  
   
 ## <a name="syntax"></a>语法
@@ -131,11 +132,13 @@ class CBulkRowset : public CRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>参数  
- *TAccessor*  
- 一个访问器类。  
+
+*TAccessor*<br/>
+一个访问器类。  
 
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -155,11 +158,13 @@ class CBulkRowset : public CRowset<TAccessor>
 |[SetRows](#setrows)|设置一次调用要检索的行句柄数。|  
   
 ## <a name="example"></a>示例  
- 下面的示例说明如何使用`CBulkRowset`类。  
+
+下面的示例说明如何使用`CBulkRowset`类。  
   
- [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
+
 调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))来增加当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
@@ -169,9 +174,11 @@ HRESULT AddRefRows() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。 
+
+标准的 HRESULT。 
   
 ## <a name="cbulkrowset"></a> Cbulkrowset:: Cbulkrowset
+
 创建一个新的 `CBulkRowset` 对象并将默认行数设置为 10。  
   
 ### <a name="syntax"></a>语法  
@@ -181,6 +188,7 @@ CBulkRowset();
 ```  
 
 ## <a name="movefirst"></a> Cbulkrowset:: Movefirst
+
 检索数据的第一行。  
   
 ### <a name="syntax"></a>语法  
@@ -190,9 +198,11 @@ HRESULT MoveFirst() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。
+
+标准的 HRESULT。
 
 ## <a name="movelast"></a> Cbulkrowset:: Movelast
+
 将移动到最后一个行。  
   
 ### <a name="syntax"></a>语法  
@@ -202,9 +212,11 @@ HRESULT MoveLast() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
 
 ## <a name="movenext"></a> Cbulkrowset:: Movenext
+
 检索下的一行数据。  
   
 ### <a name="syntax"></a>语法  
@@ -214,9 +226,11 @@ HRESULT MoveNext() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。 当已达到行集末尾时，返回 DB_S_ENDOFROWSET。 
+
+标准的 HRESULT。 当已达到行集末尾时，返回 DB_S_ENDOFROWSET。 
 
 ## <a name="moveprev"></a> Cbulkrowset:: Moveprev
+
 移动到上一行。  
   
 ### <a name="syntax"></a>语法  
@@ -226,9 +240,11 @@ HRESULT MovePrev() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
 
 ## <a name="movetobookmark"></a> Cbulkrowset:: Movetobookmark
+
 提取标记的书签或指定的偏移量处的行的行 (*lSkip*) 从该书签。  
   
 ### <a name="syntax"></a>语法  
@@ -239,16 +255,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ```  
   
 #### <a name="parameters"></a>参数  
- *书签*  
- [in] 标记要从其提取数据的位置的书签。  
+
+*书签*<br/>
+[in] 标记要从其提取数据的位置的书签。  
   
- *lSkip*  
- [in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是书签的行。 如果*lSkip*为 1，提取的第一行是标有书签的行后的行。 如果*lSkip*为-1，提取的第一行是标有书签的行前的行。  
+*lSkip*<br/>
+[in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是书签的行。 如果*lSkip*为 1，提取的第一行是标有书签的行后的行。 如果*lSkip*为-1，提取的第一行是标有书签的行前的行。  
   
 ### <a name="return-value"></a>返回值  
- 请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。 
+
+请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
+
 提取从行集中的小数位置开始的行。  
   
 ### <a name="syntax"></a>语法  
@@ -259,23 +278,27 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ```  
   
 #### <a name="parameters"></a>参数  
- *nNumerator*  
- [in]用于确定从其提取数据的小数位置分子。  
+
+*nNumerator*<br/>
+[in]用于确定从其提取数据的小数位置分子。  
   
- *nDenominator*  
- [in]用于确定从其提取数据的小数位置分母。  
+*nDenominator*<br/>
+[in]用于确定从其提取数据的小数位置分母。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `MoveToRatio` 提取大致依据的公式如下行：  
+
+`MoveToRatio` 提取大致依据的公式如下行：  
   
- `(nNumerator *  RowsetSize ) / nDenominator`  
+`(nNumerator *  RowsetSize ) / nDenominator`  
   
- 其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))中*OLE DB 程序员参考*。   
+其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\))中*OLE DB 程序员参考*。   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
+
 调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))要递减当前从 bulk 行集检索到的所有行的引用计数。  
   
 ### <a name="syntax"></a>语法  
@@ -285,9 +308,11 @@ HRESULT ReleaseRows() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
 
 ## <a name="setrows"></a> Cbulkrowset:: Setrows
+
 设置每个调用检索的行句柄数量。  
   
 ### <a name="syntax"></a>语法  
@@ -297,12 +322,15 @@ void SetRows(DBROWCOUNT nRows) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *nRows*  
- [in] 行集的新大小（行数）。  
+
+*nRows*<br/>
+[in] 行集的新大小（行数）。  
   
 ### <a name="remarks"></a>备注  
- 如果调用此函数，则它必须在行集之前打开。
+
+如果调用此函数，则它必须在行集之前打开。
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

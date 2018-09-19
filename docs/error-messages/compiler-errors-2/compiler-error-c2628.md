@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2628 |Microsoft 文档
+title: 编译器错误 C2628 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f9813f103f59e61093ab82366e50a7ef6dae46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43a7d0515013158932f627b883ab36a2793ab5bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051342"
 ---
 # <a name="compiler-error-c2628"></a>编译器错误 C2628
-type1 跟 type2 是非法 (是否忘记了;？)  
-  
- 分号可能会丢失。  
-  
- 下面的示例生成 C2628:  
-  
-```  
-// C2628.cpp  
-class CMyClass {}  
-int main(){}   // C2628 error  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2628b.cpp  
-class CMyClass {};  
-int main(){}  
+
+type1 和 type2 是非法的 (是否忘记了;？)
+
+可能缺少分号。
+
+下面的示例生成 C2628:
+
+```
+// C2628.cpp
+class CMyClass {}
+int main(){}   // C2628 error
+```
+
+可能的解决方法：
+
+```
+// C2628b.cpp
+class CMyClass {};
+int main(){}
 ```

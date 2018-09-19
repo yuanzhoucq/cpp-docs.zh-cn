@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087950"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 类
 
@@ -35,7 +35,7 @@ ms.locfileid: "43754886"
 ## <a name="syntax"></a>语法
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 对话框模板资源的资源 ID。
 
-*t_bCenter*  
+*t_bCenter*<br/>
 如果对话框对象是要在所有者窗口; 上居中否则为 FALSE。
 
 ## <a name="members"></a>成员
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 对话框中的父句柄。 如果未不提供任何值，父级设置为当前的活动窗口。
 
 ### <a name="return-value"></a>返回值

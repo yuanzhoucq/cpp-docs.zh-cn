@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136150"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*  
+*布尔表达式*<br/>
 计算结果为零或不为零的表达式（包括指针）。
 
 ### <a name="remarks"></a>备注
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*  
+*布尔表达式*<br/>
 指定要测试的布尔表达式。
 
-*hr*  
+*hr*<br/>
 指定要返回的错误代码。
 
 ### <a name="remarks"></a>备注
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>参数
 
-*函数名*  
+*函数名*<br/>
 [in]包含未实现的函数名称的字符串。
 
 ### <a name="remarks"></a>备注
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>参数
 
-*exp*  
+*exp*<br/>
 [in]字符串和要发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的变量。
 
-*category*  
+*category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
 
-*级别*  
+*级别*<br/>
 [in]对报表的跟踪级别。 请参阅备注以了解详情。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]要将发送到转储设备的格式化的字符串。
 
 ### <a name="remarks"></a>备注
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>参数
 
-*exp*  
+*exp*<br/>
 [in]要将发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的字符串。
 
-*category*  
+*category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
 
-*级别*  
+*级别*<br/>
 [in]对报表的跟踪级别。 请参阅备注以了解详情。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]`printf`-设置要用于创建要发送到转储设备的字符串的格式字符串的样式。
 
 ### <a name="remarks"></a>备注
@@ -295,5 +295,5 @@ ATLTRACE 和 ATLTRACE2 具有相同的行为，ATLTRACE 是为了向后兼容。
 
 ## <a name="see-also"></a>请参阅
 
-[宏](../../atl/reference/atl-macros.md)   
+[宏](../../atl/reference/atl-macros.md)<br/>
 [调试和错误报告全局函数](../../atl/reference/debugging-and-error-reporting-global-functions.md)

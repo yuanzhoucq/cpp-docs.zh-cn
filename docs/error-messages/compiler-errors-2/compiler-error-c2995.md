@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2995 |Microsoft 文档
+title: 编译器错误 C2995 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afd073e8877e2e28d5163d9c2e5ae72b9b7d4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63028629dd23d3bae20da0b1470cf3239c00306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109350"
 ---
 # <a name="compiler-error-c2995"></a>编译器错误 C2995
-“function”：函数模板已经定义  
-  
- 确保模板类的每个成员函数只有一个定义。  
-  
- 以下示例生成 C2995：  
-  
-```  
-// C2995.cpp  
-// compile with: /c  
-template <class T>  
-void Test(T x){}  
-  
-template <class T> void Test(T x){}   // C2995  
-template <class T> void Test2(T x){}   // OK  
+
+“function”：函数模板已经定义
+
+确保模板类的每个成员函数只有一个定义。
+
+以下示例生成 C2995：
+
+```
+// C2995.cpp
+// compile with: /c
+template <class T>
+void Test(T x){}
+
+template <class T> void Test(T x){}   // C2995
+template <class T> void Test2(T x){}   // OK
 ```

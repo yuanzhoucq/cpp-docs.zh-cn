@@ -1,5 +1,5 @@
 ---
-title: 优化警告 PG1039 按配置文件 |Microsoft 文档
+title: 按配置优化警告 PG1039 按配置文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2637013bacaecfa3e0d812177c12ce227d19be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1dd62059697b7f5c50a9fe7863f62ebbe6bf56c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050507"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>按配置优化警告 PG1039
-失败等待空闲时间以进行扫描。  
-  
- 不允许应用程序[pgosweep](../../build/reference/pgosweep.md)运行。  当应用程序处于空闲状态时，如果可能，运行 pgosweep。
+
+未能等到空闲时间以进行扫描。
+
+不允许该应用程序[pgosweep](../../build/reference/pgosweep.md)运行。  当应用程序处于空闲状态时，如果可能，请运行 pgosweep。

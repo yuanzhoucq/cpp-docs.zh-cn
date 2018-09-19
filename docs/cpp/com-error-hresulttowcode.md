@@ -16,39 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ddac28c4f39cdf11abbdf38c3af5d00c22413a
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c39b638451aa8ea89191e323eae5f2c140563990
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082061"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
-**Microsoft 专用**  
-  
- 将 32 位 HRESULT 映射到 16 位`wCode`。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-static WORD HRESULTToWCode(  
-   HRESULT hr   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>参数  
- *hr*  
- 若要映射到 16 位的 32 位 HRESULT `wCode`。  
-  
-## <a name="return-value"></a>返回值  
- 16 位`wCode`从 32 位 HRESULT 映射。  
-  
-## <a name="remarks"></a>备注  
- 请参阅[_com_error:: wcode](../cpp/com-error-wcode.md)有关详细信息。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_com_error:: wcode](../cpp/com-error-wcode.md)   
- [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [_com_error 类](../cpp/com-error-class.md)
+
+**Microsoft 专用**
+
+将 32 位 HRESULT 映射到 16 位`wCode`。
+
+## <a name="syntax"></a>语法
+
+```
+static WORD HRESULTToWCode(
+   HRESULT hr
+) throw( );
+```
+
+#### <a name="parameters"></a>参数
+
+*hr*<br/>
+若要映射到 16 位的 32 位 HRESULT `wCode`。
+
+## <a name="return-value"></a>返回值
+
+16 位`wCode`从 32 位 HRESULT 映射。
+
+## <a name="remarks"></a>备注
+
+请参阅[_com_error:: wcode](../cpp/com-error-wcode.md)有关详细信息。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_com_error::WCode](../cpp/com-error-wcode.md)<br/>
+[_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)<br/>
+[_com_error 类](../cpp/com-error-class.md)

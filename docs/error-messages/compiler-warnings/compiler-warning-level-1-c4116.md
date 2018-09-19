@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4116 |Microsoft 文档
+title: 编译器警告 （等级 1） C4116 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17a61dd39c458091216bc2bde89c84ec2307956
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f91892bd28733761c187705b8f576007862027b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080696"
 ---
 # <a name="compiler-warning-level-1-c4116"></a>编译器警告 （等级 1） C4116
-在括号中的未命名的类型定义  
-  
- 带括号的表达式中定义了结构、 联合或枚举的类型没有名称。 类型定义是无意义。  
-  
- 在 C 函数调用中，定义具有全局作用域。 在 c + + 函数调用中，定义具有与所调用的函数位于同一作用域。
+
+在括号中的未命名的类型定义
+
+结构、 联合或枚举的类型，不含名称带括号的表达式中定义。 类型定义是没有意义。
+
+在 C 函数调用中，定义具有全局作用域。 在 c + + 函数调用中，定义具有与要调用的函数相同的范围。

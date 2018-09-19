@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476edd2a199ca21a9067a72cac82a6ac7b608112
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114158"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 类
 
@@ -85,13 +85,13 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObj*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -112,7 +112,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>参数
 
-*纷纷采用*  
+*纷纷采用*<br/>
 [in]如果为 TRUE，将增加的锁计数;否则，将减少锁计数。
 
 ### <a name="return-value"></a>返回值
@@ -127,9 +127,9 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ## <a name="see-also"></a>请参阅
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[CComClassFactory2 类](../../atl/reference/ccomclassfactory2-class.md)   
-[CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2 类](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [类概述](../../atl/atl-class-overview.md)

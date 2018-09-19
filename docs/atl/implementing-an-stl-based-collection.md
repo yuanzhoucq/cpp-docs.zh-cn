@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6aa360229857e3c12322cb6579aa0dbbba53d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116697"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>实现 c + + 标准库基于集合
 
@@ -111,7 +111,7 @@ Visual Basic 支持对此接口的成功至关重要，因为返回的枚举数`
 
 ## <a name="see-also"></a>请参阅
 
-[集合和枚举数](../atl/atl-collections-and-enumerators.md)   
-[ATLCollections 示例](../visual-cpp-samples.md)   
+[集合和枚举数](../atl/atl-collections-and-enumerators.md)<br/>
+[ATLCollections 示例](../visual-cpp-samples.md)<br/>
 [ATL 复制策略类](../atl/atl-copy-policy-classes.md)
 

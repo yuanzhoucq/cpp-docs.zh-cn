@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6eea9b6005498c6c42017731db7ea706af96726
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a0d233bd9ad35eabe5782e58e186f0033b8cf816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085766"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 类
 将唯一 `CString` 对象映射到 `CObject` 指针的字典集合类。  
@@ -241,13 +241,12 @@ void GetNextAssoc(
   
  此程序的结果如下所示：  
   
- `Lisa : a CAge at $4724 11`  
-  
- `Marge : a CAge at $47A8 35`  
-  
- `Homer : a CAge at $4766 36`  
-  
- `Bart : a CAge at $45D4 13`  
+```Output
+Lisa : a CAge at $4724 11
+Marge : a CAge at $47A8 35
+Homer : a CAge at $4766 36
+Bart : a CAge at $45D4 13
+```
   
 ##  <a name="getsize"></a>  CMapStringToOb::GetSize  
  返回地图元素的数。  
@@ -484,11 +483,11 @@ CObject*& operator[ ](lpctstr key);
   
  此程序的结果如下所示：  
   
- `Operator [] example: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $4A02 11`  
-  
- `[Bart] = a CAge at $497E 13`  
+```Output
+Operator [] example: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $4A02 11
+[Bart] = a CAge at $497E 13
+```
   
 ##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
  此映射中移除所有元素，并销毁`CString`密钥对象。  
@@ -553,13 +552,12 @@ BOOL RemoveKey(LPCTSTR key);
   
  此程序的结果如下所示：  
   
- `RemoveKey example: A CMapStringToOb with 3 elements`  
-  
- `[Marge] = a CAge at $49A0 35`  
-  
- `[Homer] = a CAge at $495E 36`  
-  
- `[Bart] = a CAge at $4634 13`  
+```Output
+RemoveKey example: A CMapStringToOb with 3 elements
+[Marge] = a CAge at $49A0 35
+[Homer] = a CAge at $495E 36
+[Bart] = a CAge at $4634 13
+```
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
  主要方法要在地图中插入元素。  
@@ -598,17 +596,14 @@ void SetAt(
   
  此程序的结果如下所示：  
   
- `before Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $493C 11`  
-  
- `[Bart] = a CAge at $4654 13`  
-  
- `after Lisa's birthday: A CMapStringToOb with 2 elements`  
-  
- `[Lisa] = a CAge at $49C0 12`  
-  
- `[Bart] = a CAge at $4654 13`  
+```Output
+before Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $493C 11
+[Bart] = a CAge at $4654 13
+after Lisa's birthday: A CMapStringToOb with 2 elements
+[Lisa] = a CAge at $49C0 12
+[Bart] = a CAge at $4654 13
+```
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   

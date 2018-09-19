@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088938"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
 
@@ -65,7 +65,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 要分配的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向已分配内存的指针。
 
 ### <a name="remarks"></a>备注
@@ -103,10 +103,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向已分配内存的指针。
 
-*nBytes*  
+*nBytes*<br/>
 要重新分配的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -119,6 +119,6 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   
-[CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)   
+[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)<br/>
+[CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

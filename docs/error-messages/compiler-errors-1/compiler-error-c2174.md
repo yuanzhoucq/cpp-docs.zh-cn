@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2174 |Microsoft 文档
+title: 编译器错误 C2174 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052362"
 ---
 # <a name="compiler-error-c2174"></a>编译器错误 C2174
-function： 实参具有类型 void： 参数 number1，参数列表 number2  
-  
- 参数`number1`传递给参数列表`number2`是`void`参数。 参数不能有类型`void`。 请改用 `void*`。
+
+function： 实参具有 void 类型： 参数 number1，参数列表 number2
+
+参数`number1`传递给参数列表`number2`是`void`参数。 参数不能有类型`void`。 请改用 `void*`。

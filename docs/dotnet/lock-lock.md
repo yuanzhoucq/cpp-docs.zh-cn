@@ -1,5 +1,5 @@
 ---
-title: lock::lock |Microsoft 文档
+title: lock::lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051811"
 ---
 # <a name="locklock"></a>lock::lock
-构造`lock`对象，可以选择等待一定的时间，或者不是在所有永久，获取锁。  
+构造`lock`对象，可以选择等待下去，为指定的量的时间，或者根本不获取锁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_object`  
- 要锁定的对象。  
+*（_o)*<br/>
+要锁定的对象。  
   
- `_timeout`  
- 超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
+*超时) (_t*<br/>
+超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
 ## <a name="exceptions"></a>异常  
  引发<xref:System.ApplicationException>如果获取锁超时前不会发生。  
   
 ## <a name="remarks"></a>备注  
- 前三个窗体的构造函数尝试上获取锁`_object`指定的超时时间段内 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
+ 构造函数的前三个窗体上获取锁的尝试`_object`指定的超时期限内 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 第四个形式的构造函数不会在获取锁`_object`。 `lock_later` 为属于[lock_when 枚举](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在这种情况下获取锁。  
+ 第四个形式的构造函数不会在获取锁`_object`。 `lock_later` 是的成员[lock_when 枚举](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)这种情况下获取的锁。  
   
  当调用的析构函数时，将自动释放锁。  
   
  `_object` 不能为 <xref:System.Threading.ReaderWriterLock>。  如果是，将导致编译器错误。  
   
 ## <a name="example"></a>示例  
- 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
+ 此示例跨多个线程使用单个类的实例。  类自身上使用锁来确保对其内部数据的访问是为每个线程保持一致。  主应用程序线程的类的同一实例上使用锁来定期检查以查看任何工作线程仍存在，并等待，直到所有工作线程退出已完成其任务。  
   
 ```  
 // msl_lock_lock.cpp  
@@ -165,6 +165,6 @@ All threads completed.
   
 ## <a name="see-also"></a>请参阅  
  [锁定成员](../dotnet/lock-members.md)   
- [锁:: ~ 锁](../dotnet/lock-tilde-lock.md)   
+ [锁定:: ~ 锁](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

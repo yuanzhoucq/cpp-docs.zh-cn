@@ -1,5 +1,5 @@
 ---
-title: 链接器工具警告 LNK4200 |Microsoft 文档
+title: 链接器工具警告 LNK4200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e0db3352bc124ab586b43fab278baf517b5a04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d23d10440f4eba5082dff41544725fd6b77dbe3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111753"
 ---
 # <a name="linker-tools-warning-lnk4200"></a>链接器工具警告 LNK4200
-对象文件; 中的损坏的行号信息忽略  
-  
- 对象文件中的行号信息已损坏。 请重新生成。
+
+在对象文件; 已损坏的行号信息忽略
+
+对象文件中的行号信息已损坏。 请重新生成。

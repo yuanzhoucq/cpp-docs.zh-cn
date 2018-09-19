@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109675"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>参数
 
-*hWndNew*  
+*hWndNew*<br/>
 [in]窗口句柄。
 
 ### <a name="example"></a>示例
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>参数
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in]对其居中窗口的句柄。 如果此参数为 NULL （默认值），该方法将*hWndCenter*到窗口的父窗口，如果它是一个子窗口。 否则，它将设置*hWndCenter*到窗口的所有者窗口。
 
 ### <a name="return-value"></a>返回值
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>参数
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in]指向窗口的类的指针。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父级或所有者窗口的句柄。
 
-*rect*  
+*rect*<br/>
 [in]类型的变量[_U_RECT](../../atl/reference/u-rect-class.md)指定窗口的位置。 默认值为 NULL。 当此参数为 NULL，值`CWindow::rcDefault`使用。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定窗口的名称。 默认值为 NULL。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]窗口的样式。 默认值为 0，这意味着任何样式指定。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式指定。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]类型的变量[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定一个菜单或窗口标识符的句柄。 默认值为 0U。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 指向中包含的窗口创建数据的指针[CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)结构。
 
 ### <a name="return-value"></a>返回值
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]窗口句柄。
 
 ### <a name="remarks"></a>备注
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 [in]要检索的子代窗口的标识符。
 
 ### <a name="return-value"></a>返回值
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 [in]正在检索控件的资源 ID。
 
-*iid*  
+*iid*<br/>
 [in]你想要从控件中获取的接口 ID。
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out]指向接口指针。
 
 ### <a name="return-value"></a>返回值
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 [in]正在检索控件的资源 ID。
 
-*iid*  
+*iid*<br/>
 [in]你想要从控件中获取的接口 ID。
 
-*ppHost*  
+*ppHost*<br/>
 [out]指向接口指针。
 
 ### <a name="return-value"></a>返回值
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>参数
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]如果为 TRUE （默认值） 方法返回的大图标。 否则，返回的小图标。
 
 ### <a name="return-value"></a>返回值
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>参数
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 用于写入窗口文本的缓冲区。
 
-*nMaxCount*  
+*nMaxCount*<br/>
 缓冲区的大小（以字符为单位），这也是要写入的最大字符数。
 
-*bstrText*  
+*bstrText*<br/>
 要在其中存储窗口文本 BSTR。
 
-*strText*  
+*strText*<br/>
 用于存储窗口文本的 `CString`。
 
 ### <a name="return-value"></a>返回值
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*块*  
+*块*<br/>
 [in]如果 TRUE （默认值），则将锁定该窗口。 否则，它将解除锁定。
 
 ### <a name="return-value"></a>返回值
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>参数
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]指定要删除在样式修改过程的窗口样式。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]指定要添加样式修改期间的窗口样式。
 
-*nFlags*  
+*nFlags*<br/>
 [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。
 
 ### <a name="return-value"></a>返回值
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>参数
 
-*dwRemove*  
+*dwRemove*<br/>
 [in]指定要删除在样式修改过程的扩展的样式。
 
-*dwAdd*  
+*dwAdd*<br/>
 [in]指定要添加样式修改期间的扩展的样式。
 
-*nFlags*  
+*nFlags*<br/>
 [in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。
 
 ### <a name="return-value"></a>返回值
@@ -1963,7 +1963,7 @@ BOOL OpenClipboard() throw();
 
 将转换`CWindow`对象与 HWND。
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>参数
 
-*hDC*  
+*hDC*<br/>
 [in]设备上下文的句柄。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定绘图选项。 可以组合一个或多个下列标志：
 
 - PRF_CHECKVISIBLE 绘制窗口才可见。
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>参数
 
-*hDC*  
+*hDC*<br/>
 [in]设备上下文的句柄。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定绘图选项。 可以组合一个或多个下列标志：
 
 - PRF_CHECKVISIBLE 绘制窗口才可见。
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>参数
 
-*nWidth*  
+*nWidth*<br/>
 以像素为单位的窗口的新宽度。
 
-*nHeight*  
+*nHeight*<br/>
 以像素为单位的窗口的新高度。
 
-*bRedraw*  
+*bRedraw*<br/>
 一个标志，指示是否重绘更改。 默认值为 FALSE，指示窗口不重绘更改。
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>参数
 
-*message*  
+*message*<br/>
 [in]要发送的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
-*bDeep*  
+*bDeep*<br/>
 [in]如果为 TRUE （默认值），该消息将发送给所有子代窗口;否则，它将发送的直接子窗口。
 
 ### <a name="remarks"></a>备注
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 [in]要设置为窗口的标识符的新值。
 
 ### <a name="return-value"></a>返回值
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*hFont*  
+*hFont*<br/>
 [in]指向新字体的句柄。
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]如果 TRUE （默认值），则在重绘该窗口。 否则，它不是。
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>参数
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in]热键虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。
 
-*wModifiers*  
+*wModifiers*<br/>
 [in]热键的修饰符。 可能的值的列表，请参阅 Windows SDK 中的 WM_SETHOTKEY。
 
 ### <a name="return-value"></a>返回值
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*hIcon*  
+*hIcon*<br/>
 [in]新图标的句柄。
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in]如果 TRUE （默认值），则该方法将设置大图标。 否则，它设置小图标。
 
 ### <a name="return-value"></a>返回值
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*bRedraw*  
+*bRedraw*<br/>
 [in]指定重绘标志的状态。 如果 TRUE （默认值），则将重绘标志设置;如果为 FALSE，，清除该标记。
 
 ### <a name="remarks"></a>备注

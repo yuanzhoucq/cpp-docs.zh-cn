@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110141"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 类
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>参数
 
-*pControl*  
+*pControl*<br/>
 [in]一个指向`IUnknown`的控件。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]一个指向`IUnknown`的主机 (`AxWin`对象)。
 
 ### <a name="return-value"></a>返回值
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 现有的窗口对象的句柄。
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要创建控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -155,13 +155,13 @@ HRESULT CreateControl(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。 Windows Mobile 平台支持的 ProgID 和 CLSID。 Windows CE 嵌入式平台、 Windows Mobile CE IE 支持的支持以外所有类型包括 ProgID，CLSID、 URL、 都引用添加到活动文档和片段的 HTML。
 
-*pStream*  
+*pStream*<br/>
 [in]指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
-*dwResID*  
+*dwResID*<br/>
 HTML 资源的资源 ID。 将创建并使用指定的资源加载 WebBrowser 控件。
 
 ### <a name="return-value"></a>返回值
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>参数
 
-*lpszName*  
+*lpszName*<br/>
 指向要创建控件的字符串的指针。 通过以下方式之一的格式必须：
 
 - 例如，"MSCAL ProgID。Calendar.7"
@@ -222,22 +222,22 @@ HRESULT CreateControlEx(
    > [!NOTE]
    > "MSHTML:"，以便它指定为 MSHTML 流必须在之前的 HTML 片段。 Windows Mobile 平台支持的 ProgID 和 CLSID。 Windows CE 嵌入式平台、 Windows Mobile CE IE 支持的支持以外所有类型包括 ProgID，CLSID、 URL、 都引用添加到活动文档和片段的 HTML。
 
-*pStream*  
+*pStream*<br/>
 [in]指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out]将接收的指针的地址`IUnknown`的容器。 可以为 NULL。
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out]将接收的指针的地址`IUnknown`的控件。 可以为 NULL。
 
-*iidSink*  
+*iidSink*<br/>
 [in]包含的对象上的传出接口的接口标识符。 可以为 IID_NULL。
 
-*punkSink*  
+*punkSink*<br/>
 [in]一个指向`IUnknown`接收器对象连接到指定的包含对象上的连接点的接口*iidSink*。
 
-*dwResID*  
+*dwResID*<br/>
 [in]HTML 资源的资源 ID。 将创建并使用指定的资源加载 WebBrowser 控件。
 
 ### <a name="return-value"></a>返回值
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 现有的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]指定控件的接口的 IID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]指向控件的接口的指针。 此方法的模板版本，在没有引用 ID 需要传递类型化的接口，与关联的 UUID。
 
-*Q*  
+*Q*<br/>
 [in]正在查询的接口。
 
 ### <a name="return-value"></a>返回值
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]指定控件的接口的 IID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]指向主机上的接口的指针。 此方法的模板版本，在没有引用 ID 需要传递类型化的接口，与关联的 UUID。
 
-*Q*  
+*Q*<br/>
 [in]正在查询的接口。
 
 ### <a name="return-value"></a>返回值
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>参数
 
-*pDisp*  
+*pDisp*<br/>
 [in]一个指向`IDispatch`接口。
 
 ### <a name="return-value"></a>返回值
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>参数
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in]一个指向`IDocHostUIHandlerDispatch`接口。
 
 ### <a name="return-value"></a>返回值
@@ -377,9 +377,9 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ## <a name="see-also"></a>请参阅
 
-[ATLCON 示例](../../visual-cpp-samples.md)   
-[CWindow 类](../../atl/reference/cwindow-class.md)   
-[复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)   
-[类概述](../../atl/atl-class-overview.md)   
+[ATLCON 示例](../../visual-cpp-samples.md)<br/>
+[CWindow 类](../../atl/reference/cwindow-class.md)<br/>
+[复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [控件包含常见问题](../../atl/atl-control-containment-faq.md)
 

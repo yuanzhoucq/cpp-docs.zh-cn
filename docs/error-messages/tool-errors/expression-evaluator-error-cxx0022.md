@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0022 |Microsoft 文档
+title: 表达式计算器错误 CXX0022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082347"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>表达式计算器错误 CXX0022
-_main 前的函数调用  
-  
- 调试器已进入函数之前，C 表达式计算器无法评估函数 **_main**。 该程序未正确初始化直到 **_main**已调用。  
-  
- 此错误是与 CAN0022 相同。
+
+函数调用之前 （_m）
+
+C 表达式计算器无法在调试器进入该函数之前计算函数 **_main**。 该程序未正确初始化直到 **_main**已调用。
+
+此错误是与 CAN0022 相同。

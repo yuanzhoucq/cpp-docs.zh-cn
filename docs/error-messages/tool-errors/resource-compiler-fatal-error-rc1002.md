@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1002 |Microsoft 文档
+title: 资源编译器错误 RC1002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114522"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>资源编译器错误 RC1002
-堆空间不足  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复  
-  
-1.  增加 Windows 交换文件空间。 有关增加交换文件空间的详细信息，请参阅 Windows 帮助中的虚拟内存。  
-  
-2.  将当前文件拆分为较小的文件，然后单独对其进行编译。  
-  
-3.  删除其他程序或驱动程序的系统上运行。
+
+堆空间不足
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
+
+1. 增加 Windows 交换文件空间。 有关增加交换文件空间的详细信息，请参阅 Windows 帮助中的虚拟内存。
+
+1. 将当前文件拆分成较小的文件并将其单独编译。
+
+1. 删除其他程序或驱动程序在系统上运行。

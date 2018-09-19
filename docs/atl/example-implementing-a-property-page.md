@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046246"
 ---
 # <a name="example-implementing-a-property-page"></a>示例： 实现属性页
 
@@ -153,25 +153,25 @@ ms.locfileid: "43759325"
 一旦在生成项目后，你可以测试属性页，并使用一个简单的宏，你可以创建并运行 Visual Studio 开发环境中的帮助器对象。 此宏将创建一个帮助程序对象，然后调用其`ShowPage`方法使用的 ProgID **DocProperties**属性页和`IUnknown`文档在 Visual Studio 编辑器中当前处于活动状态的指针。 为此宏所需的代码如下所示：
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 当您运行此宏时，则将显示属性页显示的文件的名称和当前处于活动状态的文本文档的只读状态。 文档的只读状态仅反映了要写入到开发环境中; 中的文档的功能它不会影响磁盘上的文件的只读属性。
 
 ## <a name="see-also"></a>请参阅
 
-[属性页](../atl/atl-com-property-pages.md)   
+[属性页](../atl/atl-com-property-pages.md)<br/>
 [ATLPages 示例](../visual-cpp-samples.md)

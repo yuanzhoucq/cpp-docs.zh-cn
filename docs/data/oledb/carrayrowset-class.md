@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087872"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
+
 使用数组语法访问行集的元素。  
   
 ## <a name="syntax"></a>语法
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>参数  
- *TAccessor*  
- 希望集合使用的访问器类的类型。  
+
+*TAccessor*<br/>
+希望集合使用的访问器类的类型。  
 
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|  
   
 ## <a name="carrayrowset"></a> Carrayrowset:: Carrayrowset
+
 创建一个新的 `CArrayRowset` 对象。  
   
 ### <a name="syntax"></a>语法  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>参数  
- *最*  
- [in] 行集中的最大行数。 
+
+*最*<br/>
+[in] 行集中的最大行数。 
 
 ## <a name="snapshot"></a> Carrayrowset:: Snapshot
+
 将整个行集读入内存，并创建该行集的图像或快照。  
   
 ### <a name="syntax"></a>语法  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> Carrayrowset:: Operator
+
 提供用于访问行集中的行的类似数组的语法。  
   
 ### <a name="syntax"></a>语法  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>参数  
- *TAccessor*  
- 一个指定存储在行集中的访问器类型的模板化参数。  
+
+*TAccessor*<br/>
+一个指定存储在行集中的访问器类型的模板化参数。  
   
- *nRow*  
- [in] 要访问的行号（数组元素）。  
+*nRow*<br/>
+[in] 要访问的行号（数组元素）。  
   
 ### <a name="return-value"></a>返回值  
- 请求行的内容。  
+
+请求行的内容。  
   
 ### <a name="remarks"></a>备注  
- 如果*nRow*超过行集中的行数，将引发异常。  
+
+如果*nRow*超过行集中的行数，将引发异常。  
 
 ## <a name="nrowsread"></a> Carrayrowset:: M_nrowsread
+
 包含已读取的行集中的行数。  
   
 ### <a name="syntax"></a>语法  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset 类](../../data/oledb/crowset-class.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset 类](../../data/oledb/crowset-class.md)

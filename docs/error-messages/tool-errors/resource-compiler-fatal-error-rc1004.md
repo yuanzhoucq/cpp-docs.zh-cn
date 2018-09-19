@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1004 |Microsoft 文档
+title: 资源编译器错误 RC1004 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3846d0cf65b3dbca31e04999b955b1d58a4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c86822ea9dcdbb16c437e10cf81bc1c8107da0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113586"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>资源编译器错误 RC1004
-中的意外的结束的文件  
-  
- 此错误可能由缺少换行符和回车符文本文件的最后一行。
+
+意外的文件结束
+
+此错误可能由缺少换行符和回车符将文本文件的最后一行上。

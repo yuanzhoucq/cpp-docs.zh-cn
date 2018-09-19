@@ -102,14 +102,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085545"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 类
+
 提供 `IRowset` 接口的实现。  
   
 ## <a name="syntax"></a>语法
@@ -126,20 +127,22 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IRowsetImpl`。  
+
+*T*<br/>
+您的类，派生自`IRowsetImpl`。  
   
- *RowsetInterface*  
- 一个类派生自`IRowsetImpl`。  
+*RowsetInterface*<br/>
+一个类派生自`IRowsetImpl`。  
   
- *RowClass*  
- 存储单位`HROW`。  
+*RowClass*<br/>
+存储单位`HROW`。  
   
- *MapClass*  
- 持有的提供程序的所有行句柄的存储单元。  
+*MapClass*<br/>
+持有的提供程序的所有行句柄的存储单元。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -169,9 +172,11 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_rgRowHandles](#rgrowhandles)|行句柄的列表。|  
   
 ## <a name="remarks"></a>备注  
- [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))是基础行集接口。  
+
+[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))是基础行集接口。  
 
 ## <a name="addrefrows"></a> Irowsetimpl:: Addrefrows
+
 将引用计数添加到现有的行控点。  
   
 ### <a name="syntax"></a>语法  
@@ -184,9 +189,11 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程序员参考*。  
 
 ## <a name="createrow"></a> Irowsetimpl:: Createrow
+
 调用的帮助器方法[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)分配新`HROW`。  
   
 ### <a name="syntax"></a>语法  
@@ -198,19 +205,22 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 ```  
   
 #### <a name="parameters"></a>参数  
- *lRowsOffset*  
- 正在创建的行的游标位置。  
+
+*lRowsOffset*<br/>
+正在创建的行的游标位置。  
   
- *cRowsObtained*  
- 返回给用户创建的行数，该值指示传递的引用。  
+*cRowsObtained*<br/>
+返回给用户创建的行数，该值指示传递的引用。  
   
- *rgRows*  
- 一个数组`HROW`返回给调用方具有新创建的行句柄。  
+*rgRows*<br/>
+一个数组`HROW`返回给调用方具有新创建的行句柄。  
   
 ### <a name="remarks"></a>备注  
- 如果存在行，此方法会调用[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) ，并返回。 否则为它分配 RowClass 模板变量的新实例并将其添加到[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。  
+
+如果存在行，此方法会调用[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) ，并返回。 否则为它分配 RowClass 模板变量的新实例并将其添加到[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。  
   
 ## <a name="getdata"></a> Irowsetimpl:: Getdata
+
 从行的行集的副本检索数据。  
   
 ### <a name="syntax"></a>语法  
@@ -222,18 +232,21 @@ STDMETHOD(GetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程序员参考*。  
   
- 某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IRowset::GetData`:  
+某些参数对应于*OLE DB 程序员参考*中所述的不同名称的参数`IRowset::GetData`:  
   
 |OLE DB 模板参数|*OLE DB 程序员参考*参数|  
 |--------------------------------|------------------------------------------------|  
 |*pDstData*|*pData*|  
   
 ### <a name="remarks"></a>备注  
- 此外可以处理数据转换使用 OLE DB 数据转换 DLL。 
+
+此外可以处理数据转换使用 OLE DB 数据转换 DLL。 
 
 ## <a name="getdbstatus"></a> Irowsetimpl:: Getdbstatus
+
 返回指定字段的 DBSTATUS 状态标志。  
   
 ### <a name="syntax"></a>语法  
@@ -244,6 +257,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>参数  
+
 *currentRow*<br/>
 [in]当前行。  
   
@@ -251,9 +265,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 [in]正在为其请求状态列。  
   
 ### <a name="return-value"></a>返回值  
- [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))该列的标志。 
+
+[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))该列的标志。 
 
 ## <a name="getnextrows"></a> Irowsetimpl:: Getnextrows
+
 记住的以前的位置按顺序提取行。  
   
 ### <a name="syntax"></a>语法  
@@ -267,9 +283,11 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Getnextrows](/previous-versions/windows/desktop/ms709827\(v=vs.85\))中*OLE DB 程序员参考*。 
+
+请参阅[irowset:: Getnextrows](/previous-versions/windows/desktop/ms709827\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="irowsetimpl"></a> Irowsetimpl:: Irowsetimpl
+
 构造函数。  
   
 ### <a name="syntax"></a>语法  
@@ -279,9 +297,11 @@ IRowsetImpl();
 ```  
   
 ### <a name="remarks"></a>备注  
- 通常不需要直接调用此方法。  
+
+通常不需要直接调用此方法。  
 
 ## <a name="refrows"></a> Irowsetimpl:: Refrows
+
 调用[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)并[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)要递增或发布到现有的行句柄的引用计数。  
   
 ### <a name="syntax"></a>语法  
@@ -295,12 +315,15 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT 值。  
+
+标准的 HRESULT 值。  
 
 ## <a name="releaserows"></a> Irowsetimpl:: Releaserows
+
 释放行。  
   
 ### <a name="syntax"></a>语法  
@@ -314,9 +337,11 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))中*OLE DB 程序员参考*。  
 
 ## <a name="restartposition"></a> Irowsetimpl:: Restartposition
+
 将下次提取位置重新定位到其初始位置;也就是说，其位置，第一个行集时创建。  
   
 ### <a name="syntax"></a>语法  
@@ -326,12 +351,15 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 行集位置之前未定义`GetNextRow`调用。 您可以向后移动 rowet 中通过调用`RestartPosition`然后提取或向后滚动。  
+
+行集位置之前未定义`GetNextRow`调用。 您可以向后移动 rowet 中通过调用`RestartPosition`然后提取或向后滚动。  
 
 ## <a name="setdbstatus"></a> Irowsetimpl:: Setdbstatus
+
 设置指定字段的 DBSTATUS 状态标志。  
   
 ### <a name="syntax"></a>语法  
@@ -343,22 +371,26 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 ```  
   
 #### <a name="parameters"></a>参数  
- *statusFlags*  
- [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))标志设置为列。  
+
+*statusFlags*<br/>
+[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))标志设置为列。  
   
- *currentRow*  
- 当前行。  
+*currentRow*<br/>
+当前行。  
   
- *columnInfo*  
- 为其设置状态列。  
+*columnInfo*<br/>
+为其设置状态列。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT 值。  
+
+标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 提供程序重写此函数可提供 DBSTATUS_S_ISNULL 和 DBSTATUS_S_DEFAULT 的特殊处理。 
+
+提供程序重写此函数可提供 DBSTATUS_S_ISNULL 和 DBSTATUS_S_DEFAULT 的特殊处理。 
 
 ## <a name="bcanfetchback"></a> Irowsetimpl:: M_bcanfetchback
+
 指示提供程序是否支持向后提取。  
   
 ### <a name="syntax"></a>语法  
@@ -368,9 +400,11 @@ unsigned m_bCanFetchBack:1;
 ```  
   
 ### <a name="remarks"></a>备注  
- 链接到`DBPROP_CANFETCHBACKWARDS`中的属性`DBPROPSET_ROWSET`组。 提供程序必须支持`DBPROP_CANFETCHBACKWARDS`有关`m_bCanFetchBackwards`要**true**。  
+
+链接到`DBPROP_CANFETCHBACKWARDS`中的属性`DBPROPSET_ROWSET`组。 提供程序必须支持`DBPROP_CANFETCHBACKWARDS`有关`m_bCanFetchBackwards`要**true**。  
 
 ## <a name="bcanscrollback"></a> Irowsetimpl:: M_bcanscrollback
+
 指示提供程序是否可以向后具有其游标滚动。  
   
 ### <a name="syntax"></a>语法  
@@ -380,9 +414,11 @@ unsigned  m_bCanScrollBack:1;
 ```  
   
 ### <a name="remarks"></a>备注  
- 链接到`DBPROP_CANSCROLLBACKWARDS`中的属性`DBPROPSET_ROWSET`组。 提供程序必须支持`DBPROP_CANSCROLLBACKWARDS`有关`m_bCanFetchBackwards`要**true**。 
+
+链接到`DBPROP_CANSCROLLBACKWARDS`中的属性`DBPROPSET_ROWSET`组。 提供程序必须支持`DBPROP_CANSCROLLBACKWARDS`有关`m_bCanFetchBackwards`要**true**。 
 
 ## <a name="breset"></a> Irowsetimpl:: M_breset
+
 一个位标志，用于确定是否在行集上定义的游标位置。  
   
 ### <a name="syntax"></a>语法  
@@ -392,9 +428,11 @@ unsigned m_bReset:1;
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果使用者调用[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)与负`lOffset`或*cRows*并`m_bReset`为 true，`GetNextRows`将移动到行集结尾。 如果`m_bReset`为 false，使用者接收错误代码，为了符合 OLE DB 规范。 `m_bReset`标志获取设置为**true**首次创建行集时，当使用者调用[irowsetimpl:: Restartposition](../../data/oledb/irowsetimpl-restartposition.md)。 获取设置为**false**当你调用`GetNextRows`。 
+
+如果使用者调用[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)与负`lOffset`或*cRows*并`m_bReset`为 true，`GetNextRows`将移动到行集结尾。 如果`m_bReset`为 false，使用者接收错误代码，为了符合 OLE DB 规范。 `m_bReset`标志获取设置为**true**首次创建行集时，当使用者调用[irowsetimpl:: Restartposition](../../data/oledb/irowsetimpl-restartposition.md)。 获取设置为**false**当你调用`GetNextRows`。 
 
 ## <a name="irowset"></a> Irowsetimpl:: M_irowset
+
 表示光标的行集的索引。  
   
 ### <a name="syntax"></a>语法  
@@ -404,6 +442,7 @@ DBROWOFFSET m_iRowset;
 ```  
 
 ## <a name="rgrowhandles"></a> Irowsetimpl:: M_rgrowhandles
+
 当前提供程序在响应中包含的行句柄映射`GetNextRows`。  
   
 ### <a name="syntax"></a>语法  
@@ -413,9 +452,11 @@ MapClass m_rgRowHandles;
 ```  
   
 ### <a name="remarks"></a>备注  
- 行句柄已通过调用`ReleaseRows`。 请参阅[IRowsetImpl 概述](../../data/oledb/irowsetimpl-class.md)的定义*MapClass*。  
+
+行句柄已通过调用`ReleaseRows`。 请参阅[IRowsetImpl 概述](../../data/oledb/irowsetimpl-class.md)的定义*MapClass*。  
 
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)    
- [CSimpleRow 类](../../data/oledb/csimplerow-class.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[CSimpleRow 类](../../data/oledb/csimplerow-class.md)
