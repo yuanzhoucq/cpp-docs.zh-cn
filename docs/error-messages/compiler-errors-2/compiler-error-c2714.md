@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2714 |Microsoft 文档
+title: 编译器错误 C2714 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b012acdebd5ccddb056d9558bb1034ac2ba0b49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a5a8a2157fc574b9a43688bfc8fa9adcbcb676f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108490"
 ---
 # <a name="compiler-error-c2714"></a>编译器错误 C2714
-不允许 __alignof(void)  
-  
- 对运算符传递了无效的值。  
-  
- 请参阅[__alignof 运算符](../../cpp/alignof-operator.md)有关详细信息。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2714。  
-  
-```  
-// C2714.cpp  
-int main() {  
-   return __alignof(void);   // C2714  
-   return __alignof(char);   // OK  
-}  
+
+不允许 __alignof(void)
+
+对运算符传递了无效值。
+
+请参阅[__alignof 运算符](../../cpp/alignof-operator.md)有关详细信息。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2714。
+
+```
+// C2714.cpp
+int main() {
+   return __alignof(void);   // C2714
+   return __alignof(char);   // OK
+}
 ```
