@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117473"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
+
 使用公开的 OLE DB 枚举器对象[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))接口以返回行集描述所有数据源和枚举器。  
   
 ## <a name="syntax"></a>语法
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldbcli.h
+
+**标头：** atldbcli.h
   
 ## <a name="members"></a>成员  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[打开](#open)|打开枚举器。|  
   
 ## <a name="remarks"></a>备注  
- 可以检索`ISourcesRowset`从此类间接的数据。  
+
+可以检索`ISourcesRowset`从此类间接的数据。  
 
 ## <a name="find"></a> Cenumerator:: Find
+
 在可用提供程序之间查找指定名称。  
   
 ### <a name="syntax"></a>语法  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *szSearchName*  
- [in] 要搜索的名称。  
+
+*szSearchName*<br/>
+[in] 要搜索的名称。  
   
 ### <a name="return-value"></a>返回值  
- **true**如果已找到的名称。 否则为**false**。  
+
+**true**如果已找到的名称。 否则为**false**。  
   
 ### <a name="remarks"></a>备注  
- 此名称将映射到`SOURCES_NAME`的成员[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))接口。  
+
+此名称将映射到`SOURCES_NAME`的成员[ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))接口。  
   
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
+
 分析要提取的字符串可以转换为一个名字对象的组件的显示名称。  
   
 ### <a name="syntax"></a>语法  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>参数  
- *ppMoniker*  
- [out]显示名称从分析的名字对象 ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 的当前行。  
+
+*ppMoniker*<br/>
+[out]显示名称从分析的名字对象 ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 的当前行。  
   
- *lpszDisplayName*  
- [in]要分析的显示名称。  
+*lpszDisplayName*<br/>
+[in]要分析的显示名称。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
 
 ## <a name="open"></a> Cenumerator:: Open
+
 将名字对象绑定枚举器，如果其中一个指定，则检索行集枚举器通过调用[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))。  
   
 ### <a name="syntax"></a>语法  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *pMoniker*  
- [in]指向一个枚举器的名字对象的指针。  
+
+*pMoniker*<br/>
+[in]指向一个枚举器的名字对象的指针。  
   
- *pClsid*  
- [in]一个指向`CLSID`的一个枚举器。  
+*pClsid*<br/>
+[in]一个指向`CLSID`的一个枚举器。  
   
- *enumerator*  
- [in]对枚举器的引用。  
+*enumerator*<br/>
+[in]对枚举器的引用。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
   
 ## <a name="see-also"></a>请参阅  
- [DBViewer](../../visual-cpp-samples.md)   
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

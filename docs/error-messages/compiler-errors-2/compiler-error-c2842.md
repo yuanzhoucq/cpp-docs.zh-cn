@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2842 |Microsoft 文档
+title: 编译器错误 C2842 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118812"
 ---
 # <a name="compiler-error-c2842"></a>编译器错误 C2842
-“类”：托管或 WinRT 类型不能定义自己的“operator new”或“operator delete”  
-  
- 你可以定义自己 * * 运算符 new 或**运算符 delete**来管理本机堆上的内存分配。 但是，引用类不能定义这些运算符，因为它们仅分配在托管堆上。  
 
-  
- 有关详细信息，请参阅[用户定义的运算符 (C + + /cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C2842。  
-  
-```  
-// C2842.cpp  
-// compile with: /clr /c  
-ref class G {  
-   void* operator new( size_t nSize );   // C2842  
-};  
-```  
+“类”：托管或 WinRT 类型不能定义自己的“operator new”或“operator delete”
+
+可以定义自己 * * 运算符 new 或**运算符 delete**来管理本机堆上的内存分配。 但是，引用类不能定义这些运算符，因为它们仅分配在托管堆上。
+
+
+有关详细信息，请参阅[用户定义的运算符 (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。
+
+## <a name="example"></a>示例
+
+以下示例生成 C2842。
+
+```
+// C2842.cpp
+// compile with: /clr /c
+ref class G {
+   void* operator new( size_t nSize );   // C2842
+};
+```

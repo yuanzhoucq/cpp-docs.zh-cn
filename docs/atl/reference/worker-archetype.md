@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118448"
 ---
 # <a name="worker-archetype"></a>辅助原型
 
@@ -68,7 +68,7 @@ ms.locfileid: "43767160"
 
 调用以处理工作项。
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>参数
 
-*请求*  
+*请求*<br/>
 要处理的工作项。 工作项是与相同类型的`RequestType`。
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`Terminate`。
 
-*给 pOverlapped*  
+*给 pOverlapped*<br/>
 一个指向[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)用来创建的队列的工作项排队等待的结构。
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-调用以初始化辅助对象之前的任何请求传递给`WorkerArchetype::Execute`。  
+调用以初始化辅助对象之前的任何请求传递给`WorkerArchetype::Execute`。
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>参数
 
-*pvParam*  
+*pvParam*<br/>
 理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。
 
 ### <a name="return-value"></a>返回值
@@ -106,8 +106,8 @@ BOOL Initialize(void* pvParam) throw();
 
 可以由辅助类处理的工作项类型的 typedef。
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>备注
@@ -118,17 +118,17 @@ typedef MyRequestType RequestType;
 
 被调用的所有请求都传递给后取消初始化辅助对象`WorkerArchetype::Execute`)。
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>参数
 
-*pvParam*  
+*pvParam*<br/>
 理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。
 
 ## <a name="see-also"></a>请参阅
 
-[概念](../../atl/active-template-library-atl-concepts.md)   
+[概念](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)
 
