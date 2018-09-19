@@ -1,5 +1,5 @@
 ---
-title: 对于对话框控件添加事件处理程序 |Microsoft Docs
+title: 添加事件处理程序对话框控件 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -8,9 +8,9 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, adding event handlers to controls
+- Dialog Editor [C++], adding event handlers to controls
 - controls [C++], event handlers
-- dialog box controls, events
+- dialog box controls [C++], events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
 author: mikeblome
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605732"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317051"
 ---
-# <a name="adding-event-handlers-for-dialog-box-controls"></a>添加对话框控件的事件处理程序
+# <a name="adding-event-handlers-for-dialog-box-controls-c"></a>添加事件处理程序对话框控件 （c + +）
 
 对于已与类关联的项目对话框，在创建事件处理程序时可以利用一些快捷方式。 您可以快速创建的默认控件通知事件或任何适用的 Windows 消息的处理程序。
 

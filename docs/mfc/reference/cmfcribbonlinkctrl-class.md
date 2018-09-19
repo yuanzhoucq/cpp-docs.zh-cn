@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712512"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 类
 实现位于功能区上的超链接。 当单击此超链接时，可以打开网页。  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定在单击链接控件时执行该命令的命令 ID。  
+*nID*<br/>
+[in]指定在单击链接控件时执行该命令的命令 ID。  
   
- [in]*lpszText*  
- 指定要在链接控件上显示的标签。  
+*lpszText*<br/>
+[in]指定要在链接控件上显示的标签。  
   
- [in]*lpszLink*  
- 指定与链接控件关联的超链接。  
+*lpszLink*<br/>
+[in]指定与链接控件关联的超链接。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用的构造函数`CMFCRibbonLinkCtrl`类。 此代码片段属于[功能区的小工具示例](../../visual-cpp-samples.md)。  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszLink*  
- 指定的超链接文本。  
+*lpszLink*<br/>
+[in]指定的超链接文本。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

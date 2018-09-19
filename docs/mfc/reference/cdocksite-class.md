@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720299"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pos*  
- [in]*nHeight*  
+*pos*<br/>
+[in][in]*nHeight*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectToAlignBy*  
- [in]*rectResult*  
+*rectToAlignBy*<br/>
+[in][in]*rectResult*  
  [in]*bMoveImmediately*  
   
 ### <a name="remarks"></a>备注  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwStyleEx*  
- [in]*dwStyle*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*dwControlBarStyle*  
- [in]*pContext*  
+*dwStyleEx*<br/>
+[in][in]*dwStyle*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*dwControlBarStyle*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentDockBar*  
- [in]*nOffset*  
+*pParentDockBar*<br/>
+[in][in]*nOffset*  
  [in]*nRowHeight*  
   
 ### <a name="return-value"></a>返回值  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*dockMethod*  
+*pWnd*<br/>
+[in][in]*dockMethod*  
  [in]*lpRect*  
   
 ### <a name="remarks"></a>备注  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 要找到窗格中的命令 ID。  
+*nID*<br/>
+[in]要找到窗格中的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  指向与指定的命令 ID 或如果找不到窗格中，则为 NULL 的窗格的指针。  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- [in]*ptDelta*  
+*rect*<br/>
+[in][in]*ptDelta*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*nFlags*  
+*pWnd*<br/>
+[in][in]*nFlags*  
  [in]*ptOffset*  
   
 ### <a name="return-value"></a>返回值  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pos*  
- [in]*bByShow*  
+*pos*<br/>
+[in][in]*bByShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRowToResize*  
- [in]*nOffset*  
+*pRowToResize*<br/>
+[in][in]*nOffset*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectAvailable*  
- [in]*深入剖析*  
- [in]*bExpand*  
- [in]*nOffset*  
+*rectAvailable*<br/>
+[in][in]*深入剖析*  
+*bExpand*<br/>
+[in][in]*nOffset*  
   
 ### <a name="remarks"></a>备注  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndInsertAfter*  
- [in]*rectWnd*  
+*pWndInsertAfter*<br/>
+[in][in]*rectWnd*  
  [in]*nFlags*  
   
 ### <a name="return-value"></a>返回值  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pos*  
- [in]*bShow*  
+*pos*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pt*  
- 屏幕坐标，若要检索的窗格中的点。  
+*pt*<br/>
+[in]屏幕坐标，若要检索的窗格中的点。  
   
 ### <a name="return-value"></a>返回值  
  指向位于指定的点或为 NULL，如果没有窗格是位于指定点的窗格的指针。  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- [in]*点*  
+*rect*<br/>
+[in][in]*点*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*dockMethod*  
+*pWnd*<br/>
+[in][in]*dockMethod*  
   
 ### <a name="remarks"></a>备注  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pOldBar*  
- [in]*pNewBar*  
+*pOldBar*<br/>
+[in][in]*pNewBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nNewWidth*  
- [in]*nNewHeight*  
+*nNewWidth*<br/>
+[in][in]*nNewHeight*  
   
 ### <a name="remarks"></a>备注  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRow*  
- [in]*nNewSize*  
+*pRow*<br/>
+[in][in]*nNewSize*  
  [in]*bAdjustLayout*  
   
 ### <a name="return-value"></a>返回值  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in][out]*pBar*  
  指向要显示或隐藏的窗格的指针。  
   
- [in]*bShow*  
- 若要指定要显示; 窗格中，则返回 TRUE如果为 FALSE，来指定要隐藏窗格。  
+*bShow*<br/>
+[in]若要指定要显示; 窗格中，则返回 TRUE如果为 FALSE，来指定要隐藏窗格。  
   
- [in]*bDelay*  
- 若要指定显示在窗格; 后应直到延迟窗格的布局，则返回 TRUE否则为 FALSE。  
+*bDelay*<br/>
+[in]若要指定显示在窗格; 后应直到延迟窗格的布局，则返回 TRUE否则为 FALSE。  
   
- [in]*bActivate*  
- 未使用此参数。  
+*bActivate*<br/>
+[in]未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
  如果窗格是显示还是隐藏成功，则为 TRUE。 如果指定的窗格中不属于此停靠站点，则为 FALSE。  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRow*  
- [in]*bShow*  
+*pRow*<br/>
+[in][in]*bShow*  
  [in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>备注  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFirstRow*  
- [in]*pSecondRow*  
+*pFirstRow*<br/>
+[in][in]*pSecondRow*  
   
 ### <a name="remarks"></a>备注  
   

@@ -1,7 +1,7 @@
 ---
-title: 编译器警告 （等级 4） C4127 |Microsoft 文档
+title: 编译器警告 （等级 C4127 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98b2eb42cfc66c27faf74c3d6e46e981851a0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094892"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>编译器警告（等级 4）C4127
-条件表达式是常量  
-  
- 某个 `if` 语句或 `while` 循环的控制表达式的计算结果为常量。 由于其常见惯例用法，如 1 普通常量或`true`不触发此警告，除非它们是在表达式中的操作的结果。 如果的控制表达式的`while`循环是常量，因为在中间退出循环，请考虑替换`while`循环`for`循环。 可以省略的初始化、 终止测试和循环增量`for`循环，这会导致循环是无限的就像`while(1)`，并可以从的正文中退出循环`for`语句。  
-  
- 下面的示例演示两种方式 C4127 生成的并演示如何使用 for 循环以避免此警告：  
-  
-```  
-// C4127.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-int main() {  
-   if (1 == 1) {}   // C4127  
-   while (42) { break; }   // C4127  
-  
-   // OK  
-   for ( ; ; ) {  
-      printf("test\n");  
-      break;  
-   }  
-}  
+
+> 条件表达式是常量
+
+## <a name="remarks"></a>备注
+
+某个 `if` 语句或 `while` 循环的控制表达式的计算结果为常量。 由于其常见的惯用使用情况，从 Visual Studio 2015 update 3，如 1 常用常数或`true`不触发此警告，除非它们是在表达式中操作的结果。
+
+如果的控制表达式`while`循环是一个常量，因为在中间退出循环，请考虑更换`while`循环`for`循环。 可以省略初始化、 终止测试和循环增量`for`循环中，这会导致循环是无限的就像`while(1)`，并可以从正文中退出循环`for`语句。
+
+## <a name="example"></a>示例
+
+下面的示例演示两种方式 C4127 生成的并演示如何使用 for 循环，以避免出现警告：
+
+```cpp
+// C4127.cpp
+// compile with: /W4
+#include <stdio.h>
+int main() {
+   if (true) {}           // OK in VS2015 update 3 and later
+   if (1 == 1) {}         // C4127
+   while (42) { break; }  // C4127
+
+   // OK
+   for ( ; ; ) {
+      printf("test\n");
+      break;
+   }
+}
 ```

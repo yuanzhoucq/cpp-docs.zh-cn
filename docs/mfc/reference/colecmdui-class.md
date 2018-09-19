@@ -1,7 +1,7 @@
 ---
 title: COleCmdUI 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ece2d45bdce490d09c7195deec380728d79392d
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851467"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535220"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 类
 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget`驱动功能相关的用户界面对象的状态。  
@@ -61,7 +61,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI` 允许 DocObject 为接收源自其容器的用户界面 （如 filenew、 打开、 打印和等等） 中的命令，并允许容器接收源自该文档的用户界面中的命令。 尽管`IDispatch`无法用于调度相同的命令，`IOleCommandTarget`提供更简单的方法来查询和执行，因为它依赖于一组标准的命令，通常不使用参数，且涉及无类型信息。 `COleCmdUI` 可用于启用、 更新和设置其他属性 DocObject 用户界面命令。 当你想要调用的命令时，调用[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。  
   
- DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。 另请参阅[Internet 前几个步骤： 活动文档](../../mfc/active-documents-on-the-internet.md)并[活动文档](../../mfc/active-documents-on-the-internet.md)。  
+ DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  

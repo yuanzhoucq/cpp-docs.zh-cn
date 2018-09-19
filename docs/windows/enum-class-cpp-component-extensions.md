@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207597"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711082"
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 
@@ -101,11 +101,11 @@ accessenum structname [:type] { enumerator-list } var;
 *name*  
 枚举的名称。 不允许匿名托管枚举。
 
-*类型*（可选）  
-*标识符*的基础类型。 这可以是任何标量类型，例如符号或无符号的版本**int**，**短**，或**长**。  **bool**或**char**还允许使用。
+*type*  
+（可选）基础类型*标识符*。 这可以是任何标量类型，例如符号或无符号的版本**int**，**短**，或**长**。  **bool**或**char**还允许使用。
 
-*var* （可选）  
-枚举类型的变量的名称。
+*var*  
+（可选）枚举类型的变量的名称。
 
 ### <a name="remarks"></a>备注
 

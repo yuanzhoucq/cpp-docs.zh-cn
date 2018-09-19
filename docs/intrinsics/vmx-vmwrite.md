@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1f52c2c2ca60f66218b669201f293ca377d4ca5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707013"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft 专用**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmwrite(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `Field`|要写入的 VMCS 字段。|  
-|[in] `FieldValue`|要写入的 VMCS 字段的值。|  
+|*字段*|[in]要写入的 VMCS 字段。|  
+|*FieldValue*|[in]要写入的 VMCS 字段的值。|  
   
 ## <a name="return-value"></a>返回值  
  0  
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
  操作失败，无可用状态。  
   
 ## <a name="remarks"></a>备注  
- `__vmx_vmwrite`函数等同于`VMWRITE`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点，并请查阅该附录 C文档。  
+ `__vmx_vmwrite`函数等同于`VMWRITE`计算机指令。 值`Field`参数是 Intel 文档中所述的编码的字段索引。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点，并请查阅该附录 C文档。  
   
 ## <a name="requirements"></a>要求  
   

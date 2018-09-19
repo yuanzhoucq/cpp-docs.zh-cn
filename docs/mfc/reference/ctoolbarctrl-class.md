@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047923"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 提供 Windows 工具栏公共控件的功能。  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>备注  
  *LpButtons*指针指向的数组`TBBUTTON`结构。 每个`TBBUTTON`结构将被添加为按钮的样式、 映像和/或字符串，命令 ID、 状态和用户定义数据的按钮相关联：  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  成员是按如下所示：  
   
- `iBitmap`  
- 按钮图像，则此按钮没有图像为-1 的从零开始的索引。  
+- `iBitmap`  
+
+   按钮图像，则此按钮没有图像为-1 的从零开始的索引。  
   
- `idCommand`  
- 与按钮关联的命令标识符。 选择该按钮时，此标识符将发送 WM_COMMAND 消息中。 如果`fsStyle`成员具有 TBSTYLE_SEP 的值，此成员必须为零。  
+-  `idCommand`  
+
+   与按钮关联的命令标识符。 选择该按钮时，此标识符将发送 WM_COMMAND 消息中。 如果`fsStyle`成员具有 TBSTYLE_SEP 的值，此成员必须为零。  
   
- `fsState`  
- 按钮状态标志。 它可以是下面列出的值的组合：  
+-  `fsState`  
+
+   按钮状态标志。 它可以是下面列出的值的组合：  
   
-- TBSTATE_CHECKED 按钮具有 TBSTYLE_CHECKED 样式和已按下。  
+   - TBSTATE_CHECKED 按钮具有 TBSTYLE_CHECKED 样式和已按下。  
   
-- TBSTATE_ENABLED 按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并就会变灰。  
+   - TBSTATE_ENABLED 按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并就会变灰。  
   
-- TBSTATE_HIDDEN 按钮不可见，并且不能接受用户输入。  
+   - TBSTATE_HIDDEN 按钮不可见，并且不能接受用户输入。  
   
-- TBSTATE_INDETERMINATE 按钮就会变灰。  
+   - TBSTATE_INDETERMINATE 按钮就会变灰。  
   
-- TBSTATE_PRESSED 已按下按钮。  
+   - TBSTATE_PRESSED 已按下按钮。  
   
-- 该按钮后跟 TBSTATE_WRAP 一个换行符。 该按钮还必须具有 TBSTATE_ENABLED 状态。  
+   - 该按钮后跟 TBSTATE_WRAP 一个换行符。 该按钮还必须具有 TBSTATE_ENABLED 状态。  
   
- `fsStyle`  
- 按钮样式。 它可以是下面列出的值的组合：  
+- `fsStyle`  
+
+   按钮样式。 它可以是下面列出的值的组合：  
   
-- TBSTYLE_BUTTON 创建标准的推送按钮。  
+   - TBSTYLE_BUTTON 创建标准的推送按钮。  
   
-- TBSTYLE_CHECK 创建一个按钮，每次按下和未按下状态之间切换用户单击它。 该按钮处于按下状态时具有不同的背景色。  
+   - TBSTYLE_CHECK 创建一个按钮，每次按下和未按下状态之间切换用户单击它。 该按钮处于按下状态时具有不同的背景色。  
   
-- TBSTYLE_CHECKGROUP 创建直到按下的组中的另一个按钮，按下保持复选按钮。  
+   - TBSTYLE_CHECKGROUP 创建直到按下的组中的另一个按钮，按下保持复选按钮。  
   
-- TBSTYLE_GROUP 创建直到按下的组中的另一个按钮，按下某个按钮保持。  
+   - TBSTYLE_GROUP 创建直到按下的组中的另一个按钮，按下某个按钮保持。  
   
-- TBSTYLE_SEP 创建分隔符，提供按钮组较小的差异。 包含此样式的按钮不会接收用户输入。  
+   - TBSTYLE_SEP 创建分隔符，提供按钮组较小的差异。 包含此样式的按钮不会接收用户输入。  
   
- `dwData`  
- 用户定义的数据。  
+- `dwData`  
+
+   用户定义的数据。  
   
- `iString`  
- 要用作按钮的字符串的从零开始的索引的标签，则此按钮没有字符串为-1。  
+- `iString`  
+
+   要用作按钮的字符串的从零开始的索引的标签，则此按钮没有字符串为-1。  
   
- 映像和/或你提供的索引必须之前已添加到工具栏控件的字符串列表使用[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
+映像和/或你提供的索引必须之前已添加到工具栏控件的字符串列表使用[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  添加一个新字符串，作为资源 ID，到工具栏的内部列表的字符串传递。  
@@ -532,8 +533,8 @@ BOOL ChangeBitmap(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*idButton*|要接收新的位图按钮的命令标识符。|  
-|[in]*iBitmap*|当前工具栏控件的图像列表中的图像的从零开始的索引。|  
+|*idButton*|[in]要接收新的位图按钮的命令标识符。|  
+|*iBitmap*|[in]当前工具栏控件的图像列表中的图像的从零开始的索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -622,7 +623,7 @@ virtual BOOL Create(
   
 - WS_DISABLED 很少  
   
- 请参阅[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)的窗口样式说明 Windows SDK 中。  
+ 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)的窗口样式说明 Windows SDK 中。  
   
  （可选） 将应用的组合[常见控件样式](/windows/desktop/Controls/common-control-styles)，如 Windows SDK 中所述。  
   
@@ -646,7 +647,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定工具栏控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，可以指定 toolbar 样式和窗口样式的任意组合，如中所述**备注**一部分[创建](#create)。  
@@ -841,7 +842,7 @@ CString GetButtonText(int idButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*idButton*|检索其显示文本的按钮的标识符。|  
+|*idButton*|[in]检索其显示文本的按钮的标识符。|  
   
 ### <a name="return-value"></a>返回值  
  一个[CString](../../atl-mfc-shared/using-cstring.md) ，包含指定的按钮的显示文本。  
@@ -860,7 +861,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)结构，它接收的颜色方案信息。 此方法返回时，该结构描述的突出显示颜色和阴影颜色的工具栏控件。|  
+|*lpColorScheme*|[out]指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)结构，它接收的颜色方案信息。 此方法返回时，该结构描述的突出显示颜色和阴影颜色的工具栏控件。|  
   
 ### <a name="return-value"></a>返回值  
 如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1053,8 +1054,8 @@ BOOL GetPadding(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pnHorzPadding*|一个整数，以像素为单位接收工具栏控件的水平填充。|  
-|[out]*pnVertPadding*|一个整数，以像素为单位接收工具栏控件的垂直边距。|  
+|*pnHorzPadding*|[out]一个整数，以像素为单位接收工具栏控件的水平填充。|  
+|*pnVertPadding*|[out]一个整数，以像素为单位接收工具栏控件的垂直边距。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1349,8 +1350,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 工具栏按钮的命令 ID。  
+*nID*<br/>
+[in]工具栏按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮突出显示的正整数，如果不突出显示按钮，则为 0 或-1 如果检测到错误发生。  
@@ -1363,8 +1364,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 在工具栏中按钮的命令标识符。  
+*nID*<br/>
+[in]在工具栏中按钮的命令标识符。  
   
 ### <a name="return-value"></a>返回值  
  正整数如果按钮是不确定的则为零如果按钮不是不确定的或为-1 如果检测到错误发生。  
@@ -1491,11 +1492,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 若要按下或释放该按钮的命令标识符。  
+*nID*<br/>
+[in]若要按下或释放该按钮的命令标识符。  
   
- [in]*bPress*  
- 为 TRUE，则按指定的按钮;为 FALSE，则释放指定的按钮。 默认值为 TRUE。  
+*bPress*<br/>
+[in]为 TRUE，则按指定的按钮;为 FALSE，则释放指定的按钮。 默认值为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -1516,7 +1517,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|指向[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)结构描述要替换的位图和新的位图。|  
+|*pReplaceBitmap*|[in]指向[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)结构描述要替换的位图和新的位图。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1593,8 +1594,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*fAnchor*  
- 指定是否定位点突出显示是启用还是禁用状态。 如果此值为非零值，则将启用突出显示的定位点。 如果此值为零，将禁用定位点突出显示  
+*fAnchor*<br/>
+[in]指定是否定位点突出显示是启用还是禁用状态。 如果此值为非零值，则将启用突出显示的定位点。 如果此值为零，将禁用定位点突出显示  
   
 ### <a name="return-value"></a>返回值  
  以前的定位点设置。 如果启用了突出显示，此值不为零。 如果未启用突出显示，此值为零。  
@@ -1729,7 +1730,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)介绍突出显示颜色和阴影颜色的工具栏控件的结构。|  
+|*lpColorScheme*|[in]指向[要添加的配色](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)介绍突出显示颜色和阴影颜色的工具栏控件的结构。|  
   
 ### <a name="remarks"></a>备注  
  如果 Windows Vista 视觉主题设置，则此方法无效。  
@@ -1952,8 +1953,8 @@ DWORD SetPadding(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nHorzPadding*|以像素为单位指定工具栏控件的水平的填充。|  
-|[in]*nVertPadding*|以像素为单位指定工具栏控件的垂直的填充。|  
+|*nHorzPadding*|[in]以像素为单位指定工具栏控件的水平的填充。|  
+|*nVertPadding*|[in]以像素为单位指定工具栏控件的垂直的填充。|  
   
 ### <a name="return-value"></a>返回值  
  一个 dword 值，其低位字包含以前的水平填充值，而其高位字包含以前的垂直填充值。 以像素为单位测量的空白值。  
@@ -1979,8 +1980,8 @@ CImagelist* SetPressedImageList(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iImageID*|图像列表的从零开始的索引。 如果使用只有一个图像列表，请将此参数设置为零。|  
-|[in]*pImageList*|指向[CImageList](../../mfc/reference/cimagelist-class.md) ，其中包含新的映像列表。|  
+|*iImageID*|[in]图像列表的从零开始的索引。 如果使用只有一个图像列表，请将此参数设置为零。|  
+|*pImageList*|[in]指向[CImageList](../../mfc/reference/cimagelist-class.md) ，其中包含新的映像列表。|  
   
 ### <a name="return-value"></a>返回值  
  指向[CImageList](../../mfc/reference/cimagelist-class.md)如果不设置了任何此类图像列表包含当前控件，则为 NULL 的上一个图像列表。  

@@ -8,7 +8,7 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- empty projects, adding files
+- empty projects [C++], adding files
 - projects [C++], adding items
 - blank projects
 - files [C++], adding to projects
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2801ddf7169bfd8d9ede93ada28cd4716057661c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200164"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315738"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>向空的 Win32 应用程序添加文件
 
@@ -45,4 +45,3 @@ ms.locfileid: "43200164"
 ## <a name="see-also"></a>请参阅
 
 [创建空的 Windows 桌面应用程序](../windows/creating-an-empty-windows-desktop-application.md)  
-[部署应用程序](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

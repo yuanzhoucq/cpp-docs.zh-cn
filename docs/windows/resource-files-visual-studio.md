@@ -1,5 +1,5 @@
 ---
-title: 资源文件 (Visual Studio) |Microsoft Docs
+title: 资源文件 (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,36 +8,35 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio]
-- .rc files
-- resource files
-- resource script files
-- resource script files, Win-32 based applications
-- resource script files, files updated when editing resources
-- resources [Visual Studio], types of resource files
-- rct files
 - resources [C++]
-- rc files
-- resource files, types of
-- .rct files
-- resource script files, unsupported types
+- .rc files [C++]
+- resource files [C++]
+- resource script files [C++]
+- resource script files [C++], Win-32 based applications
+- resource script files [C++], files updated when editing resources
+- resources [C++], types of resource files
+- rct files [C++]
+- rc files [C++]
+- resource files [C++], types of
+- .rct files [C++]
+- resource script files [C++], unsupported types
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6db3af430b0274f116eba4445158ddcf55ad1636
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220681"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315660"
 ---
-# <a name="resource-files-visual-studio"></a>资源文件 (Visual Studio)
+# <a name="resource-files-c"></a>资源文件 (C++)
 
 > [!NOTE]
-> 本材料适用于 Windows 桌面应用程序。 有关通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
+> 本材料适用于 Windows 桌面应用程序。 有关通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](/windows/uwp/app-resources/)。
 >
 > 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的托管应用中的资源的信息，请参阅[Globalizing and Localizing.NET Framework Applications](/dotnet/standard/globalization-localization/index)。
 >

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2722 |Microsoft 文档
+title: 编译器错误 C2722 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c8838ed6b2d202d58c9553a773da9653839b6c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9138172bb108095c4e72407f1e17e8f4fa2370c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082659"
 ---
 # <a name="compiler-error-c2722"></a>编译器错误 C2722
-:: 运算符： 非法以下操作员命令;使用运算符 operator  
-  
- `operator`语句重新定义`::new`或`::delete`。 `new`和`delete`运算符是全局性的因此范围解析运算符 (`::`) 是无意义。 删除`::`运算符。
+
+:: 运算符： 非法的后缀运算符命令;使用 operator operator
+
+`operator`语句一些专门选出`::new`或`::delete`。 `new`并`delete`运算符是全局的因此范围解析运算符 (`::`) 没有任何意义。 删除`::`运算符。

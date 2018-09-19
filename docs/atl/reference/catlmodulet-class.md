@@ -24,155 +24,177 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd5bd4c7bc88d0a0acc8abc18b0d7b3462b7f52
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057478"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT 类
-此类实现的 ATL 模块。  
-  
-## <a name="syntax"></a>语法  
-  
-```
-template <class T>  
-class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
-```  
-  
-#### <a name="parameters"></a>参数  
- *T*  
- 您的类派生自`CAtlModuleT`。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAtlModuleT::CAtlModuleT](#catlmodulet)|构造函数。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAtlModuleT::InitLibId](#initlibid)|初始化包含当前模块的 GUID 的数据成员。|  
-|[CAtlModuleT::RegisterAppId](#registerappid)|将该 exe 文件添加到注册表。|  
-|[CAtlModuleT::RegisterServer](#registerserver)|将服务添加到注册表。|  
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|从注册表中删除该 exe 文件。|  
-|[CAtlModuleT::UnregisterServer](#unregisterserver)|从注册表中删除该服务。|  
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|更新注册表中的 EXE 信息。|  
-  
-## <a name="remarks"></a>备注  
- `CAtlModuleT`派生自[CAtlModule](../../atl/reference/catlmodule-class.md)，实现可执行文件 (EXE) 或服务 (EXE) ATL 模块。 可执行模块是为在本地的进程外服务器，而服务模块是一个 Windows 启动时在后台运行的 Windows 应用程序。  
-  
- `CAtlModuleT` 为初始化、 注册和注销的模块提供支持。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- [_ATL_MODULE](atl-typedefs.md#_atl_module)  
 
-  
- [CAtlModule](../../atl/reference/catlmodule-class.md)  
-  
- `CAtlModuleT`  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlbase.h  
-  
-##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT  
- 构造函数。  
-  
+此类实现的 ATL 模块。
+
+## <a name="syntax"></a>语法
+
+```
+template <class T>
+class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
+```
+
+#### <a name="parameters"></a>参数
+
+*T*<br/>
+您的类派生自`CAtlModuleT`。
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CAtlModuleT::CAtlModuleT](#catlmodulet)|构造函数。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CAtlModuleT::InitLibId](#initlibid)|初始化包含当前模块的 GUID 的数据成员。|
+|[CAtlModuleT::RegisterAppId](#registerappid)|将该 exe 文件添加到注册表。|
+|[CAtlModuleT::RegisterServer](#registerserver)|将服务添加到注册表。|
+|[CAtlModuleT::UnregisterAppId](#unregisterappid)|从注册表中删除该 exe 文件。|
+|[CAtlModuleT::UnregisterServer](#unregisterserver)|从注册表中删除该服务。|
+|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|更新注册表中的 EXE 信息。|
+
+## <a name="remarks"></a>备注
+
+`CAtlModuleT`派生自[CAtlModule](../../atl/reference/catlmodule-class.md)，实现可执行文件 (EXE) 或服务 (EXE) ATL 模块。 可执行模块是为在本地的进程外服务器，而服务模块是一个 Windows 启动时在后台运行的 Windows 应用程序。
+
+`CAtlModuleT` 为初始化、 注册和注销的模块提供支持。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
+
+[CAtlModule](../../atl/reference/catlmodule-class.md)
+
+`CAtlModuleT`
+
+## <a name="requirements"></a>要求
+
+**标头：** atlbase.h
+
+##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT
+
+构造函数。
+
 ```
 CAtlModuleT() throw();
-```  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlModuleT::InitLibId](#initlibid)。  
-  
-##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
- 初始化包含当前模块的 GUID 的数据成员。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+调用[CAtlModuleT::InitLibId](#initlibid)。
+
+##  <a name="initlibid"></a>  CAtlModuleT::InitLibId
+
+初始化包含当前模块的 GUID 的数据成员。
+
 ```
 static void InitLibId() throw();
-```  
-  
-### <a name="remarks"></a>备注  
- 由构造函数调用[CAtlModuleT::CAtlModuleT](#catlmodulet)。  
-  
-##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
- 将该 exe 文件添加到注册表。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+由构造函数调用[CAtlModuleT::CAtlModuleT](#catlmodulet)。
+
+##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId
+
+将该 exe 文件添加到注册表。
+
 ```
 HRESULT RegisterAppId() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
- 将服务添加到注册表。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer
+
+将服务添加到注册表。
+
 ```
 HRESULT RegisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *bRegTypeLib*  
- 如果类型库的注册，则为 TRUE。 默认值为 FALSE。  
-  
- *pCLSID*  
- 指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
- 从注册表中删除该 exe 文件。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bRegTypeLib*<br/>
+如果类型库的注册，则为 TRUE。 默认值为 FALSE。
+
+*pCLSID*<br/>
+指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId
+
+从注册表中删除该 exe 文件。
+
 ```
 HRESULT UnregisterAppId() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
- 从注册表中删除该服务。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer
+
+从注册表中删除该服务。
+
 ```
 HRESULT UnregisterServer(
     BOOL bUnRegTypeLib,
     const CLSID* pCLSID = NULL) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *bUnRegTypeLib*  
- 如果类型库，则也要注销，则为 TRUE。  
-  
- *pCLSID*  
- 指向要注销的对象的 CLSID。 如果为 NULL （默认值），在对象映射中的所有对象将为未注册。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
- 更新注册表中的 EXE 信息。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bUnRegTypeLib*<br/>
+如果类型库，则也要注销，则为 TRUE。
+
+*pCLSID*<br/>
+指向要注销的对象的 CLSID。 如果为 NULL （默认值），在对象映射中的所有对象将为未注册。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId
+
+更新注册表中的 EXE 信息。
+
 ```
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *bRegister*  
- 保留。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-## <a name="see-also"></a>请参阅  
- [CAtlModule 类](../../atl/reference/catlmodule-class.md)   
- [类概述](../../atl/atl-class-overview.md)   
- [Module 类](../../atl/atl-module-classes.md)
+```
+
+### <a name="parameters"></a>参数
+
+*bRegister*<br/>
+保留。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+## <a name="see-also"></a>请参阅
+
+[CAtlModule 类](../../atl/reference/catlmodule-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[Module 类](../../atl/atl-module-classes.md)

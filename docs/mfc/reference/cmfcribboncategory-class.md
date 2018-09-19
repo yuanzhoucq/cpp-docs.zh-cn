@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73cf6b78475ca438c39e52263c4e91b10de60f8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020415"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 类
 `CMFCRibbonCategory`类实现包含一组功能区选项卡[功能区面板](../../mfc/reference/cmfcribbonpanel-class.md)。  
@@ -237,23 +237,18 @@ class CMFCRibbonCategory : public CObject
   
  下面的示例演示如何创建功能区类别并向其添加一个面板。  
   
- `// Create a new ribbon category and get a pointer to it`  
-  
- `CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory`  
-  
- `(_T("&Write"),           // Category name`  
-  
- `IDB_WRITE,              // Category small images (16 x 16)`  
-  
- `IDB_WRITE_LARGE);   // Category large images (32 x 32)`  
-  
- `// Add a panel to the new category`  
-  
- `CMFCRibbonPanel* pPanel = pCategory->AddPanel (`  
-  
- `_T("Clipboard"),                       // Panel name`  
-  
- `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
+```cpp
+// Create a new ribbon category and get a pointer to it`  
+CMFCRibbonCategory* pCategory = m_wndRibbonBar.AddCategory
+    (_T("&Write"),           // Category name
+    IDB_WRITE,               // Category small images (16 x 16)
+    IDB_WRITE_LARGE);        // Category large images (32 x 32)
+
+// Add a panel to the new category
+CMFCRibbonPanel* pPanel = pCategory->AddPanel (
+    _T("Clipboard"),                // Panel name
+    m_PanelIcons.ExtractIcon (0));  // Panel icon
+```
   
  下图显示了 RibbonApp 示例应用程序中的主页类别的图。  
   
@@ -275,8 +270,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElem*  
- 指向功能区元素的指针。  
+*pElem*<br/>
+[in]指向功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
  在自定义对话框中的功能区元素是可以添加到快速访问工具栏的命令。  
@@ -292,14 +287,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPanelName*  
- 指向新的功能区面板的名称。  
+*lpszPanelName*<br/>
+[in]指向新的功能区面板的名称。  
   
- [in]*hIcon*  
- 新的功能区面板的默认图标的句柄。  
+*hIcon*<br/>
+[in]新的功能区面板的默认图标的句柄。  
   
- [in]*pRTI*  
- 自定义功能区面板的运行时类信息的指针。  
+*pRTI*<br/>
+[in]自定义功能区面板的运行时类信息的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则将新功能区面板的指针如果不创建的面板，否则为 NULL。  
@@ -330,23 +325,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParenrRibbonBar*  
- 向功能区类别的父功能区栏的指针。  
+*pParenrRibbonBar*<br/>
+[in]向功能区类别的父功能区栏的指针。  
   
- [in]*lpszName*  
- 功能区类别的名称。  
+*lpszName*<br/>
+[in]功能区类别的名称。  
   
- [in]*uiSmallImagesResID*  
- 使用功能区中的元素的功能区类别的小图像的图像列表的资源 ID。  
+*uiSmallImagesResID*<br/>
+[in]使用功能区中的元素的功能区类别的小图像的图像列表的资源 ID。  
   
- [in]*uiLargeImagesResID*  
- 使用功能区中的元素的功能区类别的大图像的图像列表的资源 ID。  
+*uiLargeImagesResID*<br/>
+[in]使用功能区中的元素的功能区类别的大图像的图像列表的资源 ID。  
   
- [in]*sizeSmallImage*  
- 默认的功能区类别中的功能区元素的小图像的大小。  
+*sizeSmallImage*<br/>
+[in]默认的功能区类别中的功能区元素的小图像的大小。  
   
- [in]*sizeLargeImage*  
- 默认的功能区中的元素的功能区类别的大图像的大小。  
+*sizeLargeImage*<br/>
+[in]默认的功能区中的元素的功能区类别的大图像的大小。  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  复制指定的状态[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)与当前[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)对象。  
@@ -356,8 +351,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*src*  
- 源 `CMFCRibbonCategory` 对象。  
+*src*<br/>
+[in]源`CMFCRibbonCategory`对象。  
   
 ### <a name="remarks"></a>备注  
   
@@ -371,11 +366,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwData*  
- 功能区元素与关联的数据。  
+*dwData*<br/>
+[in]功能区元素与关联的数据。  
   
- [in]*bVisibleOnly*  
- 若要在搜索; 中包括的快速访问功能区元素，则返回 TRUE如果为 FALSE，则若要排除在搜索中的快速访问功能区元素。  
+*bVisibleOnly*<br/>
+[in]若要在搜索; 中包括的快速访问功能区元素，则返回 TRUE如果为 FALSE，则若要排除在搜索中的快速访问功能区元素。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区元素的指针否则为，为 NULL。  
@@ -392,11 +387,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 功能区元素与关联的命令 ID。  
+*uiCmdID*<br/>
+[in]功能区元素与关联的命令 ID。  
   
- [in]*bVisibleOnly*  
- 若要在搜索; 中包括的快速访问功能区元素，则返回 TRUE如果为 FALSE，则若要排除在搜索中的快速访问功能区元素。  
+*bVisibleOnly*<br/>
+[in]若要在搜索; 中包括的快速访问功能区元素，则返回 TRUE如果为 FALSE，则若要排除在搜索中的快速访问功能区元素。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区元素的指针否则为，为 NULL。  
@@ -411,8 +406,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElement*  
- 指向功能区元素的指针。  
+*pElement*<br/>
+[in]指向功能区元素的指针。  
   
 ### <a name="return-value"></a>返回值  
  指向此方法已成功; 如果的功能区面板否则为，为 NULL。  
@@ -463,8 +458,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in、 out]*arElements*  
- 引用[CArray](../../mfc/reference/carray-class.md)的功能区元素。  
+*arElements*<br/>
+[in、 out]引用[CArray](../../mfc/reference/carray-class.md)的功能区元素。  
   
 ### <a name="remarks"></a>备注  
  数组中包含专供快速访问工具栏上的功能区元素。  
@@ -479,11 +474,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 功能区元素与关联的命令 ID。  
+*uiCmdID*<br/>
+[in]功能区元素与关联的命令 ID。  
   
- [in、 out]*arElements*  
- 引用[CArray](../../mfc/reference/carray-class.md)的功能区元素。  
+*arElements*<br/>
+[in、 out]引用[CArray](../../mfc/reference/carray-class.md)的功能区元素。  
   
 ### <a name="remarks"></a>备注  
  数组中包含专供快速访问工具栏上的功能区元素。  
@@ -532,8 +527,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bIsLargeImage*  
- 适用于大型图像列表中; 中的映像数为 FALSE 的小型图像列表中的图像数。  
+*bIsLargeImage*<br/>
+[in]适用于大型图像列表中; 中的映像数为 FALSE 的小型图像列表中的图像数。  
   
 ### <a name="return-value"></a>返回值  
  指定的图像列表中的图像数。  
@@ -548,8 +543,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bIsLargeImage*  
- 为大型映像; 的大小，则返回 TRUE对于较小的图像的大小为 FALSE。  
+*bIsLargeImage*<br/>
+[in]为大型映像; 的大小，则返回 TRUE对于较小的图像的大小为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  指定的图像列表中的图像的大小。  
@@ -567,11 +562,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lstItems*  
- 在功能区类别中的功能区元素的命令 Id 的列表。  
+*lstItems*<br/>
+[out]在功能区类别中的功能区元素的命令 Id 的列表。  
   
- [in]*bHiddenOnly*  
- 若要排除的功能区类别; 中的功能区面板上显示的功能区元素，则返回 TRUE为 FALSE，则在功能区类别中包括所有功能区元素。  
+*bHiddenOnly*<br/>
+[in]若要排除的功能区类别; 中的功能区面板上显示的功能区元素，则返回 TRUE为 FALSE，则在功能区类别中包括所有功能区元素。  
   
 ### <a name="remarks"></a>备注  
   
@@ -605,8 +600,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 功能区面板的设备上下文的指针。  
+*pDC*<br/>
+[in]功能区面板的设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
  功能区类别中包含的功能区面板的最大高度。  
@@ -634,8 +629,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 功能区面板的从零开始的索引。  
+*nIndex*<br/>
+[in]功能区面板的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  指向位于指定索引处的功能区面板。  
@@ -661,8 +656,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  指向此方法已成功; 如果的功能区面板否则为，为 NULL。  
@@ -678,8 +673,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pPanel*  
- 指向功能区面板。  
+*pPanel*<br/>
+[in]指向功能区面板。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则在指定的功能区面板的从零开始的索引否则为-1。  
@@ -822,11 +817,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pHLPanel*  
- 指向要突出显示的功能区面板。  
+*pHLPanel*<br/>
+[in]指向要突出显示的功能区面板。  
   
- [in]*点*  
- 指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  指向以前突出显示功能区面板中;如果调用此方法时，将突出不显示任何功能区面板，否则为 NULL。  
@@ -844,11 +839,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
   
- [in]*bCheckPanelCaption*  
- 测试功能区面板标题，则为 TRUE如果为 FALSE，则若要排除的功能区面板标题。  
+*bCheckPanelCaption*<br/>
+[in]测试功能区面板标题，则为 TRUE如果为 FALSE，则若要排除的功能区面板标题。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区元素的指针否则为，为 NULL。  
@@ -864,8 +859,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区元素的从零开始的索引否则为-1。  
@@ -881,8 +876,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 要测试的点。  
+*点*<br/>
+[in]要测试的点。  
   
 ### <a name="return-value"></a>返回值  
  如果*点*内左侧的边框或向右滚动按钮的功能区类别，返回一个指向该按钮，或者否则，返回 NULL。  
@@ -939,17 +934,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bAccelerator*  
- 如果此为命令，否则源自快捷键或 FALSE。  
+*bAccelerator*<br/>
+[in]如果此为命令，否则源自快捷键或 FALSE。  
   
- [in]*nNotifyCode*  
- 通知代码。  
+*nNotifyCode*<br/>
+[in]通知代码。  
   
- [in]*wParam*  
- 消息的 WPARAM 字段。  
+*wParam*<br/>
+[in]消息的 WPARAM 字段。  
   
- [in]*lParam*  
- 消息的 LPARAM 字段。  
+*lParam*<br/>
+[in]消息的 LPARAM 字段。  
   
 ### <a name="return-value"></a>返回值  
  如果该消息已处理，则为 TRUE 或 FALSE，如果不是返回。  
@@ -973,8 +968,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 功能区类别的设备上下文的指针。  
+*pDC*<br/>
+[in]功能区类别的设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -992,23 +987,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 图像的设备上下文的指针。  
+*pDC*<br/>
+[in]图像的设备上下文的指针。  
   
- [in]*rect*  
- 显示的图像的矩形。  
+*rect*<br/>
+[in]显示的图像的矩形。  
   
- [in]*pElement*  
- 指向包含该映像的功能区元素的指针。  
+*pElement*<br/>
+[in]指向包含该映像的功能区元素的指针。  
   
- [in]*bIsLargeImage*  
- 如果映像是较大的大小，则为 TRUE如果图像为小大小时，则为 FALSE。  
+*bIsLargeImage*<br/>
+[in]如果映像是较大的大小，则为 TRUE如果图像为小大小时，则为 FALSE。  
   
- [in]*nImageIndex*  
- 功能区类别中包含的映像数组中的图像的从零开始索引。  
+*nImageIndex*<br/>
+[in]功能区类别中包含的映像数组中的图像的从零开始索引。  
   
- [in]*bCenter*  
- 为 TRUE，则在显示矩形; 图像居中为 FALSE，则在显示矩形的左上角绘制图像。  
+*bCenter*<br/>
+[in]为 TRUE，则在显示矩形; 图像居中为 FALSE，则在显示矩形的左上角绘制图像。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -1025,11 +1020,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 未使用此参数。  
+*pDC*<br/>
+[in]未使用此参数。  
   
- [in]*pMenuBar*  
- 未使用此参数。  
+*pMenuBar*<br/>
+[in]未使用此参数。  
   
 ### <a name="remarks"></a>备注  
  默认情况下此方法没有任何影响。 重写此方法以绘制边框的弹出菜单。  
@@ -1055,8 +1050,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]将鼠标指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区元素的指针否则为，为 NULL。  
@@ -1071,8 +1066,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1084,8 +1079,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指针相对于窗口的左上角的 x 和 y 坐标。  
+*点*<br/>
+[in]指针相对于窗口的左上角的 x 和 y 坐标。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1097,8 +1092,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bIsRTL*  
- 如果布局是从右到左; 则为 TRUE如果布局是从左到右，则为 FALSE。  
+*bIsRTL*<br/>
+[in]如果布局是从右到左; 则为 TRUE如果布局是从左到右，则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此方法调整所有功能区面板和功能区类别中包含的功能区元素的布局。  
@@ -1113,11 +1108,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bScrollLeft*  
- 滚动到左侧，则为 TRUE为 FALSE，则向右滚动。  
+*bScrollLeft*<br/>
+[in]滚动到左侧，则为 TRUE为 FALSE，则向右滚动。  
   
- [in]*nScrollOffset*  
- 以像素为单位的滚动距离。  
+*nScrollOffset*<br/>
+[in]以像素为单位的滚动距离。  
   
 ### <a name="return-value"></a>返回值  
  功能区类别移动在水平方向; 如果为 TRUE否则为 FALSE。  
@@ -1135,14 +1130,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pCmdUI*  
- 指向`CMFCRibbonCmdUI`指定的用户界面元素才可用，哪些是要禁用的对象。  
+*pCmdUI*<br/>
+[in]指向`CMFCRibbonCmdUI`指定的用户界面元素才可用，哪些是要禁用的对象。  
   
- [in]*pTarget*  
- 对控制启用或禁用的用户界面元素的窗口的指针。  
+*pTarget*<br/>
+[in]对控制启用或禁用的用户界面元素的窗口的指针。  
   
- [in]*bDisableIfNoHndler*  
- 若要禁用的用户界面项，如果在消息映射; 中不定义任何处理程序，则返回 TRUE否则为 FALSE。  
+*bDisableIfNoHndler*<br/>
+[in]若要禁用的用户界面项，如果在消息映射; 中不定义任何处理程序，则返回 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1154,8 +1149,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 功能区类别的设备上下文的指针。  
+*pDC*<br/>
+[in]功能区类别的设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1169,11 +1164,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 要移除的面板索引号。 获取通过调用[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)方法。  
+*nIndex*<br/>
+[in]要移除的面板索引号。 获取通过调用[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)方法。  
   
- [in]*bDelete*  
- 为 TRUE，则从内存; 中删除面板对象如果为 FALSE，则若要移除的面板对象而不删除它。  
+*bDelete*<br/>
+[in]为 TRUE，则从内存; 中删除面板对象如果为 FALSE，则若要移除的面板对象而不删除它。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -1186,8 +1181,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 功能区类别中包含的功能区面板的设备上下文的指针。  
+*pDC*<br/>
+[in]功能区类别中包含的功能区面板的设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1199,8 +1194,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*arCollapseOrder*  
- 指定的折叠顺序。 该数组包含功能区面板的从零开始的索引。  
+*arCollapseOrder*<br/>
+[in]指定的折叠顺序。 该数组包含功能区面板的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
  库定义的折叠顺序。 但是，您可以通过为类别提供指定的折叠顺序的索引列表自定义此行为。  
@@ -1222,8 +1217,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwData*  
- 用户定义的数据。  
+*dwData*<br/>
+[in]用户定义的数据。  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  将快捷键提示分配给功能区类别。  
@@ -1233,8 +1228,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszKeys*  
- 快捷键提示的文本。  
+*lpszKeys*<br/>
+[in]快捷键提示的文本。  
   
 ### <a name="remarks"></a>备注  
  当用户按下 Alt 键或 F10 键显示键提示。  
@@ -1247,8 +1242,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 名称和快捷键提示的功能区类别。  
+*lpszName*<br/>
+[in]名称和快捷键提示的功能区类别。  
   
 ### <a name="remarks"></a>备注  
  若要设置功能区类别 keytip，追加跟快捷键提示字符换行转义序列*lpszName*。  
@@ -1261,8 +1256,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- 指定功能区类别的新颜色。  
+*颜色*<br/>
+[in]指定功能区类别的新颜色。  
   
 ### <a name="remarks"></a>备注  
  颜色可以是下列值之一：  

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408432"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100269"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,25 +59,28 @@ void _swab(
 
 ## <a name="parameters"></a>参数
 
-*src*要复制和交换的数据。
+*src*<br/>
+要复制和交换的数据。
 
-*目标*交换数据的存储位置。
+*dest*<br/>
+已交换数据的存储位置。
 
-*n*要复制和交换的字节数。
+*n*<br/>
+要复制和交换的字节数。
 
 ## <a name="return-value"></a>返回值
 
-**Swab**函数不返回值。 函数集**errno**到**EINVAL**如果*src*或*dest*指针为 null 或*n*小于比零，并且无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+**Swab**函数不返回值。 该函数设置**errno**到**EINVAL**如果*src*或者*dest*指针为 null 或*n*小于零，并且无效的参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
 
 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-如果*n*为偶数， **_swab**函数副本*n*个字节从*src*，交换每对相邻的字节，并将存储在结果*dest*。 如果*n*为奇数， **_swab**复制并交换第一个*n*-1 字节的*src*，并不复制的最后一个字节。 **_Swab**函数通常用于准备二进制数据传输到使用不同的字节顺序的计算机。
+如果*n*为偶数， **_swab**函数副本*n*个字节从*src*，交换每对相邻的字节，并将存储在结果*dest*。 如果*n*为奇数， **_swab**复制并交换第一个*n*-1 个字节的*src*，并不复制最后一个字节。 **_Swab**函数通常用于准备传输到使用不同的字节顺序的计算机的二进制数据。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_swab**|C：\<stdlib.h> C++：\<cstdlib> 或 \<stdlib.h>|
 

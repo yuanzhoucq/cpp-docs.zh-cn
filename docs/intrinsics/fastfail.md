@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e04f2898caf1f62a9499096ffab09fce8da86ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538392"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700175"
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft 专用**  
@@ -31,8 +31,8 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `code`  
- winnt.h 或 wdm.h 中的 `FAST_FAIL_<description>` 符号常量表示过程终止原因。  
+*代码*<br/>
+[in]一个`FAST_FAIL_<description>`winnt.h 或 wdm.h 中的指示进程终止的原因的符号常量。  
   
 ## <a name="return-value"></a>返回值  
  `__fastfail` 内部函数不会返回。  

@@ -1,5 +1,5 @@
 ---
-title: 如何： 创建资源 |Microsoft Docs
+title: 如何： 创建资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - toolbars [C++], resources
 - resource toolbars
-- resources [Visual Studio], creating
+- resources [C++], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221015"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316778"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221015"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>在“类视图”中创建新资源
 
-1. 在中[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。
+1. 在中[类视图](/visualstudio/ide/viewing-the-structure-of-code)，右键单击您的类，然后选择**添加**，然后单击**添加资源**从快捷菜单。
 
 2. 在 [“添加资源”对话框](../windows/add-resource-dialog-box.md)中，选择你想要向项目中添加的资源的类型。
 

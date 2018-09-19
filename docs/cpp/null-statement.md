@@ -16,39 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab391bb75dd6e7a2ef1ccf0951fa93770e6cd316
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 27180a8252344f7b3185ec83b48ebef42f832907
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077355"
 ---
 # <a name="null-statement"></a>Null 语句
-"Null 语句"是的表达式语句*表达式*缺失。 当语言的语法调用语句而不是表达式计算时，它很有用。   它包括分号。  
-  
- Null 语句通常用作迭代语句中的占位符或用作在复合语句或函数的末尾放置标签的语句。  
-  
- 以下代码片段说明如何将一个字符串复制到另一个字符串，并包含 null 语句：  
-  
-```cpp 
-// null_statement.cpp  
-char *myStrCpy( char *Dest, const char *Source )  
-{  
-    char *DestStart = Dest;  
-  
-    // Assign value pointed to by Source to  
-    // Dest until the end-of-string 0 is  
-    // encountered.  
-    while( *Dest++ = *Source++ )  
-        ;   // Null statement.  
-  
-    return DestStart;  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [表达式语句](../cpp/expression-statement.md)
+
+"Null 语句"是的表达式语句*表达式*缺失。 当语言的语法调用语句而不是表达式计算时，它很有用。   它包括分号。
+
+Null 语句通常用作迭代语句中的占位符或用作在复合语句或函数的末尾放置标签的语句。
+
+以下代码片段说明如何将一个字符串复制到另一个字符串，并包含 null 语句：
+
+```cpp
+// null_statement.cpp
+char *myStrCpy( char *Dest, const char *Source )
+{
+    char *DestStart = Dest;
+
+    // Assign value pointed to by Source to
+    // Dest until the end-of-string 0 is
+    // encountered.
+    while( *Dest++ = *Source++ )
+        ;   // Null statement.
+
+    return DestStart;
+}
+
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[表达式语句](../cpp/expression-statement.md)

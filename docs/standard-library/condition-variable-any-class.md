@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959227"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106959"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 类
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* A`mutex`任何类型的对象。
+*一个 Lck*<br/>
+任何类型的 `mutex` 对象。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* A`mutex`任何类型的对象。
+*一个 Lck*<br/>
+任何类型的 `mutex` 对象。
 
-*Rel_time* A`chrono::duration`对象，它指定之前在线程的时间量唤醒。
+*Rel_time*<br/>
+`chrono::duration` 对象指定线程唤醒前的时间。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck* mutex 对象。
+*一个 Lck*<br/>
+Mutex 对象。
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)对象。
+*Abs_time*<br/>
+[chrono::time_point](../standard-library/time-point-class.md) 对象。
 
-*Pred*返回的任何表达式**true**或**false**。
+*Pred*<br/>
+任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
 

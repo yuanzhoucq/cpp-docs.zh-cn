@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108299"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>参数
 
-*_Amount*提取的货币值。
+*_Amount*<br/>
+提取的货币值。
 
-*_Intl*如果**true**，使用国际格式。 默认值为“false”。
+*_Intl*<br/>
+如果 **，则返回 true**，使用国际格式。 默认值为“false”。
 
 ### <a name="remarks"></a>备注
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>参数
 
-*_Tptr*时间结构形式的时间。
+*_Tptr*<br/>
+时间结构形式的时间。
 
-*_Fmt*用于获得时间值所需的格式。
+*_Fmt*<br/>
+要用于获取时间值的所需格式。
 
 ### <a name="remarks"></a>备注
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>参数
 
-*_Amount*货币金额插入流。
+*_Amount*<br/>
+要插入到流中的货币金额。
 
-*_Intl*设置为**true**如果操控器应使用国际格式**false**如果它不应。
+*_Intl*<br/>
+设置为 **，则返回 true**如果操控器应使用国际格式**false**如果它不应。
 
 ### <a name="return-value"></a>返回值
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>参数
 
-*_Tptr*要写入到流中的时间结构提供的时间值。
+*_Tptr*<br/>
+时间结构中提供的要写入到流中的时间值。
 
-*_Fmt*所需的格式编写的时间值。
+*_Fmt*<br/>
+用来写入时间值的所需格式。
 
 ### <a name="remarks"></a>备注
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>参数
 
-*str* std:: string、 char\*，字符串文本或原始字符串文本或上述任何一个宽版本 (例如 std:: wstring、 wchar_t\*)。
+*str*<br/>
+Std:: string、 char\*，字符串文本或原始字符串文本或上述任何一个宽版本 (例如 std:: wstring、 wchar_t\*)。
 
-*分隔符*一个用户指定的字符或宽字符，用于作为分隔符的开头和结尾的字符串。
+*分隔符*<br/>
+一个用户指定的字符或宽字符，用作字符串开头和结尾的分隔符。
 
-*转义*一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
+*转义*<br/>
+一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
 
 ### <a name="remarks"></a>备注
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>参数
 
-*掩码*要清除的标志。
+*掩码*<br/>
+要清除的标志。
 
 ### <a name="return-value"></a>返回值
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>参数
 
-*（_b)* 数基。
+*（_b)*<br/>
+数基。
 
 ### <a name="return-value"></a>返回值
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>参数
 
-*Ch*将用于在右对齐显示中填充空格的字符。
+*ch*<br/>
+用于在右对齐显示中填充空格的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>参数
 
-*掩码*要设置的标志。
+*掩码*<br/>
+要设置的标志。
 
 ### <a name="return-value"></a>返回值
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>参数
 
-*Prec*浮点值的精度。
+*prec*<br/>
+浮点值的精度。
 
 ### <a name="return-value"></a>返回值
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>参数
 
-*宽*显示字段的宽度。
+*宽*<br/>
+显示字段的宽度。
 
 ### <a name="return-value"></a>返回值
 

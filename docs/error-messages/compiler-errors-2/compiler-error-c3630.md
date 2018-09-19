@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3630 |Microsoft 文档
+title: 编译器错误 C3630 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e38e06f2a32e9a95421ac113cdd0b5f1371334
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53d7b895c25a847e8abe1b9db11b8b413d3342d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066110"
 ---
 # <a name="compiler-error-c3630"></a>编译器错误 C3630
-错误处理标记 token 时  
-  
- 无法处理在源代码中的令牌。
+
+处理标记 token 时出错
+
+无法处理源代码中的令牌。

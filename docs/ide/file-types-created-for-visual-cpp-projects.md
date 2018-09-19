@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336012"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690570"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>为 Visual C++ 项目创建的文件类型
 本主题介绍与针对传统桌面应用程序的 Visual C++ 项目相关联的所有文件类型。 项目中包含的实际文件取决于项目类型以及在使用向导时选择的选项。  
@@ -73,7 +73,7 @@ ms.locfileid: "33336012"
 |.HxC|项目|帮助项目文件。|  
 |.ico|资源|图标位图图形文件。|  
 |.idb|编译|状态文件，包含源文件与类定义之间的依赖关系信息，可能由编译器在最小重新生成和增量编译过程中使用。 使用 [/Fd](../build/reference/fd-program-database-file-name.md) 编译器选项指定 .idb 文件的名称。 有关更多信息，请参见 [/Gm（启用最小重新生成）](../build/reference/gm-enable-minimal-rebuild.md) 。|  
-|.idl|编译|接口定义语言文件。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](http://msdn.microsoft.com/library/windows/desktop/aa378712)。|  
+|.idl|编译|接口定义语言文件。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](/windows/desktop/Rpc/the-interface-definition-language-idl-file)。|  
 |.ilk|链接|增量链接文件。 有关更多信息，请参见 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 。|  
 |.map|链接|包含链接器信息的文本文件。 使用 [/Fm](../build/reference/fm-name-mapfile.md) 编译器选项命名映射文件。 有关更多信息，请参见 [/MAP](../build/reference/map-generate-mapfile.md) 。|  
 |.mfcribbon-ms|资源|资源文件，包含用于定义功能区中的按钮、控件和特性的 XML 代码。 有关详细信息，请参阅 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
@@ -81,7 +81,7 @@ ms.locfileid: "33336012"
 |.pch|调试|预编译头文件。|  
 |.rc、.rc2|资源|[资源脚本文件](../windows/working-with-resource-files.md) ，用于生成资源。|  
 |.sbr|编译|源浏览器中间文件。 [BSCMAKE](../build/reference/bscmake-options.md)的输入文件。|  
-|.sln|解决方案|[解决方案](http://msdn.microsoft.com/en-us/a45c299d-69f5-4b67-879d-1383417df0a7) 文件。|  
+|.sln|解决方案|[解决方案](/visualstudio/ide/solutions-and-projects-in-visual-studio)文件。|  
 |.suo|解决方案|解决方案选项文件。|  
 |.txt|资源|文本文件，通常是“自述”文件。|  
 |.vap|项目|Visual Studio Analyzer 项目文件。|  

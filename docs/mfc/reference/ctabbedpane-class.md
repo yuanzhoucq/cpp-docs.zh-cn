@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901006"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712818"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 类
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bEnable*  
-若要启用的选项卡; 自动着色，则返回 TRUE否则为 FALSE。
+*bEnable*<br/>
+[in]若要启用的选项卡; 自动着色，则返回 TRUE否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>参数
 
-[in]*pBar*  
-[in]*nTabID*  
-[in]*dockMethod*  
-[in]*bHide*  
+*pBar*<br/>
+[in][in]*nTabID*  
+*dockMethod*<br/>
+[in][in]*bHide*  
 
 ### <a name="return-value"></a>返回值
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>参数
 
-[out]*rectTabAreaTop*  
-包含的大小和位置，在屏幕坐标中的顶部的选项卡区域。
+*rectTabAreaTop*<br/>
+[out]包含的大小和位置，在屏幕坐标中的顶部的选项卡区域。
 
-[out]*rectTabAreaBottom*  
-包含的大小和位置，在屏幕坐标中的底部选项卡区域。
+*rectTabAreaBottom*<br/>
+[out]包含的大小和位置，在屏幕坐标中的底部选项卡区域。
 
 ### <a name="remarks"></a>备注
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>参数
 
-[in]*arColors*  
-包含要设置的颜色数组。
+*arColors*<br/>
+[in]包含要设置的颜色数组。
 
 ### <a name="remarks"></a>备注
 

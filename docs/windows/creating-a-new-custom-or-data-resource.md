@@ -1,5 +1,5 @@
 ---
-title: 创建新的自定义资源或数据资源 |Microsoft Docs
+title: 创建新的自定义资源或数据资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - custom resources [C++]
 - data resources [C++]
-- resources [Visual Studio], creating
+- resources [C++], creating
 ms.assetid: 9918bf96-38fa-43a1-a384-572f95d84950
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f820991ed55efccc883fa4454a8f2ee93a82f85
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612574"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314570"
 ---
-# <a name="creating-a-new-custom-or-data-resource"></a>创建新的自定义资源或数据资源
+# <a name="creating-a-new-custom-or-data-resource-c"></a>创建新的自定义资源或数据资源 （c + +）
 
 可以通过右键单击你的项目中将资源放在单独的文件使用标准资源脚本 (.rc) 文件语法，然后包括该文件创建新的自定义资源或数据资源**解决方案资源管理器**，然后单击**资源包括**快捷菜单上。
 

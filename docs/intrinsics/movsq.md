@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 72ed2d47c995e19bdfa473c0abd79034e3e51430
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540376"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720936"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft 专用**  
@@ -41,14 +41,14 @@ void __movsq(
 ```  
   
 #### <a name="parameters"></a>参数  
- [out] `Dest`  
- 该操作的目标。  
+*dest*<br/>
+[out]该操作的目标。  
   
- [in] `Source`  
- 操作的源。  
+*Source*<br/>
+[in]操作的源。  
   
- [in] `Count`  
- 要复制的四字的数目。  
+“计数”<br/>
+[in]要复制的四字的数目。  
   
 ## <a name="requirements"></a>要求  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bf7d4f2b62ba62d520dcf84fced1dd7e7893755
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676993"
 ---
 # <a name="project-and-solution-files"></a>项目和解决方案文件
 在 Visual Studio 中创建项目时，会创建以下文件。 它们用于管理解决方案中的项目文件。  
@@ -40,7 +40,7 @@ ms.locfileid: "33340692"
 |Projname.sdf|Projname|在解决方案资源管理器中不显示|浏览数据库文件。 它支持浏览和导航功能，如“转到定义”、“查找所有引用”和“类视图”。 它是通过分析头文件生成的。|  
 |Projname.vcxproj.filters|Projname|在解决方案资源管理器中不显示|筛选器文件。 它指定在何处放置添加到解决方案的文件。 例如，.h 文件置于“头文件”节点中。|  
 |Projname.vcxproj.user|Projname|在解决方案资源管理器中不显示|迁移用户文件。 从 Visual Studio 2008 迁移项目之后，此文件包含从任何 .vsprops 文件转换的信息。|  
-|Projname.idl|Projname|源|（特定于项目）包含控件类型库的接口描述语言 (IDL) 源代码。 此文件由 Visual C++ 用于生成类型库。 生成的库会向其他自动化客户端公开控件的接口。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](http://msdn.microsoft.com/library/windows/desktop/aa378712)。|  
+|Projname.idl|Projname|源|（特定于项目）包含控件类型库的接口描述语言 (IDL) 源代码。 此文件由 Visual C++ 用于生成类型库。 生成的库会向其他自动化客户端公开控件的接口。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](/windows/desktop/Rpc/the-interface-definition-language-idl-file)。|  
 |Readme.txt|Projname|项目|自述文件。 它由应用程序向导生成，描述项目中的文件。|  
   
 ## <a name="see-also"></a>请参阅  

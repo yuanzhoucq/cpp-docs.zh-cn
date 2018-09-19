@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1035 |Microsoft 文档
+title: NMAKE 错误 U1035 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bb32f815345b933ad6a65a0c8c1ec8ad59cbe81
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0383bf4742d637d669070efa5370ebda0c7ab159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019849"
 ---
 # <a name="nmake-fatal-error-u1035"></a>NMAKE 错误 U1035
-语法错误： 预期 ':' 或 '=' 分隔符  
-  
- 任一冒号 (**:**) 或等号 (**=**) 应。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  冒号没有按照目标。  
-  
-2.  冒号和没有空格 （例如 a:） 的后面单字母目标。 NMAKE 解释它为驱动器规范。  
-  
-3.  冒号没有按照推理规则。  
-  
-4.  宏定义不后跟一个等号。  
-  
-5.  字符跟在一个反斜杠 (**\\**) 用于将命令继续到一个新行。  
-  
-6.  一个字符串出现，没有按照任何 NMAKE 语法规则。  
-  
-7.  生成文件格式化的字处理器。
+
+语法错误： 预期: 或 = 分隔符
+
+冒号 (**:**) 或等号 (**=**) 应。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 冒号不遵循目标。
+
+1. 冒号和没有空格 （例如 a:） 后接单个字母目标。 NMAKE 解释它为驱动器规格。
+
+1. 冒号不遵循推理规则。
+
+1. 通过等号后面不是宏定义。
+
+1. 字符跟一个反斜杠 (**\\**) 用于将命令继续到新行。
+
+1. 一个字符串出现的不遵循任何 NMAKE 语法规则。
+
+1. 生成文件格式化的字处理器。

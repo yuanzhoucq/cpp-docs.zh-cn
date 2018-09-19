@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219557"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704374"
 ---
 # <a name="obj-files-as-linker-input"></a>用作链接器输入的 .Obj 文件
 
@@ -38,13 +38,13 @@ Microsoft 提供了通用对象文件格式的完整说明。 有关详细信息
 
 从 Visual Studio 2005 开始，Microsoft Visual c + + 编译器支持在标识符 ISO/IEC C 和 c + + 标准定义的 Unicode 字符。 以前版本的编译器支持在标识符中仅包含 ASCII 字符。 若要支持 Unicode 的函数、 类和静态变量的名称中，编译器和链接器，请使用.obj 文件中的 COFF 符号的 Unicode utf-8 编码。 Utf-8 编码是与使用 Visual Studio 的早期版本的 ASCII 编码向上兼容。
 
-有关编译器和链接器的详细信息，请参阅[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)。 有关 Unicode 标准的详细信息，请参阅[Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123)组织。
+有关编译器和链接器的详细信息，请参阅[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)。 有关 Unicode 标准的详细信息，请参阅[Unicode](http://www.unicode.org/)组织。
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入文件](../../build/reference/link-input-files.md)  
-[链接器选项](../../build/reference/linker-options.md)  
-[支持 Unicode](../../text/support-for-unicode.md)  
-[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode 标准](http://go.microsoft.com/fwlink/p/?linkid=37123)  
-[PE 格式](/windows/desktop/Debug/pe-format)  
+[LINK 输入文件](../../build/reference/link-input-files.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)<br/>
+[支持 Unicode](../../text/support-for-unicode.md)<br/>
+[编译器和链接器中的 Unicode 支持](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Unicode 标准](http://www.unicode.org/)<br/>
+[PE 格式](/windows/desktop/Debug/pe-format)

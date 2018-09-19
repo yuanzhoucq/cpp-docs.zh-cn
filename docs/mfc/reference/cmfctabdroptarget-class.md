@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852963"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711628"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 类
 提供了一个选项卡控件与 OLE 库之间的通信机制。  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|指向用户拖动的对象的指针。|  
-|[in]*dwKeyState*|包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
-|[in]*点*|工作区坐标中的光标位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]指向用户拖动的对象的指针。|  
+|*dwKeyState*|[in]包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|*点*|[in]工作区坐标中的光标位置。|  
   
 ### <a name="return-value"></a>返回值  
  如果在指定的位置发生放置操作的效果*点*。 它可以是一个或多项操作：  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWnd*|未使用。|  
+|*pWnd*|[in]未使用。|  
   
 ### <a name="remarks"></a>备注  
  此方法调用`CMFCBaseTabCtrl::OnDragLeave`方法来执行拖动操作。  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|指向用户拖动的对象的指针。|  
-|[in]*dwKeyState*|包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
-|[in]*点*|在客户端坐标中鼠标指针的位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]指向用户拖动的对象的指针。|  
+|*dwKeyState*|[in]包含修改键的状态。 这是以下任意数量的组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|*点*|[in]在客户端坐标中鼠标指针的位置。|  
   
 ### <a name="return-value"></a>返回值  
  如果在指定的位置发生放置操作的效果*点*。 它可以是一个或多项操作：  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWnd*|未使用。|  
-|[in]*pDataObject*|指向用户拖动的对象的指针。|  
-|[in]*dropEffect*|默认删除操作。|  
-|[in]*下拉列表*|未使用。|  
-|[in]*点*|在客户端坐标中鼠标指针的位置。|  
+|*pWnd*|[in]未使用。|  
+|*pDataObject*|[in]指向用户拖动的对象的指针。|  
+|*dropEffect*|[in]默认删除操作。|  
+|*下拉列表*|[in]未使用。|  
+|*点*|[in]在客户端坐标中鼠标指针的位置。|  
   
 ### <a name="return-value"></a>返回值  
  生成的放置效果。 它可以是一个或多项操作：  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pOwner*|要注册为放置目标的选项卡控件。|  
+|*pOwner*|[in]要注册为放置目标的选项卡控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果注册成功，则非零值否则为 0。  

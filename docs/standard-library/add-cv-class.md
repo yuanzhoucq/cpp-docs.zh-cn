@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b9bdb00c421e668313d92c829c4252c2637e2e18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958138"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722132"
 ---
 # <a name="addcv-class"></a>add_cv 类
 
@@ -40,7 +40,8 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*要修改的类型。
+*T*<br/>
+要修改的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -95,7 +96,9 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits > **Namespace:** std
+**标头：**\<type_traits>
+
+**命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 

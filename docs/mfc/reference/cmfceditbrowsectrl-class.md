@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707461"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，它是有选择性地包含浏览按钮可编辑文本框。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|重绘当前编辑浏览控件。|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|由框架调用以绘制浏览按钮。|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|当编辑控件中输入文件名非法时由框架调用。|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|设置自定义映像的浏览按钮。|  
   
 ## <a name="remarks"></a>备注  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  `CMFCEditBrowseCtrl`类支持以下模式。  
   
- **自定义模式**  
- 当用户单击浏览按钮时执行自定义操作。 例如，可以显示特定于应用程序的对话框。  
+- **自定义模式**
+
+   当用户单击浏览按钮时执行自定义操作。 例如，可以显示特定于应用程序的对话框。  
   
- **文件模式**  
- 当用户单击浏览按钮显示标准文件选择对话框。  
+- **文件模式**
+
+   当用户单击浏览按钮显示标准文件选择对话框。  
   
- **文件夹模式下**  
- 当用户单击浏览按钮时显示一个标准文件夹选择对话框。  
+- **文件夹模式下**
+
+   当用户单击浏览按钮时显示一个标准文件夹选择对话框。  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>操作说明： 指定编辑浏览控件  
  执行以下步骤将合并你的应用程序中的一个编辑浏览控件：  

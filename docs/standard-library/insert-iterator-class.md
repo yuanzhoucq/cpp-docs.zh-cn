@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6011bd8f413a2e0a849e2ef9ba7c5bc229913c41
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960000"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318832"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 类
 
@@ -40,7 +40,8 @@ class insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-`Container` 元素将由插入到其中的容器类型`insert_iterator`。
+*容器*<br/>
+要通过 `insert_iterator` 将元素插入其中的容器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -110,9 +111,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L2 is: ( 40 20 10 ).
-*\
+*/
 ```
 
 ## <a name="insert_iterator"></a>insert_iterator::insert_iterator
@@ -125,9 +126,11 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>参数
 
-*_Cont*到其中的容器`insert_iterator`要将元素插入。
+*_Cont*<br/>
+`insert_iterator` 要将元素插入到其中的容器。
 
-*_It*的插入操作的位置。
+*_It*<br/>
+插入位置。
 
 ### <a name="remarks"></a>备注
 
@@ -164,19 +167,19 @@ int main( )
 
    // Alternatively, you may use the template version
    insert_iterator< list < int> > Iter(L, L.end ( ) );
- *Iter = 300;
+*Iter = 300;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( 10 20 30 ).
+( 10 20 30 ).
 After the insertions, the list L is:
- ( 2 10 20 30 300 ).
-*\
+( 2 10 20 30 300 ).
+*/
 ```
 
 ## <a name="op_star"></a>insert_iterator::operator*
@@ -222,21 +225,21 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator< list < int> > Iter(L, L.begin ( ) );
- *Iter = 10;
- *Iter = 20;
- *Iter = 30;
+*Iter = 10;
+*Iter = 20;
+*Iter = 30;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The original list L is:
- ( 0 2 4 6 ).
+( 0 2 4 6 ).
 After the insertions, the list L is:
- ( 10 20 30 0 2 4 6 ).
-*\
+( 10 20 30 0 2 4 6 ).
+*/
 ```
 
 ## <a name="op_add_add"></a>insert_iterator::operator++
@@ -284,23 +287,23 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator<vector<int> > ii ( vec, vec.begin ( ) );
- *ii = 30;
+*ii = 30;
    ii++;
- *ii = 40;
+*ii = 40;
    ii++;
- *ii = 50;
+*ii = 50;
 
    cout << "After the insertions, the vector vec becomes:\n ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++ )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The vector vec is:
- ( 1 2 3 4 ).
+( 1 2 3 4 ).
 After the insertions, the vector vec becomes:
- ( 30 40 50 1 2 3 4 ).
-*\
+( 30 40 50 1 2 3 4 ).
+*/
 ```
 
 ## <a name="op_eq"></a>insert_iterator::operator=
@@ -317,7 +320,8 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*val*要分配给容器的值。
+*val*<br/>
+要赋给容器的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -368,21 +372,21 @@ int main( )
    cout << ")." << endl;
 
    insert_iterator< list < int> > Iter(L, L.begin ( ) );
- *Iter = 10;
- *Iter = 20;
- *Iter = 30;
+*Iter = 10;
+*Iter = 20;
+*Iter = 30;
 
    cout << "After the insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++ )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The original list L is:
- ( 0 2 4 6 ).
+( 0 2 4 6 ).
 After the insertions, the list L is:
- ( 10 20 30 0 2 4 6 ).
-*\
+( 10 20 30 0 2 4 6 ).
+*/
 ```
 
 ## <a name="reference"></a>insert_iterator::reference
@@ -412,9 +416,9 @@ int main( )
 
    list<int> L;
    insert_iterator<list<int> > iivIter( L , L.begin ( ) );
- *iivIter = 10;
- *iivIter = 20;
- *iivIter = 30;
+*iivIter = 10;
+*iivIter = 20;
+*iivIter = 30;
 
    list<int>::iterator LIter;
    cout << "The list L is: ( ";
@@ -427,10 +431,10 @@ int main( )
    cout << "The first element in the list L is: "
         << RefFirst << "." << endl;
 }
-\* Output:
+/* Output:
 The list L is: ( 10 20 30 ).
 The first element in the list L is: 10.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>请参阅

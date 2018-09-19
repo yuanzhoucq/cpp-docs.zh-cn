@@ -1,5 +1,5 @@
 ---
-title: 快捷键 （图标的图像编辑器） |Microsoft Docs
+title: 快捷键 （图标的图像编辑器 c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf65c4ab55861a5588c27484db604a8e7008b96d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200721"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317740"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>快捷键（图标的图像编辑器）
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>快捷键 （图标的图像编辑器 c + +）
 
 下面是默认情况下绑定到键的图像编辑器命令的快捷键。 若要更改快捷键，请单击**选项**上**工具**菜单中，然后选择**键盘**下**环境**文件夹。 有关详细信息，请参阅[标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 
 > [!NOTE]
-> 对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 |命令|键|描述|
 |-------------|----------|-----------------|

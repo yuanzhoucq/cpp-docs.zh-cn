@@ -1,7 +1,7 @@
 ---
 title: MFC ActiveX 控件： 优化 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220501"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535179"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 本文介绍了可以用来优化更好的性能将 ActiveX 控件的方法。  
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
   
  主题[启用关闭激活可见时选项](../mfc/turning-off-the-activate-when-visible-option.md)并[提供鼠标交互而处于非活动状态](../mfc/providing-mouse-interaction-while-inactive.md)讨论不创建窗口之前激活的控件。 本主题[提供无窗口激活](../mfc/providing-windowless-activation.md)讨论永远不会创建一个窗口，即使它们被激活的控件。  
   

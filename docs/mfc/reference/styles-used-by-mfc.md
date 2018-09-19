@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689316"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式  
   
@@ -219,7 +219,7 @@ ms.locfileid: "43199916"
   
 ## <a name="button-styles"></a> 按钮样式  
   
-按钮样式应用于[CButton 类](../../mfc/reference/cbutton-class.md)对象，如单选按钮、 复选框和按键。 指定中的样式的组合*dwStyle*的参数[CButton::Create](../../mfc/reference/cbutton-class.md#create)。 在 Windows 中的按钮样式的详细信息，请参阅[按钮样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)。  
+按钮样式应用于[CButton 类](../../mfc/reference/cbutton-class.md)对象，如单选按钮、 复选框和按键。 指定中的样式的组合*dwStyle*的参数[CButton::Create](../../mfc/reference/cbutton-class.md#create)。 在 Windows 中的按钮样式的详细信息，请参阅[按钮样式 (Windows)](/windows/desktop/Controls/button-styles)。  
   
 ### <a name="button-types"></a>按钮类型  
   
@@ -288,7 +288,7 @@ ms.locfileid: "43199916"
   
 ## <a name="combo-box-styles"></a>  组合框样式  
   
-以下组合框样式在 MFC 中可用。 有关在 Windows 中的组合框样式的详细信息，请参阅[组合框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)。  
+以下组合框样式在 MFC 中可用。 有关在 Windows 中的组合框样式的详细信息，请参阅[组合框样式 (Windows)](/windows/desktop/Controls/combo-box-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ ms.locfileid: "43199916"
   
 ## <a name="edit-styles"></a>  编辑样式  
   
-编辑样式应用于[CEdit 类](../../mfc/reference/cedit-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 有关在 Windows 中的编辑控件样式的详细信息，请参阅[编辑控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+编辑样式应用于[CEdit 类](../../mfc/reference/cedit-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 有关在 Windows 中的编辑控件样式的详细信息，请参阅[编辑控件样式 (Windows)](/windows/desktop/Controls/edit-control-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ ms.locfileid: "43199916"
   
 ## <a name="list-box-styles"></a> 列表框样式  
   
-列表框样式应用于[CListBox 类](../../mfc/reference/clistbox-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CListBox::Create](../../mfc/reference/clistbox-class.md#create)。 有关在 Windows 中的列表框样式的详细信息，请参阅[列表框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149)。  
+列表框样式应用于[CListBox 类](../../mfc/reference/clistbox-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CListBox::Create](../../mfc/reference/clistbox-class.md#create)。 有关在 Windows 中的列表框样式的详细信息，请参阅[列表框样式 (Windows)](/windows/desktop/Controls/list-box-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ ms.locfileid: "43199916"
   
 ##<a name="message-box-styles"></a>  消息框样式  
   
-消息框样式应用于[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)项。 指定中的样式的组合*n 类型*参数的`AfxMessageBox`。 有关在 Windows 中的消息框样式的详细信息，请参阅[MessageBox 函数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505)。  
+消息框样式应用于[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)项。 指定中的样式的组合*n 类型*参数的`AfxMessageBox`。 有关在 Windows 中的消息框样式的详细信息，请参阅[MessageBox 函数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)。  
   
 提供以下消息框样式。  
   
@@ -403,7 +403,7 @@ ms.locfileid: "43199916"
   
 ## <a name="scroll-bar-styles"></a> 滚动条样式  
   
-滚动条样式应用于[CScrollBar 类](../../mfc/reference/cscrollbar-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 有关滚动条在 Windows 中的控件样式的详细信息，请参阅[滚动条控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)。  
+滚动条样式应用于[CScrollBar 类](../../mfc/reference/cscrollbar-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 有关滚动条在 Windows 中的控件样式的详细信息，请参阅[滚动条控件样式 (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ ms.locfileid: "43199916"
   
 ## <a name="static-styles"></a> 静态样式  
   
-静态样式应用于[CStatic 类](../../mfc/reference/cstatic-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 有关在 Windows 中的静态控件样式的详细信息，请参阅[静态控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)。  
+静态样式应用于[CStatic 类](../../mfc/reference/cstatic-class.md)对象。 指定中的样式的组合*dwStyle*的参数[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 有关在 Windows 中的静态控件样式的详细信息，请参阅[静态控件样式 (Windows)](/windows/desktop/Controls/static-control-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ ms.locfileid: "43199916"
   
 ## <a name="extended-window-styles"></a> 扩展的窗口样式  
   
-扩展的窗口样式应用于[CWnd 类](../../mfc/reference/cwnd-class.md)对象。 指定中的样式的组合*dwExStyle*的参数[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 有关在 Windows 中的扩展的窗口样式的详细信息，请参阅[扩展窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)。  
+扩展的窗口样式应用于[CWnd 类](../../mfc/reference/cwnd-class.md)对象。 指定中的样式的组合*dwExStyle*的参数[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 有关在 Windows 中的扩展的窗口样式的详细信息，请参阅[扩展窗口样式 (Windows)](/windows/desktop/winmsg/extended-window-styles)。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ ms.locfileid: "43199916"
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[按钮样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[组合框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[编辑控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[列表框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[MessageBox 函数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[滚动条控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[静态控件样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[按钮样式 (Windows)](/windows/desktop/Controls/button-styles)  
+[组合框样式 (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[编辑控件样式 (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[列表框样式 (Windows)](/windows/desktop/Controls/list-box-styles) 
+[MessageBox 函数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[滚动条控件样式 (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[静态控件样式 (Windows)](/windows/desktop/Controls/static-control-styles)  
 [窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[扩展的窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[扩展的窗口样式 (Windows)](/windows/desktop/winmsg/extended-window-styles)  

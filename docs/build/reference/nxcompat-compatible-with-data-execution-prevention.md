@@ -1,5 +1,5 @@
 ---
-title: /NXCOMPAT （与数据执行保护兼容） |Microsoft 文档
+title: /NXCOMPAT （与数据执行保护兼容） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52cf47335c1bed55ca38d508789d65902b335f0f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374799"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707624"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT（与数据执行保护兼容）
 
@@ -34,17 +34,17 @@ ms.locfileid: "32374799"
 
 ## <a name="remarks"></a>备注
 
-默认情况下， **/NXCOMPAT**上。
+默认情况下 **/NXCOMPAT**上。
 
-**/NXCOMPAT:NO**可用来显式指定为不与数据执行保护兼容的可执行文件。
+**/Nxcompat: no**可用于显式指定为不与数据执行保护兼容的可执行文件。
 
-有关数据执行保护的详细信息，请参阅这些文章：
+有关数据执行保护的详细信息，请参阅以下文章：
 
-- [数据执行保护 (DEP) 功能的详细的说明](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [数据执行保护 (DEP) 功能的详细的说明](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [数据执行保护](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [数据执行保护](/windows/desktop/Memory/data-execution-prevention)
 
-- [数据执行保护 (Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [数据执行保护 (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
@@ -60,5 +60,5 @@ ms.locfileid: "32374799"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)  
-[链接器选项](../../build/reference/linker-options.md)  
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

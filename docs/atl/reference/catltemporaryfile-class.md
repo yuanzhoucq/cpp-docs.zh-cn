@@ -32,359 +32,425 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222867"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034923"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 类
-此类提供用于创建和使用的临时文件的方法。  
-  
+
+此类提供用于创建和使用的临时文件的方法。
+
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
-  
-## <a name="syntax"></a>语法  
-  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+
+## <a name="syntax"></a>语法
+
 ```
 class CAtlTemporaryFile
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|构造函数。|  
-|[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAtlTemporaryFile::Close](#close)|调用此方法来关闭临时文件，而且，可以删除其内容或将其存储在指定的文件名。|  
-|[CAtlTemporaryFile::Create](#create)|调用此方法以创建临时文件。|  
-|[CAtlTemporaryFile::Flush](#flush)|调用此方法强制执行任何数据的剩余文件缓冲区写入到临时文件中。|  
-|[CAtlTemporaryFile::GetPosition](#getposition)|调用此方法以获取当前文件指针位置。|  
-|[CAtlTemporaryFile::GetSize](#getsize)|调用此方法以获取以字节为单位的临时文件的大小。|  
-|[CAtlTemporaryFile::HandsOff](#handsoff)|调用此方法来取消关联`CAtlTemporaryFile`对象。|  
-|[CAtlTemporaryFile::HandsOn](#handson)|调用此方法可以打开现有的临时文件和位置的文件的末尾处的指针。|  
-|[CAtlTemporaryFile::LockRange](#lockrange)|调用此方法以锁定以防止其他进程对其进行访问的文件中的区域。|  
-|[CAtlTemporaryFile::Read](#read)|调用此方法以从临时文件的文件指针所指示的位置开始读取数据。|  
-|[CAtlTemporaryFile::Seek](#seek)|调用此方法以将临时文件的文件指针移动。|  
-|[CAtlTemporaryFile::SetSize](#setsize)|调用此方法以设置临时文件的大小。|  
-|[CAtlTemporaryFile::TempFileName](#tempfilename)|调用此方法以返回临时文件的名称。|  
-|[CAtlTemporaryFile::UnlockRange](#unlockrange)|调用此方法以解锁的临时文件的区域。|  
-|[CAtlTemporaryFile::Write](#write)|调用此方法将数据写入文件指针指示的位置开始的临时文件。|  
-  
-### <a name="public-operators"></a>公共运算符  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAtlTemporaryFile::operator 句柄](#operator_handle)|返回的句柄的临时文件。|  
-  
-## <a name="remarks"></a>备注  
- `CAtlTemporaryFile` 轻松创建和使用临时文件。 自动名为、 打开、 关闭和删除文件。 如果关闭该文件后，该文件的内容是必需的可以将它们保存到具有指定名称的新文件。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlfile.h  
-  
-## <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile  
- 构造函数。  
-  
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|构造函数。|
+|[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|析构函数。|
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CAtlTemporaryFile::Close](#close)|调用此方法来关闭临时文件，而且，可以删除其内容或将其存储在指定的文件名。|
+|[CAtlTemporaryFile::Create](#create)|调用此方法以创建临时文件。|
+|[CAtlTemporaryFile::Flush](#flush)|调用此方法强制执行任何数据的剩余文件缓冲区写入到临时文件中。|
+|[CAtlTemporaryFile::GetPosition](#getposition)|调用此方法以获取当前文件指针位置。|
+|[CAtlTemporaryFile::GetSize](#getsize)|调用此方法以获取以字节为单位的临时文件的大小。|
+|[CAtlTemporaryFile::HandsOff](#handsoff)|调用此方法来取消关联`CAtlTemporaryFile`对象。|
+|[CAtlTemporaryFile::HandsOn](#handson)|调用此方法可以打开现有的临时文件和位置的文件的末尾处的指针。|
+|[CAtlTemporaryFile::LockRange](#lockrange)|调用此方法以锁定以防止其他进程对其进行访问的文件中的区域。|
+|[CAtlTemporaryFile::Read](#read)|调用此方法以从临时文件的文件指针所指示的位置开始读取数据。|
+|[CAtlTemporaryFile::Seek](#seek)|调用此方法以将临时文件的文件指针移动。|
+|[CAtlTemporaryFile::SetSize](#setsize)|调用此方法以设置临时文件的大小。|
+|[CAtlTemporaryFile::TempFileName](#tempfilename)|调用此方法以返回临时文件的名称。|
+|[CAtlTemporaryFile::UnlockRange](#unlockrange)|调用此方法以解锁的临时文件的区域。|
+|[CAtlTemporaryFile::Write](#write)|调用此方法将数据写入文件指针指示的位置开始的临时文件。|
+
+### <a name="public-operators"></a>公共运算符
+
+|名称|描述|
+|----------|-----------------|
+|[CAtlTemporaryFile::operator 句柄](#operator_handle)|返回的句柄的临时文件。|
+
+## <a name="remarks"></a>备注
+
+`CAtlTemporaryFile` 轻松创建和使用临时文件。 自动名为、 打开、 关闭和删除文件。 如果关闭该文件后，该文件的内容是必需的可以将它们保存到具有指定名称的新文件。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlfile.h
+
+## <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile
+
+构造函数。
+
 ```
 CAtlTemporaryFile() throw();
-```  
-  
-### <a name="remarks"></a>备注  
- 打开文件时不实际调用直到[CAtlTemporaryFile::Create](#create)。  
-  
-### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
-  
-##  <a name="dtor"></a>  CAtlTemporaryFile:: ~ CAtlTemporaryFile  
- 析构函数。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+打开文件时不实际调用直到[CAtlTemporaryFile::Create](#create)。
+
+### <a name="example"></a>示例
+
+[!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
+
+##  <a name="dtor"></a>  CAtlTemporaryFile:: ~ CAtlTemporaryFile
+
+析构函数。
+
 ```
 ~CAtlTemporaryFile() throw();
-```  
-  
-### <a name="remarks"></a>备注  
- 析构函数调用[CAtlTemporaryFile::Close](#close)。  
-  
-##  <a name="close"></a>  CAtlTemporaryFile::Close  
- 调用此方法来关闭临时文件，而且，可以删除其内容或将其存储在指定的文件名。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+析构函数调用[CAtlTemporaryFile::Close](#close)。
+
+##  <a name="close"></a>  CAtlTemporaryFile::Close
+
+调用此方法来关闭临时文件，而且，可以删除其内容或将其存储在指定的文件名。
+
 ```
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *szNewName*  
- 要存储在临时文件的内容的新文件的名称。 如果此参数为 NULL，则会删除临时文件的内容。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="create"></a>  CAtlTemporaryFile::Create  
- 调用此方法以创建临时文件。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*szNewName*<br/>
+要存储在临时文件的内容的新文件的名称。 如果此参数为 NULL，则会删除临时文件的内容。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="create"></a>  CAtlTemporaryFile::Create
+
+调用此方法以创建临时文件。
+
 ```
 HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *pszDir*  
- 临时文件的路径。 如果此值为 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)将调用分配路径。  
-  
- *dwDesiredAccess*  
- 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="flush"></a>  CAtlTemporaryFile::Flush  
- 调用此方法强制执行任何数据的剩余文件缓冲区写入到临时文件中。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pszDir*<br/>
+临时文件的路径。 如果此值为 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)将调用分配路径。
+
+*dwDesiredAccess*<br/>
+所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="flush"></a>  CAtlTemporaryFile::Flush
+
+调用此方法强制执行任何数据的剩余文件缓冲区写入到临时文件中。
+
 ```
 HRESULT Flush() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 类似于[CAtlTemporaryFile::HandsOff](#handsoff)，只不过不关闭该文件。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition  
- 调用此方法以获取当前文件指针位置。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+类似于[CAtlTemporaryFile::HandsOff](#handsoff)，只不过不关闭该文件。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition
+
+调用此方法以获取当前文件指针位置。
+
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nPos*  
- 中字节的位置。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 若要更改的文件指针位置，请使用[CAtlTemporaryFile::Seek](#seek)。  
-  
-##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize  
- 调用此方法以获取以字节为单位的临时文件的大小。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nPos*<br/>
+中字节的位置。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+若要更改的文件指针位置，请使用[CAtlTemporaryFile::Seek](#seek)。
+
+##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize
+
+调用此方法以获取以字节为单位的临时文件的大小。
+
 ```
 HRESULT GetSize(ULONGLONG& nLen) const throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nLen*  
- 在文件中的字节数。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff  
- 调用此方法来取消关联`CAtlTemporaryFile`对象。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nLen*<br/>
+在文件中的字节数。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff
+
+调用此方法来取消关联`CAtlTemporaryFile`对象。
+
 ```
 HRESULT HandsOff() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- `HandsOff` 并[CAtlTemporaryFile::HandsOn](#handson)用于取消关联对象，并根据需要重新附加它。 `HandsOff` 将强制写入到临时文件，文件缓冲区中剩余的任何数据，然后关闭该文件。 如果你想要关闭并永久删除该文件，或如果你想要关闭和保留的具有给定名称的文件内容，请使用[CAtlTemporaryFile::Close](#close)。  
-  
-##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn  
- 调用此方法可以打开现有的临时文件和位置的文件的末尾处的指针。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+`HandsOff` 并[CAtlTemporaryFile::HandsOn](#handson)用于取消关联对象，并根据需要重新附加它。 `HandsOff` 将强制写入到临时文件，文件缓冲区中剩余的任何数据，然后关闭该文件。 如果你想要关闭并永久删除该文件，或如果你想要关闭和保留的具有给定名称的文件内容，请使用[CAtlTemporaryFile::Close](#close)。
+
+##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn
+
+调用此方法可以打开现有的临时文件和位置的文件的末尾处的指针。
+
 ```
 HRESULT HandsOn() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- [CAtlTemporaryFile::HandsOff](#handsoff)和`HandsOn`用于取消关联对象，并根据需要重新附加它。  
-  
-##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange  
- 调用此方法以锁定以防止其他进程对其进行访问的临时文件中的区域。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+[CAtlTemporaryFile::HandsOff](#handsoff)和`HandsOn`用于取消关联对象，并根据需要重新附加它。
+
+##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange
+
+调用此方法以锁定以防止其他进程对其进行访问的临时文件中的区域。
+
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nPos*  
- 锁开始处的文件中的位置。  
-  
- *nCount*  
- 要锁定的字节范围的长度。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 锁定文件中的字节将阻止其他进程访问这些字节。 可锁定多个区域文件，但允许使用任何重叠区域。 若要成功解除锁定区域，请使用[CAtlTemporaryFile::UnlockRange](#unlockrange)，确保字节范围完全对应以前锁定的区域。 `LockRange` 不会合并相邻区域;如果有两种锁定的区域相邻，必须单独解锁每个。  
-  
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator 句柄  
- 返回的句柄的临时文件。  
-  
-```  
+```
+
+### <a name="parameters"></a>参数
+
+*nPos*<br/>
+锁开始处的文件中的位置。
+
+*nCount*<br/>
+要锁定的字节范围的长度。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+锁定文件中的字节将阻止其他进程访问这些字节。 可锁定多个区域文件，但允许使用任何重叠区域。 若要成功解除锁定区域，请使用[CAtlTemporaryFile::UnlockRange](#unlockrange)，确保字节范围完全对应以前锁定的区域。 `LockRange` 不会合并相邻区域;如果有两种锁定的区域相邻，必须单独解锁每个。
+
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator 句柄
+
+返回的句柄的临时文件。
+
+```
 operator HANDLE() throw();
-```  
-  
-##  <a name="read"></a>  CAtlTemporaryFile::Read  
- 调用此方法以从临时文件的文件指针所指示的位置开始读取数据。  
-  
+```
+
+##  <a name="read"></a>  CAtlTemporaryFile::Read
+
+调用此方法以从临时文件的文件指针所指示的位置开始读取数据。
+
 ```
 HRESULT Read(
     LPVOID pBuffer,
     DWORD nBufSize,
     DWORD& nBytesRead) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *pBuffer*  
- 指向将接收从文件中读取数据的缓冲区的指针。  
-  
- *nBufSize*  
- 缓冲区大小（以字节为单位）。  
-  
- *nBytesRead*  
- 读取的字节数。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlFile::Read](../../atl/reference/catlfile-class.md#read)。 若要更改的文件指针的位置，请调用[CAtlTemporaryFile::Seek](#seek)。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="seek"></a>  CAtlTemporaryFile::Seek  
- 调用此方法以将临时文件的文件指针移动。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pBuffer*<br/>
+指向将接收从文件中读取数据的缓冲区的指针。
+
+*nBufSize*<br/>
+缓冲区大小（以字节为单位）。
+
+*nBytesRead*<br/>
+读取的字节数。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用[CAtlFile::Read](../../atl/reference/catlfile-class.md#read)。 若要更改的文件指针的位置，请调用[CAtlTemporaryFile::Seek](#seek)。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="seek"></a>  CAtlTemporaryFile::Seek
+
+调用此方法以将临时文件的文件指针移动。
+
 ```
 HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nOffset*  
- 偏移量，以字节为单位，从给定的起始点*dwFrom。*  
-  
- *dwFrom*  
- 起始点 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek)。 若要获取当前文件指针位置，请调用[CAtlTemporaryFile::GetPosition](#getposition)。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize  
- 调用此方法以设置临时文件的大小。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nOffset*<br/>
+偏移量，以字节为单位，从给定的起始点*dwFrom。*
+
+*dwFrom*<br/>
+起始点 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用[CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek)。 若要获取当前文件指针位置，请调用[CAtlTemporaryFile::GetPosition](#getposition)。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize
+
+调用此方法以设置临时文件的大小。
+
 ```
 HRESULT SetSize(ULONGLONG nNewLen) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nNewLen*  
- 以字节为单位的文件的新长度。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize)。 返回时，文件指针定位在文件末尾。  
-  
-##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName  
- 调用此方法以返回临时文件的名称。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nNewLen*<br/>
+以字节为单位的文件的新长度。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用[CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize)。 返回时，文件指针定位在文件末尾。
+
+##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName
+
+调用此方法以返回临时文件的名称。
+
 ```
 LPCTSTR TempFileName() throw();
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回指向文件名称 LPCTSTR。  
-  
-### <a name="remarks"></a>备注  
- 在中生成的文件的名称[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)通过调用[GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK 函数。 文件扩展名将始终为临时文件"TFR"。  
-  
-##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
- 调用此方法以解锁的临时文件的区域。  
-  
+```
+
+### <a name="return-value"></a>返回值
+
+返回指向文件名称 LPCTSTR。
+
+### <a name="remarks"></a>备注
+
+在中生成的文件的名称[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)通过调用[GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK 函数。 文件扩展名将始终为临时文件"TFR"。
+
+##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange
+
+调用此方法以解锁的临时文件的区域。
+
 ```
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *nPos*  
- 解锁开始处的文件中的位置。  
-  
- *nCount*  
- 要将其解锁的字节范围的长度。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange)。  
-  
-##  <a name="write"></a>  CAtlTemporaryFile::Write  
- 调用此方法将数据写入文件指针指示的位置开始的临时文件。  
-  
 ```
-HRESULT Write(  
+
+### <a name="parameters"></a>参数
+
+*nPos*<br/>
+解锁开始处的文件中的位置。
+
+*nCount*<br/>
+要将其解锁的字节范围的长度。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用[CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange)。
+
+##  <a name="write"></a>  CAtlTemporaryFile::Write
+
+调用此方法将数据写入文件指针指示的位置开始的临时文件。
+
+```
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
-```  
-  
-### <a name="parameters"></a>参数  
- *pBuffer*  
- 包含要写入到文件的数据的缓冲区。  
-  
- *nBufSize*  
- 要从缓冲区传输的字节数。  
-  
- *pnBytesWritten*  
- 写入的字节数。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 调用[CAtlFile::Write](../../atl/reference/catlfile-class.md#write)。  
-  
-### <a name="example"></a>示例  
- 有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../../atl/atl-class-overview.md)   
- [CAtlFile 类](../../atl/reference/catlfile-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*pBuffer*<br/>
+包含要写入到文件的数据的缓冲区。
+
+*nBufSize*<br/>
+要从缓冲区传输的字节数。
+
+*pnBytesWritten*<br/>
+写入的字节数。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+调用[CAtlFile::Write](../../atl/reference/catlfile-class.md#write)。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../../atl/atl-class-overview.md)<br/>
+[CAtlFile 类](../../atl/reference/catlfile-class.md)

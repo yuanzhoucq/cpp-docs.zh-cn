@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e792233e9ce9b1fbbf2e63142caaeba37f8b4976
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f5e61c5555a59b4842d109eec5c7cbb060abe46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609883"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106972"
 ---
 # <a name="javascript-integration-ccx"></a>JavaScript 集成 (C++/CX)
 
@@ -22,4 +22,4 @@ ms.locfileid: "42609883"
 
 ## <a name="see-also"></a>请参阅
 
-[与其他语言进行互操作](../cppcx/interoperating-with-other-languages-c-cx.md)  
+[与其他语言进行互操作](../cppcx/interoperating-with-other-languages-c-cx.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4506 |Microsoft 文档
+title: 编译器警告 （等级 1） C4506 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12a8778d8c908e05d0679b0e6c7ecaa1ad830cf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a454ba35b0ba551cb5eadcb5efe399210b343b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078824"
 ---
 # <a name="compiler-warning-level-1-c4506"></a>编译器警告（等级 1）C4506
-内联函数 function 没有定义  
-  
- 声明给定的函数并将其标记为未定义内联，但它。  
-  
- 编译器没有内联函数。  
-  
- 请确保用声明外部的函数进行内联`extern`关键字。
+
+内联函数 function 没有定义
+
+给定的函数声明并将其标记为内联，但未定义。
+
+编译器没有内联函数。
+
+请确保用声明外部函数内联`extern`关键字。

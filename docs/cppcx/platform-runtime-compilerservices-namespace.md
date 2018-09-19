@@ -15,55 +15,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 400730ab08f2e8e294859b60a69c216fdb336cd5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102177"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices 命名空间
-此命名空间仅供内部使用，不用于开发。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace CompilerServices{  
-}}  
-```  
-  
-### <a name="members"></a>成员  
- 虽然此命名空间供内部使用，但是浏览器可以显示此命名空间的以下成员。  
-  
-|name|备注|  
-|----------|------------|  
-|CallConvCdecl||  
-|CallConvFastcall||  
-|CallConvStdcall||  
-|CallConvThiscall||  
-|IndexerNameAttribute||  
-|IsBoxed||  
-|IsByValue||  
-|IsConst||  
-|IsCopyConstructed||  
-|IsExplicitlyDereferenced||  
-|IsImplicitlyDereferenced||  
-|IsLong||  
-|IsSignUnspecifiedByte||  
-|IsSigned||  
-|IsUdtReturn||  
-|IsVolatile||  
-|OnePhaseConstructedAttribute||  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `Platform`  
-  
-### <a name="requirements"></a>要求  
- **元数据：** platform.winmd  
-  
- **命名空间：** Platform::CompilerServices  
-  
-## <a name="see-also"></a>请参阅  
- [平台 Namespace](platform-namespace-c-cx.md)
+
+此命名空间仅供内部使用，不用于开发。
+
+## <a name="syntax"></a>语法
+
+```cpp
+namespace Platform {
+   namespace CompilerServices{
+}}
+```
+
+### <a name="members"></a>成员
+
+虽然此命名空间供内部使用，但是浏览器可以显示此命名空间的以下成员。
+
+|name|备注|
+|----------|------------|
+|CallConvCdecl||
+|CallConvFastcall||
+|CallConvStdcall||
+|CallConvThiscall||
+|IndexerNameAttribute||
+|IsBoxed||
+|IsByValue||
+|IsConst||
+|IsCopyConstructed||
+|IsExplicitlyDereferenced||
+|IsImplicitlyDereferenced||
+|IsLong||
+|IsSignUnspecifiedByte||
+|IsSigned||
+|IsUdtReturn||
+|IsVolatile||
+|OnePhaseConstructedAttribute||
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`Platform`
+
+### <a name="requirements"></a>要求
+
+**元数据：** platform.winmd
+
+**命名空间：** Platform::CompilerServices
+
+## <a name="see-also"></a>请参阅
+
+[平台 Namespace](platform-namespace-c-cx.md)

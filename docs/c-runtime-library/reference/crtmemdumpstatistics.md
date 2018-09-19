@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688cef94721ac7ea3a36ccd375185b922b23a15f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655d9be75fa031cc2cbebfd65c4634528f410e85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395599"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110521"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -53,19 +53,20 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>参数
 
-*状态*指向堆状态进行转储。
+*state*<br/>
+指向要转储的堆状态的指针。
 
 ## <a name="remarks"></a>备注
 
 **_CrtMemDumpStatistics**函数转储指定堆状态的用户可读的窗体中的调试标头信息。 应用程序可以使用转储统计信息来跟踪分配并检测内存问题。 内存状态可以包含特定的堆状态或两个状态之间的差异。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtMemDumpStatistics**在预处理过程中删除。
 
-*状态*参数必须是指向 **_CrtMemState**由填写中的结构[_CrtMemCheckpoint](crtmemcheckpoint.md)或返回[_CrtMemDifference](crtmemdifference.md)之前 **_CrtMemDumpStatistics**调用。 如果*状态*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和不执行任何操作。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+*状态*参数必须是指向指针 **_CrtMemState**由填充中的结构[_CrtMemCheckpoint](crtmemcheckpoint.md)或者由[_CrtMemDifference](crtmemdifference.md)之前 **_CrtMemDumpStatistics**调用。 如果*状态*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和不执行任何操作。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-有关堆状态函数和 **_CrtMemState**结构，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关详细信息，有关堆状态函数和 **_CrtMemState**结构，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
 

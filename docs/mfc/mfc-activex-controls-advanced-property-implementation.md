@@ -1,7 +1,7 @@
 ---
-title: MFC ActiveX 控件： 高级属性实现 |Microsoft 文档
+title: MFC ActiveX 控件： 高级属性实现 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,19 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e5357354a747dd2ce2487bf66821e8be7d2a04a4
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928359"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534919"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
-本指南介绍了与实现高级的 ActiveX 控件中的属性相关的主题：  
+本指南介绍了与实现高级中的 ActiveX 控件的属性相关的主题。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。  
   
 -   [只读和只写属性](#_core_read2donly_and_write2donly_properties)  
   
--   [从属性返回错误代码](#_core_returning_error_codes_from_a_property)  
+-   [从属性中返回错误代码](#_core_returning_error_codes_from_a_property)  
   
 ##  <a name="_core_read2donly_and_write2donly_properties"></a> 只读和只写属性  
  添加属性向导提供的快速而简单的方法来实现控件的只读或只写属性。  
@@ -41,39 +44,39 @@ ms.locfileid: "36928359"
   
 3.  右键单击控件的接口节点（库节点的第二个节点）以打开快捷菜单。  
   
-4.  从快捷菜单中，单击**添加**，然后单击**添加属性**。  
+4.  从快捷菜单中，单击**外**，然后单击**添加属性**。  
   
      这将打开[添加属性向导](../ide/names-add-property-wizard.md)。  
   
-5.  在**属性名称**框中，键入你的属性的名称。  
+5.  在中**属性名称**框中，键入您的属性的名称。  
   
 6.  对于“实现类型” ，请单击“Get/Set 方法” 。  
   
-7.  在**属性类型**框中，选择正确的类型的属性。  
+7.  在中**属性类型**框中，选择适当的类型的属性。  
   
-8.  如果你想只读属性，则清除集函数名称。 如果你希望只写属性，，清除 Get 函数名称。  
+8.  如果你想只读属性，请清除集函数名称。 如果你想只写属性，则清除 Get 函数名。  
   
 9. 单击 **“完成”**。  
   
- 添加属性向导执行此操作时，插入函数`SetNotSupported`或`GetNotSupported`代替常规的调度映射项中设置或获取函数。  
+ 添加属性向导时执行此操作时，将插入函数`SetNotSupported`或`GetNotSupported`代替常规的调度映射项中设置或获取函数。  
   
- 如果你想要更改现有属性为只读或只写，你可以手动编辑调度映射，并从 control 类删除不必要的 Set 或 Get 函数。  
+ 如果你想要更改现有属性为只读或只写的可以手动编辑调度映射，并从 control 类中删除不必要的 Set 或 Get 函数。  
   
- 如果你想要为有条件地只读或只写 （例如，仅当在特定的模式下运行你的控件时） 的属性，你可以提供 Set 或 Get 函数的正常工作，并调用`SetNotSupported`或`GetNotSupported`函数在适当的位置。 例如：  
+ 如果你想要为有条件地只读或只写 （例如，仅当在特定的模式下运行您的控件） 的属性，可以提供 Set 或 Get 函数，按正常方式，并调用`SetNotSupported`或`GetNotSupported`函数在适当的位置。 例如：  
   
  [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- 此代码示例调用`SetNotSupported`如果`m_bReadOnlyMode`数据成员是**TRUE**。 如果**FALSE**，则该属性设置为新值。  
+ 此代码示例会调用`SetNotSupported`如果`m_bReadOnlyMode`数据成员是**TRUE**。 如果**FALSE**，则该属性设置为新值。  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 从属性返回错误代码  
- 若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数，其将作为参数 SCODE （状态代码）。 你可以使用预定义的 SCODE 或定义你自己的一个。 预定义 SCODEs 和用于定义自定义 SCODEs 说明的列表，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
+ 若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数采用 SCODE （状态代码） 作为参数。 可以使用预定义的 SCODE 或你自己的一个定义。 预定义 SCODEs 和用于定义自定义 SCODEs 说明的列表，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   
- 存在帮助器函数的最常见的预定义 SCODEs，如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ 最常见的预定义 SCODEs，例如，存在帮助器函数[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError` 用于返回属性的 Get 或 Set 从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。  
+>  `ThrowError` 用于返回属性的 Get 或 Set 中从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。  
   
- 有关报告代码的其他区域中的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和节[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
+ 有关报告其他区域中的代码的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和部分[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)在文章的 ActiveX 控件： 高级主题。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   

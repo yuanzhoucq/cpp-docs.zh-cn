@@ -1,5 +1,5 @@
 ---
-title: -sdl （启用附加安全检查） |Microsoft 文档
+title: -sdl （启用附加安全检查） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,60 +14,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa984b488f74043b8c90876047516ebca23d4d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda6d2c3a608050906626e499b1ddaa48ddd82b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702619"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl（启用附加安全检查）
-添加建议的安全开发生命周期 (SDL) 检查。 这些检查包括额外的被视为错误的安全相关警告以及其他安全代码生成功能。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/sdl[-]  
-```  
-  
-## <a name="remarks"></a>备注  
- **/sdl**使提供的基线安全检查的超集[/GS](../../build/reference/gs-buffer-security-check.md)和替代 **/GS-**。 默认情况下， **/sdl**处于关闭状态。 **/sdl-** 禁用额外的安全检查。  
-  
-## <a name="compile-time-checks"></a>编译时检查  
- **/sdl**使这些警告视为错误：  
-  
-|/sdl 启用的警告|等效的命令行开关|描述|  
-|------------------------------|-------------------------------------|-----------------|  
-|[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|将一元减号运算符应用于无符号类型，并生成了无符号的结果。|  
-|[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|将负整型常数转换为无符号类型，并生成了可能无意义的结果。|  
-|[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|/we4532|利用`continue`，`break`或`goto`中的关键字`__finally` / `finally`块具有未定义的行为在异常终止期间。|  
-|[C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|/we4533|初始化变量的代码不会执行。|  
-|[C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|/we4700|使用未初始化的局部变量。|  
-|[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|使用可能未初始化的局部指针变量。|  
-|[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|使用特定 C 运行时 (CRT) 函数时缓冲区溢出。|  
-|[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|使用函数标记有杂注[弃用](../../preprocessor/deprecated-c-cpp.md)。|  
-|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|使用函数标记为[弃用](../../cpp/deprecated-cpp.md)。|  
-  
-## <a name="runtime-checks"></a>运行时检查  
- 当 **/sdl**是启用，编译器生成代码以在运行时执行这些检查：  
-  
--   启用严格模式的 **/GS**运行时缓冲区溢出检测，等效于使用编译`#pragma strict_gs_check(push, on)`。  
-  
--   执行有限的指针清理。 在不涉及取消引用的表达式中以及没有用户定义的析构函数的类型中，在调用 `delete` 后，指针引用将设置为无效的地址。 这有助于防止重复使用已过时的指针引用。  
-  
--   执行类成员初始化。 在对象实例化时自动将所有类成员初始化为零（在构造函数运行前）。 这有助于防止使用与构造函数未显式初始化的类成员关联的未初始化的数据。  
-  
-## <a name="remarks"></a>备注  
- 有关详细信息，请参阅[警告、 /sdl 和改进未初始化的变量检测](http://go.microsoft.com/fwlink/p/?LinkId=331012)。  
-  
-#### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  选择**C/c + +** 文件夹。  
-  
-3.  上**常规**页上，选择从选项**SDL 检查**下拉列表。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+
+添加建议的安全开发生命周期 (SDL) 检查。 这些检查包括额外的被视为错误的安全相关警告以及其他安全代码生成功能。
+
+## <a name="syntax"></a>语法
+
+```
+/sdl[-]
+```
+
+## <a name="remarks"></a>备注
+
+**/sdl**使提供的基线安全检查的超集[/GS](../../build/reference/gs-buffer-security-check.md)并重写 **/GS-**。 默认情况下 **/sdl**处于关闭状态。 **/sdl-** 禁用额外的安全检查。
+
+## <a name="compile-time-checks"></a>编译时检查
+
+**/sdl**使这些警告视为错误：
+
+|/sdl 启用的警告|等效的命令行开关|描述|
+|------------------------------|-------------------------------------|-----------------|
+|[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|将一元减号运算符应用于无符号类型，并生成了无符号的结果。|
+|[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|将负整型常数转换为无符号类型，并生成了可能无意义的结果。|
+|[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|/we4532|利用`continue`，`break`或`goto`中的关键字`__finally` / `finally`块已在异常终止期间未定义行为。|
+|[C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|/we4533|初始化变量的代码不会执行。|
+|[C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|/we4700|使用未初始化的局部变量。|
+|[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|使用可能未初始化的局部指针变量。|
+|[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|使用特定 C 运行时 (CRT) 函数时缓冲区溢出。|
+|[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|使用函数标记有杂注[弃用](../../preprocessor/deprecated-c-cpp.md)。|
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|使用函数标记为[弃用](../../cpp/deprecated-cpp.md)。|
+
+## <a name="runtime-checks"></a>运行时检查
+
+当 **/sdl**是启用，编译器生成代码，以执行这些检查在运行时：
+
+- 启用严格模式下的 **/GS**运行时缓冲区溢出检测，等效于使用编译`#pragma strict_gs_check(push, on)`。
+
+- 执行有限的指针清理。 在不涉及取消引用的表达式中以及没有用户定义的析构函数的类型中，在调用 `delete` 后，指针引用将设置为无效的地址。 这有助于防止重复使用已过时的指针引用。
+
+- 执行类成员初始化。 在对象实例化时自动将所有类成员初始化为零（在构造函数运行前）。 这有助于防止使用与构造函数未显式初始化的类成员关联的未初始化的数据。
+
+## <a name="remarks"></a>备注
+
+有关详细信息，请参阅[警告、 /sdl 和改进未初始化的变量检测](https://cloudblogs.microsoft.com/microsoftsecure/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)。
+
+#### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 选择**C/c + +** 文件夹。
+
+1. 上**常规**页上，选择从选项**SDL 检查**下拉列表。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

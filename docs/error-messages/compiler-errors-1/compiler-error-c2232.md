@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2232 |Microsoft 文档
+title: 编译器错误 C2232 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504f92a72b500548c2231958afa98ccdc177e12d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0e7c20de3de097fc09b80459e96158282ef7bba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026044"
 ---
 # <a name="compiler-error-c2232"></a>编译器错误 C2232
-->： 左的操作数具有类别键类型，使用。  
-  
- `->` 运算符左侧的操作数不是指针。 对于类、 结构或联合使用句点 （.） 运算符。  
-  
- 下面的示例生成 C2232：  
-  
-```  
-// C2232.c  
-struct X {  
-    int member;  
-} x, *px;  
-int main() {  
-    x->member = 0;   // C2232, x is not a pointer  
-  
-    px->member = 0;  
-    x.member = 0;  
-}  
+
+->： 左的操作数具有类键类型，使用。
+
+`->` 运算符左侧的操作数不是指针。 对于类、 结构或联合使用句点 （.） 运算符。
+
+下面的示例生成 C2232：
+
+```
+// C2232.c
+struct X {
+    int member;
+} x, *px;
+int main() {
+    x->member = 0;   // C2232, x is not a pointer
+
+    px->member = 0;
+    x.member = 0;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: -RELOCATIONS |Microsoft 文档
+title: -RELOCATIONS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 508209debc27cb9495fa6ea7ddd50e36ef937962
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 443dd28e16eddd1e797641d00b79ef2165961586
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716724"
 ---
 # <a name="relocations"></a>/RELOCATIONS
-```  
-/RELOCATIONS  
-```  
-  
-## <a name="remarks"></a>备注  
- 此选项可显示的对象或图像中任何重定位。  
-  
- 仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项是可供产生的文件的使用[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。  
-  
-## <a name="see-also"></a>请参阅  
- [DUMPBIN 选项](../../build/reference/dumpbin-options.md)
+
+```
+/RELOCATIONS
+```
+
+## <a name="remarks"></a>备注
+
+此选项可显示任何重定位的对象或映像中。
+
+仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。
+
+## <a name="see-also"></a>请参阅
+
+[DUMPBIN 选项](../../build/reference/dumpbin-options.md)

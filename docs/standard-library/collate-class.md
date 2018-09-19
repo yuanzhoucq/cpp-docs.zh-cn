@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966454"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110368"
 ---
 # <a name="collate-class"></a>collate 类
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序中用于对字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
-*_Locname*的区域设置名称。
+*_Locname*<br/>
+区域设置的名称。
 
 ### <a name="remarks"></a>备注
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*first1*指向第一个序列中的第一个元素的指针进行比较。
+*First1*<br/>
+指向第一个序列中要比较的第一个元素的指针。
 
-*last1*指向第一个序列中的最后一个元素的指针进行比较。
+*Last1*<br/>
+指向第一个序列中要比较的最后一个元素的指针。
 
-*first2*指向第二个序列中的第一个元素的指针进行比较。
+*First2*<br/>
+指向第二个序列中要比较的第一个元素的指针。
 
-*last2*指向第二个序列中的最后一个元素的指针进行比较。
+*Last2*<br/>
+指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*first1*指向第一个序列中的第一个元素的指针进行比较。
+*First1*<br/>
+指向第一个序列中要比较的第一个元素的指针。
 
-*last1*指向第一个序列中的最后一个元素的指针进行比较。
+*Last1*<br/>
+指向第一个序列中要比较的最后一个元素的指针。
 
-*first2*指向第二个序列中的第一个元素的指针进行比较。
+*First2*<br/>
+指向第二个序列中要比较的第一个元素的指针。
 
-*last2*指向第二个序列中的最后一个元素的指针进行比较。
+*Last2*<br/>
+指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向它的具有值在序列中的第一个字符的指针要确定的。
+*first*<br/>
+一个指向序列中具有待定值的第一个字符的指针。
 
-*最后一个*指向它的具有值在序列中的最后一个字符的指针要确定的。
+*最后一个*<br/>
+一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向待转换序列中的第一个字符的指针。
+*first*<br/>
+指向序列中要转换的第一个字符的指针。
 
-*最后一个*指向待转换序列中的最后一个字符的指针。
+*最后一个*<br/>
+指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向它的具有值在序列中的第一个字符的指针要确定的。
+*first*<br/>
+一个指向序列中具有待定值的第一个字符的指针。
 
-*最后一个*指向它的具有值在序列中的最后一个字符的指针要确定的。
+*最后一个*<br/>
+一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*第一个*指向待转换序列中的第一个字符的指针。
+*first*<br/>
+指向序列中要转换的第一个字符的指针。
 
-*最后一个*指向待转换序列中的最后一个字符的指针。
+*最后一个*<br/>
+指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 

@@ -1,7 +1,7 @@
 ---
-title: .ENDPROLOG |Microsoft 文档
+title: .ENDPROLOG |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa74b469dba3bee1b4fa0a5c1e066f93826c3477
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 370db59c6be4b3f53c9596c1ca443374acd2d2c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051646"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685417"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
-用信号通知的序言声明的末尾。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-.ENDPROLOG  
-```  
-  
-## <a name="remarks"></a>备注  
- 它是在区域之间的外部使用任何序言声明错误[PROC](../../assembler/masm/proc.md)帧和。ENDPROLOG。  
-  
- 有关详细信息，请参阅[x64 (ml64.exe) 的 MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+表示结束的序言声明。
+
+## <a name="syntax"></a>语法
+
+> .ENDPROLOG
+
+## <a name="remarks"></a>备注
+
+它是错误使用任何序言声明之间的区域之外[PROC](../../assembler/masm/proc.md)帧和。ENDPROLOG。
+
+有关详细信息，请参阅[MASM 的 x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

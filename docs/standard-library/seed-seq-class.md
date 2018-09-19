@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856327"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711745"
 ---
 # <a name="seedseq-class"></a>seed_seq 类
 
@@ -68,30 +68,63 @@ public:
 
 ## <a name="types"></a>类型
 
-`typedef unsigned int result_type;` 种子序列的元素的类型。 32 位无符号整数类型。
+```cpp
+typedef unsigned int result_type;
+```
+
+种子序列中的元素类型。 32 位无符号整数类型。
 
 ## <a name="constructors"></a>构造函数
 
-`seed_seq();` 默认构造函数，初始化具有空的内部序列。
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` 使用`initlist`设置内部序列。
+默认构造函数，需要初始化为空的内部序列。
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+请使用 `initlist` 设置内部序列。
 `T` 必须为整型。
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` 初始化使用提供的输入迭代器范围中所有元素的内部序列。
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+使用提供的输入迭代器范围中的所有元素初始化内部序列。
 `iterator_traits<InputIterator>::value_type` 必须为整型。
 
 ## <a name="members"></a>成员
 
 ### <a name="generating-functions"></a>生成函数
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` 填充使用内部算法所提供序列的元素。 此算法受初始化 `seed_seq` 的内部序列影响。
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+使用内部算法填充所提供序列的元素。 此算法受初始化 `seed_seq` 的内部序列影响。
 如果 `begin == end`，则不执行任何操作。
 
 ### <a name="property-functions"></a>属性函数
 
-`size_t size() const;` 返回中的元素数`seed_seq`。
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` 将内部序列复制到输出迭代器`dest`。
+返回 `seed_seq` 中的元素数量。
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+将内部序列复制到输出迭代器 `dest` 中。
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,5 @@
 ---
-title: copyprivate |Microsoft 文档
+title: copyprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071128"
 ---
 # <a name="copyprivate"></a>copyprivate
-将指定应所有线程间共享一个或多个变量。  
+指定应在所有线程之间共享一个或多个变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,10 @@ ms.locfileid: "33692933"
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `var`  
- 若要共享的一个或多个变量。 如果指定多个变量，则请用逗号分隔变量名。  
+*var*<br/>
+若要共享的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。  
   
 ## <a name="remarks"></a>备注  
  `copyprivate` 适用于[单个](../../../parallel/openmp/reference/single.md)指令。  

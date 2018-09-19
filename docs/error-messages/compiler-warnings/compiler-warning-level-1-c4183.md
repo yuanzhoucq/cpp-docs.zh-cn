@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4183 |Microsoft 文档
+title: 编译器警告 （等级 1） C4183 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a271c12facaacdd07b4a664396c36c7301ac2f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2753b8fc47de3363c38ed6ee4dedeaf8d085c485
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022431"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>编译器警告 （等级 1） C4183
-identifier： 缺少返回的类型;假定是返回 int 的成员函数  
-  
- 类或结构中的成员函数的内联定义没有返回类型。 假定该成员函数返回类型的默认`int`。  
-  
- 下面的示例生成 C4183:  
-  
-```  
-// C4183.cpp  
-// compile with: /W1 /c  
-#pragma warning(disable : 4430)  
-class MyClass1;  
-class MyClass2 {  
-   MyClass1() {};   // C4183  
-};  
+
+identifier： 缺少返回类型;假定为返回 int 的成员函数
+
+在类或结构中的成员函数的内联定义没有返回类型。 假定此成员函数的返回类型的默认`int`。
+
+下面的示例生成 C4183:
+
+```
+// C4183.cpp
+// compile with: /W1 /c
+#pragma warning(disable : 4430)
+class MyClass1;
+class MyClass2 {
+   MyClass1() {};   // C4183
+};
 ```

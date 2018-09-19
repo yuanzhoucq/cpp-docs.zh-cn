@@ -1,7 +1,7 @@
 ---
 title: '@Time | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09f2ee96a59e9a94c5fd3f9344fdc258f4a410c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 34028f5f95cb54acc7fa25786614d67d921d8191
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049253"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693095"
 ---
 # <a name="time"></a>@Time
-系统时间采用 24 小时 hh: mm： 格式 （文本宏）。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-@Time  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [符号参考](../../assembler/masm/symbols-reference.md)
+
+24 小时： 分： 秒格式 （text 宏） 的系统时间。
+
+## <a name="syntax"></a>语法
+
+> @Time
+
+## <a name="see-also"></a>请参阅
+
+[符号参考](../../assembler/masm/symbols-reference.md)<br/>

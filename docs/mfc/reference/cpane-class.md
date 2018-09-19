@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab0f59604cc23f5d8cbd442fcc2a526962bdc4e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6f97129a9a785d4c6541d951418f2c9455aa9610
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713630"
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane`类是一个增强的功能[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)。 如果要升级现有 MFC 项目，替换出现的所有`CControlBar`与`CPane`。  
@@ -278,8 +278,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bRecalcLayout*  
- 为 TRUE，则会自动重新计算窗格; 的布局否则为 FALSE。  
+*bRecalcLayout*<br/>
+[in]为 TRUE，则会自动重新计算窗格; 的布局否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  调用此方法时动态更改窗格的布局。 例如，你可能想要隐藏或显示工具栏按钮时调用此方法。  
@@ -294,11 +294,11 @@ BOOL AllocElements(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nElements*  
- 要为其分配存储空间的元素数。  
+*nElements*<br/>
+[in]要为其分配存储空间的元素数。  
   
- [in]*cbElement*  
- 以字节为单位，元素的大小。  
+*cbElement*<br/>
+[in]以字节为单位，元素的大小。  
   
 ### <a name="return-value"></a>返回值  
  如果内存分配失败; 则为 FALSE否则，则为 TRUE。  
@@ -324,8 +324,8 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectRequired*  
- 所需的矩形。  
+*rectRequired*<br/>
+[in]所需的矩形。  
   
 ### <a name="return-value"></a>返回值  
  宽度和高度之间的区别*rectRequired*和当前窗口矩形。  
@@ -340,11 +340,11 @@ void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*rect*  
- 包含的大小和工作区的窗格中的偏移量。  
+*rect*<br/>
+[out]包含的大小和工作区的窗格中的偏移量。  
   
- [in]*bHorz*  
- 窗格将采用水平方向; 如果为 TRUE否则为 FALSE。  
+*bHorz*<br/>
+[in]窗格将采用水平方向; 如果为 TRUE否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  在必须重新计算一个窗格的布局时，由框架调用此方法。 *Rect*参数填充的大小和工作区的窗格中的偏移量。 这包括其边框和控制手柄。  
@@ -367,8 +367,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bVertDock*  
- 如果窗格停靠垂直 FALSE，否则，则为 TRUE。  
+*bVertDock*<br/>
+[in]如果窗格停靠垂直 FALSE，否则，则为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  此方法的默认实现返回的大小为 （0，0）。  
@@ -384,8 +384,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockBar*  
- 指定此窗格将停靠的窗格。  
+*pDockBar*<br/>
+[in]指定此窗格将停靠的窗格。  
   
 ### <a name="return-value"></a>返回值  
  如果此窗格可以停靠在指定的停靠窗格; 则为 TRUE否则为 FALSE。  
@@ -416,8 +416,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bActiveTabOnly*  
- 不用于`CPane::ConvertToTabbedDocument`。  
+*bActiveTabOnly*<br/>
+[in]不用于`CPane::ConvertToTabbedDocument`。  
   
 ### <a name="remarks"></a>备注  
  仅可停靠窗格可以转换为选项卡式文档。 有关信息，请参阅[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)。  
@@ -430,8 +430,8 @@ virtual void CopyState(CPane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pOrgBar*  
- 指向一个窗格的指针。  
+*pOrgBar*<br/>
+[in]指向一个窗格的指针。  
   
 ### <a name="remarks"></a>备注  
  此方法将复制的状态*pOrgBar*到当前的窗格。  
@@ -451,23 +451,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszClassName*  
- 指定的 Windows 类的名称。  
+*lpszClassName*<br/>
+[in]指定的 Windows 类的名称。  
   
- [in]*dwStyle*  
- 指定的窗口样式特性。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*dwStyle*<br/>
+[in]指定的窗口样式特性。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*rect*  
- 指定的初始大小和位置*pParentWnd*窗口中的，在工作区坐标。  
+*rect*<br/>
+[in]指定的初始大小和位置*pParentWnd*窗口中的，在工作区坐标。  
   
  [in][out]*pParentWnd*  
  指定此窗格的父窗口。  
   
- [in]*nID*  
- 指定在窗格的 ID。  
+*nID*<br/>
+[in]指定在窗格的 ID。  
   
- [in]*dwControlBarStyle*  
- 指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
+*dwControlBarStyle*<br/>
+[in]指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
  [in][out]*pContext*  
  指定创建上下文的窗格。  
@@ -488,8 +488,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectInitial*  
- 指定的初始大小和位置，在屏幕坐标中的微型框架窗口创建。  
+*rectInitial*<br/>
+[in]指定的初始大小和位置，在屏幕坐标中的微型框架窗口创建。  
   
 ### <a name="return-value"></a>返回值  
  新创建的微型框架窗口中。  
@@ -515,26 +515,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwStyleEx*  
- 指定扩展的窗口样式特性。 有关详细信息，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
+*dwStyleEx*<br/>
+[in]指定扩展的窗口样式特性。 有关详细信息，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   
- [in]*lpszClassName*  
- 指定的 Windows 类的名称。  
+*lpszClassName*<br/>
+[in]指定的 Windows 类的名称。  
   
- [in]*dwStyle*  
- 指定窗口的样式特性。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*dwStyle*<br/>
+[in]指定窗口的样式特性。 有关详细信息，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*rect*  
- 指定的初始大小和位置*pParentWnd*窗口中的，在工作区坐标。  
+*rect*<br/>
+[in]指定的初始大小和位置*pParentWnd*窗口中的，在工作区坐标。  
   
  [in][out]*pParentWnd*  
  指定此窗格的父窗口。  
   
- [in]*nID*  
- 指定在窗格的 ID。  
+*nID*<br/>
+[in]指定在窗格的 ID。  
   
- [in]*dwControlBarStyle*  
- 指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
+*dwControlBarStyle*<br/>
+[in]指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
  [in][out]*pContext*  
  指定在窗格的创建上下文。  
@@ -555,8 +555,8 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockBar*  
- 指定要将此窗格停靠到基本窗格。  
+*pDockBar*<br/>
+[in]指定要将此窗格停靠到基本窗格。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功，则停靠窗格，则返回 TRUE否则为 FALSE。  
@@ -575,11 +575,11 @@ virtual BOOL DockPane(
  [in][out]*pDockBar*  
  指定的基窗格停靠到此窗格。  
   
- [in]*lpRect*  
- 此窗格的停靠位置的基窗格上指定的矩形。  
+*lpRect*<br/>
+[in]此窗格的停靠位置的基窗格上指定的矩形。  
   
- [in]*dockMethod*  
- 指定要使用的扩展方法。 可用选项如下所示：  
+*dockMethod*<br/>
+[in]指定要使用的扩展方法。 可用选项如下所示：  
   
 |选项|描述|  
 |------------|-----------------|  
@@ -604,8 +604,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bWasDocked*  
- 如果成功停靠窗格; 则为 TRUE否则为 FALSE。  
+*bWasDocked*<br/>
+[in]如果成功停靠窗格; 则为 TRUE否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回**这**指针。  
@@ -627,23 +627,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwAlignment*  
- 你想要停靠的窗格为与父框架中的方。  
+*dwAlignment*<br/>
+[in]你想要停靠的窗格为与父框架中的方。  
   
- [in]*lpRect*  
- 指定的大小。  
+*lpRect*<br/>
+[in]指定的大小。  
   
- [in]*dwDockFlags*  
- 已忽略。  
+*dwDockFlags*<br/>
+[in]忽略。  
   
- [in]*pRelativeBar*  
- 已忽略。  
+*pRelativeBar*<br/>
+[in]忽略。  
   
- [in]*nRelativeIndex*  
- 已忽略。  
+*nRelativeIndex*<br/>
+[in]忽略。  
   
- [in]*bOuterEdge*  
- 如果 TRUE 和有是侧所指定的其他可停靠窗格*dwAlignment*外其他窗格，, 停靠窗格更接近于父框架的边缘。 如果为 FALSE，在窗格停靠在更靠近客户端区域的中心。  
+*bOuterEdge*<br/>
+[in]如果 TRUE 和有是侧所指定的其他可停靠窗格*dwAlignment*外其他窗格，, 停靠窗格更接近于父框架的边缘。 如果为 FALSE，在窗格停靠在更靠近客户端区域的中心。  
   
 ### <a name="return-value"></a>返回值  
  如果窗格分隔符，则为 FALSE ( [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)) 不能创建; 否则为 TRUE。  
@@ -676,14 +676,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectFloat*  
- 在屏幕坐标定位时它浮动窗格中指定位置。  
+*rectFloat*<br/>
+[in]在屏幕坐标定位时它浮动窗格中指定位置。  
   
- [in]*dockMethod*  
- 指定要使用时浮动窗格的停靠方法。 有关可能的值的列表，请参阅[CPane::DockPane](#dockpane)。  
+*dockMethod*<br/>
+[in]指定要使用时浮动窗格的停靠方法。 有关可能的值的列表，请参阅[CPane::DockPane](#dockpane)。  
   
- [in]*bShow*  
- 为 TRUE，则显示窗格中时浮动;否则为 FALSE。  
+*bShow*<br/>
+[in]为 TRUE，则显示窗格中时浮动;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  如果已成功浮动窗格或不能浮动窗格中，因为 TRUE [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)返回 FALSE; 否则为 FALSE。  
@@ -784,8 +784,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*大小*  
- 一个`CSize`对象填充的最小允许大小。  
+*size*<br/>
+[out]一个`CSize`对象填充的最小允许大小。  
   
 ### <a name="remarks"></a>备注  
   
@@ -797,8 +797,8 @@ virtual void GetPaneName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strName*  
- 一个`CString`对象填充的标题名称。  
+*strName*<br/>
+[out]一个`CString`对象填充的标题名称。  
   
 ### <a name="remarks"></a>备注  
  当窗格处于停靠状态还是浮动窗格标题显示的标题区域中。 如果窗格选项卡式组的一部分，是在选项卡区域中显示标题。 如果窗格在自动隐藏模式下，标题会显示在`CMFCAutoHideButton`。  
@@ -811,8 +811,8 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*rectVirtual*  
- 一个`CRect`虚拟矩形填充的对象。  
+*rectVirtual*<br/>
+[out]一个`CRect`虚拟矩形填充的对象。  
   
 ### <a name="remarks"></a>备注  
  移动后一个窗格，框架将存储在虚拟矩形的窗格中的原始位置。 该框架可以使用的虚拟矩形还原窗格中的原始位置。  
@@ -829,11 +829,11 @@ virtual AFX_CS_STATUS IsChangeState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nOffset*  
- 指定停靠的敏感度。 例如，一个窗格，其中内移动*nOffset*将停靠停靠行中的像素为单位。  
+*nOffset*<br/>
+[in]指定停靠的敏感度。 例如，一个窗格，其中内移动*nOffset*将停靠停靠行中的像素为单位。  
   
- [in]*ppTargetBar*  
- 方法返回时， *ppTargetBar*包含指向到应停靠当前窗格中，该对象的指针或 NULL，如果不停靠应发生。  
+*ppTargetBar*<br/>
+[in]方法返回时， *ppTargetBar*包含指向到应停靠当前窗格中，该对象的指针或 NULL，如果不停靠应发生。  
   
 ### <a name="return-value"></a>返回值  
  以下 AFX_CS_STATUS 值之一：  
@@ -880,11 +880,11 @@ bool IsLeftOf(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- 一个`CRect`用于比较的对象。  
+*rect*<br/>
+[in]一个`CRect`用于比较的对象。  
   
- [in]*bWindowRect*  
- 如果为 TRUE， *rect*包含屏幕坐标; 如果为 FALSE，则假定*rect*假定包含客户端坐标。  
+*bWindowRect*<br/>
+[in]如果为 TRUE， *rect*包含屏幕坐标; 如果为 FALSE，则假定*rect*假定包含客户端坐标。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -932,14 +932,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 配置文件名称。  
+*lpszProfileName*<br/>
+[in]配置文件名称。  
   
- [in]*nIndex*  
- 配置文件的索引。  
+*nIndex*<br/>
+[in]配置文件的索引。  
   
- [in]*uiID*  
- 窗格 id。  
+*uiID*<br/>
+[in]窗格 id。  
   
 ### <a name="return-value"></a>返回值  
  如果窗格状态加载成功，则为 TRUE否则为 FALSE。  
@@ -981,11 +981,11 @@ BOOL MoveByAlignment(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwAlignment*  
- 指定窗格对齐方式。  
+*dwAlignment*<br/>
+[in]指定窗格对齐方式。  
   
- [in]*nOffset*  
- 量 （以像素为单位，要移动的窗格和虚拟的矩形）。  
+*nOffset*<br/>
+[in]量 （以像素为单位，要移动的窗格和虚拟的矩形）。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1013,14 +1013,14 @@ virtual CSize MovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectNew*  
- 指定新矩形的窗格。  
+*rectNew*<br/>
+[in]指定新矩形的窗格。  
   
- [in]*bForceMove*  
- 如果为 TRUE，此方法将忽略允许的最小窗格大小 ( [CPane::GetMinSize](#getminsize)); 否则为如果有必要，以确保它至少是最小允许大小调整窗格。  
+*bForceMove*<br/>
+[in]如果为 TRUE，此方法将忽略允许的最小窗格大小 ( [CPane::GetMinSize](#getminsize)); 否则为如果有必要，以确保它至少是最小允许大小调整窗格。  
   
- [in]*hdwp*  
- 未使用。  
+*hdwp*<br/>
+[in]不使用。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，其中包含新的和旧矩形的宽度和高度差异 (旧矩形- *rectNew*)。  
@@ -1053,14 +1053,14 @@ virtual void OnAfterDock(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pBar*  
- 未使用此参数。  
+*pBar*<br/>
+[in]未使用此参数。  
   
- [in]*lpRect*  
- 未使用此参数。  
+*lpRect*<br/>
+[in]未使用此参数。  
   
- [in]*dockMethod*  
- 未使用此参数。  
+*dockMethod*<br/>
+[in]未使用此参数。  
   
 ##  <a name="onafterfloat"></a>  CPane::OnAfterFloat  
  后一个窗格浮动，由框架调用。  
@@ -1085,8 +1085,8 @@ virtual void OnBeforeChangeParent(
  [in][out]*pWndNewParent*  
  指定新的父窗口。  
   
- [in]*bDelay*  
- 为 TRUE，则延迟的全局停靠布局调整;否则为 FALSE。  
+*bDelay*<br/>
+[in]为 TRUE，则延迟的全局停靠布局调整;否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  由框架调用此方法，当窗格的父级是要更改，因为正在窗格停靠或浮动。  
@@ -1107,11 +1107,11 @@ virtual BOOL OnBeforeDock(
  [in][out]*ppDockBar*  
  指定此窗格停靠到窗格。  
   
- [in]*lpRect*  
- 指定停靠的矩形。  
+*lpRect*<br/>
+[in]指定停靠的矩形。  
   
- [in]*dockMethod*  
- 指定的扩展方法。  
+*dockMethod*<br/>
+[in]指定的扩展方法。  
   
 ### <a name="return-value"></a>返回值  
  如果可以停靠窗格，则为 TRUE。 如果该函数将返回 FALSE，将中止停靠的操作。  
@@ -1129,11 +1129,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rectFloat*  
- 当处于浮动状态时指定的位置和窗格的大小。  
+*rectFloat*<br/>
+[in]当处于浮动状态时指定的位置和窗格的大小。  
   
- [in]*dockMethod*  
- 指定在窗格的停靠方法。  
+*dockMethod*<br/>
+[in]指定在窗格的停靠方法。  
   
 ### <a name="return-value"></a>返回值  
  如果可以浮动窗格; 则为 TRUE否则为 FALSE。  
@@ -1159,8 +1159,8 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 指定菜单位置。  
+*点*<br/>
+[in]指定菜单位置。  
   
 ### <a name="return-value"></a>返回值  
  如果可以显示菜单; 则为 TRUE否则为 FALSE。  
@@ -1191,14 +1191,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 配置文件名称。  
+*lpszProfileName*<br/>
+[in]配置文件名称。  
   
- [in]*nIndex*  
- 配置文件的索引。  
+*nIndex*<br/>
+[in]配置文件的索引。  
   
- [in]*uiID*  
- 窗格 id。  
+*uiID*<br/>
+[in]窗格 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则保存状态，则返回 TRUE否则为 FALSE。  
@@ -1216,8 +1216,8 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bActive*  
- 一个布尔值，指定是否在窗格标记为活动状态。  
+*bActive*<br/>
+[in]一个布尔值，指定是否在窗格标记为活动状态。  
   
 ### <a name="remarks"></a>备注  
  当显示可停靠窗格或选择自动隐藏按钮时，相应的自动隐藏窗格标记为活动。  
@@ -1240,20 +1240,20 @@ void SetBorders(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*cxLeft*  
- 指定以像素为单位，窗格的左边框的宽度。  
+*cxLeft*<br/>
+[in]指定以像素为单位，窗格的左边框的宽度。  
   
- [in]*cyTop*  
- 指定以像素为单位，窗格的上边框的宽度。  
+*cyTop*<br/>
+[in]指定以像素为单位，窗格的上边框的宽度。  
   
- [in]*cxRight*  
- 指定以像素为单位，窗格的右边框的宽度。  
+*cxRight*<br/>
+[in]指定以像素为单位，窗格的右边框的宽度。  
   
- [in]*cyBottom*  
- 指定以像素为单位，窗格的下边框的宽度。  
+*cyBottom*<br/>
+[in]指定以像素为单位，窗格的下边框的宽度。  
   
- [in]*lpRect*  
- 一个[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，其中包含以像素为单位，每个窗格的边框的宽度。  
+*lpRect*<br/>
+[in]一个[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，其中包含以像素为单位，每个窗格的边框的宽度。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可设置窗格的边框的大小。  
@@ -1266,8 +1266,8 @@ void SetClientHotSpot(const CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ptNew*  
- 一个`CPoint`对象，它指定新的作用点。  
+*ptNew*<br/>
+[in]一个`CPoint`对象，它指定新的作用点。  
   
 ### <a name="remarks"></a>备注  
  *热点*是在用户选择并按住以移动该窗格的窗格上的点。 作用点用于从停靠位置拖动窗格时流畅的动画。  
@@ -1280,8 +1280,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDockManager*  
- 指向主框架窗口到停靠管理器。  
+*pDockManager*<br/>
+[in]指向主框架窗口到停靠管理器。  
   
 ### <a name="remarks"></a>备注  
  若要还原在窗格停靠的最近状态信息的框架调用此方法。 一个窗格，将存储在最近的停靠状态信息[cpane:: M_recentdockinfo](#m_recentdockinfo)。 有关详细信息，请参阅[CRecentDockSiteInfo 类](../../mfc/reference/crecentdocksiteinfo-class.md)。  
@@ -1296,8 +1296,8 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bExclusive*  
- 如果启用了排他行模式，则为否则为 FALSE。  
+*bExclusive*<br/>
+[in]如果启用了排他行模式，则为否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  调用此方法来启用或禁用排他行模式。 排他行模式下一个窗格时，它不能与任何其他工具栏共享同一行。  
@@ -1312,8 +1312,8 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*大小*  
- 一个`CSize`对象，其中包含的最小允许大小的窗格。  
+*size*<br/>
+[in]一个`CSize`对象，其中包含的最小允许大小的窗格。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1327,11 +1327,11 @@ void SetVirtualRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rect*  
- 一个`CRect`对象，它指定要设置的虚拟矩形。  
+*rect*<br/>
+[in]一个`CRect`对象，它指定要设置的虚拟矩形。  
   
- [in]*bMapToParent*  
- 如果指定为 TRUE *rect*包含相对于父窗口的点。  
+*bMapToParent*<br/>
+[in]如果指定为 TRUE *rect*包含相对于父窗口的点。  
   
 ### <a name="remarks"></a>备注  
  一个*虚拟矩形*时它将被移动，将存储一个窗格的原始位置。 框架可以使用的虚拟矩形还原到原始位置。  
@@ -1362,11 +1362,11 @@ virtual int StretchPaneDeferWndPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nStretchSize*  
- 量 （以像素为单位，拉伸窗格）。 使用负值收缩窗格。  
+*nStretchSize*<br/>
+[in]量 （以像素为单位，拉伸窗格）。 使用负值收缩窗格。  
   
- [in]*hdwp*  
- 未使用。  
+*hdwp*<br/>
+[in]不使用。  
   
 ### <a name="return-value"></a>返回值  
  实际的量，以像素为单位，在窗格已延伸。  
@@ -1392,8 +1392,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bDelay*  
- 如果为 FALSE，框架将调用[cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)调整停靠布局。  
+*bDelay*<br/>
+[in]如果为 FALSE，框架将调用[cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)调整停靠布局。  
   
 ### <a name="remarks"></a>备注  
  使用此方法以编程方式取消停靠窗格。  
@@ -1408,11 +1408,11 @@ void UpdateVirtualRect(CPoint ptOffset);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ptOffset*  
- 一个`CPoint`对象，它指定按其轮换窗格中的偏移量。  
+*ptOffset*<br/>
+[in]一个`CPoint`对象，它指定按其轮换窗格中的偏移量。  
   
- [in]*大小*  
- 一个`CSize`对象，它指定窗格中的新大小。  
+*大小*<br/>
+[in]一个`CSize`对象，它指定窗格中的新大小。  
   
 ### <a name="remarks"></a>备注  
  第一个重载使用当前位置和窗格的大小设置的虚拟矩形。  

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2940 |Microsoft 文档
+title: 编译器错误 C2940 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f9a89f4adb2da1ef10ae17301e0b36452e43fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6bc44d9c8286b14e091381cecfec537fae86b55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045986"
 ---
 # <a name="compiler-error-c2940"></a>编译器错误 C2940
-“class”: type-class-id 已重新定义为局部 typedef  
-  
- 不能将泛型或模板类用作局部 `typedef`。  
-  
- 以下示例生成 C2940：  
-  
-```  
-// C2940.cpp  
-template<class T>  
-struct TC {};   
-int main() {  
-   typedef int TC<int>;   // C2940  
-   typedef int TC;   // OK  
-}  
-```  
-  
- 使用泛型时，也可能发生 C2940：  
-  
-```  
-// C2940b.cpp  
-// compile with: /clr  
-generic<class T>  
-ref struct GC { };  
-  
-int main() {  
-   typedef int GC<int>;   // C2940  
-   typedef int GC;  
-}  
+
+“class”: type-class-id 已重新定义为局部 typedef
+
+不能将泛型或模板类用作局部 `typedef`。
+
+以下示例生成 C2940：
+
+```
+// C2940.cpp
+template<class T>
+struct TC {};
+int main() {
+   typedef int TC<int>;   // C2940
+   typedef int TC;   // OK
+}
+```
+
+使用泛型时，也可能发生 C2940：
+
+```
+// C2940b.cpp
+// compile with: /clr
+generic<class T>
+ref struct GC { };
+
+int main() {
+   typedef int GC<int>;   // C2940
+   typedef int GC;
+}
 ```

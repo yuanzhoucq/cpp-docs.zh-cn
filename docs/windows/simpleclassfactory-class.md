@@ -1,28 +1,30 @@
 ---
 title: SimpleClassFactory 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/7/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory
+- module/Microsoft::WRL::SimpleClassFactory::CreateInstance
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deb100cfcbb8d2af14501b8b5cf90569a90c2d4d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600486"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691440"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 类
 
@@ -44,7 +46,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 类的基类必须提供默认构造函数。
 
-下面的代码示例演示如何使用**SimpleClassFactory**与[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。
+下面的代码示例演示如何使用`SimpleClassFactory`与[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -54,7 +56,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 |名称|描述|
 |----------|-----------------|
-|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|创建指定接口的实例。|
+|[SimpleClassFactory::CreateInstance 方法](#createinstance)|创建指定接口的实例。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -86,6 +88,35 @@ class SimpleClassFactory : public ClassFactory<>;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="createinstance"></a>Simpleclassfactory:: Createinstance 方法
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+创建指定接口的实例。
+
+```cpp
+STDMETHOD( CreateInstance )(
+   _Inout_opt_ IUnknown* pUnkOuter,
+   REFIID riid,
+   _Deref_out_ void** ppvObject
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*pUnkOuter*  
+必须为`nullptr`; 否则为返回值是 CLASS_E_NOAGGREGATION。
+
+SimpleClassFactory 不支持聚合。 如果受支持聚合，并且正在创建的对象是一个聚合的组成部分*pUnkOuter*是一个指向控制`IUnknown`聚合的接口。
+
+*riid*  
+若要创建的对象 ID 的接口。
+
+*ppvObject*  
+此操作完成后，指向由指定的对象的实例*riid*参数。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+如果`__WRL_STRICT__`是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。

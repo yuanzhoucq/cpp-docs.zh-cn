@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d5dcf640e46bfb3a0ac6e9b29dbaff36f4b868
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7ef86d368a0ca9f7aa2c3b6700350ccaaa8f7836
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204402"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317324"
 ---
 # <a name="underflowerror-class"></a>underflow_error 类
 
@@ -63,10 +63,10 @@ int main( )
       cerr << "Type: " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught: The number's a bit small, captain!
 Type: class std::underflow_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>要求
@@ -77,6 +77,5 @@ Type: class std::underflow_error
 
 ## <a name="see-also"></a>请参阅
 
-[\<stdexcept > 成员](https://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
 [runtime_error 类](../standard-library/runtime-error-class.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

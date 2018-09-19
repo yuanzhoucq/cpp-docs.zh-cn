@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684594"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 本主题讨论编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许 Visual c + + 模块调用和被调用保留与非托管模块的兼容性的同时从.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)并[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优势 **/clr**。  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  你的项目将编译并运行在 Visual Studio 2010 之后应创建新的项目配置为 **/clr**而不修改默认配置。 **/clr**与一些编译器选项不兼容，并创建单独的配置允许您为本机或托管将项目生成。 当 **/clr**在属性页对话框中，与不兼容的项目设置中选择 **/clr**已禁用 (和禁用的选项不会自动还原如果 **/clr**随后取消选择)。  
   
 ### <a name="create-new-project-configurations"></a>创建新的项目配置  
- 可以使用**从此处复制设置**选项[新建项目配置对话框](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)创建基于现有项目设置的项目配置。 执行此操作一次调试配置的一次针对发布配置。 然后，后续更改可以应用于 **/clr**的特定配置，使原始项目配置保持不变。  
+ 可以使用**从此处复制设置**选项**新建项目配置对话框**(**生成** > **Configuration Manager** > **活动解决方案配置** > **新建**) 来创建基于现有项目设置的项目配置。 执行此操作一次调试配置的一次针对发布配置。 然后，后续更改可以应用于 **/clr**的特定配置，使原始项目配置保持不变。  
   
  使用自定义生成规则的项目可能需要额外关注。  
   

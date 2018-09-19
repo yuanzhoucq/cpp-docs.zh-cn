@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a990acd8f27be476ce35d682a19912dcc85bbeed
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 340a21a3bbcb1853d66de01bddf9425fed0c8183
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689839"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C + + AMP (c + + Accelerated Massive Parallelism) 通过利用数据并行硬件的是通常表示为离散图像卡上的图形处理单元 (GPU) 加快了 c + + 代码的执行。 C + + AMP 编程模型包括对多维数组，索引，内存传输和平铺的支持。 它还包括数学函数库。 可以使用 c + + AMP 语言扩展控制数据移动方式从 CPU 到 GPU 和备份。  
@@ -48,4 +48,4 @@ C + + AMP (c + + Accelerated Massive Parallelism) 通过利用数据并行硬件
  
 [本机代码博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=238472)  
 [C + + AMP 示例项目下载](http://go.microsoft.com/fwlink/p/?linkid=248508)  
-[使用并发可视化工具分析 c + + AMP 代码](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[使用并发可视化工具分析 c + + AMP 代码](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

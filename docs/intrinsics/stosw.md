@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cf0e6157f184cb91605d9da8bcaea0c22806f03c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705144"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft 专用**  
@@ -41,14 +41,14 @@ void __stosw(
 ```  
   
 #### <a name="parameters"></a>参数  
- [out] `Dest`  
- 该操作的目标。  
+*dest*<br/>
+[out]该操作的目标。  
   
- [in] `Data`  
- 要存储的数据。  
+*Data*<br/>
+[in]要存储的数据。  
   
- [in] `Count`  
- 中的单词写入块的长度。  
+“计数”<br/>
+[in]中的单词写入块的长度。  
   
 ## <a name="requirements"></a>要求  
   

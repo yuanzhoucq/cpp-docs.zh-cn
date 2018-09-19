@@ -1,7 +1,7 @@
 ---
-title: IRPC |Microsoft 文档
+title: IRPC |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4498c8ef49d6ae5452f156dde2407ed604006a81
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8460b94183e6af19e74e065317d6cd0d6cf99922
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057424"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689885"
 ---
 # <a name="irpc"></a>IRPC
-## <a name="syntax"></a>语法  
-  
-```  
-  
-IRPC  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 请参阅[FORC](../../assembler/masm/forc.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+## <a name="syntax"></a>语法
+
+> IRPC
+
+## <a name="remarks"></a>备注
+
+请参阅[FORC](../../assembler/masm/forc.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2129 |Microsoft 文档
+title: 编译器错误 C2129 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d151c774672b1788ca893a9812deb3e41100dc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e86515a7d7c8954271578291c4ebcb1a52fc9863
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054280"
 ---
 # <a name="compiler-error-c2129"></a>编译器错误 C2129
-静态函数 function 声明但未定义  
-  
- 对进行的前向引用`static`永远不会定义的函数。  
-  
- A`static`必须在文件范围内定义函数。 如果函数在另一个文件中定义的必须将它声明`extern`。
+
+静态函数 function 声明但未定义
+
+对前向引用`static`永远不会定义的函数。
+
+一个`static`必须在文件范围内定义函数。 如果在另一个文件中定义函数，则它必须声明`extern`。

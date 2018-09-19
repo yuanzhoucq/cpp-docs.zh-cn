@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0006 |Microsoft 文档
+title: 表达式计算器错误 CXX0006 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070257"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>表达式计算器错误 CXX0006
-缺少左的括号  
-  
- 在表达式中找到括号不对称。 重新键入带平衡括号表达式。  
-  
- 此错误是与 CAN0006 相同。
+
+缺少左的括号
+
+括号不对称的表达式中找到。 重新键入带平衡的括号表达式。
+
+此错误是与 CAN0006 相同。

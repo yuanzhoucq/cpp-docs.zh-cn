@@ -27,14 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070894"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 类
+
 提供的实现[ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -46,14 +47,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自  
+
+*T*<br/>
+您的类，派生自  
   
- *PropClass*  
- 属性类。  
+*PropClass*<br/>
+属性类。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -65,9 +68,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[SetProperties](#setproperties)|行集属性组中设置属性。|  
   
 ## <a name="remarks"></a>备注  
- 这是必需的对于命令。 通过定义一个静态函数提供了该实现[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏。  
+
+这是必需的对于命令。 通过定义一个静态函数提供了该实现[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏。  
 
 ## <a name="getproperties"></a> Icommandpropertiesimpl:: Getproperties
+
 返回使用该命令的属性映射的所有请求的属性集。  
   
 ### <a name="syntax"></a>语法  
@@ -80,12 +85,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
   
 ## <a name="setproperties"></a> Icommandpropertiesimpl:: Setproperties
+
 设置命令对象的属性。  
   
 ### <a name="syntax"></a>语法  
@@ -96,8 +104,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

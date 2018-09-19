@@ -1,5 +1,5 @@
 ---
-title: __popcnt16、 __popcnt、 __popcnt64 |Microsoft 文档
+title: __popcnt16，__popcnt，__popcnt64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724725"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Microsoft 专用**  
   
- 对其中一个的数量进行计数 bits （填充计数） 在 16 位、 32 位或 64 位无符号的整数。  
+ 计数的一个 16 位、 32 位或 64 位无符号的整数中的位 （填充计数）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,8 +49,8 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `value`  
- 16 位、 32 或 64 位无符号的整数，我们想要填充计数。  
+*value*<br/>
+[in]16 位、 32 或 64 位无符号的整数，我们需要填充计数。  
   
 ## <a name="return-value"></a>返回值  
  中的一个比特数`value`参数。  
@@ -65,9 +66,9 @@ unsigned __int64 __popcnt64(
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 每个这些内部函数生成`popcnt`指令。  值的大小，`popcnt`指令返回其自变量的大小相同。  在 32 位模式下有任何 64 位通用寄存器，因此不是 64 位`popcnt`。  
+ 每个这些内部函数生成`popcnt`指令。  值的大小，`popcnt`指令返回为其自变量的大小相同。  在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`popcnt`。  
   
- 若要确定的硬件支持`popcnt`指令，请调用`__cpuid`与内部函数`InfoType=0x00000001`和检查的位 23 `CPUInfo[2] (ECX)`。 此位为否则如果支持指令，则为 1 和 0。 如果你运行代码使用此内部函数不支持的硬件上`popcnt`指令，则结果不可预知。  
+ 若要确定的硬件支持`popcnt`指令，调用`__cpuid`与内部`InfoType=0x00000001`并检查位 23 的`CPUInfo[2] (ECX)`。 此位为否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`popcnt`指令，则结果不可预知。  
   
 ## <a name="example"></a>示例  
   
@@ -107,7 +108,8 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **结束 Microsoft 专用**  
- 高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+
+高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
   
 ## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

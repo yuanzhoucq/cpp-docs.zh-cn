@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722626"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 提供用户定义文档类的基本功能。  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*deEvent*  
- 枚举的数据类型，它描述事件的类型。  
+*deEvent*<br/>
+[in]枚举的数据类型，它描述事件的类型。  
   
 ### <a name="remarks"></a>备注  
  文档事件可能会影响多个类。 此方法负责处理而不会影响类的文档事件[CDocument 类](../../mfc/reference/cdocument-class.md)。 目前，唯一必须文档事件响应的类是[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。 `CDocument`类具有其他可重写方法负责处理效果`CDocument`。  

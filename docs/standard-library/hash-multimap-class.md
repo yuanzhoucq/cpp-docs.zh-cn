@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196300"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726760"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在 hash_multimap 中的键数据类型。
+要存储在 hash_multimap 中的键数据类型。
 
 *类型*<br/>
- 要存储在 hash_multimap 中的元素数据类型。
+要存储在 hash_multimap 中的元素数据类型。
 
 *特征*<br/>
- 包括两个函数对象，其中一个是类的类型*特征*能够将两个元素值作为排序键以确定其相对顺序是一元谓词映射到的元素的键值的哈希函数进行比较无符号整数类型的`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key>>`。
+包括两个函数对象，其中一个是类的类型*特征*能够将两个元素值作为排序键以确定其相对顺序是一元谓词映射到的元素的键值的哈希函数进行比较无符号整数类型的`size_t`。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key>>`。
 
 *分配器*<br/>
- 该类型表示的是已存储的分配器对象，该对象中封装了有关 hash_multimap 的内存分配和内存释放的详细信息。 此参数是可选参数，默认值为 `allocator<pair <const Key, Type>>`。
+该类型表示的是已存储的分配器对象，该对象中封装了有关 hash_multimap 的内存分配和内存释放的详细信息。 此参数是可选参数，默认值为 `allocator<pair <const Key, Type>>`。
 
 ## <a name="remarks"></a>备注
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从 hash_multimap 中进行匹配的元素的键。
+要从 hash_multimap 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -895,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>hash_multimap::emplace_hint
@@ -955,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>hash_multimap::empty
@@ -1096,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1187,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>参数
 
 *_Where*<br/>
- 要从 hash_multimap 移除的元素的位置。
+要从 hash_multimap 移除的元素的位置。
 
 *first*<br/>
- 要从 hash_multimap 中移除的第一个元素的位置。
+要从 hash_multimap 中移除的第一个元素的位置。
 
 *最后一个*<br/>
- 紧接要从 hash_multimap 中移除的最后一个元素的位置。
+紧接要从 hash_multimap 中移除的最后一个元素的位置。
 
 *key*<br/>
- 要从 hash_multimap 中移除的元素的键。
+要从 hash_multimap 中移除的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1311,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与搜索的 hash_multimap 中元素的排序键匹配的键。
+要与搜索的 hash_multimap 中元素的排序键匹配的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1505,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1762,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2316,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- hash_multimap 提供要交换的元素或其元素要与 hash_multimap 的元素进行交换的 hash_multimap。
+hash_multimap 提供要交换的元素或其元素要与 hash_multimap 的元素进行交换的 hash_multimap。
 
 ### <a name="remarks"></a>备注
 
@@ -2390,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
+要与当前搜索的 hash_multimap 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 

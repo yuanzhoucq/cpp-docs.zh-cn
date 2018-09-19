@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036548"
 ---
 # <a name="binary-operators"></a>二元运算符
 
@@ -80,4 +80,5 @@ ms.locfileid: "39408812"
 > 对二元运算符的返回类型没有限制；但是，大多数用户定义的二元运算符将返回类类型或对类类型的引用。
 
 ## <a name="see-also"></a>请参阅
- [运算符重载](../cpp/operator-overloading.md)
+
+[运算符重载](../cpp/operator-overloading.md)

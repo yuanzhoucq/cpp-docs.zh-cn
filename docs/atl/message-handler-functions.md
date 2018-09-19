@@ -23,24 +23,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6440ad59218f4c69eb3421176ebdfdc7a36e9531
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 93e3534f839417b6f601f4e8bc345342cc77ac1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040955"
 ---
 # <a name="message-handler-functions"></a>消息处理程序函数
-ATL 提供了三种类型的消息处理程序函数：  
-  
-|消息处理程序的类型|相应消息宏|  
-|-----------------------------|---------------------------------|  
-|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
-|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
-  
-## <a name="see-also"></a>请参阅  
- [实现窗口](../atl/implementing-a-window.md)   
- [消息映射](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+
+ATL 提供了三种类型的消息处理程序函数：
+
+|消息处理程序的类型|相应消息宏|
+|-----------------------------|---------------------------------|
+|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
+|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|
+
+## <a name="see-also"></a>请参阅
+
+[实现窗口](../atl/implementing-a-window.md)<br/>
+[消息映射](../atl/message-maps-atl.md)<br/>
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043932"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 提供 Windows 公共选项卡控件的功能。  
@@ -240,7 +240,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**中[创建](#create)还可以应用到控件的窗口样式的列表。  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>备注  
  发送消息，`mask`成员指定要返回的属性。 如果`mask`成员指定 TCIF_TEXT 值`pszText`成员必须包含接收项文本的缓冲区的地址和`cchTextMax`成员必须指定缓冲区的大小。  
   
- `mask`  
- 值，该值指定该`TCITEM`结构要检索或设置成员。 此成员可以是零，也可以是以下值的组合：  
+- `mask`
+
+   值，该值指定该`TCITEM`结构要检索或设置成员。 此成员可以是零，也可以是以下值的组合：  
   
-- TCIF_TEXT`pszText`成员是否有效。  
+   - TCIF_TEXT`pszText`成员是否有效。  
   
-- TCIF_IMAGE`iImage`成员是否有效。  
+   - TCIF_IMAGE`iImage`成员是否有效。  
   
-- TCIF_PARAM`lParam`成员是否有效。  
+   - TCIF_PARAM`lParam`成员是否有效。  
   
-- TCIF_RTLREADING 文本的`pszText`希伯来语或阿拉伯语系统上使用从右到左的阅读顺序显示。  
+   - TCIF_RTLREADING 文本的`pszText`希伯来语或阿拉伯语系统上使用从右到左的阅读顺序显示。  
   
-- TCIF_STATE`dwState`成员是否有效。  
+   - TCIF_STATE`dwState`成员是否有效。  
   
- `pszText`  
- 如果结构包含一个选项卡有关的信息包含在选项卡文本的以 null 结尾的字符串指针。如果结构接收的信息，则此成员指定接收的选项卡文本的缓冲区的地址。  
+- `pszText`  
+
+   如果结构包含一个选项卡有关的信息包含在选项卡文本的以 null 结尾的字符串指针。如果结构接收的信息，则此成员指定接收的选项卡文本的缓冲区的地址。  
   
- `cchTextMax`  
- 指向缓冲区的大小`pszText`。 如果结构未接收信息，则忽略此成员。  
+- `cchTextMax`  
+
+   指向缓冲区的大小`pszText`。 如果结构未接收信息，则忽略此成员。  
   
- `iImage`  
+- `iImage`  
  如果没有图像为选项卡中选项卡控件的图像列表中，或-1 的索引。  
   
- lParam  
- 与选项卡关联的应用程序定义的数据。如果有多个四个字节的每个选项卡应用程序定义的数据，应用程序必须定义一个结构，并使用它而不是`TCITEM`结构。 应用程序定义的结构的第一个成员必须是[TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)结构。 `TCITEMHEADER`结构是否与相同`TCITEM`结构，但如果没有`lParam`成员。 您的结构的大小和的大小之间的区别`TCITEMHEADER`结构应等于每个选项卡的额外字节数。  
+- `lParam`  
+
+   与选项卡关联的应用程序定义的数据。如果有多个四个字节的每个选项卡应用程序定义的数据，应用程序必须定义一个结构，并使用它而不是`TCITEM`结构。 应用程序定义的结构的第一个成员必须是[TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)结构。 `TCITEMHEADER`结构是否与相同`TCITEM`结构，但如果没有`lParam`成员。 您的结构的大小和的大小之间的区别`TCITEMHEADER`结构应等于每个选项卡的额外字节数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

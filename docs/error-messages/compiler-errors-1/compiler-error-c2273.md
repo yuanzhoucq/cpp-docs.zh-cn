@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2273 |Microsoft 文档
+title: 编译器错误 C2273 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f49ee00ba5617b494e27650c38dad679ae6767a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 995f75487820976d045e5db05fe2b170260240cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170864"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066208"
 ---
 # <a name="compiler-error-c2273"></a>编译器错误 C2273
-“type”: 位于“->”运算符右边时非法  
-  
- 类型的右操作数作为出现`->`运算符。  
-  
- 通过尝试访问用户定义类型转换可以导致此错误。 请在 -> 和 `operator` 之间使用关键字 `type`。  
-  
- 下面的示例生成 C2273:  
-  
-```  
-// C2273.cpp  
-struct MyClass {  
-   operator int() {  
-      return 0;  
-   }  
-};  
-int main() {  
-   MyClass * ClassPtr = new MyClass;  
-   int i = ClassPtr->int();   // C2273  
-   int j = ClassPtr-> operator int();   // OK  
-}  
+
+“type”: 位于“->”运算符右边时非法
+
+一种类型显示为右操作数`->`运算符。
+
+通过尝试访问用户定义类型转换可以导致此错误。 请在 -> 和 `operator` 之间使用关键字 `type`。
+
+下面的示例生成 C2273:
+
+```
+// C2273.cpp
+struct MyClass {
+   operator int() {
+      return 0;
+   }
+};
+int main() {
+   MyClass * ClassPtr = new MyClass;
+   int i = ClassPtr->int();   // C2273
+   int j = ClassPtr-> operator int();   // OK
+}
 ```

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711680"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 类
 `CMFCCaptionButton`类实现的停靠窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nHit*  
- 与按钮关联的命令。  
+*nHit*<br/>
+[in]与按钮关联的命令。  
   
- [in]*bLeftAlign*  
- 指定是否向左对齐按钮。  
+*bLeftAlign*<br/>
+[in]指定是否向左对齐按钮。  
   
  下表列出了可能值*nHit*参数。  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bHorz*  
- 左或向右箭头图像 Id;，则返回 TRUE如果为 FALSE 的向上或向下箭头的映像 Id。  
+*bHorz*<br/>
+[in]左或向右箭头图像 Id;，则返回 TRUE如果为 FALSE 的向上或向下箭头的映像 Id。  
   
- [in]*bMaximized*  
- 最大化图像 id;，则返回 TRUEFALSE 为最小化映像 id。  
+*bMaximized*<br/>
+[in]最大化图像 id;，则返回 TRUEFALSE 为最小化映像 id。  
   
 ### <a name="return-value"></a>返回值  
  映像 id。  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ptTo*  
- 新位置。  
+*ptTo*<br/>
+[in]新的位置。  
   
- [in]*bHide*  
- 是否显示该按钮。  
+*bHide*<br/>
+[in]是否显示该按钮。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  绘制标题按钮。  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 为按钮的设备上下文的指针。  
+*pDC*<br/>
+[in]为按钮的设备上下文的指针。  
   
- [in]*bActive*  
- 是否要绘制活动按钮图像。  
+*bActive*<br/>
+[in]是否要绘制活动按钮图像。  
   
- [in]*bHorz*  
- 保留供派生类中使用。  
+*bHorz*<br/>
+[in]保留供派生类中使用。  
   
- [in]*bMaximized*  
- 是否要绘制最大化的按钮图像。  
+*bMaximized*<br/>
+[in]是否要绘制最大化的按钮图像。  
   
- [in]*bDisabled*  
- 是否要绘制启用的按钮图像。  
+*bDisabled*<br/>
+[in]是否要绘制启用的按钮图像。  
   
 ### <a name="remarks"></a>备注  
  *BMaximized*参数使用时该按钮是最大化或最小化按钮。  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSet*  
- 适用于最小的标题栏的高度;对于默认标题栏高度为 FALSE。  
+*bSet*<br/>
+[in]适用于最小的标题栏的高度;对于默认标题栏高度为 FALSE。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

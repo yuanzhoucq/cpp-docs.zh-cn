@@ -19,73 +19,84 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052722"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 类
-此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
-  
-## <a name="syntax"></a>语法  
-  
+
+此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
+
+## <a name="syntax"></a>语法
+
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
-```  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|（静态）测试两个键相等。|  
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（静态）返回 false。|  
-  
-## <a name="remarks"></a>备注  
- 此特征类是对的补充`CSimpleMap`类。 它提供了方法来比较两个元素中包含`CSimpleMap`对象，特别是两个值元素或两个重要元素。  
-  
- 值比较将始终返回 false，并且除了，将调用`ATLASSERT`参数为 false，如果曾经引用它。 在相等性测试不足够定义位置的情况下，此类允许包含键/值对的大多数方法正常运行，但失败，如依赖于比较的方法的定义完善的方式映射[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlsimpcoll.h  
-  
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
- 测试两个键相等。  
-  
+```
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|（静态）测试两个键相等。|
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（静态）返回 false。|
+
+## <a name="remarks"></a>备注
+
+此特征类是对的补充`CSimpleMap`类。 它提供了方法来比较两个元素中包含`CSimpleMap`对象，特别是两个值元素或两个重要元素。
+
+值比较将始终返回 false，并且除了，将调用`ATLASSERT`参数为 false，如果曾经引用它。 在相等性测试不足够定义位置的情况下，此类允许包含键/值对的大多数方法正常运行，但失败，如依赖于比较的方法的定义完善的方式映射[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlsimpcoll.h
+
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+
+测试两个键相等。
+
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
-```  
-  
-### <a name="parameters"></a>参数  
- *版 k1*  
- 第一个键。  
-  
- *k2*  
- 第二个密钥。  
-  
-### <a name="return-value"></a>返回值  
- 如果键相等，则返回 false 否则，则返回 true。  
-  
-### <a name="remarks"></a>备注  
- 此方法调用[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。  
-  
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue  
- 返回 false。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*版 k1*<br/>
+第一个键。
+
+*k2*<br/>
+第二个密钥。
+
+### <a name="return-value"></a>返回值
+
+如果键相等，则返回 false 否则，则返回 true。
+
+### <a name="remarks"></a>备注
+
+此方法调用[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。
+
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+
+返回 false。
+
 ```
 static bool IsEqualValue(const TVal&, const TVal&);
-```  
-  
-### <a name="return-value"></a>返回值  
- 返回 false。  
-  
-### <a name="remarks"></a>备注  
- 此方法始终返回 false，并将调用`ATLASSERT`参数为 false，如果曾经引用它。 用途`CSimpleMapEqualHelperFalse::IsEqualValue`是强制方法使用的比较时尚未充分定义相等性测试，以明确定义的方式失败。  
-  
-## <a name="see-also"></a>请参阅  
- [CSimpleMapEqualHelper 类](../../atl/reference/csimplemapequalhelper-class.md)   
- [类概述](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>返回值
+
+返回 false。
+
+### <a name="remarks"></a>备注
+
+此方法始终返回 false，并将调用`ATLASSERT`参数为 false，如果曾经引用它。 用途`CSimpleMapEqualHelperFalse::IsEqualValue`是强制方法使用的比较时尚未充分定义相等性测试，以明确定义的方式失败。
+
+## <a name="see-also"></a>请参阅
+
+[CSimpleMapEqualHelper 类](../../atl/reference/csimplemapequalhelper-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)

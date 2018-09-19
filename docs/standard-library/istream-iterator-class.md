@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f8da58ad4ba2ddbfdbea7a951104b88d8f55c445
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710282"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 类
 
@@ -38,7 +38,7 @@ ms.locfileid: "38959852"
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>参数
 
-*类型*要从输入流中提取的对象类型。
+*类型*<br/>
+要从输入流中提取的对象的类型。
 
-*CharType*表示的字符类型的类型`istream_iterator`。 此参数是可选的默认值是**char**。
+*CharType*<br/>
+表示 `istream_iterator` 字符类型的类型。 此参数是可选的默认值是**char**。
 
-*特征*表示的字符类型的类型`istream_iterator`。 此自变量是可选自变量，默认值为 `char_traits`< `CharType`>。
+*特征*<br/>
+表示 `istream_iterator` 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`< `CharType`>。
 
-*距离*一个带符号的整型，表示差异类型`istream_iterator`。 此参数为可选参数，默认值为 `ptrdiff_t`。
+*距离*<br/>
+表示 `istream_iterator` 差异类型的带符号的整数类型。 此参数为可选参数，默认值为 `ptrdiff_t`。
 
 构造或递增带有非 null 存储指针的 istream_iterator 类对象后，此对象将尝试从关联的输入流提取和存储 `Type` 类型的对象。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>参数
 
-*_Istr*要读取的输入的流初始化`istream_iterator`。
+*_Istr*<br/>
+要读取以用于初始化 `istream_iterator` 的输入流。
 
 ### <a name="remarks"></a>备注
 
@@ -260,9 +265,9 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>备注
 
-*i* -> 等效于 (\* *i*)。 *m*
+`i->m` 等效于 `(*i).m`
 
-运算符返回 **&\*\*this**。
+运算符返回 `&*this`。
 
 ### <a name="example"></a>示例
 

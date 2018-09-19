@@ -1,5 +1,5 @@
 ---
-title: tiled_extent 类 |Microsoft 文档
+title: tiled_extent 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114548"
 ---
 # <a name="tiledextent-class"></a>tiled_extent 类
-A`tiled_extent`对象是`extent`到一个、 两个或三维磁贴细分的扩展盘区空间的一到三个维度的对象。  
+一个`tiled_extent`对象是`extent`一到三个维度的对象，该对象将区域空间细分成一个、 两个或三维平铺。  
   
 ### <a name="syntax"></a>语法  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Dim0`  
- 最重要的维的长度。  
+*_Dim0*<br/>
+最高有效位维的长度。  
   
- `_Dim1`  
- 下一步的最重要的维度的长度。  
+*_Dim1*<br/>
+下一步接近最高有效位维的长度。  
   
- `_Dim2`  
- 最低有效的维度的长度。  
+*_Dim2*<br/>
+最低有效位维的长度。  
   
 ## <a name="members"></a>成员  
   
@@ -79,8 +79,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |名称|描述|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|返回`extent`捕获的值的对象`tiled_extent`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。|  
-|[pad](#pad)|返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。|  
-|[truncate](#truncate)|返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。|  
+|[pad](#pad)|返回一个新`tiled_extent`对象范围调整设置为通过图标维度整除。|  
+|[truncate](#truncate)|返回一个新`tiled_extent`对象范围调整下为整除通过图标维度。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -91,11 +91,11 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[tile_dim0 常量](#tile_dim0)|将存储的最重要的维度的长度。|  
-|[tile_dim1 常量](#tile_dim1)|将存储的下一步的最重要的维度的长度。|  
-|[tile_dim2 常量](#tile_dim2)|将存储的最低有效的维度的长度。|  
+|[tile_dim0 常量](#tile_dim0)|存储最高有效位维的长度。|  
+|[tile_dim1 常量](#tile_dim1)|存储的下一步接近最高有效位维的长度。|  
+|[tile_dim2 常量](#tile_dim2)|存储最低有效位维的长度。|  
 
   
 ### <a name="public-data-members"></a>公共数据成员  
@@ -130,8 +130,8 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `extent`或`tiled_extent`要复制的对象。  
+*_Other*<br/>
+`extent`或`tiled_extent`要复制对象。  
   
 
   
@@ -149,8 +149,8 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent`捕获此维度的对象`tiled_extent`实例。  
   
 
-## <a name="pad"> </a>  填充   
-返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。  
+## <a name="pad"> </a>  板   
+返回一个新`tiled_extent`对象范围调整设置为通过图标维度整除。  
   
 ### <a name="syntax"></a>语法  
   
@@ -159,9 +159,9 @@ tiled_extent pad() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 新`tiled_extent`对象，按值。 
+ 新`tiled_extent`对象按值。 
 ## <a name="truncate"> </a>  截断   
-返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。  
+返回一个新`tiled_extent`对象范围调整下为整除通过图标维度。  
   
 ### <a name="syntax"></a>语法  
   
@@ -170,7 +170,7 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。  
+ 返回一个新`tiled_extent`对象范围调整下为整除通过图标维度。  
 
 ## <a name="operator_eq"> </a>  运算符 =   
 将指定的内容复制`tiled_index`到此对象。  
@@ -183,14 +183,14 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `tiled_index`从中进行复制的对象。  
+*_Other*<br/>
+`tiled_index`要从复制对象。  
   
 ### <a name="return-value"></a>返回值  
  对此引用`tiled_index`实例。  
 
 ## <a name="tile_dim0"> </a>  tile_dim0   
-将存储的最重要的维度的长度。  
+存储最高有效位维的长度。  
   
 ### <a name="syntax"></a>语法  
   
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-将存储的下一步的最重要的维度的长度。  
+存储的下一步接近最高有效位维的长度。  
   
 ### <a name="syntax"></a>语法  
   
@@ -207,7 +207,7 @@ static const int tile_dim0 = _Dim0;
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tile_dim2"> </a>  tile_dim2   
-将存储的最低有效的维度的长度。  
+存储最低有效位维的长度。  
   
 ### <a name="syntax"></a>语法  
   

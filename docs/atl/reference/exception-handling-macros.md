@@ -1,5 +1,5 @@
 ---
-title: 异常处理宏 |Microsoft 文档
+title: 异常处理宏 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2473a2a66792f1bfff18086030a8898a67339e10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024276"
 ---
 # <a name="exception-handling-macros"></a>异常处理宏
-这些宏用于异常处理提供支持。  
-  
-|||  
-|-|-|  
-|[_ATLCATCH](#_atlcatch)|语句来处理关联中发生的错误`_ATLTRY`。|  
-|[_ATLCATCHALL](#_atlcatchall)|语句来处理关联中发生的错误`_ATLTRY`。|  
-|[_ATLTRY](#_atltry)|将可能会出错无法一受保护的代码段的标记。|  
-  
+
+这些宏提供对异常处理支持。
+
+|||
+|-|-|
+|[_ATLCATCH](#_atlcatch)|若要处理发生在关联的错误的语句`_ATLTRY`。|
+|[_ATLCATCHALL](#_atlcatchall)|若要处理发生在关联的错误的语句`_ATLTRY`。|
+|[_ATLTRY](#_atltry)|将标记可能可能发生错误的受保护的代码部分。|
+
 ## <a name="requirements"></a>要求：
+
 **标头：** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH  
- 语句来处理关联中发生的错误`_ATLTRY`。  
-  
+##  <a name="_atlcatch"></a>  _ATLCATCH
+
+若要处理发生在关联的错误的语句`_ATLTRY`。
+
 ```
 _ATLCATCH(e)
-```  
-  
-### <a name="parameters"></a>参数  
- *e*  
- 要捕获的异常。  
-  
-### <a name="remarks"></a>备注  
- 结合使用`_ATLTRY`。 解析为 c + +[捕获 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)处理给定的类型的 c + + 异常。  
-  
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
- 语句来处理关联中发生的错误`_ATLTRY`。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*e*<br/>
+要捕获的异常。
+
+### <a name="remarks"></a>备注
+
+结合使用`_ATLTRY`。 解析为 c + +[捕获 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理给定的类型的 c + + 异常。
+
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+
+若要处理发生在关联的错误的语句`_ATLTRY`。
+
 ```
 _ATLCATCHALL
-```  
-  
-### <a name="remarks"></a>备注  
- 结合使用`_ATLTRY`。 解析为 c + +[之后](../../cpp/try-throw-and-catch-statements-cpp.md)处理所有类型的 c + + 异常。  
-  
-##  <a name="_atltry"></a>  _ATLTRY  
- 将可能会出错无法一受保护的代码段的标记。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+结合使用`_ATLTRY`。 解析为 c + +[自](../../cpp/try-throw-and-catch-statements-cpp.md)用于处理所有类型的 c + + 异常。
+
+##  <a name="_atltry"></a>  _ATLTRY
+
+将标记可能可能发生错误的受保护的代码部分。
+
 ```
 _ATLTRY
-```  
-  
-### <a name="remarks"></a>备注  
- 结合使用[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 解析为 c + + 符号[重](../../cpp/try-throw-and-catch-statements-cpp.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [宏](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>备注
+
+结合使用[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 解析为 c + + 符号[尝试](../../cpp/try-throw-and-catch-statements-cpp.md)。
+
+## <a name="see-also"></a>请参阅
+
+[宏](../../atl/reference/atl-macros.md)

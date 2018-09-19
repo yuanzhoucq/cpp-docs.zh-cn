@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7ce27566075e48fb90b894a21e7a74a3ef1fdbea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705102"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft 专用**  
@@ -41,10 +41,10 @@ void __svm_vmload(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|VMCB 物理地址。|  
+|*VmcbPhysicalAddress*|[in]VMCB 物理地址。|  
   
 ## <a name="remarks"></a>备注  
- `__svm_vmload`函数等同于`VMLOAD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
+ `__svm_vmload`函数等同于`VMLOAD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。  
   
 ## <a name="requirements"></a>要求  
   

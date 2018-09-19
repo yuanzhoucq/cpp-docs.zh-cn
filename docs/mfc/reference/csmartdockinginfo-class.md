@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 653be2fb1847403436bccb86807da382ef09cc25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018205"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
 定义智能停靠标记的外观。  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*params*  
- 类型的对象`CSmartDockingInfo`填入当前智能停靠参数。  
+*params*<br/>
+[out]类型的对象`CSmartDockingInfo`填入当前智能停靠参数。  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  指定是否使用当前的主题颜色时框架显示智能停靠标记。  
@@ -205,15 +205,13 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>备注  
  使用的资源 Id 表示智能停靠标记的位图来填充此数组。 AFX_SD_MARKERS_NUM 当前定义为 5。 数组中填充，如下所示：  
   
- `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
-  
- `params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;`  
-  
- `params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;`  
-  
- `params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;`  
-  
- `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
+```cpp
+params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
+params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;
+params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;
+params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
+params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
+```
   
 ##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  定义的资源 Id 用于突出显示的自定义智能停靠标记的位图。  
@@ -225,15 +223,13 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ### <a name="remarks"></a>备注  
  使用的资源 Id 表示突出显示的智能停靠标记的位图来填充此数组。 AFX_SD_MARKERS_NUM 当前定义为 5。 数组中填充，如下所示：  
   
- `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;`  
-  
- `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
+```cpp
+params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
+params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;
+params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;
+params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
+params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
+```
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

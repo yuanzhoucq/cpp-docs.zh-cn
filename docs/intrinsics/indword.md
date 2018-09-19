@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712525"
 ---
 # <a name="indword"></a>__indword
 **Microsoft 专用**  
@@ -39,8 +39,8 @@ unsigned long __indword(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Port`  
- 要读取的端口。  
+*端口*<br/>
+[in]要读取的端口。  
   
 ## <a name="return-value"></a>返回值  
  从端口读取单词。  

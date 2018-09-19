@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545766"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711108"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Microsoft 专用**  
@@ -41,14 +41,14 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Port`  
- 要读取的端口。  
+*端口*<br/>
+[in]要读取的端口。  
   
- [out] `Buffer`  
- 读取从端口将数据写入此处。  
+*Buffer*<br/>
+[out]读取从端口将数据写入此处。  
   
- [in] `Count`  
- 要读取的数据的单词数。  
+“计数”<br/>
+[in]要读取的数据的单词数。  
   
 ## <a name="requirements"></a>要求  
   

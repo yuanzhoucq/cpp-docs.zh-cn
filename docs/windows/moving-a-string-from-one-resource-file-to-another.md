@@ -1,5 +1,5 @@
 ---
-title: 将字符串从一个资源文件移到另一个 |Microsoft Docs
+title: 将字符串从一个资源文件移动到另一个 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,23 +9,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], moving between files
-- resource script files, moving strings
+- resource script files [C++], moving strings
 - string editing, moving strings between resources
-- String editor, moving strings between files
+- String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbed58a02d1b9ff6db1400a677a9049d23892b40
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212870"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318858"
 ---
-# <a name="moving-a-string-from-one-resource-file-to-another"></a>在资源文件之间移动字符串
+# <a name="moving-a-string-from-one-resource-file-to-another-c"></a>将字符串从一个资源文件移动到另一个 （c + +）
 
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>若要将字符串从一个资源脚本文件移动到另一个
 

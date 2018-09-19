@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3356 |Microsoft 文档
+title: 编译器错误 C3356 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 552dbab4796e39616a2833731e5170e671845f80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b21b54fc498a8fd194cea54823ce6958c25f67c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105982"
 ---
 # <a name="compiler-error-c3356"></a>编译器错误 C3356
-“attribute”: 无法使用完全限定名调用多路广播特性  
-  
- 未正确指定由多个进程（例如编译器和 ATL 提供程序）处理的特性。
+
+“attribute”: 无法使用完全限定名调用多路广播特性
+
+未正确指定由多个进程（例如编译器和 ATL 提供程序）处理的特性。

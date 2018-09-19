@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700826"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
 `CMFCPropertyGridFileProperty`类支持用于打开文件选择对话框中的属性列表控件项。  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strName*  
- 属性名称。  
+*strName*<br/>
+[in]属性名称。  
   
- [in]*bOpenFileDialog*  
- 为 true，则打开**打开文件**对话框;如果为 FALSE，打开**保存文件**对话框。  
+*bOpenFileDialog*<br/>
+[in]为 true，则打开**打开文件**对话框;如果为 FALSE，打开**保存文件**对话框。  
   
- [in]*strFileName*  
- 初始文件名。  
+*strFileName*<br/>
+[in]初始文件名。  
   
- [in]*lpszDefExt*  
- 一个或多个文件扩展名字符串。 默认值为 NULL。  
+*lpszDefExt*<br/>
+[in]一个或多个文件扩展名的字符串。 默认值为 NULL。  
   
- [in]*dwFlags*  
- 对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。  
+*dwFlags*<br/>
+[in]对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。  
   
- [in]*lpszFilter*  
- 一个或多个文件筛选器的字符串。 默认值为 NULL。  
+*lpszFilter*<br/>
+[in]一个或多个文件筛选器的字符串。 默认值为 NULL。  
   
- [in]*lpszDescr*  
- 属性项说明。 默认值为 NULL。  
+*lpszDescr*<br/>
+[in]属性项说明。 默认值为 NULL。  
   
- [in]*dwData*  
- 与属性项相关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。  
+*dwData*<br/>
+[in]与属性项相关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。  
   
 ### <a name="return-value"></a>返回值  
   

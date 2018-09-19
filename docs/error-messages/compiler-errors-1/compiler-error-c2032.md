@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2032 |Microsoft 文档
+title: 编译器错误 C2032 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db268222f3b9f7ca6f9ce297680866185e6661d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab02ca695ec94f25054e3490232b782a46a53a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064004"
 ---
 # <a name="compiler-error-c2032"></a>编译器错误 C2032
-identifier： 函数不能为结构/联合 structorunion 的成员  
-  
- 结构或联合具有成员函数时，这允许 c + + 中但不是在 c。若要解决此错误，请编译为 c + + 程序，或删除成员函数。  
-  
- 下面的示例生成 C2032:  
-  
-```  
-// C2032.c  
-struct z {  
-   int i;  
-   void func();   // C2032  
-};  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2032b.c  
-// compile with: /c  
-struct z {  
-   int i;  
-};  
+
+identifier： 函数不能是成员的结构/联合 structorunion
+
+结构或联合有一个 c + + 中，但不是在 C 中允许的成员函数若要解决此错误，请编译为 c + + 程序或删除成员函数。
+
+下面的示例生成 C2032:
+
+```
+// C2032.c
+struct z {
+   int i;
+   void func();   // C2032
+};
+```
+
+可能的解决方法：
+
+```
+// C2032b.c
+// compile with: /c
+struct z {
+   int i;
+};
 ```

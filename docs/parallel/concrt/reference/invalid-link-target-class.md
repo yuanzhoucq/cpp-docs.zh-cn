@@ -1,5 +1,5 @@
 ---
-title: invalid_link_target 类 |Microsoft 文档
+title: invalid_link_target 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021741"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target 类
 此类描述调用消息块的 `link_target` 方法且消息块无法链接到目标时引发的异常。 这可能是因为超出消息块允许的链接数或两次尝试将特定目标链接到同一源。  
@@ -63,8 +63,8 @@ invalid_link_target() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

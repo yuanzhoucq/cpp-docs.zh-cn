@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018244"
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 有关 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)并[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **参数**  
   
- `Location`  
- 要从中读取或为其写入的内存位置的地址。  
+*位置*<br/>
+要从中读取或为其写入的内存位置的地址。  
   
- `Value`（仅存储内部函数）  
- 要写入到指定内存位置的值。  
+*值*<br/>
+要写入到指定的内存位置 （仅存储内部函数） 的值。  
   
  **返回值 （仅加载内部函数）**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  你可以使用 `__iso_volatile_load8/16/32/64` 和 `__iso_volatile_store8/16/32/64` 内存函数显式执行不进行编译器优化的内存访问。 编译器不能删除、同步或更改这些操作的相对顺序，但不会生成隐式硬件内存屏障。 因此，硬件仍可能对跨多个线程的可观察内存访问进行重新排序。 更确切地说，这些内部函数是等效于以下表达式下编译 **/volatile: iso**。  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   
@@ -2210,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **参数**  
   
- `coproc`  
- 0 到 15 之间的协处理器编号。  
+*coproc*<br/>
+0 到 15 之间的协处理器编号。  
   
- `opcode1`  
- 0 到 7 之间特定于协处理器的操作码  
+*1>*<br/>
+0 到 7 之间特定于协处理器的操作码  
   
- `crn`  
- 协处理器寄存器编号，在 0 到 15 之间，用于向指令指定第一个操作数。  
+*crn*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于向指令指定第一个操作数。  
   
- `crm`  
- 协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
+*crm*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
   
- `opcode2`  
- 0 到 7 之间特定于附加协处理器的操作码。  
+*opcode2*<br/>
+0 到 7 之间特定于附加协处理器的操作码。  
   
  **返回值**  
   
@@ -2249,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **参数**  
   
- `coproc`  
- 0 到 15 之间的协处理器编号。  
+*coproc*<br/>
+0 到 15 之间的协处理器编号。  
   
- `opcode1`  
- 0 到 15 之间特定于协处理器的操作码。  
+*1>*<br/>
+0 到 15 之间特定于协处理器的操作码。  
   
- `crm`  
- 协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
+*crm*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
   
  **返回值**  
   
@@ -2294,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **参数**  
   
- `value`  
- 要写入到协处理器的值。  
+*value*<br/>
+要写入到协处理器的值。  
   
- `coproc`  
- 0 到 15 之间的协处理器编号。  
+*coproc*<br/>
+0 到 15 之间的协处理器编号。  
   
- `opcode1`  
- 0 到 7 之间特定于协处理器的操作码。  
+*1>*<br/>
+0 到 7 之间特定于协处理器的操作码。  
   
- `crn`  
- 协处理器寄存器编号，在 0 到 15 之间，用于向指令指定第一个操作数。  
+*crn*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于向指令指定第一个操作数。  
   
- `crm`  
- 协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
+*crm*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
   
- `opcode2`  
- 0 到 7 之间特定于附加协处理器的操作码。  
+*opcode2*<br/>
+0 到 7 之间特定于附加协处理器的操作码。  
   
  **返回值**  
   
@@ -2337,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **参数**  
   
- `coproc`  
- 0 到 15 之间的协处理器编号。  
+*coproc*<br/>
+0 到 15 之间的协处理器编号。  
   
- `opcode1`  
- 0 到 15 之间特定于协处理器的操作码。  
+*1>*<br/>
+0 到 15 之间特定于协处理器的操作码。  
   
- `crm`  
- 协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
+*crm*<br/>
+协处理器寄存器编号，在 0 到 15 之间，用于指定附加的源或目标操作数。  
   
  **返回值**  
   

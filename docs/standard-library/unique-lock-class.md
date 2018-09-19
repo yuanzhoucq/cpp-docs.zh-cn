@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711381"
 ---
 # <a name="uniquelock-class"></a>unique_lock 类
 
@@ -76,7 +76,7 @@ class unique_lock;
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-`unique_lock`
+*unique_lock*<br/>
 
 ## <a name="requirements"></a>要求
 
@@ -130,8 +130,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
- 一个 `unique_lock` 对象。
+*其他*<br/>
+一个 `unique_lock` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -181,8 +181,8 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*  
- 一个 `unique_lock` 对象。
+*其他*<br/>
+一个 `unique_lock` 对象。
 
 ## <a name="try_lock"></a>try_lock
 
@@ -214,8 +214,8 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*  
- 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
+*Rel_time*<br/>
+一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
 
@@ -240,8 +240,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*  
- 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
+*Abs_time*<br/>
+一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
 
@@ -283,17 +283,17 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>参数
 
-*使用 Mtx*  
- 一个 mutex 类型对象。
+*使用 Mtx*<br/>
+一个 mutex 类型对象。
 
-*Rel_time*  
- 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
+*Rel_time*<br/>
+一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
-*Abs_time*  
- 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
+*Abs_time*<br/>
+一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
-*其他*  
- 一个 `unique_lock` 对象。
+*其他*<br/>
+一个 `unique_lock` 对象。
 
 ### <a name="remarks"></a>备注
 

@@ -1,5 +1,5 @@
 ---
-title: 导入函数调用使用 __declspec （dllimport） |Microsoft 文档
+title: 导入函数调用使用 __declspec （dllimport） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,66 +20,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3f7c1bf81b94eebbe32b40053fc5ce3aeaa0bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368530"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715788"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入函数调用
-下面的代码示例演示如何使用 **_declspec(dllimport)** 若要将函数调用从 DLL 导入到应用程序。 假定`func1`是驻留在单独的.exe 文件中包含的 DLL 函数**主要**函数。  
-  
- 而无需 **__declspec （dllimport)**，给定此代码：  
-  
-```  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- 编译器生成的代码如下所示：  
-  
-```  
-call func1  
-```  
-  
- 和链接器会将转换到类似于以下调用：  
-  
-```  
-call 0x4000000         ; The address of 'func1'.  
-```  
-  
- 如果`func1`中存在另一个 DLL，链接器无法直接解决因为它具有无法知道哪些的地址`func1`是。 在 16 位环境中，链接器将此代码地址添加到中加载程序将修补程序在运行时带有正确的地址的.exe 文件的列表。 在 32 位和 64 位环境中，链接器生成一个 thunk，其中它知道其地址。 在 32 位环境中转换 （thunk） 如下所示：  
-  
-```  
-0x40000000:    jmp DWORD PTR __imp_func1  
-```  
-  
- 此处`imp_func1`的地址是`func1`.exe 文件的导入地址表中的槽。 链接器就知道所有地址。 仅加载程序必须在加载时，所有操作都要正确更新.exe 文件的导入地址表。  
-  
- 因此，使用 **__declspec （dllimport)** 比较好，因为链接器不会生成一个 thunk，如果不需要。 Thunk 使代码更大 （RISC 在系统上，它可以是几种指令），会降低缓存性能。 如果指示编译器在 DLL 中的功能，它可以为你生成的间接调用。  
-  
- 因此，现在此代码：  
-  
-```  
-__declspec(dllimport) void func1(void);  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- 生成此指令：  
-  
-```  
-call DWORD PTR __imp_func1  
-```  
-  
- 没有任何转换 （thunk），但未`jmp`指令，因此的代码为更小、 更快。  
-  
- 另一方面，针对 DLL 内部的函数调用，您不想要必须使用间接调用。 你已经知道函数的地址。 因为需要时间和空间以加载和存储间接调用之前函数的地址，直接调用始终是更快、 更小。 你只想要使用 **__declspec （dllimport)** 调用 DLL 函数从外部 DLL 本身时。 不要使用 **__declspec （dllimport)** DLL 时生成该 DLL 内部的函数。  
-  
-## <a name="see-also"></a>请参阅  
- [导入到应用程序中](../build/importing-into-an-application.md)
+
+下面的代码示例演示如何使用 **_declspec(dllimport)** 函数调用从 DLL 导入到应用程序。 假定`func1`是驻留在单独的.exe 文件中包含的 DLL 函数**主**函数。
+
+无需 **__declspec （dllimport)**，给定此代码：
+
+```
+int main(void)
+{
+   func1();
+}
+```
+
+编译器将生成如下所示的代码：
+
+```
+call func1
+```
+
+和链接器将转换到类似以下调用：
+
+```
+call 0x4000000         ; The address of 'func1'.
+```
+
+如果`func1`存在于另一个 DLL，链接器不能直接解析因为它有没有办法知道的地址`func1`是。 在 16 位环境中，链接器将此代码地址添加到在运行时使用正确的地址加载程序将修补程序的.exe 文件中的列表。 在 32 位和 64 位环境中，链接器生成它的其中知道地址转换 （thunk）。 在 32 位环境中转换 （thunk） 如下所示：
+
+```
+0x40000000:    jmp DWORD PTR __imp_func1
+```
+
+这里`imp_func1`的地址是`func1`槽中的.exe 文件的导入地址表。 链接器就知道所有地址。 仅加载程序必须在一切就会正常工作负载时，更新的.exe 文件导入地址表。
+
+因此，使用 **__declspec （dllimport)** 比较好，因为链接器不会生成一个 thunk，如果不需要。 Thunk 使代码更大 （RISC 在系统上，它可以是几种指令），可以降低缓存性能。 如果您告知编译器该函数是在 DLL 中，它可为你生成的间接调用。
+
+因此，现在此代码：
+
+```
+__declspec(dllimport) void func1(void);
+int main(void)
+{
+   func1();
+}
+```
+
+生成此指令：
+
+```
+call DWORD PTR __imp_func1
+```
+
+没有任何转换 （thunk），但不`jmp`指令，因此该代码是更小更快。
+
+但是，对于 DLL 内部的函数调用，您不要必须使用间接调用。 您已经知道函数的地址。 由于需要时间和空间以加载和存储之前的间接调用函数的地址，直接调用始终是更快、 更小。 您只想要使用 **__declspec （dllimport)** 时调用从 DLL 本身的外部的 DLL 函数。 不要使用 **__declspec （dllimport)** 上生成该 DLL 时的 DLL 中的函数。
+
+## <a name="see-also"></a>请参阅
+
+[导入到应用程序中](../build/importing-into-an-application.md)

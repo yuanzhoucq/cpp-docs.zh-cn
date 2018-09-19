@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4133 |Microsoft 文档
+title: 编译器警告 （等级 3） C4133 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056828"
 ---
 # <a name="compiler-warning-level-3-c4133"></a>编译器警告 （等级 3） C4133
-type： 不兼容的类型-从 type1 到 type2  
-  
- 尝试减去两个不同类型的指针可能导致此警告。  
-  
- 若要避免此警告，提供适当的类型转换。
+
+type： 不兼容的类型-从 type1 到 type2
+
+可以通过尝试不同类型的两个指针进行减法运算导致该警告。
+
+若要避免此警告，请提供适当的类型转换。

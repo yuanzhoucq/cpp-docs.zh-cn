@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212886"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707481"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 管理主框架窗口和子框架窗口的快捷键表。  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 命令 ID。  
+*uiCmd*<br/>
+[in]命令 id。  
   
- [out]*str*  
- 对 `CString` 对象的引用。  
+*str*<br/>
+[out]对引用`CString`对象。  
   
- [in]*pWndFrame*  
- 指向框架窗口的指针。  
+*pWndFrame*<br/>
+[in]指向框架窗口的指针。  
   
- [in]*bIsDefaultFrame*  
- 指定的框架窗口是否为默认框架窗口。  
+*bIsDefaultFrame*<br/>
+[in]指定的框架窗口是否为默认框架窗口。  
   
 ### <a name="return-value"></a>返回值  
  如果找到该快捷方式，则非零值否则为 0。  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*nKey*|要检查的键。|  
-|[in]*fVirt*|指定的快捷键的行为。 有关可能的值的列表，请参阅[加速结构](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
-|[in]*pWndFrame*|框架窗口。 此方法确定是否在此帧中处理的快捷键。|  
-|[in]*bIsDefaultFrame*|一个布尔参数，指示是否*pWndFrame*是默认框架窗口。|  
+|*nKey*|[in]要检查的键。|  
+|*fVirt*|[in]指定的快捷键的行为。 有关可能的值的列表，请参阅[加速结构](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
+|*pWndFrame*|[in]框架窗口。 此方法确定是否在此帧中处理的快捷键。|  
+|*bIsDefaultFrame*|[in]一个布尔参数，指示是否*pWndFrame*是默认框架窗口。|  
   
 ### <a name="return-value"></a>返回值  
  如果处理的快捷键，则为 TRUE。 FALSE 如果密钥未处理，或如果*pWndFrame*为 NULL。  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*nChar*|此方法检查字符。|  
+|*NChar*|[in]此方法检查字符。|  
   
 ### <a name="return-value"></a>返回值  
  非零值可打印字符是否为零则不是。  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 注册表路径其中`CKeyboardManager`保存数据。  
+*lpszProfileName*<br/>
+[in]注册表路径其中`CKeyboardManager`保存数据。  
   
- [in]*pDefaultFrame*  
- 指向要用作默认窗口的框架窗口的指针。  
+*pDefaultFrame*<br/>
+[in]指向要用作默认窗口的框架窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果状态为成功加载或 0 否则，非零值。  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 保存的注册表路径`CKeyboardManager`状态。  
+*lpszProfileName*<br/>
+[in]保存的注册表路径`CKeyboardManager`状态。  
   
- [in]*pDefaultFrame*  
- 指向将成为默认窗口的框架窗口的指针。  
+*pDefaultFrame*<br/>
+[in]指向将成为默认窗口的框架窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，保存键盘管理器状态的非零或否则为 0。  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShowAll*  
- 如果为 TRUE，将显示所有键盘快捷方式。 如果为 FALSE，将显示仅第一个快捷方式键。  
+*bShowAll*<br/>
+[in]如果为 TRUE，将显示所有键盘快捷方式。 如果为 FALSE，将显示仅第一个快捷方式键。  
   
- [in]*lpszDelimiter*  
- 要插入之间键盘快捷方式的字符串。 如果只显示一个快捷键，则此分隔符无效。  
+*lpszDelimiter*<br/>
+[in]要插入之间键盘快捷方式的字符串。 如果只显示一个快捷键，则此分隔符无效。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，如果一条命令有多个与其关联的快捷键将显示仅第一个快捷方式键。 此函数，可列出与所有命令相关联的所有快捷键。  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nChar*  
- 要转换的字符。  
+*NChar*<br/>
+[in]要转换的字符。  
   
 ### <a name="return-value"></a>返回值  
  是输入参数的上限的寄存器的字符。  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTemplate*  
- 指向文档模板的指针。  
+*pTemplate*<br/>
+[in]指向文档模板的指针。  
   
- [in]*lpAccel*  
- 一个指向新的快捷键。  
+*lpAccel*<br/>
+[in]一个指向新的快捷键。  
   
- [in]*nSize*  
- 新的快捷方式表的大小。  
+*nSize*<br/>
+[in]新的快捷方式表的大小。  
   
- [in]*pDefaultFrame*  
- 指向默认框架窗口的指针。  
+*pDefaultFrame*<br/>
+[in]指向默认框架窗口的指针。  
   
- [in]*hAccelNew*  
- 句柄的新快捷方式表。  
+*hAccelNew*<br/>
+[in]句柄的新快捷方式表。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  

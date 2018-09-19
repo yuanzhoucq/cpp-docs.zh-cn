@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2586 |Microsoft 文档
+title: 编译器错误 C2586 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf21a9379f7b0d07575dae54d9406eb5cf39094
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a85097f6383ddb788e1278aebf4732591fd38ec2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060403"
 ---
 # <a name="compiler-error-c2586"></a>编译器错误 C2586
-不正确的用户定义的转换语法： 非法的间接寻址  
-  
- 不允许的转换运算符的间接寻址。  
-  
- 下面的示例生成 C2586:  
-  
-```  
-// c2586.cpp  
-// compile with: /c  
-struct C {  
-   * operator int();   // C2586  
-   operator char();   // OK  
-};  
+
+不正确的用户定义转换语法： 非法间接寻址
+
+不允许间接寻址的转换运算符。
+
+下面的示例生成 C2586:
+
+```
+// c2586.cpp
+// compile with: /c
+struct C {
+   * operator int();   // C2586
+   operator char();   // OK
+};
 ```

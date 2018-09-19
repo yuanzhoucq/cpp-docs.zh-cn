@@ -29,11 +29,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538991"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751690"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 类
 实现包含功能区库的功能区菜单按钮。  

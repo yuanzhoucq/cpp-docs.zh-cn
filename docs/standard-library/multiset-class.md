@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708690"
 ---
 # <a name="multiset-class"></a>multiset 类
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在多重集合中的元素数据类型。
+要存储在多重集合中的元素数据类型。
 
 *Compare*<br/>
- 一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重集合中的相对顺序。 默认值是二元谓词 **less**\<Key>。
+一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重集合中的相对顺序。 默认值是二元谓词 **less**\<Key>。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
 *分配器*<br/>
- 一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
+一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从 multiset 中进行匹配的元素的键。
+要从 multiset 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的多重集中元素的排序键进行比较的参数键。
+要与当前搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>参数
 
 *Where*<br/>
- 要移除的元素的位置。
+要移除的元素的位置。
 
 *第一个*<br/>
- 要移除的第一个元素的位置。
+要移除的第一个元素的位置。
 
 *最后一个*<br/>
- 要移除的刚超出最后一个元素的位置。
+要移除的刚超出最后一个元素的位置。
 
 *Key*<br/>
- 要移除的元素的关键值。
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 与所搜索多重集中元素的排序键匹配的键值。
+与所搜索多重集中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的多重集中元素的排序键进行比较的参数键。
+要与当前搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- 参数多重集提供与目标多重集进行交换的元素。
+参数多重集提供与目标多重集进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的多重集中元素的排序键进行比较的参数键。
+要与当前搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2320,7 +2320,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[\<设置 > 成员](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

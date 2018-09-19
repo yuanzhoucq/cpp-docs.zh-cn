@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4083 |Microsoft 文档
+title: 编译器警告 （等级 1） C4083 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d0d7baa0e521484841c638cef4332001a65e78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64e81b6a68a9584e4fb30829e15da6472212ce05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046363"
 ---
 # <a name="compiler-warning-level-1-c4083"></a>编译器警告 （等级 1） C4083
-预期 token;找到了标识符 identifier  
-  
- 标识符出现在错误的位置在 **#pragma**语句。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4083.cpp  
-// compile with: /W1 /LD  
-#pragma warning disable:4083    // C4083  
-#pragma warning(disable:4083)   //correct  
-```  
-  
- 检查语法[#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)指令。
+
+预期 token;找到标识符 identifier
+
+在中错误的位置发生标识符 **#pragma**语句。
+
+## <a name="example"></a>示例
+
+```
+// C4083.cpp
+// compile with: /W1 /LD
+#pragma warning disable:4083    // C4083
+#pragma warning(disable:4083)   //correct
+```
+
+检查的语法[#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)指令。

@@ -1,5 +1,5 @@
 ---
-title: 错误 C1007 |Microsoft 文档
+title: 错误 C1007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443dd1c48b7ce1d3c5c1173f6832d08d71508cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01a9ebad83f3b0596dbf21809f91c11fd73fda2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102432"
 ---
 # <a name="fatal-error-c1007"></a>错误 C1007
-选项中无法识别的标志字符串  
-  
- 命令行选项包含无效的字符串。 检查 **CL** 命令行和环境变量是否存在错误。
+
+选项中无法识别的标志字符串
+
+命令行选项包含无效的字符串。 检查 **CL** 命令行和环境变量是否存在错误。

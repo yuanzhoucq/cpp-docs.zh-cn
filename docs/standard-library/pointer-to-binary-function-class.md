@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cdef0e68e50085513871d1fcacd9cfdb302e9f51
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953451"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107544"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 类
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*pfunc*转换的二元函数。
+*pfunc*<br/>
+要转换的二元函数。
 
-*左*的左侧对象 *\*pfunc*上调用。
+*left*<br/>
+对其调用 *\*pfunc* 的左侧对象。
 
-*右*的右侧对象 *\*pfunc*上调用。
+*right*<br/>
+对其调用 *\*pfunc* 的右侧对象。
 
 ## <a name="return-value"></a>返回值
 

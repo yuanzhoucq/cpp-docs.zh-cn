@@ -1,5 +1,5 @@
 ---
-title: 快捷键编辑器 |Microsoft Docs
+title: 快捷键编辑器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,31 +11,30 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
-- tables [Visual Studio], accelerator key
-- accelerator keys
-- resource editors, Accelerator editor
+- tables [C++], accelerator key
+- accelerator keys [C++]
+- resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
-- Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202269"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318782"
 ---
-# <a name="accelerator-editor"></a>快捷键编辑器
+# <a name="accelerator-editor-c"></a>快捷键编辑器 （c + +）
 
-快捷键对应表是一个 Windows 资源，包含由快捷键和与之关联的命令标识符组成的列表。 一个程序可以拥有多个快捷键对应表。
+快捷键对应表是包含一系列加速键 （也称为键盘快捷方式） 的 c + + Windows 资源和与之关联的命令标识符。 一个程序可以拥有多个快捷键对应表。
 
 通常情况下，快捷键用作程序命令的键盘快捷键，也可用于菜单或工具栏。 但是，快捷键对应表可用于为没有关联用户界面对象的命令定义组合键。
 
-可以使用[类视图](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)将快捷键命令与代码挂接。
+可以使用[类视图](/visualstudio/ide/viewing-the-structure-of-code)将快捷键命令与代码挂接。
 
 与**Accelerator**编辑器，你可以：
 

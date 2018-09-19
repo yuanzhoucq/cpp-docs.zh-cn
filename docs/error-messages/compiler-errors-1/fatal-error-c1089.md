@@ -1,5 +1,5 @@
 ---
-title: 错误 C1089 |Microsoft 文档
+title: 错误 C1089 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f60097b1075756a0a44247d40fe2f0ba8a4d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8deac0579cedcd369211b3624dc004ca995dc8f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085558"
 ---
 # <a name="fatal-error-c1089"></a>错误 C1089
-无法截断 filetype 文件: “文件”: 消息  
-  
- 编译器不能将文件缩小到零长度。
+
+无法截断 filetype 文件: “文件”: 消息
+
+编译器不能将文件缩小到零长度。

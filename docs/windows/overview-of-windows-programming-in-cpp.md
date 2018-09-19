@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677822"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -76,7 +76,7 @@ UWP 应用程序均可在所有 Windows 10 设备，例如平板电脑和移动�
 
 - Windows 服务。 有关详细信息，请参阅 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)。
 
-你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅[组件对象模型 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)。
+你可以使用 Visual C++ 在 Win32 DLL 或 COM DLL 中打包绝大多数自定义高性能功能，这些功能可供 C++ 应用或使用其他语言（例如，C# 或 Visual Basic）编写的应用使用。 有关 Win32 DLL 的详细信息，请参阅 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 有关 COM 开发的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="games"></a>游戏
 

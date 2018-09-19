@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ac4213587137552fa51505b73edd7387a98c5cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687548"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft 专用**  
@@ -38,7 +38,7 @@ void __ud2();
 ## <a name="remarks"></a>备注  
  如果您执行未定义的指令，处理器将引发无效操作码异常。  
   
- `__ud2`函数等同于`UD2`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
+ `__ud2`函数等同于`UD2`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，2 卷： 指令集引用"在[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站点。  
   
 ## <a name="requirements"></a>要求  
   

@@ -1,5 +1,5 @@
 ---
-title: '@ （指定编译器响应文件） |Microsoft 文档'
+title: '@ （指定编译器响应文件） |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f291ed9a0ccc86ea1ef6fe6703205d76cdcd0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369573"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720845"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@（指定编译器响应文件）
-指定编译器响应文件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-@response_file  
-```  
-  
-## <a name="arguments"></a>自变量  
- `response_file`  
- 包含编译器命令的文本文件。  
-  
-## <a name="remarks"></a>备注  
- 响应文件可以包含的任何命令都将在命令行上指定。 如果命令行自变量超过 127 个字符，这可能很有用。  
-  
- 不能指定**@** 选项从响应文件中。 也就是说，响应文件不能嵌入另一个响应文件。  
-  
- 从命令行中，你可以指定任意数量的响应文件选项 (例如， `@respfile.1 @respfile.2`) 根据需要。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
--   响应文件中不能指定从开发环境，并且必须在命令行中指定。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   不能以编程方式更改此编译器选项。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+
+指定编译器响应文件。
+
+## <a name="syntax"></a>语法
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>自变量
+
+*response_file*<br/>
+包含编译器的命令的文本文件。
+
+## <a name="remarks"></a>备注
+
+响应文件可以包含将在命令行指定任何命令。 如果命令行自变量超过 127 个字符，这可能很有用。
+
+不能指定**\@** 选项响应文件中。 也就是说，响应文件不能嵌入另一个响应文件。
+
+从命令行中，您可以指定任意多个响应文件选项 (例如， `@respfile.1 @respfile.2`) 所需。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+- 响应文件不能从开发环境中指定，也必须在命令行指定。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 不能以编程方式更改此编译器选项。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

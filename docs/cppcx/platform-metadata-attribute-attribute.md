@@ -15,35 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba61baf4b95b33b59c365f110118e539a532ac14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 54878f232ed8c6f07df6a933ddaa6e40893d98fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593761"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101919"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Platform::Metadata::Attribute 特性
-表示所有特性的基类。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-public ref class Attribute abstract : Object  
-```  
-  
-## <a name="inheritance"></a>继承  
- [Platform::Object](../cppcx/platform-object-class.md)  
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="requirements"></a>要求  
- **支持的最低客户端：** Windows 8  
-  
- **支持的最低服务器：** Windows Server 2012  
-  
- **命名空间：** Platform::Metadata  
-  
- **元数据：** platform.winmd  
-  
-## <a name="see-also"></a>请参阅  
- [Platform::Metadata 命名空间](../cppcx/platform-metadata-namespace.md)
+
+表示所有特性的基类。
+
+## <a name="syntax"></a>语法
+
+```cpp
+public ref class Attribute abstract : Object
+```
+
+## <a name="inheritance"></a>继承
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="requirements"></a>要求
+
+**支持的最低客户端：** Windows 8
+
+**支持的最低服务器：** Windows Server 2012
+
+**命名空间：** Platform::Metadata
+
+**元数据：** platform.winmd
+
+## <a name="see-also"></a>请参阅
+
+[Platform::Metadata 命名空间](../cppcx/platform-metadata-namespace.md)

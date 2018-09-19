@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0046 |Microsoft 文档
+title: 表达式计算器错误 CXX0046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022482"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>表达式计算器错误 CXX0046
-所需的成员函数的自变量列表  
-  
- 一个表达式调用成员函数，但未指定任何实际的参数。  
-  
- 此错误是与 CAN0046 相同。
+
+所需的成员函数的参数列表
+
+表达式调用成员函数，但未指定任何实际的参数。
+
+此错误是与 CAN0046 相同。

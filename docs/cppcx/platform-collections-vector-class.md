@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590230"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103927"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 向量对象中包含的元素的类型。
 
-*E*  
+*E*<br/>
 指定测试相等性类型的值的二进制谓词*T*。默认值为 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>备注
@@ -104,7 +104,7 @@ template <typename T, typename E>
 |||
 |-|-|
 |name|描述|
-|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|当向量更改时发生。|
+|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 要插入到向量中的项。 类型*项*由定义*T*类型名称。
 
 ## <a name="clear"></a>  Vector:: clear 方法
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 ### <a name="return-value"></a>返回值
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>参数
 
-*startIndex*  
+*startIndex*<br/>
 要检索的项开头从零开始的索引。
 
-*dest*  
+*dest*<br/>
 在指定的元素处开始的项的调用方分配的数组*startIndex*向量中最后一个元素结尾。
 
 ### <a name="return-value"></a>返回值
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>参数
 
-*value*  
+*value*<br/>
 要查找的项。
 
-*index*  
+*index*<br/>
 项的从零开始的索引如果参数*值*找到; 否则为 0。
 
 *索引*参数为 0，如果项目是 Vector 的第一个元素，或者找不到该项。 如果返回值为 `true`，则表明找到该项目，并且它是第一个元素；否则，表示未找到该项目。
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*项*  
+*项*<br/>
 项后指定的元素插入到向量*索引*。 类型*项*由定义*T*类型名称。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 ## <a name="removeatend"></a>  Vector:: removeatend 方法
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>参数
 
-*arr*  
+*arr*<br/>
 其类型定义的对象的数组*T*类型名称。
 
 ## <a name="setat"></a>  Vector:: setat 方法
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>参数
 
-*index*  
+*index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*项*  
+*项*<br/>
 要分配给指定元素的值。 类型*项*由定义*T*类型名称。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 一个[std:: array](../standard-library/array-class-stl.md)将用于初始化此矢量。
 
-*arr*  
+*arr*<br/>
 一个[platform:: array](../cppcx/platform-array-class.md)将用于初始化此矢量。
 
-*InIt*  
+*InIt*<br/>
 用于初始化当前向量的对象集合的类型。
 
-*il*  
+*il*<br/>
 一个[std:: initializer_list](../standard-library/initializer-list-class.md)类型的对象的*T*将用于初始化此矢量。
 
-*N*  
+*N*<br/>
 用于初始化当前向量的对象集合中的元素数。
 
-*size*  
+*size*<br/>
 向量中元素的数目。
 
-*value*  
+*value*<br/>
 用于初始化当前向量中每个元素的值。
 
-*v*  
+*v*<br/>
 [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到[std:: vector](../standard-library/vector-class.md)用于初始化当前向量。
 
-*ptr*  
+*ptr*<br/>
 指向用于初始化当前向量的 `std::vector` 的指针。
 
-*first*  
+*first*<br/>
 用于初始化当前向量的对象序列中的第一个元素。 类型*第一个*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最后一个*  
+*最后一个*<br/>
 用于初始化当前向量的对象序列中的最后一个元素。 类型*上次*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)  
-[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

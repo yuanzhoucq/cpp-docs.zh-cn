@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849657"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701735"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 类
 `CMFCRibbonComboBox`类实现可添加到功能区栏、 功能区面板或功能区弹出菜单的组合框控件。  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszItem*  
- 要添加的项的字符串。  
+*lpszItem*<br/>
+[in]要添加的项的字符串。  
   
- [in]*dwData*  
- 与要添加的项关联的数据。  
+*dwData*<br/>
+[in]与要添加的项关联的数据。  
   
 ### <a name="return-value"></a>返回值  
  追加的项的从零开始索引。  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 组合框的 ID。  
+*nID*<br/>
+[in]组合框的 ID。  
   
- [in]*bHasEditBox*  
- 如果你想在控件; 内的编辑框，则返回 TRUEFALSE 否则为。  
+*bHasEditBox*<br/>
+[in]如果你想在控件; 内的编辑框，则返回 TRUEFALSE 否则为。  
   
- [in]*nWidth*  
- 以像素为单位; 组合框的宽度或-1 表示默认宽度。  
+*nWidth*<br/>
+[in]以像素为单位; 组合框的宽度或-1 表示默认宽度。  
   
- [in]*lpszLabel*  
- 组合框显示标签。  
+*lpszLabel*<br/>
+[in]组合框显示标签。  
   
- [in]*nImage*  
- 组合框的小图像索引。  
+*nImage*<br/>
+[in]组合框的小图像索引。  
   
 ### <a name="remarks"></a>备注  
  默认宽度为 108 像素。  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 要删除的项的从零开始的索引。  
+*iIndex*<br/>
+[in]要删除的项的从零开始的索引。  
   
- [in]*dwData*  
- 与要删除的项关联的数据。  
+*dwData*<br/>
+[in]与要删除的项关联的数据。  
   
- [in]*lpszText*  
- 要删除的项的字符串。 如果有多个具有相同的字符串项，则删除的第一项。  
+*lpszText*<br/>
+[in]要删除的项的字符串。 如果有多个具有相同的字符串项，则删除的第一项。  
   
 ### <a name="return-value"></a>返回值  
  如果已删除指定的项，则为 TRUE否则为 FALSE。  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 true，则启用调整大小;如果为 FALSE 禁用重设大小。  
+*bEnable*<br/>
+[in]为 true，则启用调整大小;如果为 FALSE 禁用重设大小。  
   
 ### <a name="remarks"></a>备注  
  启用重设大小后，列表框将更改大小以适合其显示的项。  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszText*  
- 列表框中的项的字符串。  
+*lpszText*<br/>
+[in]列表框中的项的字符串。  
   
 ### <a name="return-value"></a>返回值  
  项的从零开始的索引或如果未找到该项，则为-1。  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 组合框的设备上下文的指针。  
+*pDC*<br/>
+[in]组合框的设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
  组合框的大小。  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 列表框中的项的从零开始的索引。  
+*iIndex*<br/>
+[in]列表框中的项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  指向与项; 关联的字符串的指针如果索引参数无效，或者如果索引参数为-1，并且没有组合框中选定项，否则为 NULL。  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 列表框中的项的从零开始的索引。  
+*iIndex*<br/>
+[in]列表框中的项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  与项关联的数据0 或如果该项不存在，或者索引参数为-1，在列表框中不存在选定的项。  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nItem*  
- 选定的项的索引。  
+*nItem*<br/>
+[in]选定的项的索引。  
   
 ### <a name="remarks"></a>备注  
  如果你想要处理用户输入的选择重写此方法。  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 列表框中的项的从零开始的索引。  
+*iIndex*<br/>
+[in]列表框中的项的从零开始的索引。  
   
- [in]*dwData*  
- 与列表框中的项关联的数据。  
+*dwData*<br/>
+[in]与列表框中的项关联的数据。  
   
- [in]*lpszText*  
- 列表框中的项的字符串。  
+*lpszText*<br/>
+[in]列表框中的项的字符串。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nHeight*  
- 以像素为单位，列表框的高度。  
+*nHeight*<br/>
+[in]以像素为单位，列表框的高度。  
   
 ### <a name="remarks"></a>备注  
  默认高度为 150 像素。  

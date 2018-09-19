@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e43c47d5f5c3da22a5a0e0df11022d3b667149bd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956929"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313892"
 ---
 # <a name="negate-struct"></a>negate 结构
 
@@ -44,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
-*类型*支持任何类型`operator-`接受指定或推断类型的操作数。
+*类型*<br/>
+支持 `operator-` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*要进行求反的操作数。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
+左侧<br/>
+要进行求反的操作数。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
 
 ## <a name="return-value"></a>返回值
 
@@ -93,10 +95,10 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( -10 -5 0 5 10 15 20 25 )
 The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>要求

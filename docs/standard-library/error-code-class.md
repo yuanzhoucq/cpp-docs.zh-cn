@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b454a86957911060e33c82e79832e107313e0300
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221567"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703594"
 ---
 # <a name="errorcode-class"></a>error_code 类
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 第一个构造函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
-第二个构造函数存储*val*作为错误代码值和指向[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
+第二个构造函数存储*val*作为错误代码值和指向[error_category](../standard-library/error-category-class.md)。
 
 第三个构造函数存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-测试 [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 对象是否小于要比较的传入 `error_code` 对象。
+测试 `error_code` 对象是否小于要比较的传入对象 `error_code`。
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,13 +260,12 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-向 [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 对象分配新的枚举值。
+向 `error_code` 对象分配新的枚举值。
 
 ```cpp
 template <class _Enum>
-typename enable_if<is_error_code_enum<_Enum>::value,
-    error_code>::type&
- operator=(_Enum _Errcode);
+typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
+    operator=(_Enum _Errcode);
 ```
 
 ### <a name="parameters"></a>参数

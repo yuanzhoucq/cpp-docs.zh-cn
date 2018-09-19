@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0011 |Microsoft 文档
+title: 表达式计算器错误 CXX0011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9840b805960f3ebb571dd9cb6a35895364099d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a9409728f5dbcbb003ecb8d2d9e4f98bc57ede
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294867"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026837"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>表达式计算器错误 CXX0011
-缺少右括号  
-  
- 该表达式包含不均衡的方括号。 重新键入该表达式与平衡方括号。  
-  
- 此错误是与 CAN0011 相同。
+
+缺少右括号
+
+表达式包含不平衡的方括号。 重新键入与平衡方括号括起来的表达式。
+
+此错误是与 CAN0011 相同。

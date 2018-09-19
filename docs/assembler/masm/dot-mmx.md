@@ -1,7 +1,7 @@
 ---
 title: .MMX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c769b138b722445bccc41315dc2e2d27c74b8fad
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 25e413dba3dac1978ee567ccd0649b6b714f3ce6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688619"
 ---
 # <a name="mmx"></a>.MMX
-可以使 MMX 或单指令多数据 (SIMD) 指令的程序集。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.MMX  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+支持 MMX 或单指令、 多个数据 (SIMD) 指令的程序集。
+
+## <a name="syntax"></a>语法
+
+> .MMX
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

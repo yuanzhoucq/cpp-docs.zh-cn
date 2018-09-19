@@ -13,21 +13,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fcf251a67e787f9cf935c9482d444031db96b879
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613381"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104207"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 接口
-`Platform::IValueType` 是由值类和值结构实现的基础结构接口。 不能在代码中显式使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-interface class IValueType  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [平台命名空间](../cppcx/platform-namespace-c-cx.md)
+
+`Platform::IValueType` 是由值类和值结构实现的基础结构接口。 不能在代码中显式使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+interface class IValueType
+```
+
+## <a name="see-also"></a>请参阅
+
+[平台命名空间](../cppcx/platform-namespace-c-cx.md)

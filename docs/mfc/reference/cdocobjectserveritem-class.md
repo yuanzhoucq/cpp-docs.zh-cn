@@ -1,7 +1,7 @@
 ---
 title: CDocObjectServerItem 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c9104dd36696b00dd334141b77b5f6fe1531e43
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211800"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535101"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
@@ -58,15 +58,16 @@ class CDocObjectServerItem : public COleServerItem
   
 |名称|描述|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|如果框架试图隐藏 DocObject 项，将引发异常。|
 |[CDocObjectServerItem::OnHide](#onhide)|如果框架试图隐藏 DocObject 项，将引发异常。|  
 |[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使该文档项就地活动状态。 如果项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
   
 ## <a name="remarks"></a>备注  
- `CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd)，并[OnShow](#onshow)。  
+ `CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnDoVerb](#ondoverb)，并[OnShow](#onshow)。  
   
  若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写中你`COleServerDoc`-派生的类返回一个新`CDocObjectServerItem`对象。 如果需要更改你的项中的任何功能，可以创建自己的新实例`CDocObjectServerItem`-派生的类。  
   
- DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。 另请参阅[Internet 前几个步骤： 活动文档](../../mfc/active-documents-on-the-internet.md)并[活动文档](../../mfc/active-documents-on-the-internet.md)。  
+ DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: 链接器工具警告 LNK4104 |Microsoft 文档
+title: 链接器工具警告 LNK4104 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ea3e074cc0db9591cd0ffe9329ff7f1936563f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6304f3ea928c89f4756a4594270ebb7914324f85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057257"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>链接器工具警告 LNK4104
-导出符号 symbol 应为私有  
-  
- `symbol`可以是以下之一：  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllGetDocumentation`  
-  
--   `DllInitialize`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllRegisterServerExW`  
-  
--   `DllUnload`  
-  
--   `DllUnregisterServer`  
-  
--   `RasCustomDeleteEntryNotify`  
-  
--   `RasCustomDial`  
-  
--   `RasCustomDialDlg`  
-  
--   `RasCustomEntryDlg`  
-  
- 此警告时生成 DLL 导入库发出，且导出上述函数之一，而无需在模块定义文件中指定它为私有。 一般情况下，这些函数仅由 OLE 用于导出。 将它们放置在导入库可能会导致异常行为时程序链接到库不正确地调用它们。 PRIVATE 关键字的详细信息，请参阅[导出](../../build/reference/exports.md)。
+
+导出符号 symbol 应为 PRIVATE
+
+`symbol`可以是以下之一：
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllGetDocumentation`
+
+- `DllInitialize`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllRegisterServerExW`
+
+- `DllUnload`
+
+- `DllUnregisterServer`
+
+- `RasCustomDeleteEntryNotify`
+
+- `RasCustomDial`
+
+- `RasCustomDialDlg`
+
+- `RasCustomEntryDlg`
+
+此警告生成 DLL 导入库时，将发出，而无需指定为专用模块定义文件中导出一个更高版本的函数。 一般情况下，这些函数仅由 OLE 用于导出。 将它们放置在库中导入可能会导致异常行为时错误地链接到库的程序会调用它们。 PRIVATE 关键字的详细信息，请参阅[导出](../../build/reference/exports.md)。

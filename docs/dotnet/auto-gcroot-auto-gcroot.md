@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::auto_gcroot |Microsoft 文档
+title: auto_gcroot::auto_gcroot |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100436"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 `auto_gcroot`构造函数。  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_ptr`  
- 与自己的对象。  
+*_ptr*<br/>
+到自己的对象。  
   
- `_right`  
- 现有 `auto_gcroot`。  
+*（_r)*<br/>
+现有 `auto_gcroot`。  
   
 ## <a name="remarks"></a>备注  
- 在构造时`auto_gcroot`从现有`auto_gcroot`，现有`auto_gcroot`传输到新对象的所有权前释放其对象`auto_gcroot`。  
+ 构造时`auto_gcroot`从现有`auto_gcroot`，现有`auto_gcroot`转移到新对象的所有权之前释放其对象`auto_gcroot`。  
   
 ## <a name="example"></a>示例  
   

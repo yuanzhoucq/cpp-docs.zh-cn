@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c229a07d7d8dbf8d74e487c99e6f79b8203f04f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202640"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718065"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 提供 Windows 公共数值调节钮控件的功能。  
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展的 windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展的 windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定数值调节钮 button 控件的样式。 应用于控件的数值调节钮按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>参数  
- *nLower*和*nUpper*  
- 控件的上限和下限限制。 有关`SetRange`、 既不限制可能会超出 UD_MAXVAL 或小于 UD_MINVAL; 此外，两个限制之间的差异不能超过 UD_MAXVAL。 `SetRange32` 限制; 提出任何限制使用任何整数。  
+### <a name="parameters"></a>参数
+
+*nLower*和*nUpper*<br/>
+控件的上限和下限限制。 有关`SetRange`、 既不限制可能会超出 UD_MAXVAL 或小于 UD_MINVAL; 此外，两个限制之间的差异不能超过 UD_MAXVAL。 `SetRange32` 限制; 提出任何限制使用任何整数。  
   
 ### <a name="remarks"></a>备注  
  成员函数`SetRange32`设置调节钮控件的 32 位范围。  

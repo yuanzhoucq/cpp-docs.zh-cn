@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2353 |Microsoft 文档
+title: 编译器错误 C2353 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d5adf36760252a95502f38d2d7d64f9e090729
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3685db97a213f6347fccedefdaeebfdeaaffb7bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109270"
 ---
 # <a name="compiler-error-c2353"></a>编译器错误 C2353
-不允许异常规范  
-  
- 异常规范不允许的托管类成员函数上。  
-  
- 下面的示例生成 C2353:  
-  
-```  
-// C2353.cpp  
-// compile with: /clr /c  
-ref class X {  
-   void f() throw(int);   // C2353  
-   void f();   // OK  
-};  
+
+异常规范不允许
+
+托管类的成员函数上不允许使用异常规范。
+
+下面的示例生成 C2353:
+
+```
+// C2353.cpp
+// compile with: /clr /c
+ref class X {
+   void f() throw(int);   // C2353
+   void f();   // OK
+};
 ```

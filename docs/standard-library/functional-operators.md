@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dd9d4dfa7c10d19112cd8154ddcf3b7a70bf3034
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962044"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103887"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;功能&gt;运算符
 
@@ -44,11 +44,14 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>参数
 
-*Fty*要包装的函数类型。
+*Fty*<br/>
+要包装的函数类型。
 
-*f*函数对象
+*f*<br/>
+function 对象
 
-*npc* null 指针。
+*npc*<br/>
+Null 指针。
 
 ### <a name="remarks"></a>备注
 
@@ -101,11 +104,14 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>参数
 
-*Fty*要包装的函数类型。
+*Fty*<br/>
+要包装的函数类型。
 
-*f*函数对象
+*f*<br/>
+function 对象
 
-*npc* null 指针。
+*npc*<br/>
+Null 指针。
 
 ### <a name="remarks"></a>备注
 

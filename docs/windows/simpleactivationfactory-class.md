@@ -1,28 +1,34 @@
 ---
 title: SimpleActivationFactory 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory
+- module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+- module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory::ActivateInstance method
+- Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0820012c8c22de1287fcb09037212b870a4ff7bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594793"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691466"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
 
@@ -54,9 +60,9 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 |名称|描述|
 |----------|-----------------|
-|[SimpleActivationFactory::ActivateInstance 方法](../windows/simpleactivationfactory-activateinstance-method.md)|创建指定接口的实例。|
-|[SimpleActivationFactory::GetRuntimeClassName 方法](../windows/simpleactivationfactory-getruntimeclassname-method.md)|获取指定的类的实例的运行时类名称*Base*类模板参数。|
-|[SimpleActivationFactory::GetTrustLevel 方法](../windows/simpleactivationfactory-gettrustlevel-method.md)|获取指定的类的实例的信任级别*Base*类模板参数。|
+|[SimpleActivationFactory::ActivateInstance 方法](#activateinstance)|创建指定接口的实例。|
+|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|获取指定的类的实例的运行时类名称*Base*类模板参数。|
+|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|获取指定的类的实例的信任级别*Base*类模板参数。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -88,6 +94,67 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="activateinstance"></a>Simpleactivationfactory:: Activateinstance 方法
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+创建指定接口的实例。
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*ppvObject*  
+此操作完成后，指向由指定的对象的实例`Base`类模板参数。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+如果`__WRL_STRICT__`是定义，断言错误发出如果类模板参数中指定的基类不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+
+## <a name="getruntimeclassname"></a>Simpleactivationfactory:: Getruntimeclassname 方法
+
+获取指定的类的实例的运行时类名称`Base`类模板参数。
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+#### <a name="parameters"></a>参数
+
+*runtimeName*  
+此操作完成后，运行时类名称。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+如果`__WRL_STRICT__`是定义，断言错误如果由指定的类发出`Base`类模板参数不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+
+## <a name="gettrustlevel"></a>Simpleactivationfactory:: Gettrustlevel 方法
+
+获取指定的类的实例的信任级别`Base`类模板参数。
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+#### <a name="parameters"></a>参数
+
+*trustLvl*  
+此操作完成后，当前类对象的信任级别。
+
+### <a name="return-value"></a>返回值
+
+始终返回 S_OK。

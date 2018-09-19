@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19c3dd32a99eee7b2bb460598de5b5edeb03aeda
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961793"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761730"
 ---
 # <a name="interface-pointers-classes"></a>接口指针类
-以下类管理给定的接口指针：  
-  
--   [CComPtr](../atl/reference/ccomptr-class.md)执行自动引用计数。  
-  
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md)类似于`CComPtr`，但还要执行自动查询的接口。  
-  
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md)提供方法有用时构造数组 COM 接口指针。  
-  
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md)提供的方法适合于在构造一组 COM 接口指针。  
-  
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md)提供接口指针和全局接口表 (GIT) 的方法，用于处理。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)
+
+以下类管理给定的接口指针：
+
+- [CComPtr](../atl/reference/ccomptr-class.md)执行自动引用计数。
+
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md)类似于`CComPtr`，但还要执行自动查询的接口。
+
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md)提供方法有用时构造数组 COM 接口指针。
+
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md)提供的方法适合于在构造一组 COM 接口指针。
+
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md)提供接口指针和全局接口表 (GIT) 的方法，用于处理。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)
 

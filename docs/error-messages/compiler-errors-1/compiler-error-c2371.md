@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2371 |Microsoft 文档
+title: 编译器错误 C2371 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a3b26ca1ea591a740481ff1fb7d0936ff315790
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e16cf4869b8f94408c09cc2f58e50d380c247091
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041293"
 ---
 # <a name="compiler-error-c2371"></a>编译器错误 C2371
-“identifier”：重定义；不同的基类型  
-  
- 已声明该标识符。  
-  
- 以下示例生成 C2371：  
-  
-```  
-// C2371.cpp  
-int main() {  
-   int i;  
-   float i;   // C2371, redefinition  
-   float f;   // OK  
-}  
+
+“identifier”：重定义；不同的基类型
+
+已声明该标识符。
+
+以下示例生成 C2371：
+
+```
+// C2371.cpp
+int main() {
+   int i;
+   float i;   // C2371, redefinition
+   float f;   // OK
+}
 ```

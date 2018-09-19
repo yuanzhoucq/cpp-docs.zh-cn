@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4805 |Microsoft 文档
+title: 编译器警告 （等级 1） C4805 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13477b20a046741e845c84fd1812dbc6c547ccbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fa9352dbd4138a755c603d332ff79232d7bb72a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103446"
 ---
 # <a name="compiler-warning-level-1-c4805"></a>编译器警告（等级 1）C4805
-“operation”: 在操作中将类型“type”与类型“type”混合不安全  
-  
- 对于 [bool](../../cpp/bool-cpp.md) 与 [int](../../c-language/integer-types.md)之间的比较操作，会生成此警告。下面的示例生成 C4805：  
-  
-```  
-// C4805.cpp  
-// compile with: /W1  
-int main() {  
-   int i = 1;  
-   bool b = true;  
-  
-   if (i == b) {   // C4805, comparing bool and int variables  
-   }  
-}  
+
+“operation”: 在操作中将类型“type”与类型“type”混合不安全
+
+对于 [bool](../../cpp/bool-cpp.md) 与 [int](../../c-language/integer-types.md)之间的比较操作，会生成此警告。下面的示例生成 C4805：
+
+```
+// C4805.cpp
+// compile with: /W1
+int main() {
+   int i = 1;
+   bool b = true;
+
+   if (i == b) {   // C4805, comparing bool and int variables
+   }
+}
 ```

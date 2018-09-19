@@ -1,5 +1,5 @@
 ---
-title: CL 命令文件 |Microsoft 文档
+title: CL 命令文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369872"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708664"
 ---
 # <a name="cl-command-files"></a>CL 命令文件
-命令文件是文本文件，其中包含选项和文件名，否则将在键入[命令行](../../build/reference/compiler-command-line-syntax.md)或指定使用[CL 环境变量](../../build/reference/cl-environment-variables.md)。 CL 接受编译器命令文件作为自变量在 CL 环境变量或命令行上。 与命令行或 CL 环境变量不同，命令文件允许使用多行选项和文件名。  
-  
- 命令文件名在 CL 环境变量或在命令行上的位置根据处理选项和命令文件中的文件名。 但是，如果在命令文件中会显示该 /link 选项，剩余的行上的所有选项都传递到链接器。 命令文件中的后续行中的选项和选项卡上的命令行命令文件调用后仍属编译器选项。 有关选项的顺序如何影响其解释的详细信息，请参阅[CL 选项的顺序](../../build/reference/order-of-cl-options.md)。  
-  
- 命令文件不能包含 CL 命令。 每个选项必须开始和结束在同一行;不能使用反斜杠 (\\) 以跨两个行合并选项。  
-  
- 命令文件，以指定由 at 符号 (@) 跟 filename;文件名可以指定绝对或相对路径。  
-  
- 例如，如果以下命令在名为响应的文件：  
-  
-```  
-/Og /link LIBC.LIB  
-```  
-  
- 并指定以下 CL 命令：  
-  
-```  
-CL /Ob2 @RESP MYAPP.C  
-```  
-  
- 到 CL 命令如下所示：  
-  
-```  
-CL /Ob2 /Og MYAPP.C /link LIBC.LIB  
-```  
-  
- 请注意，命令行和命令文件命令有效地组合。  
-  
-## <a name="see-also"></a>请参阅  
- [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [编译器选项](../../build/reference/compiler-options.md)
+
+命令文件是包含选项和文件名，否则应键入的文本文件[命令行](../../build/reference/compiler-command-line-syntax.md)或使用指定[CL 环境变量](../../build/reference/cl-environment-variables.md)。 CL 接受作为参数在 CL 环境变量或命令行编译器命令文件。 与命令行或 CL 环境变量不同，命令文件允许使用多行选项和文件名。
+
+根据命令文件名 CL 环境变量中或命令行上的位置处理选项和命令文件中的文件名。 但是，如果 /link 选项出现在命令文件，在行的其余部分上的所有选项都传递给链接器。 命令文件中的后续行中的选项和命令文件调用后的在命令行选项仍属编译器选项。 有关选项的顺序将如何影响其解释的详细信息，请参阅[CL 选项的顺序](../../build/reference/order-of-cl-options.md)。
+
+命令文件不得包含 CL 命令。 每个选项必须开始和结束的同一行;不能使用反斜杠 (**\\**) 若要跨两个行合并选项。
+
+指定命令文件 at 符号 (**\@**) filename; 后跟文件名可以指定绝对或相对路径。
+
+例如，如果以下命令在名为响应的文件：
+
+```
+/Og /link LIBC.LIB
+```
+
+指定以下 CL 命令：
+
+```
+CL /Ob2 @RESP MYAPP.C
+```
+
+改为 CL 命令如下所示：
+
+```
+CL /Ob2 /Og MYAPP.C /link LIBC.LIB
+```
+
+请注意，有效地组合命令行和命令文件命令。
+
+## <a name="see-also"></a>请参阅
+
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[编译器选项](../../build/reference/compiler-options.md)

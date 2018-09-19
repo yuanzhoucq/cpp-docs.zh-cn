@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597763"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105180"
 ---
 # <a name="defaulttypenamegettype-method"></a>default::(type_name)::GetType 方法
-返回表示当前类型的 Platform::Type^。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>返回值  
- 表示当前对象的 [Platform::Type](../cppcx/platform-type-class.md)^ 对象。  
-  
-### <a name="requirements"></a>要求  
- **支持的最低客户端：** Windows 8  
-  
- **支持的最低服务器：** Windows Server 2012  
-  
- **命名空间：** 默认  
-  
- **标头：** vccorlib.h  
-  
-## <a name="see-also"></a>请参阅  
- [默认命名空间](../cppcx/default-namespace.md)
+
+返回表示当前类型的 Platform::Type^。
+
+## <a name="syntax"></a>语法
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>返回值
+
+表示当前对象的 [Platform::Type](../cppcx/platform-type-class.md)^ 对象。
+
+### <a name="requirements"></a>要求
+
+**支持的最低客户端：** Windows 8
+
+**支持的最低服务器：** Windows Server 2012
+
+**命名空间：** 默认
+
+**标头：** vccorlib.h
+
+## <a name="see-also"></a>请参阅
+
+[默认命名空间](../cppcx/default-namespace.md)

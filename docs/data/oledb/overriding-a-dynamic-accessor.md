@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035534"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
+
 当使用动态访问器如`CDynamicAccessor`，该命令`Open`方法为自动，基于打开行集的列信息创建取值函数。 您可以重写动态访问器来控制完全如何绑定列。  
   
- 若要重写动态访问器，请将传递**false**的最后一个参数作为`CCommand::Open`方法。 这可以防止`Open`从自动创建取值函数。 然后，可以调用`GetColumnInfo`，并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
+若要重写动态访问器，请将传递**false**的最后一个参数作为`CCommand::Open`方法。 这可以防止`Open`从自动创建取值函数。 然后，可以调用`GetColumnInfo`，并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用访问器](../../data/oledb/using-accessors.md)
+
+[使用访问器](../../data/oledb/using-accessors.md)

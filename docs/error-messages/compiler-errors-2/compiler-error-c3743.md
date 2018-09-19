@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3743 |Microsoft 文档
+title: 编译器错误 C3743 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9a0bab67bb4fb15627dde42b1d538a0ecce9d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99988a9a0fb3afb197e081c45f6f5446d55b801c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019064"
 ---
 # <a name="compiler-error-c3743"></a>编译器错误 C3743
-可以仅挂钩/解除挂钩整个接口 event_receiver layout_dependent 参数为 true 时  
-  
- [__Unhook](../../cpp/unhook.md)函数在它传递给的值将基于的参数的数目会有所不同`layout_dependent`中的参数[event_receiver](../../windows/event-receiver.md)类。  
-  
- 下面的示例生成 C3743:  
-  
-```  
-// C3743.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-[module(name="xx")];  
-[object] __interface I { HRESULT f(); };  
-  
-[event_receiver(com, layout_dependent=true), coclass]  
-struct R : I {  
-        HRESULT f() {  
-      return 0;  
-   }  
-        R() {  
-   }  
-  
-   R(I* a) {  
-      __hook(I, a, &R::f);   // C3743  
-      // The following line resolves the error.  
-      // __hook(I, a);  
-   }  
-};  
+
+可以仅挂钩/解除挂钩整个接口当 event_receiver 的 layout_dependent 参数为 true
+
+[__Unhook](../../cpp/unhook.md)函数在它根据采用传递给的值的参数数量发生变化`layout_dependent`中的参数[event_receiver](../../windows/event-receiver.md)类。
+
+下面的示例生成 C3743:
+
+```
+// C3743.cpp
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+[module(name="xx")];
+[object] __interface I { HRESULT f(); };
+
+[event_receiver(com, layout_dependent=true), coclass]
+struct R : I {
+        HRESULT f() {
+      return 0;
+   }
+        R() {
+   }
+
+   R(I* a) {
+      __hook(I, a, &R::f);   // C3743
+      // The following line resolves the error.
+      // __hook(I, a);
+   }
+};
 ```

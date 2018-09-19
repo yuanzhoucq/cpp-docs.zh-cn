@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2490 |Microsoft 文档
+title: 编译器错误 C2490 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071791"
 ---
 # <a name="compiler-error-c2490"></a>编译器错误 C2490
-keyword 与 naked 特性的函数中不允许  
-  
- 函数定义为[裸](../../cpp/naked-cpp.md)不能使用结构化的异常处理。  
-  
- 下面的示例生成 C2490:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+
+keyword 具有 naked 特性的函数中不允许
+
+定义为一个函数[裸](../../cpp/naked-cpp.md)不能使用结构化的异常处理。
+
+下面的示例生成 C2490:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

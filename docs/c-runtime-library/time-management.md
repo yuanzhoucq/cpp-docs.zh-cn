@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c33d22f30275c9d6581d6c1cd97de4ffe68bc08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083972"
 ---
 # <a name="time-management"></a>时间管理
 
 使用这些函数获取当前时间并按需对其转换、调整及存储。 当前时间为系统时间。
 
- _ftime 和 localtime 例程使用 TZ 环境变量。 如果未设置 TZ，则运行时库将尝试使用由操作系统指定的时区信息。 如果此信息不可用，则这些函数将使用默认值 PST8PDT。 有关 TZ 的详细信息，请参阅 [_tzset](../c-runtime-library/reference/tzset.md)；另请参阅 [_daylight、timezone 和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+_ftime 和 localtime 例程使用 TZ 环境变量。 如果未设置 TZ，则运行时库将尝试使用由操作系统指定的时区信息。 如果此信息不可用，则这些函数将使用默认值 PST8PDT。 有关 TZ 的详细信息，请参阅 [_tzset](../c-runtime-library/reference/tzset.md)；另请参阅 [_daylight、timezone 和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ### <a name="time-routines"></a>时间例程
 
@@ -39,7 +39,7 @@ ms.locfileid: "32418336"
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|将时间从 struct tm 类型转换为字符串。 这些具有 _s 后缀的函数版本更安全。|
 |[clock](../c-runtime-library/reference/clock.md)|返回进程已用的时钟时间。|
 |[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|将时间从 time_t、__time32_t 或 __time64_t 类型转换为字符串。 这些具有 _s 后缀的函数版本更安全。|
-|[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|计算两个时间之差。|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|
+|[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|计算两个时间之差。|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|将当前系统时间存储在 struct _timeb 或 struct __timeb64 类型的变量中。这些带有 _s 后缀的函数版本更安全。|
 |[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|打开文件后设置修改时间|
 |[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从 time_t 类型转换为 struct tm 或从 __time64_t 类型转换为 struct tm。这些具有 _s 后缀的函数版本更安全。|

@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400653"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107450"
 ---
 # <a name="lockfile"></a>_lock_file
 
-锁定**文件**对象以确保一致性线程访问**文件**同时对象。
+锁定**文件**对象，以确保一致性线程访问**文件**同时对象。
 
 ## <a name="syntax"></a>语法
 
@@ -53,15 +53,16 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>参数
 
-*文件*文件句柄。
+文件<br/>
+文件句柄。
 
 ## <a name="remarks"></a>备注
 
-**_Lock_file**函数锁**文件**指定对象*文件*。 基础文件未被锁定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 调用 **_lock_file**和 **_unlock_file**必须匹配在线程中。
+**_Lock_file**函数锁定**文件**由指定的对象*文件*。 基础文件未被锁定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 调用 **_lock_file**并 **_unlock_file**必须匹配在线程中。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208671"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110183"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*左*复数或其参数类型为要测试是否不相等的对象。
+*left*<br/>
+将测试其不等性的复数或与复数的参数类型相同的对象。
 
-*右*复数或其参数类型为要测试是否不相等的对象。
+*right*<br/>
+将测试其不等性的复数或与复数的参数类型相同的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>参数
 
-*左*两个复数相加或相乘的复数的参数类型的数字的第一个\*操作。
+*left*<br/>
+两个复数相加或相乘的复数的参数类型的数字的第一个\*操作。
 
-*右*两个复数相加或相乘的复数的参数类型的数字的第二个\*操作。
+*right*<br/>
+两个复数相加或相乘的复数的参数类型的数字的第二个\*操作。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*左*两个复数或属于要添加的复数的参数类型的数字的第一个 + 操作。
+*left*<br/>
+两个复数的第一个数或属于复数参数类型的数通过 + 运算相加。
 
-*右*两个复数或属于要添加的复数的参数类型的数字的第二个 + 操作。
+*right*<br/>
+两个复数的第二个数或属于复数参数类型的数通过 + 运算相加。
 
 ### <a name="return-value"></a>返回值
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*左*是要通过-运算中减去的复数的参数类型的数或两个复数相加的第一个。
+*left*<br/>
+两个复数的第一个数或属于复数参数类型的数通过 - 运算相减。
 
-*右*的第二个是要通过-运算中减去的复数的参数类型的数或两个复数相加。
+*right*<br/>
+两个复数的第二个数或属于复数参数类型的数通过 - 运算相减。
 
 ### <a name="return-value"></a>返回值
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>参数
 
-*左*复数或用分子除以分母与复数的参数类型的数字 / 操作。
+*left*<br/>
+复数或属于复数参数类型的数通过 / 运算用分子除以分母。
 
-*右*复数或是要用来与分子除以分母的复数的参数类型的数字 / 操作。
+*right*<br/>
+复数或属于复数参数类型的数通过 / 运算用分子除以分母。
 
 ### <a name="return-value"></a>返回值
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*Ostr*在其中输入复数的输出流。
+*Ostr*<br/>
+要输入到输出流的复数。
 
-*右*要输入到输出流的复数
+*right*<br/>
+要输入到输出流的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*左*复数或其参数类型为要测试是否不相等的对象。
+*left*<br/>
+将测试其不等性的复数或与复数的参数类型相同的对象。
 
-*右*复数或其参数类型为要测试是否不相等的对象。
+*right*<br/>
+将测试其不等性的复数或与复数的参数类型相同的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-*Istr*从中提取复数的输入的流。
+*Istr*<br/>
+要从中提取复数的输入流。
 
-*右*正在从输入流提取的复数。
+*right*<br/>
+正在从输入流提取的复数。
 
 ### <a name="return-value"></a>返回值
 

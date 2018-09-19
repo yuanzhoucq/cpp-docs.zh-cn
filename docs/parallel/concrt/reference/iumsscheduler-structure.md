@@ -1,5 +1,5 @@
 ---
-title: IUMSScheduler 结构 |Microsoft 文档
+title: IUMSScheduler 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46ed7dac35dce4b5df51cd4c218a1a70a84d21df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079058"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 结构
 工作计划程序的抽象的接口，该工作计划程序希望并发运行时的资源管理器向其传递用户模式计划 (UMS) 线程。 资源管理器使用此接口与 UMS 线程计划程序进行通信。 `IUMSScheduler` 接口继承自 `IScheduler` 接口。  
@@ -43,11 +43,11 @@ struct IUMSScheduler : public IScheduler;
 |[IUMSScheduler::SetCompletionList](#setcompletionlist)|将分配`IUMSCompletionList`UMS 线程计划程序的接口。|  
   
 ## <a name="remarks"></a>备注  
- 如果你要实现的自定义计划程序进行通信使用资源管理器中，并且你希望 UMS 线程能被传递给计划程序而不是普通的 Win32 线程，则应提供的实现`IUMSScheduler`接口。 此外，应将计划程序策略密钥的策略值设置`SchedulerKind`要`UmsThreadDefault`。 如果该策略都指定 UMS 线程`IScheduler`传递作为参数传递给接口[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必须是`IUMSScheduler`接口。  
+ 如果要实现的自定义计划程序进行通信使用资源管理器中，并且你想要传递给你的计划程序而不是普通的 Win32 线程的 UMS 线程，则应提供的实现`IUMSScheduler`接口。 此外，应设置计划程序策略密钥的策略值`SchedulerKind`为`UmsThreadDefault`。 如果该策略都指定 UMS 线程`IScheduler`作为参数传递的接口[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必须是`IUMSScheduler`接口。  
   
- 资源管理器就能够处理 UMS 线程仅在具有 UMS 功能的操作系统上。 使用 Windows 7 和更高版本的 64 位操作系统支持 UMS 线程。 如果你创建的计划程序策略所具有`SchedulerKind`密钥设置为值`UmsThreadDefault`基础平台不支持 UMS 的值和`SchedulerKind`上该策略的密钥将更改为值`ThreadScheduler`。 你应该始终读回此策略值在希望接收 UMS 线程之前。  
+ 资源管理器就能够处理 UMS 线程仅在具有 UMS 功能的操作系统上。 64 位版本 Windows 7 和更高版本操作系统的系统支持 UMS 线程。 如果您创建的计划程序策略`SchedulerKind`键设置为值`UmsThreadDefault`和基础平台不支持 UMS 的值`SchedulerKind`密钥对该策略将更改为值`ThreadScheduler`。 您应始终读回此策略值预期会收到 UMS 线程之前。  
   
- `IUMSScheduler`接口是双向通信的通道的计划程序和资源管理器之间的一个 end。 由表示另一端`IResourceManager`和`ISchedulerProxy`接口，实现通过资源管理器。  
+ `IUMSScheduler`接口是一种计划程序和资源管理器之间的通信的双向通道的一端。 表示另一端`IResourceManager`和`ISchedulerProxy`接口，实现由资源管理器。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [IScheduler](ischeduler-structure.md)  
@@ -67,11 +67,11 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCompletionList`  
- 计划程序完成列表接口。 没有一个单独的列表，每个计划程序。  
+*pCompletionList*<br/>
+计划程序完成列表接口。 没有每个计划程序的单个列表。  
   
 ### <a name="remarks"></a>备注  
- 资源管理器将调用此方法在指定计划程序已请求资源的初始分配后，它想 UMS 线程计划程序上。 计划程序可以使用`IUMSCompletionList`接口来确定当 UMS 线程代理已解除阻塞。 它才可访问此接口从在分配给 UMS 调度程序的虚拟处理器根上运行的线程代理。  
+ 资源管理器将调用此方法在指定计划程序已请求资源的初始分配后，其需要 UMS 线程计划程序上。 计划程序可以使用`IUMSCompletionList`接口，以确定当 UMS 线程代理已解除阻塞。 才有效，若要从分配给 UMS 调度程序的虚拟处理器根上运行的线程代理访问此接口。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

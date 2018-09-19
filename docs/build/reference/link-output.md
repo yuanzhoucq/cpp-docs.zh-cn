@@ -1,5 +1,5 @@
 ---
-title: LINK 输出 |Microsoft 文档
+title: LINK 输出 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,36 +27,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ca32769d7797446dbb0766c41867da1554b037f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376723"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706207"
 ---
 # <a name="link-output"></a>LINK 输出
-Link 输出包括.exe 文件、 Dll、 映射文件和消息。  
-  
-##  <a name="_core_output_files"></a> 输出文件  
- 链接的默认输出文件是.exe 文件。 如果[/DLL](../../build/reference/dll-build-a-dll.md)指定选项，LINK 在生成.dll 文件。 你可以控制输出文件的名称与[输出文件的名称 （/ OUT）](../../build/reference/out-output-file-name.md)选项。  
-  
- 在增量模式下，链接创建一个.ilk 文件来保存更高版本增量编译的程序的状态信息。 .Ilk 文件有关的详细信息，请参阅[.ilk 文件](../../build/reference/dot-ilk-files-as-linker-input.md)。 有关增量链接的详细信息，请参阅[增量链接 (/incremental)](../../build/reference/incremental-link-incrementally.md)选项。  
-  
- 当 LINK 将创建包含的程序导出 (通常为 DLL) 时，它还将生成的.lib 文件，除非生成中使用了.exp 文件。 你可以控制在导入库文件名前面加[/IMPLIB](../../build/reference/implib-name-import-library.md)选项。  
-  
- 如果[生成映射文件 （/ 映射）](../../build/reference/map-generate-mapfile.md)指定选项，则 LINK 创建映射文件。  
-  
- 如果[生成调试信息 (/debug)](../../build/reference/debug-generate-debug-info.md)指定选项，则 LINK 创建包含调试信息的程序的 PDB。  
-  
-##  <a name="_core_other_output"></a> 其他输出  
- 当你键入`link`而无需任何其他命令行输入时，链接将显示一条总结了其选项的用法语句。  
-  
- LINK 显示版权和版本号消息并回显命令文件输入，除非[取消显示启动版权标志 (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md)使用选项。  
-  
- 你可以使用[打印进度消息 （/ 详细）](../../build/reference/verbose-print-progress-messages.md)选项以显示有关生成的其他详细信息。  
-  
- 链接会发出错误和警告消息的形式 LNK*nnnn*。 此错误前缀和的数字的范围也使用 LIB、 DUMPBIN 和 EDITBIN。  
-  
-## <a name="see-also"></a>请参阅  
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+
+Link 输出包括.exe 文件、 Dll、 映射文件和消息。
+
+##  <a name="_core_output_files"></a> 输出文件
+
+链接的默认输出文件是.exe 文件。 如果[/DLL](../../build/reference/dll-build-a-dll.md)指定选项，LINK 在生成.dll 文件。 您可以控制输出文件的名称与[输出文件的名称 (/out)](../../build/reference/out-output-file-name.md)选项。
+
+在增量模式下，链接创建一个.ilk 文件来保存程序的更高版本的增量生成的状态信息。 有关.ilk 文件的详细信息，请参阅[.ilk 文件](../../build/reference/dot-ilk-files-as-linker-input.md)。 有关增量链接的详细信息，请参阅[增量链接 (/incremental)](../../build/reference/incremental-link-incrementally.md)选项。
+
+当链接创建包含的程序将导出 (通常为 DLL) 时，它还将生成的.lib 文件，除非在生成中使用了.exp 文件。 您可以控制在导入库文件名[/IMPLIB](../../build/reference/implib-name-import-library.md)选项。
+
+如果[生成映射文件 (/map)](../../build/reference/map-generate-mapfile.md)指定选项，链接创建映射文件。
+
+如果[生成调试信息 (/debug)](../../build/reference/debug-generate-debug-info.md)指定选项，链接创建要包含的程序的调试信息的 PDB。
+
+##  <a name="_core_other_output"></a> 其他输出
+
+当您键入`link`而无需任何其他命令行输入时，链接将显示一条用法语句总结了其自己的选项。
+
+链接显示版权和版本的消息，并回显命令文件输入，除非[取消显示启动版权标志 (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md)使用选项。
+
+可以使用[打印进度消息 (/verbose)](../../build/reference/verbose-print-progress-messages.md)选项以显示有关生成的其他详细信息。
+
+链接会发出错误和警告消息中窗体 LNK*nnnn*。 由 LIB、 DUMPBIN 和 EDITBIN 还使用此错误前缀和的数字范围。
+
+## <a name="see-also"></a>请参阅
+
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

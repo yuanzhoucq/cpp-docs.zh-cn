@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2015 |Microsoft 文档
+title: 资源编译器错误 RC2015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d9f0507f0e71e9417c6b0e577d8626c63c402e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247282e7371ab79f40bfdb99031348100ee25d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037393"
 ---
 # <a name="resource-compiler-error-rc2015"></a>资源编译器错误 RC2015
-常量中的字符太多  
-  
- 字符常量包含两个以上的字符。  
-  
- 字符常量仅限于一个字符 （标准字符常量） 或两个字符 （长字符常数）。  
-  
- 请注意，到单个字符转换的转义序列 (例如，\t 选项卡)。
+
+太多个字符的常量
+
+字符常量包含两个以上的字符。
+
+字符常量被限制为一个字符 （标准字符常数） 或两个字符 （长字符常数）。
+
+请注意，转义序列 (例如，选项卡为 \t) 转换为单个字符。

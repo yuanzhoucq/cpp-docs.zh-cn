@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080436"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
 在程序元素，如类、 函数或变量声明时，可以仅"看到"并在程序的某些部分中使用其名称。 在其中一个名称是可见的上下文调用其*作用域*。 例如，如果将变量声明`x`内的函数`x`时才会显示该函数体中。 它具有*局部范围*。 中可以有其他变量同名的程序;只要它们是在不同的作用域中，只要不违反单个定义规则，并不会引发错误。
 
-自动的非静态变量的范围还可决定何时创建和销毁程序内存中。 
+自动的非静态变量的范围还可决定何时创建和销毁程序内存中。
 
 有六种范围：
 
@@ -51,9 +51,9 @@ ms.locfileid: "43220085"
 
 可通过在封闭块中声明名称来隐藏该名称。 在下图中，在内部块中重新声明 `i`，从而隐藏与外部块范围中的 `i` 关联的变量。
 
- ![块&#45;的范围名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")块范围和名称隐藏
+![块&#45;的范围名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")块范围和名称隐藏
 
- 来自图中显示的程序的输出为：
+来自图中显示的程序的输出为：
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>隐藏类名
 
- 通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，类名仍可访问时前缀由关键字**类**。
+通过声明同一范围内的函数、对象或变量或枚举器，可以隐藏类名称。 但是，类名仍可访问时前缀由关键字**类**。
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,22 +103,22 @@ int main()
 > [!NOTE]
 > 任何位置的类名 (`Account`) 调用，必须使用关键字类以将它与全局范围内的变量 Account 区分开来。 当类名出现在范围解析运算符 (::) 的左侧时，此规则不适用。 在范围解析运算符的左侧的名称始终被视为类名称。
 
- 下面的示例演示如何声明指向类型的对象的指针`Account`使用**类**关键字：
+下面的示例演示如何声明指向类型的对象的指针`Account`使用**类**关键字：
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- `Account` （在括号内） 在前面的语句中的初始值设定项中具有全局作用域; 它是类型**double**。
+`Account` （在括号内） 在前面的语句中的初始值设定项中具有全局作用域; 它是类型**double**。
 
 > [!NOTE]
 > 此示例中所示的标识符名称的重用被视为较差的编程样式。
 
- 有关指针的详细信息，请参阅[派生类型](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
+有关声明和初始化类对象的信息，请参阅[类、 结构和联合](../cpp/classes-and-structs-cpp.md)。 有关使用信息**新**并**删除**自由存储运算符，请参阅[新和 delete 运算符](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隐藏具有全局作用域的名称
 
- 可以通过显式声明块范围中的具有相同名称来隐藏具有全局作用域的名称。 但是，全局作用域名称可以使用访问作用域解析运算符 (`::`)。
+可以通过显式声明块范围中的具有相同名称来隐藏具有全局作用域的名称。 但是，全局作用域名称可以使用访问作用域解析运算符 (`::`)。
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>请参阅
- [基本概念](../cpp/basic-concepts-cpp.md)
+
+[基本概念](../cpp/basic-concepts-cpp.md)

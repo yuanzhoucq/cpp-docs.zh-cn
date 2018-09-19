@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598085"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102689"
 ---
 # <a name="wrl-integration-ccx"></a>WRL 集成 (C++/CX)
 
 可以自由混合 WRL 代码和 Windows 运行时 c + + 模板库 (WRL) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和 WRL 智能指针 (`ComPtr<T>`) 表示法。 但是，您必须手动处理返回值和 WRL HRESULT 错误代码和 WRL 异常。
-  
+
 ## <a name="wrl-development"></a>WRL 开发
 
 有关创作和使用 WRL 组件的详细信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>请参阅
 
-[与其他语言进行互操作](interoperating-with-other-languages-c-cx.md)  
+[与其他语言进行互操作](interoperating-with-other-languages-c-cx.md)

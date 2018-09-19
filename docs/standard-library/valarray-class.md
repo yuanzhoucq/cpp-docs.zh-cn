@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724810"
 ---
 # <a name="valarray-class"></a>valarray 类
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>参数
 
 _Func(Type)<br/>
- 函数对象将应用于操作数 valarray 的每个元素。
+函数对象将应用于操作数 valarray 的每个元素。
 
 _Func(const Type&)<br/>
- const 的函数对象将应用于操作数 valarray 的每个元素。
+const 的函数对象将应用于操作数 valarray 的每个元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -187,11 +187,11 @@ int main( int argc, char* argv[] )
       cout << " " << vaApplied[i];
    cout << " )" << endl;
 }
-\* Output:
+/* Output:
 The initial Right valarray is: ( 0 0 -2 3 0 -5 6 0 -8 9 )
 The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
-*\
+*/
 ```
 
 ## <a name="cshift"></a>  valarray::cshift
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*count*  
- 要向前移动元素的位数。
+*count*<br/>
+要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
@@ -261,14 +261,14 @@ int main()
         cout << " " << va2[i];
     cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va1 is: ( 0 1 2 3 4 5 6 7 8 9)
 The cyclically shifted valarray va1 is:
 va1.cshift (4) = ( 4 5 6 7 8 9 0 1 2 3)
 The operand valarray va2 is: ( 10 9 8 7 6 5 4 3 2 1)
 The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
-*\
+*/
 ```
 
 ## <a name="free"></a>  valarray::free
@@ -336,10 +336,10 @@ int main( )
    cout << "The largest element in the valarray is: "
         << MaxValue  << "." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
 The largest element in the valarray is: 13.
-*\
+*/
 ```
 
 ## <a name="min"></a>  valarray::min
@@ -388,10 +388,10 @@ int main( )
    cout << "The smallest element in the valarray is: "
         << MinValue  << "." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray is: ( 0 2 3 -3 8 0 -6 14 -3 -9 ).
 The smallest element in the valarray is: -9.
-*\
+*/
 ```
 
 ## <a name="op_not"></a>valarray::operator!
@@ -444,11 +444,11 @@ int main( )
          cout << vaNOT [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The element-by-element result of the logical NOT operator! is the
  valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
-*\
+*/
 ```
 
 ## <a name="op_mod_eq"></a>valarray::operator%=
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
@@ -508,12 +508,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial  right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
  valarray: ( 0 -3 4 -7 1 -3 ).
-*\
+*/
 ```
 
 ## <a name="and_eq"></a>valarray::operator&amp;=
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- Valarray 或值的元素相同的类型是将合并操作数 valarray 进行点算合并，通过逻辑`AND`与操作数 valarray。
+*right*<br/>
+Valarray 或值的元素相同的类型是将合并操作数 valarray 进行点算合并，通过逻辑`AND`与操作数 valarray。
 
 ### <a name="return-value"></a>返回值
 
@@ -579,12 +579,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&= is the
  valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
-*\
+*/
 ```
 
 ## <a name="op_gt_gt_eq"></a>valarray::operator&gt;&gt;=
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 指示右移位数或 valarray（其元素指示右移的元素指向值）。
+*right*<br/>
+指示右移位数或 valarray（其元素指示右移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -648,12 +648,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
  valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*\
+*/
 ```
 
 ## <a name="op_lt_lt_eq"></a>valarray::operator&lt;&lt;=
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 指示左移位数或 valarray（其元素指示左移的元素指向值）。
+*right*<br/>
+指示左移位数或 valarray（其元素指示左移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
@@ -717,13 +717,13 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift
  on the operand array is the valarray:
  ( 1 -2 4 -8 16 -32 64 -128 ).
-*\
+*/
 ```
 
 ## <a name="op_star_eq"></a>valarray::operator*=
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。
 
 ### <a name="return-value"></a>返回值
 
@@ -783,12 +783,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
  valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_add"></a>valarray::operator+
@@ -835,11 +835,11 @@ int main( )
          cout << vaPLUS [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
  valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
-*\
+*/
 ```
 
 ## <a name="op_add_eq"></a>valarray::operator+=
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。
 
 ### <a name="return-value"></a>返回值
 
@@ -899,12 +899,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
  valarray: ( 2 0 4 2 6 4 8 6 ).
-*\
+*/
 ```
 
 ## <a name="valarray__operator-"></a>  valarray::operator-
@@ -951,11 +951,11 @@ int main( )
          cout << vaMINUS [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
  valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
-*\
+*/
 ```
 
 ## <a name="valarray__operator-_eq"></a>valarray::operator-=
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。
 
 ### <a name="return-value"></a>返回值
 
@@ -1015,12 +1015,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
  valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*\
+*/
 ```
 
 ## <a name="op_div_eq"></a>valarray::operator/=
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
@@ -1080,12 +1080,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
  valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>valarray::operator=
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要复制到操作数 valarray 中的 valarray。
+*right*<br/>
+要复制到操作数 valarray 中的 valarray。
 
-*val*  
- 要分配给操作数 valarray 的元素的值。
+*val*<br/>
+要分配给操作数 valarray 的元素的值。
 
-*_Slicearray*  
- 要复制到操作数 valarray 中的 slice_array。
+*_Slicearray*<br/>
+要复制到操作数 valarray 中的 slice_array。
 
-*_Gslicearray*  
- 要复制到操作数 valarray 中的 gslice_array。
+*_Gslicearray*<br/>
+要复制到操作数 valarray 中的 gslice_array。
 
-*_Maskarray*  
- 要复制到操作数 valarray 中的 mask_array。
+*_Maskarray*<br/>
+要复制到操作数 valarray 中的 mask_array。
 
-*_Indarray*  
- 要复制到操作数 valarray 中的 indirect_array。
+*_Indarray*<br/>
+要复制到操作数 valarray 中的 indirect_array。
 
 ### <a name="return-value"></a>返回值
 
@@ -1188,12 +1188,12 @@ int main( )
          cout << " " << va [ i ];
    cout << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va is: 0 1 2 3 4 5 6 7 8 9
 The operand valarray vaR is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
-*\
+*/
 ```
 
 ## <a name="op_at"></a>valarray::operator[]
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*  
- 要对其进行赋值的元素的索引。
+*_Off*<br/>
+要对其进行赋值的元素的索引。
 
-*_Slicearray*  
- 一个 valarray 的 slice_array，它指定要选择或返回到新 valarray 的子集。
+*_Slicearray*<br/>
+一个 valarray 的 slice_array，它指定要选择或返回到新 valarray 的子集。
 
-*_Gslicearray*  
- 一个 valarray 的 gslice_array，它指定要选择或返回到新 valarray 的子集。
+*_Gslicearray*<br/>
+一个 valarray 的 gslice_array，它指定要选择或返回到新 valarray 的子集。
 
-_Boolarray  
- 一个 valarray 的 bool_array，它指定要选择或返回到新 valarray 的子集。
+_Boolarray<br/>
+一个 valarray 的 bool_array，它指定要选择或返回到新 valarray 的子集。
 
-*_Indarray*  
- 一个 valarray 的 indirect_array，它指定要选择或返回到新 valarray 的子集。
+*_Indarray*<br/>
+一个 valarray 的 indirect_array，它指定要选择或返回到新 valarray 的子集。
 
 ### <a name="return-value"></a>返回值
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1322,12 +1322,12 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^= is the
  valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*\
+*/
 ```
 
 ## <a name="op_or_eq"></a>valarray::operator&#124;=
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。
+*right*<br/>
+valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
@@ -1397,7 +1397,7 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:
  ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is:
@@ -1405,7 +1405,7 @@ The  right valarray is:
 The element-by-element result of the logical OR
  operator|= is the valarray:
  ( 1 0 1 3 3 4 7 6 7 9 ).
-*\
+*/
 ```
 
 ## <a name="op_dtor"></a>valarray::operator~
@@ -1488,7 +1488,8 @@ int main( )
          cout << vaNOT2 [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+
+/* Output:
 The initial valarray <unsigned short int> is:  ( 0 5 2 15 4 25 6 35 8 45 ).
 The element-by-element result of the bitwise NOT operator~ is the
  valarray: ( 65535 65530 65533 65520 65531 65510 65529 65500 65527 65490 ).
@@ -1499,7 +1500,7 @@ The element-by-element result of the bitwise NOT operator~ is the
 The element-by-element result of adding one
  is the negative of the original elements the
  valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
-*\
+*/
 ```
 
 ## <a name="resize"></a>  valarray::resize
@@ -1517,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>参数
 
-*_Newsize*  
- 调整大小后的 valarray 中的元素数。
+*_Newsize*<br/>
+调整大小后的 valarray 中的元素数。
 
-*val*  
- 要提供给调整大小后的 valarray 的元素的值。
+*val*<br/>
+要提供给调整大小后的 valarray 的元素的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1588,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*count*  
- 要向前移动元素的位数。
+*count*<br/>
+要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1644,12 +1645,12 @@ int main( )
          cout << va2 [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The operand valarray va1(10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The shifted valarray va1 is: va1.shift (4) = ( 4 5 6 7 8 9 0 0 0 0 ).
 The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
-*\
+*/
 ```
 
 ## <a name="size"></a>  valarray::size
@@ -1772,10 +1773,10 @@ int main( )
    cout << "The sum of elements in the valarray is: "
         << sumva  << "." <<endl;
 }
-\* Output:
+/* Output:
 The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
-*\
+*/
 ```
 
 ## <a name="swap"></a>  valarray::swap
@@ -1838,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>参数
 
-“计数”  
- 数值数组要包含的元素的数目。
+“计数”<br/>
+数值数组要包含的元素的数目。
 
-*val*  
- 要用于初始化数值数组中的元素的值。
+*val*<br/>
+要用于初始化数值数组中的元素的值。
 
-*ptr*  
- 指向要用于初始化数值数组中的元素的值的指针。
+*ptr*<br/>
+指向要用于初始化数值数组中的元素的值的指针。
 
-右侧  
- 用于初始化新数值数组的现有数值数组。
+右侧<br/>
+用于初始化新数值数组的现有数值数组。
 
-*SliceArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 slice_array。
+*SliceArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 slice_array。
 
-*GsliceArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 gslice_array。
+*GsliceArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 gslice_array。
 
-*MaskArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 mask_array。
+*MaskArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 mask_array。
 
-*IndArray*  
- 其元素值要用于初始化要构造的数值数组的元素的 indirect_array。
+*IndArray*<br/>
+其元素值要用于初始化要构造的数值数组的元素的 indirect_array。
 
-*IList*  
- 包含要复制的元素的 initializer_list。
+*IList*<br/>
+包含要复制的元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -1975,11 +1976,11 @@ int main( )
          cout << va [ i ] << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).
 The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
-*\
+*/
 ```
 
 ## <a name="see-also"></a>请参阅

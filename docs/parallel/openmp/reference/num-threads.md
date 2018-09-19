@@ -1,5 +1,5 @@
 ---
-title: num_threads |Microsoft 文档
+title: num_threads |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016281"
 ---
 # <a name="numthreads"></a>num_threads
-在线程团队设置线程的数。  
+设置线程团队中的线程数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33691881"
 num_threads(num)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `num`  
- 线程数  
+*num*<br/>
+线程数  
   
 ## <a name="remarks"></a>备注  
- `num_threads`子句具有与相同的功能[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函数。  
+ `num_threads`子句具有相同的功能[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函数。  
   
  `num_threads` 适用于以下指令：  
   

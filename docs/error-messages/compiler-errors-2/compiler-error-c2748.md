@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2748 |Microsoft 文档
+title: 编译器错误 C2748 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 336a2eb10f0a39f81547361e982aa744be88149e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57c7919cd33f9e27ad34b1298d8af36ec360200
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058055"
 ---
 # <a name="compiler-error-c2748"></a>编译器错误 C2748
-创建托管数组或 WinRT 数组时必须提供数组大小或数组初始值设定项  
-  
- 托管数组或 WinRT 数组的格式不正确。 有关详细信息，请参阅 [数组](../../windows/arrays-cpp-component-extensions.md)。  
-  
- 下面的示例生成 C2748，并演示如何修复此错误：  
-  
-```  
-// C2748.cpp  
-// compile with: /clr  
-int main() {  
-   array<int> ^p1 = new array<int>();   // C2748  
-   // try the following line instead  
-   array<int> ^p2 = new array<int>(2);  
-}  
+
+创建托管数组或 WinRT 数组时必须提供数组大小或数组初始值设定项
+
+托管数组或 WinRT 数组的格式不正确。 有关详细信息，请参阅 [数组](../../windows/arrays-cpp-component-extensions.md)。
+
+下面的示例生成 C2748，并演示如何修复此错误：
+
+```
+// C2748.cpp
+// compile with: /clr
+int main() {
+   array<int> ^p1 = new array<int>();   // C2748
+   // try the following line instead
+   array<int> ^p2 = new array<int>(2);
+}
 ```

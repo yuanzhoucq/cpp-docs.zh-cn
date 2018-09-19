@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48222be892ebe0b05b8500bb1a4f2117e440b0c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b23416e4c6895669e73ec6611cf38c678016c52a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572801"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107037"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 
@@ -69,9 +69,11 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>参数
 
-*fd*打开文件的文件描述符。
+*fd*<br/>
+打开文件的文件描述符。
 
-*模式*文件访问的类型。
+*模式*<br/>
+文件访问的类型。
 
 ## <a name="return-value"></a>返回值
 

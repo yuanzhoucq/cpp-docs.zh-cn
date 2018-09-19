@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196185"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705908"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
+ 指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)在 Windows SDK 中，除了以下进度栏控件样式，向控件：  
   
 - PBS_VERTICAL 显示垂直进度的信息，请从上到下。 如果没有此标志，进度栏控件可显示水平、 左到右。  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
- 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定进度栏控件的样式。 应用窗口样式中所述的任意组合[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *rect*  
  对引用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
+|*clrBar*|[in]一个[COLORREF](/windows/desktop/gdi/colorref)值，该值指定进度指示符栏的新颜色。 指定 CLR_DEFAULT 若要使进度条，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*fMarqueeMode*|设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|  
-|[in]*n 间隔*|以毫秒为单位的字幕动画的更新之间的时间。|  
+|*fMarqueeMode*|[in]设置为 True 或 FALSE 可以关闭字幕模式打开字幕模式。|  
+|*n 间隔*|[in]以毫秒为单位的字幕动画的更新之间的时间。|  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回 TRUE。  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iState*|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|  
+|*iState*|[in]要设置进度栏的状态。 使用下列值之一：<br /><br /> -PBST_NORMAL-正在进行中<br />-PBST_ERROR-错误<br />-PBST_PAUSED-暂停|  
   
 ### <a name="return-value"></a>返回值  
  当前进度栏控件的前一个状态。  

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3384 |Microsoft 文档
+title: 编译器错误 C3384 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab09df08edb9f1d5808f2214535c76b20fda62b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c904556951838de0308aea499980132440cbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061599"
 ---
 # <a name="compiler-error-c3384"></a>编译器错误 C3384
-“type_parameter”: 值约束与 ref 约束互相排斥  
-  
- 无法将泛型类型约束为 `value class` 和 `ref class`。  
-  
- 请参阅[泛型类型参数的约束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)有关详细信息。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3384。  
-  
-```  
-// C3384.cpp  
-// compile with: /c /clr  
-generic <typename T>  
-where T : ref class  
-where T : value class   // C3384  
-ref class List {};  
+
+“type_parameter”: 值约束与 ref 约束互相排斥
+
+无法将泛型类型约束为 `value class` 和 `ref class`。
+
+请参阅[泛型类型参数的约束 (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)有关详细信息。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3384。
+
+```
+// C3384.cpp
+// compile with: /c /clr
+generic <typename T>
+where T : ref class
+where T : value class   // C3384
+ref class List {};
 ```

@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce8706b36af848fadba041871233204e664cabf4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541207"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712434"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 类
 `CMFCRibbonBar` 类实现与 Office 2007 中所使用的类似功能区栏。  
@@ -353,8 +353,8 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiContextID*  
- 上下文类别 id。  
+*uiContextID*<br/>
+[in]上下文类别 id。  
   
 ### <a name="return-value"></a>返回值  
  如果使用的上下文类别则为 TRUE *uiContextID*找到和激活; 否则为 FALSE。  
@@ -376,26 +376,26 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 功能区类别的名称。  
+*lpszName*<br/>
+[in]功能区类别的名称。  
   
- [in]*uiSmallImagesResID*  
- 功能区类别的小型图像列表的资源 ID。  
+*uiSmallImagesResID*<br/>
+[in]功能区类别的小型图像列表的资源 ID。  
   
- [in]*uiLargeImagesResID*  
- 功能区类别的大型图像列表的资源 ID。  
+*uiLargeImagesResID*<br/>
+[in]功能区类别的大型图像列表的资源 ID。  
   
- [in]*sizeSmallImage*  
- 指定功能区类别的小图像的大小。  
+*sizeSmallImage*<br/>
+[in]指定功能区类别的小图像的大小。  
   
- [in]*sizeLargeImage*  
- 指定功能区类别的大型图像的大小。  
+*sizeLargeImage*<br/>
+[in]指定功能区类别的大型图像的大小。  
   
- [in]*nInsertAt*  
- 类别位置零开始的索引。  
+*nInsertAt*<br/>
+[in]类别位置零开始的索引。  
   
- [in]*pRTI*  
- 指向[CMFCRibbonCategory 类](../../mfc/reference/cmfcribboncategory-class.md)运行时类，以动态地在运行时创建功能区类别。  
+*pRTI*<br/>
+[in]指向[CMFCRibbonCategory 类](../../mfc/reference/cmfcribboncategory-class.md)运行时类，以动态地在运行时创建功能区类别。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新的功能区类别如果方法成功，则否则，为 NULL。  
@@ -427,32 +427,32 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 类别的名称。  
+*lpszName*<br/>
+[in]类别的名称。  
   
- [in]*lpszContextName*  
- 上下文类别标题的名称。  
+*lpszContextName*<br/>
+[in]上下文类别标题的名称。  
   
- [in]*uiContextID*  
- 上下文 id。  
+*uiContextID*<br/>
+[in]上下文 id。  
   
- [in]*clrContext*  
- 上下文类别标题的颜色。  
+*clrContext*<br/>
+[in]上下文类别标题的颜色。  
   
- [in]*uiSmallImagesResID*  
- 资源 ID 的上下文类别的小图像。  
+*uiSmallImagesResID*<br/>
+[in]资源 ID 的上下文类别的小图像。  
   
- [in]*uiLargeImagesResID*  
- 资源 ID 的上下文类别的大图像。  
+*uiLargeImagesResID*<br/>
+[in]资源 ID 的上下文类别的大图像。  
   
- [in]*sizeSmallImage*  
- 小图像的大小。  
+*sizeSmallImage*<br/>
+[in]小图像的大小。  
   
- [in]*sizeLargeImage*  
- 较大的图像的大小。  
+*sizeLargeImage*<br/>
+[in]较大的图像的大小。  
   
- [in]*pRTI*  
- 为运行时类的指针。  
+*pRTI*<br/>
+[in]为运行时类的指针。  
   
 ### <a name="return-value"></a>返回值  
  一个指向新创建的类别，则为 null`CreateObject`方法*pRTI*无法创建指定的类别。  
@@ -493,20 +493,20 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 主功能区类别的名称。  
+*lpszName*<br/>
+[in]主功能区类别的名称。  
   
- [in]*uiSmallImagesResID*  
- 较小的图像的资源 ID。  
+*uiSmallImagesResID*<br/>
+[in]较小的图像的资源 ID。  
   
- [in]*uiLargeImagesResID*  
- 大型映像的资源 ID。  
+*uiLargeImagesResID*<br/>
+[in]大型映像的资源 ID。  
   
- [in]*sizeSmallImage*  
- 较小的图像的大小。  
+*sizeSmallImage*<br/>
+[in]较小的图像的大小。  
   
- [in]*sizeLargeImage*  
- 大型图像的大小。  
+*sizeLargeImage*<br/>
+[in]大型图像的大小。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则新的主功能区类别的指针否则，为 NULL。  
@@ -544,14 +544,14 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 类别的名称。  
+*lpszName*<br/>
+[in]类别的名称。  
   
- [in]*uiSmallImagesResID*  
- 类别的图像列表的资源 ID。  
+*uiSmallImagesResID*<br/>
+[in]类别的图像列表的资源 ID。  
   
- [in]*sizeSmallImage*  
- 类别中的功能区元素的图像的大小。  
+*sizeSmallImage*<br/>
+[in]类别中的功能区元素的图像的大小。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则新的类别指向的指针否则，为 NULL。  
@@ -567,8 +567,8 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pElement*  
- 指向功能区元素的指针。  
+*pElement*<br/>
+[in]指向功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
  功能区元素位于任何系统按钮的前面。  
@@ -581,8 +581,8 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bReplaceFrameCaption*  
- 有关功能区栏来取代主框架窗口的标题，则返回 TRUE为 FALSE，则找到主框架窗口的标题下的功能区栏。  
+*bReplaceFrameCaption*<br/>
+[in]有关功能区栏来取代主框架窗口的标题，则返回 TRUE为 FALSE，则找到主框架窗口的标题下的功能区栏。  
   
 ### <a name="remarks"></a>备注  
   
@@ -597,14 +597,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 功能区栏的父级窗口的指针。  
+*pParentWnd*<br/>
+[in]功能区栏的父级窗口的指针。  
   
- [in]*dwStyle*  
- 新窗口的样式的逻辑组合。  
+*dwStyle*<br/>
+[in]新窗口的样式的逻辑组合。  
   
- [in]*nID*  
- 新窗口中的 ID。  
+*nID*<br/>
+[in]新窗口中的 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该窗口创建; 则为 TRUE否则为 FALSE。  
@@ -628,17 +628,17 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParentWnd*  
- 功能区栏的父级窗口的指针。  
+*pParentWnd*<br/>
+[in]功能区栏的父级窗口的指针。  
   
- [in]*dwCtrlStyle*  
- 未使用此参数。  
+*dwCtrlStyle*<br/>
+[in]未使用此参数。  
   
- [in]*dwStyle*  
- 新窗口的样式的逻辑组合。  
+*dwStyle*<br/>
+[in]新窗口的样式的逻辑组合。  
   
- [in]*nID*  
- 新窗口中的 ID。  
+*nID*<br/>
+[in]新窗口中的 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果该窗口创建; 则为 TRUE否则为 FALSE。  
@@ -653,8 +653,8 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bSetFocus*  
- 若要将焦点设置到功能区栏的父窗口，则为 TRUE。  
+*bSetFocus*<br/>
+[in]若要将焦点设置到功能区栏的父窗口，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -669,14 +669,14 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 菜单按钮的设备上下文的指针。  
+*pDC*<br/>
+[in]菜单按钮的设备上下文的指针。  
   
- [in]*pMenuItem*  
- 指向工具栏菜单按钮。  
+*pMenuItem*<br/>
+[in]指向工具栏菜单按钮。  
   
- [in]*rectImage*  
- 菜单按钮显示矩形。  
+*rectImage*<br/>
+[in]菜单按钮显示矩形。  
   
 ### <a name="return-value"></a>返回值  
  如果已绘制图像; 则为 TRUE否则为 FALSE。  
@@ -700,8 +700,8 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则启用键提示功能;如果为 FALSE 禁用键提示功能。  
+*bEnable*<br/>
+[in]为 TRUE，则启用键提示功能;如果为 FALSE 禁用键提示功能。  
   
 ### <a name="remarks"></a>备注  
  当启用此功能时，在用户按 ALT 或 F10 按钮时显示的关键技巧。 当用户按下 ALT 键时，并在 200 毫秒延迟显示键提示。 用于创建快捷方式执行，以便按下 ALT 键不会干扰其他组合包括的 ALT 键允许此延迟。  
@@ -714,8 +714,8 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 true 以启用**打印预览**功能;如果为 FALSE，禁用**打印预览**功能。  
+*bEnable*<br/>
+[in]为 true 以启用**打印预览**功能;如果为 FALSE，禁用**打印预览**功能。  
   
 ### <a name="remarks"></a>备注  
  如果*bEnable*为 FALSE 和打印预览类别已存在，将删除。  
@@ -732,11 +732,11 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 若要启用的功能区栏; 上的工具提示，则返回 TRUE如果为 FALSE 来禁用功能区栏上的工具提示。  
+*bEnable*<br/>
+[in]若要启用的功能区栏; 上的工具提示，则返回 TRUE如果为 FALSE 来禁用功能区栏上的工具提示。  
   
- [in]*bEnableDescr*  
- 若要启用工具提示; 上的工具提示说明，则返回 TRUE如果为 FALSE 禁用工具提示上的工具提示说明。  
+*bEnableDescr*<br/>
+[in]若要启用工具提示; 上的工具提示说明，则返回 TRUE如果为 FALSE 禁用工具提示上的工具提示说明。  
   
 ### <a name="remarks"></a>备注  
  *BEnable*参数确定当鼠标悬停在功能区元素上时是否显示工具提示。 *BEnableDescr*参数确定是否附加的描述性文本显示为工具提示文本。  
@@ -751,11 +751,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwData*  
- 功能区元素与关联的数据。  
+*dwData*<br/>
+[in]功能区元素与关联的数据。  
   
- [in]*bVisibleOnly*  
- 若要搜索仅; 可见的功能区元素，则返回 TRUE为 FALSE，则搜索所有功能区元素。  
+*bVisibleOnly*<br/>
+[in]若要搜索仅; 可见的功能区元素，则返回 TRUE为 FALSE，则搜索所有功能区元素。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的数据和可见性; 它具有的功能区元素指向的指针否则为，为 NULL。  
@@ -774,14 +774,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 功能区元素的命令 ID。  
+*uiCmdID*<br/>
+[in]功能区元素的命令 ID。  
   
- [in]*bVisibleOnly*  
- 若要搜索仅; 可见的功能区元素，则返回 TRUE为 FALSE，则搜索所有功能区元素。  
+*bVisibleOnly*<br/>
+[in]若要搜索仅; 可见的功能区元素，则返回 TRUE为 FALSE，则搜索所有功能区元素。  
   
- [in]*bExcludeQAT*  
- 为 TRUE，则从搜索; 中排除的快速访问工具栏元素否则为 FALSE。  
+*bExcludeQAT*<br/>
+[in]为 TRUE，则从搜索; 中排除的快速访问工具栏元素否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  指向具有指定的命令 ID 和搜索值; 如果的功能区元素的指针否则，为 NULL。  
@@ -799,8 +799,8 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwData*  
- 与功能区类别关联的数据。  
+*dwData*<br/>
+[in]与功能区类别关联的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则功能区类别的从零开始的索引否则为-1。  
@@ -859,8 +859,8 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 在功能区栏中包含的功能区类别列表中的功能区类别的从零开始的索引。  
+*nIndex*<br/>
+[in]在功能区栏中包含的功能区类别列表中的功能区类别的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  指向指定的索引; 处的功能区类别的指针否则为 NULL 的 if *nIndex*超出了范围。  
@@ -896,8 +896,8 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pCategory*  
- 向功能区类别的指针。  
+*pCategory*<br/>
+[in]向功能区类别的指针。  
   
 ### <a name="return-value"></a>返回值  
  指定的功能区类别的从零开始的索引*pCategory*; 或如果找不到功能区类别为-1。  
@@ -912,11 +912,11 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiContextID*  
- 功能区类别上下文 id。  
+*uiContextID*<br/>
+[in]功能区类别上下文 id。  
   
- [out]*strName*  
- 上下文类别标题的名称。  
+*strName*<br/>
+[out]上下文类别标题的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE *uiContextID*为零或找不到的上下文类别标题。  
@@ -943,11 +943,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 功能区元素的命令 ID。  
+*uiCmdID*<br/>
+[in]功能区元素的命令 ID。  
   
- [out]*arButtons*  
- 若要在功能区元素的指针的数组。  
+*arButtons*<br/>
+[out]若要在功能区元素的指针的数组。  
   
 ### <a name="remarks"></a>备注  
  多个功能区元素可以具有相同的命令 ID，因为可以将某些功能区元素复制到快速访问工具栏。  
@@ -980,11 +980,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lstItems*  
- 在功能区栏中包含的功能区元素的命令 Id 的列表。  
+*lstItems*<br/>
+[out]在功能区栏中包含的功能区元素的命令 Id 的列表。  
   
- [in]*bHiddenOnly*  
- 为 TRUE，则排除显示; 的功能区元素为 FALSE，则包含功能区栏中的所有功能区元素。  
+*bHiddenOnly*<br/>
+[in]为 TRUE，则排除显示; 的功能区元素为 FALSE，则包含功能区栏中的所有功能区元素。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1081,8 +1081,8 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lstCommands*  
- 快速访问工具栏上的功能区元素的命令 Id 的列表。  
+*lstCommands*<br/>
+[out]快速访问工具栏上的功能区元素的命令 Id 的列表。  
   
 ### <a name="remarks"></a>备注  
  列表不包含控制分隔符的功能区元素。  
@@ -1183,14 +1183,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- 在功能区栏坐标点的位置。  
+*点*<br/>
+[in]在功能区栏坐标点的位置。  
   
- [in]*bCheckActiveCategory*  
- 为 TRUE，则搜索该活动的类别。如果为 FALSE，则不以搜索活动的类别。  
+*bCheckActiveCategory*<br/>
+[in]为 TRUE，则搜索该活动的类别。如果为 FALSE，则不以搜索活动的类别。  
   
- [in]*bCheckPanelCaption*  
- 为 TRUE，则使用位于它; 中的点进行测试的功能区面板的标题如果为 FALSE，则无法使用位于在其中的点进行测试的功能区面板的标题。 有关详细信息，请参阅备注部分。  
+*bCheckPanelCaption*<br/>
+[in]为 TRUE，则使用位于它; 中的点进行测试的功能区面板的标题如果为 FALSE，则无法使用位于在其中的点进行测试的功能区面板的标题。 有关详细信息，请参阅备注部分。  
   
 ### <a name="return-value"></a>返回值  
  指向位于指定点; 处的功能区元素的指针如果该点不位于功能区元素，否则为 NULL。  
@@ -1271,8 +1271,8 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pGroup*  
- 未使用此参数。  
+*pGroup*<br/>
+[in]未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
  始终返回 FALSE。  
@@ -1325,11 +1325,11 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向被单击的按钮。  
+*pButton*<br/>
+[in]指向被单击的按钮。  
   
- [in]*点*  
- 未使用此参数。  
+*点*<br/>
+[in]未使用此参数。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pEdit*  
- [in]*点*  
+*pEdit*<br/>
+[in][in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1356,8 +1356,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bIsRTL*  
- 如果布局是从右到左; 则为 TRUE如果布局是从左到右，则为 FALSE。  
+*bIsRTL*<br/>
+[in]如果布局是从右到左; 则为 TRUE如果布局是从左到右，则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此方法调整新的布局方向的功能区栏上的所有控件的布局。  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*x*  
- [in]*y*  
- [in]*pHit*  
+*pWnd*<br/>
+[in][in]*x*  
+*y*<br/>
+[in][in]*pHit*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- [in]*x*  
- [in]*y*  
- [in]*pHit*  
+*pWnd*<br/>
+[in][in]*x*  
+*y*<br/>
+[in][in]*pHit*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrameWnd*  
- 功能区栏的父级主框架窗口的指针。  
+*pFrameWnd*<br/>
+[in]功能区栏的父级主框架窗口的指针。  
   
- [in]*wParam*  
- 键已按下的虚拟键代码。  
+*wParam*<br/>
+[in]键已按下的虚拟键代码。  
   
- [in]*lParam*  
- 当键已按下键盘状态标志。  
+*lParam*<br/>
+[in]当键已按下键盘状态标志。  
   
 ### <a name="return-value"></a>返回值  
  处理键击事件; 如果为 TRUE否则为 FALSE。  
@@ -1456,14 +1456,14 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrameWnd*  
- 功能区栏的父级主框架窗口的指针。  
+*pFrameWnd*<br/>
+[in]功能区栏的父级主框架窗口的指针。  
   
- [in]*wParam*  
- 密钥被释放的虚拟键代码。  
+*wParam*<br/>
+[in]密钥被释放的虚拟键代码。  
   
- [in]*lParam*  
- 未使用此参数。  
+*lParam*<br/>
+[in]未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
  处理键击事件; 如果为 TRUE否则为 FALSE。  
@@ -1487,8 +1487,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pMsg*  
- 指向一条消息。  
+*pMsg*<br/>
+[in]指向一条消息。  
   
 ### <a name="return-value"></a>返回值  
  如果消息已处理，通过功能区栏; 则为 TRUE否则为 FALSE。  
@@ -1533,8 +1533,8 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 在功能区栏中包含的功能区类别列表类别的从零开始的索引。  
+*nIndex*<br/>
+[in]在功能区栏中包含的功能区类别列表类别的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的功能区类别已删除，则为 TRUE否则为 FALSE。  
@@ -1552,11 +1552,11 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pCategory*  
- 在功能区栏中包含一个功能区类别。  
+*pCategory*<br/>
+[in]在功能区栏中包含一个功能区类别。  
   
- [in]*bForceRestore*  
- 最大化功能区栏，如果它最小化; 则为 TRUE如果为 FALSE 的弹出窗口中显示活动类别，最小化功能区栏时。  
+*bForceRestore*<br/>
+[in]最大化功能区栏，如果它最小化; 则为 TRUE如果为 FALSE 的弹出窗口中显示活动类别，最小化功能区栏时。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的类别是否设置为活动类别; 则为 TRUE否则为 FALSE。  
@@ -1574,8 +1574,8 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指向的 MDI 子窗口的指针。  
+*pWnd*<br/>
+[in]指向的 MDI 子窗口的指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1589,11 +1589,11 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pButton*  
- 指向应用程序功能区按钮的指针。  
+*pButton*<br/>
+[in]指向应用程序功能区按钮的指针。  
   
- [in]*sizeButton*  
- 应用程序功能区按钮的大小。  
+*sizeButton*<br/>
+[in]应用程序功能区按钮的大小。  
   
 ### <a name="remarks"></a>备注  
  应用程序功能区按钮是位于功能区控件的左上角的大圆的按钮。  
@@ -1614,14 +1614,14 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdID*  
- 功能区元素的命令 ID。  
+*uiCmdID*<br/>
+[in]功能区元素的命令 ID。  
   
- [in]*lpszKeys*  
- 快捷键提示。  
+*lpszKeys*<br/>
+[in]快捷键提示。  
   
- [in]*lpszMenuKeys*  
- 菜单快捷键提示。  
+*lpszMenuKeys*<br/>
+[in]菜单快捷键提示。  
   
 ### <a name="return-value"></a>返回值  
  如果至少一个功能区元素的键提示设置; 则为 TRUE否则为 FALSE。  
@@ -1639,11 +1639,11 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pLevel*  
- 与当前的键盘导航对象的指针。  
+*pLevel*<br/>
+[in]与当前的键盘导航对象的指针。  
   
- [in]*bSetFocus*  
- 若要将键盘焦点设置到功能区栏则为 TRUE。  
+*bSetFocus*<br/>
+[in]若要将键盘焦点设置到功能区栏则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  功能区栏的键盘导航开始时在用户按 ALT 或 F10 键。 用户通过按快捷键提示的功能区栏上选择下一步导航级别。 用户可以通过按 esc 键返回到上一个导航级别。  
@@ -1658,11 +1658,11 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMax*  
- 为 TRUE，则在功能区栏; 上显示的 MDI 子窗口的系统按钮为 FALSE，则从功能区栏中删除的 MDI 子窗口的系统按钮。  
+*bMax*<br/>
+[in]为 TRUE，则在功能区栏; 上显示的 MDI 子窗口的系统按钮为 FALSE，则从功能区栏中删除的 MDI 子窗口的系统按钮。  
   
- [in]*pWnd*  
- 指向功能区栏的主框架窗口的指针。  
+*pWnd*<br/>
+[in]指向功能区栏的主框架窗口的指针。  
   
 ### <a name="remarks"></a>备注  
  最大化的 MDI 子窗口时，功能区栏选项卡行中显示的 MDI 子窗口的系统按钮。  
@@ -1677,11 +1677,11 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lstCommands*  
- 要放置在快速访问工具栏上的命令列表。  
+*lstCommands*<br/>
+[in]要放置在快速访问工具栏上的命令列表。  
   
- [in]*bRecalcLayout*  
- 如果想要添加功能区元素，则后重绘功能区FALSE 否则为。  
+*bRecalcLayout*<br/>
+[in]如果想要添加功能区元素，则后重绘功能区FALSE 否则为。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`SetQuickAccessCommands`中的方法`CMFCRibbonBar`类。  
@@ -1696,8 +1696,8 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*状态*  
- 快速访问工具栏默认状态。  
+*state*<br/>
+[in]快速访问工具栏默认状态。  
   
 ### <a name="remarks"></a>备注  
  快速访问工具栏状态包括一系列命令和它们的可见性。  
@@ -1715,8 +1715,8 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bOnTop*  
- 为 true，则位置上方功能区栏; 的快速访问工具栏为 FALSE，则位置快速访问工具栏功能区栏的下方。  
+*bOnTop*<br/>
+[in]为 true，则位置上方功能区栏; 的快速访问工具栏为 FALSE，则位置快速访问工具栏功能区栏的下方。  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  设置工具提示的功能区栏固定宽度的常规和大型大小。  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nWidthRegular*  
- 宽度，以像素为单位，正则表达式的固定大小的工具提示。  
+*nWidthRegular*<br/>
+[in]宽度，以像素为单位，正则表达式的固定大小的工具提示。  
   
- [in]*nWidthLargeImage*  
- 宽度，以像素为单位的大型固定的大小调整工具提示。  
+*nWidthLargeImage*<br/>
+[in]宽度，以像素为单位的大型固定的大小调整工具提示。  
   
 ### <a name="remarks"></a>备注  
  将参数设置为 0 会导致相应的宽度，以改变。  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nIndex*  
- 功能区类别的索引。  
+*nIndex*<br/>
+[in]功能区类别的索引。  
   
- [in]*bShow*  
- 如果为 TRUE，显示该功能区类别。否则，隐藏功能区类别。  
+*bShow*<br/>
+[in]如果为 TRUE，显示该功能区类别。否则，隐藏功能区类别。  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  显示或隐藏具有指定 ID 的上下文类别。  
@@ -1763,11 +1763,11 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiContextID*  
- 上下文类别 id。  
+*uiContextID*<br/>
+[in]上下文类别 id。  
   
- [in]*bShow*  
- 如果为 TRUE，显示具有指定的 ID; 的类别否则，隐藏的类别，具有指定 id。  
+*bShow*<br/>
+[in]如果为 TRUE，显示具有指定的 ID; 的类别否则，隐藏的类别，具有指定 id。  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  在功能区栏上显示每个功能区元素的键提示。  
@@ -1798,8 +1798,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nChar*  
- 用户击键字符代码。  
+*NChar*<br/>
+[in]用户击键字符代码。  
   
 ### <a name="return-value"></a>返回值  
  如果已由功能区栏; 处理的字符代码，则为 TRUE否则为 FALSE。  

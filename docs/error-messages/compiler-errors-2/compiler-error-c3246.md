@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3246 |Microsoft 文档
+title: 编译器错误 C3246 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7feedafc4c965912bcb8ee022601e52d0c0f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a588067fa21e0aeee54516bcec28cdf3648ac9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047806"
 ---
 # <a name="compiler-error-c3246"></a>编译器错误 C3246
-“class”: 无法从“type”继承，因为它已声明为“sealed”  
-  
-标记为 [sealed](../../windows/sealed-cpp-component-extensions.md) 的类不能为任何其他类的基类。  
-  
-以下示例生成 C3246：  
-  
-```  
-// C3246_2.cpp  
-// compile with: /clr /LD  
-ref class X sealed {};  
-  
-ref class Y : public X {}; // C3246  
-```  
+
+“class”: 无法从“type”继承，因为它已声明为“sealed”
+
+标记为 [sealed](../../windows/sealed-cpp-component-extensions.md) 的类不能为任何其他类的基类。
+
+以下示例生成 C3246：
+
+```
+// C3246_2.cpp
+// compile with: /clr /LD
+ref class X sealed {};
+
+ref class Y : public X {}; // C3246
+```

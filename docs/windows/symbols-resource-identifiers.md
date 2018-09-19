@@ -1,5 +1,5 @@
 ---
-title: 符号： 资源标识符 |Microsoft Docs
+title: 符号： 资源标识符 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,25 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- symbols, resource identifiers
-- symbols, creating
+- symbols [C++], resource identifiers
+- symbols [C++], creating
 - resource symbols
-- symbols, editing
-- resource editors, resource symbols
+- symbols [C++], editing
+- resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1914f13a74a9af33fc2008f759062ea22c20c5b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a1a0b16ebee0ebac141d5c1675d7ff7560b374b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604333"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318201"
 ---
-# <a name="symbols-resource-identifiers"></a>符号：资源标识符
+# <a name="symbols-resource-identifiers-c"></a>符号： 资源标识符 （c + +）
 
 符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如：
 
@@ -45,8 +45,7 @@ IDC_EDITNAME = 5100
 > [!NOTE]
 > 从一个.rc 文件向另一个复制资源或资源对象时，Visual C++ 可更改传输资源的符号值，或同时更改符号名和符号值，以避免与现有文件中的符号名或符号值发生冲突。
 
-随着应用程序大小和复杂度的增长，资源和符号的数量也随之增加。 跟踪分散在多个文件中的大量符号就变得尤为困难。 
-  [资源符号对话框](../windows/resource-symbols-dialog-box.md) 可通过提供一个中心工具来简化符号管理，使用该工具可执行以下操作：
+随着应用程序大小和复杂度的增长，资源和符号的数量也随之增加。 跟踪分散在多个文件中的大量符号就变得尤为困难。 [资源符号对话框](../windows/resource-symbols-dialog-box.md) 可通过提供一个中心工具来简化符号管理，使用该工具可执行以下操作：
 
 - [查看资源符号](../windows/viewing-resource-symbols.md)
 

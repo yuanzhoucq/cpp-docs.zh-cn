@@ -14,106 +14,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1c0d7a50be0ab940ebff82cd8a21fb5ac3aed075
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106984"
 ---
 # <a name="member-function-templates"></a>成员函数模板
 
-术语成员模板引用了成员函数模板和嵌套类模板。 成员函数模板是类或类模板的成员的模板函数。  
-  
- 成员函数可以是多个环境中的函数模板。 类模板的所有函数都是泛型的，但却不称为成员模板或成员函数模板。 如果这些成员函数采用其自己的模板自变量，则将它们视为成员函数模板。  
-  
+术语成员模板引用了成员函数模板和嵌套类模板。 成员函数模板是类或类模板的成员的模板函数。
+
+成员函数可以是多个环境中的函数模板。 类模板的所有函数都是泛型的，但却不称为成员模板或成员函数模板。 如果这些成员函数采用其自己的模板自变量，则将它们视为成员函数模板。
+
 ## <a name="example"></a>示例
 
- 非模板或模板类的成员函数模板将声明为带有其模板参数的函数模板。  
-  
+非模板或模板类的成员函数模板将声明为带有其模板参数的函数模板。
+
 ```cpp
-// member_function_templates.cpp  
-struct X  
-{  
-   template <class T> void mf(T* t) {}  
-};  
-  
-int main()  
-{  
-   int i;  
-   X* x = new X();  
-   x->mf(&i);  
-}  
-```  
-  
+// member_function_templates.cpp
+struct X
+{
+   template <class T> void mf(T* t) {}
+};
+
+int main()
+{
+   int i;
+   X* x = new X();
+   x->mf(&i);
+}
+```
+
 ## <a name="example"></a>示例
 
- 以下示例显示模板类的成员函数模板。  
-  
+以下示例显示模板类的成员函数模板。
+
 ```cpp
-// member_function_templates2.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="example"></a>示例
-  
-```cpp
-// defining_member_templates_outside_class.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u);  
-};  
-  
-template<typename T> template <typename U>  
-void X<T>::mf(const U &u)  
-{  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+// member_function_templates2.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u)
+   {
+   }
+};
+
+int main()
+{
+}
+```
+
 ## <a name="example"></a>示例
 
- 局部类不允许具有成员模板。  
-  
- 当使用与基类虚函数相同的名称进行声明时，成员模板函数不能是虚函数并且不能从基类重写虚函数。  
-  
-下面的示例演示的模板化用户定义的转换：  
-  
 ```cpp
-// templated_user_defined_conversions.cpp  
-template <class T>  
-struct S  
-{  
-   template <class U> operator S<U>()  
-   {  
-      return S<U>();  
-   }  
-};  
-  
-int main()  
-{  
-   S<int> s1;  
-   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.  
-}  
-```  
-  
+// defining_member_templates_outside_class.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u);
+};
+
+template<typename T> template <typename U>
+void X<T>::mf(const U &u)
+{
+}
+
+int main()
+{
+}
+```
+
+## <a name="example"></a>示例
+
+局部类不允许具有成员模板。
+
+当使用与基类虚函数相同的名称进行声明时，成员模板函数不能是虚函数并且不能从基类重写虚函数。
+
+下面的示例演示的模板化用户定义的转换：
+
+```cpp
+// templated_user_defined_conversions.cpp
+template <class T>
+struct S
+{
+   template <class U> operator S<U>()
+   {
+      return S<U>();
+   }
+};
+
+int main()
+{
+   S<int> s1;
+   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.
+}
+```
+
 ## <a name="see-also"></a>请参阅
- [函数模板](../cpp/function-templates.md)
+
+[函数模板](../cpp/function-templates.md)

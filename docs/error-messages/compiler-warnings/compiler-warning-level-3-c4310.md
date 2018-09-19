@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4310 |Microsoft 文档
+title: 编译器警告 （等级 3） C4310 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3ab8ba6eb9175ad3f567408faa1f78c09a6f6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 410db9aa1dee4c0a75b3e1df9d1b019cef736e34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039447"
 ---
 # <a name="compiler-warning-level-3-c4310"></a>编译器警告（等级 3）C4310
-强制转换截断常量值  
-  
- 常量值被强制转换为更小的类型。 编译器将执行转换，将截断数据。 下面的示例生成 C4310:  
-  
-```  
-// C4310.cpp  
-// compile with: /W4  
-int main() {  
-   long int a;  
-   a = (char) 128;   // C4310, use value 0-127 to resolve  
-}  
+
+类型强制转换截断常量值
+
+常量值转换为较小的类型。 编译器执行强制转换、 截断数据。 下面的示例生成 C4310:
+
+```
+// C4310.cpp
+// compile with: /W4
+int main() {
+   long int a;
+   a = (char) 128;   // C4310, use value 0-127 to resolve
+}
 ```

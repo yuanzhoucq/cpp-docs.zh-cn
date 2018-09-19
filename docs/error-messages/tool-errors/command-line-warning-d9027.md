@@ -1,5 +1,5 @@
 ---
-title: 命令行警告 D9027 |Microsoft 文档
+title: 命令行警告 D9027 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112520"
 ---
 # <a name="command-line-warning-d9027"></a>命令行警告 D9027
-源文件\<文件名 > 被忽略  
-  
- CL.exe 忽略输入的源文件。  
-  
- 此警告可能引起 /Fo 选项和带有 /c 选项的命令行上输出文件名之间留一个空格。 例如：  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- 因为 /Fo 之间没有空格和`output.obj`，CL.exe 采用`output.obj`作为输入文件的名称。 若要解决此问题，请删除该空格：  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+源文件\<文件名 > 被忽略
+
+CL.exe 忽略输入的源文件。
+
+此警告可能被引起 /Fo 选项与带有 /c 选项的命令行上输出文件名之间留一个空格。 例如：
+
+```
+cl /c /Fo output.obj input.c
+```
+
+因为 /Fo 之间没有空格和`output.obj`，CL.exe 将`output.obj`作为输入文件的名称。 若要解决此问题，请删除空间：
+
+```
+cl /c /Fooutput.obj input.c
 ```

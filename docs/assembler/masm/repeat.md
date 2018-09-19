@@ -1,7 +1,7 @@
 ---
-title: 重复 |Microsoft 文档
+title: 重复 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5210ba1a56f3177a092d86312dc738bfe25d696
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e70fd06e64378cadbb1c64fba4bd566076f3183e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057307"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690012"
 ---
 # <a name="repeat"></a>REPEAT
-标记要重复的块*表达式*时间。 与相同[REPT](../../assembler/masm/rept.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-   REPEAT expression  
-statements  
-ENDM  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+将标记为要重复的块*表达式*时间。 与相同[REPT](../../assembler/masm/rept.md)。
+
+## <a name="syntax"></a>语法
+
+> 重复*表达式*<br/>
+> *语句*<br/>
+> ENDM
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

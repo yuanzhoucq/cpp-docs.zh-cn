@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2201 |Microsoft 文档
+title: 编译器错误 C2201 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea410297cdb8deb45c4376f8736234ad8f69699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b24e18d2f8ffdfa889cac3dae58e66dcb8d7dcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107125"
 ---
 # <a name="compiler-error-c2201"></a>编译器错误 C2201
-identifier： 必须拥有才能导出/导入的外部链接  
-  
- 导出的标识符是`static`。  
-  
- 下面的示例生成 C2286：  
-  
-```  
-// C2201.cpp  
-// compile with: /c  
-__declspec(dllexport) static void func() {}   // C2201 func() is static  
-__declspec(dllexport) void func2() {}   // OK  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [链接的类型](../../cpp/types-of-linkage.md)
+
+identifier： 必须拥有外部链接才能导出/导入
+
+导出的标识符是`static`。
+
+下面的示例生成 C2286：
+
+```
+// C2201.cpp
+// compile with: /c
+__declspec(dllexport) static void func() {}   // C2201 func() is static
+__declspec(dllexport) void func2() {}   // OK
+```
+
+## <a name="see-also"></a>请参阅
+
+[链接的类型](../../cpp/types-of-linkage.md)

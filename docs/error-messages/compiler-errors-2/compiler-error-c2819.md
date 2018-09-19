@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2819 |Microsoft 文档
+title: 编译器错误 C2819 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e89845f8c37884c717e6ab307623a29643df129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e535b47828a70a7a2e52606bc5c9de6ceb62ee48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095417"
 ---
 # <a name="compiler-error-c2819"></a>编译器错误 C2819
-“type”类型没有重载成员“operator ->”  
-  
- 你需要定义`operator->()`若要使用此指针操作。  
-  
- 下面的示例生成 C2819:  
-  
-```  
-// C2819.cpp  
-// compile with: /c  
-class A {  
-   public:  
-      int i;  
-};  
-  
-class B {};  
-  
-void C(B j) {  
-   j->i;   // C2819  
-}  
-  
-class D {  
-   A* pA;  
-  
-   public:  
-      A* operator->() {  
-         return pA;  
-      }  
-};  
-  
-void F(D j) {  
-   j->i;  
-}  
-```  
-  
- 使用时也可能发生 C2819[对于引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。 下面的示例生成 C2819:  
-  
-```  
-// C2819_b.cpp  
-// compile with: /clr  
-ref struct R {  
-   void Test() {}  
-};  
-  
-int main() {  
-   R r;  
-   r->Test();   // C2819  
-   r.Test();   // OK  
-}  
+
+“type”类型没有重载成员“operator ->”
+
+您需要定义`operator->()`方法是使用此指针操作。
+
+下面的示例生成 C2819:
+
+```
+// C2819.cpp
+// compile with: /c
+class A {
+   public:
+      int i;
+};
+
+class B {};
+
+void C(B j) {
+   j->i;   // C2819
+}
+
+class D {
+   A* pA;
+
+   public:
+      A* operator->() {
+         return pA;
+      }
+};
+
+void F(D j) {
+   j->i;
+}
+```
+
+当使用，也会发生 C2819[的引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。 下面的示例生成 C2819:
+
+```
+// C2819_b.cpp
+// compile with: /clr
+ref struct R {
+   void Test() {}
+};
+
+int main() {
+   R r;
+   r->Test();   // C2819
+   r.Test();   // OK
+}
 ```

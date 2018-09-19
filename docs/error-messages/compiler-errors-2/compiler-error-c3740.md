@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3740 |Microsoft 文档
+title: 编译器错误 C3740 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53004e1a26fc0ead32680ac9b37b2e9aaa13087e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6bda1392ae4ebe95c6038b8dd0ec322b32ba4d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044192"
 ---
 # <a name="compiler-error-c3740"></a>编译器错误 C3740
-模板不能发出或接收事件  
-  
- 模板类或结构不能包含[事件](../../cpp/event-handling.md)。  
-  
- 下面的示例生成 C3740:  
-  
-```  
-// C3740.cpp  
-template <typename T>   // Delete the template specification  
-struct E {  
-   __event void f();   // C3740  
-};  
-  
-int main() {  
-}  
+
+模板不能发出或接收事件
+
+模板化类或结构不能包含[事件](../../cpp/event-handling.md)。
+
+下面的示例生成 C3740:
+
+```
+// C3740.cpp
+template <typename T>   // Delete the template specification
+struct E {
+   __event void f();   // C3740
+};
+
+int main() {
+}
 ```

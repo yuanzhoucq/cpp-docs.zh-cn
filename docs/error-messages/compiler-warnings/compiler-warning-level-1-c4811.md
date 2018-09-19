@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4811 |Microsoft 文档
+title: 编译器警告 （等级 1） C4811 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5644a8d372b96c72394760a362376606964c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19d428d592b9bb99c6cc396cb1771f9047fbf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059506"
 ---
 # <a name="compiler-warning-level-1-c4811"></a>编译器警告（等级 1）C4811
-杂注 conform(forScope, show) 的值 == value  
-  
- 你使用 **conform** 杂注的 [“显示”](../../preprocessor/conform.md) 选项，将发出此警告。 *value* 为当前的 conform 值。
+
+杂注 conform(forScope, show) 的值 == value
+
+你使用 **conform** 杂注的 [“显示”](../../preprocessor/conform.md) 选项，将发出此警告。 *value* 为当前的 conform 值。

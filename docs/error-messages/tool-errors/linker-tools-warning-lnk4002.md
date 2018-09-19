@@ -1,5 +1,5 @@
 ---
-title: 链接器工具警告 LNK4002 |Microsoft 文档
+title: 链接器工具警告 LNK4002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107623"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>链接器工具警告 LNK4002
-在对象中定义的符号  
-  
- 以修饰形式，显示的符号，指定在未修饰形式`object`，但找不到为修饰符号的唯一匹配项。 此警告始终前面是警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)并且后跟错误[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)。
+
+在对象中定义的符号
+
+以修饰形式，显示的符号，指定在其未修饰形式`object`，但找不到唯一的匹配项，为修饰符号。 此警告前面始终有警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)和错误后跟[LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md)。

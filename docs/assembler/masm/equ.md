@@ -1,7 +1,7 @@
 ---
-title: 等于 |Microsoft 文档
+title: EQU |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7678cac4c480934fe9f6dd9816e636481c2d64
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 37509a39d2247649c2971932f402a18f3ac667d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681302"
 ---
 # <a name="equ"></a>EQU
-第一个指令将分配数字值*表达式*到*名称*。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      name EQU expression  
-name EQU <text>  
-```  
-  
-## <a name="remarks"></a>备注  
- *名称*不能重新定义更高版本。  
-  
- 指定第二个指令分配*文本*到*名称*。 *名称*可以分配不同*文本*更高版本。 请参阅[TEXTEQU](../../assembler/masm/textequ.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+第一个指令将分配数值*表达式*到*名称*。
+
+## <a name="syntax"></a>语法
+
+> *名称*EQU*表达式*
+
+> *名称*EQU \<*文本*>
+
+## <a name="remarks"></a>备注
+
+*名称*更高版本不能重新定义。
+
+指定第二个指令分配*文本*到*名称*。 *名称*可以分配不同*文本*更高版本。 请参阅[TEXTEQU](../../assembler/masm/textequ.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

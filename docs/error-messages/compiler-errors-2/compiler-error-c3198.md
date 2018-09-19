@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3198 |Microsoft 文档
+title: 编译器错误 C3198 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0516e7cae12e544195d157781e6ed86923470420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb91d6f7b3ef6b8204a5f8bfb753db98ab6f93d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023379"
 ---
 # <a name="compiler-error-c3198"></a>编译器错误 C3198
-使用无效的浮点杂注： fenv_access 杂注仅在精确的模式下运行  
-  
- [fenv_access](../../preprocessor/fenv-access.md)杂注已在使用[/fp](../../build/reference/fp-specify-floating-point-behavior.md)以外的设置 **/fp： 精确**。  
-  
- 下面的示例生成 C3198:  
-  
-```  
-// C3198.cpp  
-// compile with: /fp:fast  
-#pragma fenv_access(on)   // C3198  
+
+使用浮点 pragma 无效： fenv_access 杂注仅在精确模式下运行
+
+[fenv_access](../../preprocessor/fenv-access.md)下使用杂注[/fp](../../build/reference/fp-specify-floating-point-behavior.md)而不设置 **/fp： 精确**。
+
+下面的示例生成 C3198:
+
+```
+// C3198.cpp
+// compile with: /fp:fast
+#pragma fenv_access(on)   // C3198
 ```

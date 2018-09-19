@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029723"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
+
 提供一个实现[ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 命令类派生自`ICommandTextImpl`。 
+
+*T*<br/>
+命令类派生自`ICommandTextImpl`。 
 
 ## <a name="requirements"></a>要求  
- **标头：** altdb.h  
+
+**标头：** altdb.h  
   
 ## <a name="members"></a>成员  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE ICommandTextImpl
 |[m_strCommandText](#strcommandtext)|存储命令文本。|  
   
 ## <a name="remarks"></a>备注  
- 在命令上必需的接口。  
+
+在命令上必需的接口。  
  
 ## <a name="getcommandtext"></a> Icommandtextimpl:: Getcommandtext
+
 返回到最后一次调用设置的文本命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。  
   
 ### <a name="syntax"></a>语法  
@@ -87,9 +92,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
+
+请参阅[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\))中*OLE DB 程序员参考*。 *PguidDialect*默认情况下忽略参数。  
 
 ## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
+
 设置替换现有命令文本的命令文本。  
   
 ### <a name="syntax"></a>语法  
@@ -100,9 +107,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*。 
+
+请参阅[icommandtext:: Setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
+
 存储命令文本字符串。  
   
 ### <a name="syntax"></a>语法  
@@ -112,5 +121,6 @@ CComBSTR m_strCommandText;
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

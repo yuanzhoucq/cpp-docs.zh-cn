@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954716"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726227"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*要映射的键值。
+*keyval*<br/>
+要映射的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -560,8 +561,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket*  
- 存储桶编号。
+*nbucket*<br/>
+存储桶编号。
 
 ### <a name="remarks"></a>备注
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -924,8 +925,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1189,8 +1190,8 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1259,17 +1260,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>参数
 
-*Where*  
- 要移除的元素的位置。
+*Where*<br/>
+要移除的元素的位置。
 
-*第一个*  
- 要移除的第一个元素的位置。
+*第一个*<br/>
+要移除的第一个元素的位置。
 
-*最后一个*  
- 要移除的刚超出最后一个元素的位置。
+*最后一个*<br/>
+要移除的刚超出最后一个元素的位置。
 
-*Key*  
- 要移除的元素的关键值。
+*Key*<br/>
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1291,8 +1292,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval*  
- 要搜索的键值。
+*keyval*<br/>
+要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2008,8 +2009,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-*factor*  
- 新的最大加载因子。
+*factor*<br/>
+新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2141,7 +2142,7 @@ Ty& operator[](Key&& keyval);
 
 |参数|描述|
 |-|-|
-|*Keyval*|要查找或插入的键值。|
+|*keyval*|要查找或插入的键值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2380,8 +2381,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets*  
- 请求的存储桶数。
+*nbuckets*<br/>
+请求的存储桶数。
 
 ### <a name="remarks"></a>备注
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2564,8 +2565,8 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>参数
 
-*right*  
- 要交换的容器。
+*right*<br/>
+要交换的容器。
 
 ### <a name="remarks"></a>备注
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2679,7 +2680,7 @@ unordered_map(
 |*Al*|要存储的分配器对象。|
 |*Comp*|要存储的比较函数对象。|
 |*哈希*|要存储的哈希函数对象。|
-|*bucket_count*|存储桶的最少数量。|
+|*Bucket_count*|存储桶的最少数量。|
 |右侧|要复制的容器。|
 |*第一个*||
 |*最后一个*||
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

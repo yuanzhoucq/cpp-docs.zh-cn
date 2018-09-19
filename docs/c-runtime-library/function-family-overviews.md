@@ -8,18 +8,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be4ca30d42ab4404c5df229a9148d1b4d23dad99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aae6f2d901f4b7f0385cf5a78c303250dc0a956
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076679"
 ---
 # <a name="function-family-overviews"></a>函数系列概述
-在此处插入介绍。  
-  
-## <a name="section-heading"></a>节标题  
- 在此处插入节正文。  
-  
-### <a name="subsection-heading"></a>小节标题  
- 在此处插入小节正文。
+
+在此处插入介绍。
+
+## <a name="section-heading"></a>节标题
+
+在此处插入节正文。
+
+### <a name="subsection-heading"></a>小节标题
+
+在此处插入小节正文。

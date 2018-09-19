@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd7a429bbddc81458538ace0ccc138dec65b9aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955242"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106558"
 ---
 # <a name="moveiterator-class"></a>move_iterator 类
 
@@ -157,7 +157,8 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*要用作存储的迭代器的迭代器。
+*right*<br/>
+将用作存储的迭代器的迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -173,7 +174,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*偏移量添加到当前位置，以确定新的当前位置。
+*_Off*<br/>
+将偏移量添加到当前位置，以确定新的当前位置。
 
 ### <a name="return-value"></a>返回值
 

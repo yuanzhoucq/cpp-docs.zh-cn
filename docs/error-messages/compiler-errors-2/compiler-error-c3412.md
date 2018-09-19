@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3412 |Microsoft 文档
+title: 编译器错误 C3412 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5b2c86b91160eb7ae342b39ea6a63ffad364bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a04de132c85cb09a960d3a0edfcb3b07127119
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054554"
 ---
 # <a name="compiler-error-c3412"></a>编译器错误 C3412
-'template': 无法使当前作用域中的模板专用化  
-  
- 模板不能在类范围内，只能在全局或命名空间范围专用化。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3412。  
-  
-```  
-// C3412.cpp  
-template <class T>  
-struct S {  
-   template <>  
-   struct S<int> {};   // C3412 in a class  
-};  
-```  
-  
-## <a name="example"></a>示例  
- 下面的示例演示了可能的解决方法。  
-  
-```  
-// C3412b.cpp  
-// compile with: /c  
-template <class T>  
-struct S {};  
-  
-template <>  
-struct S<int> {};  
+
+模板： 不能使当前作用域中的模板专用化
+
+模板不能在类范围内，只能在全局或命名空间范围内进行专用化。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3412。
+
+```
+// C3412.cpp
+template <class T>
+struct S {
+   template <>
+   struct S<int> {};   // C3412 in a class
+};
+```
+
+## <a name="example"></a>示例
+
+下面的示例显示了可能的解决方法。
+
+```
+// C3412b.cpp
+// compile with: /c
+template <class T>
+struct S {};
+
+template <>
+struct S<int> {};
 ```

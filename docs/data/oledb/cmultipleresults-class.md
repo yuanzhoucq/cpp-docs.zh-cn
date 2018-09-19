@@ -1,5 +1,5 @@
 ---
-title: CMultipleResults 类 |Microsoft 文档
+title: CMultipleResults 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2b4f147943e09c0203f863d7514566de8466acf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071557"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 类
-如果你想要处理多个结果集的命令，使用`CMultipleResults`为`CCommand`模板自变量*TMultiple*。  
+
+如果你想要处理多个结果集的命令，使用`CMultipleResults`有关`CCommand`模板自变量*TMultiple*。  
   
 ## <a name="syntax"></a>语法
 
@@ -36,11 +37,14 @@ class CMultipleResults
 ```  
   
 ## <a name="remarks"></a>备注  
- 若要处理多个结果集， [CCommand](../../data/oledb/ccommand-class.md)必须从此类继承。  
+
+若要处理多个结果集， [CCommand](../../data/oledb/ccommand-class.md)必须从此类继承。  
   
 ## <a name="requirements"></a>要求  
- **标头：** atldbcli  
+
+**标头：** atldbcli  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

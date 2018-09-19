@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d85f50889f75f387fc6455872a38396e7b9728dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203273"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103235"
 ---
 # <a name="complex-class"></a>complex 类
 
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*用于初始化正在构造的复数的实部的值。
+*_RealVal*<br/>
+用于初始化正在构造的复数的实部值。
 
-*_ImagVal*虚部用于初始化正在构造的复数的值。
+*_ImagVal*<br/>
+用于初始化正在构造的复数的虚部值。
 
-*complexNum*其实部和虚部用于初始化正在构造的复数的复数。
+*complexNum*<br/>
+一个复数，其实部和虚部用于初始化正在构造的复数。
 
 ### <a name="remarks"></a>备注
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*右*提取其虚数值的复数。
+*right*<br/>
+要提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*复数或属于相同类型作为参数的目标复数的数字。
+*right*<br/>
+复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*右*复数或属于相同类型作为参数的目标复数的数字。
+*right*<br/>
+复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*要从目标复数减去的复数。
+*complexNum*<br/>
+要从目标复数减去的复数。
 
-*_RealPart*要从目标复数减去的实数。
+*_RealPart*<br/>
+要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
 
@@ -503,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*要从目标复数减去的复数。
+*complexNum*<br/>
+要从目标复数减去的复数。
 
-*_RealPart*要从目标复数减去的实数。
+*_RealPart*<br/>
+要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右*复数或属于相同类型作为参数的目标复数的数字。
+*right*<br/>
+复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  complex::real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*右*其实际值是要提取的复数。
+*right*<br/>
+要提取其实数值的复数。
 
 ### <a name="return-value"></a>返回值
 
@@ -792,5 +804,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>请参阅
 
-[复杂的成员](https://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

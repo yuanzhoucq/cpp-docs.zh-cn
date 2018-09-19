@@ -1,7 +1,7 @@
 ---
-title: ML 非致命错误 A2189 |Microsoft 文档
+title: ML 非致命错误 A2189 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df636f66ffe30aacc709b603a3d8e98e0f860371
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3d564166e770f263b12dbc383ba500ceb51af29e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056485"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676683"
 ---
 # <a name="ml-nonfatal-error-a2189"></a>ML 非致命错误 A2189
-**与段对齐方式的组合无效**  
-  
- 指定的对齐方式**ALIGN**或`EVEN`指令是大于所指定的当前段对齐方式**段**指令。  
-  
-## <a name="see-also"></a>请参阅  
- [ML 错误消息](../../assembler/masm/ml-error-messages.md)
+
+**与段对齐方式的组合无效**
+
+通过指定的对齐方式**对齐**或`EVEN`指令已大于当前段由指定的对齐方式**段**指令。
+
+## <a name="see-also"></a>请参阅
+
+[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

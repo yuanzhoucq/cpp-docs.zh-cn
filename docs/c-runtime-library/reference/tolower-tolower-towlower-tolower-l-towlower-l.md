@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023661"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
+
 将字符转换为小写。
 
 ## <a name="syntax"></a>语法
@@ -95,13 +96,13 @@ int _towlower_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程将转换的副本*c*到较低的情况下，如果转换是可行的并返回结果。 没有保留任何返回值以指示错误。
+每个例程将转换的副本*c*到较低的情况下，如果转换是可行的并返回结果。 没有保留任何返回值以指示错误。
 
 ## <a name="remarks"></a>备注
 
-如果可行且相关，则其中的各个例程将指定大写字母转换为小写字母。 大小写转换**towlower**是特定于区域设置。 只改变与当前区域设置相关的字符的大小写。 功能，而不必 **_l**后缀使用当前设置区域设置。 这些函数具有的版本 **_l**后缀采用作为参数的区域设置，并使用，而不是当前设置区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果可行且相关，则其中的各个例程将指定大写字母转换为小写字母。 大小写转换**towlower**是特定于区域设置的。 只改变与当前区域设置相关的字符的大小写。 功能而无需 **_l**后缀使用当前设置的区域设置。 具有这些函数的版本 **_l**后缀将区域设置用作参数并使用它而不是当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-为了使 **_tolower**提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必须同时返回非零值。
+为了使 **_tolower**来提供预期的结果[__isascii](isascii-isascii-iswascii.md)并[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必须均返回非零值。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -111,11 +112,11 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**和 **_towlower_l**具有任何区域设置依赖项，并且不应直接调用。 它们提供供内部使用 **_totlower_l**。
+> **_tolower_l**并 **_towlower_l**没有区域设置相关性，并且不应直接调用。 它们提供供内部使用 **_totlower_l**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|

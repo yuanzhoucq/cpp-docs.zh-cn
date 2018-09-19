@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4389 |Microsoft 文档
+title: 编译器警告 （等级 C4389 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a51ad6c6cf01744a99402c4db9c7cbd8f82339
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d67ae253926e79b6bc13d339ac303cca767090
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022560"
 ---
 # <a name="compiler-warning-level-4-c4389"></a>编译器警告（等级 4）C4389
-operator： 有符号/无符号不匹配  
-  
- 运算涉及有符号和无符号变量。 这可能导致数据丢失。  
-  
- 下面的示例生成 C4389:  
-  
-```  
-// C4389.cpp  
-// compile with: /W4  
-#pragma warning(default: 4389)  
-  
-int main()  
-{  
-   int a = 9;  
-   unsigned int b = 10;  
-   if (a == b)   // C4389  
-      return 0;  
-   else  
-      return 0;  
-};  
+
+operator： 有符号/无符号不匹配
+
+操作涉及符号和无符号的变量。 这可能导致数据丢失。
+
+下面的示例生成 C4389:
+
+```
+// C4389.cpp
+// compile with: /W4
+#pragma warning(default: 4389)
+
+int main()
+{
+   int a = 9;
+   unsigned int b = 10;
+   if (a == b)   // C4389
+      return 0;
+   else
+      return 0;
+};
 ```

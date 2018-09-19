@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2104 |Microsoft 文档
+title: 编译器错误 C2104 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f3a9173f1141c055547149bc18b5f96a3a475b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e35be180be7ded6a65585566dff6173a13ba7821
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083374"
 ---
 # <a name="compiler-error-c2104"></a>编译器错误 C2104
-位域上的“&”被忽略  
-  
- 不能采用位字段的地址。  
-  
- 下面的示例生成 C2104:  
-  
-```  
-// C2104.cpp  
-struct X {  
-   int sb : 1;  
-};  
-  
-int main() {  
-   X x;  
-   &x.sb;   // C2104   
-   x.sb;   // OK  
-}  
+
+位域上的“&”被忽略
+
+不能采用位域的地址。
+
+下面的示例生成 C2104:
+
+```
+// C2104.cpp
+struct X {
+   int sb : 1;
+};
+
+int main() {
+   X x;
+   &x.sb;   // C2104
+   x.sb;   // OK
+}
 ```

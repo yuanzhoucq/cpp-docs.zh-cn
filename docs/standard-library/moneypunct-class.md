@@ -56,12 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a3c45dc2762c85a2b0f191b8dcf858ccb33b24b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957504"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110092"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
@@ -76,9 +76,11 @@ class moneypunct;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序中用于对字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对字符进行编码的类型。
 
-*Intl*标志，指定是否要遵守国际约定。
+*Intl*<br/>
+一种用于指定是否遵守国际约定的标志。
 
 ## <a name="remarks"></a>备注
 
@@ -442,14 +444,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="grouping"></a>  moneypunct::grouping
@@ -511,14 +513,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="moneypunct"></a>  moneypunct::moneypunct
@@ -531,7 +533,8 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6da18217c45162dc6e275824d56ea8378b8782
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19427d24d61581d207101605a8456e8067ade929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589652"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713838"
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 
@@ -40,11 +40,11 @@ inline bool SafeNotEquals (
 
 ### <a name="parameters"></a>参数
 
-[in]*t*  
-要比较的第一个数字。 其类型必须为`T`。
+*t*<br/>
+[in]要比较的第一个数字。 其类型必须为`T`。
 
-[in]*u*  
-要比较的第二个数字。 其类型必须为`U`。
+*u*<br/>
+[in]要比较的第二个数字。 其类型必须为`U`。
 
 ## <a name="return-value"></a>返回值
 

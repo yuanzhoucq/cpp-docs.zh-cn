@@ -1,5 +1,5 @@
 ---
-title: scheduler_worker_creation_error 类 |Microsoft 文档
+title: scheduler_worker_creation_error 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114379"
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 类
 此类描述因未能在并发运行时中创建辅助执行上下文而引发的异常。  
@@ -71,11 +71,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
- `_Hresult`  
- `HRESULT`导致异常的错误值。  
+*_Hresult*<br/>
+`HRESULT`错误导致异常的值。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

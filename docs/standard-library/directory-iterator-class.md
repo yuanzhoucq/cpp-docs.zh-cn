@@ -1,7 +1,7 @@
 ---
 title: directory_iterator 类 | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46e4d8fc7b59f8b4919a7e36a85f29f626aa80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd5fedb8869533755546089bdee903403f30dcea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845825"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726370"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 类
 
-描述通过目录中的文件名排序的输入迭代器。 对于迭代器 X，表达式 *X 计算到 directory_entry 类对文件名及与其状态有关的任何信息进行包装的对象。
+描述通过目录中的文件名排序的输入迭代器。 迭代器`X`，表达式`*X`的计算结果为类的对象`directory_entry`文件名和有关其状态的任何包装。
 
-该类存储类型路径的对象（此处出于阐述的目的称为 mydir，它表示要对其进行排序的目录的名称）和类型 directory_entry 的对象（此处称为 myentry，它表示目录序列中的当前文件名）。 类型 directory_entry 的默认构造对象具有一个空的 mydir 路径名称并表示序列末迭代器。
+类存储类型的对象`path`，称为`mydir`在此处阐述，它表示要进行序列化的目录的名称的目的和类型的对象供`directory_entry`调用`myentry`这里，表示当前目录序列中的文件名。 类型的默认构造对象`directory_entry`具有空`mydir`路径名，表示序列末迭代器。
 
-例如，给定具有条目 def 和 ghi 的目录 abc，则代码：
+例如，给定的目录`abc`与条目`def`和`ghi`，代码：
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-将通过参数路径 ("abc/def") 和路径 ("abc/ghi") 调用访问。
+将调用`visit`使用参数`path("abc/def")`和`path("abc/ghi")`。
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -62,7 +62,40 @@ ms.locfileid: "33845825"
 class directory_iterator;
 ```
 
-## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[directory_iterator](#directory_iterator)|构造一个目录中的文件名排序的输入迭代器。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[增量](#increment)|尝试转到目录中的下一个文件名。|
+
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator!=](#op_neq)|返回 `!(*this == right)`。|
+|[operator=](#op_as)|默认成员赋值运算符的行为符合预期。|
+|[operator==](#op_eq)|返回 **，则返回 true**仅当这两种`*this`并*右*为序列末迭代器或 both 是否未结束的-为序列末迭代。|
+|[operator*](#op_star)|返回 `myentry`。|
+|[operator->](#op_cast)|返回 `&**this`。|
+|[operator++](#op_increment)|调用`increment()`，然后返回`*this`，或创建的对象，调用副本`increment()`，然后返回副本。|
+
+## <a name="requirements"></a>要求
+
+**标头：**\<experimental/filesystem>
+
+**命名空间：** std::experimental::filesystem
+
+## <a name="directory_iterator"></a> directory_iterator:: directory_iterator
+
+第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数存储*pval*中`mydir`，然后尝试打开并读取`mydir`作为目录。 如果成功，它们将存储的第一个文件名的目录中`myentry`; 否则它们将生成一个序列末迭代器。
+
+默认构造函数的行为符合预期。
 
 ```cpp
 directory_iterator() noexcept;
@@ -73,73 +106,94 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数将 pval 存储在 mydir 中，然后尝试将 mydir 作为目录打开和读取。 如果成功，它们会将目录中的第一个文件名存储在 myentry 中；否则它们将生成序列末迭代器。
+### <a name="parameters"></a>参数
 
-默认构造函数的行为符合预期。
+*pval*<br/>
+存储的文件名称路径。
 
-## <a name="directoryiteratorincrement"></a>directory_iterator::increment
+*ec*<br/>
+状态错误代码。
+
+*directory_iterator*<br/>
+存储的对象。
+
+## <a name="increment"></a> directory_iterator:: increment
+
+该函数尝试转到目录中的下一个文件名。 如果成功，它将该文件名存储在`myentry`; 否则它会生成序列末迭代器。
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-该函数尝试转到目录中的下一个文件名。 如果成功，它会将该文件名存储在 myentry 中；否则它会生成一个序列末迭代器。
+## <a name="op_neq"></a> directory_iterator:: operator ！ =
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator!=
+该成员运算符将返回 `!(*this == right)`。
 
 ```cpp
 bool operator!=(const directory_iterator& right) const;
 ```
 
-该成员运算符返回 !(*this == right)。
+### <a name="parameters"></a>参数
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator=
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)要进行比较的`directory_iterator`。
+
+## <a name="op_as"></a> directory_iterator:: operator =
+
+默认成员赋值运算符的行为符合预期。
 
 ```cpp
 directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-默认成员赋值运算符的行为符合预期。
+### <a name="parameters"></a>参数
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator==
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)复制到`directory_iterator`。
+
+## <a name="op_eq"></a> directory_iterator:: operator = =
+
+成员运算符将返回 **，则返回 true**仅当这两种`*this`并*右*为序列末迭代器或 both 是否未结束的-为序列末迭代。
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-仅当 *this 和 right 均为序列末迭代器或均不为序列末迭代器时，此成员运算符才返回 true。
+### <a name="parameters"></a>参数
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator*
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md)要进行比较的`directory_iterator`。
+
+## <a name="op_star"></a> directory_iterator:: operator *
+
+该成员运算符将返回 `myentry`。
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-该成员运算符将返回 myentry。
+## <a name="op_cast"></a> directory_iterator:: operator->
 
-## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->
+成员函数返回 `&**this`。
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-此成员函数返回 &**this。
+## <a name="op_increment"></a> directory_iterator:: operator + +
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator++
+第一个成员函数调用`increment()`，然后返回`*this`。 第二个成员函数生成的对象，调用副本`increment()`，然后返回副本。
 
 ```cpp
 directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-第一个成员函数调用 increment()，然后返回 *this。 第二个成员函数复制该对象，并调用 increment()，然后返回副本。
+### <a name="parameters"></a>参数
 
-## <a name="requirements"></a>要求
-
-**标头：**\<experimental/filesystem>
-
-**命名空间：** std::experimental::filesystem
+*int*<br/>
+增量数。
 
 ## <a name="see-also"></a>请参阅
 

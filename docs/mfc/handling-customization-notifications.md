@@ -1,5 +1,5 @@
 ---
-title: 处理自定义通知 |Microsoft 文档
+title: 处理自定义通知 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9c9931ae6bb83cb6801ac1bcc89359d9d7f468f2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706038"
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。  
   
- 你可以使这些自定义功能对可用用户通过赋予工具栏**CCS_ADJUSTABLE**样式。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示  “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。  
+ 您可以向这些自定义功能提供用户通过赋予工具栏**CCS_ADJUSTABLE**样式。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示  “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。  
   
  工具控件在自定义过程的每一步都会向父窗口发送通知消息。 如果用户按住 SHIFT 键并开始拖动按钮，工具栏将自动处理拖动操作。 工具栏将向父窗口发送 **TBN_QUERYDELETE** 通知消息，确定是否可删除该按钮。 如果父窗口返回 **FALSE**，则结束拖动操作。 否则，工具栏将捕获鼠标输入并等待用户释放鼠标按钮。  
   
@@ -85,115 +85,143 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
   
  这些消息都是 **WM_NOTIFY** 消息。将下列形式的消息映射项添加到所有者窗口消息映射中，就可以在所有者窗口中处理这些消息：  
   
- `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
+```cpp
+ON_NOTIFY( wNotifyCode, idControl, memberFxn )
+```
+
+- **wNotifyCode**
+
+   通知消息标识符代码，如 **TBN_BEGINADJUST**。
+
+- **idControl**
+
+   发送通知的控件的标识符。
+
+- **memberFxn**
+
+   接收到通知时调用的成员函数。  
   
- `wNotifyCode`  
- 通知消息标识符代码，如 **TBN_BEGINADJUST**。  
+成员函数将用下列原型声明：  
   
- `idControl`  
- 发送通知的控件的标识符。  
-  
- `memberFxn`  
- 接收到通知时调用的成员函数。  
-  
- 成员函数将用下列原型声明：  
-  
- `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
-  
+```cpp
+afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
+```
+
  如果消息通知处理程序返回一个值，它应将其放入由 **result** 指向的 *LRESULT*中。  
   
  对于每一条消息， `pNotifyStruct` 不是指向 **NMHDR** 结构，就是指向 **TBNOTIFY** 结构。 这些结构如下所述：  
   
  **NMHDR** 结构包含以下成员：  
   
- `typedef struct tagNMHDR {`  
+```cpp
+typedef struct tagNMHDR {
+    HWND hwndFrom;  // handle of control sending message
+    UINT idFrom;// identifier of control sending message
+    UINT code;  // notification code; see below
+} NMHDR;
+```
+
+- **hwndFrom**
+
+   发送通知的控件的窗口句柄。 要将此句柄转换为 `CWnd` 指针，可使用 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)。  
   
- `HWND hwndFrom;  // handle of control sending message`  
+- **idFrom**
+
+   发送通知的控件的标识符。  
   
- `UINT idFrom;// identifier of control sending message`  
+- **代码**
+
+   通知代码： 此成员可以是特定于控件类型的值，如 **TBN_BEGINADJUST** 或 **TTN_NEEDTEXT**，或者是下面列出的常见通知值之一：  
   
- `UINT code;  // notification code; see below`  
+   - **NM_CLICK** 用户已在控件内单击了鼠标左键。  
   
- `} NMHDR;`  
+   - **NM_DBLCLK** 用户已在控件内双击了鼠标左键。  
   
- **hwndFrom**  
- 发送通知的控件的窗口句柄。 要将此句柄转换为 `CWnd` 指针，可使用 [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle)。  
+   - **NM_KILLFOCUS** 控件已丢失输入焦点。  
   
- **idFrom**  
- 发送通知的控件的标识符。  
+   - **NM_OUTOFMEMORY** 控件无法完成操作，因为没有足够的内存可用。  
   
- **代码**  
- 通知代码： 此成员可以是特定于控件类型的值，如 **TBN_BEGINADJUST** 或 **TTN_NEEDTEXT**，或者是下面列出的常见通知值之一：  
+   - **NM_RCLICK** 用户已在控件内单击了鼠标右键。  
   
--   **NM_CLICK** 用户已在控件内单击了鼠标左键。  
+   - **NM_RDBLCLK** 用户已在控件内双击了鼠标右键。  
   
--   **NM_DBLCLK** 用户已在控件内双击了鼠标左键。  
+   - **NM_RETURN** 控件具有输入焦点并且用户已按了 ENTER 键。  
   
--   **NM_KILLFOCUS** 控件已丢失输入焦点。  
+   - **NM_SETFOCUS** 控件已收到输入焦点。  
   
--   **NM_OUTOFMEMORY** 控件无法完成操作，因为没有足够的内存可用。  
+**TBNOTIFY** 结构包含以下成员：  
   
--   **NM_RCLICK** 用户已在控件内单击了鼠标右键。  
+```cpp
+typedef struct {
+    NMHDR hdr; // information common to all WM_NOTIFY messages
+    int iItem; // index of button associated with notification
+    TBBUTTON tbButton; // info about button associated withnotification
+    int cchText;   // count of characters in button text
+    LPSTR lpszText;// address of button text
+} TBNOTIFY, FAR* LPTBNOTIFY;
+```
   
--   **NM_RDBLCLK** 用户已在控件内双击了鼠标右键。  
+- **hdr**
+
+   所有 **WM_NOTIFY** 消息的公用消息。  
   
--   **NM_RETURN** 控件具有输入焦点并且用户已按了 ENTER 键。  
+- **iItem**
+
+   与通知关联的按钮索引。  
   
--   **NM_SETFOCUS** 控件已收到输入焦点。  
+- **tbButton**
+
+   **TBBUTTON**与通知关联的结构，其中包含有关工具栏按钮的信息。  
   
- **TBNOTIFY** 结构包含以下成员：  
+- **cchText**
+
+   按钮文本中的字符数。  
   
- `typedef struct {`  
+- **lpszText**
+
+   指向按钮文本的指针。  
   
- `NMHDR hdr; // information common to all WM_NOTIFY messages`  
+工具栏发送的通知如下所示：  
   
- `int iItem; // index of button associated with notification`  
+- **TBN_BEGINADJUST**
+
+   当用户开始自定义工具栏控件时发送。 指针指向包含有关通知的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
- `TBBUTTON tbButton; // info about button associated withnotification`  
+- **TBN_BEGINDRAG**
+
+   当用户开始在工具栏中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。  
   
- `int cchText;   // count of characters in button text`  
+- **TBN_CUSTHELP**
+
+   当用户在自定义工具栏对话框中选择帮助按钮时发送。 没有返回值。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
- `LPSTR lpszText;// address of button text`  
+- **TBN_ENDADJUST**
+
+   当用户停止自定义工具栏控件时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
- `} TBNOTIFY, FAR* LPTBNOTIFY;`  
+- **TBN_ENDDRAG**
+
+   当用户停止在工具栏中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。  
   
-## <a name="remarks"></a>备注  
- **hdr**  
- 所有 **WM_NOTIFY** 消息的公用消息。  
+- **TBN_GETBUTTONINFO**
+
+   当用户正在自定义工具栏控件时发送。 工具栏使用此通知消息来检索自定义工具栏对话框所需的信息。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员指定按钮的从零开始的索引。 **pszText** 和 **cchText** 成员指定当前按钮文本的地址和长度（以字符为单位）。 应用程序应使用有关按钮的信息填充结构。 如果已将按钮信息复制到结构，则返回 **TRUE** ，否则返回 **FALSE** 。  
   
- **iItem**  
- 与通知关联的按钮索引。  
+- **TBN_QUERYDELETE**
+
+   当用户正在自定义工具栏，以确定是否可以从工具栏控件中删除某个按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要删除的按钮的从零开始的索引。 返回 **TRUE** ，允许删除该按钮，或返回 **FALSE** ，阻止删除该按钮。  
   
- **tbButton**  
- **TBBUTTON**与通知关联的结构，其中包含有关工具栏按钮的信息。  
+- **TBN_QUERYINSERT**
+
+   当用户正在自定义工具栏控件，以确定是否可以将按钮插入到给定按钮的左侧时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要插入的按钮的从零开始的索引。 返回 **TRUE** ，允许将按钮插入到给定按钮之前，或返回 **FALSE** ，阻止插入按钮。  
   
- **cchText**  
- 按钮文本中的字符数。  
+- **TBN_RESET**
+
+   当用户重置自定义工具栏对话框中的内容时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
- **lpszText**  
- 指向按钮文本的指针。  
-  
- 工具栏发送的通知如下所示：  
-  
--   **TBN_BEGINADJUST** 当用户开始自定义工具栏控件时发送 指针指向包含有关通知的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
-  
--   **TBN_BEGINDRAG** 当用户开始在工具栏中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。  
-  
--   **TBN_CUSTHELP** 当用户在“自定义工具栏”对话框中选择“帮助”按钮时发送。 没有返回值。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
-  
--   **TBN_ENDADJUST** 当用户停止自定义工具栏控件时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
-  
--   **TBN_ENDDRAG** 当用户停止在工具栏控件中拖动按钮时发送。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含正在拖动的按钮的从零开始的索引。 处理程序不需要返回任何特定值。  
-  
--   **TBN_GETBUTTONINFO** 当用户正在自定义工具栏控件时发送。 工具栏使用此通知消息来检索自定义工具栏对话框所需的信息。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员指定按钮的从零开始的索引。 **pszText** 和 **cchText** 成员指定当前按钮文本的地址和长度（以字符为单位）。 应用程序应使用有关按钮的信息填充结构。 如果已将按钮信息复制到结构，则返回 **TRUE** ，否则返回 **FALSE** 。  
-  
--   **TBN_QUERYDELETE** 当用户正在自定义工具栏控件时发送，以确定是否可以从工具栏控件中删除某个按钮。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要删除的按钮的从零开始的索引。 返回 **TRUE** ，允许删除该按钮，或返回 **FALSE** ，阻止删除该按钮。  
-  
--   **TBN_QUERYINSERT** 当用户正在自定义工具栏控件时发送，以确定是否可以将某一按钮插入到给定按钮的左侧。 指针指向 **TBNOTIFY** 结构。 **iItem** 成员包含要插入的按钮的从零开始的索引。 返回 **TRUE** ，允许将按钮插入到给定按钮之前，或返回 **FALSE** ，阻止插入按钮。  
-  
--   **TBN_RESET** 当用户重置“自定义工具栏”对话框的内容时发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
-  
--   **TBN_TOOLBARCHANGE** 用户已自定义工具栏控件后发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
+- **TBN_TOOLBARCHANGE**
+
+   用户已自定义工具栏控件后发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   

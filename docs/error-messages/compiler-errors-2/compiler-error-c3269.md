@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3269 |Microsoft 文档
+title: 编译器错误 C3269 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e4e2a2df4271a3a0213b8abedc385f22c871aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84cb9acdd6444b934e7ec51691d87a6912880de2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061788"
 ---
 # <a name="compiler-error-c3269"></a>编译器错误 C3269
-function： 托管或 WinRTtype 的成员函数不能使用...声明  
-  
-托管和 WinRT 类成员函数不能声明可变长度的参数列表。  
-  
-下面的示例将生成 C3269，并演示如何修复此错误：  
-  
-```  
-// C3269_2.cpp  
-// compile with: /clr  
-  
-ref struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+
+function： 托管或 WinRTtype 的成员函数不能使用...声明
+
+托管和 WinRT 类成员函数不能声明可变长度的参数列表。
+
+下面的示例将生成 C3269，并演示如何修复此错误：
+
+```
+// C3269_2.cpp
+// compile with: /clr
+
+ref struct A
+{
+   void func(int i, ...)   // C3269
+   // try the following line instead
+   // void func(int i )
+   {
+   }
+};
+
+int main()
+{
+}
+```

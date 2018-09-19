@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2513 |Microsoft 文档
+title: 编译器错误 C2513 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 704e5d71301886d46c8a2ce08d7ea34ef1f8275a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82df537e49ca17140d70977486314f43a072022d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045427"
 ---
 # <a name="compiler-error-c2513"></a>编译器错误 C2513
-type: = 之前的任何变量声明  
-  
- 类型说明符出现在不带任何变量的标识符的声明。  
-  
- 下面的示例生成 C2513:  
-  
-```  
-// C2513.cpp  
-int main() {  
-   int = 9;   // C2513  
-   int i = 9;   // OK  
-}  
-```  
-  
- 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作： 不再允许的 typedef 的初始化。 Typedef 的初始化不允许使用由标准，并且现在将生成编译器错误。  
-  
-```  
-// C2513b.cpp  
-// compile with: /c  
-typedef struct S {  
-   int m_i;  
-} S = { 1 };   // C2513  
-// try the following line instead  
-// } S;  
-```  
-  
- 一种替代方法是删除`typedef`定义的变量聚合初始值设定项列表，但这不建议，因为它将创建具有相同名称作为类型的变量和隐藏的类型名称。
+
+type: = 前没有声明变量
+
+类型说明符出现在声明中不带任何变量的标识符。
+
+下面的示例生成 C2513:
+
+```
+// C2513.cpp
+int main() {
+   int = 9;   // C2513
+   int i = 9;   // OK
+}
+```
+
+此错误也生成的 Visual Studio.NET 2003年完成编译器一致性工作： 不再允许 typedef 的初始化。 Typedef 的初始化不允许标准，现在会生成编译器错误。
+
+```
+// C2513b.cpp
+// compile with: /c
+typedef struct S {
+   int m_i;
+} S = { 1 };   // C2513
+// try the following line instead
+// } S;
+```
+
+一种替代方法就是删除`typedef`可定义与聚合初始值设定项列表中，而此变量不建议，因为它将创建具有相同名称作为类型的变量和隐藏的类型名称。

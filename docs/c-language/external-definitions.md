@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1ce5a214e33fed66aa5f54a57c1cc1d15473e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 193ba8b853fbdbe16f906e1cdf82dd22a40f36bb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383100"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759491"
 ---
 # <a name="external-definitions"></a>外部定义
-translation-unit：  
- external-declaration  
+
+translation-unit：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*  
   
- translation-unit external-declaration  
-  
- external-declaration:       /\* 只允许在外部（文件）范围内 \*/  
- function-definition  
-  
- `declaration`  
-  
- function-definition:         /\* 此处的声明符是函数声明符 \*/  
- declaration-specifiers optdeclarator declaration-list optcompound-statement  
-  
-## <a name="see-also"></a>请参阅  
- [短语结构语法](../c-language/phrase-structure-grammar.md)
+external-declaration: /\* 只允许在外部（文件）范围内 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+
+function-definition: /\* 此处的声明符是函数声明符 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+## <a name="see-also"></a>请参阅
+
+[短语结构语法](../c-language/phrase-structure-grammar.md)

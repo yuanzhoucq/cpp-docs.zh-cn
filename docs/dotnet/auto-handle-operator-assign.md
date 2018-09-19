@@ -1,5 +1,5 @@
 ---
-title: auto_handle::operator = |Microsoft 文档
+title: auto_handle::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: db6091772529896f12952163c0838949b8518054
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f41eff9659fd85b21b46560be4c1141152f748f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103615"
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator=
 赋值运算符。  
@@ -43,11 +43,11 @@ auto_handle<_element_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_right`  
- `auto_handle`要分配给当前`auto_handle`。  
+*（_r)*<br/>
+`auto_handle`要分配给当前`auto_handle`。  
   
 ## <a name="return-value"></a>返回值  
- 当前`auto_handle`、 现在拥有`_right`。  
+ 当前`auto_handle`现在负责`_right`。  
   
 ## <a name="example"></a>示例  
   

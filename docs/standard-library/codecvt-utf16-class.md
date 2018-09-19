@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: aa4147f28e7b780e9d916526f0e46e91432fd1ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954094"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714228"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -34,9 +34,14 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>参数
 
-*Elem*宽字符元素类型。
-*Maxcode*的最大的区域设置 facet 的字符数。
-*模式*的区域设置 facet 的配置信息。
+*Elem*<br/>
+宽字符元素类型。
+
+*Maxcode*<br/>
+区域设置 facet 的最大字符数。
+
+*模式*<br/>
+配置区域设置 facet 的信息。
 
 ## <a name="remarks"></a>备注
 
@@ -46,4 +51,6 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>要求
 
-标头：\<codecvt> Namespace: std
+标头： \<codecvt >
+
+Namespace: std

@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1064 |Microsoft 文档
+title: NMAKE 错误 U1064 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5573943fc2c274d48768933a634b2c052361a8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4240bf2c553957e73d5ead0bdd03ea129450645b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092987"
 ---
 # <a name="nmake-fatal-error-u1064"></a>NMAKE 错误 U1064
-找不到的生成文件和指定任何目标  
-  
- NMAKE 命令行中没有指定生成文件或目标和当前目录不包含名为生成文件的文件。  
-  
- NMAKE 需要生成文件或命令行的目标 （或两者）。 要生成文件提供给 NMAKE，请指定 /F 选项或者放置在当前目录命名生成文件的文件。 NMAKE 可以通过使用推理规则，如果未提供生成文件创建的命令行的目标。
+
+未找到 MAKEFILE 并且未指定目标
+
+NMAKE 命令行未指定生成文件或目标，并在当前目录不包含名为生成文件的文件。
+
+NMAKE 需要生成文件或命令行目标 （或两者）。 若要使生成文件可供 NMAKE，请指定 /F 选项或将放置在当前目录中名为生成文件的文件。 NMAKE 可以通过使用推理规则，如果未提供生成文件创建命令行目标。

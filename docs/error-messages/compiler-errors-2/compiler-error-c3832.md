@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3832 |Microsoft 文档
+title: 编译器错误 C3832 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bc751880826731c3943028a935e26936b73240f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c443242779fd355ed4f945bc33880ff8b96c566
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115211"
 ---
 # <a name="compiler-error-c3832"></a>编译器错误 C3832
-type library： 类型库看上去就好像它为 32 位指针生成;请更改 ptrsize 限定符  
-  
- 显式信息随附`ptrsize`属性[#import](../../preprocessor/hash-import-directive-cpp.md)指令未与类型库中找到的编译器不一致。
+
+type library： 类型库看上去就好像它为 32 位指针; 生成请更改 ptrsize 限定符
+
+使用提供的显式信息`ptrsize`的属性[#import](../../preprocessor/hash-import-directive-cpp.md)指令未与类型库中找到的编译器不一致。

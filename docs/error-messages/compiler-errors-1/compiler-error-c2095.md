@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2095 |Microsoft 文档
+title: 编译器错误 C2095 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7214862ba35c627987c6dace2d5d4c8c4d042fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42fa7432dce465257b8179ba8a52b2654e0e5507
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032457"
 ---
 # <a name="compiler-error-c2095"></a>编译器错误 C2095
-function： 实参具有类型 void： 参数 number  
-  
- 参数传递给函数的类型为`void`，这不允许。 使用指向 void 的指针 ( `void *`) 相反。  
-  
- `number`指示哪些参数是`void`。
+
+function： 实参具有 void 类型： 参数 number
+
+传递给函数的参数的类型为`void`，这不允许。 使用指向 void 的指针 ( `void *`) 相反。
+
+`number`指示哪个参数为`void`。

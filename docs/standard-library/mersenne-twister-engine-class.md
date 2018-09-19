@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959266"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100217"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 类
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>参数
 
-*UIntType*无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*W* **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **状态大小**。 状态序列中的元素（值）数量。
+*N*<br/>
+**状态大小**。 状态序列中的元素（值）数量。
 
-*M* **移位大小**。 每次旋转过程中要跳过的元素数量。 **前提条件**：`0 < M ≤ N`
+*M*<br/>
+**移位大小**。 每次旋转过程中要跳过的元素数量。 **前提条件**：`0 < M ≤ N`
 
-*R* **掩码位**。 **前提条件**：`R ≤ W`
+*R*<br/>
+**掩码位**。 **前提条件**：`R ≤ W`
 
-*一个* **XOR 掩码**。 **前提条件**：`A ≤ (1u<<W) - 1u`
+*A*<br/>
+**XOR 掩码**。 **前提条件**：`A ≤ (1u<<W) - 1u`
 
-*U*， *S*， *T*， *L* **Tempering 移位参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`
+*U*， *S*， *T*， *L*<br/>
+**调和移位参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`
 
-*D*， *B*， *C* **Tempering 位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`
+*D*， *B*， *C*<br/>
+**调和位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`
 
-*F* **初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`
+*F*<br/>
+**初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
 

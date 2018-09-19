@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0057 |Microsoft 文档
+title: 表达式计算器错误 CXX0057 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509c7e00236ed824c3213f7ba730909873646c2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f993b435df4d0b6804ab9b31698074d65a03112
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025017"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>表达式计算器错误 CXX0057
-在行号的任何代码  
-  
- 为指定的行号未不生成任何代码。 它不能用作一个断点。  
-  
- 此错误是与 CAN0057 相同。
+
+任何代码行数
+
+为指定的行号未不生成任何代码。 它不能用作一个断点。
+
+此错误是与 CAN0057 相同。

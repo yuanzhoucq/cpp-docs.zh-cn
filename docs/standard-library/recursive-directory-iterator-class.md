@@ -1,7 +1,7 @@
 ---
 title: recursive_directory_iterator 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd876ec21379d59445b88bdc08a1c7b831cb94fa
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954029"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691648"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 类
 
-描述一个输入迭代器，它对目录中的文件名进行排序，可能以递归方式降序到子目录。 对于迭代器 X，表达式 *X 计算到 directory_entry 类对文件名及与其状态有关的任何信息进行包装的对象。
+描述输入迭代器，它通过在目录中，文件名可能降序到子目录以递归方式。 迭代器`X`，表达式`*X`的计算结果为类的对象`directory_entry`文件名和有关其状态的任何包装。
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -37,85 +37,153 @@ class recursive_directory_iterator;
 
 模板类存储以下内容：
 
-1. 类型 stack<pair\<directory_iterator, path>> 的对象（此处出于阐述目的称为 mystack），它表示待排序的一套目录
+1. 类型的对象`stack<pair<directory_iterator, path>>`，称为`mystack`此处出于阐述，表示要进行序列化的目录的嵌套
 
-1. directory_entry 类型的对象（此处称为 myentry），它表示目录序列中的当前文件名
+1. 类型的对象`directory_entry`调用`myentry`此处，它表示目录序列中的当前文件名
 
-1. bool 类型对象（此处称为 no_push），它记录是否禁用以递归方式降序到子目录
+1. 类型的对象**bool**称为`no_push`此处记录是否禁用递归下降到子目录
 
-1. directory_options 类型的对象（此处称为 myoptions），它记录在构造时建立的选项
+1. 类型的对象`directory_options`，称为`myoptions`此处记录在构造时建立的选项
 
-默认构造的 recursive_directory_entry 类型对象在 mystack.top().first 处具有序列末迭代器并表示该序列末迭代器。例如，给定具有条目 def（一个目录）、def/ghi 和 jkl 的目录 abc，则该代码：
+类型的默认构造对象`recursive_directory_entry`具有一个序列末迭代器，在`mystack.top().first`和表示序列末迭代器。 例如，给定的目录`abc`与条目`def`（目录）， `def/ghi`，和`jkl`，代码：
 
 ```cpp
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
     visit(next->path());
 ```
 
-将使用参数 `path("abc/def/ghi") and path("abc/jkl").`发起访问 可使用以下两种方式，通过目录子树限定排序：
+使用参数将调用访问`path("abc/def/ghi")`和`path("abc/jkl")`。 您可以有资格通过目录子树中两种方式序列化：
 
-1. 仅当构造值为 directory_options::follow_directory_symlink 的 recursive_directory_iterator with a directory_options 参数时，才会扫描目录符号链接。
+1. 仅当构造，则会扫描目录符号链接`recursive_directory_iterator`与`directory_options`自变量的值是`directory_options::follow_directory_symlink`。
 
-1. 如果调用 disable_recursion_pending，则不会以递归方式扫描在增量过程中遇到的后续目录。
+1. 如果调用`disable_recursion_pending`则增量过程中遇到的后续目录，不会以递归方式扫描。
 
-## <a name="recursivedirectoryiteratordepth"></a>recursive_directory_iterator::depth
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[recursive_directory_iterator](#recursive_directory_iterator)|构造一个 `recursive_directory_iterator`。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[深度](#depth)|返回`mystack.size() - 1`，因此`pval`深度为零。|
+|[disable_recursion_pending](#disable_recursion_pending)|存储 **，则返回 true**中`no_push`。|
+|[增量](#increment)|前进到序列中的下一个文件名。|
+|[options](#options)|返回 `myoptions`。|
+|[pop](#pop)|返回下一个对象。|
+|[recursion_pending](#recursion_pending)|返回 `!no_push`。|
+
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator!=](#op_neq)|返回 `!(*this == right)`。|
+|[operator=](#op_as)|默认成员赋值运算符的行为符合预期。|
+|[operator==](#op_eq)|返回 **，则返回 true**仅当这两种`*this`并*右*为序列末迭代器或 both 是否未结束的-为序列末迭代。|
+|[operator*](#op_multiply)|返回 `myentry`。|
+|[operator->](#op_cast)|返回 `&**this`。|
+|[operator++](#op_increment)|增量`recursive_directory_iterator`。|
+
+## <a name="requirements"></a>要求
+
+**标头：** \<文件系统 >
+
+**命名空间：** std::tr2::sys
+
+## <a name="depth"></a> recursive_directory_iterator:: depth
+
+返回`mystack.size() - 1`，因此`pval`深度为零。
 
 ```cpp
 int depth() const;
 ```
 
-返回 mystack.size() - 1，因此 pval 深度为零。
+## <a name="disable_recursion_pending"></a> recursive_directory_iterator:: disable_recursion_pending
 
-## <a name="recursivedirectoryiteratordisablerecursionpending"></a>recursive_directory_iterator::disable_recursion_pending
+存储 **，则返回 true**中`no_push`。
 
 ```cpp
 void disable_recursion_pending();
 ```
 
-成员函数在 no_push 中存储为 true。
+## <a name="increment"></a> recursive_directory_iterator:: increment
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator!=
+前进到序列中的下一个文件名。
+
+```cpp
+recursive_directory_iterator& increment(error_code& ec) noexcept;
+```
+
+### <a name="parameters"></a>参数
+
+*ec*<br/>
+指定的错误代码。
+
+### <a name="remarks"></a>备注
+
+该函数尝试推进到嵌套序列中的下一个文件名。 如果成功，它将该文件名存储在`myentry`; 否则它会生成序列末迭代器。
+
+## <a name="op_neq"></a> recursive_directory_iterator:: operator ！ =
+
+返回 `!(*this == right)`。
 
 ```cpp
 bool operator!=(const recursive_directory_iterator& right) const;
 ```
 
-该成员运算符返回 !(*this == right)。
+### <a name="parameters"></a>参数
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator=
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)进行比较。
+
+## <a name="op_as"></a> recursive_directory_iterator:: operator =
+
+默认成员赋值运算符的行为符合预期。
 
 ```cpp
 recursive_directory_iterator& operator=(const recursive_directory_iterator&) = default;
 recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept = default;
 ```
 
-默认成员赋值运算符的行为符合预期。
+### <a name="parameters"></a>参数
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator==
+*recursive_directory_iterator*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)复制到`recursive_directory_iterator`。
+
+## <a name="op_eq"></a> recursive_directory_iterator:: operator = =
+
+返回 **，则返回 true**仅当这两种`*this`并*右*为序列末迭代器或 both 是否未结束的-为序列末迭代。
 
 ```cpp
 bool operator==(const recursive_directory_iterator& right) const;
 ```
 
-仅当 *this 和 right 均为序列末迭代器或均不为序列末迭代器时，此成员运算符才返回 true。
+### <a name="parameters"></a>参数
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator*
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)进行比较。
+
+## <a name="op_multiply"></a> recursive_directory_iterator:: operator *
+
+返回 `myentry`。
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-该成员运算符将返回 myentry。
+## <a name="op_cast"></a> recursive_directory_iterator:: operator->
 
-## <a name="recursivedirectoryiteratoroperator-"></a>recursive_directory_iterator::operator->
+返回 `&**this`。
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-返回 &**this。
+## <a name="op_increment"></a> recursive_directory_iterator:: operator + +
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++
+增量`recursive_directory_iterator`。
 
 ```cpp
 recursive_directory_iterator& operator++();
@@ -123,33 +191,46 @@ recursive_directory_iterator& operator++();
 recursive_directory_iterator& operator++(int);
 ```
 
-第一个成员函数调用 increment()，然后返回 *this。 第二个成员函数复制该对象，并调用 increment()，然后返回副本。
+### <a name="parameters"></a>参数
 
-## <a name="recursivedirectoryiteratoroptions"></a>recursive_directory_iterator::options
+*int*<br/>
+指定的增量。
+
+### <a name="remarks"></a>备注
+
+第一个成员函数调用`increment()`，然后返回`*this`。 第二个成员函数生成的对象，调用副本`increment()`，然后返回副本。
+
+## <a name="options"></a> recursive_directory_iterator:: options
+
+返回 `myoptions`。
 
 ```cpp
 directory_options options() const;
 ```
 
-返回 myoptions。
+## <a name="pop"></a> recursive_directory_iterator:: pop
 
-## <a name="recursivedirectoryiteratorpop"></a>recursive_directory_iterator::pop
+返回下一个对象。
 
 ```cpp
 void pop();
 ```
 
-如果 depth() == 0，则该对象成为序列末迭代器。 否则，该成员函数将终止当前（最深）目录的扫描，并在下一较浅深度继续扫描。
+### <a name="remarks"></a>备注
 
-## <a name="recursivedirectoryiteratorrecursionpending"></a>recursive_directory_iterator::recursion_pending
+如果`depth() == 0`对象将成为序列末迭代器。 否则，该成员函数将终止当前（最深）目录的扫描，并在下一较浅深度继续扫描。
+
+## <a name="recursion_pending"></a> recursive_directory_iterator:: recursion_pending
+
+返回 `!no_push`。
 
 ```cpp
 bool recursion_pending() const;
 ```
 
-返回 !no_push。
+## <a name="recursive_directory_iterator"></a> recursive_directory_iterator:: recursive_directory_iterator
 
-## <a name="recursivedirectoryiteratorrecursivedirectoryiterator"></a>recursive_directory_iterator::recursive_directory_iterator
+构造一个 `recursive_directory_iterator`。
 
 ```cpp
 recursive_directory_iterator() noexcept;
@@ -167,23 +248,25 @@ recursive_directory_iterator(const recursive_directory_iterator&) = default;
 recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 ```
 
-第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数在 myoptions 中的 no_push and directory_options::none 中存储为 false，然后尝试将 pval 作为目录打开和读取。 如果成功，则它们将初始化 mystack 和 myentry 以指定嵌套序列中的第一个非目录文件名；否则它们将生成一个序列末迭代器。
+### <a name="parameters"></a>参数
 
-第四个和第五个构造函数的行为与第二个和第三个类似，只不过它们首先将 opt 存储在 myoptions 中。 默认构造函数的行为符合预期。
+*pval*<br/>
+指定的路径。
 
-## <a name="recursivedirectoryiteratorincrement"></a>recursive_directory_iterator::increment
+*error_code*<br/>
+指定的错误代码。
 
-```cpp
-recursive_directory_iterator& increment(error_code& ec) noexcept;
-```
+*opts*<br/>
+指定的目录的选项。
 
-该函数尝试推进到嵌套序列中的下一个文件名。 如果成功，它会将该文件名存储在 myentry 中；否则它会生成一个序列末迭代器。
+*recursive_directory_iterator*<br/>
+所构造的 `recursive_directory_iterator` 要作为其副本的 `recursive_directory_iterator`。
 
-## <a name="requirements"></a>要求
+### <a name="remarks"></a>备注
 
-**标头：** \<文件系统 >
+第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数存储**false**中`no_push`并`directory_options::none`中`myoptions`，然后尝试打开并读取*pval*作为目录。 如果成功，则它们将初始化`mystack`和`myentry`指定嵌套序列; 中的第一个非目录文件名否则它们将生成一个序列末迭代器。
 
-**命名空间：** std::tr2::sys
+第四个和第五个构造函数的行为相同作为第二个和第三，只不过它们首先存储*opts*中`myoptions`。 默认构造函数的行为符合预期。
 
 ## <a name="see-also"></a>请参阅
 

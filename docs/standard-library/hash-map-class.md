@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211587"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702022"
 ---
 # <a name="hashmap-class"></a>hash_map 类
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在 hash_map 中的键数据类型。
+要存储在 hash_map 中的键数据类型。
 
 *类型*<br/>
- 要存储在 hash_map 中的元素数据类型。
+要存储在 hash_map 中的元素数据类型。
 
 *特征*<br/>
- 此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
+此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数为可选参数，其默认值为 hash_compare<`Key`, less<`Key`> >。
 
 *分配器*<br/>
- 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
+一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>备注
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从 hash_map 中进行匹配的元素的键值。
+要从 hash_map 中进行匹配的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
+要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>参数
 
 *_Where*<br/>
- 要从 hash_map 移除的元素的位置。
+要从 hash_map 移除的元素的位置。
 
 *first*<br/>
- 要从 hash_map 中移除的第一个元素的位置。
+要从 hash_map 中移除的第一个元素的位置。
 
 *最后一个*<br/>
- 紧接要从 hash_map 中移除的最后一个元素的位置。
+紧接要从 hash_map 中移除的最后一个元素的位置。
 
 *key*<br/>
- 要从 hash_map 中移除的元素的键值。
+要从 hash_map 中移除的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_map 中元素的排序键匹配的键值。
+要与当前搜索的 hash_map 中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
+要与当前搜索的 hash_map 中元素的排序键进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- 参数 hash_map 提供与目标 hash_map 进行交换的元素。
+参数 hash_map 提供与目标 hash_map 进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的 hash_map 中元素的排序键值进行比较的参数键值。
+要与当前搜索的 hash_map 中元素的排序键值进行比较的参数键值。
 
 ### <a name="return-value"></a>返回值
 

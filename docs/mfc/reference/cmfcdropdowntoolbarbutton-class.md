@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200649"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726578"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，将打开一个下拉工具栏 ( [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*src*  
- 对源按钮从其复制的引用。  
+*src*<br/>
+[in]对源按钮从其复制的引用。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 *src*的类型必须为`CMFCDropDownToolbarButton`。  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 按钮的默认文本。  
+*lpszName*<br/>
+[in]按钮的默认文本。  
   
- [in]*pToolBar*  
- 一个指向`CMFCDropDownToolBar`用户按下按钮时显示的对象。  
+*pToolBar*<br/>
+[in]一个指向`CMFCDropDownToolBar`用户按下按钮时显示的对象。  
   
 ### <a name="remarks"></a>备注  
  第二个构造函数重载将复制到下拉按钮的第一个按钮从工具栏中的*pToolBar*指定。  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 父窗口的下拉列表帧，或者为 NULL 以使用父窗口的下拉工具栏按钮。  
+*pWnd*<br/>
+[in]父窗口的下拉列表帧，或者为 NULL 以使用父窗口的下拉工具栏按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零值否则为 0。  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*menuButton*  
- 对目标菜单按钮的引用。  
+*MenuButton*<br/>
+[in]对目标菜单按钮的引用。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为非零；否则为零。  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*大小*  
- 按钮的默认大小。  
+*大小*<br/>
+[in]按钮的默认大小。  
   
- [in]*bHorz*  
- 在父级工具栏停靠状态。 如果垂直停靠工具栏，此参数是工具栏时水平停靠或浮动时，如果为 TRUE 或 FALSE。  
+*bHorz*<br/>
+[in]在父级工具栏停靠状态。 如果垂直停靠工具栏，此参数是工具栏时水平停靠或浮动时，如果为 TRUE 或 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  一个`SIZE`包含按钮，以像素为单位的维度的结构。  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParent*  
- 新的父窗口。  
+*pWndParent*<br/>
+[in]新的父窗口。  
   
 ### <a name="remarks"></a>备注  
  此方法重写基类实现 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 通过清除文本标签 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) 和设置[CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)并[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)数据成员为 FALSE。  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 父窗口的工具栏按钮。  
+*pWnd*<br/>
+[in]父窗口的工具栏按钮。  
   
- [in]*bDelay*  
- 如果该消息应处理一定的延迟，则为 TRUE。  
+*bDelay*<br/>
+[in]如果该消息应处理一定的延迟，则为 TRUE。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理单击消息时为非零值否则为 0。  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 父窗口的工具栏按钮。  
+*pWnd*<br/>
+[in]父窗口的工具栏按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理帮助消息; 非零值否则为 0。  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pMenu*  
- 要自定义的菜单。  
+*pMenu*<br/>
+[in]要自定义的菜单。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 TRUE。  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*rect*  
- 按钮的边框。  
+*rect*<br/>
+[in]按钮的边框。  
   
- [in]*pImages*  
- 是与按钮关联的工具栏图像集合。  
+*pImages*<br/>
+[in]是与按钮关联的工具栏图像集合。  
   
- [in]*bHorz*  
- 在父级工具栏停靠状态。 按钮停靠时 FALSE 水平和垂直停靠按钮时，此参数为 TRUE。  
+*bHorz*<br/>
+[in]在父级工具栏停靠状态。 按钮停靠时 FALSE 水平和垂直停靠按钮时，此参数为 TRUE。  
   
- [in]*bCustomizeMode*  
- 指定工具栏是否在自定义模式。 此参数为 TRUE 时工具栏不为自定义模式时，工具栏是在自定义模式和 FALSE。  
+*bCustomizeMode*<br/>
+[in]指定工具栏是否在自定义模式。 此参数为 TRUE 时工具栏不为自定义模式时，工具栏是在自定义模式和 FALSE。  
   
- [in]*bHighlight*  
- 指定按钮将突出显示。 此参数是如果按钮突出显示，则 TRUE 和 FALSE 时不突出显示按钮。  
+*bHighlight*<br/>
+[in]指定按钮将突出显示。 此参数是如果按钮突出显示，则 TRUE 和 FALSE 时不突出显示按钮。  
   
- [in]*bDrawBorder*  
- 指定按钮是否应显示其边框。 此参数为 TRUE 时该按钮应显示其边框和 FALSE 时不应显示其边框的按钮。  
+*bDrawBorder*<br/>
+[in]指定按钮是否应显示其边框。 此参数为 TRUE 时该按钮应显示其边框和 FALSE 时不应显示其边框的按钮。  
   
- [in]*bGrayDisabledButtons*  
- 指定是否添加阴影禁用的按钮或使用已禁用的图像集合。 禁用的按钮应为灰色并且 FALSE，此方法应使用已禁用的图像集合时，此参数为 TRUE。  
+*bGrayDisabledButtons*<br/>
+[in]指定是否添加阴影禁用的按钮或使用已禁用的图像集合。 禁用的按钮应为灰色并且 FALSE，此方法应使用已禁用的图像集合时，此参数为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以自定义工具栏按钮绘制。  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*rect*  
- 按钮的边框。  
+*rect*<br/>
+[in]按钮的边框。  
   
- [in]*bSelected*  
- 按钮是否被选定。 如果此参数为 TRUE，按钮被选定。 如果此参数为 FALSE，则不选择按钮。  
+*bSelected*<br/>
+[in]按钮是否被选定。 如果此参数为 TRUE，按钮被选定。 如果此参数为 FALSE，则不选择按钮。  
   
 ### <a name="return-value"></a>返回值  
  以像素为单位，指定的设备上下文上的按钮的宽度。  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*ar*  
- `CArchive`从中或向其进行序列化的对象。  
+*ar*<br/>
+[in]`CArchive`从中或向其进行序列化的对象。  
   
 ### <a name="remarks"></a>备注  
  此方法扩展的基类实现 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 通过序列化在父级工具栏的资源 ID。 当加载存档 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)返回非零值)，此方法设置`m_pToolBar`数据成员添加到工具栏，其中包含序列化的资源 id。  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 默认命令的 ID。  
+*uiCmd*<br/>
+[in]默认命令的 ID。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以指定用户单击按钮时框架所执行的默认命令。 具有由指定的命令 ID 的项*uiCmd*必须位于父下拉工具栏。  

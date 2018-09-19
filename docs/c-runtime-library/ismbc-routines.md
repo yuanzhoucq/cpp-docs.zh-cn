@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392570"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760245"
 ---
 # <a name="ismbc-routines"></a>_ismbc 例程
 每个 **_ismbc** 例程都针对特定条件测试给定多字节字符 `c`。  
@@ -43,9 +43,9 @@ ms.locfileid: "32392570"
 |[_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>备注  
- 每个 **_ismbc** 例程的测试结果取决于有效的多字节代码页。 多字节代码页具有单字节字母字符。 默认情况下，多字节代码页设置为在程序启动时从操作系统获取的系统默认 ANSI 代码页。 可分别使用 [_getmbcp](../c-runtime-library/reference/getmbcp.md) 和 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 查询和更改使用中的多字节代码页。  
+每个 **_ismbc** 例程的测试结果取决于有效的多字节代码页。 多字节代码页具有单字节字母字符。 默认情况下，多字节代码页设置为在程序启动时从操作系统获取的系统默认 ANSI 代码页。 可分别使用 [_getmbcp](../c-runtime-library/reference/getmbcp.md) 和 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 查询和更改使用中的多字节代码页。  
   
- 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。  
+输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。  
   
 |例程所返回的值|测试条件|代码页 932 示例|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ ms.locfileid: "32392570"
 |[_ismbcsymbol、_ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|多字节字符|当且仅当 0x8141<=`c`<=0x81AC 时返回非零值。|  
 |[_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|大写字母|当且仅当 `c` 是 ASCII 大写英文字母 0x41<=`c`<=0x5A 的单字节表示形式时返回非零值。|  
   
- **特定于代码页 932**   
+**特定于代码页 932**   
   
- 下面的例程特定于代码页 932。  
+下面的例程特定于代码页 932。  
   
 |例程所返回的值|测试条件（仅代码页 932）|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ ms.locfileid: "32392570"
 |[_ismbcl1、_ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 1 级：0x889F<>`c`<=0x9872。|  
 |[_ismbcl2、_ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 2 级：0x989F<=`c`<=0xEA9E。|  
   
- `_ismbcl0`、`_ismbcl1` 和 `_ismbcl2` 将检查指定值 `c` 是否匹配上表中所述的测试条件，但不会检查 `c` 是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。  
+`_ismbcl0`、`_ismbcl1` 和 `_ismbcl2` 将检查指定值 `c` 是否匹配上表中所述的测试条件，但不会检查 `c` 是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。  
   
- **END 特定于代码页 932**   
+**END 特定于代码页 932**   
   
 ## <a name="see-also"></a>请参阅  
- [字符分类](../c-runtime-library/character-classification.md)   
- [is、isw 例程](../c-runtime-library/is-isw-routines.md)   
- [_ismbb 例程](../c-runtime-library/ismbb-routines.md)
+[字符分类](../c-runtime-library/character-classification.md)   
+[is、isw 例程](../c-runtime-library/is-isw-routines.md)   
+[_ismbb 例程](../c-runtime-library/ismbb-routines.md)

@@ -1,7 +1,7 @@
 ---
 title: .EXIT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eade5df90a385c790587ee8d292703939d6f4d3a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02c60bfcb80a70779a54c8f3b194fdcf68408d17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693305"
 ---
 # <a name="exit"></a>.EXIT
-生成终止代码。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.EXIT [[expression]]  
-```  
-  
-## <a name="remarks"></a>备注  
- 返回可选*表达式*给命令行界面。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+生成终止代码。
+
+## <a name="syntax"></a>语法
+
+> .退出 [表达式]
+
+## <a name="remarks"></a>备注
+
+返回可选*表达式*到 shell。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

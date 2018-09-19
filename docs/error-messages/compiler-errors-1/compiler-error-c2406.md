@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2406 |Microsoft 文档
+title: 编译器错误 C2406 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d9d9e485f632ac4e4a65d109f2bf39265c5f12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a68a2b152ce90db7a6f4de665e0d625e1c6ad7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047182"
 ---
 # <a name="compiler-error-c2406"></a>编译器错误 C2406
-“identifier”：在 “context” 中未定义名称  
-  
- 未定义的标识符用于`SIZE`， `LENGTH`，或成员选择 （.） 运算符。
+
+“identifier”：在 “context” 中未定义名称
+
+与使用未定义的标识符`SIZE`， `LENGTH`，或成员选择 （.） 运算符。

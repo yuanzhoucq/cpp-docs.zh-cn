@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2227 |Microsoft 文档
+title: 编译器错误 C2227 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a23d055dec45693f292978039c5c5108e34e7a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f446cc09ab8799714141aefb45fa4aefc8b940e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078447"
 ---
 # <a name="compiler-error-c2227"></a>编译器错误 C2227
-“->member”的左边必须指向类/结构/联合/泛型类型  
-  
- `->` 左侧的操作数不是指向类、结构或联合的指针。  
-  
- 以下示例生成 C2227：  
-  
-```  
-// C2227.cpp  
-int *pInt;  
-struct S {  
-public:  
-    int member;  
-} s, *pS = &s;  
-  
-int main() {  
-   pInt->member = 0;   // C2227 pInt points to an int  
-   pS->member = 0;   // OK  
-}  
+
+“->member”的左边必须指向类/结构/联合/泛型类型
+
+`->` 左侧的操作数不是指向类、结构或联合的指针。
+
+以下示例生成 C2227：
+
+```
+// C2227.cpp
+int *pInt;
+struct S {
+public:
+    int member;
+} s, *pS = &s;
+
+int main() {
+   pInt->member = 0;   // C2227 pInt points to an int
+   pS->member = 0;   // OK
+}
 ```

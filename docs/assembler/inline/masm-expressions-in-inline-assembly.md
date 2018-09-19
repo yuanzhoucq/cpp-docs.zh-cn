@@ -1,7 +1,7 @@
 ---
-title: 内联程序集中的 MASM 表达式 |Microsoft 文档
+title: 内联程序集中的 MASM 表达式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b7ddea4746d8cee01015b649b876944d10de24
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 66af5d3fc996e6b0f36e5a863279d266e29beec9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32048785"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685134"
 ---
 # <a name="masm-expressions-in-inline-assembly"></a>内联程序集中的 MASM 表达式
-## <a name="microsoft-specific"></a>Microsoft 专用  
- 内联程序集代码可以使用计算结果为单个值或地址的操作数和运算符的任意组合的任何 MASM 表达式。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 专用**
+
+内联程序集代码可以使用计算结果为单个值或地址的操作数和运算符的任意组合的任何 MASM 表达式。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

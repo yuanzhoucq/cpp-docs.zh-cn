@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721118"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft 专用**  
   
- 执行 128 位联锁的比较和交换。  
+执行 128 位联锁的比较和交换。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in, out] `Destination`  
- 为目标，这是两个 64 位整数数组的指针被视为一个 128 位字段。 目标数据必须是 16 字节对齐以避免了一般性保护错误。  
+*目标*<br/>
+[in、 out]为目标，这是两个 64 位整数数组的指针被视为一个 128 位字段。 目标数据必须是 16 字节对齐以避免了一般性保护错误。  
   
- [in] `ExchangeHigh`  
- 一个 64 位整数，它可能与目标的高部分交换。  
+*ExchangeHigh*<br/>
+[in]一个 64 位整数，它可能与目标的高部分交换。  
   
- [in] `ExchangeLow`  
- 一个 64 位整数，它可能与目标的低部分交换。  
+*ExchangeLow*<br/>
+[in]一个 64 位整数，它可能与目标的低部分交换。  
   
- [in, out] `ComparandResult`  
- 指向数组的两个 64 位整数 （视为一个 128 位字段） 以与目标进行比较。  在输出时，这将覆盖目标位置的原始值。  
+*ComparandResult*<br/>
+[in、 out]指向数组的两个 64 位整数 （视为一个 128 位字段） 以与目标进行比较。  在输出时，这将覆盖目标位置的原始值。  
   
 ## <a name="return-value"></a>返回值  
  如果 128 位字等于目标的原始值为 1。 `ExchangeHigh` 和`ExchangeLow`覆盖 128 位目标。  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**结束 Microsoft 专用**  
- 高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
+**结束 Microsoft 专用**
+
+高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
   
 ## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   

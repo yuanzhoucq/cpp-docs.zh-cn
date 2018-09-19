@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538207"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715547"
 ---
 # <a name="region-endregion"></a>region、endregion
 `#pragma region` 允许您指定的可以展开或折叠时使用的代码块[大纲功能](/visualstudio/ide/outlining)的 Visual Studio 代码编辑器中。  
@@ -40,11 +40,11 @@ ms.locfileid: "42538207"
 ```  
   
 ### <a name="parameters"></a>参数  
-*注释*（可选）  
-将在代码编辑器中显示的注释。  
+*comment*  
+（可选）在代码编辑器中将显示注释。  
   
- 名称（可选）  
-区域的名称。  此名称将显示在代码编辑器中。  
+*name*  
+（可选）区域的名称。  此名称将显示在代码编辑器中。  
   
 ## <a name="remarks"></a>备注  
  

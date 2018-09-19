@@ -1,7 +1,7 @@
 ---
-title: ActiveX 控件容器 |Microsoft 文档
+title: ActiveX 控件容器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,15 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d8a6498edf33bbf51fa9ab0de04d5d58ebd11a
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338970"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534841"
 ---
 # <a name="activex-control-containers"></a>ActiveX 控件容器
 ActiveX 控件容器是完全支持 ActiveX 控件并且可将这些控件整合到其自己的窗口或对话框中的容器。 ActiveX 控件是您可以在许多开发项目中使用的可重用软件元素。 控件允许应用程序的用户访问数据库、监视数据以及在应用程序中作出各种选择。 ActiveX 控件的详细信息，请参阅文章[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。  
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 有关详细信息，请参阅[ActiveX 控件](activex-controls.md)。
   
  控件容器通常在一个项目中采用两种形式：  
   
@@ -31,7 +34,7 @@ ActiveX 控件容器是完全支持 ActiveX 控件并且可将这些控件整合
   
 -   应用程序中的窗口（其中将在工具栏中使用 ActiveX 控件）或用户窗口中的其他位置。  
   
- ActiveX 控件容器与通过该控件交互公开[方法](../mfc/mfc-activex-controls-methods.md)和[属性](../mfc/mfc-activex-controls-properties.md)。 可以通过控件容器访问和修改的这些方法和属性将通过 ActiveX 控件容器项目中的包装器类进行访问。 嵌入的 ActiveX 控件还可以通过激发 （发送） 交互与容器[事件](../mfc/mfc-activex-controls-events.md)以通知发生操作的容器。 控件容器可选择在收到这些通知后是否操作。  
+ ActiveX 控件容器与通过该控件交互公开[方法](../mfc/mfc-activex-controls-methods.md)并[属性](../mfc/mfc-activex-controls-properties.md)。 可以通过控件容器访问和修改的这些方法和属性将通过 ActiveX 控件容器项目中的包装器类进行访问。 嵌入的 ActiveX 控件还可以通过触发 （发送） 交互与容器[事件](../mfc/mfc-activex-controls-events.md)通知发生操作的容器。 控件容器可选择在收到这些通知后是否操作。  
   
  其他文章讨论了若干主题，从创建 ActiveX 控件容器项目到与使用 Visual C++ 生成的 ActiveX 控件容器有关的基础实现问题：  
   
@@ -53,9 +56,9 @@ ActiveX 控件容器是完全支持 ActiveX 控件并且可将这些控件整合
   
 -   [ActiveX 控件容器：使用非对话框容器中的控件](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
   
- 有关在对话框中使用 ActiveX 控件的详细信息，请参阅[对话框编辑器](../windows/dialog-editor.md)主题。  
+ 在对话框中使用 ActiveX 控件的详细信息，请参阅[对话框编辑器](../windows/dialog-editor.md)主题。  
   
- 介绍开发 ActiveX 控件使用 Visual c + + 和 MFC ActiveX 控件类的详细信息的文章的列表，请参阅[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。 文章将按功能类别进行分组。  
+ 这些文章说明了使用 Visual c + + 和 MFC ActiveX 控件类开发 ActiveX 控件的详细信息的列表，请参阅[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。 文章将按功能类别进行分组。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)

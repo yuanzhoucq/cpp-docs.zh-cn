@@ -1,5 +1,5 @@
 ---
-title: 错误 C1009 |Microsoft 文档
+title: 错误 C1009 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665d868aeacbaf5c62bf59a4400baa2b31569972
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1fbd8994be6fd86a764db400d8761a5d697079b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037328"
 ---
 # <a name="fatal-error-c1009"></a>错误 C1009
-编译器限制： 宏嵌套太深  
-  
- 编译器尝试在同一时间展开太多的宏。 编译器已限制为 256 级别的嵌套宏。 嵌套的宏拆分为更简单的宏。
+
+编译器限制： 宏嵌套太深
+
+编译器尝试进行一次展开太多的宏。 编译器的限制为 256 级嵌套宏。 将嵌套的宏拆分为更简单的宏。

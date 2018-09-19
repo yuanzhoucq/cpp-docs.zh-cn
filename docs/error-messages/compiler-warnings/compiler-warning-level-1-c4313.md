@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4313 |Microsoft 文档
+title: 编译器警告 （等级 1） C4313 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42bd8f19ac9a70f93a26265af6e310fb51e7229
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3600483ee5c6fe2ec0f9a339ec7ce5b94569af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090912"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>编译器警告（等级 1）C4313
-“function”：格式字符串中的“格式说明符”与类型“type”的自变量数量发生冲突  
-  
- 指定的格式与要传递的值之间出现冲突。 例如，你将 64 位的参数传递给了未经限定的 %d 格式说明符（预期为一个 32 位的整数参数）。 此警告仅当为 64 位目标编译代码时才会生效。  
-  
-## <a name="example"></a>示例  
- 以下代码示例在其用于为 64 位目标进行编译时将生成 C4313。  
-  
-```  
-// C4313.cpp  
-// Compile by using: cl /W1 C4313.cpp  
-#include <stdio.h>  
-int main() {  
-   int * pI = 0;  
-   printf("%d", pI);   // C4313 on 64-bit platform code  
-   // Try one of the following lines instead:  
-   // printf("%p\n", pI);  
-   // printf("%Id\n", pI);   // %I64d expects 64-bits of information  
-}  
+
+“function”：格式字符串中的“格式说明符”与类型“type”的自变量数量发生冲突
+
+指定的格式与要传递的值之间出现冲突。 例如，你将 64 位的参数传递给了未经限定的 %d 格式说明符（预期为一个 32 位的整数参数）。 此警告仅当为 64 位目标编译代码时才会生效。
+
+## <a name="example"></a>示例
+
+以下代码示例在其用于为 64 位目标进行编译时将生成 C4313。
+
+```
+// C4313.cpp
+// Compile by using: cl /W1 C4313.cpp
+#include <stdio.h>
+int main() {
+   int * pI = 0;
+   printf("%d", pI);   // C4313 on 64-bit platform code
+   // Try one of the following lines instead:
+   // printf("%p\n", pI);
+   // printf("%Id\n", pI);   // %I64d expects 64-bits of information
+}
 ```

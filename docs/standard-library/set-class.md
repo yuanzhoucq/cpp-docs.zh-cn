@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706155"
 ---
 # <a name="set-class"></a>set 类
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>参数
 
 *Key*<br/>
- 要存储在集中的元素数据类型。
+要存储在集中的元素数据类型。
 
 *特征*<br/>
- 一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less***\<Key>*。
+一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less***\<Key>*。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
 *分配器*<br/>
- 一种表示存储的分配器对象的类型，该分配器对象封装有关集的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
+一种表示存储的分配器对象的类型，该分配器对象封装有关集的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从集中进行匹配的元素的键。
+要从集中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的集中元素的排序键进行比较的参数键。
+要与当前搜索的集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>参数
 
 *Where*<br/>
- 要移除的元素的位置。
+要移除的元素的位置。
 
 *第一个*<br/>
- 要移除的第一个元素的位置。
+要移除的第一个元素的位置。
 
 *最后一个*<br/>
- 要移除的刚超出最后一个元素的位置。
+要移除的刚超出最后一个元素的位置。
 
 *Key*<br/>
- 要移除的元素的关键值。
+要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要从集中搜索的元素的排序键与键值匹配。
+要从集中搜索的元素的排序键与键值匹配。
 
 ### <a name="return-value"></a>返回值
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的集中元素的排序键进行比较的参数键。
+要与当前搜索的集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>参数
 
 *right*<br/>
- 参数集，提供与目标集进行交换的元素。
+参数集，提供与目标集进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>参数
 
 *key*<br/>
- 要与当前搜索的集中元素的排序键进行比较的参数键。
+要与当前搜索的集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 

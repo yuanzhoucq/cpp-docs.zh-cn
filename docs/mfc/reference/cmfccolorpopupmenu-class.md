@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852989"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721859"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 类
 表示一个用户使用的文档或应用程序中选择颜色的弹出菜单。  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- 框架显示弹出菜单的颜色的数组。  
+*颜色*<br/>
+[in]框架显示弹出菜单的颜色的数组。  
   
- [in]*颜色*  
- 默认选择的颜色。  
+*颜色*<br/>
+[in]默认选择的颜色。  
   
- [in]*lpszAutoColor*  
- 文本标签*自动*（默认值） 颜色按钮，则为 NULL。  
+*lpszAutoColor*<br/>
+[in]文本标签*自动*（默认值） 颜色按钮，则为 NULL。  
   
  标准标签为自动按钮**自动**。  
   
- [in]*lpszOtherColor*  
- 文本标签*其他*按钮，其中显示更多颜色选项，则为 NULL。  
+*lpszOtherColor*<br/>
+[in]文本标签*其他*按钮，其中显示更多颜色选项，则为 NULL。  
   
  其他按钮的标准标签**更多颜色...**.  
   
- [in]*lpszDocColors*  
- 文档颜色按钮的文本标签。 文档颜色调色板，列出所有的文档当前使用的颜色。  
+*lpszDocColors*<br/>
+[in]文档颜色按钮的文本标签。 文档颜色调色板，列出所有的文档当前使用的颜色。  
   
- [in]*lstDocColors*  
- 文档当前使用的颜色的列表。  
+*lstDocColors*<br/>
+[in]文档当前使用的颜色的列表。  
   
- [in]*nColumns*  
- 颜色数组具有的列数。  
+*nColumns*<br/>
+[in]颜色数组具有的列数。  
   
- [in]*nHorzDockRows*  
- 颜色栏中的水平停靠时的行数。  
+*nHorzDockRows*<br/>
+[in]颜色栏中的水平停靠时的行数。  
   
- [in]*nVertDockColumns*  
- 颜色栏中的垂直停靠时的列数。  
+*nVertDockColumns*<br/>
+[in]颜色栏中的垂直停靠时的列数。  
   
- [in]*colorAutomatic*  
- 在框架应用单击自动按钮时的默认颜色。  
+*colorAutomatic*<br/>
+[in]在框架应用单击自动按钮时的默认颜色。  
   
- [in]*uiCommandID*  
- 颜色条控制命令 id。  
+*uiCommandID*<br/>
+[in]颜色条控制命令 id。  
   
- [in]*bStdColorDlg*  
- 一个布尔值，该值指示是否显示标准系统颜色对话框中或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。  
+*bStdColorDlg*<br/>
+[in]一个布尔值，该值指示是否显示标准系统颜色对话框中或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。  
   
- [in]*pParentBtn*  
- 指向父按钮的指针。  
+*pParentBtn*<br/>
+[in]指向父按钮的指针。  
   
- [in]*nID*  
- 命令 ID。  
+*nID*<br/>
+[in]命令 id。  
   
 ### <a name="remarks"></a>备注  
  每个重载构造函数设置`m_bEnabledInCustomizeMode`成员为 FALSE。  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWndMain*|向父窗口的拖曳栏的指针。|  
-|[in]*uiID*|拖曳栏的命令 ID。|  
-|[in]*lpszName*|拖曳栏的窗口文本。|  
+|*pWndMain*|[in]向父窗口的拖曳栏的指针。|  
+|*uiID*|[in]拖曳栏的命令 ID。|  
+|*lpszName*|[in]拖曳栏的窗口文本。|  
   
 ### <a name="return-value"></a>返回值  
  指向新拖曳控件条对象的指针。  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndList*  
- 为属性网格控件对象的指针。  
+*pWndList*<br/>
+[in]为属性网格控件对象的指针。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

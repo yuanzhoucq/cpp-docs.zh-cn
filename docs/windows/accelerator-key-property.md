@@ -1,5 +1,5 @@
 ---
-title: 快捷键的 Key 属性 |Microsoft Docs
+title: 快捷键的 Key 属性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162cb774e985d490385c68bebab01f48222b3616
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fecfd06e26d9c49c3442e5b8011f6183a96cec0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598312"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314633"
 ---
-# <a name="accelerator-key-property"></a>快捷键的 Key 属性
+# <a name="accelerator-key-property-c"></a>快捷键的 Key 属性 （c + +）
 
 快捷键对应表中的键属性的合法项如下：
 

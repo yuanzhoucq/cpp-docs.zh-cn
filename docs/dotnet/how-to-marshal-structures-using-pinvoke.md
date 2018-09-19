@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219879"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689505"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 本文档介绍如何将纯函数接受 C 样式结构可以从托管函数调用通过使用 P/Invoke。 不过，我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供小的编译时错误报告，因为不是类型安全和可能乏善可陈，若要实现，如果非托管的 API 打包为 DLL 并不是源代码可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
@@ -34,7 +34,7 @@ ms.locfileid: "43219879"
   
  默认情况下，本机和托管结构的布局方式以不同的方式在内存中，成功跨托管/非托管边界传递结构需要额外的步骤来保持数据的完整性。  
   
- 本文档介绍了定义的本机结构，以及如何将得到的结构传递到非托管函数的托管等效项所需的步骤。 本文档假定的简单结构，不包含字符串或指针的那些 — 使用。 有关非 blittable 互操作性的信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将非 blittable 类型作为返回值。 可直接复制类型在托管和非托管代码中具有相同的表示形式。 有关详细信息，请参阅[Blittable 和非 Blittable 类型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
+ 本文档介绍了定义的本机结构，以及如何将得到的结构传递到非托管函数的托管等效项所需的步骤。 本文档假定的简单结构，不包含字符串或指针的那些 — 使用。 有关非 blittable 互操作性的信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能将非 blittable 类型作为返回值。 可直接复制类型在托管和非托管代码中具有相同的表示形式。 有关详细信息，请参阅[Blittable 和非 Blittable 类型](/dotnet/framework/interop/blittable-and-non-blittable-types)。  
   
  封送处理简单，可直接复制结构跨托管/非托管边界首先需要定义的每个本机结构的托管的版本。 这些结构可以具有任何合法的名称;其数据的布局以外的两个结构的本机和托管版本之间没有任何关系。 因此，非常重要的托管的版本包含相同的大小和本机版本的相同顺序中的字段。 （没有任何机制，用于确保结构的托管和本机版本等效的因此不兼容性会运行之前出现。 它是程序员的责任，以确保两个结构具有相同的数据布局）。  
   

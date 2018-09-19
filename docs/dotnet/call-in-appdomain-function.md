@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain 函数 |Microsoft 文档
+title: call_in_appdomain 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105240"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain 函数
 在指定的应用程序域中执行的函数。  
@@ -49,23 +49,23 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>参数  
- `appdomainId`  
- 在其中调用该函数 appdomain。  
+*appdomainId*<br/>
+在其中调用该函数应用程序域。  
   
- `voidFunc`  
- 指向`void`采用 N 参数的函数 (0 < = N < = 15)。  
+*voidFunc*<br/>
+指向`void`采用 N 参数的函数 (0 < = N < = 15)。  
   
- `nonvoidFunc`  
- 指向非`void`采用 N 参数的函数 (0 < = N < = 15)。  
+*nonvoidFunc*<br/>
+指向非`void`采用 N 参数的函数 (0 < = N < = 15)。  
   
- `arg1...argN`  
- 0 到 15 个参数传递给`voidFunc`或`nonvoidFunc`其他 appdomain 中。  
+*arg1...argN*<br/>
+0 到 15 个参数传递给`voidFunc`或`nonvoidFunc`其他 appdomain 中。  
   
 ## <a name="return-value"></a>返回值  
  执行的结果`voidFunc`或`nonvoidFunc`指定的应用程序域中。  
   
 ## <a name="remarks"></a>备注  
- 函数的参数传递给`call_in_appdomain`不得 CLR 类型。  
+ 函数的参数传递给`call_in_appdomain`必须不是 CLR 类型。  
   
 ## <a name="example"></a>示例  
   

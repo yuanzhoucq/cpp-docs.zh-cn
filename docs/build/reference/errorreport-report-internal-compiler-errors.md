@@ -1,5 +1,5 @@
 ---
-title: -errorReport （报告内部编译器错误） |Microsoft 文档
+title: -errorReport （报告内部编译器错误） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e87143d31de98039f5d679c102a5815dd87abb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c96225e566593987bef8ec9a82c73daacfcefb6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720104"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport（报告内部编译器错误）
-允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/errorReport:[ none | prompt | queue | send ]  
-```  
-  
-## <a name="arguments"></a>自变量  
- **none**  
- 不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。  
-  
- **提示**  
- 当您收到内部编译器错误时，提示您发送报告。 **提示符**在开发环境中编译应用程序是默认设置。  
-  
- **queue**  
- 将错误报告排入队列。 当使用管理员特权登录时，将显示一个窗口，以便您可以记录中被记录的上次报告任何失败 （你不会提示发送故障报告一次以上每隔三天）。 **队列**时在命令提示符下编译的应用程序是默认设置。  
-  
- **发送**  
- 如果启用报告的 Windows 错误报告系统设置自动向 Microsoft 发送报告内部编译器错误。  
-  
-## <a name="remarks"></a>备注  
- 当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。 出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。  
-  
- 在早期版本中，当你 ICE，你仅建议致电 Microsoft 产品支持服务要报告问题。 与 **/errorReport**，你可以直接向 Microsoft 提供 ICE 信息。 你的错误报告可以帮助改进未来的编译器版本。  
-  
- 用户能否发送报告取决于计算机和用户策略权限。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击 **“C/C++”** 文件夹。  
-  
-3.  单击**高级**属性页。  
-  
-4.  修改**错误报告**属性。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+
+允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。
+
+## <a name="syntax"></a>语法
+
+```
+/errorReport:[ none | prompt | queue | send ]
+```
+
+## <a name="arguments"></a>自变量
+
+**none**<br/>
+不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。
+
+**提示**<br/>
+当您收到内部编译器错误时，提示您发送报告。 **提示符**时在开发环境中编译应用程序是默认值。
+
+**queue**<br/>
+将错误报告排入队列。 当使用管理员权限登录时，将显示一个窗口，以便可以报告自上次登录以来的任何失败 （将不会提示您发送一次每隔三天的故障报告）。 **队列**时在命令提示符下编译应用程序是默认值。
+
+**发送**<br/>
+如果报告启用的 Windows 错误报告系统设置自动向 Microsoft 发送内部编译器错误报告。
+
+## <a name="remarks"></a>备注
+
+当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。 出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。
+
+在早期版本中，当您获得 ICE，感鼓励致电 Microsoft 产品支持服务，以报告问题。 与 **/errorReport**，可以直接向 Microsoft 提供 ICE 信息。 你的错误报告可以帮助改进未来的编译器版本。
+
+用户能否发送报告取决于计算机和用户策略权限。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 单击 **“C/C++”** 文件夹。
+
+1. 单击**高级**属性页。
+
+1. 修改**错误报告**属性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -1,7 +1,7 @@
 ---
-title: 运算符 SHR |Microsoft 文档
+title: 运算符 SHR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d152f05dd2558235799ef3cf172e54143b6491ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d6d9523059b441aa219ac6586c8c1980c0786a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679613"
 ---
 # <a name="operator-shr"></a>运算符 SHR
-返回移位的位的结果*表达式*右*计数*数字的位数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-expression SHR count  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+返回的位进行移位的结果*表达式*右*计数*数字的位数。
+
+## <a name="syntax"></a>语法
+
+> 表达式 SHR 计数
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

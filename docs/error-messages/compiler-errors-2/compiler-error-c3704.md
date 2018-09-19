@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3704 |Microsoft 文档
+title: 编译器错误 C3704 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3b1f255852def5e04d75751b0a902fb7072545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4504534e3a53f37089f0b0ba045b7afde5a8065d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054982"
 ---
 # <a name="compiler-error-c3704"></a>编译器错误 C3704
-function: vararg 方法不能激发事件  
-  
- 你尝试使用[__event](../../cpp/event.md) vararg 方法。 若要修复此错误，请替换`fireEvent(int i, ...)`调用`fireEvent(int i)`调用下面的代码示例中所示。  
-  
- 下面的示例生成 C3704:  
-  
-```  
-// C3704.cpp  
-[ event_source(native) ]  
-class CEventSrc {  
-   public:  
-      __event void fireEvent(int i, ...);   // C3704  
-      // try the following line instead:  
-      // __event void fireEvent(int i);  
-};  
-  
-int main() {  
-}  
+
+function: vararg 方法无法激发事件
+
+你尝试使用[__event](../../cpp/event.md) vararg 方法上。 若要解决此错误，替换`fireEvent(int i, ...)`与调用`fireEvent(int i)`调用如下面的代码示例中所示。
+
+下面的示例生成 C3704:
+
+```
+// C3704.cpp
+[ event_source(native) ]
+class CEventSrc {
+   public:
+      __event void fireEvent(int i, ...);   // C3704
+      // try the following line instead:
+      // __event void fireEvent(int i);
+};
+
+int main() {
+}
 ```

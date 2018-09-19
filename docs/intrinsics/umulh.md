@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07d1bf4dcf942fe358b0367f02ed0486ee10bd39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540987"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706909"
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft 专用**  
@@ -38,11 +38,11 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `a`  
- 要相乘的第一个数。  
+*a*<br/>
+[in]要相乘的第一个数字。  
   
- [in] `b`  
- 要相乘的第二个数。  
+*b*<br/>
+[in]要相乘的第二个数字。  
   
 ## <a name="return-value"></a>返回值  
  128 位乘法运算结果的高 64 位。  

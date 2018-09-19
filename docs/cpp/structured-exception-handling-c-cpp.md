@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c82ce5885b8b40613a65bab72958d6ae7c1a2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050848"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -34,10 +34,10 @@ ms.locfileid: "43217114"
 
 ## <a name="grammar"></a>语法
 
-*try 除语句*:  
+*try 除语句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *复合语句* **__except** **(** *表达式* **)** *复合语句*
 
-*try-最后-语句*:  
+*try-最后-语句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *复合语句* **__finally** *复合语句*
 
 ## <a name="remarks"></a>备注
@@ -72,7 +72,7 @@ ms.locfileid: "43217114"
 
 - [编写终止处理程序](../cpp/writing-a-termination-handler.md)
 
-- [处理 c + + 中的结构化的异常](../cpp/exception-handling-differences.md)
+- [处理 C++ 中的结构性异常](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>示例
 
@@ -154,8 +154,8 @@ Executing SEH __except block
 
 ## <a name="see-also"></a>请参阅
 
-[异常处理](../cpp/exception-handling-in-visual-cpp.md)  
-[关键字](../cpp/keywords-cpp.md)  
-[\<exception>](../standard-library/exception.md)  
-[错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[结构化的异常处理 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[异常处理](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[关键字](../cpp/keywords-cpp.md)<br/>
+[\<exception>](../standard-library/exception.md)<br/>
+[错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[结构化的异常处理 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

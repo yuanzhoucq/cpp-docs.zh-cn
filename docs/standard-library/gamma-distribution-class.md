@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962421"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099891"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 类
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*URNG*<br/>
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*alpha* `alpha`分布参数。
+alpha<br/>
+`alpha` 分布参数。
 
-*beta* `beta`分布参数。
+beta<br/>
+`beta` 分布参数。
 
-*parm*用于构造分布的参数结构。
+*parm*<br/>
+用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*alpha* `alpha`分布参数。
+alpha<br/>
+`alpha` 分布参数。
 
-*beta* `beta`分布参数。
+beta<br/>
+`beta` 分布参数。
 
-*右*`param_type`实例与此比较。
+right<br/>
+与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
 

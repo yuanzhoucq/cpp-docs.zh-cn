@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099876"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封装“工具提示控件”功能，此控件是一个小型弹出窗口，显示说明应用程序中工具用途的单行文本。  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  指定工具提示控件的样式。 请参阅**备注**一部分[创建](#create)有关详细信息。  
   
  *dwStyleEx*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零; 否则为 0。  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpToolInfo*|指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收当前工具提示窗口的相关信息的结构。|  
+|*lpToolInfo*|[out]指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收当前工具提示窗口的相关信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则检索的信息则为 TRUE否则为 FALSE。  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*pttgt*|指向[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构，其中包含工具提示控件有关的信息。 此方法返回时， *pszTitle*的成员[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构的标题的文本点。|  
+|*pttgt*|[out]指向[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构，其中包含工具提示控件有关的信息。 此方法返回时， *pszTitle*的成员[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)结构的标题的文本点。|  
   
 ### <a name="remarks"></a>备注  
  此方法将发送[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)消息，Windows SDK 中所述。  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  `TTHITTESTINFO`结构定义，如下所示：  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   指定工具的句柄。  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   如果该点在该工具的边框，请指定点的坐标。  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- 指定工具的句柄。  
-  
- `pt`  
- 如果该点在该工具的边框，请指定点的坐标。  
-  
- `ti`  
- 有关工具的信息。 有关详细信息`TOOLINFO`结构，请参阅[CToolTipCtrl::GetToolInfo](#gettoolinfo)。  
+- `ti`  
+
+   有关工具的信息。 有关详细信息`TOOLINFO`结构，请参阅[CToolTipCtrl::GetToolInfo](#gettoolinfo)。  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  从视图中删除显示的工具提示窗口。  

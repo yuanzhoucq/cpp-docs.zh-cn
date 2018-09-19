@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340354"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688606"
 ---
 # <a name="managed-resources-property-page"></a>“托管资源”属性页
 启用资源编译器的设置。  
@@ -42,6 +42,6 @@ ms.locfileid: "33340354"
  有关如何访问“受管理资源”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 RC（RC 命令行）](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [使用 RC（RC 命令行）](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
  [属性页](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE（嵌入托管资源）](../build/reference/assemblyresource-embed-a-managed-resource.md)

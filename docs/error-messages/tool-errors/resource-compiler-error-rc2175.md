@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2175 |Microsoft 文档
+title: 资源编译器错误 RC2175 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac5abdfde314220e8478a524d5b0b2e9ea15dcf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8aa622d1864a9f302c51fe90bd77f58c2829859b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084232"
 ---
 # <a name="resource-compiler-error-rc2175"></a>资源编译器错误 RC2175
-资源文件的文件名不是 3.00 格式  
-  
- 指定的资源使用早于版本 3.00 格式。 资源文件必须转换或重新创建使用的格式对 3.00 或更高版本。
+
+资源文件的文件名不是 3.00 格式
+
+指定的资源使用早于版本 3.00 格式。 资源文件必须转换或重新创建使用 3.00 或更高版本的格式。

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388378"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764259"
 ---
 # <a name="c-type-specifiers"></a>C 类型说明符
 
@@ -29,18 +29,18 @@ ms.locfileid: "32388378"
 ## <a name="syntax"></a>语法
 
 *type-specifier*：  
-&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;&nbsp;&nbsp;void  
+&nbsp;&nbsp;&nbsp;&nbsp;char  
+&nbsp;&nbsp;&nbsp;&nbsp;short  
+&nbsp;&nbsp;&nbsp;&nbsp;int  
+&nbsp;&nbsp;&nbsp;&nbsp;long  
+&nbsp;&nbsp;&nbsp;&nbsp;float  
+&nbsp;&nbsp;&nbsp;&nbsp;double  
+&nbsp;&nbsp;&nbsp;&nbsp;signed  
+&nbsp;&nbsp;&nbsp;&nbsp;unsigned  
+&nbsp;&nbsp;&nbsp;&nbsp;struct-or-union-specifier  
+&nbsp;&nbsp;&nbsp;&nbsp;enum-specifier  
+&nbsp;&nbsp;&nbsp;&nbsp;typedef-name  
 
 signed char、signed int、signed short int 和 signed long int 类型与其 unsigned 对等项和 enum 一起称作“整型”类型。 float、double 和 long double 类型说明符称作“浮动”或“浮点”类型。 可在变量或函数声明中使用任何整型或浮点型说明符。 如果声明中未提供 type-specifier，则将它用作 int。
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 为副作用计算类型 void 表达式。 无论如何，不能使用具有 void 类型的表达式的值（不存在），也不能将 void 表达式转换为除 void 以外的任何类型（通过隐式或显式转换）。 如果在需要 void 表达式的上下文中确实使用了任何其他类型的表达式，则其值将被丢弃。
 
-为了符合 ANSI 规范，void\*\* 不能用作 int\*\*。 仅 void\* 可用作指向未指定的类型的指针。
+为了符合 ANSI 规范，void\*\* 不能用作 int\*\*。 仅 **void**<strong>\*</strong> 可用作指向未指定的类型的指针。
 
 **结束 Microsoft 专用**
 

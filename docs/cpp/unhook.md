@@ -18,98 +18,101 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3efdce5bb7a9ab093a53b6a005492aecd509f560
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117291"
 ---
 # <a name="unhook"></a>__unhook
-取消处理程序方法与事件的关联。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp 
-long  __unhook(  
-   &SourceClass::EventMethod,  
-   source,  
-   &ReceiverClass::HandlerMethod  
-   [, receiver = this]   
-);  
-long  __unhook(   
-   interface,  
-   source  
-);  
-long  __unhook(  
-   source   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- **&** *SourceClass* `::` *EventMethod*  
- 指向从中解除挂钩事件处理程序方法的事件方法的指针：  
-  
--   本机 C++ 事件： *SourceClass*是事件源类和*EventMethod*是事件。  
-  
--   COM 事件： *SourceClass*是事件源接口和*EventMethod*是其方法之一。  
-  
--   托管事件： *SourceClass*是事件源类和*EventMethod*是事件。  
-  
- *interface*  
- 接口名称从解除挂钩*接收方*，仅适用于在其中 COM 事件接收器*layout_dependent*参数[event_receiver](../windows/event-receiver.md)特性是 **，则返回 true**。  
-  
- *source*  
- 指向事件源的实例的指针。 根据代码`type`中指定`event_receiver`，*源*可以是以下之一：  
-  
--   本机事件源对象指针。  
-  
--   `IUnknown`-基于指针 （COM 源）。  
-  
--   托管对象指针（针对托管事件）。  
-  
- **&** *ReceiverClass* `::` `HandlerMethod`  
- 指向要从事件中解除挂钩的事件处理程序方法的指针。 作为方法的类或引用相同，则为指定的处理程序如果未指定类名 **__unhook**假定该类是在其中进行调用。  
-  
--   本机 C++ 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
-  
--   COM 事件： *ReceiverClass*是事件接收器接口和`HandlerMethod`是其处理程序之一。  
-  
--   托管事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
-  
- *接收方*（可选）  
- 指向事件接收器类的实例的指针。 如果未指定接收方，默认值是接收方类或结构中其 **__unhook**调用。  
-  
-## <a name="usage"></a>用法  
- 可以在事件接收器类的外部的任何函数范围（包括 main）中使用。  
-  
-## <a name="remarks"></a>备注  
- 使用内部函数 **__unhook**事件接收器以取消关联或"解除挂钩"处理程序方法与事件方法中。  
-  
- 有三种形式 **__unhook**。 在大多数情况下，可以使用第一种 (four-argument) 形式。 可以使用的第二个 （两个参数） 窗体 **__unhook**仅为 COM 事件接收器; 这解除挂钩整个事件接口。 可以使用第三种 (one-argument) 形式从指定的源中解除挂钩所有委托。  
-  
- 非零返回值指示已发生错误（托管事件将引发异常）。  
-  
- 如果您调用 **__unhook**上的事件和尚未挂钩的事件处理程序，它不会产生影响。  
-  
- 在编译时，编译器将验证事件是否存在，并利用指定的处理程序执行参数类型检查。  
-  
- 除 COM 事件 **__hook**并 **__unhook**外部事件接收器可以调用。  
-  
- 使用的替代方法 **__unhook**是使用-= 运算符。  
-  
- 有关新语法中编码托管的事件的信息，请参阅[事件](../windows/event-cpp-component-extensions.md)。  
-  
+
+取消处理程序方法与事件的关联。
+
+## <a name="syntax"></a>语法
+
+```cpp
+long  __unhook(
+   &SourceClass::EventMethod,
+   source,
+   &ReceiverClass::HandlerMethod
+   [, receiver = this]
+);
+long  __unhook(
+   interface,
+   source
+);
+long  __unhook(
+   source
+);
+```
+
+#### <a name="parameters"></a>参数
+
+**&** *SourceClass* `::` *EventMethod*指向从中解除挂钩事件处理程序方法的事件方法的指针：
+
+- 本机 C++ 事件： *SourceClass*是事件源类和*EventMethod*是事件。
+
+- COM 事件： *SourceClass*是事件源接口和*EventMethod*是其方法之一。
+
+- 托管事件： *SourceClass*是事件源类和*EventMethod*是事件。
+
+*interface*<br/>
+接口名称从解除挂钩*接收方*，仅适用于在其中 COM 事件接收器*layout_dependent*参数[event_receiver](../windows/event-receiver.md)特性是 **，则返回 true**。
+
+*source*<br/>
+指向事件源的实例的指针。 根据代码`type`中指定`event_receiver`，*源*可以是以下之一：
+
+- 本机事件源对象指针。
+
+- `IUnknown`-基于指针 （COM 源）。
+
+- 托管对象指针（针对托管事件）。
+
+**&** *ReceiverClass* `::` `HandlerMethod`指向要从事件中解除挂钩的事件处理程序方法的指针。 作为方法的类或引用相同，则为指定的处理程序如果未指定类名 **__unhook**假定该类是在其中进行调用。
+
+- 本机 C++ 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。
+
+- COM 事件： *ReceiverClass*是事件接收器接口和`HandlerMethod`是其处理程序之一。
+
+- 托管事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。
+
+*接收方*（可选） 指向事件接收器类的实例的指针。 如果未指定接收方，默认值是接收方类或结构中其 **__unhook**调用。
+
+## <a name="usage"></a>用法
+
+可以在事件接收器类的外部的任何函数范围（包括 main）中使用。
+
+## <a name="remarks"></a>备注
+
+使用内部函数 **__unhook**事件接收器以取消关联或"解除挂钩"处理程序方法与事件方法中。
+
+有三种形式 **__unhook**。 在大多数情况下，可以使用第一种 (four-argument) 形式。 可以使用的第二个 （两个参数） 窗体 **__unhook**仅为 COM 事件接收器; 这解除挂钩整个事件接口。 可以使用第三种 (one-argument) 形式从指定的源中解除挂钩所有委托。
+
+非零返回值指示已发生错误（托管事件将引发异常）。
+
+如果您调用 **__unhook**上的事件和尚未挂钩的事件处理程序，它不会产生影响。
+
+在编译时，编译器将验证事件是否存在，并利用指定的处理程序执行参数类型检查。
+
+除 COM 事件 **__hook**并 **__unhook**外部事件接收器可以调用。
+
+使用的替代方法 **__unhook**是使用-= 运算符。
+
+有关新语法中编码托管的事件的信息，请参阅[事件](../windows/event-cpp-component-extensions.md)。
+
 > [!NOTE]
->  模板类或结构不能包含事件。  
-  
-## <a name="example"></a>示例  
- 请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。  
-  
-## <a name="see-also"></a>请参阅  
- [关键字](../cpp/keywords-cpp.md)   
- [event_source](../windows/event-source.md)   
- [event_receiver](../windows/event-receiver.md)   
- [__event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__raise](../cpp/raise.md)
+>  模板类或结构不能包含事件。
+
+## <a name="example"></a>示例
+
+请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。
+
+## <a name="see-also"></a>请参阅
+
+[关键字](../cpp/keywords-cpp.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__raise](../cpp/raise.md)

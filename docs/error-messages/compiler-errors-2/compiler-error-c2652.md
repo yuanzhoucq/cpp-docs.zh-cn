@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2652 |Microsoft 文档
+title: 编译器错误 C2652 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576aef31268c0cdce09162fc367358e0ed044429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37b7b259b8eb42692641883c8d69578542cce06e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076614"
 ---
 # <a name="compiler-error-c2652"></a>编译器错误 C2652
-identifier： 非法的复制构造函数： 第一个参数不能 identifier  
-  
- 复制构造函数中的第一个参数具有与类、 结构或联合为其定义相同的类型。 第一个参数可以是对的类型，但不是类型本身的引用。  
-  
- 下面的示例生成 C2651:  
-  
-```  
-// C2652.cpp  
-// compile with: /c  
-class A {  
-   A( A );   // C2652 takes an A  
-};  
-class B {  
-   B( B& );   // OK, reference to B  
-};  
+
+identifier： 非法的复制构造函数： 第一个参数不能 identifier
+
+复制构造函数中的第一个参数具有与类、 结构或联合为其定义相同的类型。 第一个参数可以是对类型而不是类型本身的引用。
+
+下面的示例生成 C2651:
+
+```
+// C2652.cpp
+// compile with: /c
+class A {
+   A( A );   // C2652 takes an A
+};
+class B {
+   B( B& );   // OK, reference to B
+};
 ```

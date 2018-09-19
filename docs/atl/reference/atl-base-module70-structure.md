@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089042"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
-使用的任何项目都使用 ATL  
-  
-## <a name="syntax"></a>语法  
-  
+
+使用的任何项目都使用 ATL
+
+## <a name="syntax"></a>语法
+
 ```
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
@@ -42,43 +43,43 @@ struct _ATL_BASE_MODULE70 {
     CRITICAL_SECTION m_csResource;
     CSimpleArray<HINSTANCE> m_rgResourceInstance;
 };
-```  
-  
-## <a name="members"></a>成员  
- `cbSize`  
- 用于版本控制的结构的大小。  
-  
- `m_hInst`  
- `hInstance`此模块 （exe 或 dll）。  
-  
- `m_hInstResource`  
- 默认实例的资源句柄。  
-  
- `m_bNT5orWin98`  
- 操作系统版本信息。 在内部由 atl。  
-  
- `dwAtlBuildVer`  
- 将存储版本的 atl。 当前 0x0700。  
-  
- `pguidVer`  
- ATL 的内部 GUID。  
-  
- `m_csResource`  
- 用于同步对`m_rgResourceInstance`数组。 在内部由 atl。  
-  
- `m_rgResourceInstance`  
- 用于搜索的 ATL 的识别的所有资源实例中的资源数组。 在内部由 atl。  
-  
-## <a name="remarks"></a>备注  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)定义为 _ATL_BASE_MODULE70 的 typedef。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlcore.h  
-  
-## <a name="see-also"></a>请参阅  
- [类和结构](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>成员
 
+`cbSize`<br/>
+用于版本控制的结构的大小。
 
+`m_hInst`<br/>
+`hInstance`此模块 （exe 或 dll）。
 
+`m_hInstResource`<br/>
+默认实例的资源句柄。
+
+`m_bNT5orWin98`<br/>
+操作系统版本信息。 在内部由 atl。
+
+`dwAtlBuildVer`<br/>
+将存储版本的 atl。 当前 0x0700。
+
+`pguidVer`<br/>
+ATL 的内部 GUID。
+
+`m_csResource`<br/>
+用于同步对`m_rgResourceInstance`数组。 在内部由 atl。
+
+`m_rgResourceInstance`<br/>
+用于搜索的 ATL 的识别的所有资源实例中的资源数组。 在内部由 atl。
+
+## <a name="remarks"></a>备注
+
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)定义为 _ATL_BASE_MODULE70 的 typedef。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlcore.h
+
+## <a name="see-also"></a>请参阅
+
+[类和结构](../../atl/reference/atl-classes.md)
 

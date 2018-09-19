@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0023 |Microsoft 文档
+title: 表达式计算器错误 CXX0023 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034598"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>表达式计算器错误 CXX0023
-错误的基数  
-  
- C 表达式计算器无法识别指定的基数。 仅当十进制、 十六进制和八进制 radixes 才有效。  
-  
- 此错误是与 CAN0023 相同。
+
+错误的基数
+
+C 表达式计算器无法识别指定的基数。 仅当十进制、 十六进制和八进制 radixes 才有效。
+
+此错误是与 CAN0023 相同。

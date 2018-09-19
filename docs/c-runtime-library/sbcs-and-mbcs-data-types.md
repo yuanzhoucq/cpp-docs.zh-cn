@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205255"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 数据类型
 
@@ -34,7 +34,7 @@ ms.locfileid: "32409272"
 
 因此，最好将多字节字符的一个字节表示为一个 8 位 `unsigned char`。 或者，为避免产生负数结果，可在将 char 类型的单字节字符转换为 int 或 long 之前将其转换为 `unsigned char`。
 
-由于某些 SBCS 字符串处理函数采用（带符号的）char\* 参数，因此定义 _MBCS 时，编译器会发出类型不匹配的警告。 可通过三种方法来避免此警告（按效率高低的顺序列出）：
+由于某些 SBCS 字符串处理函数采用（带符号的）char<strong>\*</strong> 参数，因此定义 _MBCS 时，编译器会发出类型不匹配的警告。 可通过三种方法来避免此警告（按效率高低的顺序列出）：
 
 1. 使用 TCHAR.H 中的类型安全的内联函数。 这是默认行为。
 

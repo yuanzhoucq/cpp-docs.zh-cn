@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130886"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702892"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安装 c + + 支持
 
@@ -37,9 +37,9 @@ ms.locfileid: "43130886"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
 
- 若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序，然后选择**自定义安装**，然后选择 c + + 组件。 
+若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。
 
- 一般情况下，我们强烈建议使用 Visual Studio 2017，即使您需要编译你的代码使用 Visual Studio 2015 编译器。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
+一般情况下，强烈建议使用 Visual Studio 2017，即使需要使用 Visual Studio 2015 编译器编译代码。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安装
 
@@ -59,13 +59,13 @@ ms.locfileid: "43130886"
 
    ![使用 c + + 的桌面开发](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面开发")
 
-    对于 c + +，请选择**使用 c + + 的桌面开发**工作负荷，然后选择**安装**。
+   对于 c + +，请选择**使用 c + + 的桌面开发**工作负荷，然后选择**安装**。
 
    ![安装使用 c + + 工作负荷的桌面开发](../build/media/vscpp-concierge-choose-workload.gif "安装使用 c + + 工作负荷的桌面开发")
 
 1. 安装完成后，选择**启动**按钮以启动 Visual Studio。
 
-   首次运行 Visual Studio 中，需要使用 Microsoft 帐户登录。 如果你没有帐户，则可以免费创建一个。 此外必须选择一个主题。 别担心，可以在如果要以后更改。 
+   首次运行 Visual Studio 中，需要使用 Microsoft 帐户登录。 如果你没有帐户，则可以免费创建一个。 此外必须选择一个主题。 别担心，可以在如果要以后更改。
 
    它可能需要 Visual Studio 几分钟时间才能使可供使用首次运行它。 下面是如下所示在慢镜头快速：
 

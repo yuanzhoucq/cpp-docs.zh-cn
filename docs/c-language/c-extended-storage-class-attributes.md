@@ -17,45 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014027f9b9917f6490bb54eaf21a05230ef5f2a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fd89e21b10d241ea035e8c9b9c8ac8e5c3ee9cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106063"
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 扩展的存储类特性
-**Microsoft 专用**  
-  
- 有关本主题的更多最新信息可以在 [__declspec（C++ 参考）](../cpp/declspec.md)下找到。  
-  
- 扩展的特性语法简化并标准化了特定于 Microsoft 的 C 语言扩展。 使用扩展的特性语法的存储类特性包括 thread、naked、dllimport 和 dllexport。  
-  
- 用于指定存储类信息的扩展特性语法使用 __declspec 关键字，这指定给定类型的实例将与特定于 Microsoft 的存储类特性（thread、naked、dllimport 或 dllexport）一起存储。 其他存储类修饰符的示例包括 static 和 extern 关键字。 但是，这些关键字是 ANSI C 标准的一部分，因此未涵盖在扩展的特性语法中。  
-  
-## <a name="syntax"></a>语法  
- *storage-class-specifier*：  
- `__declspec` ( extended-decl-modifier-seq ) /* Microsoft 专用 \*/  
-  
- extended-decl-modifier-seq：  
- extended-decl-modifier opt  
-  
- *extended-decl-modifier-seq extended-decl-modifier*  
-  
- extended-decl-modifier：  
- **thread**  
-  
- **naked**  
-  
- **dllimport**  
-  
- `dllexport`  
-  
- 空格可分隔声明修饰符。 请注意，extended-decl-modifier-seq 可以为空；在此情况下，__declspec 不起作用。  
-  
- thread、naked、dllimport 和 dllexport 存储类特性仅为它们应用于的数据或函数的声明的属性；它们不重新定义函数自身的类型特性。 thread 特性只影响数据。 naked 特性仅影响函数。 dllimport 和 dllexport 特性影响函数和数据。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [声明和类型](../c-language/declarations-and-types.md)
+
+**Microsoft 专用**
+
+有关本主题的更多最新信息可以在 [__declspec（C++ 参考）](../cpp/declspec.md)下找到。
+
+扩展的特性语法简化并标准化了特定于 Microsoft 的 C 语言扩展。 使用扩展的特性语法的存储类特性包括 thread、naked、dllimport 和 dllexport。
+
+用于指定存储类信息的扩展特性语法使用 __declspec 关键字，这指定给定类型的实例将与特定于 Microsoft 的存储类特性（thread、naked、dllimport 或 dllexport）一起存储。 其他存储类修饰符的示例包括 static 和 extern 关键字。 但是，这些关键字是 ANSI C 标准的一部分，因此未涵盖在扩展的特性语法中。
+
+## <a name="syntax"></a>语法
+
+*storage-class-specifier*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 专用 \*/
+
+extended-decl-modifier-seq：&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 专用 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 专用 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+
+空格可分隔声明修饰符。 请注意，extended-decl-modifier-seq 可以为空；在此情况下，__declspec 不起作用。
+
+thread、naked、dllimport 和 dllexport 存储类特性仅为它们应用于的数据或函数的声明的属性；它们不重新定义函数自身的类型特性。 thread 特性只影响数据。 naked 特性仅影响函数。 dllimport 和 dllexport 特性影响函数和数据。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[声明和类型](../c-language/declarations-and-types.md)

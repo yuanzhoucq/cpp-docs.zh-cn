@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2739b9306647b1929a0ad51aca8e0b66a65e9d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018257"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 类
 `CMFCMaskedEdit`类支持掩码的编辑控件，将验证用户输入是否针对一个掩码，并显示根据模板验证的结果。  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 true，则指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法检索仅屏蔽字符;为 FALSE，则指定该方法检索整个文本。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 true，则指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法检索仅屏蔽字符;为 FALSE，则指定该方法检索整个文本。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  使用此方法以便检索掩码的字符。 然后创建对应于电话号码，如 (425) 555-0187 的掩码的编辑控件。 如果调用`GetWindowText`方法，则返回"4255550187"。 如果禁用检索掩码的字符`GetWindowText`方法返回编辑控件，例如"(425) 555-0187"中显示的文本。  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszMask*  
- 一个掩码字符串，指定的字符可以出现在用户输入中每个位置的类型。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。 请参阅备注部分的掩码字符有关的更多详细信息。  
+*lpszMask*<br/>
+[in]一个掩码字符串，指定的字符可以出现在用户输入中每个位置的类型。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。 请参阅备注部分的掩码字符有关的更多详细信息。  
   
- [in]*lpszInputTemplate*  
- 指定文本字符的掩码模板字符串可以显示在用户输入中每个位置。 下划线字符 ('_') 用作字符占位符。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。  
+*lpszInputTemplate*<br/>
+[in]指定文本字符的掩码模板字符串可以显示在用户输入中每个位置。 下划线字符 ('_') 用作字符占位符。 长度*lpszInputTemplate*并*lpszMask*参数字符串必须相同。  
   
- [in]*chMaskInputTemplate*  
- 框架将替换为在用户输入中每个无效字符的默认字符。 此参数的默认值为下划线 ('_')。  
+*chMaskInputTemplate*<br/>
+[in]框架将替换为在用户输入中每个无效字符的默认字符。 此参数的默认值为下划线 ('_')。  
   
- [in]*lpszValid*  
- 一个包含一组有效字符的字符串。 NULL 指示所有字符都都有效。 此参数的默认值为 NULL。  
+*lpszValid*<br/>
+[in]一个包含一组有效字符的字符串。 NULL 指示所有字符都都有效。 此参数的默认值为 NULL。  
   
 ### <a name="remarks"></a>备注  
  使用此方法来创建掩码的编辑控件的掩码。 从派生类`CMFCMaskedEdit`类并重写[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)方法以使用你自己的代码进行自定义掩码处理。  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则仅选择组;为 FALSE，则选择整个文本。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 TRUE，则仅选择组;为 FALSE，则选择整个文本。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  使用此函数指定掩码的编辑控件是否允许用户选择的组或整个文本。  
@@ -196,18 +196,17 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  例如，可能会使用以下掩码的编辑控件来验证某个电话号码：  
   
- `m_wndMaskEdit.EnableMask(`  
-  
- `_T(" ddd  ddd dddd"),// Mask string`  
-  
- `_T("(___) ___-____"),// Template string`  
-  
- `_T(' '));// Default char`  
-  
- `m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.`  
-  
- `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
-  
+```cpp
+m_wndMaskEdit.EnableMask(
+    _T(" ddd  ddd dddd"),  // Mask string
+    _T("(___) ___-____"),  // Template string
+    _T(' '));              // Default char
+
+m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.
+
+m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
+```
+
  如果启用了按组选择，用户可以检索仅"425"、"555"或"0187"字符串组。 如果禁用组选择用户可检索整个文本的电话号码:"(425) 555-0187"。  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
@@ -218,8 +217,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 为 TRUE，则验证用户输入针对仅屏蔽字符;如果为 FALSE，来验证整个掩码。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 TRUE，则验证用户输入针对仅屏蔽字符;如果为 FALSE，来验证整个掩码。 默认值为 TRUE。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  检索验证掩码的编辑控件中的文本。  
@@ -233,14 +232,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*lpszStringBuf*  
- 指向接收的文本编辑控件中的缓冲区的指针。  
+*lpszStringBuf*<br/>
+[out]指向接收的文本编辑控件中的缓冲区的指针。  
   
- [in]*nMaxCount*  
- 要接收的字符数目上限。  
+*nMaxCount*<br/>
+[in]要接收的字符数目上限。  
   
- [out]*rstrString*  
- 对接收的文本编辑控件中的字符串对象的引用。  
+*rstrString*<br/>
+[out]对接收的文本编辑控件中的字符串对象的引用。  
   
 ### <a name="return-value"></a>返回值  
  第一个方法重载方法返回的字符串复制到的字节数*lpszStringBuf*参数缓冲区中; 如果掩码的编辑控件具有没有文本，则为 0。  
@@ -260,11 +259,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*chChar*  
- 要验证的字符。  
+*chChar*<br/>
+[in]要验证的字符。  
   
- [in]*chMaskChar*  
- 掩码字符串中的相应字符。  
+*chMaskChar*<br/>
+[in]掩码字符串中的相应字符。  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE *chChar*参数是一种允许字符*chMaskChar*参数; 否则为 FALSE。  
@@ -280,15 +279,24 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszValid*  
- 包含的一套有效的输入字符的字符串。 NULL 表示所有字符都都有效。 此参数的默认值为 NULL。  
+*lpszValid*<br/>
+[in]包含的一套有效的输入字符的字符串。 NULL 表示所有字符都都有效。 此参数的默认值为 NULL。  
   
 ### <a name="remarks"></a>备注  
  此方法用于定义一组有效字符。 如果输入的字符不在此列表中，掩码的编辑控件将不会接受它。  
   
  下面的代码示例接受仅十六进制数字。  
   
- `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
+```cpp
+//Mask: 0xFFFF
+m_wndMaskEdit.EnableMask( 
+    _T(" AAAA"),                // The mask string.
+    _T("0x____"),               // The literal template string.
+    _T('_'));                   // The default character that 
+                                // replaces the backspace character.
+// Valid string characters
+m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));
+```
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  掩码的编辑控件中显示的提示。  
@@ -298,8 +306,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszString*  
- 指向以 null 终止的字符串，将使用作为提示。  
+*lpszString*<br/>
+[in]指向以 null 终止的字符串，将使用作为提示。  
   
 ### <a name="remarks"></a>备注  
  此方法设置的控件文本。  

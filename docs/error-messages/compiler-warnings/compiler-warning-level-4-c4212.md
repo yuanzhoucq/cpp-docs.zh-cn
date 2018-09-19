@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4212 |Microsoft 文档
+title: 编译器警告 （等级 C4212 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb70cf045a1cc563e4eb009ed00ffe82be812b0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 107581742f1a60cfc015a9a1b8ccea8b2f89c7a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074734"
 ---
 # <a name="compiler-warning-level-4-c4212"></a>编译器警告（等级 4）C4212
-使用的非标准扩展： 使用省略号的函数声明  
-  
- 函数原型有数目可变的参数。 没有为函数定义。  
-  
- 下面的示例生成 C4212:  
-  
-```  
-// C4212.c  
-// compile with: /W4 /Ze /c  
-void f(int , ...);  
-void f(int i, int j) {}  
+
+使用了非标准扩展： 函数声明使用了省略号
+
+函数原型具有数量不定的参数。 函数定义却没有。
+
+下面的示例生成 C4212:
+
+```
+// C4212.c
+// compile with: /W4 /Ze /c
+void f(int , ...);
+void f(int i, int j) {}
 ```

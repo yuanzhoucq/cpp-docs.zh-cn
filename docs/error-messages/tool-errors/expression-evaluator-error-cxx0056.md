@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0056 |Microsoft 文档
+title: 表达式计算器错误 CXX0056 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da79a78753a9847686eca6952767fdefbe27005a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd3c2401516ee986d283dab62703c3a0dc8df42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019843"
 ---
 # <a name="expression-evaluator-error-cxx0056"></a>表达式计算器错误 CXX0056
-行号时出错  
-  
- 指定了无效的行数。  
-  
- 此错误是与 CAN0056 相同。
+
+行号时出错
+
+指定了无效的行号。
+
+此错误是与 CAN0056 相同。

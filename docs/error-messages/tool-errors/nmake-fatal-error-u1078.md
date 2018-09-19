@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1078 |Microsoft 文档
+title: NMAKE 错误 U1078 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019362"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE 错误 U1078
-在表达式的常量溢出  
-  
- 给定的表达式中包含超出范围-2147483648 到 2147483647 的常数。 该常数出现在以下情况之一：  
-  
--   预处理指令与指定的表达式  
-  
--   用短划线指定的错误级别 (**-**) 命令修饰符
+
+在 expression 的常量溢出
+
+给定的表达式中包含一个常量，它超出了范围-2,147,483,648 到 2,147,483,647。 该常数出现在以下情况之一：
+
+- 使用预处理指令指定的表达式
+
+- 用短划线指定的错误级别 (**-**) 命令修饰符

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4269 |Microsoft 文档
+title: 编译器警告 （等级 1） C4269 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e393c657e12f84d3cadfacd469e35e3472a39d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dc986c98028530b8a5d4d25047305fd1a8effef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027267"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>编译器警告（等级 1）C4269
-identifier: const 使用编译器生成默认构造函数初始化的自动数据生成不可靠的结果  
-  
- A **const**使用编译器生成的默认构造函数初始化非普通类的自动实例。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4269.cpp  
-// compile with: /c /LD /W1  
-class X {  
-public:  
-   int m_data;  
-};  
-  
-void g() {  
-   const X x1;   // C4269  
-};  
-```  
-  
- 由于在堆栈的初始值上生成类的此实例`m_data`可以是任何内容。 此外，由于它是**const**实例的值`m_data`决不能更改。
+
+identifier： 用编译器生成默认构造函数初始化 const 自动数据产生不可靠的结果
+
+一个**const**使用编译器生成的默认构造函数初始化的一个重要的类的自动实例。
+
+## <a name="example"></a>示例
+
+```
+// C4269.cpp
+// compile with: /c /LD /W1
+class X {
+public:
+   int m_data;
+};
+
+void g() {
+   const X x1;   // C4269
+};
+```
+
+由于此类的实例在堆栈中的初始值，生成`m_data`可以是任何内容。 此外，由于它是**const**实例的值`m_data`永远不会更改。

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2568 |Microsoft 文档
+title: 编译器错误 C2568 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480d0ba97417476b192a962321ff4e9d0d18a617
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9d03f0dd5a1d7029028b7e5f0d17a5e90e2891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021650"
 ---
 # <a name="compiler-error-c2568"></a>编译器错误 C2568
-identifier1： 无法解析函数重载  
-  
- 编译器无法确定哪一个重载函数调用。 传递给函数的实际参数必须强制转换，以匹配重载函数，之一的正式参数但没有一个匹配项是明确优于其他所有类型。
+
+identifier1： 无法解析函数重载
+
+编译器无法确定哪一个重载函数调用。 传递给函数的实参必须强制转换为匹配的重载函数之一的正式参数但不匹配，明确优于与所有其他用户。

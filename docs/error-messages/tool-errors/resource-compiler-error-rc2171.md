@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2171 |Microsoft 文档
+title: 资源编译器错误 RC2171 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f61400ad53d6fcc208b22067bbce62e886d0299
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab575cc03905cc4405c221e27eec5b36776b4a0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056971"
 ---
 # <a name="resource-compiler-error-rc2171"></a>资源编译器错误 RC2171
-未知的 DIB 标头格式  
-  
- 位图标头不是**BITMAPCOREHEADER**或**BITMAPINFOHEADER**结构。
+
+未知的 DIB 标头格式
+
+位图标头不是**BITMAPCOREHEADER**或**BITMAPINFOHEADER**结构。

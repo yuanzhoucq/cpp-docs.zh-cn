@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0072 |Microsoft 文档
+title: 表达式计算器错误 CXX0072 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074449"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>表达式计算器错误 CXX0072
-错误： 缺少类型信息或未知  
-  
- 未链接的.pch 文件，或代码具有对不使用 /Zi 编译的模块中的类型的引用。  
-  
- 此错误是与 CAN0067 相同。
+
+错误： 缺少类型信息或未知
+
+未链接的.pch 文件，或者代码对不是用 /Zi 编译模块中的类型的引用。
+
+此错误是与 CAN0067 相同。

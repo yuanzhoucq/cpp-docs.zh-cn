@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959815"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110118"
 ---
 # <a name="numget-class"></a>num_get 类
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*在程序内使用的区域设置的字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对区域设置中的字符进行编码的类型。
 
-*InputIterator*从中数值获取函数的迭代器的类型读取其输入。
+*InputIterator*<br/>
+数值获取函数从中读取其输入的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的读取数的字符范围的开头。
+*first*<br/>
+从其中读取数字的字符范围的起始处。
 
-*最后一个*的读取数的字符范围的末尾。
+*最后一个*<br/>
+从其中读取数字的字符范围的末尾处。
 
-*_Iosbase* [ios_base](../standard-library/ios-base-class.md)其标志由转换。
+*_Iosbase*<br/>
+[Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*_State*状态到哪些 failbit (请参阅[ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) 添加在失败时。
+*（_s)*<br/>
+发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
-*val*读取的值。
+*val*<br/>
+读取的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>参数
 
-*第一个*的读取数的字符范围的开头。
+*first*<br/>
+从其中读取数字的字符范围的起始处。
 
-*最后一个*的读取数的字符范围的末尾。
+*最后一个*<br/>
+从其中读取数字的字符范围的末尾处。
 
-*_Iosbase* [ios_base](../standard-library/ios-base-class.md)其标志由转换。
+*_Iosbase*<br/>
+[Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*_State*状态到哪些 failbit (请参阅[ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) 添加在失败时。
+*（_s)*<br/>
+发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
-*val*读取的值。
+*val*<br/>
+读取的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*整数值，该值用于指定类型的对象的内存管理。
+*_Refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 

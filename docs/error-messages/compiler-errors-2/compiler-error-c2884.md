@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2884 |Microsoft 文档
+title: 编译器错误 C2884 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bacfc53f8b1f14a9b7409a43db39fd943739e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d9266162d4608e39982cce1e94751e427bc5e47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054709"
 ---
 # <a name="compiler-error-c2884"></a>编译器错误 C2884
-name： 引起与局部函数 function 使用声明冲突  
-  
- 你尝试以不止一次定义的函数。 第一个定义是本地的定义。 第二个是与一个命名空间中`using`声明。  
-  
- 下面的示例生成 C2884:  
-  
-```  
-// C2884.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-void f() {  
-   void z(int);  
-   using A::z;   // C2884 z is already defined  
-}  
+
+name： 引入了通过使用声明与本地函数 function 冲突
+
+你试图超过一次定义的函数。 第一个定义位于本地的定义。 第二个是包含的命名空间从`using`声明。
+
+下面的示例生成 C2884:
+
+```
+// C2884.cpp
+namespace A {
+   void z(int);
+}
+
+void f() {
+   void z(int);
+   using A::z;   // C2884 z is already defined
+}
 ```

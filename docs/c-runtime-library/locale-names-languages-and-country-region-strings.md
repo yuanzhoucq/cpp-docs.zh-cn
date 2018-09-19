@@ -1,7 +1,7 @@
 ---
 title: 区域设置名称、语言和国家/地区字符串 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606730"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578270"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>区域设置名称、语言和国家/地区字符串
 
@@ -44,9 +44,9 @@ ms.locfileid: "39606730"
 
 代码页是与区域设置关联的 ANSI/OEM 代码页。 通过语言或通过语言和国家/地区单独指定区域设置时，代码页已为你确定。 特殊值 `.ACP` 将指定国家/地区的 ANSI 代码页。 特殊值 `.OCP` 将指定国家/地区的 OEM 代码页。 例如，如果指定 `"Greek_Greece.ACP"` 作为区域设置，区域设置则存储为 `Greek_Greece.1253` （希腊语的 ANSI 代码页）；如果指定 `"Greek_Greece.OCP"` 作为区域设置，它则存储为 `Greek_Greece.737` （希腊语的 OEM 代码页）。 有关代码页的详细信息，请参见 [Code Pages](../c-runtime-library/code-pages.md)。 有关 Windows 支持的代码页列表，请参阅 [Code Page Identifiers（代码页标识符）](/windows/desktop/Intl/code-page-identifiers)。
 
-如果你仅使用代码页指定区域设置，则将使用系统默认语言和国家/地区。 例如，如果指定 `".1254"` （ANSI 土耳其语）作为系统上为英语（美国）配置的区域设置，则存储的区域设置是 `English_United States.1254`。 我们不建议使用该格式，因为它可能导致不一致的行为。
+如果你仅使用代码页指定区域设置，则将使用 [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) 所报告的用户的默认语言和国家/地区。 例如，如果指定 `".1254"`（ANSI 土耳其语）作为系统上为英语（美国）配置的用户区域设置，则存储的区域设置是 `English_United States.1254`。 我们不建议使用该格式，因为它可能导致不一致的行为。
 
-`C` 的 *locale* 参数值 为 C 转换指定最小的符合 ANSI 标准的环境。 `C` 区域设置假定每个 `char` 数据类型为 1 字节，并且其值始终小于 256。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。
+`C` 的 *locale* 参数值 为 C 转换指定最小的符合 ANSI 标准的环境。 `C` 区域设置假定每个 char 数据类型为 1 字节，并且其值始终小于 256。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。
 
 使用 `setlocale` 类别，可以为 `_wsetlocale` 和 `LC_ALL` 函数同时指定所有区域设置类别。 这些类别可以全部设置为同一区域设置，你也可以使用具有该格式的区域设置参数分别设置每个类别：
 

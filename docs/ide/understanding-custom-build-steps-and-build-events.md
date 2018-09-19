@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678080"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
 可通过三种基本方法从 Visual C++ 开发环境内自定义生成过程：  
@@ -73,4 +73,3 @@ ms.locfileid: "33338762"
 ## <a name="see-also"></a>请参阅  
  [在 Visual Studio 中生成 C++ 项目](../ide/building-cpp-projects-in-visual-studio.md)   
  [用于生成命令和属性的常用宏](../ide/common-macros-for-build-commands-and-properties.md)   
- [“工具生成顺序”对话框](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

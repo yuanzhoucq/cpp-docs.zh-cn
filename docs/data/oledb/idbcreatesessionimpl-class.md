@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047390"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
+
 提供一个实现[IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自  
+
+*T*<br/>
+您的类，派生自  
   
- *SessionClass*  
- 会话对象中。  
+*SessionClass*<br/>
+会话对象中。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h 
+
+**标头：** atldb.h 
   
 ## <a name="members"></a>成员  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 |[CreateSession](#createsession)|从数据源对象创建一个新的会话并返回所请求的接口上新创建的会话。|  
   
 ## <a name="remarks"></a>备注  
- 数据源对象上的必需接口。  
+
+数据源对象上的必需接口。  
 
 ## <a name="createsession"></a> Idbcreatesessionimpl:: Createsession
+
 从数据源对象创建一个新的会话并返回所请求的接口上新创建的会话。  
   
 ### <a name="syntax"></a>语法  
@@ -74,8 +79,10 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))中*OLE DB 程序员参考*。   
+
+请参阅[idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))中*OLE DB 程序员参考*。   
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

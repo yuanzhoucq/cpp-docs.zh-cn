@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3097 |Microsoft 文档
+title: 编译器错误 C3097 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 817e6095a0141d33352946acf52a765578dafcb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c99e6667e696c2ae1cff36e0d4dfcf771c060080
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075184"
 ---
 # <a name="compiler-error-c3097"></a>编译器错误 C3097
-“attribute”: 特性必须使用“assembly:”或“module:”确定范围  
-  
- 未正确使用全局特性。  
-  
- 有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C3097。  
-  
-```  
-// C3097.cpp  
-// compile with: /clr /c  
-using namespace System;   
-  
-[AttributeUsage(AttributeTargets::All, AllowMultiple = true)]  
-public ref class Attr : public Attribute {  
-public:  
-   Attr(int t) : m_t(t) {}  
-   int m_t;  
-};  
-  
-[Attr(10)];   // C3097  
-[assembly:Attr(10)];   // OK  
-  
-[Attr(10)]   // OK  
-public ref class MyClass {};  
+
+“attribute”: 特性必须使用“assembly:”或“module:”确定范围
+
+未正确使用全局特性。
+
+有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+
+## <a name="example"></a>示例
+
+以下示例生成 C3097。
+
+```
+// C3097.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::All, AllowMultiple = true)]
+public ref class Attr : public Attribute {
+public:
+   Attr(int t) : m_t(t) {}
+   int m_t;
+};
+
+[Attr(10)];   // C3097
+[assembly:Attr(10)];   // OK
+
+[Attr(10)]   // OK
+public ref class MyClass {};
 ```

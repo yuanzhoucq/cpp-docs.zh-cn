@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954255"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705973"
 ---
 # <a name="timepoint-class"></a>time_point 类
 
@@ -111,8 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*  
- 一个 `duration` 对象。
+*Dur*<br/>
+一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -128,8 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*  
- 一个 `duration` 对象。
+*Dur*<br/>
+一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -150,17 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>参数
 
-*Dur*  
- [duration](../standard-library/duration-class.md) 对象。
+*Dur*<br/>
+[duration](../standard-library/duration-class.md) 对象。
 
-*Tp*  
- 一个 `time_point` 对象。
+*Tp*<br/>
+一个 `time_point` 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造一个对象，该对象的存储 `duration` 值等于 [duration::zero](../standard-library/duration-class.md#zero)。
 
-第二个构造函数将构造一个对象，其存储的持续时间值为等于*Dur*。 除非 `is_convertible<Duration2, duration>`*为 true*，否则第二个构造函数不参与重载决策。 有关详细信息，请参见 [<type_traits>](../standard-library/type-traits.md)。
+第二个构造函数将构造一个对象，其存储的持续时间值为等于*Dur*。 除非`is_convertible<Duration2, duration>`保持为 true，第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 第三个构造函数使用 `Tp.time_since_epoch()` 来初始化其`duration` 值。
 

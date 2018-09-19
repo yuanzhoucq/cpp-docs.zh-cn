@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 304aba4513ceb526f9a288db6f255b4c47f5c593
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962021"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701592"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 运算符
 
@@ -48,11 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 一个 `pair` 类型的对象。
+*left*<br/>
+一个 `pair` 类型的对象。
 
-*right*  
- 一个 `pair` 类型的对象。
+*right*<br/>
+一个 `pair` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -120,9 +120,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*左*类型的对象`pair`。
+*left*<br/>
+一个 `pair` 类型的对象。
 
-*右*类型的对象`pair`。
+*right*<br/>
+一个 `pair` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -181,11 +183,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 运算符左侧类型 `pair` 的对象。
+*left*<br/>
+运算符左侧类型 `pair` 的对象。
 
-*right*  
- 运算符右侧类型 `pair` 的对象。
+*right*<br/>
+运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -258,11 +260,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 运算符左侧类型 `pair` 的对象。
+*left*<br/>
+运算符左侧类型 `pair` 的对象。
 
-*right*  
- 运算符右侧类型 `pair` 的对象。
+*right*<br/>
+运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -343,11 +345,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 运算符左侧类型 `pair` 的对象。
+*left*<br/>
+运算符左侧类型 `pair` 的对象。
 
-*right*  
- 运算符右侧类型 `pair` 的对象。
+*right*<br/>
+运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -430,11 +432,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*  
- 运算符左侧类型 `pair` 的对象。
+*left*<br/>
+运算符左侧类型 `pair` 的对象。
 
-*right*  
- 运算符右侧类型 `pair` 的对象。
+*right*<br/>
+运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 

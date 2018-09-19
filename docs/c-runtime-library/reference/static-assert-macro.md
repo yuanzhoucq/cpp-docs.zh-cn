@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407361"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105076"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT 宏
 
-计算表达式在编译时，并生成错误，如果结果为**FALSE**。
+计算在编译时表达式，并生成错误时的结果是**FALSE**。
 
 ## <a name="syntax"></a>语法
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*计算结果不为零的表达式 （包括指针） (**TRUE**) 或 0 (**FALSE**)。
+*布尔表达式*<br/>
+表达式 （包括指针） 的计算结果不为零 (**，则返回 TRUE**) 或 0 (**FALSE**)。
 
 ## <a name="remarks"></a>备注
 
-此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只不过*布尔表达式*在而不是在运行时的编译时计算。 如果*布尔表达式*计算结果为**FALSE** (0)，[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)生成。
+此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只不过*布尔表达式*在而不是在运行时的编译时计算。 如果*布尔表达式*的计算结果为**FALSE** (0)，[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)生成。
 
 ## <a name="example"></a>示例
 
-在此示例中，我们检查是否[sizeof](../../c-language/sizeof-operator-c.md) **int**大于或等于 2 字节以及是否[sizeof](../../c-language/sizeof-operator-c.md) **长**为 1 个字节。 程序将不进行编译，并且将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)因为**长**大于 1 个字节。
+在此示例中，我们检查是否[sizeof](../../c-language/sizeof-operator-c.md) **int**大于或等于 2 字节和是否[sizeof](../../c-language/sizeof-operator-c.md) **长**是 1 个字节。 程序将不进行编译，它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)因为**长**大于 1 个字节。
 
 ```C
 // crt__static_assert.c

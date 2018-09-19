@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676540"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
 
@@ -27,14 +27,14 @@ ms.locfileid: "33851632"
 
 |标题|描述|
 |-----------|-----------------|
-|[开发人员代码示例](http://go.microsoft.com/fwlink/p/?LinkId=256533)|包含来自 Microsoft 和社区参与者的可下载示例代码。|
+|[开发人员代码示例](https://code.msdn.microsoft.com/)|包含来自 Microsoft 和社区参与者的可下载示例代码。|
 
 ## <a name="product-documentation"></a>产品文档
 
 |标题|描述|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|
-|[Windows 开发人员中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含有关如何使用 C++ 和其他语言来开发面向 [!INCLUDE[win8](build/reference/includes/win8_md.md)]的应用的信息。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
+|[Windows 开发人员中心](https://developer.microsoft.com/en-us/windows/)|介绍了如何使用 C++ 和其他语言来开发面向 Windows 8 的应用。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
 
 ### <a name="online-and-offline-documentation"></a>联机和脱机文档
 
@@ -48,7 +48,7 @@ ms.locfileid: "33851632"
 
 |标题|描述|
 |-----------|-----------------|
-|[Visual C++ 团队博客](http://go.microsoft.com/fwlink/p/?LinkId=256537)|包含一些博文，它们介绍了专家就 Visual C++ 产品团队进行的各种主题。|
-|[第 9 频道](http://go.microsoft.com/fwlink/p/?LinkId=251694)|包含视频访谈和演讲。 使用第 9 频道主页上的搜索框查找 C++ 内容。|
-|[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|包含有关 Visual Studio 和相关开发工具的文章和新闻。|
-|[MSDN 论坛](http://go.microsoft.com/fwlink/p/?LinkId=256538)|官方 Microsoft 论坛，可在上面公布问题，并从 Microsoft 和社区内的专家处获取答案。 使用论坛主页上的搜索框查找与 C++ 特别相关的论坛。|
+|[Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)|包含一些博文，它们介绍了专家就 Visual C++ 产品团队进行的各种主题。|
+|[第 9 频道](https://channel9.msdn.com/)|包含视频访谈和演讲。 使用第 9 频道主页上的搜索框查找 C++ 内容。|
+|[Visual Studio](https://visualstudio.microsoft.com/)|包含有关 Visual Studio 和相关开发工具的文章和新闻。|
+|[MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc)和[开发者社区](https://developercommunity.visualstudio.com)|官方 Microsoft 论坛，可在上面发布有关 C++ 的问题，并从 Microsoft 和社区内的专家处获取答案。|

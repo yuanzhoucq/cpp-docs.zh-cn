@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6102 |Microsoft 文档
+title: 数学错误 M6102 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037497"
 ---
 # <a name="math-error-m6102"></a>数学错误 M6102
-不正常  
-  
- 运算生成很小的浮点数，它是因无效而丢失的基数的倍数。 不正常通常被屏蔽浮点异常，从而导致它们被捕获并且运算。  
-  
- 程序终止，退出代码为 130。
+
+非常规
+
+操作生成非常小的浮点数，它是因无效而丢失基数。 非常规通常被屏蔽浮点异常，从而导致它们被捕获并且操作。
+
+程序终止，退出代码为 130。

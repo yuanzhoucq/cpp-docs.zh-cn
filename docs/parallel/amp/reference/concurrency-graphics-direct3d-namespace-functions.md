@@ -1,5 +1,5 @@
 ---
-title: Concurrency::graphics::direct3d 命名空间函数 |Microsoft 文档
+title: Concurrency::graphics::direct3d 命名空间函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110180"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空间函数
 ||||  
@@ -29,7 +29,7 @@ ms.locfileid: "33686329"
 
  
 ##  <a name="get_sampler"></a>  get_sampler  
- Get D3D 采样器状态接口给定加速器上查看，它表示指定的采样器对象。  
+ 获取 D3D 采样器状态接口上给定的加速器视图，它表示指定的采样器对象。  
   
 ```  
 IUnknown* get_sampler(
@@ -38,17 +38,17 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Av`  
- D3D 采样器状态是要创建 D3D 快捷键视图。  
+*_Av*<br/>
+D3D 采样器状态是要创建 D3D 加速器视图。  
   
- `_Sampler`  
- 为其创建基础 D3D 采样器状态接口的采样器对象。  
+*_Sampler*<br/>
+为其创建基础 D3D 采样器状态接口的采样器对象。  
   
 ### <a name="return-value"></a>返回值  
- IUnknown 接口指针表示给定的采样器的 D3D 采样器状态相对应。  
+ 对应于表示给定采样器的 D3D 采样器状态 IUnknown 接口指针。  
   
 ##  <a name="get_texture"></a>  get_texture  
- 获取 Direct3D 纹理接口基础指定[纹理](texture-class.md)对象。  
+ 获取指定的基础 Direct3D 纹理接口[纹理](texture-class.md)对象。  
   
 ```  
 template<
@@ -78,34 +78,34 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>参数  
- `value_type`  
- 元素类型的纹理。  
+*value_type*<br/>
+纹理的元素类型。  
   
- `_Rank`  
- 纹理的秩。  
+*_Rank*<br/>
+纹理的等级。  
   
- `_Texture`  
- 纹理或与为其返回基础 Direct3D 纹理接口 accelerator_view 相关联的纹理视图。  
+*_Texture*<br/>
+纹理或纹理视图为其基础 Direct3D 纹理接口返回的 accelerator_view 相关联。  
   
 ### <a name="return-value"></a>返回值  
- 对应于基础纹理的 Direct3D 纹理 IUnknown 接口指针。  
+ 对应于基础 Direct3D 纹理 IUnknown 接口指针。  
   
 ##  <a name="make_sampler"></a>  make_sampler  
- 创建从 D3D 采样器状态的接口指针的采样器。  
+ 从 D3D 采样器状态接口指针创建采样器。  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_D3D_sampler`  
- D3D 采样器状态，以便创建的采样器从 IUnknown 接口指针。  
+*_D3D_sampler*<br/>
+若要创建采样器的 D3D 采样器状态 IUnknown 接口指针。  
   
 ### <a name="return-value"></a>返回值  
- 采样器表示提供的 D3D 采样器状态。  
+ 采样器表示所提供的 D3D 采样器状态。  
   
 ##  <a name="make_texture"></a>  make_texture  
- 创建[纹理](texture-class.md)通过使用指定的参数的对象。  
+ 创建[纹理](texture-class.md)对象使用指定的参数。  
   
 ```  
 template<
@@ -119,26 +119,26 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>参数  
- `value_type`  
- 纹理中的元素的类型。  
+*value_type*<br/>
+纹理中元素的类型。  
   
- `_Rank`  
- 纹理的秩。  
+*_Rank*<br/>
+纹理的等级。  
   
- `_Av`  
- 纹理是要创建 D3D 快捷键视图。  
+*_Av*<br/>
+纹理是要创建 D3D 加速器视图。  
   
- `_D3D_texture`  
- 若要创建从纹理的 D3D 纹理的 IUnknown 接口指针。  
+*_D3D_texture*<br/>
+若要创建从纹理的 D3D 纹理 IUnknown 接口指针。  
   
- `_View_format`  
- 要用于创建从此纹理视图的 DXGI 格式。 将传递 DXGI_FORMAT_UNKNOWN （默认值） 为派生自 _D3D_texture 该基础格式，此模板的 value_type 的格式。 提供的格式必须与 _D3D_texture 基础格式兼容。  
+*_View_format*<br/>
+要用于从此纹理创建的视图的 DXGI 格式。 传递 DXGI_FORMAT_UNKNOWN （默认值） 以从 _D3D_texture 的基础格式和此模板的 value_type 派生格式。 所提供的格式必须与 _D3D_texture 的基础格式兼容。  
   
 ### <a name="return-value"></a>返回值  
- 使用提供的 D3D 纹理纹理。  
+ 使用提供的 D3D 纹理的纹理。  
   
 ##  <a name="msad4"></a>  msad4  
- 将 4 字节的引用值和一个 8 字节源值进行比较，并累积 4 总和向量。 每个总和对应于掩蔽绝对区别不同的字节的对齐方式的引用值，并在源值的总和。  
+ 将 4 字节引用值和一个 8 字节源值进行比较，并累积 4 个和矢量。 每个总和对应引用值和源值之间不同字节对齐的绝对差异的掩码总和。  
   
 ```  
 inline uint4 msad4(
@@ -148,17 +148,17 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Reference`  
- 一个 uint 值为 4 个字节的引用数组  
+*（_r)*<br/>
+一个 uint 值为 4 个字节引用数组  
   
- `_Source`  
- 源数组的两个 uint 值的向量中的 8 个字节。  
+*_Source*<br/>
+源数组的两个 uint 值矢量中的 8 个字节。  
   
- `_Accum`  
- 4 个值的要添加到屏蔽绝对区别不同的字节对齐方式的引用值，并在源值的总和向量。  
+*_Accum*<br/>
+若要添加到引用值和源值之间不同字节对齐的绝对差异的掩码总和的 4 个值的向量。  
   
 ### <a name="return-value"></a>返回值  
- 返回一个向量 4 的总和。 每个总和对应于掩蔽绝对区别不同的字节的对齐方式的引用值，并在源值的总和。  
+ 返回 4 个和矢量。 每个总和对应引用值和源值之间不同字节对齐的绝对差异的掩码总和。  
 
 ## <a name="requirements"></a>要求  
  **标头：** amp_graphics.h  

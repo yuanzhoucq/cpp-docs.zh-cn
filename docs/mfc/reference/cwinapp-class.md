@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712031"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|重写以执行特定于应用程序空闲时处理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用以从文件打开文档。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|分析每个参数和命令行中的标志。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|处理命令行参数和标志。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|截获由应用程序的消息和命令处理程序引发的所有未处理的异常。|
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>参数
 
-[in]*lpvParam*  
-留待将来使用。
+*lpvParam*<br/>
+[in]保留供将来使用。
 
 ### <a name="return-value"></a>返回值
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>参数
 
-[in]*lpszFileName*  
-要打开的文件的名称。
+*lpszFileName*<br/>
+[in]要打开的文件的名称。
 
-[in]*bAddToMRU*  
-TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。
+*bAddToMRU*<br/>
+[in]TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
+重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>参数
 
-[in]*bCompat*  
-TRUE 添加打印和打印到，允许用户直接从 shell 中，或通过将文件拖到打印机对象打印文件的 shell 命令的注册条目。 它还添加 DefaultIcon 密钥。 默认情况下，此参数为 FALSE 的向后兼容性。
+*bCompat*<br/>
+[in]TRUE 添加打印和打印到，允许用户直接从 shell 中，或通过将文件拖到打印机对象打印文件的 shell 命令的注册条目。 它还添加 DefaultIcon 密钥。 默认情况下，此参数为 FALSE 的向后兼容性。
 
 ### <a name="remarks"></a>备注
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |参数|描述|
-|[in]*bRegisterRecoveryCallback*|TRUE 表示应用程序的此实例使用恢复回调函数;FALSE 表示它没有。 应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*strRestartIdentifier*|用于标识此重新启动管理器实例的唯一字符串。 重新启动管理器标识符是唯一的应用程序的每个实例。|
-|[in]*pwzCommandLineArgs*|一个字符串，包含从命令行的任何额外参数。|
-|[in]*dwRestartFlags*|重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
-|[in]*pRecoveryCallback*|恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回一个 dword 值。 默认恢复回调函数是`CWinApp::ApplicationRecoveryCallback`。|
-|[in]*lpvParam*|恢复回调函数的输入的参数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*dwPingInterval*|有关恢复回调函数以返回等待重新启动管理器的时间长度。 此参数是以毫秒为单位。|
-|[in]*dwCallbackFlags*|标志传递给恢复回调函数。 留待将来使用。|
+|*bRegisterRecoveryCallback*|[in]TRUE 表示应用程序的此实例使用恢复回调函数;FALSE 表示它没有。 应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*strRestartIdentifier*|[in]用于标识此重新启动管理器实例的唯一字符串。 重新启动管理器标识符是唯一的应用程序的每个实例。|
+|*pwzCommandLineArgs*|[in]一个字符串，包含从命令行的任何额外参数。|
+|*dwRestartFlags*|[in]重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
+|*pRecoveryCallback*|[in]恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回一个 dword 值。 默认恢复回调函数是`CWinApp::ApplicationRecoveryCallback`。|
+|*lpvParam*|[in]恢复回调函数的输入的参数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*dwPingInterval*|[in]有关恢复回调函数以返回等待重新启动管理器的时间长度。 此参数是以毫秒为单位。|
+|*dwCallbackFlags*|[in]标志传递给恢复回调函数。 留待将来使用。|
 
 ### <a name="return-value"></a>返回值
 

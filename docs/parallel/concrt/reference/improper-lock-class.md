@@ -1,5 +1,5 @@
 ---
-title: improper_lock 类 |Microsoft 文档
+title: improper_lock 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106189"
 ---
 # <a name="improperlock-class"></a>improper_lock 类
 此类描述错误获取锁时引发的异常。  
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|已重载。 构造一个 `improper_lock exception`。|  
   
 ## <a name="remarks"></a>备注  
- 通常情况下，在尝试获取相同的上下文上的非可重入锁以递归方式时，将引发此异常。  
+ 通常情况下，尝试获取相同的上下文上的非可重入锁以递归方式时，将引发此异常。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027318"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721443"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 约定概述
 
@@ -64,16 +64,16 @@ ARM 上的 Windows 假定始终都在 ARMv7 体系结构上运行。 VFPv3-D32 �
 - 该目标指令必须为以下项之一：
 
    |16 位操作代码|类|限制|
-    |---------------------|-----------|------------------|
-    |MOV、MVN|移动|Rm != PC、Rd != PC|
-    |LDR、LDR[S]B、LDR[S]H|从内存中加载|但不是 LDR 文本格式|
-    |STR、STRB、STRH|存储到内存||
-    |ADD、ADC、RSB、SBC、SUB|加法或减法|但不是 ADD/SUB SP、SP 和 imm7 形式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
-    |CMP、CMN|比较|Rm != PC、Rn != PC|
-    |MUL|相乘||
-    |ASR、LSL、LSR、ROR|移位||
-    |AND、BIC、EOR、ORR、TST|按位算术运算||
-    |BX|寄存器的分支|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV、MVN|移动|Rm != PC、Rd != PC|
+   |LDR、LDR[S]B、LDR[S]H|从内存中加载|但不是 LDR 文本格式|
+   |STR、STRB、STRH|存储到内存||
+   |ADD、ADC、RSB、SBC、SUB|加法或减法|但不是 ADD/SUB SP、SP 和 imm7 形式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
+   |CMP、CMN|比较|Rm != PC、Rn != PC|
+   |MUL|相乘||
+   |ASR、LSL、LSR、ROR|移位||
+   |AND、BIC、EOR、ORR、TST|按位算术运算||
+   |BX|寄存器的分支|Rm != PC|
 
 尽管当前 ARMv7 CPU 无法报告禁用指令格式的使用情况，但以后的处理器应该能实现。 若已检测到这些格式，则使用这些格式的所有程序可能会以未定义的指令异常终止。
 
@@ -233,5 +233,5 @@ ARM EABI 指定了使用展开代码的异常展开模式。 但是，在 Window
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM 异常处理](../build/arm-exception-handling.md)  
+[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 异常处理](../build/arm-exception-handling.md)

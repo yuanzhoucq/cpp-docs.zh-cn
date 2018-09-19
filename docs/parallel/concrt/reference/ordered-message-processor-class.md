@@ -1,5 +1,5 @@
 ---
-title: ordered_message_processor 类 |Microsoft 文档
+title: ordered_message_processor 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dfb6c1a64d3a4e9df24f3966ec89db1dfbe10c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa27c46db5d23c78d9f433b41f27161f0bc41736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688760"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028566"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor 类
 `ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。  
@@ -42,8 +42,8 @@ class ordered_message_processor : public message_processor<T>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 由处理器进行处理的消息的负载类型。  
+*T*<br/>
+由处理器处理的消息的负载类型。  
   
 ## <a name="members"></a>成员  
   
@@ -64,17 +64,17 @@ class ordered_message_processor : public message_processor<T>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[async_send](#async_send)|异步消息进行排队，并开始处理任务，如果这不完成了已。 (重写[message_processor:: async_send](message-processor-class.md#async_send)。)|  
-|[初始化](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划程序和计划组的对象。|  
+|[async_send](#async_send)|异步消息进行排队，并开始处理任务，如果这不已完成。 (重写[message_processor:: async_send](message-processor-class.md#async_send)。)|  
+|[初始化](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划和计划组的对象。|  
 |[initialize_batched_processing](#initialize_batched_processing)|初始化消息的批处理|  
-|[sync_send](#sync_send)|同步消息进行排队，并启动处理任务，如果这不完成了已。 (重写[message_processor:: sync_send](message-processor-class.md#sync_send)。)|  
-|[等待](#wait)|消息块的析构函数中的使用以确保所有异步处理任务有时间完成，然后销毁块特定于处理器的自旋等待。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|  
+|[sync_send](#sync_send)|同步消息进行排队，并开始处理任务，如果这不已完成。 (重写[message_processor:: sync_send](message-processor-class.md#sync_send)。)|  
+|[等待](#wait)|特定于处理器的旋转等待中的消息块的析构函数用于确保所有异步处理任务有时间完成，然后再销毁块。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|以异步方式调用的处理函数。 它将消息取消排队，并开始处理它们。 (重写[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|  
+|[process_incoming_message](#process_incoming_message)|以异步方式调用的处理函数。 它将消息取消排队，并开始处理。 (重写[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [message_processor](message-processor-class.md)  
@@ -88,19 +88,19 @@ class ordered_message_processor : public message_processor<T>;
   
 ##  <a name="async_send"></a> async_send 
 
- 异步消息进行排队，并开始处理任务，如果这不完成了已。  
+ 异步消息进行排队，并开始处理任务，如果这不已完成。  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Msg`  
- 一条消息指向的指针。  
+*_Msg*<br/>
+一条消息指向的指针。  
   
 ##  <a name="initialize"></a> 初始化 
 
- 初始化`ordered_message_processor`与相应的回调函数、 计划程序和计划组的对象。  
+ 初始化`ordered_message_processor`与相应的回调函数、 计划和计划组的对象。  
   
 ```
 void initialize(
@@ -110,14 +110,14 @@ void initialize(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PScheduler`  
- 指向要用于计划轻量任务的计划程序的指针。  
+*_PScheduler*<br/>
+指向要用于计划的轻量级任务计划程序的指针。  
   
- `_PScheduleGroup`  
- 指向要用于计划轻量任务的计划组的指针。  
+*_PScheduleGroup*<br/>
+指向要用于计划的轻量级任务的计划组的指针。  
   
- `_Handler`  
- 在回调过程中调用处理程序函数。  
+*_Handler*<br/>
+在回调期间调用处理程序函数。  
   
 ##  <a name="initialize_batched_processing"></a> initialize_batched_processing 
 
@@ -130,11 +130,11 @@ virtual void initialize_batched_processing(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Processor`  
- 在回调过程中调用处理器函子。  
+*_Processor*<br/>
+在回调期间调用处理器仿函数。  
   
- `_Propagator`  
- 在回调过程中调用传播器函子。  
+*_Propagator*<br/>
+在回调期间调用传播器仿函数。  
   
 ##  <a name="ctor"></a> ordered_message_processor 
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 ```  
   
 ### <a name="remarks"></a>备注  
- 这`ordered_message_processor`将计划异步或同步的处理程序，直到`initialize`调用函数。  
+ 这`ordered_message_processor`则不会计划异步或同步处理程序，直到`initialize`调用函数。  
   
 ##  <a name="dtor"></a> ~ordered_message_processor 
 
@@ -160,7 +160,7 @@ virtual ~ordered_message_processor();
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- 以异步方式调用的处理函数。 它将消息取消排队，并开始处理它们。  
+ 以异步方式调用的处理函数。 它将消息取消排队，并开始处理。  
   
 ```
 virtual void process_incoming_message();
@@ -168,19 +168,19 @@ virtual void process_incoming_message();
   
 ##  <a name="sync_send"></a> sync_send 
 
- 同步消息进行排队，并启动处理任务，如果这不完成了已。  
+ 同步消息进行排队，并开始处理任务，如果这不已完成。  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Msg`  
- 一条消息指向的指针。  
+*_Msg*<br/>
+一条消息指向的指针。  
   
 ##  <a name="wait"></a> 等待 
 
- 消息块的析构函数中的使用以确保所有异步处理任务有时间完成，然后销毁块特定于处理器的自旋等待。  
+ 特定于处理器的旋转等待中的消息块的析构函数用于确保所有异步处理任务有时间完成，然后再销毁块。  
   
 ```
 virtual void wait();

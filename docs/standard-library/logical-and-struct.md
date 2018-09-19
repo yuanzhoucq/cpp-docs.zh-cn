@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cab2335a8e9adb3e4f68f8576df466be45f01504
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964855"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100788"
 ---
 # <a name="logicaland-struct"></a>logical_and 结构
 
@@ -44,16 +44,18 @@ struct logical_and<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) && std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
 *类型*， *T*， *U*支持任何类型`operator&&`接受指定或推断类型的操作数。
 
-*左侧*逻辑连接运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+逻辑连接运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*逻辑连接运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+逻辑连接运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 
@@ -127,12 +129,12 @@ int main( )
 
 /* Output:
 Original deque:
- d1 = ( true true true true true false false )
+d1 = ( true true true true true false false )
 Original deque:
- d2 = ( true false true true false true false )
+d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
- d3 = ( true false true true false false false )
- */
+d3 = ( true false true true false false false )
+*/
 ```
 
 ## <a name="requirements"></a>要求

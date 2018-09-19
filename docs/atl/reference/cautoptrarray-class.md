@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrArray 类 |Microsoft 文档
+title: CAutoPtrArray 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b99fe8fde475453c9e6dc0b524a6b1b94821bf75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23cc8e519fc47173efe413cc687ef48c0dc39945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025160"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 类
-构造的智能指针的数组时，此类提供有用的方法。  
-  
+
+构造的智能指针的数组时，此类提供了有用的方法。
+
 > [!IMPORTANT]
->  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
-  
-## <a name="syntax"></a>语法  
-  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+
+## <a name="syntax"></a>语法
+
 ```
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>参数  
- `E`  
- 指针类型。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-constructors"></a>公共构造函数  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|构造函数。|  
-  
-## <a name="remarks"></a>备注  
- 此类提供的构造函数和派生方法从[CAtlArray](../../atl/reference/catlarray-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)以帮助存储智能指针集合类对象的创建。  
-  
- 有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `CAtlArray`  
-  
- `CAutoPtrArray`  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlcoll.h  
-  
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray  
- 构造函数。  
-  
+```
+
+#### <a name="parameters"></a>参数
+
+*E*<br/>
+指针类型。
+
+## <a name="members"></a>成员
+
+### <a name="public-constructors"></a>公共构造函数
+
+|名称|描述|
+|----------|-----------------|
+|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|构造函数。|
+
+## <a name="remarks"></a>备注
+
+此类提供构造函数，并派生方法从[CAtlArray](../../atl/reference/catlarray-class.md)并[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)来帮助存储智能指针集合类对象的创建。
+
+有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`CAtlArray`
+
+`CAutoPtrArray`
+
+## <a name="requirements"></a>要求
+
+**标头：** atlcoll.h
+
+##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+
+构造函数。
+
 ```
 CAutoPtrArray() throw();
-```  
-  
-### <a name="remarks"></a>备注  
- 初始化智能指针数组。  
-  
-## <a name="see-also"></a>请参阅  
- [CAtlArray 类](../../atl/reference/catlarray-class.md)   
- [CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)   
- [CAutoPtrList 类](../../atl/reference/cautoptrlist-class.md)   
- [类概述](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>备注
+
+初始化智能指针数组。
+
+## <a name="see-also"></a>请参阅
+
+[CAtlArray 类](../../atl/reference/catlarray-class.md)<br/>
+[CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[CAutoPtrList 类](../../atl/reference/cautoptrlist-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)

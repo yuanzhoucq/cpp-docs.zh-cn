@@ -1,5 +1,5 @@
 ---
-title: 命令行错误 D8021 |Microsoft 文档
+title: 命令行错误 D8021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cac655dc716904c1d4bf6c9f0aff092c902853
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57a5bb6ac27192b8e5b0ffe6c1c343bbeab5a508
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043867"
 ---
 # <a name="command-line-error-d8021"></a>命令行错误 D8021
-无效的数值自变量 number  
-  
- 大于 65534 的数字被指定为数值自变量。
+
+无效的数值参数 number
+
+一个大于 65,534 被指定为一个数值参数的数字。

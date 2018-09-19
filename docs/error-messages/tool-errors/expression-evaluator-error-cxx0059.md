@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0059 |Microsoft 文档
+title: 表达式计算器错误 CXX0059 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050458"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>表达式计算器错误 CXX0059
-左的操作数是类不是函数的名称  
-  
- 函数调用的左的操作数是类名，无法解析到函数调用。 忽略在表达式中的成员函数的名称可能会导致此错误。  
-  
- 此错误是与 CAN0059 相同。
+
+左的操作数是类不是函数名称
+
+函数调用的左的操作数是类名和无法解析为函数调用。 忽略在表达式中的成员函数的名称会导致此错误。
+
+此错误是与 CAN0059 相同。

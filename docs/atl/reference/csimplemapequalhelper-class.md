@@ -19,79 +19,90 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 654b801c61d00f179d6d7ef88763b323d6503873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050575"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 类
-此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
-  
-## <a name="syntax"></a>语法  
-  
+
+此类是一个帮助程序对于[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
+
+## <a name="syntax"></a>语法
+
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelper
-```  
-  
-#### <a name="parameters"></a>参数  
- *TKey*  
- 键的元素。  
-  
- *TVal*  
- Value 元素中。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|（静态）测试两个键相等。|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|（静态）测试两个值相等。|  
-  
-## <a name="remarks"></a>备注  
- 此特征类是对的补充`CSimpleMap`类。 它提供用于比较两个方法`CSimpleMap`对象是否相等的元素 （具体而言，键和值的组件）。 默认情况下的键和值使用比较**operator==()**，但如果映射包含缺少其自己的相等运算符的复杂数据类型，此类可以重写以提供需要更多的功能。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlsimpcoll.h  
-  
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
- 测试两个键相等。  
-  
+```
+
+#### <a name="parameters"></a>参数
+
+*TKey*<br/>
+键的元素。
+
+*TVal*<br/>
+Value 元素中。
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|名称|描述|
+|----------|-----------------|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|（静态）测试两个键相等。|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|（静态）测试两个值相等。|
+
+## <a name="remarks"></a>备注
+
+此特征类是对的补充`CSimpleMap`类。 它提供用于比较两个方法`CSimpleMap`对象是否相等的元素 （具体而言，键和值的组件）。 默认情况下的键和值使用比较**operator==()**，但如果映射包含缺少其自己的相等运算符的复杂数据类型，此类可以重写以提供需要更多的功能。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlsimpcoll.h
+
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+
+测试两个键相等。
+
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
-```  
-  
-### <a name="parameters"></a>参数  
- *版 k1*  
- 第一个键。  
-  
- *k2*  
- 第二个密钥。  
-  
-### <a name="return-value"></a>返回值  
- 如果键相等，则返回 false 否则，则返回 true。  
-  
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- 测试两个值相等。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*版 k1*<br/>
+第一个键。
+
+*k2*<br/>
+第二个密钥。
+
+### <a name="return-value"></a>返回值
+
+如果键相等，则返回 false 否则，则返回 true。
+
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+
+测试两个值相等。
+
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
-```  
-  
-### <a name="parameters"></a>参数  
- *v1*  
- 第一个值。  
-  
- *v2*  
- 第二个值。  
-  
-### <a name="return-value"></a>返回值  
- 如果值均相等，则返回 false，则返回 true。  
-  
-## <a name="see-also"></a>请参阅  
- [CSimpleMapEqualHelperFalse 类](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [类概述](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>参数
+
+*v1*<br/>
+第一个值。
+
+*v2*<br/>
+第二个值。
+
+### <a name="return-value"></a>返回值
+
+如果值均相等，则返回 false，则返回 true。
+
+## <a name="see-also"></a>请参阅
+
+[CSimpleMapEqualHelperFalse 类](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)

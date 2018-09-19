@@ -8,24 +8,24 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], database
-- attributes [C++], data access
+- attributes [C++/CLI], database
+- attributes [C++/CLI], data access
 - databases [C++], attributes
 - OLE DB consumers [C++], attributes
-- database attributes [C++]
-- attributes [C++], OLE DB consumer
+- database attributes [C++/CLI]
+- attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4af8ccddce73e419bec468aefc1b0f63bee89ecf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604371"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318013"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 使用者特性
 OLE DB 使用者特性注入代码中，基于[OLE DB 使用者模板](../data/oledb/ole-db-consumer-templates-reference.md)，若要创建使用 OLE DB 使用者执行任务，例如打开表执行命令和访问数据。

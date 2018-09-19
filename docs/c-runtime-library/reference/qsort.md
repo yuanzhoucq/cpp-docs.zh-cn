@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404703"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110187"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>参数
 
-*基*目标数组的开头。
+<br/>
+目标数组的开头。
 
-*数*数组中元素的大小。
+*数量*<br/>
+元素中的数组大小。
 
-*宽度*元素大小 （字节）。
+*width*<br/>
+元素大小（字节）。
 
-*比较*到用户提供比较两个数组元素并返回一个值，指定其关系的例程的指针。
+*compare*<br/>
+指向用户提供的例程的指针比较两个数组元素，并返回指定它们关系的值。
 
 ## <a name="remarks"></a>备注
 
-**Qsort**函数可实现快速排序算法进行排序的数组*数*元素，每个*宽度*字节。 自变量*基*是指向要进行排序的数组的基类的指针。 **qsort**将使用的已排序的元素覆盖此数组。
+**Qsort**函数可实现一种快速排序算法进行排序的数组*数量*，每个元素*宽度*字节。 自变量*基*是指向要进行排序的数组的基的指针。 **qsort**将使用已排序的元素覆盖此数组。
 
-**qsort**调用*比较*例程的一个或多个时间期间排序，并将指针传递给两个数组元素，在每次调用。
+**qsort**调用*比较*例程的一个或多个排序，次，将指针传递给两个数组元素，在每次调用。
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -87,11 +91,11 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-此函数验证其参数。 如果*比较*或*数*是**NULL**，或者如果*基*是**NULL**和 **数*不为零，或者如果*宽度*小于零，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回和**errno**设置为**EINVAL**。
+此函数验证其参数。 如果*比较*或*数量*是**NULL**，或者如果*基*是**NULL**和 **数*不为零，或者如果*宽度*小于零，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回并**errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> 和 \<search.h>|
 

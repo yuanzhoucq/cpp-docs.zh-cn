@@ -1,7 +1,7 @@
 ---
-title: .堆栈 |Microsoft 文档
+title: .堆栈 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab47677da8db2afca73a078b110300a017e7c8d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95e8d69903fabf60fdb5bc04d90452bdad163a19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052295"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676231"
 ---
 # <a name="stack"></a>.STACK
-如果用于[。模型](../../assembler/masm/dot-model.md)，定义 （使用段名称堆栈） 堆栈段。 可选`size`指定的堆栈 （默认值 1024） 的字节数。 `.STACK`指令会自动关闭堆栈语句。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.STACK [[size]]  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，定义一个堆栈段 （使用段名称堆栈）。 可选`size`指定的堆栈 （默认值为 1024） 的字节数。 `.STACK`指令会自动关闭堆栈语句。
+
+## <a name="syntax"></a>语法
+
+> .堆栈 [[size]]
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

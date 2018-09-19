@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040930"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （C++）
 
-异常规范是 C++ 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 可以指定一个函数可能会或可能通过使用异常退出*异常规范*。 编译器可以使用此信息来优化对函数的调用并终止程序，如果异常转义函数。 
+异常规范是 C++ 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 可以指定一个函数可能会或可能通过使用异常退出*异常规范*。 编译器可以使用此信息来优化对函数的调用并终止程序，如果异常转义函数。
 
 在 C++ 17 之前没有两种类型的异常规范。 *Noexcept 规范*C++ 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，已在 C++ 11 中弃用并删除 C++ 17 中除`throw()`，即的别名`noexcept(true)`。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：
 
@@ -43,7 +43,7 @@ void MyFunction(int i) noexcept;
 
 |异常规范|含义|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|函数不会引发异常。 在[/std:C++ 14](../build/reference/std-specify-language-standard-version.md)模式 （这是默认值），`noexcept`和`noexcept(true)`是等效的。 从声明的函数引发异常`noexcept`或`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)调用。 从函数引发异常声明为`throw()`中 **/std:C++ 14**模式时，结果是未定义的行为。 调用没有特定的函数。 这是从 C++ 14 标准，分歧，这要求编译器将调用[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br> **Visual Studio 2017 15.5 及更高版本**： 在 **/std:C++ 17**模式下， `noexcept`， `noexcept(true)`，和`throw()`都是等效的。 在 **/std:C++ 17**模式下，`throw()`是的别名`noexcept(true)`。 在 **/std:C++ 17**模式下，当从与任意这些规范中，声明的函数引发异常[std:: terminate](../standard-library/exception-functions.md#terminate)调用通过 C++ 17 标准所需的方式。|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|函数不会引发异常。 在[/std:C++ 14](../build/reference/std-specify-language-standard-version.md)模式 （这是默认值），`noexcept`和`noexcept(true)`是等效的。 从声明的函数引发异常`noexcept`或`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)调用。 从函数引发异常声明为`throw()`中 **/std:C++ 14**模式时，结果是未定义的行为。 调用没有特定的函数。 这是从 C++ 14 标准，分歧，这要求编译器将调用[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br/> **Visual Studio 2017 15.5 及更高版本**： 在 **/std:C++ 17**模式下， `noexcept`， `noexcept(true)`，和`throw()`都是等效的。 在 **/std:C++ 17**模式下，`throw()`是的别名`noexcept(true)`。 在 **/std:C++ 17**模式下，当从与任意这些规范中，声明的函数引发异常[std:: terminate](../standard-library/exception-functions.md#terminate)调用通过 C++ 17 标准所需的方式。|
 |`noexcept(false)`<br/>`throw(...)`<br/>无规范|函数可以引发任何类型的异常。|
 |`throw(type)`| (**C++ 14 及更早版本**) 函数可以引发类型的异常`type`。 编译器接受语法，但将其作为解释`noexcept(false)`。 在 **/std:C++ 17**模式编译器发出警告 C5040。|
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>请参阅
- [try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [C++ 异常处理](../cpp/cpp-exception-handling.md)
+
+[try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[C++ 异常处理](../cpp/cpp-exception-handling.md)

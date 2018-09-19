@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068333"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ ms.locfileid: "39463676"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>备注
 
 编译器将传播 **__declspec(restrict)**。 例如，CRT`malloc`函数具有 **__declspec(restrict)** 修饰，因此，编译器假定指针初始化为内存位置的`malloc`还不是别名之前现有的指针。
 
-编译器不会检查返回的指针不是实际使用别名。 开发人员负责确保程序没有别名使用标记的指针**限制 __declspec**修饰符。  
-  
+编译器不会检查返回的指针不是实际使用别名。 开发人员负责确保程序没有别名使用标记的指针**限制 __declspec**修饰符。
+
 有关变量的类似语义，请参阅[__restrict](../cpp/extension-restrict.md)。
- 
+
 适用于锯齿函数内的另一个批注，请参阅[__declspec(noalias)](../cpp/noalias.md)。
-  
-璝惠**限制**关键字是 C++ AMP 中，请参阅[限制 (C++ AMP)](../cpp/restrict-cpp-amp.md)。  
- 
-## <a name="example"></a>示例  
+
+璝惠**限制**关键字是 C++ AMP 中，请参阅[限制 (C++ AMP)](../cpp/restrict-cpp-amp.md)。
+
+## <a name="example"></a>示例
 
 下面的示例演示如何使用 **__declspec(restrict)**。
 
@@ -122,6 +122,7 @@ int main()
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [关键字](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[关键字](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

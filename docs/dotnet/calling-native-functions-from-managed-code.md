@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116738"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 公共语言运行时提供平台调用服务，简称 PInvoke，使托管代码能够调用本机动态链接库 (Dll) 中的 C 样式函数。 与 COM 互操作性与运行时和"It Just Works，"或 ijw 映像、 机制使用相同的数据封送处理。  
@@ -35,8 +35,6 @@ ms.locfileid: "43195683"
 -   [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [平台调用详解](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  在本部分中的示例仅演示了如何`PInvoke`可用。 `PInvoke` 可以简化自定义的数据封送处理，这因为你提供属性而不是编写过程性的封送处理代码中声明的方式封送处理信息。  
   
@@ -107,7 +105,7 @@ int main() {
   
  在此示例中，Visual c + + 程序进行互操作是 Win32 API 的一部分的 MessageBox 函数。  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -134,16 +132,17 @@ int main() {
   
  如果我们在 Visual c + + 应用程序中使用 PInvoke，我们可以编写类似于以下内容：  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  这里的难点是我们不能删除由 MakeSpecial 返回的非托管字符串的内存。 通过 PInvoke 调用的其他函数返回到没有用户已取消分配的内部缓冲区的指针。 在这种情况下，使用 IJW 功能是显而易见的选择。  
   
 ## <a name="limitations-of-pinvoke"></a>PInvoke 的局限性  
  无法从以前用作参数的本机函数来返回完全相同的指针。 如果本机函数由 PInvoke 封送的指针返回到它，可能会发生内存损坏和异常。  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

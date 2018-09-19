@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2892 |Microsoft 文档
+title: 编译器错误 C2892 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f348c56c4ae243738307f12fab568821840e7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04efc10f6613029b2a6e4947dc202555f0d53501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097234"
 ---
 # <a name="compiler-error-c2892"></a>编译器错误 C2892
-局部类不应具有成员模板  
-  
- 模板化成员函数不是有效的类中定义的函数中的。  
-  
- 下面的示例生成 C2892:  
-  
-```  
-// C2892.cpp  
-int main() {  
-   struct local {  
-      template<class T>   // C2892  
-      void f() {}  
-   };  
-}  
+
+局部类不应有成员模板
+
+模板成员函数不能在函数中定义的类中。
+
+下面的示例生成 C2892:
+
+```
+// C2892.cpp
+int main() {
+   struct local {
+      template<class T>   // C2892
+      void f() {}
+   };
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 版本 |Microsoft 文档
+title: -版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854f0a4a5e24c10f7f9b6edf736f1c3349f72423
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851a1f33dc5ed23b2c489650140768f26f009d9c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715541"
 ---
 # <a name="version"></a>/VERSION
-```  
-/VERSION:left[,right]  
-```  
-  
-## <a name="remarks"></a>备注  
- 此选项会置于映像的标头中的版本号。  
-  
- 版本的整数部分数字，小数点左侧的部分由`left`。 版本的小数部分在小数点右侧的部分由`right`。  
-  
-## <a name="see-also"></a>请参阅  
- [EDITBIN 选项](../../build/reference/editbin-options.md)
+
+```
+/VERSION:left[,right]
+```
+
+## <a name="remarks"></a>备注
+
+此选项将版本号放入映像的标头。
+
+版本的整数部分表示数字的小数点左边部分`left`。 版本的小数部分表示小数点右侧的部分`right`。
+
+## <a name="see-also"></a>请参阅
+
+[EDITBIN 选项](../../build/reference/editbin-options.md)

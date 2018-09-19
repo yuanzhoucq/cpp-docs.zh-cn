@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2696 |Microsoft 文档
+title: 编译器错误 C2696 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65ccdd6d2c8c34c360811b80d5a93abe76f5ef8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6e76b0c11d329c734b0609c540aca4315c7ed9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108737"
 ---
 # <a name="compiler-error-c2696"></a>编译器错误 C2696
-无法创建托管类型 type 的临时对象  
-  
-引用`const`非托管程序中会导致编译器调用的构造函数并在堆栈上创建临时对象。 但是，永远不会可以在堆栈上创建的托管的类。  
-  
-C2696 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+无法创建临时对象的托管类型 type
+
+对引用`const`非托管程序中会导致编译器调用构造函数，并在堆栈上创建临时对象。 但是，永远不会可以在堆栈上创建托管的类。
+
+C2696 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

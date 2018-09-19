@@ -1,7 +1,7 @@
 ---
-title: 运算符 ！ = (MASM) |Microsoft 文档
+title: 运算符 ！ = (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b0292d95fcd2b0b7c816c98a3d4709b4fdc5e6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6dc66aac000cc346ae04d06c4b0c2374ff0762e4
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054632"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43688049"
 ---
 # <a name="operator--masm"></a>operator != (MASM)
-不等于。 只能在使用[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)拦截并在运行时，不是在程序集时计算。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-expression1 != expression2  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+不等于。 仅在[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)阻止并在运行时，不是在程序集时计算。
+
+## <a name="syntax"></a>语法
+
+> expression1 ！ = expression2
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

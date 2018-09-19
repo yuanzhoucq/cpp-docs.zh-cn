@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1070 |Microsoft 文档
+title: NMAKE 错误 U1070 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe39a5d6f6074596561cd8e32f7b9428bc60f6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6eb462e5c3c7e497cde55151bf92c62ffb2afcd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087014"
 ---
 # <a name="nmake-fatal-error-u1070"></a>NMAKE 错误 U1070
-宏定义 macroname 中的循环  
-  
- 在给定的宏的定义包含其定义包含给定的宏的宏。 循环的宏定义均无效。  
-  
-## <a name="example"></a>示例  
- 下面的宏定义  
-  
-```  
-ONE=$(TWO)  
-TWO=$(ONE)  
-```  
-  
- 会导致以下错误：  
-  
-```  
-cycle in macro definition 'TWO'  
+
+宏定义 macroname 中的循环
+
+在给定的宏的定义包含其定义包含给定的宏的宏。 循环宏定义均无效。
+
+## <a name="example"></a>示例
+
+以下宏定义
+
+```
+ONE=$(TWO)
+TWO=$(ONE)
+```
+
+会导致以下错误：
+
+```
+cycle in macro definition 'TWO'
 ```

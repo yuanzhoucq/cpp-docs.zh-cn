@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86074c341e26965778aaa5668c219c721a984d79
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961501"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318897"
 ---
 # <a name="logicalor-struct"></a>logical_or 结构
 
@@ -35,7 +35,7 @@ template <class Type = void>
 struct logical_or : public binary_function<Type, Type, bool>
 {
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator||
 template <>
@@ -44,16 +44,18 @@ struct logical_or<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
 *类型*， *T*， *U*支持任何类型`operator||`接受指定或推断类型的操作数。
 
-*左侧*逻辑析取运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+逻辑析取运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*逻辑析取运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+逻辑析取运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 
@@ -112,14 +114,14 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 Original deque:
- d1 = ( true true false false true false false )
+d1 = ( true true false false true false false )
 Original deque:
- d2 = ( false false false true true true true )
+d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
- d3 = ( true true false true true true true )
-*\
+d3 = ( true true false true true true true )
+*/
 
 ```
 

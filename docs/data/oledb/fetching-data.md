@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067072"
 ---
 # <a name="fetching-data"></a>提取数据
+
 打开数据源、 会话和行集对象后，可以提取数据。 具体取决于正在使用的访问器的类型，可能需要将列绑定。  
   
 ### <a name="to-fetch-data"></a>若要提取的数据  
   
-1.  打开使用相应的行集**打开**命令。  
+1. 打开使用相应的行集**打开**命令。  
   
-2.  如果使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：  
+1. 如果使用的`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要绑定的列，调用`GetColumnInfo`，，然后使用绑定创建取值函数，如下面的示例中所示：  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ ms.locfileid: "39339151"
     rs.Bind();  
     ```  
   
-3.  编写`while`循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：  
+1. 编写`while`循环，以检索数据。 在循环中，调用`MoveNext`前进游标和测试，则为 S_OK，针对返回的值，如下面的示例中所示：  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ ms.locfileid: "39339151"
     }  
     ```  
   
-4.  在`while`循环中，您可以根据你访问器的类型获取数据。  
+1. 在`while`循环中，您可以根据你访问器的类型获取数据。  
   
     -   如果您使用[CAccessor](../../data/oledb/caccessor-class.md)类，您应该具有一个包含数据成员的用户记录。 可以访问使用这些数据成员，您的数据，如下面的示例中所示：  
   
@@ -101,4 +102,5 @@ ms.locfileid: "39339151"
         ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

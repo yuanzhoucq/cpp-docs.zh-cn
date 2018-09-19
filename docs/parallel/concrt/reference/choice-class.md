@@ -1,5 +1,5 @@
 ---
-title: choice 类 |Microsoft 文档
+title: choice 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a8bc30d3fe394dd9940e716be69a7c10360da59f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028618"
 ---
 # <a name="choice-class"></a>choice 类
 `choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。  
@@ -50,8 +50,8 @@ class choice: public ISource<size_t>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- A `tuple`-基于表示负载的输入源的类型。  
+*T*<br/>
+一个`tuple`-基于类型，表示输入源的有效负载。  
   
 ## <a name="members"></a>成员  
   
@@ -72,21 +72,21 @@ class choice: public ISource<size_t>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[accept](#accept)|接受一条消息，已提供此`choice`块，将所有权转让给调用方。|  
-|[acquire_ref](#acquire_ref)|获取对此引用计数`choice`消息块，以防止删除。|  
-|[consume](#consume)|使用以前提供的这一条消息`choice`消息块并成功由目标，将所有权转让给调用方保留。|  
-|[has_value](#has_value)|检查是否这`choice`尚未已使用值初始化了消息块。|  
-|[index](#index)|返回到索引`tuple`表示所选的元素`choice`消息块。|  
-|[link_target](#link_target)|链接至该目标块`choice`消息块。|  
-|[release](#release)|释放以前的成功的消息保留。|  
-|[release_ref](#release_ref)|释放此引用计数`choice`消息块。|  
-|[reserve](#reserve)|保留以前提供的这一条消息`choice`消息块。|  
-|[unlink_target](#unlink_target)|取消链接目标块与该`choice`消息块。|  
+|[accept](#accept)|接受提供的这一条消息`choice`块中，将所有权传递给调用方。|  
+|[acquire_ref](#acquire_ref)|获取对此的引用计数`choice`消息传递块中，若要防止删除。|  
+|[consume](#consume)|使用以前由此消息`choice`消息块并成功由目标，将所有权传递给调用方保留。|  
+|[has_value](#has_value)|检查是否这`choice`消息块具有尚未初始化的值。|  
+|[index](#index)|返回到一个索引`tuple`表示所选的元素`choice`消息块。|  
+|[link_target](#link_target)|目标块链接到此`choice`消息块。|  
+|[release](#release)|释放上一个成功的消息保留。|  
+|[release_ref](#release_ref)|释放对此的引用计数`choice`消息块。|  
+|[reserve](#reserve)|保留以前由此一条消息`choice`消息块。|  
+|[unlink_target](#unlink_target)|取消链接此目标块`choice`消息块。|  
 |[unlink_targets](#unlink_targets)|取消链接所有目标从此`choice`消息块。 (重写[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
-|[value](#value)|获取其索引已选择的消息`choice`消息块。|  
+|[value](#value)|获取选定的索引的消息`choice`消息块。|  
   
 ## <a name="remarks"></a>备注  
- Choice 块可确保只有一个传入消息使用。  
+ Choice 块可确保只有一个传入消息的使用。  
   
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
@@ -102,7 +102,7 @@ class choice: public ISource<size_t>;
   
 ##  <a name="accept"></a> 接受 
 
- 接受一条消息，已提供此`choice`块，将所有权转让给调用方。  
+ 接受提供的这一条消息`choice`块中，将所有权传递给调用方。  
   
 ```  
 virtual message<size_t>* accept(
@@ -111,29 +111,29 @@ virtual message<size_t>* accept(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MsgId`  
- `runtime_object_identity`的提供`message`对象。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`对象。  
   
- `_PTarget`  
- 正在调用的目标块的指针`accept`方法。  
+*_PTarget*<br/>
+正在调用的目标块的指针`accept`方法。  
   
 ### <a name="return-value"></a>返回值  
  指向调用方现在具有的所有权的消息的指针。  
   
 ##  <a name="acquire_ref"></a> acquire_ref 
 
- 获取对此引用计数`choice`消息块，以防止删除。  
+ 获取对此的引用计数`choice`消息传递块中，若要防止删除。  
   
 ```  
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PTarget`  
- 指向调用此方法的目标块的指针。  
+*_PTarget*<br/>
+指向调用此方法的目标块的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法`ITarget`正在链接到在此源的对象`link_target`方法。  
+ 调用此方法`ITarget`对象，它被链接到此源期间`link_target`方法。  
   
 ##  <a name="ctor"></a> 选择 
 
@@ -159,24 +159,24 @@ choice(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Tuple`  
- choice 的源的 `tuple` 。  
+*_Tuple*<br/>
+choice 的源的 `tuple` 。  
   
- `_PScheduler`  
- 在其中计划了 `Scheduler` 消息块的传播任务的 `choice` 对象。  
+*_PScheduler*<br/>
+在其中计划了 `Scheduler` 消息块的传播任务的 `choice` 对象。  
   
- `_PScheduleGroup`  
- 在其中计划了 `ScheduleGroup` 消息块的传播任务的 `choice` 对象。 所用 `Scheduler` 对象由该计划组提示。  
+*_PScheduleGroup*<br/>
+在其中计划了 `ScheduleGroup` 消息块的传播任务的 `choice` 对象。 所用 `Scheduler` 对象由该计划组提示。  
   
- `_Choice`  
- 要从中进行复制的 `choice` 消息块。 请注意原始对象是孤立的，使之成为一个移动构造函数。  
+*_Choice*<br/>
+要从中进行复制的 `choice` 消息块。 请注意原始对象是孤立的，使之成为一个移动构造函数。  
   
 ### <a name="remarks"></a>备注  
  如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。  
   
  在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。  
   
-##  <a name="dtor"></a> ~ 选择 
+##  <a name="dtor"></a> ~ 的选择 
 
  销毁`choice`消息块。  
   
@@ -186,7 +186,7 @@ choice(
   
 ##  <a name="consume"></a> 使用 
 
- 使用以前提供的这一条消息`choice`消息块并成功由目标，将所有权转让给调用方保留。  
+ 使用以前由此消息`choice`消息块并成功由目标，将所有权传递给调用方保留。  
   
 ```  
 virtual message<size_t>* consume(
@@ -195,21 +195,21 @@ virtual message<size_t>* consume(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MsgId`  
- `runtime_object_identity`的保留`message`对象。  
+*_MsgId*<br/>
+`runtime_object_identity`的保留`message`对象。  
   
- `_PTarget`  
- 正在调用的目标块的指针`consume`方法。  
+*_PTarget*<br/>
+正在调用的目标块的指针`consume`方法。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`message`对象调用方现在具有的所有权。  
+ 一个指向`message`对象调用方现在具有的所有权。  
   
 ### <a name="remarks"></a>备注  
- `consume`方法类似于是`accept`，但始终之前必须通过调用`reserve`返回`true`。  
+ `consume`方法是类似于`accept`，但始终必须通过调用带`reserve`返回`true`。  
   
 ##  <a name="has_value"></a> has_value 
 
- 检查是否这`choice`尚未已使用值初始化了消息块。  
+ 检查是否这`choice`消息块具有尚未初始化的值。  
   
 ```  
 bool has_value() const;
@@ -222,33 +222,33 @@ bool has_value() const;
   
 ##  <a name="index"></a> 索引 
 
- 返回到索引`tuple`表示所选的元素`choice`消息块。  
+ 返回到一个索引`tuple`表示所选的元素`choice`消息块。  
   
 ```  
 size_t index();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 消息索引中。  
+ 消息的索引。  
   
 ### <a name="remarks"></a>备注  
- 可以使用提取消息负载`get`方法。  
+ 可以使用提取的消息有效负载`get`方法。  
   
 ##  <a name="link_target"></a> link_target 
 
- 链接至该目标块`choice`消息块。  
+ 目标块链接到此`choice`消息块。  
   
 ```  
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PTarget`  
- 指向的指针`ITarget`块要链接到此`choice`消息块。  
+*_PTarget*<br/>
+一个指向`ITarget`块要链接到此`choice`消息块。  
   
 ##  <a name="release"></a> 版本 
 
- 释放以前的成功的消息保留。  
+ 释放上一个成功的消息保留。  
   
 ```  
 virtual void release(
@@ -257,30 +257,30 @@ virtual void release(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MsgId`  
- `runtime_object_identity`的`message`对象被释放。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`对象被释放。  
   
- `_PTarget`  
- 正在调用的目标块的指针`release`方法。  
+*_PTarget*<br/>
+正在调用的目标块的指针`release`方法。  
   
 ##  <a name="release_ref"></a> release_ref 
 
- 释放此引用计数`choice`消息块。  
+ 释放对此的引用计数`choice`消息块。  
   
 ```  
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PTarget`  
- 指向调用此方法的目标块的指针。  
+*_PTarget*<br/>
+指向调用此方法的目标块的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法`ITarget`正在取消链接从该源的对象。 源块可以释放为目标块保留任何资源。  
+ 调用此方法`ITarget`从此源取消链接的对象。 源块允许释放任何资源保留目标块的。  
   
 ##  <a name="reserve"></a> 保留 
 
- 保留以前提供的这一条消息`choice`消息块。  
+ 保留以前由此一条消息`choice`消息块。  
   
 ```  
 virtual bool reserve(
@@ -289,29 +289,29 @@ virtual bool reserve(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MsgId`  
- `runtime_object_identity`的`message`对象被保留。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`对象所保留。  
   
- `_PTarget`  
- 正在调用的目标块的指针`reserve`方法。  
+*_PTarget*<br/>
+正在调用的目标块的指针`reserve`方法。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果消息已成功保留，`false`否则为。 保留可能因为众多原因失败，包括：消息已保留或已由另一目标接受，源可能拒绝保留等。  
+ `true` 如果消息已成功保留，`false`否则为。 预留可能因为众多原因失败，包括：消息已预留或已由另一目标接受，源可能拒绝预留等。  
   
 ### <a name="remarks"></a>备注  
- 调用后`reserve`，如果成功，必须调用`consume`或`release`才能采取或分别放弃的消息，拥有。  
+ 调用后`reserve`，如果成功，必须调用`consume`或`release`为了采用或分别放弃的消息的所有权。  
   
 ##  <a name="unlink_target"></a> unlink_target 
 
- 取消链接目标块与该`choice`消息块。  
+ 取消链接此目标块`choice`消息块。  
   
 ```  
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PTarget`  
- 指向的指针`ITarget`块从此取消链接`choice`消息块。  
+*_PTarget*<br/>
+一个指向`ITarget`块来取消链接此`choice`消息块。  
   
 ##  <a name="unlink_targets"></a> unlink_targets 
 
@@ -322,11 +322,11 @@ virtual void unlink_targets();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此方法不需要从析构函数调用，因为析构函数的内部`single_assignment`块将正确地取消链接。  
+ 此方法不需要从析构函数调用，因为析构函数内部`single_assignment`块将正确地取消链接。  
   
 ##  <a name="value"></a> 值 
 
- 获取其索引已选择的消息`choice`消息块。  
+ 获取选定的索引的消息`choice`消息块。  
   
 ```  
 template <
@@ -336,14 +336,14 @@ _Payload_type const& value();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Payload_type`  
- 消息负载的类型。  
+*_Payload_type*<br/>
+消息负载的类型。  
   
 ### <a name="return-value"></a>返回值  
  消息的负载。  
   
 ### <a name="remarks"></a>备注  
- 因为 `choice` 消息块可以采用不同负载类型的输入，您必须指定检索时的负载类型。 你可以确定基于的结果的类型`index`方法。  
+ 因为 `choice` 消息块可以采用不同负载类型的输入，您必须指定检索时的负载类型。 您可以确定基于的结果类型`index`方法。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

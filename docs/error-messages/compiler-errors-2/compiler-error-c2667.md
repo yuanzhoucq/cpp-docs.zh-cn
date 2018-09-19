@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2667 |Microsoft 文档
+title: 编译器错误 C2667 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5458bc5dc9500ea7850833b073d40d66bfc6e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6d14cf04ae399b10cbaa393d9e9fcc7133f274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095243"
 ---
 # <a name="compiler-error-c2667"></a>编译器错误 C2667
-function： 没有任何数字重载具有最佳转换  
-  
- 重载的函数调用不明确，无法解析。  
-  
- 必须严格优于所需的所有其他重载函数的转换需要用来匹配对其中一个重载函数的函数调用中的实际参数转换。  
-  
- 在函数模板的部分排序，请参阅知识库文章 Q240869 有关详细信息。
+
+function： 没有任何数字重载具有最佳转化
+
+重载的函数调用不明确，无法解析。
+
+匹配对其中一个重载函数的函数调用中的实际参数所需的转换必须是严格优于所需的所有其他重载函数的转换。
+
+在函数模板的部分排序，请参阅知识库文章 Q240869 了解详细信息。

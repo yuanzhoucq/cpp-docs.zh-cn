@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4459 |Microsoft 文档
+title: 编译器警告 （等级 C4459 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bdbfe6cceff664e7b7a5f8cee20e8df51e2fb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca0fc86be746bafdf4987a7492c59d9686535cef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040890"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>编译器警告 （等级 4） C4459
-  
+# <a name="compiler-warning-level-4-c4459"></a>编译器警告 （等级 C4459
+
 > 声明*标识符*隐藏了全局声明
-  
-声明*标识符*在本地作用域中隐藏具有相同名称的声明*标识符*在全局范围内。 此警告，告知你引用到*标识符*此作用域中解析为本地声明版本，而非全局版本，可能会也可能不是你的意图。 通常情况下，我们建议你尽量少使用的全局变量作为良好工程做法。 为了尽量减少污染全局命名空间，我们建议使用命名的命名空间的全局变量。  
-  
-在 Visual Studio 2015 中，在 Visual c + + 编译器版本 18.00 新此警告。 若要禁止显示该版本的编译器或更高版本时迁移你的代码的警告，请使用[/Wv:18](../../build/reference/compiler-option-warning-level.md)编译器选项。 
+
+声明*标识符*在本地作用域中隐藏了相同名称的声明*标识符*全局作用域中。 此警告，可以了解到引用*标识符*在此范围内解析为本地声明的版本中，不是全局版本，可能会也可能不是你的意图。 通常情况下，我们建议你尽量减少使用的全局变量作为良好工程做法。 为了尽量减少污染全局命名空间，我们建议使用已命名的命名空间的全局变量。
+
+此警告是 Visual Studio 2015 中，在 Visual c + + 编译器版本 18.00 中的新增功能。 若要禁止显示警告从该版本的编译器或更高版本时迁移你的代码，请使用[/wv:18](../../build/reference/compiler-option-warning-level.md)编译器选项。
 
 ## <a name="example"></a>示例
-  
- 下面的示例生成 C4459:  
-  
-```cpp  
+
+下面的示例生成 C4459:
+
+```cpp
 // C4459_hide.cpp
 // compile with: cl /W4 /EHsc C4459_hide.cpp
 int global_or_local = 1;
 
-int main() { 
-    int global_or_local; // warning C4459 
+int main() {
+    int global_or_local; // warning C4459
     global_or_local = 2;
-} 
-```  
-  
-若要解决此问题的一种方法是创建您全局函数的命名空间，但不是使用`using`指令置于该命名空间的范围内，因此所有引用都必须都使用明确限定名：  
-  
-```cpp  
+}
+```
+
+若要解决此问题的一种方法是创建用于在全局命名空间，但不是使用`using`指令将该命名空间引入作用域，因此必须使用明确的所有引用限定的名称：
+
+```cpp
 // C4459_namespace.cpp
 // compile with: cl /W4 /EHsc C4459_namespace.cpp
 namespace globals {
     int global_or_local = 1;
 }
 
-int main() { 
-    int global_or_local; // OK 
+int main() {
+    int global_or_local; // OK
     global_or_local = 2;
     globals::global_or_local = 3;
-} 
-```  
+}
+```

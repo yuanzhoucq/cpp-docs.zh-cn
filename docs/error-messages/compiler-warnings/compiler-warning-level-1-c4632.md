@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4632 |Microsoft 文档
+title: 编译器警告 （等级 1） C4632 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa05b039d3d4a8cddcc607861ea27e9591cfc29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84a8e078afe7164f1a3877f15c0b2741c6c848b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086403"
 ---
 # <a name="compiler-warning-level-1-c4632"></a>编译器警告（等级 1）C4632
-XML 文档注释： 文件的路径-访问被拒绝： 原因  
-  
- .Xdc 文件的路径 (`file`) 无效，且不创建任何.xdc 文件。  
-  
- 下面的示例生成 C4632:  
-  
-```  
-// C4632.cpp  
-// compile with: /clr /docv:\\falsedir /LD /W1  
-// C4632 expected  
-  
-/// Text for class MyClass.  
-public ref class MyClass {};  
+
+XML 文档注释： 文件的访问被拒绝： 原因
+
+.Xdc 文件的路径 (`file`) 无效，并不创建任何.xdc 文件。
+
+下面的示例生成 C4632:
+
+```
+// C4632.cpp
+// compile with: /clr /docv:\\falsedir /LD /W1
+// C4632 expected
+
+/// Text for class MyClass.
+public ref class MyClass {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2573 |Microsoft 文档
+title: 编译器错误 C2573 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c874cbf2f8a8594c032506ed4e47c501cb9827
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51353430b7f2e44bd272a471dfc92a37961aa7fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083699"
 ---
 # <a name="compiler-error-c2573"></a>编译器错误 C2573
-“class”：不能删除指向此类对象的指针；该类没有“operator delete”的非位置重载。  
-  
- 该类缺少非位置 delete 运算符。
+
+“class”：不能删除指向此类对象的指针；该类没有“operator delete”的非位置重载。
+
+该类缺少非位置 delete 运算符。

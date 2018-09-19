@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2001 |Microsoft 文档
+title: 资源编译器错误 RC2001 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef1fd5d29fc5784ee418a8456cacec37e943b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d75d0f906ba0d7be75ca5177bc1f58bccd226251
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039967"
 ---
 # <a name="resource-compiler-error-rc2001"></a>资源编译器错误 RC2001
-常量中有换行符  
-  
- 字符串常量在第二个行继续没有反斜杠 (**\\**) 或关闭并打开两个双引号 (**"**)。  
-  
- 若要中断位于源文件中的两个行的字符串常量，执行以下操作：  
-  
--   结束以行继续符，反斜杠的第一行。  
-  
--   关闭与双引号匹配的第一行中的字符串，并使用另一个引号打开下一步的行中的字符串。  
-  
- 不满足需求，若要结束用 \n，字符串常量中嵌入换行字符的转义序列的第一行。
+
+常量中有换行符
+
+一个字符串常量在第二个行继续不带反斜杠 (**\\**) 或关闭并打开两个双引号 (**"**)。
+
+若要中断一个字符串常量，它位于源文件中的两行上，执行以下操作：
+
+- 结束，第一行用行继续符，反斜杠。
+
+- 结束的字符串与双引号匹配的第一行上，打开下一行中的字符串与另一个引号。
+
+不足够结束，第一行用 \n，在一个字符串常量中嵌入换行字符的转义序列。

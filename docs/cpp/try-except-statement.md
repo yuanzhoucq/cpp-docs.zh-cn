@@ -35,28 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d2f75a9abbba44bd1900e2410ff73cf75cbb72
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031428"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
-**Microsoft 专用**  
-**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言的支持结构化异常处理。  
+**Microsoft 专用**
 
-## <a name="syntax"></a>语法  
-  
-> **__try**   
-> {  
->    受保护的代码  
-> }  
-> **__except** (*表达式*)  
-> {  
->    异常处理程序代码  
-> }  
+**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言的支持结构化异常处理。
+
+## <a name="syntax"></a>语法
+
+> **__try** {/ / 受保护的代码} **__except** (*表达式*) {/ / 异常处理程序代码}
 
 ## <a name="remarks"></a>备注
 
@@ -73,7 +67,7 @@ ms.locfileid: "39466294"
 
 1. 执行受保护节。
 
-2. 如果在受保护节执行过程中不发生任何异常，则继续执行之后的语句 **__except**子句。  
+2. 如果在受保护节执行过程中不发生任何异常，则继续执行之后的语句 **__except**子句。
 
 3. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用的 **__except** *表达式*(称为*筛选器*表达式)进行评估，值将确定异常的处理方式。 有三个值：
 
@@ -87,10 +81,10 @@ ms.locfileid: "39466294"
 
 每个应用程序都可以有各自的异常处理程序。
 
-它不是有效的跳转到 **__try**语句，但有效跳出。 如果在执行会终止进程不调用异常处理程序**试用-除**语句。  
-  
-有关详细信息，请参阅知识库文章 Q315937：“如何：捕获 Visual C++ 应用程序中的堆栈溢出”。  
-  
+它不是有效的跳转到 **__try**语句，但有效跳出。 如果在执行会终止进程不调用异常处理程序**试用-除**语句。
+
+有关详细信息，请参阅知识库文章 Q315937：“如何：捕获 Visual C++ 应用程序中的堆栈溢出”。
+
 ## <a name="the-leave-keyword"></a>__leave 关键字
 
 **__Leave**关键字是仅在受保护节的有效**试用-除**语句和其效果是跳转到受保护部分的结尾。 将继续执行异常处理程序后的第一个语句。
@@ -105,12 +99,12 @@ ms.locfileid: "39466294"
 
 内部函数`GetExceptionInformation`返回指向包含有关异常的其他信息的结构的指针。 通过此指针，您可以访问在出现硬件异常时存在的计算机状态。 该结构如下所示：
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 指针类型`PEXCEPTION_RECORD`并`PCONTEXT`在包含文件中定义\<winnt.h 中的 >，和`_EXCEPTION_RECORD`并`_CONTEXT`包含文件中定义\<excpt.h >
 
@@ -122,10 +116,10 @@ excpt.h 定义这些内部函数的一些替代名称：
 
 `GetExceptionCode` 等效于 `_exception_code`
 
- `GetExceptionInformation` 等效于 `_exception_info`
+`GetExceptionInformation` 等效于 `_exception_info`
 
- `AbnormalTermination` 等效于 `_abnormal_termination`
-  
+`AbnormalTermination` 等效于 `_abnormal_termination`
+
 ## <a name="example"></a>示例
 
 ```cpp
@@ -175,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>输出  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**结束 Microsoft 专用**  
+## <a name="output"></a>输出
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
- [结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
- [关键字](../cpp/keywords-cpp.md)
+
+[编写异常处理程序](../cpp/writing-an-exception-handler.md)<br/>
+[结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[关键字](../cpp/keywords-cpp.md)

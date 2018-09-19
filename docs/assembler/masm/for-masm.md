@@ -1,7 +1,7 @@
 ---
-title: 有关 (MASM) |Microsoft 文档
+title: (MASM) 的 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca67b886a0fd134b4d861a516b6726dae156c3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd349a38b1de317a01f07fdcf1ba1915f6d32a42
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681110"
 ---
 # <a name="for-masm"></a>FOR (MASM)
-将块，它将为每一次重复标记`argument`，与当前`argument`替换`parameter`上每次重复。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-   FOR   
-   parameter [[:REQ | :=default]] , <argument [[, argument]]...>  
-statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>备注  
- 与相同[IRP](../../assembler/masm/irp.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+将标记将为每一次重复的块*自变量*，与当前*自变量*替换*参数*上每次重复。
+
+## <a name="syntax"></a>语法
+
+> 有关*参数*[[: 请求 |: =*默认*]]， \<*参数*[[，*参数*]]...><br/>
+> *语句*<br/>
+> ENDM
+
+## <a name="remarks"></a>备注
+
+与相同[IRP](../../assembler/masm/irp.md)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f383b79c8130501773c56db47c08b9449b259a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111428"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor 类
+
 可以用作模板自变量 (`TAccessor`) 的模板类，如`CCommand`和`CTable`，需要访问器类参数。  
   
 ## <a name="syntax"></a>语法
@@ -36,37 +37,40 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用`CNoAccessor`作为模板参数，如果不想要支持参数或输出列的类。  
+
+使用`CNoAccessor`作为模板参数，如果不想要支持参数或输出列的类。  
   
- `CNoAccessor` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
+`CNoAccessor` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
   
--   `BindColumns` -将列绑定到访问器。  
+- `BindColumns` -将列绑定到访问器。  
   
--   `BindParameters` -将创建的参数绑定到列。  
+- `BindParameters` -将创建的参数绑定到列。  
   
--   `Bind` -创建绑定。  
+- `Bind` -创建绑定。  
   
--   `Close` -关闭访问器。  
+- `Close` -关闭访问器。  
   
--   `ReleaseAccessors` -释放访问器类创建的。  
+- `ReleaseAccessors` -释放访问器类创建的。  
   
--   `FreeRecordMemory` -释放需要释放的当前记录中的任何列。  
+- `FreeRecordMemory` -释放需要释放的当前记录中的任何列。  
   
--   `GetColumnInfo` -从打开的行集中获取列信息。  
+- `GetColumnInfo` -从打开的行集中获取列信息。  
   
--   `GetNumAccessors` -检索类创建的取值函数的数目。  
+- `GetNumAccessors` -检索类创建的取值函数的数目。  
   
--   `IsAutoAccessor` 的如果自动检索数据的访问器在移动操作过程返回 true。  
+- `IsAutoAccessor` 的如果自动检索数据的访问器在移动操作过程返回 true。  
   
--   `GetHAccessor` -检索指定的访问器的访问器句柄。  
+- `GetHAccessor` -检索指定的访问器的访问器句柄。  
   
--   `GetBuffer` -检索到的书签缓冲区的指针。  
+- `GetBuffer` -检索到的书签缓冲区的指针。  
   
--   `NoBindOnNullRowset` -可以防止在空的行集上的数据绑定。  
+- `NoBindOnNullRowset` -可以防止在空的行集上的数据绑定。  
   
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

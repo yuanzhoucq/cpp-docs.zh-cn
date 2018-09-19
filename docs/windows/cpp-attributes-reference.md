@@ -8,19 +8,19 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], reference topics
+- attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c2c98ac16e9e5cb554d72a8880c5d4c45ff610d2
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201923"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315699"
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 
@@ -47,9 +47,3 @@ Microsoft 定义一的组属性，用于简化 COM 编程和.NET Framework 公�
 
 [特性化的编程](../windows/attributed-programming-concepts.md)  
 提供属性的概念性概述。
-
-[参考](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
-提供一些链接，它们指向描述 C 和 C++ 语言参考、Visual C++ 随附的库、Visual C++ 扩展性对象模型和 Microsoft 宏汇编 (MASM) 的主题。
-
-[Visual C++ 示例](../visual-cpp-samples.md)  
-提供一些链接，它们指向显示 Visual C++ 功能及其支持的库和技术的示例代码。

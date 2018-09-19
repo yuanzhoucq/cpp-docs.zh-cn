@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2082 |Microsoft 文档
+title: 编译器错误 C2082 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbaa7f59b8853dd1b1ad0f2e839b00086db8eac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6939bf628072fc1c5c4e72c0012e4a190d43864
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082399"
 ---
 # <a name="compiler-error-c2082"></a>编译器错误 C2082
-形参“identifier”的重定义  
-  
- 已在函数体中重新声明了函数的形参。 若要解决此错误，请删除重新定义。  
-  
- 以下示例生成 C2082：  
-  
-```  
-// C2082.cpp  
-void func(int i) {  
-   int i;   // C2082  
-   int ii;   // OK  
-}  
+
+形参“identifier”的重定义
+
+已在函数体中重新声明了函数的形参。 若要解决此错误，请删除重新定义。
+
+以下示例生成 C2082：
+
+```
+// C2082.cpp
+void func(int i) {
+   int i;   // C2082
+   int ii;   // OK
+}
 ```

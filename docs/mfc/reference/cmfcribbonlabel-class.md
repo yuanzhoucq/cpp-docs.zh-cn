@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848578"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703828"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 实现功能区的不可单击文本标签。  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszText*  
- 要在标签中显示的文本。  
+*lpszText*<br/>
+[in]要在标签中显示的文本。  
   
- [in]*bIsMultiLine*  
- 若要指定标签是一个多行标签;，则返回 TRUE否则为 FALSE。  
+*bIsMultiLine*<br/>
+[in]若要指定标签是一个多行标签;，则返回 TRUE否则为 FALSE。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  确定当前的功能区标签元素的可访问性数据。  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pParent*  
- 表示父窗口的当前功能区标签。  
+*pParent*<br/>
+[in]表示父窗口的当前功能区标签。  
   
- [out]*数据*  
- 类型的对象`CAccessibilityData`填入的可访问性数据的当前功能区标签。  
+*data*<br/>
+[out]类型的对象`CAccessibilityData`填入的可访问性数据的当前功能区标签。  
   
 ### <a name="return-value"></a>返回值  
  则为 TRUE*数据*参数已成功使用当前的功能区标签可访问性数据填充; 否则为 FALSE。  

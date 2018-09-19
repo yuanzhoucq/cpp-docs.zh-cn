@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3831 |Microsoft 文档
+title: 编译器错误 C3831 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c0295f598b79436d1f892114615473d16275e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8525df7eb854ee56eef7bc9167d3630ea3c72ad5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029879"
 ---
 # <a name="compiler-error-c3831"></a>编译器错误 C3831
-member: class 不能具有固定的数据成员或成员函数返回钉住指针  
-  
- [pin_ptr (C + + /cli CLI)](../../windows/pin-ptr-cpp-cli.md)未正确使用。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3831:  
-  
-```  
-// C3831a.cpp  
-// compile with: /clr  
-ref class Y  
-{  
-public:  
-   int i;  
-};  
-  
-ref class X  
-{  
-   pin_ptr<int> mbr_Y;   // C3831  
-   int^ mbr_Y2;   // OK  
-};  
-  
-int main() {  
-   Y y;  
-   pin_ptr<int> p = &y.i;  
-}  
-```  
+
+member: class 不能有钉住的数据成员或返回钉住指针的成员函数
+
+[pin_ptr (C + + CLI)](../../windows/pin-ptr-cpp-cli.md)未正确使用。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3831:
+
+```
+// C3831a.cpp
+// compile with: /clr
+ref class Y
+{
+public:
+   int i;
+};
+
+ref class X
+{
+   pin_ptr<int> mbr_Y;   // C3831
+   int^ mbr_Y2;   // OK
+};
+
+int main() {
+   Y y;
+   pin_ptr<int> p = &y.i;
+}
+```

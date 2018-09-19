@@ -49,19 +49,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df2168da257c6d1d07cff6400122830da60b5fef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca1591bba9518b1b5f6122f51bf60f5a23fc7a26
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417440"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319001"
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
 
 比较字符串。
 
 > [!IMPORTANT]
-> **_mbscmp**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscmp**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -87,19 +87,19 @@ int _mbscmp(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数的返回值指示的序号关系*string1*到*string2*。
+每个函数的返回值指示的序号关系*string1*到*string2*。
 
-|值|string1 与 string2 的关系|
+|“值”|string1 与 string2 的关系|
 |-----------|----------------------------------------|
 |< 0|*string1*是小于*string2*|
 |0|*string1*等同于*string2*|
 |> 0|*string1*大于*string2*|
 
-参数验证错误时， **_mbscmp**返回 **_NLSCMPERROR**中, 定义\<string.h > 和\<mbstring.h >。
+参数验证错误时， **_mbscmp**返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<mbstring.h >。
 
 ## <a name="remarks"></a>备注
 
-**Strcmp**函数执行的序号比较*string1*和*string2*并返回一个值，指示二者关系。 **wcscmp**和 **_mbscmp**分别是宽字符及多字节字符版本的**strcmp**。 **_mbscmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*是 null 指针， **_mbscmp**中所述调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则 **_mbscmp**返回 **_NLSCMPERROR**和设置**errno**到**EINVAL**。 **strcmp**和**wcscmp**不会验证其参数。 否则这三个函数否则具有相同行为。
+**Strcmp**函数执行序号比较*string1*并*string2* ，并返回一个值，指示二者关系。 **wcscmp**并 **_mbscmp**分别是宽字符及多字节字符版本的**strcmp**。 **_mbscmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*是 null 指针 **_mbscmp**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则 **_mbscmp**返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。 **strcmp**并**wcscmp**不会验证其参数。 否则这三个函数否则具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -107,20 +107,20 @@ int _mbscmp(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-**Strcmp**函数与不同**strcoll**在于**strcmp**比较序号，并且不受区域设置。 **strcoll**使用按字典顺序比较字符串**LC_COLLATE**的当前区域设置的类别。 有关详细信息**LC_COLLATE**类别，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。
+**Strcmp**函数与差异**strcoll**中的函数**strcmp**比较是序号，和不受区域设置。 **strcoll**使用按字典顺序比较字符串**LC_COLLATE**当前区域设置的类别。 有关详细信息**LC_COLLATE**类别中，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。
 
 在“C”区域设置中，字符集 (ASCII 字符集) 中的字符顺序与字典中的字符顺序一样。 但是在其他区域设置中，字符集中的字符顺序可能与字典中的顺序不同。 例如，在某些欧洲区域设置中，字符集中的字符“a”（值 0x61）位于字符“ä”（值 0xE4）之前，但在字典顺序中，字符“ä”位于字符“a”之前。
 
-在为其字符集和字典字符顺序不同的区域设置中，你可以使用**strcoll**而不是**strcmp**字典对字符串进行比较。 或者，可以使用**strxfrm**对原始字符串，以及然后使用**strcmp**对结果字符串。
+在为其的字符集和字典字符顺序不同的区域设置，你可以使用**strcoll**而不是**strcmp**按字典顺序比较的字符串。 或者，可以使用**strxfrm**上原始字符串，然后使用**strcmp**对结果字符串。
 
-**Strcmp**函数是区分大小写。 **_stricmp**， **_wcsicmp**，和 **_mbsicmp**比较的第一个将它们转换为小写形式的字符串。 两个包含位于 Z 之间的字符的字符串和 'a' ASCII 表中 (['，'\\，]，^，'_' 和 '\`) 比较不同，具体取决于其大小写。 例如，两个字符串"ABCDE"和"ABCD ^"比较的一种方法，如果比较采用小写形式 ("abcde">"abcd ^") 和另一种方法 ("ABCDE"<"ABCD ^") 如果比较采用大写形式。
+**Strcmp**函数是区分大小写。 **_stricmp**， **_wcsicmp**，和 **_mbsicmp**比较字符串之前会首先将它们转换成小写形式。 两个包含位于 Z 之间的字符的字符串和 a ASCII 表中 (['，'\\，]，^，_ 和\`) 的比较方式，具体取决于其大小写。 例如，两个字符串"ABCDE"和"ABCD ^"进行比较的一种方法，如果比较采用小写形式 ("abcde">"abcd ^") 和另一种方法 ("ABCDE"<"ABCD ^") 如果比较采用大写形式。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strcmp**|<string.h>|
-|**wcscmp**|<string.h> 或 <wchar.h>|
+|**strcmp**|\<string.h>|
+|**wcscmp**|\<string.h> 或 \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。

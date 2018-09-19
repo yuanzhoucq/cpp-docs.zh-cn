@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699878"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
 **Microsoft 专用**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>参数  
- [out] `Index`  
- 已使用找到的第一个设置位 (1) 的位位置加载。  
+*Tuple*<br/>
+[out]使用找到的第一个设置位 (1) 的位位置加载。  
   
- [in] `Mask`  
- 要搜索的 32 位或 64 位值。  
+*掩码*<br/>
+[in]要搜索的 32 位或 64 位值。  
   
 ## <a name="return-value"></a>返回值  
  如果掩码为零，则为 0；否则为非零值。  

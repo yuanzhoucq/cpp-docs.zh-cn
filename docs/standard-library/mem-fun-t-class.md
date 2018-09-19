@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956383"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108468"
 ---
 # <a name="memfunt-class"></a>mem_fun_t 类
 
@@ -41,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>参数
 
-*_Pm*指向的类成员函数的指针`Type`可转换为函数对象。
+*_Pm*<br/>
+一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*_Pleft*对象的 *_Pm*上调用成员函数。
+*_Pleft*<br/>
+该对象的 *_Pm*上调用成员函数。
 
 ## <a name="return-value"></a>返回值
 

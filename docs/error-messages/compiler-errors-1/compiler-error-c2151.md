@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2151 |Microsoft 文档
+title: 编译器错误 C2151 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101548"
 ---
 # <a name="compiler-error-c2151"></a>编译器错误 C2151
-多个语言属性  
-  
- 某函数有多个关键字 ( `__cdecl`， `__stdcall`，或`__fastcall`) 指定的调用约定。
+
+多个语言属性
+
+某函数有多个关键字 ( `__cdecl`， `__stdcall`，或`__fastcall`) 指定调用约定。

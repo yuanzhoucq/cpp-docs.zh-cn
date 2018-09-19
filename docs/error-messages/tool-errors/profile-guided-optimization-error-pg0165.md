@@ -1,5 +1,5 @@
 ---
-title: 优化错误 PG0165 按配置文件 |Microsoft 文档
+title: 按配置优化错误 PG0165 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acad97411480112d06dadd454d1368dcfdf2c87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332751a123bf7d6414c40b79870b5edf27a3d8a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084206"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>按配置文件优化错误 PG0165
-读取 Filename.pgd: 不支持 PGD 版本 （版本不匹配）。  
-  
- PGD 文件是特定于特定的编译器工具集。 使用与用于不同的编译器时，会生成此错误*Filename*.pgd。 此错误指示，此编译器工具集无法使用从数据*Filename*.pgd 来优化当前程序。  
-  
- 若要解决此问题，重新生成*Filename*.pgd 通过使用当前编译器工具集。
+
+阅读 Filename.pgd: 不支持 PGD 版本 （版本不匹配）。
+
+PGD 文件是特定于特定的编译器工具集。 使用与用于不同的编译器时，会生成此错误*文件名*.pgd。 此错误表示，此编译器工具集不能使用中的数据*文件名*.pgd 来优化当前程序。
+
+若要解决此问题，重新生成*文件名*.pgd 通过使用当前的编译器工具集。

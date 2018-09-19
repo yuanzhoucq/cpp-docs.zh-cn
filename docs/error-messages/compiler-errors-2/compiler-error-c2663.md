@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2663 |Microsoft 文档
+title: 编译器错误 C2663 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f39f516b32aaf1159d47726d01623e253ee8b383
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fed35dcce056eb3d2a660c154e94b8058563dba7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083686"
 ---
 # <a name="compiler-error-c2663"></a>编译器错误 C2663
-function： 数字重载具有 this 指针的任何合法转换  
-  
- 编译器无法转换`this`到任何成员函数的重载版本。  
-  
- 可以通过调用非-导致此错误`const`成员函数上的`const`对象。  可能的解决方法：  
-  
-1.  删除`const`从对象声明。  
-  
-2.  添加`const`成员函数重载之一。  
-  
- 下面的示例生成 C2663:  
-  
-```  
-// C2663.cpp  
-struct C {  
-   void f() volatile {}  
-   void f() {}  
-};  
-  
-struct D {  
-   void f() volatile;  
-   void f() const {}  
-};  
-  
-const C *pcc;  
-const D *pcd;  
-  
-int main() {  
-   pcc->f();    // C2663  
-   pcd->f();    // OK  
-}  
+
+function： 数字重载具有 this 指针没有合法转换
+
+编译器无法将转换`this`到任何成员函数的重载版本。
+
+此错误可能由调用非`const`成员函数上的`const`对象。  可能的解决方法：
+
+1. 删除`const`从对象声明。
+
+1. 添加`const`成员函数重载之一。
+
+下面的示例生成 C2663:
+
+```
+// C2663.cpp
+struct C {
+   void f() volatile {}
+   void f() {}
+};
+
+struct D {
+   void f() volatile;
+   void f() const {}
+};
+
+const C *pcc;
+const D *pcd;
+
+int main() {
+   pcc->f();    // C2663
+   pcd->f();    // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 如何： 指定资源的包含目录 |Microsoft Docs
+title: 如何： 指定资源 （c + +） 的包含目录 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - directories [C++], specifying include paths for resources
-- include files, specifying for resources
-- resources [Visual Studio], including in projects
+- include files [C++], specifying for resources
+- resources [C++], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220593"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313944"
 ---
-# <a name="how-to-specify-include-directories-for-resources"></a>如何：指定资源的包含目录
+# <a name="how-to-specify-include-directories-for-resources-c"></a>如何： 指定资源 （c + +） 的包含目录
 
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>为特定 .rc 文件指定包含目录
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220593"
 
 2. 在中**属性页**对话框中，单击**资源**节点，在左窗格中，然后指定附加的包含目录**附加包含目录**属性。
 
-有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[演练： Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index).NET Framework 开发人员指南中。 
 
 ## <a name="requirements"></a>要求
 

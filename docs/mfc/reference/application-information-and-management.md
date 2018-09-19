@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726786"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 当您编写的应用程序时，创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)-派生的对象。 有时，可能想要获取有关从外部此对象的信息`CWinApp`-派生的对象。 或者，您可能需要与其他全局"mananger"对象的访问。
@@ -406,8 +406,8 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指向派生自 `CWnd`的对象的指针。  
+*pWnd*<br/>
+[in]指向派生自的对象的指针`CWnd`。  
    
 ### <a name="return-value"></a>返回值  
  如果提供的窗口是扩展的框架对象; 则为 TRUE否则为 FALSE。  
@@ -442,8 +442,8 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指向派生自 `CWnd`的对象的指针。  
+*pWnd*<br/>
+[in]指向派生自的对象的指针`CWnd`。  
    
 ### <a name="return-value"></a>返回值  
  如果提供的窗口为工具栏对象; 则为 TRUE否则为 FALSE。  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- TRUE 表示注册表信息将定向到的 HKCU 节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
+*bEnable*<br/>
+[in]TRUE 表示注册表信息将定向到的 HKCU 节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>备注  
 

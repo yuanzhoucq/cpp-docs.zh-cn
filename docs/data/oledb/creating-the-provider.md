@@ -1,5 +1,5 @@
 ---
-title: 创建提供程序 |Microsoft 文档
+title: 创建提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032089"
 ---
 # <a name="creating-the-provider"></a>创建提供程序
+
 #### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>使用 ATL OLE DB 提供程序向导创建 OLE DB 提供程序  
   
-1.  右键单击该项目。  
+1. 右键单击该项目。  
   
-2.  在快捷菜单上，单击**添加**，然后单击**添加类**。  
+1. 在快捷菜单上，单击**外**，然后单击**添加类**。  
   
-3.  在**添加类**对话框中，选择**ATL OLE DB 访问接口**图标，，然后单击**打开**。  
+1. 在中**添加类**对话框中，选择**ATL OLE DB 访问接口**图标，，然后单击**打开**。  
   
-4.  在 ATL OLE DB 提供程序向导中，输入你的提供商中的短名称**短名称**框。 下面的主题使用的短名称"MyProvider"，但你可以使用其他名称。 其他名称框填充根据你输入的名称。  
+1. 在 ATL OLE DB 提供程序向导中，输入在提供程序的短名称**短名称**框。 下面的主题使用短名称"MyProvider"，但可以使用其他名称。 其他名称框填充根据输入的名称。  
   
-5.  如果需要请编辑的其他名称框。 除了对象和文件名称中，你可以编辑以下：  
+1. 如果需要，编辑的其他名称框。 除了对象和文件名称，可以编辑以下：  
   
-    -   **组件类**: COM 使用创建提供程序的名称。  
+    -   **组件类**: COM 使用来创建提供程序的名称。  
   
-    -   **ProgID**： 的编程标识符，是可以使用而不是 GUID 的文本字符串。  
+    -   **ProgID**： 是可用来代替 GUID 的文本字符串的编程标识符。  
   
-    -   **版本**： 的 ProgID 和组件类与用于生成版本依赖型编程 id。  
+    -   **版本**： 具有 ProgID 和组件类用于生成版本依赖型编程 id。  
   
-6.  单击 **“完成”**。  
+1. 单击 **“完成”**。  
   
 ## <a name="see-also"></a>请参阅  
- [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)
+
+[创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)

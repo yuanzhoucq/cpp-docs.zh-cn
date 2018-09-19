@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7a503cb71ee1a7121a4770d5a401e33fe14fc649
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541390"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716508"
 ---
 # <a name="inbyte"></a>__inbyte
 **Microsoft 专用**  
@@ -39,8 +39,8 @@ unsigned char __inbyte(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Port`  
- 要读取的端口。  
+*端口*<br/>
+[in]要读取的端口。  
   
 ## <a name="return-value"></a>返回值  
  从指定的端口读取的字节。  

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2571 |Microsoft 文档
+title: 编译器错误 C2571 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dea582cf5d1211d57eac94a7f70458a51542ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30cc078251d0511da77e08690db275a788973ffb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067930"
 ---
 # <a name="compiler-error-c2571"></a>编译器错误 C2571
-function： 虚函数不能为联合联合中  
-  
- 与虚函数声明的联合。 您可以声明只能在类或结构中的虚拟函数。  可能的解决方法：  
-  
-1.  将联合更改为类或结构。  
-  
-2.  使非虚拟函数。  
-  
- 下面的示例生成 C2571:  
-  
-```  
-// C2571.cpp  
-// compile with: /c  
-union A {  
-   virtual void func1();   // C2571  
-   void func2();   // OK  
-};  
+
+function： 虚函数不能为联合 union 中
+
+联合被声明具有虚拟函数。 您可以声明只能在类或结构中的虚拟函数。  可能的解决方法：
+
+1. 更改为类或结构的并集。
+
+1. 使非虚拟函数。
+
+下面的示例生成 C2571:
+
+```
+// C2571.cpp
+// compile with: /c
+union A {
+   virtual void func1();   // C2571
+   void func2();   // OK
+};
 ```

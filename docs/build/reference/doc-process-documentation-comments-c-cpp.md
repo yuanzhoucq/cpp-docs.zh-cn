@@ -1,5 +1,5 @@
 ---
-title: -/doc （处理文档注释） （C/c + +） |Microsoft 文档
+title: -doc （处理文档注释） （C/c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,49 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 899ff6b774c365ce9df3019ef5ba6d08d0d7b93d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371276"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706571"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc（处理文档注释）(C/C++)
-在源代码文件中并创建具有文档注释每个源代码文件的.xdc 文件可让编译器处理文档注释。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/doc[name]  
-```  
-  
-## <a name="arguments"></a>自变量  
- `name`  
- 编译器将创建到.xdc 文件的名称。 仅当在编译中传递一个.cpp 文件时才有效。  
-  
-## <a name="remarks"></a>备注  
- .Xdc 文件处理到具有 xdcmake.exe 的.xml 文件。 有关详细信息，请参阅[XDCMake 参考](../../ide/xdcmake-reference.md)。  
-  
- 可以将文档注释添加到源代码文件。 有关详细信息，请参阅[建议的文档注释标记](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。  
-  
- 若要使用 IntelliSense 生成的.xml 文件，请与你想要支持，并将.xml 文件的程序集相同的程序集相同的目录中的.xml 文件的文件名称。 当 Visual Studio 项目中引用的程序集时，还找到.xml 文件。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)和[提供 XML 代码注释](/visualstudio/ide/supplying-xml-code-comments)。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  展开**配置属性**节点。  
-  
-3.  展开**C/c + +** 节点。  
-  
-4.  选择**输出文件**属性页。  
-  
-5.  修改**生成 XML 文档文件**属性。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
-  
-1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>。  
-  
-## <a name="see-also"></a>请参阅  
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+
+在源代码文件，以创建用于每个源代码文件，其中包含文档注释的.xdc 文件可让编译器处理文档注释。
+
+## <a name="syntax"></a>语法
+
+> **/doc**[*名称*]
+
+## <a name="arguments"></a>自变量
+
+*name*<br/>
+编译器会创建.xdc 文件的名称。 仅当在编译中传递一个.cpp 文件时才有效。
+
+## <a name="remarks"></a>备注
+
+.Xdc 文件处理到具有 xdcmake.exe 的.xml 文件。 有关详细信息，请参阅[XDCMake 参考](../../ide/xdcmake-reference.md)。
+
+可以将文档注释添加到源代码文件。 有关详细信息，请参阅[建议的文档注释标记](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。
+
+若要生成的.xml 文件中使用 IntelliSense，请与你想要支持，并将.xml 文件的程序集也是与程序集相同的目录中的.xml 文件的文件名。 当 Visual Studio 项目中引用该程序集时，会还会找到.xml 文件。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)并[提供 XML 代码注释](/visualstudio/ide/supplying-xml-code-comments)。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 选择**配置属性** > **C/c + +** > **输出文件**属性页。
+
+1. 修改**生成 XML 文档文件**属性。
+
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)

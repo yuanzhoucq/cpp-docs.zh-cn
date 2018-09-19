@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545764"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720065"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 类
 `CWinAppEx` 处理应用程序状态、 将状态保存到注册表、 从注册表加载状态，初始化应用程序管理器和提供那些相同的应用程序管理器的链接。  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSectionName*  
- 一个字符串，包含注册表项的路径。  
+*lpszSectionName*<br/>
+[in]一个字符串，包含注册表项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则非零值否则为 0。  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bResourceSmartUpdate*  
- 一个布尔参数，指定工作区对象是否应检测和处理资源更新。  
+*bResourceSmartUpdate*<br/>
+[in]一个布尔参数，指定工作区对象是否应检测和处理资源更新。  
   
 ### <a name="remarks"></a>备注  
  `CWinAppEx`类具有初始化的方法，提供的保存和加载到注册表中，应用程序信息的功能并控制全局应用程序设置。 它还可以使用如下所示全局管理员[CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)并[CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)。 每个应用程序可以只有一个实例`CWinAppEx`类。  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 指定应用程序从注册表中是否加载的初始大小和位置的主框架窗口。  
+*bEnable*<br/>
+[in]指定应用程序从注册表中是否加载的初始大小和位置的主框架窗口。  
   
 ### <a name="remarks"></a>备注  
  默认情况下的大小和位置的主框架是从注册表中加载以及其他应用程序设置。 期间将发生这种情况[CWinAppEx::LoadState](#loadstate)。 如果您不想要从注册表加载初始窗口位置，调用此方法替换*bEnable*设置为 FALSE。  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszRegEntry*  
- 一个字符串，包含注册表项的路径。 应用程序使用此注册表项来存储拖曳菜单的信息。  
+*lpszRegEntry*<br/>
+[in]一个字符串，包含注册表项的路径。 应用程序使用此注册表项来存储拖曳菜单的信息。  
   
- [in]*uiCmdFirst*  
- 第一个菜单拆解 id。  
+*uiCmdFirst*<br/>
+[in]第一个菜单拆解 id。  
   
- [in]*uiCmdLast*  
- 最后一个菜单拆解 id。  
+*uiCmdLast*<br/>
+[in]最后一个菜单拆解 id。  
   
 ### <a name="return-value"></a>返回值  
  如果`CMenuTearOffManager`进行创建和初始化成功，则FALSE 如果发生错误或如果`CMenuTearOffManager`已存在。  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmdToolsDummy*  
- 无符号的整数，该框架作为占位符用于用户工具菜单的命令 ID。  
+*uiCmdToolsDummy*<br/>
+[in]无符号的整数，该框架作为占位符用于用户工具菜单的命令 ID。  
   
- [in]*uiCmdFirst*  
- 第一个用户工具命令的命令 ID。  
+*uiCmdFirst*<br/>
+[in]第一个用户工具命令的命令 ID。  
   
- [in]*uiCmdLast*  
- 最后一个用户工具命令的命令 ID。  
+*uiCmdLast*<br/>
+[in]最后一个用户工具命令的命令 ID。  
   
- [in]*pToolRTC*  
- 一个类，该类`CUserToolsManager`对象用于创建新的用户工具。  
+*pToolRTC*<br/>
+[in]一个类，该类`CUserToolsManager`对象用于创建新的用户工具。  
   
- [in]*uArgMenuID*  
- 参数菜单 id。  
+*uArgMenuID*<br/>
+[in]参数菜单 id。  
   
- [in]*uInitDirMenuID*  
- 初始工具目录菜单 ID。  
+*uInitDirMenuID*<br/>
+[in]初始工具目录菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法创建并初始化为`CUserToolsManager`对象;FALSE 如果方法失败或如果`CUserToolsManager`对象已存在。  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含的注册表项名称的字符串。  
+*lpszEntry*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [out]*ppData*  
- 指向该方法填充的二进制数据的缓冲区的指针。  
+*ppData*<br/>
+[out]指向该方法填充的二进制数据的缓冲区的指针。  
   
- [out]*pBytes*  
- 指向一个无符号整数，该方法用来编写读取的字节数的指针。  
+*pBytes*<br/>
+[out]指向一个无符号整数，该方法用来编写读取的字节数的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 TRUEFALSE 否则为。  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 一个字符串，包含注册表项的名称。  
+*lpszEntry*<br/>
+[in]一个字符串，包含注册表项的名称。  
   
- [in]*n 默认*  
- 该方法将返回指定的注册表条目不存在默认值。  
+*n 默认*<br/>
+[in]该方法将返回指定的注册表条目不存在默认值。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则注册表数据否则为*n 默认*。  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszEntry*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [out]*obj*  
- 对 `CObject` 的引用。 该方法使用此引用来存储的注册表数据。  
+*obj*<br/>
+[out]对引用`CObject`。 该方法使用此引用来存储的注册表数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则非零值否则为 0。  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*szSectionAdd*  
- 一个字符串，包含注册表项的相对路径。  
+*szSectionAdd*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
 ### <a name="return-value"></a>返回值  
  一个`CString`，其中包含的注册表项的绝对路径。  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSubSection*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*lpszEntry*  
- 包含要读取的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要读取的值的字符串。  
   
- [out]*ppData*  
- 指向该方法在其中存储数据的缓冲区的指针。  
+*ppData*<br/>
+[out]指向该方法在其中存储数据的缓冲区的指针。  
   
- [out]*pBytes*  
- 指向一个无符号整数的指针。 该方法将写入的大小*ppData*给此参数。  
+*pBytes*<br/>
+[out]指向一个无符号整数的指针。 该方法将写入的大小*ppData*给此参数。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为 TRUE；否则为 FALSE。  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSubSection*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*lpszEntry*  
- 包含要读取的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要读取的值的字符串。  
   
- [in]*n 默认*  
- 要返回指定的值不存在的默认值。  
+*n 默认*<br/>
+[in]要返回指定的值不存在的默认值。  
   
 ### <a name="return-value"></a>返回值  
  存储在指定的注册表值中; 整数数据*n 默认*如果数据不存在。  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSubSection*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*lpszEntry*  
- 包含要读取的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要读取的值的字符串。  
   
- [out]*obj*  
- 对 `CObject` 的引用。 方法使用此`CObject`存储注册表数据。  
+*obj*<br/>
+[out]对引用`CObject`。 方法使用此`CObject`存储注册表数据。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSubSection*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*lpszEntry*  
- 包含要读取的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要读取的值的字符串。  
   
- [in]*lpszDefault*  
- 要返回指定的值不存在的默认值。  
+*lpszDefault*<br/>
+[in]要返回指定的值不存在的默认值。  
   
 ### <a name="return-value"></a>返回值  
  如果数据存在，则存储在指定的注册表值中的字符串数据否则为*lpszDefault*。  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含的注册表项名称的字符串  
+*lpszEntry*<br/>
+[in]包含的注册表项名称的字符串  
   
- [in]*lpzDefault*  
- 该方法将返回指定的注册表条目不存在默认值。  
+*lpzDefault*<br/>
+[in]该方法将返回指定的注册表条目不存在默认值。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则在注册表中存储的字符串数据*lpszDefault*否则为。  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSectionName*  
- 一个字符串，包含注册表项的路径。  
+*lpszSectionName*<br/>
+[in]一个字符串，包含注册表项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果密钥是在注册表中; 非零值否则为 0。  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrame*  
- 指向框架窗口对象的指针。 该方法适用于此框架窗口在注册表中的状态信息。  
+*pFrame*<br/>
+[in]指向框架窗口对象的指针。 该方法适用于此框架窗口在注册表中的状态信息。  
   
- [in]*lpszSectionName*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSectionName*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*pFrameImpl*  
- 一个指向`CFrameImpl`对象。 该方法适用于此框架窗口在注册表中的状态信息。  
+*pFrameImpl*<br/>
+[in]一个指向`CFrameImpl`对象。 该方法适用于此框架窗口在注册表中的状态信息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*rectNormalPosition*  
- 在还原位置中时包含的坐标的主框架窗口的矩形。  
+*rectNormalPosition*<br/>
+[out]在还原位置中时包含的坐标的主框架窗口的矩形。  
   
- [out]*nFlags*  
- 控制最小化的窗口和操作系统切换最小化的窗口和还原的窗口的位置的标志。  
+*nFlags*<br/>
+[out]控制最小化的窗口和操作系统切换最小化的窗口和还原的窗口的位置的标志。  
   
- [out]*nShowCmd*  
- 一个整数，指定窗口的显示状态。 有关可能的值的详细信息，请参阅[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
+*nShowCmd*<br/>
+[out]一个整数，指定窗口的显示状态。 有关可能的值的详细信息，请参阅[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndControl*  
- 指向用户对其调用上下文的帮助窗口对象的指针。  
+*pWndControl*<br/>
+[in]指向用户对其调用上下文的帮助窗口对象的指针。  
   
- [in]*dwHelpIDArray]*  
- 保留的值。  
+*dwHelpIDArray]*<br/>
+[in]保留的值。  
   
 ### <a name="remarks"></a>备注  
  此方法当前保留供将来使用。 默认实现不执行任何操作，它当前不由框架调用。  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrameImpl*  
- 一个指向`CFrameImpl`对象。  
+*pFrameImpl*<br/>
+[in]一个指向`CFrameImpl`对象。  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现将保存的状态*pFrameImpl*。  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 指向对象派生自[CView 类](../../mfc/reference/cview-class.md)。  
+*pWnd*<br/>
+[in]指向对象派生自[CView 类](../../mfc/reference/cview-class.md)。  
   
- [in]*iViewId*  
- 视图 id。  
+*iViewId*<br/>
+[in]视图 id。  
   
 ### <a name="return-value"></a>返回值  
  如果框架将查找命令; 则为 TRUE否则为 FALSE。  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pFrame*  
- 指向框架窗口的指针。  
+*pFrame*<br/>
+[in]指向框架窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则非零值如果负载失败，或者没有要加载的数据为 0。  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSectionName*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSectionName*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*pFrameImpl*  
- 一个指向`CFrameImpl`对象。 此帧保存到 Windows 注册表。  
+*pFrameImpl*<br/>
+[in]一个指向`CFrameImpl`对象。 此帧保存到 Windows 注册表。  
   
- [in]*pFrame*  
- 指向框架窗口对象的指针。 此帧保存到 Windows 注册表。  
+*pFrame*<br/>
+[in]指向框架窗口对象的指针。 此帧保存到 Windows 注册表。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 TRUEFALSE 否则为。  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSectionName*  
- 一个字符串，包含注册表项的路径。  
+*lpszSectionName*<br/>
+[in]一个字符串，包含注册表项的路径。  
   
 ### <a name="return-value"></a>返回值  
  一个字符串，包含默认注册表位置的路径。  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiMenuResId*  
- 一个菜单资源 id。  
+*uiMenuResId*<br/>
+[in]一个菜单资源 id。  
   
- [in]*点*  
- 一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)屏幕坐标中指定菜单的位置。  
+*点*<br/>
+[in]一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)屏幕坐标中指定菜单的位置。  
   
- [in]*pWnd*  
- 指向拥有的弹出菜单的窗口的指针。  
+*pWnd*<br/>
+[in]指向拥有的弹出菜单的窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则显示弹出菜单中，非零值否则为 0。  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nFlags*  
- 控制最小化的窗口和操作系统切换最小化的窗口和还原的窗口的位置的标志。  
+*nFlags*<br/>
+[in]控制最小化的窗口和操作系统切换最小化的窗口和还原的窗口的位置的标志。  
   
- [in]*nShowCmd*  
- 一个整数，指定窗口的显示状态。 有关可能的值的详细信息，请参阅[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
+*nShowCmd*<br/>
+[in]一个整数，指定窗口的显示状态。 有关可能的值的详细信息，请参阅[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
- [in]*rectNormalPosition*  
- 一个包含主框架窗口的坐标时它处于正在还原状态的矩形。  
+*rectNormalPosition*<br/>
+[in]一个包含主框架窗口的坐标时它处于正在还原状态的矩形。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含的注册表项名称的字符串。  
+*lpszEntry*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [in]*pData*  
- 要存储的数据。  
+*pData*<br/>
+[in]要存储的数据。  
   
- [in]*nBytes*  
- 大小*pData*以字节为单位。  
+*nBytes*<br/>
+[in]大小*pData*以字节为单位。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含的注册表项名称的字符串。  
+*lpszEntry*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [in]*n 值*  
- 要存储的数据。  
+*n 值*<br/>
+[in]要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含要设置的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要设置的值的字符串。  
   
- [in]*obj*  
- 对引用`CObject`方法将存储的数据。  
+*obj*<br/>
+[in]对引用`CObject`方法将存储的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 包含的注册表项名称的字符串  
+*lpszSubSection*<br/>
+[in]包含的注册表项名称的字符串  
   
- [in]*lpszEntry*  
- 包含要设置的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要设置的值的字符串。  
   
- [in]*pData*  
- 要向注册表写入的数据。  
+*pData*<br/>
+[in]要向注册表写入的数据。  
   
- [in]*nBytes*  
- 大小*pData*以字节为单位。  
+*nBytes*<br/>
+[in]大小*pData*以字节为单位。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 一个字符串，包含注册表项的相对路径。  
+*lpszSubSection*<br/>
+[in]一个字符串，包含注册表项的相对路径。  
   
- [in]*lpszEntry*  
- 包含要设置的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要设置的值的字符串。  
   
- [in]*n 值*  
- 要向注册表写入的数据。  
+*n 值*<br/>
+[in]要向注册表写入的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 包含的注册表项名称的字符串。  
+*lpszSubSection*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [in]*lpszEntry*  
- 一个字符串，包含要设置的值的名称。  
+*lpszEntry*<br/>
+[in]一个字符串，包含要设置的值的名称。  
   
- [in]*obj*  
- 要存储的数据。  
+*obj*<br/>
+[in]要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszSubSection*  
- 包含的注册表项名称的字符串。  
+*lpszSubSection*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [in]*lpszEntry*  
- 包含要设置的值的字符串。  
+*lpszEntry*<br/>
+[in]包含要设置的值的字符串。  
   
- [in]*lpszValue*  
- 要写入注册表的字符串数据。  
+*lpszValue*<br/>
+[in]要写入注册表的字符串数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszEntry*  
- 包含的注册表项名称的字符串。  
+*lpszEntry*<br/>
+[in]包含的注册表项名称的字符串。  
   
- [in]*lpszValue*  
- 要存储的数据。  
+*lpszValue*<br/>
+[in]要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

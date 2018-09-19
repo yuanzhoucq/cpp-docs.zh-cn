@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0032 |Microsoft 文档
+title: 项目生成错误 PRJ0032 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053565"
 ---
 # <a name="project-build-error-prj0032"></a>项目生成错误 PRJ0032
-项目级自定义生成步骤的 Outputs 属性包含计算出结果为 macro_expansion 的宏。  
-  
- 一个项目的自定义生成步骤具有可能由于宏计算问题发生的错误输出。 此错误还可能表示该路径格式错误，包含字符或在文件路径中是非法的字符的组合。  
-  
- 若要解决此错误，请修复宏或修复所指定的路径。 计算出的路径是从项目目录的绝对路径。
+
+项目级自定义生成步骤的输出属性包含计算为 macro_expansion 的宏。
+
+项目的自定义生成步骤具有错误的输出，很可能是由于宏计算问题。 此错误还可能意味着路径有格式错误，其中包含的字符或在文件路径中是非法的字符的组合。
+
+若要解决此错误，请修复该宏或修复所指定的路径。 计算出的路径是从项目目录的绝对路径。

@@ -76,18 +76,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a06bbfb66030a8f037ce83323486d10107bf505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020311"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
+
 比较两个字符串中指定数目的字符（不考虑大小写）。
 
 > [!IMPORTANT]
-> **_mbsnicmp**和 **_mbsnicmp_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnicmp**并 **_mbsnicmp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -144,21 +145,21 @@ int _mbsnicmp_l(
 
 |返回值|描述|
 |------------------|-----------------|
-|< 0|*string1*的子字符串将小于*string2*子字符串。|
+|< 0|*string1*子字符串小于*string2*子字符串。|
 |0|*string1*子字符串等于*string2*子字符串。|
-|> 0|*string1*子字符串大于*string2*子字符串。|
+|> 0|*string1*的子字符串大于*string2*子字符串。|
 
-参数验证错误时，这些函数将返回 **_NLSCMPERROR**中, 定义\<string.h > 和\<mbstring.h >。
+参数验证错误时，这些函数将返回 **_NLSCMPERROR**，其定义中\<string.h > 和\<mbstring.h >。
 
 ## <a name="remarks"></a>备注
 
-**_Strnicmp**进行序号比较，最多，第一个*计数*字符*string1*和*string2*。 通过将每个字符转换为小写进行不区分大小写的比较。 **_strnicmp**是不区分大小写版本**strncmp**。 如果在任一字符串中到达终止 null 字符，则比较停止*计数*字符进行比较。 如果字符串相等终止 null 字符达到在任一字符串中*计数*字符进行比较，使用较短字符串较小。
+**_Strnicmp**函数序号比较，最多，第一个*计数*字符*string1*并*string2*。 通过将每个字符转换为小写进行不区分大小写的比较。 **_strnicmp**是不区分大小写的版本**strncmp**。 如果在任一字符串中到达终止 null 字符，则比较停止*计数*字符进行比较。 如果字符串是否相等时终止 null 字符已到达字符串之前*计数*字符进行比较，较短的字符串是较小者。
 
-ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的计算结果小于任意字母字符。 此排序等同于的**stricmp**。
+ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的计算结果小于任意字母字符。 此排序等同于**stricmp**。
 
-**_wcsnicmp**和 **_mbsnicmp**宽字符及多字节字符版本的 **_strnicmp**。 自变量 **_wcsnicmp**是宽字符字符串; 而的 **_mbsnicmp**是多字节字符字符串。 **_mbsnicmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 否则这三个函数否则具有相同行为。 这些函数受到区域设置-没有版本 **_l**后缀使用当前区域设置为其区域设置相关的行为; 的版本没有 **_l**后缀改用*区域设置*传入的。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_wcsnicmp**并 **_mbsnicmp**宽字符及多字节字符版本的 **_strnicmp**。 参数 **_wcsnicmp**是宽字符字符串; **_mbsnicmp**是多字节字符字符串。 **_mbsnicmp**根据当前的多字节代码页识别多字节字符序列，并返回 **_NLSCMPERROR**发生错误时。 有关详细信息，请参阅[代码页](../../c-runtime-library/code-pages.md)。 否则这三个函数否则具有相同行为。 这些函数受到区域设置-没有版本 **_l**后缀的当前区域设置用于其区域设置相关的行为; 具有的版本 **_l**后缀改用*区域设置*中传递。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果任一*string1*或*string2*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
+所有这些函数都验证其参数。 如果任一*string1*或*string2*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -170,10 +171,10 @@ ASCII 表中从 91 到 96 的字符（“[”、“\\”、“]”、“^”、�
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_strnicmp**， **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**， **_wcsnicmp_l**|<string.h> 或 <wchar.h>|
+|**_strnicmp**， **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**， **_wcsnicmp_l**|\<string.h> 或 \<wchar.h>|
 |**_mbsnicmp**， **_mbsnicmp_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。

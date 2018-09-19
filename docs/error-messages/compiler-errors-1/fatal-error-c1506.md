@@ -1,5 +1,5 @@
 ---
-title: 错误 C1506 |Microsoft 文档
+title: 错误 C1506 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b36d7210a3ed81b7049c1ab011a38c64f7d196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 391414365549b462952045a7d9efe080097f3af6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036743"
 ---
 # <a name="fatal-error-c1506"></a>错误 C1506
-无法恢复的块范围错误  
-  
- 块已太大，无法编译。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  大括号不匹配  
-  
-2.  非常大的函数或类
+
+无法恢复的块范围错误
+
+块已太大，无法编译。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 大括号不匹配
+
+1. 非常大的函数或类

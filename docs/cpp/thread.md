@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 80ea212f8c888680edf50e269c89e62988a0ee36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104382"
 ---
 # <a name="thread"></a>thread
 
@@ -34,7 +34,7 @@ ms.locfileid: "39462087"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec （线程）** *声明符*  
+> **__declspec （线程）** *声明符*
 
 ## <a name="remarks"></a>备注
 
@@ -96,6 +96,7 @@ __declspec( thread ) int tls_i = 1;
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [__declspec](../cpp/declspec.md)  
- [关键字](../cpp/keywords-cpp.md)  
- [线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[关键字](../cpp/keywords-cpp.md)<br/>
+[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2532 |Microsoft 文档
+title: 编译器错误 C2532 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106986"
 ---
 # <a name="compiler-error-c2532"></a>编译器错误 C2532
-identifier： 非法引用修饰符  
-  
- 引用已被更改。 无法修改引用以引用另一个对象。 而是使用指针。
+
+identifier： 引用的非法修饰符
+
+引用已更改。 不能修改引用来引用另一个对象。 而是使用指针。

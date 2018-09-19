@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959467"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102585"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 类
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认值为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认值为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstI*分布范围中的第一个元素的输入迭代器。
+*firstI*<br/>
+分布范围中第一个元素的输入迭代器。
 
-*lastI*分布范围中的最后一个元素的输入迭代器。
+*lastI*<br/>
+分布范围中最后一个元素的输入迭代器。
 
-*firstW*权重范围中的第一个元素的输入迭代器。
+*firstW*<br/>
+权重范围中第一个元素的输入迭代器。
 
-*时间间隔* [initializer_list](../cpp/initializers.md)具有分布区间。
+*intervals*<br/>
+具有分布区间的 [initializer_list](../cpp/initializers.md)。
 
-*计数*分布范围中的元素数。
+*count*<br/>
+分布范围中的元素数。
 
-*xmin*分布范围中的最小值。
+*xmin*<br/>
+分布范围中的最低值。
 
-*xmax*分布范围中的最高值。 必须大于 *xmin*。
+*xmax*<br/>
+分布范围中的最高值。 必须大于 *xmin*。
 
-*weightfunc*表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*<br/>
+表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
 
-*parm*用于构造分布的参数结构。
+*parm*<br/>
+用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 

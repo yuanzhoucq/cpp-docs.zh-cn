@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2542be130c75166f8716c76df547c72fad7c2250
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027851"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 结构
 执行线程的抽象。 根据你创建的计划程序的 `SchedulerType` 策略键，资源管理器将授予你由普通的 Win32 线程或用户模式计划 (UMS) 线程支持的线程代理。 UMS 线程在具有 Windows 7 或更高版本的 64 位操作系统上受到支持。  
@@ -77,13 +77,13 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- `switchState`  
- 指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
+*switchState*<br/>
+指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>备注  
  如果由于某种原因需要解除上下文与执行它的虚拟处理器根的关联，请使用 `SwitchOut`。 根据传入参数 `switchState`的值，以及它是否在虚拟处理器根上执行，此调用将立即返回或阻塞与上下文关联的线程代理。 调用将参数设置为 `SwitchOut` 的 `Idle` 是错误的。 执行此操作将导致[invalid_argument](../../../standard-library/invalid-argument-class.md)异常。  
   
- 当您因资源管理器指示或是请求了临时过度订阅的虚拟处理器根，而要减少计划程序所拥有的虚拟处理器根的数量，并且已完成时，`SwitchOut` 很有用。 在这种情况下应调用此方法[IVirtualProcessorRoot::Remove](https://msdn.microsoft.com/ad699b4a-1972-4390-97ee-9c083ba7d9e4)上的虚拟处理器根，进行调用之前`SwitchOut`与参数`switchState`设置为`Blocking`。 这将阻塞线程代理，并且当计划程序中不同的虚拟处理器根可用来执行它时，线程代理将继续执行。 通过调用函数实例的阻塞线程代理可以恢复`SwitchTo`切换到该线程代理的执行上下文。 此外可以通过使用及其关联的上下文来激活虚拟处理器根恢复线程代理。 有关如何执行此操作的详细信息，请参阅[ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
+ 当您因资源管理器指示或是请求了临时过度订阅的虚拟处理器根，而要减少计划程序所拥有的虚拟处理器根的数量，并且已完成时，`SwitchOut` 很有用。 在这种情况下应调用此方法[IVirtualProcessorRoot::Remove](iexecutionresource-structure.md#remove)上的虚拟处理器根，进行调用之前`SwitchOut`与参数`switchState`设置为`Blocking`。 这将阻塞线程代理，并且当计划程序中不同的虚拟处理器根可用来执行它时，线程代理将继续执行。 通过调用函数实例的阻塞线程代理可以恢复`SwitchTo`切换到该线程代理的执行上下文。 此外可以通过使用及其关联的上下文来激活虚拟处理器根恢复线程代理。 有关如何执行此操作的详细信息，请参阅[ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
   
  如果您希望重新初始化虚拟处理器，也可以使用 `SwitchOut`，这样在将来阻塞线程代理或从运行它的虚拟处理器根和它进行调度工作的计划程序暂时分离该线程代理时，可以将虚拟处理器激活。 如果您希望阻塞线程代理，请使用 `SwitchOut` 并将参数 `switchState` 设置为 `Blocking`。 如上所示，稍后可以使用 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 将其恢复。 当您想要将该线程代理从运行它的虚拟处理器根和与虚拟处理器关联的计划程序暂时分离时，请使用 `SwitchOut` 并将参数设置为 `Nesting`。 当线程代理在虚拟处理器根上执行时，调用 `SwitchOut` 并将参数 `switchState` 设置为 `Nesting` 将导致根重新初始化，而当前线程代理无需虚拟处理器根也会继续执行。 线程代理被视为已离开计划程序，直到它调用[ithreadproxy:: Switchout](#switchout)方法替换`Blocking`在一个更高版本的时间点。 对将参数设置为 `SwitchOut` 的 `Blocking` 的第二次调用旨在使上下文返回已阻止状态，以便通过 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 在之前与其分离的计划程序中恢复它。 由于它不是在虚拟处理器根上执行的，因此不会发生重新初始化。  
   
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pContext`  
- 若要以协作方式切换到执行上下文。  
+*pContext*<br/>
+若要以协作方式切换到执行上下文。  
   
- `switchState`  
- 指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
+*switchState*<br/>
+指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>备注  
  此方法用于从一个执行上下文切换到另一个，从[iexecutioncontext:: Dispatch](iexecutioncontext-structure.md#dispatch)方法的第一个执行上下文。 该方法将相关联的执行上下文`pContext`如果尚未与一个相关联的线程代理使用。 为指定的值确定当前的线程代理的所有权`switchState`参数。  

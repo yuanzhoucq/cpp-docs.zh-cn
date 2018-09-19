@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338716"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315010"
 ---
 # <a name="application-control"></a>应用程序控件
 OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动和自动发布的应用程序、 协调他们的生产和修改对象，等等。 本主题中的函数符合这些要求。 有时必须调用由 OLE 系统 Dll，除了通过应用程序以及上调用这些函数。 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>要求  
- **标头：** < afxwin.h >  
+ **标头:** afxwin.h  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>要求  
- **标头：** < afxwin.h >  
+ **标头:** afxwin.h  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)  

@@ -23,20 +23,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3500c2bd8a0245f0ecf5db1337502f05699a6509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572715"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040331"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移运算符 (&gt; &gt;并&lt; &lt;)
 
-按位移位运算符是右移位运算符 (>>)，其中移动的位*shift 表达式*到右侧和左移运算符 (<<)，移动的*移表达式*左侧。 <sup>1</sup>
+按位移位运算符是右移位运算符 (**&gt;&gt;**)，从而将的位*shift 表达式*到右侧和左移运算符 (**&lt; &lt;**)，从而将的位*移表达式*左侧。 <sup>1</sup>
 
 ## <a name="syntax"></a>语法
 
-> *shift 表达式* `<<` *加法表达式*  
+> *shift 表达式* `<<` *加法表达式*
 > *shift 表达式* `>>` *加法表达式*
 
 ## <a name="remarks"></a>备注
@@ -178,7 +178,7 @@ int main() {
 
     short neg5 = neg1 >> 5; // -1
     bitset<16> bn5(neg5);
-    cout << bn5 << endl;  // 0b11111111'11111111  
+    cout << bn5 << endl;  // 0b11111111'11111111
 }
 ```
 
@@ -240,5 +240,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)  
-[C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+[使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
+[C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

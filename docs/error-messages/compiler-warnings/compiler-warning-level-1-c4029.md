@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4029 |Microsoft 文档
+title: 编译器警告 （等级 1） C4029 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe03ca53056a48d2c6104d86dd70c8c4ae31a2c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e14664a40057ff76bf69863f7b0b08bb0e63d5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105130"
 ---
 # <a name="compiler-warning-level-1-c4029"></a>编译器警告 （等级 1） C4029
-定义不同的声明的正式参数列表  
-  
- 函数声明中的形参类型与函数定义中不一致。 编译器使用从定义的参数列表。
+
+声明的形参表不同于定义
+
+函数声明中的形参类型与函数定义中的不一致。 编译器将使用从定义的参数列表。

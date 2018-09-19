@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 2） C4094 |Microsoft 文档
+title: 编译器警告 （等级 2） C4094 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9deae6a0e21fcb7dd4f09de07e65445dc9595932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b9317cbc31ef8bddb14da11af1087a148fd3188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078707"
 ---
 # <a name="compiler-warning-level-2-c4094"></a>编译器警告 （等级 2） C4094
-未标记 token 未声明符号  
-  
- 编译器检测到使用标记的结构、 联合或类的空声明。 声明将被忽略。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4094.cpp  
-// compile with: /W2  
-struct  
-{  
-};   // C4094  
-  
-int main()  
-{  
-}  
-```  
-  
- 这种情况会生成在 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+未标记 token 未声明符号
+
+编译器检测到使用标记的结构、 联合或类的空声明。 声明将被忽略。
+
+## <a name="example"></a>示例
+
+```
+// C4094.cpp
+// compile with: /W2
+struct
+{
+};   // C4094
+
+int main()
+{
+}
+```
+
+这种情况会生成在 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4936772c82bb482e468a37f2f7b327c9a728f0c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720117"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference 类
 
@@ -39,7 +39,8 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*要修改的类型。
+*T*<br/>
+要修改的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -80,7 +81,9 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>要求
 
-标头：< type_traits > 命名空间：std
+标头： \<type_traits >
+
+Namespace: std
 
 ## <a name="see-also"></a>请参阅
 

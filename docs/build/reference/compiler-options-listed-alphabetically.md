@@ -13,12 +13,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42575466"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701853"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -173,4 +173,7 @@ ms.locfileid: "42575466"
 |[/ZW](zw-windows-runtime-compilation.md)|生成要在 Windows 运行时上运行的输出文件。|
 
 ## <a name="see-also"></a>请参阅
- [C/c + + 生成参考](c-cpp-building-reference.md)[编译器选项](compiler-options.md)[设置编译器选项](setting-compiler-options.md)
+
+[C/C++ 生成参考](c-cpp-building-reference.md)<br/>
+[编译器选项](compiler-options.md)<br/>
+[设置编译器选项](setting-compiler-options.md)

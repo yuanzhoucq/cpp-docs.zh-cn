@@ -1,7 +1,7 @@
 ---
-title: 包括 (MASM) |Microsoft 文档
+title: 包括 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 346f076e63df7b02928b5abf49def827229bb289
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 26752dc25c30fa22a523a5c224192d2023c0b135
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685582"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
-从给定的源文件插入源代码*filename*到程序集在当前的源文件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-INCLUDE filename  
-```  
-  
-## <a name="remarks"></a>备注  
- *Filename*必须括在尖括号中，如果它包含一个反斜杠，分号，更高的比符号，较少-比符号、 一个单引号或双引号。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+插入从给定的源文件的源代码*文件名*到程序集在当前的源文件。
+
+## <a name="syntax"></a>语法
+
+> 包含文件名
+
+## <a name="remarks"></a>备注
+
+*文件名*必须括在尖括号中，如果它包含一个反斜杠，分号，更高版本的符号，较少-比符号、 单引号或双引号。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

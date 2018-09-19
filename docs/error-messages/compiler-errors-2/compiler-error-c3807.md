@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3807 |Microsoft 文档
+title: 编译器错误 C3807 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4171b13d7605d296ac8ac6d1f06125d0fadd226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7531d5e758828a83bc94ed88b137033182bbfea6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041100"
 ---
 # <a name="compiler-error-c3807"></a>编译器错误 C3807
-type： 具有 ComImport 特性的类不能从 type2 派生，则允许仅接口的实现  
-  
- 派生自类型<xref:System.Runtime.InteropServices.ComImportAttribute>仅可以实现接口。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3807。  
-  
-```  
-// C3807.cpp  
-// compile with: /clr /c  
-ref struct S {};  
-interface struct I {};  
-  
-[System::Runtime::InteropServices::ComImportAttribute()]  
-ref struct S1 : S {};   // C3807  
-ref struct S2 : I {};  
+
+type： 具有 ComImport 特性的类不能从 type2 派生，允许仅接口实现
+
+派生自的类型<xref:System.Runtime.InteropServices.ComImportAttribute>只能实现一个接口。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3807。
+
+```
+// C3807.cpp
+// compile with: /clr /c
+ref struct S {};
+interface struct I {};
+
+[System::Runtime::InteropServices::ComImportAttribute()]
+ref struct S1 : S {};   // C3807
+ref struct S2 : I {};
 ```

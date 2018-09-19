@@ -1,7 +1,7 @@
 ---
 title: 升级现有 ActiveX 控件 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203125"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535261"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
-现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
+现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+
+在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
   
  本文讨论以下主题：  
   
@@ -89,7 +94,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  `CODEBASE` 指向的 Cabinet 文件应包含 ActiveX 控件的 .ocx 文件和用于控制其安装的 .inf 文件。 您可以通过指定控件文件的名称和一个 .inf 文件来创建 Cabinet 文件。 不要在此 Cabinet 文件中包含可能已存在于系统上的依赖 DLL。 例如，MFC DLL 在单独的 Cabinet 文件中打包并通过控制 .inf 文件来引用。  
   
- 有关如何创建 CAB 文件的详细信息，请参阅[创建 CAB 文件](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3)。  
+ 有关如何创建 CAB 文件的详细信息，请参阅[创建 CAB 文件](/windows/desktop/devnotes/cabinet-api-functions)。  
   
 ### <a name="the-inf-file"></a>INF 文件  
  以下示例 spindial.inf 列出了 MFC Spindial 控件所需的支持文件和版本信息。 请注意，MFC DLL 的位置是 Microsoft 网站。 mfc42.cab 由 Microsoft 提供和签名。  
@@ -221,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> 代码签名  
  代码签名专用于标识代码的源和保证代码在签名后未发生更改。 在下载代码之前，用户可能会收到警告，具体取决于浏览器安全设置。 用户可能选择信任某些证书所有者或公司，在这种情况下，这些受信任方签名的代码可以直接下载，不会发出警告。 将对代码进行数字签名以避免篡改。  
   
- 请确保对最终代码进行了签名，以便让控件可以自动下载而不显示信任警告消息。 了解代码进行签名的详细信息，请查看 ActiveX SDK 中的 Authenticode 上文档并查看[签名 CAB 文件](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747)。  
+ 请确保对最终代码进行了签名，以便让控件可以自动下载而不显示信任警告消息。 了解代码进行签名的详细信息，请查看 ActiveX SDK 中的 Authenticode 上文档并查看[签名 CAB 文件](/windows/desktop/devnotes/cabinet-api-functions)。  
   
  可能显示证书来标识签名人员和公司，具体取决于信任和浏览器安全级别设置。 如果安全级别是“无”，或者已签名的控件的证书所有者是受信任的，证书将不会显示。 请参阅[Internet Explorer 浏览器安全级别和控件行为](#_core_internet_explorer_browser_safety_levels_and_control_behavior)有关如何浏览器安全设置将确定是否下载控件和显示证书的详细信息。  
   

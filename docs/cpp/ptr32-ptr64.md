@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115991"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- 在 32 位系统上，使用声明的指针 **__ptr64**截断为 32 位指针。 在 64 位系统上，使用声明的指针 **__ptr32**强制转换为 64 位指针。
+在 32 位系统上，使用声明的指针 **__ptr64**截断为 32 位指针。 在 64 位系统上，使用声明的指针 **__ptr32**强制转换为 64 位指针。
 
 > [!NOTE]
 > 不能使用 **__ptr32**或 **__ptr64**编译时 **/clr: pure**。 否则，将生成编译器错误 C2472。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
@@ -80,4 +80,5 @@ int main()
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
- [基本类型](../cpp/fundamental-types-cpp.md)
+
+[基本类型](../cpp/fundamental-types-cpp.md)

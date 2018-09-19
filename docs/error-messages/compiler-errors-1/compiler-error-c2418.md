@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2418 |Microsoft 文档
+title: 编译器错误 C2418 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943b939fbc7095f8cbdd058ea10a7dc25f84476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abbc4e0f0cc74ff704f74bef66a913b37cec5f7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024654"
 ---
 # <a name="compiler-error-c2418"></a>编译器错误 C2418
-无法删除浏览器文件： filename  
-  
- 编译器无法删除浏览器文件。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  文件是只读的。  
-  
-2.  文件正由另一个进程使用。
+
+无法删除浏览器文件： filename
+
+编译器无法删除浏览器文件。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 文件是只读的。
+
+1. 文件正由另一个进程使用。

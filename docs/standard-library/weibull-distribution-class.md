@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9229aa162c032198595e78344157748d250b4288
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713760"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 类
 
@@ -80,7 +80,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -103,7 +104,7 @@ class weibull_distribution
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](http://go.microsoft.com/fwlink/p/?linkid=401115)。
+有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](http://mathworld.wolfram.com/WeibullDistribution.html)。
 
 ## <a name="example"></a>示例
 
@@ -232,13 +233,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 `a` 分布参数。
 
-*b*  
+*b*<br/>
 `b` 分布参数。
 
-*parm*  
+*parm*<br/>
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -267,13 +268,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 `a` 分布参数。
 
-*b*  
+*b*<br/>
 `b` 分布参数。
 
-*right*  
+*right*<br/>
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

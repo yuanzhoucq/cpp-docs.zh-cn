@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9cc4c44807a40425d4531c747526148837e0a25c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545735"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711150"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 专用**  
@@ -52,8 +52,8 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Offset`  
- 从开始处的偏移量`GS`读取。  
+*偏移量*<br/>
+[in]从开始处的偏移量`GS`读取。  
   
 ## <a name="return-value"></a>返回值  
  内存内容的字节、 字、 双字或四字 （如所示的调用的函数名称） 的位置`GS:[Offset]`。  

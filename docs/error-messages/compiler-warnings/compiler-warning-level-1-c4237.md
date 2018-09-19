@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4237 |Microsoft 文档
+title: 编译器警告 （等级 1） C4237 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfefb2dc7dd04f2334b2b7d222153d5ee351ae2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca72e4973c71655bc4a891570c6f686304d07eb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092890"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>编译器警告（等级 1）C4237
-关键字 keyword 尚不支持，但保留供将来使用  
-  
- 在 Visual c + + 编译器中未实现的 c + + 规范中的关键字，但关键字不能作为用户定义的符号。  
-  
- 下面的示例生成 C4237:  
-  
-```  
-// C4237.cpp  
-// compile with: /W1 /c  
-int export;   // C4237  
+
+keyword 关键字尚不受支持，但保留供将来使用
+
+Visual c + + 编译器中未实现 c + + 规范中的关键字，但关键字不能作为用户定义的符号。
+
+下面的示例生成 C4237:
+
+```
+// C4237.cpp
+// compile with: /W1 /c
+int export;   // C4237
 ```

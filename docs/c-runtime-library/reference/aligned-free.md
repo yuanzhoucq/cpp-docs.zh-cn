@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54700ad2a1eed391647a66a4c54a726b75e812f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069711"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,7 +54,8 @@ void _aligned_free (
 
 ### <a name="parameters"></a>参数
 
-*memblock*返回到的内存块的指针`_aligned_malloc`或`_aligned_offset_malloc`函数。
+*memblock*<br/>
+指向返回到 `_aligned_malloc` 或 `_aligned_offset_malloc` 函数的内存块的指针。
 
 ## <a name="remarks"></a>备注
 
@@ -74,4 +75,4 @@ void _aligned_free (
 
 ## <a name="see-also"></a>请参阅
 
-[数据对齐](../../c-runtime-library/data-alignment.md)  
+[数据对齐](../../c-runtime-library/data-alignment.md)

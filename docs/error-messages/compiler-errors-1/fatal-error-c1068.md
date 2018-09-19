@@ -1,5 +1,5 @@
 ---
-title: 错误 C1068 |Microsoft 文档
+title: 错误 C1068 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe67aa85acbab4cb175b6062a7a36ea91c7c815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 783e4fffa73dd22a5f93254a30b57e1788baed47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031556"
 ---
 # <a name="fatal-error-c1068"></a>错误 C1068
-无法打开文件“file”  
-  
- 确保 `file` 未被其他程序使用。
+
+无法打开文件“file”
+
+确保 `file` 未被其他程序使用。

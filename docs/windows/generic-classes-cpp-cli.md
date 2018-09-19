@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716776"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 在上述语法中，使用以下术语：
 
-*属性*（可选）  
-附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。
+*特性*  
+（可选）声明性的其他信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
 *类键*  
 任一**类**或**typename**
@@ -58,7 +58,7 @@ class-body
 *约束子句*  
 （不以逗号分隔） 的列表**其中**子句指定的类型参数约束。 采用格式：
 
-`where`  *类型参数标识符*`:`*约束列表*  `...`
+> **其中***类型参数标识符* **:** *约束列表***...** 
 
 *约束列表*  
 *类或接口*[`,` *...*]
@@ -69,8 +69,8 @@ class-body
 *identifier*  
 泛型类，任何有效的 c + + 标识符的名称。
 
-*修饰符*（可选）  
-允许的修饰符包括**密封**并**抽象**。
+*修饰符*  
+（可选）允许的修饰符包括**密封**并**抽象**。
 
 *基础列表*  
 一个列表，其中包含一个基本类和任何实现的接口，所有逗号分隔。

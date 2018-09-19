@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720262"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 类
 允许用户将不同的命令与特定相关联[CView](../../mfc/reference/cview-class.md)对象时在该视图内双击。  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iViewId*  
- 视图 id。  
+*iViewId*<br/>
+[in]视图 id。  
   
- [in]*uiViewNameResId*  
- 资源字符串 ID 引用视图名称。  
+*uiViewNameResId*<br/>
+[in]资源字符串 ID 引用视图名称。  
   
- [in]*uiIconId*  
- 视图图标 id。  
+*uiIconId*<br/>
+[in]视图图标 id。  
   
- [in]*iId*  
- 视图 id。  
+*iId*<br/>
+[in]视图 id。  
   
- [in]*lpszViewName*  
- 视图名称。  
+*lpszViewName*<br/>
+[in]视图名称。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iId*  
- 视图 id。  
+*iId*<br/>
+[in]视图 id。  
   
 ### <a name="return-value"></a>返回值  
  如果视图为关联的命令; 命令标识符否则为 0。  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iViewId*  
- 视图 id。  
+*iViewId*<br/>
+[in]视图 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则一个图标资源标识符否则为 0。  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszName*  
- 视图名称。  
+*lpszName*<br/>
+[in]视图名称。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则视图 ID否则为 0。  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*listOfNames*  
- 对引用`CStringList`对象。  
+*listOfNames*<br/>
+[out]对引用`CStringList`对象。  
   
 ### <a name="remarks"></a>备注  
  此方法填充参数`listOfNames`通过使用已注册的所有视图的名称与[CMouseManager::AddView](#addview)。  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 注册表项的路径。  
+*lpszProfileName*<br/>
+[in]注册表项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszProfileName*  
- 注册表项的路径。  
+*lpszProfileName*<br/>
+[in]注册表项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iViewId*  
- 视图标识符。  
+*iViewId*<br/>
+[in]视图标识符。  
   
- [in]*uiCmd*  
- 命令标识符中。  
+*uiCmd*<br/>
+[in]命令标识符中。  
   
 ### <a name="remarks"></a>备注  
  若要将自定义命令与视图相关联，必须先注册视图通过使用[CMouseManager::AddView](#addview)。 `AddView`方法需要作为输入参数的视图标识符。 一旦您注册的视图，就可以调用`CMouseManager::SetCommandForDblClk`使用的相同视图标识符输入参数提供给`AddView`。 此后，当用户双击鼠标中已注册的视图，该应用程序将执行命令所指示*uiCmd。* 若要支持自定义鼠标行为，还需要自定义注册到鼠标管理器视图。 有关自定义鼠标行为的详细信息，请参阅[键盘和鼠标自定义](../keyboard-and-mouse-customization.md)。  

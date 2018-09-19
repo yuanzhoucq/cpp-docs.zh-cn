@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 2） C4309 |Microsoft 文档
+title: 编译器警告 （等级 2） C4309 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb98faf0c84210deb1a4c5164959d2ba4c08db9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b7eba833b547a54adc0644303ab51d3852740a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041969"
 ---
 # <a name="compiler-warning-level-2-c4309"></a>编译器警告（等级 2）C4309
-conversion： 常量值的截断  
-  
- 类型转换会导致要超过为其分配的空间的常量。 你可能需要使用更大的类型常量。  
-  
- 下面的示例生成 C4309:  
-  
-```  
-// C4309.cpp  
-// compile with: /W2  
-int main()  
-{  
-   char c = 128;   // C4309  
-}  
+
+conversion： 截断常量值
+
+类型转换会导致一个常量，以超过为其分配的空间。 您可能需要使用更大的类型的常量。
+
+下面的示例生成 C4309:
+
+```
+// C4309.cpp
+// compile with: /W2
+int main()
+{
+   char c = 128;   // C4309
+}
 ```

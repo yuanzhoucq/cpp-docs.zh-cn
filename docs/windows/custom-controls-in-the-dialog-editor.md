@@ -1,5 +1,5 @@
 ---
-title: 在对话框编辑器中的自定义控件 |Microsoft Docs
+title: 自定义控件在对话框编辑器中 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], templates
-- custom controls [Visual Studio], dialog boxes
-- custom controls [Visual Studio]
-- dialog box controls, custom (user) controls
-- Dialog editor, custom controls
+- custom controls [C++], dialog boxes
+- custom controls [C++]
+- dialog box controls [C++], custom (user) controls
+- Dialog Editor [C++], custom controls
 ms.assetid: f494b314-4000-4bbe-bbd0-4b18fb71ede1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7329873b8f56b44904c38161e737d99d29efa580
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1bebca381bc9d6d644ac1aac95b902065268a9d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592981"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317701"
 ---
-# <a name="custom-controls-in-the-dialog-editor"></a>对话框编辑器中的自定义控件
+# <a name="custom-controls-in-the-dialog-editor-c"></a>自定义控件在对话框编辑器中 （c + +）
 
 对话框编辑器使您可以使用现有的"自定义"或"user"控件在对话框模板中。
 

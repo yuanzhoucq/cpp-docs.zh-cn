@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b7c8f9e29cc71cd12c04d4135e4f02d273ab4725
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961735"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319027"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 类
 
@@ -95,10 +95,10 @@ int main() {
       cout << " " << b[i];
    cout << " )" << endl;
 }
-\* Output:
+/* Output:
 ( 0 1 2 3 4 )
 ( 0 1 2 3 4 )
-*\
+*/
 ```
 
 ## <a name="example"></a>示例
@@ -144,9 +144,9 @@ int main()
 
     return 0;
 }
-\* Output:
- 0 1 2 3 4 5 6 7 8 9
-*\
+/* Output:
+0 1 2 3 4 5 6 7 8 9
+*/
 ```
 
 ### <a name="constructors"></a>构造函数
@@ -233,9 +233,9 @@ int main() {
    cout << "The iterator underlying rpos is bpos & it points to: "
         << *bpos << "." << endl;
 }
-\* Output:
+/* Output:
 The iterator underlying rpos is bpos & it points to: 1.
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向数组的指针。
+*ptr*<br/>
+指向数组的指针。
 
-*大小*数组的大小。
+*size*<br/>
+数组大小。
 
-*索引*（可选） 数组中的元素要初始化的迭代器。  默认情况下，将迭代器初始化为数组中的第一个元素。
+*index*<br/>
+（可选）数组中用于初始化迭代器的元素。  默认情况下，将迭代器初始化为数组中的第一个元素。
 
 ### <a name="remarks"></a>备注
 
@@ -292,11 +295,11 @@ int main() {
    checked_array_iterator<int*> checked_output_iterator2(b,5,3);
    cout << *checked_output_iterator2 << endl;
 }
-\* Output:
+/* Output:
 0 1 2 3 4
 0 1 2 3 4
 3
-*\
+*/
 ```
 
 ## <a name="difference_type"></a>  checked_array_iterator::difference_type
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`对其检查相等性。
+*right*<br/>
+作为检查相等性依据的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -364,10 +368,10 @@ int main() {
    else
       cout << "checked_array_iterators are not equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_neq"></a>  checked_array_iterator::operator!=
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`针对要检查是否不相等。
+*right*<br/>
+作为检查不相等性依据的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -419,10 +424,10 @@ int main() {
    else
       cout << "checked_array_iterators are equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  checked_array_iterator::operator&lt;
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`针对要检查是否不相等。
+*right*<br/>
+作为检查不相等性依据的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -474,10 +480,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is not less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is not less than checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  checked_array_iterator::operator&gt;
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`进行比较。
+*right*<br/>
+要针对其进行比较的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`进行比较。
+*right*<br/>
+要针对其进行比较的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*右*`checked_array_iterator`进行比较。
+*right*<br/>
+要针对其进行比较的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -565,10 +574,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is greater than or equal to checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  checked_array_iterator::operator*
@@ -621,7 +630,7 @@ int main() {
    cout << "b[0] = " << *p << endl;
    cout << "c[0].first = " << p_c->first << endl;
 }
-\* Output:
+/* Output:
 0
 1
 2
@@ -629,7 +638,7 @@ int main() {
 4
 b[0] = 0
 c[0].first = 10
-*\
+*/
 ```
 
 ## <a name="op_arrow"></a>  checked_array_iterator::operator-&gt;
@@ -691,11 +700,11 @@ int main() {
    checked_output_iterator++;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 77
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
@@ -739,11 +748,11 @@ int main() {
    checked_output_iterator--;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 6
-*\
+*/
 ```
 
 ## <a name="op_add_eq"></a>  checked_array_iterator::operator+=
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*递增迭代器的偏移量。
+*_Off*<br/>
+迭代器要递增的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -787,10 +797,10 @@ int main() {
    checked_output_iterator += 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="op_add"></a>  checked_array_iterator::operator+
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*偏移量添加到`checked_array_iterator`。
+*_Off*<br/>
+要添加到 `checked_array_iterator` 的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -834,10 +845,10 @@ int main() {
    checked_output_iterator = checked_output_iterator + 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*递增迭代器的偏移量。
+*_Off*<br/>
+迭代器要递增的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -882,10 +894,10 @@ int main() {
    checked_output_iterator -= 2;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 199
 3
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*偏移量将减小从`checked_array_iterator`。
+*_Off*<br/>
+要从 `checked_array_iterator` 中减去的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*从偏移量`checked_array_iterator`地址。
+*_Off*<br/>
+`checked_array_iterator` 地址的偏移量。
 
 ### <a name="return-value"></a>返回值
 
@@ -956,9 +970,9 @@ int main() {
 
    cout << refrpos + 1 << endl;
 }
-\* Output:
+/* Output:
 3
-*\
+*/
 ```
 
 ## <a name="pointer"></a>  checked_array_iterator::pointer

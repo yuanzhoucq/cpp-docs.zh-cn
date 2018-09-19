@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715398"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ ms.locfileid: "43195785"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype* （可选）  
-OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
+*dbtype*  
+（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
 
-*精度*（可选）  
-要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*缩放*（可选）  
-要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*缩放*  
+（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*状态*（可选）  
-成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
+*status*  
+（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
 
-*长度*（可选）  
-成员变量，用来保存的列的大小以字节为单位。
+*length*  
+（可选）成员变量，用来保存的列的大小以字节为单位。
 
 ## <a name="remarks"></a>备注
 

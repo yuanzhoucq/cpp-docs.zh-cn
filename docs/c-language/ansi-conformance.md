@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c363fa74a3fac97399eee72c4b3d396a2f375d06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cca68ad9865ab6382114c3ebe64d5921539f7ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106867"
 ---
 # <a name="ansi-conformance"></a>ANSI 一致性
-Microsoft C 遵循在 ANSI C 标准的 9899:1990 版本中规定的 C 语言的标准。  
-  
- 本书的文本和语法中以及联机引用中介绍了 Microsoft ANSI C 标准扩展。 由于此扩展不是 ANSI C 标准的一部分，因此对它们的使用可能会限制系统间程序的可移植性。 默认情况下，将启用 Microsoft 扩展。 若要禁用此扩展，请指定 /Za 编译器选项。 使用 /Za，所有非 ANSI 代码将生成错误或警告。  
-  
-## <a name="see-also"></a>请参阅  
- [《C 语言参考》的组织](../c-language/organization-of-the-c-language-reference.md)
+
+Microsoft C 遵循在 ANSI C 标准的 9899:1990 版本中规定的 C 语言的标准。
+
+本书的文本和语法中以及联机引用中介绍了 Microsoft ANSI C 标准扩展。 由于此扩展不是 ANSI C 标准的一部分，因此对它们的使用可能会限制系统间程序的可移植性。 默认情况下，将启用 Microsoft 扩展。 若要禁用此扩展，请指定 /Za 编译器选项。 使用 /Za，所有非 ANSI 代码将生成错误或警告。
+
+## <a name="see-also"></a>请参阅
+
+[《C 语言参考》的组织](../c-language/organization-of-the-c-language-reference.md)

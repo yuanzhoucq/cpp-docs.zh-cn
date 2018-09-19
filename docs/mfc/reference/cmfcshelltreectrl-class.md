@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720741"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 `CMFCShellTreeCtrl`类用于扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 一个布尔值，指定是否启用的快捷菜单。  
+*bEnable*<br/>
+[in]一个布尔值，指定是否启用的快捷菜单。  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  返回为设置的标志[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象。  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*strPath*  
- 对字符串参数的引用。 该方法将写入此参数的项的路径。  
+*strPath*<br/>
+[out]对字符串参数的引用。 该方法将写入此参数的项的路径。  
   
- [in]*htreeItem*  
- 方法检索此树控件项的路径。  
+*htreeItem*<br/>
+[in]方法检索此树控件项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 0。  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*消息*  
- [in]*wParam*  
- [in]*lParam*  
- [in]*pLResult*  
+*message*<br/>
+[in][in]*wParam*  
+*lParam*<br/>
+[in][in]*pLResult*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pItem*  
- [in]*bSelected*  
+*pItem*<br/>
+[in][in]*bSelected*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPath*  
- 一个字符串，指定项的路径。  
+*lpszPath*<br/>
+[in]一个字符串，指定项的路径。  
   
- [in]*lpidl*  
- 指定的项 PIDL  
+*lpidl*<br/>
+[in]指定的项 PIDL  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 S_OK否则为 E_FAIL。  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*dwFlags*  
- 要设置的标志。  
+*dwFlags*<br/>
+[in]要设置的标志。  
   
- [in]*bRefresh*  
- 一个布尔值，指定是否`CMFCShellTreeCtrl`应立即进行刷新。  
+*bRefresh*<br/>
+[in]一个布尔值，指定是否`CMFCShellTreeCtrl`应立即进行刷新。  
   
 ### <a name="remarks"></a>备注  
  `CMFCShellTreeCtrl`传递所有标志设置为[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。 有关不同的标志的值的详细信息，请参阅[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pShellList*  
- 一个指向`CMFCShellListCtrl`对象。  
+*pShellList*<br/>
+[in]一个指向`CMFCShellListCtrl`对象。  
   
 ### <a name="remarks"></a>备注  
  此方法将相关联`CMFCShellListCtrl`与`CMFCShellTreeCtrl`。 这些对象可能显示为一个类似于资源管理器的窗口： 如果用户选择中的对象`CMFCShellTreeCtrl`、 关联中的项`CMFCShellListCtrl`将自动更新。  

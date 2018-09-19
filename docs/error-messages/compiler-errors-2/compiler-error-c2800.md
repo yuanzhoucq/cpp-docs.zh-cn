@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2800 |Microsoft 文档
+title: 编译器错误 C2800 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd9723513042ae7ef6d63914f5abecd63192e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23441361ea0c8dbc241f5bf655186f0399b6b42f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016372"
 ---
 # <a name="compiler-error-c2800"></a>编译器错误 C2800
-operator operator 无法进行重载  
-  
- 以下运算符无法进行重载： 类成员访问 (`.`)，指向成员的指针 (`.*`)，范围解析 (`::`)，条件表达式 (`? :`)，和`sizeof`。  
-  
- 下面的示例生成 C2800:  
-  
-```  
-// C2800.cpp  
-// compile with: /c  
-class C {  
-   operator:: ();   // C2800  
-};  
+
+不能重载 operator operator
+
+不能重载以下运算符： 类成员访问 (`.`)，指向成员的指针 (`.*`)，作用域解析 (`::`)，条件表达式 (`? :`)，和`sizeof`。
+
+下面的示例生成 C2800:
+
+```
+// C2800.cpp
+// compile with: /c
+class C {
+   operator:: ();   // C2800
+};
 ```

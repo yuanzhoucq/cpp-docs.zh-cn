@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3554 |Microsoft 文档
+title: 编译器错误 C3554 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb374e028097157ae72b621593a899af9fe2f91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b1760607a335d4dd56ec711eef76f5a68550d64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089497"
 ---
 # <a name="compiler-error-c3554"></a>编译器错误 C3554
-“decltype”不能与任何其他类型说明符组合  
-  
- 不可用任何类型说明符来限定 `decltype()` 关键字。 例如，下述代码片段产生错误 C3554。  
-  
-```  
-int x;  
-unsigned decltype(x); // C3554  
+
+“decltype”不能与任何其他类型说明符组合
+
+不可用任何类型说明符来限定 `decltype()` 关键字。 例如，下述代码片段产生错误 C3554。
+
+```
+int x;
+unsigned decltype(x); // C3554
 ```

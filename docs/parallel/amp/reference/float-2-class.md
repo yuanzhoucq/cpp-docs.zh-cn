@@ -1,5 +1,5 @@
 ---
-title: float_2 类 |Microsoft 文档
+title: float_2 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82197c785c8b27e2d4f2607cd677141b219c90ca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019948"
 ---
 # <a name="float2-class"></a>float_2 类
-表示短矢量的两个浮点数。  
+表示两个浮点值的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ class float_2;
   
 |名称|描述|  
 |----------|-----------------|  
-|[float_2 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[float_2 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -100,7 +100,7 @@ class float_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#float_2__size)||  
   
@@ -127,7 +127,7 @@ class float_2;
   
 ##  <a name="ctor"></a> float_2 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 float_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline float_2(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="float_2__size"></a> 大小 
 

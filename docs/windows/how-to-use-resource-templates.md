@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用资源模板 |Microsoft Docs
+title: 如何： 使用资源模板 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,27 +8,27 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- language-specific template files
+- language-specific template files [C++]
 - resource templates
-- resources [Visual Studio], creating
-- rct files
+- resources [C++], creating
+- rct files [C++]
 - templates, resource templates
-- resources [Visual Studio], templates
-- .rct files
+- resources [C++], templates
+- .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bd85dd5c5b6468ca8246fdf11f4068eae928107
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602435"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313970"
 ---
-# <a name="how-to-use-resource-templates"></a>如何：使用资源模板
+# <a name="how-to-use-resource-templates-c"></a>如何： 使用资源模板 （c + +）
 
 资源模板是保存为 .rct 文件的自定义资源。 因此，可将资源模板视为创建其他资源的起点。 资源模板可节省开发其他资源或共享功能（如标准控件和其他重复元素）的资源组的时间。 例如，你可能希望在多个对话框中包含“帮助”按钮和公司徽标的图标。 若要快速做到这一点，可以新建一个对话框模板，并用徽标和“帮助”按钮对其进行自定义。
 

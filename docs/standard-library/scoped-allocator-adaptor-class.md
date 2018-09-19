@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962925"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104062"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>参数
 
-*计数*为分配足够的存储空间的元素数。
+*count*<br/>
+要分配足够大的存储空间的元素数。
 
-*提示*通过定位在请求之前分配的对象的地址可能帮助分配器对象的指针。
+*提示*<br/>
+通过定位在请求之前分配的对象地址，指针可能对分配器对象有所帮助。
 
 ### <a name="return-value"></a>返回值
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向要构造对象的内存位置的指针。
+*ptr*<br/>
+指向要构造对象的内存位置的指针。
 
-*args*的参数列表。
+*参数*<br/>
+参数列表。
 
-*第一个*一对中第一种类型的对象。
+*first*<br/>
+属于一对中第一种类型的对象。
 
-*第二个*一对中的第二个类型的对象。
+*second*<br/>
+属于一对中第二种类型的对象。
 
-*右*移动或复制的现有对象。
+*right*<br/>
+要移动或复制的现有对象。
 
 ### <a name="remarks"></a>备注
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向要释放的对象的起始位置的指针。
+*ptr*<br/>
+指向要释放对象的起始位置的指针。
 
-*计数*要解除分配的对象数。
+*count*<br/>
+要释放的对象数。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向要销毁的对象的指针。
+*ptr*<br/>
+指向要销毁对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>参数
 
-*右*的现有`scoped_allocator_adaptor`。
+*right*<br/>
+现有 `scoped_allocator_adaptor`。
 
-*al*要用作外部分配器的现有分配器。
+*Al*<br/>
+要用作外部分配器的现有分配器。
 
-*rest*要用作内部分配器的分配器的列表。
+*rest*<br/>
+要用作内部分配器的分配器列表。
 
 ### <a name="remarks"></a>备注
 

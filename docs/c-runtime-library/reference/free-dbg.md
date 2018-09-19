@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa485eea6f0ffda05b0ef33a808d5ec837255514
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400039"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103900"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -56,23 +56,25 @@ void _free_dbg(
 
 ### <a name="parameters"></a>参数
 
-*userData*到分配的内存块的指针，用以被释放。
+*userData*<br/>
+指向要释放的已分配内存块的指针。
 
-*blockType*用于被释放的分配的内存块的类型： **_CLIENT_BLOCK**， **_NORMAL_BLOCK**，或 **_IGNORE_BLOCK**。
+*blockType*<br/>
+要释放分配的内存块的类型： **_CLIENT_BLOCK**， **_NORMAL_BLOCK**，或 **_IGNORE_BLOCK**。
 
 ## <a name="remarks"></a>备注
 
-**_Free_dbg**技术支持部门的调试版本[免费](free.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，每次调用 **_free_dbg**都会减少到对的调用**免费**。 同时**免费**和 **_free_dbg**释放内存块在基堆中，但 **_free_dbg**还包含两个调试功能： 能够保留已释放在堆中的块若要模拟内存不足的情况和用于释放特定分配类型的块类型参数的链接的列表。
+**_Free_dbg**函数是调试版[免费](free.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_free_dbg**缩减为调用**免费**。 这两**免费**并 **_free_dbg**释放基堆中的内存块，但 **_free_dbg**还包含两个调试功能： 能够保留已释放的块的堆中若要模拟内存不足的情况和用于释放特定分配类型的块类型参数的链接的列表。
 
-**_free_dbg**执行有效性检查在所有指定的文件和块位置上执行释放操作之前。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果 **_CRTDBG_DELAY_FREE_MEM_DF**位域[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)设置标志，已释放的块填入分配的值 0xDD， **_FREE_BLOCK**块类型，并保留在堆链接列表的内存块。
+**_free_dbg**执行有效性检查所有指定的文件和块位置上执行释放操作之前。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果 **_CRTDBG_DELAY_FREE_MEM_DF**位域[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)设置标志，则使用值 0xDD，分配填充释放的块 **_FREE_BLOCK**块类型，并保留在堆链接列表的内存块。
 
-如果在释放内存，发生错误**errno**从操作系统的特性的失败的信息，以及设置。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果在释放内存，出现错误**errno**的操作系统从性质上的失败的信息，以及设置。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_free_dbg**|\<crtdbg.h>|
 

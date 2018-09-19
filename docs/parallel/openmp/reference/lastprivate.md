@@ -1,5 +1,5 @@
 ---
-title: lastprivate |Microsoft 文档
+title: lastprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028189"
 ---
 # <a name="lastprivate"></a>lastprivate
-指定的变量的封闭上下文的版本被设置为私有版本的任何线程执行的最后一个迭代 （for 循环构造） 或最后一节 （#pragma 节）。  
+指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,10 @@ ms.locfileid: "33696222"
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `var`  
- 设置为等于私有版本的任何线程执行的最后一个迭代 （for 循环构造） 或最后一节 （#pragma 节） 的变量。  
+*var*<br/>
+设置为等于私有版本的任何线程的变量执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。  
   
 ## <a name="remarks"></a>备注  
  `lastprivate` 适用于以下指令：  

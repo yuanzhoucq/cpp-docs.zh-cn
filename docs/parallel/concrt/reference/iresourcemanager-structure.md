@@ -1,5 +1,5 @@
 ---
-title: IResourceManager 结构 |Microsoft 文档
+title: IResourceManager 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d1032b2db7d1552beb40eb724b9953142b9b2ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027409"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
 并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。  
@@ -52,15 +52,15 @@ struct IResourceManager;
   
 |名称|描述|  
 |----------|-----------------|  
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|仅在调试中的存在的运行时版本，此方法是旨在促进测试资源管理器的不同硬件拓扑，而无需实际相匹配的配置的硬件上测试挂钩。 使用的运行时的零售版本，此方法将返回而不执行任何操作。|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|仅在调试中的当前版本的运行时，此方法旨在便于测试资源管理器的不同硬件拓扑，而无需匹配的配置的实际硬件上的测试挂钩。 使用零售版本的运行时，此方法将返回而不执行任何操作。|  
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|返回可供资源管理器使用的节点数。|  
 |[IResourceManager::GetFirstNode](#getfirstnode)|按照资源管理器的定义，返回枚举顺序中的第一个节点。|  
-|[IResourceManager::Reference](#reference)|递增上的资源管理器实例的引用计数。|  
-|[IResourceManager::RegisterScheduler](#registerscheduler)|注册计划程序与资源管理器。 调度器注册后，它应与资源管理器使用`ISchedulerProxy`返回的接口。|  
-|[IResourceManager::Release](#release)|递减引用计数在资源管理器实例上。 资源管理器被销毁时其引用计数变为`0`。|  
+|[IResourceManager::Reference](#reference)|资源管理器实例的引用计数会递增。|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|注册计划程序与资源管理器。 计划程序在注册后，应与资源管理器使用通信`ISchedulerProxy`返回的接口。|  
+|[IResourceManager::Release](#release)|递减引用计数在资源管理器实例。 资源管理器被销毁时其引用计数变为`0`。|  
   
 ## <a name="remarks"></a>备注  
- 使用[CreateResourceManager](concurrency-namespace-functions.md)函数来获取单一资源管理器实例的接口。 该方法递增引用计数在资源管理器中，并应调用[iresourcemanager:: Release](#release)方法来完成与资源管理器后释放该引用。 通常情况下，你创建每个计划程序将在创建期间，调用此方法并释放该引用到资源管理器中之后它会关闭。  
+ 使用[CreateResourceManager](concurrency-namespace-functions.md)函数来获取接口的单一实例资源管理器实例。 方法递增引用计数在资源管理器中，并应调用[iresourcemanager:: Release](#release)方法来完成与资源管理器时释放该引用。 通常情况下，创建每个计划程序将在创建期间，调用此方法，并关闭后发布到资源管理器的引用。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IResourceManager`  
@@ -71,7 +71,7 @@ struct IResourceManager;
  **命名空间：** 并发  
   
 ##  <a name="createnodetopology"></a>  Iresourcemanager:: Createnodetopology 方法  
- 仅在调试中的存在的运行时版本，此方法是旨在促进测试资源管理器的不同硬件拓扑，而无需实际相匹配的配置的硬件上测试挂钩。 使用的运行时的零售版本，此方法将返回而不执行任何操作。  
+ 仅在调试中的当前版本的运行时，此方法旨在便于测试资源管理器的不同硬件拓扑，而无需匹配的配置的实际硬件上的测试挂钩。 使用零售版本的运行时，此方法将返回而不执行任何操作。  
   
 ```
 virtual void CreateNodeTopology(
@@ -82,22 +82,22 @@ virtual void CreateNodeTopology(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nodeCount`  
- 模拟的处理器节点数。  
+*nodeCount*<br/>
+模拟的处理器节点数。  
   
- `pCoreCount`  
- 一个数组，每个节点上指定的内核数。  
+*pCoreCount*<br/>
+一个数组，指定每个节点上的内核数。  
   
- `pNodeDistance`  
- 指定任何两个节点的节点距离矩阵。 此参数可以具有值`NULL`。  
+*pNodeDistance*<br/>
+指定任意两个节点之间的距离矩阵。 此参数可以具有值`NULL`。  
   
- `pProcessorGroups`  
- 所属的每个节点指定的处理器组的数组。  
+*pProcessorGroups*<br/>
+所属的每个节点指定处理器组的数组。  
   
 ### <a name="remarks"></a>备注  
- [invalid_argument](../../../standard-library/invalid-argument-class.md)如果引发参数`nodeCount`具有值`0`传入，或如果参数`pCoreCount`具有值`NULL`。  
+ [invalid_argument](../../../standard-library/invalid-argument-class.md)如果引发参数`nodeCount`具有值`0`传递中，或者，如果该参数`pCoreCount`的值`NULL`。  
   
- [invalid_operation](invalid-operation-class.md)如果在其他计划程序存在于进程时调用此方法引发。  
+ [invalid_operation](invalid-operation-class.md)如果在其他计划程序存在于进程时调用此方法将引发。  
   
 ##  <a name="getavailablenodecount"></a>  Iresourcemanager:: Getavailablenodecount 方法  
  返回可供资源管理器使用的节点数。  
@@ -117,7 +117,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 通过资源管理器中定义的枚举顺序中的第一个节点。  
+ 资源管理器定义的枚举顺序中的第一个节点。  
   
 ##  <a name="iresourcemanager__osversion"></a>  Iresourcemanager:: Osversion 枚举  
  表示操作系统版本的枚举类型。  
@@ -127,7 +127,7 @@ enum OSVersion;
 ```  
   
 ##  <a name="reference"></a>  Iresourcemanager:: Reference 方法  
- 递增上的资源管理器实例的引用计数。  
+ 资源管理器实例的引用计数会递增。  
   
 ```
 virtual unsigned int Reference() = 0;
@@ -137,7 +137,7 @@ virtual unsigned int Reference() = 0;
  在生成的引用计数。  
   
 ##  <a name="registerscheduler"></a>  Iresourcemanager:: Registerscheduler 方法  
- 注册计划程序与资源管理器。 调度器注册后，它应与资源管理器使用`ISchedulerProxy`返回的接口。  
+ 注册计划程序与资源管理器。 计划程序在注册后，应与资源管理器使用通信`ISchedulerProxy`返回的接口。  
   
 ```
 virtual ISchedulerProxy *RegisterScheduler(
@@ -146,22 +146,22 @@ virtual ISchedulerProxy *RegisterScheduler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pScheduler`  
- `IScheduler`到调度器要注册的接口。  
+*pScheduler*<br/>
+`IScheduler`到调度器注册接口。  
   
- `version`  
- 通信接口的版本使用计划程序与资源管理器进行通信。 使用版本允许资源管理器演化通信接口，同时允许计划程序以获取向较旧的功能的访问权限。 想要使用 Visual Studio 2010 中提供的资源管理器功能的计划程序应使用版本`CONCRT_RM_VERSION_1`。  
+*version*<br/>
+通信接口的版本使用计划程序进行通信使用资源管理器。 使用的是版本允许资源管理器，同时允许计划程序以获取访问权限向较旧的功能改进的通信接口。 想要使用 Visual Studio 2010 中存在的资源管理器功能的计划程序应使用版本`CONCRT_RM_VERSION_1`。  
   
 ### <a name="return-value"></a>返回值  
- `ISchedulerProxy`资源管理器已与你的计划程序关联的接口。 您的计划程序应使用此接口与使用资源管理器上从该点通信。  
+ `ISchedulerProxy`资源管理器已与你的计划程序关联的接口。 你的计划程序应使用此接口将使用资源管理器从该点上。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法来启动与资源管理器的通信。 该方法将关联`IScheduler`具有你计划程序的接口`ISchedulerProxy`接口和人工回给您。 你可以使用返回的接口，以便请求执行资源以供您的计划程序，或订阅线程与资源管理器。 资源管理器将使用从返回的计划程序策略的策略元素[ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy)方法来确定哪种类型的线程计划程序将需要执行工作。 如果你`SchedulerKind`策略密钥具有值`UmsThreadDefault`和从作为值策略传回读取值`UmsThreadDefault`、`IScheduler`传递给方法的接口必须是`IUMSScheduler`接口。  
+ 使用此方法来启动与资源管理器的通信。 该方法将相关联`IScheduler`与你的计划程序的接口`ISchedulerProxy`接口和人工回给您。 若要请求执行资源以供你的计划程序，或订阅线程使用资源管理器，可以使用返回的接口。 资源管理器将使用从返回的计划程序策略的策略元素[ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy)方法，以确定哪种类型的线程计划程序将需要执行工作。 如果你`SchedulerKind`策略的注册表项具有值`UmsThreadDefault`作为值策略范围返回读取的值和`UmsThreadDefault`，则`IScheduler`接口传递给该方法必须是`IUMSScheduler`接口。  
   
- 该方法将引发`invalid_argument`异常如果参数`pScheduler`具有值`NULL`或者，如果参数`version`不是有效的通信接口版本。  
+ 该方法将引发`invalid_argument`异常如果参数`pScheduler`具有值`NULL`或者，如果该参数`version`不是有效的通信接口的版本。  
   
 ##  <a name="release"></a>  Iresourcemanager:: Release 方法  
- 递减引用计数在资源管理器实例上。 资源管理器被销毁时其引用计数变为`0`。  
+ 递减引用计数在资源管理器实例。 资源管理器被销毁时其引用计数变为`0`。  
   
 ```
 virtual unsigned int Release() = 0;

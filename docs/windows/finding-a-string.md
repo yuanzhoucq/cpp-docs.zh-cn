@@ -1,5 +1,5 @@
 ---
-title: 查找字符串 |Microsoft Docs
+title: 查找字符串资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e04caa4aa927bd24bc1a5cd86f5d390e1c376b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197530"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318495"
 ---
-# <a name="finding-a-string"></a>查找字符串
+# <a name="finding-a-string-resource-c"></a>查找字符串资源 （c + +）
 
 可以搜索在字符串表中的一个或多个字符串并使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)与**在文件中查找**命令 (**编辑**菜单) 查找字符串的所有实例模式相匹配。
 

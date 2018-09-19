@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085274"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,15 +64,15 @@ double _cabs(
 
 ## <a name="return-value"></a>返回值
 
-**_cabs**如果成功返回其自变量的绝对值。 在溢出时， **_cabs**返回**HUGE_VAL**和设置**errno**到**ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
+**_cabs**如果成功，则返回其参数的绝对值。 在溢出时， **_cabs**返回**HUGE_VAL**并设置**errno**到**ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_Cabs**函数计算绝对值的数值的复数，它必须是类型的结构[_complex](../../c-runtime-library/standard-types.md)。 结构*z*由组成实分量*x*和虚部*y*。 调用 **_cabs**生成等效的表达式值`sqrt( z.x * z.x + z.y * z.y )`。
+**_Cabs**函数计算复数，它必须是类型的结构的绝对值[_complex](../../c-runtime-library/standard-types.md)。 结构*z*组成实分量*x* ，虚部*y*。 调用 **_cabs**生成的值等效的表达式`sqrt( z.x * z.x + z.y * z.y )`。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)   
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)

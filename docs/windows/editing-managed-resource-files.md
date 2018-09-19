@@ -1,5 +1,5 @@
 ---
-title: 编辑托管的资源文件 |Microsoft Docs
+title: 编辑托管的资源文件 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,27 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- .resx files, editing
-- resource files, editing
-- resx files, editing
+- .resx files [C++], editing
+- resource files [C++], editing
+- resx files [C++], editing
 ms.assetid: 42593030-7897-4bf3-920c-e0b2d11c5bbd
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba809b4522637fd7307a403601f4621a5cb53ce8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d17a4d1f9fa7cb80fc8fcb3cec5599fb572c0ea0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215235"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318650"
 ---
-# <a name="editing-managed-resource-files"></a>编辑托管资源文件
+# <a name="editing-managed-resource-files-c"></a>编辑托管资源文件 （c + +）
 
 托管的资源 (.resx) 文件是 XML 文件。 当将托管的资源文件添加到你的项目从**添加新项**对话框中，**托管资源编辑器**默认情况下打开。
-
-有关详细信息，请参阅[中的资源。Resx 文件格式](https://msdn.microsoft.com/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5)。
 
 ## <a name="see-also"></a>请参阅
 

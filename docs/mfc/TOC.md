@@ -141,7 +141,6 @@
 ### [编写 MFC 应用程序](writing-mfc-applications.md)
 ### [Internet 上的 ActiveX 控件](activex-controls-on-the-internet.md)
 ### [升级现有的 ActiveX 控件](upgrading-an-existing-activex-control.md)
-### [Internet 上的活动文档](active-documents-on-the-internet.md)
 ### [Internet 上的异步名字对象](asynchronous-monikers-on-the-internet.md)
 ### [测试 Internet 应用程序](testing-internet-applications.md)
 ### [Internet 安全性 (C++)](internet-security-cpp.md)

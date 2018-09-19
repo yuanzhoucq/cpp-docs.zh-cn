@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406636"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108314"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
@@ -55,19 +55,20 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>参数
 
-*启用*非零值以启用 **%n**支持，0 表示禁用 **%n**支持。
+*enable*<br/>
+非零值，以启用 **%n**支持，0 表示禁用 **%n**支持。
 
 ## <a name="property-valuereturn-value"></a>属性值/返回值
 
-状态 **%n**支持之前调用此函数： 非零值; 如果 **%n**支持已启用，0，如果它已被禁用。
+状态 **%n**之前调用此函数支持： 非零值; 如果 **%n**支持已启用，如果它已被禁用，则为 0。
 
 ## <a name="remarks"></a>备注
 
-出于安全考虑，支持 **%n**格式说明符在默认情况下为禁用状态**printf**和其所有变量。 如果 **%n**中遇到**printf**格式规范中，默认行为是调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 调用 **_set_printf_count_output**使用非零自变量将导致**printf**-系列函数解释 **%n**中所述[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+出于安全考虑，支持 **%n**格式说明符在默认情况下禁用**printf**及其变体。 如果 **%n**中遇到**printf**格式规范中，默认行为是调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 调用 **_set_printf_count_output**具有非零参数将导致**printf**-系列函数解释 **%n**中所述[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 

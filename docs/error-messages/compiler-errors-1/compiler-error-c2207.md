@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2207 |Microsoft 文档
+title: 编译器错误 C2207 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d62494aca47f0ad52c9abbe8e3b897c58c327d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab9d89d66efed3cfa687d17b8a9efd406bf1bec7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082633"
 ---
 # <a name="compiler-error-c2207"></a>编译器错误 C2207
-“member”：类模板的成员无法获取函数类型  
-  
- 类模板的 `member` 以前被分析为非静态数据成员。 不能将它重新定义为成员函数。
+
+“member”：类模板的成员无法获取函数类型
+
+类模板的 `member` 以前被分析为非静态数据成员。 不能将它重新定义为成员函数。

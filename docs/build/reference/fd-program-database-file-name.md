@@ -1,5 +1,5 @@
 ---
-title: -Fd （程序数据库文件名） |Microsoft 文档
+title: -Fd （程序数据库文件名） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,54 +24,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ab9f1d9c5c611b8da8b19860fe9e0c05351d75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64e047a832b3c097ced57f9d491b1344c51da495
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724407"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd（程序数据库文件名）
-指定创建的程序数据库 (PDB) 文件的文件名[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/Fdpathname  
-```  
-  
-## <a name="remarks"></a>备注  
- 而无需 **/Fd**，PDB 文件名称默认为 VC*x*0.pdb，其中*x*是在使用 Visual c + + 的主要版本。  
-  
- 如果指定不包括文件名称 （路径以反斜杠结尾） 的路径名称，编译器将创建一个名为 VC 的.pdb 文件*x*0 指定目录中的 pdb。  
-  
- 如果指定不包含扩展名的文件名称，编译器将使用作为扩展.pdb。  
-  
- 此选项还可命名状态 (.idb) 文件用于最小重新生成和增量编译。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击 **“C/C++”** 文件夹。  
-  
-3.  单击“输出文件”  属性页。  
-  
-4.  修改**程序数据库文件名**属性。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
-  
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>。  
-  
-## <a name="example"></a>示例  
- 此命令行创建一个名为 PROG.pdb 和一个名为 PROG.idb 的.idb 文件的.pdb 文件：  
-  
-```  
-CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
- [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [指定路径名](../../build/reference/specifying-the-pathname.md)
+
+指定创建的程序数据库 (PDB) 文件的文件名[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。
+
+## <a name="syntax"></a>语法
+
+```
+/Fdpathname
+```
+
+## <a name="remarks"></a>备注
+
+无需 **/Fd**，PDB 文件名称默认为 VC*x*0.pdb，其中*x*是 Visual c + + 中使用的主要版本。
+
+如果指定不包括的文件名 （路径以反斜杠结尾） 的路径名称，编译器将创建.pdb 文件，名为 VC*x*0.pdb 指定目录中的。
+
+如果指定不包含扩展名的文件名称，编译器将使用作为扩展.pdb。
+
+此选项还命名用于最小重新生成和增量编译的状态 (.idb) 文件。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 单击 **“C/C++”** 文件夹。
+
+1. 单击“输出文件”  属性页。
+
+1. 修改**程序数据库文件名**属性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>。
+
+## <a name="example"></a>示例
+
+此命令行创建一个名为 PROG.pdb 和一个名为 PROG.idb 的.idb 文件的.pdb 文件：
+
+```
+CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
+```
+
+## <a name="see-also"></a>请参阅
+
+[输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)
+[编译器选项](../../build/reference/compiler-options.md)<br/>
+[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[指定路径名](../../build/reference/specifying-the-pathname.md)

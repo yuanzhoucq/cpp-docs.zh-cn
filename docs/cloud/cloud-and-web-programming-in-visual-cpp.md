@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683360"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
@@ -62,7 +62,7 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
    提供的本机 COM 接口，可以使用 Windows 运行时的应用或 Windows 桌面应用程序中通过 HTTP 连接到 Internet 并发布 GET、 PUT 和其他 HTTP 命令。 有关详细信息，请参阅[演练： 使用任务和 XML HTTP 请求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
-- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 
    可以在 Windows 桌面应用中使用以连接到 Internet 的 Windows API。
 

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4659 |Microsoft 文档
+title: 编译器警告 （等级 1） C4659 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643b599cd11d0935f1769ad37dca4e764f0418e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c54fa77d68722b2e47a9d49832911b398deca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110050"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>编译器警告（等级 1）C4659
-\#杂注杂注： 使用保留的段领域具有未定义的行为，请使用 #pragma 注释 （链接器，...）  
-  
- .Drectve 选项已用于传递到链接器选项。 改为使用杂注[注释](../../preprocessor/comment-c-cpp.md)传递链接器选项。  
-  
-```  
-// C4659.cpp  
-// compile with: /W1 /LD  
-#pragma code_seg(".drectve")   // C4659  
+
+\#杂注杂注： 行为未定义的保留段领域的使用，请使用 #pragma comment (linker，...)
+
+.Drectve 选项用于将选项传递给链接器。 而是使用杂注[注释](../../preprocessor/comment-c-cpp.md)传递链接器选项。
+
+```
+// C4659.cpp
+// compile with: /W1 /LD
+#pragma code_seg(".drectve")   // C4659
 ```

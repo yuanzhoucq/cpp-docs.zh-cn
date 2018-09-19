@@ -1,5 +1,5 @@
 ---
-title: auto_handle 类 |Microsoft 文档
+title: auto_handle 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029710"
 ---
 # <a name="autohandle-class"></a>auto_handle 类
-用于托管类型中嵌入虚拟句柄的自动资源管理。  
+自动资源管理，这可用于托管类型中嵌入虚拟句柄。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_element_type`  
- 要嵌入的托管的类型。  
+*_element_type*<br/>
+要嵌入的托管的类型。  
   
 ## <a name="requirements"></a>要求  
  **标头文件** \<msclr\auto_handle.h >  

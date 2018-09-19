@@ -1,5 +1,5 @@
 ---
-title: __lzcnt16、 __lzcnt、 __lzcnt64 |Microsoft 文档
+title: __lzcnt16，__lzcnt，__lzcnt64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e04182cf673674e1f1ba8c073b624760bc4809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c24dcd92628b9f03596c9d10c38b5d63806dc6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720000"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
+
 **Microsoft 专用**  
   
- 计数数前导零在 16 位、 32 位或 64 位整数。  
+计数在 16 位、 32 位或 64 位整数数量的前导零。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,11 +52,11 @@ unsigned __int64 __lzcnt64(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `value`  
- 16 位、 32 或 64 位无符号的整数，以扫描前导零。  
+*value*<br/>
+[in]16 位、 32 或 64 位无符号的整数，扫描的前导零。  
   
 ## <a name="return-value"></a>返回值  
- 前导零位数中的数`value`参数。 如果`value`为零，则返回值是输入操作数 （16、 32 或 64） 的大小。 如果最高有效位`value`为 1，返回值为零。  
+ 数的前导零位数中的`value`参数。 如果`value`为零，则返回值是在输入操作数 （16、 32 或 64） 的大小。 如果最高有效位`value`为 1，返回值为零。  
   
 ## <a name="requirements"></a>要求  
   
@@ -63,16 +64,16 @@ unsigned __int64 __lzcnt64(
 |---------------|------------------|  
 |`__lzcnt16`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|  
 |`__lzcnt`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|  
-|`__lzcnt64`|AMD： 在 64 位模式下高级位操作 (ABM)。<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD： 高级位操作 (ABM) 在 64 位模式下。<br /><br /> Intel: Haswell|  
   
  **标头文件** \<intrin.h >  
   
 ## <a name="remarks"></a>备注  
- 每个这些内部函数生成`lzcnt`指令。  值的大小，`lzcnt`指令返回其自变量的大小相同。  在 32 位模式下有任何 64 位通用寄存器，因此不是 64 位`lzcnt`。  
+ 每个这些内部函数生成`lzcnt`指令。  值的大小，`lzcnt`指令返回为其自变量的大小相同。  在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`lzcnt`。  
   
- 若要确定的硬件支持`lzcnt`指令调用`__cpuid`与内部`InfoType=0x80000001`和检查的 5 位`CPUInfo[2] (ECX)`。 此位将否则如果支持指令，则为 1 和 0。 如果你运行代码使用此内部函数不支持的硬件上`lzcnt`指令，则结果不可预知。  
+ 若要确定的硬件支持`lzcnt`指令调用`__cpuid`内部使用`InfoType=0x80000001`，并检查的 5 位`CPUInfo[2] (ECX)`。 此位将否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`lzcnt`指令，则结果不可预知。  
   
- 不支持的 Intel 处理器上`lzcnt`指令字节编码为执行指令， `bsr` （位扫描反向）。 如果代码可移植性考虑，请考虑使用`_BitScanReverse`内部相反。 有关详细信息，请参阅[_BitScanReverse、 _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
+ 不支持的 Intel 处理器上`lzcnt`指令的字节编码为执行的指令， `bsr` （位扫描相反）。 如果代码可移植性是一个问题，请考虑使用`_BitScanReverse`内部函数相反。 有关详细信息，请参阅[_bitscanreverse、_bitscanreverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -112,8 +113,9 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0  
 ```  
   
-**结束 Microsoft 专用**  
- 本部分内容是高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+**结束 Microsoft 专用**
+
+本部分内容是高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限  
   
 ## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

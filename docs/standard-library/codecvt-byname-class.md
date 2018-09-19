@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a785c7868f3a1f3262283cf131bbd3cc3ae88e4c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102151"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname 类
 
@@ -53,9 +53,11 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*_Locname*命名的区域设置。
+*_Locname*<br/>
+已命名的区域设置。
 
-*_Refs*初始引用计数。
+*_Refs*<br/>
+初始引用计数。
 
 ## <a name="remarks"></a>备注
 

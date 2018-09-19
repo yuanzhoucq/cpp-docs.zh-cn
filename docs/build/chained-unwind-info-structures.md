@@ -1,5 +1,5 @@
 ---
-title: 链式展开信息结构 |Microsoft 文档
+title: 链式展开信息结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6da09387595188026d855fb99a49b588e6f21aa3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715021"
 ---
 # <a name="chained-unwind-info-structures"></a>链式展开信息结构
-如果设置 UNW_FLAG_CHAININFO 标志，然后展开信息结构是一个辅助和共享的异常的处理程序/链接的信息地址字段包含主展开信息。 以下代码检索主展开信息，假定`unwindInfo`是具有 UNW_FLAG_CHAININFO 结构标志设置。  
-  
-```  
-PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);  
-```  
-  
- 链接的信息可在两种情况下。 首先，它可以用于非连续代码段。 通过使用链接的信息，你可以减少需要的展开信息中的大小，因为无需重复主展开信息中的展开代码数组。  
-  
- 你还可以使用链接的信息将易失寄存器保存。 编译器可能会延迟超出函数项 prolog 之前保存某些易失寄存器。 记录分组的代码中之前, 提供函数的部分的主展开信息这，然后设置链式的序言中，其中链式信息中的展开代码反映的非易失寄存器保存的非零大小的信息。 在这种情况下，展开代码是 UWOP_SAVE_NONVOL 的所有实例。 不支持的分组，它将非易失寄存器保存通过推送或使用其他固定的堆栈分配修改 RSP 注册。  
-  
- Unwind_info 结构项具有 UNW_FLAG_CHAININFO 设置可以包含其 unwind_info 结构项也具有 UNW_FLAG_CHAININFO 设置 （多个紧缩套装） runtime_function 结构项。 最终，连锁展开指针将到达具有 UNW_FLAG_CHAININFO 清除; 的 unwind_info 结构项目的信息这是指向实际过程入口点的主 unwind_info 结构项。  
-  
-## <a name="see-also"></a>请参阅  
- [为异常处理和调试器支持展开数据](../build/unwind-data-for-exception-handling-debugger-support.md)
+
+如果设置 UNW_FLAG_CHAININFO 标志，则展开信息结构是一个辅助和共享的异常处理程序/链接在一起的信息地址字段包含主展开信息。 以下代码检索主展开的信息，前提假设`unwindInfo`是结构，它具有 UNW_FLAG_CHAININFO 标志设置。
+
+```
+PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
+```
+
+链接的信息是在两种情况下很有用。 首先，它可以用于非连续的代码段。 通过使用链接的信息，可以减少需要的展开信息的大小，因为您不需要重复主展开信息中的展开代码数组。
+
+此外可以使用链接的信息进行分组易失寄存器保存。 编译器可能会延迟保存一些易失寄存器，直至这不在函数入口 prolog。 您可以通过主展开信息之前分组的代码，该函数的部分记录这，然后设置链式与序言中，其中链接信息中的展开代码反映非易失性寄存器的保存的非零大小的信息。 在这种情况下，展开代码是 UWOP_SAVE_NONVOL 的所有实例。 不支持的分组，它将非易失寄存器保存通过使用请求或使用其他固定的堆栈分配修改 RSP 注册。
+
+Unwind_info 结构项具有 UNW_FLAG_CHAININFO 设置可以包含其 unwind_info 结构的项也具有 UNW_FLAG_CHAININFO 设置 （多个紧缩） runtime_function 结构项。 最终，链式展开信息指针将到达具有 UNW_FLAG_CHAININFO 清除; unwind_info 结构项这是主 unwind_info 结构项目，指向实际过程入口点。
+
+## <a name="see-also"></a>请参阅
+
+[为异常处理和调试器支持展开数据](../build/unwind-data-for-exception-handling-debugger-support.md)

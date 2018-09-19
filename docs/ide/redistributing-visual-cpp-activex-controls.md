@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207952"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683347"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>重新分发 Visual C++ ActiveX 控件
 Visual C++ 6.0 提供 ActiveX 控件，供你在应用程序中使用并且随后重新分发。 这些控件不再包含在 Visual C++ 中。 根据 Visual C++ 6.0 许可协议，可以使用在 Visual C++ 中开发的应用程序重新分发这些控件。  
@@ -43,8 +43,6 @@ Visual C++ 6.0 提供 ActiveX 控件，供你在应用程序中使用并且随�
 -   Stdole2.tlb  
   
  如果这些 DLL 不适用于目标系统，则需要使用更新相应操作系统所规定的机制更新 DLL。 可以从 [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) 下载最新的 Windows 操作系统服务包。  
-  
- 如果应用程序使用连接到数据库的其中一个 ActiveX 控件，则必须在目标系统上安装了 Microsoft 数据访问组件 (MDAC)。 有关详细信息，请参阅[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)。  
   
  使用连接到数据库的 ActiveX 控件时，还需要在目标计算机上复制数据源名称。 可以用函数（如 `ConfigDSN`）以编程方式来完成此操作。  
   

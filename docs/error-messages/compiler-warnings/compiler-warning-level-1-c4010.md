@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4010 |Microsoft 文档
+title: 编译器警告 （等级 1） C4010 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ab6307a34887fe2d8a8719e20c31da9728664b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52449689d329cee45cc69b63c315ce9335befbe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073085"
 ---
 # <a name="compiler-warning-level-1-c4010"></a>编译器警告 （等级 1） C4010
-单行注释包含续行符  
-  
- 单行注释，由此引入 / /、 包含一个反斜杠 (\\) 用作作为行继续符。 编译器会考虑为延续的下一行，并会将其视为注释。  
-  
- 某些语法导向型编辑器并不表示为一个注释延续字符后面的行。 忽略语法突出显示的任何行的会导致此警告。  
-  
- 下面的示例生成 C4010:  
-  
-```  
-// C4010.cpp  
-// compile with: /WX  
-int main() {  
-   // the next line is also a comment because of the backslash \  
-   int a = 3; // C4010  
-   a++;  
-}  
+
+单行注释包含行继续符
+
+单行注释，引入的 / / 包含反斜杠 (\\) 用作行继续符。 编译器会考虑延续的下一行，并将其视为一条注释。
+
+某些语法导向型编辑器并不表示在后是继续符为注释的行。 忽略语法突出显示的任何行的会导致此警告。
+
+下面的示例生成 C4010:
+
+```
+// C4010.cpp
+// compile with: /WX
+int main() {
+   // the next line is also a comment because of the backslash \
+   int a = 3; // C4010
+   a++;
+}
 ```

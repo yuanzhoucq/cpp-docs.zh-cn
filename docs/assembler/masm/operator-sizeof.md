@@ -1,7 +1,7 @@
 ---
-title: 运算符 SIZEOF |Microsoft 文档
+title: 运算符 SIZEOF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e39bc76f8430cbecee35f855b7c954a48b769389
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e13f04a6d41a2f5bc982dcb36a0eb4cdc1ca5f95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689727"
 ---
 # <a name="operator-sizeof"></a>运算符 SIZEOF
-返回中的字节数*变量*或`type`。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-SIZEOF {variable | type}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [运算符参考](../../assembler/masm/operators-reference.md)
+
+返回中的字节数*变量*或`type`。
+
+## <a name="syntax"></a>语法
+
+> SIZEOF {变量 | 类型}
+
+## <a name="see-also"></a>请参阅
+
+[运算符参考](../../assembler/masm/operators-reference.md)<br/>

@@ -1,28 +1,50 @@
 ---
 title: RuntimeClass 类 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::AddRef
+- implements/Microsoft::WRL::RuntimeClass::DecrementReference
+- implements/Microsoft::WRL::RuntimeClass::GetIids
+- implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName
+- implements/Microsoft::WRL::RuntimeClass::GetTrustLevel
+- implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+- implements/Microsoft::WRL::RuntimeClass::InternalAddRef
+- implements/Microsoft::WRL::RuntimeClass::QueryInterface
+- implements/Microsoft::WRL::RuntimeClass::Release
+- implements/Microsoft::WRL::RuntimeClass::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::~RuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
-- RuntimeClass class
+- Microsoft::WRL::RuntimeClass class
+- Microsoft::WRL::RuntimeClass::AddRef method
+- Microsoft::WRL::RuntimeClass::DecrementReference method
+- Microsoft::WRL::RuntimeClass::GetIids method
+- Microsoft::WRL::RuntimeClass::GetRuntimeClassName method
+- Microsoft::WRL::RuntimeClass::GetTrustLevel method
+- Microsoft::WRL::RuntimeClass::GetWeakReference method
+- Microsoft::WRL::RuntimeClass::InternalAddRef method
+- Microsoft::WRL::RuntimeClass::QueryInterface method
+- Microsoft::WRL::RuntimeClass::Release method
+- Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
+- Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f6cca23834eb889ecb83d91b40861b92fe922ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118903"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 类
 
@@ -47,14 +69,29 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ## <a name="members"></a>成员
 
-`RuntimeClassInitialize` 如果初始化该对象的函数的`MakeAndInitialize`模板函数用于构造对象。 如果初始化失败，则返回如果对象已成功初始化，则为 S_OK 或 COM 错误代码。 COM 错误代码传播的返回值作为`MakeAndInitialize`。 请注意，`RuntimeClassInitialize`如果不调用方法`Make`模板函数用于构造对象。
+`RuntimeClassInitialize`<br/>
+如果初始化该对象的函数的`MakeAndInitialize`模板函数用于构造对象。 如果初始化失败，则返回如果对象已成功初始化，则为 S_OK 或 COM 错误代码。 COM 错误代码传播的返回值作为`MakeAndInitialize`。 请注意，`RuntimeClassInitialize`如果不调用方法`Make`模板函数用于构造对象。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
-|----------|-----------------|
-|[RuntimeClass::RuntimeClass 构造函数](../windows/runtimeclass-runtimeclass-constructor.md)|初始化 RuntimeClass 类的当前实例。|
-|[RuntimeClass::~RuntimeClass 析构函数](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|取消初始化 RuntimeClass 类的当前实例。|
+| 名称                                               | 描述                                                     |
+| -------------------------------------------------- | --------------------------------------------------------------- |
+| [Runtimeclass:: Runtimeclass](#runtimeclass)        | 初始化当前实例的`RuntimeClass`类。   |
+| [RuntimeClass:: ~ RuntimeClass](#tilde-runtimeclass) | 取消初始化的当前实例`RuntimeClass`类。 |
+
+### <a name="public-methods"></a>公共方法
+
+| 名称                                                      | 描述                                                                                        |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [Runtimeclass:: Addref](#addref)                           | 递增当前引用计数`RuntimeClass`对象。                              |
+| [Runtimeclass:: Decrementreference](#decrementreference)   | 递减引用计数当前`RuntimeClass`对象。                              |
+| [Runtimeclass:: Getiids](#getiids)                         | 获取一个数组，其中可以包含的接口 Id 由当前实现`RuntimeClass`对象。 |
+| [Runtimeclass:: Getruntimeclassname](#getruntimeclassname) | 获取当前的运行时类名称`RuntimeClass`对象。                                  |
+| [Runtimeclass:: Gettrustlevel](#gettrustlevel)             | 获取当前的信任级别`RuntimeClass`对象。                                         |
+| [Runtimeclass:: Getweakreference](#getweakreference)       | 获取一个指向弱引用对象的当前`RuntimeClass`对象。                 |
+| [Runtimeclass:: Internaladdref](#internaladdref)           | 递增到当前的引用计数`RuntimeClass`对象。                               |
+| [Runtimeclass:: Queryinterface](#queryinterface)           | 检索指向指定的接口 id。                                                 |
+| [Runtimeclass:: Release](#release)                         | 执行 COM 释放操作对当前`RuntimeClass`对象。                             |
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,6 +103,189 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ RuntimeClass
 
-[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+取消初始化的当前实例`RuntimeClass`类。
+
+```cpp
+virtual ~RuntimeClass();
+```
+
+## <a name="addref"></a>Runtimeclass:: Addref
+
+递增当前引用计数`RuntimeClass`对象。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+## <a name="decrementreference"></a>Runtimeclass:: Decrementreference
+
+递减引用计数当前`RuntimeClass`对象。
+
+```cpp
+ULONG DecrementReference();
+```
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+## <a name="getiids"></a>Runtimeclass:: Getiids
+
+获取一个数组，其中可以包含的接口 Id 由当前实现`RuntimeClass`对象。
+
+```cpp
+STDMETHOD(
+   GetIids
+)  
+   (_Out_ ULONG *iidCount,
+   _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>参数
+
+*iidCount*  
+此操作完成后，数组中的元素总数*iid*。
+
+*iid*  
+此操作完成后，指向接口 ID 数组的指针。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为 E_OUTOFMEMORY。
+
+## <a name="getruntimeclassname"></a>Runtimeclass:: Getruntimeclassname
+
+获取当前的运行时类名称`RuntimeClass`对象。
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>参数
+
+*runtimeName*  
+此操作完成后，运行时类名称。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+如果发出断言错误`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`并不定义。
+
+## <a name="gettrustlevel"></a>Runtimeclass:: Gettrustlevel
+
+获取当前的信任级别`RuntimeClass`对象。
+
+```cpp
+STDMETHOD(GetTrustLevel)(
+    _Out_ TrustLevel* trustLvl
+);
+```
+
+### <a name="parameters"></a>参数
+
+*trustLvl*  
+此操作完成后，当前的信任级别`RuntimeClass`对象。
+
+### <a name="return-value"></a>返回值
+
+始终返回 S_OK。
+
+### <a name="remarks"></a>备注
+
+如果发出断言错误`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`并不定义。
+
+## <a name="getweakreference"></a>Runtimeclass:: Getweakreference
+
+获取一个指向弱引用对象的当前`RuntimeClass`对象。
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>参数
+
+*weakReference*  
+此操作完成后，指向弱引用对象的指针。
+
+### <a name="return-value"></a>返回值
+
+始终返回 S_OK。
+
+## <a name="internaladdref"></a>Runtimeclass:: Internaladdref
+
+递增到当前的引用计数`RuntimeClass`对象。
+
+```cpp
+ULONG InternalAddRef();
+```
+
+### <a name="return-value"></a>返回值
+
+在生成的引用计数。
+
+## <a name="queryinterface"></a>Runtimeclass:: Queryinterface
+
+检索指向指定的接口 id。
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)  
+   (REFIID riid,
+   _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>参数
+
+*riid*  
+接口 ID。
+
+*ppvObject*  
+当此 opereation 完成时，为指定的接口指针*riid*参数。
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+## <a name="release"></a>Runtimeclass:: Release
+
+执行 COM 释放操作对当前`RuntimeClass`对象。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>返回值
+
+如果成功，则为 S_OK；否则为指示错误的 HRESULT。
+
+### <a name="remarks"></a>备注
+
+如果引用计数变为零，`RuntimeClass`删除对象。
+
+## <a name="runtimeclass"></a>Runtimeclass:: Runtimeclass
+
+初始化当前实例的`RuntimeClass`类。
+
+```cpp
+RuntimeClass();
+```

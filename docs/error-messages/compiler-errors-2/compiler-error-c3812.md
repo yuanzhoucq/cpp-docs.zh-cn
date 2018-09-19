@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3812 |Microsoft 文档
+title: 编译器错误 C3812 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37747ebb68b5e965c15ef9763731e0b4d56ac57e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83de08dfb0ea42e99a7ef7185fb3b8fc492bdec8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101366"
 ---
 # <a name="compiler-error-c3812"></a>编译器错误 C3812
-属性必须为属性声明中的第一个标记  
-  
- 声明属性时`__property`关键字必须是在行上的第一个标记。  
-  
- C3812 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+property 必须是属性声明中的第一个标记
+
+声明一个属性时`__property`关键字必须是在行上的第一个标记。
+
+C3812 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

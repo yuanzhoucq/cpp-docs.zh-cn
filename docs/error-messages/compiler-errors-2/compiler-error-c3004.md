@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3004 |Microsoft 文档
+title: 编译器错误 C3004 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03f9b609bfa7f60794a120488315680e5f6df2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9ccca52b5977c5d709b79dbc6351b5a94605849
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068789"
 ---
 # <a name="compiler-error-c3004"></a>编译器错误 C3004
-“clause”：OpenMP“directive”指令上的子句无效  
-  
- 在指令上使用了不支持的 OpenMP 子句。  
-  
- 下面的示例生成 C3004：  
-  
-```  
-// C3004.c  
-// compile with: /openmp  
-int main()  
-{  
-   int x, y, z;  
-  
-   // Shared clause not allowed for 'single' directive.  
-   #pragma omp single shared(x, y)   // C3004  
-  
-   x = y;  
-}  
+
+“clause”：OpenMP“directive”指令上的子句无效
+
+在指令上使用了不支持的 OpenMP 子句。
+
+下面的示例生成 C3004：
+
+```
+// C3004.c
+// compile with: /openmp
+int main()
+{
+   int x, y, z;
+
+   // Shared clause not allowed for 'single' directive.
+   #pragma omp single shared(x, y)   // C3004
+
+   x = y;
+}
 ```

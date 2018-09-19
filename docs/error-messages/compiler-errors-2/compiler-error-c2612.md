@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2612 |Microsoft 文档
+title: 编译器错误 C2612 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88053cde81e7eea8bc9e9280cf235d5eccc6704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2bdc91dd2b64c4fbd3a14670ba500ac970c9ad3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135784"
 ---
 # <a name="compiler-error-c2612"></a>编译器错误 C2612
-尾随 char 非法基/成员初始值设定项列表中  
-  
- 在最后一个基或初始值设定项列表中的成员后出现的字符。  
-  
- 下面的示例生成 C2612:  
-  
-```  
-// C2612.cpp  
-class A {  
-public:  
-   int i;  
-   A( int ia ) : i( ia ) + {};   // C2612  
-};  
+
+尾随 char 基/成员初始值设定项列表中非法
+
+最后一个基或成员初始值设定项列表中的后出现一个字符。
+
+下面的示例生成 C2612:
+
+```
+// C2612.cpp
+class A {
+public:
+   int i;
+   A( int ia ) : i( ia ) + {};   // C2612
+};
 ```

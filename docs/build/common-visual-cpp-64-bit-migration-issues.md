@@ -22,40 +22,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7f643fa088acc31a40032184cd8215afd10b088
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208153"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719220"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位迁移的常见问题
 
-用 Visual C++ 创建在 64 位 Windows 操作系统中运行的应用程序时，应注意以下问题：  
-  
--   在 64 位 Windows 操作系统中，`int` 和 `long` 是 32 位值。 对于计划为 64 位平台编译的程序，应注意不要将指针赋给 32 位变量。 在 64 位平台上，指针为 64 位，如果将该指针赋给 32 位变量，则将截断该指针值。  
-  
--   `size_t``time_t`，和`ptrdiff_t`是 64 位 Windows 操作系统上的 64 位值。  
-  
--   在 Visual C++ 2005 之前的 Visual C++ 版本中，`time_t` 在 32 位 Windows 操作系统中是 32 位值。 默认情况下，`time_t` 现在为 64 位整数。 有关详细信息，请参阅[时间管理](../c-runtime-library/time-management.md)。  
-  
-     应注意代码在哪里采用 `int` 值并将其作为 `size_t` 或 `time_t` 值处理。 数字有可能增长得比 32 位数大，并且数据在被传递回 `int` 存储时将被截断。  
-  
-在 64 位 Windows 操作系统中，%X（十六进制 `int` 格式）`printf` 修饰符将不会按预期方式工作。 它将只对传递给它的值的前 32 位值执行操作。  
-  
--   使用 %I32x，以十六进制格式显示 32 位整数类型。  
-  
--   使用 %I64x，以十六进制格式显示 64 位整数类型。  
-  
--   在 64 位 Windows 操作系统中，%p（指针的十六进制格式）将按预期方式工作。  
-  
-有关详细信息，请参见:  
-  
--   [编译器选项](../build/reference/compiler-options.md)  
-  
--   [迁移提示](/windows/desktop/WinProg64/migration-tips)  
-  
-## <a name="see-also"></a>请参阅  
+用 Visual C++ 创建在 64 位 Windows 操作系统中运行的应用程序时，应注意以下问题：
 
-[配置 Visual c + + 64 位 x64 目标](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+- 在 64 位 Windows 操作系统中，`int` 和 `long` 是 32 位值。 对于计划为 64 位平台编译的程序，应注意不要将指针赋给 32 位变量。 在 64 位平台上，指针为 64 位，如果将该指针赋给 32 位变量，则将截断该指针值。
+
+- `size_t``time_t`，和`ptrdiff_t`是 64 位 Windows 操作系统上的 64 位值。
+
+- 在 Visual C++ 2005 之前的 Visual C++ 版本中，`time_t` 在 32 位 Windows 操作系统中是 32 位值。 默认情况下，`time_t` 现在为 64 位整数。 有关详细信息，请参阅[时间管理](../c-runtime-library/time-management.md)。
+
+   应注意代码在哪里采用 `int` 值并将其作为 `size_t` 或 `time_t` 值处理。 数字有可能增长得比 32 位数大，并且数据在被传递回 `int` 存储时将被截断。
+
+在 64 位 Windows 操作系统中，%X（十六进制 `int` 格式）`printf` 修饰符将不会按预期方式工作。 它将只对传递给它的值的前 32 位值执行操作。
+
+- 使用 %I32x，以十六进制格式显示 32 位整数类型。
+
+- 使用 %I64x，以十六进制格式显示 64 位整数类型。
+
+- 在 64 位 Windows 操作系统中，%p（指针的十六进制格式）将按预期方式工作。
+
+有关详细信息，请参见:
+
+- [编译器选项](../build/reference/compiler-options.md)
+
+- [迁移提示](/windows/desktop/WinProg64/migration-tips)
+
+## <a name="see-also"></a>请参阅
+
+[针对 64 位 x64 目标配置 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538390"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712083"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -52,8 +52,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*TN*  
- 第 N 个元组元素的类型。
+*TN*<br/>
+第 N 个元组元素的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-*取消*  
- 第 N 个复制的元组元素的类型。
+*取消*<br/>
+第 N 个复制的元组元素的类型。
 
-*right*  
- 要从其进行复制的元组。
+*right*<br/>
+要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-*取消*  
- 第 N 个复制的元组元素的类型。
+*取消*<br/>
+第 N 个复制的元组元素的类型。
 
-*right*  
- 要从其进行复制的元组。
+*right*<br/>
+要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 

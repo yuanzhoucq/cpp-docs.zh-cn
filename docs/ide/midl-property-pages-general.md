@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329977"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204684"
 ---
 # <a name="midl-property-pages-general"></a>MIDL 属性页：常规
 MIDL 文件夹中的“常规”属性页指定以下 MIDL 编译器选项：  
   
--   预处理器定义 [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   预处理器定义 [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   附加包含目录 ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   附加包含目录 ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   忽略标准包含路径 ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   忽略标准包含路径 ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   与 MkTypLib 兼容 ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   与 MkTypLib 兼容 ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   警告等级 ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   警告等级 ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   警告视为错误 ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   警告视为错误 ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   取消显示启动版权标志 ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   取消显示启动版权标志 ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL Char 类型 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   MIDL Char 类型 ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   目标环境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   目标环境 ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   生成无存根(Stub)代理 ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   生成无存根(Stub)代理 ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  有关如何访问 MIDL 文件夹中的“常规”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   

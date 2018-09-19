@@ -50,14 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072415"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
+
 提供一个实现[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -68,11 +69,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IDBInitializeImpl`。  
+
+*T*<br/>
+您的类，派生自`IDBInitializeImpl`。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -97,9 +100,11 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_pCUtlPropInfo](#pcutlpropinfo)|指向实现 DB 属性信息的指针。|  
   
 ## <a name="remarks"></a>备注  
- 数据源对象和枚举器上使用的可选接口上必需的接口。  
+
+数据源对象和枚举器上使用的可选接口上必需的接口。  
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+
 构造函数。  
   
 ### <a name="syntax"></a>语法  
@@ -109,9 +114,11 @@ IDBInitializeImpl();
 ```  
   
 ### <a name="remarks"></a>备注  
- 初始化所有数据成员。 
+
+初始化所有数据成员。 
   
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+
 通过准备数据源对象的属性支持来初始化该对象。  
   
 ### <a name="syntax"></a>语法  
@@ -121,9 +128,11 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程序员参考*。 
+
+请参阅[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程序员参考*。 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
+
 位置数据源，因为内部资源，例如属性支持未初始化状态的对象。  
   
 ### <a name="syntax"></a>语法  
@@ -133,9 +142,11 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程序员参考*。
+
+请参阅[IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程序员参考*。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+
 数据源的标志。  
   
 ### <a name="syntax"></a>语法  
@@ -145,7 +156,8 @@ DWORD m_dwStatus;
 ```  
   
 ### <a name="remarks"></a>备注  
- 这些标志指定，或者表示为数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：  
+
+这些标志指定，或者表示为数据源对象的各种属性的状态。 包含一个或多个以下**枚举**值：  
   
 ```cpp  
 enum DATASOURCE_FLAGS {  
@@ -162,6 +174,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_INITIALIZED`|如果初始化数据源，设置。|  
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+
 指向实现对象，用于 DB 属性信息的指针。  
   
 ### <a name="syntax"></a>语法  
@@ -171,5 +184,6 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

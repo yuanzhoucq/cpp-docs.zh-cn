@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2776 |Microsoft 文档
+title: 编译器错误 C2776 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afbf3c48e5445d101408c2539cc077071b639044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 705f6930b18483c1a449fec4b50163cc658249d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029229"
 ---
 # <a name="compiler-error-c2776"></a>编译器错误 C2776
-可以每个属性指定只有一个 get 方法  
-  
- 你只能指定一个`get`函数中[属性](../../cpp/property-cpp.md)扩展的特性。 发生此错误时多个`get`来指定函数。  
-  
- 下面的示例生成 C2776:  
-  
-```  
-// C2776.cpp  
-struct A {  
-   __declspec(property(get=GetProp,get=GetPropToo))  
-   // try the following line instead  
-   // __declspec(property(get=GetProp))  
-      int prop;   // C2776  
-   int GetProp(void);  
-   int GetPropToo(void);  
-};  
+
+只有一个 get 方法可以指定每个属性
+
+可以仅指定其中之一`get`函数，在[属性](../../cpp/property-cpp.md)扩展的特性。 此错误发生时多个`get`函数指定的。
+
+下面的示例生成 C2776:
+
+```
+// C2776.cpp
+struct A {
+   __declspec(property(get=GetProp,get=GetPropToo))
+   // try the following line instead
+   // __declspec(property(get=GetProp))
+      int prop;   // C2776
+   int GetProp(void);
+   int GetPropToo(void);
+};
 ```

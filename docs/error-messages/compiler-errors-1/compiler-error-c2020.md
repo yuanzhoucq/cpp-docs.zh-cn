@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2020 |Microsoft 文档
+title: 编译器错误 C2020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267c71d987587ce1b4308a80f40cdc4fa9ecefc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b79bc9340e39d5cdc886db4b81d220bbfe88bbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165316"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099793"
 ---
 # <a name="compiler-error-c2020"></a>编译器错误 C2020
-member: class 成员重定义  
-  
- 重新定义继承自的基类或结构的成员。 不能重新定义继承的成员，除非声明为`virtual`基类中。
+
+member: class 成员重定义
+
+已重新定义继承自的基类或结构的成员。 不能重新定义继承的成员，除非声明为`virtual`基类中。

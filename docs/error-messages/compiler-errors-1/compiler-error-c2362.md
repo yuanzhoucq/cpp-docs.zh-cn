@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2362 |Microsoft 文档
+title: 编译器错误 C2362 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b0b77930acba6ecf2d0f3c6748ba52e9b28e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f78b850f95614255fed372570742a0f88a9e30e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035976"
 ---
 # <a name="compiler-error-c2362"></a>编译器错误 C2362
-identifier 的初始化已通过转到标签跳过  
-  
- 使用编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳转到标签防止标识符进行初始化。  
-  
- 不能跳过具有初始值设定项的声明，除非声明包含在一个块，它不输入，或对象变量已初始化。  
-  
- 下面的示例生成 C2326:  
-  
-```  
-// C2362.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   int i = 1;      // C2362, initialization skipped  
-label1:;  
-}  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2362b.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   {  
-      int j = 1;   // OK, this block is never entered  
-   }  
-label1:;  
-}  
+
+goto label 跳过 identifier 的初始化
+
+使用编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳转到标签会无法标识符初始化。
+
+除非声明将封闭的块不输入中不能跳过具有初始值设定项的声明或变量已初始化。
+
+下面的示例生成 C2326:
+
+```
+// C2362.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   int i = 1;      // C2362, initialization skipped
+label1:;
+}
+```
+
+可能的解决方法：
+
+```
+// C2362b.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   {
+      int j = 1;   // OK, this block is never entered
+   }
+label1:;
+}
 ```

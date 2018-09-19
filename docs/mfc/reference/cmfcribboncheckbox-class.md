@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027175"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712486"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 `CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定命令 id。  
+*nID*<br/>
+[in]指定命令 id。  
   
- [in]*lpszText*  
- 指定文本标签。  
+*lpszText*<br/>
+[in]指定文本标签。  
   
 ### <a name="return-value"></a>返回值  
  构造一个功能区复选框对象。  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向与复选框相关联的 CDC。  
+*pDC*<br/>
+[in]指向与复选框相关联的 CDC。  
   
 ### <a name="return-value"></a>返回值  
  返回`CSize`对象，其中包含复选框的压缩大小。  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向与此复选框相关联的 CDC。  
+*pDC*<br/>
+[in]指向与此复选框相关联的 CDC。  
   
 ### <a name="return-value"></a>返回值  
  一个`CSize`对象，其中包含中间复选框的大小。  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向与此复选框关联的 CDC 对象指针。  
+*pDC*<br/>
+[in]指向与此复选框关联的 CDC 对象指针。  
   
 ### <a name="return-value"></a>返回值  
  返回`CSize`对象，其中包含复选框的常规大小。  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向要在其中绘制复选框 CDC。  
+*pDC*<br/>
+[in]指向要在其中绘制复选框 CDC。  
   
 ### <a name="remarks"></a>备注  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in]*CDC**  
  指向与复选框相关联的 CDC。  
   
- [in]*CRect*  
- 一个`CRect`对象，它指定要在其中绘制的菜单图像的矩形。  
+*CRect*<br/>
+[in]一个`CRect`对象，它指定要在其中绘制的菜单图像的矩形。  
   
 ### <a name="return-value"></a>返回值  
  如果已绘制图像，则为 TRUE 或 FALSE，如果不是返回。  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向要在其中绘制复选框的设备上下文指针。  
+*pDC*<br/>
+[in]指向要在其中绘制复选框的设备上下文指针。  
   
- [in]*strText*  
- 显示文本。  
+*strText*<br/>
+[in]显示文本。  
   
- [in]*nTextOffset*  
- 以像素为单位，从左侧和右侧显示文本的列表框的距离。  
+*nTextOffset*<br/>
+[in]以像素为单位，从左侧和右侧显示文本的列表框的距离。  
   
- [in]*rect*  
- 复选框显示矩形。  
+*rect*<br/>
+[in]复选框显示矩形。  
   
- [in]*bIsSelected*  
- 如果此复选框处于选中状态，或如果不是 FALSE，则为 TRUE。  
+*bIsSelected*<br/>
+[in]如果此复选框处于选中状态，或如果不是 FALSE，则为 TRUE。  
   
- [in]*bHighlighted*  
- 如果复选框为选中此选项，或如果不是 FALSE，则为 TRUE。  
+*bHighlighted*<br/>
+[in]如果复选框为选中此选项，或如果不是 FALSE，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   

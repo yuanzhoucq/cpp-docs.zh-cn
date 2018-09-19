@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069165"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -47,9 +47,10 @@ C++ 标准库中基于节点的容器（std::list、std::set、std::multiset、s
 
 分配器是此类型的所有模板：
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 其中模板参数 `Type` 是由分配器实例所管理的类型。 C++ 标准库提供默认分配器和在 [\<memory>](../standard-library/memory.md) 中定义的模板类 [allocator](../standard-library/allocator-class.md)。 \<allocators> 标头提供以下分配器：
 
@@ -67,23 +68,22 @@ C++ 标准库中基于节点的容器（std::list、std::set、std::multiset、s
 
 在创建容器时，将相应的分配器实例化用作第二个类型参数，如以下代码示例。
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 使用 `allocator_chunklist` 和默认的同步筛选器来分配节点。
 
 使用宏 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 来创建具有同步筛选器的分配器模板而非默认模板。
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/sync-per-thread-class.md) 同步筛选器来分配节点。
 

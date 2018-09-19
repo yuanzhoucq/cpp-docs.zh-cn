@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2422 |Microsoft 文档
+title: 编译器错误 C2422 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a808e4b324b11c88be38ae7d8815bee4e232cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17421f2d4a7823c0e2fbb34a54a7c562223c798c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047026"
 ---
 # <a name="compiler-error-c2422"></a>编译器错误 C2422
-操作数中的非法段重写  
-  
- 内联程序集代码错误地使用操作数段重写运算符 （冒号）。  可能的原因包括：  
-  
--   该运算符前面寄存器不段寄存器。  
-  
--   该运算符前面寄存器不是操作数中的唯一段寄存器。  
-  
--   段重写运算符将显示在间接寻址运算符 （括号）。  
-  
--   跟后面段重写运算符的表达式不是即时操作数或内存操作数。  
-  
- 下面的示例生成 C2422:  
-  
-```  
-// C2422.cpp  
-// processor: x86  
-int main() {  
-   _asm {  
-      mov AX, [BX:ES]   // C2422  
-      mov AX, ES   // OK  
-   }  
-}  
+
+操作数中的非法段重写
+
+内联程序集代码错误地使用操作数的段重写运算符 （冒号）。  可能的原因包括：
+
+- 运算符前面的寄存器不段寄存器。
+
+- 运算符前面的寄存器不是操作数中的唯一段寄存器。
+
+- 段重写运算符将显示在间接寻址运算符 （括号）。
+
+- 段重写运算符后的表达式不是即时操作数或内存操作数。
+
+下面的示例生成 C2422:
+
+```
+// C2422.cpp
+// processor: x86
+int main() {
+   _asm {
+      mov AX, [BX:ES]   // C2422
+      mov AX, ES   // OK
+   }
+}
 ```

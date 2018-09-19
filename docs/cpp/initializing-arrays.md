@@ -15,57 +15,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 94f13ca235091c730f81eefb5c36f388bf3dee38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103290"
 ---
 # <a name="initializing-arrays"></a>初始化数组
-如果类具有构造函数，该类的数组将由构造函数初始化。 如果初始值设定项列表中的项少于数组中的元素，则默认的构造函数将用于剩余元素。 如果没有为类定义默认构造函数，初始值设定项列表必须完整，即数组中的每个元素都必须有一个初始值设定项。  
-  
- 考虑定义了两个构造函数的`Point` 类：  
-  
-```cpp 
-// initializing_arrays1.cpp  
-class Point  
-{  
-public:  
-   Point()   // Default constructor.  
-   {  
-   }  
-   Point( int, int )   // Construct from two ints  
-   {  
-   }  
-};  
-  
-// An array of Point objects can be declared as follows:  
-Point aPoint[3] = {  
-   Point( 3, 3 )     // Use int, int constructor.  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。  
-  
- 静态成员数组 (是否**const**与否) 可在其定义 （类声明的外部） 中进行初始化。 例如：  
-  
-```cpp 
-// initializing_arrays2.cpp  
-class WindowColors  
-{  
-public:  
-    static const char *rgszWindowPartList[7];  
-};  
-  
-const char *WindowColors::rgszWindowPartList[7] = {  
-    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",  
-    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };  
-int main()  
-{  
-}  
-```  
+
+如果类具有构造函数，该类的数组将由构造函数初始化。 如果初始值设定项列表中的项少于数组中的元素，则默认的构造函数将用于剩余元素。 如果没有为类定义默认构造函数，初始值设定项列表必须完整，即数组中的每个元素都必须有一个初始值设定项。
+
+考虑定义了两个构造函数的`Point` 类：
+
+```cpp
+// initializing_arrays1.cpp
+class Point
+{
+public:
+   Point()   // Default constructor.
+   {
+   }
+   Point( int, int )   // Construct from two ints
+   {
+   }
+};
+
+// An array of Point objects can be declared as follows:
+Point aPoint[3] = {
+   Point( 3, 3 )     // Use int, int constructor.
+};
+
+int main()
+{
+}
+```
+
+`aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。
+
+静态成员数组 (是否**const**与否) 可在其定义 （类声明的外部） 中进行初始化。 例如：
+
+```cpp
+// initializing_arrays2.cpp
+class WindowColors
+{
+public:
+    static const char *rgszWindowPartList[7];
+};
+
+const char *WindowColors::rgszWindowPartList[7] = {
+    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",
+    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };
+int main()
+{
+}
+```

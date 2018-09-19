@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf94c53bd0491d5959a53591b77305d19f21bc36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4bafae070d3ff9fe80070e3598cd36867abcf830
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707195"
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 
@@ -40,11 +40,11 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>参数
 
-[in]*t*  
-要比较的第一个数字。 其类型必须为`T`。
+*t*<br/>
+[in]要比较的第一个数字。 其类型必须为`T`。
 
-[in]*u*  
-要比较的第二个数字。 其类型必须为`U`。
+*u*<br/>
+[in]要比较的第二个数字。 其类型必须为`U`。
 
 ## <a name="return-value"></a>返回值
 

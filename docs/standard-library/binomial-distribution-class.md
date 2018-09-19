@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957680"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100867"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 类
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*<br/>
+整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*URNG*<br/>
+统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -250,11 +252,14 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*t* `t`分布参数。
+*t*<br/>
+`t` 分布参数。
 
-*p* `p`分布参数。
+*p*<br/>
+`p` 分布参数。
 
-*parm* `param_type`用于构造分布的结构。
+*parm*<br/>
+用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -282,11 +287,14 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*t* `t`分布参数。
+*t*<br/>
+`t` 分布参数。
 
-*p* `p`分布参数。
+*p*<br/>
+`p` 分布参数。
 
-*右*`param_type`要与此比较的对象。
+*right*<br/>
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 

@@ -1,5 +1,5 @@
 ---
-title: 自定义颜色选择器对话框 （图标的图像编辑器） |Microsoft Docs
+title: 自定义颜色选择器对话框 （c + +） （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,51 +10,60 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Custom Color Selector dialog box
-- colors, image
+- Custom Color Selector dialog box [C++]
+- colors [C++], image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609432"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705882"
 ---
-# <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>“自定义颜色选择器”对话框（图标的图像编辑器）
+# <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>自定义颜色选择器对话框 （c + +） （图标的图像编辑器）
 
 此对话框中，可自定义映像的使用的颜色。 有关详细信息，请参阅[自定义或更改颜色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。
 
-**渐变颜色显示**  
-更改所选颜色的值。 你想要更改位置十字线颜色。 然后移动滑块向上或向下更改亮度或颜色的 RGB 值。
+- **渐变颜色显示**
 
-**亮度栏**  
-设置中选择的颜色的亮度**渐变颜色显示**框。 单击并拖动了更高的亮度条形的白色箭头或向下的翻更少。 请注意，**颜色**框显示所选的颜色和亮度设置的影响。
+   更改所选颜色的值。 你想要更改位置十字线颜色。 然后移动滑块向上或向下更改亮度或颜色的 RGB 值。
 
-**颜色**  
-列出所定义的颜色的色调 （颜色滚轮值）。 值的范围介于 0 到 240 之间，其中 0 是红色 60 为黄色，120 是绿色、 180 青色、 洋红色，可以是 200，是 240 为蓝色。
+- **亮度栏**
 
-**Hue**  
-列出所定义的颜色的色调 （颜色滚轮值）。 值的范围介于 0 到 240 之间，其中 0 是红色 60 为黄色，120 是绿色、 180 青色、 洋红色，可以是 200，是 240 为蓝色。
+   设置中选择的颜色的亮度**渐变颜色显示**框。 单击并拖动了更高的亮度条形的白色箭头或向下的翻更少。 请注意，**颜色**框显示所选的颜色和亮度设置的影响。
 
-**Sat**  
-指定正在定义的颜色的饱和度值。 饱和度是中指定的色调颜色量。 值的范围从 0 到 240。
+- **颜色**
 
-**亮度**  
-列出了正在定义的颜色的亮度 （亮度）。 值的范围从 0 到 240。
+   列出所定义的颜色的色调 （颜色滚轮值）。 值的范围介于 0 到 240 之间，其中 0 是红色 60 为黄色，120 是绿色、 180 青色、 洋红色，可以是 200，是 240 为蓝色。
 
-**红色**  
-指定正在定义的颜色的红色值。 值范围从 0 到 255 之间。
+- **Hue**
 
-**绿色**  
-指定正在定义的颜色的绿色值。 值范围从 0 到 255 之间。
+   列出所定义的颜色的色调 （颜色滚轮值）。 值的范围介于 0 到 240 之间，其中 0 是红色 60 为黄色，120 是绿色、 180 青色、 洋红色，可以是 200，是 240 为蓝色。
 
-**蓝色**  
-指定正在定义的颜色的蓝色值。 值范围从 0 到 255 之间。
+- **Sat**
+
+   指定正在定义的颜色的饱和度值。 饱和度是中指定的色调颜色量。 值的范围从 0 到 240。
+
+- **亮度**
+
+   列出了正在定义的颜色的亮度 （亮度）。 值的范围从 0 到 240。
+
+- **红色**
+
+   指定正在定义的颜色的红色值。 值范围从 0 到 255 之间。
+
+- **绿色**
+
+   指定正在定义的颜色的绿色值。 值范围从 0 到 255 之间。
+
+- **蓝色**
+
+   指定正在定义的颜色的蓝色值。 值范围从 0 到 255 之间。
 
 ## <a name="requirements"></a>要求
 

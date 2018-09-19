@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2640 |Microsoft 文档
+title: 编译器错误 C2640 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6951d6d56fa0e93e75725c5ce5b13fec7f3d78f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad39b2a9e3397f97ddc4a900bc45d1983ebbf574
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085273"
 ---
 # <a name="compiler-error-c2640"></a>编译器错误 C2640
-identifier: __based 修饰符非法引用  
-  
- `__based`指针仅可使用修饰符。  
-  
- 下面的示例生成 C2640:  
-  
-```  
-// C2640.cpp  
-void f(int i) {  
-    void *vp;  
-    int _based(vp) &vr = I;  // C2640  
-}  
+
+identifier: __based 修饰符在引用上的非法
+
+`__based`修饰符可用于仅指针。
+
+下面的示例生成 C2640:
+
+```
+// C2640.cpp
+void f(int i) {
+    void *vp;
+    int _based(vp) &vr = I;  // C2640
+}
 ```

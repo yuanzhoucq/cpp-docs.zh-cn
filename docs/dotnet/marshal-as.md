@@ -1,5 +1,5 @@
 ---
-title: marshal_as |Microsoft 文档
+title: marshal_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701618"
 ---
 # <a name="marshalas"></a>marshal_as
 此方法将本机和托管环境之间的数据转换。  
@@ -38,21 +38,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `input`  
- 你想要封送到的值`To_Type`变量。  
+*input*<br/>
+[in]你想要封送为的值`To_Type`变量。  
   
 ## <a name="return-value"></a>返回值  
- 类型的变量的`To_Type`的转换的值，它是`input`。  
+ 类型的变量`To_Type`的转换的值，它是`input`。  
   
 ## <a name="remarks"></a>备注  
- 此方法是将本机和托管类型之间的数据转换的简便的方法。 若要确定支持哪些数据类型，请参阅[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)。 某些数据转换需要上下文。 可以通过使用这些数据类型将转换[marshal_context 类](../dotnet/marshal-context-class.md)。  
+ 此方法是本机和托管类型之间转换数据的简化的方法。 若要确定支持哪些数据类型，请参阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。 某些数据转换需要上下文。 可以使用转换这些数据类型[marshal_context 类](../dotnet/marshal-context-class.md)。  
   
- 如果你尝试封送数据类型不受支持的一对`marshal_as`将生成错误[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在编译时。 阅读出现此错误的详细信息提供的消息。 `C4996`可为多个仅已弃用的函数生成的错误。 这样的一个例子尝试封送不支持的数据类型的对。  
+ 如果你尝试封送数据类型不受支持的一对`marshal_as`将生成错误[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在编译时。 读取消息提供此错误以了解更多信息。 `C4996`可为多个只是已弃用的函数生成错误。 一个例子尝试封送一对不受支持的数据类型。  
   
- 封送处理库包含多个标头文件。 任何转换要求只有一个文件，但如果你需要进行其他转换，则可以包括其他文件。 若要查看哪些转换是与哪些文件相关联，查看中的表中`Marshaling Overview`。 无论何种转换的你想要命名空间要求是始终有效。  
+ 封送处理库包含多个标头文件。 任何转换要求只有一个文件，但如果您需要为其他转换，则可以包含其他文件。 若要查看哪些文件与相关联的转换，请查看中的表中`Marshaling Overview`。 无论何种转换的你想要执行操作，命名空间要求是始终生效。  
   
 ## <a name="example"></a>示例  
- 此示例是从封送`const char*`到`System::String`变量类型。  
+ 此示例将从封送`const char*`到`System::String`变量类型。  
   
 ```  
 // marshal_as_test.cpp  

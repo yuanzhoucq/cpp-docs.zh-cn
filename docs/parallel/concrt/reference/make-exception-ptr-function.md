@@ -1,5 +1,5 @@
 ---
-title: make_exception_ptr 函数 |Microsoft 文档
+title: make_exception_ptr 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f437695e8c0062f9a40f99ac75485101a65fe2e3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3f483d266b8150dfd4aaa5299ffec280d447157
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037614"
 ---
 # <a name="makeexceptionptr-function"></a>make_exception_ptr 函数
 ## <a name="syntax"></a>语法  
@@ -30,8 +30,11 @@ exception_ptr make_exception_ptr(_E _Except);
 ```  
   
 #### <a name="parameters"></a>参数  
- `_E`  
- `_Except`  
+*_E*<br/>
+异常类型。
+
+*_Except*<br/>
+异常值。
   
 ## <a name="return-value"></a>返回值  
   

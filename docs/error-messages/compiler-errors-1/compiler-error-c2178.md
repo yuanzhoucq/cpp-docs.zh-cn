@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2178 |Microsoft 文档
+title: 编译器错误 C2178 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2017
 ms.technology:
@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3727a66554b2e128061820df160c02a1370ebb74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af9efdb3258e6793a17a26b552df8ba4e63c9107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102329"
 ---
-# <a name="compiler-error-c2178"></a>编译器错误 C2178  
-  
-*标识符*不能使用声明*说明符*说明符  
-  
-A`mutable`在声明中，已使用说明符，但此上下文中不允许使用说明符。  
-  
-`mutable`说明符可以只能应用于类数据成员的名称和不能应用于声明名称`const`或`static`，和不能应用于引用的成员。  
-  
-## <a name="example"></a>示例  
-  
-下面的示例演示如何可能发生 C2178，以及如何修复此错误。  
-  
-```  
+# <a name="compiler-error-c2178"></a>编译器错误 C2178
+
+'*标识符*不能使用声明'*说明符*说明符
+
+一个`mutable`在声明中，未使用说明符，但在此上下文中不允许说明符。
+
+`mutable`说明符可以只能应用于类数据成员的名称，并不能应用于声明的名称`const`或`static`，并且不能应用引用成员。
+
+## <a name="example"></a>示例
+
+下面的示例演示如何 C2178 可能会发生，以及如何修复此错误。
+
+```
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 
@@ -46,4 +46,4 @@ class S {
 
 mutable int x = 4; // C2178
 // To fix, remove mutable keyword
-```  
+```

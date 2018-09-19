@@ -1,5 +1,5 @@
 ---
-title: ptr::operator = |Microsoft 文档
+title: ptr::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075069"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-将附加到 COM 对象`com::ptr`。  
+将附加到的 COM 对象`com::ptr`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,8 +39,8 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_right`  
- 要附加的 COM 接口指针。  
+*（_r)*<br/>
+要附加的 COM 接口指针。  
   
 ## <a name="return-value"></a>返回值  
  跟踪引用上的`com::ptr`。  
@@ -49,12 +49,12 @@ ptr<_interface_type> % operator=(
  如果`com::ptr`已拥有对 COM 对象的引用`operator=`引发<xref:System.InvalidOperationException>。  
   
 ## <a name="remarks"></a>备注  
- 分配到 COM 对象`com::ptr`引用的 COM 对象，但不会释放对它的调用方的引用。  
+ 分配到的 COM 对象`com::ptr`引用 COM 对象，但不会释放对它的调用方的引用。  
   
- 此运算符的相同的效果`Attach`。  
+ 此运算符具有相同的效果`Attach`。  
   
 ## <a name="example"></a>示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument`成员函数首先调用`Release`上任何以前拥有对象，然后使用`operator=`要附加新的文档对象。  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument`成员函数的第一个调用`Release`任何以前拥有对象，然后使用`operator=`要附加新的文档对象。  
   
 ```  
 // comptr_op_assign.cpp  

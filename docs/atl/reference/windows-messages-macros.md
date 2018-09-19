@@ -14,45 +14,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 58c9f26b33c3ab2bcdc4e7f0c0a676835da0e3c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886201"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758838"
 ---
 # <a name="windows-messages-macros"></a>Windows 消息宏
-此宏将窗口消息转发。  
-  
-|||  
-|-|-|  
+
+此宏将窗口消息转发。
+
+|||
+|-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|使用转发到另一个窗口中进行处理的窗口收到的消息。|  
 
-## <a name="requirements"></a>要求  
- **标头：** atlbase.h 
-   
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- 此宏将转发到另一个窗口中进行处理的窗口收到的消息。  
-  
+## <a name="requirements"></a>要求
+
+**标头：** atlbase.h
+
+##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+
+此宏将转发到另一个窗口中进行处理的窗口收到的消息。
+
 ```
 WM_FORWARDMSG
-```  
-  
-### <a name="return-value"></a>返回值  
- 非零值处理该消息，如果数值为零则不。  
-  
-### <a name="remarks"></a>备注  
- 使用 WM_FORWARDMSG 转发到另一个窗口中进行处理的窗口收到的消息。 按如下所示使用 LPARAM 和 WPARAM 参数：  
-  
-|参数|用法|  
-|---------------|-----------|  
-|WPARAM|由用户定义的数据|  
-|LPARAM|一个指向`MSG`结构，其中包含有关消息的信息|  
-  
-### <a name="example"></a>示例  
- 在以下示例中，`m_hWndOther`表示收到此消息的其他窗口。  
-  
- [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
-  
-## <a name="see-also"></a>请参阅  
- [宏](../../atl/reference/atl-macros.md)
+```
+
+### <a name="return-value"></a>返回值
+
+非零值处理该消息，如果数值为零则不。
+
+### <a name="remarks"></a>备注
+
+使用 WM_FORWARDMSG 转发到另一个窗口中进行处理的窗口收到的消息。 按如下所示使用 LPARAM 和 WPARAM 参数：
+
+|参数|用法|
+|---------------|-----------|
+|WPARAM|由用户定义的数据|
+|LPARAM|一个指向`MSG`结构，其中包含有关消息的信息|
+
+### <a name="example"></a>示例
+
+在以下示例中，`m_hWndOther`表示收到此消息的其他窗口。
+
+[!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
+
+## <a name="see-also"></a>请参阅
+
+[宏](../../atl/reference/atl-macros.md)

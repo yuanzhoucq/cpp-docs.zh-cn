@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018725"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Microsoft 专用**  
-  
- 将字符串分配给此 `_variant_t` 对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>参数  
- *pSrc*  
- 指向字符串的指针。  
-  
-## <a name="remarks"></a>备注  
- 将 ANSI 字符串转换为 Unicode `BSTR` 字符串并将其分配给此 `_variant_t` 对象。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_variant_t 类](../cpp/variant-t-class.md)
+
+**Microsoft 专用**
+
+将字符串分配给此 `_variant_t` 对象。
+
+## <a name="syntax"></a>语法
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>参数
+
+*pSrc*<br/>
+指向字符串的指针。
+
+## <a name="remarks"></a>备注
+
+将 ANSI 字符串转换为 Unicode `BSTR` 字符串并将其分配给此 `_variant_t` 对象。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_variant_t 类](../cpp/variant-t-class.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 92b0a7c9ae697bc28ad9fe3bd89d37f22d7a8cdc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962853"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313463"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -47,11 +47,14 @@ complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*类型的值**长双精度型**正在构造的复数的实部。
+*_RealVal*<br/>
+正在构造的复数实部的 **long double** 类型值。
 
-*_ImagVal*类型的值**长双精度型**正在构造的复数虚部。
+*_ImagVal*<br/>
+类型的值**长双精度型**正在构造的复数虚部。
 
-*complexNum*类型的复数**双**或类型的**float**其实部和虚部用于初始化类型的复数**长双精度**正在构造。
+*complexNum*<br/>
+类型的复数**双**类型或类型**float**其实部和虚部用于初始化类型的复数**长双精度型**正在构造。
 
 ## <a name="return-value"></a>返回值
 
@@ -105,17 +108,17 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
- as type float gives c1 = (4,5)
+as type float gives c1 = (4,5)
 Implicit conversion from type float to type long double,
- gives c2longdouble = (1,3)
+gives c2longdouble = (1,3)
 Implicit conversion from type long double to type float,
- gives c3longdouble = (3,4)
+gives c3longdouble = (3,4)
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5
 Argument of c3 is recovered from c3 using:
- arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
-*\
+arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
+*/
 ```
 
 ## <a name="requirements"></a>要求

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214147"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715352"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 `CMFCColorDialog`类表示颜色选择对话框。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|返回当前所选的颜色。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|返回该颜色的调色板。|  
-|`CMFCColorDialog::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CDialogEx::PreTranslateMessage`。）|  
+|`CMFCColorDialog::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CDialogEx::PreTranslateMessage`。）|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|从系统调色板派生调色板。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|设置当前所选的颜色。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|设置颜色最等效于指定的 RGB 值。|  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*clrInit*  
- 默认颜色选择。 如果未不指定任何值，默认值为 RGB(0,0,0) （黑色）。  
+*clrInit*<br/>
+[in]默认颜色选择。 如果未不指定任何值，默认值为 RGB(0,0,0) （黑色）。  
   
- [in]*dwFlags*  
- （保留）。  
+*dwFlags*<br/>
+[in]保留。
   
- [in]*pParentWnd*  
- 指向对话框的父级或所有者窗口的指针。  
+*pParentWnd*<br/>
+[in]指向对话框的父级或所有者窗口的指针。  
   
- [in]*hPal*  
- 调色板的句柄颜色。  
+*hPal*<br/>
+[in]调色板的句柄颜色。  
   
 ### <a name="return-value"></a>返回值  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rgb*  
- RGB 颜色值  
+*rgb*<br/>
+[in]RGB 颜色值  
   
 ### <a name="remarks"></a>备注  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*rgb*  
- 一个[COLORREF](/windows/desktop/gdi/colorref) ，它指定的 RGB 颜色。  
+*rgb*<br/>
+[in]一个[COLORREF](/windows/desktop/gdi/colorref) ，它指定的 RGB 颜色。  
   
 ### <a name="remarks"></a>备注  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*R*  
- 指定的 RGB 值的红色组件。  
+*R*<br/>
+[in]指定的 RGB 值的红色组件。  
   
- [in]*G*  
- 指定的 RGB 值的绿色组件。  
+*G*<br/>
+[in]指定的 RGB 值的绿色组件。  
   
- [in]*B*  
- 指定的 RGB 值的蓝色组件。  
+*B*<br/>
+[in]指定的 RGB 值的蓝色组件。  
   
 ### <a name="remarks"></a>备注  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*R*  
- 指定的 RGB 值的红色组件  
+*R*<br/>
+[in]指定的 RGB 值的红色组件  
   
- [in]*G*  
- 指定一个 RGB 值的绿色组件  
+*G*<br/>
+[in]指定一个 RGB 值的绿色组件  
   
- [in]*B*  
- 指定一个 RGB 值的蓝色组件  
+*B*<br/>
+[in]指定一个 RGB 值的蓝色组件  
   
 ### <a name="remarks"></a>备注  
   

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e3f18f3d312adb00370d6dc51203542c259914ec
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207914"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314243"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 类
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>参数
 
-*类型*要插入到输出流的对象类型。
+*类型*<br/>
+要插入到输出流的对象的类型。
 
-*CharType*表示的字符类型的类型`ostream_iterator`。 此参数是可选的默认值是**char**。
+*CharType*<br/>
+表示 `ostream_iterator` 字符类型的类型。 此参数是可选的默认值是**char**。
 
-*特征*表示的字符类型的类型`ostream_iterator`。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
+*特征*<br/>
+表示 `ostream_iterator` 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ostream_iterator 类必须满足对输出迭代器的需求。 可使用 `ostream_iterator` 直接向输出流中写入算法。
 
@@ -114,17 +117,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 The integers written to the output stream
 by intOut are:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_star"></a>ostream_iterator::operator*
@@ -163,17 +166,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a>ostream_iterator::operator++
@@ -213,17 +216,17 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>ostream_iterator::operator=
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*类型的对象的值`Type`要插入到输出流。
+*val*<br/>
+要插入到输出流的 `Type` 类型的对象的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -266,17 +270,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>参数
 
-*_Ostr*类型的输出流[ostream_iterator:: ostream_type](#ostream_type)来循环访问。
+*_Ostr*<br/>
+将遍历的 [ostream_iterator::ostream_type](#ostream_type) 类型的输出流。
 
-*（_d)* 插入到输出流值之间的分隔符。
+*（_d)*<br/>
+用于插入到值之间的输出流中的分隔符。
 
 ### <a name="remarks"></a>备注
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -343,12 +349,12 @@ int main( )
           ostream_iterator<int> ( cout, " : " ) );
    cout << endl;
 }
-\* Output:
+/* Output:
 10
 20
 Elements output without delimiter: 123456
 Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
-*\
+*/
 ```
 
 ## <a name="ostream_type"></a>  ostream_iterator::ostream_type
@@ -404,17 +410,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
-\* Output:
+/* Output:
 The integers written to output stream
 by intOut are:
 1
 10
 100
-*\
+*/
 ```
 
 ## <a name="see-also"></a>请参阅

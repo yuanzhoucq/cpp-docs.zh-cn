@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963075"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710796"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution 类
 
@@ -77,11 +77,12 @@ public:
    result_type min() const;
    result_type max() const;
 };
- ```
+```
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -199,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 随机值的下限（包含下限）。
 
-*b*  
+*b*<br/>
 随机值的上限（不包含上限）。
 
-*parm*  
+*parm*<br/>
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -234,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a*  
+*a*<br/>
 随机值的下限（包含下限）。
 
-*b*  
+*b*<br/>
 随机值的上限（不包含上限）。
 
-*right*  
+*right*<br/>
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

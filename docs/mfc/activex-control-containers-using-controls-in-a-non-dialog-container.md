@@ -1,5 +1,5 @@
 ---
-title: ActiveX 控件容器： 使用非对话框容器中的控件 |Microsoft 文档
+title: ActiveX 控件容器： 使用非对话框容器中的控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e190eb76702b1c6d246ac2aee9c22021955af7f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028098"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控件容器：使用非对话框容器中的控件
-在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 **创建**的包装器类，由 Visual c + + 中，插入成员函数可以动态地创建控件的实例，而无需对话框。  
+在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 **创建**包装器类，由 Visual c + +，插入成员函数可以动态地创建控件的实例，而无需对话框。  
   
  **创建**成员函数具有以下参数：  
   
- `lpszWindowName`  
- 指向要在控件的“Text”或“Caption”属性（如果有）中显示的文本的指针。  
+*lpszWindowName*<br/>
+指向要在控件的“Text”或“Caption”属性（如果有）中显示的文本的指针。  
   
- `dwStyle`  
- 窗口样式。 完整列表，请参阅[cwnd:: Createcontrol](../mfc/reference/cwnd-class.md#createcontrol)。  
+*dwStyle*<br/>
+窗口样式。 有关完整列表，请参阅[cwnd:: Createcontrol](../mfc/reference/cwnd-class.md#createcontrol)。  
   
- `rect`  
- 指定控件的大小和位置。  
+*rect*<br/>
+指定控件的大小和位置。  
   
- `pParentWnd`  
- 指定控件的父窗口，通常为 `CDialog`。 它不能**NULL**。  
+*pParentWnd*<br/>
+指定控件的父窗口，通常为 `CDialog`。 不能**NULL**。  
   
- `nID`  
- 指定控件 ID，并且可由容器用来引用控件。  
+*nID*<br/>
+指定控件 ID，并且可由容器用来引用控件。  
   
  使用此函数动态创建 ActiveX 控件的一个示例是在 SDI 应用程序的窗体视图中。 然后，可以在应用程序的 `WM_CREATE` 处理程序中创建控件的实例。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33324897"
   
 3.  将 `WM_CREATE` 消息处理程序添加到 `CMyView` 类中。  
   
-4.  在处理程序函数中， `CMyView::OnCreate`，调到控件的`Create`函数使用**这**父窗口的指针：  
+4.  在处理程序函数中， `CMyView::OnCreate`，该控件的调用`Create`函数使用**这**作为父窗口的指针：  
   
      [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b740613666c7e4e1b5cc2c1b14c5cbf04b0fe6ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957420"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702866"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>参数
 
-*Val*的对象或函数要获取其实际地址。
+*val*<br/>
+要获取其实际地址的对象或函数。
 
 ### <a name="return-value"></a>返回值
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>参数
 
-*对齐方式*的对齐边界以尝试。
+*对齐方式*<br/>
+要尝试的对齐边界。
 
-*大小*以字节为单位的对齐存储的大小。
+*Size*<br/>
+对齐存储的大小（以字节为单位）。
 
-*Ptr*要使用的可用连续存储池的起始地址。 此参数还是输出参数，并设置为包含新的起始地址，如果对齐成功。 如果 `align()` 不成功，则不修改此参数。
+*ptr*<br/>
+要使用的可用连续存储池的起始地址。 此参数还是输出参数，并设置为包含新的起始地址，如果对齐成功。 如果 `align()` 不成功，则不修改此参数。
 
-*空间*总的可用空间`align()`可用于创建对齐的存储。 此参数还是输出参数，并包含存储缓冲区中在减去对齐存储和任何关联系统开销后剩余的调整空间。
+空格键<br/>
+供 `align()` 用于创建对齐存储的总空间。 此参数还是输出参数，并包含存储缓冲区中在减去对齐存储和任何关联系统开销后剩余的调整空间。
 
 如果 `align()` 不成功，则不修改此参数。
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>参数
 
-*分配*用于创建对象的分配器。
+*分配*<br/>
+用于创建对象的分配器。
 
-*Args*成为对象的零个或多个参数。
+*参数*<br/>
+成为对象的零个或更多自变量。
 
 ### <a name="remarks"></a>备注
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-*Ty*控制返回的类型共享指针。
+*Ty*<br/>
+由返回的共享指针控制的类型。
 
-*其他*由自变量共享指针控制的类型。
+*其他*<br/>
+由自变量共享指针控制的类型。
 
-*其他*自变量共享的指针。
+*其他*<br/>
+自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>参数
 
-*ptr*指向可访问、 已分配的有效存储区域的指针。
+*ptr*<br/>
+指向可访问、已分配且有效的存储区域的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -296,9 +307,11 @@ struct default_delete {
 
 ### <a name="parameters"></a>参数
 
-*Ptr*指向的对象中删除。
+*ptr*<br/>
+指向要删除的对象的指针。
 
-其他要删除的数组中元素的类型。
+*其他*<br/>
+要删除的数组中的元素类型。
 
 ### <a name="remarks"></a>备注
 
@@ -316,11 +329,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-*Ty*控制返回的类型共享指针。
+*Ty*<br/>
+由返回的共享指针控制的类型。
 
-*其他*由自变量共享指针控制的类型。
+*其他*<br/>
+由自变量共享指针控制的类型。
 
-*sp*自变量共享的指针。
+*sp*<br/>
+自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -373,11 +389,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>参数
 
-*D*删除器的类型。
+*D*<br/>
+删除器的类型。
 
-*Ty*由共享指针控制的类型。
+*Ty*<br/>
+由共享指针控制的类型。
 
-*sp*共享的指针。
+*sp*<br/>
+共享的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -451,7 +470,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>参数
 
-*计数*元素的内存请求的最大数目是并将其分配。
+*count*<br/>
+所请求的、要为其分配内存的元素的最大数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -619,15 +639,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>参数
 
-*T*的对象类型的`unique_ptr`将指向。
+*T*<br/>
+`unique_ptr` 将指向的对象的类型。
 
-*类型*构造函数参数所指定的类型*Args*。
+*类型*<br/>
+指定的构造函数参数的类型*Args*。
 
-*Args*类型的对象的构造函数传递的参数*T*。
+*参数*<br/>
+要传递给类型的对象的构造函数的参数*T*。
 
-*Elem*类型的元素的数组*T*。
+*Elem*<br/>
+类型的元素的数组*T*。
 
-*大小*要分配空间的新数组中的元素数。
+*Size*<br/>
+新数组中要为其分配空间的元素的数目。
 
 ### <a name="remarks"></a>备注
 
@@ -684,9 +709,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>参数
 
-*_ 左*共享或弱指针。
+*_ 左*<br/>
+共享指针或弱指针。
 
-*右*共享或弱指针。
+*right*<br/>
+共享指针或弱指针。
 
 ### <a name="remarks"></a>备注
 
@@ -703,7 +730,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>参数
 
-*_Pbuf*指向要释放的内存的指针。
+*_Pbuf*<br/>
+指向要取消分配的内存的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -744,7 +772,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>static_pointer_cast
@@ -759,11 +787,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>参数
 
-*Ty*控制返回的类型共享指针。
+*Ty*<br/>
+由返回的共享指针控制的类型。
 
-*其他*由自变量共享指针控制的类型。
+*其他*<br/>
+由自变量共享指针控制的类型。
 
-*其他*自变量共享的指针。
+*其他*<br/>
+自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
@@ -818,13 +849,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>参数
 
-*Ty*由左侧共享/弱指针控制的类型。
+*Ty*<br/>
+由左侧共享/弱指针控制的类型。
 
-*其他*由右侧共享/弱指针控制的类型。
+*其他*<br/>
+由右侧共享/弱指针控制的类型。
 
-*左*左侧共享/弱指针。
+*left*<br/>
+左侧共享/弱指针。
 
-*右*右侧共享/弱指针。
+*right*<br/>
+右侧共享/弱指针。
 
 ### <a name="remarks"></a>备注
 
@@ -927,11 +962,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>参数
 
-*第一个*发现源范围中的第一个元素的输入迭代器。
+*first*<br/>
+确定源范围中第一个元素的地址的输入迭代器。
 
-*最后一个*发现源范围中的最后一个元素的输入迭代器。
+*最后一个*<br/>
+确定源范围中最后一个元素的地址的输入迭代器。
 
-*dest*的目标范围内的第一个元素的向前迭代器。
+*dest*<br/>
+确定目标范围中第一个元素的地址的前向迭代器。
 
 ### <a name="return-value"></a>返回值
 
@@ -1032,11 +1070,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>参数
 
-*第一个*指的是要复制的对象的输入迭代器。
+*first*<br/>
+引用要复制的对象的输入迭代器。
 
-*计数*一个签名或无符号整数类型指定的次数复制对象。
+*count*<br/>
+指定复制对象的次数的带符号或无符号整数类型。
 
-*dest*指的是新的副本在哪里的向前迭代器。
+*dest*<br/>
+引用新副本所在位置的向前迭代器。
 
 ### <a name="return-value"></a>返回值
 
@@ -1066,11 +1107,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>参数
 
-*第一个*是用于在要启动的目标范围内的第一个元素的向前迭代器。
+*first*<br/>
+一个向前迭代器，用于在要启动的目标范围中发现第一个元素。
 
-*最后一个*发现是用于在要启动的目标范围内的最后一个元素的向前迭代器。
+*最后一个*<br/>
+一个向前迭代器，用于在要启动的目标范围中发现最后一个元素。
 
-*val*要用于初始化目标范围的值。
+*val*<br/>
+用于初始化目标范围的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1135,11 +1179,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*第一个*的向前迭代器的第一个元素的目标范围内启动。
+*first*<br/>
+在要初始化的目标范围中发现第一个元素的向前迭代器。
 
-*计数*要初始化的元素数。
+*count*<br/>
+要初始化的元素的个数。
 
-*val*要用于初始化目标范围的值。
+*val*<br/>
+用于初始化目标范围的值。
 
 ### <a name="remarks"></a>备注
 

@@ -1,5 +1,5 @@
 ---
-title: 命令行警告 D9025 |Microsoft 文档
+title: 命令行警告 D9025 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3875a2cbd065fd5ad887267bcc80748fa9845d0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298845"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063685"
 ---
 # <a name="command-line-warning-d9025"></a>命令行警告 D9025
-重写"选项 1"与"选项 2"  
-  
- *选项 1*选项已指定，但然后由重写*选项 2*。 *选项 2*以前用选项。  
-  
- 如果两个选项指定矛盾或不兼容的指令，则使用命令行上最右侧选项中指定或隐含的指令。  
-  
- 如果在从开发环境中，编译时收到此警告，并且不确定的冲突的选项来自何处，考虑以下方面：  
-  
--   在代码中或在项目的项目设置，可以指定一个选项。 如果你看一下编译器的[命令行属性页](../../ide/command-line-property-pages.md)并且时看到中的冲突选项**所有选项**字段然后设置了选项在项目的属性页中，否则为选项在源代码中设置。  
-  
-     如果在项目的属性页中设置的选项，查找在编译器的预处理器属性页上 （包含在解决方案资源管理器中选择的项目节点）。  如果你看不到选项设置存在，检查每个源代码文件 （在解决方案资源管理器） 的预处理器属性页设置以确保它未添加到此处。  
-  
-     如果在代码中设置的选项可将其设置在代码中，也可在 windows 头文件。  你可以尝试创建一个预处理的文件 ([/P](../../build/reference/p-preprocess-to-a-file.md)) 并在其中搜索符号。
+
+重写"选项 1"与"选项 2"
+
+*Option1*选项指定了，但然后重写*option2*。 *Option2*选项已使用。
+
+如果两个选项指定相互矛盾的或不兼容的指令，则使用命令行上最右侧的选项中指定或隐含的指令。
+
+如果在从开发环境中，编译时收到此警告，并且不确定冲突的选项来自哪里，考虑以下方面：
+
+- 在代码中或在项目的项目设置中，可以指定一个选项。 如果您看一下编译器的[命令行属性页](../../ide/command-line-property-pages.md)如果你看到中的选项冲突**所有选项**字段选项在项目的属性页，否则为设置选项，然后在源代码中设置。
+
+     如果项目的属性页中设置了选项，查看在编译器的预处理器属性页上 （使用解决方案资源管理器中选择的项目节点）。  如果您看不到选项集存在，检查每个源代码文件 （在解决方案资源管理器） 的预处理器属性页设置以确保它不存在添加。
+
+     如果在代码中设置了选项可以在代码中或在 windows 头文件中设置它。  您可以尝试创建预处理过的文件 ([/P](../../build/reference/p-preprocess-to-a-file.md)) 并在其中搜索符号。

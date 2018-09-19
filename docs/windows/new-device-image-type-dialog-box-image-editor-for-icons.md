@@ -1,5 +1,5 @@
 ---
-title: 新&lt;设备&gt;图像类型对话框 （图标的图像编辑器） |Microsoft Docs
+title: 新&lt;设备&gt;图像类型对话框 （c + +） （图标的图像编辑器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New <Device> Image Type dialog box
+- New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ab00ebad999569c3991f3a1d8d511d24eb47380
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610878"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313931"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新&lt;设备&gt;图像类型对话框 （图标的图像编辑器）
+# <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>新&lt;设备&gt;图像类型对话框 （c + +） （图标的图像编辑器）
 
 可以创建指定类型的新设备图像。 若要打开**新建\<设备 > 图像**对话框中，单击**新建图像类型**上**映像**菜单。
 

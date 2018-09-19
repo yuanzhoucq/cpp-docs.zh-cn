@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721248"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 `CVSListBox`类支持的可编辑列表控件。  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。 （重写 `CVSListBoxBase::GetItemData`。）|  
 |[CVSListBox::GetItemText](#getitemtext)|检索可编辑列表控件项的文本。 （重写 `CVSListBoxBase::GetItemText`。）|  
 |[CVSListBox::GetSelItem](#getselitem)|检索一个可编辑列表控件中当前选定项的从零开始的索引。 （重写 `CVSListBoxBase::GetSelItem`。）|  
-|`CVSListBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)并[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|  
+|`CVSListBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|  
 |[CVSListBox::RemoveItem](#removeitem)|从一个可编辑列表控件中移除的项。 （重写 `CVSListBoxBase::RemoveItem`。）|  
 |[CVSListBox::SelectItem](#selectitem)|选择一个可编辑列表控件字符串。 （重写 `CVSListBoxBase::SelectItem`。）|  
 |[CVSListBox::SetItemData](#setitemdata)|将特定于应用程序的 32 位值的可编辑列表控件项与相关联。 （重写 `CVSListBoxBase::SetItemData`。）|  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strIext*  
- 对字符串的引用。  
+*strIext*<br/>
+[in]对字符串的引用。  
   
- [in]*dwData*  
- 一个与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
+*dwData*<br/>
+[in]一个与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
   
- [in]*iIndex*  
- 将保存的字符串的位置的从零开始的索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
+*iIndex*<br/>
+[in]将保存的字符串的位置的从零开始的索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
   
 ### <a name="return-value"></a>返回值  
  列表控件中字符串的位置的从零开始索引。  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果编辑操作启动成功，则为 TRUE否则为 FALSE。  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  与指定项关联的 32 位值。  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含指定项的文本。  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的项被删除; 则为 TRUE否则为 FALSE。  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iItem*  
- 可编辑列表控件项的从零开始的索引。  
+*iItem*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iIndex*  
- 可编辑列表控件项的从零开始的索引。  
+*iIndex*<br/>
+[in]可编辑列表控件项的从零开始的索引。  
   
- [in]*dwData*  
- 一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。  
+*dwData*<br/>
+[in]一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
 ### <a name="remarks"></a>备注  
   

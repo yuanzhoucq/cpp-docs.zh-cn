@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b7fe1d4ef032b8895cfe9095a9c5b9a6bd32df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0b9e4b8be239ef178827ce78f4a90b21866187f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603012"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102125"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable 接口
-此接口仅供内部使用，不用于开发。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-  
-interface class IPrintable;  
-```  
-  
-### <a name="remarks"></a>备注  
- 仅出于完整性的考虑提供此接口，因为可以通过浏览器对其进行检查。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `Platform`  
-  
-### <a name="requirements"></a>要求  
- **元数据：** platform.winmd  
-  
- **命名空间：** Platform::Details  
-  
-## <a name="see-also"></a>请参阅  
- [平台 Namespace](platform-namespace-c-cx.md)
+
+此接口仅供内部使用，不用于开发。
+
+## <a name="syntax"></a>语法
+
+```cpp
+interface class IPrintable;
+```
+
+### <a name="remarks"></a>备注
+
+仅出于完整性的考虑提供此接口，因为可以通过浏览器对其进行检查。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`Platform`
+
+### <a name="requirements"></a>要求
+
+**元数据：** platform.winmd
+
+**命名空间：** Platform::Details
+
+## <a name="see-also"></a>请参阅
+
+[平台 Namespace](platform-namespace-c-cx.md)

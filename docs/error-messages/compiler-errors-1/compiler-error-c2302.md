@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2302 |Microsoft 文档
+title: 编译器错误 C2302 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4484e5cb76995a8bd75eeaf83d3d28383fdf900
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482612aaddc659d0f3c07746051ac93b1ff362de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055710"
 ---
 # <a name="compiler-error-c2302"></a>编译器错误 C2302
-“.~identifier”的左边必须有类/结构/联合类型  
-  
- 句点 （.） 运算符左侧的表达式不是类、 结构或联合。
+
+“.~identifier”的左边必须有类/结构/联合类型
+
+句点 （.） 运算符左侧的表达式不是类、 结构或联合。

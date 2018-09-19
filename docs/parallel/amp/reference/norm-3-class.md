@@ -1,5 +1,5 @@
 ---
-title: norm_3 类 |Microsoft 文档
+title: norm_3 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074378"
 ---
 # <a name="norm3-class"></a>norm_3 类
-表示三个正常数字短矢量。  
+表示正常的三个数字的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -110,7 +110,7 @@ class norm_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[norm_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[norm_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -168,7 +168,7 @@ class norm_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
   
@@ -216,7 +216,7 @@ class norm_3;
  **Namespace:** concurrency:: graphics  
 
 ## <a name="ctor"></a> norm_3 构造函数
-默认构造函数，将初始化为 0 的所有元素。  
+默认构造函数，初始化 0 的所有元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -264,20 +264,20 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ## <a name="a-namesize-size-constant"></a><a name="size"> 大小常量
 ### <a name="syntax"></a>语法  

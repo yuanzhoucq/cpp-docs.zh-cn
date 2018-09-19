@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849443"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713448"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 类
 提供下拉工具栏和下拉工具栏按钮的下拉列表框架窗口的功能。  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*pWndParent*|父窗口的下拉列表框。|  
-|[in]*x*|向下取帧的位置的水平屏幕坐标。|  
-|[in]*y*|向下取帧的位置垂直屏幕坐标。|  
-|[in]*pWndOriginToolbar*|具有此方法用于填充新的下拉列表帧对象下拉列表按钮工具栏。|  
+|*pWndParent*|[in]父窗口的下拉列表框。|  
+|*x*|[in]向下取帧的位置的水平屏幕坐标。|  
+|*y*|[in]向下取帧的位置垂直屏幕坐标。|  
+|*pWndOriginToolbar*|[in]具有此方法用于填充新的下拉列表帧对象下拉列表按钮工具栏。|  
   
 ### <a name="return-value"></a>返回值  
  如果下拉列表帧已成功创建; 则为 TRUE否则为 FALSE。  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |参数|描述|  
-|[in]*bNotify*|未使用。|  
+|*bNotify*|[in]未使用。|  
   
 ### <a name="remarks"></a>备注  
  创建下拉列表框或调整父窗口时，框架将调用此方法。 此方法使用的位置和父窗口的大小计算的位置和下拉列表帧的大小。  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bAutoDestroy*  
- 为 TRUE，则自动销毁关联的下拉列表工具栏窗口中;否则为 FALSE。  
+*bAutoDestroy*<br/>
+[in]为 TRUE，则自动销毁关联的下拉列表工具栏窗口中;否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  如果*bAutoDestroy*为 TRUE，则`CMFCDropDownFrame`析构函数销毁关联的下拉工具栏窗口。 默认值为 TRUE。  

@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5f11e049965fb7374a2294e813502d1279f9f26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067405"
 ---
 # <a name="compiler-error-c3099"></a>编译器错误 C3099
-“关键字”：将 [System::AttributeUsageAttribute] 用于托管特性；将 [Windows::Foundation::Metadata::AttributeUsageAttribute] 用于 WinRT 特性  
-  
- 使用<xref:System.AttributeUsageAttribute>声明 **/clr**属性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 声明 Windows 运行时特性。  
-  
- 有关 /CLR 特性的详细信息，请参阅[用户定义的特性](../../windows/user-defined-attributes-cpp-component-extensions.md)。 Windows 运行时中的受支持属性，请参阅[Windows.Foundation.Metadata 命名空间](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3099，并演示如何修复此错误。  
-  
-```  
-// C3099.cpp  
-// compile with: /clr /c  
-using namespace System;  
-[usage(10)]   // C3099  
-// try the following line instead  
-// [AttributeUsageAttribute(AttributeTargets::All)]  
-ref class A : Attribute {};  
+
+“关键字”：将 [System::AttributeUsageAttribute] 用于托管特性；将 [Windows::Foundation::Metadata::AttributeUsageAttribute] 用于 WinRT 特性
+
+使用<xref:System.AttributeUsageAttribute>声明 **/clr**属性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 声明 Windows 运行时特性。
+
+有关 /CLR 特性的详细信息，请参阅[用户定义的特性](../../windows/user-defined-attributes-cpp-component-extensions.md)。 Windows 运行时中的受支持属性，请参阅[Windows.Foundation.Metadata 命名空间](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3099，并演示如何修复此错误。
+
+```
+// C3099.cpp
+// compile with: /clr /c
+using namespace System;
+[usage(10)]   // C3099
+// try the following line instead
+// [AttributeUsageAttribute(AttributeTargets::All)]
+ref class A : Attribute {};
 ```

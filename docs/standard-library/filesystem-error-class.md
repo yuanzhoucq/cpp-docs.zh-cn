@@ -1,7 +1,7 @@
 ---
 title: filesystem_error 类 | Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5756c01969dba0773e0327e1a34a0c7492b972a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845487"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691518"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 类
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>备注
 
-此类用作引发报告 \<filesystem> 函数中错误的所有异常的基类。 它存储类型为 string 的对象，出于阐释目的将其称为 mymesg。 它还存储两个 path 类型的对象，称为 mypval1 和 mypval2。
+此类用作引发报告 \<filesystem> 函数中错误的所有异常的基类。 它将存储类型的对象`string`，称为`mymesg`此处出于阐述目的。 它还存储两个对象的类型`path`，称为`mypval1`和`mypval2`。
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>构造函数
+
+|构造函数|描述|
+|-|-|
+|[filesystem_error](#filesystem_error)|构造`filesystem_error`消息。|
+
+### <a name="member-functions"></a>成员函数
+
+|成员函数|描述|
+|-|-|
+|[path1](#path1)|返回 `mypval1`|
+|[path2](#path2)|返回 `mypval2`|
+|[什么](#what)|返回一个指向 `NTBS` 的指针。|
+
+## <a name="requirements"></a>要求
+
+**标头：** \<文件系统 >
+
+**命名空间：** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+
+第一个构造函数构造其消息从*what_arg*并*ec*。 第二个构造函数构造其消息从*pval1*，并将其存储在`mypval1`。 第三个构造函数构造其消息从*pval1*，并将其存储在`mypval1`，并从*pval2*，并将其存储在`mypval2`。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-第一个构造函数从 what_arg 和 ec 构造其消息。 第二个构造函数从 pval1（存储在 mypval1 中）构造其消息。 第三个构造函数从 pval1（存储在 mypval1）和 pval2（存储在 mypval2 中）构造其消息。
+### <a name="parameters"></a>参数
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+指定的消息。
+
+*ec*<br/>
+指定的错误代码。
+
+*mypval1*<br/>
+进一步指定的消息参数。
+
+*mypval2*<br/>
+进一步指定的 messsage 参数。
+
+## <a name="path1"></a> filesystem_error::path1
+
+此成员函数返回 `mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-此成员函数返回 mypval1
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+此成员函数返回 `mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-此成员函数返回 mypval2
+## <a name="what"></a> filesystem_error::what
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+此成员函数返回一个指向`NTBS`最好是从组成`runtime_error::what()`， `system_error::what()`， `mymesg`， `mypval1.native_string()`，并`mypval2.native_string()`。
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-此成员函数返回指向 NTBS 的指针，最好是由 runtime_error::what()、system_error::what()、mymesg、mypval1.native_string() 和 mypval2.native_string() 组成。
-
-## <a name="requirements"></a>要求
-
-**标头：** \<文件系统 >
-
-**命名空间：** std::experimental::filesystem
 
 ## <a name="see-also"></a>请参阅
 

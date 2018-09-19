@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3199 |Microsoft 文档
+title: 编译器错误 C3199 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddad2218e81603f59cad51e3a684303e144171e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ed917b3711f7f757b0a4ad89f0e6594ea1642a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027268"
 ---
 # <a name="compiler-error-c3199"></a>编译器错误 C3199
-使用无效的浮点杂注： 非精确模式中不支持异常  
-  
- [Float_control](../../preprocessor/float-control.md)杂注用于指定浮点异常模型下的[/fp](../../build/reference/fp-specify-floating-point-behavior.md)以外的设置 **/fp： 精确**。  
-  
- 下面的示例生成 C3199:  
-  
-```  
-// C3199.cpp  
-// compile with: /fp:fast  
-#pragma float_control(except, on)   // C3199  
+
+使用浮点 pragma 无效： 在非精确模式下不支持异常
+
+[Float_control](../../preprocessor/float-control.md)杂注用于指定的浮点异常模型下[/fp](../../build/reference/fp-specify-floating-point-behavior.md)而不设置 **/fp： 精确**。
+
+下面的示例生成 C3199:
+
+```
+// C3199.cpp
+// compile with: /fp:fast
+#pragma float_control(except, on)   // C3199
 ```

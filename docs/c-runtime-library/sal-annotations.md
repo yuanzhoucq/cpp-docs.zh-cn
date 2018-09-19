@@ -57,17 +57,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 363d7ff6de4c808c3c7b8d37a9a9f95bf069723c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107489"
 ---
 # <a name="sal-annotations"></a>SAL 批注
-如果检查库的标头文件，您可能会注意一些特殊的注释，例如，`_In_z` 和 `_Out_z_cap_(_Size)`。 这些是 Microsoft 源代码注释语言 (SAL) 的示例。SAL 提供一组描述函数如何使用其参数的注释，例如，它关于参数的假设以及关于完成的保证。 标头文件 \<sal.h> 定义了这些注释。  
-  
- 有关在 Visual Studio 中使用 SAL 注释的详细信息，请参阅[使用 SAL 注释减少 C/C++ 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。  
-  
-## <a name="see-also"></a>请参阅  
- [CRT 库功能](../c-runtime-library/crt-library-features.md)
+
+如果检查库的标头文件，您可能会注意一些特殊的注释，例如，`_In_z` 和 `_Out_z_cap_(_Size)`。 这些是 Microsoft 源代码注释语言 (SAL) 的示例。SAL 提供一组描述函数如何使用其参数的注释，例如，它关于参数的假设以及关于完成的保证。 标头文件 \<sal.h> 定义了这些注释。
+
+有关在 Visual Studio 中使用 SAL 注释的详细信息，请参阅[使用 SAL 注释减少 C/C++ 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+
+## <a name="see-also"></a>请参阅
+
+[CRT 库功能](../c-runtime-library/crt-library-features.md)

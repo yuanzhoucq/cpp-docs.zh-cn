@@ -1,5 +1,5 @@
 ---
-title: 如何： 复制资源 |Microsoft Docs
+title: 如何： 复制资源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,33 +11,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], moving between files
-- resources [Visual Studio], copying
-- resource files, copying or moving resources between
-- resource files, tiling
-- .rc files, copying resources between
-- rc files, copying resources between
+- resources [C++], moving between files
+- resources [C++], copying
+- resource files [C++], copying or moving resources between
+- resource files [C++], tiling
+- .rc files [C++], copying resources between
+- rc files [C++], copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc0fc8f3177baa01742df84c926a3c6421aa9a16
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214386"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314569"
 ---
-# <a name="how-to-copy-resources"></a>如何：复制资源
+# <a name="how-to-copy-resources-c"></a>如何： 复制资源 （c + +）
 
 您可以将复制资源从一个文件到另一个而不更改它们，也可以[将其复制时更改语言或资源的条件](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。
 
 可以轻松地从现有的资源或可执行文件的资源复制到当前的资源文件。 若要执行此操作，您打开这两个文件同时包含资源和将项从一个文件拖动到另一种或复制并粘贴在两个文件之间。 此方法适用于资源脚本 (.rc) 文件和资源模板 (.rct) 文件，以及可执行文件 (.exe) 文件。
 
 > [!NOTE]
-> Visual c + + 包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画： 公共资源](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0)。
+> Visual c + + 包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画： 公共资源](https://github.com/Microsoft/VCSamples)。
 
 你可以打开.rc 文件之间使用拖放方法[在项目外部](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
 

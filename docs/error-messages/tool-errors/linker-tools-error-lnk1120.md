@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1120 |Microsoft 文档
+title: 链接器工具错误 LNK1120 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab2b937f8bf941219c678c638e9757903ee7698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea6cc7fdde3d68c9b00ba60c7fa650cbdfd3bd8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086338"
 ---
 # <a name="linker-tools-error-lnk1120"></a>链接器工具错误 LNK1120
-*数*未解析的外部对象  
-  
-错误 LNK1120 报告计数 (*数*) 的未解析的外部符号错误的此链接操作。 大多数未解析的单独通过报告的外部符号错误[链接器工具错误 LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)和[链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)，其位于之前此错误消息，一次对每个未解析的外部符号错误。  
-  
-若要修复此错误，更正所有其他的未解析的外部错误或其他它前面的生成输出中的链接器错误。 不再有任何未解析的外部错误时，将不会报告此错误。  
+
+> *数字*无法解析的外部对象
+
+错误 LNK1120 报告计数 (*数*) 的此链接操作的未解析的外部符号错误。 大多数无法解析的单独的报告的外部符号错误[链接器工具错误 LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)并[链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)，其中前加上此错误消息，一次为每个无法解析的外部符号时出错。
+
+若要修复此错误，更正所有其他的未解析的外部错误或其他生成输出中在其之前的链接器错误。 当不再有任何未解析的外部错误时，不报告此错误。

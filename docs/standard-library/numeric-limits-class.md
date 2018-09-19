@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f40635e3a3c4c00aa98a36ebddcdb5a29c2a66ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705921"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 类
 
@@ -101,7 +101,7 @@ class numeric_limits
 ### <a name="parameters"></a>参数
 
 *类型*<br/>
- 正在测试、查询或设置其属性的基础元素数据类型。
+正在测试、查询或设置其属性的基础元素数据类型。
 
 ## <a name="remarks"></a>备注
 

@@ -1,7 +1,7 @@
 ---
 title: 预处理器语法 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541168"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766111"
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
-**#define***标识符**令牌字符串*选择    
-  
-*#* **定义***标识符*[**(** *标识符*选择 **，** *...* **，** *标识符*选择 **)**]*令牌字符串*选择    
-  
-**defined(**  *identifier* **)**  
-  
-**定义***标识符*   
-  
-`#include` **"***路径规范***"**  
-  
-`#include` **\<***路径规范***>**  
-  
-**#line**  *digit-sequence*  **"** *filename* **"** opt  
-  
-*#* **undef***标识符*   
-  
-**#error***令牌字符串*   
-  
-**#pragma***令牌字符串*   
-  
-*条件*:  
-*if 部分命令部件*opt*else 部分*选择*endif 行*  
-  
-*if 部分*:  
-*if-linetext*  
-  
-*如果行*:  
-**#if**  *constant-expression*  
-  
-**#ifdef***标识符*   
-  
-**#ifndef***标识符*   
-  
-*命令部件*:  
-*命令行文本*  
-  
-*命令部件命令行文本*  
-  
-*命令行*:  
-**#elif**  *constant-expression*  
-  
-*其他部件*:  
-*else-linetext*  
-  
-*其他行*:  
-`#else`  
-  
-*endif 行*:  
-`#endif`  
-  
-*数字序列*:  
-*digit*  
-  
-*digit-sequence digit*  
-  
-*数字*： 之一  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*令牌字符串*:  
-标记字符串  
-  
-*令牌*:  
-keyword  
-  
-*identifier*  
-  
-*constant*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*文件名*:  
-合法操作系统文件名  
-  
-*路径规范*:  
-合法文件路径  
-  
-*文本*:  
-文本的任何序列  
-  
+
+*控制行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *标识符**令牌字符串*<sub>选择</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>标识符</em>**(** *标识符*<sub>选择</sub> **，** ...**，** *标识符*<sub>选择</sub> **)** *令牌字符串*<sub>选择</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *路径规范* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *路径规范* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *数字序列***"** *filename* **"**<sub>选择  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *令牌字符串*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *令牌字符串*
+
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**定义 (** *标识符* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**定义***标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;任何其他常量表达式
+
+*条件*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if 部分**命令部件*<sub>优化</sub> *else 部分*<sub>选择</sub> *endif 行*
+
+*if 部分*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*如果行**文本*
+
+*如果行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *常量表达式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *标识符*
+
+*命令部件*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*命令行**文本*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*命令部件**命令行**文本*
+
+*命令行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *常量表达式*
+
+*其他部件*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*其他行**文本*
+
+*其他行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*endif 行*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*数字序列*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*数字*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*数字序列**数字*
+
+*数字*： 之一<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9
+
+*令牌字符串*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;标记字符串
+
+*令牌*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*关键字*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*常量*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*运算符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*标点符号*
+
+*文件名*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;合法操作系统文件名
+
+*路径规范*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;合法文件路径
+
+*文本*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;文本的任何序列
+
 > [!NOTE]
-> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*c + + 语言参考*: `constant`， `constant` -*表达式*，*标识符*，*关键字*， `operator`，和`punctuator`。  
-  
-## <a name="see-also"></a>请参阅  
- 
+> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*c + + 语言参考*:*常量*，*常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
+
+## <a name="see-also"></a>请参阅
+
 [语法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

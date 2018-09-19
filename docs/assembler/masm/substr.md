@@ -1,7 +1,7 @@
 ---
 title: SUBSTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dec1d1b1de47aa645147419a8bf96ad870cc21b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ecd5a56b00ae663eeaacbedbdbefdecab36438f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687364"
 ---
 # <a name="substr"></a>SUBSTR
-返回的子字符串*textitem*处开始，*位置*。 *Textitem*可以是文本字符串，前面是一个常数`%`，或通过宏函数返回的字符串。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-name SUBSTR textitem, position [[, length]]  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+返回字符串的子*textitem*，开始时*位置*。 *Textitem*可以是文字字符串，前面有一个常量`%`，或通过宏函数返回的字符串。
+
+## <a name="syntax"></a>语法
+
+> 命名 SUBSTR textitem，位置 [[，length]]
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

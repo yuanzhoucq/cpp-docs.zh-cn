@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1152 |Microsoft 文档
+title: 链接器工具错误 LNK1152 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b15185977dfdaa6c6cad154889e95f59ab27c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22276d0b3189f93f57f8337b22b5d6070cd3db0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034468"
 ---
 # <a name="linker-tools-error-lnk1152"></a>链接器工具错误 LNK1152
-无法解析一个或多个未修饰的符号  
-  
- 此错误之前都有一个警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)无法解析每个未修饰符号和至少两个警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)找到未修饰的符号的重复符号。
+
+无法解析一个或多个未修饰符的号
+
+此错误之前都有一个警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)对于每个的无法解析，至少两个警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)未修饰的符号为找到的重复符号。

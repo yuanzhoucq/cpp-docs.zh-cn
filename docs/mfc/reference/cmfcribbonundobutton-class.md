@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709176"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 类
 `CMFCRibbonUndoButton`类实现包含最新的用户命令的下拉列表按钮。 用户可以从要重做或撤消它们的下拉列表选择一个或多个最新的命令。  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszLabel*  
- 将显示在下拉列表中的操作标签。  
+*lpszLabel*<br/>
+[in]将显示在下拉列表中的操作标签。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  清除操作列表中，这是下拉列表。  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nID*  
- 指定命令标识符。  
+*nID*<br/>
+[in]指定命令标识符。  
   
- [in]*lpszText*  
- 指定按钮的文本标签。  
+*lpszText*<br/>
+[in]指定按钮的文本标签。  
   
- [in]*nSmallImageIndex*  
- 中的图像列表的按钮的小图像的父对象的从零开始索引。  
+*nSmallImageIndex*<br/>
+[in]中的图像列表的按钮的小图像的父对象的从零开始索引。  
   
- [in]*nLargeImageIndex*  
- 从零开始的索引中的父对象的图像列表的按钮的大图像。  
+*nLargeImageIndex*<br/>
+[in]从零开始的索引中的父对象的图像列表的按钮的大图像。  
   
- [in]*hIcon*  
- 句柄可用作按钮的图像的图标。  
+*hIcon*<br/>
+[in]句柄可用作按钮的图像的图标。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  确定用户从下拉列表中选择的项的数目。  

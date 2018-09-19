@@ -1,7 +1,7 @@
 ---
 title: 演练： 创建 UWP 应用使用 WRL 和媒体基础 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038296"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和媒体基础的 UWP 应用
 
@@ -101,7 +101,7 @@ ms.locfileid: "43214826"
 
    1. 下**输入**，对于**模块定义文件**，指定`GrayScaleTransform.def`。
 
-   2. 此外，在**输入**，添加`runtimeobject.lib`， `mfuuid.lib`，并`mfplatf.lib`到**附加依赖项**属性。
+   2. 此外，在**输入**，添加`runtimeobject.lib`， `mfuuid.lib`，并`mfplat.lib`到**附加依赖项**属性。
 
    3. 下**Windows 元数据**，请设置**生成 Windows 元数据**到**是 (/ WINMD)**。
 

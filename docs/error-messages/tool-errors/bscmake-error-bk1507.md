@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE 错误 BK1507 |Microsoft 文档
+title: BSCMAKE 错误 BK1507 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024783"
 ---
 # <a name="bscmake-error-bk1507"></a>BSCMAKE 错误 BK1507
-无法打开临时文件 filename [: 原因]  
-  
- BSCMAKE 无法打开临时文件。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  **TMP**环境变量未设置为有效的驱动器和目录。  
-  
-2.  磁盘已满。
+
+无法打开临时文件 filename [: 原因]
+
+BSCMAKE 无法打开临时文件。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. **TMP**环境变量未设置为有效的驱动器和目录。
+
+1. 磁盘已满。

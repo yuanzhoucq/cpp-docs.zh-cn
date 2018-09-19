@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962440"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110433"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 类
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
-*计数*要分配的元素数。
+*count*<br/>
+要分配的元素数量。
 
-*提示*A`const_pointer`可能帮助分配器对象满足存储请求通过定位在请求之前已分配的对象的地址。 Null 指针将被视为无提示。
+*提示*<br/>
+通过定位在请求之前分配的对象的地址，`const_pointer` 可能帮助分配器满足存储请求。 Null 指针将被视为无提示。
 
 ### <a name="return-value"></a>返回值
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
-*ptr*指向其中对象是要构造位置的指针。
+*ptr*<br/>
+指向要构造对象的位置的指针。
 
-*args*传递给对象构造函数的参数列表。
+*参数*<br/>
+传递给对象构造函数的参数列表。
 
 ### <a name="remarks"></a>备注
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
-*ptr*指向要释放的对象的起始位置的指针。
+*ptr*<br/>
+指向要释放对象的起始位置的指针。
 
-*计数*要解除分配的对象数。
+*count*<br/>
+要释放的对象数。
 
 ### <a name="remarks"></a>备注
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
-*ptr*指向对象的位置的指针。
+*ptr*<br/>
+指向对象位置的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
 ### <a name="remarks"></a>备注
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>参数
 
-*al*分配器对象。
+*Al*<br/>
+分配器对象。
 
 ### <a name="return-value"></a>返回值
 

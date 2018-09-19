@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2293 |Microsoft 文档
+title: 编译器错误 C2293 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6b3f395199a1621d507683aa6c79b1212888145
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c5a24be3c51f17d12712b950babe5e723f1633c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031166"
 ---
 # <a name="compiler-error-c2293"></a>编译器错误 C2293
-“identifie”：使成员变量作为 __based 说明符非法  
-  
- 说明符 `__based` 的修饰符必须为非成员指针。  
-  
- 以下示例生成 C2293：  
-  
-```  
-// C2293.cpp  
-// compile with: /c  
-class A {  
-   static int *i;  
-   void __based(i) *bp;   // C2293  
-   void *bp2;   // OK  
-};  
+
+“identifie”：使成员变量作为 __based 说明符非法
+
+说明符 `__based` 的修饰符必须为非成员指针。
+
+以下示例生成 C2293：
+
+```
+// C2293.cpp
+// compile with: /c
+class A {
+   static int *i;
+   void __based(i) *bp;   // C2293
+   void *bp2;   // OK
+};
 ```

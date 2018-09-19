@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2093 |Microsoft 文档
+title: 编译器错误 C2093 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11419a7df335bd87077759228be1256c92d09caa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 952391b1fbe0820175566cecd74156b9a55ef4b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055840"
 ---
 # <a name="compiler-error-c2093"></a>编译器错误 C2093
-variable1： 无法使用自动变量 variable2 的地址初始化  
-  
- 使用编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，程序将尝试自动变量的地址用作初始值设定项。  
-  
- 下面的示例生成 C2093:  
-  
-```  
-// C2093.c  
-// compile with: /Za /c  
-void func() {  
-   int li;   // an implicit auto variable  
-   int * s[]= { &li };   // C2093 address is not a constant  
-  
-   // OK  
-   static int li2;  
-   int * s2[]= { &li2 };  
-}  
+
+variable1： 不能使用自动变量"变量 2"的地址初始化
+
+使用编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，该程序尝试使用自动变量的地址作为初始值设定项。
+
+下面的示例生成 C2093:
+
+```
+// C2093.c
+// compile with: /Za /c
+void func() {
+   int li;   // an implicit auto variable
+   int * s[]= { &li };   // C2093 address is not a constant
+
+   // OK
+   static int li2;
+   int * s2[]= { &li2 };
+}
 ```

@@ -1,7 +1,7 @@
 ---
-title: ActiveX 控件容器： 手动启用 ActiveX 控件包含 |Microsoft 文档
+title: ActiveX 控件容器： 手动启用 ActiveX 控件包含 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,22 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde0ee4dc740826c9efdf7b86cd2f021699f8820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339886"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534971"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX 控件容器：手动启用 ActiveX 控件包含
-如果您在使用 MFC 应用程序向导生成应用程序时未启用 ActiveX 控件支持，则将必须手动添加此支持。 本文介绍了手动将 ActiveX 控件包含添加到现有 OLE 容器应用程序的过程。 如果事先知道您的 OLE 容器中需要 ActiveX 控件支持，请参阅文章[创建 MFC ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。  
+如果您在使用 MFC 应用程序向导生成应用程序时未启用 ActiveX 控件支持，则将必须手动添加此支持。 本文介绍了手动将 ActiveX 控件包含添加到现有 OLE 容器应用程序的过程。 如果您事先知道您的 OLE 容器中需要 ActiveX 控件支持，请参阅文章[创建 MFC ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。  
   
 > [!NOTE]
 >  本文使用一个名为 Container、基于对话框的 ActiveX 控件容器项目和一个名为 Circ 的嵌入控件分别作为过程和代码中的示例。  
   
  若要支持 ActiveX 控件，则你必须向这两个项目的文件添加一行代码。  
   
--   修改您的主对话框`InitInstance`函数 （在容器中找到。CPP) 由 MFC 应用程序向导调用[AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer)，下面的示例所示：  
+-   修改您的主对话框`InitInstance`函数 （在容器中找到。CPP) 调用 MFC 应用程序向导[AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer)，如下面的示例：  
   
      [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
@@ -40,7 +43,7 @@ ms.locfileid: "33339886"
   
      [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
   
- 完成这些步骤后，重新生成项目通过单击**生成**上**生成**菜单。  
+ 完成这些步骤后，重新生成项目通过单击**构建**上**生成**菜单。  
   
 ## <a name="see-also"></a>请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)

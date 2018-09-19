@@ -1,5 +1,5 @@
 ---
-title: concurrency 命名空间运算符 |Microsoft 文档
+title: 并发命名空间运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 13b9288e39e372ecb23299d355abc921353444b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059863"
 ---
-# <a name="concurrency-namespace-operators"></a>concurrency 命名空间运算符
+# <a name="concurrency-namespace-operators"></a>并发命名空间运算符
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
@@ -55,14 +55,14 @@ inline task<void> operator||(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ReturnType`  
- 已返回任务的类型。  
+*ReturnType*<br/>
+已返回任务的类型。  
   
- `lhs`  
- 要合并到结果任务的第一个任务。  
+*lhs*<br/>
+要合并到结果任务的第一个任务。  
   
- `rhs`  
- 要合并到结果任务的第二个任务。  
+*rhs*<br/>
+要合并到结果任务的第二个任务。  
   
 ### <a name="return-value"></a>返回值  
  在输入任务中任何一个成功完成时成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>`。 如果输入任务的类型为 `void`，则输出任务也将是 `task<void>`。  
@@ -104,14 +104,14 @@ inline task<void>  operator&&(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ReturnType`  
- 已返回任务的类型。  
+*ReturnType*<br/>
+已返回任务的类型。  
   
- `lhs`  
- 要合并到结果任务的第一个任务。  
+*lhs*<br/>
+要合并到结果任务的第一个任务。  
   
- `rhs`  
- 要合并到结果任务的第二个任务。  
+*rhs*<br/>
+要合并到结果任务的第二个任务。  
   
 ### <a name="return-value"></a>返回值  
  将在两个输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>>`。 如果输入任务的类型为 `void`，则输出任务也将是 `task<void>`。  
@@ -130,28 +130,28 @@ inline bool operator== (
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果运算符左侧的并发向量等于运算符; 右侧的并发向量否则为`false`。  
   
 ### <a name="remarks"></a>备注  
- 两个并发向量相等，如果它们都有相同的元素数并且它们各自的元素具有相同的值。 否则，它们不相等。  
+ 两个并发向量相等，如果具有相同元素数目相等且对应元素具有相同的值。 否则，它们不相等。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_neq"></a>  运算符 ！ = 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。  
@@ -164,28 +164,28 @@ inline bool operator!= (
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果并发向量是否不相等;`false`如果并发向量相等。  
+ `true` 如果并发向量是否不相等;`false`并发向量是否相等。  
   
 ### <a name="remarks"></a>备注  
- 两个并发向量相等，如果它们都有相同的元素数并且它们各自的元素具有相同的值。 否则，它们不相等。  
+ 两个并发向量相等，如果具有相同元素数目相等且对应元素具有相同的值。 否则，它们不相等。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_lt"></a>  运算符&lt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。  
@@ -198,28 +198,28 @@ inline bool operator<(
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果运算符左侧的并发向量小于运算符; 右侧的并发向量否则为`false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
+ 此运算符的行为等同于的等效运算符`vector`类中`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_lt_eq"></a>  运算符&lt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。  
@@ -232,28 +232,28 @@ inline bool operator<= (
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果运算符左侧的并发向量小于或等于运算符; 右侧的并发向量否则为`false`。  
+ `true` 如果运算符左侧的并发向量是否小于或等于运算符; 右侧的并发向量否则为`false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
+ 此运算符的行为等同于的等效运算符`vector`类中`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_gt"></a>  运算符&gt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于右侧的 `concurrent_vector` 对象。  
@@ -266,28 +266,28 @@ inline bool operator>(
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
  如果运算符左侧的并发向量大于运算符右侧的并发向量，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
+ 此运算符的行为等同于的等效运算符`vector`类中`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_gt_eq"></a>  运算符&gt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于或等于右侧的 `concurrent_vector` 对象。  
@@ -300,28 +300,28 @@ inline bool operator>= (
 ```  
   
 ### <a name="parameters"></a>参数  
- `T`  
- 并发向量中存储的元素数据类型。  
+*T*<br/>
+并发向量中存储的元素数据类型。  
   
- `A1`  
- 第一个分配器类型`concurrent_vector`对象。  
+*A1*<br/>
+第一个分配器类型`concurrent_vector`对象。  
   
- `A2`  
- 第二个的分配器类型`concurrent_vector`对象。  
+*A2*<br/>
+第二个的分配器类型`concurrent_vector`对象。  
   
- `_A`  
- 一个 `concurrent_vector` 类型的对象。  
+*_A*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
- `_B`  
- 一个 `concurrent_vector` 类型的对象。  
+*_B*<br/>
+一个 `concurrent_vector` 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果运算符左侧的并发向量大于或等于运算符; 右侧的并发向量否则为`false`。  
   
 ### <a name="remarks"></a>备注  
- 此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
+ 此运算符的行为等同于的等效运算符`vector`类中`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

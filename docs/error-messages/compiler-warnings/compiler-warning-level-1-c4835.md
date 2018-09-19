@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4835 |Microsoft 文档
+title: 编译器警告 （等级 1） C4835 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f078b128bfb3cd50707208e78b49ee1b8b3c5c35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70492be13d312c5d167990cfa0b6c0d741e1055f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080098"
 ---
 # <a name="compiler-warning-level-1-c4835"></a>编译器警告（等级 1）C4835
-variable： 在宿主程序集首次执行托管的代码之前，不会运行导出的数据的初始值设定项  
-  
- 在访问托管组件之间的数据时，建议不使用本机 c + + 导入和导出机制。 相反，声明在托管类型的内部数据成员，并引用元数据与`#using`在客户端。 有关详细信息，请参阅[#using 指令](../../preprocessor/hash-using-directive-cpp.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4835。  
-  
-```  
-// C4835.cpp  
-// compile with: /W1 /clr /LD  
-int f() { return 1; }  
-int n = 9;  
-  
-__declspec(dllexport) int m = f();   // C4835  
-__declspec(dllexport) int *p = &n;   // C4835  
-```  
-  
-## <a name="example"></a>示例  
- 下面的示例使用在前面的示例，显示的变量的值不按预期方式构建的组件。  
-  
-```  
-// C4835_b.cpp  
-// compile with: /clr C4835.lib  
-#include <stdio.h>  
-__declspec(dllimport) int m;  
-__declspec(dllimport) int *p;  
-  
-int main() {  
-   printf("%d\n", m);  
-   printf("%d\n", p);  
-}  
-```  
-  
-```Output  
-0  
-268456008  
+
+variable： 在主机程序集中首次执行托管的代码之后，将不会运行导出的数据的初始值设定项
+
+在访问托管组件之间的数据时，建议不使用本机 c + + 导入和导出机制。 相反，声明在托管类型的内部数据成员，并引用元数据与`#using`客户端中。 有关详细信息，请参阅 [#using 指令](../../preprocessor/hash-using-directive-cpp.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4835。
+
+```
+// C4835.cpp
+// compile with: /W1 /clr /LD
+int f() { return 1; }
+int n = 9;
+
+__declspec(dllexport) int m = f();   // C4835
+__declspec(dllexport) int *p = &n;   // C4835
+```
+
+## <a name="example"></a>示例
+
+下面的示例使用在上一示例中，显示这些变量的值不按预期方式构建的组件。
+
+```
+// C4835_b.cpp
+// compile with: /clr C4835.lib
+#include <stdio.h>
+__declspec(dllimport) int m;
+__declspec(dllimport) int *p;
+
+int main() {
+   printf("%d\n", m);
+   printf("%d\n", p);
+}
+```
+
+```Output
+0
+268456008
 ```

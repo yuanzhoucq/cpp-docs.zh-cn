@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6201 |Microsoft 文档
+title: 数学错误 M6201 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a15e841cfc8daf1abdafc9997698807e7356af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87d2c09d6448bcf7fb0557fa3a174c60205a34ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099390"
 ---
 # <a name="math-error-m6201"></a>数学错误 M6201
-function: _DOMAIN 错误  
-  
- 给定的函数的自变量为域外部的合法的输入值，该函数。  
-  
-## <a name="example"></a>示例  
-  
-```  
-result = sqrt(-1.0)   // C statement  
-result = SQRT(-1.0)   !  FORTRAN statement  
-```  
-  
- 此错误调用`_matherr`函数名称、 其参数与错误类型的函数。 您可以重新编写`_matherr`函数以自定义的某些运行时浮点数学错误处理。
+
+function: （_d） 错误
+
+给定函数的参数是合法的输入值，该函数的域之外。
+
+## <a name="example"></a>示例
+
+```
+result = sqrt(-1.0)   // C statement
+result = SQRT(-1.0)   !  FORTRAN statement
+```
+
+此错误调用`_matherr`函数名称、 其参数与错误类型的函数。 您可以重写`_matherr`函数以自定义某些运行时浮点数学错误处理。

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 848612f59c2d5cc24289b6d8c56b0c9eeaebc961
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208521"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712785"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>参数
 
-*OutputIterator*指定要存储的对象的输出迭代器。
+*OutputIterator*<br/>
+为正被存储的对象指定输出迭代器。
 
-*类型*为其分配存储的对象的类型。
+*类型*<br/>
+正为其分配存储的对象的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -159,15 +161,15 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>raw_storage_iterator::operator=
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>参数
 
-`val` 类型的对象的值`Type`要插入到内存。
+*val*<br/>
+类型的对象的值`Type`要插入到内存。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,13 +236,13 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a>raw_storage_iterator::operator++
@@ -282,20 +285,20 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
-};
+      *it = 2 * i;
+   };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
 
    delete[] pInt;
 }
-\* Output:
+/* Output:
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*\
+*/
 ```
 
 ## <a name="raw_storage_iterator"></a>raw_storage_iterator::raw_storage_iterator
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>参数
 
-*第一个*是基础的前向迭代器`raw_storage_iterator`正在构造的对象。
+*first*<br/>
+前向迭代器，是正在构造的 `raw_storage_iterator` 对象的基础。
 
 ### <a name="example"></a>示例
 
@@ -366,7 +370,7 @@ int main( void )
 
    free(pInt);
 }
-\* Output:
+/* Output:
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -387,7 +391,7 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*\
+*/
 ```
 
 ## <a name="see-also"></a>请参阅

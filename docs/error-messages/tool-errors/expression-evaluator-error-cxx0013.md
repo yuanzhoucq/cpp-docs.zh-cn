@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0013 |Microsoft 文档
+title: 表达式计算器错误 CXX0013 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f12c9266e4693007d52a41624f11adafe92df56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d06379c5b5163712fe3c82aefd0efb7521169736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063679"
 ---
 # <a name="expression-evaluator-error-cxx0013"></a>表达式计算器错误 CXX0013
-缺少运算符  
-  
- 已在表达式中应有运算符，但找不到。 检查表达式的语法。  
-  
- 此错误是与 CAN0013 相同。
+
+缺少运算符
+
+运算符在表达式中应有，但找不到。 检查表达式的语法。
+
+此错误是与 CAN0013 相同。

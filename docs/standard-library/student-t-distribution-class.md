@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6ce2c5e134b93c1cefd64b7a33935d42c6bba5cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961007"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723978"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 类
 
@@ -74,7 +74,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -89,7 +90,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关学生的 *t* 分布的详细信息，请参阅 Wolfram MathWorld 文章[学生的 t-分布](http://go.microsoft.com/fwlink/p/?linkid=401094)。
+有关学生的 *t* 分布的详细信息，请参阅 Wolfram MathWorld 文章[学生的 t-分布](http://mathworld.wolfram.com/Studentst-Distribution.html)。
 
 ## <a name="example"></a>示例
 
@@ -183,10 +184,11 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*n*  
- `n` 分布参数。
+*n*<br/>
+`n` 分布参数。
 
-*parm*用于构造分布的参数包。
+*parm*<br/>
+用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
@@ -213,10 +215,10 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*n*  
+*n*<br/>
 `n` 分布参数。
 
-*right*  
+*right*<br/>
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

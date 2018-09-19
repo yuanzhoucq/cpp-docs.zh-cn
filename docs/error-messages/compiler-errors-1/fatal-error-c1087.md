@@ -1,5 +1,5 @@
 ---
-title: 错误 C1087 |Microsoft 文档
+title: 错误 C1087 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15a90bf1a17bb07c06c2bcfc74a12368ffcdbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cd86b4634808d74e8aa094884d16dcc2e2cecab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043399"
 ---
 # <a name="fatal-error-c1087"></a>错误 C1087
-无法辨别 filetype 文件：“file”：消息  
-  
- 编译器无法完成某个 I/O 操作。
+
+无法辨别 filetype 文件：“file”：消息
+
+编译器无法完成某个 I/O 操作。

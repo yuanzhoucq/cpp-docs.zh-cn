@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4101 |Microsoft 文档
+title: 编译器警告 （等级 3） C4101 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973b966e4b589cb35ffc92da9031779b14d448e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1549a327329d438cb30bd6908e07419eb1b6bc1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060832"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>编译器警告 （等级 3） C4101
-identifier： 未引用的本地变量  
-  
- 永远不会使用的本地变量。 明显的情况下将出现此警告：  
-  
-```  
-// C4101a.cpp  
-// compile with: /W3  
-int main() {  
-int i;   // C4101  
-}  
-```  
-  
- 但是，此警告将在调用时也发生**静态**通过类的实例的成员函数：  
-  
-```  
-// C4101b.cpp  
-// compile with:  /W3  
-struct S {  
-   static int func()  
-   {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   S si;   // C4101, si is never used  
-   int y = si.func();  
-   return y;  
-}  
-```  
-  
- 在此情况下，编译器所使用的有关的信息`si`访问**静态**函数，但类的实例时不需要调用**静态**函数; 因此警告。 若要解决此警告，你可以：  
-  
--   添加一个构造函数，编译器将在其中使用的实例`si`对的调用中`func`。  
-  
--   删除**静态**关键字的定义从`func`。  
-  
--   调用**静态**函数显式： `int y = S::func();`。
+
+identifier： 未引用的局部变量
+
+从不使用本地变量。 此警告会在明显这种情况中：
+
+```
+// C4101a.cpp
+// compile with: /W3
+int main() {
+int i;   // C4101
+}
+```
+
+但是，此警告将在调用时也发生**静态**通过类的实例成员函数：
+
+```
+// C4101b.cpp
+// compile with:  /W3
+struct S {
+   static int func()
+   {
+      return 1;
+   }
+};
+
+int main() {
+   S si;   // C4101, si is never used
+   int y = si.func();
+   return y;
+}
+```
+
+在此情况下，编译器所使用的有关的信息`si`访问**静态**函数，但类的实例时不需要调用**静态**函数; 因此该警告。 若要解决此警告，可以：
+
+- 添加构造函数，编译器将在其中使用的实例`si`对的调用中`func`。
+
+- 删除**静态**定义中的关键字`func`。
+
+- 调用**静态**函数显式： `int y = S::func();`。

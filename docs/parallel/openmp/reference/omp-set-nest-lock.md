@@ -1,5 +1,5 @@
 ---
-title: omp_set_nest_lock |Microsoft 文档
+title: omp_set_nest_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49a63fc4bc8d31583478ee6f61fe7b374bb9f0b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5af33e7223f245325d3b4835a1599034778cd04f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027695"
 ---
 # <a name="ompsetnestlock"></a>omp_set_nest_lock
 块线程执行，直到锁可用。  
@@ -34,11 +34,10 @@ void omp_set_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `lock`  
- 类型的变量的[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)初始化与[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
+*lock*<br/>
+类型的变量[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)与初始化[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[3.2.3 omp_set_lock 和 omp_set_nest_lock 函数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)。  

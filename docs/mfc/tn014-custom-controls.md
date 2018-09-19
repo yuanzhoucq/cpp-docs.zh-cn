@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215803"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693583"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 
@@ -122,7 +122,7 @@ MFC 常规示例[CTRLTEST](../visual-cpp-samples.md)提供自我描述菜单和�
 
 您偶尔需要更改已存在对象的功能。 之前的示例需要您在创建控件之前自定义控件。 利用动态子类化，您可自定义已经创建的控件。
 
-子类化是 Windows 术语，用于替换[WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26)带有自定义窗口`WndProc`并调用旧`WndProc`为默认功能。
+子类化是 Windows 术语，用于替换<xref:System.Windows.Forms.Control.WndProc%2A>为自定义窗口的`WndProc`并调用旧`WndProc`为默认功能。
 
 这不应与 C++ 类派生混淆。 有关说明，c + + 术语*基类*和*派生的类*类似于*超类*并*子类*在 Windows 中对象模型。 使用 MFC 的 C++ 派生和 Windows 子类化在功能上是相同的，只不过 C++ 不支持动态子类化。
 

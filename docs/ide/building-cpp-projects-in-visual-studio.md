@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195861"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中生成 C++ 项目
 在 Visual Studio 集成开发环境 (IDE) 中，可通过多种方式生成整个解决方案或只在其中生成一个项目。 还可以修改生成设置并指定自定义生成步骤，以使你的部署过程更加高效。  
@@ -50,7 +50,7 @@ ms.locfileid: "33340497"
   
  在 Visual Studio 中生成 Visual C++ 应用程序时，可以在项目的“属性页”对话框中修改许多生成设置。 有关如何设置项目属性的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
- 有关如何使用 IDE 来创建、生成和调试 C++ 项目的示例，请参阅[演练：通过 C++ 了解 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 有关如何使用 IDE 来生成 C++/CLR 项目的示例，请参阅[演练：在 Visual Studio 中编译面向 CLR 的 C++ 程序](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 有关如何使用 IDE 来创建 Windows 运行时应用的示例，请参阅[使用 C++ 创建第一个 Windows 运行时应用](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
+ 有关如何使用 IDE 来创建、生成和调试 C++ 项目的示例，请参阅[演练：通过 C++ 了解 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 有关如何使用 IDE 来生成 C++/CLR 项目的示例，请参阅[演练：在 Visual Studio 中编译面向 CLR 的 C++ 程序](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 有关如何使用 IDE 来创建 Windows 运行时应用的示例，请参阅[使用 C++ 创建第一个 Windows 运行时应用](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
   
  若要阅读有关如何生成、修改生成设置和指定自定义生成步骤的详细信息，请参阅以下文章。  
   

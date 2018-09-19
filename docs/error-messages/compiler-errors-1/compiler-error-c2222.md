@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2222 |Microsoft 文档
+title: 编译器错误 C2222 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072584"
 ---
 # <a name="compiler-error-c2222"></a>编译器错误 C2222
-意外类型“type”：应为基类或成员  
-  
- 初始值设定项列表只能初始化某个类型的基类或成员。 要修复此错误，请确保在初始值设定项列表中仅初始化该类型的基类或成员。
+
+意外类型“type”：应为基类或成员
+
+初始值设定项列表只能初始化某个类型的基类或成员。 要修复此错误，请确保在初始值设定项列表中仅初始化该类型的基类或成员。

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211549"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712724"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -283,7 +283,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|  
-|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
+|*iItem*|[in]其样式是 HDF_SPLITBUTTON 标头项的从零开始索引。 有关详细信息，请参阅`fmt`的成员[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)结构。|  
+|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构接收边界矩形信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out]*lpRect*|指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
+|*lpRect*|[out]指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此函数成功，则为 TRUE否则为 FALSE。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in、 out]*phdhti*|指向[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)结构，它指定要测试的点并接收测试的结果。|  
+|*phdhti*|[in、 out]指向[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)结构，它指定要测试的点并接收测试的结果。|  
   
 ### <a name="return-value"></a>返回值  
  如果任何指定的位置; 处的标头项的从零开始的索引否则为-1。  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|标头项的从零开始的索引。|  
+|*iItem*|[in]标头项的从零开始的索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 TRUE否则为 FALSE。  

@@ -1,5 +1,5 @@
 ---
-title: -Zp （结构成员对齐） |Microsoft 文档
+title: -Zp （结构成员对齐） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1666da40f748d18c762eae19595692addcdbf78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0268f5c5d5d34d8fa244dc6260889bea6b1e837a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380857"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715905"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
 
-控制结构的成员如何打包到内存并指定模块中的所有结构相同的封装。
+控制结构的成员的打包到内存的方式，并在模块中指定的所有结构相同的封装。
 
 ## <a name="syntax"></a>语法
 
@@ -38,24 +38,24 @@ ms.locfileid: "32380857"
 
 ## <a name="remarks"></a>备注
 
-当指定 **/Zp**_n_选项，每个结构成员后第一个存储成员类型的大小或*n*-字节边界 (其中*n*是 1、 2、 4、 8 或 16)，两者中较小。
+当指定 **/Zp**_n_选项，每个结构成员后第一个存储在成员类型的大小或*n*-字节边界 (其中*n*是 1、 2、 4、 8 或 16)，两者中较小。
 
-下表中列出了可用的装箱值：
+下表中列出了该可用装箱值：
 
-|/Zp 自变量|效果|
+|/Zp 参数|效果|
 |-|-|
-|1|1 字节边界上的包结构。 与相同 **/Zp**。|
-|2|在 2 字节边界上的包结构。|
-|4|在 4 字节边界上的包结构。|
-|8|在 8 字节边界 （默认值） 上的包结构。|
-|16| 在 16 字节边界上的包结构。|
+|1|针对 1 字节边界将结构打包。 与相同 **/Zp**。|
+|2|针对 2 字节边界将结构打包。|
+|4|针对 4 字节边界将结构打包。|
+|8|针对 8 字节边界 （默认值） 将结构打包。|
+|16| 针对 16 字节边界将结构打包。|
 
 除非有特定的对齐要求，不应使用此选项。
 
-> [!WARNING]  
-> 在 Windows SDK 中的 c + + 标头假定 **/Zp8**装箱。 如果可能发生损坏的内存 **/Zp**时使用 Windows SDK 标头，则更改设置。
+> [!WARNING]
+> Windows SDK 中的 c + + 标头假定 **/zp8**打包。 如果可能发生损坏的内存 **/Zp**使用 Windows SDK 标头时更改设置。
 
-你还可以使用[包](../../preprocessor/pack.md)控制结构封装。 有关对齐的详细信息，请参阅：
+此外可以使用[pack](../../preprocessor/pack.md)控制结构封装。 有关对齐的详细信息，请参阅：
 
 - [align](../../cpp/align-cpp.md)
 
@@ -67,7 +67,7 @@ ms.locfileid: "32380857"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
 1. 选择**C/c + +** > **代码生成**属性页。
 
@@ -75,9 +75,9 @@ ms.locfileid: "32380857"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。
 
 ## <a name="see-also"></a>请参阅
 
-- [编译器选项](../../build/reference/compiler-options.md)   
+- [编译器选项](../../build/reference/compiler-options.md)
 - [设置编译器选项](../../build/reference/setting-compiler-options.md)

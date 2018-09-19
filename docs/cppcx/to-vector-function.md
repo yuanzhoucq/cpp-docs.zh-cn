@@ -15,39 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ecb00a890629c69994019c9232ff559ea93c96
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a3dcccc332a5d768a614414838003e1400f3c6a6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609733"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107622"
 ---
 # <a name="tovector-function"></a>to_vector 函数
-返回 `std::vector` ，其值与指定 IVector 或 IVectorView 参数所代表的集合相同。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template <typename T>  
-inline ::std::vector<T> to_vector(IVector<T>^ v); 
- 
-template <typename T>  
-inline ::std::vector<T> to_vector(IVectorView<T>^ v);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `T`  
- 模板类型参数。  
-  
- `v`  
- 提供对基础 Vector 或 VectorView 对象访问的 IVector 或 IVectorView 接口。  
-  
-### <a name="return-value"></a>返回值  
-  
-### <a name="requirements"></a>要求  
- **标头：** collection.h  
-  
- **命名空间：** Windows::Foundation::Collections  
-  
-## <a name="see-also"></a>请参阅  
- [Windows::Foundation::Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+
+返回 `std::vector` ，其值与指定 IVector 或 IVectorView 参数所代表的集合相同。
+
+## <a name="syntax"></a>语法
+
+```
+template <typename T>
+inline ::std::vector<T> to_vector(IVector<T>^ v);
+
+template <typename T>
+inline ::std::vector<T> to_vector(IVectorView<T>^ v);
+```
+
+#### <a name="parameters"></a>参数
+
+*T*<br/>
+模板类型参数。
+
+*v*<br/>
+提供对基础 Vector 或 VectorView 对象访问的 IVector 或 IVectorView 接口。
+
+### <a name="return-value"></a>返回值
+
+### <a name="requirements"></a>要求
+
+**标头：** collection.h
+
+**命名空间：** Windows::Foundation::Collections
+
+## <a name="see-also"></a>请参阅
+
+[Windows::Foundation::Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

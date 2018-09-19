@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9e352d43f4ff7c6fa655bd14d2c7f595cfed32ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962183"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106699"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函数和变量
 
@@ -50,11 +50,14 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>参数
 
-*标志*A [once_flag](../standard-library/once-flag-structure.md)对象，以确保可调用对象只能调用一次。
+*标志*<br/>
+确保只能调用一次可调用对象的 [once_flag](../standard-library/once-flag-structure.md) 对象。
 
-*F*可调用对象。
+*F*<br/>
+可调用的对象。
 
-*一个*参数列表。
+*A*<br/>
+自变量列表。
 
 ### <a name="remarks"></a>备注
 

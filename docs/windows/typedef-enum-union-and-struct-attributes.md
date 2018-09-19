@@ -9,26 +9,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - union attributes
-- attributes [C++], reference topics
-- struct attributes
-- typedef attributes
-- enum attributes
+- attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a285cc8c0d24e36d6c00f336d0b3724a31c7af82
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 74e9bbf3ad593f5ce1e6d1868d8e1a09b0bd885e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211295"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314594"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 
-以下属性应用于[typedef](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[结构](../cpp/struct-cpp.md)，并[枚举](../cpp/enumerations-cpp.md)c + + 关键字。
+以下属性应用于[typedef](../cpp/aliases-and-typedefs-cpp.md)，[结构](../cpp/struct-cpp.md)，并[枚举](../cpp/enumerations-cpp.md)c + + 关键字。
 
 ### <a name="typedef"></a>typedef
 

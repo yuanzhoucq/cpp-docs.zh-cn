@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721508"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 一个`CMFCReBar`对象是提供了布局、 持久性和 rebar 控件的状态信息的控件条。  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|提供直接访问权限的基础[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)公共控件。|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(重写[cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(重写[CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest)。)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(重写[CBasePane::OnUpdateCmdUI](cbasepane-class.md)。)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(重写[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment)。)|  
   
 ## <a name="remarks"></a>备注  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in][out]*pBar*  
  指向要插入到 rebar 的子窗口的指针。 引用的对象必须具有**WS_CHILD**窗口样式。  
   
- [in]*pszText*  
- 指定在 rebar 中显示的文本。 文本不是子窗口的一部分。 相反，它被显示在 rebar 本身。  
+*pszText*<br/>
+[in]指定在 rebar 中显示的文本。 文本不是子窗口的一部分。 相反，它被显示在 rebar 本身。  
   
  [in][out]*pbmp*  
  指定要在 rebar 背景上显示的位图。  
   
- [in]*dwStyle*  
- 包含要应用于带区的样式。 带样式的完整列表，请参阅的说明`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文档中的结构。  
+*dwStyle*<br/>
+[in]包含要应用于带区的样式。 带样式的完整列表，请参阅的说明`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文档中的结构。  
   
- [in]*clrFore*  
- 表示 rebar 的前景色。  
+*clrFore*<br/>
+[in]表示 rebar 的前景色。  
   
- [in]*clrBack*  
- 表示 rebar 的背景色。  
+*clrBack*<br/>
+[in]表示 rebar 的背景色。  
   
 ### <a name="return-value"></a>返回值  
  如果带区已成功添加到 rebar; 则为 TRUE否则为 FALSE。  
@@ -146,14 +146,14 @@ BOOL Create(
  [in][out]*pParentWnd*  
  指向此 rebar 控件的父窗口的指针。  
   
- [in]*dwCtrlStyle*  
- 指定对 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，它显示缩小范围行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文档中。  
+*dwCtrlStyle*<br/>
+[in]指定对 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，它显示缩小范围行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文档中。  
   
- [in]*dwStyle*  
- Rebar 控件的窗口样式。 有关有效的样式的列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*dwStyle*<br/>
+[in]Rebar 控件的窗口样式。 有关有效的样式的列表，请参阅[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*nID*  
- Rebar 的子窗口 id。  
+*nID*<br/>
+[in]Rebar 的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建 rebar，则返回 TRUE否则为 FALSE。  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*点*  
- [in]*pTI*  
+*点*<br/>
+[in][in]*pTI*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pTarget*  
- [in]*bDisableIfNoHndler*  
+*pTarget*<br/>
+[in][in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>备注  
   

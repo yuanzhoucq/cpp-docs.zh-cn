@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: aae9adaf1037297dfae9ba78f6f872544a5555ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081671"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,7 +53,8 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>参数
 
-*memblock*返回到的内存块的指针[_aligned_malloc](aligned-malloc.md)或[_aligned_offset_malloc](aligned-offset-malloc.md)函数。
+*memblock*<br/>
+返回到的内存块的指针[_aligned_malloc](aligned-malloc.md)或[_aligned_offset_malloc](aligned-offset-malloc.md)函数。
 
 ## <a name="remarks"></a>备注
 
@@ -75,4 +76,4 @@ void _aligned_free_dbg(
 
 ## <a name="see-also"></a>请参阅
 
-[调试例程](../../c-runtime-library/debug-routines.md)  
+[调试例程](../../c-runtime-library/debug-routines.md)

@@ -1,7 +1,7 @@
 ---
 title: regex_constants 类 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865749"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384990"
 ---
-# <a name="regexconstants-class"></a>regex_constants 类
+# <a name="regexconstants-namespace"></a>regex_constants 命名空间
 
 正则表达式标志的命名空间。
 
@@ -110,12 +110,18 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>备注
 
 命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。
+
+|||
+|-|-|
+|[error_type](#error_type)|用于报告正则表达式语法错误的标志。|
+|[match_flag_type](#match_flag_type)|正则表达式匹配选项的标志。|
+|[syntax_option_type](#syntax_option_type)|用于选择语法选项的标志。|
 
 ## <a name="requirements"></a>要求
 
@@ -214,7 +220,7 @@ enum match_flag_type
 
 匹配选项包括：
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol` - 不将目标序列中的第一个位置视为行首
 

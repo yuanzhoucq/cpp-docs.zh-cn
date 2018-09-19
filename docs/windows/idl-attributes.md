@@ -8,23 +8,23 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], reference topics
+- attributes [C++/CLI], reference topics
 - IDL attributes
-- .idl files, attributes
-- IDL files, attributes
-- .idl files
+- .idl files [C++], attributes
+- IDL files [C++], attributes
+- .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a5fcfe550fbcab7ffc872cd2a802906e1416a24
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13c776faee71b757f9d5ce259a2d5ee88ba29066
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196629"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315362"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -126,4 +126,3 @@ ms.locfileid: "43196629"
 ## <a name="see-also"></a>请参阅
 
 [按组分的特性](../windows/attributes-by-group.md)  
-[特性限制](https://msdn.microsoft.com/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

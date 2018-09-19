@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070595"
 ---
 # <a name="exception-handling-constants"></a>异常处理常量
-在执行 try-except 语句的保护部分期间发生异常时，将返回常量 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION` 或 `EXCEPTION_EXECUTE_HANDLER`。 此返回值确定了处理异常的方式。 有关详细信息，请参阅《C++ 语言参考》中的 [try-except 语句](../cpp/try-except-statement.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [全局常量](../c-runtime-library/global-constants.md)
+
+在执行 try-except 语句的保护部分期间发生异常时，将返回常量 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION` 或 `EXCEPTION_EXECUTE_HANDLER`。 此返回值确定了处理异常的方式。 有关详细信息，请参阅《C++ 语言参考》中的 [try-except 语句](../cpp/try-except-statement.md)。
+
+## <a name="see-also"></a>请参阅
+
+[全局常量](../c-runtime-library/global-constants.md)

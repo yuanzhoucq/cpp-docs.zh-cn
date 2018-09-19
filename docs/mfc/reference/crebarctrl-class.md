@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656a19b6cddfb7e8353bb0eabf8975c733129a52
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207905"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717582"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 封装 Rebar 控件的功能，此控件是一个子窗口容器。  
@@ -293,7 +293,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定应用于控件的 rebar 控件样式的组合。 有关受支持的样式的列表，请参阅[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 中。  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*uBand*|Rebar 带区从零开始索引。|  
-|[in]*cxWidth*|新的 rebar 带区，以像素为单位的宽度。|  
+|*uBand*|[in]Rebar 带区从零开始索引。|  
+|*cxWidth*|[in]新的 rebar 带区，以像素为单位的宽度。|  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则为 TRUE否则为 FALSE。  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*dwMask*|指定在哪些标志的标志的按位组合 (OR) *dwStyleEx*参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示与拆分器上底部在水平模式下和向右垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)向父窗口的消息。|  
-|[in]*dwStyleEx*|按位组合 (OR) 标志，用于指定要应用的样式。 若要设置样式，请指定中使用的相同标志*dwMask*参数。 若要重置样式，请指定二进制零。|  
+|*dwMask*|[in]指定在哪些标志的标志的按位组合 (OR) *dwStyleEx*参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示与拆分器上底部在水平模式下和向右垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)向父窗口的消息。|  
+|*dwStyleEx*|[in]按位组合 (OR) 标志，用于指定要应用的样式。 若要设置样式，请指定中使用的相同标志*dwMask*参数。 若要重置样式，请指定二进制零。|  
   
 ### <a name="return-value"></a>返回值  
  以前的扩展的样式。  

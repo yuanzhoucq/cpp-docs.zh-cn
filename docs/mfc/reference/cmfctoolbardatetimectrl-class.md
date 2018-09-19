@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2b1ee8e1beb6022d6a940e7036d9673e3844f35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726721"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 类
 包含日期和时间选取器控件的工具栏按钮。  
@@ -155,17 +155,17 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiID*  
- 控件 id。  
+*uiID*<br/>
+[in]控件 id。  
   
- [in]*iImage*  
- 在工具栏中的图像的索引`CMFCToolBarImages`对象。  
+*iImage*<br/>
+[in]在工具栏中的图像的索引`CMFCToolBarImages`对象。  
   
- [in]*dwStyle*  
- 样式`CMFCToolBarDateTimeCtrlImpl`用户单击按钮时创建的窗口。  
+*dwStyle*<br/>
+[in]样式`CMFCToolBarDateTimeCtrlImpl`用户单击按钮时创建的窗口。  
   
- [in]*iWidth*  
- 控件的宽度（以像素为单位）。  
+*iWidth*<br/>
+[in]该控件，以像素为单位的宽度。  
   
 ### <a name="remarks"></a>备注  
  此对象将初始化为系统日期和时间。 窗口样式的内部`CMFCToolBarDateTimeCtrlImpl`对象中包含*dwStyle*参数和 WS_CHILD 和 WS_VISIBLE 样式。 不能通过更改这些样式`CMFCToolBarDateTimeCtrl::SetStyle`。 使用`SetStyle`若要更改的样式`CMFCToolBarDateTimeCtrl`控件。  
@@ -183,8 +183,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*src*  
- 对源按钮从其复制的引用。  
+*src*<br/>
+[in]对源按钮从其复制的引用。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 *src*的类型必须为`CMFCToolBarDateTimeCtrl`。  
@@ -197,8 +197,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*menuButton*  
- 对目标菜单按钮的引用。  
+*MenuButton*<br/>
+[in]对目标菜单按钮的引用。  
   
 ### <a name="return-value"></a>返回值  
  此方法返回 TRUE。  
@@ -214,8 +214,8 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 要检索按钮的命令 ID。  
+*uiCmd*<br/>
+[in]要检索按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
  第一个`CMFCToolBarDateTimeCtrl`具有指定的命令 ID，则为 NULL，如果未在应用程序中的对象`CMFCToolBarDateTimeCtrl`对象具有指定的命令 id。  
@@ -259,11 +259,11 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out]*timeDest*  
- 在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
+*timeDest*<br/>
+[out]在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
   
- [out]*pTimeDest*  
- 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
+*pTimeDest*<br/>
+[out]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  在第一个重载中，如果时间成功写入到非零[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象; 否则为 0。 中的第二个和第三个重载，则返回值为 dword 值，它等于在中设置的 dwFlag 成员[NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange)结构。  
@@ -289,14 +289,14 @@ static DWORD GetTimeAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定工具栏按钮的命令 id。  
+*uiCmd*<br/>
+[in]指定工具栏按钮的命令 id。  
   
- [out]*timeDest*  
- 在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
+*timeDest*<br/>
+[out]在第一个重载[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)将收到系统时间信息的对象。 在第二个重载中， [CTime](../../atl-mfc-shared/reference/ctime-class.md)将收到系统时间信息的对象。  
   
- [out]*pTimeDest*  
- 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
+*pTimeDest*<br/>
+[out]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，以接收系统时间信息。 不能为 NULL。  
   
 ### <a name="return-value"></a>返回值  
  如果框架找不到匹配的命令 ID 的工具栏按钮*uiCmd*，返回值是在第一个重载中，零和 GDT_NONE 中其他重载。 如果找到工具栏按钮，则返回值是从调用的返回值相同[CMFCToolBarDateTimeCtrl::GetTime](#gettime)该按钮。 返回值为零或 GDT_NONE 可能找到按钮时，它指示在调用`GetTime`未返回某些其他原因是有效的日期。  
@@ -325,8 +325,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iNotifyCode*  
- 与命令相关联的通知消息。  
+*iNotifyCode*<br/>
+[in]与命令相关联的通知消息。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理 WM_COMMAND 消息或 FALSE 以指示消息应由在父级工具栏，则为 TRUE。  
@@ -356,8 +356,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParent*  
- 新的父窗口。  
+*pWndParent*<br/>
+[in]新的父窗口。  
   
 ### <a name="remarks"></a>备注  
  此方法重写基类实现 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 通过重新创建内部`CMFCToolBarDateTimeCtrlImpl`对象。  
@@ -372,11 +372,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWnd*  
- 未使用。  
+*pWnd*<br/>
+[in]未使用。  
   
- [in]*bDelay*  
- 未使用。  
+*bDelay*<br/>
+[in]未使用。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理单击消息时为非零值否则为 0。  
@@ -394,11 +394,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 所显示的按钮的设备上下文。  
+*pDC*<br/>
+[in]所显示的按钮的设备上下文。  
   
- [in]*nCtlColor*  
- 未使用。  
+*nCtlColor*<br/>
+[in]未使用。  
   
 ### <a name="return-value"></a>返回值  
  句柄全局 framework 用来绘制按钮背景的画笔。  
@@ -438,8 +438,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bShow*  
- 指定的按钮是否可见。 如果此参数为 TRUE，则按钮可见。 否则，该按钮不可见。  
+*bShow*<br/>
+[in]指定的按钮是否可见。 如果此参数为 TRUE，则按钮可见。 否则，该按钮不可见。  
   
 ### <a name="remarks"></a>备注  
  此方法扩展的基类实现 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 通过显示按钮，如果*bShow*为 TRUE。 否则，此方法将隐藏按钮。  
@@ -452,8 +452,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iSize*  
- 新按钮，以像素为单位的宽度。  
+*iSize*<br/>
+[in]新按钮，以像素为单位的宽度。  
   
 ### <a name="remarks"></a>备注  
  此方法重写默认类实现 ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) 通过更新的大小和位置的内部`CMFCToolBarDateTimeCtrlImpl`对象。  
@@ -470,17 +470,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pWndParent*  
- 父窗口中。  
+*pWndParent*<br/>
+[in]父窗口中。  
   
- [in]*iButtonIndex*  
- 父按钮集合中按钮的从零开始的索引。  
+*iButtonIndex*<br/>
+[in]父按钮集合中按钮的从零开始的索引。  
   
- [in]*wndToolTip*  
- 显示工具提示文本的控件。  
+*wndToolTip*<br/>
+[in]显示工具提示文本的控件。  
   
- [out]*str*  
- 一个`CString`对象，它接收的已更新的工具提示文本。  
+*str*<br/>
+[out]一个`CString`对象，它接收的已更新的工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
  此方法将更新的工具提示文本; 如果非零值否则为 0。  
@@ -498,11 +498,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*timeNew*  
- 在第一个版本中，对引用[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
+*timeNew*<br/>
+[in]在第一个版本中，对引用[COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
   
- [in]*pTimeNew*  
- 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
+*pTimeNew*<br/>
+[in]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -528,14 +528,14 @@ static BOOL SetTimeAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*uiCmd*  
- 指定工具栏按钮的命令 id。  
+*uiCmd*<br/>
+[in]指定工具栏按钮的命令 id。  
   
- [in]*timeNew*  
- 在第一个版本中， [COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
+*timeNew*<br/>
+[in]在第一个版本中， [COleDateTime 类](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含将控件设置的时间。 在第二个版本中，一个指向[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含将控件设置的时间。  
   
- [in]*pTimeNew*  
- 一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
+*pTimeNew*<br/>
+[in]一个指向[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含将控件设置的时间。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  

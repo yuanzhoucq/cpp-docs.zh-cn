@@ -21,57 +21,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7473bed5e4bf973dcea4d186e9b5b3367fb03ff1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880354"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109335"
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据交换宏
-这些宏执行注册表数据交换操作。  
-  
-|||  
-|-|-|  
-|[BEGIN_RDX_MAP](#begin_rdx_map)|标记注册表数据交换映射的开始。|  
-|[END_RDX_MAP](#end_rdx_map)|将标记注册表数据交换映射的结尾。|  
-|[RDX_BINARY](#rdx_binary)|BYTE 类型的指定的成员变量相关联的指定的注册表项。|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|将指定的注册表项与指定的成员类型的变量的 CString 相关联。|  
-|[RDX_DWORD](#rdx_dword)|指定的注册表条目相关联的指定的成员变量的类型为 DWORD。|  
+
+这些宏执行注册表数据交换操作。
+
+|||
+|-|-|
+|[BEGIN_RDX_MAP](#begin_rdx_map)|标记注册表数据交换映射的开始。|
+|[END_RDX_MAP](#end_rdx_map)|将标记注册表数据交换映射的结尾。|
+|[RDX_BINARY](#rdx_binary)|BYTE 类型的指定的成员变量相关联的指定的注册表项。|
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|将指定的注册表项与指定的成员类型的变量的 CString 相关联。|
+|[RDX_DWORD](#rdx_dword)|指定的注册表条目相关联的指定的成员变量的类型为 DWORD。|
 |[RDX_TEXT](#rdx_text)|将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。|  
 
-## <a name="requirements"></a>要求  
- **标头：** atlplus.h  
-   
-##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
- 标记注册表数据交换映射的开始。  
-  
+## <a name="requirements"></a>要求
+
+**标头：** atlplus.h
+
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP
+
+标记注册表数据交换映射的开始。
+
 ```
 BEGIN_RDX_MAP
-```  
-  
-### <a name="remarks"></a>备注  
- 在注册表数据交换映射使用以下宏来读取和写入系统注册表中的条目：  
-  
-|宏|描述|  
-|-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|BYTE 类型的指定的成员变量相关联的指定的注册表项。|  
-|[RDX_DWORD](#rdx_dword)|指定的注册表条目相关联的指定的成员变量的类型为 DWORD。|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|将指定的注册表项与指定的成员类型的变量的 CString 相关联。|  
-|[RDX_TEXT](#rdx_text)|将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。|  
-  
- 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或应使用由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数，每当你的代码需要在系统注册表之间交换数据和在 RDX 映射中指定的变量。  
-  
-##  <a name="end_rdx_map"></a>  END_RDX_MAP  
- 将标记注册表数据交换映射的结尾。  
-  
+```
+
+### <a name="remarks"></a>备注
+
+在注册表数据交换映射使用以下宏来读取和写入系统注册表中的条目：
+
+|宏|描述|
+|-----------|-----------------|
+|[RDX_BINARY](#rdx_binary)|BYTE 类型的指定的成员变量相关联的指定的注册表项。|
+|[RDX_DWORD](#rdx_dword)|指定的注册表条目相关联的指定的成员变量的类型为 DWORD。|
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|将指定的注册表项与指定的成员类型的变量的 CString 相关联。|
+|[RDX_TEXT](#rdx_text)|将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。|
+
+全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或应使用由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数，每当你的代码需要在系统注册表之间交换数据和在 RDX 映射中指定的变量。
+
+##  <a name="end_rdx_map"></a>  END_RDX_MAP
+
+将标记注册表数据交换映射的结尾。
+
 ```
 END_RDX_MAP
-```  
-  
-##  <a name="rdx_binary"></a>  RDX_BINARY  
- BYTE 类型的指定的成员变量相关联的指定的注册表项。  
-  
+```
+
+##  <a name="rdx_binary"></a>  RDX_BINARY
+
+BYTE 类型的指定的成员变量相关联的指定的注册表项。
+
 ```
 RDX_BINARY(
     rootkey, 
@@ -79,30 +85,33 @@ RDX_BINARY(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>参数  
- *Rootkey*  
- 注册表项根。  
-  
- *子项*  
- 注册表子项中。  
-  
- *valuename*  
- 注册表项中。  
-  
- *成员*  
- 要与指定的注册表项相关联的成员变量。  
-  
- *member_size*  
- 以字节为单位的成员变量的大小。  
-  
-### <a name="remarks"></a>备注  
- 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。  
-  
-##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
- 将指定的注册表项与指定的成员类型的变量的 CString 相关联。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*Rootkey*<br/>
+注册表项根。
+
+*子项*<br/>
+注册表子项中。
+
+*valuename*<br/>
+注册表项中。
+
+*成员*<br/>
+要与指定的注册表项相关联的成员变量。
+
+*member_size*<br/>
+以字节为单位的成员变量的大小。
+
+### <a name="remarks"></a>备注
+
+此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。
+
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT
+
+将指定的注册表项与指定的成员类型的变量的 CString 相关联。
+
 ```
 RDX_CSTRING_TEXT(
     rootkey, 
@@ -110,30 +119,33 @@ RDX_CSTRING_TEXT(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>参数  
- *Rootkey*  
- 注册表项根。  
-  
- *子项*  
- 注册表子项中。  
-  
- *valuename*  
- 注册表项中。  
-  
- *成员*  
- 要与指定的注册表项相关联的成员变量。  
-  
- *member_size*  
- 以字节为单位的成员变量的大小。  
-  
-### <a name="remarks"></a>备注  
- 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。  
-  
-##  <a name="rdx_dword"></a>  RDX_DWORD  
- 指定的注册表条目相关联的指定的成员变量的类型为 DWORD。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*Rootkey*<br/>
+注册表项根。
+
+*子项*<br/>
+注册表子项中。
+
+*valuename*<br/>
+注册表项中。
+
+*成员*<br/>
+要与指定的注册表项相关联的成员变量。
+
+*member_size*<br/>
+以字节为单位的成员变量的大小。
+
+### <a name="remarks"></a>备注
+
+此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。
+
+##  <a name="rdx_dword"></a>  RDX_DWORD
+
+指定的注册表条目相关联的指定的成员变量的类型为 DWORD。
+
 ```
 RDX_DWORD(
     rootkey, 
@@ -141,30 +153,33 @@ RDX_DWORD(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>参数  
- *Rootkey*  
- 注册表项根。  
-  
- *子项*  
- 注册表子项中。  
-  
- *valuename*  
- 注册表项中。  
-  
- *成员*  
- 要与指定的注册表项相关联的成员变量。  
-  
- *member_size*  
- 以字节为单位的成员变量的大小。  
-  
-### <a name="remarks"></a>备注  
- 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。  
-  
-##  <a name="rdx_text"></a>  RDX_TEXT  
- 将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*Rootkey*<br/>
+注册表项根。
+
+*子项*<br/>
+注册表子项中。
+
+*valuename*<br/>
+注册表项中。
+
+*成员*<br/>
+要与指定的注册表项相关联的成员变量。
+
+*member_size*<br/>
+以字节为单位的成员变量的大小。
+
+### <a name="remarks"></a>备注
+
+此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。
+
+##  <a name="rdx_text"></a>  RDX_TEXT
+
+将指定的注册表项与指定的成员类型的变量的 TCHAR 相关联。
+
 ```
 RDX_TEXT(
     rootkey, 
@@ -172,34 +187,31 @@ RDX_TEXT(
     valuename, 
     member, 
     member_size )
-```  
-  
-### <a name="parameters"></a>参数  
- *Rootkey*  
- 注册表项根。  
-  
- *子项*  
- 注册表子项中。  
-  
- *valuename*  
- 注册表项中。  
-  
- *成员*  
- 要与指定的注册表项相关联的成员变量。  
-  
- *member_size*  
- 以字节为单位的成员变量的大小。  
-  
-### <a name="remarks"></a>备注  
- 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。  
-  
-## <a name="see-also"></a>请参阅  
- [宏](../../atl/reference/atl-macros.md)   
- [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
+```
 
+### <a name="parameters"></a>参数
 
+*Rootkey*<br/>
+注册表项根。
 
+*子项*<br/>
+注册表子项中。
 
+*valuename*<br/>
+注册表项中。
 
+*成员*<br/>
+要与指定的注册表项相关联的成员变量。
 
+*member_size*<br/>
+以字节为单位的成员变量的大小。
+
+### <a name="remarks"></a>备注
+
+此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏结合使用，若要将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或用于执行系统注册表和成员变量之间的数据交换由 BEGIN_RDX_MAP 和 END_RDX_MAP 宏，创建具有相同名称的成员函数在 RDX 图中。
+
+## <a name="see-also"></a>请参阅
+
+[宏](../../atl/reference/atl-macros.md)<br/>
+[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

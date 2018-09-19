@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2670 |Microsoft 文档
+title: 编译器错误 C2670 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579e22906e2acfa2d8aa3f2952ae05a7a44a5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c3c41ff5e8aba8011a4e82c870f53a3f65455b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083179"
 ---
 # <a name="compiler-error-c2670"></a>编译器错误 C2670
-identifier： 函数模板不能从类型 type 转换参数号  
-  
- 所需的类型，无法转换参数。  
-  
- 如果创建显式转换，则可能会修复此错误。
+
+identifier： 函数模板不能从类型 type 转换参数编号
+
+为所需类型，无法转换参数。
+
+如果您创建的显式转换，可能会修复此错误。

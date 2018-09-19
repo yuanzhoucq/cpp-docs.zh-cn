@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023938"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 定义文档模板基本功能的抽象基类。  
@@ -167,17 +167,15 @@ CDocTemplate (
  指定与文档类型一起使用的资源 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
  字符串资源都包括最多七个 \n 字符分隔的子字符串 （'\n' 字符需要作为一个占位符，如果子字符串未包含; 但是，不需要尾随的 '\n' 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[GetDocString](#getdocstring)。 应用程序的资源文件中找到此字符串资源。 例如：  
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  请注意，字符串开头的 '\n' 字符;这是因为第一个子字符串不用于 MDI 应用程序，因此不包含。 您可以编辑此字符串使用字符串编辑器;整个字符串不为七个不同的项作为单个条目在字符串编辑器中，将出现。  
   
  *pDocClass*  
@@ -431,11 +429,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszPathName*  
- 指向包含要打开的文档的文件的路径。  
+*lpszPathName*<br/>
+[in]指向包含要打开的文档的文件的路径。  
   
- [in]*bAddToMRU*  
- TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。  
+*bAddToMRU*<br/>
+[in]TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。  
   
 ### <a name="return-value"></a>返回值  
  对其文件由的文档的指针*lpszPathName*;如果不成功，则为 NULL。  

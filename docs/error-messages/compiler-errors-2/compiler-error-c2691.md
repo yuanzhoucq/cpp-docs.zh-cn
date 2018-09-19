@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2691 |Microsoft 文档
+title: 编译器错误 C2691 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc6a20aaf3cf9d634d7426b0b7b59f624e184d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe048537ca1d504587fe64fdd5f9b5a43af7c6e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100560"
 ---
 # <a name="compiler-error-c2691"></a>编译器错误 C2691
-数据类型： 托管或 WinRTarray 不能具有此元素类型  
-  
- 托管数组元素或 WinRT 数组元素的类型可以是值类型或引用类型。  
-  
- 以下示例生成 C2691：  
-  
-```  
-// C2691a.cpp  
-// compile with: /clr  
-class A {};  
-  
-int main() {  
-   array<A>^ a1 = gcnew array<A>(20);   // C2691  
-   array<int>^ a2 = gcnew array<int>(20);   // value type OK  
-}  
-```  
+
+数据类型： 托管或 WinRTarray 不能具有此元素类型
+
+托管数组元素或 WinRT 数组元素的类型可以是值类型或引用类型。
+
+以下示例生成 C2691：
+
+```
+// C2691a.cpp
+// compile with: /clr
+class A {};
+
+int main() {
+   array<A>^ a1 = gcnew array<A>(20);   // C2691
+   array<int>^ a2 = gcnew array<int>(20);   // value type OK
+}
+```

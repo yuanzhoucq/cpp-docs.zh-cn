@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09767927a91c61f564e2013bf1b3e0930821193
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c0e42cd14c5707f728f5577a77b2dd613c5ef2a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571925"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709594"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 迁移的常见问题
 
@@ -110,4 +110,4 @@ MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编�
 
 ## <a name="see-also"></a>请参阅
 
-[为 ARM 处理器配置 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+[为 ARM 处理器配置 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)

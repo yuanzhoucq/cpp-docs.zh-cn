@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202390"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710809"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -274,17 +274,17 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-命令控件标识号。
+*nCommandControlID*<br/>
+[in]命令控件标识号。
 
-[in]*strCaption*  
-字符串的`CTaskDialog`向用户显示。 使用此字符串用于说明用途的命令。
+*strCaption*<br/>
+[in]字符串的`CTaskDialog`向用户显示。 使用此字符串用于说明用途的命令。
 
-[in]*bEnabled*  
-一个布尔参数，指示新建按钮启用或禁用。
+*bEnabled*<br/>
+[in]一个布尔参数，指示新建按钮启用或禁用。
 
-[in]*bRequiresElevation*  
-一个布尔参数，指示命令是否需要提升。
+*bRequiresElevation*<br/>
+[in]一个布尔参数，指示命令是否需要提升。
 
 ### <a name="remarks"></a>备注
 
@@ -309,14 +309,14 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-单选按钮的标识号。
+*nRadioButtonID*<br/>
+[in]单选按钮的标识号。
 
-[in]*strCaption*  
-字符串的`CTaskDialog`旁边的单选按钮将显示。
+*strCaption*<br/>
+[in]字符串的`CTaskDialog`旁边的单选按钮将显示。
 
-[in]*bEnabled*  
-一个布尔参数，指示是否启用单选按钮。
+*bEnabled*<br/>
+[in]一个布尔参数，指示是否启用单选按钮。
 
 ### <a name="remarks"></a>备注
 
@@ -339,8 +339,8 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-要单击的控件的命令 ID。
+*nCommandControlID*<br/>
+[in]要单击的控件的命令 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -357,8 +357,8 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-单选按钮，可单击的 ID。
+*nRadioButtonID*<br/>
+[in]单选按钮，可单击的 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -391,29 +391,29 @@ CTaskDialog(
 
 ### <a name="parameters"></a>参数
 
-[in]*strContent*  
-要使用的内容的字符串`CTaskDialog`。
+*strContent*<br/>
+[in]要使用的内容的字符串`CTaskDialog`。
 
-[in]*strMainInstruction*  
-主要说明`CTaskDialog`。
+*strMainInstruction*<br/>
+[in]主要说明`CTaskDialog`。
 
-[in]*strTitle*  
-标题`CTaskDialog`。
+*strTitle*<br/>
+[in]标题`CTaskDialog`。
 
-[in]*nCommonButtons*  
-常见的按钮将添加到一个掩码`CTaskDialog`。
+*nCommonButtons*<br/>
+[in]常见的按钮将添加到一个掩码`CTaskDialog`。
 
-[in]*nTaskDialogOptions*  
-要使用的选项集`CTaskDialog`。
+*nTaskDialogOptions*<br/>
+[in]要使用的选项集`CTaskDialog`。
 
-[in]*strFooter*  
-要用作页脚的字符串。
+*strFooter*<br/>
+[in]要用作页脚的字符串。
 
-[in]*nIDCommandControlsFirst*  
-第一个命令的字符串 ID。
+*nIDCommandControlsFirst*<br/>
+[in]第一个命令的字符串 ID。
 
-[in]*nIDCommandControlsLast*  
-最后一个命令字符串 ID。
+*nIDCommandControlsLast*<br/>
+[in]最后一个命令字符串 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -437,8 +437,8 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>参数
 
-[in]*hParent*  
-父窗口`CTaskDialog`。
+*hParent*<br/>
+[in]父窗口`CTaskDialog`。
 
 ### <a name="return-value"></a>返回值
 
@@ -482,8 +482,8 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nButtonId*  
-标准 Windows 按钮值。
+*nButtonId*<br/>
+[in]标准 Windows 按钮值。
 
 ### <a name="return-value"></a>返回值
 
@@ -499,8 +499,8 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>参数
 
-[in]*nFlag*  
-常见的按钮类型与关联`CTaskDialog`类。
+*nFlag*<br/>
+[in]常见的按钮类型与关联`CTaskDialog`类。
 
 ### <a name="return-value"></a>返回值
 
@@ -592,8 +592,8 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-若要测试的命令按钮控件或按钮的 ID。
+*nCommandControlID*<br/>
+[in]若要测试的命令按钮控件或按钮的 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -619,8 +619,8 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-要测试的单选按钮的 ID。
+*nRadioButtonID*<br/>
+[in]要测试的单选按钮的 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -666,11 +666,11 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>参数
 
-[in]*nIDCommandControlsFirst*  
-第一个命令的字符串 ID。
+*nIDCommandControlsFirst*<br/>
+[in]第一个命令的字符串 ID。
 
-[in]*nIDCommandControlsLast*  
-最后一个命令字符串 ID。
+*nIDCommandControlsLast*<br/>
+[in]最后一个命令字符串 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -694,11 +694,11 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>参数
 
-[in]*nIDRadioButtonsFirst*  
-第一个单选按钮的字符串 ID。
+*nIDRadioButtonsFirst*<br/>
+[in]第一个单选按钮的字符串 ID。
 
-[in]*nIDRadioButtonsLast*  
-最后一个单选按钮的字符串 ID。
+*nIDRadioButtonsLast*<br/>
+[in]最后一个单选按钮的字符串 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -721,8 +721,8 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>参数
 
-[in]*oTaskDialog*  
-`CTaskDialog`接收焦点。
+*oTaskDialog*<br/>
+[in]`CTaskDialog`接收焦点。
 
 ### <a name="remarks"></a>备注
 
@@ -738,8 +738,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-用户选择命令按钮控件的 ID。
+*nCommandControlID*<br/>
+[in]用户选择命令按钮控件的 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -791,8 +791,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>参数
 
-[in]*bExpanded*  
-一个非零值表示显示额外信息;0 指示隐藏的额外信息。
+*bExpanded*<br/>
+[in]一个非零值表示显示额外信息;0 指示隐藏的额外信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -828,8 +828,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>参数
 
-[in]*strHref*  
-表示超链接的字符串。
+*strHref*<br/>
+[in]表示超链接的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -883,8 +883,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-用户已单击单选按钮控件的 ID。
+*nRadioButtonID*<br/>
+[in]用户已单击单选按钮控件的 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -904,8 +904,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>参数
 
-[in]*lTime*  
-时间 （毫秒） 以来`CTaskDialog`创建或已重置计时器。
+*lTime*<br/>
+[in]时间 （毫秒） 以来`CTaskDialog`创建或已重置计时器。
 
 ### <a name="return-value"></a>返回值
 
@@ -925,8 +925,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>参数
 
-[in]*bChecked*  
-TRUE 表示验证复选框处于选中状态，FALSE 表示不是。
+*bChecked*<br/>
+[in]TRUE 表示验证复选框处于选中状态，FALSE 表示不是。
 
 ### <a name="return-value"></a>返回值
 
@@ -973,14 +973,14 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-要更新的命令控件的 ID。
+*nCommandControlID*<br/>
+[in]要更新的命令控件的 ID。
 
-[in]*bEnabled*  
-一个布尔参数，指示指定的命令按钮控件是启用还是禁用。
+*bEnabled*<br/>
+[in]一个布尔参数，指示指定的命令按钮控件是启用还是禁用。
 
-[in]*bRequiresElevation*  
-一个布尔参数，指示是否指定的命令按钮控件需要提升。
+*bRequiresElevation*<br/>
+[in]一个布尔参数，指示是否指定的命令按钮控件需要提升。
 
 ### <a name="remarks"></a>备注
 
@@ -1002,11 +1002,11 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>参数
 
-[in]*nDisabledButtonMask*  
-若要禁用的常见按钮掩码。
+*nDisabledButtonMask*<br/>
+[in]若要禁用的常见按钮掩码。
 
-[in]*nElevationButtonMask*  
-需要提升的常见按钮掩码。
+*nElevationButtonMask*<br/>
+[in]需要提升的常见按钮掩码。
 
 ### <a name="remarks"></a>备注
 
@@ -1033,14 +1033,14 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>参数
 
-[in]*nButtonMask*  
-要添加到按钮的掩码`CTaskDialog`。
+*nButtonMask*<br/>
+[in]要添加到按钮的掩码`CTaskDialog`。
 
-[in]*nDisabledButtonMask*  
-若要禁用的按钮的掩码。
+*nDisabledButtonMask*<br/>
+[in]若要禁用的按钮的掩码。
 
-[in]*nElevationButtonMask*  
-需要提升的按钮的掩码。
+*nElevationButtonMask*<br/>
+[in]需要提升的按钮的掩码。
 
 ### <a name="remarks"></a>备注
 
@@ -1066,8 +1066,8 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>参数
 
-[in]*strContent*  
-要向用户显示的字符串。
+*strContent*<br/>
+[in]要向用户显示的字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -1087,8 +1087,8 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>参数
 
-[in]*nCommandControlID*  
-要成为默认命令按钮控件的 ID。
+*nCommandControlID*<br/>
+[in]要成为默认命令按钮控件的 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -1110,8 +1110,8 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-要成为默认单选按钮的 ID。
+*nRadioButtonID*<br/>
+[in]要成为默认单选按钮的 ID。
 
 ### <a name="remarks"></a>备注
 
@@ -1133,8 +1133,8 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>参数
 
-[in]*nWidth*  
-对话框中，以像素为单位的宽度。
+*nWidth*<br/>
+[in]对话框中，以像素为单位的宽度。
 
 ### <a name="remarks"></a>备注
 
@@ -1159,14 +1159,14 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>参数
 
-[in]*strExpandedInformation*  
-字符串的`CTaskDialog`显示在对话框中的主要部分中，当用户单击展开按钮。
+*strExpandedInformation*<br/>
+[in]字符串的`CTaskDialog`显示在对话框中的主要部分中，当用户单击展开按钮。
 
-[in]*strCollapsedLabel*  
-字符串的`CTaskDialog`展开的区域处于折叠状态时显示展开按钮的旁边。
+*strCollapsedLabel*<br/>
+[in]字符串的`CTaskDialog`展开的区域处于折叠状态时显示展开按钮的旁边。
 
-[in]*strExpandedLabel*  
-字符串的`CTaskDialog`显示展开的区域时显示展开按钮的旁边。
+*strExpandedLabel*<br/>
+[in]字符串的`CTaskDialog`显示展开的区域时显示展开按钮的旁边。
 
 ### <a name="remarks"></a>备注
 
@@ -1189,11 +1189,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>参数
 
-[in]*hFooterIcon*  
-新建图标为`CTaskDialog`。
+*hFooterIcon*<br/>
+[in]新建图标为`CTaskDialog`。
 
-[in]*lpszFooterIcon*  
-新建图标为`CTaskDialog`。
+*lpszFooterIcon*<br/>
+[in]新建图标为`CTaskDialog`。
 
 ### <a name="remarks"></a>备注
 
@@ -1217,8 +1217,8 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>参数
 
-[in]*strFooterText*  
-新的页脚文本。
+*strFooterText*<br/>
+[in]新的页脚文本。
 
 ### <a name="remarks"></a>备注
 
@@ -1239,11 +1239,11 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>参数
 
-[in]*hMainIcon*  
-新建图标。
+*hMainIcon*<br/>
+[in]新建图标。
 
-[in]*lpszMainIcon*  
-新建图标。
+*lpszMainIcon*<br/>
+[in]新建图标。
 
 ### <a name="remarks"></a>备注
 
@@ -1265,8 +1265,8 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>参数
 
-[in]*strInstructions*  
-新的主要说明。
+*strInstructions*<br/>
+[in]新的主要说明。
 
 ### <a name="remarks"></a>备注
 
@@ -1286,8 +1286,8 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>参数
 
-[in]*nOptionFlag*  
-将该组标志用于`CTaskDialog`。
+*nOptionFlag*<br/>
+[in]将该组标志用于`CTaskDialog`。
 
 ### <a name="remarks"></a>备注
 
@@ -1330,11 +1330,11 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>参数
 
-[in]*bEnabled*  
-为 true 以启用字幕条中;FALSE 可禁用字幕栏并将其从删除`CTaskDialog`。
+*bEnabled*<br/>
+[in]为 true 以启用字幕条中;FALSE 可禁用字幕栏并将其从删除`CTaskDialog`。
 
-[in]*nMarqueeSpeed*  
-一个整数，指示字幕条的速度。
+*nMarqueeSpeed*<br/>
+[in]一个整数，指示字幕条的速度。
 
 ### <a name="remarks"></a>备注
 
@@ -1358,8 +1358,8 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>参数
 
-[in]*nProgressPos*  
-进度条的位置。
+*nProgressPos*<br/>
+[in]进度条的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -1381,11 +1381,11 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>参数
 
-[in]*nRangeMin*  
-进度栏的下限。
+*nRangeMin*<br/>
+[in]进度栏的下限。
 
-[in]*nRangeMax*  
-进度条的上限。
+*nRangeMax*<br/>
+[in]进度条的上限。
 
 ### <a name="remarks"></a>备注
 
@@ -1409,8 +1409,8 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>参数
 
-[in]*nState*  
-进度栏的状态。 请参阅备注部分中有关可能的值。
+*nState*<br/>
+[in]进度栏的状态。 请参阅备注部分中有关可能的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1442,11 +1442,11 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>参数
 
-[in]*nRadioButtonID*  
-单选按钮控件的 ID。
+*nRadioButtonID*<br/>
+[in]单选按钮控件的 ID。
 
-[in]*bEnabled*  
-为 true 以启用单选按钮中;如果为 FALSE 来禁用单选按钮。
+*bEnabled*<br/>
+[in]为 true 以启用单选按钮中;如果为 FALSE 来禁用单选按钮。
 
 ### <a name="remarks"></a>备注
 
@@ -1466,8 +1466,8 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>参数
 
-[in]*bChecked*  
-如果为验证复选框选择时`CTaskDialog`会显示出来;为 FALSE，则具有验证复选框未选中时`CTaskDialog`显示。
+*bChecked*<br/>
+[in]如果为验证复选框选择时`CTaskDialog`会显示出来;为 FALSE，则具有验证复选框未选中时`CTaskDialog`显示。
 
 ### <a name="example"></a>示例
 
@@ -1483,8 +1483,8 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>参数
 
-[in]*strVerificationText*  
-此方法显示验证复选框旁边的文本。
+*strVerificationText*<br/>
+[in]此方法显示验证复选框旁边的文本。
 
 ### <a name="remarks"></a>备注
 
@@ -1504,8 +1504,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>参数
 
-[in]*strWindowTitle*  
-新标题`CTaskDialog`。
+*strWindowTitle*<br/>
+[in]新标题`CTaskDialog`。
 
 ### <a name="remarks"></a>备注
 
@@ -1531,29 +1531,29 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>参数
 
-[in]*strContent*  
-要使用的内容的字符串`CTaskDialog`。
+*strContent*<br/>
+[in]要使用的内容的字符串`CTaskDialog`。
 
-[in]*strMainInstruction*  
-主要说明`CTaskDialog`。
+*strMainInstruction*<br/>
+[in]主要说明`CTaskDialog`。
 
-[in]*strTitle*  
-标题`CTaskDialog`。
+*strTitle*<br/>
+[in]标题`CTaskDialog`。
 
-[in]*nIDCommandControlsFirst*  
-第一个命令的字符串 ID。
+*nIDCommandControlsFirst*<br/>
+[in]第一个命令的字符串 ID。
 
-[in]*nIDCommandControlsLast*  
-最后一个命令字符串 ID。
+*nIDCommandControlsLast*<br/>
+[in]最后一个命令字符串 ID。
 
-[in]*nCommonButtons*  
-要添加到按钮的掩码`CTaskDialog`。
+*nCommonButtons*<br/>
+[in]要添加到按钮的掩码`CTaskDialog`。
 
-[in]*nTaskDialogOptions*  
-要使用的选项集`CTaskDialog`。
+*nTaskDialogOptions*<br/>
+[in]要使用的选项集`CTaskDialog`。
 
-[in]*strFooter*  
-要用作页脚的字符串。
+*strFooter*<br/>
+[in]要用作页脚的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -1589,20 +1589,20 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>参数
 
-[in]*hwnd*  
-句柄`m_hWnd`结构`CTaskDialog`。
+*hwnd*<br/>
+[in]句柄`m_hWnd`结构`CTaskDialog`。
 
-[in]*uNotification*  
-指定生成的消息的通知代码。
+*uNotification*<br/>
+[in]指定生成的消息的通知代码。
 
-[in]*wParam*  
-有关消息的详细信息。
+*wParam*<br/>
+[in]有关消息的详细信息。
 
-[in]*lParam*  
-有关消息的详细信息。
+*lParam*<br/>
+[in]有关消息的详细信息。
 
-[in]*dwRefData*  
-一个指向`CTaskDialog`回调消息适用于的对象。
+*dwRefData*<br/>
+[in]一个指向`CTaskDialog`回调消息适用于的对象。
 
 ### <a name="return-value"></a>返回值
 

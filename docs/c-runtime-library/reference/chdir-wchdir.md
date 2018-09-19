@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064621"
 ---
 # <a name="chdir-wchdir"></a>_chdir、_wchdir
 
@@ -71,19 +71,19 @@ int _wchdir(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径， **errno**设置为**ENOENT**。 如果*dirname*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
+如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径， **errno**设置为**ENOENT**。 如果*dirname*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
 
 ## <a name="remarks"></a>备注
 
-**_Chdir**函数更改为指定的目录的当前工作目录*dirname*。 *Dirname*参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在中指定新的驱动器号*dirname*，也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
+**_Chdir**函数将当前的工作目录更改到指定的目录*dirname*。 *Dirname*参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在中指定新的驱动器号*dirname*，也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
 
 ```C
 _chdir("c:\temp");
 ```
 
-当你使用的可选的反斜杠字符 (**&#92;**) 在路径中，你必须将放置两个反斜杠 (**&#92;&#92;**) 中的 C 字符串文本来表示单个反斜杠 (**&#92;**).
+当使用可选的反斜杠字符 (**&#92;**) 中的路径，则必须将放置两个反斜杠 (**&#92;&#92;**) 中的 C 字符串来表示单个反斜杠 (**&#92;**).
 
-**_wchdir**是宽字符版本的 **_chdir**; *dirname*参数 **_wchdir**是宽字符字符串。 **_wchdir**和 **_chdir**否则具有相同行为。
+**_wchdir**是宽字符版本 **_chdir**; *dirname*参数 **_wchdir**是宽字符字符串。 **_wchdir**并 **_chdir**行为相同。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：
 
@@ -93,7 +93,7 @@ _chdir("c:\temp");
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> 或 \<wchar.h>|\<errno.h>|
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

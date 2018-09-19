@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197955"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 属性页：高级
 MIDL 文件夹中的“高级”属性页指定以下 MIDL 编译器选项：  
   
--   启用错误检查 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   启用错误检查 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查分配 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查分配 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查界限 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查界限 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查枚举范围 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查枚举范围 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查引用指针 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查引用指针 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   检查存根(Stub)数据 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   检查存根(Stub)数据 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   验证参数 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   验证参数 ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   结构成员对齐 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   结构成员对齐 ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   重定向输出 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   重定向输出 ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C 预处理选项 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C 预处理选项 ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   取消定义预处理器定义 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   取消定义预处理器定义 ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust 仅适用于生成 Windows 2000 或更高版本计算机。 如果生成 ATL 项目并想使用 /robust，请在 dlldatax.c 文件中更改此行：  
   

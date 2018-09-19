@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956877"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724602"
 ---
 # <a name="chartraits-struct"></a>char_traits 结构
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>参数
 
-*CharType*元素数据类型。
+*CharType*<br/>
+元素数据类型。
 
 ## <a name="remarks"></a>备注
 
@@ -116,11 +117,14 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom*其值将被分配的字符。
 
-*_CharTo*分配字符值的元素。
+*_CharTo*<br/>
+要为其分配字符值的元素。
 
-* strTo * 其初始元素是要分配字符值的字符串或字符数组。
+*strTo*<br/>
+要对其初始元素分配字符值的字符串或字符数组。
 
-*_Num*要为其分配值的元素数。
+*_Num*<br/>
+要为其分配值的元素数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -195,11 +199,14 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>参数
 
-* str1 * 两个字符串的第一个要进行比较。
+*str1*<br/>
+要进行比较的两个字符串中的第一个。
 
-* str2 * 两个字符串的第二个，要进行比较。
+*str2*<br/>
+要进行比较的两个字符串中的第二个。
 
-*_Num*要进行比较的字符串中的元素数。
+*_Num*<br/>
+要比较的字符串中的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -258,11 +265,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>参数
 
-*待办*用于接收复制的序列的字符的字符串或字符数组的开头处的元素。
+*待办*<br/>
+用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*_From*要复制的源字符串或字符数组的开头处的元素。
+*_From*<br/>
+要复制的源字符串或字符数组的开头处的元素。
 
-*_Num*要复制的元素数。
+*_Num*<br/>
+要复制的元素的数量。
 
 ### <a name="return-value"></a>返回值
 
@@ -317,13 +327,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*dest*用于接收复制的序列的字符的字符串或字符数组。
+*dest*<br/>
+用于接收复制的字符序列的字符串或字符数组。
 
-*dest_size*的大小*dest*。 如果`char_type`是**char**，则此大小以字节为单位。 如果`char_type`是**wchar_t**，则此大小以字为单位。
+*dest_size*<br/>
+大小*dest*。 如果`char_type`是**char**，则此大小以字节为单位。 如果`char_type`是**wchar_t**，则此大小以字为单位。
 
-*_From*要复制的源字符串或字符数组。
+*_From*<br/>
+要复制的源字符串或字符数组。
 
-*计数*要复制的元素数。
+*count*<br/>
+要复制的元素的数量。
 
 ### <a name="return-value"></a>返回值
 
@@ -425,9 +439,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*两个字符的第一个要测试是否相等。
+*_Ch1*<br/>
+要测试是否相等的两个字符中的第一个。
 
-*_Ch2*两个字符的第二个，测试是否相等。
+*_Ch2*<br/>
+要测试是否相等的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
 
@@ -483,9 +499,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*的两个字符的第一个要测试是否等于`int_type`s。
+*_Ch1*<br/>
+两个字符的第一个要测试是否等于`int_type`s。
 
-*_Ch2*两个字符的第二个，若要测试是否等于`int_type`s。
+*_Ch2*<br/>
+要测试是否等于 `int_type` 的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
 
@@ -551,9 +569,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::find
@@ -568,11 +586,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>参数
 
-*str*中要搜索的字符串的第一个字符。
+*str*<br/>
+要搜索的字符串中的第一个字符。
 
-*_Num*数目的位置，从第一个要在其中搜索的范围内。
+*_Num*<br/>
+要搜索范围内的位置数，从第一位开始计数。
 
-*_Ch*要在范围中搜索的字符。
+*_Ch*<br/>
+要在范围中搜索的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -616,7 +637,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +667,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>参数
 
-*str*其长度是要测量的 C-字符串。
+*str*<br/>
+要测量其长度的 C 字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -688,9 +710,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*两个字符的第一个要用于测试小于。
+*_Ch1*<br/>
+要测试是否小于的两个字符中的第一个。
 
-*_Ch2*两个字符的第二个，要用于测试小于。
+*_Ch2*<br/>
+要测试是否小于的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
 
@@ -749,11 +773,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>参数
 
-*待办*用于接收复制的序列的字符的字符串或字符数组的开头处的元素。
+*待办*<br/>
+用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*_From*要复制的源字符串或字符数组的开头处的元素。
+*_From*<br/>
+要复制的源字符串或字符数组的开头处的元素。
 
-*_Num*要从源字符串复制的元素数。
+*_Num*<br/>
+要从源字符串复制的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -823,13 +850,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>参数
 
-*dest*用于接收复制的序列的字符的字符串或字符数组的开头处的元素。
+*dest*<br/>
+用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*dest_size*的大小*dest*。 如果`char_type`是**char**，则表明这是以字节为单位。 如果`char_type`是**wchar_t**，则以字为单位。
+*dest_size*<br/>
+大小*dest*。 如果`char_type`是**char**，则表明这是以字节为单位。 如果`char_type`是**wchar_t**，则以字为单位。
 
-*_From*要复制的源字符串或字符数组的开头处的元素。
+*_From*<br/>
+要复制的源字符串或字符数组的开头处的元素。
 
-*计数*要从源字符串复制的元素数。
+*count*<br/>
+要从源字符串复制的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -895,7 +926,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*表示为字符`int_type`要测试其是否为 EOF 字符。
+*_Ch*<br/>
+表示为 `int_type` 且要测试其是否为 EOF 字符的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1002,7 +1034,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch* `int_type`字符来表示为`char_type`。
+*_Ch*<br/>
+要表示为 `char_type` 的 `int_type` 字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1107,7 +1140,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch* `char_type`字符来表示为`int_type`。
+*_Ch*<br/>
+表示为 `int_type` 的 `char_type` 字符。
 
 ### <a name="return-value"></a>返回值
 

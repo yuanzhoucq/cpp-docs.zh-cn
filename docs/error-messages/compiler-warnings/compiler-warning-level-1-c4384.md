@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4384 |Microsoft 文档
+title: 编译器警告 （等级 1） C4384 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d24436270156dc86ad074cf8fee8d0272e83c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54d913aac76f767728bbe7b4a31d4ea1c8bbd96d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026993"
 ---
 # <a name="compiler-warning-level-1-c4384"></a>编译器警告（等级 1）C4384
-\#仅应在全局范围内使用杂注 make_public  
-  
- [Make_public](../../preprocessor/make-public.md)杂注未正确应用。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4384。  
-  
-```  
-// C4384.cpp  
-// compile with: /c /W1  
-namespace n {  
-   #pragma make_public(N::C)   // C4384  
-   namespace N {  
-      class C {};  
-   }  
-}  
+
+\#杂注 make_public 应仅使用在全局范围内
+
+[Make_public](../../preprocessor/make-public.md)杂注未正确应用。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4384。
+
+```
+// C4384.cpp
+// compile with: /c /W1
+namespace n {
+   #pragma make_public(N::C)   // C4384
+   namespace N {
+      class C {};
+   }
+}
 ```

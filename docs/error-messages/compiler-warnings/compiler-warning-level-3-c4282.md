@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4282 |Microsoft 文档
+title: 编译器警告 （等级 3） C4282 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5c72ba0e90389bbae09473bf25454aa1901149
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1025648a71d96f758a6444984f7c682df9d7904e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080943"
 ---
 # <a name="compiler-warning-level-3-c4282"></a>编译器警告（等级 3）C4282
-然后通过类型 type  
-  
- 警告 C4281shows 此延续的**operator->** 调用自身通过`type`。
+
+然后通过类型 type
+
+警告 C4281shows 该延续的**operator->** 调用自身通过`type`。

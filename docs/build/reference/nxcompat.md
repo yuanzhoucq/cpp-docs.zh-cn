@@ -1,5 +1,5 @@
 ---
-title: -NXCOMPAT |Microsoft 文档
+title: -NXCOMPAT |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eeeb0972c4aa44db49c7394a75c6ae113d809a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69f632ab6751c80fa63a1c57973d402eab2565ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371822"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722535"
 ---
 # <a name="nxcompat"></a>/NXCOMPAT
-```  
-/NXCOMPAT[:NO]  
-```  
-  
-## <a name="remarks"></a>备注  
- 指示可执行文件已测试可与 Windows 数据执行保护功能兼容。  
-  
- 有关详细信息，请参阅 [/NXCOMPAT（与数据执行保护兼容）](../../build/reference/nxcompat-compatible-with-data-execution-prevention.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [EDITBIN 选项](../../build/reference/editbin-options.md)
+
+```
+/NXCOMPAT[:NO]
+```
+
+## <a name="remarks"></a>备注
+
+指示可执行文件进行测试，可以与 Windows 数据执行保护功能兼容。
+
+有关详细信息，请参阅 [/NXCOMPAT（与数据执行保护兼容）](../../build/reference/nxcompat-compatible-with-data-execution-prevention.md)。
+
+## <a name="see-also"></a>请参阅
+
+[EDITBIN 选项](../../build/reference/editbin-options.md)

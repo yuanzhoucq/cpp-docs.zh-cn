@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5082490b9dd2e37090bac747e592b62ce51ac26a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7598065aa451d87fb45ae26310064e4828b4fb72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098798"
 ---
 # <a name="cobarray-class"></a>CObArray 类
 支持 `CObject` 指针数组。  
@@ -170,11 +170,11 @@ INT_PTR Add(CObject* newElement);
   
  此程序的结果如下所示：  
   
- `Add example: A CObArray with 2 elements`  
-  
- `[0] = a CAge at $442A 21`  
-  
- `[1] = a CAge at $4468 40`  
+```Output
+Add example: A CObArray with 2 elements
+[0] = a CAge at $442A 21
+[1] = a CAge at $4468 40
+```
   
 ##  <a name="append"></a>  CObArray::Append  
  调用此成员函数以将另一个数组的内容添加到给定数组的末尾。  
@@ -530,13 +530,12 @@ void InsertAt(
   
  此程序的结果如下所示：  
   
- `InsertAt example: A CObArray with 3 elements`  
-  
- `[0] = a CAge at $45C8 21`  
-  
- `[1] = a CAge at $4646 30`  
-  
- `[2] = a CAge at $4606 40`  
+```Output
+InsertAt example: A CObArray with 3 elements
+[0] = a CAge at $45C8 21
+[1] = a CAge at $4646 30
+[2] = a CAge at $4606 40
+```
   
 ##  <a name="isempty"></a>  CObArray::IsEmpty  
  确定数组是否为空。  
@@ -646,9 +645,10 @@ void RemoveAt(
   
  此程序的结果如下所示：  
   
- `RemoveAt example: A CObArray with 1 elements`  
-  
- `[0] = a CAge at $4606 40`  
+```Output
+RemoveAt example: A CObArray with 1 elements
+[0] = a CAge at $4606 40
+```
   
 ##  <a name="setat"></a>  CObArray::SetAt  
  设置指定索引处的数组元素。  
@@ -689,11 +689,11 @@ void SetAt(
   
  此程序的结果如下所示：  
   
- `SetAt example: A CObArray with 2 elements`  
-  
- `[0] = a CAge at $47E0 30`  
-  
- `[1] = a CAge at $47A0 40`  
+```Output
+SetAt example: A CObArray with 2 elements
+[0] = a CAge at $47E0 30
+[1] = a CAge at $47A0 40
+```
   
 ##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  设置指定索引处的数组元素。  
@@ -732,15 +732,13 @@ void SetAtGrow(
   
  此程序的结果如下所示：  
   
- `SetAtGrow example: A CObArray with 4 elements`  
-  
- `[0] = a CAge at $47C0 21`  
-  
- `[1] = a CAge at $4800 40`  
-  
- `[2] = NULL`  
-  
- `[3] = a CAge at $4840 65`  
+```Output
+SetAtGrow example: A CObArray with 4 elements
+[0] = a CAge at $47C0 21
+[1] = a CAge at $4800 40
+[2] = NULL
+[3] = a CAge at $4840 65
+```
   
 ##  <a name="setsize"></a>  CObArray::SetSize  
  建立一个空的或现有的数组; 的大小如有必要，请分配内存。  

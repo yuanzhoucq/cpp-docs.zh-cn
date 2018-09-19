@@ -1,5 +1,5 @@
 ---
-title: 记录集： 声明表 (ODBC) 类 |Microsoft 文档
+title: 记录集： 声明表 (ODBC) 的类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107632"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明表的类 (ODBC)
+
 本主题适用于 MFC ODBC 类。  
   
- 最常见的记录集类打开单个表。 若要声明单个表的记录集类，使用[MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)从**添加类**和选择所需的命名相应的记录集字段数据成员的每一列。  
+最常见的记录集类打开单个表。 若要声明单个表的记录集类，请使用[MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)从**添加类**并选择所需的命名对应的记录集字段数据成员的每个列。  
   
- 记录集的其他用途包括：  
+记录集的其他用途包括：  
   
--   联接两个或多个表。  
+- 联接两个或多个表。  
   
--   包含预定义查询的结果。  
+- 包含预定义查询的结果。  
   
 ## <a name="see-also"></a>请参阅  
- [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
- [记录集： 创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [记录集： 为预定义的查询 (ODBC) 声明一个类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[记录集：为预定义查询声明一个类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

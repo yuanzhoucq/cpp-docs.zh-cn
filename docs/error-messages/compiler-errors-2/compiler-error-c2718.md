@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2718 |Microsoft 文档
+title: 编译器错误 C2718 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12ffe631f354c7aef87497e7b21e3a9cd3261c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facbee46968cf76e6709bceff4432ba289aed3cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045765"
 ---
 # <a name="compiler-error-c2718"></a>编译器错误 C2718
-parameter： 不对齐具有 __declspec(align('#')) 的实际参数  
-  
- [对齐](../../cpp/align-cpp.md)`__declspec`函数参数中不允许修饰符。  
-  
- 下面的示例生成 C2718:  
-  
-```  
-// C2718.cpp  
-typedef struct __declspec(align(32)) AlignedStruct  {   
-   int i;   
-} AlignedStruct;  
-  
-void f2(int i, ...);  
-  
-void f4() {  
-   AlignedStruct as;  
-  
-   f2(0, as);   // C2718, actual parameter is aligned  
-}  
+
+parameter： 实参 __declspec(align('#')) 将不被对齐
+
+[对齐](../../cpp/align-cpp.md)`__declspec`函数参数上不允许使用修饰符。
+
+下面的示例生成 C2718:
+
+```
+// C2718.cpp
+typedef struct __declspec(align(32)) AlignedStruct  {
+   int i;
+} AlignedStruct;
+
+void f2(int i, ...);
+
+void f4() {
+   AlignedStruct as;
+
+   f2(0, as);   // C2718, actual parameter is aligned
+}
 ```

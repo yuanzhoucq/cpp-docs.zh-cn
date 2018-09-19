@@ -1,5 +1,5 @@
 ---
-title: swap 函数 (auto_gcroot) |Microsoft 文档
+title: swap 函数 (auto_gcroot) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 308f909e2a863f2d08feb6ff688cddf61b0347b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c653130079870c885e5bb758a0ae2d953cca5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052174"
 ---
 # <a name="swap-function-autogcroot"></a>swap 函数 (auto_gcroot)
-交换一个之间的对象`auto_gcroot`和另一个。  
+交换对象之间一个`auto_gcroot`和另一个。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_left`  
- 一个 `auto_gcroot`。  
+*_ 左*<br/>
+一个 `auto_gcroot`。  
   
- `_right`  
- 另一个`auto_gcroot`。  
+*（_r)*<br/>
+另一个`auto_gcroot`。  
   
 ## <a name="example"></a>示例  
   

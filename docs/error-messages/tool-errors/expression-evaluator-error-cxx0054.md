@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0054 |Microsoft 文档
+title: 表达式计算器错误 CXX0054 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f5306f7cd3385c9ca302cd186de5591b448ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aaf1a55ffee1d06eb4807381ad2cf1315420dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074690"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>表达式计算器错误 CXX0054
-非法的断点表达式中注册  
-  
- 不能在断点表达式中使用寄存器。  
-  
- 此错误是与 CAN0054 相同。
+
+注册在断点表达式中非法
+
+不能在断点表达式中使用寄存器。
+
+此错误是与 CAN0054 相同。

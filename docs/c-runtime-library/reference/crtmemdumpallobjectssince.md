@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396864"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100374"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,21 +53,22 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>参数
 
-*状态*指向堆状态的指针，若要开始从转储或**NULL**。
+*state*<br/>
+指向开始从其转储的堆状态的指针，或 **NULL**。
 
 ## <a name="remarks"></a>备注
 
 **_CrtMemDumpAllObjectsSince**函数转储调试标头信息的用户可读的窗体中的堆中分配的对象。 应用程序可以使用转储信息来跟踪分配并检测内存问题。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtMemDumpAllObjectsSince**在预处理过程中删除。
 
-**_CrtMemDumpAllObjectsSince**使用的值*状态*参数以确定要启动转储操作位置。 若要开始转储指定的堆状态中，从*状态*参数必须是指向 **_CrtMemState**由填写中的结构[_CrtMemCheckpoint](crtmemcheckpoint.md)之前 **_CrtMemDumpAllObjectsSince**调用。 当*状态*是**NULL**，该函数开始从程序开始执行转储。
+**_CrtMemDumpAllObjectsSince**使用的值*状态*参数，以确定启动转储操作的位置。 若要开始从指定的堆状态转储*状态*参数必须是指向指针 **_CrtMemState**由填充中的结构[_CrtMemCheckpoint](crtmemcheckpoint.md)之前 **_CrtMemDumpAllObjectsSince**调用。 当*状态*是**NULL**，该函数即开始从一开始程序执行的转储。
 
-如果应用程序已安装的转储挂钩函数，通过调用[_CrtSetDumpClient](crtsetdumpclient.md)，则每次 **_CrtMemDumpAllObjectsSince**有关转储信息 **_CLIENT_BLOCK**类型的块，它将调用应用程序提供转储函数以及。 默认情况下，内部 C 运行时块 (**_CRT_BLOCK**) 不包括在内存转储操作。 [_CrtSetDbgFlag](crtsetdbgflag.md)函数可用来打开 **_CRTDBG_CHECK_CRT_DF**位的 **_crtDbgFlag**以便包括这些块。 此外，标记为已释放或已忽略的块（**_FREE_BLOCK**、**_IGNORE_BLOCK**）不包括在内存转储中。
+如果应用程序已安装了转储挂钩函数通过调用[_CrtSetDumpClient](crtsetdumpclient.md)，然后每次 **_CrtMemDumpAllObjectsSince**有关转储信息 **_CLIENT_BLOCK**类型的块，它将调用应用程序提供的转储函数。 默认情况下，内部 C 运行时块 (**_CRT_BLOCK**) 未包含在内存转储操作。 [_CrtSetDbgFlag](crtsetdbgflag.md)函数可以用于开启 **_CRTDBG_CHECK_CRT_DF**位 **_crtDbgFlag**以将这些块包含。 此外，标记为已释放或已忽略的块（**_FREE_BLOCK**、**_IGNORE_BLOCK**）不包括在内存转储中。
 
-有关堆状态函数和 **_CrtMemState**结构，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关详细信息，有关堆状态函数和 **_CrtMemState**结构，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|
 

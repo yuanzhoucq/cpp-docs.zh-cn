@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d87bcf20957b69577e709c8fcbd2c6a5f3c9b770
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075905"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
+
 通过使用[CEnumerator](../../data/oledb/cenumerator-class.md)从枚举器行集访问数据。  
   
 ## <a name="syntax"></a>语法
@@ -65,7 +66,8 @@ class CEnumeratorAccessor
 ```  
 
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -80,9 +82,11 @@ class CEnumeratorAccessor
 |[m_szParseName](#szparsename)|要传递给字符串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)若要获取的数据源或枚举器的名字对象。|  
   
 ## <a name="remarks"></a>备注  
- 此行包含数据源和枚举器当前枚举器中可见。  
+
+此行包含数据源和枚举器当前枚举器中可见。  
   
 ## <a name="bisparent"></a> Cenumeratoraccessor:: M_bisparent
+
 变量，用于指示枚举器是否父级的枚举器，如果行是一个枚举器。  
   
 ### <a name="syntax"></a>语法  
@@ -92,9 +96,11 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。 
+
+请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
+
 一个，该值指示是否行所说明的数据源或枚举数的变量。  
   
 ### <a name="syntax"></a>语法  
@@ -104,9 +110,11 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
+
+请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
+
 数据源或枚举器的说明。  
   
 ### <a name="syntax"></a>语法  
@@ -116,9 +124,11 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
+
+请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
+
 枚举器的数据源的名称。  
   
 ### <a name="syntax"></a>语法  
@@ -128,9 +138,11 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+
+请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
+
 要传递给字符串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)若要获取的数据源或枚举器的名字对象。  
   
 ### <a name="syntax"></a>语法  
@@ -140,8 +152,10 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
+
+请参阅[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程序员参考*有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

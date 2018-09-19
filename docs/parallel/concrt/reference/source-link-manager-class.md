@@ -1,5 +1,5 @@
 ---
-title: source_link_manager 类 |Microsoft 文档
+title: source_link_manager 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059792"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 类
 `source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。  
@@ -45,8 +45,8 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_LinkRegistry`  
- 网络链接注册表中。  
+*_LinkRegistry*<br/>
+网络链接注册表中。  
   
 ## <a name="members"></a>成员  
   
@@ -54,10 +54,10 @@ class source_link_manager;
   
 |名称|描述|  
 |----------|-----------------|  
-|`const_pointer`|提供指向的指针的类型`const`中的元素`source_link_manager`对象。|  
+|`const_pointer`|提供一个指针指向的类型`const`中的元素`source_link_manager`对象。|  
 |`const_reference`|提供对引用的类型`const`元素存储在`source_link_manager`用于读取和执行 const 操作的对象。|  
-|`iterator`|提供一个迭代器的类型，可读取或修改中的任意元素`source_link_manager`对象。|  
-|`type`|一种由链接注册表`source_link_manager`对象。|  
+|`iterator`|提供的迭代器的类型可读取或修改中的任何元素`source_link_manager`对象。|  
+|`type`|由链接注册表类型`source_link_manager`对象。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
@@ -70,18 +70,18 @@ class source_link_manager;
   
 |名称|描述|  
 |----------|-----------------|  
-|[add](#add)|将添加到的源链接`source_link_manager`对象。|  
-|[begin](#begin)|返回的第一个元素的迭代器`source_link_manager`对象。|  
-|[包含](#contains)|搜索`network_link_registry`在此`source_link_manager`对象指定的块。|  
-|[count](#count)|计算中的链接块数目`source_link_manager`对象。|  
-|[reference](#reference)|上获取引用`source_link_manager`对象。|  
+|[add](#add)|添加源链接到`source_link_manager`对象。|  
+|[begin](#begin)|返回一个迭代器中的第一个元素到`source_link_manager`对象。|  
+|[包含](#contains)|搜索`network_link_registry`在此`source_link_manager`指定块的对象。|  
+|[count](#count)|中的链接块的计数`source_link_manager`对象。|  
+|[reference](#reference)|获取引用上`source_link_manager`对象。|  
 |[register_target_block](#register_target_block)|注册持有此目标块`source_link_manager`对象。|  
-|[release](#release)|在释放引用`source_link_manager`对象。|  
-|[remove](#remove)|删除从链接`source_link_manager`对象。|  
-|[set_bound](#set_bound)|设置的最大的源链接，可以添加到此`source_link_manager`对象。|  
+|[release](#release)|在释放的引用`source_link_manager`对象。|  
+|[remove](#remove)|移除从链接`source_link_manager`对象。|  
+|[set_bound](#set_bound)|设置源链接，可以添加到此最大数目`source_link_manager`对象。|  
   
 ## <a name="remarks"></a>备注  
- 目前，源块均被引用计数。 这是包装上`network_link_registry`对象，允许对链接的并发访问并能够引用通过回调的链接。 消息块 ( `target_block`s 或`propagator_block`s) 应使用此类用于其源链接。  
+ 目前，源块是引用计数。 这是一个包装上`network_link_registry`对象，它允许对链接的并发访问，并提供能够引用通过回调的链接。 消息块 ( `target_block`s 或`propagator_block`s) 应使用此类用于其源链接。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `source_link_manager`  
@@ -93,59 +93,59 @@ class source_link_manager;
   
 ##  <a name="add"></a> 添加 
 
- 将添加到的源链接`source_link_manager`对象。  
+ 添加源链接到`source_link_manager`对象。  
   
 ```
 void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向要添加的块的指针。  
+*链接 （_l)*<br/>
+指向要添加的块的指针。  
   
 ##  <a name="begin"></a> 开始 
 
- 返回的第一个元素的迭代器`source_link_manager`对象。  
+ 返回一个迭代器中的第一个元素到`source_link_manager`对象。  
   
 ```
 iterator begin();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 发现的第一个元素的迭代器`source_link_manager`对象。  
+ 中的第一个元素的迭代器`source_link_manager`对象。  
   
 ### <a name="remarks"></a>备注  
  迭代器的最终状态由`NULL`链接。  
   
 ##  <a name="contains"></a> 包含 
 
- 搜索`network_link_registry`在此`source_link_manager`对象指定的块。  
+ 搜索`network_link_registry`在此`source_link_manager`指定块的对象。  
   
 ```
 bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向要在其中搜索中的块的指针`source_link_manager`对象。  
+*链接 （_l)*<br/>
+指向要在其中搜索中的块的指针`source_link_manager`对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果找到指定的块，`false`否则为。  
   
 ##  <a name="count"></a> 计数 
 
- 计算中的链接块数目`source_link_manager`对象。  
+ 中的链接块的计数`source_link_manager`对象。  
   
 ```
 size_t count();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 中的链接块的数量`source_link_manager`对象。  
+ 在链接的块数`source_link_manager`对象。  
   
 ##  <a name="reference"></a> 引用 
 
- 上获取引用`source_link_manager`对象。  
+ 获取引用上`source_link_manager`对象。  
   
 ```
 void reference();
@@ -160,12 +160,12 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PTarget`  
- 目标块持有这`source_link_manager`对象。  
+*_PTarget*<br/>
+持有此目标块`source_link_manager`对象。  
   
 ##  <a name="release"></a> 版本 
 
- 在释放引用`source_link_manager`对象。  
+ 在释放的引用`source_link_manager`对象。  
   
 ```
 void release();
@@ -173,30 +173,30 @@ void release();
   
 ##  <a name="remove"></a> 删除 
 
- 删除从链接`source_link_manager`对象。  
+ 移除从链接`source_link_manager`对象。  
   
 ```
 bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向块被删除，如果找到。  
+*链接 （_l)*<br/>
+指向块被删除，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果找到并移除了，链接`false`否则为。  
+ `true` 如果找到该链接并将其删除，`false`否则为。  
   
 ##  <a name="set_bound"></a> set_bound 
 
- 设置的最大的源链接，可以添加到此`source_link_manager`对象。  
+ 设置源链接，可以添加到此最大数目`source_link_manager`对象。  
   
 ```
 void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MaxLinks`  
- 最大连接数。  
+*_MaxLinks*<br/>
+最大链接数。  
   
 ##  <a name="ctor"></a> source_link_manager 
 

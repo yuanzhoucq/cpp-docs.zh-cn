@@ -1,7 +1,7 @@
 ---
-title: 标签 (MASM) |Microsoft 文档
+title: 标签 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690585"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
-通过分配的当前的位置计数器值创建一个新标签与给定`type`到*名称*。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+通过将分配的当前位置计数器值创建一个新标签和给定*类型*到*名称*。
+
+## <a name="syntax"></a>语法
+
+> *名称*标签*类型*
+
+> *名称*标签 [[NEAR |得 |PTR PROC]] [[*类型*]]
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

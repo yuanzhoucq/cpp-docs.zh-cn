@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958261"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700214"
 ---
 # <a name="tuplesize-class"></a>tuple_size 类
 
@@ -66,22 +66,22 @@ template <class Tuple>
 
 ### <a name="parameters"></a>参数
 
-*Tuple*  
+*Tuple*<br/>
 元组的类型。
 
-*Elem*  
+*Elem*<br/>
 数组元素的类型。
 
-*Size*  
+*Size*<br/>
 数组大小。
 
-T1  
+T1<br/>
 对的第一个成员的类型。
 
-T2  
+T2<br/>
 对的第二个成员的类型。
 
-*类型*  
+*类型*<br/>
 元组元素的类型。
 
 ## <a name="remarks"></a>备注

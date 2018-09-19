@@ -1,7 +1,7 @@
 ---
-title: SIZESTR |Microsoft 文档
+title: SIZESTR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9330164a5f942359088e73b34903f9d02982f8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e829512e4d7d4fbae442b3726579578c0109fc19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057349"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679357"
 ---
 # <a name="sizestr"></a>SIZESTR
-查找文本项的大小。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-name SIZESTR textitem  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+查找文本项的大小。
+
+## <a name="syntax"></a>语法
+
+> 名称 SIZESTR textitem
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

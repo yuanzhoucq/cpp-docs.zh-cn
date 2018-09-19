@@ -1,7 +1,7 @@
 ---
-title: 内联程序集的数据指令和运算符 |Microsoft 文档
+title: 数据指令和运算符在内联程序集中 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -23,18 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd3bc686cc8cee1a02e9df936f80f542bec26bd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6aff2f4c5ce5e7f5592aa9ec707d002c57f0eac0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051380"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678732"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>内联程序集中的数据指令和运算符
-## <a name="microsoft-specific"></a>Microsoft 专用  
- 尽管 `__asm` 块可以引用 C 或 C++ 数据类型和对象，但它不能定义具有 MASM 指令或运算符的数据对象。 具体而言，不能使用定义指令**DB**， `DW`， **DD**， `DQ`， `DT`，和`DF`，或运算符`DUP`或**这**。 MASM 结构和记录也不可用。 内联汇编程序不接受指令`STRUC`， `RECORD`，**宽度**，或**掩码**。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 专用**
+
+尽管 `__asm` 块可以引用 C 或 C++ 数据类型和对象，但它不能定义具有 MASM 指令或运算符的数据对象。 具体而言，不能使用定义指令**DB**， `DW`， **DD**， `DQ`， `DT`，并且`DF`，或运算符`DUP`或**这**。 MASM 结构和记录也不可用。 内联汇编程序不接受指令`STRUC`， `RECORD`，**宽度**，或**掩码**。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2236 |Microsoft 文档
+title: 编译器错误 C2236 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f755c9ba72e2d36bdce608e93e8a60175e493a45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fba2f795c3b786e82331a4b14f2c4530731db64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053673"
 ---
 # <a name="compiler-error-c2236"></a>编译器错误 C2236
-意外的标记“identifier”。 你是否忘了“;”？  
-  
- 该标识符已经定义为类型，无法被用户定义类型重写。  
-  
- 下面的示例生成 C2236：  
-  
-```  
-// C2236.cpp  
-// compile with: /c  
-int class A {};  // C2236 "int class" is unexpected  
-int i;  
-class B {};  
+
+意外的标记“identifier”。 你是否忘了“;”？
+
+该标识符已经定义为类型，无法被用户定义类型重写。
+
+下面的示例生成 C2236：
+
+```
+// C2236.cpp
+// compile with: /c
+int class A {};  // C2236 "int class" is unexpected
+int i;
+class B {};
 ```

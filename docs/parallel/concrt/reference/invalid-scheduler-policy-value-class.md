@@ -1,5 +1,5 @@
 ---
-title: invalid_scheduler_policy_value 类 |Microsoft 文档
+title: invalid_scheduler_policy_value 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae46d9f9de26e80a97d4ea2e9a692caec3445c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068151"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value 类
 此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。  
@@ -62,8 +62,8 @@ invalid_scheduler_policy_value() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 
 ## <a name="see-also"></a>请参阅  

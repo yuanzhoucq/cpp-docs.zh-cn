@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a48e4112dc513923b3a933457a874409121fb1e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087695"
 ---
 # <a name="popen-wpopen"></a>_popen、_wpopen
 
@@ -61,12 +61,12 @@ ms.locfileid: "43218381"
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ const wchar_t *mode
 
 **_Popen**函数创建一个管道，并以异步方式执行使用指定的字符串的命令处理器的衍生的副本*命令*。 字符串 *mode* 指定请求的访问类型，如下所示。
 
-**"r"** 调用进程可以读取生成的命令的标准输出使用返回的流。
-
-**"w"** 调用进程可以写入到生成的命令的标准输入使用返回的流。
-
-**"b"** 在二进制模式下打开。
-
-**"t"** 在文本模式下打开。
+|访问模式|描述|
+|-|-|
+|**“r”**|调用进程可使用返回的流读取生成的命令的标准输出。|
+|**“w”**|调用进程可使用返回的流写入生成的命令的标准输入。|
+|**“b”**|在二进制模式下打开。|
+|**“t”**|在文本模式下打开。|
 
 > [!NOTE]
 > 如果在 Windows 程序中使用 **_popen**函数返回无效的文件指针，从而导致程序无限期停止响应。 **_popen**控制台应用程序中可正常工作。 若要创建 Windows 应用程序将重定向输入和输出，请参阅[重定向输入和输出创建的子进程](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output)Windows SDK 中。
@@ -169,12 +168,12 @@ int main( void )
 此输出假定当前目录中只有一个文件扩展名为 .c 的文件。
 
 ```Output
- Volume in drive C is CDRIVE
- Volume Serial Number is 0E17-1702
+Volume in drive C is CDRIVE
+Volume Serial Number is 0E17-1702
 
 Directory of D:\proj\console\test1
 
- 07/17/98  07:26p                   780 popen.c
+07/17/98  07:26p                   780 popen.c
                1 File(s)            780 bytes
                              86,597,632 bytes free
 

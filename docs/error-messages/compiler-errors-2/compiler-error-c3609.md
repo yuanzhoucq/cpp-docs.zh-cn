@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3609 |Microsoft 文档
+title: 编译器错误 C3609 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0f3ec99e5d528967fb7b02bc9d198402b16e18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0048d1493a540bfb460d03ae514b6b191ead39d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016905"
 ---
 # <a name="compiler-error-c3609"></a>编译器错误 C3609
-“成员”：密封的或最终函数必须是虚拟函数  
-  
- [密封](../../windows/sealed-cpp-component-extensions.md)和[最终](../../cpp/final-specifier.md)关键字标记的类、 结构或成员函数上只允许`virtual`。  
-  
- 以下示例生成 C3609：  
-  
-```  
-// C3609.cpp  
-// compile with: /clr /c  
-ref class C {  
-   int f() sealed;   // C3609  
-   virtual int f2() sealed;   // OK  
-};  
-```  
+
+“成员”：密封的或最终函数必须是虚拟函数
+
+[密封](../../windows/sealed-cpp-component-extensions.md)并[最终](../../cpp/final-specifier.md)关键字只能在类、 结构或成员函数标记为`virtual`。
+
+以下示例生成 C3609：
+
+```
+// C3609.cpp
+// compile with: /clr /c
+ref class C {
+   int f() sealed;   // C3609
+   virtual int f2() sealed;   // OK
+};
+```

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056776"
 ---
 # <a name="program-and-linkage-c"></a>程序和链接 (C++)
 
@@ -45,11 +45,11 @@ int f(int x){ return x * i; }
 
 ## <a name="linkage-vs-scope"></a>与作用域的链接
 
-这一概念*链接*在翻译单元是指全局符号 （如变量、 类型名称和函数名称） 在程序中作为一个整体的可见性。 这一概念*作用域*指的是如命名空间、 类或函数体块中声明的符号。 此类符号是仅在其中定义它们; 范围内可见链接的概念不适用于它们。 
+这一概念*链接*在翻译单元是指全局符号 （如变量、 类型名称和函数名称） 在程序中作为一个整体的可见性。 这一概念*作用域*指的是如命名空间、 类或函数体块中声明的符号。 此类符号是仅在其中定义它们; 范围内可见链接的概念不适用于它们。
 
 ## <a name="external-vs-internal-linkage"></a>外部与内部链接
 
-一个*自由函数*是一个函数，定义在全局或命名空间范围。 非常量全局变量和自由函数默认情况下具有*外部链接*; 它们是在程序中任何翻译单元中可见。 因此，没有任何其他全局对象 （变量、 类定义等） 可以具有该名称。 具有的符号*内部链接*或*无链接*仅在声明它的翻译单元内可见。 当名称具有内部链接时，可能另一个翻译单元中存在相同的名称。 使用类定义声明的变量或函数体有无链接。 
+一个*自由函数*是一个函数，定义在全局或命名空间范围。 非常量全局变量和自由函数默认情况下具有*外部链接*; 它们是在程序中任何翻译单元中可见。 因此，没有任何其他全局对象 （变量、 类定义等） 可以具有该名称。 具有的符号*内部链接*或*无链接*仅在声明它的翻译单元内可见。 当名称具有内部链接时，可能另一个翻译单元中存在相同的名称。 使用类定义声明的变量或函数体有无链接。
 
 你可以强制执行的全局名称，若要通过显式声明为具有内部链接**静态**。 这将限制为在其中声明同一个翻译单元其可见性。 请注意，在此上下文中，**静态**比时应用于局部变量不同的含义。
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 请参阅[extern](extern-cpp.md)有关详细信息。
 
 ## <a name="see-also"></a>请参阅
- [基本概念](../cpp/basic-concepts-cpp.md)
+
+[基本概念](../cpp/basic-concepts-cpp.md)

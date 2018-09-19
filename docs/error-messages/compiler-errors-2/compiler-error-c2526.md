@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2526 |Microsoft 文档
+title: 编译器错误 C2526 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 735222893b69763b2934a93abbb965852d2f6d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 152baa8b4fcd3f28e38b94c69b04a87f45040ccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094970"
 ---
 # <a name="compiler-error-c2526"></a>编译器错误 C2526
-identifier1: C 链接函数不能返回 c + + 类 identifier2  
-  
- 定义带 C 链接的函数无法返回的用户定义的类型。
+
+identifier1: C 链接函数无法返回 c + + 类 identifier2
+
+带 C 链接定义的函数不能返回的用户定义的类型。

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104317"
 ---
 # <a name="assume"></a>__assume
 **Microsoft 专用**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>参数  
- `expression`  
- 假设评估为 true 的任何表达式。  
+*表达式*<br/>
+假设评估为 true 的任何表达式。  
   
 ## <a name="remarks"></a>备注  
  优化程序假设在关键词出现的地方由 `expression` 表示的条件为 true 并且直到修改 `expression`（例如，指定变量）前一直为 true。 选择性使用通过 `__assume` 传递给优化程序的提示可以完善优化。  

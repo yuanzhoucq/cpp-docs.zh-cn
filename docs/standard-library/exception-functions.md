@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962268"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105401"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函数
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>参数
 
-*除*与要复制的异常类。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
+*除外*<br/>
+具有要复制的异常的类。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>参数
 
-*P*要重新引发的已捕获的异常。 如果*P*为 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，该函数将引发[std:: bad_exception](../standard-library/bad-exception-class.md)。
+*P*<br/>
+要再次引发的已捕获异常。 如果*P*为 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，该函数将引发[std:: bad_exception](../standard-library/bad-exception-class.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>参数
 
-*fnew*终止时要调用的函数。
+*fnew*<br/>
+终止时要调用的函数。
 
 ### <a name="return-value"></a>返回值
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>参数
 
-*fnew*遇到了意外的异常时调用的函数。
+*fnew*<br/>
+遇到意外异常时要调用的函数。
 
 ### <a name="return-value"></a>返回值
 

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3135 |Microsoft 文档
+title: 编译器错误 C3135 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524435d95e085b0e5014eed21877b6d351e4ca75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a1158de2768cd5aea025627caf2fe40ef53e2ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048456"
 ---
 # <a name="compiler-error-c3135"></a>编译器错误 C3135
-property: 属性不能具有 const 或易失性键入  
-  
- [Const](../../cpp/const-cpp.md)和[易失性](../../cpp/volatile-cpp.md)属性上不允许关键字。
+
+property: 属性不能具有 const 或 volatile 类型
+
+[Const](../../cpp/const-cpp.md)并[易失性](../../cpp/volatile-cpp.md)属性上不允许使用关键字。

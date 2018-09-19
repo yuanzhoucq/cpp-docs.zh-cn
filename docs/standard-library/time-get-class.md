@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960126"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704869"
 ---
 # <a name="timeget-class"></a>time_get 类
 
@@ -69,11 +69,11 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*  
- 在程序中用于对字符进行编码的类型。
+*CharType*<br/>
+在程序中用于对字符进行编码的类型。
 
-*InputIterator*  
- 从中读取时间值的迭代器。
+*InputIterator*<br/>
+从中读取时间值的迭代器。
 
 ## <a name="remarks"></a>备注
 
@@ -216,7 +216,7 @@ facet 使用的日期顺序。
 ```cpp
 virtual iter_type
     do_get(
- iter_type first,
+iter_type first,
     iter_type last,
     ios_base& iosbase,
     ios_base::iostate& state,
@@ -227,19 +227,26 @@ virtual iter_type
 
 ### <a name="parameters"></a>参数
 
-*第一个*输入迭代器，指示要转换的序列的开头。
+*first*<br/>
+一个输入迭代器，它指示要转换的序列的开始位置。
 
-*最后一个*输入迭代器，指示序列的末尾。
+*最后一个*<br/>
+一个输入迭代器，它指示序列的结束位置。
 
-*iosbase*的流对象。
+*iosbase*<br/>
+一个流对象。
 
-*状态*iosbase 中设置相应位掩码元素以指示错误的字段。
+*state*<br/>
+Iosbase 中设置相应位掩码元素以指示错误的字段。
 
-*ptm*指向要存储时间的时间结构的指针。
+*ptm*<br/>
+指向要存储时间的时间结构的指针。
 
-*fmt*转换说明符字符。
+*fmt*<br/>
+一个转换说明符字符。
 
-*mod*一个可选修饰符字符。
+*mod*<br/>
+一个可选修饰符字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -313,20 +320,20 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储日期信息的指针。
+*ptm*<br/>
+指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -364,20 +371,20 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 未使用。
+*iosbase*<br/>
+未使用。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
 
-*ptm*  
- 指向要存储月份信息的指针。
+*ptm*<br/>
+指向要存储月份信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -407,20 +414,20 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 未使用。
+*iosbase*<br/>
+未使用。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储日期信息的指针。
+*ptm*<br/>
+指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -458,20 +465,20 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储的工作日信息的指针。
+*ptm*<br/>
+指向要存储的工作日信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -501,20 +508,20 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储的年份信息的指针。
+*ptm*<br/>
+指向要存储的年份信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -556,32 +563,32 @@ iter_type get(
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 一个输入迭代器，它指示从何处开始转换序列。
+*first*<br/>
+一个输入迭代器，它指示从何处开始转换序列。
 
-*最后一个*  
- 一个输入迭代器，它指示在何处结束序列转换。
+*最后一个*<br/>
+一个输入迭代器，它指示在何处结束序列转换。
 
-*iosbase*  
- 流。
+*iosbase*<br/>
+流。
 
-*state*  
- 为流状态设置适当的位掩码元素以指示错误。
+*state*<br/>
+为流状态设置适当的位掩码元素以指示错误。
 
-*ptm*  
- 一个指针，它指向要存储时间的时间结构。
+*ptm*<br/>
+一个指针，它指向要存储时间的时间结构。
 
-*fmt*  
- 一个转换说明符字符。
+*fmt*<br/>
+一个转换说明符字符。
 
-*mod*  
- 一个可选修饰符字符。
+*mod*<br/>
+一个可选修饰符字符。
 
-*fmt_first*  
- 指向格式指令开始的位置。
+*fmt_first*<br/>
+指向格式指令开始的位置。
 
-*fmt_last*  
- 指向格式指令结束的位置。
+*fmt_last*<br/>
+指向格式指令结束的位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -613,20 +620,20 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储日期信息的指针。
+*ptm*<br/>
+指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -707,20 +714,20 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 未使用。
+*iosbase*<br/>
+未使用。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素的输出参数。
 
-*ptm*  
- 指向要存储月份信息的指针。
+*ptm*<br/>
+指向要存储月份信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -799,20 +806,20 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 未使用。
+*iosbase*<br/>
+未使用。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储日期信息的指针。
+*ptm*<br/>
+指向要存储日期信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -880,20 +887,20 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储的工作日信息的指针。
+*ptm*<br/>
+指向要存储的工作日信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -957,20 +964,20 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*  
- 确定待转换序列开头位置的输入迭代器。
+*first*<br/>
+确定待转换序列开头位置的输入迭代器。
 
-*最后一个*  
- 确定待转换序列末尾位置的输入迭代器。
+*最后一个*<br/>
+确定待转换序列末尾位置的输入迭代器。
 
-*iosbase*  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
+*iosbase*<br/>
+一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*state*  
- 根据操作是否成功，设置流状态的相应位掩码元素。
+*state*<br/>
+根据操作是否成功，设置流状态的相应位掩码元素。
 
-*ptm*  
- 指向要存储的年份信息的指针。
+*ptm*<br/>
+指向要存储的年份信息的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1043,8 +1050,8 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*refs*  
- 用于指定对象的内存管理类型的整数值。
+*refs*<br/>
+用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 

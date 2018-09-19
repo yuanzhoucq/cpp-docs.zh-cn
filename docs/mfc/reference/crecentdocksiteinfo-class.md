@@ -1,5 +1,5 @@
 ---
-title: CRecentDockSiteInfo 类 |Microsoft 文档
+title: CRecentDockSiteInfo 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078995"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702606"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 `CRecentDockSiteInfo`类是存储最近状态信息的帮助器类[CPane 类](../../mfc/reference/cpane-class.md)。  
@@ -85,7 +85,7 @@ class CRecentDockSiteInfo : public CObject
 ## <a name="remarks"></a>备注  
  `CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。  
   
- 每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个`CPane`对象具有成员变量， [cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)，以存储此信息。  
+ 每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个`CPane`对象具有一个成员变量[cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)，用于存储此信息。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*CList < HWND*  
- [in]*lstOrg*  
+*CList < HWND*<br/>
+[in][in]*lstOrg*  
  [in]*bForSlider*  
   
 ### <a name="remarks"></a>备注  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bForSlider*  
- [in]*srcInfo*  
+*bForSlider*<br/>
+[in][in]*srcInfo*  
   
 ### <a name="remarks"></a>备注  
   
@@ -275,12 +275,12 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pRecentContainer*  
- [in]*pTabbedBar*  
+*pRecentContainer*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CDockSite 类](../../mfc/reference/cdocksite-class.md)

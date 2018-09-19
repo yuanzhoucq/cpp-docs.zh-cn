@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte、 __incfsword、 __incfsdword |Microsoft 文档
+title: __incfsbyte，__incfsword，__incfsdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719350"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Microsoft 专用**  
   
- 指定相对于开始的偏移量的内存位置添加一个为值`FS`段。  
+ 指定相对于开头的偏移量的内存位置中添加一个值`FS`段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>参数  
- [in] `Offset`  
- 从开始处的偏移量`FS`。  
+*偏移量*<br/>
+[in]从开始处的偏移量`FS`。  
   
 ## <a name="requirements"></a>要求  
   
@@ -67,7 +67,7 @@ void __incfsdword(
 **结束 Microsoft 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
+ [__addfsword， \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
  [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
  [__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

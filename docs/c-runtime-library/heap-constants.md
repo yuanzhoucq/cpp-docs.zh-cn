@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25118792500d679d243f55e5d87e62a4994eaa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 791509a7c67f5fa47128fda97688c43e592724ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115172"
 ---
 # <a name="heap-constants"></a>堆常量
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 这些常量提供表示堆状态的返回值。  
-  
-|返回的常量|含义|  
-|--------------|-------------|  
-|`_HEAPBADBEGIN`|初始头信息未找到或无效。|  
-|`_HEAPBADNODE`|找到错误节点，或堆已损坏。|  
-|`_HEAPBADPTR`|_HEAPINFO 结构的 _pentry 字段不包含堆中的有效指针（仅限 `_heapwalk` 例程）。|  
-|`_HEAPEMPTY`|尚未初始化堆。|  
-|`_HEAPEND`|已成功到达堆的结尾处（仅限 `_heapwalk` 例程）。|  
-|`_HEAPOK`|堆是一致的（仅限 `_heapset` 和 `_heapchk` 例程）。 目前未出现错误；_HEAPINFO 结构包含下一个条目的信息（仅限 `_heapwalk` 例程）。|  
-  
-## <a name="see-also"></a>请参阅  
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapset](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [全局常量](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>语法
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>备注
+
+这些常量提供表示堆状态的返回值。
+
+|返回的常量|含义|
+|--------------|-------------|
+|`_HEAPBADBEGIN`|初始头信息未找到或无效。|
+|`_HEAPBADNODE`|找到错误节点，或堆已损坏。|
+|`_HEAPBADPTR`|_HEAPINFO 结构的 _pentry 字段不包含堆中的有效指针（仅限 `_heapwalk` 例程）。|
+|`_HEAPEMPTY`|尚未初始化堆。|
+|`_HEAPEND`|已成功到达堆的结尾处（仅限 `_heapwalk` 例程）。|
+|`_HEAPOK`|堆是一致的（仅限 `_heapset` 和 `_heapchk` 例程）。 目前未出现错误；_HEAPINFO 结构包含下一个条目的信息（仅限 `_heapwalk` 例程）。|
+
+## <a name="see-also"></a>请参阅
+
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[全局常量](../c-runtime-library/global-constants.md)

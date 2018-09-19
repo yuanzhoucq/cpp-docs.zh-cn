@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2438 |Microsoft 文档
+title: 编译器错误 C2438 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42740c137953007cab2c5301bff122b553e5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f5153e3ff6626f3ea1b1155f14bc9ef96441e7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066071"
 ---
 # <a name="compiler-error-c2438"></a>编译器错误 C2438
-identifier： 无法初始化静态类数据通过构造函数  
-  
- 构造函数用于初始化类的静态成员。 必须在类声明的外部定义中初始化静态成员。  
-  
- 下面的示例生成 C2438:  
-  
-```  
-// C2438.cpp  
-struct X {  
-   X(int i) : j(i) {}   // C2438  
-   static int j;  
-};  
-  
-int X::j;  
-  
-int main() {  
-   X::j = 1;  
-}  
+
+identifier： 无法初始化静态类数据通过构造函数
+
+构造函数用于初始化类的静态成员。 必须在类声明的外部定义中初始化静态成员。
+
+下面的示例生成 C2438:
+
+```
+// C2438.cpp
+struct X {
+   X(int i) : j(i) {}   // C2438
+   static int j;
+};
+
+int X::j;
+
+int main() {
+   X::j = 1;
+}
 ```

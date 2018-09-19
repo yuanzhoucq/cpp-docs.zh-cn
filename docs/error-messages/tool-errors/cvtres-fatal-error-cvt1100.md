@@ -1,5 +1,5 @@
 ---
-title: CVTRES 错误 CVT1100 |Microsoft 文档
+title: CVTRES 错误 CVT1100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068957"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>CVTRES 错误 CVT1100
-重复的资源-类型:、 名称:、 语言： 语言、 标志： 标志、 大小：  
-  
- 已多次指定给定的资源。  
-  
- 如果链接器正在创建类型库，并且你未指定，可能发生此错误[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)和你的项目中的资源已使用 1。 在这种情况下，指定 /TLBID 并指定最大为 65535 的另一个数。
+
+重复的资源-类型： 类型、 名称： 名称、 语言： 语言、 标志： 标志、 大小： 大小
+
+多次指定了给定的资源。
+
+如果链接器创建类型库，并且未指定出现此错误的[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)和你的项目中的资源已使用 1。 在这种情况下，指定 /TLBID 并指定最多 65535 的另一个数。

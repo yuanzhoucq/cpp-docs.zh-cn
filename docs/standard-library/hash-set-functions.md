@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c96ac897d870e1f8dc153847797379b6720dc7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961872"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103237"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函数
 
@@ -35,9 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*右*提供的元素进行交换的 hash_set 或其元素将要与 hash_set 进行交换的 hash_set*左*。
+*right*<br/>
+提供要交换的元素的 hash_set 或其元素将要与 hash_set 进行交换的 hash_set*左*。
 
-*左*其元素将要与 hash_set 进行交换的 hash_set*右*。
+*left*<br/>
+其元素将要与 hash_set 进行交换的 hash_set*右*。
 
 ### <a name="remarks"></a>备注
 
@@ -64,9 +66,11 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>参数
 
-*右*提供的元素进行交换的 hash_multiset 或其元素将要与 hash_multiset 进行交换的 hash_multiset*左*。
+*right*<br/>
+提供要交换的元素的 hash_multiset 或其元素将要与 hash_multiset 进行交换的 hash_multiset*左*。
 
-*左*其元素将要与 hash_multiset 进行交换的 hash_multiset*右*。
+*left*<br/>
+其元素将要与 hash_multiset 进行交换的 hash_multiset*右*。
 
 ### <a name="remarks"></a>备注
 

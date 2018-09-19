@@ -16,100 +16,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106221"
 ---
 # <a name="marshaling-global-functions"></a>封送全局函数
-这些函数提供支持封送处理和封送处理的数据转换为接口指针。  
-  
+
+这些函数提供支持封送处理和封送处理的数据转换为接口指针。
+
 > [!IMPORTANT]
->  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。  
-  
-|||  
-|-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|释放的封送数据和`IStream`指针。|  
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|创建新的流对象，并将封送指定的接口指针。|  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。
+
+|||
+|-|-|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|释放的封送数据和`IStream`指针。|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|创建新的流对象，并将封送指定的接口指针。|
 |[AtlUnmarshalPtr](#atlunmarshalptr)|将接口指针转换为流的封送处理数据。|  
 
 ## <a name="requirements"></a>要求：
+
 **标头：** atlbase.h
-  
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream  
- 释放流中的封送数据，然后释放流指针。  
+
+##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+
+释放流中的封送数据，然后释放流指针。  
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);
-```  
-  
-### <a name="parameters"></a>参数  
- *pStream*  
- [in]一个指向`IStream`用于封送处理的流上的接口。  
-  
-### <a name="example"></a>示例  
-  有关示例，请参阅[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
-  
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
- 创建新的流对象，将代理的 CLSID 写入流，并通过将初始化代理所需的数据写入流来封送指定接口指针。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pStream*<br/>
+[in]一个指向`IStream`用于封送处理的流上的接口。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[AtlMarshalPtrInProc](#atlmarshalptrinproc)。
+
+##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+
+创建新的流对象，将代理的 CLSID 写入流，并通过将初始化代理所需的数据写入流来封送指定接口指针。
+
 ```
 HRESULT AtlMarshalPtrInProc(
     IUnknown* pUnk,
     const IID& iid,
     IStream** ppStream);
-```  
-  
-### <a name="parameters"></a>参数  
- *pUnk*  
- [in]指向要封送的接口的指针。  
-  
- *iid*  
- [in]正在封送的接口的 GUID。  
-  
- *ppStream*  
- [out]一个指向`IStream`上新的流对象用于封送处理的接口。  
-  
-### <a name="return-value"></a>返回值  
- 标准的 HRESULT 值。  
-  
-### <a name="remarks"></a>备注  
- 因此可以将指针封送到多个流设置 MSHLFLAGS_TABLESTRONG 标志。 指针也可以取消封送多次。  
-  
- 如果封送处理失败，则释放流指针。  
-  
- `AtlMarshalPtrInProc` 只能对进程内对象的指针上使用。  
-  
-### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
-  
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr  
- 将流的封送数据转换为可由客户端使用的接口指针。  
-   
+```
+
+### <a name="parameters"></a>参数
+
+*pUnk*<br/>
+[in]指向要封送的接口的指针。
+
+*iid*<br/>
+[in]正在封送的接口的 GUID。
+
+*ppStream*<br/>
+[out]一个指向`IStream`上新的流对象用于封送处理的接口。
+
+### <a name="return-value"></a>返回值
+
+标准的 HRESULT 值。
+
+### <a name="remarks"></a>备注
+
+因此可以将指针封送到多个流设置 MSHLFLAGS_TABLESTRONG 标志。 指针也可以取消封送多次。
+
+如果封送处理失败，则释放流指针。
+
+`AtlMarshalPtrInProc` 只能对进程内对象的指针上使用。
+
+### <a name="example"></a>示例
+
+[!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
+
+##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+
+将流的封送数据转换为可由客户端使用的接口指针。
+
 ```
 HRESULT AtlUnmarshalPtr(
     IStream* pStream,
     const IID& iid,
     IUnknown** ppUnk);
-```  
-  
-### <a name="parameters"></a>参数  
- *pStream*  
- [in]指向要取消封送的流的指针。  
-  
- *iid*  
- [in]正在取消封送的接口的 GUID。  
-  
- *ppUnk*  
- [out]指向取消封送的接口的指针。  
-  
-### <a name="return-value"></a>返回值  
- 标准的 HRESULT 值。  
-  
-### <a name="example"></a>示例  
-  有关示例，请参阅[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
-  
-## <a name="see-also"></a>请参阅  
- [函数](../../atl/reference/atl-functions.md)
+```
+
+### <a name="parameters"></a>参数
+
+*pStream*<br/>
+[in]指向要取消封送的流的指针。
+
+*iid*<br/>
+[in]正在取消封送的接口的 GUID。
+
+*ppUnk*<br/>
+[out]指向取消封送的接口的指针。
+
+### <a name="return-value"></a>返回值
+
+标准的 HRESULT 值。
+
+### <a name="example"></a>示例
+
+有关示例，请参阅[AtlMarshalPtrInProc](#atlmarshalptrinproc)。
+
+## <a name="see-also"></a>请参阅
+
+[函数](../../atl/reference/atl-functions.md)

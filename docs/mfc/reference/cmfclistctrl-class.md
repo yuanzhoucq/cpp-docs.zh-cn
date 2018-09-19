@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851432"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702672"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 类
 `CMFCListCtrl`类用于扩展的功能[CListCtrl 类](../../mfc/reference/clistctrl-class.md)类通过支持的高级标头控件功能[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)。  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bMark*  
- 一个布尔型参数，用于确定是否启用不同的背景色。  
+*bMark*<br/>
+[in]一个布尔型参数，用于确定是否启用不同的背景色。  
   
- [in]*bRedraw*  
- 一个布尔型参数，用于确定是否要立即重绘控件。  
+*bRedraw*<br/>
+[in]一个布尔型参数，用于确定是否要立即重绘控件。  
   
 ### <a name="remarks"></a>备注  
  `EnableMarkSortedColumn` 使用方法`CDrawingManager::PixelAlpha`来计算颜色要用于排序的列。 选取颜色取决于正则背景色。  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 一个布尔值，指定是否启用多个列排序模式。  
+*bEnable*<br/>
+[in]一个布尔值，指定是否启用多个列排序模式。  
   
 ### <a name="remarks"></a>备注  
  如果启用排序基于多个列，列具有层次结构。 首先将按主列排序的数据行。 任何等效的值再按每个后续列基于优先级。  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lParam1*  
- 要比较的第一项。  
+*lParam1*<br/>
+[in]要比较的第一个项。  
   
- [in]*lParam2*  
- 要比较的第二项。  
+*lParam2*<br/>
+[in]要比较的第二个项。  
   
- [in]*iColumn*  
- 此方法进行排序的列的索引。  
+*iColumn*<br/>
+[in]此方法进行排序的列的索引。  
   
 ### <a name="return-value"></a>返回值  
  一个整数，指示两个项的相对位置。 负值指示第一项应位于第二个，正值指示第一项应遵循第二个，并且零表示两个项是等效项。  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nRow*  
- 相关的单元的行。  
+*nRow*<br/>
+[in]相关的单元的行。  
   
- [in]*nColumn*  
- 相关的单元的列。  
+*nColumn*<br/>
+[in]相关的单元的列。  
   
 ### <a name="return-value"></a>返回值  
  一个 COLOREF 值，该值指定该单元格的背景色。  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nRow*  
- 相关的单元的行。  
+*nRow*<br/>
+[in]相关的单元的行。  
   
- [in]*nColumn*  
- 相关的单元的列。  
+*nColumn*<br/>
+[in]相关的单元的列。  
   
- [in]*dwData*  
- 用户定义的数据。 默认实现不使用此参数。  
+*dwData*<br/>
+[in]用户定义的数据。 默认实现不使用此参数。  
   
 ### <a name="return-value"></a>返回值  
  句柄用于当前单元格的字体。  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nRow*  
- 相关的单元的行。  
+*nRow*<br/>
+[in]相关的单元的行。  
   
- [in]*nColumn*  
- 相关的单元的列。  
+*nColumn*<br/>
+[in]相关的单元的列。  
   
 ### <a name="return-value"></a>返回值  
  一个 COLOREF 值，该值指定该单元格的文本颜色。  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 要移除的列。  
+*iColumn*<br/>
+[in]要移除的列。  
   
 ### <a name="remarks"></a>备注  
  此方法从标头控件中删除列排序。 它将调用[CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 要排序的列。  
+*iColumn*<br/>
+[in]要排序的列。  
   
- [in]*bAscending*  
- 一个布尔值，指定的排序顺序。  
+*bAscending*<br/>
+[in]一个布尔值，指定的排序顺序。  
   
- [in]*b 将*  
- 一个布尔值，指定是否在方法中添加指示的列*iColumn*到对列进行排序的列表。  
+*b 将*<br/>
+[in]一个布尔值，指定是否在方法中添加指示的列*iColumn*到对列进行排序的列表。  
   
 ### <a name="remarks"></a>备注  
  此方法传递输入的参数使用方法标头控件[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*iColumn*  
- 要排序的列。  
+*iColumn*<br/>
+[in]要排序的列。  
   
- [in]*bAscending*  
- 一个布尔值，指定的排序顺序。  
+*bAscending*<br/>
+[in]一个布尔值，指定的排序顺序。  
   
- [in]*b 将*  
- 一个布尔值，指定此方法是否将指示的列添加*iColumn*到对列进行排序的列表。  
+*b 将*<br/>
+[in]一个布尔值，指定此方法是否将指示的列添加*iColumn*到对列进行排序的列表。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图表](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: -所有 |Microsoft 文档
+title: -所有 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c080a8fe1a03310bbade9ddeab339edef1bec5cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfae81486f6edcc20a0277b403e40914bebb6fef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368442"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705115"
 ---
 # <a name="all"></a>/ALL
-```  
-/ALL  
-```  
-  
-## <a name="remarks"></a>备注  
- 此选项显示除代码反汇编外的所有可用信息。 使用[/DISASM](../../build/reference/disasm.md)以显示反汇编。 你可以使用[/RAWDATA](../../build/reference/rawdata.md)： 无了/所有内容都在省略的文件的原始二进制详细信息。  
-  
- 仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项是可供产生的文件的使用[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。  
-  
-## <a name="see-also"></a>请参阅  
- [DUMPBIN 选项](../../build/reference/dumpbin-options.md)
+
+```
+/ALL
+```
+
+## <a name="remarks"></a>备注
+
+此选项显示除代码反汇编外的所有可用信息。 使用[/DISASM](../../build/reference/disasm.md)显示反汇编。 可以使用[/RAWDATA](../../build/reference/rawdata.md): NONE/所有到忽略的文件的原始二进制的详细信息。
+
+仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。
+
+## <a name="see-also"></a>请参阅
+
+[DUMPBIN 选项](../../build/reference/dumpbin-options.md)

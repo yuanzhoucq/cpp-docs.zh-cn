@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11e7a127fdf09fbc3704d6e06786e3bd76350941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2f52e4f551f4ae59e7d3386af8bdba2d2fe5a0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077342"
 ---
 # <a name="clock-function-c"></a>clock 函数 (C)
-**ANSI 4.12.2.1** `clock` 函数的纪元  
-  
- 当 C 程序开始执行时，`clock` 函数的纪元将以值 0 开始。 它返回以 1/CLOCKS_PER_SEC（对于 Microsoft C 等于 1/1000）度量的时间。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.12.2.1** `clock` 函数的纪元
+
+当 C 程序开始执行时，`clock` 函数的纪元将以值 0 开始。 它返回以 1/CLOCKS_PER_SEC（对于 Microsoft C 等于 1/1000）度量的时间。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)

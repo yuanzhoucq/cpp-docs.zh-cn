@@ -1,7 +1,7 @@
 ---
-title: Internet 上的 active 技术 |Microsoft 文档
+title: 在 Internet 上的 active 技术 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,21 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7062ae67c9fdfbe79efe20ce3251eba37cc926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 295873282f8d4cf44c2d00ba0bdec3a2c88fdd13
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338583"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535010"
 ---
 # <a name="active-technology-on-the-internet"></a>Internet 上的 Active 技术
 Active 技术是一个开放式平台，用来让开发人员为全球性的 Internet 或公司的内部网络（也称为 Intranet）创建激动人心的动态内容和应用程序。 Microsoft 提供的用于 Internet 编程的主要技术如下所述。  
+
+>[!IMPORTANT]
+> ActiveX 是一项传统技术，不应使用新的开发。 本文将取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
   
 ## <a name="activex-controls"></a>ActiveX 控件  
  ActiveX 控件（以前称为 OLE 控件）是一个对象，可插入网页或插入作为 ActiveX 控件容器的任何其他应用程序。 示例包括按钮、股票代码和图表控件。 有关详细信息，请参阅[Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。  
-  
-## <a name="active-documents"></a>活动文档  
- 活动文档可由 Web 浏览器或文档查看器显示。 传统嵌入对象被限制在一个页面并且嵌入在文档中显示。 利用 Active 技术，该文档可以在整个客户端区域窗口中显示完整的框架。 有关详细信息，请参阅[Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)。  
   
 ## <a name="internet-data-download-services"></a>Internet 数据下载服务  
  可使用以下普通协议通过 Internet 下载数据：HTTP、FTP 和 Gopher。 MFC WinInet 类通过将 TCP/IP 和 WinSock 协议抽象化，使得可以很轻松地使用 HTTP、FTP 和 Gopher 协议传输数据。 MFC 异步名字对象类提供了一个方法，让您可以不受阻碍地下载文件和异步呈现大型对象。 有关详细信息，请参阅[Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)。  
@@ -36,12 +36,11 @@ Active 技术是一个开放式平台，用来让开发人员为全球性的 Int
 ## <a name="active-scripts"></a>活动脚本  
  VBScript 和其他脚本语言可连接控件和将交互式功能添加到网页。 脚本会将处理从服务器移动到客户端。 例如，可在客户端上验证窗体项然后将其发送到服务器。  
   
-## <a name="html-extensions"></a>HTML 扩展名  
+## <a name="html-extensions"></a>HTML 扩展  
  HTML 扩展名（如对象标记）已添加以支持控件和脚本。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)   
  [在 Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)   
- [在 Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)   
  [Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019368"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 结构
-由 COM 相关代码在 atl。  
-  
-## <a name="syntax"></a>语法  
-  
+
+由 COM 相关代码在 atl。
+
+## <a name="syntax"></a>语法
+
 ```
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
@@ -39,34 +40,34 @@ struct _ATL_COM_MODULE70 {
     _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
     CRITICAL_SECTION m_csObjMap;
 };
-```  
-  
-## <a name="members"></a>成员  
- `cbSize`  
- 用于版本控制的结构的大小。  
-  
- `m_hInstTypeLib`  
- 对此模块的类型库句柄实例。  
-  
- `m_ppAutoObjMapFirst`  
- 数组元素，该值指示此模块的对象映射条目的开头的地址。  
-  
- `m_ppAutoObjMapLast`  
- 指示此模块的对象映射条目的结束位置的数组元素的地址。  
-  
- `m_csObjMap`  
- 若要序列化到对象的映射条目的访问的关键部分。 在内部由 atl。  
-  
-## <a name="remarks"></a>备注  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定义为 _ATL_COM_MODULE70 的 typedef。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlbase.h  
-  
-## <a name="see-also"></a>请参阅  
- [类和结构](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>成员
 
+`cbSize`<br/>
+用于版本控制的结构的大小。
 
+`m_hInstTypeLib`<br/>
+对此模块的类型库句柄实例。
 
+`m_ppAutoObjMapFirst`<br/>
+数组元素，该值指示此模块的对象映射条目的开头的地址。
+
+`m_ppAutoObjMapLast`<br/>
+指示此模块的对象映射条目的结束位置的数组元素的地址。
+
+`m_csObjMap`<br/>
+若要序列化到对象的映射条目的访问的关键部分。 在内部由 atl。
+
+## <a name="remarks"></a>备注
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定义为 _ATL_COM_MODULE70 的 typedef。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlbase.h
+
+## <a name="see-also"></a>请参阅
+
+[类和结构](../../atl/reference/atl-classes.md)
 

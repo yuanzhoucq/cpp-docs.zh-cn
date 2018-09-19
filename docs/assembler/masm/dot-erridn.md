@@ -1,7 +1,7 @@
 ---
 title: .ERRIDN] | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6948baa498cccb9f89eb030978b18363cfdddd6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 74145f45a171ab1aee10bb773fb03970842cc339
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050849"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318871"
 ---
 # <a name="erridn"></a>.ERRIDN]
-如果文本项相同，则生成错误。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-.ERRIDN[[I]] <textitem1>, <textitem2> [[, message]]  
-```  
-  
-## <a name="remarks"></a>备注  
- 如果**我**是给定，比较不区分大小写。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+如果文本项是相同的将生成错误。
+
+## <a name="syntax"></a>语法
+
+> .[[I]] ERRIDN *textitem1*， *textitem2* [[，*消息*]]
+
+## <a name="remarks"></a>备注
+
+如果**我**是给定，比较不区分大小写。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211312"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681180"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -47,12 +47,6 @@ namespace concurrency;
 ```  
   
 ## <a name="members"></a>成员  
-  
-### <a name="namespaces"></a>命名空间  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[concurrency:: extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -135,7 +129,7 @@ namespace concurrency;
 |[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|  
 |[target_block 类](target-block-class.md)|`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|  
 |[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|  
-|[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)，为已取消的任务。|  
+|[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](task-class.md)，为已取消的任务。|  
 |[task_completion_event 类](task-completion-event-class.md)|`task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|  
 |[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用此类从 UWP 应用。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|  
 |[task_group 类](task-group-class.md)|`task_group` 类表示可以等待或取消的并行工作的集合。|  
@@ -194,7 +188,7 @@ namespace concurrency;
 |[asend 函数](concurrency-namespace-functions.md#asend)|已重载。 异步发送操作，计划任务以将数据传播到目标块。|  
 |[cancel_current_task 函数](concurrency-namespace-functions.md#cancel_current_task)|获取当前执行的任务。 此函数可从任务主体中进行调用，以便中止任务的执行并使其进入 `canceled` 状态。<br /><br /> 不支持从 `task` 主体外部调用此函数的情况。 这样做将导致未定义的行为，例如应用程序崩溃或挂起。|  
 |[create_async 函数](concurrency-namespace-functions.md#create_async)|基于用户提供的 lambda 或函数对象创建 Windows 运行时异步构造。 `create_async` 的返回类型是基于传递给方法的 lambda 的签名的 `IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^` 之一。|  
-|[create_task 函数](concurrency-namespace-functions.md#create_task)|已重载。 创建 PPL[任务](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。|  
+|[create_task 函数](concurrency-namespace-functions.md#create_task)|已重载。 创建 PPL[任务](task-class.md)对象。 在你会使用任务构造函数的任何位置都可以使用 `create_task`。 出于便利性提供该函数，因为它允许在创建任务时使用 `auto` 关键字。|  
 |[CreateResourceManager 函数](concurrency-namespace-functions.md#createresourcemanager)|返回表示并发运行时的资源管理器的单一实例的接口。 资源管理器负责将资源分配给想要相互合作的计划程序。|  
 |[DisableTracing 函数](concurrency-namespace-functions.md#disabletracing)|在并发运行时中禁用跟踪。 此函数被弃用，因为默认注销 ETW 跟踪。|  
 |[EnableTracing 函数](concurrency-namespace-functions.md#enabletracing)|在并发运行时中启用跟踪。 此函数被弃用，因为现在默认启用 ETW 跟踪。|  

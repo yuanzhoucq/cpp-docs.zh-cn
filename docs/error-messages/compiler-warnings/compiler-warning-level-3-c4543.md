@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4543 |Microsoft 文档
+title: 编译器警告 （等级 3） C4543 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075437"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>编译器警告（等级 3）C4543
-抑制的属性 no_injected_text 插入的文本  
-  
- [No_injected_text](../../windows/no-injected-text.md)属性出现在源代码中，这意味着编译器将阻止属性注入代码。  
-  
- 此警告是提醒属性将无法注入代码。
+
+特性 no_injected_text 禁止注入的文本
+
+[No_injected_text](../../windows/no-injected-text.md)属性出现在源代码中，这意味着编译器将阻止属性注入代码。
+
+此警告是提醒您属性将无法再将代码注入。

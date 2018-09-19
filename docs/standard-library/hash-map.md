@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959769"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316311"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ ms.locfileid: "38959769"
 
 ## <a name="syntax"></a>语法
 
-> #<a name="include-hashmap"></a>包括 < hash_map >
+> #<a name="include-hashmap"></a>包括\<hash_map >
 
 ### <a name="operators"></a>运算符
 
@@ -64,6 +64,6 @@ ms.locfileid: "38959769"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](cpp-standard-library-header-files.md)
-[c + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)
-[c + + 标准库参考](cpp-standard-library-reference.md)
+[头文件引用](cpp-standard-library-header-files.md)<br/>
+[C++ 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库参考](cpp-standard-library-reference.md)

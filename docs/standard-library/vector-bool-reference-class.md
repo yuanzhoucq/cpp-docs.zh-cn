@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05486e4b75e631dcdc77855e850fe48c08d77326
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 798c65764ce49e795d3a6220803d51c72411ca79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686403"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 类
 
@@ -29,7 +29,7 @@ ms.locfileid: "43203846"
 
 ## <a name="remarks"></a>备注
 
-必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为无法采用 `vector<bool>::reference` 对象的地址，所以下列使用 [vector\<bool>::operator[]](https://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) 的代码是错误的：
+必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为地址`vector<bool>::reference`无法创建对象，将尝试使用以下代码`vector<bool>::operator&`不正确：
 
 ```cpp
 vector<bool> vb;

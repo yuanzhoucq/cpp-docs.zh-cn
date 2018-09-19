@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685540"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 
-本演练演示如何修改现有 MFC 应用程序中使用功能区用户界面。 Visual Studio 支持 Office 2007 功能区和 Windows 7 Scenic 功能区。 有关功能区用户界面的详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 网站上。
+本演练演示如何修改现有 MFC 应用程序中使用功能区用户界面。 Visual Studio 支持 Office 2007 功能区和 Windows 7 Scenic 功能区。 有关功能区用户界面的详细信息，请参阅[功能区](/windows/desktop/uxguide/cmd-ribbons)。
 
 本演练中修改经典 Scribble 1.0 MFC 示例，可以使用鼠标来创建线条图形。 此部分演练演示如何修改 Scribble 示例，以便它将显示功能区栏。 [第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)将多个按钮添加到功能区栏。
 

@@ -74,930 +74,1106 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032024"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 类
-此类提供支持的常用属性值的方法。  
-  
+
+此类提供支持的常用属性值的方法。
+
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。  
-  
-## <a name="syntax"></a>语法  
-  
+>  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+
+## <a name="syntax"></a>语法
+
 ```
 template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
- plibid,
+plibid,
     wMajor,
- wMinor,
+wMinor,
     tihclass>
-```   
-  
-#### <a name="parameters"></a>参数  
- *T*  
- 实现控件的类派生自`CStockPropImpl`。  
-  
- *InterfaceName*  
- 双重接口公开常用属性。  
-  
- *piid*  
- 指向 IID `InterfaceName`。  
-  
- *plibid*  
- 指向包含的定义的类型库的 LIBID `InterfaceName`。  
-  
- *wMajor*  
- 类型库的主版本。 默认值为 1。  
-  
- *wMinor*  
- 类型库的次版本。 默认值为 0。  
-  
- *tihclass*  
- 用于管理的类型信息的类*T*。默认值为 `CComTypeInfoHolder`。  
-  
-## <a name="members"></a>成员  
-  
-### <a name="public-methods"></a>公共方法  
-  
-|||  
-|-|-|  
-|[get_Appearance](#get_appearance)|调用此方法以获取的绘制样式使用的控件，例如，平面或 3D。|  
-|[get_AutoSize](#get_autosize)|调用此方法以获取用于指示该控件不能为其他任何大小的标志的状态。|  
-|[get_BackColor](#get_backcolor)|调用此方法以获取控件的背景色。|  
-|[get_BackStyle](#get_backstyle)|调用此方法以获取控件的背景样式，透明或不透明。|  
-|[get_BorderColor](#get_bordercolor)|调用此方法以获取控件的边框颜色。|  
-|[get_BorderStyle](#get_borderstyle)|调用此方法以获取控件的边框样式。|  
-|[get_BorderVisible](#get_bordervisible)|调用此方法以获取用于指示控件的边框是否可见的标志的状态。|  
-|[get_BorderWidth](#get_borderwidth)|调用此方法以获取控件的边框宽度 （以像素为单位）。|  
-|[get_Caption](#get_caption)|调用此方法以获取指定对象的标题中的文本。|  
-|[get_DrawMode](#get_drawmode)|调用此方法以获取控件的绘制模式，例如，异或笔或反转颜色。|  
-|[get_DrawStyle](#get_drawstyle)|例如，调用此方法以获取控件的绘制样式，实线、 虚线或点分。|  
-|[get_DrawWidth](#get_drawwidth)|调用此方法以获取由该控件的绘制方法的绘制宽度 （以像素为单位）。|  
-|[get_Enabled](#get_enabled)|调用此方法以获取用于指示是否启用了该控件的标志的状态。|  
-|[get_FillColor](#get_fillcolor)|调用此方法以获取控件的填充颜色。|  
-|[get_FillStyle](#get_fillstyle)|例如，调用此方法以获取控件的填充样式，solid、 透明的或交叉影线。|  
-|[get_Font](#get_font)|调用此方法以获取指向控件的字体属性。|  
-|[get_ForeColor](#get_forecolor)|调用此方法以获取控件的前景色。|  
-|[get_HWND](#get_hwnd)|调用此方法以获取与控件关联的窗口句柄。|  
-|[get_MouseIcon](#get_mouseicon)|调用此方法获取图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。|  
-|[get_MousePointer](#get_mousepointer)|调用此方法以获取鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。|  
-|[get_Picture](#get_picture)|调用此方法来获得到的图形 （图标、 位图或图元文件） 要显示的图片属性的指针。|  
-|[get_ReadyState](#get_readystate)|例如，调用此方法以获取控件的就绪状态，加载或加载。|  
-|[get_TabStop](#get_tabstop)|调用此方法以获取用于指示控件是否制表位的标志。|  
-|[get_Text](#get_text)|调用此方法以获取与该控件显示的文本。|  
-|[getvalid](#get_valid)|调用此方法以获取指示控件是否是有效的标志的状态。|  
-|[get_Window](#get_window)|调用此方法以获取与控件关联的窗口句柄。 与相同[CStockPropImpl::get_HWND](#get_hwnd)。|  
-|[put_Appearance](#put_appearance)|调用此方法以设置绘制样式使用的控件，例如，平面或 3D。|  
-|[put_AutoSize](#put_autosize)|调用此方法以设置用于指示该控件不能为其他任何大小的标志的值。|  
-|[put_BackColor](#put_backcolor)|调用此方法以设置控件的背景色。|  
-|[put_BackStyle](#put_backstyle)|调用此方法以设置控件的背景样式。|  
-|[put_BorderColor](#put_bordercolor)|调用此方法以设置控件的边框颜色。|  
-|[put_BorderStyle](#put_borderstyle)|调用此方法以设置控件的边框样式。|  
-|[put_BorderVisible](#put_bordervisible)|调用此方法以设置用于指示控件的边框是否可见的标志的值。|  
-|[put_BorderWidth](#put_borderwidth)|调用此方法以设置控件的边框的宽度。|  
-|[put_Caption](#put_caption)|调用此方法以设置与该控件显示的文本。|  
-|[put_DrawMode](#put_drawmode)|调用此方法以设置控件的绘制模式，例如，异或笔或反转颜色。|  
-|[put_DrawStyle](#put_drawstyle)|例如，调用此方法以设置控件的绘制样式，实线、 虚线或点分。|  
-|[put_DrawWidth](#put_drawwidth)|调用此方法以设置使用的控件的绘制方法的宽度 （以像素为单位）。|  
-|[put_Enabled](#put_enabled)|调用此方法以设置用于指示是否启用了该控件的标志。|  
-|[put_FillColor](#put_fillcolor)|调用此方法以设置控件的填充颜色。|  
-|[put_FillStyle](#put_fillstyle)|例如，调用此方法以设置控件的填充样式，solid、 透明的或交叉影线。|  
-|[put_Font](#put_font)|调用此方法来设置控件的字体属性。|  
-|[put_ForeColor](#put_forecolor)|调用此方法以设置控件的前景色。|  
-|[put_HWND](#put_hwnd)|此方法返回 E_FAIL。|  
-|[put_MouseIcon](#put_mouseicon)|调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。|  
-|[put_MousePointer](#put_mousepointer)|调用此方法以设置鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。|  
-|[put_Picture](#put_picture)|调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性。|  
-|[put_ReadyState](#put_readystate)|调用此方法以设置控件的就绪状态，例如，加载或加载。|  
-|[put_TabStop](#put_tabstop)|调用此方法以设置标志，指示控件是否制表位的值。|  
-|[put_Text](#put_text)|调用此方法以设置与该控件显示的文本。|  
-|[putvalid](#put_valid)|调用此方法以设置指示控件是否是有效的标志。|  
-|[put_Window](#put_window)|此方法调用[CStockPropImpl::put_HWND](#put_hwnd)，这会返回 E_FAIL。|  
-|[putref_Font](#putref_font)|调用此方法来设置控件的字体属性，引用计数。|  
-|[putref_MouseIcon](#putref_mouseicon)|调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性，引用计数。|  
-|[putref_Picture](#putref_picture)|调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性，引用计数。|  
-  
-## <a name="remarks"></a>备注  
- `CStockPropImpl` 提供了**放**并**获取**用于每个常用的属性的方法。 这些方法提供所必需的代码来设置或获取与每个属性关联的数据成员和通知和任何属性发生更改时，将容器与同步。  
-  
- Visual c + + 的常用属性通过其向导页提供支持。 有关向控件添加常用属性的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。  
-  
- 为了向后兼容`CStockPropImpl`还公开`get_Window`并`put_Window`只需调用的方法`get_HWND`和`put_HWND`分别。 默认实现`put_HWND`返回 E_FAIL，因为 HWND 应为只读属性。  
-  
- 以下属性还具有**putref**实现：  
-  
--   字体  
-  
--   MouseIcon  
-  
--   Picture  
-  
- 相同的三个常用属性需要其对应的数据成员的类型为`CComPtr`或某个其他类，用于提供正确的接口引用计数通过赋值运算符。  
-  
-## <a name="inheritance-hierarchy"></a>继承层次结构  
- `T`  
-  
- [IDispatchImpl](../../atl/reference/idispatchimpl-class.md)  
-  
- `CStockPropImpl`  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlctl.h  
-  
-##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance  
- 调用此方法以获取的绘制样式使用的控件，例如，平面或 3D。  
-  
+```
+
+#### <a name="parameters"></a>参数
+
+*T*<br/>
+实现控件的类派生自`CStockPropImpl`。
+
+*InterfaceName*<br/>
+双重接口公开常用属性。
+
+*piid*<br/>
+指向 IID `InterfaceName`。
+
+*plibid*<br/>
+指向包含的定义的类型库的 LIBID `InterfaceName`。
+
+*wMajor*<br/>
+类型库的主版本。 默认值为 1。
+
+*wMinor*<br/>
+类型库的次版本。 默认值为 0。
+
+*tihclass*<br/>
+用于管理的类型信息的类*T*。默认值为 `CComTypeInfoHolder`。
+
+## <a name="members"></a>成员
+
+### <a name="public-methods"></a>公共方法
+
+|||
+|-|-|
+|[get_Appearance](#get_appearance)|调用此方法以获取的绘制样式使用的控件，例如，平面或 3D。|
+|[get_AutoSize](#get_autosize)|调用此方法以获取用于指示该控件不能为其他任何大小的标志的状态。|
+|[get_BackColor](#get_backcolor)|调用此方法以获取控件的背景色。|
+|[get_BackStyle](#get_backstyle)|调用此方法以获取控件的背景样式，透明或不透明。|
+|[get_BorderColor](#get_bordercolor)|调用此方法以获取控件的边框颜色。|
+|[get_BorderStyle](#get_borderstyle)|调用此方法以获取控件的边框样式。|
+|[get_BorderVisible](#get_bordervisible)|调用此方法以获取用于指示控件的边框是否可见的标志的状态。|
+|[get_BorderWidth](#get_borderwidth)|调用此方法以获取控件的边框宽度 （以像素为单位）。|
+|[get_Caption](#get_caption)|调用此方法以获取指定对象的标题中的文本。|
+|[get_DrawMode](#get_drawmode)|调用此方法以获取控件的绘制模式，例如，异或笔或反转颜色。|
+|[get_DrawStyle](#get_drawstyle)|例如，调用此方法以获取控件的绘制样式，实线、 虚线或点分。|
+|[get_DrawWidth](#get_drawwidth)|调用此方法以获取由该控件的绘制方法的绘制宽度 （以像素为单位）。|
+|[get_Enabled](#get_enabled)|调用此方法以获取用于指示是否启用了该控件的标志的状态。|
+|[get_FillColor](#get_fillcolor)|调用此方法以获取控件的填充颜色。|
+|[get_FillStyle](#get_fillstyle)|例如，调用此方法以获取控件的填充样式，solid、 透明的或交叉影线。|
+|[get_Font](#get_font)|调用此方法以获取指向控件的字体属性。|
+|[get_ForeColor](#get_forecolor)|调用此方法以获取控件的前景色。|
+|[get_HWND](#get_hwnd)|调用此方法以获取与控件关联的窗口句柄。|
+|[get_MouseIcon](#get_mouseicon)|调用此方法获取图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。|
+|[get_MousePointer](#get_mousepointer)|调用此方法以获取鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。|
+|[get_Picture](#get_picture)|调用此方法来获得到的图形 （图标、 位图或图元文件） 要显示的图片属性的指针。|
+|[get_ReadyState](#get_readystate)|例如，调用此方法以获取控件的就绪状态，加载或加载。|
+|[get_TabStop](#get_tabstop)|调用此方法以获取用于指示控件是否制表位的标志。|
+|[get_Text](#get_text)|调用此方法以获取与该控件显示的文本。|
+|[getvalid](#get_valid)|调用此方法以获取指示控件是否是有效的标志的状态。|
+|[get_Window](#get_window)|调用此方法以获取与控件关联的窗口句柄。 与相同[CStockPropImpl::get_HWND](#get_hwnd)。|
+|[put_Appearance](#put_appearance)|调用此方法以设置绘制样式使用的控件，例如，平面或 3D。|
+|[put_AutoSize](#put_autosize)|调用此方法以设置用于指示该控件不能为其他任何大小的标志的值。|
+|[put_BackColor](#put_backcolor)|调用此方法以设置控件的背景色。|
+|[put_BackStyle](#put_backstyle)|调用此方法以设置控件的背景样式。|
+|[put_BorderColor](#put_bordercolor)|调用此方法以设置控件的边框颜色。|
+|[put_BorderStyle](#put_borderstyle)|调用此方法以设置控件的边框样式。|
+|[put_BorderVisible](#put_bordervisible)|调用此方法以设置用于指示控件的边框是否可见的标志的值。|
+|[put_BorderWidth](#put_borderwidth)|调用此方法以设置控件的边框的宽度。|
+|[put_Caption](#put_caption)|调用此方法以设置与该控件显示的文本。|
+|[put_DrawMode](#put_drawmode)|调用此方法以设置控件的绘制模式，例如，异或笔或反转颜色。|
+|[put_DrawStyle](#put_drawstyle)|例如，调用此方法以设置控件的绘制样式，实线、 虚线或点分。|
+|[put_DrawWidth](#put_drawwidth)|调用此方法以设置使用的控件的绘制方法的宽度 （以像素为单位）。|
+|[put_Enabled](#put_enabled)|调用此方法以设置用于指示是否启用了该控件的标志。|
+|[put_FillColor](#put_fillcolor)|调用此方法以设置控件的填充颜色。|
+|[put_FillStyle](#put_fillstyle)|例如，调用此方法以设置控件的填充样式，solid、 透明的或交叉影线。|
+|[put_Font](#put_font)|调用此方法来设置控件的字体属性。|
+|[put_ForeColor](#put_forecolor)|调用此方法以设置控件的前景色。|
+|[put_HWND](#put_hwnd)|此方法返回 E_FAIL。|
+|[put_MouseIcon](#put_mouseicon)|调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。|
+|[put_MousePointer](#put_mousepointer)|调用此方法以设置鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。|
+|[put_Picture](#put_picture)|调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性。|
+|[put_ReadyState](#put_readystate)|调用此方法以设置控件的就绪状态，例如，加载或加载。|
+|[put_TabStop](#put_tabstop)|调用此方法以设置标志，指示控件是否制表位的值。|
+|[put_Text](#put_text)|调用此方法以设置与该控件显示的文本。|
+|[putvalid](#put_valid)|调用此方法以设置指示控件是否是有效的标志。|
+|[put_Window](#put_window)|此方法调用[CStockPropImpl::put_HWND](#put_hwnd)，这会返回 E_FAIL。|
+|[putref_Font](#putref_font)|调用此方法来设置控件的字体属性，引用计数。|
+|[putref_MouseIcon](#putref_mouseicon)|调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性，引用计数。|
+|[putref_Picture](#putref_picture)|调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性，引用计数。|
+
+## <a name="remarks"></a>备注
+
+`CStockPropImpl` 提供了**放**并**获取**用于每个常用的属性的方法。 这些方法提供所必需的代码来设置或获取与每个属性关联的数据成员和通知和任何属性发生更改时，将容器与同步。
+
+Visual c + + 的常用属性通过其向导页提供支持。 有关向控件添加常用属性的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。
+
+为了向后兼容`CStockPropImpl`还公开`get_Window`并`put_Window`只需调用的方法`get_HWND`和`put_HWND`分别。 默认实现`put_HWND`返回 E_FAIL，因为 HWND 应为只读属性。
+
+以下属性还具有**putref**实现：
+
+- 字体
+
+- MouseIcon
+
+- Picture
+
+相同的三个常用属性需要其对应的数据成员的类型为`CComPtr`或某个其他类，用于提供正确的接口引用计数通过赋值运算符。
+
+## <a name="inheritance-hierarchy"></a>继承层次结构
+
+`T`
+
+[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
+
+`CStockPropImpl`
+
+## <a name="requirements"></a>要求
+
+**标头：** atlctl.h
+
+##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance
+
+调用此方法以获取的绘制样式使用的控件，例如，平面或 3D。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnAppearance*  
- 变量用于接收控件的绘制样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_autosize"></a>  CStockPropImpl::get_AutoSize  
- 调用此方法以获取用于指示该控件不能为其他任何大小的标志的状态。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnAppearance*<br/>
+变量用于接收控件的绘制样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_autosize"></a>  CStockPropImpl::get_AutoSize
+
+调用此方法以获取用于指示该控件不能为其他任何大小的标志的状态。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbAutoSize*  
- 变量用于接收标志状态。 TRUE 表示该控件不能为其他任何大小。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_backcolor"></a>  CStockPropImpl::get_BackColor  
- 调用此方法以获取控件的背景色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbAutoSize*<br/>
+变量用于接收标志状态。 TRUE 表示该控件不能为其他任何大小。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_backcolor"></a>  CStockPropImpl::get_BackColor
+
+调用此方法以获取控件的背景色。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *pclrBackColor*  
- 接收控件的背景色的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_backstyle"></a>  CStockPropImpl::get_BackStyle  
- 调用此方法以获取控件的背景样式，透明或不透明。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pclrBackColor*<br/>
+接收控件的背景色的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_backstyle"></a>  CStockPropImpl::get_BackStyle
+
+调用此方法以获取控件的背景样式，透明或不透明。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnBackStyle*  
- 变量用于接收控件的背景样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_bordercolor"></a>  CStockPropImpl::get_BorderColor  
- 调用此方法以获取控件的边框颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnBackStyle*<br/>
+变量用于接收控件的背景样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_bordercolor"></a>  CStockPropImpl::get_BorderColor
+
+调用此方法以获取控件的边框颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *pclrBorderColor*  
- 变量用于接收控件的边框颜色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_borderstyle"></a>  CStockPropImpl::get_BorderStyle  
- 调用此方法以获取控件的边框样式。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pclrBorderColor*<br/>
+变量用于接收控件的边框颜色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_borderstyle"></a>  CStockPropImpl::get_BorderStyle
+
+调用此方法以获取控件的边框样式。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnBorderStyle*  
- 变量用于接收控件的边框样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_bordervisible"></a>  CStockPropImpl::get_BorderVisible  
- 调用此方法以获取用于指示控件的边框是否可见的标志的状态。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnBorderStyle*<br/>
+变量用于接收控件的边框样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_bordervisible"></a>  CStockPropImpl::get_BorderVisible
+
+调用此方法以获取用于指示控件的边框是否可见的标志的状态。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbBorderVisible*  
- 变量用于接收标志状态。 TRUE 指示控件的边框可见。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_borderwidth"></a>  CStockPropImpl::get_BorderWidth  
- 调用此方法以获取控件的边框的宽度。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbBorderVisible*<br/>
+变量用于接收标志状态。 TRUE 指示控件的边框可见。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_borderwidth"></a>  CStockPropImpl::get_BorderWidth
+
+调用此方法以获取控件的边框的宽度。
+
 ```
 HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnBorderWidth*  
- 接收控件的边框宽度的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_caption"></a>  CStockPropImpl::get_Caption  
- 调用此方法以获取指定对象的标题中的文本。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnBorderWidth*<br/>
+接收控件的边框宽度的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_caption"></a>  CStockPropImpl::get_Caption
+
+调用此方法以获取指定对象的标题中的文本。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbstrCaption*  
- 要与该控件显示的文本。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_drawmode"></a>  CStockPropImpl::get_DrawMode  
- 调用此方法以获取控件的绘制模式，例如，异或笔或反转颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbstrCaption*<br/>
+要与该控件显示的文本。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_drawmode"></a>  CStockPropImpl::get_DrawMode
+
+调用此方法以获取控件的绘制模式，例如，异或笔或反转颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnDrawMode*  
- 变量用于接收控件的绘制模式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_drawstyle"></a>  CStockPropImpl::get_DrawStyle  
- 例如，调用此方法以获取控件的绘制样式，实线、 虚线或点分。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnDrawMode*<br/>
+变量用于接收控件的绘制模式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_drawstyle"></a>  CStockPropImpl::get_DrawStyle
+
+例如，调用此方法以获取控件的绘制样式，实线、 虚线或点分。
+
 ```
 HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnDrawStyle*  
- 变量用于接收控件的绘制样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_drawwidth"></a>  CStockPropImpl::get_DrawWidth  
- 调用此方法以获取由该控件的绘制方法的绘制宽度 （以像素为单位）。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnDrawStyle*<br/>
+变量用于接收控件的绘制样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_drawwidth"></a>  CStockPropImpl::get_DrawWidth
+
+调用此方法以获取由该控件的绘制方法的绘制宽度 （以像素为单位）。
+
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnDrawWidth*  
- 接收控件的宽度值，以像素为单位的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_enabled"></a>  CStockPropImpl::get_Enabled  
- 调用此方法以获取用于指示是否启用了该控件的标志的状态。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnDrawWidth*<br/>
+接收控件的宽度值，以像素为单位的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_enabled"></a>  CStockPropImpl::get_Enabled
+
+调用此方法以获取用于指示是否启用了该控件的标志的状态。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbEnabled*  
- 变量用于接收标志状态。 TRUE 表示已启用该控件。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_fillcolor"></a>  CStockPropImpl::get_FillColor  
- 调用此方法以获取控件的填充颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbEnabled*<br/>
+变量用于接收标志状态。 TRUE 表示已启用该控件。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_fillcolor"></a>  CStockPropImpl::get_FillColor
+
+调用此方法以获取控件的填充颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *pclrFillColor*  
- 变量用于接收控件的填充颜色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_fillstyle"></a>  CStockPropImpl::get_FillStyle  
- 例如，调用此方法以获取控件的填充样式，solid、 透明的或剖面线。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pclrFillColor*<br/>
+变量用于接收控件的填充颜色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_fillstyle"></a>  CStockPropImpl::get_FillStyle
+
+例如，调用此方法以获取控件的填充样式，solid、 透明的或剖面线。
+
 ```
 HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnFillStyle*  
- 接收控件的填充样式的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_font"></a>  CStockPropImpl::get_Font  
- 调用此方法以获取指向控件的字体属性。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnFillStyle*<br/>
+接收控件的填充样式的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_font"></a>  CStockPropImpl::get_Font
+
+调用此方法以获取指向控件的字体属性。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
-```  
-  
-### <a name="parameters"></a>参数  
- *ppFont*  
- 接收指向控件的字体属性的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_forecolor"></a>  CStockPropImpl::get_ForeColor  
- 调用此方法以获取控件的前景色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*ppFont*<br/>
+接收指向控件的字体属性的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_forecolor"></a>  CStockPropImpl::get_ForeColor
+
+调用此方法以获取控件的前景色。
+
 ```
 HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *pclrForeColor*  
- 变量用于接收的控件前景色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_hwnd"></a>  CStockPropImpl::get_HWND  
- 调用此方法以获取与控件关联的窗口句柄。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pclrForeColor*<br/>
+变量用于接收的控件前景色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_hwnd"></a>  CStockPropImpl::get_HWND
+
+调用此方法以获取与控件关联的窗口句柄。
+
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
-```  
-  
-### <a name="parameters"></a>参数  
- *phWnd*  
- 与控件关联的窗口句柄。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_mouseicon"></a>  CStockPropImpl::get_MouseIcon  
- 调用此方法获取图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*phWnd*<br/>
+与控件关联的窗口句柄。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_mouseicon"></a>  CStockPropImpl::get_MouseIcon
+
+调用此方法获取图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。
+
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *ppPicture*  
- 接收指向图形的图片属性的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_mousepointer"></a>  CStockPropImpl::get_MousePointer  
- 调用此方法以获取鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*ppPicture*<br/>
+接收指向图形的图片属性的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_mousepointer"></a>  CStockPropImpl::get_MousePointer
+
+调用此方法以获取鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。
+
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnMousePointer*  
- 接收鼠标指针的类型的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_picture"></a>  CStockPropImpl::get_Picture  
- 调用此方法来获得到的图形 （图标、 位图或图元文件） 要显示的图片属性的指针。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnMousePointer*<br/>
+接收鼠标指针的类型的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_picture"></a>  CStockPropImpl::get_Picture
+
+调用此方法来获得到的图形 （图标、 位图或图元文件） 要显示的图片属性的指针。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *ppPicture*  
- 接收指向照片的属性的变量。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_readystate"></a>  CStockPropImpl::get_ReadyState  
- 例如，调用此方法以获取控件的就绪状态，加载或加载。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*ppPicture*<br/>
+接收指向照片的属性的变量。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_readystate"></a>  CStockPropImpl::get_ReadyState
+
+例如，调用此方法以获取控件的就绪状态，加载或加载。
+
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
-```  
-  
-### <a name="parameters"></a>参数  
- *pnReadyState*  
- 接收控件的就绪状态的变量。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_tabstop"></a>  CStockPropImpl::get_TabStop  
- 调用此方法以获取用于指示控件是否制表位的标志的状态。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pnReadyState*<br/>
+接收控件的就绪状态的变量。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_tabstop"></a>  CStockPropImpl::get_TabStop
+
+调用此方法以获取用于指示控件是否制表位的标志的状态。
+
 ```
 HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbTabStop*  
- 变量用于接收标志状态。 TRUE 表示该控件是一个制表位。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_text"></a>  CStockPropImpl::get_Text  
- 调用此方法以获取与该控件显示的文本。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbTabStop*<br/>
+变量用于接收标志状态。 TRUE 表示该控件是一个制表位。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_text"></a>  CStockPropImpl::get_Text
+
+调用此方法以获取与该控件显示的文本。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbstrText*  
- 显示与该控件的文本。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_valid"></a>  CStockPropImpl::getvalid  
- 调用此方法以获取指示控件是否是有效的标志的状态。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbstrText*<br/>
+显示与该控件的文本。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_valid"></a>  CStockPropImpl::getvalid
+
+调用此方法以获取指示控件是否是有效的标志的状态。
+
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
-```  
-  
-### <a name="parameters"></a>参数  
- *pbValid*  
- 变量用于接收标志状态。 TRUE 指示控件有效。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="get_window"></a>  CStockPropImpl::get_Window  
- 调用此方法以获取与控件关联的窗口句柄。 与相同[CStockPropImpl::get_HWND](#get_hwnd)。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pbValid*<br/>
+变量用于接收标志状态。 TRUE 指示控件有效。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="get_window"></a>  CStockPropImpl::get_Window
+
+调用此方法以获取与控件关联的窗口句柄。 与相同[CStockPropImpl::get_HWND](#get_hwnd)。
+
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
-```  
-  
-### <a name="parameters"></a>参数  
- *phWnd*  
- 与控件关联的窗口句柄。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_appearance"></a>  CStockPropImpl::put_Appearance  
- 调用此方法以设置绘制样式使用的控件，例如，平面或 3D。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*phWnd*<br/>
+与控件关联的窗口句柄。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_appearance"></a>  CStockPropImpl::put_Appearance
+
+调用此方法以设置绘制样式使用的控件，例如，平面或 3D。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
-```  
-  
-### <a name="parameters"></a>参数  
- *nAppearance*  
- 使用由该控件的新绘制样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_autosize"></a>  CStockPropImpl::put_AutoSize  
- 调用此方法以设置标志，指示该控件不能为其他任何大小的值。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nAppearance*<br/>
+使用由该控件的新绘制样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_autosize"></a>  CStockPropImpl::put_AutoSize
+
+调用此方法以设置标志，指示该控件不能为其他任何大小的值。
+
 ```
 HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
-```  
-  
-### <a name="parameters"></a>参数  
- *bAutoSize*  
- 如果控件不能为任何其他大小，则为 TRUE。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_backcolor"></a>  CStockPropImpl::put_BackColor  
- 调用此方法以设置控件的背景色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bAutoSize*<br/>
+如果控件不能为任何其他大小，则为 TRUE。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_backcolor"></a>  CStockPropImpl::put_BackColor
+
+调用此方法以设置控件的背景色。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *clrBackColor*  
- 新控件背景色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_backstyle"></a>  CStockPropImpl::put_BackStyle  
- 调用此方法以设置控件的背景样式。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*clrBackColor*<br/>
+新控件背景色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_backstyle"></a>  CStockPropImpl::put_BackStyle
+
+调用此方法以设置控件的背景样式。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *nBackStyle*  
- 新控件背景样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_bordercolor"></a>  CStockPropImpl::put_BorderColor  
- 调用此方法以设置控件的边框颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nBackStyle*<br/>
+新控件背景样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_bordercolor"></a>  CStockPropImpl::put_BorderColor
+
+调用此方法以设置控件的边框颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *clrBorderColor*  
- 新的边框颜色。 OLE_COLOR 数据类型在内部表示为一个 32 位长整数。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_borderstyle"></a>  CStockPropImpl::put_BorderStyle  
- 调用此方法以设置控件的边框样式。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*clrBorderColor*<br/>
+新的边框颜色。 OLE_COLOR 数据类型在内部表示为一个 32 位长整数。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_borderstyle"></a>  CStockPropImpl::put_BorderStyle
+
+调用此方法以设置控件的边框样式。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *nBorderStyle*  
- 新的边框样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_bordervisible"></a>  CStockPropImpl::put_BorderVisible  
- 调用此方法以设置用于指示控件的边框是否可见的标志的值。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nBorderStyle*<br/>
+新的边框样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_bordervisible"></a>  CStockPropImpl::put_BorderVisible
+
+调用此方法以设置用于指示控件的边框是否可见的标志的值。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
-```  
-  
-### <a name="parameters"></a>参数  
- *bBorderVisible*  
- 如果边框可见，则为 TRUE。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_borderwidth"></a>  CStockPropImpl::put_BorderWidth  
- 调用此方法以设置控件的边框的宽度。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bBorderVisible*<br/>
+如果边框可见，则为 TRUE。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_borderwidth"></a>  CStockPropImpl::put_BorderWidth
+
+调用此方法以设置控件的边框的宽度。
+
 ```
 HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
-```  
-  
-### <a name="parameters"></a>参数  
- *nBorderWidth*  
- 新控件的边框的宽度。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_caption"></a>  CStockPropImpl::put_Caption  
- 调用此方法以设置与该控件显示的文本。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nBorderWidth*<br/>
+新控件的边框的宽度。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_caption"></a>  CStockPropImpl::put_Caption
+
+调用此方法以设置与该控件显示的文本。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
-```  
-  
-### <a name="parameters"></a>参数  
- *bstrCaption*  
- 要与该控件显示的文本。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_drawmode"></a>  CStockPropImpl::put_DrawMode  
- 调用此方法以设置控件的绘制模式，例如，异或笔或反转颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bstrCaption*<br/>
+要与该控件显示的文本。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_drawmode"></a>  CStockPropImpl::put_DrawMode
+
+调用此方法以设置控件的绘制模式，例如，异或笔或反转颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
-```  
-  
-### <a name="parameters"></a>参数  
- *nDrawMode*  
- 控件的新绘图模式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_drawstyle"></a>  CStockPropImpl::put_DrawStyle  
- 例如，调用此方法以设置控件的绘制样式，实线、 虚线或点分。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nDrawMode*<br/>
+控件的新绘图模式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_drawstyle"></a>  CStockPropImpl::put_DrawStyle
+
+例如，调用此方法以设置控件的绘制样式，实线、 虚线或点分。
+
 ```
 HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *nDrawStyle*  
- 控件的新绘制样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_drawwidth"></a>  CStockPropImpl::put_DrawWidth  
- 调用此方法以设置使用的控件的绘制方法的宽度 （以像素为单位）。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nDrawStyle*<br/>
+控件的新绘制样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_drawwidth"></a>  CStockPropImpl::put_DrawWidth
+
+调用此方法以设置使用的控件的绘制方法的宽度 （以像素为单位）。
+
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
-```  
-  
-### <a name="parameters"></a>参数  
- *nDrawWidth*  
- 若要使用由该控件的新宽度的绘图方法。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_enabled"></a>  CStockPropImpl::put_Enabled  
- 调用此方法以设置标志，指示是否启用了该控件的值。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nDrawWidth*<br/>
+若要使用由该控件的新宽度的绘图方法。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_enabled"></a>  CStockPropImpl::put_Enabled
+
+调用此方法以设置标志，指示是否启用了该控件的值。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
-```  
-  
-### <a name="parameters"></a>参数  
- *bEnabled*  
- 如果启用该控件，则为 TRUE。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_fillcolor"></a>  CStockPropImpl::put_FillColor  
- 调用此方法以设置控件的填充颜色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bEnabled*<br/>
+如果启用该控件，则为 TRUE。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_fillcolor"></a>  CStockPropImpl::put_FillColor
+
+调用此方法以设置控件的填充颜色。
+
 ```
 HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *clrFillColor*  
- 新控件的填充颜色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_fillstyle"></a>  CStockPropImpl::put_FillStyle  
- 例如，调用此方法以设置控件的填充样式，solid、 透明的或交叉影线。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*clrFillColor*<br/>
+新控件的填充颜色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_fillstyle"></a>  CStockPropImpl::put_FillStyle
+
+例如，调用此方法以设置控件的填充样式，solid、 透明的或交叉影线。
+
 ```
 HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
-```  
-  
-### <a name="parameters"></a>参数  
- *nFillStyle*  
- 新控件的填充样式。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_font"></a>  CStockPropImpl::put_Font  
- 调用此方法来设置控件的字体属性。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nFillStyle*<br/>
+新控件的填充样式。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_font"></a>  CStockPropImpl::put_Font
+
+调用此方法来设置控件的字体属性。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
-```  
-  
-### <a name="parameters"></a>参数  
- *pFont*  
- 指向控件的字体属性的指针。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_forecolor"></a>  CStockPropImpl::put_ForeColor  
- 调用此方法以设置控件的前景色。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pFont*<br/>
+指向控件的字体属性的指针。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_forecolor"></a>  CStockPropImpl::put_ForeColor
+
+调用此方法以设置控件的前景色。
+
 ```
 HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
-```  
-  
-### <a name="parameters"></a>参数  
- *clrForeColor*  
- 新的控件的前景颜色。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_hwnd"></a>  CStockPropImpl::put_HWND  
- 此方法返回 E_FAIL。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*clrForeColor*<br/>
+新的控件的前景颜色。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_hwnd"></a>  CStockPropImpl::put_HWND
+
+此方法返回 E_FAIL。
+
 ```
 HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
-```  
-  
-### <a name="parameters"></a>参数  
- */\* hWnd \*/*  
- 保留。  
-  
-### <a name="return-value"></a>返回值  
- 返回 E_FAIL。  
-  
-### <a name="remarks"></a>备注  
- 窗口句柄是只读的值。  
-  
-##  <a name="put_mouseicon"></a>  CStockPropImpl::put_MouseIcon  
- 调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*/&ast; hWnd &ast;/*<br/>
+保留。
+
+### <a name="return-value"></a>返回值
+
+返回 E_FAIL。
+
+### <a name="remarks"></a>备注
+
+窗口句柄是只读的值。
+
+##  <a name="put_mouseicon"></a>  CStockPropImpl::put_MouseIcon
+
+调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性。
+
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *pPicture*  
- 指向图形的图片属性的指针。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_mousepointer"></a>  CStockPropImpl::put_MousePointer  
- 调用此方法以设置鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pPicture*<br/>
+指向图形的图片属性的指针。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_mousepointer"></a>  CStockPropImpl::put_MousePointer
+
+调用此方法以设置鼠标指针时鼠标位于控件，例如显示、 箭头、 十字形或沙漏的类型。
+
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
-```  
-  
-### <a name="parameters"></a>参数  
- *nMousePointer*  
- 鼠标指针的类型。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_picture"></a>  CStockPropImpl::put_Picture  
- 调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nMousePointer*<br/>
+鼠标指针的类型。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_picture"></a>  CStockPropImpl::put_Picture
+
+调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *pPicture*  
- 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_readystate"></a>  CStockPropImpl::put_ReadyState  
- 调用此方法以设置控件的就绪状态，例如，加载或加载。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pPicture*<br/>
+一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_readystate"></a>  CStockPropImpl::put_ReadyState
+
+调用此方法以设置控件的就绪状态，例如，加载或加载。
+
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
-```  
-  
-### <a name="parameters"></a>参数  
- *nReadyState*  
- 控件的就绪状态。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_tabstop"></a>  CStockPropImpl::put_TabStop  
- 调用此方法以设置用于指示控件是否制表位的标志。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*nReadyState*<br/>
+控件的就绪状态。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_tabstop"></a>  CStockPropImpl::put_TabStop
+
+调用此方法以设置用于指示控件是否制表位的标志。
+
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
-```  
-  
-### <a name="parameters"></a>参数  
- *bTabStop*  
- 如果控件是一个制表位，则为 TRUE。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_text"></a>  CStockPropImpl::put_Text  
- 调用此方法以设置与该控件显示的文本。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bTabStop*<br/>
+如果控件是一个制表位，则为 TRUE。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_text"></a>  CStockPropImpl::put_Text
+
+调用此方法以设置与该控件显示的文本。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
-```  
-  
-### <a name="parameters"></a>参数  
- *bstrText*  
- 显示与该控件的文本。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_valid"></a>  CStockPropImpl::putvalid  
- 调用此方法以设置指示控件是否是有效的标志。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bstrText*<br/>
+显示与该控件的文本。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_valid"></a>  CStockPropImpl::putvalid
+
+调用此方法以设置指示控件是否是有效的标志。
+
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
-```  
-  
-### <a name="parameters"></a>参数  
- *bValid*  
- 如果控件有效，则为 TRUE。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-##  <a name="put_window"></a>  CStockPropImpl::put_Window  
- 此方法调用[CStockPropImpl::put_HWND](#put_hwnd)，这会返回 E_FAIL。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*bValid*<br/>
+如果控件有效，则为 TRUE。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+##  <a name="put_window"></a>  CStockPropImpl::put_Window
+
+此方法调用[CStockPropImpl::put_HWND](#put_hwnd)，这会返回 E_FAIL。
+
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
-```  
-  
-### <a name="parameters"></a>参数  
- *hWnd*  
- 窗口句柄。  
-  
-### <a name="return-value"></a>返回值  
- 返回 E_FAIL。  
-  
-### <a name="remarks"></a>备注  
- 窗口句柄是只读的值。  
-  
-##  <a name="putref_font"></a>  CStockPropImpl::putref_Font  
- 调用此方法来设置控件的字体属性，引用计数。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*hWnd*<br/>
+窗口句柄。
+
+### <a name="return-value"></a>返回值
+
+返回 E_FAIL。
+
+### <a name="remarks"></a>备注
+
+窗口句柄是只读的值。
+
+##  <a name="putref_font"></a>  CStockPropImpl::putref_Font
+
+调用此方法来设置控件的字体属性，引用计数。
+
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
-```  
-  
-### <a name="parameters"></a>参数  
- *pFont*  
- 指向控件的字体属性的指针。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 与相同[CStockPropImpl::put_Font](#put_font)，但具有引用计数。  
-  
-##  <a name="putref_mouseicon"></a>  CStockPropImpl::putref_MouseIcon  
- 调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性，引用计数。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pFont*<br/>
+指向控件的字体属性的指针。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+与相同[CStockPropImpl::put_Font](#put_font)，但具有引用计数。
+
+##  <a name="putref_mouseicon"></a>  CStockPropImpl::putref_MouseIcon
+
+调用此方法以设置的图形 （图标、 位图或图元文件） 以鼠标位于控件上方时要显示的图片属性，引用计数。
+
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *pPicture*  
- 指向图形的图片属性的指针。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 与相同[CStockPropImpl::put_MouseIcon](#put_mouseicon)，但具有引用计数。  
-  
-##  <a name="putref_picture"></a>  CStockPropImpl::putref_Picture  
- 调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性，引用计数。  
-  
+```
+
+### <a name="parameters"></a>参数
+
+*pPicture*<br/>
+指向图形的图片属性的指针。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+与相同[CStockPropImpl::put_MouseIcon](#put_mouseicon)，但具有引用计数。
+
+##  <a name="putref_picture"></a>  CStockPropImpl::putref_Picture
+
+调用此方法以设置的图形 （图标、 位图或图元文件） 要显示的图片属性，引用计数。
+
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
-```  
-  
-### <a name="parameters"></a>参数  
- *pPicture*  
- 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。  
-  
-### <a name="return-value"></a>返回值  
- 返回成功，则为 S_OK 或失败时的错误 HRESULT。  
-  
-### <a name="remarks"></a>备注  
- 与相同[CStockPropImpl::put_Picture](#put_picture)，但具有引用计数。  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../../atl/atl-class-overview.md)   
- [IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)
+```
+
+### <a name="parameters"></a>参数
+
+*pPicture*<br/>
+一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
+
+### <a name="return-value"></a>返回值
+
+返回成功，则为 S_OK 或失败时的错误 HRESULT。
+
+### <a name="remarks"></a>备注
+
+与相同[CStockPropImpl::put_Picture](#put_picture)，但具有引用计数。
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../../atl/atl-class-overview.md)<br/>
+[IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1215 |Microsoft 文档
+title: 链接器工具错误 LNK1215 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 031703687c5ba57e1daaa299e9a276a64e3055a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab72efea41e775f3ba028b374312975daf48d6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044829"
 ---
 # <a name="linker-tools-error-lnk1215"></a>链接器工具错误 LNK1215
-元数据操作失败 (HRESULT): 错误  
-  
- 链接器错误时，从收到的.NET 运行时尝试的操作通过.NET 运行时的元数据更新。  
-  
- `HRESULT` 是从.NET 运行时方法的 HRESULT。 `error` 是。NET 提供的文本。  
-  
- 你可能有不匹配的链接器并使用.NET 运行时;重新安装 Visual c + +。
+
+元数据操作失败 (HRESULT): 错误
+
+链接器尝试进行通过.NET 运行时元数据更新时收到的.NET 运行时错误。
+
+`HRESULT` 是从.NET 运行时方法的 HRESULT。 `error` 是。NET 提供文本。
+
+您可能具有不匹配的链接器和.NET 运行时;重新安装 Visual c + +。

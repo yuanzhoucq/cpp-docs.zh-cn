@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0050 |Microsoft 文档
+title: 项目生成错误 PRJ0050 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100586"
 ---
 # <a name="project-build-error-prj0050"></a>项目生成错误 PRJ0050
-未能注册输出。 请确保你具有适当的权限来修改注册表。  
-  
- Visual c + + 生成系统无法注册 （dll 或.exe） 的生成输出。 你需要以管理员身份来修改注册表登录。  
-  
- 如果要生成.dll，你可以尝试注册手动使用 regsvr32.exe.dll，这应该会显示有关生成失败的原因的信息。  
-  
- 如果你不生成.dll，查看引起错误的命令生成日志。
+
+未能注册输出。 请确保有适当的权限来修改注册表。
+
+Visual c + + 生成系统无法注册 （dll 或.exe） 生成的输出。 您需要以修改注册表的管理员身份登录。
+
+如果您正在构建.dll，可以尝试以注册.dll 手动使用 regsvr32.exe，此时应显示在生成失败的原因有关的信息。
+
+如果您不构建.dll，查看将导致错误的命令生成日志。

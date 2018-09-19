@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4234 |Microsoft 文档
+title: 编译器警告 （等级 C4234 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d5b7a2999b77c0b34ee925f5dd85a0a27c63f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ce6ba622cb480096144706589a01dee7326f38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118227"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>编译器警告（等级 4）C4234
-使用的非标准扩展： 保留供将来使用的关键字 keyword  
-  
- 编译器不尚未实现您使用的关键字。  
-  
- 此警告将自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使一个级别 4 警告问题，C4234  
-  
-```  
-#pragma warning(2:4234)  
-```  
-  
- 在你的源代码文件。
+
+使用了非标准扩展: keyword 关键字保留供将来使用
+
+编译器尚未实现您使用的关键字。
+
+此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使 C4234 警告等级 4 问题，
+
+```
+#pragma warning(2:4234)
+```
+
+在你的源代码文件。

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215352"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703958"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 类
 提供 Windows 公共滑块控件的功能。  
@@ -241,7 +241,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  *dwExStyle*  
- 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *dwStyle*  
  指定滑块控件的样式。 应用的任意组合[滑块控件样式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK，向控件中所述。  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in]*nLength*|滑块，以像素为单位的长度。|  
+|*nLength*|[in]滑块，以像素为单位的长度。|  
   
 ### <a name="remarks"></a>备注  
  此方法要求 trackbar 控件设置为[TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles)样式。  

@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107452"
 ---
-# <a name="storage-classes-c"></a>存储类 (C++)  
-  
-A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 在块中定义的变量具有自动存储，除非另有指定使用**extern**，**静态**，或`thread_local`说明符。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。  
-  
-**备注**  
-  
-1.  [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。  
-  
-2.  **Visual c + + 2010年及更高版本：** **自动**关键字不再是 c + + 存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**从 c + + 语言中删除关键字。
+# <a name="storage-classes-c"></a>存储类 (C++)
+
+A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 在块中定义的变量具有自动存储，除非另有指定使用**extern**，**静态**，或`thread_local`说明符。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。
+
+**备注**
+
+1. [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。
+
+1. **Visual c + + 2010年及更高版本：** **自动**关键字不再是 c + + 存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**从 c + + 语言中删除关键字。
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ var == value
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ void DoSomething()
 
 -  您可以将应用`thread_local`仅于数据声明和定义;`thread_local`不能用于函数声明或定义。
 
--  只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 声明的任何局部变量`thread_local`是隐式静态，如果未不提供任何其他存储类; 换而言之，在块范围内`thread_local`等效于`thread_local static`。 
+-  只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 声明的任何局部变量`thread_local`是隐式静态，如果未不提供任何其他存储类; 换而言之，在块范围内`thread_local`等效于`thread_local static`。
 
 -  必须为线程本地对象的声明和定义指定 `thread_local`，无论声明和定义是在同一文件中发生还是在单独的文件中发生。
 
@@ -232,7 +232,7 @@ void DoSomething()
 
 ##  <a name="register"></a>  注册
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字不再是受支持的存储类。 关键字是仍保留供将来使用标准中。 
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字不再是受支持的存储类。 关键字是仍保留供将来使用标准中。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Destroying: Static I3
 - 最后，静态局部变量（如 `I3`）在程序持续时间内保留其值，但在程序终止时将被销毁。
 
 ## <a name="see-also"></a>请参阅
- [声明和定义](../cpp/declarations-and-definitions-cpp.md)
+
+[声明和定义](../cpp/declarations-and-definitions-cpp.md)

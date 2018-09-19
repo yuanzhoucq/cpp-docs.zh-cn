@@ -19,32 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e680f4f42881ea89510048f43d657d1579686527
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109257"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Microsoft 专用**  
-  
- 将附加`VARIANT`对象插入 **_variant_t**对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void Attach(VARIANT& varSrc);  
-```  
-  
-#### <a name="parameters"></a>参数  
- *varSrc*  
- 一个`VARIANT`要附加到此对象 **_variant_t**对象。  
-  
-## <a name="remarks"></a>备注  
- 取得所有权的`VARIANT`通过封装。 此成员函数将释放所有现有封装`VARIANT`，然后复制提供`VARIANT`，并设置其`VARTYPE`为 VT_EMPTY 以确保其资源可以仅由发布 **_variant_t**析构函数。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_variant_t 类](../cpp/variant-t-class.md)
+
+**Microsoft 专用**
+
+将附加`VARIANT`对象插入 **_variant_t**对象。
+
+## <a name="syntax"></a>语法
+
+```
+void Attach(VARIANT& varSrc);
+```
+
+#### <a name="parameters"></a>参数
+
+*varSrc*<br/>
+一个`VARIANT`要附加到此对象 **_variant_t**对象。
+
+## <a name="remarks"></a>备注
+
+取得所有权的`VARIANT`通过封装。 此成员函数将释放所有现有封装`VARIANT`，然后复制提供`VARIANT`，并设置其`VARTYPE`为 VT_EMPTY 以确保其资源可以仅由发布 **_variant_t**析构函数。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_variant_t 类](../cpp/variant-t-class.md)

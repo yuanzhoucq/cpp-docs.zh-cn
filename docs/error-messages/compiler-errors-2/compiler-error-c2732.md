@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2732 |Microsoft 文档
+title: 编译器错误 C2732 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2faf21eb6f0c73d02ea32c7d4ed53f86eec3de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 040fd73bcb69ef032d5c6150bb157337f34a2088
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079656"
 ---
 # <a name="compiler-error-c2732"></a>编译器错误 C2732
-链接规范与“function”的早期规范冲突  
-  
- 该函数已经使用其他链接说明符声明。  
-  
- 具有不同链接说明符的包含文件可能会导致此错误。  
-  
- 要修复此错误，请更改 `extern` 语句，以便这些链接一致。 特别是，不要对 `extern "C"` 块中的 `#include` 指令换行。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2732：  
-  
-```  
-// C2732.cpp  
-extern void func( void );   // implicit C++ linkage  
-extern "C" void func( void );   // C2732  
+
+链接规范与“function”的早期规范冲突
+
+该函数已经使用其他链接说明符声明。
+
+具有不同链接说明符的包含文件可能会导致此错误。
+
+要修复此错误，请更改 `extern` 语句，以便这些链接一致。 特别是，不要对 `extern "C"` 块中的 `#include` 指令换行。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2732：
+
+```
+// C2732.cpp
+extern void func( void );   // implicit C++ linkage
+extern "C" void func( void );   // C2732
 ```

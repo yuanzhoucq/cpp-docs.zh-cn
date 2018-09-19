@@ -9,39 +9,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7fff0ffb62182e078149d1403c495c69ae918c36
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593959"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105713"
 ---
 # <a name="enums-ccx"></a>枚举 (C++/CX)
-C + + /CX 支持`public enum class`关键字，它是类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。  
-  
-### <a name="remarks"></a>备注  
- 没有访问说明符（如 `public enum class` ）的 `public`将作为标准 C++ [范围枚举](../cpp/enumerations-cpp.md)处理。  
-  
- 一个`public enum class`或`public enum struct`声明可以具有任何整型类型的基础类型，尽管 Windows 运行时本身要求类型是 int32 或者 uint32 对于标志枚举。 以下语法描述 `public enum class` 或 `public enum struct`的一部分。  
-  
- 此示例演示如何定义公共枚举类：  
-  
- [!code-cpp[cx_enums#01](../cppcx/codesnippet/CPP/cpp/class1.h#01)]  
-  
- 下一个示例演示如何使用枚举类：  
-  
- [!code-cpp[cx_enums#02](../cppcx/codesnippet/CPP/cpp/class1.h#02)]  
-  
-### <a name="examples"></a>示例  
- 后续示例演示如何声明枚举。  
-  
- [!code-cpp[cx_enums#03](../cppcx/codesnippet/CPP/cpp/class1.h#03)]  
-  
- 下一个示例演示如何强制转换为数字等效值和执行比较。 请注意，枚举数 `One` 的使用通过 `Enum1` 枚举标识符来确定范围，枚举数 `First` 通过 `Enum2`来确定范围。  
-  
- [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]  
-  
-## <a name="see-also"></a>请参阅  
- [类型系统](../cppcx/type-system-c-cx.md)   
- [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
- [命名空间参考](../cppcx/namespaces-reference-c-cx.md)
+
+C + + /CX 支持`public enum class`关键字，它是类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。
+
+### <a name="remarks"></a>备注
+
+没有访问说明符（如 `public enum class` ）的 `public`将作为标准 C++ [范围枚举](../cpp/enumerations-cpp.md)处理。
+
+一个`public enum class`或`public enum struct`声明可以具有任何整型类型的基础类型，尽管 Windows 运行时本身要求类型是 int32 或者 uint32 对于标志枚举。 以下语法描述 `public enum class` 或 `public enum struct`的一部分。
+
+此示例演示如何定义公共枚举类：
+
+[!code-cpp[cx_enums#01](../cppcx/codesnippet/CPP/cpp/class1.h#01)]
+
+下一个示例演示如何使用枚举类：
+
+[!code-cpp[cx_enums#02](../cppcx/codesnippet/CPP/cpp/class1.h#02)]
+
+### <a name="examples"></a>示例
+
+后续示例演示如何声明枚举。
+
+[!code-cpp[cx_enums#03](../cppcx/codesnippet/CPP/cpp/class1.h#03)]
+
+下一个示例演示如何强制转换为数字等效值和执行比较。 请注意，枚举数 `One` 的使用通过 `Enum1` 枚举标识符来确定范围，枚举数 `First` 通过 `Enum2`来确定范围。
+
+[!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]
+
+## <a name="see-also"></a>请参阅
+
+[类型系统](../cppcx/type-system-c-cx.md)<br/>
+[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间参考](../cppcx/namespaces-reference-c-cx.md)

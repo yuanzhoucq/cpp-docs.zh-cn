@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b4b99c9b187e80a7c1e0a91badc4ccad06de593f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104246"
 ---
 # <a name="greaterequal-struct"></a>greater_equal 结构
 
@@ -44,16 +44,18 @@ struct greater_equal<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left)>= std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
 *类型*， *T*， *U*支持任何类型`operator>=`接受指定或推断类型的操作数。
 
-*左侧*大于或等于运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+左侧<br/>
+大于或等于运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-*右*大于或等于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+右侧<br/>
+大于或等于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 

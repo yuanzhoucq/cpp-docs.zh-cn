@@ -1,7 +1,7 @@
 ---
-title: 调用 |Microsoft 文档
+title: 调用 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c18c83b623ce1a22ffcb5e1a9f1ce98ee6eb20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3e5698acf9986903a1d6d731c1047484a0ce6904
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676512"
 ---
 # <a name="invoke"></a>INVOKE
-在给定的地址调用过程*表达式*，并将参数传递到堆栈上或在寄存器中根据语言类型的标准调用约定。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-INVOKE   
-expression [[, arguments]]  
-```  
-  
-## <a name="remarks"></a>备注  
- 每个自变量传递给过程可能是表达式、 一个注册对中或地址表达式 (表达式前面`ADDR`)。  
-  
-## <a name="see-also"></a>请参阅  
- [指令参考](../../assembler/masm/directives-reference.md)
+
+在给定的地址调用该过程*表达式*，将自变量传递到堆栈上或在寄存器中根据语言类型的标准调用约定。
+
+## <a name="syntax"></a>语法
+
+> INVOKE*表达式*[[，*自变量*]]
+
+## <a name="remarks"></a>备注
+
+每个自变量传递给该过程可能是表达式、 是注册的对或地址表达式 (表达式前面`ADDR`)。
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>

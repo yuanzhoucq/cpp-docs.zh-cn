@@ -1,5 +1,5 @@
 ---
-title: omp_unset_nest_lock |Microsoft 文档
+title: omp_unset_nest_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434fb3e4cb07b11f2142f78ee4b243e6945dfd9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115965"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-释放 nestable 锁定。  
+释放可嵌套锁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +34,10 @@ void omp_unset_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `lock`  
- 类型的变量的[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)初始化与[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)、 所拥有的线程和函数中执行。  
+*lock*<br/>
+类型的变量[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)与初始化[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)、 由线程拥有和函数中执行。  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。  

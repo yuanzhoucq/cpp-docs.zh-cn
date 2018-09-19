@@ -1,5 +1,5 @@
 ---
-title: 位域 |Microsoft 文档
+title: 位域 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85db49f138cc733326e47a3008e79bae5ab4b7cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7451ea6afee81cc296fb091705bde48041ef5d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722483"
 ---
 # <a name="bitfields"></a>位域
-结构位域限制为 64 位并且可以为类型 int、 unsigned 的 int、 int64、 或无符号的 int64 签名。 交叉类型边界的位域将跳过位，以使位域与下一步类型对齐方式。 例如，整数位域可能不能跨越 32 位边界。  
-  
-## <a name="see-also"></a>请参阅  
- [类型和存储](../build/types-and-storage.md)
+
+结构位域被限制为 64 位和可以为类型 int、 unsigned 的 int、 int64、 或 unsigned 的 int64 的签名。 交叉类型边界的位域将跳过位，以使位域到下一步类型对齐方式。 例如，整数位域可能不会跨 32 位边界。
+
+## <a name="see-also"></a>请参阅
+
+[类型和存储](../build/types-and-storage.md)

@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216929"
 ---
 # <a name="vprintf-functions"></a>vprintf 函数
 每个 `vprintf` 函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到特定目标。 函数在执行参数验证过程中会有所不同，无论函数是采用宽字符字符串还是单字节字符串、是否具有输出目标以及是否支持指定格式字符串中使用的参数的顺序。  
@@ -89,7 +89,7 @@ ms.locfileid: "32418375"
  对于 vsprintf、`vswprintf`、`_vsnprintf` 和 `_vsnwprintf`，如果在重叠的字符串之间发生复制，则此行为不确定。  
   
 > [!IMPORTANT]
->  确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 如果使用这些函数的安全版本（_s 或 _p 后缀），如果用户提供的字符串包含无效的格式化字符，则用户提供的格式字符串可能会触发无效参数异常。  
+>  确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。 如果使用这些函数的安全版本（_s 或 _p 后缀），如果用户提供的字符串包含无效的格式化字符，则用户提供的格式字符串可能会触发无效参数异常。  
   
 ## <a name="see-also"></a>请参阅  
  [流 I/O](../c-runtime-library/stream-i-o.md)   

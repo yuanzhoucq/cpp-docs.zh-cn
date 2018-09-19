@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959064"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716184"
 ---
 # <a name="tupleelement-class"></a>tuple_element 类
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>参数
 
-*Tuple*  
+*Tuple*<br/>
 指定元素的索引。
 
-*Tuple*  
+*Tuple*<br/>
 元组的类型。
 
-*Elem*  
+*Elem*<br/>
 数组元素的类型。
 
-*Size*  
+*Size*<br/>
 数组大小。
 
-T1  
+T1<br/>
 一对中的第一个元素的类型。
 
-T2  
+T2<br/>
 一对中第二个元素的类型。
 
 ## <a name="remarks"></a>备注
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<元组 >**标头：** \<数组 > （适用于数组专用化）**标头：** \<实用程序 > （适用于对专用化） **Namespace:** std
+**标头：**\<tuple>
+
+**标头：**\<array>（适用于数组专用化）
+
+**标头：** \<实用程序 > （适用于对专用化）
+
+**命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 

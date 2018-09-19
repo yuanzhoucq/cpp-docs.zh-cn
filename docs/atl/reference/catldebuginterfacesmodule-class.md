@@ -1,5 +1,5 @@
 ---
-title: CAtlDebugInterfacesModule 类 |Microsoft 文档
+title: CAtlDebugInterfacesModule 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54fbb36a62627f6037ac1663037bffbe37232fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019381"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule 类
-此类提供了支持调试接口。  
-  
-## <a name="syntax"></a>语法  
-  
+
+此类为调试接口提供支持。
+
+## <a name="syntax"></a>语法
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>备注  
- `CAtlDebugInterfacesModule` 提供所需的调试接口的支持。 定义符号的任何项目中包含[_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)。  
-  
-## <a name="requirements"></a>要求  
- **标头：** atlbase.h  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../../atl/atl-class-overview.md)   
- [Module 类](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>备注
+
+`CAtlDebugInterfacesModule` 提供调试接口所需的支持。 定义符号的任何项目中包括[_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)。
+
+## <a name="requirements"></a>要求
+
+**标头：** atlbase.h
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../../atl/atl-class-overview.md)<br/>
+[Module 类](../../atl/atl-module-classes.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706662"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK （包括 Sourcelink PDB 文件）
 
@@ -33,7 +33,7 @@ ms.locfileid: "40242855"
 
 ## <a name="arguments"></a>自变量
 
-*filename*  
+*filename*<br/>
 指定的 JSON 格式配置文件包含 Url 的本地文件路径的简单映射，可以检索源文件由调试器的显示。 此文件的格式的详细信息，请参阅[源链接 JSON 架构](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)。
 
 ## <a name="remarks"></a>备注
@@ -48,11 +48,11 @@ SourceLink 是提供源调试二进制文件的语言和源代码管理不可知
 
 1. 在中**其他选项**框中，添加 **/SOURCELINK:**_filename_ ，然后选择**确定**或**应用**若要保存所做的更改。
 
-### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
+
 - 此选项不具有编程等效项。
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)  
-[链接器选项](../../build/reference/linker-options.md)  
+[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
+[链接器选项](../../build/reference/linker-options.md)

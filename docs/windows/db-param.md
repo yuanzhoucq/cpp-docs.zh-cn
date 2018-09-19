@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612996"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719093"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ ms.locfileid: "42612996"
 *序号*  
 列对应的编号 （DBCOLUMNINFO 序号） 到要将数据绑定到行集中的字段。
 
-*paramtype* （可选）  
-要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型为一个或多个 DBPARAMIOENUM 值的组合：
+*paramtype*  
+（可选）要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型为一个或多个 DBPARAMIOENUM 值的组合：
 
 - DBPARAMIO_INPUT 输入参数。
 
@@ -56,20 +56,20 @@ ms.locfileid: "42612996"
 
 - DBPARAMIO_NOTPARAM 访问器没有任何参数。 设置`eParamIO`为行中此值的访问器提醒用户参数将被忽略。
 
-*dbtype* （可选）  
-OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
+*dbtype*  
+（可选）OLE DB[类型指示符](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列条目。
 
-*精度*（可选）  
-要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+（可选）要用于列条目精度。 有关详细信息，请参阅的说明`bPrecision`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*缩放*（可选）  
-要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*缩放*  
+（可选）要用于列项目的比例。 有关详细信息，请参阅的说明`bScale`元素的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*状态*（可选）  
-成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
+*status*  
+（可选）成员变量，用来保存此列的状态。 状态指示该列的值是数据值或其他某个值，如空值。 有关可能的值，请参阅[状态](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程序员参考*。
 
-*长度*（可选）  
-成员变量，用来保存的列的大小以字节为单位。
+*length*  
+（可选）成员变量，用来保存的列的大小以字节为单位。
 
 ## <a name="remarks"></a>备注
 

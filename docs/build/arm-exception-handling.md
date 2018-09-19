@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205698"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711225"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 
@@ -175,26 +175,26 @@ ARM 的每个 .pdata 记录的长度是 8 个字节。 记录的一般格式是�
 1. 1 个字或 2 个字的标头，描述 .xdata 结构的总大小并提供密钥函数数据。 第二个字时才存在*尾声计数*并*代码字*字段将设置为 0。 此表中已对这些字段进行细分：
 
    |字|位|用途|
-    |----------|----------|-------------|
-    |0|0-17|*函数长度*是一个 18 位字段，指示以字节为单位，除以 2 函数的总长度。 如果函数的大小大于 512 KB，则必须使用多个 .pdata 和 .xdata 记录来描述该函数。 有关详细信息，请参阅本文档中的“大函数”部分。|
-    |0|18-19|*Vers*是描述剩余 xdata 的版本 2 位字段。 当前仅定义版本 0；保留了 1-3 的值。|
-    |0|20|*X*是 1 位字段，指示存在 (1) 或不存在 (0) 的异常数据。|
-    |0|21|*E*是 1 位字段，它指示描述单个尾声的信息将打包到标头 (1) 而不是需要其他作用域的词更高版本 (0)。|
-    |0|22|*F*是 1 位字段，该值指示此记录描述函数片段 (1) 或完整函数 (0)。 片段表示没有序言，还表示应忽略所有的序言处理。|
-    |0|23-27|*尾声计数*是具有两种含义，具体取决于状态 5 位字段*E*位：<br /><br /> -如果*E*为 0，则此字段是第 3 节中所述异常范围总数的计数。 如果该函数，则此字段中存在多个 31 个范围并*代码字*字段必须都设置为 0 以指示需要一个扩展字。<br />-如果*E*为 1，此字段指定仅描述尾声的第一个展开代码的索引。|
-    |0|28-31|*代码字*是一个 4 位字段，指定以包含所有第 4 节中的展开代码的 32 位字的数目。 如果超过 63 个展开代码字节，此字段需要超过 15 个字并*尾声计数*字段必须都设置为 0 以指示需要一个扩展字。|
-    |1|0-15|*扩展尾声计数*是提供更多的空间编码极大量的尾声的 16 位字段。 包含此字段的扩展字时才存在*尾声计数*并*代码字*第一个标头字中的字段将设置为 0。|
-    |1|16-23|*扩展代码字*是一个 8 位字段，提供编码极大量的展开代码字的更多的空间。 包含此字段的扩展字时才存在*尾声计数*并*代码字*第一个标头字中的字段将设置为 0。|
-    |1|24-31|保留|
+   |----------|----------|-------------|
+   |0|0-17|*函数长度*是一个 18 位字段，指示以字节为单位，除以 2 函数的总长度。 如果函数的大小大于 512 KB，则必须使用多个 .pdata 和 .xdata 记录来描述该函数。 有关详细信息，请参阅本文档中的“大函数”部分。|
+   |0|18-19|*Vers*是描述剩余 xdata 的版本 2 位字段。 当前仅定义版本 0；保留了 1-3 的值。|
+   |0|20|*X*是 1 位字段，指示存在 (1) 或不存在 (0) 的异常数据。|
+   |0|21|*E*是 1 位字段，它指示描述单个尾声的信息将打包到标头 (1) 而不是需要其他作用域的词更高版本 (0)。|
+   |0|22|*F*是 1 位字段，该值指示此记录描述函数片段 (1) 或完整函数 (0)。 片段表示没有序言，还表示应忽略所有的序言处理。|
+   |0|23-27|*尾声计数*是具有两种含义，具体取决于状态 5 位字段*E*位：<br /><br /> -如果*E*为 0，则此字段是第 3 节中所述异常范围总数的计数。 如果该函数，则此字段中存在多个 31 个范围并*代码字*字段必须都设置为 0 以指示需要一个扩展字。<br />-如果*E*为 1，此字段指定仅描述尾声的第一个展开代码的索引。|
+   |0|28-31|*代码字*是一个 4 位字段，指定以包含所有第 4 节中的展开代码的 32 位字的数目。 如果超过 63 个展开代码字节，此字段需要超过 15 个字并*尾声计数*字段必须都设置为 0 以指示需要一个扩展字。|
+   |1|0-15|*扩展尾声计数*是提供更多的空间编码极大量的尾声的 16 位字段。 包含此字段的扩展字时才存在*尾声计数*并*代码字*第一个标头字中的字段将设置为 0。|
+   |1|16-23|*扩展代码字*是一个 8 位字段，提供编码极大量的展开代码字的更多的空间。 包含此字段的扩展字时才存在*尾声计数*并*代码字*第一个标头字中的字段将设置为 0。|
+   |1|24-31|保留|
 
 2. 异常数据之后 (如果*E*标头中的位设置为 0) 是一系列有关尾声范围都将打包为一个字的其中一个并存储在升序起始偏移量的信息。 每个范围都将包含以下字段：
 
    |位|用途|
-    |----------|-------------|
-    |0-17|*尾声开始偏移量*是一个 18 位字段，它描述尾声，以字节为单位的一半，相对于函数的开始的偏移量。|
-    |18-19|*Res*是为将来扩展保留的 2 位字段。 其值必须为 0。|
-    |20-23|*条件*是 4 位字段，它提供用于执行尾声的条件。 对于无条件尾声，它应设为 0xE，指示“始终”。 （尾声必须是完全有条件的或完全无条件的，并且处于 Thumb-2 模式，以 IT 操作码后的第一个指令开头。）|
-    |24-31|*尾声开始索引*是一个 8 位字段，它指示描述此尾声的第一个展开代码的字节索引。|
+   |----------|-------------|
+   |0-17|*尾声开始偏移量*是一个 18 位字段，它描述尾声，以字节为单位的一半，相对于函数的开始的偏移量。|
+   |18-19|*Res*是为将来扩展保留的 2 位字段。 其值必须为 0。|
+   |20-23|*条件*是 4 位字段，它提供用于执行尾声的条件。 对于无条件尾声，它应设为 0xE，指示“始终”。 （尾声必须是完全有条件的或完全无条件的，并且处于 Thumb-2 模式，以 IT 操作码后的第一个指令开头。）|
+   |24-31|*尾声开始索引*是一个 8 位字段，它指示描述此尾声的第一个展开代码的字节索引。|
 
 3. 尾声范围列表之后是包含展开代码的字节数组，本文章中的“展开代码”部分将对它们进行详细介绍。 在最接近的全字边界的末尾处填充此数组。 按 Little-Endian 的顺序存储字节，以便可以直接在 Little-Endian 模式下提取它们。
 
@@ -358,16 +358,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 通常，紧缩套装函数应当为在常规序言中保存的其他寄存器预分配空间，然后使用 `str` 或 `stm`（而不是 `push`）来执行寄存器保存。 这会保留函数原始序言中的所有堆栈指针操作。
@@ -386,14 +386,14 @@ ShrinkWrappedFunction
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 此处的关键在于，在每个指令边界，堆栈与该区域中的展开代码是完全一致的。 如果在本例中展开发生在内部推送之前，则将它视为区域 A 的一部分，并且仅展开区域 A 序言。 如果展开发生在内部推送之后，它被视为区域 B，后者没有序言但具有描述内部推送和区域 A.类似的逻辑中原始序言的展开代码的一部分包含于内部弹出。
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>请参阅
 
-[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)  
-[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>
+[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)

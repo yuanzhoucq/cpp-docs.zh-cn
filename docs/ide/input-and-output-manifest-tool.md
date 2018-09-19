@@ -1,7 +1,7 @@
 ---
 title: 清单工具输入和输出属性 (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,56 +20,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4320339021f0de25d49cba3fbe1f5e4377cd062
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331553"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201214"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“配置属性”->“清单工具”->“输入和输出”->“&lt;项目名&gt; 属性页”对话框
-此对话框可用于指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的输入和输出选项。  
-  
- 若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“配置属性”下的“清单工具”节点，然后选择“输入和输出”。  
-  
-## <a name="uielement-list"></a>UIElement 列表  
- **其他清单文件**  
- 使用“/manifest”选项指定清单工具将处理或合并的其他清单文件的完整路径。 以分号分隔完整路径。  
-  
- **输入资源清单**  
- 使用“/inputresource”选项指定 RT_MANIFEST 类型资源的完整路径，以输入到清单工具中。 该路径的后面可紧跟指定的资源 ID。 例如:  
-  
- `dll_with_manifest.dll;#1`  
-  
- 资源 ID 是可选项，winuser.h 中默认为 CREATEPROCESS_MANIFEST_RESOURCE_ID。  
-  
- **嵌入清单**  
- 若选择“是”，则指定项目系统将应用程序清单文件嵌入到程序集中。  
-  
- 若选择“否”，则指定项目系统将应用程序清单文件创建为独立的文件。  
-  
- **输出清单文件**  
- 指定输出清单文件的名称。 当清单工具仅处理一个清单文件时，此属性是可选项。  
-  
- **清单资源文件**  
- 指定用于将清单嵌入项目输出的输出资源文件。  
-  
- **生成目录文件**  
- 使用“/makecdfs”选项指定清单工具将生成目录定义文件（即 .cdf 文件，用于创建目录）。  
-  
- **基于 ManagedAssembly 生成清单**  
- 基于托管程序集生成清单。 (**-managedassemblyname:***file*)。  
-  
- **取消依赖元素**  
- 与“-managedassembly”选项一起使用。 此标记取消在最终清单中生成依赖元素。  
-  
- **生成类别标记**  
- 与“-managedassembly”选项一起使用。 此标记会导致生成类别标记。  
-  
- **启用 DPI 感知功能**  
- 指定应用程序是否具有 DPI 感知功能。 默认情况下，MFC 项目设置为“是”，其他项目设置为“否”，因为只有 MFC 项目内置有 DPI 感知功能。 如果添加代码来处理其他 DPI 设置，可将设置改为“是”。 如果在应用程序非 DPI 感知型时将其设置为此类型，应用程序可能显示失真或显示较小。  
-  
-## <a name="see-also"></a>另请参阅  
- [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
- [清单工具属性页](../ide/manifest-tool-property-pages.md)   
- [使用项目属性](../ide/working-with-project-properties.md)   
+
+此对话框可用于指定 [Mt.exe](/windows/desktop/SbsCs/mt-exe) 的输入和输出选项。
+
+若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“配置属性”下的“清单工具”节点，然后选择“输入和输出”。
+
+## <a name="uielement-list"></a>UIElement 列表
+
+**其他清单文件**<br/>
+使用“/manifest”选项指定清单工具将处理或合并的其他清单文件的完整路径。 以分号分隔完整路径。
+
+**输入资源清单**<br/>
+使用“/inputresource”选项指定 RT_MANIFEST 类型资源的完整路径，以输入到清单工具中。 该路径的后面可紧跟指定的资源 ID。 例如:
+
+`dll_with_manifest.dll;#1`
+
+资源 ID 是可选项，winuser.h 中默认为 CREATEPROCESS_MANIFEST_RESOURCE_ID。
+
+**嵌入清单**<br/>
+- 若选择“是”，则指定项目系统将应用程序清单文件嵌入到程序集中。
+
+- 若选择“否”，则指定项目系统将应用程序清单文件创建为独立的文件。
+
+**输出清单文件**<br/>
+指定输出清单文件的名称。 当清单工具仅处理一个清单文件时，此属性是可选项。
+
+**清单资源文件**<br/>
+指定用于将清单嵌入项目输出的输出资源文件。
+
+**生成目录文件**<br/>
+使用“/makecdfs”选项指定清单工具将生成目录定义文件（即 .cdf 文件，用于创建目录）。
+
+**基于 ManagedAssembly 生成清单**<br/>
+基于托管程序集生成清单。 （-managedassemblyname：<em>文件</em>）。
+
+**取消依赖元素**<br/>
+与“-managedassembly”选项一起使用。 此标记取消在最终清单中生成依赖元素。
+
+**生成类别标记**<br/>
+与“-managedassembly”选项一起使用。 此标记会导致生成类别标记。
+
+**启用 DPI 感知功能**<br/>
+指定应用程序是否具有 DPI 感知功能。 默认情况下，MFC 项目设置为“是”，其他项目设置为“否”，因为只有 MFC 项目内置有 DPI 感知功能。 如果添加代码来处理其他 DPI 设置，可将设置改为“是”。 如果在应用程序非 DPI 感知型时将其设置为此类型，应用程序可能显示失真或显示较小。
+
+## <a name="see-also"></a>请参阅
+
+[ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)<br/>
+[清单工具属性页](../ide/manifest-tool-property-pages.md)<br/>
+[使用项目属性](../ide/working-with-project-properties.md)<br/>

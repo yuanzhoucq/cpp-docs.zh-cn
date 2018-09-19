@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394689"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764782"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -63,7 +63,7 @@ void *bsearch(
 *base*<br/>
 指向搜索数据的基项的指针。
 
-*数*<br/>
+*数量*<br/>
 元素数量。
 
 *width*<br/>
@@ -74,11 +74,11 @@ void *bsearch(
 
 ## <a name="return-value"></a>返回值
 
-**bsearch**将指针返回到的匹配项*密钥*指向数组中*基*。 如果*密钥*未找到，则该函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch**的匹配项返回一个指针*密钥*指向的数组中*基*。 如果*键*未找到，则该函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
 ## <a name="remarks"></a>备注
 
-**Bsearch**函数执行的已排序数组的二进制搜索*数*元素，每个*宽度*大小中的字节数。 *基*值是指向要搜索，该数组的基和*密钥*是正在查找的值。 *比较*参数是指向用户提供的例程将请求的键与数组元素进行比较并返回指定其关系的以下值之一：
+**Bsearch**函数执行的已排序数组的二进制搜索*数量*，每个元素*宽度*字节的大小。 *基*值是指向待搜索数组基的指针和*密钥*是要搜索的值。 *比较*参数是指向用户提供的例程，它比较所需的键的数组元素并返回指定其关系的以下值之一：
 
 |返回值*比较*例程|描述|
 |-----------------------------------------|-----------------|
@@ -86,11 +86,11 @@ void *bsearch(
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**和 **数*不为零，或者如果*宽度*为零，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**并*数*不为零，或者如果*宽度*为零，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为`EINVAL`和该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> 和 \<search.h>|
 

@@ -1,5 +1,5 @@
 ---
-title: call 类 |Microsoft 文档
+title: 调用类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109712"
 ---
 # <a name="call-class"></a>call 类
 `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。  
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 消息的负载类型传播到此块。  
+*T*<br/>
+传播到此块的消息的负载类型。  
   
- `_FunctorType`  
- 此块可以接受的函数的签名。  
+*_FunctorType*<br/>
+该块可以接受的函数的签名。  
   
 ## <a name="members"></a>成员  
   
@@ -60,10 +60,10 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[process_input_messages](#process_input_messages)|执行输入消息中调用函数。|  
-|[process_message](#process_message)|处理一条消息，已接受此`call`消息块。|  
-|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法，调用由源块时。|  
-|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法，调用由源块时。|  
+|[process_input_messages](#process_input_messages)|输入消息执行调用的函数。|  
+|[process_message](#process_message)|处理已接受此消息`call`消息块。|  
+|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`到此块`call`消息块。 由调用`propagate`方法，调用由源块时。|  
+|[send_message](#send_message)|以同步方式从将消息传递`ISource`到此块`call`消息块。 由调用`send`方法，调用由源块时。|  
 |[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>备注  
@@ -113,24 +113,24 @@ call(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Func`  
- 将为每个接受的消息调用一个函数。  
+*_Func*<br/>
+将为每个接受的消息调用一个函数。  
   
- `_Filter`  
- 确定是否应接受提供的消息的筛选器函数。  
+*筛选 （_f)*<br/>
+确定是否应接受提供的消息的筛选器函数。  
   
- `_PScheduler`  
- `Scheduler`对象在其中的传播任务`call`计划消息块。  
+*_PScheduler*<br/>
+`Scheduler`对象在其中的传播任务的`call`计划消息块。  
   
- `_PScheduleGroup`  
- `ScheduleGroup`对象在其中的传播任务`call`计划消息块。 所用 `Scheduler` 对象由该计划组提示。  
+*_PScheduleGroup*<br/>
+`ScheduleGroup`对象在其中的传播任务的`call`计划消息块。 所用 `Scheduler` 对象由该计划组提示。  
   
 ### <a name="remarks"></a>备注  
  如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。  
   
- 类型`_Call_method`是具有签名的涵子`void (T const &)`其调用由此`call`处理一条消息的消息块。  
+ 类型`_Call_method`是具有签名的伪函数`void (T const &)`调用此`call`消息块来处理消息。  
   
- 类型`filter_method`是具有签名的涵子`bool (T const &)`其调用由此`call`消息块，以确定它是否应接受提供的消息。  
+ 类型`filter_method`是具有签名的伪函数`bool (T const &)`调用此`call`消息块，以确定它是否应接受提供的消息。  
   
 ##  <a name="dtor"></a> ~ 调用 
 
@@ -142,30 +142,31 @@ call(
   
 ##  <a name="process_input_messages"></a> process_input_messages 
 
- 执行输入消息中调用函数。  
+ 输入消息执行调用的函数。  
   
 ```
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PMessage`  
+*_PMessage*<br/>
+指向要处理的消息的指针。  
   
 ##  <a name="process_message"></a> process_message 
 
- 处理一条消息，已接受此`call`消息块。  
+ 处理已接受此消息`call`消息块。  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PMessage`  
- 指向要处理的消息的指针。  
+*_PMessage*<br/>
+指向要处理的消息的指针。  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- 以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法，调用由源块时。  
+ 以异步方式从将消息传递`ISource`到此块`call`消息块。 由调用`propagate`方法，调用由源块时。  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PMessage`  
- 指向 `message` 对象的指针。  
+*_PMessage*<br/>
+指向 `message` 对象的指针。  
   
- `_PSource`  
- 指向提供消息的源块的指针。  
+*_PSource*<br/>
+指向源块提供消息的指针。  
   
 ### <a name="return-value"></a>返回值  
- A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
   
 ##  <a name="send_message"></a> send_message 
 
- 以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法，调用由源块时。  
+ 以同步方式从将消息传递`ISource`到此块`call`消息块。 由调用`send`方法，调用由源块时。  
   
 ```
 virtual message_status send_message(
@@ -194,14 +195,14 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_PMessage`  
- 指向 `message` 对象的指针。  
+*_PMessage*<br/>
+指向 `message` 对象的指针。  
   
- `_PSource`  
- 指向提供消息的源块的指针。  
+*_PSource*<br/>
+指向源块提供消息的指针。  
   
 ### <a name="return-value"></a>返回值  
- A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220224"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691830"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>演练：在启用 COM 的应用程序中使用并发运行时
 本文档演示如何在使用组件对象模型 (COM) 的应用程序中使用并发运行时。  
@@ -36,7 +36,7 @@ ms.locfileid: "43220224"
   
 - [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- 有关 COM 的详细信息，请参阅[组件对象模型 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)。  
+ 有关 COM 的详细信息，请参阅[组件对象模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>管理 COM 库的生存期  
  虽然使用了 COM 与并发运行时遵循的相同原则作为任何其他并发机制，以下准则可以帮助您有效地结合使用这些库。  

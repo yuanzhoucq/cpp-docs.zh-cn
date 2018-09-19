@@ -1,7 +1,7 @@
 ---
 title: DQ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9ba5f5fe944964c365a071cda37f5e7bdc35e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd13549977edb2b0c80673cc8cb7b6279985b67f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051138"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687481"
 ---
 # <a name="dq"></a>DQ
-分配和 （可选） 为每个初始化 8 个字节存储`initializer`。 此外可以用作类型说明符类型是合法的任何位置。 `DQ` 同义词[QWORD](../../assembler/masm/qword.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[[name]] DQ initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [指令引用](../../assembler/masm/directives-reference.md)   
- [QWORD](../../assembler/masm/qword.md)
+
+分配并根据需要为每个初始化 8 个字节存储`initializer`。 此外可以用作类型说明符类型是合法的任何位置。 `DQ` 是的同义词[QWORD](../../assembler/masm/qword.md)。
+
+## <a name="syntax"></a>语法
+
+> [[name]]DQ 初始值设定项 [[，初始值设定项]]...
+
+## <a name="see-also"></a>请参阅
+
+[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[QWORD](../../assembler/masm/qword.md)<br/>

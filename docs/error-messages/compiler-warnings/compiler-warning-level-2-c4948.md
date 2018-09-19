@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 2） C4948 |Microsoft 文档
+title: 编译器警告 （等级 2） C4948 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422f06e6e9ac749b16524f45e61cb6bbbd672cb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51b42677fbabde58afb3cb989e9b0d73e34f92a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050809"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>编译器警告（等级 2）C4948
-accessor 的返回类型与相应的 setter 的最后一个参数类型不匹配  
-  
-编译器发现何种数据类型在获取和设置为索引的属性之间不匹配。  
-  
-C4948 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+accessor 的返回类型与相应的 setter 的最后一个参数类型不匹配
+
+编译器找到了何种数据类型在获取和设置为索引的属性之间不匹配。
+
+C4948 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

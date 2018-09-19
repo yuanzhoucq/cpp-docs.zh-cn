@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3219 |Microsoft 文档
+title: 编译器错误 C3219 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16341412ae5028753b2a542b45da4ea2b549c29e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60a17d257505752f9d2c791365f537fa02ffc2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022574"
 ---
 # <a name="compiler-error-c3219"></a>编译器错误 C3219
-“param”: 泛型参数不能由多个非接口“class”进行约束  
-  
- 由两个或更多托管类约束泛型参数是无效的。  
-  
- 下面的示例生成 C3219：  
-  
-```  
-// C3219.cpp  
-// compile with: /clr  
-ref class A {};  
-ref class B {};  
-  
-generic <class T>  
-where T : A, B  
-ref class E {};   // C3219  
-```  
-  
- 以下示例演示了可能的解决方法：  
-  
-```  
-// C3219b.cpp  
-// compile with: /clr /c  
-ref class A {};  
-  
-interface struct C {};  
-  
-generic <class T>  
-where T : A  
-ref class E {};  
+
+“param”: 泛型参数不能由多个非接口“class”进行约束
+
+由两个或更多托管类约束泛型参数是无效的。
+
+下面的示例生成 C3219：
+
+```
+// C3219.cpp
+// compile with: /clr
+ref class A {};
+ref class B {};
+
+generic <class T>
+where T : A, B
+ref class E {};   // C3219
+```
+
+以下示例演示了可能的解决方法：
+
+```
+// C3219b.cpp
+// compile with: /clr /c
+ref class A {};
+
+interface struct C {};
+
+generic <class T>
+where T : A
+ref class E {};
 ```

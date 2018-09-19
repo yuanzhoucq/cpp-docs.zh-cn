@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081294"
 ---
 # <a name="ctable-class"></a>CTable 类
+
 提供了一种方法直接访问简单行集合 （一个不带任何参数）。  
   
 ## <a name="syntax"></a>语法
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>参数  
- *TAccessor*  
- 一个访问器类。  
+
+*TAccessor*<br/>
+一个访问器类。  
   
- *TRowset*  
- 行集类。  
+*TRowset*<br/>
+行集类。  
 
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -62,9 +65,11 @@ class CTable :
 |[打开](#open)|打开表。|  
   
 ## <a name="remarks"></a>备注  
- 请参阅[CCommand](../../data/oledb/ccommand-class.md)有关如何执行命令来访问行集的信息。  
+
+请参阅[CCommand](../../data/oledb/ccommand-class.md)有关如何执行命令来访问行集的信息。  
 
 ## <a name="open"></a> Ctable:: Open
+
 打开表。  
   
 ### <a name="syntax"></a>语法  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>参数  
- *会话*  
- [in]为其打开的表的会话。  
+
+*会话*<br/>
+[in]为其打开的表的会话。  
   
- *wszTableName*  
- [in]若要打开，表的名称传递为 Unicode 字符串。  
+*wszTableName*<br/>
+[in]若要打开，表的名称传递为 Unicode 字符串。  
   
- *szTableName*  
- [in]若要打开，表的名称传递为 ANSI 字符串。  
+*szTableName*<br/>
+[in]若要打开，表的名称传递为 ANSI 字符串。  
   
- *dbid*  
- [in]`DBID`要打开的表。  
+*dbid*<br/>
+[in]`DBID`要打开的表。  
   
- *pPropSet*  
- [in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。  
+*pPropSet*<br/>
+[in]指向数组的指针[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构包含要设置属性和值。 请参阅[属性设置和属性组](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程序员参考*Windows SDK 中。 默认值为 NULL 指定任何属性。  
   
- *ulPropSets*  
- [in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
+*ulPropSets*<br/>
+[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))结构传入*pPropSet*参数。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 有关更多详细信息，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+有关更多详细信息，请参阅[iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   

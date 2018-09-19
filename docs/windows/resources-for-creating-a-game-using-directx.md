@@ -1,5 +1,5 @@
 ---
-title: 使用 DirectX 创建游戏的资源 |Microsoft Docs
+title: 有关创建 c + + 游戏使用 DirectX 的资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/08/2018
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99c2671874823ee13164b2cfd226b6ef3c35bbb7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 414074c6cbc7945573409923da8070eac218c91a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221763"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315640"
 ---
-# <a name="resources-for-creating-a-game-using-directx"></a>有关使用 DirectX 创建游戏的资源
+# <a name="resources-for-creating-a-c-game-using-directx"></a>有关创建 c + + 游戏使用 DirectX 的资源
 
 若要创建最佳桌面游戏，请结合使用 Visual C++ 和 DirectX。
 

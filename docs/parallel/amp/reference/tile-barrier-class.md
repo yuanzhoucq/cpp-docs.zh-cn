@@ -1,5 +1,5 @@
 ---
-title: tile_barrier 类 |Microsoft 文档
+title: tile_barrier 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025199"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
-同步正在线程组 （磁贴） 中使用的线程的执行`wait`方法。 只有运行时可以实例化此类。  
+同步使用线程组 （磁贴） 中运行的线程执行`wait`方法。 只有运行时可以实例化此类。  
   
 ### <a name="syntax"></a>语法 
   
@@ -50,10 +50,10 @@ class tile_barrier;
   
 |名称|描述|  
 |----------|-----------------|  
-|[等待](#wait)|指示要停止执行，直至磁贴中的所有线程都完成等待的线程组 (tile) 中的所有线程。|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|完成所有的内存访问之后，才能将磁贴中的所有线程和磁贴中的所有线程的阻止执行已达到此调用。|  
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|直到已完成的所有全局内存访问以及磁贴中的所有线程均已都到达此调用将磁贴中的所有线程的阻止执行。|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|将阻止执行磁贴中的所有线程，直至将所有`tile_static`内存访问已完成和磁贴中的所有线程均已都到达此调用。|  
+|[等待](#wait)|指示要停止执行，直到平铺中的所有线程都完成等待的线程组 （磁贴） 中的所有线程。|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|阻止执行，直到所有内存访问都完成的磁贴中的所有线程和磁贴中的所有线程都达到此调用。|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|阻止平铺，直到所有全局内存访问都完成且该磁贴中的所有线程都达到此调用中的所有线程的执行。|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|阻止平铺中的所有线程的执行，直到所有`tile_static`内存访问都完成且该磁贴中的所有线程都达到此调用。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `tile_barrier`  
@@ -74,8 +74,8 @@ tile_barrier(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `tile_barrier`要复制的对象。  
+*_Other*<br/>
+`tile_barrier`要复制对象。  
 
 ## <a name="wait"></a>  等待 
 指示线程组 (Tile) 中的所有线程停止执行，直到 Tile 中的所有线程完成等待。  
@@ -87,7 +87,7 @@ void wait() const restrict(amp);
 ```    
 
 ## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence   
-直到将磁贴中的所有线程均已都到达此调用将磁贴中的所有线程的阻止执行。 这将确保所有的内存访问的线程磁贴中的其他线程对可见，并按编程顺序执行。  
+阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保所有内存访问对于线程平铺中的其他线程是可见的并已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
   
@@ -97,7 +97,7 @@ void wait_with_all_memory_fence() const restrict(amp);
   
 
 ## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence   
-直到将磁贴中的所有线程均已都到达此调用将磁贴中的所有线程的阻止执行。 这将确保所有全局内存访问的线程磁贴中的其他线程对可见，并按编程顺序执行。  
+阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保所有全局内存访问对于线程平铺中的其他线程是可见并已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
   
@@ -106,7 +106,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
-直到将磁贴中的所有线程均已都到达此调用将磁贴中的所有线程的阻止执行。 这样可确保`tile_static`内存访问的线程磁贴中的其他线程对可见，并按编程顺序执行。  
+阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保`tile_static`内存访问对于线程平铺中的其他线程是可见并已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
   

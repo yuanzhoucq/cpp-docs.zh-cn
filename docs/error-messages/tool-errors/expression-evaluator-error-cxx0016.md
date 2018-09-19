@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0016 |Microsoft 文档
+title: 表达式计算器错误 CXX0016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075407"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>表达式计算器错误 CXX0016
-常量太大  
-  
- 无符号的整数常量大于 4294967295 (0FFFFFFFF) 或其量值大于大约 1.8 e + 308 的浮点常数，则不能接受 C 表达式计算器。  
-  
- 此错误是与 CAN0016 相同。
+
+常量太大
+
+C 表达式计算器无法接受无符号的整数常量大小超过 4294967295 (0FFFFFFFF) 或其位数大于大约 1.8 e + 308 的浮点常数。
+
+此错误是与 CAN0016 相同。

@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5131479af7f34f1cc43cf91adfd0bd3ac52a594b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722977"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 类
 一个`CMFCCaptionBar`对象是可以显示三个元素的控件条： 按钮、 文本标签和位图。 它一次只能显示一种类型的一个元素。 你可以将每个元素与控件进行左对齐、右对齐或居中对齐。 你还可将平面或 3D 样式应用于标题栏的顶部和底部边界。  
@@ -230,8 +230,8 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bEnable*  
- 若要启用该按钮，则返回 FALSE 以禁用此按钮，则为 TRUE。  
+*bEnable*<br/>
+[in]若要启用该按钮，则返回 FALSE 以禁用此按钮，则为 TRUE。  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  返回指定元素的对齐方式。  
@@ -241,8 +241,8 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*elem*  
- 要为其检索对齐一个标题栏元素。  
+*Elem*<br/>
+[in]要为其检索对齐一个标题栏元素。  
   
 ### <a name="return-value"></a>返回值  
  元素，如按钮、 位图、 文本或图标的对齐方式。  
@@ -332,11 +332,11 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向设备上下文的标题栏的指针。  
+*pDC*<br/>
+[in]指向设备上下文的标题栏的指针。  
   
- [in]*rect*  
- 要填充的边界矩形。  
+*rect*<br/>
+[in]要填充的边界矩形。  
   
 ### <a name="remarks"></a>备注  
  `OnDrawBackground`要填充的标题栏的背景时调用方法。 默认实现使用填充的背景[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)颜色。  
@@ -353,11 +353,11 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 一个设备上下文，用于显示边框。  
+*pDC*<br/>
+[in]一个设备上下文，用于显示边框。  
   
- [in]*rect*  
- 绑定矩形。  
+*rect*<br/>
+[in]边界矩形。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，边框具有平面的样式。  
@@ -376,17 +376,17 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向用来显示该按钮的设备上下文的指针。  
+*pDC*<br/>
+[in]指向用来显示该按钮的设备上下文的指针。  
   
- [in]*rect*  
- 按钮的边框。  
+*rect*<br/>
+[in]按钮的边框。  
   
- [in]*strButton*  
- 按钮的文本标签。  
+*strButton*<br/>
+[in]按钮的文本标签。  
   
- [in]*bEnabled*  
- 如果启用该按钮; 则为 TRUEFALSE 否则为。  
+*bEnabled*<br/>
+[in]如果启用该按钮; 则为 TRUEFALSE 否则为。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在`CMFCCaptionBar`派生类，以自定义标题栏按钮的外观。  
@@ -401,11 +401,11 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向用于显示图像的设备上下文的指针。  
+*pDC*<br/>
+[in]指向用于显示图像的设备上下文的指针。  
   
- [in]*rect*  
- 指定图像的边框。  
+*rect*<br/>
+[in]指定图像的边框。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在`CMFCCaptionBar`派生类，以自定义图像外观。  
@@ -421,14 +421,14 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*pDC*  
- 指向用来显示该按钮的设备上下文的指针。  
+*pDC*<br/>
+[in]指向用来显示该按钮的设备上下文的指针。  
   
- [in]*rect*  
- 文本的边框。  
+*rect*<br/>
+[in]文本的边框。  
   
- [in]*strText*  
- 要显示的文本字符串。  
+*strText*<br/>
+[in]要显示的文本字符串。  
   
 ### <a name="remarks"></a>备注  
  默认实现通过使用显示的文本`CDC::DrawText`并[CMFCCaptionBar::m_clrBarText](#m_clrbartext)颜色。  
@@ -485,17 +485,17 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hBitmap*  
- 要设置的位图句柄。  
+*hBitmap*<br/>
+[in]要设置的位图句柄。  
   
- [in]*clrTransparent*  
- 一个指定位图的透明颜色的 RGB 值。  
+*clrTransparent*<br/>
+[in]一个指定位图的透明颜色的 RGB 值。  
   
- [in]*bStretch*  
- 如果为 TRUE，如果不适合边界矩形的图像的拉伸位图。 否则不拉伸的位图。  
+*bStretch*<br/>
+[in]如果为 TRUE，如果不适合边界矩形的图像的拉伸位图。 否则不拉伸的位图。  
   
- [in]*bmpAlignment*  
- 位图的对齐方式。  
+*bmpAlignment*<br/>
+[in]位图的对齐方式。  
   
 ### <a name="remarks"></a>备注  
  使用此方法在标题栏上设置位图。  
@@ -520,8 +520,8 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nSize*  
- 新的大小，以像素为单位的标题栏边框。  
+*nSize*<br/>
+[in]新的大小，以像素为单位的标题栏边框。  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  设置的标题栏的按钮。  
@@ -568,11 +568,11 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszToolTip*  
- 工具提示标题。  
+*lpszToolTip*<br/>
+[in]工具提示标题。  
   
- [in]*lpszDescription*  
- 工具提示说明。  
+*lpszDescription*<br/>
+[in]工具提示说明。  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  设置的标题栏的边框样式。  
@@ -582,8 +582,8 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*bFlat*  
- 如果标题栏的边框是平面的则为 TRUE。 如果此边框是 3D，则为 FALSE。  
+*bFlat*<br/>
+[in]如果标题栏的边框是平面的则为 TRUE。 如果此边框是 3D，则为 FALSE。  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  设置标题栏的图标。  
@@ -595,11 +595,11 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*hIcon*  
- 若要设置图标的句柄。  
+*hIcon*<br/>
+[in]若要设置图标的句柄。  
   
- [in]*iconAlignment*  
- 图标的对齐方式。  
+*iconAlignment*<br/>
+[in]图标的对齐方式。  
   
 ### <a name="remarks"></a>备注  
  标题栏可以显示的图标或位图。 请参阅[CMFCCaptionBar::SetBitmap](#setbitmap)若要了解如何显示位图。 如果将设置一个图标或位图时，将始终显示图标。 调用[CMFCCaptionBar::RemoveIcon](#removeicon)从标题栏中删除图标。  
@@ -624,11 +624,11 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszToolTip*  
- 在工具提示的文本。  
+*lpszToolTip*<br/>
+[in]在工具提示的文本。  
   
- [in]*lpszDescription*  
- 工具提示说明。  
+*lpszDescription*<br/>
+[in]工具提示说明。  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  设置的标题栏元素边缘的标题栏控件的边缘之间的距离。  
@@ -638,8 +638,8 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nMargin*  
- 以像素为单位的标题栏元素边缘的标题栏控件的边缘之间的距离。  
+*nMargin*<br/>
+[in]以像素为单位的标题栏元素边缘的标题栏控件的边缘之间的距离。  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  设置的标题栏的文本标签。  
@@ -651,11 +651,11 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strText*  
- 要设置的文本字符串。  
+*strText*<br/>
+[in]要设置的文本字符串。  
   
- [in]*文本斜体文本*  
- 文本对齐方式。  
+*文本斜体文本*<br/>
+[in]文本对齐方式。  
   
 ### <a name="remarks"></a>备注  
  对齐的文本标签所指定的*文本斜体文本*参数。 它可以是以下之一`BarElementAlignment`值：  

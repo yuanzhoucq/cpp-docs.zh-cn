@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966612"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101773"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 运算符
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`要串联。
+*left*<br/>
+要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`要串联。
+*right*<br/>
+要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*_Ostr*写入到输出流。
+*_Ostr*<br/>
+正在写入的输出流。
 
-*str*要输入到输出流的字符串。
+*str*<br/>
+要输入到输出流的字符串。
 
 ### <a name="return-value"></a>返回值
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*左*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*left*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*右*的 C 样式字符串或类型的对象`basic_string`进行比较。
+*right*<br/>
+要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-*_Istr*用于提取此序列的输入的流
+*_Istr*<br/>
+用来提取序列的输入流
 
-*右*正在从输入流提取的字符串。
+*right*<br/>
+正在从输入流提取的字符串。
 
 ### <a name="return-value"></a>返回值
 

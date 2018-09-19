@@ -1,5 +1,5 @@
 ---
-title: -Fe （命名 EXE 文件） |Microsoft 文档
+title: -Fe （命名 EXE 文件） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,34 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad2683f79fdca845245fd266555e688aa8cf7374
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377052"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716230"
 ---
 # <a name="fe-name-exe-file"></a>/Fe（命名 EXE 文件）
 
-指定名称和.exe 文件或 DLL 由编译器创建的目录。
+指定的名称和.exe 文件或由编译器创建的 DLL 的目录。
 
 ## <a name="syntax"></a>语法
 
-> **/Fe**[_pathname_]  
-> **/ Fe:** _路径名_  
+> **/Fe**[_pathname_] **/Fe:** _路径名_
 
 ### <a name="arguments"></a>自变量
 
 *路径名*<br/>
-相对或绝对路径和基文件名或到目录或要用于生成可执行文件的基文件名称的相对或绝对路径。
+相对或绝对路径和基文件名或相对或绝对路径的目录中或要用于生成可执行文件的基本文件名称。
 
 ## <a name="remarks"></a>备注
 
-**/Fe**选项允许你指定的输出目录、 输出可执行文件名称，或同时包括这两者，生成的可执行文件。 如果*路径名*路径分隔符中结束 (**&#92;**)，则假定它仅指定输出目录。 否则为最后一个组件的*路径名*用作输出文件基名称和的其余部分*路径名*指定的输出目录。 如果*路径名*不具有任何路径分隔符，则假定它在当前目录中指定输出文件的名称。 *路径名*必须括在双引号 (**"**) 如果它包含不能在一个短的路径，例如空间，任何字符扩展字符或路径组件数量超过八个字符长时间。
+**/Fe**选项可以指定输出目录、 输出可执行文件名称，或两者，为生成的可执行文件。 如果*pathname*以路径分隔符结束 (**&#92;**)，则假定它指定仅输出目录。 否则为最后一个组成部分*pathname*用作输出文件基名称和其余*路径名*指定的输出目录。 如果*pathname*不具有任何路径分隔符，则假定当前目录中指定输出文件的名称。 *Pathname*必须括在双引号 (**"**) 如果它包含任何字符，不能在短路径，如空格字符或扩展路径组件超过八个字符长时间。
 
-当 **/Fe**未指定选项，或如果基文件中未指定名称*路径名*，编译器中赋予输出文件的默认名称，使用指定的第一个源或对象文件的基名称在命令行和扩展名为.exe 或.dll。
+当 **/Fe**未指定选项，或基本的文件时在未指定名称*路径名*，编译器为输出文件赋予其默认名称，使用指定的第一个源或对象文件的基名称在命令行和扩展名为.exe 或.dll。
 
-如果指定[（编译而无需链接） 的 /c](c-compile-without-linking.md)选项， **/Fe**不起作用。
+如果指定[/c （编译而无需链接）](c-compile-without-linking.md)选项， **/Fe**不起作用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -63,7 +62,7 @@ ms.locfileid: "32377052"
 
 ## <a name="example"></a>示例
 
-下面的命令行编译并链接当前目录中的所有 C 源文件。 生成的可执行文件被命名为 PROCESS.exe 和的目录"C:\Users\User Name\repos\My Project\bin"中创建。
+下面的命令行编译并链接当前目录中的所有 C 源代码文件。 生成可执行文件名为 PROCESS.exe 和目录"C:\Users\User Name\repos\My Project\bin"中创建。
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -71,7 +70,7 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>示例
 
-下面的命令行创建中的可执行文件`C:\BIN`具有相同基名称为当前目录中的第一个源文件：
+下面的命令行创建可执行文件在`C:\BIN`具有相同基名称为当前目录中的第一个源文件：
 
 ```
 CL /FeC:\BIN\ *.C

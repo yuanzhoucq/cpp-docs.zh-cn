@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705830"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 类
 `CMFCPropertyGridColorProperty` 类支持用于打开颜色选择对话框的属性列表控件项。  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*strName*  
- 属性的名称。  
+*strName*<br/>
+[in]属性的名称。  
   
- [in]*颜色*  
- 属性的颜色值。  
+*颜色*<br/>
+[in]属性的颜色值。  
   
- [in]*pPalette*  
- 指向颜色的调色板。 默认值为 NULL。  
+*pPalette*<br/>
+[in]指向颜色的调色板。 默认值为 NULL。  
   
- [in]*lpszDescr*  
- 属性说明。 默认值为 NULL。  
+*lpszDescr*<br/>
+[in]属性说明。 默认值为 NULL。  
   
- [in]*dwData*  
- 特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
+*dwData*<br/>
+[in]特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  使*自动*颜色选择对话框上的按钮。 (标记为标准自动按钮**自动**。)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszLabel*  
- 自动按钮的标签文本。  
+*lpszLabel*<br/>
+[in]自动按钮的标签文本。  
   
- [in]*colorAutomatic*  
- 自动 （默认） 颜色的 RGB 颜色值。  
+*colorAutomatic*<br/>
+[in]自动 （默认） 颜色的 RGB 颜色值。  
   
- [in]*bEnable*  
- 为 TRUE，则启用自动按钮;否则为 FALSE。 默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 TRUE，则启用自动按钮;否则为 FALSE。 默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*lpszLabel*  
- 其他按钮的标签文本。  
+*lpszLabel*<br/>
+[in]其他按钮的标签文本。  
   
- [in]*bAltColorDlg*  
- 为 true，则显示`CMFCColorDialog`对话框;为 FALSE，则显示标准颜色选择对话框。 默认值为 TRUE。  
+*bAltColorDlg*<br/>
+[in]为 true，则显示`CMFCColorDialog`对话框;为 FALSE，则显示标准颜色选择对话框。 默认值为 TRUE。  
   
- [in]*bEnable*  
- 为 TRUE，则显示其他按钮;否则为 FALSE。  默认值为 TRUE。  
+*bEnable*<br/>
+[in]为 TRUE，则显示其他按钮;否则为 FALSE。  默认值为 TRUE。  
   
 ### <a name="remarks"></a>备注  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*颜色*  
- RGB 颜色值。  
+*颜色*<br/>
+[in]RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*nColumnsNumber*  
- 首选的颜色属性网格中的列数。  
+*nColumnsNumber*<br/>
+[in]首选的颜色属性网格中的列数。  
   
 ### <a name="remarks"></a>备注  
  此方法设置的值`m_nColumnsNumber`受保护的数据成员。  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]*varValue*  
- 一个值。  
+*varValue*<br/>
+[in]一个值。  
   
 ### <a name="remarks"></a>备注  
  使用[cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)方法来重置已编辑属性的原始值。  

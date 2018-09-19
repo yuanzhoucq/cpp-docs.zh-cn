@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c84becc5b7117c9095a055e6a815e52396987800
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847877"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758386"
 ---
 # <a name="enumerators-and-collections-classes"></a>枚举器和集合类
-以下类提供支持 COM 集合和枚举：  
-  
--   [CComEnum](../atl/reference/ccomenum-class.md)定义 COM 枚举器对象基于数组。  
-  
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。  
-  
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)定义 COM 枚举器对象，基于 c + + 标准库集合。  
-  
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)提供要枚举的项在兼容的 c + + 标准库容器中的存储位置的 COM 枚举器接口的实现。  
-  
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)提供了用于实现`Count`， `Item`，和`_NewEnum`集合接口的属性。  
-  
-## <a name="related-articles"></a>相关文章  
- [ATL 集合和枚举数](../atl/atl-collections-and-enumerators.md)  
-  
-## <a name="see-also"></a>请参阅  
- [类概述](../atl/atl-class-overview.md)
+
+以下类提供支持 COM 集合和枚举：
+
+- [CComEnum](../atl/reference/ccomenum-class.md)定义 COM 枚举器对象基于数组。
+
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。
+
+- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)定义 COM 枚举器对象，基于 c + + 标准库集合。
+
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)提供要枚举的项在兼容的 c + + 标准库容器中的存储位置的 COM 枚举器接口的实现。
+
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)提供了用于实现`Count`， `Item`，和`_NewEnum`集合接口的属性。
+
+## <a name="related-articles"></a>相关文章
+
+[ATL 集合和枚举数](../atl/atl-collections-and-enumerators.md)
+
+## <a name="see-also"></a>请参阅
+
+[类概述](../atl/atl-class-overview.md)
 

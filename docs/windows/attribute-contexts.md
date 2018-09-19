@@ -8,19 +8,19 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], contexts
+- attributes [C++/CLI], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e3935b168220b528afaecd2e1438cfe49496b1b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600795"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313658"
 ---
 # <a name="attribute-contexts"></a>特性上下文
 可以使用四个基本字段描述 c + + 特性： 它们可以应用到的目标 (**适用于**)，如果它们是可重复的还是不 (**Repeatable**)，则所需的其他属性 (存在**所需属性**)，并与其他属性的不兼容性 (**无效属性**)。 在每个属性的参考主题中的相关表中列出这些字段。 下面描述了每个字段。

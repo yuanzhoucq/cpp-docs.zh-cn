@@ -1,5 +1,5 @@
 ---
-title: C 运行时错误 R6002 到 R6035 |Microsoft 文档
+title: C 运行时错误 R6002 到 R6035 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c987b2ee09cdd701cb606e45a9525e827e0db90a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042957"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 运行时错误 R6002 到 R6035
 
-本部分是应用加载或运行时，对 C 运行时库 (CRT) 可能会生成的错误的引用。 即使消息是指 Microsoft Visual c + + 运行时，这些错误指示您的应用程序代码中存在 bug，或者运行时库无法处理，例如内存不足的条件。 如果你不代码您的应用程序，为了防止出现情况，从而导致它们，或编写代码以捕获这些错误，并向你的用户友好消息，你的应用的最终用户可能会看到这些错误。
+本部分是应用加载或运行时，对 C 运行时库 (CRT) 可能会生成的错误的引用。 即使该消息是指 Microsoft Visual c + + 运行时，这些错误将指示您的应用程序代码中的 bug，或者运行时库不能处理，如内存不足的条件。 如果没有阻止条件，从而导致它们，将应用编码或编写代码来捕获这些错误并向用户显示一条友好消息，您的应用程序的最终用户可能会看到这些错误。
 
-你可能在 Microsoft 的公共论坛中找到错误和警告的获取更多帮助。 你可以搜索错误或警告编号[开发人员社区](https://go.microsoft.com/fwlink/p/?linkid=820594)站点。 [Visual c + + 语言](http://go.microsoft.com/fwlink/p/?linkid=158195)论坛是有关问题和讨论有关 c + + 语言语法和 MSVC 编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/p/?linkid=158194)论坛是有关 Visual c + + 其他论坛中未涉及的问题。 此外可以搜索错误和警告，并询问有关的问题[堆栈溢出](http://stackoverflow.com/)用于查找的解决方案。
+在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 可以上搜索的错误或警告编号[开发人员社区](https://developercommunity.visualstudio.com)站点。 [Visual c + + 常规](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral)论坛是有关 Visual c + + 其他论坛中未涉及的问题。 此外可以搜索错误和警告，并上提问[Stack Overflow](http://stackoverflow.com/)查找解决方案。
 
 有关更多帮助和社区资源的链接，请参阅[Visual c + + 帮助和社区](../../visual-cpp-help-and-community.md)。
 
@@ -63,4 +63,4 @@ ms.locfileid: "33300015"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
