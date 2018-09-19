@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4692 |Microsoft 文档
+title: 编译器警告 （等级 1） C4692 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a908aae7e561f78514cda1f31b78060ce88d90ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 691be92230341d0cbf83b361310de4aab60f6859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117733"
 ---
 # <a name="compiler-warning-level-1-c4692"></a>编译器警告（等级 1）C4692
-“function”: 非私有成员的签名包含程序集私有本机类型“native_type”  
-  
- 程序集外部可见类型包含其签名包含不是程序集外部可见的本机类型的成员函数。 因此，不应如果其包含类型实例化的程序集外部调用成员函数。  
-  
- 有关详细信息，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。  
-  
- 默认情况下，此警告处于关闭状态。 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4692。  
-  
-```  
-// C4692.cpp  
-// compile with: /W1 /c /clr  
-#pragma warning(default:4692)  
-class Private_Native_Class {};  
-public class Public_Native_Class {};  
-public ref class Public_Ref_Class {  
-public:  
-   void Test(Private_Native_Class *) {}   // C4692  
-   void Test2(Public_Native_Class *) {}   // OK  
-};  
+
+“function”: 非私有成员的签名包含程序集私有本机类型“native_type”
+
+程序集外部可见的类型包含其签名包含本机类型不是程序集外部可见的成员函数。 因此，如果程序集外部的实例化它的包含类型应不调用成员函数。
+
+有关详细信息，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。
+
+默认情况下，此警告处于关闭状态。 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4692。
+
+```
+// C4692.cpp
+// compile with: /W1 /c /clr
+#pragma warning(default:4692)
+class Private_Native_Class {};
+public class Public_Native_Class {};
+public ref class Public_Ref_Class {
+public:
+   void Test(Private_Native_Class *) {}   // C4692
+   void Test2(Public_Native_Class *) {}   // OK
+};
 ```

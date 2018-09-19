@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113716"
 ---
 # <a name="code-pages"></a>代码页
 
 代码页是一个字符集，可以包括数字、标点符号和其他标志符号。 不同的语言和区域设置可能使用不同的代码页。 例如，ANSI 代码页 1252 适用于英语和大多数欧洲语言；而 OEM 代码页 932 则适用于日本汉字。
 
- 代码页可以用字符与单字节值或多字节值的映射表来表示。 对于 0x00 - 0x7F 范围的字符，大多数代码页共享 ASCII 字符集。
+代码页可以用字符与单字节值或多字节值的映射表来表示。 对于 0x00 - 0x7F 范围的字符，大多数代码页共享 ASCII 字符集。
 
- Microsoft 运行库使用以下类型的代码页：
+Microsoft 运行库使用以下类型的代码页：
 
 - 系统默认的 ANSI 代码页。 默认情况下，启动时运行系统将多字节代码页自动设置为系统默认的 ANSI 代码页（可从操作系统中获得）。 调用：
 
@@ -54,4 +54,4 @@ ms.locfileid: "32388612"
 ## <a name="see-also"></a>请参阅
 
 [国际化](../c-runtime-library/internationalization.md)<br/>
- [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

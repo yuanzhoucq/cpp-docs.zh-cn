@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083972"
 ---
 # <a name="time-management"></a>时间管理
 
 使用这些函数获取当前时间并按需对其转换、调整及存储。 当前时间为系统时间。
 
- _ftime 和 localtime 例程使用 TZ 环境变量。 如果未设置 TZ，则运行时库将尝试使用由操作系统指定的时区信息。 如果此信息不可用，则这些函数将使用默认值 PST8PDT。 有关 TZ 的详细信息，请参阅 [_tzset](../c-runtime-library/reference/tzset.md)；另请参阅 [_daylight、timezone 和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+_ftime 和 localtime 例程使用 TZ 环境变量。 如果未设置 TZ，则运行时库将尝试使用由操作系统指定的时区信息。 如果此信息不可用，则这些函数将使用默认值 PST8PDT。 有关 TZ 的详细信息，请参阅 [_tzset](../c-runtime-library/reference/tzset.md)；另请参阅 [_daylight、timezone 和 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ### <a name="time-routines"></a>时间例程
 

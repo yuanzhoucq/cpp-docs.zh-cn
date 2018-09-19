@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d892aac81efa8c2628c8662558b52cc1eb2e21c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fe77d3775c489399bb8b9032e645eee17d70b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076588"
 ---
 # <a name="storage-of-addresses"></a>地址存储
-地址所需的存储量和该地址的含义取决于编译器的实现。 指向不同类型的指针不能保证具有相同的长度。 因此，sizeof(char \*) 不必与 sizeof(int \*) 相等。  
-  
- **Microsoft 专用**  
-  
- 对于 Microsoft C 编译器，sizeof(char \*) 与 sizeof(int \*) 相等。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [指针声明](../c-language/pointer-declarations.md)
+
+地址所需的存储量和该地址的含义取决于编译器的实现。 指向不同类型的指针不能保证具有相同的长度。 因此，sizeof(char \*) 不必与 sizeof(int \*) 相等。
+
+**Microsoft 专用**
+
+对于 Microsoft C 编译器，sizeof(char \*) 与 sizeof(int \*) 相等。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[指针声明](../c-language/pointer-declarations.md)

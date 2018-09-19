@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2511 |Microsoft 文档
+title: 编译器错误 C2511 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cbbd75d3b39b55ff640ed99e261ba349043d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b628adda383baee0f2ec03ace715d94c6cca764c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058141"
 ---
 # <a name="compiler-error-c2511"></a>编译器错误 C2511
-identifier： 重载 class 中找不到的成员函数  
-  
- 使用指定的参数不声明的函数的任何版本。  可能的原因：  
-  
-1.  错误的参数传递给函数。  
-  
-2.  在错误的顺序传递的参数。  
-  
-3.  参数名称拼写不正确。  
-  
- 下面的示例生成 C2511:  
-  
-```  
-// C2511.cpp  
-// compile with: /c  
-class C {  
-   int c_2;  
-   int Func(char *, char *);  
-};  
-  
-int C::Func(char *, char *, int i) {   // C2511  
-// try the following line instead  
-// int C::Func(char *, char *) {  
-   return 0;  
-}  
+
+identifier： 重载的 class 中找不到成员函数
+
+任何版本的函数使用指定的参数不声明。  可能的原因：
+
+1. 错误的参数传递给函数。
+
+1. 在错误的顺序传递参数。
+
+1. 参数名称拼写不正确。
+
+下面的示例生成 C2511:
+
+```
+// C2511.cpp
+// compile with: /c
+class C {
+   int c_2;
+   int Func(char *, char *);
+};
+
+int C::Func(char *, char *, int i) {   // C2511
+// try the following line instead
+// int C::Func(char *, char *) {
+   return 0;
+}
 ```

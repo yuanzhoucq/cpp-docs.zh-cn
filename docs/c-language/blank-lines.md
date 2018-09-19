@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b85be35347a9021d2b652b6f8b33d5d313f71771
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f997e2317306cc897ae13d98c75b45034e47cbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109829"
 ---
 # <a name="blank-lines"></a>空行
-**ANSI 4.9.2** 读入时出现换行符之前，空格字符是否可以立即被写出到文本流  
-  
- 保留空格符。  
-  
-## <a name="see-also"></a>请参阅  
- [库函数](../c-language/library-functions.md)
+
+**ANSI 4.9.2** 读入时出现换行符之前，空格字符是否可以立即被写出到文本流
+
+保留空格符。
+
+## <a name="see-also"></a>请参阅
+
+[库函数](../c-language/library-functions.md)
