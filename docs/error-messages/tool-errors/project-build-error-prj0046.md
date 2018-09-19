@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0046 |Microsoft 文档
+title: 项目生成错误 PRJ0046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3571570fb00b25a42412ac8305623271ff0364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c6c02e6644391f0e4848b43f3a9f47364b41ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111584"
 ---
 # <a name="project-build-error-prj0046"></a>项目生成错误 PRJ0046
-无法生成命令行，因为指定的一个为空。  
-  
- 为生成文件配置; 指定了空命令行命令行是必需的。
+
+无法生成命令行，因为指定的一个为空。
+
+生成文件配置; 指定了空的命令行命令行是必需的。

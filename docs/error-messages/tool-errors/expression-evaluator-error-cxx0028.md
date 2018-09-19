@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0028 |Microsoft 文档
+title: 表达式计算器错误 CXX0028 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb894a9960e74fe2b6c2569aab01b66a0de077e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087421"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>表达式计算器错误 CXX0028
-不结构/联合元素  
-  
- 指定窗体 Struct.Member 或 pstruct->member 的表达式，但\<成员 > 不是元素的结构。  
-  
- 该表达式可能不正确是用圆括号括起来。  
-  
- 此错误是与 CAN0028 相同。
+
+不结构/联合元素
+
+指定窗体 Struct.Member 或 pStruct-> 成员的表达式，但\<成员 > 不是元素的结构。
+
+表达式可能不正确是用圆括号括起来。
+
+此错误是与 CAN0028 相同。

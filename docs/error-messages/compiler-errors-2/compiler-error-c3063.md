@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3063 |Microsoft 文档
+title: 编译器错误 C3063 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68809002b2c895387cd10d33615ec9d6c7a6b861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9adea484416b85f027693b59acb343d4ca19cf6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021637"
 ---
 # <a name="compiler-error-c3063"></a>编译器错误 C3063
-运算符 operator： 所有操作数必须都具有相同的枚举类型  
-  
-当在枚举器上使用运算符，两个操作数必须是枚举类型。 有关详细信息，请参阅[如何： 定义和使用枚举在 C + + /cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)。  
-  
-## <a name="example"></a>示例  
-下面的示例生成 C3063，并演示如何修复此错误：  
-  
-```  
-// C3063.cpp  
-// compile with: /clr  
-enum class E { a, b } e, mask;  
-int main() {  
-   if ( ( e & mask ) != 0 ) ;   // C3063 no operator!= (E, int)  
-  
-   if ( ( e & mask ) != E() )   // OK  
-      ;  
-}  
+
+运算符 operator： 所有操作数必须都具有相同的枚举类型
+
+当在枚举器上使用运算符，这两个操作数必须是枚举类型。 有关详细信息，请参阅[如何： 定义和使用枚举在 C + + /cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3063 并演示如何修复此错误：
+
+```
+// C3063.cpp
+// compile with: /clr
+enum class E { a, b } e, mask;
+int main() {
+   if ( ( e & mask ) != 0 ) ;   // C3063 no operator!= (E, int)
+
+   if ( ( e & mask ) != E() )   // OK
+      ;
+}
 ```

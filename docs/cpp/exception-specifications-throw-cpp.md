@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040930"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （C++）
 
-异常规范是 C++ 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 可以指定一个函数可能会或可能通过使用异常退出*异常规范*。 编译器可以使用此信息来优化对函数的调用并终止程序，如果异常转义函数。 
+异常规范是 C++ 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 可以指定一个函数可能会或可能通过使用异常退出*异常规范*。 编译器可以使用此信息来优化对函数的调用并终止程序，如果异常转义函数。
 
 在 C++ 17 之前没有两种类型的异常规范。 *Noexcept 规范*C++ 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，已在 C++ 11 中弃用并删除 C++ 17 中除`throw()`，即的别名`noexcept(true)`。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>请参阅
- [try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [C++ 异常处理](../cpp/cpp-exception-handling.md)
+
+[try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[C++ 异常处理](../cpp/cpp-exception-handling.md)

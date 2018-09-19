@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113053"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 结构
 
@@ -43,16 +43,16 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="members"></a>成员
 
-`cc`  
+`cc`<br/>
 调用约定。 使用此结构与时[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)类，此成员必须为 CC_STDCALL。 `CC_CDECL` 是在 Windows CE 中支持的唯一选项`CALLCONV`字段的`_ATL_FUNC_INFO`结构。 任何其他值不受支持因此其行为未定义。
 
-`vtReturn`  
+`vtReturn`<br/>
 该函数的变体类型返回值。
 
-`nParams`  
+`nParams`<br/>
 函数参数的数目。
 
-`pVarTypes`  
+`pVarTypes`<br/>
 函数参数的 variant 类型的数组。
 
 ## <a name="remarks"></a>备注
@@ -75,7 +75,7 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../../atl/reference/atl-classes.md)  
-[IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)   
+[类和结构](../../atl/reference/atl-classes.md)<br/>
+[IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 

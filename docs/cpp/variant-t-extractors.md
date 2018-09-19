@@ -58,68 +58,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6a9d4e13a4b7382d15e601eba16a5a12edd2d00f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034132"
 ---
 # <a name="variantt-extractors"></a>_variant_t 提取器
-**Microsoft 专用**  
-  
- 从封装中提取数据`VARIANT`对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
-operator BYTE( ) const;  
-operator VARIANT() const throw();  
-operator char() const;  
-operator unsigned short() const;  
-operator unsigned long() const;  
-operator int() const;  
-operator unsigned int() const;  
-operator __int64() const;  
-operator unsigned __int64() const;  
-```  
-  
-## <a name="remarks"></a>备注  
- 从封装中提取原始数据`VARIANT`。 如果`VARIANT`是不正确的类型，`VariantChangeType`用于尝试进行转换，并在失败时生成错误：  
-  
--   **operator short （)** 提取**短**整数值。  
-  
--   **operator long （)** 提取**长**整数值。  
-  
--   **operator float （)** 提取**float**数字值。  
-  
--   **operator double （)** 提取**double**整数值。  
-  
--   **operator CY （)** 提取`CY`对象。  
-  
--   **operator bool （)** 提取**bool**值。  
-  
--   **operator DECIMAL （)** 提取`DECIMAL`值。  
-  
--   **operator BYTE （)** 提取`BYTE`值。  
-  
--   **operator _bstr_t （)** 提取封装在一个字符串`_bstr_t`对象。  
-  
--   **运算符 IDispatch\*（)** 提取调度接口指针从封装`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。  
-  
--   **运算符 IUnknown\*（)** 从封装中提取 COM 接口指针`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_variant_t 类](../cpp/variant-t-class.md)
+
+**Microsoft 专用**
+
+从封装中提取数据`VARIANT`对象。
+
+## <a name="syntax"></a>语法
+
+```
+operator short( ) const; 
+operator long( ) const; 
+operator float( ) const; 
+operator double( ) const; 
+operator CY( ) const; 
+operator _bstr_t( ) const; 
+operator IDispatch*( ) const; 
+operator bool( ) const; 
+operator IUnknown*( ) const; 
+operator DECIMAL( ) const; 
+operator BYTE( ) const;
+operator VARIANT() const throw();
+operator char() const;
+operator unsigned short() const;
+operator unsigned long() const;
+operator int() const;
+operator unsigned int() const;
+operator __int64() const;
+operator unsigned __int64() const;
+```
+
+## <a name="remarks"></a>备注
+
+从封装中提取原始数据`VARIANT`。 如果`VARIANT`是不正确的类型，`VariantChangeType`用于尝试进行转换，并在失败时生成错误：
+
+- **operator short （)** 提取**短**整数值。
+
+- **operator long （)** 提取**长**整数值。
+
+- **operator float （)** 提取**float**数字值。
+
+- **operator double （)** 提取**double**整数值。
+
+- **operator CY （)** 提取`CY`对象。
+
+- **operator bool （)** 提取**bool**值。
+
+- **operator DECIMAL （)** 提取`DECIMAL`值。
+
+- **operator BYTE （)** 提取`BYTE`值。
+
+- **operator _bstr_t （)** 提取封装在一个字符串`_bstr_t`对象。
+
+- **运算符 IDispatch\*（)** 提取调度接口指针从封装`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。
+
+- **运算符 IUnknown\*（)** 从封装中提取 COM 接口指针`VARIANT`。 `AddRef` 因此它是由您来调用生成的指针上调用`Release`释放它。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_variant_t 类](../cpp/variant-t-class.md)

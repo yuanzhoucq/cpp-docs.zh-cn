@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090355"
 ---
 # <a name="crbtree-class"></a>CRBTree 类
 
@@ -54,22 +54,22 @@ ms.locfileid: "43759540"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 Key 元素类型。
 
-*V*  
+*V*<br/>
 值元素类型。
 
-*KTraits*  
+*KTraits*<br/>
 用于复制或移动关键元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
 
-*VTraits*  
+*VTraits*<br/>
 用于复制或移动值元素的代码。
 
 ## <a name="members"></a>成员
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 密钥的值。
 
 ### <a name="return-value"></a>返回值
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 位置值。
 
-*key*  
+*key*<br/>
 变量来接收该密钥。
 
-*value*  
+*value*<br/>
 接收的值的变量。
 
 ### <a name="return-value"></a>返回值
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 位置值。
 
 ### <a name="return-value"></a>返回值
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>返回值
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
-*key*  
+*key*<br/>
 指定的树的密钥类型模板参数。
 
-*value*  
+*value*<br/>
 指定的树的值的类型的模板参数。
 
 ### <a name="remarks"></a>备注
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>返回值
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>返回值
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>返回值
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>返回值
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="remarks"></a>备注
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 如以前调用方法所返回的位置计数器[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
-*value*  
+*value*<br/>
 要添加到值`CRBTree`对象。
 
 ### <a name="remarks"></a>备注

@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1009 |Microsoft 文档
+title: 资源编译器错误 RC1009 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034104"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>资源编译器错误 RC1009
-编译器限制： 宏嵌套太深 macro  
-  
- 此文件超过了宏嵌套的资源编译器限制。 修改指定的源文件，以减少其宏的嵌套深度。
+
+编译器限制： 宏嵌套得太深宏
+
+文件超过宏嵌套的资源编译器限制。 修改指定的源文件，减少其宏的嵌套深度。

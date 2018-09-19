@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1296 |Microsoft 文档
+title: 链接器工具错误 LNK1296 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f59045bfc0e0d7261541005be6c70680c1e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68eff2e15b4a7b0f8bafa64b4629b953e9430d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058843"
 ---
 # <a name="linker-tools-error-lnk1296"></a>链接器工具错误 LNK1296
-无法加载 filename  
-  
- 给定的 DLL 是不可用。  
-  
- 中的 dll 可能的位置是当前目录、 系统目录、 Windows 目录和在 PATH 环境变量中指定的目录。
+
+无法加载文件名
+
+给定的 DLL 是不可用。
+
+DLL 的可能位置是当前目录、 系统目录、 Windows 目录和路径环境变量中指定的目录。

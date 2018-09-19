@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457c880f7f7eb6c011637b438fa3bcc25d57303b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 190716877090f53aa48023d493cded9793839380
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039564"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 类
 
@@ -78,10 +78,10 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="parameters"></a>参数
 
-*ulCount*  
+*ulCount*<br/>
 数组中的元素数。
 
-*lLowerBound*  
+*lLowerBound*<br/>
 从数组带编号的下限。
 
 ### <a name="remarks"></a>备注
@@ -143,10 +143,10 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*绑定*  
+*绑定*<br/>
 一个 `CComSafeArrayBound` 对象。
 
-*ulCount*  
+*ulCount*<br/>
 元素数量。
 
 ### <a name="return-value"></a>返回值
@@ -167,7 +167,7 @@ ULONG SetCount(ULONG ulCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*ulCount*  
+*ulCount*<br/>
 元素数量。
 
 ### <a name="return-value"></a>返回值
@@ -184,7 +184,7 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 
 ### <a name="parameters"></a>参数
 
-*lLowerBound*  
+*lLowerBound*<br/>
 下限。
 
 ### <a name="return-value"></a>返回值

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068203"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 类
 
@@ -42,7 +42,7 @@ template <class T>
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IObjectWithSiteImpl`。
 
 ## <a name="members"></a>成员
@@ -117,7 +117,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>参数
 
-*pUnkSite*  
+*pUnkSite*<br/>
 [in]指向`IUnknown`管理此对象的站点的接口指针。 如果为 NULL，该对象应调用`IUnknown::Release`此时对象不再知道其站点的任何现有站点上。
 
 ### <a name="return-value"></a>返回值

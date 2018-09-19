@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2488 |Microsoft 文档
+title: 编译器错误 C2488 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb64ea76ae38901b2db14ec4b68bba9db69f39c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1bf2710acdc2a738b36ca9426ce55da9f6d769
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044336"
 ---
 # <a name="compiler-error-c2488"></a>编译器错误 C2488
-identifier: naked 可以仅应用于非成员函数定义  
-  
- [裸](../../cpp/naked-cpp.md)特性已应用于函数声明。  
-  
- 下面的示例生成 C2488:  
-  
-```  
-// C2488.cpp  
-// compile with: /c  
-// processor: x86  
-__declspec( naked ) void func();   // C2488  declaration, not definition  
-__declspec( naked ) void i;   // C2488  i is not a function  
-  
-__declspec( naked ) void func() {}   // OK  
+
+identifier: naked 只能应用到非成员函数定义
+
+[裸](../../cpp/naked-cpp.md)特性已应用于函数声明。
+
+下面的示例生成 C2488:
+
+```
+// C2488.cpp
+// compile with: /c
+// processor: x86
+__declspec( naked ) void func();   // C2488  declaration, not definition
+__declspec( naked ) void i;   // C2488  i is not a function
+
+__declspec( naked ) void func() {}   // OK
 ```

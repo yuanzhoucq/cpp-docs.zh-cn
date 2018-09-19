@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 138275468801f3db2f2c64f06e5a505c412723b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050952"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 类[CObject](../../mfc/reference/cobject-class.md)并[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。  
@@ -260,8 +260,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  *class_name*  
  类的实际名称。  
   
- `base_class_name`  
- 基类的名称。  
+*base_class_name*<br/>
+基类的名称。  
   
 ### <a name="remarks"></a>备注  
  在.cpp 模块中，使用 IMPLEMENT_DYNAMIC 宏，然后仅一次链接生成的对象代码。  

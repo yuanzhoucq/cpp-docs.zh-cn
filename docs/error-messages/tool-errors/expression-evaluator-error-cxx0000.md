@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0000 |Microsoft 文档
+title: 表达式计算器错误 CXX0000 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61099ba206269f13413fefe14ef02002968c65b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f028f53075aa540338e7abcce7f42fa132ad1af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059117"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>表达式计算器错误 CXX0000
-任何错误条件  
-  
- 不发生任何错误。 你可以继续正常调试。  
-  
- 请注意该情况并通知 Microsoft 产品支持服务。
+
+没有错误的情况
+
+未发生错误。 您可以继续正常调试。
+
+记录的环境并通知 Microsoft 产品支持服务。

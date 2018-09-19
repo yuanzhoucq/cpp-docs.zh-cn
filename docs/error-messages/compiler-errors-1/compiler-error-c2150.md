@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2150 |Microsoft 文档
+title: 编译器错误 C2150 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc7a84ff666fdc17f0abeec690a548f216ce975
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0920c98fe59fe5bca49bba4c62a486a61c0a55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024705"
 ---
 # <a name="compiler-error-c2150"></a>编译器错误 C2150
-  
-> *标识符*： 位域必须具有类型 int、 signed 的 int 或 unsigned 的 int  
-  
- 位域的基类型必须是`int`， `signed int`，或`unsigned int`。  
-  
-## <a name="example"></a>示例  
-  
- 此示例演示如何可能会遇到 C2150，以及如何修复此错误：  
-  
-```cpp  
-// C2150.cpp  
-// compile with: /c  
-struct A {  
-   float a : 8;    // C2150  
-   int i : 8;      // OK  
-};  
+
+> '*标识符*： 位域必须具有类型 int、 signed 的 int 或 unsigned 的 int
+
+位域的基类型必须是`int`， `signed int`，或`unsigned int`。
+
+## <a name="example"></a>示例
+
+此示例演示如何可能会遇到 C2150，以及如何修复此错误：
+
+```cpp
+// C2150.cpp
+// compile with: /c
+struct A {
+   float a : 8;    // C2150
+   int i : 8;      // OK
+};
 ```

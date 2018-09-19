@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2055 |Microsoft 文档
+title: 编译器错误 C2055 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f16d9c3948c0211da69142f1b9c7c1a6a32d8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019337"
 ---
 # <a name="compiler-error-c2055"></a>编译器错误 C2055
-预期的形式参数列表中，不是类型列表  
-  
- 函数定义包含参数类型列表而不是形参列表。 ANSI C 要求形参，除非它们是 void 或省略号命名为 (`...`)。  
-  
- 下面的示例生成 C2055:  
-  
-```  
-// C2055.c  
-// compile with: /c  
-void func(int, char) {}  // C2055  
-void func (int i, char c) {}   // OK  
+
+应输入形参表，不是类型表
+
+函数定义中包含参数类型列表，而不是形参列表。 ANSI C 要求形参，除非它们是 void 或省略号命名为 (`...`)。
+
+下面的示例生成 C2055:
+
+```
+// C2055.c
+// compile with: /c
+void func(int, char) {}  // C2055
+void func (int i, char c) {}   // OK
 ```

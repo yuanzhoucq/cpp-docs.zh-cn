@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019479"
 ---
 # <a name="crbmap-class"></a>CRBMap 类
 
@@ -38,22 +38,22 @@ ms.locfileid: "43764837"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>参数
 
-*K*  
+*K*<br/>
 Key 元素类型。
 
-*V*  
+*V*<br/>
 值元素类型。
 
-*KTraits*  
+*KTraits*<br/>
 用于复制或移动关键元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
 
-*VTraits*  
+*VTraits*<br/>
 用于复制或移动值元素的代码。
 
 ## <a name="members"></a>成员
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBlockSize*  
+*nBlockSize*<br/>
 块大小。
 
 ### <a name="remarks"></a>备注
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 指定用于标识要查找的元素的键。
 
-*value*  
+*value*<br/>
 未接收到查找值的变量。
 
 ### <a name="return-value"></a>返回值
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 你想要删除键相对应的元素对。
 
 ### <a name="return-value"></a>返回值
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要添加到密钥值`CRBMap`对象。
 
-*value*  
+*value*<br/>
 要添加到值`CRBMap`对象。
 
 ### <a name="return-value"></a>返回值
@@ -223,7 +223,7 @@ POSITION SetAt(
 
 ## <a name="see-also"></a>请参阅
 
-[CRBTree 类](../../atl/reference/crbtree-class.md)   
-[CAtlMap 类](../../atl/reference/catlmap-class.md)   
-[CRBMultiMap 类](../../atl/reference/crbmultimap-class.md)   
+[CRBTree 类](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap 类](../../atl/reference/catlmap-class.md)<br/>
+[CRBMultiMap 类](../../atl/reference/crbmultimap-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

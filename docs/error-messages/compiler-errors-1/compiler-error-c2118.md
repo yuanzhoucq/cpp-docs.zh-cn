@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2118 |Microsoft 文档
+title: 编译器错误 C2118 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27b4b253e2696b88763c2a9f99c0476f9c46dd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e79e396f707dc1462b17d9dd470527f199ad10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165238"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081632"
 ---
 # <a name="compiler-error-c2118"></a>编译器错误 C2118
-负下标  
-  
- 定义数组大小的值是超过最大数组大小大于或小于零。  
-  
- 下面的示例生成 C2118:  
-  
-```  
-// C2118.cpp  
-int main() {  
-   int array1[-1];   // C2118  
-   int array2[3];   // OK  
-}  
+
+负下标
+
+定义数组大小的值是小于最大数组大小大于或小于零。
+
+下面的示例生成 C2118:
+
+```
+// C2118.cpp
+int main() {
+   int array1[-1];   // C2118
+   int array2[3];   // OK
+}
 ```

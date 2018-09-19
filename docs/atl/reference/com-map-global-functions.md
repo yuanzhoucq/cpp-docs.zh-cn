@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113131"
 ---
 # <a name="com-map-global-functions"></a>COM 映射全局函数
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>参数
 
-*pThis*  
+*pThis*<br/>
 [in]指向包含向公开的接口的 COM 映射的对象的指针`QueryInterface`。
 
-*pEntries*  
+*pEntries*<br/>
 [in]一个数组`_ATL_INTMAP_ENTRY`访问的可用接口映射的结构。
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]中指定的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>参数
 
-*rguid1*  
+*rguid1*<br/>
 [in]要比较的 GUID `IID_IUnknown`。
 
 ## <a name="see-also"></a>请参阅
 
-[函数](../../atl/reference/atl-functions.md)   
+[函数](../../atl/reference/atl-functions.md)<br/>
 [COM 映射宏](../../atl/reference/com-map-macros.md)

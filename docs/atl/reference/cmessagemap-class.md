@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024380"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]接收消息的窗口句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
-*lResult*  
+*lResult*<br/>
 [out]消息处理的结果。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]将处理该消息的消息映射的标识符。 使用默认消息映射声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，由 0。 使用替换消息映射声明[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由`msgMapID`。
 
 ### <a name="return-value"></a>返回值
@@ -108,7 +108,7 @@ virtual BOOL ProcessWindowMessage(
 
 ## <a name="see-also"></a>请参阅
 
-[CDynamicChain 类](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain 类](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

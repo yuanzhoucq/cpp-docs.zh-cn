@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c4241621383936c477514bb6881330c514548a81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117695"
 ---
 # <a name="selection-statements-c"></a>选择语句 (C++)
-C++ 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。  
-  
- [__If_exists](../cpp/if-exists-statement.md)和[__if_not_exists](../cpp/if-not-exists-statement.md)语句可用于有条件地包括代码具体取决于是否存在某个符号。  
-  
- 有关每个语句的语法，请参阅单独的主题。  
-  
-## <a name="see-also"></a>请参阅  
- [ 语句概述](../cpp/overview-of-cpp-statements.md)
+
+C++ 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。
+
+[__If_exists](../cpp/if-exists-statement.md)和[__if_not_exists](../cpp/if-not-exists-statement.md)语句可用于有条件地包括代码具体取决于是否存在某个符号。
+
+有关每个语句的语法，请参阅单独的主题。
+
+## <a name="see-also"></a>请参阅
+
+[ 语句概述](../cpp/overview-of-cpp-statements.md)

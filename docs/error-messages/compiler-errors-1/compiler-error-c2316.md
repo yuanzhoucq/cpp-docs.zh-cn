@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2316 |Microsoft 文档
+title: 编译器错误 C2316 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,58 +16,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895db6535299a077bc32b6485a360ae450e6c87e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2868d3a81fcbc94d8b20adcdc775363eb0a8eaeb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033012"
 ---
 # <a name="compiler-error-c2316"></a>编译器错误 C2316
 
-> *异常*： 无法作为析构函数和/或复制构造函数都不可访问捕获  
-  
-通过值或引用捕获了异常，但复制构造函数和/或赋值运算符无法访问。  
-  
-通过在 Visual Studio 2003 中之前, 的 Visual c + + 版本接受此代码，但现在会导致错误。  
-  
-进行此错误适用于错误的 catch 语句的 MFC 异常派生自 Visual Studio 2015 中的一致性更改`CException`。 因为`CException`有一个继承私有复制构造函数，类和及其派生非可复制，无法传递的值，这还意味着无法通过值捕获它们。 捕获导致未捕获的异常，在运行时，以前的值由捕获 MFC 异常的语句，但现在编译器正确地标识此情形以及报表错误 C2316。 若要解决此问题，我们建议你使用 MFC TRY/CATCH 宏，而不是编写您自己的异常处理程序但不适合你的代码，如果捕获 MFC 异常由引用相反。   
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2316：  
-  
-```  
-// C2316.cpp  
-// compile with: /EHsc  
-#include <stdio.h>  
-  
-extern "C" int printf_s(const char*, ...);  
-  
-struct B   
-{  
-public:  
-    B() {}  
-    // Delete the following line to resolve.  
-private:  
-    // copy constructor  
-    B(const B&)   
-    {  
-    }  
-};  
-  
-void f(const B&)   
-{  
-}  
-  
-int main()   
-{  
-    try   
-    {  
-        B aB;  
-        f(aB);  
-    }  
-    catch (B b) {   // C2316  
-        printf_s("Caught an exception!\n");     
-    }  
-}  
+> '*异常*： 不能被捕获，因为析构函数和/或复制构造函数不可访问
+
+通过值或引用捕获了异常，但复制构造函数和/或赋值运算符无法访问。
+
+此代码的 Visual Studio 2003 中之前, 的 Visual c + + 版本接受，但现在会导致错误。
+
+在 Visual Studio 2015 的符合性更改所做的适用于派生自 MFC 异常的错误的 catch 语句，此错误`CException`。 因为`CException`具有继承的私有复制构造函数，类和其派生类是不可复制和值，这也意味着他们不能按值捕获不能传递。 Catch 语句以前会导致在运行时，未捕获的异常的值由捕获 MFC 异常，但现在编译器正确地标识此情形以及报表错误 C2316。 若要解决此问题，我们建议而不是编写自己的异常的处理程序，但如果不是适用于你的代码，捕获 MFC 异常由引用改为使用 MFC TRY/CATCH 宏。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2316：
+
+```
+// C2316.cpp
+// compile with: /EHsc
+#include <stdio.h>
+
+extern "C" int printf_s(const char*, ...);
+
+struct B
+{
+public:
+    B() {}
+    // Delete the following line to resolve.
+private:
+    // copy constructor
+    B(const B&)
+    {
+    }
+};
+
+void f(const B&)
+{
+}
+
+int main()
+{
+    try
+    {
+        B aB;
+        f(aB);
+    }
+    catch (B b) {   // C2316
+        printf_s("Caught an exception!\n");
+    }
+}
 ```

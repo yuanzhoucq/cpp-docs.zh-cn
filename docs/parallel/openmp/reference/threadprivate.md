@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081983"
 ---
 # <a name="threadprivate"></a>threadprivate
 指定一个变量是线程私有的。  
@@ -32,11 +32,10 @@ ms.locfileid: "43217740"
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `var`  
- 你想要对线程进行私有变量的以逗号分隔列表。 `var` 必须是全局或命名空间的范围内的变量或静态局部变量。  
+*var*<br/>
+你想要对线程进行私有变量的以逗号分隔列表。 `var` 必须是全局或命名空间的范围内的变量或静态局部变量。  
   
 ## <a name="remarks"></a>备注  
  `threadprivate`指令支持任何 OpenMP 子句。  

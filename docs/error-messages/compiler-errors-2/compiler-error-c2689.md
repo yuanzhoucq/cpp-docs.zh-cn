@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2689 |Microsoft 文档
+title: 编译器错误 C2689 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973f8a007080d728a07afae8818ffa2c7bd8ed4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fedb865a1c0c6e1bbefc94c03549936951b84e17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099865"
 ---
 # <a name="compiler-error-c2689"></a>编译器错误 C2689
-function： 友元函数不能定义内的本地类  
-  
- 你可以声明，但不是在本地类中定义友元函数。  
-  
- 下面的示例生成 C2689:  
-  
-```  
-// C2689.cpp  
-// compile with: /c  
-void g() {  
-   void f2();  
-   class X {  
-      friend void f2(){}   // C2689  
-      friend void f2();   // OK  
-   };  
-}  
+
+function： 不能局部类中定义友元函数
+
+您可以声明，但不是在本地类中定义友元函数。
+
+下面的示例生成 C2689:
+
+```
+// C2689.cpp
+// compile with: /c
+void g() {
+   void f2();
+   class X {
+      friend void f2(){}   // C2689
+      friend void f2();   // OK
+   };
+}
 ```

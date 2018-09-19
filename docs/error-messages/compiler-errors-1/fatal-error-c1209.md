@@ -1,5 +1,5 @@
 ---
-title: 错误 C1209 |Microsoft 文档
+title: 错误 C1209 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081489"
 ---
 # <a name="fatal-error-c1209"></a>错误 C1209
-安装的运行时版本不支持友元程序集  
-  
- 使用的编译器是当前版本而公共语言运行时是早期版本时将发生 C1208。  
-  
- 编译器的一些功能在早期的运行时版本中可能无效。  
-  
- 若要解决 C1209，请安装随正在使用的编译器附带的公共语言运行时。  
-  
- 有关详细信息，请参阅[友元程序集 （c + +）](../../dotnet/friend-assemblies-cpp.md)。
+
+安装的运行时版本不支持友元程序集
+
+使用的编译器是当前版本而公共语言运行时是早期版本时将发生 C1208。
+
+编译器的一些功能在早期的运行时版本中可能无效。
+
+若要解决 C1209，请安装随正在使用的编译器附带的公共语言运行时。
+
+有关详细信息，请参阅[友元程序集 （c + +）](../../dotnet/friend-assemblies-cpp.md)。

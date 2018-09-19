@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108477"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 类
 
@@ -57,17 +57,17 @@ ms.locfileid: "43758425"
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 包含接收到数据时将调用的函数的类。
 
-*nBindFlags*  
+*nBindFlags*<br/>
 指定由返回的绑定标志[GetBindInfo](#getbindinfo)。 默认实现设置的绑定是异步、 检索最新版本的数据/对象，而不将检索到的数据存储中磁盘缓存。
 
 ## <a name="members"></a>成员
@@ -162,7 +162,7 @@ CBindStatusCallback();
 创建`CBindStatusCallback`对象并调用`StartAsyncDownload`开始以异步方式从指定的 URL 下载数据。
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 [in]指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象针对此对象的类模板化。
 
-*pFunc*  
+*pFunc*<br/>
 [in]指向接收读取数据的函数的指针。 该函数是类型的对象的类的成员`T`。 请参阅[StartAsyncDownload](#startasyncdownload)有关语法和示例。
 
-*bstrURL*  
+*bstrURL*<br/>
 [in]要从其获取数据的 URL。 可以是任何有效的 URL 或文件名称。 不能为 NULL。 例如：
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`的容器。 默认情况下为 NULL。
 
-*bRelative*  
+*bRelative*<br/>
 [in]指示该 URL 相对值还是绝对值的标志。 默认情况下，这意味着 URL FALSE 是绝对路径。
 
 ### <a name="return-value"></a>返回值
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>参数
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out]一个指向 BINDF 枚举值，该值指示应发生绑定操作的方式。 默认情况下，设置下列枚举值：
 
 BINDF_ASYNCHRONOUS 异步下载。
@@ -220,7 +220,7 @@ BINDF_GETNEWESTVERSION 绑定操作应检索数据的最新版本。
 
 绑定操作不应存储的 BINDF_NOWRITECACHE 检索磁盘缓存中的数据。
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [in、 out]一个指向`BINDINFO`结构提供有关如何对象想要发生绑定的详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>参数
 
-*pnPriority*  
+*pnPriority*<br/>
 [out]地址**长**，成功后，接收变量的优先级。
 
 ### <a name="return-value"></a>返回值
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 指向函数`m_pFunc`是对象的类的成员，并且具有以下语法：
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ CComPtr<IStream> m_spStream;
 系统提供的异步名字对象调用`OnDataAvailable`提供对对象的数据变得可用。
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>参数
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in]一个 BSCF 枚举值。 一个或多个以下： BSCF_FIRSTDATANOTIFICATION、 BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
 
-*dwSize*  
+*dwSize*<br/>
 [in]数据可用后的绑定的开始累积量 （以字节为单位）。 可以是零，表示没有相关的数据量或特定数量变得可用。
 
-*pformatetc*  
+*pformatetc*<br/>
 [in]指向[FORMATETC](/windows/desktop/com/the-formatetc-structure)结构，其中包含可用数据的格式。 如果没有格式，可以是 CF_NULL。
 
-*pstgmed*  
+*pstgmed*<br/>
 [in]指向[STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)保存现已推出的实际数据的结构。
 
 ### <a name="return-value"></a>返回值
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>参数
 
-*dwReserved*  
+*dwReserved*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 所请求的接口的接口标识符。 未使用。
 
-*punk*  
+*punk*<br/>
 IUnknown 接口的地址。 未使用。
 
 ### <a name="return-value"></a>返回值
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>参数
 
-*ulProgress*  
+*ulProgress*<br/>
 无符号长整数。 未使用。
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 无符号长整数未使用。
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 无符号长整数。 未使用。
 
-*szStatusText*  
+*szStatusText*<br/>
 一个字符串值的地址。 未使用。
 
 ### <a name="return-value"></a>返回值
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>参数
 
-*dwReserved*  
+*dwReserved*<br/>
 留待将来使用。
 
-*pBinding*  
+*pBinding*<br/>
 [in]当前的 IBinding 接口地址绑定操作。 这不能为 NULL。 客户端应保持对绑定对象的引用此指针上调用 AddRef。
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>参数
 
-*hresult*  
+*hresult*<br/>
 绑定操作中返回状态代码。
 
-szStatusText  
-一个字符串值，未使用的地址。
+*szError*<br/>
+一个字符串值的地址。 未使用。
 
 ### <a name="remarks"></a>备注
 
@@ -494,7 +494,7 @@ szStatusText
 启动异步下载数据，从指定的 URL。
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>参数
 
-*pT*  
+*pT*<br/>
 [in]指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象针对此对象的类模板化。
 
-*pFunc*  
+*pFunc*<br/>
 [in]指向接收读取的数据的函数的指针。 该函数是类型的对象的类的成员`T`。 请参阅**备注**有关语法和示例。
 
-*bstrURL*  
+*bstrURL*<br/>
 [in]要从其获取数据的 URL。 可以是任何有效的 URL 或文件名称。 不能为 NULL。 例如：
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`的容器。 默认情况下为 NULL。
 
-*bRelative*  
+*bRelative*<br/>
 [in]指示该 URL 相对值还是绝对值的标志。 默认情况下，这意味着 URL FALSE 是绝对路径。
 
 ### <a name="return-value"></a>返回值

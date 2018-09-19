@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043412"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]可以定义为可聚合的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>参数
 
-*cf*  
+*cf*<br/>
 [in]实现您的类工厂对象的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>参数
 
-*许可证*  
+*许可证*<br/>
 [in]实现的类`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。
 
 ### <a name="remarks"></a>备注
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>参数
 
-*许可证*  
+*许可证*<br/>
 实现以下静态函数的类：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>参数
 
-*obj*  
+*obj*<br/>
 [in]类对象的名称。
 
 ### <a name="remarks"></a>备注
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类。
 
 `CComClassFactorySingleton` 派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造一个单一对象。 每次调用`CreateInstance`方法只需将查询此对象的接口指针。
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]可以定义为不可聚合的类对象的名称。
 
 ### <a name="remarks"></a>备注
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]可以定义为仅可聚合的类对象的名称。
 
 ### <a name="remarks"></a>备注
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]可以定义为可聚合或是不可聚合的类对象的名称。
 
 ### <a name="remarks"></a>备注
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>参数
 
-*statusFlags*  
+*statusFlags*<br/>
 [in]VIEWSTATUS 标志中。 请参阅[VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)标志的列表。
 
 ### <a name="example"></a>示例

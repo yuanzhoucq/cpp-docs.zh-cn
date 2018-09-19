@@ -1,5 +1,5 @@
 ---
-title: unsupported_feature 类 |Microsoft 文档
+title: unsupported_feature 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059675"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature 类
 使用不支持的功能时引发的异常。  
@@ -52,7 +52,7 @@ class unsupported_feature : public runtime_exception;
   
 ## <a name="unsupported_feature__ctor"></a> unsupported_feature 
 
-  构造 unsupported_feature 异常的新实例。  
+  构造的功能异常的新实例。  
   
 ### <a name="syntax"></a>语法  
   
@@ -64,8 +64,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误说明。  
+*消息 （_m)*<br/>
+错误说明。  
   
 ### <a name="return-value"></a>返回值  
  `unsupported_feature` 对象。  

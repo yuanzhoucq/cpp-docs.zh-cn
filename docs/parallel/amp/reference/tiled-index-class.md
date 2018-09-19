@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069412"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 提供的索引[tiled_extent](tiled-extent-class.md)对象。 该类具有访问相对于本地平铺原点和相对于全局原点的元素的属性。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_Dim0`  
- 最高有效位维的长度。  
+*_Dim0*<br/>
+最高有效位维的长度。  
   
- `_Dim1`  
- 下一步接近最高有效位维的长度。  
+*_Dim1*<br/>
+下一步接近最高有效位维的长度。  
   
- `_Dim2`  
- 最低有效位维的长度。  
+*_Dim2*<br/>
+最低有效位维的长度。  
   
 ## <a name="members"></a>成员  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_Global`  
- 全局[索引](index-class.md)构造的`tiled_index`。  
+*_Global*<br/>
+全局[索引](index-class.md)构造的`tiled_index`。  
   
- `_Local`  
- 本地[索引](index-class.md)的构造 `tiled_index`  
+*（_l)*<br/>
+本地[索引](index-class.md)的构造 `tiled_index`  
   
- `_Tile`  
- 该磁贴[索引](index-class.md)的构造 `tiled_index`  
+*_Tile*<br/>
+该磁贴[索引](index-class.md)的构造 `tiled_index`  
   
- `_Tile_origin`  
- 平铺原点[索引](index-class.md)的构造 `tiled_index`  
+*_Tile_origin*<br/>
+平铺原点[索引](index-class.md)的构造 `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md)对象的构造`tiled_index`。  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md)对象的构造`tiled_index`。  
   
- `_Other`  
- `tile_index`对象要复制到构造`tiled_index`。  
+*_Other*<br/>
+`tile_index`对象要复制到构造`tiled_index`。  
   
 ## <a name="overloads"></a>Overloads  
   

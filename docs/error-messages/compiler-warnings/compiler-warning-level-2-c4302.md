@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 2） C4302 |Microsoft 文档
+title: 编译器警告 （等级 2） C4302 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f9a94e75b0d2ce522c2ec9f45d8a2386e85b136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31ff3bebf07d87b507a18998658966b2c5a789b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025576"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>编译器警告（等级 2）C4302
-conversion： 从 type 1 的截断 type 2  
-  
- 编译器检测到从更大的类型转换为更小的类型。 信息可能会丢失。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 下面的示例生成 C4302:  
-  
-```  
-// C4302.cpp  
-// compile with: /W2  
-#pragma warning(default : 4302)  
-int main() {  
-   int i;  
-   char c = (char) &i;     // C4302  
-   short s = (short) &i;   // C4302  
-}  
+
+conversion： 从 type 1 的截断为 type 2
+
+编译器检测到从更大的类型转换为较小的类型。 信息可能会丢失。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+下面的示例生成 C4302:
+
+```
+// C4302.cpp
+// compile with: /W2
+#pragma warning(default : 4302)
+int main() {
+   int i;
+   char c = (char) &i;     // C4302
+   short s = (short) &i;   // C4302
+}
 ```

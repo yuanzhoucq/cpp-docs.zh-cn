@@ -1,5 +1,5 @@
 ---
-title: 错误 C1104 |Microsoft 文档
+title: 错误 C1104 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1df9fc846a2534004bb956b02edbfb9865985d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e624238a1b7616ab84a655839a05cfd6899d38ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048105"
 ---
 # <a name="fatal-error-c1104"></a>错误 C1104
-导入 libid 时遇到错误：“message”  
-  
- 导入类型库时编译器检测到问题。  例如，你不能使用 libid 指定类型库，同时还指定 `no_registry`。  
-  
- 有关详细信息，请参阅[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。  
-  
- 下面的示例生成 C1104：  
-  
-```  
-// C1104.cpp  
-#import "libid:11111111.1111.1111.1111.111111111111" version("4.0") lcid("9") no_registry auto_search   // C1104  
+
+导入 libid 时遇到错误：“message”
+
+导入类型库时编译器检测到问题。  例如，你不能使用 libid 指定类型库，同时还指定 `no_registry`。
+
+有关详细信息，请参阅[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
+
+下面的示例生成 C1104：
+
+```
+// C1104.cpp
+#import "libid:11111111.1111.1111.1111.111111111111" version("4.0") lcid("9") no_registry auto_search   // C1104
 ```

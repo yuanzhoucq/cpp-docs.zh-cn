@@ -1,5 +1,5 @@
 ---
-title: 错误 C1192 |Microsoft 文档
+title: 错误 C1192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45880594a3a9aa64fd62099b5b1eea342107e3dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e372db05d39bb7559fc3ee4390b8886e070b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091928"
 ---
 # <a name="fatal-error-c1192"></a>错误 C1192
-\#使用在 file 上失败  
-  
- 仅 Microsoft 中间语言 (MSIL) 格式的文件可以传递给[#using](../../preprocessor/hash-using-directive-cpp.md)指令。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)编译器选项允许你创建的 MSIL 输出文件。 其他 Visual Studio 语言还生成 MSIL 文件。
+
+\#使用 file 上失败
+
+仅 Microsoft 中间语言 (MSIL) 格式的文件可以传递给[#using](../../preprocessor/hash-using-directive-cpp.md)指令。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)编译器选项，可以创建一个 MSIL 输出文件。 其他 Visual Studio 语言还生成 MSIL 文件。

@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074833"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 类
+
 可以用作模板自变量 (`TRowset`) 用于[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
   
 ## <a name="syntax"></a>语法
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>参数  
- *TAccessor*  
- 一个访问器类。 默认值为 `CAccessorBase`。  
+
+*TAccessor*<br/>
+一个访问器类。 默认值为 `CAccessorBase`。  
   
 ## <a name="remarks"></a>备注  
- 如果命令不返回行集，请将 `CNoRowset` 用作模板参数。  
+
+如果命令不返回行集，请将 `CNoRowset` 用作模板参数。  
   
- `CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
+`CNoRowset` 将实现以下存根方法，其中每个方法都对应于其他访问器类方法：  
   
--   `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。  
+- `BindFinished` -指示绑定操作何时完成 (返回`S_OK`)。  
   
--   `Close` -释放行和当前 IRowset 接口。  
+- `Close` -释放行和当前 IRowset 接口。  
   
--   `GetIID` - 检索连接点的接口 ID。  
+- `GetIID` - 检索连接点的接口 ID。  
   
--   `GetInterface` -检索接口。  
+- `GetInterface` -检索接口。  
   
--   `GetInterfacePtr` - 检索封装的接口指针。  
+- `GetInterfacePtr` - 检索封装的接口指针。  
   
--   `SetAccessor` -将指针设置为访问器。  
+- `SetAccessor` -将指针设置为访问器。  
   
--   `SetupOptionalRowsetInterfaces` -设置设置为行集的可选接口。  
+- `SetupOptionalRowsetInterfaces` -设置设置为行集的可选接口。  
   
 ## <a name="requirements"></a>要求  
- **标头:** atldbcli.h  
+
+**标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

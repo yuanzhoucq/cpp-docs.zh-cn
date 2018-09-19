@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3299fbac04da1e0c82671e5ccc4886d7276af5b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 203aeae7dd2edb179ec3f9c1f56f989ffc09b35c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093007"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>更改默认类工厂和聚合模型
 
@@ -47,6 +47,6 @@ ms.locfileid: "43761122"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL COM 对象的基础知识](../atl/fundamentals-of-atl-com-objects.md)   
+[ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [聚合和类工厂宏](../atl/reference/aggregation-and-class-factory-macros.md)
 

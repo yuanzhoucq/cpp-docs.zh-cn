@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065325"
 ---
 # <a name="using-an-existing-ado-recordset"></a>使用现有 ADO 记录集
+
 若要混合使用 OLE DB 使用者模板和活动数据对象 (ADO)，使用 ADO 打开记录集 （对应于 OLE DB 使用者模板中的行集）。 在必须记录集，请执行以下操作来连接到 OLE DB 行集：  
   
-1.  调用`QueryInterface`有关`IRowset`和`IAccessor`指针。  
+1. 调用`QueryInterface`有关`IRowset`和`IAccessor`指针。  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ ms.locfileid: "39338933"
     > [!NOTE]
     >  *lpUnk*指向`IUnknown`的 ADO 记录集对象。  
   
-2.  附加到其相应的 OLE DB 使用者模板类的访问器和行集。  
+1. 附加到其相应的 OLE DB 使用者模板类的访问器和行集。  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ ms.locfileid: "39338933"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用访问器](../../data/oledb/using-accessors.md)
+
+[使用访问器](../../data/oledb/using-accessors.md)

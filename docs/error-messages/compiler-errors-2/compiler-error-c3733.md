@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3733 |Microsoft 文档
+title: 编译器错误 C3733 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d5531bf9eb7352f1866bc0800734a78261b585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b8aa8d3d952f84b9fee0c00b5cfcb7c5e5c45d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051296"
 ---
 # <a name="compiler-error-c3733"></a>编译器错误 C3733
-event： 用于指定的 COM 事件; 不正确的语法是否忘记了 __interface？  
-  
- 为 COM 事件时使用的错误的语法。 若要修复此错误，更改的事件类型或更正语法，使符合 COM 事件的规则。  
-  
- 下面的示例生成 C3733:  
-  
-```  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[coclass, event_source(com), // change 'com' to 'native' to resolve  
-uuid("00000000-0000-0000-0000-000000000001")]  
-class A  
-{  
-   __event void func();   // C3733  
-};  
-  
-int main()  
-{  
-}  
+
+event： 指定 COM 事件; 的语法不正确您是否忘记了 __interface？
+
+COM 事件使用的不正确的语法。 若要解决此错误，请更改事件类型或更正语法以符合 COM 事件的规则。
+
+下面的示例生成 C3733:
+
+```
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[coclass, event_source(com), // change 'com' to 'native' to resolve
+uuid("00000000-0000-0000-0000-000000000001")]
+class A
+{
+   __event void func();   // C3733
+};
+
+int main()
+{
+}
 ```

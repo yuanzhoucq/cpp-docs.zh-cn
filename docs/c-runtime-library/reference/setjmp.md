@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 0bd7d57d0678744243356a0565e10cbe4065f8d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032520"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,7 +53,7 @@ int setjmp(
 
 ### <a name="parameters"></a>参数
 
-*env*  
+*env*<br/>
 存储变量的环境。
 
 ## <a name="return-value"></a>返回值
@@ -74,7 +74,7 @@ int setjmp(
 
 **结束 Microsoft 专用**
 
-> [!NOTE]  
+> [!NOTE]
 > 在可移植 c + + 代码中，不能假定`setjmp`和`longjmp`支持 c + + 对象语义。 具体而言， `setjmp` / `longjmp`调用对行为未定义如果替换`setjmp`并`longjmp`通过**捕获**并**引发**像调用任何自动对象的任何非平常的析构函数。 在 c + + 程序中，我们建议使用 c + + 异常处理机制。
 
 有关详细信息，请参阅[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
@@ -93,5 +93,5 @@ int setjmp(
 
 ## <a name="see-also"></a>请参阅
 
-[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)  
-[longjmp](longjmp.md)  
+[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[longjmp](longjmp.md)

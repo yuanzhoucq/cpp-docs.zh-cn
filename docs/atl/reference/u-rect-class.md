@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041141e9f31e59ab7a1884e976828972c0abd91
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96bf02a00459324b14dd26709b24088a03aec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109284"
 ---
 # <a name="urect-class"></a>_U_RECT 类
 
@@ -74,16 +74,16 @@ LPRECT m_lpRect;
 引用自变量的地址存储在类的单个数据成员[m_lpRect](#_u_rect__m_lprect)。
 
 ```
-_U_RECT(RECT& rc);  
+_U_RECT(RECT& rc);
 _U_RECT(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rc*  
+*rc*<br/>
 一个`RECT`引用。
 
-*lpRect*  
+*lpRect*<br/>
 一个`RECT`指针。
 
 ### <a name="remarks"></a>备注

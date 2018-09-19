@@ -1,5 +1,5 @@
 ---
-title: improper_scheduler_attach 类 |Microsoft 文档
+title: improper_scheduler_attach 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5e3ede7a9aeba58c84b39f346222adde17f682
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46f676bbe61784adab40f90e329b87aa1c1aae52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026747"
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach 类
 此类描述在已附加到当前上下文的 `Scheduler` 对象上调用 `Attach` 方法时引发的异常。  
@@ -63,8 +63,8 @@ improper_scheduler_attach() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

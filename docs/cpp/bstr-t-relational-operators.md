@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020989"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t 关系运算符
-**Microsoft 专用**  
-  
- 比较两个 `_bstr_t` 对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>备注  
- 这些运算符按字典顺序比较两个 `_bstr_t` 对象。 运算符返回 TRUE，返回该比较保留，否则返回 FALSE。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_bstr_t 类](../cpp/bstr-t-class.md)
+
+**Microsoft 专用**
+
+比较两个 `_bstr_t` 对象。
+
+## <a name="syntax"></a>语法
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>备注
+
+这些运算符按字典顺序比较两个 `_bstr_t` 对象。 运算符返回 TRUE，返回该比较保留，否则返回 FALSE。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_bstr_t 类](../cpp/bstr-t-class.md)

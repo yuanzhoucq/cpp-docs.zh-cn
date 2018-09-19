@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118903"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 类
 
@@ -69,7 +69,8 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ## <a name="members"></a>成员
 
-`RuntimeClassInitialize` 如果初始化该对象的函数的`MakeAndInitialize`模板函数用于构造对象。 如果初始化失败，则返回如果对象已成功初始化，则为 S_OK 或 COM 错误代码。 COM 错误代码传播的返回值作为`MakeAndInitialize`。 请注意，`RuntimeClassInitialize`如果不调用方法`Make`模板函数用于构造对象。
+`RuntimeClassInitialize`<br/>
+如果初始化该对象的函数的`MakeAndInitialize`模板函数用于构造对象。 如果初始化失败，则返回如果对象已成功初始化，则为 S_OK 或 COM 错误代码。 COM 错误代码传播的返回值作为`MakeAndInitialize`。 请注意，`RuntimeClassInitialize`如果不调用方法`Make`模板函数用于构造对象。
 
 ### <a name="public-constructors"></a>公共构造函数
 

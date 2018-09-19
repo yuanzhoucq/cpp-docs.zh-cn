@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022677"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 类
 
@@ -44,13 +44,13 @@ ATL 7.0 起`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../at
 ## <a name="syntax"></a>语法
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>参数
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in]管理线程选择类。 默认值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
 
 ## <a name="members"></a>成员
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in]指向创建程序函数的指针。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObj*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向对象的映射条目的数组的指针。
 
-*h*  
+*h*<br/>
 [in]传递给 HINSTANCE`DLLMain`或`WinMain`。
 
-*plibid*  
+*plibid*<br/>
 [in]一个指向与项目关联的类型库的 LIBID。
 
-*nThreads*  
+*nThreads*<br/>
 [in]要创建的线程数。 默认情况下*nThreads*是返回的值[GetDefaultThreads](#getdefaultthreads)。
 
 ### <a name="remarks"></a>备注
@@ -269,5 +269,5 @@ LONG Unlock();
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [Module 类](../../atl/atl-module-classes.md)

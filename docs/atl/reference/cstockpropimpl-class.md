@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032024"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 类
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 实现控件的类派生自`CStockPropImpl`。
 
-*InterfaceName*  
+*InterfaceName*<br/>
 双重接口公开常用属性。
 
-*piid*  
+*piid*<br/>
 指向 IID `InterfaceName`。
 
-*plibid*  
+*plibid*<br/>
 指向包含的定义的类型库的 LIBID `InterfaceName`。
 
-*wMajor*  
+*wMajor*<br/>
 类型库的主版本。 默认值为 1。
 
-*wMinor*  
+*wMinor*<br/>
 类型库的次版本。 默认值为 0。
 
-*tihclass*  
+*tihclass*<br/>
 用于管理的类型信息的类*T*。默认值为 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成员
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>参数
 
-*pnAppearance*  
+*pnAppearance*<br/>
 变量用于接收控件的绘制样式。
 
 ### <a name="return-value"></a>返回值
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>参数
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 变量用于接收标志状态。 TRUE 表示该控件不能为其他任何大小。
 
 ### <a name="return-value"></a>返回值
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>参数
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 接收控件的背景色的变量。
 
 ### <a name="return-value"></a>返回值
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>参数
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 变量用于接收控件的背景样式。
 
 ### <a name="return-value"></a>返回值
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>参数
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 变量用于接收控件的边框颜色。
 
 ### <a name="return-value"></a>返回值
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>参数
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 变量用于接收控件的边框样式。
 
 ### <a name="return-value"></a>返回值
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>参数
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 变量用于接收标志状态。 TRUE 指示控件的边框可见。
 
 ### <a name="return-value"></a>返回值
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>参数
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 接收控件的边框宽度的变量。
 
 ### <a name="return-value"></a>返回值
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>参数
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 要与该控件显示的文本。
 
 ### <a name="return-value"></a>返回值
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>参数
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 变量用于接收控件的绘制模式。
 
 ### <a name="return-value"></a>返回值
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>参数
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 变量用于接收控件的绘制样式。
 
 ### <a name="return-value"></a>返回值
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>参数
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 接收控件的宽度值，以像素为单位的变量。
 
 ### <a name="return-value"></a>返回值
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>参数
 
-*pbEnabled*  
+*pbEnabled*<br/>
 变量用于接收标志状态。 TRUE 表示已启用该控件。
 
 ### <a name="return-value"></a>返回值
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>参数
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 变量用于接收控件的填充颜色。
 
 ### <a name="return-value"></a>返回值
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>参数
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 接收控件的填充样式的变量。
 
 ### <a name="return-value"></a>返回值
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>参数
 
-*ppFont*  
+*ppFont*<br/>
 接收指向控件的字体属性的变量。
 
 ### <a name="return-value"></a>返回值
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>参数
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 变量用于接收的控件前景色。
 
 ### <a name="return-value"></a>返回值
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>参数
 
-*phWnd*  
+*phWnd*<br/>
 与控件关联的窗口句柄。
 
 ### <a name="return-value"></a>返回值
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>参数
 
-*ppPicture*  
+*ppPicture*<br/>
 接收指向图形的图片属性的变量。
 
 ### <a name="return-value"></a>返回值
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>参数
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 接收鼠标指针的类型的变量。
 
 ### <a name="return-value"></a>返回值
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>参数
 
-*ppPicture*  
+*ppPicture*<br/>
 接收指向照片的属性的变量。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>参数
 
-*pnReadyState*  
+*pnReadyState*<br/>
 接收控件的就绪状态的变量。
 
 ### <a name="return-value"></a>返回值
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>参数
 
-*pbTabStop*  
+*pbTabStop*<br/>
 变量用于接收标志状态。 TRUE 表示该控件是一个制表位。
 
 ### <a name="return-value"></a>返回值
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>参数
 
-*pbstrText*  
+*pbstrText*<br/>
 显示与该控件的文本。
 
 ### <a name="return-value"></a>返回值
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>参数
 
-*pbValid*  
+*pbValid*<br/>
 变量用于接收标志状态。 TRUE 指示控件有效。
 
 ### <a name="return-value"></a>返回值
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>参数
 
-*phWnd*  
+*phWnd*<br/>
 与控件关联的窗口句柄。
 
 ### <a name="return-value"></a>返回值
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>参数
 
-*nAppearance*  
+*nAppearance*<br/>
 使用由该控件的新绘制样式。
 
 ### <a name="return-value"></a>返回值
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>参数
 
-*bAutoSize*  
+*bAutoSize*<br/>
 如果控件不能为任何其他大小，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>参数
 
-*clrBackColor*  
+*clrBackColor*<br/>
 新控件背景色。
 
 ### <a name="return-value"></a>返回值
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>参数
 
-*nBackStyle*  
+*nBackStyle*<br/>
 新控件背景样式。
 
 ### <a name="return-value"></a>返回值
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>参数
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 新的边框颜色。 OLE_COLOR 数据类型在内部表示为一个 32 位长整数。
 
 ### <a name="return-value"></a>返回值
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>参数
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 新的边框样式。
 
 ### <a name="return-value"></a>返回值
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>参数
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 如果边框可见，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>参数
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 新控件的边框的宽度。
 
 ### <a name="return-value"></a>返回值
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>参数
 
-*bstrCaption*  
+*bstrCaption*<br/>
 要与该控件显示的文本。
 
 ### <a name="return-value"></a>返回值
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>参数
 
-*nDrawMode*  
+*nDrawMode*<br/>
 控件的新绘图模式。
 
 ### <a name="return-value"></a>返回值
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>参数
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 控件的新绘制样式。
 
 ### <a name="return-value"></a>返回值
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>参数
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 若要使用由该控件的新宽度的绘图方法。
 
 ### <a name="return-value"></a>返回值
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>参数
 
-*bEnabled*  
+*bEnabled*<br/>
 如果启用该控件，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>参数
 
-*clrFillColor*  
+*clrFillColor*<br/>
 新控件的填充颜色。
 
 ### <a name="return-value"></a>返回值
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>参数
 
-*nFillStyle*  
+*nFillStyle*<br/>
 新控件的填充样式。
 
 ### <a name="return-value"></a>返回值
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>参数
 
-*pFont*  
+*pFont*<br/>
 指向控件的字体属性的指针。
 
 ### <a name="return-value"></a>返回值
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>参数
 
-*clrForeColor*  
+*clrForeColor*<br/>
 新的控件的前景颜色。
 
 ### <a name="return-value"></a>返回值
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>参数
 
-*/&ast; hWnd &ast;/*  
+*/&ast; hWnd &ast;/*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>参数
 
-*pPicture*  
+*pPicture*<br/>
 指向图形的图片属性的指针。
 
 ### <a name="return-value"></a>返回值
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>参数
 
-*nMousePointer*  
+*nMousePointer*<br/>
 鼠标指针的类型。
 
 ### <a name="return-value"></a>返回值
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>参数
 
-*pPicture*  
+*pPicture*<br/>
 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>参数
 
-*nReadyState*  
+*nReadyState*<br/>
 控件的就绪状态。
 
 ### <a name="return-value"></a>返回值
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>参数
 
-*bTabStop*  
+*bTabStop*<br/>
 如果控件是一个制表位，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>参数
 
-*bstrText*  
+*bstrText*<br/>
 显示与该控件的文本。
 
 ### <a name="return-value"></a>返回值
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>参数
 
-*bValid*  
+*bValid*<br/>
 如果控件有效，则为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 窗口句柄。
 
 ### <a name="return-value"></a>返回值
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>参数
 
-*pFont*  
+*pFont*<br/>
 指向控件的字体属性的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>参数
 
-*pPicture*  
+*pPicture*<br/>
 指向图形的图片属性的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>参数
 
-*pPicture*  
+*pPicture*<br/>
 一个指向照片的属性。 请参阅[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -1175,5 +1175,5 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)

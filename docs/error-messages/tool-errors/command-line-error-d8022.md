@@ -1,5 +1,5 @@
 ---
-title: 命令行错误 D8022 |Microsoft 文档
+title: 命令行错误 D8022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338612527555dff6331ceaeef5e3b3dba0949d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1438473ff4fa45bf4000cb273ad3817d5673f219
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094412"
 ---
 # <a name="command-line-error-d8022"></a>命令行错误 D8022
-无法打开邮件文件  
-  
- 给定的文件有不在当前目录或在指定的目录中的 PATH 环境变量。 消息文件包含编译器命令行语法和选项的简短的摘要。  
-  
- 将此文件移到当前目录或当前路径中的目录。 如果找不到此文件，运行安装程序从分发磁盘复制它。
+
+无法打开邮件文件
+
+给定的文件时不在当前目录或的 PATH 环境变量中指定的目录。 消息文件包含编译器命令行语法和选项的简短摘要。
+
+将此文件移到当前目录或当前路径中的目录。 如果找不到此文件，运行安装程序将从分发磁盘对其进行复制。

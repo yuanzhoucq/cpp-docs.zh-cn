@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2572 |Microsoft 文档
+title: 编译器错误 C2572 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2211137361d9de86397c333e51abf0a903ff67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56d49fe95dca7861b18d417dcd6049a12776e8d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057829"
 ---
 # <a name="compiler-error-c2572"></a>编译器错误 C2572
-class::member： 重定义的默认参数： 参数 param  
-  
- 默认参数不能重新定义。 如果你需要另一个参数的值，默认参数应保持为未定义状态。  
-  
- 下面的示例生成 C2572:  
-  
-```  
-// C2572.cpp  
-// compile with: /c  
-void f(int i = 1);   // function declaration  
-  
-// function definition  
-void f(int i = 1) {}   // C2572  
-  
-// try the following line instead  
-// void f(int i) {}  
+
+class::member： 重定义默认参数： 参数 param
+
+不能重新定义默认参数。 如果您需要另一个参数的值，默认参数应保持为未定义状态。
+
+下面的示例生成 C2572:
+
+```
+// C2572.cpp
+// compile with: /c
+void f(int i = 1);   // function declaration
+
+// function definition
+void f(int i = 1) {}   // C2572
+
+// try the following line instead
+// void f(int i) {}
 ```

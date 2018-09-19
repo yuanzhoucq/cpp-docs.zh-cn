@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084546"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 
@@ -45,19 +45,19 @@ ms.locfileid: "43756101"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的新类，派生自 `CWindowImpl`。
 
-*TBase*  
+*TBase*<br/>
 您的类的基类。 默认情况下，基类是[CWindow](../../atl/reference/cwindow-class.md)。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 一个[特征类](../../atl/understanding-window-traits.md)，它定义为您的窗口样式。 默认值为 `CControlWinTraits`。
 
 ## <a name="members"></a>成员
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父级或所有者窗口的句柄。
 
-*rect*  
+*rect*<br/>
 [in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定窗口的名称。 默认值为 NULL。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]窗口的样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]扩展的窗口样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
 
 ### <a name="return-value"></a>返回值
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>参数
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]正在销毁窗口的句柄。
 
 ### <a name="remarks"></a>备注
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]正在创建子类的窗口句柄。
 
 ### <a name="return-value"></a>返回值
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]窗口的句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -387,6 +387,6 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>请参阅
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

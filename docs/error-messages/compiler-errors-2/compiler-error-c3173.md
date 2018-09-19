@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3173 |Microsoft 文档
+title: 编译器错误 C3173 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef35c534ac834779da15fce99e8c82b94bd445e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a02ae1fcf4aff9636445979a81ef0a02ab5cb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053019"
 ---
 # <a name="compiler-error-c3173"></a>编译器错误 C3173
-在 idl 合并的版本不匹配  
-  
- 对象文件包含嵌入与以前的版本的编译器生成的 idl 时发生此错误。 编译器将编码要确保用于生成的 idl 内容的.obj 文件中嵌入的同一编译器也用于合并嵌入的 idl 的同一编译器的版本号。  
-  
- 更新你的 Visual c + + 安装，以便所有工具都均来自最新的发行版本。
+
+idl 合并中的版本不匹配
+
+当对象文件包含嵌入的 idl 与以前版本的编译器生成时，将发生此错误。 编译器将编码以确保相同的编译器用于生成在.obj 文件中嵌入的 idl 内容也是用于嵌入的 idl 合并相同的编译器的版本号。
+
+更新您的 Visual c + + 安装，以便所有工具都均来自最新的发行版本。

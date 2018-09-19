@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028527"
 ---
 # <a name="header-files-c"></a>标头文件 （c + +）
 
-必须声明变量、 函数、 类等的程序元素的名称，然后才能使用。 例如，你不能只需编写`x = 42`而无需第一个声明 x。 
+必须声明变量、 函数、 类等的程序元素的名称，然后才能使用。 例如，你不能只需编写`x = 42`而无需第一个声明 x。
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- 声明会告知编译器是否是**int**、 **double**即**函数**、**类**或一些其他事情。  此外，每个名称必须声明 （直接或间接） 在每个.cpp 文件中使用它。 当编译的程序时，每个.cpp 文件单独编译到编译单元。 编译器并不知道哪些名称在其他编译单元中声明。 这意味着，如果你定义类或函数或全局变量，你必须提供在使用它的每个其他.cpp 文件中的该操作的声明。 该操作的每个声明中的所有文件必须完全相同。 当链接器尝试将所有编译单元都合并为单个程序时，略微不一致将导致错误或意外的行为。
+声明会告知编译器是否是**int**、 **double**即**函数**、**类**或一些其他事情。  此外，每个名称必须声明 （直接或间接） 在每个.cpp 文件中使用它。 当编译的程序时，每个.cpp 文件单独编译到编译单元。 编译器并不知道哪些名称在其他编译单元中声明。 这意味着，如果你定义类或函数或全局变量，你必须提供在使用它的每个其他.cpp 文件中的该操作的声明。 该操作的每个声明中的所有文件必须完全相同。 当链接器尝试将所有编译单元都合并为单个程序时，略微不一致将导致错误或意外的行为。
 
-为了尽量减少出错的危险，c + + 已采用使用的约定*标头文件*包含声明。 在标头文件中，进行声明，然后使用 #include 指令中的每个.cpp 文件或其他标头文件所需的声明。 #Include 指令插入标头文件的副本直接在之前编译的.cpp 文件。 
+为了尽量减少出错的危险，c + + 已采用使用的约定*标头文件*包含声明。 在标头文件中，进行声明，然后使用 #include 指令中的每个.cpp 文件或其他标头文件所需的声明。 #Include 指令插入标头文件的副本直接在之前编译的.cpp 文件。
 
 ## <a name="example"></a>示例
 
@@ -91,7 +91,7 @@ int main()
 
 ## <a name="include-guards"></a>包含保护
 
-通常情况下，标头文件具有*include 防护*或`#pragma once`指令以确保，它们不会插入多个时间到单一的.cpp 文件。 
+通常情况下，标头文件具有*include 防护*或`#pragma once`指令以确保，它们不会插入多个时间到单一的.cpp 文件。
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 由于可能可能由多个文件都包括标头文件，它不能包含可能会生成具有相同名称的多个定义的定义。 以下不允许，或被视为非常不良实践：
 
 - 在命名空间或全局范围的内置类型定义
-- 非内联函数定义 
+- 非内联函数定义
 - 非常量变量定义
 - 聚合的定义
 - 未命名的命名空间
 - using 指令
 
-利用**使用**指令一定不会导致错误，但可能会出现问题，因为它将命名空间引入作用域中直接或间接包含该标头的每个.cpp 文件。 
+利用**使用**指令一定不会导致错误，但可能会出现问题，因为它将命名空间引入作用域中直接或间接包含该标头的每个.cpp 文件。
 
 ## <a name="sample-header-file"></a>示例标头文件
 
 下面的示例显示了各种类型的声明和定义允许的标头文件：
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

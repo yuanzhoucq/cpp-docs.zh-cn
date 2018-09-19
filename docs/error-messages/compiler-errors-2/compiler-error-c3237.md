@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3237 |Microsoft 文档
+title: 编译器错误 C3237 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9e43fc9ecf79443cfbf8147ff5b3c227eda9404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbfeb7775bc6d48078affcc37c2dead3c920307a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068606"
 ---
 # <a name="compiler-error-c3237"></a>编译器错误 C3237
-“generic_class”: 泛型类不能是自定义特性  
-  
- 泛型类不能是用户定义的特性。  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C3237。  
-  
-```  
-// C3237.cpp  
-// compile with: /clr /c  
-// C3237 expected  
-using namespace System;  
-  
-generic <class T>  
-// Delete the following line to resolve.  
-[attribute(AttributeTargets::All, AllowMultiple=true)]  
-public ref class GR {};  
+
+“generic_class”: 泛型类不能是自定义特性
+
+泛型类不能是用户定义的特性。
+
+## <a name="example"></a>示例
+
+以下示例生成 C3237。
+
+```
+// C3237.cpp
+// compile with: /clr /c
+// C3237 expected
+using namespace System;
+
+generic <class T>
+// Delete the following line to resolve.
+[attribute(AttributeTargets::All, AllowMultiple=true)]
+public ref class GR {};
 ```

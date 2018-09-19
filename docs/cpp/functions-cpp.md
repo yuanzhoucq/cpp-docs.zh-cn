@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022352"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -135,7 +135,7 @@ int sum(int a, int b)
 
 下图显示了函数定义的各个部分。 灰色区域是函数体。
 
- ![函数定义部分](../cpp/media/vc38ru1.gif "vc38RU1")函数定义部分
+![函数定义部分](../cpp/media/vc38ru1.gif "vc38RU1")函数定义部分
 
 ## <a name="function-definitions"></a>函数定义
 
@@ -205,7 +205,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:** 若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
+**C++ 11:** 若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ template<typename F, typename Tuple = tuple<T...>,
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ template<typename F, typename Tuple = tuple<T...>,
         return 0;
     }
     ```
-    
+
 1. 返回的 std:: tuple 或 std:: pair 对象：
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ template<typename F, typename Tuple = tuple<T...>,
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ template<typename F, typename Tuple = tuple<T...>,
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ template<typename F, typename Tuple = tuple<T...>,
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. 除了使用自身的返回值，你可以"return"的值通过定义任意数量的参数，以使用由引用传递，以便可以修改该函数或将其初始化的对象的调用方提供的值。 有关详细信息，请参阅[引用类型函数自变量](reference-type-function-arguments.md)。
 
 ## <a name="function-pointers"></a>函数指针
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 前面的声明与使用上面的 typedef 的声明等效。
 
 ## <a name="see-also"></a>请参阅
- [函数重载](../cpp/function-overloading.md)  
- [包含变量参数列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [显式默认设置的函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [默认自变量](../cpp/default-arguments.md)  
- [内联函数](../cpp/inline-functions-cpp.md)
+
+[函数重载](../cpp/function-overloading.md)<br/>
+[包含变量参数列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[显式默认设置的函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[默认自变量](../cpp/default-arguments.md)<br/>
+[内联函数](../cpp/inline-functions-cpp.md)

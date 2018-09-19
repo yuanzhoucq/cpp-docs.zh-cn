@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1036 |Microsoft 文档
+title: NMAKE 错误 U1036 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bd493dcf8f59b0aa94170eaa5c2a37a2c0fb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa7f94f9f584ab66b83fdec0e6f9076feb6b5d12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048300"
 ---
 # <a name="nmake-fatal-error-u1036"></a>NMAKE 错误 U1036
-语法错误： 左侧 '=' 的名称太多  
-  
- 宏定义左侧允许只有一个字符串。
+
+语法错误: = 左侧的名称太多
+
+左侧的宏定义允许只有一个字符串。

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c8e7c6fb2d1e441ab0c85f60779bbefd221d52
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077537"
 ---
 # <a name="device-context-global-functions"></a>设备上下文全局函数
 
@@ -39,10 +39,10 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>参数
 
-*hdc*  
+*hdc*<br/>
 [in]设备上下文或为 NULL 的现有句柄。
 
-*ptd*  
+*ptd*<br/>
 [in]一个指向`DVTARGETDEVICE`结构，其中包含有关目标设备的信息。
 
 ### <a name="return-value"></a>返回值

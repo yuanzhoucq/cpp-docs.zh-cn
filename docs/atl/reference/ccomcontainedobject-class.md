@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42aea64c0a6881dcc3ca9a3465a436b33f19ad6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f38fc3499ecc5956369a78c37f94358a1006cc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108685"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 类
 
@@ -41,13 +41,13 @@ ms.locfileid: "43761611"
 ## <a name="syntax"></a>语法
 
 ```
-template<class Base>  
+template<class Base>
 class CComContainedObject : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)。
 
 ## <a name="members"></a>成员
@@ -104,7 +104,7 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>参数
 
-*pv*  
+*pv*<br/>
 [in]所有者对象`IUnknown`。
 
 ### <a name="remarks"></a>备注
@@ -151,13 +151,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的标识符。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
-*pp*  
+*pp*<br/>
 [out]由类型标识的接口指针的指针`Q`。 如果该对象不支持此接口， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值

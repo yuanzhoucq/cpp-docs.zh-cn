@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0027 |Microsoft 文档
+title: 项目生成错误 PRJ0027 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062054"
 ---
 # <a name="project-build-error-prj0027"></a>项目生成错误 PRJ0027
-Unicode 日志消息内容包含无法转换为用户的 ANSI 代码页的内容。  
-  
- 通常，你将仅看到结合中创建批处理和/或响应文件的错误与此警告。  
-  
- 此错误的解决方法是更新以使用 ANSI 或要在你的计算机上安装的代码页，并将其设置为系统的默认的生成日志的内容。
+
+Unicode 日志消息内容包含未能翻译成用户的 ANSI 代码页的内容。
+
+通常将仅看到结合此警告在创建 batch 和/或响应文件时出错。
+
+此错误的解决方法是更新以使用 ANSI 或要在计算机上安装的代码页，并将其设置为系统默认的生成日志的内容。

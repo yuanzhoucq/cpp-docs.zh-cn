@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086455"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 
@@ -62,16 +62,16 @@ ms.locfileid: "43755551"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类派生自`CAtlServiceModuleT`。
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 服务的资源标识符。
 
 ## <a name="members"></a>成员
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwOpcode*  
+*dwOpcode*<br/>
 可定义处理程序操作的开关。 有关详细信息，请参阅备注。
 
 ### <a name="remarks"></a>备注
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszFormat*  
+*pszFormat*<br/>
 要写入事件日志的字符串。
 
-...  
+*...*<br/>
 可选的额外字符串写入到事件日志。
 
 ### <a name="remarks"></a>备注
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwOpcode*  
+*dwOpcode*<br/>
 保留。
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 命令行。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 （如果发生） 与注册相对应的 HRESULT。
 
 ### <a name="return-value"></a>返回值
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 此参数传递给[CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop)。
 
 ### <a name="return-value"></a>返回值
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>参数
 
-*bService*  
+*bService*<br/>
 必须为 true，则注册为服务。
 
 ### <a name="return-value"></a>返回值
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。
 
 ### <a name="return-value"></a>返回值
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc 自变量。
 
-*lpszArgv*  
+*lpszArgv*<br/>
 Argv 自变量。
 
 ### <a name="remarks"></a>备注
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwState*  
+*dwState*<br/>
 新的状态。 请参阅[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)有关可能的值。
 
 ### <a name="remarks"></a>备注
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。
 
 ### <a name="return-value"></a>返回值
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。
 
 ### <a name="return-value"></a>返回值
@@ -575,5 +575,5 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)   
+[CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

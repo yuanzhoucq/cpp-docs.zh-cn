@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034923"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 类
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>参数
 
-*szNewName*  
+*szNewName*<br/>
 要存储在临时文件的内容的新文件的名称。 如果此参数为 NULL，则会删除临时文件的内容。
 
 ### <a name="return-value"></a>返回值
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>参数
 
-*pszDir*  
+*pszDir*<br/>
 临时文件的路径。 如果此值为 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)将调用分配路径。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 中字节的位置。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nLen*  
+*nLen*<br/>
 在文件中的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 锁开始处的文件中的位置。
 
-*nCount*  
+*nCount*<br/>
 要锁定的字节范围的长度。
 
 ### <a name="return-value"></a>返回值
@@ -289,7 +289,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 返回的句柄的临时文件。
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>参数
 
-*pBuffer*  
+*pBuffer*<br/>
 指向将接收从文件中读取数据的缓冲区的指针。
 
-*nBufSize*  
+*nBufSize*<br/>
 缓冲区大小（以字节为单位）。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 读取的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>参数
 
-*nOffset*  
+*nOffset*<br/>
 偏移量，以字节为单位，从给定的起始点*dwFrom。*
 
-*dwFrom*  
+*dwFrom*<br/>
 起始点 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。
 
 ### <a name="return-value"></a>返回值
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>参数
 
-*nNewLen*  
+*nNewLen*<br/>
 以字节为单位的文件的新长度。
 
 ### <a name="return-value"></a>返回值
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 解锁开始处的文件中的位置。
 
-*nCount*  
+*nCount*<br/>
 要将其解锁的字节范围的长度。
 
 ### <a name="return-value"></a>返回值
@@ -421,7 +421,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 调用此方法将数据写入文件指针指示的位置开始的临时文件。
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>参数
 
-*pBuffer*  
+*pBuffer*<br/>
 包含要写入到文件的数据的缓冲区。
 
-*nBufSize*  
+*nBufSize*<br/>
 要从缓冲区传输的字节数。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 写入的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -452,5 +452,5 @@ HRESULT Write(
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [CAtlFile 类](../../atl/reference/catlfile-class.md)

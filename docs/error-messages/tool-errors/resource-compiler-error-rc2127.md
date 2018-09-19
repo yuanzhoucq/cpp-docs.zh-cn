@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2127 |Microsoft 文档
+title: 资源编译器错误 RC2127 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 585dc9b7aaa189d5f9726d1519687849991fc701
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b5a0ebda3cdfa553510f526368b05348c7ab0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086065"
 ---
 # <a name="resource-compiler-error-rc2127"></a>资源编译器错误 RC2127
-版本以预期的逗号分隔的单词  
-  
- 版本资源中的版本号的类型应该是**WORD**，并用逗号分隔。
+
+版本由预期的逗号分隔的单词
+
+版本资源中的版本号应为类型**WORD**，并用逗号分隔。

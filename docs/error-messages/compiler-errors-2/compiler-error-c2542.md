@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2542 |Microsoft 文档
+title: 编译器错误 C2542 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039d5853da3876dbe079ff1e4a38be4afdb34bd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81f6f9aa48a4a0ee1a0b414879ae3673c13529fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097233"
 ---
 # <a name="compiler-error-c2542"></a>编译器错误 C2542
-identifier： 类对象具有初始化没有构造函数  
-  
- 没有使用参数列表相匹配初始化的构造函数。  
-  
- 在初始化参数不正确可以导致此错误。
+
+identifier： 类对象已初始化没有构造函数
+
+没有与初始化匹配的参数列表的构造函数。
+
+在初始化参数不正确可以导致此错误。

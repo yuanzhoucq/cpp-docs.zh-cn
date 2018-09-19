@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054475"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 
@@ -40,13 +40,13 @@ ms.locfileid: "43755718"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>参数
 
-`T`  
+*T*<br/>
 指针类型。
 
 ## <a name="members"></a>成员
@@ -82,7 +82,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>备注
 
-此类提供用于创建和管理可帮助保护用户免受内存泄漏，它不再处于作用域时，会自动释放资源的智能指针的方法。 `CAutoVectorPtr` 类似于`CAutoPtr`，唯一的区别在于`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)并[向量删除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)来分配和释放内存而不是 c + +**新**并**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。  
+此类提供用于创建和管理可帮助保护用户免受内存泄漏，它不再处于作用域时，会自动释放资源的智能指针的方法。 `CAutoVectorPtr` 类似于`CAutoPtr`，唯一的区别在于`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)并[向量删除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)来分配和释放内存而不是 c + +**新**并**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。
 
 请参阅[CAutoPtr](../../atl/reference/cautoptr-class.md)有关使用智能指针类的示例。
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>参数
 
-*nElements*  
+*nElements*<br/>
 数组中的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr`对象将获得 this 指针的所有权。
 
 ### <a name="remarks"></a>备注
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 现有的指针。
 
 ### <a name="remarks"></a>备注
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 一个指针。
 
 ### <a name="return-value"></a>返回值
@@ -226,7 +226,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 强制转换运算符。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ operator T*() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CAutoPtr 类](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr 类](../../atl/reference/cautoptr-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

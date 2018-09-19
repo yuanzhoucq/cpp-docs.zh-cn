@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3842 |Microsoft 文档
+title: 编译器错误 C3842 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c29878f7d64bfe1ed444130c77461dece6d20302
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8db69ce3af28ed5878c43775b2c33542e5c817d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055516"
 ---
 # <a name="compiler-error-c3842"></a>编译器错误 C3842
-“函数”: 不支持在 WinRT 或托管类型的成员函数上使用“const”和“volatile”限定符  
-  
- [const](../../cpp/const-cpp.md)和[易失性](../../cpp/volatile-cpp.md)不支持的 Windows 运行时或托管的类型的成员函数上。  
-  
- 下面的示例生成 C3842：  
-  
-```  
-// C3842a.cpp  
-// compile with: /clr /c  
-public ref struct A {  
-   void f() const {}   // C3842  
-   void f() volatile {}   // C3842  
-  
-   void f() {}  
-};  
+
+“函数”: 不支持在 WinRT 或托管类型的成员函数上使用“const”和“volatile”限定符
+
+[const](../../cpp/const-cpp.md)并[易失性](../../cpp/volatile-cpp.md)不支持 Windows 运行时或托管的类型的成员函数上。
+
+下面的示例生成 C3842：
+
+```
+// C3842a.cpp
+// compile with: /clr /c
+public ref struct A {
+   void f() const {}   // C3842
+   void f() volatile {}   // C3842
+
+   void f() {}
+};
 ```

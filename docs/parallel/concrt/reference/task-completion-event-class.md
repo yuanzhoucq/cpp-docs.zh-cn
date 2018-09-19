@@ -1,5 +1,5 @@
 ---
-title: task_completion_event 类 |Microsoft 文档
+title: task_completion_event 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088990"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
 `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_ResultType`  
- 此 `task_completion_event` 类的结果类型。  
-  
- `T`  
+*_ResultType*<br/>
+此 `task_completion_event` 类的结果类型。  
+
   
 ## <a name="members"></a>Members  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Result`  
- 要设置与此事件的结果。  
+*_Result*<br/>
+要设置与此事件的结果。  
   
 ### <a name="return-value"></a>返回值  
- 该方法返回`true`如果已成功设置事件。 它将返回`false`如果已设置事件。  
+ 该方法将返回`true`如果已成功设置该事件。 它将返回`false`如果已设置该事件。  
   
 ### <a name="remarks"></a>备注  
- 在多个存在或对并发调用`set`，仅第一次调用将成功，并且其结果 （如果有） 将存储在任务完成事件。 而忽略其余的集，并且该方法将返回 false。 当设置任务完成事件时，所有的任务创建从，事件将立即完成，并且其延续，如果有的话，将被排定。 任务完成对象具有`_ResultType`以外`void`将将值传递给它们的延续。  
+ 出现多个的情况下调用或并发调用到`set`; 仅第一次调用将成功，但其结果 （如果有） 将存储在任务完成事件。 将忽略剩余的集，而该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件都会立即完成，并且其，如果有，将安排运行。 任务已完成对象`_ResultType`而不`void`将的值传递给它们的延续。  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>参数  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+异常类型。
+
+*_Except*<br/>
+要设置的异常。
+
+*_ExceptionPtr*<br/>
+要设置的异常指针。
   
 ### <a name="return-value"></a>返回值  
   

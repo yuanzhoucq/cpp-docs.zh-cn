@@ -1,5 +1,5 @@
 ---
-title: invalid_compute_domain 类 |Microsoft 文档
+title: invalid_compute_domain 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116004"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain 类
-当运行时无法通过使用在指定的计算域启动内核时引发的异常[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)调用站点。  
+当运行时不能通过使用在指定的计算域启动内核时引发的异常[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)调用站点。  
 
   
 ## <a name="syntax"></a>语法  
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误说明。  
+*消息 （_m)*<br/>
+错误说明。  
   
 ### <a name="return-value"></a>返回值  
  实例`invalid_compute_domain`类  

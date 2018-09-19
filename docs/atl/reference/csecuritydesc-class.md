@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116862"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
 
@@ -129,13 +129,13 @@ class CSecurityDesc
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `CSecurityDesc`对象或`SECURITY_DESCRIPTOR`结构，以分配给新`CSecurityDesc`对象。
 
 ### <a name="remarks"></a>备注
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pstr*  
+*pstr*<br/>
 包含的以 null 结尾的字符串指针[字符串格式安全描述符](/windows/desktop/SecAuthZ/security-descriptor-string-format)要转换。
 
 ### <a name="return-value"></a>返回值
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>参数
 
-*psdc*  
+*psdc*<br/>
 指向`SECURITY_DESCRIPTOR_CONTROL`接收的安全描述符控制信息的结构。
 
 ### <a name="return-value"></a>返回值
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>参数
 
-*pDacl*  
+*pDacl*<br/>
 指向`CDacl`要在其中存储一份安全描述符的 DACL 的结构。 如果存在自定义 ACL，该方法将设置*pDacl*到安全描述符的自定义 ACL 的地址。 如果不存在自定义 ACL，不存储任何值。
 
-*pbPresent*  
+*pbPresent*<br/>
 指向一个值，指示存在指定的安全描述符中的自定义 ACL。 如果安全描述符包含自定义 ACL，此参数设置为 true。 如果安全描述符不包含自定义 ACL，此参数设置为 false。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 指向一个标志设置为在 SE_DACL_DEFAULTED 标志的值`SECURITY_DESCRIPTOR_CONTROL`结构，如果自定义 ACL 存在的安全描述符。 由默认的机制; 如果此标志为 true，检索到的自定义 ACL如果为 false，由用户显式指定自定义 ACL。
 
 ### <a name="return-value"></a>返回值
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid](../../atl/reference/csid-class.md) （安全标识符），它接收 CDacl 中存储的组的副本。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 指向一个标志设置为在 SE_GROUP_DEFAULTED 标志的值`SECURITY_DESCRIPTOR_CONTROL`结构，该方法返回时。
 
 ### <a name="return-value"></a>返回值
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>参数
 
-*pSid*  
+*pSid*<br/>
 指向[CSid](../../atl/reference/csid-class.md) （安全标识符），它接收 CDacl 中存储的组的副本。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 指向一个标志设置为在 SE_OWNER_DEFAULTED 标志的值`SECURITY_DESCRIPTOR_CONTROL`结构，该方法返回时。
 
 ### <a name="return-value"></a>返回值
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>参数
 
-*pSacl*  
+*pSacl*<br/>
 指向`CSacl`要在其中存储一份安全描述符的 SACL 的结构。 如果存在的系统 ACL，该方法将设置*pSacl*到安全描述符的系统 ACL 的地址。 如果不存在的系统 ACL，不存储任何值。
 
-*pbPresent*  
+*pbPresent*<br/>
 指向方法的标志设置为指示中指定的安全描述符的系统 ACL 的状态。 如果安全描述符包含系统 ACL，此参数设置为 true。 如果安全描述符不包含系统 ACL，此参数设置为 false。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 指向一个标志设置为在 SE_SACL_DEFAULTED 标志的值`SECURITY_DESCRIPTOR_CONTROL`结构，如果系统 ACL 存在的安全描述符。
 
 ### <a name="return-value"></a>返回值
@@ -529,13 +529,13 @@ bool MakeSelfRelative() throw(...);
 赋值运算符。
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `SECURITY_DESCRIPTOR`结构或`CSecurityDesc`要分配给`CSecurityDesc`对象。
 
 ### <a name="return-value"></a>返回值
@@ -546,7 +546,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 将值转换为一个指向`SECURITY_DESCRIPTOR`结构。
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>参数
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 指示要设置的控制位 SECURITY_DESCRIPTOR_CONTROL 掩码。 可以设置的标志的列表，请参阅[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 指示由指定的控制位的新值的 SECURITY_DESCRIPTOR_CONTROL 掩码*ControlBitsOfInterest*掩码。 此参数可以是为列出的标志的组合*ControlBitsOfInterest*参数。
 
 ### <a name="return-value"></a>返回值
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>参数
 
-*Dacl*  
+*Dacl*<br/>
 引用`CDacl`对象，它指定安全描述符的 DACL。 此参数不能为 NULL。 若要设置安全描述符中的 NULL DACL，应与一起使用的方法的第一个窗体*bPresent*设置为 false。
 
-*bPresent*  
+*bPresent*<br/>
 指定一个标志，指示存在 DACL 的安全描述符中。 如果此参数为 true，该方法设置 SE_DACL_PRESENT 标志`SECURITY_DESCRIPTOR_CONTROL`结构，并使用中的值*Dacl*并*bDefaulted*参数。 如果为 false，该方法将清除 SE_DACL_PRESENT 标志，并*bDefaulted*将被忽略。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指定一个标志，指示源的 DACL。 如果此标志为 true，DACL 具有已检索到的一些默认的机制。 如果为 false，DACL 显式指定的用户。 该方法将此值存储在的 SE_DACL_DEFAULTED 标志`SECURITY_DESCRIPTOR_CONTROL`结构。 如果未指定此参数，则清除 SE_DACL_DEFAULTED 标志。
 
 ### <a name="return-value"></a>返回值
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*sid*  
+*sid*<br/>
 引用[CSid](../../atl/reference/csid-class.md)安全描述符的新的主组的对象。 此参数不能为 NULL。 安全描述符可以标记为不具有 DACL 或 SACL，但是它必须具有一个组和一个所有者，即使这些是空的 SID （这是一个具有特殊意义的内置 SID）。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指示是否从默认机制派生的主要组信息。 如果此值为 true，它是默认的信息，该方法将此值存储为中的 SE_GROUP_DEFAULTED 标志`SECURITY_DESCRIPTOR_CONTROL`结构。 如果此参数为零，清除 SE_GROUP_DEFAULTED 标志。
 
 ### <a name="return-value"></a>返回值
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*sid*  
+*sid*<br/>
 [CSid](../../atl/reference/csid-class.md)安全描述符的新主要所有者的对象。 此参数不能为 NULL。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指示是否从默认机制派生的所有者信息。 如果此值为 true，则默认的信息。 该方法将此值存储为中的 SE_OWNER_DEFAULTED 标志`SECURITY_DESCRIPTOR_CONTROL`结构。 如果此参数为零，清除 SE_OWNER_DEFAULTED 标志。
 
 ### <a name="return-value"></a>返回值
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*Sacl*  
+*Sacl*<br/>
 指向`CSacl`对象，它指定安全描述符的 SACL。 此参数不能为 NULL，并且必须 CSacl 对象。 与不同的 Dacl，NULL 和空的 SACL 之间没有区别如 SACL 对象未指定访问权限，只审核信息。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指定一个标志，指示 SACL 的源。 如果此标志为 true，SACL 已检索到的一些默认的机制。 如果为 false，SACL 显式指定的用户。 该方法将此值存储在的 SE_SACL_DEFAULTED 标志`SECURITY_DESCRIPTOR_CONTROL`结构。 如果未指定此参数，则清除 SE_SACL_DEFAULTED 标志。
 
 ### <a name="return-value"></a>返回值
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>参数
 
-*pstr*  
+*pstr*<br/>
 指向以 null 结尾的字符串，以接收[字符串格式安全描述符](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
 
-*si*  
+*si*<br/>
 指定 SECURITY_INFORMATION 位标志以指示要包括在输出字符串中的安全描述符的组件的组合。
 
 ### <a name="return-value"></a>返回值
@@ -713,7 +713,7 @@ bool ToString(
 
 ## <a name="see-also"></a>请参阅
 
-[安全示例](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[类概述](../../atl/atl-class-overview.md)   
+[安全示例](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

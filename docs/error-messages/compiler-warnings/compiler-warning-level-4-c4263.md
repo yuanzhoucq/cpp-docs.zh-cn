@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4263 |Microsoft 文档
+title: 编译器警告 （等级 C4263 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883b36e524f3631811cf503ebc695e3c4ad53da2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf93a010ac10b8b55bd22b9ab2db12d77a02c13a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079624"
 ---
 # <a name="compiler-warning-level-4-c4263"></a>编译器警告（等级 4）C4263
-function： 成员函数不重写任何基类虚拟成员函数  
-  
- 一个类函数定义具有与基但不是相同数量的类或类型自变量中的虚函数相同的名称。 这实际上会隐藏基类中的虚函数。  
-  
- 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
-  
- 下面的示例生成 C4263:  
-  
-```  
-// C4263.cpp  
-// compile with: /W4  
-#pragma warning(default:4263)  
-#pragma warning(default:4264)  
-class B {  
-public:  
-   virtual void func();  
-};  
-  
-class D : public B {  
-   void func(int);   // C4263  
-};  
-  
-int main() {  
-}  
+
+function： 成员函数不重写任何基类虚拟成员函数
+
+一个类函数定义具有与基类，但不是相同数量或参数的类型中的虚函数相同的名称。 这将有效地隐藏基类中的虚函数。
+
+默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
+
+下面的示例生成 C4263:
+
+```
+// C4263.cpp
+// compile with: /W4
+#pragma warning(default:4263)
+#pragma warning(default:4264)
+class B {
+public:
+   virtual void func();
+};
+
+class D : public B {
+   void func(int);   // C4263
+};
+
+int main() {
+}
 ```

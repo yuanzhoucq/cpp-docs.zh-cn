@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3500c2bd8a0245f0ecf5db1337502f05699a6509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040331"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移运算符 (&gt; &gt;并&lt; &lt;)
 
@@ -36,7 +36,7 @@ ms.locfileid: "44314100"
 
 ## <a name="syntax"></a>语法
 
-> *shift 表达式* `<<` *加法表达式*  
+> *shift 表达式* `<<` *加法表达式*
 > *shift 表达式* `>>` *加法表达式*
 
 ## <a name="remarks"></a>备注
@@ -178,7 +178,7 @@ int main() {
 
     short neg5 = neg1 >> 5; // -1
     bitset<16> bn5(neg5);
-    cout << bn5 << endl;  // 0b11111111'11111111  
+    cout << bn5 << endl;  // 0b11111111'11111111
 }
 ```
 
@@ -240,5 +240,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)  
-[C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+[使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
+[C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

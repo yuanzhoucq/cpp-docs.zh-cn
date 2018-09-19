@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8399eed2c047c10a0a78b1cd944dba7b2d1da97e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067696"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 表示的向量*N*指定的边界的整数值*N*-原始为 0 维空间。 向量中的值按从最重要到最不重要的顺序排列。
@@ -40,7 +40,7 @@ class extent;
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rank`  
+*_Rank*<br/>
 秩`extent`对象。
 
 ## <a name="requirements"></a>要求
@@ -102,7 +102,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Index`  
+*_Index*<br/>
 `index`要测试值。
 
 ### <a name="return-value"></a>返回值
@@ -124,22 +124,22 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Array`  
+*_Array*<br/>
 一个数组`_Rank`用于创建新的整数`extent`对象。
 
-`_I`  
+*_I*<br/>
 内容的长度。
 
-`_I0`  
+*_I0*<br/>
 最高有效位维的长度。
 
-`_I1`  
+*_I1*<br/>
 下一步-到-最高有效维的长度。
 
-`_I2`  
+*_I2*<br/>
 最低有效位维的长度。
 
-`_Other`  
+*_Other*<br/>
 `extent`在其上的对象的新`extent`基于对象。
 
 ## <a name="remarks"></a>备注
@@ -158,7 +158,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 要查找其模数的数字。
 
 ### <a name="return-value"></a>返回值
@@ -175,7 +175,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 要相乘的数。
 
 ### <a name="return-value"></a>返回值
@@ -192,7 +192,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 `index`对象，其中包含要添加的元素。
 
 ### <a name="return-value"></a>返回值
@@ -225,7 +225,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 号、 索引或范围添加。
 
 ### <a name="return-value"></a>返回值
@@ -242,7 +242,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 `index`对象，其中包含要减去的元素。
 
 ### <a name="return-value"></a>返回值
@@ -273,7 +273,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 要除以的数字。
 
 ### <a name="return-value"></a>返回值
@@ -292,7 +292,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Rhs`  
+*_Rhs*<br/>
 要减去的数。
 
 ### <a name="return-value"></a>返回值
@@ -309,7 +309,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Other`  
+*_Other*<br/>
 `extent`要从复制对象。
 
 ### <a name="return-value"></a>返回值
@@ -326,7 +326,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>参数
-`_Index`  
+*_Index*<br/>
 一个介于 0 到负 1 级别。
 
 ### <a name="return-value"></a>返回值

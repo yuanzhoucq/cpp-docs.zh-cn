@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4813 |Microsoft 文档
+title: 编译器警告 （等级 1） C4813 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310c4c3a0d4be35e45c9593dc4f3cc1de00077d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1bfdc3e7aa4a2f0cf32770c1511832900f2339b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050120"
 ---
 # <a name="compiler-warning-level-1-c4813"></a>编译器警告（等级 1）C4813
-“function”：局部类的友元函数必须之前已经声明  
-  
- 内部类中的友元函数未在外部类中声明。  
-  
- 以下示例生成 C4813：  
-  
-```  
-// C4813.cpp  
-// compile with: /W1 /LD  
-void MyClass()  
-{  
-   // void func();  
-   class InnerClass  
-   {  
-      friend void func();   // C4813 uncomment declaration above  
-   };  
-}  
+
+“function”：局部类的友元函数必须之前已经声明
+
+内部类中的友元函数未在外部类中声明。
+
+以下示例生成 C4813：
+
+```
+// C4813.cpp
+// compile with: /W1 /LD
+void MyClass()
+{
+   // void func();
+   class InnerClass
+   {
+      friend void func();   // C4813 uncomment declaration above
+   };
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4706 |Microsoft 文档
+title: 编译器警告 （等级 C4706 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1131147a9600525746cb3e89119189ed9e5026a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843edeaf490f27475003e9303f7929b818e2b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036951"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>编译器警告（等级 4）C4706
-条件表达式中的分配  
-  
- 条件表达式中的测试的值已作为赋值的结果。  
-  
- 分配都有一个值 （分配左侧的值），可以在另一个表达式，包括测试表达式中合法使用。  
-  
- 下面的示例生成 C4706:  
-  
-```  
-// C4706a.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a  = b ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- 即使两个测试条件两边的括号，则也会出现警告：  
-  
-```  
-// C4706b.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a  =  b ) ) // C4706  
-   {  
-   }  
-}  
-```  
-  
- 如果您的意图是测试某一关系并不进行赋值，请使用`==`运算符。 例如，以下行测试是否和 b 是否相等：  
-  
-```  
-// C4706c.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( a == b )  
-   {  
-   }  
-}  
-```  
-  
- 如果你想要将测试值赋值的结果，测试，以确保该赋值非零且不为 null。 例如，下面的代码将不会生成此警告：  
-  
-```  
-// C4706d.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int a = 0, b = 0;  
-   if ( ( a = b ) != 0 )  
-   {  
-   }  
-}  
+
+条件表达式内的赋值
+
+条件表达式中的测试值已分配的结果。
+
+分配有一个值 （在赋值语句左侧的值），可以在另一个表达式，包括测试表达式中合法使用。
+
+下面的示例生成 C4706:
+
+```
+// C4706a.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a  = b ) // C4706
+   {
+   }
+}
+```
+
+即使两个测试条件两边的括号，则将出现警告：
+
+```
+// C4706b.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a  =  b ) ) // C4706
+   {
+   }
+}
+```
+
+如果您的意图是测试某一关系并不进行分配，请使用`==`运算符。 例如，下行将测试和 b 相等：
+
+```
+// C4706c.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( a == b )
+   {
+   }
+}
+```
+
+如果你想要将测试值分配的结果，测试以确保分配非零值且不为 null。 例如，下面的代码将生成此警告：
+
+```
+// C4706d.cpp
+// compile with: /W4
+int main()
+{
+   int a = 0, b = 0;
+   if ( ( a = b ) != 0 )
+   {
+   }
+}
 ```

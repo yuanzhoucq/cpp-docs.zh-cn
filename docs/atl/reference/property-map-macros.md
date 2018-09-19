@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106345"
 ---
 # <a name="property-map-macros"></a>属性映射宏
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 [in]指定包含该属性映射的类。
 
 ### <a name="remarks"></a>备注
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>参数
 
-*szDesc*  
+*szDesc*<br/>
 [in]属性说明。
 
-*成员*  
+*成员*<br/>
 [in]包含范围; 数据成员例如， `m_sizeExtent`。
 
-*vt*  
+*vt*<br/>
 [in]指定属性的变体类型。
 
 ### <a name="remarks"></a>备注
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>参数
 
-*szDesc*  
+*szDesc*<br/>
 [in]属性说明。
 
-*dispid*  
+*dispid*<br/>
 [in]该属性的 DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]关联的属性页的 CLSID。 不具有关联的属性页的属性使用特殊值 CLSID_NULL。
 
-*vt*  
+*vt*<br/>
 [in]属性的类型。
 
 ### <a name="remarks"></a>备注
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>参数
 
-*szDesc*  
+*szDesc*<br/>
 [in]属性说明。
 
-*dispid*  
+*dispid*<br/>
 [in]该属性的 DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]关联的属性页的 CLSID。 不具有关联的属性页的属性使用特殊值 CLSID_NULL。
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in]将属性定义的双重接口的 IID。
 
-*vt*  
+*vt*<br/>
 [in]属性的类型。
 
 ### <a name="remarks"></a>备注
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 [in]属性页的 CLSID。
 
 ### <a name="remarks"></a>备注

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027851"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 结构
 执行线程的抽象。 根据你创建的计划程序的 `SchedulerType` 策略键，资源管理器将授予你由普通的 Win32 线程或用户模式计划 (UMS) 线程支持的线程代理。 UMS 线程在具有 Windows 7 或更高版本的 64 位操作系统上受到支持。  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- `switchState`  
- 指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
+*switchState*<br/>
+指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>备注  
  如果由于某种原因需要解除上下文与执行它的虚拟处理器根的关联，请使用 `SwitchOut`。 根据传入参数 `switchState`的值，以及它是否在虚拟处理器根上执行，此调用将立即返回或阻塞与上下文关联的线程代理。 调用将参数设置为 `SwitchOut` 的 `Idle` 是错误的。 执行此操作将导致[invalid_argument](../../../standard-library/invalid-argument-class.md)异常。  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pContext`  
- 若要以协作方式切换到执行上下文。  
+*pContext*<br/>
+若要以协作方式切换到执行上下文。  
   
- `switchState`  
- 指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
+*switchState*<br/>
+指示正在执行切换的线程代理的状态。 参数的类型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>备注  
  此方法用于从一个执行上下文切换到另一个，从[iexecutioncontext:: Dispatch](iexecutioncontext-structure.md#dispatch)方法的第一个执行上下文。 该方法将相关联的执行上下文`pContext`如果尚未与一个相关联的线程代理使用。 为指定的值确定当前的线程代理的所有权`switchState`参数。  

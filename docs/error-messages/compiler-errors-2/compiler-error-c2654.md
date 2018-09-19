@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2654 |Microsoft 文档
+title: 编译器错误 C2654 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b28fb3de46d9071c9ee19711344c5b41e337934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cbab40739617343f8d2a2e5e26540f01e82f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080839"
 ---
 # <a name="compiler-error-c2654"></a>编译器错误 C2654
-identifier： 尝试在成员函数的外部访问成员  
-  
- 在声明中访问的成员。 可以仅在成员函数中访问成员数据。  
-  
- 在尝试初始化声明中的变量时，可以导致此错误。 为此目的使用构造函数。
+
+identifier： 成员函数的外部访问成员的尝试
+
+在声明中访问成员。 仅在成员函数中，可以访问成员数据。
+
+尝试在声明中初始化变量时，可以导致此错误。 使用构造函数实现此目的。

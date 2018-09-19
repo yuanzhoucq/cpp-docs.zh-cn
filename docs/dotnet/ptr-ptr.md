@@ -1,5 +1,5 @@
 ---
-title: ptr::ptr |Microsoft 文档
+title: ptr::ptr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107021"
 ---
 # <a name="ptrptr"></a>ptr::ptr
-构造`com::ptr`包装的 COM 对象。  
+构造`com::ptr`要包装的 COM 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>参数  
- `P`  
- COM 接口指针。  
+*P*<br/>
+COM 接口指针。  
   
 ## <a name="remarks"></a>备注  
- 无参数构造函数将分配`nullptr`对基础对象句柄。 后续调用`com::ptr`将验证的内部对象，并且以静默方式失败，直到实际创建或附加对象。  
+ 无参数构造函数分配`nullptr`对基础对象句柄。 对后续调用`com::ptr`将验证内部对象，并以静默方式失败，直到实际创建或附加对象。  
   
- 单参数构造函数添加对 COM 对象的引用，但不会释放调用方的引用，以便调用方必须调用`Release`上要真正放弃控件的 COM 对象。 当`com::ptr`的调用析构函数，它将自动释放 COM 对象上的引用。  
+ 一个参数的构造函数中添加对 COM 对象的引用，但不会释放调用方的引用，因此调用方必须调用`Release`上要真正实现控件的 COM 对象。 当`com::ptr`的调用析构函数，它将自动释放 COM 对象上的引用。  
   
- 传递`NULL`向此构造函数是与调用的无参数的版本相同。  
+ 传递`NULL`给此构造函数是与调用无参数版本相同。  
   
 ## <a name="example"></a>示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 它演示如何使用这两个版本的构造函数。  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 它演示了这两个版本的构造函数的使用情况。  
   
 ```  
 // comptr_ptr.cpp  

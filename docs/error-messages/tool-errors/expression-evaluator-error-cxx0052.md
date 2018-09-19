@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0052 |Microsoft 文档
+title: 表达式计算器错误 CXX0052 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f4b6fb0db87a77f433775fedea9880f3f24bd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ba8fb898930ef830857773a89cd80e4c43c59c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302316"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028150"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>表达式计算器错误 CXX0052
-不存在的成员函数  
-  
- 成员函数指定为断点，但无法找到。 在已内联函数处设置断点会导致此错误。  
-  
- 重新编译将文件与内联强制关闭 (/ Ob0) 在此函数中设置断点。  
-  
- 表达式调用未定义的函数。  
-  
- 此错误是与 CAN0052 相同。
+
+成员函数不存在
+
+成员函数指定为一个断点，但未找到。 在已经内联函数处设置断点可能导致此错误。
+
+重新编译该文件与内联强制关闭 (/ Ob0) 在此函数中设置断点。
+
+一个名为未定义的函数的表达式。
+
+此错误是与 CAN0052 相同。

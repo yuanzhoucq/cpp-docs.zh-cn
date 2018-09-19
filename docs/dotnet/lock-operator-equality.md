@@ -1,5 +1,5 @@
 ---
-title: lock::operator = = |Microsoft 文档
+title: lock::operator = = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 276ad5b44dd2112abad2c7c2e293fc65b173fffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38cefb80b1c4c6969cba976c30383c1499a4968d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133254"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048885"
 ---
 # <a name="lockoperator"></a>lock::operator==
 相等运算符。  
@@ -39,11 +39,11 @@ template<class T> bool operator==(
 ```  
   
 #### <a name="parameters"></a>参数  
- `t`  
- 要比较相等的对象。  
+*t*<br/>
+要比较相等的对象。  
   
 ## <a name="return-value"></a>返回值  
- 返回`true`如果`t`锁的对象，与相同`false`否则为。  
+ 返回`true`如果`t`锁的对象，相同`false`否则为。  
   
 ## <a name="example"></a>示例  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106221"
 ---
 # <a name="marshaling-global-functions"></a>封送全局函数
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]一个指向`IStream`用于封送处理的流上的接口。
 
 ### <a name="example"></a>示例
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 [in]指向要封送的接口的指针。
 
-*iid*  
+*iid*<br/>
 [in]正在封送的接口的 GUID。
 
-*ppStream*  
+*ppStream*<br/>
 [out]一个指向`IStream`上新的流对象用于封送处理的接口。
 
 ### <a name="return-value"></a>返回值
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>参数
 
-*pStream*  
+*pStream*<br/>
 [in]指向要取消封送的流的指针。
 
-*iid*  
+*iid*<br/>
 [in]正在取消封送的接口的 GUID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]指向取消封送的接口的指针。
 
 ### <a name="return-value"></a>返回值

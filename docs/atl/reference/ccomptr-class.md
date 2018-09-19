@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030919"
 ---
 # <a name="ccomptr-class"></a>CComPtr 类
 
@@ -32,13 +32,13 @@ ms.locfileid: "43761392"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 指定要存储的指针的类型的 COM 接口。
 
 ## <a name="members"></a>成员
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>参数
 
-*lp*  
+*lp*<br/>
 用于初始化的接口指针。
 
-*T*  
+*T*<br/>
 COM 接口。
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ T* operator= (const CComPtr<T>& lp) throw ();
 
 ## <a name="see-also"></a>请参阅
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [类概述](../../atl/atl-class-overview.md)

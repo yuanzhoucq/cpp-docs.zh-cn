@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091824"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 类
 
@@ -54,16 +54,16 @@ ms.locfileid: "43764938"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`CSnapInItemImpl`。
 
-*bIsExtension*  
+*bIsExtension*<br/>
 如果对象是一个管理单元扩展; 则为 TRUE否则为 FALSE。
 
 ## <a name="members"></a>成员
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>参数
 
-*piCallback*  
+*piCallback*<br/>
 [in]指向`IContextMenuCallback`，可以将项添加到上下文菜单。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in、 out]标识 Microsoft 管理控制台 MMC 定义菜单项的插入点，可以使用。 这可以是下列标志的组合：
 
 - 可以在上下文菜单的顶部插入 CCM_INSERTIONALLOWED_TOP 项。
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - 在工具栏上的视图菜单中或在结果窗格上下文菜单的视图子菜单中，可以插入 CCM_INSERTIONALLOWED_VIEW 项。
 
-*type*  
+*type*<br/>
 [in]指定的对象的类型。 它可以具有以下值之一：
 
 - 作用域窗格上下文的 CCT_SCOPE 数据对象。
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>参数
 
-*lCommandID*  
+*lCommandID*<br/>
 [in]指定菜单项的命令标识符。
 
-*type*  
+*type*<br/>
 [in]指定的对象的类型。 它可以具有以下值之一：
 
 - 作用域窗格上下文的 CCT_SCOPE 数据对象。
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>参数
 
-*lpProvider*  
+*lpProvider*<br/>
 [in]指向`IPropertySheetCallback`接口。
 
-*句柄*  
+*句柄*<br/>
 [in]指定用于 MMCN_PROPERTY_CHANGE 通知消息路由到相应的数据类的句柄。
 
-*pUnk*  
+*pUnk*<br/>
 [in]指向`IExtendPropertySheet`上包含的节点的上下文信息的对象的接口。
 
-*type*  
+*type*<br/>
 [in]指定的对象的类型。 它可以具有以下值之一：
 
 - 作用域窗格上下文的 CCT_SCOPE 数据对象。
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>参数
 
-*cf*  
+*cf*<br/>
 [in]剪贴板格式 （文本、 格式文本或与 OLE 项的多格式文本）。
 
-*pStream*  
+*pStream*<br/>
 [in]指向包含对象数据的流的指针。
 
 ### <a name="remarks"></a>备注
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>参数
 
-*读*  
+*读*<br/>
 [out]指向返回的视图类型的地址。
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out]指向 MMC_VIEW_OPTIONS 枚举为控制台提供了由拥有管理单元指定的选项。 此值可以是以下值之一：
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 指示控制台以避免在演示中的标准列表视图选择**视图**菜单。 允许的管理单元仅在结果视图窗格中显示其自己的自定义视图。 这是在此时间定义的唯一选项标志。
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>参数
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out]一个指向`SCOPEDATAITEM`结构的`CSnapInItemImpl`对象。
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>参数
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out]一个指向`RESULTDATAITEM`结构的`CSnapInItemImpl`对象。
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>参数
 
-*event*  
+*event*<br/>
 [in]标识用户所执行的操作。 可能会出现以下通知：
 
 - MMCN_ACTIVATE 发送是一个窗口时激活和停用。
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - 当管理单元中时，可以更新所有视图发生更改时发送 MMCN_VIEW_CHANGE。
 
-*arg*  
+*arg*<br/>
 [in]取决于通知类型。
 
-*param*  
+*param*<br/>
 [in]取决于通知类型。
 
-*pComponentData*  
+*pComponentData*<br/>
 [out]指向对象实现的指针`IComponentData`。 此参数为 NULL，如果不从转发通知`IComponentData::Notify`。
 
-*pComponent*  
+*pComponent*<br/>
 [out]指向实现的对象的指针`IComponent`。 此参数为 NULL，如果不从转发通知`IComponent::Notify`。
 
-*type*  
+*type*<br/>
 [in]指定的对象的类型。 它可以具有以下值之一：
 
 - 作用域窗格上下文的 CCT_SCOPE 数据对象。
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>参数
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in]如果项被添加到上下文菜单中; 之前，应调用的函数，非零值否则为 0。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in、 out]标识 Microsoft 管理控制台 MMC 定义菜单项的插入点，可以使用。 这可以是下列标志的组合：
 
 - 可以在上下文菜单的顶部插入 CCM_INSERTIONALLOWED_TOP 项。
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]若要设置的工具栏按钮的 ID。
 
-*fsState*  
+*fsState*<br/>
 [in]按钮状态标志。 可以是一个或多项操作：
 
 - TBSTATE_CHECKED 按钮具有 TBSTYLE_CHECKED 样式和已按下。
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - 该按钮后跟 TBSTATE_WRAP 一个换行符。 该按钮还必须具有 TBSTATE_ENABLED。
 
-*fsType*  
+*fsType*<br/>
 [in]按钮状态标志。 可以是一个或多项操作：
 
 - TBSTYLE_BUTTON 创建标准的推送按钮。
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 [in]要设置的菜单项的 ID。
 
-*pBuf*  
+*pBuf*<br/>
 [in]指向要更新的菜单项的字符串的指针。
 
-*flags*  
+*flags*<br/>
 [in]指定新的状态标志。 这可以是下列标志的组合：
 
 - MF_POPUP 指定这是上下文菜单中的子菜单。 菜单项、 插入点，以及进一步子菜单可能添加到此子菜单使用其`lCommandID`作为其`IInsertionPointID`。
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>参数
 
-*id*  
+*id*<br/>
 指定要更新的工具栏按钮的按钮 ID。
 
-*fsState*  
+*fsState*<br/>
 指定工具栏按钮状态。 如果要设置此状态，则返回 TRUE。 这可以是下列标志的组合：
 
 - 已启用该按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并就会变灰。

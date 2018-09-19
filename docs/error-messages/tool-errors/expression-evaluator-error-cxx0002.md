@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0002 |Microsoft 文档
+title: 表达式计算器错误 CXX0002 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3faf350fa14156a82218fed506f50e45084501dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77e5db3859e0ada60999f329fddc82926b607579
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081034"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>表达式计算器错误 CXX0002
-错误访问用户内存  
-  
- 表达式尝试引用不会将其分配给正在调试的程序的内存。  
-  
- 此错误是与 CAN0002 相同。
+
+访问用户内存的错误
+
+表达式尝试引用不分配给正在调试的程序的内存。
+
+此错误是与 CAN0002 相同。

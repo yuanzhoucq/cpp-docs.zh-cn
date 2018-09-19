@@ -17,28 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 444f56c1a999f09a79d725173c9f0f19399ab363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118357"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
-**Microsoft 专用**  
-  
- 调用**发行**成员函数的`IUnknown`上封装的接口指针。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void Release( );  
-```  
-  
-## <a name="remarks"></a>备注  
- 调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针为 NULL。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_com_ptr_t 类](../cpp/com-ptr-t-class.md)
+
+**Microsoft 专用**
+
+调用**发行**成员函数的`IUnknown`上封装的接口指针。
+
+## <a name="syntax"></a>语法
+
+```
+void Release( );
+```
+
+## <a name="remarks"></a>备注
+
+调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针为 NULL。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_com_ptr_t 类](../cpp/com-ptr-t-class.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065316"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 类
 
@@ -36,13 +36,13 @@ ms.locfileid: "43755055"
 ## <a name="syntax"></a>语法
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -170,7 +170,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 类](../../atl/reference/ccomobject-class.md)   
-[CComObjectGlobal 类](../../atl/reference/ccomobjectglobal-class.md)   
+[CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 类](../../atl/reference/ccomobject-class.md)<br/>
+[CComObjectGlobal 类](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

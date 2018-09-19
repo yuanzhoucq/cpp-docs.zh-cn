@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561bfa3e307a08c6a3560a6a8b6d3bebd8598343
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028085"
 ---
 # <a name="understanding-parse-trees"></a>了解分析树
 
 你可以定义一个或多个分析树中注册器脚本，其中每个分析树具有以下形式：
 
-```  
-<root key>{<registry expression>}+  
+```
+<root key>{<registry expression>}+
 ```
 
 其中：
 
-```  
+```
 <root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
     HKEY_LOCAL_MACHINE | HKEY_USERS |  
     HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
     HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-    HKLM | HKU | HKPD | HKDD | HKCC  
-<registry expression> ::= <Add Key> | <Delete Key>  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]  
-<Delete Key> ::= Delete<Key Name>  
-<Key Name> ::= '<AlphaNumeric>+'  
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
-<Key Value> ::== <Key Type><Key Name>  
-<Key Type> ::= s | d  
-<Key Value> ::= '<AlphaNumeric>'  
+    HKLM | HKU | HKPD | HKDD | HKCC
+<registry expression> ::= <Add Key> | <Delete Key>
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
+<Delete Key> ::= Delete<Key Name>
+<Key Name> ::= '<AlphaNumeric>+'
+<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
+<Key Value> ::== <Key Type><Key Name>
+<Key Type> ::= s | d
+<Key Value> ::= '<AlphaNumeric>'
 ```
 
 > [!NOTE]
@@ -52,8 +52,8 @@ ms.locfileid: "43751190"
 
 分析树可以添加多个项和子项到\<根密钥 >。 在执行此操作，它维护子项的句柄打开直到分析器完成分析所有子项。 这种方法是比一次对一个密钥操作更高效，如下面的示例中所示：
 
-```  
-HKEY_CLASSES_ROOT  
+```
+HKEY_CLASSES_ROOT
 {  
     'MyVeryOwnKey'  
     {  
@@ -61,8 +61,8 @@ HKEY_CLASSES_ROOT
         {  
             'PrettyCool'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 在这里，注册机构最初打开 （创建） `HKEY_CLASSES_ROOT\MyVeryOwnKey`。 然后可以看到，`MyVeryOwnKey`有一个子项。 而不是关闭的关键`MyVeryOwnKey`，注册机构会保留该句柄，并打开 （创建）`HasASubKey`使用此父句柄。 （系统注册表可能要慢时没有父句柄处于打开状态。）因此，打开`HKEY_CLASSES_ROOT\MyVeryOwnKey`，然后打开`HasASubKey`与`MyVeryOwnKey`快于打开父原样`MyVeryOwnKey`，正在关闭`MyVeryOwnKey`，然后打开`MyVeryOwnKey\HasASubKey`。

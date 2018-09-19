@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2601 |Microsoft 文档
+title: 编译器错误 C2601 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49598223c3f68271065cc6212da19767020c51e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522abe9c3cb4b9922a6b307055a3d85f40253793
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062951"
 ---
 # <a name="compiler-error-c2601"></a>编译器错误 C2601
-function： 局部函数定义是非法的  
-  
- 代码尝试定义函数中的函数。  
-  
- 或者，C2601 错误的位置之前在源代码中可能有一个额外的大括号。  
-  
- 下面的示例生成 C2601:  
-  
-```  
-// C2601.cpp  
-int main() {  
-   int i = 0;  
-  
-   void funcname(int j) {   // C2601  
-      j++;  
-   }  
-}  
+
+function： 本地函数定义是非法的
+
+代码尝试定义函数中的函数。
+
+或者，C2601 错误的位置之前在源代码中可能有一个额外的大括号。
+
+下面的示例生成 C2601:
+
+```
+// C2601.cpp
+int main() {
+   int i = 0;
+
+   void funcname(int j) {   // C2601
+      j++;
+   }
+}
 ```

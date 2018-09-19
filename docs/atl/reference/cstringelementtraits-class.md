@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074046"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 类
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766641"
 ## <a name="syntax"></a>语法
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合中的数据类型。
 
 ## <a name="members"></a>成员
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 第一个字符串元素。
 
-*str2*  
+*str2*<br/>
 第二个字符串元素。
 
 ### <a name="return-value"></a>返回值
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>参数
 
-*str1*  
+*str1*<br/>
 第一个字符串元素。
 
-*str2*  
+*str2*<br/>
 第二个字符串元素。
 
 ### <a name="return-value"></a>返回值
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>参数
 
-*pDest*  
+*pDest*<br/>
 指向将接收复制的数据的第一个元素的指针。
 
-*pSrc*  
+*pSrc*<br/>
 指向要复制的第一个元素的指针。
 
-*nElements*  
+*nElements*<br/>
 要复制的元素数。
 
 ### <a name="remarks"></a>备注
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>参数
 
-*str*  
+*str*<br/>
 字符串元素中。
 
 ### <a name="return-value"></a>返回值
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>参数
 
-*pDest*  
+*pDest*<br/>
 指向将接收重新定位的数据的第一个元素的指针。
 
-*pSrc*  
+*pSrc*<br/>
 指向要重新定位的第一个元素的指针。
 
-*nElements*  
+*nElements*<br/>
 要重新定位的元素数。
 
 ### <a name="remarks"></a>备注
@@ -203,6 +203,6 @@ static void RelocateElements(
 
 ## <a name="see-also"></a>请参阅
 
-[CElementTraitsBase 类](../../atl/reference/celementtraitsbase-class.md)   
-[CStringElementTraitsI 类](../../atl/reference/cstringelementtraitsi-class.md)   
+[CElementTraitsBase 类](../../atl/reference/celementtraitsbase-class.md)<br/>
+[CStringElementTraitsI 类](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

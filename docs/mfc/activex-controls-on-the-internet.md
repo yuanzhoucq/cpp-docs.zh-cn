@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: d3e7603bfe2074022cdaa0e99024627c32452b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072792"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
@@ -174,33 +174,21 @@ ActiveX 控件是 OLE 控件规范的更新版本。
 ## <a name="displaying-a-control-on-a-web-page"></a>在网页上显示控件  
  以下是用于在网页上插入控件的对象标记和特性的示例。  
   
- `<OBJECT`  
-  
- `CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"`  
-  
- `CODEBASE="/ie/download/activex/iechart.ocx"`  
-  
- `ID=chart1`  
-  
- `WIDTH=400`  
-  
- `HEIGHT=200`  
-  
- `ALIGN=center`  
-  
- `HSPACE=0`  
-  
- `VSPACE=0`  
-  
- `>`  
-  
- `<PARAM NAME="BackColor" value="#ffffff">`  
-  
- `<PARAM NAME="ForeColor" value="#0000ff">`  
-  
- `<PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt">`  
-  
- `</OBJECT>`  
+```xml
+<OBJECT
+  CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"
+  CODEBASE="/ie/download/activex/iechart.ocx"
+  ID=chart1
+  WIDTH=400
+  HEIGHT=200
+  ALIGN=center
+  HSPACE=0
+  VSPACE=0>
+  <PARAM NAME="BackColor" value="#ffffff"/>
+  <PARAM NAME="ForeColor" value="#0000ff"/>
+  <PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt"/>
+</OBJECT>
+```
   
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>将现有 OLE 控件更新为使用新的 ActiveX 控件功能  
  如果 OLE 控件是使用 4.2 之前的 Visual C++ 版本创建的，则您可执行下列步骤来提高其性能并增强其功能。 有关这些更改的详细讨论，请参阅[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。  

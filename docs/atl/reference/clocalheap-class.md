@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ded1ccb86a7580cf8f004c1f61a82c876eccbe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c28a979c96a7523d2fb282a05eb2816f149b4fe2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087534"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 
@@ -83,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -106,7 +106,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。
 
 ### <a name="remarks"></a>备注
@@ -123,7 +123,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。
 
 ### <a name="return-value"></a>返回值
@@ -144,10 +144,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 指向此内存管理器以前分配的内存的指针。
 
-*nBytes*  
+*nBytes*<br/>
 新内存块中请求的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -162,9 +162,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
-[CComHeap 类](../../atl/reference/ccomheap-class.md)   
-[CWin32Heap 类](../../atl/reference/cwin32heap-class.md)   
-[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)   
-[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
+[CComHeap 类](../../atl/reference/ccomheap-class.md)<br/>
+[CWin32Heap 类](../../atl/reference/cwin32heap-class.md)<br/>
+[CGlobalHeap 类](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap 类](../../atl/reference/ccrtheap-class.md)<br/>
 [IAtlMemMgr 类](../../atl/reference/iatlmemmgr-class.md)

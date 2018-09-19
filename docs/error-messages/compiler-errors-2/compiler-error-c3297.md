@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3297 |Microsoft 文档
+title: 编译器错误 C3297 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afdf54e7a335dda86a4046a01b31875a0c91575
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa23cebc7ad7019c375c351f723b7ad1573ab86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069828"
 ---
 # <a name="compiler-error-c3297"></a>编译器错误 C3297
-“constraint_2”：不能使用“constraint_1”作为约束，因为“constraint_1”具有值约束  
-  
- 值类已密封。 如果约束是值类，则永远无法从它派生其他约束。  
-  
- 有关详细信息，请参阅[泛型类型参数的约束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3297。  
-  
-```  
-// C3297.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : value class  
-where U : T   // C3297  
-public ref struct R {};  
+
+“constraint_2”：不能使用“constraint_1”作为约束，因为“constraint_1”具有值约束
+
+值类已密封。 如果约束是值类，则永远无法从它派生其他约束。
+
+有关详细信息，请参阅[泛型类型参数的约束 (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3297。
+
+```
+// C3297.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : value class
+where U : T   // C3297
+public ref struct R {};
 ```

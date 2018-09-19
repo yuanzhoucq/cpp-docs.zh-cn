@@ -1,5 +1,5 @@
 ---
-title: 使用 ODBC 工作与其他用户 |Microsoft 文档
+title: 使用 ODBC 工作与其他用户 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40a5fe161f76076025fbfecfa053bc35ee853627
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d87ec365f6e6dbdf913d9e1f66de871f74de3d5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052421"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>使用 ODBC 与其他用户一同工作
+
 多个用户正在使用相同的 ODBC 数据库在环境中使用 ODBC。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 ## <a name="see-also"></a>请参阅  
- [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

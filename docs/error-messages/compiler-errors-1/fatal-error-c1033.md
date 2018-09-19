@@ -1,5 +1,5 @@
 ---
-title: 错误 C1033 |Microsoft 文档
+title: 错误 C1033 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837b155c1cbe3b8d6af730a4cb9fd65ea388a19c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6338325a788ec0c0e672c2dc28fa8fea73c3ec9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032193"
 ---
 # <a name="fatal-error-c1033"></a>错误 C1033
-无法打开程序数据库 pdb  
-  
- 可以通过磁盘错误导致此错误。  
-  
-  
- 有关详细信息，请参阅[ http://support.microsoft.com/default.aspx?scid=kb; en-我们; 246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007)。
+
+无法打开程序数据库 pdb
+
+可以通过磁盘错误导致此错误。
+
+
+有关详细信息，请参阅[ http://support.microsoft.com/default.aspx?scid=kb; en-我们; 246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007)。

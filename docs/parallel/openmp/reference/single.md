@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a57d93d8d2be84a470dd48d1ca6f9b04010182f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020974"
 ---
 # <a name="single"></a>单个
 可以指定一段代码应在单个线程，不一定是主线程上执行。  
@@ -37,7 +37,7 @@ ms.locfileid: "45716984"
   
 #### <a name="parameters"></a>参数  
 
-`clause`  
+*子句*<br/>
 （可选）零个或多个子句。 请参阅支持的子句的列表的备注部分**单个**。  
   
 ## <a name="remarks"></a>备注  
@@ -51,13 +51,13 @@ ms.locfileid: "45716984"
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [主](../../../parallel/openmp/reference/master.md)指令，可以指定应仅在主线程上执行的代码段。  
+[主](../../../parallel/openmp/reference/master.md)指令，可以指定应仅在主线程上执行的代码段。  
   
  有关详细信息，请参阅[2.4.3 单一构造](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // omp_single.cpp  
 // compile with: /openmp   
 #include <stdio.h>  

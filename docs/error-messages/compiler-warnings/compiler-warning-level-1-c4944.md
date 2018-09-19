@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4944 |Microsoft 文档
+title: 编译器警告 （等级 1） C4944 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ddad7aa383cfd6f8716d6b12fa56627c1ee0e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf155ce5fb53bb4b1b5914d7738c8c12f458888
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105491"
 ---
 # <a name="compiler-warning-level-1-c4944"></a>编译器警告（等级 1）C4944
-“symbol”：无法从“assembly1”导入符号，因为当前范围内已存在“symbol”  
-  
- 在源代码文件中定义了符号，然后 #using 语句引用了也已定义该符号的程序集。 程序集中的符号将被忽略。  
-  
-## <a name="example"></a>示例  
- 下面的示例使用一个名为 ClassA 类型创建了一个组件。  
-  
-```  
-// C4944.cs  
-// compile with: /target:library  
-// C# source code to create a dll  
-public class ClassA {  
-   public int i;  
-}  
-```  
-  
-## <a name="example"></a>示例  
- 以下示例生成 C4944。  
-  
-```  
-// C4944b.cpp  
-// compile with: /clr /W1  
-class ClassA {  
-public:  
-   int u;  
-};  
-  
-#using "C4944.dll"   // C4944 ClassA also defined C4944.dll  
-  
-int main() {  
-   ClassA * x = new ClassA();  
-   x->u = 9;  
-   System::Console::WriteLine(x->u);  
-}  
+
+“symbol”：无法从“assembly1”导入符号，因为当前范围内已存在“symbol”
+
+在源代码文件中定义了符号，然后 #using 语句引用了也已定义该符号的程序集。 程序集中的符号将被忽略。
+
+## <a name="example"></a>示例
+
+下面的示例使用一个名为 ClassA 类型创建了一个组件。
+
+```
+// C4944.cs
+// compile with: /target:library
+// C# source code to create a dll
+public class ClassA {
+   public int i;
+}
+```
+
+## <a name="example"></a>示例
+
+以下示例生成 C4944。
+
+```
+// C4944b.cpp
+// compile with: /clr /W1
+class ClassA {
+public:
+   int u;
+};
+
+#using "C4944.dll"   // C4944 ClassA also defined C4944.dll
+
+int main() {
+   ClassA * x = new ClassA();
+   x->u = 9;
+   System::Console::WriteLine(x->u);
+}
 ```

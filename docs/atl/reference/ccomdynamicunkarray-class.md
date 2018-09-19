@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b36f19cc6e3deddbd5984e63b70c61a0ca8ea8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068463"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 类
 
@@ -93,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>参数
 
-*pUnk*  
+*pUnk*<br/>
 `IUnknown`用于添加到数组的指针。
 
 ### <a name="return-value"></a>返回值
@@ -174,7 +174,7 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要检索的元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -191,7 +191,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>参数
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown`为其关联的 cookie 是必需的指针。
 
 ### <a name="return-value"></a>返回值
@@ -224,7 +224,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>参数
 
-*dwCookie*  
+*dwCookie*<br/>
 为其 cookie 关联`IUnknown`指针是必需。
 
 ### <a name="return-value"></a>返回值
@@ -241,7 +241,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>参数
 
-*dwCookie*  
+*dwCookie*<br/>
 Cookie 引用`IUnknown`指针要从数组中删除。
 
 ### <a name="return-value"></a>返回值
@@ -250,5 +250,5 @@ Cookie 引用`IUnknown`指针要从数组中删除。
 
 ## <a name="see-also"></a>请参阅
 
-[CComUnkArray 类](../../atl/reference/ccomunkarray-class.md)   
+[CComUnkArray 类](../../atl/reference/ccomunkarray-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

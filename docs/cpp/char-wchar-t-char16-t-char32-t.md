@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0c89df02c624d96c613f6241c9beefd466827e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9855dc406c56f82eb3ed87248316103397e44007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112650"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
+
 类型**char**， **wchar_t**， **char16_t**并**char32_t**是表示字母数字字符的内置类型，以及非字母数字的标志符号和非打印字符。
 
 ## <a name="syntax"></a>语法
 
-```cpp  
-char     ch1{ 'a' };  // or { u8'a' }   
-wchar_t  ch2{ L'a' };    
-char16_t ch3{ u'a' };    
-char32_t ch4{ U'a' };  
-```  
-  
+```cpp
+char     ch1{ 'a' };  // or { u8'a' }
+wchar_t  ch2{ L'a' };
+char16_t ch3{ u'a' };
+char32_t ch4{ U'a' };
+```
+
 ## <a name="remarks"></a>备注
 
 **Char**类型是 C 和 C++ 中的原始字符类型。 类型**无符号 char**通常用于表示*字节*，这不是 C++ 中的内置类型。 **Char**类型可以用于存储中的字符的 ASCII 字符集或任何 ISO-8859 字符集，并且各个字节多字节字符，如 Shift JIS 或 Unicode 字符集的 utf-8 编码。 字符串**char**类型被称为*缩小*字符串，即使使用多字节字符进行编码。 在 Microsoft 编译器**char**是一个 8 位类型。
@@ -44,4 +45,4 @@ char32_t ch4{ U'a' };
 
 **Char16_t**并**char32_t**类型分别表示 16 位和 32 位的宽字符。 Unicode 编码为 utf-16 可以存储在**char16_t**类型和 Unicode 编码为 UTF-32 可以存储在**char32_t**类型。 这些类型的字符串和**wchar_t**是所有被称为*宽*字符串，但此术语通常专指的字符串**wchar_t**类型。
 
-在 C++ 标准库，`basic_string`类型专用于窄和宽字符串。 使用`std::string`字符时的类型都是**char**，`std::u16string`字符时的类型都是**char16_t**，`std::u32string`字符时的类型都是**char32_t**，并`std::wstring`字符时的类型都是**wchar_t**。 表示文本，其他类型包括`std::stringstream`和`std::cout`均可专用于窄和宽字符串。  
+在 C++ 标准库，`basic_string`类型专用于窄和宽字符串。 使用`std::string`字符时的类型都是**char**，`std::u16string`字符时的类型都是**char16_t**，`std::u32string`字符时的类型都是**char32_t**，并`std::wstring`字符时的类型都是**wchar_t**。 表示文本，其他类型包括`std::stringstream`和`std::cout`均可专用于窄和宽字符串。

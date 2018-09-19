@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2495 |Microsoft 文档
+title: 编译器错误 C2495 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be85ad161c719af5dba537a96b2d9c327b06d56e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a3425ea527299d9594b1d296a41a4eaec4c3951
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108360"
 ---
 # <a name="compiler-error-c2495"></a>编译器错误 C2495
-identifier: nothrow 只能应用于函数声明或定义  
-  
- [Nothrow](../../cpp/nothrow-cpp.md)扩展的特性可以应用于函数声明或定义仅。  
-  
- 下面的示例生成 C2495:  
-  
-```  
-// C2495.cpp  
-// compile with: /c  
-__declspec(nothrow) class X {   // C2495  
-   int m_data;  
-} x;  
-  
-__declspec(nothrow) void test();   // OK  
+
+identifier: nothrow 只能应用于函数声明或定义
+
+[Nothrow](../../cpp/nothrow-cpp.md)扩展的特性可以应用于函数声明或定义仅。
+
+下面的示例生成 C2495:
+
+```
+// C2495.cpp
+// compile with: /c
+__declspec(nothrow) class X {   // C2495
+   int m_data;
+} x;
+
+__declspec(nothrow) void test();   // OK
 ```

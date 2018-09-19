@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 C4961 |Microsoft 文档
+title: 编译器警告 C4961 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68027aa11bedc6e9ad94fddc71a217a5e91bd2ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397ada023e5640cacd53fe45ffd0d250c5799d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105100"
 ---
 # <a name="compiler-warning-c4961"></a>编译器警告 C4961
-没有将任何配置文件数据合并到“.pgd file”，因此已禁用按配置文件优化  
-  
- 没有可用的配置文件数据（.pgc 文件），因此按配置优化不会发生。
+
+没有将任何配置文件数据合并到“.pgd file”，因此已禁用按配置文件优化
+
+没有可用的配置文件数据（.pgc 文件），因此按配置优化不会发生。

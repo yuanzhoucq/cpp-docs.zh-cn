@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0047193b3c16c93c23bab648735c2cc643bf20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50ab066219832258965ec96477a2ef268e127c53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099639"
 ---
 # <a name="debug"></a>_DEBUG
-指定 /MTd 或 /MDd 选项时，编译器将定义 `_DEBUG`。 这些选项可指定 C 运行时库的调试版本。  
-  
- 有关详细信息，请参阅 [CRT 调试方法](/visualstudio/debugger/crt-debugging-techniques)。  
-  
-## <a name="see-also"></a>请参阅  
- [控制标志](../c-runtime-library/control-flags.md)
+
+指定 /MTd 或 /MDd 选项时，编译器将定义 `_DEBUG`。 这些选项可指定 C 运行时库的调试版本。
+
+有关详细信息，请参阅 [CRT 调试方法](/visualstudio/debugger/crt-debugging-techniques)。
+
+## <a name="see-also"></a>请参阅
+
+[控制标志](../c-runtime-library/control-flags.md)

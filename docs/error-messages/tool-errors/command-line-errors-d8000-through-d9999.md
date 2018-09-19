@@ -1,5 +1,5 @@
 ---
-title: 命令行错误 D8000 到 D9999 |Microsoft 文档
+title: 命令行错误 D8000 到 D9999 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e608745f4c10d915ee0fc8a2cdad2f372f81046c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bed2202c8dc7f6372a102eb3926ac49d568793a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096699"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>命令行错误 D8000 到 D9999
 
-本部分中的文章提供了对命令行生成工具所生成的错误的引用。
+在本部分中的文章提供了对生成的生成工具的命令行错误的引用。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -63,4 +63,4 @@ ms.locfileid: "33302537"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

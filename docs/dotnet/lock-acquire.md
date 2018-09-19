@@ -1,5 +1,5 @@
 ---
-title: lock::acquire |Microsoft 文档
+title: lock::acquire |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042008"
 ---
 # <a name="lockacquire"></a>lock::acquire
-获取对某个对象 （可选） 等待一定的时间，或者根本不限次数，获取锁的锁。  
+获取对象后，可以选择等待下去，为指定的量的时间，或者根本不获取锁的锁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>参数  
- `_timeout`  
- 超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
+*超时) (_t*<br/>
+超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
 ## <a name="exceptions"></a>异常  
  引发<xref:System.ApplicationException>如果获取锁超时前不会发生。  
   
 ## <a name="remarks"></a>备注  
- 如果未提供的超时值，默认超时为<xref:System.Threading.Timeout.Infinite>。  
+ 如果未提供超时值，默认超时值是<xref:System.Threading.Timeout.Infinite>。  
   
  如果已获取锁，则此函数没有任何影响。  
   
 ## <a name="example"></a>示例  
- 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
+ 此示例跨多个线程使用单个类的实例。  类自身上使用锁来确保对其内部数据的访问是为每个线程保持一致。  主应用程序线程的类的同一实例上使用锁来定期检查以查看任何工作线程仍存在，并等待，直到所有工作线程退出已完成其任务。  
   
 ```  
 // msl_lock_acquire.cpp  

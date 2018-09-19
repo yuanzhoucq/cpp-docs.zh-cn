@@ -1,5 +1,5 @@
 ---
-title: NMAKE 警告 U4007 |Microsoft 文档
+title: NMAKE 警告 U4007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c28bf0918e61f3819865f65458ce78e5cdc4eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40c186e222edbb3b141fd13d8a5964e4a696edd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087508"
 ---
 # <a name="nmake-warning-u4007"></a>NMAKE 警告 U4007
-文件名 filename 太长;截断为 8.3  
-  
- 给定的文件的基名称具有多于 8 个字符，或扩展具有多个三个字符。 NMAKE 截断到 8 个字符基类型和扩展名为三个字符的名称。  
-  
- 如果您的文件系统支持长文件名，将名称括在双引号 (**"**)。
+
+文件名 filename 太长;截断为 8.3
+
+给定的文件的基名称具有超过八个字符或扩展具有三个以上的字符。 NMAKE 截断到了八个字符的基数和三个字符扩展的名称。
+
+如果您的文件系统支持长文件名，将名称括在双引号引起来 (**"**)。

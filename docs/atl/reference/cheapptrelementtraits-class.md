@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28136c9fa131d525878fe0551f5ba2421576951
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057491"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 类
 
@@ -36,17 +36,17 @@ ms.locfileid: "43760079"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T, class Allocator = ATL::CCRTAllocator>  
+template<typename T, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrElementTraits : 
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合类的对象类型。
 
-*分配器*  
+*分配器*<br/>
 要使用的内存分配类。 默认值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。
 
 ## <a name="members"></a>成员
@@ -98,6 +98,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>请参阅
 
-[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)   
-[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   
+[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

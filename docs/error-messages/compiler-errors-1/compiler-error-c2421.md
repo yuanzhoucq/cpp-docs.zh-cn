@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2421 |Microsoft 文档
+title: 编译器错误 C2421 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135940"
 ---
 # <a name="compiler-error-c2421"></a>编译器错误 C2421
-PTR 运算符用于 context 中的注册  
-  
- `PTR`运算符不能与使用`register`操作数。
+
+Context 中与寄存器一起使用的 PTR 运算符
+
+`PTR`运算符不能与一起使用`register`操作数。

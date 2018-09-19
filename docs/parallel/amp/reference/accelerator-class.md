@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106762"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 加速器是针对数据并行计算优化的硬件功能。 加速器可能是附加到 PCIe 总线 （例如 GPU) 的设备也可能是主 CPU 上设置的扩展的指令。  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Device_path`  
- 物理设备的路径。  
+*_Device_path*<br/>
+物理设备的路径。  
   
- `_Other`  
- 复制的快捷键。  
+*_Other*<br/>
+复制的快捷键。  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>参数  
- `qmode`  
- 排队模式。  
+*qmode*<br/>
+排队模式。  
   
 ### <a name="return-value"></a>返回值  
  使用指定队列的模式，在此快捷键上创建的新 `accelerator_view` 对象。  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- 与此对象相比较的 `accelerator` 对象。  
+*_Other*<br/>
+与此对象相比较的 `accelerator` 对象。  
   
 ### <a name="return-value"></a>返回值  
  `false` 如果两个`accelerator`是相同的对象; 否则为`true`。  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `accelerator`要从复制对象。  
+*_Other*<br/>
+`accelerator`要从复制对象。  
   
 ### <a name="return-value"></a>返回值  
  对此引用`accelerator`对象。  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- 与此对象相比较的 `accelerator` 对象。  
+*_Other*<br/>
+与此对象相比较的 `accelerator` 对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果另`accelerator`对象是与此相同`accelerator`对象; 否则为`false`。  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Path`  
- 快捷键的路径。  
+*路径 （_p)*<br/>
+快捷键的路径。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果调用成功设置默认快捷键。 否则为 `false`。  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Default_cpu_access_type`  
- 要用于此快捷键上 array/array_view 内存分配默认 cpu access_type。  
+*_Default_cpu_access_type*<br/>
+要用于此快捷键上 array/array_view 内存分配默认 cpu access_type。  
   
 ### <a name="return-value"></a>返回值  
  一个布尔值，该值指示是否已成功设置快捷键的默认 cpu access_type。  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `accelerator_view`要复制对象。  
+*_Other*<br/>
+`accelerator_view`要复制对象。  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- 与此对象相比较的 `accelerator_view` 对象。  
+*_Other*<br/>
+与此对象相比较的 `accelerator_view` 对象。  
   
 ### <a name="return-value"></a>返回值  
  如果两个对象相同，则为 `false`；否则为 `true`。  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- `accelerator_view`要从复制对象。  
+*_Other*<br/>
+`accelerator_view`要从复制对象。  
   
 ### <a name="return-value"></a>返回值  
  对修改后的 `accelerator_view` 对象的引用。  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Other`  
- 与此对象相比较的 `accelerator_view` 对象。  
+*_Other*<br/>
+与此对象相比较的 `accelerator_view` 对象。  
   
 ### <a name="return-value"></a>返回值  
  如果两个对象相同，则为 `true`；否则为 `false`。  

@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ce07cfce4b7361486489c2f00c3e4b395c71e200
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058505"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-此关键字是内置类型。 此类型的变量可以具有值[，则返回 true](../cpp/true-cpp.md)并[false](../cpp/false-cpp.md)。 条件表达式具有类型**bool** ，因此拥有类型的值**bool**。 例如，`i!=0`现在具有 TRUE 或 FALSE，具体取决于值`i`。  
+此关键字是内置类型。 此类型的变量可以具有值[，则返回 true](../cpp/true-cpp.md)并[false](../cpp/false-cpp.md)。 条件表达式具有类型**bool** ，因此拥有类型的值**bool**。 例如，`i!=0`现在具有 TRUE 或 FALSE，具体取决于值`i`。
 
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量`b`类型的**bool**，不再允许两个表达式：
 
@@ -37,29 +37,30 @@ ms.locfileid: "39407398"
     b--;
     --b;
 ```
-  
-TRUE 和 FALSE 的值具有以下关系：  
-  
-```cpp  
-!false == true  
-!true == false  
-```  
-  
-在下面的语句中：  
-  
-```cpp  
-if (condexpr1) statement1;   
-```  
-  
-如果`condexpr1`为 TRUE 时，`statement1`时始终执行; 如果`condexpr1`为 FALSE，`statement1`永远不会执行。  
-  
-当后缀或前缀**++** 运算符应用于类型的变量**bool**，将变量设置为 TRUE。 
+
+TRUE 和 FALSE 的值具有以下关系：
+
+```cpp
+!false == true
+!true == false
+```
+
+在下面的语句中：
+
+```cpp
+if (condexpr1) statement1;
+```
+
+如果`condexpr1`为 TRUE 时，`statement1`时始终执行; 如果`condexpr1`为 FALSE，`statement1`永远不会执行。
+
+当后缀或前缀**++** 运算符应用于类型的变量**bool**，将变量设置为 TRUE。
 **Visual Studio 2017 版本 15.3 及更高版本**： 的 operator + + **bool**从该语言已被删除，不再受支持。
 
-后缀或前缀**--** 运算符不能应用于此类型的变量。  
-  
- **Bool**类型参与了整型提升。 类型的右值**bool**可转换为类型为右值**int**、 与 FALSE 成为零和 TRUE 变为 1。 作为截然不同的类型， **bool**参与重载决策。  
-  
+后缀或前缀**--** 运算符不能应用于此类型的变量。
+
+**Bool**类型参与了整型提升。 类型的右值**bool**可转换为类型为右值**int**、 与 FALSE 成为零和 TRUE 变为 1。 作为截然不同的类型， **bool**参与重载决策。
+
 ## <a name="see-also"></a>请参阅
-[关键字](../cpp/keywords-cpp.md)  
-[基本类型](../cpp/fundamental-types-cpp.md)  
+
+[关键字](../cpp/keywords-cpp.md)<br/>
+[基本类型](../cpp/fundamental-types-cpp.md)

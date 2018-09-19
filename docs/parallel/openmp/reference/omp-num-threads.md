@@ -1,5 +1,5 @@
 ---
-title: OMP_NUM_THREADS |Microsoft 文档
+title: OMP_NUM_THREADS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091161"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-在并行区域中，设置最大线程数，除非通过重写[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
+并行区域中设置的最大线程数，除非被重写[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,16 +32,15 @@ ms.locfileid: "33691763"
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `num`  
- 最大你想在并行区域中，最多为 64 Visual c + + 实现中的线程数。  
+*num*<br/>
+最大并行区域，最多为 64 在 Visual c + + 实现中所需的线程数。  
   
 ## <a name="remarks"></a>备注  
  **OMP_NUM_THREADS**环境变量可以通过重写[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函数或通过[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
   
- 默认值`num`Visual c + + 中实现的 OpenMP 标准是虚拟处理器，包括超线程的 Cpu 数。  
+ 默认值`num`Visual c + + 中实现的 OpenMP 标准是虚拟处理器，包括超线程 Cpu 的数量。  
   
  有关详细信息，请参阅[4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4939 |Microsoft 文档
+title: 编译器警告 （等级 1） C4939 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459674bb4e6899563a18943f7ba510a6168d0e28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e13cab2d5277cca0a1962b8ec254aaef10cfc98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118760"
 ---
 # <a name="compiler-warning-level-1-c4939"></a>编译器警告（等级 1）C4939
-\#杂注 vtordisp 已弃用，将 Visual c + + 的未来版本中删除  
-  
- 将从 Visual C++ 将来的版本中删除 [vtordisp](../../preprocessor/vtordisp.md) 杂注。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4939。  
-  
-```  
-// C4939.cpp  
-// compile with: /c /W1  
-#pragma vtordisp(off)   // C4939  
+
+\#杂注 vtordisp 已弃用，并将 Visual c + + 的未来版本中删除
+
+将从 Visual C++ 将来的版本中删除 [vtordisp](../../preprocessor/vtordisp.md) 杂注。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4939。
+
+```
+// C4939.cpp
+// compile with: /c /W1
+#pragma vtordisp(off)   // C4939
 ```

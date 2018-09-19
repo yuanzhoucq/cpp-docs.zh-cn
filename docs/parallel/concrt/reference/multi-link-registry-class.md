@@ -1,5 +1,5 @@
 ---
-title: multi_link_registry 类 |Microsoft 文档
+title: multi_link_registry 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029582"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 类
 `multi_link_registry` 对象是管理多个源块或多个目标块的 `network_link_registry`。  
@@ -42,8 +42,8 @@ class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>参数  
- `_Block`  
- 块数据类型存储在`multi_link_registry`对象。  
+*（_b)*<br/>
+块数据类型存储在`multi_link_registry`对象。  
   
 ## <a name="members"></a>成员  
   
@@ -58,12 +58,12 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[add](#add)|将添加到链接`multi_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|  
-|[begin](#begin)|返回的第一个元素的迭代器`multi_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[包含](#contains)|搜索`multi_link_registry`对象指定的块。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
-|[count](#count)|计算中的项的数目`multi_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|  
-|[remove](#remove)|删除从链接`multi_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
-|[set_bound](#set_bound)|上的链接数设置上限`multi_link_registry`对象可以保留。|  
+|[add](#add)|将添加一个指向`multi_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|  
+|[begin](#begin)|返回一个迭代器中的第一个元素到`multi_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
+|[包含](#contains)|搜索`multi_link_registry`指定块的对象。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[count](#count)|中的项的计数`multi_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|  
+|[remove](#remove)|移除从链接`multi_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
+|[set_bound](#set_bound)|链接的数量设置上限`multi_link_registry`对象可以保存。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [network_link_registry](network-link-registry-class.md)  
@@ -77,58 +77,58 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 ##  <a name="add"></a> 添加 
 
- 将添加到链接`multi_link_registry`对象。  
+ 将添加一个指向`multi_link_registry`对象。  
   
 ```
 virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向要添加的块的指针。  
+*链接 （_l)*<br/>
+指向要添加的块的指针。  
   
 ### <a name="remarks"></a>备注  
- 该方法将引发[invalid_link_target](invalid-link-target-class.md)异常如果链接已存在，则在注册表中，或如果绑定已设置与`set_bound`函数和链接已被删除。  
+ 该方法将引发[invalid_link_target](invalid-link-target-class.md)异常如果链接已存在在注册表中，或如果绑定已设置与`set_bound`函数和链接已被删除。  
   
 ##  <a name="begin"></a> 开始 
 
- 返回的第一个元素的迭代器`multi_link_registry`对象。  
+ 返回一个迭代器中的第一个元素到`multi_link_registry`对象。  
   
 ```
 virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 发现的第一个元素的迭代器`multi_link_registry`对象。  
+ 中的第一个元素的迭代器`multi_link_registry`对象。  
   
 ### <a name="remarks"></a>备注  
  最终状态由`NULL`链接。  
   
 ##  <a name="contains"></a> 包含 
 
- 搜索`multi_link_registry`对象指定的块。  
+ 搜索`multi_link_registry`指定块的对象。  
   
 ```
 virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向要在其中搜索中的块的指针`multi_link_registry`对象。  
+*链接 （_l)*<br/>
+指向要在其中搜索中的块的指针`multi_link_registry`对象。  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果找到指定的块，`false`否则为。  
   
 ##  <a name="count"></a> 计数 
 
- 计算中的项的数目`multi_link_registry`对象。  
+ 中的项的计数`multi_link_registry`对象。  
   
 ```
 virtual size_t count();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 中的项的数目`multi_link_registry`对象。  
+ 中的项数`multi_link_registry`对象。  
   
 ##  <a name="ctor"></a> multi_link_registry 
 
@@ -147,34 +147,34 @@ virtual ~multi_link_registry();
 ```  
   
 ### <a name="remarks"></a>备注  
- 该方法将引发[invalid_operation](invalid-operation-class.md)异常之前将删除所有链接调用。  
+ 该方法将引发[invalid_operation](invalid-operation-class.md)异常，如果调用之前将删除所有链接。  
   
 ##  <a name="remove"></a> 删除 
 
- 删除从链接`multi_link_registry`对象。  
+ 移除从链接`multi_link_registry`对象。  
   
 ```
 virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Link`  
- 指向块被删除，如果找到。  
+*链接 （_l)*<br/>
+指向块被删除，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- `true` 如果找到并移除了，链接`false`否则为。  
+ `true` 如果找到该链接并将其删除，`false`否则为。  
   
 ##  <a name="set_bound"></a> set_bound 
 
- 上的链接数设置上限`multi_link_registry`对象可以保留。  
+ 链接的数量设置上限`multi_link_registry`对象可以保存。  
   
 ```
 void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_MaxLinks`  
- 最大数链接`multi_link_registry`对象可以保留。  
+*_MaxLinks*<br/>
+最大数目链接`multi_link_registry`对象可以保存。  
   
 ### <a name="remarks"></a>备注  
  设置了界限后，取消某项的链接将导致 `multi_link_registry` 对象进入不可变状态，在该状态下进一步调用 `add` 将引发 `invalid_link_target` 异常。  

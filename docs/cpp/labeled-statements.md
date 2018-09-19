@@ -15,175 +15,180 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5c5d626f51778782f41f4f16b7e23ad4c5acb73
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5fd0850c12adeb6d45298445f8f739978591b133
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072103"
 ---
 # <a name="labeled-statements"></a>标记语句
-标签用于将程序控制权直接转交给特定语句。  
-  
-```  
-identifier :  statement  
-case constant-expression :  statement  
-default :  statement  
-```  
-  
- 标签的范围为整个函数，已在其中声明该标签。  
-  
-## <a name="remarks"></a>备注  
- 有三种标记语句。 它们全都使用冒号将某种标签与语句隔开。 case 和 default 标签特定于 case 语句。  
-  
-```cpp  
-#include <iostream>   
-using namespace std;   
-  
-void test_label(int x) {  
-  
-    if (x == 1){  
-        goto label1;  
-    }  
-    goto label2;  
-  
-label1:  
-    cout << "in label1" << endl;  
-    return;  
-  
-label2:  
-    cout << "in label2" << endl;  
-    return;  
-}  
-  
-int main() {  
-    test_label(1);  // in label1   
-    test_label(2);  // in label2  
-}  
-```  
-  
- **Goto 语句**  
-  
- 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：  
-  
- 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
-  
- 标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
-  
-```cpp 
-// labels_with_goto.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int main() {  
-   using namespace std;  
-   goto Test2;  
-  
-   cout << "testing" << endl;  
-  
-   Test2:  
-      cerr << "At Test2 label." << endl;  
-}  
-  
-//Output: At Test2 label.  
-```  
-  
- **Case 语句**  
-  
- 后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
-  
-```cpp 
-// Sample Microsoft Windows message processing loop.  
-switch( msg )  
-{  
-   case WM_TIMER:    // Process timer event.  
-      SetClassWord( hWnd, GCW_HICON, ahIcon[nIcon++] );  
-      ShowWindow( hWnd, SW_SHOWNA );  
-      nIcon %= 14;  
-      Yield();  
-      break;  
-  
-   case WM_PAINT:  
-      memset( &ps, 0x00, sizeof(PAINTSTRUCT) );  
-      hDC = BeginPaint( hWnd, &ps );   
-      EndPaint( hWnd, &ps );  
-      break;  
-  
-   default:  
-      // This choice is taken for all messages not specifically  
-      //  covered by a case statement.  
-  
-      return DefWindowProc( hWnd, Message, wParam, lParam );  
-      break;  
-}  
-```  
-  
-## <a name="labels-in-the-case-statement"></a>case 语句中的标签  
- 后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
-  
-```cpp 
-// Sample Microsoft Windows message processing loop.  
-switch( msg )  
-{  
-   case WM_TIMER:    // Process timer event.  
-      SetClassWord( hWnd, GCW_HICON, ahIcon[nIcon++] );  
-      ShowWindow( hWnd, SW_SHOWNA );  
-      nIcon %= 14;  
-      Yield();  
-      break;  
-  
-   case WM_PAINT:  
-      // Obtain a handle to the device context.  
-      // BeginPaint will send WM_ERASEBKGND if appropriate.  
-  
-      memset( &ps, 0x00, sizeof(PAINTSTRUCT) );  
-      hDC = BeginPaint( hWnd, &ps );  
-  
-      // Inform Windows that painting is complete.  
-  
-      EndPaint( hWnd, &ps );  
-      break;  
-  
-   case WM_CLOSE:  
-      // Close this window and all child windows.  
-  
-      KillTimer( hWnd, TIMER1 );  
-      DestroyWindow( hWnd );  
-      if ( hWnd == hWndMain )  
-         PostQuitMessage( 0 );  // Quit the application.  
-      break;  
-  
-   default:  
-      // This choice is taken for all messages not specifically  
-      //  covered by a case statement.  
-  
-      return DefWindowProc( hWnd, Message, wParam, lParam );  
-      break;  
-}  
-```  
-  
-## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签  
- 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：  
-  
- 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
-  
- 标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
-  
-```cpp 
-// labels_with_goto.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int main() {  
-   using namespace std;  
-   goto Test2;  
-  
-   cout << "testing" << endl;  
-  
-   Test2:  
-      cerr << "At Test2 label." << endl;  
-// At Test2 label.  
-}  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 语句概述](../cpp/overview-of-cpp-statements.md)   
- [switch 语句 (C++)](../cpp/switch-statement-cpp.md)
+
+标签用于将程序控制权直接转交给特定语句。
+
+```
+identifier :  statement
+case constant-expression :  statement
+default :  statement
+```
+
+标签的范围为整个函数，已在其中声明该标签。
+
+## <a name="remarks"></a>备注
+
+有三种标记语句。 它们全都使用冒号将某种标签与语句隔开。 case 和 default 标签特定于 case 语句。
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void test_label(int x) {
+
+    if (x == 1){
+        goto label1;
+    }
+    goto label2;
+
+label1:
+    cout << "in label1" << endl;
+    return;
+
+label2:
+    cout << "in label2" << endl;
+    return;
+}
+
+int main() {
+    test_label(1);  // in label1
+    test_label(2);  // in label2
+}
+```
+
+**Goto 语句**
+
+外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：
+
+标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
+
+标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。
+
+```cpp
+// labels_with_goto.cpp
+// compile with: /EHsc
+#include <iostream>
+int main() {
+   using namespace std;
+   goto Test2;
+
+   cout << "testing" << endl;
+
+   Test2:
+      cerr << "At Test2 label." << endl;
+}
+
+//Output: At Test2 label.
+```
+
+**Case 语句**
+
+后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：
+
+```cpp
+// Sample Microsoft Windows message processing loop.
+switch( msg )
+{
+   case WM_TIMER:    // Process timer event.
+      SetClassWord( hWnd, GCW_HICON, ahIcon[nIcon++] );
+      ShowWindow( hWnd, SW_SHOWNA );
+      nIcon %= 14;
+      Yield();
+      break;
+
+   case WM_PAINT:
+      memset( &ps, 0x00, sizeof(PAINTSTRUCT) );
+      hDC = BeginPaint( hWnd, &ps );
+      EndPaint( hWnd, &ps );
+      break;
+
+   default:
+      // This choice is taken for all messages not specifically
+      //  covered by a case statement.
+
+      return DefWindowProc( hWnd, Message, wParam, lParam );
+      break;
+}
+```
+
+## <a name="labels-in-the-case-statement"></a>case 语句中的标签
+
+后显示的标签**用例**关键字也不能出现外部**切换**语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：
+
+```cpp
+// Sample Microsoft Windows message processing loop.
+switch( msg )
+{
+   case WM_TIMER:    // Process timer event.
+      SetClassWord( hWnd, GCW_HICON, ahIcon[nIcon++] );
+      ShowWindow( hWnd, SW_SHOWNA );
+      nIcon %= 14;
+      Yield();
+      break;
+
+   case WM_PAINT:
+      // Obtain a handle to the device context.
+      // BeginPaint will send WM_ERASEBKGND if appropriate.
+
+      memset( &ps, 0x00, sizeof(PAINTSTRUCT) );
+      hDC = BeginPaint( hWnd, &ps );
+
+      // Inform Windows that painting is complete.
+
+      EndPaint( hWnd, &ps );
+      break;
+
+   case WM_CLOSE:
+      // Close this window and all child windows.
+
+      KillTimer( hWnd, TIMER1 );
+      DestroyWindow( hWnd );
+      if ( hWnd == hWndMain )
+         PostQuitMessage( 0 );  // Quit the application.
+      break;
+
+   default:
+      // This choice is taken for all messages not specifically
+      //  covered by a case statement.
+
+      return DefWindowProc( hWnd, Message, wParam, lParam );
+      break;
+}
+```
+
+## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签
+
+外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了利用**goto**语句和一个*标识符*标签：
+
+标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。
+
+标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。
+
+```cpp
+// labels_with_goto.cpp
+// compile with: /EHsc
+#include <iostream>
+int main() {
+   using namespace std;
+   goto Test2;
+
+   cout << "testing" << endl;
+
+   Test2:
+      cerr << "At Test2 label." << endl;
+// At Test2 label.
+}
+```
+
+## <a name="see-also"></a>请参阅
+
+[ 语句概述](../cpp/overview-of-cpp-statements.md)<br/>
+[switch 语句 (C++)](../cpp/switch-statement-cpp.md)

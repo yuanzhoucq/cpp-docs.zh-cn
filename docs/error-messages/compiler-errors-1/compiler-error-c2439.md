@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2439 |Microsoft 文档
+title: 编译器错误 C2439 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33bfe8ebf00850a54020b2a3f21159daf28b7224
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419bf7be45a1383135d0231cd059837e1fe62729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058403"
 ---
 # <a name="compiler-error-c2439"></a>编译器错误 C2439
-identifier： 无法初始化成员  
-  
- 无法初始化类、 结构或联合成员。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  尝试初始化间接基类或结构。  
-  
-2.  尝试初始化类或结构的继承的成员。 必须通过类或结构的构造函数初始化继承的成员。
+
+identifier： 无法初始化成员
+
+无法初始化类、 结构或联合成员。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 尝试初始化间接基类或结构。
+
+1. 尝试初始化的类或结构继承的成员。 必须由类或结构的构造函数初始化继承的成员。

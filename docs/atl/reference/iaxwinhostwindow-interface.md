@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099754"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 接口
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in]一个指向`IUnknown`要附加到该主机对象的控件的接口。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用于承载窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>参数
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]标识要创建的控件的字符串。 可以是 （必须包含在大括号） 的 CLSID、 ProgID、 URL 或原始 HTML (加**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用于承载窗口的句柄。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控件的初始化数据的流接口指针。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>参数
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]标识要创建的控件的字符串。 可以是 （必须包含在大括号） 的 CLSID、 ProgID、 URL 或原始 HTML (带有前缀**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用于承载窗口的句柄。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控件的初始化数据的流接口指针。 可以为 NULL。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]将接收的指针的地址`IUnknown`接口创建的控件。 可以为 NULL。
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in]包含的对象上的传出接口的接口标识符。 可以为 IID_NULL。
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in]一个指向`IUnknown`接收器对象连接到指定的包含对象上的连接点的接口`iidSink`。
 
 ### <a name="return-value"></a>返回值
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 [in]所请求的控件上某个接口 ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]将收到创建的控件的指定的接口的指针的地址。
 
 ### <a name="return-value"></a>返回值
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>参数
 
-*pDisp*  
+*pDisp*<br/>
 [in]一个指向`IDispatch`接口。
 
 ### <a name="return-value"></a>返回值
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>参数
 
-*pDisp*  
+*pDisp*<br/>
 [in]一个指向`IDocHostUIHandlerDispatch`接口。
 
 ### <a name="return-value"></a>返回值
@@ -229,7 +229,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ## <a name="see-also"></a>请参阅
 
-[IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

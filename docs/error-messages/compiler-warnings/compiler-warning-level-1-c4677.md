@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4677 |Microsoft 文档
+title: 编译器警告 （等级 1） C4677 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3511ad3100bf695cec5df97703b39e5926c71c11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6a3f57ba0e3d4c15c83711a86bb8482fa8b0596
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049379"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>编译器警告（等级 1）C4677
-function： 非私有成员的签名包含程序集私有类型 private_type  
-  
- 具有程序集外部的公共可访问性的类型使用具有程序集外部的私有访问权限的类型。 引用公共程序集类型的组件将不能使用类型成员或成员引用的程序集私有类型。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4677。  
-  
-```  
-// C4677.cpp  
-// compile with: /clr /c /W1  
-delegate void TestDel();  
-public delegate void TestDel2();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;   // C4677  
-   static event TestDel2^ MyClass_Event2;   // OK  
-};  
+
+function： 非私有成员的签名包含程序集私有类型 private_type
+
+具有程序集外部的公共可访问性的类型使用的类型，具有程序集外部的私有访问权限。 引用的公共程序集类型的组件不能使用类型成员或引用程序集私有类型的成员。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4677。
+
+```
+// C4677.cpp
+// compile with: /clr /c /W1
+delegate void TestDel();
+public delegate void TestDel2();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;   // C4677
+   static event TestDel2^ MyClass_Event2;   // OK
+};
 ```

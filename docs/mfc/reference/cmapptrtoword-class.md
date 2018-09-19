@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e54e5f381b4227c31985eb161854b04284bcb4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16cbe8b5eadfeb5447c466bb0e80f94b133fe33d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062366"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord 类
 支持 void 指针键控的 16 位的映射。  
@@ -63,9 +63,7 @@ class CMapPtrToWord : public CObject
 ## <a name="members"></a>成员  
  成员函数`CMapPtrToWord`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处`CObject`作为函数参数或返回值的指针替换词。 无论您在何处`CString`或**const**指针，指向**char**作为函数参数或返回值，替换为一个指向**void**。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  例如，转换为  
   

@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064812"
 ---
 # <a name="lexical-conventions"></a>词法约定
+
 本节介绍 C++ 程序的基本元素。 你将使用这些名为“词法元素”或“标记”的元素构造用于构造完整程序的语句、定义和声明等。 本节将讨论以下词法元素：
 
 - [文件转换概述](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ ms.locfileid: "39405904"
 - [用户定义的文本](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>请参阅
- [C++ 语言参考](../cpp/cpp-language-reference.md)  
- [程序和链接](program-and-linkage-cpp.md)
+
+[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
+[程序和链接](program-and-linkage-cpp.md)

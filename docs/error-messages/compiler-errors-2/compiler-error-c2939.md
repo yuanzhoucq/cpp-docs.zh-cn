@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2939 |Microsoft 文档
+title: 编译器错误 C2939 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b4cc897c5d24b841e7ad5c8428cd10d9a36961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d397eff2cfe561ace6f29b00601941779ef2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053138"
 ---
 # <a name="compiler-error-c2939"></a>编译器错误 C2939
-“class”：type-class-id 重新定义为局部数据变量  
-  
- 不能将泛型或模板类用作局部数据变量。  
-  
- 如果大括号匹配不正确，则可能导致此错误。  
-  
- 下面的示例生成 C2939：  
-  
-```  
-// C2939.cpp  
-template<class T>  
-struct TC { };   
-int main() {  
-   int TC<int>;   // C2939  
-   int TC;   // OK  
-}  
-```  
-  
- 使用 generic 时，也可能发生 C2939：  
-  
-```  
-// C2939b.cpp  
-// compile with: /clr  
-generic<class T>  
-ref struct GC { };  
-  
-int main() {  
-   int GC<int>;   // C2939  
-   int GC;   // OK  
-}  
+
+“class”：type-class-id 重新定义为局部数据变量
+
+不能将泛型或模板类用作局部数据变量。
+
+如果大括号匹配不正确，则可能导致此错误。
+
+下面的示例生成 C2939：
+
+```
+// C2939.cpp
+template<class T>
+struct TC { };
+int main() {
+   int TC<int>;   // C2939
+   int TC;   // OK
+}
+```
+
+使用 generic 时，也可能发生 C2939：
+
+```
+// C2939b.cpp
+// compile with: /clr
+generic<class T>
+ref struct GC { };
+
+int main() {
+   int GC<int>;   // C2939
+   int GC;   // OK
+}
 ```

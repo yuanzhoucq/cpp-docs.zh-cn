@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4276 |Microsoft 文档
+title: 编译器警告 （等级 1） C4276 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afedab27c2fb93075aa33053c12ec6973824f144
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40a6c85b460e9718a8816598afb016e9c7a493b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116017"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>编译器警告（等级 1）C4276
-function： 不提供原型;假定没有参数  
-  
- 当你执行与函数的地址[__stdcall](../../cpp/stdcall.md)调用约定，你必须提供原型，以便编译器可以创建函数的修饰的名称。 由于*函数*不具有任何原型，编译器，创建修饰的名时，假定函数没有任何参数。
+
+function： 不提供原型;假定无参数
+
+执行的函数的地址时[__stdcall](../../cpp/stdcall.md)调用约定，您必须提供原型，以便编译器可以创建函数的修饰的名。 由于*函数*具有的原型，编译器创建的修饰的名时，假定函数没有任何参数。

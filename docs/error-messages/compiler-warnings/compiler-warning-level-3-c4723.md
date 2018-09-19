@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4723 |Microsoft 文档
+title: 编译器警告 （等级 3） C4723 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033142"
 ---
 # <a name="compiler-warning-level-3-c4723"></a>编译器警告（等级 3）C4723
-潜在的被 0 除  
-  
- 计算结果为零编译时，给出了未定义的结果 divide 操作中的第二个操作数。  
-  
- 仅在使用时，将发出此警告[/Og](../../build/reference/og-global-optimizations.md)或暗指 /Og 的优化选项。  
-  
- 编译器可能生成的零个操作数。
+
+潜在的被 0 除
+
+计算结果为零，在编译时，为未定义的结果提供除运算中的第二个操作数。
+
+仅在使用时，将发出此警告[/Og](../../build/reference/og-global-optimizations.md)或意味着 /Og 的优化选项。
+
+编译器可能生成的零个操作数。

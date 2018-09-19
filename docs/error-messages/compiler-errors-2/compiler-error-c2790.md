@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2790 |Microsoft 文档
+title: 编译器错误 C2790 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069568"
 ---
 # <a name="compiler-error-c2790"></a>编译器错误 C2790
-super： 仅在类成员函数的主体内使用此关键字  
-  
- 如果用户曾经尝试使用关键字，则出现此错误消息[super](../../cpp/super.md)成员函数的上下文之外。  
-  
- 下面的示例生成 C2790:  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+
+super： 此关键字仅在类成员函数的主体内部使用
+
+如果用户曾经试图使用关键字，则出现此错误消息[super](../../cpp/super.md)成员函数的上下文之外。
+
+下面的示例生成 C2790:
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

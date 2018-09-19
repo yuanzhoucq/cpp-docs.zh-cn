@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4581 |Microsoft 文档
+title: 编译器警告 （等级 1） C4581 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415fb9ffc3e53ddfe9edcee2ec99361b38de0dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 586283e41fb38baae828bf5a4380ec2afe323ecb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116043"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>编译器警告（等级 1）C4581
-已否决的行为:"string1"替换为 string2 进程属性  
-  
- 此错误可能来自于为 Visual c + + 2005年执行的编译器一致性工作： 查找 Visual c + + 特性的参数。  
-  
- 在以前版本中，属性值已被接受，无论它们已用引号引起来。 如果值是一个枚举，则它不必须被用引号引起来。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4581。  
-  
-```  
-// C4581.cpp  
-// compile with: /c /W1  
-#include "unknwn.h"  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI : IUnknown {};  
-  
-[coclass, uuid(12345678-1111-2222-3333-123456789012), threading("free")]   // C4581  
-// try the following line instead  
-// [coclass, uuid(12345678-1111-2222-3333-123456789012), threading(free)]  
-class CSample : public IMyI {};  
+
+已否决的行为:"string1"替换为 string2 进程属性
+
+为 Visual c + + 2005年执行的编译器一致性工作可以生成此错误： 正在检查的 Visual c + + 特性的参数。
+
+在上一版本中，属性值已被接受，指示已用引号引起来。 如果值是一个枚举，它必须不括在引号中。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4581。
+
+```
+// C4581.cpp
+// compile with: /c /W1
+#include "unknwn.h"
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI : IUnknown {};
+
+[coclass, uuid(12345678-1111-2222-3333-123456789012), threading("free")]   // C4581
+// try the following line instead
+// [coclass, uuid(12345678-1111-2222-3333-123456789012), threading(free)]
+class CSample : public IMyI {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: 记录的功能查看类 （MFC 数据访问） |Microsoft 文档
+title: 记录功能查看类 （MFC 数据访问） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093201"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>记录视图类的功能（MFC 数据访问）
-你可以执行与类的基于窗体的数据访问编程[CFormView](../mfc/reference/cformview-class.md)，但[CRecordView](../mfc/reference/crecordview-class.md)通常是更好的类以派生自。 除了其`CFormView`功能， `CRecordView`:  
+
+您可以执行基于窗体的数据访问编程的类[CFormView](../mfc/reference/cformview-class.md)，但[CRecordView](../mfc/reference/crecordview-class.md)通常是更好的类进行派生。 除了其`CFormView`功能， `CRecordView`:  
   
--   提供窗体控件和关联的记录集对象之间的对话框数据交换 (DDX)。  
+- 提供窗体控件和关联的记录集对象之间的对话框数据交换 (DDX)。  
   
--   处理移动第一个、 移动到下一步、 移动上一个和移动最后一个命令浏览关联记录集对象中的记录。  
+- 处理移动第一个、 移动到下一步、 移动上一个和移动最后一个命令浏览关联记录集对象中的记录。  
   
--   当用户移到另一条记录时，则将更改更新为当前记录。  
+- 当用户移到另一条记录时，更新将更改为当前记录。  
   
- 有关导航的详细信息，请参阅[记录视图： 支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。  
+有关导航的详细信息，请参阅[记录视图： 支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
- [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)
+
+[记录视图（MFC 数据访问）](../data/record-views-mfc-data-access.md)<br/>
+[ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

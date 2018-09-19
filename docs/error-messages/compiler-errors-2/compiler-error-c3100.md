@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3100 |Microsoft 文档
+title: 编译器错误 C3100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d28412fed7b31a81a0ef49d9e29c917f4c617e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f37d21015724bbb66aaa2abf52f0ee2fab7b50a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045349"
 ---
 # <a name="compiler-error-c3100"></a>编译器错误 C3100
-'target': 未知的属性限定符  
-  
- 指定了无效的属性目标。  
-  
- 有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3100。  
-  
-```  
-// C3100.cpp  
-// compile with: /clr /c  
-using namespace System;  
-[AttributeUsage(AttributeTargets::All)]  
-public ref class Attr : public Attribute {  
-public:  
-   Attr(int t) : m_t(t) {}  
-   int m_t;  
-};  
-  
-[invalid_target:Attr(10)];   // C3100  
-[assembly:Attr(10)];   // OK  
+
+'target': 未知的特性限定符
+
+指定了无效的特性目标。
+
+有关详细信息，请参阅 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3100。
+
+```
+// C3100.cpp
+// compile with: /clr /c
+using namespace System;
+[AttributeUsage(AttributeTargets::All)]
+public ref class Attr : public Attribute {
+public:
+   Attr(int t) : m_t(t) {}
+   int m_t;
+};
+
+[invalid_target:Attr(10)];   // C3100
+[assembly:Attr(10)];   // OK
 ```

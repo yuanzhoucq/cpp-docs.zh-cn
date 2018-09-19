@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726838"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -1558,16 +1558,16 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>参数
 
-*first1*<br/>
+*First1*<br/>
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*last1*<br/>
+*Last1*<br/>
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*first2*<br/>
+*First2*<br/>
 用于确定要匹配范围中的第一个元素的位置的前向迭代器。
 
-*last2*<br/>
+*Last2*<br/>
 用于确定要匹配范围中的最后元素之后的位置的前向迭代器。
 
 *comp*<br/>
@@ -2152,16 +2152,16 @@ bool includes(
 
 ### <a name="parameters"></a>参数
 
-*first1*<br/>
+*First1*<br/>
 一种输入迭代器，用于寻址第一个元素在两个已排序源范围的第一个中的位置，以便测试第二个已排序源范围的所有元素是否包含在第一个中。
 
-*last1*<br/>
+*Last1*<br/>
 一种输入迭代器，用于寻址在两个已排序源范围的第一个中最后一个元素之后下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
-*first2*<br/>
+*First2*<br/>
 一种输入迭代器，用于寻址第一个元素在两个连续已排序源范围的第二个中的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
-*last2*<br/>
+*Last2*<br/>
 一种输入迭代器，用于寻址在两个连续已排序源范围的第二个中最后一个元素之后的下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
 *comp*<br/>
@@ -2520,11 +2520,11 @@ bool is_heap(
 
 ### <a name="remarks"></a>备注
 
-第一个模板函数返回 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`。
+第一个模板函数返回[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`。
 
 第二个模板函数返回
 
-`is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`。
+`is_heap_until(first, last, comp) == last`。
 
 ## <a name="is_heap_until"></a>  is_heap_until
 
@@ -3854,7 +3854,7 @@ constexpr const Type& min(
     const Type& right,
     BinaryPredicate comp);
 template<class Type>
-constexpr Type min( 
+constexpr Type min(
     initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(

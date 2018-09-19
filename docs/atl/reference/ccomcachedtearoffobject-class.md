@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075704"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 类
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>参数
 
-`contained`  
+*包含*<br/>
 分离式类，派生自`CComTearOffObjectBase`和希望分离式对象以支持接口。
 
 ## <a name="members"></a>成员
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>参数
 
-*pv*  
+*pv*<br/>
 [in]指向`IUnknown`的`CComCachedTearOffObject`。
 
 ### <a name="remarks"></a>备注
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>参数
 
-*包含*  
+*包含*<br/>
 [in]分离式类，派生自`CComTearOffObjectBase`和希望分离式对象以支持接口。
 
 ### <a name="remarks"></a>备注
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -215,6 +215,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComTearOffObject 类](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject 类](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

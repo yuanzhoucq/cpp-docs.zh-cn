@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2973 |Microsoft 文档
+title: 编译器错误 C2973 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e377c9692fdbed0e5d7bcae16c5b96473fa6955
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b179b56edaf6dc661d1c3c9c9a781195a2d37ee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043282"
 ---
 # <a name="compiler-error-c2973"></a>编译器错误 C2973
-无效的模板参数“number”  
-  
- 请检查模板定义，以找到正确的类型。
+
+无效的模板参数“number”
+
+请检查模板定义，以找到正确的类型。

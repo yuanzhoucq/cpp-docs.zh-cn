@@ -1,5 +1,5 @@
 ---
-title: 错误 C999 |Microsoft 文档
+title: 错误 C999 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ecf2851051090a416e2657ccc93f00e840834e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74c71bef10da2220d7ffc013a9043dd6c9b8a29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118929"
 ---
 # <a name="fatal-error-c999"></a>错误 C999
-未知消息请选择技术支持命令的 Visual c + + 帮助菜单上，或打开技术支持帮助文件了解详细信息  
-  
- 此错误通常表示你有具有来自编译器不同版本的混合文件，或者你的编译器安装已损坏。 使用**程序和功能**小程序修复或重新安装产品控制面板中的。
+
+未知消息请选择 Visual c + + 帮助菜单上的技术支持命令或打开技术支持帮助文件了解详细信息
+
+此错误通常表示你有具有来自编译器不同版本的混合文件，或者你的编译器安装已损坏。 使用**程序和功能**中修复或重新安装该产品的控制面板小程序。

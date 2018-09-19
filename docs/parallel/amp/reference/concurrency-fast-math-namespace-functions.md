@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 8327442588a5ae5fa15ba37cc53b4f748fa0837d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136304"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空间函数
 ||||  
@@ -95,8 +95,8 @@ inline float acos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反余弦值  
@@ -109,8 +109,8 @@ inline float acosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反余弦值  
@@ -123,8 +123,8 @@ inline float asin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反正弦值  
@@ -137,8 +137,8 @@ inline float asinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反正弦值  
@@ -151,8 +151,8 @@ inline float atan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反正切值  
@@ -167,11 +167,11 @@ inline float atan2(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回 _Y/_X 的反正切值  
@@ -186,11 +186,11 @@ inline float atan2f(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回 _Y/_X 的反正切值  
@@ -203,8 +203,8 @@ inline float atanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反正切值  
@@ -217,8 +217,8 @@ inline float ceil(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的上限  
@@ -231,8 +231,8 @@ inline float ceilf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的上限  
@@ -245,8 +245,8 @@ inline float cosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的余弦值  
@@ -259,8 +259,8 @@ inline float coshf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反双曲余弦值  
@@ -273,8 +273,8 @@ inline float cos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的余弦值  
@@ -287,8 +287,8 @@ inline float cosh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的反双曲余弦值  
@@ -301,8 +301,8 @@ inline float exp(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 e 为底的指数  
@@ -315,8 +315,8 @@ inline float exp2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 2 为底的指数  
@@ -329,8 +329,8 @@ inline float exp2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 2 为底的指数  
@@ -343,8 +343,8 @@ inline float expf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 e 为底的指数  
@@ -357,8 +357,8 @@ inline float fabs(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 整数值  
+*_X*<br/>
+整数值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的绝对值  
@@ -371,8 +371,8 @@ inline float fabsf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的绝对值  
@@ -385,8 +385,8 @@ inline float floor(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的下限  
@@ -399,8 +399,8 @@ inline float floorf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的下限  
@@ -415,11 +415,11 @@ inline float max(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 整数值  
+*_X*<br/>
+整数值  
   
- `_Y`  
- 整数值  
+*_Y*<br/>
+整数值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的最大数值  
@@ -434,11 +434,11 @@ inline float fmaxf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的最大数值  
@@ -453,11 +453,11 @@ inline float min(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 整数值  
+*_X*<br/>
+整数值  
   
- `_Y`  
- 整数值  
+*_Y*<br/>
+整数值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的最小数值  
@@ -472,11 +472,11 @@ inline float fminf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的最小数值  
@@ -491,11 +491,11 @@ inline float fmod(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回 _X/_Y 的浮点余数  
@@ -510,11 +510,11 @@ inline float fmodf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Y`  
- 浮点值  
+*_Y*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回 _X/_Y 的浮点余数  
@@ -529,11 +529,11 @@ inline float frexp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Exp`  
- 以浮点值形式返回 _X 的整数指数。  
+*2^_exp*<br/>
+以浮点值形式返回 _X 的整数指数。  
   
 ### <a name="return-value"></a>返回值  
  返回尾数 _X  
@@ -548,11 +548,11 @@ inline float frexpf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Exp`  
- 以浮点值形式返回 _X 的整数指数。  
+*2^_exp*<br/>
+以浮点值形式返回 _X 的整数指数。  
   
 ### <a name="return-value"></a>返回值  
  返回尾数 _X  
@@ -565,8 +565,8 @@ inline int isfinite(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  当且仅当自变量具有有限值时，返回一个非零值  
@@ -579,8 +579,8 @@ inline int isinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  当且仅当自变量具有无限值时，返回一个非零值  
@@ -593,8 +593,8 @@ inline int isnan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  当且仅当自变量具有 NaN 值时，返回一个非零值  
@@ -609,11 +609,11 @@ inline float ldexp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值，尾数  
+*_X*<br/>
+浮点值，尾数  
   
- `_Exp`  
- 整数指数  
+*2^_exp*<br/>
+整数指数  
   
 ### <a name="return-value"></a>返回值  
  返回 _X \* 2 ^ 2^_exp  
@@ -628,11 +628,11 @@ inline float ldexpf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值，尾数  
+*_X*<br/>
+浮点值，尾数  
   
- `_Exp`  
- 整数指数  
+*2^_exp*<br/>
+整数指数  
   
 ### <a name="return-value"></a>返回值  
  返回 _X \* 2 ^ 2^_exp  
@@ -645,8 +645,8 @@ inline float log(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 e 为底的对数  
@@ -659,8 +659,8 @@ inline float log10(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 10 为底的对数  
@@ -673,8 +673,8 @@ inline float log10f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 10 为底的对数  
@@ -687,8 +687,8 @@ inline float log2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量 2 为底对数  
@@ -701,8 +701,8 @@ inline float log2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 10 为底的对数  
@@ -715,8 +715,8 @@ inline float logf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量以 e 为底的对数  
@@ -731,10 +731,11 @@ inline float modf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Ip`  
+*（_i)*<br/>
+接收的值的整数部分  
   
 ### <a name="return-value"></a>返回值  
  返回 _X 的有符号小数部分。  
@@ -749,10 +750,11 @@ inline float modff(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_Ip`  
+*（_i)*<br/>
+接收的值的整数部分  
   
 ### <a name="return-value"></a>返回值  
  返回 _X 的有符号小数部分。  
@@ -767,11 +769,11 @@ inline float pow(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值，底数  
+*_X*<br/>
+浮点值，底数  
   
- `_Y`  
- 浮点值，指数  
+*_Y*<br/>
+浮点值，指数  
   
 ### <a name="return-value"></a>返回值  
  返回 _X 的 _Y 次幂的值  
@@ -786,11 +788,11 @@ inline float powf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值，底数  
+*_X*<br/>
+浮点值，底数  
   
- `_Y`  
- 浮点值，指数  
+*_Y*<br/>
+浮点值，指数  
   
 ### <a name="return-value"></a>返回值  
   
@@ -802,8 +804,8 @@ inline float round(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回最接近 _X 的整数  
@@ -816,8 +818,8 @@ inline float roundf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回最接近 _X 的整数  
@@ -830,8 +832,8 @@ inline float rsqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的平方根的倒数  
@@ -844,8 +846,8 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的平方根的倒数  
@@ -858,8 +860,8 @@ inline int signbit(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  当且仅当 _X 的符号为负号时，返回一个非零值  
@@ -872,8 +874,8 @@ inline int signbitf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  当且仅当 _X 的符号为负号时，返回一个非零值  
@@ -886,8 +888,8 @@ inline float sin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的正弦值  
@@ -900,8 +902,8 @@ inline float sinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的正弦值  
@@ -917,14 +919,14 @@ inline void sincos(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_S`  
- 返回 _X 的正弦值  
+*_S*<br/>
+返回 _X 的正弦值  
   
- `_C`  
- 返回 _X 的余弦值  
+*_C*<br/>
+返回 _X 的余弦值  
   
 ##  <a name="sincosf"></a>  sincosf  
  计算 _X 的正弦和余弦值  
@@ -937,14 +939,14 @@ inline void sincosf(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
- `_S`  
- 返回 _X 的正弦值  
+*_S*<br/>
+返回 _X 的正弦值  
   
- `_C`  
- 返回 _X 的余弦值  
+*_C*<br/>
+返回 _X 的余弦值  
   
 ##  <a name="sinh"></a>  sinh  
  计算参数的双曲正弦值  
@@ -954,8 +956,8 @@ inline float sinh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的双曲正弦值  
@@ -968,8 +970,8 @@ inline float sinhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的双曲正弦值  
@@ -982,8 +984,8 @@ inline float sqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的平方根  
@@ -996,8 +998,8 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的平方根  
@@ -1010,8 +1012,8 @@ inline float tan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的正切值  
@@ -1024,8 +1026,8 @@ inline float tanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的正切值  
@@ -1038,8 +1040,8 @@ inline float tanh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的双曲正切值  
@@ -1052,8 +1054,8 @@ inline float tanhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的双曲正切值  
@@ -1066,8 +1068,8 @@ inline float trunc(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的整数部分  
@@ -1080,8 +1082,8 @@ inline float truncf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_X`  
- 浮点值  
+*_X*<br/>
+浮点值  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的整数部分  

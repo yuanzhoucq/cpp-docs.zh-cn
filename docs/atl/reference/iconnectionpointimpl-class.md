@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3e7a0589c0da4d41cab419fa68039e4f0b62c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b8d3155dd63afa6deb84349c11b0b086d039c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091317"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl 类
 
@@ -38,19 +38,19 @@ ms.locfileid: "43763349"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T, const IID* piid, class CDV = CComDynamicUnkArray>  
+template<class T, const IID* piid, class CDV = CComDynamicUnkArray>
 class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IConnectionPointImpl`。
 
-*piid*  
+*piid*<br/>
 指向 IID 的连接点对象所表示接口的指针。
 
-*CDV*  
+*CDV*<br/>
 一个类，管理包的连接。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许无限制的连接。 此外可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。
 
 ## <a name="members"></a>成员
@@ -167,5 +167,5 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ## <a name="see-also"></a>请参阅
 
-[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
+[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [类概述](../../atl/atl-class-overview.md)

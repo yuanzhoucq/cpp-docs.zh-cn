@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dfadbfb887959aaad01c88cba7c3c04ef5f27873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066120"
 ---
 # <a name="atl-control-wizard"></a>ATL 控件向导
 
@@ -107,7 +107,7 @@ ms.locfileid: "45705804"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL 控件](../../atl/reference/adding-an-atl-control.md)   
-[将功能添加到复合控件](../../atl/adding-functionality-to-the-composite-control.md)   
+[ATL 控件](../../atl/reference/adding-an-atl-control.md)<br/>
+[向复合控件添加功能](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 命令行错误 D8036 |Microsoft 文档
+title: 命令行错误 D8036 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041839"
 ---
 # <a name="command-line-error-d8036"></a>命令行错误 D8036
-/ 选项不允许使用多个源文件  
-  
- 这些编译器选项不能用于多个源文件：  
-  
--   名称的程序集文件列表 (/ Fa)  
-  
--   重命名对象文件 (/ Fo)  
-  
--   创建不含局部变量的源浏览器信息 (/ Fr)  
-  
--   创建源浏览器信息，包括本地变量 (/ FR)
+
+/ 选项不允许有多个源文件
+
+这些编译器选项不能用于多个源文件：
+
+- 名称的程序集的文件列表 (/ Fa)
+
+- 重命名对象文件 (/ Fo)
+
+- 创建无局部变量的源浏览器信息 (/ Fr)
+
+- 创建源浏览器信息，包括本地变量 (/ FR)

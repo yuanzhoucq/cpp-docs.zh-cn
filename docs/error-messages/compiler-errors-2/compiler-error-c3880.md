@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3880 |Microsoft 文档
+title: 编译器错误 C3880 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc36f3b5fb9571a707e4ffe4e75182e984e407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03cd1c953e4f0183fe71dcbcf4cc3bfb242b4f1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074352"
 ---
 # <a name="compiler-error-c3880"></a>编译器错误 C3880
-var： 不能为 literal 数据成员  
-  
- 一种[文本](../../windows/literal-cpp-component-extensions.md)必须是属性，或编译时转换为，以下类型之一：  
-  
--   整型  
-  
--   字符串  
-  
--   具有整型或基础类型的枚举  
-  
- 下面的示例生成 C3880:  
-  
-```  
-// C3880.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal System::Decimal staticConst1 = 10;   // C3880  
-   literal int staticConst2 = 10;   // OK  
-};  
+
+var： 不能是 literal 数据成员
+
+类型[文字](../../windows/literal-cpp-component-extensions.md)属性必须为，或者编译时转换为，以下类型之一：
+
+- 整型类型
+
+- 字符串
+
+- 具有整型或基础类型的枚举
+
+下面的示例生成 C3880:
+
+```
+// C3880.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal System::Decimal staticConst1 = 10;   // C3880
+   literal int staticConst2 = 10;   // OK
+};
 ```

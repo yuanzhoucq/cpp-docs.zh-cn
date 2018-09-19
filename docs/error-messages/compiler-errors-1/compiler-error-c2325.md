@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2325 |Microsoft 文档
+title: 编译器错误 C2325 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095959dd432de52c2a0d32cbd7198ea434223407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae66d00c6831d102cb3f6fd47d024745480674fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107775"
 ---
 # <a name="compiler-error-c2325"></a>编译器错误 C2325
-type： 右侧的 name 的意外的类型  
-  
- 对不正确的类型的析构函数进行调用。  
-  
- 下面的示例生成 C2325:  
-  
-```  
-// C2325.cpp  
-// compile with: /c  
-class A {};  
-typedef A* pA_t;  
-void f() {  
-    A** ppa = new A *;  
-    ppa->~A*;   // C2325  
-  
-   pA_t *ppa2 = new pA_t;  
-   ppa2->~pA_t();   // OK  
-}  
+
+type： 意外的类型，右侧的 name
+
+调用析构函数不正确的类型。
+
+下面的示例生成 C2325:
+
+```
+// C2325.cpp
+// compile with: /c
+class A {};
+typedef A* pA_t;
+void f() {
+    A** ppa = new A *;
+    ppa->~A*;   // C2325
+
+   pA_t *ppa2 = new pA_t;
+   ppa2->~pA_t();   // OK
+}
 ```

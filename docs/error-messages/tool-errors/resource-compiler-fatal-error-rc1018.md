@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1018 |Microsoft 文档
+title: 资源编译器错误 RC1018 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc54586d03aaf84882120cee0428990caa8cae97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2c4fa0a9964c3faeed010b82f8cd98f2782fb1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028501"
 ---
 # <a name="resource-compiler-fatal-error-rc1018"></a>资源编译器错误 RC1018
-意外的 #elif  
-  
- `#elif`指令未出现在`#if`， **#ifdef**，或 **#ifndef**构造。  
-  
- 请确保有`#if`， **#ifdef**，或 **#ifndef**实际上此语句前的语句。
+
+意外的 #elif
+
+`#elif`中不显示指令`#if`， **#ifdef**，或 **#ifndef**构造。
+
+请确保是否有`#if`， **#ifdef**，或 **#ifndef**实际上此语句前的语句。

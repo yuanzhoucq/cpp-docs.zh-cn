@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a312ca8aa7afe39a301607e6b091341adbb89bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066240"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 类
 
@@ -39,13 +39,13 @@ ms.locfileid: "43761077"
 ## <a name="syntax"></a>语法
 
 ```
-template <typename T>  
+template <typename T>
 class CAutoPtr
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 指针类型。
 
 ## <a name="members"></a>成员
@@ -109,7 +109,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 `CAutoPtr`对象将获得 this 指针的所有权。
 
 ### <a name="remarks"></a>备注
@@ -133,16 +133,16 @@ explicit CAutoPtr(T* p) throw();
 template<typename TSrc>
 CAutoPtr(CAutoPtr<TSrc>& p) throw();
 
-template<> 
+template<>
 CAutoPtr(CAutoPtr<T>& p) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 现有的指针。
 
-*TSrc*  
+*TSrc*<br/>
 由另一个类型`CAutoPtr`，用于初始化当前对象。
 
 ### <a name="remarks"></a>备注
@@ -223,10 +223,10 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 一个指针。
 
-*TSrc*  
+*TSrc*<br/>
 类类型。
 
 ### <a name="return-value"></a>返回值
@@ -265,7 +265,7 @@ T* operator->() const throw();
 
 强制转换运算符。
 
-```  
+```
 operator T* () const throw();
 ```
 
@@ -279,6 +279,6 @@ operator T* () const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CHeapPtr 类](../../atl/reference/cheapptr-class.md)   
-[CAutoVectorPtr 类](../../atl/reference/cautovectorptr-class.md)   
+[CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>
+[CAutoVectorPtr 类](../../atl/reference/cautovectorptr-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

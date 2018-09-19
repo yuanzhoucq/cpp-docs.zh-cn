@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036160"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 类
 
@@ -46,17 +46,17 @@ ms.locfileid: "43761347"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 实现控件的类。
 
-*WinBase*  
+*WinBase*<br/>
 实现开窗函数的基本类。 默认情况下[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。
 
 ## <a name="members"></a>成员
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 GUID。
 
-*ppv*  
+*ppv*<br/>
 [out]通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父级或所有者窗口句柄。 必须提供有效的窗口句柄。 控制窗口范围限制为其父窗口的区域。
 
-*rcPos*  
+*rcPos*<br/>
 [in]初始大小和要创建窗口的位置。
 
 ### <a name="remarks"></a>备注
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>参数
 
-*dispID*  
+*dispID*<br/>
 [in]已更改的属性的标识符。
 
 ### <a name="return-value"></a>返回值
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>参数
 
-*dispID*  
+*dispID*<br/>
 [in]要更改的属性的标识符。
 
 ### <a name="return-value"></a>返回值
@@ -203,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="remarks"></a>备注
 
-如果你的控件类派生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口指定控件属性是将要更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。  
+如果你的控件类派生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，此方法调用[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有连接`IPropertyNotifySink`接口指定控件属性是将要更改。 如果你的控件类不是派生自`IPropertyNotifySink`，此方法返回 S_OK。
 
 此方法可以安全地调用即使控件不支持连接点。
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>参数
 
-*lpszText*  
+*lpszText*<br/>
 要在消息框中显示的文本。
 
-*lpszCaption*  
+*lpszCaption*<br/>
 对话框的标题。 如果为 NULL （默认值），使用"错误"的标题。
 
-*n 类型*  
+*n 类型*<br/>
 指定的内容和对话框中的行为。 请参阅[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)可用的不同的消息框的列表的 Windows SDK 文档中的条目。 默认值提供了一个简单**确定**按钮。
 
 ### <a name="return-value"></a>返回值
@@ -243,7 +243,7 @@ int MessageBox(
 
 ## <a name="see-also"></a>请参阅
 
-[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)   
-[类概述](../../atl/atl-class-overview.md)   
-[CComControlBase 类](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[CComControlBase 类](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl 类](../../atl/reference/ccomcompositecontrol-class.md)

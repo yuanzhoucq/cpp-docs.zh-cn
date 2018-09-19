@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045050"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 
@@ -41,14 +41,14 @@ ms.locfileid: "43764805"
 ## <a name="syntax"></a>语法
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>参数
 
-*包含*  
+*包含*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>参数
 
-*pv*  
+*pv*<br/>
 [in]未知的外部聚合，或如果为 NULL 的对象是否为指针的对象，如果对象不聚合。
 
 ### <a name="remarks"></a>备注
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>参数
 
-*pp*  
+*pp*<br/>
 [out]一个指向**CComPolyObject <** `contained` **>** 指针。 如果`CreateInstance`就会失败， *pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>参数
 
-*包含*  
+*包含*<br/>
 [in]您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
 
 ### <a name="remarks"></a>备注
@@ -216,22 +216,22 @@ CComContainedObject<contained> m_contained;
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>参数
 
-*Q*  
+*Q*<br/>
 COM 接口。
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的标识符。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
 
-*pp*  
+*pp*<br/>
 [out]指向由标识的接口的指针`__uuidof(Q)`。
 
 ### <a name="return-value"></a>返回值
@@ -256,6 +256,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>请参阅
 
-[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [类概述](../../atl/atl-class-overview.md)

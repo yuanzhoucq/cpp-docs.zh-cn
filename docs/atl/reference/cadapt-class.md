@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052837"
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 
@@ -36,13 +36,13 @@ ms.locfileid: "44105343"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 已适配的类型。
 
 ## <a name="members"></a>成员
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>参数
 
-*rSrc*  
+*rSrc*<br/>
 正在适配要复制到新构造的适配器对象类型的变量。
 
-*rSrCA*  
+*rSrCA*<br/>
 一个适配器对象，其所包含的数据应要复制 （或移动） 到新构造的适配器对象。
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ T m_T;
 
 返回**const**引用[m_T](#m_t)成员，这样允许该适配器对象，就好像类型的对象视为*T*。
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ operator const T&() const;
 
 返回的引用[m_T](#m_t)成员，这样允许该适配器对象，就好像类型的对象被视为*T*。
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>参数
 
-*rSrc*  
+*rSrc*<br/>
 对要进行比较的对象的引用。
 
 ### <a name="return-value"></a>返回值
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>参数
 
-*rSrc*  
+*rSrc*<br/>
 对要复制已适配类型的对象的引用。
 
-*rSrCA*  
+*rSrCA*<br/>
 对要移动的对象的引用。
 
 ### <a name="return-value"></a>返回值
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>参数
 
-*rSrc*  
+*rSrc*<br/>
 对要进行比较的对象的引用。
 
 ### <a name="return-value"></a>返回值

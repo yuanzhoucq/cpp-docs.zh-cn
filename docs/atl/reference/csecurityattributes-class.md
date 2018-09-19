@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093037"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>参数
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 对安全描述符的引用。
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。
 
 ##  <a name="set"></a>  Csecurityattributes:: Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>参数
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 对安全描述符的引用。
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。
 
 ### <a name="remarks"></a>备注
@@ -108,8 +108,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ## <a name="see-also"></a>请参阅
 
-[安全示例](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[安全描述符](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[类概述](../../atl/atl-class-overview.md)   
+[安全示例](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[安全描述符](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

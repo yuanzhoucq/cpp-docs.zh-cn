@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070274"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 类
 
@@ -47,19 +47,19 @@ ms.locfileid: "43756345"
 ## <a name="syntax"></a>语法
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>参数
 
-*TKey*  
+*TKey*<br/>
 Key 元素类型。
 
-*TVal*  
+*TVal*<br/>
 值元素类型。
 
-*TEqual*  
+*TEqual*<br/>
 特征对象，用于定义类型的元素的相等性测试`T`。
 
 ## <a name="members"></a>成员
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键。
 
-*val*  
+*val*<br/>
 相关联的值。
 
 ### <a name="return-value"></a>返回值
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要搜索的键。
 
 ### <a name="return-value"></a>返回值
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>参数
 
-*val*  
+*val*<br/>
 要搜索值。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要返回的键的索引。
 
 ### <a name="return-value"></a>返回值
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要返回的值的索引。
 
 ### <a name="return-value"></a>返回值
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键。
 
 ### <a name="return-value"></a>返回值
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键。
 
 ### <a name="return-value"></a>返回值
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 键和关联的值，若要删除的索引。
 
 ### <a name="return-value"></a>返回值
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>参数
 
-*val*  
+*val*<br/>
 值。
 
 ### <a name="return-value"></a>返回值
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 键。
 
-*val*  
+*val*<br/>
 要分配的新值。
 
 ### <a name="return-value"></a>返回值
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 引用的键和值配对，更改索引。
 
-*key*  
+*key*<br/>
 新的密钥。
 
-*val*  
+*val*<br/>
 新值。
 
 ### <a name="return-value"></a>返回值

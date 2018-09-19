@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043360"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 类
 
@@ -35,13 +35,13 @@ ms.locfileid: "43767899"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在集合中的数据类型。
 
 ## <a name="members"></a>成员
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>参数
 
-*pDest*  
+*pDest*<br/>
 指向将接收复制的数据的第一个元素的指针。
 
-*pSrc*  
+*pSrc*<br/>
 指向要复制的第一个元素的指针。
 
-*nElements*  
+*nElements*<br/>
 要复制的元素数。
 
 ### <a name="remarks"></a>备注
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>参数
 
-*pDest*  
+*pDest*<br/>
 指向将接收重新定位的数据的第一个元素的指针。
 
-*pSrc*  
+*pSrc*<br/>
 指向要重新定位的第一个元素的指针。
 
-*nElements*  
+*nElements*<br/>
 要重新定位的元素数。
 
 ### <a name="remarks"></a>备注

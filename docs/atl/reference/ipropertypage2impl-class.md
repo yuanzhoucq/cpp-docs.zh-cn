@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0059c88d7aa99340568405150244152800684a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9329888f9a97c9bf5fad0d3834bde33845943edd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093295"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 类
 
@@ -37,13 +37,13 @@ ms.locfileid: "43751831"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IPropertyPage2Impl`。
 
 ## <a name="members"></a>成员
@@ -94,6 +94,6 @@ HRESULT EditProperty(DISPID dispID);
 
 ## <a name="see-also"></a>请参阅
 
-[IPerPropertyBrowsingImpl 类](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl 类](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPerPropertyBrowsingImpl 类](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl 类](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0039 |Microsoft 文档
+title: 表达式计算器错误 CXX0039 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8681d73d2889433516b205a47c500193bbeabdb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5397426618c5dfcbaa6307105781ff2e6f2eb97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048326"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>表达式计算器错误 CXX0039
-符号是不明确  
-  
- C 表达式计算器无法确定要在表达式中使用的符号的哪个实例。 该符号在继承树中多次出现。  
-  
- 你必须使用范围解析运算符 (`::`) 若要显式指定要在表达式中使用的实例。  
-  
- 此错误是与 CAN0039 相同。
+
+符号不明确
+
+C 表达式计算器无法确定哪些实例要在表达式中使用的符号。 该符号在继承树中多次出现。
+
+必须使用范围解析运算符 (`::`) 来显式指定要在表达式中使用的实例。
+
+此错误是与 CAN0039 相同。

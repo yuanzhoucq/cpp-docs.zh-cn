@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039050"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 类
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>参数
 
-*szMachineName*  
+*szMachineName*<br/>
 调试输出应发送到计算机的名称。 默认值为本地计算机。
 
-*szPipeName*  
+*szPipeName*<br/>
 调试输出应发送到的命名管道的名称。
 
-*dwTimeout*  
+*dwTimeout*<br/>
 以毫秒为单位，此类将变得可用的命名管道等待时间。
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>参数
 
-*reportType*  
+*reportType*<br/>
 报表 （_CRT_WARN、 _CRT_ERROR 或 _CRT_ASSERT） 的类型。
 
-*message*  
+*message*<br/>
 消息字符串中。
 
-*returnValue*  
+*returnValue*<br/>
 应由返回的值[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)。
 
 ### <a name="return-value"></a>返回值
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>参数
 
-*szMachineName*  
+*szMachineName*<br/>
 调试输出应发送到计算机的名称。
 
-*szPipeName*  
+*szPipeName*<br/>
 调试输出应发送到的命名管道的名称。
 
 ### <a name="return-value"></a>返回值
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>参数
 
-*dwTimeout*  
+*dwTimeout*<br/>
 以毫秒为单位，此类将变得可用的命名管道等待时间。
 
 ## <a name="see-also"></a>请参阅

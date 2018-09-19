@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059261"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 对象的基础知识
 
@@ -57,30 +57,30 @@ ATL COM 对象的其他方面由其他类处理：
 
 ## <a name="in-this-section"></a>本节内容
 
-[实现 CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[实现 CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 显示用于实现的 COM 映射条目的示例`CComObjectRootEx`。
 
-[实现 CComObject、CComAggObject 和 CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[实现 CComObject、CComAggObject 和 CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 讨论如何**DECLARE_\*_AGGREGATABLE**宏会影响使用`CComObject`， `CComAggObject`，并`CComPolyObject`。
 
-[支持 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[支持 IDispatch 和 IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 列出了用于支持的 ATL 实现类`IDispatch`和`IErrorInfo`接口。
 
-[支持 IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[支持 IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 讨论了实现您的类的连接点的步骤。
 
-[更改默认类工厂和聚合模型](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[更改默认类工厂和聚合模型](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 显示哪些宏，以使用更改默认类工厂和聚合模型。
 
-[创建聚合对象](../atl/creating-an-aggregated-object.md)  
+[创建聚合对象](../atl/creating-an-aggregated-object.md)<br/>
 列出了用于创建聚合的对象的步骤。
 
 ## <a name="related-sections"></a>相关章节
 
-[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)  
+[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)<br/>
 提供有关创建 ATL COM 对象的信息。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
 ## <a name="see-also"></a>请参阅

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4336 |Microsoft 文档
+title: 编译器警告 （等级 C4336 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4da5302df9b2072089ce84c349577e1ea8ea236f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce0bc5a8a3df26a330de55c331d46b1f0c1d692
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051160"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>编译器警告（等级 4）C4336
-导入交叉引用的类型库 type_lib1 在导入 type_lib2 之前  
-  
- 类型库引用与[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 但是，类型库包含对另一个使用未被引用的类型库的引用`#import`。 编译器发现了此其他.tlb 文件。  
-  
- 从以下两个文件 （使用 midl.exe 编译） 创建的磁盘上的给定两个类型库：  
-  
-```  
-// c4336a.idl  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]  
-library c4336aLib  
-{  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]  
-   enum E_C4336  
-   {  
-      one, two, three  
-   };  
-};  
-```  
-  
- 第二个类型库：  
-  
-```  
-// c4336b.idl  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]  
-library C4336bLib  
-{  
-   importlib ("c4336a.tlb");  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]  
-   struct S_C4336  
-   {  
-      enum E_C4336 e;  
-   };  
-};  
-```  
-  
- 下面的示例生成 C4336:  
-  
-```  
-// C4336.cpp  
-// compile with: /W4 /LD  
-// #import "C4336a.tlb"  
-#import "C4336b.tlb"   // C4336, uncomment previous line to resolve  
+
+导入交叉引用的类型库 type_lib1 导入 type_lib2 之前
+
+类型库引用与[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 但是，类型库包含对使用未引用的另一个类型库的引用`#import`。 编译器找到此其他.tlb 文件。
+
+从以下两个文件 （使用 midl.exe 编译） 创建的磁盘上的给定两个类型库：
+
+```
+// c4336a.idl
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]
+library c4336aLib
+{
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]
+   enum E_C4336
+   {
+      one, two, three
+   };
+};
+```
+
+第二个类型库：
+
+```
+// c4336b.idl
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]
+library C4336bLib
+{
+   importlib ("c4336a.tlb");
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]
+   struct S_C4336
+   {
+      enum E_C4336 e;
+   };
+};
+```
+
+下面的示例生成 C4336:
+
+```
+// C4336.cpp
+// compile with: /W4 /LD
+// #import "C4336a.tlb"
+#import "C4336b.tlb"   // C4336, uncomment previous line to resolve
 ```

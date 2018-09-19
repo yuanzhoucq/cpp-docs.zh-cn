@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4678 |Microsoft 文档
+title: 编译器警告 （等级 1） 可能出现 c4678 错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73871d69198752e12a629d441982c2da47146517
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81eb7df618f97300c2654cc0f4f7a58d18215b26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076094"
 ---
 # <a name="compiler-warning-level-1-c4678"></a>编译器警告（等级 1）C4678
-基类“base_type”的可访问性比“derived_type”低  
-  
-某个公共类型是从私有类型派生的。 如果在引用的程序集中实例化该公共类型，将无法访问私有基类型的成员。  
-  
-C4678 才可访问使用过时的编译器选项 **/clr:oldSyntax**。 使用时，则会出错 **/clr**来获得可访问性的基类，其派生的类。  
+
+基类“base_type”的可访问性比“derived_type”低
+
+某个公共类型是从私有类型派生的。 如果在引用的程序集中实例化该公共类型，将无法访问私有基类型的成员。
+
+可能出现 c4678 错误才可访问使用已过时的编译器选项 **/clr: oldsyntax**。 使用时，则会出错 **/clr**来获得可访问性的基类，其派生的类。

@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110609"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 专用的修饰符
-本节从以下方面描述特定于 Microsoft 的 C++ 扩展：  
-  
--   [基于寻址](based-addressing.md)，将一个指针用作其他指针可从中进行偏移的基础的做法  
-  
--   [函数调用约定](calling-conventions.md)  
-  
--   扩展的存储类特性声明[__declspec](declspec.md)关键字  
-  
--   [__W64](w64.md)关键字  
 
-### <a name="microsoft-specific-keywords"></a>Microsoft 专用关键字  
+本节从以下方面描述特定于 Microsoft 的 C++ 扩展：
 
-许多特定于 Microsoft 的关键字可用于修改声明符以构成派生类型。 有关声明符的详细信息，请参阅[声明符](overview-of-declarators.md)。  
+- [基于寻址](based-addressing.md)，将一个指针用作其他指针可从中进行偏移的基础的做法
+
+- [函数调用约定](calling-conventions.md)
+
+- 扩展的存储类特性声明[__declspec](declspec.md)关键字
+
+- [__W64](w64.md)关键字
+
+### <a name="microsoft-specific-keywords"></a>Microsoft 专用关键字
+
+许多特定于 Microsoft 的关键字可用于修改声明符以构成派生类型。 有关声明符的详细信息，请参阅[声明符](overview-of-declarators.md)。
 
 |关键字|含义|是否已用于构成派生类型？|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ ms.locfileid: "42571472"
 |[__vectorcall](vectorcall.md)|后跟的名称声明一个函数，如果可能，该函数将使用寄存器（包括 SSE 寄存器）而不是用于自变量传递的堆栈。|是|      
     
 ## <a name="see-also"></a>请参阅     
- [C++ 语言参考](cpp-language-reference.md)
+
+[C++ 语言参考](cpp-language-reference.md)

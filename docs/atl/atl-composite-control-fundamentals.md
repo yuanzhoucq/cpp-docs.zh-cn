@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d44abba005295fbc328f005c48a16611a2b5f25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 16358128c2da3c021b392bb4b461996ad38320e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045557"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 复合控件基础知识
 
@@ -39,7 +39,7 @@ ATL 项目向导和**添加类**对话框的自动执行创建和实现复合控
 
 ## <a name="see-also"></a>请参阅
 
-[概念](../atl/active-template-library-atl-concepts.md)   
-[复合控件全局函数](../atl/reference/composite-control-global-functions.md)   
+[概念](../atl/active-template-library-atl-concepts.md)<br/>
+[复合控件全局函数](../atl/reference/composite-control-global-functions.md)<br/>
 [复合控件宏](../atl/reference/composite-control-macros.md)
 

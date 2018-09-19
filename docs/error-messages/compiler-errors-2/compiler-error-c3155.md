@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3155 |Microsoft 文档
+title: 编译器错误 C3155 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383727d6f1665544654c047f37f094a38d6b5309
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b4000c9e7d3f175c243d4d3761216f4acface8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076471"
 ---
 # <a name="compiler-error-c3155"></a>编译器错误 C3155
-属性索引器中不允许属性  
-  
-未正确声明索引的属性。 有关详细信息，请参阅[如何： 使用属性在 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。  
-  
-## <a name="example"></a>示例  
-下面的示例生成 C3155。  
-  
-```  
-// C3155.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref struct R {  
-   property int F[[ParamArray] int] {   // C3155  
-   // try the following line instead  
-   // property int F[ int] {   // OK  
-      int get(int i) {   
-         return 0;   
-      }  
-   }  
-};  
+
+属性索引器中不允许使用属性
+
+未正确声明索引的属性。 有关详细信息，请参阅[如何： 使用属性在 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3155。
+
+```
+// C3155.cpp
+// compile with: /clr /c
+using namespace System;
+ref struct R {
+   property int F[[ParamArray] int] {   // C3155
+   // try the following line instead
+   // property int F[ int] {   // OK
+      int get(int i) {
+         return 0;
+      }
+   }
+};
 ```

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a174f4ee85b84451673b56139b9968c796464f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2d911d200b88191442c7ea04bdb61281cbc6d2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086234"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 简介
 
@@ -29,20 +29,20 @@ ms.locfileid: "43761827"
 
 ## <a name="in-this-section"></a>本节内容
 
-[COM 简介](../atl/introduction-to-com.md)  
+[COM 简介](../atl/introduction-to-com.md)<br/>
 概述了组件对象模型的 (COM) 的基本概念，包括接口， `IUnknown`，引用计数， `QueryInterface`，封送处理，并聚合。
 
-[ATL 简介](../atl/introduction-to-atl.md)  
+[ATL 简介](../atl/introduction-to-atl.md)<br/>
 进行了简要介绍，什么活动模板库 (ATL) 设计的模板库和 ATL 的版本号。 包含关于选择 ATL 和 MFC 的建议。
 
 ## <a name="related-sections"></a>相关章节
 
-[组件对象模型](/windows/desktop/com/the-component-object-model)  
+[组件对象模型](/windows/desktop/com/the-component-object-model)<br/>
 Windows SDK 材料上 com。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
-[ATL 类概述](../atl/atl-class-overview.md)  
+[ATL 类概述](../atl/atl-class-overview.md)<br/>
 提供的参考信息以及指向 ATL 类。
 

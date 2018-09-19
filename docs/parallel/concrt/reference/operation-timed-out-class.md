@@ -1,5 +1,5 @@
 ---
-title: operation_timed_out 类 |Microsoft 文档
+title: operation_timed_out 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8964a373378c0959c2836cca4de309853f29c077
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: af30dd9d7ff6ac64d6c0659520a6e7a15f2d0d93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116630"
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out 类
 此类描述操作超时时引发的异常。  
@@ -63,8 +63,8 @@ operation_timed_out() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

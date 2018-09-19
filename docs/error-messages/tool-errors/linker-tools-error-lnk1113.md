@@ -1,5 +1,5 @@
 ---
-title: 链接器工具错误 LNK1113 |Microsoft 文档
+title: 链接器工具错误 LNK1113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22baf1819ddc7d6fce195ad67c23d7b42ef6b1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87dae5e17efb7ebeb9d9ac79c51edcfd8f19f620
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083892"
 ---
 # <a name="linker-tools-error-lnk1113"></a>链接器工具错误 LNK1113
-无效的计算机类型  
-  
- 对象标头中指定的计算机类型不是有效的。  
-  
- 如果该文件已损坏，则可以导致此错误。 重新生成对象。
+
+无效的计算机类型类型
+
+对象标头中指定的计算机类型无效。
+
+如果该文件已损坏，则可以导致此错误。 重新生成对象。

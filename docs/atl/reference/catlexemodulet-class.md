@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b9b19888f6eae3efe7baf4429ec1174432f99a10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118552"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 类
 
@@ -46,13 +46,13 @@ ms.locfileid: "43757580"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类派生自`CAtlExeModuleT`。
 
 ## <a name="members"></a>成员
@@ -100,7 +100,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -200,10 +200,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 命令行传递给应用程序。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 （如果发生） 与注册相对应的 HRESULT。
 
 ### <a name="return-value"></a>返回值
@@ -240,7 +240,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 作为传递的值*nShowCmd* WinMain 中的参数。
 
 ### <a name="return-value"></a>返回值
@@ -261,10 +261,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwClsContext*  
+*dwClsContext*<br/>
 指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
 
-*dwFlags*  
+*dwFlags*<br/>
 确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
 
 ### <a name="return-value"></a>返回值
@@ -293,7 +293,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。 默认值为 SW_HIDE。
 
 ### <a name="return-value"></a>返回值
@@ -350,7 +350,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>参数
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)部分。
 
 ### <a name="return-value"></a>返回值
@@ -363,7 +363,7 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[ATLDuck 示例](../../visual-cpp-samples.md)   
-[CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)   
-[CAtlDllModuleT 类](../../atl/reference/catldllmodulet-class.md)   
+[ATLDuck 示例](../../visual-cpp-samples.md)<br/>
+[CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlDllModuleT 类](../../atl/reference/catldllmodulet-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

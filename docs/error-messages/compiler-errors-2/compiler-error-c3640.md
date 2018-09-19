@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3640 |Microsoft 文档
+title: 编译器错误 C3640 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ec2e22033ea4cc1b475ab1f838bb77d96916e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f032f96d4e7af48ad98a75f2bf62058121f135d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109192"
 ---
 # <a name="compiler-error-c3640"></a>编译器错误 C3640
-member： 必须定义的本地类的引用或虚拟成员函数  
-  
- 编译器需要定义某些功能。  
-  
- 下面的示例生成 C3640:  
-  
-```  
-// C3640.cpp  
-void f()   
-{  
-   struct S  
-   {  
-      virtual void f1();   // C3640  
-      // Try the following line instead:  
-      // virtual void f1(){}  
-   };  
-}  
+
+member： 必须定义局部类的一个引用或虚拟成员函数
+
+编译器需要定义某些功能。
+
+下面的示例生成 C3640:
+
+```
+// C3640.cpp
+void f()
+{
+   struct S
+   {
+      virtual void f1();   // C3640
+      // Try the following line instead:
+      // virtual void f1(){}
+   };
+}
 ```

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45add5f2133191bc046d72e797a7f8374976d63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cfb82cfa21d5cc69e66d7980c4878e1659a7a79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036223"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
 
@@ -46,7 +46,7 @@ template <class TBase = CWindow>
 
 #### <a name="parameters"></a>参数
 
-*TBase*  
+*TBase*<br/>
 从其类`CAxWindowT`派生。
 
 ## <a name="members"></a>成员
@@ -107,7 +107,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 现有的窗口句柄。
 
 ##  <a name="create"></a>  CAxWindow2T::Create
@@ -157,7 +157,7 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>参数
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 控件; 许可证密钥如果创建一个未获得许可的控件，则为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -194,7 +194,7 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>参数
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 控件; 许可证密钥如果创建一个未获得许可的控件，则为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -227,10 +227,10 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 现有的窗口句柄。
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [控件包含常见问题](../../atl/atl-control-containment-faq.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 4） C4210 |Microsoft 文档
+title: 编译器警告 （等级 C4210 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a376eb8bb9c5dffe5cfd4bc34c720c7e0acf41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cd9bf209d7d9f48ac2ff0aae4663dc9088199df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017711"
 ---
 # <a name="compiler-warning-level-4-c4210"></a>编译器警告（等级 4）C4210
-使用的非标准扩展： 提供文件范围内函数  
-  
- 与默认 Microsoft 扩展 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))，函数声明具有文件范围。  
-  
-```  
-// C4210.c  
-// compile with: /W4 /c  
-void func1()  
-{  
-   extern int func2( double );   // C4210 expected  
-}  
-  
-int main()  
-{  
-   func2( 4 );   //  /Ze passes 4 as type double  
-}                //  /Za passes 4 as type int  
-```  
-  
- 此扩展可以防止你的代码移植到其他编译器。
+
+使用了非标准扩展： 函数给定文件范围
+
+与默认 Microsoft 扩展 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))，函数声明具有文件范围。
+
+```
+// C4210.c
+// compile with: /W4 /c
+void func1()
+{
+   extern int func2( double );   // C4210 expected
+}
+
+int main()
+{
+   func2( 4 );   //  /Ze passes 4 as type double
+}                //  /Za passes 4 as type int
+```
+
+此扩展可以防止您的代码移植到其他编译器。

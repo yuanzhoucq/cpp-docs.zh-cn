@@ -1,5 +1,5 @@
 ---
-title: omp_set_dynamic |Microsoft 文档
+title: omp_set_dynamic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18521113125eb49fa413568b6a62472bb50a7924
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c3e8ac574ce304238affbab41acc415e1d8de697
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026902"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-指示运行时可以进行调整了后续并行区域中的可用线程数。  
+指示运行时可进行调整的后续并行区域中可用的线程数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,18 +34,17 @@ void omp_set_dynamic(
 );  
 ```  
   
+### <a name="parameters"></a>参数
+  
+*val*<br/>
+一个值，指示是否可以通过在运行时调整后续并行区域中可用的线程数。  如果非零，则运行时可以调整的线程数，如果为零，则运行时将不会动态调整线程数。  
+  
 ## <a name="remarks"></a>备注  
- 其中，  
+ 线程数将永远不会超出设置的值[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或通过[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)。  
   
- `val`  
- 一个值，该值指示是否可以由运行时调整后续并行区域中的可用线程数。  如果不为零，运行时可以调整的线程数，如果为零，则运行时将不会动态调整线程的数。  
+ 使用[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)若要显示的当前设置`omp_set_dynamic`。  
   
-## <a name="remarks"></a>备注  
- 线程数将永远不会超过所设置的值[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)。  
-  
- 使用[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)要显示的当前设置`omp_set_dynamic`。  
-  
- 有关设置`omp_set_dynamic`将替代的设置[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)环境变量。  
+ 设置`omp_set_dynamic`将覆盖的设置[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)环境变量。  
   
  有关详细信息，请参阅[3.1.7 omp_set_dynamic 函数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。  
   

@@ -18,31 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdc97982b9e8292dec1e8b5c2c49489f6803dea6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c2fe53c7040bc248d63bd3d14f90f915bdcd689a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061027"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
-**Microsoft 专用**  
-  
- 将现有 `_com_error` 对象赋给另一个对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-_com_error& operator = (  
-   const _com_error& that   
-) throw ( );  
-```  
-  
-#### <a name="parameters"></a>参数  
- *的*  
- 一个 `_com_error` 对象。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_com_error 类](../cpp/com-error-class.md)
+
+**Microsoft 专用**
+
+将现有 `_com_error` 对象赋给另一个对象。
+
+## <a name="syntax"></a>语法
+
+```
+_com_error& operator = (
+   const _com_error& that
+) throw ( );
+```
+
+#### <a name="parameters"></a>参数
+
+*的*<br/>
+一个 `_com_error` 对象。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_com_error 类](../cpp/com-error-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1105 |Microsoft 文档
+title: 资源编译器错误 RC1105 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c31c79f31d5121fea694ab80a13ba522d31c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8749610c37db1463d1d1d470105eb8d26bb92b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031309"
 ---
 # <a name="resource-compiler-fatal-error-rc1105"></a>资源编译器错误 RC1105
-无效开关，选项： /d 开关太多  
-  
- 使用定义的符号定义的符号太多 (/d) 选项。 在源和重新编译定义某些符号。
+
+无效开关，选项： /d 开关太多
+
+使用定义的符号定义的符号太多 (/d) 选项。 在源和重新编译定义某些符号。

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108425"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl 类
 
@@ -49,14 +49,14 @@ ms.locfileid: "43760443"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IViewObjectExImpl`。
 
 ## <a name="members"></a>成员
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>参数
 
-*hHandle*  
+*hHandle*<br/>
 要关闭句柄。
 
 ### <a name="return-value"></a>返回值
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>参数
 
-*dwParam*  
+*dwParam*<br/>
 User 参数中。
 
-*hObject*  
+*hObject*<br/>
 已收到信号的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -358,8 +358,8 @@ User 参数中。
 
 ## <a name="see-also"></a>请参阅
 
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
-[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)   
-[教程](../../atl/active-template-library-atl-tutorial.md)   
-[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)   
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)<br/>
+[教程](../../atl/active-template-library-atl-tutorial.md)<br/>
+[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

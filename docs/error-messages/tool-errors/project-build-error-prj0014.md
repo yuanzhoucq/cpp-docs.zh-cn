@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0014 |Microsoft 文档
+title: 项目生成错误 PRJ0014 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074719"
 ---
 # <a name="project-build-error-prj0014"></a>项目生成错误 PRJ0014
-失败的作业对象，用于控制生成的进程。  无法继续生成。  
-  
- 在开发环境中出错。  
-  
- 若要解决此错误，请关闭并重新加载项目。 如有必要，退出并重新启动 Visual Studio。
+
+用于控制生成的过程的作业对象失败。  生成无法继续。
+
+在开发环境中出错。
+
+若要解决此错误，请关闭并重新加载项目。 如果有必要，请退出并重新启动 Visual Studio。

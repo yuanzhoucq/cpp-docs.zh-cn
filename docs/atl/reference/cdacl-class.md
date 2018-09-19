@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036133"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 一个[CSid](../../atl/reference/csid-class.md)对象。
 
-*AccessMask*  
+*AccessMask*<br/>
 指定允许的访问权限的掩码指定`CSid`对象。
 
-*AceFlags*  
+*AceFlags*<br/>
 一组位标志，用于控制 ACE 继承。
 
-*pObjectType*  
+*pObjectType*<br/>
 对象类型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 继承的对象类型。
 
 ### <a name="return-value"></a>返回值
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 一个 `CSid` 对象。
 
-*AccessMask*  
+*AccessMask*<br/>
 指定要对其拒绝访问权限的掩码指定`CSid`对象。
 
-*AceFlags*  
+*AceFlags*<br/>
 一组位标志，用于控制 ACE 继承。 默认值为 0 的方法的第一个窗体中。
 
-*pObjectType*  
+*pObjectType*<br/>
 对象类型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 继承的对象类型。
 
 ### <a name="return-value"></a>返回值
@@ -183,13 +183,13 @@ bool AddDeniedAce(
 构造函数。
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 将现有`ACL`（访问控制列表） 结构。
 
 ### <a name="remarks"></a>备注
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 删除的 ACL （访问控制列表） 要分配给现有对象。
 
 ### <a name="return-value"></a>返回值
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要移除的 ACE 项的索引。
 
 ### <a name="remarks"></a>备注
@@ -272,9 +272,9 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[安全示例](../../visual-cpp-samples.md)   
-[CAcl 类](../../atl/reference/cacl-class.md)   
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)   
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)   
-[类概述](../../atl/atl-class-overview.md)   
+[安全示例](../../visual-cpp-samples.md)<br/>
+[CAcl 类](../../atl/reference/cacl-class.md)<br/>
+[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

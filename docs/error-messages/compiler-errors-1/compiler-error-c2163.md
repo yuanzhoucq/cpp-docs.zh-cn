@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2163 |Microsoft 文档
+title: 编译器错误 C2163 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066553"
 ---
 # <a name="compiler-error-c2163"></a>编译器错误 C2163
-function： 不可用作内部函数  
-  
- `intrinsic`或`function`杂注列出在内部形式中不可用的函数。 例如，某些内部函数并非编译使用 /clr 编程的程序时。
+
+function： 不可用作内部函数
+
+`intrinsic`或`function`杂注列出了在内部形式中不可用的函数。 例如，编译以下位置使用 /clr 编程的程序时某些内部函数不可用。

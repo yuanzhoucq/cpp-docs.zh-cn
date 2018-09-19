@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093956"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
@@ -56,10 +56,10 @@ ms.locfileid: "43756556"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)   
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
-[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
 

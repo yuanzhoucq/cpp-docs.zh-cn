@@ -14,35 +14,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b152be150e284462bddf0940df5656744925da5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 326318ddc8bc55bcdcd2939bfa00626b22d2a96c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083907"
 ---
 # <a name="jump-statements-c"></a>跳转语句 (C++)
-C++ 跳转语句执行控制的即时本地转换。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-break;  
-continue;  
-return [expression];  
-goto identifier;  
-```  
-  
-## <a name="remarks"></a>备注  
- 有关 C++ 跳转语句的说明，请参阅下列主题。  
-  
--   [break 语句](../cpp/break-statement-cpp.md)  
-  
--   [continue 语句](../cpp/continue-statement-cpp.md)  
-  
--   [return 语句](../cpp/return-statement-cpp.md)  
-  
--   [goTo 语句](../cpp/goto-statement-cpp.md)  
-  
-## <a name="see-also"></a>请参阅  
- [ 语句概述](../cpp/overview-of-cpp-statements.md)
+
+C++ 跳转语句执行控制的即时本地转换。
+
+## <a name="syntax"></a>语法
+
+```
+break;
+continue;
+return [expression];
+goto identifier;
+```
+
+## <a name="remarks"></a>备注
+
+有关 C++ 跳转语句的说明，请参阅下列主题。
+
+- [break 语句](../cpp/break-statement-cpp.md)
+
+- [continue 语句](../cpp/continue-statement-cpp.md)
+
+- [return 语句](../cpp/return-statement-cpp.md)
+
+- [goTo 语句](../cpp/goto-statement-cpp.md)
+
+## <a name="see-also"></a>请参阅
+
+[ 语句概述](../cpp/overview-of-cpp-statements.md)

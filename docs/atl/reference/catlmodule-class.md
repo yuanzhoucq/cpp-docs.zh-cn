@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093436"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>参数
 
-*pRegistrar*  
+*pRegistrar*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>参数
 
-*pFunc*  
+*pFunc*<br/>
 若要添加的函数指针。
 
-*数据仓库*  
+*数据仓库*<br/>
 用户定义数据传递给函数。
 
 ### <a name="return-value"></a>返回值
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>参数
 
-*ppGIT*  
+*ppGIT*<br/>
 指向将接收指向全局接口表的指针的变量。
 
 ### <a name="return-value"></a>返回值
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>参数
 
-*lpszRes*  
+*lpszRes*<br/>
 资源名称。
 
-*nResID*  
+*nResID*<br/>
 资源 id。
 
-*bRegister*  
+*bRegister*<br/>
 如果应注册对象; 则为 TRUEFALSE 否则为。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 指向存储脚本的可替换参数与关联的值替换地图的指针。 ATL 自动使用 %模块 %。 若要使用其他可替换参数，请参阅[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否则，使用 NULL 默认值。
 
 ### <a name="return-value"></a>返回值
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>参数
 
-*lpszRes*  
+*lpszRes*<br/>
 资源名称。
 
-*bRegister*  
+*bRegister*<br/>
 指示是否应注册对象。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 指向存储脚本的可替换参数与关联的值替换地图的指针。 ATL 自动使用 %模块 %。 若要使用其他可替换参数，请参阅[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否则，使用 NULL 默认值。
 
 ### <a name="return-value"></a>返回值
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>参数
 
-*nResID*  
+*nResID*<br/>
 资源 id。
 
-*lpszRes*  
+*lpszRes*<br/>
 资源名称。
 
-*bRegister*  
+*bRegister*<br/>
 指示是否应注册为资源脚本。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 指向存储脚本的可替换参数与关联的值替换地图的指针。 ATL 自动使用 %模块 %。 若要使用其他可替换参数，请参阅[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否则，使用 NULL 默认值。
 
 ### <a name="return-value"></a>返回值
@@ -364,7 +364,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ## <a name="see-also"></a>请参阅
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[类概述](../../atl/atl-class-overview.md)   
-[Module 类](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[Module 类](../../atl/atl-module-classes.md)<br/>
 [注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)  

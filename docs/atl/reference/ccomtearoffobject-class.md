@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089575"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 类
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*  
+*基本*<br/>
 分离式类，派生自`CComTearOffObjectBase`和希望分离式对象以支持接口。
 
 ATL 在两个阶段中实现其分离式接口 —`CComTearOffObjectBase`方法处理引用计数并`QueryInterface`，而`CComTearOffObject`实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>参数
 
-*pv*  
+*pv*<br/>
 [in]将转换为指向指针的指针`CComObject<Owner>`对象。
 
 ### <a name="remarks"></a>备注
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>参数
 
-*所有者*  
+*所有者*<br/>
 [in]为其分离式正在实现的类。
 
 ### <a name="remarks"></a>备注
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]所请求的接口的 IID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -209,5 +209,5 @@ STDMETHOD_ULONG Release();
 
 ## <a name="see-also"></a>请参阅
 
-[CComCachedTearOffObject 类](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject 类](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

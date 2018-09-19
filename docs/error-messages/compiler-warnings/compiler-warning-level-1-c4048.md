@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4048 |Microsoft 文档
+title: 编译器警告 （等级 1） C4048 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303c9922575bca905378a61d43c14ac630ed6566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e705d570522cdd645ee8d72159b74be750c147a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112442"
 ---
 # <a name="compiler-warning-level-1-c4048"></a>编译器警告 （等级 1） C4048
-不同的声明数组下标: identifier1 和 identifier2  
-  
- 表达式涉及到不同的大小的数组的指针。 指针用于无需转换。  
-  
- 如果你显式强制转换为相同或等效类型数组，则可能会修复此警告。
+
+不同声明数组下标: identifier1 和 identifier2
+
+表达式涉及到不同大小的数组的指针。 使用指针时不进行转换。
+
+如果您显式强制转换为相同或等效类型数组，可能会修复此警告。

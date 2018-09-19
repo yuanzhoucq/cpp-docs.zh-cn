@@ -1,5 +1,5 @@
 ---
-title: simple_partitioner 类 |Microsoft 文档
+title: simple_partitioner 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef53ed9fa69dc77c93b90f9f24fa8628d589b07
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 98c4c82bcf858215ceba31e2ddd0770511446f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075639"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner 类
 `simple_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将该范围分成区块，以便每个区块都至少具有区块大小指定的迭代数量。  
@@ -68,7 +68,8 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Chunk_size`  
+*_Chunk_size*<br/>
+最小分区大小。
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

@@ -31,14 +31,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16ced0ce1d6c5531b7210231315f001cda4c0bc4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 58e9d70079dce96153076b03acc1aeca87c50433
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136189"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
+
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  
   
 ## <a name="syntax"></a>语法
@@ -48,7 +49,8 @@ class CXMLAccessor : public CDynamicStringAccessorW
 ```  
 
 ## <a name="requirements"></a>要求  
- **标头**：atldbcli.h  
+
+**标头**：atldbcli.h  
   
 ## <a name="members"></a>成员  
   
@@ -60,16 +62,19 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |[GetXMLRowData](#getxmlrowdata)|按行中检索表的全部内容。|  
   
 ## <a name="remarks"></a>备注  
- 但是，`CXMLAccessor`不同于`CDynamicStringAccessorW`，因为它会将转换从数据存储为 XML 格式 （标记） 的数据访问的所有数据。 这是非常适合 XML 感知的 Web 页面的输出。 XML 标记名称将尽可能接近地匹配数据存储区的列名称。  
+
+但是，`CXMLAccessor`不同于`CDynamicStringAccessorW`，因为它会将转换从数据存储为 XML 格式 （标记） 的数据访问的所有数据。 这是非常适合 XML 感知的 Web 页面的输出。 XML 标记名称将尽可能接近地匹配数据存储区的列名称。  
   
- 使用`CDynamicAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。  
+使用`CDynamicAccessor`方法可获取列信息。 此列信息用于在运行时动态创建取值函数。  
   
- 创建和管理此类缓冲区中存储的列信息。 获取列信息使用[GetXMLColumnData](#getxmlcolumndata)或按行使用获取列数据[GetXMLRowData](#getxmlrowdata)。  
+创建和管理此类缓冲区中存储的列信息。 获取列信息使用[GetXMLColumnData](#getxmlcolumndata)或按行使用获取列数据[GetXMLRowData](#getxmlrowdata)。  
   
 ## <a name="example"></a>示例  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
 
 ## <a name="getxmlcolumndata"></a> Cxmlaccessor:: Getxmlcolumndata
+
 按列检索为 XML 格式的字符串数据的列类型信息的表。  
   
 ### <a name="syntax"></a>语法  
@@ -79,22 +84,26 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```  
   
 #### <a name="parameters"></a>参数  
- *strOutput*  
- [out]对包含要检索的列类型信息的字符串缓冲区的引用。 使用与数据存储区的列名称匹配的 XML 标记名称格式化的字符串。  
+
+*strOutput*<br/>
+[out]对包含要检索的列类型信息的字符串缓冲区的引用。 使用与数据存储区的列名称匹配的 XML 标记名称格式化的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 一个标准的 HRESULT 值。  
+
+一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 下面显示了如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，将数据类型基于 OLE DB 数据类型，不是那些正在访问的数据库。  
+
+下面显示了如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，将数据类型基于 OLE DB 数据类型，不是那些正在访问的数据库。  
   
- `<columninfo>`  
+`<columninfo>`  
   
- `<column type = I2/> ColumnName`  
+`<column type = I2/> ColumnName`  
   
- `</columninfo>` 
+`</columninfo>` 
 
 ## <a name="getxmlrowdata"></a> Cxmlaccessor:: Getxmlrowdata
+
 检索表的整个内容为 XML 格式的字符串数据，按行。  
   
 ### <a name="syntax"></a>语法  
@@ -105,31 +114,35 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ```  
   
 #### <a name="parameters"></a>参数  
- *strOutput*  
- [out]对包含要检索的表数据的缓冲区的引用。 数据格式化为使用与数据存储区的列名称匹配的 XML 标记名称的字符串数据。  
+
+*strOutput*<br/>
+[out]对包含要检索的表数据的缓冲区的引用。 数据格式化为使用与数据存储区的列名称匹配的 XML 标记名称的字符串数据。  
   
- *bAppend*  
- [in]一个布尔值，指定是否要将字符串追加到输出数据的末尾。  
+*bAppend*<br/>
+[in]一个布尔值，指定是否要将字符串追加到输出数据的末尾。  
   
 ### <a name="return-value"></a>返回值  
- 一个标准的 HRESULT 值。  
+
+一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- 下面显示了如何在 XML 中设置行数据的格式。 `DATA` 下面表示行数据。 使用 move 方法移动到所需的一行。  
+
+下面显示了如何在 XML 中设置行数据的格式。 `DATA` 下面表示行数据。 使用 move 方法移动到所需的一行。  
   
- `<row>`  
+`<row>`  
   
- `<column name>DATA</column name>`  
+`<column name>DATA</column name>`  
   
- `</row>`   
+`</row>`   
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor 类](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CDynamicStringAccessor 类](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicStringAccessorA 类](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW 类](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)
+
+[OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor 类](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicStringAccessor 类](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicStringAccessorA 类](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW 类](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)

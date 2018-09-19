@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115471"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 指定应在所有线程之间共享一个或多个变量。  
@@ -32,11 +32,10 @@ ms.locfileid: "42544385"
 shared(var)  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `var`  
- 若要共享的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。  
+*var*<br/>
+若要共享的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。  
   
 ## <a name="remarks"></a>备注  
  共享变量在线程之间的另一个方法是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。  

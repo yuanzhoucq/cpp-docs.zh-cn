@@ -30,14 +30,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118126"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
+
 执行相同的功能`IObjectWithSite`但也可以启用 OLE DB 属性`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`。  
   
 ## <a name="syntax"></a>语法
@@ -49,11 +50,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 一个类派生自`IRowsetCreator`。  
+
+*T*<br/>
+一个类派生自`IRowsetCreator`。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |[SetSite](#setsite)|设置包含行集对象的站点。|  
   
 ## <a name="remarks"></a>备注  
- 此类继承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)并重写[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 当提供程序命令或会话对象创建行集时，它将调用`QueryInterface`寻找对行集对象`IObjectWithSite`并调用`SetSite`将行集对象传递`IUnkown`作为站点接口的接口。  
+
+此类继承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)并重写[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 当提供程序命令或会话对象创建行集时，它将调用`QueryInterface`寻找对行集对象`IObjectWithSite`并调用`SetSite`将行集对象传递`IUnkown`作为站点接口的接口。  
 
 ## <a name="setsite"></a> Irowsetcreatorimpl:: Setsite
+
 设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。  
   
 ### <a name="syntax"></a>语法  
@@ -76,15 +81,19 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ```  
   
 #### <a name="parameters"></a>参数  
- *pCreator*  
- [in]指向`IUnknown`管理行集对象的站点的接口指针。  
+
+*pCreator*<br/>
+[in]指向`IUnknown`管理行集对象的站点的接口指针。  
   
 ### <a name="return-value"></a>返回值  
- 标准的 HRESULT。  
+
+标准的 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此外，`IRowsetCreatorImpl::SetSite`能使 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`属性。 
+
+此外，`IRowsetCreatorImpl::SetSite`能使 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`属性。 
 
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

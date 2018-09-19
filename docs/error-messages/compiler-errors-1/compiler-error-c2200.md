@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2200 |Microsoft 文档
+title: 编译器错误 C2200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d9307efba9dcc6ebfef94b770a79b135515e12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb7ac03ea6450b62d55bf2a6351eb994715e3c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029372"
 ---
 # <a name="compiler-error-c2200"></a>编译器错误 C2200
-“function”：函数已被定义  
-  
- `alloc_text` 杂注使用已定义的函数名称。
+
+“function”：函数已被定义
+
+`alloc_text` 杂注使用已定义的函数名称。

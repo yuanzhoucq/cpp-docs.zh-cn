@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6205 |Microsoft 文档
+title: 数学错误 M6205 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8d7fbd042d8ce8210ec4fe275b0d83314f5d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55549300a5ea603e4462d5b81679f935319838ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099734"
 ---
 # <a name="math-error-m6205"></a>数学错误 M6205
-function: _TLOSS 错误  
-  
- 总丢失基数 （精度） 发生。  
-  
- 此错误可能由与 sin、 操作数给定的非常大的数 cos 或 tan，因为该操作数必须减小为介于 0 和 2 之间的数字 * pi。
+
+function: _TLOSS 错误
+
+总丢失基数 （精度） 发生。
+
+此错误 cos，可能会导致的给定的操作数的 sin，非常大或 tan，因为该操作数必须减小为 0 到 2 之间的数字 * pi。

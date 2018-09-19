@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0015 |Microsoft 文档
+title: 表达式计算器错误 CXX0015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050811"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>表达式计算器错误 CXX0015
-表达式太复杂 （堆栈溢出）  
-  
- 输入的表达式为太复杂或嵌套太深量存储可供 C 表达式计算器。  
-  
- 由于过多的挂起计算通常会发生溢出。  
-  
- 重新排列表达式，以便在遇到，可以计算表达式的每个组件，而不是无需等待要计算的表达式的其他部分。  
-  
- 将表达式拆分为多个命令。  
-  
- 此错误是与 CAN0015 相同。
+
+表达式过于复杂 （堆栈溢出）
+
+输入的表达式是过于复杂或嵌套太深所个 C 表达式计算器的可用存储量。
+
+由于过多挂起的计算，通常会出现溢出。
+
+重新排列该表达式，以便时遇到，可以计算表达式的每个组件，而不必等待要计算的表达式的其他部分。
+
+将表达式拆分为多个命令。
+
+此错误是与 CAN0015 相同。

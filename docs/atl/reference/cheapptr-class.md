@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033974"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 类
 
@@ -37,16 +37,16 @@ ms.locfileid: "43762075"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在堆上的对象类型。
 
-*分配器*  
+*分配器*<br/>
 要使用的内存分配类。
 
 ## <a name="members"></a>成员
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>参数
 
-*nElements*  
+*nElements*<br/>
 用于计算要分配的内存量的元素数。 默认值为 1。
 
 ### <a name="return-value"></a>返回值
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 现有堆指针或`CHeapPtr`。
 
 ### <a name="remarks"></a>备注
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 一个现有的 `CHeapPtr` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>参数
 
-*nElements*  
+*nElements*<br/>
 新的用于计算要分配的内存量的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -177,6 +177,6 @@ bool Reallocate(size_t nElements) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)   
-[CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)   
+[CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -19,32 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069334"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 项目的编译器优化
 
 默认情况下[ATL 控件向导](../../atl/reference/atl-control-wizard.md)生成与 ATL_NO_VTABLE 宏的新类，如下所示：
 
-```  
-class ATL_NO_VTABLE CProjName  
-{  
-...  
-};  
+```
+class ATL_NO_VTABLE CProjName
+{
+...
+};
 ```
 
 ATL 然后定义 _ATL_NO_VTABLE，如下所示：
 
-```  
-#ifdef _ATL_DISABLE_NO_VTABLE  
-#define ATL_NO_VTABLE  
-#else  
-#define ATL_NO_VTABLE __declspec(novtable)  
-#endif  
+```
+#ifdef _ATL_DISABLE_NO_VTABLE
+#define ATL_NO_VTABLE
+#else
+#define ATL_NO_VTABLE __declspec(novtable)
+#endif
 ```
 
 如果未定义 _ATL_DISABLE_NO_VTABLE，ATL_NO_VTABLE 宏会扩展到`declspec(novtable)`。 使用`declspec(novtable)`类中声明会无法 vtable 指针初始化的类构造函数和析构函数中。 生成项目时，链接器可消除 vtable 和 vtable 所指向的所有函数。
@@ -55,19 +55,19 @@ ATL 然后定义 _ATL_NO_VTABLE，如下所示：
 
 如果您不确定是否应该使用`declspec(novtable)`修饰符，您可以从任何类定义中，删除 ATL_NO_VTABLE 宏或，可以通过指定全局禁止
 
-```  
-#define _ATL_DISABLE_NO_VTABLE  
+```
+#define _ATL_DISABLE_NO_VTABLE
 ```
 
 在 stdafx.h 中之前所有其他 ATL, 标头将包含文件。
 
 ## <a name="see-also"></a>请参阅
 
-[ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)   
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
-[novtable](../../cpp/novtable.md)   
+[ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[novtable](../../cpp/novtable.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0021 |Microsoft 文档
+title: 表达式计算器错误 CXX0021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025771"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>表达式计算器错误 CXX0021
-结构或联合用作标量  
-  
- 在表达式中，使用结构或联合，但未指定任何元素。  
-  
- 当操作结构或联合变量，变量的名称可能单独出现，而无需域限定符。 如果在表达式中使用结构或联合，必须用所需的特定元素进行限定。  
-  
- 指定要在表达式中使用其值的元素。  
-  
- 此错误是与 CAN0021 相同。
+
+结构或联合用作标量
+
+在表达式中，使用结构或联合，但未指定任何元素。
+
+当操作结构或联合变量，变量的名称可能会单独出现，无字段限定符。 如果在表达式中使用的结构或联合，它必须与所需的特定元素进行限定。
+
+指定其值将在表达式中使用的元素。
+
+此错误是与 CAN0021 相同。

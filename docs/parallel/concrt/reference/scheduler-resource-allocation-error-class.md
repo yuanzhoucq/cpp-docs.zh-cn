@@ -1,5 +1,5 @@
 ---
-title: scheduler_resource_allocation_error 类 |Microsoft 文档
+title: scheduler_resource_allocation_error 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101691"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 类
 此类描述因未能在并发运行时中获取关键资源而引发的异常。  
@@ -50,7 +50,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |[get_error_code](#get_error_code)|返回导致异常的错误代码。|  
   
 ## <a name="remarks"></a>备注  
- 对操作系统与并发运行时中的调用失败时，通常会引发此异常。 通常从调用 Win32 方法 `GetLastError` 返回的错误代码将转换为类型 `HRESULT` 的值，并且可以使用 `get_error_code` 方法检索。  
+ 从并发运行时中的操作系统调用失败时，通常将引发此异常。 通常从调用 Win32 方法 `GetLastError` 返回的错误代码将转换为类型 `HRESULT` 的值，并且可以使用 `get_error_code` 方法检索。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -71,7 +71,7 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `HRESULT`导致异常的错误值。  
+ `HRESULT`错误导致异常的值。  
   
 ##  <a name="ctor"></a> scheduler_resource_allocation_error 
 
@@ -87,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
- `_Hresult`  
- `HRESULT`导致异常的错误值。  
+*_Hresult*<br/>
+`HRESULT`错误导致异常的值。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

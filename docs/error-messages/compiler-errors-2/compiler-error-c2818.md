@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2818 |Microsoft 文档
+title: 编译器错误 C2818 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d7f419d528fcd2445b82e29d92442002624909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f692f52477c988c277f60a689dac5ce83a90acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112039"
 ---
 # <a name="compiler-error-c2818"></a>编译器错误 C2818
-重载“operator ->”的应用程序通过类型“type”进行递归  
-  
- 类成员访问运算符重新定义包含递归`return`语句。 若要重新定义`->`运算符具有递归，你必须将移动到单独的函数调用从运算符的递归例程重写函数。
+
+重载“operator ->”的应用程序通过类型“type”进行递归
+
+类成员访问运算符重新定义包含递归`return`语句。 若要重新定义`->`递归运算符，必须移动到单独的函数调用运算符从的递归例程来重写函数。

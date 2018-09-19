@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080306"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>参数
 
-*StringType*  
+*StringType*<br/>
 要使用的路径的 ATL/MFC 字符串类 (请参阅[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。
 
 ## <a name="members"></a>成员
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>参数
 
-*pszExtension*  
+*pszExtension*<br/>
 要添加的文件扩展名。
 
 ### <a name="return-value"></a>返回值
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>参数
 
-*pszMore*  
+*pszMore*<br/>
 要追加的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>参数
 
-*iDrive*  
+*iDrive*<br/>
 驱动器数量 （0 表示答:，1 是 b:，依此类推）。
 
 ### <a name="remarks"></a>备注
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>参数
 
-*pszDir*  
+*pszDir*<br/>
 目录路径中。
 
-*pszFile*  
+*pszFile*<br/>
 文件路径中。
 
 ### <a name="remarks"></a>备注
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>参数
 
-*pszOther*  
+*pszOther*<br/>
 要比较为当前的路径。
 
 ### <a name="return-value"></a>返回值
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>参数
 
-*hDC*  
+*hDC*<br/>
 使用的字体规格的设备上下文。
 
-*nWidth*  
+*nWidth*<br/>
 宽度，以像素为单位，将强制在字符串中容纳不下。
 
 ### <a name="return-value"></a>返回值
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>参数
 
-*nMaxChars*  
+*nMaxChars*<br/>
 要包含在包括终止 NULL 字符的新字符串的字符数目上限。
 
-*dwFlags*  
+*dwFlags*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>参数
 
-*pszPath*  
+*pszPath*<br/>
 指向的路径字符串的指针。
 
-*path*  
+*path*<br/>
 路径字符串中。
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>参数
 
-*pszPrefix*  
+*pszPrefix*<br/>
 要搜索前缀。 前缀是这些类型之一:"c:\\\\"，"。"，"..."，"...\\\\".
 
 ### <a name="return-value"></a>返回值
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>参数
 
-*pszOther*  
+*pszOther*<br/>
 另一条路径。
 
 ### <a name="return-value"></a>返回值
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>参数
 
-*pszSpec*  
+*pszSpec*<br/>
 与要搜索的文件类型的以 null 结尾的字符串指针。 例如，若要测试是否在当前路径的文件为文档文件， *pszSpec*应设置为"*.doc"。
 
 ### <a name="return-value"></a>返回值
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>参数
 
-*pszMore*  
+*pszMore*<br/>
 要追加的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>参数
 
-*pszFrom*  
+*pszFrom*<br/>
 相对路径的开头。
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 文件属性*pszFrom*。 如果此值包含 FILE_ATTRIBUTE_DIRECTORY， *pszFrom*假定是一个目录; 否则为*pszFrom*被假定为一个文件。
 
-*pszTo*  
+*pszTo*<br/>
 相对路径的终结点。
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 文件属性*pszTo*。 如果此值包含 FILE_ATTRIBUTE_DIRECTORY， *pszTo*假定是一个目录; 否则为*pszTo*被假定为一个文件。
 
 ### <a name="return-value"></a>返回值
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>参数
 
-*pszExtension*  
+*pszExtension*<br/>
 新的文件扩展名，前面有"。"字符。
 
 ### <a name="return-value"></a>返回值
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>请参阅
 
-[类](../../atl/reference/atl-classes.md)   
+[类](../../atl/reference/atl-classes.md)<br/>
 [CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3633 |Microsoft 文档
+title: 编译器错误 C3633 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341123f51a065cc8dcd43425f65b21edaf00abbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaa4712fb571d56166204655aff95153ac328ce6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078265"
 ---
 # <a name="compiler-error-c3633"></a>编译器错误 C3633
-不能定义为托管的 type 的成员 member  
-  
-CLR 引用类数据成员不能是非 POD c + + 类型。  仅可以实例化 POD 本机类型中的 CLR 类型。  例如，POD 类型不能包含复制构造函数或赋值运算符。  
-  
-## <a name="example"></a>示例  
-下面的示例生成 C3633。  
-  
-```  
-// C3633.cpp  
-// compile with: /clr /c  
-#pragma warning( disable : 4368 )  
-  
-class A1 {  
-public:  
-   A1() { II = 0; }  
-   int II;  
-};  
-  
-ref class B {  
-public:  
-   A1 a1;   // C3633  
-   A1 * a2;   // OK  
-   B() : a2( new A1 ) {}  
-    ~B() { delete a2; }  
-};  
-```  
+
+不能定义为托管 type 的成员 member
+
+CLR 引用类数据成员不能为非 POD + + 类型。  仅可以实例化 CLR 类型中的 POD 本机类型。  例如，POD 类型不能包含复制构造函数或赋值运算符。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3633。
+
+```
+// C3633.cpp
+// compile with: /clr /c
+#pragma warning( disable : 4368 )
+
+class A1 {
+public:
+   A1() { II = 0; }
+   int II;
+};
+
+ref class B {
+public:
+   A1 a1;   // C3633
+   A1 * a2;   // OK
+   B() : a2( new A1 ) {}
+    ~B() { delete a2; }
+};
+```

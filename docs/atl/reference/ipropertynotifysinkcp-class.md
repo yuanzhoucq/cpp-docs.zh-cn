@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135757"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 类
 
@@ -36,17 +36,17 @@ ms.locfileid: "43759660"
 ## <a name="syntax"></a>语法
 
 ```
-template<class T, class CDV = CComDynamicUnkArray>  
+template<class T, class CDV = CComDynamicUnkArray>
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IPropertyNotifySinkCP`。
 
-*CDV*  
+*CDV*<br/>
 类，用于管理连接点和其接收器之间的连接。 默认值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，它允许无限制的连接。 此外可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，它指定固定的数量的连接。
 
 ## <a name="remarks"></a>备注
@@ -65,6 +65,6 @@ class IPropertyNotifySinkCP
 
 ## <a name="see-also"></a>请参阅
 
-[IConnectionPointImpl 类](../../atl/reference/iconnectionpointimpl-class.md)   
-[IConnectionPointContainerImpl 类](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[IConnectionPointImpl 类](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPointContainerImpl 类](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

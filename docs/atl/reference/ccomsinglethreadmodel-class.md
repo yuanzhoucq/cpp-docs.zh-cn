@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0a29e7da1c4f1662d7342a507bed786fcbf82bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094417"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 类
 
@@ -137,7 +137,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向要递减的变量。
 
 ### <a name="return-value"></a>返回值
@@ -154,7 +154,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向要递增的变量。
 
 ### <a name="return-value"></a>返回值

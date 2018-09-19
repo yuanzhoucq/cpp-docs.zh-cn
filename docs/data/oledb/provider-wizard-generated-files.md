@@ -1,5 +1,5 @@
 ---
-title: 提供程序向导生成的文件 |Microsoft 文档
+title: 提供程序向导生成的文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108399"
 ---
 # <a name="provider-wizard-generated-files"></a>提供程序向导生成的文件
-ATL OLE DB 提供程序向导生成以下文件。 下面的主题使用的短名称"MyProvider"，但确切的文件名依赖于时创建提供程序所做的选择。  
+
+在 ATL OLE DB 提供程序向导将生成以下文件。 下面的主题使用短名称"MyProvider"，但确切的文件名取决于创建提供程序时所做的选择。  
   
 |文件名|描述|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|包含命令帮助器`Execute`方法和提供程序列映射。|  
+|MyProviderRS.cpp|包含命令帮助程序`Execute`方法和提供程序列映射。|  
 |MyProviderDS.h|实现数据源对象。 此标头文件包含数据源属性的属性映射。|  
-|MyProviderRS.h|实现的命令和行集对象。 此标头文件包含行集和命令的属性的属性映射。|  
-|MyProviderSess.h|实现的会话对象。 此标头文件包含会话属性的属性映射。|  
+|MyProviderRS.h|实现的命令和行集对象。 此标头文件包含行集和命令属性的属性映射。|  
+|MyProviderSess.h|实现会话对象。 此标头文件包含的会话属性的属性映射。|  
 |MyProvider.rgs|包含通过 OLE DB 提供程序向导生成的已注册的对象。|  
   
 ## <a name="see-also"></a>请参阅  
- [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)
+
+[创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)

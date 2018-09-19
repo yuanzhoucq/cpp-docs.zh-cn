@@ -1,5 +1,5 @@
 ---
-title: 对于每一个，在 |Microsoft 文档
+title: 对于每个，在 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040683"
 ---
 # <a name="for-each-in"></a>for each, in
-通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用一种标准[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)相反。  
+通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用标准[基于范围的 for 语句 （c + +）](../cpp/range-based-for-statement-cpp.md)相反。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  **语法**  
@@ -43,25 +43,25 @@ ms.locfileid: "33111938"
   
  **参数**  
   
- `type`  
- `identifier` 的类型。  
+*type*<br/>
+`identifier` 的类型。  
   
- `identifier`  
- 代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)，你可以修改该元素。  
+*identifier*<br/>
+代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。  
   
- `expression`  
- 数组表达式或集合。 集合元素必须让编译器能将其转换为 `identifier` 类型。  
+*表达式*<br/>
+数组表达式或集合。 集合元素必须让编译器能将其转换为 `identifier` 类型。  
   
- `statements`  
- 要执行的一个或多个语句。  
+*语句*<br/>
+要执行的一个或多个语句。  
   
  **备注**  
   
  `for each` 语句用于循环访问集合。 可修改集合中的元素，但无法添加或删除元素。  
   
- *语句*针对数组或集合中每个元素执行的。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。  
+ *语句*数组或集合中每个元素执行。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。  
   
- `for each` 和`in`是[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `for each` 并`in`都[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
  更多相关信息：  
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- CLR 语法等同于**所有运行时**语法，但有以下差异。  
+ CLR 语法等同于**所有运行时**语法中，按如下所示除外。  
   
  *表达式*  
- 托管的数组表达式或集合。 集合元素必须是这样，编译器可以将其从转换<xref:System.Object>到*标识符*类型。  
+ 托管的数组表达式或集合。 集合元素必须让编译器可以将其从转换<xref:System.Object>到*标识符*类型。  
   
- *表达式*计算出的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或者定义的类型`GetEnumerator`其中一个返回类型的方法的实现<xref:System.Collections.IEnumerator>或声明中定义的方法的所有`IEnumerator`.  
+ *表达式*计算结果为的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定义的类型`GetEnumerator`方法可返回一种类型的实现<xref:System.Collections.IEnumerator>声明所有中定义的方法或`IEnumerator`.  
   
 ### <a name="requirements"></a>要求  
  编译器选项： **/clr**  

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4334 |Microsoft 文档
+title: 编译器警告 （等级 3） C4334 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f26749c968c3cac18b509046633ba3d91d15a4be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7bb16ea38b2c2112c12c561398341a7d1adbfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044010"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>编译器警告（等级 3）C4334
-operator： 结果的 32 位 shift 隐式转换为 64 位 （是否 64 位位移？）  
-  
- 32 位位移的结果已隐式转换为 64 位和 64 位 shift 本来编译器怀疑。  若要解决此警告，请使用 64 位 shift 或显式将 shift 结果转换为 64 位。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4334。  
-  
-```  
-// C4334.cpp  
-// compile with: /W3 /c  
-void SetBit(unsigned __int64 *p, int i) {  
-   *p |= (1 << i);   // C4334  
-   *p |= (1i64 << i);   // OK  
-}  
+
+operator: 32 位移位的结果隐式转换为 64 位 （是否 64 位移？）
+
+32 位移位的结果已隐式转换为 64 位和 64 位 shift 原来编译器怀疑。  若要解决此警告，请使用 64 位 shift 或显式将 shift 结果转换为 64 位。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4334。
+
+```
+// C4334.cpp
+// compile with: /W3 /c
+void SetBit(unsigned __int64 *p, int i) {
+   *p |= (1 << i);   // C4334
+   *p |= (1i64 << i);   // OK
+}
 ```

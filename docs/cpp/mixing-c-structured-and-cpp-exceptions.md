@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572455"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031621"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C （结构化） 和 c + + 异常
 
@@ -47,10 +47,10 @@ ms.locfileid: "42572455"
 
   查看有关使用详细信息`setjmp`和`longjmp`c + + 程序中。
 
-- [处理 c + + 中的结构化的异常](../cpp/exception-handling-differences.md)
+- [处理 C++ 中的结构性异常](../cpp/exception-handling-differences.md)
 
   请参阅可用 c + + 来处理结构化异常的方法的示例。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 异常处理](../cpp/cpp-exception-handling.md)  
+[C++ 异常处理](../cpp/cpp-exception-handling.md)

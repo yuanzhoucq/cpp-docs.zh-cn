@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039083"
 ---
 # <a name="messagehandler"></a>消息处理程序
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>参数
 
-*uMsg*  
+*uMsg*<br/>
 指定的消息。
 
-*wParam*  
+*wParam*<br/>
 其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 其他特定于消息的信息。
 
-*bHandled*  
+*bHandled*<br/>
 消息映射集*bHandled*为 TRUE，然后才能`MessageHandler`调用。 如果`MessageHandler`不完全处理该消息，应设置*bHandled*为 FALSE 以指示该消息需要进一步处理。
 
 ## <a name="return-value"></a>返回值
@@ -61,6 +61,6 @@ LRESULT MessageHandler(
 
 ## <a name="see-also"></a>请参阅
 
-[实现窗口](../atl/implementing-a-window.md)   
-[消息映射](../atl/message-maps-atl.md)   
+[实现窗口](../atl/implementing-a-window.md)<br/>
+[消息映射](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

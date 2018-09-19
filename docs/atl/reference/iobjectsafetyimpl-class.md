@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019405"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 类
 
@@ -40,16 +40,16 @@ ms.locfileid: "43754925"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IObjectSafetyImpl`。
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 指定控件的受支持的安全选项。 可以是以下值之一：
 
 - 由标识的接口 INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)参数`riid`应对安全执行脚本。
@@ -139,5 +139,5 @@ HRESULT SetInterfaceSafetyOptions(
 
 ## <a name="see-also"></a>请参阅
 
-[IObjectSafety 接口](https://msdn.microsoft.com/library/aa768224.aspx)   
+[IObjectSafety 接口](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [类概述](../../atl/atl-class-overview.md)

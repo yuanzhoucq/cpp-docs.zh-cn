@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4272 |Microsoft 文档
+title: 编译器警告 （等级 1） C4272 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6de736c3226a9d3377769b65604a458c08e25df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00e30646c9fe56132da9cf87ba71cb54ae6a3e8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052954"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>编译器警告（等级 1）C4272
-function： 标记 __declspec （dllimport）;导入函数时，必须指定本地调用约定。  
-  
- 它是错误导出函数标记有[__clrcall](../../cpp/clrcall.md)调用约定及编译器发出此警告，如果你尝试导入标记的函数`__clrcall`。  
-  
- 下面的示例生成 C4272:  
-  
-```  
-// C4272.cpp  
-// compile with: /c /W1 /clr  
-__declspec(dllimport) void __clrcall Test();   // C4272  
-__declspec(dllimport) void Test2();   // OK  
+
+function： 被标记为 __declspec （dllimport）;导入函数时，必须指定本机调用约定。
+
+它是导出函数标记为错误[__clrcall](../../cpp/clrcall.md)如果你尝试导入标记的函数调用约定和编译器发出此警告`__clrcall`。
+
+下面的示例生成 C4272:
+
+```
+// C4272.cpp
+// compile with: /c /W1 /clr
+__declspec(dllimport) void __clrcall Test();   // C4272
+__declspec(dllimport) void Test2();   // OK
 ```

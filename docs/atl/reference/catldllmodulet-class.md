@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107822"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 类
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766569"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类派生自`CAtlDllModuleT`。
 
 ## <a name="members"></a>成员
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>参数
 
-*rclsid*  
+*rclsid*<br/>
 若要创建的对象的 CLSID。
 
-*riid*  
+*riid*<br/>
 所请求的接口的 IID。
 
-*ppv*  
+*ppv*<br/>
 通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwReason*  
+*dwReason*<br/>
 如果设置为 DLL_PROCESS_ATTACH、 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知调用被禁用。
 
-*lpreserved，请将*  
+*lpreserved，请将*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果类型库的注册，则为 TRUE。 默认值为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>参数
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果类型库，则若要从注册表中删除，则为 TRUE。 默认值为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>参数
 
-*rclsid*  
+*rclsid*<br/>
 若要创建的对象的 CLSID。
 
-*riid*  
+*riid*<br/>
 所请求的接口的 IID。
 
-*ppv*  
+*ppv*<br/>
 通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -231,7 +231,7 @@ HRESULT GetClassObject(
 
 ## <a name="see-also"></a>请参阅
 
-[CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)   
-[CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)   
-[类概述](../../atl/atl-class-overview.md)   
+[CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [Module 类](../../atl/atl-module-classes.md)

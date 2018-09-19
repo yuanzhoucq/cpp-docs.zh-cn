@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2334 |Microsoft 文档
+title: 编译器错误 C2334 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff086a9074db3fca2c85427365b4b90d99b17d24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68ce0a6096cfd8a3a4e0fe52d897690f037be40b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073796"
 ---
 # <a name="compiler-error-c2334"></a>编译器错误 C2334
-前面的意外的标记： 或 {; 正在跳过明显函数体  
-  
- 下面的示例生成 C2334。 在错误 C2059 之后会发生此错误：  
-  
-```  
-// C2334.cpp  
-// compile with: /c  
-// C2059 expected  
-struct s1 {  
-   s1   {}   // C2334  
-   s1() {}   // OK  
-};  
+
+前面有意外的标记： 或 {; 正在跳过明显的函数体
+
+下面的示例生成 C2334。 错误 C2059 后会发生此错误：
+
+```
+// C2334.cpp
+// compile with: /c
+// C2059 expected
+struct s1 {
+   s1   {}   // C2334
+   s1() {}   // OK
+};
 ```

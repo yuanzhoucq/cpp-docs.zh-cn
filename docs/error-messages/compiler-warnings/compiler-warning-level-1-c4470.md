@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4470 |Microsoft 文档
+title: 编译器警告 （等级 1） C4470 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57fa405f1137c8627b439110514f63fd3e62d83b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a660192b11e98bc34871e1f845c872fe27fb9ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278127"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076978"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>编译器警告（等级 1）C4470
-忽略在 /clr 下的浮点控制杂注  
-  
- Float 控件杂注：  
-  
--   [fenv_access](../../preprocessor/fenv-access.md)  
-  
--   [float_control](../../preprocessor/float-control.md)  
-  
--   [fp_contract](../../preprocessor/fp-contract.md)  
-  
- 在没有影响[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  
-  
- 下面的示例生成 C4470:  
-  
-```  
-// C4470.cpp  
-// compile with: /clr /W1 /LD  
-#pragma float_control(except, on)   // C4470  
+
+在 /clr 下忽略了浮点控制 pragma
+
+浮点控制杂注：
+
+- [fenv_access](../../preprocessor/fenv-access.md)
+
+- [float_control](../../preprocessor/float-control.md)
+
+- [fp_contract](../../preprocessor/fp-contract.md)
+
+在不起作用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。
+
+下面的示例生成 C4470:
+
+```
+// C4470.cpp
+// compile with: /clr /W1 /LD
+#pragma float_control(except, on)   // C4470
 ```

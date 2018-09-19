@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108438"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 结构
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>成员
 
-`cbSize`  
+`cbSize`<br/>
 用于版本控制的结构的大小。
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 引用计数以确定多长时间，该模块应始终处于活动状态。
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 跟踪已注册 ATL 关闭时要调用的函数。
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 用于协调对在多线程情况下的内部数据的访问。
 
 ## <a name="remarks"></a>备注

@@ -1,5 +1,5 @@
 ---
-title: NMAKE 错误 U1086 |Microsoft 文档
+title: NMAKE 错误 U1086 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9d314f523706ae6b4a18070f51341eba43984e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 300dac81a55a07f163f0fe6bb01646403517b554
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107625"
 ---
 # <a name="nmake-fatal-error-u1086"></a>NMAKE 错误 U1086
-**推理规则不能有依赖项**  
-  
- 冒号 (**:**) 中的推理规则后面必须跟以下方法之一：  
-  
--   换行符  
-  
--   分号 (**;**)，可以跟命令  
-  
--   数字符号 (**#**)，可以跟注释
+
+**推理规则不能有从属项**
+
+冒号 (**:**) 在推理规则必须跟有其中一种：
+
+- 换行字符
+
+- 以分号 (**;**)，可以跟命令
+
+- 数字符号 (**#**)，可以跟一条注释

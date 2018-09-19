@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2948 |Microsoft 文档
+title: 编译器错误 C2948 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ee324ebbdbc1d9dc19c6a1323f2f47c370f08b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 052bfdb49e965b0d42a8af2c7cf2e57ee1af6f6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020857"
 ---
 # <a name="compiler-error-c2948"></a>编译器错误 C2948
-显式实例化;存储类说明符 specifier 专用化中不允许  
-  
- 不能使用存储类说明符 (如`extern`) 在以前显式实例化的模板类专用化。
+
+显式实例化;存储类说明符 specifier 不允许使用专用化
+
+不能使用存储类说明符 (如`extern`) 中的以前显式实例化的模板类专用化。

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040487"
 ---
 # <a name="catlfile-class"></a>CAtlFile 类
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>参数
 
-文件  
+文件<br/>
 文件对象中。
 
-*hFile*  
+*hFile*<br/>
 文件句柄。
 
-*pTM*  
+*pTM*<br/>
 指向 CAtlTransactionManager 对象的指针
 
 ### <a name="remarks"></a>备注
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>参数
 
-*szFilename*  
+*szFilename*<br/>
 文件名。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 所需的访问。 请参阅*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 共享模式中。 请参阅*dwShareMode*中`CreateFile`。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 创建处理设置。 请参阅*dwCreationDisposition*中`CreateFile`。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 标志和属性。 请参阅*dwFlagsAndAttributes*中`CreateFile`。
 
-*lpsa*  
+*lpsa*<br/>
 安全属性。 请参阅*lpSecurityAttributes*中`CreateFile`。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 模板文件中。 请参阅*hTemplateFile*中`CreateFile`。
 
 ### <a name="return-value"></a>返回值
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>参数
 
-*给 pOverlapped*  
+*给 pOverlapped*<br/>
 重叠的结构。 请参阅*lpOverlapped*中[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK 中。
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 传送的字节数。 请参阅*lpNumberOfBytesTransferred*中`GetOverlappedResult`。
 
-*bWait*  
+*bWait*<br/>
 等待选项。 请参阅*bWait*中`GetOverlappedResult`。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 中字节的位置。
 
 ### <a name="return-value"></a>返回值
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nLen*  
+*nLen*<br/>
 在文件中的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 锁开始处的文件中的位置。
 
-*nCount*  
+*nCount*<br/>
 要锁定的字节范围的长度。
 
 ### <a name="return-value"></a>返回值
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>参数
 
-*pBuffer*  
+*pBuffer*<br/>
 指向将接收从文件中读取数据的缓冲区的指针。
 
-*nBufSize*  
+*nBufSize*<br/>
 缓冲区大小（以字节为单位）。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 读取的字节数。
 
-*给 pOverlapped*  
+*给 pOverlapped*<br/>
 重叠的结构。 请参阅*lpOverlapped*中[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK 中。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 完成例程。 请参阅*lpCompletionRoutine*中[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>参数
 
-*nOffset*  
+*nOffset*<br/>
 从给定的起始点的偏移量*dwFrom*。
 
-*dwFrom*  
+*dwFrom*<br/>
 起始点 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。
 
 ### <a name="return-value"></a>返回值
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>参数
 
-*nNewLen*  
+*nNewLen*<br/>
 以字节为单位的文件的新长度。
 
 ### <a name="return-value"></a>返回值
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>参数
 
-*nPos*  
+*nPos*<br/>
 解锁开始处的文件中的位置。
 
-*nCount*  
+*nCount*<br/>
 要将其解锁的字节范围的长度。
 
 ### <a name="return-value"></a>返回值
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>参数
 
-*pBuffer*  
+*pBuffer*<br/>
 包含要写入到文件的数据的缓冲区。
 
-*nBufSize*  
+*nBufSize*<br/>
 要从缓冲区传输的字节数。
 
-*给 pOverlapped*  
+*给 pOverlapped*<br/>
 重叠的结构。 请参阅*lpOverlapped*中[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK 中。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 完成例程。 请参阅*lpCompletionRoutine*中[writefileex 只写入](/windows/desktop/api/fileapi/nf-fileapi-writefileex)Windows SDK 中。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 写入的字节数。
 
 ### <a name="return-value"></a>返回值
@@ -459,6 +459,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>请参阅
 
-[字幕示例](../../visual-cpp-samples.md)   
-[类概述](../../atl/atl-class-overview.md)   
+[字幕示例](../../visual-cpp-samples.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
 [CHandle 类](../../atl/reference/chandle-class.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044933"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>参数
 
-*lpsa*  
+*lpsa*<br/>
 新线程的安全属性。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 新线程堆栈大小。
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 新线程的线程过程。
 
-*pvParam*  
+*pvParam*<br/>
 要传递给线程过程的参数。
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 创建标记 （0 或 CREATE_SUSPENDED）。
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out]成功后，接收新创建的线程的线程 ID 的 DWORD 变量的地址。
 
 ### <a name="return-value"></a>返回值

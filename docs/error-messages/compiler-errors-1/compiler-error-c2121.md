@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2121 |Microsoft 文档
+title: 编译器错误 C2121 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa7015880eee512cfdcaf6284c79b9c5965bb40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e40451a70744b7918301cd6dfa837df1295cea8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042398"
 ---
 # <a name="compiler-error-c2121"></a>编译器错误 C2121
-'#': 无效字符： 可能宏展开的结果  
-  
- 无效的 # 字符可能由不正确的宏，而不是字符串化运算符使用标记粘贴运算符 （#） 插入 （#）。
+
+'#': 无效的字符： 可能是宏扩展的结果
+
+无效的 # 字符可能由使用标记粘贴运算符 （#），而不是字符串化运算符的不正确宏插入 (）。

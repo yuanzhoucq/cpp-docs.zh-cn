@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111701"
 ---
 # <a name="c-storage-classes"></a>C 存储类
 
@@ -60,6 +60,6 @@ C 提供了以下存储类说明符：
 
 [用于外部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-external-level-declarations.md)和[用于内部级别的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)介绍了每种声明中的 storage-class-specifier 终端并解释了从变量中省略 storage-class-specifier 时的默认行为。 [存储类说明符与函数声明](../c-language/storage-class-specifiers-with-function-declarations.md)讨论了与函数一起使用的存储类说明符。
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-[声明和类型](../c-language/declarations-and-types.md)  
+[声明和类型](../c-language/declarations-and-types.md)

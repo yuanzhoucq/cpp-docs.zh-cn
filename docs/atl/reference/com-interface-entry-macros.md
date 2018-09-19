@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085220"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>参数
 
-[in] 一个接口的名称的 x 类对象派生自直接。
+*x*<br/>
+[in]直接从派生类对象的接口的名称。
 
 ### <a name="remarks"></a>备注
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]要从您的对象公开的接口的名称。
 
-*x2*  
+*x2*<br/>
 [in]从其继承分支的名称*x*得以实现。
 
 ### <a name="remarks"></a>备注
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]公开的接口的 GUID。
 
-*x*  
+*x*<br/>
 [in]将作为由标识的接口公开其 vtable 的类的名称*iid*。
 
 ### <a name="example"></a>示例
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]您在指定的接口的 GUID。
 
-*x*  
+*x*<br/>
 [in]直接从派生类对象的接口的名称。
 
-*x2*  
+*x2*<br/>
 [in]第二个接口直接派生类对象的名称。
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]查询的接口的 GUID。
 
-*punk*  
+*punk*<br/>
 [in]名称`IUnknown`指针。
 
 ### <a name="remarks"></a>备注
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>参数
 
-*punk*  
+*punk*<br/>
 [in]名称`IUnknown`指针。
 
 ### <a name="remarks"></a>备注
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]查询的接口的 GUID。
 
-*punk*  
+*punk*<br/>
 [in]名称`IUnknown`指针。 必须是类的包含 COM 映射的成员。
 
-*clsid*  
+*clsid*<br/>
 [in]如果将创建的聚合标识符*punk*为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>参数
 
-*punk*  
+*punk*<br/>
 [in]名称`IUnknown`指针。 必须是类的包含 COM 映射的成员。
 
-*clsid*  
+*clsid*<br/>
 [in]如果将创建的聚合标识符*punk*为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]用于构造的接口标识符的文本。
 
 ### <a name="remarks"></a>备注
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]分离式接口的 GUID。
 
-*x*  
+*x*<br/>
 [in]实现该接口的类的名称。
 
-*punk*  
+*punk*<br/>
 [in]名称`IUnknown`指针。 必须是类的包含 COM 映射的成员。 应在类对象的构造函数中初始化为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]分离式接口的 GUID。
 
-*x*  
+*x*<br/>
 [in]实现该接口的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>参数
 
-classname  
+classname<br/>
 [in]当前对象的基类。
 
 ### <a name="remarks"></a>备注
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 [in]公开的接口的 GUID。
 
-*数据仓库*  
+*数据仓库*<br/>
 [in]一个参数传递给*func*。
 
-*func*  
+*func*<br/>
 [in]将返回的函数指针*iid*。
 
 ### <a name="remarks"></a>备注
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>参数
 
-*数据仓库*  
+*数据仓库*<br/>
 [in]一个参数传递给*func*。
 
-*func*  
+*func*<br/>
 [in]获取处理 COM 映射中的此条目时调用的函数。
 
 ### <a name="remarks"></a>备注
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>参数
 
-*x*  
+*x*<br/>
 [in]用于构造的接口标识符的文本。
 
 ### <a name="remarks"></a>备注

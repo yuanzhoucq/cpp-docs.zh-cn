@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054748"
 ---
 # <a name="creating-an-atl-project"></a>创建 ATL 项目
 
@@ -47,6 +47,6 @@ ms.locfileid: "43755525"
 
 ## <a name="see-also"></a>请参阅
 
-[用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [属性页](../../ide/property-pages-visual-cpp.md)   
 

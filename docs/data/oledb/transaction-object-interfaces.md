@@ -20,17 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88b6884ff8543b3aa6ec329330563fbe1ad27b8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071583"
 ---
 # <a name="transaction-object-interfaces"></a>事务对象接口
+
 事务对象上的数据源定义原子工作单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，必须创建你自己的对象）。  
   
- 下表显示了由 OLE DB 定义的事务对象的必需和可选接口。  
+下表显示了由 OLE DB 定义的事务对象的必需和可选接口。  
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
@@ -39,4 +40,5 @@ ms.locfileid: "43194569"
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|否|  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

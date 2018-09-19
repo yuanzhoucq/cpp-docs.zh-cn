@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef8c497a681ae1b54ec833a048cddba29a72be7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067580"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 类
 
@@ -33,13 +33,13 @@ ms.locfileid: "45703193"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`IServiceProviderImpl`。
 
 ## <a name="members"></a>成员

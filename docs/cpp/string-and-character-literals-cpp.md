@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de3dffbbacd69d19b2a3fc5ba1fac360712db19e
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038550"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 
@@ -41,8 +41,8 @@ C++ 支持各种字符串和字符类型，并提供表示每种类型的文本�
 #include <string>
 using namespace std::string_literals; // enables s-suffix for std::string literals
 
-int main()  
-{  
+int main()
+{
     // Character literals
     auto c0 =   'A'; // char
     auto c1 = u8'A'; // char
@@ -51,16 +51,16 @@ int main()
     auto c4 =  U'A'; // char32_t
 
     // String literals
-    auto s0 =   "hello"; // const char*  
+    auto s0 =   "hello"; // const char*
     auto s1 = u8"hello"; // const char*, encoded as UTF-8
-    auto s2 =  L"hello"; // const wchar_t*  
+    auto s2 =  L"hello"; // const wchar_t*
     auto s3 =  u"hello"; // const char16_t*, encoded as UTF-16
     auto s4 =  U"hello"; // const char32_t*, encoded as UTF-32
 
     // Raw string literals containing unescaped \ and "
-    auto R0 =   R"("Hello \ world")"; // const char*  
+    auto R0 =   R"("Hello \ world")"; // const char*
     auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
-    auto R2 =  LR"("Hello \ world")"; // const wchar_t*  
+    auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
 
@@ -72,13 +72,13 @@ int main()
     auto S4 =  U"hello"s; // std::u32string
 
     // Combining raw string literals with standard s-suffix
-    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*  
+    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*
     auto S6 = u8R"("Hello \ world")"s; // std::string from a raw const char*, encoded as UTF-8
-    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*  
+    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*
     auto S8 =  uR"("Hello \ world")"s; // std::u16string from a raw const char16_t*, encoded as UTF-16
     auto S9 =  UR"("Hello \ world")"s; // std::u32string from a raw const char32_t*, encoded as UTF-32
-}  
-```  
+}
+```
 
 字符串文本可以米有前缀，也可以具有 `u8`、 `L`、 `u`和  `U` 前缀以分别指示窄字符（单字节或多字节）、UTF-8、宽字符（UCS-2 或 UTF-16）、UTF-16 和 UTF-32 编码。 原始字符串文本可以具有`R`， `u8R`， `LR`，`uR`和`UR`这些编码的原始版本等效项的前缀。  若要创建临时或静态 std::string 值，可以使用带 `s` 后缀的字符串文本或原始字符串文本。 有关详细信息，请参阅下面的“字符串文本”一节。 有关基本源字符集的详细信息、 通用字符名称以及在源代码中使用扩展代码页中的字符，请参阅[字符集](../cpp/character-sets.md)。
 
@@ -86,15 +86,15 @@ int main()
 
 *字符文本* 由一个字符常量构成。 它由用单引号引起来的字符表示。 有五种类型的字符文本：
 
--   类型的普通字符文本**char**，例如 `'a'`  
+- 类型的普通字符文本**char**，例如 `'a'`
 
--   类型的 utf-8 字符文本**char**，例如 `u8'a'`  
+- 类型的 utf-8 字符文本**char**，例如 `u8'a'`
 
--   类型 `wchar_t`的宽字符文本，例如 `L'a'`  
+- 类型 `wchar_t`的宽字符文本，例如 `L'a'`
 
--   类型的 utf-16 字符文本`char16_t`，例如 `u'a'`  
+- 类型的 utf-16 字符文本`char16_t`，例如 `u'a'`
 
--   类型的 UTF-32 字符文本`char32_t`，例如 `U'a'`  
+- 类型的 UTF-32 字符文本`char32_t`，例如 `U'a'`
 
 用于字符文本的字符可以是任何字符，除保留的字符反斜杠 (\\)、 单引号 （'） 或新行。 可以使用转义序列指定保留字符。 可以通过使用通用字符名称指定字符，只要类型的大小足以保留字符。
 
@@ -132,7 +132,7 @@ int main()
 #include <iostream>
 using namespace std;
 
-int main() {  
+int main() {
     char newline = '\n';
     char tab = '\t';
     char backspace = '\b';
@@ -145,24 +145,24 @@ int main() {
     cout << "Backspace character: " << backspace << "ending" << endl; // Backspace character : ending
     cout << "Backslash character: " << backslash << "ending" << endl; // Backslash character : \ending
     cout << "Null character: " << nullChar << "ending" << endl; //Null character:  ending
-}  
-```  
+}
+```
 
-**Microsoft 专用**  
+**Microsoft 专用**
 
 若要创建普通字符文本 （不带前缀） 的值，编译器将转换为 32 位整数内的 8 位值的单引号之间的字符序列的字符。 文本中的多个字符根据需要从高序位到低序位填充相应字节。 若要创建**char**值，编译器采用低序位字节。 若要创建**wchar_t**或`char16_t`值，编译器采用低序位字。 如果在分配的字节或字上设置了任何位，则编译器会警告结果被截断。
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
-```  
+```
 
 八进制转义序列包含一个反斜杠，后跟最多 3 个八进制数字的序列。 对于将包含超过三位数字的八进制转义序列，其行为被视为三位数八进制序列，之后的数字被视为字符，这可能导致令人惊讶的结果。 例如：
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
-```  
+```
 
 对于将包含非八进制字符的转义序列，其求值结果为全部由八进制字符组成的八进制序列，后跟剩余字符。 例如：
 
@@ -170,14 +170,14 @@ char c2 = '\1000';  // C4305, C4309, truncates to '0'
 char c3 = '\009';   // '9'
 char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
-```  
+```
 
 十六进制转义序列包含一个反斜杠，后跟字符 `x`和一个十六进制数字序列。 不包含十六进制数字的转义序列将导致编译器错误 C2153：“十六进制文本必须至少有一个十六进制数字”。 将忽略前导零。 对于将具有十六进制和非十六进制字符的转义序列，其求值结果为全部由十六进制字符组成的十六进制转义序列，后跟非十六进制字符。   在普通或 u8 前缀的字符文本，最高的十六进制值为 0xFF。 在使用 L 或 u 前缀的宽字符文本中，最大的十六进制值为 0xFFFF。 在使用 U 前缀的宽字符文本中，最大的十六进制值为 0xFFFFFFFF。
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
-```  
+```
 
 如果以 `L` 为前缀的宽字符文本包含多个字符，则从第一个字符中获取值。 将忽略后续字符，与等效的普通字符文本的行为不同。
 
@@ -189,9 +189,9 @@ wchar_t w4 = L'\089';   // C4066 L'\0', 89 ignored
 wchar_t w5 = L'\qrs';   // C4129, C4066 L'q' escape, rs ignored
 wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
-```  
+```
 
-**结束 Microsoft 专用**  
+**结束 Microsoft 专用**
 
 反斜杠字符 (\\) 放置在行尾时是作为行继续符。 如果你希望反斜杠字符显示为字符文本，则必须在一行中键入两个反斜杠 (`\\`)。 有关行继续符的详细信息，请参阅 [Phases of Translation](../preprocessor/phases-of-translation.md)。
 
@@ -205,7 +205,7 @@ char u2 = '\101';       // octal, 'A'
 char u3 = '\x41';       // hexadecimal, 'A'
 char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'
-```  
+```
 
 #### <a name="surrogate-pairs"></a>代理项对
 
@@ -226,7 +226,7 @@ const char *narrow = "abcd";
 
 // represents the string: yes\no
 const char *escaped = "yes\\no";
-```  
+```
 
 #### <a name="utf-8-encoded-strings"></a>UTF-8 编码的字符串
 
@@ -235,7 +235,7 @@ Utf-8 编码的字符串是 u8 且以双引号分隔、 以 null 结尾的类型
 ```cpp
 const char* str1 = u8"Hello World";
 const char* str2 = u8"\U0001F607 is O:-)";
-```  
+```
 
 ### <a name="wide-string-literals"></a>宽字符串文本
 
@@ -244,16 +244,16 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
-```  
+```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t 和 char32_t (C++11)  
+#### <a name="char16t-and-char32t-c11"></a>char16_t 和 char32_t (C++11)
 
 C++11 引入了可移植的 `char16_t` （16 位 Unicode）和 `char32_t` （32 位 Unicode）字符类型：
 
 ```cpp
-auto s3 = u"hello"; // const char16_t*  
-auto s4 = U"hello"; // const char32_t*  
-```  
+auto s3 = u"hello"; // const char16_t*
+auto s4 = U"hello"; // const char32_t*
+```
 
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)
 
@@ -273,13 +273,13 @@ const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```cpp
 // meant to represent the string: )"
 const char* bad_parens = R"()")";  // error C2059
-```  
+```
 
 但分隔符能够解决这样的错误：
 
 ```cpp
 const char* good_parens = R"xyz()")xyz";
-```  
+```
 
 你可以构造在源中有换行的原始字符串文本（非转义字符）：
 
@@ -288,7 +288,7 @@ const char* good_parens = R"xyz()")xyz";
 //goodbye
 const wchar_t* newline = LR"(hello
 goodbye)";
-```  
+```
 
 ### <a name="stdstring-literals-c14"></a>std::string 文本 (C++14)
 
@@ -302,13 +302,13 @@ string str2{ u8"Hello World" };
 wstring str3{ L"hello"s };
 u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
-```  
+```
 
 s 后缀也可以用于原始字符串：
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
-```  
+```
 
 std:: string 文本定义的命名空间中`std::literals::string_literals`在\<字符串 > 标头文件。 因为 `std::literals::string_literals`和 `std::literals` 都声明为 [内联命名空间](../cpp/namespaces-cpp.md)，所以会自动将 `std::literals::string_literals` 视为如同它直接属于命名空间 `std`。
 
@@ -319,7 +319,7 @@ std:: string 文本定义的命名空间中`std::literals::string_literals`在\<
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
-```  
+```
 
 请注意，`strlen()`并`wcslen()`不包括终止 null 字符，其大小等于字符串类型的元素大小的大小： char 上一个字节\*字符串、 两个字节 wchar_t\*或 char16_t\*字符串和四个字节，char32_t 上\*字符串。
 
@@ -336,14 +336,14 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
-```  
+```
 
 您可能会导致编译器发出错误时设置时，将字符串文字转换为 non_const 字符指针[/zc: strictstrings （禁用字符串文本类型转换）](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)编译器选项。 我们建议将其用于符合标准的可移植代码。 它也是使用一个好办法**自动**关键字声明经过字符串文本初始化的指针，因为它解析为正确 （常数） 的类型。 例如，此代码示例捕捉到一次在编译时写入字符串文本的尝试：
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
-```  
+```
 
 在某些情况下，可以合并相同的字符串文本，节省可执行文件的空间。 字符串文本合并过程中，编译器将导致对特定字符串文本的所有引用都指向内存中的同一位置，而不是每次引用都指向一个单独的字符串文本实例。 若要启用字符串合并，请使用 [/GF](../build/reference/gf-eliminate-duplicate-strings.md) 编译器选项。
 
@@ -355,33 +355,33 @@ str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
 
 ```cpp
 char str[] = "12" "34";
-```  
+```
 
 与此声明相同：
 
 ```cpp
 char atr[] = "1234";
-```  
+```
 
 也和此声明相同：
 
 ```cpp
 char atr[] =  "12\
 34";
-```  
+```
 
 使用嵌入式十六进制转义代码来指定字符串会导致意外的结果。 以下示例旨在创建包含 ASCII 5 字符、后跟字符 f、i、v 和 e 的字符串文本：
 
 ```cpp
 "\x05five"
-```  
+```
 
 实际结果是十六进制 5F，它是一个下划线 ASCII 代码，后跟字符 i、v 和 e。 若要获得正确的结果，可以使用以下方法之一：
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
-```  
+```
 
 std::string 文本，因为它们是 std::string 类型，可以与为 [basic_string](../standard-library/basic-string-class.md) 类型定义的运算符 + 串联。 它们还可以通过与相邻字符串相同的方式进行串联。 在两种情况下，字符串编码和后缀都必须匹配：
 
@@ -390,7 +390,7 @@ auto x1 = "hello" " " " world"; // OK
 auto x2 = U"hello" " " L"world"; // C2308: disagree on prefix
 auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
-```  
+```
 
 ### <a name="string-literals-with-universal-character-names"></a>具有通用字符名称的字符串文本
 
@@ -400,21 +400,21 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 // ASCII smiling face
 const char*     s1 = ":-)";
 
-// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)  
+// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)
 const wchar_t*  s2 = L"😉 = \U0001F609 is ;-)";
 
-// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)  
+// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)
 const char*     s3 = u8"😇 = \U0001F607 is O:-)";
 
-// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)  
+// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)
 const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 
-// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)  
+// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";
-```  
+```
 
 ## <a name="see-also"></a>请参阅
 
-[字符集](../cpp/character-sets.md)   
-[数值、 布尔和指针文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+[字符集](../cpp/character-sets.md)<br/>
+[数值、布尔和指针文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
 [用户定义的文本](../cpp/user-defined-literals-cpp.md)

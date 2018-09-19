@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3744 |Microsoft 文档
+title: 编译器错误 C3744 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96b8445c343bdd4f606157e692c4d6ce262e369
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d644a621fc6d8e460e1b97e5baec360de8662365
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063718"
 ---
 # <a name="compiler-error-c3744"></a>编译器错误 C3744
-__unhook 必须具有针对托管事件至少 3 个自变量  
-  
- [__Unhook](../../cpp/unhook.md)函数必须采用三个参数在 c + + 托管扩展编译的程序中使用时。  
-  
- `__hook` 和`__unhook`与 /clr 编程不兼容。 改为使用 + = 和-= 运算符。  
-  
- C3744 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+__unhook 必须有至少 3 个参数，针对托管事件
+
+[__Unhook](../../cpp/unhook.md)函数必须采用三个参数时在 c + + 托管扩展编译的程序中使用。
+
+`__hook` 和`__unhook`与 /clr 编程不兼容。 改为使用 + = 和-= 运算符。
+
+C3744 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031504"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
 表示 HTML 编辑组件。  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|切换当前选择的排序的列表和普通格式化块之间。|  
   
 #### <a name="parameters"></a>参数  
- `T`  
- 在派生类的名称。  
+*T*<br/>
+在派生类的名称。  
   
 ## <a name="remarks"></a>备注  
  `CHtmlEditCtrlBase` 提供用于 web 浏览器的 HTML 编辑命令，如成员函数[加粗](#bold)。 (或者，可以调用[ExecCommand](#execcommand)执行 IDM_BOLD 命令。)  

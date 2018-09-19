@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046272"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 类
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 UINT 构造函数将其自变量转换为与 Windows 资源管理功能使用 MAKEINTRESOURCE 宏兼容的资源类型并将结果存储在类的单个数据成员中， [m_lpstr](#_u_stringorid__m_lpstr)。
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>参数
 
-*nID*  
+*nID*<br/>
 资源 id。
 
-*lpString*  
+*lpString*<br/>
 资源名称。
 
 ### <a name="remarks"></a>备注

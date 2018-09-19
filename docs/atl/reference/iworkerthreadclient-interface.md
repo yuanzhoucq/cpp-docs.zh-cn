@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069230"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 接口
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>参数
 
-*hHandle*  
+*hHandle*<br/>
 要关闭句柄。
 
 ### <a name="return-value"></a>返回值
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>参数
 
-*dwParam*  
+*dwParam*<br/>
 User 参数中。
 
-*hObject*  
+*hObject*<br/>
 已收到信号的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -115,5 +115,5 @@ User 参数中。
 
 ## <a name="see-also"></a>请参阅
 
-[类](../../atl/reference/atl-classes.md)   
+[类](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread 类](../../atl/reference/cworkerthread-class.md)

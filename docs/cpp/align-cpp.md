@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076289"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "39405865"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec( align(** *#* **) )** *declarator*  
+> **__declspec( align(** *#* **) )** *declarator*
 
 ## <a name="remarks"></a>备注
 
@@ -251,6 +251,7 @@ struct S {
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
-[__declspec](../cpp/declspec.md)  
-[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)  
-[x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)<br/>
+[x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)

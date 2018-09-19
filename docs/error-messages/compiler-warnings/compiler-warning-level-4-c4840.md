@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025875"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>编译器警告 （等级 C4840
 
 > 类的不可移植用法*类型*作为可变参数函数的参数
-  
+
 ## <a name="remarks"></a>备注
 
 传递给 variadic 函数的类或结构必须完全可复制。 传递此类对象时，编译器只是执行按位复制，不会调用构造函数或析构函数。

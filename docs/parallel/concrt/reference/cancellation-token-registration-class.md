@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_registration 类 |Microsoft 文档
+title: cancellation_token_registration 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059586"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 类
 `cancellation_token_registration` 类表示来自 `cancellation_token` 的回调通知。 如果 `register` 上的 `cancellation_token` 方法用于接收何时进行取消的通知，则系统就会将 `cancellation_token_registration` 对象作为回调的句柄返回，以便调用方可以请求特定回调，而不再通过使用 `deregister` 方法来实现。  
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration`复制或移动。
+ 
 ##  <a name="operator_neq"></a> 运算符 ！ = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Rhs`  
-  
+*_Rhs*<br/>
+要比较的 `cancellation_token_registration`。
+ 
 ### <a name="return-value"></a>返回值  
   
 ##  <a name="operator_eq"></a> 运算符 = 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration`分配。
+ 
 ### <a name="return-value"></a>返回值  
   
 ##  <a name="operator_eq_eq"></a> 运算符 = = 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Rhs`  
-  
+*_Rhs*<br/>
+要比较的 `cancellation_token_registration`。
+ 
 ### <a name="return-value"></a>返回值  
   
 ## <a name="see-also"></a>请参阅  

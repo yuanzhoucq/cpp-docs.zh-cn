@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110960"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
 借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。 通常情况下，这将涉及使用 [\<code>](../ide/code-visual-cpp.md)标记。  
@@ -35,8 +35,8 @@ ms.locfileid: "33321426"
 ```  
   
 #### <a name="parameters"></a>参数  
- `description`  
- 代码示例的说明。  
+description<br/>
+代码示例的说明。  
   
 ## <a name="remarks"></a>备注  
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  

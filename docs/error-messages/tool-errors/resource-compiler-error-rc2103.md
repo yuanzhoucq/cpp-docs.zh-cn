@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2103 |Microsoft 文档
+title: 资源编译器错误 RC2103 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c70c89c927dca59f9bc242245d19f91e9e4a3894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfdfefa0ee66093708ea7f839d7fbe8630ffe81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093462"
 ---
 # <a name="resource-compiler-error-rc2103"></a>资源编译器错误 RC2103
-字符串文本中意外的文件结束  
-  
- 在字符串末尾之前找到文件结尾。 该字符串可能缺少一个右双引号 (**"**)。
+
+字符串文本中出现意外的文件结束
+
+前面的字符串的末尾找到的文件结束。 字符串可能缺少右双引号 (**"**)。

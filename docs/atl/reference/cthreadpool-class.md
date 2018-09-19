@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091694"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 
@@ -44,16 +44,16 @@ ms.locfileid: "43757389"
 ## <a name="syntax"></a>语法
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>参数
 
-*辅助角色*  
+*辅助角色*<br/>
 类符合[辅助原型](../../atl/reference/worker-archetype.md)提供用来处理的工作项排入队列在线程池的代码。
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 类，用于提供用来在池中创建线程的函数。
 
 ## <a name="members"></a>成员
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>参数
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]，如果成功，接收变量的线程数在池中的地址。
 
 ### <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>参数
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]成功后，接收的最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下的变量的地址。
 
 ### <a name="return-value"></a>返回值
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>参数
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 辅助参数传递给辅助线程对象`Initialize`， `Execute`，和`Terminate`方法。
 
-*nNumThreads*  
+*nNumThreads*<br/>
 请求的池中的线程数。
 
 如果*nNumThreads*是负数，其绝对值的数值将乘以中要获取的线程总数的计算机的处理器数。
 
 如果*nNumThreads*为零，ATLS_DEFAULT_THREADSPERPROC 将乘以中要获取的线程总数的计算机的处理器数。  默认值为每个处理器的 2 个线程。 如有必要，可以包括 atlutil.h 之前定义此符号自己正整数值。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 在池中每个线程堆栈大小。
 
-*hCompletion*  
+*hCompletion*<br/>
 若要将与完成端口相关联的对象的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>参数
 
-*请求*  
+*请求*<br/>
 要排入队列的请求。
 
 ### <a name="return-value"></a>返回值
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>参数
 
-*nNumThreads*  
+*nNumThreads*<br/>
 请求的池中的线程数。
 
 如果*nNumThreads*是负数，其绝对值的数值将乘以中要获取的线程总数的计算机的处理器数。
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒为单位，线程池将等待一个线程来关闭请求的最大时间。
 
 ### <a name="return-value"></a>返回值
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒为单位，线程池将等待一个线程来关闭请求的最大时间。 如果提供 0 或空值，则此方法将使用设置的超时[CThreadPool::SetTimeout](#settimeout)。
 
 ### <a name="remarks"></a>备注
@@ -358,6 +358,6 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [类](../../atl/reference/atl-classes.md)

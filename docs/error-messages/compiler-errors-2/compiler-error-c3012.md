@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3012 |Microsoft 文档
+title: 编译器错误 C3012 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d30a7fbb50a984c8cec6b45a0ab4759a0578de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99bdac5ffb75978479ae7ef420a48b3d1b2f8e64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063666"
 ---
 # <a name="compiler-error-c3012"></a>编译器错误 C3012
-  
-> *内部*： 不允许直接并行区域内的内部函数  
-  
- A[编译器内部函数](../../intrinsics/compiler-intrinsics.md)中不允许函数`omp parallel`区域。 若要解决此问题，移出该区域的内部函数，或将其替换为非内部等效项。   
-  
-## <a name="example"></a>示例  
-  
- 下面的示例生成 C3012，并演示修复此错误的一种方法：  
-  
-```cpp  
-// C3012.cpp  
-// compile with: /openmp  
-#ifdef __cplusplus  
-extern "C" {  
-#endif  
-void* _ReturnAddress();  
-#ifdef __cplusplus  
-}  
-#endif  
-  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      _ReturnAddress();   // C3012  
-   }  
-   _ReturnAddress();      // OK  
-}  
+
+> '*内部函数*： 不允许并行区域内直接使用内部函数
+
+一个[编译器内部函数](../../intrinsics/compiler-intrinsics.md)中不允许函数`omp parallel`区域。 若要解决此问题，将内部函数移出该区域，或使用非内部函数的等效信息替换它们。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3012，并演示一种方法修复此错误：
+
+```cpp
+// C3012.cpp
+// compile with: /openmp
+#ifdef __cplusplus
+extern "C" {
+#endif
+void* _ReturnAddress();
+#ifdef __cplusplus
+}
+#endif
+
+int main()
+{
+   #pragma omp parallel
+   {
+      _ReturnAddress();   // C3012
+   }
+   _ReturnAddress();      // OK
+}
 ```

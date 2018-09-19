@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cfa128ecb598d4960c0d5527e66a9cb81266c2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70b99ac7790477df88a0e685afd5652a35c06233
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047520"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全局函数
 
@@ -51,13 +51,13 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>参数
 
-*pWinModule*  
+*pWinModule*<br/>
 指向模块的指针[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。
 
-*pData*  
+*pData*<br/>
 指向[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构，以初始化，并添加到当前模块。
 
-*pObject*  
+*pObject*<br/>
 指向对象的指针**这**指针。
 
 ### <a name="remarks"></a>备注
@@ -74,7 +74,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>参数
 
-*pWinModule*  
+*pWinModule*<br/>
 指向模块的指针[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)结构。
 
 ### <a name="return-value"></a>返回值

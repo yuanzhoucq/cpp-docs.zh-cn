@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad90ac69fa41a6bec70373b84044344592d2d86e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039018"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>在 ATL 项目中添加新接口
 
@@ -52,10 +52,10 @@ ms.locfileid: "43753931"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)   
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
 

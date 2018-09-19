@@ -1,5 +1,5 @@
 ---
-title: omp_unset_lock |Microsoft 文档
+title: omp_unset_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243ff6d2336d3e293d009f82ba4a39243e076f94
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6b0b7b796ce5db6cfe23eea3608db171ff38e263
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059053"
 ---
 # <a name="ompunsetlock"></a>omp_unset_lock
 释放锁。  
@@ -34,11 +34,10 @@ void omp_unset_lock(
 );  
 ```  
   
-## <a name="remarks"></a>备注  
- 其中，  
+### <a name="parameters"></a>参数
   
- `lock`  
- 类型的变量的[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)初始化与[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)、 所拥有的线程和函数中执行。  
+*lock*<br/>
+类型的变量[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)与初始化[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)、 由线程拥有和函数中执行。  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。  

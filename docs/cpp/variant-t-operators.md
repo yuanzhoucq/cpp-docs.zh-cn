@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6652f46eb33cf40a5503f522dd7a99a16edaf9d2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 022cfc9d65d505b1e25733af8c5ade6d3c215f78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088093"
 ---
 # <a name="variantt-operators"></a>_variant_t 运算符
-璝惠 **_variant_t**运算符，请参阅[_variant_t 类](../cpp/variant-t-class.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [_variant_t 类](../cpp/variant-t-class.md)
+
+璝惠 **_variant_t**运算符，请参阅[_variant_t 类](../cpp/variant-t-class.md)。
+
+## <a name="see-also"></a>请参阅
+
+[_variant_t 类](../cpp/variant-t-class.md)

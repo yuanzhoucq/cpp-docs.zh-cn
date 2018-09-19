@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040474"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 
@@ -49,16 +49,16 @@ ms.locfileid: "43755796"
 ## <a name="syntax"></a>语法
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>参数
 
-*TBase*  
+*TBase*<br/>
 您的新类的基类。 默认基类是`CWindow`。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 定义窗口样式的特征类。 默认值为 `CControlWinTraits`。
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>参数
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]包含的窗口将基于现有窗口类的名称。
 
-*pObject*  
+*pObject*<br/>
 [in]指向包含声明消息映射的对象的指针。 此对象的类必须派生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]标识将用于处理包含的窗口的消息的消息映射。 默认值为 0，指定与声明的默认消息地图[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用的替换消息映射声明与[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，将传递`msgMapID`。
 
 ### <a name="remarks"></a>备注
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>参数
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]包含的窗口将基于现有窗口类的名称。
 
-*pObject*  
+*pObject*<br/>
 [in]指向包含声明消息映射的对象的指针。 此对象的类必须派生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]标识将用于处理包含的窗口的消息的消息映射。 默认值为 0，指定与声明的默认消息地图[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用的替换消息映射声明与[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，将传递`msgMapID`。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父级或所有者窗口的句柄。
 
-*rect*  
+*rect*<br/>
 [in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定窗口的名称。 默认值为 NULL。
 
-*dwStyle*  
+*dwStyle*<br/>
 [in]窗口的样式。 默认值是 WS_CHILD &#124; WS_VISIBLE。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
 
 ### <a name="return-value"></a>返回值
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>参数
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]正在创建子类的窗口句柄。
 
 ### <a name="return-value"></a>返回值
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>参数
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]消息映射标识符。 若要使用的默认消息映射声明与[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，传递零。 若要使用的替换消息映射声明与[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，将传递`msgMapID`。
 
 ### <a name="remarks"></a>备注
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>参数
 
-*bForce*  
+*bForce*<br/>
 [in]设置为 true 以强制原始的窗口过程，以还原即使此窗口过程`CContainedWindowT`对象不是当前处于活动状态。 如果*bForce*为此设置为 FALSE，并且窗口过程`CContainedWindowT`对象不是当前处于活动状态，将不会还原原始窗口过程。
 
 ### <a name="return-value"></a>返回值
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]窗口的句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到窗口的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -472,9 +472,9 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>请参阅
 
-[CWindow 类](../../atl/reference/cwindow-class.md)   
-[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap 类](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow 类](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap 类](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

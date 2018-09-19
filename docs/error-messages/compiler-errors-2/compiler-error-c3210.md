@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3210 |Microsoft 文档
+title: 编译器错误 C3210 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24146139fce7a1e42e112f913ab35ca425a9d5d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 804586a866f6a4d2c3cf206af14e0e2f907ed1b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037107"
 ---
 # <a name="compiler-error-c3210"></a>编译器错误 C3210
-type： 访问声明只能应用到基类成员  
-  
- A [using 声明](../../cpp/using-declaration.md)未正确指定。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3210。  
-  
-```  
-// C3210.cpp  
-// compile with: /c  
-struct A {  
-protected:  
-   int i;  
-};  
-  
-struct B {  
-   using A::i;   // C3210  
-};  
-  
-struct C : public A {  
-   using A::i;   // OK  
-};  
+
+type： 访问声明可以仅应用于基类成员
+
+一个[using 声明](../../cpp/using-declaration.md)未正确指定。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3210。
+
+```
+// C3210.cpp
+// compile with: /c
+struct A {
+protected:
+   int i;
+};
+
+struct B {
+   using A::i;   // C3210
+};
+
+struct C : public A {
+   using A::i;   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4390 |Microsoft 文档
+title: 编译器警告 （等级 3） C4390 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d052a1fa6124aa1518cddec00566e14668fe111d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83131119e360bcf8193c2d6c8ca5a3cd09341516
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054179"
 ---
 # <a name="compiler-warning-level-3-c4390"></a>编译器警告（等级 3）C4390
-;： 空的受控的语句找到;这是意图？  
-  
- 不包含任何指令的控制语句后找到分号。  
-  
- 如果你收到 C4390 宏，则应使用[警告](../../preprocessor/warning.md)杂注来禁用 C4390 中包含宏的模块。  
-  
- 下面的示例生成 C4390:  
-  
-```  
-// C4390.cpp  
-// compile with: /W3  
-int main() {  
-   int i = 0;  
-   if (i);   // C4390  
-      i++;  
-}  
+
+';': 找到空的受控的语句;这是目的？
+
+不包含指令的控制语句后找到一个分号。
+
+如果您收到 C4390 宏，则应使用[警告](../../preprocessor/warning.md)杂注来禁用 C4390 中包含宏的模块。
+
+下面的示例生成 C4390:
+
+```
+// C4390.cpp
+// compile with: /W3
+int main() {
+   int i = 0;
+   if (i);   // C4390
+      i++;
+}
 ```

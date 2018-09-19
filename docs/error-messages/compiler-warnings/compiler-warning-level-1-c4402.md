@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4402 |Microsoft 文档
+title: 编译器警告 （等级 1） C4402 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019171730d81697676a935bf3745eb29083fe88a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 395fe8a9621923bbb4e4667921bce2540bfef8b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118370"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>编译器警告（等级 1）C4402
-必须使用 PTR 运算符  
-  
- 在操作数上没有 PTR 运算符引用或强制转换为内联程序集代码中的类型时使用的类型。  
-  
- 编译器将假定 PTR 运算符。
+
+必须使用 PTR 运算符
+
+而无需引用或内联程序集代码中的类型强制转换时的 PTR 运算符的操作数上使用的类型。
+
+编译器将假定 PTR 运算符。

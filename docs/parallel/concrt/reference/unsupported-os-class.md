@@ -1,5 +1,5 @@
 ---
-title: unsupported_os 类 |Microsoft 文档
+title: unsupported_os 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4881bc0182c0d7bfbc5b5806fd6a59eea7fb25
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5298f7d8e6a998fb7841a6c3429a4240876c7cf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016528"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 类
 此类描述使用不受支持的操作系统时引发的一种异常。  
@@ -63,8 +63,8 @@ unsupported_os() throw();
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Message`  
- 错误的描述性消息。  
+*消息 （_m)*<br/>
+错误的描述性消息。  
   
 ## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

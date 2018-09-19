@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a16edcc40c0e81453e10275189384d81151123d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071949"
 ---
 # <a name="startup-and-termination-c"></a>启动和终止 (C++)
-使用两个函数来推动程序启动和终止：[主要](../cpp/main-program-startup.md)并[退出](../cpp/program-termination.md)。 可以执行其他启动和终止代码。  
-  
-## <a name="see-also"></a>请参阅  
- [基本概念](../cpp/basic-concepts-cpp.md)
+
+使用两个函数来推动程序启动和终止：[主要](../cpp/main-program-startup.md)并[退出](../cpp/program-termination.md)。 可以执行其他启动和终止代码。
+
+## <a name="see-also"></a>请参阅
+
+[基本概念](../cpp/basic-concepts-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2287 |Microsoft 文档
+title: 编译器错误 C2287 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b78dd6d7ffc44822cdff383f88b11a6cd899adf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a57d2738ba55d4964274c3c25038b8ebf248b24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072571"
 ---
 # <a name="compiler-error-c2287"></a>编译器错误 C2287
-class： 继承表示形式: representation1 是不太常见比所需的 representation2  
-  
- 类是使用比所需的更简单表示声明。  
-  
- 下面的示例生成 C2287:  
-  
-```  
-// C2287.cpp  
-// compile with: /vmg /c  
-class __single_inheritance X;  
-class __single_inheritance Y;  
-  
-struct A { };  
-struct B { };  
-struct X : A, B { };  // C2287  X uses multiple inheritance  
-struct Y : A { };  // OK  
+
+class： 继承表示形式: representation1 是不太常规比所需的 representation2
+
+用更简单的方法表示比所需声明的类。
+
+下面的示例生成 C2287:
+
+```
+// C2287.cpp
+// compile with: /vmg /c
+class __single_inheritance X;
+class __single_inheritance Y;
+
+struct A { };
+struct B { };
+struct X : A, B { };  // C2287  X uses multiple inheritance
+struct Y : A { };  // OK
 ```

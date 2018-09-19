@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd88555ee28b7bdddef51371ba2774047464678
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0e10650235298e7a5b2931e59c39cb21a5374d0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087586"
 ---
 # <a name="cw2aex-class"></a>CW2AEX 类
 
@@ -37,13 +37,13 @@ ms.locfileid: "43759478"
 ## <a name="syntax"></a>语法
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2AEX
 ```
 
 #### <a name="parameters"></a>参数
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。
 
 ## <a name="members"></a>成员
@@ -107,16 +107,16 @@ class CW2AEX
 构造函数。
 
 ```
-CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2AEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 要转换的文本字符串。
 
-*nCodePage*  
+*nCodePage*<br/>
 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)的更多详细信息。
 
 ### <a name="remarks"></a>备注
@@ -155,7 +155,7 @@ char m_szBuffer[t_nBufferLength];
 
 转换运算符。
 
-```  
+```
 operator LPSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CA2AEX 类](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
-[CA2WEX 类](../../atl/reference/ca2wex-class.md)   
-[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX 类](../../atl/reference/cw2wex-class.md)   
+[CA2AEX 类](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX 类](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX 类](../../atl/reference/ca2wex-class.md)<br/>
+[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX 类](../../atl/reference/cw2wex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

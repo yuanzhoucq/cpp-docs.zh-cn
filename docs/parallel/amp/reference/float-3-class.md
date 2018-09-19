@@ -1,5 +1,5 @@
 ---
-title: float_3 类 |Microsoft 文档
+title: float_3 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -84,15 +84,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579a728210dc74db13faaae7ea4c7161ad4142e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8fdc665fea4aefe744850a5b2ca2565cb32fae3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047559"
 ---
 # <a name="float3-class"></a>float_3 类
-表示短矢量的三个浮点数。  
+表示三个浮点数的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -112,7 +112,7 @@ class float_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[float_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[float_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -170,7 +170,7 @@ class float_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#float_3__size)||  
   
@@ -219,7 +219,7 @@ class float_3;
   
 ##  <a name="ctor"></a> float_3 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 float_3() restrict(amp,
@@ -269,20 +269,20 @@ explicit inline float_3(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="float_3__size"></a> 大小 
 

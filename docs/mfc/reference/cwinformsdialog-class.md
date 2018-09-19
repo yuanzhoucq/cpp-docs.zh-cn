@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 69882f9b22d11de139951b6196b58729af70a36a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018140"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 承载 Windows 窗体用户控件的 MFC 对话框类的包装器。  
@@ -43,8 +43,8 @@ class CWinFormsDialog :
 ```  
   
 #### <a name="parameters"></a>参数  
- `TManagedControl`  
- 要显示在 MFC 应用程序的.NET Framework 用户控件。  
+*TManagedControl*<br/>
+要显示在 MFC 应用程序的.NET Framework 用户控件。  
   
 ## <a name="members"></a>成员  
   

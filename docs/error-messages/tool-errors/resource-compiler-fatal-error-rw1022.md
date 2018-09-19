@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RW1022 |Microsoft 文档
+title: 资源编译器错误 RW1022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099834"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>资源编译器错误 RW1022
-**写入文件时出现 I/O 错误**  
-  
- 资源编译器无法写入文件。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  磁盘空间不足。 可用空间必须等于正在创建的可执行文件的大小的至少两倍。  
-  
-2.  卷为只读。  
-  
-3.  坏扇区。  
-  
-4.  共享冲突。
+
+**写入文件时出现 I/O 错误**
+
+资源编译器无法写入文件。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 磁盘空间不足。 可用空间必须等于正在创建的可执行文件的大小的至少两倍。
+
+1. 卷为只读。
+
+1. 坏扇区。
+
+1. 共享冲突。

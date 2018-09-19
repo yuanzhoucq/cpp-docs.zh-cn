@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2506 |Microsoft 文档
+title: 编译器错误 C2506 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5369a6a5bf904f7a7492037fbad4df44de92e66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4967c410dfdce781a4191c9ac848883228ba4d3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093410"
 ---
 # <a name="compiler-error-c2506"></a>编译器错误 C2506
-member: __declspec(modifier) 不能应用于此符号  
-  
- 不能为托管类的静态成员声明每个进程或每个 appdomain。  
-  
- 有关更多信息，请参见 [appdomain](../../cpp/appdomain.md) 。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2506。  
-  
-```  
-// C2506.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   __declspec(process) static int n;   // C2506  
-   int o;   // OK  
-};  
+
+member: __declspec(modifier) 不能应用于此符号
+
+不能为托管类的静态成员声明每个进程或每个 appdomain。
+
+有关更多信息，请参见 [appdomain](../../cpp/appdomain.md) 。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2506。
+
+```
+// C2506.cpp
+// compile with: /clr /c
+ref struct R {
+   __declspec(process) static int n;   // C2506
+   int o;   // OK
+};
 ```

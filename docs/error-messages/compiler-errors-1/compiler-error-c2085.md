@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2085 |Microsoft 文档
+title: 编译器错误 C2085 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fe489dbdd0934926a056bbc7e5539f40ca1ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d88968e49e38a13782dde2d905a614ad4d177e81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082373"
 ---
 # <a name="compiler-error-c2085"></a>编译器错误 C2085
-identifier： 形参列表中没有  
-  
- 函数定义中但不是在形参列表中，已声明该标识符。 (仅适用于 ANSI C)  
-  
- 下面的示例生成 C2085:  
-  
-```  
-// C2085.c  
-void func1( void )  
-int main( void ) {}   // C2085  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2085b.c  
-void func1( void );  
-int main( void ) {}  
-```  
-  
- 用分号缺失`func1()`看起来像函数定义，而不是原型，因此`main`中定义`func1()`，标识符中生成错误 C2085 `main`。
+
+identifier： 不在形参列表中
+
+函数定义中，但不是在形参列表中，已声明该标识符。 (仅适用于 ANSI C)
+
+下面的示例生成 C2085:
+
+```
+// C2085.c
+void func1( void )
+int main( void ) {}   // C2085
+```
+
+可能的解决方法：
+
+```
+// C2085b.c
+void func1( void );
+int main( void ) {}
+```
+
+使用分号缺少`func1()`看起来像函数定义，而不是原型，因此`main`中定义`func1()`，标识符生成错误 C2085 `main`。

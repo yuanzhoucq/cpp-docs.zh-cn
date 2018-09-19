@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4409 |Microsoft 文档
+title: 编译器警告 （等级 1） C4409 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30abb265676f3e95b799f657487e293cceb2a053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b6c92a34f5aa991452eca4c490d8570bd0d5b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086520"
 ---
 # <a name="compiler-warning-level-1-c4409"></a>编译器警告（等级 1）C4409
-非法指令大小  
-  
- 指令不包含具有指定大小的窗体。 使用合法的最小大小。
+
+非法指令大小
+
+指令没有具有指定大小的窗体。 使用合法的最小大小。

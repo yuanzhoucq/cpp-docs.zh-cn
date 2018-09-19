@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044270"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 
@@ -36,21 +36,21 @@ ms.locfileid: "43756946"
 
 ## <a name="in-this-section"></a>本节内容
 
-[ATL 集合和枚举器类](../atl/atl-collection-and-enumerator-classes.md)  
+[ATL 集合和枚举器类](../atl/atl-collection-and-enumerator-classes.md)<br/>
 简要介绍并提供指向 ATL 类，这样有助于实现集合和枚举数。
 
-[集合和枚举器接口的设计原则](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[集合和枚举器接口的设计原则](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 讨论了每种类型的接口的不同的设计原则。
 
-[实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)  
+[实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)<br/>
 一个扩展的示例将指导你完成一个基于 c + + 标准库的集合的实现。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
-[ATLCollections 示例](../visual-cpp-samples.md)  
+[ATLCollections 示例](../visual-cpp-samples.md)<br/>
 一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类的实现。
 
 ## <a name="see-also"></a>请参阅

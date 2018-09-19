@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068426"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自`CDialogImpl`。
 
-*TBase*  
+*TBase*<br/>
 您的新类的基类。 默认基类是[CWindow](../../atl/reference/cwindow-class.md)。
 
 ## <a name="members"></a>成员
@@ -113,7 +113,7 @@ template <class T,
 
 创建无模式对话框。
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]向所有者窗口句柄。
 
-**RECT &** *rect*  
-[in]一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定对话框的大小和位置。
+**RECT &** *rect* [in] 一个[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定对话框的大小和位置。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
 ### <a name="return-value"></a>返回值
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]为对话框的句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到对话框中的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -199,18 +198,18 @@ static LRESULT CALLBACK DialogProc(
 
 创建模式对话框。
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]向所有者窗口句柄。 默认值是返回的值[正在](https://msdn.microsoft.com/library/windows/desktop/ms646292)Win32 函数。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要传递到该对话框中的值*lParam* WM_INITDIALOG 消息参数。
 
 ### <a name="return-value"></a>返回值
@@ -227,13 +226,13 @@ INT_PTR DoModal(
 
 销毁模式对话框。
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>参数
 
-*nRetCode*  
+*nRetCode*<br/>
 [in]要返回的值[CDialogImpl::DoModal](#domodal)。
 
 ### <a name="return-value"></a>返回值
@@ -251,8 +250,8 @@ BOOL EndDialog(int nRetCode);
 
 返回`DialogProc`，当前对话框过程。
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>返回值
@@ -267,13 +266,13 @@ virtual WNDPROC GetDialogProc();
 
 将转换 （映射） 到屏幕的指定矩形的对话框单位单位 （像素）。
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>参数
 
-*lpRect*  
+*lpRect*<br/>
 指向`CRect`对象或[RECT](../../mfc/reference/rect-structure1.md)结构，它是以接收包含更新区域的更新的客户端坐标。
 
 ### <a name="return-value"></a>返回值
@@ -288,13 +287,13 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 接收最后一条消息后调用 (通常`WM_NCDESTROY`)。
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]正在销毁窗口的句柄。
 
 ### <a name="remarks"></a>备注
@@ -305,26 +304,26 @@ virtual void OnFinalMessage(HWND hWnd);
 
 只调用一次，收到第一条消息后，若要处理发送到对话框的消息。
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>参数
 
-*hWnd*  
+*hWnd*<br/>
 [in]为对话框的句柄。
 
-*uMsg*  
+*uMsg*<br/>
 [in]发送到对话框中的消息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定于消息的信息。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
@@ -337,5 +336,5 @@ static LRESULT CALLBACK StartDialogProc(
 
 ## <a name="see-also"></a>请参阅
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063107"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 类
 
@@ -40,16 +40,16 @@ ms.locfileid: "43760118"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在堆上的对象类型。
 
-*分配器*  
+*分配器*<br/>
 要使用的内存分配类。 默认情况下使用的 CRT 例程来分配和释放内存。
 
 ## <a name="members"></a>成员
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 要分配的内存字节数。
 
 ### <a name="return-value"></a>返回值
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>参数
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase`对象将获得 this 指针的所有权。
 
 ### <a name="remarks"></a>备注
@@ -216,7 +216,7 @@ T* operator->() const throw();
 
 强制转换运算符。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBytes*  
+*nBytes*<br/>
 新的分配，以字节为单位的内存量。
 
 ### <a name="return-value"></a>返回值
@@ -243,6 +243,6 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CHeapPtr 类](../../atl/reference/cheapptr-class.md)   
-[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

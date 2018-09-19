@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0051 |Microsoft 文档
+title: 表达式计算器错误 CXX0051 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065033"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>表达式计算器错误 CXX0051
-在断点中指定的多个重载的符号  
-  
- 表达式计算器无法确定其要用作断点的多个重载符号。  
-  
- 此错误是与 CAN0051 相同。
+
+指定在断点处的多个重载的符号
+
+表达式计算器无法确定其多个重载要用作断点的符号。
+
+此错误是与 CAN0051 相同。

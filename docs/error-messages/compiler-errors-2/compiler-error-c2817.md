@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2817 |Microsoft 文档
+title: 编译器错误 C2817 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb442bbe3252574afd37cac3b0e83fe90aac0da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd2f979524187dfe5fd5b18872a6927413ff512e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108451"
 ---
 # <a name="compiler-error-c2817"></a>编译器错误 C2817
-operator delete 的返回类型必须为 void  
-  
+
+operator delete 的返回类型必须为 void
+
 一个已重载[运算符 delete](../../standard-library/new-operators.md#op_delete)函数无法返回值。

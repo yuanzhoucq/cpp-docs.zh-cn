@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC2113 |Microsoft 文档
+title: 资源编译器错误 RC2113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152621a248c2a47a453034f1b171fe1746000fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015865"
 ---
 # <a name="resource-compiler-error-rc2113"></a>资源编译器错误 RC2113
-在对话框中应具有 END  
-  
- **结束**关键字必须出现在末尾**对话框**语句。 请确保有剩下的前面的语句没有左引号。
+
+在对话框中应具有 END
+
+**最终**关键字必须出现在末尾**对话框**语句。 请确保没有剩下的上一个语句中的左引号。

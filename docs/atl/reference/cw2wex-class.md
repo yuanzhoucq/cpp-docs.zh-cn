@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d888478be18063b00e1e5e8eabead510349584cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f230e66689578f1b7ea95326d9bc73efc8746c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093035"
 ---
 # <a name="cw2wex-class"></a>CW2WEX 类
 
@@ -37,13 +37,13 @@ ms.locfileid: "43752528"
 ## <a name="syntax"></a>语法
 
 ```
-template <int t_nBufferLength = 128>  
+template <int t_nBufferLength = 128>
 class CW2WEX
 ```
 
 #### <a name="parameters"></a>参数
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 在转换过程中所使用的缓冲区的大小。 默认长度为 128 个字节。
 
 ## <a name="members"></a>成员
@@ -109,10 +109,10 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*psz*  
+*psz*<br/>
 要转换的文本字符串。
 
-*nCodePage*  
+*nCodePage*<br/>
 代码页中。 不使用此类中。
 
 ### <a name="remarks"></a>备注
@@ -151,7 +151,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 强制转换运算符。
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -161,9 +161,9 @@ operator LPWSTR() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CA2AEX 类](../../atl/reference/ca2aex-class.md)   
-[CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
-[CA2WEX 类](../../atl/reference/ca2wex-class.md)   
-[CW2AEX 类](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
+[CA2AEX 类](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX 类](../../atl/reference/ca2caex-class.md)<br/>
+[CA2WEX 类](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX 类](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX 类](../../atl/reference/cw2cwex-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

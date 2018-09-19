@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105383"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 转换全局函数
 
@@ -46,10 +46,10 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>参数
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [in]指向以 HIMETRIC 为单位的对象的大小。
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [out]指向对象的大小 （像素） 将返回的指针。
 
 ### <a name="example"></a>示例
@@ -72,10 +72,10 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>参数
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [in]指向对象的大小 （像素）。
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [out]指向其中以 HIMETRIC 为单位的对象的大小是要返回的指针。
 
 ### <a name="example"></a>示例

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9ad03df6a342d47919eb576227422f687d15b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035768"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -29,22 +29,22 @@ ms.locfileid: "43755626"
 
 ## <a name="syntax"></a>语法
 
-```  
+```cpp
 LRESULT NotifyHandler(
-    int idCtrl,  
-    LPNMHDR pnmh,  
+    int idCtrl,
+    LPNMHDR pnmh,
     BOOL& bHandled);
 ```
 
 #### <a name="parameters"></a>参数
 
-*idCtrl*  
+*idCtrl*<br/>
 发送消息的控件的标识符。
 
-*pnmh*  
+*pnmh*<br/>
 地址[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)结构，其中包含通知代码和其他信息。 对于某些通知消息，此参数指向具有较大结构`NMHDR`结构作为其第一个成员。
 
-*bHandled*  
+*bHandled*<br/>
 消息映射集*bHandled*为 TRUE，然后才能*NotifyHandler*调用。 如果*NotifyHandler*不完全处理该消息，应设置*bHandled*到**FALSE**来指示该消息需要进一步处理。
 
 ## <a name="return-value"></a>返回值
@@ -57,6 +57,6 @@ LRESULT NotifyHandler(
 
 ## <a name="see-also"></a>请参阅
 
-[实现窗口](../atl/implementing-a-window.md)   
-[消息映射](../atl/message-maps-atl.md)   
+[实现窗口](../atl/implementing-a-window.md)<br/>
+[消息映射](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

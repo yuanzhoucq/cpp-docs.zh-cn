@@ -1,5 +1,5 @@
 ---
-title: 表达式计算器错误 CXX0043 |Microsoft 文档
+title: 表达式计算器错误 CXX0043 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b27c1fffca8c21a0fa3e3e79eedae0c17ae580
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01deb34c2e490eb8a2d6529a426aedca40f98901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070569"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>表达式计算器错误 CXX0043
-此指针使用外部的成员函数  
-  
- **这**指针仅用于非静态成员函数。  
-  
- 此错误是与 CAN0043 相同。
+
+使用此指针的函数的外部成员
+
+**这**指针仅用于非静态成员函数。
+
+此错误是与 CAN0043 相同。

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069113"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -88,7 +88,7 @@ int main()
     {}
 ```
 
-标识符必须指向类成员;它是使用参数的值进行初始化。 参数可以是一个构造函数参数，函数调用或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。 
+标识符必须指向类成员;它是使用参数的值进行初始化。 参数可以是一个构造函数参数，函数调用或[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。
 
 **const**必须在成员初始值设定项列表中初始化成员和引用类型的成员。
 
@@ -96,7 +96,7 @@ int main()
 
 ## <a name="default_constructors"></a> 默认构造函数
 
- *默认构造函数*通常没有任何参数，但它们可能有具有默认值的参数。
+*默认构造函数*通常没有任何参数，但它们可能有具有默认值的参数。
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
 尝试将对象复制到生成错误*C2280： 尝试引用已删除的函数*。
 
 ## <a name="move_constructors"></a> 移动构造函数
+
 一个*移动构造函数*是将现有对象的数据的所有权移动到新的变量，而不复制原始数据的特殊成员函数。 它采用右值引用作为其第一个参数，并且任何其他参数必须具有默认值。 当传递了大型对象时，移动构造函数可显著提高程序的效率。 移动构造函数采用右值引用作为其第一个参数。 任何其他参数必须具有默认值。
 
 ```cpp

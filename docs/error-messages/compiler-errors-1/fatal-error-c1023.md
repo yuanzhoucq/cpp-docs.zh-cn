@@ -1,5 +1,5 @@
 ---
-title: 错误 C1023 |Microsoft 文档
+title: 错误 C1023 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115237"
 ---
 # <a name="fatal-error-c1023"></a>错误 C1023
-“file”：发生有关 pch 的意外错误，请尝试重新生成 pch  
-  
- C1023 可能由多个问题导致，其解决方案是重新生成预编译标头文件。  
-  
- 如果尝试在生成预编译标头文件的计算机以外的计算机上使用该标头文件，则可能会导致 C1023。
+
+“file”：发生有关 pch 的意外错误，请尝试重新生成 pch
+
+C1023 可能由多个问题导致，其解决方案是重新生成预编译标头文件。
+
+如果尝试在生成预编译标头文件的计算机以外的计算机上使用该标头文件，则可能会导致 C1023。

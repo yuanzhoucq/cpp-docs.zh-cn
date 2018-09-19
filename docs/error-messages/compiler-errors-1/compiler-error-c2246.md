@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2246 |Microsoft 文档
+title: 编译器错误 C2246 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d4de93f964807003dbfcfb6717b8a858354c1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c605d6cdf30a4c184e59627ddc3819812c290d68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029086"
 ---
 # <a name="compiler-error-c2246"></a>编译器错误 C2246
-“identifier”：局部定义的类中出现非法静态数据成员  
-  
- 具有局部范围的类、结构或联合的成员被声明 `static`。  
-  
- 下面的示例生成 C2246：  
-  
-```  
-// C2246.cpp  
-// compile with: /c  
-void func( void ) {  
-   class A { static int i; };   // C2246  i is local to func  
-   static int j;   // OK  
-};  
+
+“identifier”：局部定义的类中出现非法静态数据成员
+
+具有局部范围的类、结构或联合的成员被声明 `static`。
+
+下面的示例生成 C2246：
+
+```
+// C2246.cpp
+// compile with: /c
+void func( void ) {
+   class A { static int i; };   // C2246  i is local to func
+   static int j;   // OK
+};
 ```

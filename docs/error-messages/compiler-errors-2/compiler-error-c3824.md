@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3824 |Microsoft 文档
+title: 编译器错误 C3824 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5202ff0236fca8d14c87bd55f1d314baa6bb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03d42f80716b81f4409449262af650220b1ad92b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083946"
 ---
 # <a name="compiler-error-c3824"></a>编译器错误 C3824
-member： 此类型不能出现在此上下文 （函数参数、 返回类型或静态成员）  
-  
- 钉住指针不能为函数参数、 返回类型，或声明`static`。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C3824:  
-  
-```  
-// C3824a.cpp  
-// compile with: /clr /c  
-void func() {  
-   static pin_ptr<int> a; // C3824  
-   pin_ptr<int> b; // OK  
-}  
-```  
+
+member： 此类型不能出现在此上下文中 （函数参数、 返回类型或静态成员）
+
+钉住指针不能为函数参数、 返回类型，或声明`static`。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3824:
+
+```
+// C3824a.cpp
+// compile with: /clr /c
+void func() {
+   static pin_ptr<int> a; // C3824
+   pin_ptr<int> b; // OK
+}
+```

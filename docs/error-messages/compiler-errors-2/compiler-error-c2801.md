@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2801 |Microsoft 文档
+title: 编译器错误 C2801 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68b3f575fcb8b909f58ac2ffbcaca26580279da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57ee5bf5f5152ef55852c9f9b829bc4a1d17d41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040630"
 ---
 # <a name="compiler-error-c2801"></a>编译器错误 C2801
-operator operator 必须为非静态成员  
-  
- 以下运算符可以进行重载仅作为非静态成员：  
-  
--   分配 `=`  
-  
--   类成员访问 `->`  
-  
--   下标 `[]`  
-  
--   函数调用 `()`  
-  
- C2801 的可能原因：  
-  
--   重载的运算符不是类、 结构或联合成员。  
-  
--   重载的运算符被声明`static`。  
-  
--   下面的示例生成 C2801:  
-  
-```  
-// C2801.cpp  
-// compile with: /c  
-operator[]();   // C2801 not a member  
-class A {  
-   static operator->();   // C2801 static  
-   operator()();   // OK  
-};  
+
+operator operator 必须为非静态成员
+
+可以仅为非静态成员重载以下运算符：
+
+- 赋值 `=`
+
+- 类成员访问 `->`
+
+- 下标 `[]`
+
+- 函数调用 `()`
+
+C2801 的可能原因：
+
+- 重载的运算符不是类、 结构或联合成员。
+
+- 重载的运算符被声明`static`。
+
+- 下面的示例生成 C2801:
+
+```
+// C2801.cpp
+// compile with: /c
+operator[]();   // C2801 not a member
+class A {
+   static operator->();   // C2801 static
+   operator()();   // OK
+};
 ```

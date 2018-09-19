@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070101"
 ---
 # <a name="cacl-class"></a>CAcl 类
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 一个现有的 `CAcl` 对象。
 
 ### <a name="remarks"></a>备注
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>参数
 
-*pSids*  
+*pSids*<br/>
 指向数组的指针[CSid](../../atl/reference/csid-class.md)对象。
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 访问掩码中。
 
-*pAceTypes*  
+*pAceTypes*<br/>
 访问控制项 (ACE) 类型。
 
-*pAceFlags*  
+*pAceFlags*<br/>
 ACE 的标志。
 
 ### <a name="remarks"></a>备注
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要检索的 ACL 项的索引。
 
-*pSid*  
+*pSid*<br/>
 [CSid](../../atl/reference/csid-class.md) ACL 条目应用到对象。
 
-*pMask*  
+*pMask*<br/>
 在指定的权限以授予或拒绝访问掩码。
 
-*pType*  
+*pType*<br/>
 ACE 类型。
 
-*pFlags*  
+*pFlags*<br/>
 ACE 的标志。
 
-*pObjectType*  
+*pObjectType*<br/>
 对象类型。 这将设置为 GUID_NULL，如果该 ACE 中未指定的对象类型，或如果 ACE 不是对象 ACE。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 继承的对象类型。 这将设置为 GUID_NULL，如果该 ACE 中未指定继承的对象类型，或如果 ACE 不是对象 ACE。
 
 ### <a name="remarks"></a>备注
@@ -322,7 +322,7 @@ bool IsNull() const throw();
 
 强制转换`CAcl`对象传递给`ACL`（访问控制列表） 结构。
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `CAcl`要分配给现有对象。
 
 ### <a name="return-value"></a>返回值
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>参数
 
-*nIndex*  
+*nIndex*<br/>
 要移除的 ACE 项的索引。
 
 ### <a name="remarks"></a>备注
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>参数
 
-*rSid*  
+*rSid*<br/>
 对 `CSid` 对象的引用。
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ void SetNull() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[类概述](../../atl/atl-class-overview.md)   
+[类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042879"
 ---
 # <a name="cregkey-class"></a>CRegKey 类
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>参数
 
-*hKey*  
+*hKey*<br/>
 注册表项句柄。
 
 ### <a name="remarks"></a>备注
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>参数
 
-*hKeyParent*  
+*hKeyParent*<br/>
 打开密钥句柄。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定创建或打开密钥的名称。 此名称必须是某个项的子项*hKeyParent*。
 
-*lpszClass*  
+*lpszClass*<br/>
 指定要创建或打开的键的类。 默认值为 REG_NONE。
 
-*dwOptions*  
+*dwOptions*<br/>
 密钥的选项。 默认值为 REG_OPTION_NON_VOLATILE。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。
 
-*samDesired*  
+*samDesired*<br/>
 该密钥的安全访问。 默认值是 KEY_READ &#124; KEY_WRITE。 有关可能的值和说明的列表，请参阅`RegCreateKeyEx`。
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 一个指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，指示是否可以由子进程继承该密钥的句柄。 默认情况下，此参数为 NULL （即不能继承句柄）。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out]如果非 NULL，检索 REG_CREATED_NEW_KEY （如果该键不存在并已创建） 或 REG_OPENED_EXISTING_KEY （如果该键存在并已打开）。
 
 ### <a name="return-value"></a>返回值
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 对 `CRegKey` 对象的引用。
 
-*hKey*  
+*hKey*<br/>
 注册表项句柄。
 
-*pTM*  
+*pTM*<br/>
 指向 CAtlTransactionManager 对象的指针
 
 ### <a name="remarks"></a>备注
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 指定要删除的键的名称。 此名称必须是某个项的子项[m_hKey](#m_hkey)。
 
 ### <a name="return-value"></a>返回值
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要移除的值字段。
 
 ### <a name="return-value"></a>返回值
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>参数
 
-*iIndex*  
+*iIndex*<br/>
 子项的索引。 此参数应为零的第一次调用，以便进行后续调用然后递增
 
-*pszName*  
+*pszName*<br/>
 指向该缓冲区用于接收该子项，包括终止 null 字符的名称。 仅在子项的名称复制到缓冲区，而不是完整密钥层次结构。
 
-*pnNameLength*  
+*pnNameLength*<br/>
 为指定的大小，以 TCHARs，由指定的缓冲区的变量的指针*pszName*参数。 此大小应包括终止 null 字符。 当方法返回时，通过指向的变量*pnNameLength*包含存储在缓冲区中的字符数。 返回的计数不包括终止 null 字符。
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 指向一个变量来接收时间枚举的子项上次写入。
 
 ### <a name="return-value"></a>返回值
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>参数
 
-*si*  
+*si*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)值，该值指示请求的安全信息。
 
-*psd*  
+*psd*<br/>
 指向该缓冲区用于接收请求的安全描述符的副本的指针。
 
-*pnBytes*  
+*pnBytes*<br/>
 大小 （字节） 通过指向的缓冲区*psd*。
 
 ### <a name="return-value"></a>返回值
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>参数
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 指定一个标志，指示是否报告中指定的键和所有子项或仅在指定的键中的更改。 如果此参数为 TRUE，该方法将报告在项及其子项的更改。 如果参数为 FALSE，该方法将报告仅在密钥中的更改。
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 指定应报告的一组标志，用于控制哪些更改。 此参数可以是以下值的组合：
 
 |“值”|含义|
@@ -431,10 +431,10 @@ LONG NotifyChangeKeyValue(
 |REG_NOTIFY_CHANGE_LAST_SET|通知调用方对密钥的值的更改。 这可能包括添加或删除一个值，或更改的现有值。|
 |REG_NOTIFY_CHANGE_SECURITY|通知调用方对密钥的安全描述符的更改。|
 
-*n t*  
+*n t*<br/>
 事件的句柄。 如果*bAsync*参数为 TRUE，该方法立即返回，并通过此事件报告更改。 如果*bAsync*为 FALSE 时， *hEvent*将被忽略。
 
-*bAsync*  
+*bAsync*<br/>
 指定一个标志，指示该方法报告更改的方式。 如果此参数为 TRUE，该方法立即返回，并通过指定的事件发出信号报告更改。 当此参数为 FALSE 时，该方法不返回之前发生了更改。 如果*hEvent*未指定有效的事件， *bAsync*参数不能为 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>参数
 
-*hKeyParent*  
+*hKeyParent*<br/>
 打开密钥句柄。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定创建或打开密钥的名称。 此名称必须是某个项的子项*hKeyParent*。
 
-*samDesired*  
+*samDesired*<br/>
 该密钥的安全访问。 默认值为 KEY_ALL_ACCESS。 有关可能的值和说明的列表，请参阅[RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -484,7 +484,7 @@ LONG Open(
 
 将转换`CRegKey`HKEY 的对象。
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>参数
 
-*key*  
+*key*<br/>
 要复制的键。
 
 ### <a name="return-value"></a>返回值
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*pValue*  
+*pValue*<br/>
 指向接收值的数据的缓冲区。
 
-*pnBytes*  
+*pnBytes*<br/>
 为指定的大小，以字节为单位的缓冲区的变量的指针指向的*pValue*参数。 方法返回时，此变量包含数据复制到缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*dwValue*  
+*dwValue*<br/>
 指向该缓冲区用于接收 DWORD 的指针。
 
 ### <a name="return-value"></a>返回值
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*guidValue*  
+*guidValue*<br/>
 指向一个变量来接收 GUID 的指针。
 
 ### <a name="return-value"></a>返回值
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*pszValue*  
+*pszValue*<br/>
 指向接收多字符串数据的缓冲区。 多字符串是一个数组以 null 结尾的字符串，由两个 null 字符终止。
 
-*pnChars*  
+*pnChars*<br/>
 TCHARs 指向的缓冲区的大小*pszValue*。 方法返回时， *pnChars*包含 TCHARs，包括终止 null 字符检索，多字符串的大小。
 
 ### <a name="return-value"></a>返回值
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*qwValue*  
+*qwValue*<br/>
 指向接收 QWORD 的缓冲区。
 
 ### <a name="return-value"></a>返回值
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。
 
-*pszValue*  
+*pszValue*<br/>
 指向该缓冲区用于接收字符串数据的指针。
 
-*pnChars*  
+*pnChars*<br/>
 TCHARs 指向的缓冲区的大小*pszValue*。 方法返回时， *pnChars*包含的大小，以 TCHARs 的检索，包括终止 null 字符的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 指向包含查询的值的名称的以 null 结尾的字符串指针。 如果*pszValueName*为 NULL 或空字符串，""、 方法检索的类型和键的数据的未命名或默认值，如果有的话。
 
-*pdwType*  
+*pdwType*<br/>
 指向一个变量来接收指示存储在指定的值中的数据类型的代码。 *PdwType*参数可以为 NULL，如果不需要的类型代码。
 
-*pData*  
+*pData*<br/>
 指向接收值的数据的缓冲区。 如果数据不需要此参数可以为 NULL。
 
-*pnBytes*  
+*pnBytes*<br/>
 为指定的大小，以字节为单位的缓冲区的变量的指针指向的*pData*参数。 方法返回时，此变量包含的数据复制到大小*pData。*
 
-*dwValue*  
+*dwValue*<br/>
 值字段的数值数据。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要查询的值字段。
 
-*szValue*  
+*szValue*<br/>
 值字段的字符串数据。
 
-*pdwCount*  
+*pdwCount*<br/>
 字符串数据的大小。 其值最初设置为的大小*szValue*缓冲区。
 
 ### <a name="return-value"></a>返回值
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszKey*  
+*lpszKey*<br/>
 指定要删除的键的名称。 此名称必须是某个项的子项[m_hKey](#m_hkey)。
 
 ### <a name="return-value"></a>返回值
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*pValue*  
+*pValue*<br/>
 指向包含要用指定的值名称存储的数据的缓冲区的指针。
 
-*nBytes*  
+*nBytes*<br/>
 指定的大小，以字节为单位的信息指向*pValue*参数。
 
 ### <a name="return-value"></a>返回值
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*dwValue*  
+*dwValue*<br/>
 要用指定的值名称存储的 DWORD 数据。
 
 ### <a name="return-value"></a>返回值
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*guidValue*  
+*guidValue*<br/>
 对要用指定的值名称存储的 GUID 引用。
 
 ### <a name="return-value"></a>返回值
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>参数
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定要创建或打开的键的名称。 此名称必须是某个项的子项[m_hKey](#m_hkey)。
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要存储的数据。 此参数必须为非 NULL。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。
 
 ### <a name="return-value"></a>返回值
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>参数
 
-*si*  
+*si*<br/>
 指定要设置的安全描述符的组件。 值可以是以下值的组合：
 
 |“值”|含义|
@@ -904,7 +904,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |OWNER_SECURITY_INFORMATION|设置密钥的所有者的 SID。 该密钥必须拥有 WRITE_OWNER 访问权限，或调用进程必须是对象的所有者或具有启用了 SE_TAKE_OWNERSHIP_NAME 特权。|
 |SACL_SECURITY_INFORMATION|设置密钥的系统访问控制列表 (SACL)。 该密钥必须拥有 ACCESS_SYSTEM_SECURITY 访问。 若要获得此访问权限的正确方法是启用 SE_SECURITY_NAME[特权](https://msdn.microsoft.com/library/windows/desktop/aa379306)在调用方的当前访问令牌中，打开 ACCESS_SYSTEM_SECURITY 访问的句柄，然后又禁用特权。|
 
-*psd*  
+*psd*<br/>
 指向[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)结构，它指定要为指定的键设置的安全属性。
 
 ### <a name="return-value"></a>返回值
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*pszValue*  
+*pszValue*<br/>
 指向要用指定的值名称存储的多字符串数据的指针。 多字符串是一个数组以 null 结尾的字符串，由两个 null 字符终止。
 
 ### <a name="return-value"></a>返回值
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*qwValue*  
+*qwValue*<br/>
 要用指定的值名称存储的 QWORD 数据。
 
 ### <a name="return-value"></a>返回值
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在，该方法将其添加到该密钥。
 
-*pszValue*  
+*pszValue*<br/>
 为存储到指定的值名称的字符串数据的指针。
 
-*dwType*  
+*dwType*<br/>
 要写入到注册表的字符串的类型： REG_SZ （默认值） 或 REG_EXPAND_SZ （对于多个字符串）。
 
 ### <a name="return-value"></a>返回值
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>参数
 
-*pszValueName*  
+*pszValueName*<br/>
 包含要设置的值名称的字符串指针。 如果具有此名称的值已不存在键中，该方法将其添加到该密钥。 如果*pszValueName*为 NULL 或空字符串，""，该方法设置的类型和键的数据的未命名或默认值。
 
-*dwType*  
+*dwType*<br/>
 指定一个代码，指示指向的数据类型*pValue*参数。
 
-*pValue*  
+*pValue*<br/>
 指向包含要用指定的值名称存储的数据的缓冲区的指针。
 
-*nBytes*  
+*nBytes*<br/>
 指定的大小，以字节为单位的信息指向*pValue*参数。 如果数据类型为 REG_SZ、 REG_EXPAND_SZ 或 REG_MULTI_SZ， *nBytes*必须包括终止 null 字符的大小。
 
-*hKeyParent*  
+*hKeyParent*<br/>
 打开密钥句柄。
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 指定创建或打开密钥的名称。 此名称必须是某个项的子项*hKeyParent*。
 
-*lpszValue*  
+*lpszValue*<br/>
 指定要存储的数据。 此参数必须为非 NULL。
 
-*lpszValueName*  
+*lpszValueName*<br/>
 指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。
 
-*dwValue*  
+*dwValue*<br/>
 指定要存储的数据。
 
-*bMulti*  
+*bMulti*<br/>
 如果为 false，指示该字符串是 REG_SZ 类型。 如果为 true，指示字符串为类型 REG_MULTI_SZ 多字符串。
 
-*nValueLen*  
+*nValueLen*<br/>
 如果*bMulti*为 true， *nValueLen*的长度*lpszValue*以字符为单位的字符串。 如果*bMulti*为 false，值为-1 指示该方法将自动计算长度。
 
 ### <a name="return-value"></a>返回值
@@ -1068,5 +1068,5 @@ ATL_DEPRECATED LONG SetValue(
 
 ## <a name="see-also"></a>请参阅
 
-[DCOM 示例](../../visual-cpp-samples.md)   
+[DCOM 示例](../../visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 原子 |Microsoft 文档
+title: 原子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037484"
 ---
 # <a name="atomic"></a>Atomic — 原子
 指定将以原子方式更新的内存位置。  
@@ -34,11 +34,11 @@ ms.locfileid: "33694402"
 ```  
   
 #### <a name="parameters"></a>参数  
- `expression`  
- 你想要防止多次写入包含其内存位置的左值的语句。 有关合法表达式窗体的详细信息，请参阅 OpenMP 规范。  
+*表达式*<br/>
+你想要防止多个写入包含其内存位置的左值的语句。 有关合法表达式形式的详细信息，请参阅的 OpenMP 规范。  
   
 ## <a name="remarks"></a>备注  
- `atomic`指令支持没有 OpenMP 子句。  
+ `atomic`指令支持任何 OpenMP 子句。  
   
  有关详细信息，请参阅[2.6.4 atomic 构造](../../../parallel/openmp/2-6-4-atomic-construct.md)。  
   

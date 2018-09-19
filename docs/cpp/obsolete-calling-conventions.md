@@ -22,20 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: eec6f8370103ed0256471c009d6e97cc693a1cd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071336"
 ---
 # <a name="obsolete-calling-conventions"></a>已过时调用约定
-## <a name="microsoft-specific"></a>Microsoft 专用  
- **__Pascal**， **__fortran**，并 **__syscall**调用约定不再受支持。 通过使用支持的调用约定之一和适当的链接器选项，可以模拟其功能。  
-  
- \<windows.h > 现在支持 WINAPI 宏，这会转换为目标的适当调用约定。 使用以前使用 PASCAL WINAPI 或 **__far \__pascal**。  
-  
-**结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)
+
+## <a name="microsoft-specific"></a>Microsoft 专用
+
+**__Pascal**， **__fortran**，并 **__syscall**调用约定不再受支持。 通过使用支持的调用约定之一和适当的链接器选项，可以模拟其功能。
+
+\<windows.h > 现在支持 WINAPI 宏，这会转换为目标的适当调用约定。 使用以前使用 PASCAL WINAPI 或 **__far \__pascal**。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)

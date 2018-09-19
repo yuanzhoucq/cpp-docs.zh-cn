@@ -1,5 +1,5 @@
 ---
-title: unorm 类 |Microsoft 文档
+title: unorm 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071219"
 ---
 # <a name="unorm-class"></a>unorm 类
-表示 unorm 数字。 每个元素都浮点数的 [0.0 f，1.0 f] 范围内。  
+表示 unorm 数字。 每个元素是一个浮点数，范围内的 [0.0f，1.0f]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V`  
- 用来初始化的值。  
+*（_V)*<br/>
+用来初始化的值。  
   
- `_Other`  
- 用于初始化的标准对象。  
+*_Other*<br/>
+用于初始化的标准对象。  
   
 ## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

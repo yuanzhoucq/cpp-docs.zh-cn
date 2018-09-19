@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 284efeda739f3282bf0ae23f11f950971538645d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3d3e6ca79794eafe64ee2797c12ec8a82a3bb064
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038206"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 类
 支持 void 指针键控的 void 指针的映射。  
@@ -63,9 +63,7 @@ class CMapPtrToPtr : public CObject
 ## <a name="members"></a>成员  
  成员函数`CMapPtrToPtr`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为函数参数或返回值替换为指向的指针**void**。 无论您在何处`CString`或**const**指针，指向**char**作为函数参数或返回值，替换为一个指向**void**。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  例如，转换为  
   

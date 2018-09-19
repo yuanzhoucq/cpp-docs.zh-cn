@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116719"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>参数
 
- *params*  
+*params*<br/>
 一个或多个参数必须是文本类型并且其本身必须是常数表达式。
 
 ## <a name="return-value"></a>返回值
 
- Constexpr 变量或函数必须返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
+Constexpr 变量或函数必须返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
 ## <a name="constexpr-variables"></a>constexpr 变量
 
- Const 和 constexpr 变量之间的主要区别在于：const 变量的初始化可以延迟到运行时，而 constexpr 变量必须在编译时进行初始化。  所有 constexpr 变量均为常量。
+Const 和 constexpr 变量之间的主要区别在于：const 变量的初始化可以延迟到运行时，而 constexpr 变量必须在编译时进行初始化。  所有 constexpr 变量均为常量。
 
 - 可以使用声明的变量**constexpr**，如果它具有文本类型并且未被初始化。 如果由构造函数执行初始化，则构造函数必须声明为**constexpr**。
 
@@ -91,7 +91,7 @@ constexpr int k = j + 1; //Error! j not a constant expression
 以下规则适用于**constexpr**函数在 Visual Studio 2017 及更高版本：
 
 - 它可能包含**如果**和**切换**语句以及所有循环语句，其中包括**有关**，基于范围的 for，**而**，和**执行操作-虽然**。
- 
+
 - 它可能包含局部变量声明，但该变量必须初始化，必须是文本类型，并且不能为静态或线程本地。 本地声明变量不需要是常量，且可能会发生变化。
 
 - Constexpr 非静态成员函数不需要为隐式 const。
@@ -115,7 +115,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="example"></a>示例
 
- 下面的示例演示**constexpr**变量、 函数和用户定义类型。 请注意，在 main （） 中的最后一个语句**constexpr**成员函数 getvalue （） 是运行时调用，因为值不需要在编译时已知。
+下面的示例演示**constexpr**变量、 函数和用户定义类型。 请注意，在 main （） 中的最后一个语句**constexpr**成员函数 getvalue （） 是运行时调用，因为值不需要在编译时已知。
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>请参阅
- [声明和定义](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[声明和定义](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

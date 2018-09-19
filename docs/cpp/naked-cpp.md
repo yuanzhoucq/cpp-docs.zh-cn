@@ -17,62 +17,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018374"
 ---
 # <a name="naked-c"></a>naked (C++)
-**Microsoft 专用**  
-  
- 函数声明与为**裸**特性，因此编译器将生成代码而无需 prolog 和 epilog 代码。 利用此功能，可以使用内联汇编程序代码编写您自己的 prolog/epilog 代码序列。 裸函数对于编写虚拟设备驱动程序特别有用。  请注意，**裸**属性仅适用于 x86 和 ARM，和在 x64 上不可用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-__declspec(naked) declarator  
-```  
-  
-## <a name="remarks"></a>备注  
- 因为**裸**特性仅与函数定义相关且不是类型修饰符，裸函数必须使用扩展的特性语法和[__declspec](../cpp/declspec.md)关键字。  
-  
 
- 编译器无法生成使用 naked 特性标记的函数的内联函数，即使该函数还将标有[__forceinline](inline-functions-cpp.md)关键字。  
+**Microsoft 专用**
 
- 如果编译器将发出错误**裸**特性应用于非成员方法的定义之外的任何内容。  
-  
-## <a name="examples"></a>示例  
- 此代码定义的函数**裸**属性：  
-  
-```  
-__declspec( naked ) int func( formal_parameters ) {}  
-```  
-  
- 或者，或者：  
-  
-```  
-#define Naked __declspec( naked )  
-Naked int func( formal_parameters ) {}  
-```  
-  
- **裸**特性影响仅的函数的 prolog 和 epilog 序列的编译器的代码生成的特性。 它不影响为调用这些函数而生成的代码。 因此，**裸**属性不被视为函数的类型的一部分并且不能具有函数指针**裸**属性。 此外，**裸**属性不能应用于数据定义。 例如，此代码示例生成错误：  
-  
-```  
-__declspec( naked ) int i;  
-// Error--naked attribute not permitted on data declarations.  
-```  
-  
- **裸**特性仅与函数定义相关且不能在函数的原型中指定。 例如，此声明生成编译器错误：  
-  
-```  
-__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations  
-```  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [__declspec](../cpp/declspec.md)   
- [关键字](../cpp/keywords-cpp.md)   
- [Naked 函数调用](../cpp/naked-function-calls.md)
+函数声明与为**裸**特性，因此编译器将生成代码而无需 prolog 和 epilog 代码。 利用此功能，可以使用内联汇编程序代码编写您自己的 prolog/epilog 代码序列。 裸函数对于编写虚拟设备驱动程序特别有用。  请注意，**裸**属性仅适用于 x86 和 ARM，和在 x64 上不可用。
+
+## <a name="syntax"></a>语法
+
+```
+__declspec(naked) declarator
+```
+
+## <a name="remarks"></a>备注
+
+因为**裸**特性仅与函数定义相关且不是类型修饰符，裸函数必须使用扩展的特性语法和[__declspec](../cpp/declspec.md)关键字。
+
+
+编译器无法生成使用 naked 特性标记的函数的内联函数，即使该函数还将标有[__forceinline](inline-functions-cpp.md)关键字。
+
+如果编译器将发出错误**裸**特性应用于非成员方法的定义之外的任何内容。
+
+## <a name="examples"></a>示例
+
+此代码定义的函数**裸**属性：
+
+```
+__declspec( naked ) int func( formal_parameters ) {}
+```
+
+或者，或者：
+
+```
+#define Naked __declspec( naked )
+Naked int func( formal_parameters ) {}
+```
+
+**裸**特性影响仅的函数的 prolog 和 epilog 序列的编译器的代码生成的特性。 它不影响为调用这些函数而生成的代码。 因此，**裸**属性不被视为函数的类型的一部分并且不能具有函数指针**裸**属性。 此外，**裸**属性不能应用于数据定义。 例如，此代码示例生成错误：
+
+```
+__declspec( naked ) int i;
+// Error--naked attribute not permitted on data declarations.
+```
+
+**裸**特性仅与函数定义相关且不能在函数的原型中指定。 例如，此声明生成编译器错误：
+
+```
+__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations
+```
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[__declspec](../cpp/declspec.md)<br/>
+[关键字](../cpp/keywords-cpp.md)<br/>
+[Naked 函数调用](../cpp/naked-function-calls.md)

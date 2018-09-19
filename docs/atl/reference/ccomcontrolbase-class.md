@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035742"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 与控件关联的窗口句柄。
 
 ### <a name="remarks"></a>备注
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>参数
 
-*iid*  
+*iid*<br/>
 所请求的接口的 GUID。
 
-*ppv*  
+*ppv*<br/>
 通过标识的接口指针的指针*iid*，或如果找不到该接口，则为 NULL。
 
 ### <a name="remarks"></a>备注
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>参数
 
-*iVerb*  
+*iVerb*<br/>
 值，该值指示要由执行的操作`DoVerb`。
 
 ### <a name="return-value"></a>返回值
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>参数
 
-*iVerb*  
+*iVerb*<br/>
 值，该值指示要由执行的操作`DoVerb`。
 
 ### <a name="return-value"></a>返回值
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>参数
 
-*prcPosRec*  
+*prcPosRec*<br/>
 保留。
 
-*hwndParent*  
+*hwndParent*<br/>
 包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>参数
 
-*nAppearance*  
+*nAppearance*<br/>
 DISPID_AMBIENT_APPEARANCE 属性。
 
 ### <a name="return-value"></a>返回值
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>参数
 
-*bAutoClip*  
+*bAutoClip*<br/>
 DISPID_AMBIENT_AUTOCLIP 属性。
 
 ### <a name="return-value"></a>返回值
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>参数
 
-*背景色*  
+*背景色*<br/>
 DISPID_AMBIENT_BACKCOLOR 属性。
 
 ### <a name="return-value"></a>返回值
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>参数
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 DISPID_AMBIENT_CHARSET 属性。
 
 ### <a name="return-value"></a>返回值
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>参数
 
-*ulCodePage*  
+*ulCodePage*<br/>
 DISPID_AMBIENT_CODEPAGE 属性。
 
 ### <a name="return-value"></a>返回值
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>参数
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 DISPID_AMBIENT_DISPLAYASDEFAULT 属性。
 
 ### <a name="return-value"></a>返回值
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>参数
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 DISPID_AMBIENT_DISPLAYNAME 属性。
 
 ### <a name="return-value"></a>返回值
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>参数
 
-*ppFont*  
+*ppFont*<br/>
 指向容器的环境[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)接口。
 
 ### <a name="return-value"></a>返回值
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>参数
 
-*ppFont*  
+*ppFont*<br/>
 指向容器的环境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)调度接口。
 
 ### <a name="return-value"></a>返回值
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>参数
 
-*前景色*  
+*前景色*<br/>
 DISPID_AMBIENT_FORECOLOR 属性。
 
 ### <a name="return-value"></a>返回值
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>参数
 
-*lcid*  
+*lcid*<br/>
 DISPID_AMBIENT_LOCALEID 属性。
 
 ### <a name="return-value"></a>返回值
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>参数
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 DISPID_AMBIENT_MESSAGEREFLECT 属性。
 
 ### <a name="return-value"></a>返回值
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>参数
 
-*hPalette*  
+*hPalette*<br/>
 DISPID_AMBIENT_PALETTE 属性。
 
 ### <a name="return-value"></a>返回值
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>参数
 
-*dispid*  
+*dispid*<br/>
 要检索的容器属性的标识符。
 
-*var*  
+*var*<br/>
 若要接收属性的变量。
 
 ### <a name="return-value"></a>返回值
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>参数
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 DISPID_AMBIENT_RIGHTTOLEFT 属性。 如果内容从右到左显示，则设置为 TRUE，否则，为 FALSE 到右显示左侧。
 
 ### <a name="return-value"></a>返回值
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>参数
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 DISPID_AMBIENT_SCALEUNITS 属性。
 
 ### <a name="return-value"></a>返回值
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>参数
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 DISPID_AMBIENT_SHOWGRABHANDLES 属性。
 
 ### <a name="return-value"></a>返回值
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>参数
 
-*bShowHatching*  
+*bShowHatching*<br/>
 DISPID_AMBIENT_SHOWHATCHING 属性。
 
 ### <a name="return-value"></a>返回值
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>参数
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 DISPID_AMBIENT_SUPPORTSMNEMONICS 属性。
 
 ### <a name="return-value"></a>返回值
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>参数
 
-*nTextAlign*  
+*nTextAlign*<br/>
 DISPID_AMBIENT_TEXTALIGN 属性。
 
 ### <a name="return-value"></a>返回值
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>参数
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 DISPID_AMBIENT_TOPTOBOTTOM 属性。 设置为 TRUE，如果显示的文本从上到下，否则，为 FALSE 显示底部到顶部。
 
 ### <a name="return-value"></a>返回值
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>参数
 
-*bUIDead*  
+*bUIDead*<br/>
 DISPID_AMBIENT_UIDEAD 属性。
 
 ### <a name="return-value"></a>返回值
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>参数
 
-*bUserMode*  
+*bUserMode*<br/>
 DISPID_AMBIENT_USERMODE 属性。
 
 ### <a name="return-value"></a>返回值
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>参数
 
-*di*  
+*di*<br/>
 结构，它将保存缩放系数分子和分母。 有关详细信息，请参阅[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)。
 
 ### <a name="remarks"></a>备注
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>参数
 
-*iVerb*  
+*iVerb*<br/>
 值，该值指示要由执行的操作[IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb)。
 
-*prcPosRect*  
+*prcPosRect*<br/>
 指针，指向就地控件的位置。
 
 ### <a name="return-value"></a>返回值
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>参数
 
-*riid*  
+*riid*<br/>
 应在返回的接口指针的 IID *ppUnkSite*。
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 接收请求中的接口指针的指针变量的地址*riid*。
 
 ### <a name="return-value"></a>返回值
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>参数
 
-*di*  
+*di*<br/>
 对引用[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)结构，其中包含如绘图方面，控件边界的绘图信息和绘图优化与否。
 
 ### <a name="return-value"></a>返回值
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>参数
 
-*di*  
+*di*<br/>
 对引用[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)结构，其中包含如绘图方面，控件边界的绘图信息和绘图优化与否。
 
 ### <a name="return-value"></a>返回值
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>参数
 
-*nMsg*  
+*nMsg*<br/>
 保留。
 
-*wParam*  
+*wParam*<br/>
 保留。
 
-*lParam*  
+*lParam*<br/>
 保留。
 
-*bHandled*  
+*bHandled*<br/>
 该标志指示是否已成功处理的窗口消息。 默认值为 FALSE。
 
 ### <a name="return-value"></a>返回值
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>参数
 
-*nMsg*  
+*nMsg*<br/>
 保留。
 
-*wParam*  
+*wParam*<br/>
 保留。
 
-*lParam*  
+*lParam*<br/>
 保留。
 
-*bHandled*  
+*bHandled*<br/>
 该标志指示是否已成功处理的窗口消息。 默认值为 FALSE。
 
 ### <a name="return-value"></a>返回值
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>参数
 
-*nMsg*  
+*nMsg*<br/>
 保留。
 
-*wParam*  
+*wParam*<br/>
 现有的 HDC。
 
-*lParam*  
+*lParam*<br/>
 保留。
 
-*lResult*  
+*lResult*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>参数
 
-*nMsg*  
+*nMsg*<br/>
 保留。
 
-*wParam*  
+*wParam*<br/>
 保留。
 
-*lParam*  
+*lParam*<br/>
 保留。
 
-*bHandled*  
+*bHandled*<br/>
 该标志指示是否已成功处理的窗口消息。 默认值为 FALSE。
 
 ### <a name="return-value"></a>返回值
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>参数
 
-*pMsg*  
+*pMsg*<br/>
 保留。
 
-*hRet*  
+*hRet*<br/>
 保留。
 
 ### <a name="return-value"></a>返回值
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>参数
 
-*一个指针*  
+*一个指针*<br/>
 建议标志，用于指定如何在调用[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)进行。 值取自[一个指针](/windows/desktop/api/objidl/ne-objidl-tagadvf)枚举。
 
 ### <a name="return-value"></a>返回值
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>参数
 
-*pmk*  
+*pmk*<br/>
 控件的新名字对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>参数
 
-*dwAspect*  
+*dwAspect*<br/>
 外观或控件的视图。
 
-*lindex*  
+*lindex*<br/>
 视图已更改的部分。 仅为-1 是有效的。
 
 ### <a name="return-value"></a>返回值
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>参数
 
-*bGrab*  
+*bGrab*<br/>
 如果为 TRUE，则设置为调用控件的键盘焦点。 如果为 FALSE，键盘焦点从控件中移除调用，提供具有焦点。
 
 ### <a name="return-value"></a>返回值
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>参数
 
-*bDirty*  
+*bDirty*<br/>
 数据成员的值[CComControlBase::m_bRequiresSave](#m_brequiressave)。
 
 ### <a name="remarks"></a>备注
@@ -1578,5 +1578,5 @@ void SetDirty(BOOL bDirty);
 
 ## <a name="see-also"></a>请参阅
 
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

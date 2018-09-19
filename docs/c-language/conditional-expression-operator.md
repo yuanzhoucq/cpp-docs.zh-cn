@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107878"
 ---
 # <a name="conditional-expression-operator"></a>条件表达式运算符
+
 C 具有一个三元运算符：conditional-expression 运算符 (? :)。
 
 ## <a name="syntax"></a>语法
@@ -34,23 +35,23 @@ C 具有一个三元运算符：conditional-expression 运算符 (? :)。
 
 logical-OR-expression 必须具有整型类型、浮点型或指针类型。 根据其等效性，其计算结果为 0。 序列点紧跟 logical-OR-expression。 操作数的计算将继续，如下所示：
 
--   如果 logical-OR-expression 不等于 0，则计算 expression。 由非终止符 expression 给定的表达式的计算结果。 （这意味着，仅当 logical-OR-expression 为 true 时计算 expression。）
+- 如果 logical-OR-expression 不等于 0，则计算 expression。 由非终止符 expression 给定的表达式的计算结果。 （这意味着，仅当 logical-OR-expression 为 true 时计算 expression。）
 
--   如果 logical-OR-expression 等于 0，则计算 conditional-expression。 该表达式的结果是 conditional-expression 的值。 （这意味着，仅当 logical-OR-expression 为 false 时计算 conditional-expression。）
+- 如果 logical-OR-expression 等于 0，则计算 conditional-expression。 该表达式的结果是 conditional-expression 的值。 （这意味着，仅当 logical-OR-expression 为 false 时计算 conditional-expression。）
 
 请注意，计算 expression 或 conditional-expression，但不同时计算二者。
 
 条件运算的结果类型取决于 expression 或 conditional-expression 操作数的类型，如下所示：
 
--   如果 expression 或 conditional-expression 具有整型类型或浮点型（其类型可不同），则运算符执行常用算术转换。 结果的类型是转换后操作数的类型。
+- 如果 expression 或 conditional-expression 具有整型类型或浮点型（其类型可不同），则运算符执行常用算术转换。 结果的类型是转换后操作数的类型。
 
--   如果 expression 和 conditional-expression 都具有相同的结构、联合或指针类型，则结果的类型为相同的结构、联合或指针类型。
+- 如果 expression 和 conditional-expression 都具有相同的结构、联合或指针类型，则结果的类型为相同的结构、联合或指针类型。
 
--   如果两个操作数都具有类型 `void`，则结果具有类型 `void`。
+- 如果两个操作数都具有类型 `void`，则结果具有类型 `void`。
 
--   如果其中一个操作数是指向任何类型的对象的指针，且另一个操作数是指向 `void` 的指针，则指向对象的指针将转换为指向 `void` 的指针，而结果是指向 `void` 的指针。
+- 如果其中一个操作数是指向任何类型的对象的指针，且另一个操作数是指向 `void` 的指针，则指向对象的指针将转换为指向 `void` 的指针，而结果是指向 `void` 的指针。
 
--   如果 expression 或 conditional-expression 是指针，且另一个操作数是具有值 0 的常量表达式，则结果的类型为指针类型。
+- 如果 expression 或 conditional-expression 是指针，且另一个操作数是具有值 0 的常量表达式，则结果的类型为指针类型。
 
 在指针的类型比较中，指针指向的类型中的任何类型限定符（const 或 `volatile`）是无意义的，但结果类型从两个条件组件中继承限定符。
 

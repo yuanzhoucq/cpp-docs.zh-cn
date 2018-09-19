@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed83cd67ff596581440fa317355186653a0cbec
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0da5f024e8dffd0115ba9bdbd6cf34f3f7c68a0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065785"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>更改绘图代码（ATL 教程，第 4 部分）
 
@@ -131,6 +131,6 @@ ms.locfileid: "43760420"
 
 ## <a name="see-also"></a>请参阅
 
-[教程](../atl/active-template-library-atl-tutorial.md)   
+[教程](../atl/active-template-library-atl-tutorial.md)<br/>
 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2847 |Microsoft 文档
+title: 编译器错误 C2847 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd18d685649c5ad8f03e3fdbb8b375717227f4c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41e3b49c509240fd0d782aacaa9fae836b62702a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054436"
 ---
 # <a name="compiler-error-c2847"></a>编译器错误 C2847
-无法将 sizeof 应用到托管或 WinRT 类型“类”  
-  
- [Sizeof](../../cpp/sizeof-operator.md)运算符可在编译时获取对象的值。 由于托管或 WinRT 类的大小、接口或值类型是动态的，因此在编译时无法得知。  
-  
- 例如，以下示例生成 C2847：  
-  
-```  
-// C2847.cpp  
-// compile with: /clr  
-ref class A {};  
-  
-int main() {  
-   A ^ xA = gcnew A;  
-   sizeof(*xA);   // C2847 cannot use sizeof on managed object  
-}  
-```  
+
+无法将 sizeof 应用到托管或 WinRT 类型“类”
+
+[Sizeof](../../cpp/sizeof-operator.md)运算符在编译时获取对象的值。 由于托管或 WinRT 类的大小、接口或值类型是动态的，因此在编译时无法得知。
+
+例如，以下示例生成 C2847：
+
+```
+// C2847.cpp
+// compile with: /clr
+ref class A {};
+
+int main() {
+   A ^ xA = gcnew A;
+   sizeof(*xA);   // C2847 cannot use sizeof on managed object
+}
+```

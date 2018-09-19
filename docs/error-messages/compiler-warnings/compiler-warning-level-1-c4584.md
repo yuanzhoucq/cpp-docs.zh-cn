@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4584 |Microsoft 文档
+title: 编译器警告 （等级 1） C4584 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3f92142fe42451ca7ae8272463d9347a263121
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9db97bf35034f7ca628f860924bfb9a1fccc942f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036249"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>编译器警告（等级 1）C4584
-class1： 已基类的 class3 移基类 class2。  
-  
- 你定义的类继承自两个类，其中一个继承自其他。 例如：  
-  
-```  
-// C4584.cpp  
-// compile with: /W1 /LD  
-class A {  
-};  
-  
-class B : public A {  
-};  
-  
-class C : public A, public B { // C4584  
-};  
-```  
-  
- 在这种情况下，将会发出警告类 C 从类 A 和 B，后者也继承自类 a。 类继承因此此警告充当提醒必须完全限定的成员从这些基类的类的用法，或由于语意不明确，哪个类成员中，你将引用不会生成编译器错误。
+
+class1： 基类 class2 已经是 class3 移的基类
+
+您定义的类继承自两个类，其中一个继承自其他。 例如：
+
+```
+// C4584.cpp
+// compile with: /W1 /LD
+class A {
+};
+
+class B : public A {
+};
+
+class C : public A, public B { // C4584
+};
+```
+
+在这种情况下，将发出警告类 C 从类 A 和 B，还继承自类 a。 类继承因此此警告可提醒您必须完全限定的成员从这些基类的类的用法，或由于语意不明确引用哪个类成员将产生编译器错误。

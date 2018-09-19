@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043230"
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 类
 
@@ -32,13 +32,13 @@ ms.locfileid: "43764824"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 要存储在堆上的对象类型。
 
 ## <a name="members"></a>成员
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>参数
 
-*pData*  
+*pData*<br/>
 一个现有的 `CComHeapPtr` 对象。
 
 ### <a name="remarks"></a>备注
@@ -85,7 +85,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CHeapPtr 类](../../atl/reference/cheapptr-class.md)   
-[CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)   
-[CComAllocator 类](../../atl/reference/ccomallocator-class.md)   
+[CHeapPtr 类](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)<br/>
+[CComAllocator 类](../../atl/reference/ccomallocator-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

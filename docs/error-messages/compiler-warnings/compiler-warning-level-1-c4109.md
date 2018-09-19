@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4109 |Microsoft 文档
+title: 编译器警告 （等级 1） C4109 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a8e766355dd5f8015fb49bbe584d699b0edaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a53af740cdc6652822da05a6591fd93063f2b4fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069919"
 ---
 # <a name="compiler-warning-level-1-c4109"></a>编译器警告（等级 1）C4109
-意外的标识符“identifier”  
-  
- 忽略包含意外标识符的杂注。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4109.cpp  
-// compile with: /W1 /LD  
-#pragma init_seg( abc ) // C4109  
+
+意外的标识符“identifier”
+
+忽略包含意外标识符的杂注。
+
+## <a name="example"></a>示例
+
+```
+// C4109.cpp
+// compile with: /W1 /LD
+#pragma init_seg( abc ) // C4109
 ```

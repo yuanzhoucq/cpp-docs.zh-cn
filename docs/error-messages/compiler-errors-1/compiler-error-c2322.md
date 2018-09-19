@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2322 |Microsoft 文档
+title: 编译器错误 C2322 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f33eef216e336e8b90e48002a0f2620f3846e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97151522585407ccbc0312976a18f73e9abf066c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052434"
 ---
 # <a name="compiler-error-c2322"></a>编译器错误 C2322
-“identifier”：dllimport“dllimport”地址不是静态的  
-  
- 使用非静态值作为借助 `dllimport`声明的函数地址。
+
+“identifier”：dllimport“dllimport”地址不是静态的
+
+使用非静态值作为借助 `dllimport`声明的函数地址。

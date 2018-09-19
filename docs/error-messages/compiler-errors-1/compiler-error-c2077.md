@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2077 |Microsoft 文档
+title: 编译器错误 C2077 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba9395bd783307ae184cf7f23f187d4425523968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a9025a61f9ca32679f5041256a2972ab1eaeea0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100651"
 ---
 # <a name="compiler-error-c2077"></a>编译器错误 C2077
-非标量字段初始值设定项 identifier  
-  
- 你尝试以初始化非标量 （结构、 联合、 数组或类） 的位字段。 使用整数或浮点值。
+
+非标量字段初始值设定项 identifier
+
+尝试初始化非标量 （结构、 联合、 数组或类） 的位字段。 使用整数或浮点值。

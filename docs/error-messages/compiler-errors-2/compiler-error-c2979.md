@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2979 |Microsoft 文档
+title: 编译器错误 C2979 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07a28faaf7452a96759879b001cb9b078dd86f88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66f43af14474c042d7a4a311bbe672394a2f2d1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053344"
 ---
 # <a name="compiler-error-c2979"></a>编译器错误 C2979
-泛型中不支持显式专用化  
-  
- 未正确声明泛型类。  请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2979。  
-  
-```  
-// C2979.cpp  
-// compile with: /clr /c  
-generic <>   
-ref class Utils {};   // C2979 error  
-  
-generic <class T>  
-ref class Utils2 {};   // OK  
+
+泛型中不支持显式专用化
+
+未正确声明泛型类。  请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2979。
+
+```
+// C2979.cpp
+// compile with: /clr /c
+generic <>
+ref class Utils {};   // C2979 error
+
+generic <class T>
+ref class Utils2 {};   // OK
 ```

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021130"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 类
 
@@ -43,13 +43,13 @@ ms.locfileid: "43756569"
 ## <a name="syntax"></a>语法
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>参数
 
-*T*  
+*T*<br/>
 您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要支持复合控件的任何其他接口也一样。
 
 ## <a name="members"></a>成员
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>参数
 
-*bAdvise*  
+*bAdvise*<br/>
 如果所有控件都都可以收到通知; 则为 true否则为 false。
 
 ### <a name="return-value"></a>返回值
 
-S_OK  
-事件接收器映射已连接或从其事件源已成功断开连接的所有控件。
-
-E_FAIL  
-并非所有控制事件接收器映射无法连接或从其事件源已成功断开连接。
-
-E_POINTER  
-此错误通常表示控件的事件接收器映射中的条目有问题或有问题中使用的模板参数`IDispEventImpl`或`IDispEventSimpleImpl`基类。
-
-CONNECT_E_ADVISELIMIT  
-连接点已达到其限制的连接，并且无法接受任何详细信息。
-
-CONNECT_E_CANNOTCONNECT  
-接收器不支持此连接点所需的接口。
-
-CONNECT_E_NOCONNECTION  
-Cookie 值不表示有效的连接。 此错误通常表示控件的事件接收器映射中的条目有问题或有问题中使用的模板参数`IDispEventImpl`或`IDispEventSimpleImpl`基类。
+|||
+|-|-|
+|S_OK  |事件接收器映射已连接或从其事件源已成功断开连接的所有控件。|
+|E_FAIL  |并非所有控制事件接收器映射无法连接或从其事件源已成功断开连接。|
+|E_POINTER  |此错误通常表示控件的事件接收器映射中的条目有问题或有问题中使用的模板参数`IDispEventImpl`或`IDispEventSimpleImpl`基类。|
+|CONNECT_E_ADVISELIMIT  |连接点已达到其限制的连接，并且无法接受任何详细信息。|
+|CONNECT_E_CANNOTCONNECT  |接收器不支持此连接点所需的接口。|
+|CONNECT_E_NOCONNECTION  |Cookie 值不表示有效的连接。 此错误通常表示控件的事件接收器映射中的条目有问题或有问题中使用的模板参数`IDispEventImpl`或`IDispEventSimpleImpl`基类。|
 
 ### <a name="remarks"></a>备注
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>参数
 
-*size*  
+*size*<br/>
 对引用`SIZE`结构，以通过此方法来填充。
 
 ### <a name="return-value"></a>返回值
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 控件的父窗口的句柄。
 
-*rcPos*  
+*rcPos*<br/>
 保留。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 若要控制创建期间传递给控件的数据。 数据作为传递*dwInitParam*将显示为的 LPARAM 参数[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)消息，它获取创建时将发送到复合控件。
 
 ### <a name="return-value"></a>返回值
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 控件的父窗口的句柄。
 
-*rcPos*  
+*rcPos*<br/>
 客户端中的复合控件的位置矩形相对于协调*hWndParent*。
 
 ### <a name="return-value"></a>返回值
@@ -280,6 +271,6 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ## <a name="see-also"></a>请参阅
 
-[CComControl 类](../../atl/reference/ccomcontrol-class.md)   
-[复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
+[复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

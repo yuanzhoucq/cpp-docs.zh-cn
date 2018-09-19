@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2155 |Microsoft 文档
+title: 编译器错误 C2155 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d3194dcaad982e5e9d4ce758352f7221a389dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8622de0beb968a4db9d133e698137bca3e04f14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083192"
 ---
 # <a name="compiler-error-c2155"></a>编译器错误 C2155
-'？ ': 无效的左侧操作数，预期算术或指针类型  
-  
- 在左侧的表达式中`?`不能为零进行比较。 你必须使用可以比较为零的算术或指针表达式。
+
+？： 无效的左侧操作数，预期算术或指针类型
+
+一个表达式的左侧`?`不能比较为零。 必须使用可以比较为零的算术或指针表达式。

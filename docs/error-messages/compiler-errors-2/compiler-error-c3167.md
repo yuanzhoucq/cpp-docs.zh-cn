@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3167 |Microsoft 文档
+title: 编译器错误 C3167 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc98f3f66041b86dcc93459132e3431e271bde5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1b242b0e98e0309e2a98ca2c8e59ecaeff8b7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024185"
 ---
 # <a name="compiler-error-c3167"></a>编译器错误 C3167
-无法初始化.NET Framework： 请确保已安装  
-  
- 此计算机; 上未安装.NET Framework安装.NET Framework。
+
+无法初始化.NET Framework： 确保已安装
+
+此计算机; 上未安装.NET Framework安装.NET Framework。

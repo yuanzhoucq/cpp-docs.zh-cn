@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032427"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 类
 
@@ -32,7 +32,7 @@ ms.locfileid: "43752744"
 ## <a name="syntax"></a>语法
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>参数
 
-*I*  
+*I*<br/>
 指定要存储的指针的类型的 COM 接口。
 
-*piid*  
+*piid*<br/>
 指向 IID*我*。
 
 ## <a name="members"></a>成员
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBlockSize*  
+*nBlockSize*<br/>
 块大小，默认值为 10。
 
 ### <a name="remarks"></a>备注
@@ -89,7 +89,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CAtlList 类](../../atl/reference/catllist-class.md)   
-[CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList 类](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

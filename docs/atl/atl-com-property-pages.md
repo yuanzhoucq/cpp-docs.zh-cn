@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095854"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 属性页
 
@@ -38,18 +38,18 @@ COM 属性页来设置属性提供一个用户界面 （或调用的方法） �
 
 ## <a name="in-this-section"></a>本节内容
 
-[指定属性页](../atl/specifying-property-pages.md)  
+[指定属性页](../atl/specifying-property-pages.md)<br/>
 列出了用于指定您的控件的属性页的步骤，并显示一个示例类。
 
-[属性页](../atl/implementing-property-pages.md)  
+[属性页](../atl/implementing-property-pages.md)<br/>
 列出了用于实现属性页，其中包括要重写方法的步骤。 指导你完成基于 ATLPages 示例程序的完整示例。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATLPages 示例](../visual-cpp-samples.md)  
+[ATLPages 示例](../visual-cpp-samples.md)<br/>
 ATLPages 示例中，实现属性页使用的示例抽象`IPropertyPageImpl`。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
 ## <a name="see-also"></a>请参阅

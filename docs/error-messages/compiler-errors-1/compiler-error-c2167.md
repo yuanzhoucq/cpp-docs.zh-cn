@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2167 |Microsoft 文档
+title: 编译器错误 C2167 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22abe4d25f6f8fe9b8d07195a2fd23b44dd7b19e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dee381be72124d69a17fd6e3026066bbadfac13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088379"
 ---
 # <a name="compiler-error-c2167"></a>编译器错误 C2167
-“function”：内部函数的实参太多  
-  
- `intrinsic` 函数引用的参数太多。
+
+“function”：内部函数的实参太多
+
+`intrinsic` 函数引用的参数太多。

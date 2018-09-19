@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086143"
 ---
 # <a name="containers-modern-c"></a>容器（现代 C++）
 
@@ -48,6 +48,7 @@ apple_color["Granny Smith"] = "Green";
 有关容器的详细信息，请参阅[C++ 标准库容器](../standard-library/stl-containers.md)。
 
 ## <a name="see-also"></a>请参阅
- [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [C++ 语言参考](../cpp/cpp-language-reference.md)  
- [C++ 标准库](../standard-library/cpp-standard-library-reference.md)  
+
+[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

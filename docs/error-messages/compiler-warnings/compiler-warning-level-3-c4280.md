@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 3） C4280 |Microsoft 文档
+title: 编译器警告 （等级 3） C4280 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d4e9743a584249e2ec51c639423f56280f2d8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa1446e6725ecbb990e38ede33071afddb54065f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118318"
 ---
 # <a name="compiler-warning-level-3-c4280"></a>编译器警告（等级 3）C4280
-operator-> 是自递归通过类型 type  
-  
- 你的代码错误地允许**operator->** 调用自身。  
-  
- 下面的示例生成 C4280:  
-  
-```  
-// C4280.cpp  
-// compile with: /W3 /WX  
-struct A  
-{  
-   int z;  
-   A& operator ->();  
-};  
-  
-void f(A y)  
-{  
-   int i = y->z; // C4280  
-}  
+
+operator-> 是自递归通过类型 type
+
+你的代码错误地允许**运算符->** 调用自身。
+
+下面的示例生成 C4280:
+
+```
+// C4280.cpp
+// compile with: /W3 /WX
+struct A
+{
+   int z;
+   A& operator ->();
+};
+
+void f(A y)
+{
+   int i = y->z; // C4280
+}
 ```

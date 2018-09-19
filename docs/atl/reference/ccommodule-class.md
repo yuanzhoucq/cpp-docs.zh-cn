@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090693"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>参数
 
-*rclsid*  
+*rclsid*<br/>
 [in]若要创建的对象的 CLSID。
 
-*riid*  
+*riid*<br/>
 [in]所请求的接口的 IID。
 
-*ppv*  
+*ppv*<br/>
 [out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>参数
 
-*p*  
+*p*<br/>
 [in]指向对象的映射条目的数组的指针。
 
-*h*  
+*h*<br/>
 [in]传递给 HINSTANCE`DLLMain`或`WinMain`。
 
-*plibid*  
+*plibid*<br/>
 [in]一个指向与项目关联的类型库的 LIBID。
 
 ### <a name="return-value"></a>返回值
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 [in]若要注册的对象的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]与对象关联的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]与对象关联的独立于版本的 ProgID。
 
-*nDescID*  
+*nDescID*<br/>
 [in]对象的说明的字符串资源的标识符。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定要在注册表中输入的线程处理模型。 可能的值为 THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="return-value"></a>返回值
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>参数
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in]指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 有关这些值的说明，请参阅[结合](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)Windows SDK 中。
 
 ### <a name="return-value"></a>返回值
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>参数
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in]指示是否将已注册类型库。 默认值为 FALSE。
 
-*pCLSID*  
+*pCLSID*<br/>
 [in]指向要注册的对象的 CLSID。 如果将注册为 NULL （默认值），在对象映射中的所有对象。
 
 ### <a name="return-value"></a>返回值
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>参数
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in]格式字符串`"\\N"`，其中`N`是类型库资源的整数索引。
 
 ### <a name="return-value"></a>返回值
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 [in]要注销的对象的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]与对象关联的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]与对象关联的独立于版本的 ProgID。
 
 ### <a name="return-value"></a>返回值
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>参数
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果为 TRUE，则还未注册类型库。
 
-*pCLSID*  
+*pCLSID*<br/>
 指向要注销的对象的 CLSID。 如果为 NULL （默认值），在对象映射中的所有对象将为未注册。
 
 ### <a name="return-value"></a>返回值
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>参数
 
-*clsid*  
+*clsid*<br/>
 若要注册或注销的对象的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 与对象关联的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 与对象关联的独立于版本的 ProgID。
 
-*nDescID*  
+*nDescID*<br/>
 对象的说明的字符串资源的标识符。
 
-*szDesc*  
+*szDesc*<br/>
 一个包含对象的说明的字符串。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定要在注册表中输入的线程处理模型。 可能的值为 THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
-*bRegister*  
+*bRegister*<br/>
 指示是否应注册对象。
 
 ### <a name="return-value"></a>返回值
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>参数
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]资源名称。
 
-*nResID*  
+*nResID*<br/>
 [in]资源 id。
 
-*bRegister*  
+*bRegister*<br/>
 [in]指示是否应注册对象。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in]指向存储脚本的可替换参数与关联的值替换地图的指针。 会自动使用 ATL `%MODULE%`。 若要使用其他可替换参数，请参阅备注以了解详情。 否则，使用 NULL 默认值。
 
 ### <a name="return-value"></a>返回值
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>参数
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]资源名称。
 
-*nResID*  
+*nResID*<br/>
 [in]资源 id。
 
-*bRegister*  
+*bRegister*<br/>
 [in]指示是否应注册为资源脚本。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in]指向存储脚本的可替换参数与关联的值替换地图的指针。 会自动使用 ATL `%MODULE%`。 若要使用其他可替换参数，请参阅备注以了解详情。 否则，使用 NULL 默认值。
 
 ### <a name="return-value"></a>返回值

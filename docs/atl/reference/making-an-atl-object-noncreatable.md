@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099533"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
 
@@ -46,10 +46,10 @@ ms.locfileid: "43761451"
 
 ## <a name="see-also"></a>请参阅
 
-[ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)   
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1121 |Microsoft 文档
+title: 资源编译器错误 RC1121 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d89b217e5cca5abc4a352a05722bd4d0d53a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fd83298e9a1afcaa318c8bbc333b77f3b2da61c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019886"
 ---
 # <a name="resource-compiler-fatal-error-rc1121"></a>资源编译器错误 RC1121
-读取文件时出现 I/O 错误  
-  
- 资源编译器无法读取文件。 请检查包含该文件的驱动器是否可用以及文件是否有效。
+
+读取文件时出现 I/O 错误
+
+资源编译器无法读取文件。 请检查包含该文件的驱动器是否可用以及文件是否有效。

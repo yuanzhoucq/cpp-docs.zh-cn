@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4227 |Microsoft 文档
+title: 编译器警告 （等级 1） C4227 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f3c0cced0e27d3f981c30251d4b9e1d78169559
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda3a31b228f16b27f4bdefd3131a0ddcb90f5b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060847"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>编译器警告（等级 1）C4227
-使用了记时错误： 忽略引用上的限定符  
-  
- 使用类似的限定符`const`或`volatile`与 c + + 引用是过时的方法。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// C4227.cpp  
-// compile with: /W1 /c  
-int j = 0;  
-int &const i = j;   // C4227  
+
+使用了记时错误： 忽略引用上的限定符
+
+使用等限定符`const`或`volatile`与 c + + 引用是过时的做法。
+
+## <a name="example"></a>示例
+
+```
+// C4227.cpp
+// compile with: /W1 /c
+int j = 0;
+int &const i = j;   // C4227
 ```

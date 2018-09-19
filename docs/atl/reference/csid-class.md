@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022989"
 ---
 # <a name="csid-class"></a>CSid 类
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 将现有`CSid`对象或`SID`（安全标识符） 结构。
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 颁发机构。
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 过程计数中。
 
-*pszAccountName*  
+*pszAccountName*<br/>
 帐户名称。
 
-*pszSystem*  
+*pszSystem*<br/>
 系统名称。 此字符串可以是远程计算机的名称。 如果此字符串为 NULL，则改为使用本地系统。
 
-*pSid*  
+*pSid*<br/>
 一个指向`SID`结构。
 
 ### <a name="remarks"></a>备注
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 结构或`CSid`要比较的对象。
 
 ### <a name="return-value"></a>返回值
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>参数
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 过程。
 
 ### <a name="return-value"></a>返回值
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>参数
 
-*pszAccountName*  
+*pszAccountName*<br/>
 帐户名称。
 
-*pszSystem*  
+*pszSystem*<br/>
 系统名称。 此字符串可以是远程计算机的名称。 如果此字符串为 NULL，则改为使用本地系统。
 
-*pSid*  
+*pSid*<br/>
 一个指向[SID](/windows/desktop/api/winnt/ns-winnt-_sid)结构。
 
 ### <a name="return-value"></a>返回值
@@ -385,13 +385,13 @@ bool LoadAccount(
 赋值运算符。
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>参数
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`要分配给`CSid`对象。
 
 ### <a name="return-value"></a>返回值
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 = = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 = = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 ！ = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 ！ = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 ！ = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 ！ = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 ！ = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 ！ = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 ！ = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 ！ = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全标识符） 或`CSid`，它显示在左侧和右侧的 ！ = 运算符。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全标识符） 或`CSid`的右侧显示 ！ = 运算符。
 
 ### <a name="return-value"></a>返回值
@@ -534,7 +534,7 @@ bool operator>=(
 
 强制转换`CSid`指向的对象`SID`（安全标识符） 结构。
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[安全示例](../../visual-cpp-samples.md)   
-[类概述](../../atl/atl-class-overview.md)   
-[安全全局函数](../../atl/reference/security-global-functions.md)   
+[安全示例](../../visual-cpp-samples.md)<br/>
+[类概述](../../atl/atl-class-overview.md)<br/>
+[安全全局函数](../../atl/reference/security-global-functions.md)<br/>
 [运算符](../../atl/reference/atl-operators.md)

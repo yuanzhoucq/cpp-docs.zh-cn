@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C3619 |Microsoft 文档
+title: 编译器错误 C3619 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75fed82a989691bc63911b87b9264ed95512dce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae68bd0fef3f43bfbc430ea2d41cead339424c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086705"
 ---
 # <a name="compiler-error-c3619"></a>编译器错误 C3619
-不能在托管或 WinRT 类型中声明模板  
-  
-不允许在托管或 WinRT 类或接口使用类模板。  
-  
-C3619 才可访问使用过时的编译器选项 **/clr:oldSyntax**。  
+
+不能在托管或 WinRT 类型中声明模板
+
+不允许在托管或 WinRT 类或接口使用类模板。
+
+C3619 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。

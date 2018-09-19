@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2217 |Microsoft 文档
+title: 编译器错误 C2217 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7c60ac95be1a0b21ed2cb7df43117ff7ece7a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4eb8b9fcaffa30f3a5ced5362a0f9d54a45f07e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050614"
 ---
 # <a name="compiler-error-c2217"></a>编译器错误 C2217
-attribute1 需要 attribute2  
-  
- 第一个函数属性要求第二个属性。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
-  
-1.  中断 (`__interrupt`) 函数声明为`near`。 中断函数必须是`far`。  
-  
-2.  中断用声明的函数`__stdcall`，或`__fastcall`。 中断函数必须使用 C 调用约定。  
-  
-## <a name="example"></a>示例  
- 如果你尝试将委托绑定到采用数量可变的自变量的 CLR 函数，也会发生 C2217。 如果函数还具有 e param 数组重载，使用该副本。 下面的示例生成 C2217。  
-  
-```  
-// C2217.cpp  
-// compile with: /clr  
-using namespace System;  
-delegate void MyDel(String^, Object^, Object^, ...);   // C2217  
-delegate void MyDel2(String ^, array<Object ^> ^);   // OK  
-  
-int main() {  
-   MyDel2^ wl = gcnew MyDel2(Console::WriteLine);  
-   array<Object ^ > ^ x = gcnew array<Object ^>(2);  
-   x[0] = safe_cast<Object^>(0);  
-   x[1] = safe_cast<Object^>(1);  
-  
-   // wl("{0}, {1}", 0, 1);  
-   wl("{0}, {1}", x);  
-}  
+
+attribute1 需要 attribute2
+
+第一个函数属性需要第二个属性。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
+
+1. 中断 (`__interrupt`) 函数声明为`near`。 中断函数必须是`far`。
+
+1. 中断用声明的函数`__stdcall`，或`__fastcall`。 中断函数必须使用 C 调用约定。
+
+## <a name="example"></a>示例
+
+如果您尝试将委托绑定到采用数目可变的参数的 CLR 函数，也可能发生 C2217。 如果该函数也具有 e param 数组重载，请改为使用的。 下面的示例生成 C2217。
+
+```
+// C2217.cpp
+// compile with: /clr
+using namespace System;
+delegate void MyDel(String^, Object^, Object^, ...);   // C2217
+delegate void MyDel2(String ^, array<Object ^> ^);   // OK
+
+int main() {
+   MyDel2^ wl = gcnew MyDel2(Console::WriteLine);
+   array<Object ^ > ^ x = gcnew array<Object ^>(2);
+   x[0] = safe_cast<Object^>(0);
+   x[1] = safe_cast<Object^>(1);
+
+   // wl("{0}, {1}", 0, 1);
+   wl("{0}, {1}", x);
+}
 ```

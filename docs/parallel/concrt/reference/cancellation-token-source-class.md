@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_source 类 |Microsoft 文档
+title: cancellation_token_source 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053643"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 类
 `cancellation_token_source` 类表示取消某个可取消操作的功能。  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+要复制或移动的对象。  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Iter`  
- `_Src`  
- 一个标记，如果取消该标记，则将导致取消返回的标记源。 请注意，返回的标记源也可在此参数中包含的源之外单独取消。  
+*_Iter*<br/>
+迭代器类型。
+
+*_Src*<br/>
+一个标记，如果取消该标记，则将导致取消返回的标记源。 请注意，返回的标记源也可在此参数中包含的源之外单独取消。  
   
- `_Begin`  
- C + + 标准库迭代器对应于令牌的范围的开始处进行侦听取消。  
+*（_b)*<br/>
+C + + 标准库迭代器对应于令牌的范围开始侦听取消。  
   
- `_End`  
- C + + 标准库迭代器，用于标记范围的结尾相对应侦听取消。  
+*（_e)*<br/>
+C + + 标准库迭代器，用于标记范围的结尾相对应侦听取消。  
   
 ### <a name="return-value"></a>返回值  
  在取消 `cancellation_token_source` 参数提供的标记时取消的 `_Src`。  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+操作数。
   
 ### <a name="return-value"></a>返回值  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
-  
+*_Src*<br/>
+操作数。
+
 ### <a name="return-value"></a>返回值  
   
 ##  <a name="operator_eq_eq"></a> 运算符 = = 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Src`  
+*_Src*<br/>
+操作数。
   
 ### <a name="return-value"></a>返回值  
   

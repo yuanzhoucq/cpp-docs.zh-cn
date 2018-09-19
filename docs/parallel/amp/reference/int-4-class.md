@@ -1,5 +1,5 @@
 ---
-title: int_4 类 |Microsoft 文档
+title: int_4 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a29ce2e9ec7b8401e2b9aaf499eabb5c0ceea2b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066175"
 ---
 # <a name="int4-class"></a>int_4 类
-表示短矢量的四个整数。  
+表示的四个整数中的短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -306,7 +306,7 @@ class int_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[int_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[int_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -471,7 +471,7 @@ class int_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#int_4__size)||  
   
@@ -618,7 +618,7 @@ class int_4;
   
 ##  <a name="ctor"></a> int_4 
 
- 默认构造函数，将初始化为 0 的所有元素。  
+ 默认构造函数，初始化 0 的所有元素。  
   
 ```  
 int_4() restrict(amp,
@@ -669,23 +669,23 @@ explicit inline int_4(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_V0`  
- 要初始化元素 0 的值。  
+*_V0*<br/>
+要初始化元素 0 的值。  
   
- `_V1`  
- 要初始化元素 1 的值。  
+*_V1*<br/>
+要初始化元素 1 的值。  
   
- `_V2`  
- 要初始化元素 2 的值。  
+*_V2*<br/>
+要初始化元素 2 的值。  
   
- `_V3`  
- 要初始化元素 3 的值。  
+*_V3*<br/>
+要初始化元素 3 的值。  
   
- `_V`  
- 用于初始化值。  
+*（_V)*<br/>
+用于初始化值。  
   
- `_Other`  
- 用于初始化的对象。  
+*_Other*<br/>
+用于初始化的对象。  
   
 ##  <a name="int_4__size"></a> 大小 
 

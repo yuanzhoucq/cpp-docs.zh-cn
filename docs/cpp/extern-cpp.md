@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114249"
 ---
 # <a name="extern-c"></a>extern （c + +）
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"c + +"函数声明
 
- 在 c + +，与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
+在 c + +，与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
 
- Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用**extern** "C"语法以允许要在 c + + 程序中使用的运行时库函数。
+Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用**extern** "C"语法以允许要在 c + + 程序中使用的运行时库函数。
 
 ## <a name="example"></a>示例
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- 如果函数有多个链接规范，则它们必须一致；将函数声明为同时具有 C 和 C++ 链接是错误的。 此外，如果一个函数的两个声明出现在一个程序中，并且它们一个有链接规范，另一个没有，则有链接规范的声明必须是第一个。 将为已具有链接规范的函数的所有冗余声明提供第一个声明中指定的链接。 例如：
+如果函数有多个链接规范，则它们必须一致；将函数声明为同时具有 C 和 C++ 链接是错误的。 此外，如果一个函数的两个声明出现在一个程序中，并且它们一个有链接规范，另一个没有，则有链接规范的声明必须是第一个。 将为已具有链接规范的函数的所有冗余声明提供第一个声明中指定的链接。 例如：
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>请参阅
- [关键字](../cpp/keywords-cpp.md)  
- [程序和链接](program-and-linkage-cpp.md)  
- [extern 存储类说明符在 C 中](../c-language/extern-storage-class-specifier.md)  
- [在 C 中的标识符的行为](../c-language/behavior-of-identifiers.md)  
- [C 中的链接](../c-language/linkage.md)
+
+[关键字](../cpp/keywords-cpp.md)<br/>
+[程序和链接](program-and-linkage-cpp.md)<br/>
+[extern 存储类说明符在 C 中](../c-language/extern-storage-class-specifier.md)<br/>
+[在 C 中的标识符的行为](../c-language/behavior-of-identifiers.md)<br/>
+[C 中的链接](../c-language/linkage.md)

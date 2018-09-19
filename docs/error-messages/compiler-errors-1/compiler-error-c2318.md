@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2318 |Microsoft 文档
+title: 编译器错误 C2318 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d20c3dfe8122b8795238d09ab2b376dcd91d437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c2d76a2d6f1a9f2342edfc6e174938816759cb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035703"
 ---
 # <a name="compiler-error-c2318"></a>编译器错误 C2318
-没有与该 catch 处理程序关联的 Try 块  
-  
- 定义一个 `catch` 处理程序，但其前面没有 `try` 块。  
-  
- 以下示例生成 C2318：  
-  
-```  
-// C2318.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   // no try block  
-   catch( int ) {}   // C2318  
-}  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C2318b.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try{}  
-   catch( int ) {}  
-}  
+
+没有与该 catch 处理程序关联的 Try 块
+
+定义一个 `catch` 处理程序，但其前面没有 `try` 块。
+
+以下示例生成 C2318：
+
+```
+// C2318.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   // no try block
+   catch( int ) {}   // C2318
+}
+```
+
+可能的解决方法：
+
+```
+// C2318b.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try{}
+   catch( int ) {}
+}
 ```

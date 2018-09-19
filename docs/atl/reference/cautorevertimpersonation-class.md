@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052729"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 类
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>参数
 
-*PAT*  
+*PAT*<br/>
 地址[CAccessToken](../../atl/reference/caccesstoken-class.md)对象会自动恢复
 
 ### <a name="remarks"></a>备注
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>参数
 
-*PAT*  
+*PAT*<br/>
 地址[CAccessToken](../../atl/reference/caccesstoken-class.md)对象会自动恢复。
 
 ### <a name="remarks"></a>备注
@@ -147,6 +147,6 @@ const CAccessToken* GetAccessToken() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[ATLSecurity 示例](../../visual-cpp-samples.md)   
-[访问令牌](/windows/desktop/SecAuthZ/access-tokens)   
+[ATLSecurity 示例](../../visual-cpp-samples.md)<br/>
+[访问令牌](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [类概述](../../atl/atl-class-overview.md)

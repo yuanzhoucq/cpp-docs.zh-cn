@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2337 |Microsoft 文档
+title: 编译器错误 C2337 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af10023a044e8f4f602ca6a018139d557b99dffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1b3ed1193d7a5c81e84a152bd01a26bfd04bab0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105505"
 ---
 # <a name="compiler-error-c2337"></a>编译器错误 C2337
-“attribute name”：未找到特性  
-  
- 你使用了此版本的 Visual c++ 不支持的特性。  
-  
- 以下示例生成 C2337：  
-  
-```  
-// C2337.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name="x")];  
-[grasshopper]   // C2337, not a supported attribute  
-class a{};  
+
+“attribute name”：未找到特性
+
+你使用了此版本的 Visual c++ 不支持的特性。
+
+以下示例生成 C2337：
+
+```
+// C2337.cpp
+// compile with: /c
+[emitidl];
+[module(name="x")];
+[grasshopper]   // C2337, not a supported attribute
+class a{};
 ```

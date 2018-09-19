@@ -1,5 +1,5 @@
 ---
-title: 数据源： 确定数据源 (ODBC) 的架构 |Microsoft 文档
+title: 数据源： 确定数据源 (ODBC) 的架构 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6da4067766eddab40bac75ee73d825dc5886dd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064966"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>数据源：确定数据源的架构 (ODBC)
+
 本主题适用于 MFC ODBC 类。  
   
- 若要设置数据成员你`CRecordset`对象，你需要知道你连接到数据源的架构。 确定数据源的架构，包括需要获得的数据源中的表列表、 列表中每个表的列，每个列的数据类型以及存在任何索引。  
+若要设置数据成员在`CRecordset`对象，您需要知道要连接到数据源的架构。 确定数据源的架构，涉及到获取的数据源中表的列表，每个表中的列，每个列的数据类型的列表，以及存在任何索引。  
   
 ## <a name="see-also"></a>请参阅  
- [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)   
- [数据源：管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+
+[数据源 (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
+[数据源：管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1067 |Microsoft 文档
+title: 资源编译器错误 RC1067 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570a5f1fbbb58fcbe43a0fdd34e577b1113cdae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b02bd2bf8605e5babb5bd7036b69f1d394b759d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076276"
 ---
 # <a name="resource-compiler-fatal-error-rc1067"></a>资源编译器错误 RC1067
-编译器限制： 标识符已溢出内部缓冲区  
-  
- 已超出内部编译器限制。
+
+编译器限制： 标识符已溢出内部缓冲区
+
+超出了内部编译器限制。

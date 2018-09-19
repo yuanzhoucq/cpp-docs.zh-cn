@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104915"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
+
 提供的实现[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))接口。  
   
 ## <a name="syntax"></a>语法
@@ -44,11 +45,13 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ```  
   
 ### <a name="parameters"></a>参数  
- *T*  
- 您的类，派生自`IConvertTypeImpl`。  
+
+*T*<br/>
+您的类，派生自`IConvertTypeImpl`。  
 
 ## <a name="requirements"></a>要求  
- **标头：** atldb.h  
+
+**标头：** atldb.h  
   
 ## <a name="members"></a>成员  
   
@@ -59,9 +62,11 @@ class ATL_NO_VTABLE IConvertTypeImpl
 |[CanConvert](#canconvert)|命令或上一个行集提供类型转换的可用性的信息。|  
   
 ## <a name="remarks"></a>备注  
- 此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。  
+
+此接口是必需的对于命令、 行集和索引行集。 `IConvertTypeImpl` 通过将委派给提供的 OLE DB 转换对象实现的接口。  
 
 ## <a name="canconvert"></a> Iconverttypeimpl:: Canconvert
+
 命令或上一个行集提供类型转换的可用性的信息。  
   
 ### <a name="syntax"></a>语法  
@@ -73,11 +78,14 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>参数  
- 请参阅[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\))中*OLE DB 程序员参考*。  
+
+请参阅[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\))中*OLE DB 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 使用 OLE DB 中的数据转换`MSADC.DLL`。  
+
+使用 OLE DB 中的数据转换`MSADC.DLL`。  
   
 ## <a name="see-also"></a>请参阅  
- [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

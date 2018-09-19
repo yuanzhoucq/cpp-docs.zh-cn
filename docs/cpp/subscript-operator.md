@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020603"
 ---
 # <a name="subscript-operator-"></a>下标运算符]
 
@@ -64,7 +64,7 @@ double aDbl[2];
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-下标表达式从左至右关联。 最左侧的下标表达式*expression1* **[** *expression2* **]**，首先计算。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 间接寻址运算符 (<strong>\*</strong>) 计算之后应用最后一个下标的表达式，除非最终指针值寻址数组类型。
+下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 间接寻址运算符 (<strong>\*</strong>) 计算之后应用最后一个下标的表达式，除非最终指针值寻址数组类型。
 
 具有多个下标的表达式引用多维数组的元素。 多维数组是其元素为数组的数组。 例如，三维数组的第一个元素是一个具有两个维度的数组。 以下示例声明并初始化字符的简单二维数组：
 
@@ -120,6 +120,6 @@ int main() {
 
 [后缀表达式](../cpp/postfix-expressions.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[数组](../cpp/arrays-cpp.md)
+[数组](../cpp/arrays-cpp.md)<br/>
 [一维数组](../c-language/one-dimensional-arrays.md)<br/>
 [多维数组](../c-language/multidimensional-arrays-c.md)<br/>

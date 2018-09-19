@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4272f5f8c5e19b32b295c1028de7ab30b22684bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 99d8cd4b076e5de35ffcb957a05f3c680bc82214
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106800"
 ---
 # <a name="chandle-class"></a>CHandle 类
 
@@ -90,7 +90,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 `CHandle` 将获得句柄的所有权*h*。
 
 ### <a name="remarks"></a>备注
@@ -109,7 +109,7 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 现有句柄或`CHandle`。
 
 ### <a name="remarks"></a>备注
@@ -174,7 +174,7 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>参数
 
-*h*  
+*h*<br/>
 `CHandle` 将获得句柄的所有权*h*。
 
 ### <a name="return-value"></a>返回值
@@ -189,7 +189,7 @@ CHandle& operator=(CHandle& h) throw();
 
 返回存储的句柄的值。
 
-```  
+```
 operator HANDLE() const throw();
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2510 |Microsoft 文档
+title: 编译器错误 C2510 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055957"
 ---
 # <a name="compiler-error-c2510"></a>编译器错误 C2510
-“identifier”：“::”的左边必须是类/结构/联合  
-  
- 类、结构或联合名称必须显式在范围解析运算符（`::`）运算符的左侧。
+
+“identifier”：“::”的左边必须是类/结构/联合
+
+类、结构或联合名称必须显式在范围解析运算符（`::`）运算符的左侧。

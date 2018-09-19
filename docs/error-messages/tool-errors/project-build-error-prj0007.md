@@ -1,5 +1,5 @@
 ---
-title: 项目生成错误 PRJ0007 |Microsoft 文档
+title: 项目生成错误 PRJ0007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288c86797d481719a594b061d6942923fe2230ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d944f444eb424339b4c214de1bb160e0545a3e35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317760"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068086"
 ---
 # <a name="project-build-error-prj0007"></a>项目生成错误 PRJ0007
-无法创建输出目录目录。  
-  
- Visual c + + 创建输出目录失败。 原因可能为：  
-  
--   已用要创建的输出目录的目录是只读的。  
-  
--   计算机的磁盘空间不足。  
-  
--   你指定了无效的目录路径。  
-  
--   用户权限不能满足需求，创建目录。
+
+无法创建输出目录 directory。
+
+Visual c + + 无法创建输出目录。 原因可能为：
+
+- 已用来创建输出目录的目录是只读的。
+
+- 计算机是磁盘空间不足。
+
+- 指定无效的目录路径。
+
+- 用户权限都不能创建目录。

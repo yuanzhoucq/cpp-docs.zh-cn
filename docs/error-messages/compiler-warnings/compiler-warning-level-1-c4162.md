@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4162 |Microsoft 文档
+title: 编译器警告 （等级 1） C4162 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2789f6aa63c8a547a34ec6adfd89c1e1163c68e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a36fa6a63443bf2272df7ce6125fd77afedf100f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027175"
 ---
 # <a name="compiler-warning-level-1-c4162"></a>编译器警告 （等级 1） C4162
-identifier： 没有找到具有 C 链接的函数  
-  
- 具有 C 链接的函数声明，但找不到。  
-  
- 若要解决此警告，编译.c 文件中 (invoke C 编译器)。  如果你必须调用 c + + 编译器，将函数声明之前 extern"C"。  
-  
- 下面的示例生成 C4162  
-  
-```  
-// C4162.cpp  
-// compile with: /c /W1  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)   // C4162  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
-```  
-  
- 可能的解决方法：  
-  
-```  
-// C4162b.cpp  
-// compile with: /c  
-extern "C"  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
+
+identifier： 没有找到带 C 链接函数
+
+具有 C 链接的函数声明，但找不到。
+
+若要解决此警告，编译.c 文件中 （调用 C 编译器）。  如果必须调用 c + + 编译器，请将 extern"C"的函数声明之前。
+
+下面的示例生成 C4162
+
+```
+// C4162.cpp
+// compile with: /c /W1
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)   // C4162
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
+```
+
+可能的解决方法：
+
+```
+// C4162b.cpp
+// compile with: /c
+extern "C"
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
 ```

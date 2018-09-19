@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079331"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 类
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 用于丰富预览提供 shell 主机窗口的句柄。
 
-*中华人民共和国*  
+*中华人民共和国*<br/>
 指定的初始大小和窗口的位置。
 
 ### <a name="return-value"></a>返回值
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>参数
 
-*hdc*  
+*hdc*<br/>
 用于绘制的设备上下文句柄。
 
 ### <a name="remarks"></a>备注
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>参数
 
-*nMsg*  
+*nMsg*<br/>
 将设置为 WM_PAINT。
 
-*wParam*  
+*wParam*<br/>
 未使用此参数。
 
-*lParam*  
+*lParam*<br/>
 未使用此参数。
 
-*bHandled*  
+*bHandled*<br/>
 此函数返回时，它包含 TRUE。
 
 ### <a name="return-value"></a>返回值
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>参数
 
-*hWndParent*  
+*hWndParent*<br/>
 新的父窗口的句柄。
 
 ### <a name="remarks"></a>备注
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>参数
 
-*clrBack*  
+*clrBack*<br/>
 预览窗口的背景色。
 
-*clrText*  
+*clrText*<br/>
 预览窗口的文本颜色。
 
-*plf*  
+*plf*<br/>
 用于在预览窗口中显示文本的字体。
 
 ### <a name="remarks"></a>备注
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>参数
 
-*中华人民共和国*  
+*中华人民共和国*<br/>
 指定新的大小和预览控件的位置。
 
-*bRedraw*  
+*bRedraw*<br/>
 指定是否需要重新绘制控件。
 
 ### <a name="remarks"></a>备注

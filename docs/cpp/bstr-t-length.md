@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c38ff10368ff31cfd9da435e117c6619735b6274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070491"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
-**Microsoft 专用**  
-  
- 返回 `_bstr_t` 中的字符数，但不包括封装的 `BSTR` 的终止 null 字符。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-unsigned int length ( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>备注  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [_bstr_t 类](../cpp/bstr-t-class.md)
+
+**Microsoft 专用**
+
+返回 `_bstr_t` 中的字符数，但不包括封装的 `BSTR` 的终止 null 字符。
+
+## <a name="syntax"></a>语法
+
+```
+unsigned int length ( ) const throw( );
+```
+
+## <a name="remarks"></a>备注
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[_bstr_t 类](../cpp/bstr-t-class.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9e8e080837ed109a786c2123ab90624d994cd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69f1b7e131b614aa4714f0c2be19fab79982031c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108613"
 ---
 # <a name="marshaling"></a>封送处理
 
@@ -32,6 +32,6 @@ ms.locfileid: "43753720"
 
 ## <a name="see-also"></a>请参阅
 
-[COM 简介](../atl/introduction-to-com.md)   
+[COM 简介](../atl/introduction-to-com.md)<br/>
 [封送处理的详细信息](/windows/desktop/com/marshaling-details)
 

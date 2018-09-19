@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2865 |Microsoft 文档
+title: 编译器错误 C2865 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035157"
 ---
 # <a name="compiler-error-c2865"></a>编译器错误 C2865
-function： 非法 handle_or_pointer 比较  
-  
- 你可以比较对引用[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)或托管仅对是否相等的引用类型以查看它们是否引用同一对象 （= =） 或不同的对象 (！ =)。  
-  
- 无法比较它们的排序，因为.NET 运行时可能会将托管的对象移动任何时候，从而更改测试的结果。
+
+function： 非法 handle_or_pointer 比较
+
+可以将对引用进行比较[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)或托管仅对是否相等的引用类型，以查看它们是否引用同一个对象 （= =） 或不同的对象 (！ =)。
+
+无法比较它们的排序顺序，因为.NET 运行时可能会将托管的对象移动在任何时候，从而更改测试的结果。

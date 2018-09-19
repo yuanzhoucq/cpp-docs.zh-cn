@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4572 |Microsoft 文档
+title: 编译器警告 （等级 1） C4572 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0c0068a3da1033162f90330876d74d62878178
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b87b3dd4264db9fd7ea3699f342358fa6d4d5aac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076835"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>编译器警告（等级 1）C4572
-[ParamArray] 特性弃用在 /clr 下，请使用...改为  
-  
- 使用用于指定变量自变量列表的过时的样式。 在编译为 CLR 时，使用省略号语法而不是<xref:System.ParamArrayAttribute>。 有关详细信息，请参阅[变量自变量列表 （...）(C + + /CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C4572。  
-  
-```  
-// C4572.cpp  
-// compile with: /clr /W1  
-void Func([System::ParamArray] array<int> ^);   // C4572  
-void Func2(... array<int> ^){}   // OK  
-  
-int main() {  
-   Func2(1, 2, 3);  
-}  
+
+在 /clr 下的 [ParamArray] 特性不推荐使用，请使用...改为
+
+使用指定的变量自变量列表的已过时样式。 在针对 CLR 进行编译，使用省略号语法而不是<xref:System.ParamArrayAttribute>。 有关详细信息，请参阅[变量自变量列表 （...）(C + + CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+
+## <a name="example"></a>示例
+
+下面的示例生成 C4572。
+
+```
+// C4572.cpp
+// compile with: /clr /W1
+void Func([System::ParamArray] array<int> ^);   // C4572
+void Func2(... array<int> ^){}   // OK
+
+int main() {
+   Func2(1, 2, 3);
+}
 ```

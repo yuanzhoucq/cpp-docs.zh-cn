@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f0a8066b8e79b75f3d5ede37f4e5ad6b61db168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037874"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>编译器警告（等级 1）C4076
 
@@ -30,13 +30,13 @@ ms.locfileid: "43198473"
 ## <a name="remarks"></a>备注
 
 类型修饰符，它是否**签名**或**无符号**，不能用于非整数类型。 *类型修饰符*将被忽略。
-  
-## <a name="example"></a>示例  
+
+## <a name="example"></a>示例
 
 下面的示例生成 C4076;若要修复此错误，请删除**无符号**类型修饰符：
 
 ```cpp
-// C4076.cpp  
-// compile with: /W1 /LD  
-unsigned double x;   // C4076  
+// C4076.cpp
+// compile with: /W1 /LD
+unsigned double x;   // C4076
 ```

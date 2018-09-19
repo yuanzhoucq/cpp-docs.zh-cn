@@ -1,5 +1,5 @@
 ---
-title: 编译器警告 （等级 1） C4122 |Microsoft 文档
+title: 编译器警告 （等级 1） C4122 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41f8547bc75c013a59ebd3ac8e1682049da54e3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37f7928b1aa89eb66da95b4383084b2011387e0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075406"
 ---
 # <a name="compiler-warning-level-1-c4122"></a>编译器警告（等级 1）C4122
-“function”: alloc_text 仅适用于带 C 链接的函数  
-  
- **alloc_text** 杂注仅适用于使用 **extern c**声明的函数。 它不能与外部 C++ 函数一起使用。  
-  
- 将忽略杂注。
+
+“function”: alloc_text 仅适用于带 C 链接的函数
+
+**alloc_text** 杂注仅适用于使用 **extern c**声明的函数。 它不能与外部 C++ 函数一起使用。
+
+将忽略杂注。

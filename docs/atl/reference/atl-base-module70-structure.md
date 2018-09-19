@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089042"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>成员
 
-`cbSize`  
+`cbSize`<br/>
 用于版本控制的结构的大小。
 
-`m_hInst`  
+`m_hInst`<br/>
 `hInstance`此模块 （exe 或 dll）。
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 默认实例的资源句柄。
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 操作系统版本信息。 在内部由 atl。
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 将存储版本的 atl。 当前 0x0700。
 
-`pguidVer`  
+`pguidVer`<br/>
 ATL 的内部 GUID。
 
-`m_csResource`  
+`m_csResource`<br/>
 用于同步对`m_rgResourceInstance`数组。 在内部由 atl。
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 用于搜索的 ATL 的识别的所有资源实例中的资源数组。 在内部由 atl。
 
 ## <a name="remarks"></a>备注

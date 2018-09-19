@@ -1,5 +1,5 @@
 ---
-title: 编译器错误 C2349 |Microsoft 文档
+title: 编译器错误 C2349 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92fa04f4ee943908d65e5cf6ac0b65cdad6bb62f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3677426b00b07ae7281657c5ada7d17cc4418f35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070751"
 ---
 # <a name="compiler-error-c2349"></a>编译器错误 C2349
-为托管，则不能编译 function: 原因';使用非托管的 #pragma  
-  
- 有关详细信息请参阅[编译器警告 （等级 1 和 3） C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)。
+
+function 不能编译为托管: reason;使用非托管的 #pragma
+
+有关详细信息请参阅[编译器警告 （等级 1 和 3） C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)。

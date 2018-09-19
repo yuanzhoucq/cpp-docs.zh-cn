@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090786"
 ---
 # <a name="catllist-class"></a>CAtlList 类
 
@@ -61,16 +61,16 @@ ms.locfileid: "43756439"
 ## <a name="syntax"></a>语法
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>参数
 
-*E*  
+*E*<br/>
 元素类型。
 
-*ETraits*  
+*ETraits*<br/>
 用于复制或移动元素的代码。 请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)的更多详细信息。
 
 ## <a name="members"></a>成员
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*元素*  
+*元素*<br/>
 新元素。
 
 ### <a name="return-value"></a>返回值
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>参数
 
-*plNew*  
+*plNew*<br/>
 要添加的列表。
 
 ### <a name="remarks"></a>备注
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*元素*  
+*元素*<br/>
 要添加的元素。
 
 ### <a name="return-value"></a>返回值
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>参数
 
-*plNew*  
+*plNew*<br/>
 要添加的列表。
 
 ### <a name="remarks"></a>备注
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>参数
 
-*nBlockSize*  
+*nBlockSize*<br/>
 块大小。
 
 ### <a name="remarks"></a>备注
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>参数
 
-*元素*  
+*元素*<br/>
 要在列表中找到的元素。
 
-*posStartAfter*  
+*posStartAfter*<br/>
 搜索起始位置。 如果未不指定任何值，搜索开始与头元素。
 
 ### <a name="return-value"></a>返回值
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>参数
 
-*iElement*  
+*iElement*<br/>
 所需的列表元素的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 指定特定元素的位置值。
 
 ### <a name="return-value"></a>返回值
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 返回上次调用的位置值`GetNext`， [CAtlList::GetHeadPosition](#getheadposition)，或其他`CAtlList`方法。
 
 ### <a name="return-value"></a>返回值
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 返回上次调用的位置值`GetPrev`， [CAtlList::GetTailPosition](#gettailposition)，或其他`CAtlList`方法。
 
 ### <a name="return-value"></a>返回值
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 将在其后插入新元素的位置值。
 
-*元素*  
+*元素*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 新元素将插入到此位置的值前面的列表。
 
-*元素*  
+*元素*<br/>
 要插入的元素。
 
 ### <a name="return-value"></a>返回值
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 要移动的元素的位置值。
 
 ### <a name="remarks"></a>备注
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 要移动的元素的位置值。
 
 ### <a name="remarks"></a>备注
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 要移除的元素位置的值。
 
 ### <a name="remarks"></a>备注
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>参数
 
-*pos*  
+*pos*<br/>
 对应于要更改的元素的位置值。
 
-*元素*  
+*元素*<br/>
 新的元素值。
 
 ### <a name="remarks"></a>备注
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>参数
 
-*pos1*  
+*pos1*<br/>
 第一个位置值。
 
-*pos2*  
+*pos2*<br/>
 第二个位置值。
 
 ### <a name="remarks"></a>备注
@@ -808,5 +808,5 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[CList 类](../../mfc/reference/clist-class.md)   
+[CList 类](../../mfc/reference/clist-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

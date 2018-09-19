@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078694"
 ---
 # <a name="category-macros"></a>分类宏
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>参数
 
-*类*  
+*类*<br/>
 [in]包含类别映射的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>参数
 
-*catID*  
+*catID*<br/>
 [in]CATID 常量或变量，保存为实现类别的全局唯一标识符 (GUID)。 地址*catID*将创建并添加到映射。 请参阅下表中选择的股票的类别。
 
 ### <a name="remarks"></a>备注
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>参数
 
-*catID*  
+*catID*<br/>
 [in]CATID 常量或变量，保存为所需的类别的全局唯一标识符 (GUID)。 地址*catID*将创建并添加到映射。 请参阅下表中选择的股票的类别。
 
 ### <a name="remarks"></a>备注

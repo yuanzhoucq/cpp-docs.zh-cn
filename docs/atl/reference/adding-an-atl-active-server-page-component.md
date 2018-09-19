@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf97db30cae44d02a690782f1246e06d6c2b9a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112988"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>添加 ATL Active Server Page 组件
 
@@ -46,10 +46,10 @@ Active Server Pages 组件是 Internet 信息服务体系结构，它提供以�
 
 ## <a name="see-also"></a>请参阅
 
-[添加类](../../ide/adding-a-class-visual-cpp.md)   
-[在 ATL 项目中添加新接口](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[将连接点添加到对象](../../atl/adding-connection-points-to-an-object.md)   
-[添加方法](../../ide/adding-a-method-visual-cpp.md)   
-[MFC 类](../../mfc/reference/adding-an-mfc-class.md)   
+[添加类](../../ide/adding-a-class-visual-cpp.md)<br/>
+[在 ATL 项目中添加新接口](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[将连接点添加到对象](../../atl/adding-connection-points-to-an-object.md)<br/>
+[添加方法](../../ide/adding-a-method-visual-cpp.md)<br/>
+[MFC 类](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [添加一般 C++ 类](../../ide/adding-a-generic-cpp-class.md)
 

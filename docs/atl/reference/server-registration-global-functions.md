@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023301"
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>参数
 
-*pComModule*  
+*pComModule*<br/>
 对 COM 模块的指针。
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果类型库的注册，则为 TRUE。
 
-*pCLSID*  
+*pCLSID*<br/>
 指向要注册的对象的 CLSID。 如果为 NULL，将注册对象映射中的所有对象。
 
 ### <a name="return-value"></a>返回值
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>参数
 
-*pComModule*  
+*pComModule*<br/>
 对 COM 模块的指针。
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果类型库的注册，则为 TRUE。
 
-*pCLSID*  
+*pCLSID*<br/>
 指向要注销的对象的 CLSID。 如果为 NULL 对象映射中的所有对象都将注销。
 
 ### <a name="return-value"></a>返回值
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>参数
 
-*pComModule*  
+*pComModule*<br/>
 对 COM 模块的指针。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 请参阅[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)的更多详细信息。
 
-*dwFlags*  
+*dwFlags*<br/>
 确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 请参阅[结合](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>参数
 
-*pComModule*  
+*pComModule*<br/>
 对 COM 模块的指针。
 
 ### <a name="return-value"></a>返回值
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>参数
 
-*pComModule*  
+*pComModule*<br/>
 对 COM 模块的指针。
 
-*rclsid*  
+*rclsid*<br/>
 若要创建的对象的 CLSID。
 
-*riid*  
+*riid*<br/>
 所请求的接口的 IID。
 
-*ppv*  
+*ppv*<br/>
 通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppv*设置为 NULL。
 
 ### <a name="return-value"></a>返回值

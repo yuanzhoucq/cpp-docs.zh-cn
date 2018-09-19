@@ -1,5 +1,5 @@
 ---
-title: 命令行警告 D9041 |Microsoft 文档
+title: 命令行警告 D9041 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22573d26e09e14789f4cbd64d68f4082125c2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70bf82cfdca787898a02fb52926981bfd1a1b3e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033376"
 ---
 # <a name="command-line-warning-d9041"></a>命令行警告 D9041
-无效的值 'value' 的 '/ 选项';假设 'value';添加 / 分析到命令行选项时指定此警告  
-  
- 代码分析警告编号已添加到 **/wd**， **/we**， **/wo**，或 **/wl**而无需还指定的命令行选项 **/ 分析**命令行选项。 若要更正此错误，请添加 **/ 分析**命令行选项或从相应删除无效的警告编号 **/w**命令行选项。  
-  
-## <a name="example"></a>示例  
- 下面的命令行示例将生成警告 D9041:  
-  
-```  
-cl /EHsc /LD /wd6001 filename.cpp  
-```  
-  
- 若要解决此警告，添加 **/ 分析**命令行选项。 如果 **/ 分析**不是支持你的编译器版本上，删除无效的警告编号，从 **/wd**选项。  
-  
-## <a name="see-also"></a>请参阅  
- [命令行错误 D8000 到 D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [编译器选项](../../build/reference/compiler-options.md)
+
+无效的值 'value'。 / 选项;假设 'value';添加 / 分析命令行选项指定此警告时
+
+代码分析警告编号已添加到 **/wd**， **/we**， **/wo**，或者 **/wl**但未指定命令行选项**分析 /** 命令行选项。 若要纠正此错误，请添加 **/analyze**命令行选项或从相应删除无效的警告编号 **/w**命令行选项。
+
+## <a name="example"></a>示例
+
+下面的命令行示例将生成警告 D9041:
+
+```
+cl /EHsc /LD /wd6001 filename.cpp
+```
+
+若要修复此警告，将添加**分析 /** 命令行选项。 如果 **/analyze**是你的编译器版本上不支持，删除从无效的警告编号 **/wd**选项。
+
+## <a name="see-also"></a>请参阅
+
+[命令行错误 D8000 - D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[编译器选项](../../build/reference/compiler-options.md)

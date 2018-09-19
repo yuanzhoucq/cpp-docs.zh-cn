@@ -1,5 +1,5 @@
 ---
-title: 资源编译器错误 RC1203 |Microsoft 文档
+title: 资源编译器错误 RC1203 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081450"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>资源编译器错误 RC1203
-指定无效的十六进制默认语言 ID。  
-  
- 指定默认语言 (/ l) 选项后跟一个有效的十六进制语言 id。 请参阅[语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中*运行时库参考*有关的有效语言 Id 列表。
+
+指定的无效十六进制的默认语言 ID。
+
+指定默认语言 (/ 左) 选项后跟一个有效的十六进制语言 id。 请参阅[语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中*运行时库参考*有关有效的语言 Id 的列表。

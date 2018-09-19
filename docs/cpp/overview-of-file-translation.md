@@ -19,42 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051082"
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
-C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：  
-  
-1. 词法切分。 字符映射以及三元组处理、行拼接和切分在此翻译阶段执行。  
-  
-2. 预处理。 此翻译阶段，将引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在中*预处理器参考 》* 有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。  
-  
-     预处理器指令总是以开头数字符号 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：  
-  
-    ```cpp 
-    #include <iostream>  // Include text of iostream in   
-                         //  translation unit.  
-    #define NDEBUG       // Define NDEBUG (NDEBUG contains empty   
-                         //  text string).  
-    ```  
-  
-3. 代码生成。 此翻译阶段使用在预处理阶段生成的标记来生成对象代码。  
-  
-     在此阶段中，将执行源代码的语法和语义检查。  
-  
- 请参阅[翻译阶段](../preprocessor/phases-of-translation.md)中*预处理器参考 》* 有关详细信息。  
-  
- C++ 预处理器是 ANSI C 预处理器的严格超集，但在某些实例中，C++ 预处理器与 ANSI C 预处理器不同。 以下列表介绍了 ANSI C 和 C++ 预处理器之间的多个差异：  
-  
-- 支持单行注释。 请参阅[注释](../cpp/comments-cpp.md)有关详细信息。  
-  
-- 一个预定义的宏， `__cplusplus`，仅为 c + + 定义。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考 》* 有关详细信息。  
-  
-- C 预处理器不能识别 c + + 运算符： **。**<strong>\*</strong>， **->** <strong>\*</strong>，并 **::**。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
-  
-## <a name="see-also"></a>请参阅  
- [词法约定](../cpp/lexical-conventions.md)
+
+C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：
+
+1. 词法切分。 字符映射以及三元组处理、行拼接和切分在此翻译阶段执行。
+
+2. 预处理。 此翻译阶段，将引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在中*预处理器参考 》* 有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。
+
+     预处理器指令总是以开头数字符号 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：
+
+    ```cpp
+    #include <iostream>  // Include text of iostream in
+                         //  translation unit.
+    #define NDEBUG       // Define NDEBUG (NDEBUG contains empty
+                         //  text string).
+    ```
+
+3. 代码生成。 此翻译阶段使用在预处理阶段生成的标记来生成对象代码。
+
+     在此阶段中，将执行源代码的语法和语义检查。
+
+请参阅[翻译阶段](../preprocessor/phases-of-translation.md)中*预处理器参考 》* 有关详细信息。
+
+C++ 预处理器是 ANSI C 预处理器的严格超集，但在某些实例中，C++ 预处理器与 ANSI C 预处理器不同。 以下列表介绍了 ANSI C 和 C++ 预处理器之间的多个差异：
+
+- 支持单行注释。 请参阅[注释](../cpp/comments-cpp.md)有关详细信息。
+
+- 一个预定义的宏， `__cplusplus`，仅为 c + + 定义。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考 》* 有关详细信息。
+
+- C 预处理器不能识别 c + + 运算符： **。**<strong>\*</strong>， **->** <strong>\*</strong>，并 **::**。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。
+
+## <a name="see-also"></a>请参阅
+
+[词法约定](../cpp/lexical-conventions.md)

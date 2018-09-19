@@ -1,5 +1,5 @@
 ---
-title: 数学错误 M6110 |Microsoft 文档
+title: 数学错误 M6110 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97918c38f896dd5fccd3abeae86a3104cf80694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 333a6d9741d4ccaa5764e84fabd71f58788c1b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015787"
 ---
 # <a name="math-error-m6110"></a>数学错误 M6110
-堆栈溢出  
-  
- 浮点表达式导致浮点堆栈溢出。  
-  
- 最多为七个级别除了通常支持 8087/287/387 协处理器的八个级别，可以捕获堆栈溢出浮点异常。  
-  
- 程序终止，退出代码 138。
+
+堆栈溢出
+
+浮点表达式导致浮点堆栈溢出。
+
+最多为七个级别除了通常支持 8087/287/387 协处理器的八个级别，可以捕获堆栈溢出浮点异常。
+
+程序终止，退出代码为 138。

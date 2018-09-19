@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029463"
 ---
 # <a name="c-bit-fields"></a>C++ 位域
 
@@ -38,7 +38,7 @@ ms.locfileid: "39408036"
 > [!NOTE]
 > 宽度为 0 的未命名的位域强制对齐方式的下一个位域到下一步**类型**边界，其中**类型**是成员的类型。
 
- 下面的示例声明包含位域的结构：
+下面的示例声明包含位域的结构：
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ struct Date {
 - 初始化非**const**使用位域的引用。
 
 ## <a name="see-also"></a>请参阅
- [类和结构](../cpp/classes-and-structs-cpp.md)
+
+[类和结构](../cpp/classes-and-structs-cpp.md)

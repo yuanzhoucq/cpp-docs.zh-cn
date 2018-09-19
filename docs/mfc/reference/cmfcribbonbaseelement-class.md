@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136330"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 `CMFCRibbonBaseElement`类是可以将添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  默认情况下此方法没有任何影响。 重写此方法在派生类，用于绘制图像的功能区元素中。  
   
  下表列出了可能值*类型*参数：  
-  
- `RibbonImageLarge`  
- 大型 32 x 32 像素图像大小。  
-  
- `RibbonImageSmall`  
- 小 16 x 16 像素图像大小。  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | 大型 32 x 32 像素图像大小。  |
+| `RibbonImageSmall`  | 小 16 x 16 像素图像大小。  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  如果它指向当前对象，则返回指定的指针。  
