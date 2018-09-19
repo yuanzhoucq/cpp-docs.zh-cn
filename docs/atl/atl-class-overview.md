@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e64ecd708f5ff159b61a6b7601c74dbf2b6abda6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055151"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 
@@ -52,10 +52,10 @@ ms.locfileid: "43758662"
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../atl/reference/atl-classes.md)   
-[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)  
-[函数](../atl/reference/atl-functions.md)   
-[全局变量](../atl/reference/atl-global-variables.md)   
-[宏](../atl/reference/atl-macros.md)   
+[类和结构](../atl/reference/atl-classes.md)<br/>
+[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)<br/>
+[函数](../atl/reference/atl-functions.md)<br/>
+[全局变量](../atl/reference/atl-global-variables.md)<br/>
+[宏](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
 
